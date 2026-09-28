@@ -53888,3 +53888,227 @@ example : TaoTrudgianYang2025.zeroDensityExponent (5857/6032) ≤
   zeroDensityExponent_le_bourgain_piece_7 (by norm_num) (by norm_num)
 
 end VerifiedDensityCascadeRegression
+
+-- EPZAE-21: actual Morse entry and derivative budget; no fourth-root-width assumption.
+-- These checks do not waive the remaining sharp Atkinson source-form contract.
+namespace AtkinsonMorseSourceRegression
+
+open MeasureTheory Set
+
+example {T : ℝ} (hT : 0 < T) (G L α b : ℝ) :
+    atkinsonPowerIntegral T G L α b =
+      2*atkinsonRootKernel T b (atkinsonSaddleRoot (T/(2*Real.pi)) b)*
+        ∫ z in atkinsonRootMorseRange T b,
+          atkinsonMorseWeight T G L α b z*betaQuadraticKernel 2 z :=
+  atkinsonPowerIntegral_eq_morse hT G L α b
+
+example {T : ℝ} (hT : 0 < T) (G L α b : ℝ) :
+    atkinsonStationaryMain T G L α b =
+      2*atkinsonRootKernel T b (atkinsonSaddleRoot (T/(2*Real.pi)) b)*
+        (atkinsonMorseWeight T G L α b 0*fresnelGaussianValue 1) :=
+  atkinsonStationaryMain_eq_morse_main hT G L α b
+
+example {T : ℝ} (hT : 0 < T) (b : ℝ) :
+    atkinsonRootMorseRange T b = univ := atkinsonRootMorseRange_eq_univ hT b
+
+example (α : ℝ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ T G L b : ℝ,
+      0 < T → 1 ≤ G → G^2 ≤ 2*T → 1 ≤ L → 8*L ≤ G →
+      |b| ≤ Real.sqrt T/100 → ∀ z : ℝ,
+      ‖atkinsonMorseWeight T G L α b z‖ ≤ C*G*T^(-α) ∧
+      ‖iteratedDeriv 2 (atkinsonMorseWeight T G L α b) z‖ ≤ C*G^3*T^(-α)/T :=
+  exists_atkinsonMorseWeight_global_second_bound α
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) →
+      |(∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2)-
+        2*(atkinsonStationaryLeadingSum T G (Real.log T)).re| ≤ C*G*Real.log T :=
+  exists_zetaSquarePhysicalGaussian_stationary_full_width hδ
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        2*Real.exp 1*(atkinsonStationaryLeadingSum T G (Real.log T)).re+C*G*Real.log T :=
+  exists_zetaSquareLocalMean_le_stationary_full_width hδ
+
+-- A power width below T^(1/4) is included at the exact public theorem type.
+example :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^(1/10:ℝ) ≤ G → G ≤ T^(1/2-(1/10:ℝ)) →
+      |(∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2)-
+        2*(atkinsonStationaryLeadingSum T G (Real.log T)).re| ≤ C*G*Real.log T :=
+  exists_zetaSquarePhysicalGaussian_stationary_full_width (by norm_num : (0:ℝ) < 1/10)
+
+end AtkinsonMorseSourceRegression
+
+-- EPZAE-21: literal Ivić source-form conventions and full-width consumer.
+namespace AtkinsonPrintedSourceRegression
+
+open MeasureTheory Set TaoTrudgianYang2025.AtkinsonPrintedSource
+
+example (T : ℝ) (n : ℕ) :
+    printedAtkinsonPhase T n = atkinsonSourcePhase T n+Real.pi/4 :=
+  printedAtkinsonPhase_eq T n
+
+example (T : ℝ) (K : ℕ) {x : ℝ} (hx : 0 ≤ x) :
+    ‖printedAtkinsonPrefix T K x‖ =
+      ‖∑ i ∈ Finset.range ⌊x⌋₊, atkinsonPositivePhaseTerm T (K+1+i)‖ :=
+  norm_printedAtkinsonPrefix T K hx
+
+example (N : ℕ) :
+    (∑ n ∈ Finset.Ioc 0 N, (n.divisors.card:ℝ)*(n:ℝ)^(-(1/4:ℝ))) ≤
+      3*(N:ℝ)^(3/4:ℝ)*(1+Real.log N) :=
+  sum_divisorCard_quarter_le_three N
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 40000 ≤ T → 0 < G → 16*G^2 ≤ T →
+      1 ≤ L → 1200*L ≤ 4*G → ∀ K : ℕ, 0 < K → 2*K ≤ atkinsonSourceCutoff T (4*G) L →
+      ‖∑ n ∈ Finset.Ioc K (2*K), atkinsonStationaryLeadingTerm T (4*G) L n‖ ≤
+        C*printedBlockScale T G K*(‖printedAtkinsonPrefix T K (K:ℝ)‖+
+          (1/(K:ℝ))*(∫ x in (0:ℝ)..(K:ℝ), ‖printedAtkinsonPrefix T K x‖)) :=
+  exists_stationary_printed_block_bound
+
+example {x : ℝ} (hx : 1 ≤ x) :
+    x ≤ ((2^Nat.clog 2 ⌈x⌉₊:ℕ):ℝ) ∧ ((2^Nat.clog 2 ⌈x⌉₊:ℕ):ℝ) ≤ 2*x :=
+  pow_clog_ceil_bounds hx
+
+example {T G η : ℝ}
+    (hN : 0 ≤ printedAtkinsonCutoff T G η) (j : ℕ) :
+    j ∈ printedAtkinsonDyadicIndices T G η ↔
+      T^(1/3:ℝ) ≤ ((2^j:ℕ):ℝ) ∧ ((2^j:ℕ):ℝ) ≤ printedAtkinsonCutoff T G η :=
+  mem_printedAtkinsonDyadicIndices hN j
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G L : ℝ,
+      T₀ ≤ T → 1 ≤ Real.log T → 0 < G → 16*G^2 ≤ T → 1 ≤ L → 1200*L ≤ 4*G →
+      printedAtkinsonB T G η < T/(2*Real.pi) →
+      ‖atkinsonStationaryLeadingSum T (4*G) L‖ ≤ C*(G*Real.log T+
+        ∑ j ∈ printedAtkinsonDyadicIndices T G η, printedAtkinsonBlockBound T G (2^j)) :=
+  exists_stationarySum_le_exactPrinted hη
+
+example {δ η : ℝ} (hδ : 0 < δ) (hη : 0 < η) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤ C*(G*Real.log T+
+        G*∑ j ∈ printedAtkinsonDyadicIndices T G η,
+          (T*((2^j:ℕ):ℝ))^(-(1/4:ℝ))*
+            (‖printedAtkinsonPrefix T (2^j) ((2^j:ℕ):ℝ)‖+
+              (((2^j:ℕ):ℝ))⁻¹*(∫ x in (0:ℝ)..((2^j:ℕ):ℝ), ‖printedAtkinsonPrefix T (2^j) x‖))*
+            Real.exp (-(G^2*((2^j:ℕ):ℝ))/T)) :=
+  exists_zetaSquareLocalMean_le_printedAtkinson hδ hη
+
+example (T : ℝ) (K : ℕ) : printedAtkinsonPrefix T K 0 = 0 := by
+  simp [printedAtkinsonPrefix]
+
+-- A genuine sub-fourth-root source width, with the original printed cutoff.
+example :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^(1/10:ℝ) ≤ G → G ≤ T^(1/2-(1/10:ℝ)) →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤ C*(G*Real.log T+
+        ∑ j ∈ printedAtkinsonDyadicIndices T G (1/10),
+          printedAtkinsonBlockBound T G (2^j)) :=
+  exists_zetaSquareLocalMean_le_exactPrinted
+    (by norm_num : (0:ℝ) < 1/10) (by norm_num : (0:ℝ) < 1/10)
+
+end AtkinsonPrintedSourceRegression
+
+namespace HuxleyModelRegression
+
+open TaoTrudgianYang2025.HuxleyModel Expdb Set
+
+-- The seventh test retains every entry of the literal printed determinant.
+example (a b c d : ℝ) : tests ![a,b,c,d] 6 =
+    Matrix.det ![![3*b^2+4*a*c,3*a*b,a^2],![c,b,a],![d,c,b]] := rfl
+
+-- The logarithmic phase has both negative and positive derivative signs.
+example : tests ![(2:ℝ),-6,24,-120] = ![2,-6,24,12,144,60,-720] := by
+  convert tests_monomial 3 2 1 using 1 <;> norm_num
+
+-- Strictly positive model parameter is necessary for this nondegeneracy claim.
+example : tests (0 : Fin 4 → ℝ) = 0 := by
+  funext i
+  fin_cases i <;> norm_num [tests,Matrix.det_fin_three]
+
+-- One delta and one c precede every phase and every CLOSED-interval point.
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ δ c : ℝ, 0 < δ ∧ 0 < c ∧
+      ∀ F : ℝ → ℝ, IsApproximateModelPhaseFunction F σ 5 δ →
+        ∀ x ∈ phaseInterval, ∀ j,
+          c ≤ |tests (fun i : Fin 4 => iteratedDerivWithin (i.val+3) F phaseInterval x) j| :=
+  approximateModelPhase_tests_uniform hσ
+
+-- The ordinary derivative/logarithmic bridge claims only the actual interior.
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ δ c : ℝ, 0 < δ ∧ 0 < c ∧
+      ∀ F : ℝ → ℝ, IsApproximateModelPhaseFunction F σ 5 δ →
+        ∀ x ∈ Ioo (1 : ℝ) 2,
+          (∀ j, c ≤ |tests (fun i : Fin 4 => iteratedDeriv (i.val+3) F x) j|) ∧
+          (∀ r : ℕ, 3 ≤ r → r ≤ 4 →
+            iteratedDeriv 2 (fun u => Real.log (iteratedDeriv r F u)) x ≠ 0) :=
+  approximateModelPhase_source_tests hσ
+
+end HuxleyModelRegression
+
+-- Every actual domain-preserving A-process shift has the same test lower bound.
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ δ η₀ c : ℝ, 0 < δ ∧ 0 < η₀ ∧ η₀ ≤ 1/2 ∧ 0 < c ∧
+      ∀ F : ℝ → ℝ, Expdb.IsApproximateModelPhaseFunction F σ 6 δ →
+        ∀ η : ℝ, 0 < η → η ≤ η₀ → ∀ x ∈ Expdb.phaseInterval, ∀ j,
+          c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+            (fun i : Fin 4 => iteratedDerivWithin (i.val+3)
+              (TaoTrudgianYang2025.aProcessShiftPhase F σ η) Expdb.phaseInterval x) j| :=
+  TaoTrudgianYang2025.HuxleyModel.aProcessShiftPhase_tests_uniform hσ
+
+namespace HuxleyLinearFormRegression
+
+open TaoTrudgianYang2025.HuxleyLinearForm
+
+example
+    (S : Finset ℕ) {N : ℕ} {α δ : ℝ}
+    (hne : S.Nonempty) (hN : 0 < N) (hδ : 0 ≤ δ)
+    (hS : ∀ n ∈ S, 1 ≤ n ∧ n ≤ N)
+    (hnear : ∀ n ∈ S, |(n:ℝ)*α-(round ((n:ℝ)*α):ℤ)| ≤ δ) :
+    (S.card:ℝ) ≤ 12*δ*N ∨
+      ∃ q : ℕ, 0 < q ∧ (q:ℝ) ≤ (N:ℝ)/S.card ∧
+        |(q:ℝ)*α-(round ((q:ℝ)*α):ℤ)| ≤ δ/S.card ∧
+        ∀ n ∈ S, q ∣ n :=
+  linear_form_dichotomy_round S hne hN hδ hS hnear
+
+example {m₀ n₀ : ℤ}
+    (hn₀ : 0 < n₀) (hcop : IsCoprime m₀ n₀) :
+    ∃ a b : ℤ, 1 ≤ b ∧ b ≤ n₀ ∧ IsCoprime a b ∧
+      m₀*b-n₀*a = -1 ∧
+      ∀ m n : ℤ, 1 ≤ n → n ≤ n₀ → m₀*n < n₀*m → a*n ≤ m*b :=
+  exists_right_neighbor hn₀ hcop
+
+example {N : ℕ} {l μ : ℝ} {p : ℤ × ℤ}
+    (hl : 0 < l) (hμ : 0 ≤ μ) :
+    p ∈ fareySector N l μ ↔ 1 ≤ p.2 ∧ p.2 ≤ N ∧
+      IsCoprime p.1 p.2 ∧ l*(p.2:ℝ) ≤ p.1 ∧ (p.1:ℝ) ≤ μ*p.2 :=
+  mem_fareySector_iff hl hμ
+
+example
+    {N : ℕ} {l μ B α β δ : ℝ}
+    (hl : 0 < l) (hμ : 1 ≤ μ) (hB : 1 ≤ B) (hδ : 0 ≤ δ)
+    (hR : max ((μ-l)*(N:ℝ)^2/B) 2 ≤ (fareySector N l μ).card)
+    (hsmall : (μ*(N:ℝ))*δ ≤ 1/(96*B))
+    (hnear : ∀ p ∈ fareySector N l μ,
+      ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) :
+    |α-(round α:ℤ)| ≤ 8*(N:ℝ)*δ/(fareySector N l μ).card ∧
+    |β-(round β:ℤ)| ≤ 8*(μ*(N:ℝ))*δ/(fareySector N l μ).card :=
+  fareySector_small_error_bounds hl hμ hB hδ hR hsmall hnear
+
+example : fareySector 1 1 2 = {(1,1),(2,1)} :=
+  fareySector_one_one_two
+
+example :
+    max (((2:ℝ)-1)*1^2/1) 2 ≤ ((fareySector 1 1 2).card:ℝ) ∧
+    (2:ℝ)*1*(1/1000) ≤ 1/(96*1) ∧
+    (∀ p ∈ fareySector 1 1 2,
+      ∃ b : ℤ, |(p.1:ℝ)*(1/2000)+(p.2:ℝ)*0-b| ≤ 1/1000) ∧
+    ¬∃ k : ℤ, (1/2000:ℝ)=k :=
+  printed_exact_integrality_counterexample
+
+end HuxleyLinearFormRegression

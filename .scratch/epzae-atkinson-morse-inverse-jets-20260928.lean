@@ -1,0 +1,5 @@
+import TaoTrudgianYang2025.AtkinsonMorseStationary
+
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseInverse_second
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseInverse_third
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseInverse_physical_jet_bounds

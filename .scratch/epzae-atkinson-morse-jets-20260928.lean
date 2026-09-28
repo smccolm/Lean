@@ -1,0 +1,11 @@
+import TaoTrudgianYang2025.AtkinsonMorseStationary
+
+#print axioms TaoTrudgianYang2025.iteratedDeriv_atkinsonRootMorseCurvature
+#print axioms TaoTrudgianYang2025.atkinsonRootPhase_third
+#print axioms TaoTrudgianYang2025.atkinsonRootPhase_fourth
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCurvature_jet_bounds
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCurvature_physical_jet_bounds
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCoordinate_deriv
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCoordinate_second
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCoordinate_third
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCoordinate_physical_jet_bounds

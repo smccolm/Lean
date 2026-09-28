@@ -1,0 +1,8 @@
+import TaoTrudgianYang2025.AtkinsonMorseStationary
+
+#print axioms TaoTrudgianYang2025.abs_atkinsonSaddleRoot_sub_sqrt_le
+#print axioms TaoTrudgianYang2025.atkinsonRootBand_distance_from_center
+#print axioms TaoTrudgianYang2025.support_atkinsonMorseWeight_window
+#print axioms TaoTrudgianYang2025.atkinsonMorseIntegral_eq_window
+#print axioms TaoTrudgianYang2025.fresnelGaussianValue_one_eq_beta_main
+#print axioms TaoTrudgianYang2025.exists_atkinsonPowerIntegral_morse_error

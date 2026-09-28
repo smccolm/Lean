@@ -1,6 +1,129 @@
 # Tao--Trudgian--Yang 2025 formalization
 
-## Closure-first analytic status (27 September 2026)
+## Huxley source-entry progress (28 September 2026)
+
+The finite source chain now also includes [HuxleyLinearForms.lean](Extension/TaoTrudgianYang2025/HuxleyLinearForms.lean):
+the full Lemma 2.1 dichotomy and both displayed bounds of Lemma 2.5 for
+the complete rational sector are kernel-checked. The determinant-one
+neighbor is constructed, not assumed. The focused build passes, 8,477 jobs;
+22 public audits and six additional regressions are registered.
+The literal phrase "both integers" in Lemma 2.5 is false: a separate
+kernel-checked counterexample is preserved, and exact integrality is not
+claimed or silently adopted as a repaired public source contract.
+The displayed near-integer bounds suffice for this proof route.
+Lemmas 2.3/2.6 and the long-block/family estimates remain open.
+
+[HuxleyModelNondegeneracy.lean](Extension/TaoTrudgianYang2025/HuxleyModelNondegeneracy.lean)
+proves all seven algebraic tests of Huxley (1993), Theorem 3, uniformly for
+actual ANTEDB model phases: one positive tolerance and lower bound precede
+all phases and all points of the closed interval. The ordinary-derivative
+consumer also proves both logarithmic conditions on the interior.
+This is source-entry progress, not a fifth-moment estimate or a new beta row.
+The actual compressed A-process shifts also satisfy the same uniform tests,
+by consuming the existing domain-preserving shift theorem. Mixed derivatives
+in the shift parameter are not claimed.
+The focused build passes (2,868 jobs), with eleven public audits and six
+semantic regressions registered. Full-run evidence follows in the
+[Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+The owner-supplied 40-page Huxley PDF has been read. The correct remaining
+chain is four-condition long-block/family counting -> parameter-family
+fifth moment (Theorem 2) -> differencing (Theorem 3) -> rows 7--11 and
+public consumers. Enlarged-domain and mixed-parameter entry remain open;
+the existing two-coordinate count does not discharge the stronger count.
+The page-39 short-range table supplies provenance for the omitted interval,
+not a Lean proof. See [Sources](Tao-Trudgian-Yang%20Sources.md).
+**EPZAE-13/14/29 remain OPEN; aggregate 34/42 is unchanged.** Both BATs and
+all counterexamples, repairs and regressions remain mandatory/preserved.
+Recovery-record maintenance remains permanently skipped.
+
+
+## EPZAE-21 complete under the authorized contract (28 September 2026)
+
+[AtkinsonPrintedSource.lean](Extension/TaoTrudgianYang2025/AtkinsonPrintedSource.lean) now proves
+`AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson`:
+the actual local zeta second moment satisfies Ivić Orsay 83.06, Theorem 6.2,
+(6.20)--(6.23), throughout `T^δ≤G≤T^(1/2−δ)`, for every `δ,η>0`,
+with a uniform constant and threshold before `T,G`.
+The exact printed phase, `K<n≤K+x` prefix, endpoint-plus-integral expression,
+`exp(-G²K/T)` damping, `T^(1/3)≤K≤N` dyadic range, and
+`N=B²/(T/(2π)−B)`, `B=T/(2πG)(log T)^((1+η)/2)`, are retained.
+The phase differs from the old stationary phase by `π/4`; the constant-phase
+and unit-modulus prefix bridges are proved explicitly.
+
+The proof consumes the actual full-width stationary source at width `4G`,
+controls both signed weights, absorbs small blocks using the exact
+logarithmic divisor bound, and derives the Gaussian tail beyond printed `N`.
+No analytic source inequality or desired conclusion is assumed. This is a
+new analytic proof, separate from the owner-authorized growth-contract repair.
+The shifted-height corollary (6.24) is not asserted by this theorem.
+
+One focused source module, 60 explicit public audits and ten semantic
+regressions are integrated. Its focused production build passes, 9,108 jobs,
+zero Lean diagnostics. Root imports and BAT coverage include it.
+**EPZAE-21 is DONE; aggregate 34/42.** Both mandatory BATs pass, exit 0,
+with zero Lean errors, warnings or linter diagnostics. The clause-by-clause
+acceptance review confirms the corrected growth and old-pair clauses,
+literal reflection, full real-moment transfer, genuine twelfth moment and
+the separately proved sharp Atkinson source form. Completion is under the
+owner-authorized contract, not the false printed one.
+Earlier source-form-open checkpoints below are chronological history.
+The strict `σ>1−τ` owner-authorized repair remains in force, not a proof of
+the false printed growth statement. Frozen source, both counterexamples,
+obstruction history and all old regressions remain permanently preserved.
+Current run evidence is in the [Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+
+## Historical adoption checkpoint: owner-authorized EPZAE-21 repair (27 September 2026)
+
+The accepted growth/nonexistence clause now requires **`σ>1−τ`**, in
+addition to its growth threshold and source domain. This is an
+**owner-authorized source-contract repair**, not a proof of the false
+printed `add-bound(i)` or unrestricted `lvz-340`. The
+[repair specification](Tao-Trudgian-Yang%20Zeta%20Growth%20Repair.md)
+identifies the existing proved theorem and old-pair consequence.
+The frozen source, counterexample, obstruction history and all regressions
+are permanently preserved; historical requests for authorization below
+are superseded by this approval.
+
+**EPZAE-21 remains OPEN; aggregate 33/42.** Every other acceptance requirement
+is unchanged, including the remaining sharp Atkinson printed-source-form
+bridge. The smaller-width stationary error is now proved separately below.
+The independently proved twelfth moment does not
+waive that obligation. Both build BATs, their audits and regressions remain
+mandatory; keep their coverage updated as needed.
+
+## Earlier Atkinson full-width stationary checkpoint (28 September 2026)
+
+[AtkinsonMorseStationary.lean](Extension/TaoTrudgianYang2025/AtkinsonMorseStationary.lean)
+now proves the actual stationary-source error on **every original power width**
+`T^δ≤G≤T^(1/2−δ)`, with `δ>0` and uniform `C_δ,T₀(δ)`.
+`exists_atkinsonLeadingSum_sub_stationary_full_width` gives `C_δ G`;
+`exists_zetaSquarePhysicalGaussian_stationary_full_width` and
+`exists_zetaSquareLocalMean_le_stationary_full_width` give `C_δ G log T`.
+`exists_zetaSquarePhysicalGaussian_signedMain_full_width` retains both
+original signed sums, phases, coefficients and the ceiling cutoff.
+
+The actual global Morse change of variables, inverse jets, cutoff support,
+complex second-derivative remainder and quarter-weighted divisor summation
+are proved, not assumed. The sharper quadratic remainder extends the
+existing BetaQuadraticLocalRemainder module; only one targeted Atkinson
+module was added, with 80 explicit public audits and seven exact-type
+regressions. A dependency-cycle check prevents importing it into the old
+upstream stationary-source module. Root imports and the principal BAT's
+required-module inventory include the new module.
+
+**EPZAE-21 remains OPEN; aggregate 33/42.** The smaller-width stationary
+error is closed, but the distinct sharp printed-source-form bridge is not.
+Next: connect the retained signed weights/normalizations to that exact
+source conclusion. Do not waive this requirement or relabel the owner-
+authorized growth repair as a proof of either false unrestricted clause.
+Frozen source, counterexamples, obstruction history and old regressions
+remain preserved. Both BATs and their zero-warning/audit gates stay mandatory.
+Focused production build passes; current full verification is recorded in
+the [Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+## Earlier closure-first analytic status (27 September 2026)
 
 EPZAE-11 is DONE; EPZAE-15/26 remain DONE; aggregate 33/42.
 EPZAE-06 is now DONE: pinned historical execution replays all nine energy

@@ -1,6 +1,121 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
-## Closure-first analytic status (27 September 2026)
+## Huxley (1993) source entry (28 September 2026)
+
+[HuxleyLinearForms.lean](Extension/TaoTrudgianYang2025/HuxleyLinearForms.lean)
+proves `linear_form_dichotomy_round` (Lemma 2.1) and
+`fareySector_small_error_bounds` (both displayed Lemma 2.5 bounds).
+The latter consumes the actual complete sector, a constructed Bezout
+neighbor, injective determinant labels and the proved one-dimensional
+dichotomy. No Farey adjacency or source count is assumed.
+`printed_exact_integrality_counterexample` permanently records why the
+literal words "both integers" are not asserted. This is not an authorized
+replacement of a public source contract; the proved inequalities are the
+only conclusions used here. Lemmas 2.3/2.6 remain open.
+
+The owner-supplied [full PDF](Exponential_Sums_and_the_Riemann_Zeta_Fu.pdf)
+is now available and has been read. Theorem 3, pages 38--39, has seven
+nonvanishing polynomial tests in the third through sixth derivatives.
+[HuxleyModelNondegeneracy.lean](Extension/TaoTrudgianYang2025/HuxleyModelNondegeneracy.lean)
+proves their exact monomial factorizations, a uniform perturbation tolerance
+and positive lower bound for actual model phases on closed [1,2], and
+both ordinary logarithmic conditions on the interior. Its actual A-process
+consumer derives the same bounds for every sufficiently small compressed
+shift using the already-proved shift-model theorem.
+
+This does not prove Theorem 2's parameter-family fifth moment, the stronger
+four-condition family coincidence count, mixed-parameter derivatives,
+the enlarged-domain bridge, Theorem 3 or any new public beta row.
+EPZAE-13/14/29 remain OPEN; aggregate remains 34/42. The page-39
+short-range table supplies primary provenance for the omitted interval,
+not a certified bound. The precise remaining DAG is in Sources and Goal.
+
+## EPZAE-21 complete under the authorized contract (28 September 2026)
+
+[AtkinsonPrintedSource.lean](Extension/TaoTrudgianYang2025/AtkinsonPrintedSource.lean) now proves
+`AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson`:
+the actual local zeta second moment satisfies Ivić Orsay 83.06, Theorem 6.2,
+(6.20)--(6.23), throughout `T^δ≤G≤T^(1/2−δ)`, for every `δ,η>0`,
+with a uniform constant and threshold before `T,G`.
+The exact printed phase, `K<n≤K+x` prefix, endpoint-plus-integral expression,
+`exp(-G²K/T)` damping, `T^(1/3)≤K≤N` dyadic range, and
+`N=B²/(T/(2π)−B)`, `B=T/(2πG)(log T)^((1+η)/2)`, are retained.
+The phase differs from the old stationary phase by `π/4`; the constant-phase
+and unit-modulus prefix bridges are proved explicitly.
+
+The proof consumes the actual full-width stationary source at width `4G`,
+controls both signed weights, absorbs small blocks using the exact
+logarithmic divisor bound, and derives the Gaussian tail beyond printed `N`.
+No analytic source inequality or desired conclusion is assumed. This is a
+new analytic proof, separate from the owner-authorized growth-contract repair.
+The shifted-height corollary (6.24) is not asserted by this theorem.
+
+One focused source module, 60 explicit public audits and ten semantic
+regressions are integrated. Its focused production build passes, 9,108 jobs,
+zero Lean diagnostics. Root imports and BAT coverage include it.
+**EPZAE-21 is DONE; aggregate 34/42.** Both mandatory BATs pass, exit 0,
+with zero Lean errors, warnings or linter diagnostics. The clause-by-clause
+acceptance review confirms the corrected growth and old-pair clauses,
+literal reflection, full real-moment transfer, genuine twelfth moment and
+the separately proved sharp Atkinson source form. Completion is under the
+owner-authorized contract, not the false printed one.
+Earlier source-form-open checkpoints below are chronological history.
+The strict `σ>1−τ` owner-authorized repair remains in force, not a proof of
+the false printed growth statement. Frozen source, both counterexamples,
+obstruction history and all old regressions remain permanently preserved.
+Current run evidence is in the [Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+
+## Historical adoption checkpoint: owner-authorized EPZAE-21 repair (27 September 2026)
+
+The accepted growth/nonexistence clause now requires **`σ>1−τ`**, in
+addition to its growth threshold and source domain. This is an
+**owner-authorized source-contract repair**, not a proof of the false
+printed `add-bound(i)` or unrestricted `lvz-340`. The
+[repair specification](Tao-Trudgian-Yang%20Zeta%20Growth%20Repair.md)
+identifies the existing proved theorem and old-pair consequence.
+The frozen source, counterexample, obstruction history and all regressions
+are permanently preserved; historical requests for authorization below
+are superseded by this approval.
+
+**EPZAE-21 remains OPEN; aggregate 33/42.** Every other acceptance requirement
+is unchanged, including the remaining sharp Atkinson printed-source-form
+bridge. The smaller-width stationary error is now proved separately below.
+The independently proved twelfth moment does not
+waive that obligation. Both build BATs, their audits and regressions remain
+mandatory; keep their coverage updated as needed.
+
+## Earlier Atkinson full-width stationary checkpoint (28 September 2026)
+
+[AtkinsonMorseStationary.lean](Extension/TaoTrudgianYang2025/AtkinsonMorseStationary.lean)
+now proves the actual stationary-source error on **every original power width**
+`T^δ≤G≤T^(1/2−δ)`, with `δ>0` and uniform `C_δ,T₀(δ)`.
+`exists_atkinsonLeadingSum_sub_stationary_full_width` gives `C_δ G`;
+`exists_zetaSquarePhysicalGaussian_stationary_full_width` and
+`exists_zetaSquareLocalMean_le_stationary_full_width` give `C_δ G log T`.
+`exists_zetaSquarePhysicalGaussian_signedMain_full_width` retains both
+original signed sums, phases, coefficients and the ceiling cutoff.
+
+The actual global Morse change of variables, inverse jets, cutoff support,
+complex second-derivative remainder and quarter-weighted divisor summation
+are proved, not assumed. The sharper quadratic remainder extends the
+existing BetaQuadraticLocalRemainder module; only one targeted Atkinson
+module was added, with 80 explicit public audits and seven exact-type
+regressions. A dependency-cycle check prevents importing it into the old
+upstream stationary-source module. Root imports and the principal BAT's
+required-module inventory include the new module.
+
+**EPZAE-21 remains OPEN; aggregate 33/42.** The smaller-width stationary
+error is closed, but the distinct sharp printed-source-form bridge is not.
+Next: connect the retained signed weights/normalizations to that exact
+source conclusion. Do not waive this requirement or relabel the owner-
+authorized growth repair as a proof of either false unrestricted clause.
+Frozen source, counterexamples, obstruction history and old regressions
+remain preserved. Both BATs and their zero-warning/audit gates stay mandatory.
+Focused production build passes; current full verification is recorded in
+the [Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+## Earlier closure-first analytic status (27 September 2026)
 
 EPZAE-11 is DONE; EPZAE-15/26 remain DONE; aggregate 33/42.
 EPZAE-06 is now DONE: pinned historical execution replays all nine energy
@@ -335,6 +450,12 @@ certificates, not proofs of the energy-region projections.
 
 ## Supporting theorem crosswalk
 
+EPZAE-21 is complete under the owner-authorized growth repair. The literal
+Theorem 6.2 row below is the final Atkinson source consumer; subsequent
+construction rows preserve their historical implementation checkpoints.
+Their old open-status clauses are not current blockers. The canonical
+Checklist and current acceptance review govern the aggregate status.
+
 | Paper label | Role | Planned dependency/status |
 |---|---|---|
 | `exp-process` | A/B/C preservation | General analytic A/B proved by `ExponentPair.aProcess` and `ExponentPair.bProcess`; C OPEN under EPZAE-10 |
@@ -342,9 +463,9 @@ certificates, not proofs of the energy-region projections.
 | `beta-duality` | exact closed-interval two-way beta/exponent-pair duality | Proved by `exponentPair_iff_beta_bound`; EPZAE-09 complete |
 | `beta-reflect` | beta(1-alpha)=1/2-alpha+beta(alpha), 0<=alpha<=1 | Proved by `exponentSumGrowthExponent_reflection`; independent coherent-source lower bound |
 | `heath-brown-2017` | exact kth-derivative beta estimate for every k ≥ 3, α > 0 | `HeathBrownDerivative.lean`: `TaoTrudgianYang2025.exponentSumGrowthExponent_le_heathBrown`; native VMVT input and source conventions discharged; EPZAE-12 DONE |
-| `old-exp-pair` | `(3/40,31/40)` input | Exact conditional Watt deduction proved; independent Robert--Sargos counting, finite C4 bridge, initial A-process, source A-times-A and corrected shifted averaging proved. Ordinary third derivative now controls the actual closed centered phase and doubled block; the physical initial reduction closes its small branch or returns the actual large witness. The actual signed zero-r row is now absorbed at the source floor scales. The zero-q column and diagonal now give actual physical zero-shift removal, using ordinary derivative/Abel blocks with all boundary costs. Zero-excluded shifting, remaining analytic assembly and analytic pair remain OPEN |
+| `old-exp-pair` | `(3/40,31/40)` input | **DONE:** `TaoTrudgianYang2025.exponentPair_three_fortieths` in `RobertSargosExponentPair.lean` combines the proved analytic Robert--Sargos pair with the classical A-process. The earlier conditional Watt deduction is preserved; no analytic pair is assumed by this unconditional consumer. |
 | `exp-pair-mu` | `ZetaGrowthBridge.lean`: actual analytic exponent pair gives `mu(l-k)<=k`, including both ordinate signs | EPZAE-15 generic lemma complete |
-| `mu-bound` | Exact consumer of the proved conditional old-pair deduction; Watt's analytic input and the independent Robert--Sargos fourth-derivative input remain unproved | EPZAE-15 still open |
+| `mu-bound` | Actual old-pair growth bound and its EReal infimum | **DONE:** `old_pair_zetaGrowthBound` proves `IsZetaGrowthBound (7/10) (3/40)` and `old_pair_zetaGrowthExponent` proves `μ(7/10)≤3/40`; EPZAE-15 is complete. |
 | `hux-sub` | subdivision in `tau` | EPZAE-18 |
 | `l2-mvt` | basic large-values estimate | mathlib/local analytic input; EPZAE-18 |
 | `huxley-lvt` | classical LV bound | `ClassicalLargeValueRegions` and `LargeValueHuxleyBound` prove actual-region and full uniform interfaces, including corrected cardinality powering; EPZAE-19 DONE |
@@ -353,7 +474,8 @@ certificates, not proofs of the energy-region projections.
 | `guth-maynard-lvt` | modern LV bound | `guthMaynard_largeValueBound`, with exact closed-support, reflection, phase-twist, separation, coefficient-norm, threshold, and epsilon-loss conversions; kernel-checked EPZAE-20 |
 | `bourgain-lvt` | both printed parts, full source range | `bourgain_large_values`, `largeValueExponent_le_bourgain`, `bourgain_largeValueBound`; actual exact LV attainment and unrestricted region dichotomy; EPZAE-19 DONE |
 | `power-lemma` | Dirichlet-polynomial powering | local GM coefficient machinery may help; EPZAE-18 |
-| `twelfth-bound`, `lvz-340` | zeta-specific nonexistence/bound | Genuine twelfth moment and its uniform LV consequence are proved. The printed unrestricted `lvz-340` has the preserved low-height counterexample; corrected high-height pair transfer is proved, while the specific old pair remains open. No false source statement is used. |
+| `twelfth-bound`, `lvz-340` | zeta-specific nonexistence/bound | Genuine twelfth moment and its uniform LV consequence are proved. **Owner-authorized source-contract repair:** the accepted old-pair nonexistence statement requires both `7/10+(3/40)τ<σ` and `1−τ<σ`, with `τ>0`, `1/2≤σ≤1`. The proved `exponentPair_three_fortieths` and `ExponentPair.zetaLargeValueExponent_eq_bot` discharge it. The unrestricted printed `lvz-340`, its counterexample and regressions remain permanently preserved; this is not a proof of that false statement. EPZAE-21 DONE after separate sharp Atkinson closure and full acceptance verification. |
+| Ivić Orsay 83.06, Theorem 6.2, (6.20)--(6.23) | literal sharp local zeta second moment | **DONE:** `AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson`; actual critical-line zeta, original full power widths, exact phase/prefix, endpoint-plus-integral bound, damping, dyadic range and logarithmic cutoff; constants precede physical parameters. Both signed stationary weights at `4G`, exact logarithmic small-block summation and cutoff-tail decay are proved. Sixty explicit audits and ten regressions pass both BATs. This is an independent analytic proof, not part of the growth-contract repair; (6.24) is not asserted. |
 | Ivić Orsay 83.06, Theorem 6.2 route: exact square entry | actual local zeta second moment to complete ordinary-divisor contour series | `hasSum_zetaSquareLocalMean` proves the exact source identity, including all contour limits, absolute integrated-norm summability, Gamma normalization, and compact-height interchange. The initial six `ZetaSquare*` modules have no moment premise. Averaging and the actual unit phase are proved below; the uniform amplitude/complete-series remainder is also proved below; uniform Bessel/stationary estimates, sharp remainders, and the Atkinson inequality remain open under EPZAE-21 |
 | Ivić (6.27), first Gaussian majorization and window tail | actual local second moment and physical `T ± G L` window | `zetaSquareLocalMean_le_gaussian_divisor_series` proves the weighted-series majorization with constant `exp(1)`. `exists_zetaSquareGaussian_source_approximation` gives the literal whole-line Gaussian mean up to `G T^(-A)` on `L=log T`, uniformly for `0<G≤T`. The later oscillatory source reduction remains open |
 | Ivić (6.32)--(6.33), quadratic Gaussian kernel | exact transform and frequency damping | `zetaGaussianQuadraticIntegral_eq` and `norm_zetaGaussianQuadraticIntegral_le` prove the transform with coefficient `G^(-2)+i/(2T)` and bound `sqrt(pi) G exp(-(Gv)²/8)` for `G²≤2T`. The actual unit-phase substitution and error are proved by the next row; the amplitude continuation below gives a uniform complete-source remainder, but these helpers do not establish the source's shortened divisor sum |
@@ -367,9 +489,9 @@ certificates, not proofs of the energy-region projections.
 | Ivić Orsay 83.06 (6.36), (6.38), (6.47): source-aligned lattice phase and saddle | actual unchanged divisor coefficients to the phase-adjusted local source and exact carrier geometry | `zetaDivisorLatticePhase_nat` proves the conjugate-sign insertion `exp(-2pi i n)=1`; the actual continuous test changes. `zetaSmoothDivisorSum_eq_atkinson_bessel` reapplies native Voronoi. `exists_zetaAtkinsonBesselPlus_powerSaving` proves the new complete K0 estimate; `exists_zetaSquareLocalMean_le_atkinson_reduced` consumes it, giving uniform `Cδ G log T` error on the same source widths. `zetaAtkinsonDivisorTest_mul_carrier` preserves all complex amplitudes. `zetaAtkinsonPhase_stationary_iff` and `zetaAtkinsonPhase_secondDeriv_saddle_neg` prove the unique nondegenerate positive saddle for every real carrier parameter, including both signs. Six modules, 40 public audits, 22 regressions. The main estimate is proved in the next row. The Y0 expansion is proved below; uniform stationary approximation, sharp Atkinson inequality and genuine twelfth moment remain open. Old and new continuous integrals are not equated; EPZAE-21/37 remain open |
 | Phase-adjusted logarithmic main term in the Ivić source route | actual smooth-amplitude variation to the main-integral bound and Y0-only physical source | `exists_norm_zetaAtkinsonVoronoiMain_le` proves `norm(V0_A)≤C G log T` for `T≥16`, `log T≥1`, `G>0`, `G²≤2T`, `L>0`, `8L≤G`. The actual cutoff, fixed rescaled Mellin profile, square-root/log factors, unit Gamma factor and damped quadratic Gaussian have constructed norm/variation bounds; native `norm_weighted_gmReflectionIntegral_le` supplies square-root cancellation. The main integrand is absolutely integrable and its positive-support/reflection identity is proved. `exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation` and `exists_zetaSquareLocalMean_le_atkinson_minus` consume this bound and retain only the complete phase-adjusted Y0 divisor sum, with uniform `Cδ G log T` error. Nine modules, 38 public audits, 20 regressions. No analytic premise. The literal Y0 expansion is proved in the next row; uniform stationary reduction, sharp Atkinson inequality, twelfth moment and unconditional Add-est outputs remain open under EPZAE-21/37 |
 | Literal Neumann two-term expansion toward Ivić Theorem 6.2 | native Schläfli kernel to exact decaying ray, complete arithmetic replacement and actual zeta consumers | `dfiBesselY0_eq_neumannLaplaceIntegral` proves the actual contour/branch bridge; `abs_dfiBesselY0_sub_neumannTwoTerm_le` gives explicit `K x^(-5/2)` error for every `x>0`. Physical support links this to `T^(-5/4) n^(-5/4)`. `exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le` sums the error using the genuine divisor series at `5/4` and gives `C G`; native complete Voronoi summability identifies the original series. `exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation` and `exists_zetaSquareLocalMean_le_atkinson_twoTerm` consume the complete replacement with uniform `Cδ G log T` error on `T^δ≤G≤T^(1/2-δ)`. Thirteen modules, 71 public audits, 25 regressions. No analytic premise or changed kernel. Uniform stationary reduction, sharp Atkinson inequality, genuine twelfth moment and all unconditional Add-est outputs remain open under EPZAE-21/37 |
-| `add-bound (ii)`, full closed strip and real orders | actual dyadic zeta moment to uniform LV and its EReal infimum | **DONE:** `zetaRealMoment_largeValueBound_closed_strip` and `zetaLargeValueExponent_le_of_realMoment_closed_strip` cover `1/2≤c,σ≤1`, all real `A≥1`, arbitrary real `M`, and `τ≥2`. The sole analytic input is the source dyadic moment. Arbitrary-line Mellin/Perron, retained residue and tails, real Hölder, signed height powers and logarithmic normalization are proved. At `c=1`, the actual first moment derives `M≥1`. The genuine twelfth moment is already proved and is a regression specialization. `zetaRealMoment_largeValueBound_closedStrip_aboveOne` and its EReal consumer strengthen the same exact source-moment implication to every `τ>1`. Exact reflection is now proved. EPZAE-21 remains open for source-contract correction and the sharper Atkinson branch, not this transfer. |
-| `add-bound (i)`, independent corrected theorem | actual EReal growth infimum to actual pattern nonexistence | **DONE with the explicit residual condition `σ>1−τ`:** `zetaCorrected_exponent_eq_bot_of_mu` consumes the actual `c+τ·μ(c)<σ` on the closed line/sigma strip, without finite or attained infimum assumptions. Arbitrary-order actual Mellin tails give every `τ>1`; mean-square nonvanishing proves `μ(c)≥0` and the classical pair handles `τ=1`; the sharp low-height formula handles `τ<1`. Uniform empty-pattern and pointwise consumers are proved. The printed unrestricted statement remains disproved, not replaced. Exact reflection is now proved; source-contract correction and the sharper Atkinson branch remain open under EPZAE-21. |
-| `add-bound (iii)`, exact reflection | literal affine EReal supremum equality for sigma at least 1/2 and tau greater than 1 | **SOURCE CONCLUSION DONE:** `zetaLargeValueExponent_reflection_supremum` consumes actual reflected pattern families, compact amplitudes and uniform target bounds. The exact involution yields both inequalities; transformed indices above one are proved to contribute bottom. No cardinality convergence or pointwise reflection identity is assumed. EPZAE-21 remains OPEN for the separate false unrestricted growth contract. |
+| `add-bound (ii)`, full closed strip and real orders | actual dyadic zeta moment to uniform LV and its EReal infimum | **DONE:** `zetaRealMoment_largeValueBound_closed_strip` and `zetaLargeValueExponent_le_of_realMoment_closed_strip` cover `1/2≤c,σ≤1`, all real `A≥1`, arbitrary real `M`, and `τ≥2`. The sole analytic input is the source dyadic moment. Arbitrary-line Mellin/Perron, retained residue and tails, real Hölder, signed height powers and logarithmic normalization are proved. At `c=1`, the actual first moment derives `M≥1`. The genuine twelfth moment is already proved and is a regression specialization. `zetaRealMoment_largeValueBound_closedStrip_aboveOne` and its EReal consumer strengthen the same exact source-moment implication to every `τ>1`. Exact reflection is now proved. The growth source-contract repair is owner-authorized; EPZAE-21 remains OPEN for sharp Atkinson printed-source-form bridge and any other unmet acceptance requirement, not this transfer. |
+| `add-bound (i)`, owner-authorized corrected contract | actual EReal growth infimum to actual pattern nonexistence | **DONE with the explicit residual condition `σ>1−τ`:** `zetaCorrected_exponent_eq_bot_of_mu` consumes the actual `c+τ·μ(c)<σ` on the closed line/sigma strip, without finite or attained infimum assumptions. Arbitrary-order actual Mellin tails give every `τ>1`; mean-square nonvanishing proves `μ(c)≥0` and the classical pair handles `τ=1`; the sharp low-height formula handles `τ<1`. Uniform empty-pattern and pointwise consumers are proved. The owner authorizes this corrected statement as the replacement acceptance contract; the frozen unrestricted source, counterexample, obstruction documentation and regressions remain permanently preserved. This is not a proof of the false printed statement. Exact reflection is proved; sharp Atkinson printed-source-form bridge remains mandatory and OPEN under EPZAE-21. |
+| `add-bound (iii)`, exact reflection | literal affine EReal supremum equality for sigma at least 1/2 and tau greater than 1 | **SOURCE CONCLUSION DONE:** `zetaLargeValueExponent_reflection_supremum` consumes actual reflected pattern families, compact amplitudes and uniform target bounds. The exact involution yields both inequalities; transformed indices above one are proved to contribute bottom. No cardinality convergence or pointwise reflection identity is assumed. The separate growth source-contract repair is owner-authorized, not a proof of the false unrestricted statement. EPZAE-21 remains OPEN for sharp Atkinson printed-source-form bridge and all other unmet requirements. |
 | Actual signed carriers toward Ivić Theorem 6.2 | actual power-weighted oscillatory integrals to uniform summand bounds and complete physical source identities | `exists_norm_atkinsonPowerIntegral_le` proves `norm(Iα)≤Cα G T^(-α)` for all real b and α, with Cα depending only on α, on `T>0, G>0, G²≤2T, L>0, 8L≤G`. The proof consumes the actual square-substituted amplitude and native first-derivative test in both orientations. `zetaAtkinsonTwoTerm_eq_carrierIntegral` proves all four signed quarter-power carriers with exact factors and n=0 handling; their complete weighted series is genuinely summable. `exists_norm_zetaAtkinsonTwoTerm_le` gives the actual `n^(-1/4)` and `n^(-3/4)` summand bounds, which are not summable majorants. `exists_zetaSquarePhysicalGaussian_carrier_approximation` and `exists_zetaSquareLocalMean_le_carriers` retain the complete carrier series and uniform `Cδ G log T` source error. Ten modules, 43 public audits, 24 regressions. No analytic premise. Uniform stationary main values, sharper arithmetic tails, sharp Atkinson inequality, genuine twelfth moment and all unconditional Add-est outputs remain open under EPZAE-21/37 |
 | `add-bound (ii)`, exact coefficient-one source entry | sharp polynomial to localized critical-zeta convolution | `ZetaLargeValuePattern.polynomial_eq_critical_zeta_mellin` retains both integer endpoints and residue `mellin cutoff (1-it)`. `ZetaMellinUniform` and `ZetaMellinLocalization` prove physical-scale kernels and the far integral. `ZetaLargeValuePattern.perron_entry` bounds and absorbs both errors; `exists_zetaPerron_uniform_threshold` derives its physical conditions from all actual windows `σ ≥ 1/2`, `τ ≥ 2`, `δ ≤ 1/4`. This critical-line entry edge is complete, not the full EPZAE-21 work package |
 | Summable correction removal toward Ivić Theorem 6.2 | actual near/far signed carriers to a leading-only physical source | `exists_norm_atkinsonPowerIntegral_far_le` proves both signs with `Cα G T^(-α)/b` for `b≥8sqrt(T)` on the full physical support. `exists_norm_atkinsonCorrectionTerm_le` combines near and far ranges into the actual divisor-Dirichlet majorant at `5/4`; `exists_norm_atkinsonCorrectionSum_le` sums the entire correction with bound `C G`. `summable_atkinsonLeadingTerm` and `zetaAtkinsonTwoTermSum_eq_leading_sub_correction` justify the complete leading series. `exists_zetaSquarePhysicalGaussian_atkinson_leading_approximation` and `exists_zetaSquareLocalMean_le_atkinson_leading` consume that error, retaining both leading carriers and uniform `Cδ G log T` source error. Four modules plus the generalized weighted-primitive helper; 19 new public audits, 16 regressions. No analytic premise or discarded source factor. Leading stationary main values, sharper leading arithmetic tails, sharp Atkinson inequality, genuine twelfth moment and all unconditional Add-est outputs remain open under EPZAE-21/37 |

@@ -1,0 +1,9 @@
+import TaoTrudgianYang2025.AtkinsonMorseStationary
+
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCoordinate_tendsto_atTop
+#print axioms TaoTrudgianYang2025.atkinsonRootPhase_tendsto_atBot
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseCoordinate_tendsto_atBot
+#print axioms TaoTrudgianYang2025.atkinsonRootMorseRange_eq_univ
+#print axioms TaoTrudgianYang2025.contDiff_atkinsonRootMorseInverse
+#print axioms TaoTrudgianYang2025.contDiffAt_atkinsonPowerWeight_infty
+#print axioms TaoTrudgianYang2025.contDiff_atkinsonMorseWeight

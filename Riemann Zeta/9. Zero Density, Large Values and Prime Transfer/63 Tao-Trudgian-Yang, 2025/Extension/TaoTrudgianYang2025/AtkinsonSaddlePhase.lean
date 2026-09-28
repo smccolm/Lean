@@ -1,9 +1,12 @@
 import TaoTrudgianYang2025.AtkinsonSaddleNormalization
 
 /-!
-# The literal Atkinson phase at both actual saddles
+# The stationary Atkinson phase at both actual saddles
 
-The phase agrees with Heath--Brown (1978), (11), and Ivić's Orsay (6.22).
+The phase uses the stationary `-pi/4` convention of Heath--Brown (1978), (11).
+Ivić's Orsay (6.22) omits that constant: AtkinsonPrintedSource proves the
+explicit constant-phase and unit-modulus prefix bridges, rather than
+asserting literal equality with that printed phase.
 Its definition follows the already inspected adjacent GafniTao
 HeathBrownAtkinsonPhase module; no conditional moment theorem is imported.
 The equalities below connect it to the actual continuous source phase.

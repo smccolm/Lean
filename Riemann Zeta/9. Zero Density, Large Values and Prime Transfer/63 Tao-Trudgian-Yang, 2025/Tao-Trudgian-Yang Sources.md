@@ -1,6 +1,129 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Closure-first analytic status (27 September 2026)
+## EPZAE-21 complete under the authorized contract (28 September 2026)
+
+[AtkinsonPrintedSource.lean](Extension/TaoTrudgianYang2025/AtkinsonPrintedSource.lean) now proves
+`AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson`:
+the actual local zeta second moment satisfies Ivić Orsay 83.06, Theorem 6.2,
+(6.20)--(6.23), throughout `T^δ≤G≤T^(1/2−δ)`, for every `δ,η>0`,
+with a uniform constant and threshold before `T,G`.
+The exact printed phase, `K<n≤K+x` prefix, endpoint-plus-integral expression,
+`exp(-G²K/T)` damping, `T^(1/3)≤K≤N` dyadic range, and
+`N=B²/(T/(2π)−B)`, `B=T/(2πG)(log T)^((1+η)/2)`, are retained.
+The phase differs from the old stationary phase by `π/4`; the constant-phase
+and unit-modulus prefix bridges are proved explicitly.
+
+The proof consumes the actual full-width stationary source at width `4G`,
+controls both signed weights, absorbs small blocks using the exact
+logarithmic divisor bound, and derives the Gaussian tail beyond printed `N`.
+No analytic source inequality or desired conclusion is assumed. This is a
+new analytic proof, separate from the owner-authorized growth-contract repair.
+The shifted-height corollary (6.24) is not asserted by this theorem.
+
+One focused source module, 60 explicit public audits and ten semantic
+regressions are integrated. Its focused production build passes, 9,108 jobs,
+zero Lean diagnostics. Root imports and BAT coverage include it.
+**EPZAE-21 is DONE; aggregate 34/42.** Both mandatory BATs pass, exit 0,
+with zero Lean errors, warnings or linter diagnostics. The clause-by-clause
+acceptance review confirms the corrected growth and old-pair clauses,
+literal reflection, full real-moment transfer, genuine twelfth moment and
+the separately proved sharp Atkinson source form. Completion is under the
+owner-authorized contract, not the false printed one.
+Earlier source-form-open checkpoints below are chronological history.
+The strict `σ>1−τ` owner-authorized repair remains in force, not a proof of
+the false printed growth statement. Frozen source, both counterexamples,
+obstruction history and all old regressions remain permanently preserved.
+Current run evidence is in the [Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+
+## Historical adoption checkpoint: owner-authorized EPZAE-21 repair (27 September 2026)
+
+The accepted growth/nonexistence clause now requires **`σ>1−τ`**, in
+addition to its growth threshold and source domain. This is an
+**owner-authorized source-contract repair**, not a proof of the false
+printed `add-bound(i)` or unrestricted `lvz-340`. The
+[repair specification](Tao-Trudgian-Yang%20Zeta%20Growth%20Repair.md)
+identifies the existing proved theorem and old-pair consequence.
+The frozen source, counterexample, obstruction history and all regressions
+are permanently preserved; historical requests for authorization below
+are superseded by this approval.
+
+**EPZAE-21 remains OPEN; aggregate 33/42.** Every other acceptance requirement
+is unchanged, including the remaining sharp Atkinson printed-source-form
+bridge. The smaller-width stationary error is now proved separately below.
+The independently proved twelfth moment does not
+waive that obligation. Both build BATs, their audits and regressions remain
+mandatory; keep their coverage updated as needed.
+
+## Earlier Atkinson full-width stationary checkpoint (28 September 2026)
+
+[AtkinsonMorseStationary.lean](Extension/TaoTrudgianYang2025/AtkinsonMorseStationary.lean)
+now proves the actual stationary-source error on **every original power width**
+`T^δ≤G≤T^(1/2−δ)`, with `δ>0` and uniform `C_δ,T₀(δ)`.
+`exists_atkinsonLeadingSum_sub_stationary_full_width` gives `C_δ G`;
+`exists_zetaSquarePhysicalGaussian_stationary_full_width` and
+`exists_zetaSquareLocalMean_le_stationary_full_width` give `C_δ G log T`.
+`exists_zetaSquarePhysicalGaussian_signedMain_full_width` retains both
+original signed sums, phases, coefficients and the ceiling cutoff.
+
+The actual global Morse change of variables, inverse jets, cutoff support,
+complex second-derivative remainder and quarter-weighted divisor summation
+are proved, not assumed. The sharper quadratic remainder extends the
+existing BetaQuadraticLocalRemainder module; only one targeted Atkinson
+module was added, with 80 explicit public audits and seven exact-type
+regressions. A dependency-cycle check prevents importing it into the old
+upstream stationary-source module. Root imports and the principal BAT's
+required-module inventory include the new module.
+
+**EPZAE-21 remains OPEN; aggregate 33/42.** The smaller-width stationary
+error is closed, but the distinct sharp printed-source-form bridge is not.
+Next: connect the retained signed weights/normalizations to that exact
+source conclusion. Do not waive this requirement or relabel the owner-
+authorized growth repair as a proof of either false unrestricted clause.
+Frozen source, counterexamples, obstruction history and old regressions
+remain preserved. Both BATs and their zero-warning/audit gates stay mandatory.
+Focused production build passes; current full verification is recorded in
+the [Reproduction Manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+## Exact remaining Atkinson source contract (28 September 2026)
+
+The unchanged [Ivić Orsay 83.06 scan](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf) was visually rechecked at printed
+pages 107--108 (PDF indices 111--112), not inferred from its imperfect OCR.
+Theorem 6.2, (6.20), uses the endpoint-plus-integral expression
+`|S(K)| + K^(-1) integral_[0,K] |S(x)| dx`, damping `exp(-G^2 K/T)`,
+and dyadic `T^(1/3) <= K <= N`. Its (6.23) cutoff is
+`N = B^2/(T/(2*pi)-B)`, `B = T/(2*pi*G) * (log T)^((1+eta)/2)`,
+for fixed `eta>0`. The shifted-height version (6.24) has
+`exp(-G^2 K/(2*T))`, not the same damping denominator as (6.20).
+The printed phase (6.22) has no `-pi/4`; the existing local phase includes
+that constant. A unit-modulus constant-factor bridge is required, rather
+than a claim of literal equality. The printed prefix uses `K<n<=K+x`;
+the existing range-based block starts at `K`, so its endpoints also need
+an explicit bridge. No source or pin was edited.
+
+Current short remaining-obligation DAG:
+actual pointwise weight increments [scratch-checked] -> literal
+endpoint/integral stationary block [scratch-checked] -> global dyadic
+assembly, small blocks and printed cutoff [OPEN] -> exact source consumer [OPEN].
+The full-width stationary input to this chain is now proved. A promising
+alternate route uses that input at width `4G`: existing damping then leaves
+room for the printed `exp(-G^2 K/T)` factor. This is a proof route, not a
+completed source theorem. The retained two weights must both be controlled;
+one must not be silently discarded.
+
+Targeted scratch work now kernel-checks 29 theorems through
+`exists_stationary_printed_block_bound`: both actual signed stationary
+weights satisfy the literal endpoint-plus-integral bound at width `4G`,
+with the printed damping, constant-phase bridge and `K<n<=K+x` endpoints.
+The actual saddle, cutoff, Mellin, residual and Gaussian increments are
+derived, not assumed. The final focused run has zero Lean diagnostics and
+29 explicit dependency audits using only permitted logical axioms.
+These are not yet production-integrated or an EPZAE-21 closure.
+No new support-module family is needed for these deductions: the existing
+cutoff bound is rescaled by `G/L`, and Mathlib's existing Abel summation API
+provides the endpoint/integral identity once the actual weights are supplied.
+
+## Earlier closure-first analytic status (27 September 2026)
 
 EPZAE-11 is DONE; EPZAE-15/26 remain DONE; aggregate 33/42.
 EPZAE-06 is now DONE: pinned historical execution replays all nine energy
@@ -81,6 +204,101 @@ Earlier checkpoints below are chronological history, not current work orders.
 
 ## Remaining analytic input: exact five-row dependency test
 
+### Primary proof received and source entry checked (28 September 2026)
+
+The owner supplied [Huxley (1993), full 40-page PDF](Exponential_Sums_and_the_Riemann_Zeta_Fu.pdf).
+All pages were read, with key formulas visually checked. SHA256:
+
+`7eb555b6c7a29dce6b6eedca0f4cebbe64e4bc8079d85e50da24719c1b492cca`.
+
+Theorem 3 (pages 38--39) gives exactly the five beta formulas below.
+Its proof uses **Theorem 2's parameter-family fifth-moment estimate**
+(pages 35--37), after an A-step whose differencing variable is the family
+parameter. A single-phase estimate alone is not the identified source input.
+Sections 6--7 use all four coincidence conditions to obtain L^-2 and L^-3
+long-block gains. Section 9 retains the quartic Taylor term; Section 10
+adds horizontal and vertical parameter-family counts. Theorem 2 consumes
+(10.11)--(10.13). Sections 10 and 12 reference Huxley--Watt (1989),
+*Exponential sums with a parameter*, for some spacing/differencing details;
+those steps must be proved or replaced, never inferred from the citation.
+
+The page-39 A-squared table covers the omitted interval
+(199/716,120/419) by the pieces (29+464*alpha)/600 up to 967/3428 and
+(49+1351*alpha)/1614 thereafter. This is recovered source provenance,
+not a new certified estimate.
+
+[HuxleyModelNondegeneracy.lean](Extension/TaoTrudgianYang2025/HuxleyModelNondegeneracy.lean)
+proves the exact seven polynomial tests from Theorem 3. For the monomial
+jet [z*x^3,-a*z*x^2,a*(a+1)*z*x,-a*(a+1)*(a+2)*z], the printed determinant
+is -a^2*(2*a-1)*z^4*x^8, with a=sigma+2>2 and z>0.
+Compactness upgrades these identities to one positive perturbation
+tolerance and lower bound on the entire closed model interval, before
+quantifying over the actual phase. The logarithmic second-derivative
+identities are also proved on the interior, including negative derivatives.
+No exterior smoothness, family moment or source bound is assumed.
+The actual compressed A-process shifts consume the existing uniform
+shift-model theorem and satisfy the same seven tests with constants before
+the source phase and shift. Mixed shift-parameter derivatives remain open.
+
+[HuxleyLinearForms.lean](Extension/TaoTrudgianYang2025/HuxleyLinearForms.lean)
+now proves the full Lemma 2.1 dichotomy and both displayed bounds of
+Lemma 2.5. The focused production build passes, 8,477 jobs, zero diagnostics;
+22 public audits and six regressions are registered. The complete pre-integration
+scratch check passed in session 25987 with standard logical axioms only.
+The retained [scratch entry](../../../.scratch/epzae-huxley-linear-form-20260928.lean)
+now imports production and rechecks the exact public contracts.
+It constructs a reduced Dirichlet approximation, proves the small-denominator
+divisibility/error branch, and counts the large-denominator branch using
+integer residual fibers and the existing separated-interval theorem.
+For a nonempty finite subsequence of [1,N], either R<=12*delta*N or there
+is q>0 with q<=N/R, every sample divisible by q, and nearest-integer
+distance of q*alpha at most delta/R. All samples and the printed constant 12
+are retained; delta=0 is also allowed. No rational approximation or count
+estimate remains a hypothesis of the final theorem. The maximal-denominator
+determinant labels are proved injective, and both their alpha and beta
+near-integer constraints are derived from the actual two input errors.
+The determinant-one neighbor is constructed directly from Bezout coefficients
+and proved to belong to the complete finite sector (2.3). Taking absolute
+determinants retains a unit label and at least one third of the source
+cardinality; the proved Lemma 2.1 then gives both displayed Lemma 2.5 bounds.
+Neither adjacency nor a count estimate is assumed. The source constants 8
+and 96, sector endpoints, coprimality and all approximation hypotheses remain.
+
+The printed phrase "both integers" in Lemma 2.5 is false, independently of
+its valid displayed bounds. With N=l=B=1, mu=2, delta=1/1000,
+alpha=1/2000 and beta=0, the complete sector is {(1,1),(2,1)} and all
+hypotheses hold, but alpha is not an integer.
+`printed_exact_integrality_counterexample` checks this in the kernel.
+The original PDF and this counterexample are preserved; no proof of the
+literal integrality assertion or owner authorization to change it is claimed.
+This route needs only the displayed near-integer estimates.
+
+The next terminal counting obligations are Lemmas 2.3/2.6 and their actual
+four-coordinate consumer. The printed proof of Lemma 2.3 also needs care:
+subtracting two errors gives 2*delta, so applying the stated Lemma 2.1 to
+3R/(4N) differences directly gives 8*delta*N/(3R), not the printed
+4*delta*N/(3R). This identifies a gap in that literal derivation, not a
+counterexample to Lemma 2.3. Prove the exact estimate by a complete route
+before claiming it; do not silently copy the smaller constant.
+
+The next cited Farey-density input is Lemma 9.2 of Huxley's
+[1990 paper, Exponential Sums and Lattice Points](https://doi.org/10.1112/plms/s3-60.3.471).
+The publisher record was checked, but its full PDF was not accessible in
+this follow-up. A [CiteSeer-indexed Huxley--Watt parameter-paper PDF](https://citeseerx.ist.psu.edu/document?doi=098bc5dd0d2bdb7dd84d1c16d6af052dfd26ea3b&repid=rep1&type=pdf)
+was found but returned HTTP 403 when fetched; it has not been read.
+Neither an abstract nor a search extract supplies the missing proof.
+These access results do not prevent independent finite-sector work.
+
+The finite Farey/long-block count, mixed-parameter and enlarged-domain
+bridges, fifth moment and final differencing remain open. The existing
+Taylor-pasted extension has been inspected: it agrees only on a buffered
+plateau, so applying it still needs a faithful endpoint-loss argument.
+Existing shifts, finite jets, four-dimensional sieve and source labels
+should be reused. Do not turn these remaining steps into assumed fields
+or create a broad module family. Aggregate remains 34/42.
+
+### Exact remaining beta contracts
+
 The highest-impact unresolved input is this portion of Huxley's 1993
 Theorem 3. These are analytic obligations, not certified bounds.
 
@@ -101,10 +319,11 @@ All five estimates remain explicit hypotheses; this does not close
 EPZAE-13, EPZAE-14 or EPZAE-29. The last two advertised pairs additionally
 need short-range estimates and coverage of (199/716,120/419).
 
-Primary source status, checked 27 September 2026:
+Historical primary-source access checks, before the owner supplied the PDF:
 
 - [Huxley, Exponential Sums and the Riemann Zeta Function IV](https://doi.org/10.1112/plms/s3-66.1.1):
-  publisher abstract available; full proof inaccessible in this session.
+  publisher abstract was available; full proof was then inaccessible.
+  This access limitation is superseded by the local PDF above.
   The [ANTEDB statement](https://teorth.github.io/expdb/blueprint/beta-chapter.html)
   identifies Theorem 3 but is not Lean proof evidence.
 - [Huxley's 1991 survey](https://www.numdam.org/article/AST_1991__198-199-200__165_0.pdf):
@@ -117,6 +336,17 @@ Primary source status, checked 27 September 2026:
   explicitly has no full text. The author's
   [publication list](https://profmartinhuxley.wordpress.com/publications/)
   identifies a later construction but does not supply its proof.
+
+The 28 September alternate-source check also read Bourgain's
+[1993 IHES preprint, Remarks on Halasz--Montgomery type inequalities](https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/BOURGAIN/1990-1995/M_93_51/M_93_51_web.pdf).
+Its distributional and zero-density arguments use moment/exponent-pair inputs;
+they do not supply the missing five-row exponential-sum theorem or its joint
+resonance count. The
+[Oxford publisher record](https://academic.oup.com/plms/article-abstract/s3-66/1/1/1542057)
+still offers the 1993 Huxley proof only as a purchase-only PDF. The resonance-
+curves DOI/Project Euclid route did not expose readable full text in this
+session. These are access and applicability findings, not mathematical
+impossibility claims; no theorem is inferred from an abstract or citation.
 
 The [exact route diagnostics](../../../.scratch/epzae-huxley-route-obstruction-20260927.lean)
 pass in session 8401. At alpha=3/8, both current A(Bourgain) and D(Bourgain)
@@ -142,6 +372,30 @@ the first public pair still left a positive exploratory gap of about
 This is floating-arithmetic discovery only, not a proof of necessity or
 impossibility. The five-row implication above remains the verified
 sufficient contract; no minimum-input claim is made.
+
+The 28 September alternate-route check inspected the current ANTEDB
+[Cushing example](https://github.com/teorth/expdb/blob/main/blueprint/src/python/examples.py)
+and beta A-process implementation. The example loads all literature beta
+bounds and exponent pairs before applying Lemma 4.6; it is not an independent
+proof from the locally proved inputs. A bounded floating-arithmetic search
+using only proved seed inputs, 8,001 half-interval samples, twelve initial
+A/B/C/D rounds and twelve further beta/reflection/pair rounds still missed
+all four public targets. This is discovery only, not a kernel certificate
+or an impossibility result, and authorizes no new completion claim.
+
+The existing exact route diagnostic now also proves
+`cushing_pair_majorants_miss_first_target`: at alpha=3/8, each advertised
+Cushing supporting line is strictly above the first public target line.
+Its direct Lean check passes with all four diagnostic dependency audits,
+standard logical axioms only and zero diagnostics. This does not assume or
+disprove either analytic pair, nor exclude new transformed combinations.
+The production Lean, BAT coverage and aggregate completion status are unchanged.
+
+The accessible primary [Oberwolfach 46/2004 report](https://ems.press/content/serial-article-files/45964),
+printed pages 2452--2453, was also checked. Huxley's contribution describes
+the cusp geometry and gives special logarithmic-phase formulas; it does not
+prove the uniform model-phase joint count required by the five-row contract.
+It therefore does not discharge that input.
 
 ## Signed count and literal cubic eighth moment (27 September 2026)
 

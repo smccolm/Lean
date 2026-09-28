@@ -13,6 +13,16 @@ theorem current_pair_majorants_miss_first_target :
         (exponentPairLine (18/199) (593/796) (3/8)) := by
   norm_num [exponentPairLine]
 
+/- Even if the two advertised Cushing pairs were independently proved,
+their individual supporting lines would not replace the first public pair.
+This comparison does not assume, prove or disprove either analytic pair,
+and it does not rule out new transformed combinations. -/
+theorem cushing_pair_majorants_miss_first_target :
+    exponentPairLine (89/1282) (997/1282) (3/8) <
+      min (exponentPairLine (311/4822) (3799/4822) (3/8))
+        (exponentPairLine (80219/1298878) (515638/649439) (3/8)) := by
+  norm_num [exponentPairLine]
+
 /- The retained P^12*U^3 term with P=T^alpha and U=T^(1-3*alpha)
 has twelfth-root exponent (1+alpha)/4. Retaining sqrt(q) in the
 separate Gauss error does not remove this term. -/
@@ -29,7 +39,7 @@ theorem classical_density_majorants_miss_piece_four :
   norm_num
 
 #print axioms current_pair_majorants_miss_first_target
+#print axioms cushing_pair_majorants_miss_first_target
 #print axioms retained_joint_count_cost_misses_first_target
 #print axioms classical_density_majorants_miss_piece_four
 end HuxleyRouteDiagnostic
-

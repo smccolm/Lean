@@ -186,4 +186,225 @@ theorem quadraticRemainderConstant_le_inverse_window
   rw [he]
   exact add_le_add le_rfl (div_le_div_of_nonneg_right hb (by positivity))
 
+theorem norm_integral_sq_mul_betaQuadraticKernel_le_coupled
+    {V : ℝ → ℝ} {T H M L : ℝ}
+    (hV : ContDiff ℝ ∞ V) (hT : 0 < T) (hH : 0 < H)
+    (hb : ∀ z ∈ Icc (-H) H, |V z| ≤ M)
+    (hd : ∀ z ∈ Icc (-H) H, |V z+z*deriv V z| ≤ L) :
+    ‖∫ z in (-H)..H, ((z^2*V z : ℝ) : ℂ)*betaQuadraticKernel T z‖ ≤
+      (2*H*M+2*H*L)/(2*Real.pi*T) := by
+  let c : ℂ := ((-2*Real.pi*T : ℝ) : ℂ)*Complex.I
+  let U : ℝ → ℂ := fun z => ((z*V z : ℝ) : ℂ)
+  let U' : ℝ → ℂ := fun z => ((V z+z*deriv V z : ℝ) : ℂ)
+  have hDV : Continuous (deriv V) := by
+    simpa only [iteratedDeriv_succ,iteratedDeriv_zero] using
+      hV.continuous_iteratedDeriv 1 (by simp)
+  have hU : ∀ z : ℝ, HasDerivAt U (U' z) z := by
+    intro z
+    have h := ((hasDerivAt_id z).mul
+      (hV.differentiable (by simp : (∞ : WithTop ℕ∞) ≠ 0) z).hasDerivAt).ofReal_comp
+    simpa only [id_eq,one_mul] using h
+  have hK : ∀ z : ℝ, HasDerivAt (betaQuadraticKernel T)
+      (c*(z : ℂ)*betaQuadraticKernel T z) z := by
+    intro z
+    convert betaQuadraticKernel_hasDerivAt T z using 1
+    dsimp [c]
+    push_cast
+    ring
+  have hUc : Continuous U' := Complex.continuous_ofReal.comp
+    (hV.continuous.add (continuous_id.mul hDV))
+  have hKc : Continuous (fun z : ℝ => c*(z : ℂ)*betaQuadraticKernel T z) :=
+    (continuous_const.mul Complex.continuous_ofReal).mul (continuous_betaQuadraticKernel T)
+  have hp := intervalIntegral.integral_mul_deriv_eq_deriv_mul
+    (u := U) (u' := U') (v := betaQuadraticKernel T)
+    (v' := fun z : ℝ => c*(z : ℂ)*betaQuadraticKernel T z)
+    (fun z _ => hU z) (fun z _ => hK z)
+    (hUc.intervalIntegrable (-H) H) (hKc.intervalIntegrable (-H) H)
+  have he : c*(∫ z in (-H)..H, ((z^2*V z : ℝ) : ℂ)*betaQuadraticKernel T z) =
+      U H*betaQuadraticKernel T H-U (-H)*betaQuadraticKernel T (-H)-
+        ∫ z in (-H)..H, U' z*betaQuadraticKernel T z := by
+    rw [← hp,← intervalIntegral.integral_const_mul]
+    apply intervalIntegral.integral_congr
+    intro z _
+    dsimp [U]
+    push_cast
+    ring
+  have hden : 0 < 2*Real.pi*T := mul_pos (mul_pos (by norm_num) Real.pi_pos) hT
+  have hc : ‖c‖ = 2*Real.pi*T := by
+    dsimp only [c]
+    rw [norm_mul,Complex.norm_I,mul_one,Complex.norm_real,Real.norm_eq_abs,
+      abs_of_neg (by nlinarith : -2*Real.pi*T < 0)]
+    ring
+  have hUb : ∀ z : ℝ, |z| ≤ H → ‖U z*betaQuadraticKernel T z‖ ≤ H*M := by
+    intro z hz
+    rw [norm_mul,norm_betaQuadraticKernel,mul_one,Complex.norm_real,Real.norm_eq_abs,abs_mul]
+    exact mul_le_mul hz (hb z (abs_le.mp hz)) (abs_nonneg _) hH.le
+  have hIb : ‖∫ z in (-H)..H, U' z*betaQuadraticKernel T z‖ ≤ 2*H*L := by
+    have hbound := intervalIntegral.norm_integral_le_of_norm_le_const
+      (a := -H) (b := H) (f := fun z : ℝ => U' z*betaQuadraticKernel T z) (C := L) (fun z hz => by
+        have hz' : |z| ≤ H := by
+          rw [uIoc_of_le (by linarith : -H ≤ H)] at hz
+          exact abs_le.mpr ⟨hz.1.le,hz.2⟩
+        rw [norm_mul,norm_betaQuadraticKernel,mul_one,Complex.norm_real,Real.norm_eq_abs]
+        exact hd z (abs_le.mp hz'))
+    apply hbound.trans_eq
+    rw [abs_of_nonneg (by linarith : 0 ≤ H- -H)]
+    ring
+  apply (le_div_iff₀ hden).mpr
+  rw [mul_comm,← hc,← norm_mul,he]
+  have hnorm := (norm_sub_le
+    (U H*betaQuadraticKernel T H-U (-H)*betaQuadraticKernel T (-H))
+    (∫ z in (-H)..H, U' z*betaQuadraticKernel T z)).trans
+      (add_le_add (norm_sub_le _ _) le_rfl)
+  have hright := hUb H (by rw [abs_of_pos hH])
+  have hleft := hUb (-H) (by rw [abs_neg,abs_of_pos hH])
+  linarith
+
+
+theorem abs_quadraticTaylorCoefficient_coupled_deriv_le
+    {W : ℝ → ℝ} {H M z : ℝ} (hW : ContDiff ℝ ∞ W) (hH : 0 < H)
+    (hb : ∀ x ∈ Icc (-H) H, |iteratedDeriv 2 W x| ≤ M)
+    (hz : z ∈ Icc (-H) H) :
+    |quadraticTaylorCoefficient W z+z*deriv (quadraticTaylorCoefficient W) z| ≤ 2*M := by
+  have hzero : (0:ℝ) ∈ Icc (-H) H := ⟨by linarith,by linarith⟩
+  have hM : 0 ≤ M := (abs_nonneg _).trans (hb 0 hzero)
+  have hV := abs_quadraticTaylorCoefficient_le_local hH.le hb hz
+  by_cases hz0 : z = 0
+  · subst z
+    simp only [zero_mul,add_zero]
+    linarith
+  have hD : ∀ x ∈ Icc (-H) H, DifferentiableAt ℝ (deriv W) x := by
+    intro x _
+    simpa only [iteratedDeriv_one] using
+      (contDiffAt_iteratedDeriv_infty (hW.contDiffAt (x := x)) 1).differentiableAt
+        (by simp : (∞ : WithTop ℕ∞) ≠ 0)
+  have hdiff := (convex_Icc (-H) H).norm_image_sub_le_of_norm_deriv_le hD (by
+    intro x hx
+    simpa only [Real.norm_eq_abs,iteratedDeriv_succ,iteratedDeriv_zero] using hb x hx) hzero hz
+  simp only [Real.norm_eq_abs,sub_zero] at hdiff
+  have hquot : |(deriv W z-deriv W 0)/z| ≤ M := by
+    rw [abs_div]
+    exact (div_le_iff₀ (abs_pos.2 hz0)).2 hdiff
+  have hvd := ((quadraticTaylorCoefficient_contDiff hW).differentiable
+    (by simp : (∞ : WithTop ℕ∞) ≠ 0) z).hasDerivAt
+  have hleft : HasDerivAt (fun x : ℝ => x^2*quadraticTaylorCoefficient W x)
+      (2*z*quadraticTaylorCoefficient W z+z^2*deriv (quadraticTaylorCoefficient W) z) z := by
+    convert ((hasDerivAt_id z).pow 2).mul hvd using 1; simp
+  have hright : HasDerivAt (fun x : ℝ => W x-W 0-x*deriv W 0)
+      (deriv W z-deriv W 0) z := by
+    convert (((hW.differentiable (by simp : (∞ : WithTop ℕ∞) ≠ 0) z).hasDerivAt).sub_const
+      (W 0)).sub ((hasDerivAt_id z).mul_const (deriv W 0)) using 1; simp
+  have he : (fun x : ℝ => x^2*quadraticTaylorCoefficient W x) =
+      fun x : ℝ => W x-W 0-x*deriv W 0 := by
+    funext x
+    simpa only [sub_zero,quadraticTaylorCoefficient] using segmentTaylorAverage_second_global hW 0 x
+  have he' := congrArg (fun f : ℝ → ℝ => deriv f z) he
+  dsimp only at he'
+  rw [hleft.deriv,hright.deriv] at he'
+  have hformula : quadraticTaylorCoefficient W z+z*deriv (quadraticTaylorCoefficient W) z =
+      (deriv W z-deriv W 0)/z-quadraticTaylorCoefficient W z := by
+    field_simp
+    nlinarith only [he']
+  rw [hformula]
+  exact (abs_sub _ _).trans (by linarith only [hquot,hV])
+
+theorem norm_quadratic_window_remainder_le_secondDeriv
+    {W : ℝ → ℝ} {T H M₀ M₂ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (h₀ : |W 0| ≤ M₀)
+    (h₂ : ∀ z ∈ Icc (-H) H, |iteratedDeriv 2 W z| ≤ M₂) :
+    ‖(∫ z in (-H)..H, (W z : ℂ)*betaQuadraticKernel T z)-
+      (W 0 : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        (4*M₀/H+3*H*M₂)/(Real.pi*T) := by
+  have hparts := norm_integral_sq_mul_betaQuadraticKernel_le_coupled
+    (quadraticTaylorCoefficient_contDiff hW) hT hH
+    (fun z hz => abs_quadraticTaylorCoefficient_le_local hH.le h₂ hz)
+    (fun z hz => abs_quadraticTaylorCoefficient_coupled_deriv_le hW hH h₂ hz)
+  have htail := norm_betaQuadraticWindow_sub_main hT hH
+  rw [integral_weighted_betaQuadraticKernel_taylor hW]
+  have he :
+      (W 0 : ℂ)*(∫ z in (-H)..H, betaQuadraticKernel T z)+
+          (∫ z in (-H)..H, ((z^2*quadraticTaylorCoefficient W z : ℝ) : ℂ)*
+            betaQuadraticKernel T z)-
+          (W 0 : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)) =
+      (W 0 : ℂ)*((∫ z in (-H)..H, betaQuadraticKernel T z)-
+          (𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))+
+          ∫ z in (-H)..H, ((z^2*quadraticTaylorCoefficient W z : ℝ) : ℂ)*
+            betaQuadraticKernel T z := by ring
+  rw [he]
+  apply (norm_add_le _ _).trans
+  have hmain :
+      ‖(W 0 : ℂ)*((∫ z in (-H)..H, betaQuadraticKernel T z)-
+        (𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤ M₀*(4/(T*H*Real.pi)) := by
+    rw [norm_mul,Complex.norm_real,Real.norm_eq_abs]
+    exact mul_le_mul h₀ htail (norm_nonneg _) ((abs_nonneg _).trans h₀)
+  apply (add_le_add hmain hparts).trans_eq
+  field_simp
+  ring
+
+theorem iteratedDeriv_realProjection {W : ℝ → ℂ} (hW : ContDiff ℝ ∞ W)
+    (L : ℂ →L[ℝ] ℝ) (k : ℕ) :
+    iteratedDeriv k (fun x => L (W x)) = fun x => L (iteratedDeriv k W x) := by
+  induction k with
+  | zero => rfl
+  | succ k ih =>
+      rw [iteratedDeriv_succ,ih]
+      funext x
+      have hd := (hW.differentiable_iteratedDeriv k
+        (WithTop.coe_lt_coe.mpr (ENat.coe_lt_top k)) x).hasDerivAt
+      simpa only [iteratedDeriv_succ] using (L.hasFDerivAt.comp_hasDerivAt x hd).deriv
+
+theorem norm_complex_quadratic_window_remainder_le_secondDeriv
+    {W : ℝ → ℂ} {T H M₀ M₂ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (h₀ : ‖W 0‖ ≤ M₀)
+    (h₂ : ∀ z ∈ Icc (-H) H, ‖iteratedDeriv 2 W z‖ ≤ M₂) :
+    ‖(∫ z in (-H)..H, W z*betaQuadraticKernel T z)-
+      W 0*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        2*(4*M₀/H+3*H*M₂)/(Real.pi*T) := by
+  have hR : ContDiff ℝ ∞ (fun x => (W x).re) := Complex.reCLM.contDiff.comp hW
+  have hI : ContDiff ℝ ∞ (fun x => (W x).im) := Complex.imCLM.contDiff.comp hW
+  have hr := norm_quadratic_window_remainder_le_secondDeriv (M₂ := M₂) hR hT hH
+    ((Complex.abs_re_le_norm _).trans h₀) (by
+      intro z hz
+      change |iteratedDeriv 2 (fun x => Complex.reCLM (W x)) z| ≤ M₂
+      rw [iteratedDeriv_realProjection hW Complex.reCLM 2]
+      exact (Complex.abs_re_le_norm _).trans (h₂ z hz))
+  have hi := norm_quadratic_window_remainder_le_secondDeriv (M₂ := M₂) hI hT hH
+    ((Complex.abs_im_le_norm _).trans h₀) (by
+      intro z hz
+      change |iteratedDeriv 2 (fun x => Complex.imCLM (W x)) z| ≤ M₂
+      rw [iteratedDeriv_realProjection hW Complex.imCLM 2]
+      exact (Complex.abs_im_le_norm _).trans (h₂ z hz))
+  have hcR : Continuous (fun z => ((W z).re : ℂ)*betaQuadraticKernel T z) :=
+    (Complex.continuous_ofReal.comp hR.continuous).mul (continuous_betaQuadraticKernel T)
+  have hcI : Continuous (fun z => Complex.I*((W z).im : ℂ)*betaQuadraticKernel T z) :=
+    (continuous_const.mul (Complex.continuous_ofReal.comp hI.continuous)).mul
+      (continuous_betaQuadraticKernel T)
+  have he : (∫ z in (-H)..H, W z*betaQuadraticKernel T z) =
+      (∫ z in (-H)..H, ((W z).re : ℂ)*betaQuadraticKernel T z)+
+      Complex.I*(∫ z in (-H)..H, ((W z).im : ℂ)*betaQuadraticKernel T z) := by
+    rw [← intervalIntegral.integral_const_mul,
+      ← intervalIntegral.integral_add (hcR.intervalIntegrable _ _) (by
+        simpa only [mul_assoc] using hcI.intervalIntegrable (-H) H)]
+    apply intervalIntegral.integral_congr
+    intro z _
+    have hw := Complex.re_add_im (W z)
+    linear_combination -betaQuadraticKernel T z*hw
+  rw [he]
+  have hsplit :
+      (∫ z in (-H)..H, ((W z).re : ℂ)*betaQuadraticKernel T z)+
+        Complex.I*(∫ z in (-H)..H, ((W z).im : ℂ)*betaQuadraticKernel T z)-
+        W 0*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)) =
+      ((∫ z in (-H)..H, ((W z).re : ℂ)*betaQuadraticKernel T z)-
+        ((W 0).re : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)))+
+      Complex.I*((∫ z in (-H)..H, ((W z).im : ℂ)*betaQuadraticKernel T z)-
+        ((W 0).im : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))) := by
+    linear_combination ((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))*Complex.re_add_im (W 0)
+  rw [hsplit]
+  apply (norm_add_le _ _).trans
+  rw [norm_mul,Complex.norm_I,one_mul]
+  apply (add_le_add hr hi).trans_eq
+  ring
+
 end TaoTrudgianYang2025

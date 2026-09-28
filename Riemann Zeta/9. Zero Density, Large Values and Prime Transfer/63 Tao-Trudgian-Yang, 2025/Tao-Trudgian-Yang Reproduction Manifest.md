@@ -1,5 +1,339 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Huxley finite source estimates and preserved wording counterexample (28 September 2026)
+
+[HuxleyLinearForms.lean](Extension/TaoTrudgianYang2025/HuxleyLinearForms.lean)
+integrates the full Lemma 2.1 and both displayed Lemma 2.5 bounds. It
+constructs the reduced approximation and determinant-one neighbor, uses
+the actual complete sector, and consumes the one-dimensional counting
+dichotomy. The source constants 12, 8 and 96 are retained. Exact integrality
+is not claimed: `printed_exact_integrality_counterexample` proves that the
+printed words "both integers" fail at N=l=B=1, mu=2, delta=1/1000,
+alpha=1/2000 and beta=0. The frozen PDF is untouched.
+
+The focused build passes, exit 0, 8,477 jobs, zero diagnostics (session 20973).
+All 22 explicit public audits and six exact-contract regressions pass in the
+retained production-import scratch (session 51031), with standard logical
+axioms only. Its first conversion check ran before the root object was
+rebuilt and reported unknown declarations; an explicit new-module import
+removed that stale-import dependency, and the corrected check passes.
+The root, exhaustive audit and runner required-module list include this
+single finite-source module; no unrelated module family was added.
+
+The foundation BAT passes after integration, exit 0, all six stages,
+8,857 jobs and 14,290 dependency audits, zero Lean diagnostics:
+[log](../../logs/foundation_freeze_20260928_080543.log) and
+[JSON manifest](../../logs/foundation_freeze_20260928_080543.json).
+The principal BAT rerun is recorded in
+[080531 transcript](logs/tao-trudgian-yang-build-20260928-080531-57ab829a.log);
+its final result is recorded below after completion, not inferred from
+the earlier PASS checkpoint.
+
+| Artifact | SHA256 at production freeze |
+| --- | --- |
+| HuxleyLinearForms.lean | `40f93fd1ae41bf29b84f8ae28cd99241e2bc4adcc54ce03a99eed9e3c4c7db7e` |
+| Audit.lean | `3b1c26cf33584ae9f8e668914eb31dcac87906c5af715a0dce4527e6fc7b474e` |
+| SemanticRegression.lean | `60691c5c707fa86c25aae78cc60d6a51ff54e1e47234a618b3f067a50cfa76db` |
+| Root TaoTrudgianYang2025.lean | `e6c7d7a9e3c7fd9efc3c7c674474fc9ef7be0fe1c6250a105b926bafb57347a4` |
+| run_tao_trudgian_yang_build.ps1 | `903f28f855d9b8803e684103670c7d0bffd7623f7a2aeeb5b1603ef6634ab31f` |
+| Foundation transcript 080543 | `b1a1b98c327a7adba42d34591d919c3907cbb0d7060d42b791102d1fbe6bcb43` |
+| Foundation JSON 080543 | `9ac60239ba36ee786d52cf4086c2bd33862036fa88b0355ff5596af5d6933cbc` |
+
+The remaining finite gates are Lemmas 2.3/2.6, then the four-condition
+long-block/family count and analytic consumers. The source notes identify
+a factor-of-two issue in the literal Lemma 2.3 derivation, not a
+counterexample to its statement. All aggregate statuses remain unchanged,
+34/42. Earlier checkpoints below describe their then-current scope.
+All prior counterexamples, owner-authorized repairs, audits and regressions
+are preserved. Recovery-record maintenance remains permanently skipped.
+
+## Huxley PDF and uniform source entry (28 September 2026)
+
+The owner-supplied 40-page Huxley (1993) paper was read in full, with the
+critical displayed formulas visually checked. Its SHA256 is
+`7eb555b6c7a29dce6b6eedca0f4cebbe64e4bc8079d85e50da24719c1b492cca`.
+The source dependency is the parameter-family fifth moment (Theorem 2),
+then differencing (Theorem 3), not a single-phase bound by itself.
+
+[HuxleyModelNondegeneracy.lean](Extension/TaoTrudgianYang2025/HuxleyModelNondegeneracy.lean)
+is production-integrated: eleven explicit public dependency audits and six
+semantic regressions cover the seven exact polynomial tests, uniform
+closed-interval perturbation bounds, interior logarithmic derivatives,
+and actual compressed A-process shifts. The focused build passes, 2,868
+jobs. Enlarged-domain and mixed-parameter entry, Farey/long-block and
+parameter-family counting, the fifth moment and final beta rows remain open.
+No aggregate completion status changed: 34/42; EPZAE-13/14/29/30/38/39/40/41
+remain open.
+
+The principal BAT passes, exit 0, LEAN VERIFICATION PASS:
+[complete transcript](logs/tao-trudgian-yang-build-20260928-073027-8d7238e5.log).
+It verifies 1,448 production files, scans 1,922 Lean files, builds all 10,781
+jobs and checks 7,235 semantic examples. All 18,071 exhaustive dependency
+audits pass (11,826 target, 6,240 pinned and five imported anchors).
+Required-file inventory, source pins, the fresh historical replay, nine
+checker regressions and six generator rejection regressions pass.
+There are zero Lean errors, warnings or linter diagnostics. The two archived
+Python invalid-escape SyntaxWarnings at lines 53 and 219 remain visible.
+
+The foundation BAT also passes, exit 0, all six stages, 8,857 jobs and
+14,290 dependency audits, with zero Lean diagnostics:
+[log](../../logs/foundation_freeze_20260928_072644.log) and
+[JSON manifest](../../logs/foundation_freeze_20260928_072644.json).
+No runner gate, production coverage, audit or old regression was weakened.
+
+The first principal run, [072144 transcript](logs/tao-trudgian-yang-build-20260928-072144-aa3956ea.log),
+failed at the new concrete determinant regression because simplification
+left vector entries unevaluated in the full import environment. The proof
+was corrected to consume the symbolic monomial identity. Both successful
+BATs above ran after that correction; the failed transcript is retained.
+
+The retained [linear-form scratch proof](../../../.scratch/epzae-huxley-linear-form-20260928.lean)
+separately passes (session 91934): twelve explicit audits, standard logical
+axioms only, zero diagnostics. It proves all of Lemma 2.1, including its
+constructed Dirichlet approximation, constant 12, divisibility and
+nearest-integer conclusion. It also proves maximal-denominator determinant
+injectivity and the two determinant near-integer constraints used in
+Lemma 2.5. It does not yet prove the full Farey-sector lemma and is not
+included in the production theorem count above.
+
+| Artifact | SHA256 at this checkpoint |
+| --- | --- |
+| Principal transcript 073027 | `010ef94f48f2571b2b756f2b284416b14abc5f2a6743332ac696ba5325c7b300` |
+| Historical replay transcript 073027 | `b3d8380dfacef884ce80ee7665ee7ae61c0e3866bab9aeb202a77bf81929bffb` |
+| Historical replay JSON 073027 | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| Foundation transcript 072644 | `f404686e74bea8a9d8dc0ca07e34b696b7a1442dc3b4dd6c24e7e91eea69eb6a` |
+| Foundation JSON 072644 | `e79ff28dfe926582a6ca825d3f5161830fd8aa8caa4b85aa3bb1517108bd5415` |
+| HuxleyModelNondegeneracy.lean | `f5ae49e1806bff0953dd34eaf34b42176a1bb6e8d74bb3a55da5b8f9c114b323` |
+| Audit.lean | `6cc89452437088a253ef961427e8f9579f36ad4b8881cc5806dcc0c1fe7cdca5` |
+| SemanticRegression.lean | `09d076cab893e2f14bbd5795a3610b3f2c88ba66477e9810448d69f2cf40b8dc` |
+| Root TaoTrudgianYang2025.lean | `eb7a7cc19fbd253fdd37de5c54b7041e590f1c479bb949884e90a47cf90bface` |
+| run_tao_trudgian_yang_build.ps1 | `c05d728fe5764910d9928be530f423040acde52b7a6f65cd0f751df123c4ee8b` |
+| Linear-form scratch at session 91934 | `f88cc7aee673e25bc24f1196bf35865092e6320fb85aceb0ebfef94da23db4ee` |
+
+Frozen sources, owner-authorized repairs, counterexamples and obstruction
+history are preserved. Recovery-record maintenance is permanently skipped.
+The earlier checkpoint below records its then-current production scope.
+
+## Sharp printed Atkinson source: verified EPZAE-21 closure (28 September 2026)
+
+The literal Ivić Orsay 83.06, Theorem 6.2, (6.20)--(6.23), is integrated
+in AtkinsonPrintedSource.lean. Its actual-zeta consumer retains the original
+full power widths, printed phase and prefix endpoints, endpoint-plus-integral
+expression, damping, dyadic range and exact logarithmic cutoff. The scan's
+printed page 107 was visually rechecked. The original stationary phase
+comment is corrected to distinguish its `-pi/4` from the printed phase;
+all existing definitions and proofs are unchanged.
+
+One focused source module, 60 explicit audits and ten regressions were added.
+The focused production build passes, 9,108 jobs, zero Lean diagnostics.
+Complete production coverage is now 1,447 package files / 1,921 scanned
+Lean files; 7,229 semantic examples are present.
+
+The foundation BAT has passed, exit 0, all six stages, 8,857 jobs and
+14,290 theorem dependency audits, zero Lean diagnostics:
+[foundation log](../../logs/foundation_freeze_20260928_020953.log) and
+[manifest](../../logs/foundation_freeze_20260928_020953.json).
+Its log SHA256 is `e6b520199693c176f55238ce4f5a189ae5bf346815c40a1ec20088d3cd06b9fc`;
+its manifest SHA256 is `77faae8e83b96ff2f00ac5e3b19d34f325d837dc380a8894b373855afde59b6c`.
+
+The principal BAT has passed, exit 0, LEAN VERIFICATION PASS:
+[principal transcript](logs/tao-trudgian-yang-build-20260928-020942-ec0db300.log).
+All 10,780 default build jobs, 7,229 semantic regressions and 18,053
+exhaustive dependency audits pass (11,808 target, 6,240 pinned, five anchors).
+All 43 required files, 20 source pins, 12 frozen ANTEDB files and the
+469-file Gafni-Tao pin pass. The fresh historical replay, nine checker
+regressions and six generator rejection regressions pass. Both BATs have
+zero Lean errors, warnings and linter diagnostics. The two archived Python
+invalid-escape SyntaxWarnings at lines 53 and 219 remain visible; no stage
+failed, no module was excluded, and no gate was weakened.
+
+EPZAE-21 is DONE under the owner-authorized contract; aggregate 34/42.
+The [clause-by-clause acceptance review](Tao-Trudgian-Yang%20Zeta%20Growth%20Repair.md)
+checks the corrected growth and old-pair clauses, literal reflection,
+full real-moment transfer, genuine twelfth moment and independently proved
+sharp Atkinson source form. The shifted-height corollary (6.24) is distinct
+and is not asserted here. The whole-proof goal remains incomplete:
+EPZAE-13/14/29/30/38/39/40/41 are still open.
+
+The retained printed-source scratch file now imports the production module
+instead of duplicating its development proofs. Its direct check passes,
+exit 0, all 60 explicit public dependency audits and ten exact-statement
+regressions, with standard logical axioms only and zero Lean diagnostics.
+This focused check does not replace the mandatory complete BAT.
+
+The strict growth/nonexistence condition `σ>1−τ` remains the explicitly
+owner-authorized repair, not a proof of the false printed growth clause.
+Frozen sources, both counterexamples, obstruction history, and pre-existing
+regressions/audits are preserved. Recovery-record maintenance remains skipped.
+Earlier verification checkpoints below describe their then-current scope.
+
+Verified current revision hashes (SHA256):
+
+| Artifact | SHA256 |
+| --- | --- |
+| logs/tao-trudgian-yang-build-20260928-020942-ec0db300.log | `d5a487173fa830d24d4f68e3f30cff3338ec36d04aa5143c3f3807bd17ce39ee` |
+| logs/paper-time-20260928-020942-ec0db300.log | `f1135241f9f2438bef795f97229d7073e0d4061719817391639693c77317b754` |
+| logs/paper-time-20260928-020942-ec0db300.json | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| Extension/TaoTrudgianYang2025/AtkinsonPrintedSource.lean | `cde09af693aebd43260b02920bc30d1830cf4b7e27d3f42e6c987751e0cc489a` |
+| Extension/TaoTrudgianYang2025/AtkinsonMorseStationary.lean | `343c131ca5b62b186d115527e1b58ba636556ba977571ea54be6559440171666` |
+| Extension/TaoTrudgianYang2025/BetaQuadraticLocalRemainder.lean | `21a22d942d2f4c28348681026e35ea57b913c422c5001531dfce550bea219242` |
+| Extension/TaoTrudgianYang2025/AtkinsonSaddlePhase.lean | `1c3df10184349dd8d70a2372186a4b347a162c231e92e88f32ec21e6fd33cfa0` |
+| Extension/TaoTrudgianYang2025/Audit.lean | `5fd578649b8e914d0e589bbfb70e588c3bfe20fad78f14192d8aa5a69a03007f` |
+| Extension/TaoTrudgianYang2025/SemanticRegression.lean | `9bb5f15218f6f6e9d023fd58697dfa3165cba5eebe0450d169fb487c3c21c21b` |
+| Extension/TaoTrudgianYang2025.lean | `1824e0d7ef063628e3e8c668127b3b54b3e12f34cf5cdd25e7f017d7c80889b4` |
+| Tools/run_tao_trudgian_yang_build.ps1 | `59bd663c2b0d6c3af560f2a395ac31f34ef4e085833dabfaae9d05e1dda5bc4a` |
+
+The frozen TeX, both counterexample modules, the energy obstruction document
+and the corrected growth module retain their preservation hashes recorded
+below. No audit or regression line was removed. The default build includes
+both new Atkinson source modules. Only documentation/status synchronization
+and the separately checked audit-only scratch conversion followed the
+production-source freeze for these BATs; no production Lean changed.
+
+Post-verification documentation checks pass: 12 canonical documents,
+6,406 local links, 601 architecture nodes and 1,460 edges, with no broken
+link, duplicate node or missing endpoint. The Checklist has exactly
+34 checked and eight open aggregate items; every EPZAE-21 diagram node
+is green. All eleven current artifact-table hashes and all five protected
+preservation hashes were rechecked. `git diff --check` passes; Git emits
+only its existing LF-to-CRLF conversion notices. No recovery-record file
+was created or edited, and no commit or push was performed.
+
+## Earlier Atkinson full-width stationary continuation (28 September 2026)
+
+The focused production build now checks the exact global Morse entry,
+actual inverse jets, complex second-derivative remainder, true support,
+quarter-weighted divisor summation and original arithmetic tail.
+`exists_zetaSquarePhysicalGaussian_stationary_full_width`,
+`exists_zetaSquareLocalMean_le_stationary_full_width` and the exact
+signed-main consumer retain the full original power-width range and
+uniform `C_delta,T0(delta)`, with `C_delta G log T` error.
+The separate sharp printed-source-form bridge remains OPEN;
+EPZAE-21 stays unchecked and the aggregate remains 33/42.
+
+One production module, AtkinsonMorseStationary, was added; the existing
+BetaQuadraticLocalRemainder was strengthened. The root import and BAT
+inventory include all 1,446 package files / 1,920 scanned Lean files.
+Eighty new public theorem audits and seven semantic regressions are
+appended; all pre-existing audit/regression entries remain intact.
+The old frozen source, counterexamples and corrected growth theorem
+are unchanged. The preceding repair-only checkpoint below is historical.
+
+Focused production `lake build TaoTrudgianYang2025.AtkinsonMorseStationary`
+passes, 9,105 jobs, zero diagnostics. During integration an omitted local
+Fourier-notation scope caused a parser failure and consequent elaboration
+warnings; restoring the scope corrected it. No admitted source, diagnostic
+suppression, resource increase or weakened gate was used.
+
+The foundation BAT has passed, exit 0, all six stages, 8,857 jobs and
+14,290 audits, zero Lean diagnostics:
+[foundation log](../../logs/foundation_freeze_20260928_003013.log) and
+[manifest](../../logs/foundation_freeze_20260928_003013.json).
+The target BAT has also passed, exit 0, LEAN VERIFICATION PASS:
+[target log](logs/tao-trudgian-yang-build-20260928-004145-e50a5f9a.log).
+All 10,779 jobs, 7,219 semantic regressions and 17,933 theorem dependency
+audits pass (11,688 target, 6,240 pinned, five anchors). Its 43 required
+files, 20 source pins and both frozen dependency checks pass. The fresh
+historical replay, nine checker regressions and six generator rejection
+regressions pass. Both BATs have zero Lean diagnostics; the two archived
+Python invalid-escape SyntaxWarnings at lines 53 and 219 remain visible.
+No stage failed, no module was excluded, and no proof gate was weakened.
+The architecture marks only the full-width stationary subnode DONE;
+the sharp printed-source-form node and EPZAE-21 remain OPEN.
+
+Current production verification hashes (SHA256):
+
+| Artifact | SHA256 |
+| --- | --- |
+| logs/tao-trudgian-yang-build-20260928-004145-e50a5f9a.log | `8fb0b3d5852ba048d892ee3ed79e8858ee42a1185c7f451dccb24b8f310b338c` |
+| logs/paper-time-20260928-004145-e50a5f9a.log | `ce145d5c3027a28e071d01f7989b8048399df5df9b83b15a74521da8f8ec64cc` |
+| logs/paper-time-20260928-004145-e50a5f9a.json | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| ../../logs/foundation_freeze_20260928_003013.log | `e453b96729117bdc22e822d0149c7eaa19f1e623ce38cb37298d6f7bef3bcf86` |
+| ../../logs/foundation_freeze_20260928_003013.json | `13b7a97d7f7a366f389c0b09e078836973687e4e19f49ca062429ec100d17499` |
+| Extension/TaoTrudgianYang2025/AtkinsonMorseStationary.lean | `343c131ca5b62b186d115527e1b58ba636556ba977571ea54be6559440171666` |
+| Extension/TaoTrudgianYang2025/BetaQuadraticLocalRemainder.lean | `21a22d942d2f4c28348681026e35ea57b913c422c5001531dfce550bea219242` |
+| Extension/TaoTrudgianYang2025/Audit.lean | `72778979dd48fe80df127d4e9075239d72c391ca76232606e7d01c6de387d346` |
+| Extension/TaoTrudgianYang2025/SemanticRegression.lean | `15d4aca0b5aa669654ee1bcca51a7f0a301b7b385aeed315a4aa7d1fe72f4c1d` |
+| Tools/run_tao_trudgian_yang_build.ps1 | `f721f1a3b9d8e7b4b5f7941bca4ce6536f32d612bae616408affdb069a717571` |
+
+The frozen TeX, both counterexamples, energy obstruction document and
+corrected growth module retain the preservation hashes recorded below.
+The old regression blocks remain unchanged; seven new examples are appended.
+Subsequent targeted scratch work checks 29 additional theorems through the
+literal printed stationary block, with 29 clean explicit audits. Those
+scratch theorems are not included in this production BAT count and do not
+close the remaining global source-form assembly.
+
+## Earlier owner-authorized growth-contract repair: verified adoption (27 September 2026)
+
+The [repair specification](Tao-Trudgian-Yang%20Zeta%20Growth%20Repair.md)
+adopts the already-proved EPZAE-21 growth/nonexistence clause with strict
+`σ>1−τ`, including its old-pair consequence. This is an **owner-authorized
+source-contract repair, not a proof of the false printed statement**.
+The Checklist, Goal Prompt, Crosswalk, architecture and current documentation
+agree: **EPZAE-21 remains OPEN, aggregate 33/42**. Sharp Atkinson source-form
+and smaller widths remain mandatory; no other acceptance requirement is waived.
+
+Verification ran from HEAD `c7d5386c8aa4aff0ff6071809b18b9f6aca6202b` plus
+this documentation/inventory change, with the working tree reported DIRTY.
+No production Lean module, theorem, regression, audit, source archive,
+frozen dependency, or separate energy-powering document was changed.
+The principal runner now requires this repair specification in its inventory
+(43 required files); its mathematical gates and coverage are unchanged.
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, from this folder:
+  **exit 0, LEAN VERIFICATION PASS**,
+  [target transcript](logs/tao-trudgian-yang-build-20260927-232002-ef1146c4.log).
+  All 10,778 jobs, 7,212 semantic regressions and 17,820 audits pass
+  (11,575 target, 6,240 pinned, five anchors). Coverage remains 1,445 package
+  files / 1,919 scanned Lean files. All 20 pinned source files and both
+  frozen dependency integrity checks pass.
+- `cmd /c run_lake_build.bat --no-pause`, from `E:/Lean/Riemann Zeta`:
+  **exit 0, PASS**, all six stages, 8,857 jobs and 14,290 audits;
+  [foundation transcript](../../logs/foundation_freeze_20260927_232014.log)
+  and [manifest](../../logs/foundation_freeze_20260927_232014.json).
+- Focused `lake env lean --stdin` check, from `Extension`, session 6039:
+  the exact corrected growth contract, exact corrected old-pair consequence,
+  boundary equality and negation of the unrestricted old-pair statement all
+  elaborate, **exit 0**. Five dependency checks, including the preserved
+  unrestricted growth counterexample, report only `propext`,
+  `Classical.choice` and `Quot.sound`. No probe file or production module
+  was added. The check used the same `ELAN_HOME` inferred by the BAT.
+- Fresh archived computation, nine replay-checker regressions and six
+  generator rejection regressions pass; canonical JSON and generated Lean
+  remain byte-identical. Historical computation is not Lean proof evidence.
+- Both BATs have **zero Lean errors, warnings, tactic suggestions or linter
+  failures**. The two archived Python invalid-escape `SyntaxWarning` messages
+  remain visible at source lines 53 and 219. No stage failed or gate was
+  weakened. Git's existing LF/CRLF notices are not Lean diagnostics.
+- SHA256 preservation checks pass for the frozen TeX, both original
+  counterexamples, energy obstruction document, corrected growth module and
+  entire regression file. All tracked Lean and frozen source/dependency diffs
+  are empty. The diagram keeps `ZLV`/`ZAT` open and `ZLCE`/`ZLCO` done.
+  Local documentation links, graph endpoints and `git diff --check` pass.
+
+Current evidence and preserved-artifact hashes:
+
+| Artifact | SHA256 |
+| --- | --- |
+| logs/tao-trudgian-yang-build-20260927-232002-ef1146c4.log | `3eec5110c60b16682456bd041a695978f94a56279d7f79d7ff910d97ffe6401b` |
+| logs/paper-time-20260927-232002-ef1146c4.log | `c9e3d25604a4ea14c04c6d504cd2514ae2ac0b425f5feaa85ca607f3ca848e50` |
+| logs/paper-time-20260927-232002-ef1146c4.json | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| ../../logs/foundation_freeze_20260927_232014.log | `ad58db190bc3e1833424839ab2b80705523f9b7da44c686b8ae517058bd2498a` |
+| ../../logs/foundation_freeze_20260927_232014.json | `5fdd49a79fd74c036693fa29e9a0cf5001375d938c7021a3921d185f170364b3` |
+| Tools/run_tao_trudgian_yang_build.ps1 | `15b80bf991342f6bf5365c04c8a44ec721f14b50f615abb054834224db9b2757` |
+| Tao-Trudgian-Yang Zeta Growth Repair.md | `8eb2710cd51f8ee259626ec663ddec23ce6d0f3c932fa76275d4597730f560b2` |
+| Sources/TaoTrudgianYang-v1-source/Tao_Trudgian_Yang_v2.tex | `44e7b11448398bbd2528a7b7ce9483ba029bd115555b2ce2f06679144ef0b6b1` |
+| Tao-Trudgian-Yang Energy Powering Obstruction.md | `783738b819a69c967c35a8b1094c604559c41a7e1c672cc67db54db1039da0b4` |
+| Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| Extension/TaoTrudgianYang2025/ZetaLowHeightObstruction.lean | `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae` |
+| Extension/TaoTrudgianYang2025/ZetaGrowthCorrectedTransfer.lean | `20ca4c9dade8feaa76c6bd9a28957db6c565d1349a8c91f8e124eb4df5f805dd` |
+| Extension/TaoTrudgianYang2025/SemanticRegression.lean | `61d71bdfdd264b35209b73ebb41d559ebea3138e22065c78db7e09229292a4d2` |
+| Extension/TaoTrudgianYang2025/Audit.lean | `1327c33c6f3a037a3a0466b11d621b9613d40c9e5efd91a90b418cc2c48fa452` |
+
+Earlier checkpoints below remain historical evidence; their pending growth
+repair authorization is superseded, not their obstruction findings.
+
 ## Pinned historical reproduction: verified closure (27 September 2026)
 
 **EPZAE-06 is DONE; aggregate 33/42.** The pinned Python 3.12.8 runtime and

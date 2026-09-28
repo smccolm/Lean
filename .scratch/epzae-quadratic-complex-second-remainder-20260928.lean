@@ -1,0 +1,4 @@
+import TaoTrudgianYang2025.BetaQuadraticLocalRemainder
+
+#print axioms TaoTrudgianYang2025.iteratedDeriv_realProjection
+#print axioms TaoTrudgianYang2025.norm_complex_quadratic_window_remainder_le_secondDeriv

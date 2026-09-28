@@ -1,6 +1,27 @@
 flowchart TD
-%% CURRENT REPRODUCTION: EPZAE-06 DONE; aggregate 33/42. Fresh pinned archived recipe replay and exact canonical-data regeneration are mandatory BAT stages. Python is historical computation, not Lean proof evidence; both counterexamples remain unchanged. Analytic gates EPZAE-13/14/21/29/30 and final release remain OPEN.
-%% CURRENT ANALYTIC CHECKPOINT: EPZAE-11 is DONE. The exact closed [0,1] D-process, its analytic pair consumer, the Trudgian--Yang input, its A-image and public rows 6,13,14,15 are verified. The sharper cubic Gauss remainder and actual density pieces 1,6,7 are also verified. Both BATs PASS: 7212 regressions, 17820 principal audits, 14290 foundation audits, zero diagnostics. EPZAE-13/14/29 remain OPEN; aggregate 33/42 after EPZAE-06 reproduction closure. The five-row Huxley dependency test is explicitly conditional, not analytic closure. Earlier checkpoint comments are historical.
+%% HUXLEY SOURCE UPDATE (28 September 2026): owner-supplied full PDF read; source access restored. Uniform seven polynomial tests on closed [1,2] and ordinary/logarithmic interior consumer are kernel-checked. This is not a family-moment/beta proof. EPZAE-13/14/29 remain OPEN; aggregate 34/42. Both BATs retain complete coverage.
+    HUXJET["EPZAE-13 Huxley seven model-jet tests<br/>one uniform tolerance and lower bound;<br/>closed interval + interior logarithms DONE"]
+    HUXFINITE["EPZAE-13 Huxley Lemma 2.1 and<br/>displayed Lemma 2.5 bounds DONE;<br/>constructed determinant-one neighbor;<br/>literal integrality counterexample preserved"]
+    HUXCOUNT["EPZAE-13 Huxley Sections 2--10<br/>Farey density Lemmas 2.3/2.6;<br/>four-condition long blocks, quartic refinement<br/>and parameter-family counts OPEN"]
+    HUXMOM["EPZAE-13 Huxley Theorem 2<br/>enlarged-domain/mixed-parameter entry<br/>actual family fifth moment OPEN"]
+    HUXROWS["EPZAE-13 Huxley Theorem 3<br/>differencing + five exact beta rows<br/>and page-39 short-range consumers OPEN"]
+    ED --> HUXJET
+    SRC --> HUXCOUNT
+    SRC --> HUXFINITE
+    HUXFINITE --> HUXCOUNT
+    P4SC --> HUXCOUNT
+    HUXJET --> HUXMOM
+    HUXCOUNT --> HUXMOM
+    HUXMOM --> HUXROWS
+    HUXROWS --> BT
+    class HUXJET,HUXFINITE done;
+    class HUXCOUNT,HUXMOM,HUXROWS open;
+%% CURRENT VERIFIED CONTRACT (28 September 2026): EPZAE-21 DONE, aggregate 34/42. AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson proves literal Ivić Theorem 6.2 (6.20)--(6.23), including full widths, phase/prefix, endpoint-plus-integral bound, damping and cutoff. Both BATs PASS, zero Lean diagnostics; every other EPZAE-21 acceptance clause has a public consumer. Growth/nonexistence uses the owner-authorized strict sigma>1-tau repair, not the false printed statement. Frozen source, counterexamples, obstruction history and regressions remain permanent. Earlier checkpoint comments below retain their historical statuses. Shifted-height (6.24) is not asserted.
+%% EARLIER ATKINSON CHECKPOINT (28 September 2026): the actual full-width stationary error is proved in AtkinsonMorseStationary, including both signed sums, the original divisor coefficients and ceiling cutoff. The public Gaussian/local-mean consumers give C_delta*G*log(T) throughout T^delta<=G<=T^(1/2-delta). Both BATs PASS: 7,219 regressions, 17,933 principal and 14,290 foundation audits, zero Lean diagnostics. EPZAE-21 and aggregate 33/42 are unchanged because the distinct sharp printed-source-form bridge remains OPEN. Earlier smaller-width obstruction labels below are historical.
+%% CURRENT OWNER-AUTHORIZED SOURCE-CONTRACT REPAIR (27 September 2026): EPZAE-21 adopts the proved growth/nonexistence statement with strict sigma>1-tau, including the old-pair consequence. This is not a proof of the false printed add-bound(i)/lvz-340. Frozen source, counterexample, obstruction history and regressions are permanently preserved; earlier pending-authorization comments are historical.
+%% HISTORICAL REPAIR-ONLY CHECKPOINT: EPZAE-21 remains OPEN and aggregate stays 33/42: all other acceptance requirements, including the sharp Atkinson printed-source-form bridge, remain mandatory. The newly proved smaller-width stationary error and independent twelfth moment do not waive that bridge. See Tao-Trudgian-Yang Zeta Growth Repair.md.
+%% EARLIER REPRODUCTION CHECKPOINT: EPZAE-06 DONE; aggregate 33/42. Fresh pinned archived recipe replay and exact canonical-data regeneration are mandatory BAT stages. Python is historical computation, not Lean proof evidence; both counterexamples remain unchanged. Analytic gates EPZAE-13/14/21/29/30 and final release remain OPEN.
+%% EARLIER ANALYTIC CHECKPOINT: EPZAE-11 is DONE. The exact closed [0,1] D-process, its analytic pair consumer, the Trudgian--Yang input, its A-image and public rows 6,13,14,15 are verified. The sharper cubic Gauss remainder and actual density pieces 1,6,7 are also verified. Both BATs PASS: 7212 regressions, 17820 principal audits, 14290 foundation audits, zero diagnostics. EPZAE-13/14/29 remain OPEN; aggregate 33/42 after EPZAE-06 reproduction closure. The five-row Huxley dependency test is explicitly conditional, not analytic closure. Earlier checkpoint comments are historical.
 %% Current normalized logarithmic sixth moment is production-kernel-checked: exists_logarithmic_sixth proves C*B^6*(T+N)*N^(3+epsilon), all N>=1, T>=0, positive integer frequencies and coefficient fibers. Low frequencies, full shell recombination and epsilon absorption are proved; no source moment or decoupling estimate is assumed.
 %% Current EPZAE-11 alternate DAG: normalized log sixth moment DONE -> signed square/product count DONE -> literal weighted cubic eighth moment DONE -> original C4 source-to-count reduction DONE -> sharp joint derivative count DONE -> original-model scales and epsilon absorption DONE -> analytic D(Bourgain) pair DONE -> generic scales and closed D source contract DONE. Remaining Huxley inputs belong to EPZAE-13/14 and remain OPEN.
 %% SquareProductCount.CubicMoment.exists_cubic_eighth_moment proves P*integral |sum z_n e(n*alpha+n^2*beta+n^3*gamma)|^8 <= C*(N^2+P)*N^(2+epsilon), all N>=1, P>0 and coefficient norms<=1. Exact source expansion, integer orthogonality, proved count and existing window theorem are composed; no source estimate is assumed.
@@ -429,7 +450,7 @@ flowchart TD
     HBOPT["EPZAE-19 exact Heath--Brown hb-opt<br/>max(2-2sigma,10+tau-13sigma)<br/>full source strip and all nonnegative heights DONE"]
     JER["EPZAE-19/36 actual Jutila energy-region caps<br/>corrected cardinality witnesses; k=13,12,11,10,6,5 DONE"]
     GMB["EPZAE-20 exact Guth--Maynard bridge<br/>DONE"]
-    ZLV["EPZAE-21 corrected growth, moments,<br/>exact reflection supremum DONE;<br/>false source contract and sharper Atkinson branch OPEN"]
+    ZLV["EPZAE-21 owner-authorized growth repair<br/>strict sigma>1-tau; moments + reflection;<br/>literal sharp Atkinson source;<br/>full verification + acceptance DONE"]
     ZLCO["EPZAE-21 genuine low-height coefficient-one patterns<br/>unbounded singleton obstruction DONE"]
     ZLCE["EPZAE-21 printed unrestricted growth transfer FALSE<br/>actual counterexample + Weyl growth DONE"]
     ZLPM["EPZAE-21 corrected pair transfer margins<br/>retain 2*pi*N/t residual DONE"]
@@ -507,6 +528,7 @@ flowchart TD
     ZFE["EPZAE-21 evaluated Fresnel main terms<br/>uniform tail + both physical signs;<br/>source-width per-carrier power saving DONE"]
     ZBT["EPZAE-21 source-scale truncation<br/>both tails + full arithmetic + physical zeta consumers;<br/>ceiling cutoff linked to stationary range DONE"]
     ZSE["EPZAE-21 symmetric stationary + complete sum<br/>both actual zeta consumers;<br/>fourth-root-width error bounds DONE"]
+    ZMF["EPZAE-21 actual global Morse stationary source<br/>inverse jets + true support + divisor sum;<br/>full power-width C G log T DONE;<br/>both BATs and dependency audits PASS"]
     ZMN["EPZAE-21 common fourth-root main + actual signed sums<br/>pointwise weights + literal Abel consumer DONE"]
     ZVB["EPZAE-21 uniform damped weight variation<br/>actual source-cutoff block consumer DONE"]
     ZDA["EPZAE-21 complete dyadic source assembly<br/>actual Gaussian/local-mean consumers;<br/>fourth-root-width error retained; DONE"]
@@ -529,7 +551,7 @@ flowchart TD
     Z4K["EPZAE-19/21 actual fourth-source kernel<br/>whole-line t^c Gaussian bound;<br/>Gamma normalization + uniform mass DONE"]
     Z4C["EPZAE-19/21 actual mixed-line divisor truncation<br/>convergent series + finite prefix + summable tail;<br/>literal fourth-power consumer DONE"]
     ZGB["EPZAE-19/21 genuine unweighted fourth moment<br/>translated complete-prefix mean + bounded tail;<br/>Gaussian integration and full dyadic estimate DONE"]
-    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>smaller-width + source-form bridge OPEN"]
+    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>literal Theorem 6.2 source form;<br/>full widths + exact conventions DONE"]
     ZTM["EPZAE-19/21 actual critical-line twelfth moment<br/>full dyadic integral; no moment premise DONE"]
     ZTL["EPZAE-21 actual twelfth-moment zeta LV<br/>sigma >= 1/2, tau >= 2;<br/>short sigma >= 3/4, tau >= 3/2 DONE"]
 
@@ -1328,8 +1350,12 @@ flowchart TD
     GM -->|dyadic polynomial mean-square input, not mollified moment| ZGB
     ZGB -->|proved genuine fourth-moment instance| ZTM
     ZLF -->|complete actual high/low decomposition| ZTM
-    ZDA -->|full-width and source-form bridge still needed| ZAT
-    ZSE -->|smaller-width source error still needed| ZAT
+    ZSR -->|actual root phase and natural C2 amplitude| ZMF
+    ZFE -->|exact evaluated Fresnel main| ZMF
+    ZBT -->|literal cutoff and complete arithmetic tail| ZMF
+    ZMN -->|exact original signed main sums| ZMF
+    ZMF -->|4G + both weights + exact Abel + small blocks + printed cutoff| ZAT
+    ZDA -->|older dyadic source; printed-source bridge still needed| ZAT
     SRC --> ZAT
     ZAT -. "alternative sharp source route; not used by proved moment" .-> ZTM
     LVP --> ZMI
@@ -2124,7 +2150,8 @@ flowchart TD
     class ZLCS,ZLSM,ZLSH,ZLSF,ZLFB,ZLNP,ZLBL,ZLPL,ZLCF,ZLRL,ZLRAM done;
     class ZLRMC,ZLRME,ZLRSA,ZLRC done;
     class GEN done;
-    class BT,NEP,ZLV,ZAT,OBD,ZTAB,PUB,SEM,REL open;
+    class BT,NEP,OBD,ZTAB,PUB,SEM,REL open;
+    class ZMF,ZLV,ZAT done;
     class PR done;
     class EPLVG,EPLVR,BZDL,BZDZ,AGEN,AGEP,AGPR,ISXP done;
     class AGOP,BZD done;

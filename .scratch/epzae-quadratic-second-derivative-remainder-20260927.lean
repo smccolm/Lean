@@ -1,0 +1,6 @@
+import TaoTrudgianYang2025.BetaQuadraticLocalRemainder
+
+-- Regression: canonical production proofs, including their actual dependencies.
+#print axioms TaoTrudgianYang2025.norm_integral_sq_mul_betaQuadraticKernel_le_coupled
+#print axioms TaoTrudgianYang2025.abs_quadraticTaylorCoefficient_coupled_deriv_le
+#print axioms TaoTrudgianYang2025.norm_quadratic_window_remainder_le_secondDeriv

@@ -1,0 +1,6 @@
+import TaoTrudgianYang2025.AtkinsonMorseStationary
+
+#print axioms TaoTrudgianYang2025.exists_atkinsonMorseWeight_physical_second_bound
+#print axioms TaoTrudgianYang2025.support_atkinsonMorseWeight_physical
+#print axioms TaoTrudgianYang2025.support_iteratedDeriv_atkinsonMorseWeight_physical
+#print axioms TaoTrudgianYang2025.exists_atkinsonMorseWeight_global_second_bound
