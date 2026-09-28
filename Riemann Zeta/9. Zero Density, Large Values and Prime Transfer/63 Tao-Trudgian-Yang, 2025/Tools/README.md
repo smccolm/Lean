@@ -1,5 +1,84 @@
 # Tooling record
 
+## Closure-first analytic status (27 September 2026)
+
+EPZAE-11 is DONE; EPZAE-15/26 remain DONE; aggregate 33/42.
+EPZAE-06 is now DONE: pinned historical execution replays all nine energy
+projection recipes, the four pair-coordinate discoveries and eight rational
+density pieces. Two independent installations give byte-identical canonical
+data and regenerate the unchanged kernel-consumed Lean module. The principal
+BAT requires a fresh replay, nine exact checker regressions and six generator
+rejection regressions on every run. The archived false powering rule remains
+historical computation only, never analytic proof evidence. Clause 1's API
+adapter, clause 5's strict envelope relaxation and redundant-cell normalization
+are explicit. Two archived Python SyntaxWarnings are visible; Lean's
+zero-warning gate is unchanged. EPZAE-13/14/21/29/30 and final release remain
+open; reproduction does not supply missing Huxley provenance.
+The exact universal Sargos D beta bound on closed [0,1] is proved in
+CubicJointCount.exponentSumGrowthExponent_le_sargosD. It consumes the
+actual closed original-model exponential sum, with physical scales,
+curvature signs, endpoint losses and epsilon absorption derived.
+The D-transformed analytic pair additionally retains the explicit
+conditions 5*k-3*l+2>=0 and k+3*l>=2. The proved Watt pair
+(89/560,369/560) and old pair (3/40,31/40) are preserved.
+
+The proved refined beta estimate also gives the exact Trudgian--Yang pair
+(4742/38463,35731/51284), its A-image (2371/43205,280013/345640),
+and public beta rows 6,13,14,15. No historical intermediate is required
+where this alternate proof already supplies the exact public contract.
+
+New production closure within existing modules:
+
+- exists_bourgain_cubic_shifted_gauss_denominator_error retains
+  sqrt(q)*log(2N) in the actual closed Gauss-transform error, alongside
+  1/(mu*N^2) and 1/(sqrt(mu*N)*sqrt(q)). The original q<=N,
+  mu*N^2<=1 domain and exact stationary main term are unchanged.
+- exponentPair_eleven_eightyFifths proves the actual pair (11/85,59/85).
+  zeroDensityExponent_le_bourgain_piece_1, _6 and _7 now discharge three
+  optimized-density pieces, including their closed upper endpoints.
+- optimizedBourgain_bound_of_remaining_pairs reduces the assembly to
+  five still-unproved analytic pair inputs. This theorem is conditional;
+  it does not complete EPZAE-29.
+
+Both mandatory BATs PASS, exit 0, zero Lean diagnostics:
+7,212 semantic regressions; 17,820 principal audits (11,575 target,
+6,240 pinned, five anchors); 14,290 foundation audits. All six new public
+declarations have explicit dependency audits. Complete production coverage
+remains 1,445 package files / 1,919 scanned Lean files. Exact logs, hashes
+and earlier corrected regression failures are in the Reproduction Manifest.
+
+The principal BAT's native-stderr reporting bug is repaired: captured
+stdout/stderr are printed before exit-code checking, and both warning and
+nonzero-exit gates remain enforced. Five reporting regressions pass,
+including stdout/stderr warnings at exit zero and missing-executable failure.
+No module was added, no production coverage or proof gate was narrowed.
+
+Current short obligation DAG:
+zero-q/diagonal/zero-shift -> mixed jets/common-prefix -> sieve/spacing
+-> Robert--Sargos scales/fourth derivative -> old pair/growth/density [DONE];
+actual cubic source -> refined beta -> generic scales -> closed D [DONE];
+proved D/AD/refined-beta pairs -> density pieces 1,6,7 [DONE];
+Huxley joint resonance count -> exact rows 7--11 [OPEN]
+-> first two public pairs + four further density pieces [CONDITIONAL TEST PASS];
+short-range bounds + omitted interval -> last two public pairs [OPEN].
+
+The five-row implication is now kernel-checked in explicitly conditional
+scratch, not merely numerically suggested. Its five analytic estimates
+remain hypotheses; EPZAE-13/14/29 stay OPEN. The precise closed intervals
+and primary-source access status are recorded in Sources.
+Local/ANTEDB/GafniTaoNative/Mathlib searches found no proved replacement.
+Exact rational diagnostics show why current pair/density majorants and the
+retained P^12*U^3 cost do not suffice. The sharper Gauss error alone does
+not remove that cost. These diagnostics are not analytic counterexamples.
+Do not grow a support-module family without a route to this count saving.
+
+Both run_tao_trudgian_yang_build.bat and run_lake_build.bat remain mandatory;
+maintain their coverage and diagnostics as needed. All existing
+counterexamples, corrected powering, Add-est and regressions are preserved.
+Recovery-record maintenance is permanently skipped.
+
+Earlier checkpoints below are chronological history, not current work orders.
+
 ## Signed count and literal cubic eighth moment (27 September 2026)
 
 `SquareProductCount.exists_signed_square_product_count` proves the full
@@ -24,10 +103,10 @@ C*(M^6*card(actual joint derivative pairs)*(1+mu*H^2)*H^epsilon+H^8).
 The existing four-dimensional sieve and common-prefix Taylor theorem
 supply the bound; the averaging boundary term, closed thresholds and
 source-label multiplicities are retained. No source/count bound is assumed.
-The sharp derivative-pair estimate remains OPEN.
+The sharp derivative-pair estimate is now proved; its literal consumer is below.
 
-The module has 99 explicit public theorem audits and 27 regressions.
-The new reduction passed its complete scratch check (19 audits, eight
+Historical source-reduction checkpoint: 99 public audits and 27 regressions.
+At that checkpoint the reduction passed its scratch check (19 audits, eight
 regressions, zero diagnostics) and focused production build (10,364 jobs).
 No additional production module or runner exclusion was introduced.
 Both complete BATs passed for this source-reduction revision, exit 0:
@@ -37,10 +116,10 @@ the manifest records exact logs and revision hashes.
 
 Current EPZAE-11 DAG: normalized log sixth moment DONE -> signed count
 DONE -> literal cubic eighth moment DONE -> actual C4 source-to-count
-reduction DONE -> **sharp joint derivative-pair count OPEN** -> original
-model/scale assembly OPEN -> missing D(Bourgain) interval OPEN.
-Target the near-curve count with independently optimized Fourier width;
-its scale algebra recovers D(k,l). This is not an analytic closure claim.
+reduction DONE -> sharp joint derivative-pair count DONE -> original
+D(Bourgain) scale assembly DONE -> analytic D(Bourgain) pair DONE.
+The generic D-process and the remaining Huxley inputs are separate open
+obligations; the special-pair proof does not establish the universal process.
 The actual joint derivative count and complete closed-source eighth-power
 estimate are now proved in the existing CubicJointCount namespace.
 The source estimate derives all derivative hypotheses, removes both
@@ -57,11 +136,55 @@ Complete scratch session 21436: zero diagnostics and standard logical
 axioms only. Production integration reuses SquareProductCount.lean:
 nine additional public audits and seven endpoint/contract regressions.
 Focused production session 71438 passes (10,380 jobs, zero diagnostics).
-Both mandatory BATs pass for this revision, exit 0: 7,149 regressions,
+Both mandatory BATs passed for the D(Bourgain) baseline, exit 0: 7,149 regressions,
 17,665 principal audits (11,420 target, 6,240 pinned, five anchors),
 and 14,290 foundation audits; zero Lean diagnostics. Exact logs and
 SHA256 hashes are recorded in the reproduction manifest.
-The verified module has 147 public theorem audits and 45 regressions.
+That verified baseline has 147 public theorem audits and 45 regressions.
+
+Current EPZAE-11/13 refinement (27 September 2026): the numerical
+P/A/B/Robert--Sargos/Bourgain fallback does not force the missing
+curvature-scale sign. Its exact rational obstruction is preserved as a
+regression; it is not a counterexample to the analytic D-process.
+The second route reuses the proved exponent-pair near-curve estimate,
+block multiplicity, both shift signs, zero shift, and four-coordinate
+sieve window. `CubicJointCount.exists_model_refined_frozen_source`
+now reaches the literal frozen C4 source sum. Eleven public declarations
+and eleven source-contract regressions are integrated into the existing
+SquareProductCount module; fifteen existing source/scale lemmas are
+exposed for reuse and explicitly audited. No new production module.
+Both mandatory BATs now PASS for this refinement, exit 0 and zero Lean
+diagnostics: 7,161 regressions; 17,723 principal audits (11,478 target,
+6,240 pinned, five anchors); 14,290 foundation audits. The existing
+module has 158 public audits and 56 regressions. Exact logs and hashes
+are in the reproduction manifest. The new numerical fallback
+obstruction is an additional regression, not an exponent-pair assertion.
+The analytic refinement now reaches the literal closed original sum:
+constructed bands -> uniform physical sum and tail -> endpoint trimming,
+including short intervals -> linked scales and epsilon absorption ->
+CubicJointCount.exponentSumGrowthExponent_le_refined_bourgain.
+The kernel-checked bound on 2/5<alpha<3/7 is
+max(1/12+2*alpha/3,241/1164+425*alpha/1164).
+No count, source estimate, lifting inequality or physical scale condition
+is left as an assumption of this beta theorem.
+
+Focused band/source build 64158 passed (10,777 jobs); eight explicit
+dependency checks reported only standard logical axioms. The endpoint
+and scale build 91803 passed (10,380 jobs), and the final beta consumer
+passed scratch session 27162, all with zero diagnostics. Both full BATs
+now PASS for this analytic beta revision, exit 0 and zero diagnostics:
+7,178 regressions; 17,790 principal audits (11,545 target, 6,240 pinned,
+five anchors); 14,290 foundation audits. The reproduction manifest records
+the exact logs and source hashes.
+
+Remaining DAG: new analytic beta consumer DONE -> generic D curvature-gap
+coverage and generic scale/source assembly scratch-checked -> full closed
+D source-contract integration OPEN -> remaining Huxley/Trudgian--Yang
+inputs OPEN -> full beta envelope
+and EPZAE-14 outputs OPEN. Aggregate remains 31/42.
+The original numerical fallback obstruction is preserved unchanged.
+A new regression uses the actual beta theorem to cover that exact
+rational point without asserting its numerical input is an exponent pair.
 
 Remaining cluster: generic D source contract; the missing Huxley and
 Trudgian--Yang beta inputs; exact full envelope and four advertised pairs.
@@ -71,7 +194,6 @@ pair did not reach the four outputs; this is discovery, not a proof of
 impossibility. Reuse the completed machinery before adding support code.
 No new production module, runner exclusion or weakened audit gate.
 EPZAE-11/13/14 remain OPEN; the aggregate stays 31/42.
-EPZAE-11/13/14 remain OPEN; aggregate completion remains 31/42.
 Keep both `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
 mandatory and synchronize their existing coverage as the proof changes.
 Both counterexamples, corrected powering and Add-est remain intact.
@@ -126,7 +248,34 @@ ANTEDB source ledger, source archive hashes, forbidden-shortcut policy,
 semantic regressions, and dynamic transitive axiom audit. It writes a complete
 timestamped log and supports `--no-pause`.
 
-Installed and planned tools:
+Historical replay boundaries: the frozen archive retains the disproved
+five-coordinate powering rule. Its computations are never imported as Lean
+proofs; the independently checked corrected two-witness energy proofs remain
+authoritative. Clause 1 needs an explicit stale-API/return-value adapter and
+the blueprint's [3/4,5/6] domain. Only the unrelated import-time density demo
+is skipped. Archived files are not edited. Closed rational endpoints are
+checked by continuous extension. Contiguous cells are coalesced only when
+their exact rational functions agree; archived iteration can add redundant
+cuts, so raw cell lists are not byte-stable. Clause 5's public maximum strictly relaxes
+the replayed piecewise envelope; the exact difference at sigma=373/493 is
+12551/8098290. The checker retains that distinction and reproduces every
+printed branch. Two archived Python invalid-escape SyntaxWarnings remain
+visible in the transcript; these are not Lean diagnostics.
+
+Standalone reproduction (the BAT runs these stages automatically):
+
+```powershell
+& Tools/setup_paper_time.ps1
+& E:/Lean/.tmp_epzae_reproduction_20260927/python/python.exe `
+  Tools/reproduce_paper_time.py --runtime E:/Lean/.tmp_epzae_reproduction_20260927 `
+  --log logs/paper-time-manual.log --check Tools/paper_time_reproduction.json
+```
+
+Choose a fresh log name on each manual run; existing logs are never overwritten.
+The pinned environment is a compatible replay environment, not a claim about
+the authors' historical installed package versions.
+
+Installed tools:
 
 - `verify_sources.ps1` -- recompute `Sources/SHA256SUMS.txt`, check archive
   commit metadata, and fail on missing/unlisted files;
@@ -136,10 +285,18 @@ Installed and planned tools:
   extracts and sign-normalizes all nine energy-clause tables from the frozen
   blueprint, and deterministically emits their kernel-consumed rational data
   module;
-- `reproduce_paper_time.py` -- future tool to invoke pinned ANTEDB functions for the 2025
-  outputs and serialize exact rational results;
-- `emit_certificates.py` -- future full conversion of exact rational witnesses to deterministic
-  Lean data, never theorem declarations;
+- `reproduce_paper_time.py` -- installed historical replay of all nine energy
+  projection recipes and all four pair-coordinate discoveries, with exact
+  algebraic interval checks and nine checker regressions. It also reconstructs
+  the eight rational density pieces. This is not analytic proof evidence;
+- `setup_paper_time.ps1` and `paper_time_environment.json` -- isolated Windows
+  Python 3.12.8 plus 15 version/hash-pinned wheels. No system Python installation
+  is changed. Initial setup downloads official python.org/PyPI artifacts;
+  subsequent runs verify cached archives and all imported installed bytes;
+- `paper_time_reproduction.json` -- canonical exact replay data, compared
+  byte-for-byte on every principal BAT invocation. The generator consumes the
+  fresh replay via `--replay`, rejects six classes of altered source data, and
+  emits the same kernel-consumed Lean module;
 - deterministic regeneration/diff checking for the installed generated module
   is integrated directly into the principal runner;
 - `run_tao_trudgian_yang_build.ps1` -- installed warning-failing Lake build,

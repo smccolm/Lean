@@ -1,6 +1,15 @@
 # Authorized cardinality/energy powering repair
 
-Current analytic closure (27 September 2026): the refined displacement
+Current status (27 September 2026): EPZAE-06/11/15/26 are DONE;
+aggregate 33/42. The universal D-process, Watt and old-pair provenance,
+corrected two-witness powering and all nine Add-est clauses are preserved.
+The principal BAT now replays the pinned historical computations and checks
+exact regeneration. The archived false five-coordinate rule is not proof
+evidence; both permanent Lean counterexamples are unchanged. Huxley analytic
+inputs and the separately obstructed unrestricted growth clause remain open.
+See the current goal and reproduction manifest for complete gate evidence.
+
+Historical Watt checkpoint (27 September 2026): the refined displacement
 argument proves the full Bourgain pair `(13/84,55/84)` and the exact Watt
 coordinates `(89/560,369/560)` in the existing localization module.
 The original model phase, every source band, tail, endpoint and uniform

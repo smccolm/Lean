@@ -35,10 +35,27 @@ function Invoke-LeanGate {
     Write-Host "STAGE: $Label"
     Push-Location -LiteralPath $WorkingDirectory
     try {
-        $output = @(& $Executable @Arguments 2>&1)
-        $processExitCode = $LASTEXITCODE
+        # Windows PowerShell treats redirected native stderr as an error record.
+        # Capture it without aborting before stdout is printed; then enforce the
+        # same native exit-code and zero-warning gates on the complete output.
+        $savedErrorActionPreference = $ErrorActionPreference
+        try {
+            $ErrorActionPreference = 'Continue'
+            $output = @(& $Executable @Arguments 2>&1)
+            $processExitCode = $LASTEXITCODE
+        }
+        finally {
+            $ErrorActionPreference = $savedErrorActionPreference
+        }
         foreach ($line in $output) {
             Write-Host $line
+        }
+        $invocationErrors = @($output | Where-Object {
+            $_ -is [System.Management.Automation.ErrorRecord] -and
+            $_.FullyQualifiedErrorId -notin @('NativeCommandError', 'NativeCommandErrorMessage')
+        })
+        if ($invocationErrors.Count -ne 0) {
+            throw "$Label encountered a PowerShell invocation error."
         }
         if ($processExitCode -ne 0) {
             throw "$Label failed with exit code $processExitCode."
@@ -107,6 +124,10 @@ try {
         'Sources\SHA256SUMS.txt',
         'Tools\README.md',
         'Tools\generate_certificates.py',
+        'Tools\reproduce_paper_time.py',
+        'Tools\setup_paper_time.ps1',
+        'Tools\paper_time_environment.json',
+        'Tools\paper_time_reproduction.json',
         'Tools\verify_sources.ps1',
         'Tools\verify_gafnitao_sources.ps1',
         'Tools\run_tao_trudgian_yang_build.ps1',
@@ -1698,16 +1719,32 @@ try {
         Write-Host "PASS: complete production coverage ($($actualLeanFiles.Count) Lean package files)"
         Write-Host 'PASS: Lean package bootstrap inventory'
 
-        Write-Host 'STAGE: deterministic certificate regeneration'
-        $pythonCommand = Get-Command python -ErrorAction Stop
+        Write-Host 'STAGE: pinned historical reproduction environment'
+        $workspaceRoot = (Get-Item -LiteralPath $projectRoot).Parent.Parent.Parent.FullName
+        $replayRuntime = Join-Path $workspaceRoot '.tmp_epzae_reproduction_20260927'
+        & (Join-Path $PSScriptRoot 'setup_paper_time.ps1') -RuntimeRoot $replayRuntime
+        $replayPython = Join-Path $replayRuntime 'python\python.exe'
+        $replayOutput = Join-Path $logDirectory "paper-time-$logStamp-$logId.json"
+        $replayLog = Join-Path $logDirectory "paper-time-$logStamp-$logId.log"
+        Write-Host 'Archived Python computations are historical reproduction, NOT Lean proof evidence.'
+        Write-Host 'The frozen Python source emits two visible invalid-escape SyntaxWarnings.'
+        Invoke-LeanGate -Label 'historical paper-time computation and exact replay regressions' `
+            -WorkingDirectory $projectRoot -Executable $replayPython -Arguments @(
+                (Join-Path $PSScriptRoot 'reproduce_paper_time.py'),
+                '--runtime', $replayRuntime,
+                '--log', $replayLog, '--output', $replayOutput,
+                '--check', (Join-Path $PSScriptRoot 'paper_time_reproduction.json')
+            )
+
+        Write-Host 'STAGE: deterministic certificate regeneration from replayed data'
         $generatorPath = Join-Path $projectRoot 'Tools\generate_certificates.py'
         $archivePath = Join-Path $projectRoot 'Sources\antedb-expdb-paper-time-9953003.zip'
         $checkedCertificatePath = Join-Path $extensionRoot `
             'TaoTrudgianYang2025\GeneratedCertificates.lean'
         $temporaryCertificate = New-TemporaryFile
         try {
-            & $pythonCommand.Source $generatorPath --archive $archivePath `
-                --output $temporaryCertificate.FullName
+            & $replayPython $generatorPath --archive $archivePath `
+                --replay $replayOutput --output $temporaryCertificate.FullName
             if ($LASTEXITCODE -ne 0) {
                 throw "Certificate generator exited with code $LASTEXITCODE."
             }

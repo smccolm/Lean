@@ -1,0 +1,685 @@
+{
+  "adaptations": [
+    "Skip unrelated import-time compute_best_zero_density demo.",
+    "Clause 1: repair stale projection API, return output, use blueprint domain [3/4,5/6].",
+    "Restrict replay cells to the nine public clause domains.",
+    "Closed endpoints compared by continuous rational extension.",
+    "Reconstruct the printed maximum from exactly the replayed branches; explicitly report any strict relaxation."
+  ],
+  "archive_sha256": "6ab14c1fbafe048abb61e497322cd7bb67868b2d8816fad0ec20183d937bb2f3",
+  "bourgain_pieces": [
+    {
+      "candidate": 0,
+      "denominator_constant": -36,
+      "denominator_slope": 48,
+      "ell": "59/85",
+      "k": "11/85",
+      "lower": "3/4",
+      "numerator": 11,
+      "upper": "14/15"
+    },
+    {
+      "candidate": 1,
+      "denominator_constant": -2014,
+      "denominator_slope": 2493,
+      "ell": "3461/4595",
+      "k": "391/4595",
+      "lower": "14/15",
+      "numerator": 391,
+      "upper": "2841/3016"
+    },
+    {
+      "candidate": 2,
+      "denominator_constant": -134765,
+      "denominator_slope": 163248,
+      "ell": "58699/76066",
+      "k": "2779/38033",
+      "lower": "2841/3016",
+      "numerator": 22232,
+      "upper": "859/908"
+    },
+    {
+      "candidate": 3,
+      "denominator_constant": -2279,
+      "denominator_slope": 2742,
+      "ell": "997/1282",
+      "k": "89/1282",
+      "lower": "859/908",
+      "numerator": 356,
+      "upper": "1625/1692"
+    },
+    {
+      "candidate": 4,
+      "denominator_constant": -17313767,
+      "denominator_slope": 20732766,
+      "ell": "7599781/9713986",
+      "k": "652397/9713986",
+      "lower": "1625/1692",
+      "numerator": 2609588,
+      "upper": "3334585/3447984"
+    },
+    {
+      "candidate": 5,
+      "denominator_constant": -625653,
+      "denominator_slope": 729216,
+      "ell": "280013/345640",
+      "k": "2371/43205",
+      "lower": "3334585/3447984",
+      "numerator": 75872,
+      "upper": "974605/1005296"
+    },
+    {
+      "candidate": 6,
+      "denominator_constant": -3197,
+      "denominator_slope": 3616,
+      "ell": "1461/1736",
+      "k": "9/217",
+      "lower": "974605/1005296",
+      "numerator": 288,
+      "upper": "5857/6032"
+    },
+    {
+      "candidate": 7,
+      "denominator_constant": -1311509,
+      "denominator_slope": 1447460,
+      "ell": "609317/702192",
+      "k": "10769/351096",
+      "lower": "5857/6032",
+      "numerator": 86152,
+      "upper": "1"
+    }
+  ],
+  "energy": [
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "3/4",
+      "public_bounds": [
+        {
+          "denominator": [
+            "6",
+            "-2"
+          ],
+          "numerator": [
+            "-19",
+            "18"
+          ]
+        },
+        {
+          "denominator": [
+            "20",
+            "-5"
+          ],
+          "numerator": [
+            "-36",
+            "40"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "6",
+            "-2"
+          ],
+          "lower": "3/4",
+          "numerator": [
+            "-19",
+            "18"
+          ],
+          "upper": "sqrt(13889)/328 + 143/328"
+        },
+        {
+          "denominator": [
+            "20",
+            "-5"
+          ],
+          "lower": "sqrt(13889)/328 + 143/328",
+          "numerator": [
+            "-36",
+            "40"
+          ],
+          "upper": "5/6"
+        }
+      ],
+      "source_label": "imp-hb-energy-bound",
+      "upper": "5/6"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "7/10",
+      "public_bounds": [
+        {
+          "denominator": [
+            "10",
+            "6"
+          ],
+          "numerator": [
+            "-95",
+            "90"
+          ]
+        },
+        {
+          "denominator": [
+            "2",
+            "15"
+          ],
+          "numerator": [
+            "-88",
+            "90"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "10",
+            "6"
+          ],
+          "lower": "7/10",
+          "numerator": [
+            "-95",
+            "90"
+          ],
+          "upper": "539/460 - sqrt(42121)/460"
+        },
+        {
+          "denominator": [
+            "2",
+            "15"
+          ],
+          "lower": "539/460 - sqrt(42121)/460",
+          "numerator": [
+            "-88",
+            "90"
+          ],
+          "upper": "3/4"
+        }
+      ],
+      "source_label": "imp-energy-bound2",
+      "upper": "3/4"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "173/229",
+      "public_bounds": [
+        {
+          "denominator": [
+            "2000",
+            "-1488"
+          ],
+          "numerator": [
+            "270",
+            "-173"
+          ]
+        },
+        {
+          "denominator": [
+            "1250",
+            "-930"
+          ],
+          "numerator": [
+            "890",
+            "-653"
+          ]
+        },
+        {
+          "denominator": [
+            "300",
+            "-40"
+          ],
+          "numerator": [
+            "-1190",
+            "1151"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "2000",
+            "-1488"
+          ],
+          "lower": "173/229",
+          "numerator": [
+            "270",
+            "-173"
+          ],
+          "upper": "4359/5770"
+        },
+        {
+          "denominator": [
+            "1250",
+            "-930"
+          ],
+          "lower": "4359/5770",
+          "numerator": [
+            "890",
+            "-653"
+          ],
+          "upper": "241/319"
+        },
+        {
+          "denominator": [
+            "300",
+            "-40"
+          ],
+          "lower": "241/319",
+          "numerator": [
+            "-1190",
+            "1151"
+          ],
+          "upper": "443/586"
+        }
+      ],
+      "source_label": "imp-energy-bound9",
+      "upper": "443/586"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "443/586",
+      "public_bounds": [
+        {
+          "denominator": [
+            "1150",
+            "-855"
+          ],
+          "numerator": [
+            "810",
+            "-593"
+          ]
+        },
+        {
+          "denominator": [
+            "275",
+            "-35"
+          ],
+          "numerator": [
+            "-1100",
+            "1064"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "1150",
+            "-855"
+          ],
+          "lower": "443/586",
+          "numerator": [
+            "810",
+            "-593"
+          ],
+          "upper": "409/541"
+        },
+        {
+          "denominator": [
+            "275",
+            "-35"
+          ],
+          "lower": "409/541",
+          "numerator": [
+            "-1100",
+            "1064"
+          ],
+          "upper": "373/493"
+        }
+      ],
+      "source_label": "imp-energy-bound10",
+      "upper": "373/493"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "public maximum relaxes the replayed piecewise envelope",
+      "lower": "373/493",
+      "public_bounds": [
+        {
+          "denominator": [
+            "1050",
+            "-780"
+          ],
+          "numerator": [
+            "730",
+            "-533"
+          ]
+        },
+        {
+          "denominator": [
+            "85",
+            "-62"
+          ],
+          "numerator": [
+            "-99",
+            "78"
+          ]
+        },
+        {
+          "denominator": [
+            "31",
+            "2"
+          ],
+          "numerator": [
+            "-185",
+            "174"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "1050",
+            "-780"
+          ],
+          "lower": "373/493",
+          "numerator": [
+            "730",
+            "-533"
+          ],
+          "upper": "314/415"
+        },
+        {
+          "denominator": [
+            "85",
+            "-62"
+          ],
+          "lower": "314/415",
+          "numerator": [
+            "-99",
+            "78"
+          ],
+          "upper": "171/226"
+        },
+        {
+          "denominator": [
+            "31",
+            "2"
+          ],
+          "lower": "171/226",
+          "numerator": [
+            "-185",
+            "174"
+          ],
+          "upper": "103/136"
+        }
+      ],
+      "source_label": "imp-energy-bound11",
+      "upper": "103/136"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "103/136",
+      "public_bounds": [
+        {
+          "denominator": [
+            "77",
+            "-56"
+          ],
+          "numerator": [
+            "-91",
+            "72"
+          ]
+        },
+        {
+          "denominator": [
+            "10",
+            "6"
+          ],
+          "numerator": [
+            "-95",
+            "90"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "77",
+            "-56"
+          ],
+          "lower": "103/136",
+          "numerator": [
+            "-91",
+            "72"
+          ],
+          "upper": "6038/6405 - 2*sqrt(352321)/6405"
+        },
+        {
+          "denominator": [
+            "10",
+            "6"
+          ],
+          "lower": "6038/6405 - 2*sqrt(352321)/6405",
+          "numerator": [
+            "-95",
+            "90"
+          ],
+          "upper": "42/55"
+        }
+      ],
+      "source_label": "imp-energy-bound4",
+      "upper": "42/55"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "42/55",
+      "public_bounds": [
+        {
+          "denominator": [
+            "90",
+            "-66"
+          ],
+          "numerator": [
+            "-19",
+            "18"
+          ]
+        },
+        {
+          "denominator": [
+            "16",
+            "-4"
+          ],
+          "numerator": [
+            "-57",
+            "54"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "90",
+            "-66"
+          ],
+          "lower": "42/55",
+          "numerator": [
+            "-19",
+            "18"
+          ],
+          "upper": "97/127"
+        },
+        {
+          "denominator": [
+            "16",
+            "-4"
+          ],
+          "lower": "97/127",
+          "numerator": [
+            "-57",
+            "54"
+          ],
+          "upper": "79/103"
+        }
+      ],
+      "source_label": "imp-energy-bound6",
+      "upper": "79/103"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "79/103",
+      "public_bounds": [
+        {
+          "denominator": [
+            "74",
+            "-54"
+          ],
+          "numerator": [
+            "-19",
+            "18"
+          ]
+        },
+        {
+          "denominator": [
+            "26",
+            "-6"
+          ],
+          "numerator": [
+            "-95",
+            "90"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "74",
+            "-54"
+          ],
+          "lower": "79/103",
+          "numerator": [
+            "-19",
+            "18"
+          ],
+          "upper": "33/43"
+        },
+        {
+          "denominator": [
+            "26",
+            "-6"
+          ],
+          "lower": "33/43",
+          "numerator": [
+            "-95",
+            "90"
+          ],
+          "upper": "84/109"
+        }
+      ],
+      "source_label": "imp-energy-bound7",
+      "upper": "84/109"
+    },
+    {
+      "endpoint_convention": "continuous extension of archived half-open cells",
+      "envelope_relation": "equal",
+      "lower": "84/109",
+      "public_bounds": [
+        {
+          "denominator": [
+            "27",
+            "-18"
+          ],
+          "numerator": [
+            "-19",
+            "18"
+          ]
+        },
+        {
+          "denominator": [
+            "20",
+            "-5"
+          ],
+          "numerator": [
+            "-36",
+            "40"
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "denominator": [
+            "27",
+            "-18"
+          ],
+          "lower": "84/109",
+          "numerator": [
+            "-19",
+            "18"
+          ],
+          "upper": "1273/1184 - sqrt(128689)/1184"
+        },
+        {
+          "denominator": [
+            "20",
+            "-5"
+          ],
+          "lower": "1273/1184 - sqrt(128689)/1184",
+          "numerator": [
+            "-36",
+            "40"
+          ],
+          "upper": "13/16"
+        },
+        {
+          "denominator": [
+            "20",
+            "-5"
+          ],
+          "lower": "13/16",
+          "numerator": [
+            "-36",
+            "40"
+          ],
+          "upper": "5/6"
+        }
+      ],
+      "source_label": "imp-energy-bound8",
+      "upper": "5/6"
+    }
+  ],
+  "environment": {
+    "packages": {
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "fonttools": "4.66.0",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.10.0",
+      "mpmath": "1.3.0",
+      "numpy": "2.2.2",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pycddlib": "2.1.8.post1",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "scipy": "1.15.1",
+      "six": "1.17.0",
+      "sympy": "1.13.3"
+    },
+    "python": "3.12.8"
+  },
+  "exponent_pair_coordinates": [
+    [
+      "89/1282",
+      "997/1282"
+    ],
+    [
+      "652397/9713986",
+      "7599781/9713986"
+    ],
+    [
+      "10769/351096",
+      "609317/702192"
+    ],
+    [
+      "89/3478",
+      "15327/17390"
+    ]
+  ],
+  "proof_evidence": false,
+  "schema": 1
+}

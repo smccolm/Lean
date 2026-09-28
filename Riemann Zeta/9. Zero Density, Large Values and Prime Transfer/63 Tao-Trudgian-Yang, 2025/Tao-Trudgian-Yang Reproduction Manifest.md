@@ -1,6 +1,366 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-## Analytic D(Bourgain) cascade: current verified revision (27 September 2026)
+## Pinned historical reproduction: verified closure (27 September 2026)
+
+**EPZAE-06 is DONE; aggregate 33/42.** The pinned Python 3.12.8 runtime and
+15 pinned wheels execute all nine archived energy recipes and four
+pair-coordinate discoveries; exact rational arithmetic reconstructs the
+eight density pieces. This is historical computation, never Lean proof
+evidence. The false archived five-coordinate powering rule remains intact.
+The corrected two-witness Lean proofs and both counterexamples are unchanged.
+
+The principal BAT now requires fresh replay, nine exact checker regressions,
+six generator rejection regressions, byte-identical canonical JSON, and
+regeneration of the unchanged GeneratedCertificates.lean from that fresh
+JSON. It does not accept a previous PASS or use Python theorem claims as
+proof inputs. No new Lean production module was added.
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  LEAN VERIFICATION PASS, [target transcript](logs/tao-trudgian-yang-build-20260927-134034-a1a5877d.log).
+  All 10,778 build jobs, 7,212 semantic regressions and 17,820 audits pass
+  (11,575 target, 6,240 pinned, five anchors). Complete coverage remains
+  1,445 package files / 1,919 scanned Lean files.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, PASS,
+  [foundation transcript](../../logs/foundation_freeze_20260927_133447.log)
+  and [manifest](../../logs/foundation_freeze_20260927_133447.json).
+  All six stages, 8,857 jobs and 14,290 theorem audits pass.
+- The [clean-install standalone replay](logs/paper-time-replay-20260927-canonical-clean.log)
+  and the [BAT replay](logs/paper-time-20260927-134034-a1a5877d.log)
+  ran in independently installed runtimes. Both output JSON files and the
+  [checked reference](Tools/paper_time_reproduction.json) have identical
+  SHA256 71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee.
+  Standalone command: pinned python.exe, Tools/reproduce_paper_time.py,
+  --runtime E:/Lean/.tmp_epzae_reproduction_clean_20260927,
+  --log logs/paper-time-replay-20260927-canonical-clean.log,
+  --output E:/Lean/.scratch/paper-time-replay-20260927-canonical-clean.json,
+  --check Tools/paper_time_reproduction.json.
+
+Both BATs have zero Lean errors, warnings, tactic suggestions or linter
+failures. Two **archived Python SyntaxWarnings** (invalid escapes, source
+lines 53 and 219) remain visible in the replay and target transcripts; no
+warning filter or Lean gate was weakened. This is not a claim of zero
+diagnostics from historical Python. All proof dependencies remain permitted.
+
+Explicit reproduction adaptations and findings:
+
+- Skip only the unrelated import-time density demo. Clause 1's stale API,
+  missing return and blueprint domain [3/4,5/6] are adapted in memory;
+  the frozen archive is unchanged.
+- Closed endpoints use continuous rational extension. Clause 5's printed
+  maximum strictly relaxes the replayed piecewise envelope: at sigma=373/493,
+  another printed branch exceeds the selected branch by 12551/8098290.
+  All printed branches and exact domains are reproduced; equality with the
+  sharper piecewise function is not falsely asserted.
+- Archived iteration can split an unchanged formula at a redundant endpoint.
+  Canonicalization merges only contiguous cells with identical exact rational
+  functions. The split/unsplit regression passes; no numerical sampling is used.
+- Failed overstrong equality attempts are preserved in
+  [first](logs/paper-time-replay-20260927-first.log) and
+  [second](logs/paper-time-replay-20260927-second.log) logs.
+  The [raw repeatability attempt](logs/paper-time-replay-20260927-repeat.log)
+  exposed the extra 13/16 split. The [pre-normalization BAT](logs/tao-trudgian-yang-build-20260927-133437-a77ae002.log)
+  exited 1 at replay comparison (its older running code encountered the
+  updated reference). The complete final run above supersedes it.
+
+Artifact hashes:
+
+| Artifact | SHA256 |
+| --- | --- |
+| logs/tao-trudgian-yang-build-20260927-134034-a1a5877d.log | `67b975ad16e3a3c50f1848ae9542605abb4e0998aa0ee360af066c7112e742a4` |
+| logs/paper-time-20260927-134034-a1a5877d.log | `44c534e66812538b800b57d5089803666fc19673596291dd420c8002b26dfb37` |
+| logs/paper-time-20260927-134034-a1a5877d.json | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| Tools/reproduce_paper_time.py | `dc448906c1950b5d90d6ba0c188586f42bec20b2ad0456495f3ff55078c2b5bf` |
+| Tools/setup_paper_time.ps1 | `fccef6c4f29c249484c5172533752be20752c04351a2f1bcc48250d48e452a1e` |
+| Tools/paper_time_environment.json | `44f437a6176d549dd5ed2eeeeeb443f66aa5ab0739625b73bfb6ada98c16e8e3` |
+| Tools/paper_time_reproduction.json | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| Tools/generate_certificates.py | `663d8bdc8951599f011e08785c4f6309e62da23368540fe625034454110f07f5` |
+| Tools/run_tao_trudgian_yang_build.ps1 | `da5fc352a7ae053edffb771dace20b9e81f601eaf4ad98c092edd98647a46687` |
+| Extension/TaoTrudgianYang2025/GeneratedCertificates.lean | `3029655e27a31f9fb4616608aec4857f7f9be394af5aea867e4ead375e5871c8` |
+| logs/paper-time-replay-20260927-canonical-clean.log | `c3097d9cc74384947969dd32d91dd495ccddf1d077ba31396727b844a5a04d34` |
+| ../../logs/foundation_freeze_20260927_133447.log | `cdb11e89c629346bb60b1f5906ea81df46ea98d179773433f7d831a2fd6b6b5d` |
+| ../../logs/foundation_freeze_20260927_133447.json | `c9fc096379d95d595cca442e501033bdab03f66d8228ad9b0dce3366d3c747c3` |
+
+The runtime installer uses official python.org/PyPI artifacts without
+changing system Python. Source and runtime payload hashes are checked before
+replay. The pinned packages describe this compatible reproduction environment,
+not the authors' historical installed versions.
+
+The analytical work remains incomplete: Huxley joint-resonance provenance
+for the five-row cascade is unproved; smaller tested A/B/C/D closures and
+the retained joint-count cost do not discharge it. EPZAE-13/14/29 remain
+open, as do the separately obstructed EPZAE-21 contract and final release.
+The complete goal and both BAT requirements remain unchanged.
+Final documentation checks cover 11 documents, 6,341 local links, 600 graph
+nodes and 1,456 edges, with no broken links or missing/duplicate endpoints.
+The canonical checklist contains exactly 33 checked and nine open items.
+Git diff whitespace checking passes; Git prints only its existing LF/CRLF
+conversion notices, not Lean diagnostics.
+No recovery-record file was touched. No commit or push was performed.
+
+Earlier verified checkpoints and their revision-specific hashes follow as history.
+
+## Cubic source and density cascade: verified checkpoint (27 September 2026)
+
+Current verification covers the sharper original cubic Gauss remainder and
+three actual optimized Bourgain density pieces, in addition to the universal
+Sargos D-process and the six table/pair consumers recorded below.
+The aggregate remains **32/42**: EPZAE-11 is complete; EPZAE-13, EPZAE-14
+and EPZAE-29 remain open. A passing build does not discharge missing
+analytic inputs.
+
+- The existing ParabolaBilinearLocalization module proves
+  `exists_bourgain_cubic_shifted_gauss_denominator_error`, retaining the
+  sharper `sqrt(q)*log(2*N)` remainder. Its old consumer is preserved
+  as a monotone weakening. This does not remove the remaining joint-count
+  loss `P^12*U^3`.
+- The existing BourgainOptimizedTransfer module proves the actual
+  exponent pair `(11/85,59/85)` and optimized density pieces **1, 6, 7**.
+  `optimizedBourgain_bound_of_remaining_pairs` is explicitly conditional
+  on the other five analytic pairs; it is not the unconditional eight-piece
+  theorem. Six public audits and nine semantic regressions were added.
+  No production module was added.
+- Principal command: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`.
+  Session 28359, exit 0, **LEAN VERIFICATION PASS**, every stage passed,
+  **7,212** regressions, **17,820** dependency audits
+  (11,575 target, 6,240 pinned, five anchors), 10,778 jobs;
+  1,445 package files and 1,919 scanned Lean files; zero Lean diagnostics.
+  [Complete log](logs/tao-trudgian-yang-build-20260927-124311-77435d84.log),
+  SHA256 `c9e1775124a95d1da1eb7dbeb8136e8db254d1c012a320fcb3ffc91e98f467a4`.
+- Foundation command: `cmd /c run_lake_build.bat --no-pause`.
+  Session 30195, exit 0, **PASS**, all six stages, 8,857 jobs,
+  **14,290** dependency audits, zero Lean diagnostics.
+  [Complete log](../../logs/foundation_freeze_20260927_124322.log),
+  SHA256 `c7ca0975d6c8561dfc8f41a5c3f7e49369318a38aa8b05aaaa14b47259a95098`;
+  [JSON](../../logs/foundation_freeze_20260927_124322.json),
+  SHA256 `01f7668bcb444d65eaa9292066752f64bd6571acc94039f1283062b78cf3bc1c`.
+- The first combined runs (81207 and 12770) failed at integration:
+  the new regression section had an ambiguous `zeroDensityExponent`.
+  All seven affected occurrences now explicitly name
+  `TaoTrudgianYang2025.zeroDensityExponent`; no regression was excluded.
+  The principal runner now captures and prints native stdout/stderr before
+  checking exit status, so PowerShell cannot conceal the underlying Lean
+  diagnostic. Nonzero exits, warnings and missing executables still fail.
+  [Five runner-reporting tests](../../../.scratch/epzae-runner-native-output-regression-20260927.ps1)
+  passed (native failure, stdout warning, stderr warning, clean success,
+  missing executable). No gate was weakened.
+
+Verified production SHA256 hashes:
+
+| File | SHA256 |
+| --- | --- |
+| ParabolaBilinearLocalization.lean | `b7a75c1db0da493abe8b06cd20d0bee0addfbcb728ba49ce6eb59fbbfe2a67fc` |
+| SquareProductCount.lean | `da00b0d0676cbc86e9f38f3fc59d4fc7872ecd3aad795ff3441e1248a8740ba4` |
+| BourgainOptimizedTransfer.lean | `f62b8609a5af56ce3645b0acb6c17b885f1d4d3865298a926ec1db298a8b8c04` |
+| SemanticRegression.lean | `61d71bdfdd264b35209b73ebb41d559ebea3138e22065c78db7e09229292a4d2` |
+| Audit.lean | `1327c33c6f3a037a3a0466b11d621b9613d40c9e5efd91a90b418cc2c48fa452` |
+| Tools/run_tao_trudgian_yang_build.ps1 | `f76b448570251c89b2e206d8fdaa77c797de084ed16778944743d0ea7825cc62` |
+
+Two separately kernel-checked discovery tests delimit, but do not close,
+the remaining analytic obligation:
+
+- [Five-row dependency test](../../../.scratch/epzae-huxley-five-row-dependency-20260927.lean),
+  session 4110, zero diagnostics, four audited deductions from **five explicit
+  unresolved Huxley bounds** to the first two new public pairs and two further
+  density-input pairs. SHA256
+  `a37b62317ed5214f8b845877b0517d227f9d1c394bf997a55c9606bff10cdb26`.
+  This conditional test is not installed as an unconditional production result.
+- [Exact failed-route comparisons](../../../.scratch/epzae-huxley-route-obstruction-20260927.lean),
+  session 8401, zero diagnostics, three audited rational comparisons.
+  At alpha = 3/8, the available A/D bound and retained count-cost exponent
+  are too large for the first target pair; at sigma = 19/20, the compared
+  available density bounds are too large for piece 4. These compare
+  **upper bounds**, not analytic lower bounds or counterexamples.
+  SHA256 `fa9129e9549869abc37ca67e591840f1e7d00e097e1d8d6ad0220fee01bd45ce`.
+
+The necessary source-level Huxley joint-derivative/rational-label count is
+still unproved. Seven printed rows and the short table gap remain open;
+the exact five-row contracts and their cascade are in
+[Sources](Tao-Trudgian-Yang%20Sources.md).
+The preserved EnergyPoweringObstruction hash is
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+ZetaLowHeightObstruction is
+`6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+The generic-D fallthrough numerical counterexample is also preserved.
+Recovery-record maintenance is permanently skipped.
+
+Earlier verified revisions and their revision-specific hashes follow as history.
+
+## Refined table cascade: verified checkpoint (27 September 2026)
+
+Six additional public consumers in the existing SquareProductCount module
+prove the exact Trudgian--Yang input (4742/38463,35731/51284), its A-image
+(2371/43205,280013/345640), and printed beta rows 6,13,14,15.
+Rows 13--15 include both closed endpoints; row 6 holds on all [0,1].
+They consume the proved refined beta estimate, D(Bourgain), Bourgain
+and A-process. No input pair is postulated and no module was added.
+SquareProductCount now has 189 public theorem declarations.
+EPZAE-11 remains complete; EPZAE-13/14 remain open; aggregate 32/42.
+
+- Focused build 87909 PASS: module, root and semantic regressions.
+- Principal BAT 14289: exit 0, LEAN VERIFICATION PASS; 7,203 regressions,
+  17,813 audits (11,568 target, 6,240 pinned, five anchors), 10,778 jobs;
+  1,445 package files and 1,919 scanned Lean files, zero diagnostics.
+  [Log](logs/tao-trudgian-yang-build-20260927-114801-b6113460.log), SHA256
+  fd8dddabe016079de1c62720d93f7a1d3377955ceb5d7d48df7ecf97d7ca743b.
+- Foundation BAT 52435: exit 0, PASS, all six stages, 8,857 jobs,
+  14,290 audited declarations, zero diagnostics.
+  [Log](../../logs/foundation_freeze_20260927_114237.log), SHA256
+  654eb858d4c839f3c9f259bc8ac97de610d48db7cff706eb2a39429c74c24610;
+  [JSON](../../logs/foundation_freeze_20260927_114237.json), SHA256
+  3f73a869e77641408560b32f4667ea645745b6ed66cc11c5e6aa203154a0c9b6.
+- Verified source hashes:
+  SquareProductCount.lean da00b0d0676cbc86e9f38f3fc59d4fc7872ecd3aad795ff3441e1248a8740ba4;
+  Audit.lean 603ef72ee8f0b32f7e66f43bf37d91787e1497dbe641007fb683d3d71fe34b1a;
+  SemanticRegression.lean 611411450cefc5d9f71ae4cfd007d100a4dbe9e6b20ab37fa8a62d7f852138cf.
+- Six public audits and twelve regressions were added. Counterexample
+  hashes below are unchanged. No exclusion, pin change, weakened gate
+  or recovery-record edit was introduced.
+
+Seven Huxley rows and the printed-table interval gap (199/716,120/419)
+remain analytic obligations. Numerical transforms are discovery only.
+The earlier universal-D checkpoint and its hashes follow as history.
+
+## Universal Sargos D-process: verified checkpoint (27 September 2026)
+
+EPZAE-11 is complete; aggregate 32/42. The public theorem
+CubicJointCount.exponentSumGrowthExponent_le_sargosD proves exactly the
+printed maximum bound on the full closed interval 0<=alpha<=1, for every
+actual analytic ExponentPair(k,l). Its original-source estimate, linked
+integer/Fourier scales, curvature fallthrough, endpoint losses and epsilon
+absorption are derived; the upper half uses actual beta reflection.
+CubicJointCount.exponentPair_sargosD consumes this estimate when
+5*k-3*l+2>=0 and k+3*l>=2. The secondary term is retained until those
+comparisons are proved. D(Bourgain) and its A-image are audited consumers.
+This is an alternate proof of the exact source contract, not of every
+historical intermediate variant.
+
+- Principal BAT 38365: exit 0, LEAN VERIFICATION PASS, 7,191 regressions,
+  17,807 audits (11,562 target, 6,240 pinned, five anchors), 10,778 jobs;
+  1,445 package files and 1,919 scanned Lean files, zero diagnostics.
+  [Log](logs/tao-trudgian-yang-build-20260927-113023-c49fabdf.log), SHA256
+  225c0f273b22fbc0f0c6093bfb6e0e85a4a603c2e9e4e422167132c0a310865e.
+- Foundation BAT 41828: exit 0, PASS, all six stages, 8,857 jobs,
+  14,290 audited declarations, zero diagnostics.
+  [Log](../../logs/foundation_freeze_20260927_112520.log), SHA256
+  c16d7289d084f54a5b6a368202c3d516f0a5498ddbe2683e7d503d85e2129ad5;
+  [JSON](../../logs/foundation_freeze_20260927_112520.json), SHA256
+  27cc1e21e061787ff3757e9ea9816c06f611de1b0fd0a41086aafb1aba9372cf.
+- Source hashes at this verified checkpoint:
+  SquareProductCount.lean 4e4f89d6e2adb3896c5ebdc7695953232c04bc471ab7e4194f5022be853f47ab;
+  Audit.lean 30602d5ed5742e589be87c92eab42b937ba675772e754e6723c9516ea58608ae;
+  SemanticRegression.lean 6dde1250c1e9c57a57ee00c195eb48dcdb7374d102f2d7624d7c9d04905a837c.
+- Ten public declarations were added inside an existing module (183 total),
+  with ten full-contract regressions, both closed endpoints and the actual
+  D(Bourgain) pair. Scratch proof/audit 3512 and regressions 93343 pass.
+- The first copied regression signatures were malformed; focused build
+  67555 and principal BAT 89423 failed. Those declarations were corrected,
+  not excluded. The full principal rerun above passed all gates.
+
+Both original counterexample hashes remain unchanged:
+EnergyPoweringObstruction 76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487;
+ZetaLowHeightObstruction 6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38dbdbd36b5ae.
+
+Subsequent table cascade, not included in the hashes above: six short
+consumer proofs supply the exact Trudgian--Yang input and its A-image,
+and public rows 6,13,14,15. Proof/audit scratches 80144 and 39487 and all
+twelve regressions in 34564 pass with zero diagnostics. Their production
+integration is underway; both BATs must pass again for that revision.
+No new module, runner exclusion, pin change or weakened audit was added.
+EPZAE-13/14 and the whole goal remain open. Recovery records are skipped.
+
+## Refined original-source beta theorem: preceding verified revision
+
+The public theorem
+CubicJointCount.exponentSumGrowthExponent_le_refined_bourgain proves
+beta(alpha) <= max(1/12+2*alpha/3,241/1164+425*alpha/1164)
+for 2/5<alpha<3/7. It consumes the literal closed original source,
+constructs rational bands, sums the frozen estimate and tail, trims
+both endpoint strips, includes short intervals, and derives every
+physical condition and loss from the asymptotic source scales.
+
+No new production module was created. The existing interval-block proof
+was generalized to arbitrary real endpoints; its old interface is retained.
+The preserved generic-D numerical obstruction is not deleted or weakened;
+a new analytic regression covers that exact rational point.
+
+- Principal BAT 13537: exit 0, LEAN VERIFICATION PASS, 7,178 regressions;
+  17,790 audits (11,545 target, 6,240 pinned, five anchors);
+  1,445 package files, 1,919 scanned files, 10,778 jobs; zero diagnostics.
+  [Log](logs/tao-trudgian-yang-build-20260927-105559-174acced.log),
+  SHA256 c97f58167dbdfe387cda469b1a7d38ad894fb066aca9b35ceb37eaf28de236cf.
+- Foundation BAT 64412: exit 0, PASS, all six stages, 8,857 jobs,
+  14,290 audits; zero diagnostics.
+  [Log](../../logs/foundation_freeze_20260927_105609.log), SHA256
+  29e81197a80d2701c90137ae1b657edf05808022022e8728b21a5f7b92dde99c;
+  [JSON](../../logs/foundation_freeze_20260927_105609.json), SHA256
+  c33c79281f767378ab2eb90e97578e324f38d862afb510a66df425604c3cf461.
+- Source SHA256: SquareProductCount.lean
+  4578eb1ec9a57a17c073f38c08e2400c5d308530db43299e37fe105cd0f34ecd;
+  ParabolaBilinearLocalization.lean
+  bfa1b63a88e2f9f3bd43a7d99299b4a7e4cfa24e923b3205fc8a0fb111e72a9e;
+  audit 74d306518b0c6371fb80cb4853683e0eb2775614f53afa01bcf38a741c7ce6ba;
+  regressions 8e324a03878803983dceec0e78ca91c635896ca4bc2128884f8ed08b3042601f.
+- Focused builds 64158 and 91803, eight-declaration audit 22088,
+  and scratches 80119, 70698, 27162: PASS, zero diagnostics.
+
+The existing SquareProductCount module now has 173 public declarations.
+Aggregate remains 31/42: EPZAE-11/13/14 are still open.
+Subsequent scratch checks have proved the generic curvature fallthrough
+(session 96333) and generic scales/original-source consumer (88130).
+The full closed D source-contract consumer is now being checked; these
+subsequent scratch proofs are not part of the production hashes above.
+Recovery-record maintenance remains permanently skipped.
+
+## Refined analytic second-spacing source: preceding verified revision (27 September 2026)
+
+The existing exponent-pair near-curve estimate now bounds the literal
+four-coordinate source window and enters the actual frozen C4 source sum.
+The displacement image, labelled block fibers, rounded-center lifting,
+independent Fourier width, both shift signs, zero shift and harmonic weight
+are all derived. No cardinality estimate or source-sum bound is an input.
+
+Eleven declarations and eleven contract regressions were added inside
+SquareProductCount.lean (158 public audits, 56 regressions). Fifteen
+already-proved source/scale lemmas were exposed for reuse and audited.
+The exact numerical generic-D fallback obstruction adds one regression;
+it is explicitly not an exponent-pair assertion or a counterexample to D.
+
+- Complete scratch consumer/audit session 81422: PASS, zero diagnostics,
+  standard logical axioms only. Physical majorant session 19510: PASS.
+- Focused production session 34617: PASS, 10,777 jobs, zero diagnostics.
+- Principal BAT session 84850: exit 0, **LEAN VERIFICATION PASS**,
+  7,161 regressions; 17,723 audits (11,478 target, 6,240 pinned,
+  five anchors); 1,445 package files, 1,919 scanned files, 10,778 jobs.
+  [Log](logs/tao-trudgian-yang-build-20260927-095539-469a842c.log),
+  SHA256 `87881bd9f515676b3b38b71cb71f6817bbdd84c809bcf01d8d5522d8c4e58919`.
+- Foundation BAT session 10822: exit 0, **PASS**, all six stages,
+  8,857 jobs, 14,290 audits, zero diagnostics.
+  [Log](../../logs/foundation_freeze_20260927_094950.log), SHA256
+  `fe889a3debcde2342826f042840dd8608d05f84211413ad43d2137274a38b119`;
+  [JSON](../../logs/foundation_freeze_20260927_094950.json), SHA256
+  `41f147823596b9e94af97eecaab7f6faa4a95de20ea7ac6363e389a94166ede5`.
+- Source SHA256: SquareProductCount.lean
+  `0ea0ed8c11cb3a6a7c742f21827395e98680f5f419f72a541986fcad472f0ad4`;
+  ParabolaBilinearLocalization.lean
+  `2d47f78734fd40740f9ab9bc0eedf59eaee279ccadb23149c6433a8f1bcf95ac`;
+  audit `9085acee0bce5a1d679e0003541c0f8f5ccb70d23f9de295e1ef6d0d4614d257`;
+  regressions `6bf7d95fbd571f71cd0bfa30fd2c257dd0ef5c4d8409f9e3ad00997338c64082`.
+
+The next actual-source band consumer is scratch-checked (session 11046,
+zero diagnostics): it constructs minimum-denominator rational curvature
+arcs from the model and feeds those same bands into the refined estimate.
+The source-error/small-band comparison is also scratch-checked (session 4854).
+Neither subsequent scratch result is included in the production hashes above.
+
+Remaining: uniform physical band summation, complete original endpoint
+trimming, linked-scale epsilon absorption, and the new analytic beta consumer.
+The candidate beta expression is
+max(1/12+2*alpha/3,241/1164+425*alpha/1164) on 2/5<alpha<3/7;
+its algebra is verified, but no analytic beta theorem is claimed yet.
+Generic D/Huxley inputs and EPZAE-11/13/14 remain OPEN; aggregate 31/42.
+Both original counterexample hashes are unchanged. Recovery records are skipped.
+
+## Analytic D(Bourgain) cascade: preceding verified revision (27 September 2026)
 
 The literal original-model estimate now proves the missing D(Bourgain)
 interval, the analytic pair (18/199,593/796), its A-transform

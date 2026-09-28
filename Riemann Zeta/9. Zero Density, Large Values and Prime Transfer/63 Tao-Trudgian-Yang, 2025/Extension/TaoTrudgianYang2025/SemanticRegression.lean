@@ -52921,3 +52921,970 @@ example {α : ℝ≥0} (hα : (α:ℝ) ≤ 1) :
     exponentSumGrowthExponent α ≤ 9/217+(1389/1736)*(α:ℝ) :=
   exponentSumGrowthExponent_le_sargosAD_bourgain hα
 end CubicBourgainCascadeRegression
+
+section GenericDFallbackObstructionRegression
+open TaoTrudgianYang2025
+/-- A rational obstruction to the proposed purely numerical fallback.
+This is NOT an exponent pair assertion or a counterexample to Sargos D.
+The input lies in the triangle, but the tested P/A/B, Robert--Sargos and
+Bourgain lines do not force the necessary positive curvature exponent. -/
+example :
+    let k : ℝ := 6153/40000
+    let l : ℝ := 26153/40000
+    let a : ℝ := 2051/5000
+    let h := max (((2*k+4*l)*a-l)/(2+5*k+3*l)) ((4*a-1)/6)
+    let b := (4*a+1+2*h)/8
+    InExponentPairTriangle k l ∧
+      b<k+(l-k)*a ∧ b<(k+(l+1)*a)/(2*k+2) ∧
+      b<l-1/2+(k-l+1)*a ∧ b<(1+9*a)/13 ∧
+      b<13/84+a/2 ∧ b<2/9+a/3 ∧ b<18/199+(521/796)*a ∧
+      1-3*a+2*h<0 := by
+  norm_num [InExponentPairTriangle]
+
+
+end GenericDFallbackObstructionRegression
+
+section RefinedDisplacementSpacingRegression
+open Set Expdb GafniTao TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped Topology ContDiff BigOperators NNReal FourierTransform
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 2 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N d D a b R B lam δ₁ δ₂ W : ℝ)
+          (K : ℤ) (S : Finset (ℤ × ℕ)),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 2 ≤ d → 0 < D → 0 < R → 0 ≤ B → 0 < lam →
+          N < a-R → b+R+2*D < 2*N →
+          δ₂ ≤ lam*d*R/2 → δ₁+2*B*D*R^2 ≤ W/2 →
+          0 < K → 2*(K:ℝ)*N^2/(σ*T) ≤ κ₀ → 0 < W → W ≤ 1/2 →
+          let f := fun z => T*F (z/N)
+          (∀ t∈Icc (a-R) (b+R+2*D),
+            -B ≤ iteratedDeriv 4 f t ∧ iteratedDeriv 4 f t ≤ -lam) →
+          (∀ p∈S, (p.1:ℝ)∈Icc a b ∧ (p.2:ℝ)∈Icc d (2*D)) →
+          (∀ p∈S, |(iteratedDeriv 2 f ((p.1:ℝ)+(p.2:ℝ))-
+            iteratedDeriv 2 f p.1)/2-(K:ℝ)| ≤ δ₂) →
+          (∀ p∈S, ∃ e : ℤ, |iteratedDeriv 1 f ((p.1:ℝ)+(p.2:ℝ))-
+            iteratedDeriv 1 f p.1-(e:ℝ)| ≤ δ₁) →
+            ((S.image Prod.snd).card:ℝ) ≤
+              C*(W*D+(T/N^2)^(k₀+ε)*D^(l₀+ε)*W^(-(k₀+ε))+N^2/T) :=
+  original_joint_level_displacement_count hσ hpair hε hp
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 2 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ {ι : Type*} [DecidableEq ι] (S : Finset ι) (V : Finset (ι × ι))
+          (center block : ι → ℤ) (H Bmul : ℕ) (s K : ℤ)
+          (F : ℝ → ℝ) (T N d D a b R B lam δ₁ δ₂ W : ℝ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 2 ≤ d → 0 < D → 0 < R → 0 ≤ B →
+          0 < lam → 0 ≤ δ₂ → 0 < H →
+          N < a-R → b+R+2*D < 2*N →
+          δ₂ ≤ lam*d*R/2 → δ₁+2*B*D*R^2 ≤ W/2 →
+          0 < K → 2*(K:ℝ)*N^2/(σ*T) ≤ κ₀ → 0 < W → W ≤ 1/2 →
+          (∀ i∈S, (H:ℤ) ≤ s+(H:ℤ)*block i-center i ∧
+            s+(H:ℤ)*block i-center i ≤ 3*(H:ℤ)) →
+          (∀ j : ℤ, (S.filter (fun i => block i=j)).card ≤ Bmul) →
+          (∀ i∈S, (center i:ℝ)∈Icc a b) →
+          V ⊆ S ×ˢ S →
+          (∀ p∈V, (center p.2:ℝ)-center p.1∈Icc d (2*D)) →
+          let f := fun z => T*F (z/N)
+          (∀ t∈Icc (a-R) (b+R+2*D),
+            -B ≤ iteratedDeriv 4 f t ∧ iteratedDeriv 4 f t ≤ -lam) →
+          (∀ p∈V, |(iteratedDeriv 2 f (center p.2)-
+            iteratedDeriv 2 f (center p.1))/2-(K:ℝ)| ≤ δ₂) →
+          (∀ p∈V, ∃ e : ℤ, |iteratedDeriv 1 f (center p.2)-
+            iteratedDeriv 1 f (center p.1)-(e:ℝ)| ≤ δ₁) →
+            (V.card:ℝ) ≤ (3*(Bmul:ℝ)^2*(3+8*δ₂/(lam*d*H)))*
+              (C*(W*D+(T/N^2)^(k₀+ε)*D^(l₀+ε)*W^(-(k₀+ε))+N^2/T)) :=
+  original_model_block_source_pair_count hσ hpair hε hp
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 3 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ {ι : Type*} [DecidableEq ι] (S : Finset ι) (V : Finset (ι × ι))
+          (center block : ι → ℤ) (z : ι → ℝ) (H Bmul : ℕ) (s K : ℤ)
+          (F : ℝ → ℝ) (T N a b R δ₁ W : ℝ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 0 < R → 0 < H → 0 < K →
+          let L := modelPhaseJetLower σ 2*T/N^3
+          let U := (modelPhaseJetCoefficient σ 2+1)*T/N^3
+          let lam := modelPhaseJetLower σ 3*T/N^4
+          let B := (modelPhaseJetCoefficient σ 3+1)*T/N^4
+          let d := (K:ℝ)/(6*U)
+          let D := (K:ℝ)/L+1
+          12*U ≤ 1 → N < a-R → b+R+2*D < 2*N →
+          3*U ≤ lam*d*R/2 → δ₁+2*B*D*R^2 ≤ W/2 →
+          2*(K:ℝ)*N^2/(σ*T) ≤ κ₀ → 0 < W → W ≤ 1/2 →
+          (∀ i∈S, (H:ℤ) ≤ s+(H:ℤ)*block i-center i ∧
+            s+(H:ℤ)*block i-center i ≤ 3*(H:ℤ)) →
+          (∀ j : ℤ, (S.filter (fun i => block i=j)).card ≤ Bmul) →
+          (∀ i∈S, (center i:ℝ)∈Icc a b) →
+          (∀ i∈S, z i∈Ioo N (2*N)) →
+          (∀ i∈S, |(center i:ℝ)-z i| ≤ 1/2) →
+          V ⊆ S ×ˢ S →
+          let f := fun t => T*F (t/N)
+          (∀ p∈V, iteratedDeriv 2 f (z p.2)/2-
+            iteratedDeriv 2 f (z p.1)/2=(K:ℝ)) →
+          (∀ p∈V, ∃ e : ℤ, |iteratedDeriv 1 f (center p.2)-
+            iteratedDeriv 1 f (center p.1)-(e:ℝ)| ≤ δ₁) →
+            (V.card:ℝ) ≤ (3*(Bmul:ℝ)^2*(3+144*U^2/(lam*(K:ℝ)*H)))*
+              (C*(W*D+(T/N^2)^(k₀+ε)*D^(l₀+ε)*W^(-(k₀+ε))+N^2/T)) :=
+  original_model_rounded_shift_count hσ hpair hε hp
+
+example
+    {L U lam B K η w : ℝ}
+    (hL : 0 < L) (hU : 0 < U) (hlam : 0 < lam) (hB : 0 ≤ B)
+    (hK : 1 ≤ K) (hLK : L ≤ K) (hη : 0 ≤ η) (hw : 0 < w) (hwhalf : w ≤ 1/2)
+    (hsmall : 2*η+10368*B*U^4/(lam^2*L) ≤ 1/2) :
+    let d := K/(6*U)
+    let D := K/L+1
+    let R := 36*U^2/(lam*K)
+    let W := max (2*η+4*B*D*R^2) w
+    0 < R ∧ 0 < W ∧ W ≤ 1/2 ∧
+      3*U=lam*d*R/2 ∧ η+2*B*D*R^2 ≤ W/2 ∧
+      W*D ≤ (2*η+w)*D+20736*B*U^4/(lam^2*L^2) ∧
+      ∀ p : ℝ, 0 ≤ p → W^(-p) ≤ w^(-p) :=
+  rounded_shift_free_width hL hU hlam hB hK hLK hη hw hwhalf hsmall
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 3 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ {ι : Type*} [DecidableEq ι] (S : Finset ι) (V : Finset (ι × ι))
+          (center block : ι → ℤ) (z : ι → ℝ) (H Bmul : ℕ) (s K : ℤ)
+          (F : ℝ → ℝ) (T N a b Kmax η w : ℝ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 0 < H → 0 < K → (K:ℝ) ≤ Kmax →
+          0 ≤ η → 0 < w → w ≤ 1/2 →
+          let L := modelPhaseJetLower σ 2*T/N^3
+          let U := (modelPhaseJetCoefficient σ 2+1)*T/N^3
+          let lam := modelPhaseJetLower σ 3*T/N^4
+          let B := (modelPhaseJetCoefficient σ 3+1)*T/N^4
+          let Rmax := 36*U^2/lam
+          let Dmax := Kmax/L+1
+          12*U ≤ 1 → L ≤ 1 →
+          2*η+10368*B*U^4/(lam^2*L) ≤ 1/2 →
+          N < a-Rmax → b+Rmax+2*Dmax < 2*N →
+          2*Kmax*N^2/(σ*T) ≤ κ₀ →
+          (∀ i∈S, (H:ℤ) ≤ s+(H:ℤ)*block i-center i ∧
+            s+(H:ℤ)*block i-center i ≤ 3*(H:ℤ)) →
+          (∀ j : ℤ, (S.filter (fun i => block i=j)).card ≤ Bmul) →
+          (∀ i∈S, (center i:ℝ)∈Icc a b) →
+          (∀ i∈S, z i∈Ioo N (2*N)) →
+          (∀ i∈S, |(center i:ℝ)-z i| ≤ 1/2) →
+          V ⊆ S ×ˢ S →
+          let f := fun t => T*F (t/N)
+          (∀ p∈V, iteratedDeriv 2 f (z p.2)/2-
+            iteratedDeriv 2 f (z p.1)/2=(K:ℝ)) →
+          (∀ p∈V, ∃ e : ℤ, |iteratedDeriv 1 f (center p.2)-
+            iteratedDeriv 1 f (center p.1)-(e:ℝ)| ≤ η) →
+            (V.card:ℝ) ≤ (3*(Bmul:ℝ)^2*(3+144*U^2/(lam*(K:ℝ)*H)))*
+              (C*((2*η+w)*Dmax+20736*B*U^4/(lam^2*L^2)+
+                (T/N^2)^(k₀+ε)*Dmax^(l₀+ε)*w^(-(k₀+ε))+N^2/T)) :=
+  original_model_uniform_positive_shift_count hσ hpair hε hp
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 3 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ {ι : Type*} [DecidableEq ι] (S : Finset ι) (R : Finset (ι × ι))
+          (center block : ι → ℤ) (z : ι → ℝ) (H Bmul Kcut : ℕ) (s : ℤ)
+          (F : ℝ → ℝ) (T N a b η w : ℝ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 0 < H → 0 ≤ η → 0 < w → w ≤ 1/2 →
+          let L := modelPhaseJetLower σ 2*T/N^3
+          let U := (modelPhaseJetCoefficient σ 2+1)*T/N^3
+          let lam := modelPhaseJetLower σ 3*T/N^4
+          let B := (modelPhaseJetCoefficient σ 3+1)*T/N^4
+          let Rmax := 36*U^2/lam
+          let Dmax := (Kcut:ℝ)/L+1
+          12*U ≤ 1 → L ≤ 1 →
+          2*η+10368*B*U^4/(lam^2*L) ≤ 1/2 →
+          N < a-Rmax → b+Rmax+2*Dmax < 2*N →
+          2*(Kcut:ℝ)*N^2/(σ*T) ≤ κ₀ →
+          (∀ i∈S, (H:ℤ) ≤ s+(H:ℤ)*block i-center i ∧
+            s+(H:ℤ)*block i-center i ≤ 3*(H:ℤ)) →
+          (∀ j : ℤ, (S.filter (fun i => block i=j)).card ≤ Bmul) →
+          (∀ i∈S, (center i:ℝ)∈Icc a b) →
+          (∀ i∈S, z i∈Ioo N (2*N)) →
+          (∀ i∈S, |(center i:ℝ)-z i| ≤ 1/2) →
+          R ⊆ S ×ˢ S → (∀ p∈R, p.swap∈R) →
+          let f := fun t => T*F (t/N)
+          (∀ p∈R, ∃ k : ℤ, iteratedDeriv 2 f (z p.2)/2-
+            iteratedDeriv 2 f (z p.1)/2=(k:ℝ) ∧ |(k:ℝ)| ≤ Kcut) →
+          (∀ p∈R, ∃ e : ℤ, |iteratedDeriv 1 f (center p.2)-
+            iteratedDeriv 1 f (center p.1)-(e:ℝ)| ≤ η) →
+          let Count := C*((2*η+w)*Dmax+20736*B*U^4/(lam^2*L^2)+
+                (T/N^2)^(k₀+ε)*Dmax^(l₀+ε)*w^(-(k₀+ε))+N^2/T)
+          let Dweight := 144*U^2/(lam*H)
+          (R.card:ℝ) ≤ 4*(Bmul:ℝ)*S.card+
+            6*(Bmul:ℝ)^2*Count*(3*(Kcut:ℝ)+Dweight*(harmonic Kcut:ℝ)) :=
+  original_model_all_shifts_count hσ hpair hε hp
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 3 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ {ι : Type*} [DecidableEq ι] (S : Finset ι)
+          (center block label inverse : ι → ℤ) (z : ι → ℝ) (q : ι → ℕ)
+          (parity : ι → Fin 2) (H Bmul M Qden : ℕ) [NeZero M] (s : ℤ)
+          (F : ℝ → ℝ) (T N a₀ b₀ w : ℝ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 0 < H → 0 < Qden → 0 < w → w ≤ 1/2 →
+          (Qden:ℝ)^2 < 6*(M:ℝ)^2 →
+          let L := modelPhaseJetLower σ 2*T/N^3
+          let U := (modelPhaseJetCoefficient σ 2+1)*T/N^3
+          let lam := modelPhaseJetLower σ 3*T/N^4
+          let B := (modelPhaseJetCoefficient σ 3+1)*T/N^4
+          let f := fun t => T*F (t/N)
+    let mu := fun i => iteratedDeriv 3 f (center i)/6
+    let ell := fun i => iteratedDeriv 1 f (center i)
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋:ℤ)+(parity i:ℕ)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let coeff := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let Y := fun i => (![Int.fract (-(inverse i:ℝ)*b i/q i),Int.fract (-(inverse i:ℝ)/q i),
+      coeff i/Real.sqrt M,(3*coeff i*tau i/2)/Real.sqrt M] : Fin 4 → ℝ)
+    let window : Fin 4 → ℝ :=
+      ![1/(12*(M:ℝ)),1/(12*(M:ℝ)^2),(1/(M:ℝ)^2)/12,(1/(M:ℝ))/12]
+    let R := (S ×ˢ S).filter (fun ij => ∀ j, |Y ij.1 j-Y ij.2 j| ≤ 2*window j)
+    let D₀ : ℝ := (Real.sqrt M/(9*(M:ℝ))+Real.sqrt M/(12*(M:ℝ)^2))*
+      Real.sqrt (U*(Qden:ℝ)^3)
+    let η : ℝ := 4*D₀/(Qden:ℝ)
+    let rho := (12*U*Real.sqrt (U*(Qden:ℝ)^3)/lam)*(Real.sqrt M/(6*(M:ℝ)^2))
+    let Kcut := ⌈3*U*(rho+1)⌉₊
+    let Rmax := 36*U^2/lam
+    let Dmax := (Kcut:ℝ)/L+1
+    12*U ≤ 1 → L ≤ 1 →
+    2*η+10368*B*U^4/(lam^2*L) ≤ 1/2 →
+    N < a₀-Rmax → b₀+Rmax+2*Dmax < 2*N →
+    2*(Kcut:ℝ)*N^2/(σ*T) ≤ κ₀ →
+    (∀ i∈S, (H:ℤ) ≤ s+(H:ℤ)*block i-center i ∧
+      s+(H:ℤ)*block i-center i ≤ 3*(H:ℤ)) →
+    (∀ j : ℤ, (S.filter (fun i => block i=j)).card ≤ Bmul) →
+    (∀ i∈S, (center i:ℝ)∈Icc a₀ b₀) →
+    (∀ i∈S, z i∈Ioo N (2*N)) →
+    (∀ i∈S, |(center i:ℝ)-z i| ≤ 1/2) →
+    (∀ i∈S, 0 < q i ∧ q i ≤ Qden ∧ Qden ≤ 2*q i) →
+    (∀ i∈S, (q i:ℤ) ∣ label i*inverse i-1) →
+    (∀ i∈S, iteratedDeriv 2 f (z i)/2=(label i:ℝ)/q i) →
+    let Count := C*((2*η+w)*Dmax+20736*B*U^4/(lam^2*L^2)+
+      (T/N^2)^(k₀+ε)*Dmax^(l₀+ε)*w^(-(k₀+ε))+N^2/T)
+    let Dweight := 144*U^2/(lam*H)
+    (R.card:ℝ) ≤ 4*(Bmul:ℝ)*S.card+
+      6*(Bmul:ℝ)^2*Count*(3*(Kcut:ℝ)+Dweight*(harmonic Kcut:ℝ)) :=
+  original_model_four_coordinate_count hσ hpair hε hp
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Qphase : ℕ, 3 ≤ Qphase ∧ ∃ C > (0:ℝ), ∃ Cp : ℝ, 1 ≤ Cp ∧
+      ∀ (ι : Type*) [DecidableEq ι] (S : Finset ι)
+      (G : ℝ → ℝ) (T P : ℝ) (r : ι → ℚ) (z : ι → ℝ) (m k : ι → ℤ)
+      (H : ι → ℕ) (N Q Bmul : ℕ) (s : ℤ) (A B w : ℝ),
+      IsApproximateModelPhaseFunction G σ Qphase δ →
+      0 < T → 0 < P → 0 < N → 0 < Q → 0 < w → w ≤ 1/2 →
+      let f := fun t => T*G (t/P)
+      let L := modelPhaseJetLower σ 2*T/P^3
+      let U := (modelPhaseJetCoefficient σ 2+1)*T/P^3
+      let lam := modelPhaseJetLower σ 3*T/P^4
+      let F := (modelPhaseJetCoefficient σ 3+1)*T/P^4
+      12*U ≤ 1 → L ≤ 1 →
+      F*(6*(N:ℝ)+1)^4 ≤ 1 → (3*U/2)*(6*(N:ℝ)+1)^2 ≤ 1 →
+      (∀ i∈S, z i∈Ioo A B) →
+      (∀ i∈S, Icc ((m i:ℝ)-(6*(N:ℝ)+1)) ((m i:ℝ)+(6*(N:ℝ)+1)) ⊆ Icc A B) →
+      (∀ i∈S, |z i-m i| ≤ 1/2) →
+      (∀ i∈S, (N:ℤ) ≤ s+(N:ℤ)*k i-m i ∧ s+(N:ℤ)*k i-m i ≤ 3*(N:ℤ)) →
+      (∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ Bmul) →
+      (∀ i∈S, H i ≤ N) →
+      (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧ (r i).den ≤ N) →
+      (∀ i∈S, iteratedDeriv 2 f (z i)/2=(r i:ℝ)) →
+      12 ≤ L*(Q:ℝ)*(N:ℝ)^2 → 384 ≤ L^2*(Q:ℝ)^3*(N:ℝ)^3 →
+      let Z := (S.card:ℝ)
+      let M : ℕ := ⌈63*U*(Q:ℝ)*(N:ℝ)^2⌉₊+1
+      let V := 756*U/L
+      let Wloss := 1+32/(L*(Q:ℝ)^2*N)
+      let d := L*(Q:ℝ)*N/12
+      let D₀ := (Real.sqrt M/(9*(M:ℝ))+Real.sqrt M/(12*(M:ℝ)^2))*Real.sqrt (U*(Q:ℝ)^3)
+      let η : ℝ := 4*D₀/(Q:ℝ)
+      let rho := (12*U*Real.sqrt (U*(Q:ℝ)^3)/lam)*(Real.sqrt M/(6*(M:ℝ)^2))
+      let K := ⌈3*U*(rho+1)⌉₊
+      let Rmax := 36*U^2/lam
+      let Dmax := (K:ℝ)/L+1
+      let Dweight := 144*U^2/(lam*N)
+      let Count := Cp*((2*η+w)*Dmax+20736*F*U^4/(lam^2*L^2)+
+        (T/P^2)^(k₀+ε)*Dmax^(l₀+ε)*w^(-(k₀+ε))+P^2/T)
+      let Pair := 4*(Bmul:ℝ)*Z+6*(Bmul:ℝ)^2*Count*(3*(K:ℝ)+Dweight*(harmonic K:ℝ))
+      let Loss := (5*Wloss)^11*Wloss^2*(6*(3+8*Real.pi*V)*(1+Real.log M))^12*
+        (2/d)^6*(M:ℝ)^((12:ℝ)+ε)
+      let Err := Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+6/(L*(N:ℝ)^2)+
+        Real.sqrt (12/(L*(N:ℝ)*Q))
+      (Q:ℝ)^2 < 6*(M:ℝ)^2 →
+      2*η+10368*F*U^4/(lam^2*L) ≤ 1/2 →
+      P < A-Rmax → B+Rmax+2*Dmax < 2*P →
+      2*(K:ℝ)*P^2/(σ*T) ≤ κ₀ →
+      (∑ i∈S, ‖∑ n∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),(𝐞 (f n):ℂ)‖)^12 ≤
+        C*(Loss*(2*Z)^10*Pair+(Z*Err)^12) :=
+  exists_model_refined_frozen_source hσ hpair hε hp
+
+example {k l a : ℝ} (hk : 0 ≤ k) :
+    let u := 1-3*a
+    let z := a+u/2
+    let v := a+u
+    let w := (k*v+(l-1)*z)/(1+k)
+    let c := (7*k+l+4)/(24*(1+k))
+    let d := (5*k-l+10)/(24*(1+k))
+    w+z=k*v+l*z-k*w ∧
+      w+z=((2*k+l)/(1+k))*a+((3*k+l)/(2*(1+k)))*u ∧
+      10*a+u/2+(a+3*u/2)+(w+z)=12*(c+d*a) :=
+  refined_spacing_exponent_balance hk
+
+example {a : ℝ} (ha : 2/5 < a) (hb : a < 3/7) :
+    let u := 1-3*a
+    let z := a+u/2
+    let w := -(3+23*a)/194
+    let β := max (1/12+2*a/3) (241/1164+425*a/1164)
+    u<0 ∧ w<0 ∧ 2-5*a<0 ∧ 0<a+3*u/2 ∧ z<a ∧ z<β ∧
+      2*a-1<0 ∧ 1/4+a/4≤β ∧
+      ((13/84:ℝ)*(a+u)+(55/84-1)*z)/(1+13/84)=w ∧
+      w+z=(47-60*a)/97 :=
+  refined_bourgain_scale_domain ha hb
+
+example
+    {l a b u n p q : ℝ} (hl : 0<l) (ha : 0<a) (hb : 0≤b)
+    (hu : 0<u) (hn : 0≤n) (hq : 0≤q) :
+    ∃ C > (0:ℝ), ∀ P U K η w : ℝ,
+      0<P → 0<U → U≤1 → 1≤P*U*Real.sqrt U →
+      0≤K → K≤n*(P*U*Real.sqrt U) →
+      0≤η → η≤4*Real.sqrt U → 0<w →
+      let D := K/(l*U)+1
+      (2*η+w)*D+20736*(b*U/P)*U^4/((a*U/P)^2*(l*U)^2)+
+        (P*U/u)^p*D^q*w^(-p)+u/(P*U) ≤
+      C*(P*U+w*(P*Real.sqrt U)+(P*U)^p*(P*Real.sqrt U)^q*w^(-p)+1/(P*U)) :=
+  refined_count_physical_majorant hl ha hb hu hn hq
+
+end RefinedDisplacementSpacingRegression
+
+section RefinedSourceBandsRegression
+open Set Expdb GafniTao TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped Topology ContDiff BigOperators NNReal FourierTransform
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Qphase : ℕ, 3 ≤ Qphase ∧ ∃ Cd ≥ (1:ℝ), ∃ Cf > (0:ℝ),
+      ∃ Cp : ℝ, 1 ≤ Cp ∧ ∀ (ι : Type*) [DecidableEq ι]
+      (S : Finset ι) (F : ℝ → ℝ) (T P : ℝ) (k : ι → ℤ) (H : ι → ℕ)
+      (N : ℕ) (s : ℤ) (A B w : ℝ),
+      IsApproximateModelPhaseFunction F σ Qphase δ →
+      0<T → 0<P → 0<N → 0<w → w≤1/2 → P<A → B<2*P →
+      let f := fun t => T*F (t/P)
+      let L := modelPhaseJetLower σ 2*T/P^3
+      let U := (modelPhaseJetCoefficient σ 2+1)*T/P^3
+      let lam := modelPhaseJetLower σ 3*T/P^4
+      let F4 := (modelPhaseJetCoefficient σ 3+1)*T/P^4
+      let X := (modelPhaseJetCoefficient σ 1+1)*T/P^2/2
+      12*U≤1 → L≤1 →
+      F4*(6*(N:ℝ)+1)^4≤1 → (3*U/2)*(6*(N:ℝ)+1)^2≤1 →
+      (∀ j : ℤ, (S.filter (fun i => k i=j)).card ≤ 1) →
+      (∀ i∈S, H i ≤ N) →
+      let base := fun i => (s:ℝ)-2*(N:ℝ)+(N:ℝ)*(k i:ℝ)
+      (∀ i∈S, Icc (base i-(7*(N:ℝ)+2)) (base i+(7*(N:ℝ)+2)) ⊆ Icc A B) →
+      ∃ r : ι → ℚ,
+        (∀ Q₀ : ℕ, 2 ≤ Q₀ →
+          let D₀ := 8/(L*(N:ℝ)*(Q₀:ℝ))
+          ((S.filter (fun i => Q₀ ≤ (r i).den)).card:ℝ) ≤
+            4*(X+1)*D₀^2+D₀*(2+Real.log (D₀+1))) ∧
+        (∀ j : ℕ,
+          let Q : ℕ := 2^(j+1)
+          let G := (S.filter (fun i => (r i).den ≤ N)).filter (fun i => Nat.log 2 (r i).den=j)
+          let Z := (G.card:ℝ)
+          let Zd := 4*(Q:ℝ)*(2*X*Q+1)
+          let D := 16/(L*(N:ℝ)*(Q:ℝ))
+          let Err := Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+6/(L*(N:ℝ)^2)+
+            Real.sqrt (12/(L*(N:ℝ)*Q))
+          Z ≤ Zd ∧
+          (1 ≤ j → Z ≤ 4*(X+1)*D^2+D*(2+Real.log (D+1))) ∧
+          (∑ i∈G, ‖∑ n∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),(𝐞 (f n):ℂ)‖) ≤
+            Cd*Zd*(3*(N:ℝ)*Real.sqrt (3*U*(Q:ℝ)*N)+Err) ∧
+          (12 ≤ L*(Q:ℝ)*(N:ℝ)^2 → 384 ≤ L^2*(Q:ℝ)^3*(N:ℝ)^3 →
+            let M : ℕ := ⌈63*U*(Q:ℝ)*(N:ℝ)^2⌉₊+1
+            let V := 756*U/L
+            let W := 1+32/(L*(Q:ℝ)^2*N)
+            let d := L*(Q:ℝ)*N/12
+            let Loss := (5*W)^11*W^2*(6*(3+8*Real.pi*V)*(1+Real.log M))^12*
+              (2/d)^6*(M:ℝ)^((12:ℝ)+ε)
+            let D₀ := (Real.sqrt M/(9*(M:ℝ))+Real.sqrt M/(12*(M:ℝ)^2))*
+              Real.sqrt (U*(Q:ℝ)^3)
+            let η := 4*D₀/(Q:ℝ)
+            let rho := (12*U*Real.sqrt (U*(Q:ℝ)^3)/lam)*(Real.sqrt M/(6*(M:ℝ)^2))
+            let K := ⌈3*U*(rho+1)⌉₊
+            let Rmax := 36*U^2/lam
+            let Dmax := (K:ℝ)/L+1
+            let Dweight := 144*U^2/(lam*N)
+            let Count := Cp*((2*η+w)*Dmax+20736*F4*U^4/(lam^2*L^2)+
+              (T/P^2)^(k₀+ε)*Dmax^(l₀+ε)*w^(-(k₀+ε))+P^2/T)
+            let Pair := 4*Z+6*Count*(3*(K:ℝ)+Dweight*(harmonic K:ℝ))
+            (Q:ℝ)^2 < 6*(M:ℝ)^2 →
+            2*η+10368*F4*U^4/(lam^2*L) ≤ 1/2 →
+            P < A-Rmax → B+Rmax+2*Dmax < 2*P →
+            2*(K:ℝ)*P^2/(σ*T) ≤ κ₀ →
+            (∑ i∈G, ‖∑ n∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),(𝐞 (f n):ℂ)‖)^12 ≤
+              Cf*(Loss*(2*Z)^10*Pair+(Z*Err)^12))) :=
+  exists_model_refined_source_bands hσ hpair hε hp
+
+example
+    {P U Z C Log ε r : ℝ} (hP : 1≤P) (hU : 0<U) (hU1 : U≤1)
+    (hZ : 0≤Z) (hC : 0≤C) (hLog : 1≤Log) (hε : 0≤ε)
+    (hr : 1/4≤r) (hsmall : P*U^2≤1)
+    (hbound : Z≤C*P*U^r*Log^2) :
+    Z^12 ≤ C^12*P^ε*Log^24*(P^11*U) :=
+  refined_elementary_twelfth hP hU hU1 hZ hC hLog hε hr hsmall hbound
+
+end RefinedSourceBandsRegression
+
+section RefinedPhysicalSourceRegression
+open Set Expdb GafniTao TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped Topology ContDiff BigOperators NNReal FourierTransform
+
+example
+    {P U w p q : ℝ} (hP : 0<P) (hU : 0<U) :
+    P^10*Real.sqrt U*(P*U*Real.sqrt U)*
+      (P*U+w*(P*Real.sqrt U)+(P*U)^p*(P*Real.sqrt U)^q*w^(-p)+1/(P*U)) =
+    P^12*U^3+w*P^12*U^((5:ℝ)/2)+
+      P^(11+p+q)*U^(2+p+q/2)*w^(-p)+P^10*U :=
+  refined_spacing_physical_product hP hU
+
+example
+    {P U w p q : ℝ} (hP : 1≤P) (hU : 0<U) (hw : 0≤w) (hsmall : P*U^2≤1) :
+    P^10*Real.sqrt U*(P*U*Real.sqrt U)*
+      (P*U+w*(P*Real.sqrt U)+(P*U)^p*(P*Real.sqrt U)^q*w^(-p)+1/(P*U)) ≤
+    2*(P^11*U+w*P^12*U^((5:ℝ)/2)+P^(11+p+q)*U^(2+p+q/2)*w^(-p)) :=
+  refined_spacing_physical_product_bound hP hU hw hsmall
+
+example
+    {l ε Cc p q : ℝ} (hl : 0<l) (hε : 0<ε) (hCc : 1≤Cc) :
+    ∃ C > (0:ℝ), ∀ (P U Z w : ℝ) (Q : ℕ),
+      0<P → 0<U → U≤1/3600 → 1≤P*U → P*U^2≤1 → 0≤Z → 0<w →
+      0<Q → (Q:ℝ)≤P →
+      Z≤Cc*P*U*(Q:ℝ)^2 → Z≤Cc*(P/(Q:ℝ)^2)*(1+Real.log P) →
+      let N := ⌊1/(10*Real.sqrt U)⌋₊
+      let L := l*U
+      let M : ℕ := ⌈63*U*(Q:ℝ)*(N:ℝ)^2⌉₊+1
+      let V := 756*U/L
+      let W := 1+32/(L*(Q:ℝ)^2*N)
+      let d := L*(Q:ℝ)*N/12
+      let Loss := (5*W)^11*W^2*(6*(3+8*Real.pi*V)*(1+Real.log M))^12*
+        (2/d)^6*(M:ℝ)^((12:ℝ)+ε)
+      let Err := Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+6/(L*(N:ℝ)^2)+
+        Real.sqrt (12/(L*(N:ℝ)*Q))
+      let E := P*U+w*(P*Real.sqrt U)+(P*U)^p*(P*Real.sqrt U)^q*w^(-p)+1/(P*U)
+      let R := Z+(P*U*Real.sqrt U)*E*(1+Real.log P)
+      Loss*(2*Z)^10*R+(Z*Err)^12 ≤
+        C*P^ε*(1+Real.log P)^24*
+          (P^11*U+w*P^12*U^((5:ℝ)/2)+P^(11+p+q)*U^(2+p+q/2)*w^(-p)) :=
+  exists_refined_uniform_frozen_rhs hl hε hCc
+
+example
+    {l a b u p q Cp : ℝ} (hl : 0<l) (ha : 0<a) (hb : 0≤b)
+    (hu : 0<u) (hq : 0≤q) (hCp : 1≤Cp) :
+    ∃ Ca ≥ (1:ℝ), ∀ P U M Q Z w : ℝ,
+      0<P → 0<U → U≤1/3600 → 1≤P*U*Real.sqrt U →
+      1≤M → 0<Q → Q≤4*M → 0≤Z → 0<w →
+      let N := ⌊1/(10*Real.sqrt U)⌋₊
+      let L := l*U
+      let lam := a*U/P
+      let D₀ := (Real.sqrt M/(9*M)+Real.sqrt M/(12*M^2))*Real.sqrt (U*Q^3)
+      let η := 4*D₀/Q
+      let rho := (12*U*Real.sqrt (U*Q^3)/lam)*(Real.sqrt M/(6*M^2))
+      let K := ⌈3*U*(rho+1)⌉₊
+      let Dmax := (K:ℝ)/L+1
+      let Dweight := 144*U^2/(lam*N)
+      let E := P*U+w*(P*Real.sqrt U)+(P*U)^p*(P*Real.sqrt U)^q*w^(-p)+1/(P*U)
+      let Count := Cp*((2*η+w)*Dmax+20736*(b*U/P)*U^4/(lam^2*L^2)+
+        (P*U/u)^p*Dmax^q*w^(-p)+u/(P*U))
+      4*Z+6*Count*(3*(K:ℝ)+Dweight*(harmonic K:ℝ)) ≤
+        Ca*(Z+(P*U*Real.sqrt U)*E*(1+Real.log P)) :=
+  exists_refined_physical_pair_bound hl ha hb hu hq hCp
+
+example
+    {σ l a b u n P T U η K κ₀ A B : ℝ}
+    (hσ : 0<σ) (hl : 0<l) (ha : 0<a) (hn : 0≤n)
+    (hP : 0<P) (hT : 0<T) (hU : 0<U) (hU1 : U≤1)
+    (hUeq : U=u*T/P^3) (hK : 1≤P*U*Real.sqrt U)
+    (hKhi : K≤n*(P*U*Real.sqrt U)) (hηhi : η≤4*Real.sqrt U)
+    (hlift : 8*Real.sqrt U+(10368*b/(a^2*l))*(P*U^2)≤1/2)
+    (hκ : (2*n*u/σ)*Real.sqrt U≤κ₀)
+    (hA : P+(36/a+2*(n/l+1)+1)*(P*Real.sqrt U)<A)
+    (hB : B+(36/a+2*(n/l+1)+1)*(P*Real.sqrt U)<2*P) :
+    let L := l*U
+    let lam := a*U/P
+    let Rmax := 36*U^2/lam
+    let Dmax := K/L+1
+    2*η+10368*(b*U/P)*U^4/(lam^2*L)≤1/2 ∧
+      P<A-Rmax ∧ B+Rmax+2*Dmax<2*P ∧ 2*K*P^2/(σ*T)≤κ₀ :=
+  refined_physical_lifting_domain hσ hl ha hn hP hT hU hU1 hUeq hK hKhi hηhi hlift hκ hA hB
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0<σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0<ε) (hp : k₀+ε<1) :
+    let u := modelPhaseJetCoefficient σ 2+1
+    let l := modelPhaseJetLower σ 2/u
+    let a := modelPhaseJetLower σ 3/u
+    let b := (modelPhaseJetCoefficient σ 3+1)/u
+    let x := (modelPhaseJetCoefficient σ 1+1)/(2*u)
+    let n := 2+48/a
+    let m := 36/a+2*(n/l+1)+1
+    ∃ δ κ₀ : ℝ, 0<δ ∧ 0<κ₀ ∧
+      ∃ Qphase : ℕ, 3≤Qphase ∧ ∃ Cd ≥ (1:ℝ), ∃ C > (0:ℝ),
+      ∀ (ι : Type*) [DecidableEq ι] (S : Finset ι) (F : ℝ→ℝ)
+        (T P : ℝ) (k : ι→ℤ) (H : ι→ℕ) (s : ℤ) (A B w : ℝ),
+      IsApproximateModelPhaseFunction F σ Qphase δ →
+      0<T → 0<P → 0<w → w≤1/2 →
+      let U := u*T/P^3
+      let N := ⌊1/(10*Real.sqrt U)⌋₊
+      let L := l*U
+      let X := x*P*U
+      U≤1/3600 → 1≤P*U*Real.sqrt U → b≤P*U → l*U≤1 →
+      P*U^2≤1 → 8*Real.sqrt U+(10368*b/(a^2*l))*(P*U^2)≤1/2 →
+      (2*n*u/σ)*Real.sqrt U≤κ₀ →
+      P+m*(P*Real.sqrt U)<A → B+m*(P*Real.sqrt U)<2*P →
+      (∀ j : ℤ, (S.filter (fun i => k i=j)).card≤1) →
+      (∀ i∈S, H i≤N) →
+      let base := fun i => (s:ℝ)-2*(N:ℝ)+(N:ℝ)*(k i:ℝ)
+      (∀ i∈S, Icc (base i-(7*(N:ℝ)+2)) (base i+(7*(N:ℝ)+2))⊆Icc A B) →
+      ∃ r : ι→ℚ,
+        (∀ Q₀ : ℕ, 2≤Q₀ →
+          let D₀ := 8/(L*(N:ℝ)*(Q₀:ℝ))
+          ((S.filter (fun i => Q₀≤(r i).den)).card:ℝ)≤
+            4*(X+1)*D₀^2+D₀*(2+Real.log (D₀+1))) ∧
+        (∀ j : ℕ,
+          let Q : ℕ := 2^(j+1)
+          let G := (S.filter (fun i => (r i).den≤N)).filter (fun i => Nat.log 2 (r i).den=j)
+          let Zd := 4*(Q:ℝ)*(2*X*Q+1)
+          let Err := Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+6/(L*(N:ℝ)^2)+
+            Real.sqrt (12/(L*(N:ℝ)*Q))
+          (∑ i∈G, ‖∑ t∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),
+            (𝐞 (T*F ((t:ℝ)/P)):ℂ)‖)≤
+            Cd*Zd*(3*(N:ℝ)*Real.sqrt (3*U*(Q:ℝ)*N)+Err) ∧
+          (1≤j → 12≤L*(Q:ℝ)*(N:ℝ)^2 → 384≤L^2*(Q:ℝ)^3*(N:ℝ)^3 →
+            (∑ i∈G, ‖∑ t∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),
+              (𝐞 (T*F ((t:ℝ)/P)):ℂ)‖)^12 ≤
+              C*P^ε*(1+Real.log P)^24*
+                (P^11*U+w*P^12*U^((5:ℝ)/2)+
+                  P^(11+(k₀+ε)+(l₀+ε))*U^(2+(k₀+ε)+(l₀+ε)/2)*w^(-(k₀+ε))))) :=
+  exists_model_uniform_refined_source_bands hσ hpair hε hp
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0<σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0<ε) (hp : k₀+ε<1) :
+    let u := modelPhaseJetCoefficient σ 2+1
+    let l := modelPhaseJetLower σ 2/u
+    let a := modelPhaseJetLower σ 3/u
+    let b := (modelPhaseJetCoefficient σ 3+1)/u
+    let n := 2+48/a
+    let m := 36/a+2*(n/l+1)+1
+    ∃ δ κ₀ : ℝ, 0<δ ∧ 0<κ₀ ∧
+      ∃ Qphase : ℕ, 3≤Qphase ∧ ∃ C > (0:ℝ),
+      ∀ (ι : Type*) [DecidableEq ι] (S : Finset ι) (F : ℝ→ℝ)
+        (T P : ℝ) (k : ι→ℤ) (H : ι→ℕ) (s : ℤ) (A B w : ℝ),
+      IsApproximateModelPhaseFunction F σ Qphase δ →
+      0<T → 0<P → 0<w → w≤1/2 →
+      let U := u*T/P^3
+      let N := ⌊1/(10*Real.sqrt U)⌋₊
+      U≤1/3600 → 1≤P*U*Real.sqrt U → b≤P*U → l*U≤1 →
+      P*U^2≤1 → 8*Real.sqrt U+(10368*b/(a^2*l))*(P*U^2)≤1/2 →
+      (2*n*u/σ)*Real.sqrt U≤κ₀ →
+      P+m*(P*Real.sqrt U)<A → B+m*(P*Real.sqrt U)<2*P →
+      (∀ j : ℤ, (S.filter (fun i => k i=j)).card≤1) →
+      (∀ i∈S, H i≤N) →
+      let base := fun i => (s:ℝ)-2*(N:ℝ)+(N:ℝ)*(k i:ℝ)
+      (∀ i∈S, Icc (base i-(7*(N:ℝ)+2)) (base i+(7*(N:ℝ)+2))⊆Icc A B) →
+      (1+23*(N:ℝ)+∑ i∈S,
+        ‖∑ t∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),
+          (𝐞 (T*F ((t:ℝ)/P)):ℂ)‖)^12 ≤
+        C*P^ε*(1+Real.log P)^36*(P^11*U+w*P^12*U^((5:ℝ)/2)+P^(11+(k₀+ε)+(l₀+ε))*U^(2+(k₀+ε)+(l₀+ε)/2)*w^(-(k₀+ε))) :=
+  exists_model_refined_source_global hσ hpair hε hp
+
+example
+    (g : ℤ → ℂ) (hg : ∀ n,‖g n‖≤1)
+    {a b : ℤ} {A B : ℝ} (hab : a≤b) (ha : A≤a) (hb : (b:ℝ)≤B)
+    (N : ℕ) (hN : 0<N) :
+    ∃ S : Finset ℕ,
+      (∀ k∈S, Icc ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k-(7*(N:ℝ)+2))
+        ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k+(7*(N:ℝ)+2)) ⊆ Icc (A+1/2) (B-1/2)) ∧
+      (∀ k∈S, a≤a+(N:ℤ)*k ∧ a+(N:ℤ)*k+N≤b) ∧
+      ‖∑ n∈Finset.Ioc a b,g n‖≤23*(N:ℝ)+
+        ∑ k∈S,‖∑ n∈Finset.Ioc (a+(N:ℤ)*k) (a+(N:ℤ)*k+N),g n‖ :=
+  exists_buffered_integer_source_blocks_interval g hg hab ha hb N hN
+
+end RefinedPhysicalSourceRegression
+
+section RefinedClosedSourceRegression
+open Set Expdb Filter GafniTao TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped Topology ContDiff BigOperators NNReal FourierTransform
+
+example
+    (g : ℤ→ℂ) (hg : ∀ n, ‖g n‖≤1) {a b : ℤ} {K : ℕ}
+    (hab : a+2*(K:ℤ)≤b) :
+    ‖∑ n∈Finset.Icc a b,g n‖≤
+      ‖∑ n∈Finset.Ioc (a+K) (b-K),g n‖+2*(K:ℝ)+1 :=
+  refined_integer_source_trim g hg hab
+
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0<σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0<ε) (hp : k₀+ε<1) :
+    let u := modelPhaseJetCoefficient σ 2+1
+    let l := modelPhaseJetLower σ 2/u
+    let a := modelPhaseJetLower σ 3/u
+    let b := (modelPhaseJetCoefficient σ 3+1)/u
+    let n := 2+48/a
+    ∃ δ κ₀ : ℝ, 0<δ ∧ 0<κ₀ ∧
+      ∃ Qphase : ℕ, 3≤Qphase ∧ ∃ C > (0:ℝ),
+      ∀ (F : ℝ→ℝ) (T P : ℝ) (aa bb : ℕ) (w : ℝ),
+      IsApproximateModelPhaseFunction F σ Qphase δ →
+      0<T → 0<P → P≤aa → (bb:ℝ)≤2*P → 0<w → w≤1/2 →
+      let U := u*T/P^3
+      U≤1/3600 → 1≤P*U*Real.sqrt U → b≤P*U → l*U≤1 →
+      P*U^2≤1 → 8*Real.sqrt U+(10368*b/(a^2*l))*(P*U^2)≤1/2 →
+      (2*n*u/σ)*Real.sqrt U≤κ₀ →
+      ‖exponentialSumAt F T P aa bb‖^12 ≤
+        C*P^ε*(1+Real.log P)^36*
+          (P^11*U+w*P^12*U^((5:ℝ)/2)+
+            P^(11+(k₀+ε)+(l₀+ε))*U^(2+(k₀+ε)+(l₀+ε)/2)*w^(-(k₀+ε))) :=
+  exists_model_refined_global_bound hσ hpair hε hp
+
+example
+    {T P : VariableObject ℝ} {α σ κ₀ : ℝ}
+    (hlo : 2/5<α) (hhi : α<3/7) (hσ : 0<σ) (hκ₀ : 0<κ₀)
+    (hT : ∀ i, 1≤T i) (hTunbounded : T.IsUnbounded)
+    (hPT : IsPowerAsymptotic P T α) :
+    let u := modelPhaseJetCoefficient σ 2+1
+    let l := modelPhaseJetLower σ 2/u
+    let a := modelPhaseJetLower σ 3/u
+    let b := (modelPhaseJetCoefficient σ 3+1)/u
+    let n := 2+48/a
+    let U := fun i => u*T i/(P i)^3
+    let w := fun i => (T i)^(-(3+23*α)/194)
+    ∀ᶠ i in atTop, 0<P i ∧ 0<w i ∧ w i≤1/2 ∧ U i≤1/3600 ∧
+      1≤P i*U i*Real.sqrt (U i) ∧ b≤P i*U i ∧ l*U i≤1 ∧
+      P i*(U i)^2≤1 ∧
+      8*Real.sqrt (U i)+(10368*b/(a^2*l))*(P i*(U i)^2)≤1/2 ∧
+      (2*n*u/σ)*Real.sqrt (U i)≤κ₀ :=
+  eventually_refined_bourgain_parameters hlo hhi hσ hκ₀ hT hTunbounded hPT
+
+example
+    {T P : VariableObject ℝ} {α σ η : ℝ}
+    (hlo : 2/5<α) (hhi : α<3/7) (hσ : 0<σ) (hη : 0<η)
+    (hT : ∀ i, 1≤T i) (hTunbounded : T.IsUnbounded)
+    (hPT : IsPowerAsymptotic P T α) :
+    let u := modelPhaseJetCoefficient σ 2+1
+    let U := fun i => u*T i/(P i)^3
+    let w := fun i => (T i)^(-(3+23*α)/194)
+    let β := max (1/12+2*α/3) (241/1164+425*α/1164)
+    ∀ᶠ i in atTop,
+      (P i)^η*(1+Real.log (P i))^36*
+        ((P i)^11*U i+w i*(P i)^12*(U i)^((5:ℝ)/2)+
+          (P i)^(11+(13/84+η)+(55/84+η))*
+            (U i)^(2+(13/84+η)+(55/84+η)/2)*(w i)^(-(13/84+η))) ≤
+        3*(T i)^(12*β+5*η) :=
+  eventually_refined_bourgain_cost hlo hhi hσ hη hT hTunbounded hPT
+
+end RefinedClosedSourceRegression
+
+section RefinedBetaConsumerRegression
+open Set Expdb Filter GafniTao TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped Topology ContDiff BigOperators NNReal FourierTransform
+
+example {α : ℝ≥0} (hlo : 2/5<(α:ℝ)) (hhi : (α:ℝ)<3/7) :
+    IsExponentSumBound α (max (1/12+2*(α:ℝ)/3) (241/1164+425*(α:ℝ)/1164)) :=
+  isExponentSumBound_refined_bourgain hlo hhi
+
+example {α : ℝ≥0} (hlo : 2/5<(α:ℝ)) (hhi : (α:ℝ)<3/7) :
+    exponentSumGrowthExponent α ≤ max (1/12+2*(α:ℝ)/3) (241/1164+425*(α:ℝ)/1164) :=
+  exponentSumGrowthExponent_le_refined_bourgain hlo hhi
+
+/-- The preserved numerical obstruction is now covered by an actual analytic
+bound, without asserting that its numerical input is an exponent pair. -/
+example :
+    exponentSumGrowthExponent (2051/5000) ≤
+      exponentPairLine (sargosDProcessK (6153/40000) (26153/40000))
+        (sargosDProcessL (6153/40000) (26153/40000)) (2051/5000) := by
+  have h := exponentSumGrowthExponent_le_refined_bourgain (α:=(2051/5000:ℝ≥0))
+    (by norm_num) (by norm_num)
+  norm_num [exponentPairLine,sargosDProcessK,sargosDProcessL] at h ⊢
+  linarith only [h]
+
+end RefinedBetaConsumerRegression
+
+section UniversalSargosDRegression
+open Set Expdb Filter GafniTao TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped Topology ContDiff BigOperators NNReal FourierTransform
+
+example {a b : ℝ}
+    (hsecondary : 1/12+2*a/3 ≤ b)
+    (hRS : b < (1+9*a)/13)
+    (hhigh : 5/12 ≤ a → b < 1/12+2*a/3) :
+    1/4 < a ∧ a < 5/12 :=
+  sargosD_fallthrough_interval hsecondary hRS hhigh
+
+example {a b h : ℝ}
+    (ha : 1/4 < a) (ha' : a < 5/12)
+    (hh : (4*a-1)/6 ≤ h) (hb : b=(4*a+1+2*h)/8)
+    (hRS : b < (1+9*a)/13) :
+    0<h ∧ h<1 ∧ 0<4*a-1-5*h ∧ 0<4*a-1-3*h ∧
+      4*a-1-3*h<a ∧ 4*a-1-3*h<b ∧ 2*h<b ∧ b<a ∧
+      1-4*a+4*h<0 ∧ 4*a-1-6*h≤0 ∧
+      1-2*a+(4*a-1-3*h)+(4*a-1-5*h)<1 :=
+  sargosD_fallthrough_physical ha ha' hh hb hRS
+
+example
+    {k l a b h : ℝ}
+    (hk : 0≤k) (hl : 1/2≤l)
+    (ha : 1/4<a) (ha' : a<5/12)
+    (hh : (4*a-1)/6≤h) (hb : b=(4*a+1+2*h)/8)
+    (hD : ((2*k+4*l)*a-l)/(2+5*k+3*l)≤h)
+    (hP : b<k+(l-k)*a)
+    (hB : b<l-1/2+(k-l+1)*a)
+    (hnew : 2/5<a →
+      b < max (1/12+2*a/3) (241/1164+425*a/1164)) :
+    0<1-3*a+2*h :=
+  sargosD_refined_fallthrough_curvature hk hl ha ha' hh hb hD hP hB hnew
+
+example
+    {T N : VariableObject ℝ} {α h σ κ₀ η : ℝ}
+    (hlo : 1/4<α) (hhi : α<5/12)
+    (hsecondary : (4*α-1)/6≤h)
+    (hRS : (4*α+1+2*h)/8<(1+9*α)/13)
+    (hcurvature : 0<1-3*α+2*h) (hσ : 0<σ)
+    (hκ₀ : 0 < κ₀) (hη : 0 < η)
+    (hT : ∀ i, 1 ≤ T i) (hTunbounded : T.IsUnbounded)
+    (hNT : IsPowerAsymptotic N T α) :
+    let r := 4*α-1-5*h
+    let H := floorRpow T h
+    let Y := fun i => (T i)^r
+    let lam := fun i => modelPhaseJetLower σ 3*T i/(N i)^4
+    let B := fun i => (modelPhaseJetCoefficient σ 3+1)*T i/(N i)^4
+    let L := fun i => modelPhaseJetLower σ 2*T i/(N i)^3
+    let U := fun i => (modelPhaseJetCoefficient σ 2+1)*T i/(N i)^3
+    let Qcut := fun i => 3/(2*lam i*(H i:ℝ)^3)
+    ∀ᶠ i in atTop, 0 < N i ∧ 2 ≤ H i ∧ 2 ≤ Y i ∧
+      ∃ J : ℕ, 1 ≤ Qcut i ∧ Qcut i ≤ (2:ℝ)^J ∧ (J:ℝ)+2 ≤ (T i)^η ∧
+        1/(4*(H i:ℝ)^2) ≤ L i/4 ∧
+        4*U i*Qcut i*(N i)^2/(σ*T i) ≤ κ₀ ∧
+        B i*((H i:ℝ)+1)^4 ≤ 1 :=
+  eventually_cubic_generic_parameters hlo hhi hsecondary hRS hcurvature hσ hκ₀ hη hT hTunbounded hNT
+
+example
+    {T N : VariableObject ℝ} {k l α h σ η : ℝ}
+    (hlo : 1/4<α) (hhi : α<5/12)
+    (hsecondary : (4*α-1)/6≤h)
+    (hRS : (4*α+1+2*h)/8<(1+9*α)/13)
+    (hcurvature : 0<1-3*α+2*h)
+    (hopt : (2*k+4*l)*α-l≤h*(2+5*k+3*l))
+    (hσ : 0<σ) (hη : 0<η)
+    (hT : ∀ i, 1 ≤ T i) (hTunbounded : T.IsUnbounded)
+    (hNT : IsPowerAsymptotic N T α) :
+    let r := 4*α-1-5*h
+    let β := (4*α+1+2*h)/8
+    let H := floorRpow T h
+    let Y := fun i => (T i)^r
+    let lam := fun i => modelPhaseJetLower σ 3*T i/(N i)^4
+    let B := fun i => (modelPhaseJetCoefficient σ 3+1)*T i/(N i)^4
+    let U := fun i => (modelPhaseJetCoefficient σ 2+1)*T i/(N i)^3
+    let Qcut := fun i => 3/(2*lam i*(H i:ℝ)^3)
+    ∀ᶠ i in atTop, ∀ J : ℕ, (J:ℝ)+2 ≤ (T i)^η →
+      let E := ((J:ℝ)+2)*(U i/(lam i*(H i:ℝ)^2))*
+        (1+B i/((lam i)^2*(H i:ℝ)^4)+Qcut i/(H i:ℝ)+Qcut i/Y i+
+          (T i/(N i)^2)^(k+η)*(Qcut i)^(l+η)*(Y i)^(k+η)+(N i)^2/T i)
+      (N i)^6*(N i+E)*(1+U i*(H i:ℝ)^2)*(H i:ℝ)^η+
+          (H i:ℝ)^8+((H i:ℝ)^2+Qcut i+1)^8 ≤
+        (15+3^8)*(T i)^(8*β+5*η) :=
+  eventually_cubic_generic_cost hlo hhi hsecondary hRS hcurvature hopt hσ hη hT hTunbounded hNT
+
+example
+    {k l h : ℝ} {α : ℝ≥0} (hpair : ExponentPair k l)
+    (hlo : 1/4<(α:ℝ)) (hhi : (α:ℝ)<5/12)
+    (hsecondary : (4*(α:ℝ)-1)/6≤h)
+    (hRS : (4*(α:ℝ)+1+2*h)/8<(1+9*(α:ℝ))/13)
+    (hcurvature : 0<1-3*(α:ℝ)+2*h)
+    (hopt : (2*k+4*l)*(α:ℝ)-l≤h*(2+5*k+3*l)) :
+    IsExponentSumBound α ((4*(α:ℝ)+1+2*h)/8) :=
+  isExponentSumBound_cubic_generic hpair hlo hhi hsecondary hRS hcurvature hopt
+
+example {k l a : ℝ} (hk : 0≤k) (hl : 0≤l) :
+    let h := max (((2*k+4*l)*a-l)/(2+5*k+3*l)) ((4*a-1)/6)
+    max (exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) a)
+      (1/12+2*a/3) = (4*a+1+2*h)/8 :=
+  sargosD_balanced_scale hk hl
+
+example
+    {k l : ℝ} (hpair : ExponentPair k l)
+    {α : ℝ≥0} (hhalf : (α:ℝ)≤1/2) :
+    exponentSumGrowthExponent α ≤
+      max (exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) α)
+        (1/12+2*(α:ℝ)/3) :=
+  exponentSumGrowthExponent_le_sargosD_half hpair hhalf
+
+example
+    {k l : ℝ} (hpair : ExponentPair k l)
+    {α : ℝ≥0} (hα : (α:ℝ)≤1) :
+    exponentSumGrowthExponent α ≤
+      max (exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) α)
+        (1/12+2*(α:ℝ)/3) :=
+  exponentSumGrowthExponent_le_sargosD hpair hα
+
+example {k l : ℝ}
+    (hpair : ExponentPair k l) (hzero : 0≤5*k-3*l+2) (hhalf : 2≤k+3*l) :
+    ExponentPair (sargosDProcessK k l) (sargosDProcessL k l) :=
+  exponentPair_sargosD hpair hzero hhalf
+
+example {k l : ℝ} (hpair : ExponentPair k l) :
+    exponentSumGrowthExponent 0 ≤
+      max (exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) 0) (1/12) := by
+  simpa using exponentSumGrowthExponent_le_sargosD (α:=0) hpair (by norm_num)
+
+example {k l : ℝ} (hpair : ExponentPair k l) :
+    exponentSumGrowthExponent 1 ≤
+      max (exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) 1) (3/4) := by
+  have h := exponentSumGrowthExponent_le_sargosD (α:=1) hpair (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair (18/199) (593/796) := by
+  have h := exponentPair_sargosD exponentPair_bourgain (by norm_num) (by norm_num)
+  norm_num [sargosDProcessK,sargosDProcessL] at h
+  exact h
+
+end UniversalSargosDRegression
+
+section RefinedTableCascadeRegression
+open Expdb TaoTrudgianYang2025 TaoTrudgianYang2025.CubicJointCount
+open scoped NNReal
+
+example
+    {α : ℝ≥0} (hlo : 62831/155153 ≤ (α:ℝ)) (hhi : (α:ℝ) ≤ 143/349) :
+    exponentSumGrowthExponent α ≤ 569/2800+1053*(α:ℝ)/2800 :=
+  exponentSumGrowthExponent_le_huxley_thirteenthRow hlo hhi
+
+example
+    {α : ℝ≥0} (hlo : 143/349 ≤ (α:ℝ)) (hhi : (α:ℝ) ≤ 263/638) :
+    exponentSumGrowthExponent α ≤ 491/5530+1812*(α:ℝ)/2765 :=
+  exponentSumGrowthExponent_le_huxley_fourteenthRow hlo hhi
+
+example
+    {α : ℝ≥0} (hlo : 263/638 ≤ (α:ℝ)) (hhi : (α:ℝ) ≤ 1673/4038) :
+    exponentSumGrowthExponent α ≤ 113/1345+897*(α:ℝ)/1345 :=
+  exponentSumGrowthExponent_le_huxley_fifteenthRow hlo hhi
+
+example :
+    ExponentPair (4742/38463) (35731/51284) :=
+  exponentPair_trudgianYang_first
+
+example :
+    ExponentPair (2371/43205) (280013/345640) :=
+  exponentPair_aTrudgianYang_first
+
+example
+    {α : ℝ≥0} (hα : (α:ℝ)≤1) :
+    exponentSumGrowthExponent α ≤ 2371/43205+52209*(α:ℝ)/69128 :=
+  exponentSumGrowthExponent_le_trudgianYang_sixthRow hα
+
+example : exponentSumGrowthExponent (62831/155153) ≤ (569/2800:ℝ)+(1053/2800)*(62831/155153) := by
+  have h := exponentSumGrowthExponent_le_huxley_thirteenthRow (α:=(62831/155153:ℝ≥0)) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (143/349) ≤ (569/2800:ℝ)+(1053/2800)*(143/349) := by
+  have h := exponentSumGrowthExponent_le_huxley_thirteenthRow (α:=(143/349:ℝ≥0)) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (143/349) ≤ (491/5530:ℝ)+(1812/2765)*(143/349) := by
+  have h := exponentSumGrowthExponent_le_huxley_fourteenthRow (α:=(143/349:ℝ≥0)) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (263/638) ≤ (491/5530:ℝ)+(1812/2765)*(263/638) := by
+  have h := exponentSumGrowthExponent_le_huxley_fourteenthRow (α:=(263/638:ℝ≥0)) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (263/638) ≤ (113/1345:ℝ)+(897/1345)*(263/638) := by
+  have h := exponentSumGrowthExponent_le_huxley_fifteenthRow (α:=(263/638:ℝ≥0)) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (1673/4038) ≤ (113/1345:ℝ)+(897/1345)*(1673/4038) := by
+  have h := exponentSumGrowthExponent_le_huxley_fifteenthRow (α:=(1673/4038:ℝ≥0)) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+end RefinedTableCascadeRegression
+
+-- The sharp original source retains the rational denominator in its error.
+example :
+    ∃ C ≥ (1 : ℝ), ∀ N N₁ q : ℕ, 1 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
+      0 < q → q ≤ N → ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 →
+      ∀ a b : ℤ, IsCoprime a (q : ℤ) →
+      ∀ θ : ℝ, |(q : ℝ)*θ| ≤ 1/2 →
+        ‖(∑ n ∈ Finset.Icc (N : ℤ) (N₁ : ℤ),
+          (𝐞 (μ*(n : ℝ)^3+θ*n+((a : ℝ)*(n : ℝ)^2+(b : ℝ)*(n : ℝ))/(q : ℝ)) : ℂ))-
+          (q : ℂ)⁻¹*∑ h ∈ Finset.Icc ⌈(q : ℝ)*(3*μ*(N : ℝ)^2+θ)⌉ ⌊(q : ℝ)*(3*μ*(N₁ : ℝ)^2+θ)⌋,
+            let r := Real.sqrt (((h : ℝ)/(q : ℝ)-θ)/(3*μ))
+            bourgainQuadraticGauss q a (b+h)*
+              ((𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ))‖ ≤
+          C*(Real.sqrt q*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)+
+            1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)) :=
+  exists_bourgain_cubic_shifted_gauss_denominator_error
+
+-- Actual analytic provenance for three optimized-density pieces.
+namespace VerifiedDensityCascadeRegression
+
+example : ExponentPair (11/85) (59/85) := exponentPair_eleven_eightyFifths
+
+example {σ : ℝ} (hσ : 3/4 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((bourgainPieceOne σ):EReal) :=
+  zeroDensityExponent_le_bourgain_piece_1 hσ hσ1
+
+example {σ : ℝ} (hσ : 3334585/3447984 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((bourgainPieceSix σ):EReal) :=
+  zeroDensityExponent_le_bourgain_piece_6 hσ hσ1
+
+example {σ : ℝ} (hσ : 974605/1005296 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((bourgainPieceSeven σ):EReal) :=
+  zeroDensityExponent_le_bourgain_piece_7 hσ hσ1
+
+example {σ : ℝ}
+    (h2 : ExponentPair (391/4595) (3461/4595))
+    (h3 : ExponentPair (2779/38033) (58699/76066))
+    (h4 : ExponentPair (89/1282) (997/1282))
+    (h5 : ExponentPair (652397/9713986) (7599781/9713986))
+    (h8 : ExponentPair (10769/351096) (609317/702192))
+    (hσ : 3/4 < σ) (hσ1 : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((optimizedBourgainBound σ):EReal) :=
+  optimizedBourgain_bound_of_remaining_pairs h2 h3 h4 h5 h8 hσ hσ1
+
+example : TaoTrudgianYang2025.zeroDensityExponent (14/15) ≤ ((bourgainPieceOne (14/15)):EReal) :=
+  zeroDensityExponent_le_bourgain_piece_1 (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (974605/1005296) ≤
+    ((bourgainPieceSix (974605/1005296)):EReal) :=
+  zeroDensityExponent_le_bourgain_piece_6 (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (5857/6032) ≤
+    ((bourgainPieceSeven (5857/6032)):EReal) :=
+  zeroDensityExponent_le_bourgain_piece_7 (by norm_num) (by norm_num)
+
+end VerifiedDensityCascadeRegression

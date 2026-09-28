@@ -1,16 +1,18 @@
 flowchart TD
+%% CURRENT REPRODUCTION: EPZAE-06 DONE; aggregate 33/42. Fresh pinned archived recipe replay and exact canonical-data regeneration are mandatory BAT stages. Python is historical computation, not Lean proof evidence; both counterexamples remain unchanged. Analytic gates EPZAE-13/14/21/29/30 and final release remain OPEN.
+%% CURRENT ANALYTIC CHECKPOINT: EPZAE-11 is DONE. The exact closed [0,1] D-process, its analytic pair consumer, the Trudgian--Yang input, its A-image and public rows 6,13,14,15 are verified. The sharper cubic Gauss remainder and actual density pieces 1,6,7 are also verified. Both BATs PASS: 7212 regressions, 17820 principal audits, 14290 foundation audits, zero diagnostics. EPZAE-13/14/29 remain OPEN; aggregate 33/42 after EPZAE-06 reproduction closure. The five-row Huxley dependency test is explicitly conditional, not analytic closure. Earlier checkpoint comments are historical.
 %% Current normalized logarithmic sixth moment is production-kernel-checked: exists_logarithmic_sixth proves C*B^6*(T+N)*N^(3+epsilon), all N>=1, T>=0, positive integer frequencies and coefficient fibers. Low frequencies, full shell recombination and epsilon absorption are proved; no source moment or decoupling estimate is assumed.
-%% Current EPZAE-11 alternate DAG: normalized log sixth moment DONE -> signed square/product count DONE -> literal weighted cubic eighth moment DONE -> original C4 source-to-count reduction DONE -> sharp joint derivative count DONE -> original-model scales and epsilon absorption DONE -> analytic D(Bourgain) pair DONE -> A-transform and both beta rows DONE. Generic D source contract and Huxley inputs remain OPEN.
+%% Current EPZAE-11 alternate DAG: normalized log sixth moment DONE -> signed square/product count DONE -> literal weighted cubic eighth moment DONE -> original C4 source-to-count reduction DONE -> sharp joint derivative count DONE -> original-model scales and epsilon absorption DONE -> analytic D(Bourgain) pair DONE -> generic scales and closed D source contract DONE. Remaining Huxley inputs belong to EPZAE-13/14 and remain OPEN.
 %% SquareProductCount.CubicMoment.exists_cubic_eighth_moment proves P*integral |sum z_n e(n*alpha+n^2*beta+n^3*gamma)|^8 <= C*(N^2+P)*N^(2+epsilon), all N>=1, P>0 and coefficient norms<=1. Exact source expansion, integer orthogonality, proved count and existing window theorem are composed; no source estimate is assumed.
-%% Sharp-count production checkpoint: 135 public audits and 35 regressions in SquareProductCount.lean; both BATs PASS (7139 regressions, 17638 principal audits, 14290 foundation audits), zero diagnostics. Full closed-source estimate subsequently integrated with three additional public audits and three regressions; focused build and foundation BAT PASS, principal rerun pending.
-%% Current terminal obligation: generic D range split and scale assembly. D(Bourgain), AD(Bourgain) and both beta rows are production-kernel-checked: principal BAT 38517 and foundation BAT 7120 PASS, 7149 regressions, 17665 principal audits, 14290 foundation audits, zero diagnostics. Generic D has a separate curvature-scale boundary to resolve; no universal process claim follows from the special pair. EPZAE-11/13/14 and aggregate 31/42 stay OPEN/unchanged.
+%% Historical sharp-count checkpoint: 135 public audits and 35 regressions; its formerly pending source and D(Bourgain) consumers are now verified below.
+%% Historical refined second-spacing checkpoint: original-model near-curve count -> labelled fibers -> both signs/zero shift -> literal four-coordinate window -> frozen C4 source DONE. Then both BATs PASS: 7161 regressions, 17723 principal audits, 14290 foundation audits, zero diagnostics. Physical band summation, endpoint trimming and analytic beta assembly were then OPEN and have since been proved. The exact numerical fallback obstruction is preserved; it is not a counterexample to D. The current EPZAE-11 and aggregate status is given above.
 %% The printed n^(it) convention still needs an explicit time-rescaling bridge. The proved character is e(alpha*n^2+t*log(n)); no printed-normalization closure is claimed.
 %% The direct logarithmic frequency-gap route closes the moment without the first route's unresolved all-plane weighted comparison. Existing planar Gram, multiplier, scalar recurrence and native quadratic VMVT are reused.
 %% One targeted production module, 83 explicit public theorem audits and 14 regressions were integrated. Root imports and runner required inventory are synchronized; no gate was weakened.
 %% Earlier normalized-moment checkpoint: both BATs PASS, 7104 regressions, 17369 principal audits, 14290 foundation audits, zero diagnostics. LogarithmicSixthMoment.lean was included in all 1444 then-current production package files.
 %% Bourgain (13/84,55/84), exact Watt (89/560,369/560) and the short-range Bourgain beta rows remain DONE. Watt uses stronger Bourgain provenance.
 %% Robert--Sargos DAG DONE: zero-q/diagonal/zero-r -> zero shifts -> mixed jets/common prefixes -> sieve/spacing -> scales -> long-range fourth derivative -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26.
-%% Generic Sargos D and remaining Huxley/Trudgian--Yang inputs stay OPEN; EPZAE-11/13/14 are not completed by the new moment. Aggregate completion stays 31/42.
+%% Historical moment-only checkpoint: generic Sargos D and Huxley/Trudgian--Yang inputs were then OPEN, with aggregate 31/42. The subsequent D and Trudgian--Yang proofs are recorded in the CURRENT status above.
 %% D(Bourgain) beta <= 18/199+(521/796)*alpha is DONE on the full closed unit interval; exponentPair_sargosD_bourgain and exponentPair_sargosAD_bourgain consume actual analytic source estimates and half-duality, with no source-sum premise.
 %% The moving Taylor/double-dual alternate retains both signs and low-height terms; complete chart count is now production-kernel-checked. The unchanged relaxed Robert--Sargos scale route has the checked 13*t<=8*d limitation.
 %% Both counterexamples, corrected powering and all nine Add-est clauses are preserved. Recovery-record maintenance is permanently skipped.
@@ -23,7 +25,7 @@ flowchart TD
 
     TC["EPZAE-01--02 unified toolchain,<br/>package, build and audit<br/>DONE"]
     RC["EPZAE-03--05 exact rational,<br/>piecewise and polyhedral certificates<br/>DONE"]
-    GEN["EPZAE-06 deterministic generator<br/>all public tables INSTALLED;<br/>archived projection-recipe replay OPEN"]
+    GEN["EPZAE-06 pinned historical recipe replay<br/>exact canonical data + Lean regeneration DONE<br/>not analytic proof evidence"]
     AB["EPZAE-07 asymptotic/phase bridge<br/>DONE"]
 
     EP["EPZAE-08 exponent-pair semantics<br/>DONE"]
@@ -201,7 +203,7 @@ flowchart TD
     COPT["EPZAE-10 linked real optimum and actual integer H<br/>high-height source + all epsilon budgets DONE"]
     CLOW["EPZAE-10 actual A-cubed-B low-height input<br/>threshold comparison + uniform model consumer DONE"]
     SCM["EPZAE-10 exact analytic C-process<br/>all source windows and heights DONE"]
-    PR["EPZAE-11 remaining D-process OPEN<br/>A/B/C processes DONE"]
+    PR["EPZAE-11 universal D-process DONE<br/>exact closed [0,1] beta + analytic pair;<br/>A/B/C DONE; both BATs PASS"]
     LSM["EPZAE-11 normalized logarithmic sixth moment<br/>full frequency range + coefficient fibers DONE"]
     LGSP["EPZAE-11 signed square/product count<br/>full source bound + sharp cubic count DONE"]
     CEM["EPZAE-11 literal weighted cubic eighth moment<br/>actual source expansion + integral bound DONE"]
@@ -210,6 +212,8 @@ flowchart TD
     DSCAL["EPZAE-11 original-model D(Bourgain) scales<br/>closed source + physical scales + epsilon DONE"]
     DBI["EPZAE-11 D(Bourgain) analytic pair<br/>missing interval + closed half-duality DONE;<br/>(18/199,593/796), both BATs PASS"]
     DAB["EPZAE-13 AD(Bourgain) and both beta rows<br/>(9/217,1461/1736) DONE;<br/>both BATs PASS"]
+    RFS["EPZAE-11/13 refined exponent-pair spacing<br/>literal model count + frozen C4 source DONE;<br/>both BATs PASS"]
+    RBA["EPZAE-11/13 refined analytic beta DONE<br/>actual source + bands + endpoints + scales;<br/>2/5 &lt; alpha &lt; 3/7; both BATs PASS"]
     LSM --> LGSP
     LGSP --> CEM
     CEM --> CSR
@@ -219,6 +223,16 @@ flowchart TD
     DBI --> DAB
     DAB --> BT
     DBI --> PR
+    DSS --> RFS
+    EP --> RFS
+    RFS --> RBA
+    RBA --> PR
+    RBA --> BT
+    DBI --> BZOPT
+    DAB --> BZOPT
+    RBA --> BZOPT
+    class RFS done;
+    class RBA done;
     class LSM,LGSP,CEM,CSR,DSS,DSCAL,DBI,DAB done;
     GFN["Pinned native Wooley/Heath--Brown and Ford source<br/>canonical foundation; complete closure AVAILABLE"]
     HBJ["EPZAE-12 actual signed model jets<br/>closed physical phase and derivative scale DONE"]
@@ -229,7 +243,7 @@ flowchart TD
     DGC["EPZAE-11 rational D geometry + beta consumer<br/>conditional on source beta estimate DONE"]
     HSEC["EPZAE-12/13 actual derivative-order selection<br/>global secant comparison + all errors DONE"]
     HFAM["EPZAE-12/13 native Heath--Brown family<br/>all integer k at least 3; exact analytic pairs DONE"]
-    BT["EPZAE-13 certified beta table<br/>first two Heath--Brown + three Bourgain rows DONE;<br/>other inputs/assembly OPEN"]
+    BT["EPZAE-13 certified beta table<br/>Heath--Brown, Bourgain, D and rows 6/13/14/15 DONE;<br/>seven Huxley rows + interval coverage OPEN"]
     PLOC["EPZAE-13 finite epsilon-loss parabola decoupling<br/>actual source entry + curve-cell return + local decoupling<br/>genuine base + smaller-grid recurrence + global dyadic bootstrap DONE"]
     PANI["EPZAE-13 weighted coarse-cell refinement + exact outer integration<br/>canonical endpoint-safe cells + actual finite fibers<br/>original-source small-anisotropic global assembly DONE"]
     PVM["EPZAE-13 native quadratic VMVT + exact weighted Fourier periods<br/>translated short intervals + actual coefficient fibers<br/>literal-source larger-plane fine-cell bound DONE"]
@@ -600,9 +614,9 @@ flowchart TD
     AGPB["EPZAE-28 actual physical general-pair packets<br/>cutoff, divisor energy + logarithms consumed DONE"]
     IVAB["EPZAE-28 (2/9,11/18) exact absorption length<br/>actual finite endpoint-preserving cover DONE"]
     IVLC["EPZAE-28 actual local-mean excess count<br/>H/(G Y^2) + H^(15/4)/(G Y^11) DONE"]
-    OBD["EPZAE-29 optimized eight-piece bound<br/>boundary closure + conditional assembly DONE;<br/>actual analytic pair provenance OPEN"]
+    OBD["EPZAE-29 optimized eight-piece bound<br/>pieces 1,6,7 proved; five analytic inputs OPEN;<br/>new consumers: both BATs PASS"]
     BZCL["EPZAE-29 genuine analytic convex limit<br/>closed k and affine-range boundaries DONE"]
-    BZOPT["EPZAE-29 eight exact analytic pair consumers<br/>source intervals + conditional assembly DONE"]
+    BZOPT["EPZAE-29 eight exact analytic pair consumers<br/>three actual inputs discharged;<br/>five-input conditional assembly DONE"]
     ZTAB["EPZAE-30 best-known density envelope<br/>OPEN"]
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
@@ -1086,7 +1100,7 @@ flowchart TD
     HBT --> BT
     HBB --> BT
     DU --> BHDU
-    PR -->|source beta estimate still unproved| DGC
+    PR -->|exact source beta estimate proved| DGC
     BHDU --> DGC
     SRC --> DGC
     DGC --> BT
@@ -2109,7 +2123,9 @@ flowchart TD
     class ZLEA,ZLRCE,ZLVB done;
     class ZLCS,ZLSM,ZLSH,ZLSF,ZLFB,ZLNP,ZLBL,ZLPL,ZLCF,ZLRL,ZLRAM done;
     class ZLRMC,ZLRME,ZLRSA,ZLRC done;
-    class GEN,PR,BT,NEP,ZLV,ZAT,OBD,ZTAB,PUB,SEM,REL open;
+    class GEN done;
+    class BT,NEP,ZLV,ZAT,OBD,ZTAB,PUB,SEM,REL open;
+    class PR done;
     class EPLVG,EPLVR,BZDL,BZDZ,AGEN,AGEP,AGPR,ISXP done;
     class AGOP,BZD done;
     class AGPB,IVAB,IVLC,IVPC,IVSD,IVRM done;

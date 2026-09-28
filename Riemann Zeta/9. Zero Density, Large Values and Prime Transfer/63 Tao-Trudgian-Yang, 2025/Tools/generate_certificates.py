@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import ast
 from fractions import Fraction
 import hashlib
+import json
 from math import gcd, lcm
 import re
 import zipfile
@@ -399,16 +401,82 @@ end TaoTrudgianYang2025
 """
 
 
+def replay_data(archive: Path, report: dict):
+    """Validate and consume replayed data; never import Python proof claims."""
+    if (report.get("schema") != 1 or report.get("proof_evidence") is not False
+            or report.get("archive_sha256") != ARCHIVE_SHA256):
+        raise SystemExit("unrecognized or unpinned historical replay")
+    pairs = []
+    for k_text, ell_text in report["exponent_pair_coordinates"]:
+        k, ell = Fraction(k_text), Fraction(ell_text)
+        pairs.append((k.numerator, k.denominator, ell.numerator, ell.denominator))
+    if pairs != extract_pairs(archive):
+        raise SystemExit("replayed exponent-pair coordinates differ from frozen driver")
+    pieces = [
+        (row["candidate"], Fraction(row["k"]), Fraction(row["ell"]),
+         Fraction(row["lower"]), Fraction(row["upper"]),
+         (row["numerator"], row["denominator_slope"], row["denominator_constant"]))
+        for row in report["bourgain_pieces"]
+    ]
+    if pieces != bourgain_pieces(extract_bourgain_candidates(archive)):
+        raise SystemExit("replayed density pieces differ from frozen rational envelope")
+    energy = []
+    for clause in report["energy"]:
+        bounds = []
+        for bound in clause["public_bounds"]:
+            if len(bound["numerator"]) != 2 or len(bound["denominator"]) != 2:
+                raise SystemExit("energy replay must have affine numerator and denominator")
+            values = [Fraction(v) for v in bound["numerator"] + bound["denominator"]]
+            if any(v.denominator != 1 for v in values):
+                raise SystemExit("energy replay coefficients are not normalized integers")
+            bounds.append(tuple(int(v) for v in values))
+        energy.append((clause["source_label"], Fraction(clause["lower"]),
+                       Fraction(clause["upper"]), bounds))
+    if energy != extract_energy_clauses(archive):
+        raise SystemExit("replayed energy branches/domains differ from frozen public data")
+    return pairs, pieces, energy
+
+
+def check_replay_rejections(archive: Path, report: dict) -> None:
+    """Keep the generator's exact source-contract validation fail-closed."""
+    mutations = [
+        (lambda r: r.update(archive_sha256="0" * 64), "unpinned"),
+        (lambda r: r["exponent_pair_coordinates"][0].__setitem__(0, "0"), "coordinates"),
+        (lambda r: r["bourgain_pieces"][0].update(numerator=0), "density pieces"),
+        (lambda r: r["energy"][0]["public_bounds"][0]["numerator"].__setitem__(0, "0"),
+         "energy branches/domains"),
+        (lambda r: r["energy"][0].update(lower="0"), "energy branches/domains"),
+        (lambda r: r["energy"].pop(), "energy branches/domains"),
+    ]
+    for mutate, expected in mutations:
+        altered = copy.deepcopy(report)
+        mutate(altered)
+        try:
+            replay_data(archive, altered)
+        except SystemExit as error:
+            if expected not in str(error):
+                raise
+        else:
+            raise SystemExit("altered replay data was unexpectedly accepted")
+    print(f"PASS: {len(mutations)} generator rejection regressions")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--archive", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--replay", type=Path,
+                        help="consume exact data from a verified historical replay")
     args = parser.parse_args()
-    content = render(
-        extract_pairs(args.archive),
-        bourgain_pieces(extract_bourgain_candidates(args.archive)),
-        extract_energy_clauses(args.archive),
-    )
+    if args.replay:
+        report = json.loads(args.replay.read_text("utf-8"))
+        data = replay_data(args.archive, report)
+        check_replay_rejections(args.archive, report)
+    else:
+        data = (extract_pairs(args.archive),
+                bourgain_pieces(extract_bourgain_candidates(args.archive)),
+                extract_energy_clauses(args.archive))
+    content = render(*data)
     args.output.write_text(content, encoding="utf-8", newline="\n")
 
 

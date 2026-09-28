@@ -24612,7 +24612,7 @@ set_option maxHeartbeats 400000 in
 /-- The full cubic Gauss transformation, with the literal sharp integer
 source, exact closed stationary-frequency interval and complex main term.
 All cutoff, zero-mode, endpoint and omitted-frequency errors are derived. -/
-private theorem exists_bourgain_cubic_shifted_gauss_closed :
+theorem exists_bourgain_cubic_shifted_gauss_denominator_error :
     ∃ C ≥ (1 : ℝ), ∀ N N₁ q : ℕ, 1 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
       0 < q → q ≤ N → ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 →
       ∀ a b : ℤ, IsCoprime a (q : ℤ) →
@@ -24623,7 +24623,7 @@ private theorem exists_bourgain_cubic_shifted_gauss_closed :
             let r := Real.sqrt (((h : ℝ)/(q : ℝ)-θ)/(3*μ))
             bourgainQuadraticGauss q a (b+h)*
               ((𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ))‖ ≤
-          C*(Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)+
+          C*(Real.sqrt q*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)+
             1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)) := by
   classical
   obtain ⟨Cc,hCc,hcentral⟩ := exists_bourgain_cubic_shifted_central_error
@@ -24654,9 +24654,6 @@ private theorem exists_bourgain_cubic_shifted_gauss_closed :
     nlinarith [mul_le_mul_of_nonneg_left hNr hqr.le]
   have hlogs := bourgain_cubic_truncation_log hNr hqNr hHcast
   have hlog0 : 0 ≤ Real.log (2*(N : ℝ)) := by linarith [hlogs.1]
-  have hfreqlog : 0 ≤ 1+Real.log (2*(H : ℝ)+1) := by
-    have h := Real.log_nonneg (show 1 ≤ 2*(H : ℝ)+1 by have hHnonneg : (0 : ℝ) ≤ H := Nat.cast_nonneg H; linarith)
-    linarith
   let χ := bourgainCubicSharpCutoff (N : ℝ) (N₁ : ℝ)
   let F : ℤ → ℂ := fun h => bourgainQuadraticGauss q a (b+h)*
     bourgainCubicFourierMode (fun x => (χ x : ℂ)) μ ((h : ℝ)/(q : ℝ)-θ)
@@ -24703,22 +24700,21 @@ private theorem exists_bourgain_cubic_shifted_gauss_closed :
   change ‖(q : ℂ)⁻¹*E‖ ≤
     Cc*(1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)+
       Real.sqrt q*(1+Real.log (2*(H : ℝ)+1))) at hc
-  have hsq : Real.sqrt (q : ℝ) ≤ Real.sqrt (N : ℝ) := Real.sqrt_le_sqrt hqNr
-  have hunit : Real.sqrt (N : ℝ) ≤ 2*(Real.sqrt (N : ℝ)*Real.log (2*(N : ℝ))) := by
-    have h := mul_le_mul_of_nonneg_left hlogs.1 (Real.sqrt_nonneg (N : ℝ))
+  have hunit : Real.sqrt (q : ℝ) ≤ 2*(Real.sqrt (q : ℝ)*Real.log (2*(N : ℝ))) := by
+    have h := mul_le_mul_of_nonneg_left hlogs.1 (Real.sqrt_nonneg (q : ℝ))
     nlinarith
   have hc' : ‖(q : ℂ)⁻¹*E‖ ≤
       Cc*(1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q))+
-        258*Cc*(Real.sqrt N*Real.log (2*(N : ℝ))) := by
+        258*Cc*(Real.sqrt q*Real.log (2*(N : ℝ))) := by
     apply hc.trans
     have hm : Real.sqrt (q : ℝ)*(1+Real.log (2*(H : ℝ)+1)) ≤
-        Real.sqrt (N : ℝ)*(258*Real.log (2*(N : ℝ))) :=
-      mul_le_mul hsq hlogs.2 hfreqlog (Real.sqrt_nonneg _)
+        Real.sqrt (q : ℝ)*(258*Real.log (2*(N : ℝ))) :=
+      mul_le_mul_of_nonneg_left hlogs.2 (Real.sqrt_nonneg _)
     have hmc := mul_le_mul_of_nonneg_left hm hCc0
     nlinarith
   have hf := hfar μ N N₁ hμ hNr hNNr hN₁r hμN q hq a b ha θ hθ H hH0
   change ‖(q : ℂ)⁻¹*tail‖ ≤ Cf*(N : ℝ)*(q : ℝ)*Real.sqrt q/(H : ℝ) at hf
-  have hf' : ‖(q : ℂ)⁻¹*tail‖ ≤ 2*Cf*(Real.sqrt N*Real.log (2*(N : ℝ))) := by
+  have hf' : ‖(q : ℂ)⁻¹*tail‖ ≤ 2*Cf*(Real.sqrt q*Real.log (2*(N : ℝ))) := by
     apply hf.trans
     rw [hHcast]
     have he' : Cf*(N : ℝ)*(q : ℝ)*Real.sqrt q/(64*(q : ℝ)*(N : ℝ)) =
@@ -24726,29 +24722,54 @@ private theorem exists_bourgain_cubic_shifted_gauss_closed :
     rw [he']
     calc
       _ ≤ Cf*Real.sqrt (q : ℝ) := mul_le_mul_of_nonneg_right (by linarith) (Real.sqrt_nonneg _)
-      _ ≤ Cf*Real.sqrt (N : ℝ) := mul_le_mul_of_nonneg_left hsq hCf0
       _ ≤ _ := by
         have h := mul_le_mul_of_nonneg_left hunit hCf0
         nlinarith
   apply (norm_add_le _ _).trans
   apply (add_le_add (norm_add_le _ _) le_rfl).trans
   apply (add_le_add (add_le_add hz hc') hf').trans
-  have hmain0 : 0 ≤ Real.sqrt (N : ℝ)*Real.log (2*(N : ℝ)) := by positivity
+  have hmain0 : 0 ≤ Real.sqrt (q : ℝ)*Real.log (2*(N : ℝ)) := by positivity
   have hinv0 : 0 ≤ 1/(μ*(N : ℝ)^2) := by positivity
   have hcap0 : 0 ≤ 1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q) := by positivity
   have hbcoef : 258*Cc+2*Cf ≤ D := by dsimp only [D]; linarith
   have hucoef : Cz ≤ D := by dsimp only [D]; linarith
   have hvcoef : Cc+Cz ≤ D := by dsimp only [D]; linarith
   calc
-    _ = (258*Cc+2*Cf)*(Real.sqrt N*Real.log (2*(N : ℝ)))+
+    _ = (258*Cc+2*Cf)*(Real.sqrt q*Real.log (2*(N : ℝ)))+
         Cz*(1/(μ*(N : ℝ)^2))+
         (Cc+Cz)*(1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)) := by ring
-    _ ≤ D*(Real.sqrt N*Real.log (2*(N : ℝ)))+
+    _ ≤ D*(Real.sqrt q*Real.log (2*(N : ℝ)))+
         D*(1/(μ*(N : ℝ)^2))+
         D*(1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)) :=
       add_le_add (add_le_add (mul_le_mul_of_nonneg_right hbcoef hmain0)
         (mul_le_mul_of_nonneg_right hucoef hinv0)) (mul_le_mul_of_nonneg_right hvcoef hcap0)
     _ = _ := by ring
+
+/-- Compatibility bound used by the existing source consumers. -/
+private theorem exists_bourgain_cubic_shifted_gauss_closed :
+    ∃ C ≥ (1 : ℝ), ∀ N N₁ q : ℕ, 1 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
+      0 < q → q ≤ N → ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 →
+      ∀ a b : ℤ, IsCoprime a (q : ℤ) →
+      ∀ θ : ℝ, |(q : ℝ)*θ| ≤ 1/2 →
+        ‖(∑ n ∈ Finset.Icc (N : ℤ) (N₁ : ℤ),
+          (𝐞 (μ*(n : ℝ)^3+θ*n+((a : ℝ)*(n : ℝ)^2+(b : ℝ)*(n : ℝ))/(q : ℝ)) : ℂ))-
+          (q : ℂ)⁻¹*∑ h ∈ Finset.Icc ⌈(q : ℝ)*(3*μ*(N : ℝ)^2+θ)⌉ ⌊(q : ℝ)*(3*μ*(N₁ : ℝ)^2+θ)⌋,
+            let r := Real.sqrt (((h : ℝ)/(q : ℝ)-θ)/(3*μ))
+            bourgainQuadraticGauss q a (b+h)*
+              ((𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ))‖ ≤
+          C*(Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)+
+            1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)) := by
+  obtain ⟨C,hC,hbound⟩ := exists_bourgain_cubic_shifted_gauss_denominator_error
+  refine ⟨C,hC,?_⟩
+  intro N N₁ q hN hNN hN₁ hq hqN μ hμ hμN a b ha θ hθ
+  apply (hbound N N₁ q hN hNN hN₁ hq hqN μ hμ hμN a b ha θ hθ).trans
+  have hlog : 0 ≤ Real.log (2*(N : ℝ)) := by
+    apply Real.log_nonneg
+    have hn : (1:ℝ) ≤ N := by exact_mod_cast hN
+    linarith only [hn]
+  have hsq : Real.sqrt (q : ℝ) ≤ Real.sqrt (N : ℝ) :=
+    Real.sqrt_le_sqrt (by exact_mod_cast hqN)
+  gcongr
 
 
 private theorem bourgain_cubic_real_linear_reindex (q : ℕ) (hq : 0 < q)
@@ -27257,7 +27278,8 @@ theorem bourgain_rational_curvature_center
   · simpa only [g,Rat.cast_def] using hmt
 
 
-private theorem bourgain_integer_source_translation
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem bourgain_integer_source_translation
     (f : ℝ → ℝ) (m : ℤ) (N H : ℕ) :
     (∑ n∈Finset.Ioc (m+N) (m+N+H),(𝐞 (f n):ℂ))=
     ∑ n∈Finset.Ioc (N:ℤ) ((N:ℤ)+H),(𝐞 (f ((m:ℝ)+n)):ℂ) := by
@@ -29530,7 +29552,8 @@ private theorem bourgain_triangular_inverse_coordinate_equality
     field_simp
     nlinarith only [hpR]
 
-private theorem bourgain_curvature_level_difference
+/-- Existing source-scale bridge reused by the refined spacing consumer. -/
+theorem bourgain_curvature_level_difference
     (f : ℝ → ℝ) {A B U x y : ℝ}
     (hf : ∀ z∈Icc A B, ContDiffAt ℝ 4 f z)
     (hthree : ∀ z∈Icc A B, 0 ≤ iteratedDeriv 3 f z ∧ iteratedDeriv 3 f z ≤ 6*U)
@@ -32850,7 +32873,8 @@ theorem exists_bourgain_C4_frozen_source_second_spacing_reduction
     (Finset.sum_nonneg (fun _ _ => norm_nonneg _)) hmain hE hBudget hC0 hC₂.le hs hg'
 
 
-private theorem bourgain_frozen_physical_dual_scales
+/-- Existing source-scale bridge reused by the refined spacing consumer. -/
+theorem bourgain_frozen_physical_dual_scales
     {L U N Q μ q n : ℝ} (hL : 0<L) (hU : 0<U) (hN : 0<N) (hQ : 0<Q)
     (hμ : L/6≤μ ∧ μ≤U) (hq : Q/2≤q ∧ q≤Q) (hn : N≤n ∧ n≤3*N)
     (hdual : 12≤L*Q*N^2) (hfrozen : 384≤L^2*Q^3*N^3) :
@@ -33244,7 +33268,8 @@ private theorem sum_integer_blocks (g : ℤ → ℂ) (a : ℤ) {N u v : ℕ}
       (by gcongr)
       (by nlinarith only [Int.natCast_nonneg N])
 
-private theorem norm_sum_integer_Ioc_le (g : ℤ → ℂ) (hg : ∀ n,‖g n‖≤1)
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem norm_sum_integer_Ioc_le (g : ℤ → ℂ) (hg : ∀ n,‖g n‖≤1)
     {a b : ℤ} (hab : a≤b) :
     ‖∑ n∈Finset.Ioc a b,g n‖≤(b:ℝ)-a := by
   calc
@@ -33254,13 +33279,14 @@ private theorem norm_sum_integer_Ioc_le (g : ℤ → ℂ) (hg : ∀ n,‖g n‖�
       simp only [Finset.sum_const,nsmul_eq_mul,mul_one,Int.card_Ioc]
       exact_mod_cast Int.toNat_of_nonneg (sub_nonneg.mpr hab)
 
-private theorem exists_buffered_integer_source_blocks
+/-- The existing source-block construction works inside any closed real interval. -/
+theorem exists_buffered_integer_source_blocks_interval
     (g : ℤ → ℂ) (hg : ∀ n,‖g n‖≤1)
-    {a b : ℤ} {P : ℝ} (hab : a≤b) (ha : P≤a) (hb : (b:ℝ)≤2*P)
+    {a b : ℤ} {A B : ℝ} (hab : a≤b) (ha : A≤a) (hb : (b:ℝ)≤B)
     (N : ℕ) (hN : 0<N) :
     ∃ S : Finset ℕ,
       (∀ k∈S, Icc ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k-(7*(N:ℝ)+2))
-        ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k+(7*(N:ℝ)+2)) ⊆ Icc (P+1/2) (2*P-1/2)) ∧
+        ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k+(7*(N:ℝ)+2)) ⊆ Icc (A+1/2) (B-1/2)) ∧
       (∀ k∈S, a≤a+(N:ℤ)*k ∧ a+(N:ℤ)*k+N≤b) ∧
       ‖∑ n∈Finset.Ioc a b,g n‖≤23*(N:ℝ)+
         ∑ k∈S,‖∑ n∈Finset.Ioc (a+(N:ℤ)*k) (a+(N:ℤ)*k+N),g n‖ := by
@@ -33332,6 +33358,19 @@ private theorem exists_buffered_integer_source_blocks
     have h := mul_le_mul_of_nonneg_left hqR (le_trans zero_le_one hNr)
     have hn := norm_sum_integer_Ioc_le g hg hab
     nlinarith only [hn,hhighR,h,hNr]
+
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_buffered_integer_source_blocks
+    (g : ℤ → ℂ) (hg : ∀ n,‖g n‖≤1)
+    {a b : ℤ} {P : ℝ} (hab : a≤b) (ha : P≤a) (hb : (b:ℝ)≤2*P)
+    (N : ℕ) (hN : 0<N) :
+    ∃ S : Finset ℕ,
+      (∀ k∈S, Icc ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k-(7*(N:ℝ)+2))
+        ((a:ℝ)-2*(N:ℝ)+(N:ℝ)*k+(7*(N:ℝ)+2)) ⊆ Icc (P+1/2) (2*P-1/2)) ∧
+      (∀ k∈S, a≤a+(N:ℤ)*k ∧ a+(N:ℤ)*k+N≤b) ∧
+      ‖∑ n∈Finset.Ioc a b,g n‖≤23*(N:ℝ)+
+        ∑ k∈S,‖∑ n∈Finset.Ioc (a+(N:ℤ)*k) (a+(N:ℤ)*k+N),g n‖ :=
+  exists_buffered_integer_source_blocks_interval g hg hab ha hb N hN
 
 private theorem model_source_derivative_data {σ : ℝ} (hσ : 0<σ) :
     ∃ δ>(0:ℝ), ∀ (F : ℝ → ℝ) (T P : ℝ),
@@ -33727,7 +33766,8 @@ theorem exists_bourgain_model_source_bands {σ ε : ℝ} (hσ : 0<σ) (hε : 0<�
       hN hL hF hU hX hlambda hFL hsmall hquad hreg hthree hfour hcurv
       hmul (fun _ _ => le_rfl) hbuf
 
-private theorem sum_by_denominator_bands {ι : Type*} [DecidableEq ι]
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem sum_by_denominator_bands {ι : Type*} [DecidableEq ι]
     (S : Finset ι) (q : ι → ℕ) (w : ι → ℝ) (N : ℕ) :
     (∑ i∈S,w i) =
       (∑ i∈S.filter (fun i => N+1 ≤ q i),w i)+
@@ -35590,7 +35630,8 @@ private theorem physical_moment_band_main_bounds
     convert hh using 1
     ac_rfl
 
-private theorem physical_dyadic_geometry
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem physical_dyadic_geometry
     {K T : ℝ} {N : ℕ} (hK : 1000 ≤ K) (hT : 1 ≤ T)
     (hN : 0<N) (hNT : (N:ℝ) ≤ T) :
     let J := Nat.log 2 N+1
@@ -37510,7 +37551,8 @@ private theorem hat_fourier_positive_moment
       rw [show p-2+1=p-1 by ring,show -(p-2)-1=1-p by ring]
       ring
 
-private theorem source_four_coordinate_integer_shift_bound
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem source_four_coordinate_integer_shift_bound
     (f : ℝ → ℝ) (M q q' Q : ℕ) [NeZero M]
     (a a' r r' m n : ℤ) {A B x y U lam : ℝ}
     (hq : 0 < q) (hq' : 0 < q') (hqQ : q ≤ Q) (hqQ' : q' ≤ Q)
@@ -37599,7 +37641,8 @@ private theorem source_four_coordinate_integer_shift_bound
     rw [he] at hleveldist
     exact hleveldist.trans (mul_le_mul_of_nonneg_left hxy (by positivity))
 
-private theorem actual_source_triangular_derivative_resonance
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem actual_source_triangular_derivative_resonance
     (M q q' Q : ℕ) [NeZero M] (a a' r r' : ℤ)
     (hq : 0 < q) (hq' : 0 < q') (hqQ : q ≤ Q) (hqQ' : q' ≤ Q)
     (hthin : (Q:ℝ)^2 < 6*(M:ℝ)^2)
@@ -38375,7 +38418,8 @@ private theorem fixed_displacement_level_spacing
   apply (le_div_iff₀ (mul_pos hlam hd)).mpr
   nlinarith only [hdiff,hbound,(abs_le.mp hu').2,(abs_le.mp hw').1]
 
-private theorem rounded_curvature_difference_error
+/-- Existing literal source geometry, exposed for the exponent-pair spacing refinement. -/
+theorem rounded_curvature_difference_error
     (f : ℝ → ℝ) {x y m n U k : ℝ}
     (hf : ∀ t∈uIcc x m ∪ uIcc y n, ContDiffAt ℝ 3 f t)
     (hb : ∀ t∈uIcc x m ∪ uIcc y n, |iteratedDeriv 3 f t| ≤ 6*U)
@@ -38442,7 +38486,8 @@ private theorem block_cloud_card_of_center_interval
     _ = (Bmul:ℝ)*W.card := by simp [mul_comm]
     _ ≤ _ := mul_le_mul_of_nonneg_left hW (Nat.cast_nonneg _)
 
-private theorem fixed_displacement_source_pair_fibers
+/-- Existing literal source geometry, exposed for the exponent-pair spacing refinement. -/
+theorem fixed_displacement_source_pair_fibers
     {ι : Type*} [DecidableEq ι] (S : Finset ι) (R : Finset (ι × ι))
     (center block : ι → ℤ) (H Bmul : ℕ) (s : ℤ) (f : ℝ → ℝ)
     {A B lam d k ε : ℝ} (hH : 0 < H) (hlam : 0 < lam) (hd : 0 < d) (hε : 0 ≤ ε)
@@ -38517,7 +38562,8 @@ private theorem fixed_displacement_source_pair_fibers
   · rw [Finset.not_nonempty_iff_eq_empty.mp hR,Finset.card_empty,Nat.cast_zero]
     positivity
 
-private theorem rounded_positive_curvature_shift_bounds
+/-- Existing literal source geometry, exposed for the exponent-pair spacing refinement. -/
+theorem rounded_positive_curvature_shift_bounds
     (f : ℝ → ℝ) {A B L U x y m n k : ℝ}
     (hL : 0 < L) (hU : 0 < U) (hk : 6*U ≤ k)
     (hf : ∀ t∈Ioo A B, ContDiffAt ℝ 3 f t)
@@ -38562,7 +38608,8 @@ private theorem rounded_positive_curvature_shift_bounds
   · have hh : y-x ≤ 2*k/L := (le_div_iff₀ hL).mpr (by nlinarith only [hlo,hdiff])
     linarith only [hh,hround.2]
 
-private theorem rounded_shift_source_pair_count_of_displacements
+/-- Existing literal source geometry, exposed for the exponent-pair spacing refinement. -/
+theorem rounded_shift_source_pair_count_of_displacements
     {ι : Type*} [DecidableEq ι] (S : Finset ι) (R : Finset (ι × ι))
     (center block : ι → ℤ) (z : ι → ℝ) (H Bmul : ℕ) (s : ℤ)
     (f : ℝ → ℝ) (J : Finset ℤ) {A B L U lam k : ℝ}
@@ -39317,7 +39364,8 @@ theorem model_displacement_derivative_data {σ : ℝ} (hσ : 0 < σ) :
       (by convert mul_le_mul_of_nonneg_left hb (show 0 ≤ T/P^2 by positivity) using 1; ring)
       (by norm_num)
 
-private theorem raw_displacement_window_scales
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem raw_displacement_window_scales
     {U M Q lam : ℝ} (hU : 0 ≤ U) (hM : 1 ≤ M) (hQ : 0 < Q)
     (hQM : Q ≤ 4*M) (hlam : 0 < lam) :
     let D₀ := (Real.sqrt M/(9*M)+Real.sqrt M/(12*M^2))*Real.sqrt (U*Q^3)
@@ -39374,7 +39422,8 @@ private theorem raw_displacement_window_scales
         mul_le_mul_of_nonneg_left ((div_le_iff₀ hMp).mpr hQM) (by positivity)
       _ = _ := by ring
 
-private theorem displacement_block_scale
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem displacement_block_scale
     {U : ℝ} (hU : 0 < U) (hsmall : U ≤ 1/3600) :
     let H := ⌊1/(10*Real.sqrt U)⌋₊
     0 < H ∧ 1/12 ≤ (H:ℝ)*Real.sqrt U ∧ (H:ℝ)*Real.sqrt U ≤ 1/10 ∧
@@ -39435,7 +39484,8 @@ private theorem fourfold_source_majorant {C X Y E : ℝ}
     C*(X*(4*Y)+E) ≤ (4*C)*(X*Y+E) := by
   nlinarith only [mul_nonneg hC hE]
 
-private theorem displacement_prescribed_source_error
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem displacement_prescribed_source_error
     {N W Q q : ℕ} {L mu : ℝ}
     (hN : 0 < N) (hQ : 0 < Q) (hq : 0 < q) (hL : 0 < L)
     (hWlo : N ≤ W) (hWhi : W ≤ 3*N) (hmu : L/6 ≤ mu)
@@ -39465,12 +39515,14 @@ private theorem displacement_prescribed_source_error
     · field_simp
   linarith only [herr,hcap]
 
-private theorem displacement_empty_source_bound (C Loss Pair Err Z : ℝ) (hZ : Z=0) :
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem displacement_empty_source_bound (C Loss Pair Err Z : ℝ) (hZ : Z=0) :
     0 ≤ (4*C)*(Loss*(2*Z)^10*Pair+(Z*Err)^12) := by
   rw [hZ]
   norm_num
 
-private theorem displacement_frozen_cardinality_absorption
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem displacement_frozen_cardinality_absorption
     {ι : Type*} [DecidableEq ι] (S : Finset ι)
     {Y C Loss Err Raw Pair ErrorSum : ℝ}
     (hC : 0 ≤ C) (hLoss : 0 ≤ Loss) (hErr : 0 ≤ Err)
@@ -39736,7 +39788,8 @@ private theorem exists_displacement_frozen_physical_source
     rw [hsrcempty]
     exact displacement_empty_source_bound C Loss Pair Err Z hZ
 
-private theorem displacement_physical_cutoff
+/-- Existing source/scale estimate reused by the analytic spacing refinement. -/
+theorem displacement_physical_cutoff
     {a P U M Q : ℝ} (ha : 0 < a) (hP : 0 < P) (hU : 0 < U)
     (hsmall : U ≤ 1/3600) (hK : 1 ≤ P*U*Real.sqrt U)
     (hM : 1 ≤ M) (hQ : 0 < Q) (hQM : Q ≤ 4*M) :
@@ -39880,7 +39933,8 @@ private theorem displacement_count_physical_majorant
     _ ≤ (3+(52+144*C)*(v*(a+b)+c))*E := by
       nlinarith only [hterms.1]
 
-private theorem displacement_harmonic_weight
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem displacement_harmonic_weight
     {n d P U D : ℝ} {N : ℕ}
     (hn : 1 ≤ n) (hP : 1 ≤ P) (hU : 0 < U) (hU1 : U ≤ 1)
     (hN : 1 ≤ N) (hNhi : (N:ℝ) ≤ n*(P*U*Real.sqrt U))
@@ -40041,7 +40095,8 @@ private theorem displacement_pair_majorant {c z x y t : ℝ}
     4*z+6*x*y ≤ (4+6*c)*(z+t) := by
   nlinarith only [h,mul_nonneg hc hz,ht]
 
-private theorem displacement_taylor_smallness {b P U : ℝ}
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem displacement_taylor_smallness {b P U : ℝ}
     (hb : 0 < b) (hP : 0 < P) (hU : 0 < U) (hUsmall : U ≤ 1/3600)
     (hbPU : b ≤ P*U) :
     let N := ⌊1/(10*Real.sqrt U)⌋₊
@@ -40178,7 +40233,8 @@ private theorem displacement_denominator_elimination
         have hh := mul_le_mul_of_nonneg_left hp (show 0 ≤ (1+c)^13*B^10 by positivity)
         nlinarith only [hh]
 
-private theorem exists_displacement_frozen_loss_bound
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_displacement_frozen_loss_bound
     {l ε : ℝ} (hl : 0 < l) (hε : 0 < ε) :
     ∃ C > (0:ℝ), ∀ (U B Z : ℝ) (Q : ℕ),
       0 < U → U ≤ 1/3600 → 0 ≤ Z → 0 < Q →
@@ -40388,7 +40444,8 @@ private theorem displacement_minimal_source_family
   · intro Q hQ D
     simpa only [Nat.cast_one,one_mul] using htail Q hQ
 
-private theorem exists_displacement_cardinality_majorants
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_displacement_cardinality_majorants
     {l x : ℝ} (hl : 0 < l) (hx : 0 ≤ x) :
     ∃ C ≥ (1:ℝ), ∀ (P U Q : ℝ),
       0 < P → 0 < U → U ≤ 1/3600 → 1 ≤ P*U → 1 ≤ Q →
@@ -40611,7 +40668,8 @@ private theorem exists_displacement_source_bands
       hmulG (fun i hi => hH i (hGS hi)) hqdata
       (fun i hi => hlevel i (hGS hi)) hdual hfrozen
 
-private theorem displacement_cardinality_geometric
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem displacement_cardinality_geometric
     {U Q B Z : ℝ} (hU : 0 ≤ U) (hQ : 0 < Q) (hZ : 0 ≤ Z)
     (hlo : Z ≤ B*U*Q^2) (hhi : Z*Q^2 ≤ B) : Z ≤ B*Real.sqrt U := by
   have hB : 0 ≤ B := (mul_nonneg hZ (sq_nonneg Q)).trans hhi
@@ -40645,7 +40703,8 @@ private theorem displacement_two_term_product {P U : ℝ} (hU : 0 < U) :
     _ = P^11*(Real.sqrt U)^2+P^12*(Real.sqrt U*U^((13:ℝ)/6)) := by ring
     _ = _ := by rw [Real.sq_sqrt hU.le,hp]
 
-private theorem exists_displacement_frozen_error_majorant {l : ℝ} (hl : 0 < l) :
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_displacement_frozen_error_majorant {l : ℝ} (hl : 0 < l) :
     ∃ C > (0:ℝ), ∀ (P U Q : ℝ),
       0 < P → 0 < U → U ≤ 1/3600 → 1 ≤ P*U → 1 ≤ Q →
       let N := ⌊1/(10*Real.sqrt U)⌋₊
@@ -40864,7 +40923,8 @@ private theorem exists_displacement_uniform_frozen_rhs
     _ ≤ Cl*Cc^10*(Cc+2)*P^ε*J^24*E+(Cc*Ce)^12*P^ε*J^24*E := add_le_add hmain herror'
     _ = C*P^ε*J^24*E := by dsimp only [C]; ring
 
-private theorem displacement_block_physical_scale {P U : ℝ}
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem displacement_block_physical_scale {P U : ℝ}
     (hP : 0 < P) (hU : 0 < U) (hUsmall : U ≤ 1/3600)
     (hK : 1 ≤ P*U*Real.sqrt U) :
     1 ≤ P*U ∧ 1 ≤ P ∧ 2*(⌊1/(10*Real.sqrt U)⌋₊:ℝ) ≤ P := by
@@ -40958,7 +41018,8 @@ private theorem exists_displacement_uniform_source_bands
   have hm := mul_le_mul_of_nonneg_left hh hCf.le
   exact hs.trans (by convert hm using 1; ring)
 
-private theorem exists_displacement_small_band_cutoff {l : ℝ} (hl : 0 < l) :
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_displacement_small_band_cutoff {l : ℝ} (hl : 0 < l) :
     ∃ C ≥ (1:ℝ), ∀ U Q : ℝ,
       0 < U → U ≤ 1/3600 → 0 < Q →
       let N := ⌊1/(10*Real.sqrt U)⌋₊
@@ -41022,7 +41083,8 @@ private theorem exists_displacement_small_band_cutoff {l : ℝ} (hl : 0 < l) :
     rw [hinv,←div_eq_mul_inv]
     exact (le_div_iff₀ hw).mpr hqw
 
-private theorem exists_displacement_small_band_majorant
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_displacement_small_band_majorant
     {l x K : ℝ} (hl : 0 < l) (hx : 0 ≤ x) (hK : 1 ≤ K) :
     ∃ C > (0:ℝ), ∀ P U Q : ℝ,
       0 < P → 0 < U → U ≤ 1/3600 → 1 ≤ P*U → 1 ≤ Q → Q ≤ K*U^(-(1:ℝ)/6) →
@@ -41109,7 +41171,8 @@ private theorem exists_displacement_small_band_majorant
     _ = C*P*(U*U^(-(1:ℝ)/4)*U^(-(5:ℝ)/12))*J := by dsimp only [C]; ring
     _ = _ := by rw [hUproduct]
 
-private theorem exists_displacement_tail_majorant {l x : ℝ} (hl : 0 < l) (hx : 0 ≤ x) :
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem exists_displacement_tail_majorant {l x : ℝ} (hl : 0 < l) (hx : 0 ≤ x) :
     ∃ C > (0:ℝ), ∀ P U : ℝ,
       0 < P → 0 < U → U ≤ 1/3600 → 1 ≤ P*U →
       let N := ⌊1/(10*Real.sqrt U)⌋₊
@@ -41171,7 +41234,8 @@ private theorem exists_displacement_tail_majorant {l x : ℝ} (hl : 0 < l) (hx :
     _ = C*P*((N:ℝ)*U) := by ring
     _ ≤ C*P*v := mul_le_mul_of_nonneg_left hNU (by positivity)
 
-private theorem displacement_finite_moment_budget
+/-- Existing analytic assembly lemma reused by the refined denominator-band proof. -/
+theorem displacement_finite_moment_budget
     {B A K : ℝ} (g : ℕ → ℝ) (J : ℕ)
     (hB : 0 ≤ B) (hA : 0 ≤ A) (hg : ∀ j, 0 ≤ g j)
     (hBK : B^12 ≤ K) (hAK : A^12 ≤ K)
