@@ -19,8 +19,9 @@ flowchart TD
     HUXWINDOW["EPZAE-13 paired short-window IVT consumer<br/>explicit forward cutoff derives endpoint coverage;<br/>new roots, displacement, t/r geometry, labels + four bounds DONE;<br/>CONDITIONAL on interior windows, q-band and source scales"]
     HUXNOWRAP["EPZAE-13 actual sector (5.18) consumer<br/>complete-sector theorem derives common labels;<br/>cubic displacement and explicit t/q/sector scales derive no-wrap;<br/>nearest-label case DONE under explicit geometry/coincidences"]
     HUXDSECTOR["EPZAE-13 actual doubled-label sector consumer<br/>one compatible family, common labels and no-wrap derived;<br/>actual (5.18) with centering tolerance DONE;<br/>CONDITIONAL on geometry/density and measured coincidences"]
-    HUXQUARTIC["EPZAE-13 literal Section 9 quartic correction h<br/>actual Taylor/coordinate/derivative inputs DONE;<br/>(9.9) and paired g-h Fourth residual at C*q/N DONE;<br/>CONDITIONAL on actual roots, squared cutoff, linked scales/coincidences"]
-    HUXCOUNT["EPZAE-13 Huxley Sections 3--10<br/>source-valid window/Farey-region selection;<br/>reciprocal Third-Condition curvature + quartic uniform geometry<br/>and scalar/parameter-family counts OPEN"]
+    HUXQUARTIC["EPZAE-13 literal Section 9 correction h<br/>actual Fourth residual at C*q/N, reciprocal refinement DONE;<br/>measured Third gives source curvature (9.6) and Taylor DONE;<br/>CONDITIONAL on actual real roots/region and linked scales/coincidences"]
+    HUXQREG["EPZAE-13 actual quartic curvature regions<br/>17 complete interval sectors + 16 Farey exceptions DONE;<br/>sampled Third + finite Fourth derive common labels;<br/>rational-anchor density + sharp physical (9.13) DONE<br/>under explicit source geometry/scalar tests"]
+    HUXCOUNT["EPZAE-13 Huxley Sections 3--10<br/>paired R^2 physical-block and long-block constraint DONE;<br/>constructed vertical C2 curvature count DONE;<br/>actual mixed-family entry and triangular bounds OPEN;<br/>global selection, budgets and matrix/block sums OPEN"]
     HUXMOM["EPZAE-13 Huxley Theorem 2<br/>enlarged-domain/mixed-parameter entry<br/>actual family fifth moment OPEN"]
     HUXROWS["EPZAE-13 Huxley Theorem 3<br/>differencing + five exact beta rows<br/>and page-39 short-range consumers OPEN"]
     ED --> HUXJET
@@ -87,6 +88,9 @@ flowchart TD
     HUXENTRY --> HUXQUARTIC
     HUXRES --> HUXQUARTIC
     HUXQUARTIC --> HUXCOUNT
+    HUXQUARTIC --> HUXQREG
+    HUXFINITE --> HUXQREG
+    HUXQREG --> HUXCOUNT
     P4SC --> HUXCOUNT
     HUXJET --> HUXMOM
     HUXCOUNT --> HUXMOM
@@ -100,7 +104,7 @@ flowchart TD
     class HUXALL done;
     class HUXWINDOW done;
     class HUXNOWRAP done;
-    class HUXDSECTOR,HUXQUARTIC done;
+    class HUXDSECTOR,HUXQUARTIC,HUXQREG done;
     class HUXLABEL open;
     class HUXCOUNT,HUXMOM,HUXROWS open;
 %% CURRENT VERIFIED CONTRACT (28 September 2026): EPZAE-21 DONE, aggregate 34/42. AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson proves literal Ivić Theorem 6.2 (6.20)--(6.23), including full widths, phase/prefix, endpoint-plus-integral bound, damping and cutoff. Both BATs PASS, zero Lean diagnostics; every other EPZAE-21 acceptance clause has a public consumer. Growth/nonexistence uses the owner-authorized strict sigma>1-tau repair, not the false printed statement. Frozen source, counterexamples, obstruction history and regressions remain permanent. Earlier checkpoint comments below retain their historical statuses. Shifted-height (6.24) is not asserted.

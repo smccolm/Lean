@@ -28605,6 +28605,184 @@ private theorem bourgain_curvature_profile
     have hh := mul_le_mul_of_nonneg_left (hthree _ hvI) hL.le
     nlinarith only [hh,hfour _ hvI]
 
+private theorem bourgain_paired_resonance_hasDerivAt
+    (g gp j jp : ℝ → ℝ) {a b c d x : ℝ}
+    (hdet : a*d-b*c=1) (ht : c*x+d ≠ 0)
+    (hg : HasDerivAt g (gp x) x)
+    (hgy : HasDerivAt j (jp ((a*x+b)/(c*x+d))) ((a*x+b)/(c*x+d))) :
+    HasDerivAt (fun z => j ((a*z+b)/(c*z+d))*(c*z+d)^3-g z)
+      (jp ((a*x+b)/(c*x+d))*(c*x+d)+
+        3*c*j ((a*x+b)/(c*x+d))*(c*x+d)^2-gp x) x := by
+  have htd := ((hasDerivAt_id x).const_mul c).add_const d
+  have hyd := (((hasDerivAt_id x).const_mul a).add_const b).div htd ht
+  have he : (a*(c*x+d)-(a*x+b)*c)/(c*x+d)^2=1/(c*x+d)^2 := by
+    congr 1
+    nlinarith only [hdet]
+  simp only [mul_one,id_eq] at hyd
+  rw [he] at hyd
+  have hh := ((hgy.comp x hyd).mul (htd.pow 3)).sub hg
+  dsimp at hh
+  simp only [mul_one] at hh
+  change HasDerivAt (fun z => j ((a*z+b)/(c*z+d))*(c*z+d)^3-g z)
+    (jp ((a*x+b)/(c*x+d))*(1/(c*x+d)^2)*(c*x+d)^3+
+      j ((a*x+b)/(c*x+d))*(3*(c*x+d)^2*c)-gp x) x at hh
+  convert hh using 1
+  field_simp
+
+/-- A fixed non-upper-triangular resonance matrix compresses the possible
+curvature levels whenever the positive profile has sufficiently small derivative. -/
+private theorem bourgain_paired_nontriangular_profile_compression
+    (g gp j jp : ℝ → ℝ) {a b c d l r u E : ℝ}
+    (hlr : l ≤ r) (hu : 0 < u) (hdet : a*d-b*c=1)
+    (hc : 1 ≤ |c|)
+    (hg : ∀ x∈Icc l r, HasDerivAt g (gp x) x)
+    (hgy : ∀ x∈Icc l r,
+      HasDerivAt j (jp ((a*x+b)/(c*x+d))) ((a*x+b)/(c*x+d)))
+    (ht : ∀ x∈Icc l r, (1:ℝ)/2 ≤ c*x+d ∧ c*x+d ≤ 2)
+    (hpos : ∀ x∈Icc l r, u ≤ j ((a*x+b)/(c*x+d)))
+    (hgp : ∀ x∈Icc l r, |gp x| ≤ u/8)
+    (hgpy : ∀ x∈Icc l r, |jp ((a*x+b)/(c*x+d))| ≤ u/8)
+    (hl : |j ((a*l+b)/(c*l+d))*(c*l+d)^3-g l| ≤ E)
+    (hr : |j ((a*r+b)/(c*r+d))*(c*r+d)^3-g r| ≤ E) :
+    r-l ≤ 8*E/(|c| *u) := by
+  have hd : 0 < |c| *u := mul_pos (by linarith only [hc]) hu
+  have hE : 0 ≤ E := (abs_nonneg _).trans hl
+  rcases hlr.eq_or_lt with he | hlt
+  · subst r
+    simp only [sub_self]
+    positivity
+  let F := fun x => j ((a*x+b)/(c*x+d))*(c*x+d)^3-g x
+  let F' := fun x => jp ((a*x+b)/(c*x+d))*(c*x+d)+
+      3*c*j ((a*x+b)/(c*x+d))*(c*x+d)^2-gp x
+  have hder x (hx : x∈Icc l r) : HasDerivAt F (F' x) x :=
+    bourgain_paired_resonance_hasDerivAt g gp j jp hdet (by linarith only [(ht x hx).1])
+      (hg x hx) (hgy x hx)
+  obtain ⟨x,hx,he⟩ := exists_hasDerivAt_eq_slope F F' hlt
+    (fun x hx => (hder x hx).continuousAt.continuousWithinAt)
+    (fun x hx => hder x ⟨hx.1.le,hx.2.le⟩)
+  have hxi : x∈Icc l r := ⟨hx.1.le,hx.2.le⟩
+  have hb := bourgain_resonance_derivative_lower hu hc (ht x hxi).1 (ht x hxi).2
+    (hpos x hxi) (hgpy x hxi) (hgp x hxi)
+  change |c| *u/4 ≤ |F' x| at hb
+  rw [he,abs_div,abs_of_pos (sub_pos.mpr hlt)] at hb
+  have hdiff : |F r-F l| ≤ 2*E := by
+    calc
+      _ ≤ |F r|+|F l| := abs_sub _ _
+      _ ≤ _ := by linarith only [hr,hl]
+  have hs := (le_div_iff₀ (sub_pos.mpr hlt)).mp hb
+  apply (le_div_iff₀ hd).mpr
+  nlinarith only [hs,hdiff]
+
+/-- Actual C4 source curvature levels for two phases and one non-upper-triangular integer
+resonance matrix lie in a short interval. Only endpoint source points and
+endpoint matrix/third-derivative data are supplied; all intervening inverse
+profile derivatives and domain coverage are derived. -/
+theorem bourgain_paired_C4_nontriangular_resonance_compression
+    (f f₁ : ℝ → ℝ) {A B A₁ B₁ L E xl xr yl yr : ℝ}
+    (a b c d : ℤ) (hdet : a*d-b*c=1) (hc : c ≠ 0) (hL : 0 < L)
+    (hf : ∀ x∈Ioo A B, ContDiffAt ℝ 4 f x)
+    (hthree : ∀ x∈Ioo A B, L ≤ iteratedDeriv 3 f x)
+    (hfour : ∀ x∈Ioo A B, |iteratedDeriv 4 f x| ≤ L^2/16)
+    (hf₁ : ∀ x∈Ioo A₁ B₁, ContDiffAt ℝ 4 f₁ x)
+    (hthree₁ : ∀ x∈Ioo A₁ B₁, L ≤ iteratedDeriv 3 f₁ x)
+    (hfour₁ : ∀ x∈Ioo A₁ B₁, |iteratedDeriv 4 f₁ x| ≤ L^2/16)
+    (hxl : xl∈Ioo A B) (hxr : xr∈Ioo A B)
+    (hyl : yl∈Ioo A₁ B₁) (hyr : yr∈Ioo A₁ B₁) :
+    let h := fun x => iteratedDeriv 2 f x/2
+    let h₁ := fun x => iteratedDeriv 2 f₁ x/2
+    let t := fun v => (c:ℝ)*v+d
+    h xl ≤ h xr →
+    ((a:ℝ)*h xl+b)/t (h xl)=h₁ yl →
+    ((a:ℝ)*h xr+b)/t (h xr)=h₁ yr →
+    ((1:ℝ)/2 ≤ t (h xl) ∧ t (h xl) ≤ 2) →
+    ((1:ℝ)/2 ≤ t (h xr) ∧ t (h xr) ≤ 2) →
+    |(iteratedDeriv 3 f₁ yl/6)*t (h xl)^3-iteratedDeriv 3 f xl/6| ≤ E →
+    |(iteratedDeriv 3 f₁ yr/6)*t (h xr)^3-iteratedDeriv 3 f xr/6| ≤ E →
+    h xr-h xl ≤ 48*E/(|(c:ℝ)| *L) := by
+  intro h h₁ t hlr hmapl hmapr htl htr hel her
+  let I := Ioo A B
+  let inv := Function.invFunOn h I
+  let g := fun v => iteratedDeriv 3 f (inv v)/6
+  let gp := fun v => iteratedDeriv 4 f (inv v)/(3*iteratedDeriv 3 f (inv v))
+  have hp := bourgain_curvature_profile f hL hf hthree hfour
+  change (∀ x∈I, inv (h x)=x) ∧
+    ∀ v∈h '' I, h (inv v)=v ∧ inv v∈I ∧ HasDerivAt g (gp v) v ∧
+      L/6 ≤ g v ∧ |gp v| ≤ (L/6)/8 at hp
+  let I₁ := Ioo A₁ B₁
+  let inv₁ := Function.invFunOn h₁ I₁
+  let g₁ := fun v => iteratedDeriv 3 f₁ (inv₁ v)/6
+  let gp₁ := fun v => iteratedDeriv 4 f₁ (inv₁ v)/(3*iteratedDeriv 3 f₁ (inv₁ v))
+  have hp₁ := bourgain_curvature_profile f₁ hL hf₁ hthree₁ hfour₁
+  change (∀ x∈I₁, inv₁ (h₁ x)=x) ∧
+    ∀ v∈h₁ '' I₁, h₁ (inv₁ v)=v ∧ inv₁ v∈I₁ ∧ HasDerivAt g₁ (gp₁ v) v ∧
+      L/6 ≤ g₁ v ∧ |gp₁ v| ≤ (L/6)/8 at hp₁
+  have hhcont₁ : ContinuousOn h₁ I₁ := by
+    intro x hx
+    exact ((contDiffAt_iteratedDeriv_finite (n:=2) (j:=2)
+      (hf₁ x hx)).continuousAt.div_const 2).continuousWithinAt
+  have himage₁ : (h₁ '' I₁).OrdConnected :=
+    (isPreconnected_Ioo.image h₁ hhcont₁).ordConnected
+  have hhcont : ContinuousOn h I := by
+    intro x hx
+    exact ((contDiffAt_iteratedDeriv_finite (n:=2) (j:=2)
+      (hf x hx)).continuousAt.div_const 2).continuousWithinAt
+  have himage : (h '' I).OrdConnected :=
+    (isPreconnected_Ioo.image h hhcont).ordConnected
+  have hxin : ∀ x∈Icc (h xl) (h xr), x∈h '' I :=
+    fun x hx => himage.out ⟨xl,hxl,rfl⟩ ⟨xr,hxr,rfl⟩ hx
+  have ht x (hx : x∈Icc (h xl) (h xr)) : (1:ℝ)/2 ≤ t x ∧ t x ≤ 2 := by
+    rcases le_total 0 (c:ℝ) with hcpos | hcneg
+    · have hlo := mul_le_mul_of_nonneg_left hx.1 hcpos
+      have hhi := mul_le_mul_of_nonneg_left hx.2 hcpos
+      dsimp only [t] at *
+      constructor <;> linarith only [htl.1,htr.2,hlo,hhi]
+    · have hlo := mul_le_mul_of_nonpos_left hx.1 hcneg
+      have hhi := mul_le_mul_of_nonpos_left hx.2 hcneg
+      dsimp only [t] at *
+      constructor <;> linarith only [htl.2,htr.1,hlo,hhi]
+  let y := fun x => ((a:ℝ)*x+b)/t x
+  have hdetR : (a:ℝ)*d-(b:ℝ)*c=1 := by exact_mod_cast hdet
+  have hyder x (hx : x∈Icc (h xl) (h xr)) : HasDerivAt y (1/(t x)^2) x := by
+    have hd := (((hasDerivAt_id x).const_mul (a:ℝ)).add_const (b:ℝ)).div
+      (((hasDerivAt_id x).const_mul (c:ℝ)).add_const (d:ℝ))
+      (by change t x ≠ 0; linarith only [(ht x hx).1])
+    simp only [mul_one,id_eq] at hd
+    convert hd using 1
+    congr 1
+    nlinarith only [hdetR]
+  have hymono : MonotoneOn y (Icc (h xl) (h xr)) := by
+    apply monotoneOn_of_deriv_nonneg (convex_Icc _ _)
+    · exact fun x hx => (hyder x hx).continuousAt.continuousWithinAt
+    · exact fun x hx => (hyder x (interior_subset hx)).differentiableAt.differentiableWithinAt
+    · intro x hx
+      rw [(hyder x (interior_subset hx)).deriv]
+      positivity
+  have hyin x (hx : x∈Icc (h xl) (h xr)) : y x∈h₁ '' I₁ := by
+    apply himage₁.out ⟨yl,hyl,rfl⟩ ⟨yr,hyr,rfl⟩
+    constructor
+    · rw [←hmapl]
+      exact hymono ⟨le_rfl,hlr⟩ hx hx.1
+    · rw [←hmapr]
+      exact hymono hx ⟨hlr,le_rfl⟩ hx.2
+  have hcabs : (1:ℝ) ≤ |(c:ℝ)| := by exact_mod_cast Int.one_le_abs hc
+  have hleft : |g₁ (y (h xl))*t (h xl)^3-g (h xl)| ≤ E := by
+    dsimp only [g,g₁,y]
+    rw [hmapl,hp₁.1 yl hyl,hp.1 xl hxl]
+    exact hel
+  have hright : |g₁ (y (h xr))*t (h xr)^3-g (h xr)| ≤ E := by
+    dsimp only [g,g₁,y]
+    rw [hmapr,hp₁.1 yr hyr,hp.1 xr hxr]
+    exact her
+  have hb := bourgain_paired_nontriangular_profile_compression g gp g₁ gp₁ hlr
+    (by positivity : 0 < L/6) hdetR hcabs
+    (fun x hx => (hp.2 x (hxin x hx)).2.2.1)
+    (fun x hx => (hp₁.2 _ (hyin x hx)).2.2.1) ht
+    (fun x hx => (hp₁.2 _ (hyin x hx)).2.2.2.1)
+    (fun x hx => (hp.2 x (hxin x hx)).2.2.2.2)
+    (fun x hx => (hp₁.2 _ (hyin x hx)).2.2.2.2) hleft hright
+  convert hb using 1
+  ring
+
 /-- Actual C4 source curvature levels for one non-upper-triangular integer
 resonance matrix lie in a short interval. Only endpoint source points and
 endpoint matrix/third-derivative data are supplied; all intervening inverse
