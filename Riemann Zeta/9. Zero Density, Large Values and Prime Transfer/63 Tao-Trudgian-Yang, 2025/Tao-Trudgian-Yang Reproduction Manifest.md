@@ -1,14 +1,473 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-## Constructed grid multiplicities and minor-arc Fourier entry (29 September 2026)
+## Actual Fourier-cloud Type-1 source-scale count (29 September 2026)
+
+Four public theorems are installed in the existing HuxleyLinearForms
+module. Scratch 63757 checks all four exact proof bodies with zero Lean
+diagnostics and standard logical axioms; read-back confirms every body.
+Counts: 503 public HuxleyLinearForms theorems, 7,681 exact examples and
+6,996 explicit audit commands. Focused build 54854 and foundation BAT
+4453 are running; the paper BAT is pending. Earlier PASS logs certify
+earlier snapshots. No new module is introduced.
+
+The bounded-action nontriangular and identity family branches each
+have the proved linked bound C*I*(M/N)*(1+Delta*J), with C depending
+only on the source jet constants. The hypotheses N<=M and J<=M are
+explicit: actual rounded geometry bounds the first-point count, and
+J<=M absorbs the rounding term. Both branches are combined by filtering
+the literal pair set, not by assuming branch cardinalities.
+This is not a claim about an unrestricted printed family theorem.
+
+The direct Fourier-cloud consumer constructs the matrices from the
+actual two-parity cloud. It retains determinant one, the positive
+denominator range, genuine curvature homography, derived gamma bound
+and actual cubic-error bound. Its Type-1 set is the literal same-color
+filter containing identity or bounded-action nontriangular matrices.
+The consumer proves its count at C*I*(M/N)*(1+Delta*J), where I is the
+number of actual source parameters and Delta is the explicit Fourier
+cloud error involving Q, K0 and the derived cubic scales.
+The finite source-uniform rational coloring and twelfth-power loss
+remain in the same conclusion. There is no supplied matrix family,
+pair-count certificate or unlinked logarithmic scale.
+
+Remaining DAG: source-reference interval packing and dyadic long-block
+compression must provide the sharp U/L savings; combine all colored
+Type-1, triangular Type-2 and large-entry Type-3 branches with the full
+Fourier count; boundary/major blocks -> family fifth moment ->
+beta rows 7--11 -> EPZAE-14/29. The uncompressed Type-1 source count
+does not close the sharp full coincidence estimate or fifth moment.
+Aggregate remains 34/42. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory. Frozen statements,
+counterexamples and the supplied PDF remain unchanged.
+Recovery-record maintenance is permanently skipped.
+
+## Earlier source-colored Fourier matrices and actual family multiplicities (29 September 2026)
+
+Nine public theorems are installed in the existing HuxleyLinearForms
+module. Scratch 29230 checks all nine exact proof bodies with zero Lean
+diagnostics and standard logical axioms; read-back confirms every
+installed body. Counts: 499 public HuxleyLinearForms theorems,
+7,677 exact examples and 6,992 explicit audit commands. Focused build
+75842 passes (10,781 jobs; Huxley 97 seconds, regression 358 seconds).
+Public exact scratch 65918 passes with zero Lean diagnostics and
+standard logical axioms. Foundation BAT 91536 passes (8,857 jobs;
+14,290 audited declarations), log foundation_freeze_20260929_115606.
+Paper BAT 57179 passes (10,782 jobs; semantic regression and 19,805
+dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-120506-be34466b.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible. No new module is introduced.
+
+The genuine phase jets give lambda=c*T/(4*sigma*M^2) <= |h| <=
+H=(3*U/sigma)*T/(2*M^2). Their rational-band color bound is
+(4/delta+3)*(24*U/(c*delta)+3), independent of T, M and Q, with
+the proved eleventh-power loss for the actual complex twelfth moment.
+The literal Fourier-cloud consumer chooses the SAME matrix witnesses
+as the existing cloud construction and retains their determinant,
+curvature homography, cubic-ratio, affine-strip and thin-gamma bounds.
+Same-color points supply both narrow ratios. Triangular matrices are
+exhaustively classified into identity, upper translation |b|<=delta*H,
+or lower translation |c|<=delta/lambda; nontriangular matrices remain
+explicit. Bounded actions retain the proved trace-two conclusion.
+
+The vertical analytic parameter count is now consumed by actual
+rounded block/parity points. At each fixed parameter there are at most
+six such points. Literal pair counting over (matrix, first point)
+therefore has factor 6*K*(1+8*C*B*(Delta+5/M)*J), with the source
+separation parameter J retained and K,C depending only on source jets.
+The identity branch is linear in the first-point set. The bounded-action
+nontriangular family branch additionally uses the scale-independent
+matrix polynomial (2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2.
+Neither branch inserts a second raw family-size factor.
+The actual rounded first-point geometry gives
+#points <= 2*(4+M/N)*#parameters, including rounding and both parities.
+
+Remaining DAG: absorb these family bounds into the linked source scales;
+combine colored triangular, identity and nontriangular branches with
+sharp large-entry/long-block savings and the full Fourier count;
+boundary/major blocks -> family fifth moment -> beta rows 7--11 ->
+EPZAE-14/29. This does not close the full coincidence estimate or fifth
+moment. Aggregate remains 34/42. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory. Frozen statements,
+counterexamples and the supplied PDF remain unchanged.
+Recovery-record maintenance is permanently skipped.
+
+Verified source-colored-matrix/family-multiplicity snapshot SHA-256:
+HuxleyLinearForms.lean 3536994f6932fb73a338d80db38944cfc36adef4226470e6bde5dda2cac1283d;
+SemanticRegression.lean 2718930cbc7978afd561bec4963fd93f7c848245eec9babad034f1beddf45d14;
+Audit.lean 701ee269bb807766d759b9374fac97487b1de038457e0859e3b3e4d85e8ff374;
+tao-trudgian-yang-build-20260929-120506-be34466b.log 082086012a8892484ee4da4175c26f185fe2e1e11151e2a901dbe9d859bc0174;
+foundation_freeze_20260929_115606.log c9202b9f352814df49e07ba7b9917ffa96375cc2149bd6295fc94fc0d854a3d2;
+foundation_freeze_20260929_115606.json aae750d75299e2758451807cd7f8f7070dc41259f97a93e6043b55e20c76afc1;
+
+## Earlier triangular source-pair sums and rational-band power loss (29 September 2026)
+
+Ten public theorems are installed in the existing HuxleyLinearForms
+module. Scratch 79685 checks all ten exact proof bodies with zero Lean
+diagnostics and standard logical axioms. Counts: 490 public
+HuxleyLinearForms theorems, 7,668 exact examples and 6,983 explicit
+audit commands. Focused builds 46639 and 22661 pass (10,781 jobs;
+the refreshed regression takes 318 seconds). Public exact scratch 60907
+passes with zero Lean diagnostics and standard logical axioms.
+Foundation BAT 3771 correctly failed its source scan on the English
+word "admit" in a doc comment; the wording was corrected without
+changing the scanner or proof. Rerun 39784 passes (8,857 jobs;
+14,290 audited declarations), log foundation_freeze_20260929_112009.
+Paper BAT 77540 passes (10,782 jobs; semantic regression and 19,786
+dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-113448-0d8b2fc5.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible. No new module or additional
+analytic assumption is introduced.
+
+The existing integer reciprocal-sum proof gives
+sum(1+W/|b|) <= 2*D+1+2*W*(3+2*log(D+2))
+over any actual finite set of nonzero integers with |b|<=D.
+The physical upper and lower block counts retain this logarithmic
+weight. Upper W=(sigma/c)*B*(Delta+1/M)*T/(N*M);
+lower W=(4*sigma/c)*B^12*(Delta+1/M)*M^3/(N*T).
+Both retain the required family-parameter neighborhood, and the lower
+branch retains its small-eta constant.
+
+The tagged matrix reindexing applies the already-proved factor-60
+physical-block bound to an injective one-parameter matrix family.
+Two literal pair consumers construct the occupied blocks and select
+actual source pairs, then apply the upper/lower sums. They retain both
+parities, both rounded-offset geometries, the real curvature
+translation and the rounded third condition. The integer cutoff D and
+its source interpretation remain explicit.
+
+For rational curvatures with lambda<=|r|<=U and Q/2<=den(r)<=Q, the
+explicit two-coordinate floor coloring has at most
+(4/delta+3)*(4*U/(lambda*delta)+3) colors. Same-color numerator and
+denominator ratios are within delta of one, including signed numerators.
+The actual complex finite sum has the proved twelfth-power partition
+loss equal to this color bound to the eleventh power. No finite-loss or
+narrow-band compatibility certificate is assumed.
+
+Remaining DAG: genuine source-jet specialization of the color constants
+and matrix/translation cutoffs; family-parameter and full Fourier/count
+assembly; sharp source scales and boundary/major blocks -> family fifth
+moment -> beta rows 7--11 -> EPZAE-14/29. The full coincidence estimate
+and fifth moment remain OPEN. Aggregate remains 34/42.
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory. Frozen statements, counterexamples and the supplied PDF are
+preserved. Recovery-record maintenance is permanently skipped.
+
+Verified triangular-sum/rational-band snapshot SHA-256:
+HuxleyLinearForms 952bfc6afbca9727be449675bc7abdce08df88af974a5fcd3a11d0ced9fc6c08;
+ParabolaBilinearLocalization 3e6c2b3871350313542c8bfe6d28a9ff7bd84f6d055b31403b11ec5e96b9b048;
+SemanticRegression cfeb1b59a969e54892440443d53bdaae2a40b8012dbf8eb030393bc5ea5aa1fd;
+Audit c583a5ef1fd180cd4a9dea465990e751747f230caf631a9b5d9735e04e13ab77;
+foundation_freeze_20260929_112009.log 799af6c77e35f2017bd835878b5026c14a7bab0ecca2fadd115d4c12aeebd6a1;
+foundation_freeze_20260929_112009.json 1b672ef0d3158fffcc53b60a913fb769eedb5ce02f5e29a14b708e081e97335f;
+tao-trudgian-yang-build-20260929-113448-0d8b2fc5.log 00bb7493df05937e7d867c9b47f261c708bc185b7f56c7edba07b133b8a6dd94.
+
+## Earlier narrow-band nontriangular source-pair assembly (29 September 2026)
+
+Seven public theorems are installed in the existing HuxleyLinearForms
+module. Scratch 59077 passes; fresh verification 83715 rechecks all
+seven exact proof bodies with zero Lean diagnostics and standard logical
+axioms. Counts: 480 public HuxleyLinearForms theorems, 7,658 exact
+examples and 6,973 explicit audit commands. The existing parabola
+integer reciprocal-sum theorem is exposed with its statement and proof
+unchanged for the remaining triangular translation sum. No new module.
+The reused parabola module passes (330 seconds), the Huxley module
+passes (107 seconds), and focused build 53534 passes (10,781 jobs;
+regression 317 seconds). Public exact scratch 38424 passes with zero
+Lean diagnostics and standard logical axioms. Foundation BAT 45340
+passes (8,857 jobs; 14,290 audited declarations), log
+foundation_freeze_20260929_104513. Paper BAT 93766 passes (10,782 jobs;
+semantic regression and 19,741 dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-105906-db5a2650.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible.
+
+Following Huxley page 34, bounded action |gamma|*H<=L and numerator/
+denominator ratio errors at most 1/(8*(L+3)) force trace two and
+(alpha-1)^2=-beta*gamma. The rational-data consumer uses the actual
+curvature homography and denominator identity. Half-action forces
+triangularity without requiring small curvature. For nontriangular
+matrices, integral nonvanishing bounds |gamma| by (L+3)^2; the existing
+arithmetic matrix sum gives a scale-independent polynomial count.
+
+The genuine difference-phase consumer derives curvature range and
+nonvanishing from source jets and tests, chooses actual pair witnesses,
+and combines that matrix count with the proved index multiplicity.
+The source-scale dichotomy uses L=288*(U/c)^2: every matrix entry has
+bounded action or lies in the analytic large-entry range. The combined
+literal-pair theorem therefore covers every nontriangular entry inside
+the stated narrow bands, with a diagonal-size term plus the explicit
+large-entry estimate. No unclassified intermediate action or supplied
+cardinality bound remains in this conditional branch.
+
+Remaining DAG: construct narrow rational-band partitions with their
+finite loss; sum upper/lower triangular translations and family
+parameters; sharpen/assemble source scales and boundary/major blocks ->
+family fifth moment -> beta rows 7--11 -> EPZAE-14/29.
+The full coincidence estimate and fifth moment remain OPEN.
+Aggregate remains 34/42. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory. Frozen statements,
+counterexamples and the supplied PDF are preserved. Recovery-record
+maintenance is permanently skipped.
+
+Verified batch SHA256 evidence:
+
+- HuxleyLinearForms.lean: `6ec0a01b7ad49056e575f9071c017cf914e4c721e500b0d9aee0796df4e58685`
+- ParabolaBilinearLocalization.lean: `3e6c2b3871350313542c8bfe6d28a9ff7bd84f6d055b31403b11ec5e96b9b048`
+- SemanticRegression.lean: `4faab93b0825ddfe19f01e39f114575cbc0271dc756004576f77dd200676aa3f`
+- Audit.lean: `002e040652faf3e8dbbb37beb529489a3b25335c3a964774848f45c3b3a4b1b6`
+- foundation_freeze_20260929_104513.log: `bc24406845b5d7ecff7e547fa23d0b29549c5ebd80154b837405f95546683108`
+- foundation_freeze_20260929_104513.json: `e688506ffb75acaee464243802b22b88468fe32ce37d01810a51b18b8539054a`
+- tao-trudgian-yang-build-20260929-105906-db5a2650.log: `2d128d1925b307c0520d535b905a0c384dfc4e69559eac6677b951b31a2eb130`
+
+## Earlier physical-block rebinning and actual pair-count consumers (29 September 2026)
+
+Four public theorems are installed in the existing HuxleyLinearForms
+module. Scratch 63233 checks all four proofs with zero Lean diagnostics
+and standard logical axioms. Counts: 473 public HuxleyLinearForms
+theorems, 7,650 exact examples and 6,965 explicit audit commands.
+The production module passes (90 seconds), and public exact scratch
+92136 passes with zero Lean diagnostics. Foundation BAT 12651 passes
+(8,857 jobs; 14,290 audited declarations), log
+foundation_freeze_20260929_101849. Focused build 2883 passes
+(10,781 jobs; zero Lean diagnostics).
+Paper BAT 75836 passes (10,782 build jobs; semantic regression and
+19,722 dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-102700-62610cf6.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible.
+
+The rounded-offset geometry now proves the physical floor rebin: each
+physical N-window contains at most five original grid labels. Combined
+with the proved factor-12 matrix/index multiplicity, the literal pair
+set is bounded by 60 times the sum of occupied physical block counts.
+No fiber-cardinality or point-count certificate is assumed.
+
+The large-entry consumer constructs those block families and chooses
+actual pair witnesses from the literal two-parity pair set, then applies
+the existing paired analytic/arithmetic matrix sum. Its bound is
+120*(2*Gamma+1)*(2*Vbound+5)^2*(Gamma+Error), with
+Vbound=3*U*T/(2*sigma*M^2) and
+Error=8*B*(Delta+5/M)*R^2/(c/(2*sigma))^2.
+The determinant, genuine homography, third-condition and explicit
+large-entry regime are retained. The identity-homography consumer
+separately proves the diagonal-size bound 12 times the first-index
+count from source curvature injectivity and actual offset geometry.
+
+This closes the physical-block compatibility gap and the actual
+large-entry/identity branch consumers, not the complete coincidence
+estimate. Remaining DAG: exhaustive small/nontriangular and transposed
+matrix regimes -> source-scale coincidence sum and parameter/boundary/
+major-block assembly -> family fifth moment -> beta rows 7--11 ->
+EPZAE-14/29. Aggregate remains 34/42. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory. Frozen statements,
+counterexamples and the supplied PDF are preserved. Recovery-record
+maintenance is permanently skipped.
+
+Verified batch SHA256 evidence:
+
+- HuxleyLinearForms.lean: `d4beedf15d11f676325bd782b928d8ba1c65074abfc030461df7f37f5faca93b`
+- ParabolaBilinearLocalization.lean: `8c4f73086b9653583fc4cd07c0087dd60c21612f3e28ce3b2f23a944f1f80021`
+- SemanticRegression.lean: `87ce275ae4cd52807277271662f28b9fbd740446cdb24c9cf3321fd5f1560753`
+- Audit.lean: `24fe429153d6b924e087f4dd075ffb34fe6b1c81836d248d613bc168d1909b5c`
+- foundation_freeze_20260929_101849.log: `f46af5eecbe8a21941e2f40fe41de7d4b0f68e759b83121f4dd47c41adeebb14`
+- foundation_freeze_20260929_101849.json: `14f4e1cd6654e62d366c7689bd1ca2b6e9bd79aa4c34628bf9cade25ebbb79b3`
+- tao-trudgian-yang-build-20260929-102700-62610cf6.log: `5fd3d4acca21f7db3091d84c94daf6059d6f615a0ed61b1a739a590116e75907`
+
+## Earlier small-action source counts and matrix-index multiplicities (29 September 2026)
+
+Six public theorems are installed in the existing HuxleyLinearForms
+module. Scratch 88237 checks all six proofs with zero Lean diagnostics
+and standard logical axioms. Counts: 469 public HuxleyLinearForms
+theorems, 7,646 exact examples and 6,961 explicit audit commands.
+The production module passes, public exact scratch 43996 passes, and
+focused build 36499 passes (10,781 jobs; regression 352 seconds), all
+with zero Lean diagnostics. Foundation BAT 13812 passes (8,857 jobs;
+14,290 audited declarations), log foundation_freeze_20260929_095206.
+Paper BAT 77978 passes (10,782 build jobs; semantic regression and
+19,717 dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-100254-486df7d0.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible.
+
+The lower-triangular regime is derived, not assumed: with
+H=(3*U/sigma)*T/(2*M^2), H<=1/6, |gamma|*H<=1/4 and denominator ratio
+in [1/2,2], integral unimodularity forces alpha=delta=1 and beta=0.
+The genuine-phase consumer reuses the completed reciprocal occupied-block
+estimate. The transposed regime uses InvH=4*sigma*M^2/(c*T), InvH<=1/6,
+|beta|*InvH<=1/4 and reciprocal denominator ratio in [1/2,2]; source
+tests derive curvature nonvanishing, and the proved upper-triangular
+estimate applies. Both consumers retain the nonzero displacement and
+small family-parameter separation required by their analytic estimates.
+
+The literal two-parity pair set now satisfies a factor-12 bound by the
+sum of matrix-indexed original-grid counts. For a fixed matrix and first
+index, curvature injectivity fixes the second root. Rounded offset
+lengths in [N,3*N] allow at most three second indices, and both parities
+give the factor four. The genuine-phase consumer derives injectivity
+from the signed source fourth derivative and consumes the actual
+rounded-center/offset geometry. No fiber-cardinality hypothesis is used.
+
+These small-action regimes are not an exhaustive matrix decomposition.
+Intermediate curvatures, larger actions, and the reciprocal-denominator
+partition still require assembly. Original grid indices must also be
+related to occupied physical floor blocks before the matrix block-count
+sum can be applied without an unproved compatibility assumption.
+Remaining DAG: physical floor rebin and exhaustive matrix regimes ->
+source-scale coincidence sum and parameter/boundary/major-block assembly
+-> family fifth moment -> beta rows 7--11 -> EPZAE-14/29.
+Aggregate remains 34/42. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory. Frozen statements,
+counterexamples and the supplied PDF are preserved. Recovery-record
+maintenance is permanently skipped.
+
+Verified batch SHA256 evidence:
+
+- HuxleyLinearForms.lean: `b3d0fc2d20fe4b9715c8445c6ba0d0854c61e39fc625aa62bc148c2c1975ee7e`
+- ParabolaBilinearLocalization.lean: `8c4f73086b9653583fc4cd07c0087dd60c21612f3e28ce3b2f23a944f1f80021`
+- SemanticRegression.lean: `758d8fcfe6812a9f653f8fd349adcccb1a9fc50bf5f0cfc17dd791a1cb9b41d3`
+- Audit.lean: `273529273a5eac31d127a59c61f392721ea3c7dc19d39ef9dad2c1a1cd46eb4c`
+- foundation_freeze_20260929_095206.log: `bb7b368fba52ad174161135bfd66ee559c52a236055e7ccb769746394479555a`
+- foundation_freeze_20260929_095206.json: `3753e2f5e56522f58dad3d1d271b3fb896a81b0c11993397fb3f2e49930b551e`
+- tao-trudgian-yang-build-20260929-100254-486df7d0.log: `83d11034f575b6ce9196904ad9cc88441c51a1b7ebc89de1d89d8f95a219cc85`
+
+## Earlier denominator-band completion and actual Fourier-cloud constraints (29 September 2026)
+
+The new batch stays in HuxleyLinearForms and reuses the existing parabola
+analytic machinery. The chosen-arc completion now uses the actual
+denominator bound Q0: K0 >= 63*U3*Q0*N^2. The original N^3 theorem retains
+its public type as a specialization, and the three constructed/interior/
+selected-reference consumers are strengthened in place.
+
+Close pairs in the literal completed Fourier point set produce one
+determinant-one matrix with the actual curvature homography, denominator
+ratio in [1/2,2], lower-left bound, relative cubic-coefficient bound and
+affine linear strip. The fourth-coordinate estimate and integer labels
+are derived using the existing four-coordinate and affine-strip proofs.
+The thin-cutoff triangular alternative is retained. A genuine
+positive-difference-family consumer derives the positive rounded cubic
+scales; transformed coefficient bounds are not independent assumptions.
+
+The scalar lemma derives the rounding and Taylor budgets from
+N^10 <= M^3*R^7, R<=N<=R^2, N^2<=M, N>=29 and sigma>=7203*J.
+The selected-reference source consumer applies that deduction and
+retains its original counts, least-denominator provenance, common
+Fourier mode, both parity branches, major-block remainder and endpoint
+errors. Small N, boundary/major blocks, optimized parameter regimes and
+the final coincidence count are not asserted away.
+
+Scratch 39670 checks all new mathematics with zero Lean diagnostics and
+standard logical axioms. The initial two-theorem/refactor module build
+43595 passes (10,364 jobs). Counts: 463 public HuxleyLinearForms theorems,
+7,640 exact examples and 6,955 explicit audit commands. Three existing
+parabola results are exposed with unchanged statements/proofs; no new
+module. Public exact scratch 37256 passes with zero Lean diagnostics.
+Focused build 80920 passes (10,781 jobs; regression 344 seconds).
+Foundation BAT 79815 passes (8,857 jobs; 14,290 audited declarations),
+log foundation_freeze_20260929_092123. Paper BAT 39748 passes
+(10,782 build jobs; semantic regression and 19,693 dynamically audited
+declarations), log logs/tao-trudgian-yang-build-20260929-092715-d585c78c.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible.
+Aggregate remains 34/42.
+Remaining DAG: source-scale coincidence count and small-entry/transposed
+cases -> dyadic/parameter and boundary/major-block assembly -> family
+fifth moment -> beta rows 7--11 -> EPZAE-14/29.
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory.
+Frozen statements, counterexamples and the supplied PDF are preserved.
+Recovery-record maintenance is permanently skipped.
+
+Verified batch SHA256 evidence:
+
+- HuxleyLinearForms.lean: `830f87d9b636a3e2c4c19e15ca54b581f3f95c7f8d648cc0888ed3cd39019bc8`
+- ParabolaBilinearLocalization.lean: `8c4f73086b9653583fc4cd07c0087dd60c21612f3e28ce3b2f23a944f1f80021`
+- SemanticRegression.lean: `3253d41f1e25b624b9b7dd95d5a1d5ad29a8952773d24db38629fee1c4b98391`
+- Audit.lean: `a29e9cf3ce3c3595d37b199ac189266db950f1d1d1c887933abca05d80444184`
+- foundation_freeze_20260929_092123.log: `3e1757a866b6119a362346fb81030caa08de39705fe0e03d4dffb60f9da7bc1b`
+- foundation_freeze_20260929_092123.json: `86709094bfff85104dec199546f0f569bb5f165577ba5a6c085a5ad102256743`
+- tao-trudgian-yang-build-20260929-092715-d585c78c.log: `e3d7bb42915272dc765821055ac2dc2dc9739400fc278883858493b580b913b7`
+
+## Earlier same-witness minimum-denominator arcs and Fourier source entry (29 September 2026)
+
+Seven public theorems in HuxleyLinearForms construct minimum-denominator
+curvature arcs and carry those exact witnesses into the original source
+sum's common Fourier estimate. Scratch 64556 passes all new proofs and
+the first three public exact regressions with zero Lean diagnostics and
+standard logical axioms. Public exact regressions 9652 pass. The six-theorem
+focused build 1873 passes (10,781 jobs; regression 338 seconds), and the
+selected-reference module build 58446 passes (10,364 jobs).
+Foundation BAT 32835 passes (8,857 jobs; 14,290 audited declarations),
+log foundation_freeze_20260929_083338. Paper BAT 21825 passes the complete
+seven-theorem scope (10,782 jobs; regression build 326 seconds;
+19,676 dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-083547-d0d5be70.log.
+Both BATs exit 0 with zero Lean errors/warnings. The two archived Python
+invalid-escape SyntaxWarnings remain visible.
+Two existing parabola theorems (variable-window Fourier completion and
+minimal-arc rounding geometry) are exposed with their original statements
+and proofs unchanged. Counts: 457 public HuxleyLinearForms theorems,
+7,631 exact examples and 6,946 explicit audit commands. No new module.
+
+Each quarter-block-trimmed interior gap supplies its finite physical
+grid, real roots strictly inside the gap, rational levels strictly
+between its endpoints, and least-denominator provenance. Two-sided
+counts are (sigma/(6*J))*U-3/2 and (14*sigma/c)*U+1/2. The same witnesses
+satisfy the sparse denominator-tail bound and the Fourier source estimate.
+The final interior-gap consumer constructs one family for all these
+conclusions; it does not combine unrelated existential arc families.
+
+The chosen-arc consumer applies to varying family parameters y_i.
+It derives rounded-center errors, offset lengths, third/fourth-derivative
+bounds and Taylor scales from the genuine difference phase, then reuses
+the already-proved variable-window Fourier bridge. All blocks outside
+q<=N and 1<=lambda*q^2*N remain in an explicit length remainder. Both
+parity branches, the common Fourier mode, weights and stationary-endpoint
+errors are retained. No transformed estimate or count certificate is an
+assumption. Scalar buffer/Taylor budgets remain explicit.
+
+The selected-reference Fourier consumer chooses both constants before
+the phase/scales, constructs U and the finite reference system, and
+connects every interior gap to the source estimate while retaining the
+actual determinant-one coordinate neighbor and both enlarged preimages.
+The visible long-gap condition is 6*B*J<=sigma*(N/Q)^(2/3).
+Boundary gaps, major-block estimates, multi-parameter dyadic assembly and
+improved coincidences are not claimed complete.
+Remaining DAG: final scalar budgets and actual Fourier-cloud coincidence
+estimates -> small-entry/transposed cases and source-scale summation ->
+family fifth moment -> beta rows 7--11 -> EPZAE-14/29.
+Aggregate remains 34/42.
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory.
+Frozen statements, counterexamples and the supplied PDF are preserved;
+recovery-record maintenance is permanently skipped.
+
+Recorded same-witness source-entry batch SHA-256 values:
+
+- Foundation log 20260929_083338: b459d65267aad5a6e867511656a64d84c2b0cf4ed59e50b6fb4f661dd7a4ef30.
+- Foundation JSON 20260929_083338: 14099bc0e68531c6df1e0fb125381de9ce979d7b356ac1b32f0b0bebd2ea24d8.
+- Paper log 20260929-083547-d0d5be70: a2be6b8e591baf62078969c80355ce8cdb2e5e68a1329a773a8e640ab863a65a.
+- HuxleyLinearForms: 4861fbcfa1b35c5688a5a621d49e52c979959c586b0ba64434857797f35a6b79.
+- ParabolaBilinearLocalization: 0d2214d8c84e57d8b9238c841f1ad397fbc7719e6ee05ed58b62f008ce629c18.
+- SemanticRegression: 4f4ce421540ce36c1ffc533f198273b693c209ee5270c421b61b05fd293d8e8f.
+- Audit: e99d5049403bddc2f6b01e4ff0bd85115f2a5b87d4d2411a1a5e0a1a6b878057.
+
+
+## Earlier constructed grid multiplicities and minor-arc Fourier entry (29 September 2026)
 
 Four public theorems are installed in the existing HuxleyLinearForms
 module. Both constructed-gap consumers are strengthened in place; the
 unchanged lower-width theorem is moved before its new consumers.
 Scratch 95448 checks all new proofs with zero Lean diagnostics and
-standard logical axioms. Production build, public exact regressions
-and both BAT evaluations are pending. Counts: 450 public HuxleyLinearForms
-theorems, 7,622 exact examples and 6,937 explicit audit commands.
+standard logical axioms. Public exact regressions 71598 pass. Focused
+build 55975 passes (10,781 jobs; regression 330 seconds). Foundation BAT
+3748 passes (8,857 jobs; 14,290 audited declarations), log
+foundation_freeze_20260929_073753. Paper BAT 66848 passes (10,782 jobs;
+19,656 dynamically audited declarations), log
+logs/tao-trudgian-yang-build-20260929-074611-b15386ff.log.
+Both BATs exit 0 with zero Lean errors/warnings. The two archived Python
+invalid-escape SyntaxWarnings remain visible.
+Counts: 450 public HuxleyLinearForms theorems,
+7,622 exact examples and 6,937 explicit audit commands.
 
 The same constructed reference set now supplies two-sided uniform-grid
 counts for interior gaps. The proof constructs both original-domain
@@ -39,6 +498,16 @@ Aggregate remains 34/42. Both run_lake_build.bat and
 run_tao_trudgian_yang_build.bat remain mandatory. Frozen source repairs,
 counterexamples and the supplied PDF are preserved. Recovery records
 remain permanently skipped.
+
+Recorded grid/Fourier-entry batch SHA-256 values:
+
+- Foundation log 20260929_073753: 8c4916909564a5c85582674f8f8963a424cfcb391a8669fda3cc073f42864648.
+- Foundation JSON 20260929_073753: b137826d3591ef90697d3618011d2f49b1313bb4fb277869d5e361dda174ef20.
+- Paper log 20260929-074611-b15386ff: 2a8f8aba441c1df2f39bcd5ffb08235d91ab2bb201968da435c3cc26cdd50a1e.
+- HuxleyLinearForms: 318945be6b92aad7197dc0cf6bac9c523b424f17219baf5c9b2e5eb0763358a4.
+- Audit: 21cad2e548a4691f0557693c3fcfa0dd231489276cae742469b39c63dce173f3.
+- SemanticRegression: 378ed346e423dbbf3790f53a34d4a16f876fb5e85733a907404e031e4c53af43.
+
 
 ## Earlier selected reference gaps and physical block counts (29 September 2026)
 

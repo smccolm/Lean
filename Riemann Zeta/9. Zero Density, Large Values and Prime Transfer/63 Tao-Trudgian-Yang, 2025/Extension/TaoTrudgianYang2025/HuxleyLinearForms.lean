@@ -25470,4 +25470,4288 @@ theorem positive_difference_prescribed_interval_minor_arcs
       dsimp only [Lambda]
       ring
 
+/-- Reuse the completed minimum-denominator curvature-arc construction
+for the genuine difference phase. The exact physical roots and sparse
+denominator-family bound are derived, with R, N, M and T linked. -/
+theorem positive_difference_minimal_curvature_arc_count
+    {ι : Type*} [DecidableEq ι] (S : Finset ι) (F : ℝ → ℝ)
+    (k : ι → ℤ) (N Bmul : ℕ) (s : ℝ) {σ c J η y T M R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y ∈ Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hNM : (N:ℝ) ≤ M) (hphase : T*(N:ℝ)*R^2=M^3)
+    (hmul : ∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ Bmul)
+    (hpoints : ∀ i∈S, s+(N:ℝ)*(k i:ℝ) ∈ Icc M (2*M)) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let t := fun i => s+(N:ℝ)*(k i:ℝ)
+    let v := fun i => iteratedDeriv 2 f (t i)/2
+    let delta := c/(16*σ*R^2)
+    let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+    ∃ (r : ι → ℚ) (z : ι → ℝ),
+      (∀ i∈S, z i∈Ioo (t i-(N:ℝ)/4) (t i+(N:ℝ)/4) ∧
+        iteratedDeriv 2 f (z i)/2=(r i:ℝ) ∧
+        (r i:ℝ)∈Ioo (v i-delta) (v i+delta) ∧
+        ∀ a : ℚ, (a:ℝ)∈Ioo (v i-delta) (v i+delta) → (r i).den ≤ a.den) ∧
+      (∀ i∈S, ∀ a∈Icc M (2*M), ∀ b∈Icc M (2*M),
+        a+(N:ℝ)/4 ≤ t i → t i ≤ b-(N:ℝ)/4 →
+        (r i:ℝ)∈Ioo (iteratedDeriv 2 f a/2) (iteratedDeriv 2 f b/2)) ∧
+      ∀ Q : ℕ, 2 ≤ Q →
+        let G := S.filter (fun i => Q ≤ (r i).den)
+        let D := 16*σ*R^2/(c*(Q:ℝ))
+        (G.card:ℝ) ≤ Bmul*(4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) := by
+  intro f t v delta Vbound
+  have hNp : (0:ℝ) < N := Nat.cast_pos.mpr hN
+  let L := c/(2*σ*(N:ℝ)*R^2)
+  have hL : 0 < L := by dsimp only [L]; positivity
+  have hX : 0 ≤ Vbound := by dsimp only [Vbound]; positivity
+  have hnorm w (hw : w∈Icc (3*M/4) (9*M/4)) :
+      w/M∈Icc (3/4:ℝ) (9/4) := by
+    constructor
+    · apply (le_div_iff₀ hM).mpr
+      linarith only [hw.1]
+    · apply (div_le_iff₀ hM).mpr
+      linarith only [hw.2]
+  have hcf w (hw : w∈Icc (3*M/4) (9*M/4)) : ContDiffAt ℝ 3 f w := by
+    have hn := hnorm w hw
+    have hw0 : 0 < w/M := by linarith only [hn.1]
+    have hs0 : 0 < w/M+η*y := add_pos hw0 (mul_pos hη (by linarith only [hy.1]))
+    exact (contDiffAt_const.mul (((hf _ hw0).comp w (contDiffAt_id.div_const M)).sub
+      ((hf _ hs0).comp w ((contDiffAt_id.div_const M).add contDiffAt_const)))).div_const (σ*η)
+      |>.of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 3)
+  have hscale3 : T/M^3=1/((N:ℝ)*R^2) := by
+    apply (div_eq_div_iff (by positivity) (by positivity)).mpr
+    nlinarith only [hphase]
+  have hthree w (hw : w∈Icc (3*M/4) (9*M/4)) : L ≤ iteratedDeriv 3 f w := by
+    have hl := positive_difference_third_signed_lower F (y:=y) hσ hη hηmax hc (hnorm w hw)
+      ⟨by linarith only [hy.1],by linarith only [hy.2]⟩ hf hnegative
+    have hid := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hM
+      (show 0 < w by linarith only [hw.1,hM])
+      (mul_nonneg hη.le (by linarith only [hy.1])) hf 3
+    dsimp only [f]
+    rw [hid,hscale3]
+    convert mul_le_mul_of_nonneg_left hl
+      (show 0 ≤ 1/((N:ℝ)*R^2) by positivity) using 1
+    dsimp only [L]
+    ring
+  have hbuffer i (hi : i∈S) :
+      Icc (t i-(N:ℝ)/4) (t i+(N:ℝ)/4) ⊆ Icc (3*M/4) (9*M/4) := by
+    intro w hw
+    have ht := hpoints i hi
+    change M ≤ t i ∧ t i ≤ 2*M at ht
+    constructor <;> linarith only [ht.1,ht.2,hw.1,hw.2,hNM]
+  have hv i (hi : i∈S) : |v i| ≤ Vbound := by
+    have htI : t i∈Icc (3*M/4) (9*M/4) :=
+      hbuffer i hi ⟨by linarith only [hNp],by linarith only [hNp]⟩
+    have hn := hnorm (t i) htI
+    have hu := positive_jets_difference_mixed_upper F hσ hJ hη hηmax hn
+      (show y∈Icc (1/2:ℝ) 3 from ⟨by linarith only [hy.1],by linarith only [hy.2]⟩)
+      hf hbound 2 0 (by norm_num) (by norm_num)
+    simp only [iteratedDeriv_zero] at hu
+    have ht0 : 0 < t i/M := by linarith only [hn.1]
+    have hs0 : 0 < t i/M+η*y := add_pos ht0 (mul_pos hη (by linarith only [hy.1]))
+    have hFx : ContDiffAt ℝ 2 F (t i/M) :=
+      (hf _ ht0).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)
+    have hFz : ContDiffAt ℝ 2 (fun u => F (u+η*y)) (t i/M) :=
+      ((hf _ hs0).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)).comp
+        (t i/M) (contDiffAt_id.add contDiffAt_const)
+    rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu
+    have hid := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hM
+      (show 0 < t i by linarith only [htI.1,hM])
+      (mul_nonneg hη.le (by linarith only [hy.1])) hf 2
+    dsimp only [v,f]
+    rw [hid,abs_div,abs_mul,abs_of_pos (show 0 < T/M^2 by positivity)]
+    rw [abs_of_pos (by norm_num : (0:ℝ) < 2)]
+    calc
+      _ ≤ (T/M^2)*(3*J/σ)/2 := by gcongr
+      _ = Vbound := by
+        have he : T/M^2=M/((N:ℝ)*R^2) := by
+          apply (div_eq_div_iff (by positivity) (by positivity)).mpr
+          nlinarith only [hphase]
+        rw [he]
+        dsimp only [Vbound]
+        ring
+  obtain ⟨r,z,hdata,hcount⟩ :=
+    TaoTrudgianYang2025.exists_bourgain_C3_minimal_curvature_arc_count S f k N Bmul s
+      hN hL hX hcf hthree hmul hbuffer hv
+  have hdelta : L*(N:ℝ)/8=delta := by dsimp only [L,delta]; field_simp; norm_num
+  refine ⟨r,z,?_,?_,?_⟩
+  · simpa only [hdelta] using hdata
+  · intro i hi a ha b hb hat htb
+    have hz := (hdata i hi).1
+    have hza : a < z i := by linarith only [hz.1,hat]
+    have hzb : z i < b := by linarith only [hz.2,htb]
+    have hwide w (hw : w∈Icc M (2*M)) : w∈Icc (3*M/4) (9*M/4) := by
+      constructor <;> linarith only [hw.1,hw.2,hM]
+    have hzwide : z i∈Icc (3*M/4) (9*M/4) :=
+      ⟨(hwide a ha).1.trans hza.le,hzb.le.trans (hwide b hb).2⟩
+    have hmono := positive_difference_physical_curvature_strictMono F hσ hc hη hηmax hy
+      hf hnegative hT hM
+    change StrictMonoOn (fun w => iteratedDeriv 2 f w/2) (Icc (3*M/4) (9*M/4)) at hmono
+    rw [←(hdata i hi).2.1]
+    exact ⟨hmono (hwide a ha) hzwide hza,hmono hzwide (hwide b hb) hzb⟩
+  · intro Q hQ G D
+    have hQp : (0:ℝ) < Q := by exact_mod_cast (show 0 < Q by omega)
+    have hD : 8/(L*(N:ℝ)*(Q:ℝ))=D := by dsimp only [L,D]; field_simp; norm_num
+    have hh := hcount Q hQ
+    dsimp only at hh
+    rw [hD] at hh
+    exact hh
+
+/-- A sufficiently long interior reference gap constructs actual
+minimum-denominator source arcs. A quarter-block trim keeps every real
+root strictly inside the same gap; grid multiplicities and denominator
+tails are derived together, before any major/minor classification. -/
+theorem positive_difference_reference_gap_minimal_arcs
+    (F : ℝ → ℝ) (N : ℕ) {σ c J η y T M R U x z s : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y ∈ Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R) (hU : 0 < U)
+    (hNM : (N:ℝ) ≤ M) (hUlarge : 3*J ≤ σ*U)
+    (hphase : T*(N:ℝ)*R^2=M^3) (hx : x∈Icc M (2*M)) (hz : z∈Icc M (2*M)) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun w => iteratedDeriv 2 f w/2
+    let t := fun k : ℤ => s+(N:ℝ)*k
+    let delta := c/(16*σ*R^2)
+    let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+    U/(4*R^2) ≤ h z-h x → h z-h x ≤ 7*U/(2*R^2) →
+    ∃ A : Finset ℤ, ∃ (r : ℤ → ℚ) (w : ℤ → ℝ),
+      (∀ k : ℤ, k∈A ↔ x+(N:ℝ)/4 ≤ t k ∧ t k ≤ z-(N:ℝ)/4) ∧
+      (∀ k∈A, w k∈Ioo x z ∧ h (w k)=(r k:ℝ) ∧
+        (r k:ℝ)∈Ioo (h x) (h z) ∧
+        (r k:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) ∧
+        ∀ a : ℚ, (a:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) → (r k).den ≤ a.den) ∧
+      (σ/(6*J))*U-3/2 ≤ (A.card:ℝ) ∧
+      (A.card:ℝ) ≤ (14*σ/c)*U+1/2 ∧
+      ∀ Q : ℕ, 2 ≤ Q →
+        let G := A.filter (fun k => Q ≤ (r k).den)
+        let D := 16*σ*R^2/(c*(Q:ℝ))
+        (G.card:ℝ) ≤ 4*(Vbound+1)*D^2+D*(2+Real.log (D+1)) := by
+  classical
+  intro f h t delta Vbound hgaplow hgapup
+  have hNp : (0:ℝ) < N := Nat.cast_pos.mpr hN
+  have hwide a (ha : a∈Icc M (2*M)) : a∈Icc (3*M/4) (9*M/4) := by
+    constructor <;> linarith only [ha.1,ha.2,hM]
+  have hmono := positive_difference_physical_curvature_strictMono F hσ hc hη hηmax hy
+    hf hnegative hT hM
+  change StrictMonoOn h (Icc (3*M/4) (9*M/4)) at hmono
+  have hgap : 0 < h z-h x := (show 0 < U/(4*R^2) by positivity).trans_le hgaplow
+  have hxz : x < z := by
+    by_contra hn
+    have hh := hmono.monotoneOn (hwide z hz) (hwide x hx) (le_of_not_gt hn)
+    linarith only [hh,hgap]
+  have hlower := positive_difference_reference_preimage_width_lower F hσ hJ hη hηmax hy
+    hf hbound hT hM hNp hR hphase (hwide x hx) (hwide z hz)
+    (by change U/(4*R^2) ≤ |h z-h x|; rwa [abs_of_pos hgap])
+  have hupper := positive_difference_reference_preimage_width F hσ hc hη hηmax hy
+    hf hnegative hT hM hNp hR hphase hx hz
+    (by change |h z-h x| ≤ 7*U/(2*R^2); rwa [abs_of_pos hgap])
+  rw [abs_of_pos (sub_pos.mpr hxz)] at hlower hupper
+  have hhalf : (1:ℝ)/2 ≤ (σ/(6*J))*U := by
+    have hh : 3*J/(6*J) ≤ σ*U/(6*J) :=
+      div_le_div_of_nonneg_right hUlarge (by positivity)
+    have he : 3*J/(6*J)=(1:ℝ)/2 := by field_simp; norm_num
+    rw [he] at hh
+    convert hh using 1
+    ring
+  have hwidth : (N:ℝ)/2 ≤ z-x := by
+    have hh := mul_le_mul_of_nonneg_right hhalf hNp.le
+    linarith only [hh,hlower]
+  have htrim : x+(N:ℝ)/4 ≤ z-(N:ℝ)/4 := by linarith only [hwidth]
+  obtain ⟨A,hmem,hcardlow,hcardup⟩ := physical_grid_interval_card (Z:=s) hNp htrim
+  have hmem' k : k∈A ↔ x+(N:ℝ)/4 ≤ t k ∧ t k ≤ z-(N:ℝ)/4 := by
+    dsimp only [t]
+    simpa only [mul_comm (N:ℝ) (k:ℝ)] using hmem k
+  have hpoints k (hk : k∈A) : t k∈Icc M (2*M) := by
+    have hh := (hmem' k).mp hk
+    constructor <;> linarith only [hh.1,hh.2,hx.1,hz.2,hNp]
+  have hmul n : (A.filter (fun k => id k=n)).card ≤ 1 := by
+    have hsub : A.filter (fun k => id k=n) ⊆ {n} := by
+      intro k hk
+      exact Finset.mem_singleton.mpr (Finset.mem_filter.mp hk).2
+    simpa using Finset.card_le_card hsub
+  obtain ⟨r,w,hdata,hlocal,hcount⟩ :=
+    positive_difference_minimal_curvature_arc_count A F id N 1 s hσ hc hJ hη hηmax hy
+      hf hbound hnegative hT hM hN hR hNM hphase hmul hpoints
+  refine ⟨A,r,w,hmem',?_,?_,?_,?_⟩
+  · intro k hk
+    have hkI := (hmem' k).mp hk
+    have hd := hdata k hk
+    have hloc := hlocal k hk x hx z hz hkI.1 hkI.2
+    refine ⟨⟨?_,?_⟩,hd.2.1,hloc,hd.2.2.1,hd.2.2.2⟩
+    · have hh := hd.1.1
+      change t k-(N:ℝ)/4 < w k at hh
+      linarith only [hh,hkI.1]
+    · have hh := hd.1.2
+      change w k < t k+(N:ℝ)/4 at hh
+      linarith only [hh,hkI.2]
+  · have hh : (σ/(6*J))*U ≤ (z-x)/(N:ℝ) := (le_div_iff₀ hNp).mpr hlower
+    have he : ((z-(N:ℝ)/4)-(x+(N:ℝ)/4))/(N:ℝ)-1=(z-x)/(N:ℝ)-3/2 := by field_simp; ring
+    rw [he] at hcardlow
+    linarith only [hh,hcardlow]
+  · have hh : (z-x)/(N:ℝ) ≤ (14*σ/c)*U := (div_le_iff₀ hNp).mpr hupper
+    have he : ((z-(N:ℝ)/4)-(x+(N:ℝ)/4))/(N:ℝ)+1=(z-x)/(N:ℝ)+1/2 := by field_simp; ring
+    rw [he] at hcardup
+    linarith only [hh,hcardup]
+  · intro Q hQ G D
+    have hh := hcount Q hQ
+    dsimp only at hh
+    simpa only [Nat.cast_one,one_mul] using hh
+
+/-- The selected reference system itself supplies minimum-denominator
+arc families in every sufficiently long interior gap. Coordinate
+neighbors and source arc counts come from the same constructed gap. -/
+theorem positive_difference_selected_reference_arcs
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ B : ℝ, 1 ≤ B ∧
+      ∀ (F : ℝ → ℝ) (N : ℕ) (η T M R Q : ℝ),
+      0 < N → 0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 0 < M → 1 ≤ R → R ≤ Q → Q ≤ (N:ℝ) →
+      (N:ℝ) ≤ R^2 → (N:ℝ)^2 ≤ M →
+      2*B ≤ ((N:ℝ)/Q)^((2:ℝ)/3) →
+      6*B*J ≤ σ*((N:ℝ)/Q)^((2:ℝ)/3) →
+      T*(N:ℝ)*R^2=M^3 →
+      ∃ U : ℕ, 1 ≤ U ∧
+        ((N:ℝ)/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+        (U:ℝ) ≤ ((N:ℝ)/Q)^((2:ℝ)/3)/B ∧
+        (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ (N:ℝ) ∧
+        B^2*(U:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ H : ℤ, 2 ≤ H ∧ ∃ S : Finset ℝ,
+        (∀ v ∈ S, |v| ≤ 3*J*T/(2*σ*M^2)+1) ∧
+        (∀ a ∈ S, ∀ b ∈ S, a ≠ b → (U:ℝ)/(4*R^2) < |a-b|) ∧
+        ∀ y ∈ Icc (1:ℝ) 2, ∀ x∈Icc M (2*M),
+          h y x∈S ∨
+          ∃ a∈S, ∃ b∈S, a<h y x ∧ h y x<b ∧
+            (∀ v∈S, ¬ (a<v ∧ v<b)) ∧
+            (U:ℝ)/(4*R^2)<b-a ∧ b-a≤7*(U:ℝ)/(2*R^2) ∧
+            ∃ e r₀ p q : ℤ, ((e:ℝ)/r₀=a ∨ (e:ℝ)/r₀=b) ∧
+              IsCoprime e r₀ ∧ 0<r₀ ∧ 0<q ∧ q≤r₀ ∧ q≤H ∧
+              R^2≤(U:ℝ)*(r₀:ℝ)^2 ∧ (p:ℝ)/q∈S ∧ |e*q-p*r₀|=1 ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(e:ℝ)/r₀) ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(p:ℝ)/q) ∧
+              (∀ s : ℝ, a∈Icc (h y M) (h y (2*M)) →
+                b∈Icc (h y M) (h y (2*M)) →
+                ∃ x₁∈Icc M (2*M), ∃ x₂∈Icc M (2*M),
+                  h y x₁=a ∧ h y x₂=b ∧
+                  ∃ A : Finset ℤ, ∃ (r : ℤ→ℚ) (w : ℤ→ℝ),
+                    (∀ k : ℤ, k∈A ↔
+                      x₁+(N:ℝ)/4 ≤ s+(N:ℝ)*k ∧ s+(N:ℝ)*k ≤ x₂-(N:ℝ)/4) ∧
+                    (∀ k∈A, w k∈Ioo x₁ x₂ ∧ h y (w k)=(r k:ℝ) ∧
+                      (r k:ℝ)∈Ioo a b ∧
+                      (r k:ℝ)∈Ioo (h y (s+(N:ℝ)*k)-delta) (h y (s+(N:ℝ)*k)+delta) ∧
+                      ∀ v : ℚ, (v:ℝ)∈Ioo
+                        (h y (s+(N:ℝ)*k)-delta) (h y (s+(N:ℝ)*k)+delta) →
+                        (r k).den ≤ v.den) ∧
+                    (σ/(6*J))*(U:ℝ)-3/2 ≤ (A.card:ℝ) ∧
+                    (A.card:ℝ) ≤ (14*σ/c)*(U:ℝ)+1/2 ∧
+                    ∀ K : ℕ, 2 ≤ K →
+                      let G := A.filter (fun k => K ≤ (r k).den)
+                      let D := 16*σ*R^2/(c*(K:ℝ))
+                      (G.card:ℝ) ≤ 4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) := by
+  obtain ⟨B,hB,hsource⟩ := positive_difference_selected_reference_gap hσ hc hJ
+  refine ⟨B,hB,?_⟩
+  intro F N η T M R Q hN hη hηmax hf hbound htests hnegative hT hM hR hRQ hQN
+    hNR hNsquare hlarge hlargeGap hphase
+  have hNp : (0:ℝ) < N := Nat.cast_pos.mpr hN
+  have hBp : 0 < B := zero_lt_one.trans_le hB
+  obtain ⟨U,hU,hlo,hhi,hUmax,hlinear,hwrap,H,hH,S,hpoints,hsep,hpart⟩ :=
+    hsource F η T M N R Q hη hηmax hf hbound htests hnegative hT hM hNp hR hRQ hQN
+      hNR hNsquare hlarge hphase
+  have hUp : (0:ℝ) < U := by exact_mod_cast (show 0 < U by omega)
+  have hUlarge : 3*J ≤ σ*(U:ℝ) := by
+    have hl : 3*J ≤ σ*(((N:ℝ)/Q)^((2:ℝ)/3)/(2*B)) := by
+      rw [←mul_div_assoc]
+      apply (le_div_iff₀ (show 0 < 2*B by positivity)).mpr
+      nlinarith only [hlargeGap]
+    exact hl.trans (mul_le_mul_of_nonneg_left hlo hσ.le)
+  have hNone : (1:ℝ) ≤ N := by exact_mod_cast (show 1 ≤ N by omega)
+  have hNM : (N:ℝ) ≤ M := by
+    nlinarith only [mul_nonneg (Nat.cast_nonneg N) (sub_nonneg.mpr hNone),hNsquare]
+  refine ⟨U,hU,hlo,hhi,hUmax,hlinear,hwrap,?_⟩
+  intro f h delta Vbound
+  refine ⟨H,hH,S,hpoints,hsep,?_⟩
+  intro y hy x hx
+  rcases hpart y hy x hx with hxS | hgap
+  · exact Or.inl hxS
+  right
+  obtain ⟨a,ha,b,hb,hax,hxb,hadj,hgaplow,hgapup,e,r₀,p,q,hwhich,hcop,hr₀,hq,hqr,hqH,
+    hrscale,hpS,hdet,hroot,hneighbor,_hwidth,_hcount,hinterior⟩ := hgap
+  refine ⟨a,ha,b,hb,hax,hxb,hadj,hgaplow,hgapup,e,r₀,p,q,hwhich,hcop,hr₀,hq,hqr,hqH,
+    hrscale,hpS,hdet,hroot,hneighbor,?_⟩
+  intro s haI hbI
+  obtain ⟨x₁,hx₁,x₂,hx₂,hx₁val,hx₂val,_A,_hgrid⟩ := hinterior s haI hbI
+  change h y x₁=a at hx₁val
+  change h y x₂=b at hx₂val
+  obtain ⟨A,r,w,hmem,hdata,hcardlow,hcardup,hcount⟩ :=
+    positive_difference_reference_gap_minimal_arcs F N (s:=s) hσ hc hJ hη hηmax hy
+      hf hbound hnegative hT hM hN (zero_lt_one.trans_le hR) hUp hNM hUlarge hphase hx₁ hx₂
+      (by change (U:ℝ)/(4*R^2) ≤ h y x₂-h y x₁; rw [hx₁val,hx₂val]; exact hgaplow.le)
+      (by change h y x₂-h y x₁ ≤ 7*(U:ℝ)/(2*R^2); rw [hx₁val,hx₂val]; exact hgapup)
+  refine ⟨x₁,hx₁,x₂,hx₂,hx₁val,hx₂val,A,r,w,hmem,?_,hcardlow,hcardup,hcount⟩
+  intro k hk
+  have hd := hdata k hk
+  change w k∈Ioo x₁ x₂ ∧ h y (w k)=(r k:ℝ) ∧
+    (r k:ℝ)∈Ioo (h y x₁) (h y x₂) ∧
+    (r k:ℝ)∈Ioo (h y (s+(N:ℝ)*k)-delta) (h y (s+(N:ℝ)*k)+delta) ∧
+    ∀ v : ℚ, (v:ℝ)∈Ioo (h y (s+(N:ℝ)*k)-delta) (h y (s+(N:ℝ)*k)+delta) →
+      (r k).den ≤ v.den at hd
+  simpa only [hx₁val,hx₂val] using hd
+
+
+/-- Complete the genuine positive-difference source sums using the supplied
+curvature roots, without selecting replacement rational witnesses.
+The complement of the analytic minor-arc conditions is retained explicitly.
+The completion length uses the supplied bound on actual denominators. -/
+theorem positive_difference_chosen_arcs_band_fourier
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : Finset ι) (F : ℝ → ℝ)
+      (y : ι → ℝ) (L : ι → ℤ) (H : ι → ℕ) (r : ι → ℚ) (z : ι → ℝ)
+      (N : ℕ) (η T M R : ℝ),
+      1 ≤ N → (∀ i∈S, H i ≤ N) →
+      0 < η → η ≤ 1/8 → 0 < T → 0 < M → 0 < R →
+      (∀ i∈S, y i∈Icc (1:ℝ) 2) →
+      (∀ i∈S, (L i:ℝ)-2*(N:ℝ)∈Icc M (2*M)) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      (∀ i∈S, z i∈Ioo ((L i:ℝ)-2*(N:ℝ)-(N:ℝ)/4)
+        ((L i:ℝ)-2*(N:ℝ)+(N:ℝ)/4) ∧
+        iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ι → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f i n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) := by
+  classical
+  obtain ⟨C,hC,hentry⟩ := TaoTrudgianYang2025.exists_bourgain_C4_variable_source_common_fourier
+  refine ⟨C,hC,?_⟩
+  intro ι S F y L H r z N η T M R hN hH hη hηmax hT hM hR hy hbase hf hbound hnegative
+    hphase hbuffer hfourBudget hquadBudget f hroots m A q μ ℓ lambda U₃ G
+  have hNp : (0:ℝ) < N := by exact_mod_cast (show 0 < N by omega)
+  have hlambda : 0 < lambda := by dsimp only [lambda]; positivity
+  have hU₃ : 0 < U₃ := by dsimp only [U₃]; positivity
+  let beta := 3*J/(σ*M*(N:ℝ)*R^2)
+  have hbeta : 0 ≤ beta := by dsimp only [beta]; positivity
+  have hnorm w (hw : w∈Icc (3*M/4) (9*M/4)) :
+      w/M∈Icc (3/4:ℝ) (9/4) := by
+    constructor
+    · apply (le_div_iff₀ hM).mpr
+      linarith only [hw.1]
+    · apply (div_le_iff₀ hM).mpr
+      linarith only [hw.2]
+  have hcf i (hi : i∈S) w (hw : w∈Icc (3*M/4) (9*M/4)) :
+      ContDiffAt ℝ ∞ (f i) w := by
+    have hn := hnorm w hw
+    have hw0 : 0 < w/M := by linarith only [hn.1]
+    have hs0 : 0 < w/M+η*y i := add_pos hw0 (mul_pos hη (by linarith only [(hy i hi).1]))
+    exact (contDiffAt_const.mul (((hf _ hw0).comp w (contDiffAt_id.div_const M)).sub
+      ((hf _ hs0).comp w ((contDiffAt_id.div_const M).add contDiffAt_const)))).div_const (σ*η)
+  have hupper i (hi : i∈S) w (hw : w∈Icc (3*M/4) (9*M/4)) n (hn : n ≤ 4) :
+      |iteratedDeriv n (f i) w| ≤ (T/M^n)*(3*J/σ) := by
+    have hw' := hnorm w hw
+    have hy' : y i∈Icc (1/2:ℝ) 3 :=
+      ⟨by linarith only [(hy i hi).1],by linarith only [(hy i hi).2]⟩
+    have hu := positive_jets_difference_mixed_upper F hσ hJ hη hηmax hw' hy' hf hbound
+      n 0 (by norm_num) (by omega)
+    simp only [iteratedDeriv_zero] at hu
+    have hw0 : 0 < w/M := by linarith only [hw'.1]
+    have hs0 : 0 < w/M+η*y i := add_pos hw0 (mul_pos hη (by linarith only [(hy i hi).1]))
+    have hFx : ContDiffAt ℝ n F (w/M) :=
+      (hf _ hw0).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl n)
+    have hFz : ContDiffAt ℝ n (fun u => F (u+η*y i)) (w/M) :=
+      ((hf _ hs0).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl n)).comp
+        (w/M) (contDiffAt_id.add contDiffAt_const)
+    rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu
+    have hid := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hM
+      (show 0 < w by linarith only [hw.1,hM])
+      (mul_nonneg hη.le (by linarith only [(hy i hi).1])) hf n
+    dsimp only [f]
+    rw [hid,abs_mul,abs_of_pos (show 0 < T/M^n by positivity)]
+    exact mul_le_mul_of_nonneg_left hu (by positivity)
+  have hscale3 : T/M^3=1/((N:ℝ)*R^2) := by
+    apply (div_eq_div_iff (by positivity) (by positivity)).mpr
+    nlinarith only [hphase]
+  have hscale4 : T/M^4=1/(M*(N:ℝ)*R^2) := by
+    apply (div_eq_div_iff (by positivity) (by positivity)).mpr
+    calc
+      T*(M*(N:ℝ)*R^2)=M*(T*(N:ℝ)*R^2) := by ring
+      _ = M*M^3 := by rw [hphase]
+      _ = 1*M^4 := by ring
+  have hthree i (hi : i∈S) w (hw : w∈Icc (3*M/4) (9*M/4)) :
+      6*lambda ≤ iteratedDeriv 3 (f i) w ∧ iteratedDeriv 3 (f i) w ≤ 6*U₃ := by
+    have hl := positive_difference_third_signed_lower F (y:=y i) hσ hη hηmax hc (hnorm w hw)
+      ⟨by linarith only [(hy i hi).1],by linarith only [(hy i hi).2]⟩ hf hnegative
+    have hid := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hM
+      (show 0 < w by linarith only [hw.1,hM])
+      (mul_nonneg hη.le (by linarith only [(hy i hi).1])) hf 3
+    have hu := (le_abs_self (iteratedDeriv 3 (f i) w)).trans (hupper i hi w hw 3 (by norm_num))
+    rw [hscale3] at hu
+    constructor
+    · dsimp only [f]
+      rw [hid,hscale3]
+      convert mul_le_mul_of_nonneg_left hl
+        (show 0 ≤ 1/((N:ℝ)*R^2) by positivity) using 1
+      dsimp only [lambda]
+      ring
+    · convert hu using 1
+      dsimp only [U₃]
+      ring
+  have hgeo i (hi : i∈S) :
+      z i∈Ioo (3*M/4) (9*M/4) ∧ |z i-(m i:ℝ)| ≤ 1/2 ∧
+      ((N:ℤ) ≤ L i-m i ∧ L i-m i ≤ 3*(N:ℤ)) ∧
+      Icc ((m i:ℝ)-(6*(N:ℝ)+1)) ((m i:ℝ)+(6*(N:ℝ)+1)) ⊆ Icc (3*M/4) (9*M/4) := by
+    apply TaoTrudgianYang2025.bourgain_minimal_arc_rounded_source_geometry
+      (show 0 < N by omega) (by ring) (hroots i hi).1
+    intro w hw
+    have hb := hbase i hi
+    constructor <;> linarith only [hb.1,hb.2,hw.1,hw.2,hbuffer]
+  have hA i (hi : i∈S) : N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i := by
+    have hg := (hgeo i hi).2.2.1
+    have hnonneg : 0 ≤ L i-m i := (Int.natCast_nonneg N).trans hg.1
+    have he : (A i:ℤ)=L i-m i := Int.toNat_of_nonneg hnonneg
+    refine ⟨?_,?_,?_⟩
+    · exact_mod_cast (show (N:ℤ) ≤ (A i:ℤ) by rw [he]; exact hg.1)
+    · exact_mod_cast (show (A i:ℤ) ≤ 3*(N:ℤ) by rw [he]; exact hg.2)
+    · omega
+  have hm i (hi : i∈S) : (m i:ℝ)∈Icc (3*M/4) (9*M/4) :=
+    (hgeo i hi).2.2.2 ⟨by linarith only [hNp],by linarith only [hNp]⟩
+  have hmu i (hi : i∈S) : 0 < μ i ∧ lambda ≤ μ i ∧ μ i ≤ U₃ := by
+    have hh := hthree i hi (m i) (hm i hi)
+    change 0 < iteratedDeriv 3 (f i) (m i)/6 ∧
+      lambda ≤ iteratedDeriv 3 (f i) (m i)/6 ∧ iteratedDeriv 3 (f i) (m i)/6 ≤ U₃
+    constructor
+    · linarith only [hh.1,hlambda]
+    · constructor <;> linarith only [hh.1,hh.2]
+  have hsmall i (hi : i∈S) :
+      beta*(2*(A i:ℝ)+1)^4 ≤ 1 ∧ (3*U₃/2)*(2*(A i:ℝ)+1)^2 ≤ 1 := by
+    have hAr : (A i:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast (hA i hi).2.1
+    have ha : 2*(A i:ℝ)+1 ≤ 6*(N:ℝ)+1 := by linarith only [hAr]
+    have hb : beta*(6*(N:ℝ)+1)^4 ≤ 1 := by
+      have hh := (div_le_one (show 0 < M*(N:ℝ)*R^2 by positivity)).mpr hfourBudget
+      convert hh using 1
+      dsimp only [beta]
+      ring
+    have hd : (3*U₃/2)*(6*(N:ℝ)+1)^2 ≤ 1 := by
+      have hh := (div_le_one (show 0 < (N:ℝ)*R^2 by positivity)).mpr hquadBudget
+      convert hh using 1
+      dsimp only [U₃]
+      ring
+    exact ⟨(mul_le_mul_of_nonneg_left (pow_le_pow_left₀ (by positivity) ha 4) hbeta).trans hb,
+      (mul_le_mul_of_nonneg_left (pow_le_pow_left₀ (by positivity) ha 2) (by positivity)).trans hd⟩
+  have hsub i (hi : i∈S) :
+      Icc ((m i:ℝ)-(2*(A i:ℝ)+1)) ((m i:ℝ)+(2*(A i:ℝ)+1)) ⊆ Icc (3*M/4) (9*M/4) := by
+    intro w hw
+    apply (hgeo i hi).2.2.2
+    have ha : (A i:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast (hA i hi).2.1
+    constructor <;> linarith only [hw.1,hw.2,ha]
+  have hcurv i (hi : i∈S) :
+      |iteratedDeriv 2 (f i) (m i)/2-((r i).num:ℝ)/(q i:ℝ)| ≤ 3*U₃/2 := by
+    have hh := TaoTrudgianYang2025.bourgain_curvature_level_difference (f i)
+      (fun w hw => (hcf i hi w hw).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 4))
+      (fun w hw => ⟨(by linarith only [(hthree i hi w hw).1,hlambda]),(hthree i hi w hw).2⟩)
+      (hm i hi) ⟨(hgeo i hi).1.1.le,(hgeo i hi).1.2.le⟩
+    rw [(hroots i hi).2] at hh
+    have hr := mul_le_mul_of_nonneg_left (hgeo i hi).2.1 (show 0 ≤ 3*U₃ by positivity)
+    have he : (r i:ℝ)=((r i).num:ℝ)/(q i:ℝ) := by rw [Rat.cast_def]
+    rw [he,abs_sub_comm (m i:ℝ) (z i)] at hh
+    exact hh.trans (by linarith only [hr])
+  have hGS : G ⊆ S := fun i hi => (Finset.mem_filter.mp hi).1
+  have hscale i (hi : i∈G) :
+      0 < q i ∧ q i ≤ A i ∧ IsCoprime (r i).num (q i:ℤ) ∧
+      0 < μ i ∧ μ i*(A i:ℝ)^2 ≤ 1 ∧ 1 ≤ μ i*(q i:ℝ)^2*A i := by
+    have hiS := hGS hi
+    have hd := (Finset.mem_filter.mp hi).2
+    have hmu' := hmu i hiS
+    refine ⟨(r i).pos,hd.1.trans (hA i hiS).1,(r i).isCoprime_num_den,hmu'.1,?_,?_⟩
+    · calc
+        _ ≤ U₃*(2*(A i:ℝ)+1)^2 :=
+          mul_le_mul hmu'.2.2
+            (pow_le_pow_left₀ (show (0:ℝ) ≤ A i from Nat.cast_nonneg _)
+              (show (A i:ℝ) ≤ 2*(A i:ℝ)+1 by linarith [show (0:ℝ) ≤ A i from Nat.cast_nonneg _]) 2)
+            (sq_nonneg _) hU₃.le
+        _ ≤ (3*U₃/2)*(2*(A i:ℝ)+1)^2 := by gcongr; linarith only [hU₃]
+        _ ≤ _ := (hsmall i hiS).2
+    · have hAr : (N:ℝ) ≤ A i := by exact_mod_cast (hA i hiS).1
+      exact hd.2.trans (mul_le_mul
+        (mul_le_mul_of_nonneg_right hmu'.2.1 (sq_nonneg (q i:ℝ))) hAr hNp.le
+        (mul_nonneg hmu'.1.le (sq_nonneg _)))
+  refine ⟨(fun i hi => ⟨(hgeo i hi).2.1,hA i hi⟩),?_⟩
+  intro Q₀ hQ₀ K₀ inst hK₀
+  have hKG i (hi : i∈G) : 7*(μ i*(q i:ℝ)*(A i:ℝ)^2) ≤ K₀ := by
+    have hiS := hGS hi
+    have hAr : (A i:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast (hA i hiS).2.1
+    have hqr : (q i:ℝ) ≤ Q₀ := by exact_mod_cast hQ₀ i hi
+    calc
+      _ ≤ 7*(U₃*(Q₀:ℝ)*(3*(N:ℝ))^2) := by gcongr; exact (hmu i hiS).2.2
+      _ = 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 := by ring
+      _ ≤ _ := hK₀
+  obtain ⟨v,hv,hfourier⟩ := hentry ι G f (fun i => (m i:ℝ)) (fun i => (r i).num) q A H
+    (fun i hi => hN.trans (hA i (hGS hi)).1)
+    (fun i hi => (hH i (hGS hi)).trans (hA i (hGS hi)).1)
+    beta (3*U₃/2) hbeta (by positivity)
+    (fun i hi => (hsmall i (hGS hi)).1) (fun i hi => (hsmall i (hGS hi)).2)
+    (fun i hi w hw => (hcf i (hGS hi) w (hsub i (hGS hi) hw)).of_le
+      (ENat.natCast_le_of_coe_top_le_withTop le_rfl 4))
+    (by
+      intro i hi w hw
+      have hh := hupper i (hGS hi) w (hsub i (hGS hi) hw) 4 (by norm_num)
+      rw [hscale4] at hh
+      convert hh using 1
+      dsimp only [beta]
+      ring)
+    (fun i hi => hcurv i (hGS hi)) hscale K₀ hKG
+  refine ⟨v,hv,?_⟩
+  intro b τ s K x
+  obtain ⟨k,hk⟩ := hfourier
+  refine ⟨k,?_⟩
+  let Src := fun i => ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f i n):ℂ)‖
+  have hsrc :
+      (∑ i∈G,Src i) =
+        ∑ i∈G, ‖∑ n∈Finset.Ioc (A i:ℤ) ((A i:ℤ)+H i),(𝐞 (f i ((m i:ℝ)+n)):ℂ)‖ := by
+    apply Finset.sum_congr rfl
+    intro i hi
+    dsimp only [Src]
+    rw [←(hA i (hGS hi)).2.2,TaoTrudgianYang2025.bourgain_integer_source_translation]
+  rw [←hsrc] at hk
+  let Bad := S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N))
+  have hbad : (∑ i∈Bad,Src i) ≤ ∑ i∈Bad,(H i:ℝ) := by
+    apply Finset.sum_le_sum
+    intro i _hi
+    dsimp only [Src]
+    apply (norm_sum_le _ _).trans_eq
+    simp
+  have hbad0 : 0 ≤ ∑ i∈Bad,(H i:ℝ) :=
+    Finset.sum_nonneg (fun i _ => Nat.cast_nonneg (H i))
+  have hbadC := mul_le_mul_of_nonneg_right hC hbad0
+  simp only [one_mul] at hbadC
+  have hsplit : (∑ i∈S,Src i)=(∑ i∈G,Src i)+(∑ i∈Bad,Src i) :=
+    (Finset.sum_filter_add_sum_filter_not S
+      (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N) Src).symm
+  change (∑ i∈S,Src i) ≤ _
+  rw [hsplit]
+  have hh := add_le_add hk (hbad.trans hbadC)
+  convert hh using 1
+  dsimp only [Bad]
+  ring
+
+/-- Complete the genuine positive-difference source sums using the supplied
+curvature roots, without selecting replacement rational witnesses.
+The complement of the analytic minor-arc conditions is retained explicitly. -/
+theorem positive_difference_chosen_arcs_fourier
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : Finset ι) (F : ℝ → ℝ)
+      (y : ι → ℝ) (L : ι → ℤ) (H : ι → ℕ) (r : ι → ℚ) (z : ι → ℝ)
+      (N : ℕ) (η T M R : ℝ),
+      1 ≤ N → (∀ i∈S, H i ≤ N) →
+      0 < η → η ≤ 1/8 → 0 < T → 0 < M → 0 < R →
+      (∀ i∈S, y i∈Icc (1:ℝ) 2) →
+      (∀ i∈S, (L i:ℝ)-2*(N:ℝ)∈Icc M (2*M)) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      (∀ i∈S, z i∈Ioo ((L i:ℝ)-2*(N:ℝ)-(N:ℝ)/4)
+        ((L i:ℝ)-2*(N:ℝ)+(N:ℝ)/4) ∧
+        iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(N:ℝ)^3 ≤ K₀ →
+      ∃ v : ι → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f i n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) := by
+  obtain ⟨C,hC,hentry⟩ := positive_difference_chosen_arcs_band_fourier hσ hc hJ
+  refine ⟨C,hC,?_⟩
+  intro ι S F y L H r z N η T M R hN hH hη hηmax hT hM hR hy hbase hf hbound hnegative
+    hphase hbuffer hfourBudget hquadBudget f hroots m A q μ ℓ lambda U₃ G
+  obtain ⟨hgeometry,hfourier⟩ := hentry ι S F y L H r z N η T M R hN hH hη hηmax
+    hT hM hR hy hbase hf hbound hnegative hphase hbuffer hfourBudget hquadBudget hroots
+  refine ⟨hgeometry,?_⟩
+  intro K₀ inst hK₀
+  exact hfourier N (fun i hi => (Finset.mem_filter.mp hi).2.1) K₀
+    (by convert hK₀ using 1; ring)
+
+
+
+/-- Construct minimum-denominator arcs and carry precisely those witnesses
+into the complete Fourier source estimate. Their localization and sparse
+denominator count remain attached to the same rational and real roots. -/
+theorem positive_difference_constructed_minimal_arcs_fourier
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) [DecidableEq ι] (S : Finset ι) (F : ℝ → ℝ)
+      (k : ι → ℤ) (H : ι → ℕ) (N Bmul : ℕ) (s : ℤ) (η y T M R : ℝ),
+      1 ≤ N → (∀ i∈S, H i ≤ N) →
+      0 < η → η ≤ 1/8 → y∈Icc (1:ℝ) 2 → 0 < T → 0 < M → 0 < R →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      (∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ Bmul) →
+      (∀ i∈S, (s:ℝ)+(N:ℝ)*(k i:ℝ)∈Icc M (2*M)) →
+      let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let t := fun i => (s:ℝ)+(N:ℝ)*(k i:ℝ)
+      let L := fun i => s+(N:ℤ)*k i+2*(N:ℤ)
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ (r : ι → ℚ) (z : ι → ℝ),
+        (∀ i∈S, z i∈Ioo (t i-(N:ℝ)/4) (t i+(N:ℝ)/4) ∧
+          iteratedDeriv 2 f (z i)/2=(r i:ℝ) ∧
+          (r i:ℝ)∈Ioo (iteratedDeriv 2 f (t i)/2-delta) (iteratedDeriv 2 f (t i)/2+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo (iteratedDeriv 2 f (t i)/2-delta)
+            (iteratedDeriv 2 f (t i)/2+delta) → (r i).den ≤ a.den) ∧
+        (∀ i∈S, ∀ a∈Icc M (2*M), ∀ b∈Icc M (2*M),
+          a+(N:ℝ)/4 ≤ t i → t i ≤ b-(N:ℝ)/4 →
+          (r i:ℝ)∈Ioo (iteratedDeriv 2 f a/2) (iteratedDeriv 2 f b/2)) ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((S.filter (fun i => Q ≤ (r i).den)).card:ℝ) ≤
+            Bmul*(4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 f (m i)/6
+      let ℓ := fun i => deriv f (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ι → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) := by
+  obtain ⟨C,hC,hentry⟩ := positive_difference_chosen_arcs_band_fourier hσ hc hJ
+  refine ⟨C,hC,?_⟩
+  intro ι inst S F k H N Bmul s η y T M R hN hH hη hηmax hy hT hM hR hf hbound hnegative
+    hphase hbuffer hfourBudget hquadBudget hmul hpoints f t L delta Vbound
+  have hNp : (0:ℝ) < N := by exact_mod_cast (show 0 < N by omega)
+  have hNM : (N:ℝ) ≤ M := by linarith only [hbuffer,hNp]
+  obtain ⟨r,z,hdata,hlocal,hcount⟩ :=
+    positive_difference_minimal_curvature_arc_count S F k N Bmul s hσ hc hJ hη hηmax hy
+      hf hbound hnegative hT hM (show 0 < N by omega) hR hNM hphase hmul hpoints
+  refine ⟨r,z,hdata,hlocal,hcount,?_⟩
+  have hLi i : (L i:ℝ)-2*(N:ℝ)=t i := by
+    dsimp only [L,t]
+    push_cast
+    ring
+  exact hentry ι S F (fun _ => y) L H r z N η T M R hN hH hη hηmax hT hM hR
+    (fun _ _ => hy) (fun i hi => by rw [hLi]; exact hpoints i hi)
+    hf hbound hnegative hphase hbuffer hfourBudget hquadBudget
+    (fun i hi => by
+      change z i∈Ioo ((L i:ℝ)-2*(N:ℝ)-(N:ℝ)/4)
+        ((L i:ℝ)-2*(N:ℝ)+(N:ℝ)/4) ∧ iteratedDeriv 2 f (z i)/2=(r i:ℝ)
+      rw [hLi]
+      exact ⟨(hdata i hi).1,(hdata i hi).2.1⟩)
+
+
+
+/-- An actual interior curvature gap supplies its trimmed finite grid and
+minimum-denominator arcs together with the Fourier estimate for those same
+arcs. Both grid counts, rational localization and denominator tails survive. -/
+theorem positive_difference_interior_gap_fourier
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (N : ℕ) (s : ℤ) (H : ℤ → ℕ)
+      (η y T M R U x₁ x₂ : ℝ),
+      1 ≤ N → (∀ k, H k ≤ N) →
+      0 < η → η ≤ 1/8 → y∈Icc (1:ℝ) 2 → 0 < T → 0 < M → 0 < R → 0 < U →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U → x₁∈Icc M (2*M) → x₂∈Icc M (2*M) →
+      let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun w => iteratedDeriv 2 f w/2
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      U/(4*R^2) ≤ h x₂-h x₁ → h x₂-h x₁ ≤ 7*U/(2*R^2) →
+      ∃ S : Finset ℤ, ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+        (∀ k : ℤ, k∈S ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈S, z k∈Ioo x₁ x₂ ∧ h (z k)=(r k:ℝ) ∧
+          (r k:ℝ)∈Ioo (h x₁) (h x₂) ∧
+          (r k:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) → (r k).den ≤ a.den) ∧
+        (σ/(6*J))*U-3/2 ≤ (S.card:ℝ) ∧ (S.card:ℝ) ≤ (14*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((S.filter (fun k => Q ≤ (r k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 f (m i)/6
+      let ℓ := fun i => deriv f (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) := by
+  obtain ⟨C,hC,hentry⟩ := positive_difference_constructed_minimal_arcs_fourier hσ hc hJ
+  refine ⟨C,hC,?_⟩
+  intro F N s H η y T M R U x₁ x₂ hN hH hη hηmax hy hT hM hR hU hf hbound hnegative
+    hphase hbuffer hfourBudget hquadBudget hUlarge hx₁ hx₂ f h t L delta Vbound hgaplow hgapup
+  have hNp : (0:ℝ) < N := by exact_mod_cast (show 0 < N by omega)
+  have hNM : (N:ℝ) ≤ M := by linarith only [hbuffer,hNp]
+  obtain ⟨S,_oldR,_oldZ,hmem,_oldData,hcardlow,hcardup,_oldTail⟩ :=
+    positive_difference_reference_gap_minimal_arcs F N (s:=(s:ℝ)) hσ hc hJ hη hηmax hy
+      hf hbound hnegative hT hM (show 0 < N by omega) hR hU hNM hUlarge hphase hx₁ hx₂
+      hgaplow hgapup
+  have hpoints k (hk : k∈S) : (s:ℝ)+(N:ℝ)*k∈Icc M (2*M) := by
+    have hh := (hmem k).mp hk
+    constructor <;> linarith only [hh.1,hh.2,hx₁.1,hx₂.2,hNp]
+  have hmul n : (S.filter (fun k => id k=n)).card ≤ 1 := by
+    have hh : S.filter (fun k => id k=n) ⊆ {n} := by
+      intro k hk
+      exact Finset.mem_singleton.mpr (Finset.mem_filter.mp hk).2
+    simpa using Finset.card_le_card hh
+  obtain ⟨r,z,hdata,hlocal,htail,hfourier⟩ :=
+    hentry ℤ S F id H N 1 s η y T M R hN (fun k _ => hH k)
+      hη hηmax hy hT hM hR hf hbound hnegative hphase hbuffer hfourBudget hquadBudget
+      hmul hpoints
+  refine ⟨S,r,z,hmem,?_,hcardlow,hcardup,?_,hfourier⟩
+  · intro k hk
+    have hd := hdata k hk
+    have hg := (hmem k).mp hk
+    have hl := hlocal k hk x₁ hx₁ x₂ hx₂ hg.1 hg.2
+    refine ⟨⟨?_,?_⟩,hd.2.1,hl,hd.2.2.1,hd.2.2.2⟩
+    · have hh := hd.1.1
+      change t k-(N:ℝ)/4 < z k at hh
+      change x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4 at hg
+      linarith only [hh,hg.1]
+    · have hh := hd.1.2
+      change z k < t k+(N:ℝ)/4 at hh
+      change x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4 at hg
+      linarith only [hh,hg.2]
+  · intro Q hQ D
+    simpa only [Nat.cast_one,one_mul] using htail Q hQ
+
+
+/-- The selected finite reference system now returns interior-gap source
+Fourier estimates with the actual coordinate neighbors, grid counts and
+minimum-denominator witnesses. Boundary gaps and final scale selection
+are deliberately not asserted away. -/
+theorem positive_difference_selected_reference_fourier
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ B : ℝ, 1 ≤ B ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (N : ℕ) (η T M R Q : ℝ),
+      0 < N → 0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 0 < M → 1 ≤ R → R ≤ Q → Q ≤ (N:ℝ) →
+      (N:ℝ) ≤ R^2 → (N:ℝ)^2 ≤ M →
+      2*B ≤ ((N:ℝ)/Q)^((2:ℝ)/3) →
+      6*B*J ≤ σ*((N:ℝ)/Q)^((2:ℝ)/3) →
+      T*(N:ℝ)*R^2=M^3 →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      ∃ U : ℕ, 1 ≤ U ∧
+        ((N:ℝ)/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+        (U:ℝ) ≤ ((N:ℝ)/Q)^((2:ℝ)/3)/B ∧
+        (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ (N:ℝ) ∧
+        B^2*(U:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ H : ℤ, 2 ≤ H ∧ ∃ S : Finset ℝ,
+        (∀ v ∈ S, |v| ≤ 3*J*T/(2*σ*M^2)+1) ∧
+        (∀ a ∈ S, ∀ b ∈ S, a ≠ b → (U:ℝ)/(4*R^2) < |a-b|) ∧
+        ∀ y ∈ Icc (1:ℝ) 2, ∀ x∈Icc M (2*M),
+          h y x∈S ∨
+          ∃ a∈S, ∃ b∈S, a<h y x ∧ h y x<b ∧
+            (∀ v∈S, ¬ (a<v ∧ v<b)) ∧
+            (U:ℝ)/(4*R^2)<b-a ∧ b-a≤7*(U:ℝ)/(2*R^2) ∧
+            ∃ e r₀ p q : ℤ, ((e:ℝ)/r₀=a ∨ (e:ℝ)/r₀=b) ∧
+              IsCoprime e r₀ ∧ 0<r₀ ∧ 0<q ∧ q≤r₀ ∧ q≤H ∧
+              R^2≤(U:ℝ)*(r₀:ℝ)^2 ∧ (p:ℝ)/q∈S ∧ |e*q-p*r₀|=1 ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(e:ℝ)/r₀) ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(p:ℝ)/q) ∧
+              (∀ (s : ℤ) (Hlen : ℤ → ℕ), (∀ k, Hlen k ≤ N) →
+                a∈Icc (h y M) (h y (2*M)) → b∈Icc (h y M) (h y (2*M)) →
+                ∃ x₁∈Icc M (2*M), ∃ x₂∈Icc M (2*M),
+                  h y x₁=a ∧ h y x₂=b ∧
+                let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+                let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      ∃ Agrid : Finset ℤ, ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+        (∀ k : ℤ, k∈Agrid ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈Agrid, z k∈Ioo x₁ x₂ ∧ (h y) (z k)=(r k:ℝ) ∧
+          (r k:ℝ)∈Ioo ((h y) x₁) ((h y) x₂) ∧
+          (r k:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) → (r k).den ≤ a.den) ∧
+        (σ/(6*J))*(U:ℝ)-3/2 ≤ (Agrid.card:ℝ) ∧ (Agrid.card:ℝ) ≤ (14*σ/c)*(U:ℝ)+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((Agrid.filter (fun k => Q ≤ (r k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f y) (m i)/6
+      let ℓ := fun i => deriv (f y) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := Agrid.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈Agrid, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈Agrid, ‖∑ n∈Finset.Ioc (L i) (L i+Hlen i),(𝐞 ((f y) n):ℂ)‖) ≤
+          C*((∑ i∈Agrid.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(Hlen i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2)))) := by
+  obtain ⟨B,hB,hsource⟩ := positive_difference_selected_reference_gap hσ hc hJ
+  obtain ⟨C,hC,hfourier⟩ := positive_difference_interior_gap_fourier hσ hc hJ
+  refine ⟨B,hB,C,hC,?_⟩
+  intro F N η T M R Q hN hη hηmax hf hbound htests hnegative hT hM hR hRQ hQN
+    hNR hNsquare hlarge hlargeGap hphase hbuffer hfourBudget hquadBudget
+  have hNp : (0:ℝ) < N := Nat.cast_pos.mpr hN
+  have hBp : 0 < B := zero_lt_one.trans_le hB
+  obtain ⟨U,hU,hlo,hhi,hUmax,hlinear,hwrap,Horder,hHorder,S,hpoints,hsep,hpart⟩ :=
+    hsource F η T M N R Q hη hηmax hf hbound htests hnegative hT hM hNp hR hRQ hQN
+      hNR hNsquare hlarge hphase
+  have hUp : (0:ℝ) < U := by exact_mod_cast (show 0 < U by omega)
+  have hUlarge : 3*J ≤ σ*(U:ℝ) := by
+    have hl : 3*J ≤ σ*(((N:ℝ)/Q)^((2:ℝ)/3)/(2*B)) := by
+      rw [←mul_div_assoc]
+      apply (le_div_iff₀ (show 0 < 2*B by positivity)).mpr
+      nlinarith only [hlargeGap]
+    exact hl.trans (mul_le_mul_of_nonneg_left hlo hσ.le)
+  refine ⟨U,hU,hlo,hhi,hUmax,hlinear,hwrap,?_⟩
+  intro f h delta Vbound
+  refine ⟨Horder,hHorder,S,hpoints,hsep,?_⟩
+  intro y hy x hx
+  rcases hpart y hy x hx with hxS | hgap
+  · exact Or.inl hxS
+  right
+  obtain ⟨a,ha,b,hb,hax,hxb,hadj,hgaplow,hgapup,e,r₀,p,q,hwhich,hcop,hr₀,hq,hqr,hqH,
+    hrscale,hpS,hdet,hroot,hneighbor,_hwidth,_hcount,hinterior⟩ := hgap
+  refine ⟨a,ha,b,hb,hax,hxb,hadj,hgaplow,hgapup,e,r₀,p,q,hwhich,hcop,hr₀,hq,hqr,hqH,
+    hrscale,hpS,hdet,hroot,hneighbor,?_⟩
+  intro s Hlen hHlen haI hbI
+  obtain ⟨x₁,hx₁,x₂,hx₂,hx₁val,hx₂val,_oldGrid,_oldCount⟩ := hinterior (s:ℝ) haI hbI
+  change h y x₁=a at hx₁val
+  change h y x₂=b at hx₂val
+  refine ⟨x₁,hx₁,x₂,hx₂,hx₁val,hx₂val,?_⟩
+  intro t L
+  exact hfourier F N s Hlen η y T M R U x₁ x₂ (show 1 ≤ N by omega) hHlen
+    hη hηmax hy hT hM (zero_lt_one.trans_le hR) hUp hf hbound hnegative hphase
+    hbuffer hfourBudget hquadBudget hUlarge hx₁ hx₂
+    (by change (U:ℝ)/(4*R^2) ≤ h y x₂-h y x₁; rw [hx₁val,hx₂val]; exact hgaplow.le)
+    (by change h y x₂-h y x₁ ≤ 7*(U:ℝ)/(2*R^2); rw [hx₁val,hx₂val]; exact hgapup)
+
+
+/-- The rounded cubic Taylor coefficient of the genuine difference
+phase has explicit positive lower and upper scales. The rounding buffer
+and the linked T*N*R^2=M^3 normalization are derived in the proof. -/
+theorem positive_difference_rounded_cubic_scales
+    (F : ℝ → ℝ) {σ c J η y z T M N R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hM : 2 ≤ M) (hN : 0 < N) (hR : 0 < R)
+    (hz : z∈Icc M (2*M)) (hphase : T*N*R^2=M^3) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    c/(12*σ*N*R^2) ≤ iteratedDeriv 3 f (round z)/6 ∧
+      iteratedDeriv 3 f (round z)/6 ≤ J/(2*σ*N*R^2) := by
+  intro f
+  have hMp : 0 < M := by linarith only [hM]
+  have hr := abs_le.mp (abs_sub_round z)
+  have hm : (round z:ℝ)∈Icc (3*M/4) (9*M/4) := by
+    constructor <;> linarith only [hr.1,hr.2,hz.1,hz.2,hM]
+  have hn : (round z:ℝ)/M∈Icc (3/4:ℝ) (9/4) := by
+    constructor
+    · apply (le_div_iff₀ hMp).mpr
+      linarith only [hm.1]
+    · apply (div_le_iff₀ hMp).mpr
+      linarith only [hm.2]
+  have hy' : y∈Icc (1/2:ℝ) 3 :=
+    ⟨by linarith only [hy.1],by linarith only [hy.2]⟩
+  have hlow := positive_difference_third_signed_lower F (y:=y) hσ hη hηmax hc hn hy' hf hnegative
+  have hu := positive_jets_difference_mixed_upper F hσ hJ hη hηmax hn hy' hf hbound
+    3 0 (by norm_num) (by norm_num)
+  simp only [iteratedDeriv_zero] at hu
+  have hm0 : 0 < (round z:ℝ)/M := by linarith only [hn.1]
+  have hs0 : 0 < (round z:ℝ)/M+η*y := add_pos hm0 (mul_pos hη (by linarith only [hy.1]))
+  have hFx : ContDiffAt ℝ 3 F ((round z:ℝ)/M) :=
+    (hf _ hm0).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 3)
+  have hFz : ContDiffAt ℝ 3 (fun u => F (u+η*y)) ((round z:ℝ)/M) :=
+    ((hf _ hs0).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 3)).comp
+      ((round z:ℝ)/M) (contDiffAt_id.add contDiffAt_const)
+  rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu
+  have hid := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hMp
+    (show 0 < (round z:ℝ) by linarith only [hm.1,hMp])
+    (mul_nonneg hη.le (by linarith only [hy.1])) hf 3
+  have hscale : T/M^3=1/(N*R^2) := by
+    apply (div_eq_div_iff (by positivity) (by positivity)).mpr
+    nlinarith only [hphase]
+  dsimp only [f]
+  rw [hid,hscale]
+  have hupper := (le_abs_self _).trans hu
+  constructor
+  · have hh := div_le_div_of_nonneg_right
+      (mul_le_mul_of_nonneg_left hlow (show 0 ≤ 1/(N*R^2) by positivity))
+      (by norm_num : (0:ℝ) ≤ 6)
+    convert hh using 1
+    ring
+  · have hh := div_le_div_of_nonneg_right
+      (mul_le_mul_of_nonneg_left hupper (show 0 ≤ 1/(N*R^2) by positivity))
+      (by norm_num : (0:ℝ) ≤ 6)
+    convert hh using 1
+    ring
+
+/-- Close pairs in the literal completed Fourier point set determine
+determinant-one matrices acting on the original curvature roots.
+The denominator ratio, lower-left cutoff, cubic-coefficient ratio and
+linear strip are derived from the same
+dyadic rational data, including the upper-triangular alternative. -/
+theorem source_arc_fourier_cloud_matrices
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (f : ι → ℝ → ℝ) (z : ι → ℝ) (r : ι → ℚ) (v : ι → ℤ)
+    (Q K₀ : ℕ) [NeZero K₀] (μ₀ U₀ : ℝ) (hμ₀ : 0 < μ₀)
+    (hμbounds : ∀ i∈S, μ₀ ≤ iteratedDeriv 3 (f i) (round (z i))/6 ∧
+      iteratedDeriv 3 (f i) (round (z i))/6 ≤ U₀)
+    (hlevel : ∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ))
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den)
+    (hinv : ∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) :
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : ι × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    ∃ A : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      ∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num) := by
+  classical
+  intro q μ ℓ b τ K x V w radius P h D
+  have hK : (0:ℝ) < K₀ := by exact_mod_cast (NeZero.pos K₀)
+  have hone (ij : (ι × Fin 2) × (ι × Fin 2)) (hij : ij∈P) :
+      ∃ A : Fin 4 → ℤ, A 0*A 3-A 1*A 2=1 ∧
+        let t := (A 2:ℝ)*h ij.1.1+A 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A 0:ℝ)*h ij.1.1+A 1)/t=h ij.2.1 ∧
+        |(A 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num) := by
+    have hp := Finset.mem_filter.mp hij
+    have hi : ij.1.1∈S := (Finset.mem_product.mp (Finset.mem_product.mp hp.1).1).1
+    have hj : ij.2.1∈S := (Finset.mem_product.mp (Finset.mem_product.mp hp.1).2).1
+    have hqi : (0:ℝ) < q ij.1.1 := Nat.cast_pos.mpr (r ij.1.1).pos
+    have hqj : (0:ℝ) < q ij.2.1 := Nat.cast_pos.mpr (r ij.2.1).pos
+    have hmi : μ₀ ≤ μ ij.1.1 ∧ μ ij.1.1 ≤ U₀ := hμbounds _ hi
+    have hmj : μ₀ ≤ μ ij.2.1 ∧ μ ij.2.1 ≤ U₀ := hμbounds _ hj
+    have hmip : 0 < μ ij.1.1 := hμ₀.trans_le hmi.1
+    have hmjp : 0 < μ ij.2.1 := hμ₀.trans_le hmj.1
+    have hU₀ : 0 < U₀ := hmip.trans_le hmi.2
+    have hconstraints := TaoTrudgianYang2025.actual_four_coordinate_constraints
+      K₀ (q ij.1.1) (q ij.2.1) Q (r ij.2.1).num (v ij.1.1) (v ij.2.1)
+      (r ij.1.1).pos (r ij.2.1).pos (hden _ hi).1 (hinv _ hj)
+      hmip hmjp hmi.2 ij.1.2 ij.2.2 hp.2
+    have htau : |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D := hconstraints.1
+    obtain ⟨a,b₀,c,d,e₁,e₂,hdet,hnum,hdenom,hgamma,hstrip₁,hstrip₂⟩ :=
+      TaoTrudgianYang2025.actual_source_affine_lattice_strip
+        K₀ (q ij.1.1) (q ij.2.1) Q
+        (r ij.1.1).num (r ij.2.1).num (v ij.1.1) (v ij.2.1)
+        (round (z ij.1.1)) (round (z ij.2.1))
+        (r ij.1.1).pos (r ij.2.1).pos (hden _ hi).1 (hinv _ hi) (hinv _ hj)
+        hmip hmjp hmi.2 ij.1.2 ij.2.2 hp.2
+    have hhi : h ij.1.1=((r ij.1.1).num:ℝ)/q ij.1.1 := by
+      dsimp only [h]
+      rw [hlevel _ hi,Rat.cast_def]
+    have hhj : h ij.2.1=((r ij.2.1).num:ℝ)/q ij.2.1 := by
+      dsimp only [h]
+      rw [hlevel _ hj,Rat.cast_def]
+    have hnumR : (a:ℝ)*(r ij.1.1).num+(b₀:ℝ)*q ij.1.1=(r ij.2.1).num := by
+      exact_mod_cast hnum
+    have hdenR : (c:ℝ)*(r ij.1.1).num+(d:ℝ)*q ij.1.1=q ij.2.1 := by
+      exact_mod_cast hdenom
+    have ht : (c:ℝ)*h ij.1.1+d=(q ij.2.1:ℝ)/q ij.1.1 := by
+      rw [hhi]
+      apply (eq_div_iff hqi.ne').mpr
+      field_simp
+      nlinarith only [hdenR]
+    have hm : ((a:ℝ)*h ij.1.1+b₀)/((c:ℝ)*h ij.1.1+d)=h ij.2.1 := by
+      rw [ht,hhi,hhj]
+      field_simp
+      nlinarith only [hnumR]
+    have hqiQ : (q ij.1.1:ℝ) ≤ Q := by exact_mod_cast (hden _ hi).1
+    have hqjQ : (q ij.2.1:ℝ) ≤ Q := by exact_mod_cast (hden _ hj).1
+    have hQqi : (Q:ℝ) ≤ 2*q ij.1.1 := by exact_mod_cast (hden _ hi).2
+    have hQqj : (Q:ℝ) ≤ 2*q ij.2.1 := by exact_mod_cast (hden _ hj).2
+    have hbudget : (q ij.1.1:ℝ)*q ij.2.1/(6*(K₀:ℝ)^2) ≤
+        (Q:ℝ)^2/(6*(K₀:ℝ)^2) := by
+      apply div_le_div_of_nonneg_right _ (by positivity)
+      calc
+        _ ≤ (Q:ℝ)*Q := by gcongr
+        _ = _ := by ring
+    have hsqrt : 0 < Real.sqrt (K₀:ℝ) := Real.sqrt_pos.mpr hK
+    have hdual : |K ij.1.1-K ij.2.1| ≤ Real.sqrt K₀/(6*(K₀:ℝ)^2) := by
+      have hh := hp.2 (2 : Fin 4)
+      change |K ij.1.1/Real.sqrt K₀-K ij.2.1/Real.sqrt K₀| ≤
+        2*((1/(K₀:ℝ)^2)/12) at hh
+      rw [←sub_div,abs_div,abs_of_pos hsqrt] at hh
+      have hh' := (div_le_iff₀ hsqrt).mp hh
+      convert hh' using 1
+      ring
+    have hcoef := TaoTrudgianYang2025.bourgain_dual_variable_denominator_difference
+      hmip hmjp hqi hqj hmi.2 hmj.2 hqiQ hqjQ hQqi hdual
+    have hrelative :
+        |μ ij.2.1/μ ij.1.1*((c:ℝ)*h ij.1.1+d)^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) := by
+      rw [ht]
+      have he : μ ij.2.1/μ ij.1.1*((q ij.2.1:ℝ)/q ij.1.1)^3-1 =
+          (μ ij.2.1*((q ij.2.1:ℝ)/q ij.1.1)^3-μ ij.1.1)/μ ij.1.1 := by
+        field_simp
+      rw [he,abs_div,abs_of_pos hmip]
+      calc
+        _ ≤ (16*U₀*Real.sqrt (U₀*(Q:ℝ)^3)*
+            (Real.sqrt K₀/(6*(K₀:ℝ)^2)))/μ ij.1.1 :=
+          div_le_div_of_nonneg_right hcoef hmip.le
+        _ ≤ (16*U₀*Real.sqrt (U₀*(Q:ℝ)^3)*
+            (Real.sqrt K₀/(6*(K₀:ℝ)^2)))/μ₀ :=
+          div_le_div_of_nonneg_left (by positivity) hμ₀ hmi.1
+        _ = _ := by ring
+    refine ⟨![a,b₀,c,d],hdet,ht,?_,?_,hm,hgamma.trans hbudget,hrelative,htau,?_,?_⟩
+    · change (1:ℝ)/2 ≤ (c:ℝ)*h ij.1.1+d
+      rw [ht]
+      apply (le_div_iff₀ hqi).mpr
+      linarith only [hqiQ,hQqj]
+    · change (c:ℝ)*h ij.1.1+d ≤ 2
+      rw [ht]
+      exact (div_le_iff₀ hqi).mpr (hqjQ.trans hQqi)
+    · refine ⟨e₁,e₂,hstrip₁,?_⟩
+      change |(_-(e₂:ℝ))-h ij.2.1*(_-(e₁:ℝ))| ≤ 2*D/q ij.2.1
+      rw [hhj]
+      exact hstrip₂
+    · intro hb
+      have hg : c=0 := Int.abs_lt_one_iff.mp (by exact_mod_cast hgamma.trans_lt (hbudget.trans_lt hb))
+      have hqiZ : (0:ℤ) < q ij.1.1 := by exact_mod_cast hqi
+      have hqjZ : (0:ℤ) < q ij.2.1 := by exact_mod_cast hqj
+      rw [hg,zero_mul,zero_add] at hdenom
+      rw [hg,mul_zero,sub_zero] at hdet
+      have hd : 0 < d := by nlinarith only [hqiZ,hqjZ,hdenom]
+      have ha : 0 < a := by nlinarith only [hd,hdet]
+      have hd1 : d=1 := by nlinarith only [hd,ha,hdet]
+      have ha1 : a=1 := by nlinarith only [hdet,hd1]
+      refine ⟨hg,?_,?_⟩
+      · have he : (q ij.1.1:ℤ)=q ij.2.1 := by simpa only [hd1,one_mul] using hdenom
+        exact_mod_cast he
+      · refine ⟨b₀,?_⟩
+        rw [ha1,one_mul] at hnum
+        nlinarith only [hnum]
+  let A := fun ij => if hij : ij∈P then Classical.choose (hone ij hij) else 0
+  refine ⟨A,?_⟩
+  intro ij hij
+  dsimp only [A]
+  rw [dif_pos hij]
+  exact Classical.choose_spec (hone ij hij)
+
+/-- The genuine positive-difference family supplies the cubic coefficient
+scales in the Fourier-cloud matrix/strip theorem; they are not extra
+analytic assumptions on the transformed points. -/
+theorem positive_difference_fourier_cloud_matrices
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (F : ℝ → ℝ) (y z : ι → ℝ) (r : ι → ℚ) (v : ι → ℤ)
+    (Q K₀ : ℕ) [NeZero K₀] {σ c J η T M N R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hy : ∀ i∈S, y i∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hM : 2 ≤ M) (hN : 0 < N) (hR : 0 < R)
+    (hz : ∀ i∈S, z i∈Icc M (2*M)) (hphase : T*N*R^2=M^3) :
+    let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+    (∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+    (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) →
+    (∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) →
+    let μ₀ := c/(12*σ*N*R^2)
+    let U₀ := J/(2*σ*N*R^2)
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : ι × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    ∃ A : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      ∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num) := by
+  intro f hlevel hden hinv μ₀ U₀
+  exact source_arc_fourier_cloud_matrices S f z r v Q K₀ μ₀ U₀ (by dsimp only [μ₀]; positivity)
+    (fun i hi => positive_difference_rounded_cubic_scales F hσ hc hJ hη hηmax (hy i hi)
+      hf hbound hnegative hM hN hR (hz i hi) hphase)
+    hlevel hden hinv
+
+/-- The improved quartic scale, not the older N^5 restriction,
+discharges the Fourier Taylor and rounding budgets after a fixed
+normalization and the finite small-N cutoff. -/
+theorem positive_difference_fourier_budgets
+    {σ J M N R : ℝ} (hJ : 0 < J) (hσ : 7203*J ≤ σ)
+    (hN : 29 ≤ N) (hR : 0 < R) (hRN : R ≤ N)
+    (hNR : N ≤ R^2) (hNM : N^2 ≤ M)
+    (hquartic : N^10 ≤ M^3*R^7) :
+    7*N+2 ≤ M/4 ∧ (3*J/σ)*(6*N+1)^4 ≤ M*N*R^2 ∧
+      (3*J/(4*σ))*(6*N+1)^2 ≤ N*R^2 := by
+  have hNp : 0 < N := by linarith only [hN]
+  have hMp : 0 < M := (sq_pos_of_pos hNp).trans_le hNM
+  have hσp : 0 < σ := (mul_pos (by norm_num) hJ).trans_le hσ
+  have hcubic : N^3 ≤ M*R^2 := by
+    apply (pow_le_pow_iff_left₀ (by positivity) (by positivity) (by norm_num : (3:ℕ) ≠ 0)).mp
+    apply (mul_le_mul_iff_left₀ hR).mp
+    calc
+      (N^3)^3*R ≤ N^10 := by
+        have hh := mul_le_mul_of_nonneg_right hRN (pow_nonneg hNp.le 9)
+        convert hh using 1 <;> ring
+      _ ≤ M^3*R^7 := hquartic
+      _ = (M*R^2)^3*R := by ring
+  have hshort : 6*N+1 ≤ 7*N := by linarith only [hN]
+  have hfour : (6*N+1)^4 ≤ (7*N)^4 := by gcongr
+  have htwo : (6*N+1)^2 ≤ (7*N)^2 := by gcongr
+  constructor
+  · nlinarith only [hNM,mul_nonneg (show 0 ≤ N-29 by linarith only [hN])
+      (show 0 ≤ N+1 by positivity)]
+  constructor
+  · have hnorm : 7203*J/σ ≤ 1 := (div_le_one hσp).mpr hσ
+    have hh := mul_le_mul_of_nonneg_right hnorm (pow_nonneg hNp.le 4)
+    have hn4 : N^4 ≤ M*N*R^2 := by
+      have hh := mul_le_mul_of_nonneg_right hcubic hNp.le
+      convert hh using 1
+      ring
+    calc
+      _ ≤ (3*J/σ)*(7*N)^4 := mul_le_mul_of_nonneg_left hfour (by positivity)
+      _ ≤ N^4 := by convert hh using 1 <;> ring
+      _ ≤ _ := hn4
+  · have hnorm : 147*J/(4*σ) ≤ 1 := by
+      apply (div_le_one (by positivity)).mpr
+      linarith only [hσ,hJ]
+    have hh := mul_le_mul_of_nonneg_right hnorm (sq_nonneg N)
+    have hn2 : N^2 ≤ N*R^2 := by nlinarith only [mul_le_mul_of_nonneg_left hNR hNp.le]
+    calc
+      _ ≤ (3*J/(4*σ))*(7*N)^2 := mul_le_mul_of_nonneg_left htwo (by positivity)
+      _ ≤ N^2 := by convert hh using 1 <;> ring
+      _ ≤ _ := hn2
+
+/-- The selected reference construction and its literal source Fourier
+estimate under the improved N^10 scale. Buffer and Taylor budgets are
+derived, with a fixed normalization and an explicit small-N cutoff. -/
+theorem positive_difference_selected_reference_source_fourier
+    {σ c J : ℝ} (hσ : 7203*J ≤ σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ B : ℝ, 1 ≤ B ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (N : ℕ) (η T M R Q : ℝ),
+      29 ≤ N → 0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 0 < M → 1 ≤ R → R ≤ Q → Q ≤ (N:ℝ) →
+      (N:ℝ) ≤ R^2 → (N:ℝ)^2 ≤ M →
+      2*B ≤ ((N:ℝ)/Q)^((2:ℝ)/3) →
+      6*B*J ≤ σ*((N:ℝ)/Q)^((2:ℝ)/3) →
+      T*(N:ℝ)*R^2=M^3 →
+      (N:ℝ)^10 ≤ M^3*R^7 →
+      ∃ U : ℕ, 1 ≤ U ∧
+        ((N:ℝ)/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+        (U:ℝ) ≤ ((N:ℝ)/Q)^((2:ℝ)/3)/B ∧
+        (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ (N:ℝ) ∧
+        B^2*(U:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ H : ℤ, 2 ≤ H ∧ ∃ S : Finset ℝ,
+        (∀ v ∈ S, |v| ≤ 3*J*T/(2*σ*M^2)+1) ∧
+        (∀ a ∈ S, ∀ b ∈ S, a ≠ b → (U:ℝ)/(4*R^2) < |a-b|) ∧
+        ∀ y ∈ Icc (1:ℝ) 2, ∀ x∈Icc M (2*M),
+          h y x∈S ∨
+          ∃ a∈S, ∃ b∈S, a<h y x ∧ h y x<b ∧
+            (∀ v∈S, ¬ (a<v ∧ v<b)) ∧
+            (U:ℝ)/(4*R^2)<b-a ∧ b-a≤7*(U:ℝ)/(2*R^2) ∧
+            ∃ e r₀ p q : ℤ, ((e:ℝ)/r₀=a ∨ (e:ℝ)/r₀=b) ∧
+              IsCoprime e r₀ ∧ 0<r₀ ∧ 0<q ∧ q≤r₀ ∧ q≤H ∧
+              R^2≤(U:ℝ)*(r₀:ℝ)^2 ∧ (p:ℝ)/q∈S ∧ |e*q-p*r₀|=1 ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(e:ℝ)/r₀) ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(p:ℝ)/q) ∧
+              (∀ (s : ℤ) (Hlen : ℤ → ℕ), (∀ k, Hlen k ≤ N) →
+                a∈Icc (h y M) (h y (2*M)) → b∈Icc (h y M) (h y (2*M)) →
+                ∃ x₁∈Icc M (2*M), ∃ x₂∈Icc M (2*M),
+                  h y x₁=a ∧ h y x₂=b ∧
+                let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+                let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      ∃ Agrid : Finset ℤ, ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+        (∀ k : ℤ, k∈Agrid ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈Agrid, z k∈Ioo x₁ x₂ ∧ (h y) (z k)=(r k:ℝ) ∧
+          (r k:ℝ)∈Ioo ((h y) x₁) ((h y) x₂) ∧
+          (r k:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) → (r k).den ≤ a.den) ∧
+        (σ/(6*J))*(U:ℝ)-3/2 ≤ (Agrid.card:ℝ) ∧ (Agrid.card:ℝ) ≤ (14*σ/c)*(U:ℝ)+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((Agrid.filter (fun k => Q ≤ (r k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f y) (m i)/6
+      let ℓ := fun i => deriv (f y) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := Agrid.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈Agrid, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈Agrid, ‖∑ n∈Finset.Ioc (L i) (L i+Hlen i),(𝐞 ((f y) n):ℂ)‖) ≤
+          C*((∑ i∈Agrid.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(Hlen i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2)))) := by
+  have hσp : 0 < σ := (mul_pos (by norm_num) hJ).trans_le hσ
+  obtain ⟨B,hB,C,hC,hentry⟩ := positive_difference_selected_reference_fourier hσp hc hJ
+  refine ⟨B,hB,C,hC,?_⟩
+  intro F N η T M R Q hN hη hηmax hf hbound htests hnegative hT hM hR hRQ hQN
+    hNR hNsquare hlarge hlargeGap hphase hquartic
+  obtain ⟨hbuffer,hfourBudget,hquadBudget⟩ := positive_difference_fourier_budgets hJ hσ
+    (by exact_mod_cast hN) (zero_lt_one.trans_le hR) (hRQ.trans hQN) hNR hNsquare hquartic
+  exact hentry F N η T M R Q (by omega) hη hηmax hf hbound htests hnegative
+    hT hM hR hRQ hQN hNR hNsquare hlarge hlargeGap hphase hbuffer hfourBudget hquadBudget
+
+/-- A sufficiently small curvature range and lower-left action force
+an integral unimodular homography to be exactly lower triangular.
+No matrix-type conclusion is assumed. -/
+theorem small_curvature_small_action_lower_triangular
+    (a b c d : ℤ) {h h₁ : ℝ}
+    (hdet : a*d-b*c=1)
+    (hh : |h| ≤ 1/6) (hh₁ : |h₁| ≤ 1/6)
+    (haction : |(c:ℝ)*h| ≤ 1/4)
+    (ht : (1:ℝ)/2 ≤ (c:ℝ)*h+d ∧ (c:ℝ)*h+d ≤ 2)
+    (hmap : ((a:ℝ)*h+b)/((c:ℝ)*h+d)=h₁) :
+    a=1 ∧ b=0 ∧ d=1 ∧ h₁=h/((c:ℝ)*h+1) := by
+  let t : ℝ := (c:ℝ)*h+d
+  have htp : 0 < t := by dsimp only [t]; linarith only [ht.1]
+  have hact := abs_le.mp haction
+  have hdpos : 0 < d := by
+    exact_mod_cast (show (0:ℝ) < d by linarith only [ht.1,hact.2])
+  have hdthree : d < 3 := by
+    exact_mod_cast (show (d:ℝ) < 3 by linarith only [ht.2,hact.1])
+  have hdle : d ≤ 2 := by omega
+  have hdabs : |(d:ℝ)| ≤ 2 := by
+    rw [abs_of_pos (by exact_mod_cast hdpos)]
+    exact_mod_cast hdle
+  have hdetR : (a:ℝ)*d-(b:ℝ)*c=1 := by exact_mod_cast hdet
+  have hmapR : (a:ℝ)*h+b=h₁*t := (div_eq_iff htp.ne').mp hmap
+  have hprod : (b:ℝ)*t=h₁*(d:ℝ)*t-h := by
+    have he := congrArg (fun w : ℝ => w*(d:ℝ)) hmapR
+    have he' := congrArg (fun w : ℝ => w*h) hdetR
+    dsimp only [t] at *
+    nlinarith only [he,he']
+  have hb : (b:ℝ)=h₁*(d:ℝ)-h/t := by
+    calc
+      _ = (h₁*(d:ℝ)*t-h)/t := (eq_div_iff htp.ne').mpr hprod
+      _ = _ := by field_simp
+  have hfrac : |h|/t ≤ (1:ℝ)/3 := by
+    apply (div_le_iff₀ htp).mpr
+    change (1:ℝ)/2 ≤ t ∧ t ≤ 2 at ht
+    linarith only [hh,ht.1]
+  have hbabs : |(b:ℝ)| ≤ 2/3 := by
+    rw [hb]
+    calc
+      _ ≤ |h₁*(d:ℝ)|+|h/t| := abs_sub _ _
+      _ = |h₁| * |(d:ℝ)|+|h|/t := by rw [abs_mul,abs_div,abs_of_pos htp]
+      _ ≤ (1/6:ℝ)*2+1/3 :=
+        add_le_add (mul_le_mul hh₁ hdabs (abs_nonneg _) (by norm_num)) hfrac
+      _ = _ := by norm_num
+  have hb0 : b=0 := Int.abs_lt_one_iff.mp
+    (by exact_mod_cast (show |(b:ℝ)| < 1 by linarith only [hbabs]))
+  have had : a*d=1 := by simpa only [hb0,zero_mul,sub_zero] using hdet
+  have hapos : 0 < a := by nlinarith only [had,hdpos]
+  have hd1 : d=1 := by nlinarith only [had,hdpos,hapos]
+  have ha1 : a=1 := by simpa only [hd1,mul_one] using had
+  refine ⟨ha1,hb0,hd1,?_⟩
+  simpa only [ha1,hb0,hd1,Int.cast_one,Int.cast_zero,one_mul,add_zero] using hmap.symm
+
+/-- The small-curvature/small-action part of the actual matrix family
+consumes the proved reciprocal block count. Its lower-triangular shape
+is derived from scalar phase bounds and integral unimodularity. -/
+theorem positive_difference_small_action_block_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ η₀ a C : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z : ℝ) (a₀ b₀ c₀ d₀ : ℤ)
+        (S : Finset ℤ) (xa xb : ℤ → ℝ),
+      0 < η → η ≤ η₀ → ya ∈ Icc (1:ℝ) 2 → yb ∈ Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ →
+      a₀*d₀-b₀*c₀=1 →
+      (3*U/σ)*T/(2*M^2) ≤ 1/6 →
+      |(c₀:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ 1/4 →
+      ((yb-ya,T*(c₀:ℝ)/(2*M^2)):ℝ × ℝ) ≠ 0 → |yb-ya| < a →
+      (∀ k ∈ S, Z+(k:ℝ)*N ≤ xa k ∧ xa k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ k ∈ S, xa k ∈ Icc M (2*M) ∧ xb k ∈ Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let h := fun y z => iteratedDeriv 2 (f y) z/2
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ k ∈ S, (1:ℝ)/2 ≤ (c₀:ℝ)*h ya (xa k)+d₀ ∧
+        (c₀:ℝ)*h ya (xa k)+d₀ ≤ 2) →
+      (∀ k ∈ S, ((a₀:ℝ)*h ya (xa k)+b₀)/((c₀:ℝ)*h ya (xa k)+d₀)=h yb (xb k)) →
+      (∀ k ∈ S, |μ yb (xb k)/μ ya (xa k)*((c₀:ℝ)*h ya (xa k)+d₀)^3-1| ≤ Δ) →
+      let R := max 1 (max (3*U/σ) (2*σ/c))
+      (S.card:ℝ) ≤ C*(1+(2*σ/c)*R^12*(Δ+1/M)*M/
+        (N*‖((yb-ya,T*(c₀:ℝ)/(2*M^2)):ℝ × ℝ)‖)) := by
+  obtain ⟨η₀,a,C,hη₀,hηcap,ha,hC,hcount⟩ :=
+    positive_difference_physical_lower_block_count hσ hc hU
+  refine ⟨η₀,a,C,hη₀,hηcap,ha,hC,?_⟩
+  intro F η ya yb Δ T M N Z a₀ b₀ c₀ d₀ S xa xb hη hηsmall hya hyb hf hbound htests
+    hT hM hN hΔ hdet hcurvSmall hactionSmall hdisp hsmall hwindow hpoints
+    f h μ ht hmap hthird R
+  have hηmax : η ≤ 1/8 := hηsmall.trans hηcap
+  have hMp : 0 < M := by linarith only [hM]
+  let Hcurv := (3*U/σ)*T/(2*M^2)
+  have hcurv y z (hy : y∈Icc (1:ℝ) 2) (hz : z∈Icc M (2*M)) :
+      |h y z| ≤ Hcurv := by
+    have hx : z/M∈Icc (3/4:ℝ) (9/4) := by
+      constructor
+      · apply (le_div_iff₀ hMp).mpr
+        linarith only [hz.1,hMp]
+      · apply (div_le_iff₀ hMp).mpr
+        linarith only [hz.2,hMp]
+    have hywide : y∈Icc (1/2:ℝ) 3 :=
+      ⟨by linarith only [hy.1],by linarith only [hy.2]⟩
+    have hxpos : 0 < z/M := by linarith only [hx.1]
+    have hspos : 0 < z/M+η*y := add_pos hxpos (mul_pos hη (by linarith only [hy.1]))
+    have hFx : ContDiffAt ℝ 2 F (z/M) :=
+      (hf _ hxpos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)
+    have hFz : ContDiffAt ℝ 2 (fun u => F (u+η*y)) (z/M) :=
+      ((hf _ hspos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)).comp
+        (z/M) (contDiffAt_id.add contDiffAt_const)
+    have hu := positive_jets_difference_mixed_upper F hσ hU hη hηmax hx hywide
+      hf hbound 2 0 (by norm_num) (by norm_num)
+    simp only [iteratedDeriv_zero] at hu
+    rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu
+    have hd := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hMp
+      (hMp.trans_le hz.1) (mul_nonneg hη.le (by linarith only [hy.1])) hf 2
+    dsimp only [h,f]
+    rw [hd,abs_div,abs_mul,abs_of_pos (div_pos hT (pow_pos hMp 2))]
+    rw [abs_of_pos (by norm_num : (0:ℝ) < 2)]
+    calc
+      _ ≤ (T/M^2)*(3*U/σ)/2 :=
+        div_le_div_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hu (by positivity)) (by norm_num)
+      _ = Hcurv := by dsimp only [Hcurv]; ring
+  have hform k (hk : k∈S) :
+      a₀=1 ∧ b₀=0 ∧ d₀=1 ∧ h yb (xb k)=h ya (xa k)/((c₀:ℝ)*h ya (xa k)+1) := by
+    apply small_curvature_small_action_lower_triangular a₀ b₀ c₀ d₀ hdet
+      ((hcurv ya (xa k) hya (hpoints k hk).1).trans hcurvSmall)
+      ((hcurv yb (xb k) hyb (hpoints k hk).2).trans hcurvSmall)
+      _ (ht k hk) (hmap k hk)
+    rw [abs_mul]
+    exact (mul_le_mul_of_nonneg_left (hcurv ya (xa k) hya (hpoints k hk).1)
+      (abs_nonneg (c₀:ℝ))).trans hactionSmall
+  apply hcount F η ya yb (c₀:ℝ) Δ T M N Z S xa xb hη hηsmall hya hyb
+    hf hbound htests hT hM hN hΔ hdisp hsmall hwindow hpoints
+    (fun k hk => (hform k hk).2.2.2)
+  intro k hk
+  have hh := hthird k hk
+  simpa only [(hform k hk).2.2.1,Int.cast_one] using hh
+
+/-- Reciprocal curvature gives the transposed small-action alternative:
+the same integral homography is exactly upper triangular. -/
+theorem large_curvature_small_action_upper_triangular
+    (a b c d : ℤ) {h h₁ : ℝ}
+    (hdet : a*d-b*c=1) (hh0 : h ≠ 0) (hh₁0 : h₁ ≠ 0)
+    (hh : |1/h| ≤ 1/6) (hh₁ : |1/h₁| ≤ 1/6)
+    (haction : |(b:ℝ)/h| ≤ 1/4)
+    (ht : (1:ℝ)/2 ≤ (b:ℝ)/h+a ∧ (b:ℝ)/h+a ≤ 2)
+    (hmap : ((a:ℝ)*h+b)/((c:ℝ)*h+d)=h₁) :
+    a=1 ∧ c=0 ∧ d=1 ∧ h₁=h+b := by
+  have hdn : (c:ℝ)*h+d ≠ 0 := by
+    intro he
+    rw [he,div_zero] at hmap
+    exact hh₁0 hmap.symm
+  have hnum : (a:ℝ)*h+b ≠ 0 := by
+    intro he
+    rw [he,zero_div] at hmap
+    exact hh₁0 hmap.symm
+  have hmapinv : ((d:ℝ)*(1/h)+c)/((b:ℝ)*(1/h)+a)=1/h₁ := by
+    rw [←hmap]
+    field_simp [hh0,hnum,hdn]
+    ring
+  obtain ⟨hd1,hc0,ha1,_⟩ := small_curvature_small_action_lower_triangular d c b a
+    (by nlinarith only [hdet]) hh hh₁
+    (by simpa only [one_div,div_eq_mul_inv,one_mul] using haction)
+    (by simpa only [one_div,div_eq_mul_inv,one_mul] using ht) hmapinv
+  refine ⟨ha1,hc0,hd1,?_⟩
+  simpa only [ha1,hc0,hd1,Int.cast_one,Int.cast_zero,one_mul,zero_mul,zero_add,div_one]
+    using hmap.symm
+
+/-- Reciprocal small action consumes the existing upper-triangular
+occupied-block estimate. Curvature nonvanishing and reciprocal size are
+derived from the source tests, not supplied as shape assumptions. -/
+theorem positive_difference_reciprocal_small_action_block_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ a C : ℝ, 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z : ℝ) (a₀ b₀ c₀ d₀ : ℤ)
+        (S : Finset ℤ) (xa xb : ℤ → ℝ),
+      0 < η → η ≤ 1/8 → ya ∈ Icc (1:ℝ) 2 → yb ∈ Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ →
+      a₀*d₀-b₀*c₀=1 →
+      4*σ*M^2/(c*T) ≤ 1/6 →
+      |(b₀:ℝ)| * (4*σ*M^2/(c*T)) ≤ 1/4 →
+      ((yb-ya,2*M^2*(b₀:ℝ)/T):ℝ × ℝ) ≠ 0 → |yb-ya| < a →
+      (∀ k ∈ S, Z+(k:ℝ)*N ≤ xa k ∧ xa k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ k ∈ S, xa k ∈ Icc M (2*M) ∧ xb k ∈ Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let h := fun y z => iteratedDeriv 2 (f y) z/2
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ k ∈ S, (1:ℝ)/2 ≤ (b₀:ℝ)/h ya (xa k)+a₀ ∧
+        (b₀:ℝ)/h ya (xa k)+a₀ ≤ 2) →
+      (∀ k ∈ S, ((a₀:ℝ)*h ya (xa k)+b₀)/((c₀:ℝ)*h ya (xa k)+d₀)=h yb (xb k)) →
+      (∀ k ∈ S, |μ yb (xb k)/μ ya (xa k)*((c₀:ℝ)*h ya (xa k)+d₀)^3-1| ≤ Δ) →
+      let R := max 1 (max (3*U/σ) (2*σ/c))
+      (S.card:ℝ) ≤ C*(1+(2*σ/c)*R*(Δ+1/M)*M/
+        (N*‖((yb-ya,2*M^2*(b₀:ℝ)/T):ℝ × ℝ)‖)) := by
+  obtain ⟨a,C,ha,hC,hcount⟩ := positive_difference_physical_triangular_block_count hσ hc hU
+  refine ⟨a,C,ha,hC,?_⟩
+  intro F η ya yb Δ T M N Z a₀ b₀ c₀ d₀ S xa xb hη hηmax hya hyb hf hbound htests
+    hT hM hN hΔ hdet hcurvSmall hactionSmall hdisp hsmall hwindow hpoints
+    f h μ ht hmap hthird R
+  have hMp : 0 < M := by linarith only [hM]
+  let InvScale := 4*σ*M^2/(c*T)
+  let Low := c*T/(4*σ*M^2)
+  have hLow : 0 < Low := by dsimp only [Low]; positivity
+  have hcurv y z (hy : y∈Icc (1:ℝ) 2) (hz : z∈Icc M (2*M)) :
+      h y z ≠ 0 ∧ |1/h y z| ≤ InvScale := by
+    have hx : z/M∈Icc (3/4:ℝ) (9/4) := by
+      constructor
+      · apply (le_div_iff₀ hMp).mpr
+        linarith only [hz.1,hMp]
+      · apply (div_le_iff₀ hMp).mpr
+        linarith only [hz.2,hMp]
+    have hywide : y∈Icc (1/2:ℝ) 3 :=
+      ⟨by linarith only [hy.1],by linarith only [hy.2]⟩
+    have hxpos : 0 < z/M := by linarith only [hx.1]
+    have hspos : 0 < z/M+η*y := add_pos hxpos (mul_pos hη (by linarith only [hy.1]))
+    have hFx : ContDiffAt ℝ 2 F (z/M) :=
+      (hf _ hxpos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)
+    have hFz : ContDiffAt ℝ 2 (fun u => F (u+η*y)) (z/M) :=
+      ((hf _ hspos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)).comp
+        (z/M) (contDiffAt_id.add contDiffAt_const)
+    have hu := positive_jets_difference_spatial_lower F hσ hc hη hηmax hx hywide
+      hf htests 2 (by norm_num) (by norm_num)
+    rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu
+    have hd := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hMp
+      (hMp.trans_le hz.1) (mul_nonneg hη.le (by linarith only [hy.1])) hf 2
+    have hlow : Low ≤ |h y z| := by
+      dsimp only [h,f]
+      rw [hd,abs_div,abs_mul,abs_of_pos (div_pos hT (pow_pos hMp 2)),
+        abs_of_pos (by norm_num : (0:ℝ) < 2)]
+      calc
+        Low = (T/M^2)*(c/(2*σ))/2 := by dsimp only [Low]; ring
+        _ ≤ _ := div_le_div_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hu (by positivity)) (by norm_num)
+    refine ⟨abs_pos.mp (hLow.trans_le hlow),?_⟩
+    rw [abs_div,abs_one]
+    calc
+      _ ≤ 1/Low := one_div_le_one_div_of_le hLow hlow
+      _ = InvScale := by dsimp only [Low,InvScale]; field_simp
+  have hform k (hk : k∈S) :
+      a₀=1 ∧ c₀=0 ∧ d₀=1 ∧ h yb (xb k)=h ya (xa k)+b₀ := by
+    have hca := hcurv ya (xa k) hya (hpoints k hk).1
+    have hcb := hcurv yb (xb k) hyb (hpoints k hk).2
+    apply large_curvature_small_action_upper_triangular a₀ b₀ c₀ d₀ hdet hca.1 hcb.1
+      (hca.2.trans hcurvSmall) (hcb.2.trans hcurvSmall) _ (ht k hk) (hmap k hk)
+    have hh := mul_le_mul_of_nonneg_left hca.2 (abs_nonneg (b₀:ℝ))
+    have he : |(b₀:ℝ)/h ya (xa k)|=|(b₀:ℝ)| * |1/h ya (xa k)| := by
+      simp only [div_eq_mul_inv,one_mul,abs_mul]
+    rw [he]
+    exact hh.trans hactionSmall
+  apply hcount F η ya yb (b₀:ℝ) Δ T M N Z S xa xb hη hηmax hya hyb
+    hf hbound htests hT hM hN hΔ hdisp hsmall hwindow hpoints
+    (fun k hk => (hform k hk).2.2.2)
+  intro k hk
+  have hh := hthird k hk
+  simpa only [(hform k hk).2.1,(hform k hk).2.2.1,Int.cast_zero,Int.cast_one,
+    zero_mul,zero_add,one_pow,mul_one] using hh
+
+/-- Literal two-parity point pairs have bounded multiplicity over their
+matrix and first occupied block. Injectivity of the second curvature
+profile fixes its root; the retained offset geometry leaves at most
+three second blocks and four parity choices. -/
+theorem curvature_pair_card_le_matrix_blocks
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (A : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (ha hb : ℝ → ℝ) (za zb : ℤ → ℝ) (D : Set ℝ) {N Z : ℝ}
+    (hN : 0 < N) (hinj : Set.InjOn hb D)
+    (hz : ∀ ij∈P, zb ij.2.1∈D)
+    (hspan : ∀ ij∈P, N ≤ Z+(ij.2.1:ℝ)*N+2*N-(round (zb ij.2.1):ℝ) ∧
+      Z+(ij.2.1:ℝ)*N+2*N-(round (zb ij.2.1):ℝ) ≤ 3*N)
+    (hmap : ∀ ij∈P,
+      ((A ij 0:ℝ)*ha (za ij.1.1)+A ij 1)/
+        ((A ij 2:ℝ)*ha (za ij.1.1)+A ij 3)=hb (zb ij.2.1)) :
+    P.card ≤ 12*(P.image (fun ij => (A ij,ij.1.1))).card := by
+  classical
+  apply Finset.card_le_mul_card_image P 12
+  intro key hkey
+  obtain ⟨ij₀,hij₀,hkey₀⟩ := Finset.mem_image.mp hkey
+  let m : ℝ := round (zb ij₀.2.1)
+  obtain ⟨J,hJ,_hJlow,hJhigh⟩ := physical_grid_interval_card (Z:=Z)
+    (x:=m-N) (z:=m+N) hN (by linarith only [hN])
+  have hJcard : J.card ≤ 3 := by
+    have hh : (J.card:ℝ) ≤ 3 := hJhigh.trans_eq (by field_simp; ring)
+    exact_mod_cast hh
+  let W := (Finset.univ : Finset (Fin 2)) ×ˢ (J ×ˢ (Finset.univ : Finset (Fin 2)))
+  let E := P.filter (fun ij => (A ij,ij.1.1)=key)
+  have hsame ij (hij : ij∈E) : zb ij.2.1=zb ij₀.2.1 := by
+    have hd := Finset.mem_filter.mp hij
+    have hAe : A ij=A ij₀ := (congrArg Prod.fst hd.2).trans (congrArg Prod.fst hkey₀).symm
+    have hke : ij.1.1=ij₀.1.1 := (congrArg Prod.snd hd.2).trans (congrArg Prod.snd hkey₀).symm
+    apply hinj (hz ij hd.1) (hz ij₀ hij₀)
+    rw [←hmap ij hd.1,←hmap ij₀ hij₀,hAe,hke]
+  have hbound : E.card ≤ W.card := by
+    apply Finset.card_le_card_of_injOn (fun ij => (ij.1.2,(ij.2.1,ij.2.2)))
+    · intro ij hij
+      apply Finset.mem_product.mpr
+      refine ⟨Finset.mem_univ _,Finset.mem_product.mpr ⟨?_,Finset.mem_univ _⟩⟩
+      apply (hJ ij.2.1).mpr
+      have hh := hspan ij (Finset.mem_filter.mp hij).1
+      rw [hsame ij hij] at hh
+      change N ≤ Z+(ij.2.1:ℝ)*N+2*N-m ∧ Z+(ij.2.1:ℝ)*N+2*N-m ≤ 3*N at hh
+      constructor <;> linarith only [hh.1,hh.2]
+    · intro u hu v hv he
+      have hku : u.1.1=key.2 := congrArg Prod.snd (Finset.mem_filter.mp hu).2
+      have hkv : v.1.1=key.2 := congrArg Prod.snd (Finset.mem_filter.mp hv).2
+      apply Prod.ext
+      · exact Prod.ext (hku.trans hkv.symm) (congrArg Prod.fst he)
+      · exact Prod.ext (congrArg (fun x => x.2.1) he) (congrArg (fun x => x.2.2) he)
+  have hw : W.card=2*(J.card*2) := by simp only [W,Finset.card_product,Finset.card_univ,Fintype.card_fin]
+  rw [hw] at hbound
+  change E.card ≤ 12
+  omega
+
+/-- Genuine source curvature and the rounded offset lengths consume the
+matrix/block multiplicity estimate. Curvature injectivity and the
+three-block fiber bound are derived from the source data. -/
+theorem positive_difference_pair_card_le_matrix_blocks
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/
+      ((Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3)=h yb (zb ij.2.1)) →
+    P.card ≤ 12*∑ A∈P.image Mat, ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card := by
+  classical
+  intro f h hmap
+  let V := P.image (fun ij => (Mat ij,ij.1.1))
+  have hprojection : P.card ≤ 12*V.card := by
+    have hmono := positive_difference_physical_curvature_strictMono F
+      hσ hc hη hηmax hyb hf hnegative hT hM
+    have hsubset : Icc M (2*M) ⊆ Icc (3*M/4) (9*M/4) := by
+      intro x hx
+      constructor <;> linarith only [hx.1,hx.2,hM]
+    apply curvature_pair_card_le_matrix_blocks (N:=(N:ℝ)) (Z:=(Z:ℝ))
+      P Mat (h ya) (h yb) za zb (Icc M (2*M))
+      (by exact_mod_cast hN) (hmono.injOn.mono hsubset) hz _ hmap
+    intro ij hij
+    have hg := hgeometry ij hij
+    have hlo : (N:ℝ) ≤ Alen ij.2.1 := by exact_mod_cast hg.1
+    have hhi : (Alen ij.2.1:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast hg.2.1
+    have he : (round (zb ij.2.1):ℝ)+(Alen ij.2.1:ℝ)=
+        (Z:ℝ)+(N:ℝ)*ij.2.1+2*(N:ℝ) := by exact_mod_cast hg.2.2
+    constructor <;> nlinarith only [he,hlo,hhi]
+  have hcard : V.card=∑ A∈P.image Mat,
+      ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card := by
+    calc
+      _ = ∑ A∈P.image Mat, (V.filter (fun v => v.1=A)).card := by
+        apply Finset.card_eq_sum_card_fiberwise
+        intro v hv
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hv
+        exact Finset.mem_image.mpr ⟨ij,hij,rfl⟩
+      _ = _ := by
+        apply Finset.sum_congr rfl
+        intro A _
+        have hImage : (V.filter (fun v => v.1=A)).image Prod.snd=
+            (P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1) := by
+          ext k
+          simp only [V,Finset.mem_image,Finset.mem_filter]
+          constructor
+          · rintro ⟨v,⟨⟨ij,hij,he⟩,hvA⟩,hvk⟩
+            refine ⟨ij,⟨hij,?_⟩,?_⟩
+            · rw [←he] at hvA
+              exact hvA
+            · rw [←he] at hvk
+              exact hvk
+          · rintro ⟨ij,⟨hij,hA⟩,hk⟩
+            exact ⟨(Mat ij,ij.1.1),⟨⟨ij,hij,rfl⟩,hA⟩,hk⟩
+        rw [←hImage]
+        symm
+        apply Finset.card_image_of_injOn
+        intro x hx y hy he
+        exact Prod.ext ((Finset.mem_filter.mp hx).2.trans (Finset.mem_filter.mp hy).2.symm) he
+  exact hprojection.trans_eq (congrArg (fun n : ℕ => 12*n) hcard)
+
+/-- Rounded minor-arc offsets control the multiplicity when original
+grid labels are replaced by physical floor blocks. This is a geometric
+bound, not a supplied index-multiplicity certificate. -/
+theorem rounded_offset_floor_block_count
+    (I : Finset ℤ) (z : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ) (W : ℝ)
+    (hN : 0 < N)
+    (hgeometry : ∀ k∈I, N ≤ Alen k ∧ Alen k ≤ 3*N ∧
+      round (z k)+(Alen k:ℤ)=Z+(N:ℤ)*k+2*(N:ℤ)) :
+    I.card ≤ 5*(I.image (fun k => ⌊(z k-W)/(N:ℝ)⌋)).card := by
+  classical
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hN1 : (1:ℝ) ≤ N := by exact_mod_cast hN
+  apply Finset.card_le_mul_card_image I 5
+  intro j _
+  let lower := W+(j:ℝ)*N-(N:ℝ)-1/2
+  let upper := W+((j:ℝ)+1)*N+(N:ℝ)+1/2
+  obtain ⟨J,hJ,_hJlow,hJhigh⟩ := physical_grid_interval_card (N:=(N:ℝ)) (Z:=(Z:ℝ))
+    (x:=lower) (z:=upper) hNp (by dsimp only [lower,upper]; nlinarith only [hNp])
+  have hJcard : J.card ≤ 5 := by
+    have hwidth : upper-lower ≤ 4*(N:ℝ) := by
+      dsimp only [upper,lower]
+      nlinarith only [hN1]
+    have hd : (upper-lower)/(N:ℝ) ≤ 4 := (div_le_iff₀ hNp).mpr hwidth
+    have hh : (J.card:ℝ) ≤ 5 := by linarith only [hJhigh,hd]
+    exact_mod_cast hh
+  apply (Finset.card_le_card ?_).trans hJcard
+  intro k hk
+  have hkI := (Finset.mem_filter.mp hk).1
+  have hklabel := (Finset.mem_filter.mp hk).2
+  change ⌊(z k-W)/(N:ℝ)⌋=j at hklabel
+  have hlo := Int.floor_le ((z k-W)/(N:ℝ))
+  have hhi := Int.lt_floor_add_one ((z k-W)/(N:ℝ))
+  rw [hklabel] at hlo hhi
+  have hzl := (le_div_iff₀ hNp).mp hlo
+  have hzu := (div_lt_iff₀ hNp).mp hhi
+  have hr := abs_le.mp (abs_sub_round (z k))
+  have hg := hgeometry k hkI
+  have hAlo : (N:ℝ) ≤ Alen k := by exact_mod_cast hg.1
+  have hAhi : (Alen k:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast hg.2.1
+  have he : (round (z k):ℝ)+(Alen k:ℝ)=(Z:ℝ)+(N:ℝ)*k+2*(N:ℝ) := by
+    exact_mod_cast hg.2.2
+  apply (hJ k).mpr
+  dsimp only [lower,upper]
+  constructor <;> nlinarith only [hzl,hzu,hr.1,hr.2,hAlo,hAhi,he]
+
+/-- Actual two-parity source pairs reduce to the physical occupied blocks
+used by the analytic matrix counts. Both finite multiplicity losses are
+proved from the original rounded-offset witnesses. -/
+theorem positive_difference_pair_card_le_physical_blocks
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA Alen : ℤ → ℕ) (N : ℕ) (Za Z : ℤ) (W : ℝ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/
+      ((Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3)=h yb (zb ij.2.1)) →
+    P.card ≤ 60*∑ A∈P.image Mat,
+      ((P.filter (fun ij => Mat ij=A)).image (fun ij => ⌊(za ij.1.1-W)/(N:ℝ)⌋)).card := by
+  classical
+  intro f h hmap
+  have hfirst := positive_difference_pair_card_le_matrix_blocks P Mat F za zb Alen N Z
+    hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometry hmap
+  have hper (A : Fin 4 → ℤ) :
+      ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card ≤
+        5*((P.filter (fun ij => Mat ij=A)).image (fun ij => ⌊(za ij.1.1-W)/(N:ℝ)⌋)).card := by
+    have hh := rounded_offset_floor_block_count
+      ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)) za AlenA N Za W hN
+      (by
+        intro k hk
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hk
+        exact hgeometryA ij (Finset.mem_filter.mp hij).1)
+    simpa only [Finset.image_image] using hh
+  calc
+    _ ≤ 12*∑ A∈P.image Mat, ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card := hfirst
+    _ ≤ 12*∑ A∈P.image Mat,
+        5*((P.filter (fun ij => Mat ij=A)).image (fun ij => ⌊(za ij.1.1-W)/(N:ℝ)⌋)).card :=
+      Nat.mul_le_mul_left 12 (Finset.sum_le_sum (fun A _ => hper A))
+    _ = _ := by rw [←Finset.mul_sum]; ring
+
+/-- Actual source pairs in the large-lower-left-entry branch consume the
+existing analytic and arithmetic matrix sum. Physical occupied blocks
+and their point witnesses are constructed from the literal pair set. -/
+theorem positive_difference_large_entry_pair_count
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+    (N : ℕ) (Za Zb : ℤ) {σ c U η ya yb Δ T M R Gamma : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hya : ya∈Icc (1:ℝ) 2) (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 2 ≤ M) (hN : 0 < N)
+    (hΔ : 0 ≤ Δ) (hGamma : 0 ≤ Gamma) (hphase : T*(N:ℝ)*R^2=M^3)
+    (hpoints : ∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometryB : ∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ))
+    (hdet : ∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1)
+    (hgamma : ∀ ij∈P, Mat ij 2 ≠ 0 ∧ |(Mat ij 2:ℝ)| ≤ Gamma)
+    (hlarge : ∀ ij∈P, 16*(3*U/σ)*M^2 ≤ |(Mat ij 2:ℝ)| * (c/(2*σ))^2*T) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+    let t := fun ij => (Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/t ij=h yb (zb ij.2.1)) →
+    (∀ ij∈P, (1:ℝ)/2 ≤ t ij ∧ t ij ≤ 2) →
+    (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)*(t ij)^3-1| ≤ Δ) →
+    let B := max 1 (max (3*U/σ) (2*σ/c))
+    let Vbound := 3*U*T/(2*σ*M^2)
+    let Error := 8*B*(Δ+5/M)*R^2/(c/(2*σ))^2
+    (P.card:ℝ) ≤ 120*(2*Gamma+1)*(2*Vbound+5)^2*(Gamma+Error) := by
+  classical
+  intro f h μ t hmap ht hthird B Vbound Error
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hMp : 0 < M := by linarith only [hM]
+  let bin := fun ij : (ℤ × Fin 2) × (ℤ × Fin 2) => ⌊za ij.1.1/(N:ℝ)⌋
+  let S := P.image Mat
+  let blocks := fun A => (P.filter (fun ij => Mat ij=A)).image bin
+  have hex A k (hk : k∈blocks A) : ∃ ij, ij∈P ∧ Mat ij=A ∧ bin ij=k := by
+    obtain ⟨ij,hij,he⟩ := Finset.mem_image.mp hk
+    exact ⟨ij,(Finset.mem_filter.mp hij).1,(Finset.mem_filter.mp hij).2,he⟩
+  let pick := fun A k => if hk : k∈blocks A then Classical.choose (hex A k hk) else ((0,0),(0,0))
+  have hpick A k (hk : k∈blocks A) :
+      pick A k∈P ∧ Mat (pick A k)=A ∧ bin (pick A k)=k := by
+    dsimp only [pick]
+    rw [dif_pos hk]
+    exact Classical.choose_spec (hex A k hk)
+  let xa := fun A k => za (pick A k).1.1
+  let xb := fun A k => zb (pick A k).2.1
+  have hoccupied A (hA : A∈S) : (blocks A).Nonempty := by
+    obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hA
+    exact ⟨bin ij,Finset.mem_image.mpr ⟨ij,Finset.mem_filter.mpr ⟨hij,rfl⟩,rfl⟩⟩
+  have hwindow A k (hk : k∈blocks A) :
+      (0:ℝ)+(k:ℝ)*N ≤ xa A k ∧ xa A k ≤ 0+((k:ℝ)+1)*N := by
+    have hh := (hpick A k hk).2.2
+    change ⌊xa A k/(N:ℝ)⌋=k at hh
+    have hlo := Int.floor_le (xa A k/(N:ℝ))
+    have hhi := Int.lt_floor_add_one (xa A k/(N:ℝ))
+    rw [hh] at hlo hhi
+    have hl := (le_div_iff₀ hNp).mp hlo
+    have hu := (div_lt_iff₀ hNp).mp hhi
+    constructor <;> linarith only [hl,hu]
+  have hsum := positive_difference_paired_matrix_block_sum F S blocks xa xb
+    (fun _ => ya) (fun _ => yb) (fun _ => 0)
+    hσ hc hU hη hηmax (fun _ _ => hya) (fun _ _ => hyb)
+    hf hbound htests hnegative hT hM hNp hΔ hGamma hphase
+    (by intro A hA; obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hA; exact hdet ij hij)
+    (by intro A hA; obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hA; exact hgamma ij hij)
+    (by intro A hA; obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hA; exact hlarge ij hij)
+    hoccupied
+    (fun A _ k hk => hpoints (pick A k) (hpick A k hk).1)
+    (fun A _ k hk => hwindow A k hk)
+    (by
+      intro A _ k hk
+      have hh := hmap (pick A k) (hpick A k hk).1
+      dsimp only [t] at hh
+      rw [(hpick A k hk).2.1] at hh
+      exact hh)
+    (by
+      intro A _ k hk
+      have hh := ht (pick A k) (hpick A k hk).1
+      dsimp only [t] at hh
+      rw [(hpick A k hk).2.1] at hh
+      exact hh)
+    (by
+      intro A _ k hk
+      have hh := hthird (pick A k) (hpick A k hk).1
+      dsimp only [t] at hh
+      rw [(hpick A k hk).2.1] at hh
+      exact hh)
+  have hcard := positive_difference_pair_card_le_physical_blocks P Mat F za zb
+    AlenA AlenB N Za Zb 0 hσ hc hη hηmax hyb hf hnegative hT hMp hN
+    (fun ij hij => (hpoints ij hij).2) hgeometryA hgeometryB hmap
+  have hcardNat : P.card ≤ 60*∑ A∈S, (blocks A).card := by
+    simpa only [S,blocks,bin,sub_zero] using hcard
+  have hcardR : (P.card:ℝ) ≤ 60*∑ A∈S, ((blocks A).card:ℝ) := by
+    exact_mod_cast hcardNat
+  have hh := hcardR.trans (mul_le_mul_of_nonneg_left hsum (by norm_num : (0:ℝ) ≤ 60))
+  convert hh using 1
+  dsimp only [B,Vbound,Error]
+  ring
+
+/-- Identity homographies have the diagonal-size bound on the literal
+two-parity source pair set. The second root is fixed by genuine source
+curvature; rounded-offset geometry controls repeated grid labels. -/
+theorem positive_difference_identity_pair_count
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, h ya (za ij.1.1)=h yb (zb ij.2.1)) →
+    P.card ≤ 12*(P.image (fun ij => ij.1.1)).card := by
+  classical
+  intro f h hsame
+  let Id : Fin 4 → ℤ := ![1,0,0,1]
+  have hh := positive_difference_pair_card_le_matrix_blocks (ya:=ya) P (fun _ => Id)
+    F za zb Alen N Z hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometry
+    (by
+      intro ij hij
+      simpa [Id,h,f] using hsame ij hij)
+  by_cases he : P.Nonempty
+  · have himage : P.image (fun _ => Id)={Id} := Finset.image_const he Id
+    simpa [himage] using hh
+  · have hzP : P=∅ := Finset.not_nonempty_iff_eq_empty.mp he
+    simp only [hzP,Finset.card_empty,Finset.image_empty,mul_zero,le_refl]
+
+/-- Huxley's small-entry trace-two step (Section 10): narrow actual
+numerator and denominator ratios, together with bounded action, force
+an integral unimodular homography to be parabolic. -/
+theorem bounded_action_narrow_ratios_trace_two
+    (a b c d : ℤ) {x y H L : ℝ}
+    (hdet : a*d-b*c=1) (hx0 : x ≠ 0)
+    (hx : |x| ≤ H) (hy : |y| ≤ H)
+    (haction : |(c:ℝ)| * H ≤ L)
+    (hmap : ((a:ℝ)*x+b)/((c:ℝ)*x+d)=y)
+    (hden : |((c:ℝ)*x+d)-1| ≤ 1/(8*(L+3)))
+    (hnum : |((a:ℝ)*x+b)/x-1| ≤ 1/(8*(L+3))) :
+    a+d=2 ∧ (a-1)^2= -b*c := by
+  let θ : ℝ := (c:ℝ)*x+d
+  let φ : ℝ := ((a:ℝ)*x+b)/x
+  have hθ : |θ-1| ≤ 1/(8*(L+3)) := hden
+  have hφ : |φ-1| ≤ 1/(8*(L+3)) := hnum
+  have hH : 0 ≤ H := (abs_nonneg x).trans hx
+  have hL : 0 ≤ L := (mul_nonneg (abs_nonneg (c:ℝ)) hH).trans haction
+  have hLp : 0 < L+3 := by linarith only [hL]
+  have hε : 1/(8*(L+3)) ≤ (1:ℝ)/24 :=
+    one_div_le_one_div_of_le (by norm_num) (by linarith only [hL])
+  have hθbounds := abs_le.mp (hθ.trans hε)
+  have hdetR : (a:ℝ)*d-(b:ℝ)*c=1 := by exact_mod_cast hdet
+  have hentries := TaoTrudgianYang2025.bourgain_mobius_entry_bounds hdetR
+    (by dsimp only [θ] at hθbounds; linarith only [hθbounds.1])
+    (by dsimp only [θ] at hθbounds; linarith only [hθbounds.2]) hmap hx hy
+  have ha : |1-(a:ℝ)| ≤ L+3 := by
+    calc
+      _ ≤ |(1:ℝ)|+|(a:ℝ)| := abs_sub _ _
+      _ ≤ L+3 := by norm_num only [abs_one]; linarith only [hentries.1,haction]
+  have hd : |1-(d:ℝ)| ≤ L+3 := by
+    calc
+      _ ≤ |(1:ℝ)|+|(d:ℝ)| := abs_sub _ _
+      _ ≤ L+3 := by norm_num only [abs_one]; linarith only [hentries.2,haction]
+  have hid : θ*(a:ℝ)+φ*(d:ℝ)=1+θ*φ := by
+    dsimp only [θ,φ]
+    field_simp [hx0]
+    nlinarith only [congrArg (fun w : ℝ => w*x) hdetR]
+  have h1 : |(θ-1)*(1-(a:ℝ))| ≤ 1/8 := by
+    rw [abs_mul]
+    exact (mul_le_mul hθ ha (abs_nonneg _) (by positivity)).trans_eq (by field_simp)
+  have h2 : |(φ-1)*(1-(d:ℝ))| ≤ 1/8 := by
+    rw [abs_mul]
+    exact (mul_le_mul hφ hd (abs_nonneg _) (by positivity)).trans_eq (by field_simp)
+  have h3 : |(θ-1)*(φ-1)| ≤ 1/576 := by
+    rw [abs_mul]
+    exact (mul_le_mul (hθ.trans hε) (hφ.trans hε) (abs_nonneg _)
+      (by norm_num)).trans_eq (by norm_num)
+  have he : |((a+d-2:ℤ):ℝ)| < 1 := by
+    push_cast
+    have hb1 := abs_le.mp h1
+    have hb2 := abs_le.mp h2
+    have hb3 := abs_le.mp h3
+    apply abs_lt.mpr
+    constructor <;> nlinarith only [hid,hb1.1,hb1.2,hb2.1,hb2.2,hb3.1,hb3.2]
+  have hz : a+d-2=0 := Int.abs_lt_one_iff.mp (by exact_mod_cast he)
+  refine ⟨by omega,?_⟩
+  have hdform : d=2-a := by omega
+  rw [hdform] at hdet
+  nlinarith only [hdet]
+
+/-- The trace-two test consumes the actual rational curvature homography
+and denominator identity returned by the Fourier-cloud construction.
+Its two small errors are the numerator and denominator band widths. -/
+theorem rational_bounded_action_narrow_bands_trace_two
+    (r s : ℚ) (a b c d : ℤ) {H L : ℝ}
+    (hr : r ≠ 0) (hdet : a*d-b*c=1)
+    (hrange : |(r:ℝ)| ≤ H) (hsrange : |(s:ℝ)| ≤ H)
+    (haction : |(c:ℝ)| * H ≤ L)
+    (hmap : ((a:ℝ)*(r:ℝ)+b)/((c:ℝ)*(r:ℝ)+d)=(s:ℝ))
+    (hdenom : (c:ℝ)*(r:ℝ)+d=(s.den:ℝ)/r.den)
+    (hden : |(s.den:ℝ)/r.den-1| ≤ 1/(8*(L+3)))
+    (hnum : |(s.num:ℝ)/r.num-1| ≤ 1/(8*(L+3))) :
+    a+d=2 ∧ (a-1)^2= -b*c := by
+  have hrR : (r:ℝ) ≠ 0 := by exact_mod_cast hr
+  have hrd : (0:ℝ) < r.den := by exact_mod_cast r.pos
+  have hsd : (0:ℝ) < s.den := by exact_mod_cast s.pos
+  have hdn : (c:ℝ)*(r:ℝ)+d ≠ 0 := by rw [hdenom]; positivity
+  have hmul := (div_eq_iff hdn).mp hmap
+  have hratio : ((a:ℝ)*(r:ℝ)+b)/(r:ℝ)=(s.num:ℝ)/r.num := by
+    rw [hmul,hdenom]
+    simp only [Rat.cast_def]
+    field_simp
+  apply bounded_action_narrow_ratios_trace_two a b c d hdet hrR hrange hsrange
+    haction hmap
+  · simpa only [hdenom] using hden
+  · simpa only [hratio] using hnum
+
+
+/-- Within the narrower action range, the trace-two classification
+forces an actual triangular matrix without any small-curvature
+assumption. This covers the intermediate-curvature branch as well. -/
+theorem narrow_ratios_half_action_triangular
+    (a b c d : ℤ) {x y H : ℝ}
+    (hdet : a*d-b*c=1) (hx0 : x ≠ 0)
+    (hx : |x| ≤ H) (hy : |y| ≤ H)
+    (haction : |(c:ℝ)| * H ≤ 1/2)
+    (hmap : ((a:ℝ)*x+b)/((c:ℝ)*x+d)=y)
+    (hden : |((c:ℝ)*x+d)-1| ≤ 1/32)
+    (hnum : |((a:ℝ)*x+b)/x-1| ≤ 1/32) :
+    a=1 ∧ d=1 ∧ (b=0 ∨ c=0) := by
+  have htrace := bounded_action_narrow_ratios_trace_two a b c d hdet hx0 hx hy
+    (L:=1) (by linarith only [haction]) hmap
+    (by norm_num only [show (8:ℝ)*(1+3)=32 by norm_num]; exact hden)
+    (by norm_num only [show (8:ℝ)*(1+3)=32 by norm_num]; exact hnum)
+  have hact : |(c:ℝ)*x| ≤ 1/2 := by
+    rw [abs_mul]
+    exact (mul_le_mul_of_nonneg_left hx (abs_nonneg _)).trans haction
+  have hdabs : |((d-1:ℤ):ℝ)| < 1 := by
+    push_cast
+    have h1 := abs_le.mp hden
+    have h2 := abs_le.mp hact
+    apply abs_lt.mpr
+    constructor <;> linarith only [h1.1,h1.2,h2.1,h2.2]
+  have hd : d=1 := by
+    have he : d-1=0 := Int.abs_lt_one_iff.mp (by exact_mod_cast hdabs)
+    omega
+  have ha : a=1 := by omega
+  refine ⟨ha,hd,?_⟩
+  apply mul_eq_zero.mp
+  rw [ha,hd] at hdet
+  nlinarith only [hdet]
+
+/-- The bounded-action nontriangular matrices in narrow rational bands
+form a uniformly bounded set. Trace two bounds the lower-left entry
+using integral nonvanishing; the existing arithmetic matrix sum then
+gives an explicit count independent of the physical scales. -/
+theorem bounded_action_narrow_nontriangular_matrix_count
+    (S : Finset (Fin 4 → ℤ)) (x y : (Fin 4 → ℤ) → ℝ) {H L : ℝ}
+    (hL : 0 ≤ L)
+    (hdet : ∀ A∈S, A 0*A 3-A 1*A 2=1)
+    (hnontri : ∀ A∈S, A 1 ≠ 0 ∧ A 2 ≠ 0)
+    (hpoints : ∀ A∈S, x A ≠ 0 ∧ |x A| ≤ H ∧ |y A| ≤ H)
+    (haction : ∀ A∈S, |(A 2:ℝ)| * H ≤ L)
+    (hmap : ∀ A∈S, ((A 0:ℝ)*x A+A 1)/((A 2:ℝ)*x A+A 3)=y A)
+    (hden : ∀ A∈S, |((A 2:ℝ)*x A+A 3)-1| ≤ 1/(8*(L+3)))
+    (hnum : ∀ A∈S, |((A 0:ℝ)*x A+A 1)/x A-1| ≤ 1/(8*(L+3))) :
+    (S.card:ℝ) ≤ (2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2 := by
+  classical
+  have hε : 1/(8*(L+3)) ≤ (1:ℝ)/24 :=
+    one_div_le_one_div_of_le (by norm_num) (by linarith only [hL])
+  have hdata A (hA : A∈S) :
+      |(A 2:ℝ)| ≤ (L+3)^2 ∧
+      |(A 0:ℝ)| ≤ |(A 2:ℝ)| * L+2 ∧
+      |(A 3:ℝ)| ≤ |(A 2:ℝ)| * L+2 := by
+    have hp := hpoints A hA
+    have htr := bounded_action_narrow_ratios_trace_two (A 0) (A 1) (A 2) (A 3)
+      (hdet A hA) hp.1 hp.2.1 hp.2.2 (haction A hA)
+      (hmap A hA) (hden A hA) (hnum A hA)
+    have hdetR : (A 0:ℝ)*A 3-(A 1:ℝ)*A 2=1 := by exact_mod_cast hdet A hA
+    have ht := abs_le.mp ((hden A hA).trans hε)
+    have he := TaoTrudgianYang2025.bourgain_mobius_entry_bounds hdetR
+      (by linarith only [ht.1]) (by linarith only [ht.2])
+      (hmap A hA) hp.2.1 hp.2.2
+    have ha : |(A 0:ℝ)| ≤ L+2 := by linarith only [he.1,haction A hA]
+    have hd : |(A 3:ℝ)| ≤ L+2 := by linarith only [he.2,haction A hA]
+    have hb1 : (1:ℝ) ≤ |(A 1:ℝ)| := by exact_mod_cast Int.one_le_abs (hnontri A hA).1
+    have hc1 : (1:ℝ) ≤ |(A 2:ℝ)| := by exact_mod_cast Int.one_le_abs (hnontri A hA).2
+    have hasub : |(A 0:ℝ)-1| ≤ L+3 := by
+      calc
+        _ ≤ |(A 0:ℝ)|+|(1:ℝ)| := abs_sub _ _
+        _ ≤ L+3 := by rw [abs_one]; linarith only [ha]
+    have hsq := pow_le_pow_left₀ (abs_nonneg ((A 0:ℝ)-1)) hasub 2
+    rw [sq_abs] at hsq
+    have hsqR : ((A 0:ℝ)-1)^2= -(A 1:ℝ)*A 2 := by exact_mod_cast htr.2
+    have hprod := congrArg abs hsqR
+    rw [abs_of_nonneg (sq_nonneg _),abs_mul,abs_neg] at hprod
+    refine ⟨?_,?_,?_⟩
+    · nlinarith only [hb1,hprod,hsq,abs_nonneg (A 2:ℝ)]
+    · nlinarith only [ha,hc1,hL]
+    · nlinarith only [hd,hc1,hL]
+  have hsum := TaoTrudgianYang2025.bourgain_resonance_matrix_weight_sum
+    (X:=L) (Gamma:=(L+3)^2) (W:=0) S hL (sq_nonneg _) (by norm_num)
+    hdet (fun A hA => ⟨(hnontri A hA).2,(hdata A hA).1⟩)
+    (fun A hA => (hdata A hA).2.1) (fun A hA => (hdata A hA).2.2)
+  simpa only [zero_div,add_zero,Finset.sum_const,nsmul_eq_mul,mul_one] using hsum
+
+/-- The bounded-action nontriangular branch has diagonal-size point
+count for the literal two-parity source pairs. Genuine source jets
+supply curvature range and nonvanishing, and actual pair witnesses
+supply the matrix count; neither is an assumed counting certificate. -/
+theorem positive_difference_bounded_action_nontriangular_pair_count
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ)
+    {σ c U η ya yb T M L : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hya : ya∈Icc (1:ℝ) 2) (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hL : 0 ≤ L)
+    (hpoints : ∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ))
+    (hdet : ∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1)
+    (hnontri : ∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0)
+    (haction : ∀ ij∈P, |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let t := fun ij => (Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/t ij=h yb (zb ij.2.1)) →
+    (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+    (∀ ij∈P, |((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/h ya (za ij.1.1)-1| ≤ 1/(8*(L+3))) →
+    (P.card:ℝ) ≤ 12*((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)*
+      ((P.image (fun ij => ij.1.1)).card:ℝ) := by
+  classical
+  intro f h t hmap hden hnum
+  let Hcurv := (3*U/σ)*T/(2*M^2)
+  let Low := c*T/(4*σ*M^2)
+  have hLow : 0 < Low := by dsimp only [Low]; positivity
+  have hcurv y z (hy : y∈Icc (1:ℝ) 2) (hz : z∈Icc M (2*M)) :
+      h y z ≠ 0 ∧ |h y z| ≤ Hcurv := by
+    have hx : z/M∈Icc (3/4:ℝ) (9/4) := by
+      constructor
+      · apply (le_div_iff₀ hM).mpr
+        linarith only [hz.1,hM]
+      · apply (div_le_iff₀ hM).mpr
+        linarith only [hz.2,hM]
+    have hywide : y∈Icc (1/2:ℝ) 3 :=
+      ⟨by linarith only [hy.1],by linarith only [hy.2]⟩
+    have hxpos : 0 < z/M := by linarith only [hx.1]
+    have hspos : 0 < z/M+η*y := add_pos hxpos (mul_pos hη (by linarith only [hy.1]))
+    have hFx : ContDiffAt ℝ 2 F (z/M) :=
+      (hf _ hxpos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)
+    have hFz : ContDiffAt ℝ 2 (fun u => F (u+η*y)) (z/M) :=
+      ((hf _ hspos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)).comp
+        (z/M) (contDiffAt_id.add contDiffAt_const)
+    have hu := positive_jets_difference_mixed_upper F hσ hU hη hηmax hx hywide
+      hf hbound 2 0 (by norm_num) (by norm_num)
+    simp only [iteratedDeriv_zero] at hu
+    have hl := positive_jets_difference_spatial_lower F hσ hc hη hηmax hx hywide
+      hf htests 2 (by norm_num) (by norm_num)
+    rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu hl
+    have hd := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hM
+      (hM.trans_le hz.1) (mul_nonneg hη.le (by linarith only [hy.1])) hf 2
+    have hlow : Low ≤ |h y z| := by
+      dsimp only [h,f]
+      rw [hd,abs_div,abs_mul,abs_of_pos (div_pos hT (pow_pos hM 2)),
+        abs_of_pos (by norm_num : (0:ℝ) < 2)]
+      calc
+        Low = (T/M^2)*(c/(2*σ))/2 := by dsimp only [Low]; ring
+        _ ≤ _ := div_le_div_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hl (by positivity)) (by norm_num)
+    refine ⟨abs_pos.mp (hLow.trans_le hlow),?_⟩
+    dsimp only [h,f]
+    rw [hd,abs_div,abs_mul,abs_of_pos (div_pos hT (pow_pos hM 2)),
+      abs_of_pos (by norm_num : (0:ℝ) < 2)]
+    calc
+      _ ≤ (T/M^2)*(3*U/σ)/2 :=
+        div_le_div_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hu (by positivity)) (by norm_num)
+      _ = Hcurv := by dsimp only [Hcurv]; ring
+  let S := P.image Mat
+  have hex A (hA : A∈S) : ∃ ij, ij∈P ∧ Mat ij=A := Finset.mem_image.mp hA
+  let pick := fun A => if hA : A∈S then Classical.choose (hex A hA) else ((0,0),(0,0))
+  have hpick A (hA : A∈S) : pick A∈P ∧ Mat (pick A)=A := by
+    dsimp only [pick]
+    rw [dif_pos hA]
+    exact Classical.choose_spec (hex A hA)
+  let x := fun A => h ya (za (pick A).1.1)
+  let y := fun A => h yb (zb (pick A).2.1)
+  have hS := bounded_action_narrow_nontriangular_matrix_count (H:=Hcurv) S x y hL
+    (by intro A hA; rw [←(hpick A hA).2]; exact hdet _ (hpick A hA).1)
+    (by intro A hA; rw [←(hpick A hA).2]; exact hnontri _ (hpick A hA).1)
+    (by
+      intro A hA
+      have hp := hpoints _ (hpick A hA).1
+      exact ⟨(hcurv ya _ hya hp.1).1,(hcurv ya _ hya hp.1).2,(hcurv yb _ hyb hp.2).2⟩)
+    (by intro A hA; rw [←(hpick A hA).2]; exact haction _ (hpick A hA).1)
+    (by
+      intro A hA
+      have hh := hmap _ (hpick A hA).1
+      dsimp only [t] at hh
+      rw [(hpick A hA).2] at hh
+      exact hh)
+    (by
+      intro A hA
+      have hh := hden _ (hpick A hA).1
+      dsimp only [t] at hh
+      rw [(hpick A hA).2] at hh
+      exact hh)
+    (by
+      intro A hA
+      have hh := hnum _ (hpick A hA).1
+      rw [(hpick A hA).2] at hh
+      exact hh)
+  have hfirst := positive_difference_pair_card_le_matrix_blocks P Mat F za zb Alen N Z
+    hσ hc hη hηmax hyb hf hnegative hT hM hN
+    (fun ij hij => (hpoints ij hij).2) hgeometry hmap
+  let I := P.image (fun ij => ij.1.1)
+  have hper A : ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card ≤ I.card :=
+    Finset.card_le_card (Finset.image_subset_image (Finset.filter_subset _ _))
+  have hsum : (∑ A∈S, ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card)
+      ≤ S.card*I.card := by
+    calc
+      _ ≤ ∑ A∈S,I.card := Finset.sum_le_sum (fun A _ => hper A)
+      _ = _ := by simp only [Finset.sum_const,smul_eq_mul]
+  have hcard : (P.card:ℝ) ≤ 12*((S.card:ℝ)*(I.card:ℝ)) := by
+    exact_mod_cast hfirst.trans (Nat.mul_le_mul_left 12 hsum)
+  calc
+    _ ≤ 12*((S.card:ℝ)*(I.card:ℝ)) := hcard
+    _ ≤ 12*((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2*(I.card:ℝ)) :=
+      mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_right hS (by positivity)) (by norm_num)
+    _ = _ := by ring
+
+/-- The source physical scale splits every lower-left matrix entry
+between bounded action and the proved analytic large-entry range.
+The cutoff depends only on the genuine jet constants. -/
+theorem source_action_or_large_entry
+    {σ c U T M γ : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hT : 0 < T) (hM : 0 < M) :
+    |γ| * ((3*U/σ)*T/(2*M^2)) ≤ 288*(U/c)^2 ∨
+      16*(3*U/σ)*M^2 ≤ |γ| * (c/(2*σ))^2*T := by
+  by_cases hl : 16*(3*U/σ)*M^2 ≤ |γ| * (c/(2*σ))^2*T
+  · exact Or.inr hl
+  apply Or.inl
+  have hden : 0 < (c/(2*σ))^2*T := by positivity
+  have hv : 0 < (3*U/σ)*T/(2*M^2) := by positivity
+  have hb : |γ| < (16*(3*U/σ)*M^2)/((c/(2*σ))^2*T) := by
+    apply (lt_div_iff₀ hden).mpr
+    nlinarith only [lt_of_not_ge hl]
+  have hh := mul_lt_mul_of_pos_right hb hv
+  have he : (16*(3*U/σ)*M^2)/((c/(2*σ))^2*T)*
+      ((3*U/σ)*T/(2*M^2))=288*(U/c)^2 := by
+    field_simp
+    ring
+  rw [he] at hh
+  exact hh.le
+
+/-- Every nontriangular source pair in the narrow numerator/denominator
+bands is counted by the bounded-action or large-entry branch. The
+physical cutoff is derived; no unclassified intermediate action remains.
+This does not perform the narrow-band partition or the family sum. -/
+theorem positive_difference_narrow_nontriangular_pair_count
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+    (N : ℕ) (Za Zb : ℤ) {σ c U η ya yb Δ T M R Gamma : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hya : ya∈Icc (1:ℝ) 2) (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 2 ≤ M) (hN : 0 < N)
+    (hΔ : 0 ≤ Δ) (hGamma : 0 ≤ Gamma) (hphase : T*(N:ℝ)*R^2=M^3)
+    (hpoints : ∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometryB : ∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ))
+    (hdet : ∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1)
+    (hnontri : ∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0)
+    (hgamma : ∀ ij∈P, |(Mat ij 2:ℝ)| ≤ Gamma) :
+    let L := 288*(U/c)^2
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+    let t := fun ij => (Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/t ij=h yb (zb ij.2.1)) →
+    (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+    (∀ ij∈P, |((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/h ya (za ij.1.1)-1| ≤ 1/(8*(L+3))) →
+    (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)*(t ij)^3-1| ≤ Δ) →
+    let B := max 1 (max (3*U/σ) (2*σ/c))
+    let Vbound := 3*U*T/(2*σ*M^2)
+    let Error := 8*B*(Δ+5/M)*R^2/(c/(2*σ))^2
+    (P.card:ℝ) ≤
+      12*((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)*((P.image (fun ij => ij.1.1)).card:ℝ)+
+      120*(2*Gamma+1)*(2*Vbound+5)^2*(Gamma+Error) := by
+  classical
+  intro L f h μ t hmap hden hnum hthird B Vbound Error
+  have hMp : 0 < M := by linarith only [hM]
+  have hL : 0 ≤ L := by dsimp only [L]; positivity
+  let large := fun ij => 16*(3*U/σ)*M^2 ≤ |(Mat ij 2:ℝ)| * (c/(2*σ))^2*T
+  let Plo := P.filter (fun ij => ¬ large ij)
+  let Phi := P.filter large
+  have hlo ij (hij : ij∈Plo) : ij∈P ∧ ¬ large ij := Finset.mem_filter.mp hij
+  have hhi ij (hij : ij∈Phi) : ij∈P ∧ large ij := Finset.mem_filter.mp hij
+  have hsmall := positive_difference_bounded_action_nontriangular_pair_count
+    (L:=L) Plo Mat F za zb AlenB N Zb hσ hc hU hη hηmax hya hyb hf hbound htests
+    hnegative hT hMp hN hL
+    (fun ij hij => hpoints ij (hlo ij hij).1)
+    (fun ij hij => hgeometryB ij (hlo ij hij).1)
+    (fun ij hij => hdet ij (hlo ij hij).1)
+    (fun ij hij => hnontri ij (hlo ij hij).1)
+    (by
+      intro ij hij
+      exact (source_action_or_large_entry (γ:=(Mat ij 2:ℝ)) hσ hc hU hT hMp).resolve_right
+        (hlo ij hij).2)
+    (fun ij hij => hmap ij (hlo ij hij).1)
+    (fun ij hij => hden ij (hlo ij hij).1)
+    (fun ij hij => hnum ij (hlo ij hij).1)
+  have hε : 1/(8*(L+3)) ≤ (1:ℝ)/24 :=
+    one_div_le_one_div_of_le (by norm_num) (by linarith only [hL])
+  have hbig := positive_difference_large_entry_pair_count Phi Mat F za zb AlenA AlenB
+    N Za Zb hσ hc hU hη hηmax hya hyb hf hbound htests hnegative hT hM hN
+    hΔ hGamma hphase
+    (fun ij hij => hpoints ij (hhi ij hij).1)
+    (fun ij hij => hgeometryA ij (hhi ij hij).1)
+    (fun ij hij => hgeometryB ij (hhi ij hij).1)
+    (fun ij hij => hdet ij (hhi ij hij).1)
+    (fun ij hij => ⟨(hnontri ij (hhi ij hij).1).2,hgamma ij (hhi ij hij).1⟩)
+    (fun ij hij => (hhi ij hij).2)
+    (fun ij hij => hmap ij (hhi ij hij).1)
+    (by
+      intro ij hij
+      have hh := abs_le.mp ((hden ij (hhi ij hij).1).trans hε)
+      change (1:ℝ)/2 ≤ t ij ∧ t ij ≤ 2
+      constructor <;> linarith only [hh.1,hh.2])
+    (fun ij hij => hthird ij (hhi ij hij).1)
+  have hI : ((Plo.image (fun ij => ij.1.1)).card:ℝ) ≤
+      ((P.image (fun ij => ij.1.1)).card:ℝ) := by
+    exact_mod_cast Finset.card_le_card
+      (Finset.image_subset_image (Finset.filter_subset (fun ij => ¬ large ij) P))
+  have hs' := hsmall.trans (mul_le_mul_of_nonneg_left hI
+    (by positivity : (0:ℝ) ≤ 12*((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)))
+  have he : P.card=Plo.card+Phi.card := by
+    simpa only [Plo,Phi,add_comm] using
+      (Finset.card_filter_add_card_filter_not (s:=P) large).symm
+  have heR : (P.card:ℝ)=(Plo.card:ℝ)+(Phi.card:ℝ) := by exact_mod_cast he
+  rw [heR]
+  exact add_le_add hs' hbig
+
+/-- Sum the genuine reciprocal translation weights over an arbitrary
+bounded set of nonzero integers, reusing the existing audited integer
+harmonic estimate. The real cutoff is retained without a hidden ceiling
+loss in its linear term. -/
+theorem integer_translation_weight_sum
+    (S : Finset ℤ) {D W : ℝ} (hD : 0 ≤ D) (hW : 0 ≤ W)
+    (hS : ∀ b∈S, b ≠ 0 ∧ |(b:ℝ)| ≤ D) :
+    ∑ b∈S, (1+W/|(b:ℝ)|) ≤ 2*D+1+2*W*(3+2*Real.log (D+2)) := by
+  classical
+  let H := ⌈D⌉₊
+  have hsub : S ⊆ (Finset.Icc (-(H:ℤ)) (H:ℤ)).erase 0 := by
+    intro b hb
+    apply Finset.mem_erase.mpr
+    refine ⟨(hS b hb).1,Finset.mem_Icc.mpr ?_⟩
+    have hh := abs_le.mp ((hS b hb).2.trans (Nat.le_ceil D))
+    constructor
+    · exact_mod_cast hh.1
+    · exact_mod_cast hh.2
+  have hrec : ∑ b∈S, 1/|(b:ℝ)| ≤ 2*(3+2*Real.log (D+2)) := by
+    have hh := (Finset.sum_le_sum_of_subset_of_nonneg hsub
+      (fun _ _ _ => by positivity : ∀ b∈(Finset.Icc (-(H:ℤ)) (H:ℤ)).erase 0,
+        b∉S → (0:ℝ) ≤ 1/|(b:ℝ)|)).trans
+      (TaoTrudgianYang2025.bourgain_integer_reciprocal_sum H)
+    have hceil : (H:ℝ) < D+1 := Nat.ceil_lt_add_one hD
+    have hlog : Real.log ((H:ℝ)+1) ≤ Real.log (D+2) :=
+      Real.log_le_log (by positivity) (by linarith only [hceil])
+    linarith only [hh,hlog]
+  have hcard : (S.card:ℝ) ≤ 2*D+1 :=
+    integer_card_le_of_abs_sub_le (a:=0) S hD
+      (by intro b hb; simpa only [sub_zero] using (hS b hb).2)
+  calc
+    _ = (S.card:ℝ)+W*(∑ b∈S,1/|(b:ℝ)|) := by
+      rw [Finset.sum_add_distrib,Finset.mul_sum]
+      simp only [Finset.sum_const,nsmul_eq_mul,mul_one,mul_one_div]
+    _ ≤ 2*D+1+W*(2*(3+2*Real.log (D+2))) :=
+      add_le_add hcard (mul_le_mul_of_nonneg_left hrec hW)
+    _ = _ := by ring
+
+/-- The nonzero upper-triangular translations are summed with their
+actual reciprocal weight. The family-parameter neighborhood is retained;
+the bound is uniform in every physical block witness and finite cutoff. -/
+theorem positive_difference_upper_translation_block_sum
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ a C : ℝ, 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z D : ℝ)
+        (S : Finset ℤ) (blocks : ℤ → Finset ℤ) (xa xb : ℤ → ℤ → ℝ),
+      0 < η → η ≤ 1/8 → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ b∈S, b ≠ 0 ∧ |(b:ℝ)| ≤ D) →
+      (∀ b∈S, ∀ k∈blocks b, Z+(k:ℝ)*N ≤ xa b k ∧ xa b k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ b∈S, ∀ k∈blocks b, xa b k∈Icc M (2*M) ∧ xb b k∈Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ b∈S, ∀ k∈blocks b,
+        iteratedDeriv 2 (f yb) (xb b k)/2=iteratedDeriv 2 (f ya) (xa b k)/2+b) →
+      (∀ b∈S, ∀ k∈blocks b, |μ yb (xb b k)/μ ya (xa b k)-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (σ/c)*B*(Δ+1/M)*T/(N*M)
+      ∑ b∈S, ((blocks b).card:ℝ) ≤ C*(2*D+1+2*W*(3+2*Real.log (D+2))) := by
+  obtain ⟨a,C,ha,hC,hcount⟩ := positive_difference_physical_triangular_block_count hσ hc hU
+  refine ⟨a,C,ha,hC,?_⟩
+  intro F η ya yb Δ T M N Z D S blocks xa xb hη hηmax hya hyb hf hbound htests
+    hT hM hN hΔ hD hsmall hS hwindow hpoints f μ hmap hthird B W
+  have hMp : 0 < M := by linarith only [hM]
+  have hW : 0 ≤ W := by dsimp only [W,B]; positivity
+  have hper b (hb : b∈S) : ((blocks b).card:ℝ) ≤ C*(1+W/|(b:ℝ)|) := by
+    have hb0 : (b:ℝ) ≠ 0 := by exact_mod_cast (hS b hb).1
+    have hbp : 0 < |(b:ℝ)| := abs_pos.mpr hb0
+    have hdisp : ((yb-ya,2*M^2*(b:ℝ)/T):ℝ × ℝ) ≠ 0 := by
+      intro he
+      have he2 := congrArg Prod.snd he
+      change 2*M^2*(b:ℝ)/T=0 at he2
+      exact (div_ne_zero (mul_ne_zero (by positivity) hb0) hT.ne') he2
+    have hh := hcount F η ya yb (b:ℝ) Δ T M N Z (blocks b) (xa b) (xb b)
+      hη hηmax hya hyb hf hbound htests hT hM hN hΔ hdisp hsmall
+      (hwindow b hb) (hpoints b hb) (hmap b hb) (hthird b hb)
+    have hnorm : 2*M^2*|(b:ℝ)|/T ≤ ‖((yb-ya,2*M^2*(b:ℝ)/T):ℝ × ℝ)‖ := by
+      have he := norm_snd_le ((yb-ya,2*M^2*(b:ℝ)/T):ℝ × ℝ)
+      simpa only [Real.norm_eq_abs,abs_div,abs_mul,abs_of_pos hT,
+        abs_of_pos (by norm_num : (0:ℝ) < 2),abs_of_nonneg (sq_nonneg M)] using he
+    have hfrac : (2*σ/c)*B*(Δ+1/M)*M/
+        (N*‖((yb-ya,2*M^2*(b:ℝ)/T):ℝ × ℝ)‖) ≤ W/|(b:ℝ)| := by
+      calc
+        _ ≤ (2*σ/c)*B*(Δ+1/M)*M/(N*(2*M^2*|(b:ℝ)|/T)) :=
+          div_le_div_of_nonneg_left (by dsimp only [B]; positivity) (by positivity)
+            (mul_le_mul_of_nonneg_left hnorm hN.le)
+        _ = _ := by dsimp only [W]; field_simp
+    exact hh.trans (mul_le_mul_of_nonneg_left (add_le_add (le_refl 1) hfrac) hC.le)
+  calc
+    _ ≤ ∑ b∈S,C*(1+W/|(b:ℝ)|) := Finset.sum_le_sum hper
+    _ = C*(∑ b∈S,(1+W/|(b:ℝ)|)) := (Finset.mul_sum _ _ _).symm
+    _ ≤ _ := mul_le_mul_of_nonneg_left (integer_translation_weight_sum S hD hW hS) hC.le
+
+/-- The nonzero lower-triangular translations are summed with their
+actual reciprocal weight. The family-parameter neighborhood is retained;
+the bound is uniform in every physical block witness and finite cutoff. -/
+theorem positive_difference_lower_translation_block_sum
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ η₀ a C : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z D : ℝ)
+        (S : Finset ℤ) (blocks : ℤ → Finset ℤ) (xa xb : ℤ → ℤ → ℝ),
+      0 < η → η ≤ η₀ → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ b∈S, b ≠ 0 ∧ |(b:ℝ)| ≤ D) →
+      (∀ b∈S, ∀ k∈blocks b, Z+(k:ℝ)*N ≤ xa b k ∧ xa b k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ b∈S, ∀ k∈blocks b, xa b k∈Icc M (2*M) ∧ xb b k∈Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let h := fun y z => iteratedDeriv 2 (f y) z/2
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ b∈S, ∀ k∈blocks b,
+        h yb (xb b k)=h ya (xa b k)/((b:ℝ)*h ya (xa b k)+1)) →
+      (∀ b∈S, ∀ k∈blocks b, |μ yb (xb b k)/μ ya (xa b k)*((b:ℝ)*h ya (xa b k)+1)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (4*σ/c)*B^12*(Δ+1/M)*M^3/(N*T)
+      ∑ b∈S, ((blocks b).card:ℝ) ≤ C*(2*D+1+2*W*(3+2*Real.log (D+2))) := by
+  obtain ⟨η₀,a,C,hη₀,hηcap,ha,hC,hcount⟩ := positive_difference_physical_lower_block_count hσ hc hU
+  refine ⟨η₀,a,C,hη₀,hηcap,ha,hC,?_⟩
+  intro F η ya yb Δ T M N Z D S blocks xa xb hη hηsmall hya hyb hf hbound htests
+    hT hM hN hΔ hD hsmall hS hwindow hpoints f h μ hmap hthird B W
+  have hMp : 0 < M := by linarith only [hM]
+  have hW : 0 ≤ W := by dsimp only [W,B]; positivity
+  have hper b (hb : b∈S) : ((blocks b).card:ℝ) ≤ C*(1+W/|(b:ℝ)|) := by
+    have hb0 : (b:ℝ) ≠ 0 := by exact_mod_cast (hS b hb).1
+    have hbp : 0 < |(b:ℝ)| := abs_pos.mpr hb0
+    have hdisp : ((yb-ya,T*(b:ℝ)/(2*M^2)):ℝ × ℝ) ≠ 0 := by
+      intro he
+      have he2 := congrArg Prod.snd he
+      change T*(b:ℝ)/(2*M^2)=0 at he2
+      exact (div_ne_zero (mul_ne_zero hT.ne' hb0) (by positivity)) he2
+    have hh := hcount F η ya yb (b:ℝ) Δ T M N Z (blocks b) (xa b) (xb b)
+      hη hηsmall hya hyb hf hbound htests hT hM hN hΔ hdisp hsmall
+      (hwindow b hb) (hpoints b hb) (hmap b hb) (hthird b hb)
+    have hnorm : T*|(b:ℝ)|/(2*M^2) ≤ ‖((yb-ya,T*(b:ℝ)/(2*M^2)):ℝ × ℝ)‖ := by
+      have he := norm_snd_le ((yb-ya,T*(b:ℝ)/(2*M^2)):ℝ × ℝ)
+      simpa only [Real.norm_eq_abs,abs_div,abs_mul,abs_of_pos hT,
+        abs_of_pos (by norm_num : (0:ℝ) < 2),abs_of_nonneg (sq_nonneg M)] using he
+    have hfrac : (2*σ/c)*B^12*(Δ+1/M)*M/
+        (N*‖((yb-ya,T*(b:ℝ)/(2*M^2)):ℝ × ℝ)‖) ≤ W/|(b:ℝ)| := by
+      calc
+        _ ≤ (2*σ/c)*B^12*(Δ+1/M)*M/(N*(T*|(b:ℝ)|/(2*M^2))) :=
+          div_le_div_of_nonneg_left (by dsimp only [B]; positivity) (by positivity)
+            (mul_le_mul_of_nonneg_left hnorm hN.le)
+        _ = _ := by dsimp only [W]; field_simp; ring
+    exact hh.trans (mul_le_mul_of_nonneg_left (add_le_add (le_refl 1) hfrac) hC.le)
+  calc
+    _ ≤ ∑ b∈S,C*(1+W/|(b:ℝ)|) := Finset.sum_le_sum hper
+    _ = C*(∑ b∈S,(1+W/|(b:ℝ)|)) := (Finset.mul_sum _ _ _).symm
+    _ ≤ _ := mul_le_mul_of_nonneg_left (integer_translation_weight_sum S hD hW hS) hC.le
+
+/-- Reindex actual physical block counts by an injective one-parameter
+matrix family. This retains the literal pair set and both rounded-offset
+geometries; no multiplicity bound is supplied. -/
+theorem positive_difference_tagged_pair_card_le_physical_blocks
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (tag : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (A : ℤ → Fin 4 → ℤ) (hA : Function.Injective A)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA Alen : ℤ → ℕ) (N : ℕ) (Za Z : ℤ) (W : ℝ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((A (tag ij) 0:ℝ)*h ya (za ij.1.1)+A (tag ij) 1)/
+      ((A (tag ij) 2:ℝ)*h ya (za ij.1.1)+A (tag ij) 3)=h yb (zb ij.2.1)) →
+    P.card ≤ 60*∑ b∈P.image tag,
+      ((P.filter (fun ij => tag ij=b)).image (fun ij => ⌊(za ij.1.1-W)/(N:ℝ)⌋)).card := by
+  classical
+  intro f h hmap
+  have hh := positive_difference_pair_card_le_physical_blocks
+    P (fun ij => A (tag ij)) F za zb AlenA Alen N Za Z W
+    hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometryA hgeometry hmap
+  have he : P.image (fun ij => A (tag ij))=(P.image tag).image A := by
+    rw [Finset.image_image]
+    rfl
+  rw [he,Finset.sum_image (fun _ _ _ _ h => hA h)] at hh
+  simpa only [hA.eq_iff] using hh
+
+/-- Actual two-parity source pairs with nonzero integral upper translations
+consume the proved logarithmic translation sum. Their occupied physical
+blocks and all witnesses are constructed from the literal pair set. -/
+theorem positive_difference_upper_translation_pair_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ a C : ℝ, 0 < a ∧ 0 < C ∧
+      ∀ (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+        (tag : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+        (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+        (N : ℕ) (Za Zb : ℤ) (η ya yb Δ T M D : ℝ),
+      0 < η → η ≤ 1/8 → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ ij∈P, tag ij ≠ 0 ∧ |(tag ij:ℝ)| ≤ D) →
+      (∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M)) →
+      (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+        round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+        round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h yb (zb ij.2.1)=h ya (za ij.1.1)+tag ij) →
+      (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (σ/c)*B*(Δ+1/M)*T/((N:ℝ)*M)
+      (P.card:ℝ) ≤ 60*C*(2*D+1+2*W*(3+2*Real.log (D+2))) := by
+  obtain ⟨a,C,ha,hC,hcount⟩ := positive_difference_upper_translation_block_sum hσ hc hU
+  refine ⟨a,C,ha,hC,?_⟩
+  intro P tag F za zb AlenA AlenB N Za Zb η ya yb Δ T M D hη hηmax hya hyb
+    hf hbound htests hnegative hT hM hN hΔ hD hsmall htag hpoints
+    hgeometryA hgeometryB f h μ hmap hthird B W
+  classical
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hMp : 0 < M := by linarith only [hM]
+  let S := P.image tag
+  let bin := fun ij : (ℤ × Fin 2) × (ℤ × Fin 2) => ⌊za ij.1.1/(N:ℝ)⌋
+  let blocks := fun b => (P.filter (fun ij => tag ij=b)).image bin
+  have hex b k (hk : k∈blocks b) : ∃ ij, ij∈P ∧ tag ij=b ∧ bin ij=k := by
+    obtain ⟨ij,hij,he⟩ := Finset.mem_image.mp hk
+    exact ⟨ij,(Finset.mem_filter.mp hij).1,(Finset.mem_filter.mp hij).2,he⟩
+  let pick := fun b k => if hk : k∈blocks b then Classical.choose (hex b k hk) else ((0,0),(0,0))
+  have hpick b k (hk : k∈blocks b) :
+      pick b k∈P ∧ tag (pick b k)=b ∧ bin (pick b k)=k := by
+    dsimp only [pick]
+    rw [dif_pos hk]
+    exact Classical.choose_spec (hex b k hk)
+  let xa := fun b k => za (pick b k).1.1
+  let xb := fun b k => zb (pick b k).2.1
+  have hwindow b k (hk : k∈blocks b) :
+      (0:ℝ)+(k:ℝ)*N ≤ xa b k ∧ xa b k ≤ 0+((k:ℝ)+1)*N := by
+    have hh := (hpick b k hk).2.2
+    change ⌊xa b k/(N:ℝ)⌋=k at hh
+    have hlo := Int.floor_le (xa b k/(N:ℝ))
+    have hhi := Int.lt_floor_add_one (xa b k/(N:ℝ))
+    rw [hh] at hlo hhi
+    have hl := (le_div_iff₀ hNp).mp hlo
+    have hu := (div_lt_iff₀ hNp).mp hhi
+    constructor <;> linarith only [hl,hu]
+  have hsum := hcount F η ya yb Δ T M (N:ℝ) 0 D S blocks xa xb
+    hη hηmax hya hyb hf hbound htests hT hM hNp hΔ hD hsmall
+    (by intro b hb; obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hb; exact htag ij hij)
+    (fun b _ k hk => hwindow b k hk)
+    (fun b _ k hk => hpoints _ (hpick b k hk).1)
+    (by
+      intro b _ k hk
+      have hh := hmap _ (hpick b k hk).1
+      rw [(hpick b k hk).2.1] at hh
+      exact hh)
+    (fun b _ k hk => hthird _ (hpick b k hk).1)
+  let Embed := fun b : ℤ => (![1,b,0,1] : Fin 4 → ℤ)
+  have hinj : Function.Injective Embed := by
+    intro b b' he
+    simpa [Embed] using congrFun he 1
+  have hcard := positive_difference_tagged_pair_card_le_physical_blocks
+    (ya:=ya) P tag Embed hinj F za zb AlenA AlenB N Za Zb 0
+    hσ hc hη hηmax hyb hf hnegative hT hMp hN
+    (fun ij hij => (hpoints ij hij).2) hgeometryA hgeometryB
+    (by intro ij hij; simpa [Embed,h,f] using (hmap ij hij).symm)
+  have hcardN : P.card ≤ 60*∑ b∈S,(blocks b).card := by
+    simpa only [S,blocks,bin,sub_zero] using hcard
+  have hcardR : (P.card:ℝ) ≤ 60*∑ b∈S,((blocks b).card:ℝ) := by
+    exact_mod_cast hcardN
+  have hh := hcardR.trans (mul_le_mul_of_nonneg_left hsum (by norm_num : (0:ℝ) ≤ 60))
+  convert hh using 1
+  dsimp only [W,B]
+  ring
+
+/-- Actual two-parity source pairs with nonzero integral lower translations
+consume the proved logarithmic translation sum. Their occupied physical
+blocks and all witnesses are constructed from the literal pair set. -/
+theorem positive_difference_lower_translation_pair_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ η₀ a C : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < C ∧
+      ∀ (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+        (tag : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+        (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+        (N : ℕ) (Za Zb : ℤ) (η ya yb Δ T M D : ℝ),
+      0 < η → η ≤ η₀ → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ ij∈P, tag ij ≠ 0 ∧ |(tag ij:ℝ)| ≤ D) →
+      (∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M)) →
+      (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+        round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+        round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h yb (zb ij.2.1)=h ya (za ij.1.1)/((tag ij:ℝ)*h ya (za ij.1.1)+1)) →
+      (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)*((tag ij:ℝ)*h ya (za ij.1.1)+1)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (4*σ/c)*B^12*(Δ+1/M)*M^3/((N:ℝ)*T)
+      (P.card:ℝ) ≤ 60*C*(2*D+1+2*W*(3+2*Real.log (D+2))) := by
+  obtain ⟨η₀,a,C,hη₀,hηcap,ha,hC,hcount⟩ := positive_difference_lower_translation_block_sum hσ hc hU
+  refine ⟨η₀,a,C,hη₀,hηcap,ha,hC,?_⟩
+  intro P tag F za zb AlenA AlenB N Za Zb η ya yb Δ T M D hη hηsmall hya hyb
+    hf hbound htests hnegative hT hM hN hΔ hD hsmall htag hpoints
+    hgeometryA hgeometryB f h μ hmap hthird B W
+  classical
+  have hηmax : η ≤ 1/8 := hηsmall.trans hηcap
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hMp : 0 < M := by linarith only [hM]
+  let S := P.image tag
+  let bin := fun ij : (ℤ × Fin 2) × (ℤ × Fin 2) => ⌊za ij.1.1/(N:ℝ)⌋
+  let blocks := fun b => (P.filter (fun ij => tag ij=b)).image bin
+  have hex b k (hk : k∈blocks b) : ∃ ij, ij∈P ∧ tag ij=b ∧ bin ij=k := by
+    obtain ⟨ij,hij,he⟩ := Finset.mem_image.mp hk
+    exact ⟨ij,(Finset.mem_filter.mp hij).1,(Finset.mem_filter.mp hij).2,he⟩
+  let pick := fun b k => if hk : k∈blocks b then Classical.choose (hex b k hk) else ((0,0),(0,0))
+  have hpick b k (hk : k∈blocks b) :
+      pick b k∈P ∧ tag (pick b k)=b ∧ bin (pick b k)=k := by
+    dsimp only [pick]
+    rw [dif_pos hk]
+    exact Classical.choose_spec (hex b k hk)
+  let xa := fun b k => za (pick b k).1.1
+  let xb := fun b k => zb (pick b k).2.1
+  have hwindow b k (hk : k∈blocks b) :
+      (0:ℝ)+(k:ℝ)*N ≤ xa b k ∧ xa b k ≤ 0+((k:ℝ)+1)*N := by
+    have hh := (hpick b k hk).2.2
+    change ⌊xa b k/(N:ℝ)⌋=k at hh
+    have hlo := Int.floor_le (xa b k/(N:ℝ))
+    have hhi := Int.lt_floor_add_one (xa b k/(N:ℝ))
+    rw [hh] at hlo hhi
+    have hl := (le_div_iff₀ hNp).mp hlo
+    have hu := (div_lt_iff₀ hNp).mp hhi
+    constructor <;> linarith only [hl,hu]
+  have hsum := hcount F η ya yb Δ T M (N:ℝ) 0 D S blocks xa xb
+    hη hηsmall hya hyb hf hbound htests hT hM hNp hΔ hD hsmall
+    (by intro b hb; obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hb; exact htag ij hij)
+    (fun b _ k hk => hwindow b k hk)
+    (fun b _ k hk => hpoints _ (hpick b k hk).1)
+    (by
+      intro b _ k hk
+      have hh := hmap _ (hpick b k hk).1
+      rw [(hpick b k hk).2.1] at hh
+      exact hh)
+    (by
+      intro b _ k hk
+      have hh := hthird _ (hpick b k hk).1
+      rw [(hpick b k hk).2.1] at hh
+      exact hh)
+  let Embed := fun b : ℤ => (![1,0,b,1] : Fin 4 → ℤ)
+  have hinj : Function.Injective Embed := by
+    intro b b' he
+    simpa [Embed] using congrFun he 2
+  have hcard := positive_difference_tagged_pair_card_le_physical_blocks
+    (ya:=ya) P tag Embed hinj F za zb AlenA AlenB N Za Zb 0
+    hσ hc hη hηmax hyb hf hnegative hT hMp hN
+    (fun ij hij => (hpoints ij hij).2) hgeometryA hgeometryB
+    (by intro ij hij; simpa [Embed,h,f] using (hmap ij hij).symm)
+  have hcardN : P.card ≤ 60*∑ b∈S,(blocks b).card := by
+    simpa only [S,blocks,bin,sub_zero] using hcard
+  have hcardR : (P.card:ℝ) ≤ 60*∑ b∈S,((blocks b).card:ℝ) := by
+    exact_mod_cast hcardN
+  have hh := hcardR.trans (mul_le_mul_of_nonneg_left hsum (by norm_num : (0:ℝ) ≤ 60))
+  convert hh using 1
+  dsimp only [W,B]
+  ring
+
+/-- Equality of physical floor bins gives a relative error whenever
+the first value has the stated nonzero scale, including signed values. -/
+theorem same_scaled_floor_relative_bound {u v Q δ : ℝ}
+    (hQ : 0 < Q) (hδ : 0 < δ) (hu : Q ≤ |u|)
+    (hbin : ⌊u/(δ*Q)⌋=⌊v/(δ*Q)⌋) :
+    |v/u-1| ≤ δ := by
+  have hden : 0 < δ*Q := mul_pos hδ hQ
+  have hup : 0 < |u| := hQ.trans_le hu
+  have hdiff := Int.abs_sub_lt_one_of_floor_eq_floor hbin
+  rw [←sub_div,abs_div,abs_of_pos hden] at hdiff
+  have hd : |v-u| ≤ δ*Q := by
+    have hh := (div_lt_iff₀ hden).mp hdiff
+    simpa only [one_mul,abs_sub_comm u v] using hh.le
+  have he : v/u-1=(v-u)/u := by field_simp [abs_pos.mp hup]
+  rw [he,abs_div]
+  exact (div_le_iff₀ hup).mpr (hd.trans (mul_le_mul_of_nonneg_left hu hδ.le))
+
+
+/-- A floor partition at a relative scale has a scale-independent
+number of occupied colors. This is derived from the actual image
+of the finite source set. -/
+theorem scaled_floor_image_card
+    {ι : Type*} (S : Finset ι) (u : ι → ℝ) {Q δ R : ℝ}
+    (hQ : 0 < Q) (hδ : 0 < δ) (hR : 0 ≤ R)
+    (hu : ∀ i∈S, |u i| ≤ R*Q) :
+    ((S.image (fun i => ⌊u i/(δ*Q)⌋)).card:ℝ) ≤ 2*R/δ+3 := by
+  classical
+  have hden : 0 < δ*Q := mul_pos hδ hQ
+  have hper i (hi : i∈S) : |(⌊u i/(δ*Q)⌋:ℝ)| ≤ R/δ+1 := by
+    have hb : |u i/(δ*Q)| ≤ R/δ := by
+      rw [abs_div,abs_of_pos hden]
+      calc
+        _ ≤ R*Q/(δ*Q) := div_le_div_of_nonneg_right (hu i hi) hden.le
+        _ = _ := by field_simp
+    have hb' := abs_le.mp hb
+    have hlo := Int.floor_le (u i/(δ*Q))
+    have hhi := Int.lt_floor_add_one (u i/(δ*Q))
+    apply abs_le.mpr
+    constructor <;> linarith only [hb'.1,hb'.2,hlo,hhi]
+  have hh := integer_card_le_of_abs_sub_le (a:=0)
+    (S.image (fun i => ⌊u i/(δ*Q)⌋)) (by positivity : (0:ℝ) ≤ R/δ+1)
+    (by
+      intro k hk
+      obtain ⟨i,hi,rfl⟩ := Finset.mem_image.mp hk
+      simpa only [sub_zero] using hper i hi)
+  convert hh using 1
+  ring
+
+/-- Actual dyadic rational curvatures have a finite numerator/denominator
+coloring with controlled relative ratios inside each color. Its color
+count depends on the curvature ratio and requested accuracy, not on Q. -/
+theorem rational_narrow_band_partition
+    {ι : Type*} (S : Finset ι) (r : ι → ℚ) (Q : ℕ) {lambda U δ : ℝ}
+    (hQ : 0 < Q) (hlambda : 0 < lambda) (hU : 0 ≤ U) (hδ : 0 < δ)
+    (hcurv : ∀ i∈S, lambda ≤ |(r i:ℝ)| ∧ |(r i:ℝ)| ≤ U)
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) :
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    ((S.image color).card:ℝ) ≤ (4/δ+3)*(4*U/(lambda*δ)+3) ∧
+      ∀ i∈S, ∀ j∈S, color i=color j →
+        |((r j).den:ℝ)/(r i).den-1| ≤ δ ∧
+        |((r j).num:ℝ)/(r i).num-1| ≤ δ := by
+  classical
+  intro q₀ p₀ color
+  have hQR : (0:ℝ) < Q := by exact_mod_cast hQ
+  have hq₀ : 0 < q₀ := by dsimp only [q₀]; positivity
+  have hp₀ : 0 < p₀ := by dsimp only [p₀]; positivity
+  have hqlo i (hi : i∈S) : q₀ ≤ ((r i).den:ℝ) := by
+    have hh : (Q:ℝ) ≤ 2*((r i).den:ℝ) := by exact_mod_cast (hden i hi).2
+    dsimp only [q₀]
+    linarith only [hh]
+  have hqhi i (hi : i∈S) : ((r i).den:ℝ) ≤ Q := by exact_mod_cast (hden i hi).1
+  have hn i (hi : i∈S) :
+      p₀ ≤ |((r i).num:ℝ)| ∧ |((r i).num:ℝ)| ≤ U*(Q:ℝ) := by
+    have hd : (0:ℝ) < (r i).den := by exact_mod_cast (r i).pos
+    have hl := (hcurv i hi).1
+    have hu := (hcurv i hi).2
+    rw [Rat.cast_def,abs_div,abs_of_pos hd] at hl hu
+    have hl' := (le_div_iff₀ hd).mp hl
+    have hu' := (div_le_iff₀ hd).mp hu
+    constructor
+    · calc
+        p₀ = lambda*q₀ := by dsimp only [p₀,q₀]; ring
+        _ ≤ lambda*((r i).den:ℝ) := mul_le_mul_of_nonneg_left (hqlo i hi) hlambda.le
+        _ ≤ _ := hl'
+    · exact hu'.trans (mul_le_mul_of_nonneg_left (hqhi i hi) hU)
+  have hfirst := scaled_floor_image_card S (fun i => ((r i).den:ℝ))
+    hq₀ hδ (by norm_num : (0:ℝ) ≤ 2)
+    (by
+      intro i hi
+      rw [abs_of_pos (by exact_mod_cast (r i).pos : (0:ℝ) < (r i).den)]
+      have hh := hqhi i hi
+      dsimp only [q₀]
+      linarith only [hh])
+  have hsecond := scaled_floor_image_card (R:=2*U/lambda) S (fun i => ((r i).num:ℝ))
+    hp₀ hδ (div_nonneg (mul_nonneg (by norm_num) hU) hlambda.le)
+    (by
+      intro i hi
+      calc
+        _ ≤ U*(Q:ℝ) := (hn i hi).2
+        _ = (2*U/lambda)*p₀ := by dsimp only [p₀]; field_simp)
+  have hc₁ : ((S.image (fun i => (color i).1)).card:ℝ) ≤ 4/δ+3 := by
+    convert hfirst using 1
+    ring
+  have hc₂ : ((S.image (fun i => (color i).2)).card:ℝ) ≤ 4*U/(lambda*δ)+3 := by
+    convert hsecond using 1
+    ring
+  constructor
+  · have hs : S.image color ⊆
+        (S.image (fun i => (color i).1)) ×ˢ (S.image (fun i => (color i).2)) := by
+      intro v hv
+      obtain ⟨i,hi,rfl⟩ := Finset.mem_image.mp hv
+      exact Finset.mem_product.mpr ⟨Finset.mem_image_of_mem _ hi,Finset.mem_image_of_mem _ hi⟩
+    have hh := Finset.card_le_card hs
+    rw [Finset.card_product] at hh
+    have hhR : ((S.image color).card:ℝ) ≤
+        ((S.image (fun i => (color i).1)).card:ℝ)*
+          ((S.image (fun i => (color i).2)).card:ℝ) := by exact_mod_cast hh
+    exact hhR.trans (mul_le_mul hc₁ hc₂ (by positivity) (by positivity))
+  · intro i hi j _hj he
+    constructor
+    · apply same_scaled_floor_relative_bound hq₀ hδ
+      · simpa only [abs_of_nonneg (Nat.cast_nonneg ((r i).den) : (0:ℝ) ≤ (r i).den)] using hqlo i hi
+      · exact congrArg Prod.fst he
+    · exact same_scaled_floor_relative_bound hp₀ hδ (hn i hi).1 (congrArg Prod.snd he)
+
+/-- The explicit rational-band partition carries its finite twelfth
+moment loss into the actual complex source sum. No narrow-band
+compatibility or unexplained power loss is assumed. -/
+theorem rational_narrow_band_twelfth_partition
+    {ι : Type*} (S : Finset ι) (r : ι → ℚ) (Q : ℕ) {lambda U δ : ℝ}
+    (hQ : 0 < Q) (hlambda : 0 < lambda) (hU : 0 ≤ U) (hδ : 0 < δ)
+    (hcurv : ∀ i∈S, lambda ≤ |(r i:ℝ)| ∧ |(r i:ℝ)| ≤ U)
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) :
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    ((S.image color).card:ℝ) ≤ (4/δ+3)*(4*U/(lambda*δ)+3) ∧
+      (∀ i∈S, ∀ j∈S, color i=color j →
+        |((r j).den:ℝ)/(r i).den-1| ≤ δ ∧
+        |((r j).num:ℝ)/(r i).num-1| ≤ δ) ∧
+      ∀ z : ι → ℂ, ‖∑ i∈S,z i‖^12 ≤
+        ((4/δ+3)*(4*U/(lambda*δ)+3))^11*
+          ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),z i‖^12 := by
+  classical
+  intro q₀ p₀ color
+  have hd := rational_narrow_band_partition S r Q hQ hlambda hU hδ hcurv hden
+  refine ⟨hd.1,hd.2,?_⟩
+  intro z
+  let J := S.image color
+  let V := fun j => S.filter (fun i => color i=j)
+  let g := fun j => ∑ i∈V j,z i
+  have he : (∑ j∈J,g j)=∑ i∈S,z i :=
+    Finset.sum_fiberwise_of_maps_to (fun i hi => Finset.mem_image_of_mem color hi) z
+  have hnorm : ‖∑ i∈S,z i‖ ≤ ∑ j∈J,‖g j‖ := by
+    rw [←he]
+    exact norm_sum_le _ _
+  have hp := pow_le_pow_left₀ (norm_nonneg _) hnorm 12
+  have hholder := Real.rpow_sum_le_const_mul_sum_rpow_of_nonneg J
+    (f:=fun j => ‖g j‖) (p:=(12:ℝ)) (by norm_num) (fun _ _ => norm_nonneg _)
+  have hh : (∑ j∈J,‖g j‖)^12 ≤ (J.card:ℝ)^11*∑ j∈J,‖g j‖^12 := by
+    simpa only [show (12:ℝ)-1=11 by norm_num,Real.rpow_ofNat] using hholder
+  exact (hp.trans hh).trans (mul_le_mul_of_nonneg_right
+    (pow_le_pow_left₀ (by positivity : (0:ℝ) ≤ J.card) hd.1 11)
+    (Finset.sum_nonneg (fun _ _ => by positivity)))
+
+/-- The actual positive-difference half-curvature has the signed-safe
+source lower and upper scales, uniformly across the family. -/
+theorem positive_difference_half_curvature_source_bounds
+    (F : ℝ → ℝ) {σ c U η T M y z : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hT : 0 < T) (hM : 0 < M)
+    (hy : y∈Icc (1:ℝ) 2) (hz : z∈Icc M (2*M))
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    c*T/(4*σ*M^2) ≤ |h y z| ∧ |h y z| ≤ (3*U/σ)*T/(2*M^2) := by
+  intro f h
+  let Hcurv := (3*U/σ)*T/(2*M^2)
+  let Low := c*T/(4*σ*M^2)
+  have hx : z/M∈Icc (3/4:ℝ) (9/4) := by
+    constructor
+    · apply (le_div_iff₀ hM).mpr
+      linarith only [hz.1,hM]
+    · apply (div_le_iff₀ hM).mpr
+      linarith only [hz.2,hM]
+  have hywide : y∈Icc (1/2:ℝ) 3 :=
+    ⟨by linarith only [hy.1],by linarith only [hy.2]⟩
+  have hxpos : 0 < z/M := by linarith only [hx.1]
+  have hspos : 0 < z/M+η*y := add_pos hxpos (mul_pos hη (by linarith only [hy.1]))
+  have hFx : ContDiffAt ℝ 2 F (z/M) :=
+    (hf _ hxpos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)
+  have hFz : ContDiffAt ℝ 2 (fun u => F (u+η*y)) (z/M) :=
+    ((hf _ hspos).of_le (ENat.natCast_le_of_coe_top_le_withTop le_rfl 2)).comp
+      (z/M) (contDiffAt_id.add contDiffAt_const)
+  have hu := positive_jets_difference_mixed_upper F hσ hU hη hηmax hx hywide
+    hf hbound 2 0 (by norm_num) (by norm_num)
+  simp only [iteratedDeriv_zero] at hu
+  have hl := positive_jets_difference_spatial_lower F hσ hc hη hηmax hx hywide
+    hf htests 2 (by norm_num) (by norm_num)
+  rw [iteratedDeriv_div_const,iteratedDeriv_fun_sub hFx hFz,iteratedDeriv_comp_add_const] at hu hl
+  have hd := positive_difference_physical_iteratedDeriv F (T:=T) (σ:=σ) hM
+    (hM.trans_le hz.1) (mul_nonneg hη.le (by linarith only [hy.1])) hf 2
+  have hlow : Low ≤ |h y z| := by
+    dsimp only [h,f]
+    rw [hd,abs_div,abs_mul,abs_of_pos (div_pos hT (pow_pos hM 2)),
+      abs_of_pos (by norm_num : (0:ℝ) < 2)]
+    calc
+      Low = (T/M^2)*(c/(2*σ))/2 := by dsimp only [Low]; ring
+      _ ≤ _ := div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hl (by positivity)) (by norm_num)
+  refine ⟨hlow,?_⟩
+  dsimp only [h,f]
+  rw [hd,abs_div,abs_mul,abs_of_pos (div_pos hT (pow_pos hM 2)),
+    abs_of_pos (by norm_num : (0:ℝ) < 2)]
+  calc
+    _ ≤ (T/M^2)*(3*U/σ)/2 :=
+      div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hu (by positivity)) (by norm_num)
+    _ = Hcurv := by dsimp only [Hcurv]; ring
+
+
+
+/-- The genuine difference-family jets supply every curvature scale in
+the rational-band partition and its twelfth-power loss. The resulting
+color bound depends only on source jet constants and requested accuracy,
+not on T, M, Q, or the chosen phase parameters and roots. -/
+theorem positive_difference_rational_band_twelfth_partition
+    {ι : Type*} (S : Finset ι) (F : ℝ → ℝ)
+    (param z : ι → ℝ) (r : ι → ℚ) (Q : ℕ) {σ c U η T M δ : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hT : 0 < T) (hM : 0 < M) (hQ : 0 < Q) (hδ : 0 < δ)
+    (hparam : ∀ i∈S, param i∈Icc (1:ℝ) 2)
+    (hpoints : ∀ i∈S, z i∈Icc M (2*M))
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ i∈S, h (param i) (z i)=(r i:ℝ)) →
+    let lambda := c*T/(4*σ*M^2)
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    let Cap := (4/δ+3)*(24*U/(c*δ)+3)
+    ((S.image color).card:ℝ) ≤ Cap ∧
+      (∀ i∈S, ∀ j∈S, color i=color j →
+        |((r j).den:ℝ)/(r i).den-1| ≤ δ ∧
+        |((r j).num:ℝ)/(r i).num-1| ≤ δ) ∧
+      ∀ coeff : ι → ℂ, ‖∑ i∈S,coeff i‖^12 ≤ Cap^11*
+        ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),coeff i‖^12 := by
+  intro f h hlevel lambda q₀ p₀ color Cap
+  let Hcurv := (3*U/σ)*T/(2*M^2)
+  let Low := c*T/(4*σ*M^2)
+  have hLow : 0 < Low := by dsimp only [Low]; positivity
+  have hcurv y z (hy : y∈Icc (1:ℝ) 2) (hz : z∈Icc M (2*M)) :
+      Low ≤ |h y z| ∧ |h y z| ≤ Hcurv :=
+    positive_difference_half_curvature_source_bounds F hσ hc hU hη hηmax hT hM
+      hy hz hf hbound htests
+  have hd := rational_narrow_band_twelfth_partition S r Q (U:=Hcurv) hQ hLow
+    (by dsimp only [Hcurv]; positivity) hδ
+    (by
+      intro i hi
+      rw [←hlevel i hi]
+      exact hcurv _ _ (hparam i hi) (hpoints i hi)) hden
+  have hcap : (4/δ+3)*(4*Hcurv/(Low*δ)+3)=Cap := by
+    dsimp only [Hcurv,Low,Cap]
+    field_simp
+    ring
+  dsimp only at hd
+  rw [hcap] at hd
+  exact hd
+
+
+/-- Narrow numerator and denominator ratios classify every triangular
+unimodular matrix and bound its actual translation. Nontriangular
+matrices are retained explicitly as the fourth branch. -/
+theorem narrow_band_matrix_translation_cases
+    (a b c d : ℤ) {x lambda H δ : ℝ}
+    (hlambda : 0 < lambda) (hxlo : lambda ≤ |x|) (hxhi : |x| ≤ H)
+    (hδ : 0 ≤ δ) (hδmax : δ < 1)
+    (hdet : a*d-b*c=1)
+    (hden : |((c:ℝ)*x+d)-1| ≤ δ)
+    (hnum : |((a:ℝ)*x+b)/x-1| ≤ δ) :
+    (a=1 ∧ b=0 ∧ c=0 ∧ d=1) ∨
+    (a=1 ∧ d=1 ∧ c=0 ∧ b≠0 ∧ |(b:ℝ)| ≤ δ*H) ∨
+    (a=1 ∧ d=1 ∧ b=0 ∧ c≠0 ∧ |(c:ℝ)| ≤ δ/lambda) ∨
+    (b≠0 ∧ c≠0) := by
+  have hxabs : 0 < |x| := hlambda.trans_le hxlo
+  have hx : x ≠ 0 := abs_pos.mp hxabs
+  by_cases hc : c=0
+  · have hdabs : |((d-1:ℤ):ℝ)| < 1 := by
+      push_cast
+      simpa only [hc,Int.cast_zero,zero_mul,zero_add] using hden.trans_lt hδmax
+    have hd : d=1 := by
+      have hh := Int.abs_lt_one_iff.mp (by exact_mod_cast hdabs)
+      omega
+    have ha : a=1 := by simpa only [hc,hd,mul_zero,mul_one,sub_zero] using hdet
+    by_cases hb : b=0
+    · exact Or.inl ⟨ha,hb,hc,hd⟩
+    · apply Or.inr ∘ Or.inl
+      refine ⟨ha,hd,hc,hb,?_⟩
+      have he : ((a:ℝ)*x+b)/x-1=(b:ℝ)/x := by rw [ha]; push_cast; field_simp; ring
+      rw [he,abs_div] at hnum
+      calc
+        |(b:ℝ)| ≤ δ*|x| := (div_le_iff₀ hxabs).mp hnum
+        _ ≤ δ*H := mul_le_mul_of_nonneg_left hxhi hδ
+  · by_cases hb : b=0
+    · have he : ((a:ℝ)*x+b)/x-1=(a:ℝ)-1 := by rw [hb]; push_cast; field_simp; ring
+      rw [he] at hnum
+      have haabs : |((a-1:ℤ):ℝ)| < 1 := by
+        push_cast
+        exact hnum.trans_lt hδmax
+      have ha : a=1 := by
+        have hh := Int.abs_lt_one_iff.mp (by exact_mod_cast haabs)
+        omega
+      have hd : d=1 := by simpa only [hb,ha,zero_mul,one_mul,sub_zero] using hdet
+      apply Or.inr ∘ Or.inr ∘ Or.inl
+      refine ⟨ha,hd,hb,hc,?_⟩
+      have hcx : |(c:ℝ)| * |x| ≤ δ := by
+        simpa only [hd,Int.cast_one,add_sub_cancel_right,abs_mul] using hden
+      apply (le_div_iff₀ hlambda).mpr
+      exact (mul_le_mul_of_nonneg_left hxlo (abs_nonneg _)).trans hcx
+    · exact Or.inr (Or.inr (Or.inr ⟨hb,hc⟩))
+
+
+/-- The literal two-parity Fourier-cloud output is combined with a source-uniform
+rational coloring. The same matrices retain their strip and third-condition
+bounds, while every same-color triangular action receives its derived
+translation cutoff and bounded actions satisfy trace two. -/
+theorem positive_difference_colored_fourier_cloud_matrices
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (F : ℝ → ℝ) (y z : ι → ℝ) (r : ι → ℚ) (v : ι → ℤ)
+    (Q K₀ : ℕ) [NeZero K₀] {σ c J η T M N R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hy : ∀ i∈S, y i∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hQ : 0 < Q)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hM : 2 ≤ M) (hN : 0 < N) (hR : 0 < R)
+    (hz : ∀ i∈S, z i∈Icc M (2*M)) (hphase : T*N*R^2=M^3) :
+    let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+    (∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+    (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) →
+    (∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) →
+    let μ₀ := c/(12*σ*N*R^2)
+    let U₀ := J/(2*σ*N*R^2)
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : ι × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    let L := 288*(J/c)^2
+    let δ := 1/(8*(L+3))
+    let lambda := c*T/(4*σ*M^2)
+    let Hcurv := (3*J/σ)*T/(2*M^2)
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    let Cap := (4/δ+3)*(24*J/(c*δ)+3)
+    ((S.image color).card:ℝ) ≤ Cap ∧
+    (∀ coeff : ι → ℂ, ‖∑ i∈S,coeff i‖^12 ≤ Cap^11*
+      ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),coeff i‖^12) ∧
+    ∃ A : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      (∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num)) ∧
+      ∀ ij∈P, color ij.1.1=color ij.2.1 →
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        |t-1| ≤ δ ∧
+        |((A ij 0:ℝ)*h ij.1.1+A ij 1)/h ij.1.1-1| ≤ δ ∧
+        ((A ij 0=1 ∧ A ij 1=0 ∧ A ij 2=0 ∧ A ij 3=1) ∨
+         (A ij 0=1 ∧ A ij 3=1 ∧ A ij 2=0 ∧ A ij 1≠0 ∧ |(A ij 1:ℝ)| ≤ δ*Hcurv) ∨
+         (A ij 0=1 ∧ A ij 3=1 ∧ A ij 1=0 ∧ A ij 2≠0 ∧ |(A ij 2:ℝ)| ≤ δ/lambda) ∨
+         (A ij 1≠0 ∧ A ij 2≠0)) ∧
+        (|(A ij 2:ℝ)| * Hcurv ≤ L →
+          A ij 0+A ij 3=2 ∧ (A ij 0-1)^2= -A ij 1*A ij 2) := by
+  classical
+  intro f hlevel hden hinv μ₀ U₀ q μ ℓ b τ K x V w radius P h D
+    L δ lambda Hcurv q₀ p₀ color Cap
+  have hMp : 0 < M := by linarith only [hM]
+  have hT : 0 < T := by
+    have he : T=M^3/(N*R^2) := (eq_div_iff (by positivity)).mpr (by nlinarith only [hphase])
+    rw [he]
+    positivity
+  have hL : 0 ≤ L := by dsimp only [L]; positivity
+  have hδ : 0 < δ := by dsimp only [δ]; positivity
+  have hδmax : δ < 1 := by
+    dsimp only [δ]
+    apply (div_lt_iff₀ (by positivity)).mpr
+    linarith only [hL]
+  have hlambda : 0 < lambda := by dsimp only [lambda]; positivity
+  have hband := positive_difference_rational_band_twelfth_partition S F y z r Q
+    hσ hc hJ hη hηmax hT hMp hQ hδ hy hz hf hbound htests hden hlevel
+  refine ⟨hband.1,hband.2.2,?_⟩
+  obtain ⟨A,hA⟩ := positive_difference_fourier_cloud_matrices S F y z r v Q K₀
+    hσ hc hJ hη hηmax hy hf hbound hnegative hM hN hR hz hphase hlevel hden hinv
+  refine ⟨A,hA,?_⟩
+  intro ij hij hcolor t
+  have hpair := Finset.mem_product.mp (Finset.mem_filter.mp hij).1
+  have hi : ij.1.1∈S := (Finset.mem_product.mp hpair.1).1
+  have hj : ij.2.1∈S := (Finset.mem_product.mp hpair.2).1
+  have hb := hband.2.1 _ hi _ hj hcolor
+  have hp := hA ij hij
+  have ht : t=(q ij.2.1:ℝ)/q ij.1.1 := hp.2.1
+  have htpos : 0 < t := by
+    have hh : (1:ℝ)/2 ≤ t := hp.2.2.1
+    linarith only [hh]
+  have hmap : ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 := hp.2.2.2.2.1
+  have hcurvi := positive_difference_half_curvature_source_bounds F hσ hc hJ hη hηmax
+    hT hMp (hy _ hi) (hz _ hi) hf hbound htests
+  have hcurvj := positive_difference_half_curvature_source_bounds F hσ hc hJ hη hηmax
+    hT hMp (hy _ hj) (hz _ hj) hf hbound htests
+  have hx : h ij.1.1 ≠ 0 := abs_pos.mp (hlambda.trans_le hcurvi.1)
+  have hri : h ij.1.1=(r ij.1.1:ℝ) := hlevel _ hi
+  have hrj : h ij.2.1=(r ij.2.1:ℝ) := hlevel _ hj
+  have hnumeq : ((A ij 0:ℝ)*h ij.1.1+A ij 1)/h ij.1.1=
+      ((r ij.2.1).num:ℝ)/(r ij.1.1).num := by
+    rw [(div_eq_iff htpos.ne').mp hmap,ht,hri,hrj]
+    dsimp only [q]
+    simp only [Rat.cast_def]
+    field_simp
+  have hden' : |t-1| ≤ δ := by simpa only [ht,q] using hb.1
+  have hnum' : |((A ij 0:ℝ)*h ij.1.1+A ij 1)/h ij.1.1-1| ≤ δ := by
+    simpa only [hnumeq] using hb.2
+  refine ⟨hden',hnum',?_,?_⟩
+  · exact narrow_band_matrix_translation_cases (A ij 0) (A ij 1) (A ij 2) (A ij 3)
+      hlambda hcurvi.1 hcurvi.2 hδ.le hδmax hp.1 hden' hnum'
+  · intro haction
+    exact bounded_action_narrow_ratios_trace_two (A ij 0) (A ij 1) (A ij 2) (A ij 3)
+      hp.1 hx hcurvi.2 hcurvj.2 haction hmap hden' hnum'
+
+
+/-- At a fixed first point and matrix, the actual rounded source points
+have a family-parameter bound, not the square of the family size. Curvature
+injectivity and offset geometry bound the remaining block/parity fiber
+by six; the vertical analytic count is applied to selected real witnesses. -/
+theorem positive_difference_physical_family_fiber_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (S : Finset ((ℝ × ℤ) × Fin 2)) (F : ℝ → ℝ)
+        (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ) (N : ℕ) (Z : ℝ → ℤ)
+        (η ya xa Δ J q t T M : ℝ),
+      0 < η → η ≤ 1/8 → ya∈Icc (1:ℝ) 2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → t∈Icc (1/2:ℝ) 2 →
+      xa∈Icc M (2*M) →
+      (∀ ip∈S, ip.1.1∈Icc (1:ℝ) 2 ∧ z ip.1.1 ip.1.2∈Icc M (2*M)) →
+      (∀ ip∈S, N ≤ Alen ip.1.1 ip.1.2 ∧ Alen ip.1.1 ip.1.2 ≤ 3*N ∧
+        round (z ip.1.1 ip.1.2)+(Alen ip.1.1 ip.1.2:ℤ)=
+          Z ip.1.1+(N:ℤ)*ip.1.2+2*(N:ℤ)) →
+      (∀ ip∈S, ∀ jp∈S, ip.1.1 ≠ jp.1.1 → 1 ≤ J*|ip.1.1-jp.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ip∈S, h ip.1.1 (z ip.1.1 ip.1.2)=q) →
+      (∀ ip∈S, |μ ip.1.1 (z ip.1.1 ip.1.2)/μ ya xa*t^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (S.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J) := by
+  obtain ⟨K,C,hK,hC,hcount⟩ := positive_difference_physical_parameter_count hσ hc hU
+  refine ⟨K,C,hK,hC,?_⟩
+  intro S F z Alen N Z η ya xa Δ J q t T M hη hηmax hya hf hbound htests hnegative
+    hT hM hN hΔ hJ ht hxa hpoints hgeometry hsep f h μ hlevel hthird B
+  classical
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hMp : 0 < M := by linarith only [hM]
+  let Y := S.image (fun ip => ip.1.1)
+  have hex y (hy : y∈Y) : ∃ ip, ip∈S ∧ ip.1.1=y := Finset.mem_image.mp hy
+  let pick := fun y => if hy : y∈Y then Classical.choose (hex y hy) else ((y,0),0)
+  have hpick y (hy : y∈Y) : pick y∈S ∧ (pick y).1.1=y := by
+    dsimp only [pick]
+    rw [dif_pos hy]
+    exact Classical.choose_spec (hex y hy)
+  let root := fun y => z y (pick y).1.2
+  have hparams y (hy : y∈Y) : y∈Icc (1:ℝ) 2 ∧ root y∈Icc M (2*M) := by
+    have hh := hpoints _ (hpick y hy).1
+    rw [(hpick y hy).2] at hh
+    exact hh
+  have hY := hcount F η ya xa Δ J q t T M Y root hη hηmax hya hf hbound htests
+    hT hM hΔ hJ ht hxa hparams
+    (by
+      intro y hy y' hy' hne
+      have hh := hsep _ (hpick y hy).1 _ (hpick y' hy').1
+      rw [(hpick y hy).2,(hpick y' hy').2] at hh
+      exact hh hne)
+    (by
+      intro y hy
+      have hh := hlevel _ (hpick y hy).1
+      rw [(hpick y hy).2] at hh
+      exact hh)
+    (by
+      intro y hy
+      have hh := hthird _ (hpick y hy).1
+      rw [(hpick y hy).2] at hh
+      exact hh)
+  have hcard : S.card ≤ 6*Y.card := by
+    apply Finset.card_le_mul_card_image S 6
+    intro y hy
+    let E := S.filter (fun ip => ip.1.1=y)
+    let m : ℝ := round (root y)
+    obtain ⟨I,hI,_hIlow,hIhigh⟩ := physical_grid_interval_card (Z:=(Z y:ℝ))
+      (x:=m-(N:ℝ)) (z:=m+(N:ℝ)) hNp (by linarith only [hNp])
+    have hIcard : I.card ≤ 3 := by
+      have hh : (I.card:ℝ) ≤ 3 := hIhigh.trans_eq (by field_simp; ring)
+      exact_mod_cast hh
+    have hmono := positive_difference_physical_curvature_strictMono F hσ hc hη hηmax
+      (hparams y hy).1 hf hnegative hT hMp
+    have hsubset : Icc M (2*M) ⊆ Icc (3*M/4) (9*M/4) := by
+      intro w hw
+      constructor <;> linarith only [hw.1,hw.2,hMp]
+    have hsame ip (hip : ip∈E) : z ip.1.1 ip.1.2=root y := by
+      have hd := Finset.mem_filter.mp hip
+      have hz := (hpoints ip hd.1).2
+      have he := hlevel ip hd.1
+      have hp := hlevel _ (hpick y hy).1
+      rw [hd.2] at hz he ⊢
+      rw [(hpick y hy).2] at hp
+      exact hmono.injOn (hsubset hz) (hsubset (hparams y hy).2) (he.trans hp.symm)
+    have hfiber : E.card ≤ (I ×ˢ (Finset.univ : Finset (Fin 2))).card := by
+      apply Finset.card_le_card_of_injOn (fun ip => (ip.1.2,ip.2))
+      · intro ip hip
+        refine Finset.mem_product.mpr ⟨?_,Finset.mem_univ _⟩
+        apply (hI ip.1.2).mpr
+        have hd := Finset.mem_filter.mp hip
+        have hg := hgeometry ip hd.1
+        have hlo : (N:ℝ) ≤ Alen ip.1.1 ip.1.2 := by exact_mod_cast hg.1
+        have hhi : (Alen ip.1.1 ip.1.2:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast hg.2.1
+        have he : (round (z ip.1.1 ip.1.2):ℝ)+(Alen ip.1.1 ip.1.2:ℝ)=
+            (Z ip.1.1:ℝ)+(N:ℝ)*ip.1.2+2*(N:ℝ) := by exact_mod_cast hg.2.2
+        rw [hsame ip hip,hd.2] at he
+        change m+(Alen y ip.1.2:ℝ)=(Z y:ℝ)+(N:ℝ)*ip.1.2+2*(N:ℝ) at he
+        rw [hd.2] at hlo hhi
+        constructor <;> nlinarith only [he,hlo,hhi]
+      · intro ip hip jp hjp he
+        have hi := (Finset.mem_filter.mp hip).2
+        have hj := (Finset.mem_filter.mp hjp).2
+        have he1 : ip.1.2=jp.1.2 := congrArg (fun p : ℤ × Fin 2 => p.1) he
+        have he2 : ip.2=jp.2 := congrArg (fun p : ℤ × Fin 2 => p.2) he
+        exact Prod.ext (Prod.ext (hi.trans hj.symm) he1) he2
+    have he : (I ×ˢ (Finset.univ : Finset (Fin 2))).card=I.card*2 := by
+      simp only [Finset.card_product,Finset.card_univ,Fintype.card_fin]
+    rw [he] at hfiber
+    change E.card ≤ 6
+    omega
+  have hcardR : (S.card:ℝ) ≤ 6*(Y.card:ℝ) := by exact_mod_cast hcard
+  have hh := hcardR.trans (mul_le_mul_of_nonneg_left hY (by norm_num : (0:ℝ) ≤ 6))
+  convert hh using 1
+  ring
+
+
+/-- Literal family point-pairs are counted over the same matrix and first
+point returned by the Fourier construction. The second-family multiplicity
+is supplied by the vertical analytic theorem and actual rounded geometry,
+not by an assumed cardinality bound. -/
+theorem positive_difference_family_pair_card_le_matrix_points
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, t ij∈Icc (1/2:ℝ) 2) →
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*
+        ((P.image (fun ij => (Mat ij,ij.1))).card:ℝ) := by
+  obtain ⟨K,C,hK,hC,hcount⟩ := positive_difference_physical_family_fiber_count hσ hc hU
+  refine ⟨K,C,hK,hC,?_⟩
+  intro P Mat F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hpoints hgeometry hsep f h μ t ht hmap hthird B
+  classical
+  let key := fun ij => (Mat ij,ij.1)
+  let I := P.image key
+  let Vbound := 6*K*(1+8*C*B*(Δ+5/M)*J)
+  have hfiber k (hk : k∈I) :
+      ((P.filter (fun ij => key ij=k)).card:ℝ) ≤ Vbound := by
+    obtain ⟨ij₀,hij₀,he₀⟩ := Finset.mem_image.mp hk
+    let E := P.filter (fun ij => key ij=k)
+    let S := E.image Prod.snd
+    have hmem ij (hij : ij∈E) : ij∈P ∧ Mat ij=Mat ij₀ ∧ ij.1=ij₀.1 := by
+      have hh := Finset.mem_filter.mp hij
+      exact ⟨hh.1,(congrArg Prod.fst hh.2).trans (congrArg Prod.fst he₀).symm,
+        (congrArg Prod.snd hh.2).trans (congrArg Prod.snd he₀).symm⟩
+    have htE ij (hij : ij∈E) : t ij=t ij₀ := by
+      dsimp only [t]
+      rw [(hmem ij hij).2.1,(hmem ij hij).2.2]
+    have hcS := hcount S F z Alen N Z η ij₀.1.1.1 (z ij₀.1.1.1 ij₀.1.1.2)
+      Δ J (((Mat ij₀ 0:ℝ)*h ij₀.1.1.1 (z ij₀.1.1.1 ij₀.1.1.2)+Mat ij₀ 1)/t ij₀)
+      (t ij₀) T M hη hηmax (hpoints ij₀ hij₀).1.1 hf hbound htests hnegative
+      hT hM hN hΔ hJ (ht ij₀ hij₀) (hpoints ij₀ hij₀).1.2
+      (by
+        intro ip hip
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+        exact (hpoints ij (hmem ij hij).1).2)
+      (by
+        intro ip hip
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+        exact hgeometry ij (hmem ij hij).1)
+      (by
+        intro ip hip jp hjp hne
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+        obtain ⟨kl,hkl,rfl⟩ := Finset.mem_image.mp hjp
+        exact hsep ij (hmem ij hij).1 kl (hmem kl hkl).1 hne)
+      (by
+        intro ip hip
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+        have hh := (hmap ij (hmem ij hij).1).symm
+        rw [htE ij hij,(hmem ij hij).2.1,(hmem ij hij).2.2] at hh
+        exact hh)
+      (by
+        intro ip hip
+        obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+        have hh := hthird ij (hmem ij hij).1
+        rw [htE ij hij,(hmem ij hij).2.2] at hh
+        exact hh)
+    have he : S.card=E.card := Finset.card_image_of_injOn (by
+      intro ij hij kl hkl he
+      exact Prod.ext ((hmem ij hij).2.2.trans (hmem kl hkl).2.2.symm) he)
+    rw [he] at hcS
+    exact hcS
+  have he : (P.card:ℝ)=∑ k∈I,((P.filter (fun ij => key ij=k)).card:ℝ) := by
+    exact_mod_cast Finset.card_eq_sum_card_image key P
+  rw [he]
+  calc
+    _ ≤ ∑ k∈I,Vbound := Finset.sum_le_sum hfiber
+    _ = Vbound*(I.card:ℝ) := by rw [Finset.sum_const,nsmul_eq_mul,mul_comm]
+    _ = _ := rfl
+
+
+/-- The actual identity-matrix branch uses the family-parameter count.
+Its multiplicity is linear in the first-point set, with the analytic
+separation factor retained; no second family-size factor is inserted. -/
+theorem positive_difference_family_identity_pair_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)=h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*
+        ((P.image Prod.fst).card:ℝ) := by
+  obtain ⟨K,C,hK,hC,hcount⟩ := positive_difference_family_pair_card_le_matrix_points hσ hc hU
+  refine ⟨K,C,hK,hC,?_⟩
+  intro P F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hpoints hgeometry hsep f h μ hmap hthird B
+  classical
+  let Id : Fin 4 → ℤ := ![1,0,0,1]
+  have hI0 : (Id 0:ℝ)=1 := by norm_num [Id]
+  have hI1 : (Id 1:ℝ)=0 := by norm_num [Id]
+  have hI2 : (Id 2:ℝ)=0 := by
+    have hh : Id 2=0 := by decide
+    exact_mod_cast hh
+  have hI3 : (Id 3:ℝ)=1 := by
+    have hh : Id 3=1 := by decide
+    exact_mod_cast hh
+  have hh := hcount P (fun _ => Id) F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hpoints hgeometry hsep
+    (by
+      intro ij _
+      change ((Id 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Id 3)∈Icc (1/2:ℝ) 2
+      rw [hI2,hI3]
+      norm_num)
+    (by
+      intro ij hij
+      change ((Id 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Id 1)/
+        ((Id 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Id 3)=h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)
+      simpa only [hI0,hI1,hI2,hI3,one_mul,add_zero,zero_mul,zero_add,div_one] using (hmap ij hij).symm)
+    (by
+      intro ij hij
+      change |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*
+        ((Id 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Id 3)^3-1| ≤ Δ
+      simpa only [hI2,hI3,zero_mul,zero_add,one_pow,mul_one] using hthird ij hij)
+  have he : P.image (fun ij => (Id,ij.1))=(P.image Prod.fst).image (fun ip => (Id,ip)) := by
+    rw [Finset.image_image]
+    rfl
+  have hinj : Function.Injective (fun ip : (ℝ × ℤ) × Fin 2 => (Id,ip)) := by
+    intro ip jp he
+    exact congrArg Prod.snd he
+  rw [he,Finset.card_image_of_injective _ hinj] at hh
+  exact hh
+
+
+/-- Bounded-action nontriangular matrices in narrow bands are now counted
+across the actual separated family. The trace-two matrix count and the
+vertical source theorem are both consumed, retaining the first-point
+multiplicity rather than a second raw family-size factor. -/
+theorem positive_difference_family_bounded_action_pair_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M L : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → 0 ≤ L →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+      (∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0) →
+      (∀ ij∈P, |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/
+        h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*
+        ((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)*
+        ((P.image Prod.fst).card:ℝ) := by
+  obtain ⟨K,C,hK,hC,hcount⟩ := positive_difference_family_pair_card_le_matrix_points hσ hc hU
+  refine ⟨K,C,hK,hC,?_⟩
+  intro P Mat F z Alen N Z η Δ J T M L hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hL hpoints hgeometry hsep hdet hnontri haction f h μ t hmap hden hnum hthird B
+  classical
+  have hMp : 0 < M := by linarith only [hM]
+  let Hcurv := (3*U/σ)*T/(2*M^2)
+  let Smat := P.image Mat
+  have hex A (hA : A∈Smat) : ∃ ij, ij∈P ∧ Mat ij=A := Finset.mem_image.mp hA
+  let pick := fun A => if hA : A∈Smat then Classical.choose (hex A hA) else (((0,0),0),((0,0),0))
+  have hpick A (hA : A∈Smat) : pick A∈P ∧ Mat (pick A)=A := by
+    dsimp only [pick]
+    rw [dif_pos hA]
+    exact Classical.choose_spec (hex A hA)
+  let x := fun A => h (pick A).1.1.1 (z (pick A).1.1.1 (pick A).1.1.2)
+  let y := fun A => h (pick A).2.1.1 (z (pick A).2.1.1 (pick A).2.1.2)
+  have hcurv u w (hu : u∈Icc (1:ℝ) 2) (hw : w∈Icc M (2*M)) :
+      h u w ≠ 0 ∧ |h u w| ≤ Hcurv := by
+    have hh := positive_difference_half_curvature_source_bounds F hσ hc hU hη hηmax
+      hT hMp hu hw hf hbound htests
+    exact ⟨abs_pos.mp ((by positivity : (0:ℝ) < c*T/(4*σ*M^2)).trans_le hh.1),hh.2⟩
+  have hmat := bounded_action_narrow_nontriangular_matrix_count (H:=Hcurv) Smat x y hL
+    (by intro A hA; have hh := hdet _ (hpick A hA).1; rw [(hpick A hA).2] at hh; exact hh)
+    (by intro A hA; have hh := hnontri _ (hpick A hA).1; rw [(hpick A hA).2] at hh; exact hh)
+    (by
+      intro A hA
+      have hp := hpoints _ (hpick A hA).1
+      have ha := hcurv _ _ hp.1.1 hp.1.2
+      have hb := hcurv _ _ hp.2.1 hp.2.2
+      exact ⟨ha.1,ha.2,hb.2⟩)
+    (by intro A hA; have hh := haction _ (hpick A hA).1; rw [(hpick A hA).2] at hh; exact hh)
+    (by
+      intro A hA
+      have hh := hmap _ (hpick A hA).1
+      dsimp only [t] at hh
+      rw [(hpick A hA).2] at hh
+      exact hh)
+    (by
+      intro A hA
+      have hh := hden _ (hpick A hA).1
+      dsimp only [t] at hh
+      rw [(hpick A hA).2] at hh
+      exact hh)
+    (by
+      intro A hA
+      have hh := hnum _ (hpick A hA).1
+      rw [(hpick A hA).2] at hh
+      exact hh)
+  have ht ij (hij : ij∈P) : t ij∈Icc (1/2:ℝ) 2 := by
+    have hε : 1/(8*(L+3)) ≤ (1:ℝ)/24 :=
+      one_div_le_one_div_of_le (by norm_num) (by linarith only [hL])
+    have hh := abs_le.mp ((hden ij hij).trans hε)
+    constructor <;> linarith only [hh.1,hh.2]
+  have hpair := hcount P Mat F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hpoints hgeometry hsep ht hmap hthird
+  have hsub : P.image (fun ij => (Mat ij,ij.1)) ⊆ Smat ×ˢ P.image Prod.fst := by
+    intro a ha
+    obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp ha
+    exact Finset.mem_product.mpr ⟨Finset.mem_image_of_mem Mat hij,Finset.mem_image_of_mem Prod.fst hij⟩
+  have hcard : ((P.image (fun ij => (Mat ij,ij.1))).card:ℝ) ≤
+      (Smat.card:ℝ)*((P.image Prod.fst).card:ℝ) := by
+    exact_mod_cast (Finset.card_le_card hsub).trans_eq (Finset.card_product Smat (P.image Prod.fst))
+  have hlast := hcard.trans (mul_le_mul_of_nonneg_right hmat
+    (by positivity : (0:ℝ) ≤ (P.image Prod.fst).card))
+  have hh := hpair.trans (mul_le_mul_of_nonneg_left hlast
+    (by dsimp only [B]; positivity : (0:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)))
+  convert hh using 1
+  ring
+
+
+/-- The literal rounded block/parity points have the physical family size
+bound. Both endpoint rounding and both parities are counted explicitly. -/
+theorem rounded_offset_family_point_count
+    (S : Finset ((ℝ × ℤ) × Fin 2)) (z : ℝ → ℤ → ℝ)
+    (Alen : ℝ → ℤ → ℕ) (N : ℕ) (Z : ℝ → ℤ) {M : ℝ}
+    (hM : 0 ≤ M) (hN : 0 < N)
+    (hpoints : ∀ ip∈S, z ip.1.1 ip.1.2∈Icc M (2*M))
+    (hgeometry : ∀ ip∈S, N ≤ Alen ip.1.1 ip.1.2 ∧ Alen ip.1.1 ip.1.2 ≤ 3*N ∧
+      round (z ip.1.1 ip.1.2)+(Alen ip.1.1 ip.1.2:ℤ)=
+        Z ip.1.1+(N:ℤ)*ip.1.2+2*(N:ℤ)) :
+    (S.card:ℝ) ≤ 2*(4+M/(N:ℝ))*((S.image (fun ip => ip.1.1)).card:ℝ) := by
+  classical
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hN1 : (1:ℝ) ≤ N := by exact_mod_cast hN
+  let Y := S.image (fun ip => ip.1.1)
+  have hfiber y (hy : y∈Y) :
+      ((S.filter (fun ip => ip.1.1=y)).card:ℝ) ≤ 2*(4+M/(N:ℝ)) := by
+    let E := S.filter (fun ip => ip.1.1=y)
+    obtain ⟨I,hI,_hIlow,hIhigh⟩ := physical_grid_interval_card (Z:=(Z y:ℝ))
+      (x:=M-(N:ℝ)-1/2) (z:=2*M+(N:ℝ)+1/2) hNp (by linarith only [hM,hNp])
+    have hIcard : (I.card:ℝ) ≤ 4+M/(N:ℝ) := by
+      apply hIhigh.trans
+      apply (le_of_sub_nonneg ?_)
+      have he : 4+M/(N:ℝ)-((2*M+(N:ℝ)+1/2-(M-(N:ℝ)-1/2))/(N:ℝ)+1)=
+          ((N:ℝ)-1)/(N:ℝ) := by field_simp; ring
+      rw [he]
+      exact div_nonneg (by linarith only [hN1]) hNp.le
+    have hc : E.card ≤ (I ×ˢ (Finset.univ : Finset (Fin 2))).card := by
+      apply Finset.card_le_card_of_injOn (fun ip => (ip.1.2,ip.2))
+      · intro ip hip
+        have hd := Finset.mem_filter.mp hip
+        refine Finset.mem_product.mpr ⟨?_,Finset.mem_univ _⟩
+        apply (hI ip.1.2).mpr
+        have hz := hpoints ip hd.1
+        have hr := abs_le.mp (abs_sub_round (z ip.1.1 ip.1.2))
+        have hg := hgeometry ip hd.1
+        have hlo : (N:ℝ) ≤ Alen ip.1.1 ip.1.2 := by exact_mod_cast hg.1
+        have hhi : (Alen ip.1.1 ip.1.2:ℝ) ≤ 3*(N:ℝ) := by exact_mod_cast hg.2.1
+        have he : (round (z ip.1.1 ip.1.2):ℝ)+(Alen ip.1.1 ip.1.2:ℝ)=
+            (Z ip.1.1:ℝ)+(N:ℝ)*ip.1.2+2*(N:ℝ) := by exact_mod_cast hg.2.2
+        rw [←hd.2]
+        constructor <;> nlinarith only [he,hlo,hhi,hz.1,hz.2,hr.1,hr.2]
+      · intro ip hip jp hjp he
+        have hi := (Finset.mem_filter.mp hip).2
+        have hj := (Finset.mem_filter.mp hjp).2
+        have he1 : ip.1.2=jp.1.2 := congrArg (fun p : ℤ × Fin 2 => p.1) he
+        have he2 : ip.2=jp.2 := congrArg (fun p : ℤ × Fin 2 => p.2) he
+        exact Prod.ext (Prod.ext (hi.trans hj.symm) he1) he2
+    have hcR : (E.card:ℝ) ≤ (I.card:ℝ)*2 := by
+      exact_mod_cast hc.trans_eq (by simp only [Finset.card_product,Finset.card_univ,Fintype.card_fin])
+    exact hcR.trans (by nlinarith only [hIcard])
+  have he : (S.card:ℝ)=∑ y∈Y,((S.filter (fun ip => ip.1.1=y)).card:ℝ) := by
+    exact_mod_cast Finset.card_eq_sum_card_image (fun ip => ip.1.1) S
+  rw [he]
+  calc
+    _ ≤ ∑ _y∈Y,2*(4+M/(N:ℝ)) := Finset.sum_le_sum hfiber
+    _ = _ := by rw [Finset.sum_const,nsmul_eq_mul,mul_comm]
+
+/-- The bounded-action nontriangular family count has the linked source
+scale I*M/N*(1+Delta*J). Rounded first-point geometry and J<=M discharge
+the extra cardinality and rounding factors; the constant depends only
+on the source jets, not on the physical scales or family. -/
+theorem positive_difference_family_bounded_action_source_scale
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    let L := 288*(U/c)^2
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → (N:ℝ) ≤ M → J ≤ M →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.1.1.1 ij.1.1.2 ∧ Alen ij.1.1.1 ij.1.1.2 ≤ 3*N ∧
+        round (z ij.1.1.1 ij.1.1.2)+(Alen ij.1.1.1 ij.1.1.2:ℤ)=
+          Z ij.1.1.1+(N:ℤ)*ij.1.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+      (∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0) →
+      (∀ ij∈P, |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/
+        h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      (P.card:ℝ) ≤ D*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+        (M/(N:ℝ))*(1+Δ*J) := by
+  intro L
+  obtain ⟨K,C,hK,hC,hcount⟩ := positive_difference_family_bounded_action_pair_count hσ hc hU
+  let B := max 1 (max (3*U/σ) (2*σ/c))
+  let CMat := (2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2
+  have hL : 0 ≤ L := by dsimp only [L]; positivity
+  have hB : 0 < B := zero_lt_one.trans_le (le_max_left _ _)
+  have hCMat : 0 < CMat := by dsimp only [CMat]; positivity
+  refine ⟨60*K*(1+40*C*B)*CMat,by positivity,?_⟩
+  intro P Mat F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hNM hJM hpoints hgeometryA hgeometryB hsep hdet hnontri haction
+    f h μ t hmap hden hnum hthird
+  classical
+  have hMp : 0 < M := by linarith only [hM]
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hh := hcount P Mat F z Alen N Z η Δ J T M L hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hL hpoints hgeometryB hsep hdet hnontri haction hmap hden hnum hthird
+  have hfirst := rounded_offset_family_point_count (P.image Prod.fst) z Alen N Z hMp.le hN
+    (by
+      intro ip hip
+      obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+      exact (hpoints ij hij).1.2)
+    (by
+      intro ip hip
+      obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+      exact hgeometryA ij hij)
+  rw [Finset.image_image] at hfirst
+  let I := ((P.image (fun ij => ij.1.1.1)).card:ℝ)
+  have hI : 0 ≤ I := by dsimp only [I]; positivity
+  have hscale : 1 ≤ M/(N:ℝ) := (le_div_iff₀ hNp).mpr (by simpa only [one_mul] using hNM)
+  have hfirst' : ((P.image Prod.fst).card:ℝ) ≤ 10*(M/(N:ℝ))*I := by
+    apply hfirst.trans
+    apply mul_le_mul_of_nonneg_right _ hI
+    linarith only [hscale]
+  have hJM' : J/M ≤ 1 := (div_le_iff₀ hMp).mpr (by simpa only [one_mul] using hJM)
+  have hfactor : 1+8*C*B*(Δ+5/M)*J ≤ (1+40*C*B)*(1+Δ*J) := by
+    calc
+      _ = 1+8*C*B*(Δ*J+5*(J/M)) := by ring
+      _ ≤ 1+8*C*B*(Δ*J+5) := by
+        gcongr
+        nlinarith only [hJM']
+      _ ≤ _ := by
+        have hp : 0 ≤ (32*C*B+1)*(Δ*J) := by positivity
+        nlinarith only [hp]
+  calc
+    (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*CMat*((P.image Prod.fst).card:ℝ) := hh
+    _ ≤ 6*K*((1+40*C*B)*(1+Δ*J))*CMat*(10*(M/(N:ℝ))*I) := by
+      gcongr
+    _ = _ := by ring
+
+
+/-- The identity family branch has the linked I*M/N*(1+Delta*J)
+source scale under the explicit N<=M and J<=M range. The same actual
+rounded geometry and vertical parameter estimate discharge every
+cardinality and rounding factor. -/
+theorem positive_difference_family_identity_source_scale
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → (N:ℝ) ≤ M → J ≤ M →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.1.1.1 ij.1.1.2 ∧ Alen ij.1.1.1 ij.1.1.2 ≤ 3*N ∧
+        round (z ij.1.1.1 ij.1.1.2)+(Alen ij.1.1.1 ij.1.1.2:ℤ)=
+          Z ij.1.1.1+(N:ℤ)*ij.1.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)=h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ Δ) →
+      (P.card:ℝ) ≤ D*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+        (M/(N:ℝ))*(1+Δ*J) := by
+  obtain ⟨K,C,hK,hC,hcount⟩ := positive_difference_family_identity_pair_count hσ hc hU
+  let B := max 1 (max (3*U/σ) (2*σ/c))
+  have hB : 0 < B := zero_lt_one.trans_le (le_max_left _ _)
+  refine ⟨60*K*(1+40*C*B),by positivity,?_⟩
+  intro P F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hNM hJM hpoints hgeometryA hgeometryB hsep f h μ hmap hthird
+  classical
+  have hMp : 0 < M := by linarith only [hM]
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hh := hcount P F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hpoints hgeometryB hsep hmap hthird
+  have hfirst := rounded_offset_family_point_count (P.image Prod.fst) z Alen N Z hMp.le hN
+    (by
+      intro ip hip
+      obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+      exact (hpoints ij hij).1.2)
+    (by
+      intro ip hip
+      obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp hip
+      exact hgeometryA ij hij)
+  rw [Finset.image_image] at hfirst
+  let I := ((P.image (fun ij => ij.1.1.1)).card:ℝ)
+  have hI : 0 ≤ I := by dsimp only [I]; positivity
+  have hscale : 1 ≤ M/(N:ℝ) := (le_div_iff₀ hNp).mpr (by simpa only [one_mul] using hNM)
+  have hfirst' : ((P.image Prod.fst).card:ℝ) ≤ 10*(M/(N:ℝ))*I := by
+    apply hfirst.trans
+    apply mul_le_mul_of_nonneg_right _ hI
+    linarith only [hscale]
+  have hJM' : J/M ≤ 1 := (div_le_iff₀ hMp).mpr (by simpa only [one_mul] using hJM)
+  have hfactor : 1+8*C*B*(Δ+5/M)*J ≤ (1+40*C*B)*(1+Δ*J) := by
+    calc
+      _ = 1+8*C*B*(Δ*J+5*(J/M)) := by ring
+      _ ≤ 1+8*C*B*(Δ*J+5) := by
+        gcongr
+        nlinarith only [hJM']
+      _ ≤ _ := by
+        have hp : 0 ≤ (32*C*B+1)*(Δ*J) := by positivity
+        nlinarith only [hp]
+  calc
+    (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*((P.image Prod.fst).card:ℝ) := hh
+    _ ≤ 6*K*((1+40*C*B)*(1+Δ*J))*(10*(M/(N:ℝ))*I) := by
+      gcongr
+    _ = _ := by ring
+
+
+/-- Identity and bounded-action nontriangular pairs are assembled at the
+linked Type-1 source scale. The branch predicate is an explicit matrix
+classification, and both filtered counts come from actual source data. -/
+theorem positive_difference_family_type_one_source_scale
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    let L := 288*(U/c)^2
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → (N:ℝ) ≤ M → J ≤ M →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.1.1.1 ij.1.1.2 ∧ Alen ij.1.1.1 ij.1.1.2 ≤ 3*N ∧
+        round (z ij.1.1.1 ij.1.1.2)+(Alen ij.1.1.1 ij.1.1.2:ℤ)=
+          Z ij.1.1.1+(N:ℤ)*ij.1.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+      (∀ ij∈P,
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L)) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/
+        h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      (P.card:ℝ) ≤ D*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+        (M/(N:ℝ))*(1+Δ*J) := by
+  intro L
+  obtain ⟨D₀,hD₀,hzero⟩ := positive_difference_family_identity_source_scale hσ hc hU
+  obtain ⟨D₁,hD₁,hnonzero⟩ := positive_difference_family_bounded_action_source_scale hσ hc hU
+  refine ⟨D₀+D₁,add_pos hD₀ hD₁,?_⟩
+  intro P Mat F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hNM hJM hpoints hgeometryA hgeometryB hsep hdet hbranch
+    f h μ t hmap hden hnum hthird
+  classical
+  let P₀ := P.filter (fun ij => Mat ij 1=0)
+  let P₁ := P.filter (fun ij => Mat ij 1≠0)
+  have hlo ij (hij : ij∈P₀) : ij∈P ∧ Mat ij 1=0 := Finset.mem_filter.mp hij
+  have hhi ij (hij : ij∈P₁) : ij∈P ∧ Mat ij 1≠0 := Finset.mem_filter.mp hij
+  have hform ij (hij : ij∈P₀) :
+      Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1 := by
+    rcases hbranch ij (hlo ij hij).1 with ha | ha
+    · exact ha
+    · exact False.elim (ha.1 (hlo ij hij).2)
+  have hnontri ij (hij : ij∈P₁) :
+      Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L :=
+    (hbranch ij (hhi ij hij).1).resolve_left (fun ha => (hhi ij hij).2 ha.2.1)
+  have h₀ := hzero P₀ F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hNM hJM
+    (fun ij hij => hpoints ij (hlo ij hij).1)
+    (fun ij hij => hgeometryA ij (hlo ij hij).1)
+    (fun ij hij => hgeometryB ij (hlo ij hij).1)
+    (fun ij hij kl hkl hne => hsep ij (hlo ij hij).1 kl (hlo kl hkl).1 hne)
+    (by
+      intro ij hij
+      have ha := hform ij hij
+      have hh := (hmap ij (hlo ij hij).1).symm
+      dsimp only [t] at hh
+      simpa only [ha.1,ha.2.1,ha.2.2.1,ha.2.2.2,Int.cast_zero,Int.cast_one,
+        zero_mul,one_mul,zero_add,add_zero,div_one] using hh)
+    (by
+      intro ij hij
+      have ha := hform ij hij
+      have hh := hthird ij (hlo ij hij).1
+      dsimp only [t] at hh
+      simpa only [ha.2.2.1,ha.2.2.2,Int.cast_zero,Int.cast_one,zero_mul,zero_add,one_pow,mul_one]
+        using hh)
+  have h₁ := hnonzero P₁ Mat F z Alen N Z η Δ J T M hη hηmax hf hbound htests hnegative
+    hT hM hN hΔ hJ hNM hJM
+    (fun ij hij => hpoints ij (hhi ij hij).1)
+    (fun ij hij => hgeometryA ij (hhi ij hij).1)
+    (fun ij hij => hgeometryB ij (hhi ij hij).1)
+    (fun ij hij kl hkl hne => hsep ij (hhi ij hij).1 kl (hhi kl hkl).1 hne)
+    (fun ij hij => hdet ij (hhi ij hij).1)
+    (fun ij hij => ⟨(hnontri ij hij).1,(hnontri ij hij).2.1⟩)
+    (fun ij hij => (hnontri ij hij).2.2)
+    (fun ij hij => hmap ij (hhi ij hij).1)
+    (fun ij hij => hden ij (hhi ij hij).1)
+    (fun ij hij => hnum ij (hhi ij hij).1)
+    (fun ij hij => hthird ij (hhi ij hij).1)
+  have hI₀ : ((P₀.image (fun ij => ij.1.1.1)).card:ℝ) ≤
+      ((P.image (fun ij => ij.1.1.1)).card:ℝ) := by
+    exact_mod_cast Finset.card_le_card (Finset.image_subset_image
+      (Finset.filter_subset (fun ij => Mat ij 1=0) P))
+  have hI₁ : ((P₁.image (fun ij => ij.1.1.1)).card:ℝ) ≤
+      ((P.image (fun ij => ij.1.1.1)).card:ℝ) := by
+    exact_mod_cast Finset.card_le_card (Finset.image_subset_image
+      (Finset.filter_subset (fun ij => Mat ij 1≠0) P))
+  have hMp : 0 < M := by linarith only [hM]
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have h₀' : (P₀.card:ℝ) ≤ D₀*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+      (M/(N:ℝ))*(1+Δ*J) := h₀.trans (by gcongr)
+  have h₁' : (P₁.card:ℝ) ≤ D₁*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+      (M/(N:ℝ))*(1+Δ*J) := h₁.trans (by gcongr)
+  have he : P.card=P₀.card+P₁.card := by
+    exact (Finset.card_filter_add_card_filter_not (s:=P) (fun ij => Mat ij 1=0)).symm
+  have heR : (P.card:ℝ)=(P₀.card:ℝ)+(P₁.card:ℝ) := by exact_mod_cast he
+  rw [heR]
+  calc
+    _ ≤ D₀*((P.image (fun ij => ij.1.1.1)).card:ℝ)*(M/(N:ℝ))*(1+Δ*J)+
+        D₁*((P.image (fun ij => ij.1.1.1)).card:ℝ)*(M/(N:ℝ))*(1+Δ*J) := add_le_add h₀' h₁'
+    _ = _ := by ring
+
+
+/-- The linked Type-1 bound is consumed by the actual same-color
+two-parity Fourier cloud. Its matrix, homography and cubic error are
+constructed upstream; no matrix-family or pair-count certificate is
+assumed. The source-uniform coloring loss is retained as well. -/
+theorem positive_difference_fourier_cloud_type_one_count
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (S : Finset (ℝ × ℤ))
+        (F : ℝ → ℝ) (z : (ℝ × ℤ) → ℝ) (r : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ)
+        (Alen : (ℝ × ℤ) → ℕ) (Z : ℝ → ℤ)
+        (Q K₀ N : ℕ) [NeZero K₀] (η T M R Jsep : ℝ),
+      (0 < η) →
+      (η ≤ 1/8) →
+      (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (0 < Q) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      (2 ≤ M) →
+      (0 < N) →
+      (0 < R) →
+      (∀ i∈S, z i∈Icc M (2*M)) →
+      (T*(N:ℝ)*R^2=M^3) →
+      ((N:ℝ) ≤ M) →
+      (0 < Jsep) →
+      (Jsep ≤ M) →
+      (∀ i∈S, N ≤ Alen i ∧ Alen i ≤ 3*N ∧
+      round (z i)+(Alen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+      (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let y := (Prod.fst : (ℝ × ℤ) → ℝ)
+    let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+    (∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+    (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) →
+    (∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) →
+    let μ₀ := c/(12*σ*N*R^2)
+    let U₀ := U/(2*σ*N*R^2)
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let L := 288*(U/c)^2
+    let δ := 1/(8*(L+3))
+    let lambda := c*T/(4*σ*M^2)
+    let Hcurv := (3*U/σ)*T/(2*M^2)
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    let Cap := (4/δ+3)*(24*U/(c*δ)+3)
+    let Δ := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    ((S.image color).card:ℝ) ≤ Cap ∧
+    (∀ coeff : (ℝ × ℤ) → ℂ, ‖∑ i∈S,coeff i‖^12 ≤ Cap^11*
+      ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),coeff i‖^12) ∧
+    ∃ A : ((((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2))) → Fin 4 → ℤ,
+      (∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t∈Icc (1/2:ℝ) 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤ Δ) ∧
+      let E := P.filter (fun ij =>
+        color ij.1.1=color ij.2.1 ∧
+        ((A ij 0=1 ∧ A ij 1=0 ∧ A ij 2=0 ∧ A ij 3=1) ∨
+         (A ij 1≠0 ∧ A ij 2≠0 ∧ |(A ij 2:ℝ)| * Hcurv ≤ L)))
+      (E.card:ℝ) ≤ D*((S.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep) := by
+  obtain ⟨D,hD,hcount⟩ := positive_difference_family_type_one_source_scale hσ hc hU
+  refine ⟨D,hD,?_⟩
+  intro S F z r v Alen Z Q K₀ N _ η T M R Jsep hη hηmax hy hf hbound htests hQ
+    hnegative hM hN hR hz hphase hNM hJsep hJsepM hgeometry hsep y f hlevel hden hinv
+    μ₀ U₀ q μ ℓ b τ K x V w radius P h L δ lambda Hcurv q₀ p₀ color Cap Δ
+  classical
+  have hNp : (0:ℝ) < N := by exact_mod_cast hN
+  have hMp : 0 < M := by linarith only [hM]
+  have hT : 0 < T := by
+    have he : T=M^3/((N:ℝ)*R^2) :=
+      (eq_div_iff (by positivity)).mpr (by nlinarith only [hphase])
+    rw [he]
+    positivity
+  have hΔ : 0 ≤ Δ := by dsimp only [Δ,U₀,μ₀]; positivity
+  have hcloud := positive_difference_colored_fourier_cloud_matrices S F y z r v Q K₀
+    hσ hc hU hη hηmax hy hf hbound htests hQ hnegative hM hNp hR hz hphase hlevel hden hinv
+  refine ⟨hcloud.1,hcloud.2.1,?_⟩
+  obtain ⟨A,hA,hclass⟩ := hcloud.2.2
+  refine ⟨A,?_,?_⟩
+  · intro ij hij
+    have hh := hA ij hij
+    exact ⟨hh.1,⟨hh.2.2.1,hh.2.2.2.1⟩,hh.2.2.2.2.1,
+      hh.2.2.2.2.2.1,hh.2.2.2.2.2.2.1⟩
+  · intro E
+    have hmem ij (hij : ij∈E) :
+        ij∈P ∧ color ij.1.1=color ij.2.1 ∧
+          ((A ij 0=1 ∧ A ij 1=0 ∧ A ij 2=0 ∧ A ij 3=1) ∨
+           (A ij 1≠0 ∧ A ij 2≠0 ∧ |(A ij 2:ℝ)| * Hcurv ≤ L)) := by
+      exact Finset.mem_filter.mp hij
+    have hpoints ij (hij : ij∈P) : ij.1.1∈S ∧ ij.2.1∈S := by
+      have hh := Finset.mem_product.mp (Finset.mem_filter.mp hij).1
+      exact ⟨(Finset.mem_product.mp hh.1).1,(Finset.mem_product.mp hh.2).1⟩
+    have hh := hcount E A F (fun a k => z (a,k)) (fun a k => Alen (a,k)) N Z η Δ Jsep T M
+      hη hηmax hf hbound htests hnegative hT hM hN hΔ hJsep hNM hJsepM
+      (by
+        intro ij hij
+        have hp := hpoints ij (hmem ij hij).1
+        exact ⟨⟨hy _ hp.1,hz _ hp.1⟩,⟨hy _ hp.2,hz _ hp.2⟩⟩)
+      (fun ij hij => hgeometry _ (hpoints ij (hmem ij hij).1).1)
+      (fun ij hij => hgeometry _ (hpoints ij (hmem ij hij).1).2)
+      (fun ij hij kl hkl hne =>
+        hsep _ (hpoints ij (hmem ij hij).1).2 _ (hpoints kl (hmem kl hkl).1).2 hne)
+      (fun ij hij => (hA ij (hmem ij hij).1).1)
+      (fun ij hij => (hmem ij hij).2.2)
+      (fun ij hij => (hA ij (hmem ij hij).1).2.2.2.2.1)
+      (fun ij hij => (hclass ij (hmem ij hij).1 (hmem ij hij).2.1).1)
+      (fun ij hij => (hclass ij (hmem ij hij).1 (hmem ij hij).2.1).2.1)
+      (fun ij hij => (hA ij (hmem ij hij).1).2.2.2.2.2.2.1)
+    have hsub : E.image (fun ij => ij.1.1.1) ⊆ S.image Prod.fst := by
+      intro a ha
+      obtain ⟨ij,hij,rfl⟩ := Finset.mem_image.mp ha
+      exact Finset.mem_image_of_mem Prod.fst (hpoints ij (hmem ij hij).1).1
+    have hI : ((E.image (fun ij => ij.1.1.1)).card:ℝ) ≤ ((S.image Prod.fst).card:ℝ) := by
+      exact_mod_cast Finset.card_le_card hsub
+    exact hh.trans (by gcongr)
+
 end TaoTrudgianYang2025.HuxleyRationalPhase

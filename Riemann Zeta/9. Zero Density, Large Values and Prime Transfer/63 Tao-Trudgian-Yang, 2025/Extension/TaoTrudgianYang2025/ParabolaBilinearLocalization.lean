@@ -23552,7 +23552,7 @@ private theorem bourgain_integer_kernel_sum (S : Finset ℤ) (H : ℕ)
   rw [Finset.sum_image (fun _ _ _ _ h => Int.cast_injective h)] at hk
   simpa only [zetaMomentKernel,zero_sub,abs_neg] using hk
 
-private theorem bourgain_integer_reciprocal_sum (H : ℕ) :
+theorem bourgain_integer_reciprocal_sum (H : ℕ) :
     (∑ h ∈ (Finset.Icc (-(H : ℤ)) (H : ℤ)).erase 0, 1/|(h : ℝ)|) ≤
       2*(3+2*Real.log ((H : ℝ)+1)) := by
   let S := (Finset.Icc (-(H : ℤ)) (H : ℤ)).erase 0
@@ -28996,7 +28996,7 @@ theorem bourgain_C4_fixed_matrix_resonance_count
     _ = (Bmul:ℝ)*W.card := by simp [mul_comm]
     _ ≤ _ := mul_le_mul_of_nonneg_left hWfinal (Nat.cast_nonneg _)
 
-private theorem bourgain_dual_variable_denominator_difference
+theorem bourgain_dual_variable_denominator_difference
     {mu nu U q r Q zeta : ℝ}
     (hm : 0 < mu) (hn : 0 < nu) (hq : 0 < q) (hr : 0 < r)
     (hmU : mu ≤ U) (hnU : nu ≤ U) (hqQ : q ≤ Q) (hrQ : r ≤ Q)
@@ -30065,7 +30065,7 @@ theorem bourgain_C4_physical_cloud_second_spacing
   have hc := bourgain_physical_cloud_count_le_two_coordinate_count S q r mu ell M
   exact hc.trans (mul_le_mul_of_nonneg_left hb (by norm_num : (0:ℝ) ≤ 4))
 
-private theorem exists_bourgain_C4_variable_source_common_fourier :
+theorem exists_bourgain_C4_variable_source_common_fourier :
     ∃ C≥(1:ℝ), ∀ (ι : Type*) (S : Finset ι) (f : ι → ℝ → ℝ)
       (m : ι → ℝ) (a : ι → ℤ) (q : ι → ℕ) (N H : ι → ℕ),
       (∀ i∈S, 1≤N i) → (∀ i∈S, H i≤N i) → ∀ B D : ℝ, 0≤B → 0≤D →
@@ -31128,7 +31128,7 @@ theorem exists_bourgain_C3_minimal_curvature_arc_count
   exact hb.trans (mul_le_mul_of_nonneg_left
     (bourgain_minimal_arc_floor_budget hD hX) (Nat.cast_nonneg Bmul))
 
-private theorem bourgain_minimal_arc_rounded_source_geometry
+theorem bourgain_minimal_arc_rounded_source_geometry
     {N : ℕ} {start : ℤ} {base z A B : ℝ} (hN : 0 < N)
     (hstart : (start:ℝ)=base+2*(N:ℝ))
     (hz : z∈Ioo (base-(N:ℝ)/4) (base+(N:ℝ)/4))
@@ -36974,7 +36974,7 @@ private theorem dual_coefficient_lower
   have hone : 1 ≤ abs K*Real.sqrt (U*Q^3) := by nlinarith only [hsq,hpos]
   exact (div_le_iff₀ (Real.sqrt_pos.mpr (by positivity : 0 < U*Q^3))).mpr hone
 
-private theorem actual_four_coordinate_constraints
+theorem actual_four_coordinate_constraints
     (M q q' Q : ℕ) [NeZero M] (a' r r' : ℤ)
     (hq : 0 < q) (hq' : 0 < q') (hqQ : q ≤ Q)
     (har' : (q':ℤ) ∣ a'*r'-1)
@@ -37180,7 +37180,7 @@ private theorem inverse_lift_fract (q : ℕ) (hq : 0 < q) (r R b : ℤ)
     ring
   rw [he,Int.fract_sub_intCast]
 
-private theorem actual_source_affine_lattice_strip
+theorem actual_source_affine_lattice_strip
     (M q q' Q : ℕ) [NeZero M] (a a' r r' m n : ℤ)
     (hq : 0 < q) (hq' : 0 < q') (hqQ : q ≤ Q)
     (har : (q:ℤ) ∣ a*r-1) (har' : (q':ℤ) ∣ a'*r'-1)

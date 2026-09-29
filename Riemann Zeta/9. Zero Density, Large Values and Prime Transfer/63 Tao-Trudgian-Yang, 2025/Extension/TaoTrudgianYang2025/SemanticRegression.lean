@@ -61650,4 +61650,1789 @@ example
           ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) :=
   TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_prescribed_interval_minor_arcs (σ:=σ) (c:=c) (J:=J) hσ hc hJ
 
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι) (F : ℝ → ℝ)
+    (k : ι → ℤ) (N Bmul : ℕ) (s : ℝ) {σ c J η y T M R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y ∈ Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hNM : (N:ℝ) ≤ M) (hphase : T*(N:ℝ)*R^2=M^3)
+    (hmul : ∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ Bmul)
+    (hpoints : ∀ i∈S, s+(N:ℝ)*(k i:ℝ) ∈ Icc M (2*M)) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let t := fun i => s+(N:ℝ)*(k i:ℝ)
+    let v := fun i => iteratedDeriv 2 f (t i)/2
+    let delta := c/(16*σ*R^2)
+    let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+    ∃ (r : ι → ℚ) (z : ι → ℝ),
+      (∀ i∈S, z i∈Ioo (t i-(N:ℝ)/4) (t i+(N:ℝ)/4) ∧
+        iteratedDeriv 2 f (z i)/2=(r i:ℝ) ∧
+        (r i:ℝ)∈Ioo (v i-delta) (v i+delta) ∧
+        ∀ a : ℚ, (a:ℝ)∈Ioo (v i-delta) (v i+delta) → (r i).den ≤ a.den) ∧
+      (∀ i∈S, ∀ a∈Icc M (2*M), ∀ b∈Icc M (2*M),
+        a+(N:ℝ)/4 ≤ t i → t i ≤ b-(N:ℝ)/4 →
+        (r i:ℝ)∈Ioo (iteratedDeriv 2 f a/2) (iteratedDeriv 2 f b/2)) ∧
+      ∀ Q : ℕ, 2 ≤ Q →
+        let G := S.filter (fun i => Q ≤ (r i).den)
+        let D := 16*σ*R^2/(c*(Q:ℝ))
+        (G.card:ℝ) ≤ Bmul*(4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_minimal_curvature_arc_count (ι:=ι) S F k N Bmul s (σ:=σ) (c:=c) (J:=J) (η:=η) (y:=y) (T:=T) (M:=M) (R:=R) hσ hc hJ hη hηmax hy hf hbound hnegative hT hM hN hR hNM hphase hmul hpoints
+
+example
+    (F : ℝ → ℝ) (N : ℕ) {σ c J η y T M R U x z s : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y ∈ Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R) (hU : 0 < U)
+    (hNM : (N:ℝ) ≤ M) (hUlarge : 3*J ≤ σ*U)
+    (hphase : T*(N:ℝ)*R^2=M^3) (hx : x∈Icc M (2*M)) (hz : z∈Icc M (2*M)) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun w => iteratedDeriv 2 f w/2
+    let t := fun k : ℤ => s+(N:ℝ)*k
+    let delta := c/(16*σ*R^2)
+    let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+    U/(4*R^2) ≤ h z-h x → h z-h x ≤ 7*U/(2*R^2) →
+    ∃ A : Finset ℤ, ∃ (r : ℤ → ℚ) (w : ℤ → ℝ),
+      (∀ k : ℤ, k∈A ↔ x+(N:ℝ)/4 ≤ t k ∧ t k ≤ z-(N:ℝ)/4) ∧
+      (∀ k∈A, w k∈Ioo x z ∧ h (w k)=(r k:ℝ) ∧
+        (r k:ℝ)∈Ioo (h x) (h z) ∧
+        (r k:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) ∧
+        ∀ a : ℚ, (a:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) → (r k).den ≤ a.den) ∧
+      (σ/(6*J))*U-3/2 ≤ (A.card:ℝ) ∧
+      (A.card:ℝ) ≤ (14*σ/c)*U+1/2 ∧
+      ∀ Q : ℕ, 2 ≤ Q →
+        let G := A.filter (fun k => Q ≤ (r k).den)
+        let D := 16*σ*R^2/(c*(Q:ℝ))
+        (G.card:ℝ) ≤ 4*(Vbound+1)*D^2+D*(2+Real.log (D+1)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_reference_gap_minimal_arcs F N (σ:=σ) (c:=c) (J:=J) (η:=η) (y:=y) (T:=T) (M:=M) (R:=R) (U:=U) (x:=x) (z:=z) (s:=s) hσ hc hJ hη hηmax hy hf hbound hnegative hT hM hN hR hU hNM hUlarge hphase hx hz
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ B : ℝ, 1 ≤ B ∧
+      ∀ (F : ℝ → ℝ) (N : ℕ) (η T M R Q : ℝ),
+      0 < N → 0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 0 < M → 1 ≤ R → R ≤ Q → Q ≤ (N:ℝ) →
+      (N:ℝ) ≤ R^2 → (N:ℝ)^2 ≤ M →
+      2*B ≤ ((N:ℝ)/Q)^((2:ℝ)/3) →
+      6*B*J ≤ σ*((N:ℝ)/Q)^((2:ℝ)/3) →
+      T*(N:ℝ)*R^2=M^3 →
+      ∃ U : ℕ, 1 ≤ U ∧
+        ((N:ℝ)/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+        (U:ℝ) ≤ ((N:ℝ)/Q)^((2:ℝ)/3)/B ∧
+        (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ (N:ℝ) ∧
+        B^2*(U:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ H : ℤ, 2 ≤ H ∧ ∃ S : Finset ℝ,
+        (∀ v ∈ S, |v| ≤ 3*J*T/(2*σ*M^2)+1) ∧
+        (∀ a ∈ S, ∀ b ∈ S, a ≠ b → (U:ℝ)/(4*R^2) < |a-b|) ∧
+        ∀ y ∈ Icc (1:ℝ) 2, ∀ x∈Icc M (2*M),
+          h y x∈S ∨
+          ∃ a∈S, ∃ b∈S, a<h y x ∧ h y x<b ∧
+            (∀ v∈S, ¬ (a<v ∧ v<b)) ∧
+            (U:ℝ)/(4*R^2)<b-a ∧ b-a≤7*(U:ℝ)/(2*R^2) ∧
+            ∃ e r₀ p q : ℤ, ((e:ℝ)/r₀=a ∨ (e:ℝ)/r₀=b) ∧
+              IsCoprime e r₀ ∧ 0<r₀ ∧ 0<q ∧ q≤r₀ ∧ q≤H ∧
+              R^2≤(U:ℝ)*(r₀:ℝ)^2 ∧ (p:ℝ)/q∈S ∧ |e*q-p*r₀|=1 ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(e:ℝ)/r₀) ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(p:ℝ)/q) ∧
+              (∀ s : ℝ, a∈Icc (h y M) (h y (2*M)) →
+                b∈Icc (h y M) (h y (2*M)) →
+                ∃ x₁∈Icc M (2*M), ∃ x₂∈Icc M (2*M),
+                  h y x₁=a ∧ h y x₂=b ∧
+                  ∃ A : Finset ℤ, ∃ (r : ℤ→ℚ) (w : ℤ→ℝ),
+                    (∀ k : ℤ, k∈A ↔
+                      x₁+(N:ℝ)/4 ≤ s+(N:ℝ)*k ∧ s+(N:ℝ)*k ≤ x₂-(N:ℝ)/4) ∧
+                    (∀ k∈A, w k∈Ioo x₁ x₂ ∧ h y (w k)=(r k:ℝ) ∧
+                      (r k:ℝ)∈Ioo a b ∧
+                      (r k:ℝ)∈Ioo (h y (s+(N:ℝ)*k)-delta) (h y (s+(N:ℝ)*k)+delta) ∧
+                      ∀ v : ℚ, (v:ℝ)∈Ioo
+                        (h y (s+(N:ℝ)*k)-delta) (h y (s+(N:ℝ)*k)+delta) →
+                        (r k).den ≤ v.den) ∧
+                    (σ/(6*J))*(U:ℝ)-3/2 ≤ (A.card:ℝ) ∧
+                    (A.card:ℝ) ≤ (14*σ/c)*(U:ℝ)+1/2 ∧
+                    ∀ K : ℕ, 2 ≤ K →
+                      let G := A.filter (fun k => K ≤ (r k).den)
+                      let D := 16*σ*R^2/(c*(K:ℝ))
+                      (G.card:ℝ) ≤ 4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_selected_reference_arcs (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+
+example :
+    ∃ C≥(1:ℝ), ∀ (ι : Type*) (S : Finset ι) (f : ι → ℝ → ℝ)
+      (m : ι → ℝ) (a : ι → ℤ) (q : ι → ℕ) (N H : ι → ℕ),
+      (∀ i∈S, 1≤N i) → (∀ i∈S, H i≤N i) → ∀ B D : ℝ, 0≤B → 0≤D →
+      (∀ i∈S, B*(2*(N i:ℝ)+1)^4≤1) → (∀ i∈S, D*(2*(N i:ℝ)+1)^2≤1) →
+      (∀ i∈S, ∀ y∈Icc (m i-(2*(N i:ℝ)+1)) (m i+(2*(N i:ℝ)+1)),
+        ContDiffAt ℝ 4 (f i) y) →
+      (∀ i∈S, ∀ y∈Icc (m i-(2*(N i:ℝ)+1)) (m i+(2*(N i:ℝ)+1)),
+        |iteratedDeriv 4 (f i) y|≤B) →
+      (∀ i∈S, |iteratedDeriv 2 (f i) (m i)/2-(a i:ℝ)/(q i:ℝ)|≤D) →
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      (∀ i∈S, 0<q i ∧ q i≤N i ∧ IsCoprime (a i) (q i:ℤ) ∧
+        0<μ i ∧ μ i*(N i:ℝ)^2≤1 ∧ 1≤μ i*(q i:ℝ)^2*N i) →
+      ∀ (M : ℕ) [NeZero M], (∀ i∈S, 7*(μ i*(q i:ℝ)*(N i:ℝ)^2)≤M) →
+      ∃ r : ι → ℤ, (∀ i∈S, (q i:ℤ)∣a i*r i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod M,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (N i:ℤ) ((N i:ℤ)+H i),
+          (𝐞 (f i (m i+n)):ℂ)‖) ≤
+        C*((1+Real.log M)*
+          (∑ i∈S, ∑ p : Fin 2,
+            (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*N i)))*
+            ‖∑ j : ZMod M,ZMod.stdAddChar (-(j*k))*
+              GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                  Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+          ∑ i∈S, (Real.sqrt (N i)*Real.log (2*(N i:ℝ))+1/(μ i*(N i:ℝ)^2))) :=
+  TaoTrudgianYang2025.exists_bourgain_C4_variable_source_common_fourier
+
+example
+    {N : ℕ} {start : ℤ} {base z A B : ℝ} (hN : 0 < N)
+    (hstart : (start:ℝ)=base+2*(N:ℝ))
+    (hz : z∈Ioo (base-(N:ℝ)/4) (base+(N:ℝ)/4))
+    (hbuffer : Icc (base-(7*(N:ℝ)+2)) (base+(7*(N:ℝ)+2)) ⊆ Icc A B) :
+    z∈Ioo A B ∧ |z-(round z:ℝ)| ≤ 1/2 ∧
+      ((N:ℤ) ≤ start-round z ∧ start-round z ≤ 3*(N:ℤ)) ∧
+      Icc ((round z:ℝ)-(6*(N:ℝ)+1)) ((round z:ℝ)+(6*(N:ℝ)+1)) ⊆ Icc A B :=
+  TaoTrudgianYang2025.bourgain_minimal_arc_rounded_source_geometry (N:=N) (start:=start) (base:=base) (z:=z) (A:=A) (B:=B) hN hstart hz hbuffer
+
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : Finset ι) (F : ℝ → ℝ)
+      (y : ι → ℝ) (L : ι → ℤ) (H : ι → ℕ) (r : ι → ℚ) (z : ι → ℝ)
+      (N : ℕ) (η T M R : ℝ),
+      1 ≤ N → (∀ i∈S, H i ≤ N) →
+      0 < η → η ≤ 1/8 → 0 < T → 0 < M → 0 < R →
+      (∀ i∈S, y i∈Icc (1:ℝ) 2) →
+      (∀ i∈S, (L i:ℝ)-2*(N:ℝ)∈Icc M (2*M)) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      (∀ i∈S, z i∈Ioo ((L i:ℝ)-2*(N:ℝ)-(N:ℝ)/4)
+        ((L i:ℝ)-2*(N:ℝ)+(N:ℝ)/4) ∧
+        iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(N:ℝ)^3 ≤ K₀ →
+      ∃ v : ι → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f i n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_chosen_arcs_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) [DecidableEq ι] (S : Finset ι) (F : ℝ → ℝ)
+      (k : ι → ℤ) (H : ι → ℕ) (N Bmul : ℕ) (s : ℤ) (η y T M R : ℝ),
+      1 ≤ N → (∀ i∈S, H i ≤ N) →
+      0 < η → η ≤ 1/8 → y∈Icc (1:ℝ) 2 → 0 < T → 0 < M → 0 < R →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      (∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ Bmul) →
+      (∀ i∈S, (s:ℝ)+(N:ℝ)*(k i:ℝ)∈Icc M (2*M)) →
+      let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let t := fun i => (s:ℝ)+(N:ℝ)*(k i:ℝ)
+      let L := fun i => s+(N:ℤ)*k i+2*(N:ℤ)
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ (r : ι → ℚ) (z : ι → ℝ),
+        (∀ i∈S, z i∈Ioo (t i-(N:ℝ)/4) (t i+(N:ℝ)/4) ∧
+          iteratedDeriv 2 f (z i)/2=(r i:ℝ) ∧
+          (r i:ℝ)∈Ioo (iteratedDeriv 2 f (t i)/2-delta) (iteratedDeriv 2 f (t i)/2+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo (iteratedDeriv 2 f (t i)/2-delta)
+            (iteratedDeriv 2 f (t i)/2+delta) → (r i).den ≤ a.den) ∧
+        (∀ i∈S, ∀ a∈Icc M (2*M), ∀ b∈Icc M (2*M),
+          a+(N:ℝ)/4 ≤ t i → t i ≤ b-(N:ℝ)/4 →
+          (r i:ℝ)∈Ioo (iteratedDeriv 2 f a/2) (iteratedDeriv 2 f b/2)) ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((S.filter (fun i => Q ≤ (r i).den)).card:ℝ) ≤
+            Bmul*(4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 f (m i)/6
+      let ℓ := fun i => deriv f (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ι → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_constructed_minimal_arcs_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (N : ℕ) (s : ℤ) (H : ℤ → ℕ)
+      (η y T M R U x₁ x₂ : ℝ),
+      1 ≤ N → (∀ k, H k ≤ N) →
+      0 < η → η ≤ 1/8 → y∈Icc (1:ℝ) 2 → 0 < T → 0 < M → 0 < R → 0 < U →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U → x₁∈Icc M (2*M) → x₂∈Icc M (2*M) →
+      let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun w => iteratedDeriv 2 f w/2
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      U/(4*R^2) ≤ h x₂-h x₁ → h x₂-h x₁ ≤ 7*U/(2*R^2) →
+      ∃ S : Finset ℤ, ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+        (∀ k : ℤ, k∈S ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈S, z k∈Ioo x₁ x₂ ∧ h (z k)=(r k:ℝ) ∧
+          (r k:ℝ)∈Ioo (h x₁) (h x₂) ∧
+          (r k:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) → (r k).den ≤ a.den) ∧
+        (σ/(6*J))*U-3/2 ≤ (S.card:ℝ) ∧ (S.card:ℝ) ≤ (14*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((S.filter (fun k => Q ≤ (r k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 f (m i)/6
+      let ℓ := fun i => deriv f (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_interior_gap_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ B : ℝ, 1 ≤ B ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (N : ℕ) (η T M R Q : ℝ),
+      0 < N → 0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 0 < M → 1 ≤ R → R ≤ Q → Q ≤ (N:ℝ) →
+      (N:ℝ) ≤ R^2 → (N:ℝ)^2 ≤ M →
+      2*B ≤ ((N:ℝ)/Q)^((2:ℝ)/3) →
+      6*B*J ≤ σ*((N:ℝ)/Q)^((2:ℝ)/3) →
+      T*(N:ℝ)*R^2=M^3 →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      ∃ U : ℕ, 1 ≤ U ∧
+        ((N:ℝ)/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+        (U:ℝ) ≤ ((N:ℝ)/Q)^((2:ℝ)/3)/B ∧
+        (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ (N:ℝ) ∧
+        B^2*(U:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ H : ℤ, 2 ≤ H ∧ ∃ S : Finset ℝ,
+        (∀ v ∈ S, |v| ≤ 3*J*T/(2*σ*M^2)+1) ∧
+        (∀ a ∈ S, ∀ b ∈ S, a ≠ b → (U:ℝ)/(4*R^2) < |a-b|) ∧
+        ∀ y ∈ Icc (1:ℝ) 2, ∀ x∈Icc M (2*M),
+          h y x∈S ∨
+          ∃ a∈S, ∃ b∈S, a<h y x ∧ h y x<b ∧
+            (∀ v∈S, ¬ (a<v ∧ v<b)) ∧
+            (U:ℝ)/(4*R^2)<b-a ∧ b-a≤7*(U:ℝ)/(2*R^2) ∧
+            ∃ e r₀ p q : ℤ, ((e:ℝ)/r₀=a ∨ (e:ℝ)/r₀=b) ∧
+              IsCoprime e r₀ ∧ 0<r₀ ∧ 0<q ∧ q≤r₀ ∧ q≤H ∧
+              R^2≤(U:ℝ)*(r₀:ℝ)^2 ∧ (p:ℝ)/q∈S ∧ |e*q-p*r₀|=1 ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(e:ℝ)/r₀) ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(p:ℝ)/q) ∧
+              (∀ (s : ℤ) (Hlen : ℤ → ℕ), (∀ k, Hlen k ≤ N) →
+                a∈Icc (h y M) (h y (2*M)) → b∈Icc (h y M) (h y (2*M)) →
+                ∃ x₁∈Icc M (2*M), ∃ x₂∈Icc M (2*M),
+                  h y x₁=a ∧ h y x₂=b ∧
+                let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+                let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      ∃ Agrid : Finset ℤ, ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+        (∀ k : ℤ, k∈Agrid ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈Agrid, z k∈Ioo x₁ x₂ ∧ (h y) (z k)=(r k:ℝ) ∧
+          (r k:ℝ)∈Ioo ((h y) x₁) ((h y) x₂) ∧
+          (r k:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) → (r k).den ≤ a.den) ∧
+        (σ/(6*J))*(U:ℝ)-3/2 ≤ (Agrid.card:ℝ) ∧ (Agrid.card:ℝ) ≤ (14*σ/c)*(U:ℝ)+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((Agrid.filter (fun k => Q ≤ (r k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f y) (m i)/6
+      let ℓ := fun i => deriv (f y) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := Agrid.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈Agrid, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈Agrid, ‖∑ n∈Finset.Ioc (L i) (L i+Hlen i),(𝐞 ((f y) n):ℂ)‖) ≤
+          C*((∑ i∈Agrid.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(Hlen i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2)))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_selected_reference_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : Finset ι) (F : ℝ → ℝ)
+      (y : ι → ℝ) (L : ι → ℤ) (H : ι → ℕ) (r : ι → ℚ) (z : ι → ℝ)
+      (N : ℕ) (η T M R : ℝ),
+      1 ≤ N → (∀ i∈S, H i ≤ N) →
+      0 < η → η ≤ 1/8 → 0 < T → 0 < M → 0 < R →
+      (∀ i∈S, y i∈Icc (1:ℝ) 2) →
+      (∀ i∈S, (L i:ℝ)-2*(N:ℝ)∈Icc M (2*M)) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      (∀ i∈S, z i∈Ioo ((L i:ℝ)-2*(N:ℝ)-(N:ℝ)/4)
+        ((L i:ℝ)-2*(N:ℝ)+(N:ℝ)/4) ∧
+        iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := S.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈S, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ι → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f i n):ℂ)‖) ≤
+          C*((∑ i∈S.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(H i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_chosen_arcs_band_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    (F : ℝ → ℝ) {σ c J η y z T M N R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hM : 2 ≤ M) (hN : 0 < N) (hR : 0 < R)
+    (hz : z∈Icc M (2*M)) (hphase : T*N*R^2=M^3) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    c/(12*σ*N*R^2) ≤ iteratedDeriv 3 f (round z)/6 ∧
+      iteratedDeriv 3 f (round z)/6 ≤ J/(2*σ*N*R^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_rounded_cubic_scales F (σ:=σ) (c:=c) (J:=J) (η:=η) (y:=y) (z:=z) (T:=T) (M:=M) (N:=N) (R:=R) hσ hc hJ hη hηmax hy hf hbound hnegative hM hN hR hz hphase
+
+example
+    (M q q' Q : ℕ) [NeZero M] (a' r r' : ℤ)
+    (hq : 0 < q) (hq' : 0 < q') (hqQ : q ≤ Q)
+    (har' : (q':ℤ) ∣ a'*r'-1)
+    {μ μ' U ℓ ℓ' : ℝ} (hμ : 0 < μ) (hμ' : 0 < μ') (hμU : μ ≤ U)
+    (p p' : Fin 2) :
+    let b : ℤ := ⌊(q:ℝ)*ℓ⌋+(p:ℕ)
+    let b' : ℤ := ⌊(q':ℝ)*ℓ'⌋+(p':ℕ)
+    let τ := ((b:ℝ)-(q:ℝ)*ℓ)/2
+    let τ' := ((b':ℝ)-(q':ℝ)*ℓ')/2
+    let K := -2*μ*(Real.sqrt (2/(3*μ*(q:ℝ))))^3
+    let K' := -2*μ'*(Real.sqrt (2/(3*μ'*(q':ℝ))))^3
+    let y : Fin 4 → ℝ := ![Int.fract (-(r:ℝ)*b/q),Int.fract (-(r:ℝ)/q),
+      K/Real.sqrt M,(3*K*τ/2)/Real.sqrt M]
+    let y' : Fin 4 → ℝ := ![Int.fract (-(r':ℝ)*b'/q'),Int.fract (-(r':ℝ)/q'),
+      K'/Real.sqrt M,(3*K'*τ'/2)/Real.sqrt M]
+    let window : Fin 4 → ℝ :=
+      ![1/(12*(M:ℝ)),1/(12*(M:ℝ)^2),(1/(M:ℝ)^2)/12,(1/(M:ℝ))/12]
+    let D := (Real.sqrt M/(9*(M:ℝ))+Real.sqrt M/(12*(M:ℝ)^2))*
+      Real.sqrt (U*(Q:ℝ)^3)
+    (∀ d, |y d-y' d| ≤ 2*window d) →
+    |τ-τ'| ≤ D ∧ ∃ R R' u v : ℤ, (q:ℤ) ∣ R-r ∧ (q':ℤ) ∣ R'-r' ∧
+      |(((q':ℤ)*R-(q:ℤ)*R':ℤ):ℝ)| ≤ (q:ℝ)*q'/(6*(M:ℝ)^2) ∧
+      |(q:ℝ)*ℓ-(q':ℝ)*ℓ'-(u:ℝ)| ≤ 2*D ∧
+      |-(R:ℝ)*ℓ+(R':ℝ)*ℓ'-(v:ℝ)| ≤ 1/(6*(M:ℝ))+2*D+1/(6*(M:ℝ)^2) :=
+  TaoTrudgianYang2025.actual_four_coordinate_constraints M q q' Q a' r r' hq hq' hqQ har' (μ:=μ) (μ':=μ') (U:=U) (ℓ:=ℓ) (ℓ':=ℓ') hμ hμ' hμU p p'
+
+example
+    (M q q' Q : ℕ) [NeZero M] (a a' r r' m n : ℤ)
+    (hq : 0 < q) (hq' : 0 < q') (hqQ : q ≤ Q)
+    (har : (q:ℤ) ∣ a*r-1) (har' : (q':ℤ) ∣ a'*r'-1)
+    {μ μ' U ℓ ℓ' : ℝ} (hμ : 0 < μ) (hμ' : 0 < μ') (hμU : μ ≤ U)
+    (p p' : Fin 2) :
+    let b : ℤ := ⌊(q:ℝ)*ℓ⌋+(p:ℕ)
+    let b' : ℤ := ⌊(q':ℝ)*ℓ'⌋+(p':ℕ)
+    let τ := ((b:ℝ)-(q:ℝ)*ℓ)/2
+    let τ' := ((b':ℝ)-(q':ℝ)*ℓ')/2
+    let K := -2*μ*(Real.sqrt (2/(3*μ*(q:ℝ))))^3
+    let K' := -2*μ'*(Real.sqrt (2/(3*μ'*(q':ℝ))))^3
+    let y : Fin 4 → ℝ := ![Int.fract (-(r:ℝ)*b/q),Int.fract (-(r:ℝ)/q),
+      K/Real.sqrt M,(3*K*τ/2)/Real.sqrt M]
+    let y' : Fin 4 → ℝ := ![Int.fract (-(r':ℝ)*b'/q'),Int.fract (-(r':ℝ)/q'),
+      K'/Real.sqrt M,(3*K'*τ'/2)/Real.sqrt M]
+    let window : Fin 4 → ℝ :=
+      ![1/(12*(M:ℝ)),1/(12*(M:ℝ)^2),(1/(M:ℝ)^2)/12,(1/(M:ℝ))/12]
+    let D := (Real.sqrt M/(9*(M:ℝ))+Real.sqrt M/(12*(M:ℝ)^2))*
+      Real.sqrt (U*(Q:ℝ)^3)
+    (∀ d, |y d-y' d| ≤ 2*window d) →
+    ∃ α β γ δ e₁ e₂ : ℤ,
+      α*δ-β*γ=1 ∧ α*a+β*q=a' ∧ γ*a+δ*q=q' ∧
+      |(γ:ℝ)| ≤ (q:ℝ)*q'/(6*(M:ℝ)^2) ∧
+      let F₁ := 2*(n:ℝ)-2*(δ:ℝ)*m-(γ:ℝ)*ℓ
+      let F₂ := ℓ'-2*(β:ℝ)*m-(α:ℝ)*ℓ
+      |F₁-e₁| ≤ (q':ℝ)/(6*(M:ℝ))+|(γ:ℝ)|/q ∧
+      |(F₂-e₂)-((a':ℝ)/q')*(F₁-e₁)| ≤ 2*D/q' :=
+  TaoTrudgianYang2025.actual_source_affine_lattice_strip M q q' Q a a' r r' m n hq hq' hqQ har har' (μ:=μ) (μ':=μ') (U:=U) (ℓ:=ℓ) (ℓ':=ℓ') hμ hμ' hμU p p'
+
+example {mu nu U q r Q zeta : ℝ}
+    (hm : 0 < mu) (hn : 0 < nu) (hq : 0 < q) (hr : 0 < r)
+    (hmU : mu ≤ U) (hnU : nu ≤ U) (hqQ : q ≤ Q) (hrQ : r ≤ Q)
+    (hQq : Q ≤ 2*q)
+    (hdual : |(-2*mu*(Real.sqrt (2/(3*mu*q)))^3)-
+      (-2*nu*(Real.sqrt (2/(3*nu*r)))^3)| ≤ zeta) :
+    |nu*(r/q)^3-mu| ≤ 16*U*Real.sqrt (U*Q^3)*zeta :=
+  TaoTrudgianYang2025.bourgain_dual_variable_denominator_difference
+    hm hn hq hr hmU hnU hqQ hrQ hQq hdual
+
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (f : ι → ℝ → ℝ) (z : ι → ℝ) (r : ι → ℚ) (v : ι → ℤ)
+    (Q K₀ : ℕ) [NeZero K₀] (μ₀ U₀ : ℝ) (hμ₀ : 0 < μ₀)
+    (hμbounds : ∀ i∈S, μ₀ ≤ iteratedDeriv 3 (f i) (round (z i))/6 ∧
+      iteratedDeriv 3 (f i) (round (z i))/6 ≤ U₀)
+    (hlevel : ∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ))
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den)
+    (hinv : ∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) :
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : ι × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    ∃ A : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      ∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.source_arc_fourier_cloud_matrices (ι:=ι) S f z r v Q K₀ μ₀ U₀ hμ₀ hμbounds hlevel hden hinv
+
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (F : ℝ → ℝ) (y z : ι → ℝ) (r : ι → ℚ) (v : ι → ℤ)
+    (Q K₀ : ℕ) [NeZero K₀] {σ c J η T M N R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hy : ∀ i∈S, y i∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hM : 2 ≤ M) (hN : 0 < N) (hR : 0 < R)
+    (hz : ∀ i∈S, z i∈Icc M (2*M)) (hphase : T*N*R^2=M^3) :
+    let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+    (∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+    (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) →
+    (∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) →
+    let μ₀ := c/(12*σ*N*R^2)
+    let U₀ := J/(2*σ*N*R^2)
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : ι × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    ∃ A : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      ∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_fourier_cloud_matrices (ι:=ι) S F y z r v Q K₀ (σ:=σ) (c:=c) (J:=J) (η:=η) (T:=T) (M:=M) (N:=N) (R:=R) hσ hc hJ hη hηmax hy hf hbound hnegative hM hN hR hz hphase
+
+example
+    {σ J M N R : ℝ} (hJ : 0 < J) (hσ : 7203*J ≤ σ)
+    (hN : 29 ≤ N) (hR : 0 < R) (hRN : R ≤ N)
+    (hNR : N ≤ R^2) (hNM : N^2 ≤ M)
+    (hquartic : N^10 ≤ M^3*R^7) :
+    7*N+2 ≤ M/4 ∧ (3*J/σ)*(6*N+1)^4 ≤ M*N*R^2 ∧
+      (3*J/(4*σ))*(6*N+1)^2 ≤ N*R^2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_fourier_budgets (σ:=σ) (J:=J) (M:=M) (N:=N) (R:=R) hJ hσ hN hR hRN hNR hNM hquartic
+
+example
+    {σ c J : ℝ} (hσ : 7203*J ≤ σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ B : ℝ, 1 ≤ B ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (N : ℕ) (η T M R Q : ℝ),
+      29 ≤ N → 0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 0 < M → 1 ≤ R → R ≤ Q → Q ≤ (N:ℝ) →
+      (N:ℝ) ≤ R^2 → (N:ℝ)^2 ≤ M →
+      2*B ≤ ((N:ℝ)/Q)^((2:ℝ)/3) →
+      6*B*J ≤ σ*((N:ℝ)/Q)^((2:ℝ)/3) →
+      T*(N:ℝ)*R^2=M^3 →
+      (N:ℝ)^10 ≤ M^3*R^7 →
+      ∃ U : ℕ, 1 ≤ U ∧
+        ((N:ℝ)/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+        (U:ℝ) ≤ ((N:ℝ)/Q)^((2:ℝ)/3)/B ∧
+        (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ (N:ℝ) ∧
+        B^2*(U:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let delta := c/(16*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ H : ℤ, 2 ≤ H ∧ ∃ S : Finset ℝ,
+        (∀ v ∈ S, |v| ≤ 3*J*T/(2*σ*M^2)+1) ∧
+        (∀ a ∈ S, ∀ b ∈ S, a ≠ b → (U:ℝ)/(4*R^2) < |a-b|) ∧
+        ∀ y ∈ Icc (1:ℝ) 2, ∀ x∈Icc M (2*M),
+          h y x∈S ∨
+          ∃ a∈S, ∃ b∈S, a<h y x ∧ h y x<b ∧
+            (∀ v∈S, ¬ (a<v ∧ v<b)) ∧
+            (U:ℝ)/(4*R^2)<b-a ∧ b-a≤7*(U:ℝ)/(2*R^2) ∧
+            ∃ e r₀ p q : ℤ, ((e:ℝ)/r₀=a ∨ (e:ℝ)/r₀=b) ∧
+              IsCoprime e r₀ ∧ 0<r₀ ∧ 0<q ∧ q≤r₀ ∧ q≤H ∧
+              R^2≤(U:ℝ)*(r₀:ℝ)^2 ∧ (p:ℝ)/q∈S ∧ |e*q-p*r₀|=1 ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(e:ℝ)/r₀) ∧
+              (∃ z∈Ioo (3*M/4) (9*M/4), h y z=(p:ℝ)/q) ∧
+              (∀ (s : ℤ) (Hlen : ℤ → ℕ), (∀ k, Hlen k ≤ N) →
+                a∈Icc (h y M) (h y (2*M)) → b∈Icc (h y M) (h y (2*M)) →
+                ∃ x₁∈Icc M (2*M), ∃ x₂∈Icc M (2*M),
+                  h y x₁=a ∧ h y x₂=b ∧
+                let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+                let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      ∃ Agrid : Finset ℤ, ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+        (∀ k : ℤ, k∈Agrid ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈Agrid, z k∈Ioo x₁ x₂ ∧ (h y) (z k)=(r k:ℝ) ∧
+          (r k:ℝ)∈Ioo ((h y) x₁) ((h y) x₂) ∧
+          (r k:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h y) (t k)-delta) ((h y) (t k)+delta) → (r k).den ≤ a.den) ∧
+        (σ/(6*J))*(U:ℝ)-3/2 ≤ (Agrid.card:ℝ) ∧ (Agrid.card:ℝ) ≤ (14*σ/c)*(U:ℝ)+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 16*σ*R^2/(c*(Q:ℝ))
+          ((Agrid.filter (fun k => Q ≤ (r k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f y) (m i)/6
+      let ℓ := fun i => deriv (f y) (m i)
+      let lambda := c/(12*σ*(N:ℝ)*R^2)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      let G := Agrid.filter (fun i => q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈Agrid, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ Q₀ : ℕ, (∀ i∈G, q i ≤ Q₀) →
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q₀:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+        (∑ i∈Agrid, ‖∑ n∈Finset.Ioc (L i) (L i+Hlen i),(𝐞 ((f y) n):ℂ)‖) ≤
+          C*((∑ i∈Agrid.filter (fun i => ¬ (q i ≤ N ∧ 1 ≤ lambda*(q i:ℝ)^2*N)),(Hlen i:ℝ))+
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2)))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_selected_reference_source_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    (a b c d : ℤ) {h h₁ : ℝ}
+    (hdet : a*d-b*c=1)
+    (hh : |h| ≤ 1/6) (hh₁ : |h₁| ≤ 1/6)
+    (haction : |(c:ℝ)*h| ≤ 1/4)
+    (ht : (1:ℝ)/2 ≤ (c:ℝ)*h+d ∧ (c:ℝ)*h+d ≤ 2)
+    (hmap : ((a:ℝ)*h+b)/((c:ℝ)*h+d)=h₁) :
+    a=1 ∧ b=0 ∧ d=1 ∧ h₁=h/((c:ℝ)*h+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.small_curvature_small_action_lower_triangular a b c d (h:=h) (h₁:=h₁) hdet hh hh₁ haction ht hmap
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ η₀ a C : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z : ℝ) (a₀ b₀ c₀ d₀ : ℤ)
+        (S : Finset ℤ) (xa xb : ℤ → ℝ),
+      0 < η → η ≤ η₀ → ya ∈ Icc (1:ℝ) 2 → yb ∈ Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ →
+      a₀*d₀-b₀*c₀=1 →
+      (3*U/σ)*T/(2*M^2) ≤ 1/6 →
+      |(c₀:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ 1/4 →
+      ((yb-ya,T*(c₀:ℝ)/(2*M^2)):ℝ × ℝ) ≠ 0 → |yb-ya| < a →
+      (∀ k ∈ S, Z+(k:ℝ)*N ≤ xa k ∧ xa k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ k ∈ S, xa k ∈ Icc M (2*M) ∧ xb k ∈ Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let h := fun y z => iteratedDeriv 2 (f y) z/2
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ k ∈ S, (1:ℝ)/2 ≤ (c₀:ℝ)*h ya (xa k)+d₀ ∧
+        (c₀:ℝ)*h ya (xa k)+d₀ ≤ 2) →
+      (∀ k ∈ S, ((a₀:ℝ)*h ya (xa k)+b₀)/((c₀:ℝ)*h ya (xa k)+d₀)=h yb (xb k)) →
+      (∀ k ∈ S, |μ yb (xb k)/μ ya (xa k)*((c₀:ℝ)*h ya (xa k)+d₀)^3-1| ≤ Δ) →
+      let R := max 1 (max (3*U/σ) (2*σ/c))
+      (S.card:ℝ) ≤ C*(1+(2*σ/c)*R^12*(Δ+1/M)*M/
+        (N*‖((yb-ya,T*(c₀:ℝ)/(2*M^2)):ℝ × ℝ)‖)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_small_action_block_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    (a b c d : ℤ) {h h₁ : ℝ}
+    (hdet : a*d-b*c=1) (hh0 : h ≠ 0) (hh₁0 : h₁ ≠ 0)
+    (hh : |1/h| ≤ 1/6) (hh₁ : |1/h₁| ≤ 1/6)
+    (haction : |(b:ℝ)/h| ≤ 1/4)
+    (ht : (1:ℝ)/2 ≤ (b:ℝ)/h+a ∧ (b:ℝ)/h+a ≤ 2)
+    (hmap : ((a:ℝ)*h+b)/((c:ℝ)*h+d)=h₁) :
+    a=1 ∧ c=0 ∧ d=1 ∧ h₁=h+b :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.large_curvature_small_action_upper_triangular a b c d (h:=h) (h₁:=h₁) hdet hh0 hh₁0 hh hh₁ haction ht hmap
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ a C : ℝ, 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z : ℝ) (a₀ b₀ c₀ d₀ : ℤ)
+        (S : Finset ℤ) (xa xb : ℤ → ℝ),
+      0 < η → η ≤ 1/8 → ya ∈ Icc (1:ℝ) 2 → yb ∈ Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v ∈ Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ →
+      a₀*d₀-b₀*c₀=1 →
+      4*σ*M^2/(c*T) ≤ 1/6 →
+      |(b₀:ℝ)| * (4*σ*M^2/(c*T)) ≤ 1/4 →
+      ((yb-ya,2*M^2*(b₀:ℝ)/T):ℝ × ℝ) ≠ 0 → |yb-ya| < a →
+      (∀ k ∈ S, Z+(k:ℝ)*N ≤ xa k ∧ xa k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ k ∈ S, xa k ∈ Icc M (2*M) ∧ xb k ∈ Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let h := fun y z => iteratedDeriv 2 (f y) z/2
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ k ∈ S, (1:ℝ)/2 ≤ (b₀:ℝ)/h ya (xa k)+a₀ ∧
+        (b₀:ℝ)/h ya (xa k)+a₀ ≤ 2) →
+      (∀ k ∈ S, ((a₀:ℝ)*h ya (xa k)+b₀)/((c₀:ℝ)*h ya (xa k)+d₀)=h yb (xb k)) →
+      (∀ k ∈ S, |μ yb (xb k)/μ ya (xa k)*((c₀:ℝ)*h ya (xa k)+d₀)^3-1| ≤ Δ) →
+      let R := max 1 (max (3*U/σ) (2*σ/c))
+      (S.card:ℝ) ≤ C*(1+(2*σ/c)*R*(Δ+1/M)*M/
+        (N*‖((yb-ya,2*M^2*(b₀:ℝ)/T):ℝ × ℝ)‖)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_reciprocal_small_action_block_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (A : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (ha hb : ℝ → ℝ) (za zb : ℤ → ℝ) (D : Set ℝ) {N Z : ℝ}
+    (hN : 0 < N) (hinj : Set.InjOn hb D)
+    (hz : ∀ ij∈P, zb ij.2.1∈D)
+    (hspan : ∀ ij∈P, N ≤ Z+(ij.2.1:ℝ)*N+2*N-(round (zb ij.2.1):ℝ) ∧
+      Z+(ij.2.1:ℝ)*N+2*N-(round (zb ij.2.1):ℝ) ≤ 3*N)
+    (hmap : ∀ ij∈P,
+      ((A ij 0:ℝ)*ha (za ij.1.1)+A ij 1)/
+        ((A ij 2:ℝ)*ha (za ij.1.1)+A ij 3)=hb (zb ij.2.1)) :
+    P.card ≤ 12*(P.image (fun ij => (A ij,ij.1.1))).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.curvature_pair_card_le_matrix_blocks P A ha hb za zb D (N:=N) (Z:=Z) hN hinj hz hspan hmap
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/
+      ((Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3)=h yb (zb ij.2.1)) →
+    P.card ≤ 12*∑ A∈P.image Mat, ((P.filter (fun ij => Mat ij=A)).image (fun ij => ij.1.1)).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_pair_card_le_matrix_blocks P Mat F za zb Alen N Z (σ:=σ) (c:=c) (η:=η) (ya:=ya) (yb:=yb) (T:=T) (M:=M) hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometry
+
+example
+    (I : Finset ℤ) (z : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ) (W : ℝ)
+    (hN : 0 < N)
+    (hgeometry : ∀ k∈I, N ≤ Alen k ∧ Alen k ≤ 3*N ∧
+      round (z k)+(Alen k:ℤ)=Z+(N:ℤ)*k+2*(N:ℤ)) :
+    I.card ≤ 5*(I.image (fun k => ⌊(z k-W)/(N:ℝ)⌋)).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.rounded_offset_floor_block_count I z Alen N Z W hN hgeometry
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA Alen : ℤ → ℕ) (N : ℕ) (Za Z : ℤ) (W : ℝ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/
+      ((Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3)=h yb (zb ij.2.1)) →
+    P.card ≤ 60*∑ A∈P.image Mat,
+      ((P.filter (fun ij => Mat ij=A)).image (fun ij => ⌊(za ij.1.1-W)/(N:ℝ)⌋)).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_pair_card_le_physical_blocks P Mat F za zb AlenA Alen N Za Z W (σ:=σ) (c:=c) (η:=η) (ya:=ya) (yb:=yb) (T:=T) (M:=M) hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometryA hgeometry
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+    (N : ℕ) (Za Zb : ℤ) {σ c U η ya yb Δ T M R Gamma : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hya : ya∈Icc (1:ℝ) 2) (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 2 ≤ M) (hN : 0 < N)
+    (hΔ : 0 ≤ Δ) (hGamma : 0 ≤ Gamma) (hphase : T*(N:ℝ)*R^2=M^3)
+    (hpoints : ∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometryB : ∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ))
+    (hdet : ∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1)
+    (hgamma : ∀ ij∈P, Mat ij 2 ≠ 0 ∧ |(Mat ij 2:ℝ)| ≤ Gamma)
+    (hlarge : ∀ ij∈P, 16*(3*U/σ)*M^2 ≤ |(Mat ij 2:ℝ)| * (c/(2*σ))^2*T) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+    let t := fun ij => (Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/t ij=h yb (zb ij.2.1)) →
+    (∀ ij∈P, (1:ℝ)/2 ≤ t ij ∧ t ij ≤ 2) →
+    (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)*(t ij)^3-1| ≤ Δ) →
+    let B := max 1 (max (3*U/σ) (2*σ/c))
+    let Vbound := 3*U*T/(2*σ*M^2)
+    let Error := 8*B*(Δ+5/M)*R^2/(c/(2*σ))^2
+    (P.card:ℝ) ≤ 120*(2*Gamma+1)*(2*Vbound+5)^2*(Gamma+Error) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_large_entry_pair_count P Mat F za zb AlenA AlenB N Za Zb (σ:=σ) (c:=c) (U:=U) (η:=η) (ya:=ya) (yb:=yb) (Δ:=Δ) (T:=T) (M:=M) (R:=R) (Gamma:=Gamma) hσ hc hU hη hηmax hya hyb hf hbound htests hnegative hT hM hN hΔ hGamma hphase hpoints hgeometryA hgeometryB hdet hgamma hlarge
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, h ya (za ij.1.1)=h yb (zb ij.2.1)) →
+    P.card ≤ 12*(P.image (fun ij => ij.1.1)).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_identity_pair_count P F za zb Alen N Z (σ:=σ) (c:=c) (η:=η) (ya:=ya) (yb:=yb) (T:=T) (M:=M) hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometry
+
+example
+    (a b c d : ℤ) {x y H L : ℝ}
+    (hdet : a*d-b*c=1) (hx0 : x ≠ 0)
+    (hx : |x| ≤ H) (hy : |y| ≤ H)
+    (haction : |(c:ℝ)| * H ≤ L)
+    (hmap : ((a:ℝ)*x+b)/((c:ℝ)*x+d)=y)
+    (hden : |((c:ℝ)*x+d)-1| ≤ 1/(8*(L+3)))
+    (hnum : |((a:ℝ)*x+b)/x-1| ≤ 1/(8*(L+3))) :
+    a+d=2 ∧ (a-1)^2= -b*c :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.bounded_action_narrow_ratios_trace_two a b c d (x:=x) (y:=y) (H:=H) (L:=L) hdet hx0 hx hy haction hmap hden hnum
+
+example
+    (r s : ℚ) (a b c d : ℤ) {H L : ℝ}
+    (hr : r ≠ 0) (hdet : a*d-b*c=1)
+    (hrange : |(r:ℝ)| ≤ H) (hsrange : |(s:ℝ)| ≤ H)
+    (haction : |(c:ℝ)| * H ≤ L)
+    (hmap : ((a:ℝ)*(r:ℝ)+b)/((c:ℝ)*(r:ℝ)+d)=(s:ℝ))
+    (hdenom : (c:ℝ)*(r:ℝ)+d=(s.den:ℝ)/r.den)
+    (hden : |(s.den:ℝ)/r.den-1| ≤ 1/(8*(L+3)))
+    (hnum : |(s.num:ℝ)/r.num-1| ≤ 1/(8*(L+3))) :
+    a+d=2 ∧ (a-1)^2= -b*c :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.rational_bounded_action_narrow_bands_trace_two r s a b c d (H:=H) (L:=L) hr hdet hrange hsrange haction hmap hdenom hden hnum
+
+example
+    (a b c d : ℤ) {x y H : ℝ}
+    (hdet : a*d-b*c=1) (hx0 : x ≠ 0)
+    (hx : |x| ≤ H) (hy : |y| ≤ H)
+    (haction : |(c:ℝ)| * H ≤ 1/2)
+    (hmap : ((a:ℝ)*x+b)/((c:ℝ)*x+d)=y)
+    (hden : |((c:ℝ)*x+d)-1| ≤ 1/32)
+    (hnum : |((a:ℝ)*x+b)/x-1| ≤ 1/32) :
+    a=1 ∧ d=1 ∧ (b=0 ∨ c=0) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.narrow_ratios_half_action_triangular a b c d (x:=x) (y:=y) (H:=H) hdet hx0 hx hy haction hmap hden hnum
+
+example
+    (S : Finset (Fin 4 → ℤ)) (x y : (Fin 4 → ℤ) → ℝ) {H L : ℝ}
+    (hL : 0 ≤ L)
+    (hdet : ∀ A∈S, A 0*A 3-A 1*A 2=1)
+    (hnontri : ∀ A∈S, A 1 ≠ 0 ∧ A 2 ≠ 0)
+    (hpoints : ∀ A∈S, x A ≠ 0 ∧ |x A| ≤ H ∧ |y A| ≤ H)
+    (haction : ∀ A∈S, |(A 2:ℝ)| * H ≤ L)
+    (hmap : ∀ A∈S, ((A 0:ℝ)*x A+A 1)/((A 2:ℝ)*x A+A 3)=y A)
+    (hden : ∀ A∈S, |((A 2:ℝ)*x A+A 3)-1| ≤ 1/(8*(L+3)))
+    (hnum : ∀ A∈S, |((A 0:ℝ)*x A+A 1)/x A-1| ≤ 1/(8*(L+3))) :
+    (S.card:ℝ) ≤ (2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.bounded_action_narrow_nontriangular_matrix_count S x y (H:=H) (L:=L) hL hdet hnontri hpoints haction hmap hden hnum
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (Alen : ℤ → ℕ) (N : ℕ) (Z : ℤ)
+    {σ c U η ya yb T M L : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hya : ya∈Icc (1:ℝ) 2) (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hL : 0 ≤ L)
+    (hpoints : ∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ))
+    (hdet : ∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1)
+    (hnontri : ∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0)
+    (haction : ∀ ij∈P, |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let t := fun ij => (Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/t ij=h yb (zb ij.2.1)) →
+    (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+    (∀ ij∈P, |((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/h ya (za ij.1.1)-1| ≤ 1/(8*(L+3))) →
+    (P.card:ℝ) ≤ 12*((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)*
+      ((P.image (fun ij => ij.1.1)).card:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_bounded_action_nontriangular_pair_count P Mat F za zb Alen N Z (σ:=σ) (c:=c) (U:=U) (η:=η) (ya:=ya) (yb:=yb) (T:=T) (M:=M) (L:=L) hσ hc hU hη hηmax hya hyb hf hbound htests hnegative hT hM hN hL hpoints hgeometry hdet hnontri haction
+
+example
+    {σ c U T M γ : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hT : 0 < T) (hM : 0 < M) :
+    |γ| * ((3*U/σ)*T/(2*M^2)) ≤ 288*(U/c)^2 ∨
+      16*(3*U/σ)*M^2 ≤ |γ| * (c/(2*σ))^2*T :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.source_action_or_large_entry (σ:=σ) (c:=c) (U:=U) (T:=T) (M:=M) (γ:=γ) hσ hc hU hT hM
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+    (N : ℕ) (Za Zb : ℤ) {σ c U η ya yb Δ T M R Gamma : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hya : ya∈Icc (1:ℝ) 2) (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 2 ≤ M) (hN : 0 < N)
+    (hΔ : 0 ≤ Δ) (hGamma : 0 ≤ Gamma) (hphase : T*(N:ℝ)*R^2=M^3)
+    (hpoints : ∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometryB : ∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ))
+    (hdet : ∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1)
+    (hnontri : ∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0)
+    (hgamma : ∀ ij∈P, |(Mat ij 2:ℝ)| ≤ Gamma) :
+    let L := 288*(U/c)^2
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+    let t := fun ij => (Mat ij 2:ℝ)*h ya (za ij.1.1)+Mat ij 3
+    (∀ ij∈P, ((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/t ij=h yb (zb ij.2.1)) →
+    (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+    (∀ ij∈P, |((Mat ij 0:ℝ)*h ya (za ij.1.1)+Mat ij 1)/h ya (za ij.1.1)-1| ≤ 1/(8*(L+3))) →
+    (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)*(t ij)^3-1| ≤ Δ) →
+    let B := max 1 (max (3*U/σ) (2*σ/c))
+    let Vbound := 3*U*T/(2*σ*M^2)
+    let Error := 8*B*(Δ+5/M)*R^2/(c/(2*σ))^2
+    (P.card:ℝ) ≤
+      12*((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)*((P.image (fun ij => ij.1.1)).card:ℝ)+
+      120*(2*Gamma+1)*(2*Vbound+5)^2*(Gamma+Error) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_narrow_nontriangular_pair_count P Mat F za zb AlenA AlenB N Za Zb (σ:=σ) (c:=c) (U:=U) (η:=η) (ya:=ya) (yb:=yb) (Δ:=Δ) (T:=T) (M:=M) (R:=R) (Gamma:=Gamma) hσ hc hU hη hηmax hya hyb hf hbound htests hnegative hT hM hN hΔ hGamma hphase hpoints hgeometryA hgeometryB hdet hnontri hgamma
+
+example (H : ℕ) :
+    (∑ h ∈ (Finset.Icc (-(H : ℤ)) (H : ℤ)).erase 0, 1/|(h : ℝ)|) ≤
+      2*(3+2*Real.log ((H : ℝ)+1)) :=
+  TaoTrudgianYang2025.bourgain_integer_reciprocal_sum H
+
+example
+    (S : Finset ℤ) {D W : ℝ} (hD : 0 ≤ D) (hW : 0 ≤ W)
+    (hS : ∀ b∈S, b ≠ 0 ∧ |(b:ℝ)| ≤ D) :
+    ∑ b∈S, (1+W/|(b:ℝ)|) ≤ 2*D+1+2*W*(3+2*Real.log (D+2)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.integer_translation_weight_sum S (D:=D) (W:=W) hD hW hS
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ a C : ℝ, 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z D : ℝ)
+        (S : Finset ℤ) (blocks : ℤ → Finset ℤ) (xa xb : ℤ → ℤ → ℝ),
+      0 < η → η ≤ 1/8 → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ b∈S, b ≠ 0 ∧ |(b:ℝ)| ≤ D) →
+      (∀ b∈S, ∀ k∈blocks b, Z+(k:ℝ)*N ≤ xa b k ∧ xa b k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ b∈S, ∀ k∈blocks b, xa b k∈Icc M (2*M) ∧ xb b k∈Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ b∈S, ∀ k∈blocks b,
+        iteratedDeriv 2 (f yb) (xb b k)/2=iteratedDeriv 2 (f ya) (xa b k)/2+b) →
+      (∀ b∈S, ∀ k∈blocks b, |μ yb (xb b k)/μ ya (xa b k)-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (σ/c)*B*(Δ+1/M)*T/(N*M)
+      ∑ b∈S, ((blocks b).card:ℝ) ≤ C*(2*D+1+2*W*(3+2*Real.log (D+2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_upper_translation_block_sum (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ η₀ a C : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < C ∧
+      ∀ (F : ℝ → ℝ) (η ya yb Δ T M N Z D : ℝ)
+        (S : Finset ℤ) (blocks : ℤ → Finset ℤ) (xa xb : ℤ → ℤ → ℝ),
+      0 < η → η ≤ η₀ → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ v, 0 < v → ContDiffAt ℝ ∞ F v) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F v| ≤ U) →
+      (∀ v∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F v) j|) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ b∈S, b ≠ 0 ∧ |(b:ℝ)| ≤ D) →
+      (∀ b∈S, ∀ k∈blocks b, Z+(k:ℝ)*N ≤ xa b k ∧ xa b k ≤ Z+((k:ℝ)+1)*N) →
+      (∀ b∈S, ∀ k∈blocks b, xa b k∈Icc M (2*M) ∧ xb b k∈Icc M (2*M)) →
+      let f := fun y z => T*(F (z/M)-F (z/M+η*y))/(σ*η)
+      let h := fun y z => iteratedDeriv 2 (f y) z/2
+      let μ := fun y z => iteratedDeriv 3 (f y) (round z)/6
+      (∀ b∈S, ∀ k∈blocks b,
+        h yb (xb b k)=h ya (xa b k)/((b:ℝ)*h ya (xa b k)+1)) →
+      (∀ b∈S, ∀ k∈blocks b, |μ yb (xb b k)/μ ya (xa b k)*((b:ℝ)*h ya (xa b k)+1)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (4*σ/c)*B^12*(Δ+1/M)*M^3/(N*T)
+      ∑ b∈S, ((blocks b).card:ℝ) ≤ C*(2*D+1+2*W*(3+2*Real.log (D+2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_lower_translation_block_sum (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (tag : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (A : ℤ → Fin 4 → ℤ) (hA : Function.Injective A)
+    (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA Alen : ℤ → ℕ) (N : ℕ) (Za Z : ℤ) (W : ℝ)
+    {σ c η ya yb T M : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hyb : yb∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hz : ∀ ij∈P, zb ij.2.1∈Icc M (2*M))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((A (tag ij) 0:ℝ)*h ya (za ij.1.1)+A (tag ij) 1)/
+      ((A (tag ij) 2:ℝ)*h ya (za ij.1.1)+A (tag ij) 3)=h yb (zb ij.2.1)) →
+    P.card ≤ 60*∑ b∈P.image tag,
+      ((P.filter (fun ij => tag ij=b)).image (fun ij => ⌊(za ij.1.1-W)/(N:ℝ)⌋)).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_tagged_pair_card_le_physical_blocks P tag A hA F za zb AlenA Alen N Za Z W (σ:=σ) (c:=c) (η:=η) (ya:=ya) (yb:=yb) (T:=T) (M:=M) hσ hc hη hηmax hyb hf hnegative hT hM hN hz hgeometryA hgeometry
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ a C : ℝ, 0 < a ∧ 0 < C ∧
+      ∀ (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+        (tag : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+        (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+        (N : ℕ) (Za Zb : ℤ) (η ya yb Δ T M D : ℝ),
+      0 < η → η ≤ 1/8 → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ ij∈P, tag ij ≠ 0 ∧ |(tag ij:ℝ)| ≤ D) →
+      (∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M)) →
+      (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+        round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+        round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h yb (zb ij.2.1)=h ya (za ij.1.1)+tag ij) →
+      (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (σ/c)*B*(Δ+1/M)*T/((N:ℝ)*M)
+      (P.card:ℝ) ≤ 60*C*(2*D+1+2*W*(3+2*Real.log (D+2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_upper_translation_pair_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ η₀ a C : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < C ∧
+      ∀ (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+        (tag : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+        (F : ℝ → ℝ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ)
+        (N : ℕ) (Za Zb : ℤ) (η ya yb Δ T M D : ℝ),
+      0 < η → η ≤ η₀ → ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 ≤ D → |yb-ya| < a →
+      (∀ ij∈P, tag ij ≠ 0 ∧ |(tag ij:ℝ)| ≤ D) →
+      (∀ ij∈P, za ij.1.1∈Icc M (2*M) ∧ zb ij.2.1∈Icc M (2*M)) →
+      (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+        round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+        round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h yb (zb ij.2.1)=h ya (za ij.1.1)/((tag ij:ℝ)*h ya (za ij.1.1)+1)) →
+      (∀ ij∈P, |μ yb (zb ij.2.1)/μ ya (za ij.1.1)*((tag ij:ℝ)*h ya (za ij.1.1)+1)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      let W := (4*σ/c)*B^12*(Δ+1/M)*M^3/((N:ℝ)*T)
+      (P.card:ℝ) ≤ 60*C*(2*D+1+2*W*(3+2*Real.log (D+2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_lower_translation_pair_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example {u v Q δ : ℝ}
+    (hQ : 0 < Q) (hδ : 0 < δ) (hu : Q ≤ |u|)
+    (hbin : ⌊u/(δ*Q)⌋=⌊v/(δ*Q)⌋) :
+    |v/u-1| ≤ δ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.same_scaled_floor_relative_bound (u:=u) (v:=v) (Q:=Q) (δ:=δ) hQ hδ hu hbin
+
+example
+    {ι : Type*} (S : Finset ι) (u : ι → ℝ) {Q δ R : ℝ}
+    (hQ : 0 < Q) (hδ : 0 < δ) (hR : 0 ≤ R)
+    (hu : ∀ i∈S, |u i| ≤ R*Q) :
+    ((S.image (fun i => ⌊u i/(δ*Q)⌋)).card:ℝ) ≤ 2*R/δ+3 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.scaled_floor_image_card (ι:=ι) S u (Q:=Q) (δ:=δ) (R:=R) hQ hδ hR hu
+
+example
+    {ι : Type*} (S : Finset ι) (r : ι → ℚ) (Q : ℕ) {lambda U δ : ℝ}
+    (hQ : 0 < Q) (hlambda : 0 < lambda) (hU : 0 ≤ U) (hδ : 0 < δ)
+    (hcurv : ∀ i∈S, lambda ≤ |(r i:ℝ)| ∧ |(r i:ℝ)| ≤ U)
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) :
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    ((S.image color).card:ℝ) ≤ (4/δ+3)*(4*U/(lambda*δ)+3) ∧
+      ∀ i∈S, ∀ j∈S, color i=color j →
+        |((r j).den:ℝ)/(r i).den-1| ≤ δ ∧
+        |((r j).num:ℝ)/(r i).num-1| ≤ δ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.rational_narrow_band_partition (ι:=ι) S r Q (lambda:=lambda) (U:=U) (δ:=δ) hQ hlambda hU hδ hcurv hden
+
+example
+    {ι : Type*} (S : Finset ι) (r : ι → ℚ) (Q : ℕ) {lambda U δ : ℝ}
+    (hQ : 0 < Q) (hlambda : 0 < lambda) (hU : 0 ≤ U) (hδ : 0 < δ)
+    (hcurv : ∀ i∈S, lambda ≤ |(r i:ℝ)| ∧ |(r i:ℝ)| ≤ U)
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) :
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    ((S.image color).card:ℝ) ≤ (4/δ+3)*(4*U/(lambda*δ)+3) ∧
+      (∀ i∈S, ∀ j∈S, color i=color j →
+        |((r j).den:ℝ)/(r i).den-1| ≤ δ ∧
+        |((r j).num:ℝ)/(r i).num-1| ≤ δ) ∧
+      ∀ z : ι → ℂ, ‖∑ i∈S,z i‖^12 ≤
+        ((4/δ+3)*(4*U/(lambda*δ)+3))^11*
+          ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),z i‖^12 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.rational_narrow_band_twelfth_partition (ι:=ι) S r Q (lambda:=lambda) (U:=U) (δ:=δ) hQ hlambda hU hδ hcurv hden
+
+example
+    (F : ℝ → ℝ) {σ c U η T M y z : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hT : 0 < T) (hM : 0 < M)
+    (hy : y∈Icc (1:ℝ) 2) (hz : z∈Icc M (2*M))
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    c*T/(4*σ*M^2) ≤ |h y z| ∧ |h y z| ≤ (3*U/σ)*T/(2*M^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_half_curvature_source_bounds F (σ:=σ) (c:=c) (U:=U) (η:=η) (T:=T) (M:=M) (y:=y) (z:=z) hσ hc hU hη hηmax hT hM hy hz hf hbound htests
+
+example
+    {ι : Type*} (S : Finset ι) (F : ℝ → ℝ)
+    (param z : ι → ℝ) (r : ι → ℚ) (Q : ℕ) {σ c U η T M δ : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hT : 0 < T) (hM : 0 < M) (hQ : 0 < Q) (hδ : 0 < δ)
+    (hparam : ∀ i∈S, param i∈Icc (1:ℝ) 2)
+    (hpoints : ∀ i∈S, z i∈Icc M (2*M))
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hden : ∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ i∈S, h (param i) (z i)=(r i:ℝ)) →
+    let lambda := c*T/(4*σ*M^2)
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    let Cap := (4/δ+3)*(24*U/(c*δ)+3)
+    ((S.image color).card:ℝ) ≤ Cap ∧
+      (∀ i∈S, ∀ j∈S, color i=color j →
+        |((r j).den:ℝ)/(r i).den-1| ≤ δ ∧
+        |((r j).num:ℝ)/(r i).num-1| ≤ δ) ∧
+      ∀ coeff : ι → ℂ, ‖∑ i∈S,coeff i‖^12 ≤ Cap^11*
+        ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),coeff i‖^12 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_rational_band_twelfth_partition (ι:=ι) S F param z r Q (σ:=σ) (c:=c) (U:=U) (η:=η) (T:=T) (M:=M) (δ:=δ) hσ hc hU hη hηmax hT hM hQ hδ hparam hpoints hf hbound htests hden
+
+example
+    (a b c d : ℤ) {x lambda H δ : ℝ}
+    (hlambda : 0 < lambda) (hxlo : lambda ≤ |x|) (hxhi : |x| ≤ H)
+    (hδ : 0 ≤ δ) (hδmax : δ < 1)
+    (hdet : a*d-b*c=1)
+    (hden : |((c:ℝ)*x+d)-1| ≤ δ)
+    (hnum : |((a:ℝ)*x+b)/x-1| ≤ δ) :
+    (a=1 ∧ b=0 ∧ c=0 ∧ d=1) ∨
+    (a=1 ∧ d=1 ∧ c=0 ∧ b≠0 ∧ |(b:ℝ)| ≤ δ*H) ∨
+    (a=1 ∧ d=1 ∧ b=0 ∧ c≠0 ∧ |(c:ℝ)| ≤ δ/lambda) ∨
+    (b≠0 ∧ c≠0) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.narrow_band_matrix_translation_cases a b c d (x:=x) (lambda:=lambda) (H:=H) (δ:=δ) hlambda hxlo hxhi hδ hδmax hdet hden hnum
+
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (F : ℝ → ℝ) (y z : ι → ℝ) (r : ι → ℚ) (v : ι → ℤ)
+    (Q K₀ : ℕ) [NeZero K₀] {σ c J η T M N R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hy : ∀ i∈S, y i∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hQ : 0 < Q)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hM : 2 ≤ M) (hN : 0 < N) (hR : 0 < R)
+    (hz : ∀ i∈S, z i∈Icc M (2*M)) (hphase : T*N*R^2=M^3) :
+    let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+    (∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+    (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) →
+    (∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) →
+    let μ₀ := c/(12*σ*N*R^2)
+    let U₀ := J/(2*σ*N*R^2)
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : ι × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    let L := 288*(J/c)^2
+    let δ := 1/(8*(L+3))
+    let lambda := c*T/(4*σ*M^2)
+    let Hcurv := (3*J/σ)*T/(2*M^2)
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    let Cap := (4/δ+3)*(24*J/(c*δ)+3)
+    ((S.image color).card:ℝ) ≤ Cap ∧
+    (∀ coeff : ι → ℂ, ‖∑ i∈S,coeff i‖^12 ≤ Cap^11*
+      ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),coeff i‖^12) ∧
+    ∃ A : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      (∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |τ ij.1.1 ij.1.2-τ ij.2.1 ij.2.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(A ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 2:ℝ)*ℓ ij.1.1
+          let F₂ := ℓ ij.2.1-2*(A ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (A ij 0:ℝ)*ℓ ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(A ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          A ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (r ij.2.1).num-(r ij.1.1).num)) ∧
+      ∀ ij∈P, color ij.1.1=color ij.2.1 →
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        |t-1| ≤ δ ∧
+        |((A ij 0:ℝ)*h ij.1.1+A ij 1)/h ij.1.1-1| ≤ δ ∧
+        ((A ij 0=1 ∧ A ij 1=0 ∧ A ij 2=0 ∧ A ij 3=1) ∨
+         (A ij 0=1 ∧ A ij 3=1 ∧ A ij 2=0 ∧ A ij 1≠0 ∧ |(A ij 1:ℝ)| ≤ δ*Hcurv) ∨
+         (A ij 0=1 ∧ A ij 3=1 ∧ A ij 1=0 ∧ A ij 2≠0 ∧ |(A ij 2:ℝ)| ≤ δ/lambda) ∨
+         (A ij 1≠0 ∧ A ij 2≠0)) ∧
+        (|(A ij 2:ℝ)| * Hcurv ≤ L →
+          A ij 0+A ij 3=2 ∧ (A ij 0-1)^2= -A ij 1*A ij 2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_colored_fourier_cloud_matrices (ι:=ι) S F y z r v Q K₀ (σ:=σ) (c:=c) (J:=J) (η:=η) (T:=T) (M:=M) (N:=N) (R:=R) hσ hc hJ hη hηmax hy hf hbound htests hQ hnegative hM hN hR hz hphase
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (S : Finset ((ℝ × ℤ) × Fin 2)) (F : ℝ → ℝ)
+        (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ) (N : ℕ) (Z : ℝ → ℤ)
+        (η ya xa Δ J q t T M : ℝ),
+      0 < η → η ≤ 1/8 → ya∈Icc (1:ℝ) 2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → t∈Icc (1/2:ℝ) 2 →
+      xa∈Icc M (2*M) →
+      (∀ ip∈S, ip.1.1∈Icc (1:ℝ) 2 ∧ z ip.1.1 ip.1.2∈Icc M (2*M)) →
+      (∀ ip∈S, N ≤ Alen ip.1.1 ip.1.2 ∧ Alen ip.1.1 ip.1.2 ≤ 3*N ∧
+        round (z ip.1.1 ip.1.2)+(Alen ip.1.1 ip.1.2:ℤ)=
+          Z ip.1.1+(N:ℤ)*ip.1.2+2*(N:ℤ)) →
+      (∀ ip∈S, ∀ jp∈S, ip.1.1 ≠ jp.1.1 → 1 ≤ J*|ip.1.1-jp.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ip∈S, h ip.1.1 (z ip.1.1 ip.1.2)=q) →
+      (∀ ip∈S, |μ ip.1.1 (z ip.1.1 ip.1.2)/μ ya xa*t^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (S.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_physical_family_fiber_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, t ij∈Icc (1/2:ℝ) 2) →
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*
+        ((P.image (fun ij => (Mat ij,ij.1))).card:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_family_pair_card_le_matrix_points (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)=h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*
+        ((P.image Prod.fst).card:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_family_identity_pair_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ K C : ℝ, 0 < K ∧ 0 < C ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M L : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → 0 ≤ L →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+      (∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0) →
+      (∀ ij∈P, |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/
+        h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      let B := max 1 (max (3*U/σ) (2*σ/c))
+      (P.card:ℝ) ≤ 6*K*(1+8*C*B*(Δ+5/M)*J)*
+        ((2*(L+3)^2+1)*(2*L+5)^2*(L+3)^2)*
+        ((P.image Prod.fst).card:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_family_bounded_action_pair_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    (S : Finset ((ℝ × ℤ) × Fin 2)) (z : ℝ → ℤ → ℝ)
+    (Alen : ℝ → ℤ → ℕ) (N : ℕ) (Z : ℝ → ℤ) {M : ℝ}
+    (hM : 0 ≤ M) (hN : 0 < N)
+    (hpoints : ∀ ip∈S, z ip.1.1 ip.1.2∈Icc M (2*M))
+    (hgeometry : ∀ ip∈S, N ≤ Alen ip.1.1 ip.1.2 ∧ Alen ip.1.1 ip.1.2 ≤ 3*N ∧
+      round (z ip.1.1 ip.1.2)+(Alen ip.1.1 ip.1.2:ℤ)=
+        Z ip.1.1+(N:ℤ)*ip.1.2+2*(N:ℤ)) :
+    (S.card:ℝ) ≤ 2*(4+M/(N:ℝ))*((S.image (fun ip => ip.1.1)).card:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.rounded_offset_family_point_count S z Alen N Z (M:=M) hM hN hpoints hgeometry
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    let L := 288*(U/c)^2
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → (N:ℝ) ≤ M → J ≤ M →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.1.1.1 ij.1.1.2 ∧ Alen ij.1.1.1 ij.1.1.2 ≤ 3*N ∧
+        round (z ij.1.1.1 ij.1.1.2)+(Alen ij.1.1.1 ij.1.1.2:ℤ)=
+          Z ij.1.1.1+(N:ℤ)*ij.1.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+      (∀ ij∈P, Mat ij 1 ≠ 0 ∧ Mat ij 2 ≠ 0) →
+      (∀ ij∈P, |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/
+        h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      (P.card:ℝ) ≤ D*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+        (M/(N:ℝ))*(1+Δ*J) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_family_bounded_action_source_scale (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → (N:ℝ) ≤ M → J ≤ M →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.1.1.1 ij.1.1.2 ∧ Alen ij.1.1.1 ij.1.1.2 ≤ 3*N ∧
+        round (z ij.1.1.1 ij.1.1.2)+(Alen ij.1.1.1 ij.1.1.2:ℤ)=
+          Z ij.1.1.1+(N:ℤ)*ij.1.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      (∀ ij∈P, h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)=h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ Δ) →
+      (P.card:ℝ) ≤ D*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+        (M/(N:ℝ))*(1+Δ*J) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_family_identity_source_scale (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    let L := 288*(U/c)^2
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)))
+        (Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ)
+        (F : ℝ → ℝ) (z : ℝ → ℤ → ℝ) (Alen : ℝ → ℤ → ℕ)
+        (N : ℕ) (Z : ℝ → ℤ) (η Δ J T M : ℝ),
+      0 < η → η ≤ 1/8 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      0 < T → 2 ≤ M → 0 < N → 0 ≤ Δ → 0 < J → (N:ℝ) ≤ M → J ≤ M →
+      (∀ ij∈P,
+        (ij.1.1.1∈Icc (1:ℝ) 2 ∧ z ij.1.1.1 ij.1.1.2∈Icc M (2*M)) ∧
+        (ij.2.1.1∈Icc (1:ℝ) 2 ∧ z ij.2.1.1 ij.2.1.2∈Icc M (2*M))) →
+      (∀ ij∈P, N ≤ Alen ij.1.1.1 ij.1.1.2 ∧ Alen ij.1.1.1 ij.1.1.2 ≤ 3*N ∧
+        round (z ij.1.1.1 ij.1.1.2)+(Alen ij.1.1.1 ij.1.1.2:ℤ)=
+          Z ij.1.1.1+(N:ℤ)*ij.1.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, N ≤ Alen ij.2.1.1 ij.2.1.2 ∧ Alen ij.2.1.1 ij.2.1.2 ≤ 3*N ∧
+        round (z ij.2.1.1 ij.2.1.2)+(Alen ij.2.1.1 ij.2.1.2:ℤ)=
+          Z ij.2.1.1+(N:ℤ)*ij.2.1.2+2*(N:ℤ)) →
+      (∀ ij∈P, ∀ kl∈P, ij.2.1.1 ≠ kl.2.1.1 → 1 ≤ J*|ij.2.1.1-kl.2.1.1|) →
+      (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+      (∀ ij∈P,
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ |(Mat ij 2:ℝ)| * ((3*U/σ)*T/(2*M^2)) ≤ L)) →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+      let μ := fun y w => iteratedDeriv 3 (f y) (round w)/6
+      let t := fun ij => (Mat ij 2:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 3
+      (∀ ij∈P, ((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/t ij=
+        h ij.2.1.1 (z ij.2.1.1 ij.2.1.2)) →
+      (∀ ij∈P, |t ij-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |((Mat ij 0:ℝ)*h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)+Mat ij 1)/
+        h ij.1.1.1 (z ij.1.1.1 ij.1.1.2)-1| ≤ 1/(8*(L+3))) →
+      (∀ ij∈P, |μ ij.2.1.1 (z ij.2.1.1 ij.2.1.2)/
+        μ ij.1.1.1 (z ij.1.1.1 ij.1.1.2)*(t ij)^3-1| ≤ Δ) →
+      (P.card:ℝ) ≤ D*((P.image (fun ij => ij.1.1.1)).card:ℝ)*
+        (M/(N:ℝ))*(1+Δ*J) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_family_type_one_source_scale (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
+example
+    {σ c U : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hU : 0 < U) :
+    ∃ D : ℝ, 0 < D ∧
+      ∀ (S : Finset (ℝ × ℤ))
+        (F : ℝ → ℝ) (z : (ℝ × ℤ) → ℝ) (r : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ)
+        (Alen : (ℝ × ℤ) → ℕ) (Z : ℝ → ℤ)
+        (Q K₀ N : ℕ) [NeZero K₀] (η T M R Jsep : ℝ),
+      (0 < η) →
+      (η ≤ 1/8) →
+      (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ U) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (0 < Q) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      (2 ≤ M) →
+      (0 < N) →
+      (0 < R) →
+      (∀ i∈S, z i∈Icc M (2*M)) →
+      (T*(N:ℝ)*R^2=M^3) →
+      ((N:ℝ) ≤ M) →
+      (0 < Jsep) →
+      (Jsep ≤ M) →
+      (∀ i∈S, N ≤ Alen i ∧ Alen i ≤ 3*N ∧
+      round (z i)+(Alen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+      (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let y := (Prod.fst : (ℝ × ℤ) → ℝ)
+    let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+    (∀ i∈S, iteratedDeriv 2 (f i) (z i)/2=(r i:ℝ)) →
+    (∀ i∈S, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den) →
+    (∀ i∈S, ((r i).den:ℤ) ∣ (r i).num*v i-1) →
+    let μ₀ := c/(12*σ*N*R^2)
+    let U₀ := U/(2*σ*N*R^2)
+    let q := fun i => (r i).den
+    let μ := fun i => iteratedDeriv 3 (f i) (round (z i))/6
+    let ℓ := fun i => deriv (f i) (round (z i))
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun i p =>
+      (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let w := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+        x ip.1 ip.2 2/Real.sqrt K₀,x ip.1 ip.2 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let P := (V ×ˢ V).filter (fun ij => ∀ d, |w ij.1 d-w ij.2 d| ≤ 2*radius d)
+    let h := fun i => iteratedDeriv 2 (f i) (z i)/2
+    let L := 288*(U/c)^2
+    let δ := 1/(8*(L+3))
+    let lambda := c*T/(4*σ*M^2)
+    let Hcurv := (3*U/σ)*T/(2*M^2)
+    let q₀ := (Q:ℝ)/2
+    let p₀ := lambda*(Q:ℝ)/2
+    let color := fun i => (⌊((r i).den:ℝ)/(δ*q₀)⌋,⌊((r i).num:ℝ)/(δ*p₀)⌋)
+    let Cap := (4/δ+3)*(24*U/(c*δ)+3)
+    let Δ := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    ((S.image color).card:ℝ) ≤ Cap ∧
+    (∀ coeff : (ℝ × ℤ) → ℂ, ‖∑ i∈S,coeff i‖^12 ≤ Cap^11*
+      ∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),coeff i‖^12) ∧
+    ∃ A : ((((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2))) → Fin 4 → ℤ,
+      (∀ ij∈P,
+        A ij 0*A ij 3-A ij 1*A ij 2=1 ∧
+        let t := (A ij 2:ℝ)*h ij.1.1+A ij 3
+        t∈Icc (1/2:ℝ) 2 ∧
+        ((A ij 0:ℝ)*h ij.1.1+A ij 1)/t=h ij.2.1 ∧
+        |(A ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤ Δ) ∧
+      let E := P.filter (fun ij =>
+        color ij.1.1=color ij.2.1 ∧
+        ((A ij 0=1 ∧ A ij 1=0 ∧ A ij 2=0 ∧ A ij 3=1) ∨
+         (A ij 1≠0 ∧ A ij 2≠0 ∧ |(A ij 2:ℝ)| * Hcurv ≤ L)))
+      (E.card:ℝ) ≤ D*((S.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_fourier_cloud_type_one_count (σ:=σ) (c:=c) (U:=U) hσ hc hU
+
 end HuxleyPhysicalReferenceRegression
