@@ -29210,7 +29210,7 @@ private theorem bourgain_fixed_first_column_delta_spacing {a b c d b' d' : ℤ}
 /-- Count determinant-one integer matrices with fixed nonzero lower-left
 entry. The determinant forces spacing of lower-right entries; no matrix
 count or coprimality certificate is assumed. -/
-private theorem bourgain_fixed_gamma_matrix_count
+theorem bourgain_fixed_gamma_matrix_count
     (S : Finset (Fin 4 → ℤ)) {c : ℤ} {X : ℝ} (hc : c ≠ 0) (hX : 0 ≤ X)
     (hdet : ∀ M∈S, M 0*M 3-M 1*M 2=1)
     (hgamma : ∀ M∈S, M 2=c)
@@ -29298,7 +29298,7 @@ private theorem bourgain_fixed_gamma_matrix_count
 
 /-- Weighted enumeration of non-upper-triangular determinant-one matrices.
 The reciprocal lower-left-entry factor is retained for source compression. -/
-private theorem bourgain_resonance_matrix_weight_sum
+theorem bourgain_resonance_matrix_weight_sum
     (S : Finset (Fin 4 → ℤ)) {X Gamma W : ℝ}
     (hX : 0 ≤ X) (hGamma : 0 ≤ Gamma) (hW : 0 ≤ W)
     (hdet : ∀ M∈S, M 0*M 3-M 1*M 2=1)
@@ -29353,7 +29353,7 @@ private theorem bourgain_resonance_matrix_weight_sum
       mul_le_mul_of_nonneg_right hC (by positivity)
     _ = _ := by ring
 
-private theorem bourgain_mobius_entry_bounds {a b c d x y X : ℝ}
+theorem bourgain_mobius_entry_bounds {a b c d x y X : ℝ}
     (hdet : a*d-b*c=1) (htl : (1:ℝ)/2 ≤ c*x+d) (htu : c*x+d ≤ 2)
     (hmap : (a*x+b)/(c*x+d)=y) (hx : |x| ≤ X) (hy : |y| ≤ X) :
     |a| ≤ |c| *X+2 ∧ |d| ≤ |c| *X+2 := by
