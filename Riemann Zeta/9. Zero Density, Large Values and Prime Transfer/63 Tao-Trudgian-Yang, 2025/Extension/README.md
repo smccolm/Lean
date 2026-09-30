@@ -1,5 +1,1097 @@
 # Lean extension
 
+## Whole-grid Fourier entry and normalized chart tolerance (30 September 2026)
+
+Three public analytic consumers are now installed, with all preceding
+public contracts and regressions unchanged:
+
+- positive_difference_reference_family_whole_grid_geometry constructs
+  the SAME interior endpoints, covers reference-point endpoints as well
+  as open gaps, and bounds omitted physical-grid points by
+  card(Y)*(24*J*M/(xi*N*U)+28*xi*U/c+4).
+  Interior trimming costs at most two points per gap; at most two
+  boundary gaps per phase use the proved curvature preimage-width bound.
+  Its bound on original exponential sums is proved, not assumed.
+- positive_difference_constructed_reference_family_whole_grid_fourier
+  consumes the constructed reference system and this geometry, retains
+  ALL prior reference/anchor/Farey metadata and ONE common Fourier mode,
+  and proves the whole-grid Fourier estimate with the additional cost
+  card(Y)*(24*J*M/(xi*U)+28*xi*N*U/c+4*N).
+  This holds for every finite I whose grid points t(k)=s+N*k lie in [M,2M],
+  for the actual blocks starting at L(k)=s+N*k+2*N with H(y,k)<=N.
+  H depends on the original phase and grid point, not the reference-gap
+  tag. The general gap-dependent interior contract is preserved.
+  Raw and normalized MR/Q anchor-error alternatives are both retained.
+- approximateModelPhase_enlarged_colored_linked_chart_source_tests keeps
+  the SAME constructed extension, sharp-prefix loss, finite colors,
+  physical models and rounded-jet identities. It chooses a smaller
+  positive source constant and proves, at the ACTUAL common normalized
+  radius Rnew^2=R^2*xi/(sigma*y0),
+  c/(64*xi*R^2) <= kappa/(16*(Cphys+2)*Rnew^2),
+  where kappa=modelPhaseThirdLower(sigma+1) and
+  Cphys=(sigma+1)*(sigma+2)+1. No chart-tolerance certificate is assumed.
+
+Scratch 68132 PASS checks the exact geometry contract; combined scratch
+75472 PASS checks both whole-grid contracts; scratch 19437 PASS checks
+the normalized source-test contract. All three public dependencies and
+six private geometric/scalar dependencies use only standard logical
+axioms, with zero Lean diagnostics. Scratch SHA-256:
+geometry 635fa1de10c12bfa99b9ee55f6da77ff3c95402bcee03c894ea2d5c43d685f56;
+whole-grid Fourier 90873d6a705c7efd3f190774802a7f479f1c99403de1eda45710e91c98131685;
+chart tolerance 61ff96a0aaeba3863af981c3db30b9be1d35ba2263d68aada41af62f9f193060.
+Current totals: 728 actual public Huxley theorems, 7,913 exact-signature
+regressions, 7,223 explicit public audits.
+This installed snapshot still requires focused production compilation
+and BOTH run_lake_build.bat and run_tao_trudgian_yang_build.bat.
+
+Remaining obligation DAG: remaining linked scalar choices and literal
+pair-to-family/first-point multiplicities -> source packing and long/short
+scale optimization -> triangular Type-2 and complete Type-3/Fourier,
+boundary/major and outer source-sum assembly -> fifth moment -> beta
+rows 7--11 -> EPZAE-14/29/30 and public aggregate.
+Whole-grid SOURCE ENTRY and the common normalized chart-tolerance bridge
+are proved; this is not the full source fifth moment. Small-Q/major-block
+treatment and conversion to the target complete moment remain OPEN.
+Aggregate remains OPEN (34/42). The PDF's Section 10 horizontal/vertical
+counting distinction is retained; a fixed phase-pair matrix estimate does
+not by itself discharge the whole parameter-family moment.
+
+No new production module, import, resource limit, toolchain or BAT change.
+Both BATs remain first-class required interfaces and must be updated when
+their actual coverage or behavior needs it. Frozen source statements,
+both counterexamples, authorized repairs and permanent regressions remain
+preserved. Protected proof hashes and git diff --check were rechecked.
+Recovery-record maintenance remains permanently skipped.
+
+## Constructed interior family and strong-anchor Fourier entry (30 September 2026)
+
+The existing source partition proofs are factored into cutoff-parametric
+private proofs; both original public partition contracts remain unchanged.
+The existing positive_difference_tagged_gap_controlled_complement_fourier
+is strengthened to arbitrary Acut>=2 and Bmajor>=128*sigma, with Acut<=Q.
+The grouped actual-anchor error remains charged once per distinct phase.
+Under Acut*R<=Q and N*R<=M its explicit constant gives the MR/Q
+logarithmic source scale. A permanent exact-type regression retains the
+old Acut=2, Bmajor=128*sigma contract.
+
+For Acut>=768 and Bmajor>=24576*sigma the SAME chosen anchors satisfy
+256*den(anchor)<=Q/3 and 256<=2*eps*(Q/3)*den(anchor)
+for every eps>=c/(64*sigma*R^2). These are proved consequences of the
+cutoffs, not assumed dense-sector certificates. Matching this tolerance
+to the normalized model-phase matrix-chart epsilon is still a separate
+linked-scale obligation.
+
+Two new public analytic consumers are
+positive_difference_reference_family_interior_geometry and
+positive_difference_constructed_reference_family_source_fourier.
+The first constructs physical endpoints of every literal interior
+reference gap, proves same-phase disjointness, retains the existing
+M/(N*U) packing bound, bounds the distinct phase count by card(Y), and
+proves that at most 2*card(Y) occupied gaps are boundary gaps.
+The second consumes positive_difference_constructed_reference_system
+itself, retains ALL its original metadata, constructs this interior
+family, and invokes the stronger tagged Fourier entry on it.
+No reference set, endpoint, disjointness, gap-count or anchor-count
+certificate is supplied by its caller. The SAME original block sums,
+minimum anchors, Farey centers, and ONE common Fourier mode are retained.
+The scalar buffer/Taylor/U conditions remain explicit source inputs.
+
+Actual totals: 725 public Huxley theorems, 7,910 exact-signature
+regressions and 7,220 explicit public audits.
+Combined scratch 7326 PASS checks SIX exact contracts, including the
+preserved weak-cutoff regression; all five changed/new public proof
+dependencies and private cutoff/geometry dependencies have only standard
+logical axioms, with zero Lean diagnostics. Scratch SHA-256:
+2389719450f224197fe964b797429675c5ef9d06137f6e5fd508d2695ca0c51c.
+The finite real gap tags use an explicit classical equality instance at
+the generic tagged-entry interface; this resolves a type-instance mismatch
+without altering mathematical data or adding an assumption.
+This snapshot is verified: focused build 94092 PASS (10,781 jobs;
+Huxley 281s, root 16s, regressions 430s); foundation BAT 12168 PASS
+(8,857 jobs, 14,290 audited theorems), and paper BAT 79675 PASS
+(10,782 jobs, 20,799 dynamic declarations: 14,559 target + 6,240 pinned).
+All Lean stages have zero diagnostics. The two frozen historical Python
+SyntaxWarnings remain visible and are not Lean proof evidence.
+Foundation log/manifest: foundation_freeze_20260930_135723.log/.json.
+Paper log: tao-trudgian-yang-build-20260930-141020-db233b31.log.
+SHA-256:
+Huxley 2fbad548bb25390fbd360c75c7d8a0f55a318615117a4619754c1bd4438e2d12;
+regressions bc44457f3033eb9b0a518ca17a4662644ce05fc7e6d086263c2ab604425e9259;
+audit 47cc57fd32dc1bd5faf3adc1adc8f24f9a224660ec5f9b0eb56bf7527848addd;
+foundation log 743267334c689b50c15efebe3765406c8844ebd12362e0715502c8e585b18aef;
+foundation JSON c8475fccb45d748c6ee89e12e17a28fbd70b97d876964ea5e8e66f433de37d3a;
+paper log 95e05d4f20b2a56c9382b8dd59208d68363186797059cb8f464607bc6d6e4295.
+The remaining DAG below describes this preceding snapshot; the next
+whole-grid/tolerance snapshot advances those two entry obligations.
+
+Remaining obligation DAG: whole-physical-grid coverage and trim/boundary
+SUM budgets -> normalized chart-tolerance and remaining linked scalar
+choices -> literal pair-to-family partition and first-point multiplicities
+-> source packing and dyadic long/short scale optimization -> triangular
+Type-2 and complete Type-3/Fourier/boundary/major assembly -> fifth moment
+-> beta rows 7--11 -> EPZAE-14/29/30 and public aggregate.
+The INTERIOR-family entry is proved; neither its boundary-gap cardinality
+nor the matrix sum is claimed as the full fifth moment. Aggregate stays
+OPEN (34/42). Small-Q/major-block treatment is not removed by stronger
+cutoffs.
+
+No new production module, import, resource-limit, toolchain or BAT
+changes. Both BATs remain mandatory and must be maintained as needed.
+The supplied PDF and both frozen counterexample files were hash-checked
+unchanged, as was the authorized corrected zeta transfer.
+All frozen false statements, repairs and permanent regressions remain
+preserved. Recovery-record maintenance remains permanently skipped.
+
+## Actual Fourier-family long/short matrix sum (30 September 2026)
+
+The existing physicalModelPhase_actual_fourier_charted_reference_gap_count
+is strengthened IN PLACE: its constructed selected-family witnesses and
+small-entry alternative are preserved, and every positive long-family
+threshold ell yields a uniform reciprocal-entry bound independent of the
+selected subfamily's unknown cardinality. The original mass inequality
+supplies the required selected size; no count is assumed.
+
+One new public consumer,
+physicalModelPhase_actual_fourier_matrix_family_sum,
+handles ALL families in a fixed source-reference/phase-pair regime.
+It consumes the actual approximate model phases, physical samples,
+rational seeds, original Fourier clouds, same-color conditions, matrix
+maps, source geometry and strong anchors. Long families use the existing
+paired-chart analytic theorem; short and empty families retain their
+explicit costs. Observed Mobius maps and dyadic denominators derive
+matrix entry bounds. The existing determinant-one weighted enumeration
+supplies both the pure reciprocal coefficient and the finite matrix count.
+
+For any nonnegative actual lower-left-entry cap Gamma, the result is
+(2*Gamma+1)*(2*Uband+5)^2*(Gamma*ShortCost+Coeff).
+Here ShortCost is the maximum of the exact source-size and long-family
+thresholds, and Coeff has the explicit R^4/(ell^2*N^2) scale and existing
+logarithmic chart/label constants. Matrices remain nonzero and above the
+displayed Type-3 small-entry cutoff. The previous physical matrix cap is
+also retained. No family-count, spacing, or matrix-count certificate is an
+input to the public theorem.
+
+Actual totals: 723 public Huxley theorems, 7,907 exact-signature
+regressions and 7,218 explicit public audits. Scratch 57134 PASS checks
+both new/changed exact public signatures and all six private dependencies;
+zero Lean diagnostics, standard logical axioms only. Scratch SHA-256:
+8a67cfbfb7f91fb1804a45aa2752453c1d3623ff81831a3596496f9ee88090ab.
+The first all-family wrapper exceeded the existing 200,000-heartbeat
+limit. A direct long/short decomposition resolves this with no resource
+increase, no suppressed diagnostic and no new production module.
+Focused build 78696 PASS (10,781 jobs; Huxley 276s, regressions 418s).
+Foundation BAT 43768 PASS (8,857 jobs, 14,290 audited declarations),
+logs foundation_freeze_20260930_132619.log/.json.
+Paper BAT 12851 PASS (10,782 jobs, 14,551 target plus 6,240 pinned-source
+dynamic declarations), log tao-trudgian-yang-build-20260930-133910-e61e8592.log.
+All Lean build, regression, dependency and integrity gates passed with
+zero Lean diagnostics; historical Python escape warnings remain visible.
+Snapshot SHA-256: Huxley
+8e71e974f647cebf3aaeaaba71cd5cfb091c924983b992b47e9a6ff6c74cf8a4;
+regressions d55d664f3b7bd58826ed76d77237261672c0d1aa608d659c40c2da2fe327f9a2;
+audit f17a492519d73b2dc39f274cc1e39e60f88ea18912c7970e4a2dcfd92c24a7f6;
+paper log 2546a24108ef2a569d4a0c3425685a5cfe3c75f0bafcb474692635b74587d232;
+foundation log cf72764206710c43175dda339441317e8d0ab4922f1ca5fc90b265fd0f18b6c0;
+foundation JSON ad3527cfde569a8ecfc95a5e6f77dca0abfe45441a28335edaa43250741e239b.
+
+Still OPEN: actual selected-reference family assembly and boundary
+buffers; strong dense-sector anchor selection; remaining linked scalar
+choices; literal pair-to-family partition, first-point multiplicities and
+source packing; dyadic scale optimization, triangular Type-2 contribution,
+and complete Type-3/Fourier/boundary/major assembly. The new matrix sum
+does NOT by itself prove the source fifth moment. Beta rows 7--11 and
+the aggregate remain OPEN (34/42).
+No import, toolchain, resource-limit or BAT changes. Both BATs remain
+mandatory and must be maintained as needed. Counterexamples, frozen
+false statements, authorized repairs, supplied PDF and permanent
+regressions remain preserved. Recovery-record maintenance is skipped.
+
+## Distinct-phase complement for disjoint physical gaps (30 September 2026)
+
+The existing huxley_anchor_complement_source_scale proof is promoted
+in place. One new public analytic consumer,
+positive_difference_tagged_gap_controlled_complement_fourier,
+uses the actual tagged source entry, retaining its SAME minimum anchors,
+Farey fractions, roots, inverses and ONE common Fourier mode.
+For disjoint physical gaps of the same phase, the error is charged ONCE
+per distinct phase: card(Y.image y)*N*Cost, and under 2*R<=Q, N*R<=M,
+card(Y.image y)*Cerror*(MR/Q)*(2+log(Dlow+1)).
+This is not a separate-mode or per-gap relaxation.
+
+The proof groups the actual physical grid before invoking the sharper
+anchor count, derives disjointness from the stated endpoint geometry,
+and proves fiber injectivity for the actual supplied anchors.
+No tail, counting, spacing or Fourier conclusion is assumed.
+The caller must still construct the adjacent-reference gap family and
+derive the required endpoint geometry and stronger dense-sector anchors.
+All original sums, stationary errors and Fourier weights are retained.
+
+Actual totals: 722 public Huxley theorems, 7,906 exact-signature
+regressions and 7,217 explicit public audits. Scratch 98484 PASS checks
+both exact public signatures and private grouped-count dependencies;
+zero Lean diagnostics, standard logical axioms only.
+Scratch SHA-256:
+978dd8e152f8121b1abdd830854fe626d00fa0d74a0e99b05036d0eeda67af9e.
+Focused build 24360 PASS (10,781 jobs; Huxley 262s, regressions 412s).
+Foundation BAT 95618 PASS (8,857 jobs, 14,290 audited declarations),
+logs foundation_freeze_20260930_125718.log/.json.
+Paper BAT 4320 PASS (10,782 jobs, 14,549 target plus 6,240 pinned-source
+dynamic declarations), log tao-trudgian-yang-build-20260930-131014-46e4efdc.log.
+All Lean build, regression, dependency and integrity gates passed with
+zero Lean diagnostics. The historical Python escape warnings remain visible.
+Snapshot SHA-256: Huxley
+770d1a54ab9012e0a949178b50275f077df6ec6fe0ac7c63fda9619ed48786d6;
+regressions 89c93746cc1238bc970cca08ae248c4fafa859c64cf739045119bcb9414a3929;
+audit 65865adc70905b425eaf1a3716508f3f68f44907d12ad7cf2036907fb6aecaaa;
+paper log d06afb00b03ecd79f2ce839d59dccbea35b1a44e51257bf6843d58b31f4fab6b;
+foundation log c07957024090ec99ac1aac8b79f2768076bfbe20f227b81a3bc466b68ea7a030;
+foundation JSON bd6c2919d24bfb7b1b8dff24e96ee2c4981fdcd468881927697e4dc87e5f5e3c.
+
+Still OPEN: actual selected-reference family assembly and boundary
+buffers, stronger dense-sector anchor selection, remaining linked scalar
+choices, matrix/first-point image counts, source packing and dyadic
+long-block savings, complete Type-2/3, Fourier and boundary/major assembly.
+The fifth moment, beta rows 7--11 and aggregate remain OPEN (34/42).
+No production module, import, resource limit or BAT changes.
+Both BATs remain mandatory and must be maintained as needed.
+Frozen false statements, counterexamples, authorized repairs, supplied
+PDF and permanent regressions are preserved. Recovery-record maintenance
+remains permanently skipped.
+
+## Sharp anchor tails reach the source Fourier bound (30 September 2026)
+
+The existing rational-neighborhood proof is sharpened IN PLACE.
+A short compatibility proof preserves its old interface. Two new public
+theorems are bourgain_actual_minimal_arc_sharp_tail and
+positive_difference_actual_minimal_anchor_sharp_tail; the existing
+complement and Fourier consumers are strengthened in place. Totals:
+720 public Huxley theorems, 7,904 exact-signature regressions and 7,215
+explicit public audits. Final scratch 64162 PASS checks all FOUR new/changed
+exact public signatures with Polynomial notation open, zero Lean diagnostics,
+standard logical axioms only. Scratch SHA-256:
+576190156ec9b42553f20f424df82d4207c7ef5e129db263fd52cc7931e6d379.
+The first focused attempt exposed an X/Polynomial notation collision;
+renaming the local curvature bound Vcurv fixes it without changing mathematics.
+Focused retry 11088 PASS (10,781 jobs; Huxley 252s, regressions 409s).
+Foundation BAT 20895 PASS (8,857 jobs; 14,290 audited declarations),
+logs foundation_freeze_20260930_121621.log/.json.
+Paper BAT 6770 PASS (10,782 jobs; 14,535 target plus 6,240 pinned-source
+dynamic declarations), log tao-trudgian-yang-build-20260930-124224-a598f008.log.
+All Lean build, regression, dependency and integrity gates passed without
+Lean diagnostics; historical Python escape SyntaxWarnings are not Lean
+diagnostics and the archived false powering rule remains explicitly flagged.
+Snapshot SHA-256: Parabola
+d630b035c29ce0946bf9cb6c01d0ee5e63a63253b08e715690e489a1e829b1d5;
+Huxley 7043d0cc4beea697bee034fff65773fd8ca0c79b9d8449fba6309f44d2835898;
+regressions 83f437c89ce18fc9c892776b496e064cff99d864641a6bd9728a64f412e311ec;
+audit 3999897d12e9a471732dd5f44e09e26bc4705509373718b751518b8334ff6a08;
+paper log 98b3ba2cdee745fa02040079b10b5160e267b4d6f01b34e583e69f045a218a76;
+foundation log ed11dd3e6f256329241c2f970b3a93703c4abf6dc66487723a8c04fec7f26aa0;
+foundation JSON 278a50975101f2ed4366d3a7279067e3e5045dc171ae038abfd3e70f210bc2ba.
+Historical Huxley public totals from the old line-based search were one too
+high: it included a prose line beginning 'theorem constructs'. Exact-signature
+regression and explicit-audit totals are unaffected.
+
+Keeping the actual Dirichlet numerator error gives 2*X*q+3 instead
+of 2*(X+1)*q+1. The derived minimum-denominator tail is now
+4*X*D^2+3*D*(2+log(D+1)), with NO standalone 4*D^2 term.
+The proof consumes the supplied anchors directly and derives physical
+grid separation from the existing curvature-width theorem. With
+X=3*J*M/(2*sigma*N*R^2), D=64*sigma*R^2/(c*Q), R<=Q and N*R<=M,
+it gives the MR/(NQ) tail with logarithmic loss, including an MR/Q
+bound for the original exponential sums.
+
+The actual two-regime complement uses this sharper high-denominator
+tail and the existing low-denominator rational count. Its unnecessary
+N<=M input is removed. The SAME-anchor, SAME-root, SAME-common-mode
+interior-gap Fourier consumer retains the explicit unrestricted error
+bound AND proves the sharper MR/Q logarithmic error under 2*R<=Q
+and N*R<=M. Its displayed constant depends only on sigma, c and J.
+The entire sum and all stationary/Fourier errors remain present.
+This is an actual upstream consumer, not a supplied tail certificate.
+
+Still OPEN: global tagged-family complement assembly, stronger
+dense-sector anchor selection and boundary buffers, remaining linked
+scalar choices, matrix/first-point image counts, source packing,
+dyadic long-block savings, and full Type-2/3/Fourier plus boundary/major
+assembly. The fifth moment, beta rows 7--11 and aggregate remain
+OPEN (34/42). No module, import, resource limit or BAT changes.
+Both BATs remain mandatory and must be maintained as needed.
+Counterexamples, frozen false statements, authorized repairs, the
+supplied PDF and permanent regressions are preserved.
+Recovery-record maintenance remains permanently skipped.
+
+## Actual-anchor complement and source Fourier consumer (30 September 2026)
+
+Two new public Huxley theorems derive the excluded-anchor count and
+insert its weighted error into the original source Fourier conclusion.
+The existing Bourgain bounded-denominator theorem is made public
+IN PLACE and reused; no production proof is copied. Totals: 720 public
+Huxley theorems, 7,902 exact-signature regressions and 7,213 explicit
+public audits. Scratch 16558 PASS checks both new exact signatures,
+with zero Lean diagnostics and only standard logical axioms; SHA-256
+31d449f3b8591543d94bec2edd2e67a85c0eadbff38e81d834fc932d5bbc72ac.
+Focused build 14282 PASS (10,781 jobs; Parabola 351s, Huxley 266s,
+semantic regression 427s), foundation BAT 71670 PASS (8,857 jobs /
+14,290 discovered audits), and paper BAT 93650 PASS (10,782 jobs /
+20,761 dynamic audits). All exit 0 and zero Lean diagnostics.
+Foundation evidence: foundation_freeze_20260930_114115 (.log/.json);
+paper log: tao-trudgian-yang-build-20260930-120050-86275e7c.log.
+The two archived Python SyntaxWarnings are historical replay diagnostics.
+
+The actual physical grid and positive-difference curvature estimate
+prove near-anchor injectivity. Any two minimum-denominator choices
+in the SAME curvature interval have equal denominators; this transfers
+the existing sparse high-denominator tail to the actual supplied
+anchors without replacing their rational values. The low-denominator
+branch uses the already-proved rational count with derived multiplicity
+one. For arbitrary Acut >= 2 and Bmajor >= 0, both failures of
+Acut*den(anchor) <= Q and Bmajor*R^2 <= c*Q*den(anchor) are counted.
+The public consumer applies this to the EXACT anchors returned by
+positive_difference_interior_gap_dyadic_source_fourier, with Acut=2
+and Bmajor=128*sigma. It preserves the source sum, rational roots and
+one common Fourier mode, replacing the rejected-block length sum by
+N times the derived cost.
+
+This is an explicit complement error, NOT a proof of the saving needed
+for the fifth moment. Stronger dense-sector anchor selection, boundary
+buffers, linked scalar choices, matrix/first-point image counts,
+source packing, dyadic long-block savings and full Type-2/3/Fourier
+plus boundary/major assembly remain OPEN. Beta rows 7--11 and the
+aggregate remain OPEN (34/42). No new module, import, resource limit
+or BAT modification. Both BATs remain mandatory and must be maintained
+as needed. Counterexamples, frozen source statements, authorized repairs
+and permanent regressions are unchanged. Recovery-record maintenance
+is permanently skipped.
+
+## Constructed paired charts and actual family count (30 September 2026)
+
+Two new public theorems and five private proofs extend the existing
+module: `physicalModelPhase_same_color_reference_gap_paired_chart_cover`
+and `physicalModelPhase_actual_fourier_charted_reference_gap_count`.
+Totals: 718 public Huxley theorems, 7,899 exact-signature regressions
+and 7,210 explicit public audit commands. Scratch 4567 PASS checks
+both exact public signatures, with zero Lean diagnostics and only
+standard logical axioms. Scratch SHA-256:
+2b210a1cd5236e1b03b82e2a6de57bfca63b539dec5a6ed2ac0e439f010237ea.
+Focused build 22509 PASS (10,781 jobs), foundation BAT 1810 PASS
+(8,857 jobs / 14,290 discovered audits), and paper BAT 63843 PASS
+(10,782 jobs / 20,754 dynamic audits), all exit 0 and zero Lean
+diagnostics. Foundation evidence: foundation_freeze_20260930_111231
+(.log and .json); paper log:
+tao-trudgian-yang-build-20260930-112453-e7064d05.log.
+The two archived Python SyntaxWarnings remain historical replay
+diagnostics, not Lean diagnostics.
+
+The existing rational narrow-band partition supplies denominator ratios
+within 1/24 of one. The actual Fourier lower-left-entry bound and mesh
+derive its variation across the source epsilon-window; this is not a
+new assumed chart certificate. A tighter TWELVE-radius endpoint
+exclusion still removes at most SIX physical windows. A base-5/4
+logarithmic partition of the actual reference distance then constructs
+common intervals on which BOTH transported denominators lie in
+[d,2*d]. Their endpoints map into the SAME reference gap.
+
+The actual family consumer selects the largest constructed chart
+fiber and applies the existing certified analytic count. Its signature
+has NO supplied global d/l/w chart, paired denominator-region bound or
+endpoint chart-inclusion premise. Writing
+Ccharts=floor(log_(5/4)((gapHi-gapLo)/(12*epsilon)))+1, its original-family
+mass is at most 6+Ccharts*(105+17*card(S0)); the identical finite loss
+is carried into the small-entry/reciprocal-entry-count alternative.
+The original Fourier matrix, rational points, rounded labels and
+SAME-reference-before-quartic-cell choice are preserved. The narrow-band
+source inputs remain explicit and match the already-proved source
+coloring; they are not a substitute for final source assembly.
+
+Still OPEN: actual anchor/complement and boundary-buffer selection,
+remaining linked scalar choices, matrix/first-point image counts,
+source packing, dyadic long-block savings and full Type-2/3/Fourier
+plus boundary/major assembly. The fifth moment and beta rows 7--11
+remain OPEN; aggregate stays 34/42. No module, import, resource limit
+or BAT change was needed. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory and must be maintained
+as needed. The supplied PDF, counterexamples, frozen false statements,
+owner-authorized repairs and permanent regressions are preserved.
+Recovery-record maintenance is permanently skipped.
+
+## Certified reference-gap sector size (30 September 2026)
+
+Two new public theorems and five private proofs extend the existing
+module: `reference_gap_complete_sector_linearization_size` and
+`physicalModelPhase_actual_fourier_certified_reference_gap_count`.
+Totals: 716 public Huxley theorems, 7,897 exact-signature regressions
+and 7,208 explicit public audit commands. Scratch 61680 PASS checks
+both exact public signatures with zero Lean diagnostics and only
+standard logical axioms, within the existing resource limits.
+Scratch SHA-256:
+b65d603458d92980fc14cf8cd11358856434d76b556b2d4298c5ef0278420306.
+Focused build 85936 PASS: 10,781 jobs; Huxley 263s and semantic
+regression 411s, with zero Lean diagnostics. Foundation BAT 74840 PASS:
+8,857 jobs and 14,290 audited declarations, zero Lean diagnostics;
+evidence logs/foundation_freeze_20260930_104158 (.log and .json).
+Paper BAT 76699 PASS: 10,782 jobs and 20,747 dynamically audited
+declarations; log tao-trudgian-yang-build-20260930-105404-b717a254.log.
+All Lean build, regression and audit stages have zero errors/warnings
+and only permitted standard logical axioms. The two archived Python
+invalid-escape SyntaxWarnings remain visible historical-reproduction
+diagnostics, not Lean warnings.
+
+The actual complete signed sector supplies its density lower bound.
+Reference-gap geometry gives a height/width bound, and the SAME selected
+integer U supplies Bselect*U*Q <= N. These derive the strict
+linearization-size inequality from a fixed source-constant margin,
+not from an assumed sector-cardinality certificate. The new actual
+Fourier-family consumer integrates the six-window endpoint removal,
+deriving inverse-chart positivity, factor-two variation and the
+sector-size test. Its original-family loss is explicitly 105+17.
+Reference roots are selected before the common quartic cell, and the
+original matrix and rounded labels are preserved.
+
+Still OPEN: construction of the global paired denominator chart,
+actual anchor/complement and boundary-buffer selection, remaining
+linked scalar choices, matrix/first-point image counts, source packing,
+dyadic long-block savings and full Type-2/3/Fourier plus boundary/major
+assembly. The fifth moment and beta rows 7--11 remain OPEN; aggregate
+stays 34/42. No module, import, resource limit or BAT change was needed.
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. Frozen source statements,
+counterexamples, owner-authorized repairs, regressions and the supplied
+PDF are preserved; recovery-record maintenance is permanently skipped.
+
+## Derived reference-chart geometry (30 September 2026)
+
+Four new public theorems and two private geometric proofs extend the
+existing module; four public and three private consumers are generalized
+in place. Totals: 714 public Huxley theorems (mechanical recount), 7,895 exact-signature
+regressions and 7,206 explicit public audit commands.
+Scratch 92871 PASS checks the generalized analytic chain, seven exact
+public signatures and four UNCHANGED factor-2 compatibility signatures.
+Scratch 13641 PASS checks the exact-source-radius six-window theorem,
+its exact public signature and both private/public axiom audits.
+Both checks have zero Lean diagnostics and only standard logical axioms.
+Chart scratch SHA-256:
+6e6af5743fe9f3ee4f9be265c071b41d3f88639a59ad773923b8fac048ec9088.
+Interior scratch SHA-256:
+a83cfeb9821234d424f67dc7d300cefa35fce35bebc438cc98b0448a799905af.
+Focused build 93059 PASS: 10,781 jobs; Huxley 261s and semantic
+regression 411s, with zero Lean diagnostics. Foundation BAT 18804 PASS:
+8,857 jobs and 14,290 discovered declarations; evidence
+logs/foundation_freeze_20260930_095935 (.log and .json).
+Paper BAT 22945 PASS: 10,782 jobs and 20,737 dynamically audited
+declarations; log tao-trudgian-yang-build-20260930-101230-02ec0d0c.log.
+All Lean build, regression and audit stages have zero errors/warnings
+and only permitted standard logical axioms. The two archived Python
+invalid-escape SyntaxWarnings remain visible historical-reproduction
+diagnostics, not Lean warnings.
+
+Separation of the actual retained determinant-one parent gives
+abs(r*s)*delta < 4. Reference-gap width <= 7*delta/2 then bounds
+abs(s) <= 14*(r*z+s), hence abs(r*z) <= 30*d on dyadic chart endpoints.
+The factor 2 is NOT inferred from separation. The existing weighted
+coefficient estimate is proved for arbitrary chart constant K, with
+cutoff (2*K+1)*C*J. A natural-number K is threaded through the EXISTING
+signed coefficient, sample, square-span First and actual family chain.
+All old factor-2 applications are retained and still elaborate.
+
+The new separated-reference family consumer derives its coordinate
+bound from actual reference-set separation, retained-parent membership,
+both chart endpoints and dyadic endpoint denominators. It uses K=30,
+hence the explicit source cutoff 61*Ccurv*Cphys. The SAME U, matrix,
+rounded labels, constructed reference and sign-free 99+17 family loss
+are preserved. This is an analytic constant refinement, not a repair
+of a false source statement.
+
+Separately, the actual source radius
+epsilon=kappa/(16*(Cphys+2)*R^2) satisfies the boundary smallness budget.
+At most SIX physical windows meet the two endpoint neighborhoods.
+Removing them derives inverse-chart denominator positivity, factor-two
+variation and inclusion of the complete curvature interval in the SAME
+reference gap, for either reference orientation. These conditions are
+outputs, not assumed cardinality or chart certificates.
+
+Still OPEN: integration of this six-window selection into the full
+family consumer, the global paired denominator chart and density/scalar
+selection, boundary buffers, matrix/first-point image counts, source
+packing, dyadic long-block savings and full Type-2/3/Fourier plus
+boundary/major assembly. The fifth moment and beta rows 7--11 remain
+OPEN; aggregate stays 34/42. No module, import or resource limit was added.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed; their existing coverage
+includes this in-place refinement. The supplied PDF, frozen source
+statements, counterexamples, owner-authorized repairs and permanent
+regressions remain preserved. Recovery-record maintenance is skipped.
+
+## Sign-free reference-gap family count (30 September 2026)
+
+Three public theorems and seven private proof components extend the
+existing HuxleyLinearForms module: 709 public declarations, 7,887
+exact-signature regressions and 7,202 explicit public audit commands.
+Scratch 58641 PASS checks all ten bodies, three exact public signatures
+and ten axiom audits, with zero Lean diagnostics and only standard
+logical axioms. Scratch SHA-256:
+4551357e1e2fa1ac13ad1eee367d455c5d9ae475ef855c2232fed5ed198ad744.
+Focused build 81771 PASS: 10,781 jobs; Huxley 261s and semantic
+regression 416s, with zero Lean diagnostics. Foundation BAT 7702 PASS:
+8,857 jobs and 14,290 discovered declarations; evidence
+logs/foundation_freeze_20260930_092756 (.log and .json).
+Paper BAT 85782 PASS: 10,782 jobs and 20,722 dynamically audited
+declarations; log tao-trudgian-yang-build-20260930-094024-78c2d57b.log.
+All Lean build, regression and audit stages have zero errors/warnings
+and only permitted standard logical axioms. The two archived Python
+invalid-escape SyntaxWarnings remain visible historical-reproduction
+diagnostics, not Lean warnings.
+
+The negative-sector integer-label theorem now covers every negative
+slope, without the former alpha <= -1 restriction. Strict size bounds
+exclude rounding ties before reflection; no false global oddness of
+round is used. Actual negative Fourier coincidences give both the
+measured quartic curvature bound and the original-seed residual.
+Positive-sector results are reused unchanged.
+
+The new actual Fourier-family consumer has NO sector-sign or
+zero-exclusion assumption. After the existing seventeen-cell selection,
+the proved physical boundary-crossing count removes at most three
+zero-crossing windows. It derives each retained sector's sign and applies
+the corresponding actual source theorem, preserving the SAME matrix,
+integer U, original rounded labels and reference chosen before selection.
+The resulting loss is S.card <= 99+17*S0.card, and the Section 9
+small-entry/count alternative uses the same 99 loss. Sector-density
+tests are required only on the retained, noncrossing sectors.
+The previous reference-gap cutoff, derived reference window and BOTH
+physical square-span budgets remain part of this consumer.
+
+Global reference/chart geometry, density and scalar selection, boundary
+buffers, matrix/first-point image counts, source-family packing, dyadic
+long-block summation and full Type-2/3/Fourier plus boundary/major
+assembly remain OPEN. This is not the full fifth-moment theorem or a
+closure of beta rows 7--11. Aggregate remains 34/42.
+No production module, import, resource limit or BAT coverage was added.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. The supplied PDF, frozen
+source statements, counterexamples, authorized repairs and permanent
+regressions are preserved. Recovery-record maintenance is skipped.
+
+## Reference-gap cutoff and physical-span consumer (30 September 2026)
+
+Three public theorems extend HuxleyLinearForms: 706 public
+declarations, 7,884 exact-signature regressions and 7,199 explicit
+public audit commands. Scratch 7367 PASS checks the three exact bodies,
+three exact signatures and their axiom audits, with zero Lean diagnostics
+and only standard logical axioms. Scratch SHA-256:
+78b9d46be5f58e25df3b059ce97e0ffbcf7ed3ad5bdee9db959afe9b3801a1c3.
+Focused build 18872 PASS: 10,781 jobs; Huxley 248s and semantic
+regression 397s, with zero Lean diagnostics. Foundation BAT 99330 PASS:
+8,857 jobs and 14,290 discovered declarations; evidence
+logs/foundation_freeze_20260930_085349 (.log and .json).
+Paper BAT 16448 PASS: 10,782 jobs and 20,709 dynamically audited
+declarations; log tao-trudgian-yang-build-20260930-090648-277f9fdf.log.
+All Lean build, regression and audit stages have zero errors/warnings
+and only permitted standard logical axioms. The two archived Python
+invalid-escape SyntaxWarnings remain visible historical-reproduction
+diagnostics, not Lean warnings.
+
+The actual cubic coefficient, determinant-one coordinate identity and
+reference-gap width give abs(G) <= 7*U*N/kappa. The SAME selected-U
+no-wrap budget and maximal-reference-denominator budget imply the
+source (6.6) cutoff for either reference orientation.
+Two actual matrix-related dyadic-denominator points in that gap have
+physical separation <= 28*U*N/kappa in BOTH phases, using the existing
+curvature-growth theorem and actual denominator ratios.
+
+The actual Fourier-family count now chooses Lref=56*U/kappa.
+Reference closeness and its scalar window budget are derived.
+It retains the constructed reference and derives all family displacements,
+the padded square Taylor budgets and the coordinate cutoff, then invokes
+the existing Section 9 small-entry/count alternative. The square span
+comes from the SAME selected U and N^10<=M^3*R^7; no old N^5 condition,
+physical-displacement certificate, Taylor-budget certificate or G-cutoff
+hypothesis is supplied to this consumer.
+Required selection constants are explicit:
+Bselect >= 2+168/kappa and 7*Bcut <= kappa*Bselect.
+An intermediate large family-count interface was consolidated away;
+no production module, import, resource limit or BAT coverage was added.
+
+Still explicit upstream: actual reference-gap membership and endpoint
+selection, denominator/chart and sector-sign geometry, density tests,
+boundary buffers and the remaining scalar regime. Connecting the global
+constructed reference partition, including all sign cases, remains OPEN.
+Matrix/first-point image counts, source-family packing, dyadic summation,
+full Type-2/3/Fourier and boundary/major assembly, the fifth moment and
+beta rows 7--11 remain OPEN. Aggregate stays 34/42.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. The supplied PDF, frozen
+source statements, counterexamples, authorized repairs and permanent
+regressions are preserved. Recovery-record maintenance is skipped.
+
+
+## Section 9 square-span analytic First/count closure (30 September 2026)
+
+Seven public theorems and one shared private source consumer are
+installed in HuxleyLinearForms: 703 public declarations, 7,881
+exact-signature regressions and 7,196 explicit public audit commands.
+Scratch 94835 PASS checks all seven bodies/signatures with zero Lean
+diagnostics and only standard logical axioms. Scratch SHA-256:
+377e0bc5fb1f592add63766ee7c631c8eb5b6a34029d874bf543b97096390ba0.
+Focused build 65913 PASS: 10,781 jobs; Huxley 249s and semantic
+regression 382s, with zero Lean diagnostics. Foundation BAT 13209 PASS:
+8,857 jobs and 14,290 discovered declarations; evidence
+logs/foundation_freeze_20260930_082229 (.log and .json).
+Paper BAT 9471 PASS: 10,782 jobs and 20,692 dynamically audited
+declarations; log tao-trudgian-yang-build-20260930-083515-6cf9d3e6.log.
+All Lean build, regression and audit stages have zero errors/warnings
+and only permitted standard logical axioms. The two archived Python
+invalid-escape SyntaxWarnings remain visible historical-reproduction
+diagnostics, not Lean warnings.
+
+This is an alternate analytic proof of the supplied PDF's (9.18), not
+a source-contract repair. The existing paired C4 compression acts
+directly on the two genuine quartic Third witnesses. In the large-entry
+case it yields the L^-3 First Condition without transporting an improved
+Third estimate to all intervening occupied points. The complementary
+matrix-entry case supplies the N*R^2/M term. Both terms are retained.
+
+Actual signed-height occupied-window samples feed this result. The
+actual Fourier-family consumer constructs and retains the same
+reference, selects the curvature cell, derives the original-seed
+heights/residuals and proves the two-term bound using
+nSpan^2 <= M*R, NOT nSpan^3 <= M*R^2.
+With J = 6+216*(floor(log_2(P1*P2))+1),
+L = kappa*card(S0)/(16*J*Cphys), and the explicit constants Cfirst,
+Csecond from the analytic theorem, its whole-family consumer proves:
+either abs(Mat[2]) <= 2*Csecond*N*R^2/M, or
+card(S) <= 48+17*Ccount*R^4/(L^2*N^2*abs(Mat[2])),
+where Ccount = 32*J*Cphys*Cfirst/kappa.
+The common family and selected reference are unchanged. No improved
+occupied-Third hypothesis or cardinality upper bound is supplied.
+
+The SAME already-selected integer U also satisfies
+(B*U*N)^2 <= M*R from its actual Q-dependent upper bound,
+R<=Q and N^10<=M^3*R^7. No older N^5<=M*R^4 condition is added.
+The previous cubic-span First/Third consumers remain valid and preserved;
+they are no longer the required route for this square-span First/count step.
+
+Still explicit upstream: sector-sign and denominator/chart geometry,
+source cutoffs, physical reference displacements and padded Taylor
+budgets. Derive these from the actual constructed reference gaps next.
+Matrix/first-point image counts, source-family packing, dyadic summation,
+full Type-2/3/Fourier and boundary/major assembly, the fifth moment and
+beta rows 7--11 remain OPEN. Aggregate stays 34/42; EPZAE-13/14/29
+are not complete.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. Frozen source statements,
+counterexamples, authorized repairs, permanent regressions and the
+supplied PDF remain preserved. Recovery-record maintenance is skipped.
+
+## Height-based actual-family consumers (30 September 2026)
+
+Six public theorems and one shared private fixed-reference proof extend
+HuxleyLinearForms: 696 public declarations, 7,874 exact-signature
+regressions and 7,189 explicit public audit commands.
+Scratch 24266 PASS checks all six bodies/signatures, the private core
+and 169 preceding public examples, with zero Lean diagnostics and only
+standard logical axioms. Scratch SHA-256:
+ead3b9d94a9049ef905ba45de124fbd366fe19aab4a9c214ad0d76449df40ed8.
+Focused build 75379 PASS (10,781 jobs; Huxley 240 s,
+regression 399 s). Foundation BAT 88340 PASS (8,857 jobs;
+14,290 discovered theorems), log/manifest foundation_freeze_20260930_074857.
+Paper BAT 41865 PASS (10,782 jobs; 20,663 dynamically audited
+declarations), log tao-trudgian-yang-build-20260930-080059-9bfb450f.log.
+All Lean checks have zero errors/warnings and only permitted standard
+logical axioms. Scratch 16775 also passes all 175 public signatures.
+The two archived Python invalid-escape SyntaxWarnings remain visible
+historical-reproduction diagnostics, not Lean warnings.
+
+The signed integer-height count now feeds eight actual common-label
+samples, the long-block First Condition, occupied Third-Condition mass,
+the actual Fourier family, same-reference curvature-cell selection and
+the large-entry whole-family count. Physical seed heights are derived.
+The selected-family size threshold is 48+544*B, where
+B=6+216*(floor(log_2(P1*P2))+1); the same reference survives selection.
+The fixed-reference proof is shared to avoid repeated elaboration;
+no resource limit or source contract was weakened.
+
+These consumers still require the explicit cubic span budget
+nSpan^3 <= M*R^2, sector-sign geometry, displacement and source cutoffs.
+They are NOT a proof of the improved Section 9 range.
+The supplied PDF, pp. 27--31, instead uses nSpan^2 <= M*R and retains
+the additive N*R^2/M term in (9.18). The existing two-term determinant
+and paired C4 resonance-compression theorems are the next reuse targets:
+apply compression directly to the two quartic Third witnesses before
+transporting any improved estimate through the intervening interval.
+No implication from N^10 <= M^3*R^7 to the older N^5 <= M*R^4 is assumed.
+
+Global source geometry, matrix/first-point image counts, packing,
+dyadic summation, Type-2/3/Fourier and boundary/major assembly, the
+fifth moment and beta rows 7--11 remain OPEN. Aggregate stays 34/42.
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. Frozen false statements,
+counterexamples, owner-authorized repairs and permanent regressions
+are preserved; recovery-record maintenance remains skipped.
+
+## Signed coefficient cost and linked loss (30 September 2026)
+
+Ten theorems extend HuxleyLinearForms: 690 public declarations,
+7,868 exact-signature regressions and 7,183 explicit audit commands.
+Scratch 58886 PASS checks all ten bodies/signatures and 159 preceding
+public examples, with zero Lean diagnostics and standard logical axioms.
+Scratch SHA-256:
+7ce41fb0871fd212b4d41af3874818dbc1d51cfc9adaaf12304a6fc47e6476f0.
+Focused build 46968 PASS (10,781 jobs; Huxley 227 s,
+regression 438 s). Foundation BAT 83060 PASS (8,857 jobs;
+14,290 discovered theorems), log/manifest foundation_freeze_20260930_071139.
+Paper BAT 73434 PASS (10,782 jobs; 20,625 dynamically audited
+declarations), log tao-trudgian-yang-build-20260930-072514-63cb0eb3.log.
+All Lean checks have zero errors/warnings and only permitted standard
+logical axioms. The two archived Python invalid-escape SyntaxWarnings
+remain visible historical-reproduction diagnostics, not Lean warnings.
+
+The count now covers both numerator signs and zero slope, with cost
+6 + 216*(floor(log_2(P1*P2))+1), using the original rounded labels.
+No reflection identity for half-integer rounding is assumed.
+Actual physical seeds supply P1/P2; the chart need not start above zero.
+
+Under the source relation T*N*R^2=M^3, R<=Q<=N, N^2<=M and U>=1,
+the bounded reference labels give P1,P2 <= C*T^3. Every fixed power
+of the actual rounded coefficient-image count is then <= T^epsilon
+eventually, uniformly in the remaining physical parameters and phases.
+The proof reuses the existing logarithmic-power absorption theorem.
+The existing integer-U choice and bounded physical reference construction
+are also joined at the same witness, preserving seeds, retained parents,
+curvature coverage, adjacent gaps and physical preimage widths.
+
+Remaining: feed these height-based counts into the actual long-block
+First/Third and full-family consumers, and derive the remaining chart,
+source-cutoff and reference-displacement conditions. Matrix/first-point
+image counts, packing, dyadic summation, Type-2/3/Fourier and boundary/major
+assembly, the fifth moment and beta rows 7--11 remain OPEN.
+Aggregate remains 34/42; EPZAE-13/14/29 are not complete.
+Both BATs remain mandatory and must be maintained as needed.
+Frozen source statements, counterexamples, authorized repairs, permanent
+regressions and the supplied PDF are preserved. Recovery records are skipped.
+
+## Physical seed and reference heights (30 September 2026)
+
+Eight theorems extend the existing HuxleyLinearForms module:
+680 public theorems, 7,858 exact-signature examples and 7,173 explicit
+audit commands. Scratch 74147 checks all eight bodies, all eight exact
+local regression signatures and 151 preceding public examples, with
+exit 0, zero Lean diagnostics and only standard logical axioms.
+Scratch SHA-256:
+a87ee3dc6606e6554ebb6c10f90299d1bb6cdc53f3e8492ee487f1bbb0bdf474.
+Focused build 48448 PASS (10,781 jobs; Huxley 229 s,
+regression 376 s). Foundation BAT 42065 PASS (8,857 jobs;
+14,290 discovered theorems), with log/manifest
+foundation_freeze_20260930_062824. Paper BAT 5456 PASS (10,782 jobs;
+20,605 dynamically audited declarations), log
+tao-trudgian-yang-build-20260930-064108-6a08b392.log.
+All Lean checks have zero errors/warnings and only permitted standard
+logical axioms. The two archived Python invalid-escape SyntaxWarnings
+remain visible historical-reproduction diagnostics, not Lean warnings.
+
+Dyadic coefficient selection can now use the actual occupied slope
+range while keeping the measured curvature and weighted budget on the
+original chart. Positive integer seeds in a rectangle P1 by P2 give
+cost 5 + 108*(floor(log_2(P1*P2))+1), with no positive-left-chart-endpoint
+premise. The source (6.6) cutoff still derives the weighted budget.
+
+The physical consumer derives that rectangle from the original rational
+curvature levels and denominator cutoff Q. With
+V = T*(modelPhaseJetCoefficient(sigma,1)+delta)/(2*M^2), it uses
+P1 = 1 + (abs(v)+abs(s)*V)*Q and
+P2 = 1 + (abs(r)*V+abs(e))*Q.
+Neither seed heights nor numerator estimates are assumed. Positive
+seed coordinates, the small raw residual and the actual curvature
+cell/cutoff remain explicit upstream conditions.
+
+The existing separated reference construction also supplies its own
+height bounds. Its retained points 0 and 1/H imply H < 4/delta.
+An inserted reference and its retained determinant-one parent imply
+n*v < 4/delta and n < 4/delta. The bounded interval construction
+preserves all original seeds, primitive labels, parents, separation,
+coverage and adjacent-gap conclusions. Its physical consumer gives
+denominator < 4*R^2/U and numerator at most
+(3*J*T/(2*sigma*M^2)+1)*(4*R^2/U), while retaining curvature coverage
+and physical preimage-width conclusions. No bounded mediant index is
+assumed and no reference set is replaced.
+
+Next: connect these bounded reference labels and the already-constructed
+integer U >= 1 to the actual long-block coefficient cost, then prove
+the allowed loss absorption. Global chart/scalar selection,
+matrix/first-point image counts, source-family packing, dyadic long-block
+summation, full Type-2/3 and Fourier assembly, boundary/major blocks,
+the family fifth moment and beta rows 7--11 remain open.
+Aggregate remains 34/42; EPZAE-13/14/29 are not complete.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. Frozen source statements,
+counterexamples, owner-authorized repairs, permanent regressions and
+the supplied PDF remain preserved. Recovery-record maintenance is skipped.
+
+
+## Logarithmic long-block and whole-family consumer (30 September 2026)
+
+Nine theorems extend the existing HuxleyLinearForms module:
+672 public theorems, 7,850 exact-signature examples and 7,165 explicit
+audit commands. Scratch 43429 checks all nine bodies, all nine exact
+local regression signatures and 142 preceding public examples, with
+exit 0, zero Lean diagnostics and only standard logical axioms.
+Scratch SHA-256:
+933a8a92238f6240c8d2eaa77b2d30b70a04af8be9038331a0e331c2b4d142cf.
+Focused build 97397 passes 10,781 jobs (Huxley 225 seconds;
+regressions 431 seconds). Foundation BAT 99172 passes 8,857 jobs and
+14,290 audited declarations, log foundation_freeze_20260930_055713.
+Paper BAT 30793 passes 10,782 build jobs, semantic regressions and the
+20,592-declaration dependency audit, log
+logs/tao-trudgian-yang-build-20260930-060953-dbf4d7ac.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible. Earlier PASS records
+certify their recorded snapshots.
+
+The actual original integer seed now supplies the source-normalized
+residual from D/u and its original Q-band. The logarithmic coefficient
+cost Blabels = 5 + 108*(floor(log_2(w/l))+1) feeds the eight-point
+determinant and Third-Condition arguments, including actual occupied
+mass of at least S.card/(16*Blabels). No extra normalized-residual
+hypothesis is supplied.
+
+The SAME actual Fourier matrix constructs its paired reference and
+derives the measured curvature and raw residual. The selected-cell
+consumer also derives its rank cell, retaining the 48-window boundary
+loss and factor 17. It returns an L^-3 original-matrix entry bound and
+L^-2 Third Condition on actual occupied seeds, with
+L = kappa*S0.card/(16*Blabels*Cphys). Reusing the existing analytic
+large-entry count yields a bound for the WHOLE original family:
+S.card <= 48 + 544*Blabels + 17*Ccount*R^4/(L^2*N^2*abs(Mat[2])),
+where Ccount explicitly includes the coefficient cost.
+
+These are conditional source-family consumers, not the global Huxley
+estimate. Positive chart interval, raw D <= 1/2, denominator/chart,
+coordinate cutoff, reference displacement and large-entry scalar tests
+remain explicit. The all-positive-sector constant is 3840, not the
+printed 1536. No upper-inverse-slope-at-least-one premise is used.
+
+Next: bound the logarithmic cost using actual seed heights, link those
+heights and remaining scalar tests to the physical scales, and prove
+allowed loss absorption. Global reference/chart selection,
+matrix/first-point image counts, source-family packing, dyadic long-block
+summation, full Type-2/3 and Fourier assembly, boundary/major blocks,
+the family fifth moment and beta rows 7--11 remain open.
+Aggregate remains 34/42; EPZAE-13/14/29 are not complete.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. Frozen source statements,
+counterexamples, owner-authorized repairs, permanent regressions and
+the supplied PDF remain preserved. Recovery-record maintenance is skipped.
+
+
+## Whole-positive-interval coefficient selection (30 September 2026)
+
+Seventeen theorems extend the existing HuxleyLinearForms module:
+663 public theorems, 7,841 exact-signature examples and 7,156 explicit
+audit commands. Scratch 63859 checks all seventeen bodies and the 125
+preceding public examples; scratch 79173 additionally checks all seventeen
+exact-signature local regression examples. Both exit 0 with zero Lean
+diagnostics and only standard logical axioms. Focused build 18614 passes
+10,781 jobs (Huxley 227 seconds; regressions 437 seconds). Foundation BAT
+20920 passes 8,857 jobs and 14,290 audited declarations, log
+foundation_freeze_20260930_051126. Paper BAT 68467 passes 10,782 build
+jobs, semantic regressions and the 20,535-declaration dependency audit,
+log logs/tao-trudgian-yang-build-20260930-052525-e685d5f3.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible. Earlier PASS records
+certify their recorded snapshots.
+
+The alternate Section 6 route derives convexity or concavity from the
+actual degree-five quartic-curvature numerator, including its identically
+zero case. For a fixed second integer coefficient, the actual residual
+bounds first-coefficient spread on a dyadic interval; there are at most
+six first labels and three second labels. All five possible curvature
+roots are retained separately from the six sign cells.
+
+A constructed dyadic cover extends this to the WHOLE positive interval:
+Blabels = 5 + 108*(floor(log_2(w/l))+1) bounds the actual rounded-pair
+image. The source (6.6) coordinate cutoff derives the weighted budget
+without a first-derivative width premise. The original integer-seed
+residual D/u gives D*(t/u) because t is a positive integer.
+The source consumer retains 0 <= D <= 1/2, positive seed coordinates,
+the measured curvature band/cell, dyadic denominator and coordinate
+height tests; these are explicit upstream conditions, not globally
+discharged hypotheses.
+
+For 32*Blabels occupied windows the proof selects eight actual indices
+with the SAME coefficients and rank gaps at least S.card/(16*Blabels).
+The physical consumer derives reverse slope order, physical spacing and
+minor-arc coordinate spacing from the model curvature growth.
+There is no assumption w <= 2*l, max(|l|,|w|) >= 1, or
+U*(w-l) <= 1/2 in the whole-interval chain.
+
+This is a conditional whole-interval coefficient/sample consumer, not
+the global Huxley estimate. Next: feed these exact logarithmic spacing
+losses into the determinant/Third-Condition and occupied-mass consumers,
+then prove their allowed loss absorption and linked scalar cutoffs.
+Global reference/chart selection, matrix/first-point image counts,
+source-family packing, dyadic long-block summation, full Type-2/3 and
+Fourier assembly, boundary/major blocks, the family fifth moment and
+beta rows 7--11 remain open. Aggregate remains 34/42;
+EPZAE-13/14/29 are not complete.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be updated as needed. Frozen source statements,
+counterexamples, owner-authorized repairs, permanent regressions and
+the supplied PDF remain preserved. Recovery-record maintenance is skipped.
+
+
+## All-positive-slope original-seed consumer (30 September 2026)
+
+Sixteen theorems extend the existing HuxleyLinearForms module:
+646 public theorems, 7,824 exact-signature examples and 7,139 explicit
+audit commands. Scratch 57707 checks all sixteen bodies and 109 preceding
+public examples with zero Lean diagnostics and only standard logical
+axioms. Focused build 83075 passes 10,781 jobs (Huxley 203 seconds;
+regressions 406 seconds). Foundation BAT 1358 passes 8,857 jobs and
+14,290 audited declarations, log foundation_freeze_20260930_041218.
+Paper BAT 85836 passes 10,782 build jobs, semantic regressions and the
+20,485-declaration dependency audit, log
+logs/tao-trudgian-yang-build-20260930-042452-bc9be356.log.
+Both BATs exit 0 with zero Lean errors/warnings; the two archived Python
+invalid-escape SyntaxWarnings remain visible. Preceding PASS records
+certify their recorded snapshots.
+
+The literal complete sector now has numerator-density and consecutive-
+denominator estimates at its original cutoff, including slopes below
+one. The determinant small-error argument uses the larger coordinate
+height. Together these prove an all-positive-slope dichotomy with
+explicit constants 3840 in the size alternative, 27*B for alpha and
+20*B for beta. These are alternate constants, not the printed constants.
+
+The resulting twelve-times rectangle labels feed the original-seed
+Taylor theorem, physical quartic linearization and the actual SAME-matrix
+Fourier-data residual consumer. The latter no longer assumes upper
+inverse slope >= 1. It retains the original physical reference, source
+denominator cutoff, actual seed Third Condition and auxiliary Fourth
+Conditions; the size gate changes from 1536 to 3840 explicitly.
+No quarter-turn or reference-budget transfer is used in this chain.
+
+This closes the small-slope finite-sector/seed-label subproblem only.
+Small-slope coefficient selection on whole long intervals remains open.
+Physical minor-arc width addresses only the local budget; the long-interval
+step must use the actual source conditions and Section 6 level-set
+argument, or an equivalent proof. The local estimate is not a whole
+long-block budget. Global reference/chart and scalar selection,
+matrix/first-point image counts, source-family packing, dyadic long-block
+summation, full Type-2/3 and Fourier assembly, boundary/major blocks,
+the family fifth moment and beta rows 7--11 remain open.
+Aggregate remains 34/42; EPZAE-13/14/29 are not complete.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained as needed. All frozen source statements,
+counterexamples, owner-authorized repairs, regression tests and the
+supplied PDF remain preserved. Recovery-record maintenance is skipped.
+
+## Negative-sector source count and absolute-height estimates (30 September 2026)
+
+Twenty theorems extend the existing HuxleyLinearForms module, with
+exact-signature regressions and explicit audits: 630 public theorems,
+7,808 examples and 7,123 audit commands. Scratch 28392 passes all
+109 retained public examples and six small-slope counting lemmas with zero
+Lean diagnostics and only standard logical axioms. Focused build 73618
+passes 10,781 jobs (Huxley 200 seconds; regressions 424 seconds).
+Foundation BAT 42503 passes 8,857 build jobs and 14,290 audited declarations
+(log foundation_freeze_20260930_033303). Paper BAT 11364 passes
+10,782 build jobs, semantic regressions and the 20,408-declaration
+dependency audit (logs/tao-trudgian-yang-build-20260930-034925-55fa212f.log).
+Both BATs exit 0 with zero Lean errors/warnings. The two archived Python
+invalid-escape SyntaxWarnings remain visible. Earlier PASS records
+certify their recorded snapshots.
+
+The literal negative sector is the numerator reflection of the positive
+Farey sector. Density constant 128, actual SAME-matrix physical roots,
+Fourth Condition, original denominator-Q seed rectangle, common labels,
+quartic residual and source-normalized curvature/residual are derived.
+The strict size gate excludes the half-integer tie: nearest-integer
+rounding is not assumed to commute with negation in general.
+Paired reference roots are constructed from the same Fourier data.
+
+The absolute-height coefficient estimate now treats both slope signs.
+It supplies the occupied-window L^-3 determinant and actual-subfamily
+L^-2 Third Condition. The negative-sector selected-cell consumer proves
+the same literal whole-family bound
+4944 + 17*Ccount*R^4/(L^2*N^2*|Mat_2|), with the occupied-span budgets
+derived and the original Fourier matrix retained.
+
+These remain conditional source consumers, not the global Huxley bound.
+The negative branch requires its lower inverse slope <= -1; the positive
+branch retains upper slope >= 1. Quarter-turn coordinates (-t,u) preserve
+the physical numerator/denominator and SAME-matrix images, and turn a
+positive interval below one into a negative interval below minus one.
+That changes the reference endpoint: reference displacement, scale,
+dyadic, anchor and scalar tests must still be proved for the chosen chart.
+No global small-slope coverage follows from the algebra alone.
+
+Remaining DAG: original reference-gap/chart selection, including
+small-slope coverage with physical budgets -> matrix/first-point image
+count and source-family packing -> dyadic matrix/long-block summation ->
+full Type-2/3 and Fourier count -> boundary/major blocks -> family fifth
+moment -> beta rows 7--11 -> EPZAE-14/29. Aggregate remains 34/42.
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory. Frozen sources, counterexamples, corrected-contract
+regressions and the supplied PDF are preserved. Recovery-record
+maintenance is permanently skipped.
+
+
+## Signed source-count consumer (30 September 2026)
+
+Eleven theorems extend the existing HuxleyLinearForms source chain:
+610 public theorems, 7,788 exact-signature examples and 7,103 explicit
+audit commands. Scratch 32047 checks all eleven bodies and 78 preceding
+public examples with zero Lean diagnostics and only standard logical
+axioms. Focused build 40332 passes (10,781 jobs; Huxley 216 seconds,
+regression 422 seconds). Exact public scratch 54749 passes all 89
+retained public examples and eight negative-chart local proofs, with
+zero Lean diagnostics and only standard logical axioms.
+Foundation BAT 25014 passes (8,857 jobs; 14,290 audited declarations),
+log foundation_freeze_20260930_030251. Paper BAT 99241 passes
+(10,782 jobs; semantic regression and 20,310 dynamically audited
+declarations), log logs/tao-trudgian-yang-build-20260930-031616-07ca6b30.log.
+Both BATs exit 0 with zero Lean errors/warnings. The two archived
+Python invalid-escape SyntaxWarnings remain visible; preceding PASS
+records certify their recorded snapshots.
+
+The original seed now receives the source-normalized residual and
+measured quartic curvature for either reference-denominator sign.
+The absolute G cutoff gives the coefficient budgets with the unchanged
+5*C*J constant, under the explicit height test |r|*w <= 2*d.
+The SAME Fourier matrix supplies the occupied-window L^-3 determinant
+bound and an actual subfamily carrying the L^-2 Third Condition.
+Common-cell selection retains the 48-window loss and factor 17.
+The final consumer bounds the literal whole occupied family by
+4944 + 17*Ccount*R^4/(L^2*N^2*|Mat_2|), deriving the cubic and padded
+displacement budgets from the actual occupied span.
+
+These remain conditional chart consumers, not the global Huxley
+source estimate. Positive auxiliary slopes, upper slope >= 1 and
+the explicit coordinate-height, anchor and scalar tests remain.
+Huxley page 9's right-reference sign changes can produce NEGATIVE
+inverse-Farey slopes; page 16 also requires the N' >= M' small-slope
+case. Signed reference denominators alone do not discharge either
+coverage obligation. No phase-reflection shortcut is claimed.
+
+Remaining DAG: negative/small-slope chart consumers and actual
+reference-gap/scalar selection -> matrix/first-point image count
+and source-family packing -> dyadic matrix/long-block summation ->
+full Type-2/3 and Fourier count -> boundary/major blocks -> family
+fifth moment -> beta rows 7--11 -> EPZAE-14/29.
+Aggregate remains 34/42. Both run_lake_build.bat and
+run_tao_trudgian_yang_build.bat remain mandatory. Frozen sources,
+counterexamples, corrected-contract regressions and the supplied PDF
+are preserved; recovery-record maintenance is permanently skipped.
+
+
 ## Signed sector-to-original-seed chain (30 September 2026)
 
 Eight signed-orientation theorems are installed in the existing
@@ -12,8 +1104,12 @@ the production Huxley module passed in 175 seconds, and the repaired
 regression build in 442 seconds). Exact public scratch 28033 passes
 all 78 retained public examples and four next-obligation local proofs.
 Foundation BAT 82200 passes (8,857 jobs; 14,290 audited declarations),
-log foundation_freeze_20260930_023328. The paper BAT is pending;
-earlier PASS logs certify their recorded snapshots.
+log foundation_freeze_20260930_023328. Paper BAT 7300 passes
+(10,782 jobs; semantic regression and 20,244 dynamically audited
+declarations), log logs/tao-trudgian-yang-build-20260930-024818-a6f4230e.log.
+Both BATs exit 0 with zero Lean errors/warnings. The two archived
+Python invalid-escape SyntaxWarnings remain visible; earlier PASS
+logs certify their recorded snapshots.
 
 The affine chart now allows either reference-denominator sign.
 Positive endpoint affine denominators and max <= 2*min give the

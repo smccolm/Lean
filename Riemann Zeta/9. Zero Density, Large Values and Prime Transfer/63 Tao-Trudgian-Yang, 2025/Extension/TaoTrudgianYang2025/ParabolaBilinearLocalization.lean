@@ -30831,7 +30831,7 @@ private theorem bourgain_separated_level_band_count
     _ ≤ (4*w/eta+1)*B := mul_le_mul_of_nonneg_right himage (Nat.cast_nonneg _)
     _ = _ := mul_comm _ _
 
-private theorem bourgain_rational_neighborhood_block_count
+private theorem bourgain_rational_neighborhood_block_count_sharp
     {ι : Type*} [DecidableEq ι] (S : Finset ι) (k : ι → ℤ)
     (v : ι → ℝ) (a : ι → ℚ) (J Q B : ℕ) {eta X : ℝ}
     (heta : 0 < eta) (hQ : 0 < Q) (hX : 0 ≤ X)
@@ -30841,31 +30841,32 @@ private theorem bourgain_rational_neighborhood_block_count
     (hden : ∀ i∈S, (a i).den ≤ J)
     (hnear : ∀ i∈S, |v i-(a i:ℝ)| ≤ 1/((Q:ℝ)*(a i).den)) :
     (S.card:ℝ) ≤ B*∑ q∈Finset.Icc 1 J,
-      (2*(X+1)*(q:ℝ)+1)*(4/(eta*(Q:ℝ)*q)+1) := by
+      (2*X*(q:ℝ)+3)*(4/(eta*(Q:ℝ)*q)+1) := by
   classical
   have hQr : (0:ℝ) < Q := Nat.cast_pos.mpr hQ
   have hQ1 : (1:ℝ) ≤ Q := by exact_mod_cast hQ
-  have hnum i (hi : i∈S) : |((a i).num:ℝ)| ≤ (X+1)*(a i).den := by
+  have hnum i (hi : i∈S) : |((a i).num:ℝ)| ≤ X*(a i).den+1 := by
     have hd : (0:ℝ) < (a i).den := Nat.cast_pos.mpr (a i).pos
-    have hd1 : (1:ℝ) ≤ (a i).den := by exact_mod_cast (a i).pos
-    have hone : 1/((Q:ℝ)*(a i).den) ≤ 1 := by
-      apply (div_le_one₀ (mul_pos hQr hd)).mpr
-      nlinarith only [hQ1,hd1]
-    have hval : |(a i:ℝ)| ≤ X+1 := by
+    have hval : |(a i:ℝ)| ≤ X+1/((Q:ℝ)*(a i).den) := by
       have hh := abs_add_le (v i) ((a i:ℝ)-v i)
       rw [add_sub_cancel,abs_sub_comm (a i:ℝ) (v i)] at hh
-      linarith only [hh,hv i hi,(hnear i hi).trans hone]
+      linarith only [hh,hv i hi,hnear i hi]
     rw [Rat.cast_def,abs_div,abs_of_pos hd] at hval
-    exact (div_le_iff₀ hd).mp hval
+    have hh := (div_le_iff₀ hd).mp hval
+    have he : (X+1/((Q:ℝ)*(a i).den))*(a i).den=X*(a i).den+1/(Q:ℝ) := by
+      field_simp
+    rw [he] at hh
+    have hinv : 1/(Q:ℝ) ≤ 1 := (div_le_one₀ hQr).mpr hQ1
+    linarith only [hh,hinv]
   have hfiber (q : ℕ) (hq : q∈Finset.Icc 1 J) :
       ((S.filter (fun i => (a i).den=q)).card:ℝ) ≤
-        (2*(X+1)*(q:ℝ)+1)*(B*(4/(eta*(Q:ℝ)*q)+1)) := by
+        (2*X*(q:ℝ)+3)*(B*(4/(eta*(Q:ℝ)*q)+1)) := by
     let T := S.filter (fun i => (a i).den=q)
     let W := T.image (fun i => (a i).num)
     have hqpos : 0 < q := by have hh := Finset.mem_Icc.mp hq; omega
     have hqr : (0:ℝ) < q := Nat.cast_pos.mpr hqpos
-    have hW : (W.card:ℝ) ≤ 2*(X+1)*(q:ℝ)+1 := by
-      have hh := integer_card_le_of_abs_sub_le W (a:=0) (B:=(X+1)*(q:ℝ))
+    have hW : (W.card:ℝ) ≤ 2*X*(q:ℝ)+3 := by
+      have hh := integer_card_le_of_abs_sub_le W (a:=0) (B:=X*(q:ℝ)+1)
         (by positivity) (by
           intro p hp
           obtain ⟨i,hi,rfl⟩ := Finset.mem_image.mp hp
@@ -30903,9 +30904,125 @@ private theorem bourgain_rational_neighborhood_block_count
     _ = ∑ q∈Finset.Icc 1 J,((S.filter (fun i => (a i).den=q)).card:ℝ) := by
       exact_mod_cast hcard
     _ ≤ ∑ q∈Finset.Icc 1 J,
-        (2*(X+1)*(q:ℝ)+1)*(B*(4/(eta*(Q:ℝ)*q)+1)) :=
+        (2*X*(q:ℝ)+3)*(B*(4/(eta*(Q:ℝ)*q)+1)) :=
       Finset.sum_le_sum hfiber
     _ = _ := by rw [Finset.mul_sum]; apply Finset.sum_congr rfl; intro q hq; ring
+
+
+private theorem bourgain_rational_neighborhood_block_count
+    {ι : Type*} [DecidableEq ι] (S : Finset ι) (k : ι → ℤ)
+    (v : ι → ℝ) (a : ι → ℚ) (J Q B : ℕ) {eta X : ℝ}
+    (heta : 0 < eta) (hQ : 0 < Q) (hX : 0 ≤ X)
+    (hmul : ∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ B)
+    (hsep : ∀ i∈S, ∀ j∈S, eta*|(k i:ℝ)-k j| ≤ |v i-v j|)
+    (hv : ∀ i∈S, |v i| ≤ X)
+    (hden : ∀ i∈S, (a i).den ≤ J)
+    (hnear : ∀ i∈S, |v i-(a i:ℝ)| ≤ 1/((Q:ℝ)*(a i).den)) :
+    (S.card:ℝ) ≤ B*∑ q∈Finset.Icc 1 J,
+      (2*(X+1)*(q:ℝ)+1)*(4/(eta*(Q:ℝ)*q)+1) := by
+  classical
+  have hh := bourgain_rational_neighborhood_block_count_sharp S k v a J Q B
+    heta hQ hX hmul hsep hv hden hnear
+  apply hh.trans
+  apply mul_le_mul_of_nonneg_left _ (Nat.cast_nonneg B)
+  apply Finset.sum_le_sum
+  intro q hq
+  apply mul_le_mul_of_nonneg_right _ (by positivity)
+  have hq1 : (1:ℝ) ≤ q := by exact_mod_cast (Finset.mem_Icc.mp hq).1
+  nlinarith only [hq1]
+
+
+/-- Minimum-denominator tails without the spurious constant part of
+the quadratic height cost. This consumes the supplied anchors themselves,
+not newly selected rational values. -/
+theorem bourgain_actual_minimal_arc_sharp_tail
+    {ι : Type*} [DecidableEq ι] (S : Finset ι) (k : ι → ℤ)
+    (v : ι → ℝ) (r : ι → ℚ) (B : ℕ) {eta delta X : ℝ}
+    (heta : 0 < eta) (hdelta : 0 < delta) (hX : 0 ≤ X)
+    (hwidth : 4*delta ≤ eta)
+    (hmul : ∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ B)
+    (hsep : ∀ i∈S, ∀ j∈S, eta*|(k i:ℝ)-k j| ≤ |v i-v j|)
+    (hv : ∀ i∈S, |v i| ≤ X)
+    (hminimal : ∀ i∈S, ∀ a : ℚ,
+      (a:ℝ)∈Ioo (v i-delta) (v i+delta) → (r i).den ≤ a.den) :
+    ∀ Q : ℕ, 2 ≤ Q →
+      let D := 1/(delta*(Q:ℝ))
+      ((S.filter (fun i => Q ≤ (r i).den)).card:ℝ) ≤
+        B*(4*X*D^2+3*D*(2+Real.log (D+1))) := by
+  classical
+  intro Q hQ D
+  let G := S.filter (fun i => Q ≤ (r i).den)
+  let J := ⌊D⌋₊
+  have hGsub : G ⊆ S := Finset.filter_subset _ _
+  have hQp : 0 < Q := by omega
+  have hQr : (0:ℝ) < Q := Nat.cast_pos.mpr hQp
+  have hD : 0 ≤ D := by dsimp only [D]; positivity
+  have hJ : (J:ℝ) ≤ D := Nat.floor_le hD
+  have hex i : ∃ a : ℚ, i∈G →
+      0 < a.den ∧ a.den < Q ∧ (a.den:ℝ) ≤ D ∧
+        |v i-(a:ℝ)| ≤ 1/((Q:ℝ)*a.den) := by
+    by_cases hi : i∈G
+    · obtain ⟨a,ha⟩ := bourgain_minimal_arc_dirichlet_compression hdelta Q hQ
+        (r i) (hminimal i (hGsub hi)) (Finset.mem_filter.mp hi).2
+      exact ⟨a,fun _ => ha⟩
+    · exact ⟨0,fun hh => False.elim (hi hh)⟩
+  choose a ha using hex
+  have hden i (hi : i∈G) : (a i).den ≤ J :=
+    (Nat.le_floor_iff' (a i).pos.ne').mpr (ha i hi).2.2.1
+  have hmulG n : (G.filter (fun i => k i=n)).card ≤ B :=
+    (Finset.card_le_card (Finset.filter_subset_filter _ hGsub)).trans (hmul n)
+  have hb := bourgain_rational_neighborhood_block_count_sharp G k v a J Q B
+    heta hQp hX hmulG
+    (fun i hi j hj => hsep i (hGsub hi) j (hGsub hj))
+    (fun i hi => hv i (hGsub hi)) hden
+    (fun i hi => (ha i hi).2.2.2)
+  have hE : 4/(eta*(Q:ℝ)) ≤ D := by
+    apply (div_le_div_iff₀ (mul_pos heta hQr) (mul_pos hdelta hQr)).mpr
+    nlinarith only [mul_le_mul_of_nonneg_right hwidth hQr.le]
+  have hlog : Real.log (J:ℝ) ≤ Real.log (D+1) := by
+    by_cases hzero : J=0
+    · rw [hzero,Nat.cast_zero,Real.log_zero]
+      exact Real.log_nonneg (by linarith only [hD])
+    · exact Real.log_le_log (Nat.cast_pos.mpr (Nat.pos_of_ne_zero hzero))
+        (by linarith only [hJ])
+  have hharm : (∑ q∈Finset.Icc 1 J,1/(q:ℝ)) ≤ 1+Real.log (D+1) := by
+    have hh : (∑ q∈Finset.Icc 1 J,1/(q:ℝ)) ≤ 1+Real.log J := by
+      simpa only [harmonic_eq_sum_Icc,Rat.cast_sum,Rat.cast_inv,
+        Rat.cast_natCast,one_div] using harmonic_le_one_add_log J
+    linarith only [hh,hlog]
+  have hcard : (Finset.Icc 1 J).card=J := by simp
+  have hlinear : (∑ q∈Finset.Icc 1 J,(2*X*(q:ℝ)+3)) ≤ (2*X*D+3)*D := by
+    calc
+      _ ≤ ∑ _q∈Finset.Icc 1 J,(2*X*D+3) := by
+        apply Finset.sum_le_sum
+        intro q hq
+        have hqD : (q:ℝ) ≤ D := (Nat.cast_le.mpr (Finset.mem_Icc.mp hq).2).trans hJ
+        nlinarith only [mul_nonneg hX (sub_nonneg.mpr hqD)]
+      _ = (2*X*D+3)*(J:ℝ) := by simp only [Finset.sum_const,nsmul_eq_mul,hcard,mul_comm]
+      _ ≤ _ := mul_le_mul_of_nonneg_left hJ (by positivity)
+  have heq q (hq : q∈Finset.Icc 1 J) :
+      (2*X*(q:ℝ)+3)*(4/(eta*(Q:ℝ)*q)+1)=
+        (2*X*(q:ℝ)+3)+(4/(eta*(Q:ℝ)))*(2*X+3/(q:ℝ)) := by
+    have hqp : (0:ℝ) < q := by exact_mod_cast (Finset.mem_Icc.mp hq).1
+    field_simp
+    ring
+  have hsum :
+      (∑ q∈Finset.Icc 1 J,(2*X*(q:ℝ)+3)*(4/(eta*(Q:ℝ)*q)+1)) ≤
+        4*X*D^2+3*D*(2+Real.log (D+1)) := by
+    calc
+      _ = (∑ q∈Finset.Icc 1 J,(2*X*(q:ℝ)+3))+
+          (4/(eta*(Q:ℝ)))*(2*X*J+3*∑ q∈Finset.Icc 1 J,1/(q:ℝ)) := by
+        rw [Finset.sum_congr rfl heq]
+        simp only [Finset.sum_add_distrib,div_eq_mul_inv,←Finset.mul_sum,
+          Finset.sum_const,nsmul_eq_mul,hcard]
+        ring
+      _ ≤ (2*X*D+3)*D+D*(2*X*D+3*(1+Real.log (D+1))) := by
+        apply add_le_add hlinear
+        apply (mul_le_mul_of_nonneg_right hE (by positivity)).trans
+        apply mul_le_mul_of_nonneg_left _ hD
+        nlinarith only [hharm,mul_nonneg hX (sub_nonneg.mpr hJ)]
+      _ = _ := by ring
+  exact hb.trans (mul_le_mul_of_nonneg_left hsum (Nat.cast_nonneg B))
 
 private theorem bourgain_rational_neighborhood_sum_bound
     (J Q : ℕ) {eta X : ℝ} (heta : 0 < eta) (hQ : 0 < Q) (hX : 0 ≤ X) :
@@ -31565,7 +31682,9 @@ private theorem exists_bourgain_C4_unrestricted_absolute_bound :
   rw [bourgain_source_Ioc_range]
   exact hsum.trans ((mul_le_mul_of_nonneg_left hraw (by linarith only [hp])).trans_eq (by ring))
 
-private theorem bourgain_bounded_denominator_count
+/-- Count a bounded-multiplicity family of rational points with bounded
+height and denominator. Reused by the actual Huxley anchor complement. -/
+theorem bourgain_bounded_denominator_count
     {ι : Type*} [DecidableEq ι] (S : Finset ι) (r : ι → ℚ)
     (Q B : ℕ) {X : ℝ} (hX : 0 ≤ X)
     (hlevel : ∀ i∈S, |(r i:ℝ)| ≤ X)

@@ -68324,4 +68324,6957 @@ example
       (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤ D/(pseed.2:ℝ) :=
   TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_constructed_reference_seed_residual_signed (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (L:=L) (dmin:=dmin) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
 
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    0 < (v:ℝ)-s*((rat 0:ℝ)+ε) →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := HuxleyLinearForm.fareySector K α β
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    1 ≤ β → Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*(β*(K:ℝ))*(K:ℝ) < S.card →
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      (4*(37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ)/κ)*R^2/
+        |(rp 0:ℝ)*minorArcCoordinate (μr 0) (rp 0) (sp 0) yseed| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_original_seed_source_residual_signed (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    0 < (v:ℝ)-s*((rat 0:ℝ)+ε) →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := HuxleyLinearForm.fareySector K α β
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    1 ≤ β → Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*(β*(K:ℝ))*(K:ℝ) < S.card →
+    |iteratedDeriv 2 g yseed-iteratedDeriv 2 hq yseed| ≤ U ∧
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      (4*(37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ)/κ)*R^2/
+        |(rp 0:ℝ)*minorArcCoordinate (μr 0) (rp 0) (sp 0) yseed| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_original_seed_source_bounds_signed (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {σ δ T M N R L dmin : ℝ} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 → r ≠ 0 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    0 < (v:ℝ)-s*((rat 0:ℝ)+ε) →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := HuxleyLinearForm.fareySector K α β
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    0 < L →
+    modelPhaseThirdLower σ*L*R^2 ≤ 24*N^2 →
+    (∀ i, x₀ i-L*N∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+L*N∈Ioo (1/2:ℝ) (W i-1/2)) →
+    |(e:ℝ)/r-(rat 0:ℝ)| ≤ modelPhaseThirdLower σ*L/(16*R^2) →
+    (H+L*N+1)^2 ≤ M*R →
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x₀ i| ≤ L*N ∧
+        |(round (xref i):ℝ)-(round (x₀ i):ℝ)| ≤ L*N+1) ∧
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    1 ≤ β → Δ < 1/2 →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    ∀ k : Fin 17, α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*(β*(K:ℝ))*(K:ℝ) < S.card →
+    |iteratedDeriv 2 g yseed-iteratedDeriv 2 hq yseed| ≤ U ∧
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      (4*(37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ)/κ)*R^2/
+        |(rp 0:ℝ)*minorArcCoordinate (μr 0) (rp 0) (sp 0) yseed| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_constructed_reference_source_bounds_signed (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (L:=L) (dmin:=dmin) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {C J μ N R r s d l w Bcut : ℝ}
+    (hC : 0 ≤ C) (hJ : 0 < J) (hμ : 0 < μ)
+    (hN : 0 < N) (hR : 0 < R) (hr : r ≠ 0) (hd : 0 < d)
+    (hl : 0 ≤ l) (hlw : l ≤ w) (hw : 1 ≤ w)
+    (hdlo : d ≤ min (r*l+s) (r*w+s)) (hdhi : max (r*l+s) (r*w+s) ≤ 2*d)
+    (hcoord : |r| *w ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2)) :
+    let U := C*R^4/(N*d^3)
+    U*(w-l) ≤ 1/2 ∧
+      U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_coefficient_budgets_of_source_coordinate_cutoff_signed (C:=C) (J:=J) (μ:=μ) (N:=N) (R:=R) (r:=r) (s:=s) (d:=d) (l:=l) (w:=w) (Bcut:=Bcut) hC hJ hμ hN hR hr hd hl hlw hw hdlo hdhi hcoord hμupper hBcut hBsize hG
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ) (hS : 288 ≤ S.card)
+    {σ δ T M N R base d K nSpan Ccurv Bcut l w y₀ ac bc : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hK : 0 ≤ K) (hRM : R ≤ M)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| *w ≤ 2*d) (hl : 0 ≤ l) (hw : 1 ≤ w)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(144*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      K*R^2/|r 0*G (y j)|) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    |r 0*s 1-s 0*r 1| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_occupied_window_quartic_determinant_signed S p x hS (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (K:=K) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hσ hδ hF hT hM hN hR hd hK hRM hscale hA hW hxref hpt hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hl hw hCcurv hBcut hBsize
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ) (hS : 288 ≤ S.card)
+    {σ δ T M N R base d K nSpan Ccurv Bcut l w y₀ ac bc : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hK : 0 ≤ K) (hRM : R ≤ M)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| *w ≤ 2*d) (hl : 0 ≤ l) (hw : 1 ≤ w)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(144*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      K*R^2/|r 0*G (y j)|) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/144 ≤ (E.card:ℝ) ∧
+      ∀ j∈E,
+        |(iteratedDeriv 3 (f 1) (round (x j 1))/6)*(r 1*y j+s 1)^3/
+          ((iteratedDeriv 3 (f 0) (round (x j 0))/6)*(r 0*y j+s 0)^3)-1| ≤
+          (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_occupied_window_quartic_third_mass_signed S p x hS (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (K:=K) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hσ hδ hF hT hM hN hR hd hK hRM hscale hA hW hxref hpt hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hl hw hCcurv hBcut hBsize
+
+example
+    (S : Finset ℕ) (hS : 288 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ} {k : Fin 17}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| *w ≤ 2*d) (hl : 0 ≤ l) (hw : 1 ≤ w) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let U := Ccurv*R^4/(N*d^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    Δ < 1/2 →
+    (∀ j∈S, 1 ≤ β j) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈finiteBoundaryCell Z l w k) →
+    (∀ j∈S, β j∈finiteBoundaryCell Z l w k) →
+    (∀ j∈S, 1536*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/144 ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_constructed_family_long_block_signed S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (k:=k) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hw hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (Z : Finset ℝ) (x : ℕ → ℝ)
+    {σ δ T M A W N R base ε e r v s l w : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hphase : T*N*R^2=M^3)
+    (hsmall : 4*ε*R^2 ≤ modelPhaseThirdLower σ) (hε : 0 ≤ ε)
+    (hdet : v*r-e*s=1) (hZ : Z.card ≤ 16)
+    (hx : ∀ j∈S, x j∈Ioo 0 W)
+    (hwindow : ∀ j∈S, x j∈Icc (base+(j:ℝ)*N) (base+((j:ℝ)+1)*N))
+    (hregion : ∀ z∈Icc l w, 0 < r*z+s) :
+    let f := heathBrownPhysicalPhase F T M A 1
+    let q := fun j => iteratedDeriv 2 f (x j)/2
+    let α := fun j => (v-s*(q j+ε))/(r*(q j+ε)-e)
+    let β := fun j => (v-s*(q j-ε))/(r*(q j-ε)-e)
+    (∀ j∈S, 0 < r*(q j-ε)-e ∧ 0 < r*(q j+ε)-e) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    ∃ (k : Fin 17) (E : Finset ℕ), E⊆S ∧ S.card ≤ 48+17*E.card ∧
+      ∀ j∈E, α j∈finiteBoundaryCell Z l w k ∧ β j∈finiteBoundaryCell Z l w k :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_farey_common_cell_selection_signed S Z x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (N:=N) (R:=R) (base:=base) (ε:=ε) (e:=e) (r:=r) (v:=v) (s:=s) (l:=l) (w:=w) (F:=F) hσ hδ hF hT hM hN hR hA hW hphase hsmall hε hdet hZ hx hwindow hregion
+
+example
+    (S : Finset ℕ) (hS : 4944 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| *w ≤ 2*d) (hl : 0 ≤ l) (hw : 1 ≤ w) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    Δ < 1/2 →
+    (∀ j∈S, 1 ≤ β j) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 1536*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S₀ ∧ (S₀.card:ℝ)/144 ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_selected_cell_long_block_signed S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hw hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (hS : 4944 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| *w ≤ 2*d) (hl : 0 ≤ l) (hw : 1 ≤ w) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2))
+    (hc : Mat 2 ≠ 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    Δ < 1/2 →
+    (∀ j∈S, 1 ≤ β j) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 1536*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Ccount := (4608*Cphys/κ^2)*
+      (Γ^2*(Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)+
+        Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    (S.card:ℝ) ≤ 4944+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_selected_cell_family_count_signed S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hw hBcut hLref hrefWindow hwideL hwideU hrefNear hc hlarge
+
+example
+    (S : Finset ℕ) (hS : 4944 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| *w ≤ 2*d) (hl : 0 ≤ l) (hw : 1 ≤ w) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2))
+    (hc : Mat 2 ≠ 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    Δ < 1/2 →
+    (∀ j∈S, 1 ≤ β j) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 1536*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Ccount := (4608*Cphys/κ^2)*
+      (Γ^2*(Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)+
+        Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    (S.card:ℝ) ≤ 4944+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_selected_cell_source_count_signed S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hw hBcut hLref hrefWindow hwideL hwideU hrefNear hc hlarge
+
+example
+    {N : ℕ} {l w B α β δ : ℝ}
+    (hw : w < 0) (hl : l ≤ -1) (hB : 1 ≤ B) (hδ : 0 ≤ δ) :
+    let P := HuxleyLinearForm.fareySector N (-w) (-l)
+    let S := P.image (fun p : ℤ × ℤ => (-p.1,p.2))
+    max ((w-l)*(N:ℝ)^2/B) 2 ≤ (S.card:ℝ) →
+    1536*B*δ*((-l)*(N:ℝ))*(N:ℝ) < (S.card:ℝ) →
+    (∀ p∈S, ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) →
+    ∀ p : ℤ × ℤ, 0 ≤ -(p.1:ℝ) → -(p.1:ℝ) ≤ 12*((-l)*(N:ℝ)) →
+      0 ≤ (p.2:ℝ) → (p.2:ℝ) ≤ 12*(N:ℝ) → ∀ b : ℤ,
+      |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ →
+      b=p.1*round α+p.2*round β :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.negative_fareySector_integer_labels_enlarged_rectangle (N:=N) (l:=l) (w:=w) (B:=B) (α:=α) (β:=β) (δ:=δ) hw hl hB hδ
+
+example
+    {e r v s : ℤ} {a : ℚ} {l w Q : ℝ}
+    (hdet : v*r-e*s=1)
+    (hlw : l < w) (hl : 0 < (r:ℝ)*l-e) (hw : 0 < (r:ℝ)*w-e)
+    (hnl : (v:ℝ)-s*l < 0)
+    (ha : (a:ℝ) ∈ Set.Icc l w)
+    (hdyad : max ((r:ℝ)*l-e) ((r:ℝ)*w-e) ≤ 2*min ((r:ℝ)*l-e) ((r:ℝ)*w-e))
+    (hcut : 256*(a.den:ℝ) ≤ Q) (hscale : 256 ≤ (w-l)*Q*a.den) :
+    let α := ((v:ℝ)-s*w)/((r:ℝ)*w-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊Q*min ((r:ℝ)*l-e) ((r:ℝ)*w-e)⌋₊
+    let P := HuxleyLinearForm.fareySector K (-β) (-α)
+    let S := P.image (fun p : ℤ × ℤ => (-p.1,p.2))
+    max ((β-α)*(K:ℝ)^2/128:ℝ) 2 ≤ S.card ∧
+      ∀ p ∈ S,
+        0 < (r:ℝ)*p.1+s*p.2 ∧ (r:ℝ)*p.1+s*p.2 ≤ Q ∧
+        ((e:ℝ)*p.1+v*p.2)/((r:ℝ)*p.1+s*p.2) ∈ Set.Icc l w :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.completeNegativeSector_density_from_curvature (e:=e) (r:=r) (v:=v) (s:=s) (a:=a) (l:=l) (w:=w) (Q:=Q) hdet hlw hl hw hnl ha hdyad hcut hscale
+
+example
+    {σ δ T M N R : ℝ} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 3 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    (v:ℝ)-s*((rat 0:ℝ)-ε) < 0 →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := (HuxleyLinearForm.fareySector K (-β) (-α)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    max ((β-α)*(K:ℝ)^2/128:ℝ) 2 ≤ S.card ∧
+    ∃ ξ : ℝ → Fin 2 → ℝ, ∀ p∈S,
+      let a := e*p.1+v*p.2
+      let d := r*p.1+s*p.2
+      let x₁ := ξ ((p.1:ℝ)/p.2)
+      let anew : Fin 2 → ℤ := ![a,Mat 0*a+Mat 1*d]
+      let qnew : Fin 2 → ℤ := ![d,Mat 2*a+Mat 3*d]
+      let z := fun i => (qnew i:ℝ)*deriv (f i) (round (x₁ i))
+      (∀ i, x₁ i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (x₁ i)/2=(anew i:ℝ)/qnew i ∧
+        |x₁ i-x₀ i| ≤ H ∧ 0 < (qnew i:ℝ) ∧ (qnew i:ℝ) ≤ Q) ∧
+      |(z 0-z 1)-round (z 0-z 1)| ≤ Δ ∧
+      (Δ < 1/2 →
+        ∃ cnew∈minorArcCenterLabels (z 0) Δ,
+          ∃ cnew₁∈minorArcCenterLabels (z 1) Δ,
+          cnew=round (z 0) ∧ |(z 0-cnew)-(z 1-cnew₁)| ≤ Δ ∧
+          ∃ p₀ p₁ : Fin 2, cnew=⌊z 0⌋+(p₀:ℕ) ∧ cnew₁=⌊z 1⌋+(p₁:ℕ)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_complete_negative_sector_fourth (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {e r v s : ℤ} {anchor seed : ℚ} {l w Q : ℝ}
+    (hdet : v*r-e*s=1)
+    (hl : 0 < (r:ℝ)*l-e) (hw : 0 < (r:ℝ)*w-e)
+    (hnl : (v:ℝ)-s*l < 0)
+    (ha : (anchor:ℝ)∈Icc l w) (hseed : (seed:ℝ)∈Icc l w)
+    (hdyad : max ((r:ℝ)*l-e) ((r:ℝ)*w-e) ≤ 2*min ((r:ℝ)*l-e) ((r:ℝ)*w-e))
+    (hcut : 256*(anchor.den:ℝ) ≤ Q/3) (hseedQ : (seed.den:ℝ) ≤ Q) :
+    let α := ((v:ℝ)-s*w)/((r:ℝ)*w-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊(Q/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w-e)⌋₊
+    let p : ℤ × ℤ := (v*seed.den-s*seed.num,r*seed.num-e*seed.den)
+    0 < (p.2:ℝ) ∧ (p.1:ℝ)/p.2∈Icc α β ∧
+      0 ≤ -(p.1:ℝ) ∧ -(p.1:ℝ) ≤ 12*((-α)*(K:ℝ)) ∧
+      (p.2:ℝ) ≤ 12*(K:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.inverseFarey_negative_original_seed_enlarged_rectangle (e:=e) (r:=r) (v:=v) (s:=s) (anchor:=anchor) (seed:=seed) (l:=l) (w:=w) (Q:=Q) hdet hl hw hnl ha hseed hdyad hcut hseedQ
+
+example {N : ℕ} {l w : ℝ} {p : ℤ × ℤ}
+    (hw : w < 0) (hlw : l ≤ w) :
+    p ∈ (HuxleyLinearForm.fareySector N (-w) (-l)).image
+      (fun q : ℤ × ℤ => (-q.1,q.2)) ↔
+      1 ≤ p.2 ∧ p.2 ≤ N ∧ IsCoprime p.1 p.2 ∧
+        l*(p.2:ℝ) ≤ p.1 ∧ (p.1:ℝ) ≤ w*p.2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.mem_negative_fareySector_iff (N:=N) (l:=l) (w:=w) (p:=p) hw hlw
+
+example
+    {K : ℕ} {l w B y₀ α β δ C : ℝ} {g : ℝ → ℝ} {H : ℤ × ℤ → ℤ} {p₀ : ℤ × ℤ} {H₀ : ℤ}
+    (hl : l ≤ -1) (hw : w < 0) (hlw : l ≤ w) (hB : 1 ≤ B)
+    (hy₀ : y₀ ∈ Set.Icc l w) (hδ : 0 ≤ δ) (hC : 0 ≤ C)
+    (hcard : max ((w-l)*(K:ℝ)^2/B) 2 ≤ (((HuxleyLinearForm.fareySector K (-w) (-l)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2)))).card)
+    (htaylor : ∀ p ∈ ((HuxleyLinearForm.fareySector K (-w) (-l)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))),
+      |g ((p.1:ℝ)/p.2)-g y₀-deriv g y₀*((p.1:ℝ)/p.2-y₀)| ≤
+        C*|((p.1:ℝ)/p.2)-y₀|^2)
+    (hnear : ∀ p ∈ ((HuxleyLinearForm.fareySector K (-w) (-l)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))),
+      |(p.1:ℝ)*α+(p.2:ℝ)*β-(p.2:ℝ)*g ((p.1:ℝ)/p.2)-H p| ≤ δ) :
+    let η := δ+(K:ℝ)*C*(w-l)^2
+    1536*B*η*((-l)*(K:ℝ))*(K:ℝ) < (((HuxleyLinearForm.fareySector K (-w) (-l)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2)))).card →
+    0 ≤ -(p₀.1:ℝ) → -(p₀.1:ℝ) ≤ 12*((-l)*(K:ℝ)) →
+    0 < (p₀.2:ℝ) → (p₀.2:ℝ) ≤ 12*(K:ℝ) →
+    (p₀.1:ℝ)/p₀.2=y₀ →
+    |(p₀.1:ℝ)*α+(p₀.2:ℝ)*β-(p₀.2:ℝ)*g y₀-H₀| ≤ δ →
+    H₀=p₀.1*round (α-deriv g y₀)+p₀.2*round (β-g y₀+y₀*deriv g y₀) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.negative_sector_seed_label_of_taylor_remainders (K:=K) (l:=l) (w:=w) (B:=B) (y₀:=y₀) (α:=α) (β:=β) (δ:=δ) (C:=C) (g:=g) (H:=H) (p₀:=p₀) (H₀:=H₀) hl hw hlw hB hy₀ hδ hC hcard htaylor hnear
+
+example
+    {K : ℕ} {σ δ T M N R B dmin l w Bd Δ Q : ℝ}
+    {p₀ : ℤ × ℤ} {k : Fin 17}
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xseed : Fin 2 → ℝ}
+    {x₁ : ℝ → Fin 2 → ℝ} {e r v s : Fin 2 → ℤ}
+    {cnew : ℤ × ℤ → Fin 2 → ℤ} {cseed : Fin 2 → ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 1 ≤ M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hNscale : N^2 ≤ M*R) (hscale : T*N*R^2=M^3)
+    (hB : 0 ≤ B) (hdmin : 0 < dmin) (hΔ : 0 ≤ Δ) (hQ : 0 ≤ Q)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hx₁ : ∀ p ∈ ((HuxleyLinearForm.fareySector K (-w) (-l)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))), ∀ i,
+      x₁ ((p.1:ℝ)/p.2) i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hxseed : ∀ i, xseed i∈Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hl : l ≤ -1) (hw : w < 0) (hlw : l ≤ w) (hBd : 1 ≤ Bd) (htseed : 0 < p₀.2)
+    (hyseed : (p₀.1:ℝ)/p₀.2∈Set.Icc l w)
+    (hden : ∀ y ∈ Set.Icc l w, ∀ i, dmin ≤ (r i:ℝ)*y+s i) :
+    let S := ((HuxleyLinearForm.fareySector K (-w) (-l)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2)))
+    let y₀ := (p₀.1:ℝ)/p₀.2
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let a := fun i => round (x₀ i)
+    let b := fun y i => round (x₁ y i)
+    let n := fun y i => b y i-a i
+    let μ := fun i => iteratedDeriv 3 (f i) (a i)/6
+    let μseed := fun i => iteratedDeriv 3 (f i) (round (xseed i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (a i)/24
+    let q := fun (p : ℤ × ℤ) i => (r i:ℝ)*p.1+s i*p.2
+    let d₀ := fun i => iteratedDeriv 1 (f i) (a i)
+    let δ₀ := fun i => iteratedDeriv 2 (f i) (a i)/2-(e i:ℝ)/r i
+    let θ := fun i => (r i:ℝ)*d₀ i-round ((r i:ℝ)*d₀ i)
+    let β₀ := fun i => d₀ i*s i+2*δ₀ i/(3*μ i*r i)
+    let α := θ 0-θ 1
+    let β := β₀ 0-β₀ 1
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun y => g y-h y
+    let z := fun (p : ℤ × ℤ) i => q p i*iteratedDeriv 1 (f i) (b ((p.1:ℝ)/p.2) i)
+    let zseed := fun i => q p₀ i*iteratedDeriv 1 (f i) (round (xseed i))
+    let jseed := fun i => round ((r i:ℝ)*d₀ i)*p₀.1+
+      2*(round (xseed i)-a i)*(e i*p₀.1+v i*p₀.2)
+    let Hseed := (cseed 0-jseed 0)-(cseed 1-jseed 1)
+    let C := (2/modelPhaseThirdLower σ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*Q/N
+    let η := D+(K:ℝ)*C*(w-l)^2
+    let U := (4/modelPhaseThirdLower σ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    l ∈ finiteBoundaryCell Z l w k →
+    w ∈ finiteBoundaryCell Z l w k →
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(e i:ℝ)/r i) →
+    (∀ i, iteratedDeriv 2 (f i) (xseed i)/2=((e i:ℝ)*p₀.1+v i*p₀.2)/q p₀ i) →
+    (∀ i, |(round (xseed i):ℝ)-(a i:ℝ)|^2 ≤ M*R) →
+    (∀ p ∈ S, ∀ i,
+      iteratedDeriv 2 (f i) (x₁ ((p.1:ℝ)/p.2) i)/2=((e i:ℝ)*p.1+v i*p.2)/q p i) →
+    (∀ p ∈ S, ∀ i, |(n ((p.1:ℝ)/p.2) i:ℝ)|^2 ≤ M*R) →
+    |μseed 1*(q p₀ 1)^3/(μseed 0*(q p₀ 0)^3)-1| ≤ B*R^2/N^2 →
+    (∀ p ∈ S, |(z p 0-cnew p 0)-(z p 1-cnew p 1)| ≤ Δ) →
+    (∀ p ∈ S, |q p 0|+|q p 1| ≤ Q) →
+    max ((w-l)*(K:ℝ)^2/Bd) 2 ≤ S.card →
+    1536*Bd*η*((-l)*(K:ℝ))*(K:ℝ) < S.card →
+    -(p₀.1:ℝ) ≤ 12*((-l)*(K:ℝ)) →
+    (p₀.2:ℝ) ≤ 12*(K:ℝ) →
+    |(zseed 0-cseed 0)-(zseed 1-cseed 1)| ≤ Δ →
+    |q p₀ 0|+|q p₀ 1| ≤ Q →
+    Hseed=p₀.1*round (α-deriv φ y₀)+p₀.2*round (β-φ y₀+y₀*deriv φ y₀) ∧
+    |(α-round (α-deriv φ y₀))*y₀+
+      (β-round (β-φ y₀+y₀*deriv φ y₀))-φ y₀| ≤ D/(p₀.2:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_quartic_negative_original_seed_linearization (K:=K) (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (B:=B) (dmin:=dmin) (l:=l) (w:=w) (Bd:=Bd) (Δ:=Δ) (Q:=Q) (p₀:=p₀) (k:=k) (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xseed:=xseed) (x₁:=x₁) (e:=e) (r:=r) (v:=v) (s:=s) (cnew:=cnew) (cseed:=cseed) hσ hδ hF hT hM hN hR hRM hNscale hscale hB hdmin hΔ hQ hA hW hx₀ hx₁ hxseed hr hdet hl hw hlw hBd htseed hyseed hden
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    (v:ℝ)-s*((rat 0:ℝ)-ε) < 0 →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := (HuxleyLinearForm.fareySector K (-β) (-α)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    α ≤ -1 → Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*((-α)*(K:ℝ))*(K:ℝ) < S.card →
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤ D/(pseed.2:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_negative_original_seed_residual (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    (e r v s u t : ℤ) (Mat : Fin 4 → ℤ) (hdet : v*r-e*s=1) :
+    e*(-s)-(-v)*r=1 ∧
+    (-v)*(-t)+e*u=e*u+v*t ∧
+    (-s)*(-t)+r*u=r*u+s*t ∧
+    Mat 0*((-v)*(-t)+e*u)+Mat 1*((-s)*(-t)+r*u)=
+      Mat 0*(e*u+v*t)+Mat 1*(r*u+s*t) ∧
+    Mat 2*((-v)*(-t)+e*u)+Mat 3*((-s)*(-t)+r*u)=
+      Mat 2*(e*u+v*t)+Mat 3*(r*u+s*t) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.farey_chart_quarter_turn_same_matrix e r v s u t Mat hdet
+
+example
+    {e r v s l w : ℝ} (hdet : v*r-e*s=1) (hlw : l ≤ w)
+    (hdl : 0 < r*l-e)
+    (hnl : 0 < v-s*l) (hnw : 0 < v-s*w)
+    (hsmall : (v-s*l)/(r*l-e) < 1) :
+    e*(-s)-(-v)*r=1 ∧
+    0 < (-s)*l-(-v) ∧ 0 < (-s)*w-(-v) ∧
+    (e-r*w)/((-s)*w-(-v)) ≤ (e-r*l)/((-s)*l-(-v)) ∧
+    (e-r*l)/((-s)*l-(-v)) < -1 ∧
+    (e-r*w)/((-s)*w-(-v)) = -1/((v-s*w)/(r*w-e)) ∧
+    (e-r*l)/((-s)*l-(-v)) = -1/((v-s*l)/(r*l-e)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.inverseFarey_quarter_turn_small_sector (e:=e) (r:=r) (v:=v) (s:=s) (l:=l) (w:=w) hdet hlw hdl hnl hnw hsmall
+
+example
+    {r s l w : ℝ} (hs : 0 ≤ s) (hl : 0 ≤ r*l) (hw : 0 ≤ r*w) :
+    |r| * max |l| |w| ≤ max (r*l+s) (r*w+s) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.farey_chart_absolute_coordinate_height (r:=r) (s:=s) (l:=l) (w:=w) hs hl hw
+
+example
+    {C J μ N R r s d l w Bcut : ℝ}
+    (hC : 0 ≤ C) (hJ : 0 < J) (hμ : 0 < μ)
+    (hN : 0 < N) (hR : 0 < R) (hr : r ≠ 0) (hd : 0 < d)
+    (hlw : l ≤ w) (hsize : 1 ≤ max |l| |w|)
+    (hdlo : d ≤ min (r*l+s) (r*w+s)) (hdhi : max (r*l+s) (r*w+s) ≤ 2*d)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2)) :
+    let U := C*R^4/(N*d^3)
+    U*(w-l) ≤ 1/2 ∧
+      U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_coefficient_budgets_of_source_coordinate_cutoff_absolute (C:=C) (J:=J) (μ:=μ) (N:=N) (R:=R) (r:=r) (s:=s) (d:=d) (l:=l) (w:=w) (Bcut:=Bcut) hC hJ hμ hN hR hr hd hlw hsize hdlo hdhi hcoord hμupper hBcut hBsize hG
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ) (hS : 288 ≤ S.card)
+    {σ δ T M N R base d K nSpan Ccurv Bcut l w y₀ ac bc : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hK : 0 ≤ K) (hRM : R ≤ M)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hheight : 1 ≤ max |l| |w|)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(144*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      K*R^2/|r 0*G (y j)|) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    |r 0*s 1-s 0*r 1| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_occupied_window_quartic_determinant_absolute S p x hS (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (K:=K) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hσ hδ hF hT hM hN hR hd hK hRM hscale hA hW hxref hpt hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hheight hCcurv hBcut hBsize
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ) (hS : 288 ≤ S.card)
+    {σ δ T M N R base d K nSpan Ccurv Bcut l w y₀ ac bc : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hK : 0 ≤ K) (hRM : R ≤ M)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hheight : 1 ≤ max |l| |w|)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(144*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      K*R^2/|r 0*G (y j)|) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/144 ≤ (E.card:ℝ) ∧
+      ∀ j∈E,
+        |(iteratedDeriv 3 (f 1) (round (x j 1))/6)*(r 1*y j+s 1)^3/
+          ((iteratedDeriv 3 (f 0) (round (x j 0))/6)*(r 0*y j+s 0)^3)-1| ≤
+          (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_occupied_window_quartic_third_mass_absolute S p x hS (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (K:=K) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hσ hδ hF hT hM hN hR hd hK hRM hscale hA hW hxref hpt hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hheight hCcurv hBcut hBsize
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    (v:ℝ)-s*((rat 0:ℝ)-ε) < 0 →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := (HuxleyLinearForm.fareySector K (-β) (-α)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    α ≤ -1 → Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*((-α)*(K:ℝ))*(K:ℝ) < S.card →
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      (4*(37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ)/κ)*R^2/
+        |(rp 0:ℝ)*minorArcCoordinate (μr 0) (rp 0) (sp 0) yseed| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_negative_original_seed_source_residual (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    (v:ℝ)-s*((rat 0:ℝ)-ε) < 0 →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := (HuxleyLinearForm.fareySector K (-β) (-α)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    α ≤ -1 → Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*((-α)*(K:ℝ))*(K:ℝ) < S.card →
+    |iteratedDeriv 2 g yseed-iteratedDeriv 2 hq yseed| ≤ U ∧
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      (4*(37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ)/κ)*R^2/
+        |(rp 0:ℝ)*minorArcCoordinate (μr 0) (rp 0) (sp 0) yseed| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_negative_original_seed_source_bounds (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {σ δ T M N R L dmin : ℝ} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 → r ≠ 0 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    (v:ℝ)-s*((rat 0:ℝ)-ε) < 0 →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := (HuxleyLinearForm.fareySector K (-β) (-α)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    0 < L →
+    modelPhaseThirdLower σ*L*R^2 ≤ 24*N^2 →
+    (∀ i, x₀ i-L*N∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+L*N∈Ioo (1/2:ℝ) (W i-1/2)) →
+    |(e:ℝ)/r-(rat 0:ℝ)| ≤ modelPhaseThirdLower σ*L/(16*R^2) →
+    (H+L*N+1)^2 ≤ M*R →
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x₀ i| ≤ L*N ∧
+        |(round (xref i):ℝ)-(round (x₀ i):ℝ)| ≤ L*N+1) ∧
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    α ≤ -1 → Δ < 1/2 →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    ∀ k : Fin 17, α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    1536*128*η*((-α)*(K:ℝ))*(K:ℝ) < S.card →
+    |iteratedDeriv 2 g yseed-iteratedDeriv 2 hq yseed| ≤ U ∧
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      (4*(37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ)/κ)*R^2/
+        |(rp 0:ℝ)*minorArcCoordinate (μr 0) (rp 0) (sp 0) yseed| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_constructed_negative_reference_source_bounds (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (L:=L) (dmin:=dmin) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    (S : Finset ℕ) (hS : 4944 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hheight : 1 ≤ max |l| |w|) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, (v:ℝ)-s*((rat j 0:ℝ)-ε) < 0) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => (HuxleyLinearForm.fareySector (Kaux j) (-β j) (-α j)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    Δ < 1/2 →
+    (∀ j∈S, α j ≤ -1) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 1536*128*η j*((-α j)*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S₀ ∧ (S₀.card:ℝ)/144 ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_negative_selected_cell_long_block S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hheight hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (hS : 4944 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hheight : 1 ≤ max |l| |w|) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2))
+    (hc : Mat 2 ≠ 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, (v:ℝ)-s*((rat j 0:ℝ)-ε) < 0) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => (HuxleyLinearForm.fareySector (Kaux j) (-β j) (-α j)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    Δ < 1/2 →
+    (∀ j∈S, α j ≤ -1) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 1536*128*η j*((-α j)*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Ccount := (4608*Cphys/κ^2)*
+      (Γ^2*(Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)+
+        Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    (S.card:ℝ) ≤ 4944+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_negative_selected_cell_family_count S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hheight hBcut hLref hrefWindow hwideL hwideU hrefNear hc hlarge
+
+example
+    (S : Finset ℕ) (hS : 4944 ≤ S.card) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hheight : 1 ≤ max |l| |w|) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2))
+    (hc : Mat 2 ≠ 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, (v:ℝ)-s*((rat j 0:ℝ)-ε) < 0) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => (HuxleyLinearForm.fareySector (Kaux j) (-β j) (-α j)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    Δ < 1/2 →
+    (∀ j∈S, α j ≤ -1) →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 1536*128*η j*((-α j)*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Γ := Cphys/κ
+    let L := κ/(144*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Ccount := (4608*Cphys/κ^2)*
+      (Γ^2*(Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)+
+        Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    (S.card:ℝ) ≤ 4944+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_negative_selected_cell_source_count S hS jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hheight hBcut hLref hrefWindow hwideL hwideU hrefNear hc hlarge
+
+example {N : ℕ} {l w : ℝ}
+    (hw : 0 ≤ w) :
+    ((HuxleyLinearForm.fareySector N l w).card:ℝ) ≤ w*(N:ℝ)^2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_card_le_rectangle_all_slopes (N:=N) (l:=l) (w:=w) hw
+
+example
+    {N : ℕ} {l w : ℝ} {m : ℤ}
+    (hl : 0 < l) (hlw : l ≤ w) (hm : 0 ≤ m) :
+    let T := (HuxleyLinearForm.fareySector N l w).filter (fun p => p.1=m)
+    (T.card:ℝ) ≤ N ∧ (T.card:ℝ) ≤ (m:ℝ)/l-(m:ℝ)/w+1 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_numerator_fiber_bounds (N:=N) (l:=l) (w:=w) (m:=m) hl hlw hm
+
+example {N q : ℕ} {l w : ℝ}
+    (hl : 0 < l) (hw : 0 ≤ w) (hR : 2 ≤ (HuxleyLinearForm.fareySector N l w).card)
+    (hdvd : ∀ p ∈ HuxleyLinearForm.fareySector N l w, q ∣ p.1.natAbs) : q=1 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_numerator_common_divisor (N:=N) (q:=q) (l:=l) (w:=w) hl hw hR hdvd
+
+example {N : ℕ} {l w B : ℝ}
+    (hl : 0 < l) (hlw : l ≤ w) (hN : 0 < N) (hB : 1 ≤ B)
+    (hR : w*(N:ℝ) ≤ (HuxleyLinearForm.fareySector N l w).card)
+    (hdensity : (w-l)*(N:ℝ)^2 ≤ B*(HuxleyLinearForm.fareySector N l w).card) :
+    w*(N:ℝ) ≤ 3*B*((HuxleyLinearForm.fareySector N l w).image Prod.fst).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_numerator_card_lower (N:=N) (l:=l) (w:=w) (B:=B) hl hlw hN hB hR hdensity
+
+example
+    {N : ℕ} {l w : ℝ} {m : ℤ}
+    (hl : 0 < l) (hlw : l ≤ w) (hmM : (m:ℝ) ≤ w*(N:ℝ)) :
+    (((HuxleyLinearForm.fareySector N l w).filter (fun p => p.1=m)).card:ℝ) ≤
+      (N:ℝ)-(m:ℝ)/w+1 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_numerator_fiber_cutoff_bound (N:=N) (l:=l) (w:=w) (m:=m) hl hlw hmM
+
+example {N : ℕ} {l w : ℝ}
+    (hw : 0 ≤ w) :
+    (((HuxleyLinearForm.fareySector N l w).image Prod.fst).card:ℝ) ≤ w*(N:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_numerator_projection_card_le (N:=N) (l:=l) (w:=w) hw
+
+example {N : ℕ} {l w : ℝ}
+    (hl : 0 < l) (hlw : l ≤ w) (hN : 0 < N)
+    (hR : 40*w*(N:ℝ) ≤ (HuxleyLinearForm.fareySector N l w).card) :
+    39 ≤ (w*(N:ℝ))*(1/l-1/w) ∧ 39 ≤ (N:ℝ)-1/w :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_large_numerator_width (N:=N) (l:=l) (w:=w) hl hlw hN hR
+
+example {N : ℕ} {l w : ℝ}
+    (hl : 0 < l) (hlw : l ≤ w) (hN : 0 < N)
+    (hR : 40*w*(N:ℝ) ≤ (HuxleyLinearForm.fareySector N l w).card) :
+    ∃ m n : ℤ, (m,n) ∈ HuxleyLinearForm.fareySector N l w ∧
+      (m,n+1) ∈ HuxleyLinearForm.fareySector N l w :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_consecutive_denominators (N:=N) (l:=l) (w:=w) hl hlw hN hR
+
+example {N : ℕ} {l w α β δ : ℝ}
+    (hl : 0 < l) (hlw : l ≤ w) (hN : 0 < N)
+    (hR : 40*w*(N:ℝ) ≤ (HuxleyLinearForm.fareySector N l w).card) (hδ : 0 ≤ δ)
+    (hnear : ∀ p ∈ HuxleyLinearForm.fareySector N l w,
+      ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) :
+    ((HuxleyLinearForm.fareySector N l w).card:ℝ) ≤ 96*δ*(w*(N:ℝ))*(N:ℝ) ∨
+      |β-(round β:ℤ)| ≤ 8*(w*(N:ℝ))*δ/(HuxleyLinearForm.fareySector N l w).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_large_beta_bound (N:=N) (l:=l) (w:=w) (α:=α) (β:=β) (δ:=δ) hl hlw hN hR hδ hnear
+
+example
+    {N : ℕ} {l μ B α β δ : ℝ}
+    (hl : 0 < l) (hμ : 0 ≤ μ) (hB : 1 ≤ B) (hδ : 0 ≤ δ)
+    (hR : max ((μ-l)*(N:ℝ)^2/B) 2 ≤ (HuxleyLinearForm.fareySector N l μ).card)
+    (hsmall : (max 1 μ*(N:ℝ))*δ ≤ 1/(96*B))
+    (hnear : ∀ p ∈ HuxleyLinearForm.fareySector N l μ,
+      ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) :
+    |α-(round α:ℤ)| ≤ 8*(N:ℝ)*δ/(HuxleyLinearForm.fareySector N l μ).card ∧
+    |β-(round β:ℤ)| ≤ 8*(μ*(N:ℝ))*δ/(HuxleyLinearForm.fareySector N l μ).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_small_error_bounds_all_slopes (N:=N) (l:=l) (μ:=μ) (B:=B) (α:=α) (β:=β) (δ:=δ) hl hμ hB hδ hR hsmall hnear
+
+example {N : ℕ} {l w B α β δ : ℝ}
+    (hl : 0 < l) (hlw : l ≤ w) (hN : 0 < N) (hB : 1 ≤ B)
+    (hR : w*(N:ℝ) ≤ (HuxleyLinearForm.fareySector N l w).card)
+    (hR2 : 2 ≤ (HuxleyLinearForm.fareySector N l w).card)
+    (hdensity : (w-l)*(N:ℝ)^2 ≤ B*(HuxleyLinearForm.fareySector N l w).card)
+    (hδ : 0 ≤ δ)
+    (hβ : |β-(round β:ℤ)| ≤ 8*(w*(N:ℝ))*δ/(HuxleyLinearForm.fareySector N l w).card)
+    (hnear : ∀ p∈HuxleyLinearForm.fareySector N l w,
+      ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) :
+    ((HuxleyLinearForm.fareySector N l w).card:ℝ) ≤ 324*B*δ*(w*(N:ℝ))*(N:ℝ) ∨
+      |α-(round α:ℤ)| ≤ 27*B*(N:ℝ)*δ/(HuxleyLinearForm.fareySector N l w).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_alpha_of_beta_bound (N:=N) (l:=l) (w:=w) (B:=B) (α:=α) (β:=β) (δ:=δ) hl hlw hN hB hR hR2 hdensity hδ hβ hnear
+
+example
+    {N : ℕ} {l w B α β δ : ℝ}
+    (hl : 0 < l) (hB : 1 ≤ B) (hδ : 0 ≤ δ)
+    (hR : max ((w-l)*(N:ℝ)^2/B) 2 ≤ (HuxleyLinearForm.fareySector N l w).card)
+    (hnear : ∀ p∈HuxleyLinearForm.fareySector N l w,
+      ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) :
+    ((HuxleyLinearForm.fareySector N l w).card:ℝ) ≤ 3840*B*δ*(w*(N:ℝ))*(N:ℝ) ∨
+      (|α-(round α:ℤ)| ≤ 27*B*(N:ℝ)*δ/(HuxleyLinearForm.fareySector N l w).card ∧
+       |β-(round β:ℤ)| ≤ 20*B*(w*(N:ℝ))*δ/(HuxleyLinearForm.fareySector N l w).card) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_bounded_density_dichotomy_all_slopes (N:=N) (l:=l) (w:=w) (B:=B) (α:=α) (β:=β) (δ:=δ) hl hB hδ hR hnear
+
+example
+    {N : ℕ} {l μ B α β δ : ℝ}
+    (hl : 0 < l) (hμ : 0 ≤ μ) (hB : 1 ≤ B) (hδ : 0 ≤ δ)
+    (hR : max ((μ-l)*(N:ℝ)^2/B) 2 ≤ (HuxleyLinearForm.fareySector N l μ).card)
+    (hlarge : 3840*B*δ*(μ*(N:ℝ))*(N:ℝ) < (HuxleyLinearForm.fareySector N l μ).card)
+    (hnear : ∀ p ∈ HuxleyLinearForm.fareySector N l μ,
+      ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) :
+    ∀ p : ℤ × ℤ, 0 ≤ (p.1:ℝ) → (p.1:ℝ) ≤ 12*(μ*(N:ℝ)) →
+      0 ≤ (p.2:ℝ) → (p.2:ℝ) ≤ 12*(N:ℝ) → ∀ b : ℤ,
+      |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ →
+      b=p.1*(round α)+p.2*(round β) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fareySector_integer_labels_enlarged_rectangle_all_slopes (N:=N) (l:=l) (μ:=μ) (B:=B) (α:=α) (β:=β) (δ:=δ) hl hμ hB hδ hR hlarge hnear
+
+example
+    {K : ℕ} {l w B y₀ α β δ C : ℝ} {g : ℝ → ℝ} {H : ℤ × ℤ → ℤ} {p₀ : ℤ × ℤ} {H₀ : ℤ}
+    (hl : 0 < l) (hw : 0 ≤ w) (hlw : l ≤ w) (hB : 1 ≤ B)
+    (hy₀ : y₀ ∈ Set.Icc l w) (hδ : 0 ≤ δ) (hC : 0 ≤ C)
+    (hcard : max ((w-l)*(K:ℝ)^2/B) 2 ≤ (HuxleyLinearForm.fareySector K l w).card)
+    (htaylor : ∀ p ∈ HuxleyLinearForm.fareySector K l w,
+      |g ((p.1:ℝ)/p.2)-g y₀-deriv g y₀*((p.1:ℝ)/p.2-y₀)| ≤
+        C*|((p.1:ℝ)/p.2)-y₀|^2)
+    (hnear : ∀ p ∈ HuxleyLinearForm.fareySector K l w,
+      |(p.1:ℝ)*α+(p.2:ℝ)*β-(p.2:ℝ)*g ((p.1:ℝ)/p.2)-H p| ≤ δ) :
+    let η := δ+(K:ℝ)*C*(w-l)^2
+    3840*B*η*(w*(K:ℝ))*(K:ℝ) < (HuxleyLinearForm.fareySector K l w).card →
+    0 ≤ (p₀.1:ℝ) → (p₀.1:ℝ) ≤ 12*(w*(K:ℝ)) →
+    0 < (p₀.2:ℝ) → (p₀.2:ℝ) ≤ 12*(K:ℝ) →
+    (p₀.1:ℝ)/p₀.2=y₀ →
+    |(p₀.1:ℝ)*α+(p₀.2:ℝ)*β-(p₀.2:ℝ)*g y₀-H₀| ≤ δ →
+    H₀=p₀.1*round (α-deriv g y₀)+p₀.2*round (β-g y₀+y₀*deriv g y₀) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.sector_seed_label_of_taylor_remainders_all_slopes (K:=K) (l:=l) (w:=w) (B:=B) (y₀:=y₀) (α:=α) (β:=β) (δ:=δ) (C:=C) (g:=g) (H:=H) (p₀:=p₀) (H₀:=H₀) hl hw hlw hB hy₀ hδ hC hcard htaylor hnear
+
+example
+    {K : ℕ} {σ δ T M N R B dmin l w Bd Δ Q : ℝ}
+    {p₀ : ℤ × ℤ} {k : Fin 17}
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xseed : Fin 2 → ℝ}
+    {x₁ : ℝ → Fin 2 → ℝ} {e r v s : Fin 2 → ℤ}
+    {cnew : ℤ × ℤ → Fin 2 → ℤ} {cseed : Fin 2 → ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 1 ≤ M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hNscale : N^2 ≤ M*R) (hscale : T*N*R^2=M^3)
+    (hB : 0 ≤ B) (hdmin : 0 < dmin) (hΔ : 0 ≤ Δ) (hQ : 0 ≤ Q)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hx₁ : ∀ p ∈ HuxleyLinearForm.fareySector K l w, ∀ i,
+      x₁ ((p.1:ℝ)/p.2) i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hxseed : ∀ i, xseed i∈Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hl : 0 < l) (hw : 0 ≤ w) (hlw : l ≤ w) (hBd : 1 ≤ Bd) (htseed : 0 < p₀.2)
+    (hyseed : (p₀.1:ℝ)/p₀.2∈Set.Icc l w)
+    (hden : ∀ y ∈ Set.Icc l w, ∀ i, dmin ≤ (r i:ℝ)*y+s i) :
+    let S := HuxleyLinearForm.fareySector K l w
+    let y₀ := (p₀.1:ℝ)/p₀.2
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let a := fun i => round (x₀ i)
+    let b := fun y i => round (x₁ y i)
+    let n := fun y i => b y i-a i
+    let μ := fun i => iteratedDeriv 3 (f i) (a i)/6
+    let μseed := fun i => iteratedDeriv 3 (f i) (round (xseed i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (a i)/24
+    let q := fun (p : ℤ × ℤ) i => (r i:ℝ)*p.1+s i*p.2
+    let d₀ := fun i => iteratedDeriv 1 (f i) (a i)
+    let δ₀ := fun i => iteratedDeriv 2 (f i) (a i)/2-(e i:ℝ)/r i
+    let θ := fun i => (r i:ℝ)*d₀ i-round ((r i:ℝ)*d₀ i)
+    let β₀ := fun i => d₀ i*s i+2*δ₀ i/(3*μ i*r i)
+    let α := θ 0-θ 1
+    let β := β₀ 0-β₀ 1
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun y => g y-h y
+    let z := fun (p : ℤ × ℤ) i => q p i*iteratedDeriv 1 (f i) (b ((p.1:ℝ)/p.2) i)
+    let zseed := fun i => q p₀ i*iteratedDeriv 1 (f i) (round (xseed i))
+    let jseed := fun i => round ((r i:ℝ)*d₀ i)*p₀.1+
+      2*(round (xseed i)-a i)*(e i*p₀.1+v i*p₀.2)
+    let Hseed := (cseed 0-jseed 0)-(cseed 1-jseed 1)
+    let C := (2/modelPhaseThirdLower σ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*Q/N
+    let η := D+(K:ℝ)*C*(w-l)^2
+    let U := (4/modelPhaseThirdLower σ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    l ∈ finiteBoundaryCell Z l w k →
+    w ∈ finiteBoundaryCell Z l w k →
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(e i:ℝ)/r i) →
+    (∀ i, iteratedDeriv 2 (f i) (xseed i)/2=((e i:ℝ)*p₀.1+v i*p₀.2)/q p₀ i) →
+    (∀ i, |(round (xseed i):ℝ)-(a i:ℝ)|^2 ≤ M*R) →
+    (∀ p ∈ S, ∀ i,
+      iteratedDeriv 2 (f i) (x₁ ((p.1:ℝ)/p.2) i)/2=((e i:ℝ)*p.1+v i*p.2)/q p i) →
+    (∀ p ∈ S, ∀ i, |(n ((p.1:ℝ)/p.2) i:ℝ)|^2 ≤ M*R) →
+    |μseed 1*(q p₀ 1)^3/(μseed 0*(q p₀ 0)^3)-1| ≤ B*R^2/N^2 →
+    (∀ p ∈ S, |(z p 0-cnew p 0)-(z p 1-cnew p 1)| ≤ Δ) →
+    (∀ p ∈ S, |q p 0|+|q p 1| ≤ Q) →
+    max ((w-l)*(K:ℝ)^2/Bd) 2 ≤ S.card →
+    3840*Bd*η*(w*(K:ℝ))*(K:ℝ) < S.card →
+    (p₀.1:ℝ) ≤ 12*(w*(K:ℝ)) →
+    (p₀.2:ℝ) ≤ 12*(K:ℝ) →
+    |(zseed 0-cseed 0)-(zseed 1-cseed 1)| ≤ Δ →
+    |q p₀ 0|+|q p₀ 1| ≤ Q →
+    Hseed=p₀.1*round (α-deriv φ y₀)+p₀.2*round (β-φ y₀+y₀*deriv φ y₀) ∧
+    |(α-round (α-deriv φ y₀))*y₀+
+      (β-round (β-φ y₀+y₀*deriv φ y₀))-φ y₀| ≤ D/(p₀.2:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_quartic_original_seed_linearization_all_slopes (K:=K) (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (B:=B) (dmin:=dmin) (l:=l) (w:=w) (Bd:=Bd) (Δ:=Δ) (Q:=Q) (p₀:=p₀) (k:=k) (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xseed:=xseed) (x₁:=x₁) (e:=e) (r:=r) (v:=v) (s:=s) (cnew:=cnew) (cseed:=cseed) hσ hδ hF hT hM hN hR hRM hNscale hscale hB hdmin hΔ hQ hA hW hx₀ hx₁ hxseed hr hdet hl hw hlw hBd htseed hyseed hden
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    0 < (v:ℝ)-s*((rat 0:ℝ)+ε) →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := HuxleyLinearForm.fareySector K α β
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    3840*128*η*(β*(K:ℝ))*(K:ℝ) < S.card →
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤ D/(pseed.2:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_original_seed_residual_all_positive_slopes (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    {C J μ N R r s d l w Bcut : ℝ}
+    (hC : 0 ≤ C) (hJ : 0 < J) (hμ : 0 < μ)
+    (hN : 0 < N) (hR : 0 < R) (hr : r ≠ 0) (hd : 0 < d)
+    (hlw : l ≤ w)
+    (hdlo : d ≤ min (r*l+s) (r*w+s)) (hdhi : max (r*l+s) (r*w+s) ≤ 2*d)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2)) :
+    let U := C*R^4/(N*d^3)
+    U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_weighted_coefficient_budget_of_source_coordinate_cutoff (C:=C) (J:=J) (μ:=μ) (N:=N) (R:=R) (r:=r) (s:=s) (d:=d) (l:=l) (w:=w) (Bcut:=Bcut) hC hJ hμ hN hR hr hd hlw hdlo hdhi hcoord hμupper hBcut hBsize hG
+
+example
+    {f : ℝ → ℝ} {l w x y : ℝ}
+    (hconv : ConvexOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : x∈Icc l w) (hy : y∈Icc l w) :
+    l*|deriv f y-deriv f x| ≤
+      |(y*deriv f y-f y)-(x*deriv f x-f x)| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.convex_weighted_derivative_difference (f:=f) (l:=l) (w:=w) (x:=x) (y:=y) hconv hder hx hy
+
+example
+    {f : ℝ → ℝ} {l w x y : ℝ}
+    (hshape : ConvexOn ℝ (Icc l w) f ∨ ConcaveOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : x∈Icc l w) (hy : y∈Icc l w) :
+    l*|deriv f y-deriv f x| ≤
+      |(y*deriv f y-f y)-(x*deriv f x-f x)| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.curvature_branch_weighted_derivative_difference (f:=f) (l:=l) (w:=w) (x:=x) (y:=y) hshape hder hx hy
+
+example
+    {f : ℝ → ℝ} {l w x y ac bc D : ℝ} {b : ℤ}
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD : D ≤ 1/2)
+    (hshape : ConvexOn ℝ (Icc l w) f ∨ ConcaveOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : x∈Icc l w) (hy : y∈Icc l w)
+    (hresx : |(ac-round (ac-deriv f x))*x+bc-b-f x| ≤ D*x)
+    (hresy : |(ac-round (ac-deriv f y))*y+bc-b-f y| ≤ D*y) :
+    |round (ac-deriv f y)-round (ac-deriv f x)| ≤ (5:ℤ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fixed_integer_dyadic_first_coefficient_spread (f:=f) (l:=l) (w:=w) (x:=x) (y:=y) (ac:=ac) (bc:=bc) (D:=D) (b:=b) hl hdyad hD hshape hder hx hy hresx hresy
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {f : ℝ → ℝ} {l w ac bc D : ℝ} {b : ℤ}
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD : D ≤ 1/2)
+    (hshape : ConvexOn ℝ (Icc l w) f ∨ ConcaveOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : ∀ i∈S, x i∈Icc l w)
+    (hres : ∀ i∈S, |(ac-round (ac-deriv f (x i)))*x i+bc-b-f (x i)| ≤ D*x i) :
+    (S.image (fun i => round (ac-deriv f (x i)))).card ≤ 6 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.fixed_integer_dyadic_first_coefficient_count (ι:=ι) S x (f:=f) (l:=l) (w:=w) (ac:=ac) (bc:=bc) (D:=D) (b:=b) hl hdyad hD hshape hder hx hres
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {f : ℝ → ℝ} {l w ac bc D b₀ : ℝ}
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD : D ≤ 1/2)
+    (hshape : ConvexOn ℝ (Icc l w) f ∨ ConcaveOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : ∀ i∈S, x i∈Icc l w)
+    (hweighted : ∀ i∈S, |bc-f (x i)+x i*deriv f (x i)-b₀| ≤ 1/2)
+    (hres : ∀ i∈S,
+      |(ac-round (ac-deriv f (x i)))*x i+
+        bc-round (bc-f (x i)+x i*deriv f (x i))-f (x i)| ≤ D*x i) :
+    (S.image (fun i => (round (ac-deriv f (x i)),
+      round (bc-f (x i)+x i*deriv f (x i))))).card ≤ 18 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.dyadic_curvature_branch_coefficient_pair_count (ι:=ι) S x (f:=f) (l:=l) (w:=w) (ac:=ac) (bc:=bc) (D:=D) (b₀:=b₀) hl hdyad hD hshape hder hx hweighted hres
+
+example
+    {μ ν r s μ₁ ν₁ r₁ s₁ x : ℝ}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hx : r*x+s ≠ 0) (hx₁ : r₁*x+s₁ ≠ 0) :
+    let φ := fun z => rationalPhase μ r s μ₁ r₁ s₁ z-
+      quarticPhase μ ν r s μ₁ ν₁ r₁ s₁ z
+    DifferentiableAt ℝ φ x ∧ DifferentiableAt ℝ (deriv φ) x ∧
+      (deriv^[2] φ) x =
+        (quarticCurvatureNumerator μ ν r s μ₁ ν₁ r₁ s₁).eval x/
+          ((r*x+s)^4*(r₁*x+s₁)^4) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_second_derivative_data (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (x:=x) hμ hμ₁ hr hr₁ hx hx₁
+
+example
+    {μ ν r s μ₁ ν₁ r₁ s₁ l w a b : ℝ} {k : ℕ}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcell : Icc a b ⊆ finiteBoundaryCell
+      (quarticCurvatureNumerator μ ν r s μ₁ ν₁ r₁ s₁).roots.toFinset l w k) :
+    let φ := fun z => rationalPhase μ r s μ₁ r₁ s₁ z-
+      quarticPhase μ ν r s μ₁ ν₁ r₁ s₁ z
+    ConvexOn ℝ (Icc a b) φ ∨ ConcaveOn ℝ (Icc a b) φ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_shape_on_curvature_root_cell (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (l:=l) (w:=w) (a:=a) (b:=b) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ hcell
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ l w ac bc D b₀ : ℝ} {k : ℕ}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD : D ≤ 1/2) :
+    let φ := fun z => rationalPhase μ r s μ₁ r₁ s₁ z-
+      quarticPhase μ ν r s μ₁ ν₁ r₁ s₁ z
+    let Z := (quarticCurvatureNumerator μ ν r s μ₁ ν₁ r₁ s₁).roots.toFinset
+    (∀ i∈S, x i∈finiteBoundaryCell Z l w k) →
+    (∀ i∈S, |bc-φ (x i)+x i*deriv φ (x i)-b₀| ≤ 1/2) →
+    (∀ i∈S, |(ac-round (ac-deriv φ (x i)))*x i+
+      bc-round (bc-φ (x i)+x i*deriv φ (x i))-φ (x i)| ≤ D*x i) →
+    (S.image (fun i => (round (ac-deriv φ (x i)),
+      round (bc-φ (x i)+x i*deriv φ (x i))))).card ≤ 18 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_dyadic_root_cell_coefficient_count (ι:=ι) S x (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (l:=l) (w:=w) (ac:=ac) (bc:=bc) (D:=D) (b₀:=b₀) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ hl hdyad hD
+
+example
+    {μ ν r s μ₁ ν₁ r₁ s₁ U l w x₀ x bc : ℝ} {k : Fin 17}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hheight : U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2) :
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    x∈finiteBoundaryCell Z l w k →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    |(bc-φ x+x*deriv φ x)-(bc-φ x₀+x₀*deriv φ x₀)| ≤ 1/2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_weighted_coefficient_variation (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (U:=U) (l:=l) (w:=w) (x₀:=x₀) (x:=x) (bc:=bc) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ hheight
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ U l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD : D ≤ 1/2)
+    (hheight : U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2) :
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, x i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (x i)))*x i+
+      bc-round (bc-φ (x i)+x i*deriv φ (x i))-φ (x i)| ≤ D*x i) →
+    (S.image (fun i => (round (ac-deriv φ (x i)),
+      round (bc-φ (x i)+x i*deriv φ (x i))))).card ≤ 113 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_dyadic_coefficient_color_count (ι:=ι) S x (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (U:=U) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ hl hdyad hD hheight
+
+example
+    {ι : Type*} (S : Finset ι) (p : ι → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hp : ∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤ 113 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_dyadic_source_cutoff_coefficient_count (ι:=ι) S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hl hdyad hD₀ hD hp
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (hS : 3616 ≤ S.card)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hdyad : w ≤ 2*l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hp : ∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      ∀ i : Fin 7, (S.card:ℝ)/1808 ≤ (j i.succ:ℝ)-(j i.castSucc:ℝ)-1 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_dyadic_source_common_coefficient_windows S p hS (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hl hdyad hD₀ hD hp
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ U l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hl : 0 < l) (hD : D ≤ 1/2)
+    (hheight : U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2) :
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, x i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (x i)))*x i+
+      bc-round (bc-φ (x i)+x i*deriv φ (x i))-φ (x i)| ≤ D*x i) →
+    (S.image (fun i => (round (ac-deriv φ (x i)),
+      round (bc-φ (x i)+x i*deriv φ (x i))))).card ≤ 5+108*(⌊Real.logb 2 (w/l)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_positive_interval_coefficient_color_count (ι:=ι) S x (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (U:=U) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ hl hD hheight
+
+example
+    {ι : Type*} (S : Finset ι) (p : ι → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hp : ∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤ 5+108*(⌊Real.logb 2 (w/l)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_positive_interval_source_cutoff_coefficient_count (ι:=ι) S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hl hD₀ hD hp
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hp : ∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      ∀ i : Fin 7, (S.card:ℝ)/(16*((5+108*(⌊Real.logb 2 (w/l)⌋₊+1):ℕ):ℝ)) ≤ (j i.succ:ℝ)-(j i.castSucc:ℝ)-1 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_positive_interval_source_common_coefficient_windows S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hl hD₀ hD hS hp
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → ℝ)
+    {σ δ T M A W step base μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut D l w y₀ ac bc e v : ℝ}
+    {F : ℝ → ℝ} {k : Fin 17}
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hstep : 0 < step) (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0)
+    (hr : r ≠ 0) (hr₁ : r₁ ≠ 0) (hdet : v*r-e*s=1)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hGcut : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hnum : ∀ i∈S, 0 < (p i).1)
+    (hpt : ∀ i∈S, 0 < (p i).2)
+    (hx : ∀ i∈S, x i∈Ioo 0 W)
+    (hwindow : ∀ i∈S, x i∈Icc (base+step*(i:ℝ)) (base+step*((i:ℝ)+1))) :
+    let U := C*R^4/(N*d^3)
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let f := heathBrownPhysicalPhase F T M A 1
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, iteratedDeriv 2 f (x i)/2=
+      (e*(p i).1+v*(p i).2)/(r*(p i).1+s*(p i).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      StrictAnti (fun i => y (j i)) ∧
+      (∀ i : Fin 7, step*(S.card:ℝ)/(16*(Blabels:ℝ)) ≤ x (j i.succ)-x (j i.castSucc)) ∧
+      ∀ i : Fin 7, modelPhaseThirdLower σ*T/(6*μ*M^3)*(step*(S.card:ℝ)/(16*(Blabels:ℝ))) ≤
+        minorArcCoordinate μ r s (y (j i.succ))-
+        minorArcCoordinate μ r s (y (j i.castSucc)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_positive_interval_common_coefficient_samples S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (step:=step) (base:=base) (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (D:=D) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (e:=e) (v:=v) (F:=F) (k:=k) hS hσ hδ hF hT hM hA hW hstep hμ hμ₁ hr hr₁ hdet hden hden₁ hC hJ hN hR hd hcoord hμupper hBcut hBsize hGcut hl hD₀ hD hnum hpt hx hwindow
+
+
+example
+    (p : ℤ × ℤ) {μ r s κ N R Q Cres D : ℝ}
+    (hμ : 0 < μ) (hr : r ≠ 0) (hκ : 0 < κ) (hN : 0 < N)
+    (hCres : 0 ≤ Cres) (hu : 0 < p.2)
+    (hden : 0 < r*((p.1:ℝ)/p.2)+s)
+    (hQband : Q ≤ 2*(r*(p.1:ℝ)+s*p.2))
+    (hD : D ≤ Cres*Q/N)
+    (hlower : κ/(2*N) ≤ 3*μ*R^2) :
+    D/(p.2:ℝ) ≤ (4*Cres/κ)*R^2/
+      |r*minorArcCoordinate μ r s ((p.1:ℝ)/p.2)| :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_integer_seed_residual_source_normalization p (μ:=μ) (r:=r) (s:=s) (κ:=κ) (N:=N) (R:=R) (Q:=Q) (Cres:=Cres) (D:=D) hμ hr hκ hN hCres hu hden hQband hD hlower
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ)
+    {σ δ T M N R base d Cres Q D nSpan Ccurv Bcut l w y₀ ac bc : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hCres : 0 ≤ Cres) (hRM : R ≤ M)
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) (hDupper : D ≤ Cres*Q/N)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hnum : ∀ j∈S, 0 < (p j).1)
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hQband : ∀ j∈S, Q ≤ 2*(r 0*(p j).1+s 0*(p j).2))
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hl : 0 < l)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let K := 4*Cres/κ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(16*(Blabels:ℝ)*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      D/(p j).2) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    |r 0*s 1-s 0*r 1| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_positive_interval_quartic_determinant S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (Cres:=Cres) (Q:=Q) (D:=D) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hS hσ hδ hF hT hM hN hR hd hCres hRM hD₀ hD hDupper hscale hA hW hxref hnum hpt hQband hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hl hCcurv hBcut hBsize
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hp : ∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      (∀ i : Fin 7, (S.card:ℝ)/(16*((5+108*(⌊Real.logb 2 (w/l)⌋₊+1):ℕ):ℝ)) ≤
+        (j i.succ:ℝ)-(j i.castSucc:ℝ)-1) ∧
+      ∀ i : Fin 7, (S.card:ℝ)/(16*((5+108*(⌊Real.logb 2 (w/l)⌋₊+1):ℕ):ℝ)) ≤
+        ((S.filter (fun n => j i.castSucc<n ∧ n<j i.succ)).card:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_positive_interval_source_common_coefficient_windows_with_mass S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hl hD₀ hD hS hp
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → ℝ)
+    {σ δ T M A W step base μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut D l w y₀ ac bc e v : ℝ}
+    {F : ℝ → ℝ} {k : Fin 17}
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hstep : 0 < step) (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0)
+    (hr : r ≠ 0) (hr₁ : r₁ ≠ 0) (hdet : v*r-e*s=1)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hGcut : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hl : 0 < l) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hnum : ∀ i∈S, 0 < (p i).1)
+    (hpt : ∀ i∈S, 0 < (p i).2)
+    (hx : ∀ i∈S, x i∈Ioo 0 W)
+    (hwindow : ∀ i∈S, x i∈Icc (base+step*(i:ℝ)) (base+step*((i:ℝ)+1))) :
+    let U := C*R^4/(N*d^3)
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let f := heathBrownPhysicalPhase F T M A 1
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, iteratedDeriv 2 f (x i)/2=
+      (e*(p i).1+v*(p i).2)/(r*(p i).1+s*(p i).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      StrictAnti (fun i => y (j i)) ∧
+      (∀ i : Fin 7, step*(S.card:ℝ)/(16*(Blabels:ℝ)) ≤ x (j i.succ)-x (j i.castSucc)) ∧
+      (∀ i : Fin 7, modelPhaseThirdLower σ*T/(6*μ*M^3)*(step*(S.card:ℝ)/(16*(Blabels:ℝ))) ≤
+        minorArcCoordinate μ r s (y (j i.succ))-
+        minorArcCoordinate μ r s (y (j i.castSucc))) ∧
+      (∀ i : Fin 7, (S.card:ℝ)/(16*(Blabels:ℝ)) ≤
+        ((S.filter (fun n => j i.castSucc<n ∧ n<j i.succ)).card:ℝ)) ∧
+      AntitoneOn y (S:Set ℕ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_positive_interval_common_coefficient_samples_with_mass S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (step:=step) (base:=base) (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (D:=D) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (e:=e) (v:=v) (F:=F) (k:=k) hS hσ hδ hF hT hM hA hW hstep hμ hμ₁ hr hr₁ hdet hden hden₁ hC hJ hN hR hd hcoord hμupper hBcut hBsize hGcut hl hD₀ hD hnum hpt hx hwindow
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ)
+    {σ δ T M N R base d Cres Q D nSpan Ccurv Bcut l w y₀ ac bc : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hCres : 0 ≤ Cres) (hRM : R ≤ M)
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) (hDupper : D ≤ Cres*Q/N)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hnum : ∀ j∈S, 0 < (p j).1)
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hQband : ∀ j∈S, Q ≤ 2*(r 0*(p j).1+s 0*(p j).2))
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hl : 0 < l)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let K := 4*Cres/κ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(16*(Blabels:ℝ)*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      D/(p j).2) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/(16*(Blabels:ℝ)) ≤ (E.card:ℝ) ∧
+      ∀ j∈E,
+        |(iteratedDeriv 3 (f 1) (round (x j 1))/6)*(r 1*y j+s 1)^3/
+          ((iteratedDeriv 3 (f 0) (round (x j 0))/6)*(r 0*y j+s 0)^3)-1| ≤
+          (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_positive_interval_quartic_third_mass S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (Cres:=Cres) (Q:=Q) (D:=D) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hS hσ hδ hF hT hM hN hR hd hCres hRM hD₀ hD hDupper hscale hA hW hxref hnum hpt hQband hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hl hCcurv hBcut hBsize
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    0 < (v:ℝ)-s*((rat 0:ℝ)+ε) →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := HuxleyLinearForm.fareySector K α β
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    3840*128*η*(β*(K:ℝ))*(K:ℝ) < S.card →
+    |iteratedDeriv 2 g yseed-iteratedDeriv 2 hq yseed| ≤ U ∧
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      D/(pseed.2:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_original_seed_bounds_all_positive_slopes (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ} {k : Fin 17}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hS : 32*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hl : 0 < l) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let U := Ccurv*R^4/(N*d^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈finiteBoundaryCell Z l w k) →
+    (∀ j∈S, β j∈finiteBoundaryCell Z l w k) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/(16*(Blabels:ℝ)) ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_positive_interval_family_long_block S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (k:=k) (F:=F) (A:=A) (W:=W) (x:=x) hS hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hS : 48+544*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hl : 0 < l) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S₀ ∧ (S₀.card:ℝ)/(16*(Blabels:ℝ)) ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_positive_interval_selected_cell_long_block S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hS hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hS : 48+544*(5+108*(⌊Real.logb 2 (w/l)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hl : 0 < l) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2))
+    (hc : Mat 2 ≠ 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 5+108*(⌊Real.logb 2 (w/l)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Ccount := (512*(Blabels:ℝ)*Cphys/κ^2)*
+      (Γ^2*(Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)+
+        Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    (S.card:ℝ) ≤ 48+544*(Blabels:ℝ)+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_positive_interval_selected_cell_family_count S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hS hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hl hBcut hLref hrefWindow hwideL hwideU hrefNear hc hlarge
+
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ U l w x₀ ac bc D a b : ℝ} {k : Fin 17}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (ha : 0 < a) (hband : ∀ i∈S, x i∈Icc a b) (hD : D ≤ 1/2)
+    (hheight : U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2) :
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, x i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (x i)))*x i+
+      bc-round (bc-φ (x i)+x i*deriv φ (x i))-φ (x i)| ≤ D*x i) →
+    (S.image (fun i => (round (ac-deriv φ (x i)),
+      round (bc-φ (x i)+x i*deriv φ (x i))))).card ≤ 5+108*(⌊Real.logb 2 (b/a)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_positive_subfamily_coefficient_color_count (ι:=ι) S x (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (U:=U) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (a:=a) (b:=b) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ ha hband hD hheight
+
+example
+    {ι : Type*} (S : Finset ι) (p : ι → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D P₁ P₂ : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hP₂ : 0 < P₂) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hp : ∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2)
+    (hheight : ∀ i∈S, ((p i).1:ℝ) ≤ P₁ ∧ ((p i).2:ℝ) ≤ P₂) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤ 5+108*(⌊Real.logb 2 (P₁*P₂)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_integer_height_source_cutoff_coefficient_count (ι:=ι) S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (P₁:=P₁) (P₂:=P₂) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hP₂ hD₀ hD hp hheight
+
+example
+    (q : ℚ) (Q : ℕ) (e r v s : ℤ)
+    {σ δ T M A W x : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hσ : 0 ≤ σ) (hF : Expdb.IsApproximateModelPhaseFunction F σ P δ)
+    (hP : 1 ≤ P) (hT : 0 < T) (hM : 0 < M)
+    (hA : M ≤ A) (hW : A+W ≤ 2*M) (hx : x∈Ioo 0 W)
+    (hden : q.den ≤ Q)
+    (hlevel : iteratedDeriv 2 (heathBrownPhysicalPhase F T M A 1) x/2=(q:ℝ)) :
+    let V := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let p : ℤ × ℤ := (v*(q.den:ℤ)-s*q.num,r*q.num-e*(q.den:ℤ))
+    |((p.1):ℝ)| ≤ (|(v:ℝ)|+|(s:ℝ)| *V)*(Q:ℝ) ∧
+      |((p.2):ℝ)| ≤ (|(r:ℝ)| *V+|(e:ℝ)|)*(Q:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_original_seed_coordinate_heights q Q e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (x:=x) (P:=P) (F:=F) hσ hF hP hT hM hA hW hx hden hlevel
+
+example
+    {ι : Type*} (S : Finset ι) (rat : ι → ℚ) (Q : ℕ) (e r v s : ℤ)
+    {σ δ T M A W μ ν μ₁ ν₁ r₁ s₁ C J N R d Bcut l w y₀ ac bc D : ℝ}
+    {P : ℕ} {F : ℝ → ℝ} {x : ι → ℝ} {k : Fin 17}
+    (hσ : 0 ≤ σ) (hF : Expdb.IsApproximateModelPhaseFunction F σ P δ)
+    (hP : 1 ≤ P) (hT : 0 < T) (hM : 0 < M)
+    (hA : M ≤ A) (hW : A+W ≤ 2*M) (hx : ∀ i∈S, x i∈Ioo 0 W)
+    (hQ : ∀ i∈S, (rat i).den ≤ Q)
+    (hlevel : ∀ i∈S,
+      iteratedDeriv 2 (heathBrownPhysicalPhase F T M A 1) (x i)/2=(rat i:ℝ))
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ (r:ℝ)*z+s ∧ (r:ℝ)*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |(r:ℝ)| *N^2/(Bcut*R^2))
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) :
+    let V := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *V)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *V+|(e:ℝ)|)*(Q:ℝ)
+    let p : ι → ℤ × ℤ := fun i =>
+      (v*((rat i).den:ℤ)-s*(rat i).num,r*(rat i).num-e*((rat i).den:ℤ))
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, 0 < (p i).1 ∧ 0 < (p i).2) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤
+      5+108*(⌊Real.logb 2 (P₁*P₂)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_integer_height_source_coefficient_count (ι:=ι) S rat Q e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (μ:=μ) (ν:=ν) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (D:=D) (P:=P) (F:=F) (x:=x) (k:=k) hσ hF hP hT hM hA hW hx hQ hlevel hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hD₀ hD
+
+example
+    (S : Finset ℝ) {δ : ℝ} {m n u v : ℤ}
+    (hδ : 0 < δ) (hn : 0 < n) (hv : 0 < v)
+    (hm : (m:ℝ)/n∈S) (hu : (u:ℝ)/v∈S)
+    (hdet : |m*v-u*n|=1)
+    (hsep : ∀ x∈S, ∀ y∈S, x ≠ y → δ/4 < |x-y|) :
+    (n:ℝ)*(v:ℝ) < 4/δ ∧ (n:ℝ) < 4/δ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.separated_reference_parent_denominator_bound S (δ:=δ) (m:=m) (n:=n) (u:=u) (v:=v) hδ hn hv hm hu hdet hsep
+
+example
+    (S : Finset ℝ) {H : ℤ} {δ : ℝ}
+    (hH : 1 ≤ H) (hδ : 0 < δ)
+    (hseed : ∀ q : ℚ, (q.den:ℤ) ≤ H → (q:ℝ)∈Icc (0:ℝ) 1 → (q:ℝ)∈S)
+    (hsep : ∀ x∈S, ∀ y∈S, x ≠ y → δ/4 < |x-y|) :
+    (H:ℝ) < 4/δ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.separated_unit_reference_order_bound S (H:=H) (δ:=δ) hH hδ hseed hsep
+
+example {δ : ℝ}
+    (hδ : 0 < δ) (hδmax : δ ≤ 1) :
+    ∃ H : ℤ, 2 ≤ H ∧ (H:ℝ)<4/δ ∧ ∀ L U : ℤ, L ≤ U →
+      ∃ T : Finset ℝ,
+        (∀ q : ℚ, (q.den:ℤ) ≤ H →
+          (q:ℝ) ∈ Icc (L:ℝ) ((U:ℝ)+1) → (q:ℝ) ∈ T) ∧
+        (∀ z ∈ T, z ∈ Icc (L:ℝ) ((U:ℝ)+1)) ∧
+        (∀ z ∈ T,
+          (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ H) ∨
+          (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+            1 ≤ δ*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ H ∧
+            (u:ℝ)/v ∈ Icc (L:ℝ) ((U:ℝ)+1) ∧ |m*v-u*n|=1)) ∧
+        (∀ x ∈ T, ∀ y ∈ T, x ≠ y → δ/4 < |x-y|) ∧
+        (∀ x ∈ Icc (L:ℝ) ((U:ℝ)+1), ∃ y ∈ T, |x-y| ≤ 7*δ/4) ∧
+        (∀ x ∈ T, ∀ y ∈ T, x < y →
+          (∀ z ∈ T, ¬ (x < z ∧ z < y)) →
+          δ/4 < y-x ∧ y-x ≤ 7*δ/2 ∧
+          ∃ a b c d : ℤ, x=(a:ℝ)/b ∧ y=(c:ℝ)/d ∧
+            IsCoprime a b ∧ IsCoprime c d ∧ 0 < b ∧ 0 < d ∧
+            1 ≤ δ*((max b d:ℤ):ℝ)^2) ∧
+        ∀ z∈T, ∃ a b : ℤ, z=(a:ℝ)/b ∧ IsCoprime a b ∧ 0 < b ∧
+          (b:ℝ)<4/δ ∧ |(a:ℝ)| ≤ max |(L:ℝ)| |(U:ℝ)+1| *(4/δ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exists_source_interval_reference_system_bounded (δ:=δ) hδ hδmax
+
+example
+    (F : ℝ → ℝ) {σ c J η T M N R U : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hU : 0 < U) (hUmax : U ≤ R^2) (hphase : T*N*R^2=M^3) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let curvatureScale := 3*J*T/(2*σ*M^2)
+    ∃ H : ℤ, 2 ≤ H ∧ (H:ℝ)<4*R^2/U ∧ ∃ S : Finset ℝ,
+      (∀ q : ℚ, (q.den:ℤ) ≤ H → |(q:ℝ)| ≤ curvatureScale → (q:ℝ) ∈ S) ∧
+      (∀ a ∈ S, ∀ b ∈ S, ∀ q : ℚ, (q.den:ℤ) ≤ H →
+        (q:ℝ) ∈ Icc a b → (q:ℝ) ∈ S) ∧
+      (∃ l ∈ S, ∃ u ∈ S, l ≤ -curvatureScale ∧ curvatureScale ≤ u) ∧
+      (∀ z ∈ S, |z| ≤ curvatureScale+1) ∧
+      (∀ z∈S, ∃ a b : ℤ, z=(a:ℝ)/b ∧ IsCoprime a b ∧ 0 < b ∧
+        (b:ℝ)<4*R^2/U ∧ |(a:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), |h y x| ≤ curvatureScale) ∧
+      (∀ z ∈ S,
+        (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ H) ∨
+        (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+          R^2 ≤ U*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ H ∧ (u:ℝ)/v ∈ S ∧ |m*v-u*n|=1)) ∧
+      (∀ x ∈ S, ∀ z ∈ S, x ≠ z → U/(4*R^2) < |x-z|) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M),
+        ∃ q ∈ S, |h y x-q| ≤ 7*U/(4*R^2)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ q ∈ S,
+        q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ x ∈ Icc M (2*M), h y x=q) ∧
+      (∀ a ∈ S, ∀ b ∈ S, a < b →
+        (∀ z ∈ S, ¬ (a < z ∧ z < b)) →
+        U/(4*R^2) < b-a ∧ b-a ≤ 7*U/(2*R^2) ∧
+        (∃ m n u v : ℤ, a=(m:ℝ)/n ∧ b=(u:ℝ)/v ∧
+          IsCoprime m n ∧ IsCoprime u v ∧ 0 < n ∧ 0 < v ∧
+          R^2 ≤ U*((max n v:ℤ):ℝ)^2) ∧
+        (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), ∀ z ∈ Icc M (2*M),
+          h y x=a → h y z=b → |z-x| ≤ (14*σ/c)*U*N)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_constructed_reference_system_bounded F (σ:=σ) (c:=c) (J:=J) (η:=η) (T:=T) (M:=M) (N:=N) (R:=R) (U:=U) hσ hc hJ hη hηmax hf hbound htests hnegative hT hM hN hR hU hUmax hphase
+
+
+example
+    {f : ℝ → ℝ} {l w x y a ac bc D : ℝ} {b : ℤ}
+    (ha : 0 < a) (hside : (a ≤ l ∧ w ≤ 2*a) ∨ (-2*a ≤ l ∧ w ≤ -a))
+    (hD : D ≤ 1/2)
+    (hshape : ConvexOn ℝ (Icc l w) f ∨ ConcaveOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : x∈Icc l w) (hy : y∈Icc l w)
+    (hresx : |(ac-round (ac-deriv f x))*x+bc-b-f x| ≤ D*|x|)
+    (hresy : |(ac-round (ac-deriv f y))*y+bc-b-f y| ≤ D*|y|) :
+    |round (ac-deriv f y)-round (ac-deriv f x)| ≤ (5:ℤ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.signed_dyadic_first_coefficient_spread (f:=f) (l:=l) (w:=w) (x:=x) (y:=y) (a:=a) (ac:=ac) (bc:=bc) (D:=D) (b:=b) ha hside hD hshape hder hx hy hresx hresy
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {f : ℝ → ℝ} {l w a₀ ac bc D b₀ : ℝ}
+    (ha₀ : 0 < a₀)
+    (hside : (a₀ ≤ l ∧ w ≤ 2*a₀) ∨ (-2*a₀ ≤ l ∧ w ≤ -a₀)) (hD : D ≤ 1/2)
+    (hshape : ConvexOn ℝ (Icc l w) f ∨ ConcaveOn ℝ (Icc l w) f)
+    (hder : ∀ z∈Icc l w, DifferentiableAt ℝ f z)
+    (hx : ∀ i∈S, x i∈Icc l w)
+    (hweighted : ∀ i∈S, |bc-f (x i)+x i*deriv f (x i)-b₀| ≤ 1/2)
+    (hres : ∀ i∈S,
+      |(ac-round (ac-deriv f (x i)))*x i+
+        bc-round (bc-f (x i)+x i*deriv f (x i))-f (x i)| ≤ D*|x i|) :
+    (S.image (fun i => (round (ac-deriv f (x i)),
+      round (bc-f (x i)+x i*deriv f (x i))))).card ≤ 18 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.signed_dyadic_curvature_branch_coefficient_pair_count (ι:=ι) S x (f:=f) (l:=l) (w:=w) (a₀:=a₀) (ac:=ac) (bc:=bc) (D:=D) (b₀:=b₀) ha₀ hside hD hshape hder hx hweighted hres
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ l w a₀ ac bc D b₀ : ℝ} {k : ℕ}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (ha₀ : 0 < a₀)
+    (hside : (a₀ ≤ l ∧ w ≤ 2*a₀) ∨ (-2*a₀ ≤ l ∧ w ≤ -a₀)) (hD : D ≤ 1/2) :
+    let φ := fun z => rationalPhase μ r s μ₁ r₁ s₁ z-
+      quarticPhase μ ν r s μ₁ ν₁ r₁ s₁ z
+    let Z := (quarticCurvatureNumerator μ ν r s μ₁ ν₁ r₁ s₁).roots.toFinset
+    (∀ i∈S, x i∈finiteBoundaryCell Z l w k) →
+    (∀ i∈S, |bc-φ (x i)+x i*deriv φ (x i)-b₀| ≤ 1/2) →
+    (∀ i∈S, |(ac-round (ac-deriv φ (x i)))*x i+
+      bc-round (bc-φ (x i)+x i*deriv φ (x i))-φ (x i)| ≤ D*|x i|) →
+    (S.image (fun i => (round (ac-deriv φ (x i)),
+      round (bc-φ (x i)+x i*deriv φ (x i))))).card ≤ 18 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_signed_dyadic_root_cell_coefficient_count (ι:=ι) S x (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (l:=l) (w:=w) (a₀:=a₀) (ac:=ac) (bc:=bc) (D:=D) (b₀:=b₀) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ ha₀ hside hD
+
+example
+    {ι : Type*} (S : Finset ι) (x : ι → ℝ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ U l w x₀ ac bc D a b : ℝ} {k : Fin 17}
+    (hμ : μ ≠ 0) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hden : ∀ z∈Icc l w, r*z+s ≠ 0)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (ha : 0 < a) (hband : ∀ i∈S, |x i|∈Icc a b) (hD : D ≤ 1/2)
+    (hheight : U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2) :
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, x i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (x i)))*x i+
+      bc-round (bc-φ (x i)+x i*deriv φ (x i))-φ (x i)| ≤ D*|x i|) →
+    (S.image (fun i => (round (ac-deriv φ (x i)),
+      round (bc-φ (x i)+x i*deriv φ (x i))))).card ≤ 5+216*(⌊Real.logb 2 (b/a)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_signed_subfamily_coefficient_color_count (ι:=ι) S x (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (U:=U) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (a:=a) (b:=b) (k:=k) hμ hμ₁ hr hr₁ hden hden₁ ha hband hD hheight
+
+example
+    {ι : Type*} (S : Finset ι) (p : ι → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D P₁ P₂ : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hP₂ : 0 < P₂) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hp : ∀ i∈S, 0 < (p i).2)
+    (hheight : ∀ i∈S, |((p i).1:ℝ)| ≤ P₁ ∧ ((p i).2:ℝ) ≤ P₂) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤ 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_signed_integer_height_source_cutoff_coefficient_count (ι:=ι) S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (P₁:=P₁) (P₂:=P₂) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hP₂ hD₀ hD hp hheight
+
+example
+    {ι : Type*} (S : Finset ι) (rat : ι → ℚ) (Q : ℕ) (e r v s : ℤ)
+    {σ δ T M A W μ ν μ₁ ν₁ r₁ s₁ C J N R d Bcut l w y₀ ac bc D : ℝ}
+    {P : ℕ} {F : ℝ → ℝ} {x : ι → ℝ} {k : Fin 17}
+    (hσ : 0 ≤ σ) (hF : Expdb.IsApproximateModelPhaseFunction F σ P δ)
+    (hP : 1 ≤ P) (hT : 0 < T) (hM : 0 < M)
+    (hA : M ≤ A) (hW : A+W ≤ 2*M) (hx : ∀ i∈S, x i∈Ioo 0 W)
+    (hQ : ∀ i∈S, (rat i).den ≤ Q)
+    (hlevel : ∀ i∈S,
+      iteratedDeriv 2 (heathBrownPhysicalPhase F T M A 1) (x i)/2=(rat i:ℝ))
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ (r:ℝ)*z+s ∧ (r:ℝ)*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |(r:ℝ)| *N^2/(Bcut*R^2))
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) :
+    let V := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *V)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *V+|(e:ℝ)|)*(Q:ℝ)
+    let p : ι → ℤ × ℤ := fun i =>
+      (v*((rat i).den:ℤ)-s*(rat i).num,r*(rat i).num-e*((rat i).den:ℤ))
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, 0 < (p i).2) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤
+      6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_integer_height_source_coefficient_count (ι:=ι) S rat Q e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (μ:=μ) (ν:=ν) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (D:=D) (P:=P) (F:=F) (x:=x) (k:=k) hσ hF hP hT hM hA hW hx hQ hlevel hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hD₀ hD
+
+example
+    {σ J Jv T M N R Q U V e r v s : ℝ}
+    (hσ : 0 < σ) (hJ : 0 ≤ J) (hJv : 0 ≤ Jv)
+    (hT : 0 < T) (hM : 0 < M) (hR : 1 ≤ R)
+    (hRQ : R ≤ Q) (hQN : Q ≤ N) (hNM : N^2 ≤ M)
+    (hU : 1 ≤ U) (hscale : T*N*R^2=M^3)
+    (hV₀ : 0 ≤ V) (hV : V ≤ Jv*T/(2*M^2))
+    (hr : |r| ≤ 4*R^2/U) (hs : |s| ≤ 4*R^2/U)
+    (he : |e| ≤ (3*J*T/(2*σ*M^2)+1)*(4*R^2/U))
+    (hv : |v| ≤ (3*J*T/(2*σ*M^2)+1)*(4*R^2/U)) :
+    let C := 1+4*(3*J/(2*σ)+1+Jv/2)
+    1 ≤ T ∧ 1 ≤ C ∧
+      1+(|v|+|s| *V)*Q ≤ C*T^3 ∧
+      1+(|r| *V+|e|)*Q ≤ C*T^3 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.source_reference_seed_height_polynomial (σ:=σ) (J:=J) (Jv:=Jv) (T:=T) (M:=M) (N:=N) (R:=R) (Q:=Q) (U:=U) (V:=V) (e:=e) (r:=r) (v:=v) (s:=s) hσ hJ hJv hT hM hR hRQ hQN hNM hU hscale hV₀ hV hr hs he hv
+
+example
+    {C ε : ℝ} (hC : 1 ≤ C) (m : ℕ) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ P₁ P₂ : ℝ,
+      1 ≤ P₁ → 1 ≤ P₂ → P₁ ≤ C*T^3 → P₂ ≤ C*T^3 →
+      (((6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1):ℕ):ℝ)^m) ≤ T^ε :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_signed_height_coefficient_cost (C:=C) (ε:=ε) hC m hε
+
+example
+    {ι : Type*} {σ Jref ε : ℝ}
+    (hσ : 0 < σ) (hJref : 0 ≤ Jref) (m : ℕ) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀
+    (S : Finset ι) (rat : ι → ℚ) (Q : ℕ) (e r v s : ℤ)
+    {δ M A W μ ν μ₁ ν₁ r₁ s₁ C J N R d Bcut l w y₀ ac bc D : ℝ}
+    {P : ℕ} {F : ℝ → ℝ} {x : ι → ℝ} {k : Fin 17}
+    (_ : Expdb.IsApproximateModelPhaseFunction F σ P δ)
+    (_ : 1 ≤ P) (_ : 0 < T) (_ : 0 < M)
+    (_ : M ≤ A) (_ : A+W ≤ 2*M) (_ : ∀ i∈S, x i∈Ioo 0 W)
+    (_ : ∀ i∈S, (rat i).den ≤ Q)
+    (_ : ∀ i∈S,
+      iteratedDeriv 2 (heathBrownPhysicalPhase F T M A 1) (x i)/2=(rat i:ℝ))
+    (_ : 0 < μ) (_ : μ₁ ≠ 0) (_ : r ≠ 0) (_ : r₁ ≠ 0)
+    (_ : 0 ≤ C) (_ : 0 < J) (_ : 0 < N) (_ : 1 ≤ R) (_ : 0 < d)
+    (_ : ∀ z∈Icc l w, d ≤ (r:ℝ)*z+s ∧ (r:ℝ)*z+s ≤ 2*d)
+    (_ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (_ : |(r:ℝ)| * max |l| |w| ≤ 2*d)
+    (_ : μ ≤ J/(6*N*R^2))
+    (_ : 0 < Bcut) (_ : 5*C*J ≤ Bcut)
+    (_ : |minorArcCoordinate μ r s l| ≤ |(r:ℝ)| *N^2/(Bcut*R^2))
+    (_ : 0 ≤ D) (_ : D ≤ 1/2)
+    (_ : δ ≤ 1) {Uref : ℝ}
+    (_ : R ≤ (Q:ℝ)) (_ : (Q:ℝ) ≤ N) (_ : N^2 ≤ M)
+    (_ : 1 ≤ Uref) (_ : T*N*R^2=M^3)
+    (_ : |(r:ℝ)| ≤ 4*R^2/Uref) (_ : |(s:ℝ)| ≤ 4*R^2/Uref)
+    (_ : |(e:ℝ)| ≤ (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/Uref))
+    (_ : |(v:ℝ)| ≤ (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/Uref)),
+    let p : ι → ℤ × ℤ := fun i =>
+      (v*((rat i).den:ℤ)-s*(rat i).num,r*(rat i).num-e*((rat i).den:ℤ))
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, 0 < (p i).2) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (((S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card:ℝ)^m) ≤ T^ε :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_physicalModelPhase_bounded_reference_coefficient_count (ι:=ι) (σ:=σ) (Jref:=Jref) (ε:=ε) hσ hJref m hε
+
+example
+    (F : ℝ → ℝ) {σ c J η ε T M N R Q B : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hRQ : R ≤ Q) (hQN : Q ≤ N) (hNR : N ≤ R^2) (hNM : N^2 ≤ M)
+    (hB : 1 ≤ B) (hBε : 5 < ε*B) (hlarge : 2*B ≤ (N/Q)^((2:ℝ)/3))
+    (hphase : T*N*R^2=M^3) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let curvatureScale := 3*J*T/(2*σ*M^2)
+    ∃ U : ℕ, 1 ≤ U ∧
+      (N/Q)^((2:ℝ)/3)/(2*B) ≤ (U:ℝ) ∧
+      (U:ℝ) ≤ (N/Q)^((2:ℝ)/3)/B ∧
+      (U:ℝ) ≤ R^2 ∧ B*(U:ℝ)*Q ≤ N ∧ B^2*(U:ℝ)^3*R^2 ≤ N^2 ∧
+      7*(U:ℝ)/(2*R^2)+Real.sqrt (U:ℝ)/R < ε*T/M^2 ∧
+    ∃ H : ℤ, 2 ≤ H ∧ (H:ℝ)<4*R^2/(U:ℝ) ∧ ∃ S : Finset ℝ,
+      (∀ q : ℚ, (q.den:ℤ) ≤ H → |(q:ℝ)| ≤ curvatureScale → (q:ℝ) ∈ S) ∧
+      (∀ a ∈ S, ∀ b ∈ S, ∀ q : ℚ, (q.den:ℤ) ≤ H →
+        (q:ℝ) ∈ Icc a b → (q:ℝ) ∈ S) ∧
+      (∃ l ∈ S, ∃ u ∈ S, l ≤ -curvatureScale ∧ curvatureScale ≤ u) ∧
+      (∀ z ∈ S, |z| ≤ curvatureScale+1) ∧
+      (∀ z∈S, ∃ a b : ℤ, z=(a:ℝ)/b ∧ IsCoprime a b ∧ 0 < b ∧
+        (b:ℝ)<4*R^2/(U:ℝ) ∧ |(a:ℝ)| ≤ (curvatureScale+1)*(4*R^2/(U:ℝ))) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), |h y x| ≤ curvatureScale) ∧
+      (∀ z ∈ S,
+        (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ H) ∨
+        (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+          R^2 ≤ (U:ℝ)*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ H ∧ (u:ℝ)/v ∈ S ∧ |m*v-u*n|=1)) ∧
+      (∀ x ∈ S, ∀ z ∈ S, x ≠ z → (U:ℝ)/(4*R^2) < |x-z|) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M),
+        ∃ q ∈ S, |h y x-q| ≤ 7*(U:ℝ)/(4*R^2)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ q ∈ S,
+        q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ x ∈ Icc M (2*M), h y x=q) ∧
+      (∀ a ∈ S, ∀ b ∈ S, a < b →
+        (∀ z ∈ S, ¬ (a < z ∧ z < b)) →
+        (U:ℝ)/(4*R^2) < b-a ∧ b-a ≤ 7*(U:ℝ)/(2*R^2) ∧
+        (∃ m n u v : ℤ, a=(m:ℝ)/n ∧ b=(u:ℝ)/v ∧
+          IsCoprime m n ∧ IsCoprime u v ∧ 0 < n ∧ 0 < v ∧
+          R^2 ≤ (U:ℝ)*((max n v:ℤ):ℝ)^2) ∧
+        (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), ∀ z ∈ Icc M (2*M),
+          h y x=a → h y z=b → |z-x| ≤ (14*σ/c)*(U:ℝ)*N)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_chosen_block_reference_system_bounded F (σ:=σ) (c:=c) (J:=J) (η:=η) (ε:=ε) (T:=T) (M:=M) (N:=N) (R:=R) (Q:=Q) (B:=B) hσ hc hJ hη hηmax hf hbound htests hnegative hT hM hN hR hRQ hQN hNR hNM hB hBε hlarge hphase
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → ℝ)
+    {σ δ T M A W step base μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut D l w y₀ ac bc e v P₁ P₂ : ℝ}
+    {F : ℝ → ℝ} {k : Fin 17}
+    (hS : 32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hstep : 0 < step) (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0)
+    (hr : r ≠ 0) (hr₁ : r₁ ≠ 0) (hdet : v*r-e*s=1)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hcoord : |r| * max |l| |w| ≤ 2*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : 5*C*J ≤ Bcut)
+    (hGcut : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hP₂ : 0 < P₂) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hheight : ∀ i∈S, |((p i).1:ℝ)| ≤ P₁ ∧ ((p i).2:ℝ) ≤ P₂)
+    (hpt : ∀ i∈S, 0 < (p i).2)
+    (hx : ∀ i∈S, x i∈Ioo 0 W)
+    (hwindow : ∀ i∈S, x i∈Icc (base+step*(i:ℝ)) (base+step*((i:ℝ)+1))) :
+    let U := C*R^4/(N*d^3)
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let f := heathBrownPhysicalPhase F T M A 1
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, iteratedDeriv 2 f (x i)/2=
+      (e*(p i).1+v*(p i).2)/(r*(p i).1+s*(p i).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      StrictAnti (fun i => y (j i)) ∧
+      (∀ i : Fin 7, step*(S.card:ℝ)/(16*(Blabels:ℝ)) ≤ x (j i.succ)-x (j i.castSucc)) ∧
+      (∀ i : Fin 7, modelPhaseThirdLower σ*T/(6*μ*M^3)*(step*(S.card:ℝ)/(16*(Blabels:ℝ))) ≤
+        minorArcCoordinate μ r s (y (j i.succ))-
+        minorArcCoordinate μ r s (y (j i.castSucc))) ∧
+      (∀ i : Fin 7, (S.card:ℝ)/(16*(Blabels:ℝ)) ≤
+        ((S.filter (fun n => j i.castSucc<n ∧ n<j i.succ)).card:ℝ)) ∧
+      AntitoneOn y (S:Set ℕ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_height_common_coefficient_samples_with_mass S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (step:=step) (base:=base) (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (D:=D) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (e:=e) (v:=v) (P₁:=P₁) (P₂:=P₂) (F:=F) (k:=k) hS hσ hδ hF hT hM hA hW hstep hμ hμ₁ hr hr₁ hdet hden hden₁ hC hJ hN hR hd hcoord hμupper hBcut hBsize hGcut hP₂ hD₀ hD hheight hpt hx hwindow
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ)
+    {σ δ T M N R base d Cres Q D nSpan Ccurv Bcut l w y₀ ac bc P₁ P₂ : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hS : 32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hCres : 0 ≤ Cres) (hRM : R ≤ M)
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) (hDupper : D ≤ Cres*Q/N)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hheight : ∀ j∈S, |((p j).1:ℝ)| ≤ P₁ ∧ ((p j).2:ℝ) ≤ P₂)
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hQband : ∀ j∈S, Q ≤ 2*(r 0*(p j).1+s 0*(p j).2))
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hP₂ : 0 < P₂)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let K := 4*Cres/κ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(16*(Blabels:ℝ)*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      D/(p j).2) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    |r 0*s 1-s 0*r 1| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_height_quartic_determinant S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (Cres:=Cres) (Q:=Q) (D:=D) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (P₁:=P₁) (P₂:=P₂) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hS hσ hδ hF hT hM hN hR hd hCres hRM hD₀ hD hDupper hscale hA hW hxref hheight hpt hQband hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hP₂ hCcurv hBcut hBsize
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ)
+    {σ δ T M N R base d Cres Q D nSpan Ccurv Bcut l w y₀ ac bc P₁ P₂ : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hS : 32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hCres : 0 ≤ Cres) (hRM : R ≤ M)
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) (hDupper : D ≤ Cres*Q/N)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hheight : ∀ j∈S, |((p j).1:ℝ)| ≤ P₁ ∧ ((p j).2:ℝ) ≤ P₂)
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hQband : ∀ j∈S, Q ≤ 2*(r 0*(p j).1+s 0*(p j).2))
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hP₂ : 0 < P₂)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut) :
+    let U := Ccurv*R^4/(N*d^3)
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let K := 4*Cres/κ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(16*(Blabels:ℝ)*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      D/(p j).2) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/(16*(Blabels:ℝ)) ≤ (E.card:ℝ) ∧
+      ∀ j∈E,
+        |(iteratedDeriv 3 (f 1) (round (x j 1))/6)*(r 1*y j+s 1)^3/
+          ((iteratedDeriv 3 (f 0) (round (x j 0))/6)*(r 0*y j+s 0)^3)-1| ≤
+          (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_height_quartic_third_mass S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (Cres:=Cres) (Q:=Q) (D:=D) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (P₁:=P₁) (P₂:=P₂) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hS hσ hδ hF hT hM hN hR hd hCres hRM hD₀ hD hDupper hscale hA hW hxref hheight hpt hQband hx hwindow hdisplacement hspan hsourcecube hr hdet hden hcoord hP₂ hCcurv hBcut hBsize
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ} {k : Fin 17}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let U := Ccurv*R^4/(N*d^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈finiteBoundaryCell Z l w k) →
+    (∀ j∈S, β j∈finiteBoundaryCell Z l w k) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S ∧ (S.card:ℝ)/(16*(Blabels:ℝ)) ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_height_family_long_block S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (k:=k) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    48+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    ∃ E : Finset ℕ, E ⊆ S₀ ∧ (S₀.card:ℝ)/(16*(Blabels:ℝ)) ≤ (E.card:ℝ) ∧
+      ∀ j∈E, |mu j 1*(q j 1:ℝ)^3/(mu j 0*(q j 0:ℝ)^3)-1| ≤
+        (Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^2/(L^2*N^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_height_selected_cell_long_block S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcecube : nSpan^3 ≤ M*R^2)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2))
+    (hc : Mat 2 ≠ 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    48+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Ccount := (512*(Blabels:ℝ)*Cphys/κ^2)*
+      (Γ^2*(Γ^2*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)+
+        Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)
+    (|(Mat 2:ℝ)| ≤ (64*Γ/(3*κ))*
+      ((1+Γ^2)*C+2*Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4/(L^3*N^2)) ∧
+    (S.card:ℝ) ≤ 48+544*(Blabels:ℝ)+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_height_selected_cell_family_count S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcecube hden hinv hchart hr hd hcoord hBcut hLref hrefWindow hwideL hwideU hrefNear hc hlarge
+
+example
+    (x y : Fin 2 → ℝ) (a b c d : ℤ)
+    {σ δ T M Δ : ℝ} {τ A W : Fin 2 → ℝ} {F : Fin 2 → ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1) (hδ0 : 0 ≤ δ)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 3 δ)
+    (hT : 0 < T) (hτ : ∀ i, T ≤ τ i ∧ τ i ≤ 2*T) (hM : 0 < M)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hΔ : 0 ≤ Δ) (hdet : a*d-b*c=1) (hc : c ≠ 0)
+    (hscale : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤ |(c:ℝ)| *(modelPhaseThirdLower σ)^2*T)
+    (hx : ∀ p, x p ∈ Set.Ioo (1/2:ℝ) (W 0-1/2))
+    (hy : ∀ p, y p ∈ Set.Ioo (1/2:ℝ) (W 1-1/2))
+    :
+    let f := fun i => heathBrownPhysicalPhase (F i) (τ i) M (A i) 1
+    let μ := fun i z => iteratedDeriv 3 (f i) (round z)/6
+    let t := fun p : Fin 2 => (c:ℝ)*(iteratedDeriv 2 (f 0) (x p)/2)+d
+    iteratedDeriv 2 (f 0) (x 0)/2 ≤ iteratedDeriv 2 (f 0) (x 1)/2 →
+    (∀ p, ((a:ℝ)*(iteratedDeriv 2 (f 0) (x p)/2)+b)/t p=
+      iteratedDeriv 2 (f 1) (y p)/2) →
+    (∀ p, (1:ℝ)/2 ≤ t p ∧ t p ≤ 2) →
+    (∀ p, |μ 1 (y p)*(t p)^3/μ 0 (x p)-1| ≤ Δ) →
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let η := (modelPhaseJetCoefficient σ 3+δ)/(2*κ*M)
+    iteratedDeriv 2 (f 0) (x 1)/2-iteratedDeriv 2 (f 0) (x 0)/2 ≤
+      16*(σ*(σ+1)+1)*(Γ^2*Δ+2*Γ*η)/(κ*|(c:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_paired_large_entry_curvature_diameter x y a b c d (σ:=σ) (δ:=δ) (T:=T) (M:=M) (Δ:=Δ) (τ:=τ) (A:=A) (W:=W) (F:=F) hσ hδ hδ0 hF hT hτ hM hA hW hΔ hdet hc hscale hx hy
+
+example
+    {σ δ T M N R L d K α β : ℝ} (x : Fin 8 → ℝ) (Mat : Fin 4 → ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ e r v s : Fin 2 → ℝ}
+    {x₁ : ℝ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hL : 0 < L)
+    (hNL : (L*N)^2 ≤ M*R) (hd : 0 < d) (hK : 0 ≤ K)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hx₁ : ∀ y ∈ Set.Icc (x 0) (x 7), ∀ i,
+      x₁ y i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ y ∈ Set.Icc (x 0) (x 7), ∀ i, d ≤ r i*y+s i)
+    (hdenUpper : ∀ y ∈ Set.Icc (x 0) (x 7), ∀ i, r i*y+s i ≤ 2*d)
+    (hmono : StrictMono x) (hscale : T*N*R^2=M^3)
+    (hMat : Mat 0*Mat 3-Mat 1*Mat 2=1) (hc : Mat 2 ≠ 0)
+    (htransport : e 1=(Mat 0:ℝ)*e 0+Mat 1*r 0 ∧
+      v 1=(Mat 0:ℝ)*v 0+Mat 1*s 0 ∧
+      r 1=(Mat 2:ℝ)*e 0+Mat 3*r 0 ∧
+      s 1=(Mat 2:ℝ)*v 0+Mat 3*s 0)
+    (hlarge : 32*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤
+      |(Mat 2:ℝ)| *(modelPhaseThirdLower σ)^2*T) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let n := fun y i => (round (x₁ y i):ℝ)-(round (x₀ i):ℝ)
+    let μ := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (x₀ i))/24
+    let D := fun y i => r i*y+s i
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let H := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=e i/r i) →
+    (∀ y ∈ Set.Icc (x 0) (x 7), ∀ i,
+      iteratedDeriv 2 (f i) (x₁ y i)/2=(e i*y+v i)/D y i) →
+    (∀ y ∈ Set.Icc (x 0) (x 7), ∀ i, |n y i|^2 ≤ M*R) →
+    (∀ j : Fin 7, L*N ≤ |G (x j.succ)-G (x j.castSucc)|) →
+    (∀ j : Fin 8, |α*x j+β-g (x j)+H (x j)| ≤ K*R^2/|r 0*G (x j)|) →
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    κ^2*|(Mat 2:ℝ)| *L^3*N^2 ≤
+      128*(σ*(σ+1)+1)*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)*R^4 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_large_entry_quartic_long_block_constraint (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (L:=L) (d:=d) (K:=K) (α:=α) (β:=β) x Mat (F:=F) (A:=A) (W:=W) (x₀:=x₀) (e:=e) (r:=r) (v:=v) (s:=s) (x₁:=x₁) hσ hδ hF hT hM hN hR hL hNL hd hK hA hW hx₀ hx₁ hr hdet hden hdenUpper hmono hscale hMat hc htransport hlarge
+
+example
+    {σ δ T M N R L d K α β : ℝ} (x : Fin 8 → ℝ) (Mat : Fin 4 → ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ e r v s : Fin 2 → ℝ}
+    {x₁ : ℝ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hL : 0 < L)
+    (hNL : (L*N)^2 ≤ M*R) (hd : 0 < d) (hK : 0 ≤ K)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hx₁ : ∀ y ∈ Set.Icc (x 0) (x 7), ∀ i,
+      x₁ y i ∈ Set.Ioo (1/2:ℝ) (W i-1/2))
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ y ∈ Set.Icc (x 0) (x 7), ∀ i, d ≤ r i*y+s i)
+    (hdenUpper : ∀ y ∈ Set.Icc (x 0) (x 7), ∀ i, r i*y+s i ≤ 2*d)
+    (hmono : StrictMono x) (hscale : T*N*R^2=M^3)
+    (hMat : Mat 0*Mat 3-Mat 1*Mat 2=1)
+    (htransport : e 1=(Mat 0:ℝ)*e 0+Mat 1*r 0 ∧
+      v 1=(Mat 0:ℝ)*v 0+Mat 1*s 0 ∧
+      r 1=(Mat 2:ℝ)*e 0+Mat 3*r 0 ∧
+      s 1=(Mat 2:ℝ)*v 0+Mat 3*s 0)
+    :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let n := fun y i => (round (x₁ y i):ℝ)-(round (x₀ i):ℝ)
+    let μ := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (x₀ i))/24
+    let D := fun y i => r i*y+s i
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let H := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=e i/r i) →
+    (∀ y ∈ Set.Icc (x 0) (x 7), ∀ i,
+      iteratedDeriv 2 (f i) (x₁ y i)/2=(e i*y+v i)/D y i) →
+    (∀ y ∈ Set.Icc (x 0) (x 7), ∀ i, |n y i|^2 ≤ M*R) →
+    (∀ j : Fin 7, L*N ≤ |G (x j.succ)-G (x j.castSucc)|) →
+    (∀ j : Fin 8, |α*x j+β-g (x j)+H (x j)| ≤ K*R^2/|r 0*G (x j)|) →
+    let κ := modelPhaseThirdLower σ
+    let Γ := (σ*(σ+1)+1)/κ
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*(σ*(σ+1)+1)*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    |(Mat 2:ℝ)| ≤ Cfirst*R^4/(L^3*N^2)+Csecond*N*R^2/M :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_quartic_matrix_long_block_first_condition (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (L:=L) (d:=d) (K:=K) (α:=α) (β:=β) x Mat (F:=F) (A:=A) (W:=W) (x₀:=x₀) (e:=e) (r:=r) (v:=v) (s:=s) (x₁:=x₁) hσ hδ hF hT hM hN hR hL hNL hd hK hA hW hx₀ hx₁ hr hdet hden hdenUpper hmono hscale hMat htransport
+
+example
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ) (Mat : Fin 4 → ℤ)
+    {σ δ T M N R base d Cres Q D nSpan Ccurv Bcut l w y₀ ac bc P₁ P₂ : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hS : 32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hCres : 0 ≤ Cres)
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) (hDupper : D ≤ Cres*Q/N)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hheight : ∀ j∈S, |((p j).1:ℝ)| ≤ P₁ ∧ ((p j).2:ℝ) ≤ P₂)
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hQband : ∀ j∈S, Q ≤ 2*(r 0*(p j).1+s 0*(p j).2))
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hnsquare : nSpan^2 ≤ M*R)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ 2*d) (hP₂ : 0 < P₂)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : 5*Ccurv*(σ*(σ+1)+1) ≤ Bcut)
+    (hMat : Mat 0*Mat 3-Mat 1*Mat 2=1)
+    (htransport : e 1=(Mat 0:ℝ)*e 0+Mat 1*r 0 ∧
+      v 1=(Mat 0:ℝ)*v 0+Mat 1*s 0 ∧
+      r 1=(Mat 2:ℝ)*e 0+Mat 3*r 0 ∧
+      s 1=(Mat 2:ℝ)*v 0+Mat 3*s 0) :
+    let U := Ccurv*R^4/(N*d^3)
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let K := 4*Cres/κ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(16*(Blabels:ℝ)*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      D/(p j).2) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*(σ*(σ+1)+1)*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    |(Mat 2:ℝ)| ≤ Cfirst*R^4/(L^3*N^2)+Csecond*N*R^2/M :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_height_square_span_first_condition S p x Mat (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (Cres:=Cres) (Q:=Q) (D:=D) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (P₁:=P₁) (P₂:=P₂) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hS hσ hδ hF hT hM hN hR hd hCres hD₀ hD hDupper hscale hA hW hxref hheight hpt hQband hx hwindow hdisplacement hspan hnsquare hr hdet hden hcoord hP₂ hCcurv hBcut hBsize hMat htransport
+
+example
+    (U : ℕ) {M N R Q B : ℝ}
+    (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hRQ : R ≤ Q) (hB : 0 < B)
+    (hU : (U:ℝ) ≤ (N/Q)^((2:ℝ)/3)/B)
+    (hscale : N^10 ≤ M^3*R^7) :
+    (B*(U:ℝ)*N)^2 ≤ M*R :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.source_selected_reference_square_span_budget U (M:=M) (N:=N) (R:=R) (Q:=Q) (B:=B) hM hN hR hRQ hB hU hscale
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcesquare : nSpan^2 ≤ M*R)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    48+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    |(Mat 2:ℝ)| ≤ Cfirst*R^4/(L^3*N^2)+Csecond*N*R^2/M :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_height_square_span_selected_cell_first_condition S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcesquare hden hinv hchart hr hd hcoord hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d nSpan base l w Bcut Lref : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hsourcesquare : nSpan^2 ≤ M*R)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hLref : 0 < Lref) (hrefWindow : modelPhaseThirdLower σ*Lref*R^2 ≤ 24*N^2)
+    (hwideL : ∀ i, x jref i-Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+Lref*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hrefNear : |(e:ℝ)/r-(rat jref 0:ℝ)| ≤ modelPhaseThirdLower σ*Lref/(16*R^2)) :
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    48+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    ∀ Hspan : Fin 2 → ℝ,
+    (∀ j∈S, ∀ i, |x j i-xref i| ≤ Hspan i) →
+    (∀ i, 2*Hspan i+1 ≤ nSpan) →
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let G := minorArcCoordinate (μr 0) (rp 0) (sp 0)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    (∀ j∈S, ∀ i, (H+|x j i-xref i|+1)^2 ≤ M*R) →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    |G l| ≤ |(rp 0:ℝ)| *N^2/(Bcut*R^2) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      (S.card:ℝ) ≤ 48+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_height_square_span_selected_cell_family_count S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (nSpan:=nSpan) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (Lref:=Lref) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hsourcesquare hden hinv hchart hr hd hcoord hBcut hLref hrefWindow hwideL hwideU hrefNear
+
+example
+    {σ δ T M A W xref N R U B Bcut a b e r v s l : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hxref : xref ∈ Ioo (1/2:ℝ) (W-1/2))
+    (hN : 0 < N) (hR : 0 < R) (hU : 0 ≤ U)
+    (hB : 0 < B) (hBcut : 0 < Bcut)
+    (hscale : T*N*R^2=M^3)
+    (hmargin : 7*Bcut ≤ modelPhaseThirdLower σ*B)
+    (hr : r ≠ 0) (hchart : r*l+s ≠ 0) (hdet : v*r-e*s=1)
+    (hgap : b-a ≤ 7*U/(2*R^2))
+    (hden : R^2 ≤ r^2*U) (hwrap : B^2*U^3*R^2 ≤ N^2)
+    (hpoint : (e*l+v)/(r*l+s) ∈ Icc a b) :
+    let f := heathBrownPhysicalPhase F T M A 1
+    iteratedDeriv 2 f xref/2=e/r →
+    (iteratedDeriv 2 f xref/2=a ∨ iteratedDeriv 2 f xref/2=b) →
+    |minorArcCoordinate (iteratedDeriv 3 f (round xref)/6) r s l| ≤
+      |r| *N^2/(Bcut*R^2) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_reference_gap_minorArc_cutoff (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (xref:=xref) (N:=N) (R:=R) (U:=U) (B:=B) (Bcut:=Bcut) (a:=a) (b:=b) (e:=e) (r:=r) (v:=v) (s:=s) (l:=l) (F:=F) hσ hδ hF hT hM hA hW hxref hN hR hU hB hBcut hscale hmargin hr hchart hdet hgap hden hwrap hpoint
+
+example
+    (Q : ℕ) (rat₀ rat₁ : Fin 2 → ℚ) (Mat : Fin 4 → ℤ)
+    {σ δ T M N R U a b : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ x₁ : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R) (hU : 0 ≤ U)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo 0 (W i)) (hx₁ : ∀ i, x₁ i∈Ioo 0 (W i))
+    (hscale : T*N*R^2=M^3)
+    (hden₀ : ∀ i, (rat₀ i).den ≤ Q ∧ Q ≤ 2*(rat₀ i).den)
+    (hden₁ : ∀ i, (rat₁ i).den ≤ Q ∧ Q ≤ 2*(rat₁ i).den)
+    (hdet : Mat 0*Mat 3-Mat 1*Mat 2=1)
+    (ht₀ : (Mat 2:ℝ)*(rat₀ 0:ℝ)+Mat 3=((rat₀ 1).den:ℝ)/(rat₀ 0).den)
+    (ht₁ : (Mat 2:ℝ)*(rat₁ 0:ℝ)+Mat 3=((rat₁ 1).den:ℝ)/(rat₁ 0).den)
+    (hmap₀ : ((Mat 0:ℝ)*(rat₀ 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat₀ 0:ℝ)+Mat 3)=(rat₀ 1:ℝ))
+    (hmap₁ : ((Mat 0:ℝ)*(rat₁ 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat₁ 0:ℝ)+Mat 3)=(rat₁ 1:ℝ))
+    (hgap : b-a ≤ 7*U/(2*R^2))
+    (hgap₀ : (rat₀ 0:ℝ)∈Icc a b) (hgap₁ : (rat₁ 0:ℝ)∈Icc a b) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat₀ i:ℝ)) →
+    (∀ i, iteratedDeriv 2 (f i) (x₁ i)/2=(rat₁ i:ℝ)) →
+    ∀ i, |x₁ i-x₀ i| ≤ 28*U*N/modelPhaseThirdLower σ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_matrix_gap_displacement Q rat₀ rat₁ Mat (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (U:=U) (a:=a) (b:=b) (F:=F) (A:=A) (W:=W) (x₀:=x₀) (x₁:=x₁) hσ hδ hF hT hM hN hR hU hA hW hx₀ hx₁ hscale hden₀ hden₁ hdet ht₀ ht₁ hmap₀ hmap₁ hgap hgap₀ hgap₁
+
+example
+    (Uref : ℕ) {Bselect gapLo gapHi : ℝ}
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d base l w Bcut : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hwideL : ∀ i, x jref i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hreferenceEndpoint : (e:ℝ)/r=gapLo ∨ (e:ℝ)/r=gapHi)
+    (hchartLeft : ((e:ℝ)*l+v)/((r:ℝ)*l+s)∈Icc gapLo gapHi)
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ j∈S, (rat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Lref := 56*(Uref:ℝ)/modelPhaseThirdLower σ
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    48+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, 0 < (v:ℝ)-s*((rat j 0:ℝ)+ε)) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, 3840*128*η j*(β j*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 48+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      (S.card:ℝ) ≤ 48+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_selected_reference_gap_count Uref (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hinv hchart hr hd hcoord hBcut hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hreferenceEndpoint hchartLeft hRQ hselectedUpper hscaleTen hfamilyGap
+
+
+example
+    {N : ℕ} {l w B α β δ : ℝ}
+    (hw : w < 0) (hlw : l ≤ w) (hB : 1 ≤ B) (hδ : 0 ≤ δ) :
+    let P := HuxleyLinearForm.fareySector N (-w) (-l)
+    let S := P.image (fun p : ℤ × ℤ => (-p.1,p.2))
+    max ((w-l)*(N:ℝ)^2/B) 2 ≤ (S.card:ℝ) →
+    3840*B*δ*((-l)*(N:ℝ))*(N:ℝ) < (S.card:ℝ) →
+    (∀ p∈S, ∃ b : ℤ, |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ) →
+    ∀ p : ℤ × ℤ, 0 ≤ -(p.1:ℝ) → -(p.1:ℝ) ≤ 12*((-l)*(N:ℝ)) →
+      0 ≤ (p.2:ℝ) → (p.2:ℝ) ≤ 12*(N:ℝ) → ∀ b : ℤ,
+      |(p.1:ℝ)*α+(p.2:ℝ)*β-b| ≤ δ →
+      b=p.1*round α+p.2*round β :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.negative_fareySector_integer_labels_enlarged_rectangle_all_slopes (N:=N) (l:=l) (w:=w) (B:=B) (α:=α) (β:=β) (δ:=δ) hw hlw hB hδ
+
+example
+    {σ δ T M N R dmin : ℝ} {k : Fin 17} (Q K₀ : ℕ) [NeZero K₀]
+    (rat : Fin 2 → ℚ) (vinv : Fin 2 → ℤ) (parity : Fin 2 → Fin 2) (Mat : Fin 4 → ℤ) (anchor : ℚ) (e r v s : ℤ)
+    {F : Fin 2 → ℝ → ℝ} {A W x₀ xref : Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx₀ : ∀ i, x₀ i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hden : ∀ i, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den)
+    (hinv : ∀ i, ((rat i).den:ℤ) ∣ (rat i).num*vinv i-1) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ i, iteratedDeriv 2 (f i) (x₀ i)/2=(rat i:ℝ)) →
+    let q := fun i => (rat i).den
+    let mu := fun i => iteratedDeriv 3 (f i) (round (x₀ i))/6
+    let ell := fun i => deriv (f i) (round (x₀ i))
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋+(parity i:ℕ) : ℤ)
+    let cround := fun i => round ((q i:ℝ)*ell i)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let dual := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let w := fun i => (![Int.fract (-(vinv i:ℝ)*b i/q i),
+      Int.fract (-(vinv i:ℝ)/q i),dual i/Real.sqrt K₀,
+      (3*dual i*tau i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    b 0-cround 0=b 1-cround 1 →
+    (∀ d, |w 0 d-w 1 d| ≤ 2*radius d) →
+    let c := modelPhaseThirdLower σ/6
+    let J := (σ*(σ+1)+1)/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (Mat 2:ℝ)*(rat 0:ℝ)+Mat 3=(q 1:ℝ)/q 0 →
+    ((Mat 0:ℝ)*(rat 0:ℝ)+Mat 1)/((Mat 2:ℝ)*(rat 0:ℝ)+Mat 3)=(rat 1:ℝ) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let C := σ*(σ+1)+1
+    let H := N/(C+2)
+    let ε := modelPhaseThirdLower σ/(16*(C+2)*R^2)
+    2 ≤ N →
+    (∀ i, x₀ i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, x₀ i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    v*r-e*s=1 →
+    0 < (r:ℝ)*((rat 0:ℝ)-ε)-e →
+    0 < (r:ℝ)*((rat 0:ℝ)+ε)-e →
+    (v:ℝ)-s*((rat 0:ℝ)-ε) < 0 →
+    max ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat 0:ℝ)-ε)-e) ((r:ℝ)*((rat 0:ℝ)+ε)-e) →
+    |(anchor:ℝ)-(rat 0:ℝ)| ≤ ε →
+    256*(anchor.den:ℝ) ≤ (Q:ℝ)/3 →
+    256 ≤ (2*ε)*((Q:ℝ)/3)*anchor.den →
+    let l := (rat 0:ℝ)-ε
+    let w' := (rat 0:ℝ)+ε
+    let α := ((v:ℝ)-s*w')/((r:ℝ)*w'-e)
+    let β := ((v:ℝ)-s*l)/((r:ℝ)*l-e)
+    let K := ⌊((Q:ℝ)/3)*min ((r:ℝ)*l-e) ((r:ℝ)*w'-e)⌋₊
+    let S := (HuxleyLinearForm.fareySector K (-β) (-α)).image
+      (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let κ := modelPhaseThirdLower σ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    let pseed : ℤ × ℤ := (v*(q 0:ℤ)-s*(rat 0).num,r*(rat 0).num-e*(q 0:ℤ))
+    let yseed := (pseed.1:ℝ)/pseed.2
+    let ar := fun i => round (xref i)
+    let μr := fun i => iteratedDeriv 3 (f i) (ar i)/6
+    let νr := fun i => iteratedDeriv 4 (f i) (ar i)/24
+    let dr := fun i => deriv (f i) (ar i)
+    let δr := fun i => iteratedDeriv 2 (f i) (ar i)/2-(ep i:ℝ)/rp i
+    let θr := fun i => (rp i:ℝ)*dr i-round ((rp i:ℝ)*dr i)
+    let βr := fun i => dr i*sp i+2*δr i/(3*μr i*rp i)
+    let ac := θr 0-θr 1
+    let bc := βr 0-βr 1
+    let g := rationalPhase (μr 0) (rp 0) (sp 0) (μr 1) (rp 1) (sp 1)
+    let hq := quarticPhase (μr 0) (νr 0) (rp 0) (sp 0) (μr 1) (νr 1) (rp 1) (sp 1)
+    let φ := fun y => g y-hq y
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := D+(K:ℝ)*Ctay*(β-α)^2
+    let U := (4/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*dmin^3)
+    let Z := quarticCurvatureBoundaryRoots (μr 0) (νr 0) (rp 0) (sp 0)
+      (μr 1) (νr 1) (rp 1) (sp 1) U
+    1 ≤ M → 1 ≤ R → R ≤ M → N^2 ≤ M*R → 0 < dmin →
+    Δ < 1/2 →
+    (∀ i, rp i ≠ 0) →
+    (∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i) →
+    (∀ i, (H+|x₀ i-xref i|+1)^2 ≤ M*R) →
+    (∀ y∈Icc α β, ∀ i, dmin ≤ (rp i:ℝ)*y+sp i) →
+    α ∈ finiteBoundaryCell Z α β k → β ∈ finiteBoundaryCell Z α β k →
+    3840*128*η*((-α)*(K:ℝ))*(K:ℝ) < S.card →
+    |iteratedDeriv 2 g yseed-iteratedDeriv 2 hq yseed| ≤ U ∧
+    |(ac-round (ac-deriv φ yseed))*yseed+
+      (bc-round (bc-φ yseed+yseed*deriv φ yseed))-g yseed+hq yseed| ≤
+      D/(pseed.2:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_original_seed_bounds_all_negative_slopes (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (dmin:=dmin) (k:=k) Q K₀ rat vinv parity Mat anchor e r v s (F:=F) (A:=A) (W:=W) (x₀:=x₀) (xref:=xref) hσ hδ hF hT hM hN hR hQ hscale hmesh hA hW hx₀ hden hinv
+
+example
+    (Uref : ℕ) {Bselect gapLo gapHi : ℝ}
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d base l w Bcut : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ 2*d) (hBcut : 0 < Bcut)
+    (hwideL : ∀ i, x jref i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hreferenceEndpoint : (e:ℝ)/r=gapLo ∨ (e:ℝ)/r=gapHi)
+    (hchartLeft : ((e:ℝ)*l+v)/((r:ℝ)*l+s)∈Icc gapLo gapHi)
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ j∈S, (rat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Lref := 56*(Uref:ℝ)/modelPhaseThirdLower σ
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    99+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => if 0 < α j then HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+      else (HuxleyLinearForm.fareySector (Kaux j) (-β j) (-α j)).image
+        (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, (0 < α j ∨ β j < 0) → 3840*128*η j*((max |α j| |β j|)*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    5*Ccurv*Cphys ≤ Bcut →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 99+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      (S.card:ℝ) ≤ 99+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_signed_selected_reference_gap_count Uref (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hinv hchart hr hd hcoord hBcut hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hreferenceEndpoint hchartLeft hRQ hselectedUpper hscaleTen hfamilyGap
+
+
+
+example
+    {C J μ N R r s d l w Bcut Kcoord : ℝ}
+    (hC : 0 ≤ C) (hJ : 0 < J) (hμ : 0 < μ)
+    (hN : 0 < N) (hR : 0 < R) (hr : r ≠ 0) (hd : 0 < d)
+    (hlw : l ≤ w)
+    (hdlo : d ≤ min (r*l+s) (r*w+s)) (hdhi : max (r*l+s) (r*w+s) ≤ 2*d)
+    (hcoord : |r| * max |l| |w| ≤ Kcoord*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : (2*Kcoord+1)*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2)) :
+    let U := C*R^4/(N*d^3)
+    U*(w-l)*(max |l| |w|+(w-l)/2) ≤ 1/2 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_weighted_coefficient_budget_of_bounded_source_chart (C:=C) (J:=J) (μ:=μ) (N:=N) (R:=R) (r:=r) (s:=s) (d:=d) (l:=l) (w:=w) (Bcut:=Bcut) (Kcoord:=Kcoord) hC hJ hμ hN hR hr hd hlw hdlo hdhi hcoord hμupper hBcut hBsize hG
+
+example
+    {Kcoord : ℕ}
+    {ι : Type*} (S : Finset ι) (p : ι → ℤ × ℤ)
+    {μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut l w x₀ ac bc D P₁ P₂ : ℝ} {k : Fin 17}
+    (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0) (hr : r ≠ 0) (hr₁ : r₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hcoord : |r| * max |l| |w| ≤ (Kcoord:ℝ)*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : ((2*Kcoord+1:ℕ):ℝ)*C*J ≤ Bcut)
+    (hG : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hP₂ : 0 < P₂) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hp : ∀ i∈S, 0 < (p i).2)
+    (hheight : ∀ i∈S, |((p i).1:ℝ)| ≤ P₁ ∧ ((p i).2:ℝ) ≤ P₂) :
+    let U := C*R^4/(N*d^3)
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    x₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g x₀-iteratedDeriv 2 h x₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    (S.image (fun i => (round (ac-deriv φ (y i)),
+      round (bc-φ (y i)+y i*deriv φ (y i))))).card ≤ 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.quartic_phase_signed_integer_height_source_cutoff_coefficient_count (Kcoord:=Kcoord) (ι:=ι) S p (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (l:=l) (w:=w) (x₀:=x₀) (ac:=ac) (bc:=bc) (D:=D) (P₁:=P₁) (P₂:=P₂) (k:=k) hμ hμ₁ hr hr₁ hC hJ hN hR hd hden hden₁ hcoord hμupper hBcut hBsize hG hP₂ hD₀ hD hp hheight
+
+example
+    {Kcoord : ℕ}
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → ℝ)
+    {σ δ T M A W step base μ ν r s μ₁ ν₁ r₁ s₁ C J N R d Bcut D l w y₀ ac bc e v P₁ P₂ : ℝ}
+    {F : ℝ → ℝ} {k : Fin 17}
+    (hS : 32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hstep : 0 < step) (hμ : 0 < μ) (hμ₁ : μ₁ ≠ 0)
+    (hr : r ≠ 0) (hr₁ : r₁ ≠ 0) (hdet : v*r-e*s=1)
+    (hden : ∀ z∈Icc l w, d ≤ r*z+s ∧ r*z+s ≤ 2*d)
+    (hden₁ : ∀ z∈Icc l w, r₁*z+s₁ ≠ 0)
+    (hC : 0 ≤ C) (hJ : 0 < J) (hN : 0 < N) (hR : 0 < R) (hd : 0 < d)
+    (hcoord : |r| * max |l| |w| ≤ (Kcoord:ℝ)*d)
+    (hμupper : μ ≤ J/(6*N*R^2))
+    (hBcut : 0 < Bcut) (hBsize : ((2*Kcoord+1:ℕ):ℝ)*C*J ≤ Bcut)
+    (hGcut : |minorArcCoordinate μ r s l| ≤ |r| *N^2/(Bcut*R^2))
+    (hP₂ : 0 < P₂) (hD₀ : 0 ≤ D) (hD : D ≤ 1/2)
+    (hheight : ∀ i∈S, |((p i).1:ℝ)| ≤ P₁ ∧ ((p i).2:ℝ) ≤ P₂)
+    (hpt : ∀ i∈S, 0 < (p i).2)
+    (hx : ∀ i∈S, x i∈Ioo 0 W)
+    (hwindow : ∀ i∈S, x i∈Icc (base+step*(i:ℝ)) (base+step*((i:ℝ)+1))) :
+    let U := C*R^4/(N*d^3)
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let f := heathBrownPhysicalPhase F T M A 1
+    let y := fun i => ((p i).1:ℝ)/(p i).2
+    let g := rationalPhase μ r s μ₁ r₁ s₁
+    let h := quarticPhase μ ν r s μ₁ ν₁ r₁ s₁
+    let φ := fun z => g z-h z
+    let Z := quarticCurvatureBoundaryRoots μ ν r s μ₁ ν₁ r₁ s₁ U
+    (∀ i∈S, iteratedDeriv 2 f (x i)/2=
+      (e*(p i).1+v*(p i).2)/(r*(p i).1+s*(p i).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ i∈S, y i∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ i∈S, |(ac-round (ac-deriv φ (y i)))*y i+
+      bc-round (bc-φ (y i)+y i*deriv φ (y i))-φ (y i)| ≤ D/(p i).2) →
+    ∃ (a b : ℤ) (j : Fin 8 → ℕ), StrictMono j ∧
+      (∀ i, j i∈S ∧ round (ac-deriv φ (y (j i)))=a ∧
+        round (bc-φ (y (j i))+y (j i)*deriv φ (y (j i)))=b) ∧
+      StrictAnti (fun i => y (j i)) ∧
+      (∀ i : Fin 7, step*(S.card:ℝ)/(16*(Blabels:ℝ)) ≤ x (j i.succ)-x (j i.castSucc)) ∧
+      (∀ i : Fin 7, modelPhaseThirdLower σ*T/(6*μ*M^3)*(step*(S.card:ℝ)/(16*(Blabels:ℝ))) ≤
+        minorArcCoordinate μ r s (y (j i.succ))-
+        minorArcCoordinate μ r s (y (j i.castSucc))) ∧
+      (∀ i : Fin 7, (S.card:ℝ)/(16*(Blabels:ℝ)) ≤
+        ((S.filter (fun n => j i.castSucc<n ∧ n<j i.succ)).card:ℝ)) ∧
+      AntitoneOn y (S:Set ℕ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_height_common_coefficient_samples_with_mass (Kcoord:=Kcoord) S p x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (step:=step) (base:=base) (μ:=μ) (ν:=ν) (r:=r) (s:=s) (μ₁:=μ₁) (ν₁:=ν₁) (r₁:=r₁) (s₁:=s₁) (C:=C) (J:=J) (N:=N) (R:=R) (d:=d) (Bcut:=Bcut) (D:=D) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (e:=e) (v:=v) (P₁:=P₁) (P₂:=P₂) (F:=F) (k:=k) hS hσ hδ hF hT hM hA hW hstep hμ hμ₁ hr hr₁ hdet hden hden₁ hC hJ hN hR hd hcoord hμupper hBcut hBsize hGcut hP₂ hD₀ hD hheight hpt hx hwindow
+
+example
+    {Kcoord : ℕ}
+    (S : Finset ℕ) (p : ℕ → ℤ × ℤ) (x : ℕ → Fin 2 → ℝ) (Mat : Fin 4 → ℤ)
+    {σ δ T M N R base d Cres Q D nSpan Ccurv Bcut l w y₀ ac bc P₁ P₂ : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W xref e r v s H : Fin 2 → ℝ} {k : Fin 17}
+    (hS : 32*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R)
+    (hd : 0 < d) (hCres : 0 ≤ Cres)
+    (hD₀ : 0 ≤ D) (hD : D ≤ 1/2) (hDupper : D ≤ Cres*Q/N)
+    (hscale : T*N*R^2=M^3)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hxref : ∀ i, xref i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hheight : ∀ j∈S, |((p j).1:ℝ)| ≤ P₁ ∧ ((p j).2:ℝ) ≤ P₂)
+    (hpt : ∀ j∈S, 0 < (p j).2)
+    (hQband : ∀ j∈S, Q ≤ 2*(r 0*(p j).1+s 0*(p j).2))
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hdisplacement : ∀ j∈S, ∀ i, |x j i-xref i| ≤ H i)
+    (hspan : ∀ i, 2*H i+1 ≤ nSpan)
+    (hnsquare : nSpan^2 ≤ M*R)
+    (hr : ∀ i, r i ≠ 0) (hdet : ∀ i, v i*r i-e i*s i=1)
+    (hden : ∀ z∈Icc l w, ∀ i, d ≤ r i*z+s i ∧ r i*z+s i ≤ 2*d)
+    (hcoord : |r 0| * max |l| |w| ≤ (Kcoord:ℝ)*d) (hP₂ : 0 < P₂)
+    (hCcurv : 0 ≤ Ccurv) (hBcut : 0 < Bcut)
+    (hBsize : ((2*Kcoord+1:ℕ):ℝ)*Ccurv*(σ*(σ+1)+1) ≤ Bcut)
+    (hMat : Mat 0*Mat 3-Mat 1*Mat 2=1)
+    (htransport : e 1=(Mat 0:ℝ)*e 0+Mat 1*r 0 ∧
+      v 1=(Mat 0:ℝ)*v 0+Mat 1*s 0 ∧
+      r 1=(Mat 2:ℝ)*e 0+Mat 3*r 0 ∧
+      s 1=(Mat 2:ℝ)*v 0+Mat 3*s 0) :
+    let U := Ccurv*R^4/(N*d^3)
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let μ := fun i => iteratedDeriv 3 (f i) (round (xref i))/6
+    let ν := fun i => iteratedDeriv 4 (f i) (round (xref i))/24
+    let y := fun j => ((p j).1:ℝ)/(p j).2
+    let g := rationalPhase (μ 0) (r 0) (s 0) (μ 1) (r 1) (s 1)
+    let h := quarticPhase (μ 0) (ν 0) (r 0) (s 0) (μ 1) (ν 1) (r 1) (s 1)
+    let φ := fun z => g z-h z
+    let G := minorArcCoordinate (μ 0) (r 0) (s 0)
+    let Z := quarticCurvatureBoundaryRoots (μ 0) (ν 0) (r 0) (s 0)
+      (μ 1) (ν 1) (r 1) (s 1) U
+    let κ := modelPhaseThirdLower σ
+    let K := 4*Cres/κ
+    let Γ := (σ*(σ+1)+1)/κ
+    let L := κ/(16*(Blabels:ℝ)*(σ*(σ+1)+1))*(S.card:ℝ)
+    |G l| ≤ |r 0| *N^2/(Bcut*R^2) →
+    (∀ i, iteratedDeriv 2 (f i) (xref i)/2=e i/r i) →
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=
+      (e i*(p j).1+v i*(p j).2)/(r i*(p j).1+s i*(p j).2)) →
+    y₀∈finiteBoundaryCell Z l w k →
+    (∀ j∈S, y j∈finiteBoundaryCell Z l w k) →
+    |iteratedDeriv 2 g y₀-iteratedDeriv 2 h y₀| ≤ U →
+    (∀ j∈S, |(ac-round (ac-deriv φ (y j)))*y j+
+      (bc-round (bc-φ (y j)+y j*deriv φ (y j)))-g (y j)+h (y j)| ≤
+      D/(p j).2) →
+    let C := Γ*(32*K+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*(σ*(σ+1)+1)*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    |(Mat 2:ℝ)| ≤ Cfirst*R^4/(L^3*N^2)+Csecond*N*R^2/M :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_signed_height_square_span_first_condition (Kcoord:=Kcoord) S p x Mat (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (d:=d) (Cres:=Cres) (Q:=Q) (D:=D) (nSpan:=nSpan) (Ccurv:=Ccurv) (Bcut:=Bcut) (l:=l) (w:=w) (y₀:=y₀) (ac:=ac) (bc:=bc) (P₁:=P₁) (P₂:=P₂) (F:=F) (A:=A) (W:=W) (xref:=xref) (e:=e) (r:=r) (v:=v) (s:=s) (H:=H) (k:=k) hS hσ hδ hF hT hM hN hR hd hCres hD₀ hD hDupper hscale hA hW hxref hheight hpt hQband hx hwindow hdisplacement hspan hnsquare hr hdet hden hcoord hP₂ hCcurv hBcut hBsize hMat htransport
+
+example
+    (S : Finset ℝ) {δ a b e r v s l w d : ℝ}
+    (hr : r ≠ 0) (hs : s ≠ 0) (hdet : v*r-e*s=1)
+    (href : e/r∈S) (hparent : v/s∈S)
+    (hsep : ∀ x∈S, ∀ y∈S, x ≠ y → δ/4 < |x-y|)
+    (hgap : b-a ≤ 7*δ/2) (hendpoint : e/r=a ∨ e/r=b)
+    (hd : 0 < d)
+    (hdenl : d ≤ r*l+s ∧ r*l+s ≤ 2*d)
+    (hdenw : d ≤ r*w+s ∧ r*w+s ≤ 2*d)
+    (hleft : (e*l+v)/(r*l+s)∈Icc a b)
+    (hright : (e*w+v)/(r*w+s)∈Icc a b) :
+    |r| * max |l| |w| ≤ 30*d :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.separated_farey_reference_interval_coordinate_bound S (δ:=δ) (a:=a) (b:=b) (e:=e) (r:=r) (v:=v) (s:=s) (l:=l) (w:=w) (d:=d) hr hs hdet href hparent hsep hgap hendpoint hd hdenl hdenw hleft hright
+
+example
+    {Kcoord : ℕ}
+    (Uref : ℕ) {Bselect gapLo gapHi : ℝ}
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d base l w Bcut : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hcoord : |(r:ℝ)| * max |l| |w| ≤ (Kcoord:ℝ)*d) (hBcut : 0 < Bcut)
+    (hwideL : ∀ i, x jref i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hreferenceEndpoint : (e:ℝ)/r=gapLo ∨ (e:ℝ)/r=gapHi)
+    (hchartLeft : ((e:ℝ)*l+v)/((r:ℝ)*l+s)∈Icc gapLo gapHi)
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ j∈S, (rat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Lref := 56*(Uref:ℝ)/modelPhaseThirdLower σ
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    99+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => if 0 < α j then HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+      else (HuxleyLinearForm.fareySector (Kaux j) (-β j) (-α j)).image
+        (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, (0 < α j ∨ β j < 0) → 3840*128*η j*((max |α j| |β j|)*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    ((2*Kcoord+1:ℕ):ℝ)*Ccurv*Cphys ≤ Bcut →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 99+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      (S.card:ℝ) ≤ 99+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_signed_selected_reference_gap_count (Kcoord:=Kcoord) Uref (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hinv hchart hr hd hcoord hBcut hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hreferenceEndpoint hchartLeft hRQ hselectedUpper hscaleTen hfamilyGap
+
+example
+    (Uref : ℕ) (Refs : Finset ℝ) {Bselect gapLo gapHi : ℝ}
+    (S : Finset ℕ) (jref : ℕ) (hjref : jref∈S)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d base l w Bcut : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1) (hr : r ≠ 0)
+    (hd : 0 < d) (hBcut : 0 < Bcut)
+    (hs : s ≠ 0)
+    (hrefSet : (e:ℝ)/r∈Refs) (hparentSet : (v:ℝ)/s∈Refs)
+    (hsep : ∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|)
+    (hdenl : d ≤ (r:ℝ)*l+s ∧ (r:ℝ)*l+s ≤ 2*d)
+    (hdenw : d ≤ (r:ℝ)*w+s ∧ (r:ℝ)*w+s ≤ 2*d)
+    (hwideL : ∀ i, x jref i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ i, x jref i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hreferenceEndpoint : (e:ℝ)/r=gapLo ∨ (e:ℝ)/r=gapHi)
+    (hchartLeft : ((e:ℝ)*l+v)/((r:ℝ)*l+s)∈Icc gapLo gapHi)
+    (hchartRight : ((e:ℝ)*w+v)/((r:ℝ)*w+s)∈Icc gapLo gapHi)
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ j∈S, (rat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Lref := 56*(Uref:ℝ)/modelPhaseThirdLower σ
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    99+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)-ε)-e) →
+    (∀ j∈S, 0 < (r:ℝ)*((rat j 0:ℝ)+ε)-e) →
+    (∀ j∈S, max ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e) ≤
+      2*min ((r:ℝ)*((rat j 0:ℝ)-ε)-e) ((r:ℝ)*((rat j 0:ℝ)+ε)-e)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let Kaux := fun j => ⌊((Q:ℝ)/3)*min ((r:ℝ)*lo j-e) ((r:ℝ)*hi j-e)⌋₊
+    let Saux := fun j => if 0 < α j then HuxleyLinearForm.fareySector (Kaux j) (α j) (β j)
+      else (HuxleyLinearForm.fareySector (Kaux j) (-β j) (-α j)).image
+        (fun p : ℤ × ℤ => (-p.1,p.2))
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Ctay := (2/κ)*(B+2*quarticReciprocalConstant σ δ)*R^4/(N*d^3)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let η := fun j => D+(Kaux j:ℝ)*Ctay*(β j-α j)^2
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈S, α j∈Icc l w ∧ β j∈Icc l w) →
+    (∀ j∈S, (0 < α j ∨ β j < 0) → 3840*128*η j*((max |α j| |β j|)*(Kaux j:ℝ))*(Kaux j:ℝ) < (Saux j).card) →
+    61*Ccurv*Cphys ≤ Bcut →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 99+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      (S.card:ℝ) ≤ 99+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_separated_reference_gap_count Uref Refs (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) S jref hjref Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hinv hchart hr hd hBcut hs hrefSet hparentSet hsep hdenl hdenw hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hreferenceEndpoint hchartLeft hchartRight hRQ hselectedUpper hscaleTen hfamilyGap
+
+example
+    (S : Finset ℕ) (x : ℕ → ℝ)
+    {σ δ T M A W N R base a b e r : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hphase : T*N*R^2=M^3)
+    (horientation : (0 < r ∧ e/r=a) ∨ (r < 0 ∧ e/r=b))
+    (hx : ∀ j∈S, x j∈Ioo 0 W)
+    (hwindow : ∀ j∈S, x j∈Icc (base+(j:ℝ)*N) (base+((j:ℝ)+1)*N)) :
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let f := heathBrownPhysicalPhase F T M A 1
+    let q := fun j => iteratedDeriv 2 f (x j)/2
+    (∀ j∈S, q j∈Icc a b) →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 6+S₀.card ∧ ∀ j∈S₀,
+      a+3*ε < q j ∧ q j < b-3*ε ∧
+      0 < r*(q j-ε)-e ∧ 0 < r*(q j+ε)-e ∧
+      max (r*(q j-ε)-e) (r*(q j+ε)-e) ≤
+        2*min (r*(q j-ε)-e) (r*(q j+ε)-e) ∧
+      Icc (q j-ε) (q j+ε) ⊆ Icc a b :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_reference_gap_interior_chart_selection S x (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (N:=N) (R:=R) (base:=base) (a:=a) (b:=b) (e:=e) (r:=r) (F:=F) hσ hδ hF hT hM hN hR hA hW hphase horientation hx hwindow
+
+example
+    (e r v s : ℤ) (anchor : ℚ)
+    {q ε E R Q N d l w gapLo gapHi U B D D₀ Ct : ℝ}
+    (hdet : v*r-e*s=1) (hr : r ≠ 0)
+    (hE : 0 < E) (hR : 0 < R) (hQ : 0 < Q) (hN : 0 < N)
+    (hd : 0 < d) (hU : 0 ≤ U) (hB : 0 < B)
+    (hCt : 0 ≤ Ct) (hD₀ : 0 ≤ D₀) (heps : ε=E/R^2)
+    (hminus : 0 < (r:ℝ)*(q-ε)-e)
+    (hplus : 0 < (r:ℝ)*(q+ε)-e)
+    (hdyad : max ((r:ℝ)*(q-ε)-e) ((r:ℝ)*(q+ε)-e) ≤
+      2*min ((r:ℝ)*(q-ε)-e) ((r:ℝ)*(q+ε)-e))
+    (hanchor : |(anchor:ℝ)-q| ≤ ε)
+    (hcut : 256*(anchor.den:ℝ) ≤ Q/3)
+    (hcount : 256 ≤ (2*ε)*(Q/3)*anchor.den)
+    (hden : ∀ z∈Icc l w, d ≤ (r:ℝ)*z+s ∧ (r:ℝ)*z+s ≤ 2*d)
+    (hcoord : |(r:ℝ)| * max |l| |w| ≤ 30*d)
+    (hgap : gapHi-gapLo ≤ 7*U/(2*R^2))
+    (hendpoint : (e:ℝ)/r=gapLo ∨ (e:ℝ)/r=gapHi)
+    (hpoint : q+ε∈Icc gapLo gapHi)
+    (hselected : B*U*Q ≤ N)
+    (hmargin : 2*3840*128^2*105*(D₀+64*Ct*E^2) ≤ B*E)
+    (hD : D ≤ D₀*Q/N) :
+    let α := ((v:ℝ)-s*(q+ε))/((r:ℝ)*(q+ε)-e)
+    let β := ((v:ℝ)-s*(q-ε))/((r:ℝ)*(q-ε)-e)
+    let K := ⌊(Q/3)*min ((r:ℝ)*(q-ε)-e) ((r:ℝ)*(q+ε)-e)⌋₊
+    let S := if 0 < α then HuxleyLinearForm.fareySector K α β
+      else (HuxleyLinearForm.fareySector K (-β) (-α)).image
+        (fun p : ℤ × ℤ => (-p.1,p.2))
+    let η := D+(K:ℝ)*(Ct*R^4/(N*d^3))*(β-α)^2
+    α∈Icc l w → β∈Icc l w → (0 < α ∨ β < 0) →
+    3840*128*η*((max |α| |β|)*(K:ℝ))*(K:ℝ) < S.card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.reference_gap_complete_sector_linearization_size e r v s anchor (q:=q) (ε:=ε) (E:=E) (R:=R) (Q:=Q) (N:=N) (d:=d) (l:=l) (w:=w) (gapLo:=gapLo) (gapHi:=gapHi) (U:=U) (B:=B) (D:=D) (D₀:=D₀) (Ct:=Ct) hdet hr hE hR hQ hN hd hU hB hCt hD₀ heps hminus hplus hdyad hanchor hcut hcount hden hcoord hgap hendpoint hpoint hselected hmargin hD
+
+example
+    (Uref : ℕ) (Refs : Finset ℝ) {Bselect gapLo gapHi : ℝ}
+    (S : Finset ℕ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R d base l w Bcut : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1)
+    (horientation : ((0:ℝ) < r ∧ (e:ℝ)/r=gapLo) ∨
+      ((r:ℝ) < 0 ∧ (e:ℝ)/r=gapHi))
+    (hd : 0 < d) (hBcut : 0 < Bcut)
+    (hs : s ≠ 0)
+    (hrefSet : (e:ℝ)/r∈Refs) (hparentSet : (v:ℝ)/s∈Refs)
+    (hsep : ∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|)
+    (hdenl : d ≤ (r:ℝ)*l+s ∧ (r:ℝ)*l+s ≤ 2*d)
+    (hdenw : d ≤ (r:ℝ)*w+s ∧ (r:ℝ)*w+s ≤ 2*d)
+    (hwideL : ∀ j∈S, ∀ i, x j i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ j∈S, ∀ i, x j i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hchartLeft : ((e:ℝ)*l+v)/((r:ℝ)*l+s)∈Icc gapLo gapHi)
+    (hchartRight : ((e:ℝ)*w+v)/((r:ℝ)*w+s)∈Icc gapLo gapHi)
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ j∈S, (rat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Lref := 56*(Uref:ℝ)/modelPhaseThirdLower σ
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    105+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    let ε := κ/(16*(Cphys+2)*R^2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let lo := fun j => (rat j 0:ℝ)-ε
+    let hi := fun j => (rat j 0:ℝ)+ε
+    let α := fun j => ((v:ℝ)-s*hi j)/((r:ℝ)*hi j-e)
+    let β := fun j => ((v:ℝ)-s*lo j)/((r:ℝ)*lo j-e)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    let sp : Fin 2 → ℤ := ![s,Mat 2*v+Mat 3*s]
+    ∃ G : Finset ℕ, G⊆S ∧ S.card ≤ 6+G.card ∧
+    ∃ jref : ℕ, jref∈G ∧
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 →
+    (∀ z∈Icc l w, ∀ i, d ≤ (rp i:ℝ)*z+sp i ∧ (rp i:ℝ)*z+sp i ≤ 2*d) →
+    (∀ j∈G, α j∈Icc l w ∧ β j∈Icc l w) →
+    61*Ccurv*Cphys ≤ Bcut →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 105+17*S₀.card ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      (S.card:ℝ) ≤ 105+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_certified_reference_gap_count Uref Refs (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) S Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (d:=d) (base:=base) (l:=l) (w:=w) (Bcut:=Bcut) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hinv hchart horientation hd hBcut hs hrefSet hparentSet hsep hdenl hdenw hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hchartLeft hchartRight hRQ hselectedUpper hscaleTen hfamilyGap
+
+example
+    (S : Finset ℕ) (x : ℕ → ℝ) (rat : ℕ → Fin 2 → ℚ)
+    (Q K₀ : ℕ) [NeZero K₀] (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M A W N R base a b lambda U θ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : Expdb.IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hRN : R ≤ N) (hQ : 0 < Q)
+    (hA : M ≤ A) (hW : A+W ≤ 2*M)
+    (hphase : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hgamma : |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2))
+    (hchart : v*r-e*s=1)
+    (horientation : ((0:ℝ) < r ∧ (e:ℝ)/r=a) ∨ ((r:ℝ) < 0 ∧ (e:ℝ)/r=b))
+    (hx : ∀ j∈S, x j∈Ioo 0 W)
+    (hwindow : ∀ j∈S, x j∈Icc (base+(j:ℝ)*N) (base+((j:ℝ)+1)*N))
+    (hlambda : 0 < lambda) (hU : 0 ≤ U)
+    (hθ : 0 < θ) (hθmax : θ ≤ 1/24)
+    (hcurv : ∀ j∈S, ∀ i, lambda ≤ |(rat j i:ℝ)| ∧ |(rat j i:ℝ)| ≤ U)
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hgap : ∀ j∈S, (rat j 0:ℝ)∈Icc a b)
+    (hMatt : ∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=
+      ((rat j 1).den:ℝ)/(rat j 0).den) :
+    let f := heathBrownPhysicalPhase F T M A 1
+    (∀ j∈S, iteratedDeriv 2 f (x j)/2=(rat j 0:ℝ)) →
+    let color := fun j i => (⌊((rat j i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat j i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ j∈S, color j 0=color j 1) →
+    (((S ×ˢ (Finset.univ : Finset (Fin 2))).image
+      (fun ji => color ji.1 ji.2)).card:ℝ) ≤ (4/θ+3)*(4*U/(lambda*θ)+3) ∧
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let chartColor := fun j => ⌊Real.logb (5/4)
+      (((r:ℝ)*(rat j 0:ℝ)-e)/(12*|(r:ℝ)| *ε))⌋₊
+    let α := fun j => ((v:ℝ)-s*((rat j 0:ℝ)+ε))/((r:ℝ)*((rat j 0:ℝ)+ε)-e)
+    let β := fun j => ((v:ℝ)-s*((rat j 0:ℝ)-ε))/((r:ℝ)*((rat j 0:ℝ)-ε)-e)
+    ∃ G : Finset ℕ, G⊆S ∧ S.card ≤ 6+G.card ∧
+      (G.image chartColor).card ≤ ⌊Real.logb (5/4) ((b-a)/(12*ε))⌋₊+1 ∧
+      ∀ n∈G.image chartColor, ∃ d l w : ℝ, 0 < d ∧ l ≤ w ∧
+        (∀ j∈G, chartColor j=n → α j∈Icc l w ∧ β j∈Icc l w) ∧
+        (∀ z∈Icc l w,
+          (d ≤ (r:ℝ)*z+s ∧ (r:ℝ)*z+s ≤ 2*d) ∧
+          (d ≤ ((Mat 2:ℝ)*e+Mat 3*r)*z+((Mat 2:ℝ)*v+Mat 3*s) ∧
+            ((Mat 2:ℝ)*e+Mat 3*r)*z+((Mat 2:ℝ)*v+Mat 3*s) ≤ 2*d)) ∧
+        ((e:ℝ)*l+v)/((r:ℝ)*l+s)∈Icc a b ∧
+        ((e:ℝ)*w+v)/((r:ℝ)*w+s)∈Icc a b :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_same_color_reference_gap_paired_chart_cover S x rat Q K₀ Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (A:=A) (W:=W) (N:=N) (R:=R) (base:=base) (a:=a) (b:=b) (lambda:=lambda) (U:=U) (θ:=θ) (F:=F) hσ hδ hF hT hM hN hR hRN hQ hA hW hphase hmesh hgamma hchart horientation hx hwindow hlambda hU hθ hθmax hcurv hden hgap hMatt
+
+
+example
+    (Uref : ℕ) (Refs : Finset ℝ) {Bselect gapLo gapHi : ℝ}
+    (S : Finset ℕ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ℕ → Fin 2 → ℚ) (vinv : ℕ → Fin 2 → ℤ)
+    (parity : ℕ → Fin 2 → Fin 2) (anchor : ℕ → ℚ)
+    (Mat : Fin 4 → ℤ) (e r v s : ℤ)
+    {σ δ T M N R base Bcut lambda Uband θ : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ j∈S, ∀ i, x j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ j∈S, x j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ j∈S, ∀ i, (rat j i).den ≤ Q ∧ Q ≤ 2*(rat j i).den)
+    (hlambda : 0 < lambda) (hUband : 0 ≤ Uband)
+    (hθ : 0 < θ) (hθmax : θ ≤ 1/24)
+    (hcurv : ∀ j∈S, ∀ i, lambda ≤ |(rat j i:ℝ)| ∧ |(rat j i:ℝ)| ≤ Uband)
+    (hinv : ∀ j∈S, ∀ i, ((rat j i).den:ℤ) ∣ (rat j i).num*vinv j i-1)
+    (hchart : v*r-e*s=1)
+    (horientation : ((0:ℝ) < r ∧ (e:ℝ)/r=gapLo) ∨
+      ((r:ℝ) < 0 ∧ (e:ℝ)/r=gapHi))
+    (hBcut : 0 < Bcut)
+    (hs : s ≠ 0)
+    (hrefSet : (e:ℝ)/r∈Refs) (hparentSet : (v:ℝ)/s∈Refs)
+    (hsep : ∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|)
+    (hwideL : ∀ j∈S, ∀ i, x j i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ j∈S, ∀ i, x j i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ j∈S, (rat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Lref := 56*(Uref:ℝ)/modelPhaseThirdLower σ
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let Ccharts := ⌊Real.logb (5/4) ((gapHi-gapLo)/(12*ε))⌋₊+1
+    let sourceColor := fun j i => (⌊((rat j i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat j i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ j∈S, sourceColor j 0=sourceColor j 1) →
+    6+Ccharts*(105+544*(6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1))) ≤ S.card →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ j∈S, ∀ i, iteratedDeriv 2 (f i) (x j i)/2=(rat j i:ℝ)) →
+    let q := fun j i => (rat j i).den
+    let mu := fun j i => iteratedDeriv 3 (f i) (round (x j i))/6
+    let ell := fun j i => deriv (f i) (round (x j i))
+    let b := fun j i => (⌊(q j i:ℝ)*ell j i⌋+(parity j i:ℕ) : ℤ)
+    let cround := fun j i => round ((q j i:ℝ)*ell j i)
+    let tau := fun j i => ((b j i:ℝ)-(q j i:ℝ)*ell j i)/2
+    let dual := fun j i => -2*mu j i*(Real.sqrt (2/(3*mu j i*(q j i:ℝ))))^3
+    let cloud := fun j i => (![Int.fract (-(vinv j i:ℝ)*b j i/q j i),
+      Int.fract (-(vinv j i:ℝ)/q j i),dual j i/Real.sqrt K₀,
+      (3*dual j i*tau j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ j∈S, b j 0-cround j 0=b j 1-cround j 1) →
+    (∀ j∈S, ∀ a, |cloud j 0 a-cloud j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    Mat 0*Mat 3-Mat 1*Mat 2=1 →
+    (∀ j∈S, (Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3=(q j 1:ℝ)/q j 0) →
+    (∀ j∈S, ((Mat 0:ℝ)*(rat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat j 0:ℝ)+Mat 3)=(rat j 1:ℝ)) →
+    |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) →
+    let H := N/(Cphys+2)
+    2 ≤ N →
+    (∀ j∈S, ∀ i, x j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, ∀ i, x j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ j∈S, |(anchor j:ℝ)-(rat j 0:ℝ)| ≤ ε) →
+    (∀ j∈S, 256*((anchor j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ j∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor j).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let ep : Fin 2 → ℤ := ![e,Mat 0*e+Mat 1*r]
+    let rp : Fin 2 → ℤ := ![r,Mat 2*e+Mat 3*r]
+    ∃ Schart : Finset ℕ, Schart⊆S ∧ S.card ≤ 6+Ccharts*Schart.card ∧
+    ∃ G : Finset ℕ, G⊆Schart ∧ Schart.card ≤ 6+G.card ∧
+    ∃ jref : ℕ, jref∈G ∧
+    ∃ xref : Fin 2 → ℝ,
+      (∀ i, 0 < rp i*r ∧ xref i∈Ioo (1/2:ℝ) (W i-1/2) ∧
+        iteratedDeriv 2 (f i) (xref i)/2=(ep i:ℝ)/rp i ∧
+        |xref i-x jref i| ≤ Lref*N ∧
+        |(round (xref i):ℝ)-(round (x jref i):ℝ)| ≤ Lref*N+1) ∧
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 →
+    61*Ccurv*Cphys ≤ Bcut →
+    ∃ S₀ : Finset ℕ, S₀⊆S ∧ S.card ≤ 6+Ccharts*(105+17*S₀.card) ∧
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let L := κ/(16*(Blabels:ℝ)*Cphys)*(S₀.card:ℝ)
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    |(Mat 2:ℝ)| ≤ 2*Csecond*N*R^2/M ∨
+      ((S.card:ℝ) ≤ 6+(Ccharts:ℝ)*(105+17*Ccount*R^4/(L^2*N^2*|(Mat 2:ℝ)|)) ∧
+      ∀ ell : ℝ, 0 < ell → 0 < |(Mat 2:ℝ)| →
+        2*(6+105*(Ccharts:ℝ))+34*(Ccharts:ℝ)*ell ≤ (S.card:ℝ) →
+        (S.card:ℝ) ≤ 34*(Ccharts:ℝ)*Ccount*R^4/
+          ((κ/(16*(Blabels:ℝ)*Cphys)*ell)^2*N^2*|(Mat 2:ℝ)|)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_charted_reference_gap_count Uref Refs (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) S Q K₀ rat vinv parity anchor Mat e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (Bcut:=Bcut) (lambda:=lambda) (Uband:=Uband) (θ:=θ) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hlambda hUband hθ hθmax hcurv hinv hchart horientation hBcut hs hrefSet hparentSet hsep hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hRQ hselectedUpper hscaleTen hfamilyGap
+
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι) (r : ι → ℚ)
+    (Q B : ℕ) {X : ℝ} (hX : 0 ≤ X)
+    (hlevel : ∀ i∈S, |(r i:ℝ)| ≤ X)
+    (hden : ∀ i∈S, (r i).den ≤ Q)
+    (hmul : ∀ a : ℚ, (S.filter (fun i => r i=a)).card ≤ B) :
+    (S.card:ℝ) ≤ B*(Q:ℝ)*(2*X*Q+1) :=
+  TaoTrudgianYang2025.bourgain_bounded_denominator_count (ι:=ι) S r Q B (X:=X) hX hlevel hden hmul
+
+
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι) (k : ι → ℤ)
+    (v : ι → ℝ) (r : ι → ℚ) (B : ℕ) {eta delta X : ℝ}
+    (heta : 0 < eta) (hdelta : 0 < delta) (hX : 0 ≤ X)
+    (hwidth : 4*delta ≤ eta)
+    (hmul : ∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ B)
+    (hsep : ∀ i∈S, ∀ j∈S, eta*|(k i:ℝ)-k j| ≤ |v i-v j|)
+    (hv : ∀ i∈S, |v i| ≤ X)
+    (hminimal : ∀ i∈S, ∀ a : ℚ,
+      (a:ℝ)∈Ioo (v i-delta) (v i+delta) → (r i).den ≤ a.den) :
+    ∀ Q : ℕ, 2 ≤ Q →
+      let D := 1/(delta*(Q:ℝ))
+      ((S.filter (fun i => Q ≤ (r i).den)).card:ℝ) ≤
+        B*(4*X*D^2+3*D*(2+Real.log (D+1))) :=
+  TaoTrudgianYang2025.bourgain_actual_minimal_arc_sharp_tail (ι:=ι) S k v r B (eta:=eta) (delta:=delta) (X:=X) heta hdelta hX hwidth hmul hsep hv hminimal
+
+example
+    (S : Finset ℤ) (F : ℝ → ℝ) (anchor : ℤ → ℚ)
+    (N : ℕ) (s : ℝ) {σ c J η y T M R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hphase : T*(N:ℝ)*R^2=M^3)
+    (hpoints : ∀ i∈S, s+(N:ℝ)*i∈Icc M (2*M)) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun w => iteratedDeriv 2 f w/2
+    let t := fun i : ℤ => s+(N:ℝ)*i
+    let delta := c/(64*σ*R^2)
+    let X := 3*J*M/(2*σ*(N:ℝ)*R^2)
+    let C := (6*J/σ)*(64*σ/c)^2+192*σ/c
+    (∀ i∈S, ∀ a : ℚ, (a:ℝ)∈Ioo (h (t i)-delta) (h (t i)+delta) →
+      (anchor i).den ≤ a.den) →
+    ∀ Q : ℕ, 2 ≤ Q →
+      let High := S.filter (fun i => Q ≤ (anchor i).den)
+      let D := 64*σ*R^2/(c*(Q:ℝ))
+      (High.card:ℝ) ≤ 4*X*D^2+3*D*(2+Real.log (D+1)) ∧
+      ((R ≤ (Q:ℝ)) → (N:ℝ)*R ≤ M →
+        (High.card:ℝ) ≤ C*(M*R/((N:ℝ)*Q))*(2+Real.log (D+1)) ∧
+        ∀ (L : ℤ → ℤ) (H : ℤ → ℕ), (∀ i∈S, H i ≤ N) →
+          (∑ i∈High, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤
+            C*(M*R/Q)*(2+Real.log (D+1))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_actual_minimal_anchor_sharp_tail S F anchor N s (σ:=σ) (c:=c) (J:=J) (η:=η) (y:=y) (T:=T) (M:=M) (R:=R) hσ hc hJ hη hηmax hy hf hbound htests hnegative hT hM hN hR hphase hpoints
+
+example
+    (S : Finset ℤ) (F : ℝ → ℝ) (anchor : ℤ → ℚ)
+    (N : ℕ) (s : ℝ) {σ c J η y T M R : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : y∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hphase : T*(N:ℝ)*R^2=M^3)
+    (hpoints : ∀ i∈S, s+(N:ℝ)*i∈Icc M (2*M)) :
+    let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun w => iteratedDeriv 2 f w/2
+    let t := fun i : ℤ => s+(N:ℝ)*i
+    let delta := c/(64*σ*R^2)
+    let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+    (∀ i∈S, (anchor i:ℝ)∈Ioo (h (t i)-delta) (h (t i)+delta) ∧
+      ∀ a : ℚ, (a:ℝ)∈Ioo (h (t i)-delta) (h (t i)+delta) → (anchor i).den ≤ a.den) →
+    ∀ (Q Acut : ℕ) (Bmajor : ℝ), 2 ≤ Acut → Acut ≤ Q → 0 ≤ Bmajor →
+    let Bad := S.filter (fun i => ¬ (Acut*(anchor i).den ≤ Q ∧
+      Bmajor*R^2 ≤ c*(Q:ℝ)*(anchor i).den))
+    let Dlow := Bmajor*R^2/(c*(Q:ℝ))
+    let Khigh := Q/Acut+1
+    let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+    let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+      Dlow*(2*(Vbound+delta)*Dlow+1)
+    (Bad.card:ℝ) ≤ Cost ∧
+      ∀ H : ℤ → ℕ, (∀ i∈S, H i ≤ N) →
+        (∑ i∈Bad,(H i:ℝ)) ≤ (N:ℝ)*Cost :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_minimal_anchor_complement_count S F anchor N s (σ:=σ) (c:=c) (J:=J) (η:=η) (y:=y) (T:=T) (M:=M) (R:=R) hσ hc hJ hη hηmax hy hf hbound htests hnegative hT hM hN hR hphase hpoints
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (N : ℕ) (s : ℤ) (H : ℤ → ℕ)
+      (η y T M R U x₁ x₂ : ℝ),
+      1 ≤ N → (∀ k, H k ≤ N) →
+      0 < η → η ≤ 1/8 → y∈Icc (1:ℝ) 2 → 0 < T → 0 < M → 0 < R → 0 < U →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U → x₁∈Icc M (2*M) → x₂∈Icc M (2*M) →
+      let f := fun w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun w => iteratedDeriv 2 f w/2
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      U/(4*R^2) ≤ h x₂-h x₁ → h x₂-h x₁ ≤ 7*U/(2*R^2) →
+      ∃ S : Finset ℤ, ∃ (anchor : ℤ → ℚ) (za : ℤ → ℝ),
+        (∀ k : ℤ, k∈S ↔ x₁+(N:ℝ)/4 ≤ t k ∧ t k ≤ x₂-(N:ℝ)/4) ∧
+        (∀ k∈S, za k∈Ioo x₁ x₂ ∧ h (za k)=(anchor k:ℝ) ∧
+          (anchor k:ℝ)∈Ioo (h x₁) (h x₂) ∧
+          (anchor k:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo (h (t k)-delta) (h (t k)+delta) → (anchor k).den ≤ a.den) ∧
+        (∀ k∈S, |za k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ (S.card:ℝ) ∧ (S.card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          ((S.filter (fun k => Q ≤ (anchor k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      let Good := fun i => 2*(anchor i).den ≤ Q ∧
+        128*σ*R^2 ≤ c*(Q:ℝ)*(anchor i).den
+      let G := S.filter Good
+      let Dlow := 128*σ*R^2/(c*(Q:ℝ))
+      let Khigh := Q/2+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ((S.filter (fun i => ¬ Good i)).card:ℝ) ≤ Cost ∧
+      ∃ (r : ℤ → ℚ) (z : ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i:ℝ) < r i ∧ |(r i:ℝ)-(anchor i:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i) (za i+(N:ℝ)/16) ∧
+        iteratedDeriv 2 f (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo x₁ x₂) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 f (m i)/6
+      let ℓ := fun i => deriv f (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := 2*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(128*σ/c)^2+128*σ/c)
+      (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤ C*((N:ℝ)*Cost+FourierCost) ∧
+      (2*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f n):ℂ)‖) ≤
+          C*(Cerror*(M*R/Q)*(2+Real.log (Dlow+1))+FourierCost)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_interior_gap_controlled_complement_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    (Q Acut : ℕ) {σ c J M N R B : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hM : 0 < M) (hN : 0 < N) (hR : 0 < R)
+    (hA : 2 ≤ Acut) (hAQ : Acut ≤ Q) (hB : 0 ≤ B)
+    (hRQ : (Acut:ℝ)*R ≤ Q) (hNR : N*R ≤ M) :
+    let Vcurv := 3*J*M/(2*σ*N*R^2)
+    let delta := c/(64*σ*R^2)
+    let Dlow := B*R^2/(c*(Q:ℝ))
+    let Dhigh := 64*σ*R^2/(c*((Q/Acut+1:ℕ):ℝ))
+    let Dupper := 64*σ*R^2/(c*((Q:ℝ)/Acut))
+    let Ctail := (6*J/σ)*(64*σ/c)^2+192*σ/c
+    let Clow := (3*J/σ+c/(32*σ))*(B/c)^2+B/c
+    (4*Vcurv*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1)))+
+      Dlow*(2*(Vcurv+delta)*Dlow+1) ≤
+        ((Acut:ℝ)*Ctail+Clow)*(M*R/(N*Q))*(2+Real.log (Dupper+1)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.huxley_anchor_complement_source_scale Q Acut (σ:=σ) (c:=c) (J:=J) (M:=M) (N:=N) (R:=R) (B:=B) hσ hc hJ hM hN hR hA hAQ hB hRQ hNR
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (Y : Finset ι) (F : ℝ → ℝ)
+      (N : ℕ) (s : ℤ) (H : ι → ℤ → ℕ)
+      (η T M R U : ℝ) (y x₁ x₂ : ι → ℝ),
+      1 ≤ N → (∀ i∈Y, ∀ k, H i k ≤ N) →
+      0 < η → η ≤ 1/8 → (∀ i∈Y, y i∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R → 0 < U →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U →
+      (∀ i∈Y, x₁ i∈Icc M (2*M)) → (∀ i∈Y, x₂ i∈Icc M (2*M)) →
+      (∀ i∈Y, ∀ j∈Y, i≠j → y i=y j → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      let h := fun i w => iteratedDeriv 2 (f i) w/2
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈Y, U/(4*R^2) ≤ h i (x₂ i)-h i (x₁ i) ∧
+        h i (x₂ i)-h i (x₁ i) ≤ 7*U/(2*R^2)) →
+      ∃ (S : ι → Finset ℤ) (anchor : ι → ℤ → ℚ) (za : ι → ℤ → ℝ),
+        (∀ i∈Y,
+          (∀ k : ℤ, k∈(S i) ↔ (x₁ i)+(N:ℝ)/4 ≤ t k ∧ t k ≤ (x₂ i)-(N:ℝ)/4) ∧
+        (∀ k∈(S i), (za i) k∈Ioo (x₁ i) (x₂ i) ∧ (h i) ((za i) k)=((anchor i) k:ℝ) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i) (x₁ i)) ((h i) (x₂ i)) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i) (t k)-delta) ((h i) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h i) (t k)-delta) ((h i) (t k)+delta) → ((anchor i) k).den ≤ a.den) ∧
+        (∀ k∈(S i), |(za i) k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ ((S i).card:ℝ) ∧ ((S i).card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          (((S i).filter (fun k => Q ≤ ((anchor i) k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      ∀ (Acut : ℕ) (Bmajor : ℝ), 2 ≤ Acut → Acut ≤ Q → 128*σ ≤ Bmajor →
+      let Sall := Y.biUnion (fun i => (S i).image (fun k => (i,k)))
+      let Good := fun i => Acut*(anchor i.1 i.2).den ≤ Q ∧
+        Bmajor*R^2 ≤ c*(Q:ℝ)*(anchor i.1 i.2).den
+      let G := Sall.filter Good
+      let Dlow := Bmajor*R^2/(c*(Q:ℝ))
+      let Khigh := Q/Acut+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Dlog := 64*σ*R^2/(c*((Q:ℝ)/Acut))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ∃ (r : ι × ℤ → ℚ) (z : ι × ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i.1 i.2:ℝ) < r i ∧ |(r i:ℝ)-(anchor i.1 i.2:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i.1 i.2) (za i.1 i.2+(N:ℝ)/16) ∧
+        iteratedDeriv 2 (f i.1) (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo (x₁ i.1) (x₂ i.1)) ∧
+      (768 ≤ Acut → 24576*σ ≤ Bmajor →
+        ∀ i∈G, 256*((anchor i.1 i.2).den:ℝ) ≤ (Q:ℝ)/3 ∧
+          ∀ eps : ℝ, delta ≤ eps → 256 ≤ 2*eps*((Q:ℝ)/3)*(anchor i.1 i.2).den) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i.2-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i.1) (m i)/6
+      let ℓ := fun i => deriv (f i.1) (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ι × ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := (Acut:ℝ)*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(Bmajor/c)^2+Bmajor/c)
+      (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1 i.2),(𝐞 (f i.1 n):ℂ)‖) ≤ C*(((Y.image y).card:ℝ)*(N:ℝ)*Cost+FourierCost) ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1 i.2),(𝐞 (f i.1 n):ℂ)‖) ≤
+          C*(((Y.image y).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_tagged_gap_controlled_complement_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    (Uref : ℕ) (Refs : Finset ℝ) {Bselect gapLo gapHi : ℝ}
+    (Matrices : Finset (Fin 4 → ℤ)) (family : (Fin 4 → ℤ) → Finset ℕ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : (Fin 4 → ℤ) → ℕ → Fin 2 → ℚ) (vinv : (Fin 4 → ℤ) → ℕ → Fin 2 → ℤ)
+    (parity : (Fin 4 → ℤ) → ℕ → Fin 2 → Fin 2) (anchor : (Fin 4 → ℤ) → ℕ → ℚ)
+    (e r v s : ℤ)
+    {σ δ T M N R base Bcut lambda Uband θ : ℝ}
+    {F : Fin 2 → ℝ → ℝ} {A W : Fin 2 → ℝ}
+    {x : (Fin 4 → ℤ) → ℕ → Fin 2 → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 1 ≤ R) (hRM : R ≤ M)
+    (hQ : 0 < Q) (hscale : T*N*R^2=M^3)
+    (hmesh : (Q:ℝ)*N ≤ (K₀:ℝ)*R^2)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+W i ≤ 2*M)
+    (hx : ∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, x Mat j i∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwindow : ∀ Mat∈Matrices, ∀ j∈family Mat, x Mat j 0∈Icc (base+N*(j:ℝ)) (base+N*((j:ℝ)+1)))
+    (hden : ∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, (rat Mat j i).den ≤ Q ∧ Q ≤ 2*(rat Mat j i).den)
+    (hlambda : 0 < lambda) (hUband : 0 ≤ Uband)
+    (hθ : 0 < θ) (hθmax : θ ≤ 1/24)
+    (hcurv : ∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, lambda ≤ |(rat Mat j i:ℝ)| ∧ |(rat Mat j i:ℝ)| ≤ Uband)
+    (hinv : ∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, ((rat Mat j i).den:ℤ) ∣ (rat Mat j i).num*vinv Mat j i-1)
+    (hchart : v*r-e*s=1)
+    (horientation : ((0:ℝ) < r ∧ (e:ℝ)/r=gapLo) ∨
+      ((r:ℝ) < 0 ∧ (e:ℝ)/r=gapHi))
+    (hBcut : 0 < Bcut)
+    (hs : s ≠ 0)
+    (hrefSet : (e:ℝ)/r∈Refs) (hparentSet : (v:ℝ)/s∈Refs)
+    (hsep : ∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|)
+    (hwideL : ∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, x Mat j i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hwideU : ∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, x Mat j i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*N∈Ioo (1/2:ℝ) (W i-1/2))
+    (hUref : 1 ≤ Uref)
+    (hBselectSize : 2+168/modelPhaseThirdLower σ ≤ Bselect)
+    (hcutMargin : 7*Bcut ≤ modelPhaseThirdLower σ*Bselect)
+    (hselectedWrap : Bselect^2*(Uref:ℝ)^3*R^2 ≤ N^2)
+    (hreferenceDen : R^2 ≤ (r:ℝ)^2*(Uref:ℝ))
+    (hgapWidth : gapHi-gapLo ≤ 7*(Uref:ℝ)/(2*R^2))
+    (hRQ : R ≤ (Q:ℝ))
+    (hselectedUpper : (Uref:ℝ) ≤ (N/(Q:ℝ))^((2:ℝ)/3)/Bselect)
+    (hscaleTen : N^10 ≤ M^3*R^7)
+    (hfamilyGap : ∀ Mat∈Matrices, ∀ j∈family Mat, (rat Mat j 0:ℝ)∈Icc gapLo gapHi) :
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := 1+(|(v:ℝ)|+|(s:ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := 1+(|(r:ℝ)| *Vheight+|(e:ℝ)|)*(Q:ℝ)
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let Ccharts := ⌊Real.logb (5/4) ((gapHi-gapLo)/(12*ε))⌋₊+1
+    let sourceColor := fun Mat j i => (⌊((rat Mat j i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat Mat j i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ Mat∈Matrices, ∀ j∈family Mat, sourceColor Mat j 0=sourceColor Mat j 1) →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, iteratedDeriv 2 (f i) (x Mat j i)/2=(rat Mat j i:ℝ)) →
+    let q := fun Mat j i => (rat Mat j i).den
+    let mu := fun Mat j i => iteratedDeriv 3 (f i) (round (x Mat j i))/6
+    let ell := fun Mat j i => deriv (f i) (round (x Mat j i))
+    let b := fun Mat j i => (⌊(q Mat j i:ℝ)*ell Mat j i⌋+(parity Mat j i:ℕ) : ℤ)
+    let cround := fun Mat j i => round ((q Mat j i:ℝ)*ell Mat j i)
+    let tau := fun Mat j i => ((b Mat j i:ℝ)-(q Mat j i:ℝ)*ell Mat j i)/2
+    let dual := fun Mat j i => -2*mu Mat j i*(Real.sqrt (2/(3*mu Mat j i*(q Mat j i:ℝ))))^3
+    let cloud := fun Mat j i => (![Int.fract (-(vinv Mat j i:ℝ)*b Mat j i/q Mat j i),
+      Int.fract (-(vinv Mat j i:ℝ)/q Mat j i),dual Mat j i/Real.sqrt K₀,
+      (3*dual Mat j i*tau Mat j i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ Mat∈Matrices, ∀ j∈family Mat, b Mat j 0-cround Mat j 0=b Mat j 1-cround Mat j 1) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, ∀ a, |cloud Mat j 0 a-cloud Mat j 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/N^2 ≤ 1/2 → N ≤ R^2 → R ≤ N → N^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*N →
+    (∀ Mat∈Matrices, Mat 0*Mat 3-Mat 1*Mat 2=1) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, (Mat 2:ℝ)*(rat Mat j 0:ℝ)+Mat 3=(q Mat j 1:ℝ)/q Mat j 0) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, ((Mat 0:ℝ)*(rat Mat j 0:ℝ)+Mat 1)/
+      ((Mat 2:ℝ)*(rat Mat j 0:ℝ)+Mat 3)=(rat Mat j 1:ℝ)) →
+    (∀ Mat∈Matrices, |(Mat 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := N/(Cphys+2)
+    2 ≤ N →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, x Mat j i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, ∀ i, x Mat j i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, |(anchor Mat j:ℝ)-(rat Mat j 0:ℝ)| ≤ ε) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, 256*((anchor Mat j).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ Mat∈Matrices, ∀ j∈family Mat, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor Mat j).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/N
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/N
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 →
+    61*Ccurv*Cphys ≤ Bcut →
+    let Blabels := 6+216*(⌊Real.logb 2 (P₁*P₂)⌋₊+1)
+    let Γ := Cphys/κ
+    let C := Γ*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Cfirst := 128*Cphys*(Γ^2*C+Γ*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Csecond := 32*(modelPhaseJetCoefficient σ 3+δ)/κ^2
+    let Ccount := 32*(Blabels:ℝ)*Cphys*Cfirst/κ
+    ∀ length : ℝ, 0 < length →
+    (∀ Mat∈Matrices, Mat 2 ≠ 0) →
+    (∀ Mat∈Matrices, 2*Csecond*N*R^2/M < |(Mat 2:ℝ)|) →
+    let scale := κ/(16*(Blabels:ℝ)*Cphys)
+    let Coeff := 34*(Ccharts:ℝ)*Ccount*R^4/((scale*length)^2*N^2)
+    ∀ Gamma : ℝ, 0 ≤ Gamma →
+    (∀ Mat∈Matrices, |(Mat 2:ℝ)| ≤ Gamma) →
+    let ShortCost := max ((6+Ccharts*(105+544*Blabels):ℕ):ℝ)
+      (2*(6+105*(Ccharts:ℝ))+34*(Ccharts:ℝ)*length)
+    ∑ Mat∈Matrices,((family Mat).card:ℝ) ≤
+      ((2*Gamma+1)*(2*Uband+5)^2)*(Gamma*ShortCost+Coeff) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_actual_fourier_matrix_family_sum Uref Refs (Bselect:=Bselect) (gapLo:=gapLo) (gapHi:=gapHi) Matrices family Q K₀ rat vinv parity anchor e r v s (σ:=σ) (δ:=δ) (T:=T) (M:=M) (N:=N) (R:=R) (base:=base) (Bcut:=Bcut) (lambda:=lambda) (Uband:=Uband) (θ:=θ) (F:=F) (A:=A) (W:=W) (x:=x) hσ hδ hF hT hM hN hR hRM hQ hscale hmesh hA hW hx hwindow hden hlambda hUband hθ hθmax hcurv hinv hchart horientation hBcut hs hrefSet hparentSet hsep hwideL hwideU hUref hBselectSize hcutMargin hselectedWrap hreferenceDen hgapWidth hRQ hselectedUpper hscaleTen hfamilyGap
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (Y : Finset ι) (F : ℝ → ℝ)
+      (N : ℕ) (s : ℤ) (H : ι → ℤ → ℕ)
+      (η T M R U : ℝ) (y x₁ x₂ : ι → ℝ),
+      1 ≤ N → (∀ i∈Y, ∀ k, H i k ≤ N) →
+      0 < η → η ≤ 1/8 → (∀ i∈Y, y i∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R → 0 < U →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U →
+      (∀ i∈Y, x₁ i∈Icc M (2*M)) → (∀ i∈Y, x₂ i∈Icc M (2*M)) →
+      (∀ i∈Y, ∀ j∈Y, i≠j → y i=y j → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      let h := fun i w => iteratedDeriv 2 (f i) w/2
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈Y, U/(4*R^2) ≤ h i (x₂ i)-h i (x₁ i) ∧
+        h i (x₂ i)-h i (x₁ i) ≤ 7*U/(2*R^2)) →
+      ∃ (S : ι → Finset ℤ) (anchor : ι → ℤ → ℚ) (za : ι → ℤ → ℝ),
+        (∀ i∈Y,
+          (∀ k : ℤ, k∈(S i) ↔ (x₁ i)+(N:ℝ)/4 ≤ t k ∧ t k ≤ (x₂ i)-(N:ℝ)/4) ∧
+        (∀ k∈(S i), (za i) k∈Ioo (x₁ i) (x₂ i) ∧ (h i) ((za i) k)=((anchor i) k:ℝ) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i) (x₁ i)) ((h i) (x₂ i)) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i) (t k)-delta) ((h i) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h i) (t k)-delta) ((h i) (t k)+delta) → ((anchor i) k).den ≤ a.den) ∧
+        (∀ k∈(S i), |(za i) k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ ((S i).card:ℝ) ∧ ((S i).card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          (((S i).filter (fun k => Q ≤ ((anchor i) k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      let Sall := Y.biUnion (fun i => (S i).image (fun k => (i,k)))
+      let Good := fun i => 2*(anchor i.1 i.2).den ≤ Q ∧
+        128*σ*R^2 ≤ c*(Q:ℝ)*(anchor i.1 i.2).den
+      let G := Sall.filter Good
+      let Dlow := 128*σ*R^2/(c*(Q:ℝ))
+      let Khigh := Q/2+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ∃ (r : ι × ℤ → ℚ) (z : ι × ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i.1 i.2:ℝ) < r i ∧ |(r i:ℝ)-(anchor i.1 i.2:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i.1 i.2) (za i.1 i.2+(N:ℝ)/16) ∧
+        iteratedDeriv 2 (f i.1) (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo (x₁ i.1) (x₂ i.1)) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i.2-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i.1) (m i)/6
+      let ℓ := fun i => deriv (f i.1) (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : ι × ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := 2*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(128*σ/c)^2+128*σ/c)
+      (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1 i.2),(𝐞 (f i.1 n):ℂ)‖) ≤ C*(((Y.image y).card:ℝ)*(N:ℝ)*Cost+FourierCost) ∧
+      (2*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1 i.2),(𝐞 (f i.1 n):ℂ)‖) ≤
+          C*(((Y.image y).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlow+1))+FourierCost)) := by
+  obtain ⟨C,hC,hentry⟩ :=
+    TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_tagged_gap_controlled_complement_fourier hσ hc hJ
+  refine ⟨C,hC,?_⟩
+  intro ι Y F N s H η T M R U y x₁ x₂ hN hH hη hηmax hy hT hM hR hU
+    hf hbound htests hnegative hphase hbuffer hfourBudget hquadBudget hUlarge hx₁ hx₂
+    hGapSep f h t L delta Vbound hgap
+  obtain ⟨S,anchor,za,hinfo,hconsumer⟩ :=
+    hentry ι Y F N s H η T M R U y x₁ x₂ hN hH hη hηmax hy hT hM hR hU
+      hf hbound htests hnegative hphase hbuffer hfourBudget hquadBudget hUlarge hx₁ hx₂ hGapSep hgap
+  refine ⟨S,anchor,za,hinfo,?_⟩
+  intro Q hQ hQN Sall Good G Dlow Khigh Dhigh Cost
+  obtain ⟨r,z,hr,hzg,_hdense,hrest⟩ :=
+    hconsumer Q hQ hQN 2 (128*σ) (by norm_num) hQ le_rfl
+  refine ⟨r,z,hr,hzg,?_⟩
+  have he : 64*σ*R^2/(c*((Q:ℝ)/2))=Dlow := by dsimp only [Dlow]; ring
+  simpa only [Nat.cast_ofNat,he] using hrest
+
+example
+    (F : ℝ → ℝ) (Y S : Finset ℝ)
+    {σ c J η T M N R U : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : ∀ y∈Y, y∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R) (hU : 0 < U)
+    (hphase : T*N*R^2=M^3)
+    (hsep : ∀ a∈S, ∀ b∈S, a≠b → U/(4*R^2) ≤ |a-b|)
+    (hgapUpper : ∀ a∈S, ∀ b∈S, a<b →
+      (∀ t∈S, ¬(a<t ∧ t<b)) → b-a ≤ 7*U/(2*R^2)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let V := (Y ×ˢ (S ×ˢ S)).filter (fun i =>
+      i.2.1 < i.2.2 ∧ (∀ t∈S, ¬(i.2.1 < t ∧ t < i.2.2)) ∧
+        i.2.1 < h i.1 (2*M) ∧ h i.1 M < i.2.2)
+    let G := V.filter (fun i => h i.1 M ≤ i.2.1 ∧ i.2.2 ≤ h i.1 (2*M))
+    (V.card:ℝ) ≤ ((12*J/σ)*M/(N*U)+2)*(Y.card:ℝ) ∧
+    (V \ G).card ≤ 2*Y.card ∧ (G.image Prod.fst).card ≤ Y.card ∧
+    ∃ x₁ x₂ : ℝ × (ℝ × ℝ) → ℝ,
+      (∀ i∈G, x₁ i∈Icc M (2*M) ∧ x₂ i∈Icc M (2*M) ∧ x₁ i < x₂ i ∧
+        h i.1 (x₁ i)=i.2.1 ∧ h i.1 (x₂ i)=i.2.2 ∧
+        U/(4*R^2) ≤ h i.1 (x₂ i)-h i.1 (x₁ i) ∧
+        h i.1 (x₂ i)-h i.1 (x₁ i) ≤ 7*U/(2*R^2)) ∧
+      (∀ i∈G, ∀ j∈G, i≠j → i.1=j.1 → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_reference_family_interior_geometry F Y S (σ:=σ) (c:=c) (J:=J) (η:=η) (T:=T) (M:=M) (N:=N) (R:=R) (U:=U) hσ hc hJ hη hηmax hy hf hbound htests hnegative hT hM hN hR hU hphase hsep hgapUpper
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (Y : Finset ℝ)
+      (N : ℕ) (s : ℤ) (H : (ℝ × (ℝ × ℝ)) → ℤ → ℕ)
+      (η T M R U : ℝ),
+      1 ≤ N → (∀ i : ℝ × (ℝ × ℝ), i.1∈Y → ∀ k, H i k ≤ N) →
+      0 < η → η ≤ 1/8 → (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R → 0 < U → U ≤ R^2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let curvatureScale := 3*J*T/(2*σ*M^2)
+    ∃ Href : ℤ, 2 ≤ Href ∧ ∃ Refs : Finset ℝ,
+      (∀ q : ℚ, (q.den:ℤ) ≤ Href → |(q:ℝ)| ≤ curvatureScale → (q:ℝ) ∈ Refs) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, ∀ q : ℚ, (q.den:ℤ) ≤ Href →
+        (q:ℝ) ∈ Icc a b → (q:ℝ) ∈ Refs) ∧
+      (∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ -curvatureScale ∧ curvatureScale ≤ u) ∧
+      (∀ z ∈ Refs, |z| ≤ curvatureScale+1) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), |h y x| ≤ curvatureScale) ∧
+      (∀ z ∈ Refs,
+        (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ Href) ∨
+        (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+          R^2 ≤ U*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ Href ∧ (u:ℝ)/v ∈ Refs ∧ |m*v-u*n|=1)) ∧
+      (∀ x ∈ Refs, ∀ z ∈ Refs, x ≠ z → U/(4*R^2) < |x-z|) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M),
+        ∃ q ∈ Refs, |h y x-q| ≤ 7*U/(4*R^2)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ q ∈ Refs,
+        q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ x ∈ Icc M (2*M), h y x=q) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b →
+        (∀ z ∈ Refs, ¬ (a < z ∧ z < b)) →
+        U/(4*R^2) < b-a ∧ b-a ≤ 7*U/(2*R^2) ∧
+        (∃ m n u v : ℤ, a=(m:ℝ)/n ∧ b=(u:ℝ)/v ∧
+          IsCoprime m n ∧ IsCoprime u v ∧ 0 < n ∧ 0 < v ∧
+          R^2 ≤ U*((max n v:ℤ):ℝ)^2) ∧
+        (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), ∀ z ∈ Icc M (2*M),
+          h y x=a → h y z=b → |z-x| ≤ (14*σ/c)*U*N)) ∧
+    let V := (Y ×ˢ (Refs ×ˢ Refs)).filter (fun i =>
+      i.2.1 < i.2.2 ∧ (∀ t∈Refs, ¬(i.2.1 < t ∧ t < i.2.2)) ∧
+        i.2.1 < h i.1 (2*M) ∧ h i.1 M < i.2.2)
+    let Gref := V.filter (fun i => h i.1 M ≤ i.2.1 ∧ i.2.2 ≤ h i.1 (2*M))
+    (V.card:ℝ) ≤ ((12*J/σ)*M/(N*U)+2)*(Y.card:ℝ) ∧
+    (V \ Gref).card ≤ 2*Y.card ∧ (Gref.image Prod.fst).card ≤ Y.card ∧
+    ∃ x₁ x₂ : ℝ × (ℝ × ℝ) → ℝ,
+      (∀ i∈Gref, x₁ i∈Icc M (2*M) ∧ x₂ i∈Icc M (2*M) ∧ x₁ i < x₂ i ∧
+        h i.1 (x₁ i)=i.2.1 ∧ h i.1 (x₂ i)=i.2.2 ∧
+        U/(4*R^2) ≤ h i.1 (x₂ i)-h i.1 (x₁ i) ∧
+        h i.1 (x₂ i)-h i.1 (x₁ i) ≤ 7*U/(2*R^2)) ∧
+      (∀ i∈Gref, ∀ j∈Gref, i≠j → i.1=j.1 → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) ∧
+      letI : DecidableEq (ℝ × (ℝ × ℝ)) := Classical.decEq _
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ (S : (ℝ × (ℝ × ℝ)) → Finset ℤ) (anchor : (ℝ × (ℝ × ℝ)) → ℤ → ℚ) (za : (ℝ × (ℝ × ℝ)) → ℤ → ℝ),
+        (∀ i∈Gref,
+          (∀ k : ℤ, k∈(S i) ↔ (x₁ i)+(N:ℝ)/4 ≤ t k ∧ t k ≤ (x₂ i)-(N:ℝ)/4) ∧
+        (∀ k∈(S i), (za i) k∈Ioo (x₁ i) (x₂ i) ∧ (h i.1) ((za i) k)=((anchor i) k:ℝ) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (x₁ i)) ((h i.1) (x₂ i)) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) → ((anchor i) k).den ≤ a.den) ∧
+        (∀ k∈(S i), |(za i) k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ ((S i).card:ℝ) ∧ ((S i).card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          (((S i).filter (fun k => Q ≤ ((anchor i) k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      ∀ (Acut : ℕ) (Bmajor : ℝ), 2 ≤ Acut → Acut ≤ Q → 128*σ ≤ Bmajor →
+      let Sall := Gref.biUnion (fun i => (S i).image (fun k => (i,k)))
+      let Good := fun i => Acut*(anchor i.1 i.2).den ≤ Q ∧
+        Bmajor*R^2 ≤ c*(Q:ℝ)*(anchor i.1 i.2).den
+      let G := Sall.filter Good
+      let Dlow := Bmajor*R^2/(c*(Q:ℝ))
+      let Khigh := Q/Acut+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Dlog := 64*σ*R^2/(c*((Q:ℝ)/Acut))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ∃ (r : (ℝ × (ℝ × ℝ)) × ℤ → ℚ) (z : (ℝ × (ℝ × ℝ)) × ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i.1 i.2:ℝ) < r i ∧ |(r i:ℝ)-(anchor i.1 i.2:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i.1 i.2) (za i.1 i.2+(N:ℝ)/16) ∧
+        iteratedDeriv 2 (f i.1.1) (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo (x₁ i.1) (x₂ i.1)) ∧
+      (768 ≤ Acut → 24576*σ ≤ Bmajor →
+        ∀ i∈G, 256*((anchor i.1 i.2).den:ℝ) ≤ (Q:ℝ)/3 ∧
+          ∀ eps : ℝ, delta ≤ eps → 256 ≤ 2*eps*((Q:ℝ)/3)*(anchor i.1 i.2).den) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i.2-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i.1.1) (m i)/6
+      let ℓ := fun i => deriv (f i.1.1) (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : (ℝ × (ℝ × ℝ)) × ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := (Acut:ℝ)*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(Bmajor/c)^2+Bmajor/c)
+      (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤ C*(((Gref.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost) ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤
+          C*(((Gref.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_constructed_reference_family_source_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    (F : ℝ → ℝ) (Y S : Finset ℝ)
+    {σ c J η T M N R U : ℝ}
+    (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J)
+    (hη : 0 < η) (hηmax : η ≤ 1/8) (hy : ∀ y∈Y, y∈Icc (1:ℝ) 2)
+    (hf : ∀ w, 0 < w → ContDiffAt ℝ ∞ F w)
+    (hbound : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+        (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|)
+    (hnegative : ∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N) (hR : 0 < R) (hU : 0 < U)
+    (hphase : T*N*R^2=M^3)
+    (hsep : ∀ a∈S, ∀ b∈S, a≠b → U/(4*R^2) ≤ |a-b|)
+    (hgapUpper : ∀ a∈S, ∀ b∈S, a<b →
+      (∀ t∈S, ¬(a<t ∧ t<b)) → b-a ≤ 7*U/(2*R^2)) :
+    let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let V := (Y ×ˢ (S ×ˢ S)).filter (fun i =>
+      i.2.1 < i.2.2 ∧ (∀ t∈S, ¬(i.2.1 < t ∧ t < i.2.2)) ∧
+        i.2.1 < h i.1 (2*M) ∧ h i.1 M < i.2.2)
+    let G := V.filter (fun i => h i.1 M ≤ i.2.1 ∧ i.2.2 ≤ h i.1 (2*M))
+    (V.card:ℝ) ≤ ((12*J/σ)*M/(N*U)+2)*(Y.card:ℝ) ∧
+    (V \ G).card ≤ 2*Y.card ∧ (G.image Prod.fst).card ≤ Y.card ∧
+    ∃ x₁ x₂ : ℝ × (ℝ × ℝ) → ℝ,
+      (∀ i∈G, x₁ i∈Icc M (2*M) ∧ x₂ i∈Icc M (2*M) ∧ x₁ i < x₂ i ∧
+        h i.1 (x₁ i)=i.2.1 ∧ h i.1 (x₂ i)=i.2.2 ∧
+        U/(4*R^2) ≤ h i.1 (x₂ i)-h i.1 (x₁ i) ∧
+        h i.1 (x₂ i)-h i.1 (x₁ i) ≤ 7*U/(2*R^2)) ∧
+      (∀ i∈G, ∀ j∈G, i≠j → i.1=j.1 → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) ∧
+      (∀ (s : ℝ) (I : Finset ℤ),
+        (∀ k∈I, s+N*(k:ℝ)∈Icc M (2*M)) →
+        (∀ y∈Y, ∃ l∈S, ∃ u∈S, l ≤ h y M ∧ h y (2*M) ≤ u) →
+        let Bad := (Y ×ˢ I).filter (fun p => ¬∃ i∈G, p.1=i.1 ∧
+          x₁ i+N/4 ≤ s+N*(p.2:ℝ) ∧ s+N*(p.2:ℝ) ≤ x₂ i-N/4)
+        let Inner := (G ×ˢ I).filter (fun i =>
+          x₁ i.1+N/4 ≤ s+N*(i.2:ℝ) ∧ s+N*(i.2:ℝ) ≤ x₂ i.1-N/4)
+        let ErrorCount := (Y.card:ℝ)*((24*J/σ)*M/(N*U)+28*σ*U/c+4)
+        (Bad.card:ℝ) ≤ ErrorCount ∧
+        ∀ (L : ℤ → ℤ) (H : ℝ → ℤ → ℕ),
+          (∀ y∈Y, ∀ k∈I, (H y k:ℝ) ≤ N) →
+          (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),
+            (𝐞 (f p.1 n):ℂ)‖) ≤
+          (∑ i∈Inner, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),
+            (𝐞 (f i.1.1 n):ℂ)‖)+N*ErrorCount) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_reference_family_whole_grid_geometry F Y S (σ:=σ) (c:=c) (J:=J) (η:=η) (T:=T) (M:=M) (N:=N) (R:=R) (U:=U) hσ hc hJ hη hηmax hy hf hbound htests hnegative hT hM hN hR hU hphase hsep hgapUpper
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (Y : Finset ℝ)
+      (N : ℕ) (s : ℤ) (H : ℝ → ℤ → ℕ)
+      (η T M R U : ℝ),
+      1 ≤ N → (∀ y∈Y, ∀ k, H y k ≤ N) →
+      0 < η → η ≤ 1/8 → (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R → 0 < U → U ≤ R^2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let curvatureScale := 3*J*T/(2*σ*M^2)
+    ∃ Href : ℤ, 2 ≤ Href ∧ ∃ Refs : Finset ℝ,
+      (∀ q : ℚ, (q.den:ℤ) ≤ Href → |(q:ℝ)| ≤ curvatureScale → (q:ℝ) ∈ Refs) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, ∀ q : ℚ, (q.den:ℤ) ≤ Href →
+        (q:ℝ) ∈ Icc a b → (q:ℝ) ∈ Refs) ∧
+      (∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ -curvatureScale ∧ curvatureScale ≤ u) ∧
+      (∀ z ∈ Refs, |z| ≤ curvatureScale+1) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), |h y x| ≤ curvatureScale) ∧
+      (∀ z ∈ Refs,
+        (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ Href) ∨
+        (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+          R^2 ≤ U*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ Href ∧ (u:ℝ)/v ∈ Refs ∧ |m*v-u*n|=1)) ∧
+      (∀ x ∈ Refs, ∀ z ∈ Refs, x ≠ z → U/(4*R^2) < |x-z|) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M),
+        ∃ q ∈ Refs, |h y x-q| ≤ 7*U/(4*R^2)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ q ∈ Refs,
+        q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ x ∈ Icc M (2*M), h y x=q) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b →
+        (∀ z ∈ Refs, ¬ (a < z ∧ z < b)) →
+        U/(4*R^2) < b-a ∧ b-a ≤ 7*U/(2*R^2) ∧
+        (∃ m n u v : ℤ, a=(m:ℝ)/n ∧ b=(u:ℝ)/v ∧
+          IsCoprime m n ∧ IsCoprime u v ∧ 0 < n ∧ 0 < v ∧
+          R^2 ≤ U*((max n v:ℤ):ℝ)^2) ∧
+        (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), ∀ z ∈ Icc M (2*M),
+          h y x=a → h y z=b → |z-x| ≤ (14*σ/c)*U*N)) ∧
+    let V := (Y ×ˢ (Refs ×ˢ Refs)).filter (fun i =>
+      i.2.1 < i.2.2 ∧ (∀ t∈Refs, ¬(i.2.1 < t ∧ t < i.2.2)) ∧
+        i.2.1 < h i.1 (2*M) ∧ h i.1 M < i.2.2)
+    let Gref := V.filter (fun i => h i.1 M ≤ i.2.1 ∧ i.2.2 ≤ h i.1 (2*M))
+    (V.card:ℝ) ≤ ((12*J/σ)*M/(N*U)+2)*(Y.card:ℝ) ∧
+    (V \ Gref).card ≤ 2*Y.card ∧ (Gref.image Prod.fst).card ≤ Y.card ∧
+    ∃ x₁ x₂ : ℝ × (ℝ × ℝ) → ℝ,
+      (∀ i∈Gref, x₁ i∈Icc M (2*M) ∧ x₂ i∈Icc M (2*M) ∧ x₁ i < x₂ i ∧
+        h i.1 (x₁ i)=i.2.1 ∧ h i.1 (x₂ i)=i.2.2 ∧
+        U/(4*R^2) ≤ h i.1 (x₂ i)-h i.1 (x₁ i) ∧
+        h i.1 (x₂ i)-h i.1 (x₁ i) ≤ 7*U/(2*R^2)) ∧
+      (∀ i∈Gref, ∀ j∈Gref, i≠j → i.1=j.1 → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) ∧
+      letI : DecidableEq (ℝ × (ℝ × ℝ)) := Classical.decEq _
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∃ (S : (ℝ × (ℝ × ℝ)) → Finset ℤ) (anchor : (ℝ × (ℝ × ℝ)) → ℤ → ℚ) (za : (ℝ × (ℝ × ℝ)) → ℤ → ℝ),
+        (∀ i∈Gref,
+          (∀ k : ℤ, k∈(S i) ↔ (x₁ i)+(N:ℝ)/4 ≤ t k ∧ t k ≤ (x₂ i)-(N:ℝ)/4) ∧
+        (∀ k∈(S i), (za i) k∈Ioo (x₁ i) (x₂ i) ∧ (h i.1) ((za i) k)=((anchor i) k:ℝ) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (x₁ i)) ((h i.1) (x₂ i)) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) → ((anchor i) k).den ≤ a.den) ∧
+        (∀ k∈(S i), |(za i) k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ ((S i).card:ℝ) ∧ ((S i).card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          (((S i).filter (fun k => Q ≤ ((anchor i) k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      ∀ (Acut : ℕ) (Bmajor : ℝ), 2 ≤ Acut → Acut ≤ Q → 128*σ ≤ Bmajor →
+      let Sall := Gref.biUnion (fun i => (S i).image (fun k => (i,k)))
+      let Good := fun i => Acut*(anchor i.1 i.2).den ≤ Q ∧
+        Bmajor*R^2 ≤ c*(Q:ℝ)*(anchor i.1 i.2).den
+      let G := Sall.filter Good
+      let Dlow := Bmajor*R^2/(c*(Q:ℝ))
+      let Khigh := Q/Acut+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Dlog := 64*σ*R^2/(c*((Q:ℝ)/Acut))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ∃ (r : (ℝ × (ℝ × ℝ)) × ℤ → ℚ) (z : (ℝ × (ℝ × ℝ)) × ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i.1 i.2:ℝ) < r i ∧ |(r i:ℝ)-(anchor i.1 i.2:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i.1 i.2) (za i.1 i.2+(N:ℝ)/16) ∧
+        iteratedDeriv 2 (f i.1.1) (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo (x₁ i.1) (x₂ i.1)) ∧
+      (768 ≤ Acut → 24576*σ ≤ Bmajor →
+        ∀ i∈G, 256*((anchor i.1 i.2).den:ℝ) ≤ (Q:ℝ)/3 ∧
+          ∀ eps : ℝ, delta ≤ eps → 256 ≤ 2*eps*((Q:ℝ)/3)*(anchor i.1 i.2).den) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i.2-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i.1.1) (m i)/6
+      let ℓ := fun i => deriv (f i.1.1) (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : (ℝ × (ℝ × ℝ)) × ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := (Acut:ℝ)*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(Bmajor/c)^2+Bmajor/c)
+      (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤ C*(((Gref.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost) ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤
+          C*(((Gref.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)) ∧
+      ∀ (I : Finset ℤ), (∀ j∈I, t j∈Icc M (2*M)) →
+      let BoundaryCost := (Y.card:ℝ)*((24*J/σ)*M/U+(28*σ/c)*(N:ℝ)*U+4*(N:ℝ))
+      (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),(𝐞 (f p.1 n):ℂ)‖) ≤
+        C*(((Gref.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost)+BoundaryCost ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),(𝐞 (f p.1 n):ℂ)‖) ≤
+          C*(((Gref.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)+BoundaryCost) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_constructed_reference_family_whole_grid_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+
+example
+    {σ ε : ℝ} (hσ : 0 < σ) (P : ℕ) (hP : 5 ≤ P) (hε : 0 < ε) :
+    ∃ δ η₀ a c J : ℝ, 0 < δ ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < c ∧ 0 < J ∧
+      ∀ (M : ℝ) (F : ℝ → ℝ), 1 ≤ M →
+      Expdb.IsApproximateModelPhaseFunction F σ (P+2) δ →
+      ∃ Fext : ℝ → ℝ,
+        (∀ w, 0 < w → ContDiffAt ℝ ∞ Fext w) ∧
+        (∀ w∈Icc (1/2:ℝ) 3, ∀ p ≤ P+1,
+          |iteratedDeriv (p+1) Fext w-iteratedDeriv p (Expdb.modelPhase σ) w| ≤ ε) ∧
+        (∀ x ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fext x| ≤ J) ∧
+        (∀ x ∈ Icc (1/2:ℝ) 3, ∀ j,
+          c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+            (fun i : Fin 4 => iteratedDeriv (i.val+3) Fext x) j|) ∧
+        (∀ x ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 Fext x ≤ -c) ∧
+        (∀ (T : ℝ) (m n : ℕ), M ≤ (m:ℝ) → (n:ℝ) ≤ 2*M →
+          ‖Expdb.exponentialSumAt F T M m n-Expdb.exponentialSumAt Fext T M m n‖ ≤ 6) ∧
+        ∀ {ι : Type*} (S : Finset ι) (y : ι → ℝ) (η : ℝ),
+          (∀ i∈S, y i∈Icc (1:ℝ) 2) → 0 < η → η ≤ η₀ →
+          let color := fun i => ⌊y i/a⌋
+          let Cap := 4/a+3
+          ((S.image color).card:ℝ) ≤ Cap ∧
+          (∀ z : ι → ℂ, ‖∑ i∈S,z i‖^12 ≤
+            Cap^11*∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),z i‖^12) ∧
+          ∀ j∈S.image color, ∃ i₀∈S, color i₀=j ∧
+            ∀ xi T N R : ℝ, 0 < xi → 0 < T → 0 < R → T*N*R^2=M^3 →
+            let Tnew := T*σ*y i₀/xi
+            let Rnew := R*Real.sqrt (xi/(σ*y i₀))
+            0 < Tnew ∧ 0 < Rnew ∧ Rnew^2=R^2*xi/(σ*y i₀) ∧
+              Tnew*N*Rnew^2=M^3 ∧
+            c/(64*xi*R^2) ≤ TaoTrudgianYang2025.modelPhaseThirdLower (σ+1)/
+              (16*((σ+1)*(σ+2)+3)*Rnew^2) ∧
+            ∀ i∈S, color i=j →
+              let G := fun u => (Fext u-Fext (u+η*y i))/(σ*η*y i₀)
+              let f := fun w => T*(Fext (w/M)-Fext (w/M+η*y i))/(xi*η)
+              Expdb.IsApproximateModelPhaseFunction G (σ+1) P ε ∧
+                (∀ A x : ℝ, heathBrownPhysicalPhase G Tnew M A 1 x=f (A+x)) ∧
+                (∀ (A : ℤ) (w : ℝ) (k : ℕ),
+                  iteratedDeriv k (heathBrownPhysicalPhase G Tnew M A 1) (round (w-A))=
+                    iteratedDeriv k f (round w)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.approximateModelPhase_enlarged_colored_linked_chart_source_tests (σ:=σ) (ε:=ε) hσ P hP hε
+
+
 end HuxleyPhysicalReferenceRegression
