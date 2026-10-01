@@ -78381,4 +78381,4366 @@ example
         2*Blower*(3+2*Real.log (DlowerCut+2))+(1/2:ℝ)*(2*DlowerCut+1))) :=
   TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_actual_fourier_charted_triangular_source_cutoff_sample_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
 
+example
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ) (hMat : Function.Injective Mat)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ)
+    (F : Fin 2 → ℝ → ℝ) (A Wlim : Fin 2 → ℝ) (za zb : ℤ → ℝ) (AlenA Alen : ℤ → ℕ)
+    (N : ℕ) (Za Z : ℤ) (W : ℝ)
+    {σ δ T M : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : ∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 2 δ)
+    (hT : 0 < T) (hM : 0 < M) (hN : 0 < N)
+    (hA : ∀ i, M ≤ A i) (hW : ∀ i, A i+Wlim i ≤ 2*M)
+    (hbase : ∀ ij∈P, W ≤ za ij.1.1)
+    (hz : ∀ ij∈P, zb ij.2.1∈Ioo 0 (Wlim 1))
+    (hgeometryA : ∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ))
+    (hgeometry : ∀ ij∈P, N ≤ Alen ij.2.1 ∧ Alen ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(Alen ij.2.1:ℤ)=Z+(N:ℤ)*ij.2.1+2*(N:ℤ)) :
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*h 0 (za ij.1.1)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*h 0 (za ij.1.1)+Mat (entry ij) 3)=h 1 (zb ij.2.1)) →
+    let block := fun ij : (ℤ × Fin 2) × (ℤ × Fin 2) =>
+      ⌊(za ij.1.1-W)/(N:ℝ)⌋.toNat
+    let S := fun t ab => (P.filter (fun ij => entry ij=t ∧ gap ij=ab)).image block
+    ∃ pick : ℤ → ℝ × ℝ → ℕ → (ℤ × Fin 2) × (ℤ × Fin 2),
+      (∀ t∈P.image entry, ∀ ab∈P.image gap, ∀ j∈S t ab,
+        pick t ab j∈P ∧ entry (pick t ab j)=t ∧ gap (pick t ab j)=ab ∧
+        block (pick t ab j)=j ∧
+        za (pick t ab j).1.1∈Icc (W+(N:ℝ)*j) (W+(N:ℝ)*((j:ℝ)+1))) ∧
+      P.card ≤ 60*∑ t∈P.image entry, ∑ ab∈P.image gap, (S t ab).card :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.physicalModelPhase_reference_translation_window_selection P entry Mat hMat gap F A Wlim za zb AlenA Alen N Za Z W (σ:=σ) (δ:=δ) (T:=T) (M:=M) hσ hδ hF hT hM hN hA hW hbase hz hgeometryA hgeometry
+
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc E : ℝ) (chartKey : ℤ → ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2))) (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ) (Bmajor Cmajor : ℕ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {σ δ T M R base Bcut lambda Uband θ : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ} {x : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℝ},
+    Function.Injective Mat →
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, entry ij≠0) →
+    (∀ ij∈P, base ≤ za ij.1.1) →
+    (∀ ij∈P, x ij 0=za ij.1.1) →
+    (∀ ij∈P, x ij 1=zb ij.2.1) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey (entry ij)) →
+    (0 < σ) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, x ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < lambda) →
+    (0 ≤ Uband) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, lambda ≤ |(rat ij i:ℝ)| ∧ |(rat ij i:ℝ)| ≤ Uband) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, x ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := fun (ab : ℝ × ℝ) => 1+(|((v ab):ℝ)|+|((s ab):ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := fun (ab : ℝ × ℝ) => 1+(|((r ab):ℝ)| *Vheight+|((e ab):ℝ)|)*(Q:ℝ)
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let Ccharts := fun (ab : ℝ × ℝ) => ⌊Real.logb (5/4) ((ab.2-ab.1)/(12*ε))⌋₊+1
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ t∈P.image entry, Mat t 0*Mat t 3-Mat t 1*Mat t 2=1) →
+    (∀ ij∈P, (Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3)=(rat ij 1:ℝ)) →
+    (∀ t∈P.image entry, |(Mat t 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, x ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Blabels := fun ab => 6+216*(⌊Real.logb 2 (P₁ ab*P₂ ab)⌋₊+1)
+    let m0 := 6+Cmajor*(105+544*Bmajor)
+    (∀ ab∈Gaps, Blabels ab ≤ Bmajor) →
+    (∀ ab∈Gaps, Ccharts ab ≤ Cmajor) →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Aupper := 2*Cupper*(Cthird+1)*E^2*M^2/(κ*Lunit^3*(N:ℝ)^4)
+    let Bupper := Cupper*(Cthird+1)*E^2*M^2/(Lunit^2*(N:ℝ)^4*(Uref:ℝ))+
+      Dupper*(B+1)*E^2*M^2/(4*(N:ℝ)^4*(Uref:ℝ))
+    let Alower := 8*Clower*(Cthird+1)*R^4/(κ*Lunit^3*(N:ℝ)^2)
+    let Blower := 4*Clower*(Cthird+1)*R^4/(Lunit^2*(N:ℝ)^2*(Uref:ℝ))+
+      (4*Dlower*(B+1)*R^4)/(4*(N:ℝ)^2*(Uref:ℝ))
+    let DupperCut := θ*Uband
+    let DlowerCut := θ/lambda
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 2=0 ∧ Mat t 3=1 ∧ Mat t 1=t) →
+      (P.card:ℝ) ≤ 60*(4*(m0:ℝ)*(3*Aupper^((3:ℝ)⁻¹)*(DupperCut+2)^((2:ℝ)/3)+
+        2*Bupper*(3+2*Real.log (DupperCut+2))+(1/2:ℝ)*(2*DupperCut+1)))) ∧
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 1=0 ∧ Mat t 3=1 ∧ Mat t 2=t) →
+      (P.card:ℝ) ≤ 60*(4*(m0:ℝ)*(3*Alower^((3:ℝ)⁻¹)*(DlowerCut+2)^((2:ℝ)/3)+
+        2*Blower*(3+2*Real.log (DlowerCut+2))+(1/2:ℝ)*(2*DlowerCut+1)))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_actual_fourier_triangular_original_pair_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc E : ℝ) (chartKey : ℤ → ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2))) (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ) (Bmajor Cmajor : ℕ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {σ δ T M R base Bcut θ : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ} {x : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℝ},
+    Function.Injective Mat →
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, entry ij≠0) →
+    (∀ ij∈P, base ≤ za ij.1.1) →
+    (∀ ij∈P, x ij 0=za ij.1.1) →
+    (∀ ij∈P, x ij 1=zb ij.2.1) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey (entry ij)) →
+    (0 < σ) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, x ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, x ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := fun (ab : ℝ × ℝ) => 1+(|((v ab):ℝ)|+|((s ab):ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := fun (ab : ℝ × ℝ) => 1+(|((r ab):ℝ)| *Vheight+|((e ab):ℝ)|)*(Q:ℝ)
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let Ccharts := fun (ab : ℝ × ℝ) => ⌊Real.logb (5/4) ((ab.2-ab.1)/(12*ε))⌋₊+1
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ t∈P.image entry, Mat t 0*Mat t 3-Mat t 1*Mat t 2=1) →
+    (∀ ij∈P, (Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3)=(rat ij 1:ℝ)) →
+    (∀ t∈P.image entry, |(Mat t 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, x ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Blabels := fun ab => 6+216*(⌊Real.logb 2 (P₁ ab*P₂ ab)⌋₊+1)
+    let m0 := 6+Cmajor*(105+544*Bmajor)
+    (∀ ab∈Gaps, Blabels ab ≤ Bmajor) →
+    (∀ ab∈Gaps, Ccharts ab ≤ Cmajor) →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let Aupper := 2*Cupper*(Cthird+1)*E^2*M^2/(κ*Lunit^3*(N:ℝ)^4)
+    let Bupper := Cupper*(Cthird+1)*E^2*M^2/(Lunit^2*(N:ℝ)^4*(Uref:ℝ))+
+      Dupper*(B+1)*E^2*M^2/(4*(N:ℝ)^4*(Uref:ℝ))
+    let Alower := 8*Clower*(Cthird+1)*R^4/(κ*Lunit^3*(N:ℝ)^2)
+    let Blower := 4*Clower*(Cthird+1)*R^4/(Lunit^2*(N:ℝ)^2*(Uref:ℝ))+
+      (4*Dlower*(B+1)*R^4)/(4*(N:ℝ)^2*(Uref:ℝ))
+    let DupperCut := θ*Uband
+    let DlowerCut := θ/lambda
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 2=0 ∧ Mat t 3=1 ∧ Mat t 1=t) →
+      (P.card:ℝ) ≤ 60*(4*(m0:ℝ)*(3*Aupper^((3:ℝ)⁻¹)*(DupperCut+2)^((2:ℝ)/3)+
+        2*Bupper*(3+2*Real.log (DupperCut+2))+(1/2:ℝ)*(2*DupperCut+1)))) ∧
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 1=0 ∧ Mat t 3=1 ∧ Mat t 2=t) →
+      (P.card:ℝ) ≤ 60*(4*(m0:ℝ)*(3*Alower^((3:ℝ)⁻¹)*(DlowerCut+2)^((2:ℝ)/3)+
+        2*Blower*(3+2*Real.log (DlowerCut+2))+(1/2:ℝ)*(2*DlowerCut+1)))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_actual_fourier_triangular_original_source_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc E Lregime : ℝ) (chartKey : ℤ → ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2))) (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ) (Bmajor Cmajor : ℕ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {σ δ T M R base Bcut θ : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ} {x : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℝ},
+    Function.Injective Mat →
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, entry ij≠0) →
+    (∀ ij∈P, base ≤ za ij.1.1) →
+    (∀ ij∈P, x ij 0=za ij.1.1) →
+    (∀ ij∈P, x ij 1=zb ij.2.1) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    0 ≤ Lregime →
+    (N:ℝ)^4 ≤ M*R^3*Lregime^((3:ℝ)/2) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey (entry ij)) →
+    (0 < σ) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, x ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, x ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := fun (ab : ℝ × ℝ) => 1+(|((v ab):ℝ)|+|((s ab):ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := fun (ab : ℝ × ℝ) => 1+(|((r ab):ℝ)| *Vheight+|((e ab):ℝ)|)*(Q:ℝ)
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let Ccharts := fun (ab : ℝ × ℝ) => ⌊Real.logb (5/4) ((ab.2-ab.1)/(12*ε))⌋₊+1
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ t∈P.image entry, Mat t 0*Mat t 3-Mat t 1*Mat t 2=1) →
+    (∀ ij∈P, (Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3)=(rat ij 1:ℝ)) →
+    (∀ t∈P.image entry, |(Mat t 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, x ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Blabels := fun ab => 6+216*(⌊Real.logb 2 (P₁ ab*P₂ ab)⌋₊+1)
+    let m0 := 6+Cmajor*(105+544*Bmajor)
+    (∀ ab∈Gaps, Blabels ab ≤ Bmajor) →
+    (∀ ab∈Gaps, Ccharts ab ≤ Cmajor) →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let DupperCut := θ*Uband
+    let DlowerCut := θ/lambda
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 2=0 ∧ Mat t 3=1 ∧ Mat t 1=t) →
+      (P.card:ℝ) ≤ 240*(m0:ℝ)*CostUpper*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)*Lregime+
+          2*BupperConst*(3+2*Real.log (DupperCut+2))+
+          (3/2:ℝ)*DupperConst*Lregime^((3:ℝ)/2))) ∧
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 1=0 ∧ Mat t 3=1 ∧ Mat t 2=t) →
+      (P.card:ℝ) ≤ 240*(m0:ℝ)*CostLower*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)*Lregime+
+          2*BlowerConst*(3+2*Real.log (DlowerCut+2))+
+          (3/2:ℝ)*DlowerConst*Lregime^((3:ℝ)/2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_actual_fourier_triangular_original_source_regime_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ {σ Jref εloss E θ : ℝ}, 0 < σ → 0 ≤ Jref → 0 < εloss →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc : ℝ) (chartKey : ℤ → ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2))) (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {δ M R base Bcut : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ} {x : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℝ},
+    Function.Injective Mat →
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, entry ij≠0) →
+    (∀ ij∈P, base ≤ za ij.1.1) →
+    (∀ ij∈P, x ij 0=za ij.1.1) →
+    (∀ ij∈P, x ij 1=zb ij.2.1) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey (entry ij)) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, x ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, x ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((v ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ t∈P.image entry, Mat t 0*Mat t 3-Mat t 1*Mat t 2=1) →
+    (∀ ij∈P, (Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3)=(rat ij 1:ℝ)) →
+    (∀ t∈P.image entry, |(Mat t 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, x ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 2=0 ∧ Mat t 3=1 ∧ Mat t 1=t) →
+      (P.card:ℝ) ≤ (240*CostUpper*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+
+          2*BupperConst+(3/2:ℝ)*DupperConst))*T^εloss) ∧
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 1=0 ∧ Mat t 3=1 ∧ Mat t 2=t) →
+      (P.card:ℝ) ≤ (240*CostLower*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+
+          2*BlowerConst+(3/2:ℝ)*DlowerConst))*T^εloss) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_actual_fourier_triangular_original_source_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+
+example
+    {ι : Type*} (S : Finset ι) (Fsrc : ℝ → ℝ)
+    (y z : ι → ℝ) (rat : ι → ℚ) (Q : ℕ)
+    {σsrc csrc Usrc η Tsrc T M E σ δ θ a : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hη : 0 < η) (hηmax : η ≤ 1/8)
+    (hTsrc : 0 < Tsrc) (hT : 0 < T) (hM : 0 < M)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hscale : Tsrc ≤ E*T) (hQ : 0 < Q) (hθ : 0 < θ) (ha : 0 < a)
+    (hy : ∀ i∈S, y i∈Icc (1:ℝ) 2)
+    (hz : ∀ i∈S, z i∈Icc M (2*M))
+    (hreg : ∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w)
+    (hjets : ∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc)
+    (htests : ∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|)
+    (hden : ∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) :
+    let Fmodel := fun i u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*y i))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 2 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (y i)) (z i)/2=(rat i:ℝ)) →
+    let Hsrc := fun p : ℝ × ℝ =>
+      (iteratedDeriv 2 Fsrc p.2-iteratedDeriv 2 Fsrc (p.2+η*p.1))/(σsrc*η)
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let u := fun i => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun i => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun i => (⌊y i/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun i =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun i => ((rat i).den:ℝ)*deriv (f (y i)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : ι × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : ι × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    (∀ key∈V.image color, ∃ iref∈S, chart iref=key.1 ∧
+      let xcenter := z iref/M
+      let ycenter := y iref
+      xcenter∈Icc (1:ℝ) 2 ∧ ycenter∈Icc (1:ℝ) 2 ∧
+      ∀ ip∈V, color ip=key →
+        ‖((y ip.1,u ip.1):ℝ × ℝ)-(ycenter,Hsrc (ycenter,xcenter))‖ < a ∧
+        ‖((y ip.1,w ip.1):ℝ × ℝ)-(ycenter,(Hsrc (ycenter,xcenter))⁻¹)‖ < a) ∧
+    (∀ ip∈V, ∀ jp∈V, color ip=color jp →
+      |((rat jp.1).den:ℝ)/(rat ip.1).den-1| ≤ θ ∧
+      |((rat jp.1).num:ℝ)/(rat ip.1).num-1| ≤ θ ∧ offset ip = offset jp) ∧
+    ∀ coeff : ι × Fin 2 → ℂ, ‖∑ ip∈V,coeff ip‖^12 ≤
+      Cap^11*∑ key∈V.image color,
+        ‖∑ ip∈V.filter (fun ip => color ip=key),coeff ip‖^12 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_actual_source_joint_twelfth_partition (ι:=ι) S Fsrc y z rat Q (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (η:=η) (Tsrc:=Tsrc) (T:=T) (M:=M) (E:=E) (σ:=σ) (δ:=δ) (θ:=θ) (a:=a) hσsrc hcsrc hUsrc hη hηmax hTsrc hT hM hσ hδ hscale hQ hθ ha hy hz hreg hjets htests hden
+
+example
+    {εloss : ℝ} (hεloss : 0 < εloss) :
+    ∃ C > (0:ℝ),
+    ∀ {ι : Type huxleyNarrowV} [DecidableEq ι], ∀ (S : Finset ι) (Fsrc : ℝ → ℝ)
+    (y z : ι → ℝ) (rat : ι → ℚ) (v : ι → ℤ) (Nlen : ι → ℕ)
+    (Q K₀ : ℕ) [NeZero K₀] (Vscale Nphys Rphys : ℝ)
+    {σsrc csrc Usrc η Tsrc T M E σ δ θ a : ℝ},
+    (0 < σsrc) →
+    (0 < csrc) →
+    (0 < Usrc) →
+    (0 < η) →
+    (η ≤ 1/8) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (0 < σ) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (0 < θ) →
+    (0 < a) →
+    (θ < 1) →
+    (∀ i∈S, y i∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < Nphys) →
+    ((Q:ℝ)*Nphys ≤ (K₀:ℝ)*Rphys^2) →
+    let Fmodel := fun i u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*y i))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 2 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (y i)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (y i)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (y i)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+    let Hsrc := fun p : ℝ × ℝ =>
+      (iteratedDeriv 2 Fsrc p.2-iteratedDeriv 2 Fsrc (p.2+η*p.1))/(σsrc*η)
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun i => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun i => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun i => (⌊y i/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun i =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun i => ((rat i).den:ℝ)*deriv (f (y i)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : ι × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : ι × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun i => (rat i).den
+    let μ := fun i => iteratedDeriv 3 (f (y i)) (round (z i))/6
+    let ell := fun i => deriv (f (y i)) (round (z i))
+    let b := fun ip : ι × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : ι × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : ι × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let cloud := fun ip => (![Int.fract (x ip 0),Int.fract (x ip 1),
+      x ip 2/Real.sqrt K₀,x ip 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2*Vscale),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let Pall := (V ×ˢ V).filter (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let Fiber := fun key => V.filter (fun ip => color ip=key)
+    let Pairs := fun key => ((Fiber key) ×ˢ (Fiber key)).filter
+      (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let h := fun i => iteratedDeriv 2 (f (y i)) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    (∀ key∈V.image color, ∃ iref∈S, chart iref=key.1 ∧
+      let xcenter := z iref/M
+      let ycenter := y iref
+      xcenter∈Icc (1:ℝ) 2 ∧ ycenter∈Icc (1:ℝ) 2 ∧
+      ∀ ip∈V, color ip=key →
+        ‖((y ip.1,u ip.1):ℝ × ℝ)-(ycenter,Hsrc (ycenter,xcenter))‖ < a ∧
+        ‖((y ip.1,w ip.1):ℝ × ℝ)-(ycenter,(Hsrc (ycenter,xcenter))⁻¹)‖ < a) ∧
+    (∀ ip∈V, ∀ jp∈V, color ip=color jp →
+      |((rat jp.1).den:ℝ)/(rat ip.1).den-1| ≤ θ ∧
+      |((rat jp.1).num:ℝ)/(rat ip.1).num-1| ≤ θ ∧ offset ip = offset jp) ∧
+    ∃ Mat : ((ι × Fin 2) × (ι × Fin 2)) → Fin 4 → ℤ,
+      (∀ k : ZMod K₀,
+        (∑ ip∈V, ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+          C*Vscale*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+            ∑ key∈V.image color,((Fiber key).card:ℝ)^10*((Pairs key).card:ℝ)) ∧
+      (∀ ij∈Pall,
+        Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1 ∧
+        let t := (Mat ij 2:ℝ)*h ij.1.1+Mat ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((Mat ij 0:ℝ)*h ij.1.1+Mat ij 1)/t=h ij.2.1 ∧
+        |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |tau ij.1-tau ij.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(Mat ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 2:ℝ)*ell ij.1.1
+          let F₂ := ell ij.2.1-2*(Mat ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 0:ℝ)*ell ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(Mat ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          Mat ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (rat ij.2.1).num-(rat ij.1.1).num)) ∧
+      (∀ ij∈Pall, |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2*Vscale) ∧
+        |(Mat ij 2:ℝ)| ≤ Rphys^4/(6*Nphys^2*Vscale)) ∧
+      (∀ key, ∀ ij∈Pairs key,
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+          |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+          |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exists_positive_difference_actual_joint_source_sieve (εloss:=εloss) hεloss
+
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ C Dtype : ℝ, 0 < C ∧ 0 < Dtype ∧ ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale Rphys Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc T M δ θ a : ℝ},
+    (0 < η) →
+    (η ≤ 1/8) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (0 < θ) →
+    (0 < a) →
+    (θ < 1) →
+    (θ ≤ 1/(8*(L+3))) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*Rphys^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 2 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+    let Hsrc := fun p : ℝ × ℝ =>
+      (iteratedDeriv 2 Fsrc p.2-iteratedDeriv 2 Fsrc (p.2+η*p.1))/(σsrc*η)
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let ell := fun (i : ℝ × ℤ) => deriv (f (i.1)) (round (z i))
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let cloud := fun ip => (![Int.fract (x ip 0),Int.fract (x ip 1),
+      x ip 2/Real.sqrt K₀,x ip 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2*Vscale),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let Pall := (V ×ˢ V).filter (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let Fiber := fun key => V.filter (fun ip => color ip=key)
+    let Pairs := fun key => ((Fiber key) ×ˢ (Fiber key)).filter
+      (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let h := fun (i : ℝ × ℤ) => iteratedDeriv 2 (f (i.1)) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    let Δ := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    (∀ key∈V.image color, ∃ iref∈S, chart iref=key.1 ∧
+      let xcenter := z iref/M
+      let ycenter := iref.1
+      xcenter∈Icc (1:ℝ) 2 ∧ ycenter∈Icc (1:ℝ) 2 ∧
+      ∀ ip∈V, color ip=key →
+        ‖((ip.1.1,u ip.1):ℝ × ℝ)-(ycenter,Hsrc (ycenter,xcenter))‖ < a ∧
+        ‖((ip.1.1,w ip.1):ℝ × ℝ)-(ycenter,(Hsrc (ycenter,xcenter))⁻¹)‖ < a) ∧
+    (∀ ip∈V, ∀ jp∈V, color ip=color jp →
+      |((rat jp.1).den:ℝ)/(rat ip.1).den-1| ≤ θ ∧
+      |((rat jp.1).num:ℝ)/(rat ip.1).num-1| ≤ θ ∧ offset ip = offset jp) ∧
+    ∃ Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ,
+      (∀ k : ZMod K₀,
+        (∑ ip∈V, ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+          C*Vscale*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+            ∑ key∈V.image color,((Fiber key).card:ℝ)^10*((Pairs key).card:ℝ)) ∧
+      (∀ ij∈Pall,
+        Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1 ∧
+        let t := (Mat ij 2:ℝ)*h ij.1.1+Mat ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((Mat ij 0:ℝ)*h ij.1.1+Mat ij 1)/t=h ij.2.1 ∧
+        |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |tau ij.1-tau ij.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(Mat ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 2:ℝ)*ell ij.1.1
+          let F₂ := ell ij.2.1-2*(Mat ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 0:ℝ)*ell ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(Mat ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          Mat ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (rat ij.2.1).num-(rat ij.1.1).num)) ∧
+      (∀ ij∈Pall, |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2*Vscale) ∧
+        |(Mat ij 2:ℝ)| ≤ Rphys^4/(6*(N:ℝ)^2*Vscale)) ∧
+      (∀ key, ∀ ij∈Pairs key,
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+          |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+          |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0)) ∧
+      let TypeOne := fun key => (Pairs key).filter (fun ij =>
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ |(Mat ij 2:ℝ)| * Uband ≤ L))
+      ∀ key, (((TypeOne key).card:ℝ) ≤
+        Dtype*((S.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep)) ∧
+        (∀ ij∈Pairs key, ij∉TypeOne key →
+          (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+            |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+          (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+            |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+          (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧
+            8*Uband ≤ |(Mat ij 2:ℝ)| * lambda^2 ∧
+            64*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤ |(Mat ij 2:ℝ)| * κ^2*T)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exists_positive_difference_joint_type_one_source_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ C Dtype : ℝ, 0 < C ∧ 0 < Dtype ∧ ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale Rphys Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc T M δ θ a : ℝ},
+    (0 < η) →
+    (η ≤ 1/8) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (0 < θ) →
+    (0 < a) →
+    (θ < 1) →
+    (θ ≤ 1/(8*(L+3))) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*Rphys^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 2 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+    let Hsrc := fun p : ℝ × ℝ =>
+      (iteratedDeriv 2 Fsrc p.2-iteratedDeriv 2 Fsrc (p.2+η*p.1))/(σsrc*η)
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let ell := fun (i : ℝ × ℤ) => deriv (f (i.1)) (round (z i))
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let cloud := fun ip => (![Int.fract (x ip 0),Int.fract (x ip 1),
+      x ip 2/Real.sqrt K₀,x ip 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2*Vscale),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let Pall := (V ×ˢ V).filter (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let Fiber := fun key => V.filter (fun ip => color ip=key)
+    let Pairs := fun key => ((Fiber key) ×ˢ (Fiber key)).filter
+      (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let h := fun (i : ℝ × ℤ) => iteratedDeriv 2 (f (i.1)) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    let Δ := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    (∀ key∈V.image color, ∃ iref∈S, chart iref=key.1 ∧
+      let xcenter := z iref/M
+      let ycenter := iref.1
+      xcenter∈Icc (1:ℝ) 2 ∧ ycenter∈Icc (1:ℝ) 2 ∧
+      ∀ ip∈V, color ip=key →
+        ‖((ip.1.1,u ip.1):ℝ × ℝ)-(ycenter,Hsrc (ycenter,xcenter))‖ < a ∧
+        ‖((ip.1.1,w ip.1):ℝ × ℝ)-(ycenter,(Hsrc (ycenter,xcenter))⁻¹)‖ < a) ∧
+    (∀ ip∈V, ∀ jp∈V, color ip=color jp →
+      |((rat jp.1).den:ℝ)/(rat ip.1).den-1| ≤ θ ∧
+      |((rat jp.1).num:ℝ)/(rat ip.1).num-1| ≤ θ ∧ offset ip = offset jp) ∧
+    ∃ Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ,
+      (∀ k : ZMod K₀,
+        (∑ ip∈V, ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+          C*Vscale*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+            ∑ key∈V.image color,((Fiber key).card:ℝ)^10*((Pairs key).card:ℝ)) ∧
+      (∀ ij∈Pall,
+        Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1 ∧
+        let t := (Mat ij 2:ℝ)*h ij.1.1+Mat ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((Mat ij 0:ℝ)*h ij.1.1+Mat ij 1)/t=h ij.2.1 ∧
+        |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |tau ij.1-tau ij.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(Mat ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 2:ℝ)*ell ij.1.1
+          let F₂ := ell ij.2.1-2*(Mat ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 0:ℝ)*ell ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(Mat ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          Mat ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (rat ij.2.1).num-(rat ij.1.1).num)) ∧
+      (∀ ij∈Pall, |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2*Vscale) ∧
+        |(Mat ij 2:ℝ)| ≤ Rphys^4/(6*(N:ℝ)^2*Vscale)) ∧
+      (∀ key, ∀ ij∈Pairs key,
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+          |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+          |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0)) ∧
+      let TypeOne := fun key => (Pairs key).filter (fun ij =>
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ |(Mat ij 2:ℝ)| * Uband ≤ L))
+      let Rest := fun key => (Pairs key).filter (fun ij => ij∉TypeOne key)
+      let Upper := fun key => (Rest key).filter (fun ij => Mat ij 2=0)
+      let NonUpper := fun key => (Rest key).filter (fun ij => Mat ij 2≠0)
+      let Lower := fun key => (NonUpper key).filter (fun ij => Mat ij 1=0)
+      let Large := fun key => (NonUpper key).filter (fun ij => Mat ij 1≠0)
+      let Y := S.image Prod.fst
+      let forget := fun ij : ((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2) =>
+        ((ij.1.1.2,ij.1.2),(ij.2.1.2,ij.2.2))
+      let phaseFiber := fun (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2))) ab =>
+        (P.filter (fun ij => ij.1.1.1=ab.1 ∧ ij.2.1.1=ab.2)).image forget
+      (∀ key, (((TypeOne key).card:ℝ) ≤
+        Dtype*((S.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep)) ∧
+        (∀ ij∈Pairs key, ij∉TypeOne key →
+          (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+            |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+          (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+            |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+          (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧
+            8*Uband ≤ |(Mat ij 2:ℝ)| * lambda^2 ∧
+            64*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤ |(Mat ij 2:ℝ)| * κ^2*T))) ∧
+      (∀ key, ((Pairs key).card:ℝ)=((TypeOne key).card:ℝ)+∑ ab∈Y ×ˢ Y,
+        (((phaseFiber (Upper key) ab).card:ℝ)+((phaseFiber (Lower key) ab).card:ℝ)+
+          ((phaseFiber (Large key) ab).card:ℝ))) ∧
+      (∀ k : ZMod K₀,
+        (∑ ip∈V, ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+          C*Vscale*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+            ∑ key∈V.image color,((Fiber key).card:ℝ)^10*
+              (Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep)+∑ ab∈Y ×ˢ Y,
+                (((phaseFiber (Upper key) ab).card:ℝ)+((phaseFiber (Lower key) ab).card:ℝ)+
+                  ((phaseFiber (Large key) ab).card:ℝ)))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exists_positive_difference_joint_type_decomposed_source_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ {σ Jref εloss E θ : ℝ}, 0 < σ → 0 ≤ Jref → 0 < εloss →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc : ℝ) (chartKey : ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2)))
+    (Mat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {δ M R base Bcut Vscale : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ},
+    let x := fun ij : (ℤ × Fin 2) × (ℤ × Fin 2) => (![za ij.1.1,zb ij.2.1] : Fin 2 → ℝ)
+    let xlocal := fun ij i => x ij i-(A i:ℝ)
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, base ≤ za ij.1.1-(A 0:ℝ)) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey) →
+    (1 ≤ Vscale) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, xlocal ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, xlocal ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, xlocal ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((v ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun (i : Fin 2) w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*yp i))/(σsrc*η)
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    (∀ ij∈P, |cloud ij 0 1-cloud ij 1 1| ≤ 1/(6*(K₀:ℝ)^2*Vscale)) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ ij∈P, Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1) →
+    (∀ ij∈P, (Mat ij 2:ℝ)*(rat ij 0:ℝ)+Mat ij 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat ij 0:ℝ)*(rat ij 0:ℝ)+Mat ij 1)/
+      ((Mat ij 2:ℝ)*(rat ij 0:ℝ)+Mat ij 3)=(rat ij 1:ℝ)) →
+    (∀ ij∈P, |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    (∀ ij∈P,
+      (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0) ∨
+      (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0) ∨
+      (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ 8*Uband ≤ |(Mat ij 2:ℝ)| *lambda^2 ∧
+        64*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤ |(Mat ij 2:ℝ)| *κ^2*T)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, xlocal ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, xlocal ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+    Vscale=(Uref:ℝ)^((3:ℝ)/2) →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    Vscale*(P.card:ℝ) ≤ (Vscale*(Kupper+Klower)+Klarge)*T^εloss :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_global_non_type_one_pair_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {Jref θ : ℝ}, 0 ≤ Jref → 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale R Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc M δ Bcut Bselect : ℝ}
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ))
+    (A : ℝ → ℤ) (W : ℝ → ℝ) (gap : (ℝ × ℤ) → ℝ × ℝ)
+    (anchor : (ℝ × ℤ) → ℚ) (e r vRef s : ℝ × ℝ → ℤ),
+    (0 < η) →
+    (η ≤ η₀) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 4 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    (1 ≤ R) → (R ≤ M) → (T*(N:ℝ)*R^2=M^3) →
+    (∀ i∈S, M ≤ A i.1) → (∀ i∈S, A i.1+W i.1 ≤ 2*M) →
+    let xlocal := fun i : ℝ × ℤ => z i-(A i.1:ℝ)
+    (∀ i∈S, xlocal i∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, gap i∈Gaps) →
+    (∀ ab∈Gaps, (vRef ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) → (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((vRef ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ i∈S, xlocal i-(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/κ ≤ Bselect) → (7*Bcut ≤ κ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ i∈S, (rat i:ℝ)∈Icc (gap i).1 (gap i).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((vRef ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ i∈S, xlocal i-H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    let ε := κ/(16*(Cphys+2)*R^2)
+    (∀ i∈S, |(anchor i:ℝ)-(rat i:ℝ)| ≤ ε) →
+    (∀ i∈S, 256*((anchor i).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ i∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor i).den) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let Fiber := fun key => V.filter (fun ip => color ip=key)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    Vscale=(Uref:ℝ)^((3:ℝ)/2) →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    let Y := S.image Prod.fst
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    ∀ k : ZMod K₀,
+      (∑ ip∈V, ‖∑ j : ZMod K₀, ZMod.stdAddChar (-(j*k))*
+        GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+          (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+            Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+        C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+          ∑ key∈V.image color, ((Fiber key).card:ℝ)^10*
+            (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+              (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)
+ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_actual_family_source_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {Jref θ : ℝ}, 0 ≤ Jref → 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale R Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc M δ Bcut Bselect : ℝ}
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ))
+    (A : ℝ → ℤ) (W : ℝ → ℝ) (gap : (ℝ × ℤ) → ℝ × ℝ)
+    (anchor : (ℝ × ℤ) → ℚ) (e r vRef s : ℝ × ℝ → ℤ),
+    (0 < η) →
+    (η ≤ η₀) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 4 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    (1 ≤ R) → (R ≤ M) → (T*(N:ℝ)*R^2=M^3) →
+    (∀ i∈S, M ≤ A i.1) → (∀ i∈S, A i.1+W i.1 ≤ 2*M) →
+    let xlocal := fun i : ℝ × ℤ => z i-(A i.1:ℝ)
+    (∀ i∈S, xlocal i∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, gap i∈Gaps) →
+    (∀ ab∈Gaps, (vRef ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) → (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((vRef ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ i∈S, xlocal i-(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/κ ≤ Bselect) → (7*Bcut ≤ κ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ i∈S, (rat i:ℝ)∈Icc (gap i).1 (gap i).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((vRef ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ i∈S, xlocal i-H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    let ε := κ/(16*(Cphys+2)*R^2)
+    (∀ i∈S, |(anchor i:ℝ)-(rat i:ℝ)| ≤ ε) →
+    (∀ i∈S, 256*((anchor i).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ i∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor i).den) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    Vscale=(Uref:ℝ)^((3:ℝ)/2) →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    let Y := S.image Prod.fst
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    (V.card:ℝ) ≤ 10*(Y.card:ℝ)*(M/(N:ℝ)) ∧
+    (∀ k : ZMod K₀,
+      (∑ ip∈V, ‖∑ j : ZMod K₀, ZMod.stdAddChar (-(j*k))*
+        GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+          (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+            Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+        C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+          (10*(Y.card:ℝ)*(M/(N:ℝ)))^10*
+            (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+              (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)) ∧
+    ∀ k : ZMod K₀,
+      (∑ ip∈V, (Real.sqrt (2*(q ip.1:ℝ))/
+        ((q ip.1:ℝ)*Real.sqrt (μ ip.1*(Nlen ip.1:ℝ))))*
+        ‖∑ j : ZMod K₀, ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+        (144*Usrc/(csrc*κ))^6*(R^2/(Q:ℝ))^6*
+          C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+          (10*(Y.card:ℝ)*(M/(N:ℝ)))^10*
+            (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+              (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)
+ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_actual_family_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (Y : Finset ℝ)
+      (N : ℕ) (s : ℤ) (H : ℝ → ℤ → ℕ)
+      (η T M R U : ℝ),
+      1 ≤ N → (∀ y∈Y, ∀ k, H y k ≤ N) →
+      0 < η → η ≤ 1/8 → (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R → 0 < U → U ≤ R^2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let curvatureScale := 3*J*T/(2*σ*M^2)
+    ∃ Href : ℤ, 2 ≤ Href ∧ (Href:ℝ)<4*R^2/U ∧ ∃ Refs : Finset ℝ,
+      (∀ q : ℚ, (q.den:ℤ) ≤ Href → |(q:ℝ)| ≤ curvatureScale → (q:ℝ) ∈ Refs) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, ∀ q : ℚ, (q.den:ℤ) ≤ Href →
+        (q:ℝ) ∈ Icc a b → (q:ℝ) ∈ Refs) ∧
+      (∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ -curvatureScale ∧ curvatureScale ≤ u) ∧
+      (∀ z ∈ Refs, |z| ≤ curvatureScale+1) ∧
+      (∀ z∈Refs, ∃ a b : ℤ, z=(a:ℝ)/b ∧ IsCoprime a b ∧ 0 < b ∧
+        (b:ℝ)<4*R^2/U ∧ |(a:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), |h y x| ≤ curvatureScale) ∧
+      (∀ z ∈ Refs,
+        (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ Href) ∨
+        (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+          R^2 ≤ U*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ Href ∧ (u:ℝ)/v ∈ Refs ∧ |m*v-u*n|=1)) ∧
+      (∀ x ∈ Refs, ∀ z ∈ Refs, x ≠ z → U/(4*R^2) < |x-z|) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M),
+        ∃ q ∈ Refs, |h y x-q| ≤ 7*U/(4*R^2)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ q ∈ Refs,
+        q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ x ∈ Icc M (2*M), h y x=q) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b →
+        (∀ z ∈ Refs, ¬ (a < z ∧ z < b)) →
+        U/(4*R^2) < b-a ∧ b-a ≤ 7*U/(2*R^2) ∧
+        (∃ m n u v : ℤ, a=(m:ℝ)/n ∧ b=(u:ℝ)/v ∧
+          IsCoprime m n ∧ IsCoprime u v ∧ 0 < n ∧ 0 < v ∧
+          R^2 ≤ U*((max n v:ℤ):ℝ)^2) ∧
+        (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), ∀ z ∈ Icc M (2*M),
+          h y x=a → h y z=b → |z-x| ≤ (14*σ/c)*U*N)) ∧
+      (∀ a∈Refs, ∀ b∈Refs, a < b →
+        (∀ z∈Refs, ¬(a < z ∧ z < b)) →
+        ∃ e r v s : ℤ, v*r-e*s=1 ∧
+          ((0 < r ∧ (e:ℝ)/r=a) ∨ (r < 0 ∧ (e:ℝ)/r=b)) ∧
+          s≠0 ∧ (e:ℝ)/r∈Refs ∧ (v:ℝ)/s∈Refs ∧ R^2 ≤ (r:ℝ)^2*U ∧
+          |(r:ℝ)| < 4*R^2/U ∧ |(s:ℝ)| < 4*R^2/U ∧
+          |(e:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U) ∧
+          |(v:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U)) ∧
+    let V := (Y ×ˢ (Refs ×ˢ Refs)).filter (fun i =>
+      i.2.1 < i.2.2 ∧ (∀ t∈Refs, ¬(i.2.1 < t ∧ t < i.2.2)) ∧
+        i.2.1 < h i.1 (2*M) ∧ h i.1 M < i.2.2)
+    let Gref := V.filter (fun i => h i.1 M ≤ i.2.1 ∧ i.2.2 ≤ h i.1 (2*M))
+    (V.card:ℝ) ≤ ((12*J/σ)*M/(N*U)+2)*(Y.card:ℝ) ∧
+    (V \ Gref).card ≤ 2*Y.card ∧ (Gref.image Prod.fst).card ≤ Y.card ∧
+    ∃ x₁ x₂ : ℝ × (ℝ × ℝ) → ℝ,
+      (∀ i∈Gref, x₁ i∈Icc M (2*M) ∧ x₂ i∈Icc M (2*M) ∧ x₁ i < x₂ i ∧
+        h i.1 (x₁ i)=i.2.1 ∧ h i.1 (x₂ i)=i.2.2 ∧
+        U/(4*R^2) ≤ h i.1 (x₂ i)-h i.1 (x₁ i) ∧
+        h i.1 (x₂ i)-h i.1 (x₁ i) ≤ 7*U/(2*R^2)) ∧
+      (∀ i∈Gref, ∀ j∈Gref, i≠j → i.1=j.1 → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) ∧
+      letI : DecidableEq (ℝ × (ℝ × ℝ)) := Classical.decEq _
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∀ Buffer : ℝ, 0 ≤ Buffer →
+      let Gcore := Gref.filter (fun i => M+Buffer ≤ x₁ i ∧ x₂ i ≤ 2*M-Buffer)
+      ∃ (S : (ℝ × (ℝ × ℝ)) → Finset ℤ) (anchor : (ℝ × (ℝ × ℝ)) → ℤ → ℚ) (za : (ℝ × (ℝ × ℝ)) → ℤ → ℝ),
+        (∀ i∈Gcore,
+          (∀ k : ℤ, k∈(S i) ↔ (x₁ i)+(N:ℝ)/4 ≤ t k ∧ t k ≤ (x₂ i)-(N:ℝ)/4) ∧
+        (∀ k∈(S i), (za i) k∈Ioo (x₁ i) (x₂ i) ∧ (h i.1) ((za i) k)=((anchor i) k:ℝ) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (x₁ i)) ((h i.1) (x₂ i)) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) → ((anchor i) k).den ≤ a.den) ∧
+        (∀ k∈(S i), |(za i) k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ ((S i).card:ℝ) ∧ ((S i).card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          (((S i).filter (fun k => Q ≤ ((anchor i) k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      ∀ (Acut : ℕ) (Bmajor : ℝ), 2 ≤ Acut → Acut ≤ Q → 128*σ ≤ Bmajor →
+      let Sall := Gcore.biUnion (fun i => (S i).image (fun k => (i,k)))
+      Set.InjOn (fun i : (ℝ × (ℝ × ℝ)) × ℤ => (i.1.1,i.2)) (Sall : Set _) ∧
+      let Good := fun i => Acut*(anchor i.1 i.2).den ≤ Q ∧
+        Bmajor*R^2 ≤ c*(Q:ℝ)*(anchor i.1 i.2).den
+      let G := Sall.filter Good
+      let Dlow := Bmajor*R^2/(c*(Q:ℝ))
+      let Khigh := Q/Acut+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Dlog := 64*σ*R^2/(c*((Q:ℝ)/Acut))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ∃ (r : (ℝ × (ℝ × ℝ)) × ℤ → ℚ) (z : (ℝ × (ℝ × ℝ)) × ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i.1 i.2:ℝ) < r i ∧ |(r i:ℝ)-(anchor i.1 i.2:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i.1 i.2) (za i.1 i.2+(N:ℝ)/16) ∧
+        iteratedDeriv 2 (f i.1.1) (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo (x₁ i.1) (x₂ i.1)) ∧
+      (∀ i∈G, z i∈Ioo (M+Buffer) (2*M-Buffer)) ∧
+      (∀ i∈G, ∀ d : ℝ, |d|+2 ≤ Buffer →
+        z i-(⌈M⌉:ℤ)+d∈Ioo (1/2:ℝ) (2*M-(⌈M⌉:ℤ)-1/2)) ∧
+      (768 ≤ Acut → 24576*σ ≤ Bmajor →
+        ∀ i∈G, 256*((anchor i.1 i.2).den:ℝ) ≤ (Q:ℝ)/3 ∧
+          ∀ eps : ℝ, delta ≤ eps → 256 ≤ 2*eps*((Q:ℝ)/3)*(anchor i.1 i.2).den) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i.2-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i.1.1) (m i)/6
+      let ℓ := fun i => deriv (f i.1.1) (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : (ℝ × (ℝ × ℝ)) × ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := (Acut:ℝ)*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(Bmajor/c)^2+Bmajor/c)
+      (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤ C*(((Gcore.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost) ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤
+          C*(((Gcore.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)) ∧
+      ∀ (I : Finset ℤ), (∀ j∈I, t j∈Icc M (2*M)) →
+      let BoundaryCost := (Y.card:ℝ)*((24*J/σ)*M/U+(56*σ/c)*(N:ℝ)*U+6*(N:ℝ)+2*Buffer)
+      (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),(𝐞 (f p.1 n):ℂ)‖) ≤
+        C*(((Gcore.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost)+BoundaryCost ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),(𝐞 (f p.1 n):ℂ)‖) ≤
+          C*(((Gcore.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)+BoundaryCost) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_constructed_reference_family_buffered_source_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    {σ ε xi : ℝ} (hσ : 0 < σ) (hε : 0 < ε) (hxi : 0 < xi)
+    (P : ℕ) (hP : 5 ≤ P) :
+    ∃ δ η₀ a c J : ℝ, 0 < δ ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧ 0 < c ∧ 0 < J ∧
+      c ≤ 4*modelPhaseThirdLower (σ+1)*xi/((σ+1)*(σ+2)+3) ∧
+      ∀ (M : ℝ) (F : ℝ → ℝ), 1 ≤ M →
+      Expdb.IsApproximateModelPhaseFunction F σ (P+2) δ →
+      ∃ Fext : ℝ → ℝ,
+        (∀ w, 0 < w → ContDiffAt ℝ ∞ Fext w) ∧
+        (∀ w∈Icc (1/2:ℝ) 3, ∀ p ≤ P+1,
+          |iteratedDeriv (p+1) Fext w-iteratedDeriv p (Expdb.modelPhase σ) w| ≤ ε) ∧
+        (∀ (T : ℝ) (m n : ℕ), M ≤ (m:ℝ) → (n:ℝ) ≤ 2*M →
+          ‖Expdb.exponentialSumAt F T M m n-Expdb.exponentialSumAt Fext T M m n‖ ≤ 6) ∧
+        ∀ {ι : Type*} (S : Finset ι) (y : ι → ℝ) (η : ℝ),
+          (∀ i∈S, y i∈Icc (1:ℝ) 2) → 0 < η → η ≤ η₀ →
+          let color := fun i => ⌊y i/a⌋
+          let Cap := 4/a+3
+          ((S.image color).card:ℝ) ≤ Cap ∧
+          (∀ z : ι → ℂ, ‖∑ i∈S,z i‖^12 ≤
+            Cap^11*∑ j∈S.image color, ‖∑ i∈S.filter (fun i => color i=j),z i‖^12) ∧
+          ∀ j∈S.image color, ∃ i₀∈S, color i₀=j ∧
+            let Fsrc := fun w => (xi/(σ*y i₀))*Fext w
+            (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) ∧
+            (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ J) ∧
+            (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+              c ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) ∧
+            (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -c) ∧
+            ∀ T N R : ℝ, 0 < T → 0 < R → T*N*R^2=M^3 →
+            let Tnew := T*σ*y i₀/xi
+            let Rnew := R*Real.sqrt (xi/(σ*y i₀))
+            0 < Tnew ∧ 0 < Rnew ∧ Rnew^2=R^2*xi/(σ*y i₀) ∧
+              Tnew*N*Rnew^2=M^3 ∧
+            ∀ i∈S, color i=j →
+              let G := fun u => (Fsrc u-Fsrc (u+η*y i))/(xi*η)
+              let f := fun w => Tnew*(Fsrc (w/M)-Fsrc (w/M+η*y i))/(xi*η)
+              Expdb.IsApproximateModelPhaseFunction G (σ+1) P ε ∧
+                (∀ w : ℝ, f w=T*(Fext (w/M)-Fext (w/M+η*y i))/(xi*η)) ∧
+                (∀ A x : ℝ, heathBrownPhysicalPhase G Tnew M A 1 x=f (A+x)) ∧
+                (∀ (A : ℤ) (w : ℝ) (k : ℕ),
+                  iteratedDeriv k (heathBrownPhysicalPhase G Tnew M A 1) (round (w-A))=
+                    iteratedDeriv k f (round w)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.approximateModelPhase_enlarged_colored_common_scale_source (σ:=σ) (ε:=ε) (xi:=xi) hσ hε hxi P hP
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (Hlen : ℝ → ℤ → ℕ) (I : Finset ℤ) (Q K₀ N Uref : ℕ) [NeZero K₀]
+      (sgrid : ℤ) (R Jsep : ℝ) {η M δ Bcut Bselect : ℝ},
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y ∈ Y, y ∈ Icc (1:ℝ) 2) →
+    (∀ y ∈ Y, ∀ z ∈ Y, y ≠ z → 1 ≤ Jsep*|y-z|) →
+    (∀ y ∈ Y, ∀ k, Hlen y k ≤ N) →
+    (∀ k ∈ I, (sgrid:ℝ)+(N:ℝ)*k ∈ Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y ∈ Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2 = M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    3*Usrc ≤ σsrc*(Uref:ℝ) →
+    63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+    (Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    1 ≤ Uref → 0 < Bcut →
+    2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2 →
+    (Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    (N:ℝ)^10 ≤ M^3*R^7 →
+    Q ≤ N → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    768*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let Vscale := (Uref:ℝ)^((3:ℝ)/2)
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    let Buffer := (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Dlog := 64*σsrc*R^2/(csrc*((Q:ℝ)/768))
+    let Cerror := (768:ℝ)*((6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc)+
+      ((3*Usrc/σsrc+csrc/(32*σsrc))*((24576*σsrc)/csrc)^2+(24576*σsrc)/csrc)
+    let Major := (Y.card:ℝ)*Cerror*(M*R/(Q:ℝ))*(2+Real.log (Dlog+1))
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let Boundary := (Y.card:ℝ)*((24*Usrc/σsrc)*M/(Uref:ℝ)+
+      (56*σsrc/csrc)*(N:ℝ)*(Uref:ℝ)+6*(N:ℝ)+2*Buffer)
+    let FamilyBound := (144*Usrc/(csrc*κ))^6*(R^2/(Q:ℝ))^6*
+      C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(10*(Y.card:ℝ)*(M/(N:ℝ)))^10*
+        (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+          (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let Lgrid := fun k : ℤ => sgrid+(N:ℤ)*k+2*(N:ℤ)
+    (∑ p ∈ Y ×ˢ I, ‖∑ n ∈ Finset.Ioc (Lgrid p.2) (Lgrid p.2+Hlen p.1 p.2),
+      (𝐞 (f p.1 n):ℂ)‖)^12 ≤
+      2^11*((Csrc*(Major+Error)+Boundary)^12+
+        (Csrc*(1+Real.log K₀))^12*FamilyBound)
+ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_buffered_source_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (F : ℝ → ℝ) (Y : Finset ℝ)
+      (N : ℕ) (η T M R U : ℝ),
+      1 ≤ N →
+      0 < η → η ≤ 1/8 → (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R → 0 < U → U ≤ R^2 →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |TaoTrudgianYang2025.HuxleyModel.tests
+          (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      3*J ≤ σ*U →
+      let f := fun y w => T*(F (w/M)-F (w/M+η*y))/(σ*η)
+      let h := fun y w => iteratedDeriv 2 (f y) w/2
+    let curvatureScale := 3*J*T/(2*σ*M^2)
+    ∃ Href : ℤ, 2 ≤ Href ∧ (Href:ℝ)<4*R^2/U ∧ ∃ Refs : Finset ℝ,
+      (∀ q : ℚ, (q.den:ℤ) ≤ Href → |(q:ℝ)| ≤ curvatureScale → (q:ℝ) ∈ Refs) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, ∀ q : ℚ, (q.den:ℤ) ≤ Href →
+        (q:ℝ) ∈ Icc a b → (q:ℝ) ∈ Refs) ∧
+      (∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ -curvatureScale ∧ curvatureScale ≤ u) ∧
+      (∀ z ∈ Refs, |z| ≤ curvatureScale+1) ∧
+      (∀ z∈Refs, ∃ a b : ℤ, z=(a:ℝ)/b ∧ IsCoprime a b ∧ 0 < b ∧
+        (b:ℝ)<4*R^2/U ∧ |(a:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), |h y x| ≤ curvatureScale) ∧
+      (∀ z ∈ Refs,
+        (∃ q : ℚ, z=(q:ℝ) ∧ (q.den:ℤ) ≤ Href) ∨
+        (∃ m n u v : ℤ, z=(m:ℝ)/n ∧ IsCoprime m n ∧ 0 < n ∧
+          R^2 ≤ U*(n:ℝ)^2 ∧ 0 < v ∧ v ≤ Href ∧ (u:ℝ)/v ∈ Refs ∧ |m*v-u*n|=1)) ∧
+      (∀ x ∈ Refs, ∀ z ∈ Refs, x ≠ z → U/(4*R^2) < |x-z|) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M),
+        ∃ q ∈ Refs, |h y x-q| ≤ 7*U/(4*R^2)) ∧
+      (∀ y ∈ Icc (1:ℝ) 2, ∀ q ∈ Refs,
+        q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ x ∈ Icc M (2*M), h y x=q) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b →
+        (∀ z ∈ Refs, ¬ (a < z ∧ z < b)) →
+        U/(4*R^2) < b-a ∧ b-a ≤ 7*U/(2*R^2) ∧
+        (∃ m n u v : ℤ, a=(m:ℝ)/n ∧ b=(u:ℝ)/v ∧
+          IsCoprime m n ∧ IsCoprime u v ∧ 0 < n ∧ 0 < v ∧
+          R^2 ≤ U*((max n v:ℤ):ℝ)^2) ∧
+        (∀ y ∈ Icc (1:ℝ) 2, ∀ x ∈ Icc M (2*M), ∀ z ∈ Icc M (2*M),
+          h y x=a → h y z=b → |z-x| ≤ (14*σ/c)*U*N)) ∧
+      (∀ a∈Refs, ∀ b∈Refs, a < b →
+        (∀ z∈Refs, ¬(a < z ∧ z < b)) →
+        ∃ e r v s : ℤ, v*r-e*s=1 ∧
+          ((0 < r ∧ (e:ℝ)/r=a) ∨ (r < 0 ∧ (e:ℝ)/r=b)) ∧
+          s≠0 ∧ (e:ℝ)/r∈Refs ∧ (v:ℝ)/s∈Refs ∧ R^2 ≤ (r:ℝ)^2*U ∧
+          |(r:ℝ)| < 4*R^2/U ∧ |(s:ℝ)| < 4*R^2/U ∧
+          |(e:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U) ∧
+          |(v:ℝ)| ≤ (curvatureScale+1)*(4*R^2/U)) ∧
+    let V := (Y ×ˢ (Refs ×ˢ Refs)).filter (fun i =>
+      i.2.1 < i.2.2 ∧ (∀ t∈Refs, ¬(i.2.1 < t ∧ t < i.2.2)) ∧
+        i.2.1 < h i.1 (2*M) ∧ h i.1 M < i.2.2)
+    let Gref := V.filter (fun i => h i.1 M ≤ i.2.1 ∧ i.2.2 ≤ h i.1 (2*M))
+    (V.card:ℝ) ≤ ((12*J/σ)*M/(N*U)+2)*(Y.card:ℝ) ∧
+    (V \ Gref).card ≤ 2*Y.card ∧ (Gref.image Prod.fst).card ≤ Y.card ∧
+    ∃ x₁ x₂ : ℝ × (ℝ × ℝ) → ℝ,
+      (∀ i∈Gref, x₁ i∈Icc M (2*M) ∧ x₂ i∈Icc M (2*M) ∧ x₁ i < x₂ i ∧
+        h i.1 (x₁ i)=i.2.1 ∧ h i.1 (x₂ i)=i.2.2 ∧
+        U/(4*R^2) ≤ h i.1 (x₂ i)-h i.1 (x₁ i) ∧
+        h i.1 (x₂ i)-h i.1 (x₁ i) ≤ 7*U/(2*R^2)) ∧
+      (∀ i∈Gref, ∀ j∈Gref, i≠j → i.1=j.1 → x₂ i ≤ x₁ j ∨ x₂ j ≤ x₁ i) ∧
+      ∀ (s : ℤ) (H : ℝ → ℤ → ℕ), (∀ y∈Y, ∀ k, H y k ≤ N) →
+      letI : DecidableEq (ℝ × (ℝ × ℝ)) := Classical.decEq _
+      let t := fun k : ℤ => (s:ℝ)+(N:ℝ)*k
+      let L := fun k : ℤ => s+(N:ℤ)*k+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Vbound := 3*J*M/(2*σ*(N:ℝ)*R^2)
+      ∀ Buffer : ℝ, 0 ≤ Buffer →
+      let Gcore := Gref.filter (fun i => M+Buffer ≤ x₁ i ∧ x₂ i ≤ 2*M-Buffer)
+      ∃ (S : (ℝ × (ℝ × ℝ)) → Finset ℤ) (anchor : (ℝ × (ℝ × ℝ)) → ℤ → ℚ) (za : (ℝ × (ℝ × ℝ)) → ℤ → ℝ),
+        (∀ i∈Gcore,
+          (∀ k : ℤ, k∈(S i) ↔ (x₁ i)+(N:ℝ)/4 ≤ t k ∧ t k ≤ (x₂ i)-(N:ℝ)/4) ∧
+        (∀ k∈(S i), (za i) k∈Ioo (x₁ i) (x₂ i) ∧ (h i.1) ((za i) k)=((anchor i) k:ℝ) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (x₁ i)) ((h i.1) (x₂ i)) ∧
+          ((anchor i) k:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) ∧
+          ∀ a : ℚ, (a:ℝ)∈Ioo ((h i.1) (t k)-delta) ((h i.1) (t k)+delta) → ((anchor i) k).den ≤ a.den) ∧
+        (∀ k∈(S i), |(za i) k-t k| ≤ (N:ℝ)/16) ∧
+        (σ/(6*J))*U-3/2 ≤ ((S i).card:ℝ) ∧ ((S i).card:ℝ) ≤ (56*σ/c)*U+1/2 ∧
+        (∀ Q : ℕ, 2 ≤ Q →
+          let D := 64*σ*R^2/(c*(Q:ℝ))
+          (((S i).filter (fun k => Q ≤ ((anchor i) k).den)).card:ℝ) ≤
+            4*(Vbound+1)*D^2+D*(2+Real.log (D+1)))) ∧
+      ∀ Q : ℕ, 2 ≤ Q → Q ≤ N →
+      ∀ (Acut : ℕ) (Bmajor : ℝ), 2 ≤ Acut → Acut ≤ Q → 128*σ ≤ Bmajor →
+      let Sall := Gcore.biUnion (fun i => (S i).image (fun k => (i,k)))
+      Set.InjOn (fun i : (ℝ × (ℝ × ℝ)) × ℤ => (i.1.1,i.2)) (Sall : Set _) ∧
+      let Good := fun i => Acut*(anchor i.1 i.2).den ≤ Q ∧
+        Bmajor*R^2 ≤ c*(Q:ℝ)*(anchor i.1 i.2).den
+      let G := Sall.filter Good
+      let Dlow := Bmajor*R^2/(c*(Q:ℝ))
+      let Khigh := Q/Acut+1
+      let Dhigh := 64*σ*R^2/(c*(Khigh:ℝ))
+      let Dlog := 64*σ*R^2/(c*((Q:ℝ)/Acut))
+      let Cost := 4*Vbound*Dhigh^2+3*Dhigh*(2+Real.log (Dhigh+1))+
+        Dlow*(2*(Vbound+delta)*Dlow+1)
+      ∃ (r : (ℝ × (ℝ × ℝ)) × ℤ → ℚ) (z : (ℝ × (ℝ × ℝ)) × ℤ → ℝ),
+      (∀ i∈G, (r i).den ≤ Q ∧ Q ≤ 2*(r i).den ∧
+        (anchor i.1 i.2:ℝ) < r i ∧ |(r i:ℝ)-(anchor i.1 i.2:ℝ)| ≤ c/(64*σ*R^2) ∧
+        z i∈Icc (za i.1 i.2) (za i.1 i.2+(N:ℝ)/16) ∧
+        iteratedDeriv 2 (f i.1.1) (z i)/2=(r i:ℝ)) ∧
+      (∀ i∈G, z i∈Ioo (x₁ i.1) (x₂ i.1)) ∧
+      (∀ i∈G, z i∈Ioo (M+Buffer) (2*M-Buffer)) ∧
+      (∀ i∈G, ∀ d : ℝ, |d|+2 ≤ Buffer →
+        z i-(⌈M⌉:ℤ)+d∈Ioo (1/2:ℝ) (2*M-(⌈M⌉:ℤ)-1/2)) ∧
+      (768 ≤ Acut → 24576*σ ≤ Bmajor →
+        ∀ i∈G, 256*((anchor i.1 i.2).den:ℝ) ≤ (Q:ℝ)/3 ∧
+          ∀ eps : ℝ, delta ≤ eps → 256 ≤ 2*eps*((Q:ℝ)/3)*(anchor i.1 i.2).den) ∧
+      let m := fun i => round (z i)
+      let A := fun i => (L i.2-m i).toNat
+      let q := fun i => (r i).den
+      let μ := fun i => iteratedDeriv 3 (f i.1.1) (m i)/6
+      let ℓ := fun i => deriv (f i.1.1) (m i)
+      let U₃ := J/(2*σ*(N:ℝ)*R^2)
+      (∀ i∈G, |z i-(m i:ℝ)| ≤ 1/2 ∧
+        N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2) ∧
+      ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+      ∃ v : (ℝ × (ℝ × ℝ)) × ℤ → ℤ, (∀ i∈G, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod K₀,
+      let FourierCost :=
+            (1+Real.log K₀)*
+            (∑ i∈G, ∑ p : Fin 2,
+              (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+              ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+                GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                  (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                    Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+            ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))
+      let Cerror := (Acut:ℝ)*((6*J/σ)*(64*σ/c)^2+192*σ/c)+
+        ((3*J/σ+c/(32*σ))*(Bmajor/c)^2+Bmajor/c)
+      (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤ C*(((Gcore.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost) ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ i∈Sall, ‖∑ n∈Finset.Ioc (L i.2) (L i.2+H i.1.1 i.2),(𝐞 (f i.1.1 n):ℂ)‖) ≤
+          C*(((Gcore.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)) ∧
+      ∀ (I : Finset ℤ), (∀ j∈I, t j∈Icc M (2*M)) →
+      let BoundaryCost := (Y.card:ℝ)*((24*J/σ)*M/U+(56*σ/c)*(N:ℝ)*U+6*(N:ℝ)+2*Buffer)
+      (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),(𝐞 (f p.1 n):ℂ)‖) ≤
+        C*(((Gcore.image Prod.fst).card:ℝ)*(N:ℝ)*Cost+FourierCost)+BoundaryCost ∧
+      ((Acut:ℝ)*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+        (∑ p∈Y ×ˢ I, ‖∑ n∈Finset.Ioc (L p.2) (L p.2+H p.1 p.2),(𝐞 (f p.1 n):ℂ)‖) ≤
+          C*(((Gcore.image Prod.fst).card:ℝ)*Cerror*(M*R/Q)*(2+Real.log (Dlog+1))+FourierCost)+BoundaryCost) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_constructed_reference_family_uniform_grid_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (Q K₀ N Uref : ℕ) [NeZero K₀] (R Jsep : ℝ) {η M δ Bcut Bselect : ℝ},
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y ∈ Y, y ∈ Icc (1:ℝ) 2) →
+    (∀ y ∈ Y, ∀ z ∈ Y, y ≠ z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y ∈ Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2 = M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    3*Usrc ≤ σsrc*(Uref:ℝ) →
+    63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+    (Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    1 ≤ Uref → 0 < Bcut →
+    2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2 →
+    (Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    (N:ℝ)^10 ≤ M^3*R^7 →
+    Q ≤ N → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    768*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let Vscale := (Uref:ℝ)^((3:ℝ)/2)
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    let Buffer := (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Dlog := 64*σsrc*R^2/(csrc*((Q:ℝ)/768))
+    let Cerror := (768:ℝ)*((6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc)+
+      ((3*Usrc/σsrc+csrc/(32*σsrc))*((24576*σsrc)/csrc)^2+(24576*σsrc)/csrc)
+    let Major := (Y.card:ℝ)*Cerror*(M*R/(Q:ℝ))*(2+Real.log (Dlog+1))
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let FamilyBound := (144*Usrc/(csrc*κ))^6*(R^2/(Q:ℝ))^6*
+      C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(10*(Y.card:ℝ)*(M/(N:ℝ)))^10*
+        (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+          (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    ∃ Refs : Finset ℝ,
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a ≠ b → (Uref:ℝ)/(4*R^2) ≤ |a-b|) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b → (∀ q ∈ Refs,¬(a < q ∧ q < b)) →
+        b-a ≤ 7*(Uref:ℝ)/(2*R^2)) ∧
+      (∀ y ∈ Y, ∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ h y M ∧ h y (2*M) ≤ u) ∧
+      (∀ y ∈ Y, ∀ q ∈ Refs, q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ z ∈ Icc M (2*M), h y z = q) ∧
+      ∀ (sgrid : ℤ) (Hlen : ℝ → ℤ → ℕ), (∀ y ∈ Y, ∀ k, Hlen y k ≤ N) →
+      let Lgrid := fun k : ℤ => sgrid+(N:ℤ)*k+2*(N:ℤ)
+      let Good : ℝ × ℤ → Prop := fun p =>
+        ∃ a ∈ Refs, ∃ b ∈ Refs, a < b ∧ (∀ q ∈ Refs,¬(a < q ∧ q < b)) ∧
+          ∃ z₁ z₂ : ℝ, z₁ ∈ Icc M (2*M) ∧ z₂ ∈ Icc M (2*M) ∧
+            h p.1 z₁ = a ∧ h p.1 z₂ = b ∧ M+Buffer ≤ z₁ ∧ z₂ ≤ 2*M-Buffer ∧
+            z₁+(N:ℝ)/4 ≤ (sgrid:ℝ)+(N:ℝ)*p.2 ∧
+              (sgrid:ℝ)+(N:ℝ)*p.2 ≤ z₂-(N:ℝ)/4
+      ∀ Pcore : Finset (ℝ × ℤ), (∀ p ∈ Pcore, p.1 ∈ Y ∧ Good p) →
+      (∑ p ∈ Pcore, ‖∑ n ∈ Finset.Ioc (Lgrid p.2) (Lgrid p.2+Hlen p.1 p.2),
+        (𝐞 (f p.1 n):ℂ)‖)^12 ≤
+        2^11*((Csrc*(Major+Error))^12+
+          (Csrc*(1+Real.log K₀))^12*FamilyBound)
+ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_uniform_reference_core_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (Q K₀ N Uref : ℕ) [NeZero K₀] (R Jsep : ℝ) {η M δ Bcut Bselect : ℝ},
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y ∈ Y, y ∈ Icc (1:ℝ) 2) →
+    (∀ y ∈ Y, ∀ z ∈ Y, y ≠ z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y ∈ Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2 = M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    12*Usrc ≤ σsrc*(Uref:ℝ) →
+    63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+    (Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    1 ≤ Uref → 0 < Bcut →
+    2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2 →
+    (Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    (N:ℝ)^10 ≤ M^3*R^7 →
+    Q ≤ N → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    768*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let Vscale := (Uref:ℝ)^((3:ℝ)/2)
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    let Buffer := (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Dlog := 64*σsrc*R^2/(csrc*((Q:ℝ)/768))
+    let Cerror := (768:ℝ)*((6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc)+
+      ((3*Usrc/σsrc+csrc/(32*σsrc))*((24576*σsrc)/csrc)^2+(24576*σsrc)/csrc)
+    let Major := (Y.card:ℝ)*Cerror*(M*R/(Q:ℝ))*(2+Real.log (Dlog+1))
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let FamilyBound := (144*Usrc/(csrc*κ))^6*(R^2/(Q:ℝ))^6*
+      C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(10*(Y.card:ℝ)*(M/(N:ℝ)))^10*
+        (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+          (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    ∀ n : ℕ, N = 8*n →
+      2*(Buffer+(14*σsrc/csrc)*(Uref:ℝ)*(N:ℝ))+6*(N:ℝ) ≤ M →
+      let Endpoint := (Y.card:ℝ)*
+        (2*Buffer+2*((14*σsrc/csrc)*(Uref:ℝ)*(N:ℝ))+6*(N:ℝ))
+      (∑ y ∈ Y, ‖∑ k ∈ Finset.Ioc ⌈M⌉ ⌊2*M⌋,(𝐞 (f y k):ℂ)‖)^12 ≤
+        2^11*((32:ℝ)^12*
+          (2^11*((Csrc*(Major+Error))^12+
+            (Csrc*(1+Real.log K₀))^12*FamilyBound))+Endpoint^12)
+ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_eight_grid_whole_sum_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+
+example
+    {σ c J : ℝ} (hσ : 0 < σ) (hc : 0 < c) (hJ : 0 < J) :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : ι → Finset ℤ) (F : ℝ → ℝ)
+      (y : ι → ℝ) (base : Fin 2 → ℤ) (N Qbase kmax Acut : ℕ)
+      (Bmajor η T M R : ℝ),
+      0 < N → 0 < η → η ≤ 1/8 → (∀ i, y i∈Icc (1:ℝ) 2) →
+      0 < T → 0 < M → 0 < R →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ F w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) F w| ≤ J) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        c ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) F w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 F w ≤ -c) →
+      T*(N:ℝ)*R^2=M^3 → 2 ≤ Acut → Acut ≤ Qbase → 128*σ ≤ Bmajor →
+      (∀ i, ∀ j∈S i, ∀ p,
+        (base p:ℝ)+(N:ℝ)*j∈Icc (M+(N:ℝ)/4) (2*M-(N:ℝ)/4)) →
+      (N:ℝ)*(Qbase*2^kmax:ℕ) ≤ M →
+      7*(N:ℝ)+2 ≤ M/4 →
+      (3*J/σ)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+      (3*J/(4*σ))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+      let f := fun i w => T*(F (w/M)-F (w/M+η*y i))/(σ*η)
+      let h := fun i w => iteratedDeriv 2 (f i) w/2
+      let t := fun (j : ℤ) (p : Fin 2) => (base p:ℝ)+(N:ℝ)*j
+      let L := fun (j : ℤ) (p : Fin 2) => base p+(N:ℤ)*j+2*(N:ℤ)
+      let delta := c/(64*σ*R^2)
+      let Q := fun k : ℕ => Qbase*2^k
+      let Ctail := (6*J/σ)*(64*σ/c)^2+192*σ/c
+      let Clow := (3*J/σ+c/(32*σ))*(Bmajor/c)^2+Bmajor/c
+      let Cerror := (Acut:ℝ)^2*Ctail+Clow
+      let Density := fun k => 2*Cerror*(M*R^2/((N:ℝ)*(Q k:ℝ)^2))*
+        (2+Real.log (64*σ*R^2/(c*((Q k:ℝ)/Acut))+1))
+      ∃ (anchor : ι → ℤ → Fin 2 → ℚ) (band : ι → ℤ → Option ℕ)
+        (za : ι → ℤ → Fin 2 → ℝ),
+        (∀ i, ∀ j∈S i, ∀ p,
+          (anchor i j p:ℝ)∈Ioo (h i (t j p)-delta) (h i (t j p)+delta) ∧
+          ∀ q : ℚ, (q:ℝ)∈Ioo (h i (t j p)-delta) (h i (t j p)+delta) →
+            (anchor i j p).den ≤ q.den) ∧
+        (∀ i, ∀ j∈S i, ∀ p, h i (za i j p)=(anchor i j p:ℝ) ∧
+          |za i j p-t j p| ≤ (N:ℝ)/16 ∧ za i j p∈Icc M (2*M)) ∧
+        let Good := fun i j k (p : Fin 2) =>
+          Acut*(anchor i j p).den ≤ Q k ∧
+            Bmajor*R^2 ≤ c*(Q k:ℝ)*(anchor i j p).den
+        (∀ i, ∀ j∈S i, match band i j with
+          | none => ∃ p, ¬Good i j kmax p
+          | some k => k ≤ kmax ∧ (∀ p, Good i j k p) ∧
+              (k=0 ∨ ∃ p, ¬Good i j (k-1) p)) ∧
+        (∀ i, ∀ k ≤ kmax,
+          (((S i).filter (fun j => band i j=some (k+1))).card:ℝ) ≤ Density k) ∧
+        (∀ i, (((S i).filter (fun j => band i j=none)).card:ℝ) ≤ Density kmax) ∧
+        ∀ k : ℕ, Q k ≤ N →
+        ∀ (E : Finset (ι × (ℤ × Fin 2))) (H : ι × (ℤ × Fin 2) → ℕ),
+        (∀ i∈E, i.2.1∈S i.1 ∧ band i.1 i.2.1=some k) →
+        (∀ i∈E, H i ≤ N) →
+        ∃ (r : ι × (ℤ × Fin 2) → ℚ) (z : ι × (ℤ × Fin 2) → ℝ),
+        (∀ i∈E, (r i).den ≤ Q k ∧ Q k ≤ 2*(r i).den ∧
+          (anchor i.1 i.2.1 i.2.2:ℝ) < r i ∧
+          |(r i:ℝ)-(anchor i.1 i.2.1 i.2.2:ℝ)| ≤ delta ∧
+          z i∈Icc (za i.1 i.2.1 i.2.2) (za i.1 i.2.1 i.2.2+(N:ℝ)/16) ∧
+          h i.1 (z i)=(r i:ℝ)) ∧
+        (∀ i∈E, |z i-t i.2.1 i.2.2| ≤ (N:ℝ)/8 ∧
+          ∀ a b : ℝ, a+(N:ℝ)/4 ≤ t i.2.1 i.2.2 →
+            t i.2.1 i.2.2 ≤ b-(N:ℝ)/4 → z i∈Ioo a b) ∧
+        let m := fun i => round (z i)
+        let A := fun i => (L i.2.1 i.2.2-m i).toNat
+        let q := fun i => (r i).den
+        let μ := fun i => iteratedDeriv 3 (f i.1) (m i)/6
+        let ell := fun i => deriv (f i.1) (m i)
+        let U₃ := J/(2*σ*(N:ℝ)*R^2)
+        (∀ i∈E, |z i-(m i:ℝ)| ≤ 1/2 ∧
+          N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i.2.1 i.2.2) ∧
+        ∀ (K₀ : ℕ) [NeZero K₀], 63*U₃*(Q k:ℝ)*(N:ℝ)^2 ≤ K₀ →
+        ∃ v : ι × (ℤ × Fin 2) → ℤ, (∀ i∈E, (q i:ℤ) ∣ (r i).num*v i-1) ∧
+        let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ell i⌋+(p:ℕ) : ℤ)
+        let tau := fun i p => ((b i p:ℝ)-(q i:ℝ)*ell i)/2
+        let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+        let K := fun i => -2*μ i*(s i)^3
+        let x := fun i p =>
+          (![-(v i:ℝ)*b i p/q i,-(v i:ℝ)/q i,K i,3*K i*tau i p/2] : Fin 4 → ℝ)
+        ∃ mode : ZMod K₀,
+          (∑ i∈E, ‖∑ n∈Finset.Ioc (L i.2.1 i.2.2) (L i.2.1 i.2.2+H i),
+            (𝐞 (f i.1 n):ℂ)‖) ≤
+            C*((1+Real.log K₀)*
+              (∑ i∈E, ∑ p : Fin 2,
+                (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+                ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*mode))*
+                  GafniTao.fordAdditiveCharacter (∑ d,x i p d*
+                    (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                      Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+              ∑ i∈E, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2))) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.positive_difference_selected_dyadic_family_fourier (σ:=σ) (c:=c) (J:=J) hσ hc hJ
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ C Dtype : ℝ, 0 < C ∧ 0 < Dtype ∧ ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale Rphys Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc T M δ θ a : ℝ},
+    (0 < η) →
+    (η ≤ 1/8) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (0 < θ) →
+    (0 < a) →
+    (θ < 1) →
+    (θ ≤ 1/(8*(L+3))) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*Rphys^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 2 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+    let Hsrc := fun p : ℝ × ℝ =>
+      (iteratedDeriv 2 Fsrc p.2-iteratedDeriv 2 Fsrc (p.2+η*p.1))/(σsrc*η)
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let ell := fun (i : ℝ × ℤ) => deriv (f (i.1)) (round (z i))
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let cloud := fun ip => (![Int.fract (x ip 0),Int.fract (x ip 1),
+      x ip 2/Real.sqrt K₀,x ip 3/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ :=
+      ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2*Vscale),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    let Pall := (V ×ˢ V).filter (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let Fiber := fun key => V.filter (fun ip => color ip=key)
+    let Pairs := fun key => ((Fiber key) ×ˢ (Fiber key)).filter
+      (fun ij => ∀ d, |cloud ij.1 d-cloud ij.2 d| ≤ 2*radius d)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let h := fun (i : ℝ × ℤ) => iteratedDeriv 2 (f (i.1)) (z i)/2
+    let D := (Real.sqrt K₀/(9*(K₀:ℝ))+Real.sqrt K₀/(12*(K₀:ℝ)^2))*
+      Real.sqrt (U₀*(Q:ℝ)^3)
+    let Δ := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    (∀ key∈V.image color, ∃ iref∈S, chart iref=key.1 ∧
+      let xcenter := z iref/M
+      let ycenter := iref.1
+      xcenter∈Icc (1:ℝ) 2 ∧ ycenter∈Icc (1:ℝ) 2 ∧
+      ∀ ip∈V, color ip=key →
+        ‖((ip.1.1,u ip.1):ℝ × ℝ)-(ycenter,Hsrc (ycenter,xcenter))‖ < a ∧
+        ‖((ip.1.1,w ip.1):ℝ × ℝ)-(ycenter,(Hsrc (ycenter,xcenter))⁻¹)‖ < a) ∧
+    (∀ ip∈V, ∀ jp∈V, color ip=color jp →
+      |((rat jp.1).den:ℝ)/(rat ip.1).den-1| ≤ θ ∧
+      |((rat jp.1).num:ℝ)/(rat ip.1).num-1| ≤ θ ∧ offset ip = offset jp) ∧
+    ∃ Mat : (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2)) → Fin 4 → ℤ,
+      (∀ k : ZMod K₀,
+        (∑ ip∈V, ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+          C*Vscale*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+            ∑ key∈V.image color,((Fiber key).card:ℝ)^10*((Pairs key).card:ℝ)) ∧
+      (∀ ij∈Pall,
+        Mat ij 0*Mat ij 3-Mat ij 1*Mat ij 2=1 ∧
+        let t := (Mat ij 2:ℝ)*h ij.1.1+Mat ij 3
+        t=(q ij.2.1:ℝ)/q ij.1.1 ∧ (1:ℝ)/2 ≤ t ∧ t ≤ 2 ∧
+        ((Mat ij 0:ℝ)*h ij.1.1+Mat ij 1)/t=h ij.2.1 ∧
+        |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2) ∧
+        |μ ij.2.1/μ ij.1.1*t^3-1| ≤
+          (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2) ∧
+        |tau ij.1-tau ij.2| ≤ D ∧
+        (∃ e₁ e₂ : ℤ,
+          let F₁ := 2*(round (z ij.2.1):ℝ)-2*(Mat ij 3:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 2:ℝ)*ell ij.1.1
+          let F₂ := ell ij.2.1-2*(Mat ij 1:ℝ)*(round (z ij.1.1):ℝ)-
+            (Mat ij 0:ℝ)*ell ij.1.1
+          |F₁-e₁| ≤ (q ij.2.1:ℝ)/(6*(K₀:ℝ))+|(Mat ij 2:ℝ)|/q ij.1.1 ∧
+          |(F₂-e₂)-h ij.2.1*(F₁-e₁)| ≤ 2*D/q ij.2.1) ∧
+        ((Q:ℝ)^2/(6*(K₀:ℝ)^2) < 1 →
+          Mat ij 2=0 ∧ q ij.1.1=q ij.2.1 ∧
+            (q ij.1.1:ℤ) ∣ (rat ij.2.1).num-(rat ij.1.1).num)) ∧
+      (∀ ij∈Pall, |(Mat ij 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2*Vscale) ∧
+        |(Mat ij 2:ℝ)| ≤ Rphys^4/(6*(N:ℝ)^2*Vscale)) ∧
+      (∀ key, ∀ ij∈Pairs key,
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+          |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+        (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+          |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0)) ∧
+      let TypeOne := fun key => (Pairs key).filter (fun ij =>
+        (Mat ij 0=1 ∧ Mat ij 1=0 ∧ Mat ij 2=0 ∧ Mat ij 3=1) ∨
+        (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧ |(Mat ij 2:ℝ)| * Uband ≤ L))
+      let Rest := fun key => (Pairs key).filter (fun ij => ij∉TypeOne key)
+      let Upper := fun key => (Rest key).filter (fun ij => Mat ij 2=0)
+      let NonUpper := fun key => (Rest key).filter (fun ij => Mat ij 2≠0)
+      let Lower := fun key => (NonUpper key).filter (fun ij => Mat ij 1=0)
+      let Large := fun key => (NonUpper key).filter (fun ij => Mat ij 1≠0)
+      let Y := S.image Prod.fst
+      let forget := fun ij : ((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2) =>
+        ((ij.1.1.2,ij.1.2),(ij.2.1.2,ij.2.2))
+      let phaseFiber := fun (P : Finset (((ℝ × ℤ) × Fin 2) × ((ℝ × ℤ) × Fin 2))) ab =>
+        (P.filter (fun ij => ij.1.1.1=ab.1 ∧ ij.2.1.1=ab.2)).image forget
+      (∀ key, (((TypeOne key).card:ℝ) ≤
+        Dtype*((S.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep)) ∧
+        (∀ ij∈Pairs key, ij∉TypeOne key →
+          (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0 ∧ Mat ij 1≠0 ∧
+            |(Mat ij 1:ℝ)| ≤ θ*Uband) ∨
+          (Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0 ∧ Mat ij 2≠0 ∧
+            |(Mat ij 2:ℝ)| ≤ θ/lambda) ∨
+          (Mat ij 1≠0 ∧ Mat ij 2≠0 ∧
+            8*Uband ≤ |(Mat ij 2:ℝ)| * lambda^2 ∧
+            64*(modelPhaseJetCoefficient σ 3+δ)*M^2 ≤ |(Mat ij 2:ℝ)| * κ^2*T))) ∧
+      (∀ key, ((Pairs key).card:ℝ)=((TypeOne key).card:ℝ)+∑ ab∈Y ×ˢ Y,
+        (((phaseFiber (Upper key) ab).card:ℝ)+((phaseFiber (Lower key) ab).card:ℝ)+
+          ((phaseFiber (Large key) ab).card:ℝ))) ∧
+      (∀ k : ZMod K₀,
+        (∑ ip∈V, ‖∑ j : ZMod K₀,ZMod.stdAddChar (-(j*k))*
+          GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+            (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+              Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+          C*Vscale*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+            ∑ key∈V.image color,((Fiber key).card:ℝ)^10*
+              (Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δ*Jsep)+∑ ab∈Y ×ˢ Y,
+                (((phaseFiber (Upper key) ab).card:ℝ)+((phaseFiber (Lower key) ab).card:ℝ)+
+                  ((phaseFiber (Large key) ab).card:ℝ)))) ∧
+      (Vscale=1+Rphys^4/(6*(N:ℝ)^2) →
+        (∀ key, ∀ ij∈Pairs key, Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 2=0) ∧
+        (∀ key, Lower key=∅ ∧ Large key=∅)) ∧
+      (Uband ≤ 1/16 → Vscale=1+Rphys^4*Uband^2/(N:ℝ)^2 →
+        (∀ key, ∀ ij∈Pairs key, Mat ij 0=1 ∧ Mat ij 3=1 ∧ Mat ij 1=0) ∧
+        (∀ key, Upper key=∅ ∧ Large key=∅)) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exists_positive_difference_triangular_regime_source_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ {σ Jref εloss E θ : ℝ}, 0 < σ → 0 ≤ Jref → 0 < εloss →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc : ℝ) (chartKey : ℤ → ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2))) (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {δ M R base Bcut : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ},
+    let x := fun ij : (ℤ × Fin 2) × (ℤ × Fin 2) => (![za ij.1.1,zb ij.2.1] : Fin 2 → ℝ)
+    let xlocal := fun ij i => x ij i-(A i:ℝ)
+    Function.Injective Mat →
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, entry ij≠0) →
+    (∀ ij∈P, base ≤ za ij.1.1-(A 0:ℝ)) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey (entry ij)) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, xlocal ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, xlocal ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, xlocal ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((v ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun (i : Fin 2) w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*yp i))/(σsrc*η)
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ t∈P.image entry, Mat t 0*Mat t 3-Mat t 1*Mat t 2=1) →
+    (∀ ij∈P, (Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3)=(rat ij 1:ℝ)) →
+    (∀ t∈P.image entry, |(Mat t 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, xlocal ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, xlocal ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 2=0 ∧ Mat t 3=1 ∧ Mat t 1=t) →
+      (P.card:ℝ) ≤ (240*CostUpper*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+
+          2*BupperConst+(3/2:ℝ)*DupperConst))*T^εloss) ∧
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 1=0 ∧ Mat t 3=1 ∧ Mat t 2=t) →
+      (P.card:ℝ) ≤ (240*CostLower*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+
+          2*BlowerConst+(3/2:ℝ)*DlowerConst))*T^εloss) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_global_triangular_source_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {Jref θ : ℝ}, 0 ≤ Jref → 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale R Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc M δ Bcut Bselect : ℝ}
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ))
+    (A : ℝ → ℤ) (W : ℝ → ℝ) (gap : (ℝ × ℤ) → ℝ × ℝ)
+    (anchor : (ℝ × ℤ) → ℚ) (e r vRef s : ℝ × ℝ → ℤ),
+    (0 < η) →
+    (η ≤ η₀) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 4 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    (1 ≤ R) → (R ≤ M) → (T*(N:ℝ)*R^2=M^3) →
+    (∀ i∈S, M ≤ A i.1) → (∀ i∈S, A i.1+W i.1 ≤ 2*M) →
+    let xlocal := fun i : ℝ × ℤ => z i-(A i.1:ℝ)
+    (∀ i∈S, xlocal i∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, gap i∈Gaps) →
+    (∀ ab∈Gaps, (vRef ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) → (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((vRef ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ i∈S, xlocal i-(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/κ ≤ Bselect) → (7*Bcut ≤ κ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ i∈S, (rat i:ℝ)∈Icc (gap i).1 (gap i).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((vRef ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ i∈S, xlocal i-H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    let ε := κ/(16*(Cphys+2)*R^2)
+    (∀ i∈S, |(anchor i:ℝ)-(rat i:ℝ)| ≤ ε) →
+    (∀ i∈S, 256*((anchor i).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ i∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor i).den) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let Fiber := fun key => V.filter (fun ip => color ip=key)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    ∀ isUpper : Bool,
+    (if isUpper then Vscale=1+R^4/(6*(N:ℝ)^2)
+      else Uband ≤ 1/16 ∧ Vscale=1+R^4*Uband^2/(N:ℝ)^2) →
+    let Ktri := if isUpper then Kupper else Klower
+    let Y := S.image Prod.fst
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    ∀ k : ZMod K₀,
+      (∑ ip∈V, ‖∑ j : ZMod K₀, ZMod.stdAddChar (-(j*k))*
+        GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+          (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+            Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+        C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*
+          ∑ key∈V.image color, ((Fiber key).card:ℝ)^10*
+            (Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+              (Y.card:ℝ)^2*Vscale*Ktri*T^εloss)
+ :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_triangular_actual_family_source_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {Jref θ : ℝ}, 0 ≤ Jref → 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale R Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc M δ Bcut Bselect : ℝ}
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ))
+    (A : ℝ → ℤ) (W : ℝ → ℝ) (gap : (ℝ × ℤ) → ℝ × ℝ)
+    (anchor : (ℝ × ℤ) → ℚ) (e r vRef s : ℝ × ℝ → ℤ),
+    (0 < η) →
+    (η ≤ η₀) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 4 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    (1 ≤ R) → (R ≤ M) → (T*(N:ℝ)*R^2=M^3) →
+    (∀ i∈S, M ≤ A i.1) → (∀ i∈S, A i.1+W i.1 ≤ 2*M) →
+    let xlocal := fun i : ℝ × ℤ => z i-(A i.1:ℝ)
+    (∀ i∈S, xlocal i∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, gap i∈Gaps) →
+    (∀ ab∈Gaps, (vRef ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) → (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((vRef ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ i∈S, xlocal i-(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/κ ≤ Bselect) → (7*Bcut ≤ κ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ i∈S, (rat i:ℝ)∈Icc (gap i).1 (gap i).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((vRef ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ i∈S, xlocal i-H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    let ε := κ/(16*(Cphys+2)*R^2)
+    (∀ i∈S, |(anchor i:ℝ)-(rat i:ℝ)| ≤ ε) →
+    (∀ i∈S, 256*((anchor i).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ i∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor i).den) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    ∀ isUpper : Bool,
+    (if isUpper then Vscale=1+R^4/(6*(N:ℝ)^2)
+      else Uband ≤ 1/16 ∧ Vscale=1+R^4*Uband^2/(N:ℝ)^2) →
+    let Ktri := if isUpper then Kupper else Klower
+    let Y := S.image Prod.fst
+    let dualValue := fun (k : ZMod K₀) (ip : (ℝ × ℤ) × Fin 2) =>
+      ∑ j : ZMod K₀, ZMod.stdAddChar (-(j*k))*
+        GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+          (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+            Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)
+    let Scale := C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11
+    let Mass := Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+      (Y.card:ℝ)^2*Vscale*Ktri*T^εloss
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    ∀ k : ZMod K₀,
+      (∑ ip∈V, ‖dualValue k ip‖)^12 ≤ Scale*(2*(S.card:ℝ))^10*Mass ∧
+      (∑ ip∈V, (Real.sqrt (2*(q ip.1:ℝ))/
+        ((q ip.1:ℝ)*Real.sqrt (μ ip.1*(Nlen ip.1:ℝ))))*‖dualValue k ip‖)^12 ≤
+        ((48*σsrc/csrc)*(T/Tsrc)*(R^2/(Q:ℝ)))^6*
+          Scale*(2*(S.card:ℝ))^10*Mass :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_triangular_selected_family_weighted_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σsrc csrc Usrc E σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hE : 0 < E) (hσ : 0 < σ) (hεloss : 0 < εloss) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2*E/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)*E/κ^2)
+    ∃ η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {Jref θ : ℝ}, 0 ≤ Jref → 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (S : Finset (ℝ × ℤ)) (Fsrc : ℝ → ℝ)
+    (z : (ℝ × ℤ) → ℝ) (rat : (ℝ × ℤ) → ℚ) (v : (ℝ × ℤ) → ℤ) (Nlen : (ℝ × ℤ) → ℕ)
+    (Q K₀ N : ℕ) [NeZero K₀] (Vscale R Jsep : ℝ) (Z : ℝ → ℤ)
+    {η Tsrc M δ Bcut Bselect : ℝ}
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ))
+    (A : ℝ → ℤ) (W : ℝ → ℝ) (gap : (ℝ × ℤ) → ℝ × ℝ)
+    (anchor : (ℝ × ℤ) → ℚ) (e r vRef s : ℝ × ℝ → ℤ),
+    (0 < η) →
+    (η ≤ η₀) →
+    (0 < Tsrc) →
+    (0 < T) →
+    (0 < M) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (Tsrc ≤ E*T) →
+    (0 < Q) →
+    (∀ i∈S, i.1∈Icc (1:ℝ) 2) →
+    (∀ i∈S, z i∈Icc M (2*M)) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ i∈S, (rat i).den ≤ Q ∧ Q ≤ 2*(rat i).den) →
+    (∀ i∈S, ((rat i).den:ℤ) ∣ (rat i).num*v i-1) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (2 ≤ M) →
+    (1 ≤ Vscale) →
+    (0 < N) →
+    (0 < Jsep) → (Jsep ≤ M) → ((N:ℝ) ≤ M) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i∈S, N ≤ Nlen i ∧ Nlen i ≤ 3*N ∧
+      round (z i)+(Nlen i:ℤ)=Z i.1+(N:ℤ)*i.2+2*(N:ℤ)) →
+    (∀ i∈S, ∀ j∈S, i.1≠j.1 → 1 ≤ Jsep*|i.1-j.1|) →
+    let Fmodel := fun (i : ℝ × ℤ) u => (Tsrc/T)*(Fsrc u-Fsrc (u+η*i.1))/(σsrc*η)
+    (∀ i∈S, Expdb.IsApproximateModelPhaseFunction (Fmodel i) σ 4 δ) →
+    let f := fun p w => Tsrc*(Fsrc (w/M)-Fsrc (w/M+η*p))/(σsrc*η)
+    (∀ i∈S, iteratedDeriv 2 (f (i.1)) (z i)/2=(rat i:ℝ)) →
+    (∀ i∈S, 1 ≤ Nlen i ∧ (rat i).den ≤ Nlen i ∧
+      1 ≤ (iteratedDeriv 3 (f (i.1)) (round (z i))/6)*((rat i).den:ℝ)^2*Nlen i) →
+    (∀ i∈S, 7*((iteratedDeriv 3 (f (i.1)) (round (z i))/6)*
+      ((rat i).den:ℝ)*(Nlen i:ℝ)^2) ≤ K₀) →
+
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    (1 ≤ R) → (R ≤ M) → (T*(N:ℝ)*R^2=M^3) →
+    (∀ i∈S, M ≤ A i.1) → (∀ i∈S, A i.1+W i.1 ≤ 2*M) →
+    let xlocal := fun i : ℝ × ℤ => z i-(A i.1:ℝ)
+    (∀ i∈S, xlocal i∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, gap i∈Gaps) →
+    (∀ ab∈Gaps, (vRef ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) → (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((vRef ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ i∈S, xlocal i-(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+(56*(Uref:ℝ)/κ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/κ ≤ Bselect) → (7*Bcut ≤ κ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ i∈S, (rat i:ℝ)∈Icc (gap i).1 (gap i).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    (Q:ℝ) ≤ (N:ℝ) → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    (∀ ab∈Gaps, |((r ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((s ab):ℝ)| ≤ 4*R^2/(Uref:ℝ)) →
+    (∀ ab∈Gaps, |((e ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    (∀ ab∈Gaps, |((vRef ab):ℝ)| ≤
+      (3*Jref*T/(2*σ*M^2)+1)*(4*R^2/(Uref:ℝ))) →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ i∈S, xlocal i-H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    (∀ i∈S, xlocal i+H∈Ioo (1/2:ℝ) (W i.1-1/2)) →
+    let ε := κ/(16*(Cphys+2)*R^2)
+    (∀ i∈S, |(anchor i:ℝ)-(rat i:ℝ)| ≤ ε) →
+    (∀ i∈S, 256*((anchor i).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ i∈S, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor i).den) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let u := fun (i : ℝ × ℤ) => (2*M^2/Tsrc)*(rat i:ℝ)
+    let w := fun (i : ℝ × ℤ) => (Tsrc/(2*M^2))*(rat i:ℝ)⁻¹
+    let chart := fun (i : ℝ × ℤ) => (⌊i.1/a⌋,⌊u i/a⌋,⌊w i/a⌋)
+    let narrow := fun (i : ℝ × ℤ) =>
+      (⌊((rat i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+       ⌊((rat i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    let qell := fun (i : ℝ × ℤ) => ((rat i).den:ℝ)*deriv (f (i.1)) (round (z i))
+    let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+    let offset := fun ip : (ℝ × ℤ) × Fin 2 => ⌊qell ip.1⌋+(ip.2:ℕ)-round (qell ip.1)
+    let color := fun ip : (ℝ × ℤ) × Fin 2 => (chart ip.1,narrow ip.1,offset ip)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2*E/(σsrc*csrc*modelPhaseThirdLower σ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+
+    let q := fun (i : ℝ × ℤ) => (rat i).den
+    let μ := fun (i : ℝ × ℤ) => iteratedDeriv 3 (f (i.1)) (round (z i))/6
+    let b := fun ip : (ℝ × ℤ) × Fin 2 => (⌊qell ip.1⌋+(ip.2:ℕ) : ℤ)
+    let tau := fun ip : (ℝ × ℤ) × Fin 2 => ((b ip:ℝ)-qell ip.1)/2
+    let dual := fun (i : ℝ × ℤ) => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+    let x := fun ip : (ℝ × ℤ) × Fin 2 =>
+      (![-(v ip.1:ℝ)*b ip/q ip.1,-(v ip.1:ℝ)/q ip.1,
+        dual ip.1,3*dual ip.1*tau ip/2] : Fin 4 → ℝ)
+    let μ₀ := csrc*Tsrc/(12*σsrc*M^3)
+    let U₀ := Usrc*Tsrc/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    Vscale=(Uref:ℝ)^((3:ℝ)/2) →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    let Y := S.image Prod.fst
+    let dualValue := fun (k : ZMod K₀) (ip : (ℝ × ℤ) × Fin 2) =>
+      ∑ j : ZMod K₀, ZMod.stdAddChar (-(j*k))*
+        GafniTao.fordAdditiveCharacter (∑ d,x ip d*
+          (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+            Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)
+    let Scale := C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11
+    let Mass := Vscale*Dtype*(Y.card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+      (Y.card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss
+    ((V.image color).card:ℝ) ≤ Cap ∧
+    ∀ k : ZMod K₀,
+      (∑ ip∈V, ‖dualValue k ip‖)^12 ≤ Scale*(2*(S.card:ℝ))^10*Mass ∧
+      (∑ ip∈V, (Real.sqrt (2*(q ip.1:ℝ))/
+        ((q ip.1:ℝ)*Real.sqrt (μ ip.1*(Nlen ip.1:ℝ))))*‖dualValue k ip‖)^12 ≤
+        ((48*σsrc/csrc)*(T/Tsrc)*(R^2/(Q:ℝ)))^6*
+          Scale*(2*(S.card:ℝ))^10*Mass :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_selected_family_weighted_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (E:=E) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hE hσ hεloss
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (Q K₀ N Uref : ℕ) [NeZero K₀] (R Jsep : ℝ) {η M δ Bcut Bselect : ℝ},
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y ∈ Y, y ∈ Icc (1:ℝ) 2) →
+    (∀ y ∈ Y, ∀ z ∈ Y, y ≠ z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y ∈ Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2 = M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    3*Usrc ≤ σsrc*(Uref:ℝ) →
+    63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+    (Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    1 ≤ Uref → 0 < Bcut →
+    2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2 →
+    (Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect →
+    ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Uref:ℝ) →
+    (N:ℝ)^10 ≤ M^3*R^7 →
+    Q ≤ N → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    768*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let Vscale := (Uref:ℝ)^((3:ℝ)/2)
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := 2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+      (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+
+    let Buffer := (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let FamilyBound := fun (P : Finset (ℝ × ℤ)) =>
+      (48*σsrc/csrc)^6*(R^2/(Q:ℝ))^6*
+        C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(2*(P.card:ℝ))^10*
+          (Vscale*Dtype*((P.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+            ((P.image Prod.fst).card:ℝ)^2*(Vscale*(Kupper+Klower)+Klarge)*T^εloss)
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    ∃ Refs : Finset ℝ,
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a ≠ b → (Uref:ℝ)/(4*R^2) ≤ |a-b|) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b → (∀ q ∈ Refs,¬(a < q ∧ q < b)) →
+        b-a ≤ 7*(Uref:ℝ)/(2*R^2)) ∧
+      (∀ y ∈ Y, ∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ h y M ∧ h y (2*M) ≤ u) ∧
+      (∀ y ∈ Y, ∀ q ∈ Refs, q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ z ∈ Icc M (2*M), h y z = q) ∧
+      ∀ (sgrid : ℤ) (Hlen : ℝ → ℤ → ℕ), (∀ y ∈ Y, ∀ k, Hlen y k ≤ N) →
+      let Lgrid := fun k : ℤ => sgrid+(N:ℤ)*k+2*(N:ℤ)
+      let Good : ℝ × ℤ → Prop := fun p =>
+        ∃ a ∈ Refs, ∃ b ∈ Refs, a < b ∧ (∀ q ∈ Refs,¬(a < q ∧ q < b)) ∧
+          ∃ z₁ z₂ : ℝ, z₁ ∈ Icc M (2*M) ∧ z₂ ∈ Icc M (2*M) ∧
+            h p.1 z₁ = a ∧ h p.1 z₂ = b ∧ M+Buffer ≤ z₁ ∧ z₂ ≤ 2*M-Buffer ∧
+            z₁+(N:ℝ)/4 ≤ (sgrid:ℝ)+(N:ℝ)*p.2 ∧
+              (sgrid:ℝ)+(N:ℝ)*p.2 ≤ z₂-(N:ℝ)/4
+      ∀ (Pcore : Finset (ℝ × ℤ)) (anchor : (ℝ × ℤ) → ℚ) (za : (ℝ × ℤ) → ℝ),
+      (∀ p ∈ Pcore, p.1 ∈ Y ∧ Good p) →
+      (∀ p ∈ Pcore, |za p-((sgrid:ℝ)+(N:ℝ)*p.2)| ≤ (N:ℝ)/16 ∧
+        h p.1 (za p)=(anchor p:ℝ)) →
+      (∀ p ∈ Pcore, 768*(anchor p).den ≤ Q) →
+      (∀ p ∈ Pcore, (24576*σsrc)*R^2 ≤ csrc*(Q:ℝ)*(anchor p).den) →
+      (∑ p ∈ Pcore, ‖∑ n ∈ Finset.Ioc (Lgrid p.2) (Lgrid p.2+Hlen p.1 p.2),
+        (𝐞 (f p.1 n):ℂ)‖)^12 ≤
+        2^11*((Csrc*Error)^12+
+          (Csrc*(1+Real.log K₀))^12*FamilyBound Pcore) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_selected_reference_core_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (Q K₀ N Uref : ℕ) [NeZero K₀] (R Jsep Vscale : ℝ) {η M δ Bcut Bselect : ℝ},
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 1 ≤ Vscale → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y ∈ Y, y ∈ Icc (1:ℝ) 2) →
+    (∀ y ∈ Y, ∀ z ∈ Y, y ≠ z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w ∈ Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y ∈ Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2 = M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    3*Usrc ≤ σsrc*(Uref:ℝ) →
+    63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q:ℝ)*(N:ℝ)^2 ≤ K₀ →
+    (Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    1 ≤ Uref → 0 < Bcut →
+    2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2 →
+    (Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect →
+    (N:ℝ)^10 ≤ M^3*R^7 →
+    Q ≤ N → (N:ℝ)^2 ≤ M → (Uref:ℝ) ≤ R^2 →
+    768*R ≤ (Q:ℝ) → (N:ℝ)*R ≤ M →
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let Δtype := (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := 240*CostUpper*
+      (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := 240*CostLower*
+      (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    ∀ isUpper : Bool,
+    (if isUpper then Vscale=1+R^4/(6*(N:ℝ)^2)
+      else Uband ≤ 1/16 ∧ Vscale=1+R^4*Uband^2/(N:ℝ)^2) →
+    let Buffer := (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let FamilyBound := fun (P : Finset (ℝ × ℤ)) =>
+      (48*σsrc/csrc)^6*(R^2/(Q:ℝ))^6*
+        C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(2*(P.card:ℝ))^10*
+          (Vscale*Dtype*((P.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+Δtype*Jsep)+
+            ((P.image Prod.fst).card:ℝ)^2*Vscale*(if isUpper then Kupper else Klower)*T^εloss)
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let h := fun y w => iteratedDeriv 2 (f y) w/2
+    ∃ Refs : Finset ℝ,
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a ≠ b → (Uref:ℝ)/(4*R^2) ≤ |a-b|) ∧
+      (∀ a ∈ Refs, ∀ b ∈ Refs, a < b → (∀ q ∈ Refs,¬(a < q ∧ q < b)) →
+        b-a ≤ 7*(Uref:ℝ)/(2*R^2)) ∧
+      (∀ y ∈ Y, ∃ l ∈ Refs, ∃ u ∈ Refs, l ≤ h y M ∧ h y (2*M) ≤ u) ∧
+      (∀ y ∈ Y, ∀ q ∈ Refs, q ∈ Icc (h y M) (h y (2*M)) →
+        ∃ z ∈ Icc M (2*M), h y z = q) ∧
+      ∀ (sgrid : ℤ) (Hlen : ℝ → ℤ → ℕ), (∀ y ∈ Y, ∀ k, Hlen y k ≤ N) →
+      let Lgrid := fun k : ℤ => sgrid+(N:ℤ)*k+2*(N:ℤ)
+      let Good : ℝ × ℤ → Prop := fun p =>
+        ∃ a ∈ Refs, ∃ b ∈ Refs, a < b ∧ (∀ q ∈ Refs,¬(a < q ∧ q < b)) ∧
+          ∃ z₁ z₂ : ℝ, z₁ ∈ Icc M (2*M) ∧ z₂ ∈ Icc M (2*M) ∧
+            h p.1 z₁ = a ∧ h p.1 z₂ = b ∧ M+Buffer ≤ z₁ ∧ z₂ ≤ 2*M-Buffer ∧
+            z₁+(N:ℝ)/4 ≤ (sgrid:ℝ)+(N:ℝ)*p.2 ∧
+              (sgrid:ℝ)+(N:ℝ)*p.2 ≤ z₂-(N:ℝ)/4
+      ∀ (Pcore : Finset (ℝ × ℤ)) (anchor : (ℝ × ℤ) → ℚ) (za : (ℝ × ℤ) → ℝ),
+      (∀ p ∈ Pcore, p.1 ∈ Y ∧ Good p) →
+      (∀ p ∈ Pcore, |za p-((sgrid:ℝ)+(N:ℝ)*p.2)| ≤ (N:ℝ)/16 ∧
+        h p.1 (za p)=(anchor p:ℝ)) →
+      (∀ p ∈ Pcore, 768*(anchor p).den ≤ Q) →
+      (∀ p ∈ Pcore, (24576*σsrc)*R^2 ≤ csrc*(Q:ℝ)*(anchor p).den) →
+      (∑ p ∈ Pcore, ‖∑ n ∈ Finset.Ioc (Lgrid p.2) (Lgrid p.2+Hlen p.1 p.2),
+        (𝐞 (f p.1 n):ℂ)‖)^12 ≤
+        2^11*((Csrc*Error)^12+
+          (Csrc*(1+Real.log K₀))^12*FamilyBound Pcore) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_triangular_selected_reference_core_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (n N Qbase kmax : ℕ) (Kmesh Usel : ℕ → ℕ)
+      (R Jsep : ℝ) {η M δ Bcut Bselect : ℝ},
+    (∀ k, 0 < Kmesh k) → N=8*n →
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+    (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j ≤ 6, |iteratedDeriv (j+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2=M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    0 < Bcut → 2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    (N:ℝ)^10 ≤ M^3*R^7 → (N:ℝ)^2 ≤ M → (N:ℝ)*R ≤ M →
+    let Q := fun k : ℕ => Qbase*2^k
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let Vscale := fun k : ℕ =>
+      let Uref := Usel k
+      (Uref:ℝ)^((3:ℝ)/2)
+    let Δtype := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let Δ := fun k : ℕ =>
+      let Q := Q k
+      (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let D := fun k : ℕ =>
+      let Q := Q k
+      (Δ k)+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let CostUpper := fun k : ℕ =>
+      let Uref := Usel k
+      M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := fun k : ℕ =>
+      let Uref := Usel k
+      R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := fun k : ℕ =>
+      240*(CostUpper k)*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := fun k : ℕ =>
+      240*(CostLower k)*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := fun k : ℕ =>
+      let Q := Q k
+      2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+        (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+    let Buffer := fun k : ℕ =>
+      let Uref := Usel k
+      (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Width := fun k : ℕ => (14*σsrc/csrc)*(Usel k:ℝ)*(N:ℝ)
+    let FamilyBound := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      fun (P : Finset (ℝ × ℤ)) =>
+        (48*σsrc/csrc)^6*(R^2/(Q:ℝ))^6*
+          C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(2*(P.card:ℝ))^10*
+            ((Vscale k)*Dtype*((P.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+(Δtype k)*Jsep)+
+              ((P.image Prod.fst).card:ℝ)^2*((Vscale k)*((Kupper k)+(Klower k))+(Klarge k))*T^εloss)
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    61*Ccurv*Cphys ≤ Bcut →
+    (∀ k ≤ kmax,
+      12*Usrc ≤ σsrc*(Usel k:ℝ) ∧
+      63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+      (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+      1 ≤ Usel k ∧
+      Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+      ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Usel k:ℝ) ∧
+      Q k ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧
+      768*R ≤ (Q k:ℝ) ∧ 2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+      D k ≤ 1/2 ∧ Δ k < 1/2) →
+    (∀ k ≤ kmax, Usel k ≤ Usel 0) →
+    2*(Buffer 0+Width 0)+6*(N:ℝ) ≤ M →
+    let CtailBand := (6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc
+    let ClowBand := (3*Usrc/σsrc+csrc/(32*σsrc))*((3072*σsrc)/csrc)^2+(3072*σsrc)/csrc
+    let CerrorBand := (768:ℝ)^2*CtailBand+ClowBand
+    let Density := fun k => 128*CerrorBand*(M*R^2/((N:ℝ)*(Q k:ℝ)^2))*
+      (2+Real.log (512*σsrc*R^2/(csrc*((Q k:ℝ)/768))+1))
+    let Endpoint := (Y.card:ℝ)*(2*Buffer 0+2*Width 0+6*(N:ℝ)+2*(n:ℝ))
+    ∀ A Bint : ℤ, ⌈M⌉ ≤ A → A ≤ Bint → Bint ≤ ⌊2*M⌋ →
+    ∃ (Chunks : Finset (ℝ × ℤ)) (band : (ℝ × ℤ) → Option ℕ)
+      (Dcover : ℕ → Finset (ℝ × ℤ)),
+      (Chunks.card:ℝ) ≤ (Y.card:ℝ)*(8*M/(N:ℝ)) ∧
+      (∀ k ≤ kmax, ((Chunks.filter (fun p => band p=some (k+1))).card:ℝ) ≤
+        (Y.card:ℝ)*Density k) ∧
+      ((Chunks.filter (fun p => band p=none)).card:ℝ) ≤ (Y.card:ℝ)*Density kmax ∧
+      let Selected := fun k => Chunks.filter (fun p => band p=some k)
+      let Grid := fun (k : ℕ) (r : ℤ) =>
+        ((Dcover k).filter (fun p => p.2%8=r)).image (fun p => (p.1,p.2/8-2))
+      (∀ k ≤ kmax,
+        Dcover k ⊆ Selected k ∪ (Selected k).image (fun p => (p.1,p.2-6)) ∧
+        (Dcover k).card ≤ 2*(Selected k).card ∧
+        (∀ r, (Grid k r).card ≤ 2*(Selected k).card) ∧
+        (∀ r, (Grid k r).image Prod.fst ⊆ Y)) ∧
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc A Bint,(𝐞 (f y j):ℂ)‖)^12 ≤
+        2^11*(((kmax:ℝ)+2)^11*
+          (((n:ℝ)*(Y.card:ℝ)*Density kmax)^12+
+            (4:ℝ)^12*(8:ℝ)^11*∑ k∈Finset.range (kmax+1),
+              ∑ r∈Finset.Ico (0:ℤ) 8,
+                (2^11*((Csrc*Error)^12+
+                  (Csrc*(1+Real.log (Kmesh k)))^12*FamilyBound k (Grid k r))))+
+            Endpoint^12) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_selected_band_subinterval_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (n N Qbase kmax : ℕ) (Kmesh Usel : ℕ → ℕ)
+      (R Jsep Vscale : ℝ) (isUpper : Bool) {η M δ Bcut Bselect : ℝ},
+    (∀ k, 0 < Kmesh k) → N=8*n →
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 1 ≤ Vscale → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+    (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j ≤ 6, |iteratedDeriv (j+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2=M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    0 < Bcut → 2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    (N:ℝ)^10 ≤ M^3*R^7 → (N:ℝ)^2 ≤ M → (N:ℝ)*R ≤ M →
+    let Q := fun k : ℕ => Qbase*2^k
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let Δtype := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let Δ := fun k : ℕ =>
+      let Q := Q k
+      (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let D := fun k : ℕ =>
+      let Q := Q k
+      (Δ k)+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let CostUpper := fun k : ℕ =>
+      let Uref := Usel k
+      M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := fun k : ℕ =>
+      let Uref := Usel k
+      R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := fun k : ℕ =>
+      240*(CostUpper k)*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := fun k : ℕ =>
+      240*(CostLower k)*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Buffer := fun k : ℕ =>
+      let Uref := Usel k
+      (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Width := fun k : ℕ => (14*σsrc/csrc)*(Usel k:ℝ)*(N:ℝ)
+    let FamilyBound := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      fun (P : Finset (ℝ × ℤ)) =>
+        (48*σsrc/csrc)^6*(R^2/(Q:ℝ))^6*
+          C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(2*(P.card:ℝ))^10*
+            (Vscale*Dtype*((P.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+(Δtype k)*Jsep)+
+              ((P.image Prod.fst).card:ℝ)^2*Vscale*(if isUpper then (Kupper k) else (Klower k))*T^εloss)
+    (if isUpper then Vscale=1+R^4/(6*(N:ℝ)^2)
+      else Uband ≤ 1/16 ∧ Vscale=1+R^4*Uband^2/(N:ℝ)^2) →
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    61*Ccurv*Cphys ≤ Bcut →
+    (∀ k ≤ kmax,
+      12*Usrc ≤ σsrc*(Usel k:ℝ) ∧
+      63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+      (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+      1 ≤ Usel k ∧
+      Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+      Q k ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧
+      768*R ≤ (Q k:ℝ) ∧ 2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+      D k ≤ 1/2 ∧ Δ k < 1/2) →
+    (∀ k ≤ kmax, Usel k ≤ Usel 0) →
+    2*(Buffer 0+Width 0)+6*(N:ℝ) ≤ M →
+    let CtailBand := (6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc
+    let ClowBand := (3*Usrc/σsrc+csrc/(32*σsrc))*((3072*σsrc)/csrc)^2+(3072*σsrc)/csrc
+    let CerrorBand := (768:ℝ)^2*CtailBand+ClowBand
+    let Density := fun k => 128*CerrorBand*(M*R^2/((N:ℝ)*(Q k:ℝ)^2))*
+      (2+Real.log (512*σsrc*R^2/(csrc*((Q k:ℝ)/768))+1))
+    let Endpoint := (Y.card:ℝ)*(2*Buffer 0+2*Width 0+6*(N:ℝ)+2*(n:ℝ))
+    ∀ A Bint : ℤ, ⌈M⌉ ≤ A → A ≤ Bint → Bint ≤ ⌊2*M⌋ →
+    ∃ (Chunks : Finset (ℝ × ℤ)) (band : (ℝ × ℤ) → Option ℕ)
+      (Dcover : ℕ → Finset (ℝ × ℤ)),
+      (Chunks.card:ℝ) ≤ (Y.card:ℝ)*(8*M/(N:ℝ)) ∧
+      (∀ k ≤ kmax, ((Chunks.filter (fun p => band p=some (k+1))).card:ℝ) ≤
+        (Y.card:ℝ)*Density k) ∧
+      ((Chunks.filter (fun p => band p=none)).card:ℝ) ≤ (Y.card:ℝ)*Density kmax ∧
+      let Selected := fun k => Chunks.filter (fun p => band p=some k)
+      let Grid := fun (k : ℕ) (r : ℤ) =>
+        ((Dcover k).filter (fun p => p.2%8=r)).image (fun p => (p.1,p.2/8-2))
+      (∀ k ≤ kmax,
+        Dcover k ⊆ Selected k ∪ (Selected k).image (fun p => (p.1,p.2-6)) ∧
+        (Dcover k).card ≤ 2*(Selected k).card ∧
+        (∀ r, (Grid k r).card ≤ 2*(Selected k).card) ∧
+        (∀ r, (Grid k r).image Prod.fst ⊆ Y)) ∧
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc A Bint,(𝐞 (f y j):ℂ)‖)^12 ≤
+        2^11*(((kmax:ℝ)+2)^11*
+          (((n:ℝ)*(Y.card:ℝ)*Density kmax)^12+
+            (4:ℝ)^12*(8:ℝ)^11*∑ k∈Finset.range (kmax+1),
+              ∑ r∈Finset.Ico (0:ℤ) 8,
+                (2^11*((Csrc*Error)^12+
+                  (Csrc*(1+Real.log (Kmesh k)))^12*FamilyBound k (Grid k r))))+
+            Endpoint^12) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_triangular_selected_band_subinterval_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (n N Qbase kmax : ℕ) (Kmesh Usel : ℕ → ℕ)
+      (R Jsep : ℝ) {η M δ Bcut Bselect : ℝ},
+    (∀ k, 0 < Kmesh k) → N=8*n →
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+    (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j ≤ 6, |iteratedDeriv (j+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2=M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    0 < Bcut → 2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    (N:ℝ)^10 ≤ M^3*R^7 → (N:ℝ)^2 ≤ M → (N:ℝ)*R ≤ M →
+    let Q := fun k : ℕ => Qbase*2^k
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+    let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+    let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+    let Ctail := 4*Cpack/Lunit^2+Cgap
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let Vscale := fun k : ℕ =>
+      let Uref := Usel k
+      (Uref:ℝ)^((3:ℝ)/2)
+    let Δtype := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let Δ := fun k : ℕ =>
+      let Q := Q k
+      (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let D := fun k : ℕ =>
+      let Q := Q k
+      (Δ k)+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let CostUpper := fun k : ℕ =>
+      let Uref := Usel k
+      M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := fun k : ℕ =>
+      let Uref := Usel k
+      R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := fun k : ℕ =>
+      240*(CostUpper k)*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := fun k : ℕ =>
+      240*(CostLower k)*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Klarge := fun k : ℕ =>
+      let Q := Q k
+      2*Bselect*60*588*(Uband/lambda)^2*Uband^2*(R^8/(N:ℝ)^4)*
+        (Cmain+Ctail)*((Q:ℝ)/(N:ℝ))^((2:ℝ)/3)
+    let Buffer := fun k : ℕ =>
+      let Uref := Usel k
+      (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Width := fun k : ℕ => (14*σsrc/csrc)*(Usel k:ℝ)*(N:ℝ)
+    let FamilyBound := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      fun (P : Finset (ℝ × ℤ)) =>
+        (48*σsrc/csrc)^6*(R^2/(Q:ℝ))^6*
+          C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(2*(P.card:ℝ))^10*
+            ((Vscale k)*Dtype*((P.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+(Δtype k)*Jsep)+
+              ((P.image Prod.fst).card:ℝ)^2*((Vscale k)*((Kupper k)+(Klower k))+(Klarge k))*T^εloss)
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    61*Ccurv*Cphys ≤ Bcut →
+    (∀ k ≤ kmax,
+      12*Usrc ≤ σsrc*(Usel k:ℝ) ∧
+      63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+      (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+      1 ≤ Usel k ∧
+      Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+      ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Usel k:ℝ) ∧
+      Q k ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧
+      768*R ≤ (Q k:ℝ) ∧ 2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+      D k ≤ 1/2 ∧ Δ k < 1/2) →
+    (∀ k ≤ kmax, Usel k ≤ Usel 0) →
+    2*(Buffer 0+Width 0)+6*(N:ℝ) ≤ M →
+    let CtailBand := (6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc
+    let ClowBand := (3*Usrc/σsrc+csrc/(32*σsrc))*((3072*σsrc)/csrc)^2+(3072*σsrc)/csrc
+    let CerrorBand := (768:ℝ)^2*CtailBand+ClowBand
+    let Density := fun k => 128*CerrorBand*(M*R^2/((N:ℝ)*(Q k:ℝ)^2))*
+      (2+Real.log (512*σsrc*R^2/(csrc*((Q k:ℝ)/768))+1))
+    let Endpoint := (Y.card:ℝ)*(2*Buffer 0+2*Width 0+6*(N:ℝ)+2*(n:ℝ))
+    ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+    (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+    ∃ (Chunks : Finset (ℝ × ℤ)) (band : (ℝ × ℤ) → Option ℕ)
+      (Dcover : ℕ → Finset (ℝ × ℤ)),
+      (Chunks.card:ℝ) ≤ (Y.card:ℝ)*(8*M/(N:ℝ)) ∧
+      (∀ k ≤ kmax, ((Chunks.filter (fun p => band p=some (k+1))).card:ℝ) ≤
+        (Y.card:ℝ)*Density k) ∧
+      ((Chunks.filter (fun p => band p=none)).card:ℝ) ≤ (Y.card:ℝ)*Density kmax ∧
+      let Selected := fun k => Chunks.filter (fun p => band p=some k)
+      let Grid := fun (k : ℕ) (r : ℤ) =>
+        ((Dcover k).filter (fun p => p.2%8=r)).image (fun p => (p.1,p.2/8-2))
+      (∀ k ≤ kmax,
+        Dcover k ⊆ Selected k ∪ (Selected k).image (fun p => (p.1,p.2-6)) ∧
+        (Dcover k).card ≤ 2*(Selected k).card ∧
+        (∀ r, (Grid k r).card ≤ 2*(Selected k).card) ∧
+        (∀ r, (Grid k r).image Prod.fst ⊆ Y)) ∧
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),(𝐞 (f y j):ℂ)‖)^12 ≤
+        2^11*(((kmax:ℝ)+2)^11*
+          (((n:ℝ)*(Y.card:ℝ)*Density kmax)^12+
+            (4:ℝ)^12*(8:ℝ)^11*∑ k∈Finset.range (kmax+1),
+              ∑ r∈Finset.Ico (0:ℤ) 8,
+                (2^11*((Csrc*Error)^12+
+                  (Csrc*(1+Real.log (Kmesh k)))^12*FamilyBound k (Grid k r))))+
+            Endpoint^12) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_selected_band_phase_subinterval_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
+example
+    {σsrc csrc Usrc σ εloss : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hεloss : 0 < εloss)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    let κ := modelPhaseThirdLower σ
+    let Ratio := 18*Usrc^2/(σsrc*csrc*κ)
+    let L := max (8*Ratio^2)
+      (32*(modelPhaseJetCoefficient σ 3+1)*(3*Usrc/σsrc)/κ^2)
+    ∃ Csrc η₀ a Cupper Clower Dupper Dlower C Dtype : ℝ,
+      1 ≤ Csrc ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧ 0 < C ∧ 0 < Dtype ∧
+    ∀ {θ : ℝ}, 0 < θ → θ ≤ 1/24 → θ ≤ 1/(8*(L+3)) →
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (n N Qbase kmax : ℕ) (Kmesh Usel : ℕ → ℕ)
+      (R Jsep Vscale : ℝ) (isUpper : Bool) {η M δ Bcut Bselect : ℝ},
+    (∀ k, 0 < Kmesh k) → N=8*n →
+    0 < η → η ≤ η₀ → 0 < T → 2 ≤ N →
+    1 ≤ R → R ≤ M → 1 ≤ Vscale → 0 ≤ δ → δ ≤ min κ 1 →
+    0 < Jsep → Jsep ≤ M →
+    (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+    (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j ≤ 6, |iteratedDeriv (j+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+    (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction
+      (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+    T*(N:ℝ)*R^2=M^3 →
+    7*(N:ℝ)+2 ≤ M/4 →
+    (3*Usrc/σsrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 →
+    (3*Usrc/(4*σsrc))*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 →
+    (N:ℝ)^4 ≤ M*R^3*(Real.log T)^((3:ℝ)/2) →
+    0 < Bcut → 2+168/κ ≤ Bselect → 7*Bcut ≤ κ*Bselect →
+    (N:ℝ)^10 ≤ M^3*R^7 → (N:ℝ)^2 ≤ M → (N:ℝ)*R ≤ M →
+    let Q := fun k : ℕ => Qbase*2^k
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    let Uband := (3*Usrc/σsrc)*T/(2*M^2)
+    let ChartCap := (4/a+3)*((6*Usrc/σsrc)/a+3)*((4*σsrc/csrc)/a+3)
+    let NarrowCap := (4/θ+3)*(72*Usrc^2/(σsrc*csrc*κ*θ)+3)
+    let Cap := 3*ChartCap*NarrowCap
+    let μ₀ := csrc*T/(12*σsrc*M^3)
+    let U₀ := Usrc*T/(2*σsrc*M^3)
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*1^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*1^2/Lunit^2+Dupper*(B+1)*1^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*1/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let Error := (Y.card:ℝ)*(M/(N:ℝ)+1)*
+      (Real.sqrt (3*(N:ℝ))*Real.log (6*(N:ℝ))+12*σsrc*R^2/(csrc*(N:ℝ)))
+    let f := fun y w => T*(Fsrc (w/M)-Fsrc (w/M+η*y))/(σsrc*η)
+    let Δtype := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      (16*U₀/μ₀)*Real.sqrt (U₀*(Q:ℝ)^3)*Real.sqrt K₀/(6*(K₀:ℝ)^2)
+    let Δ := fun k : ℕ =>
+      let Q := Q k
+      (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let D := fun k : ℕ =>
+      let Q := Q k
+      (Δ k)+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let CostUpper := fun k : ℕ =>
+      let Uref := Usel k
+      M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := fun k : ℕ =>
+      let Uref := Usel k
+      R^4/((N:ℝ)^2*(Uref:ℝ))
+    let Kupper := fun k : ℕ =>
+      240*(CostUpper k)*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)+2*BupperConst+(3/2:ℝ)*DupperConst)
+    let Klower := fun k : ℕ =>
+      240*(CostLower k)*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)+2*BlowerConst+(3/2:ℝ)*DlowerConst)
+    let Buffer := fun k : ℕ =>
+      let Uref := Usel k
+      (56*(Uref:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2
+    let Width := fun k : ℕ => (14*σsrc/csrc)*(Usel k:ℝ)*(N:ℝ)
+    let FamilyBound := fun k : ℕ =>
+      let Q := Q k
+      let K₀ := Kmesh k
+      fun (P : Finset (ℝ × ℤ)) =>
+        (48*σsrc/csrc)^6*(R^2/(Q:ℝ))^6*
+          C*(K₀:ℝ)^((12:ℝ)+εloss)*Cap^11*(2*(P.card:ℝ))^10*
+            (Vscale*Dtype*((P.image Prod.fst).card:ℝ)*(M/(N:ℝ))*(1+(Δtype k)*Jsep)+
+              ((P.image Prod.fst).card:ℝ)^2*Vscale*(if isUpper then (Kupper k) else (Klower k))*T^εloss)
+    (if isUpper then Vscale=1+R^4/(6*(N:ℝ)^2)
+      else Uband ≤ 1/16 ∧ Vscale=1+R^4*Uband^2/(N:ℝ)^2) →
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 → R ≤ (N:ℝ) → (N:ℝ)^3 ≤ M*R^2 →
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    61*Ccurv*Cphys ≤ Bcut →
+    (∀ k ≤ kmax,
+      12*Usrc ≤ σsrc*(Usel k:ℝ) ∧
+      63*(Usrc/(2*σsrc*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+      (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+      1 ≤ Usel k ∧
+      Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+      Q k ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧
+      768*R ≤ (Q k:ℝ) ∧ 2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+      D k ≤ 1/2 ∧ Δ k < 1/2) →
+    (∀ k ≤ kmax, Usel k ≤ Usel 0) →
+    2*(Buffer 0+Width 0)+6*(N:ℝ) ≤ M →
+    let CtailBand := (6*Usrc/σsrc)*(64*σsrc/csrc)^2+192*σsrc/csrc
+    let ClowBand := (3*Usrc/σsrc+csrc/(32*σsrc))*((3072*σsrc)/csrc)^2+(3072*σsrc)/csrc
+    let CerrorBand := (768:ℝ)^2*CtailBand+ClowBand
+    let Density := fun k => 128*CerrorBand*(M*R^2/((N:ℝ)*(Q k:ℝ)^2))*
+      (2+Real.log (512*σsrc*R^2/(csrc*((Q k:ℝ)/768))+1))
+    let Endpoint := (Y.card:ℝ)*(2*Buffer 0+2*Width 0+6*(N:ℝ)+2*(n:ℝ))
+    ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+    (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+    ∃ (Chunks : Finset (ℝ × ℤ)) (band : (ℝ × ℤ) → Option ℕ)
+      (Dcover : ℕ → Finset (ℝ × ℤ)),
+      (Chunks.card:ℝ) ≤ (Y.card:ℝ)*(8*M/(N:ℝ)) ∧
+      (∀ k ≤ kmax, ((Chunks.filter (fun p => band p=some (k+1))).card:ℝ) ≤
+        (Y.card:ℝ)*Density k) ∧
+      ((Chunks.filter (fun p => band p=none)).card:ℝ) ≤ (Y.card:ℝ)*Density kmax ∧
+      let Selected := fun k => Chunks.filter (fun p => band p=some k)
+      let Grid := fun (k : ℕ) (r : ℤ) =>
+        ((Dcover k).filter (fun p => p.2%8=r)).image (fun p => (p.1,p.2/8-2))
+      (∀ k ≤ kmax,
+        Dcover k ⊆ Selected k ∪ (Selected k).image (fun p => (p.1,p.2-6)) ∧
+        (Dcover k).card ≤ 2*(Selected k).card ∧
+        (∀ r, (Grid k r).card ≤ 2*(Selected k).card) ∧
+        (∀ r, (Grid k r).image Prod.fst ⊆ Y)) ∧
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),(𝐞 (f y j):ℂ)‖)^12 ≤
+        2^11*(((kmax:ℝ)+2)^11*
+          (((n:ℝ)*(Y.card:ℝ)*Density kmax)^12+
+            (4:ℝ)^12*(8:ℝ)^11*∑ k∈Finset.range (kmax+1),
+              ∑ r∈Finset.Ico (0:ℤ) 8,
+                (2^11*((Csrc*Error)^12+
+                  (Csrc*(1+Real.log (Kmesh k)))^12*FamilyBound k (Grid k r))))+
+            Endpoint^12) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_triangular_selected_band_phase_subinterval_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
+
 end HuxleyPhysicalReferenceRegression

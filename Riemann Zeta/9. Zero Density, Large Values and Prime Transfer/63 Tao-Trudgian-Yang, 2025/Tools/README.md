@@ -406,6 +406,1055 @@ Frozen statements, counterexamples, owner-authorized repairs, obstruction
 documentation and regressions are preserved. Recovery records remain
 permanently optional and skipped.
 
+## Current phase-dependent finite source assembly (1 October 2026)
+
+The EXISTING Huxley module now has complete finite estimates for ORIGINAL
+phase-dependent subintervals, with their common-interval specializations:
+
+- eventually_positive_difference_selected_band_phase_subinterval_physical_sieve;
+- eventually_positive_difference_triangular_selected_band_phase_subinterval_physical_sieve;
+- eventually_positive_difference_selected_band_subinterval_physical_sieve;
+- eventually_positive_difference_triangular_selected_band_subinterval_physical_sieve.
+
+Each phase may have its own A(y), B(y) inside [M,2M]. This is required by
+the actual differencing correlations, whose endpoints depend on the shift.
+The interval selector constructs a disjoint union of the actual phase
+chunks and charges the same uniform endpoint budget. No extra phase-count
+factor is lost. The old scalar-endpoint PUBLIC CONTRACTS AND REGRESSIONS
+are preserved exactly; their proofs specialize the stronger consumers.
+The old private scalar band reduction is replaced by the phase-dependent
+reduction, rather than maintaining two separate analytic assembly proofs.
+
+Canonical two-probe anchors are chosen before references. A finer grid,
+N=8*n and R_fine=sqrt(8)*R, reuses the proved quadratic denominator density.
+Actual anchors/roots are transported to all eight grids, with
+card(grid)<=2*card(band) and the actual phase-image subset retained.
+ALL bands, terminal-none mass and endpoint strips are included, also for
+short intervals. General and triangular regimes retain distinct costs.
+Genuine source tests/model conditions and physical scalar budgets are
+still explicit. No source-count or matrix-count certificate is assumed.
+
+Scratch 87961 PASS: 73 exact regressions and 73 explicit axiom checks,
+zero Lean diagnostics, standard logical axioms only. SHA-256:
+fb06199d57d4331e53723465fcf30923ae2fc4165c6025bae6d1bfc8c069e6e9.
+A separate integer-scale scratch 75431 PASS constructs Qbase, kmax,
+all integer Fourier meshes and monotone floor-selected reference lengths,
+derives the per-band physical budgets, and proves kmax<=log(N)/log(2).
+Its uniform selector chooses the cutoff from fixed source constants.
+It also proves the exact twelfth-power prefactor identity, derives the
+Type-I spacing factor from the actual mesh inequalities, and bounds
+density/completion/band-count logarithms by fixed multiples of 1+log(T).
+It reuses the EXISTING Fourier-mesh theorem and avoids the older, stronger
+Taylor-scale restriction. Six exact regressions and six explicit audits
+have zero Lean diagnostics and standard logical axioms only; SHA-256
+c5676df222d08be4bc49212c55fb00b24fb3485c31636a82ccfdda56dc146253.
+These scalar results are SCRATCH-CHECKED, not yet composed into production
+power-window/all-shift source assembly. Default resource limits are unchanged.
+
+Verified totals: 786 public Huxley theorems, 7,971 exact regressions and
+7,281 explicit public audits. Focused 17996 PASS: 10,781 jobs,
+Huxley 537s, root 11s, regressions 657s, zero Lean diagnostics.
+BOTH required BATs passed for this installed snapshot at dirty HEAD
+b83fe47bb344b5987461bd10e2834d3f7db57fa4:
+- cmd /c run_lake_build.bat --no-pause (foundation cwd), session 23140,
+  exit 0, 8,857 build jobs, 14,290 audited declarations, all six manifest
+  stages passed with zero warnings/tactic suggestions/linter failures.
+  Log: E:/Lean/Riemann Zeta/logs/foundation_freeze_20261001_151024.log
+  SHA-256 769e85bb99f82a598e4381b4f965cf101d3b1f2f9cf426149e31a3bc28263aae.
+  Matching JSON manifest SHA-256:
+  fe8e4314c6ee6322de0ca7a006501260926a74fb3ff87b864dc947b8ba0c0dae.
+- cmd /c run_tao_trudgian_yang_build.bat --no-pause (paper cwd),
+  session 86700, exit 0, 10,782 default-build jobs, semantic regression
+  PASS and 21,036 declarations in the permitted-dependency audit.
+  All inventory/source-integrity/replay/generator/coverage gates passed.
+  Log: logs/tao-trudgian-yang-build-20261001-151327-92068d9d.log
+  SHA-256 72c4a2320aed86697a11e21c3b43636eb2a36dc8fa182d99c35e855d1baf7482.
+  Zero Lean diagnostics; the TWO frozen Python invalid-escape
+  SyntaxWarnings remain visible and unchanged.
+The preceding 784 focused and 782 BAT snapshots are historical evidence,
+not the verification claimed for the current installation.
+
+Installed source SHA-256:
+Huxley cb7e24a7f30ae10addcad19f538dbc3d809516b3d8071bd4942d7a0f28dc677f;
+regression 0492870e0c2883a0ab2b89dff9f37bc6323fd14636dc2c9d50122fbf81689b78;
+audit d26a233891036d046fbfae0d96a031c81c95f308bcd8d5afae0ad7c3bf10c55d.
+
+Remaining DAG:
+actual selected-band source counts/completion weights (installed)
+-> phase-dependent original-subinterval all-band/eight-grid assembly,
+including terminal and endpoint errors (installed; focused and BOTH BATs PASS)
+-> integer band/mesh/reference-length construction and scalar spacing/log bounds
+(scratch checked)
+-> fixed source constants, common physical power-window budgets and
+scalar/logarithmic simplification uniform over ALL differencing shifts
+-> original-phase/correlation transfer -> beta rows 7--11 -> EPZAE-14/29/30.
+Keep the ACTUAL shift cardinality until H*R^2 cancels in the cubic and
+terminal errors; an early replacement by Hmax loses the required bound.
+Reuse existing source normalization, cubic-error and logarithmic estimates.
+No beta row or aggregate gate changes status: OPEN, 34/42.
+EPZAE-13/14/29/30/38/39/40/41 remain open.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory
+and must be maintained when coverage or behavior changes. No production
+module, import, resource setting, toolchain or runner exclusion was added.
+Preserve every frozen false statement, counterexample, obstruction,
+owner-authorized repair and regression, including the supplied Huxley PDF.
+Recovery-record maintenance remains permanently skipped.
+
+## Historical verified 777 selected-band and triangular-regime snapshot (1 October 2026)
+
+Two new public consumers are installed in the EXISTING Huxley module:
+positive_difference_selected_dyadic_family_fourier and
+exists_positive_difference_triangular_regime_source_sieve.
+The already-proved eventually_positive_difference_global_triangular_source_mass
+is now public for direct reuse; its statement and proof are unchanged.
+
+The first consumer constructs the minimum-denominator anchors, least dyadic
+band labels and ACTUAL curvature roots before every selected finite family.
+Both probes are good at the chosen band. The earlier band's bad-probe union
+gives the quadratic occupied-band bound; the terminal remainder is retained.
+The roots lie within N/16 of their actual grid starts. The SAME canonical
+denominators retain their band when root-producing witnesses replace the
+original minimum-denominator witnesses. The existing arbitrary-family
+Fourier theorem then completes exactly the selected family with ONE common
+mode across phases and blocks. Dyadic centers lie within N/8 of the grid
+starts and stay in every quarter-trimmed reference bracket containing those
+starts. No discarded-block majorant is inserted inside that selected family.
+Six private prerequisites are installed; no new module or import is added.
+
+The second consumer unpacks the ACTUAL matrix returned by the installed
+source sieve. It preserves all existing source, Fourier, classification
+and Type-I metadata, and proves:
+
+- Vscale=1+R^4/(6*N^2): every same-color pair is upper triangular;
+  the lower and large-entry sets are EMPTY.
+- Hcurv=(3*Usrc/sigma_src)*E*T/(2*M^2)<=1/16 and
+  Vscale=1+R^4*Hcurv^2/N^2: every same-color pair is lower triangular;
+  the upper and large-entry sets are EMPTY.
+
+The source jets derive the curvature bound. Neither a matrix-classification
+certificate nor a pair-count certificate is assumed.
+
+Scratch 11737 PASS: 44 exact regressions and 44 explicit audits,
+zero Lean diagnostics, standard logical axioms only. SHA-256:
+0fe96106541f7ebd41dd123eed0f2c514e4987fc860181b67423d7ec710c2a18.
+Production totals after installation: 777 public Huxley theorems,
+7,962 exact regressions and 7,272 explicit public audits.
+Focused build 78922 PASS: 10,781 jobs, zero Lean diagnostics.
+Both mandatory BATs PASS for this 777 snapshot at dirty HEAD
+b83fe47bb344b5987461bd10e2834d3f7db57fa4 (exit 0):
+
+- Foundation 4761: 8,857 build jobs, 14,290 audited declarations.
+  Logs: E:/Lean/Riemann Zeta/logs/foundation_freeze_20261001_111624.log
+  and the matching .json manifest.
+- Paper 14705: 10,782 build jobs, 21,007 audited declarations.
+  Log: logs/tao-trudgian-yang-build-20261001-112425-67c2f6f7.log.
+
+The complete on-disk logs have zero Lean errors, warnings or tactic
+suggestions. The two frozen Python invalid-escape SyntaxWarnings remain
+visible. git diff --check passes (only Git line-ending notices).
+The preceding 774 snapshot's logs below remain historical evidence.
+
+Verified SHA-256:
+Huxley 8a71af3c031d045bbfb55783d196fe846dd75c5de70e881a0613de3204cc7bce;
+regression eb94b08afdf683b7a36193a6c353f7bfbd4406d43030fcdf4787ba1382f152f6;
+audit 25f7790b787b510554485386a50bcf16471bf33b3459b301d7a3f03b18729a35;
+foundation log 368e1795bfe92c79e6af84cf06802250ecb394911d2c0219468932957d9295c3;
+foundation manifest def8d6e18df4fdb9b6b4973f6d50c1f27fb8d1e862913cb9975e3ad669c30e74;
+paper log 706a023490155b00ebe41dab11ecc6c44f44020341df12a394f026254c6d490f.
+
+Remaining prioritized DAG:
+actual non-circular bands + roots + selected-family common-mode Fourier
+and actual source-sieve upper/lower classification (installed)
+-> surviving triangular original-pair count in the SAME source-family sieve
+-> selected-band/reference/eight-grid original-sum assembly and terminal error
+-> exact interval-wide upper/general/lower physical scale selection
+-> original-phase transfer -> beta rows 7--11 -> EPZAE-14/29/30.
+The general row-9 source sieve is already installed. Exploratory endpoint
+linear programs suggest margin for all five rows with POINTWISE Type-I
+counting; they are not proof evidence or substitutes for physical scale
+assembly. Joint-cell/gap-averaged Type-I and fifth-moment routes remain
+alternatives. No beta row or aggregate gate changes status: OPEN, 34/42.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory.
+Maintain runner coverage if it changes; no runner modification is needed
+for this installation in an already-covered module. Preserve all frozen
+false statements, counterexamples, obstruction documents, owner-authorized
+repairs and regressions. Recovery-record maintenance is permanently skipped.
+
+## Previous common-reference eight-grid consumer: 774 snapshot (1 October 2026)
+
+Three public consumers are installed in the EXISTING Huxley module:
+positive_difference_constructed_reference_family_uniform_grid_fourier,
+eventually_positive_difference_uniform_reference_core_physical_sieve,
+and eventually_positive_difference_eight_grid_whole_sum_physical_sieve.
+
+The reference system, heights, oriented charts and actual curvature roots
+are now chosen BEFORE every grid origin and prefix-length family.
+The old buffered-source theorem is recovered as a checked specialization;
+its public statement is unchanged. The common-scale colored extension
+and the earlier coarse whole-grid estimate are also preserved unchanged.
+
+The core consumer reuses the actual weighted family sieve, SAME reference
+charts, phase/block transport, common Fourier mode, local windows and
+completion error. For any finite family of genuinely buffered good blocks,
+it proves the twelfth-power bound WITHOUT a discarded-block M/U charge.
+Good-block membership is expressed by actual adjacent references and roots,
+not by an assumed Fourier, matrix, pair-count or whole-result certificate.
+
+The whole-interval consumer derives good membership from the source jets
+and actual reference separation. With N=8*n, one of two starts works for
+each n-term chunk. Global maximizing prefixes are chosen once. Exact
+integer quotient/remainder reindexing uses EIGHT grids; the two-start
+overlap costs a factor four. All grids use the SAME reference system.
+An exact interval partition and ceiling/floor construction account for
+the original interval (ceil M, floor(2*M)], including both endpoint strips.
+
+Let Width=(14*sigma_src/c_src)*U*N and
+Buffer=(56*U/kappa)*N+N/(Cphys+2)+2.
+Under 12*J<=sigma_src*U and the explicit scalar room condition
+2*(Buffer+Width)+6*N<=M, put
+Endpoint=card(Y)*(2*Buffer+2*Width+6*N).
+Writing X for the sum over phases of ORIGINAL interval-sum norms, and
+CoreBound=2^11*((Csrc*(Major+Error))^12
+               +(Csrc*(1+log K0))^12*FamilyBound(card Y)),
+the consumer proves
+X^12 <= 2^11*(32^12*CoreBound+Endpoint^12).
+Major, Error and FamilyBound are the unchanged explicit analytic expressions
+in the preceding physical-family consumer. Endpoint has order card(Y)*U*N,
+not card(Y)*M/U. Physical regimes, genuine source tests and model
+approximation are still explicit and must be supplied by scale selection.
+
+Twelve private boundary/prefix/reindexing/endpoint helpers are installed;
+there is no new module/import, resource increase, linter suppression,
+source pin, toolchain or BAT-coverage change. Five trailing-space defects
+in the preceding installation were corrected; git diff --check now passes
+apart from Git's informational LF-to-CRLF notices.
+
+Scratch 39676 PASS: ten exact regressions/27 audits, zero diagnostics;
+SHA-256 b5b0d8eec719e7e99c0bd92c428e26ac434b2069275d22a55cf1c3004cd9eeca.
+Uniform-reference compatibility scratch 8090 PASS: three exact regressions/
+nine audits, zero diagnostics; SHA-256
+7b5915f3ef08c7e9de58f676bb940ca8b43412b1c657fd4f8a95515f0abaa1ff.
+Boundary/source-refinement scratch 16821 PASS: forty-one exact regressions/
+forty-one audits, zero diagnostics; SHA-256
+5c15be379fbad6c5292c7ccd610735afda97b575465d2245fde18816431f7506.
+All three audit scopes use standard logical axioms only.
+
+A second, direct monomial/differencing route was tested before further
+analytic expansion. Its exact exponent-model diagnostic proves
+(53+882*m)/1106<=b from the linked scale relation and the diagonal,
+current major-arc, Type-I and large-entry exponent inequalities.
+At m=1/3 this is 347/1106, strictly above the required third-row value.
+This diagnoses that PARTICULAR majorant/transfer route; it is neither
+a counterexample to Huxley's theorem nor a proof that all routes fail.
+The earlier coarse-boundary exponent diagnostic is retained as well.
+
+The supplied Huxley PDF, especially pp.34--39, was rechecked against the
+current formulas. Existing Bourgain six-tuple first spacing IS already
+used. The PDF explicitly uses R<<Q<<N, so extending to Q<R is NOT the current
+priority. The next targeted investigation is intrinsic dyadic denominator
+bands and their occupied-family/Type-I density. The existing sharper RAW
+anchor-tail estimate was found before adding analytic machinery; the current
+whole-sum consumer specializes it to the coarser MR/Q expression.
+The existing scratch now proves the actual phase-family raw tail and its
+quadratic density C*card(Y)*M*R^2/(N*Q^2)*(2+log(D+1)), assuming N*Q<=M.
+A four-start construction (indices 0,1,5,6 on the N/8 grid) derives both
+reference avoidance and exclusion of denominators <=Dmin under
+(36*J+c)*Dmin^2<32*sigma*R^2; its actual buffered brackets are proved too.
+This is NOT yet a Q-band cover: selecting references using Q and then
+assuming that the selected anchor belongs to that same band is circular.
+
+Visual reinspection of PDF pp.32 and 34 resolves the next analytic loss:
+Type-I pair mass has the gap-averaged factor (1+Delta2*J/U), not merely
+(1+Delta2*J). In (10.11) the first term is IM/R, and the phase factor is
+1+(R/N)^(8/3)*J. The R denominator was checked directly in the printed PDF.
+The current pointwise Type-I consumer does not contain the 1/U saving.
+
+A smaller reuse route is now kernel-checked in that SAME scratch:
+positive_difference_local_pair_compression applies the existing local
+parameter count to two actual phases; its physical identity specialization
+derives |yb-ya|<=C*(Delta+1/M), including rounding.
+positive_difference_identity_quartic_long_block_parameter_gap consumes
+actual quartic residuals, roots and spacing through the existing improved
+Third theorem, deriving
+|yb-ya|<=C*(Cthird+1)*R^2/(L^2*N^2).
+No improved-Third conclusion, inverse-profile derivative or count
+certificate is assumed. This closes the analytic identity long-block
+sublemma ONLY.
+The new positive_difference_actual_fourier_identity_long_gap_parameter_gap
+now composes that analytic result with the INSTALLED actual Fourier-gap
+witness constructor. Original-family size m0*n determines
+L=(2*kappa/Cphys)*n; samples, root curves, quartic residuals and the improved
+Third estimate are all derived from the SAME actual Fourier data.
+The literal identity matrix and genuine source/anchor/reference/scale
+hypotheses remain explicit. This is not the complete Type-I family mass.
+The finite separated_inverse_square_weight_sum theorem separately proves
+sum(w)<=U+4*D*J from actual separated parameters, w<=U, and inverse-square
+long-block compression. It reuses the existing interval count and Mathlib
+tail sum. Its compression premise must still be discharged in the SAME
+whole-family consumer; the finite lemma alone is not analytic assembly.
+
+Two further reuse steps are kernel-checked in the SAME scratch.
+fourier_matrix_constructed_upper_triangular_narrowing chooses
+V=1+R^4/(6*N^2); the actual narrowed Fourier-matrix estimate forces C=0,
+unit diagonal, equal denominators and the exact numerator translation.
+This tests the paper's alternate upper-triangular route, not a supplied
+matrix-classification certificate.
+positive_difference_shared_chart_quartic_parameter_gap applies the
+already-proved middle-interval Third theorem twice at the SAME point.
+The common target Farey-chart weight cancels, giving
+|yc-yb|<=C*(16*Gamma*Cmid+1)*R^2/(L^2*N^2).
+Actual source jets, roots, eight common samples, quartic residuals and
+span budgets are explicit; the improved Third estimate is derived.
+The next three consumers remove supplied samples for an actual common
+occupied family: quartic_two_comparisons_common_coefficient_samples,
+physical_two_comparisons_common_samples, and
+positive_difference_common_occupied_quartic_parameter_gap.
+Two applications of the existing nine-color lemma choose eight ORIGINAL
+occupied points with both coefficient pairs fixed. The source curvature
+growth derives physical/G spacing; endpoint interpolation constructs all
+three root curves and rounded span budgets. The final parameter bound
+uses L=kappa*card(S)/(1296*Cphys), not an unrelated length witness.
+The original common occupied set, two curvature cells and actual quartic
+residuals are explicit upstream inputs. The full SAME-matrix Fourier
+cell/residual assembly and gap-averaged sum are NOT concluded.
+
+A second route is also kernel-checked:
+bounded_action_off_transition_triangular derives unit diagonal and
+B=0 or C=0 from the actual narrow homography whenever Laction<Hcurv
+or (Laction+4)*Hcurv<1. Its linked source consumer
+eventually_source_scaled_bounded_action_triangular specializes
+Hcurv=K*X^p/(X^m)^2, K>0, and proves this eventually when p!=2*m.
+The transition p=2*m is explicitly excluded, not silently discarded.
+Using final epsilon slack to choose ALL physical scales away from the
+transition remains an investigation, not a completed scale choice.
+Seven further source consumers are now checked in the SAME scratch.
+fixed_probe_minimal_anchor_band chooses the LEAST finite dyadic band
+making BOTH fixed probe denominators good BEFORE any reference system
+is chosen. Minimum-denominator witness independence transfers the band
+to later anchors in the same curvature window.
+positive_difference_fixed_probe_band_safe_start combines that selection
+with the actual two-probe buffered-reference construction. This removes
+the circular band/reference choice at the finite source-selection level.
+positive_difference_two_probe_dyadic_band_card constructs the actual
+two minimum-denominator anchors and band labels on an N-spaced grid,
+then derives each noninitial band's size from the two bad-probe sets at
+the preceding band; the terminal remainder is counted at the final band.
+huxley_anchor_complement_quadratic_density_scale retains BOTH high- and
+low-denominator tails, proving the quadratic density under N*Q<=M.
+positive_difference_two_probe_dyadic_quadratic_density composes those
+proofs for the actual source phase. Neither band labels nor a band-count
+certificate are assumed.
+
+fourier_matrix_constructed_lower_triangular_narrowing proves the
+complementary small-curvature route: for Hcurv<=1/16 and
+V=1+R^4*Hcurv^2/N^2, the ACTUAL narrowed Fourier matrix has B=0,
+unit diagonal, equal numerators and the exact denominator translation.
+fourier_matrix_constructed_lower_triangular_physical_scale substitutes
+the linked physical curvature and scale relation:
+Hcurv=Ccurv*T/M^2 and T*N*R^2=M^3 give V=1+Ccurv^2*M^2/N^4.
+The displayed small-curvature hypothesis remains explicit.
+These twenty-six scratch refinements are not installed public declarations
+and do not change production counts.
+
+A lower-moment reuse route was also checked before expanding infrastructure.
+Padding a ten-tuple by a diagonal pair in the existing twelve-tuple theorem
+costs an extra mesh factor in the subsequent sieve. Exploratory exponent
+calculations did not unlock the missing rows; no new moment-module family
+was added and numerical exploration is not proof evidence.
+Exploratory exponent checks also tested the averaged Type-I improvement
+with coarse and quadratic major-arc costs, and a second-derivative saving
+on the discarded contribution. These particular bounds still miss the
+five target midpoints; they do not justify a new derivative-module family
+or prove an obstruction to other source-faithful routes.
+
+The preferred alternate route now uses the proved two-probe dyadic
+selection and three matrix regimes: upper triangular for rows 7--8,
+the installed general estimate for row 9, and lower triangular for rows
+10--11. Exploratory endpoint linear programs have positive exponent
+margin at both ends of every requested interval even with POINTWISE
+Type-I counting. This is only a feasibility check, NOT a kernel proof:
+exact rational scale witnesses, all source hypotheses, selected-band
+Fourier/sieve assembly and original-phase transfer remain to be proved.
+Accordingly the next obligation is the existing arbitrary-family Fourier
+consumer on the ACTUAL selected bands, preserving quadratic density.
+The joint-cell/gap-averaged Type-I and fifth-moment approaches remain
+available alternatives, not prerequisites proved by the endpoint checks.
+No sharp Type-I, fifth-moment or beta-row conclusion is claimed.
+
+INSTALLED snapshot: 774 public Huxley theorems, 7,959 exact regressions,
+7,269 explicit public audits. Focused build 93259 PASS (10,781 jobs).
+Foundation BAT 84824 PASS (8,857 jobs; 14,290 audited declarations), exit 0.
+Paper BAT 71020 PASS (10,782 jobs; 20,994 audited declarations), exit 0.
+Both full disk logs have zero Lean diagnostics. The two frozen-Python
+invalid-escape SyntaxWarnings remain visible and unchanged.
+Foundation foundation_freeze_20261001_074825.log SHA-256
+db2877113a909f7bff95360802fbe8f134b7e86568430c0b2c9809913dab0ee8;
+JSON 2494bfbb4f43d2beabe7cf6f839c6ff41d8042e5aa9230d2a895a55adaaf020d.
+Paper tao-trudgian-yang-build-20261001-075400-78362642.log SHA-256
+329766c2a7216fb400e855fa7f56aa8fb90cd605215bc91db7c11fb2e0a58600.
+Source SHA-256:
+Huxley 26b5e17c7ef0d4acca5e8ad4ef234afa9612ff856b6a550a1b5484680cb63263;
+regressions 49286f349c4a064d48606766ef777148a2625222d8659131ab52bdd09d86ea1c;
+audit 9dd6524a99fcdd0d4e007847a1a590fd65dd4b8c70a1de9ecc494d7f56883dfc.
+
+The previous 771 snapshot remains historical PASS evidence:
+focused 22392 (10,781 jobs);
+foundation BAT 11404 (8,857 jobs; 14,290 audited declarations), exit 0;
+paper BAT 40073 (10,782 jobs; 20,980 audited declarations), exit 0.
+Both full disk logs have zero Lean diagnostics.
+Foundation foundation_freeze_20261001_062942.log SHA-256
+bcc40f2d7171bfff1b25adcf4b0c9c59ea050ae1f5d384fcfa86a0678040afd8;
+JSON f6e3457431761b486e38e155757a015f79e9470ee68bfb61fd70cf9ffd536ac9.
+Paper tao-trudgian-yang-build-20261001-063348-2236b49e.log SHA-256
+03bd9bde2f0573d0612deef5b1046b020c8704ec29635153231a689b0687728d.
+The two frozen-Python invalid-escape SyntaxWarnings were unchanged.
+
+The previous 769 snapshot remains historical PASS evidence only:
+focused 85104 (10,781 jobs); foundation BAT 39571 (8,857 jobs/14,290 audits);
+paper BAT 73174 (10,782 jobs/20,963 audits), both exit 0, zero Lean diagnostics.
+Foundation foundation_freeze_20261001_050535.log SHA-256
+a7b10d4bc4ab6d971338f341fc841c54bcf2028442e4e9f60aeec14deaed03e3;
+JSON ab1531f61aa97ebf1eeba6cfc37fdd79cb9f13e5f97743d93ca7855bf9bb570a.
+Paper tao-trudgian-yang-build-20261001-050929-6769e517.log SHA-256
+508b1fba64ab8d44e6ccb721ec17115ef4daeeae759ac96b261b251e8248a549a.
+
+Remaining DAG: common-scale source + SAME-reference eight-grid ORIGINAL
+interval estimate without coarse M/U loss (installed; both BATs PASS)
+-> non-circular fixed-probe band selection and actual quadratic counts
+   (scratch kernel-checked)
+-> ACTUAL restricted-band Fourier/sieve assembly (OPEN)
+-> upper/general/lower matrix-regime consumers with linked physical scales
+-> exact rational interval-wide scale choice and original-model transfer
+-> exact beta rows 7--11 -> EPZAE-14/29/30.
+The aggregate remains OPEN (34/42). No beta row or fifth-moment conclusion
+is marked complete by this installation.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory,
+with runner maintenance required if coverage or behavior changes.
+Preserve every frozen false statement, counterexample, obstruction,
+owner-authorized source-contract repair and regression.
+Recovery-record maintenance remains permanently skipped.
+## Physical-size and weighted common-mode family consumer (1 October 2026)
+
+eventually_positive_difference_actual_family_physical_sieve is installed
+in the EXISTING Huxley module. It consumes the actual-source common-mode
+family theorem, absorbs the literal joint-color fiber weights and derives
+card(V) <= 10*card(Y)*M/N from the existing rounded block/parity count.
+No cardinality, weight-sign or matrix hypothesis is added.
+
+The output retains the unweighted common-mode twelfth-power estimate with
+the color sum replaced by (10*card(Y)*M/N)^10. It additionally bounds the
+ACTUAL completion-weighted Fourier sum, whose point weight is
+sqrt(2*q)/(q*sqrt(mu*Nlen)), by the same physical twelfth-power expression
+times (144*Usrc/(csrc*kappa))^6*(R^2/Q)^6.
+The cubic lower bound comes from the genuine rounded source phase.
+The lower comparison kappa*sigma_src*T/(3*Usrc) <= Tsrc is DERIVED from
+an actual approximate-model witness; it is not a new assumption.
+The empty family is proved separately. All constants/threshold order,
+Type-I linear versus other-type quadratic phase counts and original
+reference/endpoint/scalar hypotheses are unchanged.
+
+Four short private finite-weight/scalar lemmas are new. Existing rounded
+point counting, rounded cubic bounds and source-amplitude nondegeneracy
+are reused. There is no new production module or import and no resource,
+toolchain, source-pin or BAT-coverage change.
+
+Scratch 72276 PASS: one exact-signature regression and six explicit
+audits, zero Lean diagnostics, standard logical axioms only.
+SHA-256 2f350ab304e48772a736dd73f693ea991a1e31d4a124fbe20a413e8f77f7a3ec.
+Transient missing scalar arguments, cast-expression mismatches and final
+multiplication normalization were repaired without weakening the contract
+or increasing resources. Earlier raw-weight scratch snapshots are not
+the final normalized theorem.
+Private color-weight scratch 53731 PASS: two exact regressions/two audits;
+SHA-256 ce5127a82283356622b4bb1483fb4535a258f800c9d9b6e8e86af5e8fc33bb9b.
+Private completion-weight scratch (exec 787) PASS: two exact regressions/
+two audits; SHA-256 e1d4e8728cce4fe0786dc27a8f15d692a594efdab3cadfc9a70ef2f083332274.
+Both have zero Lean diagnostics and standard logical axioms.
+
+VERIFIED snapshot: 768 public Huxley theorems, 7,953 exact regressions,
+7,263 explicit public audits. Focused build 14641 PASS: 10,781 jobs
+(Huxley 419s, root 11s, semantic regression 566s).
+Foundation BAT 18646 PASS: 8,857 jobs and 14,290 audited declarations;
+logs/foundation_freeze_20261001_041944.log and matching JSON.
+Log SHA-256 9d1e2f3e7f38c02f6a5d96bb24f7435449e9f977c135c717751ded3fc862ea05;
+JSON SHA-256 21d265b4c64215335ae4644b75b367ce90b1a3bbde0f5ec558e64bc580b9a352.
+Paper BAT 83617 PASS: 10,782 jobs and 20,960 imported/target declarations;
+logs/tao-trudgian-yang-build-20261001-042343-4c2bc863.log.
+Log SHA-256 ec4df191e1b3c8a003ddd13a1c188df16cfaef5441235a2112f34a844eb9d5f6.
+Both complete disk logs have zero Lean errors, warnings or tactic suggestions.
+The two visible frozen-Python invalid-escape SyntaxWarnings are unchanged.
+Both runners exited 0; no failed stage or coverage change.
+Source SHA-256:
+Huxley 1d62682fce24d5db050147cca5d9211c6174660b0957dd70526660e92e877ab9;
+regressions 9e940dcd1d1380c57457d450ce8a38c1d5e6260c5689c215ffccde8f302be8d4;
+audit dece1a3e98ced70b47549d3796db875ca6c8f0d4194aaf433d82b2937deac220.
+
+Remaining DAG: SAME constructed source and selected physical hypotheses
+-> actual common-mode family count
+-> physical-size and normalized weighted common-mode bound (verified)
+-> SAME whole-grid source entry, outer Fourier factor and source errors
+-> boundary/major blocks -> fifth moment -> beta rows 7--11
+-> EPZAE-14/29/30. Aggregate remains OPEN (34/42).
+
+The existing whole-grid source theorem already constructs a common
+Fourier mode and explicit boundary/major-block costs; reuse it. Its
+reference-tagged grid must be identified with the actual phase/block
+family, and every endpoint/reference/scalar hypothesis must be discharged.
+A bounded reference-system witness may not be substituted for a separately
+constructed whole-grid witness without a proved common construction.
+
+The second source-entry normalization route is SCRATCH ONLY: three private
+lemmas prove that the seven literal nondegeneracy tests scale with degrees
+1, 2 and 4, that a fixed positive amplitude interval gives uniform jet/
+test/negative-fourth constants, and that rescaling the source leaves the
+physical exponential phase exactly unchanged when Tmodel*amplitude=Traw.
+Scratch 62022 PASS: three exact regressions/three audits, zero Lean
+diagnostics, standard logical axioms; SHA-256
+5cc1dd1a55a8fa17d3a9a5f0df3c9ee9831deb4943987117fa3a01e9af282764.
+This is not installed and does not by itself supply the selected
+reference geometry or all scale budgets. Uniform constants must precede
+the phase-color center; scaled Fourier/Taylor budgets still need proof.
+
+Additional source-entry work is SCRATCH ONLY, not included in this
+production verification. The SAME whole-grid reference witness now has
+derived rational heights, actual oriented determinant-one charts from
+the existing larger-denominator neighbor theorem, and injective
+phase/block identification. Scratch 18183 PASS: two exact regressions,
+four explicit audits, zero Lean diagnostics and standard logical axioms.
+SHA-256 5008670a07c74688fa23b86bcf404cc291f816d01fb4107abe3432697515e918.
+No separately constructed reference system is substituted.
+
+Two private endpoint lemmas count discarded whole gaps in the actual
+two physical boundary strips and derive the integer-based shifted local
+window from an endpoint buffer. Scratch 59709 PASS: two exact regressions,
+two audits, zero Lean diagnostics and standard logical axioms.
+SHA-256 515dcf583198ffb370a19da4035ac826b66b044730ff046b4863710a587a866b.
+Their source integration is IN PROGRESS: choose the buffered gap family
+BEFORE Fourier completion, retain a common mode for that family, and
+charge discarded original sums explicitly. No completion is claimed for
+the buffered source consumer or the fifth-moment theorem.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory
+and must be maintained as coverage or behavior changes. All frozen false
+statements, counterexamples, obstructions, owner-authorized repairs and
+regressions remain preserved. Recovery-record maintenance stays skipped.
+
+## Actual-source common-mode family assembly (1 October 2026)
+
+eventually_positive_difference_actual_family_source_sieve is installed
+in the EXISTING Huxley module. It unpacks the actual joint-source sieve,
+uses its SAME constructed global Fourier matrix on its literal residual
+phase fibers, and consumes the combined triangular/large-entry analytic
+count. The resulting public contract has NO matrix, matrix-injectivity,
+multiplicity or pair-count hypothesis.
+
+For each common Fourier mode, write Y=S.image(fst), Fiber for the actual
+joint-color fibers and Vscale=Uref^(3/2). The proved twelfth-power bound is
+C*K0^(12+epsilon)*Cap^11 times the sum over actual colors of
+card(Fiber)^10 times
+[Vscale*Dtype*card(Y)*(M/N)*(1+Delta_type*Jsep)
+ + card(Y)^2*(Vscale*(Kupper+Klower)+Klarge)*T^epsilon].
+Type I remains linear in card(Y); only the other types use phase pairs.
+The triangular M^2/(N^4*Uref), R^4/(N^2*Uref), and large-entry
+R^8/N^4 and (Q/N)^(2/3) factors are unchanged. Both displayed epsilon
+losses remain explicit. Constants precede the finite family, and the
+color width and reference-height bound precede the eventual threshold.
+
+The proof preserves actual phase coordinates, physical/rounded jets,
+parity offsets and Fourier clouds under exact phase-fiber reindexing.
+Membership in Y supplies both model witnesses even for an empty residual
+fiber. Three previously scratch-only PRIVATE transports are installed;
+the existing phase-forgetting proof is reused, not duplicated.
+
+STATUS: conditional source-family estimate, NOT fifth-moment closure.
+Genuine order-four source models, reference-gap/anchor geometry, selected
+U, endpoint margins, mesh/rounding relations and displayed scalar regimes
+remain upstream inputs. The theorem derives all matrix/count data, but
+does not claim to derive these physical/source-entry inputs.
+
+Scratch 99383 PASS: one exact-signature regression and five explicit
+axiom audits; zero Lean errors, warnings or tactic suggestions; only
+propext, Classical.choice and Quot.sound. SHA-256
+550ddd34cf2e10b01ae1aef4ee19335f4f47658b1ad72af42358f33644fbe538.
+Initial binder/type-inference, scalar-positivity and expensive ring
+expansion failures, and one unnecessary tactic-sequencing warning,
+were repaired in the proofs. No resource increase or linter suppression.
+
+VERIFIED snapshot: 767 public Huxley theorems, 7,952 exact regressions,
+7,262 explicit public audits. Focused build 40699 PASS: 10,781 jobs,
+Huxley 413 s, root 11 s, regressions 560 s.
+Foundation BAT 9853: exit 0, FINAL RESULT PASS, 8,857 build jobs and
+14,290 audited declarations. Evidence (foundation root):
+logs/foundation_freeze_20261001_033701.log / .json.
+Log SHA-256 f1660eb73a1d1844a345306611b66f2433410685e954f157ece28b42dcec57db;
+JSON SHA-256 c8ab76fd3497a990f0443c80e21fec2029be20a03dbd7411958bf99056ada932.
+Paper BAT 39529: exit 0, FINAL RESULT LEAN VERIFICATION PASS, 10,782 jobs
+and 20,958 audited imported/target declarations. Evidence:
+logs/tao-trudgian-yang-build-20261001-034051-d5d1e06c.log;
+SHA-256 efae5fa7d0419ba99f88dd105522f125b00e6f97cd85ce9984294322c532d9bc.
+Both complete disk logs contain zero Lean errors, warnings or tactic
+suggestions; no failed stage. The same two frozen historical-Python
+invalid-escape SyntaxWarnings remain visible and are not Lean proof
+evidence. Owner HEAD b83fe47bb344b5987461bd10e2834d3f7db57fa4, dirty;
+no agent commit or push. The preceding 766 evidence is historical.
+Source SHA-256:
+Huxley 41aa40975257e826bb7f7ce643680dcf2c13170d062ad36748a60980a9320e0d;
+regressions b0cdf2012997fe2a6e20e12641bbffa2adfdfa3cd0981d35173d674df66a5ae3;
+audit 50e4de5d0341bc82350e77e2a7b872dea7ccab4934601328abf167b673c4ec28.
+
+Remaining DAG: SAME constructed source/selected physical hypotheses
+-> actual common-mode family bound (kernel-checked; both BATs PASS)
+-> finite-color/physical-family cardinality and common Fourier assembly
+-> outer source sum, boundary and major blocks
+-> fifth moment -> beta rows 7--11 -> EPZAE-14/29/30.
+Next mathematical work must consume the actual family estimate, not add
+another abstract matrix/count certificate. The source-entry supplier
+must eventually discharge EVERY physical hypothesis for the SAME source.
+Aggregate remains OPEN (34/42); no EPZAE gate is newly marked complete.
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be maintained if coverage or behavior changes.
+No new production module/import, source pin, toolchain, resource limit
+or BAT coverage change. Frozen false statements, counterexamples,
+obstructions, owner-authorized repairs and regressions are preserved.
+Recovery-record maintenance remains permanently skipped.
+
+## Exact common-mode type decomposition and combined fixed-phase-pair bound (1 October 2026)
+
+Two public consumers are installed in the EXISTING Huxley module:
+exists_positive_difference_joint_type_decomposed_source_sieve and
+eventually_positive_difference_global_non_type_one_pair_mass.
+
+The first unpacks the actual joint-colored source sieve and its SAME
+global Fourier matrix. It inserts the proved Type-I linear-parameter
+contribution directly into the common-mode twelfth-moment estimate.
+The residual is an EXACT sum over phase pairs of the literal upper,
+lower and large-entry subsets. Forgetting the fixed phase coordinates
+preserves pair cardinality exactly; no multiplicity or pair-count
+certificate is assumed. The old matrix, coloring and source conclusions
+remain available together with this strengthened common-mode bound.
+
+The second counts ONE actual fixed-phase-pair matrix family outside
+Type I, splitting its literal upper/lower/large-entry subsets. It reuses
+the existing local analytic estimates through proved global/local
+phase, rounded-jet, Fourier-cloud and rounded-block identities.
+Repeated triangular matrices are reindexed by their integer translation;
+injectivity of the ORIGINAL matrix family is neither assumed nor needed.
+The source curvature band is derived from the genuine source jets and
+normalized approximate model. The displayed classification/large-entry
+conditions match the already-derived complement from the Type-I consumer;
+they are narrower upstream data, not a count assumption.
+
+For the same physical parameters its conclusion is
+Vscale*card(P) <= (Vscale*(Kupper+Klower)+Klarge)*T^epsilon.
+Kupper and Klower retain the triangular M^2/(N^4*Uref) and
+R^4/(N^2*Uref) costs. Klarge retains the actual narrowed-sieve cost,
+Vscale=Uref^(3/2), the R^8/N^4 source scale and (Q/N)^(2/3) saving.
+Constants and eventual thresholds are chosen before the source phase,
+finite pair set and physical/reference data. Actual order-four model,
+reference-gap/anchor geometry, common selected U, endpoint margins,
+mesh/rounding constraints and scalar regimes remain displayed inputs.
+This is a conditional source count, not full source entry or fifth-moment
+closure.
+
+Five private lemmas are new: three finite cardinality/reindexing facts
+and two global-coordinate transports of EXISTING analytic bounds.
+Existing source-amplitude and curvature proofs are reused, not duplicated
+in production. No new production module/import, resource limit,
+toolchain or BAT coverage change.
+
+Scratch 23163 PASS: common-mode reduction, one exact regression/four
+audits, zero Lean diagnostics and standard logical axioms;
+SHA-256 ba26ce66471ba8d80c9d8d7294d395b58ef5b9cfb8a1633e48c4cb073d5c1ad1.
+Scratch 97602 PASS: combined fixed-phase-pair theorem, one exact
+regression/five audits, zero Lean diagnostics and standard logical axioms;
+SHA-256 bcddd6eb89862cdd5e67dcf75396c480def79dcdf20381a70f22b41fce7f8996.
+Transient expression-matching/resource and vector-evaluation failures
+were repaired in the proofs, without increasing resources or suppressing
+diagnostics.
+
+VERIFIED combined snapshot: 766 public Huxley theorems, 7,951 exact
+regressions, 7,261 explicit public audits. Focused 6334 PASS (10,781 jobs;
+Huxley 390 s, root 13 s, regressions 545 s).
+
+Foundation BAT 11032: exit 0, FINAL RESULT PASS, 8,857 build jobs and
+14,290 audited declarations. Complete evidence:
+logs/foundation_freeze_20261001_023411.log / .json (foundation root).
+Log SHA-256 c29d139dbc9910b3a837e1be091c9e1dd7ceca2e04e7cfd691c6ec0e3fd8e4d2;
+JSON SHA-256 8b7aaecf7206c3a18fa913b7e35cc3aac9f84ad1014e59796c9c931a872e1530.
+Paper BAT 95358: exit 0, FINAL RESULT LEAN VERIFICATION PASS, 10,782 build
+jobs and 20,957 audited imported/target declarations. Complete evidence:
+logs/tao-trudgian-yang-build-20261001-023833-5771f561.log;
+SHA-256 d799937eea6a25569808c680c2a444eaadda892d5bc7b525ab420f7619eb276d.
+Both complete logs contain zero Lean errors, warnings or tactic suggestions.
+No failed stage. The same two frozen historical-Python invalid-escape
+SyntaxWarnings remain visible and are not Lean proof evidence.
+Owner HEAD b83fe47bb344b5987461bd10e2834d3f7db57fa4, dirty checkout;
+no agent commit or push.
+
+Verified source SHA-256:
+Huxley a9440fd28849a9d7565f6a77ca2be53a9fe6acbf27579a9659ac154a0d42d958;
+regressions 06373de0e5a7c2adfae6058f9b90a1c14fa9939e30c4e00c03ee0139e2c44f4f;
+audit be7f5962420d550b24ec7cfe0dae4c5c9186d084bfbbdf5dbcc41b6f5ad4e5e7.
+The preceding verified 764 snapshot remains recorded below.
+
+Remaining DAG: SAME constructed source and selected physical hypotheses
+-> joint-color/common-mode sieve and Type-I bound
+-> exact Type-I/phase-pair common-mode reduction + combined fixed-phase
+non-Type-I source count (kernel-checked; both BATs PASS)
+-> consume that count on the SAME residual phase fibers
+-> full phase-family/common Fourier assembly and boundary/major blocks
+-> fifth moment -> beta rows 7--11 -> EPZAE-14/29/30.
+Type I remains linear in the phase count; only Types II/III use phase
+pairs. The actual source/reference entry and every advertised physical
+hypothesis must still be discharged; abstract conditional assembly does
+not close EPZAE-13. Aggregate remains OPEN (34/42).
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory
+and must be updated if their coverage or behavior changes. Frozen source
+statements, counterexamples, obstructions, owner-authorized repairs and
+regressions remain preserved. Recovery-record maintenance stays skipped.
+
+Next-consumer SCRATCH (not installed): the phase-tagged analytic count
+reuses the combined theorem with exact cardinality preservation, while
+the residual-fiber identity identifies the three projected residual
+counts with the combined fiber. The actual source-data identity proves
+that fixed-phase functions, physical and rounded jets, parity offsets,
+and Fourier clouds are the original tagged data. These are transport
+facts, not a new analytic source-closure claim.
+Tagged count 69294 PASS: one exact regression/two audits; SHA-256
+c1fce62966cd9876ec5cb06bbc18b5bd7426590dc762377051d205028b92cbed.
+Residual fiber 87745 PASS: one exact regression/two audits; SHA-256
+872a79e59596222c1b9ac3e966de931f7dbfdbf36428f695811fd60d4c729b73.
+Source data 63755 PASS: one exact regression/one audit; SHA-256
+c7839a54931ad3c540a2ceafab5ccc2d8431018ad3d602c2edabe27d279450e5.
+All three finish with zero Lean diagnostics and standard logical axioms.
+
+The next public consumer must unpack the actual joint-source sieve,
+apply the combined count to its SAME residual phase fibers, and conclude
+a common-mode family bound with no matrix or count assumptions. Genuine
+source/point/reference hypotheses remain explicit until their constructed
+source-entry supplier is consumed. Color width and reference-height
+parameters must be fixed before the eventual threshold and finite family.
+Membership in the phase image supplies both model-phase witnesses even
+when an individual residual fiber is empty. A renewed local search found
+no full-family assembly discharging this edge directly; the existing
+Huxley matrix-family and Sargos family-sieve results have narrower index
+or kernel contracts and are already reused at their applicable layers.
+No EPZAE gate closes from these transport facts alone.
+
+## SAME constructed-matrix Type-I family count (1 October 2026)
+
+The new public exists_positive_difference_joint_type_one_source_sieve
+consumes exists_positive_difference_actual_joint_source_sieve on the
+ACTUAL phase/block point set S and its two parity copies. It retains
+the SAME common-mode twelfth-moment estimate, chart centres, joint
+colors, ONE global Fourier matrix, and all matrix constraints.
+
+For each joint color, its identity-or-bounded-nontriangular subset
+TypeOne satisfies the LINEAR phase-parameter bound
+card(TypeOne) <= Dtype*card(S.image Prod.fst)*(M/N)*(1+Delta*Jsep).
+Dtype is chosen before S, T, M, N, the rounding data, or the Fourier
+mesh. Actual source jets, negative fourth derivative, rounded block
+geometry, separated phase parameters, N,Jsep<=M, minor-arc and completion
+conditions remain displayed hypotheses; no matrix or count certificate
+is assumed. This is a faithful conditional source consumer, not yet the
+complete source-entry/fifth-moment theorem.
+
+The source-uniform action cutoff is
+L=max(8*Ratio^2,32*(C3+1)*(3*Usrc/sigma_src)*E/kappa^2),
+where Ratio=18*Usrc^2*E/(sigma_src*csrc*kappa).
+For every colored pair outside TypeOne, the same constructed matrix
+is either a nonzero upper/lower translation with its proved source
+cutoff, or is nontriangular and satisfies BOTH
+8*Uband<=abs(gamma)*lambda^2 and
+64*(C3+delta)*M^2<=abs(gamma)*kappa^2*T.
+Thus the Type-III large-entry conditions are derived from the actual
+complement, not added as a case-selection certificate.
+
+Three private lemmas reuse the existing arbitrary-action family count
+and prove the scalar cutoff implication. No new production module,
+import, toolchain, resource setting, or BAT coverage change.
+Scratch 27967 PASS: one exact-signature regression and four explicit
+dependency audits, zero Lean diagnostics, only propext/Classical.choice/
+Quot.sound. Scratch SHA-256:
+8d91acb331349be604d1806fb3f294d05566e07def38ab4b19211fb620d90d24.
+
+VERIFIED combined snapshot: 764 public Huxley theorems, 7,949 exact
+regressions, 7,259 explicit public audits. Focused 84659 PASS (10,781 jobs;
+Huxley 375 s, root 11 s, regressions 553 s). The historical 763 regression
+notation failure is corrected and remains recorded as a failed attempt.
+
+Foundation BAT 52042: exit 0, FINAL RESULT PASS, 8,857 build jobs and
+14,290 audited declarations. Complete evidence:
+logs/foundation_freeze_20261001_014953.log / .json (foundation root).
+Log SHA-256 f91f9ff168ca253adaaed7e7873aecb2dc6b06fdff07a0cf90e8fa34f88b1f44;
+JSON SHA-256 017b52f4343552b43f00e3364ac8e84201b1117455df915d08861102f31879b1.
+Paper BAT 7377: exit 0, FINAL RESULT LEAN VERIFICATION PASS, 10,782 build
+jobs and 20,953 audited imported/target declarations. Complete evidence:
+logs/tao-trudgian-yang-build-20261001-015310-59750742.log;
+SHA-256 ef3b3607c131d19beed82125e8e45a074075adf83d7ab85418b82da7d8573007.
+Both complete logs contain zero Lean errors, warnings or tactic suggestions.
+No failed stage. The same two frozen historical-Python invalid-escape
+SyntaxWarnings remain visible and are not Lean proof evidence.
+Owner HEAD b83fe47bb344b5987461bd10e2834d3f7db57fa4, dirty checkout;
+no agent commit or push.
+
+Verified source SHA-256:
+Huxley 75001638a2349d5c621639698c4594a71fb9157ceee598a6e77115a28d52c41a;
+regressions c4d3f2e2fc872031d93db3d4fe97bad03828b56847f8a291ea520b8966f67b5b;
+audit 6be634d991d9afae837bf128c3a527093a2fff4c2b3fcac05f90de8ded5b4404.
+Protected obstruction, corrected growth-transfer, Parabola and supplied-PDF
+hashes were rechecked unchanged.
+
+Remaining obligation DAG: SAME constructed source and selected physical
+hypotheses -> joint-color/common-mode sieve + SAME-matrix Type-I linear
+count (kernel-checked and both BATs PASS) -> SAME-matrix triangular and
+large-entry fixed-phase-pair bounds -> exact phase-pair family sum
+-> original source/common Fourier assembly and boundary/major blocks
+-> fifth moment -> beta rows 7--11 -> EPZAE-14/29/30.
+Type I must remain linear in the phase count; only Type II/III use the
+quadratic phase-pair sum. Existing fixed-phase-pair bounds will be reused,
+with actual global/local phase and rounded-jet transport proved rather
+than assumed. EPZAE-13 and the aggregate remain OPEN (34/42).
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory;
+update them if coverage or behavior changes. Preserve frozen source
+statements, counterexamples, obstructions, owner-authorized repairs, and
+regressions. Recovery-record maintenance remains permanently skipped.
+
+Next-obligation SCRATCH only (not installed or EPZAE closure):
+exists_positive_difference_joint_type_decomposed_source_sieve inserts
+the proved Type-I contribution directly into the SAME common-mode
+twelfth-moment bound. Three private finite lemmas prove exact phase-pair
+cardinality and the residual triangular/large-entry partition, with no
+multiplicity assumption. Scratch 23163 PASS: one exact regression/four
+audits, zero Lean diagnostics and standard logical axioms;
+SHA-256 ba26ce66471ba8d80c9d8d7294d395b58ef5b9cfb8a1633e48c4cb073d5c1ad1.
+The independent finite-fiber scratch 36282 PASS has three exact regressions/
+three audits; SHA-256
+249f3dbcc0c43fd62fd4b9b5203fd0843a4693bb8844f6dff80a39c6c7f437e5.
+Global-coordinate triangular and large-entry transports reuse the existing
+local analytic bounds and prove phase, rounded-jet, cloud and rounded-block
+identities. Scratch 24213 and 17534 each PASS one exact regression/one audit;
+SHA-256 respectively
+09571be36d52ccd81100b3aa44456563f42dbbdbe55c9565914ce54155fe6968 and
+a234e7e51bb2ab317cd64361fba7fb0e9f2777fdf10a851b6eebb99d38d62ea9.
+The next substantive target combines those bounds on literal upper,
+lower and large-entry subsets of ONE actual fixed-phase-pair matrix
+family, then consumes the exact phase-pair sums above. Repeated actual
+matrices must be reindexed by canonical triangular translations; their
+global injectivity must NOT be assumed. All displayed source/reference
+geometry still needs SAME-source discharge before the fifth moment.
+
+## Actual joint source coloring and SAME-matrix narrowed sieve (1 October 2026)
+
+Two public consumers are installed in the EXISTING Huxley module:
+positive_difference_actual_source_joint_twelfth_partition and
+exists_positive_difference_actual_joint_source_sieve.
+
+The first constructs ONE joint color from the actual source-chart
+coordinates, numerator/denominator bands, and Fourier parity offset.
+It derives the curvature band from the normalized approximate model
+and genuine source jets; no curvature or color-cardinality certificate
+is assumed. Its source-uniform bound is
+Cap=3*ChartCap*NarrowCap, where
+ChartCap=(4/a+3)*((6*Usrc/sigma_src)/a+3)*((4*sigma_src/csrc)/a+3)
+and NarrowCap=(4/theta+3)*(72*Usrc^2*E/(sigma_src*csrc*kappa*theta)+3).
+Every color has an ACTUAL source-point chart centre. Ordinary and
+reciprocal charts, narrow rational ratios, parity-offset equality,
+and the complex twelfth-moment loss Cap^11 are retained together.
+
+The second feeds this coloring into the EXISTING narrowed completed
+Fourier sieve. For the literal two-parity original point set V it proves
+( sum_{ip in V} norm(completed_dual_sum(ip,k)) )^12
+ <= C*Vscale*K0^(12+epsilon)*Cap^11*
+    sum_key card(Fiber_key)^10*card(Pairs_key),
+for every SAME common Fourier mode k. Pairs_key is the actual close-pair
+filter of that color fiber, not an assumed spacing count.
+
+ONE global matrix family is constructed from the actual Fourier cloud.
+It retains determinant one, the actual denominator ratio and homography,
+cubic ratio error, linear strip, and BOTH narrowed lower-left bounds.
+For every colored close pair, the proof derives the exhaustive identity,
+nonzero upper-triangular, nonzero lower-triangular, or nontriangular
+classification, including source-derived triangular translation cutoffs.
+The rounded cubic scales are derived from the source jets and the
+displayed fourth-derivative sign. Actual minor-arc/completion and physical
+mesh hypotheses remain explicit; this is not the full source entry or
+fifth-moment theorem.
+
+Only one private colored-sieve composition lemma is new. Existing chart,
+rational, parity, rounded-cubic, completed-sieve and matrix machinery is
+reused. No new production module/import, resource limit, toolchain or
+BAT coverage change. Scratch 56475 PASS: two exact-signature regressions,
+three explicit audits, zero Lean diagnostics and standard logical axioms.
+SHA-256 6c259fd966731f960137afe840aa34fc27c4cbbc5461ed62df3e2d87ba93d78a.
+Independent joint-color scratch 37736 PASS; SHA-256
+cdc93a97dbe88a196cf9a1715cc0404003408585053ca3b3b75136006cd441fa.
+
+Historical installed totals: 763 actual public Huxley theorems, 7,948 exact
+regressions and 7,258 explicit public audits. Focused 86751 compiled Huxley
+(494 s) and the root (17 s), but the regression stage failed because two
+new examples parsed the unspaced expression "=offset" as asymptotic
+notation. Both examples have been corrected with explicit equality
+spacing. No 763-snapshot full PASS is claimed; both mandatory BATs now
+PASS on the combined 764 snapshot recorded above. The fully verified 761
+combined snapshot is recorded below.
+
+Remaining DAG: SAME constructed source and selected physical hypotheses
+-> actual joint-color/common-mode sieve and matrix classification
+(covered by the verified combined 764 snapshot) -> SAME matrix Type-1 linear-parameter
+bound (now installed above) plus Type-2/3 phase-pair bounds -> full weighted family sum
+-> original source/common Fourier assembly, boundary/major blocks
+-> fifth moment -> beta rows 7--11 -> EPZAE-14/29/30.
+The Type-1 fixed-action generalization and complementary Type-3 cutoff
+calculation are now consumed by the installed actual-source theorem above.
+EPZAE-13 and the aggregate remain OPEN (34/42).
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory and must be updated if coverage or behavior changes.
+Frozen source statements, counterexamples, obstructions, owner-authorized
+repairs and regressions remain preserved. Recovery records remain skipped.
+
+## Uniform triangular original-pair source bound (1 October 2026)
+
+eventually_positive_difference_actual_fourier_triangular_original_source_mass
+is installed in the EXISTING Huxley module. It consumes the actual
+original-pair source-regime theorem above with Lregime=log(T).
+
+The EXISTING Type-3 physical reference-budget machinery constructs
+Bmajor/Cmajor from the actual bounded Farey labels and gap widths.
+Neither budget nor its cardinality estimate is assumed in the new
+public theorem. The same T*N*R^2=M^3, R<=Q<=N and N^2<=M imply M<=T;
+both actual triangular cutoffs are therefore bounded by a fixed
+source constant times T. An explicit log comparison and the existing
+log-power-versus-rpower theorem absorb all remaining losses.
+
+For every epsilon>0, eventually uniformly in the finite reference
+system, actual physical data, and original pair set, each branch has
+card(P)<=240*Cost*(9*(Aconst*Dconst^2)^(1/3)+2*Bconst+3*Dconst/2)*T^epsilon.
+The threshold depends only on the displayed fixed source/model,
+reference-height, E, theta and epsilon parameters. The genuine physical
+and Fourier hypotheses remain explicit; no source-entry, finite-color
+or full-family completion is claimed.
+
+Three small private scalar lemmas are added; the existing reference
+budget and source-constant lemmas are reused without duplication.
+No new production module, import, resource limit, toolchain or runner
+change. Scratch 28088 PASS: one exact-signature regression, four explicit
+audits, zero Lean diagnostics and standard logical axioms only.
+SHA-256 f2ebc68a418463d2ae5bcb4f04f25526b7366df3b35f9543495ad38a6b8dc62a.
+
+Verified combined snapshot: 761 actual public Huxley theorems, 7,946 exact
+regressions and 7,256 explicit public audits. Focused 72929 PASS:
+10,781 jobs, Huxley 364s, regressions 526s, zero Lean diagnostics.
+Foundation BAT 35915 PASS: 8,857 jobs and 14,290 audited declarations.
+Paper BAT 63577 PASS: 10,782 jobs and 20,936 audited imported/target
+declarations. Both complete disk logs contain zero Lean diagnostics;
+the two frozen Python SyntaxWarnings remain unchanged.
+Foundation log/manifest: foundation_freeze_20261001_005046.log/.json;
+SHA-256 log a39ff412ffb45f104bafca3e9597da3274454c833b13a2eccfd2324be1ff471d;
+JSON f3aee33c13c2dadcc3083dd94186daf64be1517a6c8b9c1b0f953765237281b7.
+Paper log: tao-trudgian-yang-build-20261001-005518-14f696db.log;
+SHA-256 ca08e717bdb559d84a417f3c8ba4eb2ee1bc0e9e99b0af00e8fa020d1e6c8c9d.
+Huxley SHA-256 2ba4f8d1d6b8f43fbb9179212c3fcb7b59b623555c4a4de416999bbb95ecb0af;
+regression 3e954cce04c09b89c568c7d648d857e77e745c0cd8bef27824bad154dd81b003;
+audit 614ca012ea1d0ec7f809acb6e90a194c6853ec780aa7f457b8c09347ce4f12bc.
+This combined BAT scope includes all four 760-snapshot additions.
+These hashes identify 761, not later additions. Owner HEAD at verification:
+b83fe47bb344b5987461bd10e2834d3f7db57fa4 (dirty); no agent commit or push.
+
+Remaining DAG: original triangular pair mass and regime absorption
+-> constructed logarithmic budgets and uniform T^epsilon bound
+(kernel-checked and BAT-verified) -> SAME constructed source and
+selected physical hypotheses -> finite-color application in the full
+Type-1/2/3 phase family -> common Fourier/outer source sum and
+boundary/major blocks -> fifth moment -> beta rows 7--11 -> EPZAE-14/29/30.
+Type-1 has linear parameter counting; Type-2/3 require the pair sum.
+EPZAE-13 and the aggregate remain OPEN (34/42).
+
+Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain
+mandatory, with coverage/behavior updates whenever necessary. Frozen
+statements, counterexamples, obstructions, owner-authorized repairs
+and regressions remain preserved. Recovery records remain skipped.
+
+## Actual triangular original pairs and source-regime absorption (1 October 2026)
+
+Four public consumers are installed in the EXISTING Huxley module:
+physicalModelPhase_reference_translation_window_selection,
+positive_difference_actual_fourier_triangular_original_pair_mass,
+positive_difference_actual_fourier_triangular_original_source_mass, and
+positive_difference_actual_fourier_triangular_original_source_regime_mass.
+No new production module, import, resource setting or BAT exclusion is added.
+
+The selector reuses the proved matrix-window selection theorem and
+reindexes the ACTUAL original Fourier pairs by their nonzero triangular
+entry, deriving the factor-60 multiplicity. The pair-mass theorem feeds
+those literal selected witnesses into the source-cutoff translation sum.
+No original-pair count, tail estimate or multiplicity certificate is assumed.
+
+The source consumer derives the physical curvature band:
+lambda=csrc*kappa*T/(12*Usrc*M^2),
+Uband=(3*Usrc/sigma_src)*E*T/(2*M^2).
+The lower scale comparison is PROVED from the approximate-model third
+derivative and the source jet bounds:
+kappa*sigma_src*T/(3*Usrc)<=Tsrc.
+It is not an additional comparison hypothesis. Actual phase identities,
+levels and source colors supply the rational band and translation cutoffs.
+
+The final consumer keeps the SAME T*N*R^2=M^3, selected Uref,
+and explicit (10.7) budget N^4<=M*R^3*Lregime^(3/2).
+For upper/lower triangular branches the actual pair cardinality is at most
+240*m0*Cost*[9*(Aconst*Dconst^2)^(1/3)*Lregime
+ +2*Bconst*(3+2*log(Dcut+2))+(3/2)*Dconst*Lregime^(3/2)].
+CostUpper=M^2/(N^4*Uref), CostLower=R^4/(N^2*Uref);
+DcutUpper=theta*Uband, DcutLower=theta/lambda.
+All Aconst/Bconst/Dconst are the explicit source constants in the Lean
+signature; no independent scale is substituted. Nonempty original
+families supply an actual nonzero integer entry, so Dcut>=1 is derived.
+The empty-family case is handled exactly. Both cubic-root and short-family
+terms are absorbed; the logarithmic and budget losses remain visible.
+
+Eight private analytic/arithmetic lemmas support these consumers in the
+same module. Previously proved rational-cutoff and source-constant lemmas
+are reused, not duplicated. The final proof is factored to stay within
+the default heartbeat limit; its public contract is unchanged.
+Retained pair scratch 5396 PASS: four exact-signature regressions, seven
+explicit audits, zero Lean diagnostics and standard logical axioms only.
+SHA-256 2dce22de603f1588b0f90c5b12cfa0c0239fc9a539f07024b11ca2fefcd5e9d3.
+Retained regime scratch 76682 PASS, three exact examples/seven audits;
+SHA-256 9e85ff64d1bf35a0f97ec0381333aa962d6d986d4fff3cdad5e2af59823b8328.
+
+Intermediate snapshot: 760 actual public Huxley theorems, 7,945 exact
+regressions and 7,255 explicit public audits. Focused build 75782 PASS:
+10,781 jobs, Huxley 360s, regressions 526s, zero Lean diagnostics.
+Huxley SHA-256 f2b6a327676a428df44b58da7ddc61be63a115eb0e2a468187b69b8d8e434822;
+regression 5436fb013c17b651da5b457ff0119e0acb7986d1c3fce4b46b2fb085afe6f02b;
+audit 67e209fc886c222d55f683b02604224894e566f738a5704c204832371ca68935.
+The related uniform-budget consumer is batched with this addition for
+BOTH mandatory BAT verifications. No standalone BAT PASS is claimed
+for this intermediate hash. The preceding 756 snapshot is fully verified.
+
+Remaining DAG: actual triangular translation sums -> literal original-pair
+composition -> source-derived curvature/cutoffs -> same-scale cubic-root
+and short-family absorption (focused kernel build PASS; BAT gate pending)
+-> SAME constructed source and selected physical hypotheses
+-> finite-color application in the full Type-1/2/3 phase family
+-> common Fourier/outer source sum and boundary/major blocks
+-> fifth moment -> beta rows 7--11 -> EPZAE-14/29/30.
+Source (10.5)--(10.8), PDF page 33, governs these terms. Type-1 needs its
+linear parameter sum; Type-2/3 need the pair sum. The full family and
+source conclusion remain OPEN. Aggregate stays 34/42.
+
+run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory
+and must be updated if coverage or behavior changes. All frozen source
+statements, counterexamples, obstructions, owner-authorized repairs and
+regressions are preserved. Recovery records remain skipped.
+
 ## Source-derived triangular translation sums (30 September 2026)
 
 Two public consumers are installed in the EXISTING Huxley module:
@@ -453,14 +1502,27 @@ imports beyond the current Huxley module.
 SHA-256 99f16a29484a24437f24533c07a4a1782e1367a4e2972951c02e3e6f1efb1212.
 The production integral theorem reference is fully namespace-qualified.
 
-Current totals: 756 actual public Huxley theorems, 7,941 exact-signature
-regressions and 7,251 explicit public audits. Focused compilation and
-BOTH mandatory BAT verifications for this snapshot are pending.
-The preceding 754 snapshot is fully verified and recorded below.
+Verified snapshot: 756 actual public Huxley theorems, 7,941 exact-signature
+regressions and 7,251 explicit public audits. Focused build 54520 PASS
+(10,781 jobs), foundation BAT 67054 PASS (8,857 jobs; 14,290 audited
+declarations), and paper BAT 41978 PASS (10,782 jobs; 20,915 audited
+declarations). Complete logs contain zero Lean diagnostics. The two
+frozen Python SyntaxWarnings are unchanged. The first focused attempt
+28177 failed because integral_rpow was incorrectly namespace-qualified;
+the ROOT Mathlib reference was corrected before all recorded PASS runs.
+Foundation evidence: foundation_freeze_20260930_233755.log/.json.
+SHA-256 log b8fc2768230f32a4e1fdcf86f3e85126644e530d31736fa4ce299378281c4251;
+JSON 226b7e074f073421318875fcc6a89e976499884b0c62d042e18f6ef433d82e3b.
+Paper log: tao-trudgian-yang-build-20260930-234151-f409a257.log;
+SHA-256 19170828c62dbeaf5efccaa5c179893f5d680a4c8d690419e1977a3591d95890.
+Huxley SHA-256 b1be9db6bfb7aa6170075fc503c2a6235025d7c80624865ad2aecf58675c70ee;
+regression e960fb4c81eac070875d63ab362a68414d3df2de9a30666e73a1c0ec9b33f217;
+audit 633a565e7fac741cfcbe1295f92023264aff65cab82eca00d56146be19a40663.
+These hashes identify the verified 756 snapshot, not later additions.
 
 Remaining DAG: actual source charts -> ALL triangular family mass
 -> actual integer translation sums with derived source cutoffs
-(installed; verification pending) -> original Fourier-pair/family
+(kernel-checked) -> original Fourier-pair/family
 composition and source-regime cubic-root/short-term accounting
 -> SAME constructed source and selected physical hypotheses
 -> finite-color application in the complete Type-1/2/3 family and

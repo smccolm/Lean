@@ -1275,6 +1275,120 @@ private theorem rational_narrow_triangular_translation_bounds
     apply (le_div_iff₀ hlambda).mpr
     exact (mul_le_mul_of_nonneg_left (hcurv 0).1 (abs_nonneg _)).trans hh
 
+private theorem triangular_original_mass_regime_assembly
+    (m0 : ℕ) {M N R U T σsrc csrc Usrc κ Lunit E θ CU CL DU DL Cthird B Lregime mass : ℝ}
+    (hM : 0 < M) (hN : 0 < N) (hRpos : 0 < R) (hUp : 0 < U) (hT : 0 < T)
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hκ : 0 < κ) (hLunit : 0 < Lunit) (hE : 0 ≤ E) (hθ : 0 ≤ θ)
+    (hCU : 0 ≤ CU) (hCL : 0 ≤ CL) (hDU : 0 ≤ DU) (hDL : 0 ≤ DL)
+    (hCthird : 0 ≤ Cthird) (hBnonneg : 0 ≤ B)
+    (hLregime : 0 ≤ Lregime) (hRN : R ≤ N) (hscale : T*N*R^2=M^3)
+    (hselected : U ≤ (N/R)^((2:ℝ)/3))
+    (hregime : N^4 ≤ M*R^3*Lregime^((3:ℝ)/2)) :
+
+    let lambda := csrc*κ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let Aupper := 2*CU*(Cthird+1)*E^2*M^2/(κ*Lunit^3*N^4)
+    let Bupper := CU*(Cthird+1)*E^2*M^2/(Lunit^2*N^4*U)+DU*(B+1)*E^2*M^2/(4*N^4*U)
+    let Alower := 8*CL*(Cthird+1)*R^4/(κ*Lunit^3*N^2)
+    let Blower := 4*CL*(Cthird+1)*R^4/(Lunit^2*N^2*U)+(4*DL*(B+1)*R^4)/(4*N^2*U)
+    let AupperConst := 2*CU*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := CU*(Cthird+1)*E^2/Lunit^2+DU*(B+1)*E^2/4
+    let AlowerConst := 8*CL*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*CL*(Cthird+1)/Lunit^2+DL*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/(N^4*U)
+    let CostLower := R^4/(N^2*U)
+    let DupperCut := θ*Uband
+    let DlowerCut := θ/lambda
+    (mass ≤ 60*(4*(m0:ℝ)*(3*Aupper^((3:ℝ)⁻¹)*(DupperCut+2)^((2:ℝ)/3)+
+        2*Bupper*(3+2*Real.log (DupperCut+2))+(1/2:ℝ)*(2*DupperCut+1))) →
+      (mass=0 ∨ 1 ≤ DupperCut) →
+      mass ≤ 240*(m0:ℝ)*CostUpper*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)*Lregime+
+          2*BupperConst*(3+2*Real.log (DupperCut+2))+
+          (3/2:ℝ)*DupperConst*Lregime^((3:ℝ)/2))) ∧
+    (mass ≤ 60*(4*(m0:ℝ)*(3*Alower^((3:ℝ)⁻¹)*(DlowerCut+2)^((2:ℝ)/3)+
+        2*Blower*(3+2*Real.log (DlowerCut+2))+(1/2:ℝ)*(2*DlowerCut+1))) →
+      (mass=0 ∨ 1 ≤ DlowerCut) →
+      mass ≤ 240*(m0:ℝ)*CostLower*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)*Lregime+
+          2*BlowerConst*(3+2*Real.log (DlowerCut+2))+
+          (3/2:ℝ)*DlowerConst*Lregime^((3:ℝ)/2))) := by
+  intro lambda Uband Aupper Bupper Alower Blower AupperConst BupperConst
+    AlowerConst BlowerConst DupperConst DlowerConst CostUpper CostLower DupperCut DlowerCut
+  have hlambda : 0 < lambda := by dsimp only [lambda]; positivity
+  have hUband : 0 ≤ Uband := by dsimp only [Uband]; positivity
+  have hAU : 0 ≤ AupperConst := by dsimp only [AupperConst]; positivity
+  have hBU : 0 ≤ BupperConst := by dsimp only [BupperConst]; positivity
+  have hAL : 0 ≤ AlowerConst := by dsimp only [AlowerConst]; positivity
+  have hBL : 0 ≤ BlowerConst := by dsimp only [BlowerConst]; positivity
+  have hDUc : 0 ≤ DupperConst := by dsimp only [DupperConst]; positivity
+  have hDLc : 0 ≤ DlowerConst := by dsimp only [DlowerConst]; positivity
+  have hCostU : 0 ≤ CostUpper := by dsimp only [CostUpper]; positivity
+  have hCostL : 0 ≤ CostLower := by dsimp only [CostLower]; positivity
+  have hphysical := triangular_physical_regime_costs hM hN hRpos hUp hLregime hRN
+    hselected hregime
+  have hid :
+      Aupper=AupperConst*(M^2/N^4) ∧
+      Bupper=BupperConst*CostUpper ∧
+      Alower=AlowerConst*(R^4/N^2) ∧
+      Blower=BlowerConst*CostLower ∧
+      DupperCut=DupperConst*(M/(N*R^2)) ∧
+      DlowerCut=DlowerConst*(N*R^2/M) :=
+    triangular_source_weight_scale_identities
+      (U:=U) (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (κ:=κ)
+      (Lunit:=Lunit) (E:=E) (θ:=θ) (CU:=CU) (CL:=CL) (DU:=DU) (DL:=DL)
+      (Cthird:=Cthird) (B:=B) hM hN hRpos hT hscale
+  constructor
+  · intro hraw hnonempty
+    rcases hnonempty with hzero | hDcut
+    · rw [hzero]
+      have hDcut0 : 0 ≤ DupperCut := by dsimp only [DupperCut]; positivity
+      have hlog : 0 ≤ Real.log (DupperCut+2) :=
+        Real.log_nonneg (by linarith only [hDcut0])
+      positivity
+    ·
+      have hw := triangular_weight_regime_absorption (Bconst:=BupperConst)
+        hAU hDUc (by positivity : (0:ℝ) ≤ M^2/N^4)
+        (by positivity : (0:ℝ) ≤ M/(N*R^2))
+        hCostU hLregime
+        (by rw [←hid.2.2.2.2.1]; exact hDcut) hphysical.1 hphysical.2.2.1
+      rw [←hid.1,←hid.2.1,←hid.2.2.2.2.1] at hw
+      calc
+        _ ≤ 60*(4*(m0:ℝ)*(3*Aupper^((3:ℝ)⁻¹)*(DupperCut+2)^((2:ℝ)/3)+
+            2*Bupper*(3+2*Real.log (DupperCut+2))+(1/2:ℝ)*(2*DupperCut+1))) := hraw
+        _ ≤ 60*(4*(m0:ℝ)*(CostUpper*
+            (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)*Lregime+
+              2*BupperConst*(3+2*Real.log (DupperCut+2))+
+              (3/2:ℝ)*DupperConst*Lregime^((3:ℝ)/2)))) :=
+          mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_left hw (by positivity)) (by norm_num)
+        _ = _ := by ring
+  · intro hraw hnonempty
+    rcases hnonempty with hzero | hDcut
+    · rw [hzero]
+      have hDcut0 : 0 ≤ DlowerCut := by dsimp only [DlowerCut]; positivity
+      have hlog : 0 ≤ Real.log (DlowerCut+2) :=
+        Real.log_nonneg (by linarith only [hDcut0])
+      positivity
+    ·
+      have hw := triangular_weight_regime_absorption (Bconst:=BlowerConst)
+        hAL hDLc (by positivity : (0:ℝ) ≤ R^4/N^2)
+        (by positivity : (0:ℝ) ≤ N*R^2/M)
+        hCostL hLregime
+        (by rw [←hid.2.2.2.2.2]; exact hDcut) hphysical.2.1 hphysical.2.2.2
+      rw [←hid.2.2.1,←hid.2.2.2.1,←hid.2.2.2.2.2] at hw
+      calc
+        _ ≤ 60*(4*(m0:ℝ)*(3*Alower^((3:ℝ)⁻¹)*(DlowerCut+2)^((2:ℝ)/3)+
+            2*Blower*(3+2*Real.log (DlowerCut+2))+(1/2:ℝ)*(2*DlowerCut+1))) := hraw
+        _ ≤ 60*(4*(m0:ℝ)*(CostLower*
+            (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)*Lregime+
+              2*BlowerConst*(3+2*Real.log (DlowerCut+2))+
+              (3/2:ℝ)*DlowerConst*Lregime^((3:ℝ)/2)))) :=
+          mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_left hw (by positivity)) (by norm_num)
+        _ = _ := by ring
+
 /-- The actual original Fourier pairs satisfy the triangular source-regime
 bound. The SAME physical scale absorbs both cubic-root and short-family
 terms; source curvature, translation cutoffs and pair multiplicities are
@@ -1523,14 +1637,6 @@ theorem positive_difference_actual_fourier_triangular_original_source_regime_mas
   have hLunit : 0 < Lunit := by dsimp only [Lunit]; positivity
   obtain ⟨hBnonneg,hCthird⟩ := physical_source_triangular_constants_nonneg hσ
     (approximateModelPhase_tolerance_nonneg (hF 0))
-  have hAU : 0 ≤ AupperConst := by dsimp only [AupperConst]; positivity
-  have hBU : 0 ≤ BupperConst := by dsimp only [BupperConst]; positivity
-  have hAL : 0 ≤ AlowerConst := by dsimp only [AlowerConst]; positivity
-  have hBL : 0 ≤ BlowerConst := by dsimp only [BlowerConst]; positivity
-  have hDUc : 0 ≤ DupperConst := by dsimp only [DupperConst]; positivity
-  have hDLc : 0 ≤ DlowerConst := by dsimp only [DlowerConst]; positivity
-  have hCostU : 0 ≤ CostUpper := by dsimp only [CostUpper]; positivity
-  have hCostL : 0 ≤ CostLower := by dsimp only [CostLower]; positivity
   have hBselOne : 1 ≤ Bselect := by
     have hh : 0 ≤ 168/modelPhaseThirdLower σ := by positivity
     linarith only [hBselectSize,hh]
@@ -1541,19 +1647,9 @@ theorem positive_difference_actual_fourier_triangular_original_source_regime_mas
         div_le_self (by positivity) hBselOne
       _ ≤ _ := Real.rpow_le_rpow (by positivity)
         (div_le_div_of_nonneg_left hN.le hRpos hRQ) (by norm_num)
-  have hphysical := triangular_physical_regime_costs hM hN hRpos hUp hLregime hRN
-    hselected hregime
-  have hid :
-      Aupper=AupperConst*(M^2/(N:ℝ)^4) ∧
-      Bupper=BupperConst*CostUpper ∧
-      Alower=AlowerConst*(R^4/(N:ℝ)^2) ∧
-      Blower=BlowerConst*CostLower ∧
-      DupperCut=DupperConst*(M/((N:ℝ)*R^2)) ∧
-      DlowerCut=DlowerConst*((N:ℝ)*R^2/M) :=
-    triangular_source_weight_scale_identities
-      (U:=(Uref:ℝ)) (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (κ:=κ)
-      (Lunit:=Lunit) (E:=E) (θ:=θ) (CU:=CU) (CL:=CL) (DU:=DU) (DL:=DL)
-      (Cthird:=Cthird) (B:=B) hM hN hRpos hT hscale
+  have hassembly := triangular_original_mass_regime_assembly m0
+    (mass:=(P.card:ℝ)) hM hN hRpos hUp hT hσsrc hcsrc hUsrc hκ hLunit hE.le hθ.le
+    hCU.le hCL.le hDU.le hDL.le hCthird hBnonneg hLregime hRN hscale hselected hregime
   have hcuts ij (hij : ij∈P) :
       ((Mat (entry ij) 0=1 ∧ Mat (entry ij) 2=0 ∧ Mat (entry ij) 3=1) →
         |(Mat (entry ij) 1:ℝ)| ≤ DupperCut) ∧
@@ -1564,68 +1660,205 @@ theorem positive_difference_actual_fourier_triangular_original_source_regime_mas
       (hsourceColor ij hij) (hMatt ij hij) (hMatmap ij hij)
   constructor
   · intro htri
+    apply hassembly.1 (hraw.1 htri)
     by_cases hne : P.Nonempty
     · obtain ⟨ij,hij⟩ := hne
       have hsides := htri (entry ij) (Finset.mem_image_of_mem entry hij)
       have hcut := (hcuts ij hij).1 ⟨hsides.1,hsides.2.1,hsides.2.2.1⟩
       rw [hsides.2.2.2] at hcut
       have hone : (1:ℝ) ≤ |(entry ij:ℝ)| := by exact_mod_cast Int.one_le_abs (hentry ij hij)
-      have hDcut : 1 ≤ DupperCut := hone.trans hcut
-      have hw := triangular_weight_regime_absorption (Bconst:=BupperConst)
-        hAU hDUc (by positivity : (0:ℝ) ≤ M^2/(N:ℝ)^4)
-        (by positivity : (0:ℝ) ≤ M/((N:ℝ)*R^2))
-        hCostU hLregime
-        (by rw [←hid.2.2.2.2.1]; exact hDcut) hphysical.1 hphysical.2.2.1
-      rw [←hid.1,←hid.2.1,←hid.2.2.2.2.1] at hw
-      calc
-        _ ≤ 60*(4*(m0:ℝ)*(3*Aupper^((3:ℝ)⁻¹)*(DupperCut+2)^((2:ℝ)/3)+
-            2*Bupper*(3+2*Real.log (DupperCut+2))+(1/2:ℝ)*(2*DupperCut+1))) := hraw.1 htri
-        _ ≤ 60*(4*(m0:ℝ)*(CostUpper*
-            (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)*Lregime+
-              2*BupperConst*(3+2*Real.log (DupperCut+2))+
-              (3/2:ℝ)*DupperConst*Lregime^((3:ℝ)/2)))) :=
-          mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_left hw (by positivity)) (by norm_num)
-        _ = _ := by ring
-    · have he : P=∅ := Finset.not_nonempty_iff_eq_empty.mp hne
-      rw [he,Finset.card_empty,Nat.cast_zero]
-      have hDcut0 : 0 ≤ DupperCut := by dsimp only [DupperCut]; positivity
-      have hlog : 0 ≤ Real.log (DupperCut+2) :=
-        Real.log_nonneg (by linarith only [hDcut0])
-      positivity
+      exact Or.inr (hone.trans hcut)
+    · exact Or.inl (by simp only [Finset.not_nonempty_iff_eq_empty.mp hne,Finset.card_empty,Nat.cast_zero])
   · intro htri
+    apply hassembly.2 (hraw.2 htri)
     by_cases hne : P.Nonempty
     · obtain ⟨ij,hij⟩ := hne
       have hsides := htri (entry ij) (Finset.mem_image_of_mem entry hij)
       have hcut := (hcuts ij hij).2 ⟨hsides.1,hsides.2.1,hsides.2.2.1⟩
       rw [hsides.2.2.2] at hcut
       have hone : (1:ℝ) ≤ |(entry ij:ℝ)| := by exact_mod_cast Int.one_le_abs (hentry ij hij)
-      have hDcut : 1 ≤ DlowerCut := hone.trans hcut
-      have hw := triangular_weight_regime_absorption (Bconst:=BlowerConst)
-        hAL hDLc (by positivity : (0:ℝ) ≤ R^4/(N:ℝ)^2)
-        (by positivity : (0:ℝ) ≤ (N:ℝ)*R^2/M)
-        hCostL hLregime
-        (by rw [←hid.2.2.2.2.2]; exact hDcut) hphysical.2.1 hphysical.2.2.2
-      rw [←hid.2.2.1,←hid.2.2.2.1,←hid.2.2.2.2.2] at hw
-      calc
-        _ ≤ 60*(4*(m0:ℝ)*(3*Alower^((3:ℝ)⁻¹)*(DlowerCut+2)^((2:ℝ)/3)+
-            2*Blower*(3+2*Real.log (DlowerCut+2))+(1/2:ℝ)*(2*DlowerCut+1))) := hraw.2 htri
-        _ ≤ 60*(4*(m0:ℝ)*(CostLower*
-            (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)*Lregime+
-              2*BlowerConst*(3+2*Real.log (DlowerCut+2))+
-              (3/2:ℝ)*DlowerConst*Lregime^((3:ℝ)/2)))) :=
-          mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_left hw (by positivity)) (by norm_num)
-        _ = _ := by ring
-    · have he : P=∅ := Finset.not_nonempty_iff_eq_empty.mp hne
-      rw [he,Finset.card_empty,Nat.cast_zero]
-      have hDcut0 : 0 ≤ DlowerCut := by dsimp only [DlowerCut]; positivity
-      have hlog : 0 ≤ Real.log (DlowerCut+2) :=
-        Real.log_nonneg (by linarith only [hDcut0])
-      positivity
+      exact Or.inr (hone.trans hcut)
+    · exact Or.inl (by simp only [Finset.not_nonempty_iff_eq_empty.mp hne,Finset.card_empty,Nat.cast_zero])
 
 end HuxleyTriangularPairScratch
+example
+    {σsrc csrc Usrc : ℝ} (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) :
+    ∃ η₀ a Cupper Clower Dupper Dlower : ℝ, 0 < η₀ ∧ η₀ ≤ 1/8 ∧ 0 < a ∧
+      0 < Cupper ∧ 0 < Clower ∧ 0 < Dupper ∧ 0 < Dlower ∧
+    ∀ (Fsrc : ℝ → ℝ) (η ya yb Tsrc E Lregime : ℝ) (chartKey : ℤ → ℤ × ℤ × ℤ)
+    (Uref : ℕ) (Refs : Finset ℝ) (Gaps : Finset (ℝ × ℝ)) {Bselect : ℝ}
+    (P : Finset ((ℤ × Fin 2) × (ℤ × Fin 2))) (entry : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℤ)
+    (Mat : ℤ → Fin 4 → ℤ)
+    (gap : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℝ × ℝ) (Bmajor Cmajor : ℕ)
+    (N : ℕ) (za zb : ℤ → ℝ) (AlenA AlenB : ℤ → ℕ) (Za Zb : ℤ)
+    (Q K₀ : ℕ) [NeZero K₀]
+    (rat : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℚ) (vinv : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℤ)
+    (parity : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → Fin 2) (anchor : ((ℤ × Fin 2) × (ℤ × Fin 2)) → ℚ)
+    (e r v s : ℝ × ℝ → ℤ)
+    {σ δ T M R base Bcut θ : ℝ}
+    (A : Fin 2 → ℤ) {W : Fin 2 → ℝ} {x : ((ℤ × Fin 2) × (ℤ × Fin 2)) → Fin 2 → ℝ},
+    Function.Injective Mat →
+    0 < η → η ≤ η₀ →
+    ya∈Icc (1:ℝ) 2 → yb∈Icc (1:ℝ) 2 →
+    (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ n ≤ 6, |iteratedDeriv (n+1) Fsrc w| ≤ Usrc) →
+    (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+      csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+    0 < Tsrc → 2 ≤ M → Tsrc ≤ E*T →
+    (∀ ij∈P, entry ij≠0) →
+    (∀ ij∈P, base ≤ za ij.1.1) →
+    (∀ ij∈P, x ij 0=za ij.1.1) →
+    (∀ ij∈P, x ij 1=zb ij.2.1) →
+    (∀ ij∈P, gap ij∈Gaps) →
+    (∀ ij∈P, N ≤ AlenA ij.1.1 ∧ AlenA ij.1.1 ≤ 3*N ∧
+      round (za ij.1.1)+(AlenA ij.1.1:ℤ)=Za+(N:ℤ)*ij.1.1+2*(N:ℤ)) →
+    (∀ ij∈P, N ≤ AlenB ij.2.1 ∧ AlenB ij.2.1 ≤ 3*N ∧
+      round (zb ij.2.1)+(AlenB ij.2.1:ℤ)=Zb+(N:ℤ)*ij.2.1+2*(N:ℤ)) →
+    0 ≤ Lregime →
+    (N:ℝ)^4 ≤ M*R^3*Lregime^((3:ℝ)/2) →
+    let lambda := csrc*modelPhaseThirdLower σ*T/(12*Usrc*M^2)
+    let Uband := (3*Usrc/σsrc)*E*T/(2*M^2)
+    let yp : Fin 2 → ℝ := ![ya,yb]
+    let F := fun (i : Fin 2) u =>
+      (Tsrc/T)*(Fsrc u-Fsrc (u+η*yp i))/(σsrc*η)
+    let chartColor := fun ij i =>
+      (⌊yp i/a⌋,⌊((2*M^2/Tsrc)*(rat ij i:ℝ))/a⌋,
+        ⌊((Tsrc/(2*M^2))*(rat ij i:ℝ)⁻¹)/a⌋)
+    (∀ ij∈P, ∀ i, chartColor ij i=chartKey (entry ij)) →
+    (0 < σ) →
+    (δ ≤ min (modelPhaseThirdLower σ) 1) →
+    (∀ i, Expdb.IsApproximateModelPhaseFunction (F i) σ 4 δ) →
+    (0 < T) →
+    (0 < M) →
+    (0 < (N:ℝ)) →
+    (1 ≤ R) →
+    (R ≤ M) →
+    (0 < Q) →
+    (T*(N:ℝ)*R^2=M^3) →
+    ((Q:ℝ)*(N:ℝ) ≤ (K₀:ℝ)*R^2) →
+    (∀ i, M ≤ A i) →
+    (∀ i, A i+W i ≤ 2*M) →
+    (∀ ij∈P, ∀ i, x ij i∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, (rat ij i).den ≤ Q ∧ Q ≤ 2*(rat ij i).den) →
+    (0 < θ) →
+    (θ ≤ 1/24) →
+    (∀ ij∈P, ∀ i, ((rat ij i).den:ℤ) ∣ (rat ij i).num*vinv ij i-1) →
+    (∀ ab∈Gaps, (v ab)*(r ab)-(e ab)*(s ab)=1) →
+    (∀ ab∈Gaps, ((0:ℝ) < (r ab) ∧ ((e ab):ℝ)/(r ab)=ab.1) ∨
+      (((r ab):ℝ) < 0 ∧ ((e ab):ℝ)/(r ab)=ab.2)) →
+    (0 < Bcut) →
+    (∀ ab∈Gaps, (s ab) ≠ 0) →
+    (∀ ab∈Gaps, ((e ab):ℝ)/(r ab)∈Refs) →
+    (∀ ab∈Gaps, ((v ab):ℝ)/(s ab)∈Refs) →
+    (∀ a∈Refs, ∀ b∈Refs, a ≠ b → ((Uref:ℝ)/R^2)/4 < |a-b|) →
+    (∀ ij∈P, ∀ i, x ij i-(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+(56*(Uref:ℝ)/modelPhaseThirdLower σ)*(N:ℝ)∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (1 ≤ Uref) →
+    (2+168/modelPhaseThirdLower σ ≤ Bselect) →
+    (7*Bcut ≤ modelPhaseThirdLower σ*Bselect) →
+    (Bselect^2*(Uref:ℝ)^3*R^2 ≤ (N:ℝ)^2) →
+    (∀ ab∈Gaps, R^2 ≤ ((r ab):ℝ)^2*(Uref:ℝ)) →
+    (∀ ab∈Gaps, ab.2-ab.1 ≤ 7*(Uref:ℝ)/(2*R^2)) →
+    (R ≤ (Q:ℝ)) →
+    ((Uref:ℝ) ≤ ((N:ℝ)/(Q:ℝ))^((2:ℝ)/3)/Bselect) →
+    ((N:ℝ)^10 ≤ M^3*R^7) →
+    (∀ ij∈P, (rat ij 0:ℝ)∈Icc (gap ij).1 (gap ij).2) →
+    (∀ ab∈Gaps, ab.1∈Refs ∧ ab.2∈Refs ∧ ab.1 < ab.2 ∧
+      ∀ t∈Refs, ¬(ab.1 < t ∧ t < ab.2)) →
+    let Vheight := T*(modelPhaseJetCoefficient σ 1+δ)/(2*M^2)
+    let P₁ := fun (ab : ℝ × ℝ) => 1+(|((v ab):ℝ)|+|((s ab):ℝ)| *Vheight)*(Q:ℝ)
+    let P₂ := fun (ab : ℝ × ℝ) => 1+(|((r ab):ℝ)| *Vheight+|((e ab):ℝ)|)*(Q:ℝ)
+    let ε := modelPhaseThirdLower σ/(16*(σ*(σ+1)+1+2)*R^2)
+    let Ccharts := fun (ab : ℝ × ℝ) => ⌊Real.logb (5/4) ((ab.2-ab.1)/(12*ε))⌋₊+1
+    let sourceColor := fun ij i => (⌊((rat ij i).den:ℝ)/(θ*((Q:ℝ)/2))⌋,
+      ⌊((rat ij i).num:ℝ)/(θ*(lambda*(Q:ℝ)/2))⌋)
+    (∀ ij∈P, sourceColor ij 0=sourceColor ij 1) →
+    let f := fun i => heathBrownPhysicalPhase (F i) T M (A i) 1
+    (∀ ij∈P, ∀ i, iteratedDeriv 2 (f i) (x ij i)/2=(rat ij i:ℝ)) →
+    let q := fun ij i => (rat ij i).den
+    let mu := fun ij i => iteratedDeriv 3 (f i) (round (x ij i))/6
+    let ell := fun ij i => deriv (f i) (round (x ij i))
+    let b := fun ij i => (⌊(q ij i:ℝ)*ell ij i⌋+(parity ij i:ℕ) : ℤ)
+    let cround := fun ij i => round ((q ij i:ℝ)*ell ij i)
+    let tau := fun ij i => ((b ij i:ℝ)-(q ij i:ℝ)*ell ij i)/2
+    let dual := fun ij i => -2*mu ij i*(Real.sqrt (2/(3*mu ij i*(q ij i:ℝ))))^3
+    let cloud := fun ij i => (![Int.fract (-(vinv ij i:ℝ)*b ij i/q ij i),
+      Int.fract (-(vinv ij i:ℝ)/q ij i),dual ij i/Real.sqrt K₀,
+      (3*dual ij i*tau ij i/2)/Real.sqrt K₀] : Fin 4 → ℝ)
+    let radius : Fin 4 → ℝ := ![1/(12*(K₀:ℝ)),1/(12*(K₀:ℝ)^2),(1/(K₀:ℝ)^2)/12,(1/(K₀:ℝ))/12]
+    (∀ ij∈P, b ij 0-cround ij 0=b ij 1-cround ij 1) →
+    (∀ ij∈P, ∀ a, |cloud ij 0 a-cloud ij 1 a| ≤ 2*radius a) →
+    let κ := modelPhaseThirdLower σ
+    let Cphys := σ*(σ+1)+1
+    let c := κ/6
+    let J := Cphys/6
+    let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+    B*R^2/(N:ℝ)^2 ≤ 1/2 →
+    (N:ℝ) ≤ R^2 →
+    R ≤ (N:ℝ) →
+    (N:ℝ)^3 ≤ M*R^2 →
+    2*R^2 ≤ (Q:ℝ)*(N:ℝ) →
+    (∀ t∈P.image entry, Mat t 0*Mat t 3-Mat t 1*Mat t 2=1) →
+    (∀ ij∈P, (Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3=(q ij 1:ℝ)/q ij 0) →
+    (∀ ij∈P, ((Mat (entry ij) 0:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 1)/
+      ((Mat (entry ij) 2:ℝ)*(rat ij 0:ℝ)+Mat (entry ij) 3)=(rat ij 1:ℝ)) →
+    (∀ t∈P.image entry, |(Mat t 2:ℝ)| ≤ (Q:ℝ)^2/(6*(K₀:ℝ)^2)) →
+    let H := (N:ℝ)/(Cphys+2)
+    2 ≤ (N:ℝ) →
+    (∀ ij∈P, ∀ i, x ij i-H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, ∀ i, x ij i+H∈Ioo (1/2:ℝ) (W i-1/2)) →
+    (∀ ij∈P, |(anchor ij:ℝ)-(rat ij 0:ℝ)| ≤ ε) →
+    (∀ ij∈P, 256*((anchor ij).den:ℝ) ≤ (Q:ℝ)/3) →
+    (∀ ij∈P, 256 ≤ (2*ε)*((Q:ℝ)/3)*(anchor ij).den) →
+    let C₂ := modelPhaseJetCoefficient σ 2+δ
+    let C₃ := modelPhaseJetCoefficient σ 3+δ
+    let Ct := C₂/2+5*C₃/12
+    let Cc := C₂/κ+C₃/(2*κ)
+    let Δ := (37*B/2+16*B*Cc+2*Ct+2*Cc)*(Q:ℝ)/(N:ℝ)
+    let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+    let D := Δ+quarticNonlinearResidualConstant σ δ*(2*(Q:ℝ))/(N:ℝ)
+    let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+      2*quarticNonlinearResidualConstant σ δ)/κ
+    let Esize := κ/(16*(Cphys+2))
+    let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+    let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+    2*3840*128^2*105*(Dbase+64*Tbase*Esize^2) ≤ Bselect*Esize →
+    D ≤ 1/2 → Δ < 1/2 → 61*Ccurv*Cphys ≤ Bcut →
+    let Blabels := fun ab => 6+216*(⌊Real.logb 2 (P₁ ab*P₂ ab)⌋₊+1)
+    let m0 := 6+Cmajor*(105+544*Bmajor)
+    (∀ ab∈Gaps, Blabels ab ≤ Bmajor) →
+    (∀ ab∈Gaps, Ccharts ab ≤ Cmajor) →
+    let Lunit := 2*κ/Cphys
+    let Gamma := Cphys/κ
+    let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+    let AupperConst := 2*Cupper*(Cthird+1)*E^2/(κ*Lunit^3)
+    let BupperConst := Cupper*(Cthird+1)*E^2/Lunit^2+Dupper*(B+1)*E^2/4
+    let AlowerConst := 8*Clower*(Cthird+1)/(κ*Lunit^3)
+    let BlowerConst := 4*Clower*(Cthird+1)/Lunit^2+Dlower*(B+1)
+    let DupperConst := θ*(3*Usrc/σsrc)*E/2
+    let DlowerConst := 12*Usrc*θ/(csrc*κ)
+    let CostUpper := M^2/((N:ℝ)^4*(Uref:ℝ))
+    let CostLower := R^4/((N:ℝ)^2*(Uref:ℝ))
+    let DupperCut := θ*Uband
+    let DlowerCut := θ/lambda
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 2=0 ∧ Mat t 3=1 ∧ Mat t 1=t) →
+      (P.card:ℝ) ≤ 240*(m0:ℝ)*CostUpper*
+        (9*(AupperConst*DupperConst^2)^((3:ℝ)⁻¹)*Lregime+
+          2*BupperConst*(3+2*Real.log (DupperCut+2))+
+          (3/2:ℝ)*DupperConst*Lregime^((3:ℝ)/2))) ∧
+    ((∀ t∈P.image entry, Mat t 0=1 ∧ Mat t 1=0 ∧ Mat t 3=1 ∧ Mat t 2=t) →
+      (P.card:ℝ) ≤ 240*(m0:ℝ)*CostLower*
+        (9*(AlowerConst*DlowerConst^2)^((3:ℝ)⁻¹)*Lregime+
+          2*BlowerConst*(3+2*Real.log (DlowerCut+2))+
+          (3/2:ℝ)*DlowerConst*Lregime^((3:ℝ)/2))) :=
+  HuxleyTriangularPairScratch.positive_difference_actual_fourier_triangular_original_source_regime_mass (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) hσsrc hcsrc hUsrc
+
+
+
 #print axioms HuxleyTriangularPairScratch.physicalModelPhase_reference_translation_window_selection
 #print axioms HuxleyTriangularPairScratch.positive_difference_actual_fourier_triangular_original_pair_mass
 #print axioms HuxleyTriangularPairScratch.positive_difference_approximate_model_source_amplitude
 #print axioms HuxleyTriangularPairScratch.positive_difference_model_normalized_curvature_band
 #print axioms HuxleyTriangularPairScratch.positive_difference_actual_fourier_triangular_original_source_mass
 #print axioms HuxleyTriangularPairScratch.positive_difference_actual_fourier_triangular_original_source_regime_mass
+#print axioms HuxleyTriangularPairScratch.triangular_original_mass_regime_assembly
