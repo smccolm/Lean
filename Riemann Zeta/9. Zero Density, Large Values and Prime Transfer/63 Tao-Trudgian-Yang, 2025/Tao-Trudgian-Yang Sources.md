@@ -483,26 +483,69 @@ The 11 new public contracts each have an exact regression and an
 explicit production axiom check. Current installed totals:
 792 public Huxley theorems, 7,985 exact regressions and 7,295 public audits.
 
-PRODUCTION VERIFICATION PENDING: focused session 41992 has compiled
-HuxleyLinearForms (591s), BourgainOptimizedTransfer (13s) and the root
-(12s) without Lean diagnostics; the full regression module is running.
-Both mandatory BATs will follow sequentially. Prior 789-snapshot PASS
-logs are historical evidence only and are not verification of this batch.
+Production verification: focused retry 8445 PASS, 10,781 jobs, including
+the full SemanticRegression module (577s), with zero Lean diagnostics.
+Initial focused run 41992 exposed eight name-qualification errors in
+the new regression examples; these were fixed without changing the
+theorem proofs. The 11-contract installed-source check also passed.
+Foundation BAT 40278 PASS: 8,857 build jobs, 14,290 audited declarations
+and all six evaluation stages, with zero Lean diagnostics.
+Log: E:/Lean/Riemann Zeta/logs/foundation_freeze_20261001_224805.log.
+SHA-256 f7e1ec59d754e23a9f039d074053bf9185b3327a32d502f49337d6fbab08f8d5;
+manifest SHA-256 735a27bd820e4ee3f079bf651e907ed43f288e1637942650a0173bffcb8d5a7a.
+Paper BAT retry 60314 PASS, exit 0: all 1,449 package files covered,
+10,782 default-build jobs, direct semantic regression PASS, and 21,050
+imported/target declarations audited with permitted dependencies.
+All 11 new public contracts appear in the explicit audit output.
+Log: logs/tao-trudgian-yang-build-20261001-230742-79119df4.log.
+SHA-256 c63534bfb45907fce6295856406f6193b19abfc892ccc9c4b6119ee5e4ae8d13.
+The complete on-disk foundation and paper logs have zero Lean diagnostics.
+The two known frozen Python invalid-escape SyntaxWarnings remain visible.
+Earlier paper run 18851 was interrupted after its default build; its
+log ending at semantic regression is preserved and is NOT a PASS:
+logs/tao-trudgian-yang-build-20261001-225140-39c5aac8.log.
+Prior 789-snapshot PASS logs remain historical evidence only.
 Current production SHA-256:
 Huxley d2fa25cfac9fde7cb900a8bef5c72aad612741fb3d356fba0371c1924c3f216c;
 Bourgain consumer 18f92cfdedd24750a47f2d2f4aa2da5a7d9f21d2f18b44afbdf76f0ccde23a7d;
-regression e198f6906addfa2400ea8e169e177171970b16d7d3d142b251b1d6cb07578235;
+regression 1e3828345e0e635549717083dc2325816caa75a0f43c3f0f8fae55399c2b6fa7;
 audit 7baddcd830a0b0ffbe7f250d953bbeca1f7073efa3516a1004a6b0812c93393a.
 No production module, toolchain, resource allowance or runner exclusion
 was added. The new consumer import has been checked for cycles.
 
 Short remaining-obligation DAG:
 actual source factory -> closed middle rows 7--11 -> first two new pairs
-and density pieces 2--5 (installed; production verification pending)
--> actual two-step A source entry and A^2 theta family estimate
--> short rows 3--4 and the two gap pieces
--> third/fourth new pairs -> density piece 8 -> full table/envelope
-and public assembly -> aggregate semantic/release gates.
+and density pieces 2--5 (production and BOTH BATs PASS).
+For the remaining branch: actual two-step source/model entry
+-> two-step Weyl + actual product selection + common-jet error
+(SCRATCH KERNEL-CHECKED)
+-> source-derived physical rounded double-phase parameter count
+(SCRATCH KERNEL-CHECKED)
+-> literal original-grid fibers, shift-error absorption and common
+colored models (SCRATCH KERNEL-CHECKED)
+-> actual same-matrix Fourier Type-I and triangular source-scale counts
+-> joint rational/parity completed-source sieve with SAME narrowed matrices
+-> arbitrary-V and clamped actual model-pair mass, including global/tagged
+coordinate transport (all SCRATCH KERNEL-CHECKED)
+-> source-only large-action cutoff, actual joint-color/phase-fiber mass
+assembly, derived physical curvature band and physical family-size/color
+weight absorption and actual cubic-completion-weighted family estimate
+(SCRATCH KERNEL-CHECKED)
+-> source-derived enlarged curvature growth and common bounded reference
+system, actual coverage/roots and preimage widths (SCRATCH KERNEL-CHECKED)
+-> actual minimum anchors/roots, sharp high/low complement, least bands,
+quadratic occupied/terminal counts and SAME selected-family common-mode
+Fourier factory (SCRATCH KERNEL-CHECKED)
+-> SAME constructed bounded-reference/weighted-sieve composition
+(SCRATCH KERNEL-CHECKED)
+-> SAME original selected-source-sum twelfth moment with completion error
+and actual selected cardinality; ORIGINAL-model common source normalization
+(SCRATCH KERNEL-CHECKED)
+-> actual least-band/count consumption and full original-family moment (OPEN)
+-> actual finite source moment and full-window scale assembly (OPEN)
+-> short rows 3--4 and both gap pieces -> third/fourth new pairs
+-> density piece 8 -> full table/envelope and public assembly
+-> aggregate semantic/release gates. No aggregate gate changed.
 
 The PDF p. 39 explicitly lists the short rows as A^2 theta bounds.
 It also supplies the two intervening formulas
@@ -516,8 +559,305 @@ The naive A-transform of the installed one-step rows does not cover
 the needed parent range. Numerical scale checks, including selection
 of the block scale after the dyadic shift, identify an obstruction
 to that PARTICULAR majorant route; they are not analytic counterexamples.
-The second route reuses the existing uniform A-shift model and exact
-physical-coordinate identity for the genuine two-step source entry.
+The combined-parameter route is explicitly identified on the supplied
+PDF p. 40 by reference to Huxley--Watt (1989), Theorem 4, pp. 247--248,
+[Exponential Sums with a Parameter](https://doi.org/10.1112/plms/s3-59.2.233).
+The primary indexed text of those pages was read; a full 1989 PDF download
+was unavailable, so no claim is made to have read that whole paper.
+It groups two Weyl shifts by their product. Distinct shift pairs with
+equal product must NOT be identified as equal phases.
+
+The retained scratch epzae-huxley-double-shift-entry-20261002.lean has a
+verified checkpoint with 120 exact proposition regressions and 120 explicit
+axiom checks (session 83207, exit 0; zero Lean diagnostics, standard logical
+axioms only). Checkpoint SHA-256:
+af51f8e40d0797ccc01078cc5d74b506ae6b1f5bc0002a2aee4c6efea56d3b9a.
+Thirty-five declarations are unchanged copies of existing private budget/sieve/arithmetic,
+finite-decomposition and physical-spacing proofs for scratch access, NOT new analytic results; promotion must reuse
+the originals in the existing module. No production module was added.
+It reuses the existing uniform A-shift model, physical coordinate identity,
+source Weyl inequality, divisor estimate and iterated-derivative composition.
+Its product-indexed consumer starts from the ACTUAL original exponential
+sum, constructs every double-difference sum with its literal truncated
+interval, selects an ACTUAL maximizing pair in each product fiber, and
+absorbs multiplicities into a constant times (H*K)^epsilon. The constant
+is chosen before all phases, scales and intervals. No correlation bound
+or family estimate is a premise. With n=L+1, it proves
+H^2*K*abs(S)^4 <= 8*K*n^4+64*H^2*n^4+
+128*H*n^3*D*(H*K)^epsilon*sum_product abs(actual selected sum).
+The separate common-jet theorem proves
+abs(Delta_r Delta_s F^(j)(x)-r*s*F^(j+2)(x))
+<= B*r*s*(r+s) from the actual (j+3)-derivative bound on the full segment.
+These are source-entry/finite-reduction results, NOT the family estimate.
+
+The SAME scratch proves exact rational row-3 scale feasibility throughout
+[890/3277,199/716]. The original nine-term arithmetic check is preserved,
+but its provisional analytic worksheet understated powers of M:
+Type-I second term M^201 must be M^207; old triangular terms M^182 and
+M^230 must be M^193 and M^241; the Type-III tail M^260 must be M^268.
+It was never a proof of the analytic moment. The NEW clamped-route
+certificate checks ten corrected 288th-moment exponents for EVERY
+product block g<=3*h, plus the physical budgets, with margin 1/10000.
+For K=H^2, affine endpoint profiles remain
+(nu,h)=(121373,27201)/1000000 and (130455,29341)/1000000.
+Neither arithmetic certificate asserts the missing analytic moment.
+
+A candidate decomposition for row 4 and the two gap pieces treats small
+products by the existing second-derivative estimate and larger products
+by the family estimate. Earlier numerical LP checks used the provisional
+worksheet and establish no current feasibility claim for those intervals.
+New numerical searches using the corrected exponents found no positive-margin
+solution at most gap/row-4 endpoints, both with clamped V and with freely
+chosen V and block length. These are route-specific DISCOVERY diagnostics,
+not formal impossibility proofs or counterexamples to the printed bounds.
+Row 3 retains its separate corrected all-product arithmetic certificate.
+A second route now targets the FOURTH pair's own supporting line rather
+than the sharper printed row/gap formulas. The reference-height logarithmic
+budget no longer requires N^2<=M exclusively: the SAME actual-pair chain
+also accepts 1<=M, N<=T and R^2<=T. Both alternatives are kernel-checked;
+the original analytic pair bound itself never required N^2<=M.
+The new exact bilinear certificate checks every product scale between its
+small-product cutoff and 3*h, for all alpha in
+[890/3277,17604372/60424193], against
+beta=89/3478+(7441/8695)*alpha. It includes the two small-product
+second-derivative costs and ten corrected moment exponents. This is an
+arithmetic certificate, NOT a proof of the fourth pair or a printed beta
+row: the actual selected-family Fourier factory and finite moment still
+have to be assembled. The analogous third-pair numerical routes remain
+infeasible at tested endpoints; this is not an impossibility theorem.
+The direct reference route is now consumed, not merely proposed.
+The scratch constructs nearby exact roots of H(y,u)=y*F^(4)(u),
+proves their displacement and SAME-root profile errors, derives the
+literal mixed-derivative ratio from the actual two-jet determinant,
+and invokes the EXISTING curvature_fiber_parameter_count. A finite
+bin partition globalizes the local count. Enlarged roots lie in
+(3/4,9/4); they are NOT silently treated as roots in [1,2].
+No smooth interpolation of selected shift pairs is needed.
+
+For each ACTUAL selected pair r(y),s(y), put
+Q_y(u)=(F(u)-F(u+r)-F(u+s)+F(u+r+s))/delta, with
+r*s=delta*y, 1<=y<=2 and r+s<=w.
+double_difference_physical_parameter_count consumes
+f_y(z)=T*Q_y(z/M), the actual exact curvature level, and the rounded
+relative cubic test with 1/2<=t<=2. Sargos's EXISTING local affine-jet
+theorem supplies T/M^n scaling; the common-jet theorem supplies the
+positive cubic and fourth-derivative rounding bounds. It proves
+card(S)<=K*(1+C*(24*U*(Delta+5/M)+2*U*w+12*U^2*w/c)*J).
+The extra shift error remains EXPLICIT. Preconditions include
+w<=1/4 and 2*U*w<=c/64, not an assumed counting or matching-root bound.
+
+approximateModelPhase_enlarged_double_difference_count starts with
+the ORIGINAL approximate-model phase. For any prescribed positive jet
+tolerance it chooses all constants before M,F and the shifts, constructs
+ONE extension, derives its positive fifth and negative fourth derivatives
+from the exact model and its determinant from the existing seven source tests, retains
+every sharp prefix with loss <=6, and supplies that physical parameter
+count. No analytic jet bound, parameter-count certificate, root family
+or conclusion-shaped premise is left at this source-entry boundary.
+The literal original-grid/parity fiber is now proved with factor six:
+positive actual cubic jets imply curvature injectivity, and the EXISTING
+integer-grid geometry leaves at most three block indices and two parity
+labels. The same count now absorbs the visible rounding and shift errors
+under J<=M and J*w<=1 into D*(1+Delta*J), with D chosen before the phase.
+No original-grid multiplicity or root-identification certificate is assumed.
+
+Two mean-value steps also identify every actual double jet with
+r*s*F^(j+2) at an interior point. This proves the uncompressed common
+model using ONLY source derivatives through P+3 (order seven for P=4).
+The parameter is sigma+2 and the common normalization is
+sigma*(sigma+1)*d*y0. The EXISTING finite floor-coloring/Hölder argument
+chooses y0 from each occupied color, bounds the occupied-color count
+by Cap=4/a+3, retains the full
+complex sum's Cap^11 twelfth-power loss, and proves the SAME-center
+physical phase identity. Neither a model certificate nor cross-color
+cancellation is assumed.
+
+The actual double-phase curvature now has the derived signed band
+-2*U<=Q_y''<=-c. The EXISTING bounded-action matrix theorem counts
+the nontriangular branch; the identity branch costs at most one matrix.
+The literal matrix/first-point fiber and rounded original-grid count
+give D*I*(M/N)*(1+Delta*J), where D depends only on c,U and the fixed
+action cutoff L, chosen BEFORE all physical scales and selected pairs.
+
+double_difference_colored_fourier_cloud_type_one constructs the SAME
+matrices from the ACTUAL completed two-parity Fourier cloud. It derives
+mu0=c*T/(12*M^3), U0=U*T/(2*M^3), the signed-safe rational curvature band,
+the rational coloring and its FULL complex-sum twelfth-power loss.
+It retains determinant one, the exact homography/denominator ratio,
+cubic Third test, affine strips, triangular alternatives and trace-two
+condition, and consumes them in the Type-I count. No matrix, curvature,
+cubic-bound or pair-count certificate is a premise.
+This is SCRATCH KERNEL-CHECKED, not installed production.
+
+The SAME actual Fourier matrix now also has the triangular count
+D*(1+theta*(Hcurv+1/lambda))*I*(M/N)*(1+Delta*J).
+This uses the literal original-grid fibers and elementary integer matrix
+counting, not a hypothesized triangular source estimate. For Hcurv<=1,
+the new choice V=max(1,Hcurv*N/Q) pays its cost while retaining the
+existing Type-III V^(-5/3) decay. The scratch proves BOTH cost inequalities
+including the full sieve factor V. This second route avoids extending
+the old positive-difference triangular compression machinery.
+double_difference_actual_joint_narrowed_sieve now consumes the EXISTING
+completed-source sieve. It constructs the rational/parity joint color
+with at most 3*Cap colors, retains each literal color-fiber pair count and
+the full V*(3*Cap)^11 cost, and uses the SAME matrix as the proved Type-I
+and triangular source counts. Its 1/V entry cap is derived from the actual
+inverse Fourier coordinate, including the physical R^4/(6*N^2*V) cap.
+The minor-arc/completion scalar conditions remain explicit source inputs.
+
+The EXISTING arbitrary-V analytic pair bound is now consumed with
+constructed uniform logarithmic budgets, exact global-coordinate transport,
+and the clamped V=max(1,Uband*N/Q). For 0<Uband<=1, its ACTUAL pair mass
+including the sieve cost is bounded by
+60*588*(Uband/lambda)^2*Uband^2*(R^8/N^4)*
+(Cmain*(Q/(Uband*N))^(2/3)+Ctail/Uref)*T^epsilon.
+The tagged fixed-phase pair consumer proves the original cardinality
+identity; it does not assume injectivity or a pair-count certificate.
+All displayed physical reference/model/Fourier hypotheses still have to
+come from the SAME selected source family. A small coefficient-positivity
+lemma keeps the composition within the unchanged Lean heartbeat limit.
+
+eventually_double_difference_actual_family_source_sieve now constructs
+the SAME matrices and consumes the actual joint-color/fixed-phase fibers.
+Its source-only cutoff derives BOTH large-entry analytic thresholds.
+Finite fiber summation combines the Type-I, triangular and large-entry
+counts, retaining the full clamped V cost and original phase multiplicity.
+double_difference_physical_curvature_band derives the physical band from
+the original fourth derivative; that band is NOT an input to this family
+consumer. Reference geometry, common-model data and scalar source budgets
+remain explicit upstream inputs, not assumed analytic counting results.
+
+eventually_double_difference_actual_family_physical_sieve consumes that
+actual estimate and the EXISTING literal rounded-grid count. It derives
+card(V)<=10*I*(M/N), preserves the colored estimate and absorbs the tenth
+powers of all color-fiber sizes into (10*I*M/N)^10.
+The same-matrix family mass is
+V*Dtype*(2+theta*(Uband+1/lambda))*I*(M/N)*(1+Delta*J)
++ I^2*Klarge*T^epsilon.
+A larger combined draft exceeded the unchanged 200000-heartbeat limit;
+a separate consumer and explicit multiplication identity pass without
+resource changes or suppressed diagnostics.
+
+double_difference_source_completion_weight derives the actual rounded
+cubic weight <=sqrt((144*Usrc/(csrc*kappa))*(R^2/Q)).
+The needed source/model amplitude lower comparison is proved from the
+SAME phase's third derivative, not assumed. The physical-family consumer
+now applies this bound to EVERY actual block/parity term and proves the
+completion-weighted twelfth-power estimate with the full factor
+((144*Usrc/(csrc*kappa))*(R^2/Q))^6. Empty families are retained.
+No new copied private helper, production module or resource change was
+needed for this step.
+
+double_difference_physical_curvature_growth derives the lower rate
+c*T/(4*M^3) on the ENLARGED physical interval [3*M/4,9*M/4].
+double_difference_constructed_reference_system_bounded consumes it and
+the EXISTING bounded rational-reference construction for the ACTUAL finite
+selected double-phase family. It retains the full low-denominator hull,
+bounded rational labels, original parents, separation and gap denominator
+scale; it derives curvature coverage, actual roots and adjacent preimage
+width <=14*Uref*N/c. No reference or root certificate is assumed.
+
+The actual minimum-denominator anchors now have SAME-phase roots within
+N/16, proved injectivity and sharp high-denominator tails. The SAME anchors
+also control the low-denominator complement and literal discarded source
+lengths. The two-probe least band is selected after these witnesses, before
+any finite selected family. Existing arithmetic gives its quadratic occupied
+and terminal counts. double_difference_selected_dyadic_family_fourier
+consumes those actual witnesses, constructs the dyadic centres, derives the
+minor-arc conditions and invokes the EXISTING generic C4 completion to
+complete precisely the selected original sums with ONE common Fourier mode.
+Its constant precedes all phases, scales and selected families. No anchor,
+root, cardinality or Fourier estimate is supplied as a hypothesis.
+The two additional scratch copies are unchanged existing private scalar
+arithmetic proofs, to be reused directly at production promotion.
+
+The constructed reference system now includes oriented charts, bounded integer
+labels and closed adjacent-gap coverage, including points equal to references.
+Its radius is independent of the source amplitude: the proof derives the
+auxiliary reference length M^3/(Tsrc*R^2), rather than identifying Tsrc with
+the normalized model amplitude T. The SAME Fourier factory also exports its
+derived minor-arc and mesh conditions.
+eventually_double_difference_constructed_reference_weighted_sieve consumes
+this constructed system and the existing physical weighted sieve; reference
+charts, gap assignments, height bounds and integer endpoint windows are no
+longer supplied hypotheses. Its uniform constants precede the source family
+and all physical scales. Two more unchanged private chart/bracket proofs are
+copied only for scratch access and will reuse their originals at promotion.
+
+eventually_double_difference_original_selected_block_moment now consumes
+the SAME constructed dyadic centres, actual minor-arc/mesh data and ONE common
+Fourier mode in the constructed-reference weighted sieve. Its conclusion is
+the twelfth moment of the original selected block sums, with explicit error
+|S|*(sqrt(3N)*log(6N)+36*Usrc*R^2/(csrc*kappa*N)). The cubic-derivative lower
+bound used for that error comes from the SAME actual rounded phase. The old
+physical family-size estimate is preserved, while the strengthened weighted
+consumer retains (2*|S|)^10, allowing later selected-band density savings.
+No Fourier, reference-chart, matrix-count or moment estimate is assumed.
+The actual minimum-anchor/root data and scalar budgets remain explicit upstream
+inputs of this selected-block theorem.
+
+approximateModelPhase_enlarged_double_common_scale_source consumes the ORIGINAL
+approximate model, one sharp extension with error 6, actual product colors and
+uniformly rescaled signed source tests. Its source amplitude and radius satisfy
+exact physical phase/scale identities. The model tolerance is chosen BEFORE
+the extension constants, so the choice is not circular. The finite-color
+moment loss is preserved. The additional unchanged private scratch copy is
+the existing scalar cubic-completion error bound, to reuse at promotion.
+
+The nonzero rational count is now kernel-checked: |S| <= 2*B*X*Q^2,
+with explicit nonzero values and bounded multiplicity. Its actual-anchor
+consumer derives nonvanishing and the sharper |anchor| <= X from the SAME
+physical curvature roots, improving the low-denominator cost to 2*X*Dlow^2.
+The high-denominator logarithmic term is unchanged; its present quadratic
+absorption still needs N*Q <= M. No removal of that separate restriction is
+claimed.
+
+A second fourth-pair route is checked arithmetically with a larger small-product
+cutoff and cap min(N,M/N). It keeps all ten previous moment inequalities and
+adds the nonempty-band scale inequalities and the terminal exponent
+504*alpha-72-216*h+72*nu. The exact physical cap estimate retains BOTH
+M*R^2/N^2 and N^2*R^2/M. Earlier worksheets are preserved. This certificate is
+not an analytic all-band moment or a proof of the sharper printed row four.
+
+The existing integer selector is now consumed at the effective cap
+qcap*min(1,M/N^2). The SAME chosen terminal denominator satisfies N*Qmax<=M,
+the Fourier/reference budgets, and the two-term terminal-error estimate.
+Actual double-difference fine-grid chunks construct their least bands and
+roots before any selected family, with occupied-band and terminal counts.
+The original phase-dependent subinterval sums now consume those bands,
+retaining both integer endpoint strips and the terminal remainder explicitly.
+Direct eight-residue-grid transport preserves all original chunks and bounds
+each grid's cardinality by the actual selected cardinality; it needs no
+shifted-cover enlargement. These are kernel-checked scratch consumers.
+
+eventually_double_difference_direct_residue_grid_moment now consumes those
+SAME direct grids in the original completed-block estimate, deriving every
+anchor/root/buffer/cutoff input from their actual selected chunks.
+eventually_double_difference_all_band_subinterval_moment consumes that result
+and the constructed least-band reduction. It proves the twelfth-power bound
+for the ORIGINAL phase-dependent subinterval sums, with actual selected-grid
+cardinalities, terminal remainder and both endpoint strips. All source-only
+constants precede the finite families and physical scales. No analytic
+sum bound, Fourier certificate, root family or count is assumed by this
+all-band consumer. Explicit source jets/models and scalar budgets remain.
+
+double_difference_actual_source_grid_monomials now consumes the actual
+occupied-grid and phase-image counts, not arbitrary unrelated cardinalities.
+Its SAME source curvature and Type-I spacing are derived from T*N*R^2=M^3
+and the selected mesh. The clamped triangular and large-entry mass reduces
+to five explicit physical power terms. This is a checked selected-grid
+consumer, not yet the complete source-family estimate.
+
+Remaining DAG: compose these physical power terms with the actual all-band
+ORIGINAL-sum moment, logarithms, completion/endpoint errors and BOTH capped
+terminal terms -> SAME source-normalization and full physical-window scale
+selection -> fourth analytic pair (and the other remaining short-row/gap
+obligations). The exact arithmetic worksheet is not yet linked to a complete
+analytic moment. Those end theorems and the aggregate gates remain OPEN.
+These checked original-block and source-normalization consumers are not an
+installed short-row theorem or a completed analytic pair.
+This is NOT the complete family estimate, a short beta row, or a new
+aggregate completion.
 Do not grow a support-module family without a consumer for this obligation.
 
 Historical 789-snapshot evidence remains available in the logs:
@@ -530,7 +870,8 @@ not retroactively relabeled as an unconditional theorem.
 Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory
 and must be maintained when coverage or behavior changes. Preserve every
 frozen false statement, counterexample, obstruction, owner-authorized
-repair and regression, including the supplied Huxley PDF.
+repair and regression, including the supplied Huxley PDF. Their SHA-256 hashes remain unchanged;
+git diff --check passes (only Git LF/CRLF notices).
 Recovery-record maintenance is permanently skipped.
 ## Historical verified 777 selected-band and triangular-regime snapshot (1 October 2026)
 
@@ -6568,8 +6909,8 @@ Current update (2 October 2026): all FIVE inputs 7--11 are discharged by
 installed closed-row consumers. The first two new public pairs and four
 further Bourgain density pieces are now unconditional production theorems.
 Short-range rows 3--4 and the omitted interval remain separate full-table
-and last-two-pair obligations. Verification of the new 792 snapshot is
-pending; see the current verification section above. The preserved
+and last-two-pair obligations. The new 792 snapshot passes the focused
+retry and BOTH BATs; see the current verification section above. The preserved
 conditional test below records the original five inputs and is not
 retroactively relabeled as an unconditional proof.
 
