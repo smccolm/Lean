@@ -406,101 +406,132 @@ Frozen statements, counterexamples, owner-authorized repairs, obstruction
 documentation and regressions are preserved. Recovery records remain
 permanently optional and skipped.
 
-## Current phase-dependent finite source assembly (1 October 2026)
+## Current exact middle beta rows and unconditional cascade (2 October 2026)
 
-The EXISTING Huxley module now has complete finite estimates for ORIGINAL
-phase-dependent subintervals, with their common-interval specializations:
+The supplied 40-page Huxley (1993) PDF has been read in full. Its
+Theorem 3 (pp. 38--39) now has the five required middle-row consumers
+installed in the EXISTING HuxleyLinearForms module. These prove the
+literal frozen beta-table formulas, with BOTH endpoints included:
 
-- eventually_positive_difference_selected_band_phase_subinterval_physical_sieve;
-- eventually_positive_difference_triangular_selected_band_phase_subinterval_physical_sieve;
-- eventually_positive_difference_selected_band_subinterval_physical_sieve;
-- eventually_positive_difference_triangular_selected_band_subinterval_physical_sieve.
+| Row | Closed alpha interval | Proved beta bound |
+| --- | --- | --- |
+| 7 | [861996/2811205, 87/275] | (13+94*alpha)/146 |
+| 8 | [87/275, 423/1295] | (11+191*alpha)/244 |
+| 9 | [423/1295, 227/601] | (89+908*alpha)/1282 |
+| 10 | [227/601, 12/31] | (29+173*alpha)/280 |
+| 11 | [12/31, 1508/3825] | (4+103*alpha)/128 |
 
-Each phase may have its own A(y), B(y) inside [M,2M]. This is required by
-the actual differencing correlations, whose endpoints depend on the shift.
-The interval selector constructs a disjoint union of the actual phase
-chunks and charges the same uniform endpoint budget. No extra phase-count
-factor is lost. The old scalar-endpoint PUBLIC CONTRACTS AND REGRESSIONS
-are preserved exactly; their proofs specialize the stronger consumers.
-The old private scalar band reduction is replaced by the phase-dependent
-reduction, rather than maintaining two separate analytic assembly proofs.
+The public names are
+HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_seventhRow,
+exponentSumGrowthExponent_le_huxley_eighthRow,
+exponentSumGrowthExponent_le_huxley_ninthRow,
+exponentSumGrowthExponent_le_huxley_tenthRow and
+exponentSumGrowthExponent_le_huxley_eleventhRow.
+Rows 7--8 use the upper regime, row 9 the general regime, and rows
+10--11 the lower regime. The new batch installs only 42 transitively
+used PRIVATE prerequisites and reuses 31 existing lemmas; no production
+module was added.
 
-Canonical two-probe anchors are chosen before references. A finer grid,
-N=8*n and R_fine=sqrt(8)*R, reuses the proved quadratic denominator density.
-Actual anchors/roots are transported to all eight grids, with
-card(grid)<=2*card(band) and the actual phase-image subset retained.
-ALL bands, terminal-none mass and endpoint strips are included, also for
-short intervals. General and triangular regimes retain distinct costs.
-Genuine source tests/model conditions and physical scalar budgets are
-still explicit. No source-count or matrix-count certificate is assumed.
+Semantic source-entry check: the consumers start with the ACTUAL
+approximate-model phase, construct one common extension, retain the
+original sharp interval with a one-time loss of at most six, and derive
+the actual dyadic correlations and phase-dependent finite source factory.
+Source-only constants precede T, M, F and the interval endpoints.
+No source correlation, mesh/grid/count, matrix certificate, beta bound
+or desired conclusion is supplied as a hypothesis. The general route
+uses a 144th moment; the lower route uses a 72nd moment and DERIVES
+the source small-curvature budget B*T<=M^2 from B*X*H<=M^3.
+Both routes prove the FULL nonasymptotic length window
+T^(alpha-delta)<=M<=T^(alpha+delta), including empty intervals,
+integer floor scales, logarithmic losses and final root extraction.
+The public contracts consume these source bridges transitively.
+Fixed rational affine profiles verify all scale/exponent inequalities
+throughout the closed intervals. No resource limit was increased.
 
-Scratch 87961 PASS: 73 exact regressions and 73 explicit axiom checks,
-zero Lean diagnostics, standard logical axioms only. SHA-256:
-fb06199d57d4331e53723465fcf30923ae2fc4165c6025bae6d1bfc8c069e6e9.
-A separate integer-scale scratch 75431 PASS constructs Qbase, kmax,
-all integer Fourier meshes and monotone floor-selected reference lengths,
-derives the per-band physical budgets, and proves kmax<=log(N)/log(2).
-Its uniform selector chooses the cutoff from fixed source constants.
-It also proves the exact twelfth-power prefactor identity, derives the
-Type-I spacing factor from the actual mesh inequalities, and bounds
-density/completion/band-count logarithms by fixed multiples of 1+log(T).
-It reuses the EXISTING Fourier-mesh theorem and avoids the older, stronger
-Taylor-scale restriction. Six exact regressions and six explicit audits
-have zero Lean diagnostics and standard logical axioms only; SHA-256
-c5676df222d08be4bc49212c55fb00b24fb3485c31636a82ccfdda56dc146253.
-These scalar results are SCRATCH-CHECKED, not yet composed into production
-power-window/all-shift source assembly. Default resource limits are unchanged.
+The EXISTING BourgainOptimizedTransfer module now consumes these rows
+together with the already-proved global sixth-row and Sargos D bounds.
+Global beta-half duality, with every interval covered, proves:
 
-Verified totals: 786 public Huxley theorems, 7,971 exact regressions and
-7,281 explicit public audits. Focused 17996 PASS: 10,781 jobs,
-Huxley 537s, root 11s, regressions 657s, zero Lean diagnostics.
-BOTH required BATs passed for this installed snapshot at dirty HEAD
-b83fe47bb344b5987461bd10e2834d3f7db57fa4:
-- cmd /c run_lake_build.bat --no-pause (foundation cwd), session 23140,
-  exit 0, 8,857 build jobs, 14,290 audited declarations, all six manifest
-  stages passed with zero warnings/tactic suggestions/linter failures.
-  Log: E:/Lean/Riemann Zeta/logs/foundation_freeze_20261001_151024.log
-  SHA-256 769e85bb99f82a598e4381b4f965cf101d3b1f2f9cf426149e31a3bc28263aae.
-  Matching JSON manifest SHA-256:
-  fe8e4314c6ee6322de0ca7a006501260926a74fb3ff87b864dc947b8ba0c0dae.
-- cmd /c run_tao_trudgian_yang_build.bat --no-pause (paper cwd),
-  session 86700, exit 0, 10,782 default-build jobs, semantic regression
-  PASS and 21,036 declarations in the permitted-dependency audit.
-  All inventory/source-integrity/replay/generator/coverage gates passed.
-  Log: logs/tao-trudgian-yang-build-20261001-151327-92068d9d.log
-  SHA-256 72c4a2320aed86697a11e21c3b43636eb2a36dc8fa182d99c35e855d1baf7482.
-  Zero Lean diagnostics; the TWO frozen Python invalid-escape
-  SyntaxWarnings remain visible and unchanged.
-The preceding 784 focused and 782 BAT snapshots are historical evidence,
-not the verification claimed for the current installation.
+- exponentPair_taoTrudgianYang_firstNew:
+  (89/1282, 997/1282);
+- exponentPair_taoTrudgianYang_secondNew:
+  (652397/9713986, 7599781/9713986);
+- exponentPair_bourgain_piece_two_input:
+  (391/4595, 3461/4595);
+- exponentPair_bourgain_piece_three_input:
+  (2779/38033, 58699/76066).
 
-Installed source SHA-256:
-Huxley cb7e24a7f30ae10addcad19f538dbc3d809516b3d8071bd4942d7a0f28dc677f;
-regression 0492870e0c2883a0ab2b89dff9f37bc6323fd14636dc2c9d50122fbf81689b78;
-audit d26a233891036d046fbfae0d96a031c81c95f308bcd8d5afae0ad7c3bf10c55d.
+The corresponding zeroDensityExponent_le_bourgain_piece_2,
+_piece_3, _piece_4 and _piece_5 are now unconditional analytic consumers
+on their exact published sigma ranges. Together with the existing
+pieces 1, 6 and 7, this discharges SEVEN of the eight analytic pair inputs.
+The legacy explicit-input assembly signatures remain unchanged.
 
-Remaining DAG:
-actual selected-band source counts/completion weights (installed)
--> phase-dependent original-subinterval all-band/eight-grid assembly,
-including terminal and endpoint errors (installed; focused and BOTH BATs PASS)
--> integer band/mesh/reference-length construction and scalar spacing/log bounds
-(scratch checked)
--> fixed source constants, common physical power-window budgets and
-scalar/logarithmic simplification uniform over ALL differencing shifts
--> original-phase/correlation transfer -> beta rows 7--11 -> EPZAE-14/29/30.
-Keep the ACTUAL shift cardinality until H*R^2 cancels in the cubic and
-terminal errors; an early replacement by Hmax loses the required bound.
-Reuse existing source normalization, cubic-error and logarithmic estimates.
-No beta row or aggregate gate changes status: OPEN, 34/42.
-EPZAE-13/14/29/30/38/39/40/41 remain open.
+Acceptance boundary: EPZAE-13/14/29/30 are NOT complete.
+Short-range rows 3--4 and the omitted interval (199/716,120/419)
+remain open for the full beta table and last two new pairs.
+The THIRD new pair (10769/351096,609317/702192) is still needed for
+Bourgain piece 8. The FOURTH pair (89/3478,15327/17390) is also open.
+The five-row cascade must not be equated with the complete four-pair
+or eight-piece contract. Aggregate remains OPEN, 34/42:
+EPZAE-13/14/29/30/38/39/40/41 stay open.
+
+Scratch 51088 PASS: 97 exact proposition regressions and 97 explicit
+axiom checks, zero Lean diagnostics and only standard logical axioms.
+SHA-256 b59732e96266cbb0db99a9d526569e9ce7f8215c5e61e5033ce072596eb05a1f.
+The 11 new public contracts each have an exact regression and an
+explicit production axiom check. Current installed totals:
+792 public Huxley theorems, 7,985 exact regressions and 7,295 public audits.
+
+PRODUCTION VERIFICATION PENDING: focused session 41992 has compiled
+HuxleyLinearForms (591s), BourgainOptimizedTransfer (13s) and the root
+(12s) without Lean diagnostics; the full regression module is running.
+Both mandatory BATs will follow sequentially. Prior 789-snapshot PASS
+logs are historical evidence only and are not verification of this batch.
+Current production SHA-256:
+Huxley d2fa25cfac9fde7cb900a8bef5c72aad612741fb3d356fba0371c1924c3f216c;
+Bourgain consumer 18f92cfdedd24750a47f2d2f4aa2da5a7d9f21d2f18b44afbdf76f0ccde23a7d;
+regression e198f6906addfa2400ea8e169e177171970b16d7d3d142b251b1d6cb07578235;
+audit 7baddcd830a0b0ffbe7f250d953bbeca1f7073efa3516a1004a6b0812c93393a.
+No production module, toolchain, resource allowance or runner exclusion
+was added. The new consumer import has been checked for cycles.
+
+Short remaining-obligation DAG:
+actual source factory -> closed middle rows 7--11 -> first two new pairs
+and density pieces 2--5 (installed; production verification pending)
+-> actual two-step A source entry and A^2 theta family estimate
+-> short rows 3--4 and the two gap pieces
+-> third/fourth new pairs -> density piece 8 -> full table/envelope
+and public assembly -> aggregate semantic/release gates.
+
+The PDF p. 39 explicitly lists the short rows as A^2 theta bounds.
+It also supplies the two intervening formulas
+(29+464*alpha)/600 on [199/716,967/3428] and
+(49+1351*alpha)/1614 on [967/3428,120/419].
+These are REFERENCES, not yet proved local consumers.
+Searches of the existing A-process, local source-Weyl/correlation,
+GafniTaoNative, frozen ANTEDB and completed analytic machinery found
+no equivalent theorem discharging this short-range family obligation.
+The naive A-transform of the installed one-step rows does not cover
+the needed parent range. Numerical scale checks, including selection
+of the block scale after the dyadic shift, identify an obstruction
+to that PARTICULAR majorant route; they are not analytic counterexamples.
+The second route reuses the existing uniform A-shift model and exact
+physical-coordinate identity for the genuine two-step source entry.
+Do not grow a support-module family without a consumer for this obligation.
+
+Historical 789-snapshot evidence remains available in the logs:
+foundation_freeze_20261001_202858.log (foundation 67293 PASS) and
+tao-trudgian-yang-build-20261001-203159-359a6611.log (paper 25958 PASS).
+The original 35-statement upper-row scratch and the preserved conditional
+five-row dependency test remain intact; the latter is historical,
+not retroactively relabeled as an unconditional theorem.
 
 Both run_lake_build.bat and run_tao_trudgian_yang_build.bat remain mandatory
-and must be maintained when coverage or behavior changes. No production
-module, import, resource setting, toolchain or runner exclusion was added.
-Preserve every frozen false statement, counterexample, obstruction,
-owner-authorized repair and regression, including the supplied Huxley PDF.
-Recovery-record maintenance remains permanently skipped.
-
+and must be maintained when coverage or behavior changes. Preserve every
+frozen false statement, counterexample, obstruction, owner-authorized
+repair and regression, including the supplied Huxley PDF.
+Recovery-record maintenance is permanently skipped.
 ## Historical verified 777 selected-band and triangular-regime snapshot (1 October 2026)
 
 Two new public consumers are installed in the EXISTING Huxley module:
@@ -6793,10 +6824,12 @@ additive energy**, the three output families covered by the paper.
   estimate implies the paper's beta formula with all scale/range conditions.
 - [ ] **EPZAE-13 -- Beta table.** Every segment consumed by `new-exp-pair` has a
   proved analytic source and a checked exact envelope certificate.
-  Printed rows 6, 13, 14 and 15 now have actual analytic consumers.
-  Seven Huxley rows and coverage of (199/716,120/419) remain open.
+  Printed rows 6, 7, 8, 13, 14 and 15 now have actual analytic consumers;
+  rows 7--8 include both endpoints and pass focused/BOTH BAT verification.
+  Rows 3, 4, 9, 10 and 11 and coverage of (199/716,120/419) remain open.
   The five-row conditional kernel test in Sources identifies a sufficient
-  cascade to the first two public pairs; it does not prove its inputs.
+  cascade to the first two public pairs: inputs 7--8 are now discharged,
+  while 9--11 remain open. This does not complete the four-pair contract.
 - [ ] **EPZAE-14 -- Four new exponent pairs.** The exact four public
   `new-exp-pair` conclusions are proved and audited without a conclusion-shaped
   hypothesis.

@@ -82743,4 +82743,98 @@ example
             Endpoint^12) :=
   TaoTrudgianYang2025.HuxleyRationalPhase.eventually_positive_difference_triangular_selected_band_phase_subinterval_physical_sieve (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (εloss:=εloss) hσsrc hcsrc hUsrc hσ hεloss hanchorBudget
 
+example
+    {σsrc csrc Usrc σ δ ε : ℝ}
+    (hσsrc : 0 < σsrc) (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc)
+    (hσ : 0 < σ) (hδzero : 0 ≤ δ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hε : 0 < ε)
+    (hanchorBudget : csrc ≤ 4*modelPhaseThirdLower σ*σsrc/(σ*(σ+1)+3)) :
+    ∃ Cbudget η₀ : ℝ, 1 ≤ Cbudget ∧ 0 < η₀ ∧ η₀ ≤ 1/8 ∧
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc : ℝ → ℝ) (Y : Finset ℝ)
+      (n N : ℕ) (R Jsep : ℝ) {η M : ℝ},
+      N=8*n → 2 ≤ N → 1 ≤ R → 0 < η → η ≤ η₀ →
+      0 < Jsep → Jsep ≤ M →
+      (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j ≤ 6, |iteratedDeriv (j+1) Fsrc w| ≤ Usrc) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j,
+        csrc ≤ |HuxleyModel.tests (fun i : Fin 4 => iteratedDeriv (i.val+3) Fsrc w) j|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+      (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction
+        (fun u => (Fsrc u-Fsrc (u+η*y))/(σsrc*η)) σ 4 δ) →
+      T*(N:ℝ)*R^2=M^3 →
+      Cbudget*R ≤ N → Cbudget*(N:ℝ) ≤ R^2 → Cbudget*(N:ℝ)^2 ≤ M →
+      (N:ℝ)^4 ≤ M*R^3 → (N:ℝ)^10 ≤ M^3*R^7 →
+      ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+      (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+      let Yc := (Y.card:ℝ)
+      let ErrorTotal := Yc*M/Real.sqrt (N:ℝ)+Yc*M*R^2/(N:ℝ)^2+
+        Yc*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+      let Main := Yc^11*M^11/((N:ℝ)*R^2)+
+        Yc^11*Jsep*M^11/(N:ℝ)^3+
+        Yc^12*M^12/((N:ℝ)^4*R^2)*(R/(N:ℝ))^((2:ℝ)/3)
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),
+        (𝐞 (T*(Fsrc ((j:ℝ)/M)-Fsrc ((j:ℝ)/M+η*y))/(σsrc*η)):ℂ)‖)^12 ≤
+        T^ε*(ErrorTotal^12+Main) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.eventually_upper_quantitative_phase_subinterval_bound (σsrc:=σsrc) (csrc:=csrc) (Usrc:=Usrc) (σ:=σ) (δ:=δ) (ε:=ε) hσsrc hcsrc hUsrc hσ hδzero hδ hε hanchorBudget
+
+example
+    {α : ℝ≥0} (hα : 861996/2811205≤(α:ℝ)) (hα₁ : (α:ℝ)≤87/275) :
+    Expdb.exponentSumGrowthExponent α ≤ (13+94*(α:ℝ))/146 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_seventhRow (α:=α) hα hα₁
+
+example
+    {α : ℝ≥0} (hα : 87/275≤(α:ℝ)) (hα₁ : (α:ℝ)≤423/1295) :
+    Expdb.exponentSumGrowthExponent α ≤ (11+191*(α:ℝ))/244 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_eighthRow (α:=α) hα hα₁
+
+
+example
+    {α : ℝ≥0} (hα : (423:ℝ)/1295≤(α:ℝ)) (hα₁ : (α:ℝ)≤(227:ℝ)/601) :
+    Expdb.exponentSumGrowthExponent α≤(89+908*(α:ℝ))/1282 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_ninthRow (α:=α) hα hα₁
+
+example
+    {α : ℝ≥0} (hα : (227:ℝ)/601≤(α:ℝ)) (hα₁ : (α:ℝ)≤(12:ℝ)/31) :
+    Expdb.exponentSumGrowthExponent α≤(29+173*(α:ℝ))/280 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_tenthRow (α:=α) hα hα₁
+
+example
+    {α : ℝ≥0} (hα : (12:ℝ)/31≤(α:ℝ)) (hα₁ : (α:ℝ)≤(1508:ℝ)/3825) :
+    Expdb.exponentSumGrowthExponent α≤(4+103*(α:ℝ))/128 :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_eleventhRow (α:=α) hα hα₁
+
+example : TaoTrudgianYang2025.ExponentPair (89/1282) (997/1282) :=
+  TaoTrudgianYang2025.exponentPair_taoTrudgianYang_firstNew
+
+example : TaoTrudgianYang2025.ExponentPair (652397/9713986) (7599781/9713986) :=
+  TaoTrudgianYang2025.exponentPair_taoTrudgianYang_secondNew
+
+example : TaoTrudgianYang2025.ExponentPair (391/4595) (3461/4595) :=
+  TaoTrudgianYang2025.exponentPair_bourgain_piece_two_input
+
+example : TaoTrudgianYang2025.ExponentPair (2779/38033) (58699/76066) :=
+  TaoTrudgianYang2025.exponentPair_bourgain_piece_three_input
+
+example {σ : ℝ}
+    (hσ : 14/15 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((TaoTrudgianYang2025.bourgainPieceTwo σ):EReal) :=
+  TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_piece_2 (σ:=σ) hσ hσ1
+
+example {σ : ℝ}
+    (hσ : 2841/3016 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((TaoTrudgianYang2025.bourgainPieceThree σ):EReal) :=
+  TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_piece_3 (σ:=σ) hσ hσ1
+
+example {σ : ℝ}
+    (hσ : 859/908 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((TaoTrudgianYang2025.bourgainPieceFour σ):EReal) :=
+  TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_piece_4 (σ:=σ) hσ hσ1
+
+example {σ : ℝ}
+    (hσ : 1625/1692 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((TaoTrudgianYang2025.bourgainPieceFive σ):EReal) :=
+  TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_piece_5 (σ:=σ) hσ hσ1
+
 end HuxleyPhysicalReferenceRegression
