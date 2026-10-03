@@ -1,5 +1,37 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
+## Endpoint-packet integration (2 October 2026)
+
+The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN
+and the acceptance count is still 38/42. The supplied packet provides new
+in-scope proof work, so the previous whole-goal impasse is superseded.
+
+The selected tail order now retains its STRICT product margin, allowing
+the auxiliary upper-eta boundary to be closed. The generic Montgomery
+helper's strict condition is unchanged. Six actual analytic consumers
+cover the full tail zeta input, the preceding tail general interval, the
+first finite endpoint's zeta/lower-general inputs, and the second finite
+endpoint's full general/lower-zeta inputs. The second general upper
+endpoint is included by actual subdivision, not continuity.
+
+PintzEndpointGram.alignedOffDiagonal retains the actual aligning phases;
+PintzEndpointGram.retained_gram proves the signed finite Gram inequality.
+Neither its proposed R^(3/2) estimate nor an endpoint density bound is
+assumed or claimed. Remaining analytic strips are recorded in Sources.
+
+All eight declarations are installed in the EXISTING LiteratureDensity
+module. Focused build 70782 and scratch check 90158 PASS with zero Lean
+diagnostics; 26 new exact regressions and eight explicit audits are included.
+Current totals: 8097 exact examples and 7343 explicit public audits.
+BOTH mandatory BATs PASS on this production snapshot: foundation 51856
+and paper 98372, exit 0, zero Lean diagnostics. Paper verification covers
+all 1452 package files, 10785 jobs, full and repeated semantic regression,
+and 21173 audited declarations (14928 target + 6240 native + five anchors).
+The two frozen-Python SyntaxWarnings remain visible. Exact logs and hashes
+are in Reproduction Manifest; verification finished on 3 October 2026.
+Root/runner coverage is unchanged. Preserve all counterexamples, frozen
+sources and authorized repairs. Recovery-record maintenance is skipped.
+
 ## Current acceptance status (2 October 2026)
 
 **38/42 complete.** EPZAE-13, 14, 29 and 38 are now DONE after exact
@@ -110,9 +142,12 @@ module, namespace LiteratureTable, with all 32 regressions and eight audits.
 Focused build 7205 PASSes (10549 jobs, zero diagnostics). The earlier focused
 run 68349 found a declaration-order error, repaired before the passing check.
 The snapshot has 8071 exact examples and 7335 explicit public audits.
-Root/runner coverage is unchanged. Foundation BAT 8379 PASSes (8857 jobs,
-14290 audits, zero Lean diagnostics). Paper BAT 61247 is running; the new
-BOTH-BAT checkpoint remains pending. Production files are frozen.
+Root/runner coverage is unchanged. BOTH mandatory BATs PASS on this snapshot:
+foundation 8379 (8857 jobs, 14290 audits) and paper 61247 (10785 jobs,
+all 1452 package files, full and repeated semantic regression, and 21160
+discovered audits = 14915 target + 6240 native + five anchors). Both exit 0
+with zero Lean diagnostics. The two historical frozen-Python SyntaxWarnings
+remain visible. The original printed table and endpoint exclusions are unchanged.
 EPZAE-30 remains OPEN at the printed Pintz lower endpoints. Remaining DAG:
 stronger endpoint input -> endpoint consumers -> exact total envelope ->
 EPZAE-39/40/41. No source-contract repair has been authorized for this gap.

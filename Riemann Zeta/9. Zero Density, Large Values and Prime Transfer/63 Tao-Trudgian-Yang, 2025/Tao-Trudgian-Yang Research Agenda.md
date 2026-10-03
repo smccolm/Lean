@@ -1,5 +1,153 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
+## Resumed author-proof trace (3 October 2026)
+
+The owner's workaround request resumes the original endpoint task.
+The source proof was traced beyond its cell statement: Pintz (3.1)
+requires a positive derivative margin, (3.2) uses it for decay, and the
+smoothed far Gram branch invokes it in (4.21)--(4.23). The printed table
+boundaries make that margin zero. The later ceiling/growth theorem and
+Matomaki--Teravainen reverse-density route were also checked; the tested
+growth choices are too weak, and the direct reverse route still requires
+density at the unresolved endpoint itself. Sources records the exact
+formulas, scopes and primary references. This is not a proof that no
+alternate argument exists, nor a counterexample to the density claims.
+The 13-page journal final remains uninspected; its 15-page author
+manuscript was read. No Lean/runner change or new build claim is made.
+EPZAE-30/39/40/41 remain OPEN, 38/42 complete; no dependency edge closes.
+
+## Endpoint-packet integration (2 October 2026)
+
+The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN
+and the acceptance count is still 38/42. The supplied packet provides new
+in-scope proof work, so the previous whole-goal impasse is superseded.
+
+The selected tail order now retains its STRICT product margin, allowing
+the auxiliary upper-eta boundary to be closed. The generic Montgomery
+helper's strict condition is unchanged. Six actual analytic consumers
+cover the full tail zeta input, the preceding tail general interval, the
+first finite endpoint's zeta/lower-general inputs, and the second finite
+endpoint's full general/lower-zeta inputs. The second general upper
+endpoint is included by actual subdivision, not continuity.
+
+PintzEndpointGram.alignedOffDiagonal retains the actual aligning phases;
+PintzEndpointGram.retained_gram proves the signed finite Gram inequality.
+Neither its proposed R^(3/2) estimate nor an endpoint density bound is
+assumed or claimed. Remaining analytic strips are recorded in Sources.
+
+All eight declarations are installed in the EXISTING LiteratureDensity
+module. Focused build 70782 and scratch check 90158 PASS with zero Lean
+diagnostics; 26 new exact regressions and eight explicit audits are included.
+Current totals: 8097 exact examples and 7343 explicit public audits.
+BOTH mandatory BATs PASS on this production snapshot: foundation 51856
+and paper 98372, exit 0, zero Lean diagnostics. Paper verification covers
+all 1452 package files, 10785 jobs, full and repeated semantic regression,
+and 21173 audited declarations (14928 target + 6240 native + five anchors).
+The two frozen-Python SyntaxWarnings remain visible. Exact logs and hashes
+are in Reproduction Manifest; verification finished on 3 October 2026.
+Root/runner coverage is unchanged. Preserve all counterexamples, frozen
+sources and authorized repairs. Recovery-record maintenance is skipped.
+
+## Powered-energy route check and current impasse (3 October 2026)
+
+Check 31293 passes 14 declarations, 27 examples and 14 explicit audits
+in the EXISTING alternate-route scratch file: exit 0, zero Lean diagnostics.
+Four new scalar theorems show that rho=2/21, energy=4/21 and s=44/21
+remain feasible for the checked Heath--Brown energy/double-zeta and
+Gram/CS inequalities, ALL integer powers of the nine-branch consequence,
+and ALL powered Jutila parameters throughout the residual second strip.
+Yet rho exceeds 3*tau/170 there (gap 2/1785 at tau=16/3).
+This is not an actual region witness or a density counterexample.
+It retires further optimization of those same inputs as a closing route.
+The distinct Pintz--Revesz displayed growth-estimator choice is also too
+weak: its 4*lambda_zeta(2*eta) term is 26/19 at eta=1/42, versus 63/85.
+See Sources for exact hypotheses, primary source and limitations.
+
+The packet unblocked and completed its auxiliary repair, but subsequent
+route checks leave the same specific missing far-correlation/positive-LV
+estimate. No identified route using the checked inputs closes the three
+residual strips. A genuinely stronger analytic input or a closed-endpoint
+source argument is needed; no contract weakening is authorized.
+The original whole-proof goal is incomplete, not redefined: EPZAE-30/39/40/41
+remain OPEN, 38/42 complete. Both BAT-verified production snapshots and
+all counterexamples remain unchanged. No recovery-record maintenance.
+
+## Moment-route check (3 October 2026)
+
+Check 37937 passes the existing alternate-route scratch file: ten named
+declarations, 18 examples, ten audits, exit 0, zero Lean diagnostics.
+Three new scalar theorems rule out the direct classical moment-table
+application (fixed loss >= 229/1190) and the unchanged integer
+mean-value/pointwise majorant (loss >= 1537/3570) on the second Pintz strip.
+The latter includes every direct integer Heath--Brown pair and the
+Bellotti--Yang Section 4 relaxed pointwise exponent; see Sources for
+exact domains and citations. These are not density counterexamples or
+proofs of an endpoint, and do not rule out genuinely sharper moments.
+No production module was added. Both BAT-verified production sources
+remain unchanged; EPZAE-30/39/40/41 remain OPEN, 38/42 complete.
+Continue at the actual phase-sensitive far estimate or a genuinely
+stronger analytic input, not another wrapper around these majorants.
+
+## EPZAE-30: alternate-route barriers and proved fallbacks (2 October 2026)
+
+Scratch check 4723 PASSes seven declarations, 11 exact regressions and
+seven dependency audits, with zero Lean diagnostics.
+Source: `E:/Lean/.scratch/epzae-pintz-alternate-route-barriers-20261003.lean`;
+SHA-256 `25f2aaf9804fe06207f897d9833e16703aeecc407cf333b48c512816ba81cdba`.
+Log: `E:/Lean/.scratch/epzae-pintz-alternate-route-check-20261003-0415.log`;
+SHA-256 `253cb51bc74355b7c85ac109c9cd4bf78979014b7cff6b6dc56fa1113215d51e`.
+These are checked scratch results, NOT additional installed public contracts.
+
+`heathBrown_pair_plateau_all_orders` uses the existing ordered secants
+to prove the same plateau obstruction for EVERY direct integer Heath--Brown
+exponent pair, not just a finite sample.
+`twelfth_comparison_low_cardinality_feasible` and
+`twelfth_first_endpoint_scalar_obstruction` show that optimizing the
+subdivision variable in the retained-twelfth comparison alone cannot
+exclude the obstructing cardinality: its first two branches already
+permit it. Neither statement asserts an actual pattern or zeta zero exists.
+
+The three `proved_*_endpoint_fallback` theorems prove actual density bounds:
+
+| Point | Printed value still OPEN | Proved fallback |
+| --- | --- | --- |
+| sigma = 39/40 | 16/21 | 1424/1649 |
+| sigma = 41/42 | 63/85 | 28/37 |
+| sigma = 1-1/(2*n*(n-1)), n >= 6 | 3/(n-1) | 3*n/(n^2-2*n+2) |
+
+The first fallback is the existing Bourgain row; the others use the
+preceding Pintz cell's proved closed upper endpoint.
+`tail_fallback_strictly_weaker` proves the strict comparison for every
+n >= 6; exact regressions verify the two finite comparisons as well.
+The n=6 specialization is A(59/60) <= 9/13, not the printed 3/5.
+Consequently these fallbacks do NOT discharge the unchanged table contract.
+The initial scratch run 58852 needed rational normalization of the equivalent
+first fallback 172304/199529; runs 25204 and 4723 repaired and verified it.
+
+A separate exact-rational DISCOVERY search used 20 rounds of A/B/C and
+admissible D, with convex-hull clipping to both D-process side conditions,
+the four new public pairs, the actual Robert--Sargos pair (1/13,10/13),
+and Heath--Brown orders 3 through 60. Its final hull had 468 vertices.
+At tau=15/4 and 63/16, the best affine values were respectively
+66203/69560 and 266147/278240, both greater than the required 19/20.
+At tau=16/3 and 340/63, they were 1661/1701 and 4985/5103,
+both greater than the required 41/42. This finite search found no candidate;
+it is NOT kernel evidence or an impossibility theorem for all compositions.
+
+Pintz's separate [growth-based proof](https://arxiv.org/html/2310.04544v1),
+Corollary 2, was also checked: its explicit Hardy--Littlewood choices give
+minimum values 1 and 84/85 at the two finite points, again too weak.
+The native strict-cell route, all raw derivative orders, direct
+Heath--Brown pairs, the twelfth comparison and the expanded process search
+therefore do not currently supply the missing exact endpoint input.
+
+Owner direction was requested without pausing verification: retain the
+printed endpoint requirements as OPEN, or authorize a documented endpoint
+repair using proved bounds. No reply authorizing repair has been received,
+so the original contract is unchanged. Preserve all frozen source statements
+and existing counterexamples. The table values have NOT been disproved.
+EPZAE-30/39/40/41 remain OPEN; the whole goal remains active and incomplete.
+
 ## EPZAE-30: literal table and endpoint isolation (2 October 2026)
 
 Scratch check 68267 PASSes eight declarations, 32 exact examples and eight
@@ -56,7 +204,9 @@ repairing declaration order exposed by run 68349. All 32 regressions and
 eight audits are installed: totals 8071 and 7335. No new support module,
 runner exclusion, resource increase or recovery-record edit was introduced.
 Foundation BAT 8379 PASSes (8857 jobs, 14290 audits, zero Lean diagnostics).
-Paper BAT 61247 is running; BOTH-BAT verification remains pending.
+Paper BAT 61247 also PASSes (10785 jobs, all 1452 files, full and repeated
+semantic regression, 21160 discovered dependency audits, zero Lean diagnostics).
+Both runners exit 0; the two frozen-Python SyntaxWarnings remain visible.
 
 The architecture's stale BDI node was synchronized with the already-proved
 `bourgain_large_values` and `bourgain_largeValueBound` in
@@ -321,6 +471,28 @@ EPZAE-30 remains OPEN; aggregate 38/42. All frozen statements,
 counterexamples and both owner-authorized source repairs are preserved.
 Recovery-record maintenance remains permanently skipped.
 
+### Focused endpoint research target
+
+The exact residual targets, including all left endpoints, are:
+
+| Endpoint | Remaining estimate | Height interval |
+| --- | --- | --- |
+| 39/40 | LV <= 2*tau/105 | [17/5,63/16] |
+| 41/42 | LV_zeta <= 3*tau/170 | [37/7,340/63) |
+| 1-1/(2*n*(n-1)), n >= 6 | LV <= 3*tau/(2*n*(n-1)^2) | [n-2+2/n,n-1] |
+
+The width-1/9 zeta strip is the first target; positive cardinality growth
+is allowed. The six complementary analytic consumers and the actual
+signed Gram entry are checked. Near frequencies must remain controlled;
+the proposed far-correlation R^(3/2) estimate is not proved or assumed.
+Scratch 82597 now reuses existing sharp near-row/harmonic machinery to
+control and uniformly absorb the near contribution at cutoff N^(7/5).
+Its four declarations, nine examples and four audits pass with zero
+diagnostics; these are research results, not new installed contracts.
+The explicit far sum remains unbounded at the required strength.
+Sources records packet provenance, exact public contracts and independent
+Kerr/Smith source-hypothesis checks; none proves the remaining strip.
+
 ## Current acceptance status (2 October 2026)
 
 **38/42 complete.** EPZAE-13, 14, 29 and 38 are now DONE after exact
@@ -431,9 +603,12 @@ module, namespace LiteratureTable, with all 32 regressions and eight audits.
 Focused build 7205 PASSes (10549 jobs, zero diagnostics). The earlier focused
 run 68349 found a declaration-order error, repaired before the passing check.
 The snapshot has 8071 exact examples and 7335 explicit public audits.
-Root/runner coverage is unchanged. Foundation BAT 8379 PASSes (8857 jobs,
-14290 audits, zero Lean diagnostics). Paper BAT 61247 is running; the new
-BOTH-BAT checkpoint remains pending. Production files are frozen.
+Root/runner coverage is unchanged. BOTH mandatory BATs PASS on this snapshot:
+foundation 8379 (8857 jobs, 14290 audits) and paper 61247 (10785 jobs,
+all 1452 package files, full and repeated semantic regression, and 21160
+discovered audits = 14915 target + 6240 native + five anchors). Both exit 0
+with zero Lean diagnostics. The two historical frozen-Python SyntaxWarnings
+remain visible. The original printed table and endpoint exclusions are unchanged.
 EPZAE-30 remains OPEN at the printed Pintz lower endpoints. Remaining DAG:
 stronger endpoint input -> endpoint consumers -> exact total envelope ->
 EPZAE-39/40/41. No source-contract repair has been authorized for this gap.

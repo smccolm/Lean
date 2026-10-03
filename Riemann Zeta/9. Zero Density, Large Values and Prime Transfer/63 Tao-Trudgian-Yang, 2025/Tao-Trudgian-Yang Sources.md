@@ -1,5 +1,383 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
+## Author-proof trace after resumption (3 October 2026)
+
+Owner-supplied copy received and read in full (all 15 pages):
+`Sources/Density theorems for Riemann’s zeta-function near the line Re s = 1.pdf`.
+Its SHA-256 is
+`c82f1323ed4cb29ae6976ff3335770c7afcfc9b70fc2673da8f1d8469449410d`,
+identical to the already present #74 source
+`Sources/pintz-density-near-one-2023.pdf`. Both files are preserved.
+The supplied PDF's creation metadata is 11 March 2023; byte identity,
+not its filename or page count alone, identifies it as the same manuscript.
+Its equations (2.4) on p. 4 and (3.1) on p. 6 retain the strict margins;
+the proof through (4.25) on p. 13 and references on pp. 14--15 were reread.
+This resolves the identity of the supplied file, not the endpoint estimate
+or the contents of a different journal-version file. The earlier reply
+should have explicitly identified the manuscript already held locally.
+
+This is a source-level investigation, not a new Lean theorem or an endpoint
+repair. The original contracts remain fixed and EPZAE-30/39/40/41 remain OPEN.
+
+The [2025 paper, Table 2](https://arxiv.org/html/2501.16779v1), attributes
+these rows to Pintz's Theorem 1. The earlier
+[Trudgian--Yang paper, Table 2, printed p. 11](https://arxiv.org/pdf/2306.05599)
+also records the closed lower endpoints and cites Pintz; it is not an
+independent proof of those endpoints. The source chain therefore needs the
+analytic endpoint argument, not just a second citation of the same table.
+
+In the accessible [Pintz author manuscript](https://real.mtak.hu/164181/1/PJ_Density230311-3.pdf),
+the proof is a smoothed Moebius zero detector, dyadic selection and integer
+powering, followed by a smoothed Halasz Gram estimate. The strictness occurs
+inside this proof, not only in the definition of the integer cells:
+
+| Requested boundary | Critical source choice | Lost strict margin |
+| --- | --- | --- |
+| sigma=39/40 | r=ell=5, xi=2*eta=1/20 | xi=1/(r*(r-1)) |
+| sigma=41/42 | r=k=7, xi=eta=1/42 | xi=1/(r*(r-1)) |
+| sigma=1-1/(2*n*(n-1)) | r=ell=n, xi=2*eta | xi=1/(r*(r-1)) |
+
+Equation (3.1), printed p. 6, requires
+`xi <= 1/(r*(r-1)) - 6*epsilon`, with epsilon positive. At each displayed
+boundary this is impossible. Before that restriction is used, the middle
+Heath--Brown contribution has exponent `xi - 1/(r*(r-1)) + 3*epsilon`;
+it is positive at equality, not the negative exponent used in (3.2).
+The near-frequency contour estimate (4.20) is a separate branch.
+The far branch explicitly invokes Corollary 3 in (4.21); the small-n
+smoothing factor in (4.22)--(4.23) does not supply an endpoint replacement
+for blocks at the main scale. Thus retaining the smoothing alone does not
+repair the lost margin. This is a limitation of this argument, NOT a
+counterexample to the endpoint density statements.
+
+Two further sourced alternatives were checked:
+
+- [Pintz, *Remark on a general zero density theorem*, Theorem 1.2](https://www.researchgate.net/publication/375980496_Remark_on_a_General_Zero_Density_Theorem)
+  gives a genuinely different ceiling-dependent formula in terms of
+  growth estimators lambda(eta) and lambda(2*eta). With the source-valid
+  Heath--Brown bound mu(1-x) <= x^(3/2)/2 and the contour choice x=3*h,
+  lambda(h)=3*sqrt(3*h)/4 and the ceiling is 2. The resulting bound at
+  eta=1/42 is `9/(4*sqrt(7))`, larger than `63/85`; using Heath--Brown's
+  sharper coefficient `8*sqrt(15)/63` gives `4*sqrt(15)/(7*sqrt(7))`,
+  still larger. These are checks of these particular input choices,
+  not lower bounds for actual density or an exclusion of every estimator.
+  [Pintz's 2024 Dedekind note, Theorem 4.1 and Remark 4.4](https://real.mtak.hu/233624/1/article-10.1556-314.2024.00009.pdf)
+  does not supply the missing Riemann endpoint theorem: the new theorem
+  assumes field degree at least 2, and its degree-1 remark cites the
+  original near-one result.
+- [Matomaki--Teravainen, Theorem 1.2](https://arxiv.org/pdf/2403.13157)
+  reverses density into zeta-polynomial large values. Its maximum ranges
+  over alpha >= 1-nu-epsilon and includes alpha=1-nu. At nu=1/42 that
+  term is precisely the unresolved density input at sigma=41/42.
+  Feeding in the already proved `28/37` fallback supplies an exponent
+  contribution `2*tau/111`, exceeding the required `3*tau/170` by
+  `7*tau/18870`. The theorem as stated therefore does not close the strip
+  by feeding that fallback back into our transfer. Strict-right density
+  estimates do not remove the alpha=41/42 term.
+
+The final journal article is 13 pages; the accessible/local manuscript is
+15 pages. The publisher's normal download route did not provide the final
+text, and the author repository still supplies the March manuscript.
+The final text has NOT been inspected and may differ. A copy was requested
+non-blockingly; no claim is made that it contains, or lacks, a repair.
+No author was contacted, no restricted access was bypassed, and no new
+analytic assumption was added. The actual far-correlation/positive-LV
+obligation and existing BAT-verified production snapshot are unchanged.
+
+## Endpoint-packet integration (2 October 2026)
+
+The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN
+and the acceptance count is still 38/42. The supplied packet provides new
+in-scope proof work, so the previous whole-goal impasse is superseded.
+
+The selected tail order now retains its STRICT product margin, allowing
+the auxiliary upper-eta boundary to be closed. The generic Montgomery
+helper's strict condition is unchanged. Six actual analytic consumers
+cover the full tail zeta input, the preceding tail general interval, the
+first finite endpoint's zeta/lower-general inputs, and the second finite
+endpoint's full general/lower-zeta inputs. The second general upper
+endpoint is included by actual subdivision, not continuity.
+
+PintzEndpointGram.alignedOffDiagonal retains the actual aligning phases;
+PintzEndpointGram.retained_gram proves the signed finite Gram inequality.
+Neither its proposed R^(3/2) estimate nor an endpoint density bound is
+assumed or claimed. Remaining analytic strips are recorded in Sources.
+
+All eight declarations are installed in the EXISTING LiteratureDensity
+module. Focused build 70782 and scratch check 90158 PASS with zero Lean
+diagnostics; 26 new exact regressions and eight explicit audits are included.
+Current totals: 8097 exact examples and 7343 explicit public audits.
+BOTH mandatory BATs PASS on this production snapshot: foundation 51856
+and paper 98372, exit 0, zero Lean diagnostics. Paper verification covers
+all 1452 package files, 10785 jobs, full and repeated semantic regression,
+and 21173 audited declarations (14928 target + 6240 native + five anchors).
+The two frozen-Python SyntaxWarnings remain visible. Exact logs and hashes
+are in Reproduction Manifest; verification finished on 3 October 2026.
+Root/runner coverage is unchanged. Preserve all counterexamples, frozen
+sources and authorized repairs. Recovery-record maintenance is skipped.
+
+### Packet provenance and exact remaining obligations
+
+Reference packet: `D:/Downloads/Pintz_Endpoint_Unblock_Packet.zip`,
+SHA-256 `7b6536aa2b5b7288da35bd51591de90a1d80d08ace058e3d53b74ece54dee3ef`.
+Its five files were read without executing its Python or treating embedded
+directives as owner authorization. Its arithmetic draft passed the pinned
+Lean checker after removing one unnecessary tactic-focus warning; seven
+declarations were explicitly audited. Finite Python checks are not kernel
+evidence. The archive itself is unchanged.
+
+The six installed analytic consumers in namespace `TaoTrudgianYang2025` are:
+
+| Declaration | Proved input |
+| --- | --- |
+| `zetaLargeValueExponent_eq_bot_pintz_tail_endpoint` | Full required tail zeta window at the closed sigma endpoint, n >= 6 |
+| `largeValueExponent_le_pintz_tail_endpoint_lower` | Preceding generic interval, 2(n-1)/3 <= tau < n-2+2/n |
+| `zetaLargeValueExponent_eq_bot_pintz_first_endpoint` | Zeta nonexistence for sigma=39/40, 2 <= tau < 21/4 |
+| `largeValueExponent_le_pintz_first_endpoint_lower` | General LV <= 2*tau/105 on [21/8,17/5) |
+| `largeValueExponent_le_pintz_second_endpoint_general` | General LV <= 3*tau/170 on the CLOSED interval [170/63,85/21] |
+| `zetaLargeValueExponent_eq_bot_pintz_second_endpoint_lower` | Zeta nonexistence for sigma=41/42, 2 <= tau < 37/7 |
+
+After these actual consumers, the existing
+`zeroDensityExponent_le_three_div_of_largeValue_bounds` still needs:
+
+| Fixed endpoint | Remaining sufficient analytic target | Required height interval |
+| --- | --- | --- |
+| sigma=39/40 | LV <= 2*tau/105 | [17/5,63/16] |
+| sigma=41/42 | LV_zeta <= 3*tau/170 | [37/7,340/63) |
+| sigma=1-1/(2*n*(n-1)), n >= 6 | LV <= 3*tau/(2*n*(n-1)^2) | [n-2+2/n,n-1] |
+
+Every left boundary is INCLUDED. The second strip has width 1/9.
+These are sufficient targets for the chosen transfer, not a claim that
+every possible endpoint proof must use this route.
+
+The existing-module definitions `PintzEndpointGram.alignedOffDiagonal`
+and `PintzEndpointGram.retained_gram` retain the actual coefficients,
+aligning phases, ordered off-diagonal pairs and source scales. They prove
+R^2*V^2 <= 4*N^2*R + 2*N*Re(Q). The candidate uniform estimate
+Re(Q) <= C*(N*R + N^(2*sigma-1+rho/2+u)*R^(3/2))
+is still UNPROVED. Neither this estimate nor a density conclusion has
+been inserted as a new assumption.
+
+Short remaining DAG: actual signed Gram entry INSTALLED -> near-frequency
+control/absorption SCRATCH CHECKED -> suitable far-correlation/positive-LV
+estimate OPEN -> three displayed strips OPEN -> exact density endpoints
+OPEN -> total table and EPZAE-39/40/41 OPEN.
+
+### Powered-energy route check (3 October 2026)
+
+Check 31293 passes the existing alternate-route scratch file with 14 named
+declarations, 27 examples and 14 explicit dependency audits, exit 0 and
+zero Lean diagnostics. Its SHA-256 is
+`19038976639224fa0615b8f6b45a38a7f5596b0a363ea7c645444a94ce3e2a20`.
+Four new theorems use the ACTUAL production definitions of
+`heathBrownEnergyRHS`, `heathBrownNineBranch` and
+`jutilaLargeValueExponent`; no replacement analytic object is introduced.
+
+At sigma=41/42 throughout 37/7 <= tau < 340/63, the scalar tuple
+rho=2/21, energy=4/21, double-zeta exponent=44/21 satisfies:
+
+- every positive-integer-powered Heath--Brown energy inequality;
+- all independent positive integer powers of its nine-branch consequence;
+- every positive-integer-powered Jutila cardinality inequality, for EVERY
+  positive integer Jutila parameter;
+- the elementary cardinality/energy/double-zeta bounds, the unpowered
+  Heath--Brown double-zeta majorant, and the absolute Gram/CS exponent
+  inequality. The simplified small-height two-branch bound also permits it.
+
+Nevertheless rho > 3*tau/170 throughout that strip. At tau=16/3 the
+target is 8/85 and the gap is exactly 2/1785. The general energy lemma
+works for all sigma <= 1 and real q >= 1: energy=8*(1-sigma),
+rho=4*(1-sigma) already satisfy its diagonal terms. Thus merely adding
+more powers or reoptimizing THESE inequalities cannot give the endpoint.
+This is NOT a witness in an actual energy region, a counterexample to
+the density claim, or an exclusion of a stronger phase-sensitive theorem.
+In particular, no fifth-coordinate powering assertion is restored.
+
+A distinct source route was checked in
+[Pintz--Revesz, arXiv:2407.12746v1](https://arxiv.org/pdf/2407.12746),
+Lemma 1 and equations (21)--(24). Its relaxed estimator-comparison
+condition does not remove the `4*lambda_zeta(2*eta)` contribution.
+For its displayed Bourgain choice, eta=1/42 makes that contribution
+26/19, strictly ABOVE 63/85; this arithmetic is also kernel-checked.
+This rejects that displayed choice, not every possible improved growth
+estimator. The [final Pintz journal page](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/208/1/115159/density-theorems-for-riemann-s-zeta-function-near-the-line-rm-re-s-1)
+still identifies institutional access for its PDF. No final-text proof
+or replacement endpoint estimate was obtained from this source check.
+
+The packet's auxiliary repair and actual analytic consumers remain valid.
+The repeated technical impasse is now the missing uniform far-correlation
+or positive-LV estimate on the three displayed strips, not source access
+alone. Existing derivative/pair, moment, twelfth-comparison and the newly
+checked powered-energy routes do not supply it in their documented scopes.
+No identified closing route remains with the checked inputs. Resumption
+needs a genuinely stronger analytic input or a source argument covering
+the closed endpoints; no weaker contract is authorized. EPZAE-30/39/40/41
+stay OPEN, 38/42 complete. No production module or runner changed.
+
+### Checked near-frequency reduction (3 October 2026)
+
+Scratch check 82597 passes four named declarations, nine exact regressions
+and four dependency audits, with zero Lean diagnostics and only standard
+logical axioms. Source: `E:/Lean/.scratch/epzae-pintz-signed-gram-20261003.lean`;
+SHA-256 `efaf397bf7f528f1e6f59145c0abd71855c62601a06ec4be2e3aa4839932d354`.
+These are retained research results, NOT additional installed public contracts.
+
+`PintzSignedGramScratch.retained_gram_near_control` consumes the actual
+installed Gram theorem and the existing sharp near-row/harmonic bound.
+It splits all ordered pairs at a cutoff L, without discarding small gaps.
+`retained_gram_far_reduction` then reuses the existing asymptotic absorption:
+for every epsilon > 0, sufficiently large N and V >= N^(193/200),
+
+    R^2*V^2 <= R*N^(2+epsilon) + 4*N*Re(Qfar),
+
+where Qfar is the actual phase-weighted sum over |u-t| > N^(7/5).
+The amplitude requirement follows from sigma >= 39/40 and loss delta <= 1/100;
+an exact regression checks that implication and another consumes an actual
+ZetaLargeValuePattern. No analytic bound on Qfar is assumed or proved.
+Thus the near-frequency branch is available without a new module family;
+the missing phase-sensitive far estimate remains the terminal obligation.
+
+### Independent source-route checks
+
+[Kerr, arXiv:1909.12075, Theorems 2, 3 and 5](https://arxiv.org/pdf/1909.12075)
+require N >= T^(2/3). This does not apply directly to T=N^tau with
+tau >= 37/7. Integer powering to meet that length condition requires at
+least the fourth power; its N^2/V^2 contribution becomes N^(8*(1-sigma)),
+already larger than the requested exponent in the second strip.
+Theorem 4 instead assumes R <= min(N,N^4/T^2), incompatible with a
+nonempty pattern when tau > 2. These are hypothesis/majorant mismatches
+for these applications, not counterexamples to the endpoint claim.
+
+As an inference from Kerr's Theorem 1, plain entrywise Cauchy--Schwarz
+gives contributions sqrt(N)*R^2, N*R^(3/2), and
+sqrt(N)*T^(1/4)*R^(13/8). The middle term already loses too much:
+2*(41/42)-1+(3*tau/170)/2 < 1 throughout tau < 340/63.
+Scratch regressions check this exact comparison and the additional
+height-term loss at tau=16/3. This rules out that direct application,
+NOT a sharper argument retaining phases or a density endpoint itself.
+
+[Smith, arXiv:2212.04421v3, Theorems 1 and 2](https://arxiv.org/pdf/2212.04421)
+characterize moment transitions under a subconvexity hypothesis; they
+do not furnish the quantitative high-moment bound needed by the local
+`zetaLargeValueExponent_le_of_realMoment` consumer. No such bound has
+been inferred from the transition statement.
+
+The [current ANTEDB blueprint, Theorem 11.35](https://teorth.github.io/expdb/blueprint/zero-density-chapter.html)
+also retains the strict upper-eta conditions in both integer cells.
+Its proof uses strict beta inequalities; it does not supply the missing
+positive-cardinality endpoint estimate. The frozen source remains the
+public-contract authority, not this later online rendering.
+
+The [Pintz journal landing page](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/208/1/115159/density-theorems-for-riemann-s-zeta-function-near-the-line-rm-re-s-1)
+requires institutional access for the final full text. The download did
+not supply that text; only the previously inspected author manuscript
+is being used for the strict-cell diagnosis. No final-version endpoint
+repair is claimed.
+
+## Checked moment-route limitations (3 October 2026)
+
+The existing alternate-route scratch file now passes check 37937: ten
+named declarations, 18 exact examples and ten explicit axiom audits,
+exit 0, zero Lean diagnostics, only standard logical axioms.
+SHA-256: `799ff277be92acadccb952f20e939b9566950456c333bf9022471acaf8dee01c`.
+This supersedes the older scratch-file hash below, not its mathematical results.
+
+Three additional scalar theorems avoid a new moment-module campaign:
+
+- `classical_moment_table_weight_ceiling` proves p*(1-c) <= 5 for all
+  eight branches of [ANTEDB's classical moment table, Lemma 9.9](https://teorth.github.io/expdb/blueprint/zeta-moment-chapter.html).
+  The seventh upper cutoff is enlarged to 57/62. This proves an algebraic
+  ceiling for these supplied bounds, NOT an upper bound for actual moments.
+- `classical_moment_table_second_strip_gap` proves that the resulting
+  majorant tau-p*(41/42-c) exceeds 3*tau/170 by at least 229/1190
+  throughout tau >= 37/7. Thus the existing real-moment transfer cannot
+  close the strip using those table entries.
+- `pointwise_power_moment_second_strip_gap` checks every integer power.
+  With beta >= 41/42, the mean-value majorant for k <= 5 and the
+  pointwise-interpolated majorant
+  tau+2*(k-5)*beta+5-2*k*(41/42) for k > 5 both lose at least 1537/3570.
+  A regression obtains beta >= 41/42 from the already-proved all-order
+  Heath--Brown pair plateau.
+
+[Bellotti--Yang, arXiv:2303.05028v2, Section 4](https://arxiv.org/pdf/2303.05028)
+uses this mean-value/pointwise decomposition, with floor(tau)=5 in the
+required strip. Another exact regression checks that its relaxed pointwise
+exponent 1-(1-3/tau)/tau^2 is also at least 41/42 throughout the strip.
+The asymptotic moment corollary does not remove this finite-scale
+majorant obstruction. This does NOT exclude a sharper moment argument.
+The separate Lemma 3.2 was inspected; exploratory numerical optimization
+is discovery only, not a proved exclusion of that whole parameter family.
+
+[Bellotti, arXiv:2508.02041v1, Theorem 1.1](https://arxiv.org/pdf/2508.02041)
+requires a strip shrinking toward one with height, with
+K(T) << (log log T)^alpha, alpha < 1. Its stated domain eventually
+excludes each fixed sigma < 1 here, so it cannot directly replace a
+fixed-endpoint density theorem. No unsupported uniformity is inferred.
+
+Production code and both verified BAT snapshots are unchanged. These
+route limitations do not prove or disprove a density endpoint. The
+phase-sensitive far-correlation/positive-LV obligation remains OPEN;
+EPZAE-30/39/40/41 and the 38/42 count are unchanged.
+
+## EPZAE-30: alternate-route barriers and proved fallbacks (2 October 2026)
+
+Scratch check 4723 PASSes seven declarations, 11 exact regressions and
+seven dependency audits, with zero Lean diagnostics.
+Source: `E:/Lean/.scratch/epzae-pintz-alternate-route-barriers-20261003.lean`;
+SHA-256 `25f2aaf9804fe06207f897d9833e16703aeecc407cf333b48c512816ba81cdba`.
+Log: `E:/Lean/.scratch/epzae-pintz-alternate-route-check-20261003-0415.log`;
+SHA-256 `253cb51bc74355b7c85ac109c9cd4bf78979014b7cff6b6dc56fa1113215d51e`.
+These are checked scratch results, NOT additional installed public contracts.
+
+`heathBrown_pair_plateau_all_orders` uses the existing ordered secants
+to prove the same plateau obstruction for EVERY direct integer Heath--Brown
+exponent pair, not just a finite sample.
+`twelfth_comparison_low_cardinality_feasible` and
+`twelfth_first_endpoint_scalar_obstruction` show that optimizing the
+subdivision variable in the retained-twelfth comparison alone cannot
+exclude the obstructing cardinality: its first two branches already
+permit it. Neither statement asserts an actual pattern or zeta zero exists.
+
+The three `proved_*_endpoint_fallback` theorems prove actual density bounds:
+
+| Point | Printed value still OPEN | Proved fallback |
+| --- | --- | --- |
+| sigma = 39/40 | 16/21 | 1424/1649 |
+| sigma = 41/42 | 63/85 | 28/37 |
+| sigma = 1-1/(2*n*(n-1)), n >= 6 | 3/(n-1) | 3*n/(n^2-2*n+2) |
+
+The first fallback is the existing Bourgain row; the others use the
+preceding Pintz cell's proved closed upper endpoint.
+`tail_fallback_strictly_weaker` proves the strict comparison for every
+n >= 6; exact regressions verify the two finite comparisons as well.
+The n=6 specialization is A(59/60) <= 9/13, not the printed 3/5.
+Consequently these fallbacks do NOT discharge the unchanged table contract.
+The initial scratch run 58852 needed rational normalization of the equivalent
+first fallback 172304/199529; runs 25204 and 4723 repaired and verified it.
+
+A separate exact-rational DISCOVERY search used 20 rounds of A/B/C and
+admissible D, with convex-hull clipping to both D-process side conditions,
+the four new public pairs, the actual Robert--Sargos pair (1/13,10/13),
+and Heath--Brown orders 3 through 60. Its final hull had 468 vertices.
+At tau=15/4 and 63/16, the best affine values were respectively
+66203/69560 and 266147/278240, both greater than the required 19/20.
+At tau=16/3 and 340/63, they were 1661/1701 and 4985/5103,
+both greater than the required 41/42. This finite search found no candidate;
+it is NOT kernel evidence or an impossibility theorem for all compositions.
+
+Pintz's separate [growth-based proof](https://arxiv.org/html/2310.04544v1),
+Corollary 2, was also checked: its explicit Hardy--Littlewood choices give
+minimum values 1 and 84/85 at the two finite points, again too weak.
+The native strict-cell route, all raw derivative orders, direct
+Heath--Brown pairs, the twelfth comparison and the expanded process search
+therefore do not currently supply the missing exact endpoint input.
+
+Owner direction was requested without pausing verification: retain the
+printed endpoint requirements as OPEN, or authorize a documented endpoint
+repair using proved bounds. No reply authorizing repair has been received,
+so the original contract is unchanged. Preserve all frozen source statements
+and existing counterexamples. The table values have NOT been disproved.
+EPZAE-30/39/40/41 remain OPEN; the whole goal remains active and incomplete.
+
 ## EPZAE-30: literal table and endpoint isolation (2 October 2026)
 
 Scratch check 68267 PASSes eight declarations, 32 exact examples and eight
@@ -56,7 +434,9 @@ repairing declaration order exposed by run 68349. All 32 regressions and
 eight audits are installed: totals 8071 and 7335. No new support module,
 runner exclusion, resource increase or recovery-record edit was introduced.
 Foundation BAT 8379 PASSes (8857 jobs, 14290 audits, zero Lean diagnostics).
-Paper BAT 61247 is running; BOTH-BAT verification remains pending.
+Paper BAT 61247 also PASSes (10785 jobs, all 1452 files, full and repeated
+semantic regression, 21160 discovered dependency audits, zero Lean diagnostics).
+Both runners exit 0; the two frozen-Python SyntaxWarnings remain visible.
 
 The architecture's stale BDI node was synchronized with the already-proved
 `bourgain_large_values` and `bourgain_largeValueBound` in
@@ -431,9 +811,12 @@ module, namespace LiteratureTable, with all 32 regressions and eight audits.
 Focused build 7205 PASSes (10549 jobs, zero diagnostics). The earlier focused
 run 68349 found a declaration-order error, repaired before the passing check.
 The snapshot has 8071 exact examples and 7335 explicit public audits.
-Root/runner coverage is unchanged. Foundation BAT 8379 PASSes (8857 jobs,
-14290 audits, zero Lean diagnostics). Paper BAT 61247 is running; the new
-BOTH-BAT checkpoint remains pending. Production files are frozen.
+Root/runner coverage is unchanged. BOTH mandatory BATs PASS on this snapshot:
+foundation 8379 (8857 jobs, 14290 audits) and paper 61247 (10785 jobs,
+all 1452 package files, full and repeated semantic regression, and 21160
+discovered audits = 14915 target + 6240 native + five anchors). Both exit 0
+with zero Lean diagnostics. The two historical frozen-Python SyntaxWarnings
+remain visible. The original printed table and endpoint exclusions are unchanged.
 EPZAE-30 remains OPEN at the printed Pintz lower endpoints. Remaining DAG:
 stronger endpoint input -> endpoint consumers -> exact total envelope ->
 EPZAE-39/40/41. No source-contract repair has been authorized for this gap.

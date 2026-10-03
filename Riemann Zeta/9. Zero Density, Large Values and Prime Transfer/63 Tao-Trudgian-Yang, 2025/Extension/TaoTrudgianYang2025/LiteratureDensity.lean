@@ -1449,7 +1449,7 @@ private theorem pintz_heathBrown_cell_zeta {n : ℕ} (hn : 4 ≤ n)
 
 private theorem pintz_exists_pintz_tail_zeta_order {n : ℕ} (hn : 6 ≤ n)
     {η : ℝ} (hη : 0 ≤ η)
-    (hupper : 2*η*(n:ℝ)*((n:ℝ)-1) < 1)
+    (hupper : 2*η*(n:ℝ)*((n:ℝ)-1) ≤ 1)
     (hlower : 1 ≤ 2*η*(n:ℝ)*((n:ℝ)+1)) :
     ∃ m : ℕ, 4 ≤ m ∧ η*(m:ℝ)*((m:ℝ)-1) < 1 ∧
       4*((n:ℝ)*(1-2*((n:ℝ)-1)*η))/3 ≤
@@ -1460,20 +1460,26 @@ private theorem pintz_exists_pintz_tail_zeta_order {n : ℕ} (hn : 6 ≤ n)
   have hmhi : 3*m ≤ 4*n+1 := by dsimp only [m]; omega
   have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
   have hmr : (4:ℝ) ≤ m := by exact_mod_cast hm
-  have hmlor : 4*(n:ℝ) ≤ 3*(m:ℝ)+1 := by exact_mod_cast hmlo
   have hmhir : 3*(m:ℝ) ≤ 4*(n:ℝ)+1 := by exact_mod_cast hmhi
-  have hprod : (m:ℝ)*((m:ℝ)-1) ≤ 2*(n:ℝ)*((n:ℝ)-1) := by
+  have hprod : (m:ℝ)*((m:ℝ)-1) < 2*(n:ℝ)*((n:ℝ)-1) := by
     by_cases hn6 : n = 6
     · norm_num [m,hn6]
     · have hn7 : (7:ℝ) ≤ n := by exact_mod_cast (show 7 ≤ n by omega)
-      have hsq : (3*(m:ℝ))^2 ≤ (4*(n:ℝ)+1)^2 :=
-        sq_le_sq₀ (by positivity) (by positivity) |>.2 hmhir
+      have hfactor : 0 ≤
+          (4*(n:ℝ)+1-3*(m:ℝ))*(4*(n:ℝ)-2+3*(m:ℝ)) := by
+        apply mul_nonneg
+        · linarith only [hmhir]
+        · linarith only [hn7,hmr]
       have hdiff := mul_nonneg (show 0 ≤ (n:ℝ)-7 by linarith only [hn7])
         (show 0 ≤ (n:ℝ) by positivity)
-      nlinarith only [hsq,hmhir,hmr,hdiff,hmlor]
+      nlinarith only [hfactor,hdiff]
   have hcell : η*(m:ℝ)*((m:ℝ)-1) < 1 := by
-    have hh := mul_le_mul_of_nonneg_left hprod hη
-    nlinarith only [hh,hupper]
+    by_cases hzero : η = 0
+    · simp only [hzero,zero_mul]
+      norm_num
+    · have hpos : 0 < η := lt_of_le_of_ne hη (Ne.symm hzero)
+      have hh := mul_lt_mul_of_pos_left hprod hpos
+      nlinarith only [hh,hupper]
   let B := 8*(n:ℝ)*((n:ℝ)-1)/3-(m:ℝ)*((m:ℝ)-1)
   have hB : 0 ≤ B := by dsimp only [B]; nlinarith only [hprod,hnr]
   refine ⟨m,hm,hcell,?_⟩
@@ -1520,7 +1526,7 @@ theorem zeroDensityExponent_le_pintz_tail_interior {n : ℕ} (hn : 6 ≤ n) {σ 
     nlinarith only [hh,hupper]
   have hcut : 0 < (n:ℝ)*(1-2*((n:ℝ)-1)*(1-σ)) := by
     nlinarith only [hupper,hnr]
-  obtain ⟨m,hm,hmcell,hmrange⟩ := pintz_exists_pintz_tail_zeta_order hn hη hupper hlower
+  obtain ⟨m,hm,hmcell,hmrange⟩ := pintz_exists_pintz_tail_zeta_order hn hη hupper.le hlower
   apply zeroDensityExponent_le_three_div_of_montgomery_range σ
     ((n:ℝ)*(1-2*((n:ℝ)-1)*(1-σ))) hσhalf hσ1 hcut
   · intro τ hτ
@@ -1530,6 +1536,123 @@ theorem zeroDensityExponent_le_pintz_tail_interior {n : ℕ} (hn : 6 ≤ n) {σ 
   · intro τ hτ
     exact largeValueExponent_le_of_bound (pintz_heathBrown_cell_montgomery
       (by omega : 4 ≤ n) hσ1.le hupper hτ.1 (by linarith only [hτ.2,hσ1]))
+
+/-- The actual zeta consumer is valid at every printed tail lower endpoint.
+This closes only the zeta side of the density transfer. The generic
+Montgomery cell retains its strict amplitude hypothesis. -/
+theorem zetaLargeValueExponent_eq_bot_pintz_tail_endpoint {n : ℕ} (hn : 6 ≤ n)
+    {τ : ℝ} (hτlo : 2 ≤ τ) (hτhi : τ < 4*((n:ℝ)-1)/3) :
+    zetaLargeValueExponent (1-1/(2*(n:ℝ)*((n:ℝ)-1))) τ = ⊥ := by
+  have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
+  have hnpos : (0:ℝ) < n := by linarith only [hnr]
+  have hnmpos : 0 < (n:ℝ)-1 := by linarith only [hnr]
+  have hD : 0 < 2*(n:ℝ)*((n:ℝ)-1) := by positivity
+  let η : ℝ := 1/(2*(n:ℝ)*((n:ℝ)-1))
+  have hη : 0 ≤ η := (one_div_pos.mpr hD).le
+  have hupper : 2*η*(n:ℝ)*((n:ℝ)-1) = 1 := by
+    dsimp only [η]
+    field_simp
+  have hlower : 1 ≤ 2*η*(n:ℝ)*((n:ℝ)+1) := by
+    have hh := mul_nonneg hη (show (0:ℝ) ≤ n by positivity)
+    nlinarith only [hupper,hh]
+  have hcut : (n:ℝ)*(1-2*((n:ℝ)-1)*η) = (n:ℝ)-1 := by
+    nlinarith only [hupper]
+  obtain ⟨m,hm,hmcell,hmrange⟩ :=
+    pintz_exists_pintz_tail_zeta_order hn hη hupper.le hlower
+  have hcell : (1-(1-η))*(m:ℝ)*((m:ℝ)-1) < 1 := by
+    simpa only [sub_sub_cancel] using hmcell
+  have hheight : τ < (m:ℝ)*(1-((m:ℝ)-1)*(1-(1-η))) := by
+    simp only [sub_sub_cancel]
+    rw [hcut] at hmrange
+    exact hτhi.trans_le hmrange
+  exact pintz_heathBrown_cell_zeta hm (by linarith only [hη]) hcell
+    (by linarith only [hτlo]) hheight
+
+/-- The preceding generic cell supplies every tail endpoint below its
+remaining strip. No bound is asserted at the strip's lower boundary. -/
+theorem largeValueExponent_le_pintz_tail_endpoint_lower {n : ℕ} (hn : 6 ≤ n)
+    {τ : ℝ} (hτlo : 2*((n:ℝ)-1)/3 ≤ τ)
+    (hτhi : τ < (n:ℝ)-2+2/(n:ℝ)) :
+    largeValueExponent (1-1/(2*(n:ℝ)*((n:ℝ)-1))) τ ≤
+      ((3*τ/(2*(n:ℝ)*((n:ℝ)-1)^2):ℝ):EReal) := by
+  have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
+  have hnpos : (0:ℝ) < n := by linarith only [hnr]
+  have hnmpos : 0 < (n:ℝ)-1 := by linarith only [hnr]
+  have hD : 0 < 2*(n:ℝ)*((n:ℝ)-1) := by positivity
+  have hm : ((n-1:ℕ):ℝ) = (n:ℝ)-1 := by
+    rw [Nat.cast_sub (by omega),Nat.cast_one]
+  have hcell : 2*(1-(1-1/(2*(n:ℝ)*((n:ℝ)-1))))*
+      ((n-1:ℕ):ℝ)*(((n-1:ℕ):ℝ)-1) < 1 := by
+    rw [hm]
+    have he : 2*(1-(1-1/(2*(n:ℝ)*((n:ℝ)-1))))*
+        ((n:ℝ)-1)*((n:ℝ)-1-1) = ((n:ℝ)-2)/(n:ℝ) := by
+      field_simp
+      ring
+    rw [he]
+    exact (div_lt_one hnpos).mpr (by linarith)
+  have hcut : ((n-1:ℕ):ℝ)*
+      (1-2*(((n-1:ℕ):ℝ)-1)*(1-(1-1/(2*(n:ℝ)*((n:ℝ)-1))))) =
+        (n:ℝ)-2+2/(n:ℝ) := by
+    rw [hm]
+    field_simp
+    ring
+  have hh := pintz_heathBrown_cell_montgomery (n:=n-1)
+    (σ:=1-1/(2*(n:ℝ)*((n:ℝ)-1))) (by omega)
+    (by have hp := one_div_pos.mpr hD; linarith only [hp]) hcell
+    (show 0 ≤ τ by linarith only [hτlo,hnr]) (by rwa [hcut])
+  apply (largeValueExponent_le_of_bound hh).trans
+  apply EReal.coe_le_coe_iff.mpr
+  rw [show 2-2*(1-1/(2*(n:ℝ)*((n:ℝ)-1))) =
+    2/(2*(n:ℝ)*((n:ℝ)-1)) by ring]
+  apply (div_le_div_iff₀ hD (by positivity : 0 < 2*(n:ℝ)*((n:ℝ)-1)^2)).mpr
+  have hmul := mul_nonneg
+    (show 0 ≤ 3*τ-2*((n:ℝ)-1) by linarith only [hτlo]) hD.le
+  nlinarith only [hmul]
+
+/-- The first missing density endpoint already has the complete zeta input. -/
+theorem zetaLargeValueExponent_eq_bot_pintz_first_endpoint {τ : ℝ}
+    (hτlo : 2 ≤ τ) (hτhi : τ < 21/4) :
+    zetaLargeValueExponent (39/40) τ = ⊥ := by
+  apply pintz_heathBrown_cell_zeta (n:=6) (by omega) (by norm_num)
+    (by norm_num) (by linarith only [hτlo])
+  norm_num
+  exact hτhi
+
+/-- The fourth-order cell supplies the first endpoint's lower general window.
+The upper boundary 17/5 is deliberately excluded. -/
+theorem largeValueExponent_le_pintz_first_endpoint_lower {τ : ℝ}
+    (hτlo : 21/8 ≤ τ) (hτhi : τ < 17/5) :
+    largeValueExponent (39/40) τ ≤ ((2*τ/105:ℝ):EReal) := by
+  have hb := pintz_heathBrown_cell_montgomery (n:=4) (σ:=39/40)
+    (by omega) (by norm_num) (by norm_num)
+    (show 0 ≤ τ by linarith only [hτlo]) (by norm_num; exact hτhi)
+  exact (largeValueExponent_le_of_bound hb).trans
+    (EReal.coe_le_coe_iff.mpr (by linarith only [hτlo]))
+
+/-- The second missing endpoint has the full required general window.
+Subdivision from 169/42 supplies its closed upper endpoint 85/21. -/
+theorem largeValueExponent_le_pintz_second_endpoint_general {τ : ℝ}
+    (hτlo : 170/63 ≤ τ) (hτhi : τ ≤ 85/21) :
+    largeValueExponent (41/42) τ ≤ ((3*τ/170:ℝ):EReal) := by
+  have hbase : IsLargeValueBound (41/42) (169/42) (1/21) := by
+    have hh := pintz_heathBrown_cell_montgomery (n:=5) (σ:=41/42) (τ:=169/42)
+      (by omega) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    norm_num at hh
+    exact hh
+  by_cases hlo : τ ≤ 169/42
+  · exact (largeValueExponent_le_of_bound (hbase.of_height_le hlo)).trans
+      (EReal.coe_le_coe_iff.mpr (by linarith only [hτlo]))
+  · have hh := largeValueExponent_le_of_bound (hbase.subdivision (le_of_not_ge hlo))
+    exact hh.trans (EReal.coe_le_coe_iff.mpr (by linarith only [hτhi]))
+
+/-- Sixth-order nonexistence below the second endpoint's remaining zeta strip. -/
+theorem zetaLargeValueExponent_eq_bot_pintz_second_endpoint_lower {τ : ℝ}
+    (hτlo : 2 ≤ τ) (hτhi : τ < 37/7) :
+    zetaLargeValueExponent (41/42) τ = ⊥ := by
+  apply pintz_heathBrown_cell_zeta (n:=6) (by omega) (by norm_num)
+    (by norm_num) (by linarith only [hτlo])
+  norm_num
+  exact hτhi
 
 end TaoTrudgianYang2025
 
@@ -2823,6 +2946,136 @@ theorem zeroDensityExponent_le_bourgain_literature {σ : ℝ}
 /-! Literal literature-table assembly away from the unresolved Pintz lower
 endpoints, and explicit limitations of the raw derivative-majorant route.
 These results neither repair the source contract nor close EPZAE-30. -/
+
+namespace PintzEndpointGram
+
+open scoped ComplexConjugate
+
+/-- The exact off-diagonal kernel with the actual amplitude-aligning phases. -/
+def alignedOffDiagonal (P : LargeValuePattern) : ℂ :=
+  let c := fun t => phaseAlign (∑ n ∈ P.indices,P.coeff n*dirichletPhase n t)
+  ∑ t ∈ P.ordinates, ∑ u ∈ P.ordinates,
+    if t = u then 0 else
+      conj (c t)*c u*(∑ n ∈ P.indices,dirichletPhase n (u-t))
+
+/-- Phase-weighted duality before any entrywise absolute values are taken. -/
+theorem retained_gram (P : LargeValuePattern) :
+    ((P.ordinates.card:ℝ)*P.V)^2 ≤
+      4*P.N^2*(P.ordinates.card:ℝ)+2*P.N*(alignedOffDiagonal P).re := by
+  classical
+  let D := fun t => ∑ n ∈ P.indices,P.coeff n*dirichletPhase n t
+  let c := fun t => phaseAlign (D t)
+  let b := fun n => ∑ t ∈ P.ordinates,c t*dirichletPhase n t
+  have halign : ‖∑ t ∈ P.ordinates,c t*D t‖ = ∑ t ∈ P.ordinates,‖D t‖ := by
+    have he : (∑ t ∈ P.ordinates,c t*D t) =
+        ((∑ t ∈ P.ordinates,‖D t‖:ℝ):ℂ) := by
+      push_cast
+      exact Finset.sum_congr rfl (fun t _ => phaseAlign_mul (D t))
+    rw [he,Complex.norm_real,Real.norm_eq_abs,abs_of_nonneg]
+    positivity
+  have hlow : (P.ordinates.card:ℝ)*P.V ≤ ∑ t ∈ P.ordinates,‖D t‖ := by
+    calc
+      _ = ∑ _t ∈ P.ordinates,P.V := by simp
+      _ ≤ _ := Finset.sum_le_sum P.large
+  have hexpand : (∑ t ∈ P.ordinates,c t*D t) =
+      ∑ n ∈ P.indices,P.coeff n*b n := by
+    simp only [D,b,Finset.mul_sum]
+    rw [Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro n _
+    apply Finset.sum_congr rfl
+    intro t _
+    ring
+  have hcs := norm_sum_mul_sq_le P.indices P.coeff b
+  rw [← hexpand] at hcs
+  have hcoeff : (∑ n ∈ P.indices,‖P.coeff n‖^2) ≤ 2*P.N := by
+    calc
+      _ ≤ ∑ _n ∈ P.indices,(1:ℝ) := Finset.sum_le_sum fun n hn => by
+        simpa only [one_pow] using
+          pow_le_pow_left₀ (norm_nonneg _) (P.coeff_one_bounded n hn) 2
+      _ = (P.indices.card:ℝ) := by simp
+      _ ≤ _ := P.indices_card_cast_le_two_mul_N
+  have hsampling : ((P.ordinates.card:ℝ)*P.V)^2 ≤
+      2*P.N*(∑ n ∈ P.indices,‖b n‖^2) := by
+    have hlo : ((P.ordinates.card:ℝ)*P.V)^2 ≤ ‖∑ t ∈ P.ordinates,c t*D t‖^2 := by
+      rw [halign]
+      exact pow_le_pow_left₀ (mul_nonneg (Nat.cast_nonneg _) P.V_pos.le) hlow 2
+    exact hlo.trans (hcs.trans (mul_le_mul_of_nonneg_right hcoeff
+      (Finset.sum_nonneg (fun _ _ => sq_nonneg _))))
+  let G := fun t u => conj (c t)*c u*(∑ n ∈ P.indices,dirichletPhase n (u-t))
+  have henergy : ((∑ n ∈ P.indices,‖b n‖^2:ℝ):ℂ) =
+      ∑ t ∈ P.ordinates,∑ u ∈ P.ordinates,G t u := by
+    have hpoint (n : ℕ) :
+        ((‖b n‖^2:ℝ):ℂ) = conj (b n)*b n := by
+      rw [← Complex.normSq_eq_norm_sq,Complex.normSq_eq_conj_mul_self]
+    have hcast : ((∑ n ∈ P.indices,‖b n‖^2:ℝ):ℂ) =
+        ∑ n ∈ P.indices,((‖b n‖^2:ℝ):ℂ) := by
+      push_cast
+      rfl
+    rw [hcast]
+    simp_rw [hpoint]
+    simp only [b,map_sum,map_mul]
+    simp_rw [Finset.sum_mul,Finset.mul_sum]
+    rw [Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro t _
+    rw [Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro u _
+    dsimp only [G]
+    rw [Finset.mul_sum]
+    apply Finset.sum_congr rfl
+    intro n hn
+    have hp := dirichletPhase_mul_star (P.index_pos hn) u t
+    rw [Complex.star_def] at hp
+    rw [← hp]
+    ring
+  have hdiag (t : ℝ) : (G t t).re ≤ 2*P.N := by
+    have hc := norm_phaseAlign_le_one (D t)
+    have hc2 : ‖c t‖^2 ≤ 1 := by
+      simpa only [one_pow] using pow_le_pow_left₀ (norm_nonneg _) hc 2
+    have he : G t t = ((‖c t‖^2:ℝ):ℂ)*(P.indices.card:ℂ) := by
+      simp only [G,sub_self,dirichletPhase_zero,Finset.sum_const,nsmul_eq_mul,mul_one]
+      rw [← Complex.normSq_eq_conj_mul_self,Complex.normSq_eq_norm_sq]
+    rw [he]
+    simp only [Complex.mul_re,Complex.ofReal_re,Complex.ofReal_im,
+      Complex.natCast_re,Complex.natCast_im,mul_zero,sub_zero]
+    exact (mul_le_mul_of_nonneg_right hc2 (Nat.cast_nonneg _)).trans
+      (by simpa only [one_mul] using P.indices_card_cast_le_two_mul_N)
+  have hsplit : (∑ t ∈ P.ordinates,∑ u ∈ P.ordinates,G t u) =
+      (∑ t ∈ P.ordinates,G t t)+alignedOffDiagonal P := by
+    have hrow (t : ℝ) (ht : t ∈ P.ordinates) :
+        (∑ u ∈ P.ordinates,G t u) =
+          G t t+∑ u ∈ P.ordinates,if t = u then 0 else G t u := by
+      have hh : ∀ u : ℝ, G t u =
+          (if t = u then G t t else 0)+(if t = u then 0 else G t u) := by
+        intro u
+        split_ifs with h
+        · subst u
+          simp only [add_zero]
+        · simp only [zero_add]
+      have hs := Finset.sum_congr rfl (fun u (_ : u ∈ P.ordinates) => hh u)
+      simpa only [Finset.sum_add_distrib,Finset.sum_ite_eq,if_pos ht] using hs
+    calc
+      _ = ∑ t ∈ P.ordinates,(G t t+
+          ∑ u ∈ P.ordinates,if t = u then 0 else G t u) :=
+        Finset.sum_congr rfl hrow
+      _ = _ := by rw [Finset.sum_add_distrib]; rfl
+  have hre := congrArg Complex.re henergy
+  rw [hsplit] at hre
+  simp only [Complex.ofReal_re,Complex.add_re,Complex.re_sum] at hre
+  have hsum := Finset.sum_le_sum (s:=P.ordinates) (fun t _ => hdiag t)
+  have hbound : (∑ n ∈ P.indices,‖b n‖^2) ≤
+      (P.ordinates.card:ℝ)*(2*P.N)+(alignedOffDiagonal P).re := by
+    rw [hre]
+    exact add_le_add
+      (by simpa only [Finset.sum_const,nsmul_eq_mul] using hsum) le_rfl
+  have hh := hsampling.trans
+    (mul_le_mul_of_nonneg_left hbound
+      (mul_nonneg (by norm_num : (0:ℝ) ≤ 2) (zero_lt_one.trans P.one_lt_N).le))
+  nlinarith only [hh]
+
+end PintzEndpointGram
 
 namespace LiteratureTable
 

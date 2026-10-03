@@ -1,4 +1,7 @@
 flowchart TD
+%% RESUMED SOURCE TRACE (3 October 2026): Pintz (3.1)--(3.2), (4.21)--(4.23) use the strict derivative margin; smoothing does not remove it. Checked later growth choices and direct reverse-density transfer do not close the endpoints. Final journal text uninspected. No node or edge changes; EPZAE-30/39/40/41 OPEN. See Sources, Author-proof trace after resumption.
+%% POWERED-ENERGY CHECK (3 October 2026): scratch 31293 permits rho=2/21 above the second-strip target for all documented integer-powered energy/Jutila constraints. No actual pattern witness or density counterexample is claimed. Far-correlation/positive-LV input remains the technical impasse; EPZAE-30/39/40/41 OPEN. No graph node or dependency edge closes; production and both BAT snapshots unchanged.
+%% RESEARCH CHECK (3 October 2026): scratch 37937 proves classical-moment and unchanged pointwise/mean-value route losses on the second Pintz strip; see Sources. No production node or edge closes. Signed Gram -> checked near absorption -> OPEN far estimate -> OPEN exact endpoints remains the current chain. Both BAT-verified production snapshots are unchanged.
 %% CURRENT STATUS (2 October 2026): 38/42 complete. EPZAE-13/14/29/38 DONE after exact source-contract review and BOTH BATs 8912/11052 PASS. EPZAE-30/39/40/41 remain OPEN. Older dated checkpoint comments are historical. Counterexamples and owner-authorized repairs are preserved; recovery-record maintenance is permanently skipped.
 %% HUXLEY SOURCE UPDATE (28 September 2026): owner-supplied full PDF read; source access restored. Uniform seven polynomial tests on closed [1,2] and ordinary/logarithmic interior consumer are kernel-checked. This is not a family-moment/beta proof. EPZAE-13/14/29 remain OPEN; aggregate 34/42. Both BATs retain complete coverage.
     HUXJET["EPZAE-13 Huxley seven model-jet tests<br/>one uniform tolerance and lower bound;<br/>closed interval + interior logarithms DONE"]
@@ -731,7 +734,7 @@ flowchart TD
     OBD["EPZAE-29 exact eight-piece bound DONE;<br/>optimizedBourgain_bound, 3/4 &lt; sigma &lt; 1;<br/>all eight analytic inputs discharged;<br/>exact regressions, audits and BOTH BATs PASS"]
     BZCL["EPZAE-29 genuine analytic convex limit<br/>closed k and affine-range boundaries DONE"]
     BZOPT["EPZAE-29 eight exact analytic pair consumers<br/>three actual inputs discharged;<br/>five-input conditional assembly DONE"]
-    ZTAB["EPZAE-30 best-known density envelope<br/>OPEN; analytic rows incl. Bourgain: BOTH BATs PASS;<br/>finite table off 2 points + selected tail interiors INSTALLED;<br/>all-order raw-majorant obstruction CHECKED;<br/>focused PASS; BOTH BATs pending;<br/>stronger Pintz endpoints -> total envelope OPEN"]
+    ZTAB["EPZAE-30 best-known density envelope<br/>OPEN; endpoint-packet snapshot: BOTH BATs PASS;<br/>closed tail zeta + finite complementary windows CHECKED;<br/>actual signed Gram entry CHECKED; near absorption SCRATCH CHECKED;<br/>far correlation -> positive-cardinality strips -> exact endpoints -> total envelope OPEN"]
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
     ER["EPZAE-32 energy exponents and regions<br/>DONE"]

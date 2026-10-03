@@ -1,5 +1,66 @@
 # Whole-proof operational goal prompt
 
+## Resumed author-proof investigation (3 October 2026)
+
+The owner's request to find a workaround resumes the unchanged endpoint
+task; the earlier impasse record is historical, not a weakened goal.
+The source proof has now been traced through Pintz (3.1)--(3.2) and
+(4.20)--(4.23). Its strict derivative margin is used analytically and is
+not removed by its smoothing. Both later tables cite this source rather
+than independently proving the disputed endpoints. Further direct tests
+of Pintz's ceiling/growth theorem and the Matomaki--Teravainen reverse
+transfer did not close the remaining estimates; exact limitations and
+primary references are in Sources, "Author-proof trace after resumption".
+The final 13-page journal text remains uninspected; a copy was requested
+without pausing the alternative-route investigation. Do not infer that
+the final version supplies a repair, or that the endpoint claims are false.
+The owner subsequently supplied the full-title PDF in #63 Sources. All
+15 pages were read; SHA-256 comparison establishes byte identity with
+the existing #74 March manuscript. Record it as an inspected source,
+not a new journal revision or an endpoint repair; both copies are preserved.
+The exact hash and page references are recorded in Sources.
+
+Keep the actual positive-LV/far-correlation estimates as open obligations;
+do not replace them by an assumed bound or a conditional wrapper. Preserve
+all packet results, counterexamples and authorized earlier repairs.
+No Lean source or BAT changed during this source check; no new build is
+claimed. After any production integration, maintain and run BOTH
+`run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` with their unchanged gates.
+EPZAE-30/39/40/41 remain OPEN, 38/42 complete. Recovery records stay skipped.
+
+## Endpoint-packet integration (2 October 2026)
+
+The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN
+and the acceptance count is still 38/42. The supplied packet provides new
+in-scope proof work, so the previous whole-goal impasse is superseded.
+
+The selected tail order now retains its STRICT product margin, allowing
+the auxiliary upper-eta boundary to be closed. The generic Montgomery
+helper's strict condition is unchanged. Six actual analytic consumers
+cover the full tail zeta input, the preceding tail general interval, the
+first finite endpoint's zeta/lower-general inputs, and the second finite
+endpoint's full general/lower-zeta inputs. The second general upper
+endpoint is included by actual subdivision, not continuity.
+
+PintzEndpointGram.alignedOffDiagonal retains the actual aligning phases;
+PintzEndpointGram.retained_gram proves the signed finite Gram inequality.
+Neither its proposed R^(3/2) estimate nor an endpoint density bound is
+assumed or claimed. Remaining analytic strips are recorded in Sources.
+
+All eight declarations are installed in the EXISTING LiteratureDensity
+module. Focused build 70782 and scratch check 90158 PASS with zero Lean
+diagnostics; 26 new exact regressions and eight explicit audits are included.
+Current totals: 8097 exact examples and 7343 explicit public audits.
+BOTH mandatory BATs PASS on this production snapshot: foundation 51856
+and paper 98372, exit 0, zero Lean diagnostics. Paper verification covers
+all 1452 package files, 10785 jobs, full and repeated semantic regression,
+and 21173 audited declarations (14928 target + 6240 native + five anchors).
+The two frozen-Python SyntaxWarnings remain visible. Exact logs and hashes
+are in Reproduction Manifest; verification finished on 3 October 2026.
+Root/runner coverage is unchanged. Preserve all counterexamples, frozen
+sources and authorized repairs. Recovery-record maintenance is skipped.
+
 ## Current acceptance status (2 October 2026)
 
 **38/42 complete.** EPZAE-13, 14, 29 and 38 are now DONE after exact
@@ -110,9 +171,12 @@ module, namespace LiteratureTable, with all 32 regressions and eight audits.
 Focused build 7205 PASSes (10549 jobs, zero diagnostics). The earlier focused
 run 68349 found a declaration-order error, repaired before the passing check.
 The snapshot has 8071 exact examples and 7335 explicit public audits.
-Root/runner coverage is unchanged. Foundation BAT 8379 PASSes (8857 jobs,
-14290 audits, zero Lean diagnostics). Paper BAT 61247 is running; the new
-BOTH-BAT checkpoint remains pending. Production files are frozen.
+Root/runner coverage is unchanged. BOTH mandatory BATs PASS on this snapshot:
+foundation 8379 (8857 jobs, 14290 audits) and paper 61247 (10785 jobs,
+all 1452 package files, full and repeated semantic regression, and 21160
+discovered audits = 14915 target + 6240 native + five anchors). Both exit 0
+with zero Lean diagnostics. The two historical frozen-Python SyntaxWarnings
+remain visible. The original printed table and endpoint exclusions are unchanged.
 EPZAE-30 remains OPEN at the printed Pintz lower endpoints. Remaining DAG:
 stronger endpoint input -> endpoint consumers -> exact total envelope ->
 EPZAE-39/40/41. No source-contract repair has been authorized for this gap.
@@ -123,6 +187,62 @@ Preserve all frozen statements, counterexamples, obstruction documents and
 authorized repairs. Recovery-record maintenance remains permanently skipped.
 Older dated progress entries below are historical; this status supersedes
 their unfinished-branch and aggregate-count statements.
+
+## Current endpoint-contract decision
+
+The original endpoint contract is fixed. The endpoint-packet work at the
+top of this document supersedes the earlier whole-goal impasse, not the
+acceptance test. EPZAE-30 is NOT complete.
+The unproved printed values are A(39/40) <= 16/21,
+A(41/42) <= 63/85 and the integer-tail lower-endpoint values 3/(n-1).
+Scratch check 4723 additionally proves valid, strictly weaker fallbacks:
+1424/1649, 28/37 and 3*n/(n^2-2*n+2), respectively.
+These are NOT substitutes for the current acceptance target.
+The raw derivative and direct Heath--Brown pair routes have all-order
+kernel-checked plateau obstructions; the native strict-cell route,
+twelfth comparison and expanded A/B/C/D search do not close the gap.
+See Sources for exact evidence and the limits of each negative result.
+
+Prioritize the positive zeta large-values estimate
+LV_zeta(41/42,tau) <= 3*tau/170 on [37/7,340/63), including 37/7.
+Nonexistence is not required there. The other remaining strips are
+LV(39/40,tau) <= 2*tau/105 on [17/5,63/16], and, for every n >= 6,
+LV(1-1/(2*n*(n-1)),tau) <= 3*tau/(2*n*(n-1)^2) on
+[n-2+2/n,n-1]. Sources records the actual checked complementary inputs.
+Do not weaken the generic Montgomery condition or assume the packet's
+proposed phase-weighted R^(3/2) estimate. Reuse the existing near-row
+and harmonic estimates; retain every frequency and the actual phases.
+Scratch check 82597 now carries out that near-frequency reduction, including
+uniform absorption at N^(7/5), with four audited declarations and nine
+regressions, zero diagnostics. It is not yet an installed public contract.
+The remaining terminal step is a genuinely stronger far-correlation or
+positive large-values estimate, not another conditional endpoint wrapper.
+Scratch check 37937 additionally excludes the direct classical moment
+table and the unchanged mean-value/pointwise higher-moment majorant on
+the second strip, with fixed exponent gaps 229/1190 and 1537/3570.
+The latter has exact regressions for every direct integer Heath--Brown
+pair and Bellotti--Yang's relaxed pointwise exponent. See Sources for
+the precise scope: no actual density counterexample or exclusion of
+stronger moment estimates is claimed. Do not build a new module family
+around these insufficient inputs. Production and both BATs are unchanged.
+No further endpoint-contract repair is authorized or requested here.
+The subsequent powered-energy check 31293 passes 14 scratch declarations,
+27 examples and 14 audits, zero diagnostics. On the entire second strip,
+rho=2/21, energy=4/21 and s=44/21 satisfy the checked energy/double-zeta
+and absolute Gram/CS inequalities, every integer-powered nine-branch
+constraint, and every integer-powered Jutila bound. They still exceed
+the target cardinality (gap 2/1785 at tau=16/3). These are scalar
+feasibility results, NOT actual pattern witnesses or density counterexamples.
+Do not spend another optimization campaign on those unchanged constraints.
+The separately checked Pintz--Revesz displayed growth estimator is too
+weak as well; see Sources. The repeated technical impasse remains the
+genuinely stronger far-correlation/positive-LV input, with no identified
+closing route from the checked inputs. Resume on a new analytic input or
+a source argument covering the closed endpoints, retaining the full goal.
+The actual density endpoint claims have not been disproved. Preserve all
+frozen statements, counterexamples and source repairs, and maintain BOTH
+run_lake_build.bat and run_tao_trudgian_yang_build.bat as production changes
+require. Recovery-record maintenance remains permanently skipped.
 
 ## First and packing bounds across all charted Fourier gaps (30 September 2026)
 
