@@ -1,5 +1,33 @@
 # Lean extension
 
+Current source-only check (3 October 2026): no Lean or runner changes.
+Original EPZAE-30/39/40/41 remain OPEN at the endpoint analytic impasse,
+38/42 complete. Latest actual BAT evidence is 89353/41454, both PASS;
+see Goal Prompt, Sources and Reproduction Manifest. No weaker table is
+substituted for the original endpoint contract.
+
+## Total source-faithful envelope (3 October 2026)
+
+Five further pair-consumer theorems improve the first and all tail
+endpoint bounds and close more of the first required LV interval.
+Total additions this turn: three definitions, thirteen theorems,
+24 exact examples and 16 explicit audits; no new production module.
+
+The existing LiteratureDensity module exports
+`LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable`,
+valid for every 1/2 <= sigma < 1 without exceptional endpoint hypotheses.
+Three definitions, eight proved theorems, 15 exact regressions and
+11 explicit audits are added, with unchanged root/BAT coverage.
+The source-faithful endpoint values are deliberately distinguished from
+the stronger frozen printed targets. The literal EPZAE-30 acceptance
+remains OPEN; see Goal Prompt and Reproduction Manifest.
+
+Final foundation BAT 96455 and paper BAT 14724 both PASS, exit 0,
+zero Lean diagnostics. Current totals: 8121 exact examples, 7359 explicit
+audits, 21206 dynamically audited declarations, 1452 covered package files.
+The historical Python replay retains two visible SyntaxWarnings. See the
+Reproduction Manifest for logs and hashes; acceptance is still 38/42.
+
 ## Endpoint-packet integration (2 October 2026)
 
 The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN

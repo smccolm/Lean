@@ -1,5 +1,90 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
+## Current endpoint impasse (3 October 2026)
+
+After three consecutive resumed checks, the original endpoint proof is
+blocked at the missing uniform far-correlation/positive-LV estimate.
+The additional Fiori short-interval paper and Lean assumption inventory,
+Fiori--Jaskari PNT inputs, and Pintz Selberg-class theorem do not supply
+the required bound; their precise scope is in Sources. No statement that
+the density endpoints are false or that no proof exists is made.
+No essential source-access, permission or build requirement is missing.
+The separately proved weaker table is not an accepted replacement.
+EPZAE-30/39/40/41 remain OPEN, 38/42 complete; earlier active-status
+checkpoints below are historical. No code changed or build was rerun in
+this source-only continuation. Both last actual BAT runs remain PASS
+(89353/41454), with the exact evidence in Reproduction Manifest.
+
+## Continued trace-route check (3 October 2026)
+
+The previous turn installed actual analytic improvements. This continuation
+checks the existing signed Gram reduction against the completed cubic-trace
+route, including all positive integer powers of the final Guth--Maynard
+majorant and an optimistic real-power/window diagonal comparison. Scratch
+86333 passes without diagnostics. The source-scale restriction forces a
+larger exponent than the second-strip target; no new positive-LV estimate
+results. A separate Montgomery--Vaughan growth substitution and the #74
+release inputs also supply no closing candidate. Sources records the scope.
+The missing uniform far-correlation/positive-LV estimate is unchanged;
+EPZAE-30/39/40/41 remain OPEN and the original goal stays active, 38/42.
+
+Both mandatory BATs now PASS for this continuation: foundation 89353,
+paper 41454, exit 0, zero Lean diagnostics. The paper's 21206 dependency
+audits and separate semantic regression pass; its two historical Python
+SyntaxWarnings remain visible. Exact evidence is in Reproduction Manifest.
+
+## Total source-faithful table (3 October 2026)
+
+Owner clarification: prefer the paper's path, but an alternate proof may
+repair a defect if it proves the same end statement. No weaker endpoint
+acceptance is authorized; the separate source-faithful table is not a
+replacement for the remaining original endpoint obligations.
+
+The next dependency search yielded new actual endpoint bounds, not only
+limitations: the existing fourth pair gives A(39/40)<=3560/4399; the
+Heath--Brown family gives A(1-1/(2*n*(n-1))) <=
+3/(n-2+2/n+1/(2*n*(n-1))) for ALL n>=6. The latter gives 20/29 at
+59/60 and 252/445 at 83/84. These five consumers and nine exact examples
+are installed, with five explicit audits; focused build 70917 PASSes.
+The first exact LV input now extends to the CLOSED value 135765/36668,
+so its remaining interval is (135765/36668,63/16]. The sharper printed
+endpoints and all four acceptance gates remain open.
+
+New positive result: `LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable`
+assembles the actual proved rows on every sigma in [1/2,1), including all
+boundaries. Its least tail index is proved to be the source-valid index,
+not an assumed analytic witness. Exact endpoint evaluations distinguish
+the source-faithful table from the stronger printed one.
+This uses the existing module and does not grow the support-module family.
+Focused build 57680 and installed regression 81182 pass without diagnostics.
+
+The sharper endpoint research remains separate:
+signed Gram -> near absorption -> OPEN uniform far correlation/positive LV
+-> OPEN printed endpoints -> OPEN literal envelope -> EPZAE-39/40/41.
+A fixed rescaling does not absorb the boundary middle term: at xi=1/(r*(r-1))
+the available estimate still carries a positive epsilon-power loss.
+No claim of impossibility, density counterexample, or essential missing
+source is justified. The latest owner request resumes the task; 38/42
+acceptance items are complete and the four existing aggregate gates stay open.
+
+Final verification of this snapshot: foundation BAT 96455 and paper BAT
+14724 both PASS, exit 0, zero Lean diagnostics. The full and repeated
+semantic regression and all 21206 dependency audits pass, with complete
+1452-file package coverage. The two frozen-Python SyntaxWarnings remain
+visible; exact evidence is in Reproduction Manifest. The mathematical
+impasse is still the stated endpoint estimate, not an unavailable source.
+
+## Resumed endpoint audit result (3 October 2026)
+
+Focused check 15317 PASSes the additional one-step shifted-derivative
+route limitation: the candidate majorant is at least 41/42+1/168 for
+every derivative order r>=3, tau>=37/7 and shift exponent h>=0. This
+is not a density counterexample or a positive-cardinality bound.
+The same missing analytic input persists after the resumed source trace,
+supplied-PDF identity check and this alternate-route test. No checked
+closing route remains; the unchanged whole goal is blocked, with
+EPZAE-30/39/40/41 OPEN and 38/42 complete. Production and BATs unchanged.
+
 ## Resumed author-proof trace (3 October 2026)
 
 The owner's workaround request resumes the original endpoint task.

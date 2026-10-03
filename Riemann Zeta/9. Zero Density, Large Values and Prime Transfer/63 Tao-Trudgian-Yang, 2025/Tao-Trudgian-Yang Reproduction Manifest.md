@@ -1,5 +1,177 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Source-only endpoint impasse check (3 October 2026)
+
+No Lean file, dependency, runner, audit or regression changed in this
+continuation. No new Lean or BAT run is claimed. The three production
+hashes below, all three protected obstruction/correction hashes, and the
+paper BAT hash were rechecked unchanged. The retained foundation and
+paper logs still end in PASS; the latest actual runs are 89353/41454,
+with exact commands, hashes, counts and warning scope immediately below.
+Their log hashes were also rechecked unchanged. Repository-wide forbidden
+proof scans again find no prohibited term or declaration; the `constant`
+matches are comments and ordinary structure fields. `git diff --check`
+passes, with Git's existing LF-to-CRLF notices only, not Lean diagnostics.
+Additional web sources were inspected without importing or building
+external code. No recovery-record file was created or edited.
+The third resumed check leaves the original goal at the same analytic
+impasse: EPZAE-30/39/40/41 OPEN, 38/42 complete. These verification facts
+do not supply the missing endpoint estimates.
+
+## Continued trace-route verification (3 October 2026)
+
+Only the existing research scratch file and documentation change in this
+continuation; the production Lean hashes below remain unchanged.
+From Extension, with ELAN_HOME=C:/Users/Naraphim/.elan:
+
+`lake env lean E:/Lean/.scratch/epzae-pintz-alternate-route-barriers-20261003.lean`
+
+Session 86333: PASS, exit 0, zero Lean diagnostics, 18 named declarations,
+34 exact examples and 18 explicit audits; only propext, Classical.choice,
+and Quot.sound. Three new scalar route-comparison theorems and four
+examples are added; no new production module or analytic premise.
+SHA-256: `cb4cf9121180c63cea73bba9b4c2fa99d5ba80ba77dd00a0a8852d1ab9123fdb`.
+The original endpoints remain unproved; no acceptance item closes.
+The mandatory BATs are rerun sequentially. Foundation
+`cmd /c run_lake_build.bat --no-pause`, session 89353: PASS, exit 0,
+8857 jobs, 14290 discovered theorem audits, 7636 explicit declarations,
+five exact publication contracts and all retained regressions/linters.
+There are zero Lean errors, warnings, linter diagnostics or suggestions.
+Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_110207.log`.
+SHA-256: `7ee9eccc1e7fd455d22b9256c24d2554ff099c85a64bfbbe90ec2858ce3ee0cf`.
+Paper `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, session 41454:
+LEAN VERIFICATION PASS, exit 0. All 22 source pins, 1926-file shortcut scan,
+1452-file production coverage, historical replay and certificate regressions,
+10785 build jobs, separate semantic regression and 21206 dependency audits
+(14961 target + 6240 pinned Gafni-Tao + five anchors) pass.
+There are zero Lean diagnostics. The two frozen-Python invalid-escape
+SyntaxWarnings remain visible; historical replay is not proof evidence.
+Log: `logs/tao-trudgian-yang-build-20261003-111025-adb1854a.log`.
+SHA-256: `ff8c91151c32b9eb717f956482be48bfc9ea37fd2151e418b8e83233976fd4a3`.
+Production, runner and all three protected obstruction/correction hashes
+were rechecked unchanged. Source counts remain 8121 exact examples and
+7359 explicit paper audits. Repository-wide integrity scans found no
+prohibited proof term or declaration; `constant` matches are comments or
+ordinary structure fields. `git diff --check` passes, with existing Git
+LF-to-CRLF notices only. No recovery record was created or edited.
+This verifies the retained scope; EPZAE-30/39/40/41 remain OPEN, 38/42.
+
+## Source-faithful complete envelope (3 October 2026)
+
+### Subsequent positive endpoint-pair revision
+
+Five more theorems consume existing analytic exponent pairs and the proved
+endpoint zeta windows. Nine additional exact examples and five audits give
+FINAL source totals of 8121 examples and 7359 explicit audits, with the
+same 1452 package files. These stronger bounds are still weaker than the
+frozen printed endpoints; acceptance remains 38/42.
+
+From Extension with the same pinned toolchain and ELAN_HOME:
+
+- `lake env lean E:/Lean/.scratch/epzae-first-endpoint-pair-bridge-20261003.lean`,
+  development 20747 and installed regression 84654: exit 0, zero diagnostics,
+  nine exact examples, five permitted-axiom audits. Development 46088 had
+  binder/arithmetic elaboration errors; these were repaired before success.
+- `lake build TaoTrudgianYang2025.LiteratureDensity`, session 70917:
+  PASS, exit 0, 10549 jobs, zero diagnostics.
+
+Final production SHA-256:
+
+- LiteratureDensity: `83ea5484e2ebe5e905bf90d56f126cdadbab9caabdd870d31f9813def628f2e5`.
+- Audit: `a2ed6911fe66e3686a68d9e5ff23592022a6f9f14ae8489cc49736a4c21c4a63`.
+- SemanticRegression: `8483613d5981028d49f449edaaf1c444cd919ea67828fd9f7f5a0c4e0396f1cd`.
+- Pair-consumer scratch: `d0aaed93ebee59a5695afb5d481e898a7c8cdfddc06fb0e2f204dbc7a3ad2b47`.
+
+Paper session 71697 is SUPERSEDED, NOT PASS: all 22 source pins, integrity,
+historical replay, deterministic certificates and default build (10785 jobs,
+including SemanticRegression) passed on the preceding envelope snapshot.
+Its repeated semantic-regression process was deliberately stopped to
+integrate the newly proved pair consumers; the runner correctly exited 1.
+The failed attempt to stop an already-finished compilation changed nothing;
+only the identity-checked repeated-regression process was stopped.
+Both mandatory BATs are rerun on the final snapshot. Foundation
+`cmd /c run_lake_build.bat --no-pause`, session 96455: PASS, exit 0,
+8857 jobs, 14290 discovered dependency audits, zero Lean diagnostics.
+Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_100703.log`.
+SHA-256: `9c886dd1f34d9e062c2a065f7524719ba38d6163bd63e146101bd104571d97cc`.
+Paper `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, session 14724:
+LEAN VERIFICATION PASS, exit 0. It checks all 22 source pins, 1926 Lean
+files for shortcuts, all 1452 package files for coverage, 10785 build jobs,
+the full and repeated semantic regression, and 21206 dependency audits
+(14961 target + 6240 pinned Gafni-Tao + five imported anchors).
+There are zero Lean errors, warnings, linter diagnostics or suggestions.
+The two frozen-Python invalid-escape SyntaxWarnings remain visible;
+historical reproduction is not Lean proof evidence.
+Log: `logs/tao-trudgian-yang-build-20261003-101422-a1a92689.log`.
+SHA-256: `1a9479ff506b23c829bbd54a1d4aad6716d65e4b180b9a2cc93c8936323d5338`.
+Final source hashes and the three preserved obstruction/correction hashes
+were rechecked unchanged. Repository-wide shortcut/postulate scans found
+only ordinary comment/structure-field matches for the word `constant`;
+no prohibited declaration or proof term. `git diff --check` passes;
+Git reports its existing LF-to-CRLF conversion notices, not Lean warnings.
+No recovery record was created or edited. Neither BAT PASS closes the
+four remaining mathematical/source-contract acceptance gates.
+
+### Preceding source-faithful-envelope checkpoint
+
+Base commit: `0e6c7c554c8440ad599a7a49856ed54f212bf909`, dirty worktree.
+The original endpoint acceptance is unchanged. Three definitions and
+eight theorems are added to the existing LiteratureDensity module;
+15 exact examples and 11 explicit audits give current totals of
+8112 examples and 7354 explicit audits. Package-file coverage stays 1452.
+
+All Lean commands set ELAN_HOME=C:/Users/Naraphim/.elan and use the
+pinned Lean 4.30.0 toolchain. From Extension:
+
+- Standalone development check 88394: exit 0, zero diagnostics, only
+  propext/Classical.choice/Quot.sound; earlier failed development checks
+  90338 (positivity/decidability) and 5847 (one style warning) were repaired.
+- `lake build TaoTrudgianYang2025.LiteratureDensity`, session 57680:
+  exit 0, 10549 jobs, zero diagnostics.
+- `lake env lean E:/Lean/.scratch/epzae-source-faithful-envelope-20261003.lean`,
+  session 81182: installed consumer regression PASS, exit 0,
+  15 exact examples, 11 audits, zero diagnostics.
+
+Current source SHA-256:
+
+- LiteratureDensity: `a780801316cbd251ae53bd391883d4235fc23494e8ed08cbf2cffb6b848e31e9`.
+- Audit: `936ad71ce91433e75ad06b36eb5d92c884d3b5f7ae4d53708cbbd8ebb4f67bd9`.
+- SemanticRegression: `ff5c628a50b97faa26c933e7c9d7da0af19c9fd0071660e976d23bce2e865ba8`.
+- Installed scratch regression: `9209c898dce1f5bcf8fa40dc0a02fdd3e1f43a970c5ef7a5b7c8f864fc8a8ae1`.
+
+Foundation `cmd /c run_lake_build.bat --no-pause`, session 90148:
+PASS, exit 0, 8857 jobs, 14290 discovered audits, zero Lean diagnostics.
+Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_094057.log`.
+SHA-256: `2c1b5ae1918744dd22a5dcb3a57748a14bbaae964d0f250450c1d2cb9e24ca44`.
+
+The first paper BAT exited 1 at the source-integrity stage: the supplied
+Pintz PDF was unlisted. Failed log:
+`logs/tao-trudgian-yang-build-20261003-094410-d262b9b5.log`.
+Added the verified PDF hash to Sources/SHA256SUMS.txt and made both
+Tools/verify_sources.ps1 manifest reads explicitly UTF-8. Existing pins,
+the PDF bytes, both BAT files, and all build/audit gates are unchanged.
+The rerun, session 71697, passed all 22 source pins and the default build,
+then was deliberately superseded as recorded above. It is not a full PASS.
+
+## Additional scratch-only shifted-derivative check (3 October 2026)
+
+From Extension, with ELAN_HOME=C:/Users/Naraphim/.elan:
+
+`lake env lean E:/Lean/.scratch/epzae-pintz-alternate-route-barriers-20261003.lean`
+
+Session 15317: exit 0, 15 named declarations, 30 examples, 15 explicit
+audits, zero Lean diagnostics; only propext, Classical.choice and Quot.sound.
+SHA-256: `b5b64b9ebf77d958a6788f9339dd679d1a219679a26b08ffec2cccc20d910296`.
+One scalar route-limitation theorem and three examples were added to the
+existing scratch file. Sessions 40809 and 4264 failed on tactic
+normalization/inequality orientation and were repaired before the passing
+check; no resource limit or linter setting changed. Full output is retained
+in tool session 15317; no separate log was created. Earlier scratch hashes
+below are historical. No production file, import, audit, dependency or BAT
+changed, so the prior BAT logs remain evidence for that unchanged scope;
+neither full BAT was rerun for this scratch/documentation-only addition.
+No recovery-record file was created or edited. No endpoint gate closes.
+
 ## Endpoint-packet integration (2 October 2026)
 
 The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN

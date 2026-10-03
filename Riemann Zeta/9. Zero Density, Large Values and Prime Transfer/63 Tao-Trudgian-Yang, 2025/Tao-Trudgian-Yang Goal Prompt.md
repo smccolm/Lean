@@ -1,5 +1,121 @@
 # Whole-proof operational goal prompt
 
+## Current endpoint impasse (3 October 2026)
+
+The unchanged whole goal is blocked at the analytic endpoint obligation
+after three consecutive resumed checks following the latest owner
+clarification. This supersedes the earlier active-status checkpoints below.
+The exact targets remain A(39/40)<=16/21, A(41/42)<=63/85, and
+A(1-1/(2*n*(n-1)))<=3/(n-1) for every integer n>=6.
+EPZAE-30/39/40/41 remain OPEN; acceptance is still 38/42, not complete.
+
+The available source path loses its required strict exponent margin.
+The preserved alternative pair, moment, energy, trace and signed-Gram
+work has not supplied the remaining uniform far-correlation/positive-LV
+estimate. Further September 2026 papers and an external Lean repository
+were checked against the exact contract; none supplied a closing input.
+Sources records their scope and limitations. This is a mathematical
+implementation impasse, not a counterexample, a claim that no proof exists,
+or a request for a supposedly essential inaccessible document.
+
+Owner authority remains: prefer the paper's path, repair defects by a
+faithful alternate proof of its end statements. Do not accept the weaker
+source-faithful table as those stronger statements. Preserve frozen
+sources, all counterexamples, regressions and earlier authorized repairs.
+No new proof module or assumption is warranted by the source check alone.
+
+No Lean or runner change was made in this continuation. The last actual
+foundation and paper BAT runs (89353 and 41454) both passed; their evidence
+was rechecked, not rerun. Maintain and execute BOTH
+`run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after future production changes,
+with unchanged coverage, audit, regression and zero-Lean-warning gates.
+Recovery-record maintenance remains permanently skipped.
+
+## Continuation check (3 October 2026)
+
+The previous goal turn made progress by installing actual endpoint-pair
+bounds and a separate complete source-faithful envelope, with both BATs
+passing. This continuation retains the ORIGINAL endpoint targets. New
+checked trace/powering comparisons in the existing research scratch file
+show why the available cubic-trace scale and its diagonal term do not
+close the second strip; they are not density counterexamples or a substitute
+for the target. See Sources and Reproduction Manifest, check 86333.
+The goal remains active and incomplete, 38/42. No new authority or missing
+document is asserted necessary. Recovery-record maintenance stays skipped.
+
+Continuation verification: foundation BAT 89353 and paper BAT 41454 both
+PASS, exit 0, zero Lean diagnostics. The original mathematical acceptance
+is unchanged; exact logs, counts and hashes are in Reproduction Manifest.
+
+## Current resumed work: total source-faithful table (3 October 2026)
+
+Subsequent positive analytic progress, installed in the same module:
+`zeroDensityExponent_le_pintz_first_endpoint_pair` proves 3560/4399
+at sigma=39/40. `zeroDensityExponent_le_pintz_tail_endpoint_pair` proves
+3/(n-2+2/n+1/(2*n*(n-1))) at every printed tail lower endpoint, n>=6.
+The exact first required LV bound now holds on CLOSED
+[21/8,135765/36668]; only (135765/36668,63/16] remains on that branch.
+These are actual analytic consumers of the proved fourth/Heath--Brown
+pairs, closed-cutoff subdivision and the endpoint zeta windows, not scalar
+obstruction lemmas. They improve the source-faithful baseline below but
+still do not prove 16/21, 63/85, or 3/(n-1). Preserve both results.
+
+The owner's latest request resumes proof work. Earlier blocked reports below
+are historical, not an instruction to wait for a missing document. No
+inaccessible source has been established necessary, and no endpoint density
+counterexample has been found.
+
+The new `LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable`
+proves an actual bound at EVERY sigma in [1/2,1), using the proved source
+ranges. The original printed table, source files, obstructions and
+counterexamples remain unchanged. The new table has weaker values ONLY at
+the disputed Pintz lower endpoints: 1424/1649 at 39/40, 28/37 at 41/42,
+and 3*n/(n^2-2*n+2) at 1-1/(2*n*(n-1)), n>=6.
+This is a source-provenance correction candidate, NOT a proof that the
+stronger printed endpoint estimates are false, and NOT a silent replacement
+of the existing acceptance contract. The owner has now clarified the repair
+authority: follow the paper's proof path wherever possible; repair a defect
+by another path if it proves the paper's end statements. This does NOT
+authorize substituting the weaker table for the stronger endpoint targets.
+Do not infer that an unproved endpoint is false. The original endpoint
+acceptance remains fixed, and alternate proofs of it are authorized.
+
+EPZAE-30/39/40/41 therefore remain OPEN, 38/42 complete. Continue seeking
+the missing positive-LV estimates; do not add conclusion-shaped assumptions
+or require an inaccessible document. Keep the actual signed-Gram route and
+all earlier authorized repairs. Maintain and execute BOTH
+`run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after production changes,
+with complete import coverage, audits, regressions and zero-Lean-warning
+gates. No new Lean module or BAT entrypoint was needed. The source verifier
+now reads the hash manifest explicitly as UTF-8; the supplied Pintz PDF
+has been added with its verified hash, without changing existing pins.
+Recovery records remain
+permanently optional and skipped.
+
+The final snapshot passes BOTH mandatory BATs: foundation 96455 and
+paper 14724, exit 0 and zero Lean diagnostics. Paper coverage includes
+all 1452 package files, 8121 exact examples and 21206 audited declarations.
+The two historical Python SyntaxWarnings are still visible. Reproduction
+Manifest records the exact evidence. This verifies the installed scope,
+not the missing endpoint estimates; the original completion test is unchanged.
+
+## Resumed endpoint audit result (3 October 2026)
+
+The unchanged goal is blocked at the missing uniform far-correlation/
+positive-LV input, after three consecutive resumed checks of that same
+obligation. Source tracing, the byte-identical supplied manuscript and a
+new one-step shifted-derivative route have not discharged it. The latter
+now has a kernel-checked scalar gap of 1/168 throughout the second strip,
+for all integer derivative orders and nonnegative shift exponents; see
+Sources and focused session 15317 in Reproduction Manifest. This is not
+a counterexample to the density targets or a claim that no proof exists.
+All exact endpoint targets remain required; EPZAE-30/39/40/41 remain OPEN,
+38/42 complete. No production source, runner or acceptance gate changed.
+New source evidence or an analytic input supplying an actual remaining
+strip would reopen the proof work; no weaker contract is requested.
+
 ## Resumed author-proof investigation (3 October 2026)
 
 The owner's request to find a workaround resumes the unchanged endpoint

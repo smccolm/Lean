@@ -449,4 +449,103 @@ example : (26/21:ℝ)/(1-4*(1/42)) = 26/19 ∧ (63/85:ℝ) < 26/19 := by norm_nu
 #print axioms jutila_second_strip_diagonal_feasible
 #print axioms second_strip_energy_scalar_feasible
 
+/-- One Weyl differencing step followed by any raw integer Heath--Brown
+derivative majorant still cannot supply the strict second-endpoint
+pointwise saving. Here `h` is the logarithmic shift-length exponent and
+the shifted phase has height exponent `tau+h-1`. This is a scalar check
+of that particular sufficient route, not a bound for the actual sum or
+a counterexample to the required positive-cardinality estimate. -/
+theorem one_shift_derivative_second_strip_gap {r : ℕ} (hr : 3 ≤ r)
+    {τ h : ℝ} (hτ : 37/7 ≤ τ) (hh : 0 ≤ h) :
+    (41/42:ℝ)+1/168 ≤ max (1-h/2)
+      ((1+(τ+h-1)*heathBrownBetaBound r (1/(τ+h-1)))/2) := by
+  have ht : 0 < τ+h-1 := by linarith only [hτ,hh]
+  have hb : (27/28:ℝ) ≤ (τ+h-1)*heathBrownBetaBound r (1/(τ+h-1)) := by
+    rw [heathBrownBetaBound_reciprocal_scale hr ht (by field_simp)]
+    by_cases hr5 : r ≤ 5
+    · apply le_trans _ (add_le_add (le_refl (1:ℝ)) (le_max_left _ _))
+      interval_cases r <;> norm_num <;> linarith only [hτ,hh]
+    · have hr6 : (6:ℝ) ≤ r := by exact_mod_cast (show 6 ≤ r by omega)
+      have hD : (30:ℝ) ≤ (r:ℝ)*((r:ℝ)-1) := by
+        nlinarith only [hr6,sq_nonneg ((r:ℝ)-6)]
+      have hi : 1/((r:ℝ)*((r:ℝ)-1)) ≤ (1/30:ℝ) :=
+        one_div_le_one_div_of_le (by norm_num) hD
+      have hm : -1/((r:ℝ)*((r:ℝ)-1)) ≤
+          max (((τ+h-1)-(r:ℝ))/((r:ℝ)*((r:ℝ)-1)))
+            (max (-1/((r:ℝ)*((r:ℝ)-1)))
+              (-2*(τ+h-1)/((r:ℝ)^2*((r:ℝ)-1)))) :=
+        (le_max_left _ _).trans (le_max_right _ _)
+      simp only [neg_div] at hm ⊢
+      linarith only [hi,hm]
+  have hm := le_max_right (1-h/2)
+    ((1+(τ+h-1)*heathBrownBetaBound r (1/(τ+h-1)))/2)
+  linarith only [hb,hm]
+
+example {r : ℕ} (hr : 3 ≤ r) {τ h : ℝ}
+    (hτ : 37/7 ≤ τ) (hh : 0 ≤ h) :
+    (41/42:ℝ)+1/168 ≤ max (1-h/2)
+      ((1+(τ+h-1)*heathBrownBetaBound r (1/(τ+h-1)))/2) :=
+  one_shift_derivative_second_strip_gap hr hτ hh
+
+example {r : ℕ} (hr : 3 ≤ r) {h : ℝ} (hh : 0 ≤ h) :
+    ¬ (max (1-h/2)
+      ((1+(16/3+h-1)*heathBrownBetaBound r (1/(16/3+h-1)))/2) < (41/42:ℝ)) := by
+  have hb := one_shift_derivative_second_strip_gap hr (τ:=16/3) (by norm_num) hh
+  linarith only [hb]
+
+example : (55/56:ℝ)-(41/42) = 1/168 := by norm_num
+
+#print axioms one_shift_derivative_second_strip_gap
+
+/-- Every positive integer powering of the actual Guth--Maynard exponent
+majorant permits rho=2/21 in the second endpoint strip. This is a limit
+of that majorant, not an actual large-value pattern or density counterexample. -/
+theorem guthMaynard_powered_second_strip_feasible {τ : ℝ} (hτ : 37/7 ≤ τ)
+    (q : ℕ) (hq : 1 ≤ q) :
+    (2/21:ℝ)/q ≤ guthMaynardLargeValueExponent (41/42) (τ/q) := by
+  by_cases he : q = 1
+  · subst q
+    apply le_trans _ ((le_max_right _ _).trans (le_max_right _ _))
+    norm_num
+    linarith only [hτ]
+  · have hqr : (2:ℝ) ≤ q := by exact_mod_cast (show 2 ≤ q by omega)
+    have hqp : (0:ℝ) < q := by linarith only [hqr]
+    apply le_trans _ (le_max_left _ _)
+    apply (div_le_iff₀ hqp).mpr
+    linarith only [hqr]
+
+/-- The diagonal N^2/V^2 term in the existing cubic-trace root bound,
+after a proposed q-th powering and height-window subdivision, cannot
+beat tau/28 at sigma=41/42. The source scale T^(3/4)<=N becomes
+3*theta/4<=q. Allowing every real q makes this an optimistic scalar
+test; no fractional-power construction or analytic estimate is asserted. -/
+theorem cubic_trace_powered_window_diagonal_ceiling {q τ θ : ℝ}
+    (hwindow : θ ≤ τ) (hscale : 3*θ/4 ≤ q) :
+    τ/28 ≤ τ-θ+q*(2-2*(41/42:ℝ)) := by
+  linarith only [hwindow,hscale]
+
+theorem cubic_trace_second_strip_gap {q τ θ : ℝ}
+    (hτ : 37/7 ≤ τ) (hwindow : θ ≤ τ) (hscale : 3*θ/4 ≤ q) :
+    3*τ/170+1591/16660 ≤ τ-θ+q*(2-2*(41/42:ℝ)) := by
+  have hd := cubic_trace_powered_window_diagonal_ceiling hwindow hscale
+  linarith only [hτ,hd]
+
+example {τ : ℝ} (hτ : 37/7 ≤ τ) (q : ℕ) (hq : 1 ≤ q) :
+    (2/21:ℝ)/q ≤ guthMaynardLargeValueExponent (41/42) (τ/q) :=
+  guthMaynard_powered_second_strip_feasible hτ q hq
+
+example : (2/21:ℝ) > 3*(16/3)/170 := by norm_num
+
+example {q τ θ : ℝ} (hτ : 37/7 ≤ τ)
+    (hwindow : θ ≤ τ) (hscale : 3*θ/4 ≤ q) :
+    ¬ τ-θ+q*(2-2*(41/42:ℝ)) ≤ 3*τ/170 := by
+  have hd := cubic_trace_second_strip_gap hτ hwindow hscale
+  linarith only [hd]
+
+example : (37/7:ℝ)/28-3*(37/7)/170 = 1591/16660 := by norm_num
+
+#print axioms guthMaynard_powered_second_strip_feasible
+#print axioms cubic_trace_powered_window_diagonal_ceiling
+#print axioms cubic_trace_second_strip_gap
+
 end PintzAlternateRouteBarriers

@@ -42,7 +42,10 @@ tail cell on its strict lower interior (including its upper endpoint).
 They use the proved first/fourth new pairs and genuine Heath--Brown
 derivative bounds on all sharp logarithmic intervals, followed by actual
 Gram-cardinality and zero-density transfer. The other printed closed
-lower endpoints are NOT claimed. No source-contract repair is made here.
+lower endpoints are NOT claimed. The separate sourceFaithfulDensityTable
+corrects endpoint ownership and has a proved bound everywhere on [1/2,1).
+It does not replace the frozen printed acceptance contract or assert that
+the stronger printed endpoint values are false.
 
 The Bourgain literature row now follows from the actual localized retained
 Gram recurrence, a common weighted amplitude band, the existing mixed
@@ -50,8 +53,8 @@ Heath--Brown estimate, and the critical-line twelfth moment. All physical
 losses are discharged before the zero-loss limit and density transfer.
 No off-critical eighth moment or density conclusion is assumed.
 
-These are identified table inputs, not a claim to the entire literature
-envelope. The remaining Pintz lower endpoints and envelope stay open.
+The source-faithful envelope is complete. The stronger printed Pintz lower
+endpoints and therefore the literal printed envelope remain open.
 -/
 
 noncomputable section
@@ -3077,6 +3080,104 @@ theorem retained_gram (P : LargeValuePattern) :
 
 end PintzEndpointGram
 
+/-- Actual fourth-pair consumer, including its closed height endpoint and
+all larger heights by the proved subdivision theorem. -/
+theorem pintz_first_endpoint_pair_largeValueBound (τ : ℝ) :
+    IsLargeValueBound (39/40) τ (1/20+max 0 (τ-3277/890)) := by
+  have hh := exponentPair_taoTrudgianYang_fourthNew.largeValueBound_of_positive_cutoff
+    (σ:=39/40) (τ:=τ) (c:=3277/890)
+    (by norm_num) (by norm_num) (by norm_num)
+  norm_num at hh ⊢
+  exact hh
+
+/-- A larger CLOSED part of the first endpoint's exact required LV range. -/
+theorem largeValueExponent_le_pintz_first_endpoint_pair_range {τ : ℝ}
+    (hlo : 21/8 ≤ τ) (hhi : τ ≤ 135765/36668) :
+    largeValueExponent (39/40) τ ≤ ((2*τ/105:ℝ):EReal) := by
+  apply (largeValueExponent_le_of_bound (pintz_first_endpoint_pair_largeValueBound τ)).trans
+  apply EReal.coe_le_coe_iff.mpr
+  by_cases ht : τ ≤ 3277/890
+  · rw [max_eq_left (by linarith only [ht])]
+    linarith only [hlo]
+  · rw [max_eq_right (by linarith only [ht])]
+    linarith only [hhi]
+
+/-- Improved actual first density endpoint via the existing fourth pair,
+the complete endpoint zeta window, and the Montgomery transfer. -/
+theorem zeroDensityExponent_le_pintz_first_endpoint_pair :
+    zeroDensityExponent (39/40) ≤ ((3560/4399:ℝ):EReal) := by
+  have hh := zeroDensityExponent_le_three_div_of_montgomery_range
+    (39/40) (13197/3560) (by norm_num) (by norm_num) (by norm_num)
+  norm_num at hh
+  apply hh
+  · intro τ hlo hhi
+    rw [zetaLargeValueExponent_eq_bot_pintz_first_endpoint hlo
+      (by linarith only [hhi])]
+    exact bot_le
+  · intro τ _hlo hhi
+    have hb := largeValueExponent_le_of_bound (pintz_first_endpoint_pair_largeValueBound τ)
+    rw [max_eq_left (by linarith only [hhi]), add_zero] at hb
+    exact hb
+
+/-- Closed Montgomery input at every tail boundary, from the already proved
+Heath--Brown analytic pair rather than the strict derivative cell. -/
+theorem pintz_tail_endpoint_pair_largeValueBound {n : ℕ} (hn : 6 ≤ n) :
+    IsLargeValueBound (1-1/(2*(n:ℝ)*((n:ℝ)-1)))
+      ((n:ℝ)-2+2/(n:ℝ)) (1/((n:ℝ)*((n:ℝ)-1))) := by
+  have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
+  have hnp : (0:ℝ) < n := by linarith only [hnr]
+  have hnm : (0:ℝ) < (n:ℝ)-1 := by linarith only [hnr]
+  have hnp2 : (0:ℝ) < (n:ℝ)+2 := by linarith only [hnr]
+  have hc : 0 < (n:ℝ)-2+2/(n:ℝ) :=
+    add_pos_of_pos_of_nonneg (by linarith only [hnr]) (by positivity)
+  have hs : (2/(((n:ℝ)-1)^2*((n:ℝ)+2)))*((n:ℝ)-2+2/(n:ℝ)) =
+      2*(1-1/(2*(n:ℝ)*((n:ℝ)-1)))-1-
+        (1-(3*(n:ℝ)-2)/((n:ℝ)*((n:ℝ)-1)*((n:ℝ)+2)))+
+          2/(((n:ℝ)-1)^2*((n:ℝ)+2)) := by
+    field_simp
+    ring
+  have hh := (exponentPair_heathBrown (by omega : 3 ≤ n)).closed_local_largeValueBound
+    (σ:=1-1/(2*(n:ℝ)*((n:ℝ)-1))) (by positivity) hc hs
+  convert hh using 1
+  field_simp
+  ring
+
+/-- A uniformly improved actual bound at ALL printed tail lower endpoints.
+It is still weaker than 3/(n-1), which remains unproved. -/
+theorem zeroDensityExponent_le_pintz_tail_endpoint_pair {n : ℕ} (hn : 6 ≤ n) :
+    zeroDensityExponent (1-1/(2*(n:ℝ)*((n:ℝ)-1))) ≤
+      ((3/((n:ℝ)-2+2/(n:ℝ)+1/(2*(n:ℝ)*((n:ℝ)-1))):ℝ):EReal) := by
+  have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
+  have hnp : (0:ℝ) < n := by linarith only [hnr]
+  have hnm : (0:ℝ) < (n:ℝ)-1 := by linarith only [hnr]
+  let η : ℝ := 1/(2*(n:ℝ)*((n:ℝ)-1))
+  have hη : 0 < η := by dsimp only [η]; positivity
+  have hηsmall : η ≤ 1/60 := by
+    dsimp only [η]
+    apply one_div_le_one_div_of_le (by norm_num)
+    nlinarith only [hnr]
+  have hfrac : 2/(n:ℝ) ≤ 1/3 := (div_le_iff₀ hnp).mpr (by linarith only [hnr])
+  have hc : 0 < (n:ℝ)-2+2/(n:ℝ) :=
+    add_pos_of_pos_of_nonneg (by linarith only [hnr]) (by positivity)
+  have hcut : (n:ℝ)-2+2/(n:ℝ)+η < (n:ℝ)-1 := by
+    linarith only [hfrac,hηsmall]
+  apply zeroDensityExponent_le_three_div_of_montgomery_range
+    (1-η) ((n:ℝ)-2+2/(n:ℝ)+η)
+    (by linarith only [hηsmall]) (by linarith only [hη]) (by linarith only [hc,hη])
+  · intro τ hτ
+    rw [zetaLargeValueExponent_eq_bot_pintz_tail_endpoint hn hτ.1
+      (by linarith only [hτ.2,hcut])]
+    exact bot_le
+  · intro τ hτ
+    have hb := (pintz_tail_endpoint_pair_largeValueBound hn).of_height_le
+      (show τ ≤ (n:ℝ)-2+2/(n:ℝ) by linarith only [hτ.2])
+    have he : 2-2*(1-η) = 1/((n:ℝ)*((n:ℝ)-1)) := by
+      dsimp only [η]
+      field_simp
+      ring
+    rw [he]
+    exact largeValueExponent_le_of_bound hb
+
 namespace LiteratureTable
 
 def printedFiniteDensityTable (σ : ℝ) : ℝ :=
@@ -3382,6 +3483,180 @@ theorem exists_printed_tail_bound_regular {σ : ℝ}
   refine ⟨n,hn,hleft,hright,?_⟩
   exact zeroDensityExponent_le_pintz_tail_interior hn
     (lt_of_le_of_ne hleft (Ne.symm (hendpoint n hn))) hright.le
+
+/-- Preserve the finite printed table except at its two unsupported Pintz
+lower endpoints, where the preceding proved row applies. -/
+def sourceFaithfulFiniteDensityTable (σ : ℝ) : ℝ :=
+  if σ = 39/40 then 86152/(1447460*σ-1311509) else
+  if σ = 41/42 then 2/(15*σ-12) else printedFiniteDensityTable σ
+
+theorem sourceFaithfulFinite_eq_printed {σ : ℝ}
+    (h39 : σ ≠ 39/40) (h41 : σ ≠ 41/42) :
+    sourceFaithfulFiniteDensityTable σ = printedFiniteDensityTable σ := by
+  simp only [sourceFaithfulFiniteDensityTable, if_neg h39, if_neg h41]
+
+/-- The corrected finite table has no exceptional arguments in its range. -/
+theorem zeroDensityExponent_le_sourceFaithfulFinite {σ : ℝ}
+    (hlo : 1/2 ≤ σ) (hhi : σ ≤ 59/60) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤
+      ((sourceFaithfulFiniteDensityTable σ):EReal) := by
+  by_cases h39 : σ = 39/40
+  · subst σ
+    have hh := zeroDensityExponent_le_bourgain_piece_8
+      (σ:=39/40) (by norm_num) (by norm_num)
+    norm_num [sourceFaithfulFiniteDensityTable, bourgainPieceEight,
+      generatedBourgainPiece8, RationalAffineFraction.eval] at hh ⊢
+    exact hh
+  by_cases h41 : σ = 41/42
+  · subst σ
+    have hh := zeroDensityExponent_le_pintz_second_interior
+      (σ:=41/42) (by norm_num) (by norm_num)
+    norm_num [sourceFaithfulFiniteDensityTable] at hh ⊢
+    exact hh
+  rw [sourceFaithfulFinite_eq_printed h39 h41]
+  by_cases h60 : σ = 59/60
+  · subst σ
+    have hh := zeroDensityExponent_le_pintz_third_interior
+      (σ:=59/60) (by norm_num) (by norm_num)
+    norm_num [printedFiniteDensityTable] at hh ⊢
+    exact hh
+  exact zeroDensityExponent_le_printedFinite_regular hlo (lt_of_le_of_ne hhi h60) h39 h41
+
+/-- Pintz's proved tail cells are open at the lower sigma endpoint and
+closed at the upper endpoint. These cells cover every sigma above 59/60. -/
+theorem exists_sourceFaithful_tail_cell {σ : ℝ}
+    (hlo : 59/60 < σ) (hhi : σ < 1) :
+    ∃ n : ℕ, 6 ≤ n ∧
+      1-1/(2*(n:ℝ)*((n:ℝ)-1)) < σ ∧
+      σ ≤ 1-1/(2*(n:ℝ)*((n:ℝ)+1)) := by
+  obtain ⟨n, hn, hleft, hright⟩ := exists_printed_tail_cell hlo.le hhi
+  rcases hleft.eq_or_lt with he | hs
+  · have hn7 : 7 ≤ n := by
+      by_contra h
+      have hn6 : n = 6 := by omega
+      subst n
+      norm_num at he
+      linarith only [he, hlo]
+    have hnr : (7:ℝ) ≤ n := by exact_mod_cast hn7
+    have hm : ((n-1:ℕ):ℝ) = (n:ℝ)-1 := by
+      rw [Nat.cast_sub (by omega), Nat.cast_one]
+    have hd : 0 < 2*((n:ℝ)-1)*((n:ℝ)-2) :=
+      mul_pos (mul_pos (by norm_num) (by linarith only [hnr]))
+        (by linarith only [hnr])
+    have hlt : 2*((n:ℝ)-1)*((n:ℝ)-2) < 2*(n:ℝ)*((n:ℝ)-1) := by
+      nlinarith only [hnr]
+    refine ⟨n-1, by omega, ?_, ?_⟩
+    · rw [hm, ← he]
+      have hh := one_div_lt_one_div_of_lt hd hlt
+      convert sub_lt_sub_left hh 1 using 1
+      ring
+    · rw [hm, ← he]
+      have hid : 2*((n:ℝ)-1)*((n:ℝ)-1+1) = 2*(n:ℝ)*((n:ℝ)-1) := by ring
+      rw [hid]
+  · exact ⟨n, hn, hs, hright.le⟩
+
+/-- A deterministic least-index choice for the actual source cells.
+Outside their domain the harmless default is not used by the public bound. -/
+def sourceFaithfulTailIndex (σ : ℝ) : ℕ := by
+  classical
+  exact if h : ∃ n : ℕ, 6 ≤ n ∧
+      1-1/(2*(n:ℝ)*((n:ℝ)-1)) < σ ∧
+      σ ≤ 1-1/(2*(n:ℝ)*((n:ℝ)+1)) then Nat.find h else 6
+
+theorem sourceFaithfulTailIndex_spec {σ : ℝ}
+    (hlo : 59/60 < σ) (hhi : σ < 1) :
+    6 ≤ sourceFaithfulTailIndex σ ∧
+      1-1/(2*(sourceFaithfulTailIndex σ:ℝ)*((sourceFaithfulTailIndex σ:ℝ)-1)) < σ ∧
+      σ ≤ 1-1/(2*(sourceFaithfulTailIndex σ:ℝ)*((sourceFaithfulTailIndex σ:ℝ)+1)) := by
+  have he := exists_sourceFaithful_tail_cell hlo hhi
+  simp only [sourceFaithfulTailIndex, dif_pos he]
+  exact Nat.find_spec he
+
+/-- The complete proved table. It is not the stronger frozen printed table:
+source cells own their upper endpoints, not their lower endpoints. -/
+def sourceFaithfulDensityTable (σ : ℝ) : ℝ :=
+  if σ ≤ 59/60 then sourceFaithfulFiniteDensityTable σ else
+    3/((sourceFaithfulTailIndex σ:ℝ)*
+      (1-2*((sourceFaithfulTailIndex σ:ℝ)-1)*(1-σ)))
+
+/-- An unconditional actual-zero-density bound at EVERY sigma in [1/2,1).
+No endpoint inequality, continuity principle, or analytic output is assumed. -/
+theorem zeroDensityExponent_le_sourceFaithfulTable {σ : ℝ}
+    (hlo : 1/2 ≤ σ) (hhi : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤
+      ((sourceFaithfulDensityTable σ):EReal) := by
+  unfold sourceFaithfulDensityTable
+  split_ifs with hs
+  · exact zeroDensityExponent_le_sourceFaithfulFinite hlo hs
+  · obtain ⟨hn, hleft, hright⟩ := sourceFaithfulTailIndex_spec (lt_of_not_ge hs) hhi
+    exact zeroDensityExponent_le_pintz_tail_interior hn hleft hright
+
+/-- The index really is the unique source cell containing sigma; it is not
+an unspecified analytic choice. -/
+theorem sourceFaithfulTailIndex_eq {n : ℕ} {σ : ℝ} (hn : 6 ≤ n)
+    (hleft : 1-1/(2*(n:ℝ)*((n:ℝ)-1)) < σ)
+    (hright : σ ≤ 1-1/(2*(n:ℝ)*((n:ℝ)+1))) :
+    sourceFaithfulTailIndex σ = n := by
+  classical
+  have he : ∃ j : ℕ, 6 ≤ j ∧
+      1-1/(2*(j:ℝ)*((j:ℝ)-1)) < σ ∧
+      σ ≤ 1-1/(2*(j:ℝ)*((j:ℝ)+1)) := ⟨n, hn, hleft, hright⟩
+  simp only [sourceFaithfulTailIndex, dif_pos he]
+  apply (Nat.find_eq_iff he).mpr
+  refine ⟨⟨hn, hleft, hright⟩, ?_⟩
+  intro m hmn hm
+  have hmr : (6:ℝ) ≤ m := by exact_mod_cast hm.1
+  have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
+  have hmnreal : (m:ℝ)+1 ≤ n := by exact_mod_cast hmn
+  have hd : 0 < 2*(m:ℝ)*((m:ℝ)+1) := by positivity
+  have hdd : 2*(m:ℝ)*((m:ℝ)+1) ≤ 2*(n:ℝ)*((n:ℝ)-1) := by
+    nlinarith only [hmr, hnr, hmnreal,
+      mul_nonneg (show 0 ≤ (n:ℝ)-(m:ℝ)-1 by linarith only [hmnreal])
+        (show 0 ≤ (n:ℝ)+(m:ℝ) by linarith only [hmr, hnr])]
+  have hi := one_div_le_one_div_of_le hd hdd
+  linarith only [hm.2.2, hleft, hi]
+
+theorem sourceFaithfulDensityTable_of_tail_cell {n : ℕ} {σ : ℝ}
+    (hlo : 59/60 < σ) (hn : 6 ≤ n)
+    (hleft : 1-1/(2*(n:ℝ)*((n:ℝ)-1)) < σ)
+    (hright : σ ≤ 1-1/(2*(n:ℝ)*((n:ℝ)+1))) :
+    sourceFaithfulDensityTable σ = 3/((n:ℝ)*(1-2*((n:ℝ)-1)*(1-σ))) := by
+  rw [sourceFaithfulDensityTable, if_neg (not_le.mpr hlo),
+    sourceFaithfulTailIndex_eq hn hleft hright]
+
+/-- Every disputed tail lower endpoint has the preceding cell's value.
+This is strictly weaker than the separately retained target 3/(n-1). -/
+theorem sourceFaithfulDensityTable_tail_lower {n : ℕ} (hn : 6 ≤ n) :
+    sourceFaithfulDensityTable (1-1/(2*(n:ℝ)*((n:ℝ)-1))) =
+      3*(n:ℝ)/((n:ℝ)^2-2*(n:ℝ)+2) := by
+  by_cases hn6 : n = 6
+  · subst n
+    norm_num [sourceFaithfulDensityTable, sourceFaithfulFiniteDensityTable,
+      printedFiniteDensityTable]
+  have hn7 : 7 ≤ n := by omega
+  have hnr : (7:ℝ) ≤ n := by exact_mod_cast hn7
+  have hnp : (0:ℝ) < n := by linarith only [hnr]
+  have hnm : (0:ℝ) < (n:ℝ)-1 := by linarith only [hnr]
+  have hm : ((n-1:ℕ):ℝ) = (n:ℝ)-1 := by
+    rw [Nat.cast_sub (by omega), Nat.cast_one]
+  have hd : (60:ℝ) < 2*(n:ℝ)*((n:ℝ)-1) := by nlinarith only [hnr]
+  have hlo : (59/60:ℝ) < 1-1/(2*(n:ℝ)*((n:ℝ)-1)) := by
+    have hh := one_div_lt_one_div_of_lt (by norm_num : (0:ℝ) < 60) hd
+    linarith only [hh]
+  have hDm : 0 < 2*((n:ℝ)-1)*((n:ℝ)-2) :=
+    mul_pos (by positivity) (by linarith only [hnr])
+  have hDlt : 2*((n:ℝ)-1)*((n:ℝ)-2) < 2*(n:ℝ)*((n:ℝ)-1) := by
+    nlinarith only [hnr]
+  have hleft : 1-1/(2*((n-1:ℕ):ℝ)*(((n-1:ℕ):ℝ)-1)) <
+      1-1/(2*(n:ℝ)*((n:ℝ)-1)) := by
+    rw [hm, show (n:ℝ)-1-1 = (n:ℝ)-2 by ring]
+    exact sub_lt_sub_left (one_div_lt_one_div_of_lt hDm hDlt) 1
+  have hright : 1-1/(2*(n:ℝ)*((n:ℝ)-1)) ≤
+      1-1/(2*((n-1:ℕ):ℝ)*(((n-1:ℕ):ℝ)+1)) := by
+    rw [hm, show 2*((n:ℝ)-1)*((n:ℝ)-1+1) = 2*(n:ℝ)*((n:ℝ)-1) by ring]
+  rw [sourceFaithfulDensityTable_of_tail_cell hlo (by omega : 6 ≤ n-1) hleft hright, hm]
+  field_simp
+  ring
 
 end LiteratureTable
 

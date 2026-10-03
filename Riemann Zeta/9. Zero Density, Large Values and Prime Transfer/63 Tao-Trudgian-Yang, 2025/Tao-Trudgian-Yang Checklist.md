@@ -1,5 +1,62 @@
 # Tao--Trudgian--Yang 2025 checklist
 
+## Current endpoint impasse (3 October 2026)
+
+The third resumed check reaches the same missing analytic endpoint input.
+Further primary sources and an external Lean repository provide no closing
+contract; see Sources. The whole goal is blocked, not complete. Original
+EPZAE-30/39/40/41 remain OPEN, 38/42 complete. No weaker endpoint acceptance,
+new assumption, or source-only green gate is introduced. No Lean or BAT
+changed; the last actual BAT evidence is 89353/41454, both PASS. Earlier
+active-status checkpoints below are historical.
+
+## Continued trace-route check (3 October 2026)
+
+Scratch 86333 checks three further majorant/scale comparisons, not a
+positive-LV or density estimate. Production remains unchanged and
+EPZAE-30/39/40/41 remain OPEN, 38/42 complete. See Sources and Reproduction
+Manifest for exact statements and verification; no source target is weakened.
+Foundation BAT 89353 and paper BAT 41454 both PASS, exit 0, zero Lean
+diagnostics. These checks do not close the remaining acceptance clauses.
+
+## Total source-faithful table (3 October 2026)
+
+Five further actual pair consumers are installed: improved first endpoint
+3560/4399, improved ALL-tail endpoints
+3/(n-2+2/n+1/(2*n*(n-1))), and the closed first LV range through
+135765/36668. Standalone 20747 and focused build 70917 PASS with zero
+Lean diagnostics. Nine further exact examples and five audits bring
+totals to 8121 and 7359. These improvements remain weaker than the literal
+targets; none of the four open acceptance gates is crossed out.
+
+The existing LiteratureDensity module now proves
+`LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable` on ALL of
+[1/2,1), with no excluded endpoints. Three definitions and eight theorems,
+15 exact regressions and 11 explicit audits are installed; focused build
+57680 and regression 81182 PASS with zero Lean diagnostics.
+Its endpoint values are weaker than the frozen printed targets. This
+does NOT close the unchanged EPZAE-30 acceptance clause or establish that
+the printed endpoint inequalities are false. EPZAE-30/39/40/41 remain
+OPEN, 38/42 complete, pending the sharper proofs. The owner has clarified
+that alternate proofs may repair the paper's path while retaining its
+end statements; no weaker endpoint acceptance is authorized. See Goal
+Prompt, Sources and Reproduction Manifest. Earlier blocked reports below
+are historical.
+
+BOTH final BATs PASS: foundation 96455 and paper 14724, exit 0,
+zero Lean diagnostics; paper audit checks 21206 declarations and all
+1452 package files. Two historical Python SyntaxWarnings remain visible.
+Verification does not close EPZAE-30/39/40/41; exact logs are in
+Reproduction Manifest.
+
+## Resumed endpoint audit result (3 October 2026)
+
+EPZAE-30/39/40/41 remain OPEN, 38/42 complete. Focused check 15317 proves
+only the additional one-step shifted-derivative route limitation; no
+acceptance gate closes. The missing analytic input persists after three
+resumed checks, so the unchanged whole goal is blocked. Sources and
+Reproduction Manifest record the precise scope and verification.
+
 ## Resumed source check (3 October 2026)
 
 EPZAE-30/39/40/41 remain OPEN, 38/42 complete. Sources now traces the

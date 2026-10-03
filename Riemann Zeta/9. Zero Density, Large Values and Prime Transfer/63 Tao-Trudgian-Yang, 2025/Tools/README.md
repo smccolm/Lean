@@ -1,5 +1,19 @@
 # Tooling record
 
+## Source verification and final endpoint-bridge run (3 October 2026)
+
+The owner-supplied Pintz PDF is now hash-pinned. Both manifest reads in
+`verify_sources.ps1` explicitly use UTF-8 so Windows PowerShell preserves
+the filename's curly apostrophe. No PDF bytes, old pins, BAT entrypoint,
+coverage rule, warning gate or audit policy changed.
+Final paper BAT 14724 PASSes, exit 0: 22 source pins, 1926 scanned Lean
+files, 1452 covered package files, 10785 build jobs, full and repeated
+semantic regression, and 21206 dependency audits. Foundation BAT 96455
+also PASSes. Both have zero Lean diagnostics; the two frozen-Python
+invalid-escape SyntaxWarnings remain visible. Exact logs and hashes,
+including the initial missing-pin failure and superseded run, are in
+Reproduction Manifest. Mathematical acceptance remains 38/42.
+
 ## Endpoint-packet integration (2 October 2026)
 
 The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN

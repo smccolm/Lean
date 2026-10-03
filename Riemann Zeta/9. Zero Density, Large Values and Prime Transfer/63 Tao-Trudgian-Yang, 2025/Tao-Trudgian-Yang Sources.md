@@ -1,5 +1,251 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
+## Further source check and current endpoint impasse (3 October 2026)
+
+This is the third consecutive resumed check of the same missing uniform
+far-correlation/positive-LV input after the latest owner clarification.
+The positive pair consumers and the subsequent checked trace comparisons
+are preserved. Neither they nor the additional sources below close the
+three original endpoint targets. All identified routes terminate before
+the required analytic estimate; no closing proof has been found. This is
+an impasse in this implementation, not a proof of impossibility or of a
+false density statement. No inaccessible document is established necessary.
+
+[Fiori, Zero Density Theorems for Short Intervals (18 September 2026)](https://arxiv.org/html/2609.22624v1),
+Theorems 2--3, was checked for a usable replacement. For fixed admissible
+alpha and radius, the displayed bounds have size O((h+1)*log(t)). Merely
+covering [T,2T] with these windows gives O(T*log(T)), not the required
+T^(3/170+epsilon) at sigma=41/42. This is a comparison of those displayed
+bounds, not a claim that every refinement of the method must fail. The
+paper's complete analytic proof was not audited.
+
+The accompanying
+[Lean repository](https://github.com/andrewfiori/ZeroDensityInShortIntervals)
+and its complete
+[assumption inventory](https://github.com/andrewfiori/ZeroDensityInShortIntervals/blob/main/Assumptions.txt)
+were inspected. The repository reports 27 assertions in six hypothesis
+classes: 16 literature inputs and 11 numerical certificates. Its seven
+headline theorems therefore cannot be treated as assumption-free inputs
+merely because their axiom audits show only standard logical axioms.
+No listed input supplies the missing Pintz endpoint. No external code was
+imported or built. Solution.lean itself remained unread after GitHub/raw
+web failures and a failed direct public-URL fetch; this is not an essential
+access blocker, since the advertised conclusion is already insufficient.
+External build conventions and instructions were treated as source data.
+
+[Fiori--Jaskari, Explicit bounds for the prime number theorem (19 September 2026)](https://arxiv.org/html/2609.23222v1),
+Sections 2.4 and 5, uses a zero-density INPUT with power
+T^((8/3)*(1-sigma)), together with logarithmic terms. Its resulting PNT
+error bound is not a proof of the stronger density estimate sought here;
+no reverse implication is supplied by those statements. Only the relevant
+statements and input direction were checked, not the complete proof.
+
+[Pintz, On the Density Hypothesis for the Selberg Class](https://arxiv.org/pdf/2408.00617),
+the theorem on p. 3, specializes to A<=2 for the Riemann zeta function
+when eta<=1/10, not A(41/42)<=63/85. The later general-density estimator
+statements in the Dedekind note and Pintz--Revesz Lemma 1 were rechecked;
+the previously recorded growth substitutions still do not close the gap.
+The current [ANTEDB Pintz theorem](https://teorth.github.io/expdb/blueprint/zero-density-chapter.html)
+also retains strict upper eta endpoints. None of these checks establishes
+that the whole literature lacks a repair.
+
+No Lean source, runner, dependency, counterexample or regression changed
+in this source-only continuation. Original EPZAE-30/39/40/41 remain OPEN,
+38/42 complete. The exact sufficient strips and source-margin obstruction
+are retained below; no weaker table is substituted for acceptance.
+
+## Continued signed-correlation route check (3 October 2026)
+
+The actual near/far Gram reduction was reread, together with the completed
+Guth--Maynard spectral-dispersion and eight-root consumers. The unchanged
+`gmSection12_equation12_1_smooth` requires T^(3/4)<=N; its first physical
+root is N^2/V^2. At sigma=41/42, a proposed q-th powering and a height
+window of exponent theta therefore have theta<=tau, 3*theta/4<=q, and
+diagonal/subdivision exponent tau-theta+q/21. Even allowing every REAL q,
+this is at least tau/28, exceeding the required 3*tau/170 by at least
+1591/16660 when tau>=37/7. Fractional powering is NOT asserted available.
+
+The existing alternate-route scratch file now proves this comparison and
+also checks that EVERY positive integer powering of the ACTUAL
+`guthMaynardLargeValueExponent` permits rho=2/21. Check 86333 passes all
+18 named declarations, 34 examples and 18 explicit dependency audits,
+with zero Lean diagnostics. No production module or acceptance gate changes.
+These are limitations of the specified majorants, not actual pattern
+witnesses, endpoint counterexamples, or an exclusion of stronger trace
+estimates without the source scale restriction.
+
+A different source route was checked in
+[Montgomery--Vaughan, Multiplicative Number Theory III, Theorem 28.7, printed p. 218](https://personal.science.psu.edu/rcv4/Vol3/Vol3.pdf).
+Its growth-function bound, with the displayed Heath--Brown input
+mu(s)<=((1-s)^(3/2))/2, gives 9/(2*sqrt(14)) at sigma=41/42, above 63/85.
+This is the arithmetic of that substitution, not a new Lean density proof
+or a claim that every growth input fails. The full #74 release was also
+rechecked: its Pintz cutoff gives A<=1 and its explicit first cell stops
+before the disputed points; the near-one detector retains the strict margin.
+The same three exact endpoint targets remain OPEN, with no essential
+source-access, permission or build blocker.
+
+The current-source search also checked
+[Durkan--Page, Amplified moments, v2 (5 August 2026), Sections 1.1--1.3](https://arxiv.org/pdf/2606.27323v2).
+Its higher-moment applications are lower bounds. Its amplified second/fourth
+moment formulas have length restrictions theta_k<1/(2*k) and
+vartheta_k<1/(4*k), respectively; they are not unrestricted high-moment
+upper bounds. No consumer deriving the missing endpoint estimate from
+these formulas was found; no such implication is claimed or installed.
+The full proof was not audited. Bellotti's shrinking-strip Theorem 1.1
+was rechecked; its domain still does not eventually contain a fixed
+sigma=41/42. The Pintz slide URL again returned a redirect loop.
+These checks supply no new essential source-access requirement.
+
+## Exact obstruction and source-faithful positive result (3 October 2026)
+
+The subsequent local dependency search produced FIVE actual analytic
+consumers, checked in standalone 20747, installed in LiteratureDensity,
+and checked again by focused build 70917 and installed regression 84654:
+
+- The fourth new pair gives the actual global cardinality bound
+  LV(39/40,tau) <= 1/20 + max(0,tau-3277/890).
+- Hence the exact required first-strip bound 2*tau/105 holds on the
+  CLOSED range [21/8,135765/36668], not merely tau<17/5.
+- Montgomery transfer with cutoff 13197/3560 and the already-proved full
+  endpoint zeta window yields A(39/40)<=3560/4399.
+- The actual Heath--Brown pair at order n supplies a CLOSED generic
+  cutoff n-2+2/n at every tail endpoint.
+- Its Montgomery transfer, with cutoff n-2+2/n+1/(2*n*(n-1)), yields
+  A(1-1/(2*n*(n-1))) <= 3/(n-2+2/n+1/(2*n*(n-1))) for ALL n>=6.
+  Concrete checked instances are 20/29 at 59/60 and 252/445 at 83/84.
+
+These improve the source-faithful baseline tabulated below. They do NOT
+replace that separately proved baseline or close the stronger printed
+endpoint targets. No new analytic premise or support-module family was
+introduced. There are nine new exact examples and five new explicit audits.
+
+The new production theorem
+`LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable` proves a
+total, actual zero-density envelope on [1/2,1), with no excluded points
+and no analytic theorem as a hypothesis. It uses the existing proved
+finite rows and Pintz tail cells (open lower sigma, closed upper sigma).
+The frozen printed table is untouched. The changed boundary values are:
+
+| sigma | Frozen printed target | Proved source-faithful value |
+| --- | --- | --- |
+| 39/40 | 16/21 | 1424/1649 |
+| 41/42 | 63/85 | 28/37 |
+| 1-1/(2*n*(n-1)), n>=6 | 3/(n-1) | 3*n/(n^2-2*n+2) |
+
+All other row formulas are preserved. In particular the corrected value
+at 59/60 is 9/13, at 83/84 it is 21/37, and at 111/112 it is 12/25.
+The least-index selector is proved to choose the actual source cell.
+Fifteen exact regressions and eleven explicit audits accompany the result.
+This corrects source provenance and supplies an everywhere-valid table;
+it does NOT prove the stronger printed endpoints false or true. The owner
+has clarified that alternate paths are authorized when they prove the
+paper's end statements. The stronger endpoint acceptance is therefore
+unchanged; the weaker table is a separate result, not an accepted substitute.
+
+The exact remaining sufficient analytic obligations in the current
+transfer route are:
+
+1. LV(39/40,tau) <= 2*tau/105 on (135765/36668,63/16].
+2. LV_zeta(41/42,tau) <= 3*tau/170 on [37/7,340/63).
+3. LV(1-1/(2*n*(n-1)),tau) <= 3*tau/(2*n*(n-1)^2)
+   on [n-2+2/n,n-1], for every integer n>=6.
+
+The second left endpoint is included. The tail range shown is a conservative
+sufficient interval: the new closed Montgomery consumer already controls
+its old left boundary, while the interior above it remains unresolved.
+These conditions are sufficient for the
+installed transfer, not necessary conditions for every possible proof.
+The completed Add-est alternatives were also checked against these points:
+the existing `two_mul_zeroDensityExponent_le_zeroDensityEnergyExponent`
+does convert energy bounds to cardinality bounds, but all nine new Add-est
+conclusions have upper sigma at most 5/6. They cannot be specialized to
+the disputed near-one points. Bellotti--Yang Lemma 3.2 was resampled with
+its domain c>=theta and the optimistic limiting epsilon0=0: the best
+sampled saving p*(41/42-c) was about 4.089, whereas the current moment
+transfer needs at least 6179/1190 (about 5.192) already at tau=37/7.
+This floating-point search is discovery only, NOT a proof excluding all
+parameters or all moment approaches; it supplies no closing candidate.
+The actual signed-Gram entry and complementary windows are already
+proved. The missing piece is a uniform bound on the remaining large
+values/far correlations, not a tactic, build, credential, or file access.
+No density counterexample has been found. Existing scalar majorant
+limitations are NOT counterexamples or proof that every route must fail.
+
+The supplied Pintz manuscript's (3.1) requires
+xi <= 1/(r*(r-1))-6*epsilon. At the disputed choices xi=1/(r*(r-1)),
+the middle term before absorption has exponent 3*epsilon. A fixed
+rescaling changes constants but not this positive exponent. Thus the
+newly checked small-constant alternative does not follow from that input.
+
+No inaccessible document is established necessary to continue. Actual
+access failures, distinguished from mathematical requirements:
+
+- The [final 2023 journal version](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/208/1/115159/density-theorems-for-riemann-s-zeta-function-near-the-line-rm-re-s-1):
+  the normal product-115159 download was retried and redirected to the
+  publisher homepage. The complete owner-supplied author manuscript is
+  available, read, and now included in Sources/SHA256SUMS.txt.
+- [Pintz's lecture slides](https://elaz.amu.edu.pl/Slides/Pintz.pdf):
+  the web retry again reported a redirect loop. Earlier direct HTTPS
+  reported an expired certificate; HTTP returned 404. No TLS checks
+  were disabled. These slides are not established necessary.
+- [On a general density theorem, 2024](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/214/0/115526/on-a-general-density-theorem):
+  both ordinary product-115526 download paths redirected to the homepage.
+  The previously read 2023 general-density remark remains available;
+  no claim is made that the unread 2024 text contains an endpoint repair.
+
+Further accessible substitutes were checked during the final audit:
+[Pintz, A note on the zeros of the Dedekind zeta functions](https://real.mtak.hu/233624/1/article-10.1556-314.2024.00009.pdf),
+p. 4, restates a special case of the 2024 general theorem as Theorem A.
+[Pintz--Revesz, New zero-density estimates for the Beurling zeta function](https://www.impan.pl/shop/publication/transaction/download/product/116232),
+Lemma 1, states and sketches a version allowing equality of the estimator
+functions and an unrestricted positive zeta shift parameter. Thus this
+particular source information is accessible despite the original download
+failure. Its conclusion uses max(2*lambda_f(eta),4*lambda_zeta(2*eta)).
+For f=zeta and eta=1/42, the Heath--Brown growth input with shift parameter
+2 gives lambda_zeta(2*eta)=3/(4*sqrt(7)); choosing the first estimator at
+least this large gives 3/sqrt(7), still weaker than 63/85. This is one
+explicit substitution, not an exclusion of all growth estimators or a
+new Lean result. The Dedekind-specific Theorem 4.1 requires field degree
+at least two and does not directly specialize to the Riemann case.
+
+These are records of access attempts, not grounds to demand more material
+from the owner or to claim all of the internet has been exhausted.
+The original EPZAE-30/39/40/41 acceptance remains OPEN (38/42 complete).
+
+The paper BAT initially failed because the newly supplied PDF was absent
+from its hash manifest. Its actual SHA-256 was added and both manifest
+reads now explicitly use UTF-8, preserving the curly apostrophe in the
+filename under Windows PowerShell. No file was renamed, no old pin changed,
+and no integrity check was bypassed. The full rerun checks all 22 pins.
+
+## One-step shifted-derivative route check (3 October 2026)
+
+The existing alternate-route scratch file now proves
+`one_shift_derivative_second_strip_gap`. For EVERY integer r >= 3,
+tau >= 37/7 and real h >= 0, it shows
+
+    41/42 + 1/168 <= max (1-h/2)
+      ((1+(tau+h-1)*heathBrownBetaBound r (1/(tau+h-1)))/2).
+
+Here h is the shift-length exponent in the candidate one-step Weyl
+differencing route, with shifted phase height exponent tau+h-1. The
+square-root conversion matches the existing differencing scale. For
+r=3,4,5 the first raw derivative branch suffices; for r>=6 the middle
+branch suffices. Thus this particular shifted-derivative majorant cannot
+provide strict pointwise saving at sigma=41/42, even before epsilon losses.
+It does NOT rule out the requested positive-cardinality estimate, further
+analytic processes, or cancellation between correlations. No phase-family
+consumer or endpoint theorem is claimed by this scalar result.
+
+Focused session 15317 PASSes: 15 named declarations, 30 exact examples,
+15 explicit audits, zero Lean diagnostics. SHA-256:
+`b5b64b9ebf77d958a6788f9339dd679d1a219679a26b08ffec2cccc20d910296`.
+No production source or BAT changed. The same missing far-correlation/
+positive-LV input remains after the resumed source, supplied-PDF and
+shifted-derivative checks; no checked closing route remains. The whole
+goal is blocked, not completed or weakened. EPZAE-30/39/40/41 remain OPEN.
+
 ## Author-proof trace after resumption (3 October 2026)
 
 Owner-supplied copy received and read in full (all 15 pages):

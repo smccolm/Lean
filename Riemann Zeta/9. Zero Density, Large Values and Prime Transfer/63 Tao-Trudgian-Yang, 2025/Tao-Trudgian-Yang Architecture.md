@@ -1,4 +1,11 @@
 flowchart TD
+%% CURRENT ENDPOINT IMPASSE (3 October 2026): third resumed check still lacks the uniform far-correlation/positive-LV input. Additional primary sources and an external Lean repository supply no closing contract; see Sources. Whole goal blocked, not complete; ORIGINAL EPZAE-30/39/40/41 OPEN, 38/42. Earlier active-status comments are historical. No analytic node or dependency edge closes. No code/BAT change or new build in this source-only continuation; last actual BATs 89353/41454 PASS.
+%% CONTINUATION VERIFICATION (3 October 2026): foundation BAT 89353 and paper BAT 41454 PASS, exit 0, zero Lean diagnostics; 21206 paper dependency audits and separate semantic regression pass. Exact logs/hashes in Reproduction Manifest. No mathematical gate closes; original EPZAE-30/39/40/41 remain OPEN, 38/42.
+%% CONTINUATION CHECK (3 October 2026): scratch 86333 proves only powered Guth--Maynard/cubic-trace scale comparisons. The existing T^(3/4)<=N trace route has diagonal/window exponent >=tau/28 at sigma=41/42, above the target. No analytic node closes; original EPZAE-30/39/40/41 stay OPEN, 38/42. See Sources and Reproduction Manifest.
+%% FINAL VERIFICATION (3 October 2026): foundation BAT 96455 and paper BAT 14724 PASS, exit 0, zero Lean diagnostics; all 1452 package files, 8121 exact examples and 21206 dynamic audits checked. Two historical Python SyntaxWarnings remain visible. Original endpoint gates EPZAE-30/39/40/41 stay OPEN; acceptance 38/42. Exact logs/hashes in Reproduction Manifest.
+%% OWNER CLARIFICATION (3 October 2026): alternate proof paths are authorized to recover the paper's end statements; a weaker endpoint table is NOT a substitute for the original acceptance targets. No status or target is weakened.
+%% CURRENT RESUMPTION (3 October 2026): SFENV is the complete source-faithful table, not a proof or disproof of the stronger printed endpoints. Original acceptance unchanged, 38/42 complete. Earlier blocked comments are historical; no inaccessible source is established necessary. See Goal Prompt and Reproduction Manifest.
+%% RESUMED ENDPOINT AUDIT (3 October 2026): scratch 15317 checks one-step shifted-derivative majorants for all orders, with gap 1/168 above 41/42. No positive-LV or endpoint theorem follows. Same missing analytic input persists through three resumed checks; whole goal blocked, EPZAE-30/39/40/41 OPEN. No graph node or edge closes; production/BATs unchanged.
 %% RESUMED SOURCE TRACE (3 October 2026): Pintz (3.1)--(3.2), (4.21)--(4.23) use the strict derivative margin; smoothing does not remove it. Checked later growth choices and direct reverse-density transfer do not close the endpoints. Final journal text uninspected. No node or edge changes; EPZAE-30/39/40/41 OPEN. See Sources, Author-proof trace after resumption.
 %% POWERED-ENERGY CHECK (3 October 2026): scratch 31293 permits rho=2/21 above the second-strip target for all documented integer-powered energy/Jutila constraints. No actual pattern witness or density counterexample is claimed. Far-correlation/positive-LV input remains the technical impasse; EPZAE-30/39/40/41 OPEN. No graph node or dependency edge closes; production and both BAT snapshots unchanged.
 %% RESEARCH CHECK (3 October 2026): scratch 37937 proves classical-moment and unchanged pointwise/mean-value route losses on the second Pintz strip; see Sources. No production node or edge closes. Signed Gram -> checked near absorption -> OPEN far estimate -> OPEN exact endpoints remains the current chain. Both BAT-verified production snapshots are unchanged.
@@ -734,7 +741,15 @@ flowchart TD
     OBD["EPZAE-29 exact eight-piece bound DONE;<br/>optimizedBourgain_bound, 3/4 &lt; sigma &lt; 1;<br/>all eight analytic inputs discharged;<br/>exact regressions, audits and BOTH BATs PASS"]
     BZCL["EPZAE-29 genuine analytic convex limit<br/>closed k and affine-range boundaries DONE"]
     BZOPT["EPZAE-29 eight exact analytic pair consumers<br/>three actual inputs discharged;<br/>five-input conditional assembly DONE"]
-    ZTAB["EPZAE-30 best-known density envelope<br/>OPEN; endpoint-packet snapshot: BOTH BATs PASS;<br/>closed tail zeta + finite complementary windows CHECKED;<br/>actual signed Gram entry CHECKED; near absorption SCRATCH CHECKED;<br/>far correlation -> positive-cardinality strips -> exact endpoints -> total envelope OPEN"]
+    ZTAB["EPZAE-30 literal printed density envelope OPEN;<br/>stronger Pintz lower endpoints UNPROVED, not disproved;<br/>signed Gram + near absorption CHECKED;<br/>far correlation -> positive-LV strips -> exact endpoints OPEN"]
+    SFENV["EPZAE-30 separate source-faithful envelope CHECKED;<br/>every sigma in [1/2,1), no endpoint holes;<br/>source-valid tail index + exact boundary regressions;<br/>weaker boundary values do NOT close literal acceptance"]
+    EPPAIR["EPZAE-30 positive endpoint-pair bridges CHECKED;<br/>first A <= 3560/4399; all-tail improved bounds;<br/>first exact LV interval closed through 135765/36668;<br/>stronger printed endpoints still OPEN"]
+    NEP --> EPPAIR
+    EPPAIR -. "narrows first residual interval" .-> ZTAB
+    OBD --> SFENV
+    HBD --> SFENV
+    GM --> SFENV
+    SFENV -. "separate corrected contract, not endpoint proof" .-> ZTAB
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
     ER["EPZAE-32 energy exponents and regions<br/>DONE"]
@@ -2215,6 +2230,8 @@ flowchart TD
     classDef done fill:#d9f2df,stroke:#26753a,color:#123d1e,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
+    class SFENV done;
+    class EPPAIR done;
     class ML,ED,GM,PY,SRC,GFN available;
     class ZGDEF,ZGLOG,ZGWGT,ZGCOEF,ZGSHARP,ZGDS,ZGBRIDGE done;
     class ZLCO,ZLCE,ZLPM,ZLPC,ZLCL,ZLEX,ZLFD done;

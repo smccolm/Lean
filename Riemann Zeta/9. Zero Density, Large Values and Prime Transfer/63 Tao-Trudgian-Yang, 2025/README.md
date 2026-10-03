@@ -1,5 +1,33 @@
 # Tao--Trudgian--Yang 2025 formalization
 
+Current status (3 October 2026): original endpoint proof at a mathematical
+impasse; 38/42 complete, EPZAE-30/39/40/41 OPEN. Further sources did not
+supply the missing uniform large-values estimate. No stronger endpoint
+is declared false or replaced by the weaker table. See Goal Prompt and
+Sources. No code changed in this source-only continuation; the last actual
+BATs are 89353/41454, both PASS, not new runs.
+
+## Source-faithful envelope, distinct from printed endpoints (3 October 2026)
+
+Additional proved bridges improve A(39/40) to 3560/4399 and every tail
+endpoint to 3/(n-2+2/n+1/(2*n*(n-1))). The first required large-values
+range now includes 135765/36668. These actual analytic improvements use
+existing pairs and do not establish the sharper printed endpoint targets.
+
+`LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable` now proves
+the actual literature envelope on every sigma in [1/2,1) with source-valid
+endpoint ownership. The frozen printed table remains separate: its
+stronger lower-endpoint claims are still unproved, not disproved.
+No original acceptance target has been weakened; EPZAE-30/39/40/41
+remain OPEN (38/42 complete). See Goal Prompt for the exact distinction
+and Reproduction Manifest for current verification.
+
+Final verification: BOTH mandatory BATs PASS (foundation 96455, paper
+14724), exit 0, zero Lean diagnostics. The paper run includes all 1452
+package files, 8121 exact regressions and 21206 dependency audits.
+Two historical Python SyntaxWarnings remain visible. Exact commands,
+logs, hashes and earlier failed/superseded runs are in Reproduction Manifest.
+
 ## Endpoint-packet integration (2 October 2026)
 
 The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN

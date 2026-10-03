@@ -1,5 +1,33 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
+Current source-only check (3 October 2026): no consumer or proof status
+changes. Original endpoint acceptance remains OPEN at the analytic
+impasse, 38/42 complete; the weaker consumers below remain separate.
+Latest actual BAT evidence is 89353/41454, both PASS, not new runs.
+See Sources for additional papers and the external Lean hypothesis audit.
+
+## Positive endpoint bridges and separate envelope (3 October 2026)
+
+All three consumers below are in the existing `LiteratureDensity.lean`.
+They have no assumed analytic output. Their supporting declarations add
+24 exact examples and 16 explicit audits, giving totals 8121 and 7359.
+
+| Public consumer | Actual upstream proof | Exact scope |
+| --- | --- | --- |
+| `LiteratureTable.zeroDensityExponent_le_sourceFaithfulTable` | proved finite rows and source-valid tail-cell selection | every sigma in [1/2,1), with weaker values at the disputed lower endpoints |
+| `zeroDensityExponent_le_pintz_first_endpoint_pair` | fourth new pair, closed-cutoff subdivision, endpoint zeta window, Montgomery transfer | A(39/40)<=3560/4399, not the printed 16/21 |
+| `zeroDensityExponent_le_pintz_tail_endpoint_pair` | Heath--Brown pair family, closed cutoff, full tail zeta windows, Montgomery transfer | A(1-1/(2*n*(n-1)))<=3/(n-2+2/n+1/(2*n*(n-1))), all n>=6, not the printed 3/(n-1) |
+
+The first exact LV range also extends to the CLOSED value 135765/36668.
+The owner authorizes alternate paths to the same end statements, not
+weaker endpoint acceptance. EPZAE-30/39/40/41 remain OPEN, 38/42 complete.
+See Reproduction Manifest for current builds; entries below are historical.
+
+Final foundation 96455 and paper 14724 BATs PASS with zero Lean diagnostics;
+all 1452 package files and 21206 discovered dependency audits are covered.
+The two frozen-Python SyntaxWarnings remain visible. These results verify
+the stated consumers, not the stronger endpoint acceptance targets.
+
 ## Endpoint-packet integration (2 October 2026)
 
 The original endpoint contract remains fixed; EPZAE-30/39/40/41 remain OPEN

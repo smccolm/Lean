@@ -13,7 +13,7 @@ if (-not (Test-Path -LiteralPath $ledgerPath -PathType Leaf)) {
 $failures = [System.Collections.Generic.List[string]]::new()
 $checked = 0
 
-foreach ($line in Get-Content -LiteralPath $ledgerPath) {
+foreach ($line in Get-Content -LiteralPath $ledgerPath -Encoding UTF8) {
     if ([string]::IsNullOrWhiteSpace($line) -or $line.StartsWith('#')) {
         continue
     }
@@ -43,7 +43,7 @@ foreach ($line in Get-Content -LiteralPath $ledgerPath) {
     Write-Host "PASS $relative"
 }
 
-$listed = Get-Content -LiteralPath $ledgerPath |
+$listed = Get-Content -LiteralPath $ledgerPath -Encoding UTF8 |
     Where-Object { $_ -match '^[0-9a-fA-F]{64}  (.+)$' } |
     ForEach-Object { $Matches[1].Replace('\', '/') }
 
