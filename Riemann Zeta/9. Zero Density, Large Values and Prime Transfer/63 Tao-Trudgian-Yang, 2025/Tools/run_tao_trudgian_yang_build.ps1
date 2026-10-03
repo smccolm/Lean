@@ -241,6 +241,9 @@ try {
         Write-Host 'STAGE: Lean package bootstrap inventory'
         $leanPackageFiles = @(
             'Extension\TaoTrudgianYang2025.lean',
+            'Extension\TaoTrudgianYang2025\LiteratureDensity.lean',
+            'Extension\TaoTrudgianYang2025\IvicNineteenthDensity.lean',
+            'Extension\TaoTrudgianYang2025\CDVMixedDensity.lean',
             'Extension\TaoTrudgianYang2025\HeathBrownModelJets.lean',
             'Extension\TaoTrudgianYang2025\HeathBrownPhysicalPhase.lean',
             'Extension\TaoTrudgianYang2025\HeathBrownExponentAlgebra.lean',

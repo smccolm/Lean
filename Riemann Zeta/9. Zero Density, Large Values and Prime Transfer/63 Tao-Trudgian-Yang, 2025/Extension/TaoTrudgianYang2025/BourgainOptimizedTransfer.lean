@@ -2,11 +2,12 @@ import TaoTrudgianYang2025.BourgainPairDensityClosure
 import TaoTrudgianYang2025.BourgainPiecewiseCertificates
 import TaoTrudgianYang2025.SquareProductCount
 import TaoTrudgianYang2025.HuxleyLinearForms
+import TaoTrudgianYang2025.HeathBrownBetaTable
 
-/-! Analytic consumers for the optimized rational table. Seven pair inputs
-are discharged below from proved source estimates, including the first two
-new published pairs. Only the third new published pair, needed by piece 8,
-remains open; full table closure is not claimed. -/
+/-! Analytic consumers for the optimized rational table. All eight pair inputs
+are discharged below from proved source estimates. All four new published
+pairs and the unconditional eight-piece theorem are proved in this module.
+The explicit-input interfaces are retained for compatibility. -/
 
 noncomputable section
 namespace TaoTrudgianYang2025
@@ -179,9 +180,9 @@ theorem zeroDensityExponent_le_bourgain_piece_7 {σ : ℝ}
     zeroDensityExponent σ ≤ ((bourgainPieceSeven σ):EReal) :=
   CubicJointCount.exponentPair_sargosAD_bourgain.bourgain_piece_7 hσ hσ1
 
-/-- Legacy explicit-input assembly preserving its original signature. Four
-of these five pair inputs are now proved below; only the piece-8 input
-remains open. This conditional interface does not assert full table closure. -/
+/-- Legacy explicit-input assembly preserving its original signature. All
+five inputs are proved below and discharged in `optimizedBourgain_bound`.
+This interface retains its explicit hypotheses for compatibility. -/
 theorem optimizedBourgain_bound_of_remaining_pairs {σ : ℝ}
     (h2 : ExponentPair (391/4595) (3461/4595))
     (h3 : ExponentPair (2779/38033) (58699/76066))
@@ -347,5 +348,101 @@ theorem zeroDensityExponent_le_bourgain_piece_5 {σ : ℝ}
     (hσ : 1625/1692 < σ) (hσ1 : σ ≤ 1) :
     zeroDensityExponent σ ≤ ((bourgainPieceFive σ):EReal) := by
   exact exponentPair_taoTrudgianYang_secondNew.bourgain_piece_5 hσ hσ1
+
+open scoped NNReal
+
+/-- Closed half-interval coverage for the fourth pair, reusing the native
+Heath--Brown derivative bounds and the already proved sixth row outside
+the actual double-shift short-range interval. -/
+private theorem taoTrudgianYang_fourthNew_half_beta
+    {α : ℝ≥0} (hhalf : (α:ℝ)≤1/2) :
+    Expdb.exponentSumGrowthExponent α≤89/3478+(7441/8695)*(α:ℝ) := by
+  by_cases hpos : 0<(α:ℝ)
+  swap
+  · have hz : α=0 := NNReal.coe_injective (le_antisymm (le_of_not_gt hpos) α.coe_nonneg)
+    subst α
+    rw [exponentSumGrowthExponent_zero]
+    norm_num
+  by_cases h7 : (α:ℝ)≤1/6
+  · have hh := exponentSumGrowthExponent_le_heathBrown_of_derivative
+      GafniTao.heathBrownKthDerivativeTheorem_native (by norm_num : 3≤(7:ℕ)) hpos
+    apply hh.trans
+    rw [heathBrownBetaBound_eq_max (by norm_num : 3≤(7:ℕ))]
+    norm_num [heathBrownDerivativeExponent,heathBrownInverseExponent]
+    refine ⟨?_,?_,?_⟩ <;> linarith only [h7,α.coe_nonneg]
+  by_cases h6 : (α:ℝ)≤3/13
+  · have hh := exponentSumGrowthExponent_le_heathBrown_of_derivative
+      GafniTao.heathBrownKthDerivativeTheorem_native (by norm_num : 3≤(6:ℕ)) hpos
+    apply hh.trans
+    rw [heathBrownBetaBound_eq_max (by norm_num : 3≤(6:ℕ))]
+    norm_num [heathBrownDerivativeExponent,heathBrownInverseExponent]
+    refine ⟨?_,?_,?_⟩ <;> linarith only [lt_of_not_ge h7,h6]
+  by_cases h5 : (α:ℝ)≤1/4
+  · have hh := exponentSumGrowthExponent_le_heathBrown_firstRow h5
+    linarith only [hh,lt_of_not_ge h6]
+  by_cases hlo : (α:ℝ)≤890/3277
+  · have hh := exponentSumGrowthExponent_le_heathBrown_secondRow (le_of_not_ge h5) hlo
+    linarith only [hh,hlo]
+  by_cases hhi : (α:ℝ)≤17604372/60424193
+  · exact HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_fourthPair_shortRange
+      (le_of_not_ge hlo) hhi
+  have hh := CubicJointCount.exponentSumGrowthExponent_le_trudgianYang_sixthRow
+    (α:=α) (by linarith only [hhalf])
+  linarith only [hh,lt_of_not_ge hhi]
+
+
+/-- The fourth new analytic exponent pair, obtained from complete beta
+coverage, not from a rational triangle certificate or an assumed pair. -/
+theorem exponentPair_taoTrudgianYang_fourthNew :
+    ExponentPair (89/3478) (15327/17390) := by
+  apply exponentPair_of_beta_bound_half
+    (by norm_num [InExponentPairTriangle]) (by norm_num)
+  intro α hhalf
+  have hh := taoTrudgianYang_fourthNew_half_beta hhalf
+  unfold exponentPairLine
+  linarith only [hh]
+
+/-- The third new analytic exponent pair. Every source estimate is discharged,
+including both endpoints of the two short-range intervals. -/
+theorem exponentPair_taoTrudgianYang_thirdNew :
+    ExponentPair (10769/351096) (609317/702192) := by
+  apply exponentPair_of_beta_bound_half
+    (by norm_num [InExponentPairTriangle]) (by norm_num)
+  intro α hhalf
+  have hαone : (α:ℝ)≤1 := by linarith only [hhalf]
+  by_cases hlo : (α:ℝ)≤890/3277
+  · have hh := exponentSumGrowthExponent_le_exponentPairLine_closed
+      exponentPair_taoTrudgianYang_fourthNew α hαone
+    unfold exponentPairLine at hh ⊢
+    linarith only [hh,hlo]
+  by_cases hmiddle : (α:ℝ)≤391838/1377271
+  · have hh := HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_thirdPair_lowerRange
+      (le_of_not_ge hlo) hmiddle
+    unfold exponentPairLine
+    linarith only [hh]
+  by_cases hupper : (α:ℝ)≤754/2579
+  · have hh := HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_thirdPair_upperRange
+      (le_of_not_ge hmiddle) hupper
+    unfold exponentPairLine
+    linarith only [hh]
+  have hh := exponentSumGrowthExponent_le_exponentPairLine_closed
+    CubicJointCount.exponentPair_sargosAD_bourgain α hαone
+  unfold exponentPairLine at hh ⊢
+  linarith only [hh,lt_of_not_ge hupper]
+
+theorem zeroDensityExponent_le_bourgain_piece_8 {σ : ℝ}
+    (hσ : 5857/6032<σ) (hσ₁ : σ≤1) :
+    zeroDensityExponent σ≤((bourgainPieceEight σ):EReal) :=
+  exponentPair_taoTrudgianYang_thirdNew.bourgain_piece_8 hσ hσ₁
+
+/-- All eight analytic exponent-pair inputs are proved, not hypotheses. -/
+theorem optimizedBourgain_bound {σ : ℝ} (hσ : 3/4<σ) (hσ₁ : σ<1) :
+    zeroDensityExponent σ≤((optimizedBourgainBound σ):EReal) :=
+  optimizedBourgain_bound_of_pairs exponentPair_eleven_eightyFifths
+    exponentPair_bourgain_piece_two_input exponentPair_bourgain_piece_three_input
+    exponentPair_taoTrudgianYang_firstNew exponentPair_taoTrudgianYang_secondNew
+    CubicJointCount.exponentPair_aTrudgianYang_first
+    CubicJointCount.exponentPair_sargosAD_bourgain
+    exponentPair_taoTrudgianYang_thirdNew hσ hσ₁
 
 end TaoTrudgianYang2025

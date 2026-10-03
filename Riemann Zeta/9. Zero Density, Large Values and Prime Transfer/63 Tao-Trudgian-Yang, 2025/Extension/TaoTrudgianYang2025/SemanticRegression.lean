@@ -82837,4 +82837,472 @@ example {σ : ℝ}
     TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((TaoTrudgianYang2025.bourgainPieceFive σ):EReal) :=
   TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_piece_5 (σ:=σ) hσ hσ1
 
+example
+    {α : ℝ≥0} (hα : (890:ℝ)/3277≤(α:ℝ))
+    (hα₁ : (α:ℝ)≤(17604372:ℝ)/60424193) :
+    Expdb.exponentSumGrowthExponent α≤89/3478+(7441/8695)*(α:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_fourthPair_shortRange hα hα₁
+
+example : TaoTrudgianYang2025.ExponentPair (89/3478) (15327/17390) :=
+  TaoTrudgianYang2025.exponentPair_taoTrudgianYang_fourthNew
+
+
+example {α : ℝ≥0} (hα : (890:ℝ)/3277≤(α:ℝ))
+    (hα₁ : (α:ℝ)≤(391838:ℝ)/1377271) :
+    Expdb.exponentSumGrowthExponent α≤10769/351096+(587779/702192)*(α:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_thirdPair_lowerRange hα hα₁
+
+example {α : ℝ≥0} (hα : (391838:ℝ)/1377271≤(α:ℝ))
+    (hα₁ : (α:ℝ)≤(754:ℝ)/2579) :
+    Expdb.exponentSumGrowthExponent α≤10769/351096+(587779/702192)*(α:ℝ) :=
+  TaoTrudgianYang2025.HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_thirdPair_upperRange hα hα₁
+
+example : TaoTrudgianYang2025.ExponentPair (10769/351096) (609317/702192) :=
+  TaoTrudgianYang2025.exponentPair_taoTrudgianYang_thirdNew
+
+example {σ : ℝ} (hσ : 5857/6032<σ) (hσ₁ : σ≤1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ≤
+      ((TaoTrudgianYang2025.bourgainPieceEight σ):EReal) :=
+  TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_piece_8 hσ hσ₁
+
+example {σ : ℝ} (hσ : 3/4<σ) (hσ₁ : σ<1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ≤
+      ((TaoTrudgianYang2025.optimizedBourgainBound σ):EReal) :=
+  TaoTrudgianYang2025.optimizedBourgain_bound hσ hσ₁
+
 end HuxleyPhysicalReferenceRegression
+
+namespace LiteratureDensityRegression
+open TaoTrudgianYang2025
+
+example (k : ℕ) (hk : 0 < k) {σ τ : ℝ}
+    (hσ : 3/4 < σ) (hτ : 1 < τ)
+    (hfirst : (k:ℝ)*τ+2*k-4*k*σ ≤ 2-2*σ)
+    (hsecond : 2*τ/3+4*k*(3-4*σ)/3 ≤ 2-2*σ) :
+    IsLargeValueBound σ τ (2-2*σ) :=
+  ivic_fiveQuarter_local_largeValueBound k hk hσ hτ hfirst hsecond
+
+example (k : ℕ) (hk : 0 < k) {σ τ₀ : ℝ}
+    (hσ : 3/4 < σ) (hσ₁ : σ < 1) (hlocal : 1 < τ₀+σ-1)
+    (hfirst : (k:ℝ)*(τ₀+σ-1)+2*k-4*k*σ ≤ 2-2*σ)
+    (hsecond : 2*(τ₀+σ-1)/3+4*k*(3-4*σ)/3 ≤ 2-2*σ)
+    (hcut : τ₀ ≤ 3*(4*σ-1)/4) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/τ₀:ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_of_cutoff k hk hσ hσ₁ hlocal hfirst hsecond hcut
+
+example {σ:ℝ} (hσ : 4/5 ≤ σ) (hσ₁ : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(2*σ):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_two hσ hσ₁
+
+example {σ:ℝ} (hσ : 41/53 ≤ σ) (hσ₁ : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((9/(7*σ-1):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_three hσ hσ₁
+
+example {σ:ℝ} (hσ : 13/17 ≤ σ) (hσ₁ : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((6/(5*σ-1):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_four hσ hσ₁
+
+example {σ:ℝ} (hσ : 127/167 ≤ σ) (hσ₁ : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((15/(13*σ-3):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_five hσ hσ₁
+
+example {σ:ℝ} (hσ : 47/62 ≤ σ) (hσ₁ : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((9/(8*σ-2):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_six hσ hσ₁
+
+example : IsZeroDensityBound (1/2) 2 := ingham_isZeroDensityBound_at_half
+
+example {σ:ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    IsZeroDensityBound σ (3/(2-σ)) :=
+  ingham_isZeroDensityBound_closed hσ hσ₁
+
+example {σ:ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(2-σ):ℝ):EReal) :=
+  zeroDensityExponent_le_ingham_closed hσ hσ₁
+
+end LiteratureDensityRegression
+
+namespace IvicNineteenthDensityRegression
+open TaoTrudgianYang2025 MeasureTheory
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ (H V : ℝ) (W : Finset ℝ),
+      H₀ ≤ H → 0 < V → H^(1/8+ε) ≤ V →
+      RiemannZeta.GuthMaynard.IsSeparated 1 W →
+      (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+      (∀ t ∈ W, V ≤ zetaMomentCriticalNorm t) →
+      (W.card : ℝ) ≤ H^ε*(H/V^6+H^3/V^19) :=
+  ivicNineteenth_pointValue_card_le hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ B : ℝ, 40000 ≤ B ∧ ∀ H U : ℝ, B ≤ H → H^(1/8+ε) ≤ U →
+      (∫ t in pointValueSuperlevel H U, zetaMomentCriticalNorm t^6) ≤
+        H^ε*(H+H^3/U^13) :=
+  ivicNineteenth_restricted_sixth_moment hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C B : ℝ, 0 < C ∧ 40000 ≤ B ∧ ∀ T U : ℝ, B ≤ T →
+      (4*T)^(1/8+ε) ≤ U →
+      (∫ t in -T..T, ivicSixthExcess U t^6) ≤ C*T^ε*(T+T^3/U^13) :=
+  ivicNineteenth_excess_symmetric_moment hε
+
+example {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 1 < τ) (hgap : τ/8 < σ-1/2) :
+    IsZetaLargeValueBound σ τ (max (τ+3-6*σ) (3*τ+19/2-19*σ)) :=
+  ivicNineteenth_zetaLargeValueBound hσ hτ hgap
+
+example {σ τ : ℝ} (hτ : 0 < τ) (hgap : τ/8 < 2*σ-3/2) :
+    IsLargeValueBound σ τ (max (2-2*σ) (max (τ+9-12*σ) (3*τ+57/2-38*σ))) :=
+  ivicNineteenth_general_largeValueBound hτ hgap
+
+example {σ : ℝ} (hσ : 155/174 ≤ σ) (hσ₁ : σ ≤ 17/18) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((24/(30*σ-11):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_nineteenth hσ hσ₁
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (155/174) ≤
+      ((24/(30*(155/174)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_nineteenth (by norm_num) (by norm_num)
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (9/10) ≤
+      ((24/(30*(9/10)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_nineteenth (by norm_num) (by norm_num)
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (17/18) ≤
+      ((24/(30*(17/18)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_ivic_nineteenth (by norm_num) (by norm_num)
+
+end IvicNineteenthDensityRegression
+
+namespace CDVMixedDensityRegression
+open TaoTrudgianYang2025
+
+example {σ τ : ℝ} (hσ : 279/314 ≤ σ) (hσhi : σ ≤ 155/174)
+    (hτ : τ ∈ Set.Icc (2*((30*σ-11)/8)/3) ((30*σ-11)/8)) :
+    largeValueExponent σ τ ≤ (((3-3*σ)*τ/((30*σ-11)/8):ℝ):EReal) :=
+  cdv_largeValueExponent_range hσ hσhi hτ
+
+example {σ : ℝ} (hσ : 279/314 ≤ σ) (hσhi : σ ≤ 17/18) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((24/(30*σ-11):ℝ):EReal) :=
+  zeroDensityExponent_le_cdv_ivic hσ hσhi
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (279/314) ≤
+      ((24/(30*(279/314)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_cdv_ivic (by norm_num) (by norm_num)
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (155/174) ≤
+      ((24/(30*(155/174)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_cdv_ivic (by norm_num) (by norm_num)
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (9/10) ≤
+      ((24/(30*(9/10)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_cdv_ivic (by norm_num) (by norm_num)
+
+example :
+    TaoTrudgianYang2025.zeroDensityExponent (17/18) ≤
+      ((24/(30*(17/18)-11):ℝ):EReal) :=
+  zeroDensityExponent_le_cdv_ivic (by norm_num) (by norm_num)
+
+example {σ : ℝ} (hσ : 279/314 ≤ σ) (hσhi : σ ≤ 155/174) :
+    largeValueExponent σ (2*((30*σ-11)/8)/3) ≤
+      (((3-3*σ)*(2*((30*σ-11)/8)/3)/((30*σ-11)/8):ℝ):EReal) :=
+  cdv_largeValueExponent_range hσ hσhi
+    ⟨le_rfl,by linarith only [hσ]⟩
+
+example {σ : ℝ} (hσ : 279/314 ≤ σ) (hσhi : σ ≤ 155/174) :
+    largeValueExponent σ ((30*σ-11)/8) ≤
+      (((3-3*σ)*((30*σ-11)/8)/((30*σ-11)/8):ℝ):EReal) :=
+  cdv_largeValueExponent_range hσ hσhi
+    ⟨by linarith only [hσ],le_rfl⟩
+
+end CDVMixedDensityRegression
+
+namespace PintzDensityRegression
+open TaoTrudgianYang2025
+
+example {σ : ℝ} (hσ : 23/24 ≤ σ) (hσ1 : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(24*σ-20):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_first hσ hσ1
+
+example : TaoTrudgianYang2025.zeroDensityExponent (23/24) ≤ ((3/(24*(23/24)-20):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_first (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (2211487/2274732) ≤
+    ((3/(24*(2211487/2274732)-20):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_first (by norm_num) (by norm_num)
+
+example {σ : ℝ} (hσ : 39/40 < σ) (hσ1 : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((2/(15*σ-12):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_second_interior hσ hσ1
+
+example {σ : ℝ} (hσ : 41/42 < σ) (hσ1 : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(40*σ-35):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_third_interior hσ hσ1
+
+example : TaoTrudgianYang2025.zeroDensityExponent (1951/2000) ≤ ((2/(15*(1951/2000)-12):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_second_interior (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (41/42) ≤ ((2/(15*(41/42)-12):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_second_interior (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (49/50) ≤ ((3/(40*(49/50)-35):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_third_interior (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (59/60) ≤ ((3/(40*(59/60)-35):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_third_interior (by norm_num) (by norm_num)
+
+example {n : ℕ} (hn : 6 ≤ n) {σ : ℝ}
+    (hσlo : 1-1/(2*(n:ℝ)*((n:ℝ)-1)) < σ)
+    (hσhi : σ ≤ 1-1/(2*(n:ℝ)*((n:ℝ)+1))) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤
+      ((3/((n:ℝ)*(1-2*((n:ℝ)-1)*(1-σ))):ℝ):EReal) :=
+  zeroDensityExponent_le_pintz_tail_interior hn hσlo hσhi
+
+example : TaoTrudgianYang2025.zeroDensityExponent (99/100) ≤
+    ((3/((7:ℝ)*(1-2*(7-1)*(1-99/100)))):EReal) :=
+  zeroDensityExponent_le_pintz_tail_interior (n:=7) (by norm_num) (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (83/84) ≤
+    ((3/((6:ℝ)*(1-2*(6-1)*(1-83/84)))):EReal) :=
+  zeroDensityExponent_le_pintz_tail_interior (n:=6) (by norm_num) (by norm_num) (by norm_num)
+
+end PintzDensityRegression
+
+namespace BourgainTwelfthDensityRegression
+open TaoTrudgianYang2025
+
+example {σ τ : ℝ}
+    (hσ : 31/39 ≤ σ) (hσ1 : σ < 1)
+    (hτ : τ ∈ Set.Icc (2*(2*σ)/3) (2*σ)) :
+    largeValueExponent σ τ ≤ ((((3-3*σ)*τ/(2*σ)):ℝ):EReal) :=
+  bourgain_twelfth_largeValueExponent_range hσ hσ1 hτ
+
+example {σ : ℝ}
+    (hσ : 31/39 ≤ σ) (hσ1 : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(2*σ):ℝ):EReal) :=
+  zeroDensityExponent_le_bourgain_twelfth hσ hσ1
+
+example {σ : ℝ}
+    (hσ : 1867/2347 ≤ σ) (hσ1 : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(2*σ):ℝ):EReal) :=
+  zeroDensityExponent_le_bourgain_literature hσ hσ1
+
+example : TaoTrudgianYang2025.zeroDensityExponent (1867/2347) ≤
+    ((3/(2*(1867/2347)):ℝ):EReal) :=
+  zeroDensityExponent_le_bourgain_literature le_rfl (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (4/5) ≤
+    ((3/(2*(4/5)):ℝ):EReal) :=
+  zeroDensityExponent_le_bourgain_literature (by norm_num) (by norm_num)
+
+
+example : TaoTrudgianYang2025.zeroDensityExponent (31/39) ≤
+    ((3/(2*(31/39)):ℝ):EReal) :=
+  zeroDensityExponent_le_bourgain_twelfth le_rfl (by norm_num)
+
+example {σ : ℝ} (hσ : 31/39 ≤ σ) (hσ1 : σ < 1) :
+    largeValueExponent σ (2*(2*σ)/3) ≤
+      ((((3-3*σ)*(2*(2*σ)/3)/(2*σ)):ℝ):EReal) :=
+  bourgain_twelfth_largeValueExponent_range hσ hσ1
+    ⟨le_rfl,by linarith only [hσ]⟩
+
+example {σ : ℝ} (hσ : 31/39 ≤ σ) (hσ1 : σ < 1) :
+    largeValueExponent σ (2*σ) ≤
+      ((((3-3*σ)*(2*σ)/(2*σ)):ℝ):EReal) :=
+  bourgain_twelfth_largeValueExponent_range hσ hσ1
+    ⟨by linarith only [hσ],le_rfl⟩
+
+end BourgainTwelfthDensityRegression
+
+namespace LiteratureTableRegression
+open TaoTrudgianYang2025.LiteratureTable
+
+example (σ : ℝ) : printedFiniteDensityTable σ =
+    if σ ≤ 7/10 then 3/(2-σ) else
+    if σ < 19/25 then 15/(3+5*σ) else
+    if σ < 127/167 then 9/(8*σ-2) else
+    if σ < 13/17 then 15/(13*σ-3) else
+    if σ < 17/22 then 6/(5*σ-1) else
+    if σ < 41/53 then 2/(9*σ-6) else
+    if σ < 7/9 then 9/(7*σ-1) else
+    if σ < 1867/2347 then 9/(8*(2*σ-1)) else
+    if σ < 4/5 then 3/(2*σ) else
+    if σ < 7/8 then 3/(2*σ) else
+    if σ < 279/314 then 3/(10*σ-7) else
+    if σ < 155/174 then 24/(30*σ-11) else
+    if σ ≤ 9/10 then 24/(30*σ-11) else
+    if σ ≤ 31/34 then 3/(10*σ-7) else
+    if σ < 14/15 then 11/(48*σ-36) else
+    if σ < 2841/3016 then 391/(2493*σ-2014) else
+    if σ < 859/908 then 22232/(163248*σ-134765) else
+    if σ < 23/24 then 356/(2742*σ-2279) else
+    if σ < 2211487/2274732 then 3/(24*σ-20) else
+    if σ < 39/40 then 86152/(1447460*σ-1311509) else
+    if σ < 41/42 then 2/(15*σ-12) else
+    3/(40*σ-35) := rfl
+
+example {σ : ℝ} (hσ : 1/2 ≤ σ) (hσhi : σ < 59/60)
+    (h39 : σ ≠ 39/40) (h41 : σ ≠ 41/42) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((printedFiniteDensityTable σ):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular hσ hσhi h39 h41
+
+example : TaoTrudgianYang2025.zeroDensityExponent (1/2) ≤
+    ((printedFiniteDensityTable (1/2)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (7/10) ≤
+    ((printedFiniteDensityTable (7/10)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (19/25) ≤
+    ((printedFiniteDensityTable (19/25)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (127/167) ≤
+    ((printedFiniteDensityTable (127/167)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (13/17) ≤
+    ((printedFiniteDensityTable (13/17)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (17/22) ≤
+    ((printedFiniteDensityTable (17/22)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (41/53) ≤
+    ((printedFiniteDensityTable (41/53)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (7/9) ≤
+    ((printedFiniteDensityTable (7/9)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (1867/2347) ≤
+    ((printedFiniteDensityTable (1867/2347)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (4/5) ≤
+    ((printedFiniteDensityTable (4/5)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (7/8) ≤
+    ((printedFiniteDensityTable (7/8)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (279/314) ≤
+    ((printedFiniteDensityTable (279/314)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (155/174) ≤
+    ((printedFiniteDensityTable (155/174)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (9/10) ≤
+    ((printedFiniteDensityTable (9/10)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (31/34) ≤
+    ((printedFiniteDensityTable (31/34)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (14/15) ≤
+    ((printedFiniteDensityTable (14/15)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (2841/3016) ≤
+    ((printedFiniteDensityTable (2841/3016)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (859/908) ≤
+    ((printedFiniteDensityTable (859/908)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (23/24) ≤
+    ((printedFiniteDensityTable (23/24)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (2211487/2274732) ≤
+    ((printedFiniteDensityTable (2211487/2274732)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (1951/2000) ≤
+    ((printedFiniteDensityTable (1951/2000)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : TaoTrudgianYang2025.zeroDensityExponent (49/50) ≤
+    ((printedFiniteDensityTable (49/50)):EReal) :=
+  zeroDensityExponent_le_printedFinite_regular (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+-- These are frozen-table VALUES only, not density theorems at the open obligations.
+
+example : printedFiniteDensityTable (39/40) = 2/(15*(39/40)-12) := by
+  norm_num [printedFiniteDensityTable]
+
+example : printedFiniteDensityTable (41/42) = 3/(40*(41/42)-35) := by
+  norm_num [printedFiniteDensityTable]
+
+example {n r : ℕ} (hn : 4 ≤ n) (hr : 3 ≤ r) {τ : ℝ}
+    (hτlo : (n:ℝ)-2+2/(n:ℝ) ≤ τ) :
+    1-1/((n:ℝ)*((n:ℝ)-1)) ≤ τ*heathBrownBetaBound r (1/τ) :=
+  raw_derivative_plateau_all_orders hn hr hτlo
+
+example {r : ℕ} (hr : 3 ≤ r) :
+    (15/4:ℝ) ∈ Set.Icc (2*((45*(39/40)-36)/2)/3) ((45*(39/40)-36)/2) ∧
+    ¬ ((15/4:ℝ)*heathBrownBetaBound r (4/15) < 2*(39/40)-1) :=
+  first_missing_endpoint_raw_obstruction hr
+
+example {r : ℕ} (hr : 3 ≤ r) :
+    (16/3:ℝ) ∈ Set.Ico 2 (4*(40*(41/42)-35)/3) ∧
+    ¬ ((16/3:ℝ)*heathBrownBetaBound r (3/16) < 41/42) :=
+  second_missing_endpoint_raw_obstruction hr
+
+example {n r : ℕ} (hn : 6 ≤ n) (hr : 3 ≤ r) :
+    let σ := 1-1/(2*(n:ℝ)*((n:ℝ)-1))
+    let τ := (n:ℝ)-1-1/(2*(n:ℝ)*((n:ℝ)-1))
+    τ ∈ Set.Icc (2*((n:ℝ)-1)/3) ((n:ℝ)-1) ∧
+      ¬ (τ*heathBrownBetaBound r (1/τ) < 2*σ-1) :=
+  tail_lower_endpoint_raw_obstruction hn hr
+
+example {σ : ℝ} (hlo : 59/60 ≤ σ) (hhi : σ < 1) :
+    ∃ n : ℕ, 6 ≤ n ∧
+      1-1/(2*(n:ℝ)*((n:ℝ)-1)) ≤ σ ∧
+      σ < 1-1/(2*(n:ℝ)*((n:ℝ)+1)) :=
+  exists_printed_tail_cell hlo hhi
+
+example {σ : ℝ} (hlo : 59/60 ≤ σ) (hhi : σ < 1)
+    (hendpoint : ∀ n : ℕ, 6 ≤ n → σ ≠ 1-1/(2*(n:ℝ)*((n:ℝ)-1))) :
+    ∃ n : ℕ, 6 ≤ n ∧
+      1-1/(2*(n:ℝ)*((n:ℝ)-1)) ≤ σ ∧
+      σ < 1-1/(2*(n:ℝ)*((n:ℝ)+1)) ∧
+      TaoTrudgianYang2025.zeroDensityExponent σ ≤
+        ((3/((n:ℝ)*(1-2*((n:ℝ)-1)*(1-σ))):ℝ):EReal) :=
+  exists_printed_tail_bound_regular hlo hhi hendpoint
+
+end LiteratureTableRegression

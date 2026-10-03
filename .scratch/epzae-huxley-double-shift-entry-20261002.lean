@@ -3,6 +3,9 @@ import TaoTrudgianYang2025.ExponentPairSourceWeyl
 import TaoTrudgianYang2025.BetaTaylorPolynomialRemainder
 import GuthMaynard.ArithmeticCoefficients
 import TaoTrudgianYang2025.HuxleyLinearForms
+import TaoTrudgianYang2025.HeathBrownBetaTable
+import TaoTrudgianYang2025.SquareProductCount
+import TaoTrudgianYang2025.BetaHalfDuality
 
 /-! The actual two-step A-process phase entry. These are source bridges,
 not a proof of the short-range Huxley table or of its family estimate. -/
@@ -16767,5 +16770,3536 @@ example
   exact exists_capped_source_physical_budget hcap hA₄ hA₂ hB hbuffer hlinear
 
 #print axioms exists_capped_source_physical_budget
+
+/-- Actual capped mesh and reference choices consume the source physical budget.
+The source coefficients may have either sign; their absolute-value majorant is
+used only for finite cutoff selection. No N^2 <= M condition is assumed. -/
+private theorem exists_capped_source_discrete_budget
+    {Usrc κ Cphys B Bselect Dbase Δbase : ℝ}
+    (hUsrc : 0 < Usrc) (hκ : 0 < κ) (hCphys : 0 ≤ Cphys)
+    (hB : 0 ≤ B) (hBselect : 1 ≤ Bselect) :
+    ∃ Cbudget qcap : ℝ, 1 ≤ Cbudget ∧ Usrc ≤ Cbudget ∧ 0 < qcap ∧
+    ∀ (N : ℕ) (M R : ℝ), (1:ℝ) ≤ N → 1 ≤ R →
+      Cbudget*R ≤ N → Cbudget*(N:ℝ) ≤ R^2 → Cbudget*(N:ℝ) ≤ M →
+      Cbudget*(N:ℝ)^3 ≤ M*R^2 → Cbudget*(N:ℝ)*R ≤ M →
+    ∃ (Qbase kmax : ℕ) (Kmesh Usel : ℕ → ℕ),
+      let Q := fun k : ℕ => Qbase*2^k
+      0 < M ∧ R ≤ (N:ℝ) ∧ (N:ℝ) ≤ R^2 ∧ (N:ℝ) ≤ M ∧ R ≤ M ∧
+      (N:ℝ)^3 ≤ M*R^2 ∧
+      7*(N:ℝ)+2 ≤ M/4 ∧
+      (3*Usrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 ∧
+      (3*Usrc/4)*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 ∧
+      B*R^2/(N:ℝ)^2 ≤ 1/2 ∧
+      768 ≤ Qbase ∧ (Qbase:ℝ) ≤ 1536*R ∧
+      (N:ℝ)*(Q kmax:ℝ) ≤ M ∧
+      (qcap/2)*min (N:ℝ) (M/(N:ℝ)) ≤ (Q kmax:ℝ) ∧
+      (kmax:ℝ) ≤ Real.log (N:ℝ)/Real.log 2 ∧
+      (∀ k, 0 < Kmesh k) ∧
+      (∀ k ≤ kmax,
+        63*(Usrc/(2*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+        (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+        1 ≤ Usel k ∧ Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+        R ≤ (Q k:ℝ) ∧
+        (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+        (Q k:ℝ) ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧
+        2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+        Dbase*(Q k:ℝ)/(N:ℝ) ≤ 1/2 ∧ Δbase*(Q k:ℝ)/(N:ℝ) < 1/2) ∧
+      (∀ k, Usel k ≤ Usel 0) ∧
+      2*((56*(Usel 0:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2)+6*(N:ℝ) ≤ M ∧
+      (∀ k ≤ kmax,
+        (Kmesh k:ℝ) ≤ (2*max 1 (63*Usrc/2))*(Q k:ℝ)*(N:ℝ)/R^2 ∧
+        ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Usel k:ℝ)) := by
+  let Dcap := |Dbase|+|Δbase|+1
+  have hDcap : 0 ≤ Dcap := by dsimp only [Dcap]; positivity
+  have hDb : Dbase ≤ Dcap := by
+    dsimp only [Dcap]
+    linarith only [le_abs_self Dbase,abs_nonneg Δbase]
+  have hΔb : Δbase ≤ Dcap := by
+    dsimp only [Dcap]
+    linarith only [le_abs_self Δbase,abs_nonneg Dbase]
+  let H := (2*Bselect)^((3:ℝ)/2)
+  have hH : 0 ≤ H := by dsimp only [H]; positivity
+  let qcap := 1/(1+H+4*Dcap)
+  have hden : 0 < 1+H+4*Dcap := by positivity
+  have hq : 0 < qcap := by dsimp only [qcap]; positivity
+  have hqone : qcap ≤ 1 := by
+    dsimp only [qcap]
+    apply (div_le_iff₀ hden).mpr
+    linarith only [hH,hDcap]
+  have hqH : qcap*(2*Bselect*1)^((3:ℝ)/2) ≤ 1 := by
+    simp only [mul_one]
+    change (1/(1+H+4*Dcap))*H ≤ 1
+    rw [one_div_mul_eq_div]
+    apply (div_le_iff₀ hden).mpr
+    linarith only [hDcap]
+  have hqD : 4*Dcap*qcap ≤ 1 := by
+    change 4*Dcap*(1/(1+H+4*Dcap)) ≤ 1
+    rw [mul_one_div]
+    apply (div_le_iff₀ hden).mpr
+    linarith only [hH]
+  obtain ⟨C₀,hC₀,hCcap,hbudget⟩ := exists_capped_source_physical_budget
+    (Ccap:=1536/qcap) (A₄:=3*Usrc) (A₂:=3*Usrc/4)
+    (Cbuffer:=56/κ) (Clinear:=1/(Cphys+2))
+    (by positivity) (by positivity) (by positivity) hB (by positivity) (by positivity)
+  let Cbudget := max C₀ Usrc
+  have hC : C₀ ≤ Cbudget := le_max_left _ _
+  refine ⟨Cbudget,qcap,hC₀.trans hC,le_max_right _ _,hq,?_⟩
+  intro N M R hN hR hsep hrad hlength hcubic hcapRoom
+  have hNp : (0:ℝ) < N := zero_lt_one.trans_le hN
+  have hRp : 0 < R := zero_lt_one.trans_le hR
+  have hsep₀ : C₀*R ≤ N := (mul_le_mul_of_nonneg_right hC hRp.le).trans hsep
+  have hrad₀ : C₀*(N:ℝ) ≤ R^2 := (mul_le_mul_of_nonneg_right hC hNp.le).trans hrad
+  have hlength₀ : C₀*(N:ℝ) ≤ M := (mul_le_mul_of_nonneg_right hC hNp.le).trans hlength
+  have hcubic₀ : C₀*(N:ℝ)^3 ≤ M*R^2 :=
+    (mul_le_mul_of_nonneg_right hC (by positivity)).trans hcubic
+  have hcap₀ : C₀*(N:ℝ)*R ≤ M :=
+    (mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_right hC hNp.le) hRp.le).trans hcapRoom
+  obtain ⟨hM,hRN,hNR,hNM,hRM,hNcube,hcapN,hcapM,hpad,hquartic,hquadratic,hsmall,_⟩ :=
+    hbudget (N:ℝ) R M 0 hN hR hsep₀ hrad₀ hlength₀ hcubic₀ hcap₀ (by positivity)
+  have hroom : 2*768*R ≤ qcap*min (N:ℝ) (M/(N:ℝ)) := by
+    rw [mul_min_of_nonneg _ _ hq.le]
+    apply le_min
+    · have hh := mul_le_mul_of_nonneg_left hcapN hq.le
+      calc
+        _ = qcap*((1536/qcap)*R) := by field_simp; norm_num
+        _ ≤ _ := hh
+    · rw [←mul_div_assoc]
+      apply (le_div_iff₀ hNp).mpr
+      have hh := mul_le_mul_of_nonneg_left hcapM hq.le
+      calc
+        (2*768*R)*(N:ℝ) = qcap*((1536/qcap)*(N:ℝ)*R) := by field_simp; ring
+        _ ≤ _ := hh
+  obtain ⟨Qbase,kmax,Kmesh,Usel,hBaseLo,hBaseHi,hEndLo,_hEndHi,hNQ,_hError,
+    hkmax,hK,hvalid,hmono⟩ :=
+    capped_dyadic_band_integer_physical_selection N (σ:=1) (J:=Usrc) (L:=1)
+      (Cbase:=768) (Dcap:=Dcap) (by norm_num) hM hR hRN hNR hBselect (by norm_num)
+      (by norm_num) hq hqone hqH hDcap hqD hroom
+  let Q := fun k : ℕ => Qbase*2^k
+  have hUzero : (Usel 0:ℝ) ≤ ((N:ℝ)/R)^((2:ℝ)/3) := by
+    obtain ⟨_,_,_,_,_,_,hupper,_,_,_,hstrong,_,_⟩ := hvalid 0 (Nat.zero_le _)
+    have hRQ : R ≤ (Q 0:ℝ) := by linarith only [hstrong,hRp]
+    calc
+      _ ≤ ((N:ℝ)/(Q 0:ℝ))^((2:ℝ)/3)/Bselect := hupper
+      _ ≤ ((N:ℝ)/(Q 0:ℝ))^((2:ℝ)/3) := div_le_self (by positivity) hBselect
+      _ ≤ _ := Real.rpow_le_rpow (by positivity)
+        (div_le_div_of_nonneg_left hNp.le hRp hRQ) (by norm_num)
+  have hbuffer := (hbudget (N:ℝ) R M (Usel 0:ℝ) hN hR
+    hsep₀ hrad₀ hlength₀ hcubic₀ hcap₀ hUzero).2.2.2.2.2.2.2.2.2.2.2.2
+  have hbase : 768 ≤ Qbase := by
+    have hh : (768:ℝ) ≤ Qbase :=
+      (le_mul_of_one_le_right (by norm_num) hR).trans hBaseLo
+    exact_mod_cast hh
+  refine ⟨Qbase,kmax,Kmesh,Usel,hM,hRN,hNR,hNM,hRM,hNcube,hpad,hquartic,
+    hquadratic,hsmall,hbase,?_,hNQ,?_,hkmax,hK,?_,hmono,?_,?_⟩
+  · simpa only [show (2:ℝ)*768=1536 by norm_num] using hBaseHi
+  · simpa only [div_mul_eq_mul_div] using hEndLo
+  · intro k hk
+    obtain ⟨_,hsource,hmesh,_,hU,hwrap,hupper,_,hQN,hUR,hstrong,hmin,hD⟩ := hvalid k hk
+    have hD' : Dbase*(Q k:ℝ)/(N:ℝ) ≤ 1/4 :=
+      (div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_right hDb (Nat.cast_nonneg _)) hNp.le).trans hD
+    have hΔ' : Δbase*(Q k:ℝ)/(N:ℝ) ≤ 1/4 :=
+      (div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_right hΔb (Nat.cast_nonneg _)) hNp.le).trans hD
+    refine ⟨?_,hmesh,hU,hwrap,?_,hupper,?_,hUR,hmin,?_,?_⟩
+    · simpa only [mul_one] using hsource
+    · linarith only [hstrong,hRp]
+    · exact_mod_cast hQN
+    · exact hD'.trans (by norm_num)
+    · exact hΔ'.trans_lt (by norm_num)
+  · convert hbuffer using 1
+    ring
+  · intro k hk
+    obtain ⟨_,_,_,hupper,_,_,_,hlower,_⟩ := hvalid k hk
+    exact ⟨by simpa only [mul_one] using hupper,hlower⟩
+
+
+example
+    {Usrc κ Cphys B Bselect Dbase Δbase : ℝ}
+    (hUsrc : 0 < Usrc) (hκ : 0 < κ) (hCphys : 0 ≤ Cphys)
+    (hB : 0 ≤ B) (hBselect : 1 ≤ Bselect) :
+    ∃ Cbudget qcap : ℝ, 1 ≤ Cbudget ∧ Usrc ≤ Cbudget ∧ 0 < qcap ∧
+    ∀ (N : ℕ) (M R : ℝ), (1:ℝ) ≤ N → 1 ≤ R →
+      Cbudget*R ≤ N → Cbudget*(N:ℝ) ≤ R^2 → Cbudget*(N:ℝ) ≤ M →
+      Cbudget*(N:ℝ)^3 ≤ M*R^2 → Cbudget*(N:ℝ)*R ≤ M →
+    ∃ (Qbase kmax : ℕ) (Kmesh Usel : ℕ → ℕ),
+      let Q := fun k : ℕ => Qbase*2^k
+      0 < M ∧ R ≤ (N:ℝ) ∧ (N:ℝ) ≤ R^2 ∧ (N:ℝ) ≤ M ∧ R ≤ M ∧
+      (N:ℝ)^3 ≤ M*R^2 ∧
+      7*(N:ℝ)+2 ≤ M/4 ∧
+      (3*Usrc)*(6*(N:ℝ)+1)^4 ≤ M*(N:ℝ)*R^2 ∧
+      (3*Usrc/4)*(6*(N:ℝ)+1)^2 ≤ (N:ℝ)*R^2 ∧
+      B*R^2/(N:ℝ)^2 ≤ 1/2 ∧
+      768 ≤ Qbase ∧ (Qbase:ℝ) ≤ 1536*R ∧
+      (N:ℝ)*(Q kmax:ℝ) ≤ M ∧
+      (qcap/2)*min (N:ℝ) (M/(N:ℝ)) ≤ (Q kmax:ℝ) ∧
+      (kmax:ℝ) ≤ Real.log (N:ℝ)/Real.log 2 ∧
+      (∀ k, 0 < Kmesh k) ∧
+      (∀ k ≤ kmax,
+        63*(Usrc/(2*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+        (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+        1 ≤ Usel k ∧ Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+        R ≤ (Q k:ℝ) ∧
+        (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+        (Q k:ℝ) ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧
+        2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+        Dbase*(Q k:ℝ)/(N:ℝ) ≤ 1/2 ∧ Δbase*(Q k:ℝ)/(N:ℝ) < 1/2) ∧
+      (∀ k, Usel k ≤ Usel 0) ∧
+      2*((56*(Usel 0:ℝ)/κ)*(N:ℝ)+(N:ℝ)/(Cphys+2)+2)+6*(N:ℝ) ≤ M ∧
+      (∀ k ≤ kmax,
+        (Kmesh k:ℝ) ≤ (2*max 1 (63*Usrc/2))*(Q k:ℝ)*(N:ℝ)/R^2 ∧
+        ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/(2*Bselect) ≤ (Usel k:ℝ)) := by
+  exact exists_capped_source_discrete_budget hUsrc hκ hCphys hB hBselect
+
+#print axioms exists_capped_source_discrete_budget
+
+/-- Unchanged existing private source-constant/absorption proof; promotion reuses the original. -/
+private theorem exists_source_cutoff_margins
+    {κ Ccurv Cphys Sector Esize : ℝ}
+    (hκ : 0 < κ) (hCcurv : 0 ≤ Ccurv) (hCphys : 0 ≤ Cphys)
+    (hEsize : 0 < Esize) :
+    ∃ Bcut Bselect : ℝ, 0 < Bcut ∧ 1 ≤ Bselect ∧
+      2+168/κ ≤ Bselect ∧ 7*Bcut ≤ κ*Bselect ∧
+      Sector ≤ Bselect*Esize ∧ 61*Ccurv*Cphys ≤ Bcut := by
+  let Bcut := 1+61*Ccurv*Cphys
+  let Bselect := max 1 (max (2+168/κ) (max (7*Bcut/κ) (Sector/Esize)))
+  have hBcut : 0 < Bcut := by dsimp only [Bcut]; positivity
+  have hBs : 1 ≤ Bselect := le_max_left _ _
+  have hSize : 2+168/κ ≤ Bselect := (le_max_left _ _).trans (le_max_right _ _)
+  have hCut : 7*Bcut/κ ≤ Bselect :=
+    (le_max_left _ _).trans ((le_max_right _ _).trans (le_max_right _ _))
+  have hSec : Sector/Esize ≤ Bselect :=
+    (le_max_right _ _).trans ((le_max_right _ _).trans (le_max_right _ _))
+  refine ⟨Bcut,Bselect,hBcut,hBs,hSize,?_,(div_le_iff₀ hEsize).mp hSec,?_⟩
+  · calc
+      7*Bcut ≤ Bselect*κ := (div_le_iff₀ hκ).mp hCut
+      _ = κ*Bselect := mul_comm _ _
+  · dsimp only [Bcut]
+    linarith
+
+example
+    {κ Ccurv Cphys Sector Esize : ℝ}
+    (hκ : 0 < κ) (hCcurv : 0 ≤ Ccurv) (hCphys : 0 ≤ Cphys)
+    (hEsize : 0 < Esize) :
+    ∃ Bcut Bselect : ℝ, 0 < Bcut ∧ 1 ≤ Bselect ∧
+      2+168/κ ≤ Bselect ∧ 7*Bcut ≤ κ*Bselect ∧
+      Sector ≤ Bselect*Esize ∧ 61*Ccurv*Cphys ≤ Bcut := by
+  exact exists_source_cutoff_margins hκ hCcurv hCphys hEsize
+
+#print axioms exists_source_cutoff_margins
+
+/-- Unchanged existing private source-constant/absorption proof; promotion reuses the original. -/
+private theorem eventually_selected_band_logarithmic_absorption
+    {C ε : ℝ} (hC : 0 ≤ C) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop, 0 < T ∧ 1 ≤ Real.log T ∧
+      C*T^(ε/2)*(1+Real.log T)^36 ≤ T^ε := by
+  filter_upwards [
+    TaoTrudgianYang2025.eventually_const_log_pow_le_rpow (C*2^36) (by positivity) 36
+      (show 0 < ε/2 by linarith only [hε]),
+    Real.tendsto_log_atTop.eventually_ge_atTop 1,
+    Filter.eventually_ge_atTop (1:ℝ)] with T hsmall hlog hT
+  have hTp : 0 < T := zero_lt_one.trans_le hT
+  have hpoly : C*(1+Real.log T)^36 ≤ T^(ε/2) := by
+    calc
+      _ ≤ C*(2*Real.log T)^36 := by gcongr; linarith only [hlog]
+      _ = (C*2^36)*(Real.log T)^36 := by rw [mul_pow]; ring
+      _ ≤ _ := hsmall
+  refine ⟨hTp,hlog,?_⟩
+  calc
+    _ = (C*(1+Real.log T)^36)*T^(ε/2) := by ring
+    _ ≤ T^(ε/2)*T^(ε/2) := mul_le_mul_of_nonneg_right hpoly (by positivity)
+    _ = _ := by rw [←Real.rpow_add hTp]; congr 1; ring
+
+example
+    {C ε : ℝ} (hC : 0 ≤ C) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop, 0 < T ∧ 1 ≤ Real.log T ∧
+      C*T^(ε/2)*(1+Real.log T)^36 ≤ T^ε := by
+  exact eventually_selected_band_logarithmic_absorption hC hε
+
+#print axioms eventually_selected_band_logarithmic_absorption
+/-- The fixed five source weights and logarithms are absorbed numerically.
+The analytic consumer below supplies the actual unsimplified moment. -/
+private theorem double_difference_five_monomial_absorption
+    {Usrc Ctri Dtype Cdelta C₀ Cmain Bselect Ctail Ctotal ε Y M N R Jsep T X : ℝ}
+    (hUsrc : 0 < Usrc) (hY : 0 ≤ Y) (hM : 0 < M) (hNp : 0 < N) (hRp : 0 < R)
+    (hJsep : 0 ≤ Jsep) (hT : 0 < T) (hTotal : 0 ≤ Ctotal) :
+    let a₁ := Ctri*Dtype/Usrc
+    let a₂ := Ctri*Dtype
+    let a₃ := Ctri*Dtype*Cdelta/Usrc
+    let a₄ := Ctri*Dtype*Cdelta
+    let a₅ := C₀*(Cmain+2*Bselect*Ctail)*Usrc^((4:ℝ)/3)
+    let Cmass := 1+|a₁|+|a₂|+|a₃|+|a₄|+|a₅|
+    |Ctotal| *Cmass*T^(ε/2)*(1+Real.log T)^36 ≤ T^ε →
+    let ErrorTotal := Y*M/Real.sqrt N+Y*M*R^2/N^2+
+      Y*N^2*R^2/M+Y*N*(N/R)^((2:ℝ)/3)
+    let Main := Y^11*M^10*N^2/R^4+Y^11*M^11*N^2/R^7+
+      Y^11*Jsep*M^10/R^2+Y^11*Jsep*M^11/R^5+
+      Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+    let MassPower := Ctri*Dtype*
+      (Y^11*M^10*N^2/(Usrc*R^4)+Y^11*M^11*N^2/R^7+
+        Cdelta*Y^11*Jsep*M^10/(Usrc*R^2)+Cdelta*Y^11*Jsep*M^11/R^5)+
+      C₀*(Cmain+2*Bselect*Ctail)*(Y^12*M^10*R^2/N^2)*
+        (R/N)^((2:ℝ)/3)*(Usrc*T/M^2)^((4:ℝ)/3)
+    X ≤ Ctotal*T^(ε/2)*(1+Real.log T)^36*(MassPower+ErrorTotal^12) →
+    X ≤ T^ε*(Main+ErrorTotal^12) := by
+  intro a₁ a₂ a₃ a₄ a₅ Cmass habsorb ErrorTotal Main MassPower
+  have hCmass : 1 ≤ Cmass := by
+    dsimp only [Cmass]
+    linarith only [abs_nonneg a₁,abs_nonneg a₂,abs_nonneg a₃,abs_nonneg a₄,abs_nonneg a₅]
+  let P₁ := Y^11*M^10*N^2/R^4
+  let P₂ := Y^11*M^11*N^2/R^7
+  let P₃ := Y^11*Jsep*M^10/R^2
+  let P₄ := Y^11*Jsep*M^11/R^5
+  let P₅ := Y^12*M^10*R^2/N^2*
+    (R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+  have hP₁ : 0 ≤ P₁ := by clear * - hY hM hNp hRp; dsimp only [P₁]; positivity
+  have hP₂ : 0 ≤ P₂ := by clear * - hY hM hNp hRp; dsimp only [P₂]; positivity
+  have hP₃ : 0 ≤ P₃ := by clear * - hY hM hNp hRp hJsep; dsimp only [P₃]; positivity
+  have hP₄ : 0 ≤ P₄ := by clear * - hY hM hNp hRp hJsep; dsimp only [P₄]; positivity
+  have hP₅ : 0 ≤ P₅ := by clear * - hY hM hNp hRp hT; dsimp only [P₅]; positivity
+  have hMain : 0 ≤ Main := by change 0 ≤ P₁+P₂+P₃+P₄+P₅; positivity
+  have hMassEq : MassPower=a₁*P₁+a₂*P₂+a₃*P₃+a₄*P₄+a₅*P₅ := by
+    have hp : (Usrc*T/M^2)^((4:ℝ)/3)=
+        Usrc^((4:ℝ)/3)*(T/M^2)^((4:ℝ)/3) := by
+      rw [mul_div_assoc,Real.mul_rpow hUsrc.le (by positivity)]
+    dsimp only [MassPower,P₁,P₂,P₃,P₄,P₅,a₁,a₂,a₃,a₄,a₅]
+    rw [hp]
+    ring
+  have hweighted (a b c d e x y z u v : ℝ)
+      (hx : 0 ≤ x) (hy : 0 ≤ y) (hz : 0 ≤ z) (hu : 0 ≤ u) (hv : 0 ≤ v) :
+      a*x+b*y+c*z+d*u+e*v ≤
+        (1+|a|+|b|+|c|+|d|+|e|)*(x+y+z+u+v) := by
+    clear * - hx hy hz hu hv
+    have ha := mul_le_mul (le_abs_self a)
+      (show x ≤ x+y+z+u+v by linarith only [hy,hz,hu,hv]) hx (abs_nonneg a)
+    have hb := mul_le_mul (le_abs_self b)
+      (show y ≤ x+y+z+u+v by linarith only [hx,hz,hu,hv]) hy (abs_nonneg b)
+    have hc := mul_le_mul (le_abs_self c)
+      (show z ≤ x+y+z+u+v by linarith only [hx,hy,hu,hv]) hz (abs_nonneg c)
+    have hd := mul_le_mul (le_abs_self d)
+      (show u ≤ x+y+z+u+v by linarith only [hx,hy,hz,hv]) hu (abs_nonneg d)
+    have he := mul_le_mul (le_abs_self e)
+      (show v ≤ x+y+z+u+v by linarith only [hx,hy,hz,hu]) hv (abs_nonneg e)
+    nlinarith only [ha,hb,hc,hd,he,hx,hy,hz,hu,hv]
+  have hMass : MassPower ≤ Cmass*Main := by
+    rw [hMassEq]
+    exact hweighted a₁ a₂ a₃ a₄ a₅ P₁ P₂ P₃ P₄ P₅ hP₁ hP₂ hP₃ hP₄ hP₅
+  have hEM : 0 ≤ Main+ErrorTotal^12 := add_nonneg hMain (by positivity)
+  have hMassTotal : MassPower+ErrorTotal^12 ≤ Cmass*(Main+ErrorTotal^12) := by
+    calc
+      _ ≤ Cmass*Main+Cmass*ErrorTotal^12 :=
+        add_le_add hMass (le_mul_of_one_le_left (by positivity) hCmass)
+      _ = _ := (mul_add _ _ _).symm
+
+  intro hraw
+  calc
+    _ ≤ Ctotal*T^(ε/2)*(1+Real.log T)^36*(MassPower+ErrorTotal^12) := hraw
+    _ ≤ Ctotal*T^(ε/2)*(1+Real.log T)^36*(Cmass*(Main+ErrorTotal^12)) :=
+      mul_le_mul_of_nonneg_left hMassTotal (by positivity)
+    _ ≤ |Ctotal| *T^(ε/2)*(1+Real.log T)^36*(Cmass*(Main+ErrorTotal^12)) :=
+      mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_right (le_abs_self Ctotal) (by positivity)) (by positivity))
+        (mul_nonneg (zero_le_one.trans hCmass) hEM)
+    _ = (|Ctotal| *Cmass*T^(ε/2)*(1+Real.log T)^36)*(Main+ErrorTotal^12) := by ac_rfl
+    _ ≤ _ := mul_le_mul_of_nonneg_right habsorb hEM
+
+
+example
+    {Usrc Ctri Dtype Cdelta C₀ Cmain Bselect Ctail Ctotal ε Y M N R Jsep T X : ℝ}
+    (hUsrc : 0 < Usrc) (hY : 0 ≤ Y) (hM : 0 < M) (hNp : 0 < N) (hRp : 0 < R)
+    (hJsep : 0 ≤ Jsep) (hT : 0 < T) (hTotal : 0 ≤ Ctotal) :
+    let a₁ := Ctri*Dtype/Usrc
+    let a₂ := Ctri*Dtype
+    let a₃ := Ctri*Dtype*Cdelta/Usrc
+    let a₄ := Ctri*Dtype*Cdelta
+    let a₅ := C₀*(Cmain+2*Bselect*Ctail)*Usrc^((4:ℝ)/3)
+    let Cmass := 1+|a₁|+|a₂|+|a₃|+|a₄|+|a₅|
+    |Ctotal| *Cmass*T^(ε/2)*(1+Real.log T)^36 ≤ T^ε →
+    let ErrorTotal := Y*M/Real.sqrt N+Y*M*R^2/N^2+
+      Y*N^2*R^2/M+Y*N*(N/R)^((2:ℝ)/3)
+    let Main := Y^11*M^10*N^2/R^4+Y^11*M^11*N^2/R^7+
+      Y^11*Jsep*M^10/R^2+Y^11*Jsep*M^11/R^5+
+      Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+    let MassPower := Ctri*Dtype*
+      (Y^11*M^10*N^2/(Usrc*R^4)+Y^11*M^11*N^2/R^7+
+        Cdelta*Y^11*Jsep*M^10/(Usrc*R^2)+Cdelta*Y^11*Jsep*M^11/R^5)+
+      C₀*(Cmain+2*Bselect*Ctail)*(Y^12*M^10*R^2/N^2)*
+        (R/N)^((2:ℝ)/3)*(Usrc*T/M^2)^((4:ℝ)/3)
+    X ≤ Ctotal*T^(ε/2)*(1+Real.log T)^36*(MassPower+ErrorTotal^12) →
+    X ≤ T^ε*(Main+ErrorTotal^12) := by
+  exact double_difference_five_monomial_absorption hUsrc hY hM hNp hRp hJsep hT hTotal
+
+#print axioms double_difference_five_monomial_absorption
+
+/-- Source-uniform capped double-difference estimate. The discrete band,
+mesh and reference scales are constructed from physical room, and all fixed
+constants and logarithms are absorbed. Both capped terminal errors are retained. -/
+private theorem eventually_double_difference_uniform_capped_source_bound
+    {csrc Usrc σ δ ε : ℝ}
+    (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) (hσ : 0 < σ)
+    (hδzero : 0 ≤ δ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hε : 0 < ε)
+    (hanchor : csrc ≤ 4*modelPhaseThirdLower σ/(σ*(σ+1)+3)) :
+    ∃ Cbudget w₀ : ℝ, 1 ≤ Cbudget ∧ 0 < w₀ ∧ w₀ ≤ 1/4 ∧
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc rshift sshift : ℝ → ℝ) (Y : Finset ℝ)
+      (n N : ℕ) (R Jsep : ℝ) {d Wmax M : ℝ},
+      N=8*n → 2 ≤ N → 1 ≤ R → 0 < d → 0 ≤ Wmax → Wmax ≤ w₀ →
+      0 < Jsep → Jsep ≤ M → Wmax*Jsep ≤ 1 →
+      (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+      (∀ y∈Y, 0 ≤ rshift y ∧ 0 ≤ sshift y ∧
+        rshift y*sshift y=d*y ∧ rshift y+sshift y ≤ Wmax) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+      (∀ w∈Icc (1/2:ℝ) 3, csrc ≤ iteratedDeriv 5 Fsrc w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j, 1 ≤ j → j ≤ 7 → |iteratedDeriv j Fsrc w| ≤ Usrc) →
+      (∀ w∈Icc (1/2:ℝ) 3,
+        csrc ≤ |(iteratedDeriv 5 Fsrc w)^2-iteratedDeriv 4 Fsrc w*iteratedDeriv 6 Fsrc w|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+      let Φ := fun y u =>
+        (Fsrc u-Fsrc (u+rshift y)-Fsrc (u+sshift y)+Fsrc (u+rshift y+sshift y))/d
+      (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction (Φ y) σ 4 δ) →
+      T*(N:ℝ)*R^2=M^3 →
+      Cbudget*R ≤ N → Cbudget*(N:ℝ) ≤ R^2 → Cbudget*(N:ℝ) ≤ M →
+      Cbudget*(N:ℝ)^3 ≤ M*R^2 → Cbudget*(N:ℝ)*R ≤ M →
+      Cbudget*M ≤ (N:ℝ)*R^2 → M ≤ T → R^2 ≤ T →
+      (N:ℝ)^10 ≤ M^3*R^7 →
+      ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+      (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+      let Yc := (Y.card:ℝ)
+      let ErrorTotal := Yc*M/Real.sqrt (N:ℝ)+Yc*M*R^2/(N:ℝ)^2+
+        Yc*(N:ℝ)^2*R^2/M+Yc*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+      let Main := Yc^11*M^10*(N:ℝ)^2/R^4+Yc^11*M^11*(N:ℝ)^2/R^7+
+        Yc^11*Jsep*M^10/R^2+Yc^11*Jsep*M^11/R^5+
+        Yc^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),(𝐞 (T*Φ y ((j:ℝ)/M)):ℂ)‖)^12 ≤
+        T^ε*(Main+ErrorTotal^12) := by
+  classical
+  let εloss := ε/4
+  have hεloss : 0 < εloss := by dsimp only [εloss]; linarith only [hε]
+  let κ := modelPhaseThirdLower σ
+  let L := max (32*Usrc^2/csrc^2)
+    (64*(modelPhaseJetCoefficient σ 3+1)*Usrc/κ^2)
+  let θ := 1/(8*(L+3))
+  have hκ : 0 < κ := modelPhaseThirdLower_pos hσ
+  obtain ⟨CF,C,Dtype,_hCF,hC,_hDtype,hfinite⟩ :=
+    eventually_double_difference_all_source_physical_powers hcsrc hUsrc hσ hεloss
+  let Cphys := σ*(σ+1)+1
+  let c := κ/6
+  let J := Cphys/6
+  let B := max 1 (max (2*Real.sqrt J) (8*J*Real.sqrt J/(3*c)))
+  let NarrowCap := (4/θ+3)*(8*Usrc/(csrc*θ)+3)
+  let Cap := 3*NarrowCap
+  let C₂ := modelPhaseJetCoefficient σ 2+δ
+  let C₃ := modelPhaseJetCoefficient σ 3+δ
+  let Ct := C₂/2+5*C₃/12
+  let Cc := C₂/κ+C₃/(2*κ)
+  let Ccurv := (4/κ)*(B+2*quarticReciprocalConstant σ δ)
+  let Kres := 4*(37*B/2+16*B*Cc+2*Ct+2*Cc+
+    2*quarticNonlinearResidualConstant σ δ)/κ
+  let Esize := κ/(16*(Cphys+2))
+  let Dbase := 37*B/2+16*B*Cc+2*Ct+2*Cc+2*quarticNonlinearResidualConstant σ δ
+  let Tbase := (2/κ)*(B+2*quarticReciprocalConstant σ δ)
+  let Lunit := 2*κ/Cphys
+  let Gamma := Cphys/κ
+  let Cthird := Gamma*(32*Kres+9*quarticReciprocalConstant σ δ)
+  let Cpack := 64*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+  let Cfirst := 128*Cphys*(Gamma^2*Cthird+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ^2
+  let Cgap := 64*Cphys*(Gamma^2*B+Gamma*(modelPhaseJetCoefficient σ 3+δ)/κ)/κ
+  let Cmain := 4*(2*Cfirst/Lunit^3)^((3:ℝ)⁻¹)+2
+  let Ctail := 4*Cpack/Lunit^2+Cgap
+  have hCphys : 0 ≤ Cphys := by clear * - hσ; dsimp only [Cphys]; positivity
+  have hB : 0 ≤ B := zero_le_one.trans (le_max_left _ _)
+  have hEsize : 0 < Esize := by clear * - hκ hCphys; dsimp only [Esize]; positivity
+  let Δbase := 37*B/2+16*B*Cc+2*Ct+2*Cc
+  let Sector := 2*3840*128^2*105*(Dbase+64*Tbase*Esize^2)
+  obtain ⟨Bcut,Bselect,hBcut,hBs,hBsSize,hcutMargin,hsize,hcurvAbs⟩ :=
+    exists_source_cutoff_margins (Sector:=Sector) hκ (abs_nonneg Ccurv) hCphys hEsize
+  have hcurv : 61*Ccurv*Cphys ≤ Bcut :=
+    (mul_le_mul_of_nonneg_right
+      (mul_le_mul_of_nonneg_left (le_abs_self Ccurv) (by norm_num)) hCphys).trans hcurvAbs
+  obtain ⟨Cbudget,qcap,hCbudget,hUbudget,hqcap,hselect⟩ :=
+    exists_capped_source_discrete_budget (Dbase:=Dbase) (Δbase:=Δbase)
+      hUsrc hκ hCphys hB hBs
+  let w₀ := min (1/4:ℝ) (csrc/(128*Usrc))
+  have hw₀ : 0 < w₀ := lt_min (by norm_num) (by positivity)
+  have hwcap : w₀ ≤ 1/4 := min_le_left _ _
+  have hwsmall : 2*Usrc*w₀ ≤ csrc/64 := by
+    calc
+      _ ≤ 2*Usrc*(csrc/(128*Usrc)) :=
+        mul_le_mul_of_nonneg_left (min_le_right _ _) (by positivity)
+      _ = _ := by field_simp; norm_num
+  let Cbase := (1536:ℝ)
+  let Cmesh := 2*max 1 (63*Usrc/2)
+  have hCm : 1 ≤ Cmesh := by
+    have hh := le_max_left (1:ℝ) (63*Usrc/2)
+    dsimp only [Cmesh]
+    linarith only [hh]
+  let CtailBand := 4*Usrc*(64/csrc)^2+192/csrc
+  let ClowBand := (2*Usrc+csrc/32)*(3072/csrc)^2+3072/csrc
+  let CerrorBand := (768:ℝ)^2*CtailBand+ClowBand
+  let Carg := 512*768/csrc
+  let Cdensity := 128*CerrorBand*(3+Real.log (Carg+1))
+  let Ccard := 16*Cbase^2+8*Cdensity
+  let Cdelta := (16*Usrc/csrc)*Real.sqrt ((Usrc/2)*Cmesh)
+  let Ctri := 2+θ*(1+2*Usrc/csrc)
+  let C₀ := 60*588*(2*Usrc/csrc)^2
+  let Cpref := Cmesh^12*Cmesh^εloss*(2*Ccard)^10
+  let Wconst := 144*Usrc/(csrc*κ)
+  let CKlog := 3+Real.log (Cmesh+1)
+  let Cerror := 8*(2*Real.sqrt 3*(1+Real.log 6)+72*Usrc/(csrc*κ))
+  let Cfamily := CF^12*2^11*(C*Cap^11*Wconst^6*CKlog^12*Cpref+Cerror^12)
+  let Cband := 2+1/Real.log 2
+  let Cterminal := Cdensity/(2*qcap^2)
+  let Cendpoint := 112/κ+2/(Cphys+2)+41/4
+  let Ctotal := (2:ℝ)^11*
+    (Cband^11*(Cterminal^12+(8:ℝ)^12*Cband*Cfamily)+Cendpoint^12)
+  have hθ : 0 < θ := by
+    clear * - hUsrc hcsrc hκ
+    dsimp only [θ,L]
+    positivity
+  have hCap : 0 ≤ Cap := by
+    clear * - hθ hUsrc hcsrc
+    dsimp only [Cap,NarrowCap]
+    positivity
+  have hTotal : 0 ≤ Ctotal := by
+    clear * - hC hCap hCm
+    have hl : 0 < Real.log 2 := Real.log_pos (by norm_num)
+    dsimp only [Ctotal,Cband,Cfamily,Cpref]
+    positivity
+  let a₁ := Ctri*Dtype/Usrc
+  let a₂ := Ctri*Dtype
+  let a₃ := Ctri*Dtype*Cdelta/Usrc
+  let a₄ := Ctri*Dtype*Cdelta
+  let a₅ := C₀*(Cmain+2*Bselect*Ctail)*Usrc^((4:ℝ)/3)
+  let Cmass := 1+|a₁|+|a₂|+|a₃|+|a₄|+|a₅|
+  have hCmass : 1 ≤ Cmass := by
+    dsimp only [Cmass]
+    linarith only [abs_nonneg a₁,abs_nonneg a₂,abs_nonneg a₃,abs_nonneg a₄,abs_nonneg a₅]
+  have hAbsorb := eventually_selected_band_logarithmic_absorption
+    (C:=|Ctotal| *Cmass) (mul_nonneg (abs_nonneg _) (zero_le_one.trans hCmass)) hε
+  refine ⟨Cbudget,w₀,hCbudget,hw₀,hwcap,?_⟩
+  filter_upwards [hfinite,hAbsorb,Filter.eventually_ge_atTop (1:ℝ)] with T hfiniteT habsorb hTone
+  clear hfinite hAbsorb
+  intro Fsrc rshift sshift Y n N R Jsep d Wmax M
+    hNlink hNtwo hR hd hW hWsmall hJsep hJM hWJ hy hsepY hshifts
+    hreg hlower hjets htests hnegative Φ hmodels hscale
+    hsep hrad hlength hcubic hcapRoom hHeight hMT hRT hNten A Bint hA hab hBint
+    Yc ErrorTotal Main
+  have hT : 0 < T := zero_lt_one.trans_le hTone
+  have hNreal : (2:ℝ) ≤ N := by exact_mod_cast hNtwo
+  have hNp : (0:ℝ) < N := by linarith only [hNreal]
+  have hNOne : (1:ℝ) ≤ N := by linarith only [hNreal]
+  have hRp : 0 < R := zero_lt_one.trans_le hR
+  obtain ⟨Qbase,kmax,Kmesh,Usel,hM,hRN,hNR,hNM,hRM,hNcube,hpad,hquartic,hquadratic,
+    hsmall,hQbase,hBaseHi,hNQ,hQcap,hkmax,hK,hvalid,hmono,hbuffer,hmore⟩ :=
+    hselect N M R hNOne hR hsep hrad hlength hcubic hcapRoom
+  clear hselect
+  let Q := fun k : ℕ => Qbase*2^k
+  have hMtwo : 2 ≤ M := hNreal.trans hNM
+  have hNpos : 0 < N := by omega
+  have hUband : Usrc*T/M^2 ≤ 1 := by
+    apply (div_le_iff₀ (sq_pos_of_pos hM)).mpr
+    simp only [one_mul]
+    apply (mul_le_mul_iff_left₀ hM).mp
+    calc
+      (Usrc*T)*M = (Usrc*M)*T := by ring
+      _ ≤ (Cbudget*M)*T :=
+        mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_right hUbudget hM.le) hT.le
+      _ ≤ ((N:ℝ)*R^2)*T := mul_le_mul_of_nonneg_right hHeight hT.le
+      _ = M^2*M := by nlinarith only [hscale]
+  have hvalidSource : ∀ k ≤ kmax,
+      63*(Usrc/(2*(N:ℝ)*R^2))*(Q k:ℝ)*(N:ℝ)^2 ≤ Kmesh k ∧
+      (Q k:ℝ)*(N:ℝ) ≤ (Kmesh k:ℝ)*R^2 ∧
+      1 ≤ Usel k ∧ Bselect^2*(Usel k:ℝ)^3*R^2 ≤ (N:ℝ)^2 ∧
+      R ≤ (Q k:ℝ) ∧ (Usel k:ℝ) ≤ ((N:ℝ)/(Q k:ℝ))^((2:ℝ)/3)/Bselect ∧
+      (Q k:ℝ) ≤ N ∧ (Usel k:ℝ) ≤ R^2 ∧ 2*R^2 ≤ (Q k:ℝ)*(N:ℝ) ∧
+      Δbase*(Q k:ℝ)/(N:ℝ)+
+        quarticNonlinearResidualConstant σ δ*(2*(Q k:ℝ))/(N:ℝ) ≤ 1/2 ∧
+      Δbase*(Q k:ℝ)/(N:ℝ) < 1/2 := by
+    intro k hk
+    obtain ⟨hsource,hmesh,hU,hwrap,hRQ,hupper,hQN,hUR,hmin,hD,hDelta⟩ := hvalid k hk
+    refine ⟨hsource,hmesh,hU,hwrap,hRQ,hupper,hQN,hUR,hmin,?_,hDelta⟩
+    convert hD using 1
+    dsimp only [Dbase,Δbase]
+    ring
+  have hraw :=
+    hfiniteT Fsrc rshift sshift Y n N Qbase kmax Kmesh Usel R Jsep
+      (d:=d) (Wmax:=Wmax) (M:=M) (δ:=δ) (Bcut:=Bcut) (Bselect:=Bselect)
+      (Cbase:=Cbase) (Cmesh:=Cmesh) (qcap:=qcap)
+      hK hNlink hd hW (hWsmall.trans hwcap)
+      ((mul_le_mul_of_nonneg_left hWsmall (by positivity)).trans hwsmall)
+      hT hMtwo hNpos hδ hR hRM hJsep hJM hNM hWJ
+      hy hsepY hshifts hreg hlower hjets htests hnegative hmodels
+      hscale hpad hquartic hquadratic hBcut hBsSize hcutMargin hNten
+      (Or.inr ⟨by linarith only [hMtwo],hNM.trans hMT,hRT⟩)
+      hQbase hNQ hsmall hNR hRN hNcube hNreal
+      (by simpa only [Cphys,add_assoc,show (1:ℝ)+2=3 by norm_num] using hanchor)
+      hUband hsize hcurv hvalidSource (fun k _ => hmono k) hbuffer
+      hTone hMT hδzero hCm hBaseHi hkmax hqcap hQcap hmore A Bint hA hab hBint
+  clear hfiniteT
+  have heps : 2*εloss=ε/2 := by dsimp only [εloss]; ring
+  exact double_difference_five_monomial_absorption
+    (Ctri:=Ctri) (Dtype:=Dtype) (Cdelta:=Cdelta) (C₀:=C₀)
+    (Cmain:=Cmain) (Bselect:=Bselect) (Ctail:=Ctail) (Ctotal:=Ctotal) (ε:=ε)
+    hUsrc (Nat.cast_nonneg _) hM hNp hRp hJsep.le hT hTotal habsorb.2.2
+    (by simpa only [heps] using hraw)
+
+
+example
+    {csrc Usrc σ δ ε : ℝ}
+    (hcsrc : 0 < csrc) (hUsrc : 0 < Usrc) (hσ : 0 < σ)
+    (hδzero : 0 ≤ δ) (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hε : 0 < ε)
+    (hanchor : csrc ≤ 4*modelPhaseThirdLower σ/(σ*(σ+1)+3)) :
+    ∃ Cbudget w₀ : ℝ, 1 ≤ Cbudget ∧ 0 < w₀ ∧ w₀ ≤ 1/4 ∧
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (Fsrc rshift sshift : ℝ → ℝ) (Y : Finset ℝ)
+      (n N : ℕ) (R Jsep : ℝ) {d Wmax M : ℝ},
+      N=8*n → 2 ≤ N → 1 ≤ R → 0 < d → 0 ≤ Wmax → Wmax ≤ w₀ →
+      0 < Jsep → Jsep ≤ M → Wmax*Jsep ≤ 1 →
+      (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+      (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+      (∀ y∈Y, 0 ≤ rshift y ∧ 0 ≤ sshift y ∧
+        rshift y*sshift y=d*y ∧ rshift y+sshift y ≤ Wmax) →
+      (∀ w, 0 < w → ContDiffAt ℝ ∞ Fsrc w) →
+      (∀ w∈Icc (1/2:ℝ) 3, csrc ≤ iteratedDeriv 5 Fsrc w) →
+      (∀ w∈Icc (1/2:ℝ) 3, ∀ j, 1 ≤ j → j ≤ 7 → |iteratedDeriv j Fsrc w| ≤ Usrc) →
+      (∀ w∈Icc (1/2:ℝ) 3,
+        csrc ≤ |(iteratedDeriv 5 Fsrc w)^2-iteratedDeriv 4 Fsrc w*iteratedDeriv 6 Fsrc w|) →
+      (∀ w∈Icc (1/2:ℝ) 3, iteratedDeriv 4 Fsrc w ≤ -csrc) →
+      let Φ := fun y u =>
+        (Fsrc u-Fsrc (u+rshift y)-Fsrc (u+sshift y)+Fsrc (u+rshift y+sshift y))/d
+      (∀ y∈Y, Expdb.IsApproximateModelPhaseFunction (Φ y) σ 4 δ) →
+      T*(N:ℝ)*R^2=M^3 →
+      Cbudget*R ≤ N → Cbudget*(N:ℝ) ≤ R^2 → Cbudget*(N:ℝ) ≤ M →
+      Cbudget*(N:ℝ)^3 ≤ M*R^2 → Cbudget*(N:ℝ)*R ≤ M →
+      Cbudget*M ≤ (N:ℝ)*R^2 → M ≤ T → R^2 ≤ T →
+      (N:ℝ)^10 ≤ M^3*R^7 →
+      ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+      (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+      let Yc := (Y.card:ℝ)
+      let ErrorTotal := Yc*M/Real.sqrt (N:ℝ)+Yc*M*R^2/(N:ℝ)^2+
+        Yc*(N:ℝ)^2*R^2/M+Yc*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+      let Main := Yc^11*M^10*(N:ℝ)^2/R^4+Yc^11*M^11*(N:ℝ)^2/R^7+
+        Yc^11*Jsep*M^10/R^2+Yc^11*Jsep*M^11/R^5+
+        Yc^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+      (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),(𝐞 (T*Φ y ((j:ℝ)/M)):ℂ)‖)^12 ≤
+        T^ε*(Main+ErrorTotal^12) := by
+  exact eventually_double_difference_uniform_capped_source_bound
+    hcsrc hUsrc hσ hδzero hδ hε hanchor
+
+#print axioms eventually_double_difference_uniform_capped_source_bound
+
+
+/-- Unchanged existing private radius-comparison proof; promotion reuses the original. -/
+private theorem upperOriginal_comparable_radius_powers
+    {N R S D : ℝ} (hN : 0<N) (hR : 0<R) (hS : 0<S) (hD : 1≤D)
+    (hSR : S≤D*R) (hRS : R≤D*S) :
+    S^2≤D^2*R^2 ∧ 1/S^2≤D^2/R^2 ∧
+      (N/S)^((2:ℝ)/3)≤D*(N/R)^((2:ℝ)/3) ∧
+      (S/N)^((2:ℝ)/3)≤D*(R/N)^((2:ℝ)/3) := by
+  have hD0 : 0≤D := zero_le_one.trans hD
+  have hDs : D^((2:ℝ)/3)≤D := by
+    simpa only [Real.rpow_one] using
+      Real.rpow_le_rpow_of_exponent_le hD (by norm_num : (2:ℝ)/3≤1)
+  have hpow {x y : ℝ} (hx : 0≤x) (hy : 0≤y) (hxy : x≤D*y) :
+      x^((2:ℝ)/3)≤D*y^((2:ℝ)/3) := by
+    calc
+      _ ≤ (D*y)^((2:ℝ)/3) := Real.rpow_le_rpow hx hxy (by norm_num)
+      _ = D^((2:ℝ)/3)*y^((2:ℝ)/3) := Real.mul_rpow hD0 hy
+      _ ≤ _ := mul_le_mul_of_nonneg_right hDs (Real.rpow_nonneg hy _)
+  refine ⟨?_,?_,?_,?_⟩
+  · simpa only [mul_pow] using pow_le_pow_left₀ hS.le hSR 2
+  · apply (div_le_div_iff₀ (sq_pos_of_pos hS) (sq_pos_of_pos hR)).mpr
+    simpa only [one_mul,mul_pow] using pow_le_pow_left₀ hR.le hRS 2
+  · apply hpow (div_nonneg hN.le hS.le) (div_nonneg hN.le hR.le)
+    calc
+      _ ≤ (D*N)/R := (div_le_div_iff₀ hS hR).mpr (by
+        nlinarith only [mul_le_mul_of_nonneg_left hRS hN.le])
+      _ = _ := by ring
+  · apply hpow (div_nonneg hS.le hN.le) (div_nonneg hR.le hN.le)
+    calc
+      _ ≤ (D*R)/N := div_le_div_of_nonneg_right hSR hN.le
+      _ = _ := by ring
+
+example
+    {N R S D : ℝ} (hN : 0<N) (hR : 0<R) (hS : 0<S) (hD : 1≤D)
+    (hSR : S≤D*R) (hRS : R≤D*S) :
+    S^2≤D^2*R^2 ∧ 1/S^2≤D^2/R^2 ∧
+      (N/S)^((2:ℝ)/3)≤D*(N/R)^((2:ℝ)/3) ∧
+      (S/N)^((2:ℝ)/3)≤D*(R/N)^((2:ℝ)/3) := by
+  exact upperOriginal_comparable_radius_powers hN hR hS hD hSR hRS
+
+#print axioms upperOriginal_comparable_radius_powers
+
+/-- Unchanged existing private radius-comparison proof; promotion reuses the original. -/
+private theorem upperOriginal_upper_radius_error_bound
+    {Ysmall Y M N R S D : ℝ}
+    (hYsmall : 0≤Ysmall) (hY : Ysmall≤Y) (hM : 0<M) (hN : 0<N)
+    (hR : 0<R) (hS : 0<S) (hD : 1≤D) (hSR : S≤D*R) (hRS : R≤D*S) :
+    Ysmall*M/Real.sqrt N+Ysmall*M*S^2/N^2+Ysmall*N*(N/S)^((2:ℝ)/3) ≤
+      D^2*(Y*M/Real.sqrt N+Y*M*R^2/N^2+Y*N*(N/R)^((2:ℝ)/3)) := by
+  have hY0 := hYsmall.trans hY
+  have hD0 := zero_le_one.trans hD
+  have hD2 : 1≤D^2 := by nlinarith only [hD,sq_nonneg (D-1)]
+  have hDD2 : D≤D^2 := by nlinarith only [hD,sq_nonneg (D-1)]
+  obtain ⟨hSq,_,hInv,_⟩ := upperOriginal_comparable_radius_powers hN hR hS hD hSR hRS
+  have h₁ : Ysmall*M/Real.sqrt N≤D^2*(Y*M/Real.sqrt N) := by
+    calc
+      _ ≤ Y*M/Real.sqrt N := by gcongr
+      _ ≤ _ := le_mul_of_one_le_left (by positivity) hD2
+  have h₂ : Ysmall*M*S^2/N^2≤D^2*(Y*M*R^2/N^2) := by
+    calc
+      _ ≤ Y*M*(D^2*R^2)/N^2 := by gcongr
+      _ = _ := by ring
+  have h₃ : Ysmall*N*(N/S)^((2:ℝ)/3)≤D^2*(Y*N*(N/R)^((2:ℝ)/3)) := by
+    calc
+      _ ≤ Y*N*(D*(N/R)^((2:ℝ)/3)) := by gcongr
+      _ = D*(Y*N*(N/R)^((2:ℝ)/3)) := by ring
+      _ ≤ _ := mul_le_mul_of_nonneg_right hDD2 (by positivity)
+  calc
+    _ ≤ D^2*(Y*M/Real.sqrt N)+D^2*(Y*M*R^2/N^2)+
+        D^2*(Y*N*(N/R)^((2:ℝ)/3)) := add_le_add (add_le_add h₁ h₂) h₃
+    _ = _ := by ring
+
+example
+    {Ysmall Y M N R S D : ℝ}
+    (hYsmall : 0≤Ysmall) (hY : Ysmall≤Y) (hM : 0<M) (hN : 0<N)
+    (hR : 0<R) (hS : 0<S) (hD : 1≤D) (hSR : S≤D*R) (hRS : R≤D*S) :
+    Ysmall*M/Real.sqrt N+Ysmall*M*S^2/N^2+Ysmall*N*(N/S)^((2:ℝ)/3) ≤
+      D^2*(Y*M/Real.sqrt N+Y*M*R^2/N^2+Y*N*(N/R)^((2:ℝ)/3)) := by
+  exact upperOriginal_upper_radius_error_bound hYsmall hY hM hN hR hS hD hSR hRS
+
+#print axioms upperOriginal_upper_radius_error_bound
+
+/-- Unchanged existing private radius-comparison proof; promotion reuses the original. -/
+private theorem upperOriginal_normalized_radius_comparable
+    {γ R S D : ℝ} (hR : 0<R) (hS : 0<S) (hD : 1≤D)
+    (hγD : γ≤D) (hDγ : 1≤D*γ) (hlink : γ*S^2=R^2) :
+    S≤D*R ∧ R≤D*S := by
+  have hD0 := zero_le_one.trans hD
+  have hDD2 : D≤D^2 := by nlinarith only [hD,sq_nonneg (D-1)]
+  constructor
+  · apply (sq_le_sq₀ hS.le (mul_nonneg hD0 hR.le)).mp
+    calc
+      _ ≤ (D*γ)*S^2 := le_mul_of_one_le_left (sq_nonneg S) hDγ
+      _ = D*R^2 := by rw [mul_assoc,hlink]
+      _ ≤ D^2*R^2 := mul_le_mul_of_nonneg_right hDD2 (sq_nonneg R)
+      _ = _ := (mul_pow D R 2).symm
+  · apply (sq_le_sq₀ hR.le (mul_nonneg hD0 hS.le)).mp
+    calc
+      _ = γ*S^2 := hlink.symm
+      _ ≤ D*S^2 := mul_le_mul_of_nonneg_right hγD (sq_nonneg S)
+      _ ≤ D^2*S^2 := mul_le_mul_of_nonneg_right hDD2 (sq_nonneg S)
+      _ = _ := (mul_pow D S 2).symm
+
+example
+    {γ R S D : ℝ} (hR : 0<R) (hS : 0<S) (hD : 1≤D)
+    (hγD : γ≤D) (hDγ : 1≤D*γ) (hlink : γ*S^2=R^2) :
+    S≤D*R ∧ R≤D*S := by
+  exact upperOriginal_normalized_radius_comparable hR hS hD hγD hDγ hlink
+
+#print axioms upperOriginal_normalized_radius_comparable
+
+/-- Capped physical budgets survive the SAME source amplitude/radius normalization.
+Unlike the older single-difference budget transport, this retains the cubic and
+height budgets and introduces no N^2 <= M restriction. -/
+private theorem double_difference_capped_comparable_radius_budgets
+    {M N R S T V D C : ℝ} (hM : 0 < M) (hN : 0 < N)
+    (hR : 0 < R) (hD : 1 ≤ D) (hC : 1 ≤ C)
+    (hSR : S ≤ D*R) (hRS : R ≤ D*S) (hTV : T ≤ D*V)
+    (hRlow : C*D^7 ≤ R)
+    (hRN : (C*D^7)*R ≤ N) (hNR : (C*D^7)*N ≤ R^2)
+    (hNM : (C*D^7)*N ≤ M) (hCubic : (C*D^7)*N^3 ≤ M*R^2)
+    (hCap : (C*D^7)*N*R ≤ M) (hHeight : (C*D^7)*M ≤ N*R^2)
+    (hMT : (C*D^7)*M ≤ T) (hRT : (C*D^7)*R^2 ≤ T)
+    (hTen : (C*D^7)*N^10 ≤ M^3*R^7) :
+    1 ≤ S ∧ C*S ≤ N ∧ C*N ≤ S^2 ∧ C*N ≤ M ∧
+      C*N^3 ≤ M*S^2 ∧ C*N*S ≤ M ∧ C*M ≤ N*S^2 ∧
+      M ≤ V ∧ S^2 ≤ V ∧ N^10 ≤ M^3*S^7 := by
+  have hDp := zero_lt_one.trans_le hD
+  have hCp := zero_lt_one.trans_le hC
+  have hpow (i : ℕ) (hi : i ≤ 7) : C*D^i ≤ C*D^7 :=
+    mul_le_mul_of_nonneg_left (pow_le_pow_right₀ hD hi) hCp.le
+  have hplain (i : ℕ) (hi : i ≤ 7) : D^i ≤ C*D^7 :=
+    (le_mul_of_one_le_left (pow_nonneg hDp.le i) hC).trans (hpow i hi)
+  have hB : C ≤ C*D^7 := by simpa only [pow_zero,mul_one] using hpow 0 (by omega)
+  have hDb : D ≤ C*D^7 := by simpa only [pow_one] using hplain 1 (by omega)
+  refine ⟨?_,?_,?_,?_,?_,?_,?_,?_,?_,?_⟩
+  · have hh := hDb.trans (hRlow.trans hRS)
+    nlinarith only [hh,hDp]
+  · calc
+      _ ≤ C*(D*R) := mul_le_mul_of_nonneg_left hSR hCp.le
+      _ = (C*D^1)*R := by ring
+      _ ≤ (C*D^7)*R := mul_le_mul_of_nonneg_right (hpow 1 (by omega)) hR.le
+      _ ≤ N := hRN
+  · apply (mul_le_mul_iff_right₀ (sq_pos_of_pos hDp)).mp
+    calc
+      _ = (C*D^2)*N := by ring
+      _ ≤ (C*D^7)*N := mul_le_mul_of_nonneg_right (hpow 2 (by omega)) hN.le
+      _ ≤ R^2 := hNR
+      _ ≤ (D*S)^2 := pow_le_pow_left₀ hR.le hRS 2
+      _ = _ := by ring
+  · exact (mul_le_mul_of_nonneg_right hB hN.le).trans hNM
+  · apply (mul_le_mul_iff_right₀ (sq_pos_of_pos hDp)).mp
+    calc
+      _ = (C*D^2)*N^3 := by ring
+      _ ≤ (C*D^7)*N^3 := mul_le_mul_of_nonneg_right (hpow 2 (by omega)) (by positivity)
+      _ ≤ M*R^2 := hCubic
+      _ ≤ M*(D*S)^2 := mul_le_mul_of_nonneg_left (pow_le_pow_left₀ hR.le hRS 2) hM.le
+      _ = _ := by ring
+  · calc
+      _ ≤ C*N*(D*R) := mul_le_mul_of_nonneg_left hSR (by positivity)
+      _ = (C*D^1)*N*R := by ring
+      _ ≤ (C*D^7)*N*R :=
+        mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_right (hpow 1 (by omega)) hN.le) hR.le
+      _ ≤ M := hCap
+  · apply (mul_le_mul_iff_right₀ (sq_pos_of_pos hDp)).mp
+    calc
+      _ = (C*D^2)*M := by ring
+      _ ≤ (C*D^7)*M := mul_le_mul_of_nonneg_right (hpow 2 (by omega)) hM.le
+      _ ≤ N*R^2 := hHeight
+      _ ≤ N*(D*S)^2 := mul_le_mul_of_nonneg_left (pow_le_pow_left₀ hR.le hRS 2) hN.le
+      _ = _ := by ring
+  · apply (mul_le_mul_iff_right₀ hDp).mp
+    exact ((mul_le_mul_of_nonneg_right hDb hM.le).trans hMT).trans hTV
+  · apply (mul_le_mul_iff_right₀ hDp).mp
+    have hSnon : 0 ≤ S := by
+      have hh : 0 < D*S := hR.trans_le hRS
+      exact (pos_of_mul_pos_right hh hDp.le).le
+    calc
+      _ ≤ D*(D*R)^2 := mul_le_mul_of_nonneg_left (pow_le_pow_left₀ hSnon hSR 2) hDp.le
+      _ = D^3*R^2 := by ring
+      _ ≤ (C*D^7)*R^2 := mul_le_mul_of_nonneg_right (hplain 3 (by omega)) (sq_nonneg R)
+      _ ≤ T := hRT
+      _ ≤ D*V := hTV
+  · apply (mul_le_mul_iff_right₀ (pow_pos hDp 7)).mp
+    calc
+      _ ≤ (C*D^7)*N^10 :=
+        mul_le_mul_of_nonneg_right (hplain 7 le_rfl) (pow_nonneg hN.le 10)
+      _ ≤ M^3*R^7 := hTen
+      _ ≤ M^3*(D*S)^7 :=
+        mul_le_mul_of_nonneg_left (pow_le_pow_left₀ hR.le hRS 7) (pow_nonneg hM.le 3)
+      _ = _ := by ring
+
+
+example
+    {M N R S T V D C : ℝ} (hM : 0 < M) (hN : 0 < N)
+    (hR : 0 < R) (hD : 1 ≤ D) (hC : 1 ≤ C)
+    (hSR : S ≤ D*R) (hRS : R ≤ D*S) (hTV : T ≤ D*V)
+    (hRlow : C*D^7 ≤ R)
+    (hRN : (C*D^7)*R ≤ N) (hNR : (C*D^7)*N ≤ R^2)
+    (hNM : (C*D^7)*N ≤ M) (hCubic : (C*D^7)*N^3 ≤ M*R^2)
+    (hCap : (C*D^7)*N*R ≤ M) (hHeight : (C*D^7)*M ≤ N*R^2)
+    (hMT : (C*D^7)*M ≤ T) (hRT : (C*D^7)*R^2 ≤ T)
+    (hTen : (C*D^7)*N^10 ≤ M^3*R^7) :
+    1 ≤ S ∧ C*S ≤ N ∧ C*N ≤ S^2 ∧ C*N ≤ M ∧
+      C*N^3 ≤ M*S^2 ∧ C*N*S ≤ M ∧ C*M ≤ N*S^2 ∧
+      M ≤ V ∧ S^2 ≤ V ∧ N^10 ≤ M^3*S^7 := by
+  exact double_difference_capped_comparable_radius_budgets hM hN hR hD hC hSR hRS hTV
+    hRlow hRN hNR hNM hCubic hCap hHeight hMT hRT hTen
+
+#print axioms double_difference_capped_comparable_radius_budgets
+
+/-- Radius comparison retains the extra capped terminal error. -/
+private theorem double_difference_capped_radius_error_bound
+    {Ysmall Y M N R S D : ℝ}
+    (hYsmall : 0 ≤ Ysmall) (hY : Ysmall ≤ Y) (hM : 0 < M) (hN : 0 < N)
+    (hR : 0 < R) (hS : 0 < S) (hD : 1 ≤ D) (hSR : S ≤ D*R) (hRS : R ≤ D*S) :
+    Ysmall*M/Real.sqrt N+Ysmall*M*S^2/N^2+
+      Ysmall*N^2*S^2/M+Ysmall*N*(N/S)^((2:ℝ)/3) ≤
+    D^2*(Y*M/Real.sqrt N+Y*M*R^2/N^2+
+      Y*N^2*R^2/M+Y*N*(N/R)^((2:ℝ)/3)) := by
+  have hY0 := hYsmall.trans hY
+  have hbase := upperOriginal_upper_radius_error_bound hYsmall hY hM hN hR hS hD hSR hRS
+  have hSq := (upperOriginal_comparable_radius_powers hN hR hS hD hSR hRS).1
+  have hnew : Ysmall*N^2*S^2/M ≤ D^2*(Y*N^2*R^2/M) := by
+    calc
+      _ ≤ Y*N^2*(D^2*R^2)/M := by gcongr
+      _ = _ := by ring
+  nlinarith only [hbase,hnew]
+
+
+example
+    {Ysmall Y M N R S D : ℝ}
+    (hYsmall : 0 ≤ Ysmall) (hY : Ysmall ≤ Y) (hM : 0 < M) (hN : 0 < N)
+    (hR : 0 < R) (hS : 0 < S) (hD : 1 ≤ D) (hSR : S ≤ D*R) (hRS : R ≤ D*S) :
+    Ysmall*M/Real.sqrt N+Ysmall*M*S^2/N^2+
+      Ysmall*N^2*S^2/M+Ysmall*N*(N/S)^((2:ℝ)/3) ≤
+    D^2*(Y*M/Real.sqrt N+Y*M*R^2/N^2+
+      Y*N^2*R^2/M+Y*N*(N/R)^((2:ℝ)/3)) := by
+  exact double_difference_capped_radius_error_bound hYsmall hY hM hN hR hS hD hSR hRS
+
+#print axioms double_difference_capped_radius_error_bound
+
+/-- The five actual physical main terms are uniform under common height/radius normalization. -/
+private theorem double_difference_capped_radius_main_bound
+    {Ysmall Y M N R S D J T V : ℝ}
+    (hYsmall : 0 ≤ Ysmall) (hY : Ysmall ≤ Y) (hM : 0 < M) (hN : 0 < N)
+    (hR : 0 < R) (hS : 0 < S) (hD : 1 ≤ D) (hJ : 0 ≤ J)
+    (hT : 0 < T) (hV : 0 < V)
+    (hSR : S ≤ D*R) (hRS : R ≤ D*S) (hVT : V ≤ D*T) :
+    Ysmall^11*M^10*N^2/S^4+Ysmall^11*M^11*N^2/S^7+
+      Ysmall^11*J*M^10/S^2+Ysmall^11*J*M^11/S^5+
+      Ysmall^12*M^10*S^2/N^2*(S/N)^((2:ℝ)/3)*(V/M^2)^((4:ℝ)/3) ≤
+    D^8*(Y^11*M^10*N^2/R^4+Y^11*M^11*N^2/R^7+
+      Y^11*J*M^10/R^2+Y^11*J*M^11/R^5+
+      Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)) := by
+  have hY0 := hYsmall.trans hY
+  have hD0 := zero_le_one.trans hD
+  have hInv (j : ℕ) : 1/S^j ≤ D^j/R^j := by
+    apply (div_le_div_iff₀ (pow_pos hS j) (pow_pos hR j)).mpr
+    simpa only [one_mul,mul_pow] using pow_le_pow_left₀ hR.le hRS j
+  have hi₄ := hInv 4
+  have hi₇ := hInv 7
+  have hi₂ := hInv 2
+  have hi₅ := hInv 5
+  obtain ⟨hSq,_,_,hFor⟩ := upperOriginal_comparable_radius_powers hN hR hS hD hSR hRS
+  have hD48 : D^4 ≤ D^8 := pow_le_pow_right₀ hD (by norm_num)
+  have hD78 : D^7 ≤ D^8 := pow_le_pow_right₀ hD (by norm_num)
+  have hD28 : D^2 ≤ D^8 := pow_le_pow_right₀ hD (by norm_num)
+  have hD58 : D^5 ≤ D^8 := pow_le_pow_right₀ hD (by norm_num)
+  have hTr : (V/M^2)^((4:ℝ)/3) ≤ D^2*(T/M^2)^((4:ℝ)/3) := by
+    have hDe : D^((4:ℝ)/3) ≤ D^2 := by
+      rw [←Real.rpow_natCast D 2]
+      exact Real.rpow_le_rpow_of_exponent_le hD (by norm_num)
+    calc
+      _ ≤ (D*(T/M^2))^((4:ℝ)/3) := by
+        apply Real.rpow_le_rpow (by positivity) _ (by norm_num)
+        simpa only [mul_div_assoc] using div_le_div_of_nonneg_right hVT (sq_nonneg M)
+      _ = D^((4:ℝ)/3)*(T/M^2)^((4:ℝ)/3) := Real.mul_rpow hD0 (by positivity)
+      _ ≤ _ := mul_le_mul_of_nonneg_right hDe (by positivity)
+  have h₁ : Ysmall^11*M^10*N^2/S^4 ≤ D^8*(Y^11*M^10*N^2/R^4) := by
+    calc
+      _ = (Ysmall^11*M^10*N^2)*(1/S^4) := by ring
+      _ ≤ (Y^11*M^10*N^2)*(D^4/R^4) := by gcongr
+      _ = D^4*(Y^11*M^10*N^2/R^4) := by ring
+      _ ≤ _ := mul_le_mul_of_nonneg_right hD48 (by positivity)
+  have h₂ : Ysmall^11*M^11*N^2/S^7 ≤ D^8*(Y^11*M^11*N^2/R^7) := by
+    calc
+      _ = (Ysmall^11*M^11*N^2)*(1/S^7) := by ring
+      _ ≤ (Y^11*M^11*N^2)*(D^7/R^7) := by gcongr
+      _ = D^7*(Y^11*M^11*N^2/R^7) := by ring
+      _ ≤ _ := mul_le_mul_of_nonneg_right hD78 (by positivity)
+  have h₃ : Ysmall^11*J*M^10/S^2 ≤ D^8*(Y^11*J*M^10/R^2) := by
+    calc
+      _ = (Ysmall^11*J*M^10)*(1/S^2) := by ring
+      _ ≤ (Y^11*J*M^10)*(D^2/R^2) := by gcongr
+      _ = D^2*(Y^11*J*M^10/R^2) := by ring
+      _ ≤ _ := mul_le_mul_of_nonneg_right hD28 (by positivity)
+  have h₄ : Ysmall^11*J*M^11/S^5 ≤ D^8*(Y^11*J*M^11/R^5) := by
+    calc
+      _ = (Ysmall^11*J*M^11)*(1/S^5) := by ring
+      _ ≤ (Y^11*J*M^11)*(D^5/R^5) := by gcongr
+      _ = D^5*(Y^11*J*M^11/R^5) := by ring
+      _ ≤ _ := mul_le_mul_of_nonneg_right hD58 (by positivity)
+  have h₅ :
+      Ysmall^12*M^10*S^2/N^2*(S/N)^((2:ℝ)/3)*(V/M^2)^((4:ℝ)/3) ≤
+      D^8*(Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)) := by
+    calc
+      _ ≤ (Y^12*M^10*(D^2*R^2)/N^2)*
+          (D*(R/N)^((2:ℝ)/3))*(D^2*(T/M^2)^((4:ℝ)/3)) := by gcongr
+      _ = D^5*(Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)) := by ring
+      _ ≤ _ := mul_le_mul_of_nonneg_right hD58 (by positivity)
+  calc
+    _ ≤ D^8*(Y^11*M^10*N^2/R^4)+D^8*(Y^11*M^11*N^2/R^7)+
+        D^8*(Y^11*J*M^10/R^2)+D^8*(Y^11*J*M^11/R^5)+
+        D^8*(Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)) :=
+      add_le_add (add_le_add (add_le_add (add_le_add h₁ h₂) h₃) h₄) h₅
+    _ = _ := by ring
+
+
+example
+    {Ysmall Y M N R S D J T V : ℝ}
+    (hYsmall : 0 ≤ Ysmall) (hY : Ysmall ≤ Y) (hM : 0 < M) (hN : 0 < N)
+    (hR : 0 < R) (hS : 0 < S) (hD : 1 ≤ D) (hJ : 0 ≤ J)
+    (hT : 0 < T) (hV : 0 < V)
+    (hSR : S ≤ D*R) (hRS : R ≤ D*S) (hVT : V ≤ D*T) :
+    Ysmall^11*M^10*N^2/S^4+Ysmall^11*M^11*N^2/S^7+
+      Ysmall^11*J*M^10/S^2+Ysmall^11*J*M^11/S^5+
+      Ysmall^12*M^10*S^2/N^2*(S/N)^((2:ℝ)/3)*(V/M^2)^((4:ℝ)/3) ≤
+    D^8*(Y^11*M^10*N^2/R^4+Y^11*M^11*N^2/R^7+
+      Y^11*J*M^10/R^2+Y^11*J*M^11/R^5+
+      Y^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)) := by
+  exact double_difference_capped_radius_main_bound hYsmall hY hM hN hR hS hD hJ hT hV hSR hRS hVT
+
+#print axioms double_difference_capped_radius_main_bound
+
+/-- The SAME sharp extension of the original model supplies every normalized
+double-difference family. This consumes the constructed capped source estimate,
+with all physical budgets transported and the literal phase sums preserved. -/
+private theorem approximateModelPhase_enlarged_double_capped_quantitative
+    {σ ε : ℝ} (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ w₀ B C : ℝ, 0 < δ ∧ 0 < w₀ ∧ w₀ ≤ 1/4 ∧ 1 ≤ B ∧ 1 ≤ C ∧
+      ∀ (M : ℝ) (F : ℝ → ℝ), 1 ≤ M →
+        Expdb.IsApproximateModelPhaseFunction F σ 7 δ →
+      ∃ Fext : ℝ → ℝ,
+        (∀ (X : ℝ) (a b : ℕ), M ≤ (a:ℝ) → (b:ℝ) ≤ 2*M →
+          ‖Expdb.exponentialSumAt F X M a b-
+            Expdb.exponentialSumAt Fext X M a b‖ ≤ 6) ∧
+        ∀ (T : ℝ) (Y : Finset ℝ) (rshift sshift : ℝ → ℝ) (n N : ℕ)
+          (R Jsep d Wmax : ℝ),
+          C ≤ T → N=8*n → 2 ≤ N → B ≤ R →
+          0 < d → 0 ≤ Wmax → Wmax ≤ w₀ → 0 < Jsep → Jsep ≤ M → Wmax*Jsep ≤ 1 →
+          (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+          (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+          (∀ y∈Y, 0 < rshift y ∧ 0 < sshift y ∧
+            rshift y*sshift y=d*y ∧ rshift y+sshift y ≤ Wmax) →
+          T*(N:ℝ)*R^2=M^3 →
+          B*R ≤ N → B*(N:ℝ) ≤ R^2 → B*(N:ℝ) ≤ M →
+          B*(N:ℝ)^3 ≤ M*R^2 → B*(N:ℝ)*R ≤ M →
+          B*M ≤ (N:ℝ)*R^2 → B*M ≤ T → B*R^2 ≤ T →
+          B*(N:ℝ)^10 ≤ M^3*R^7 →
+          ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+          (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+          let Yc := (Y.card:ℝ)
+          let ErrorTotal := Yc*M/Real.sqrt (N:ℝ)+Yc*M*R^2/(N:ℝ)^2+
+            Yc*(N:ℝ)^2*R^2/M+Yc*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+          let Main := Yc^11*M^10*(N:ℝ)^2/R^4+Yc^11*M^11*(N:ℝ)^2/R^7+
+            Yc^11*Jsep*M^10/R^2+Yc^11*Jsep*M^11/R^5+
+            Yc^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+          (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),
+            (𝐞 (T*(Fext ((j:ℝ)/M)-Fext ((j:ℝ)/M+rshift y)-
+              Fext ((j:ℝ)/M+sshift y)+Fext ((j:ℝ)/M+rshift y+sshift y))/d):ℂ)‖)^12 ≤
+            C*T^ε*(Main+ErrorTotal^12) := by
+  classical
+  have hσtwo : 0 < σ+2 := by linarith only [hσ]
+  let δmodel := min (modelPhaseThirdLower (σ+2)) 1/2
+  have hmin : 0 < min (modelPhaseThirdLower (σ+2)) 1 :=
+    lt_min (modelPhaseThirdLower_pos hσtwo) zero_lt_one
+  have hδmodel : 0 < δmodel := half_pos hmin
+  have hδmodelCap : δmodel ≤ min (modelPhaseThirdLower (σ+2)) 1 := by
+    dsimp only [δmodel]
+    linarith only [hmin]
+  obtain ⟨δ,wsrc,a,c,U,hδ,hwsrc,hwsrcCap,ha,hc,hU,_hsmall,hanchor,hsource⟩ :=
+    approximateModelPhase_enlarged_double_common_scale_source hσ hδmodel
+  have hanchor' : c ≤ 4*modelPhaseThirdLower (σ+2)/((σ+2)*((σ+2)+1)+3) := by
+    simpa only [add_assoc,show (2:ℝ)+1=3 by norm_num] using hanchor
+  obtain ⟨Cbudget,wquant,hCbudget,hwquant,_hwquantCap,hquant⟩ :=
+    eventually_double_difference_uniform_capped_source_bound
+      hc hU hσtwo hδmodel.le hδmodelCap hε hanchor'
+  obtain ⟨Tcut,hTcut⟩ := Filter.eventually_atTop.mp hquant
+  let G := σ*(σ+1)
+  have hG : 0 < G := by dsimp only [G]; positivity
+  let D := 2+2*G+1/G
+  have hD : 1 ≤ D := by
+    dsimp only [D]
+    have hi : 0 < 1/G := by positivity
+    linarith only [hG,hi]
+  have hDp := zero_lt_one.trans_le hD
+  have hDG : 1 ≤ D*G := by
+    have hi : (1/G)*G=1 := div_mul_cancel₀ 1 hG.ne'
+    dsimp only [D]
+    nlinarith only [hi,hG,sq_nonneg G]
+  have hGD : 2*G ≤ D := by
+    dsimp only [D]
+    have hi : 0 < 1/G := by positivity
+    linarith only [hi]
+  let B := Cbudget*D^7
+  have hB : 1 ≤ B := one_le_mul_of_one_le_of_one_le hCbudget (one_le_pow₀ hD)
+  let Cap := 4/a+3
+  have hCap : 1 ≤ Cap := by
+    dsimp only [Cap]
+    have hh : 0 < 4/a := by positivity
+    linarith only [hh]
+  let K := (2*G)^ε*D^24
+  have hK : 0 ≤ K := by dsimp only [K]; positivity
+  let C := max 1 (max (Tcut/G) (Cap^12*K))
+  have hC : 1 ≤ C := le_max_left _ _
+  have hCcut : Tcut/G ≤ C := (le_max_left _ _).trans (le_max_right _ _)
+  have hCK : Cap^12*K ≤ C := (le_max_right _ _).trans (le_max_right _ _)
+  refine ⟨δ,min wsrc wquant,B,C,hδ,lt_min hwsrc hwquant,
+    (min_le_left _ _).trans hwsrcCap,hB,hC,?_⟩
+  intro M F hM hF
+  obtain ⟨Fext,_hreg,hsharp,hcolors⟩ := hsource M F hM hF
+  refine ⟨Fext,hsharp,?_⟩
+  intro T Y rshift sshift n N R Jsep d Wmax
+    hThreshold hN8 hN2 hRlow hd hW hWcap hJsep hJM hWJ hy hsep hshifts
+    hphase hRN hNR hNM hCubic hCapRoom hHeight hMT hRT hTen
+    A Bint hA hab hBint Yc ErrorTotal Main
+  have hMp : 0 < M := zero_lt_one.trans_le hM
+  have hNp : (0:ℝ) < N := by exact_mod_cast (show 0 < N by omega)
+  have hRp : 0 < R := zero_lt_one.trans_le (hB.trans hRlow)
+  have hTp : 0 < T := zero_lt_one.trans_le (hC.trans hThreshold)
+  have hYc : 0 ≤ Yc := Nat.cast_nonneg _
+  have hMain : 0 ≤ Main := by
+    dsimp only [Main]
+    clear * - hYc hMp hNp hRp hJsep hTp
+    positivity
+  have hError : 0 ≤ ErrorTotal := by
+    dsimp only [ErrorTotal]
+    clear * - hYc hMp hNp hRp
+    positivity
+  have hMass : 0 ≤ Main+ErrorTotal^12 := add_nonneg hMain (pow_nonneg hError 12)
+  let color := fun y : ℝ => ⌊y/a⌋
+  let z := fun y : ℝ => (‖∑ l∈Finset.Ioc (A y) (Bint y),
+    (𝐞 (T*(Fext ((l:ℝ)/M)-Fext ((l:ℝ)/M+rshift y)-
+      Fext ((l:ℝ)/M+sshift y)+Fext ((l:ℝ)/M+rshift y+sshift y))/d):ℂ)‖:ℂ)
+  have hzNorm (V : Finset ℝ) :
+      ‖∑ y∈V,z y‖ = ∑ y∈V,‖∑ l∈Finset.Ioc (A y) (Bint y),
+        (𝐞 (T*(Fext ((l:ℝ)/M)-Fext ((l:ℝ)/M+rshift y)-
+          Fext ((l:ℝ)/M+sshift y)+Fext ((l:ℝ)/M+rshift y+sshift y))/d):ℂ)‖ := by
+    dsimp only [z]
+    rw [←Complex.ofReal_sum]
+    exact Complex.norm_of_nonneg (Finset.sum_nonneg (fun _ _ => norm_nonneg _))
+  obtain ⟨hcard,hmoment,hclasses⟩ := hcolors Y id rshift sshift d hd hy (by
+    intro y hy'
+    obtain ⟨hr,hs,hproduct,hsum⟩ := hshifts y hy'
+    exact ⟨hr,hs,hsum.trans (hWcap.trans (min_le_left _ _)),hproduct⟩)
+  have hlocal (j : ℤ) (hj : j∈Y.image color) :
+      ‖∑ y∈Y.filter (fun y => color y=j),z y‖^12 ≤
+        K*T^ε*(Main+ErrorTotal^12) := by
+    obtain ⟨y₀,hy₀,_hcolor,hreg,hjets,hlower,htests,hnegative,hscaled⟩ := hclasses j hj
+    let γ := G*y₀
+    have hy₀range := hy y₀ hy₀
+    have hy₀p : 0 < y₀ := zero_lt_one.trans_le hy₀range.1
+    have hγ : 0 < γ := mul_pos hG hy₀p
+    have hγlo : G ≤ γ := le_mul_of_one_le_right hG.le hy₀range.1
+    have hγhi : γ ≤ 2*G := by dsimp only [γ]; nlinarith only [hy₀range.2,hG]
+    have hγD := hγhi.trans hGD
+    have hDγ : 1 ≤ D*γ := hDG.trans (mul_le_mul_of_nonneg_left hγlo hDp.le)
+    let Fsrc := fun w => (1/(σ*(σ+1)*y₀))*Fext w
+    let Tnew := T*σ*(σ+1)*y₀
+    let Rnew := R*Real.sqrt (1/(σ*(σ+1)*y₀))
+    obtain ⟨hTnew,hRnew,hRsq,hnewphase,hmodels⟩ :=
+      hscaled T (N:ℝ) R M hTp hRp hphase
+    have hTnewEq : Tnew=T*γ := by dsimp only [Tnew,γ,G]; ring
+    have hRnewSq : Rnew^2=R^2/γ := by
+      simpa only [γ,G,mul_one_div] using hRsq
+    have hRg : γ*Rnew^2=R^2 := by rw [hRnewSq]; field_simp
+    obtain ⟨hSle,hRle⟩ := upperOriginal_normalized_radius_comparable hRp hRnew hD hγD hDγ hRg
+    have hTV : T ≤ D*Tnew := by
+      rw [hTnewEq]
+      calc
+        _ ≤ (D*γ)*T := le_mul_of_one_le_left hTp.le hDγ
+        _ = _ := by ring
+    have hVT : Tnew ≤ D*T := by
+      rw [hTnewEq]
+      simpa only [mul_comm] using mul_le_mul_of_nonneg_right hγD hTp.le
+    obtain ⟨hRnew1,hnewRN,hnewNR,hnewNM,hnewCubic,hnewCap,hnewHeight,hnewMT,hnewRT,hnewTen⟩ :=
+      double_difference_capped_comparable_radius_budgets
+        hMp hNp hRp hD hCbudget hSle hRle hTV hRlow
+        hRN hNR hNM hCubic hCapRoom hHeight hMT hRT hTen
+    have hTnewCut : Tcut ≤ Tnew := by
+      rw [hTnewEq]
+      exact ((div_le_iff₀ hG).mp (hCcut.trans hThreshold)).trans
+        (mul_le_mul_of_nonneg_left hγlo hTp.le)
+    let Yj := Y.filter (fun y => color y=j)
+    have hYj (y : ℝ) (hy' : y∈Yj) : y∈Y := (Finset.mem_filter.mp hy').1
+    have hYjColor (y : ℝ) (hy' : y∈Yj) : color y=j := (Finset.mem_filter.mp hy').2
+    let Φ := fun y u =>
+      (Fsrc u-Fsrc (u+rshift y)-Fsrc (u+sshift y)+Fsrc (u+rshift y+sshift y))/d
+    have hmod (y : ℝ) (hy' : y∈Yj) :
+        Expdb.IsApproximateModelPhaseFunction (Φ y) (σ+2) 4 δmodel :=
+      (hmodels y (hYj y hy') (hYjColor y hy')).1
+    have hq := hTcut Tnew hTnewCut Fsrc rshift sshift Yj n N Rnew Jsep
+      (d:=d) (Wmax:=Wmax) (M:=M) hN8 hN2 hRnew1 hd hW (hWcap.trans (min_le_right _ _)) hJsep hJM hWJ
+      (fun y hy' => hy y (hYj y hy'))
+      (fun y hy' v hv hne => hsep y (hYj y hy') v (hYj v hv) hne)
+      (by
+        intro y hy'
+        obtain ⟨hr,hs,hprod,hsum⟩ := hshifts y (hYj y hy')
+        exact ⟨hr.le,hs.le,hprod,hsum⟩)
+      hreg hlower hjets htests hnegative hmod hnewphase hnewRN hnewNR hnewNM
+      hnewCubic hnewCap hnewHeight hnewMT hnewRT hnewTen A Bint
+      (fun y hy' => hA y (hYj y hy')) (fun y hy' => hab y (hYj y hy'))
+      (fun y hy' => hBint y (hYj y hy'))
+    have hYj0 : (0:ℝ) ≤ Yj.card := Nat.cast_nonneg _
+    have hYjCard : (Yj.card:ℝ) ≤ Yc := by
+      change ((Y.filter (fun y => color y=j)).card:ℝ) ≤ (Y.card:ℝ)
+      exact_mod_cast (Finset.card_filter_le Y (fun y => color y=j))
+    let Enew := (Yj.card:ℝ)*M/Real.sqrt (N:ℝ)+
+      (Yj.card:ℝ)*M*Rnew^2/(N:ℝ)^2+
+      (Yj.card:ℝ)*(N:ℝ)^2*Rnew^2/M+
+      (Yj.card:ℝ)*(N:ℝ)*((N:ℝ)/Rnew)^((2:ℝ)/3)
+    let MainNew := (Yj.card:ℝ)^11*M^10*(N:ℝ)^2/Rnew^4+
+      (Yj.card:ℝ)^11*M^11*(N:ℝ)^2/Rnew^7+
+      (Yj.card:ℝ)^11*Jsep*M^10/Rnew^2+(Yj.card:ℝ)^11*Jsep*M^11/Rnew^5+
+      (Yj.card:ℝ)^12*M^10*Rnew^2/(N:ℝ)^2*
+        (Rnew/(N:ℝ))^((2:ℝ)/3)*(Tnew/M^2)^((4:ℝ)/3)
+    have hEnew : Enew ≤ D^2*ErrorTotal :=
+      double_difference_capped_radius_error_bound hYj0 hYjCard hMp hNp hRp hRnew hD hSle hRle
+    have hMainNew : MainNew ≤ D^8*Main :=
+      double_difference_capped_radius_main_bound
+        hYj0 hYjCard hMp hNp hRp hRnew hD hJsep.le hTp hTnew hSle hRle hVT
+    have hEnew0 : 0 ≤ Enew := by
+      dsimp only [Enew]
+      clear * - hYj0 hMp hNp hRnew
+      positivity
+    have hMainNew0 : 0 ≤ MainNew := by
+      dsimp only [MainNew]
+      clear * - hYj0 hMp hNp hRnew hJsep hTnew
+      positivity
+    have hEpow : Enew^12 ≤ D^24*ErrorTotal^12 := by
+      calc
+        _ ≤ (D^2*ErrorTotal)^12 := pow_le_pow_left₀ hEnew0 hEnew 12
+        _ = _ := by rw [mul_pow,←pow_mul]
+    have hMainPow : MainNew ≤ D^24*Main :=
+      hMainNew.trans (mul_le_mul_of_nonneg_right
+        (pow_le_pow_right₀ hD (by norm_num : 8 ≤ 24)) hMain)
+    have hTotal : MainNew+Enew^12 ≤ D^24*(Main+ErrorTotal^12) := by
+      calc
+        _ ≤ D^24*Main+D^24*ErrorTotal^12 := add_le_add hMainPow hEpow
+        _ = _ := (mul_add _ _ _).symm
+    have hTpow : Tnew^ε ≤ (2*G)^ε*T^ε := by
+      rw [hTnewEq,Real.mul_rpow hTp.le hγ.le]
+      calc
+        _ ≤ T^ε*(2*G)^ε :=
+          mul_le_mul_of_nonneg_left (Real.rpow_le_rpow hγ.le hγhi hε.le)
+            (Real.rpow_nonneg hTp.le _)
+        _ = _ := mul_comm _ _
+    rw [hzNorm]
+    calc
+      _ = (∑ y∈Yj, ‖∑ l∈Finset.Ioc (A y) (Bint y),
+          (𝐞 (Tnew*Φ y ((l:ℝ)/M)):ℂ)‖)^12 := by
+        congr 1
+        apply Finset.sum_congr rfl
+        intro y hy'
+        congr 1
+        apply Finset.sum_congr rfl
+        intro l _
+        apply congrArg (fun x : ℝ => (𝐞 x:ℂ))
+        exact ((hmodels y (hYj y hy') (hYjColor y hy')).2 (l:ℝ)).symm
+      _ ≤ Tnew^ε*(MainNew+Enew^12) := hq
+      _ ≤ ((2*G)^ε*T^ε)*(D^24*(Main+ErrorTotal^12)) :=
+        mul_le_mul hTpow hTotal (add_nonneg hMainNew0 (pow_nonneg hEnew0 12))
+          (mul_nonneg (Real.rpow_nonneg (by positivity) ε) (Real.rpow_nonneg hTp.le ε))
+      _ = _ := by dsimp only [K]; ac_rfl
+  have hKmass : 0 ≤ K*T^ε*(Main+ErrorTotal^12) :=
+    mul_nonneg (mul_nonneg hK (Real.rpow_nonneg hTp.le ε)) hMass
+  have hcolorSum :
+      (∑ j∈Y.image color, ‖∑ y∈Y.filter (fun y => color y=j),z y‖^12) ≤
+        Cap*(K*T^ε*(Main+ErrorTotal^12)) := by
+    calc
+      _ ≤ ∑ _j∈Y.image color,K*T^ε*(Main+ErrorTotal^12) := Finset.sum_le_sum hlocal
+      _ = ((Y.image color).card:ℝ)*(K*T^ε*(Main+ErrorTotal^12)) := by
+        rw [Finset.sum_const,nsmul_eq_mul]
+      _ ≤ _ := mul_le_mul_of_nonneg_right hcard hKmass
+  calc
+    _ = ‖∑ y∈Y,z y‖^12 := congrArg (fun x : ℝ => x^12) (hzNorm Y).symm
+    _ ≤ Cap^11*∑ j∈Y.image color,‖∑ y∈Y.filter (fun y => color y=j),z y‖^12 := hmoment z
+    _ ≤ Cap^11*(Cap*(K*T^ε*(Main+ErrorTotal^12))) :=
+      mul_le_mul_of_nonneg_left hcolorSum (pow_nonneg (zero_le_one.trans hCap) 11)
+    _ = (Cap^12*K)*(T^ε*(Main+ErrorTotal^12)) := by
+      rw [show Cap^12=Cap^11*Cap from pow_succ Cap 11]
+      ac_rfl
+    _ ≤ C*(T^ε*(Main+ErrorTotal^12)) :=
+      mul_le_mul_of_nonneg_right hCK (mul_nonneg (Real.rpow_nonneg hTp.le ε) hMass)
+    _ = _ := (mul_assoc _ _ _).symm
+
+
+example
+    {σ ε : ℝ} (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ w₀ B C : ℝ, 0 < δ ∧ 0 < w₀ ∧ w₀ ≤ 1/4 ∧ 1 ≤ B ∧ 1 ≤ C ∧
+      ∀ (M : ℝ) (F : ℝ → ℝ), 1 ≤ M →
+        Expdb.IsApproximateModelPhaseFunction F σ 7 δ →
+      ∃ Fext : ℝ → ℝ,
+        (∀ (X : ℝ) (a b : ℕ), M ≤ (a:ℝ) → (b:ℝ) ≤ 2*M →
+          ‖Expdb.exponentialSumAt F X M a b-
+            Expdb.exponentialSumAt Fext X M a b‖ ≤ 6) ∧
+        ∀ (T : ℝ) (Y : Finset ℝ) (rshift sshift : ℝ → ℝ) (n N : ℕ)
+          (R Jsep d Wmax : ℝ),
+          C ≤ T → N=8*n → 2 ≤ N → B ≤ R →
+          0 < d → 0 ≤ Wmax → Wmax ≤ w₀ → 0 < Jsep → Jsep ≤ M → Wmax*Jsep ≤ 1 →
+          (∀ y∈Y, y∈Icc (1:ℝ) 2) →
+          (∀ y∈Y, ∀ z∈Y, y≠z → 1 ≤ Jsep*|y-z|) →
+          (∀ y∈Y, 0 < rshift y ∧ 0 < sshift y ∧
+            rshift y*sshift y=d*y ∧ rshift y+sshift y ≤ Wmax) →
+          T*(N:ℝ)*R^2=M^3 →
+          B*R ≤ N → B*(N:ℝ) ≤ R^2 → B*(N:ℝ) ≤ M →
+          B*(N:ℝ)^3 ≤ M*R^2 → B*(N:ℝ)*R ≤ M →
+          B*M ≤ (N:ℝ)*R^2 → B*M ≤ T → B*R^2 ≤ T →
+          B*(N:ℝ)^10 ≤ M^3*R^7 →
+          ∀ A Bint : ℝ → ℤ, (∀ y∈Y, ⌈M⌉ ≤ A y) →
+          (∀ y∈Y, A y ≤ Bint y) → (∀ y∈Y, Bint y ≤ ⌊2*M⌋) →
+          let Yc := (Y.card:ℝ)
+          let ErrorTotal := Yc*M/Real.sqrt (N:ℝ)+Yc*M*R^2/(N:ℝ)^2+
+            Yc*(N:ℝ)^2*R^2/M+Yc*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+          let Main := Yc^11*M^10*(N:ℝ)^2/R^4+Yc^11*M^11*(N:ℝ)^2/R^7+
+            Yc^11*Jsep*M^10/R^2+Yc^11*Jsep*M^11/R^5+
+            Yc^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+          (∑ y∈Y, ‖∑ j∈Finset.Ioc (A y) (Bint y),
+            (𝐞 (T*(Fext ((j:ℝ)/M)-Fext ((j:ℝ)/M+rshift y)-
+              Fext ((j:ℝ)/M+sshift y)+Fext ((j:ℝ)/M+rshift y+sshift y))/d):ℂ)‖)^12 ≤
+            C*T^ε*(Main+ErrorTotal^12) := by
+  exact approximateModelPhase_enlarged_double_capped_quantitative hσ hε
+
+#print axioms approximateModelPhase_enlarged_double_capped_quantitative
+
+
+private theorem upperOriginal_exponentialSumAt_eq_int_Icc
+    (F : ℝ → ℝ) (X M : ℝ) (a b : ℕ) :
+    Expdb.exponentialSumAt F X M a b =
+      ∑ j∈Finset.Icc (a:ℤ) (b:ℤ),Expdb.oscillatory F X M j := by
+  unfold Expdb.exponentialSumAt
+  apply Finset.sum_bij (fun (n:ℕ) _ => (n:ℤ))
+  case hi =>
+    intro n hn
+    have hn' := Finset.mem_Icc.mp hn
+    exact Finset.mem_Icc.mpr ⟨by exact_mod_cast hn'.1,by exact_mod_cast hn'.2⟩
+  case i_inj =>
+    intro n _ m _ hnm
+    exact_mod_cast hnm
+  case i_surj =>
+    intro z hz
+    have hz' := Finset.mem_Icc.mp hz
+    have hz0 : 0≤z := (Int.natCast_nonneg a).trans hz'.1
+    refine ⟨z.toNat,Finset.mem_Icc.mpr ⟨?_,?_⟩,Int.toNat_of_nonneg hz0⟩
+    · omega
+    · omega
+  case h =>
+    intro n _
+    simp only [Int.cast_natCast]
+
+private theorem upperOriginal_norm_exponentialSumAt_le_int_Ioc
+    (F : ℝ → ℝ) (X M : ℝ) (a b : ℕ) (hab : a≤b) :
+    ‖Expdb.exponentialSumAt F X M a b‖ ≤
+      1+‖∑ j∈Finset.Ioc (a:ℤ) (b:ℤ),Expdb.oscillatory F X M j‖ := by
+  rw [upperOriginal_exponentialSumAt_eq_int_Icc,
+    Finset.Icc_eq_cons_Ioc (by exact_mod_cast hab : (a:ℤ)≤b),Finset.sum_cons]
+  simpa only [Expdb.norm_oscillatory] using
+    norm_add_le (Expdb.oscillatory F X M (a:ℤ))
+      (∑ j∈Finset.Ioc (a:ℤ) (b:ℤ),Expdb.oscillatory F X M j)
+
+example (F : ℝ → ℝ) (X M : ℝ) (a b : ℕ) :
+    Expdb.exponentialSumAt F X M a b =
+      ∑ j∈Finset.Icc (a:ℤ) (b:ℤ),Expdb.oscillatory F X M j := by
+  exact upperOriginal_exponentialSumAt_eq_int_Icc F X M a b
+
+#print axioms upperOriginal_exponentialSumAt_eq_int_Icc
+
+example (F : ℝ → ℝ) (X M : ℝ) (a b : ℕ) (hab : a≤b) :
+    ‖Expdb.exponentialSumAt F X M a b‖ ≤
+      1+‖∑ j∈Finset.Ioc (a:ℤ) (b:ℤ),Expdb.oscillatory F X M j‖ := by
+  exact upperOriginal_norm_exponentialSumAt_le_int_Ioc F X M a b hab
+
+#print axioms upperOriginal_norm_exponentialSumAt_le_int_Ioc
+
+/-- The literal double-shift correlation enters the source interval with
+exactly one endpoint term. No shifted phase or analytic estimate is assumed. -/
+private theorem double_difference_actual_range_le_int_Ioc
+    (F : ℝ → ℝ) (X : ℝ) {M : ℝ} (hM : M≠0)
+    (a L r s k : ℕ) (hk : 0<k) (hrs : r+s≤L) :
+    ‖∑ j∈Finset.range (L+1-r-s),
+      (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+r)/M)-
+        F (((a:ℝ)+j+s)/M)+F (((a:ℝ)+j+r+s)/M))):ℂ)‖ ≤
+      1+‖∑ j∈Finset.Ioc (a:ℤ) ((a+(L-r-s):ℕ):ℤ),
+        (𝐞 ((X*k/M^2)*(F ((j:ℝ)/M)-F ((j:ℝ)/M+(r:ℝ)/M)-
+          F ((j:ℝ)/M+(s:ℝ)/M)+F ((j:ℝ)/M+(r:ℝ)/M+(s:ℝ)/M))/
+            ((k:ℝ)/M^2)):ℂ)‖ := by
+  have hkR : (k:ℝ)≠0 := by exact_mod_cast hk.ne'
+  have hd : (k:ℝ)/M^2≠0 := div_ne_zero hkR (pow_ne_zero 2 hM)
+  have hcoeff (q : ℝ) : (X*k/M^2)*(q/((k:ℝ)/M^2))=X*q := by
+    calc
+      _ = X*((q/((k:ℝ)/M^2))*((k:ℝ)/M^2)) := by ring
+      _ = _ := by rw [div_mul_cancel₀ q hd]
+  let Φ := fun u => (F u-F (u+(r:ℝ)/M)-F (u+(s:ℝ)/M)+
+    F (u+(r:ℝ)/M+(s:ℝ)/M))/((k:ℝ)/M^2)
+  have heq :
+      (∑ j∈Finset.range (L+1-r-s),
+        (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+r)/M)-
+          F (((a:ℝ)+j+s)/M)+F (((a:ℝ)+j+r+s)/M))):ℂ)) =
+        Expdb.exponentialSumAt Φ (X*k/M^2) M a (a+(L-r-s)) := by
+    rw [exponentialSumAt_eq_range,show L-r-s+1=L+1-r-s by omega]
+    apply Finset.sum_congr rfl
+    intro j _
+    apply congrArg (fun t : ℝ => (𝐞 t:ℂ))
+    dsimp only [Φ]
+    rw [hcoeff]
+    simp only [add_div]
+  rw [heq]
+  calc
+    _ ≤ 1+‖∑ j∈Finset.Ioc (a:ℤ) ((a+(L-r-s):ℕ):ℤ),
+        Expdb.oscillatory Φ (X*k/M^2) M j‖ :=
+      upperOriginal_norm_exponentialSumAt_le_int_Ioc Φ (X*k/M^2) M
+        a (a+(L-r-s)) (Nat.le_add_right _ _)
+    _ = _ := by
+      apply congrArg (fun z : ℂ => 1+‖z‖)
+      apply Finset.sum_congr rfl
+      intro j _
+      unfold Expdb.oscillatory
+      apply congrArg (fun t : ℝ => (𝐞 t:ℂ))
+      exact (mul_div_assoc _ _ _).symm
+
+example
+    (F : ℝ → ℝ) (X : ℝ) {M : ℝ} (hM : M≠0)
+    (a L r s k : ℕ) (hk : 0<k) (hrs : r+s≤L) :
+    ‖∑ j∈Finset.range (L+1-r-s),
+      (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+r)/M)-
+        F (((a:ℝ)+j+s)/M)+F (((a:ℝ)+j+r+s)/M))):ℂ)‖ ≤
+      1+‖∑ j∈Finset.Ioc (a:ℤ) ((a+(L-r-s):ℕ):ℤ),
+        (𝐞 ((X*k/M^2)*(F ((j:ℝ)/M)-F ((j:ℝ)/M+(r:ℝ)/M)-
+          F ((j:ℝ)/M+(s:ℝ)/M)+F ((j:ℝ)/M+(r:ℝ)/M+(s:ℝ)/M))/
+            ((k:ℝ)/M^2)):ℂ)‖ := by
+  exact double_difference_actual_range_le_int_Ioc F X hM a L r s k hk hrs
+
+#print axioms double_difference_actual_range_le_int_Ioc
+
+/-- Every occupied product block supplies an actual separated double-shift
+family with its actual intervals. Empty correlations are removed, and the
+one-term endpoint loss is retained explicitly. -/
+private theorem double_difference_product_dyadic_actual_family
+    (F : ℝ → ℝ) (X : ℝ) {M : ℝ} (hM : 0<M)
+    (a L H K k : ℕ) (hk : 0<k) (ha : M≤(a:ℝ)) (hb : ((a+L:ℕ):ℝ)≤2*M) :
+    let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (K-1))
+    let Products := Pairs.image (fun p => p.1*p.2)
+    ∀ pick : ℕ → ℕ × ℕ,
+      (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l) →
+    let Block := (Finset.Ico k (2*k)).filter (fun l => l∈Products)
+    let Kept := Block.filter (fun l => (pick l).1+(pick l).2≤L)
+    let Y := Kept.image (fun l : ℕ => (l:ℝ)/(k:ℝ))
+    let rshift := fun y : ℝ => ((pick ⌊(k:ℝ)*y⌋₊).1:ℝ)/M
+    let sshift := fun y : ℝ => ((pick ⌊(k:ℝ)*y⌋₊).2:ℝ)/M
+    let Bint := fun y : ℝ =>
+      ((a+(L-(pick ⌊(k:ℝ)*y⌋₊).1-(pick ⌊(k:ℝ)*y⌋₊).2):ℕ):ℤ)
+    Y.card≤k ∧
+      (∀ y∈Y, y∈Icc (1:ℝ) 2) ∧
+      (∀ y∈Y, ∀ z∈Y, y≠z → 1≤(k:ℝ)*|y-z|) ∧
+      (∀ y∈Y, 0<rshift y ∧ 0<sshift y ∧
+        rshift y*sshift y=((k:ℝ)/M^2)*y ∧ rshift y+sshift y≤((H:ℝ)+K)/M) ∧
+      ⌈M⌉≤(a:ℤ) ∧ (∀ y∈Y, (a:ℤ)≤Bint y) ∧
+      (∀ y∈Y, Bint y≤⌊2*M⌋) ∧
+      (∑ l∈Block,‖∑ j∈Finset.range (L+1-(pick l).1-(pick l).2),
+        (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+(pick l).1)/M)-
+          F (((a:ℝ)+j+(pick l).2)/M)+
+          F (((a:ℝ)+j+(pick l).1+(pick l).2)/M))):ℂ)‖) ≤
+        (Y.card:ℝ)+∑ y∈Y,‖∑ j∈Finset.Ioc (a:ℤ) (Bint y),
+          (𝐞 ((X*k/M^2)*(F ((j:ℝ)/M)-F ((j:ℝ)/M+rshift y)-
+            F ((j:ℝ)/M+sshift y)+F ((j:ℝ)/M+rshift y+sshift y))/
+              ((k:ℝ)/M^2)):ℂ)‖ := by
+  classical
+  intro Pairs Products pick hpick Block Kept Y rshift sshift Bint
+  have hkR : (0:ℝ)<k := by exact_mod_cast hk
+  have hinj : Function.Injective (fun l : ℕ => (l:ℝ)/(k:ℝ)) := by
+    intro l m hlm
+    exact_mod_cast (div_left_inj' hkR.ne').mp hlm
+  have hcard : Y.card=Kept.card := Finset.card_image_of_injOn hinj.injOn
+  have hcardK : Kept.card≤k := by
+    calc
+      _ ≤ Block.card := Finset.card_filter_le _ _
+      _ ≤ (Finset.Ico k (2*k)).card := Finset.card_filter_le _ _
+      _ = k := by rw [Nat.card_Ico]; omega
+  have hfloor (l : ℕ) : ⌊(k:ℝ)*((l:ℝ)/(k:ℝ))⌋₊=l := by
+    rw [show (k:ℝ)*((l:ℝ)/(k:ℝ))=(l:ℝ) by field_simp]
+    exact Nat.floor_natCast l
+  have hKept (l : ℕ) (hl : l∈Kept) :
+      l∈Finset.Ico k (2*k) ∧ l∈Products ∧ (pick l).1+(pick l).2≤L := by
+    have hh := Finset.mem_filter.mp hl
+    have hh' := Finset.mem_filter.mp hh.1
+    exact ⟨hh'.1,hh'.2,hh.2⟩
+  have hgeom := HuxleyRationalPhase.difference_family_dyadic_parameter_geometry hkR
+  refine ⟨hcard.trans_le hcardK,?_,?_,?_,?_,?_,?_,?_⟩
+  · intro y hy
+    obtain ⟨l,hl,rfl⟩ := Finset.mem_image.mp hy
+    have hl' := Finset.mem_Ico.mp (hKept l hl).1
+    have hh := hgeom.1 l (by exact_mod_cast hl'.1) (by exact_mod_cast hl'.2.le)
+    constructor <;> linarith only [hh.1,hh.2]
+  · intro y hy z hz hyz
+    obtain ⟨l,_hl,rfl⟩ := Finset.mem_image.mp hy
+    obtain ⟨m,_hm,rfl⟩ := Finset.mem_image.mp hz
+    have hlm : l≠m := fun he => hyz (congrArg (fun n : ℕ => (n:ℝ)/(k:ℝ)) he)
+    have hh := hgeom.2 l m hlm
+    rw [show (l:ℝ)/(k:ℝ)-1-((m:ℝ)/(k:ℝ)-1)=
+      (l:ℝ)/(k:ℝ)-(m:ℝ)/(k:ℝ) by ring] at hh
+    exact hh
+  · intro y hy
+    obtain ⟨l,hl,rfl⟩ := Finset.mem_image.mp hy
+    obtain ⟨hpair,hprod⟩ := hpick l (hKept l hl).2.1
+    obtain ⟨hr,hs⟩ := Finset.mem_product.mp hpair
+    obtain ⟨hr1,hrH⟩ := Finset.mem_Icc.mp hr
+    obtain ⟨hs1,hsK⟩ := Finset.mem_Icc.mp hs
+    have hrp : (0:ℝ)<(pick l).1 := by exact_mod_cast (show 0<(pick l).1 by omega)
+    have hsp : (0:ℝ)<(pick l).2 := by exact_mod_cast (show 0<(pick l).2 by omega)
+    dsimp only [rshift,sshift]
+    rw [hfloor]
+    refine ⟨div_pos hrp hM,div_pos hsp hM,?_,?_⟩
+    · have hh : ((pick l).1:ℝ)*(pick l).2=(l:ℝ) := by exact_mod_cast hprod
+      field_simp
+      nlinarith only [hh]
+    · rw [←add_div]
+      apply (div_le_div_iff_of_pos_right hM).mpr
+      have hrr : ((pick l).1:ℝ)≤H := by exact_mod_cast (show (pick l).1≤H by omega)
+      have hss : ((pick l).2:ℝ)≤K := by exact_mod_cast (show (pick l).2≤K by omega)
+      exact add_le_add hrr hss
+  · apply Int.ceil_le.mpr
+    simpa only [Int.cast_natCast] using ha
+  · intro y _
+    dsimp only [Bint]
+    exact_mod_cast (Nat.le_add_right a (L-(pick ⌊(k:ℝ)*y⌋₊).1-(pick ⌊(k:ℝ)*y⌋₊).2))
+  · intro y _
+    apply Int.le_floor.mpr
+    have hh : ((a+(L-(pick ⌊(k:ℝ)*y⌋₊).1-(pick ⌊(k:ℝ)*y⌋₊).2):ℕ):ℝ)≤
+        ((a+L:ℕ):ℝ) := by
+      exact_mod_cast (show a+(L-(pick ⌊(k:ℝ)*y⌋₊).1-(pick ⌊(k:ℝ)*y⌋₊).2)≤a+L by omega)
+    exact hh.trans hb
+  · let f := fun l : ℕ => ‖∑ j∈Finset.range (L+1-(pick l).1-(pick l).2),
+        (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+(pick l).1)/M)-
+          F (((a:ℝ)+j+(pick l).2)/M)+
+          F (((a:ℝ)+j+(pick l).1+(pick l).2)/M))):ℂ)‖
+    have hFilter : (∑ l∈Kept,f l)=∑ l∈Block,f l := by
+      apply Finset.sum_filter_of_ne
+      intro l _ hne
+      by_contra hn
+      exact hne (by
+        dsimp only [f]
+        rw [show L+1-(pick l).1-(pick l).2=0 by omega]
+        simp only [Finset.range_zero,Finset.sum_empty,norm_zero])
+    change (∑ l∈Block,f l)≤_
+    rw [←hFilter,hcard,Finset.sum_image hinj.injOn]
+    calc
+      _ ≤ ∑ l∈Kept,(1+‖∑ j∈Finset.Ioc (a:ℤ) (Bint ((l:ℝ)/(k:ℝ))),
+          (𝐞 ((X*k/M^2)*(F ((j:ℝ)/M)-F ((j:ℝ)/M+rshift ((l:ℝ)/(k:ℝ)))-
+            F ((j:ℝ)/M+sshift ((l:ℝ)/(k:ℝ)))+
+            F ((j:ℝ)/M+rshift ((l:ℝ)/(k:ℝ))+sshift ((l:ℝ)/(k:ℝ))))/
+              ((k:ℝ)/M^2)):ℂ)‖) := by
+        apply Finset.sum_le_sum
+        intro l hl
+        dsimp only [f,Bint,rshift,sshift]
+        rw [hfloor]
+        exact double_difference_actual_range_le_int_Ioc F X hM.ne'
+          a L (pick l).1 (pick l).2 k hk (hKept l hl).2.2
+      _ = _ := by rw [Finset.sum_add_distrib,Finset.sum_const,nsmul_eq_mul,mul_one]
+
+example
+    (F : ℝ → ℝ) (X : ℝ) {M : ℝ} (hM : 0<M)
+    (a L H K k : ℕ) (hk : 0<k) (ha : M≤(a:ℝ)) (hb : ((a+L:ℕ):ℝ)≤2*M) :
+    let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (K-1))
+    let Products := Pairs.image (fun p => p.1*p.2)
+    ∀ pick : ℕ → ℕ × ℕ,
+      (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l) →
+    let Block := (Finset.Ico k (2*k)).filter (fun l => l∈Products)
+    let Kept := Block.filter (fun l => (pick l).1+(pick l).2≤L)
+    let Y := Kept.image (fun l : ℕ => (l:ℝ)/(k:ℝ))
+    let rshift := fun y : ℝ => ((pick ⌊(k:ℝ)*y⌋₊).1:ℝ)/M
+    let sshift := fun y : ℝ => ((pick ⌊(k:ℝ)*y⌋₊).2:ℝ)/M
+    let Bint := fun y : ℝ =>
+      ((a+(L-(pick ⌊(k:ℝ)*y⌋₊).1-(pick ⌊(k:ℝ)*y⌋₊).2):ℕ):ℤ)
+    Y.card≤k ∧
+      (∀ y∈Y, y∈Icc (1:ℝ) 2) ∧
+      (∀ y∈Y, ∀ z∈Y, y≠z → 1≤(k:ℝ)*|y-z|) ∧
+      (∀ y∈Y, 0<rshift y ∧ 0<sshift y ∧
+        rshift y*sshift y=((k:ℝ)/M^2)*y ∧ rshift y+sshift y≤((H:ℝ)+K)/M) ∧
+      ⌈M⌉≤(a:ℤ) ∧ (∀ y∈Y, (a:ℤ)≤Bint y) ∧
+      (∀ y∈Y, Bint y≤⌊2*M⌋) ∧
+      (∑ l∈Block,‖∑ j∈Finset.range (L+1-(pick l).1-(pick l).2),
+        (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+(pick l).1)/M)-
+          F (((a:ℝ)+j+(pick l).2)/M)+
+          F (((a:ℝ)+j+(pick l).1+(pick l).2)/M))):ℂ)‖) ≤
+        (Y.card:ℝ)+∑ y∈Y,‖∑ j∈Finset.Ioc (a:ℤ) (Bint y),
+          (𝐞 ((X*k/M^2)*(F ((j:ℝ)/M)-F ((j:ℝ)/M+rshift y)-
+            F ((j:ℝ)/M+sshift y)+F ((j:ℝ)/M+rshift y+sshift y))/
+              ((k:ℝ)/M^2)):ℂ)‖ := by
+  exact double_difference_product_dyadic_actual_family F X hM a L H K k hk ha hb
+
+#print axioms double_difference_product_dyadic_actual_family
+
+/-- The SAME original-model extension supplies the literal product-block
+twelfth moment. The actual family and intervals are constructed internally,
+and their endpoint loss is absorbed by the existing physical error terms. -/
+private theorem approximateModelPhase_enlarged_double_product_correlation_moment
+    {σ ε : ℝ} (hσ : 0<σ) (hε : 0<ε) :
+    ∃ δ w₀ B C : ℝ, 0<δ ∧ 0<w₀ ∧ w₀≤1/4 ∧ 1≤B ∧ 1≤C ∧
+      ∀ (M : ℝ) (F : ℝ → ℝ), 1≤M →
+        Expdb.IsApproximateModelPhaseFunction F σ 7 δ →
+      ∃ Fext : ℝ → ℝ,
+        (∀ (X : ℝ) (a b : ℕ), M≤(a:ℝ) → (b:ℝ)≤2*M →
+          ‖Expdb.exponentialSumAt F X M a b-
+            Expdb.exponentialSumAt Fext X M a b‖≤6) ∧
+        ∀ (X : ℝ) (n N a L H K k : ℕ) (R : ℝ),
+          C≤X*k/M^2 → N=8*n → 2≤N → B≤R → 0<k →
+          ((H:ℝ)+K)/M≤w₀ → (k:ℝ)≤M → (((H:ℝ)+K)/M)*(k:ℝ)≤1 →
+          M≤(a:ℝ) → ((a+L:ℕ):ℝ)≤2*M →
+          (X*k/M^2)*(N:ℝ)*R^2=M^3 →
+          B*R≤N → B*(N:ℝ)≤R^2 → B*(N:ℝ)≤M →
+          B*(N:ℝ)^3≤M*R^2 → B*(N:ℝ)*R≤M →
+          B*M≤(N:ℝ)*R^2 → B*M≤X*k/M^2 → B*R^2≤X*k/M^2 →
+          B*(N:ℝ)^10≤M^3*R^7 →
+          let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (K-1))
+          let Products := Pairs.image (fun p => p.1*p.2)
+          ∀ pick : ℕ → ℕ × ℕ,
+            (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l) →
+          let J := (k:ℝ)
+          let E := J*M/Real.sqrt (N:ℝ)+J*M*R^2/(N:ℝ)^2+
+            J*(N:ℝ)^2*R^2/M+J*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+          let Main := J^11*M^10*(N:ℝ)^2/R^4+J^11*M^11*(N:ℝ)^2/R^7+
+            J^11*J*M^10/R^2+J^11*J*M^11/R^5+
+            J^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*
+              ((X*k/M^2)/M^2)^((4:ℝ)/3)
+          (∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),
+            ‖∑ j∈Finset.range (L+1-(pick l).1-(pick l).2),
+              (𝐞 (X*(Fext (((a:ℝ)+j)/M)-Fext (((a:ℝ)+j+(pick l).1)/M)-
+                Fext (((a:ℝ)+j+(pick l).2)/M)+
+                Fext (((a:ℝ)+j+(pick l).1+(pick l).2)/M))):ℂ)‖)^12 ≤
+            C*(X*k/M^2)^ε*(Main+E^12) := by
+  classical
+  obtain ⟨δ,w₀,B,C₀,hδ,hw₀,hwcap,hB,hC₀,hsource⟩ :=
+    approximateModelPhase_enlarged_double_capped_quantitative hσ hε
+  let C := (2:ℝ)^12*C₀
+  have hCC₀ : C₀≤C := le_mul_of_one_le_left (zero_le_one.trans hC₀) (by norm_num)
+  have hC : 1≤C := hC₀.trans hCC₀
+  refine ⟨δ,w₀,B,C,hδ,hw₀,hwcap,hB,hC,?_⟩
+  intro M F hM hF
+  obtain ⟨Fext,hsharp,hupper⟩ := hsource M F hM hF
+  refine ⟨Fext,hsharp,?_⟩
+  intro X n N a L H K k R hT hN8 hN2 hR hk hWcap hJM hWJ ha hb hphase
+    hRN hNR hNM hCubic hCap hHeight hMT hRT hTen Pairs Products pick hpick J E Main
+  have hMp := zero_lt_one.trans_le hM
+  have hNp : (0:ℝ)<N := by exact_mod_cast (show 0<N by omega)
+  have hN1 : (1:ℝ)≤N := by exact_mod_cast (show 1≤N by omega)
+  have hRp := zero_lt_one.trans_le (hB.trans hR)
+  have hJp : 0<J := by
+    change (0:ℝ)<k
+    exact_mod_cast hk
+  let T := X*k/M^2
+  have hT1 : 1≤T := hC.trans hT
+  have hTp := zero_lt_one.trans_le hT1
+  let Block := (Finset.Ico k (2*k)).filter (fun l => l∈Products)
+  let Kept := Block.filter (fun l => (pick l).1+(pick l).2≤L)
+  let Y := Kept.image (fun l : ℕ => (l:ℝ)/(k:ℝ))
+  let rshift := fun y : ℝ => ((pick ⌊(k:ℝ)*y⌋₊).1:ℝ)/M
+  let sshift := fun y : ℝ => ((pick ⌊(k:ℝ)*y⌋₊).2:ℝ)/M
+  let Bint := fun y : ℝ =>
+    ((a+(L-(pick ⌊(k:ℝ)*y⌋₊).1-(pick ⌊(k:ℝ)*y⌋₊).2):ℕ):ℤ)
+  obtain ⟨hcard,hY,hsep,hshifts,hA,hAB,hBint,hcorr⟩ :=
+    double_difference_product_dyadic_actual_family Fext X hMp a L H K k hk ha hb pick hpick
+  have hY0 : (0:ℝ)≤Y.card := Nat.cast_nonneg _
+  have hYJ : (Y.card:ℝ)≤J := by
+    change (Y.card:ℝ)≤(k:ℝ)
+    exact_mod_cast hcard
+  let EY := (Y.card:ℝ)*M/Real.sqrt (N:ℝ)+(Y.card:ℝ)*M*R^2/(N:ℝ)^2+
+    (Y.card:ℝ)*(N:ℝ)^2*R^2/M+(Y.card:ℝ)*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+  let MainY := (Y.card:ℝ)^11*M^10*(N:ℝ)^2/R^4+
+    (Y.card:ℝ)^11*M^11*(N:ℝ)^2/R^7+
+    (Y.card:ℝ)^11*J*M^10/R^2+(Y.card:ℝ)^11*J*M^11/R^5+
+    (Y.card:ℝ)^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+  have hEY : EY≤E := by
+    have hh := double_difference_capped_radius_error_bound hY0 hYJ hMp hNp hRp hRp
+      (show (1:ℝ)≤1 from le_rfl) (by rw [one_mul]) (by rw [one_mul])
+    simpa only [one_pow,one_mul] using hh
+  have hMY : MainY≤Main := by
+    have hh := double_difference_capped_radius_main_bound hY0 hYJ hMp hNp hRp hRp
+      (show (1:ℝ)≤1 from le_rfl) hJp.le hTp hTp
+      (by rw [one_mul]) (by rw [one_mul]) (by rw [one_mul])
+    simpa only [one_pow,one_mul] using hh
+  have hEY0 : 0≤EY := by
+    dsimp only [EY]
+    clear * - hY0 hMp hNp hRp
+    positivity
+  have hE0 : 0≤E := by
+    dsimp only [E]
+    clear * - hJp hMp hNp hRp
+    positivity
+  have hMain0 : 0≤Main := by
+    dsimp only [Main]
+    change 0≤J^11*M^10*(N:ℝ)^2/R^4+J^11*M^11*(N:ℝ)^2/R^7+
+      J^11*J*M^10/R^2+J^11*J*M^11/R^5+
+      J^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*(T/M^2)^((4:ℝ)/3)
+    clear * - hJp hMp hNp hRp hTp
+    positivity
+  have hMass0 : 0≤Main+E^12 := add_nonneg hMain0 (pow_nonneg hE0 12)
+  have hMass : MainY+EY^12≤Main+E^12 :=
+    add_le_add hMY (pow_le_pow_left₀ hEY0 hEY 12)
+  let Z := ∑ y∈Y,‖∑ j∈Finset.Ioc (a:ℤ) (Bint y),
+    (𝐞 (T*(Fext ((j:ℝ)/M)-Fext ((j:ℝ)/M+rshift y)-
+      Fext ((j:ℝ)/M+sshift y)+Fext ((j:ℝ)/M+rshift y+sshift y))/
+        ((k:ℝ)/M^2)):ℂ)‖
+  have hZ0 : 0≤Z := Finset.sum_nonneg (fun _ _ => norm_nonneg _)
+  have hZ : Z^12≤C₀*T^ε*(Main+E^12) := by
+    have hW : 0≤((H:ℝ)+K)/M := div_nonneg (by positivity) hMp.le
+    have hu := hupper T Y rshift sshift n N R J ((k:ℝ)/M^2) (((H:ℝ)+K)/M)
+      (hCC₀.trans hT) hN8 hN2 hR (div_pos hJp (sq_pos_of_pos hMp)) hW hWcap hJp hJM hWJ
+      hY hsep hshifts hphase hRN hNR hNM hCubic hCap hHeight hMT hRT hTen
+      (fun _ => (a:ℤ)) Bint (fun _ _ => hA) hAB hBint
+    exact hu.trans (mul_le_mul_of_nonneg_left hMass
+      (mul_nonneg (zero_le_one.trans hC₀) (Real.rpow_nonneg hTp.le ε)))
+  have hQ : 1≤C₀*T^ε := by
+    calc
+      _ = (1:ℝ)*1 := by norm_num
+      _ ≤ _ := mul_le_mul hC₀ (Real.one_le_rpow hT1 hε.le)
+        zero_le_one (zero_le_one.trans hC₀)
+  have hRleN : R≤(N:ℝ) := (le_mul_of_one_le_left hRp.le hB).trans hRN
+  have hJE : J≤E := by
+    have hratio : 1≤(N:ℝ)/R := (one_le_div hRp).mpr hRleN
+    have hp : 1≤((N:ℝ)/R)^((2:ℝ)/3) := Real.one_le_rpow hratio (by norm_num)
+    have hu : 1≤(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3) := one_le_mul_of_one_le_of_one_le hN1 hp
+    have hlast : J≤J*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3) := by
+      simpa only [mul_assoc] using le_mul_of_one_le_right hJp.le hu
+    have hother : 0≤J*M/Real.sqrt (N:ℝ)+J*M*R^2/(N:ℝ)^2+
+        J*(N:ℝ)^2*R^2/M := by
+      clear * - hJp hMp hNp hRp
+      positivity
+    exact hlast.trans (le_add_of_nonneg_left hother)
+  have hJpow : J^12≤C₀*T^ε*(Main+E^12) :=
+    ((pow_le_pow_left₀ hJp.le hJE 12).trans (le_add_of_nonneg_left hMain0)).trans
+      (le_mul_of_one_le_left hMass0 hQ)
+  have hCorr :
+      (∑ l∈Block,‖∑ j∈Finset.range (L+1-(pick l).1-(pick l).2),
+        (𝐞 (X*(Fext (((a:ℝ)+j)/M)-Fext (((a:ℝ)+j+(pick l).1)/M)-
+          Fext (((a:ℝ)+j+(pick l).2)/M)+
+          Fext (((a:ℝ)+j+(pick l).1+(pick l).2)/M))):ℂ)‖)≤J+Z :=
+    hcorr.trans (add_le_add hYJ le_rfl)
+  calc
+    _ ≤ (J+Z)^12 :=
+      pow_le_pow_left₀ (Finset.sum_nonneg (fun _ _ => norm_nonneg _)) hCorr 12
+    _ ≤ (2:ℝ)^11*(J^12+Z^12) := add_pow_le hJp.le hZ0 12
+    _ ≤ (2:ℝ)^11*(C₀*T^ε*(Main+E^12)+C₀*T^ε*(Main+E^12)) :=
+      mul_le_mul_of_nonneg_left (add_le_add hJpow hZ) (by norm_num)
+    _ = _ := by
+      rw [←two_mul]
+      dsimp only [C]
+      rw [show (2:ℝ)^12=2^11*2 from pow_succ 2 11]
+      ac_rfl
+
+example
+    {σ ε : ℝ} (hσ : 0<σ) (hε : 0<ε) :
+    ∃ δ w₀ B C : ℝ, 0<δ ∧ 0<w₀ ∧ w₀≤1/4 ∧ 1≤B ∧ 1≤C ∧
+      ∀ (M : ℝ) (F : ℝ → ℝ), 1≤M →
+        Expdb.IsApproximateModelPhaseFunction F σ 7 δ →
+      ∃ Fext : ℝ → ℝ,
+        (∀ (X : ℝ) (a b : ℕ), M≤(a:ℝ) → (b:ℝ)≤2*M →
+          ‖Expdb.exponentialSumAt F X M a b-
+            Expdb.exponentialSumAt Fext X M a b‖≤6) ∧
+        ∀ (X : ℝ) (n N a L H K k : ℕ) (R : ℝ),
+          C≤X*k/M^2 → N=8*n → 2≤N → B≤R → 0<k →
+          ((H:ℝ)+K)/M≤w₀ → (k:ℝ)≤M → (((H:ℝ)+K)/M)*(k:ℝ)≤1 →
+          M≤(a:ℝ) → ((a+L:ℕ):ℝ)≤2*M →
+          (X*k/M^2)*(N:ℝ)*R^2=M^3 →
+          B*R≤N → B*(N:ℝ)≤R^2 → B*(N:ℝ)≤M →
+          B*(N:ℝ)^3≤M*R^2 → B*(N:ℝ)*R≤M →
+          B*M≤(N:ℝ)*R^2 → B*M≤X*k/M^2 → B*R^2≤X*k/M^2 →
+          B*(N:ℝ)^10≤M^3*R^7 →
+          let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (K-1))
+          let Products := Pairs.image (fun p => p.1*p.2)
+          ∀ pick : ℕ → ℕ × ℕ,
+            (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l) →
+          let J := (k:ℝ)
+          let E := J*M/Real.sqrt (N:ℝ)+J*M*R^2/(N:ℝ)^2+
+            J*(N:ℝ)^2*R^2/M+J*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+          let Main := J^11*M^10*(N:ℝ)^2/R^4+J^11*M^11*(N:ℝ)^2/R^7+
+            J^11*J*M^10/R^2+J^11*J*M^11/R^5+
+            J^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*
+              ((X*k/M^2)/M^2)^((4:ℝ)/3)
+          (∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),
+            ‖∑ j∈Finset.range (L+1-(pick l).1-(pick l).2),
+              (𝐞 (X*(Fext (((a:ℝ)+j)/M)-Fext (((a:ℝ)+j+(pick l).1)/M)-
+                Fext (((a:ℝ)+j+(pick l).2)/M)+
+                Fext (((a:ℝ)+j+(pick l).1+(pick l).2)/M))):ℂ)‖)^12 ≤
+            C*(X*k/M^2)^ε*(Main+E^12) := by
+  exact approximateModelPhase_enlarged_double_product_correlation_moment hσ hε
+
+#print axioms approximateModelPhase_enlarged_double_product_correlation_moment
+
+/-- Exact scale-linked integer powers for all five main terms and all four
+errors. The physical relation includes the actual double-shift height X*J/M^2. -/
+private theorem double_difference_capped_integer_moments
+    {X M N J R : ℝ} (hX : 0<X) (hM : 0<M) (hN : 0<N)
+    (hJ : 0<J) (hR : 0<R) (hscale : (X*J/M^2)*N*R^2=M^3) :
+    (J*M/Real.sqrt N)^72=J^72*M^72/N^36 ∧
+    (J*M*R^2/N^2)^72=M^432/(X^72*N^216) ∧
+    (J*N^2*R^2/M)^72=M^288*N^72/X^72 ∧
+    (J*N*(N/R)^((2:ℝ)/3))^72=X^24*J^96*N^144/M^120 ∧
+    (J^11*M^10*N^2/R^4)^6=X^12*J^78*N^24 ∧
+    (J^11*M^11*N^2/R^7)^6=X^21*J^87*N^33/M^39 ∧
+    (J^11*J*M^10/R^2)^6=X^6*J^78*M^30*N^6 ∧
+    (J^11*J*M^11/R^5)^6=X^15*J^87*N^15/M^9 ∧
+    (J^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*
+      ((X*J/M^2)/M^2)^((4:ℝ)/3))^6=J^72*M^68/N^24 := by
+  have hR2 : R^2=M^5/(X*J*N) := by
+    apply (eq_div_iff (mul_ne_zero (mul_ne_zero hX.ne' hJ.ne') hN.ne')).mpr
+    have hs := hscale
+    field_simp at hs
+    nlinarith only [hs]
+  have hSecond : J*M*R^2/N^2=M^6/(X*N^3) := by
+    rw [hR2]
+    field_simp
+  have hThird : J*N^2*R^2/M=M^4*N/X := by
+    rw [hR2]
+    field_simp
+  have hFrac : ((R/N)^((2:ℝ)/3))^6=(R/N)^4 := by
+    rw [←Real.rpow_mul_natCast (div_nonneg hR.le hN.le)]
+    norm_num
+  have hTime : (((X*J/M^2)/M^2)^((4:ℝ)/3))^6=((X*J/M^2)/M^2)^8 := by
+    rw [←Real.rpow_mul_natCast (by positivity : 0≤(X*J/M^2)/M^2)]
+    norm_num
+  refine ⟨?_,?_,?_,?_,?_,?_,?_,?_,?_⟩
+  · have hsqrt : (Real.sqrt N)^72=N^36 := by
+      calc
+        _ = ((Real.sqrt N)^2)^36 := by rw [←pow_mul]
+        _ = N^36 := by rw [Real.sq_sqrt hN.le]
+    rw [div_pow,mul_pow,hsqrt]
+  · rw [hSecond]
+    simp only [div_pow,mul_pow,←pow_mul]
+  · rw [hThird]
+    simp only [div_pow,mul_pow,←pow_mul]
+  · rw [mul_pow,mul_pow,←Real.rpow_mul_natCast (div_nonneg hN.le hR.le),
+      show ((2:ℝ)/3)*((72:ℕ):ℝ)=((48:ℕ):ℝ) by norm_num,
+      Real.rpow_natCast,div_pow]
+    rw [show R^48=(R^2)^24 by rw [←pow_mul],hR2]
+    field_simp
+  · simp only [mul_pow,div_pow,←pow_mul]
+    rw [show R^24=(R^2)^12 by rw [←pow_mul],hR2]
+    field_simp
+    ac_rfl
+  · simp only [mul_pow,div_pow,←pow_mul]
+    rw [show R^42=(R^2)^21 by rw [←pow_mul],hR2]
+    field_simp
+    ac_rfl
+  · simp only [mul_pow,div_pow,←pow_mul]
+    rw [show R^12=(R^2)^6 by rw [←pow_mul],hR2]
+    field_simp
+  · simp only [mul_pow,div_pow,←pow_mul]
+    rw [show R^30=(R^2)^15 by rw [←pow_mul],hR2]
+    field_simp
+  · rw [mul_pow,mul_pow,hFrac,hTime]
+    simp only [mul_pow,div_pow,←pow_mul]
+    rw [show R^12=(R^2)^6 by rw [←pow_mul],
+      show R^4=(R^2)^2 by rw [←pow_mul],hR2]
+    field_simp
+    ring
+
+example
+    {X M N J R : ℝ} (hX : 0<X) (hM : 0<M) (hN : 0<N)
+    (hJ : 0<J) (hR : 0<R) (hscale : (X*J/M^2)*N*R^2=M^3) :
+    (J*M/Real.sqrt N)^72=J^72*M^72/N^36 ∧
+    (J*M*R^2/N^2)^72=M^432/(X^72*N^216) ∧
+    (J*N^2*R^2/M)^72=M^288*N^72/X^72 ∧
+    (J*N*(N/R)^((2:ℝ)/3))^72=X^24*J^96*N^144/M^120 ∧
+    (J^11*M^10*N^2/R^4)^6=X^12*J^78*N^24 ∧
+    (J^11*M^11*N^2/R^7)^6=X^21*J^87*N^33/M^39 ∧
+    (J^11*J*M^10/R^2)^6=X^6*J^78*M^30*N^6 ∧
+    (J^11*J*M^11/R^5)^6=X^15*J^87*N^15/M^9 ∧
+    (J^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*
+      ((X*J/M^2)/M^2)^((4:ℝ)/3))^6=J^72*M^68/N^24 := by
+  exact double_difference_capped_integer_moments hX hM hN hJ hR hscale
+
+#print axioms double_difference_capped_integer_moments
+
+private theorem upperOriginal_three_term_power_bound
+    {a b c : ℝ} (ha : 0≤a) (hb : 0≤b) (hc : 0≤c) (n : ℕ) :
+    (a+b+c)^n≤(2:ℝ)^(2*n)*(a^n+b^n+c^n) := by
+  let D := (2:ℝ)^(n-1)
+  have hD : 1≤D := one_le_pow₀ (by norm_num)
+  have hD0 := zero_le_one.trans hD
+  have hDpow : D^2≤(2:ℝ)^(2*n) := by
+    dsimp only [D]
+    rw [←pow_mul]
+    exact pow_le_pow_right₀ (by norm_num) (by omega)
+  calc
+    _ ≤ D*((a+b)^n+c^n) := add_pow_le (add_nonneg ha hb) hc n
+    _ ≤ D*(D*(a^n+b^n)+D*c^n) :=
+      mul_le_mul_of_nonneg_left
+        (add_le_add (add_pow_le ha hb n)
+          (le_mul_of_one_le_left (pow_nonneg hc n) hD)) hD0
+    _ = D^2*(a^n+b^n+c^n) := by ring
+    _ ≤ _ := mul_le_mul_of_nonneg_right hDpow
+      (add_nonneg (add_nonneg (pow_nonneg ha n) (pow_nonneg hb n)) (pow_nonneg hc n))
+
+example
+    {a b c : ℝ} (ha : 0≤a) (hb : 0≤b) (hc : 0≤c) (n : ℕ) :
+    (a+b+c)^n≤(2:ℝ)^(2*n)*(a^n+b^n+c^n) := by
+  exact upperOriginal_three_term_power_bound ha hb hc n
+
+#print axioms upperOriginal_three_term_power_bound
+
+private theorem middleOriginal_five_term_power_bound
+    {a b c d e : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c)
+    (hd : 0 ≤ d) (he : 0 ≤ e) (n : ℕ) :
+    (a+b+c+d+e)^n ≤ (2:ℝ)^(4*n)*(a^n+b^n+c^n+d^n+e^n) := by
+  let D := (2:ℝ)^(2*n)
+  have hD : 1 ≤ D := one_le_pow₀ (by norm_num)
+  have hD0 := zero_le_one.trans hD
+  have habc := upperOriginal_three_term_power_bound ha hb hc n
+  have habc0 : 0 ≤ a+b+c := add_nonneg (add_nonneg ha hb) hc
+  calc
+    _ ≤ D*((a+b+c)^n+d^n+e^n) := upperOriginal_three_term_power_bound habc0 hd he n
+    _ ≤ D*(D*(a^n+b^n+c^n)+D*d^n+D*e^n) :=
+      mul_le_mul_of_nonneg_left
+        (add_le_add
+          (add_le_add habc (le_mul_of_one_le_left (pow_nonneg hd n) hD))
+          (le_mul_of_one_le_left (pow_nonneg he n) hD)) hD0
+    _ = (D*D)*(a^n+b^n+c^n+d^n+e^n) := by ring
+    _ = _ := by
+      dsimp only [D]
+      rw [←pow_add]
+      congr 2
+      omega
+
+example
+    {a b c d e : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c)
+    (hd : 0 ≤ d) (he : 0 ≤ e) (n : ℕ) :
+    (a+b+c+d+e)^n ≤ (2:ℝ)^(4*n)*(a^n+b^n+c^n+d^n+e^n) := by
+  exact middleOriginal_five_term_power_bound ha hb hc hd he n
+
+#print axioms middleOriginal_five_term_power_bound
+
+private theorem upperOriginal_nonnegative_doubled_block_selection
+    (f : ℕ → ℝ) (H : ℕ) (hH : 2 ≤ H) (hf₀ : f 0=0)
+    (hf : ∀ n, 0 ≤ f n) {A : ℝ} (hA : 0 ≤ A)
+    (hcap : ∀ n < H, f n ≤ A) :
+    ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧
+      (∑ n∈Finset.range H,f n) ≤
+        (Nat.clog 2 H:ℝ)*(A+∑ j∈Finset.range k,f (k+j)) := by
+  classical
+  obtain ⟨k,hk,hmax⟩ := (Finset.Icc 1 (H/2)).exists_max_image
+    (fun k => ∑ j∈Finset.range k,f (k+j))
+    (by exact ⟨1,Finset.mem_Icc.mpr ⟨le_rfl,by omega⟩⟩)
+  have hk' := Finset.mem_Icc.mp hk
+  have hnorm (s : Finset ℕ) (g : ℕ → ℕ) :
+      ‖∑ j∈s,(f (g j):ℂ)‖=∑ j∈s,f (g j) := by
+    rw [←Complex.ofReal_sum]
+    exact Complex.norm_of_nonneg (Finset.sum_nonneg (fun j _ => hf (g j)))
+  have hbound := norm_prefix_le_doubled_blocks
+    (fun n => (f n:ℂ)) H (Nat.clog 2 H) H
+    (congrArg (fun x : ℝ => (x:ℂ)) hf₀) le_rfl (Nat.le_pow_clog (by norm_num) H)
+    A (∑ j∈Finset.range k,f (k+j)) hA
+    (Finset.sum_nonneg (fun j _ => hf (k+j)))
+    (fun n hn => (Complex.norm_of_nonneg (hf n)).le.trans (hcap n hn))
+    (fun l hl hlH => by
+      rw [hnorm (Finset.range l) (fun j => l+j)]
+      exact hmax l (Finset.mem_Icc.mpr ⟨by omega,by omega⟩))
+  have he : ‖∑ n∈Finset.range H,(f n:ℂ)‖ = ∑ n∈Finset.range H,f n :=
+    hnorm (Finset.range H) id
+  rw [he] at hbound
+  exact ⟨k,by omega,by omega,hbound⟩
+
+example
+    (f : ℕ → ℝ) (H : ℕ) (hH : 2 ≤ H) (hf₀ : f 0=0)
+    (hf : ∀ n, 0 ≤ f n) {A : ℝ} (hA : 0 ≤ A)
+    (hcap : ∀ n < H, f n ≤ A) :
+    ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧
+      (∑ n∈Finset.range H,f n) ≤
+        (Nat.clog 2 H:ℝ)*(A+∑ j∈Finset.range k,f (k+j)) := by
+  exact upperOriginal_nonnegative_doubled_block_selection f H hH hf₀ hf hA hcap
+
+#print axioms upperOriginal_nonnegative_doubled_block_selection
+
+
+/-- The ACTUAL two-step Weyl reduction chooses a product block without
+identifying phases in a fiber. The block is the same one accepted by the
+source-derived product-family twelfth-moment consumer. -/
+private theorem source_product_twice_weyl_doubled_block
+    {ε : ℝ} (hε : 0<ε) :
+    ∃ D : ℝ, 0<D ∧
+      ∀ (F : ℝ → ℝ) (σ X M : ℝ) (a L H K : ℕ),
+        0<σ → 2≤H → 2≤K → H+K≤a →
+        H≤L+1 → K≤L+1 → (H:ℝ)+K<M →
+        let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (K-1))
+        let Products := Pairs.image (fun p => p.1*p.2)
+        let W := fun p : ℕ × ℕ => ∑ j∈Finset.range (L+1-p.1-p.2),
+          (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+p.1)/M)-
+            F (((a:ℝ)+j+p.2)/M)+F (((a:ℝ)+j+p.1+p.2)/M))):ℂ)
+        ∃ (pick : ℕ → ℕ × ℕ) (k : ℕ), 0<k ∧ 2*k≤H*K ∧
+          (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l ∧
+            ∀ p∈Pairs, p.1*p.2=l → ‖W p‖≤‖W (pick l)‖) ∧
+          (H:ℝ)^2*K*‖Expdb.exponentialSumAt F X M a (a+L)‖^4 ≤
+            8*K*((L:ℝ)+1)^4+64*(H:ℝ)^2*((L:ℝ)+1)^4+
+              128*H*((L:ℝ)+1)^3*
+                (D*((H:ℝ)*K)^ε*((Nat.clog 2 (H*K):ℝ)*
+                  ((L:ℝ)+1+∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),
+                    ‖W (pick l)‖))) := by
+  classical
+  obtain ⟨D,hD,hsource⟩ := source_product_twice_weyl hε
+  refine ⟨D,hD,?_⟩
+  intro F σ X M a L H K hσ hH hK hHa hHL hKL hM Pairs Products W
+  obtain ⟨pick,hpick,hweyl⟩ := hsource F σ X M a L H K hσ
+    (by omega) (by omega) hHa hHL hKL hM
+  have hbounds (p : ℕ × ℕ) (hp : p∈Pairs) :
+      0<p.1 ∧ p.1<H ∧ 0<p.2 ∧ p.2<K := by
+    obtain ⟨hr,hs⟩ := Finset.mem_product.mp hp
+    obtain ⟨hr1,hrH⟩ := Finset.mem_Icc.mp hr
+    obtain ⟨hs1,hsK⟩ := Finset.mem_Icc.mp hs
+    omega
+  have hproduct (l : ℕ) (hl : l∈Products) : 0<l ∧ l<H*K := by
+    obtain ⟨p,hp,rfl⟩ := Finset.mem_image.mp hl
+    obtain ⟨hr,hrH,hs,hsK⟩ := hbounds p hp
+    refine ⟨Nat.mul_pos hr hs,?_⟩
+    exact (Nat.mul_lt_mul_of_pos_right hrH hs).trans_le (Nat.mul_le_mul_left H hsK.le)
+  have hWcap (p : ℕ × ℕ) : ‖W p‖≤(L:ℝ)+1 := by
+    calc
+      _ ≤ ∑ j∈Finset.range (L+1-p.1-p.2),
+          ‖(𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+p.1)/M)-
+            F (((a:ℝ)+j+p.2)/M)+F (((a:ℝ)+j+p.1+p.2)/M))):ℂ)‖ := norm_sum_le _ _
+      _ = (L+1-p.1-p.2:ℕ) := by simp
+      _ ≤ (L:ℝ)+1 := by exact_mod_cast (show L+1-p.1-p.2≤L+1 by omega)
+  let f := fun l => if l∈Products then ‖W (pick l)‖ else 0
+  have hf0 : f 0=0 := if_neg (by
+    intro hh
+    exact (Nat.lt_irrefl 0) (hproduct 0 hh).1)
+  have hf (l : ℕ) : 0≤f l := by
+    dsimp only [f]
+    split_ifs
+    · exact norm_nonneg _
+    · exact le_rfl
+  have hfCap (l : ℕ) : f l≤(L:ℝ)+1 := by
+    dsimp only [f]
+    split_ifs
+    · exact hWcap _
+    · positivity
+  have hHK : 2≤H*K := by nlinarith only [hH,hK]
+  obtain ⟨k,hk,hkHK,hselected⟩ :=
+    upperOriginal_nonnegative_doubled_block_selection f (H*K) hHK hf0 hf
+      (by positivity : 0≤(L:ℝ)+1) (fun l _ => hfCap l)
+  have hFilter : (Finset.range (H*K)).filter (fun l => l∈Products)=Products := by
+    ext l
+    simp only [Finset.mem_filter,Finset.mem_range]
+    exact ⟨fun hh => hh.2,fun hl => ⟨(hproduct l hl).2,hl⟩⟩
+  have hAll : (∑ l∈Products,‖W (pick l)‖)=∑ l∈Finset.range (H*K),f l := by
+    calc
+      _ = ∑ l∈(Finset.range (H*K)).filter (fun l => l∈Products),‖W (pick l)‖ :=
+        congrArg (fun S : Finset ℕ => ∑ l∈S,‖W (pick l)‖) hFilter.symm
+      _ = _ := by rw [Finset.sum_filter]
+  have hRange :
+      (∑ j∈Finset.range k,f (k+j))=∑ l∈Finset.Ico k (2*k),f l := by
+    apply Finset.sum_bij (fun (j:ℕ) _ => k+j)
+    case hi =>
+      intro j hj
+      have hj' := Finset.mem_range.mp hj
+      exact Finset.mem_Ico.mpr ⟨by omega,by omega⟩
+    case i_inj =>
+      intro j _ l _ hjl
+      omega
+    case i_surj =>
+      intro l hl
+      have hl' := Finset.mem_Ico.mp hl
+      exact ⟨l-k,Finset.mem_range.mpr (by omega),by omega⟩
+    case h =>
+      intro j _
+      rfl
+  have hBlock :
+      (∑ j∈Finset.range k,f (k+j))=
+        ∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖ := by
+    rw [hRange,Finset.sum_filter]
+  rw [←hAll,hBlock] at hselected
+  refine ⟨pick,k,hk,hkHK,hpick,?_⟩
+  exact hweyl.trans (add_le_add le_rfl
+    (mul_le_mul_of_nonneg_left
+      (mul_le_mul_of_nonneg_left hselected
+        (mul_nonneg hD.le (Real.rpow_nonneg (by positivity) ε)))
+      (by positivity)))
+
+example
+    {ε : ℝ} (hε : 0<ε) :
+    ∃ D : ℝ, 0<D ∧
+      ∀ (F : ℝ → ℝ) (σ X M : ℝ) (a L H K : ℕ),
+        0<σ → 2≤H → 2≤K → H+K≤a →
+        H≤L+1 → K≤L+1 → (H:ℝ)+K<M →
+        let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (K-1))
+        let Products := Pairs.image (fun p => p.1*p.2)
+        let W := fun p : ℕ × ℕ => ∑ j∈Finset.range (L+1-p.1-p.2),
+          (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+p.1)/M)-
+            F (((a:ℝ)+j+p.2)/M)+F (((a:ℝ)+j+p.1+p.2)/M))):ℂ)
+        ∃ (pick : ℕ → ℕ × ℕ) (k : ℕ), 0<k ∧ 2*k≤H*K ∧
+          (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l ∧
+            ∀ p∈Pairs, p.1*p.2=l → ‖W p‖≤‖W (pick l)‖) ∧
+          (H:ℝ)^2*K*‖Expdb.exponentialSumAt F X M a (a+L)‖^4 ≤
+            8*K*((L:ℝ)+1)^4+64*(H:ℝ)^2*((L:ℝ)+1)^4+
+              128*H*((L:ℝ)+1)^3*
+                (D*((H:ℝ)*K)^ε*((Nat.clog 2 (H*K):ℝ)*
+                  ((L:ℝ)+1+∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),
+                    ‖W (pick l)‖))) := by
+  exact source_product_twice_weyl_doubled_block hε
+
+#print axioms source_product_twice_weyl_doubled_block
+
+/-- The actual physical nine-term moment becomes the nine scale-linked
+monomials used in the fourth-pair worksheet, with the two-step Weyl weight. -/
+private theorem double_difference_weighted_capped_integer_moments
+    {X M N J H R : ℝ} (hX : 0<X) (hM : 0<M) (hN : 0<N)
+    (hJ : 0<J) (hH : 0<H) (hR : 0<R) (hscale : (X*J/M^2)*N*R^2=M^3) :
+    let E := J*M/Real.sqrt N+J*M*R^2/N^2+J*N^2*R^2/M+
+      J*N*(N/R)^((2:ℝ)/3)
+    let Main := J^11*M^10*N^2/R^4+J^11*M^11*N^2/R^7+
+      J^11*J*M^10/R^2+J^11*J*M^11/R^5+
+      J^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*((X*J/M^2)/M^2)^((4:ℝ)/3)
+    (M^3/H^3)^72*(E^72+Main^6) ≤ (2:ℝ)^288*
+      ((J^72*M^288/(H^216*N^36)+M^648/(X^72*H^216*N^216)+
+        M^504*N^72/(X^72*H^216)+X^24*J^96*M^96*N^144/H^216)+
+        (X^12*J^78*M^216*N^24/H^216+X^21*J^87*M^177*N^33/H^216+
+          X^6*J^78*M^246*N^6/H^216+X^15*J^87*M^207*N^15/H^216+
+          J^72*M^284/(H^216*N^24))) := by
+  intro E Main
+  let e₁ := J*M/Real.sqrt N
+  let e₂ := J*M*R^2/N^2
+  let e₃ := J*N^2*R^2/M
+  let e₄ := J*N*(N/R)^((2:ℝ)/3)
+  let a₁ := J^11*M^10*N^2/R^4
+  let a₂ := J^11*M^11*N^2/R^7
+  let a₃ := J^11*J*M^10/R^2
+  let a₄ := J^11*J*M^11/R^5
+  let a₅ := J^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*((X*J/M^2)/M^2)^((4:ℝ)/3)
+  have he₁ : 0≤e₁ := by dsimp only [e₁]; positivity
+  have he₂ : 0≤e₂ := by dsimp only [e₂]; positivity
+  have he₃ : 0≤e₃ := by dsimp only [e₃]; positivity
+  have he₄ : 0≤e₄ := by dsimp only [e₄]; positivity
+  have ha₁ : 0≤a₁ := by dsimp only [a₁]; positivity
+  have ha₂ : 0≤a₂ := by dsimp only [a₂]; positivity
+  have ha₃ : 0≤a₃ := by dsimp only [a₃]; positivity
+  have ha₄ : 0≤a₄ := by dsimp only [a₄]; positivity
+  have ha₅ : 0≤a₅ := by dsimp only [a₅]; positivity
+  have hE : E^72≤(2:ℝ)^288*(e₁^72+e₂^72+e₃^72+e₄^72) := by
+    have hh := middleOriginal_five_term_power_bound he₁ he₂ he₃ he₄ (le_refl (0:ℝ)) 72
+    rw [add_zero,show (0:ℝ)^72=0 by norm_num,add_zero] at hh
+    exact hh
+  have hMain : Main^6≤(2:ℝ)^288*(a₁^6+a₂^6+a₃^6+a₄^6+a₅^6) := by
+    exact (middleOriginal_five_term_power_bound ha₁ ha₂ ha₃ ha₄ ha₅ 6).trans
+      (mul_le_mul_of_nonneg_right
+        (pow_le_pow_right₀ (by norm_num : (1:ℝ)≤2) (by norm_num : 4*6≤288))
+        (by positivity))
+  obtain ⟨h₁,h₂,h₃,h₄,h₅,h₆,h₇,h₈,h₉⟩ :=
+    double_difference_capped_integer_moments hX hM hN hJ hR hscale
+  have hW : 0≤(M^3/H^3)^72 := pow_nonneg (div_nonneg (pow_nonneg hM.le 3) (pow_nonneg hH.le 3)) 72
+  calc
+    _ ≤ (M^3/H^3)^72*((2:ℝ)^288*(e₁^72+e₂^72+e₃^72+e₄^72)+
+        (2:ℝ)^288*(a₁^6+a₂^6+a₃^6+a₄^6+a₅^6)) :=
+      mul_le_mul_of_nonneg_left (add_le_add hE hMain) hW
+    _ = (2:ℝ)^288*((M^3/H^3)^72*
+        ((e₁^72+e₂^72+e₃^72+e₄^72)+(a₁^6+a₂^6+a₃^6+a₄^6+a₅^6))) := by
+      rw [←mul_add]
+      ac_rfl
+    _ = _ := by
+      apply congrArg (fun q : ℝ => (2:ℝ)^288*q)
+      dsimp only [e₁,e₂,e₃,e₄,a₁,a₂,a₃,a₄,a₅]
+      rw [h₁,h₂,h₃,h₄,h₅,h₆,h₇,h₈,h₉]
+      simp only [div_pow,←pow_mul,mul_add]
+      field_simp
+      ring
+
+example
+    {X M N J H R : ℝ} (hX : 0<X) (hM : 0<M) (hN : 0<N)
+    (hJ : 0<J) (hH : 0<H) (hR : 0<R) (hscale : (X*J/M^2)*N*R^2=M^3) :
+    let E := J*M/Real.sqrt N+J*M*R^2/N^2+J*N^2*R^2/M+
+      J*N*(N/R)^((2:ℝ)/3)
+    let Main := J^11*M^10*N^2/R^4+J^11*M^11*N^2/R^7+
+      J^11*J*M^10/R^2+J^11*J*M^11/R^5+
+      J^12*M^10*R^2/N^2*(R/N)^((2:ℝ)/3)*((X*J/M^2)/M^2)^((4:ℝ)/3)
+    (M^3/H^3)^72*(E^72+Main^6) ≤ (2:ℝ)^288*
+      ((J^72*M^288/(H^216*N^36)+M^648/(X^72*H^216*N^216)+
+        M^504*N^72/(X^72*H^216)+X^24*J^96*M^96*N^144/H^216)+
+        (X^12*J^78*M^216*N^24/H^216+X^21*J^87*M^177*N^33/H^216+
+          X^6*J^78*M^246*N^6/H^216+X^15*J^87*M^207*N^15/H^216+
+          J^72*M^284/(H^216*N^24))) := by
+  exact double_difference_weighted_capped_integer_moments hX hM hN hJ hH hR hscale
+
+#print axioms double_difference_weighted_capped_integer_moments
+
+/-- A single power-window comparison for the actual source polynomial
+budgets and the nine two-step Weyl monomials; both floor losses are explicit. -/
+private theorem double_difference_monomial_power_window
+    {X M N H J ℓ u ν h g : ℝ} (hX : 1≤X)
+    (hMl : X^ℓ≤M) (hMu : M≤X^u)
+    (hNl : X^ν/2≤N) (hNu : N≤X^ν)
+    (hHl : X^h/2≤H) (hJ : J=X^g)
+    (p q r s x t v w z : ℕ) :
+    X^p*J^q*M^r*N^s/(X^x*H^t*N^v*M^w*J^z) ≤
+      (2:ℝ)^(t+v)*X^((p:ℝ)+q*g+r*u+s*ν-x-t*h-v*ν-w*ℓ-z*g) := by
+  have hXp := zero_lt_one.trans_le hX
+  have hMp : 0<M := (Real.rpow_pos_of_pos hXp ℓ).trans_le hMl
+  have hNp : 0<N := (div_pos (Real.rpow_pos_of_pos hXp ν) (by norm_num)).trans_le hNl
+  have hHp : 0<H := (div_pos (Real.rpow_pos_of_pos hXp h) (by norm_num)).trans_le hHl
+  rw [hJ]
+  calc
+    _ ≤ X^p*(X^g)^q*(X^u)^r*(X^ν)^s/
+        (X^x*(X^h/2)^t*(X^ν/2)^v*(X^ℓ)^w*(X^g)^z) := by
+      gcongr
+    _ = (2:ℝ)^(t+v)*(X^p*(X^g)^q*(X^u)^r*(X^ν)^s/
+        (X^x*(X^h)^t*(X^ν)^v*(X^ℓ)^w*(X^g)^z)) := by
+      rw [div_pow,div_pow,pow_add]
+      field_simp
+    _ = _ := by
+      rw [←Real.rpow_natCast X p,←Real.rpow_natCast X x]
+      simp only [←Real.rpow_mul_natCast hXp.le,←Real.rpow_add hXp,←Real.rpow_sub hXp]
+      apply congrArg (fun a : ℝ => (2:ℝ)^(t+v)*X^a)
+      ring
+
+example
+    {X M N H J ℓ u ν h g : ℝ} (hX : 1≤X)
+    (hMl : X^ℓ≤M) (hMu : M≤X^u)
+    (hNl : X^ν/2≤N) (hNu : N≤X^ν)
+    (hHl : X^h/2≤H) (hJ : J=X^g)
+    (p q r s x t v w z : ℕ) :
+    X^p*J^q*M^r*N^s/(X^x*H^t*N^v*M^w*J^z) ≤
+      (2:ℝ)^(t+v)*X^((p:ℝ)+q*g+r*u+s*ν-x-t*h-v*ν-w*ℓ-z*g) := by
+  exact double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ p q r s x t v w z
+
+#print axioms double_difference_monomial_power_window
+
+/-- The existing exact fourth-pair scale certificate remains strict throughout
+a genuine two-sided M power window. This also proves the small-product trivial
+bound and short-interval bound required by the actual Weyl reduction. -/
+private theorem fourth_pair_capped_full_window_margins
+    {t u : ℝ} (ht : t∈Icc (0:ℝ) 1) (hu : u∈Icc (0:ℝ) 1) :
+    let α := (1-t)*(890/3277)+t*(17604372/60424193)
+    let h := ((1-t)*2749411+t*3296917)/100000000
+    let g₀ := ((1-t)*16756+t*1976824)/100000000
+    let ν₀ := ((1-t)*11931645+t*14567321)/100000000
+    let ν₁ := ((1-t)*11969967+t*14925729)/100000000
+    let g := (1-u)*g₀+u*(3*h)
+    let ν := (1-u)*ν₀+u*ν₁
+    let β := 89/3478+(7441/8695)*α
+    let ℓ := α-1/10000000000
+    let v := α+1/10000000000
+    let μ := (1:ℝ)/1000000
+    μ≤ℓ ∧
+      v+μ≤1 ∧
+      μ≤h ∧
+      μ≤ν ∧
+      μ≤g₀ ∧
+      5*h+μ≤ℓ ∧
+      g₀+μ≤3*h ∧
+      ν+μ≤ℓ ∧
+      5*v-1-g+μ≤3*ν ∧
+      1+g+2*ν+μ≤5*ℓ ∧
+      4*ν+1+g+μ≤6*ℓ ∧
+      ν+3*v+μ≤1+g ∧
+      1+g+μ≤4*ℓ ∧
+      3*v+μ≤1+g ∧
+      7*v+μ≤2+2*g+ν ∧
+      7+7*g+27*ν+μ≤41*ℓ ∧
+      2*h+μ≤β ∧
+      4*v+g₀-3*h+μ≤4*β ∧
+      288*v-144*h+μ≤288*β ∧
+      288*v-36*ν+72*g-216*h+μ≤288*β ∧
+      648*v-72-216*h-216*ν+μ≤288*β ∧
+      24+96*g-216*h+96*v+144*ν+μ≤288*β ∧
+      21+87*g-216*h+177*v+33*ν+μ≤288*β ∧
+      15+87*g-216*h+207*v+15*ν+μ≤288*β ∧
+      12+78*g-216*h+216*v+24*ν+μ≤288*β ∧
+      6+78*g-216*h+246*v+6*ν+μ≤288*β ∧
+      72*g-216*h+284*v-24*ν+μ≤288*β ∧
+      504*v-72-216*h+72*ν+μ≤288*β := by
+  intro α h g₀ ν₀ ν₁ g ν β ℓ v μ
+  have ht0 := ht.1
+  have ht1 := ht.2
+  have hraw := fourth_pair_capped_terminal_source_window_scales ht hu
+  dsimp only at hraw
+  obtain ⟨h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23,h24,h25,h26,h27,h28,h29⟩ := hraw
+  refine ⟨?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_,?_⟩
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [ht0,ht1]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [ht0,ht1]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h3]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h7]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h1]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h4,h3]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h2]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h8]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h13]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h16]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h14]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h10]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h15]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h11]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h12]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h18]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [ht0,ht1]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [ht0,ht1]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h19]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h20]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h21]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h22]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h23]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h24]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h25]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h26]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h28]
+  · dsimp only [α,h,g₀,ν₀,ν₁,g,ν,β,ℓ,v,μ]
+    nlinarith only [h29]
+
+example
+    {t u : ℝ} (ht : t∈Icc (0:ℝ) 1) (hu : u∈Icc (0:ℝ) 1) :
+    let α := (1-t)*(890/3277)+t*(17604372/60424193)
+    let h := ((1-t)*2749411+t*3296917)/100000000
+    let g₀ := ((1-t)*16756+t*1976824)/100000000
+    let ν₀ := ((1-t)*11931645+t*14567321)/100000000
+    let ν₁ := ((1-t)*11969967+t*14925729)/100000000
+    let g := (1-u)*g₀+u*(3*h)
+    let ν := (1-u)*ν₀+u*ν₁
+    let β := 89/3478+(7441/8695)*α
+    let ℓ := α-1/10000000000
+    let v := α+1/10000000000
+    let μ := (1:ℝ)/1000000
+    μ≤ℓ ∧
+      v+μ≤1 ∧
+      μ≤h ∧
+      μ≤ν ∧
+      μ≤g₀ ∧
+      5*h+μ≤ℓ ∧
+      g₀+μ≤3*h ∧
+      ν+μ≤ℓ ∧
+      5*v-1-g+μ≤3*ν ∧
+      1+g+2*ν+μ≤5*ℓ ∧
+      4*ν+1+g+μ≤6*ℓ ∧
+      ν+3*v+μ≤1+g ∧
+      1+g+μ≤4*ℓ ∧
+      3*v+μ≤1+g ∧
+      7*v+μ≤2+2*g+ν ∧
+      7+7*g+27*ν+μ≤41*ℓ ∧
+      2*h+μ≤β ∧
+      4*v+g₀-3*h+μ≤4*β ∧
+      288*v-144*h+μ≤288*β ∧
+      288*v-36*ν+72*g-216*h+μ≤288*β ∧
+      648*v-72-216*h-216*ν+μ≤288*β ∧
+      24+96*g-216*h+96*v+144*ν+μ≤288*β ∧
+      21+87*g-216*h+177*v+33*ν+μ≤288*β ∧
+      15+87*g-216*h+207*v+15*ν+μ≤288*β ∧
+      12+78*g-216*h+216*v+24*ν+μ≤288*β ∧
+      6+78*g-216*h+246*v+6*ν+μ≤288*β ∧
+      72*g-216*h+284*v-24*ν+μ≤288*β ∧
+      504*v-72-216*h+72*ν+μ≤288*β := by
+  exact fourth_pair_capped_full_window_margins ht hu
+
+#print axioms fourth_pair_capped_full_window_margins
+
+/-- The selected double-shift radius converts the polynomial power-window
+inequalities into every actual capped source budget. No N^2≤M is imposed. -/
+private theorem double_difference_capped_polynomial_source_budgets
+    {X M N J R B : ℝ} (hX : 0<X) (hM : 0<M) (hN : 0<N)
+    (hJ : 0<J) (hR : 0<R) (hB : 1≤B) (hBN : B≤N)
+    (hscale : (X*J/M^2)*N*R^2=M^3)
+    (hRN : B^2*M^5≤X*J*N^3) (hNR : B*X*J*N^2≤M^5)
+    (hNM : B*N≤M) (hCubic : B*X*J*N^4≤M^6)
+    (hCap : B^2*N*M^3≤X*J) (hHeight : B*X*J≤M^4)
+    (hMT : B*M^3≤X*J) (hRT : B*M^7≤X^2*J^2*N)
+    (hTen : B^2*X^7*J^7*N^27≤M^41) :
+    B≤R ∧ B*R≤N ∧ B*N≤R^2 ∧ B*N≤M ∧
+      B*N^3≤M*R^2 ∧ B*N*R≤M ∧ B*M≤N*R^2 ∧
+      B*M≤X*J/M^2 ∧ B*R^2≤X*J/M^2 ∧ B*N^10≤M^3*R^7 := by
+  have hBp := zero_lt_one.trans_le hB
+  have hDen : 0<X*J*N := mul_pos (mul_pos hX hJ) hN
+  have hR2 : R^2=M^5/(X*J*N) := by
+    apply (eq_div_iff hDen.ne').mpr
+    have hs := hscale
+    field_simp at hs
+    nlinarith only [hs]
+  have hNR' : B*N≤R^2 := by
+    rw [hR2]
+    apply (le_div_iff₀ hDen).mpr
+    convert hNR using 1
+    ring
+  refine ⟨?_,?_,hNR',hNM,?_,?_,?_,?_,?_,?_⟩
+  · apply (sq_le_sq₀ hBp.le hR.le).mp
+    calc
+      B^2 = B*B := pow_two B
+      _ ≤ B*N := mul_le_mul_of_nonneg_left hBN hBp.le
+      _ ≤ R^2 := hNR'
+  · apply (sq_le_sq₀ (mul_nonneg hBp.le hR.le) hN.le).mp
+    rw [mul_pow,hR2,←mul_div_assoc]
+    apply (div_le_iff₀ hDen).mpr
+    convert hRN using 1
+    ring
+  · rw [hR2,←mul_div_assoc]
+    apply (le_div_iff₀ hDen).mpr
+    convert hCubic using 1 <;> ring
+  · apply (sq_le_sq₀ (mul_nonneg (mul_nonneg hBp.le hN.le) hR.le) hM.le).mp
+    simp only [mul_pow]
+    rw [hR2,←mul_div_assoc]
+    apply (div_le_iff₀ hDen).mpr
+    have hh := mul_le_mul_of_nonneg_right hCap (mul_nonneg hN.le (sq_nonneg M))
+    convert hh using 1 <;> ring
+  · rw [hR2,←mul_div_assoc]
+    apply (le_div_iff₀ hDen).mpr
+    have hh := mul_le_mul_of_nonneg_right hHeight (mul_nonneg hM.le hN.le)
+    convert hh using 1 <;> ring
+  · apply (le_div_iff₀ (sq_pos_of_pos hM)).mpr
+    convert hMT using 1
+    ring
+  · rw [hR2,←mul_div_assoc]
+    apply (div_le_div_iff₀ hDen (sq_pos_of_pos hM)).mpr
+    convert hRT using 1 <;> ring
+  · apply (sq_le_sq₀ (mul_nonneg hBp.le (pow_nonneg hN.le 10))
+      (mul_nonneg (pow_nonneg hM.le 3) (pow_nonneg hR.le 7))).mp
+    simp only [mul_pow,←pow_mul]
+    rw [show R^14=(R^2)^7 by rw [←pow_mul],hR2,div_pow,←mul_div_assoc]
+    apply (le_div_iff₀ (pow_pos hDen 7)).mpr
+    convert hTen using 1 <;> ring
+
+example
+    {X M N J R B : ℝ} (hX : 0<X) (hM : 0<M) (hN : 0<N)
+    (hJ : 0<J) (hR : 0<R) (hB : 1≤B) (hBN : B≤N)
+    (hscale : (X*J/M^2)*N*R^2=M^3)
+    (hRN : B^2*M^5≤X*J*N^3) (hNR : B*X*J*N^2≤M^5)
+    (hNM : B*N≤M) (hCubic : B*X*J*N^4≤M^6)
+    (hCap : B^2*N*M^3≤X*J) (hHeight : B*X*J≤M^4)
+    (hMT : B*M^3≤X*J) (hRT : B*M^7≤X^2*J^2*N)
+    (hTen : B^2*X^7*J^7*N^27≤M^41) :
+    B≤R ∧ B*R≤N ∧ B*N≤R^2 ∧ B*N≤M ∧
+      B*N^3≤M*R^2 ∧ B*N*R≤M ∧ B*M≤N*R^2 ∧
+      B*M≤X*J/M^2 ∧ B*R^2≤X*J/M^2 ∧ B*N^10≤M^3*R^7 := by
+  exact double_difference_capped_polynomial_source_budgets hX hM hN hJ hR hB hBN
+    hscale hRN hNR hNM hCubic hCap hHeight hMT hRT hTen
+
+#print axioms double_difference_capped_polynomial_source_budgets
+
+/-- The linked ten-monomial two-step Weyl majorant is bounded over a full
+power window, retaining both floor losses and the constant extension term. -/
+private theorem double_difference_ten_monomials_power_window
+    {X M N H J ℓ u ν h g ξ : ℝ} (hX : 1≤X) (hξ : 0≤ξ)
+    (hMl : X^ℓ≤M) (hMu : M≤X^u)
+    (hNl : X^ν/2≤N) (hNu : N≤X^ν) (hHl : X^h/2≤H) (hJ : J=X^g)
+    (hDiag : 288*u-144*h≤ξ)
+    (hSqrt : 288*u-36*ν+72*g-216*h≤ξ)
+    (hSecond : 648*u-72-216*h-216*ν≤ξ)
+    (hThird : 504*u-72-216*h+72*ν≤ξ)
+    (hFourth : 24+96*g-216*h+96*u+144*ν≤ξ)
+    (hFirstMain : 12+78*g-216*h+216*u+24*ν≤ξ)
+    (hSecondMain : 21+87*g-216*h+177*u+33*ν≤ξ)
+    (hThirdMain : 6+78*g-216*h+246*u+6*ν≤ξ)
+    (hFourthMain : 15+87*g-216*h+207*u+15*ν≤ξ)
+    (hFifthMain : 72*g-216*h+284*u-24*ν≤ξ) :
+    1+(M^288/H^144+
+        ((J^72*M^288/(H^216*N^36)+M^648/(X^72*H^216*N^216)+
+          M^504*N^72/(X^72*H^216)+X^24*J^96*M^96*N^144/H^216)+
+          (X^12*J^78*M^216*N^24/H^216+X^21*J^87*M^177*N^33/H^216+
+            X^6*J^78*M^246*N^6/H^216+X^15*J^87*M^207*N^15/H^216+
+            J^72*M^284/(H^216*N^24)))) ≤ (11*(2:ℝ)^432)*X^ξ := by
+  have hXp := zero_lt_one.trans_le hX
+  have hbound (k : ℕ) (e : ℝ) (hk : k≤432) (he : e≤ξ) :
+      (2:ℝ)^k*X^e≤(2:ℝ)^432*X^ξ :=
+    mul_le_mul (pow_le_pow_right₀ (by norm_num) hk)
+      (Real.rpow_le_rpow_of_exponent_le hX he)
+      (Real.rpow_nonneg hXp.le _) (by norm_num)
+  have h₀ : 1≤(2:ℝ)^432*X^ξ :=
+    one_le_mul_of_one_le_of_one_le (one_le_pow₀ (by norm_num)) (Real.one_le_rpow hX hξ)
+  have hb1 : M^288/H^144≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      0 0 288 0 0 144 0 0 0
+    have heq : (0:ℝ)+0*g+288*u+0*ν-0-144*h-0*ν-0*ℓ-0*g =
+        288*u-144*h := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 144 _ (by norm_num) hDiag)
+  have hb2 : J^72*M^288/(H^216*N^36)≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      0 72 288 0 0 216 36 0 0
+    have heq : (0:ℝ)+72*g+288*u+0*ν-0-216*h-36*ν-0*ℓ-0*g =
+        288*u-36*ν+72*g-216*h := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 252 _ (by norm_num) hSqrt)
+  have hb3 : M^648/(X^72*H^216*N^216)≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      0 0 648 0 72 216 216 0 0
+    have heq : (0:ℝ)+0*g+648*u+0*ν-72-216*h-216*ν-0*ℓ-0*g =
+        648*u-72-216*h-216*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 432 _ (by norm_num) hSecond)
+  have hb4 : M^504*N^72/(X^72*H^216)≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      0 0 504 72 72 216 0 0 0
+    have heq : (0:ℝ)+0*g+504*u+72*ν-72-216*h-0*ν-0*ℓ-0*g =
+        504*u-72-216*h+72*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 216 _ (by norm_num) hThird)
+  have hb5 : X^24*J^96*M^96*N^144/H^216≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      24 96 96 144 0 216 0 0 0
+    have heq : (24:ℝ)+96*g+96*u+144*ν-0-216*h-0*ν-0*ℓ-0*g =
+        24+96*g-216*h+96*u+144*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 216 _ (by norm_num) hFourth)
+  have hb6 : X^12*J^78*M^216*N^24/H^216≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      12 78 216 24 0 216 0 0 0
+    have heq : (12:ℝ)+78*g+216*u+24*ν-0-216*h-0*ν-0*ℓ-0*g =
+        12+78*g-216*h+216*u+24*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 216 _ (by norm_num) hFirstMain)
+  have hb7 : X^21*J^87*M^177*N^33/H^216≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      21 87 177 33 0 216 0 0 0
+    have heq : (21:ℝ)+87*g+177*u+33*ν-0-216*h-0*ν-0*ℓ-0*g =
+        21+87*g-216*h+177*u+33*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 216 _ (by norm_num) hSecondMain)
+  have hb8 : X^6*J^78*M^246*N^6/H^216≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      6 78 246 6 0 216 0 0 0
+    have heq : (6:ℝ)+78*g+246*u+6*ν-0-216*h-0*ν-0*ℓ-0*g =
+        6+78*g-216*h+246*u+6*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 216 _ (by norm_num) hThirdMain)
+  have hb9 : X^15*J^87*M^207*N^15/H^216≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      15 87 207 15 0 216 0 0 0
+    have heq : (15:ℝ)+87*g+207*u+15*ν-0-216*h-0*ν-0*ℓ-0*g =
+        15+87*g-216*h+207*u+15*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 216 _ (by norm_num) hFourthMain)
+  have hb10 : J^72*M^284/(H^216*N^24)≤(2:ℝ)^432*X^ξ := by
+    have hh := double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ
+      0 72 284 0 0 216 24 0 0
+    have heq : (0:ℝ)+72*g+284*u+0*ν-0-216*h-24*ν-0*ℓ-0*g =
+        72*g-216*h+284*u-24*ν := by ring
+    simp only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,one_mul,mul_one,
+      heq] at hh
+    exact hh.trans (hbound 240 _ (by norm_num) hFifthMain)
+  have hSum (d : ℝ) : d+(d+((d+d+d+d)+(d+d+d+d+d)))=11*d := by ring
+  calc
+    _ ≤ (2:ℝ)^432*X^ξ+((2:ℝ)^432*X^ξ+
+        (((2:ℝ)^432*X^ξ+(2:ℝ)^432*X^ξ+(2:ℝ)^432*X^ξ+(2:ℝ)^432*X^ξ)+
+          ((2:ℝ)^432*X^ξ+(2:ℝ)^432*X^ξ+(2:ℝ)^432*X^ξ+
+            (2:ℝ)^432*X^ξ+(2:ℝ)^432*X^ξ))) :=
+      add_le_add h₀ (add_le_add hb1
+        (add_le_add (add_le_add (add_le_add (add_le_add hb2 hb3) hb4) hb5)
+          (add_le_add (add_le_add (add_le_add (add_le_add hb6 hb7) hb8) hb9) hb10)))
+    _ = 11*((2:ℝ)^432*X^ξ) := hSum _
+    _ = _ := (mul_assoc _ _ _).symm
+
+example
+    {X M N H J ℓ u ν h g ξ : ℝ} (hX : 1≤X) (hξ : 0≤ξ)
+    (hMl : X^ℓ≤M) (hMu : M≤X^u)
+    (hNl : X^ν/2≤N) (hNu : N≤X^ν) (hHl : X^h/2≤H) (hJ : J=X^g)
+    (hDiag : 288*u-144*h≤ξ)
+    (hSqrt : 288*u-36*ν+72*g-216*h≤ξ)
+    (hSecond : 648*u-72-216*h-216*ν≤ξ)
+    (hThird : 504*u-72-216*h+72*ν≤ξ)
+    (hFourth : 24+96*g-216*h+96*u+144*ν≤ξ)
+    (hFirstMain : 12+78*g-216*h+216*u+24*ν≤ξ)
+    (hSecondMain : 21+87*g-216*h+177*u+33*ν≤ξ)
+    (hThirdMain : 6+78*g-216*h+246*u+6*ν≤ξ)
+    (hFourthMain : 15+87*g-216*h+207*u+15*ν≤ξ)
+    (hFifthMain : 72*g-216*h+284*u-24*ν≤ξ) :
+    1+(M^288/H^144+
+        ((J^72*M^288/(H^216*N^36)+M^648/(X^72*H^216*N^216)+
+          M^504*N^72/(X^72*H^216)+X^24*J^96*M^96*N^144/H^216)+
+          (X^12*J^78*M^216*N^24/H^216+X^21*J^87*M^177*N^33/H^216+
+            X^6*J^78*M^246*N^6/H^216+X^15*J^87*M^207*N^15/H^216+
+            J^72*M^284/(H^216*N^24)))) ≤ (11*(2:ℝ)^432)*X^ξ := by
+  exact double_difference_ten_monomials_power_window hX hξ hMl hMu hNl hNu hHl hJ
+    hDiag hSqrt hSecond hThird hFourth hFirstMain hSecondMain hThirdMain hFourthMain hFifthMain
+
+#print axioms double_difference_ten_monomials_power_window
+
+private theorem upperOriginal_floor_power_scales
+    {U V : ℝ} (hU : 32≤U) (hV : 4≤V) :
+    let n := ⌊U/8⌋₊
+    let N := 8*n
+    let H := ⌊V⌋₊
+    2≤N ∧ 2≤H ∧ U/2≤(N:ℝ) ∧ (N:ℝ)≤U ∧
+      V/2≤(H:ℝ) ∧ (H:ℝ)≤V := by
+  intro n N H
+  have hn4 : 4≤n := Nat.le_floor (by linarith only [hU] : (4:ℝ)≤U/8)
+  have hH4 : 4≤H := Nat.le_floor hV
+  have hNcast : (N:ℝ)=8*(n:ℝ) := by simp only [N,Nat.cast_mul,Nat.cast_ofNat]
+  have hnlo : U/8<(n:ℝ)+1 := Nat.lt_floor_add_one (U/8)
+  have hnhi : (n:ℝ)≤U/8 := Nat.floor_le (by linarith only [hU])
+  have hHlo : V<(H:ℝ)+1 := Nat.lt_floor_add_one V
+  have hHhi : (H:ℝ)≤V := Nat.floor_le (by linarith only [hV])
+  refine ⟨by dsimp only [N]; omega,by omega,?_,?_,?_,hHhi⟩
+  · rw [hNcast]
+    linarith only [hnlo,hU]
+  · rw [hNcast]
+    linarith only [hnhi]
+  · linarith only [hHlo,hV]
+
+example
+    {U V : ℝ} (hU : 32≤U) (hV : 4≤V) :
+    let n := ⌊U/8⌋₊
+    let N := 8*n
+    let H := ⌊V⌋₊
+    2≤N ∧ 2≤H ∧ U/2≤(N:ℝ) ∧ (N:ℝ)≤U ∧
+      V/2≤(H:ℝ) ∧ (H:ℝ)≤V := by
+  exact upperOriginal_floor_power_scales hU hV
+
+#print axioms upperOriginal_floor_power_scales
+
+/-- Uniformly construct the actual integer scales and radius for the capped
+Huxley source from strict power-window margins. The threshold precedes all
+product exponents and all actual product-block families. -/
+private theorem eventually_double_difference_capped_physical_window
+    {B C w₀ μ ℓ v h : ℝ} (hB : 1≤B) (hC : 1≤C) (hw₀ : 0<w₀)
+    (hμ : 0<μ) (hμℓ : μ≤ℓ) (hℓv : ℓ≤v) (hμh : μ≤h)
+    (hWidth : 5*h+μ≤ℓ) :
+    ∀ᶠ X : ℝ in Filter.atTop, 2≤X ∧
+      ∀ M J g ν : ℝ, X^ℓ≤M → M≤X^v → J=X^g →
+        0≤g → g≤3*h → μ≤ν → ν+μ≤ℓ →
+        5*v-1-g+μ≤3*ν → 1+g+2*ν+μ≤5*ℓ →
+        4*ν+1+g+μ≤6*ℓ → ν+3*v+μ≤1+g →
+        1+g+μ≤4*ℓ → 3*v+μ≤1+g →
+        7*v+μ≤2+2*g+ν → 7+7*g+27*ν+μ≤41*ℓ →
+        let n := ⌊X^ν/8⌋₊
+        let N := 8*n
+        let H := ⌊X^h⌋₊
+        let R := Real.sqrt (M^5/(X*J*(N:ℝ)))
+        let T := X*J/M^2
+        let W := ((H:ℝ)+(H:ℝ)^2)/M
+        1≤M ∧ 2≤N ∧ 2≤H ∧
+          X^ν/2≤(N:ℝ) ∧ (N:ℝ)≤X^ν ∧ X^h/2≤(H:ℝ) ∧ (H:ℝ)≤X^h ∧
+          1≤J ∧ 0<R ∧ T*(N:ℝ)*R^2=M^3 ∧ C≤T ∧
+          W≤w₀ ∧ J≤M ∧ W*J≤1 ∧
+          B≤R ∧ B*R≤N ∧ B*(N:ℝ)≤R^2 ∧ B*(N:ℝ)≤M ∧
+          B*(N:ℝ)^3≤M*R^2 ∧ B*(N:ℝ)*R≤M ∧ B*M≤(N:ℝ)*R^2 ∧
+          B*M≤T ∧ B*R^2≤T ∧ B*(N:ℝ)^10≤M^3*R^7 := by
+  have hB0 := zero_le_one.trans hB
+  have hC0 := zero_le_one.trans hC
+  have hℓp := hμ.trans_le hμℓ
+  have hv0 := (hℓp.trans_le hℓv).le
+  have hhp := hμ.trans_le hμh
+  let D := 32+8*B^2+2*B+C+2/w₀
+  have hInv : 0<2/w₀ := div_pos (by norm_num) hw₀
+  have hD32 : 32≤D := by dsimp only [D]; nlinarith only [sq_nonneg B,hB0,hC0,hInv]
+  have hDB : 2*B≤D := by dsimp only [D]; nlinarith only [sq_nonneg B,hC0,hInv]
+  have hDBsq : 8*B^2≤D := by dsimp only [D]; linarith only [hB0,hC0,hInv]
+  have hDC : C≤D := by dsimp only [D]; nlinarith only [sq_nonneg B,hB0,hInv]
+  have hDW : 2/w₀≤D := by dsimp only [D]; nlinarith only [sq_nonneg B,hB0,hC0]
+  have hD1 : 1≤D := (by norm_num : (1:ℝ)≤32).trans hD32
+  have hDB1 : B≤D := (by linarith only [hB0] : B≤2*B).trans hDB
+  have hDBsq1 : B^2≤D := (by nlinarith only [sq_nonneg B] : B^2≤8*B^2).trans hDBsq
+  have hD2 : 2≤D := (by norm_num : (2:ℝ)≤32).trans hD32
+  filter_upwards [(tendsto_rpow_atTop hμ).eventually_ge_atTop D,
+    Filter.eventually_ge_atTop (2:ℝ)] with X hXD hX2
+  have hX : 1≤X := (by norm_num : (1:ℝ)≤2).trans hX2
+  have hXp := zero_lt_one.trans_le hX
+  have hdom (A e : ℝ) (hAD : A≤D) (he : e+μ≤0) : A*X^e≤1 := by
+    calc
+      _ ≤ X^μ*X^e := mul_le_mul_of_nonneg_right (hAD.trans hXD) (Real.rpow_nonneg hXp.le _)
+      _ = X^(μ+e) := (Real.rpow_add hXp _ _).symm
+      _ ≤ X^(0:ℝ) := Real.rpow_le_rpow_of_exponent_le hX (by linarith only [he])
+      _ = 1 := Real.rpow_zero X
+  refine ⟨hX2,?_⟩
+  intro M J g ν hMl hMu hJ hg0 hgh hμν hνM hRN hNR hCubic hCap hHeight hMT hRT hTen
+    n N H R T W
+  have hM1 : 1≤M := (Real.one_le_rpow hX hℓp.le).trans hMl
+  have hMp := zero_lt_one.trans_le hM1
+  have hJ1 : 1≤J := by rw [hJ]; exact Real.one_le_rpow hX hg0
+  have hJp := zero_lt_one.trans_le hJ1
+  have hNU : 32≤X^ν := hD32.trans (hXD.trans (Real.rpow_le_rpow_of_exponent_le hX hμν))
+  have hHU : 4≤X^h :=
+    (by norm_num : (4:ℝ)≤32).trans (hD32.trans (hXD.trans (Real.rpow_le_rpow_of_exponent_le hX hμh)))
+  obtain ⟨hN2,hH2,hNl,hNu,hHl,hHu⟩ := upperOriginal_floor_power_scales hNU hHU
+  have hNp : (0:ℝ)<N := by exact_mod_cast (show 0<N by omega)
+  have hH1 : (1:ℝ)≤H := by exact_mod_cast (show 1≤H by omega)
+  have hBN : B≤(N:ℝ) := by
+    have hh := hDB.trans (hXD.trans (Real.rpow_le_rpow_of_exponent_le hX hμν))
+    linarith only [hh,hNl]
+  have hratio (A : ℝ) (p q r s x t vN w z : ℕ)
+      (hA : 0≤A) (hAD : A*(2:ℝ)^(t+vN)≤D)
+      (he : (p:ℝ)+q*g+r*v+s*ν-x-t*h-vN*ν-w*ℓ-z*g+μ≤0) :
+      A*(X^p*J^q*M^r*(N:ℝ)^s/(X^x*(H:ℝ)^t*(N:ℝ)^vN*M^w*J^z))≤1 := by
+    calc
+      _ ≤ A*((2:ℝ)^(t+vN)*X^((p:ℝ)+q*g+r*v+s*ν-x-t*h-vN*ν-w*ℓ-z*g)) :=
+        mul_le_mul_of_nonneg_left
+          (double_difference_monomial_power_window hX hMl hMu hNl hNu hHl hJ p q r s x t vN w z) hA
+      _ = (A*(2:ℝ)^(t+vN))*X^((p:ℝ)+q*g+r*v+s*ν-x-t*h-vN*ν-w*ℓ-z*g) :=
+        (mul_assoc _ _ _).symm
+      _ ≤ 1 := hdom _ _ hAD he
+
+  have hpoly {a b c : ℝ} (hb : 0<b) (hh : c*(a/b)≤1) : c*a≤b := by
+    rw [←mul_div_assoc] at hh
+    simpa only [one_mul] using (div_le_iff₀ hb).mp hh
+  have pRN : B^2*M^5≤X*J*(N:ℝ)^3 := by
+    have hh := hratio (B^2) 0 0 5 0 1 0 3 0 1 (sq_nonneg B)
+      (by norm_num; nlinarith only [hDBsq])
+      (by norm_num; linarith only [hRN])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pNR : B*X*J*(N:ℝ)^2≤M^5 := by
+    have hh := hratio (B) 1 1 0 2 0 0 0 5 0 (hB0)
+      (by norm_num; nlinarith only [hDB1])
+      (by norm_num; linarith only [hNR])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pNM : B*(N:ℝ)≤M := by
+    have hh := hratio (B) 0 0 0 1 0 0 0 1 0 (hB0)
+      (by norm_num; nlinarith only [hDB1])
+      (by norm_num; linarith only [hνM])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    exact hh'
+  have pCubic : B*X*J*(N:ℝ)^4≤M^6 := by
+    have hh := hratio (B) 1 1 0 4 0 0 0 6 0 (hB0)
+      (by norm_num; nlinarith only [hDB1])
+      (by norm_num; linarith only [hCubic])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pCap : B^2*(N:ℝ)*M^3≤X*J := by
+    have hh := hratio (B^2) 0 0 3 1 1 0 0 0 1 (sq_nonneg B)
+      (by norm_num; nlinarith only [hDBsq1])
+      (by norm_num; linarith only [hCap])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pHeight : B*X*J≤M^4 := by
+    have hh := hratio (B) 1 1 0 0 0 0 0 4 0 (hB0)
+      (by norm_num; nlinarith only [hDB1])
+      (by norm_num; linarith only [hHeight])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pMT : B*M^3≤X*J := by
+    have hh := hratio (B) 0 0 3 0 1 0 0 0 1 (hB0)
+      (by norm_num; nlinarith only [hDB1])
+      (by norm_num; linarith only [hMT])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    exact hh'
+  have pRT : B*M^7≤X^2*J^2*(N:ℝ) := by
+    have hh := hratio (B) 0 0 7 0 2 0 1 0 2 (hB0)
+      (by norm_num; nlinarith only [hDB])
+      (by norm_num; linarith only [hRT])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pTen : B^2*X^7*J^7*(N:ℝ)^27≤M^41 := by
+    have hh := hratio (B^2) 7 7 0 27 0 0 0 41 0 (sq_nonneg B)
+      (by norm_num; nlinarith only [hDBsq1])
+      (by norm_num; linarith only [hTen])
+    simp only [pow_zero,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    convert hh' using 1
+    ring
+  have pThreshold : C*M^2≤X*J := by
+    have hh := hratio (C) 0 0 2 0 1 0 0 0 1 (hC0)
+      (by norm_num; nlinarith only [hDC])
+      (by norm_num; linarith only [hMT,hv0])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    have hh' := hpoly (by positivity) hh
+    exact hh'
+  have pJ : J≤M := by
+    have hh := hratio (1) 0 1 0 0 0 0 0 1 0 (zero_le_one)
+      (by norm_num; nlinarith only [hD1])
+      (by norm_num; linarith only [hgh,hWidth,hhp])
+    simp only [pow_zero,pow_one,one_mul,mul_one] at hh
+    exact (div_le_one hMp).mp hh
+
+  have hThreshold : C≤T := (le_div_iff₀ (sq_pos_of_pos hMp)).mpr pThreshold
+  have hWbound : W≤2*X^(2*h-ℓ) := by
+    have hHsq : (H:ℝ)^2≤(X^h)^2 := by gcongr
+    have hnumer : (H:ℝ)+(H:ℝ)^2≤2*(X^h)^2 := by
+      nlinarith only [hH1,hHsq]
+    calc
+      W ≤ 2*(X^h)^2/X^ℓ :=
+        div_le_div₀ (by positivity) hnumer (Real.rpow_pos_of_pos hXp _) hMl
+      _ = 2*X^(2*h-ℓ) := by
+        have hp : X^(h*2)=(X^h)^2 := by
+          simpa only [Nat.cast_ofNat] using Real.rpow_mul_natCast hXp.le h 2
+        rw [Real.rpow_sub hXp,show 2*h=h*2 by ring,hp]
+        ring
+  have hW : W≤w₀ := by
+    have hh := hdom (2/w₀) (2*h-ℓ) hDW (by linarith only [hWidth,hhp])
+    have hh' := mul_le_mul_of_nonneg_right hh hw₀.le
+    have heq : (2/w₀*X^(2*h-ℓ))*w₀=2*X^(2*h-ℓ) := by
+      field_simp
+    rw [heq,one_mul] at hh'
+    exact hWbound.trans hh'
+  have hWJ : W*J≤1 := by
+    calc
+      W*J ≤ (2*X^(2*h-ℓ))*J := mul_le_mul_of_nonneg_right hWbound hJp.le
+      _ = 2*X^(2*h-ℓ+g) := by rw [hJ,mul_assoc,←Real.rpow_add hXp]
+      _ ≤ 1 := hdom 2 _ hD2 (by linarith only [hgh,hWidth])
+  have hRad : 0<M^5/(X*J*(N:ℝ)) := by positivity
+  have hRp : 0<R := Real.sqrt_pos.2 hRad
+  have hR2 : R^2=M^5/(X*J*(N:ℝ)) := Real.sq_sqrt hRad.le
+  have hscale : T*(N:ℝ)*R^2=M^3 := by
+    rw [hR2]
+    dsimp only [T]
+    field_simp
+  have hbudgets := double_difference_capped_polynomial_source_budgets hXp hMp hNp hJp hRp
+    hB hBN hscale pRN pNR pNM pCubic pCap pHeight pMT pRT pTen
+  exact ⟨hM1,hN2,hH2,hNl,hNu,hHl,hHu,hJ1,hRp,hscale,hThreshold,hW,pJ,hWJ,hbudgets⟩
+
+example
+    {B C w₀ μ ℓ v h : ℝ} (hB : 1≤B) (hC : 1≤C) (hw₀ : 0<w₀)
+    (hμ : 0<μ) (hμℓ : μ≤ℓ) (hℓv : ℓ≤v) (hμh : μ≤h)
+    (hWidth : 5*h+μ≤ℓ) :
+    ∀ᶠ X : ℝ in Filter.atTop, 2≤X ∧
+      ∀ M J g ν : ℝ, X^ℓ≤M → M≤X^v → J=X^g →
+        0≤g → g≤3*h → μ≤ν → ν+μ≤ℓ →
+        5*v-1-g+μ≤3*ν → 1+g+2*ν+μ≤5*ℓ →
+        4*ν+1+g+μ≤6*ℓ → ν+3*v+μ≤1+g →
+        1+g+μ≤4*ℓ → 3*v+μ≤1+g →
+        7*v+μ≤2+2*g+ν → 7+7*g+27*ν+μ≤41*ℓ →
+        let n := ⌊X^ν/8⌋₊
+        let N := 8*n
+        let H := ⌊X^h⌋₊
+        let R := Real.sqrt (M^5/(X*J*(N:ℝ)))
+        let T := X*J/M^2
+        let W := ((H:ℝ)+(H:ℝ)^2)/M
+        1≤M ∧ 2≤N ∧ 2≤H ∧
+          X^ν/2≤(N:ℝ) ∧ (N:ℝ)≤X^ν ∧ X^h/2≤(H:ℝ) ∧ (H:ℝ)≤X^h ∧
+          1≤J ∧ 0<R ∧ T*(N:ℝ)*R^2=M^3 ∧ C≤T ∧
+          W≤w₀ ∧ J≤M ∧ W*J≤1 ∧
+          B≤R ∧ B*R≤N ∧ B*(N:ℝ)≤R^2 ∧ B*(N:ℝ)≤M ∧
+          B*(N:ℝ)^3≤M*R^2 ∧ B*(N:ℝ)*R≤M ∧ B*M≤(N:ℝ)*R^2 ∧
+          B*M≤T ∧ B*R^2≤T ∧ B*(N:ℝ)^10≤M^3*R^7 := by
+  exact eventually_double_difference_capped_physical_window hB hC hw₀ hμ hμℓ hℓv hμh hWidth
+
+#print axioms eventually_double_difference_capped_physical_window
+
+/-- Normalize the ACTUAL selected product block from two-step Weyl with
+K=H². The selected maximum phases and all endpoint terms are retained. -/
+private theorem source_product_twice_weyl_normalized_block
+    {ε : ℝ} (hε : 0<ε) :
+    ∃ A : ℝ, 1≤A ∧
+      ∀ (F : ℝ → ℝ) (σ X M : ℝ) (a L H : ℕ),
+        0<σ → 1≤X → 1≤M → 2≤H → H^2≤L+1 →
+        (H:ℝ)^3≤X → ((H:ℝ)+(H:ℝ)^2)/M≤1/4 →
+        M≤(a:ℝ) → ((a+L:ℕ):ℝ)≤2*M →
+        let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (H^2-1))
+        let Products := Pairs.image (fun p => p.1*p.2)
+        let W := fun p : ℕ × ℕ => ∑ j∈Finset.range (L+1-p.1-p.2),
+          (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+p.1)/M)-
+            F (((a:ℝ)+j+p.2)/M)+F (((a:ℝ)+j+p.1+p.2)/M))):ℂ)
+        ∃ (pick : ℕ → ℕ × ℕ) (k : ℕ), 0<k ∧ 2*k≤H^3 ∧
+          (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l ∧
+            ∀ p∈Pairs, p.1*p.2=l → ‖W p‖≤‖W (pick l)‖) ∧
+          (∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖)≤2*M*k ∧
+          ‖Expdb.exponentialSumAt F X M a (a+L)‖^4 ≤
+            A*X^ε*(1+(Nat.clog 2 (H^3):ℝ))*
+              (M^4/(H:ℝ)^2+(M^3/(H:ℝ)^3)*
+                (∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖)) := by
+  classical
+  obtain ⟨D,hD,hsource⟩ := source_product_twice_weyl_doubled_block hε
+  let A := 4096*max 1 D
+  have hA : 1≤A := by
+    dsimp only [A]
+    linarith only [le_max_left (1:ℝ) D]
+  refine ⟨A,hA,?_⟩
+  intro F σ X M a L H hσ hX hM hH hHL hHX hWidth ha hb Pairs Products W
+  have hMp := zero_lt_one.trans_le hM
+  have hH1 : (1:ℝ)≤H := by exact_mod_cast (show 1≤H by omega)
+  have hHp := zero_lt_one.trans_le hH1
+  have hK2 : 2≤H^2 := by nlinarith only [hH]
+  have hHK : (H:ℝ)+(H:ℝ)^2<M := by
+    have hh := (div_le_iff₀ hMp).mp hWidth
+    linarith only [hh,hMp]
+  have hHKnat : H+H^2≤a := by
+    exact_mod_cast (show (H:ℝ)+(H:ℝ)^2≤(a:ℝ) from hHK.le.trans ha)
+  have hHshort : H≤L+1 := (by nlinarith only [hH] : H≤H^2).trans hHL
+  have hCube : H*H^2=H^3 := by ring
+  obtain ⟨pick,k,hk,hkH,hpick,hweyl⟩ :=
+    hsource F σ X M a L H (H^2) hσ hH hK2 hHKnat hHshort hHL
+      (by exact_mod_cast hHK)
+  rw [hCube] at hkH hweyl
+  simp only [Nat.cast_pow] at hweyl
+  rw [show (H:ℝ)^2*(H:ℝ)^2=(H:ℝ)^4 by ring,
+    show (H:ℝ)*(H:ℝ)^2=(H:ℝ)^3 by ring] at hweyl
+  let Z := ∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖
+  have hZ : 0≤Z := Finset.sum_nonneg (fun _ _ => norm_nonneg _)
+  let Log := 1+(Nat.clog 2 (H^3):ℝ)
+  let U := max 1 D*X^ε*Log
+  have hLog : 1≤Log := by dsimp only [Log]; exact le_add_of_nonneg_right (Nat.cast_nonneg _)
+  have hXpow : 1≤X^ε := Real.one_le_rpow hX hε.le
+  have hU : 1≤U := one_le_mul_of_one_le_of_one_le
+    (one_le_mul_of_one_le_of_one_le (le_max_left _ _) hXpow) hLog
+  have hLcap : (L:ℝ)+1≤2*M := by
+    have hb' : (a:ℝ)+(L:ℝ)≤2*M := by simpa only [Nat.cast_add] using hb
+    linarith only [ha,hb',hM]
+  have hZcap : Z≤2*M*k := by
+    have hWcap (p : ℕ × ℕ) : ‖W p‖≤2*M := by
+      calc
+        _ ≤ ∑ j∈Finset.range (L+1-p.1-p.2),
+            ‖(𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+p.1)/M)-
+              F (((a:ℝ)+j+p.2)/M)+F (((a:ℝ)+j+p.1+p.2)/M))):ℂ)‖ := norm_sum_le _ _
+        _ = (L+1-p.1-p.2:ℕ) := by simp
+        _ ≤ (L:ℝ)+1 := by exact_mod_cast (show L+1-p.1-p.2≤L+1 by omega)
+        _ ≤ 2*M := hLcap
+    have hCard : ((Finset.Ico k (2*k)).filter (fun l => l∈Products)).card≤k := by
+      calc
+        _ ≤ (Finset.Ico k (2*k)).card := Finset.card_filter_le _ _
+        _ = k := by rw [Nat.card_Ico]; omega
+    calc
+      _ ≤ ∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products), (2*M) :=
+        Finset.sum_le_sum (fun l _ => hWcap (pick l))
+      _ = (((Finset.Ico k (2*k)).filter (fun l => l∈Products)).card:ℝ)*(2*M) := by simp
+      _ ≤ (k:ℝ)*(2*M) := mul_le_mul_of_nonneg_right (by exact_mod_cast hCard) (by positivity)
+      _ = _ := by ring
+  have hweight : D*((H:ℝ)^3)^ε*(Nat.clog 2 (H^3):ℝ)≤U := by
+    dsimp only [U,Log]
+    gcongr
+    · exact le_max_right _ _
+    · linarith
+  have hraw :
+      (H:ℝ)^4*‖Expdb.exponentialSumAt F X M a (a+L)‖^4 ≤
+        1152*(H:ℝ)^2*M^4+1024*H*M^3*U*(2*M+Z) := by
+    calc
+      _ ≤ 8*(H:ℝ)^2*((L:ℝ)+1)^4+64*(H:ℝ)^2*((L:ℝ)+1)^4+
+          128*H*((L:ℝ)+1)^3*(D*((H:ℝ)^3)^ε*((Nat.clog 2 (H^3):ℝ)*((L:ℝ)+1+Z))) :=
+        hweyl
+      _ = 72*(H:ℝ)^2*((L:ℝ)+1)^4+
+          128*H*((L:ℝ)+1)^3*(D*((H:ℝ)^3)^ε*(Nat.clog 2 (H^3):ℝ))*((L:ℝ)+1+Z) := by ring
+      _ ≤ 72*(H:ℝ)^2*(2*M)^4+128*H*(2*M)^3*U*(2*M+Z) := by gcongr
+      _ = _ := by ring
+  have hDen : (H:ℝ)^2≤(H:ℝ)^3 := by
+    calc
+      _ = 1*(H:ℝ)^2 := (one_mul _).symm
+      _ ≤ (H:ℝ)*(H:ℝ)^2 := mul_le_mul_of_nonneg_right hH1 (sq_nonneg _)
+      _ = _ := by ring
+  have hRatio : M^4/(H:ℝ)^3≤M^4/(H:ℝ)^2 :=
+    div_le_div_of_nonneg_left (pow_nonneg hMp.le 4) (sq_pos_of_pos hHp) hDen
+  have hDiag0 : 0≤M^4/(H:ℝ)^2 := by positivity
+  have hCorr0 : 0≤(M^3/(H:ℝ)^3)*Z := mul_nonneg (by positivity) hZ
+  refine ⟨pick,k,hk,hkH,hpick,hZcap,?_⟩
+  calc
+    _ ≤ (1152*(H:ℝ)^2*M^4+1024*H*M^3*U*(2*M+Z))/(H:ℝ)^4 :=
+      (le_div_iff₀ (pow_pos hHp 4)).mpr ((mul_comm _ _).trans_le hraw)
+    _ = 1152*(M^4/(H:ℝ)^2)+2048*U*(M^4/(H:ℝ)^3)+
+        1024*U*((M^3/(H:ℝ)^3)*Z) := by field_simp; ring
+    _ ≤ 1152*(M^4/(H:ℝ)^2)+2048*U*(M^4/(H:ℝ)^2)+
+        1024*U*((M^3/(H:ℝ)^3)*Z) := by gcongr
+    _ ≤ 4096*U*(M^4/(H:ℝ)^2+(M^3/(H:ℝ)^3)*Z) := by
+      nlinarith only [hDiag0,hCorr0,
+        mul_le_mul_of_nonneg_right hU hDiag0,mul_nonneg (zero_le_one.trans hU) hCorr0]
+    _ = _ := by
+      dsimp only [A,U]
+      ring
+
+example
+    {ε : ℝ} (hε : 0<ε) :
+    ∃ A : ℝ, 1≤A ∧
+      ∀ (F : ℝ → ℝ) (σ X M : ℝ) (a L H : ℕ),
+        0<σ → 1≤X → 1≤M → 2≤H → H^2≤L+1 →
+        (H:ℝ)^3≤X → ((H:ℝ)+(H:ℝ)^2)/M≤1/4 →
+        M≤(a:ℝ) → ((a+L:ℕ):ℝ)≤2*M →
+        let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (H^2-1))
+        let Products := Pairs.image (fun p => p.1*p.2)
+        let W := fun p : ℕ × ℕ => ∑ j∈Finset.range (L+1-p.1-p.2),
+          (𝐞 (X*(F (((a:ℝ)+j)/M)-F (((a:ℝ)+j+p.1)/M)-
+            F (((a:ℝ)+j+p.2)/M)+F (((a:ℝ)+j+p.1+p.2)/M))):ℂ)
+        ∃ (pick : ℕ → ℕ × ℕ) (k : ℕ), 0<k ∧ 2*k≤H^3 ∧
+          (∀ l∈Products, pick l∈Pairs ∧ (pick l).1*(pick l).2=l ∧
+            ∀ p∈Pairs, p.1*p.2=l → ‖W p‖≤‖W (pick l)‖) ∧
+          (∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖)≤2*M*k ∧
+          ‖Expdb.exponentialSumAt F X M a (a+L)‖^4 ≤
+            A*X^ε*(1+(Nat.clog 2 (H^3):ℝ))*
+              (M^4/(H:ℝ)^2+(M^3/(H:ℝ)^3)*
+                (∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖)) := by
+  exact source_product_twice_weyl_normalized_block hε
+
+#print axioms source_product_twice_weyl_normalized_block
+
+/-- Combine the two-step fourth-power bound with the actual family's
+twelfth moment and its weighted physical monomials. These explicit
+upstream inequalities are consumed, not packaged as the final bound. -/
+private theorem double_difference_fourth_twelfth_moment_assembly
+    {S Z d w Main E V C X ε Q : ℝ}
+    (hS : 0≤S) (hZ : 0≤Z) (hd : 0≤d) (hw : 0≤w)
+    (hMain : 0≤Main) (hE : 0≤E) (hC : 1≤C) (hX : 1≤X)
+    (hε : 0≤ε) (hQ : 0≤Q)
+    (hWeyl : S^4≤Q*(d+w*Z))
+    (hMoment : Z^12≤C*X^ε*(Main+E^12))
+    (hWeighted : w^72*(E^72+Main^6)≤(2:ℝ)^288*V) :
+    S^288≤(2:ℝ)^364*Q^72*C^6*X^(6*ε)*(d^72+V) := by
+  have hXp := zero_lt_one.trans_le hX
+  have hC0 := zero_le_one.trans hC
+  have hPower : 1≤X^(6*ε) := Real.one_le_rpow hX (by positivity)
+  have hCoeff : 1≤(2:ℝ)^293*C^6*X^(6*ε) :=
+    one_le_mul_of_one_le_of_one_le
+      (one_le_mul_of_one_le_of_one_le (one_le_pow₀ (by norm_num : (1:ℝ)≤2))
+        (one_le_pow₀ hC)) hPower
+  have hZ72 : Z^72≤32*C^6*X^(6*ε)*(Main^6+E^72) := by
+    calc
+      _ = (Z^12)^6 := by rw [←pow_mul]
+      _ ≤ (C*X^ε*(Main+E^12))^6 :=
+        pow_le_pow_left₀ (pow_nonneg hZ 12) hMoment 6
+      _ = C^6*X^(6*ε)*(Main+E^12)^6 := by
+        rw [mul_pow,mul_pow]
+        have hp : (X^ε)^6=X^(6*ε) := by
+          simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le ε 6).symm
+        rw [hp]
+      _ ≤ C^6*X^(6*ε)*((2:ℝ)^5*(Main^6+(E^12)^6)) :=
+        mul_le_mul_of_nonneg_left (add_pow_le hMain (pow_nonneg hE 12) 6) (by positivity)
+      _ = _ := by rw [←pow_mul]; norm_num; ring
+  have hZweighted : w^72*Z^72≤(2:ℝ)^293*C^6*X^(6*ε)*V := by
+    calc
+      _ ≤ w^72*(32*C^6*X^(6*ε)*(Main^6+E^72)) :=
+        mul_le_mul_of_nonneg_left hZ72 (pow_nonneg hw 72)
+      _ = 32*C^6*X^(6*ε)*(w^72*(E^72+Main^6)) := by ring
+      _ ≤ 32*C^6*X^(6*ε)*((2:ℝ)^288*V) :=
+        mul_le_mul_of_nonneg_left hWeighted (by positivity)
+      _ = _ := by
+        rw [show (2:ℝ)^293=32*2^288 by
+          rw [show (293:ℕ)=5+288 by rfl,pow_add,show (2:ℝ)^5=32 by norm_num]]
+        have heq (a b c d : ℝ) : 32*a*b*(c*d)=(32*c)*a*b*d := by ring
+        exact heq _ _ _ _
+  have hDiag : d^72≤(2:ℝ)^293*C^6*X^(6*ε)*d^72 :=
+    le_mul_of_one_le_left (pow_nonneg hd 72) hCoeff
+  calc
+    _ = (S^4)^72 := by rw [←pow_mul]
+    _ ≤ (Q*(d+w*Z))^72 := pow_le_pow_left₀ (pow_nonneg hS 4) hWeyl 72
+    _ = Q^72*(d+w*Z)^72 := mul_pow _ _ _
+    _ ≤ Q^72*((2:ℝ)^71*(d^72+(w*Z)^72)) :=
+      mul_le_mul_of_nonneg_left (add_pow_le hd (mul_nonneg hw hZ) 72) (pow_nonneg hQ 72)
+    _ = (2:ℝ)^71*Q^72*(d^72+w^72*Z^72) := by
+      rw [mul_pow]
+      exact (mul_left_comm _ _ _).trans (mul_assoc _ _ _).symm
+    _ ≤ (2:ℝ)^71*Q^72*((2:ℝ)^293*C^6*X^(6*ε)*d^72+
+        (2:ℝ)^293*C^6*X^(6*ε)*V) :=
+      mul_le_mul_of_nonneg_left (add_le_add hDiag hZweighted)
+        (mul_nonneg (pow_nonneg (by norm_num : (0:ℝ)≤2) 71) (pow_nonneg hQ 72))
+    _ = _ := by
+      rw [show (2:ℝ)^364=2^71*2^293 by rw [←pow_add]]
+      have heq (a b c d e f g : ℝ) :
+          a*b*(c*d*e*f+c*d*e*g)=(a*c)*b*d*e*(f+g) := by ring
+      exact heq _ _ _ _ _ _ _
+
+example
+    {S Z d w Main E V C X ε Q : ℝ}
+    (hS : 0≤S) (hZ : 0≤Z) (hd : 0≤d) (hw : 0≤w)
+    (hMain : 0≤Main) (hE : 0≤E) (hC : 1≤C) (hX : 1≤X)
+    (hε : 0≤ε) (hQ : 0≤Q)
+    (hWeyl : S^4≤Q*(d+w*Z))
+    (hMoment : Z^12≤C*X^ε*(Main+E^12))
+    (hWeighted : w^72*(E^72+Main^6)≤(2:ℝ)^288*V) :
+    S^288≤(2:ℝ)^364*Q^72*C^6*X^(6*ε)*(d^72+V) := by
+  exact double_difference_fourth_twelfth_moment_assembly hS hZ hd hw hMain hE hC hX hε hQ
+    hWeyl hMoment hWeighted
+
+#print axioms double_difference_fourth_twelfth_moment_assembly
+
+private theorem middleOriginal_eventually_uniform_clog_power_loss_72
+    {C ζ : ℝ} (hC : 0≤C) (hζ : 0<ζ) :
+    ∀ᶠ X : ℝ in Filter.atTop, ∀ H : ℕ, 2≤H → (H:ℝ)≤X →
+      C*(1+(Nat.clog 2 H:ℝ))^72≤X^ζ := by
+  have hlog2 : 0<Real.log 2 := Real.log_pos (by norm_num)
+  let D := 1+2/Real.log 2
+  have hD : 0≤D := by dsimp only [D]; positivity
+  have hLoss := eventually_const_log_pow_le_rpow
+    (C*D^72) (mul_nonneg hC (pow_nonneg hD 72)) 72 hζ
+  filter_upwards [hLoss,Real.tendsto_log_atTop.eventually_ge_atTop 1,
+    Filter.eventually_ge_atTop (1:ℝ)] with X hLossX hlogX hX
+  intro H hH hHX
+  have hHp : (0:ℝ)<H := by exact_mod_cast (show 0<H by omega)
+  have hlogHX := Real.log_le_log hHp hHX
+  have hc : (Nat.clog 2 H:ℝ)≤(2/Real.log 2)*Real.log X := by
+    calc
+      _ ≤ 2*(Real.log H/Real.log 2) := nat_clog_two_le_twice_log H hH
+      _ ≤ 2*(Real.log X/Real.log 2) := mul_le_mul_of_nonneg_left
+        (div_le_div_of_nonneg_right hlogHX hlog2.le) (by norm_num)
+      _ = _ := by ring
+  have hplus : 1+(Nat.clog 2 H:ℝ)≤D*Real.log X := by
+    dsimp only [D]
+    nlinarith only [hc,hlogX]
+  calc
+    _ ≤ C*(D*Real.log X)^72 := mul_le_mul_of_nonneg_left
+      (pow_le_pow_left₀ (by positivity) hplus 72) hC
+    _ = (C*D^72)*(Real.log X)^72 := by rw [mul_pow,mul_assoc]
+    _ ≤ X^ζ := hLossX
+
+example
+    {C ζ : ℝ} (hC : 0≤C) (hζ : 0<ζ) :
+    ∀ᶠ X : ℝ in Filter.atTop, ∀ H : ℕ, 2≤H → (H:ℝ)≤X →
+      C*(1+(Nat.clog 2 H:ℝ))^72≤X^ζ := by
+  exact middleOriginal_eventually_uniform_clog_power_loss_72 hC hζ
+
+#print axioms middleOriginal_eventually_uniform_clog_power_loss_72
+
+open scoped NNReal
+
+/-- The original approximate-model sum on the fourth-pair supporting-line
+interval, with a genuine two-sided M window, all selected product blocks,
+the sharp extension loss and every source logarithm discharged. -/
+private theorem fourth_pair_capped_short_nonAsymptotic
+    {α : ℝ≥0} {t : ℝ} (ht : t∈Icc (0:ℝ) 1)
+    (hα : (α:ℝ)=(1-t)*(890/3277)+t*(17604372/60424193)) :
+    Expdb.IsExponentSumBoundNonAsymptotic α (89/3478+(7441/8695)*(α:ℝ)) := by
+  let h := ((1-t)*2749411+t*3296917)/100000000
+  let g₀ := ((1-t)*16756+t*1976824)/100000000
+  let ν₀ := ((1-t)*11931645+t*14567321)/100000000
+  let ν₁ := ((1-t)*11969967+t*14925729)/100000000
+  let g := fun u : ℝ => (1-u)*g₀+u*(3*h)
+  let ν := fun u : ℝ => (1-u)*ν₀+u*ν₁
+  let β := 89/3478+(7441/8695)*(α:ℝ)
+  let δw := (1:ℝ)/10000000000
+  let ℓ := (α:ℝ)-δw
+  let v := (α:ℝ)+δw
+  let μ := (1:ℝ)/1000000
+  let εs := μ/1000
+  let ζ := μ/2
+  let ξ := 288*β-μ
+  have hμ : 0<μ := by norm_num [μ]
+  have hεs : 0<εs := by dsimp only [εs]; positivity
+  have hζ : 0<ζ := by dsimp only [ζ]; positivity
+  have hδw : 0<δw := by norm_num [δw]
+  have hMargins (u : ℝ) (hu : u∈Icc (0:ℝ) 1) :
+      μ≤ℓ ∧
+        v+μ≤1 ∧
+        μ≤h ∧
+        μ≤(ν u) ∧
+        μ≤g₀ ∧
+        5*h+μ≤ℓ ∧
+        g₀+μ≤3*h ∧
+        (ν u)+μ≤ℓ ∧
+        5*v-1-(g u)+μ≤3*(ν u) ∧
+        1+(g u)+2*(ν u)+μ≤5*ℓ ∧
+        4*(ν u)+1+(g u)+μ≤6*ℓ ∧
+        (ν u)+3*v+μ≤1+(g u) ∧
+        1+(g u)+μ≤4*ℓ ∧
+        3*v+μ≤1+(g u) ∧
+        7*v+μ≤2+2*(g u)+(ν u) ∧
+        7+7*(g u)+27*(ν u)+μ≤41*ℓ ∧
+        2*h+μ≤β ∧
+        4*v+g₀-3*h+μ≤4*β ∧
+        288*v-144*h+μ≤288*β ∧
+        288*v-36*(ν u)+72*(g u)-216*h+μ≤288*β ∧
+        648*v-72-216*h-216*(ν u)+μ≤288*β ∧
+        24+96*(g u)-216*h+96*v+144*(ν u)+μ≤288*β ∧
+        21+87*(g u)-216*h+177*v+33*(ν u)+μ≤288*β ∧
+        15+87*(g u)-216*h+207*v+15*(ν u)+μ≤288*β ∧
+        12+78*(g u)-216*h+216*v+24*(ν u)+μ≤288*β ∧
+        6+78*(g u)-216*h+246*v+6*(ν u)+μ≤288*β ∧
+        72*(g u)-216*h+284*v-24*(ν u)+μ≤288*β ∧
+        504*v-72-216*h+72*(ν u)+μ≤288*β := by
+    have hh := fourth_pair_capped_full_window_margins ht hu
+    dsimp only at hh
+    rw [←hα] at hh
+    exact hh
+  have hzero := hMargins 0 (by norm_num)
+  simp only [g,ν,sub_zero,zero_mul,one_mul,add_zero] at hzero
+  obtain ⟨hμℓ,hv,hμh,hμν₀,hμg₀,hWidth,hg₀h,hν₀M,hRN₀,hNR₀,hCubic₀,hCap₀,
+    hHeight₀,hMT₀,hRT₀,hTen₀,hShort,hSmall,hDiag,hSqrt₀,hSecond₀,hFourth₀,
+    hSecondMain₀,hFourthMain₀,hFirstMain₀,hThirdMain₀,hFifthMain₀,hThird₀⟩ := hzero
+  have hℓv : ℓ≤v := by dsimp only [ℓ,v]; linarith only [hδw]
+  have hhp := hμ.trans_le hμh
+  have hℓp := hμ.trans_le hμℓ
+  have hg₀p := hμ.trans_le hμg₀
+  have hβ : 0<β := by linarith only [hShort,hhp,hμ]
+  have hξ : 0≤ξ := by dsimp only [ξ]; linarith only [hShort,hhp,hμ]
+  have hh3 : 3*h≤1 := by linarith only [hWidth,hℓv,hv,hhp,hμ]
+  intro ε hε σ hσ
+  obtain ⟨δsrc,w₀,B,Csrc,hδsrc,hw₀,hw₀cap,hB,hCsrc,hSource⟩ :=
+    approximateModelPhase_enlarged_double_product_correlation_moment hσ hεs
+  obtain ⟨A,hA,hWeylSource⟩ := source_product_twice_weyl_normalized_block hεs
+  let Clarge := (2:ℝ)^364*A^72*Csrc^6*(11*2^432)
+  let Csmall := (20*A)^72
+  let D := 1+Clarge+Csmall
+  let Ctotal := (2:ℝ)^287*((6:ℝ)^288+D)
+  have hA0 := zero_le_one.trans hA
+  have hCsrc0 := zero_le_one.trans hCsrc
+  have hClarge : 0≤Clarge := by
+    dsimp only [Clarge]
+    clear * - hA0 hCsrc0
+    positivity
+  have hCsmall : 0≤Csmall := by
+    dsimp only [Csmall]
+    clear * - hA0
+    positivity
+  have hD : 1≤D := (le_add_of_nonneg_right hClarge).trans (le_add_of_nonneg_right hCsmall)
+  have hLargeD : Clarge≤D :=
+    (le_add_of_nonneg_left (by norm_num : (0:ℝ)≤1)).trans (le_add_of_nonneg_right hCsmall)
+  have hSmallD : Csmall≤D := le_add_of_nonneg_left (add_nonneg zero_le_one hClarge)
+  have hCtotal : 0≤Ctotal := by
+    dsimp only [Ctotal]
+    exact mul_nonneg (pow_nonneg (by norm_num : (0:ℝ)≤2) 287)
+      (add_nonneg (pow_nonneg (by norm_num : (0:ℝ)≤6) 288) (zero_le_one.trans hD))
+  have hPhys := eventually_double_difference_capped_physical_window
+    hB hCsrc hw₀ hμ hμℓ hℓv hμh hWidth
+  have hLog := middleOriginal_eventually_uniform_clog_power_loss_72 hCtotal hζ
+  obtain ⟨X₀,hX₀⟩ := Filter.eventually_atTop.mp (hPhys.and hLog)
+  let δ := min δsrc δw
+  let C := max 1 X₀
+  have hC : 1≤C := le_max_left _ _
+  refine ⟨δ,lt_min hδsrc hδw,7,by norm_num,C,hC,?_⟩
+  intro X M F a b setup
+  have hTogether := hX₀ X ((le_max_right 1 X₀).trans setup.threshold_le_param)
+  have hX2 := hTogether.1.1
+  have hX : 1≤X := (by norm_num : (1:ℝ)≤2).trans hX2
+  have hXp := zero_lt_one.trans_le hX
+  have hMl : X^ℓ≤M :=
+    (Real.rpow_le_rpow_of_exponent_le hX
+      (sub_le_sub_left (min_le_right δsrc δw) _)).trans setup.rpow_sub_le_scale
+  have hMu : M≤X^v := setup.scale_le_rpow_add.trans
+    (Real.rpow_le_rpow_of_exponent_le hX (add_le_add le_rfl (min_le_right δsrc δw)))
+  have hF := approximateModelPhase_mono setup.isApproximateModelPhase le_rfl (min_le_left δsrc δw)
+  have hBasePhys := hTogether.1.2 M (X^g₀) g₀ ν₀ hMl hMu rfl hg₀p.le
+    (by linarith only [hg₀h,hμ]) hμν₀ hν₀M hRN₀ hNR₀ hCubic₀ hCap₀ hHeight₀ hMT₀ hRT₀ hTen₀
+  let H := ⌊X^h⌋₊
+  obtain ⟨hM,hN₀2,hH2,hN₀l,hN₀u,hHl,hHu,hJ₀,hR₀,hscale₀,hThreshold₀,hW,
+    hJ₀M,hWJ₀,hR₀B,hR₀N,hN₀R,hN₀M,hCubicBudget₀,hCapBudget₀,hHeightBudget₀,
+    hMTBudget₀,hRTBudget₀,hTenBudget₀⟩ := hBasePhys
+  have hMp := zero_lt_one.trans_le hM
+  have hHp : (0:ℝ)<H := by exact_mod_cast (show 0<H by omega)
+  have hH1 : (1:ℝ)≤H := by exact_mod_cast (show 1≤H by omega)
+  have hHcube : (H:ℝ)^3≤X := by
+    calc
+      _ ≤ (X^h)^3 := pow_le_pow_left₀ hHp.le hHu 3
+      _ = X^(3*h) := by
+        simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le h 3).symm
+      _ ≤ X := by simpa only [Real.rpow_one] using Real.rpow_le_rpow_of_exponent_le hX hh3
+  suffices hResult : ‖Expdb.exponentialSumAt F X M a b‖≤X^β by
+    calc
+      _ ≤ X^β := hResult
+      _ ≤ X^(β+ε) := Real.rpow_le_rpow_of_exponent_le hX (le_add_of_nonneg_right hε.le)
+      _ ≤ C*X^(β+ε) := le_mul_of_one_le_left (Real.rpow_nonneg hXp.le _) hC
+  by_cases hba : b<a
+  · rw [Expdb.exponentialSumAt_of_lt hba,norm_zero]
+    exact Real.rpow_nonneg hXp.le _
+  have hab : a≤b := Nat.le_of_not_gt hba
+  let L := b-a
+  have hEnd : a+L=b := Nat.add_sub_of_le hab
+  have ha := setup.scale_le_start
+  have hb : ((a+L:ℕ):ℝ)≤2*M := by rw [hEnd]; exact setup.end_le_two_mul_scale
+  by_cases hShortL : L+1<H^2
+  · calc
+      _ ≤ ((Finset.Icc a b).card:ℝ) := Expdb.norm_exponentialSumAt_le_card F X M a b
+      _ = (L:ℝ)+1 := by
+        have hc : (Finset.Icc a b).card=L+1 := by rw [Nat.card_Icc]; dsimp only [L]; omega
+        exact_mod_cast hc
+      _ ≤ (H:ℝ)^2 := by exact_mod_cast hShortL.le
+      _ ≤ (X^h)^2 := pow_le_pow_left₀ hHp.le hHu 2
+      _ = X^(2*h) := by
+        simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le h 2).symm
+      _ ≤ X^β := Real.rpow_le_rpow_of_exponent_le hX (by linarith only [hShort,hμ])
+  have hLong : H^2≤L+1 := Nat.le_of_not_gt hShortL
+  obtain ⟨Fext,hSharp,hFamily⟩ := hSource M F hM hF
+  obtain ⟨pick,k,hk,hkH,hpick,hZcap,hWeyl⟩ :=
+    hWeylSource Fext σ X M a L H hσ hX hM hH2 hLong hHcube (hW.trans hw₀cap) ha hb
+  let J := (k:ℝ)
+  let Pairs := (Finset.Icc 1 (H-1)) ×ˢ (Finset.Icc 1 (H^2-1))
+  let Products := Pairs.image (fun p => p.1*p.2)
+  let W := fun p : ℕ × ℕ => ∑ j∈Finset.range (L+1-p.1-p.2),
+    (𝐞 (X*(Fext (((a:ℝ)+j)/M)-Fext (((a:ℝ)+j+p.1)/M)-
+      Fext (((a:ℝ)+j+p.2)/M)+Fext (((a:ℝ)+j+p.1+p.2)/M))):ℂ)
+  let Z := ∑ l∈(Finset.Ico k (2*k)).filter (fun l => l∈Products),‖W (pick l)‖
+  let Log := 1+(Nat.clog 2 (H^3):ℝ)
+  have hZ0 : 0≤Z := Finset.sum_nonneg (fun _ _ => norm_nonneg _)
+  have hLog1 : 1≤Log := le_add_of_nonneg_right (Nat.cast_nonneg _)
+  have hLog0 := zero_le_one.trans hLog1
+  have hLog72 : 1≤Log^72 := one_le_pow₀ hLog1
+  have hJp : 0<J := by change (0:ℝ)<k; exact_mod_cast hk
+  have hJH : J≤(H:ℝ)^3 := by
+    change (k:ℝ)≤(H:ℝ)^3
+    exact_mod_cast (show k≤H^3 by omega)
+  have hQ : 0≤A*X^εs*Log :=
+    mul_nonneg (mul_nonneg hA0 (Real.rpow_nonneg hXp.le _)) hLog0
+  have hξPower : 1≤X^ξ := Real.one_le_rpow hX hξ
+  have hLossPower : 1≤X^(78*εs) := Real.one_le_rpow hX (by positivity)
+  have hCommon :
+      ‖Expdb.exponentialSumAt Fext X M a (a+L)‖^288 ≤ D*Log^72*X^(78*εs)*X^ξ := by
+    by_cases hSmallJ : J≤X^g₀
+    · have hdPower : M^4/(H:ℝ)^2≤4*X^(ξ/72) := by
+        have hh := double_difference_monomial_power_window hX hMl hMu hN₀l hN₀u hHl
+          (rfl : X^g₀=X^g₀) 0 0 4 0 0 2 0 0 0
+        norm_num only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,pow_one,zero_mul,one_mul,
+          mul_one,zero_add,add_zero,sub_zero] at hh
+        have hexp : 4*v-2*h≤ξ/72 := by
+          apply (le_div_iff₀ (by norm_num : (0:ℝ)<72)).mpr
+          calc
+            (4*v-2*h)*72 = 288*v-144*h := by ring
+            _ ≤ 288*β-μ := (le_sub_iff_add_le).mpr hDiag
+        exact hh.trans (mul_le_mul_of_nonneg_left
+          (Real.rpow_le_rpow_of_exponent_le hX hexp)
+          (by norm_num))
+      have hSmallPower : M^4*J/(H:ℝ)^3≤8*X^(ξ/72) := by
+        have hh := double_difference_monomial_power_window hX hMl hMu hN₀l hN₀u hHl
+          (rfl : X^g₀=X^g₀) 0 1 4 0 0 3 0 0 0
+        norm_num only [Nat.cast_zero,Nat.cast_ofNat,pow_zero,pow_one,zero_mul,one_mul,
+          mul_one,zero_add,add_zero,sub_zero] at hh
+        calc
+          _ ≤ M^4*(X^g₀)/(H:ℝ)^3 := by gcongr
+          _ = (X^g₀)*M^4/(H:ℝ)^3 := by rw [mul_comm (M^4)]
+          _ ≤ 8*X^(g₀+4*v-3*h) := hh
+          _ ≤ 8*X^(ξ/72) := mul_le_mul_of_nonneg_left
+            (Real.rpow_le_rpow_of_exponent_le hX (by
+              apply (le_div_iff₀ (by norm_num : (0:ℝ)<72)).mpr
+              calc
+                (g₀+4*v-3*h)*72 = (4*v+g₀-3*h)*72 := by ring
+                _ ≤ (4*β-μ)*72 := mul_le_mul_of_nonneg_right
+                  ((le_sub_iff_add_le).mpr hSmall) (by norm_num)
+                _ ≤ 288*β-μ := by nlinarith only [hμ])) (by norm_num)
+      have hCorr : (M^3/(H:ℝ)^3)*Z≤16*X^(ξ/72) := by
+        calc
+          _ ≤ (M^3/(H:ℝ)^3)*(2*M*J) := mul_le_mul_of_nonneg_left hZcap (by positivity)
+          _ = 2*(M^4*J/(H:ℝ)^3) := by ring
+          _ ≤ 2*(8*X^(ξ/72)) := mul_le_mul_of_nonneg_left hSmallPower (by norm_num)
+          _ = _ := by ring
+      have hFourth :
+          ‖Expdb.exponentialSumAt Fext X M a (a+L)‖^4≤
+            (20*A)*Log*X^εs*X^(ξ/72) := by
+        calc
+          _ ≤ A*X^εs*Log*(M^4/(H:ℝ)^2+(M^3/(H:ℝ)^3)*Z) := hWeyl
+          _ ≤ A*X^εs*Log*(4*X^(ξ/72)+16*X^(ξ/72)) :=
+            mul_le_mul_of_nonneg_left (add_le_add hdPower hCorr) hQ
+          _ = _ := by ring
+      have hpε : (X^εs)^72=X^(72*εs) := by
+        simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le εs 72).symm
+      have hpξ : (X^(ξ/72))^72=X^ξ := by
+        have hh := (Real.rpow_mul_natCast hXp.le (ξ/72) 72).symm
+        norm_num only [Nat.cast_ofNat,div_mul_cancel₀ _ (by norm_num : (72:ℝ)≠0)] at hh
+        exact hh
+      calc
+        _ = (‖Expdb.exponentialSumAt Fext X M a (a+L)‖^4)^72 := by rw [←pow_mul]
+        _ ≤ ((20*A)*Log*X^εs*X^(ξ/72))^72 :=
+          pow_le_pow_left₀ (pow_nonneg (norm_nonneg _) 4) hFourth 72
+        _ = Csmall*Log^72*X^(72*εs)*X^ξ := by
+          simp only [mul_pow,hpε,hpξ,Csmall]
+        _ ≤ D*Log^72*X^(78*εs)*X^ξ := by
+          gcongr
+          norm_num
+    · let γ := Real.logb X J
+      have hXgt : 1<X := by linarith only [hX2]
+      have hJpow : J=X^γ := (Real.rpow_logb hXp hXgt.ne' hJp).symm
+      have hγlo : g₀≤γ :=
+        (Real.le_logb_iff_rpow_le hXgt hJp).mpr (le_of_not_ge hSmallJ)
+      have hγhi : γ≤3*h := by
+        apply (Real.logb_le_iff_le_rpow hXgt hJp).mpr
+        calc
+          J ≤ (H:ℝ)^3 := hJH
+          _ ≤ (X^h)^3 := pow_le_pow_left₀ hHp.le hHu 3
+          _ = X^(3*h) := by
+            simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le h 3).symm
+      have hDen : 0<3*h-g₀ := by linarith only [hg₀h,hμ]
+      let u := (γ-g₀)/(3*h-g₀)
+      have hu : u∈Icc (0:ℝ) 1 := by
+        refine ⟨div_nonneg (sub_nonneg.mpr hγlo) hDen.le,?_⟩
+        exact (div_le_one hDen).mpr (by linarith only [hγhi])
+      have hgu : g u=γ := by
+        dsimp only [g,u]
+        field_simp
+        ring
+      have hm := hMargins u hu
+      rw [hgu] at hm
+      obtain ⟨_,_,_,hμν,_,_,_,hνM,hRN,hNR,hCubic,hCap,hHeight,hMT,hRT,hTen,
+        _,_,hDiag',hSqrt,hSecond,hFourth,hSecondMain,hFourthMain,hFirstMain,hThirdMain,hFifthMain,hThird⟩ := hm
+      let n := ⌊X^(ν u)/8⌋₊
+      let N := 8*n
+      let R := Real.sqrt (M^5/(X*J*(N:ℝ)))
+      let T := X*J/M^2
+      have hPhysical := hTogether.1.2 M J γ (ν u) hMl hMu hJpow
+        (hg₀p.le.trans hγlo) hγhi hμν hνM hRN hNR hCubic hCap hHeight hMT hRT hTen
+      obtain ⟨_,hN2,_,hNl,hNu,_,_,hJ1,hRp,hscale,hThreshold,hWidthJ,hJM,hWJ,
+        hBR,hRNbudget,hNRbudget,hNMbudget,hCubicBudget,hCapBudget,hHeightBudget,
+        hMTbudget,hRTbudget,hTenBudget⟩ := hPhysical
+      have hNp : (0:ℝ)<N := by exact_mod_cast (show 0<N by omega)
+      have hTp : 0<T := by dsimp only [T]; positivity
+      have hTX : T≤X := by
+        apply (div_le_iff₀ (sq_pos_of_pos hMp)).mpr
+        have hJM2 : J≤M^2 := hJM.trans (by nlinarith only [hM])
+        nlinarith only [mul_le_mul_of_nonneg_left hJM2 hXp.le]
+      let E := J*M/Real.sqrt (N:ℝ)+J*M*R^2/(N:ℝ)^2+J*(N:ℝ)^2*R^2/M+
+        J*(N:ℝ)*((N:ℝ)/R)^((2:ℝ)/3)
+      let Main := J^11*M^10*(N:ℝ)^2/R^4+J^11*M^11*(N:ℝ)^2/R^7+
+        J^11*J*M^10/R^2+J^11*J*M^11/R^5+
+        J^12*M^10*R^2/(N:ℝ)^2*(R/(N:ℝ))^((2:ℝ)/3)*((X*J/M^2)/M^2)^((4:ℝ)/3)
+      let V :=
+        (J^72*M^288/((H:ℝ)^216*(N:ℝ)^36)+M^648/(X^72*(H:ℝ)^216*(N:ℝ)^216)+
+          M^504*(N:ℝ)^72/(X^72*(H:ℝ)^216)+X^24*J^96*M^96*(N:ℝ)^144/(H:ℝ)^216)+
+        (X^12*J^78*M^216*(N:ℝ)^24/(H:ℝ)^216+X^21*J^87*M^177*(N:ℝ)^33/(H:ℝ)^216+
+          X^6*J^78*M^246*(N:ℝ)^6/(H:ℝ)^216+X^15*J^87*M^207*(N:ℝ)^15/(H:ℝ)^216+
+          J^72*M^284/((H:ℝ)^216*(N:ℝ)^24))
+      have hE0 : 0≤E := by
+        dsimp only [E]
+        clear * - hJp hMp hNp hRp
+        positivity
+      have hMain0 : 0≤Main := by
+        dsimp only [Main]
+        clear * - hJp hMp hNp hRp hXp
+        positivity
+      have hFamilyMoment : Z^12≤Csrc*T^εs*(Main+E^12) := by
+        exact hFamily X n N a L H (H^2) k R hThreshold rfl hN2 hBR hk
+          (by simpa only [Nat.cast_pow] using hWidthJ) hJM
+          (by simpa only [Nat.cast_pow] using hWJ) ha hb hscale
+          hRNbudget hNRbudget hNMbudget hCubicBudget hCapBudget hHeightBudget
+          hMTbudget hRTbudget hTenBudget pick (fun l hl => ⟨(hpick l hl).1,(hpick l hl).2.1⟩)
+      have hMoment : Z^12≤Csrc*X^εs*(Main+E^12) := hFamilyMoment.trans
+        (mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_left (Real.rpow_le_rpow hTp.le hTX hεs.le) hCsrc0)
+          (add_nonneg hMain0 (pow_nonneg hE0 12)))
+      have hWeighted : (M^3/(H:ℝ)^3)^72*(E^72+Main^6)≤(2:ℝ)^288*V :=
+        double_difference_weighted_capped_integer_moments hXp hMp hNp hJp hHp hRp hscale
+      have hPower := double_difference_fourth_twelfth_moment_assembly
+        (norm_nonneg _) hZ0 (div_nonneg (pow_nonneg hMp.le 4) (pow_nonneg hHp.le 2))
+        (div_nonneg (pow_nonneg hMp.le 3) (pow_nonneg hHp.le 3)) hMain0 hE0 hCsrc hX hεs.le hQ
+        hWeyl hMoment hWeighted
+      have hPoly : 1+(M^288/(H:ℝ)^144+V)≤(11*(2:ℝ)^432)*X^ξ :=
+        double_difference_ten_monomials_power_window hX hξ hMl hMu hNl hNu hHl hJpow
+          (by dsimp only [ξ]; linarith only [hDiag'])
+          (by dsimp only [ξ]; linarith only [hSqrt])
+          (by dsimp only [ξ]; linarith only [hSecond])
+          (by dsimp only [ξ]; linarith only [hThird])
+          (by dsimp only [ξ]; linarith only [hFourth])
+          (by dsimp only [ξ]; linarith only [hFirstMain])
+          (by dsimp only [ξ]; linarith only [hSecondMain])
+          (by dsimp only [ξ]; linarith only [hThirdMain])
+          (by dsimp only [ξ]; linarith only [hFourthMain])
+          (by dsimp only [ξ]; linarith only [hFifthMain])
+      have hPoly' : M^288/(H:ℝ)^144+V≤(11*(2:ℝ)^432)*X^ξ :=
+        (le_add_of_nonneg_left (by norm_num : (0:ℝ)≤1)).trans hPoly
+      have hPowers :
+          (2:ℝ)^364*(A*X^εs*Log)^72*Csrc^6*X^(6*εs)*
+              ((M^4/(H:ℝ)^2)^72+V)=
+            ((2:ℝ)^364*A^72*Csrc^6)*Log^72*X^(78*εs)*(M^288/(H:ℝ)^144+V) := by
+        simp only [mul_pow,div_pow,←pow_mul]
+        have hεpower : (X^εs)^72=X^(72*εs) := by
+          simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le εs 72).symm
+        rw [hεpower]
+        have hcombine : X^(72*εs)*X^(6*εs)=X^(78*εs) := by
+          rw [←Real.rpow_add hXp]
+          congr 1
+          ring
+        have heq (a b c d e f z : ℝ) : a*(b*c*d)*e*f*z=(a*b*e)*d*(c*f)*z := by ring
+        rw [heq,hcombine]
+      calc
+        _ ≤ ((2:ℝ)^364*A^72*Csrc^6)*Log^72*X^(78*εs)*(M^288/(H:ℝ)^144+V) :=
+          hPower.trans_eq hPowers
+        _ ≤ ((2:ℝ)^364*A^72*Csrc^6)*Log^72*X^(78*εs)*((11*(2:ℝ)^432)*X^ξ) :=
+          mul_le_mul_of_nonneg_left hPoly' (by
+            clear * - hA0 hCsrc0 hLog0 hXp
+            positivity)
+        _ = Clarge*Log^72*X^(78*εs)*X^ξ := by
+          dsimp only [Clarge]
+          have heq (a b c d e f z : ℝ) : (a*b*c)*d*e*(f*z)=(a*b*c*f)*d*e*z := by ring
+          exact heq _ _ _ _ _ _ _
+        _ ≤ D*Log^72*X^(78*εs)*X^ξ := by gcongr
+  have hSharp' := hSharp X a (a+L) ha hb
+  have hOriginal : ‖Expdb.exponentialSumAt F X M a (a+L)‖≤
+      6+‖Expdb.exponentialSumAt Fext X M a (a+L)‖ :=
+    (norm_le_norm_sub_add _ _).trans (add_le_add hSharp' le_rfl)
+  have hY : 1≤Log^72*X^(78*εs)*X^ξ :=
+    one_le_mul_of_one_le_of_one_le
+      (one_le_mul_of_one_le_of_one_le hLog72 hLossPower) hξPower
+  have hSix : (6:ℝ)^288≤(6:ℝ)^288*(Log^72*X^(78*εs)*X^ξ) :=
+    le_mul_of_one_le_right (pow_nonneg (by norm_num : (0:ℝ)≤6) 288) hY
+  have hFinalPower : ‖Expdb.exponentialSumAt F X M a (a+L)‖^288≤X^(288*β) := by
+    have hLogLoss : Ctotal*Log^72≤X^ζ :=
+      hTogether.2 (H^3)
+        ((by norm_num : (2:ℕ)≤2^3).trans (Nat.pow_le_pow_left (show 2≤H from hH2) 3))
+        (by exact_mod_cast hHcube)
+    calc
+      _ ≤ (6+‖Expdb.exponentialSumAt Fext X M a (a+L)‖)^288 :=
+        pow_le_pow_left₀ (norm_nonneg _) hOriginal 288
+      _ ≤ (2:ℝ)^287*((6:ℝ)^288+‖Expdb.exponentialSumAt Fext X M a (a+L)‖^288) :=
+        add_pow_le (by norm_num : (0:ℝ)≤6) (norm_nonneg _) 288
+      _ ≤ (2:ℝ)^287*((6:ℝ)^288*(Log^72*X^(78*εs)*X^ξ)+
+          D*Log^72*X^(78*εs)*X^ξ) :=
+        mul_le_mul_of_nonneg_left (add_le_add hSix hCommon)
+          (pow_nonneg (by norm_num : (0:ℝ)≤2) 287)
+      _ = (Ctotal*Log^72)*X^(78*εs)*X^ξ := by
+        dsimp only [Ctotal]
+        have heq (a b c d e f : ℝ) : a*(b*(d*e*f)+c*d*e*f)=((a*(b+c))*d)*e*f := by ring
+        exact heq _ _ _ _ _ _
+      _ ≤ X^ζ*X^(78*εs)*X^ξ :=
+        mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_right hLogLoss (Real.rpow_nonneg hXp.le _))
+          (Real.rpow_nonneg hXp.le _)
+      _ = X^(ζ+78*εs+ξ) := by rw [←Real.rpow_add hXp,←Real.rpow_add hXp]
+      _ ≤ X^(288*β) := Real.rpow_le_rpow_of_exponent_le hX (by
+        dsimp only [ζ,εs,ξ]
+        linarith only [hμ])
+  have hRootPower : (X^β)^288=X^(288*β) := by
+    simpa only [Nat.cast_ofNat,mul_comm] using (Real.rpow_mul_natCast hXp.le β 288).symm
+  rw [←hEnd]
+  exact le_of_pow_le_pow_left₀ (by norm_num : (288:ℕ)≠0)
+    (Real.rpow_nonneg hXp.le _) (hFinalPower.trans_eq hRootPower.symm)
+
+example
+    {α : ℝ≥0} {t : ℝ} (ht : t∈Icc (0:ℝ) 1)
+    (hα : (α:ℝ)=(1-t)*(890/3277)+t*(17604372/60424193)) :
+    Expdb.IsExponentSumBoundNonAsymptotic α (89/3478+(7441/8695)*(α:ℝ)) := by
+  exact fourth_pair_capped_short_nonAsymptotic ht hα
+
+#print axioms fourth_pair_capped_short_nonAsymptotic
+
+/-- Closed half-interval coverage for the fourth pair, reusing the native
+Heath--Brown derivative bounds and the already proved sixth row outside
+the actual double-shift short-range interval. -/
+private theorem fourth_pair_full_half_beta
+    {α : ℝ≥0} (hhalf : (α:ℝ)≤1/2) :
+    Expdb.exponentSumGrowthExponent α≤89/3478+(7441/8695)*(α:ℝ) := by
+  by_cases hpos : 0<(α:ℝ)
+  swap
+  · have hz : α=0 := NNReal.coe_injective (le_antisymm (le_of_not_gt hpos) α.coe_nonneg)
+    subst α
+    rw [exponentSumGrowthExponent_zero]
+    norm_num
+  by_cases h7 : (α:ℝ)≤1/6
+  · have hh := exponentSumGrowthExponent_le_heathBrown_of_derivative
+      GafniTao.heathBrownKthDerivativeTheorem_native (by norm_num : 3≤(7:ℕ)) hpos
+    apply hh.trans
+    rw [heathBrownBetaBound_eq_max (by norm_num : 3≤(7:ℕ))]
+    norm_num [heathBrownDerivativeExponent,heathBrownInverseExponent]
+    refine ⟨?_,?_,?_⟩ <;> linarith only [h7,α.coe_nonneg]
+  by_cases h6 : (α:ℝ)≤3/13
+  · have hh := exponentSumGrowthExponent_le_heathBrown_of_derivative
+      GafniTao.heathBrownKthDerivativeTheorem_native (by norm_num : 3≤(6:ℕ)) hpos
+    apply hh.trans
+    rw [heathBrownBetaBound_eq_max (by norm_num : 3≤(6:ℕ))]
+    norm_num [heathBrownDerivativeExponent,heathBrownInverseExponent]
+    refine ⟨?_,?_,?_⟩ <;> linarith only [lt_of_not_ge h7,h6]
+  by_cases h5 : (α:ℝ)≤1/4
+  · have hh := exponentSumGrowthExponent_le_heathBrown_firstRow h5
+    linarith only [hh,lt_of_not_ge h6]
+  by_cases hlo : (α:ℝ)≤890/3277
+  · have hh := exponentSumGrowthExponent_le_heathBrown_secondRow (le_of_not_ge h5) hlo
+    linarith only [hh,hlo]
+  by_cases hhi : (α:ℝ)≤17604372/60424193
+  · let t := ((α:ℝ)-(890:ℝ)/3277)/((17604372:ℝ)/60424193-(890:ℝ)/3277)
+    have hden : 0<(17604372:ℝ)/60424193-(890:ℝ)/3277 := by norm_num
+    have ht : t∈Icc (0:ℝ) 1 := by
+      refine ⟨div_nonneg (by linarith only [lt_of_not_ge hlo]) hden.le,?_⟩
+      exact (div_le_one hden).mpr (by linarith only [hhi])
+    have hα : (α:ℝ)=(1-t)*(890/3277)+t*(17604372/60424193) := by
+      dsimp only [t]
+      ring
+    exact Expdb.exponentSumGrowthExponent_le_iff_nonAsymptotic.mpr
+      (fourth_pair_capped_short_nonAsymptotic ht hα)
+  have hh := CubicJointCount.exponentSumGrowthExponent_le_trudgianYang_sixthRow
+    (α:=α) (by linarith only [hhalf])
+  linarith only [hh,lt_of_not_ge hhi]
+
+example
+    {α : ℝ≥0} (hhalf : (α:ℝ)≤1/2) :
+    Expdb.exponentSumGrowthExponent α≤89/3478+(7441/8695)*(α:ℝ) := by
+  exact fourth_pair_full_half_beta hhalf
+
+#print axioms fourth_pair_full_half_beta
+
+/-- The fourth new analytic exponent pair, obtained from complete beta
+coverage, not from a rational triangle certificate or an assumed pair. -/
+private theorem fourth_pair_analytic :
+    ExponentPair (89/3478) (15327/17390) := by
+  apply exponentPair_of_beta_bound_half
+    (by norm_num [InExponentPairTriangle]) (by norm_num)
+  intro α hhalf
+  have hh := fourth_pair_full_half_beta hhalf
+  unfold exponentPairLine
+  linarith only [hh]
+
+example : ExponentPair (89/3478) (15327/17390) := fourth_pair_analytic
+
+#print axioms fourth_pair_analytic
 
 end HuxleyDoubleShiftScratch

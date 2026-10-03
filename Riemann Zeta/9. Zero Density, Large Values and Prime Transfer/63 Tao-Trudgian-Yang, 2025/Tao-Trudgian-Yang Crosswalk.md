@@ -1,5 +1,129 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
+## Current acceptance status (2 October 2026)
+
+**38/42 complete.** EPZAE-13, 14, 29 and 38 are now DONE after exact
+source-contract review, focused verification and BOTH mandatory BATs.
+EPZAE-30, 39, 40 and 41 remain OPEN; the whole goal is not complete.
+
+All four `exponentPair_taoTrudgianYang_*New` theorems and
+`optimizedBourgain_bound` are proved in `BourgainOptimizedTransfer.lean`.
+The public root also exports `improved_heathBrown_zeroDensity`,
+`zeroDensityExponent_le_bourgain_improved` and `add_est_i` through
+`add_est_ix`, with no assumed mathematical output.
+EPZAE-13's existing acceptance test is every beta segment ACTUALLY CONSUMED
+by those pairs. Complete closed-interval analytic coverage is proved.
+The unused sharper printed short rows 3/4 are NOT claimed proved; the
+owner-authorized alternate-proof policy does not require their reproduction.
+
+Continue with EPZAE-30's literal literature table, then endpoint regressions
+and final release. The five-quarter Jutila/Ivic consumer and closed sigma=1/2
+Ingham endpoint have passed standalone Lean checks (16 exact regressions and
+16 dependency audits, zero diagnostics). They are now installed in the single
+`LiteratureDensity.lean` module with 10 public regressions/audits and updated
+root/runner coverage. Focused build 92443, foundation BAT 7946 and paper
+BAT 17691 all PASS at the preceding LiteratureDensity checkpoint (1450
+package files, 21072 audited declarations, zero Lean diagnostics).
+The subsequent 28-check standalone Ivić nineteenth-power route now proves
+24/(30*sigma-11) on the CLOSED interval [155/174,17/18], including the
+literal table row through 9/10. It uses actual peak counts, a variable-
+threshold sixth moment, uniform compact prefix, Perron and smooth Gram
+consumers; no full nineteenth moment or density conclusion is assumed.
+The single IvicNineteenthDensity module is now installed with six public
+contracts, nine exact/endpoint regressions, six public audits and updated
+root/runner coverage. BOTH mandatory BATs now PASS: foundation 56611
+and paper 67603, exit 0, zero Lean diagnostics or tactic suggestions.
+The full package and repeated semantic regression pass; all 1451 package
+files are covered and all 21078 discovered declarations pass the audit.
+The snapshot contains 8011 exact examples and 7318 explicit public audits.
+The two historical frozen-Python SyntaxWarnings remain visible.
+This verifies the installed Ivić row, not the entire density envelope.
+The subsequent 57-contract weighted mixed-band scratch check 51287
+PASSes the COMPLETE CDV extension, with 57 exact regressions, 57 audits
+and zero diagnostics. The new single CDVMixedDensity module is installed;
+focused production build 62103 PASSes (9583 jobs, zero diagnostics).
+It exports cdv_largeValueExponent_range on the closed two-thirds interval
+and zeroDensityExponent_le_cdv_ivic on [279/314,17/18].
+Root/runner coverage, two public audits and eight exact/endpoint
+regressions are synchronized. BOTH mandatory BATs now PASS on this
+CDV snapshot: foundation 96955 and paper 11434, exit 0, zero Lean
+diagnostics. Full package compilation (10785 jobs), repeated semantic
+regression and all 21080 discovered dependency audits PASS. All 1452
+package files are covered; 8019 exact examples and 7320 explicit public
+audits are retained. The two frozen Python SyntaxWarnings remain visible.
+The Pintz scratch checkpoint 10964 PASSes 21 declarations, 29 exact
+regressions and 21 audits, zero diagnostics. Its consumers are now
+installed in the EXISTING LiteratureDensity module: four public theorems,
+12 exact/endpoint regressions and four public audits, with unchanged
+root/runner coverage. Focused build 30366 PASSes (10445 jobs).
+The first formula 3/(24*sigma-20) holds for 23/24 <= sigma < 1.
+The next formulas 2/(15*sigma-12) and 3/(40*sigma-35) hold for
+39/40 < sigma < 1 and 41/42 < sigma < 1, respectively.
+For every integer n >= 6, the exact tail formula is proved on
+1-1/(2*n*(n-1)) < sigma <= 1-1/(2*n*(n+1)).
+This includes each upper endpoint, NOT the printed lower endpoints.
+The uniform proof links physical height through log_N(t), selects finitely
+many derivative orders, and uses actual Gram rows and density transfer.
+The final zeta order is m=floor((4*n+1)/3), with all scalar inequalities
+kernel-checked. No new support-module family or source repair was added.
+BOTH mandatory BATs now PASS on the enlarged Pintz snapshot:
+foundation 18437 (8857 jobs, 14290 discovered audits) and paper 52349
+(10785 jobs, 21085 discovered audits), exit 0 and zero Lean diagnostics.
+All 1452 package files, repeated semantic regression, 8031 exact examples
+and 7324 explicit public audits are covered. The failed paper run 20900
+exposed ambiguous zeroDensityExponent references in the 12 new regressions;
+all were qualified before the successful full rerun. The two historical
+frozen-Python SyntaxWarnings remain visible.
+The actual region consumer discharges smoothing, ordered multiplicities,
+common band/slice, two-height comparison, coefficient losses and slice
+elimination. Exact optimization uses the maximum of the sixth- and
+nineteenth-power choices and includes sigma=279/314.
+The Bourgain alternate route now passes the COMPLETE density consumer in
+scratch check 28117: 28 declarations, 31 exact examples and 28 audits, zero
+Lean diagnostics. It proves 3/(2*sigma) for 31/39 <= sigma < 1, hence the
+literal Bourgain row on 1867/2347 <= sigma < 1. Actual physical patterns,
+weighted bands, the critical twelfth moment and mixed Heath--Brown estimate
+feed the uniform logarithmic comparison, zero-loss limit and density transfer.
+The 25 private helpers and three public contracts are now installed in the
+EXISTING LiteratureDensity module, with eight exact/endpoint regressions and
+three public audits. No new module or runner exclusion was introduced;
+existing root/runner coverage already includes this module. Focused production
+build 62461 PASSes (10513 jobs, zero Lean diagnostics). The first focused run
+26496 exposed a local band-volume/Moebius notation clash; renaming that variable
+fixed it without changing the proof. Foundation BAT 2079 PASSes (8857 jobs,
+14290 discovered audits, zero Lean diagnostics). Paper BAT 69066 also PASSes:
+10785 jobs, all 1452 package files, full and repeated semantic regression,
+and all 21089 discovered dependency audits (14844 target + 6240 native +
+five anchors). BOTH logs have zero Lean diagnostics; the two historical
+frozen-Python SyntaxWarnings remain visible. The verified snapshot has
+8039 exact examples and 7327 explicit public audits.
+The subsequent literal-table scratch check 68267 PASSes eight declarations,
+32 exact regressions and eight dependency audits, zero diagnostics.
+All 22 finite rows are assembled for 1/2 <= sigma < 59/60, explicitly
+excluding 39/40 and 41/42. The integer-tail index is constructed for every
+59/60 <= sigma < 1; its exact analytic bound holds off the printed lower
+endpoints. An all-order theorem proves the raw derivative-majorant plateau
+obstruction, with concrete ordinary/zeta height witnesses and all n >= 6
+tail witnesses. This is NOT a counterexample to the actual density bounds.
+These eight declarations are installed in the EXISTING LiteratureDensity
+module, namespace LiteratureTable, with all 32 regressions and eight audits.
+Focused build 7205 PASSes (10549 jobs, zero diagnostics). The earlier focused
+run 68349 found a declaration-order error, repaired before the passing check.
+The snapshot has 8071 exact examples and 7335 explicit public audits.
+Root/runner coverage is unchanged. Foundation BAT 8379 PASSes (8857 jobs,
+14290 audits, zero Lean diagnostics). Paper BAT 61247 is running; the new
+BOTH-BAT checkpoint remains pending. Production files are frozen.
+EPZAE-30 remains OPEN at the printed Pintz lower endpoints. Remaining DAG:
+stronger endpoint input -> endpoint consumers -> exact total envelope ->
+EPZAE-39/40/41. No source-contract repair has been authorized for this gap.
+See Sources/Research Agenda.
+Maintain and run both `run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after production changes.
+Preserve all frozen statements, counterexamples, obstruction documents and
+authorized repairs. Recovery-record maintenance remains permanently skipped.
+Older dated progress entries below are historical; this status supersedes
+their unfinished-branch and aggregate-count statements.
+
 ## First and packing bounds across all charted Fourier gaps (30 September 2026)
 
 physicalModelPhase_actual_fourier_charted_long_gap_packing is installed
@@ -406,7 +530,185 @@ Frozen statements, counterexamples, owner-authorized repairs, obstruction
 documentation and regressions are preserved. Recovery records remain
 permanently optional and skipped.
 
-## Current exact middle beta rows and unconditional cascade (2 October 2026)
+## Verified four-pair and eight-piece closure (2 October 2026)
+
+The supplied Huxley IV PDF has been read in full (40 pages). Its short-range
+analysis informed the actual capped two-A source consumer. The third pair
+now uses the proved fourth pair below 890/3277, the closed lower interval
+[890/3277,391838/1377271], the closed local-A upper interval
+[391838/1377271,754/2579], and A(D(Bourgain)) above 754/2579.
+Both short intervals prove the exact line
+10769/351096+(587779/702192)*alpha. The local-A proof retains every actual
+compressed shift, the harmonic loss and constants chosen before the phase
+and physical scales. The lower proof discharges finite scale inequalities
+in the SAME existing capped source assembly; no analytic sum bound is assumed.
+
+Public production conclusions:
+
+- `HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_thirdPair_lowerRange`;
+- `HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_thirdPair_upperRange`;
+- `exponentPair_taoTrudgianYang_thirdNew`;
+- `zeroDensityExponent_le_bourgain_piece_8`;
+- `optimizedBourgain_bound` on the exact source range 3/4 < sigma < 1.
+
+The first, second and fourth pairs remain proved. Each pair is the paper's
+analytic predicate, not just a coordinate/triangle certificate. All eight
+density inputs are discharged; the old explicit-input interfaces are
+preserved as conditional compatibility interfaces.
+Five exact production regressions and five public audits were added.
+No new production module, resource limit, toolchain or runner change.
+
+Verification of the four-pair checkpoint, BEFORE the subsequent
+`LiteratureDensity.lean` integration (not a current whole-snapshot PASS):
+
+- focused 54530 PASS, 10,781 jobs, zero diagnostics;
+  E:/Lean/.scratch/epzae-huxley-third-pair-focused-20261002-1855.log;
+- foundation BAT 8912 PASS, exit 0, 8,857 jobs / 14,290 audited declarations;
+  E:/Lean/Riemann Zeta/logs/foundation_freeze_20261002_122123.log
+  (SHA-256 afe1c9d67c59abc88597b9e561312d9e89718f13668973d494aa54a6da933b38);
+  matching JSON SHA-256
+  2043e9baa84054c9ee569a22886daa668869abe16903ee43216b4181049987c1;
+- paper BAT 11052 PASS, exit 0, 10,782 jobs, all 1,449 package files covered;
+  21,057 audited declarations = 14,812 target + 6,240 pinned Gafni-Tao + 5 anchors;
+  logs/tao-trudgian-yang-build-20261002-122506-e561229c.log
+  (SHA-256 955327b5056879eae396f7c7de96f570c32e1eb2de1506678326447ef294923f).
+Both BATs have zero Lean diagnostics. The two known frozen-Python
+invalid-escape SyntaxWarnings remain visible and are not Lean diagnostics.
+Historical replay and deterministic regeneration pass; neither is proof evidence.
+The snapshot has 7,992 exact examples and 7,302 explicit public axiom checks.
+Dirty HEAD: 91604dfc9733555f0b762594cd434450728d3d8c; no commit/push performed.
+
+Verified checkpoint source SHA-256 (regression/audit files subsequently changed):
+
+- HuxleyLinearForms.lean:
+  f2b8c04dc8a9af9dcc2ff44ce3d8249d8213a324b13ef7639e879b725cd3eff4;
+- BourgainOptimizedTransfer.lean:
+  cc4adbf6da5bc9472310864014d610b7ca58f0c3e28f004ec0c43976984cf5d5;
+- SemanticRegression.lean:
+  cee47bfceac32cb04c349fe73ac302d37ed85c3ff9b4e31ea55b3a49045aaed1;
+- Audit.lean:
+  d6f51822365989dd2a52a9ec265d79be9896fc1c1e167225e728e66cbc899b99.
+
+Semantic gate review: EPZAE-13 requires only actually consumed beta segments;
+every branch now has its actual source estimate, exact rational comparison,
+closed endpoint and beta-half duality. This is an alternate proof of the
+unchanged four public pairs, NOT a claim to the unused sharper printed rows.
+EPZAE-14 and 29 have their exact unconditional public consumers. EPZAE-38 is
+satisfied by the EXISTING root exports of all advertised new outputs.
+Thus 38/42 are complete; EPZAE-30/39/40/41 remain OPEN.
+Both counterexamples, frozen source statements and authorized repairs are unchanged.
+The fourth-pair checkpoint below is retained as historical verification evidence.
+
+## Verified fourth-pair checkpoint (2 October 2026)
+
+The supplied PDF is M. N. Huxley, *Exponential Sums and the Riemann
+Zeta Function IV*, Proc. London Math. Soc. (3) 66 (1993), 1--40.
+All 40 pages have been read. Pages 39--40 identify the two-A-process
+short-range route and the combined-product parameter argument.
+
+The exact fourth published pair (89/3478,15327/17390) now has a complete
+SCRATCH KERNEL-CHECKED analytic proof. Full check 26419 exits 0:
+165 exact proposition regressions and 165 explicit axiom audits,
+zero Lean diagnostics, and only standard logical axioms.
+Scratch SHA-256:
+28fa9767894b7f58c9b8f3a455eabaf50794aec4eba1fda704064fd4c39ee89e.
+Complete compiler log:
+E:/Lean/.scratch/epzae-huxley-double-shift-check-20261002-1732.log.
+The preceding full short-range check 68283 also passed all 163 checks.
+Earlier integration failures were repaired with explicit scalar algebra;
+no statement, warning gate, or elaboration resource allowance was weakened.
+
+The new source theorem starts with the ACTUAL approximate-model phase,
+constructs the SAME sharp extension and the actual maximizing phase in
+each shift-product fiber, and combines its fourth and twelfth moments.
+It derives the complete 288th-moment estimate, including integer floor
+scales, radius/source budgets, short intervals, small and large product
+blocks, one-time sharp-extension loss, logarithms and final root extraction.
+Constants are chosen before the phase, physical scales and endpoints.
+No family moment, spacing bound, beta bound or desired pair is a premise.
+
+The full nonasymptotic M window is retained. The short-range beta bound is
+89/3478+(7441/8695)*alpha on the CLOSED interval
+[890/3277,17604372/60424193]. Native Heath--Brown bounds for derivative
+orders 7, 6 and 5 cover the lower intervals; the existing sixth-row bound
+covers the upper interval through alpha=1/2. Proved beta reflection then
+supplies the actual exponent-pair contract.
+
+Installation is in the EXISTING HuxleyLinearForms and
+BourgainOptimizedTransfer modules, not a new support-module family:
+- HuxleyRationalPhase.exponentSumGrowthExponent_le_huxley_fourthPair_shortRange;
+- exponentPair_taoTrudgianYang_fourthNew.
+The installation selects 106 source prerequisites from the checked scratch
+dependency graph and reuses 50 unchanged existing private proofs. The
+Bourgain consumer adds its short half-interval assembly. Both new public
+contracts have exact production regressions and explicit public audits.
+
+Current installation verification: focused retry 56625 PASS, exit 0,
+10,781 jobs (Huxley 719s, Bourgain 13s, root 12s, regressions 590s),
+zero Lean diagnostics. Complete log:
+E:/Lean/.scratch/epzae-huxley-fourth-pair-focused-20261002-1754.log.
+Initial production build 10179 failed because the extraction step duplicated
+scratch declarations and three local height names conflicted in the larger
+namespace. The extraction now selects each declaration exactly once, and
+those three local names were alpha-renamed. No mathematical statement changed.
+Both required BAT evaluations now PASS for this changed production snapshot
+at dirty HEAD 91604dfc9733555f0b762594cd434450728d3d8c:
+- foundation session 52759, exit 0: 8,857 jobs, 14,290 audited declarations;
+  log E:/Lean/Riemann Zeta/logs/foundation_freeze_20261002_112455.log
+  and matching .json manifest;
+- paper session 87347, exit 0: 10,782 jobs, 1,449 covered package files,
+  21,052 audited declarations (14,807 target + 6,240 Gafni--Tao + 5 anchors);
+  log logs/tao-trudgian-yang-build-20261002-113304-be537c77.log.
+Both complete logs contain zero Lean diagnostics. The two known frozen
+Python invalid-escape SyntaxWarnings remain visible. The first foundation
+launch stopped before verification because ELAN_HOME was absent; setting
+the configured toolchain location resolved it without changing either BAT.
+Earlier 792-theorem PASS logs below are historical, not this snapshot.
+
+Verified production SHA-256:
+Huxley 822619397abb8e7f44d1a675a54a492c1e1a315513122e75e43853c090455cd6;
+Bourgain 5a9a1407444a6245cbbcafa83fa32c7c2694871699b0a4a0323d41ef695de152;
+regressions 42457c1c74bc8c3ab7038370e213c4adfdacd93c2c0b1b42f8c21dbebed83059;
+audit e4335741927c96230744a8037ac2f45479c019396bff7ce47700411fe295a2e2.
+Foundation log c04802813d8657701dd36dcc21113701a05cbf919d44d35e6ec4dc3a66db8ceb;
+foundation manifest a7afd9e2ac1b8aa4060dcca7214ab7b1d4b1f426be3ee751b9bd88cc892f63c6;
+paper log 0cf9dd00e73459e1cb90d3f5127b13bf951bccb7cb56aaa5d33710fdca5db938.
+The counterexamples, corrected zeta-growth theorem and supplied PDF retain
+their recorded hashes. No new production module or BAT coverage change.
+
+The next terminal obligation is the third pair. Scratch 6278 checks eight
+exact regressions and audits without diagnostics, including a compact
+local-beta uniformity theorem, literal compressed correlations, the
+installed-row parent majorant, rational lower-window margins, and the
+all-shifts physical window. Scratch SHA-256:
+05d9cf461069eea0f939f29f8dce60c342308d1f356ed4284490113654e4178e.
+The harmonic estimate and full local-A analytic consumer are subsequent
+drafts, not yet claimed proved. The lower interval can reuse the same
+capped two-step source assembly through its finite scale inequalities.
+This route targets the exact third pair; it does not assert the sharper
+printed beta-row formulas.
+
+Remaining-obligation DAG:
+actual two-step source -> full nonasymptotic short-range beta
+-> closed half-interval coverage -> fourth analytic pair
+(installed source, exact regressions and BOTH BATs PASS)
+-> third pair / remaining exact short beta-table rows (OPEN)
+-> Bourgain piece 8 and full density envelope (OPEN)
+-> public assembly, semantic and release gates (OPEN).
+EPZAE-13/14/29/30/38/39/40/41 remain OPEN; aggregate stays 34/42.
+The fourth pair does not discharge the third pair or the printed
+short-row/gap formulas. Numerical scale searches and completed-process
+searches are discovery only, not impossibility proofs.
+
+Maintain and execute BOTH run_lake_build.bat and
+run_tao_trudgian_yang_build.bat; update them when coverage or behavior
+changes. Their coverage must not be narrowed to obtain a PASS.
+All frozen source contracts, both counterexamples, obstruction documents,
+owner-authorized repairs and exact regressions remain preserved.
+The EPZAE-21 correction remains explicitly owner-authorized and distinct
+from the false printed clause. Recovery-record maintenance stays skipped.
+
+## Historical middle-row cascade and earlier short-range checkpoints (2 October 2026)
 
 The supplied 40-page Huxley (1993) PDF has been read in full. Its
 Theorem 3 (pp. 38--39) now has the five required middle-row consumers
@@ -568,12 +870,14 @@ It groups two Weyl shifts by their product. Distinct shift pairs with
 equal product must NOT be identified as equal phases.
 
 The retained scratch epzae-huxley-double-shift-entry-20261002.lean has a
-verified checkpoint with 120 exact proposition regressions and 120 explicit
-axiom checks (session 83207, exit 0; zero Lean diagnostics, standard logical
+verified checkpoint with 162 exact proposition regressions and 162 explicit
+axiom checks (session 55216, exit 0; zero Lean diagnostics, standard logical
 axioms only). Checkpoint SHA-256:
-af51f8e40d0797ccc01078cc5d74b506ae6b1f5bc0002a2aee4c6efea56d3b9a.
-Thirty-five declarations are unchanged copies of existing private budget/sieve/arithmetic,
-finite-decomposition and physical-spacing proofs for scratch access, NOT new analytic results; promotion must reuse
+38099f4ed118b065af419585d6b19c415b9c702f2192c7316e45e793d2218f59.
+Fifty declarations are unchanged copies of existing private budget/sieve/arithmetic,
+finite-decomposition, physical-spacing, completion/logarithm, radius-comparison,
+endpoint, finite-power/dyadic-selection and floor-scale proofs for scratch access, NOT new
+analytic results; promotion must reuse
 the originals in the existing module. No production module was added.
 It reuses the existing uniform A-shift model, physical coordinate identity,
 source Weyl inequality, divisor estimate and iterated-derivative composition.
@@ -841,19 +1145,49 @@ constants precede the finite families and physical scales. No analytic
 sum bound, Fourier certificate, root family or count is assumed by this
 all-band consumer. Explicit source jets/models and scalar budgets remain.
 
-double_difference_actual_source_grid_monomials now consumes the actual
-occupied-grid and phase-image counts, not arbitrary unrelated cardinalities.
-Its SAME source curvature and Type-I spacing are derived from T*N*R^2=M^3
-and the selected mesh. The clamped triangular and large-entry mass reduces
-to five explicit physical power terms. This is a checked selected-grid
-consumer, not yet the complete source-family estimate.
+double_difference_actual_source_grid_monomials consumes the actual occupied-grid
+and phase-image counts. Its SAME source curvature and Type-I spacing are
+derived from T*N*R^2=M^3 and the selected mesh. The clamped mass reduces
+to five explicit physical power terms.
 
-Remaining DAG: compose these physical power terms with the actual all-band
-ORIGINAL-sum moment, logarithms, completion/endpoint errors and BOTH capped
-terminal terms -> SAME source-normalization and full physical-window scale
-selection -> fourth analytic pair (and the other remaining short-row/gap
-obligations). The exact arithmetic worksheet is not yet linked to a complete
-analytic moment. Those end theorems and the aggregate gates remain OPEN.
+eventually_double_difference_uniform_capped_source_bound constructs all
+discrete source scales and absorbs fixed coefficients/logarithms.
+approximateModelPhase_enlarged_double_capped_quantitative consumes it for
+the SAME sharp extension of the ORIGINAL approximate model, with derived
+colored normalization/radius budgets and literal phase identities.
+approximateModelPhase_enlarged_double_product_correlation_moment now
+constructs the ACTUAL selected-pair product family and its original
+intervals, absorbs the one-term endpoint loss, and proves its twelfth
+moment with five main terms and all four errors. Different phases sharing
+a product are never identified. Source constants precede X and the family;
+no Fourier/count/moment conclusion is assumed, and no N^2<=M is imposed.
+
+source_product_twice_weyl_doubled_block selects an actual product block
+from the original two-step Weyl reduction. The exact nine integer-power
+identities and double_difference_weighted_capped_integer_moments link
+the physical relation (X*J/M^2)*N*R^2=M^3 to the worksheet monomials,
+including BOTH terminal errors. The ten-monomial power-window comparison
+retains explicit integer-rounding factors. The fourth-pair worksheet now
+has strict margins on a genuine two-sided M window, including arithmetic
+margins for the short-interval and small-product cases.
+eventually_double_difference_capped_physical_window constructs the ACTUAL
+floor scales N=8*floor(X^nu/8), H=floor(X^h) and radius
+R=sqrt(M^5/(X*J*N)), and derives every capped source budget. Its uniform
+threshold precedes all product exponents and actual product-block families;
+the exact height is T=X*J/M^2. No N^2<=M restriction is added.
+source_product_twice_weyl_normalized_block now gives the normalized
+fourth-power estimate and elementary 2*M*J cap for the SAME actual chosen
+block. Its selected phases and endpoint/logarithmic losses are retained.
+The fourth/twelfth-moment scalar consumer proves the 288th-power estimate;
+the existing uniform logarithmic-loss proof is reused unchanged. These
+are checked links, not yet an exponent-pair theorem.
+
+Remaining DAG: consume the normalized ACTUAL block, source twelfth moment
+and uniform physical-window construction in one original-model end theorem
+(including short-interval, small-product and large-product cases) -> fourth
+analytic pair (and the other remaining short-row/gap obligations). The
+complete non-asymptotic original-sum assembly is under development, not a
+proved contract. Those end theorems and the aggregate gates remain OPEN.
 These checked original-block and source-normalization consumers are not an
 installed short-row theorem or a completed analytic pair.
 This is NOT the complete family estimate, a short beta row, or a new
@@ -7071,16 +7405,16 @@ EPZAE-15--20, EPZAE-22--28, and EPZAE-31--37 (31/42),
 together with the precisely scoped partial results below.
 `Add-est (i)--(ix)` are now proved on their full closed intervals in
 `NewAdditiveEnergy`. The improved Bourgain and Heath--Brown density outputs
-are complete; the four new exponent pairs and optimized density output remain open.
+are complete; all four new exponent pairs and the optimized density output are now proved and audited.
 
 ## Public result ledger
 
-| Paper label | Exact source conclusion | Planned Lean home | Checklist |
+| Paper label | Exact source conclusion | Lean home and public consumer | Checklist |
 |---|---|---|---:|
-| `new-exp-pair` | `(89/1282,997/1282)`, `(652397/9713986,7599781/9713986)`, `(10769/351096,609317/702192)`, and `(89/3478,15327/17390)` are exponent pairs | `NewExponentPairs.lean` | EPZAE-14 |
+| `new-exp-pair` | `(89/1282,997/1282)`, `(652397/9713986,7599781/9713986)`, `(10769/351096,609317/702192)`, and `(89/3478,15327/17390)` are exponent pairs | `BourgainOptimizedTransfer.lean`: `exponentPair_taoTrudgianYang_firstNew`, `_secondNew`, `_thirdNew`, `_fourthNew`; actual analytic estimates | EPZAE-14 complete |
 | `hb-density2` | `A(sigma) <= 3/(10 sigma-7)` for `7/10 < sigma <= 1` | `RobertSargosExponentPair.lean`: `improved_heathBrown_zeroDensity`, consuming the actual proved old pair | EPZAE-26 complete |
 | `bourgain-density-improved` | Exact max formula on `17/22 <= sigma <= 4/5`, with both closed subranges proved | `BourgainImprovedDensity.lean`: `zeroDensityExponent_le_bourgain_improved`, `_lower`, `_upper` | EPZAE-27 complete; source-proof k=3 comparison repaired using proved Jutila k=4 |
-| `bourgain-zero-density-optimized` | eight-piece bound below | Closed-boundary limit in `BourgainPairDensityClosure.lean`; eight source-range consumers and explicitly conditional assembly in `BourgainOptimizedTransfer.lean`; actual pair provenance OPEN | EPZAE-29 |
+| `bourgain-zero-density-optimized` | eight-piece bound below | `BourgainOptimizedTransfer.lean`: `optimizedBourgain_bound`; all eight analytic inputs discharged, exact source range and crossovers | EPZAE-29 complete |
 | `Add-est` | nine energy bounds below; every clause (i)--(ix) proved | `NewAdditiveEnergy.lean` (all nine clauses installed) | EPZAE-37 |
 
 ### Exact optimized Bourgain pieces
