@@ -36,9 +36,35 @@ Maintain and rerun `run_lake_build.bat --no-pause` and
 their coverage, audit and zero-Lean-warning gates must not be narrowed.
 This is internal kernel/project completion, not independent peer review.
 
+### Current package use
+
+From this `Extension/` directory, focused development uses
+`lake build TaoTrudgianYang2025.<Module>`. The release interface is
+`cmd /c ..\run_tao_trudgian_yang_build.bat --no-pause`; also run
+`cmd /c run_lake_build.bat --no-pause` from the `Riemann Zeta/` root,
+sequentially, after relevant implementation changes.
+
+The package pins Lean 4.30 and a single Mathlib graph. All 1,455 package
+Lean files are covered by the principal runner. The root
+[`TaoTrudgianYang2025.lean`](TaoTrudgianYang2025.lean), explicit runner
+inventory, [audit](TaoTrudgianYang2025/Audit.lean) and
+[semantic regressions](TaoTrudgianYang2025/SemanticRegression.lean) must
+remain synchronized. Consult the parent
+[tooling guide](../Tools/README.md) and
+[reproduction manifest](../Tao-Trudgian-Yang%20Reproduction%20Manifest.md)
+for current gate details. Earlier bootstrap instructions below are history.
+
 Historical checkpoints below retain the evidence and status at their
 dates. This section governs current status; canonical EPZAE checkboxes
 record the completed acceptance tests.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
 
 ## First frozen endpoint proved by original research (3 October 2026)
 
@@ -21488,3 +21514,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

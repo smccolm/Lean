@@ -1,6 +1,6 @@
 # Pair Correlation, Zero Statistics and Weil-Form Methods
 
-This directory mirrors the corresponding corridor in `The RH Map - Aug 30, 2026 - Mermaid Diagram.txt`. Its numbered child directories reserve stable locations for source material, research notes, and Lean packages as work matures.
+This directory mirrors the corresponding corridor in `The RH Map - Sep 19, 2026 - Mermaid Diagram.txt`. Its numbered child directories reserve stable locations for source material, research notes, and Lean packages as work matures.
 
 - `16 Montgomery, 1973/`
 - `21 Gallagher-Mueller, 1978/`
@@ -16,3 +16,6 @@ This directory mirrors the corresponding corridor in `The RH Map - Aug 30, 2026 
 - `68 Goldston-Suriajaya, 2025/`
 - `72 Goldston-Suriajaya, 2026/`
 - `76 Alpoge-Furman, 2026/`
+- `79 Lamzouri, 2026/`
+- `80 Wang, 2026/` (the map labels this author Biao Wang)
+- `82 Najnudel-Nikeghbali, 2026/`

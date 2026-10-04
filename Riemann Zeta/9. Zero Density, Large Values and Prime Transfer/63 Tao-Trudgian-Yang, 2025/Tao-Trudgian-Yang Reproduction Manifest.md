@@ -151,6 +151,81 @@ rational data fields, also covered by the principal scanner regressions.
 Git's LF-to-CRLF notices are working-tree format notices, not Lean diagnostics.
 No commit, staging, push or recovery-record maintenance was performed.
 
+### Documentation consistency audit (4 October 2026)
+
+This is a documentation-only follow-up to the release receipt above.
+The starting checkout was clean at
+`bd2bcb104885a35e19e8c9b8e5ee3adf979b6a82` (`Complete`).
+The earlier BAT logs still describe their original working-tree snapshot
+based on `ef07bf1eecb6ebe3320922f41f36557a328376cd`; they have not been
+rewritten or represented as new clean-commit runs.
+
+Scope: mechanical link/structure checks across 66 authored Riemann Zeta
+Markdown documents, the workspace README and the target's parent dependency
+README (68 documents). Frozen Sources, vendored dependency records, archived
+documents, logs and every recovery-record file were excluded from editing.
+Current status/contract review concentrated on all target control, repair and
+tooling documents and their repository/corridor navigation.
+
+Corrections:
+
+- Current goal, canonical checklist, public crosswalk, repair notes, tooling
+  guide and rendered architecture agree on 42/42. The stale integer-tail
+  OPEN node and live 31/42--38/42 claims were reconciled.
+- Preserved development checkpoints are explicitly historical, including
+  superseded source searches, provisional module names and next-step commands.
+  They do not override the current contracts or acceptance status.
+- Both repairs remain owner-authorized changes to supporting contracts,
+  never proofs of false printed statements. EPZAE-21 retains its independent,
+  completed sharp Atkinson obligation. All frozen endpoint values and original
+  research attribution are unchanged.
+- Navigation now points to the existing September RH map, lists all seven
+  appended nodes, identifies the verified node-73 release and node-63 result,
+  and does not link a nonexistent inference directory. The old generated
+  workspace tree is explicitly labeled historical, not current coverage.
+
+Read-only validation:
+
+- 6,629 local Markdown links resolve; all 17 heading-fragment links resolve.
+  Collapsible historical blocks and fenced code delimiters are balanced.
+- Exactly 42 distinct canonical EPZAE IDs are checked. The Mermaid graph has
+  638 distinct defined/classified nodes and 1,563 parsed dependency edges,
+  with no duplicate definition or undefined reference: 629 done, eight
+  available and one preserved-counterexample node. No aggregate gate is open.
+- The unchanged package contains 1,455 Lean files, 8,176 semantic examples and
+  7,646 explicit `#print axioms` entries in its audit. The earlier full
+  dynamic audit checked 22,064 declarations; these are different counts.
+- Public signatures for both finite endpoints, the requested second zeta-LV
+  strip, every integer-tail endpoint and the full printed table were checked
+  against the production sources. The two repairs, sharp Atkinson consumer,
+  completed D-process and bounded-range energy consumer were also located.
+- Both source-verifier scripts pass: 22 source artifacts and 469 native files
+  / 463 reachable modules. All 12 ANTEDB ledger hashes match. Direct script
+  invocation initially met the shell's execution-policy restriction; rerunning
+  through the same process-local `powershell.exe -NoProfile -ExecutionPolicy
+  Bypass -File` interface used by the BAT passed without changing system policy.
+- All proof, regression, audit, root-import, runner, permanent-counterexample
+  and source-faithful-table hashes listed above match. Both full PASS-log
+  hashes and the foundation JSON hash match their recorded receipts.
+  The logs retain zero Lean diagnostics and the two disclosed Python warnings.
+- Repository Lean shortcut searches find no prohibited proof term or
+  postulate; matches for `constant` are prose or rational structure fields.
+  The final diff is documentation-only and `git diff --check` passes.
+
+No Lean source, import, audit, BAT, PowerShell runner, pin, generated
+certificate or frozen artifact changed in this documentation audit.
+No new Lean build or full BAT invocation is claimed; the exact existing
+receipts were rechecked. Both BATs remain mandatory after relevant future
+implementation changes. No recovery-record file was touched.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
+
 ## First endpoint and finite table: production and BOTH principal BATs PASS
 
 Direct scratch check 99612: PASS, exit 0, zero diagnostics. All 86
@@ -32891,3 +32966,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

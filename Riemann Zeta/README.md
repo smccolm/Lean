@@ -12,13 +12,13 @@ Author: **S. McColm**
 
 ## Research Map Layout
 
-The wider research workspace is organized by the nine corridors in [`The RH Map - Aug 30, 2026 - Mermaid Diagram.txt`](The%20RH%20Map%20-%20Aug%2030,%202026%20-%20Mermaid%20Diagram.txt). See [`Research Organization.md`](Research%20Organization.md) for the complete directory map and the distinction between numbered source nodes and cross-node investigations.
+The wider research workspace is organized by the nine corridors in [`The RH Map - Sep 19, 2026 - Mermaid Diagram.txt`](The%20RH%20Map%20-%20Sep%2019,%202026%20-%20Mermaid%20Diagram.txt). See [`Research Organization.md`](Research%20Organization.md) for the complete directory map and the distinction between numbered source nodes and cross-node investigations.
 
-The frozen package and its unchanged `RiemannZeta.*` declaration namespaces now live under [`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/`](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/README.md). The filesystem module layout is flattened inside that node, which Lake and the verifier use as the foundation source root. The source-pinned but not-yet-formalized [Tao 2026 scaffold](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/73%20Tao,%202026/README.md) is in node 73, and the completed [Gafni--Tao formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/README.md) is in node 74. Prime Shell and the cross-node inference agenda live under [`Investigations/`](Investigations/README.md).
+The frozen package and its unchanged `RiemannZeta.*` declaration namespaces now live under [`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/`](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/README.md). The filesystem module layout is flattened inside that node, which Lake and the verifier use as the foundation source root. The [Tao 2026 four-theorem release](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/73%20Tao,%202026/README.md) is in node 73, and the completed [Gafni--Tao formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/README.md) is in node 74. The isolated Prime Shell route analysis lives under [`Investigations/`](Investigations/README.md); the formerly proposed cross-node inference directory is not present in this checkout.
 
 The empty numbered node directories are structural placeholders, not formalization claims.
 
-Node 63 now includes the [Tao--Trudgian--Yang endpoint research](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/README.md).
+Node 63 contains the [Tao--Trudgian--Yang formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/README.md), with all 42 acceptance gates complete under the documented owner-authorized supporting repairs.
 Its production theorem `PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
 proves the frozen density envelope on `[1/2,1)`, including the disputed closed
 Pintz endpoints by original far-correlation arguments. No weaker source-faithful

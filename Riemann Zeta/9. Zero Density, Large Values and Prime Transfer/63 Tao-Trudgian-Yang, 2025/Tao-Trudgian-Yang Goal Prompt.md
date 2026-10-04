@@ -36,9 +36,36 @@ Maintain and rerun `run_lake_build.bat --no-pause` and
 their coverage, audit and zero-Lean-warning gates must not be narrowed.
 This is internal kernel/project completion, not independent peer review.
 
+### Current maintenance directive
+
+The whole-proof goal is complete, not awaiting another analytic obligation.
+Preserve every frozen end statement and both owner-authorized supporting
+repairs. Closed Pintz endpoints remain original RESEARCH STRENGTHENINGS;
+neither the weaker source-faithful table nor a relabeling of Pintz's strict
+cells may replace them. Historical source-hunting and continuation instructions
+below are inactive. Do not reopen that search absent a genuinely new theorem.
+Optional alternative routes are not acceptance blockers.
+
+The [frozen public theorem contract](#frozen-public-theorem-contract),
+[supporting results](#supporting-source-results-in-scope),
+[integrity contract](#integrity-contract) and
+[principal verification runner](#principal-verification-runner) remain binding
+for maintenance. Keep `run_tao_trudgian_yang_build.bat` and the foundation
+`run_lake_build.bat` synchronized with relevant implementation changes, and
+rerun them sequentially when their gates require it. Preserve complete
+coverage, no-shortcut audits and zero Lean diagnostics. Recovery-record
+maintenance is permanently optional and skipped.
+
 Historical checkpoints below retain the evidence and status at their
 dates. This section governs current status; canonical EPZAE checkboxes
 record the completed acceptance tests.
+
+<details>
+<summary>Historical development checkpoints — superseded status and next-step notes</summary>
+
+The material in this block records earlier snapshots. Its OPEN labels, counts
+and instructions are historical, not current obligations. See the current
+completion section and canonical acceptance tests for present status.
 
 ## First frozen endpoint proved by original research (3 October 2026)
 
@@ -8624,6 +8651,8 @@ Preserve all counterexamples, audits and regressions. Keep
 run it and the foundation `run_lake_build.bat --no-pause` after proof integration.
 Recovery-record maintenance is permanently optional and skipped.
 
+</details>
+
 ## Objective
 
 Produce a reproducible, kernel-checked Lean 4 formalization of every new
@@ -8691,6 +8720,9 @@ multiplicity and the paper's epsilon-loss normalization.
 
 ## Supporting source results in scope
 
+These acceptance requirements are now satisfied; they remain requirements
+for maintenance, not a new to-do list.
+
 The release outputs require faithful formal versions of:
 
 - cheap asymptotic notation and automatic uniformity;
@@ -8709,6 +8741,20 @@ The release outputs require faithful formal versions of:
   relation; and
 - exact rational/polyhedral optimization certificates for every final
   envelope and interval split.
+
+EPZAE-30 additionally retains the unchanged complete printed density table
+on `1/2≤σ<1`, including `16/21` at `39/40`, `63/85` at `41/42`,
+and every `3/(n−1)` at `1−1/(2n(n−1))` for integers `n≥6`.
+`PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
+is the proved public consumer; the closed endpoints are original research.
+
+EPZAE-21 uses the owner-authorized corrected growth/nonexistence contract:
+for `τ>0`, `1/2≤c,σ≤1`, both `c+τ·μ(c)<σ` and strict `1−τ<σ`
+are required. The old-pair consequence retains both corresponding strict
+inequalities. This is not a proof of the false unrestricted printed clause.
+The sharp Atkinson (6.20)--(6.23) source form, exact reflection and moment
+requirements are independently proved; see the
+[Zeta Growth Repair](Tao-Trudgian-Yang%20Zeta%20Growth%20Repair.md).
 
 An upstream theorem may be imported only after its quantifiers, interval
 conventions, coefficient normalization, sign convention, epsilon losses, and
@@ -8752,6 +8798,13 @@ by `run_tao_trudgian_yang_build.bat`, updating its PowerShell inventory and
 the root imports whenever this proof chain changes.
 Do not infer arbitrary polytope closure or use any scaled `s` constraint.
 Keep `energyPowering_source_counterexample` as a permanent audited regression.
+
+All nine final Add-est clauses and the independent endpoint-two energy
+transfer are now proved. The following preserved construction sequence
+describes earlier partial interfaces and must not be read as current work.
+
+<details>
+<summary>Historical energy and moment construction instructions (superseded)</summary>
 
 The clause-(i) general intermediate `imphb-lver-ineq` is now proved by
 `InLargeValueEnergyRegion.energyClauseOneGeneral_lower_piece` and
@@ -9789,22 +9842,25 @@ independent-coordinate powering/Heath–Brown chain.
 
 
 
+</details>
+
 ## Source and dependency boundary
 
 1. Primary paper: arXiv `2501.16779v1`, submitted 28 January 2025.
 2. Paper-time ANTEDB snapshot: commit
    `9953003a48f46fe8075ccf9534321f98f656032e`, the last repository commit before
    the arXiv v1 submission time.
-3. Current ANTEDB Lean snapshot: commit
+3. Selected ANTEDB Lean snapshot: commit
    `088040634e8300f87e80f431d8bdc38c42cc8e11`, dated 4 September 2026.
 4. Completed local Guth--Maynard foundation: the canonical source under
    `../71 Guth-Maynard, 2026/`, pinned by that project's own reproduction
    manifest and release tag.
-5. Mathlib and `PrimeNumberTheoremAnd`: use only through a single selected
-   toolchain/dependency graph after EPZAE-01 is resolved.
+5. Mathlib and `PrimeNumberTheoremAnd`: use only through the single pinned
+   toolchain/dependency graph established by completed EPZAE-01.
 
 The paper-time snapshot is for historical reproduction of the optimization.
-The current snapshot is for reusable Lean foundations. Never blur the two.
+The selected Lean snapshot is for reusable foundations, not a floating
+upstream HEAD. Never blur the two.
 
 ## Proof architecture
 
@@ -9822,7 +9878,16 @@ The finite-certificate layer must not assert that an analytic hypothesis is
 true. The analytic layer must not bury an optimization result inside a
 definition. The public layer must consume the actual upstream objects.
 
-## Proposed production modules
+## Production inventory
+
+The installed root `Extension/TaoTrudgianYang2025.lean` and the principal
+PowerShell runner's explicit coverage list are authoritative for the 1,455
+package Lean files. This includes all three endpoint-research modules,
+their actual public consumers, semantic regressions and exhaustive audit.
+Do not recreate a module merely because its provisional name appears below.
+
+<details>
+<summary>Original proposed module layout (historical, not an inventory)</summary>
 
 ```text
 TaoTrudgianYang2025/
@@ -9916,8 +9981,9 @@ TaoTrudgianYang2025/
   Audit.lean
 ```
 
-Module names may be refined, but every dependency edge in the architecture
-must remain visible and audited.
+</details>
+
+Every dependency edge in the architecture must remain visible and audited.
 
 ## Integrity contract
 
@@ -9945,10 +10011,13 @@ list, or axiom audit changes.
 The runner must resolve the project from its own location, preserve a complete
 timestamped log, support `--no-pause`, and return a nonzero exit code if any
 required inventory, source hash, build, warning, semantic, integrity, or audit
-gate fails. While no Lean package exists it must say `PLANNING SCAFFOLD ONLY`
-and must not describe its result as a Lean build. Once the package is
-installed, a release claim requires executing this exact runner successfully;
-a direct `lake build` alone is insufficient.
+gate fails. The package is installed and the runner's successful terminal
+status is `FINAL RESULT: LEAN VERIFICATION PASS`, not scaffold success.
+A release claim requires executing this exact runner successfully;
+a direct `lake build` alone is insufficient. Run the foundation
+`cmd /c run_lake_build.bat --no-pause` from `Riemann Zeta/` and the paper
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause` from this paper directory
+sequentially after relevant source, import, audit, configuration or runner changes.
 
 ## Release acceptance gates
 
@@ -9962,7 +10031,7 @@ A release may be called complete only when all of the following pass:
 5. the source hashes and both ANTEDB pins pass;
 6. the repository-wide shortcut scans pass;
 7. `run_tao_trudgian_yang_build.bat --no-pause` covers all production modules
-   and completes with zero warnings;
+   and completes with zero Lean warnings or other Lean diagnostics;
 8. the exhaustive dependency audit reports only permitted Lean/Mathlib logical
    axioms;
 9. the architecture, checklist, crosswalk, research agenda, README, and
@@ -9977,9 +10046,20 @@ A release may be called complete only when all of the following pass:
     and covered by `run_tao_trudgian_yang_build.bat`, alongside the repaired
     theorem and its downstream consumers.
 
-Until then, use the status terms **planned**, **defined/stated**,
+All gates are satisfied in the recorded 4 October 2026 snapshot; the archived
+Python replay's two visible SyntaxWarnings are disclosed, not Lean warnings.
+A later checkout must reproduce its own verification before claiming a new PASS.
+If a gate regresses, use the status terms **planned**, **defined/stated**,
 **conditionally proved**, or **kernel-checked helper** as appropriate. Do not
-say the paper or any advertised output is formalized.
+claim completion for an affected output until the exact gate is restored.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
 
 ### Actual second-order Fourier tails and finite leading source
 
@@ -27321,3 +27401,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

@@ -6,9 +6,9 @@ sum layers. The later Heath--Brown beta deduction also uses the pinned native
 Gafni--Tao derivative-proof closure described below. The attributed subset is in `ANTEDBFrozen/`; it is compiled as a
 separate local Lake package and imported from source by the extension.
 
-## Intended dependencies
+## Installed dependencies
 
-| Dependency | Role | Current version boundary | Decision needed |
+| Dependency | Role | Pinned version boundary | Installed integration |
 |---|---|---|---|
 | local `RiemannZeta` / Guth--Maynard | zeta analytic foundations, large values, Ingham/Huxley/GM density | Lean 4.30, pinned local mathlib | imported as a local source dependency |
 | frozen ANTEDB subset | asymptotics, phase functions, exponential sums | upstream `0880406...`, backported to Lean 4.30 | imported from `ANTEDBFrozen/` |
@@ -51,9 +51,12 @@ introduced.
 
 The package README, `PROVENANCE.json`, installed hash ledger and upstream
 PNT license record this exact boundary. Installation alone is not a proof
-of the target beta estimate. The target bridge must derive the signed
-physical derivative, interval/tail convention and uniform scale losses
-from the actual ANTEDB model phase, then consume the native theorem.
+of the target beta estimate. The completed target bridge
+`exponentSumGrowthExponent_le_heathBrown` in `HeathBrownDerivative.lean`
+derives the physical derivative, interval convention and uniform scale
+losses from the actual ANTEDB model phase and consumes the native theorem.
+The endpoint research also uses the proved native critical VMVT. These
+target consumers, not the act of vendoring, are the proof evidence.
 
 `Tools/verify_gafnitao_sources.ps1`, invoked by
 `run_tao_trudgian_yang_build.bat`, rejects changed, missing, extra and
@@ -66,6 +69,10 @@ theorems. Both build BATs remain mandatory after implementation changes.
 Scoped `.gitattributes` rules preserve the exact bytes of pinned Sources,
 ANTEDB/native dependency files, the generated certificate and the permanent
 counterexample across Git checkouts. The runner requires this policy file.
-No repository Git configuration was changed. A read-only comparison of
-509 protected files against HEAD found 507 byte-identical; the only two
-differences are the documented native README correction and its ledger.
+No repository Git configuration was changed. The original installation
+checkpoint compared 509 protected files against its then-current HEAD:
+507 were byte-identical, and two differed by the documented native README
+correction and its ledger. This is historical evidence, not a comparison
+against today's HEAD. Current installed ledgers cover 12 ANTEDB files
+(including ten Lean modules) and 469 Gafni--Tao files (463 reachable modules);
+see the parent reproduction manifest for the latest verified snapshot.

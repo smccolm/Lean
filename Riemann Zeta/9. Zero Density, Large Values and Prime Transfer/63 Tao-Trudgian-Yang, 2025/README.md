@@ -40,6 +40,13 @@ Historical checkpoints below retain the evidence and status at their
 dates. This section governs current status; canonical EPZAE checkboxes
 record the completed acceptance tests.
 
+<details>
+<summary>Historical development checkpoints — superseded status and next-step notes</summary>
+
+The material in this block records earlier snapshots. Its OPEN labels, counts
+and instructions are historical, not current obligations. See the current
+completion section and canonical acceptance tests for present status.
+
 ## First frozen endpoint proved by original research (3 October 2026)
 
 Clean kernel check 99612 proves the unchanged `A(39/40)<=16/21`
@@ -7801,6 +7808,8 @@ stationary error, sharp Atkinson assembly and genuine twelfth moment
 remain open. These source consumers assume no analytic theorem. The full goal and counterexample
 are unchanged; the exact batch interface remains part of the goal.
 
+</details>
+
 ## Exact intended outputs
 
 The initial completion contract covers all results advertised by the paper as
@@ -7822,12 +7831,12 @@ project integrity and semantic audits.
 
 ## Main research finding
 
-The live [ANTEDB repository](https://github.com/teorth/expdb) now has a real
-Lean library. At commit
+The [ANTEDB repository](https://github.com/teorth/expdb) snapshot inspected
+on 19 September 2026 has a real Lean library. At the pinned commit
 `088040634e8300f87e80f431d8bdc38c42cc8e11` it contains proved foundations for
 cheap asymptotic notation, automatic uniformity, model phase functions,
 exponential sums, the exponent-sum growth function, Euler--Maclaurin, and
-Fourier/L2 estimates. It does **not** yet contain Lean modules for exponent
+Fourier/L2 estimates. That snapshot does **not** contain Lean modules for exponent
 pairs, large-value exponents, zero-density exponents, or additive-energy
 exponents.
 
@@ -7839,13 +7848,14 @@ graph.
 
 ## Layout
 
-- `Tao-Trudgian-Yang Goal Prompt.md` -- immutable whole-project contract.
-- `Tao-Trudgian-Yang Research Agenda.md` -- staged implementation plan and
-  risk register.
+- `Tao-Trudgian-Yang Goal Prompt.md` -- frozen public outputs, explicit
+  owner-authorized supporting repairs and current maintenance contract.
+- `Tao-Trudgian-Yang Research Agenda.md` -- current semantic evidence and
+  historical implementation plan/risk register.
 - `Tao-Trudgian-Yang Architecture.md` -- dependency graph with checklist
   ownership.
 - `Tao-Trudgian-Yang Checklist.md` -- acceptance tests for every work package.
-- `Tao-Trudgian-Yang Crosswalk.md` -- paper labels, formulas, and planned Lean
+- `Tao-Trudgian-Yang Crosswalk.md` -- paper labels, formulas, and proved Lean
   consumers.
 - `Tao-Trudgian-Yang Sources.md` -- literature, repositories, and reuse survey.
 - `Tao-Trudgian-Yang Reproduction Manifest.md` -- pins and verification policy.
@@ -7858,6 +7868,13 @@ graph.
 - `run_tao_trudgian_yang_build.bat` -- principal human-facing verification
   runner; it builds the unified package and runs every currently installed
   integrity, regression, and audit gate.
+
+<details>
+<summary>Historical development checkpoints — superseded status and next-step notes</summary>
+
+The material in this block records earlier snapshots. Its OPEN labels, counts
+and instructions are historical, not current obligations. See the current
+completion section and canonical acceptance tests for present status.
 
 ## Historical implementation frontier (superseded by the current checkpoint)
 
@@ -8018,6 +8035,8 @@ the pinned archived projection recipes now run in the principal BAT, their
 canonical output is byte-checked, and regeneration consumes that fresh output.
 This historical computation does not replace the independent Lean proofs.
 
+</details>
+
 ## Non-claims
 
 - ANTEDB's Python output is discovery evidence, not Lean proof evidence.
@@ -8036,10 +8055,17 @@ This historical computation does not replace the independent Lean proofs.
 ## Repository synchronization
 
 Use the repository-root `push_to_github.bat` only when deliberately requested.
-Do not add a second synchronization workflow here. A suitable future commit
-message for this scaffold is:
+Do not add a second synchronization workflow here. Supply a commit message
+describing the actual changes; the original scaffold-planning message is no
+longer appropriate for this completed formalization.
 
-`plan Tao-Trudgian-Yang 2025 formalization and pin primary sources`
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
 
 ## Finite stationary reduction checkpoint
 
@@ -20072,3 +20098,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

@@ -75,6 +75,13 @@ The amplitude margin, constants and dyadic losses are absorbed before
 subdivision and the existing multiplicity-faithful density transfer.
 These are new endpoint arguments; the completed source audit is not revised.
 
+<details>
+<summary>Historical development checkpoints — superseded status and next-step notes</summary>
+
+The material in this block records earlier snapshots. Its OPEN labels, counts
+and instructions are historical, not current obligations. See the current
+completion section and canonical acceptance tests for present status.
+
 ## First frozen endpoint proved by original research (3 October 2026)
 
 Clean kernel check 99612 proves the unchanged `A(39/40)<=16/21`
@@ -9294,27 +9301,38 @@ Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
 
+</details>
+
 ## Executive assessment
 
-The repaired energy branch is now complete through all nine Add-est
-outputs (EPZAE-36/37). The exact density/energy transfers and their source
-corollaries are also complete (EPZAE-24/33). Exponent-pair, new density
-outputs and full-release obligations
-remain; see the current checkpoint for exact scope and build evidence.
+All 42 acceptance gates are complete: four new exponent pairs, the three
+new density outputs, all nine Add-est clauses, and the unchanged full density
+table. The exact transfers, both authorized supporting repairs, sharp Atkinson
+source form and release gates are complete. The closed Pintz endpoints were
+proved by original research, not by changing the completed source audit.
+The current semantic account above and reproduction manifest govern status.
 
-This project is feasible as a staged extension of two unusually strong local
-assets:
+The completed extension reuses two principal local assets:
 
 - ANTEDB's newer Lean foundation already models the paper's cheap asymptotic
   language and exponential-sum growth function; and
 - the neighboring Guth--Maynard project already proves the deepest large-value
   and zero-density input used by the 2025 paper.
 
-The main difficulty is not rational arithmetic. It is building faithful
+The main difficulty was not rational arithmetic. It was building faithful
 interfaces between four semantic layers: asymptotic exponential sums,
 large-value patterns, zeta zero counts, and additive energy. The optimization
-should be formalized as proof-producing exact finite certificates only after
-those meanings are fixed.
+is formalized as proof-producing exact finite certificates over those fixed
+meanings. Historical phases and unresolved alternative routes below do not
+reopen completed gates. Independent review remains external.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
 
 ## Historical implementation baseline (19 September 2026)
 
@@ -23830,3 +23848,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

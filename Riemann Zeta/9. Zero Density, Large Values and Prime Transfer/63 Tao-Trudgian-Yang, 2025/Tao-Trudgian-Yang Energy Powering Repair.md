@@ -1,6 +1,23 @@
 # Authorized cardinality/energy powering repair
 
-Current status (27 September 2026): EPZAE-06/11/15/26 are DONE;
+## Current repair and downstream status (4 October 2026)
+
+All **42/42** owner-authorized acceptance gates are complete. Corrected
+EPZAE-34 supplies separate cardinality and energy witnesses, with no false
+`s'/s` scaling. The proved Heath--Brown relation, bounded-range energy
+transfer and exact optimization yield all nine unchanged `Add-est` clauses.
+The independent growth repair and sharp Atkinson obligation are also complete.
+The printed Lemma 62 and its kernel-checked singleton counterexample remain
+permanently preserved; neither is relabeled as a proof of the false statement.
+The contracts and proof account below are current. Explicitly marked
+historical blocks retain earlier counts, status and next-step instructions.
+Current build evidence is in the
+[reproduction manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+<details>
+<summary>Historical September status and Watt checkpoint (superseded)</summary>
+
+Status at 27 September 2026: EPZAE-06/11/15/26 are DONE;
 aggregate 33/42. The universal D-process, Watt and old-pair provenance,
 corrected two-witness powering and all nine Add-est clauses are preserved.
 The principal BAT now replays the pinned historical computations and checks
@@ -31,6 +48,8 @@ preserved. Recovery-record maintenance is permanently skipped.
 See the [closure-first goal](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority) and [reproduction manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
 Earlier checkpoint sections are historical; the frozen public contract is unchanged.
 
+
+</details>
 
 Authorized by the owner on 20 September 2026. This replaces the false
 supporting requirement in EPZAE-34, not any advertised final theorem.
@@ -210,6 +229,9 @@ consumer retains zeta endpoint `1`. The separate exact endpoint-two corollary
 is now proved in `ZeroEndpointTwoBoundedRanges`; the older consumer is preserved.
 This downstream module is also
 imported, inventoried, explicitly audited, and regression-tested.
+
+<details>
+<summary>Historical construction sequence; old OPEN clauses are not current blockers</summary>
 
 ## Completed Heath–Brown analytic step
 
@@ -12901,3 +12923,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

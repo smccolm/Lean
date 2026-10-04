@@ -40,6 +40,13 @@ Historical checkpoints below retain the evidence and status at their
 dates. This section governs current status; canonical EPZAE checkboxes
 record the completed acceptance tests.
 
+<details>
+<summary>Historical development checkpoints — superseded status and next-step notes</summary>
+
+The material in this block records earlier snapshots. Its OPEN labels, counts
+and instructions are historical, not current obligations. See the current
+completion section and canonical acceptance tests for present status.
+
 ## First frozen endpoint proved by original research (3 October 2026)
 
 Clean kernel check 99612 proves the unchanged `A(39/40)<=16/21`
@@ -9282,7 +9289,12 @@ Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
 
-Research checked on 19 September 2026.
+</details>
+
+The survey below records the source state inspected on 19 September 2026,
+not a new web search or today's upstream HEAD. Later acquisition evidence is
+retained in the historical record. The installed inventory is authoritative in
+`Sources/SHA256SUMS.txt` (22 pinned artifacts at final verification).
 
 ## Primary paper
 
@@ -9295,7 +9307,7 @@ estimates: a systematic approach*, arXiv `2501.16779v1`, submitted
 - [experimental HTML](https://arxiv.org/html/2501.16779v1)
 - [Tao's launch post](https://terrytao.wordpress.com/2025/01/28/new-exponent-pairs-zero-density-estimates-and-zero-additive-energy-estimates-a-systematic-approach/)
 
-ArXiv currently lists only v1. The official source archive internally names
+At that survey date arXiv listed only v1. The official source archive internally names
 its main file `Tao_Trudgian_Yang_v2.tex`; the archive version, not that internal
 filename, is the citation authority.
 
@@ -9311,14 +9323,14 @@ Two pins serve different purposes:
 | Purpose | Commit | Date/evidence |
 |---|---|---|
 | paper-time computation | `9953003a48f46fe8075ccf9534321f98f656032e` | last commit before the arXiv v1 submission timestamp |
-| current Lean reuse survey | `088040634e8300f87e80f431d8bdc38c42cc8e11` | repository HEAD inspected 19 September 2026; commit dated 4 September 2026 |
+| selected Lean reuse snapshot | `088040634e8300f87e80f431d8bdc38c42cc8e11` | repository HEAD inspected 19 September 2026; commit dated 4 September 2026 |
 
 The paper-time tree uses Lean `v4.16.0-rc2` and contains only a placeholder
 Lean example. The current tree uses Lean `v4.32.0` and contains 18 substantive
 Lean modules. A source scan found no `sorry`, `admit`, project axiom, unsafe
 proof bypass, or `native_decide` in those modules.
 
-### Current ANTEDB Lean coverage
+### ANTEDB Lean coverage at the surveyed pin
 
 Available modules cover:
 
@@ -9332,9 +9344,10 @@ Available modules cover:
 - Euler--Maclaurin and iterated derivatives; and
 - smooth bump functions and an L2 exponential-sum integral estimate.
 
-No current Lean file defines exponent pairs, large-value exponents,
-zero-density exponents, or additive-energy exponents. These are target work,
-not existing proofs.
+No Lean file at that upstream pin defines exponent pairs, large-value
+exponents, zero-density exponents, or additive-energy exponents. Those objects
+and the required theorem consumers are now implemented in this local target;
+the absence at the surveyed upstream pin is not a current local proof gap.
 
 ## License and redistribution record
 
@@ -9419,6 +9432,9 @@ Lower-priority references used for definitions or background include
 Iwaniec--Kowalski, Tao--Vu, Tao's cheap nonstandard-analysis post, and
 Cladek--Tao on additive energy.
 
+<details>
+<summary>Original complete bibliography triage (historical acquisition and planning status)</summary>
+
 ## Complete bibliography triage
 
 This table covers every item in the primary paper's embedded bibliography.
@@ -9460,7 +9476,9 @@ the crosswalk later promotes it.
 | TY23 | Trudgian--Yang, *Toward optimal exponent pairs* | old hull and beta table | v3 PDF/source pinned |
 | Wat89 | Watt, exponential sums and zeta II | zeta growth/LV input | reference unless a target certificate consumes it |
 
-## Repository search verdict
+</details>
+
+## Repository search verdict (19 September 2026 survey)
 
 The only authoritative public repository found that directly combines the
 paper's formulas with Lean is ANTEDB itself. General web/GitHub searches did
@@ -9468,9 +9486,20 @@ not locate a separate Lean implementation of the four new exponent pairs,
 the paper's zero-density table, or `Add-est`. Unrelated repositories making
 Riemann-hypothesis claims were not treated as sources.
 
-Accordingly, the implementation should collaborate with or track ANTEDB where
-practical, while keeping this repository's stricter no-placeholder and
-exhaustive-audit contract.
+This is a record of the original search, not a claim that every later
+repository has been searched. The local implementation is now complete.
+The owner-directed source audit is closed: do not resume source hunting or
+replace the frozen Pintz endpoints with weaker source-faithful values.
+Any future genuinely new theorem must still satisfy this repository's
+no-placeholder, exact-contract and exhaustive-audit requirements.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
 
 ## Acquisition policy
 
@@ -23016,3 +23045,5 @@ The zero-q proof here uses the ordinary third-derivative theorem with
 finite Abel summation and square-root subdivision, not the sharper
 printed Lemma 3. It proves the sufficient O(M^2) source contribution,
 without claiming the paper's optional additional lambda saving.
+
+</details>

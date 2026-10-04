@@ -1,6 +1,6 @@
 # de Bruijn-Newman Heat-Flow Route
 
-This directory mirrors the corresponding corridor in `The RH Map - Aug 30, 2026 - Mermaid Diagram.txt`. Its numbered child directories reserve stable locations for source material, research notes, and Lean packages as work matures.
+This directory mirrors the corresponding corridor in `The RH Map - Sep 19, 2026 - Mermaid Diagram.txt`. Its numbered child directories reserve stable locations for source material, research notes, and Lean packages as work matures.
 
 - `12 de Bruijn, 1950/`
 - `20 Newman, 1976/`

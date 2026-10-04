@@ -1,6 +1,6 @@
 # Equivalent Criteria and Functional-Analytic Reformulations
 
-This directory mirrors the corresponding corridor in `The RH Map - Aug 30, 2026 - Mermaid Diagram.txt`. Its numbered child directories reserve stable locations for source material, research notes, and Lean packages as work matures.
+This directory mirrors the corresponding corridor in `The RH Map - Sep 19, 2026 - Mermaid Diagram.txt`. Its numbered child directories reserve stable locations for source material, research notes, and Lean packages as work matures.
 
 - `06 Speiser, 1934/`
 - `11 Nyman, 1950/`

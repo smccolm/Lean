@@ -1,5 +1,66 @@
 # Tooling record
 
+## Current verification interface (4 October 2026)
+
+The project is **42/42 complete** under the owner-authorized contracts.
+From the paper directory (the parent of `Tools/`), run:
+
+```powershell
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+```
+
+From `E:/Lean/Riemann Zeta`, also run the foundation gate:
+
+```powershell
+cmd /c run_lake_build.bat --no-pause
+```
+
+Run the two BATs sequentially. Maintain both interfaces after relevant Lean,
+import, audit, inventory, pin, certificate or runner changes; focused Lake
+builds do not replace them. The paper BAT resolves its own directory,
+propagates the verifier's exit code and pauses unless `--no-pause` is used.
+
+The last full paper invocation, 20361, passed 22 source pins, 12 frozen
+ANTEDB files, 469 native dependency files / 463 reachable modules,
+the 1,929-file shortcut scan, 1,455 package files, 8,176 exact regressions,
+22,064 dependency audits, nine archived replay tests, six generator rejection
+tests and byte-exact certificate regeneration. Foundation 73153 also passed.
+Both exited 0 with zero Lean diagnostics. The two archived Python
+invalid-escape SyntaxWarnings remain visible; replay is not proof evidence.
+These are recorded snapshot results, not a claim of a fresh build during
+the documentation audit. See the
+[reproduction manifest](../Tao-Trudgian-Yang%20Reproduction%20Manifest.md)
+for exact logs, hashes and commands.
+
+Current tool roles:
+
+- `verify_sources.ps1`: validate the frozen source inventory and hashes.
+- `verify_gafnitao_sources.ps1`: validate native hashes and full import closure.
+- `setup_paper_time.ps1`: prepare or verify the isolated pinned Python stack.
+- `reproduce_paper_time.py`: replay all nine archived energy recipes and
+  pair/table discovery with explicit adapters; never a Lean proof oracle.
+- `generate_certificates.py`: check fresh replay data and emit deterministic
+  rational certificates consumed by Lean.
+- `run_tao_trudgian_yang_build.ps1`: orchestrate complete source/coverage,
+  shortcut, regeneration, build, warning, regression and dependency gates.
+  The production inventory in this file and the root imports are authoritative;
+  historical module counts below are not a replacement inventory.
+
+The archived five-coordinate powering rule stays frozen and disproved.
+Corrected independent powering witnesses justify the actual Lean energy
+proofs. Replay adapters, closed-endpoint continuation, exact cell coalescing
+and the strict clause-5 relaxation remain documented in the historical
+reproduction account below. Preserve all counterexamples and regressions.
+Recovery-record maintenance is permanently skipped.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
+
 ## Source verification and final endpoint-bridge run (3 October 2026)
 
 The owner-supplied Pintz PDF is now hash-pinned. Both manifest reads in
@@ -19634,3 +19695,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

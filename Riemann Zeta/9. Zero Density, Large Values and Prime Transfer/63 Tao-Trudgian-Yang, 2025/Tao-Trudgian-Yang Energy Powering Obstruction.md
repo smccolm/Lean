@@ -82,13 +82,18 @@ that no erratum exists anywhere. No upstream issue or message was posted.
 This counterexample refutes the required supporting lemma, not the four
 new exponent pairs, the zero-density outputs, or the nine `Add-est`
 clauses. The new proof of `zeroe-from-large` does not use the false lemma.
-The bounded-range corollary remains open and must now consume the proved
-two-witness repair; it must not inherit the disproved fifth-coordinate restriction.
+The bounded-range corollary is now proved by
+`zeroDensityEnergyExponent_le_endpointTwo_bounded_suprema` in
+`ZeroEndpointTwoBoundedRanges.lean`. It consumes the corrected energy
+witness and does not inherit the disproved fifth-coordinate restriction.
 
 Proving the original EPZAE-34 statement literally is impossible. The owner
 has now authorized replacing it by two cardinality/energy witnesses, with
 independent existential fifth coordinates and no `s/k` restriction. The
 repair's general analytic proof is `correctedCardinalityEnergyPowering`.
 Retain this counterexample,
-preserve the original source and final output contracts, and make no
-paper-completion claim. Authorization is no longer a blocker.
+preserve the original source and final output contracts, and never claim a
+proof of the false printed lemma. All 42 owner-authorized acceptance gates
+are now complete; this does not undo the obstruction or prove the original
+EPZAE-34 statement. Authorization is no longer a blocker. See the current
+[reproduction manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).

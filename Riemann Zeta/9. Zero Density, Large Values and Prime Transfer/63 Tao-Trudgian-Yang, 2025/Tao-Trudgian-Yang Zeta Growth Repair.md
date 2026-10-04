@@ -79,9 +79,21 @@ Permanently retain:
 - all existing [Audit.lean](Extension/TaoTrudgianYang2025/Audit.lean) entries
   for these declarations, and the separate energy-powering obstruction and repair.
 
-## Completed acceptance and verification (28 September 2026)
+## Current acceptance
 
-**EPZAE-21 is DONE under the owner-authorized contract; aggregate 34/42.**
+EPZAE-21 is complete and the project aggregate is **42/42** as of
+4 October 2026. The strict `σ>1−τ` repair, sharp Atkinson source form,
+moment transfer, exact reflection, and old-pair consequence below all remain
+required and proved. The two mandatory final BATs pass with 8,176 semantic
+examples and 22,064 paper dependency audits, zero Lean diagnostics.
+The two archived Python SyntaxWarnings are disclosed separately.
+See the [reproduction manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md)
+for the exact snapshot, commands and hashes.
+
+## Initial completion receipt (28 September 2026; historical counts)
+
+**At this checkpoint EPZAE-21 became DONE under the owner-authorized
+contract; the then-current aggregate was 34/42.**
 The separate analytic proof in
 [AtkinsonPrintedSource.lean](Extension/TaoTrudgianYang2025/AtkinsonPrintedSource.lean)
 now supplies the sharp printed source form. The focused build and both

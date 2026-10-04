@@ -40,6 +40,13 @@ Historical checkpoints below retain the evidence and status at their
 dates. This section governs current status; canonical EPZAE checkboxes
 record the completed acceptance tests.
 
+<details>
+<summary>Historical development checkpoints — superseded status and next-step notes</summary>
+
+The material in this block records earlier snapshots. Its OPEN labels, counts
+and instructions are historical, not current obligations. See the current
+completion section and canonical acceptance tests for present status.
+
 ## Integer-tail cardinality checkpoint (4 October 2026)
 
 Scratch 7421 PASSes, exit 0, zero diagnostics, 119 standard-only audits.
@@ -7671,7 +7678,11 @@ See the [closure-first goal](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-
 Earlier checkpoint sections are historical; the frozen public contract is unchanged.
 
 
-No item is complete at scaffold creation. A checked box requires the exact
+</details>
+
+## Canonical acceptance checklist
+
+All 42 items below are complete. A checked box requires the exact
 acceptance test below, not merely a definition, a Python reproduction, or a
 conditional wrapper.
 
@@ -7763,8 +7774,10 @@ additive energy**, the three output families covered by the paper.
   proof CubicJointCount.exponentSumGrowthExponent_le_sargosD on closed [0,1].
   The actual pair consumer exponentPair_sargosD checks both numerical
   secondary-line comparisons. D(Bourgain) and A(D(Bourgain)) are audited.
-  Both mandatory BATs pass: 7,191 regressions, 17,807 principal audits,
-  14,290 foundation audits, zero diagnostics. Aggregate: 32/42.
+  Initial D-process closure passed both mandatory BATs with 7,191 regressions,
+  17,807 principal audits and 14,290 foundation audits; the aggregate at that
+  historical checkpoint was 32/42. The current complete snapshot and counts
+  are recorded at the top of this document and in Reproduction Manifest.
 - [x] **EPZAE-12 -- Heath--Brown derivative input.** The source kth-derivative
   estimate implies the paper's beta formula with all scale/range conditions.
 - [x] **EPZAE-13 -- Beta table.** Every segment consumed by `new-exp-pair` has a
@@ -7882,7 +7895,12 @@ additive energy**, the three output families covered by the paper.
   proves `zetaTwelfth_lower_short_largeValueBound` for sigma >= 7/10 and
   tau >= 7/5; actual cancellation below twice sigma and nine-branch
   certificates supply the full short-zeta range for Add-est (ii). The nearby Gafni--Tao proposition
-  is not used as proof evidence. The historical implementation sequence follows;
+  is not used as proof evidence.
+
+  <details>
+  <summary>Historical EPZAE-21 construction sequence; later closure is recorded above</summary>
+
+  The following OPEN claims and counts are from earlier development checkpoints.
   `ZetaMomentKernel`, `ZetaMomentTransfer`, and `ZetaMomentAsymptotics`
   now prove the actual critical-zeta convolution estimate, weighted
   twelfth-power Hölder, logarithmic-loss absorption, and exact
@@ -8031,6 +8049,8 @@ additive energy**, the three output families covered by the paper.
   The genuine moment is now proved; other source parameters, the sharp
   source-form Atkinson statement and zeta-LV inputs remain open, so
   EPZAE-21 is not closed.
+
+  </details>
 
 ## Zero density
 
@@ -8205,7 +8225,8 @@ additive energy**, the three output families covered by the paper.
   closed-range proofs, consumed by actual corrected witnesses in
   `energyClauseNine_general_bound` and `energyClauseNine_zeta_bound`.
   The source cutoff is tau0=8sigma-4. All nine projections are complete;
-  the independent full release and deterministic replay gates remain open.
+  the independent full release and deterministic replay gates are also
+  complete under EPZAE-06/40.
 - [x] **EPZAE-37 -- Nine new energy estimates.** Every clause of `Add-est` is
   proved on its exact interval and audited.
   Clause (i)'s general intermediate `imphb-lver-ineq` is proved on the exact
@@ -8294,6 +8315,14 @@ The paper-level project is complete only when EPZAE-00 through EPZAE-41 are all
 checked. If one advertised output remains conditional, disconnected from its
 real upstream object, outside the build, or absent from the axiom audit, the
 project remains incomplete.
+
+<details>
+<summary>Historical implementation and verification record — not current status</summary>
+
+All counts, OPEN labels, proposed modules and continuation instructions in
+this block describe their recorded development snapshots. They do not
+override the current completion, contracts or runner instructions above.
+Failed attempts and obsolete plans are retained as history, not new evidence.
 
 ## EPZAE-21 stationary continuation: precise partial completion
 
@@ -20376,3 +20405,5 @@ The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
+
+</details>

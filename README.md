@@ -49,6 +49,38 @@ From that directory:
 cmd /c run_gafni_tao_build.bat --no-pause
 ```
 
+### Tao--Trudgian--Yang 2025
+
+The isolated [node 63 project](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/README.md)
+records all 42 acceptance gates complete under the owner-authorized supporting
+repairs. The four exponent pairs, density outputs, nine additive-energy bounds,
+and unchanged density table are proved; the disputed closed Pintz endpoints
+are original research strengthenings, not reproductions of Pintz's strict-cell
+source theorem. Frozen statements and counterexamples remain preserved.
+
+From that directory:
+
+```powershell
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+```
+
+Its [reproduction manifest](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/Tao-Trudgian-Yang%20Reproduction%20Manifest.md)
+records the separate paper and foundation verification gates. A recorded PASS
+is evidence for its recorded source snapshot, not a fresh build of any checkout.
+
+### Tao 2026
+
+The isolated [node 73 project](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/73%20Tao,%202026/README.md)
+records a verified four-theorem release: Theorems 1.7--1.10, with the documented
+owner-approved endpoint-equivalent PNT and sieve substitutions. This does not
+claim every stronger auxiliary statement in the paper.
+
+From that directory:
+
+```powershell
+cmd /c run_tao_build.bat --no-pause
+```
+
 ### Prime Shell investigation
 
 [`Riemann Zeta/Investigations/PrimeShell/`](Riemann%20Zeta/Investigations/PrimeShell/)
@@ -101,8 +133,11 @@ captures are intentional research artifacts. Their provenance and hashes live
 beside the projects that consume them. Temporary extraction tools, caches,
 logs, backups, and generated page images are excluded from version control.
 
-[`directory_tree.txt`](directory_tree.txt) is a generated, repository-relative
-inventory. Regenerate it from the root with:
+[`directory_tree.txt`](directory_tree.txt) is a historical, repository-relative
+snapshot predating the node-63 formalization, not the current module inventory.
+Use the project READMEs and each runner's coverage inventory for current scope,
+or `git ls-files` for tracked files. Its original regeneration command is below;
+review local scratch/dependency inclusions before replacing the snapshot:
 
 ```powershell
 python list_files.py

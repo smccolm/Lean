@@ -1,4 +1,9 @@
---- Generated repository tree (run python list_files.py) ---
+--- Historical generated repository tree ---
+This snapshot predates the node-63 formalization and is not a current source
+or production-module inventory. Current navigation is in README.md and the
+project READMEs; use git ls-files for the current tracked-file inventory.
+The original regeneration command is python list_files.py; review its local
+scratch/dependency inclusions before replacing this historical snapshot.
 
 ./
 +-- .gitignore
