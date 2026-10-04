@@ -1,5 +1,274 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Current frozen-endpoint completion (4 October 2026)
+
+Acceptance: **42/42 complete, EPZAE-00 through EPZAE-41** under the
+owner-authorized contracts. The frozen endpoint values were NOT replaced.
+
+`PintzTailCorrelationResearch.pintz_tail_research_density` proves
+`A(1-1/(2*n*(n-1)))<=3/(n-1)` for EVERY integer n>=6.
+`PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
+assembles the unchanged complete density envelope on [1/2,1), including
+16/21 at 39/40 and 63/85 at 41/42. The requested
+`LV_zeta(41/42,tau)<=3*tau/170` on [37/7,340/63) remains proved by
+`PintzEndpointResearch.pintz_second_endpoint_research_largeValueBound`.
+These are original RESEARCH STRENGTHENINGS, not reproductions of
+Pintz's strict source cells. The source audit remains complete and unchanged.
+
+The new proof bounds the actual far-correlation sum with original
+ordered-pair multiplicities, derives the original-pattern cardinality bound,
+and discharges the exact epsilon--delta and density-transfer consumers.
+No endpoint or far-correlation estimate is an assumed input.
+Production 50504 and regression 74526 PASS. BOTH principal BATs
+73153/20361 PASS, exit 0: 8,176 exact examples, 1,455 package files and
+22,064 paper dependency audits, with zero Lean diagnostics.
+The archived Python replay retains its two visible SyntaxWarnings;
+they are not Lean proof evidence. Exact commands, hashes and logs are
+in Reproduction Manifest. Only permitted standard logical axioms occur.
+
+All frozen statements, the separate source-faithful table, counterexamples,
+regressions and alternate signed F_out/D_wide research remain preserved.
+The earlier owner-authorized Lemma 62 powering and strict sigma>1-tau
+growth repairs remain explicit; the disproved original statements are
+not relabeled as proved. Recovery-record maintenance is permanently skipped.
+Maintain and rerun `run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after relevant future changes;
+their coverage, audit and zero-Lean-warning gates must not be narrowed.
+This is internal kernel/project completion, not independent peer review.
+
+Historical checkpoints below retain the evidence and status at their
+dates. This section governs current status; canonical EPZAE checkboxes
+record the completed acceptance tests.
+
+### Current production receipt
+
+`lake build TaoTrudgianYang2025.PintzTailCorrelationResearch`,
+session 50504: PASS, exit 0, all 10,555 jobs. The new module's trace
+contains exactly 129 informational standard-only axiom reports and no
+warning/error entries. Only propext, Classical.choice and Quot.sound occur.
+Source SHA-256:
+`3a123b7f15755126a41a4d9b3505ed3e8a1b475acfef401cbd37f7218e70e563`.
+Trace SHA-256:
+`4de552c537487472aded6460a31d5b31aff0550a2c58ab88edce53903acb954b`.
+
+Earlier scratch 14550 proved all integer endpoints with 123 clean audits.
+Complete-table attempt 24318 failed in the final rational identity;
+13807 accepted all 129 proofs but emitted an unnecessary sequencing warning.
+Both issues were corrected before the clean production check 50504.
+The retained scratch now has the identical declaration body (only its
+module introduction differs), SHA-256:
+`5de1c6736c3dea03490fc9ebc2980ca37831d8f6336d0d6001563115b49be7de`.
+No failed or warning-producing attempt is treated as a clean receipt.
+
+39 added regressions preserve all prior examples (8,176 total).
+Full semantic-regression build 74526 PASSes, exit 0, all 10,787 jobs;
+the regression module completed in 616 seconds with zero diagnostics.
+Its trace contains only the normal compiler invocation, no warnings or errors.
+Regression source SHA-256:
+`8dcd4295cae98f525c0a42ea5139bef276b5560ef115876862917dd045655e1a`.
+Regression trace SHA-256:
+`735e94d47375377b4c784d1bac69afd1b11aa0ad3465a282371abaf59f53a361`.
+The root and principal paper runner include the new production module;
+the package audit includes all 129 named theorems. Paper runner SHA-256:
+`b46f03b1a12dbdd98b6677310c3ea56de8cc4ddba2587881b1ae68eb5323bd46`.
+Foundation BAT 73153: FINAL RESULT PASS, exit 0, all 8,857 build jobs.
+Publication contracts, both retained regressions, 7,636 explicit public
+declarations, 14,290 discovered nonprivate foundation theorems and all
+16 declaration linters pass with zero Lean diagnostics. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261004_031844.log`.
+Log SHA-256:
+`34b2c9d18c5202c39eba47e4d496f2b07d4897d2dec8bbd36ef83973d979c7d3`.
+JSON manifest SHA-256:
+`4c44b6c0d2d012cbe3e8f3317c48fd26b7af5136ad2577cb038dc50aba74c107`.
+The paper BAT started only after 73153 finished. Paper 20361:
+FINAL RESULT LEAN VERIFICATION PASS, exit 0, all 10,788 build jobs.
+The same invocation passes 22 source pins, 12 ANTEDB files, 469 Gafni--Tao
+files/463 reachable modules, the 1,929-file shortcut scan, complete coverage
+of 1,455 package files, nine archived replay regressions, six generator
+rejection tests, exact certificate regeneration, all 8,176 semantic examples
+and 22,064 imported/target dependency audits. Log:
+`logs/tao-trudgian-yang-build-20261004-032140-884a7b50.log`.
+Log SHA-256:
+`cc8a0f6eacf29d5542b2650a79f12f9e15c23b23a3e1447cdc2cd598426ba244`.
+The complete log has zero Lean errors, warnings, tactic suggestions or
+linter diagnostics. Exactly two historical Python invalid-escape
+SyntaxWarnings are visible; the frozen replay is not proof evidence.
+Every mathematical dependency is restricted to the permitted standard
+axioms, and no failed stage remains. The source/consumer audit is recorded
+in Crosswalk and Research Agenda, separately from dependency integrity.
+
+Commands (with the pinned `ELAN_HOME`):
+
+```powershell
+# From E:/Lean/Riemann Zeta
+cmd /c run_lake_build.bat --no-pause
+# From the 63 Tao-Trudgian-Yang, 2025 directory
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+```
+
+Only documentation synchronization followed these successful BATs; the
+verified Lean sources, imports, audits and runners were not changed.
+EPZAE-30/39/40/41 are now checked and the acceptance total is 42/42.
+Final mechanical synchronization check: exactly 42 distinct canonical
+EPZAE IDs, all 42 checked; all eight prose status sections and the
+architecture agree. `git diff --check` passes (only the disclosed Git
+line-ending notices). Final proof/regression/runner and protected-artifact
+hash comparisons pass. Additional verified snapshot hashes:
+
+- `Extension/TaoTrudgianYang2025.lean`:
+  `effdede77a2c3657824463691ef8379fc8edf4e91cade121e3cbd868d9adb682`.
+- `Extension/TaoTrudgianYang2025/Audit.lean`:
+  `7606370e42a8bbb46f0366b1a69a9ffa0078daf4b0d138f3dcd2fbfc17170b80`.
+- `run_tao_trudgian_yang_build.bat`:
+  `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+
+Both runs use the dirty working tree based on
+`ef07bf1eecb6ebe3320922f41f36557a328376cd`; no clean commit or external
+peer review is claimed. No concurrent Lean/Lake/scratch runs were used,
+and no recovery-record file was touched.
+
+### Frozen-artifact preservation check (4 October 2026)
+
+The following SHA-256 values match the pre-tail checkpoint byte-for-byte.
+Paths are relative to `Extension/TaoTrudgianYang2025/` except the signed
+Gram scratch. Neither the source-faithful table nor a counterexample was
+rewritten to close the research target.
+
+| Preserved artifact | SHA-256 |
+| --- | --- |
+| `PintzEndpointResearch.lean` | `d7b15421496ff500d76093202bb01114bb777d86a69d147da84c03e14de0b0f0` |
+| `LiteratureDensity.lean` | `83ea5484e2ebe5e905bf90d56f126cdadbab9caabdd870d31f9813def628f2e5` |
+| `EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `ZetaLowHeightObstruction.lean` | `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae` |
+| `ZetaGrowthCorrectedTransfer.lean` | `20ca4c9dade8feaa76c6bd9a28957db6c565d1349a8c91f8e124eb4df5f805dd` |
+| `E:/Lean/.scratch/epzae-pintz-signed-gram-20261003.lean` | `c5d88a447f8e12a8f5f6174e5aaa95a374d06e1e276cb7a0e0085655e3a1e603` |
+
+All 22 pinned source artifacts, 12 frozen ANTEDB files and 469 pinned
+Gafni--Tao files (463 reachable modules) pass the current paper runner's
+integrity checks. Repository-wide searches found no prohibited proof terms
+or postulates; the lexical `constant` matches are comments or ordinary
+rational data fields, also covered by the principal scanner regressions.
+Git's LF-to-CRLF notices are working-tree format notices, not Lean diagnostics.
+No commit, staging, push or recovery-record maintenance was performed.
+
+## First endpoint and finite table: production and BOTH principal BATs PASS
+
+Direct scratch check 99612: PASS, exit 0, zero diagnostics. All 86
+then-present theorems have explicit standard-only axiom reports,
+including `pintz_first_endpoint_research_largeValueBound`,
+`pintz_first_endpoint_research_exponent` and
+`pintz_first_endpoint_research_density`. The frozen first endpoint is
+`A(39/40)<=16/21`; the full required general-LV interval is `[21/8,63/16]`.
+No endpoint hypothesis, source-faithful substitution or external analytic
+assumption is used. All actual mixed-cell, moment and source-entry inputs
+are proved. This is original research, not Pintz boundary reproduction.
+
+The proof is installed as
+`Extension/TaoTrudgianYang2025/PintzFirstEndpointResearch.lean`, with an
+additional finite-table assembly theorem, 87 public package audits,
+eight exact-signature regressions, root import and explicit BAT inventory.
+Production SHA-256 before its first build result:
+`ff8c1d4182947d54b9e71dfd118ff8994bf2ac2f2a2c8e6f7e44cf5cbafc5d98`.
+Focused Lake build 45018 PASSes, exit 0, all 10,554 jobs. Its trace has
+exactly 87 informational axiom reports, no warning/error entries, and
+SHA-256 `0e32ea3bd5654bda8cac3b054926c8b82f67e06603e7cad37d5b4877b2c10012`.
+The additional `zeroDensityExponent_le_printedFinite` theorem proves the
+entire unchanged finite table on [1/2,59/60), with both finite endpoints
+included and no substitute table. Huxley and its downstream dependencies
+rebuilt successfully after the previously private curvature count was
+made public; that theorem's proof is unchanged and its audit is added.
+Full semantic-regression build 34366 PASSes, exit 0, all 10,786 jobs;
+all 8,137 exact examples compile with zero diagnostics. Regression source
+SHA-256 `c05d6b1b0b7376e1a0ade122c86e5d17afae636f6a44cf8323f6f3860f4a66db`;
+trace SHA-256 `cb7dd5f99e234cc14f029079585e295c3af6549b62a653e472557c7b61001a0e`.
+Both principal BATs ran sequentially after focused checks finished, with
+no overlapping Lean/Lake/scratch job. Foundation 11101: FINAL RESULT PASS,
+exit 0, all 8,857 build jobs, 7,636 explicit declarations, 14,290 discovered
+nonprivate foundation theorems, publication contracts, regressions and
+16 declaration linters pass. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_232017.log`;
+SHA-256 `8ff3cb3bc3456c3572637eea632586f41e331b70bd44ae10f8c4074a128ca95b`.
+Paper 82140: FINAL RESULT LEAN VERIFICATION PASS, exit 0, all 10,787
+build jobs, 1,454 production package files, 8,137 exact examples and
+21,604 imported/target declaration audits pass. Log:
+`logs/tao-trudgian-yang-build-20261003-232642-18a66da7.log`;
+SHA-256 `636e29a8959e91622a1d777dc58b0caeb91f15fc3c3bcd1da20b915419a80814`.
+Both runs have zero Lean errors, warnings, suggestions or linter diagnostics.
+The paper's archived Python replay retains two visible invalid-escape
+SyntaxWarnings; all nine replay checks and six generator rejection tests pass.
+Earlier 78591/25859 receipts below are historical. Tail scratch work resumed
+only after both current BATs exited; it is not included in their production scope.
+
+Tail research remains outside production. Both BATs 11101/82140 still
+verify the unchanged production scope only.
+
+Current tail checkpoint (4 October 2026): scratch 7421 PASSes, exit 0,
+zero diagnostics, 119 explicit standard-only audits. The actual-kernel
+source entry and both Abel errors, critical VMVT insertion, complete
+dyadic far moment and near Gram absorption are checked.
+With p=n*(n-1), rho=101/(100*p), the actual far sum satisfies
+`U^p<=N^(2*epsilon)*(R^(2*p-1)*N^(p-1+rho+epsilon)+R^(2*p)*N^(p-1-1/100))`.
+The original-pattern cardinality consumer derives
+`R<=N^(6/(5*p))` for every n>=6, one positive amplitude tolerance,
+and the full physical range
+`N^(n-2+2/n-1/(10000*n))<=T<=N^(n-1)`.
+All local occupancy and moment inputs are discharged internally.
+Next: subdivision, exact LV strip, unchanged integer density endpoint,
+full table, production integration and both BATs. Acceptance stays 38/42.
+SHA-256 at checkpoint 7421:
+`e910dd5e7a3ae555e9469dec24f571d1605bbf2765031fae2411a367b6e0d5b8`.
+
+Earlier full far-count scratch check 32442
+PASSes, exit 0, zero Lean diagnostics, 71 explicit standard-only audits.
+`tailMixedPairs_card_far` proves the FULL actual mixed-cell count
+<=N^(99/100), uniformly for all n>=6, including both displacement branches,
+the adaptive integer block, physical-scale discharge and absorption of
+order-dependent constants. The next obligations are native same-height
+count, original joint critical moment and Gram absorption; the unchanged
+integer-tail endpoint remains OPEN. This is original endpoint research.
+Earlier small-shift-only checkpoint 41840 had 65 clean audits and SHA-256:
+`212eb2da2ab6937c2e92ae6f3b1f7faa28043f781bb69b3dc9fbec516d1c6157`.
+Command: `lake env lean E:\Lean\.scratch\epzae-pintz-tail-correlation-20261003.lean`
+from the paper Extension directory, with the pinned toolchain.
+No recovery-record maintenance. Production remains exactly the scope
+verified by principal BATs 11101/82140; aggregate stays 38/42.
+
+Earlier scratch check 9965 PASSes,
+exit 0, zero diagnostics, all 52 explicit audits standard-only. Both actual
+mixed-cell counting branches and their original finite sums are proved;
+physical-scale discharge, combined far-power saving and endpoint remain
+OPEN. SHA-256 at this checkpoint:
+`655a0010cc969a95a7a7a9961db406396db57aed37960206a887654c4a6969d0`.
+No recovery-record file was touched. Production is unchanged since
+principal BATs 11101/82140 PASS; scratch work continues outside that scope.
+
+Earlier scratch check 84411 PASSes,
+exit 0, zero diagnostics, all 33 explicit audits standard-only, including
+the actual fixed-shift Taylor-cell consumer and general-order stationary
+inverse-root displacement. SHA-256 at this checkpoint:
+`e3a8e21c46494e6388a16da306d812f425c2147c207349a7e1d23f8d15a6b672`.
+This is not an integer-tail endpoint proof. Mathematical work continues.
+
+Historical initial scratch check 44827 PASSes,
+exit 0, zero diagnostics, all nine explicit audits standard-only.
+Its SHA-256 is
+`45d5a6b4865e1effcf7731ac4fd8b6e8e0ad8ff500d640c201cd3f1306b86cd2`.
+These are actual curve and near-level counting theorems, not an endpoint
+proof. The exact remaining source-entry/count obligations are in Agenda
+and Goal Prompt. No recovery-record file was created or edited.
+
+Protected files are byte-for-byte unchanged: LiteratureDensity
+`83ea5484e2ebe5e905bf90d56f126cdadbab9caabdd870d31f9813def628f2e5`,
+EnergyPoweringObstruction
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`,
+ZetaLowHeightObstruction
+`6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`,
+and ZetaGrowthCorrectedTransfer
+`20ca4c9dade8feaa76c6bd9a28957db6c565d1349a8c91f8e124eb4df5f805dd`.
+The signed-correlation scratch, all frozen statements, counterexamples
+and prior regressions are preserved. Integer-tail endpoint research and
+EPZAE-30/39/40/41 remain OPEN; acceptance remains 38/42.
+
 ## Owner-directed signed-correlation research (3 October 2026)
 
 ### Exact second-endpoint research proof (58511)
@@ -50,10 +319,29 @@ all build, publication-contract, regression, 14,290-theorem audit and
 16-linter gates pass. Log
 `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_193638.log`, SHA-256
 `b6b4e719a8b773eb0a82abcba3ecabbab9a71191c94418fdffdff7a01c895cb0`.
-The subsequent paper rerun 25859 is running, log
+The subsequent paper rerun 25859: FINAL RESULT LEAN VERIFICATION PASS,
+exit 0. Log
 `logs/tao-trudgian-yang-build-20261003-193946-b87dd07b.log`.
-Full post-fix package verification is not yet claimed. No Lean/Lake check
-overlaps either BAT.
+SHA-256 `13ddb6e91a765d99f57dd51ee4438628e7dcf8f42c240c7c882436b21f8178aa`.
+Its complete Lake build passes all 10,786 jobs, including the corrected
+8,129-example SemanticRegression module. Direct semantic regression also
+passes, as does the exhaustive transitive audit: 15,144 nonprivate target
+theorems, 6,240 pinned native-source theorems, and 21,389 total imported and
+target declarations have permitted dependencies. All 70 new public audits
+pass. Complete coverage is 1,453 package files; the shortcut scan covers
+1,927 Lean files. Source pins, replay and certificate regeneration pass.
+The completed log has zero Lean errors, warnings, tactic suggestions or
+linter diagnostics. Exactly two frozen historical Python SyntaxWarnings
+remain visible. No failed stage remains in this final run.
+Both post-fix BATs PASS; no Lean/Lake check overlapped either BAT.
+During verification, an external `Progress Update` commit advanced HEAD
+to `ef07bf1eecb6ebe3320922f41f36557a328376cd` at 19:45:18 local time.
+The agent did not stage, commit or push. The tested endpoint module's hash
+remains `d7b15421496ff500d76093202bb01114bb777d86a69d147da84c03e14de0b0f0`,
+and the corrected regression file remains
+`68473f4a438139c03e8d97cf89b8dc0fbcf9cfa9a1ccc01978876fc8e7ff0048`.
+The earlier foundation receipts correctly record the pre-commit dirty
+checkout; no mathematical source change is inferred from a commit alone.
 Earlier development failures are not proof evidence and their elaborator
 error dependencies are absent from the successful 58511 audit.
 Acceptance remains 38/42: the first and integer-tail frozen endpoints

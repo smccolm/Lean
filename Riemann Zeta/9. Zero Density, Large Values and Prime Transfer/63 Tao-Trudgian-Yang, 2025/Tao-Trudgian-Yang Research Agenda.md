@@ -1,6 +1,208 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
+## Current frozen-endpoint completion (4 October 2026)
+
+Acceptance: **42/42 complete, EPZAE-00 through EPZAE-41** under the
+owner-authorized contracts. The frozen endpoint values were NOT replaced.
+
+`PintzTailCorrelationResearch.pintz_tail_research_density` proves
+`A(1-1/(2*n*(n-1)))<=3/(n-1)` for EVERY integer n>=6.
+`PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
+assembles the unchanged complete density envelope on [1/2,1), including
+16/21 at 39/40 and 63/85 at 41/42. The requested
+`LV_zeta(41/42,tau)<=3*tau/170` on [37/7,340/63) remains proved by
+`PintzEndpointResearch.pintz_second_endpoint_research_largeValueBound`.
+These are original RESEARCH STRENGTHENINGS, not reproductions of
+Pintz's strict source cells. The source audit remains complete and unchanged.
+
+The new proof bounds the actual far-correlation sum with original
+ordered-pair multiplicities, derives the original-pattern cardinality bound,
+and discharges the exact epsilon--delta and density-transfer consumers.
+No endpoint or far-correlation estimate is an assumed input.
+Production 50504 and regression 74526 PASS. BOTH principal BATs
+73153/20361 PASS, exit 0: 8,176 exact examples, 1,455 package files and
+22,064 paper dependency audits, with zero Lean diagnostics.
+The archived Python replay retains its two visible SyntaxWarnings;
+they are not Lean proof evidence. Exact commands, hashes and logs are
+in Reproduction Manifest. Only permitted standard logical axioms occur.
+
+All frozen statements, the separate source-faithful table, counterexamples,
+regressions and alternate signed F_out/D_wide research remain preserved.
+The earlier owner-authorized Lemma 62 powering and strict sigma>1-tau
+growth repairs remain explicit; the disproved original statements are
+not relabeled as proved. Recovery-record maintenance is permanently skipped.
+Maintain and rerun `run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after relevant future changes;
+their coverage, audit and zero-Lean-warning gates must not be narrowed.
+This is internal kernel/project completion, not independent peer review.
+
+Historical checkpoints below retain the evidence and status at their
+dates. This section governs current status; canonical EPZAE checkboxes
+record the completed acceptance tests.
+
+### Current endpoint semantic audit
+
+Public names below are in `TaoTrudgianYang2025.PintzTailCorrelationResearch`.
+The consuming object is the original `LargeValuePattern`: literal closed
+integer support [N,2N], arbitrary one-bounded complex coefficients,
+one-separated actual ordinates in an interval of length T, and their
+actual Dirichlet-polynomial lower bound V. `IsLargeValueBound` retains
+every epsilon, one uniform C and positive delta, and both physical
+height/amplitude tolerance bands. `zeroDensityExponent` is the infimum
+of bounds on `paperZeroCount`, with analytic multiplicity and the
+real-part shift; no scalar proxy replaces it.
+
+| Public consumer | Actual input discharged / exact output |
+| --- | --- |
+| `tailMixedPairs_card_far` | Both geometric displacement branches; actual mixed-cell count <=N^(99/100). |
+| `tail_endpoint_kernel_moment` | Actual logarithmic kernel, both finite-interval Abel errors, proved native critical VMVT, adaptive block and original difference multiplicities. |
+| `tail_endpoint_far_moment` | Every dyadic far slab; logarithmic cost absorbed, no externally supplied far estimate. |
+| `tail_endpoint_gram` | Literal signed Gram identity and analytic Heath--Brown near-frequency bound. |
+| `tail_endpoint_card` | Original R<=N^(6/(5*n*(n-1))) for every n>=6 through the CLOSED height T=N^(n-1); one positive amplitude tolerance. |
+| `tail_endpoint_largeValueBound_uniform` | Actual coefficient-preserving ordinate subdivision; full epsilon--delta statement including the closed top height. |
+| `pintz_tail_research_exponent` | LV(1-1/(2*n*(n-1)),tau)<=3*tau/(2*n*(n-1)^2), for 2*(n-1)/3<=tau<=n-1. |
+| `pintz_tail_research_density` | Exact frozen A(1-1/(2*n*(n-1)))<=3/(n-1), every integer n>=6. |
+| `zeroDensityExponent_le_printedTable` | Entire unchanged table on 1/2<=sigma<1, using the previously proved finite endpoints and strict-cell interior bounds. |
+| `printedDensityTable_tail_lower` | The table itself has the frozen endpoint value 3/(n-1), not the source-faithful weaker value. |
+
+The analytic chain has no conclusion-shaped assumptions. It inserts
+`GafniTao.heathBrownVMVTMainConjecture_native.critical` and
+`GafniTao.heathBrownCriticalMoment_bound`, derives local occupancy,
+and aggregates the actual difference pairs before Holder.
+With p=n*(n-1), rho=101/(100*p), the far bound is
+`U^p<=N^(2*epsilon)*(R^(2*p-1)*N^(p-1+rho+epsilon)+R^(2*p)*N^(p-1-1/100))`.
+The amplitude margin, constants and dyadic losses are absorbed before
+subdivision and the existing multiplicity-faithful density transfer.
+These are new endpoint arguments; the completed source audit is not revised.
+
+## First frozen endpoint proved by original research (3 October 2026)
+
+Clean kernel check 99612 proves the unchanged `A(39/40)<=16/21`
+endpoint and `LV(39/40,tau)<=2*tau/105` throughout
+`21/8<=tau<=63/16`. The new proof is installed in
+`Extension/TaoTrudgianYang2025/PintzFirstEndpointResearch.lean`;
+production build 45018 PASSes, exit 0, with all 87 theorem audits clean.
+The complete frozen finite table on [1/2,59/60) is also now proved,
+including both disputed finite endpoints. Eight new exact regressions
+are installed. Full regression 34366 and BOTH principal BATs 11101/82140
+PASS, exit 0: 8,137 exact examples, 21,604 paper dependency audits and
+zero Lean diagnostics. Exact receipts are in Reproduction Manifest.
+This is a RESEARCH STRENGTHENING, not a changed source contract or a
+claim that Pintz's strict cells include their boundaries.
+
+The actual far-kernel sum over original ordered ordinate pairs satisfies
+`U^20<=N^(1/500)*(R^39*N^(3811/200+1/10000)+R^40*N^(1899/100))`.
+All multiplicities are retained. Reciprocal-cubic curvature bounds the
+actual mixed cells; native same-height counting, local occupancy, joint
+critical VMVT, both Abel errors and Gram absorption are discharged.
+The resulting original-pattern bound is `R<=N^(7/100)`, uniformly for
+`N^(18/5)<=T<=N^(79/20)` and `V>=N^(39/40-delta)` with one positive
+delta. Exact epsilon--delta and density-transfer consumers close 16/21.
+
+The second endpoint 63/85 remains proved. Only the integer-tail research
+strengthenings remain among these endpoint targets. Keep EPZAE-30/39/40/41
+OPEN and 38/42 until the unchanged all-integer contract closes. Preserve
+all frozen statements, counterexamples, regressions, F_out and D_wide.
+No source hunt or recovery-record maintenance is needed. Older first-
+and second-endpoint-open checkpoints below are historical.
+
 ## Owner-directed endpoint research (3 October 2026)
+
+Current tail checkpoint (4 October 2026): scratch 7421 PASSes, exit 0,
+zero diagnostics, 119 explicit standard-only audits. The actual-kernel
+source entry and both Abel errors, critical VMVT insertion, complete
+dyadic far moment and near Gram absorption are checked.
+With p=n*(n-1), rho=101/(100*p), the actual far sum satisfies
+`U^p<=N^(2*epsilon)*(R^(2*p-1)*N^(p-1+rho+epsilon)+R^(2*p)*N^(p-1-1/100))`.
+The original-pattern cardinality consumer derives
+`R<=N^(6/(5*p))` for every n>=6, one positive amplitude tolerance,
+and the full physical range
+`N^(n-2+2/n-1/(10000*n))<=T<=N^(n-1)`.
+All local occupancy and moment inputs are discharged internally.
+Next: subdivision, exact LV strip, unchanged integer density endpoint,
+full table, production integration and both BATs. Acceptance stays 38/42.
+SHA-256 at checkpoint 7421:
+`e910dd5e7a3ae555e9469dec24f571d1605bbf2765031fae2411a367b6e0d5b8`.
+
+Earlier full far-count checkpoint (4 October 2026): scratch 32442 PASSes,
+exit 0, zero diagnostics, 71 explicit standard-only theorem audits.
+`tailMixedPairs_card_far` proves the FULL actual mixed-cell count
+<=N^(99/100) at every n>=6, for the far cutoff
+Delta>=N^(n-2+2/n-1/(10000*n)), T<=N^(n-1), and t,u in [T,2*T].
+Its block is the actual ceiling of N/T^(1/n). Both displacement cases,
+every curvature, error and range premise, and constant absorption are
+discharged. The large-shift physical sum including its fibre-size factor
+is <=12*N^(59/60); N^(1/150) absorbs the order-dependent constants.
+Next: native same-height count -> original joint critical moment ->
+Gram absorption -> unchanged all-integer tail. The endpoint is OPEN;
+no far-count assumption remains in the checked count theorem.
+Earlier small-shift-only checkpoint 41840 had 65 clean audits and SHA-256
+`212eb2da2ab6937c2e92ae6f3b1f7faa28043f781bb69b3dc9fbec516d1c6157`.
+Production remains at BOTH-BAT 11101/82140 PASS; scratch is outside that
+scope. Acceptance remains 38/42. No recovery-record file was touched.
+
+Earlier tail checkpoint (4 October 2026): scratch check 9965 PASSes,
+exit 0, zero diagnostics, 52 explicit standard-only theorem audits.
+`tailMixedPairs_card_stationary` assembles the actual general-order
+large-shift count from derived positive labels, uniform quadratic curve
+error, equal-label/equal-shift uniqueness, fibre diameter and a single
+bounded-ratio curvature count, including all integer translation losses.
+`tailMixedPairs_card_fixed_shifts` assembles the small-shift count,
+including the finite sum over every original mixed pair. Both consume
+the literal overlap set. Their explicit numerical smallness premises
+still require discharge from the linked N,T,H,Delta scales; neither
+assumes a count, spacing bound, far-correlation estimate or endpoint.
+Next: physical-scale discharge and the combined power-saving far count,
+then the actual joint critical moment, Gram absorption and integer tail.
+Scratch SHA-256 at this checkpoint:
+`655a0010cc969a95a7a7a9961db406396db57aed37960206a887654c4a6969d0`.
+Production remains at BOTH-BAT 11101/82140 PASS. The tail remains outside
+production and unproved as an endpoint; aggregate remains 38/42.
+
+Earlier tail checkpoint (4 October 2026): scratch check 84411 PASSes,
+exit 0, with 33 explicit standard-only audits and zero diagnostics.
+`curved_bounded_range_card` and `mixedShift_near_integer_card` now prove
+the bounded-image fixed-shift count. `tailFixedShiftIndices_card` consumes
+the literal finite Taylor-cell overlap set: it derives the short interval,
+integer labels, derivative bounds, positive curvature and image range.
+Only its explicit numerical smallness condition needs physical-scale
+discharge. Both signs, general degree and no-winding top coordinate are
+proved. `stationaryProduct_quadratic_error` and
+`stationary_inverse_root_displacement` establish the general-order
+quadratic stationary cancellation for the large-shift branch.
+
+Remaining: sum the small-shift fibres with their linked physical scales;
+complete the general reciprocal-root label count and its source consumer;
+combine the two far-overlap bounds; assemble the actual joint critical
+moment, Gram absorption and all-integer endpoint. Use the existing genuine
+`LargeValuePattern.localized` and `card_le_of_localized` to handle the
+closed top height boundary without allowing a winding top coordinate.
+This is substantive far-correlation research, not an endpoint proof yet.
+The integer tail and EPZAE-30/39/40/41 remain OPEN, aggregate 38/42.
+
+Historical initial continuation after the first-endpoint proof: the remaining tail
+is original research, not a literature-reproduction gap. Scratch
+`E:/Lean/.scratch/epzae-pintz-tail-correlation-20261003.lean` passes check
+44827 with nine standard-only theorem audits and zero diagnostics.
+It proves the exact fixed-label curve, its first/second derivatives,
+its entry from actual real mixed coefficients, and its precise curvature
+error in terms of the top mixed coefficient. The alternative fixed-shift
+route now also has a proved counting input:
+`curved_single_level_card` bounds a finite integer set by
+`4+4*sqrt(eta/mu)` when its function values lie within eta of one level
+and the graph has lower curvature mu. The proof constructs two short
+clusters from the actual three-point convexity inequality; no cardinality
+or spacing bound is assumed.
+
+Next: prove the bounded-range version and consume it on the actual
+fixed-shift logarithmic coefficients. A nearly stationary top coefficient
+should constrain both the range and curvature of the next coefficient.
+Combine this small-index-difference count with the general-order analogue
+of the proved reciprocal-cubic counting route for larger differences.
+Both source entries and all scale inequalities remain proof obligations;
+the integer-tail endpoint and aggregate gates are still OPEN. This is a
+specific analytic route being implemented, not an asserted endpoint bound.
+
 
 ACTIVE original research, superseding the earlier impasse checkpoints.
 The source audit is COMPLETE. Disputed closed Pintz endpoints are now
@@ -14,7 +216,7 @@ preserved, not assumed as missing majorants. Acceptance remains 38/42:
 the first and integer-tail research strengthenings and aggregate
 EPZAE-30/39/40/41 stay OPEN.
 
-## Exact second endpoint (scratch check 58511)
+## Exact second endpoint (production and BOTH BATs verified)
 
 The exact LV target on [37/7,340/63) and A(41/42)<=63/85 are now proved
 in the retained scratch, with zero diagnostics and permitted logical
@@ -23,9 +225,11 @@ not reinterpret Pintz Theorem 1 or replace any frozen statement.
 The dependency-selected proof is installed in
 `Extension/TaoTrudgianYang2025/PintzEndpointResearch.lean`; direct check
 72099 is clean. All 70 public audits, eight package regressions, root
-import and principal BAT inventory are updated. Paper BAT 98577 found one
-regression-name ambiguity, now qualified; BOTH BATs are being rerun.
-Foundation 10502 passed previously. Full package verification is not yet claimed.
+import and principal BAT inventory are updated. BOTH final BATs 78591/25859
+PASS, exit 0, with zero Lean diagnostics: 8,129 exact examples and 21,389
+paper dependency audits. The earlier regression-name ambiguity is fixed.
+Two historical Python SyntaxWarnings remain visible; exact logs and hashes
+are recorded in Reproduction Manifest.
 
 The actual joint cell multiplicity nu has first integral R*|indices|*v
 and second integral <=(3*R*N+R^2*N^(19/20))*v, where v=64/H^21 and
@@ -44,7 +248,7 @@ window and zero-density transfer prove the frozen 63/85 value.
 Exact consumers: `pintz_second_endpoint_research_largeValueBound`,
 `pintz_second_endpoint_research_exponent` and
 `pintz_second_endpoint_research_density`. No count, moment or desired
-endpoint bound is a premise. Next: installed-package checks, then the
+endpoint bound is a premise. Installed-package checks now pass. Next is the
 remaining first and integer-tail endpoint research. Acceptance stays
 38/42; EPZAE-30/39/40/41 remain OPEN. Earlier checkpoints below are
 historical, including their now-superseded second-endpoint status.

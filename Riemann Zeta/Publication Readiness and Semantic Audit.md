@@ -6,6 +6,17 @@ This document is the project's adversarial review packet. It records an internal
 
 ## 1. One-page claim sheet
 
+Scope addendum (4 October 2026): the foundation claim sheet below is unchanged.
+The separate Tao--Trudgian--Yang extension now has a production-kernel-checked
+proof of the frozen density envelope, including the disputed closed Pintz
+endpoints by original research. Its
+[semantic crosswalk](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/Tao-Trudgian-Yang%20Crosswalk.md)
+unfolds the original large-value patterns, epsilon--delta quantifiers and
+multiplicity-weighted zero count. Its checklist and reproduction manifest
+govern the separate paper scope; foundation `PASS` alone does not certify it.
+The source audit and counterexamples are preserved. No new source attribution,
+independent semantic review or peer-reviewed acceptance is claimed.
+
 ### What is claimed
 
 - Lean 4, using the pinned toolchain and dependencies, accepts the public theorems listed below.

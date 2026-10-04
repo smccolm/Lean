@@ -18,6 +18,13 @@ The frozen package and its unchanged `RiemannZeta.*` declaration namespaces now 
 
 The empty numbered node directories are structural placeholders, not formalization claims.
 
+Node 63 now includes the [Tao--Trudgian--Yang endpoint research](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/README.md).
+Its production theorem `PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
+proves the frozen density envelope on `[1/2,1)`, including the disputed closed
+Pintz endpoints by original far-correlation arguments. No weaker source-faithful
+table replaces them. This is a separate extension of the foundation above;
+its checklist and reproduction manifest record the independent paper BAT gate.
+
 ---
 
 ## Package Structure

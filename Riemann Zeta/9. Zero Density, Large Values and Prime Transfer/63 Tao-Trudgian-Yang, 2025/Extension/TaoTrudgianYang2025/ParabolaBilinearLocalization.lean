@@ -38388,7 +38388,9 @@ private theorem triangular_displacement_derivative_bounds
     show lam*k/(27*1*U^3)=2*(lam*k/(54*U^3)) by ring] at hh
   constructor <;> nlinarith only [hh.1,hh.2]
 
-private theorem positive_second_derivative_count_optimized
+/-- Optimized near-integer counting from actual positive second derivatives.
+Public so endpoint spacing arguments can reuse the proved Fourier estimate. -/
+theorem positive_second_derivative_count_optimized
     (G G₁ G₂ : ℝ → ℝ) (a : ℝ) (N : ℕ) (I : Finset ℕ)
     {C μ η : ℝ} (hC : 1 ≤ C) (hμ : 0 < μ) (hη : 0 ≤ η)
     (hG : ∀ z∈Icc a (a+N), HasDerivAt G (G₁ z) z)

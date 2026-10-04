@@ -1447,5 +1447,7 @@ import TaoTrudgianYang2025.HuxleyModelNondegeneracy
 import TaoTrudgianYang2025.HuxleyLinearForms
 import TaoTrudgianYang2025.LiteratureDensity
 import TaoTrudgianYang2025.PintzEndpointResearch
+import TaoTrudgianYang2025.PintzFirstEndpointResearch
+import TaoTrudgianYang2025.PintzTailCorrelationResearch
 import TaoTrudgianYang2025.IvicNineteenthDensity
 import TaoTrudgianYang2025.CDVMixedDensity

@@ -1,5 +1,8 @@
 flowchart TD
-%% RESEARCH ENDPOINT CHECK 72099: PintzEndpointResearch proves the exact LV_zeta(41/42,tau)<=3*tau/170 strip and A(41/42)<=63/85, via actual mixed-cell counts, joint critical VMVT, source-entry and scale absorption. Foundation BAT 10502 PASS; paper BAT 98577 found one regression-name ambiguity, now qualified; BOTH BATs are being rerun. First and integer-tail endpoints remain OPEN; aggregate stays 38/42. All frozen statements are preserved. Earlier checkpoint comments are historical.
+%% CURRENT COMPLETION (4 October 2026): 42/42, EPZAE-00--41 DONE under owner-authorized contracts. The complete unchanged density table, including 16/21, 63/85 and EVERY integer endpoint 3/(n-1), is production-kernel-checked by zeroDensityExponent_le_printedTable. Production 50504, regression 74526 and BOTH principal BATs 73153/20361 PASS, exit 0; 8176 examples, 22064 paper dependency audits, zero Lean diagnostics. Closed Pintz endpoints remain original RESEARCH STRENGTHENINGS, not strict-cell source reproduction. All frozen statements, source audits, counterexamples and F_out/D_wide are preserved. Recovery-record maintenance skipped. Earlier dated status comments are historical, not current authority.
+%% CURRENT INTEGER-TAIL RESEARCH: scratch 7421 PASS, zero diagnostics, 119 standard-only audits. Actual source entry, critical VMVT scale assembly, full dyadic far moment and near Gram absorption CHECKED. Original-pattern R<=N^(6/(5*n*(n-1))) proved for n>=6 through T=N^(n-1). Next: subdivision -> exact LV strip -> frozen integer density endpoint -> full table and production/BAT verification. Production unchanged, 38/42.
+%% CURRENT FINITE TABLE: clean production 45018 proves unchanged A(39/40)<=16/21, its full general-LV strip and the entire frozen finite table on [1/2,59/60). Both finite endpoints use actual mixed-cell curvature, original-difference multiplicities, critical moments and Gram absorption. BOTH principal BATs 11101/82140 PASS, exit 0; 8137 exact examples and 21604 paper dependency audits, zero Lean diagnostics. Integer tail remains OPEN; aggregate 38/42. Older endpoint-open checkpoints are historical.
+%% VERIFIED RESEARCH ENDPOINT: PintzEndpointResearch proves the exact LV_zeta(41/42,tau)<=3*tau/170 strip and A(41/42)<=63/85, via actual mixed-cell counts, joint critical VMVT, source-entry and scale absorption. BOTH final BATs 78591/25859 PASS, exit 0, zero Lean diagnostics; 8129 exact examples and 21389 paper dependency audits pass. First and integer-tail endpoints remain OPEN; aggregate stays 38/42. All frozen statements are preserved. Earlier checkpoint comments are historical.
 %% OWNER-DIRECTED RESEARCH (3 October 2026): ACTIVE original research; earlier impasse checkpoints are historical. Source audit COMPLETE. Disputed closed Pintz endpoints are RESEARCH STRENGTHENINGS; every frozen target is preserved, no weaker substitution. First target LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63); attack actual far correlation, not source hunting or known-majorant obstructions. EPZAE-30/39/40/41 OPEN, 38/42.
 %% HISTORICAL ENDPOINT IMPASSE BEFORE OWNER-DIRECTED RESTART (3 October 2026): third resumed check still lacked the uniform far-correlation/positive-LV input. Additional primary sources and an external Lean repository supplied no closing contract; see Sources. The goal was blocked at that checkpoint; it is now ACTIVE original research as directed above. No analytic acceptance gate closed. That source-only continuation made no code/BAT change; its last actual BATs were 89353/41454 PASS.
 %% CONTINUATION VERIFICATION (3 October 2026): foundation BAT 89353 and paper BAT 41454 PASS, exit 0, zero Lean diagnostics; 21206 paper dependency audits and separate semantic regression pass. Exact logs/hashes in Reproduction Manifest. No mathematical gate closes; original EPZAE-30/39/40/41 remain OPEN, 38/42.
@@ -743,24 +746,50 @@ flowchart TD
     OBD["EPZAE-29 exact eight-piece bound DONE;<br/>optimizedBourgain_bound, 3/4 &lt; sigma &lt; 1;<br/>all eight analytic inputs discharged;<br/>exact regressions, audits and BOTH BATs PASS"]
     BZCL["EPZAE-29 genuine analytic convex limit<br/>closed k and affine-range boundaries DONE"]
     BZOPT["EPZAE-29 eight exact analytic pair consumers<br/>three actual inputs discharged;<br/>five-input conditional assembly DONE"]
-    ZTAB["EPZAE-30 frozen density envelope OPEN;<br/>source audit COMPLETE;<br/>closed Pintz endpoints: RESEARCH STRENGTHENINGS;<br/>second endpoint A(41/42)<=63/85 CHECKED;<br/>first 16/21 and integer-tail 3/(n-1) remain OPEN;<br/>earlier signed F_out and D_wide research routes preserved"]
+    ZTAB["EPZAE-30 unchanged COMPLETE density envelope DONE;<br/>zeroDensityExponent_le_printedTable on [1/2,1);<br/>16/21, 63/85 and ALL n>=6 values 3/(n-1) preserved;<br/>closed Pintz endpoints are RESEARCH STRENGTHENINGS;<br/>regressions, audits and BOTH BATs PASS;<br/>source audit, counterexamples, F_out and D_wide preserved"]
+    TAILCOUNT["EPZAE-30 all-order mixed cells DONE;<br/>both displacement branches give N^(99/100);<br/>native same-height count and actual local occupancy"]
+    TAILMOM["EPZAE-30 actual far-correlation moment DONE;<br/>all ordered-difference multiplicities;<br/>critical VMVT, both Abel errors and dyadic scales"]
+    TAILEND["EPZAE-30 ALL integer endpoints KERNEL-CHECKED 50504;<br/>Gram gives original R <= N^(6/(5*n*(n-1)));<br/>actual subdivision, epsilon-delta LV and density transfer;<br/>A(1-1/(2*n*(n-1))) <= 3/(n-1), n>=6"]
+    TAYVMVT --> TAILCOUNT
+    TAYVMVT --> TAILMOM
+    TAILCOUNT --> TAILMOM
+    NEP -- "actual near-frequency absorption" --> TAILEND
+    TAILMOM --> TAILEND
+    ZDT --> TAILEND
+    TAILEND --> ZTAB
+    class TAILCOUNT,TAILMOM,TAILEND done;
+    QCOUNT["EPZAE-30 first-endpoint actual mixed cells CHECKED;<br/>reciprocal-cubic curvature gives far count N^(99/100);<br/>native same-height count N^(1+epsilon)"]
+    QMOM["EPZAE-30 original-difference joint 20th moment CHECKED;<br/>all multiplicities and actual interval preserved;<br/>local occupancy, native VMVT and both Abel errors discharged"]
+    QEND["EPZAE-30 first frozen endpoint VERIFIED;<br/>Gram absorption gives R at most N^(7/100);<br/>exact general-LV strip and A(39/40) at most 16/21;<br/>production 45018 and BOTH BATs 11101/82140 PASS"]
+    QFINITE["EPZAE-30 full frozen finite table CHECKED 45018;<br/>every sigma in [1/2,59/60), both endpoints included;<br/>zeroDensityExponent_le_printedFinite;<br/>no source-faithful substitution"]
+    ML --> QCOUNT
+    TAYVMVT --> QCOUNT
+    QCOUNT --> QMOM
+    NEP -- "actual local occupancy and near absorption" --> QEND
+    QMOM --> QEND
+    ZDT --> QEND
+    QEND --> ZTAB
+    QEND --> QFINITE
+    TAYEND --> QFINITE
+    QFINITE --> ZTAB
+    class QCOUNT,QMOM,QEND,QFINITE done;
     TAYCOUNT["EPZAE-30 original-research mixed-cell counts CHECKED MODULE 72099;<br/>all far gaps>N^(10/3): at most N^(19/20) pairs;<br/>same heights: at most 3N;<br/>actual log cells, all labels, N^5<=T<=N^(27/5)"]
     TAYMOM["EPZAE-30 joint multiplicity + critical 42nd moment CHECKED MODULE 72099;<br/>aggregate BEFORE Holder; native VMVT inserted;<br/>actual source-entry and both Abel errors discharged"]
-    TAYEND["EPZAE-30 second-endpoint research proof CHECKED MODULE 72099;<br/>original count at most N^(9/100); exact LV strip;<br/>A(41/42) at most 63/85; post-install BATs pending"]
-    TAYVMVT["Pinned Gafni--Tao coefficient cells,<br/>Abel transfer and critical degree-six VMVT<br/>AVAILABLE and kernel-audited"]
+    TAYEND["EPZAE-30 second-endpoint research proof DONE;<br/>original count at most N^(9/100); exact LV strip;<br/>A(41/42) at most 63/85; BOTH BATs 78591/25859 PASS"]
+    TAYVMVT["Pinned Gafni--Tao coefficient cells,<br/>Abel transfer and critical VMVT at all orders<br/>AVAILABLE and kernel-audited"]
     TAYVMVT --> TAYCOUNT
     TAYVMVT --> TAYMOM
     TAYCOUNT --> TAYMOM
     TAYMOM --> TAYEND
     RS02D -- "actual local occupancy and separated subset" --> TAYEND
-    ZDT -- "existing general LV window + lower zeta strip" --> TAYEND
+    ZDT -- "multiplicity-weighted zero-density transfer" --> TAYEND
     TAYEND --> ZTAB
     class TAYVMVT available;
     class TAYCOUNT,TAYMOM,TAYEND done;
     SFENV["EPZAE-30 separate source-faithful envelope CHECKED;<br/>every sigma in [1/2,1), no endpoint holes;<br/>source-valid tail index + exact boundary regressions;<br/>weaker boundary values do NOT close literal acceptance"]
-    EPPAIR["EPZAE-30 positive endpoint-pair bridges CHECKED;<br/>first A <= 3560/4399; all-tail improved bounds;<br/>first exact LV interval closed through 135765/36668;<br/>stronger printed endpoints still OPEN"]
+    EPPAIR["EPZAE-30 positive endpoint-pair bridges CHECKED;<br/>first lower general-LV range feeds new full endpoint proof;<br/>all-tail improved bounds retained;<br/>integer-tail printed endpoint still OPEN"]
     NEP --> EPPAIR
-    EPPAIR -. "narrows first residual interval" .-> ZTAB
+    EPPAIR --> QEND
     OBD --> SFENV
     HBD --> SFENV
     GM --> SFENV
@@ -864,8 +893,8 @@ flowchart TD
     NAE["EPZAE-37 nine new additive-energy bounds<br/>all clauses (i)--(ix) full source theorems DONE"]
 
     PUB["EPZAE-38 exact public assembly DONE;<br/>existing root exports four pairs, three density outputs,<br/>and all nine Add-est clauses on full source domains"]
-    SEM["EPZAE-39 semantic regressions<br/>OPEN"]
-    REL["EPZAE-40--41 release reproduction<br/>and synchronized documentation<br/>OPEN"]
+    SEM["EPZAE-39 semantic regressions DONE;<br/>8176 exact examples, all finite crossovers;<br/>universal integer endpoints and actual source consumers"]
+    REL["EPZAE-40--41 reproduction and documentation DONE;<br/>BOTH principal BATs 73153/20361 PASS, exit 0;<br/>22064 paper dependency audits, zero Lean diagnostics;<br/>source replay, certificate regeneration and 42/42 synchronized"]
 
     ML --> TC
     ED --> TC
@@ -2278,7 +2307,7 @@ flowchart TD
     class ZLRMC,ZLRME,ZLRSA,ZLRC done;
     class GEN done;
     class BT,NEP,OBD,PUB done;
-    class ZTAB,SEM,REL open;
+    class ZTAB,SEM,REL done;
     class ZMF,ZLV,ZAT done;
     class PR done;
     class EPLVG,EPLVR,BZDL,BZDZ,AGEN,AGEP,AGPR,ISXP done;

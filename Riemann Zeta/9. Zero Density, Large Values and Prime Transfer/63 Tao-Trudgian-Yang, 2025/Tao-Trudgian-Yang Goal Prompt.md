@@ -1,5 +1,76 @@
 # Whole-proof operational goal prompt
 
+## Current frozen-endpoint completion (4 October 2026)
+
+Acceptance: **42/42 complete, EPZAE-00 through EPZAE-41** under the
+owner-authorized contracts. The frozen endpoint values were NOT replaced.
+
+`PintzTailCorrelationResearch.pintz_tail_research_density` proves
+`A(1-1/(2*n*(n-1)))<=3/(n-1)` for EVERY integer n>=6.
+`PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
+assembles the unchanged complete density envelope on [1/2,1), including
+16/21 at 39/40 and 63/85 at 41/42. The requested
+`LV_zeta(41/42,tau)<=3*tau/170` on [37/7,340/63) remains proved by
+`PintzEndpointResearch.pintz_second_endpoint_research_largeValueBound`.
+These are original RESEARCH STRENGTHENINGS, not reproductions of
+Pintz's strict source cells. The source audit remains complete and unchanged.
+
+The new proof bounds the actual far-correlation sum with original
+ordered-pair multiplicities, derives the original-pattern cardinality bound,
+and discharges the exact epsilon--delta and density-transfer consumers.
+No endpoint or far-correlation estimate is an assumed input.
+Production 50504 and regression 74526 PASS. BOTH principal BATs
+73153/20361 PASS, exit 0: 8,176 exact examples, 1,455 package files and
+22,064 paper dependency audits, with zero Lean diagnostics.
+The archived Python replay retains its two visible SyntaxWarnings;
+they are not Lean proof evidence. Exact commands, hashes and logs are
+in Reproduction Manifest. Only permitted standard logical axioms occur.
+
+All frozen statements, the separate source-faithful table, counterexamples,
+regressions and alternate signed F_out/D_wide research remain preserved.
+The earlier owner-authorized Lemma 62 powering and strict sigma>1-tau
+growth repairs remain explicit; the disproved original statements are
+not relabeled as proved. Recovery-record maintenance is permanently skipped.
+Maintain and rerun `run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after relevant future changes;
+their coverage, audit and zero-Lean-warning gates must not be narrowed.
+This is internal kernel/project completion, not independent peer review.
+
+Historical checkpoints below retain the evidence and status at their
+dates. This section governs current status; canonical EPZAE checkboxes
+record the completed acceptance tests.
+
+## First frozen endpoint proved by original research (3 October 2026)
+
+Clean kernel check 99612 proves the unchanged `A(39/40)<=16/21`
+endpoint and `LV(39/40,tau)<=2*tau/105` throughout
+`21/8<=tau<=63/16`. The new proof is installed in
+`Extension/TaoTrudgianYang2025/PintzFirstEndpointResearch.lean`;
+production build 45018 PASSes, exit 0, with all 87 theorem audits clean.
+The complete frozen finite table on [1/2,59/60) is also now proved,
+including both disputed finite endpoints. Eight new exact regressions
+are installed. Full regression 34366 and BOTH principal BATs 11101/82140
+PASS, exit 0: 8,137 exact examples, 21,604 paper dependency audits and
+zero Lean diagnostics. Exact receipts are in Reproduction Manifest.
+This is a RESEARCH STRENGTHENING, not a changed source contract or a
+claim that Pintz's strict cells include their boundaries.
+
+The actual far-kernel sum over original ordered ordinate pairs satisfies
+`U^20<=N^(1/500)*(R^39*N^(3811/200+1/10000)+R^40*N^(1899/100))`.
+All multiplicities are retained. Reciprocal-cubic curvature bounds the
+actual mixed cells; native same-height counting, local occupancy, joint
+critical VMVT, both Abel errors and Gram absorption are discharged.
+The resulting original-pattern bound is `R<=N^(7/100)`, uniformly for
+`N^(18/5)<=T<=N^(79/20)` and `V>=N^(39/40-delta)` with one positive
+delta. Exact epsilon--delta and density-transfer consumers close 16/21.
+
+The second endpoint 63/85 remains proved. Only the integer-tail research
+strengthenings remain among these endpoint targets. Keep EPZAE-30/39/40/41
+OPEN and 38/42 until the unchanged all-integer contract closes. Preserve
+all frozen statements, counterexamples, regressions, F_out and D_wide.
+No source hunt or recovery-record maintenance is needed. Older first-
+and second-endpoint-open checkpoints below are historical.
+
 ## Owner-directed endpoint research (3 October 2026)
 
 ACTIVE original research. Preserve EVERY frozen end statement; the
@@ -10,9 +81,10 @@ the max formula with strict cell boundaries, and its boundary arithmetic
 does not supply 16/21, 63/85, or 3/(n-1). Earlier impasse/source-search
 checkpoints below are historical, not the current operating direction.
 
-First target: LV_zeta(41/42,tau)<=3*tau/170 for
-37/7<=tau<340/63. Work directly on the already established actual far
-correlation sum after signed Gram reduction and near-frequency absorption.
+The first research target is now proved:
+LV_zeta(41/42,tau)<=3*tau/170 for 37/7<=tau<340/63, and A(41/42)<=63/85.
+Its actual mixed-height critical-moment proof and final BAT verification
+are recorded below. Preserve the earlier signed far-correlation work.
 New analytic decompositions, spectral arguments, bilinear forms and higher
 moments are authorized. Conditional wrappers, scalar obstruction lemmas,
 weaker substitutes and further demonstrations that known majorants fail
@@ -36,14 +108,65 @@ ordinate count is <=N^(9/100); no endpoint bound is assumed.
 The dependency-selected `PintzEndpointResearch.lean` is now installed
 and directly checked in 72099, with all 70 public audits, eight package
 regressions, the root import and principal BAT inventory updated.
-Complete and record BOTH post-install BATs before claiming package
-acceptance. Paper BAT 98577 found a regression-name ambiguity, now fixed;
-BOTH BATs are being rerun (foundation 78591 first). Continue
+BOTH final BATs PASS, exit 0: foundation 78591 and paper 25859. The full
+8,129-example regression suite and 21,389 paper dependency audits pass,
+with zero Lean diagnostics. The earlier regression-name ambiguity is fixed;
+Reproduction Manifest retains its failed receipt and the successful reruns.
+Continue
 with the still-open first and integer-tail research strengthenings;
 38/42 and EPZAE-30/39/40/41 remain open. The source audit is unchanged.
 Preserve F_out, D_wide, all frozen statements and every counterexample.
 The research checkpoints below are historical and superseded wherever
 they describe the second endpoint as unproved.
+
+The first density value A(39/40)<=16/21 and its full required general-LV
+range are now proved by the original far-correlation argument above.
+Next unchanged research contract: for every integer n>=6,
+retain A(1-1/(2*n*(n-1)))<=3/(n-1). A sufficient remaining general-LV
+strip is LV(1-1/(2*n*(n-1)),tau)<=3*tau/(2*n*(n-1)^2) for
+n-2+2/n<=tau<=n-1; its required zeta range is already proved.
+This is a research target, not an assumed input or completed table row.
+
+Current tail-research DAG (no change to the acceptance contract):
+actual fixed-shift logarithmic coefficients -> short stationary interval
+and bounded coefficient range -> curved near-integer fibre count ->
+small-index-difference overlap bound; in parallel, general-order
+reciprocal-root curvature -> large-index-difference overlap bound;
+combine both actual counts -> original-difference critical moment ->
+Gram absorption -> all-integer endpoint. Scratch 32442 now checks the
+FULL actual far-count power saving `tailMixedPairs_card_far`: at every
+n>=6, the original mixed-cell count is at most N^(99/100), for
+Delta>=N^(n-2+2/n-1/(10000*n)), T<=N^(n-1), and t,u in [T,2*T].
+Both displacement cases are proved, with adaptive block ceil(N/T^(1/n))
+and ALL geometric smallness premises discharged. The large-shift physical
+terms satisfy 12*N^(59/60), and the fixed constants are absorbed into
+N^(1/150). All 71 explicit audits are standard-only, zero diagnostics.
+Scratch 7421 now checks 119 standard-only audits with zero diagnostics.
+The actual Abel/source entry, critical VMVT scale assembly, all dyadic
+far correlations and near-frequency Gram absorption are proved.
+`tail_endpoint_card` consumes the ORIGINAL pattern and gives
+`R<=N^(6/(5*n*(n-1)))` throughout
+`N^(n-2+2/n-1/(10000*n))<=T<=N^(n-1)`, for all n>=6, with one
+positive amplitude tolerance. No local occupancy or correlation bound
+remains assumed in this consumer. Next: actual-pattern subdivision,
+exact large-values strip, frozen integer density endpoint, full-table
+assembly, production integration and BOTH principal BATs.
+Acceptance remains 38/42 until the unchanged contract and checks close.
+This is original research; the completed source audit remains frozen.
+Use existing actual-pattern subdivision at the closed top height boundary.
+These are checked analytic counts, not an assumed far estimate or a
+completed endpoint. Preserve the alternate fixed-label route.
+
+Earlier scratch 84411 checks the
+bounded-range count AND its actual fixed-shift overlap-set consumer,
+general-degree source coordinates, quadratic stationary cancellation
+and inverse-root displacement (33 clean explicit audits). Next: discharge
+the fixed-shift numerical smallness and sum actual fibres; prove the
+general reciprocal-root label count and its actual source consumer.
+Use existing actual-pattern subdivision at the closed top height boundary.
+Neither combined far count nor integer endpoint is proved yet. No missing
+bound may be supplied as a premise to an endpoint consumer. Preserve the
+existing fixed-label curve identities as an alternate research route.
 
 Earlier research checkpoint: the existing signed-Gram scratch checks
 the actual cubic far-matrix reduction, uniform absorption of repeated

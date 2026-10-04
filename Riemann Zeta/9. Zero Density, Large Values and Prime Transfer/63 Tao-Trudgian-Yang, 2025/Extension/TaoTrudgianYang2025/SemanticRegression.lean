@@ -83617,3 +83617,213 @@ example : ∃ C : ℝ, 1 ≤ C ∧ ∃ K : ℝ, 0 < K ∧
   logarithmicTaylor_joint_critical
 
 end PintzEndpointResearchRegression
+
+section PintzFirstEndpointResearchRegression
+
+open TaoTrudgianYang2025.PintzFirstEndpointResearch
+
+example : ∀ τ : ℝ, 135765/36668 < τ → τ ≤ 63/16 →
+    IsLargeValueBound (39/40) τ (2*τ/105) :=
+  fun _ hlo hhi => pintz_first_endpoint_research_largeValueBound hlo hhi
+
+example : ∀ τ : ℝ, 21/8 ≤ τ → τ ≤ 63/16 →
+    largeValueExponent (39/40) τ ≤ ((2*τ/105 : ℝ) : EReal) :=
+  fun _ hlo hhi => pintz_first_endpoint_research_exponent hlo hhi
+
+example : TaoTrudgianYang2025.zeroDensityExponent (39/40) ≤ ((16/21 : ℝ) : EReal) :=
+  pintz_first_endpoint_research_density
+
+example : ∀ σ : ℝ, 1/2 ≤ σ → σ < 59/60 →
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤
+      ((LiteratureTable.printedFiniteDensityTable σ):EReal) :=
+  fun _ hlo hhi => zeroDensityExponent_le_printedFinite hlo hhi
+
+example : ∃ δ : ℝ, 0 < δ ∧ δ ≤ 1/100000 ∧ ∃ C : ℝ, 4 ≤ C ∧
+    ∀ P : LargeValuePattern, C ≤ P.N → P.N^(39/40-δ : ℝ) ≤ P.V →
+    P.N^((18:ℝ)/5) ≤ P.T → P.T ≤ P.N^((79:ℝ)/20) →
+    (P.ordinates.card:ℝ) ≤ P.N^((7:ℝ)/100) := quartic_first_endpoint_card
+
+example : ∃ δ : ℝ, 0 < δ ∧ δ ≤ 1/100000 ∧ ∃ C : ℝ, 4 ≤ C ∧
+    ∀ P : LargeValuePattern, C ≤ P.N → P.N^(39/40-δ : ℝ) ≤ P.V →
+    P.N^((18:ℝ)/5) ≤ P.T → P.T ≤ P.N^((79:ℝ)/20) →
+    (quarticFarKernelSum P)^20 ≤ P.N^((1:ℝ)/500)*
+      ((P.ordinates.card:ℝ)^39*P.N^(3811/200+1/10000 : ℝ)+
+        (P.ordinates.card:ℝ)^40*P.N^((1899:ℝ)/100)) := quartic_first_endpoint_far_moment
+
+example : ∃ δ : ℝ, 0 < δ ∧ δ ≤ 1/100000 ∧ ∃ C : ℝ, 4 ≤ C ∧
+    ∀ P : LargeValuePattern, C ≤ P.N → P.N^(39/40-δ : ℝ) ≤ P.V →
+    ∀ x : ℝ, ((P.ordinates.filter (fun y => |x-y| ≤ P.N^((18:ℝ)/5))).card:ℝ) ≤
+      P.N^((11:ℝ)/200) := quartic_first_endpoint_local_occupancy
+
+example : ∃ C : ℝ, 4 ≤ C ∧ ∀ P : LargeValuePattern, C ≤ P.N →
+    P.N^((97499:ℝ)/100000) ≤ P.V →
+    (P.ordinates.card:ℝ)^2*P.V^2 ≤
+      (P.ordinates.card:ℝ)*P.N^(2+1/1000 : ℝ)+8*P.N*quarticFarKernelSum P :=
+  quartic_first_endpoint_gram
+
+end PintzFirstEndpointResearchRegression
+
+section PintzTailCorrelationResearchRegression
+
+open TaoTrudgianYang2025.PintzTailCorrelationResearch
+
+/-- Frozen integer endpoints, with their universal integer quantifier. -/
+example {n : ℕ} (hn : 6 ≤ n) :
+    TaoTrudgianYang2025.zeroDensityExponent (1-1/(2*(n:ℝ)*((n:ℝ)-1))) ≤
+      ((3/((n:ℝ)-1):ℝ):EReal) := pintz_tail_research_density hn
+
+example : TaoTrudgianYang2025.zeroDensityExponent (59/60) ≤ ((3/5:ℝ):EReal) := by
+  have hh := pintz_tail_research_density (n:=6) (by omega)
+  norm_num at hh
+  exact hh
+
+example : TaoTrudgianYang2025.zeroDensityExponent (83/84) ≤ ((1/2:ℝ):EReal) := by
+  have hh := pintz_tail_research_density (n:=7) (by omega)
+  norm_num at hh
+  exact hh
+
+example : TaoTrudgianYang2025.zeroDensityExponent (3443/3444) ≤ ((3/41:ℝ):EReal) := by
+  have hh := pintz_tail_research_density (n:=42) (by omega)
+  norm_num at hh
+  exact hh
+
+example {k : ℕ} (hk : 4 ≤ k) {τ : ℝ} (hτ : τ ≤ (k:ℝ)+1) :
+    IsLargeValueBound (1-1/(2*((k:ℝ)+2)*((k:ℝ)+1))) τ
+      (6/(5*((k:ℝ)+2)*((k:ℝ)+1))) := tail_endpoint_largeValueBound_uniform hk hτ
+
+example {n : ℕ} (hn : 6 ≤ n) {τ : ℝ}
+    (hlo : 2*((n:ℝ)-1)/3 ≤ τ) (hhi : τ ≤ (n:ℝ)-1) :
+    largeValueExponent (1-1/(2*(n:ℝ)*((n:ℝ)-1))) τ ≤
+      ((3*τ/(2*(n:ℝ)*((n:ℝ)-1)^2):ℝ):EReal) :=
+  pintz_tail_research_exponent hn hlo hhi
+
+example {n : ℕ} (hn : 6 ≤ n) :
+    largeValueExponent (1-1/(2*(n:ℝ)*((n:ℝ)-1))) ((n:ℝ)-1) ≤
+      ((3*((n:ℝ)-1)/(2*(n:ℝ)*((n:ℝ)-1)^2):ℝ):EReal) := by
+  have hnr : (6:ℝ) ≤ n := by exact_mod_cast hn
+  exact pintz_tail_research_exponent hn (by linarith only [hnr]) le_rfl
+
+example : IsLargeValueBound (59/60) 5 (1/25) := by
+  have hh := tail_endpoint_largeValueBound_uniform (k:=4) (by omega)
+    (τ:=5) (by norm_num)
+  norm_num at hh
+  exact hh
+
+/-- Exact public envelope, not the weaker source-faithful substitute. -/
+example {σ : ℝ} (hlo : 1/2 ≤ σ) (hhi : σ < 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((printedDensityTable σ):EReal) :=
+  zeroDensityExponent_le_printedTable hlo hhi
+
+example {n : ℕ} (hn : 6 ≤ n) :
+    printedDensityTable (1-1/(2*(n:ℝ)*((n:ℝ)-1))) = 3/((n:ℝ)-1) :=
+  printedDensityTable_tail_lower hn
+
+example : printedDensityTable (59/60) = (3/5:ℝ) := by
+  have hh := printedDensityTable_tail_lower (n:=6) (by omega)
+  norm_num at hh
+  exact hh
+
+example : printedDensityTable (83/84) = (1/2:ℝ) := by
+  have hh := printedDensityTable_tail_lower (n:=7) (by omega)
+  norm_num at hh
+  exact hh
+
+example : printedTailIndex (59/60) = 6 :=
+  printedTailIndex_eq (n:=6) (by omega) (by norm_num) (by norm_num)
+
+example : printedTailIndex (83/84) = 7 :=
+  printedTailIndex_eq (n:=7) (by omega) (by norm_num) (by norm_num)
+
+example {σ : ℝ} (hlo : 59/60 ≤ σ) (hhi : σ < 83/84) :
+    printedDensityTable σ = 3/(6*(1-10*(1-σ))) := by
+  have hh := printedDensityTable_of_tail_cell hlo (n:=6) (by omega)
+    (by norm_num; exact hlo) (by norm_num; exact hhi)
+  norm_num at hh
+  exact hh
+
+example {k : ℕ} (hk : 4 ≤ k) :
+    ∃ δ : ℝ, 0 < δ ∧ δ ≤ 1/(100000*(((k:ℝ)+2)*((k:ℝ)+1))^2) ∧
+      ∃ C : ℝ, 4 ≤ C ∧ ∀ P : LargeValuePattern, C ≤ P.N →
+      P.N^(1-1/(2*((k:ℝ)+2)*((k:ℝ)+1))-δ) ≤ P.V →
+      P.N^((k:ℝ)+2/((k:ℝ)+2)-1/(10000*((k:ℝ)+2))) ≤ P.T →
+      P.T ≤ P.N^(k+1) →
+      (P.ordinates.card:ℝ) ≤ P.N^(6/(5*((k:ℝ)+2)*((k:ℝ)+1))) := tail_endpoint_card hk
+
+example {k : ℕ} (hk : 4 ≤ k) {ε : ℝ} (hε : 0 < ε) :
+    let p := 2*GafniTao.heathBrownCriticalMoment (k+2)
+    ∃ δ : ℝ, 0 < δ ∧ δ ≤ 1/(100000*(((k:ℝ)+2)*((k:ℝ)+1))^2) ∧
+      ∃ C : ℝ, 4 ≤ C ∧ ∀ P : LargeValuePattern, C ≤ P.N →
+      P.N^(1-1/(2*((k:ℝ)+2)*((k:ℝ)+1))-δ) ≤ P.V →
+      P.T ≤ P.N^(k+1) → ∀ L : ℝ, P.N^k ≤ L → L ≤ P.T →
+      (tailFarKernelSum P L)^p ≤
+        P.N^(2*ε)*((P.ordinates.card:ℝ)^(2*p-1)*
+          P.N^((p:ℝ)-1+101/(100*((k:ℝ)+2)*((k:ℝ)+1))+ε)+
+          (P.ordinates.card:ℝ)^(2*p)*P.N^((p:ℝ)-1-1/100)) := tail_endpoint_far_moment hk hε
+
+example : printedDensityTable (1/2) = (3/(2-(1/2)):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (7/10) = (3/(2-(7/10)):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (19/25) = (9/(8*(19/25)-2):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (127/167) = (15/(13*(127/167)-3):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (13/17) = (6/(5*(13/17)-1):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (17/22) = (2/(9*(17/22)-6):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (41/53) = (9/(7*(41/53)-1):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (7/9) = (9/(8*(2*(7/9)-1)):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (1867/2347) = (3/(2*(1867/2347)):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (4/5) = (3/(2*(4/5)):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (7/8) = (3/(10*(7/8)-7):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (279/314) = (24/(30*(279/314)-11):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (155/174) = (24/(30*(155/174)-11):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (9/10) = (24/(30*(9/10)-11):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (31/34) = (3/(10*(31/34)-7):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (14/15) = (391/(2493*(14/15)-2014):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (2841/3016) = (22232/(163248*(2841/3016)-134765):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (859/908) = (356/(2742*(859/908)-2279):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (23/24) = (3/(24*(23/24)-20):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (2211487/2274732) = (86152/(1447460*(2211487/2274732)-1311509):ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (39/40) = (16/21:ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+example : printedDensityTable (41/42) = (63/85:ℝ) := by
+  norm_num [printedDensityTable, LiteratureTable.printedFiniteDensityTable]
+
+end PintzTailCorrelationResearchRegression

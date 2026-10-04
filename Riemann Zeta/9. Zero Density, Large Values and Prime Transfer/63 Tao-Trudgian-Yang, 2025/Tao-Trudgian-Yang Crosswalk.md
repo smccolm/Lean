@@ -1,5 +1,111 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
+## Current frozen-endpoint completion (4 October 2026)
+
+Acceptance: **42/42 complete, EPZAE-00 through EPZAE-41** under the
+owner-authorized contracts. The frozen endpoint values were NOT replaced.
+
+`PintzTailCorrelationResearch.pintz_tail_research_density` proves
+`A(1-1/(2*n*(n-1)))<=3/(n-1)` for EVERY integer n>=6.
+`PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`
+assembles the unchanged complete density envelope on [1/2,1), including
+16/21 at 39/40 and 63/85 at 41/42. The requested
+`LV_zeta(41/42,tau)<=3*tau/170` on [37/7,340/63) remains proved by
+`PintzEndpointResearch.pintz_second_endpoint_research_largeValueBound`.
+These are original RESEARCH STRENGTHENINGS, not reproductions of
+Pintz's strict source cells. The source audit remains complete and unchanged.
+
+The new proof bounds the actual far-correlation sum with original
+ordered-pair multiplicities, derives the original-pattern cardinality bound,
+and discharges the exact epsilon--delta and density-transfer consumers.
+No endpoint or far-correlation estimate is an assumed input.
+Production 50504 and regression 74526 PASS. BOTH principal BATs
+73153/20361 PASS, exit 0: 8,176 exact examples, 1,455 package files and
+22,064 paper dependency audits, with zero Lean diagnostics.
+The archived Python replay retains its two visible SyntaxWarnings;
+they are not Lean proof evidence. Exact commands, hashes and logs are
+in Reproduction Manifest. Only permitted standard logical axioms occur.
+
+All frozen statements, the separate source-faithful table, counterexamples,
+regressions and alternate signed F_out/D_wide research remain preserved.
+The earlier owner-authorized Lemma 62 powering and strict sigma>1-tau
+growth repairs remain explicit; the disproved original statements are
+not relabeled as proved. Recovery-record maintenance is permanently skipped.
+Maintain and rerun `run_lake_build.bat --no-pause` and
+`run_tao_trudgian_yang_build.bat --no-pause` after relevant future changes;
+their coverage, audit and zero-Lean-warning gates must not be narrowed.
+This is internal kernel/project completion, not independent peer review.
+
+Historical checkpoints below retain the evidence and status at their
+dates. This section governs current status; canonical EPZAE checkboxes
+record the completed acceptance tests.
+
+### Current endpoint semantic audit
+
+Public names below are in `TaoTrudgianYang2025.PintzTailCorrelationResearch`.
+The consuming object is the original `LargeValuePattern`: literal closed
+integer support [N,2N], arbitrary one-bounded complex coefficients,
+one-separated actual ordinates in an interval of length T, and their
+actual Dirichlet-polynomial lower bound V. `IsLargeValueBound` retains
+every epsilon, one uniform C and positive delta, and both physical
+height/amplitude tolerance bands. `zeroDensityExponent` is the infimum
+of bounds on `paperZeroCount`, with analytic multiplicity and the
+real-part shift; no scalar proxy replaces it.
+
+| Public consumer | Actual input discharged / exact output |
+| --- | --- |
+| `tailMixedPairs_card_far` | Both geometric displacement branches; actual mixed-cell count <=N^(99/100). |
+| `tail_endpoint_kernel_moment` | Actual logarithmic kernel, both finite-interval Abel errors, proved native critical VMVT, adaptive block and original difference multiplicities. |
+| `tail_endpoint_far_moment` | Every dyadic far slab; logarithmic cost absorbed, no externally supplied far estimate. |
+| `tail_endpoint_gram` | Literal signed Gram identity and analytic Heath--Brown near-frequency bound. |
+| `tail_endpoint_card` | Original R<=N^(6/(5*n*(n-1))) for every n>=6 through the CLOSED height T=N^(n-1); one positive amplitude tolerance. |
+| `tail_endpoint_largeValueBound_uniform` | Actual coefficient-preserving ordinate subdivision; full epsilon--delta statement including the closed top height. |
+| `pintz_tail_research_exponent` | LV(1-1/(2*n*(n-1)),tau)<=3*tau/(2*n*(n-1)^2), for 2*(n-1)/3<=tau<=n-1. |
+| `pintz_tail_research_density` | Exact frozen A(1-1/(2*n*(n-1)))<=3/(n-1), every integer n>=6. |
+| `zeroDensityExponent_le_printedTable` | Entire unchanged table on 1/2<=sigma<1, using the previously proved finite endpoints and strict-cell interior bounds. |
+| `printedDensityTable_tail_lower` | The table itself has the frozen endpoint value 3/(n-1), not the source-faithful weaker value. |
+
+The analytic chain has no conclusion-shaped assumptions. It inserts
+`GafniTao.heathBrownVMVTMainConjecture_native.critical` and
+`GafniTao.heathBrownCriticalMoment_bound`, derives local occupancy,
+and aggregates the actual difference pairs before Holder.
+With p=n*(n-1), rho=101/(100*p), the far bound is
+`U^p<=N^(2*epsilon)*(R^(2*p-1)*N^(p-1+rho+epsilon)+R^(2*p)*N^(p-1-1/100))`.
+The amplitude margin, constants and dyadic losses are absorbed before
+subdivision and the existing multiplicity-faithful density transfer.
+These are new endpoint arguments; the completed source audit is not revised.
+
+## First frozen endpoint proved by original research (3 October 2026)
+
+Clean kernel check 99612 proves the unchanged `A(39/40)<=16/21`
+endpoint and `LV(39/40,tau)<=2*tau/105` throughout
+`21/8<=tau<=63/16`. The new proof is installed in
+`Extension/TaoTrudgianYang2025/PintzFirstEndpointResearch.lean`;
+production build 45018 PASSes, exit 0, with all 87 theorem audits clean.
+The complete frozen finite table on [1/2,59/60) is also now proved,
+including both disputed finite endpoints. Eight new exact regressions
+are installed. Full regression 34366 and BOTH principal BATs 11101/82140
+PASS, exit 0: 8,137 exact examples, 21,604 paper dependency audits and
+zero Lean diagnostics. Exact receipts are in Reproduction Manifest.
+This is a RESEARCH STRENGTHENING, not a changed source contract or a
+claim that Pintz's strict cells include their boundaries.
+
+The actual far-kernel sum over original ordered ordinate pairs satisfies
+`U^20<=N^(1/500)*(R^39*N^(3811/200+1/10000)+R^40*N^(1899/100))`.
+All multiplicities are retained. Reciprocal-cubic curvature bounds the
+actual mixed cells; native same-height counting, local occupancy, joint
+critical VMVT, both Abel errors and Gram absorption are discharged.
+The resulting original-pattern bound is `R<=N^(7/100)`, uniformly for
+`N^(18/5)<=T<=N^(79/20)` and `V>=N^(39/40-delta)` with one positive
+delta. Exact epsilon--delta and density-transfer consumers close 16/21.
+
+The second endpoint 63/85 remains proved. Only the integer-tail research
+strengthenings remain among these endpoint targets. Keep EPZAE-30/39/40/41
+OPEN and 38/42 until the unchanged all-integer contract closes. Preserve
+all frozen statements, counterexamples, regressions, F_out and D_wide.
+No source hunt or recovery-record maintenance is needed. Older first-
+and second-endpoint-open checkpoints below are historical.
+
 Owner classification (3 October 2026): source audit COMPLETE. Disputed
 closed Pintz endpoints are RESEARCH STRENGTHENINGS; their frozen end
 statements remain required. Original research proves the first zeta LV
@@ -14,8 +120,9 @@ consumer uses the existing lower-strip nonexistence, general-LV window
 and exact transfer. This is a RESEARCH STRENGTHENING, not a Pintz Theorem 1
 boundary reproduction. The production module passes check 72099, with
 explicit audits, eight regressions and principal BAT coverage installed.
-Paper BAT 98577 found a regression-name ambiguity, now qualified; BOTH
-BATs are being rerun. Foundation 10502 passed previously. The other
+BOTH final BATs 78591/25859 PASS, exit 0, with zero Lean diagnostics;
+8,129 exact examples and 21,389 paper dependency audits pass. The earlier
+regression-name ambiguity is resolved. The other
 frozen endpoints keep EPZAE-30 OPEN and acceptance at 38/42. Earlier
 second-endpoint-open checkpoints below are superseded.
 

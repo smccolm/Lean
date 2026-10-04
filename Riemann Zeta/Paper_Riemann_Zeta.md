@@ -23,6 +23,19 @@ In this work, we formalize finite Dirichlet-polynomial identities, coordinate wr
 The complete claim sheet and source-to-Lean comparison are in [`Publication Readiness and Semantic Audit.md`](Publication%20Readiness%20and%20Semantic%20Audit.md). “Internally semantically audited” below refers only to that project-internal comparison. No external expert review, preprint release, journal submission, peer-reviewed publication, or canonicalization is claimed.
 
 ## Contribution Taxonomy & Originality Disclosure
+
+Separate follow-on development (4 October 2026): node 63 contains original
+far-correlation arguments for the frozen Tao--Trudgian--Yang density-table
+endpoints, culminating in
+`TaoTrudgianYang2025.PintzTailCorrelationResearch.zeroDensityExponent_le_printedTable`.
+The production proof preserves the finite values `16/21`, `63/85` and every
+integer-tail value `3/(n-1)` for `n>=6`. These are research strengthenings,
+not claims that Pintz's strict source cells contain their boundaries.
+The [node-63 crosswalk](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/63%20Tao-Trudgian-Yang,%202025/Tao-Trudgian-Yang%20Crosswalk.md)
+records the actual-pattern, critical-moment and multiplicity-faithful consumers.
+This does not change the Guth--Maynard foundation claims or establish external
+peer review; separate extension verification is recorded in its manifest.
+
 The mathematical content of this package is structured into six distinct layers:
 
 1. **Finite Sum Dualities (New Definitions)**: Formalization of positive-index Dirichlet polynomials over $\mathbb{N}_+$ (`dirichletPoly`), conjugate coefficient sequences (`conjCoeff`), and cross-norm evaluation products (`crossNormProduct`).
