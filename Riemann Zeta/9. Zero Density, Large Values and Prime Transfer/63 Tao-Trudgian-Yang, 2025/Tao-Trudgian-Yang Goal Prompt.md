@@ -46,6 +46,11 @@ cells may replace them. Historical source-hunting and continuation instructions
 below are inactive. Do not reopen that search absent a genuinely new theorem.
 Optional alternative routes are not acceptance blockers.
 
+Maintain the consolidated [Errata and Formalization Repairs](Tao-Trudgian-Yang%20Errata.md)
+alongside the individual repair and obstruction accounts. It records existing
+authorized corrections and independent endpoint proofs; it neither changes
+frozen outputs nor authorizes new source-contract repairs.
+
 The [frozen public theorem contract](#frozen-public-theorem-contract),
 [supporting results](#supporting-source-results-in-scope),
 [integrity contract](#integrity-contract) and

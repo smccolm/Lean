@@ -7831,6 +7831,11 @@ reflection supremum are also proved; see the EPZAE-21 rows and repair document.
 
 ## Source errata/audit ledger
 
+The consolidated [Errata and Formalization Repairs](Tao-Trudgian-Yang%20Errata.md)
+records the two disproved supporting statements, all three Pintz endpoint
+repairs, the additional discrepancies below and the separate formalization/
+tooling findings, with exact public proof references.
+
 These are preserved editorial or semantic findings from the rendered paper,
 ANTEDB blueprint and cited sources, with their resolutions. Neither these
 findings nor completed repairs permit changing frozen public end statements.

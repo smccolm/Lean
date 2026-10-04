@@ -36,6 +36,11 @@ Maintain and rerun `run_lake_build.bat --no-pause` and
 their coverage, audit and zero-Lean-warning gates must not be narrowed.
 This is internal kernel/project completion, not independent peer review.
 
+The [Errata and Formalization Repairs](Tao-Trudgian-Yang%20Errata.md)
+consolidates the source errors, authorized repairs, independently proved
+Pintz endpoints, provenance gaps and implementation fixes. It distinguishes
+false supporting statements from proof gaps and tooling issues.
+
 Historical checkpoints below retain the evidence and status at their
 dates. This section governs current status; canonical EPZAE checkboxes
 record the completed acceptance tests.
