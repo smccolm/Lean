@@ -83566,3 +83566,54 @@ example : TaoTrudgianYang2025.zeroDensityExponent (83/84) ≤ ((252/445:ℝ):ERe
   exact hh
 
 end PintzEndpointPairBridgeRegression
+
+namespace PintzEndpointResearchRegression
+
+open TaoTrudgianYang2025.PintzEndpointResearch
+
+/-- Exact owner-frozen LV strip, not a weaker source-faithful table. -/
+example : ∀ τ : ℝ, 37/7 ≤ τ → τ < 340/63 →
+    IsZetaLargeValueBound (41/42) τ (3*τ/170) :=
+  fun _ hlo hhi => pintz_second_endpoint_research_largeValueBound hlo hhi
+
+example : ∀ τ : ℝ, 37/7 ≤ τ → τ < 340/63 →
+    zetaLargeValueExponent (41/42) τ ≤ ((3*τ/170 : ℝ) : EReal) :=
+  fun _ hlo hhi => pintz_second_endpoint_research_exponent hlo hhi
+
+example : TaoTrudgianYang2025.zeroDensityExponent (41/42) ≤ ((63/85 : ℝ) : EReal) :=
+  pintz_second_endpoint_research_density
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+    P.N^5 ≤ P.T → P.T ≤ P.N^(27/5 : ℝ) → P.N^(1951/2000 : ℝ) ≤ P.V →
+    (P.ordinates.card : ℝ) ≤ P.N^(9/100 : ℝ) :=
+  logarithmicTaylor_actual_card
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+    P.N^5 ≤ P.T → P.T ≤ P.N^(27/5 : ℝ) → P.N^(1951/2000 : ℝ) ≤ P.V →
+    ∀ W : Finset ℝ, W ⊆ P.ordinates →
+    (W : Set ℝ).Pairwise (fun t u => P.N^(10/3 : ℝ) < |t-u|) →
+    (W.card : ℝ) ≤ P.N^(7/200 : ℝ) :=
+  logarithmicTaylor_separated_card
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+    P.N^5 ≤ P.T → P.T ≤ P.N^(27/5 : ℝ) →
+    ∀ t ∈ P.ordinates, ∀ u ∈ P.ordinates, P.N^(10/3 : ℝ) < |t-u| →
+    ((logarithmicTaylorMixedPairs P t u).card : ℝ) ≤ P.N^(19/20 : ℝ) :=
+  logarithmicTaylorMixedPairs_card_far
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+    P.N^5 ≤ P.T → P.T ≤ P.N^(27/5 : ℝ) →
+    ∀ t ∈ P.ordinates, ((logarithmicTaylorMixedPairs P t t).card : ℝ) ≤ 3*P.N :=
+  logarithmicTaylorMixedPairs_card_self
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ∃ K : ℝ, 0 < K ∧
+    ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+    P.N^5 ≤ P.T → P.T ≤ P.N^(27/5 : ℝ) → P.N^(1951/2000 : ℝ) ≤ P.V →
+    ∀ W : Finset ℝ, W ⊆ P.ordinates →
+    (W : Set ℝ).Pairwise (fun t u => P.N^(10/3 : ℝ) < |t-u|) →
+    (W.card : ℝ)*P.V^42 ≤
+      K*(Nat.ceil (P.N^(9/40 : ℝ)) : ℝ)^(1/1000 : ℝ)*P.N^40*
+        (3*P.N+(W.card : ℝ)*P.N^(19/20 : ℝ)) :=
+  logarithmicTaylor_joint_critical
+
+end PintzEndpointResearchRegression

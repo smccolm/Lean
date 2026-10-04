@@ -1,6 +1,54 @@
 # Tao--Trudgian--Yang 2025 formalization
 
-Current status (3 October 2026): original endpoint proof at a mathematical
+Owner-directed research (3 October 2026): ACTIVE. Source audit COMPLETE;
+disputed closed Pintz endpoints are RESEARCH STRENGTHENINGS, with frozen
+values preserved. The first research target, the zeta LV bound at 41/42
+on [37/7,340/63), is now proved below. No weaker table substitution or
+further known-majorant obstruction iterations. Acceptance remains 38/42.
+Earlier impasse checkpoints below are historical; see Goal Prompt.
+
+Latest clean research check 58511 proves the exact requested LV bound
+on [37/7,340/63) and A(41/42)<=63/85, by an actual mixed-height critical
+moment argument. Source-entry, both Abel errors, native VMVT insertion,
+off-height absorption and the exact density transfer are proved, not
+assumed. The dependency-selected [production proof](Extension/TaoTrudgianYang2025/PintzEndpointResearch.lean)
+passes direct check 72099; audits, regressions and BAT coverage are installed.
+The paper BAT found a regression-name ambiguity; its qualification is
+fixed and BOTH BATs are being rerun. Foundation 10502 passed previously.
+See Reproduction Manifest for exact verification scope.
+This research strengthening leaves every frozen statement unchanged.
+The first and integer-tail endpoints remain open; acceptance is 38/42.
+Earlier research checkpoints below are historical and superseded where
+they describe the second endpoint as unproved. See Agenda and Manifest.
+
+Research checkpoint: the existing signed-Gram scratch checks an actual
+signed cubic reduction and a zeta-specific anchored far-correlation
+reduction, including uniform removal of repeated frequencies and the
+three continuous integral contributions. The remaining signed discrete
+triple-correlation cancellation estimate is unproved. Scratch checkpoint
+59327 additionally checks phase-retained reflection, the actual triple
+phase, angular integral cancellation 6/sqrt(u), and a reciprocal-weighted
+above-cone radial frequency sum bounded by 2*harmonic(K). These continuous
+kernel estimates did not yet bound the discrete ordinate sum. The newer
+discrete proof bounds each actual mismatch band by 3072*N^2*|K| and
+now removes |q+r-s|<=floor(N^(9/10)), including ALL reflection errors, from
+the actual endpoint-pattern inequality. All ordinate gaps through N^(10/3)
+are also absorbed, and local ordinate nonconcentration is proved on
+intervals of that length. The remaining signed outside-band
+correlation is still unbounded at the required strength. No endpoint
+or acceptance gate closes. See Research
+Agenda and Reproduction Manifest for precise scope and verification.
+The earlier residual checkpoint's BATs 7619/61639 both PASS. Reproduction
+Manifest records the separate focused checks and subsequent BAT receipts;
+the two historical Python warnings remain visible.
+Further check 6803 proves actual difference-interval upper bounds and
+the enlarged-cutoff negative-spectrum/signed-cubic reduction. Neither
+supplies the full remaining cancellation estimate; acceptance stays 38/42.
+Check 21443 also removes the actual N^(4/5) mismatch band from the full
+signed cubic trace and absorbs every error. The remaining signed F_out
+upper bound, and therefore the frozen endpoint, are still OPEN.
+
+Historical source-only status (before the research restart, 3 October 2026): original endpoint proof at a mathematical
 impasse; 38/42 complete, EPZAE-30/39/40/41 OPEN. Further sources did not
 supply the missing uniform large-values estimate. No stronger endpoint
 is declared false or replaced by the weaker table. See Goal Prompt and

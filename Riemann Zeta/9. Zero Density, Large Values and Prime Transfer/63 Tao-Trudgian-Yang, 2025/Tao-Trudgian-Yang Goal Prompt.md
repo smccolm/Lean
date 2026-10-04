@@ -1,6 +1,129 @@
 # Whole-proof operational goal prompt
 
-## Current endpoint impasse (3 October 2026)
+## Owner-directed endpoint research (3 October 2026)
+
+ACTIVE original research. Preserve EVERY frozen end statement; the
+source-faithful table is not a replacement. Internally classify the
+disputed closed Pintz endpoints as RESEARCH STRENGTHENINGS, not missing
+source reproduction. The source audit is COMPLETE: Pintz Theorem 1 has
+the max formula with strict cell boundaries, and its boundary arithmetic
+does not supply 16/21, 63/85, or 3/(n-1). Earlier impasse/source-search
+checkpoints below are historical, not the current operating direction.
+
+First target: LV_zeta(41/42,tau)<=3*tau/170 for
+37/7<=tau<340/63. Work directly on the already established actual far
+correlation sum after signed Gram reduction and near-frequency absorption.
+New analytic decompositions, spectral arguments, bilinear forms and higher
+moments are authorized. Conditional wrappers, scalar obstruction lemmas,
+weaker substitutes and further demonstrations that known majorants fail
+do not count as progress toward this target. Stop further source hunting
+unless a genuinely new theorem is discovered.
+
+Keep 38/42 and EPZAE-30/39/40/41 OPEN until an actual endpoint proof closes
+the unchanged contract. Preserve all counterexamples, regressions and
+authorized prior repairs. Maintain and run BOTH `run_lake_build.bat
+--no-pause` and `run_tao_trudgian_yang_build.bat --no-pause` after Lean
+changes, with unchanged audits, coverage and warning gates. Recovery-record
+maintenance remains permanently optional and skipped.
+
+Research continuation after clean check 58511: the exact first research
+target LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63), and its density
+consequence A(41/42)<=63/85, are now proved in the retained scratch.
+The new mixed-height critical-moment argument derives all actual cell
+counts, source-entry and Abel errors, aggregates BEFORE Holder, inserts
+the proved native VMVT and absorbs the off-height term. The original
+ordinate count is <=N^(9/100); no endpoint bound is assumed.
+The dependency-selected `PintzEndpointResearch.lean` is now installed
+and directly checked in 72099, with all 70 public audits, eight package
+regressions, the root import and principal BAT inventory updated.
+Complete and record BOTH post-install BATs before claiming package
+acceptance. Paper BAT 98577 found a regression-name ambiguity, now fixed;
+BOTH BATs are being rerun (foundation 78591 first). Continue
+with the still-open first and integer-tail research strengthenings;
+38/42 and EPZAE-30/39/40/41 remain open. The source audit is unchanged.
+Preserve F_out, D_wide, all frozen statements and every counterexample.
+The research checkpoints below are historical and superseded wherever
+they describe the second endpoint as unproved.
+
+Earlier research checkpoint: the existing signed-Gram scratch checks
+the actual cubic far-matrix reduction, uniform absorption of repeated
+frequencies, and a second zeta-specific anchored route. The latter keeps
+the actual interval coefficients and [T,2T] ordinates. The two anchor
+integrals cost at most 1, and the middle-kernel integral error
+`108*N^3*R^2/L` is also absorbed. The final checked consumer derives
+`R*V^2<=4*N^(2+epsilon) OR R^2*V^4<=8*N*(Re D_triple+1)`, where all
+three factors of D_triple retain their literal discrete residuals.
+These are proved analytic reductions, not the endpoint. Concentrate the
+next mathematical work on the signed discrete triple residual D_triple or
+the retained distinct-frequency cubic correlation. Do not assume either
+missing upper bound. See Research Agenda for their exact definitions and
+Reproduction Manifest for scratch and BAT verification. No new production
+module family or acceptance claim is introduced.
+The next research revision, scratch 59327, also checks a PHASE-RETAINED
+sharp logarithmic reflection and the exact reflected triple phase. New
+continuous-kernel estimates give angular cancellation `6/sqrt u` and
+reciprocal-weighted above-additive-cone radial frequency sum `2*harmonic K`.
+These are actual proved oscillatory integral bounds, not the discrete
+endpoint. Next attack their coupling to the actual ordinate/frequency sum,
+including moving stationary cutoffs, amplitudes and all reflection errors.
+Do not replace that missing step with a conditional consumer. The remaining
+signed discrete correlation estimate and the frozen endpoint are still OPEN.
+Research Agenda records exact hypotheses and the short remaining DAG.
+That earlier checkpoint is superseded by the discrete near-band work:
+`norm_reflectedBand` proves 3072*N^2*|K| cancellation for actual retained
+frequencies with q+r-s in any finite K. All source intervals, amplitudes,
+orientations and three reflection errors are carried through the actual
+zeta-pattern consumer. With |q+r-s|<=floor(sqrt N) removed,
+`endpoint_outsideBand_dichotomy` derives, under the unchanged uniform
+endpoint-pattern quantifiers,
+`R*V^2<=4*N^(2+epsilon) OR R^2*V^4<=8*N*Re D_out`.
+The entire removed band and reflection error have been PROVED and
+absorbed, not left as hypotheses. Focus the next work on cancellation
+in this actual signed outside-band sum D_out. A sufficient remaining
+bound is `Re D_out<=C_epsilon*N^epsilon*R*N^(61/21)*T^(3/170)` with the
+required uniform quantifiers. It is NOT proved or available as an input.
+Do not substitute a conditional wrapper for that research step.
+The later checked reduction `endpoint_wideOutsideBand_dichotomy`
+enlarges the ordinate cutoff to N^(9/5) and removes the full mismatch band
+|q+r-s|<=floor(N^(9/10)), including all reflection errors. Its conclusion
+is `R*V^2<=N^(2+epsilon) OR R^2*V^4<=16*N*Re D_wide` under the same
+endpoint neighbourhood convention. An actual local ordinate bound is
+also proved on every interval of length N^(9/5). Focus further work on
+this smaller signed remainder; its required cancellation is NOT proved.
+The preserved smaller-cutoff reductions above are earlier checkpoints.
+The latest checked consumer `endpoint_pairWideOutsideBand_dichotomy`
+uses the installed analytic (3/40,31/40) pair to enlarge the ordinate
+cutoff further to N^(10/3), with the SAME N^(9/10) mismatch band and
+all reflection errors absorbed. The local ordinate bound also holds
+at length N^(10/3). Attack this latest signed remainder D_wide itself;
+no required upper bound is assumed or claimed. Focused check 12842 PASSes
+without Lean diagnostics. Exact
+examples, complete scratch audits and BOTH subsequent BAT runs remain
+separately recorded in Reproduction Manifest. Keep 38/42.
+
+Further checked work (6803) bounds each actual difference interval of
+length N^(10/3), including the reflected outside-band version, and proves
+the far matrix's negative eigenvalues are >=-N^(1+epsilon) at that cutoff.
+The actual anchored Gram consumer now reduces to the SIGNED cubic trace
+with all three gaps>N^(10/3); no spectral bound is supplied as a premise.
+Attack cancellation across the remaining intervals or in that signed
+trace. Individual interval estimates and spectral reductions do not close
+the endpoint. Preserve both routes without treating either as acceptance.
+Run and record BOTH principal BATs after Lean changes; their PASS verifies
+integrity and regressions, not the missing endpoint estimate.
+
+Check 21443 further estimates a specified part of the FULL signed cubic
+trace. The six-orientation identity, N^(4/5) mismatch-band cancellation,
+all reflection-error absorption, and negative-spectrum-error absorption
+are checked. The resulting actual-pattern alternative is
+`R<=N^(2/25) OR R^3*V^6<=1536*N^3*Re F_out`, with
+F_out=`orderedTriangleOutsideBand P (traceMismatchBand N) (N^(10/3))`.
+Attack the upper bound for this explicit signed remainder or the retained
+two-ordinate D_wide remainder; do not count the reduction itself as the
+frozen endpoint. Both routes, every frozen statement, all counterexamples
+and regressions remain preserved. Acceptance stays 38/42.
+
+## Historical endpoint impasse before the owner-directed research restart (3 October 2026)
 
 The unchanged whole goal is blocked at the analytic endpoint obligation
 after three consecutive resumed checks following the latest owner

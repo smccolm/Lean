@@ -1,6 +1,74 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Further source check and current endpoint impasse (3 October 2026)
+## Source audit complete; endpoint research classification (3 October 2026)
+
+Owner direction: the source audit is COMPLETE. Pintz Theorem 1 supplies
+the max formula with strict cell boundaries; its exact boundary arithmetic
+does not supply 16/21, 63/85, or 3/(n-1). The disputed closed endpoints are
+RESEARCH STRENGTHENINGS, not omitted source reproduction. Preserve all
+frozen statements and do not replace them with the source-faithful table.
+Stop source hunting unless a genuinely new theorem is discovered. Current
+work has proved LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63) by the
+original mixed-height critical-moment argument. Historical source checks
+below are retained as evidence, not instructions to repeat those routes.
+Acceptance remains 38/42; EPZAE-30/39/40/41 remain OPEN.
+
+Research check 58511 cleanly proves the requested LV strip and frozen
+A(41/42)<=63/85 value. It reuses pinned coefficient-cell, Abel, Holder and
+native critical VMVT theorems; new mixed-height counting and aggregation
+prove the endpoint with actual source-entry and scale losses discharged.
+No external source hunt occurred. This is original research, not a claim
+that Pintz Theorem 1 supplies its boundary. The production module passes
+check 72099; audits, regressions and principal BAT coverage are installed.
+Paper BAT 98577 found one regression-name ambiguity, now qualified;
+BOTH BATs are being rerun. Foundation 10502 passed previously.
+The first and integer-tail targets
+remain open; 38/42.
+Earlier second-endpoint-open checkpoints below are historical.
+
+No further external source search was performed in the owner-directed
+research checkpoint. New work uses the actual far matrix, local
+near-row/mean-square theorems, Mathlib finite spectral theory and the
+explicit integral of x^(-it). See Research Agenda for the proved
+decompositions. None is attributed to Pintz's missing boundary arithmetic.
+
+The next checked research revision reuses the already-proved local
+`BetaBufferedPowerError`, `ZetaLogReflectionTerms` and
+`AtkinsonFirstDerivative` contracts. It preserves complex phases, derives
+the reflected triple's coupled logarithmic phase, and proves new actual
+angular/radial integral estimates and a summed harmonic frequency bound.
+No new external source was sought or claimed to prove the endpoint.
+Research Agenda distinguishes these continuous-kernel bounds from the
+still-open discrete correlation estimate.
+Further local reuse of `ContinuousSecondDerivativeRange`,
+`AtkinsonMainPartialSummation` and `IntegerIntervalCount` now proves
+discrete cancellation for each actual additive-mismatch slice and any
+finite band. The original pattern consumer retains and absorbs all
+reflection errors and the sqrt(N)-wide near-resonance band. These new
+research estimates do not come from a new external source and are not
+attributed to Pintz Theorem 1. The remaining signed outside-band estimate
+and the frozen endpoint are still unproved; see Research Agenda.
+Further checked original research absorbs gaps through N^(9/5) using
+the anchor mass and widens the removed mismatch band to N^(9/10).
+It also proves local ordinate nonconcentration. This is local theorem
+reuse and new deduction, not renewed source hunting or an endpoint proof.
+Local reuse of `ExponentPairGramBound`, `ExponentPairGramLogLoss` and the
+installed `exponentPair_three_fortieths` then proves actual medium-gap
+absorption through N^(10/3), including diagonal and harmonic terms, and
+local ordinate nonconcentration at that length. Check 12842 is clean.
+No extra analytic hypothesis or missing-source claim was introduced.
+Check 6803 further reuses the installed Heath--Brown pair and actual
+local counts to bound the original/reflected far-correlation interval
+sums. Localized Gram rows and Mathlib spectral theory give the enlarged
+cutoff negative-spectrum bound and signed cubic consumer. These are
+new deductions in the research scratch, not source reproduction or a
+proof of the endpoint. No external source hunting was resumed.
+Check 21443 extends this LOCAL analytic reuse to full signed-trace
+frequency cancellation, including its exact six orientations and all
+reflection/spectral errors. It leaves an explicit signed F_out estimate
+unproved. No new literature claim or change of frozen target is involved.
+
+## Historical further source check and endpoint impasse (3 October 2026)
 
 This is the third consecutive resumed check of the same missing uniform
 far-correlation/positive-LV input after the latest owner clarification.

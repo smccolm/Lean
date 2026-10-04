@@ -242,6 +242,7 @@ try {
         $leanPackageFiles = @(
             'Extension\TaoTrudgianYang2025.lean',
             'Extension\TaoTrudgianYang2025\LiteratureDensity.lean',
+            'Extension\TaoTrudgianYang2025\PintzEndpointResearch.lean',
             'Extension\TaoTrudgianYang2025\IvicNineteenthDensity.lean',
             'Extension\TaoTrudgianYang2025\CDVMixedDensity.lean',
             'Extension\TaoTrudgianYang2025\HeathBrownModelJets.lean',

@@ -1,6 +1,52 @@
 # Lean extension
 
-Current source-only check (3 October 2026): no Lean or runner changes.
+Owner-directed research (3 October 2026): source audit COMPLETE; disputed
+closed Pintz endpoints are RESEARCH STRENGTHENINGS. Original research now
+proves LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63).
+Frozen end statements and 38/42 acceptance are unchanged. Earlier impasse
+checkpoints are historical; no weaker table is accepted as a substitute.
+
+Clean scratch 58511 proves the exact LV target on [37/7,340/63) and
+A(41/42)<=63/85, with permitted logical axioms only. Actual mixed-cell
+counts, joint integration, both Abel transfers, native critical VMVT,
+off-height absorption and original-ordinate recovery are all included.
+The dependency-selected [production module](TaoTrudgianYang2025/PintzEndpointResearch.lean)
+passes direct check 72099. All public audits, eight package regressions,
+root import and principal BAT inventory are updated. Paper BAT 98577 found
+a regression-name ambiguity, now qualified; BOTH BATs are being rerun.
+Foundation 10502 passed previously. No overall package PASS is
+yet claimed. The other endpoint research keeps
+acceptance at 38/42. Earlier checkpoints below are historical and their
+second-endpoint status is superseded. See Reproduction Manifest.
+
+Research scratch checkpoint 54966 passes with zero Lean diagnostics: actual signed
+cubic and anchored-zeta reductions, repeated-frequency absorption and
+control of all three continuous integral contributions. It is explicitly checked scratch,
+not an imported production endpoint theorem. Production modules, audits,
+regressions and runner coverage are unchanged. See Research Agenda and
+Reproduction Manifest; the signed discrete cancellation remains open.
+Checkpoint 59327 also checks phase-retained reflection and actual
+oscillatory-kernel estimates: 6/sqrt(u) angular cancellation and a
+2*harmonic(K) above-cone reciprocal-weighted radial sum. Neither supplies
+the missing discrete ordinate/frequency coupling. These remain separately
+checked research results, not production endpoint inputs. Reproduction
+Manifest records each snapshot and its sequential BAT receipts.
+The newer scratch proof now derives discrete mismatch-band cancellation
+3072*N^2*|K|, actual zeta-pattern entry, and uniform absorption of the
+N^(9/10)-wide band AND all reflection errors. The actual ordinate cutoff
+is now N^(10/3), with a proved local ordinate bound at that length.
+The resulting endpoint
+dichotomy retains only the signed outside-band sum. Its required
+cancellation bound and the frozen endpoint remain OPEN, 38/42.
+Check 6803 adds actual original/reflected difference-interval bounds and
+the negative-spectrum/signed-cubic consumer at the same N^(10/3) cutoff.
+This remains separately audited research scratch, not production endpoint
+coverage. Cross-interval/full signed-trace cancellation is still unproved.
+Check 21443 proves actual full-trace mismatch-band cancellation with all
+reflection and negative-spectrum errors absorbed. Its explicit remaining
+signed F_out is not assumed bounded; 38/42 is unchanged.
+
+Historical source-only check (before the research restart, 3 October 2026): no Lean or runner changes.
 Original EPZAE-30/39/40/41 remain OPEN at the endpoint analytic impasse,
 38/42 complete. Latest actual BAT evidence is 89353/41454, both PASS;
 see Goal Prompt, Sources and Reproduction Manifest. No weaker table is

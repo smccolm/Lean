@@ -1,6 +1,65 @@
 # Tao--Trudgian--Yang 2025 checklist
 
-## Current endpoint impasse (3 October 2026)
+## Owner-directed endpoint research (3 October 2026)
+
+ACTIVE original research; earlier impasse checkpoints below are historical.
+The disputed closed Pintz endpoints are RESEARCH STRENGTHENINGS, not
+missing source reproduction. Source audit COMPLETE; frozen end statements
+unchanged and the weaker table is not a substitute. First target is
+LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63), by estimating the actual
+remaining far correlation. No further source hunting or known-majorant
+obstruction iterations. EPZAE-30/39/40/41 remain OPEN, 38/42 complete.
+
+Clean scratch 58511 proves the requested second-endpoint LV strip and
+A(41/42)<=63/85 by the actual mixed-height critical-moment chain.
+All cell counts, source-entry, Abel errors, native VMVT insertion,
+off-height absorption and exact transfers are discharged. Production
+module check 72099 is clean; all public audits, eight package regressions,
+root import and principal BAT inventory are updated. Paper BAT 98577 found
+one regression-name ambiguity, now qualified; BOTH BATs are being rerun.
+Overall package acceptance is not yet claimed.
+EPZAE-30 remains OPEN because its first and integer-tail frozen endpoints
+are not proved. No aggregate item closes: 38/42, all contracts unchanged.
+Earlier second-endpoint-open checkpoints below are historical.
+
+Research checkpoint: existing signed-Gram scratch 54966 checks the actual
+signed cubic reduction, repeated-frequency absorption, and the anchored
+zeta residual reduction with all three continuous integral contributions
+removed or absorbed. The explicit middle-kernel cost is 108*N^3*R^2/L.
+No upper bound for the remaining signed residual and no endpoint theorem
+is claimed. Later scratch checkpoint 59327 checks phase-retained sharp
+reflection and exact-triple continuous-kernel cancellation (angular
+6/sqrt(u), summed above-cone radial 2*harmonic(K)). The bridge to the
+actual discrete ordinate sum was still open at that checkpoint.
+The newer checked `norm_reflectedBand` proves 3072*N^2*|K| cancellation
+on the ACTUAL native frequency sets. `anchorFar_nearBand_uniform` bounds
+the sqrt(N)-wide mismatch band plus all reflection errors by
+9243*R^2*N^(5/2), and `endpoint_outsideBand_dichotomy` absorbs that cost
+under the unchanged endpoint quantifiers. Signed outside-band
+cancellation and the frozen endpoint remain OPEN; no item closes.
+Research Agenda gives the exact definitions and remaining bound.
+Subsequent checked research enlarges the actual ordinate cutoff to N^(9/5),
+proves local ordinate nonconcentration at that length, and absorbs the
+full N^(9/10)-wide mismatch band plus all reflection errors. The remaining
+signed D_wide estimate is OPEN; no frozen endpoint or gate closes.
+Checks 1653/79158/55110 PASS; see Research Agenda and Reproduction Manifest.
+Check 12842 additionally derives and absorbs the actual pair-based near
+row through N^(10/3), using the installed (3/40,31/40) theorem; it also
+proves local nonconcentration at this enlarged length. The combined
+`endpoint_pairWideOutsideBand_dichotomy` retains only the signed sum with
+gaps>N^(10/3) and mismatch outside the N^(9/10) band. Its needed bound
+and the original endpoint remain OPEN, with no acceptance change.
+Check 6803 additionally proves upper bounds for actual original/reflected
+difference-interval sums and a negative-spectrum bound at N^(10/3).
+The anchored Gram consumer retains the signed cubic trace at that cutoff.
+The full cancellation estimate remains OPEN; these checked research
+results do not complete EPZAE-30 or alter 38/42.
+Check 21443 extends frequency-band cancellation to the FULL signed cubic
+trace, with exact six-orientation identity and all errors absorbed. It
+proves `R<=N^(2/25) OR R^3*V^6<=1536*N^3*Re F_out`; the required
+upper bound for F_out remains OPEN. This is not endpoint acceptance.
+
+## Historical endpoint impasse before the owner-directed research restart (3 October 2026)
 
 The third resumed check reaches the same missing analytic endpoint input.
 Further primary sources and an external Lean repository provide no closing
@@ -7940,6 +7999,23 @@ additive energy**, the three output families covered by the paper.
 - [ ] **EPZAE-30 -- Best-known density table.** The source table is reproduced as
   a proved envelope from individually identified theorems; it is validation,
   not a substitute for EPZAE-26--29.
+  Owner classification (3 October 2026): source audit COMPLETE. The disputed
+  closed Pintz endpoints are RESEARCH STRENGTHENINGS. Their frozen values
+  remain required for acceptance; source-faithful weaker values do not
+  close this item. The first research target, the actual zeta LV bound on
+  [37/7,340/63) at sigma=41/42, is now proved by
+  `PintzEndpointResearch.pintz_second_endpoint_research_largeValueBound`
+  and `pintz_second_endpoint_research_exponent`; the exact frozen
+  `A(41/42)<=63/85` value is proved by
+  `PintzEndpointResearch.pintz_second_endpoint_research_density`.
+  The proof consumes actual mixed-cell counts, native critical VMVT,
+  the constructed separated subset and the exact density transfer.
+  Direct production check 72099 and foundation BAT 10502 pass;
+  paper BAT 98577 exposed one regression-name ambiguity, now fixed.
+  BOTH BATs are being rerun after that qualification. The first closed value
+  `A(39/40)<=16/21` and the integer-tail values `3/(n-1)` remain OPEN.
+  Keep this item unchecked and the aggregate at 38/42 until the entire
+  unchanged envelope and its required acceptance checks are proved.
 
 ## Additive energy
 

@@ -1,6 +1,415 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-## Current endpoint impasse (3 October 2026)
+## Owner-directed endpoint research (3 October 2026)
+
+ACTIVE original research, superseding the earlier impasse checkpoints.
+The source audit is COMPLETE. Disputed closed Pintz endpoints are now
+classified as RESEARCH STRENGTHENINGS, with all frozen end statements
+preserved. Do not substitute the weaker table or continue source hunting
+and known-majorant obstruction checks. First target:
+LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63).
+That first target is now proved by the mixed-height critical-moment argument
+below. The earlier signed cubic trace and negative-spectrum routes remain
+preserved, not assumed as missing majorants. Acceptance remains 38/42:
+the first and integer-tail research strengthenings and aggregate
+EPZAE-30/39/40/41 stay OPEN.
+
+## Exact second endpoint (scratch check 58511)
+
+The exact LV target on [37/7,340/63) and A(41/42)<=63/85 are now proved
+in the retained scratch, with zero diagnostics and permitted logical
+axioms only. This is an owner-authorized RESEARCH STRENGTHENING; it does
+not reinterpret Pintz Theorem 1 or replace any frozen statement.
+The dependency-selected proof is installed in
+`Extension/TaoTrudgianYang2025/PintzEndpointResearch.lean`; direct check
+72099 is clean. All 70 public audits, eight package regressions, root
+import and principal BAT inventory are updated. Paper BAT 98577 found one
+regression-name ambiguity, now qualified; BOTH BATs are being rerun.
+Foundation 10502 passed previously. Full package verification is not yet claimed.
+
+The actual joint cell multiplicity nu has first integral R*|indices|*v
+and second integral <=(3*R*N+R^2*N^(19/20))*v, where v=64/H^21 and
+H=ceil(N^(9/40)). Both Abel transfers connect the original interval sum
+to these cells, including H*(H+1) boundary error. Holder is applied only
+AFTER summing heights. Native critical VMVT then gives, for one uniform
+K>0 and sufficiently large N,
+`R*V^42<=K*H^(1/1000)*N^40*(3*N+R*N^(19/20))`.
+For N^5<=T<=N^(27/5), V>=N^(1951/2000), the off-height term is absorbed
+and the selected count is <=N^(7/200). The already proved local occupancy
+bound constructs an actual separated subset and recovers the original
+count <=N^(9/100). A positive epsilon--delta neighbourhood proves the
+exact LV contract; existing lower-strip nonexistence, the full general-LV
+window and zero-density transfer prove the frozen 63/85 value.
+
+Exact consumers: `pintz_second_endpoint_research_largeValueBound`,
+`pintz_second_endpoint_research_exponent` and
+`pintz_second_endpoint_research_density`. No count, moment or desired
+endpoint bound is a premise. Next: installed-package checks, then the
+remaining first and integer-tail endpoint research. Acceptance stays
+38/42; EPZAE-30/39/40/41 remain OPEN. Earlier checkpoints below are
+historical, including their now-superseded second-endpoint status.
+
+## Earlier full mixed-cell counting (checked 26651)
+
+The actual logarithmic Taylor-cell counting step is now kernel-checked
+in the existing scratch, uniformly for sufficiently large N and
+N^5<=T<=N^(27/5), at H=ceil(N^(9/40)). No count is supplied as a premise.
+`logarithmicTaylorNonzeroPairs_card_uniform` counts ALL nonzero fifth
+labels by N^(3/4): the actual label-q fibre has at most
+1+2*N^(7/10)/abs(q) pairs, and the full label range is summed harmonically.
+`logarithmicTaylorZeroPairs_card_uniform` counts the zero label by
+N^(9/10) when abs(t-u)>T/(8192*N). Its proof derives the thin strip
+abs(m-(u/t)^(1/5)*n)<=81920*pi*N^6/(T*H^5), bounds its slope from both
+sides, and counts literal integer differences and their fibres.
+
+Together with the earlier medium-gap disjointness,
+`logarithmicTaylorMixedPairs_card_far` gives at most N^(19/20) actual
+overlapping frequency pairs for EVERY gap abs(t-u)>N^(10/3).
+`logarithmicTaylorMixedPairs_card_self` gives at most 3*N pairs at t=u.
+Every theorem consumes the original dyadic frequencies and ordinates.
+Direct check 26651 passes without Lean diagnostics; exact audits,
+hash and subsequent BAT receipts are in Reproduction Manifest.
+
+Remaining research DAG: CHECKED mixed-cell counts -> OPEN joint cell
+multiplicity integral/42nd-moment inequality -> OPEN actual separated
+subpattern consumer and scale absorption -> OPEN frozen LV endpoint.
+The moment argument must aggregate the literal cells BEFORE Holder;
+it must derive all source-entry translations, shift-boundary errors,
+Taylor-remainder bounds, and uniform constants. None is an assumed
+endpoint majorant. The signed F_out and D_wide routes are preserved.
+The counts alone are NOT an endpoint proof. EPZAE-30/39/40/41 remain
+OPEN, 38/42; every frozen end statement and counterexample is unchanged.
+
+## Earlier mixed-height Taylor geometry (checked 21279)
+
+The existing scratch now uses the literal degree-six coefficient-torus
+cells of `f_t(x)=-(t/(2*pi))*log(x)`, with the exact n^(-it) character
+and every Taylor coordinate proved. At H=ceil(N^(9/40)), equal-centre
+cells are disjoint for actual gaps above N^(10/3). More strongly,
+`logarithmicTaylorCell_medium_far_disjoint` proves ALL centre pairs
+disjoint when N^5<=T<=N^(27/5) and
+`N^(10/3)<abs(t-u)<=T/(8192*N)`. Coordinates six and five are unwrapped
+using proved reciprocal-power and integer-spacing inequalities; every
+size condition is derived from the actual pattern, not assumed as a
+cell-count or correlation bound. Direct check 21279 has zero diagnostics
+and permitted logical axioms only. See Manifest for exact scope/receipts.
+
+This is a new mixed-height geometric result, NOT yet an estimate for
+the original signed Gram trace. The next research obligation is the
+larger-gap mixed-cell count, separated by the fifth-coordinate integer
+label (nonzero labels versus the zero label), followed by an actual
+aggregate mean-value consumer. Neither that count nor the consumer is
+proved. The full signed F_out/D_wide bound and frozen endpoint stay OPEN;
+38/42 and every frozen source statement remain unchanged.
+
+Current mathematical route under investigation (NOT a proved bound):
+count overlapping mixed cells at H=ceil(N^(9/40)), with nonzero fifth
+labels controlled by a reciprocal-label diameter and the zero label by
+the integer difference of the two centres. A sufficient terminal target
+is at most N^(19/20) mixed overlaps for each far-separated height pair,
+along with the actual same-height diagonal count. Then aggregate the
+literal native cell-averaging/degree-six, 42nd-moment inequality BEFORE
+applying Holder, rather than summing independent pointwise bounds.
+An actual separated-subpattern consumer and the already proved local
+ordinate count must then reconnect the estimate to the original pattern.
+At that earlier checkpoint all counting, aggregate-moment and endpoint
+assembly edges were OPEN. The counting edge is now proved in 26651
+above; the aggregate-moment and endpoint-assembly edges remain OPEN.
+The later work is not included in the historical 21279 receipt.
+
+## Full signed-trace frequency removal (checked 21443)
+
+The alternate route now removes a frequency band from the FULL actual
+cubic trace, not an unrelated ordered model. `farTriangle_re_eq_six_ordered`
+proves its real part equals six times the increasing-ordinate portion:
+reverse orientations conjugate the complex values. The original Gram
+kernels are reflected with both adjacent positive gaps retained and the
+actual moving stationary cutoffs unchanged.
+
+`farTriangle_traceBand_re_error` bounds removal of
+`|q+r-s|<=floor(N^(4/5))`, together with ALL three reflection errors,
+by `55458*R^3*N^(14/5)`. This is a direct estimate for a specified part
+of the actual far correlation, not a supplied majorant. All three
+ordinate gaps exceed N^(10/3).
+
+`anchorMass_triangleOutsideBand_dichotomy` absorbs that complete cost
+using the actual anchor mass. `endpoint_orderedOutsideBand_dichotomy`
+checks the original two-sided endpoint neighbourhoods. Finally,
+`orderedOutsideBand_largeCard_dichotomy` also absorbs the explicit
+negative-spectrum remainder and proves, uniformly for large N,
+T<=N^6 and V>=N^(1951/2000):
+
+`R<=N^(2/25) OR R^3*V^6<=1536*N^3*Re F_out`.
+
+F_out is exactly `orderedTriangleOutsideBand P (traceMismatchBand N)
+(N^(10/3))`. The small-cardinality branch is below the target throughout
+the requested tau range. The REQUIRED upper bound for F_out is still
+OPEN. The earlier two-ordinate D_wide route and every checked intermediate
+are preserved; neither is an endpoint proof. No acceptance gate closes.
+The missing work is global signed cancellation, not source reproduction.
+No source hunt or repeated failed-majorant comparison was performed.
+
+## Actual difference-interval bounds and enlarged-cutoff spectrum
+
+Focused check 6803 passes with zero Lean diagnostics. The same research
+scratch proves actual upper bounds for each remaining difference interval
+of length N^(10/3), preserving the strict far cutoff:
+`norm(anchorDifferenceSlab P H) <= R*N^(2993/1000)` and
+`norm(anchorOutsideDifferenceSlab P a b H) <= 2*R*N^(2993/1000)`.
+The second uses the actual reflected outside-band kernel, its moving
+cutoffs and derived local reflection error, not a global R^2 error.
+The underlying hypotheses N<=T, 2*T<=N^6 and V>=N^(1951/2000) follow
+in the original endpoint neighbourhoods. Exact restriction identities
+connect both interval sums to their original full signed correlations.
+These estimates do NOT provide cancellation across difference intervals.
+
+The alternate spectral attack now also works at L=N^(10/3).
+`nearMatrix_pairGap_row` uses two actual local intervals and the installed
+analytic pair to derive row norm <=N^(1+epsilon), independently of the
+global R. Gram positivity then proves every far eigenvalue >=-N^(1+epsilon).
+With M=anchorMass P and F=farTriangle P L, `anchorFar_pairGap_cube`
+proves `(Re anchorFar)^3 <= M^3*(Re F+R*N^(3+epsilon))`.
+The actual consumer `anchorMass_pairGap_triangle_dichotomy` proves
+`M<=4*N^(2+epsilon/3) OR M^3<=64*N^3*(Re F+R*N^(3+epsilon))`.
+No spectrum, row bound, local density, or desired endpoint is assumed.
+The full signed triangle/outside-band cancellation is STILL OPEN.
+This is original research, not a newly discovered source theorem;
+38/42 and all frozen statements remain unchanged.
+
+## Enlarged actual gap and frequency removal (3 October 2026)
+
+Focused checks 1653, 79158 and 55110 PASS with zero Lean diagnostics.
+`anchorFar_refinedGap_dichotomy` uses the actual anchor mass to absorb
+ALL ordinate gaps up to N^(9/5), without a preliminary global R bound.
+`ordinate_local_mass_refined` restricts the actual pattern and proves
+`card(W intersect [x,x+N^(9/5)])*V^2 <= N^(2+epsilon)` for every x,
+uniformly at large N with V>=N^(24/25). No local-density estimate is assumed.
+
+`anchorFar_wideBand_uniform` removes the ACTUAL frequency band
+`|q+r-s|<=floor(N^(9/10))` plus all reflection errors, with total cost
+`9243*R^2*N^(29/10)`. `endpoint_wideOutsideBand_dichotomy` absorbs that
+entire cost in the unchanged two-sided endpoint neighbourhoods, deriving
+
+`R*V^2 <= N^(2+epsilon) OR R^2*V^4 <= 16*N*Re D_wide`.
+
+Here D_wide is `anchorOutsideBandFar` at the enlarged ordinate cutoff
+N^(9/5) and `wideMismatchBand N`, with actual source cutoffs and signs.
+This supersedes the smaller-cutoff/sqrt(N)-band reductions below, without
+deleting them. The required upper bound for this remaining signed sum
+is STILL OPEN; no frozen endpoint or acceptance gate closes (38/42).
+The second medium-gap attack also PASSES focused check 12842, with
+zero Lean diagnostics. `exponentPair_nearMatrix_row` recentres and
+restricts the ACTUAL pattern before consuming the already-proved
+literal logarithmic sum bound. `anchorFar_pairGap_dichotomy` specializes
+to the installed analytic (3/40,31/40) pair and absorbs every gap through
+N^(10/3), retaining the diagonal and reciprocal-gap loss. The physical
+threshold is V>=N^(1951/2000), derived in the endpoint neighbourhood.
+`ordinate_local_mass_pair` proves the same local count bound on EVERY
+interval of length N^(10/3), without a supplied density estimate.
+
+The latest actual consumer `endpoint_pairWideOutsideBand_dichotomy`
+combines this with the N^(9/10)-wide frequency removal and ALL reflection
+errors. It proves the displayed dichotomy with D_wide now evaluated at
+L=N^(10/3), with the exact original endpoint neighbourhoods. This is the
+current remainder to attack; no upper bound for it is assumed or proved.
+The earlier N^(9/5) results remain preserved as checked intermediate work.
+No literature search, failed-majorant comparison, new production module
+family, counterexample edit or recovery-record write is involved.
+
+## Earlier discrete near-resonance removal on the actual pattern (3 October 2026)
+
+Focused check 77380 passes with zero Lean diagnostics. The same scratch
+now proves discrete cancellation, not only continuous-kernel estimates.
+There is no new production module, assumed far bound, source search,
+frozen-statement change, counterexample edit or recovery-record write.
+
+For N>=1, 4*pi*N<=h<=t and all three original integer intervals contained
+in [N,2*N], `norm_reflectedCone` bounds the EXACT retained resonance
+q+r=s by 3072*N^2. The proof derives the actual intersected integer
+interval, its curvature and reciprocal-weight variation; no enlarged
+frequency box or estimate supplied as a hypothesis replaces the sum.
+`norm_reflectedShiftedCone` extends the bound to EVERY integer mismatch
+q+r-s=k, including the empty nonpositive-frequency cases. Consequently
+`norm_reflectedBand` bounds the actual triple frequency sum restricted
+to any finite mismatch set K by 3072*N^2*|K|.
+
+`dirichlet_product_outsideBand_error` transfers this cancellation to the
+three ORIGINAL Dirichlet sums. All B-process errors remain explicit:
+
+`3072*N^2*|K| + 3*E*(2*N+E)^2`, where
+`E=C*(N/sqrt(h/(2*pi))+((t+h)/(2*pi))^epsilon)`.
+
+`anchorFar_outsideBand_error` consumes the actual ZetaLargeValuePattern,
+derives its active interval endpoints and [T,2*T] height constraints,
+retains the moving native stationary sets, and conjugates reverse
+ordinate pairs exactly. Its signed outside-band sum is
+`anchorOutsideBandFar`; no cancellation estimate for that remainder
+is a theorem parameter.
+
+Take L=N^(7/5) and K=[-floor(sqrt N),floor(sqrt N)] in the integers.
+`anchorFar_nearBand_uniform` proves, uniformly for large N and T<=N^6,
+that the removed band AND all reflection errors cost at most
+`9243*R^2*N^(5/2)`, where R is the actual ordinate cardinality.
+`endpoint_outsideBand_dichotomy` absorbs this entire cost under the
+original uniform endpoint-pattern quantifiers, deriving
+
+`R*V^2 <= 4*N^(2+epsilon) OR R^2*V^4 <= 8*N*Re D_out`.
+
+Here D_out is the literal signed dual correlation with the sqrt(N)-wide
+additive-resonance band removed, not a newly assumed majorant. This
+supersedes the open reflection-error/cutoff-assembly step of checkpoint
+59327. It does NOT prove the remaining cancellation estimate or endpoint.
+A sufficient remaining research bound is
+`Re D_out <= C_epsilon*N^epsilon*R*N^(61/21)*T^(3/170)` with the required
+uniform neighbourhood quantifiers. Do not assume that bound or replace
+it by another conditional consumer.
+
+Current short research DAG: actual phase-retained reflection CHECKED ->
+discrete shifted-resonance cancellation CHECKED -> actual-pattern entry
+and full near-band/error absorption CHECKED -> signed outside-band
+cancellation OPEN -> frozen first zeta LV endpoint OPEN -> EPZAE-30 OPEN.
+Continue analytic work on D_out itself; the continuous angular/radial
+estimates and original signed cubic route remain available. Acceptance
+stays 38/42, EPZAE-30/39/40/41 OPEN. Reproduction Manifest records the
+separate direct check, exact examples, audits and sequential BAT receipts.
+
+## Earlier phase-retained checkpoint 59327 (3 October 2026)
+
+At this earlier revision the same scratch passes check 59327, exit 0, with
+zero Lean errors, warnings or tactic suggestions: 26 definitions, 66
+theorems (six private), 17 exact examples and 67 explicit axiom audits.
+Every theorem is audited; all dependencies are permitted. No production
+module, source contract, counterexample, regression or runner changes.
+
+`dirichlet_sharp_complex_reflection` uses the ALREADY PROVED sharp
+B-process to compare the actual complex Dirichlet sum, not just its norm,
+with its true retained stationary sum. The error remains
+`C*(N/sqrt(t/(2*pi))+(t/(2*pi))^epsilon)`. The exact reflected term is
+
+`sqrt(t/(2*pi))/q * exp(i*(t*log q-t*log(t/(2*pi))+t+pi/4))`.
+
+`reflected_triple_term` proves that the actual product at positive heights
+`u*x`, `u*(1-x)`, `u` (conjugating the last factor) has phase
+`u*F(q,r,s,x)+pi/4`, with its amplitude retained, where
+
+`F = x*log q+(1-x)*log r-x*log x-(1-x)*log(1-x)-log s`.
+
+This is not an identification of D_triple with an error-free dual sum.
+The exact saddle is `x=q/(q+r)`, where the angular derivative is zero
+and `F=log((q+r)/s)`. The new proved CANCELLATION estimates are:
+
+- `norm_reflectedAngular_integral_left/right`: explicit reciprocal-slope
+  bounds on either side of this saddle, derived from the actual phase.
+- `norm_reflectedAngular_integral_sqrt`: for q,r,u>0 and
+  `0<a<=b<1`, the norm of the integral of `exp(i*(u*F+pi/4))` over
+  `[a,b]` is at most `6/sqrt u`, uniformly in s. A clipped central
+  interval and the two proved oscillatory tails handle every saddle
+  position; no cancellation estimate is an input hypothesis.
+- `norm_reflectedRadial_integral_above_cone`: for `s>q+r`, q,r>0,
+  `0<x<1`, `A<=B`, the corresponding radial integral over `[A,B]`
+  has norm at most `2/log(s/(q+r))`.
+- `norm_reflectedRadial_above_cone_sum`: integrating the FINITE sum
+  of these phases at `s=q+r+j`, `1<=j<=K`, with reciprocal weights
+  `1/(q+r+j)`, costs at most `2*harmonic K`, not a linear frequency
+  count. The reciprocal-weighted individual bound is `2/j`.
+
+These are new checked continuous-kernel estimates, not scalar obstruction
+lemmas or a claim that the endpoint follows from a previously known
+majorant. Their exact link to the reflected complex terms is proved.
+They DO NOT YET bound the discrete signed sum over the arbitrary actual
+one-separated ordinate set. Moving retained frequency cutoffs, amplitude
+weights, the reflection errors in the full correlation, and the sampling/
+near-additive interaction must all be handled, not silently discarded.
+
+Research DAG at that earlier checkpoint:
+actual complex reflection and triple phase CHECKED -> continuous angular
+and above-cone radial cancellation CHECKED -> discrete ordinate/frequency
+coupling with retained cutoffs, weights and errors OPEN -> uniform signed
+D_triple bound OPEN -> frozen zeta LV endpoint OPEN -> EPZAE-30 OPEN.
+The earlier signed cubic route remains available; no source hunting or
+failed-majorant iteration was performed. Keep EPZAE-30/39/40/41 OPEN,
+38/42. Both BATs are rerun after this Lean change; their terminal evidence
+is recorded in Reproduction Manifest separately from the scratch check.
+
+## Earlier signed far-correlation checkpoint 54966 (3 October 2026)
+
+The existing `E:/Lean/.scratch/epzae-pintz-signed-gram-20261003.lean`
+now checks two actual-object routes, with no assumed correlation estimate.
+It remains research scratch, not a new production-module family or a
+completed endpoint theorem. At this checkpoint focused session 54966 exits 0 with
+zero Lean diagnostics; all 45 then-present theorems, including the five private
+spectral/energy helpers, have explicit permitted-axiom audits. There are
+15 exact examples and 46 explicit audits in that snapshot (one also audits a definition).
+
+Write R=card W, L=N^(7/5), K(t,u)=sum_n n^(-i(u-t)). The first route
+derives the negative-spectrum bound for the actual far matrix from the
+proved near row and positivity of the full Gram matrix. Its signed cubic
+trace is expanded into actual frequency triangles. Repeated frequencies
+cost at most 12*N^2*R^3, and that entire error is absorbed uniformly on
+the target strip. The checked consumer is
+`endpoint_distinct_triangle_reduction`:
+
+`(R*V^2-N^(2+epsilon))^3 <= 64*N^3*(Re C_distinct+2*R*N^(3+epsilon))`.
+
+C_distinct retains BOTH all-far ordinate restrictions and pairwise-distinct
+integer frequencies, with the exact complex signs. No upper bound for
+C_distinct is assumed or claimed.
+
+The second route retains the zeta-specific coefficients and absolute
+height. Let Z(t) be the sum on the ACTUAL active integer interval, I(t)
+the continuous integral between its endpoints (zero for empty support),
+and F(t)=Z(t)-I(t). The zero-ordinate anchor yields a quadratic inequality
+in S=sum_W |Z(t)|^2, with S>=R*V^2. The actual signed far correlation is
+sum_(t,u far) Z(t)*conj(Z(u))*K(t,u), not an arbitrary scalar witness.
+`dirichlet_integral_decay` and `anchorFar_bulk_error` prove
+
+`|I(t)| <= 4*N/T`,
+`|D_anchor-D_residual| <= 64*N^3*R^2/T`.
+
+This uses t in [T,2T]; both mixed error terms are included. The error is
+at most 1 uniformly in the endpoint neighbourhood. The final checked
+`endpoint_anchored_residual_dichotomy` gives, for every epsilon>0 with
+the original uniform C,delta quantifiers and actual zeta patterns:
+
+`R*V^2 <= 4*N^(2+epsilon) OR R^2*V^4 <= 4*N*(Re D_residual+1)`.
+
+The later checked `anchorResidualFar_middle_error` also removes the
+middle kernel's continuous integral B(s)=integral_N^(2N) x^(-is) dx.
+Both signs of s are handled. Its total error is at most
+`108*N^3*R^2/L`. For L=N^(7/5), the actual amplitude lower bound absorbs
+that entire error into the preceding inequality. The strongest consumer,
+`endpoint_triple_residual_dichotomy`, now gives
+
+`R*V^2 <= 4*N^(2+epsilon) OR R^2*V^4 <= 8*N*(Re D_triple+1)`,
+
+where D_triple is the SAME far-pair sum with factors
+`F(t)*conj(F(u))*(K(t,u)-B(u-t))`. Thus all three continuous integral
+contributions are removed or absorbed. Endpoint terms remain inside the
+discrete residuals: no identification with a convergent nonzero Poisson
+expansion is claimed. This is an unconditional analytic reduction, NOT a
+positive-LV estimate. The remaining research step is a uniform upper
+bound for this signed discrete triple residual (or the distinct cubic
+sum), using its oscillation rather than another pointwise majorant. The
+absolute-height anchor is retained because the unanchored spectrum loses
+that information.
+One sufficient NEW estimate to attack on this second route is
+`Re D_triple << N^epsilon * R * N^(61/21) * T^(3/170)` on the actual
+endpoint patterns, with uniform constants. This estimate is NOT proved,
+not inserted as a Lean assumption, and not attributed to an existing
+source. Its exponent 61/21=4*(41/42)-1 comes from the checked anchored
+consumer, not a replacement endpoint. The remaining DAG is:
+actual anchor/bulk control CHECKED -> signed residual cancellation OPEN
+-> frozen zeta LV endpoint OPEN -> frozen envelope/EPZAE-30 OPEN.
+No source hunt, failed-majorant regression, weaker replacement, endpoint
+acceptance change, or recovery-record edit is part of this checkpoint.
+EPZAE-30/39/40/41 remain OPEN, 38/42. Reproduction Manifest records the
+separate scratch verification and sequential BAT evidence.
+The final post-change BATs 7619/61639 both PASS, exit 0, zero Lean
+diagnostics. All 21206 production dependency audits and the separate
+semantic regression pass; the two historical Python warnings remain
+visible. No proof of the remaining cancellation bound is inferred.
+
+## Historical endpoint impasse before the owner-directed research restart (3 October 2026)
 
 After three consecutive resumed checks, the original endpoint proof is
 blocked at the missing uniform far-correlation/positive-LV estimate.

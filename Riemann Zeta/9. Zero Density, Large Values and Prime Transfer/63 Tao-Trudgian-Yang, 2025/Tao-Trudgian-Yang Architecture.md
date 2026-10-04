@@ -1,5 +1,7 @@
 flowchart TD
-%% CURRENT ENDPOINT IMPASSE (3 October 2026): third resumed check still lacks the uniform far-correlation/positive-LV input. Additional primary sources and an external Lean repository supply no closing contract; see Sources. Whole goal blocked, not complete; ORIGINAL EPZAE-30/39/40/41 OPEN, 38/42. Earlier active-status comments are historical. No analytic node or dependency edge closes. No code/BAT change or new build in this source-only continuation; last actual BATs 89353/41454 PASS.
+%% RESEARCH ENDPOINT CHECK 72099: PintzEndpointResearch proves the exact LV_zeta(41/42,tau)<=3*tau/170 strip and A(41/42)<=63/85, via actual mixed-cell counts, joint critical VMVT, source-entry and scale absorption. Foundation BAT 10502 PASS; paper BAT 98577 found one regression-name ambiguity, now qualified; BOTH BATs are being rerun. First and integer-tail endpoints remain OPEN; aggregate stays 38/42. All frozen statements are preserved. Earlier checkpoint comments are historical.
+%% OWNER-DIRECTED RESEARCH (3 October 2026): ACTIVE original research; earlier impasse checkpoints are historical. Source audit COMPLETE. Disputed closed Pintz endpoints are RESEARCH STRENGTHENINGS; every frozen target is preserved, no weaker substitution. First target LV_zeta(41/42,tau)<=3*tau/170 on [37/7,340/63); attack actual far correlation, not source hunting or known-majorant obstructions. EPZAE-30/39/40/41 OPEN, 38/42.
+%% HISTORICAL ENDPOINT IMPASSE BEFORE OWNER-DIRECTED RESTART (3 October 2026): third resumed check still lacked the uniform far-correlation/positive-LV input. Additional primary sources and an external Lean repository supplied no closing contract; see Sources. The goal was blocked at that checkpoint; it is now ACTIVE original research as directed above. No analytic acceptance gate closed. That source-only continuation made no code/BAT change; its last actual BATs were 89353/41454 PASS.
 %% CONTINUATION VERIFICATION (3 October 2026): foundation BAT 89353 and paper BAT 41454 PASS, exit 0, zero Lean diagnostics; 21206 paper dependency audits and separate semantic regression pass. Exact logs/hashes in Reproduction Manifest. No mathematical gate closes; original EPZAE-30/39/40/41 remain OPEN, 38/42.
 %% CONTINUATION CHECK (3 October 2026): scratch 86333 proves only powered Guth--Maynard/cubic-trace scale comparisons. The existing T^(3/4)<=N trace route has diagonal/window exponent >=tau/28 at sigma=41/42, above the target. No analytic node closes; original EPZAE-30/39/40/41 stay OPEN, 38/42. See Sources and Reproduction Manifest.
 %% FINAL VERIFICATION (3 October 2026): foundation BAT 96455 and paper BAT 14724 PASS, exit 0, zero Lean diagnostics; all 1452 package files, 8121 exact examples and 21206 dynamic audits checked. Two historical Python SyntaxWarnings remain visible. Original endpoint gates EPZAE-30/39/40/41 stay OPEN; acceptance 38/42. Exact logs/hashes in Reproduction Manifest.
@@ -741,7 +743,20 @@ flowchart TD
     OBD["EPZAE-29 exact eight-piece bound DONE;<br/>optimizedBourgain_bound, 3/4 &lt; sigma &lt; 1;<br/>all eight analytic inputs discharged;<br/>exact regressions, audits and BOTH BATs PASS"]
     BZCL["EPZAE-29 genuine analytic convex limit<br/>closed k and affine-range boundaries DONE"]
     BZOPT["EPZAE-29 eight exact analytic pair consumers<br/>three actual inputs discharged;<br/>five-input conditional assembly DONE"]
-    ZTAB["EPZAE-30 literal printed density envelope OPEN;<br/>stronger Pintz lower endpoints UNPROVED, not disproved;<br/>signed Gram + near absorption CHECKED;<br/>far correlation -> positive-LV strips -> exact endpoints OPEN"]
+    ZTAB["EPZAE-30 frozen density envelope OPEN;<br/>source audit COMPLETE;<br/>closed Pintz endpoints: RESEARCH STRENGTHENINGS;<br/>second endpoint A(41/42)<=63/85 CHECKED;<br/>first 16/21 and integer-tail 3/(n-1) remain OPEN;<br/>earlier signed F_out and D_wide research routes preserved"]
+    TAYCOUNT["EPZAE-30 original-research mixed-cell counts CHECKED MODULE 72099;<br/>all far gaps>N^(10/3): at most N^(19/20) pairs;<br/>same heights: at most 3N;<br/>actual log cells, all labels, N^5<=T<=N^(27/5)"]
+    TAYMOM["EPZAE-30 joint multiplicity + critical 42nd moment CHECKED MODULE 72099;<br/>aggregate BEFORE Holder; native VMVT inserted;<br/>actual source-entry and both Abel errors discharged"]
+    TAYEND["EPZAE-30 second-endpoint research proof CHECKED MODULE 72099;<br/>original count at most N^(9/100); exact LV strip;<br/>A(41/42) at most 63/85; post-install BATs pending"]
+    TAYVMVT["Pinned Gafni--Tao coefficient cells,<br/>Abel transfer and critical degree-six VMVT<br/>AVAILABLE and kernel-audited"]
+    TAYVMVT --> TAYCOUNT
+    TAYVMVT --> TAYMOM
+    TAYCOUNT --> TAYMOM
+    TAYMOM --> TAYEND
+    RS02D -- "actual local occupancy and separated subset" --> TAYEND
+    ZDT -- "existing general LV window + lower zeta strip" --> TAYEND
+    TAYEND --> ZTAB
+    class TAYVMVT available;
+    class TAYCOUNT,TAYMOM,TAYEND done;
     SFENV["EPZAE-30 separate source-faithful envelope CHECKED;<br/>every sigma in [1/2,1), no endpoint holes;<br/>source-valid tail index + exact boundary regressions;<br/>weaker boundary values do NOT close literal acceptance"]
     EPPAIR["EPZAE-30 positive endpoint-pair bridges CHECKED;<br/>first A <= 3560/4399; all-tail improved bounds;<br/>first exact LV interval closed through 135765/36668;<br/>stronger printed endpoints still OPEN"]
     NEP --> EPPAIR

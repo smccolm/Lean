@@ -1,6 +1,73 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
-Current source-only check (3 October 2026): no consumer or proof status
+Owner classification (3 October 2026): source audit COMPLETE. Disputed
+closed Pintz endpoints are RESEARCH STRENGTHENINGS; their frozen end
+statements remain required. Original research proves the first zeta LV
+target through the mixed-height critical moment; no weaker substitution or
+acceptance change (38/42). Earlier impasse checkpoints are historical.
+
+Original research 58511: clean scratch proves the exact LV strip and
+frozen A(41/42)<=63/85 value. Literal mixed-cell counts feed a joint
+42nd-moment estimate BEFORE Holder; actual source-entry, both Abel errors,
+native VMVT and original-ordinate recovery are proved. The final density
+consumer uses the existing lower-strip nonexistence, general-LV window
+and exact transfer. This is a RESEARCH STRENGTHENING, not a Pintz Theorem 1
+boundary reproduction. The production module passes check 72099, with
+explicit audits, eight regressions and principal BAT coverage installed.
+Paper BAT 98577 found a regression-name ambiguity, now qualified; BOTH
+BATs are being rerun. Foundation 10502 passed previously. The other
+frozen endpoints keep EPZAE-30 OPEN and acceptance at 38/42. Earlier
+second-endpoint-open checkpoints below are superseded.
+
+Original-research scratch now has two actual consumers:
+`endpoint_distinct_triangle_reduction` absorbs the repeated-frequency
+part of the signed cubic far trace; `endpoint_triple_residual_dichotomy`
+keeps the actual zeta interval and absolute height, with the continuous
+integral contributions in all three factors removed or absorbed. Neither
+bounds the remaining signed discrete correlation. These are not source reproductions or
+production endpoint theorems; EPZAE-30 remains OPEN. Exact scope and
+verification are in Research Agenda and Reproduction Manifest.
+
+Scratch checkpoint 59327 retains the complex phase in the native sharp
+B-process (`modelPhase_source_sharp_comparison`), proves its literal
+three-term phase identity, and derives continuous angular and radial
+cancellation using the native monotone-slope integral test. The finite
+reciprocal-weighted above-cone radial frequency sum has a proved harmonic
+bound. These are original-research kernel consumers, not Pintz endpoint
+source reproduction. Discrete sampling, actual retained-cutoff assembly,
+and the required far-correlation bound remained open at that checkpoint.
+The newer `norm_reflectedBand` uses the already-proved negative second
+derivative range test and discrete partial summation on the actual
+intersected stationary intervals, deriving 3072*N^2*|K| for arbitrary
+integer mismatch sets. `anchorFar_outsideBand_error` consumes the real
+zeta pattern, not independently supplied endpoints or heights.
+`endpoint_outsideBand_dichotomy` absorbs the sqrt(N)-wide band and ALL
+reflection errors under the original endpoint quantifiers. It retains
+the explicit signed remainder, whose stronger cancellation is unproved.
+This is original research, not a proof of Pintz's disputed endpoint.
+The later `endpoint_wideOutsideBand_dichotomy` enlarges these checked
+removals to gaps N^(9/5) and mismatches N^(9/10), including all errors.
+`ordinate_local_mass_refined` derives local nonconcentration by restricting
+the ACTUAL pattern, without an assumed density bound. The signed
+complement remains unbounded at the strength needed for the endpoint.
+The latest `endpoint_pairWideOutsideBand_dichotomy` consumes the installed
+`exponentPair_three_fortieths` through its actual logarithmic sum and
+Gram-row contracts, enlarging the gap cutoff to N^(10/3). This is a proved
+medium-gap removal and local ordinate estimate, not an assumed analytic
+endpoint input. The remaining signed correlation still needs a new bound.
+The next checked step uses the installed Heath--Brown analytic pair
+(1/162,359/378), not a desired-result hypothesis, to bound the actual
+original/reflected difference-interval sums. Local nonconcentration and
+the localized analytic Gram row also discharge the enlarged far matrix's
+negative-spectrum bound. The signed cubic consumer is kernel-checked;
+the full signed-trace/outside-band estimate is not. See Research Agenda.
+Check 21443 now connects the ordered reflected cycles to the FULL trace
+by an exact six-orientation real-part identity. The derived N^(4/5)
+mismatch-band/error estimate is consumed by the actual Gram/spectral
+inequality, and its cost plus the negative-spectrum term are absorbed.
+The remaining F_out upper bound is original research and still unproved.
+
+Historical source-only check (before the research restart, 3 October 2026): no consumer or proof status
 changes. Original endpoint acceptance remains OPEN at the analytic
 impasse, 38/42 complete; the weaker consumers below remain separate.
 Latest actual BAT evidence is 89353/41454, both PASS, not new runs.

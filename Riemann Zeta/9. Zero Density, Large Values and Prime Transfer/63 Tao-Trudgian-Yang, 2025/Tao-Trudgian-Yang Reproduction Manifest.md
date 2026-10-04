@@ -1,5 +1,442 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Owner-directed signed-correlation research (3 October 2026)
+
+### Exact second-endpoint research proof (58511)
+
+Direct scratch check 58511: PASS, exit 0, zero Lean errors, warnings,
+suggestions or linter diagnostics. Both the frozen LV target on
+37/7<=tau<340/63 and A(41/42)<=63/85 have clean transitive axiom output:
+propext, Classical.choice and Quot.sound only. Scratch SHA-256:
+`c5d88a447f8e12a8f5f6174e5aaa95a374d06e1e276cb7a0e0085655e3a1e603`.
+The original source-entry, joint integral, critical VMVT insertion,
+off-height absorption, actual ordinate count and exact density transfer
+are all included. This is a research strengthening, not a claim that
+Pintz Theorem 1 supplies its strict boundary.
+
+Fresh logged check 27524 also PASSes, exit 0, with no diagnostics or
+prohibited dependencies. Log `E:/Lean/.scratch/pintz-endpoint-verified-20261003.log`,
+SHA-256 `ae383ab1cf6d45f2ec7767ff830dd50c5d5a374dfbc16f0bf32ece5f1d3c09a4`.
+The initial production write denial was resolved by this fresh evidence;
+the same authorized installation then succeeded without any bypass.
+`Extension/TaoTrudgianYang2025/PintzEndpointResearch.lean` is installed
+and direct check 72099 PASSes, exit 0, zero diagnostics and permitted
+logical axioms only. Module SHA-256:
+`d7b15421496ff500d76093202bb01114bb777d86a69d147da84c03e14de0b0f0`.
+The dependency-selected module contains 21 definitions and 82 theorems
+(12 private), with 82 direct audits and three internal exact examples.
+The post-install Lake compile also passes. Its trace has exactly 82
+informational axiom reports and no warning/error entries:
+`E:/Lean/.lake/tao-trudgian-yang-2025-build/lib/lean/TaoTrudgianYang2025/PintzEndpointResearch.trace`,
+SHA-256 `e63204b4a257d39864f498c2933258381cde85d414c9185aa39aa4e4a70997c1`.
+All 70 public theorems are explicitly audited in the package audit;
+eight new exact-signature regressions cover the exact LV/density contracts and the actual
+mixed-cell, critical-moment and original-ordinate consumers. The root
+import and principal BAT PowerShell inventory include the new module.
+Post-install foundation BAT 10502: FINAL RESULT PASS, exit 0, zero Lean
+diagnostics, all 14,290 discovered foundation theorem audits, exact
+publication contracts, regressions and 16 declaration linters pass.
+Log `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_191628.log`.
+SHA-256 `69ced43067317e8b5f94634ef4fb59fc04075e4531e4607580b9b60e81b5d5e4`.
+Subsequent paper BAT 98577: FAIL, exit 1. The production module and root
+compiled, but SemanticRegression line 83583 used an ambiguous unqualified
+`zeroDensityExponent` (GafniTao and TaoTrudgianYang2025 were both open).
+The regression is now explicitly qualified as
+`TaoTrudgianYang2025.zeroDensityExponent`; no mathematical proof changed.
+Failed log `logs/tao-trudgian-yang-build-20261003-191930-fe30aa44.log`,
+SHA-256 `99f2c0b7dee57cf4464d053a36a3704c5d65b68baec9b3cfdc19fbe27a947ca6`.
+Foundation rerun 78591: FINAL RESULT PASS, exit 0, zero Lean diagnostics;
+all build, publication-contract, regression, 14,290-theorem audit and
+16-linter gates pass. Log
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_193638.log`, SHA-256
+`b6b4e719a8b773eb0a82abcba3ecabbab9a71191c94418fdffdff7a01c895cb0`.
+The subsequent paper rerun 25859 is running, log
+`logs/tao-trudgian-yang-build-20261003-193946-b87dd07b.log`.
+Full post-fix package verification is not yet claimed. No Lean/Lake check
+overlaps either BAT.
+Earlier development failures are not proof evidence and their elaborator
+error dependencies are absent from the successful 58511 audit.
+Acceptance remains 38/42: the first and integer-tail frozen endpoints
+and aggregate EPZAE-30/39/40/41 acceptance are still open.
+
+Semantic source-entry review: `ZetaLargeValuePattern` retains the literal
+dyadic integer support, interval-indicator coefficients, [T,2T] ordinates,
+one-separation and lower bound for the actual Dirichlet sum.
+`logarithmicTaylor_actual_Abel` consumes that sum, derives nonempty active
+support and carries the full H*(H+1) translation error. The selected W
+is constructed from those same ordinates, with a proved covering loss.
+Constants and the epsilon--delta radius precede the arbitrary pattern.
+The density consumer uses the repository's multiplicity-weighted zero
+count and its existing exact transfer; no target conclusion, overlap
+count or moment estimate is an external premise. This semantic check is
+separate from, and does not replace, the full package audit.
+
+### Earlier full mixed-cell counting revision
+
+Direct scratch session 26651: PASS, exit 0, zero Lean errors, warnings,
+linter diagnostics or tactic suggestions. The full far-pair and same-height
+counts are proved; their exact physical range and remaining joint-moment
+obligations are recorded in Research Agenda. Earlier clean direct checks
+81036 and 80432 established the per-label and harmonic-sum portions.
+Development checks 94737, 17607, 38672, 47946, 60765, 37259 and 45774
+exposed elaboration issues (including an incorrect expansion coefficient
+in the draft). All were repaired; failed checks are not proof evidence.
+
+52 definitions, 172 theorems (22 private), 26 exact examples and 173
+explicit audits. Every theorem is audited; all dependencies are propext,
+Classical.choice and Quot.sound. Scratch SHA-256:
+`10f26b577cc358578480a6b7d430160132909f005ac23582f1a11f26365ac301`.
+Raw scratch integrity scan and git diff --check pass; ordinary Git
+LF/CRLF notices are not Lean diagnostics. The scratch is checked directly,
+not silently included in the production import graph. Foundation BAT 77886:
+FINAL RESULT PASS, exit 0, zero Lean diagnostics, all build/contract/audit/
+linter gates pass. Log `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_183557.log`,
+SHA-256 `62f50416a2dadb8559cf392e311f0a97c49b52bbc48d2ef8e46ac11ee590fd77`.
+The subsequent paper BAT 58920: LEAN VERIFICATION PASS, exit 0,
+zero Lean errors, warnings, suggestions or linter failures. Log
+`logs/tao-trudgian-yang-build-20261003-183910-be3a3de7.log`, SHA-256
+`f7c7aa43a043467f72f0536b5faaae4b919a8bc5299629cb95c94688309241b1`.
+No Lean/Lake check overlapped either BAT. The joint multiplicity, separated
+subset and actual source-entry scripts written afterwards were initially
+under development check 13481, superseded by clean check 58511 above.
+They are not included in the historical 26651 hash/claim. At that earlier
+checkpoint the endpoint was not proved; the exact second endpoint is now
+proved above. 38/42 and all frozen statements are unchanged.
+
+### Earlier actual mixed-height Taylor-cell revision
+
+Direct scratch check 21279: PASS, exit 0, zero Lean errors, warnings,
+linter diagnostics or tactic suggestions. Development checks 5524,
+24844 and 30710 exposed elaboration errors; 40042 passed with diagnostics.
+All causes were repaired, not suppressed. Earlier 48651 cleanly checked
+the equal-centre portion. The actual all-centre medium-far disjointness
+and precise unproved next obligations are recorded in Research Agenda.
+
+46 definitions, 149 theorems (17 private), 26 exact examples and 150
+explicit audits. Every theorem is audited; all dependencies are propext,
+Classical.choice and Quot.sound. Scratch SHA-256:
+`8dec47b552ec4862fd1cf8e20e7cc3697ada34aec7aa1277562cd6c832c5d524`.
+Raw scratch integrity scan and git diff --check pass. Ordinary Git
+LF/CRLF notices are not Lean diagnostics. Foundation BAT 98562: FINAL
+RESULT PASS, exit 0, zero Lean diagnostics; all build, contract, regression,
+audit and linter gates pass. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_173241.log`.
+SHA-256: `8d2af1ddae7050cf4c7b7662ef40cf58bbcd557681ca327247350093f6ebf936`.
+Paper BAT 31709: FINAL RESULT LEAN VERIFICATION PASS, exit 0, zero Lean
+diagnostics; all pins, scans, coverage, regeneration, 10785 build jobs,
+semantic regression and transitive audits pass. Historical Python
+invalid-escape SyntaxWarnings remain visible. Log:
+`logs/tao-trudgian-yang-build-20261003-173544-c249deef.log`.
+SHA-256: `9be752395e9c6841794c54a5c2e48b5ca34c89b258fe10828c8ec73edd8bcea7`.
+No Lean/Lake check overlaps a BAT. No endpoint or acceptance gate closes,
+38/42. Later sixth-ratio, fifth-label projection, nonzero-label diameter,
+second-centre uniqueness and full counts are checked in 26651 above,
+not covered by the historical 21279 hash or its BAT receipts.
+
+### Earlier full signed-trace frequency revision
+
+Direct Lean session 21443: PASS, exit 0, zero Lean errors, warnings,
+linter diagnostics or tactic suggestions. Intermediate 36411 passes.
+Development 22296 exposed one missing positivity fact and three unused
+simp arguments; all causes were repaired, not suppressed. Research Agenda
+records the exact full-trace band estimate, six-orientation identity,
+error absorption, endpoint-neighbourhood consumer and large-cardinality
+alternative. The remaining signed F_out upper bound is not proved.
+
+Scratch totals: 44 definitions, 139 theorems (15 private), 26 exact
+examples, 140 explicit audits. Every theorem is audited; the extra audit
+is alignedOffDiagonal. All dependencies are propext, Classical.choice and
+Quot.sound. SHA-256:
+`d4619d191954138c4a46da8d7962c87f020f5dc215e7e8970e5b2509d842b8c1`.
+Raw scratch integrity scan and git diff --check pass; ordinary Git
+LF/CRLF notices are not Lean diagnostics. Protected frozen-contract,
+counterexample, authorized-repair, audit, regression and runner hashes
+remain unchanged. No recovery-record write occurred. Acceptance 38/42;
+EPZAE-30/39/40/41 OPEN. The direct scratch check is separate from
+production BAT coverage.
+
+Foundation BAT 89583: FINAL RESULT PASS, exit 0, zero Lean diagnostics;
+8857 jobs, 14290 discovered theorem audits, five exact frozen contracts,
+retained regressions and all 16 linters pass. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_165316.log`.
+SHA-256: `3437cd23528fb41215613dad89adad7d6eea405d17ba2c9a2b0a3ed7e40d2791`.
+Paper BAT 95712: FINAL RESULT LEAN VERIFICATION PASS, exit 0, zero
+Lean diagnostics. All pins, integrity/coverage scans, regeneration,
+10785 build jobs, semantic regression and transitive axiom audit pass.
+The historical Python invalid-escape SyntaxWarnings remain visible and
+are not Lean diagnostics. Log:
+`logs/tao-trudgian-yang-build-20261003-165625-4590c5b2.log`.
+SHA-256: `7d1d7051bf37345724ee62991750aae0a4acbb6a818e9a215e2df20c302e9132`.
+No Lean/Lake invocation overlaps either BAT. Earlier receipts below
+cover earlier snapshots only.
+Later actual logarithmic Taylor-cell research was written during paper
+BAT 95712 and checked separately in 21279 above. The 21443 hash and
+receipts retain their earlier scope and do not cover that later revision.
+
+### Earlier actual-interval and spectral revision
+
+Direct Lean session 6803: PASS, exit 0, zero Lean errors, warnings,
+linter diagnostics or tactic suggestions. Intermediate 30636 and 98642
+also pass. Development 31844 had two elaboration errors; 61763 then
+exposed two unused/unreachable-tactic warnings. Their causes were fixed,
+not suppressed. Research Agenda states the exact checked interval bounds,
+enlarged-cutoff spectrum and actual signed-cubic consumer; no endpoint closes.
+
+Scratch totals: 41 definitions, 129 theorems (14 private), 25 exact
+examples and 130 explicit audits. Every theorem is audited; the extra
+audit is alignedOffDiagonal. All dependencies are propext, Classical.choice
+and Quot.sound. Scratch SHA-256:
+`e54601bb2fa4bc46eb86670f7a776c558036c467d1f65e784f701c473980fd37`.
+Raw scratch integrity scan and git diff --check pass. Git's LF/CRLF
+notices are not Lean diagnostics. No frozen statement, counterexample,
+regression, production Lean file, source pin, runner or recovery record
+was changed. The scratch is checked directly, not silently treated as
+production coverage. Acceptance remains 38/42, EPZAE-30/39/40/41 OPEN.
+
+Foundation BAT 41438: FINAL RESULT PASS, exit 0, zero Lean diagnostics;
+8857 jobs, 14290 discovered theorem audits, five frozen contracts,
+retained regressions and all 16 linters pass. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_162629.log`.
+SHA-256: `2331720bb53dc198cba6d5ef430a96345dbf6f73cf3b00d33c6f5f648eda4e27`.
+The subsequent full paper BAT 85399: LEAN VERIFICATION PASS, exit 0,
+zero Lean diagnostics; all source pins, 1452-file coverage, 10785 build
+jobs, semantic regression and 21206 transitive audits pass. The two
+historical Python invalid-escape SyntaxWarnings remain visible. Log:
+`logs/tao-trudgian-yang-build-20261003-162924-3e4a3d09.log`.
+SHA-256: `0125e12f15336b179dfd96911200fb7905a41b4fe0cf76d5fb0a440cbb89b10e`.
+No Lean invocation overlapped either BAT. Earlier receipts below do not
+verify this newer scratch revision. Further ordered-triangle reflection
+work was written during the paper BAT and checked later in 21443 above;
+the 6803 hash and receipts do not claim to verify that later revision.
+
+### Earlier enlarged-gap and wide-mismatch revision
+
+Direct Lean session 12842: PASS, exit 0, zero Lean errors, warnings,
+linter diagnostics or tactic suggestions. This checks the actual
+(3/40,31/40)-pair-driven gap absorption through N^(10/3), local ordinate
+nonconcentration at that length, and removal of the N^(9/10)-wide
+frequency band plus every reflection error. The combined actual-pattern
+consumer retains the signed complementary sum; its required bound and
+the frozen endpoint are still OPEN. Acceptance remains 38/42.
+
+Scratch totals: 39 definitions, 116 theorems (13 private), 24 exact
+examples, 117 explicit audits. Every theorem is explicitly audited;
+the extra audit is alignedOffDiagonal. All printed dependencies are
+propext, Classical.choice and Quot.sound. SHA-256:
+`73036924616d9d3a027249cabb609f5610b2aaf5f2e225c80d58a330b005793e`.
+Development checks 95897, 83271, 33287 and 62465 exposed elaboration
+issues, all repaired. Intermediate checks 1653, 79158 and 55110 pass
+without Lean diagnostics. No proof placeholder or suppressed diagnostic
+was added. Raw scratch integrity scans and git diff --check pass;
+Git's ordinary LF/CRLF notices are not Lean diagnostics.
+
+Foundation BAT 87465: FINAL RESULT PASS, exit 0, zero Lean diagnostics;
+8857 jobs, all 14290 discovered audits, five frozen contracts, retained
+regressions and 16 declaration linters pass. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_154800.log`.
+SHA-256: `e0b1542305e40c2bf93bc1804a48ea75bad999dea95fb18efbc5ba10ae1d6151`.
+The subsequent full paper BAT 88976: LEAN VERIFICATION PASS, exit 0,
+zero Lean diagnostics; all source pins, 1452-file production coverage,
+10785 build jobs, semantic regression and 21206 transitive audits pass.
+The two historical Python invalid-escape SyntaxWarnings remain visible.
+Log: `logs/tao-trudgian-yang-build-20261003-155055-51fb756a.log`.
+SHA-256: `983f130c9e81c3feb973f65ed38b8bd461578eabe0f9f1c1c23f3036a8c5eae5`.
+No Lean invocation
+overlaps a BAT. Earlier BAT receipts below cover earlier snapshots, not
+this revision. Production files, frozen contracts, counterexamples,
+regressions, source pins, runners and recovery-record files are unchanged.
+The standalone research scratch is not silently claimed as production
+coverage: its direct check and both mandatory BATs are distinct evidence.
+Later difference-slab and spectral work is checked in 6803 above.
+The 12842 hash and its BAT receipts remain evidence for this earlier
+snapshot only, not a verification of that later text.
+
+### Earlier actual-pattern mismatch-band revision
+
+Focused session 98087, same direct Lean command below: PASS, exit 0,
+zero Lean errors, warnings, linter diagnostics or tactic suggestions.
+The main proof already passed 77380; 98087 additionally checks both new
+exact examples. Research Agenda records the precise analytic scope:
+3072*N^2*|K| discrete band cancellation, actual-pattern entry, uniform
+9243*R^2*N^(5/2) total error, and its absorption in the original endpoint
+quantifiers. The outside-band cancellation and frozen endpoint are OPEN.
+Current totals: 37 definitions, 100 theorems (11 private), 21 exact
+examples and 101 explicit audits. Mechanical name comparison finds no
+unaudited theorem; the extra audit is alignedOffDiagonal. All audited
+dependencies are propext, Classical.choice and Quot.sound. Scratch SHA-256:
+`4b23b634bb2eabcb3e47d0316c7482fca57965024b4a9142be4c6519fae02eea`.
+
+Discrete development checks 61790, 70703, 12337, 61894, 72417, 93800,
+31586, 51297, 74104, 31946 and 44431 exposed elaboration/tactic issues;
+82721 and 75862 exposed linter diagnostics. These were repaired, not
+suppressed. Intermediate clean checks include 94107, 99586, 24348,
+77062, 52116, 86886, 33358 and 64210. Only checked snapshots are proof
+evidence; no admitted source or new analytic assumption was introduced.
+No production file, frozen statement, counterexample, regression,
+source pin, runner, import coverage or recovery-record file changes.
+Foundation BAT session 50963: FINAL RESULT PASS, exit 0, zero Lean
+diagnostics; unchanged 8857 jobs, 14290 discovered audits, all five frozen
+contracts, retained regressions and 16 declaration linters. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_151302.log`.
+SHA-256: `a4d28805420b27f42c1ae81e30beecff958a1e902ad8716b9af9bebcf614c121`.
+Subsequent paper BAT session 68753: LEAN VERIFICATION PASS, exit 0,
+zero Lean diagnostics. Source pins, full production coverage, semantic
+regressions and all 21206 transitive audits pass. The two historical
+Python invalid-escape SyntaxWarnings remain visible, not Lean warnings.
+Log: `logs/tao-trudgian-yang-build-20261003-151719-e6a0f202.log`.
+SHA-256: `9059d4fb39f194867640000c4d5a13ac76a4eff03f401a5f7a7605b392cfe89f`.
+Earlier BAT logs below do not verify
+this newer scratch snapshot. The direct scratch check remains separate
+from the production BAT evaluation. All protected production, audit,
+regression, counterexample, authorized-repair and runner hashes were
+rechecked unchanged against the preceding receipts.
+Further refined ordinate-gap research was added to the same scratch
+while paper BAT 68753 ran, without a simultaneous Lean check. After its
+completion, direct session 1653 checked the N^(9/5) gap absorption and
+actual outside-band consumer: PASS, exit 0, zero Lean diagnostics.
+This later revision is not covered by the 98087 scratch hash or those
+BAT receipts. Further local-ordinate work and subsequent BATs remain
+in progress; the checked results above retain their stated scope.
+
+### Earlier phase-retained oscillatory-kernel revision
+
+Focused session 59327, the same direct Lean command below: PASS, exit 0,
+zero Lean errors, warnings, linter diagnostics or tactic suggestions.
+The phase-retained sharp B-process, exact reflected triple, angular
+square-root cancellation, and summed reciprocal-weighted above-cone radial
+cancellation are checked. Research Agenda states their exact scope and the
+remaining discrete sampling/correlation obligation. No endpoint closes.
+Current totals: 26 definitions, 66 theorems (six private), 17 exact
+examples and 67 explicit audits. Mechanical name comparison finds no
+unaudited theorem; the extra audit is alignedOffDiagonal. Every audit has
+only propext, Classical.choice and Quot.sound. Scratch SHA-256:
+`c9db2810f36722d28d21fdc0c72559076b5507ba8644c4ea3e0205cfe060e4ce`.
+
+Development sessions 79167, 10145, 5010, 41660, 19676, 16153 and 45071
+had syntax/elaboration/tactic diagnostics. All were repaired before 59327,
+without placeholders, suppressed linters or imported assumptions. These
+development checks are not proof evidence. The scratch is still not a
+production import: its direct check and the mandatory BATs are separate.
+No new module family, source search, frozen-statement replacement,
+counterexample edit, source pin change or recovery-record write occurred.
+Foundation BAT session 80344: FINAL RESULT PASS, exit 0, zero Lean
+diagnostics, unchanged 8857 jobs and 14290 discovered theorem audits.
+All five exact publication contracts and all retained regressions/linters
+pass. Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_140826.log`.
+SHA-256: `5fc005d658099b0add8e6258798b3e8236e47fa62cae5e75a4811123bfb3eb69`.
+The subsequent paper BAT, session 46340: LEAN VERIFICATION PASS, exit 0,
+zero Lean diagnostics; all 22 source pins, 1926-file shortcut scan,
+1452-file package coverage, 10785 build jobs, separate semantic regression
+and 21206 transitive audits pass. The two historical Python invalid-escape
+SyntaxWarnings remain visible. Log:
+`logs/tao-trudgian-yang-build-20261003-141121-df3128e4.log`.
+SHA-256: `2f1fb02f16b8641ed598a24d69305d1a2a344ed8b4eb0ca563b761a56d058f35`.
+Its terminal receipt is separate from the focused scratch check. Further resonant-slice Lean
+development after 59327 requires its own focused check and later BATs;
+these earlier receipts do not verify that later scratch snapshot.
+
+### Earlier fully verified residual revision 54966
+
+Focused session 54966, same direct Lean command below: PASS on the first
+check, exit 0, zero Lean diagnostics. The middle-kernel integral is now
+removed with error 108*N^3*R^2/L, and the actual endpoint-pattern consumer
+absorbs it. The final signed term has literal discrete residuals in all
+three factors. This is not a proof of its required cancellation bound.
+Final file totals: 21 definitions, 45 theorems, 15 exact examples and 46
+explicit permitted-axiom audits. SHA-256:
+`a7a2d5bd2c321674ec7a95b1b17c1ae33831c4e23f8213e2c4636fdd05906433`.
+The post-change foundation BAT, session 7619: FINAL RESULT PASS, exit 0,
+zero Lean diagnostics; unchanged 8857 jobs, 14290 discovered theorem
+audits, publication contracts, regressions and linters. Log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_131927.log`.
+SHA-256: `3ab1b2fd34359f218c2828303f1430520fa6aa9e3ff2803193619bca9bf94748`.
+The subsequent paper BAT, session 61639: LEAN VERIFICATION PASS, exit 0,
+zero Lean diagnostics. All 22 pinned sources, the 1926-file shortcut scan,
+1452-file package coverage, historical replay, certificate regeneration,
+10785 build jobs, separate semantic regression and all 21206 transitive
+audits (14961 target + 6240 native + five anchors) pass. The two preserved
+Python invalid-escape SyntaxWarnings remain visible, not Lean warnings.
+Log: `logs/tao-trudgian-yang-build-20261003-132259-e7d4caa2.log`.
+SHA-256: `54d46d414812e524d98da2d190b7ed5e2c0cea15f65ac25e95ca685c82912351`.
+Both commands were run with `--no-pause`, sequentially, after the final
+Lean change. Scratch hash was rechecked unchanged after both runs.
+Mechanical audit coverage confirms 45 theorem names and 46 explicit
+audits with NO unaudited theorem; the extra audit is alignedOffDiagonal.
+All production source/contract/counterexample/runner files remain
+unchanged. No recovery-record file was created or edited. These facts
+verify the retained scope, not the still-unproved endpoint: 38/42.
+
+### Earlier fully verified 35045 checkpoint
+
+Checkout HEAD: `8d3c912f330b9f75f0325a8a1ea956c9e36861b8`.
+Only the existing research scratch and documentation change; no new
+production module, analytic assumption, frozen statement, counterexample,
+regression, build target, runner or dependency pin changes. The source
+audit is COMPLETE; the closed Pintz endpoints are RESEARCH STRENGTHENINGS.
+No external source search or recovery-record write was performed.
+
+From Extension with ELAN_HOME=C:/Users/Naraphim/.elan:
+
+`lake env lean E:/Lean/.scratch/epzae-pintz-signed-gram-20261003.lean`
+
+Final focused session 35045: PASS, exit 0, zero Lean errors, warnings,
+linter diagnostics or tactic suggestions. File totals: 19 definitions,
+41 theorems (including five private helpers), 14 exact examples and 42
+explicit dependency audits. Every theorem is explicitly audited; all
+dependencies are among propext, Classical.choice and Quot.sound.
+Scratch SHA-256:
+`a4c56d5653cfd87158d4f30f4524b2cb6ac5a63f4c89404a410338a766bca1e5`.
+
+The verified outputs are the actual signed cubic far-matrix bound,
+uniform repeated-frequency absorption, and the zeta-specific anchored
+residual dichotomy with the continuous integral error absorbed. Research
+Agenda records their exact quantifiers and remaining signed correlation.
+Neither a frozen endpoint nor the original envelope has been proved.
+The scratch is NOT imported by the production BAT; its direct check is
+separate evidence, not an increase in the production theorem count.
+
+Successful incremental checks: 5330, 15759, 99184, 29857, 19325 and 2942.
+Development checks 97363, 37887, 5105, 37138, 75059, 13632, 8072, 20186,
+88268, 1524, 58523, 7928, 21325 and 46974 had elaboration/tactic errors;
+29530 exited 0 but had an unused-simp warning and was NOT a clean check.
+All diagnostics were repaired before the final check, without placeholders
+or linter suppression. These failed development checks are not proof
+evidence and are not retained as failing Lean files.
+
+Rechecked unchanged: LiteratureDensity
+`83ea5484e2ebe5e905bf90d56f126cdadbab9caabdd870d31f9813def628f2e5`,
+Audit `a2ed6911fe66e3686a68d9e5ff23592022a6f9f14ae8489cc49736a4c21c4a63`,
+SemanticRegression
+`8483613d5981028d49f449edaaf1c444cd919ea67828fd9f7f5a0c4e0396f1cd`,
+all three protected obstruction/correction hashes below, and paper BAT
+`6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+
+Both mandatory BATs are checked sequentially for this scratch/docs
+snapshot. Foundation `cmd /c run_lake_build.bat --no-pause`, session
+84744: FINAL RESULT PASS, exit 0, 8857 jobs, 14290 discovered theorem
+audits, 7636 explicit public declarations, all five frozen publication
+contracts and the retained regressions/linters. Zero Lean diagnostics.
+Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20261003_125445.log`.
+SHA-256: `e2dbfa54b27799803281e4e92a2a44ef8a24c5e4d7f54a6d8a752d43f9409d07`.
+Paper `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, session 78504:
+LEAN VERIFICATION PASS, exit 0, all 22 source pins, 1926-file integrity
+scan, 1452-file package coverage, deterministic replay/certificate checks,
+10785 build jobs, separate semantic regression and 21206 dependency
+audits (14961 target + 6240 native + five anchors). Zero Lean diagnostics;
+the two frozen-Python invalid-escape SyntaxWarnings remain visible.
+Log: `logs/tao-trudgian-yang-build-20261003-125916-a6bc0f7b.log`.
+SHA-256: `45e8bc3a3ddba4e9501511fb8daffc3d177d20fe4411d9e1163d690bfc7bd2ea`.
+These two runs verify the 35045 scratch/docs checkpoint. Mathematical
+work then resumed on the middle-kernel integral contribution; that later
+scratch revision requires its own focused check and subsequent BAT runs.
+
+Repository-wide proof-integrity searches contain no prohibited term or
+declaration; `constant` matches are comments and ordinary structure
+fields. The explicit scratch scan is also clear. `git diff --check`
+passes, with existing Git LF-to-CRLF notices, not Lean diagnostics.
+There are no changes under the production Lean directory or Sources.
+EPZAE-30/39/40/41 remain OPEN, 38/42 acceptance unchanged.
+
 ## Source-only endpoint impasse check (3 October 2026)
 
 No Lean file, dependency, runner, audit or regression changed in this
