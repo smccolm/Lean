@@ -25,6 +25,11 @@ Pintz endpoints by original far-correlation arguments. No weaker source-faithful
 table replaces them. This is a separate extension of the foundation above;
 its checklist and reproduction manifest record the independent paper BAT gate.
 
+Node 77 contains the [Dong–Wang–Wang–Zhang 2026 project template](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/77%20Dong-Wang-Wang-Zhang,%202026/README.md):
+a dated source/code survey, pinned paper and references, exact mathematical
+targets, an inactive future goal prompt and a scaffold-only BAT. No Lean
+conversion or proof goal has been started for that node.
+
 ---
 
 ## Package Structure

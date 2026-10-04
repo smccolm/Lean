@@ -27,3 +27,9 @@ Node 63 contains the [Tao--Trudgian--Yang formalization](63%20Tao-Trudgian-Yang,
 counterexamples and authorized repairs, and the closed Pintz endpoints proved
 as original research strengthenings. Each extension has its own verification
 runner and reproduction manifest; none changes the frozen foundation's scope.
+
+Node 77 now contains the [Dong–Wang–Wang–Zhang planning scaffold](77%20Dong-Wang-Wang-Zhang,%202026/README.md),
+with a 4 October 2026 source/repository survey, pinned primary sources, an inactive
+goal prompt and a scaffold-verification BAT. Lean conversion has not started;
+neither main result is formalized in this node and all twenty implementation
+gates remain OPEN.

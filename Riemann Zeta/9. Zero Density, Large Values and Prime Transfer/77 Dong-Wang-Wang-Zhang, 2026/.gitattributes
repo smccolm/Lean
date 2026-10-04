@@ -1,0 +1,4 @@
+# Immutable downloaded source artifacts and extracted original bytes.
+Sources/** -text
+*.bat text eol=crlf
+Tools/*.ps1 text eol=crlf

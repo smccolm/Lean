@@ -1,0 +1,38 @@
+{
+  "observed_on": "2026-10-04",
+  "method": "GitHub public repository/commit/tree APIs and raw lean-toolchain at each exact commit; all recursive trees untruncated",
+  "installed": false,
+  "repositories": [
+    {
+      "repository": "teorth/expdb",
+      "branch": "main",
+      "commit": "c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+      "commit_time_utc": "2026-09-26T19:01:00Z",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "lean_file_count_whole_tree": 18
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "branch": "master",
+      "commit": "dd56d02cb7a58fa066c4a2c7fddec3cbb59ae8df",
+      "commit_time_utc": "2026-10-04T17:07:32Z",
+      "toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "lean_file_count_whole_tree": 9188
+    },
+    {
+      "repository": "AlexKontorovich/PrimeNumberTheoremAnd",
+      "branch": "main",
+      "commit": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+      "commit_time_utc": "2026-10-01T03:31:57Z",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "lean_file_count_whole_tree": 236
+    }
+  ],
+  "searches_without_dedicated_implementation": [
+    "GitHub repositories: 2608.31060",
+    "GitHub repositories: large zeta sums",
+    "GitHub repositories: Halasz lean",
+    "GitHub code: 2608.31060"
+  ],
+  "qualification": "Negative indexed searches do not establish that no private, unindexed or differently named implementation exists. No whole-repository dependency audit is claimed."
+}
