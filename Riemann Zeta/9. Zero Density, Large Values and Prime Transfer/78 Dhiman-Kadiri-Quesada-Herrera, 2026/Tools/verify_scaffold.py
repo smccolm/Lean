@@ -140,7 +140,11 @@ def validate(paper=PAPER):
                  'lemma_seven_negative_height', 'lemma_six_source',
                  'lemma_four_source', 'lemma_five_quadratic_sum',
                  'lemma_five_lower_remainder_source', 'lemma_five_lower_sum_source', 'lemma_five_upper_sum_source', 'stationary_point_source',
-                 'fresnel_window_source', 'stationary_quadratic_phase_source']:
+                 'fresnel_window_source', 'stationary_quadratic_phase_source',
+                 'partII_printed_E1_counterexample', 'weighted_integral_gamma_source',
+                 'weighted_integral_chi_source', 'afe_integral_sum_source',
+                 'stationary_digamma_decimal_source', 'afe_second_derivatives_source', 'afe_positive_second_quotients_source',
+                 'partII_negative_second_integral', 'afe_positive_second_integral_source']:
         require(re.search(r'^theorem ' + name + r'\b', regression, re.M) and
                 'SemanticRegression.' + name in audit, f'Missing required source regression/audit: {name}')
     print(f'STATUS PASS: active goal; {complete}/20 gates complete; exact source-diagnostic regressions required.')

@@ -57,3 +57,5 @@ Four Fresnel modules are adapted in the project namespace. The Gaussian comparis
 | FresnelAbelLimit.lean | e9f294b70ba26a11ecea0185dfedcb5b2a6b65c969db2f2973f5e627dc62d09e |
 | FresnelEvaluation.lean | 925e9fa770af5f2f44cc66b74516a6cbf407481b6eaa92fee8cc1180cd92f0c6 |
 | AtkinsonFiniteStationaryMain.lean | 5da1b1a3a31658e9be97305fb3e45a1bb42dc3fea1a55d9a2ab9292f55a2d4a9 |
+
+DampedWeightedKernel directly imports the existing node-71 GuthMaynard.DFIComplexLaplace and consumes integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi and dfiComplexLaplace_eq. Source SHA-256: 1f79e5847fb9cb9e3e3d1a61fa62f9043ecf9b362c643fc06f42730607473bf9; exact imports/signatures are recorded in local_reuse_inventory.json. No upstream code is copied or changed. The current adapters prove local/absolute damped integrability, the exact actual-kernel identity and Gamma evaluation, and principal-branch continuity at zero damping. Uniform tails and removal of damping remain separate work. The import closure stays within the pinned audited foundation.

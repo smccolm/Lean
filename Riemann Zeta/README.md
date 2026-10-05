@@ -33,7 +33,7 @@ proof BAT share the unchanged pinned foundation graph. This is internal kernel/p
 
 ---
 
-Node 78 contains the [Dhiman–Kadiri–Quesada-Herrera active formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md), activated on 5 October 2026. DKQH-03/04/05/07/08/12/13 are complete: Lemmas 1–3, Appendix Lemma 11, corrected weighted Poisson Part I for all allowed N and endpoints, Theorem 9 AFE1 with its exact constant and corrected unit-term convention, and Lemmas 6–7 and Corollary 0.3 with real-cutoff transfer and both advertised decimal constants. This is 7/20 gates, with thirteen OPEN. The isolated package preserves the original counterexample and owner-approved repair; Part II and AFE2 remain open. Existing foundation contracts and dependency pins are unchanged.
+Node 78 contains the [Dhiman–Kadiri–Quesada-Herrera active formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md), activated on 5 October 2026. DKQH-03/04/05/06/07/08/12/13 are complete: Lemmas 1–3, Appendix Lemma 11, Lemmas 4–5 with actual improper integrals and stationary-phase normalization, corrected weighted Poisson Part I for all allowed N and endpoints, Theorem 9 AFE1 with its exact constant and corrected unit-term convention, and Lemmas 6–7 and Corollary 0.3 with real-cutoff transfer and both advertised decimal constants. This is 8/20 gates, with twelve OPEN. The isolated package preserves the original counterexample and owner-approved repair; Part II and AFE2 remain open. Existing foundation contracts and dependency pins are unchanged.
 
 ## Package Structure
 

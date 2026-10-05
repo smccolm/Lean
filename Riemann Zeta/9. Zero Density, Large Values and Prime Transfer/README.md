@@ -40,7 +40,7 @@ and alternate supporting proofs are documented without changing either main
 statement. Internal completion is not independent review or publication.
 
 Node 78 contains the [Dhiman–Kadiri–Quesada-Herrera active formalization](78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md),
-activated on 5 October 2026. **7/20 proof gates complete: DKQH-03/04/05/07/08/12/13 DONE; thirteen OPEN.** Its isolated
+activated on 5 October 2026. **8/20 proof gates complete: DKQH-03/04/05/06/07/08/12/13 DONE; twelve OPEN.** Its isolated
 Lean package begins with exact source-error regressions and actual sharp-sum objects.
 The active BAT checks full module coverage, source pins, exact types and transitive
 axioms. The existing foundation and dependency pins are preserved, and its owner

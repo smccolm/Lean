@@ -2372,5 +2372,47 @@
         "signature": "theorem exists_atkinsonPowerIntegral_finite_stationary_approximation (α : ℝ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ T G L b H : ℝ, 0 < T → 1 ≤ G → G ^ 2 ≤ 2 * T →\n      1 ≤ L → 8 * L ≤ G → 0 < H →\n      Real.sqrt T / 4 ≤ atkinsonSaddleRoot (T / (2 * Real.pi)) b - H →\n      atkinsonSaddleRoot (T / (2 * Real.pi)) b + H ≤ Real.sqrt T →\n      H ≤ atkinsonSaddleRoot (T / (2 * Real.pi)) b / 2 →\n      ‖atkinsonPowerIntegral T G L α b - atkinsonFiniteStationaryMain T G L α b H‖ ≤\n        C * G * T ^ (-α) * (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 +\n          16 * T * H ^ 4 / (atkinsonSaddleRoot (T / (2 * Real.pi)) b) ^ 3)"
       }
     ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIComplexLaplace.lean",
+    "sha256": "1f79e5847fb9cb9e3e3d1a61fa62f9043ecf9b362c643fc06f42730607473bf9",
+    "imports": [
+      "GuthMaynard.DFIBesselMellin",
+      "Mathlib.Analysis.Analytic.IsolatedZeros",
+      "Mathlib.Analysis.Complex.Convex",
+      "Mathlib.Analysis.Calculus.ParametricIntegral"
+    ],
+    "declarations": [
+      {
+        "name": "integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi",
+        "line": 20,
+        "signature": "theorem integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi\n    {s a : ℂ} (hs : 0 < s.re) (ha : 0 < a.re) :\n    IntegrableOn (fun x : ℝ =>\n      (x : ℂ) ^ (s - 1) * cexp (-(a * x))) (Set.Ioi 0)"
+      },
+      {
+        "name": "dfiComplexLaplace",
+        "line": 39,
+        "signature": "noncomputable def dfiComplexLaplace (s a : ℂ) : ℂ"
+      },
+      {
+        "name": "hasDerivAt_dfiComplexLaplace",
+        "line": 42,
+        "signature": "theorem hasDerivAt_dfiComplexLaplace\n    {s a : ℂ} (hs : 0 < s.re) (ha : 0 < a.re) :\n    HasDerivAt (dfiComplexLaplace s)\n      (∫ x : ℝ in Set.Ioi 0,\n        (x : ℂ) ^ (s - 1) * (-x) * cexp (-(a * x))) a"
+      },
+      {
+        "name": "analyticOnNhd_dfiComplexLaplace",
+        "line": 121,
+        "signature": "theorem analyticOnNhd_dfiComplexLaplace {s : ℂ} (hs : 0 < s.re) :\n    AnalyticOnNhd ℂ (dfiComplexLaplace s) {a : ℂ | 0 < a.re}"
+      },
+      {
+        "name": "dfiComplexLaplace_ofReal",
+        "line": 130,
+        "signature": "theorem dfiComplexLaplace_ofReal\n    {s : ℂ} (hs : 0 < s.re) {r : ℝ} (hr : 0 < r) :\n    dfiComplexLaplace s (r : ℂ) = (r : ℂ) ^ (-s) * Gamma s"
+      },
+      {
+        "name": "dfiComplexLaplace_eq",
+        "line": 150,
+        "signature": "theorem dfiComplexLaplace_eq\n    {s a : ℂ} (hs : 0 < s.re) (ha : 0 < a.re) :\n    dfiComplexLaplace s a = a ^ (-s) * Gamma s"
+      }
+    ]
   }
 ]

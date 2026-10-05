@@ -37,3 +37,59 @@ AFEDigammaNumerics proves ψ(x)≥log(x)−1/(2x)−1/(12x²) for every x>0 by a
 All six branches in the exact c₀ maxima are bounded. afeFirstRealConstant_small_le proves c₀(14.13472)≤1.2552; afeFirstRealConstant_large_le proves c₀(3·10^12)≤1.2127. The public afe_first_kind_small_decimal and afe_first_kind_large_decimal consume those certificates and the actual real-cutoff AFE. Two unfolded source consumers preserve σ∈(0,1], the exact thresholds, inclusion of n=1, actual ζ and the displayed decimals. No assumption about zero verification or RH occurs. The current inventory is 87 files, twenty-one production modules and two verification modules. All new public declarations and consumers are registered. DKQH-13 is DONE after the exact-source review and sequential foundation/paper checks passed; the accepted count is 6/20.
 
 The author programs remain frozen and their outputs remain computational observations. The new AFE1 certification is an independent analytic/rational proof; it does not use Sage, Python, floating-point values or an optimizer as proof evidence. The Python Fraction exploration only selected convenient outward rational endpoints; Lean independently proves their complete finite inequalities. AFE2/Table 1–3 certification remains open.
+
+## Table 1 failures and proposed Table 2 certificates
+
+TableLowerBounds proves a fourth-order upper estimate for the actual digamma function and a finite lower enclosure 0.577215664≤γ. Combined with rational logarithm/pi bounds, it proves that Table 1's direct entries 2.265204 at exact 2π, 1.792736 at 1000, and 1.750701 at 10¹⁰ are strictly below the actual direct maxima: sigma=1 supplies each witness. These are failures of the claimed numerical maximum bounds, not counterexamples to the zeta remainder inequality itself. The printed entries remain preserved.
+
+AFETableTwo proves outward candidate bounds for all twenty cells at k=1,...,10, over the complete closed sigma strip. Finite exponential sums certify the floor-defined lower cutoffs. Distinct sigma ranges for the two A₀ inputs give separate direct/reflected rational certificates, propagated through the actual global maxima and then the actual two-polynomial AFE. The proposed decimals are listed in Computation Review and explicitly named proposedTableTwoDirect/proposedTableTwoReflected; they are not yet an adopted source repair.
+
+The unchanged Table 3, large-k bound and constant-six consequence remain proved. DKQH-16/17 stay OPEN for the remaining Table 1 certificates and explicit adoption of numerical repairs. General Part-II and E03 decisions remain pending. Current scope: 137 retained files, 71 production and two verification modules, 113 semantic consumers; accepted count 8/20.
+
+| k | Printed direct | Proposed direct | Printed reflected | Proposed reflected |
+|---|---:|---:|---:|---:|
+| 1 | 2.069011 | 2.069011 | 2.069008 | 2.069008 |
+| 2 | 2.132269 | 2.132269 | 2.132265 | 2.132266 |
+| 3 | 2.222299 | 2.222300 | 2.222296 | 2.222296 |
+| 4 | 2.472238 | 2.472239 | 2.472235 | 2.472236 |
+| 5 | 2.766225 | 2.766226 | 2.766222 | 2.766222 |
+| 6 | 3.075279 | 3.075280 | 3.075276 | 3.075277 |
+| 7 | 3.390201 | 3.390202 | 3.390198 | 3.390198 |
+| 8 | 3.707264 | 3.707265 | 3.707261 | 3.707262 |
+| 9 | 4.025115 | 4.025116 | 4.025112 | 4.025113 |
+| 10 | 4.343256 | 4.343257 | 4.343253 | 4.343254 |
+
+The proposed upper certificates do not by themselves assert that every changed original Table 2 entry is false. The three Table 1 failures above have separate lower-bound proofs. Adoption remains pending.
+
+## Global chi-factor table certificates
+
+ChiTableBounds bounds the actual C₁ on the entire closed sigma strip by a concave cubic and an explicit sum-of-squares identity. A finite Taylor remainder certifies C₂; finite positive exponential sums bound the remaining tails. The complete C₀ product and its actual attained maximum therefore give δ₀≤0.05961930 at exact 2π, δ₀≤0.0003692901 at 1000, δ₀≤3.692588·10⁻¹¹ at 10¹⁰, and δ₀≤1.230863·10⁻¹³ at 3·10¹². The last two are unchanged printed values; the first two are proposed outward replacements, not yet adopted. No optimizer output or sampled interval enters these proofs.
+
+The remaining Table 1 epsilon assembly and numerical-repair adoption stay OPEN under DKQH-16. Table 2 candidates, unchanged Table 3, large-k and constant-six bounds are proved as described above. Pending Part-II and E03 decisions are unchanged. Current scope: 137 retained files, 71 production and two verification modules, 113 semantic consumers; accepted count 8/20.
+
+## Complete proposed Table 1 AFE certificates
+
+AFETableOne proves all sixteen proposed Table 1 cells over the entire closed sigma strip. The four thresholds retain exact 2π in the first row. The symmetric lower cutoffs are proved equal to floor(sqrt(t₀/(2π)))+1/2 and are derived from the physical height, half-integer condition and x=y; no extra symmetric-cutoff hypothesis remains. Separate actual direct, reflected and symmetric zeta-remainder theorems consume all coefficient certificates, preserve logarithmic factors and cover both signs of t.
+
+The complete proposed Table 1 and Table 2 replacements are listed beside the preserved printed values in Computation Review. All unchanged Table 3 entries, k/π+1.1601 and the constant-six consequence are also proved. Numerical source-repair adoption and E03 remain pending before DKQH-16/17 can be accepted. The general Part-II decisions and DKQH-09–11 obligations remain separate. Current scope: 142 retained files, 76 production and two verification modules, 129 semantic consumers; accepted count 8/20.
+
+| Exact threshold | Column | Printed | Certified proposal |
+|---|---|---:|---:|
+| 2π | Reflected x<y | 2.264445 | 2.264445 |
+| 2π | Symmetric x=y | 2.265204 | 2.265207 |
+| 2π | Direct x>y | 2.265204 | 2.265207 |
+| 2π | δ₀ | 0.05961915 | 0.05961930 |
+| 1000 | Reflected x<y | 1.792711 | 1.792711 |
+| 1000 | Symmetric x=y | 1.265977 | 1.265978 |
+| 1000 | Direct x>y | 1.792736 | 1.792737 |
+| 1000 | δ₀ | 0.0003692900 | 0.0003692901 |
+| 10¹⁰ | Reflected x<y | 1.750701 | 1.750701 |
+| 10¹⁰ | Symmetric x=y | 1.160079 | 1.160080 |
+| 10¹⁰ | Direct x>y | 1.750701 | 1.750702 |
+| 10¹⁰ | δ₀ | 3.692588·10⁻¹¹ | 3.692588·10⁻¹¹ |
+| 3·10¹² | Reflected x<y | 1.750689 | 1.750689 |
+| 3·10¹² | Symmetric x=y | 1.160048 | 1.160049 |
+| 3·10¹² | Direct x>y | 1.750689 | 1.750689 |
+| 3·10¹² | δ₀ | 1.230863·10⁻¹³ | 1.230863·10⁻¹³ |
+
+The proposal changes nine of the sixteen Table 1 cells and fourteen of the twenty Table 2 cells. All eight Table 3 entries remain unchanged. Three direct Table 1 entries have proved strict lower-bound counterexamples; the other changed entries are justified here by independent outward upper certificates, without asserting that each original entry has separately been refuted. This is a concrete source-scope proposal, not automatic adoption.

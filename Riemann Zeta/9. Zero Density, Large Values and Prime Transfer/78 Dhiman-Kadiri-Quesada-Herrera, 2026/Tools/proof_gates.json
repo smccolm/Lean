@@ -39,10 +39,11 @@
   },
   {
     "id": "DKQH-06",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Stationary phase and weighted integrals",
     "acceptance": "Prove Lemmas 4–5 with exact boundary and error terms for the actual J(a,b,m); derive stationary points and branch phases.",
-    "proposedModule": "StationaryPhase"
+    "proposedModule": "StationaryPhase",
+    "evidence": "FirstDerivativeTest proves full Lemma 4; LowerIntegralEstimate and UpperIntegralEstimate prove both literal Lemma-5 bounds with actual improper convergence, both height signs and explicit mode cutoffs. Minimal attributed node-63 Fresnel adaptation plus StationaryPoints derives unique critical points and the principal negative-curvature phase -1/8. Six new exact source consumers; 818 exhaustive theorem dependencies and 529 registered public consumers; zero diagnostics; sequential foundation/paper receipts 2026-10-05 10:53/10:56. Full nonlinear B-process errors remain DKQH-11."
   },
   {
     "id": "DKQH-07",

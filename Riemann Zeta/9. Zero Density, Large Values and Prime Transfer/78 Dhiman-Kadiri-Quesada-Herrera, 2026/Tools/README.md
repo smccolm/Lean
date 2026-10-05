@@ -1,6 +1,6 @@
 # Active verification and research tooling
 
-Current mode: **active-development**, 7/20 proof gates complete. Run the folder-local paper BAT with `--no-pause`; it supports any caller directory.
+Current mode: **active-development**, 8/20 proof gates complete. Run the folder-local paper BAT with `--no-pause`; it supports any caller directory.
 
 The runner verifies all retained files and production/verification Lean modules, full root-import coverage, immutable source pins, parent configuration, identical dependency revisions, the original node-63 synchronization BAT, JSON/checklist/diagram status agreement, TeX labels and local links. It builds all implemented modules and executes exact-type source regressions and the exhaustive transitive axiom audit. Nonzero exits, Lean errors/warnings and tactic suggestions fail the run. A development PASS explicitly leaves uncompleted source gates open.
 
@@ -15,3 +15,5 @@ The current AFE1 development contains 87 retained files, twenty-one production m
 Current reflection/Lemma-7 development: 89 retained files, twenty-three production modules and two verification modules. Both new modules are classified and root-imported; 6/20 gates remain accepted.
 
 Current digamma development: 90 retained files, twenty-four production modules and two verification modules. GammaDigammaReal is classified and root-imported; 6/20 gates remain accepted.
+
+Current second-order AFE scope: 142 retained files, 76 production modules, two verification modules and 129 semantic consumers; 8/20 accepted gates. Exact current-checkout verification is recorded in the Reproduction Manifest.

@@ -1,6 +1,6 @@
 # Reproduction manifest
 
-**ACTIVE GOAL — activated 5 October 2026. 7/20 proof gates complete.**
+**ACTIVE GOAL — activated 5 October 2026. 8/20 proof gates complete.**
 
 The following setup sections are historical receipts. The active package, source review and verification changes are recorded below; they supersede the no-Lean setup boundary.
 Prepared 5 October 2026 at checkout `baef1ac59f8ded380b91dda2b5a04a5468f798a8`; working tree was clean before setup. Changes belong to node 78 plus its category README entry. That setup checkpoint included no Lean source/package/configuration change, goal activation, dependency update, commit or push.
@@ -187,3 +187,185 @@ Sequential verification: first `cmd /c run_lake_build.bat --no-pause` returned e
 After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, checking all 102 retained files, 36 production modules and both verification modules, 25 source pins, eight source fixtures, 8540 jobs, 778 exhaustive theorem dependencies and 501 registered consumers. All 16 linters passed with zero errors, warnings, tactic suggestions or linter failures. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-103725-976.log; SHA-256 ab0c88f73fe71994577db931bfca571487c2384ff387f9c596196c636815ba9f.
 
 Thirteen isolated active-validator fixtures and `git diff --check` passed (Git's ordinary line-ending notice is not a Lean diagnostic). Foundation pins, source bytes, and the exact owner BAT remain unchanged. No staging, commit, push or owner BAT execution occurred. Subsequent Fresnel adaptations are outside this 102-file receipt and require their own checks.
+
+## DKQH-06 sequential acceptance — 5 October 2026
+
+The completed 107-file scope contains 41 production and two verification modules, 56 semantic consumers, 529 explicitly registered public consumers and 818 exhaustive theorem dependencies. The focused build passed all 8544 jobs and all 16 linters over 621 declarations plus 278 generated declarations, with zero diagnostics. One missing documentation string found during the initial audit was repaired before the passing build; no linter was disabled.
+
+First, `cmd /c run_lake_build.bat --no-pause` returned exit 0, **FINAL RESULT: PASS**, covering the unchanged 301 foundation production and two regression modules, 8857 jobs, 7636 explicit public declarations and 14290 discovered theorem dependencies. Log: ../../logs/foundation_freeze_20261005_105306.log; SHA-256 0c59dc8d29ab69f7d1bcb76a96f30d3d704a40970f4848049d3f0300f3901c74.
+
+After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, with all 107 files classified, 25 source pins intact, eight source fixtures passing, 8545 jobs, 818 exhaustive theorem dependencies, 529 registered consumers and all 16 linters passing. Zero errors, warnings, tactic suggestions or failed stages. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-105602-627.log; SHA-256 5919e3fa920dd35b8239d6b7e7c06f4a87b6d7de4894b4677bf39efc34bd89fe.
+
+The logs record 7/20 while acceptance was pending. Documentation/status metadata alone then accepted DKQH-06, giving **8/20**: DKQH-03 through DKQH-08, DKQH-12 and DKQH-13 DONE. No Lean, audit or verifier implementation changed between the receipts and acceptance. The full nonlinear B-process estimate, its numerical constants, Part II and AFE2 remain open. Twelve whole-paper gates remain open.
+
+The checkout advanced externally to 2ee2742a7316acadec7a368057ee8b2adcbed6d0 (Progress Update) before these receipts; the foundation verifier recorded a clean tree. The agent did not stage, commit, push or run the owner BAT. Subsequent acceptance documentation edits make the current tree dirty. Source bytes, dependency pins and the exact owner BAT are unchanged.
+
+## Improper Gamma integral focused checkpoint
+
+Before WeightedIntegralAssembly was added, `lake build DhimanKadiriQuesadaHerrera2026.SemanticRegression DhimanKadiriQuesadaHerrera2026.Audit` returned exit 0 with 8628 jobs, 859 exhaustive theorem dependencies, 558 registered public consumers and all 16 linters passing over 653 declarations plus 290 generated declarations. There were zero Lean errors, warnings, tactic suggestions or linter failures. This covers 43 production modules and 59 source consumers, including the Part-II arithmetic diagnostic and the two actual improper-integral evaluations. The next 44-module integral assembly has its own verification; this focused checkpoint does not supersede the last full sequential receipts.
+
+## Actual AFE integral stage: sequential checkpoint — 5 October 2026
+
+The focused SemanticRegression/Audit build exited 0 with 8629 jobs, 865 exhaustive theorem dependencies, 564 registered public consumers and all 16 linters passing over 659 declarations plus 290 generated declarations. Scope: 110 retained files, 44 production modules, two verification modules and 60 source consumers. Zero Lean diagnostics.
+
+First, `cmd /c run_lake_build.bat --no-pause` returned exit 0, **FINAL RESULT: PASS**, covering the unchanged foundation's 301 production and two regression modules, 8857 jobs, 7636 explicit declarations and 14290 discovered theorem dependencies. Log: ../../logs/foundation_freeze_20261005_112235.log; SHA-256 7c319923c4b02755e059437b9cc8a07ba4a5686fc6f00f43de6ebf3da92d02d4.
+
+After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, with the full 110-file classification, 25 source pins, eight source fixtures, 8630 jobs, 865 exhaustive dependencies, 564 public consumers and all 16 linters passing. Zero errors, warnings, tactic suggestions or failed stages. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-112533-309.log; SHA-256 4986bd1596bb70f0bcbeab57b88e8ea150675e58e6172abf3bf982467ea7a642.
+
+All thirteen isolated active-validator fixtures and `git diff --check` passed. This checkpoint is at dirty commit 2ee2742a7316acadec7a368057ee8b2adcbed6d0. No gate was newly accepted: **8/20** remain complete. The actual integral stage is verified; the Poisson-to-zeta assembly, endpoints, B-process, Part II and AFE2 numerical obligations remain open. Source bytes, foundation pins and owner BAT are unchanged. No staging, commit, push or owner BAT execution occurred.
+
+## AFE derivative conditions and 1.251 focused checkpoint
+
+The expanded SemanticRegression/Audit build returned exit 0 with 8631 jobs, 902 exhaustive theorem dependencies, 580 registered public consumers and all 16 linters passing over 675 declarations plus 311 generated declarations. Zero Lean errors, warnings, tactic suggestions or linter failures. Scope: 112 retained files, 46 production modules, two verification modules and 63 source consumers. The previous long module name failed during Windows artifact creation after its proofs elaborated; renaming that module to AFESecondWeights fixed the build without changing pins, proof statements or audit coverage. This is focused evidence; the last full sequential receipts cover the 110-file integral checkpoint above.
+
+## Second-integration sequential checkpoint — 5 October 2026
+
+The focused SemanticRegression/Audit build exited 0 with 8633 jobs, 932 exhaustive theorem dependencies, 589 registered public consumers and all 16 linters passing over 684 declarations plus 332 generated declarations. Scope: 114 retained files, 48 production modules, two verification modules and 65 semantic consumers. Zero Lean diagnostics.
+
+First, `cmd /c run_lake_build.bat --no-pause` returned exit 0, **FINAL RESULT: PASS**, covering the unchanged foundation with 8857 jobs, 301 production and two regression modules, 7636 explicit declarations and 14290 discovered dependencies. Log: ../../logs/foundation_freeze_20261005_114656.log; SHA-256 8f6f8d624f25a3b1fba1f9f969db0f6f88e3a265284ca1b342e618a5b09ae986.
+
+After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, checking all 114 files, 48 production and both verification modules, 25 source pins, eight source fixtures, 8634 jobs, 932 exhaustive dependencies and 589 explicit consumers. All 16 linters passed over 684 declarations plus 332 generated declarations, with zero errors, warnings, tactic suggestions or failed stages. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-115044-993.log; SHA-256 524778e19cd012d6428332e88c314d314a10b3b428c356f54f18151b414abc8f.
+
+This checkpoint is at dirty commit 2ee2742a7316acadec7a368057ee8b2adcbed6d0. The actual second-integration estimates are verified; Part II remains open and the accepted count stays 8/20. Pins, source bytes and owner BAT are unchanged. No staging, commit, push or owner BAT execution occurred. The subsequent concrete Part-II quotient diagnostic is outside this receipt and is verified separately.
+
+## Part-II quotient diagnostic focused checkpoint
+
+The focused SemanticRegression/Audit build exited 0 with 8634 jobs, 966 exhaustive theorem dependencies, 616 explicitly registered public consumers and all 16 linters passing over 713 declarations plus 339 generated declarations. Zero Lean errors, warnings, tactic suggestions or linter failures. Scope: 115 retained files, 49 production and two verification modules, 66 semantic consumers. The cubic diagnostic satisfies the printed strict conditions and the accepted Part-I repair, and refutes the specific positive-frequency quotient inference. It does not refute the full Poisson inequality. No gate is accepted; 8/20 remain complete. The prior sequential receipts cover 114 files.
+
+## Positive-frequency series focused checkpoint
+
+The focused SemanticRegression/Audit build returned exit 0 with 8635 jobs, 977 exhaustive theorem dependencies, 625 explicitly registered public consumers and all 16 linters passing over 724 declarations plus 341 generated declarations. Zero Lean errors, warnings, tactic suggestions or linter failures. Scope: 116 retained files, 50 production and two verification modules, 67 semantic consumers. The generic second-integration series and its actual AFE applications are verified, including σ=0. All thirteen isolated active-validator fixtures and git diff --check passed at the preceding 115-file diagnostic scope. An initial extra status phrase in the Mermaid gate was rejected by the validator; preserving the required gate label and adding a separate diagnostic node repaired it without weakening validation. No new gate is accepted; 8/20 remain complete.
+
+## Positive-frequency series sequential checkpoint — 5 October 2026
+
+First, `cmd /c run_lake_build.bat --no-pause` returned exit 0, **FINAL RESULT: PASS**, with 8857 jobs, all 301 foundation production and two regression modules, 7636 explicit declarations, 14290 discovered theorem dependencies and all 16 linters passing. Zero Lean diagnostics. Log: ../../logs/foundation_freeze_20261005_120827.log; SHA-256 55f8818b88c1ae8e20340600ee1d252f2e419352b9d27163b3f03a333b3f8923.
+
+After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, covering all 116 retained files, 50 production and two verification modules, 25 source pins, eight source fixtures, 8636 jobs, 977 exhaustive dependencies and 625 registered public consumers. All 16 linters passed over 724 declarations plus 341 generated declarations. Zero errors, warnings, tactic suggestions or failed stages. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-121145-225.log; SHA-256 8e3469413a71ef84319dedead11e721e812d9133b32e879ef2dd6957d4736682.
+
+The checkout remains dirty at 2ee2742a7316acadec7a368057ee8b2adcbed6d0. No new gate was accepted; 8/20 remain DONE. Source bytes, dependency pins and owner BAT are unchanged, and no staging, commit, push or owner BAT execution occurred. Subsequent upper-frequency and coefficient-assembly additions lie outside this receipt.
+
+## Both frequency series and coefficient assembly focused checkpoint
+
+The focused SemanticRegression/Audit build returned exit 0 with 8637 jobs, 998 exhaustive theorem dependencies, 643 registered public consumers and all 16 linters passing over 744 declarations plus 344 generated declarations. Zero Lean errors, warnings, tactic suggestions or linter failures. Scope: 118 retained files, 52 production and two verification modules, 69 semantic consumers. All thirteen isolated active-validator fixtures and git diff --check passed; ordinary Git line-ending notices are not Lean diagnostics. Both actual AFE frequency-series estimates and the exact finite Poisson assembly derive every convergence input. No new gate is accepted; 8/20 remain complete. The preceding full sequential receipts cover 116 files, with current-scope sequential verification running separately.
+
+## Both-series Poisson assembly sequential checkpoint — 5 October 2026
+
+First, `cmd /c run_lake_build.bat --no-pause` returned exit 0, **FINAL RESULT: PASS**, covering all 301 foundation production and two regression modules, 8857 jobs, 7636 public declarations and 14290 discovered dependencies. All 16 linters passed with zero Lean diagnostics. Log: ../../logs/foundation_freeze_20261005_122145.log; SHA-256 3750996a41f887680463e197ac9284799488847b737d2d71b2163c7e8b34874b.
+
+After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, checking 118 retained files, 52 production and two verification modules, 25 source pins, eight source fixtures, 8638 jobs, 998 exhaustive theorem dependencies and 643 explicit consumers. All 16 linters passed over 744 declarations plus 344 generated declarations. Zero errors, warnings, tactic suggestions or failed stages. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-122539-074.log; SHA-256 2a71c0212a68aa831b490404eed87d2546b17d2465f24c754a02495c033b4af3.
+
+All thirteen isolated active-validator fixtures and git diff --check passed. The checkout remains dirty at 2ee2742a7316acadec7a368057ee8b2adcbed6d0. No new gate is accepted; 8/20 remain DONE. Pins, source bytes and owner BAT are unchanged. No staging, commit, push or owner BAT execution occurred. The subsequent H/H₁ inequalities and unchanged E₂ packaging are outside this receipt.
+
+## Actual H/H₁ finite Poisson inequality focused checkpoint
+
+The focused SemanticRegression/Audit build returned exit 0 with 8638 jobs, 1037 exhaustive theorem dependencies, 659 explicitly registered public consumers and all 16 linters passing over 769 declarations plus 367 generated declarations. Zero Lean errors, warnings, tactic suggestions or linter failures. Scope: 119 retained files, 53 production and two verification modules, 71 semantic consumers. All thirteen isolated active-validator fixtures and git diff --check passed; ordinary Git line-ending notices are not Lean diagnostics. The actual AFE finite Poisson inequality, the exact proposed E₁ coefficient identity and the unchanged literal E₂ bound are verified, without adopting a corrected general Part-II contract. No new gate is accepted; 8/20 remain complete. The last full sequential receipts cover the preceding 118-file scope.
+
+## Actual finite Poisson inequality sequential checkpoint — 5 October 2026
+
+First, `cmd /c run_lake_build.bat --no-pause` returned exit 0, **FINAL RESULT: PASS**, covering the unchanged foundation: 301 production and two regression modules, 8857 jobs, 7636 explicit declarations and 14290 discovered dependencies. All 16 linters passed, with zero Lean diagnostics. Log: ../../logs/foundation_freeze_20261005_123047.log; SHA-256 7401a6cd192559b2eec8ff4bde234ab23ba0e0ef275934aec5669ecd768ee386.
+
+After foundation completion, `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` returned exit 0, **DEVELOPMENT PASS**, checking 119 retained files, 53 production and two verification modules, 25 source pins, eight source fixtures, 8639 jobs, 1037 exhaustive theorem dependencies and 659 explicit consumers. All 16 linters passed over 769 declarations plus 367 generated declarations. Zero errors, warnings, tactic suggestions or failed stages. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-123513-268.log; SHA-256 fe8ffa3932d5320e6b20244955e3392f9737c205c660327342a11a65865bc79d.
+
+All thirteen isolated active-validator fixtures and git diff --check passed. The checkout remains dirty at 2ee2742a7316acadec7a368057ee8b2adcbed6d0. No new gate is accepted; 8/20 remain DONE. Pins, source bytes and owner BAT are unchanged. No staging, commit, push or owner BAT execution occurred. Subsequent endpoint simplifications and limit inputs lie outside this receipt.
+
+## Half-integer and uniform endpoint focused checkpoint
+
+The focused SemanticRegression/Audit build exited 0 with 8639 jobs, 1049 exhaustive theorem dependencies, 669 explicitly registered public consumers and all 16 linters passing over 780 declarations plus 369 generated declarations. Zero Lean errors, warnings, tactic suggestions or linter failures. Scope: 120 retained files, 54 production and two verification modules, 73 semantic consumers. Both the literal half-integer B bound and the actual AFE finite Poisson boundary simplification are verified, together with uniform actual-tail bounds at arbitrary endpoints. No new gate is accepted; 8/20 remain complete. The last sequential receipts cover 119 files; subsequent limit work is verified separately.
+
+## Strict-strip assembly focused checkpoint — 5 October 2026
+
+Before the subsequent closed-strip addition, lake build DhimanKadiriQuesadaHerrera2026.SemanticRegression DhimanKadiriQuesadaHerrera2026.Audit passed at 121 retained files, 55 production modules and 75 semantic consumers: 8640 jobs, 1071 exhaustive theorem dependencies, 683 explicit consumers, 16 linters over 796 declarations plus 377 generated declarations, zero Lean diagnostics. The direct scratch compilation of AFESecondLimits also exited 0 without diagnostics. This focused evidence does not replace the full sequential BATs for the later 122-file scope.
+
+## Closed-strip assembly sequential checkpoint — 5 October 2026
+
+Scope before the later cancellation sharpening: 122 retained files, 56 production modules, two verification modules and 77 semantic consumers. Focused build: 8641 jobs, 1088 exhaustive theorem dependencies, 695 explicit consumers; 16 linters over 810 declarations plus 382 generated, zero Lean diagnostics.
+
+The foundation BAT ran first and exited 0 with FINAL RESULT: PASS: logs/foundation_freeze_20261005_125519.log (repository-root-relative), SHA-256 e632da15bcac6caa79362f04ea378c8d438ee502ff82adb1fd29133f72cc0f03. It covered 8857 build jobs, 301 root production modules plus two retained regressions, 7636 explicit and 14290 discovered public dependencies, with all integrity/publication/linter gates passing.
+
+The paper BAT then exited 0 with DEVELOPMENT PASS: logs/dhiman-kadiri-quesada-herrera-build-20261005-125846-262.log, SHA-256 d8ec280438e573ba8988209ac94073eaf4d55dd13a22ece7a0302402c3d72887. It covered 8642 jobs, all 122 files/56 production modules, the 25 source pins, eight source fixtures, exact regressions and exhaustive audit above, zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check also passed; Git's existing LF/CRLF notices are not Lean diagnostics. Checkout 2ee2742a7316acadec7a368057ee8b2adcbed6d0 was dirty; no staging/commit/push occurred. These receipts certify that checkpoint, not later edits. Gates remain 8/20.
+
+## Cancellation checkpoint focused verification — 5 October 2026
+
+At 124 retained files, 58 production modules and 80 semantic consumers, the focused build passed: 8643 jobs; 1101 exhaustive theorem dependencies; 707 explicit consumers; 16 linters over 822 declarations plus 383 generated; zero Lean diagnostics. The first scaffold scan rejected ordinary English wording in two docstrings containing a prohibited proof-token word; the wording was corrected, the scanner was unchanged, and the complete scaffold scan then passed. No prohibited proof term was introduced. Later A/B assembly is a distinct expanded scope.
+
+## Literal A/B assembly sequential checkpoint — 5 October 2026
+
+Scope before the uniform-branch addition: 125 retained files, 59 production modules, two verification modules and 82 semantic consumers. Focused verification passed at 8644 jobs, 1122 exhaustive theorem dependencies, 717 explicit consumers, 16 linters over 834 declarations plus 394 generated; zero Lean diagnostics.
+
+The foundation BAT ran first and exited 0 with FINAL RESULT: PASS, root-relative logs/foundation_freeze_20261005_131125.log, SHA-256 2d4c0a816826b5ed0ba25e807aaefef31867b428a2bfaeb1204e36ca65c055a0. Coverage: 8857 jobs, 301 root modules plus two regressions, 7636 explicit/14290 discovered public dependencies; all integrity, publication and linter gates passed.
+
+The paper BAT then exited 0 with DEVELOPMENT PASS, logs/dhiman-kadiri-quesada-herrera-build-20261005-131530-154.log, SHA-256 f90d0964e9f2c51f573ceff3e5c9a95480b9462eab17af530fc9183670ded548. Coverage: 8645 jobs, all 125 files/59 production modules, 25 pins, eight source fixtures, exact source consumers and audit above; zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check passed. Git emitted only the existing LF/CRLF notices. Dirty checkout 2ee2742a7316acadec7a368057ee8b2adcbed6d0; no staging, commit or push. Gate count remains 8/20; later uniform-branch changes are a separate verification scope.
+
+## Full uniform-branch sequential checkpoint — 5 October 2026
+
+Scope: 126 retained files, 60 production modules, two verification modules and 84 semantic consumers. The focused build passed at 8645 jobs, 1157 exhaustive theorem dependencies, 733 explicit consumers, and 16 linters over 853 declarations plus 413 generated; zero Lean diagnostics.
+
+The foundation BAT ran first and exited 0 with FINAL RESULT: PASS, root-relative logs/foundation_freeze_20261005_132152.log, SHA-256 bc7907d3ef918735ac2547cd16f910fece28e11834b61efc3537b37be4cc53bb. It checked 8857 jobs, 301 production modules plus two regressions, 7636 explicit and 14290 discovered public dependencies, with all integrity, publication and linter gates passing.
+
+The paper BAT then exited 0 with DEVELOPMENT PASS, logs/dhiman-kadiri-quesada-herrera-build-20261005-132526-750.log, SHA-256 088f083e0e0da8c2aab1f773f30cc603a92f6b25836e8483bce6b4820ec8343e. It checked 8646 jobs, all 126 files/60 production modules, 25 source pins, eight source fixtures, the exact consumers and audit above, with zero Lean diagnostics. All thirteen isolated active-validator fixtures passed. Both proof-consistent Theorem 10 branches are verified, including both height signs and the closed sigma endpoint, but E03 adoption remains pending and the gate count remains 8/20. No staging, commit, push or owner BAT execution occurred. Subsequent general Poisson additions are a separate scope.
+
+## General analytic-input focused checkpoint — 5 October 2026
+
+Before PartIIBounds was added, the 128-file/62-production-module scope passed the focused SemanticRegression/Audit build: 8647 jobs, 1197 exhaustive theorem dependencies, 749 explicit consumers, 87 semantic consumers, and 16 linters over 881 declarations plus 431 generated. Zero Lean diagnostics. All thirteen isolated active-validator fixtures passed. An initial duplicate regression name was corrected by replacing the redundant N=0 consumer with the distinct general-N constant-weight consumer; the final build above verifies that correction. Gate count remains 8/20; subsequent endpoint/shift packaging has its own expanded verification scope.
+
+## General endpoint and frequency transport sequential checkpoint — 5 October 2026
+
+The preceding 129-file/63-production-module scope passed focused verification: 8648 jobs, 1209 exhaustive theorem dependencies, 759 explicit consumers, 89 semantic consumers, and 16 linters over 895 declarations plus 433 generated. Zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check passed; Git emitted only its existing line-ending notices.
+
+The foundation BAT then returned exit 0, FINAL RESULT: PASS, with 8857 jobs, 301 production modules plus two regressions, 7636 explicit/14290 discovered public dependencies, and all integrity/publication/linter gates passing. Log: root-relative logs/foundation_freeze_20261005_134052.log; SHA-256 64fc9f4b0f7491579b3b76f073f80c4e0b0c58001ea0f66258751258a5d68024.
+
+After its completion the paper BAT returned exit 0, DEVELOPMENT PASS, with 8649 jobs, all 129 files/63 production modules, 25 source pins, eight source fixtures, and the exact regression/dependency counts above, zero Lean diagnostics. Log: logs/dhiman-kadiri-quesada-herrera-build-20261005-134542-861.log; SHA-256 200f86cc1610b51c7d16fc6b409179df9680071482af0f8cd855bdd284ea8b39. Dirty checkout 2ee2742a7316acadec7a368057ee8b2adcbed6d0; no staging, commit, push or owner BAT execution. Gate count remains 8/20. The subsequent constant-weight and global-maximum modules expand the verification scope.
+
+## Global maxima and integer bands sequential checkpoint — 5 October 2026
+
+Scope preceding the constant-six addition: 131 retained files, 65 production and two verification modules, 95 semantic consumers. Focused build passed: 8650 jobs, 1246 exhaustive theorem dependencies, 783 explicit consumers, and 16 linters over 926 declarations plus 446 generated. Zero Lean diagnostics. Thirteen isolated active-validator fixtures passed.
+
+The foundation BAT ran first and exited 0, FINAL RESULT: PASS: root-relative logs/foundation_freeze_20261005_135628.log; SHA-256 f7ac1068bf75c5e102911228aa91d46096099c9e90b6182ebeae5966e7bc3a6d. Coverage: 8857 jobs, 301 production modules plus two regressions, 7636 explicit and 14290 discovered public dependencies; all integrity/publication/linter gates passed.
+
+After foundation completion, the paper BAT exited 0, DEVELOPMENT PASS: logs/dhiman-kadiri-quesada-herrera-build-20261005-140047-512.log; SHA-256 bebc5787d30ab19695bfb51b9d9b793371fae6243783dbbc44058b20007b2d6f. Coverage: 8651 jobs, all 131 files/65 production modules, 25 source pins, eight source fixtures, and the exact semantic/audit counts above. Zero Lean diagnostics. The dirty checkout remains 2ee2742a7316acadec7a368057ee8b2adcbed6d0; no staging, commit, push or owner BAT execution. Gate count remains 8/20. Subsequent constant-six and numerical additions have a separate expanded verification scope.
+
+## Constant-six and large-k sequential checkpoint — 5 October 2026
+
+Scope preceding Table 3: 133 retained files, 67 production and two verification modules, 100 semantic consumers. Focused verification passed at 8652 jobs, 1283 exhaustive theorem dependencies, 817 explicit consumers, and 16 linters over 960 declarations plus 449 generated. Zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check passed.
+
+The foundation BAT ran first and exited 0 with FINAL RESULT: PASS, root-relative logs/foundation_freeze_20261005_140906.log, SHA-256 efe3e387372fcf34d4382edf8aa834f444d7e9cea7ab10df5df8afa72bfe9879. It checked 8857 jobs, 301 production modules plus two regressions, 7636 explicit/14290 discovered public dependencies, and all integrity/publication/linter gates.
+
+The paper BAT subsequently exited 0 with DEVELOPMENT PASS: logs/dhiman-kadiri-quesada-herrera-build-20261005-141553-136.log, SHA-256 7ae67696e3c2fd41126fc5d0c969d7a42db76ea7ddc1cf564420a3a3acb82b83. Coverage: 8653 jobs, all 133 files/67 production modules, 25 pins, eight source fixtures, and the semantic/audit counts above; zero Lean diagnostics. No staging, commit, push or owner BAT execution occurred. Gate count remains 8/20. Table 3 expands the subsequent verification scope.
+
+## Table 3 sequential checkpoint — 5 October 2026
+
+Scope preceding the table diagnostics/candidates: 134 retained files, 68 production and two verification modules, 103 semantic consumers. Focused verification passed: 8653 jobs, 1303 exhaustive theorem dependencies, 833 explicit consumers, and 16 linters over 977 declarations plus 453 generated; zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check passed.
+
+The foundation BAT ran first and exited 0, FINAL RESULT: PASS: root-relative logs/foundation_freeze_20261005_142331.log, SHA-256 388e114f0190f94d58803aa86e82a2cdec53133ee80c7d44a750245a87c9be45. It checked 8857 jobs, 301 root modules plus two regressions, 7636 explicit/14290 discovered public dependencies, all integrity/publication/linter gates.
+
+The paper BAT then exited 0, DEVELOPMENT PASS: logs/dhiman-kadiri-quesada-herrera-build-20261005-142740-741.log, SHA-256 c88643a3c595b574728c48d460b4603bc5fa3a45ed933326b934686e9d30b361. Coverage: 8654 jobs, all 134 files/68 production modules, 25 pins, eight source fixtures and the exact audit/regression counts above, zero Lean diagnostics. No staging/commit/push/owner BAT execution. Gate count remains 8/20; Table 1 diagnostics and proposed Table 2 certificates are a subsequent expanded scope.
+
+## Table 1 diagnostics and Table 2 candidate focused checkpoint — 5 October 2026
+
+The 136-file/70-production-module scope passed the focused SemanticRegression/Audit build: 8655 jobs, 1358 exhaustive theorem dependencies, 859 explicit consumers, 109 semantic consumers, and 16 linters over 1007 declarations plus 482 generated; zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check passed. Git emitted its existing line-ending notices only. This covers the three source-maximum counterexamples and all proposed Table 2 cells and actual AFE consumers; it does not adopt the numerical source repairs. Subsequent ChiTableBounds expands the verification scope. Gates remain 8/20.
+
+## Chi table focused checkpoint — 5 October 2026
+
+The 137-file/71-production-module scope passed focused verification: 8656 jobs, 1381 exhaustive theorem dependencies, 882 explicit consumers, 113 semantic consumers, and 16 linters over 1030 declarations plus 482 generated; zero Lean diagnostics. All thirteen isolated active-validator fixtures passed. The four complete C₀/δ₀ certificates were checked, including exact 2π. AFETableOne is the subsequent expanded scope; no numerical repair was adopted and the gate count remains 8/20.
+
+## Complete Table 1–3 certificate sequential checkpoint — 5 October 2026
+
+Scope: 138 retained files, 72 production modules, two verification modules and 118 semantic consumers. Focused SemanticRegression/Audit verification passed: 8657 jobs, 1428 exhaustive theorem dependencies, 914 explicit consumers, and 16 linters over 1068 declarations plus 497 generated; zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check passed.
+
+The foundation BAT ran first and exited 0, FINAL RESULT: PASS: root-relative logs/foundation_freeze_20261005_145014.log, SHA-256 cd1c4d1682913f56458d5227252a22b922e81b69fd483de70f3acec10739fbd5. It checked 8857 jobs, 301 production modules plus two retained regressions, 7636 explicit/14290 discovered public dependencies, and all integrity/publication/linter gates.
+
+The paper BAT subsequently exited 0, DEVELOPMENT PASS: logs/dhiman-kadiri-quesada-herrera-build-20261005-145441-870.log, SHA-256 be2fdd31b117502d627fdd8646a57ed64217257818b355212efea14da6afa1f9. Coverage: 8658 jobs, all 138 files/72 production modules, 25 source pins, eight source fixtures, and the semantic/audit counts above; zero Lean diagnostics. All Table 3 constants and all proposed Table 1–2 constants consume the actual AFE inequalities. Numerical scope adoption and E03 remain pending, and the gate count remains 8/20. Dirty checkout 2ee2742a7316acadec7a368057ee8b2adcbed6d0; no staging, commit, push or owner BAT execution. Subsequent Part II transport and half-offset additions expand the verification scope.
+
+## Shifted Part II and exact half-offset focused checkpoint — 5 October 2026
+
+The 140-file/74-production-module scope passed the focused SemanticRegression/Audit build: 8659 jobs, 1466 exhaustive theorem dependencies, 936 explicit consumers, 123 semantic consumers, and 16 linters over 1090 declarations plus 513 generated; zero Lean diagnostics. All thirteen isolated active-validator fixtures and git diff --check passed. The two new modules and five exact source consumers preserve the pending status of the Part II hypotheses and sign repairs. Gates remain 8/20.
+
+## Shifted Part II and exact half-offset sequential checkpoint — 5 October 2026
+
+The foundation BAT ran first and exited 0, FINAL RESULT: PASS: root-relative logs/foundation_freeze_20261005_150630.log, SHA-256 33bd1624088f5dcd3472e7f04def7d3041604361eea47a8fa8beac5599af4a53. It checked 8857 jobs, 301 production modules plus two retained regressions, 7636 explicit/14290 discovered public dependencies, all integrity/publication/linter gates and zero Lean diagnostics.
+
+The paper BAT then exited 0, DEVELOPMENT PASS: logs/dhiman-kadiri-quesada-herrera-build-20261005-150937-433.log, SHA-256 a1bd6a96a6fecbd6c5e7af3121c03c96cb2cdc7790e437f40c1aad32ce1e8862. Its complete package build checked 8660 jobs, all 140 retained files/74 production modules, 25 source pins and eight source fixtures. The 123 semantic consumers, 1466 exhaustive dependencies and 936 explicit consumers passed; 16 linters checked 1090 declarations plus 513 generated with zero Lean diagnostics. Thirteen isolated active-validator fixtures and git diff --check also passed. The dirty checkout remains 2ee2742a7316acadec7a368057ee8b2adcbed6d0. No staging, commit, push or owner BAT execution occurred. Scope decisions remain pending and 8/20 gates are complete. Subsequent stationary Taylor and B-process review work is a separate expanded scope.
+
+## Stationary Taylor and B-process diagnostics focused checkpoint — 5 October 2026
+
+The 142-file/76-production-module scope passed the focused SemanticRegression/Audit build: 8661 jobs, 1504 exhaustive theorem dependencies, 960 explicit consumers, 129 semantic consumers, and 16 linters over 1116 declarations plus 527 generated; zero Lean diagnostics. The initial regression build exposed missing Set qualifications and a real-to-complex coercion mismatch in the newly unfolded consumers; these were corrected before the passing build. All thirteen isolated active-validator fixtures passed. This verifies the finite Taylor inputs and the two B-process proof diagnostics, not the unfinished nonlinear B-process conclusion. Gates remain 8/20.
