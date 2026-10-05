@@ -1,0 +1,16 @@
+name = "DongWangWangZhang2026"
+version = "0.1.0"
+defaultTargets = ["DongWangWangZhang2026"]
+packagesDir = "../../../.lake/packages"
+buildDir = "../../../../.lake/dong-wang-wang-zhang-2026-build"
+
+[[lean_lib]]
+name = "DongWangWangZhang2026"
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "RiemannZeta"
+path = "../../.."

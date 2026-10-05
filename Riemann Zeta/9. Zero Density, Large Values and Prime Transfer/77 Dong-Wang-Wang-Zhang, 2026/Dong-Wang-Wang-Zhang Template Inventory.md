@@ -1,5 +1,7 @@
 # Node-63 template inventory and adaptation
 
+This records the **initial planning scaffold**. After the owner's explicit activation on 4 October 2026, the formerly deferred isolated package and development build/audit gate were created; the current inventory is `Tools/scaffold.json`. Historical setup omissions below are not descriptions of the now-active package.
+
 Reference checkout: `56fcb266457d6097f87e38ca7d45eef3231cc145`, inspected 4 October 2026. Node 63's entire tracked path inventory was enumerated; top-level documents, subdirectory READMEs, runner interfaces, pin conventions and relevant Lean interfaces were reviewed. This is not a claim to have re-read or re-audited every one of its 1,929 Lean files.
 
 Tracked inventory: **1,993 files** = 15 root + 23 Sources + 487 Dependencies + 1,459 Extension + 9 Tools. Ignored `logs/`, Lake caches and `Tools/__pycache__/` were classified as generated state, not copied. All five root subdirectory roles are accounted for below.

@@ -28,8 +28,8 @@ counterexamples and authorized repairs, and the closed Pintz endpoints proved
 as original research strengthenings. Each extension has its own verification
 runner and reproduction manifest; none changes the frozen foundation's scope.
 
-Node 77 now contains the [Dong–Wang–Wang–Zhang planning scaffold](77%20Dong-Wang-Wang-Zhang,%202026/README.md),
-with a 4 October 2026 source/repository survey, pinned primary sources, an inactive
-goal prompt and a scaffold-verification BAT. Lean conversion has not started;
-neither main result is formalized in this node and all twenty implementation
-gates remain OPEN.
+Node 77 contains the [Dong–Wang–Wang–Zhang active formalization](77%20Dong-Wang-Wang-Zhang,%202026/README.md),
+explicitly activated on 4 October 2026. Its isolated Lean package and development
+BAT share the unchanged foundation pins. DWWZ-01/03/05/06/07/08/10 are DONE (7/20): compatible
+package/tooling, the actual sum/spectral shift, consumed phase-specialized analytic
+inputs, full same-witness Lemma 2.2, uniform zeta Lemma 3.1, exact residue-bearing Lemma 3.3 and xi/divisor identities. Both frozen main results and thirteen gates remain OPEN.

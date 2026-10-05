@@ -10,6 +10,8 @@ The [first author's current publication list](https://zikangdong.github.io/) lis
 
 The primary v1 PDF, raw source archive, `main.tex` and arXiv processing metadata are archived locally. The abstract is not sufficient to recover the exact disk radius or quantifier order; those come from the full Theorems 1.1/1.2 and their proofs. See [Source Contract](Dong-Wang-Wang-Zhang%20Source%20Contract.md).
 
+Activation recheck, 4 October 2026: the live arXiv submission history still lists only v1. All nine archived artifact hashes pass. Node-73 interface survey scope and its negative reuse outcome for the initial obligation are now recorded in Crosswalk; no source revision or dependency upgrade was selected.
+
 ## Essential analytic references
 
 | Source | Exact role | Access and local record |

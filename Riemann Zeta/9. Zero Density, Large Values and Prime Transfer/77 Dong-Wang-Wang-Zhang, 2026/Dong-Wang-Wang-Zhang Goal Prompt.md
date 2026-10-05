@@ -1,12 +1,12 @@
-# Dong–Wang–Wang–Zhang 2026 — future whole-proof goal prompt
+# Dong–Wang–Wang–Zhang 2026 — whole-proof goal prompt
 
-**INACTIVE TEMPLATE. Created 4 October 2026.** The owner has authorized research and project setup, explicitly **not** starting Lean conversion. Reading this file, running the scaffold BAT, or discovering it in the workspace is not an instruction to activate a goal. Begin the following work only after a subsequent explicit owner instruction to implement this paper.
+**ACTIVE GOAL — explicitly activated by the owner on 4 October 2026.** Implementation is authorized; frozen end statements and all twenty acceptance gates remain the completion contract.
 
-## Objective upon explicit activation
+## Active objective
 
 Implement *Large zeta sums and zeros of the Riemann zeta function*, Dong–Wang–Wang–Zhang, arXiv:2608.31060v1, in this existing Lean repository. Prove both main theorems at their exact [frozen source contracts](Dong-Wang-Wang-Zhang%20Source%20Contract.md), discharge the analytic dependencies, and satisfy all twenty [checklist gates](Dong-Wang-Wang-Zhang%20Checklist.md). Preserve the existing Guth–Maynard foundation and all completed extensions, audits, counterexamples and source freezes.
 
-Use the full paper name for human-facing files. The prospective Lean namespace is `DongWangWangZhang2026`; the task prefix is `DWWZ`. Do not carry over node-63 theorem names or completion claims.
+Use the full paper name for human-facing files. The active Lean namespace is `DongWangWangZhang2026`; the task prefix is `DWWZ`. Do not carry over node-63 theorem names or completion claims.
 
 ## Read before implementation
 
@@ -22,6 +22,8 @@ Do not weaken endpoints, move quantifiers, replace multiplicity by cardinality, 
 ## Mathematical execution
 
 Prefer the paper's Granville–Soundararajan proof path. Search existing local code, installed Mathlib, node 63, node 74/PNT+, and the dated external survey before creating new support modules. Inspect actual theorem types and assumptions; matching names or comments are not enough. Choose a single compatible dependency graph, not moving upstream branches or mixed Mathlib versions. Do not vendor a completed project's full tree unless its needed audited import closure genuinely requires that scope.
+
+Survey node 73 for reusable exact interfaces before implementation, but do not import it unless a theorem materially shortens a Node 77 obligation. Record “inspected, no relevant reuse” if none is found. Record the inspected scope and outcome in the Crosswalk; for any proposed reuse, name the exact declaration, the DWWZ obligation it shortens, and the required adapters/import closure. Surveying node 73 does not make it a mandatory dependency or authorize starting conversion.
 
 Prioritize the smallest faithful mean-value/twist/Lipschitz theorem that closes Lemma 2.2 for `n^(it)` and feeds Proposition 4.1. The Hilbert-space Halász–Montgomery inequality is not the pretentious mean-value theorem. A proved specialization may avoid unnecessary generality, but document exactly what source result it replaces and keep its original statement intact. Alternate proofs must establish the exact public end contract.
 
@@ -39,7 +41,7 @@ Recovery-record maintenance is permanently optional and skipped: do not create, 
 
 ## BAT maintenance is part of the goal
 
-Maintain **`run_dong_wang_wang_zhang_build.bat`** and its PowerShell implementation throughout conversion. Its current scaffold-only result is not a proof PASS. Before any claim of formalization, upgrade it to verify pins, enumerate all production/test files, check root import coverage, build the package and every retained regression, reject every Lean warning/error, run explicit public and exhaustive transitive axiom audits, scan for prohibited shortcuts, test exact public contracts, and write timestamped log/evidence with reliable failure exit codes. Preserve arbitrary-caller-directory operation, visible diagnostics, double-click pause and `--no-pause`.
+Maintain **`run_dong_wang_wang_zhang_build.bat`** and its PowerShell implementation throughout conversion. It now verifies the active development package; a development PASS is not completion of the paper. Verify pins, enumerate all production/test files, check root import coverage, build the package and every retained regression, reject every Lean warning/error, run explicit public and exhaustive transitive axiom audits, scan for prohibited shortcuts, test implemented contracts, and write timestamped log/evidence with reliable failure exit codes. Add exact T1/T2 public-consumer regressions as those proofs become available; never substitute supporting-module checks for them. Preserve arbitrary-caller-directory operation, visible diagnostics, double-click pause and `--no-pause`.
 
 Also maintain and execute **`../../run_lake_build.bat --no-pause`** for the frozen foundation after relevant Lean/import/package/audit/runner changes. Run the foundation and paper BATs **sequentially**. Focused Lake builds supplement, never replace, these interfaces. Do not narrow their coverage or relabel an unperformed proof build as passed. If the paper runner changes mode, synchronize README, Tools, Checklist and Reproduction Manifest in the same change.
 

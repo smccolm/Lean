@@ -1,8 +1,8 @@
-# Scaffold tooling
+# Development verification tooling
 
 Run `cmd /c ..\run_dong_wang_wang_zhang_build.bat --no-pause` from this folder. The BAT resolves its own directory, returns the PowerShell exit code, rejects unknown arguments, and pauses in double-click mode.
 
-Current scope: **offline planning/scaffold verification**, not a Lean build. `scaffold.json` is the exhaustive file inventory and parent-pin baseline. `verify_sources.ps1` rejects missing, changed, extra, duplicate, malformed, empty and nonlocal artifact pins. The main PowerShell runner additionally checks no Lean/package files were accidentally created, status consistency, required inactive-prompt markers, primary result labels and local Markdown link targets. Logs are generated under `../logs/`.
+Current scope: **active partial-library build and audit**, not completion of T1/T2. `scaffold.json` retains its filename but now records active-development mode, exhaustive file/module classifications, proof-gate counts and the parent-pin baseline. `verify_sources.ps1` rejects missing, changed, extra, duplicate, malformed, empty and nonlocal artifact pins. The runner checks identical parent/extension dependency revisions, actual root-import closure, complete Lean classification, prohibited-proof scans, status consistency, active-prompt markers, primary source labels and local links. It then builds all production/verification modules and executes semantic regression, transitive audit and declaration linters. Every native exit and Lean diagnostic is checked. Logs are generated under `../logs/`.
 
 `upstream_snapshot.json` records external observations, not installed dependencies. Verification performs no Python replay, certificate generation, source download, telemetry, recovery-record maintenance, commit or push operation.
 
@@ -10,4 +10,4 @@ Current scope: **offline planning/scaffold verification**, not a Lean build. `sc
 
 `test_source_verifier.ps1` runs isolated generated-fixture regressions for source-pin validation; it never edits the frozen sources. These are tooling tests, not mathematical regressions.
 
-Upon later authorized conversion, upgrade this same paper BAT and runner to complete package build/coverage, axiom audit, semantic regression and zero-Lean-diagnostic gates. Update the inventory and mode explicitly. Keep the foundation BAT intact and run both interfaces sequentially after relevant changes. Until that upgrade, the only valid success label is **SCAFFOLD PASS — NOT A LEAN PROOF PASS**.
+Keep the module inventory, explicit consumers, semantic regressions and status checks synchronized as the proof grows. The only current success label is **DEVELOPMENT PASS — CURRENT MODULES VERIFIED; MAIN PAPER CONTRACTS INCOMPLETE**. Add exact T1/T2 result regressions before release; helper-only tests do not close those contracts. Keep the foundation BAT intact and run both interfaces sequentially after relevant changes. No recovery-record maintenance is performed.

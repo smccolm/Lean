@@ -1,6 +1,6 @@
 # Errata, source distinctions and audit questions
 
-4 October 2026. **PLANNING ONLY.** This is a local register, not an author-issued erratum. No mathematical error in the two main theorems has been established by this setup, and no source-contract repair is claimed or authorized here. Absence of an entry is not a complete correctness certification.
+4 October 2026. **ACTIVE DEVELOPMENT.** This is a local register, not an author-issued erratum. No mathematical error in the two main theorems has been established, and no source-contract repair is claimed or authorized here. Absence of an entry is not a complete correctness certification.
 
 ## Confirmed source distinctions
 
