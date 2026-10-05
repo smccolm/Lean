@@ -1,0 +1,1367 @@
+{
+  "sha": "c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+  "url": "https://api.github.com/repos/teorth/expdb/git/trees/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+  "tree": [
+    {
+      "path": ".git-blame-ignore-revs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d27a88e884d05184abaf44fa74d4272d7230e023",
+      "size": 351,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d27a88e884d05184abaf44fa74d4272d7230e023"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c83ffd193aca5039cd4a7101d20fc22c00ac02ae",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/c83ffd193aca5039cd4a7101d20fc22c00ac02ae"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc45a897f5416c4c4dbdb6f31a2da7e858207e27",
+      "size": 419,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/cc45a897f5416c4c4dbdb6f31a2da7e858207e27"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0f41b5bdff22e049a40047cc2936b5863ff97e5",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/a0f41b5bdff22e049a40047cc2936b5863ff97e5"
+    },
+    {
+      "path": ".github/workflows/blueprint.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94842b4f0c3bc8760329e95109fdb511767cecd6",
+      "size": 2467,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/94842b4f0c3bc8760329e95109fdb511767cecd6"
+    },
+    {
+      "path": ".github/workflows/create-release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "891670666246e81b1cbca065872491bafe0298b4",
+      "size": 562,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/891670666246e81b1cbca065872491bafe0298b4"
+    },
+    {
+      "path": ".github/workflows/python-tests.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e3a719ddc711ce846659544fad31f500e9d3880",
+      "size": 1512,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/4e3a719ddc711ce846659544fad31f500e9d3880"
+    },
+    {
+      "path": ".github/workflows/update-dependencies.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d9eebb6a29e8025d9565c6238b341e9371a51cd",
+      "size": 2222,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/4d9eebb6a29e8025d9565c6238b341e9371a51cd"
+    },
+    {
+      "path": ".github/workflows/whitespace.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ed72f01abb2b0eb1f52d8f78b6eff0e216a4b6e",
+      "size": 683,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/7ed72f01abb2b0eb1f52d8f78b6eff0e216a4b6e"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e412e6025e7fd9a9c866465399b3a20355ac5f1",
+      "size": 407,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/4e412e6025e7fd9a9c866465399b3a20355ac5f1"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb5bfa3adf4cc8891ff384412b0b5daecc33416e",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/fb5bfa3adf4cc8891ff384412b0b5daecc33416e"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acf12cdca972ba1a3c8b2a5e4b4f1446a5c15b8e",
+      "size": 374,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/acf12cdca972ba1a3c8b2a5e4b4f1446a5c15b8e"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9317b30c2088f60ec755affdf3e30f6b985a462",
+      "size": 660,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d9317b30c2088f60ec755affdf3e30f6b985a462"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5a15c393d682ecc32ba42f3b4d565d6f1a2ffa3",
+      "size": 7149,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e5a15c393d682ecc32ba42f3b4d565d6f1a2ffa3"
+    },
+    {
+      "path": "Expdb.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee921a09c45837b2496328153cc98b87732ddae4",
+      "size": 632,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ee921a09c45837b2496328153cc98b87732ddae4"
+    },
+    {
+      "path": "Expdb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e0ff60af4b7d5c2f6fcb1ecc6a1102fe9d48662",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/5e0ff60af4b7d5c2f6fcb1ecc6a1102fe9d48662"
+    },
+    {
+      "path": "Expdb/Basic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e230b7e472eb927b5060c3a80a7c3452e5c9baa3",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/e230b7e472eb927b5060c3a80a7c3452e5c9baa3"
+    },
+    {
+      "path": "Expdb/Basic/Asymptotics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d03bc2a2e6c76bfd7f85689b2d16cb02e1ef692",
+      "size": 11081,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/1d03bc2a2e6c76bfd7f85689b2d16cb02e1ef692"
+    },
+    {
+      "path": "Expdb/Basic/AutomaticUniformity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f4f7d63fbb811a999a01c1c0be8b30d6509de2b",
+      "size": 12608,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/7f4f7d63fbb811a999a01c1c0be8b30d6509de2b"
+    },
+    {
+      "path": "Expdb/Basic/Definitions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9687c30cb77abd9075addc6a0d4f0cb5d155d6c2",
+      "size": 1763,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/9687c30cb77abd9075addc6a0d4f0cb5d155d6c2"
+    },
+    {
+      "path": "Expdb/Basic/PowerAsymptotics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22d1d7562370d6a77b7e442d24488e93a3f42dc4",
+      "size": 24288,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/22d1d7562370d6a77b7e442d24488e93a3f42dc4"
+    },
+    {
+      "path": "Expdb/ExponentialSums",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "174230935ef2d4a73c5f0247318f24c006a66d7a",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/174230935ef2d4a73c5f0247318f24c006a66d7a"
+    },
+    {
+      "path": "Expdb/ExponentialSums/ExponentSumGrowth.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60c9a0e808efd2fc64a873c66a2c37cfb1681090",
+      "size": 10527,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/60c9a0e808efd2fc64a873c66a2c37cfb1681090"
+    },
+    {
+      "path": "Expdb/ExponentialSums/ExponentSumGrowthNonAsymptotic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dd80b6e0ec90eabdc1ef27effa536c2e2718dbd",
+      "size": 13602,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8dd80b6e0ec90eabdc1ef27effa536c2e2718dbd"
+    },
+    {
+      "path": "Expdb/ExponentialSums/FixedExponentialSum.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cee21c21ab91b49420ced0eb88c8f2b376f0fd2",
+      "size": 2647,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8cee21c21ab91b49420ced0eb88c8f2b376f0fd2"
+    },
+    {
+      "path": "Expdb/ExponentialSums/LogPhase.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "331334bbf782a410a4e25068035a99e0a11407ee",
+      "size": 9846,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/331334bbf782a410a4e25068035a99e0a11407ee"
+    },
+    {
+      "path": "Expdb/ExponentialSums/OscillatoryBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bce1139c3efffe8d0467953ddd688cec650ae4d",
+      "size": 27104,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/1bce1139c3efffe8d0467953ddd688cec650ae4d"
+    },
+    {
+      "path": "Expdb/ExponentialSums/PhaseFunctions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b15df1f14792e39aae30e196c56fdf2002fd520",
+      "size": 19726,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/4b15df1f14792e39aae30e196c56fdf2002fd520"
+    },
+    {
+      "path": "Expdb/ExponentialSums/ScaleTransfer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc19b0cb9768448a45bb0bc886417a9c8f0bc079",
+      "size": 12031,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/cc19b0cb9768448a45bb0bc886417a9c8f0bc079"
+    },
+    {
+      "path": "Expdb/ExponentialSums/TrivialBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77d0dca9ce153d55654a5d8067dfa348214a7511",
+      "size": 23772,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/77d0dca9ce153d55654a5d8067dfa348214a7511"
+    },
+    {
+      "path": "Expdb/ExponentialSums/UpperSemicontinuity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81e8c92e033e8d1096ca86b684a6c5f15fe4396",
+      "size": 21885,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/c81e8c92e033e8d1096ca86b684a6c5f15fe4396"
+    },
+    {
+      "path": "Expdb/ForMathlib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9da94b1048da06ae64e332fd6f473d53fb923d91",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/9da94b1048da06ae64e332fd6f473d53fb923d91"
+    },
+    {
+      "path": "Expdb/ForMathlib/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1219fe3caf8677175a89341e860b5be2539be201",
+      "size": 100,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/1219fe3caf8677175a89341e860b5be2539be201"
+    },
+    {
+      "path": "Expdb/Fourier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a74b2d4644ff4036f8b4bfc6939c35e28b6fc18",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/8a74b2d4644ff4036f8b4bfc6939c35e28b6fc18"
+    },
+    {
+      "path": "Expdb/Fourier/Bump.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11c5e5e291946d843b88dc0a70b7d49342ac50c4",
+      "size": 12360,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/11c5e5e291946d843b88dc0a70b7d49342ac50c4"
+    },
+    {
+      "path": "Expdb/Fourier/L2Integral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "157a3a3eaf04ebf0926be9c21fbcdd04bcd602de",
+      "size": 41153,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/157a3a3eaf04ebf0926be9c21fbcdd04bcd602de"
+    },
+    {
+      "path": "Expdb/Mathlib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34b3db119983e59587a95252c703d3deb59b2197",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/34b3db119983e59587a95252c703d3deb59b2197"
+    },
+    {
+      "path": "Expdb/Mathlib/EulerMaclaurin.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbc007e28e4347f2943b7932b8d0eee7afebf12",
+      "size": 22270,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/adbc007e28e4347f2943b7932b8d0eee7afebf12"
+    },
+    {
+      "path": "Expdb/Mathlib/IteratedDeriv.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce10d4cf67deb7c1f9d315e83382cc80505e2485",
+      "size": 2181,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ce10d4cf67deb7c1f9d315e83382cc80505e2485"
+    },
+    {
+      "path": "Expdb/Mathlib/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b8c586eabd276e24b1df34bea576ee7d342838f",
+      "size": 108,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/7b8c586eabd276e24b1df34bea576ee7d342838f"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ca4e4219b2e22cc8a4eb8bdc60d3d1c180b7e9",
+      "size": 9431,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/16ca4e4219b2e22cc8a4eb8bdc60d3d1c180b7e9"
+    },
+    {
+      "path": "blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76d64986703dcdf029fe7200a66fc6d0bb4a0687",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/76d64986703dcdf029fe7200a66fc6d0bb4a0687"
+    },
+    {
+      "path": "blueprint/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88a179f9cc40e6d95b2237639eb0b8eee66d265f",
+      "size": 127,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/88a179f9cc40e6d95b2237639eb0b8eee66d265f"
+    },
+    {
+      "path": "blueprint/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6104ce041668ab5b1c4f3d25303e50a938cf47ed",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/6104ce041668ab5b1c4f3d25303e50a938cf47ed"
+    },
+    {
+      "path": "blueprint/src/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88a179f9cc40e6d95b2237639eb0b8eee66d265f",
+      "size": 127,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/88a179f9cc40e6d95b2237639eb0b8eee66d265f"
+    },
+    {
+      "path": "blueprint/src/blueprint.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2cce57d4479c16176f373174da091f6a4084e53",
+      "size": 34,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d2cce57d4479c16176f373174da091f6a4084e53"
+    },
+    {
+      "path": "blueprint/src/chapter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d4cb2a9ea2bbf537ba69be50cde6aef4fbbada9",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/8d4cb2a9ea2bbf537ba69be50cde6aef4fbbada9"
+    },
+    {
+      "path": "blueprint/src/chapter/additive_energy.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bb9ef08776d69d34025272a34082317a8df4d2e",
+      "size": 47342,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/6bb9ef08776d69d34025272a34082317a8df4d2e"
+    },
+    {
+      "path": "blueprint/src/chapter/beta.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5622f339946d6bcca37dd415adbb3b22d787f0ea",
+      "size": 28614,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5622f339946d6bcca37dd415adbb3b22d787f0ea"
+    },
+    {
+      "path": "blueprint/src/chapter/biblio.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bba5d5e2cc47ee0da2ad58929e176afe0c0e9c7",
+      "size": 92,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8bba5d5e2cc47ee0da2ad58929e176afe0c0e9c7"
+    },
+    {
+      "path": "blueprint/src/chapter/brun_titchmarsh.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f87a58793d4b676d6889752549e250de8e2e546",
+      "size": 15499,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8f87a58793d4b676d6889752549e250de8e2e546"
+    },
+    {
+      "path": "blueprint/src/chapter/de_bruijn_newman.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f293b96757411693757a996da0e1cee2f767992b",
+      "size": 3936,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/f293b96757411693757a996da0e1cee2f767992b"
+    },
+    {
+      "path": "blueprint/src/chapter/divisor_sum.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ab4c987ab84cc1ad207710da7d07a9bcdfad894",
+      "size": 10795,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5ab4c987ab84cc1ad207710da7d07a9bcdfad894"
+    },
+    {
+      "path": "blueprint/src/chapter/exp_pair_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10a5033c7d2fa4394dccfd5de078d1505c91af82",
+      "size": 37475,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/10a5033c7d2fa4394dccfd5de078d1505c91af82"
+    },
+    {
+      "path": "blueprint/src/chapter/exponent_pairs.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d1127dc39d58eb54abf2afd67f798f9cd14775c",
+      "size": 20771,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/3d1127dc39d58eb54abf2afd67f798f9cd14775c"
+    },
+    {
+      "path": "blueprint/src/chapter/gauss_circle.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29363d6c22c62c7fcad5ee57c08fa00b8ee85be7",
+      "size": 5414,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/29363d6c22c62c7fcad5ee57c08fa00b8ee85be7"
+    },
+    {
+      "path": "blueprint/src/chapter/gauss_circle_error_2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42896dc98a2ef8e049e0a36702ad084cfe91f6ad",
+      "size": 90190,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/42896dc98a2ef8e049e0a36702ad084cfe91f6ad"
+    },
+    {
+      "path": "blueprint/src/chapter/gauss_circle_error_3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c74ad4d354ec160e66b393d306d21abba409c176",
+      "size": 77141,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/c74ad4d354ec160e66b393d306d21abba409c176"
+    },
+    {
+      "path": "blueprint/src/chapter/gauss_circle_historical_bounds.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c4ec4fe60ef36fffcd68422cb40c629db18aa3f",
+      "size": 74167,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/3c4ec4fe60ef36fffcd68422cb40c629db18aa3f"
+    },
+    {
+      "path": "blueprint/src/chapter/intro.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da06c4f90c50ff1c15a8484af468020454697ffc",
+      "size": 6474,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/da06c4f90c50ff1c15a8484af468020454697ffc"
+    },
+    {
+      "path": "blueprint/src/chapter/l2.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec35ceff7171166cbe76632d31e013c83beb3bcd",
+      "size": 1672,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ec35ceff7171166cbe76632d31e013c83beb3bcd"
+    },
+    {
+      "path": "blueprint/src/chapter/large_values.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b824db2c0dbe30556c63bfd21ffbc83a6bde11d",
+      "size": 18111,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/4b824db2c0dbe30556c63bfd21ffbc83a6bde11d"
+    },
+    {
+      "path": "blueprint/src/chapter/mu_bound_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7d9c0c247e22a4a4610544b8a575c525e031e64",
+      "size": 38433,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/a7d9c0c247e22a4a4610544b8a575c525e031e64"
+    },
+    {
+      "path": "blueprint/src/chapter/notation.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86967a7d307554230dc11a284b04930b72936c73",
+      "size": 9068,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/86967a7d307554230dc11a284b04930b72936c73"
+    },
+    {
+      "path": "blueprint/src/chapter/optimized_bourgain_lv_estimate.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b6e6563e143b6b388863f0b76f16c9f5d302c3f",
+      "size": 43592,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/0b6e6563e143b6b388863f0b76f16c9f5d302c3f"
+    },
+    {
+      "path": "blueprint/src/chapter/prime_counting_function.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78a357e3c6215ac0f009aa8ac8742ca6d2de2fc9",
+      "size": 6960,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/78a357e3c6215ac0f009aa8ac8742ca6d2de2fc9"
+    },
+    {
+      "path": "blueprint/src/chapter/primes.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f8dbc6246a19ccf637924e56fb731bd52ebde71",
+      "size": 21996,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8f8dbc6246a19ccf637924e56fb731bd52ebde71"
+    },
+    {
+      "path": "blueprint/src/chapter/pythagorean_triples.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8283d9860261378860b06a129a4dba42fdcde91",
+      "size": 1167,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/f8283d9860261378860b06a129a4dba42fdcde91"
+    },
+    {
+      "path": "blueprint/src/chapter/van_der_corput_beta.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcd6e62da164b15fabfe1ca27c2d0f1cb5d147c5",
+      "size": 76095,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/bcd6e62da164b15fabfe1ca27c2d0f1cb5d147c5"
+    },
+    {
+      "path": "blueprint/src/chapter/van_der_corput_beta_vs_conjectured.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88487afac1c9557c821f9f2047e2b6a70e1aca27",
+      "size": 60475,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/88487afac1c9557c821f9f2047e2b6a70e1aca27"
+    },
+    {
+      "path": "blueprint/src/chapter/van_der_corput_vs_best_beta.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b0a4dcf60079a0d49ce336a9908b6a805b79acb",
+      "size": 24703,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/0b0a4dcf60079a0d49ce336a9908b6a805b79acb"
+    },
+    {
+      "path": "blueprint/src/chapter/waring-goldbach-schnirelman.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3f42fe8a5926b1ef63d9118dc3843824fb5e781",
+      "size": 12157,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d3f42fe8a5926b1ef63d9118dc3843824fb5e781"
+    },
+    {
+      "path": "blueprint/src/chapter/zero_density.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64f5d305e5d9ef97dc2c8943422b9b1980bc6db0",
+      "size": 71948,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/64f5d305e5d9ef97dc2c8943422b9b1980bc6db0"
+    },
+    {
+      "path": "blueprint/src/chapter/zero_density_energy.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "889b4db6d0b9f7192d1ff4d15f4b79cd5fbb357c",
+      "size": 70096,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/889b4db6d0b9f7192d1ff4d15f4b79cd5fbb357c"
+    },
+    {
+      "path": "blueprint/src/chapter/zero_density_energy_estimate.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1087cdf606ed3c815400f5f08f6db03f7d38eb49",
+      "size": 54845,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/1087cdf606ed3c815400f5f08f6db03f7d38eb49"
+    },
+    {
+      "path": "blueprint/src/chapter/zero_density_estimate_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a2578f13ffacbba32dff59af4d8caa52f4925bb",
+      "size": 44613,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8a2578f13ffacbba32dff59af4d8caa52f4925bb"
+    },
+    {
+      "path": "blueprint/src/chapter/zero_free_region.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66c336efa0b1337538f93e8382d6cbbd9b95981b",
+      "size": 6801,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/66c336efa0b1337538f93e8382d6cbbd9b95981b"
+    },
+    {
+      "path": "blueprint/src/chapter/zeta_growth.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c71c4b7e50c912b0615ba15a8ecade0d3e443fc7",
+      "size": 15393,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/c71c4b7e50c912b0615ba15a8ecade0d3e443fc7"
+    },
+    {
+      "path": "blueprint/src/chapter/zeta_large_values.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c8fe94b1171dea30976e35251ee7cc517d4e5e2",
+      "size": 22144,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/1c8fe94b1171dea30976e35251ee7cc517d4e5e2"
+    },
+    {
+      "path": "blueprint/src/chapter/zeta_moments.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b5478f71d314eef60e5319242a8ff574b936f75",
+      "size": 18904,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/2b5478f71d314eef60e5319242a8ff574b936f75"
+    },
+    {
+      "path": "blueprint/src/content.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036397389f8a91f74535564544ead2de4310d096",
+      "size": 1526,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/036397389f8a91f74535564544ead2de4310d096"
+    },
+    {
+      "path": "blueprint/src/extra_styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b96c77678d2dd196dc7c2aeb3bdc2d0e94239a68",
+      "size": 482,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/b96c77678d2dd196dc7c2aeb3bdc2d0e94239a68"
+    },
+    {
+      "path": "blueprint/src/latexmkrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38d5963054f6b33f66acd04945ac69f2522ad2bc",
+      "size": 181,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/38d5963054f6b33f66acd04945ac69f2522ad2bc"
+    },
+    {
+      "path": "blueprint/src/macros",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adad8f00e844f05ab29253357982d1cb8c6a15b6",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/adad8f00e844f05ab29253357982d1cb8c6a15b6"
+    },
+    {
+      "path": "blueprint/src/macros/common.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b09e7c0175abc49c638f3ca38c387ccc854fb2ff",
+      "size": 1556,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/b09e7c0175abc49c638f3ca38c387ccc854fb2ff"
+    },
+    {
+      "path": "blueprint/src/macros/print.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d9d235be8fb34ed075d44a71e647dbd67eadb46",
+      "size": 675,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/0d9d235be8fb34ed075d44a71e647dbd67eadb46"
+    },
+    {
+      "path": "blueprint/src/macros/web.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97723d53b49f72240ddacb72e2c9e6681154fd63",
+      "size": 529,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/97723d53b49f72240ddacb72e2c9e6681154fd63"
+    },
+    {
+      "path": "blueprint/src/plastex.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca19a62afb09c380add9ffc94256282f7585287c",
+      "size": 263,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ca19a62afb09c380add9ffc94256282f7585287c"
+    },
+    {
+      "path": "blueprint/src/print.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300b7b4699a42b3899f9df3f8d6f41d8aab74f2e",
+      "size": 1012,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/300b7b4699a42b3899f9df3f8d6f41d8aab74f2e"
+    },
+    {
+      "path": "blueprint/src/python",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5605457725af2cbeaec3e7e687d23cca7a76bb0",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/f5605457725af2cbeaec3e7e687d23cca7a76bb0"
+    },
+    {
+      "path": "blueprint/src/python/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c55f884b03eb59a42e819b96807c9ecedf3ce21",
+      "size": 2068,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/6c55f884b03eb59a42e819b96807c9ecedf3ce21"
+    },
+    {
+      "path": "blueprint/src/python/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "blueprint/src/python/additive_energy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59a692d6e40b5b56156924f6002929c04c2725e3",
+      "size": 17515,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/59a692d6e40b5b56156924f6002929c04c2725e3"
+    },
+    {
+      "path": "blueprint/src/python/benchmarks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e861ae6f064d57bce1db9dec68065677a5678040",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/e861ae6f064d57bce1db9dec68065677a5678040"
+    },
+    {
+      "path": "blueprint/src/python/benchmarks/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "blueprint/src/python/benchmarks/benchmark_polytope.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a92047a0e30fb9ce54b048d39d7536f7bd600249",
+      "size": 1415,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/a92047a0e30fb9ce54b048d39d7536f7bd600249"
+    },
+    {
+      "path": "blueprint/src/python/bound_beta.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "933e95eae777c81b3b17b942b65a881b57c128ab",
+      "size": 20498,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/933e95eae777c81b3b17b942b65a881b57c128ab"
+    },
+    {
+      "path": "blueprint/src/python/bound_mu.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02bc14dec87545ae49c88b1776d4c865225f6e43",
+      "size": 13341,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/02bc14dec87545ae49c88b1776d4c865225f6e43"
+    },
+    {
+      "path": "blueprint/src/python/constants.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86c904450d7ebb06d24ef8ad5d69ede778f12612",
+      "size": 1452,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/86c904450d7ebb06d24ef8ad5d69ede778f12612"
+    },
+    {
+      "path": "blueprint/src/python/derived.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a918628ddaf69421947b2b6b60b255a95a7e2c4f",
+      "size": 60063,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/a918628ddaf69421947b2b6b60b255a95a7e2c4f"
+    },
+    {
+      "path": "blueprint/src/python/examples.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f1b3a224c2f42af2a977803eae5c5efb43f0da9",
+      "size": 22815,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/6f1b3a224c2f42af2a977803eae5c5efb43f0da9"
+    },
+    {
+      "path": "blueprint/src/python/exponent_pair.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9909543d8a938d8985735ae934cf930c0648f8e",
+      "size": 18994,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/c9909543d8a938d8985735ae934cf930c0648f8e"
+    },
+    {
+      "path": "blueprint/src/python/functions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d369b50f46c6afc00c6c9ed2b0b4c3aa2293e100",
+      "size": 39559,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d369b50f46c6afc00c6c9ed2b0b4c3aa2293e100"
+    },
+    {
+      "path": "blueprint/src/python/helpers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3ed7084b0650ffbabe46a03e0bc92e8ed1f7bee",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/f3ed7084b0650ffbabe46a03e0bc92e8ed1f7bee"
+    },
+    {
+      "path": "blueprint/src/python/helpers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "blueprint/src/python/helpers/region_helper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7189272b918b6bd4bd5128d70c41bcbf30877eeb",
+      "size": 2043,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/7189272b918b6bd4bd5128d70c41bcbf30877eeb"
+    },
+    {
+      "path": "blueprint/src/python/helpers/str_helper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "482ba8c0154c9f91c43c9101d7f28dd2595de401",
+      "size": 894,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/482ba8c0154c9f91c43c9101d7f28dd2595de401"
+    },
+    {
+      "path": "blueprint/src/python/hypotheses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "384082a4744c489fa23cef5d6dc2cd2eb004aefb",
+      "size": 12114,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/384082a4744c489fa23cef5d6dc2cd2eb004aefb"
+    },
+    {
+      "path": "blueprint/src/python/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "811eadff1f1015bce4899d29736b1f2939adefe3",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/811eadff1f1015bce4899d29736b1f2939adefe3"
+    },
+    {
+      "path": "blueprint/src/python/images/van_der_corput_beta.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcd6e62da164b15fabfe1ca27c2d0f1cb5d147c5",
+      "size": 76095,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/bcd6e62da164b15fabfe1ca27c2d0f1cb5d147c5"
+    },
+    {
+      "path": "blueprint/src/python/images/van_der_corput_beta_vs_conjectured.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88487afac1c9557c821f9f2047e2b6a70e1aca27",
+      "size": 60475,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/88487afac1c9557c821f9f2047e2b6a70e1aca27"
+    },
+    {
+      "path": "blueprint/src/python/large_values.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "383d329f606859e4aaf5fa77d374bccfe3b698b1",
+      "size": 19190,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/383d329f606859e4aaf5fa77d374bccfe3b698b1"
+    },
+    {
+      "path": "blueprint/src/python/literature.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b85b4ed008154eee2e17f59aae5b708e5d1153",
+      "size": 53084,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d9b85b4ed008154eee2e17f59aae5b708e5d1153"
+    },
+    {
+      "path": "blueprint/src/python/polynomial.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8889f07652264018e9748834cdd29c1d4e023b2",
+      "size": 4704,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/f8889f07652264018e9748834cdd29c1d4e023b2"
+    },
+    {
+      "path": "blueprint/src/python/polytope.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb73eb1f0a10187046f713e23513b6c510b3295f",
+      "size": 35420,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/cb73eb1f0a10187046f713e23513b6c510b3295f"
+    },
+    {
+      "path": "blueprint/src/python/prime_gap.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e75b6dffc06d08ecf2f2b23d9d91bc9719d01c3a",
+      "size": 5387,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e75b6dffc06d08ecf2f2b23d9d91bc9719d01c3a"
+    },
+    {
+      "path": "blueprint/src/python/reference.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72a53630dd4ecd6619b625dd6c8d92d6547828bf",
+      "size": 6153,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/72a53630dd4ecd6619b625dd6c8d92d6547828bf"
+    },
+    {
+      "path": "blueprint/src/python/region.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e271ff43133c8102ec290d37f607f0ee18044a4b",
+      "size": 22795,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e271ff43133c8102ec290d37f607f0ee18044a4b"
+    },
+    {
+      "path": "blueprint/src/python/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe95a89aea32aaaa948adaf7dcf5dbe03861a95f",
+      "size": 606,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/fe95a89aea32aaaa948adaf7dcf5dbe03861a95f"
+    },
+    {
+      "path": "blueprint/src/python/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc4def12188f03eedd67672998766fe6f53ed40c",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/cc4def12188f03eedd67672998766fe6f53ed40c"
+    },
+    {
+      "path": "blueprint/src/python/tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_affine2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cebbfbfe1e684ba651ba0a0972a36693f9307fa4",
+      "size": 1610,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/cebbfbfe1e684ba651ba0a0972a36693f9307fa4"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_affine_envelope_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49eeddb19a8d3bb8ba58af49f8c06d95ee7dc07a",
+      "size": 1108,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/49eeddb19a8d3bb8ba58af49f8c06d95ee7dc07a"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_all.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65bab6872b4ec0d9ae558c60236351ef77c368d1",
+      "size": 1257,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/65bab6872b4ec0d9ae558c60236351ef77c368d1"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_beta_reflection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b54e40fbb8cff1d43c303877dbaf0d363f30e6",
+      "size": 1061,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d9b54e40fbb8cff1d43c303877dbaf0d363f30e6"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_coverage_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41307f72a704c4eb19b941b9453aa78139d6bbdc",
+      "size": 770,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/41307f72a704c4eb19b941b9453aa78139d6bbdc"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_ep_to_zd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "803675ae10cde33160b6a05bbe1bf15fd5b23c0b",
+      "size": 1810,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/803675ae10cde33160b6a05bbe1bf15fd5b23c0b"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_equality_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2710b40dc7636a749fcc415110c1610c59174cbb",
+      "size": 707,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/2710b40dc7636a749fcc415110c1610c59174cbb"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_exppair.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2543402dca9abc8397603a409e752fabad1235e0",
+      "size": 2971,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/2543402dca9abc8397603a409e752fabad1235e0"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_hypothesis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb6109759498959e85bae40aac8376e42800ffe3",
+      "size": 2776,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/cb6109759498959e85bae40aac8376e42800ffe3"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_hypothesis_cache.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74b1e9d8da7d682cb484855459972e91cdd68dfb",
+      "size": 1840,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/74b1e9d8da7d682cb484855459972e91cdd68dfb"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_interval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0615b9932c7e7242442741bc4dfe83b3093567f0",
+      "size": 1050,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/0615b9932c7e7242442741bc4dfe83b3093567f0"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_piecewise_mu.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3688de6cda2831adeccffa647d345699cb7cf644",
+      "size": 1223,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/3688de6cda2831adeccffa647d345699cb7cf644"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_polynomial.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b5e525b76837bf7aea6cfca4fcbc9ec69e46146",
+      "size": 1166,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5b5e525b76837bf7aea6cfca4fcbc9ec69e46146"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_polytope.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72ebee1a45f439a3a00177e1475a8594b9ede873",
+      "size": 16150,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/72ebee1a45f439a3a00177e1475a8594b9ede873"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_rational_envelope_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c04946e527e68cd5f7419d007890405ffb599fe",
+      "size": 1437,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5c04946e527e68cd5f7419d007890405ffb599fe"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_rational_roots_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3496560714888b1835e3595c50140f0818d76232",
+      "size": 628,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/3496560714888b1835e3595c50140f0818d76232"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_rationalfunction.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f27e4840cc57eda26b3a410c73365a900277442b",
+      "size": 592,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/f27e4840cc57eda26b3a410c73365a900277442b"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_reference.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2d8ffba20cccb38f1af78b0892962148db3c364",
+      "size": 1468,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d2d8ffba20cccb38f1af78b0892962148db3c364"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_region.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac9bff4a3911b0c44aa29889cb50c4e54a42a139",
+      "size": 4088,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ac9bff4a3911b0c44aa29889cb50c4e54a42a139"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_region_projection_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79264576a7453aa7e45608909894d26e4513cb5a",
+      "size": 821,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/79264576a7453aa7e45608909894d26e4513cb5a"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_subset_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5afd51c19f9265ab0c079cba9438c46e394b3420",
+      "size": 715,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5afd51c19f9265ab0c079cba9438c46e394b3420"
+    },
+    {
+      "path": "blueprint/src/python/tests/test_unbounded_projection_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "224707271397c7ee803fffb3b08094113eefef7d",
+      "size": 940,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/224707271397c7ee803fffb3b08094113eefef7d"
+    },
+    {
+      "path": "blueprint/src/python/transform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a9f7cad86fc595e91917c5e24bd83452d14f875",
+      "size": 1034,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/7a9f7cad86fc595e91917c5e24bd83452d14f875"
+    },
+    {
+      "path": "blueprint/src/python/visualizations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "740a292cf23dabad356ab34562ca9551452cfd2b",
+      "size": 15748,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/740a292cf23dabad356ab34562ca9551452cfd2b"
+    },
+    {
+      "path": "blueprint/src/python/zero_density_energy_estimate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2344aeeafa68be399a649a4af8bd75b55448c08d",
+      "size": 15357,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/2344aeeafa68be399a649a4af8bd75b55448c08d"
+    },
+    {
+      "path": "blueprint/src/python/zero_density_estimate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "444efc8eb0e37dcd14d34f6902c6f3e7b2f621b0",
+      "size": 36854,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/444efc8eb0e37dcd14d34f6902c6f3e7b2f621b0"
+    },
+    {
+      "path": "blueprint/src/python/zeta_large_values.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6201546f19bc2abf80572f9b1552dce2951cd915",
+      "size": 8510,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/6201546f19bc2abf80572f9b1552dce2951cd915"
+    },
+    {
+      "path": "blueprint/src/references.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8480cb865372b783bce90efcaea6fbb7f4047717",
+      "size": 176634,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/8480cb865372b783bce90efcaea6fbb7f4047717"
+    },
+    {
+      "path": "blueprint/src/web.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9cad8ff05db29b58170d44e38c0f0a805fd2b6f",
+      "size": 893,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/d9cad8ff05db29b58170d44e38c0f0a805fd2b6f"
+    },
+    {
+      "path": "home_page",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebb66b855ca04be1d4d5f309aa5c619329cf4153",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/ebb66b855ca04be1d4d5f309aa5c619329cf4153"
+    },
+    {
+      "path": "home_page/404.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "086a5c9ea988c5a4d37acc5f8ea089e37cb19371",
+      "size": 419,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/086a5c9ea988c5a4d37acc5f8ea089e37cb19371"
+    },
+    {
+      "path": "home_page/Gemfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e40c26d149743539afba7a57882c713c3574901",
+      "size": 830,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/9e40c26d149743539afba7a57882c713c3574901"
+    },
+    {
+      "path": "home_page/Gemfile.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d3bdf39634d25524cdf75e73fc9251622586202",
+      "size": 7945,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5d3bdf39634d25524cdf75e73fc9251622586202"
+    },
+    {
+      "path": "home_page/_config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "114d5ecaf247134304d07dc295496e3f22d8ebee",
+      "size": 1445,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/114d5ecaf247134304d07dc295496e3f22d8ebee"
+    },
+    {
+      "path": "home_page/_includes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca9d0a926284669b50d76fbde6bba3c58ef8ca72",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/ca9d0a926284669b50d76fbde6bba3c58ef8ca72"
+    },
+    {
+      "path": "home_page/_includes/head-custom.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e64b4117d0f3fd4c35e12021b79eff63cc21f15a",
+      "size": 163,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/e64b4117d0f3fd4c35e12021b79eff63cc21f15a"
+    },
+    {
+      "path": "home_page/_includes/mathjax.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5340b093eee305e2c7e4ce60498bbfd85021269c",
+      "size": 555,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/5340b093eee305e2c7e4ce60498bbfd85021269c"
+    },
+    {
+      "path": "home_page/_layouts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45a9121fa9e88498d8670f442f1407ee696e01ce",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/45a9121fa9e88498d8670f442f1407ee696e01ce"
+    },
+    {
+      "path": "home_page/_layouts/default.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65a15cd2e93cc9c0a0b484279ae47dbd4298018f",
+      "size": 2022,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/65a15cd2e93cc9c0a0b484279ae47dbd4298018f"
+    },
+    {
+      "path": "home_page/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60fc023e462fba38ccce51587a9121b8e80b83bb",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/60fc023e462fba38ccce51587a9121b8e80b83bb"
+    },
+    {
+      "path": "home_page/assets/css",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "793f7cf2bf8df6c455ea4101b764acfda3086e42",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/793f7cf2bf8df6c455ea4101b764acfda3086e42"
+    },
+    {
+      "path": "home_page/assets/css/style.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca1437b86e2af67d4aa487fcedd03ae9ca9b252f",
+      "size": 211,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ca1437b86e2af67d4aa487fcedd03ae9ca9b252f"
+    },
+    {
+      "path": "home_page/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98ba8f01ab52f5fa813fbcd0c0f39038ae402898",
+      "size": 3093,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/98ba8f01ab52f5fa813fbcd0c0f39038ae402898"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d3d72f4be17e1f44f6b6f2d1df4111f76aafae4",
+      "size": 3431,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/0d3d72f4be17e1f44f6b6f2d1df4111f76aafae4"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1082df3b01e37753a3638dd7984ee9513cb290c8",
+      "size": 375,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/1082df3b01e37753a3638dd7984ee9513cb290c8"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94b9f495baff80fd9cb44aad8f4762cb3b2066fe",
+      "size": 25,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/94b9f495baff80fd9cb44aad8f4762cb3b2066fe"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "875933fd5dd701a188a60792656fc706264989c9",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/875933fd5dd701a188a60792656fc706264989c9"
+    },
+    {
+      "path": "scripts/check_whitespace.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef1207cd736f34c21c65c57f0e6901b833b16fd5",
+      "size": 2731,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/ef1207cd736f34c21c65c57f0e6901b833b16fd5"
+    },
+    {
+      "path": "scripts/lean_declarations.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b66e78365f3b6526c936ea22befc8414aed90dfd",
+      "size": 5960,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/b66e78365f3b6526c936ea22befc8414aed90dfd"
+    },
+    {
+      "path": "scripts/update_mathlib.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59721289a3e5da728bec22aa0af32fb517da6075",
+      "size": 504,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/59721289a3e5da728bec22aa0af32fb517da6075"
+    },
+    {
+      "path": "scripts/update_mathlib.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d76421aea40795661324dfac5bcb0ed471b6281",
+      "size": 531,
+      "url": "https://api.github.com/repos/teorth/expdb/git/blobs/9d76421aea40795661324dfac5bcb0ed471b6281"
+    }
+  ],
+  "truncated": false
+}

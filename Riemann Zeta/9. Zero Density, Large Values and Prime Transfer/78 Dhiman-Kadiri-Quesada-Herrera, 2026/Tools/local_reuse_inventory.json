@@ -1,0 +1,2093 @@
+[
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/ClassicalArgumentPrinciple.lean",
+    "sha256": "95e1eb7d4e1c79fa10bfcdf05aad2cc0d9e8fafbcd4151f4603962b2ed989e12",
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv",
+      "GuthMaynardExternal.PNT.RectangleArgumentPrinciple",
+      "GuthMaynard.ClassicalDensity"
+    ],
+    "declarations": [
+      {
+        "name": "norm_riemannZeta_le_twenty_mul_abs_im_on_classical_strip",
+        "line": 21,
+        "signature": "theorem norm_riemannZeta_le_twenty_mul_abs_im_on_classical_strip\n    {s : ℂ} (hre : s.re ∈ Set.Ico (1 / 2 : ℝ) 3) (him : 1 ≤ |s.im|) :\n    ‖riemannZeta s‖ ≤ 20 * |s.im|"
+      },
+      {
+        "name": "analytic_rectangle_logDeriv_integral_eq_order_sum",
+        "line": 39,
+        "signature": "theorem analytic_rectangle_logDeriv_integral_eq_order_sum\n    {f : ℂ → ℂ} {z w : ℂ}\n    (zRe_le_wRe : z.re ≤ w.re) (zIm_le_wIm : z.im ≤ w.im)\n    (hf : AnalyticOnNhd ℂ f (Rectangle z w))\n    (hfiniteOrder : ∀ p ∈ Rectangle z w, meromorphicOrderAt f p ≠ ⊤)\n    (hnoBoundaryZeros :\n      Disjoint (RectangleBorder z w)\n        (MeromorphicOn.divisor f (Rectangle z w)).support) :\n    RectangleIntegral' (logDeriv f) z w =\n      ∑ p ∈ (divisor_support_rectangle_finite f z w).toFinset,\n        ((MeromorphicOn.divisor f (Rectangle z w)) p : ℂ)"
+      },
+      {
+        "name": "regularizedInghamZeroDetector_rectangle_argumentPrinciple",
+        "line": 58,
+        "signature": "theorem regularizedInghamZeroDetector_rectangle_argumentPrinciple\n    (X : ℕ) {z w : ℂ}\n    (zRe_le_wRe : z.re ≤ w.re) (zIm_le_wIm : z.im ≤ w.im)\n    (hfiniteOrder : ∀ p ∈ Rectangle z w,\n      meromorphicOrderAt (regularizedInghamZeroDetector X) p ≠ ⊤)\n    (hnoBoundaryZeros :\n      Disjoint (RectangleBorder z w)\n        (MeromorphicOn.divisor (regularizedInghamZeroDetector X)\n          (Rectangle z w)).support) :\n    RectangleIntegral' (logDeriv (regularizedInghamZeroDetector X)) z w =\n      ∑ p ∈\n        (divisor_support_rectangle_finite\n          (regularizedInghamZeroDetector X) z w).toFinset,\n        ((MeromorphicOn.divisor (regularizedInghamZeroDetector X)\n          (Rectangle z w)) p : ℂ)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/GammaVerticalDecay.lean",
+    "sha256": "4a25c5525c7c0069006f19bc8d922452bc08f3d374cb23db55a297f9a64c08f8",
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup",
+      "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.IntegralBounds"
+    ],
+    "declarations": [
+      {
+        "name": "Gamma_add_nat_eq_prod_mul",
+        "line": 11,
+        "signature": "theorem Gamma_add_nat_eq_prod_mul (s : ℂ) (n : ℕ)\n    (hs : ∀ j < n, s + (j : ℂ) ≠ 0) :\n    Complex.Gamma (s + n) =\n      (∏ j ∈ Finset.range n, (s + (j : ℂ))) * Complex.Gamma s"
+      },
+      {
+        "name": "abs_im_pow_le_norm_prod_horizontal",
+        "line": 35,
+        "signature": "lemma abs_im_pow_le_norm_prod_horizontal (a t : ℝ) (n : ℕ) :\n    |t| ^ n ≤ ‖∏ j ∈ Finset.range n,\n      ((a : ℂ) + (t : ℂ) * I + (j : ℂ))‖"
+      },
+      {
+        "name": "typeII_Gamma_vertical_decay",
+        "line": 56,
+        "signature": "theorem typeII_Gamma_vertical_decay (n : ℕ) (hn : 3 ≤ n)\n    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :\n    |t| ^ n * ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤\n      (Nat.factorial (n - 1) : ℝ)"
+      },
+      {
+        "name": "appendixC_Gamma_vertical_decay",
+        "line": 108,
+        "signature": "theorem appendixC_Gamma_vertical_decay (n : ℕ) (hn : 3 ≤ n)\n    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ 1 / 2) :\n    |t| ^ n * ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤\n      (Nat.factorial n : ℝ)"
+      },
+      {
+        "name": "appendixC_Gamma_norm_le_inv_pow",
+        "line": 156,
+        "signature": "theorem appendixC_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)\n    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ 1 / 2)\n    (ht : 1 ≤ |t|) :\n    ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤\n      (Nat.factorial n : ℝ) / |t| ^ n"
+      },
+      {
+        "name": "continuous_appendixC_Gamma_horizontal",
+        "line": 167,
+        "signature": "theorem continuous_appendixC_Gamma_horizontal {a : ℝ}\n    (haPos : 0 < a) :\n    Continuous (fun t : ℝ => Complex.Gamma ((a : ℂ) + (t : ℂ) * I))"
+      },
+      {
+        "name": "integrable_sq_norm_appendixC_Gamma_horizontal",
+        "line": 188,
+        "signature": "theorem integrable_sq_norm_appendixC_Gamma_horizontal {a : ℝ}\n    (haPos : 0 < a) (haUpper : a ≤ 1 / 2) :\n    MeasureTheory.Integrable (fun t : ℝ =>\n      ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ^ 2)"
+      },
+      {
+        "name": "typeII_Gamma_norm_le_inv_pow",
+        "line": 275,
+        "signature": "theorem typeII_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)\n    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ))\n    (ht : 1 ≤ |t|) :\n    ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤\n      (Nat.factorial (n - 1) : ℝ) / |t| ^ n"
+      },
+      {
+        "name": "typeII_Gamma_norm_le_fourteen",
+        "line": 285,
+        "signature": "theorem typeII_Gamma_norm_le_fourteen {a t : ℝ}\n    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :\n    ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤ 14"
+      },
+      {
+        "name": "continuous_typeII_Gamma_horizontal",
+        "line": 357,
+        "signature": "theorem continuous_typeII_Gamma_horizontal {a : ℝ}\n    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :\n    Continuous (fun t : ℝ => Complex.Gamma ((a : ℂ) + (t : ℂ) * I))"
+      },
+      {
+        "name": "integrable_typeII_Gamma_horizontal",
+        "line": 380,
+        "signature": "theorem integrable_typeII_Gamma_horizontal {a : ℝ}\n    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :\n    MeasureTheory.Integrable\n      (fun t : ℝ => Complex.Gamma ((a : ℂ) + (t : ℂ) * I))"
+      },
+      {
+        "name": "integrable_one_add_abs_mul_typeII_Gamma_horizontal",
+        "line": 455,
+        "signature": "theorem integrable_one_add_abs_mul_typeII_Gamma_horizontal {a : ℝ}\n    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :\n    MeasureTheory.Integrable (fun t : ℝ =>\n      ((1 + |t| : ℝ) : ℂ) * Complex.Gamma ((a : ℂ) + (t : ℂ) * I))"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/QuantitativeSmoothReflection.lean",
+    "sha256": "b75efb2d63493481a6e59496e5aa2103f5d67e97a98178e524e25a930c113334",
+    "imports": [
+      "GuthMaynard.LargeValuesCubic",
+      "GuthMaynard.TypeIIFourthMomentReduction"
+    ],
+    "declarations": [
+      {
+        "name": "gmTraceNonzeroFourierSum",
+        "line": 18,
+        "signature": "noncomputable def gmTraceNonzeroFourierSum\n    (cutoff : GMSmoothCutoff) (N : ℕ) (t : ℝ) : ℂ"
+      },
+      {
+        "name": "gmTraceFourierFarTail",
+        "line": 24,
+        "signature": "noncomputable def gmTraceFourierFarTail\n    (cutoff : GMSmoothCutoff) (N M : ℕ) (t : ℝ) : ℂ"
+      },
+      {
+        "name": "gmTraceFourier_summable",
+        "line": 29,
+        "signature": "theorem gmTraceFourier_summable (cutoff : GMSmoothCutoff)\n    (N : ℕ) (hN : 0 < N) (t : ℝ) :\n    Summable (fun m : ℤ =>\n      gmTraceFourier cutoff t ((N : ℝ) * (m : ℝ)))"
+      },
+      {
+        "name": "gmTraceFourierCentral_eq_signed",
+        "line": 39,
+        "signature": "theorem gmTraceFourierCentral_eq_signed\n    (cutoff : GMSmoothCutoff) (N M : ℕ) (t : ℝ) :\n    (∑ z ∈ Finset.Icc (-(M : ℤ)) (M : ℤ),\n        if z = 0 then 0 else\n          gmTraceFourier cutoff t ((N : ℝ) * (z : ℝ))) =\n      ∑ m ∈ Finset.Icc 1 M,\n        (gmTraceFourier cutoff t ((N : ℝ) * m) +\n          gmTraceFourier cutoff t (-((N : ℝ) * m)))"
+      },
+      {
+        "name": "gmTraceNonzeroFourierSum_eq_signed_add_far",
+        "line": 96,
+        "signature": "theorem gmTraceNonzeroFourierSum_eq_signed_add_far\n    (cutoff : GMSmoothCutoff) (N M : ℕ) (hN : 0 < N) (t : ℝ) :\n    gmTraceNonzeroFourierSum cutoff N t =\n      (∑ m ∈ Finset.Icc 1 M,\n        (gmTraceFourier cutoff t ((N : ℝ) * m) +\n          gmTraceFourier cutoff t (-((N : ℝ) * m)))) +\n        gmTraceFourierFarTail cutoff N M t"
+      },
+      {
+        "name": "gmTraceFourierFarTail_bound_order",
+        "line": 161,
+        "signature": "theorem gmTraceFourierFarTail_bound_order\n    (cutoff : GMSmoothCutoff) (n : ℕ) :\n    ∃ K : ℝ, 0 < K ∧ ∀ (N M : ℕ), 0 < N → 0 < M → ∀ t : ℝ,\n      ‖gmTraceFourierFarTail cutoff N M t‖ ≤\n        K * (1 + |t|) ^ (n + 2) /\n          ((N : ℝ) ^ (n + 2) * (M : ℝ) ^ n)"
+      },
+      {
+        "name": "continuous_gmReflectionDirichletPoly",
+        "line": 263,
+        "signature": "theorem continuous_gmReflectionDirichletPoly\n    (t : ℝ) (M : ℕ) : Continuous (gmReflectionDirichletPoly t M)"
+      },
+      {
+        "name": "intervalIntegrable_norm_gmReflectionDirichletPoly",
+        "line": 274,
+        "signature": "theorem intervalIntegrable_norm_gmReflectionDirichletPoly\n    (t : ℝ) (M : ℕ) (a b : ℝ) :\n    IntervalIntegrable (fun u : ℝ =>\n      ‖gmReflectionDirichletPoly t M u‖) volume a b"
+      },
+      {
+        "name": "integral_norm_gmReflectionDirichletPoly_comp_neg",
+        "line": 280,
+        "signature": "theorem integral_norm_gmReflectionDirichletPoly_comp_neg\n    (t : ℝ) (M : ℕ) (H : ℝ) :\n    (∫ u in -H..H, ‖gmReflectionDirichletPoly t M (-u)‖) =\n      ∫ u in -H..H, ‖gmReflectionDirichletPoly t M u‖"
+      },
+      {
+        "name": "gmPositiveMellinCore_bound",
+        "line": 290,
+        "signature": "theorem gmPositiveMellinCore_bound (cutoff : GMSmoothCutoff) :\n    ∃ C : ℝ, 0 < C ∧ ∀ {t T₀ H : ℝ} {N M : ℕ},\n      4 ≤ T₀ → T₀ ≤ t → 0 < H → H ≤ T₀ / 2 →\n      0 < N → 0 < M →\n      ∫ r : ℝ in Set.Icc (-H) H,\n          (1 / (2 * Real.pi) : ℝ) * ‖gmCutoffMellin cutoff r‖ *\n            ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ *\n              ‖gmPositiveDualDirichletPoly t N M r‖ ≤\n        C / Real.sqrt T₀ *\n          ∫ u in -H..H, ‖gmReflectionDirichletPoly t M u‖"
+      },
+      {
+        "name": "gmPositiveMellinTail_bound_order",
+        "line": 379,
+        "signature": "theorem gmPositiveMellinTail_bound_order\n    (cutoff : GMSmoothCutoff) (q : ℕ) (hq : 2 ≤ q) :\n    ∃ K : ℝ, 0 < K ∧ ∀ (t H : ℝ) (N M : ℕ),\n      1 ≤ H → 0 < N → 0 < M →\n      ∫ r : ℝ in (Set.Icc (-H) H)ᶜ,\n          (1 / (2 * Real.pi) : ℝ) * ‖gmCutoffMellin cutoff r‖ *\n            ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ *\n              ‖gmPositiveDualDirichletPoly t N M r‖ ≤\n        K * (M : ℝ) ^ 2 * H ^ (1 - (q : ℝ))"
+      },
+      {
+        "name": "gmNegativeMellinCore_bound",
+        "line": 483,
+        "signature": "theorem gmNegativeMellinCore_bound (cutoff : GMSmoothCutoff) :\n    ∃ C : ℝ, 0 < C ∧ ∀ {t T₀ H : ℝ} {N M : ℕ},\n      4 ≤ T₀ → T₀ ≤ t → 0 < H → H ≤ T₀ / 2 →\n      0 < N → 0 < M →\n      ∫ r : ℝ in Set.Icc (-H) H,\n          (1 / (2 * Real.pi) : ℝ) * ‖gmCutoffMellin cutoff r‖ *\n            ‖gmReflectionIntegral (-t - r) N (2 * N * M)‖ *\n              ‖gmPositiveDualDirichletPoly (-t) N M r‖ ≤\n        C / Real.sqrt T₀ *\n          ∫ u in -H..H, ‖gmReflectionDirichletPoly t M u‖"
+      },
+      {
+        "name": "gmRetainedSignedReflection_bound_order",
+        "line": 569,
+        "signature": "theorem gmRetainedSignedReflection_bound_order\n    (cutoff : GMSmoothCutoff) (q : ℕ) (hq : 2 ≤ q) :\n    ∃ C K : ℝ, 0 < C ∧ 0 < K ∧\n      ∀ {t T₀ H : ℝ} {N M : ℕ},\n        4 ≤ T₀ → T₀ ≤ t → 1 ≤ H → H ≤ T₀ / 2 →\n        0 < N → 0 < M →\n        ‖∑ m ∈ Finset.Icc 1 M,\n            (gmTraceFourier cutoff t ((N : ℝ) * m) +\n              gmTraceFourier cutoff t (-((N : ℝ) * m)))‖ ≤\n          C / Real.sqrt T₀ *\n              (∫ u in -H..H, ‖gmReflectionDirichletPoly t M u‖) +\n            K * (M : ℝ) ^ 2 * H ^ (1 - (q : ℝ))"
+      },
+      {
+        "name": "gmTraceNonzeroFourierSum_neg_eq_conj",
+        "line": 632,
+        "signature": "theorem gmTraceNonzeroFourierSum_neg_eq_conj\n    (cutoff : GMSmoothCutoff) (N : ℕ) (t : ℝ) :\n    gmTraceNonzeroFourierSum cutoff N (-t) =\n      star (gmTraceNonzeroFourierSum cutoff N t)"
+      },
+      {
+        "name": "norm_gmTraceNonzeroFourierSum_neg",
+        "line": 657,
+        "signature": "theorem norm_gmTraceNonzeroFourierSum_neg\n    (cutoff : GMSmoothCutoff) (N : ℕ) (t : ℝ) :\n    ‖gmTraceNonzeroFourierSum cutoff N (-t)‖ =\n      ‖gmTraceNonzeroFourierSum cutoff N t‖"
+      },
+      {
+        "name": "integral_norm_gmReflectionDirichletPoly_neg_time",
+        "line": 664,
+        "signature": "theorem integral_norm_gmReflectionDirichletPoly_neg_time\n    (t H : ℝ) (M : ℕ) :\n    (∫ u in -H..H, ‖gmReflectionDirichletPoly (-t) M u‖) =\n      ∫ u in -H..H, ‖gmReflectionDirichletPoly t M u‖"
+      },
+      {
+        "name": "gmCompleteSmoothReflection_bound_order",
+        "line": 676,
+        "signature": "theorem gmCompleteSmoothReflection_bound_order\n    (cutoff : GMSmoothCutoff) (q : ℕ) (hq : 2 ≤ q) :\n    ∃ C K L : ℝ, 0 < C ∧ 0 < K ∧ 0 < L ∧\n      ∀ {t T₀ H : ℝ} {N M : ℕ},\n        4 ≤ T₀ → T₀ ≤ |t| → 1 ≤ H → H ≤ T₀ / 2 →\n        0 < N → 0 < M →\n        ‖gmTraceNonzeroFourierSum cutoff N t‖ ≤\n          C / Real.sqrt T₀ *\n              (∫ u in -H..H, ‖gmReflectionDirichletPoly t M u‖) +\n            K * (M : ℝ) ^ 2 * H ^ (1 - (q : ℝ)) +\n            L * (1 + |t|) ^ (q + 2) /\n              ((N : ℝ) ^ (q + 2) * (M : ℝ) ^ q)"
+      },
+      {
+        "name": "gmReflectionEta",
+        "line": 756,
+        "signature": "noncomputable def gmReflectionEta (ε : ℝ) : ℝ"
+      },
+      {
+        "name": "gmReflectionHeight",
+        "line": 760,
+        "signature": "noncomputable def gmReflectionHeight (T ε : ℝ) : ℝ"
+      },
+      {
+        "name": "gmReflectionLength",
+        "line": 764,
+        "signature": "noncomputable def gmReflectionLength (T ε : ℝ) (N : ℕ) (t : ℝ) : ℕ"
+      },
+      {
+        "name": "gmReflectionEta_pos",
+        "line": 767,
+        "signature": "theorem gmReflectionEta_pos {ε : ℝ} (hε : 0 < ε) :\n    0 < gmReflectionEta ε"
+      },
+      {
+        "name": "gmReflectionEta_le_one",
+        "line": 772,
+        "signature": "theorem gmReflectionEta_le_one {ε : ℝ} :\n    gmReflectionEta ε ≤ 1"
+      },
+      {
+        "name": "gmReflectionEta_lt_eps",
+        "line": 777,
+        "signature": "theorem gmReflectionEta_lt_eps {ε : ℝ} (hε : 0 < ε) :\n    gmReflectionEta ε < ε"
+      },
+      {
+        "name": "gmReflectionLength_pos",
+        "line": 784,
+        "signature": "theorem gmReflectionLength_pos {T ε t : ℝ} {N : ℕ}\n    (hT : 0 < T) (hN : 0 < N) :\n    0 < gmReflectionLength T ε N t"
+      },
+      {
+        "name": "gmReflectionLength_lower",
+        "line": 791,
+        "signature": "theorem gmReflectionLength_lower {T ε t : ℝ} {N : ℕ}\n    (hN : 0 < N) :\n    (1 + |t|) * gmReflectionHeight T ε ≤\n      (N : ℝ) * gmReflectionLength T ε N t"
+      },
+      {
+        "name": "gmReflectionLength_upper",
+        "line": 802,
+        "signature": "theorem gmReflectionLength_upper {T ε t : ℝ} {N : ℕ}\n    (hT : 1 ≤ T) (hN : 0 < N) (ht : |t| ≤ T) :\n    (gmReflectionLength T ε N t : ℝ) ≤ 3 * T ^ 2"
+      },
+      {
+        "name": "gmReflectionDecayOrder",
+        "line": 829,
+        "signature": "noncomputable def gmReflectionDecayOrder (A ε : ℝ) : ℕ"
+      },
+      {
+        "name": "gmReflectionDecayOrder_two_le",
+        "line": 832,
+        "signature": "theorem gmReflectionDecayOrder_two_le (A ε : ℝ) :\n    2 ≤ gmReflectionDecayOrder A ε"
+      },
+      {
+        "name": "gmReflectionDecayOrder_budget",
+        "line": 837,
+        "signature": "theorem gmReflectionDecayOrder_budget {A ε : ℝ}\n    (hA : 0 < A) (hε : 0 < ε) :\n    A + 5 ≤ gmReflectionEta ε *\n      ((gmReflectionDecayOrder A ε : ℝ) - 1)"
+      },
+      {
+        "name": "exists_gmReflectionScaleThreshold",
+        "line": 855,
+        "signature": "theorem exists_gmReflectionScaleThreshold {ε : ℝ} (hε : 0 < ε) :\n    ∃ T_min : ℝ, 1 ≤ T_min ∧ ∀ {T T₀ : ℝ}, T_min ≤ T →\n      T ^ ε ≤ T₀ →\n      4 ≤ T₀ ∧ 1 ≤ gmReflectionHeight T ε ∧\n        gmReflectionHeight T ε ≤ T₀ / 2"
+      },
+      {
+        "name": "gmReflectionMellinError_le",
+        "line": 899,
+        "signature": "theorem gmReflectionMellinError_le\n    {A ε K T t : ℝ} {N : ℕ}\n    (hA : 0 < A) (hε : 0 < ε) (hK : 0 ≤ K)\n    (hT : 1 ≤ T) (hN : 0 < N) (ht : |t| ≤ T) :\n    K * (gmReflectionLength T ε N t : ℝ) ^ 2 *\n        gmReflectionHeight T ε ^\n          (1 - (gmReflectionDecayOrder A ε : ℝ)) ≤\n      9 * K / T ^ A"
+      },
+      {
+        "name": "gmReflectionFrequencyError_le",
+        "line": 951,
+        "signature": "theorem gmReflectionFrequencyError_le\n    {A ε L T t : ℝ} {N : ℕ}\n    (hA : 0 < A) (hε : 0 < ε) (hL : 0 ≤ L)\n    (hT : 1 ≤ T) (hN : 0 < N) (ht : |t| ≤ T) :\n    L * (1 + |t|) ^ (gmReflectionDecayOrder A ε + 2) /\n        ((N : ℝ) ^ (gmReflectionDecayOrder A ε + 2) *\n          (gmReflectionLength T ε N t : ℝ) ^\n            gmReflectionDecayOrder A ε) ≤\n      4 * L / T ^ A"
+      },
+      {
+        "name": "GMQuantitativeSmoothReflection",
+        "line": 1042,
+        "signature": "def GMQuantitativeSmoothReflection (cutoff : GMSmoothCutoff) : Prop"
+      },
+      {
+        "name": "gmQuantitativeSmoothReflection_native",
+        "line": 1055,
+        "signature": "theorem gmQuantitativeSmoothReflection_native\n    (cutoff : GMSmoothCutoff) :\n    GMQuantitativeSmoothReflection cutoff"
+      },
+      {
+        "name": "gmQuantitativeSmoothReflection_hundred",
+        "line": 1148,
+        "signature": "theorem gmQuantitativeSmoothReflection_hundred\n    (cutoff : GMSmoothCutoff) {ε : ℝ} (hε : 0 < ε) :\n    ∃ C T_min : ℝ, 0 < C ∧ 1 ≤ T_min ∧\n      ∀ {T T₀ t : ℝ} {N : ℕ},\n        T_min ≤ T → 0 < N → (N : ℝ) ≤ T →\n        T ^ ε ≤ T₀ → T₀ ≤ |t| → |t| ≤ 2 * T₀ → |t| ≤ T →\n        ‖gmTraceNonzeroFourierSum cutoff N t‖ ≤\n          C / Real.sqrt T₀ *\n            (∫ u in -(gmReflectionHeight T ε)..(gmReflectionHeight T ε),\n              ‖gmReflectionDirichletPoly t\n                (gmReflectionLength T ε N t) u‖) +\n          C / T ^ (100 : ℝ)"
+      },
+      {
+        "name": "gmTraceNonzeroTailAt_eq_scale_mul",
+        "line": 1164,
+        "signature": "theorem gmTraceNonzeroTailAt_eq_scale_mul\n    (cutoff : GMSmoothCutoff) (N : ℕ) (t : ℝ) :\n    gmTraceNonzeroTailAt cutoff N t =\n      (N : ℂ) * gmTraceNonzeroFourierSum cutoff N t"
+      },
+      {
+        "name": "norm_gmTraceNonzeroTailAt_eq",
+        "line": 1174,
+        "signature": "theorem norm_gmTraceNonzeroTailAt_eq\n    (cutoff : GMSmoothCutoff) (N : ℕ) (t : ℝ) :\n    ‖gmTraceNonzeroTailAt cutoff N t‖ =\n      (N : ℝ) * ‖gmTraceNonzeroFourierSum cutoff N t‖"
+      },
+      {
+        "name": "GMScaledQuantitativeSmoothReflection",
+        "line": 1183,
+        "signature": "def GMScaledQuantitativeSmoothReflection (cutoff : GMSmoothCutoff) : Prop"
+      },
+      {
+        "name": "gmScaledQuantitativeSmoothReflection_native",
+        "line": 1196,
+        "signature": "theorem gmScaledQuantitativeSmoothReflection_native\n    (cutoff : GMSmoothCutoff) :\n    GMScaledQuantitativeSmoothReflection cutoff"
+      },
+      {
+        "name": "gmCubicS2FirstSummand_reflection_native",
+        "line": 1248,
+        "signature": "theorem gmCubicS2FirstSummand_reflection_native\n    (cutoff : GMSmoothCutoff) :\n    ∀ A ε : ℝ, 0 < A → 0 < ε →\n      ∃ C T_min : ℝ, 0 < C ∧ 1 ≤ T_min ∧\n        ∀ {T T₀ : ℝ} {N : ℕ} {W : Finset ℝ}\n            (x y z : GMRow W),\n          T_min ≤ T → 0 < N → (N : ℝ) ≤ T →\n          T ^ ε ≤ T₀ →\n          T₀ ≤ |(x : ℝ) - (y : ℝ)| →\n          |(x : ℝ) - (y : ℝ)| ≤ 2 * T₀ →\n          |(x : ℝ) - (y : ℝ)| ≤ T →\n          ‖gmCubicS2FirstSummand cutoff N x y z‖ ≤\n            ((N : ℝ) * C / Real.sqrt T₀ *\n                (∫ u in -(gmReflectionHeight T ε)..(gmReflectionHeight T ε),\n                  ‖gmReflectionDirichletPoly\n                    ((x : ℝ) - (y : ℝ))\n                    (gmReflectionLength T ε N\n                      ((x : ℝ) - (y : ℝ))) u‖) +\n              C / T ^ A) *\n            ‖gmTraceNonzeroTailAt cutoff N ((y : ℝ) - (z : ℝ))‖ *\n            ‖gmTraceZeroMode cutoff N ((z : ℝ) - (x : ℝ))‖"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SecondDerivative.lean",
+    "sha256": "fd4d4273961c4cf69806a20ad2348f649b10881f4d334d08322f47cbb11609d0",
+    "imports": [
+      "GuthMaynard.VanDerCorput"
+    ],
+    "declarations": [
+      {
+        "name": "discrete_growth_lower",
+        "line": 16,
+        "signature": "theorem discrete_growth_lower (theta : Nat -> Real) (lambda : Real)\n    (i d N : Nat)\n    (hstep : forall n, n < N -> lambda <= theta (n + 1) - theta n)\n    (hid : i + d <= N) :\n    (d : Real) * lambda <= theta (i + d) - theta i"
+      },
+      {
+        "name": "monotone_of_step",
+        "line": 31,
+        "signature": "theorem monotone_of_step (theta : Nat -> Real) (N : Nat)\n    (hstep : forall n, n < N -> theta n <= theta (n + 1)) :\n    forall i j, i <= j -> j <= N -> theta i <= theta j"
+      },
+      {
+        "name": "filter_card_bound",
+        "line": 42,
+        "signature": "theorem filter_card_bound (theta : Nat -> Real) (N : Nat)\n    (lambda a b : Real) (hlambda : 0 < lambda) (hab : a <= b)\n    (hstep : forall n, n < N -> lambda <= theta (n + 1) - theta n) :\n    (((Finset.range (N + 1)).filter fun n => a <= theta n ∧ theta n <= b).card : Real)\n      <= (b - a) / lambda + 1"
+      },
+      {
+        "name": "sum_Icc_eq_shifted_range",
+        "line": 86,
+        "signature": "theorem sum_Icc_eq_shifted_range (z : Nat -> Complex) (i j : Nat) (hij : i <= j) :\n    (∑ n ∈ Finset.Icc i j, z n) = ∑ d ∈ Finset.range (j - i + 1), z (i + d)"
+      },
+      {
+        "name": "kusminLandau_good_fiber",
+        "line": 107,
+        "signature": "theorem kusminLandau_good_fiber (f : Nat -> Real) (N : Nat) (k : Int)\n    (delta : Real) (hdelta : 0 < delta)\n    (hmono : forall n, n < N ->\n      f (n + 1) - f n <= f (n + 2) - f (n + 1)) :\n    ‖∑ n ∈ (Finset.range (N + 1)).filter (fun n =>\n        delta <= f (n + 1) - f n - (k : Real) * (2 * Real.pi) ∧\n        f (n + 1) - f n - (k : Real) * (2 * Real.pi) <= 2 * Real.pi - delta),\n      unitaryPhase (f n)‖ <= 2 * Real.pi / delta"
+      },
+      {
+        "name": "periodIndex",
+        "line": 165,
+        "signature": "noncomputable def periodIndex (theta : Real) : Int"
+      },
+      {
+        "name": "periodIndex_bounds",
+        "line": 168,
+        "signature": "theorem periodIndex_bounds (theta : Real) :\n    (periodIndex theta : Real) * (2 * Real.pi) <= theta ∧\n      theta < ((periodIndex theta : Real) + 1) * (2 * Real.pi)"
+      },
+      {
+        "name": "periodIndex_mono",
+        "line": 180,
+        "signature": "theorem periodIndex_mono {x y : Real} (hxy : x <= y) :\n    periodIndex x <= periodIndex y"
+      },
+      {
+        "name": "period_count_bound",
+        "line": 185,
+        "signature": "theorem period_count_bound {x y : Real} (hxy : x <= y) :\n    (((Finset.Icc (periodIndex x) (periodIndex y)).card : Nat) : Real)\n      <= (y - x) / (2 * Real.pi) + 2"
+      },
+      {
+        "name": "discrete_growth_upper",
+        "line": 209,
+        "signature": "theorem discrete_growth_upper (theta : Nat -> Real) (Lambda : Real)\n    (i d N : Nat)\n    (hstep : forall n, n < N -> theta (n + 1) - theta n <= Lambda)\n    (hid : i + d <= N) :\n    theta (i + d) - theta i <= (d : Real) * Lambda"
+      },
+      {
+        "name": "norm_phase_sum_finset_le_card",
+        "line": 224,
+        "signature": "theorem norm_phase_sum_finset_le_card (s : Finset Nat) (f : Nat -> Real) :\n    ‖∑ n ∈ s, unitaryPhase (f n)‖ <= (s.card : Real)"
+      },
+      {
+        "name": "vanDerCorput_second_derivative",
+        "line": 231,
+        "signature": "theorem vanDerCorput_second_derivative\n    (f : Nat -> Real) (N : Nat) (lambda Lambda delta : Real)\n    (hlambda : 0 < lambda) (hdelta : 0 < delta)\n    (hlower : forall n, n < N ->\n      lambda <= (f (n + 2) - f (n + 1)) - (f (n + 1) - f n))\n    (hupper : forall n, n < N ->\n      (f (n + 2) - f (n + 1)) - (f (n + 1) - f n) <= Lambda) :\n    ‖∑ n ∈ Finset.range (N + 1), unitaryPhase (f n)‖ <=\n      ((N : Real) * Lambda / (2 * Real.pi) + 2) *\n        (2 * Real.pi / delta + 2 * (delta / lambda + 1))"
+      },
+      {
+        "name": "vanDerCorput_B_process",
+        "line": 398,
+        "signature": "theorem vanDerCorput_B_process\n    (f : Nat -> Real) (N : Nat) (lambda Lambda : Real)\n    (hlambda : 0 < lambda)\n    (hlower : forall n, n < N ->\n      lambda <= (f (n + 2) - f (n + 1)) - (f (n + 1) - f n))\n    (hupper : forall n, n < N ->\n      (f (n + 2) - f (n + 1)) - (f (n + 1) - f n) <= Lambda) :\n    ‖∑ n ∈ Finset.range (N + 1), unitaryPhase (f n)‖ <=\n      ((N : Real) * Lambda / (2 * Real.pi) + 2) *\n        (2 * Real.pi / Real.sqrt lambda +\n          2 * (Real.sqrt lambda / lambda + 1))"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/TypeIReflection.lean",
+    "sha256": "92705d8127027d9c9c7230dd362e48b4db33ccec302f54834287dd6690073bcc",
+    "imports": [
+      "Mathlib.Analysis.Distribution.SchwartzSpace.Fourier",
+      "Mathlib.Analysis.Fourier.PoissonSummation",
+      "Mathlib.Analysis.MellinInversion",
+      "GuthMaynard.LargeValuesReflection",
+      "GuthMaynard.MediumReflection",
+      "GuthMaynard.TypeISmoothing"
+    ],
+    "declarations": [
+      {
+        "name": "mellinConvergent_typeIDyadicCutoff_one",
+        "line": 52,
+        "signature": "theorem mellinConvergent_typeIDyadicCutoff_one :\n    MellinConvergent typeIDyadicCutoffComplex (1 : ℂ)"
+      },
+      {
+        "name": "typeIDyadicMellinKernel",
+        "line": 62,
+        "signature": "noncomputable def typeIDyadicMellinKernel (u : ℝ) : ℂ"
+      },
+      {
+        "name": "contDiff_typeIDyadicMellinKernel",
+        "line": 65,
+        "signature": "theorem contDiff_typeIDyadicMellinKernel :\n    ContDiff ℝ ∞ typeIDyadicMellinKernel"
+      },
+      {
+        "name": "hasCompactSupport_typeIDyadicMellinKernel",
+        "line": 72,
+        "signature": "theorem hasCompactSupport_typeIDyadicMellinKernel :\n    HasCompactSupport typeIDyadicMellinKernel"
+      },
+      {
+        "name": "typeIDyadicMellinSchwartz",
+        "line": 98,
+        "signature": "noncomputable def typeIDyadicMellinSchwartz : 𝓢(ℝ, ℂ)"
+      },
+      {
+        "name": "typeIDyadicMellinSchwartz_apply",
+        "line": 103,
+        "signature": "theorem typeIDyadicMellinSchwartz_apply (u : ℝ) :\n    typeIDyadicMellinSchwartz u = typeIDyadicMellinKernel u"
+      },
+      {
+        "name": "typeIDyadicCutoffMellin",
+        "line": 107,
+        "signature": "noncomputable def typeIDyadicCutoffMellin (r : ℝ) : ℂ"
+      },
+      {
+        "name": "typeIDyadicCutoffMellin_eq_fourier",
+        "line": 110,
+        "signature": "theorem typeIDyadicCutoffMellin_eq_fourier (r : ℝ) :\n    typeIDyadicCutoffMellin r =\n      𝓕 typeIDyadicMellinSchwartz (r / (2 * Real.pi))"
+      },
+      {
+        "name": "continuous_typeIDyadicCutoffMellin",
+        "line": 122,
+        "signature": "theorem continuous_typeIDyadicCutoffMellin :\n    Continuous typeIDyadicCutoffMellin"
+      },
+      {
+        "name": "typeIDyadicCutoffMellin_polynomial_decay",
+        "line": 134,
+        "signature": "theorem typeIDyadicCutoffMellin_polynomial_decay (n : ℕ) :\n    ∃ C : ℝ, 0 ≤ C ∧ ∀ r : ℝ,\n      |r| ^ n * ‖typeIDyadicCutoffMellin r‖ ≤ C"
+      },
+      {
+        "name": "verticalIntegrable_typeIDyadicCutoffMellin",
+        "line": 165,
+        "signature": "theorem verticalIntegrable_typeIDyadicCutoffMellin :\n    VerticalIntegrable (mellin typeIDyadicCutoffComplex) 1"
+      },
+      {
+        "name": "typeIDyadicCutoff_mellinInversion",
+        "line": 181,
+        "signature": "theorem typeIDyadicCutoff_mellinInversion {x : ℝ} (hx : 0 < x) :\n    mellinInv 1 (mellin typeIDyadicCutoffComplex) x =\n      (typeIDyadicCutoff x : ℂ)"
+      },
+      {
+        "name": "typeIDyadicCutoff_eq_verticalMellinIntegral",
+        "line": 190,
+        "signature": "theorem typeIDyadicCutoff_eq_verticalMellinIntegral\n    {x : ℝ} (hx : 0 < x) :\n    (typeIDyadicCutoff x : ℂ) =\n      (1 / (2 * Real.pi) : ℝ) •\n        ∫ r : ℝ,\n          (x : ℂ) ^ (-((1 : ℂ) + (r : ℂ) * I)) *\n            typeIDyadicCutoffMellin r"
+      },
+      {
+        "name": "typeIMellinReflectionIntegrand",
+        "line": 204,
+        "signature": "noncomputable def typeIMellinReflectionIntegrand\n    (sigma t q v r : ℝ) : ℂ"
+      },
+      {
+        "name": "typeIDyadicCutoffPhase_eq_mellinIntegral",
+        "line": 214,
+        "signature": "theorem typeIDyadicCutoffPhase_eq_mellinIntegral\n    (sigma t q : ℝ) {v : ℝ} (hv : 0 < v) (hq : 0 < q) :\n    (typeIDyadicCutoff (v / q) : ℂ) *\n        (gmReflectionPowerWeight sigma v *\n          Complex.exp (-((((t * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)))) =\n      (1 / (2 * Real.pi) : ℝ) •\n        ∫ r : ℝ, typeIMellinReflectionIntegrand sigma t q v r"
+      },
+      {
+        "name": "typeIMellinReflectionIntegrand_eq_factored",
+        "line": 256,
+        "signature": "theorem typeIMellinReflectionIntegrand_eq_factored\n    (sigma t : ℝ) {q v : ℝ} (r : ℝ) (hq : 0 < q) (hv : 0 < v) :\n    typeIMellinReflectionIntegrand sigma t q v r =\n      (q : ℂ) * (q : ℂ) ^ ((r : ℂ) * I) *\n        typeIDyadicCutoffMellin r *\n          (gmReflectionPowerWeight sigma v *\n            star ((v : ℂ)⁻¹ * Complex.exp\n              (((((t + r) * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))))"
+      },
+      {
+        "name": "integrable_typeIMellinReflectionIntegrand",
+        "line": 324,
+        "signature": "theorem integrable_typeIMellinReflectionIntegrand\n    {sigma t q A B : ℝ} (hsigma : 0 ≤ sigma) (hq : 0 < q)\n    (hA : 0 < A) (hAB : A ≤ B) :\n    Integrable (Function.uncurry\n      (typeIMellinReflectionIntegrand sigma t q))\n      ((volume.restrict (Set.uIoc A B)).prod volume)"
+      },
+      {
+        "name": "typeIPowerReflectionIntegral",
+        "line": 411,
+        "signature": "noncomputable def typeIPowerReflectionIntegral\n    (sigma tau A B : ℝ) : ℂ"
+      },
+      {
+        "name": "norm_typeIPowerReflectionIntegral_le",
+        "line": 420,
+        "signature": "theorem norm_typeIPowerReflectionIntegral_le\n    {sigma tau A B : ℝ} (htau : 1 ≤ tau)\n    (hA : 0 < A) (hAB : A ≤ B) :\n    ‖typeIPowerReflectionIntegral sigma tau A B‖ ≤\n      (10 / Real.sqrt tau) *\n        (B ^ (-sigma) +\n          ∫ v in A..B,\n            ‖(((-sigma / v : ℝ) : ℂ) *\n              gmReflectionPowerWeight sigma v)‖)"
+      },
+      {
+        "name": "typeIDyadicRescaledIntegral_eq_mellinReflection",
+        "line": 435,
+        "signature": "theorem typeIDyadicRescaledIntegral_eq_mellinReflection\n    {sigma t q A B : ℝ} (hsigma : 0 ≤ sigma) (hq : 0 < q)\n    (hA : 0 < A) (hAB : A ≤ B) :\n    (∫ v in A..B,\n        (typeIDyadicCutoff (v / q) : ℂ) *\n          (gmReflectionPowerWeight sigma v *\n            Complex.exp\n              (-((((t * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))))) =\n      (1 / (2 * Real.pi) : ℝ) •\n        ∫ r : ℝ,\n          (q : ℂ) * (q : ℂ) ^ ((r : ℂ) * I) *\n            typeIDyadicCutoffMellin r *\n              typeIPowerReflectionIntegral sigma (t + r) A B"
+      },
+      {
+        "name": "typeIReflectionScaleFactor",
+        "line": 490,
+        "signature": "noncomputable def typeIReflectionScaleFactor\n    (sigma t m : ℝ) : ℂ"
+      },
+      {
+        "name": "typeIDyadicPhysicalIntegrand",
+        "line": 497,
+        "signature": "noncomputable def typeIDyadicPhysicalIntegrand\n    (sigma t m Q x : ℝ) : ℂ"
+      },
+      {
+        "name": "typeIDyadicPhysicalIntegral_rescale",
+        "line": 505,
+        "signature": "theorem typeIDyadicPhysicalIntegral_rescale\n    {sigma t m Q A B : ℝ} (hm : 0 < m) (hQ : 0 < Q)\n    (hA : 0 < A) (hAB : A ≤ B) :\n    (∫ x in A..B, typeIDyadicPhysicalIntegrand sigma t m Q x) =\n      typeIReflectionScaleFactor sigma t m *\n        ∫ v in m * A..m * B,\n          typeIDyadicPhysicalIntegrand sigma t 1 (m * Q) v"
+      },
+      {
+        "name": "typeIDyadicPhysicalIntegral_eq_mellinReflection",
+        "line": 577,
+        "signature": "theorem typeIDyadicPhysicalIntegral_eq_mellinReflection\n    {sigma t m Q A B : ℝ} (hsigma : 0 ≤ sigma)\n    (hm : 0 < m) (hQ : 0 < Q) (hA : 0 < A) (hAB : A ≤ B) :\n    (∫ x in A..B, typeIDyadicPhysicalIntegrand sigma t m Q x) =\n      typeIReflectionScaleFactor sigma t m *\n        ((1 / (2 * Real.pi) : ℝ) •\n          ∫ r : ℝ,\n            ((m * Q : ℝ) : ℂ) *\n              ((m * Q : ℝ) : ℂ) ^ ((r : ℂ) * I) *\n                typeIDyadicCutoffMellin r *\n                  typeIPowerReflectionIntegral sigma (t + r)\n                    (m * A) (m * B))"
+      },
+      {
+        "name": "integral_typeIDyadicPhysicalIntegrand_eq_interval",
+        "line": 610,
+        "signature": "theorem integral_typeIDyadicPhysicalIntegrand_eq_interval\n    {sigma t q L U : ℝ} (hq : 0 < q)\n    (hL : L ≤ q / 2) (hU : 2 * q ≤ U) :\n    (∫ v : ℝ, typeIDyadicPhysicalIntegrand sigma t 1 q v) =\n      ∫ v in L..U, typeIDyadicPhysicalIntegrand sigma t 1 q v"
+      },
+      {
+        "name": "typeIDyadicPhysicalIntegral_eq_common_mellinReflection",
+        "line": 640,
+        "signature": "theorem typeIDyadicPhysicalIntegral_eq_common_mellinReflection\n    {sigma t Q : ℝ} {m M : ℕ} (hsigma : 0 ≤ sigma)\n    (hQ : 0 < Q) (hm : 1 ≤ m) (hmM : m ≤ M) :\n    (∫ x in Q / 2..2 * Q,\n        typeIDyadicPhysicalIntegrand sigma t m Q x) =\n      typeIReflectionScaleFactor sigma t m *\n        ((1 / (2 * Real.pi) : ℝ) •\n          ∫ r : ℝ,\n            (((m : ℝ) * Q : ℝ) : ℂ) *\n              (((m : ℝ) * Q : ℝ) : ℂ) ^ ((r : ℂ) * I) *\n                typeIDyadicCutoffMellin r *\n                  typeIPowerReflectionIntegral sigma (t + r)\n                    (Q / 2) (2 * M * Q))"
+      },
+      {
+        "name": "typeICommonMellinMode",
+        "line": 697,
+        "signature": "noncomputable def typeICommonMellinMode\n    (sigma t q A B r : ℝ) : ℂ"
+      },
+      {
+        "name": "intervalIntegral_typeIMellinReflectionIntegrand_eq_commonMode",
+        "line": 703,
+        "signature": "theorem intervalIntegral_typeIMellinReflectionIntegrand_eq_commonMode\n    {sigma t q A B : ℝ} (r : ℝ) (hq : 0 < q)\n    (hA : 0 < A) (hAB : A ≤ B) :\n    (∫ v in A..B, typeIMellinReflectionIntegrand sigma t q v r) =\n      typeICommonMellinMode sigma t q A B r"
+      },
+      {
+        "name": "integrable_typeICommonMellinMode",
+        "line": 717,
+        "signature": "theorem integrable_typeICommonMellinMode\n    {sigma t q A B : ℝ} (hsigma : 0 ≤ sigma) (hq : 0 < q)\n    (hA : 0 < A) (hAB : A ≤ B) :\n    Integrable (typeICommonMellinMode sigma t q A B)"
+      },
+      {
+        "name": "typeIReflectedMellinPolynomial",
+        "line": 737,
+        "signature": "noncomputable def typeIReflectedMellinPolynomial\n    (sigma t Q : ℝ) (M : ℕ) (r : ℝ) : ℂ"
+      },
+      {
+        "name": "sum_typeIDyadicPhysicalIntegral_eq_reflectedMellinPolynomial",
+        "line": 748,
+        "signature": "theorem sum_typeIDyadicPhysicalIntegral_eq_reflectedMellinPolynomial\n    {sigma t Q : ℝ} {M : ℕ} (hsigma : 0 ≤ sigma)\n    (hQ : 0 < Q) (hM : 1 ≤ M) :\n    (∑ m ∈ Finset.Icc 1 M,\n        ∫ x in Q / 2..2 * Q,\n          typeIDyadicPhysicalIntegrand sigma t m Q x) =\n      (1 / (2 * Real.pi) : ℝ) •\n        ∫ r : ℝ,\n          typeIReflectedMellinPolynomial sigma t Q M r *\n            typeIDyadicCutoffMellin r *\n              typeIPowerReflectionIntegral sigma (t + r)\n                (Q / 2) (2 * M * Q)"
+      },
+      {
+        "name": "typeIReflectionKernel",
+        "line": 827,
+        "signature": "noncomputable def typeIReflectionKernel\n    (Y A r : ℕ) (σ t x : ℝ) : ℂ"
+      },
+      {
+        "name": "contDiff_typeIReflectionKernel",
+        "line": 833,
+        "signature": "theorem contDiff_typeIReflectionKernel\n    (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) :\n    ContDiff ℝ ∞ (typeIReflectionKernel Y A r σ t)"
+      },
+      {
+        "name": "hasCompactSupport_typeIReflectionKernel",
+        "line": 864,
+        "signature": "theorem hasCompactSupport_typeIReflectionKernel\n    (Y A r : ℕ) (σ t : ℝ) :\n    HasCompactSupport (typeIReflectionKernel Y A r σ t)"
+      },
+      {
+        "name": "typeIReflectionSchwartz",
+        "line": 888,
+        "signature": "noncomputable def typeIReflectionSchwartz\n    (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) : 𝓢(ℝ, ℂ)"
+      },
+      {
+        "name": "typeIReflectionSchwartz_apply",
+        "line": 894,
+        "signature": "theorem typeIReflectionSchwartz_apply\n    (Y A r : ℕ) (σ t x : ℝ) (hY : 0 < Y) :\n    typeIReflectionSchwartz Y A r σ t hY x =\n      typeIReflectionKernel Y A r σ t x"
+      },
+      {
+        "name": "typeIReflectionFourier",
+        "line": 900,
+        "signature": "noncomputable def typeIReflectionFourier\n    (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) (ξ : ℝ) : ℂ"
+      },
+      {
+        "name": "typeIReflection_poisson",
+        "line": 905,
+        "signature": "theorem typeIReflection_poisson\n    (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) :\n    ∑' n : ℤ, typeIReflectionKernel Y A r σ t n =\n      ∑' m : ℤ, typeIReflectionFourier Y A r σ t hY m"
+      },
+      {
+        "name": "typeIReflectionFourier_fixed_decay",
+        "line": 917,
+        "signature": "theorem typeIReflectionFourier_fixed_decay\n    (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) (j : ℕ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ ξ : ℝ,\n      |ξ| ^ j * ‖typeIReflectionFourier Y A r σ t hY ξ‖ ≤ C"
+      },
+      {
+        "name": "typeIReflectionFourier_summable",
+        "line": 930,
+        "signature": "theorem typeIReflectionFourier_summable\n    (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) :\n    Summable (fun m : ℤ =>\n      typeIReflectionFourier Y A r σ t hY m)"
+      },
+      {
+        "name": "typeIReflectionKernel_natCast",
+        "line": 944,
+        "signature": "theorem typeIReflectionKernel_natCast\n    (Y A r n : ℕ) (σ t : ℝ) (hn : 0 < n) :\n    typeIReflectionKernel Y A r σ t n =\n      typeISourceSmoothWeight Y A r n *\n        (n : ℂ) ^ (-(σ : ℂ)) * (n : ℂ) ^ (-(t : ℂ) * I)"
+      },
+      {
+        "name": "typeIReflectionFourier_neg_eq_stationaryIntegral",
+        "line": 962,
+        "signature": "theorem typeIReflectionFourier_neg_eq_stationaryIntegral\n    (Y A r : ℕ) (σ t m : ℝ) (hY : 0 < Y) :\n    typeIReflectionFourier Y A r σ t hY (-m) =\n      ∫ x : ℝ,\n        (typeISourceSmoothWeight Y A r x : ℂ) *\n          Complex.exp ((((-σ * Real.log x : ℝ) : ℂ))) *\n          Complex.exp (2 * Real.pi * I *\n            ((reflectionPhase t m x : ℝ) : ℂ))"
+      },
+      {
+        "name": "typeIReflection_stationary_window",
+        "line": 1013,
+        "signature": "theorem typeIReflection_stationary_window\n    {Y r : ℕ} {t m : ℝ} (hY : 0 < Y) (hm : 0 < m) :\n    reflectionStationaryPoint t m ∈\n        Set.Icc (((2 ^ r * Y : ℕ) : ℝ) / 2)\n          (2 * ((2 ^ r * Y : ℕ) : ℝ)) ↔\n      t / (4 * Real.pi * ((2 ^ r * Y : ℕ) : ℝ)) ≤ m ∧\n        m ≤ t / (Real.pi * ((2 ^ r * Y : ℕ) : ℝ))"
+      },
+      {
+        "name": "typeISourceSmoothWeight_eq_dyadic_of_interior",
+        "line": 1036,
+        "signature": "theorem typeISourceSmoothWeight_eq_dyadic_of_interior\n    {Y A r : ℕ}\n    (hLower : ((Y + 1 : ℕ) : ℝ) ≤\n      (((2 ^ r * Y : ℕ) : ℝ) / 2))\n    (hUpper : (2 * (2 ^ r * Y : ℕ) : ℕ) ≤ A)\n    (x : ℝ) :\n    typeISourceSmoothWeight Y A r x =\n      typeIDyadicCutoff (x / (2 ^ r * Y : ℕ))"
+      },
+      {
+        "name": "typeIReflectionKernel_eq_dyadicPhysical_of_interior",
+        "line": 1077,
+        "signature": "theorem typeIReflectionKernel_eq_dyadicPhysical_of_interior\n    {Y A r : ℕ} {σ t : ℝ}\n    (hLower : ((Y + 1 : ℕ) : ℝ) ≤\n      (((2 ^ r * Y : ℕ) : ℝ) / 2))\n    (hUpper : (2 * (2 ^ r * Y : ℕ) : ℕ) ≤ A) :\n    typeIReflectionKernel Y A r σ t =\n      typeIDyadicPhysicalIntegrand σ t 0 (2 ^ r * Y : ℕ)"
+      },
+      {
+        "name": "typeINormalizedAmplitude",
+        "line": 1104,
+        "signature": "noncomputable def typeINormalizedAmplitude (σ x : ℝ) : ℂ"
+      },
+      {
+        "name": "contDiff_typeINormalizedAmplitude",
+        "line": 1109,
+        "signature": "theorem contDiff_typeINormalizedAmplitude (σ : ℝ) :\n    ContDiff ℝ ∞ (typeINormalizedAmplitude σ)"
+      },
+      {
+        "name": "typeINormalizedKernel",
+        "line": 1154,
+        "signature": "noncomputable def typeINormalizedKernel (σ t x : ℝ) : ℂ"
+      },
+      {
+        "name": "typeINormalizedKernelSchwartz",
+        "line": 1192,
+        "signature": "noncomputable def typeINormalizedKernelSchwartz (σ t : ℝ) : 𝓢(ℝ, ℂ)"
+      },
+      {
+        "name": "typeINormalizedKernelSchwartz_apply",
+        "line": 1197,
+        "signature": "theorem typeINormalizedKernelSchwartz_apply (σ t x : ℝ) :\n    typeINormalizedKernelSchwartz σ t x = typeINormalizedKernel σ t x"
+      },
+      {
+        "name": "typeINormalizedFourier",
+        "line": 1201,
+        "signature": "noncomputable def typeINormalizedFourier (σ t ξ : ℝ) : ℂ"
+      },
+      {
+        "name": "typeINormalizedKernel_uniform_iteratedFDeriv",
+        "line": 1289,
+        "signature": "theorem typeINormalizedKernel_uniform_iteratedFDeriv (σ : ℝ) (n : ℕ) :\n    ∃ C : ℝ, 0 ≤ C ∧ ∀ t x : ℝ,\n      ‖iteratedFDeriv ℝ n (typeINormalizedKernel σ t) x‖ ≤\n        C * (1 + |t|) ^ n"
+      },
+      {
+        "name": "typeINormalizedFourier_uniform_decay",
+        "line": 1465,
+        "signature": "theorem typeINormalizedFourier_uniform_decay (σ : ℝ) (n : ℕ) :\n    ∃ C : ℝ, 0 ≤ C ∧ ∀ t ξ : ℝ,\n      |ξ| ^ n * ‖typeINormalizedFourier σ t ξ‖ ≤\n        C * (1 + |t|) ^ n"
+      },
+      {
+        "name": "typeINormalizedFourier_far_frequency_decay",
+        "line": 1524,
+        "signature": "theorem typeINormalizedFourier_far_frequency_decay (σ : ℝ) :\n    ∃ C : ℝ, 0 ≤ C ∧ ∀ {T t ξ : ℝ}, 1 ≤ T →\n      (1 + |t|) * T ≤ |ξ| →\n        ‖typeINormalizedFourier σ t ξ‖ ≤ C / T ^ 100"
+      },
+      {
+        "name": "typeINormalizedFarTail",
+        "line": 1555,
+        "signature": "noncomputable def typeINormalizedFarTail\n    (σ t : ℝ) (Q M : ℕ) : ℂ"
+      },
+      {
+        "name": "typeINormalizedFarTail_bound",
+        "line": 1656,
+        "signature": "theorem typeINormalizedFarTail_bound (σ : ℝ) :\n    ∃ K : ℝ, 0 < K ∧ ∀ (t : ℝ) (Q M : ℕ),\n      0 < Q → 0 < M →\n      ‖typeINormalizedFarTail σ t Q M‖ ≤\n        K * (1 + |t|) ^ 102 /\n          ((Q : ℝ) ^ 101 * (M : ℝ) ^ 100)"
+      },
+      {
+        "name": "typeINormalizedFarTail_bound_order",
+        "line": 1712,
+        "signature": "theorem typeINormalizedFarTail_bound_order (σ : ℝ) (n : ℕ) :\n    ∃ K : ℝ, 0 < K ∧ ∀ (t : ℝ) (Q M : ℕ),\n      0 < Q → 0 < M →\n      ‖typeINormalizedFarTail σ t Q M‖ ≤\n        K * (1 + |t|) ^ (n + 2) /\n          ((Q : ℝ) ^ (n + 1) * (M : ℝ) ^ n)"
+      },
+      {
+        "name": "typeINormalizedScaledKernel",
+        "line": 1830,
+        "signature": "noncomputable def typeINormalizedScaledKernel\n    (σ t Q x : ℝ) : ℂ"
+      },
+      {
+        "name": "typeINormalizedScaledKernelSchwartz",
+        "line": 1864,
+        "signature": "noncomputable def typeINormalizedScaledKernelSchwartz\n    (σ t Q : ℝ) (hQ : 0 < Q) : 𝓢(ℝ, ℂ)"
+      },
+      {
+        "name": "typeINormalizedScaledKernelSchwartz_apply",
+        "line": 1870,
+        "signature": "theorem typeINormalizedScaledKernelSchwartz_apply\n    (σ t Q x : ℝ) (hQ : 0 < Q) :\n    typeINormalizedScaledKernelSchwartz σ t Q hQ x =\n      typeINormalizedKernel σ t (x / Q)"
+      },
+      {
+        "name": "typeINormalizedScaledKernel_fourier",
+        "line": 1875,
+        "signature": "theorem typeINormalizedScaledKernel_fourier\n    (σ t Q ξ : ℝ) (hQ : 0 < Q) :\n    𝓕 (typeINormalizedScaledKernelSchwartz σ t Q hQ) ξ =\n      (Q : ℂ) * typeINormalizedFourier σ t (Q * ξ)"
+      },
+      {
+        "name": "typeINormalizedKernel_poisson",
+        "line": 1915,
+        "signature": "theorem typeINormalizedKernel_poisson\n    (σ t Q : ℝ) (hQ : 0 < Q) :\n    ∑' n : ℤ, typeINormalizedKernel σ t ((n : ℝ) / Q) =\n      ∑' m : ℤ,\n        (Q : ℂ) * typeINormalizedFourier σ t (Q * (m : ℝ))"
+      },
+      {
+        "name": "typeINormalizedCentralModes",
+        "line": 1926,
+        "signature": "noncomputable def typeINormalizedCentralModes\n    (σ t : ℝ) (Q M : ℕ) : ℂ"
+      },
+      {
+        "name": "typeINormalizedPoisson_split",
+        "line": 1944,
+        "signature": "theorem typeINormalizedPoisson_split\n    (σ t : ℝ) (Q M : ℕ) (hQ : 0 < Q) :\n    (∑' n : ℤ,\n        typeINormalizedKernel σ t ((n : ℝ) / (Q : ℝ))) =\n      typeINormalizedCentralModes σ t Q M +\n        typeINormalizedFarTail σ t Q M"
+      },
+      {
+        "name": "mediumTypeIExactBProcess_native",
+        "line": 1988,
+        "signature": "theorem mediumTypeIExactBProcess_native (σ : ℝ) :\n    ∃ K : ℝ, 0 < K ∧ ∀ (t : ℝ) (Q M : ℕ),\n      0 < Q → 0 < M →\n      (∑' n : ℤ,\n          typeINormalizedKernel σ t ((n : ℝ) / (Q : ℝ))) =\n        typeINormalizedCentralModes σ t Q M +\n          typeINormalizedFarTail σ t Q M ∧\n      ‖typeINormalizedFarTail σ t Q M‖ ≤\n        K * (1 + |t|) ^ 102 /\n          ((Q : ℝ) ^ 101 * (M : ℝ) ^ 100)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/VanDerCorput.lean",
+    "sha256": "2e4b891fe01180ce5eb71c4f1f7be1de1e319470c2ed803b7f92b967b419046b",
+    "imports": [
+      "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+      "Mathlib.Analysis.SpecialFunctions.Complex.Log",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Cotangent",
+      "Mathlib.Algebra.Order.Chebyshev",
+      "Mathlib.Analysis.InnerProductSpace.Basic"
+    ],
+    "declarations": [
+      {
+        "name": "unitaryPhase",
+        "line": 23,
+        "signature": "noncomputable def unitaryPhase (x : ℝ) : ℂ"
+      },
+      {
+        "name": "phaseResolvent",
+        "line": 26,
+        "signature": "noncomputable def phaseResolvent (x : ℝ) : ℂ"
+      },
+      {
+        "name": "unitaryPhase_add",
+        "line": 31,
+        "signature": "theorem unitaryPhase_add (x y : ℝ) :\n    unitaryPhase (x + y) = unitaryPhase x * unitaryPhase y"
+      },
+      {
+        "name": "unitaryPhase_sub",
+        "line": 35,
+        "signature": "theorem unitaryPhase_sub (x y : ℝ) :\n    unitaryPhase (x - y) = unitaryPhase x * starRingEnd ℂ (unitaryPhase y)"
+      },
+      {
+        "name": "phaseSum",
+        "line": 44,
+        "signature": "noncomputable def phaseSum (f : ℝ → ℝ) (A B : ℕ) : ℂ"
+      },
+      {
+        "name": "logarithmicPhase",
+        "line": 48,
+        "signature": "noncomputable def logarithmicPhase (t x : ℝ) : ℝ"
+      },
+      {
+        "name": "logarithmicSum",
+        "line": 51,
+        "signature": "noncomputable def logarithmicSum (t : ℝ) (A B : ℕ) : ℂ"
+      },
+      {
+        "name": "unitaryPhase_logarithmicPhase_eq_cpow",
+        "line": 54,
+        "signature": "theorem unitaryPhase_logarithmicPhase_eq_cpow (t : ℝ) (n : ℕ) (hn : 0 < n) :\n    unitaryPhase (logarithmicPhase t n) = (n : ℂ) ^ (-(t : ℂ) * I)"
+      },
+      {
+        "name": "logarithmicSum_eq_cpow",
+        "line": 62,
+        "signature": "theorem logarithmicSum_eq_cpow (t : ℝ) (A B : ℕ) (hA : 0 < A) :\n    logarithmicSum t A B = ∑ n ∈ Ico A B, (n : ℂ) ^ (-(t : ℂ) * I)"
+      },
+      {
+        "name": "norm_phaseSum_le_card",
+        "line": 69,
+        "signature": "theorem norm_phaseSum_le_card (f : ℝ → ℝ) (A B : ℕ) :\n    ‖phaseSum f A B‖ ≤ (Finset.Ico A B).card"
+      },
+      {
+        "name": "norm_logarithmicSum_le_length",
+        "line": 75,
+        "signature": "theorem norm_logarithmicSum_le_length (t : ℝ) (A B : ℕ) :\n    ‖logarithmicSum t A B‖ ≤ ((B - A : ℕ) : ℝ)"
+      },
+      {
+        "name": "hasDerivAt_logarithmicPhase",
+        "line": 80,
+        "signature": "theorem hasDerivAt_logarithmicPhase (t : ℝ) {x : ℝ} (hx : x ≠ 0) :\n    HasDerivAt (logarithmicPhase t) (-t / x) x"
+      },
+      {
+        "name": "hasDerivAt_logarithmicPhase_deriv",
+        "line": 86,
+        "signature": "theorem hasDerivAt_logarithmicPhase_deriv (t : ℝ) {x : ℝ} (hx : x ≠ 0) :\n    HasDerivAt (fun y => deriv (logarithmicPhase t) y) (t / x ^ 2) x"
+      },
+      {
+        "name": "hasDerivAt_logarithmicPhase_secondDeriv",
+        "line": 99,
+        "signature": "theorem hasDerivAt_logarithmicPhase_secondDeriv (t : ℝ) {x : ℝ} (hx : x ≠ 0) :\n    HasDerivAt (fun y => deriv (fun z => deriv (logarithmicPhase t) z) y)\n      (-2 * t / x ^ 3) x"
+      },
+      {
+        "name": "phaseResolvent_eq",
+        "line": 120,
+        "signature": "theorem phaseResolvent_eq (x : ℝ) (hs : Real.sin (x / 2) ≠ 0) :\n    phaseResolvent x = (1 : ℂ) / 2 + Complex.I * (Real.cot (x / 2) / 2 : ℝ)"
+      },
+      {
+        "name": "hasDerivAt_real_cot",
+        "line": 145,
+        "signature": "theorem hasDerivAt_real_cot {x : ℝ} (hx : x ∈ Set.Ioo 0 Real.pi) :\n    HasDerivAt Real.cot (-(1 / Real.sin x ^ 2)) x"
+      },
+      {
+        "name": "strictAntiOn_real_cot",
+        "line": 156,
+        "signature": "theorem strictAntiOn_real_cot : StrictAntiOn Real.cot (Set.Ioo 0 Real.pi)"
+      },
+      {
+        "name": "sin_half_lower",
+        "line": 169,
+        "signature": "theorem sin_half_lower {δ θ : ℝ} (hδ : 0 ≤ δ) (hθlow : δ ≤ θ)\n    (hθhigh : θ ≤ 2 * Real.pi - δ) :\n    δ / Real.pi ≤ Real.sin (θ / 2)"
+      },
+      {
+        "name": "norm_phaseResolvent_le",
+        "line": 194,
+        "signature": "theorem norm_phaseResolvent_le {δ θ : ℝ} (hδ : 0 < δ) (hθlow : δ ≤ θ)\n    (hθhigh : θ ≤ 2 * Real.pi - δ) :\n    ‖phaseResolvent θ‖ ≤ Real.pi / (2 * δ)"
+      },
+      {
+        "name": "norm_phaseResolvent_sub_eq",
+        "line": 212,
+        "signature": "theorem norm_phaseResolvent_sub_eq {x y : ℝ}\n    (hx0 : 0 < x) (hy2pi : y < 2 * Real.pi) (hxy : x ≤ y) :\n    ‖phaseResolvent y - phaseResolvent x‖ =\n      (Real.cot (x / 2) - Real.cot (y / 2)) / 2"
+      },
+      {
+        "name": "phaseResolvent_variation",
+        "line": 236,
+        "signature": "theorem phaseResolvent_variation (θ : ℕ → ℝ) (N : ℕ) (δ : ℝ)\n    (hδ : 0 < δ)\n    (hlow : ∀ n ≤ N, δ ≤ θ n)\n    (hhigh : ∀ n ≤ N, θ n ≤ 2 * Real.pi - δ)\n    (hmono : ∀ n < N, θ n ≤ θ (n + 1)) :\n    ∑ n ∈ Finset.range N, ‖phaseResolvent (θ (n + 1)) - phaseResolvent (θ n)‖ =\n      (Real.cot (θ 0 / 2) - Real.cot (θ N / 2)) / 2"
+      },
+      {
+        "name": "abs_cot_half_le_norm_phaseResolvent",
+        "line": 258,
+        "signature": "theorem abs_cot_half_le_norm_phaseResolvent {θ : ℝ}\n    (hθ0 : 0 < θ) (hθ2pi : θ < 2 * Real.pi) :\n    |Real.cot (θ / 2) / 2| ≤ ‖phaseResolvent θ‖"
+      },
+      {
+        "name": "unitaryPhase_resolvent_step",
+        "line": 276,
+        "signature": "theorem unitaryPhase_resolvent_step (f : ℕ → ℝ) (n : ℕ)\n    (hsin : Real.sin ((f (n + 1) - f n) / 2) ≠ 0) :\n    unitaryPhase (f n) = phaseResolvent (f (n + 1) - f n) *\n      (unitaryPhase (f n) - unitaryPhase (f (n + 1)))"
+      },
+      {
+        "name": "finite_resolvent_telescoping",
+        "line": 296,
+        "signature": "theorem finite_resolvent_telescoping (z q : ℕ → ℂ) (N : ℕ)\n    (hrec : ∀ n ≤ N, z n = q n * (z n - z (n + 1))) :\n    ∑ n ∈ Finset.range (N + 1), z n =\n      q 0 * z 0 - q N * z (N + 1) +\n        ∑ n ∈ Finset.range N, (q (n + 1) - q n) * z (n + 1)"
+      },
+      {
+        "name": "norm_sum_le_resolvent_variation",
+        "line": 319,
+        "signature": "theorem norm_sum_le_resolvent_variation (z q : ℕ → ℂ) (N : ℕ)\n    (hz : ∀ n ≤ N + 1, ‖z n‖ = 1)\n    (hrec : ∀ n ≤ N, z n = q n * (z n - z (n + 1))) :\n    ‖∑ n ∈ Finset.range (N + 1), z n‖ ≤\n      ‖q 0‖ + ‖q N‖ + ∑ n ∈ Finset.range N, ‖q (n + 1) - q n‖"
+      },
+      {
+        "name": "kusminLandau_one_period",
+        "line": 345,
+        "signature": "theorem kusminLandau_one_period (f : ℕ → ℝ) (N : ℕ) (δ : ℝ)\n    (hδ : 0 < δ)\n    (hlow : ∀ n ≤ N, δ ≤ f (n + 1) - f n)\n    (hhigh : ∀ n ≤ N, f (n + 1) - f n ≤ 2 * Real.pi - δ)\n    (hmono : ∀ n < N, f (n + 1) - f n ≤ f (n + 2) - f (n + 1)) :\n    ‖∑ n ∈ Finset.range (N + 1), unitaryPhase (f n)‖ ≤\n      2 * Real.pi / δ"
+      },
+      {
+        "name": "unitaryPhase_int_mul_two_pi",
+        "line": 393,
+        "signature": "theorem unitaryPhase_int_mul_two_pi (k : ℤ) :\n    unitaryPhase ((k : ℝ) * (2 * Real.pi)) = 1"
+      },
+      {
+        "name": "unitaryPhase_sub_int_mul_two_pi",
+        "line": 401,
+        "signature": "theorem unitaryPhase_sub_int_mul_two_pi (x : ℝ) (k : ℤ) :\n    unitaryPhase (x - (k : ℝ) * (2 * Real.pi)) = unitaryPhase x"
+      },
+      {
+        "name": "kusminLandau_one_period_decreasing",
+        "line": 407,
+        "signature": "theorem kusminLandau_one_period_decreasing (f : ℕ → ℝ) (N : ℕ) (δ : ℝ)\n    (hδ : 0 < δ)\n    (hlow : ∀ n ≤ N, δ ≤ f (n + 1) - f n)\n    (hhigh : ∀ n ≤ N, f (n + 1) - f n ≤ 2 * Real.pi - δ)\n    (hmono : ∀ n < N, f (n + 2) - f (n + 1) ≤ f (n + 1) - f n) :\n    ‖∑ n ∈ Finset.range (N + 1), unitaryPhase (f n)‖ ≤\n      2 * Real.pi / δ"
+      },
+      {
+        "name": "kusminLandau_interval",
+        "line": 442,
+        "signature": "theorem kusminLandau_interval (f : ℕ → ℝ) (A N : ℕ) (k : ℤ) (δ : ℝ)\n    (hδ : 0 < δ)\n    (hlow : ∀ n ≤ N, δ ≤\n      f (A + n + 1) - f (A + n) - (k : ℝ) * (2 * Real.pi))\n    (hhigh : ∀ n ≤ N,\n      f (A + n + 1) - f (A + n) - (k : ℝ) * (2 * Real.pi) ≤\n        2 * Real.pi - δ)\n    (hmono : ∀ n < N,\n      f (A + n + 1) - f (A + n) ≤ f (A + n + 2) - f (A + n + 1)) :\n    ‖∑ n ∈ Finset.range (N + 1), unitaryPhase (f (A + n))‖ ≤\n      2 * Real.pi / δ"
+      },
+      {
+        "name": "norm_sum_sq_le_card_mul_sum_norm_sq",
+        "line": 479,
+        "signature": "theorem norm_sum_sq_le_card_mul_sum_norm_sq {ι : Type*} [DecidableEq ι]\n    (s : Finset ι) (a : ι → ℂ) :\n    ‖∑ i ∈ s, a i‖ ^ 2 ≤ (s.card : ℝ) * ∑ i ∈ s, ‖a i‖ ^ 2"
+      },
+      {
+        "name": "finite_weyl_differencing",
+        "line": 495,
+        "signature": "theorem finite_weyl_differencing\n    {ι κ : Type*} [DecidableEq ι] [DecidableEq κ]\n    (s : Finset ι) (r : Finset κ) (b : ι → κ → ℂ) (S : ℂ) (A B : ℝ)\n    (hB : 0 ≤ B)\n    (hshift : ∀ h ∈ r, ∑ n ∈ s, b n h = S)\n    (hdiag : ∀ h ∈ r, ∑ n ∈ s, ‖b n h‖ ^ 2 ≤ A)\n    (hcorr : ∀ h ∈ r, ∀ k ∈ r, h ≠ k →\n      abs (∑ n ∈ s, ⟪b n h, b n k⟫_ℝ) ≤ B) :\n    (r.card : ℝ) ^ 2 * ‖S‖ ^ 2 ≤\n      (s.card : ℝ) * ((r.card : ℝ) * A + (r.card : ℝ) ^ 2 * B)"
+      },
+      {
+        "name": "paddedShift",
+        "line": 564,
+        "signature": "noncomputable def paddedShift (a : ℤ → ℂ) (N : ℕ) (n : ℤ) (h : ℕ) : ℂ"
+      },
+      {
+        "name": "sum_paddedShift_eq",
+        "line": 569,
+        "signature": "theorem sum_paddedShift_eq (a : ℤ → ℂ) (N H h : ℕ) (hh : h < H) :\n    ∑ n ∈ Finset.Ico (-(H : ℤ)) N, paddedShift a N n h =\n      ∑ m ∈ Finset.Ico (0 : ℤ) N, a m"
+      },
+      {
+        "name": "sum_norm_sq_paddedShift_eq",
+        "line": 595,
+        "signature": "theorem sum_norm_sq_paddedShift_eq (a : ℤ → ℂ) (N H h : ℕ) (hh : h < H) :\n    ∑ n ∈ Finset.Ico (-(H : ℤ)) N, ‖paddedShift a N n h‖ ^ 2 =\n      ∑ m ∈ Finset.Ico (0 : ℤ) N, ‖a m‖ ^ 2"
+      },
+      {
+        "name": "interval_weyl_differencing",
+        "line": 621,
+        "signature": "theorem interval_weyl_differencing\n    (a : ℤ → ℂ) (N H : ℕ) (C : ℝ)\n    (ha : ∀ n ∈ Finset.Ico (0 : ℤ) N, ‖a n‖ ≤ 1)\n    (hC : 0 ≤ C)\n    (hcorr : ∀ h ∈ Finset.range H, ∀ k ∈ Finset.range H, h ≠ k →\n      abs (∑ n ∈ Finset.Ico (-(H : ℤ)) N,\n        ⟪paddedShift a N n h, paddedShift a N n k⟫_ℝ) ≤ C) :\n    (H : ℝ) ^ 2 * ‖∑ n ∈ Finset.Ico (0 : ℤ) N, a n‖ ^ 2 ≤\n      ((N + H : ℕ) : ℝ) * ((H : ℝ) * N + (H : ℝ) ^ 2 * C)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/WeylExplicit.lean",
+    "sha256": "9b84e618a070b0c83f65258e8d138ed7963d444bf4adc2bbd2f333bcee53185c",
+    "imports": [
+      "GuthMaynard.Weyl",
+      "Mathlib.Analysis.Real.Pi.Bounds"
+    ],
+    "declarations": [
+      {
+        "name": "vdc_product_bound",
+        "line": 18,
+        "signature": "theorem vdc_product_bound\n    (n x : Real) (hn : 0 <= n) (hx : 0 < x) (hx1 : x <= 1) :\n    (n * (32 * x) / (2 * Real.pi) + 2) *\n        (2 * Real.pi / Real.sqrt x + 2 * (Real.sqrt x / x + 1)) <=\n      100 * (n * Real.sqrt x + 1 / Real.sqrt x)"
+      },
+      {
+        "name": "logarithmicCorrelationBound_le_simple",
+        "line": 89,
+        "signature": "theorem logarithmicCorrelationBound_le_simple\n    (t A : Real) (N r : Nat) (ht : 0 < t) (hA : 0 < A)\n    (hr : 0 < r) (hsmall : t * r / (8 * A ^ 3) <= 1) :\n    logarithmicCorrelationBound t A N r <=\n      100 * ((N : Real) * Real.sqrt (t * r / (8 * A ^ 3)) +\n        1 / Real.sqrt (t * r / (8 * A ^ 3)))"
+      },
+      {
+        "name": "simpleLogarithmicCorrelationBound",
+        "line": 122,
+        "signature": "noncomputable def simpleLogarithmicCorrelationBound\n    (t A : Real) (N H : Nat) : Real"
+      },
+      {
+        "name": "logarithmicCorrelationBound_le_uniform",
+        "line": 127,
+        "signature": "theorem logarithmicCorrelationBound_le_uniform\n    (t A : Real) (N H r : Nat) (ht : 0 < t) (hA : 0 < A)\n    (hr : 0 < r) (hrH : r <= H)\n    (hsmall : t * H / (8 * A ^ 3) <= 1) :\n    logarithmicCorrelationBound t A N r <=\n      simpleLogarithmicCorrelationBound t A N H"
+      },
+      {
+        "name": "logarithmic_weyl_AB_process_simple",
+        "line": 163,
+        "signature": "theorem logarithmic_weyl_AB_process_simple\n    (t A : Real) (N H : Nat) (ht : 0 < t) (hA : 0 < A)\n    (hH : H <= N) (hNA : (N : Real) <= A)\n    (hsmall : t * H / (8 * A ^ 3) <= 1) :\n    (H : Real) ^ 2 *\n        ‖∑ n ∈ Finset.Ico (0 : Int) N, integerLogarithmicTerm t A n‖ ^ 2 <=\n      ((N + H : Nat) : Real) *\n        ((H : Real) * N + (H : Real) ^ 2 *\n          simpleLogarithmicCorrelationBound t A N H)"
+      },
+      {
+        "name": "simpleLogarithmicCorrelationBound_le_four_hundred",
+        "line": 196,
+        "signature": "theorem simpleLogarithmicCorrelationBound_le_four_hundred\n    (Y : Real) (A H : Nat) (hY : 1 <= Y) (hA : 0 < A)\n    (hHY : (H : Real) * Y <= A) (hAY : (A : Real) ^ 2 <= Y ^ 3) :\n    simpleLogarithmicCorrelationBound (Y ^ 3) A A H <= 400 * Y"
+      },
+      {
+        "name": "simpleLogarithmicCorrelationBound_le_four_hundred_mul",
+        "line": 262,
+        "signature": "theorem simpleLogarithmicCorrelationBound_le_four_hundred_mul\n    (Y X : Real) (A H : Nat) (hY : 1 ≤ Y) (hX : 1 ≤ X) (hA : 0 < A)\n    (hHY : (H : Real) * Y ≤ A)\n    (hAY : (A : Real) ^ 2 ≤ X * Y ^ 3) :\n    simpleLogarithmicCorrelationBound (Y ^ 3) A A H ≤ 400 * X * Y"
+      },
+      {
+        "name": "logarithmic_weyl_exponent_pair_with_shift",
+        "line": 340,
+        "signature": "theorem logarithmic_weyl_exponent_pair_with_shift\n    (Y : Real) (A H : Nat) (hY : 1 <= Y) (hA : 0 < A) (hH : 0 < H)\n    (hYA : Y <= A) (hAY : (A : Real) ^ 2 <= Y ^ 3)\n    (hHY : (H : Real) * Y <= A) (hAH : (A : Real) <= 2 * H * Y) :\n    ‖logarithmicSum (Y ^ 3) A (A + A)‖ <=\n      30 * Real.sqrt ((A : Real) * Y)"
+      },
+      {
+        "name": "classicalWeylShiftLength",
+        "line": 410,
+        "signature": "noncomputable def classicalWeylShiftLength (Y : Real) (A : Nat) : Nat"
+      },
+      {
+        "name": "classicalWeylShiftLength_spec",
+        "line": 413,
+        "signature": "theorem classicalWeylShiftLength_spec\n    (Y : Real) (A : Nat) (hY : 1 <= Y) (hA : 0 < A) (hYA : Y <= A) :\n    let H"
+      },
+      {
+        "name": "logarithmic_weyl_exponent_pair",
+        "line": 459,
+        "signature": "theorem logarithmic_weyl_exponent_pair\n    (Y : Real) (A : Nat) (hY : 1 <= Y) (hA : 0 < A)\n    (hYA : Y <= A) (hAY : (A : Real) ^ 2 <= Y ^ 3) :\n    ‖logarithmicSum (Y ^ 3) A (A + A)‖ <=\n      30 * Real.sqrt ((A : Real) * Y)"
+      },
+      {
+        "name": "logarithmic_weyl_exponent_pair_prefix",
+        "line": 470,
+        "signature": "theorem logarithmic_weyl_exponent_pair_prefix\n    (Y : Real) (A N : Nat) (hY : 1 <= Y) (hA : 0 < A)\n    (hYA : Y <= A) (hAY : (A : Real) ^ 2 <= Y ^ 3) (hNA : N <= A) :\n    ‖logarithmicSum (Y ^ 3) A (A + N)‖ <=\n      30 * Real.sqrt ((A : Real) * Y)"
+      },
+      {
+        "name": "logarithmic_weyl_exponent_pair_prefix_with_slack",
+        "line": 583,
+        "signature": "theorem logarithmic_weyl_exponent_pair_prefix_with_slack\n    (Y X : Real) (A N : Nat) (hY : 1 ≤ Y) (hX : 1 ≤ X) (hA : 0 < A)\n    (hYA : Y ≤ A) (hAY : (A : Real) ^ 2 ≤ X * Y ^ 3) (hNA : N ≤ A) :\n    ‖logarithmicSum (Y ^ 3) A (A + N)‖ ≤\n      30 * Real.sqrt (X * (A : Real) * Y)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/ZetaTruncation.lean",
+    "sha256": "0f81c633c512a6a4031f234f61f3fb8545dfc6d70ab6490ce31d87c54520cf1a",
+    "imports": [
+      "GuthMaynard.ZetaBounds",
+      "GuthMaynard.ZeroCount",
+      "GuthMaynardExternal.PNT.ZetaAppendix"
+    ],
+    "declarations": [
+      {
+        "name": "sharpZetaTheta",
+        "line": 10,
+        "signature": "noncomputable def sharpZetaTheta (s : ℂ) (a : ℝ) : ℝ"
+      },
+      {
+        "name": "sharpZetaBoundaryCoeff",
+        "line": 15,
+        "signature": "noncomputable def sharpZetaBoundaryCoeff (s : ℂ) (a : ℝ) : ℂ"
+      },
+      {
+        "name": "sharpZetaErrorCoeff",
+        "line": 25,
+        "signature": "noncomputable def sharpZetaErrorCoeff (s : ℂ) (a : ℝ) : ℝ"
+      },
+      {
+        "name": "sharpZetaCutoff",
+        "line": 39,
+        "signature": "noncomputable def sharpZetaCutoff (T : ℝ) : ℝ"
+      },
+      {
+        "name": "sharpZetaCutoff_isHalfInteger",
+        "line": 42,
+        "signature": "theorem sharpZetaCutoff_isHalfInteger (T : ℝ) :\n    (sharpZetaCutoff T).IsHalfInteger"
+      },
+      {
+        "name": "four_mul_lt_sharpZetaCutoff",
+        "line": 49,
+        "signature": "theorem four_mul_lt_sharpZetaCutoff (T : ℝ) :\n    4 * T < sharpZetaCutoff T"
+      },
+      {
+        "name": "sharpZetaCutoff_le_add",
+        "line": 55,
+        "signature": "theorem sharpZetaCutoff_le_add (T : ℝ) :\n    sharpZetaCutoff T ≤ 4 * T + 3 / 2"
+      },
+      {
+        "name": "sharpZetaCutoff_le_six_mul",
+        "line": 61,
+        "signature": "theorem sharpZetaCutoff_le_six_mul {T : ℝ} (hT : 3 / 4 ≤ T) :\n    sharpZetaCutoff T ≤ 6 * T"
+      },
+      {
+        "name": "sharpZetaCutoff_admissible_of_mem",
+        "line": 67,
+        "signature": "theorem sharpZetaCutoff_admissible_of_mem {σ T : ℝ} {ρ : ℂ}\n    (hT : 3 / 4 ≤ T) (hρ : ρ ∈ zerosInRect σ 1 T (2 * T)) :\n    0 < sharpZetaCutoff T ∧\n      (sharpZetaCutoff T).IsHalfInteger ∧\n        sharpZetaCutoff T > |ρ.im| / (2 * Real.pi)"
+      },
+      {
+        "name": "pi_mul_sharpZetaTheta_eq",
+        "line": 89,
+        "signature": "theorem pi_mul_sharpZetaTheta_eq (s : ℂ) {a : ℝ} (ha : a ≠ 0) :\n    Real.pi * sharpZetaTheta s a = s.im / (2 * a)"
+      },
+      {
+        "name": "sharpZetaPhase_mem_Icc_of_mem",
+        "line": 94,
+        "signature": "theorem sharpZetaPhase_mem_Icc_of_mem {σ T : ℝ} {ρ : ℂ}\n    (hT : 3 / 4 ≤ T) (hρ : ρ ∈ zerosInRect σ 1 T (2 * T)) :\n    Real.pi * sharpZetaTheta ρ (sharpZetaCutoff T) ∈\n      Set.Icc (1 / 12 : ℝ) (1 / 4 : ℝ)"
+      },
+      {
+        "name": "one_sixteenth_le_sin_of_mem_Icc",
+        "line": 113,
+        "signature": "theorem one_sixteenth_le_sin_of_mem_Icc {x : ℝ}\n    (hx : x ∈ Set.Icc (1 / 12 : ℝ) (1 / 4 : ℝ)) :\n    1 / 16 ≤ Real.sin x"
+      },
+      {
+        "name": "sharpZetaBoundaryCoeff_le_fourteen",
+        "line": 133,
+        "signature": "theorem sharpZetaBoundaryCoeff_le_fourteen {σ T : ℝ} {ρ : ℂ}\n    (hT : 3 / 4 ≤ T) (hρ : ρ ∈ zerosInRect σ 1 T (2 * T)) :\n    ‖sharpZetaBoundaryCoeff ρ (sharpZetaCutoff T)‖ ≤ 14"
+      },
+      {
+        "name": "sharpZetaErrorCoeff_le_129",
+        "line": 182,
+        "signature": "theorem sharpZetaErrorCoeff_le_129 {σ T : ℝ} {ρ : ℂ} (hT : 3 / 4 ≤ T)\n    (hρ : ρ ∈ zerosInRect σ 1 T (2 * T)) (hρre0 : 0 ≤ ρ.re) (hρre1 : ρ.re ≤ 1) :\n    sharpZetaErrorCoeff ρ (sharpZetaCutoff T) ≤ 129"
+      },
+      {
+        "name": "riemannZeta_sharp_halfInteger_truncation",
+        "line": 267,
+        "signature": "theorem riemannZeta_sharp_halfInteger_truncation {s : ℂ}\n    (hs1 : s ≠ 1) (hsigma : 0 ≤ s.re) {a : ℝ} (ha : 0 < a)\n    (haHalf : a.IsHalfInteger) (haIm : a > |s.im| / (2 * Real.pi)) :\n    ∃ E : ℂ,\n      riemannZeta s =\n          ∑ n ∈ Finset.Icc 1 ⌊a⌋₊, (n : ℂ) ^ (-s) -\n            (a ^ (1 - s) : ℂ) / (1 - s) -\n            sharpZetaBoundaryCoeff s a * (a ^ (-s) : ℂ) + E ∧\n        ‖E‖ ≤ sharpZetaErrorCoeff s a / a ^ (s.re + 1)"
+      },
+      {
+        "name": "zeta_zero_sharp_halfInteger_truncation",
+        "line": 280,
+        "signature": "theorem zeta_zero_sharp_halfInteger_truncation {ρ : ℂ}\n    (hρre : 0 < ρ.re) (hρim : ρ.im ≠ 0) (hρzero : riemannZeta ρ = 0)\n    {a : ℝ} (ha : 0 < a) (haHalf : a.IsHalfInteger)\n    (haIm : a > |ρ.im| / (2 * Real.pi)) :\n    ∃ E : ℂ,\n      (∑ n ∈ Finset.Icc 1 ⌊a⌋₊, (n : ℂ) ^ (-ρ)) =\n          (a ^ (1 - ρ) : ℂ) / (1 - ρ) +\n            sharpZetaBoundaryCoeff ρ a * (a ^ (-ρ) : ℂ) - E ∧\n        ‖E‖ ≤ sharpZetaErrorCoeff ρ a / a ^ (ρ.re + 1)"
+      },
+      {
+        "name": "norm_zeta_zero_sharp_sum_le",
+        "line": 299,
+        "signature": "theorem norm_zeta_zero_sharp_sum_le {ρ : ℂ}\n    (hρre : 0 < ρ.re) (hρim : ρ.im ≠ 0) (hρzero : riemannZeta ρ = 0)\n    {a : ℝ} (ha : 0 < a) (haHalf : a.IsHalfInteger)\n    (haIm : a > |ρ.im| / (2 * Real.pi)) :\n    ‖∑ n ∈ Finset.Icc 1 ⌊a⌋₊, (n : ℂ) ^ (-ρ)‖ ≤\n      ‖(a ^ (1 - ρ) : ℂ) / (1 - ρ)‖ +\n        ‖sharpZetaBoundaryCoeff ρ a * (a ^ (-ρ) : ℂ)‖ +\n          sharpZetaErrorCoeff ρ a / a ^ (ρ.re + 1)"
+      },
+      {
+        "name": "norm_zeta_zero_sharp_cutoff_sum_le",
+        "line": 328,
+        "signature": "theorem norm_zeta_zero_sharp_cutoff_sum_le {σ T : ℝ} {ρ : ℂ} (hT : 3 / 4 ≤ T)\n    (hρmem : ρ ∈ zerosInRect σ 1 T (2 * T)) (hσ : 0 < σ) :\n    ‖∑ n ∈ Finset.Icc 1 ⌊sharpZetaCutoff T⌋₊, (n : ℂ) ^ (-ρ)‖ ≤\n      149 * sharpZetaCutoff T ^ (-ρ.re)"
+      },
+      {
+        "name": "abelZetaTail",
+        "line": 410,
+        "signature": "noncomputable def abelZetaTail (b : ℝ) (s : ℂ) : ℂ"
+      },
+      {
+        "name": "integrableOn_abelZetaTail_integrand",
+        "line": 413,
+        "signature": "theorem integrableOn_abelZetaTail_integrand {b : ℝ} (hb : 1 ≤ b) {s : ℂ}\n    (hs : 0 < s.re) :\n    IntegrableOn\n      (fun t : ℝ => ((Int.fract t : ℝ) : ℂ) * (t : ℂ) ^ (-(s + 1)))\n      (Ioi b)"
+      },
+      {
+        "name": "abelZetaRemainder_eq_finite_add_tail",
+        "line": 420,
+        "signature": "theorem abelZetaRemainder_eq_finite_add_tail {b : ℝ} (hb : 1 ≤ b) {s : ℂ}\n    (hs : 0 < s.re) :\n    abelZetaRemainder s =\n      (∫ t in Ioc (1 : ℝ) b,\n        ((Int.fract t : ℝ) : ℂ) * (t : ℂ) ^ (-(s + 1))) + abelZetaTail b s"
+      },
+      {
+        "name": "sum_cpow_neg_eq_boundary_add_floor_integral",
+        "line": 435,
+        "signature": "theorem sum_cpow_neg_eq_boundary_add_floor_integral {b : ℕ} (hb : 1 ≤ b) {s : ℂ}\n    (hs : 0 < s.re) :\n    ∑ n ∈ Finset.Icc 1 b, (n : ℂ) ^ (-s) =\n      (b : ℂ) ^ (1 - s) + s * ∫ t in Ioc (1 : ℝ) b,\n        (⌊t⌋₊ : ℂ) * (t : ℂ) ^ (-(s + 1))"
+      },
+      {
+        "name": "integral_Ioc_cpow_neg",
+        "line": 512,
+        "signature": "theorem integral_Ioc_cpow_neg {b : ℝ} (hb : 1 ≤ b) {s : ℂ} (hs1 : s ≠ 1) :\n    (∫ t in Ioc (1 : ℝ) b, (t : ℂ) ^ (-s)) =\n      ((b : ℂ) ^ (1 - s) - 1) / (1 - s)"
+      },
+      {
+        "name": "floor_cpow_integral_eq_sub_fract",
+        "line": 522,
+        "signature": "theorem floor_cpow_integral_eq_sub_fract {b : ℕ} (hb : 1 ≤ b) {s : ℂ}\n    (hs : 0 < s.re) :\n    (∫ t in Ioc (1 : ℝ) b, (⌊t⌋₊ : ℂ) * (t : ℂ) ^ (-(s + 1))) =\n      (∫ t in Ioc (1 : ℝ) b, (t : ℂ) ^ (-s)) -\n        ∫ t in Ioc (1 : ℝ) b,\n          ((Int.fract t : ℝ) : ℂ) * (t : ℂ) ^ (-(s + 1))"
+      },
+      {
+        "name": "riemannZeta_truncation",
+        "line": 563,
+        "signature": "theorem riemannZeta_truncation {b : ℕ} (hb : 1 ≤ b) {s : ℂ}\n    (hs : 0 < s.re) (hs1 : s ≠ 1) :\n    ∑ n ∈ Finset.Icc 1 b, (n : ℂ) ^ (-s) =\n      riemannZeta s + (b : ℂ) ^ (1 - s) / (1 - s) + s * abelZetaTail b s"
+      },
+      {
+        "name": "zeta_zero_truncation",
+        "line": 581,
+        "signature": "theorem zeta_zero_truncation {b : ℕ} (hb : 1 ≤ b) {ρ : ℂ}\n    (hρre : 0 < ρ.re) (hρim : ρ.im ≠ 0) (hρzero : riemannZeta ρ = 0) :\n    ∑ n ∈ Finset.Icc 1 b, (n : ℂ) ^ (-ρ) =\n      (b : ℂ) ^ (1 - ρ) / (1 - ρ) + ρ * abelZetaTail b ρ"
+      },
+      {
+        "name": "norm_abelZetaTail_le",
+        "line": 591,
+        "signature": "theorem norm_abelZetaTail_le {b : ℝ} (hb : 1 ≤ b) {s : ℂ} (hs : 0 < s.re) :\n    ‖abelZetaTail b s‖ ≤ b ^ (-s.re) / s.re"
+      },
+      {
+        "name": "norm_zeta_zero_truncation_error_le",
+        "line": 616,
+        "signature": "theorem norm_zeta_zero_truncation_error_le {b : ℕ} (hb : 1 ≤ b) {ρ : ℂ}\n    (hρre : 0 < ρ.re) (hρim : ρ.im ≠ 0) (hρzero : riemannZeta ρ = 0) :\n    ‖(∑ n ∈ Finset.Icc 1 b, (n : ℂ) ^ (-ρ)) -\n        (b : ℂ) ^ (1 - ρ) / (1 - ρ)‖ ≤\n      ‖ρ‖ * (b : ℝ) ^ (-ρ.re) / ρ.re"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonStationaryEvaluation.lean",
+    "sha256": "6152618827bda24d083ba66f698b0c1a87d81f65c94d5d96b455035459be4b76",
+    "imports": [
+      "TaoTrudgianYang2025.AtkinsonStationaryMain"
+    ],
+    "declarations": [
+      {
+        "name": "exists_atkinsonPowerIntegral_small_frequency_stationary",
+        "line": 16,
+        "signature": "theorem exists_atkinsonPowerIntegral_small_frequency_stationary (α : ℝ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ T G L b H : ℝ, 0 < T → 1 ≤ G → G ^ 2 ≤ 2 * T →\n      1 ≤ L → 8 * L ≤ G → 0 < H → H ≤ Real.sqrt T / 12 →\n      |b| ≤ Real.sqrt T / 100 →\n      ‖atkinsonPowerIntegral T G L α b - atkinsonStationaryMain T G L α b‖ ≤\n        C * G * T ^ (-α) * (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 +\n          432 * H ^ 4 / Real.sqrt T)"
+      },
+      {
+        "name": "exists_atkinsonPowerIntegral_small_n_pair_stationary",
+        "line": 42,
+        "signature": "theorem exists_atkinsonPowerIntegral_small_n_pair_stationary (α : ℝ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ T G L H : ℝ, 0 < T → 1 ≤ G → G ^ 2 ≤ 2 * T →\n      1 ≤ L → 8 * L ≤ G → 0 < H → H ≤ Real.sqrt T / 12 →\n      ∀ n : ℕ, 10000 * (n : ℝ) ≤ T →\n      ‖atkinsonPowerIntegral T G L α (Real.sqrt n) -\n        atkinsonStationaryMain T G L α (Real.sqrt n)‖ ≤\n          C * G * T ^ (-α) * (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 +\n            432 * H ^ 4 / Real.sqrt T) ∧\n      ‖atkinsonPowerIntegral T G L α (-Real.sqrt n) -\n        atkinsonStationaryMain T G L α (-Real.sqrt n)‖ ≤\n          C * G * T ^ (-α) * (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 +\n            432 * H ^ 4 / Real.sqrt T)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/BetaPoissonBoundary.lean",
+    "sha256": "a59268f958e9c35ac74bb475aeec1c94977da9be3e5864b82d74c250413c4fd8",
+    "imports": [
+      "TaoTrudgianYang2025.BetaFourierModes"
+    ],
+    "declarations": [
+      {
+        "name": "modelPhaseInteriorIndices",
+        "line": 19,
+        "signature": "def modelPhaseInteriorIndices (N : ℝ) (a b : ℤ) : Finset ℤ"
+      },
+      {
+        "name": "modelPhaseInteriorIndices_subset",
+        "line": 23,
+        "signature": "theorem modelPhaseInteriorIndices_subset (N : ℝ) (a b : ℤ) :\n    modelPhaseInteriorIndices N a b ⊆ Finset.Icc a b"
+      },
+      {
+        "name": "exists_modelPhase_interior_cutoff",
+        "line": 28,
+        "signature": "theorem exists_modelPhase_interior_cutoff {N : ℝ} (hN : 0 < N) (a b : ℤ) :\n    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧\n      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧\n      (∀ x : ℝ, 0 ≤ χ x ∧ χ x ≤ 1) ∧\n      ∀ n : ℤ, χ ((n : ℝ)/N) =\n        if n ∈ modelPhaseInteriorIndices N a b then 1 else 0"
+      },
+      {
+        "name": "modelPhase_boundary_indices_card_le_two",
+        "line": 69,
+        "signature": "theorem modelPhase_boundary_indices_card_le_two\n    {N : ℝ} {a b : ℤ} (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :\n    ((Finset.Icc a b) \\ modelPhaseInteriorIndices N a b).card ≤ 2"
+      },
+      {
+        "name": "norm_modelPhase_full_sub_interior_le_two",
+        "line": 94,
+        "signature": "theorem norm_modelPhase_full_sub_interior_le_two\n    (F : ℝ → ℝ) (T : ℝ) {N : ℝ} {a b : ℤ}\n    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :\n    ‖(∑ n ∈ Finset.Icc a b, (𝐞 (T*F ((n : ℝ)/N)) : ℂ)) -\n      ∑ n ∈ modelPhaseInteriorIndices N a b, (𝐞 (T*F ((n : ℝ)/N)) : ℂ)‖ ≤ 2"
+      },
+      {
+        "name": "modelPhase_closed_interval_poisson",
+        "line": 112,
+        "signature": "theorem modelPhase_closed_interval_poisson\n    {F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}\n    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N)\n    {a b : ℕ} (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :\n    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧\n      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧\n      (∀ n : ℤ, χ ((n : ℝ)/N) =\n        if n ∈ modelPhaseInteriorIndices N a b then 1 else 0) ∧\n      ∀ T : ℝ, Summable (fun r : ℤ => ‖modelPhaseFourierMode χ F T N r‖) ∧\n        ‖exponentialSumAt F T N a b -\n          ∑' r : ℤ, modelPhaseFourierMode χ F T N r‖ ≤ 2"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ContinuousSecondDerivative.lean",
+    "sha256": "6a3f9dc9fb25077a3e00339b0c19114e49001844eb95f5025254abd2e25965a3",
+    "imports": [
+      "TaoTrudgianYang2025.ContinuousDerivativeBounds",
+      "TaoTrudgianYang2025.SecondDerivativeScale",
+      "GafniTao.FordTaylorPhase"
+    ],
+    "declarations": [
+      {
+        "name": "fordAdditiveCharacter_eq_unitaryPhase",
+        "line": 11,
+        "signature": "theorem fordAdditiveCharacter_eq_unitaryPhase (x : ℝ) :\n    fordAdditiveCharacter x = unitaryPhase (2*Real.pi*x)"
+      },
+      {
+        "name": "continuous_second_derivative_bound",
+        "line": 18,
+        "signature": "theorem continuous_second_derivative_bound\n    (F F' F'' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C α : ℝ}\n    (hC : 0 ≤ C) (hα : 0 < α) (hα1 : α ≤ 1)\n    (hF : ∀ x ∈ Icc A (A+N+1), HasDerivAt F (F' x) x)\n    (hF' : ∀ x ∈ Icc A (A+N+1), HasDerivAt F' (F'' x) x)\n    (hlo : ∀ x ∈ Icc A (A+N+1), α ≤ F'' x)\n    (hhi : ∀ x ∈ Icc A (A+N+1), F'' x ≤ C*α) :\n    ‖∑ n ∈ Finset.range (N+1), fordAdditiveCharacter (F (A+n))‖ ≤\n      12*(C*N*Real.sqrt α+2/Real.sqrt α)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ExponentPairBProcess.lean",
+    "sha256": "acbf4409db1fe263ceb367babc748431a8fcfbd3befa019279d7c27238ed22c8",
+    "imports": [
+      "TaoTrudgianYang2025.BetaReflectionEnvelope",
+      "TaoTrudgianYang2025.BetaClosedDuality"
+    ],
+    "declarations": [
+      {
+        "name": "InExponentPairTriangle.bProcess",
+        "line": 19,
+        "signature": "theorem InExponentPairTriangle.bProcess {k l : ℝ}\n    (h : InExponentPairTriangle k l) :\n    InExponentPairTriangle (l-1/2) (k+1/2)"
+      },
+      {
+        "name": "exponentPairLine_bProcess",
+        "line": 26,
+        "signature": "theorem exponentPairLine_bProcess (k l α : ℝ) :\n    exponentPairLine k l (1-α)+1/2-(1-α) =\n      exponentPairLine (l-1/2) (k+1/2) α"
+      },
+      {
+        "name": "ExponentPair.bProcess",
+        "line": 32,
+        "signature": "theorem ExponentPair.bProcess {k l : ℝ} (h : ExponentPair k l) :\n    ExponentPair (l-1/2) (k+1/2)"
+      },
+      {
+        "name": "exponentPair_bProcess_iff",
+        "line": 64,
+        "signature": "theorem exponentPair_bProcess_iff {k l : ℝ} :\n    ExponentPair (l-1/2) (k+1/2) ↔ ExponentPair k l"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanDigamma.lean",
+    "sha256": "1e94b5150c08e6beb541c8f54e4eae92358f8307daa728f2c14da5cb0adbcb08",
+    "imports": [
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries"
+    ],
+    "declarations": [
+      {
+        "name": "exists_re_digamma_le_log_add",
+        "line": 28,
+        "signature": "theorem exists_re_digamma_le_log_add {a b : ℝ} (ha : 0 < a) :\n    ∃ D : ℝ, 0 < D ∧ ∀ z : ℂ, a ≤ z.re → z.re ≤ b →\n      (Complex.digamma z).re ≤ Real.log (|z.im| + 2) + D"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaDigammaLog.lean",
+    "sha256": "b4ee082bbfac1d665be670a4b88eac3c2587e7ef552de1d298294cd2c9d8dc26",
+    "imports": [
+      "GuthMaynard.HughesYoungPolygamma",
+      "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv",
+      "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus"
+    ],
+    "declarations": [
+      {
+        "name": "norm_reciprocal_log_step_le",
+        "line": 52,
+        "signature": "theorem norm_reciprocal_log_step_le {z : ℂ} (hz : 0 < z.re)\n    (hy : 0 < |z.im|) (n : ℕ) :\n    ‖(z + n)⁻¹ - (Complex.log (z + (n + 1 : ℕ)) - Complex.log (z + n))‖ ≤\n      2 / ((n : ℝ) + |z.im|) ^ 2"
+      },
+      {
+        "name": "norm_sum_reciprocal_sub_log_le",
+        "line": 124,
+        "signature": "theorem norm_sum_reciprocal_sub_log_le {z : ℂ} (hz : 0 < z.re)\n    (hy : 1 ≤ |z.im|) (N : ℕ) :\n    ‖(∑ n ∈ range N, (z + n)⁻¹) -\n      (Complex.log (z + N) - Complex.log z)‖ ≤ 4 / |z.im|"
+      },
+      {
+        "name": "tendsto_log_nat_shift_sub_log",
+        "line": 142,
+        "signature": "theorem tendsto_log_nat_shift_sub_log {z : ℂ} (hz : 0 < z.re) :\n    Tendsto (fun N : ℕ => Complex.log (z + N) - (Real.log N : ℂ))\n      atTop (𝓝 0)"
+      },
+      {
+        "name": "norm_digamma_sub_log_le",
+        "line": 172,
+        "signature": "theorem norm_digamma_sub_log_le {z : ℂ} (hz : 0 < z.re)\n    (hy : 1 ≤ |z.im|) : ‖Complex.digamma z - Complex.log z‖ ≤ 4 / |z.im|"
+      },
+      {
+        "name": "abs_re_digamma_sub_log_im_le",
+        "line": 205,
+        "signature": "theorem abs_re_digamma_sub_log_im_le {z : ℂ} (hz : 0 < z.re)\n    (hy : 1 ≤ |z.im|) :\n    |(Complex.digamma z).re - Real.log (|z.im|)| ≤ (4 + z.re) / |z.im|"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSharpTruncation.lean",
+    "sha256": "a46fd6ca9bdeaa25b6180752b63f6c1a567b2957e560a5a8594922b8647f70b2",
+    "imports": [
+      "TaoTrudgianYang2025.ZetaSharpCoefficients"
+    ],
+    "declarations": [
+      {
+        "name": "norm_zeta_le_sharp_sum_add",
+        "line": 10,
+        "signature": "theorem norm_zeta_le_sharp_sum_add {σ t : ℝ}\n    (hσ0 : 0 ≤ σ) (hσ1 : σ ≤ 1) (ht : 1 ≤ t) :\n    ‖riemannZeta ((σ : ℂ)+(t : ℂ)*I)‖ ≤\n      ‖∑ n ∈ Finset.Icc 1 ⌊sharpZetaCutoff t⌋₊,\n        (n : ℂ)^(-((σ : ℂ)+(t : ℂ)*I))‖+150"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Extension/GafniTao/FordDadaroTruncation.lean",
+    "sha256": "8eaef039c25a311fb108c424ca332a7625824b2f7f81ea65e6b3908f857bbe23",
+    "imports": [
+      "GafniTao.FordHurwitzTruncation",
+      "RiemannZeta.External.PNT.ZetaAppendix",
+      "RiemannZeta.GuthMaynard.ZetaTruncation"
+    ],
+    "declarations": [
+      {
+        "name": "fordDadaroCutoff",
+        "line": 21,
+        "signature": "def fordDadaroCutoff (t : ℝ) : ℝ"
+      },
+      {
+        "name": "fordDadaroCutoff_pos",
+        "line": 24,
+        "signature": "theorem fordDadaroCutoff_pos (t : ℝ) :\n    0 < fordDadaroCutoff t"
+      },
+      {
+        "name": "fordDadaroCutoff_isHalfInteger",
+        "line": 29,
+        "signature": "theorem fordDadaroCutoff_isHalfInteger (t : ℝ) :\n    (fordDadaroCutoff t).IsHalfInteger"
+      },
+      {
+        "name": "fordDadaroCutoff_le_add",
+        "line": 36,
+        "signature": "theorem fordDadaroCutoff_le_add {t : ℝ} (ht : 0 ≤ t) :\n    fordDadaroCutoff t ≤ t + 3 / 2"
+      },
+      {
+        "name": "lt_fordDadaroCutoff",
+        "line": 41,
+        "signature": "theorem lt_fordDadaroCutoff (t : ℝ) :\n    t < fordDadaroCutoff t"
+      },
+      {
+        "name": "fordDadaroCutoff_gt_height_div_two_pi",
+        "line": 48,
+        "signature": "theorem fordDadaroCutoff_gt_height_div_two_pi\n    {t : ℝ} (ht : 3 ≤ t) :\n    fordDadaroCutoff t > |t| / (2 * Real.pi)"
+      },
+      {
+        "name": "fordDadaroCutoff_floor",
+        "line": 59,
+        "signature": "theorem fordDadaroCutoff_floor (t : ℝ) :\n    ⌊fordDadaroCutoff t⌋₊ = fordFiniteEndpoint t + 1"
+      },
+      {
+        "name": "ford_head_one_add_finite_eq_partial_sum",
+        "line": 75,
+        "signature": "theorem ford_head_one_add_finite_eq_partial_sum\n    (sigma t : ℝ) (M : ℕ) :\n    fordHurwitzHead sigma 1 t + fordFiniteHurwitzSum sigma M 1 t =\n      ∑ n ∈ Finset.Icc 1 (M + 1),\n        (n : ℂ) ^ (-fordComplexHeight sigma t)"
+      },
+      {
+        "name": "fordHurwitzFiniteApproximation_one_eq_partial_sum",
+        "line": 92,
+        "signature": "theorem fordHurwitzFiniteApproximation_one_eq_partial_sum\n    (sigma t : ℝ) :\n    fordHurwitzFiniteApproximation sigma 1 t =\n      ∑ n ∈ Finset.Icc 1 ⌊fordDadaroCutoff t⌋₊,\n        (n : ℂ) ^ (-fordComplexHeight sigma t)"
+      },
+      {
+        "name": "riemannZeta_eq_fordFiniteApproximation_sub_terms",
+        "line": 103,
+        "signature": "theorem riemannZeta_eq_fordFiniteApproximation_sub_terms\n    {sigma t : ℝ} (hsigma : 0 ≤ sigma) (ht : 3 ≤ t) :\n    ∃ E : ℂ,\n      riemannZeta (fordComplexHeight sigma t) =\n          fordHurwitzFiniteApproximation sigma 1 t -\n            ((fordDadaroCutoff t : ℂ) ^\n              (1 - fordComplexHeight sigma t)) /\n              (1 - fordComplexHeight sigma t) -\n            RiemannZeta.GuthMaynard.sharpZetaBoundaryCoeff\n                (fordComplexHeight sigma t) (fordDadaroCutoff t) *\n              ((fordDadaroCutoff t : ℂ) ^\n                (-fordComplexHeight sigma t)) + E ∧\n        ‖E‖ ≤\n          RiemannZeta.GuthMaynard.sharpZetaErrorCoeff\n              (fordComplexHeight sigma t) (fordDadaroCutoff t) /\n            fordDadaroCutoff t ^ (sigma + 1)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Extension/GafniTao/FordRiemannDadaroTruncation.lean",
+    "sha256": "68f649a97640373ac1fae669dfa0259e6694c586fd700c5e52ef99b5190739d7",
+    "imports": [
+      "GafniTao.FordTheorem2Unshifted"
+    ],
+    "declarations": [
+      {
+        "name": "fordRiemannDadaroCutoff",
+        "line": 19,
+        "signature": "def fordRiemannDadaroCutoff (t : ℝ) : ℝ"
+      },
+      {
+        "name": "fordRiemannDadaroCutoff_pos",
+        "line": 22,
+        "signature": "theorem fordRiemannDadaroCutoff_pos (t : ℝ) :\n    0 < fordRiemannDadaroCutoff t"
+      },
+      {
+        "name": "fordRiemannDadaroCutoff_isHalfInteger",
+        "line": 27,
+        "signature": "theorem fordRiemannDadaroCutoff_isHalfInteger (t : ℝ) :\n    (fordRiemannDadaroCutoff t).IsHalfInteger"
+      },
+      {
+        "name": "fordRiemannDadaroCutoff_floor",
+        "line": 34,
+        "signature": "theorem fordRiemannDadaroCutoff_floor (t : ℝ) :\n    ⌊fordRiemannDadaroCutoff t⌋₊ = fordFiniteEndpoint t"
+      },
+      {
+        "name": "fordRiemannDadaroCutoff_le_add_half",
+        "line": 46,
+        "signature": "theorem fordRiemannDadaroCutoff_le_add_half {t : ℝ} (ht : 0 ≤ t) :\n    fordRiemannDadaroCutoff t ≤ t + 1 / 2"
+      },
+      {
+        "name": "t_sub_half_lt_fordRiemannDadaroCutoff",
+        "line": 51,
+        "signature": "theorem t_sub_half_lt_fordRiemannDadaroCutoff (t : ℝ) :\n    t - 1 / 2 < fordRiemannDadaroCutoff t"
+      },
+      {
+        "name": "fordRiemannDadaroCutoff_gt_height_div_two_pi",
+        "line": 58,
+        "signature": "theorem fordRiemannDadaroCutoff_gt_height_div_two_pi\n    {t : ℝ} (ht : 3 ≤ t) :\n    fordRiemannDadaroCutoff t > |t| / (2 * Real.pi)"
+      },
+      {
+        "name": "fordRiemannDadaroPhase",
+        "line": 69,
+        "signature": "def fordRiemannDadaroPhase (sigma t : ℝ) : ℝ"
+      },
+      {
+        "name": "fordRiemannDadaroPhase_eq",
+        "line": 73,
+        "signature": "theorem fordRiemannDadaroPhase_eq (sigma t : ℝ) :\n    fordRiemannDadaroPhase sigma t =\n      t / (2 * fordRiemannDadaroCutoff t)"
+      },
+      {
+        "name": "fordRiemannDadaroPhase_mem_Icc",
+        "line": 81,
+        "signature": "theorem fordRiemannDadaroPhase_mem_Icc\n    {sigma t : ℝ} (ht : 3 ≤ t) :\n    fordRiemannDadaroPhase sigma t ∈\n      Set.Icc (1 / 3 : ℝ) (2 / 3 : ℝ)"
+      },
+      {
+        "name": "one_fourth_le_sin_of_mem_rpow_phase",
+        "line": 96,
+        "signature": "theorem one_fourth_le_sin_of_mem_rpow_phase {x : ℝ}\n    (hx : x ∈ Set.Icc (1 / 3 : ℝ) (2 / 3 : ℝ)) :\n    1 / 4 ≤ Real.sin x"
+      },
+      {
+        "name": "riemannZeta_eq_fordPartialSum_sub_terms",
+        "line": 115,
+        "signature": "theorem riemannZeta_eq_fordPartialSum_sub_terms\n    {sigma t : ℝ} (hsigma : 0 ≤ sigma) (ht : 3 ≤ t) :\n    ∃ E : ℂ,\n      riemannZeta (fordComplexHeight sigma t) =\n          (∑ n ∈ Finset.Icc 1 (fordFiniteEndpoint t),\n            (n : ℂ) ^ (-fordComplexHeight sigma t)) -\n            ((fordRiemannDadaroCutoff t : ℂ) ^\n              (1 - fordComplexHeight sigma t)) /\n              (1 - fordComplexHeight sigma t) -\n            RiemannZeta.GuthMaynard.sharpZetaBoundaryCoeff\n                (fordComplexHeight sigma t) (fordRiemannDadaroCutoff t) *\n              ((fordRiemannDadaroCutoff t : ℂ) ^\n                (-fordComplexHeight sigma t)) + E ∧\n        ‖E‖ ≤\n          RiemannZeta.GuthMaynard.sharpZetaErrorCoeff\n              (fordComplexHeight sigma t) (fordRiemannDadaroCutoff t) /\n            fordRiemannDadaroCutoff t ^ (sigma + 1)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Extension/GafniTao/HeathBrownAtkinsonBProcess.lean",
+    "sha256": "51851547d1eeee799726a4bf594371538ed3a8bc1d028ce3d279a0698363615d",
+    "imports": [
+      "GafniTao.HeathBrownAtkinsonCurvatureScale",
+      "RiemannZeta.GuthMaynard.SecondOrderMeanValue"
+    ],
+    "declarations": [
+      {
+        "name": "heathBrownAtkinsonPositiveDifference",
+        "line": 21,
+        "signature": "def heathBrownAtkinsonPositiveDifference (t u x : ℝ) : ℝ"
+      },
+      {
+        "name": "hasDerivAt_heathBrownAtkinsonPositiveDifference",
+        "line": 24,
+        "signature": "theorem hasDerivAt_heathBrownAtkinsonPositiveDifference\n    {t u x : ℝ} (ht : 0 < t) (hu : 0 < u) (hx : 0 < x) :\n    HasDerivAt (heathBrownAtkinsonPositiveDifference t u)\n      (heathBrownAtkinsonRealSlope u x -\n        heathBrownAtkinsonRealSlope t x) x"
+      },
+      {
+        "name": "hasDerivAt_heathBrownAtkinsonPositiveDifferenceSlope",
+        "line": 33,
+        "signature": "theorem hasDerivAt_heathBrownAtkinsonPositiveDifferenceSlope\n    {t u x : ℝ} (ht : 0 < t) (hu : 0 < u) (hx : 0 < x) :\n    HasDerivAt\n      (fun y => heathBrownAtkinsonRealSlope u y -\n        heathBrownAtkinsonRealSlope t y)\n      (heathBrownAtkinsonRealCurvature u x -\n        heathBrownAtkinsonRealCurvature t x) x"
+      },
+      {
+        "name": "exists_heathBrownAtkinsonPositiveDifference_secondDifference",
+        "line": 45,
+        "signature": "theorem exists_heathBrownAtkinsonPositiveDifference_secondDifference\n    {t u x : ℝ} (ht : 0 < t) (hu : 0 < u) (hx : 0 < x) :\n    ∃ xi ∈ Set.Ioo x (x + 2),\n      heathBrownAtkinsonRealCurvature u xi -\n          heathBrownAtkinsonRealCurvature t xi =\n        (heathBrownAtkinsonPositiveDifference t u (x + 2) -\n          heathBrownAtkinsonPositiveDifference t u (x + 1)) -\n        (heathBrownAtkinsonPositiveDifference t u (x + 1) -\n          heathBrownAtkinsonPositiveDifference t u x)"
+      },
+      {
+        "name": "heathBrownAtkinsonPositiveDifferenceNat",
+        "line": 78,
+        "signature": "def heathBrownAtkinsonPositiveDifferenceNat\n    (t u : ℝ) (K n : ℕ) : ℝ"
+      },
+      {
+        "name": "heathBrownAtkinsonPositiveDifference_natCast",
+        "line": 85,
+        "signature": "theorem heathBrownAtkinsonPositiveDifference_natCast\n    (t u : ℝ) (K n : ℕ) :\n    heathBrownAtkinsonPositiveDifference t u (K + n : ℕ) =\n      heathBrownAtkinsonPositiveDifferenceNat t u K n"
+      },
+      {
+        "name": "heathBrownAtkinsonBProcessLambda",
+        "line": 95,
+        "signature": "def heathBrownAtkinsonBProcessLambda\n    (t u : ℝ) (K N : ℕ) : ℝ"
+      },
+      {
+        "name": "heathBrownAtkinsonBProcessLambdaUpper",
+        "line": 100,
+        "signature": "def heathBrownAtkinsonBProcessLambdaUpper\n    (t u : ℝ) (K N : ℕ) : ℝ"
+      },
+      {
+        "name": "heathBrownAtkinsonBProcessLambda_pos",
+        "line": 104,
+        "signature": "theorem heathBrownAtkinsonBProcessLambda_pos\n    {t u : ℝ} {K N : ℕ} (hu : 0 < u) (htu : u < t) (hK : 0 < K) :\n    0 < heathBrownAtkinsonBProcessLambda t u K N"
+      },
+      {
+        "name": "heathBrownAtkinsonPositiveDifferenceNat_secondDifference_bounds",
+        "line": 118,
+        "signature": "theorem heathBrownAtkinsonPositiveDifferenceNat_secondDifference_bounds\n    {t u : ℝ} {K N : ℕ}\n    (hu : 0 < u) (htu : u < t) (hK : 0 < K)\n    (hblock : ((K + N + 2 : ℕ) : ℝ) ≤ u)\n    (htUpper : t ≤ 2 * u) :\n    ∀ n, n < N →\n      heathBrownAtkinsonBProcessLambda t u K N ≤\n          (heathBrownAtkinsonPositiveDifferenceNat t u K (n + 2) -\n            heathBrownAtkinsonPositiveDifferenceNat t u K (n + 1)) -\n          (heathBrownAtkinsonPositiveDifferenceNat t u K (n + 1) -\n            heathBrownAtkinsonPositiveDifferenceNat t u K n) ∧\n        (heathBrownAtkinsonPositiveDifferenceNat t u K (n + 2) -\n            heathBrownAtkinsonPositiveDifferenceNat t u K (n + 1)) -\n          (heathBrownAtkinsonPositiveDifferenceNat t u K (n + 1) -\n            heathBrownAtkinsonPositiveDifferenceNat t u K n) ≤\n        heathBrownAtkinsonBProcessLambdaUpper t u K N"
+      },
+      {
+        "name": "heathBrownAtkinsonPositiveDifference_B_process",
+        "line": 193,
+        "signature": "theorem heathBrownAtkinsonPositiveDifference_B_process\n    {t u : ℝ} {K N : ℕ}\n    (hu : 0 < u) (htu : u < t) (hK : 0 < K)\n    (hblock : ((K + N + 2 : ℕ) : ℝ) ≤ u)\n    (htUpper : t ≤ 2 * u) :\n    ‖∑ n ∈ Finset.range (N + 1),\n        unitaryPhase (heathBrownAtkinsonPositiveDifferenceNat t u K n)‖ ≤\n      ((N : ℝ) * heathBrownAtkinsonBProcessLambdaUpper t u K N /\n          (2 * Real.pi) + 2) *\n        (2 * Real.pi /\n            Real.sqrt (heathBrownAtkinsonBProcessLambda t u K N) +\n          2 * (Real.sqrt (heathBrownAtkinsonBProcessLambda t u K N) /\n            heathBrownAtkinsonBProcessLambda t u K N + 1))"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Extension/GafniTao/PintzDigammaSharp.lean",
+    "sha256": "9fc5aaa7ad15686f9a2c525927845213af2ef902eb768eae174eb4b4792a83fe",
+    "imports": [
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries"
+    ],
+    "declarations": [
+      {
+        "name": "exists_re_digamma_le_log_add",
+        "line": 25,
+        "signature": "theorem exists_re_digamma_le_log_add {a b : ℝ} (ha : 0 < a) :\n    ∃ D : ℝ, 0 < D ∧ ∀ z : ℂ, a ≤ z.re → z.re ≤ b →\n      (Complex.digamma z).re ≤ Real.log (|z.im| + 2) + D"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Extension/GafniTao/PintzGammaHorizontalSharp.lean",
+    "sha256": "0fc39e75ff81073d6f1788021f00c0a2bccef7ee1ea1949cfe5f5bb5fc40a2d4",
+    "imports": [
+      "GafniTao.PintzDigammaSharp",
+      "RiemannZeta.GuthMaynard.HughesYoungSmallContourTail",
+      "Mathlib.Analysis.ODE.Gronwall"
+    ],
+    "declarations": [
+      {
+        "name": "exists_norm_Gamma_sq_right_displacement_le",
+        "line": 32,
+        "signature": "theorem exists_norm_Gamma_sq_right_displacement_le {a b : ℝ} (ha : 0 < a) :\n    ∃ D : ℝ, 0 < D ∧ ∀ (z : ℂ) (d : ℝ),\n      a ≤ z.re → z.re + d ≤ b → 0 ≤ d →\n      ‖Complex.Gamma (z + (d : ℂ))‖ ^ 2 ≤\n        ‖Complex.Gamma z‖ ^ 2 *\n          Real.exp (2 * (Real.log (|z.im| + 2) + D) * d)"
+      },
+      {
+        "name": "exists_norm_Gamma_right_displacement_le",
+        "line": 107,
+        "signature": "theorem exists_norm_Gamma_right_displacement_le {a b : ℝ} (ha : 0 < a) :\n    ∃ D : ℝ, 0 < D ∧ ∀ (z : ℂ) (d : ℝ),\n      a ≤ z.re → z.re + d ≤ b → 0 ≤ d →\n      ‖Complex.Gamma (z + (d : ℂ))‖ ≤\n        ‖Complex.Gamma z‖ *\n          Real.exp ((Real.log (|z.im| + 2) + D) * d)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Extension/GafniTao/SharpPerronFunctionalEquation.lean",
+    "sha256": "1bd5f048372f40d2e3f4246b02beea41c81eeb107c754c821449843d56d78d0b",
+    "imports": [
+      "PrimeNumberTheoremAnd.IEANTN.HadamardLogDerivative",
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries",
+      "Mathlib.NumberTheory.LSeries.RiemannZeta"
+    ],
+    "declarations": [
+      {
+        "name": "sharpPerron_zeta_logDeriv_functional_eq",
+        "line": 248,
+        "signature": "theorem sharpPerron_zeta_logDeriv_functional_eq {s : ℂ}\n    (hs1 : s ≠ 1) (hs0 : s ≠ 0)\n    (hζs : riemannZeta s ≠ 0)\n    (hζ1s : riemannZeta (1 - s) ≠ 0) :\n    -deriv riemannZeta s / riemannZeta s =\n      ((-Real.log Real.pi : ℝ) : ℂ)\n      + deriv riemannZeta (1 - s) / riemannZeta (1 - s)\n      + (1 / 2 : ℂ) * (digamma (s / 2) +\n        digamma ((1 - s) / 2))"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/73 Tao, 2026/Extension/Tao2026/StationaryFourierSourceBlock.lean",
+    "sha256": "80d4b397a627253003a7b5f26a33978fb361a4e0eb5b9bb787fc3c05a73434cd",
+    "imports": [
+      "Tao2026.UnequalFourierSourceBlock"
+    ],
+    "declarations": [
+      {
+        "name": "quadraticReciprocalStationaryPoint",
+        "line": 18,
+        "signature": "def quadraticReciprocalStationaryPoint (A B : ℝ) : ℝ"
+      },
+      {
+        "name": "quadraticReciprocalStationaryPoint_spec",
+        "line": 21,
+        "signature": "theorem quadraticReciprocalStationaryPoint_spec\n    {A B : ℝ} (hA : A ≠ 0) :\n    A * quadraticReciprocalStationaryPoint A B + 2 * B = 0"
+      },
+      {
+        "name": "quadraticReciprocalStationaryPoint_same_parameter",
+        "line": 30,
+        "signature": "theorem quadraticReciprocalStationaryPoint_same_parameter\n    (q : ℤ × ℤ) {N : ℝ} (hq₁ : q.1 ≠ 0) (hN : N ≠ 0) :\n    quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * N) =\n      -2 * (q.2 : ℝ) / (q.1 : ℝ)"
+      },
+      {
+        "name": "quadraticReciprocalStationaryPoint_same_parameter_le_two_mul",
+        "line": 41,
+        "signature": "theorem quadraticReciprocalStationaryPoint_same_parameter_le_two_mul\n    {q : ℤ × ℤ} {N R : ℝ} (hq₁ : q.1 ≠ 0) (hN : N ≠ 0)\n    (hq₂ : |(q.2 : ℝ)| ≤ R) :\n    quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * N) ≤ 2 * R"
+      },
+      {
+        "name": "quadraticReciprocalLinearFactor_eq",
+        "line": 59,
+        "signature": "theorem quadraticReciprocalLinearFactor_eq\n    {A B : ℝ} (hA : A ≠ 0) (t : ℝ) :\n    A * t + 2 * B =\n      A * (t - quadraticReciprocalStationaryPoint A B)"
+      },
+      {
+        "name": "abs_quadraticReciprocalLinearFactor_eq",
+        "line": 67,
+        "signature": "theorem abs_quadraticReciprocalLinearFactor_eq\n    {A B : ℝ} (hA : A ≠ 0) (t : ℝ) :\n    |A * t + 2 * B| =\n      |A| * |t - quadraticReciprocalStationaryPoint A B|"
+      },
+      {
+        "name": "quadraticReciprocalSecondLinearFactor_eq",
+        "line": 73,
+        "signature": "theorem quadraticReciprocalSecondLinearFactor_eq\n    {A B : ℝ} (hA : A ≠ 0) (t : ℝ) :\n    2 * A * t + 6 * B =\n      A * (2 * t - 3 * quadraticReciprocalStationaryPoint A B)"
+      },
+      {
+        "name": "unequalQuadraticIntegralAmplitudeDeriv_nonpos_left_of_stationaryPoint",
+        "line": 80,
+        "signature": "theorem unequalQuadraticIntegralAmplitudeDeriv_nonpos_left_of_stationaryPoint\n    {A B t : ℝ} (hA : 0 < A) (ht : 2 ≤ t)\n    (hts : t ≤ quadraticReciprocalStationaryPoint A B) :\n    unequalQuadraticIntegralAmplitudeDeriv A B t ≤ 0"
+      },
+      {
+        "name": "unequalQuadraticIntegralAmplitudeDeriv_nonpos_right_near_stationaryPoint",
+        "line": 107,
+        "signature": "theorem unequalQuadraticIntegralAmplitudeDeriv_nonpos_right_near_stationaryPoint\n    {A B t : ℝ} (hA : 0 < A) (ht : 2 ≤ t)\n    (hst : quadraticReciprocalStationaryPoint A B ≤ t)\n    (hts : t ≤ 3 * quadraticReciprocalStationaryPoint A B / 2) :\n    unequalQuadraticIntegralAmplitudeDeriv A B t ≤ 0"
+      },
+      {
+        "name": "intervalIntegrable_unequalQuadraticIntegralAmplitudeDeriv_of_linear_ne",
+        "line": 130,
+        "signature": "theorem intervalIntegrable_unequalQuadraticIntegralAmplitudeDeriv_of_linear_ne\n    {A B a b : ℝ} (ha : 2 ≤ a) (hab : a ≤ b)\n    (hlin : ∀ t ∈ Set.Icc a b, A * t + 2 * B ≠ 0) :\n    IntervalIntegrable (unequalQuadraticIntegralAmplitudeDeriv A B)\n      volume a b"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_nonpos",
+        "line": 158,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_nonpos\n    {A B a b : ℝ} (ha : 2 ≤ a) (hab : a ≤ b)\n    (hlin : ∀ t ∈ Set.Icc a b, A * t + 2 * B ≠ 0)\n    (hderiv : ∀ t ∈ Set.Icc a b,\n      unequalQuadraticIntegralAmplitudeDeriv A B t ≤ 0) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      2 * ‖unequalQuadraticIntegralFactor‖ *\n        (|unequalQuadraticIntegralAmplitude A B a| +\n          |unequalQuadraticIntegralAmplitude A B b|)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_nonneg",
+        "line": 260,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_nonneg\n    {A B a b : ℝ} (ha : 2 ≤ a) (hab : a ≤ b)\n    (hlin : ∀ t ∈ Set.Icc a b, A * t + 2 * B ≠ 0)\n    (hderiv : ∀ t ∈ Set.Icc a b,\n      0 ≤ unequalQuadraticIntegralAmplitudeDeriv A B t) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      2 * ‖unequalQuadraticIntegralFactor‖ *\n        (|unequalQuadraticIntegralAmplitude A B a| +\n          |unequalQuadraticIntegralAmplitude A B b|)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_abs_le",
+        "line": 358,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_abs_le\n    {A B a b D : ℝ} (ha : 2 ≤ a) (hab : a ≤ b)\n    (hlin : ∀ t ∈ Set.Icc a b, A * t + 2 * B ≠ 0)\n    (hderiv : ∀ t ∈ Set.Icc a b,\n      |unequalQuadraticIntegralAmplitudeDeriv A B t| ≤ D) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      ‖unequalQuadraticIntegralFactor‖ *\n        (|unequalQuadraticIntegralAmplitude A B a| +\n          |unequalQuadraticIntegralAmplitude A B b| + (b - a) * D)"
+      },
+      {
+        "name": "quadraticReciprocalLinearFactor_eq_zero_iff",
+        "line": 432,
+        "signature": "theorem quadraticReciprocalLinearFactor_eq_zero_iff\n    {A B t : ℝ} (hA : A ≠ 0) :\n    A * t + 2 * B = 0 ↔\n      t = quadraticReciprocalStationaryPoint A B"
+      },
+      {
+        "name": "quadraticReciprocalPhase_deriv_eq_zero_iff",
+        "line": 439,
+        "signature": "theorem quadraticReciprocalPhase_deriv_eq_zero_iff\n    {A B t : ℝ} (hA : A ≠ 0) (ht : t ≠ 0) :\n    -(A * t + 2 * B) / t ^ 3 = 0 ↔\n      t = quadraticReciprocalStationaryPoint A B"
+      },
+      {
+        "name": "abs_quadraticReciprocalPhase_deriv_eq",
+        "line": 446,
+        "signature": "theorem abs_quadraticReciprocalPhase_deriv_eq\n    {A B t : ℝ} (hA : A ≠ 0) (ht : 0 < t) :\n    |-(A * t + 2 * B) / t ^ 3| =\n      |A| * |t - quadraticReciprocalStationaryPoint A B| / t ^ 3"
+      },
+      {
+        "name": "abs_quadraticReciprocalPhase_deriv_lower_of_dyadic_far",
+        "line": 453,
+        "signature": "theorem abs_quadraticReciprocalPhase_deriv_lower_of_dyadic_far\n    {A B P t δ : ℝ} (hA : A ≠ 0) (hP : 0 < P)\n    (hPt : P ≤ t) (htP : t ≤ 2 * P) (hδ : 0 ≤ δ)\n    (hfar : δ ≤ |t - quadraticReciprocalStationaryPoint A B|) :\n    |A| * δ / (8 * P ^ 3) ≤ |-(A * t + 2 * B) / t ^ 3|"
+      },
+      {
+        "name": "abs_unequalQuadraticIntegralAmplitude_le_of_dyadic_far",
+        "line": 474,
+        "signature": "theorem abs_unequalQuadraticIntegralAmplitude_le_of_dyadic_far\n    {A B P t δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hPt : P ≤ t) (htP : t ≤ 2 * P) (hδ : 0 < δ)\n    (hfar : δ ≤ |t - quadraticReciprocalStationaryPoint A B|) :\n    |unequalQuadraticIntegralAmplitude A B t| ≤\n      8 * P ^ 3 / (A * δ * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_left_of_stationaryPoint_le",
+        "line": 505,
+        "signature": "theorem norm_quadraticIntervalIntegral_left_of_stationaryPoint_le\n    {A B P a δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P) (hPa : P ≤ a)\n    (hδ : 0 < δ)\n    (hleft : a ≤ quadraticReciprocalStationaryPoint A B - δ)\n    (hstationaryUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    ‖∫ t in a..(quadraticReciprocalStationaryPoint A B - δ),\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      32 * P ^ 3 / (A * δ * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_right_near_stationaryPoint_le",
+        "line": 554,
+        "signature": "theorem norm_quadraticIntervalIntegral_right_near_stationaryPoint_le\n    {A B P b δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hPleft : P ≤ quadraticReciprocalStationaryPoint A B + δ)\n    (hδ : 0 < δ)\n    (hright : quadraticReciprocalStationaryPoint A B + δ ≤ b)\n    (hbturn : b ≤ 3 * quadraticReciprocalStationaryPoint A B / 2)\n    (hbP : b ≤ 2 * P) :\n    ‖∫ t in (quadraticReciprocalStationaryPoint A B + δ)..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      32 * P ^ 3 / (A * δ * Real.log P)"
+      },
+      {
+        "name": "abs_unequalQuadraticIntegralAmplitudeDeriv_le_right_turning",
+        "line": 608,
+        "signature": "theorem abs_unequalQuadraticIntegralAmplitudeDeriv_le_right_turning\n    {A B P t : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (htLower : 3 * quadraticReciprocalStationaryPoint A B / 2 ≤ t)\n    (htUpper : t ≤ 2 * P) :\n    |unequalQuadraticIntegralAmplitudeDeriv A B t| ≤\n      64 * P / (A * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_right_tail_le",
+        "line": 703,
+        "signature": "theorem norm_quadraticIntervalIntegral_right_tail_le\n    {A B P b : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hstart : 3 * quadraticReciprocalStationaryPoint A B / 2 ≤ b)\n    (hbP : b ≤ 2 * P) :\n    ‖∫ t in (3 * quadraticReciprocalStationaryPoint A B / 2)..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      160 * P ^ 2 / (A * Real.log P)"
+      },
+      {
+        "name": "quadraticReciprocalStationaryPoint_pos_of_pos_neg",
+        "line": 766,
+        "signature": "theorem quadraticReciprocalStationaryPoint_pos_of_pos_neg\n    {A B : ℝ} (hA : 0 < A) (hB : B < 0) :\n    0 < quadraticReciprocalStationaryPoint A B"
+      },
+      {
+        "name": "quadraticReciprocalStationaryPoint_pos_of_neg_pos",
+        "line": 772,
+        "signature": "theorem quadraticReciprocalStationaryPoint_pos_of_neg_pos\n    {A B : ℝ} (hA : A < 0) (hB : 0 < B) :\n    0 < quadraticReciprocalStationaryPoint A B"
+      },
+      {
+        "name": "abs_quadraticCoefficient_eq_abs_linear_mul_stationaryPoint_div_two",
+        "line": 778,
+        "signature": "theorem abs_quadraticCoefficient_eq_abs_linear_mul_stationaryPoint_div_two\n    {A B : ℝ} (hA : A ≠ 0) :\n    |B| = |A| * |quadraticReciprocalStationaryPoint A B| / 2"
+      },
+      {
+        "name": "abs_quadraticCoefficient_le_abs_linear_mul_scale_of_stationaryPoint",
+        "line": 791,
+        "signature": "theorem abs_quadraticCoefficient_le_abs_linear_mul_scale_of_stationaryPoint\n    {A B P : ℝ} (hA : A ≠ 0) (hstationaryNonneg :\n      0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hstationaryUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    |B| ≤ |A| * P"
+      },
+      {
+        "name": "reciprocalPhaseScale_le_five_mul_abs_linear_div_sixteen",
+        "line": 801,
+        "signature": "theorem reciprocalPhaseScale_le_five_mul_abs_linear_div_sixteen\n    {A B P : ℝ} (hA : A ≠ 0) (hP : 0 < P)\n    (hstationaryNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hstationaryUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    reciprocalPhaseScale A B 2 (4 * P) ≤\n      5 * |A| / (16 * P)"
+      },
+      {
+        "name": "abs_linear_lower_of_phaseScale_lower_of_stationaryPoint",
+        "line": 821,
+        "signature": "theorem abs_linear_lower_of_phaseScale_lower_of_stationaryPoint\n    {A B P L : ℝ} (hA : A ≠ 0) (hP : 0 < P)\n    (hstationaryNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hstationaryUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hL : L ≤ reciprocalPhaseScale A B 2 (4 * P)) :\n    (16 / 5) * P * L ≤ |A|"
+      },
+      {
+        "name": "abs_quadraticReciprocalPhase_deriv_lower_of_sourceScale_far",
+        "line": 837,
+        "signature": "theorem abs_quadraticReciprocalPhase_deriv_lower_of_sourceScale_far\n    {A B P t δ L : ℝ} (hA : A ≠ 0) (hP : 0 < P)\n    (hstationaryNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hstationaryUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hL : L ≤ reciprocalPhaseScale A B 2 (4 * P))\n    (hPt : P ≤ t) (htP : t ≤ 2 * P) (hδ : 0 ≤ δ)\n    (hfar : δ ≤ |t - quadraticReciprocalStationaryPoint A B|) :\n    (2 / 5) * L * δ / P ^ 2 ≤\n      |-(A * t + 2 * B) / t ^ 3|"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_length_div_log",
+        "line": 865,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_length_div_log\n    (A B : ℝ) {P c d : ℝ} (hP : 2 ≤ P)\n    (hPc : P ≤ c) (hcd : c ≤ d) :\n    ‖∫ t in c..d,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      (d - c) / Real.log P"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_two_mul_radius_div_log",
+        "line": 894,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_two_mul_radius_div_log\n    (A B : ℝ) {P c d δ : ℝ} (hP : 2 ≤ P) (hPc : P ≤ c)\n    (hcd : c ≤ d)\n    (hc : quadraticReciprocalStationaryPoint A B - δ ≤ c)\n    (hd : d ≤ quadraticReciprocalStationaryPoint A B + δ) :\n    ‖∫ t in c..d,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      2 * δ / Real.log P"
+      },
+      {
+        "name": "intervalIntegrable_quadraticLogIntegrand",
+        "line": 908,
+        "signature": "theorem intervalIntegrable_quadraticLogIntegrand\n    (A B : ℝ) {a b : ℝ} (ha : 1 < a) (hab : a ≤ b) :\n    IntervalIntegrable\n      (fun t => standardAdditiveCharacter (reciprocalPhase A B 2 t) /\n        Real.log t) volume a b"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_right_of_stationaryPoint_le",
+        "line": 930,
+        "signature": "theorem norm_quadraticIntervalIntegral_right_of_stationaryPoint_le\n    {A B P b δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hδ : 0 < δ) (hδUpper : δ ≤ P / 2)\n    (hright : quadraticReciprocalStationaryPoint A B + δ ≤ b)\n    (hbP : b ≤ 2 * P) :\n    ‖∫ t in (quadraticReciprocalStationaryPoint A B + δ)..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      32 * P ^ 3 / (A * δ * Real.log P) +\n        160 * P ^ 2 / (A * Real.log P)"
+      },
+      {
+        "name": "quadraticIntervalIntegral_eq_stationarySplit",
+        "line": 991,
+        "signature": "theorem quadraticIntervalIntegral_eq_stationarySplit\n    (A B : ℝ) {a b δ : ℝ} (ha : 1 < a) (hδ : 0 ≤ δ)\n    (hleft : a ≤ quadraticReciprocalStationaryPoint A B - δ)\n    (hright : quadraticReciprocalStationaryPoint A B + δ ≤ b) :\n    ∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t =\n      (∫ t in a..(quadraticReciprocalStationaryPoint A B - δ),\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t) +\n      (∫ t in (quadraticReciprocalStationaryPoint A B - δ)..\n          (quadraticReciprocalStationaryPoint A B + δ),\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t) +\n      ∫ t in (quadraticReciprocalStationaryPoint A B + δ)..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationaryFar_add_near",
+        "line": 1018,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationaryFar_add_near\n    (A B : ℝ) {P a b δ : ℝ} (hP : 2 ≤ P) (hPa : P ≤ a)\n    (hδ : 0 ≤ δ)\n    (hleft : a ≤ quadraticReciprocalStationaryPoint A B - δ)\n    (hright : quadraticReciprocalStationaryPoint A B + δ ≤ b) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      ‖∫ t in a..(quadraticReciprocalStationaryPoint A B - δ),\n          standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ +\n        2 * δ / Real.log P +\n      ‖∫ t in (quadraticReciprocalStationaryPoint A B + δ)..b,\n          standardAdditiveCharacter (reciprocalPhase A B 2 t) /\n            Real.log t‖"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_raw",
+        "line": 1070,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_raw\n    {A B P a b δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hPa : P ≤ a) (hbP : b ≤ 2 * P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hδ : 0 < δ) (hδUpper : δ ≤ P / 2)\n    (hleft : a ≤ quadraticReciprocalStationaryPoint A B - δ)\n    (hright : quadraticReciprocalStationaryPoint A B + δ ≤ b) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      64 * P ^ 3 / (A * δ * Real.log P) + 2 * δ / Real.log P +\n        160 * P ^ 2 / (A * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_sourceScale",
+        "line": 1107,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_sourceScale\n    {A B P L a b δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P) (hL : 0 < L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ A)\n    (hPa : P ≤ a) (hbP : b ≤ 2 * P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hδ : 0 < δ) (hδUpper : δ ≤ P / 2)\n    (hleft : a ≤ quadraticReciprocalStationaryPoint A B - δ)\n    (hright : quadraticReciprocalStationaryPoint A B + δ ≤ b) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      20 * P ^ 2 / (L * δ * Real.log P) + 2 * δ / Real.log P +\n        50 * P / (L * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_optimized",
+        "line": 1161,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_optimized\n    {A B P L a b : ℝ} (hA : 0 < A) (hP : 2 ≤ P) (hL : 4 ≤ L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ A)\n    (hPa : P ≤ a) (hbP : b ≤ 2 * P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hleft : a ≤ quadraticReciprocalStationaryPoint A B - P / Real.sqrt L)\n    (hright : quadraticReciprocalStationaryPoint A B + P / Real.sqrt L ≤ b) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      50 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_raw_clipped",
+        "line": 1220,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_raw_clipped\n    {A B P a b δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)\n    (hsa : a ≤ quadraticReciprocalStationaryPoint A B)\n    (hsb : quadraticReciprocalStationaryPoint A B ≤ b)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hδ : 0 < δ) (hδUpper : δ ≤ P / 2) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      64 * P ^ 3 / (A * δ * Real.log P) + 2 * δ / Real.log P +\n        160 * P ^ 2 / (A * Real.log P)"
+      },
+      {
+        "name": "stationaryRawMajorant_le_sourceScale",
+        "line": 1324,
+        "signature": "theorem stationaryRawMajorant_le_sourceScale\n    {A P L δ : ℝ} (hP : 2 ≤ P) (hL : 0 < L)\n    (hδ : 0 < δ) (hAsource : (16 / 5 : ℝ) * P * L ≤ A) :\n    64 * P ^ 3 / (A * δ * Real.log P) + 2 * δ / Real.log P +\n        160 * P ^ 2 / (A * Real.log P) ≤\n      20 * P ^ 2 / (L * δ * Real.log P) + 2 * δ / Real.log P +\n        50 * P / (L * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_sourceScale_clipped",
+        "line": 1359,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_sourceScale_clipped\n    {A B P L a b δ : ℝ} (hA : 0 < A) (hP : 2 ≤ P) (hL : 0 < L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ A)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)\n    (hsa : a ≤ quadraticReciprocalStationaryPoint A B)\n    (hsb : quadraticReciprocalStationaryPoint A B ≤ b)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P)\n    (hδ : 0 < δ) (hδUpper : δ ≤ P / 2) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      20 * P ^ 2 / (L * δ * Real.log P) + 2 * δ / Real.log P +\n        50 * P / (L * Real.log P)"
+      },
+      {
+        "name": "stationarySourceScaleMajorant_optimized",
+        "line": 1376,
+        "signature": "theorem stationarySourceScaleMajorant_optimized\n    {P L : ℝ} (hP : 2 ≤ P) (hL : 4 ≤ L) :\n    20 * P ^ 2 / (L * (P / Real.sqrt L) * Real.log P) +\n        2 * (P / Real.sqrt L) / Real.log P +\n        50 * P / (L * Real.log P) ≤\n      50 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_optimized_clipped",
+        "line": 1422,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_optimized_clipped\n    {A B P L a b : ℝ} (hA : 0 < A) (hP : 2 ≤ P) (hL : 4 ≤ L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ A)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)\n    (hsa : a ≤ quadraticReciprocalStationaryPoint A B)\n    (hsb : quadraticReciprocalStationaryPoint A B ≤ b)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      50 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "quadraticReciprocalStationaryPoint_neg_coefficients",
+        "line": 1444,
+        "signature": "theorem quadraticReciprocalStationaryPoint_neg_coefficients (A B : ℝ) :\n    quadraticReciprocalStationaryPoint (-A) (-B) =\n      quadraticReciprocalStationaryPoint A B"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_of_neg",
+        "line": 1450,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_of_neg\n    {A B P L a b : ℝ} (hA : A < 0) (hP : 2 ≤ P) (hL : 4 ≤ L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ -A)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)\n    (hsa : a ≤ quadraticReciprocalStationaryPoint A B)\n    (hsb : quadraticReciprocalStationaryPoint A B ≤ b)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      50 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs",
+        "line": 1476,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs\n    {A B P L a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P) (hL : 4 ≤ L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ |A|)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)\n    (hsa : a ≤ quadraticReciprocalStationaryPoint A B)\n    (hsb : quadraticReciprocalStationaryPoint A B ≤ b)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      50 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_stationary_optimized_dyadic",
+        "line": 1514,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_stationary_optimized_dyadic\n    {A B P L a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P) (hL : 4 ≤ L)\n    (hAsource : (16 / 5 : ℝ) * P * L ≤ |A|)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)\n    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      100 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "unequalQuadraticIntegralAmplitudeDeriv_nonneg_right_far",
+        "line": 1616,
+        "signature": "theorem unequalQuadraticIntegralAmplitudeDeriv_nonneg_right_far\n    {A B t : ℝ} (hA : 0 < A)\n    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hlog : 2 ≤ Real.log t)\n    (hsep : 2 * quadraticReciprocalStationaryPoint A B ≤ t) :\n    0 ≤ unequalQuadraticIntegralAmplitudeDeriv A B t"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half",
+        "line": 1648,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half\n    {A B P a b : ℝ} (hA : 0 < A) (hP : 2 ≤ P)\n    (hlogP : 2 ≤ Real.log P)\n    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hsFar : quadraticReciprocalStationaryPoint A B ≤ P / 2)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      64 * P ^ 2 / (A * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half_abs",
+        "line": 1710,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half_abs\n    {A B P a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P)\n    (hlogP : 2 ≤ Real.log P)\n    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hsFar : quadraticReciprocalStationaryPoint A B ≤ P / 2)\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      64 * P ^ 2 / (|A| * Real.log P)"
+      },
+      {
+        "name": "norm_quadraticIntervalIntegral_le_sourceScale_of_stationaryPoint_le_half",
+        "line": 1736,
+        "signature": "theorem norm_quadraticIntervalIntegral_le_sourceScale_of_stationaryPoint_le_half\n    {A B P L a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P)\n    (hlogP : 2 ≤ Real.log P) (hL : 0 < L)\n    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)\n    (hsFar : quadraticReciprocalStationaryPoint A B ≤ P / 2)\n    (hscale : L ≤ reciprocalPhaseScale A B 2 (4 * P))\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :\n    ‖∫ t in a..b,\n        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤\n      20 * P / (L * Real.log P)"
+      },
+      {
+        "name": "norm_fourierModeIntegral_Ico_le_stationary_optimized_clipped",
+        "line": 1767,
+        "signature": "theorem norm_fourierModeIntegral_Ico_le_stationary_optimized_clipped\n    {q : ℤ × ℤ} {N M P L a b : ℝ}\n    (hlinear : (q.1 : ℝ) * N ≠ 0)\n    (hP : 2 ≤ P) (hL : 4 ≤ L) (hPa : P ≤ a) (hab : a ≤ b)\n    (hbP : b ≤ 2 * P)\n    (hsa : a ≤ quadraticReciprocalStationaryPoint\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M))\n    (hsb : quadraticReciprocalStationaryPoint\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ b)\n    (hscale : L ≤ reciprocalPhaseScale\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2 (4 * P)) :\n    ‖fourierModeIntegral (Set.Ico a b) q N M 2‖ ≤\n      50 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "norm_fourierModeIntegral_Ico_le_stationary_optimized_dyadic",
+        "line": 1797,
+        "signature": "theorem norm_fourierModeIntegral_Ico_le_stationary_optimized_dyadic\n    {q : ℤ × ℤ} {N M P L a b : ℝ}\n    (hlinear : (q.1 : ℝ) * N ≠ 0)\n    (hP : 2 ≤ P) (hL : 4 ≤ L) (hPa : P ≤ a) (hab : a ≤ b)\n    (hbP : b ≤ 2 * P)\n    (hsLower : P ≤ quadraticReciprocalStationaryPoint\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M))\n    (hsUpper : quadraticReciprocalStationaryPoint\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ 2 * P)\n    (hscale : L ≤ reciprocalPhaseScale\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2 (4 * P)) :\n    ‖fourierModeIntegral (Set.Ico a b) q N M 2‖ ≤\n      100 * P / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "norm_fourierModeIntegral_Ico_le_sourceScale_of_stationaryPoint_le_half",
+        "line": 1824,
+        "signature": "theorem norm_fourierModeIntegral_Ico_le_sourceScale_of_stationaryPoint_le_half\n    {q : ℤ × ℤ} {N M P L a b : ℝ}\n    (hlinear : (q.1 : ℝ) * N ≠ 0)\n    (hP : 2 ≤ P) (hlogP : 2 ≤ Real.log P) (hL : 0 < L)\n    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M))\n    (hsFar : quadraticReciprocalStationaryPoint\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ P / 2)\n    (hscale : L ≤ reciprocalPhaseScale\n      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2 (4 * P))\n    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :\n    ‖fourierModeIntegral (Set.Ico a b) q N M 2‖ ≤\n      20 * P / (L * Real.log P)"
+      },
+      {
+        "name": "eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary",
+        "line": 1848,
+        "signature": "theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary\n    (hVinogradov : VinogradovExponentialSumEstimate)\n    {A₀ ε S : ℝ} (hA₀ : 0 < A₀) (hε : 0 < ε)\n    (haexp : 0 ≤ 3 / 2 - ε) (hS : 0 ≤ S) :\n    ∀ᶠ P : ℕ in atTop, ∀ (a b : ℕ) (q : ℤ × ℤ) (N M L : ℝ),\n      P ≤ a → a < b → b ≤ 2 * P →\n      (q.1 : ℝ) * N ≠ 0 → (q.2 : ℝ) * M ≠ 0 → 4 ≤ L →\n      (a : ℝ) ≤ quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) →\n      quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ (b : ℝ) →\n      (Real.log b) ^ vaughanTypeIILogSavingPhaseExponent (S + 1) ≤ L →\n      L ≤ reciprocalPhaseScale ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2\n        (4 * (P : ℝ)) →\n      |(q.1 : ℝ) * N| ≤\n        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →\n      |(q.2 : ℝ) * M| ≤\n        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →\n      ‖primeFourierModeSum (P : ℝ)\n          (Set.Ico (a : ℝ) (b : ℝ)) q N M 2 -\n        fourierModeIntegral (Set.Ico (a : ℝ) (b : ℝ)) q N M 2‖ ≤\n        vaughanPrimeQuadraticDecayConstant * (P : ℝ) *\n            (Real.log P) ^ (-S) +\n          50 * (P : ℝ) / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary_dyadic",
+        "line": 1894,
+        "signature": "theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary_dyadic\n    (hVinogradov : VinogradovExponentialSumEstimate)\n    {A₀ ε S : ℝ} (hA₀ : 0 < A₀) (hε : 0 < ε)\n    (haexp : 0 ≤ 3 / 2 - ε) (hS : 0 ≤ S) :\n    ∀ᶠ P : ℕ in atTop, ∀ (a b : ℕ) (q : ℤ × ℤ) (N M L : ℝ),\n      P ≤ a → a < b → b ≤ 2 * P →\n      (q.1 : ℝ) * N ≠ 0 → (q.2 : ℝ) * M ≠ 0 → 4 ≤ L →\n      (P : ℝ) ≤ quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) →\n      quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ 2 * (P : ℝ) →\n      (Real.log b) ^ vaughanTypeIILogSavingPhaseExponent (S + 1) ≤ L →\n      L ≤ reciprocalPhaseScale ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2\n        (4 * (P : ℝ)) →\n      |(q.1 : ℝ) * N| ≤\n        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →\n      |(q.2 : ℝ) * M| ≤\n        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →\n      ‖primeFourierModeSum (P : ℝ)\n          (Set.Ico (a : ℝ) (b : ℝ)) q N M 2 -\n        fourierModeIntegral (Set.Ico (a : ℝ) (b : ℝ)) q N M 2‖ ≤\n        vaughanPrimeQuadraticDecayConstant * (P : ℝ) *\n            (Real.log P) ^ (-S) +\n          100 * (P : ℝ) / (Real.sqrt L * Real.log P)"
+      },
+      {
+        "name": "eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary_left",
+        "line": 1939,
+        "signature": "theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary_left\n    (hVinogradov : VinogradovExponentialSumEstimate)\n    {A₀ ε S : ℝ} (hA₀ : 0 < A₀) (hε : 0 < ε)\n    (haexp : 0 ≤ 3 / 2 - ε) (hS : 0 ≤ S) :\n    ∀ᶠ P : ℕ in atTop, ∀ (a b : ℕ) (q : ℤ × ℤ) (N M L : ℝ),\n      P ≤ a → a < b → b ≤ 2 * P →\n      (q.1 : ℝ) * N ≠ 0 → (q.2 : ℝ) * M ≠ 0 → 4 ≤ L →\n      0 ≤ quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) →\n      quadraticReciprocalStationaryPoint\n        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ (P : ℝ) / 2 →\n      (Real.log b) ^ vaughanTypeIILogSavingPhaseExponent (S + 1) ≤ L →\n      L ≤ reciprocalPhaseScale ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2\n        (4 * (P : ℝ)) →\n      |(q.1 : ℝ) * N| ≤\n        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →\n      |(q.2 : ℝ) * M| ≤\n        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →\n      ‖primeFourierModeSum (P : ℝ)\n          (Set.Ico (a : ℝ) (b : ℝ)) q N M 2 -\n        fourierModeIntegral (Set.Ico (a : ℝ) (b : ℝ)) q N M 2‖ ≤\n        vaughanPrimeQuadraticDecayConstant * (P : ℝ) *\n            (Real.log P) ^ (-S) +\n          20 * (P : ℝ) / (L * Real.log P)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/77 Dong-Wang-Wang-Zhang, 2026/Extension/DongWangWangZhang2026/GammaLogBounds.lean",
+    "sha256": "3c943b5610526cd2c56a9ebb567a79299673fe52d807d34589e2b14e80492f46",
+    "imports": [
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries",
+      "Mathlib.NumberTheory.Harmonic.Bounds"
+    ],
+    "declarations": [
+      {
+        "name": "norm_le_norm_add_nat",
+        "line": 17,
+        "signature": "theorem norm_le_norm_add_nat {z : ℂ} (hz : 0 ≤ z.re) (n : ℕ) :\n    ‖z‖ ≤ ‖z + (n : ℂ)‖"
+      },
+      {
+        "name": "digamma_real_head_le",
+        "line": 25,
+        "signature": "theorem digamma_real_head_le {z : ℂ} (hz : 1 / 4 ≤ z.re)\n    {N : ℕ} (hN : (N : ℝ) ≤ ‖z‖ + 2) :\n    0 ≤ (∑ n ∈ range N, ((z + (n : ℂ))⁻¹).re) ∧\n      (∑ n ∈ range N, ((z + (n : ℂ))⁻¹).re) ≤ 9"
+      },
+      {
+        "name": "digamma_norm_tail_le",
+        "line": 50,
+        "signature": "theorem digamma_norm_tail_le {z : ℂ} (hz : 1 / 4 ≤ z.re)\n    {N : ℕ} (hN : 1 ≤ N) (hR : ‖z‖ + 1 ≤ (N : ℝ)) :\n    ‖∑' i : ℕ, ((((i + N : ℕ) : ℂ) + 1)⁻¹ - (z + (i + N : ℕ))⁻¹)‖ ≤ 4"
+      },
+      {
+        "name": "abs_re_digamma_sub_log_norm_le",
+        "line": 83,
+        "signature": "theorem abs_re_digamma_sub_log_norm_le {z : ℂ} (hz : 1 / 4 ≤ z.re) :\n    |(digamma z).re - Real.log (‖z‖ + 2)| ≤\n      14 + |Real.eulerMascheroniConstant|"
+      },
+      {
+        "name": "re_digamma_source_upper",
+        "line": 123,
+        "signature": "theorem re_digamma_source_upper {a v : ℝ} (ha : 0 < a) (hv : 2 ≤ |v|) :\n    (digamma ((((1 + a : ℝ) : ℂ) + (v : ℂ) * I) / 2)).re ≤\n      Real.log (2 + a + |v|) + (14 + |Real.eulerMascheroniConstant|)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/77 Dong-Wang-Wang-Zhang, 2026/Extension/DongWangWangZhang2026/GammaRatioBounds.lean",
+    "sha256": "97be860a116078c5dd23dc8463121b46d12b63dd9905c690103d5b7e0bf96736",
+    "imports": [
+      "DongWangWangZhang2026.GammaLogBounds",
+      "Mathlib.Analysis.Calculus.Deriv.MeanValue"
+    ],
+    "declarations": [
+      {
+        "name": "hasDerivAt_complex_normSq",
+        "line": 18,
+        "signature": "theorem hasDerivAt_complex_normSq\n    {g : ℝ → ℂ} {x : ℝ} {g' : ℂ} (hg : HasDerivAt g g' x) :\n    HasDerivAt (fun u => Complex.normSq (g u))\n      (2 * (starRingEnd ℂ (g x) * g').re) x"
+      },
+      {
+        "name": "hasDerivAt_real_log_norm",
+        "line": 34,
+        "signature": "theorem hasDerivAt_real_log_norm\n    {g : ℝ → ℂ} {x : ℝ} {g' : ℂ} (hg : HasDerivAt g g' x)\n    (hgne : g x ≠ 0) :\n    HasDerivAt (fun u => Real.log ‖g u‖) (g' / g x).re x"
+      },
+      {
+        "name": "hasDerivAt_log_norm_Gamma_horizontal",
+        "line": 55,
+        "signature": "theorem hasDerivAt_log_norm_Gamma_horizontal {σ : ℝ} (hσ : 0 < σ) (u : ℝ) :\n    HasDerivAt (fun x : ℝ => Real.log ‖Gamma ((x : ℂ) + (u : ℂ) * I / 2)‖)\n      (digamma ((σ : ℂ) + (u : ℂ) * I / 2)).re σ"
+      },
+      {
+        "name": "re_digamma_source_segment_upper",
+        "line": 71,
+        "signature": "theorem re_digamma_source_segment_upper {σ u : ℝ}\n    (hσ : σ ∈ Icc (1 / 4 : ℝ) (3 / 4)) (hu : 2 ≤ |u|) :\n    (digamma ((σ : ℂ) + (u : ℂ) * I / 2)).re ≤\n      Real.log (2 + |u|) + (14 + |Real.eulerMascheroniConstant|)"
+      },
+      {
+        "name": "log_norm_Gamma_source_difference_le",
+        "line": 89,
+        "signature": "theorem log_norm_Gamma_source_difference_le {a u : ℝ}\n    (ha : 0 < a) (ha2 : a ≤ 1 / 2) (hu : 2 ≤ |u|) :\n    Real.log ‖Gamma ((((1 + a : ℝ) : ℂ) + (u : ℂ) * I) / 2)‖ -\n      Real.log ‖Gamma ((((1 - a : ℝ) : ℂ) + (u : ℂ) * I) / 2)‖ ≤\n        a * (Real.log (2 + |u|) + (14 + |Real.eulerMascheroniConstant|))"
+      },
+      {
+        "name": "norm_Gamma_source_ratio_le",
+        "line": 117,
+        "signature": "theorem norm_Gamma_source_ratio_le {a u : ℝ}\n    (ha : 0 < a) (ha2 : a ≤ 1 / 2) (hu : 2 ≤ |u|) :\n    ‖Gamma ((((1 + a : ℝ) : ℂ) + (u : ℂ) * I) / 2)‖ ≤\n      ‖Gamma ((((1 - a : ℝ) : ℂ) + (u : ℂ) * I) / 2)‖ *\n        Real.exp (a * (Real.log (2 + |u|) + (14 + |Real.eulerMascheroniConstant|)))"
+      },
+      {
+        "name": "norm_GammaReal_source_ratio_le",
+        "line": 137,
+        "signature": "theorem norm_GammaReal_source_ratio_le {a u : ℝ}\n    (ha : 0 < a) (ha2 : a ≤ 1 / 2) (hu : 2 ≤ |u|) :\n    ‖Gammaℝ (((1 + a : ℝ) : ℂ) + (u : ℂ) * I)‖ ≤\n      ‖Gammaℝ (((1 - a : ℝ) : ℂ) + (u : ℂ) * I)‖ *\n        Real.exp (a * (Real.log (2 + |u|) + (14 + |Real.eulerMascheroniConstant|)))"
+      },
+      {
+        "name": "re_digamma_source_lower",
+        "line": 152,
+        "signature": "theorem re_digamma_source_lower {a : ℝ} (ha : 0 < a) (u : ℝ) :\n    Real.log (2 + |u|) - (14 + |Real.eulerMascheroniConstant| + Real.log 2) ≤\n      (digamma ((((1 + a : ℝ) : ℂ) + (u : ℂ) * I) / 2)).re"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/77 Dong-Wang-Wang-Zhang, 2026/Extension/DongWangWangZhang2026/LogarithmicBlockBound.lean",
+    "sha256": "34625dec58501c19250d323a1905f741f06cfdb1fb8dd3721c1fe7be0a9aed89",
+    "imports": [
+      "DongWangWangZhang2026.ZetaSum",
+      "DongWangWangZhang2026.LogarithmicDerivativeBounds",
+      "GuthMaynard.WeylExplicit"
+    ],
+    "declarations": [
+      {
+        "name": "logarithmic_correlation_extended_scale",
+        "line": 19,
+        "signature": "theorem logarithmic_correlation_extended_scale {Z : ℝ} (hZ : 1 ≤ Z)\n    (A H : ℕ) (hA : 0 < A) (hHY : (H : ℝ) * Z ^ (4 : ℕ) ≤ A)\n    (hAZ : (A : ℝ) ≤ Z ^ (8 : ℕ)) :\n    simpleLogarithmicCorrelationBound (Z ^ (12 : ℕ)) A A H ≤\n      100 * (Z ^ (4 : ℕ) + 3 * (A : ℝ) / Z ^ (2 : ℕ))"
+      },
+      {
+        "name": "logarithmic_weyl_prefix_extended",
+        "line": 59,
+        "signature": "theorem logarithmic_weyl_prefix_extended {Z : ℝ} (hZ : 1 ≤ Z)\n    (A N : ℕ) (hA : 0 < A) (hNA : N ≤ A)\n    (hYA : Z ^ (4 : ℕ) ≤ A) (hAZ : (A : ℝ) ≤ Z ^ (8 : ℕ)) :\n    ‖logarithmicSum (Z ^ (12 : ℕ)) A (A + N)‖ ≤\n      30 * (Real.sqrt ((A : ℝ) * Z ^ (4 : ℕ)) + (A : ℝ) / Z)"
+      },
+      {
+        "name": "source_logarithmic_prefix_uniform",
+        "line": 138,
+        "signature": "theorem source_logarithmic_prefix_uniform {Z : ℝ} (hZ : 2 ≤ Z)\n    (A N : ℕ) (hA : 0 < A) (hNA : N ≤ A) :\n    ‖∑ n ∈ Finset.range N,\n      unitaryPhase (logarithmicPhase (Z ^ (12 : ℕ)) (A + 1 + n))‖ ≤\n        120 * (Z ^ (2 : ℕ) * Real.sqrt A + (A : ℝ) / Z)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/77 Dong-Wang-Wang-Zhang, 2026/Extension/DongWangWangZhang2026/LogarithmicDerivativeBounds.lean",
+    "sha256": "abee5d02330d4385d4890099a89ec8901395f84a8d29b373c6fafeac4e32ddc9",
+    "imports": [
+      "DongWangWangZhang2026.ZetaSum",
+      "GuthMaynard.LogarithmicKernel"
+    ],
+    "declarations": [
+      {
+        "name": "source_logarithmic_prefix_first_derivative",
+        "line": 23,
+        "signature": "theorem source_logarithmic_prefix_first_derivative\n    (A L : ℕ) (t : ℝ) (hA : 0 < A) (hL : L ≤ A)\n    (htOne : 1 ≤ t) (htA : t ≤ (A : ℝ)) :\n    ‖∑ n ∈ Finset.range L,\n        unitaryPhase (logarithmicPhase t (A + 1 + n))‖ ≤\n      6 * Real.pi * (A : ℝ) / t"
+      },
+      {
+        "name": "source_logarithmic_prefix_second_derivative",
+        "line": 172,
+        "signature": "theorem source_logarithmic_prefix_second_derivative\n    (A L : ℕ) (t : ℝ) (hA : 0 < A) (hL : L ≤ A)\n    (hAt : (A : ℝ) ≤ t) (htA : t ≤ (A : ℝ) ^ 2) :\n    ‖∑ n ∈ Finset.range L,\n        unitaryPhase (logarithmicPhase t (A + 1 + n))‖ ≤\n      100 * Real.sqrt t"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/77 Dong-Wang-Wang-Zhang, 2026/Extension/DongWangWangZhang2026/ZetaSum.lean",
+    "sha256": "17642f646bc69ea3a31b7f26b2f023d3eca0f814e5a71dca2eeb2a5507ac6a55",
+    "imports": [
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      {
+        "name": "zetaTerm",
+        "line": 20,
+        "signature": "def zetaTerm (t : ℝ) (n : ℕ) : ℂ"
+      },
+      {
+        "name": "zetaTerm_eq_cpow",
+        "line": 26,
+        "signature": "theorem zetaTerm_eq_cpow (t : ℝ) {n : ℕ} (hn : n ≠ 0) :\n    zetaTerm t n = (n : ℂ) ^ ((t : ℂ) * I)"
+      },
+      {
+        "name": "zetaTerm_eq_exp",
+        "line": 33,
+        "signature": "theorem zetaTerm_eq_exp (t : ℝ) {n : ℕ} (hn : n ≠ 0) :\n    zetaTerm t n = Complex.exp (((t * Real.log n : ℝ) : ℂ) * I)"
+      },
+      {
+        "name": "norm_zetaTerm",
+        "line": 41,
+        "signature": "theorem norm_zetaTerm (t : ℝ) {n : ℕ} (hn : 0 < n) : ‖zetaTerm t n‖ = 1"
+      },
+      {
+        "name": "zetaTerm_mul",
+        "line": 45,
+        "signature": "theorem zetaTerm_mul (t : ℝ) (m n : ℕ) :\n    zetaTerm t (m * n) = zetaTerm t m * zetaTerm t n"
+      },
+      {
+        "name": "zetaTerm_neg",
+        "line": 55,
+        "signature": "theorem zetaTerm_neg (t : ℝ) (n : ℕ) :\n    zetaTerm (-t) n = star (zetaTerm t n)"
+      },
+      {
+        "name": "zetaTerm_add",
+        "line": 66,
+        "signature": "theorem zetaTerm_add (t u : ℝ) (n : ℕ) :\n    zetaTerm (t + u) n = zetaTerm t n * zetaTerm u n"
+      },
+      {
+        "name": "zetaTerm_sub",
+        "line": 76,
+        "signature": "theorem zetaTerm_sub (t u : ℝ) (n : ℕ) :\n    zetaTerm (t - u) n = zetaTerm t n * star (zetaTerm u n)"
+      },
+      {
+        "name": "zetaSum",
+        "line": 81,
+        "signature": "def zetaSum (x t : ℝ) : ℂ"
+      },
+      {
+        "name": "zetaSum_eq_sum_exp",
+        "line": 83,
+        "signature": "theorem zetaSum_eq_sum_exp (x t : ℝ) :\n    zetaSum x t = ∑ n ∈ Finset.Icc 1 ⌊x⌋₊,\n      Complex.exp (((t * Real.log n : ℝ) : ℂ) * I)"
+      },
+      {
+        "name": "zetaSum_eq_zero_of_lt_one",
+        "line": 90,
+        "signature": "theorem zetaSum_eq_zero_of_lt_one {x : ℝ} (hx : x < 1) (t : ℝ) :\n    zetaSum x t = 0"
+      },
+      {
+        "name": "zetaSum_neg",
+        "line": 94,
+        "signature": "theorem zetaSum_neg (x t : ℝ) : zetaSum x (-t) = star (zetaSum x t)"
+      },
+      {
+        "name": "norm_zetaSum_neg",
+        "line": 97,
+        "signature": "theorem norm_zetaSum_neg (x t : ℝ) : ‖zetaSum x (-t)‖ = ‖zetaSum x t‖"
+      },
+      {
+        "name": "norm_zetaSum_le_floor",
+        "line": 100,
+        "signature": "theorem norm_zetaSum_le_floor (x t : ℝ) : ‖zetaSum x t‖ ≤ ⌊x⌋₊"
+      },
+      {
+        "name": "norm_zetaSum_le",
+        "line": 107,
+        "signature": "theorem norm_zetaSum_le {x : ℝ} (hx : 0 ≤ x) (t : ℝ) : ‖zetaSum x t‖ ≤ x"
+      },
+      {
+        "name": "norm_normalized_zetaSum_exp_le_one",
+        "line": 110,
+        "signature": "theorem norm_normalized_zetaSum_exp_le_one (y t : ℝ) :\n    ‖zetaSum (Real.exp y) t / (Real.exp y : ℂ)‖ ≤ 1"
+      },
+      {
+        "name": "zetaTerm_div_cpow",
+        "line": 116,
+        "signature": "theorem zetaTerm_div_cpow (t : ℝ) {s : ℂ} (hs : 1 < s.re) (n : ℕ) :\n    zetaTerm t n / (n : ℂ) ^ s = 1 / (n : ℂ) ^ (s - (t : ℂ) * I)"
+      },
+      {
+        "name": "summable_zetaTerm_div_cpow",
+        "line": 126,
+        "signature": "theorem summable_zetaTerm_div_cpow (t : ℝ) {s : ℂ} (hs : 1 < s.re) :\n    Summable (fun n : ℕ => zetaTerm t n / (n : ℂ) ^ s)"
+      },
+      {
+        "name": "tsum_zetaTerm_div_cpow",
+        "line": 133,
+        "signature": "theorem tsum_zetaTerm_div_cpow (t : ℝ) {s : ℂ} (hs : 1 < s.re) :\n    (∑' n : ℕ, zetaTerm t n / (n : ℂ) ^ s) = riemannZeta (s - (t : ℂ) * I)"
+      }
+    ]
+  }
+]

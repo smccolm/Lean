@@ -1,0 +1,2652 @@
+{
+  "observed_on": "2026-10-05",
+  "checkout": "baef1ac59f8ded380b91dda2b5a04a5468f798a8",
+  "scope": "all physical node-77 files, including generated files; content/role inventory, not a new proof audit",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 133,
+      "sha256": "bbda61778070a92d415a37140a9de69fcd6c055436230e35f6ba72cd87216611",
+      "generated": false
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "e70d3eda4b3b4cb6d42317798b916b116b2da9e1399baf95e4d6a9eb285c4895",
+      "generated": false
+    },
+    {
+      "path": ".gitkeep",
+      "bytes": 84,
+      "sha256": "2e860d4e9dab714d2e3774c62708c1ab6f650eef8e9d20843d72b60f10f15347",
+      "generated": false
+    },
+    {
+      "path": "Dependencies/README.md",
+      "bytes": 25695,
+      "sha256": "080cae7f77d51eda04b629059a2980ca847bd366c4b582ef4b85e423c6f27112",
+      "generated": false,
+      "headings": [
+        "# Dependency boundary",
+        "## Selected finite exponential-sum closure (5 October 2026)",
+        "## Selected foundation zero-count bridge",
+        "## Scoped real log-norm derivative reuse",
+        "## Selected digamma series input",
+        "## Selected continuous mean-value import",
+        "## Scoped Euler-log proof adaptation",
+        "## Selected installed sieve closure",
+        "## Selected foundation pole-removal bridge",
+        "## Selected installed xi/Hadamard closure",
+        "## Selected installed zeta continuation interfaces",
+        "## Selected installed quantitative PNT closure"
+      ],
+      "imports": [],
+      "declarations": [
+        "interfaces"
+      ]
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Architecture.md",
+      "bytes": 8013,
+      "sha256": "fd7626417e4e5ca277fdfa50f8d7aa03462d04a5cd0afe5523e10460c68797c1",
+      "generated": false,
+      "headings": [
+        "# Proof architecture"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Checklist.md",
+      "bytes": 12701,
+      "sha256": "e83c6ac85f7b7dc061069330894aac179be0a527cd7391fdf04786661961f565",
+      "generated": false,
+      "headings": [
+        "# Dong–Wang–Wang–Zhang checklist",
+        "## Final semantic acceptance (5 October 2026)"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Crosswalk.md",
+      "bytes": 55015,
+      "sha256": "03716ee30682a3f6f7c668ed8cbe65cad0527f25837a476c452b963e2e0279bb",
+      "generated": false,
+      "headings": [
+        "# Source-to-formalization crosswalk",
+        "## Exact Theorem 1.2 and all-large-x estimate (DWWZ-02/15/16 DONE)",
+        "## Exact Theorem 1.1 and linked disk count (DWWZ-13/14 DONE)",
+        "## Full actual weighted forcing (DWWZ-12 DONE)",
+        "## Actual large-sum Gaussian lower bound (DWWZ-12 supporting progress)",
+        "## Gaussian evaluation in Proposition 4.1 (DWWZ-12 supporting progress)",
+        "## Actual zero-count conventions (DWWZ-04)",
+        "## Implemented source zero repulsion",
+        "## Implemented exact zero-sum upper bound",
+        "## Implemented uniform zeta continuation consumer",
+        "## Gaussian normalization to preserve",
+        "## Implemented residue-bearing Gaussian consumer",
+        "## Actual xi/divisor and real logarithmic-derivative consumers",
+        "## Consumer checkpoints",
+        "## Historical planning candidates and bridge obligations",
+        "### Node-73 survey before implementation — inspected, no relevant reuse",
+        "### Implemented entry consumers",
+        "### Two-frequency analytic consumer",
+        "## Full Lemma 2.2 consumer"
+      ],
+      "imports": [
+        "graph. The completed consumers above and the selected closures in"
+      ],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Errata.md",
+      "bytes": 3865,
+      "sha256": "8f2a71d3efcf05277d291800f8283b6948f449f19095ac7d8887177b502c5821",
+      "generated": false,
+      "headings": [
+        "# Errata, source distinctions and audit questions",
+        "## Confirmed source distinctions",
+        "## Formalization hazards, not diagnosed source errors",
+        "## Formalization outcome, 5 October 2026",
+        "## Future entry format"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Goal Prompt.md",
+      "bytes": 9543,
+      "sha256": "0d8dbc1a9db6a60eff5c288d8ab72b3e0c4801f8af397c440ff986b3f085025f",
+      "generated": false,
+      "headings": [
+        "# Dong–Wang–Wang–Zhang 2026 — whole-proof goal prompt",
+        "## Completed objective (contract retained)",
+        "## Read before implementation",
+        "## Non-negotiable public results",
+        "## Mathematical execution",
+        "## Integrity, source errors and progress",
+        "## BAT maintenance is part of the goal",
+        "## Completion and handoff"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Reproduction Manifest.md",
+      "bytes": 77699,
+      "sha256": "ba38822cea3137c4f940d9f93eebc72f3cf363a215742a7bf80c64b122935fb7",
+      "generated": false,
+      "headings": [
+        "# Reproduction manifest",
+        "## Documentation consistency audit — 5 October 2026",
+        "## Final release-mode verification — 5 October 2026",
+        "## Complete mathematical acceptance checkpoint — 5 October 2026",
+        "## Historical setup baseline and immutable inputs",
+        "## Current verification commands",
+        "## Historical checkpoint records",
+        "## Initial setup verification record (35-file scaffold)",
+        "## Folder-local synchronization follow-up (37-file scaffold)",
+        "## Goal activation and first arithmetic reduction",
+        "## Uniform power-sum and finite mean-comparison verification",
+        "## Source-form mean-comparison verification",
+        "## Ordinary and logarithmically weighted transform verification",
+        "## Near-frequency and actual-block far-tail verification",
+        "## Sharp full-series frequency verification",
+        "## Poisson maximum transport and full weighted mean-square verification",
+        "## Lipschitz difference-factor verification",
+        "## Euler-distance and reciprocal-prime verification",
+        "## Quartic-cell pointwise smoothing verification",
+        "## Ordinary maximum-form mean-value verification",
+        "## Source large-sum prime-distance verification",
+        "## Same-witness twist-bound verification",
+        "## Two-frequency prime/zeta and maximizer verification",
+        "## Optimized dilation and weighted-difference verification",
+        "## Capped mean square and actual-difference smoothing verification",
+        "## Evaluated dilation-parameter verification",
+        "## Full Lemma 2.2 acceptance",
+        "### Post-acceptance status verification",
+        "## Uniform zeta Lemma 3.1 acceptance",
+        "## Exact Gaussian Lemma 3.3 acceptance",
+        "## Actual xi/divisor and real logarithmic-derivative acceptance",
+        "## Exact Lemma 3.4 acceptance — 4 October 2026",
+        "## Exact Lemma 3.2 acceptance — 4 October 2026",
+        "## Proof acceptance evidence requirements",
+        "### Exact Theorem 1.1 acceptance — 4 October 2026",
+        "### Proposition 4.1 acceptance — 4 October 2026",
+        "### Zero-count and conjugation acceptance — 4 October 2026"
+      ],
+      "imports": [],
+      "declarations": [
+        "premise."
+      ]
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Research Agenda.md",
+      "bytes": 18995,
+      "sha256": "48b33fb30be60d0c9bbdf0c68256c3446c36c12856b4e0e4f3032e5b7f4d6baf",
+      "generated": false,
+      "headings": [
+        "# Research agenda and current status",
+        "## Historical planning survey",
+        "## Initial analytic priority, now closed",
+        "## Completed obligation DAG",
+        "## Route selection and stopping source searches",
+        "### Gaussian branch now assembled",
+        "### Xi branch now assembled",
+        "### Source zero repulsion assembled",
+        "## Regression coverage to retain",
+        "## Acceptance authority"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Source Contract.md",
+      "bytes": 4926,
+      "sha256": "3129d2add24f67ac2bf13928d4d7d8ad96e6b68f072ab009cf3a5541100b3074",
+      "generated": false,
+      "headings": [
+        "# Frozen source contract",
+        "## Actual objects",
+        "## T1 — Theorem 1.1 (`thm:main`)",
+        "## T2 — Theorem 1.2 (`thm:corollary`)",
+        "## Supporting contracts and scope"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Sources.md",
+      "bytes": 11294,
+      "sha256": "3ecf502322a88a6f7bb52355ea0ea30464e1668a0ce9d0c7a35477dd9f45b700",
+      "generated": false,
+      "headings": [
+        "# Sources and repository survey — 4 October 2026",
+        "## Primary paper and publication status",
+        "## Essential analytic references",
+        "## Other references and current surrounding work",
+        "## Live repositories observed on 4 October 2026",
+        "## Search ledger and meaning of negative results"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Dong-Wang-Wang-Zhang Template Inventory.md",
+      "bytes": 5766,
+      "sha256": "30532e569e815b5c9a379bf6d22a56938d829570238c071ff7caad8f386aa5e5",
+      "generated": false,
+      "headings": [
+        "# Node-63 template inventory and adaptation"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Extension/.lake/config/14/lakefile.olean",
+      "bytes": 96680,
+      "sha256": "cbc655563bb14e5e15bd6d17a785407df33e81d0eb8e364f1d1f40526c274016",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/14/lakefile.olean.trace",
+      "bytes": 182,
+      "sha256": "f61a7d1b69b3aee8eacf31afa5b9853cafe4108ef2dd0c9b2d80131b2b8da550",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/15/lakefile.olean",
+      "bytes": 857464,
+      "sha256": "bb5e0b8835dd1d11f9d8dd57bfb56c1c0e485f56229a61b92be84a06926eb96a",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/15/lakefile.olean.trace",
+      "bytes": 185,
+      "sha256": "35863c63dc58aac0f3d5e6929d76c0b2556773804c5664835abe7d5d75692a70",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/2/lakefile.olean",
+      "bytes": 643992,
+      "sha256": "9a3961e7cc4b3579d8e56fe77410fa6d118bda7c9b425b20ce7a3610b141b390",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/2/lakefile.olean.trace",
+      "bytes": 178,
+      "sha256": "a93bd97dc4bdba76109d9948f94f1dbe3e040f82f2bded037eac8eca224bbe04",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/7/lakefile.olean",
+      "bytes": 757552,
+      "sha256": "2d78b2f8bb1873530c860d3d60af17cf371f25d1bcd7970d8ce6aed3c3e7ff2b",
+      "generated": true
+    },
+    {
+      "path": "Extension/.lake/config/7/lakefile.olean.trace",
+      "bytes": 295,
+      "sha256": "df295b26acb6f9e05deb9a646c7affc5d8635c1fdaf82772523f0f8260afc228",
+      "generated": true
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/Audit.lean",
+      "bytes": 27130,
+      "sha256": "fd4daac43f7bb484417bb8322fe6965a732b494de20414e24f37a2583438fbf6",
+      "generated": false,
+      "headings": [],
+      "imports": [
+        "Lean.Util.CollectAxioms",
+        "DongWangWangZhang2026.SemanticRegression"
+      ],
+      "declarations": []
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/CoefficientMean.lean",
+      "bytes": 32921,
+      "sha256": "c1607b71cb77c238ba8ca06f93c908b0b8487ec86eb3409869f22b094056c1ee",
+      "generated": false,
+      "headings": [
+        "# Mean estimates for the actual Möbius coefficients"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanComparison",
+        "Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt",
+        "Mathlib.NumberTheory.Chebyshev",
+        "Mathlib.NumberTheory.EulerProduct.Basic",
+        "Mathlib.NumberTheory.AbelSummation"
+      ],
+      "declarations": [
+        "coefficientLogMul",
+        "coefficientLogMul_mul",
+        "complexMangoldt",
+        "sum_divisors_complexMangoldt",
+        "coefficientLogMul_moebius_mul_zeta",
+        "coefficientLogMul_moebius",
+        "coefficientLogMul_phase",
+        "coefficientLogMul_phaseMobiusCoeff",
+        "phaseMobiusAbs",
+        "phaseMobiusAbs_nonneg",
+        "isMultiplicative_phaseMobiusAbs",
+        "norm_twisted_mangoldt_difference_le",
+        "phaseMobiusAbs_mul_log_le_convolution",
+        "sum_phaseMobiusAbs_mul_log_le",
+        "sum_phaseMobiusAbs_le",
+        "phaseMobiusWeight",
+        "phaseMobiusWeight_nonneg",
+        "phaseMobiusWeight_mul",
+        "hasSum_phaseMobiusWeight_prime_pow",
+        "sum_phaseMobiusWeight_le_eulerProduct",
+        "phase_prime_factor_error_le",
+        "sum_phaseMobiusWeight_le_exp_prime",
+        "reciprocal_tail_le_of_mean_bound",
+        "sum_phaseMobiusWeight_mono",
+        "sum_phaseMobiusWeight_tail_le",
+        "norm_mean_comparison_le_split",
+        "norm_mean_comparison_le_log_weight",
+        "norm_mean_comparison_le_prime_error",
+        "norm_normalized_mean_comparison_le"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/DilationAssembly.lean",
+      "bytes": 31994,
+      "sha256": "6c0218463f353ec486e82218721678147d8020b610dfb7d101254fa302765dab",
+      "generated": false,
+      "headings": [
+        "# Damping-parameter assembly for the actual dilation"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.DilationMeanSquare",
+        "DongWangWangZhang2026.DilationSmoothing"
+      ],
+      "declarations": [
+        "measurable_logZetaSumDilation",
+        "norm_normalized_logZetaDilation_exp_le",
+        "normalized_zetaDilation_exp_le_logDilation",
+        "intervalIntegrable_normalized_logDilation_div",
+        "integral_normalized_zetaDilation_le_logDilation",
+        "integral_damped_logDilation_le_sqrt",
+        "reciprocal_le_damping_parameter_double",
+        "integrable_dilation_damping_rectangle",
+        "integral_normalized_logDilation_le_damping_average",
+        "dilationDampingBound",
+        "continuousOn_dilationDampingBound",
+        "exists_maximizingTwist_dilation_parameter_bound",
+        "dilationDampingBound_le_four_meanValueDampingBound",
+        "integral_dilationDampingBound_le",
+        "min_le_geometric_rpow",
+        "integral_min_reciprocal_le_rpow",
+        "integral_dilationDampingBound_le_rpow",
+        "exists_maximizingTwist_dilation_power_bound"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/DilationLipschitz.lean",
+      "bytes": 22075,
+      "sha256": "62a3295b67b7e3c456e57f7ccefd817af06ffb0239f54e2a3c55270be4bd106c",
+      "generated": false,
+      "headings": [
+        "# Uniform exponent absorption for the actual summatory dilation"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.DilationAssembly",
+        "DongWangWangZhang2026.TwistBounds"
+      ],
+      "declarations": [
+        "optimized_dilation_scale_le_third",
+        "log_ratio_loss_le_third",
+        "dilation_logarithmic_loss_le_third",
+        "dilationScaleConstant",
+        "dilationScaleConstant_ge_one",
+        "dilation_maximum_le_scale",
+        "dilation_power_term_le_third",
+        "dilationLipschitzConstant",
+        "dilationLipschitzConstant_ge_four",
+        "dilation_evaluated_bound_le_third",
+        "exists_maximizingTwist_dilation_third_bound",
+        "norm_normalized_dilation_eq",
+        "exists_maximizingTwist_uniform_lipschitz",
+        "exists_large_sum_maximizing_twist"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/DilationMeanSquare.lean",
+      "bytes": 20039,
+      "sha256": "d2e2f3225891391e84d4211b246b883fec126e21ab5a4f1cd75339b58f247b99",
+      "generated": false,
+      "headings": [
+        "# Weighted difference mean square at the actual maximizing twist"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.TwoPointEuler",
+        "DongWangWangZhang2026.MeanValueAssembly"
+      ],
+      "declarations": [
+        "dampedLogZetaDifference",
+        "dampedLogZetaDifference_eq_actual",
+        "integrable_dampedLogZetaDifference",
+        "memLp_dampedLogZetaDifference_two",
+        "fourier_dampedLogZetaDifference",
+        "integral_zeta_deriv_dilation_sq_eq_logDifference_sq",
+        "integrable_zeta_deriv_dilation_sq",
+        "zeta_deriv_dilation_near_frequency_le",
+        "zeta_deriv_dilation_mean_square_le",
+        "exists_maximizingTwist_weighted_dilation_mean_square",
+        "norm_zeta_dilation_le_four_div",
+        "exists_maximizingTwist_weighted_dilation_mean_square_min"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/DilationSmoothing.lean",
+      "bytes": 28126,
+      "sha256": "823cf21aa0b8511d595a1b0b01460e7fbe31cc01a6ed409f90312a8a9c98dca4",
+      "generated": false,
+      "headings": [
+        "# Arithmetic smoothing for the actual summatory dilation"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueSmoothing"
+      ],
+      "declarations": [
+        "zetaSumDilation",
+        "logZetaSumDilation",
+        "zetaSumDilation_eq_zero_of_lt_one",
+        "measurable_zetaSumDilation",
+        "norm_zetaSumDilation_le",
+        "norm_zetaSum_sub_le_of_mem_interval",
+        "norm_zetaSumDilation_reciprocal_sub_le",
+        "logZetaSumDilation_eq_mangoldt_convolution",
+        "norm_logZetaSumDilation_le_mangoldt_sum",
+        "norm_log_mul_zetaSum_sub_logZetaSum_le_nonneg",
+        "norm_log_mul_zetaSumDilation_sub_logDilation_le",
+        "intervalIntegrable_zetaSumDilation_reciprocal_norm",
+        "zetaSumDilation_reciprocal_le_cell_average",
+        "sum_mangoldt_zetaSumDilation_quarticCell_le",
+        "sum_quarticCell_variation_cost_le",
+        "sum_active_quarticCell_variation_cost_le",
+        "sum_quarticCell_dilation_integrals",
+        "sum_mangoldt_zetaSumDilation_quarticPrefix_le",
+        "integral_zetaSumDilation_reciprocal_eq_of_cutoff",
+        "sum_mangoldt_zetaSumDilation_le_integral",
+        "norm_zetaSumDilation_mul_log_le_reciprocal_integral",
+        "integral_zetaSumDilation_reciprocal_eq_exp",
+        "intervalIntegrable_normalized_zetaSumDilation_exp",
+        "norm_normalized_zetaSumDilation_le_log_average",
+        "zetaSumDilation_exp",
+        "logZetaSumDilation_exp",
+        "norm_exp_dilation_le_log_average"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/DiskZeroCount.lean",
+      "bytes": 4162,
+      "sha256": "45004df35bc86ffbe8512feadfd71f52a220364e328f8059eca2c76fbca7233e",
+      "generated": false,
+      "headings": [
+        "# Transfer from the actual weighted zero sum to an open disk"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.DiskZeroGeometry"
+      ],
+      "declarations": [
+        "weighted_zero_sum_le_disk_and_resolvent",
+        "source_disk_count_of_weighted_forcing"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/DiskZeroGeometry.lean",
+      "bytes": 6507,
+      "sha256": "574ebf652c4e25795063dd5ecfb497525ccff8d4fa53bb3f03292e519f0b8400",
+      "generated": false,
+      "headings": [
+        "# Near/far geometry for actual zero counts"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.WeightedZeroForcing",
+        "DongWangWangZhang2026.ZeroSumUpperBound",
+        "DongWangWangZhang2026.ZeroCounts"
+      ],
+      "declarations": [
+        "norm_zero_distance_shift_mono",
+        "source_far_zero_separation",
+        "source_far_inverse_square_le",
+        "source_inverse_square_le_real_resolvent",
+        "source_zero_kernel_le_reciprocal",
+        "source_far_kernel_le_real_resolvent",
+        "source_eta_le_outer_tenth"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/GammaLogBounds.lean",
+      "bytes": 6564,
+      "sha256": "3c943b5610526cd2c56a9ebb567a79299673fe52d807d34589e2b14e80492f46",
+      "generated": false,
+      "headings": [
+        "# Coefficient-one real digamma bounds"
+      ],
+      "imports": [
+        "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries",
+        "Mathlib.NumberTheory.Harmonic.Bounds"
+      ],
+      "declarations": [
+        "norm_le_norm_add_nat",
+        "digamma_real_head_le",
+        "digamma_norm_tail_le",
+        "abs_re_digamma_sub_log_norm_le",
+        "re_digamma_source_upper"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/GammaRatioBounds.lean",
+      "bytes": 8579,
+      "sha256": "97be860a116078c5dd23dc8463121b46d12b63dd9905c690103d5b7e0bf96736",
+      "generated": false,
+      "headings": [
+        "# Gamma quotients on the source horizontal segment"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.GammaLogBounds",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue"
+      ],
+      "declarations": [
+        "hasDerivAt_complex_normSq",
+        "hasDerivAt_real_log_norm",
+        "hasDerivAt_log_norm_Gamma_horizontal",
+        "re_digamma_source_segment_upper",
+        "log_norm_Gamma_source_difference_le",
+        "norm_Gamma_source_ratio_le",
+        "norm_GammaReal_source_ratio_le",
+        "re_digamma_source_lower"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/GaussianConcentration.lean",
+      "bytes": 15521,
+      "sha256": "c29879836cccd4cd208c72946d5884ccb3d46b5104f31de1f1684b8e9e4c5ede",
+      "generated": false,
+      "headings": [
+        "# Gaussian concentration at the actual maximizing twist"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.GaussianTransform",
+        "DongWangWangZhang2026.DilationLipschitz"
+      ],
+      "declarations": [
+        "gaussianMomentMajorant",
+        "integrable_gaussianMomentMajorant",
+        "gaussianMomentConstant",
+        "gaussianMomentConstant_nonneg",
+        "holder_weight_rescaled_le",
+        "integral_gaussianMomentMajorant_scaled",
+        "integrable_gaussianMomentMajorant_scaled",
+        "integrable_holder_gaussian",
+        "integral_holder_gaussian_le",
+        "integrable_normalized_zetaSum_gaussian_difference",
+        "exists_maximizingTwist_gaussian_concentration",
+        "integral_centered_gaussian",
+        "source_gaussian_width_mul",
+        "source_gaussian_width_third",
+        "source_gaussian_weight_centered",
+        "integrable_centered_gaussian",
+        "source_gaussian_integral_centered",
+        "exists_maximizingTwist_source_gaussian_error"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/GaussianFrequency.lean",
+      "bytes": 12694,
+      "sha256": "c7f94e0ffae9fec7a0b877b1fb8cd10c4919976e48c857097a27ef91c5e2f61d",
+      "generated": false,
+      "headings": [
+        "# The residue and frequency integral in Proposition 4.1"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.GaussianLowerBound",
+        "DongWangWangZhang2026.ZetaUniformBounds"
+      ],
+      "declarations": [
+        "source_gaussian_residue_exponent",
+        "norm_source_gaussian_residue_le",
+        "norm_source_gaussian_residue_linked",
+        "norm_source_gaussian_residue_half",
+        "exists_large_sum_gaussian_frequency_lower",
+        "norm_source_zeta_quotient_le",
+        "source_gaussian_tail_height_absorption",
+        "source_gaussian_weighted_zeta_tail",
+        "exists_zeta_gaussian_frequency_gt"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/GaussianLowerBound.lean",
+      "bytes": 9173,
+      "sha256": "992a9d9885b70cc951d27922419ad7d1309c2051a682817011c57caf2687b332",
+      "generated": false,
+      "headings": [
+        "# Large sums give a Gaussian lower bound"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.GaussianConcentration"
+      ],
+      "declarations": [
+        "one_le_norm_inverse_comparisonFactor",
+        "normalized_twisted_sum_lower",
+        "exists_large_sum_gaussian_threshold",
+        "gaussian_error_absorbed",
+        "exists_large_sum_gaussian_lower"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/GaussianTransform.lean",
+      "bytes": 12179,
+      "sha256": "6c048030cafc15e8faed4493f6300a68a63f208c6f262587431772fe5c7a6b18",
+      "generated": false,
+      "headings": [
+        "# Gaussian identity with the zeta pole term retained"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.RegularizedTransform",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform"
+      ],
+      "declarations": [
+        "integral_source_gaussian_phase",
+        "integrable_source_gaussian_double",
+        "integrable_source_gaussian_frequency",
+        "source_gaussian_pairing",
+        "regularized_source_gaussian_identity",
+        "integrable_source_gaussian_zeta",
+        "integrable_source_gaussian_remainder",
+        "integrable_source_gaussian_pole",
+        "integral_source_gaussian_pole",
+        "integrable_source_gaussian_sum",
+        "source_gaussian_identity"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/LargeSumEstimate.lean",
+      "bytes": 7373,
+      "sha256": "eac4e827e0c7fb033f7191fa5c59c9feb203cf776524971eab142e795c632e95",
+      "generated": false,
+      "headings": [
+        "# Uniform cancellation of the actual finite sum"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.LogarithmicBlockBound",
+        "DongWangWangZhang2026.MeanValueSmoothing"
+      ],
+      "declarations": [
+        "zetaSum_nat_increment_logarithmic",
+        "norm_zetaSum_nat_twelfth_scale",
+        "norm_zetaSum_twelfth_scale",
+        "norm_zetaSum_abs_height",
+        "large_x_zeta_sum_bound",
+        "exists_large_x_zeta_sum_bound"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/LinkedZeroSum.lean",
+      "bytes": 3441,
+      "sha256": "2f47b83466b81276a9ce7518d36b317983a8e1bd88a8cd83b0fdc4ecea79d332",
+      "generated": false,
+      "headings": [
+        "# Uniform farther-resolvent bound on the actual source scales"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.DiskZeroGeometry"
+      ],
+      "declarations": [
+        "source_outer_shift_reciprocal",
+        "exists_source_linked_resolvent_upper"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/LocalWindowScale.lean",
+      "bytes": 4302,
+      "sha256": "6135380a3a46d88b2e4c9859e4de2c53592eb39189fc392de2a8e6e520d5e7d2",
+      "generated": false,
+      "headings": [
+        "# Admissible source scale for the local-zero contradiction"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.ZeroDiskTheorem"
+      ],
+      "declarations": [
+        "exists_local_window_scale_threshold",
+        "source_local_window_scale"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/LocalZeroCriterion.lean",
+      "bytes": 4549,
+      "sha256": "dbc7724c6f33d7fc1eea9e3a5cb6a61f0d538a4b21496a74216d6a9f4488eae1",
+      "generated": false,
+      "headings": [
+        "# Theorem 1.2: cancellation from the actual local zero-window hypothesis"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.SmallRangeZeroCriterion",
+        "DongWangWangZhang2026.LargeSumEstimate"
+      ],
+      "declarations": [
+        "large_x_zeta_sum_log_bound",
+        "local_zero_windows_force_zeta_sum_cancellation"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/LogarithmicBlockBound.lean",
+      "bytes": 11810,
+      "sha256": "34625dec58501c19250d323a1905f741f06cfdb1fb8dd3721c1fe7be0a9aed89",
+      "generated": false,
+      "headings": [
+        "# Finite logarithmic blocks for the large-x estimate"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.ZetaSum",
+        "DongWangWangZhang2026.LogarithmicDerivativeBounds",
+        "GuthMaynard.WeylExplicit"
+      ],
+      "declarations": [
+        "logarithmic_correlation_extended_scale",
+        "logarithmic_weyl_prefix_extended",
+        "source_logarithmic_prefix_uniform"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/LogarithmicDerivativeBounds.lean",
+      "bytes": 9706,
+      "sha256": "abee5d02330d4385d4890099a89ec8901395f84a8d29b373c6fafeac4e32ddc9",
+      "generated": false,
+      "headings": [
+        "# Reused finite first- and second-derivative prefix estimates"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.ZetaSum",
+        "GuthMaynard.LogarithmicKernel"
+      ],
+      "declarations": [
+        "source_logarithmic_prefix_first_derivative",
+        "source_logarithmic_prefix_second_derivative"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanComparison.lean",
+      "bytes": 11135,
+      "sha256": "81828de8e78caf45e7a2caf27bdb59955733436312be1142ca7961d4d71cdf82",
+      "generated": false,
+      "headings": [
+        "# Actual convolution coefficients for the mean-comparison argument"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.TwistSelection",
+        "DongWangWangZhang2026.PowerSumEstimate",
+        "Mathlib.NumberTheory.ArithmeticFunction.Moebius",
+        "Mathlib.Algebra.Order.Floor.Semifield"
+      ],
+      "declarations": [
+        "phaseArithmetic",
+        "isMultiplicative_phaseArithmetic",
+        "phaseMobiusCoeff",
+        "isMultiplicative_phaseMobiusCoeff",
+        "phaseMobiusCoeff_mul_zeta",
+        "sum_divisors_phaseMobiusCoeff",
+        "phaseMobiusCoeff_prime_pow",
+        "phaseMobiusCoeff_prime",
+        "norm_phaseMobiusCoeff_prime_pow_le",
+        "phaseMobiusCoeff_twist_convolution",
+        "zetaSum_eq_mobius_twisted_sum",
+        "norm_phaseMobiusCoeff_prime_pow",
+        "zetaSum_eq_mobius_floor_sum",
+        "comparisonFactor",
+        "norm_comparisonFactor_le_one",
+        "phase_powerMain_transport",
+        "norm_twisted_cell_comparison_le",
+        "norm_mean_comparison_le_mobius_error"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanValueAssembly.lean",
+      "bytes": 48824,
+      "sha256": "c33b71dd66e0494b1bfe1e227c2716a18517f8c9d3bea954f042bfce7612d30d",
+      "generated": false,
+      "headings": [
+        "# Damping-parameter assembly for the actual phase sum"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueSmoothing",
+        "Mathlib.Analysis.Complex.ExponentialBounds",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ],
+      "declarations": [
+        "norm_normalized_zetaSum_exp_le",
+        "norm_normalized_logZetaSum_exp_le",
+        "normalized_zetaSum_exp_le_logSum",
+        "intervalIntegrable_normalized_logZetaSum_div",
+        "integral_normalized_zetaSum_exp_le_logSum",
+        "integral_damping_parameter",
+        "reciprocal_le_damping_parameter",
+        "integral_damped_logSum_le_sqrt",
+        "integrable_damping_rectangle",
+        "integral_normalized_logSum_le_damping_average",
+        "norm_shifted_zeta_le_reciprocal",
+        "meanValueDampingBound",
+        "continuousOn_meanValueDampingBound",
+        "exists_maximizingTwist_damped_first_moment",
+        "exists_maximizingTwist_parameter_mean_bound",
+        "meanValueAssemblyConstant",
+        "meanValueAssemblyConstant_pos",
+        "meanValueDampingBound_le",
+        "integral_reciprocal_sq",
+        "integral_min_reciprocal_le",
+        "integral_meanValueDampingBound_le",
+        "exists_maximizingTwist_mean_value_bound",
+        "ordinaryHalaszConstant",
+        "ordinaryHalaszConstant_pos",
+        "exists_maximizingTwist_prime_distance_mean_bound",
+        "primePhaseDistance_le_reciprocal_primes",
+        "primePhaseDistance_add_one_le_log",
+        "exists_ordinary_mean_error_threshold",
+        "exists_large_sum_prime_distance_bound"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanValueEuler.lean",
+      "bytes": 20406,
+      "sha256": "a55990c7f36cb949a1188ef7470b134734d8889739e5aab9d42ef6b2b32c217c",
+      "generated": false,
+      "headings": [
+        "# Euler-product control of the actual prime distance"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueMaximum",
+        "DongWangWangZhang2026.CoefficientMean",
+        "Mathlib.NumberTheory.EulerProduct.DirichletLSeries",
+        "Mathlib.Analysis.SpecialFunctions.Complex.LogBounds"
+      ],
+      "declarations": [
+        "summable_primeEulerLog",
+        "log_norm_zeta_eq_prime_logs",
+        "norm_sub_re_le_log_distance",
+        "norm_primeZetaPower",
+        "summable_primeZetaPower",
+        "dampedPrimeDistance",
+        "summable_dampedPrimeDistance",
+        "dampedPrimeDistance_nonneg",
+        "dampedPrimeDistance_le_log_norm_sub",
+        "norm_zeta_le_exp_neg_dampedPrimeDistance",
+        "primeZetaPower_re_deficit",
+        "sum_damped_prime_phase_le",
+        "sum_prime_log_div_le",
+        "prime_phase_damping_error_le",
+        "primePhaseDistance_le_damped",
+        "norm_zeta_shift_le_primePhaseDistance",
+        "norm_twistZeta_le_primePhaseDistance",
+        "tsum_prime_rpow_le_log_norm_zeta",
+        "sum_prime_rpow_le_log_norm_zeta",
+        "prime_reciprocal_damping_error_le",
+        "sum_prime_reciprocal_le",
+        "prime_phase_deviation_le_log_bound",
+        "norm_normalized_mean_comparison_le_distance"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanValueFrequency.lean",
+      "bytes": 55660,
+      "sha256": "b9e81b03232c9a162f875098fb5d8d10f935ed044a300713e497ed27a85c5c6b",
+      "generated": false,
+      "headings": [
+        "# Frequency estimates for the actual logarithmic coefficients"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueTransform",
+        "GuthMaynard.MeanValueProof",
+        "Mathlib.Order.SuccPred.IntervalSucc",
+        "Mathlib.Analysis.SumIntegralComparisons",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform",
+        "Mathlib.Analysis.PSeries"
+      ],
+      "declarations": [
+        "zetaLogBlock",
+        "zetaLogBlock_eq_LSeries_terms",
+        "zetaLogBlock_eq_dirichletTime",
+        "norm_logPhaseCoeff",
+        "continuous_zetaLogBlock",
+        "integral_norm_sq_zetaLogBlock_le",
+        "integral_zetaLogBlock_quotient_le",
+        "integral_zetaLogBlock_positive_shell_le",
+        "integral_zetaLogBlock_negative_shell_le",
+        "zetaLogBlock_positive_tail",
+        "zetaLogBlock_neg_frequency",
+        "norm_zetaLogBlock_quotient_neg",
+        "zetaLogBlock_negative_tail",
+        "zetaLogBlock_far_tail",
+        "sum_lower_power_ratios_le",
+        "sum_upper_power_ratios_le",
+        "logGaussianKernel",
+        "logGaussianKernel_nonneg",
+        "logGaussianKernel_symm",
+        "logGaussianKernel_le_power_ratio",
+        "sum_logGaussianKernel_le",
+        "sum_logGaussianKernel_mul_le",
+        "integral_gaussian_phase",
+        "integrable_gaussian_phase",
+        "logFrequencySum",
+        "continuous_logFrequencySum",
+        "norm_logFrequencySum_le",
+        "integrable_gaussian_norm_logFrequencySum",
+        "integral_gaussian_logFrequencySum",
+        "integral_gaussian_logFrequencySum_le",
+        "integral_norm_sq_logFrequencySum_le",
+        "logFrequencySum_eq_sum_range",
+        "summable_logFrequencyTerms",
+        "tendsto_logFrequencySum",
+        "integral_norm_sq_tsum_logFrequency_le",
+        "tsum_nat_rpow_neg_le",
+        "log_sq_mul_rpow_le",
+        "summable_log_sq_mul_rpow",
+        "tsum_log_sq_mul_rpow_le",
+        "zetaLogCoeff",
+        "zetaLogCoeff_phase_eq_term",
+        "zetaLogCoeff_eq_term",
+        "summable_norm_zetaLogCoeff",
+        "tsum_zetaLogCoeff_phase",
+        "norm_zetaLogCoeff_sq",
+        "index_mul_norm_zetaLogCoeff_sq",
+        "summable_norm_zetaLogCoeff_sq",
+        "summable_index_norm_zetaLogCoeff_sq",
+        "tsum_norm_zetaLogCoeff_sq_le",
+        "tsum_index_norm_zetaLogCoeff_sq_le",
+        "integral_zeta_deriv_sq_le",
+        "continuous_shifted_zeta_deriv",
+        "integral_zeta_deriv_sq_shift_le",
+        "integral_zeta_deriv_quotient_interval_le",
+        "zeta_deriv_positive_far_tail",
+        "zeta_deriv_negative_far_tail",
+        "zeta_deriv_far_tail"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanValueMaximum.lean",
+      "bytes": 41737,
+      "sha256": "2cc84a069de19ee13dd53cf5496723f73dc1446f8369295c058d07568ebc5988",
+      "generated": false,
+      "headings": [
+        "# Rightward maximum control for the actual Dirichlet series"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueFrequency",
+        "Mathlib.Probability.Distributions.Cauchy"
+      ],
+      "declarations": [
+        "poissonLineKernel",
+        "poissonLineKernel_nonneg",
+        "continuous_poissonLineKernel",
+        "poissonLineKernel_eq_cauchyPDF",
+        "integrable_poissonLineKernel",
+        "integral_poissonLineKernel",
+        "poissonExponential",
+        "continuous_poissonExponential",
+        "integrable_poissonExponential",
+        "fourier_poissonExponential",
+        "integral_poissonLineKernel_phase",
+        "integrable_poissonLineKernel_phase",
+        "continuous_tsum_logFrequency",
+        "norm_tsum_logFrequency_le",
+        "integral_poissonLineKernel_zetaTerm",
+        "integrable_poissonLineKernel_zetaTerm",
+        "integral_poissonLineKernel_tsum",
+        "integrable_poissonLineKernel_tsum",
+        "poissonLineKernel_neg",
+        "integral_poissonLineKernel_far_le",
+        "norm_poissonLine_average_le",
+        "norm_tsum_logFrequency_rightward_le",
+        "zetaPhaseCoeff",
+        "summable_norm_zetaPhaseCoeff",
+        "norm_zetaPhaseCoeff",
+        "tsum_norm_zetaPhaseCoeff_le",
+        "zetaPhaseCoeff_phase_eq",
+        "tsum_zetaPhaseCoeff_phase",
+        "zetaPhaseCoeff_rightward",
+        "norm_shifted_zeta_rightward_le",
+        "exists_maximizingTwist_rightward_bound",
+        "poissonLine_zeta",
+        "exists_maximizingTwist_rightward_near_mean_square",
+        "zeta_deriv_quotient_mean_square_le",
+        "exists_maximizingTwist_weighted_mean_square",
+        "poissonLine_frequency_series",
+        "zetaPhaseCoeff_modulated_series",
+        "poissonLine_modulated_zeta",
+        "poissonLine_zeta_difference",
+        "norm_shifted_zeta_difference_rightward_le",
+        "poissonLine_zeta_dilation_difference"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanValueSmoothing.lean",
+      "bytes": 30888,
+      "sha256": "811d12e721fcb70c7f4017f74d653f6a53db9286ce83f06fc2363f078c1cef76",
+      "generated": false,
+      "headings": [
+        "# Arithmetic smoothing for the actual cutoff sums"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueEuler",
+        "PrimeNumberTheoremAnd.BrunTitchmarsh"
+      ],
+      "declarations": [
+        "sum_prime_log_interval_le",
+        "sum_nonprime_mangoldt_interval_le",
+        "quarticCell_length_le",
+        "log_one_add_quartic_le",
+        "sum_prime_log_quarticCell_le",
+        "sum_mangoldt_quarticCell_le",
+        "sum_mangoldt_quarticCell_le_uniform",
+        "zetaSum_sub_eq_sum_Ioc",
+        "norm_zetaSum_sub_le",
+        "norm_zetaSum_le_of_mem_interval",
+        "intervalIntegrable_zetaSum_reciprocal_norm",
+        "zetaSum_reciprocal_le_cell_average",
+        "sum_mangoldt_zetaSum_quarticCell_le",
+        "quarticCell_variation_cost_le",
+        "sum_quarticCells",
+        "sum_quarticCell_integrals",
+        "sum_mangoldt_zetaSum_quarticPrefix_le",
+        "exists_quarticCell_cover",
+        "integral_zetaSum_reciprocal_eq_of_cutoff",
+        "sum_mangoldt_zetaSum_le_integral",
+        "logZetaSum_eq_log_mul_sub_integral",
+        "norm_log_mul_zetaSum_sub_logZetaSum_le",
+        "logZetaSum_eq_mangoldt_convolution",
+        "norm_logZetaSum_le_mangoldt_sum",
+        "norm_zetaSum_mul_log_le_reciprocal_integral",
+        "integral_zetaSum_reciprocal_eq_exp",
+        "intervalIntegrable_normalized_zetaSum_exp",
+        "norm_normalized_zetaSum_le_log_average"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/MeanValueTransform.lean",
+      "bytes": 47904,
+      "sha256": "a6c720d63a590b336cf31102bdb9d917866630f29f67b5bfbb88d4edeb426a73",
+      "generated": false,
+      "headings": [
+        "# Transform of the actual summatory phase"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.ZetaSum",
+        "DongWangWangZhang2026.TwistSelection",
+        "Mathlib.NumberTheory.LSeries.SumCoeff",
+        "Mathlib.Analysis.MellinInversion",
+        "Mathlib.Analysis.Fourier.LpSpace",
+        "Mathlib.NumberTheory.LSeries.Deriv",
+        "Mathlib.Analysis.Calculus.Deriv.Shift",
+        "Mathlib.NumberTheory.LSeries.Dirichlet",
+        "Mathlib.NumberTheory.Chebyshev"
+      ],
+      "declarations": [
+        "measurable_zetaSum",
+        "integrableOn_zetaSum_cpow",
+        "LSeries_zetaTerm",
+        "integral_zetaSum_cpow",
+        "integral_zetaSum_exp",
+        "integrableOn_zetaSum_exp",
+        "integrable_zetaSum_exp",
+        "integral_zetaSum_exp_univ",
+        "dampedZetaSum",
+        "integrable_dampedZetaSum",
+        "fourier_dampedZetaSum",
+        "norm_dampedZetaSum_le_one",
+        "memLp_dampedZetaSum_two",
+        "fourier_toLp_ae_eq",
+        "memLp_fourier_of_integrable_memLp_two",
+        "integral_norm_sq_fourier_of_integrable_memLp_two",
+        "integral_zeta_quotient_sq_eq_sum_sq",
+        "integrable_zeta_quotient_sq",
+        "logZetaSum",
+        "logZetaSum_eq_zero_of_lt_one",
+        "measurable_logZetaSum",
+        "norm_logZetaSum_le",
+        "norm_logZetaSum_le_rpow",
+        "LSeries_logZetaTerm",
+        "integral_logZetaSum_cpow",
+        "integrableOn_logZetaSum_cpow",
+        "integral_logZetaSum_exp",
+        "integrableOn_logZetaSum_exp",
+        "integrable_logZetaSum_exp",
+        "integral_logZetaSum_exp_univ",
+        "dampedLogZetaSum",
+        "integrable_dampedLogZetaSum",
+        "fourier_dampedLogZetaSum",
+        "norm_dampedLogZetaSum_le",
+        "memLp_dampedLogZetaSum_two",
+        "integral_zeta_deriv_quotient_sq_eq_logSum_sq",
+        "integrable_zeta_deriv_quotient_sq",
+        "summatory_LSeries_laplace",
+        "LSeries_quotient_mean_square_le",
+        "LSeries_twistedMangoldt",
+        "sum_norm_twistedMangoldt_le",
+        "zeta_logDeriv_quotient_mean_square_le",
+        "zeta_deriv_near_frequency_le",
+        "exists_maximizingTwist_near_mean_square",
+        "laplace_zetaSum_dilation",
+        "laplace_logZetaSum_dilation"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/PowerSumEstimate.lean",
+      "bytes": 13308,
+      "sha256": "ccdcc87bdc90de17c8429293420ebef2424b377931a3432d410d3904e1492774",
+      "generated": false,
+      "headings": [
+        "# Power-sum error for the mean-comparison argument"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.ZetaSum",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts",
+        "Mathlib.Analysis.PSeries"
+      ],
+      "declarations": [
+        "complex_unit_trapezoid_remainder",
+        "norm_complex_unit_trapezoid_remainder_le",
+        "hasDerivAt_positive_cpow",
+        "norm_phase_second_derivative_le",
+        "norm_phase_unit_trapezoid_remainder_le",
+        "sum_unit_trapezoid_remainders",
+        "norm_phase_trapezoid_remainder_le",
+        "norm_zetaSum_nat_sub_powerMain_le",
+        "norm_zetaSum_sub_powerMain_le",
+        "norm_powerMain_le",
+        "norm_zetaSum_sub_powerMain_le_min"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/RegularizedTransform.lean",
+      "bytes": 16420,
+      "sha256": "d84e5b5af7e5092eb599d5943ee5c27800665d43d66d083ab1542d9d8e3afc87",
+      "generated": false,
+      "headings": [
+        "# Convergent transform after subtracting the actual zeta pole term"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueTransform",
+        "DongWangWangZhang2026.PowerSumEstimate",
+        "GuthMaynard.ZetaBounds"
+      ],
+      "declarations": [
+        "zetaRemainderKernel",
+        "zetaRemainderKernel_eq",
+        "zetaRemainderKernel_eq_zero",
+        "norm_zetaRemainderKernel_le",
+        "measurable_zetaRemainderKernel",
+        "locallyIntegrableOn_zetaRemainderKernel",
+        "zetaRemainderKernel_isBigO_atTop",
+        "zetaRemainderKernel_isBigO_zero",
+        "zetaRemainderMellin",
+        "mellinConvergent_zetaRemainderKernel",
+        "differentiableAt_zetaRemainderMellin",
+        "zetaRemainderMellin_eq_integral",
+        "integrableOn_zetaRemainder_cpow",
+        "zetaRemainderMellin_eq_of_one_lt_re",
+        "zetaRemainderMellin_pole_removed",
+        "zetaRemainderMellin_eq",
+        "zetaExpRemainder",
+        "zetaExpRemainder_eq_power",
+        "zetaExpRemainder_of_neg",
+        "norm_zetaExpRemainder_le",
+        "measurable_zetaExpRemainder",
+        "integral_zetaExpRemainder_positive",
+        "integrableOn_zetaExpRemainder_positive",
+        "integrableOn_zetaExpRemainder_negative",
+        "integral_zetaExpRemainder_negative",
+        "integrable_zetaExpRemainder",
+        "integral_zetaExpRemainder"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/SemanticRegression.lean",
+      "bytes": 58260,
+      "sha256": "7dbf4542332fb751e25877235f1f22ad9d8b66447a6cfe0132031e0772266fa3",
+      "generated": false,
+      "headings": [],
+      "imports": [
+        "DongWangWangZhang2026"
+      ],
+      "declarations": [
+        "negativeCutoff",
+        "unitCutoff",
+        "zeroIndexExcluded",
+        "bothHeightSigns",
+        "spectralShift",
+        "actualMaximizer",
+        "actualMobiusConvolution",
+        "primePowerCoefficient",
+        "actualPrimeDistance",
+        "powerSumError",
+        "twistedMeanReduction",
+        "actualCoefficientMean",
+        "actualCoefficientTail",
+        "sourceMeanComparison",
+        "actualLaplaceTransform",
+        "actualFourierTransform",
+        "actualParseval",
+        "weightedLaplaceTransform",
+        "weightedFourierTransform",
+        "weightedParseval",
+        "logarithmicDerivativeMeanSquare",
+        "actualMaximizerNearMeanSquare",
+        "actualDerivativeBlock",
+        "blockConjugation",
+        "shiftedBlockMeanSquare",
+        "actualBlockFarTail",
+        "exactGaussianGram",
+        "actualDerivativeSeries",
+        "sharpDerivativeCoefficientSums",
+        "actualFullDerivativeMeanSquare",
+        "actualFullDerivativeFarTail",
+        "poissonFrequencyNormalization",
+        "actualZetaPoisson",
+        "actualMaximizerRightward",
+        "actualMaximizerWeightedMeanSquare",
+        "actualDilationLaplace",
+        "weightedDilationLaplace",
+        "actualDilationPoisson",
+        "differenceMaximumTransport",
+        "exactConvergentEulerDistance",
+        "actualSourcePrimeDistanceBound",
+        "reciprocalPrimeBound",
+        "sourceMeanComparisonDistance",
+        "actualQuarticMangoldtMass",
+        "actualCutoffVariation",
+        "actualMangoldtConvolution",
+        "actualPointwiseSmoothing",
+        "dampingReconstruction",
+        "actualWeightedCauchy",
+        "parameterMinimumEvaluation",
+        "actualMaximizerMeanValue",
+        "actualDistanceMeanValue",
+        "crudePrimeDistance",
+        "uniformMeanErrorThreshold",
+        "sourceLargeSumPrimeDistance",
+        "exactInverseTwistFactor",
+        "sameTwistQuantitativeBounds",
+        "actualThetaLogarithmicError",
+        "actualPrimeCosine",
+        "actualTwoPointZeta",
+        "sameMaximizerFrequencyBound",
+        "actualMaximizerDilationFactor",
+        "actualDilationRightwardBound",
+        "weightedDilationParseval",
+        "actualWeightedDilationMeanSquare",
+        "cappedWeightedDilationMeanSquare",
+        "actualDilationConvolution",
+        "activeDilationFloorCost",
+        "actualDilationPointwiseSmoothing",
+        "translationScaleLogRemoval",
+        "fixedSourceLineReconstruction",
+        "uniformSizeParameterEvaluation",
+        "actualMaximizerDilationPowerBound",
+        "exactThirdExponentAbsorption",
+        "exactNormalizedDilation",
+        "actualAllRealLipschitz",
+        "fullSourceMaximizingTwist",
+        "uniformLeftStripZeta",
+        "zeroHeightLeftStrip",
+        "closedHalfEndpoint",
+        "explicitZetaPoleTruncation",
+        "continuedActualMellin",
+        "actualStripTransform",
+        "gaussianPoleAtZeroTwist",
+        "bothSourceGaussianIntegrals",
+        "exactResidueBearingGaussian",
+        "xiActualZeros",
+        "xiMultiplicityFiber",
+        "xiReflectionLabels",
+        "xiGenusOneConvergence",
+        "xiRealLogDerivative",
+        "xiZetaGammaDecomposition",
+        "xiRepulsionKernelConvergence",
+        "coefficientOneDigamma",
+        "uniformZetaLogDerivativePole",
+        "exactSourceZeroSumUpper",
+        "zeroSumBothClosedHeightEndpoints",
+        "digammaClosedQuarterBoundary",
+        "actualXiQuadraticShift",
+        "actualGammaSourceRatio",
+        "uniformXiLowerLogarithm",
+        "exactSourceZeroRepulsion",
+        "zeroRepulsionZeroHeight",
+        "zeroRepulsionClosedHalf",
+        "zeroConjugationLabels",
+        "finiteSourceZeroCounts",
+        "exactClosedWindowMultiplicity",
+        "sourceZeroCountsBothSigns",
+        "openDiskBoundaryExcluded",
+        "closedWindowCornerIncluded",
+        "sourceDiskWindowCountTransfer",
+        "convergentKernelBothSigns",
+        "gaussianFixedMoment",
+        "gaussianLinkedOneSixth",
+        "gaussianActualErrorIntegrable",
+        "sourceNormalizedGaussianError",
+        "inverseComparisonCannotShrink",
+        "actualLargeSumGaussianLower",
+        "actualWeightedZeroForcing",
+        "actualFrequencyIntegralLower",
+        "sourceFrequencyTailUniform",
+        "sourceResidueHalfBound",
+        "farDiskBoundaryIncluded",
+        "linkedDiskMultiplicityTransfer",
+        "reciprocalOuterScale",
+        "emptyScaleIntervalAllowed",
+        "exactTheoremOneSourceContract",
+        "deltaOnlyScaleThreshold",
+        "smallRangeLocalWindowContract",
+        "exactLargeCutoffSourceContract",
+        "largeCutoffClosedJunction",
+        "largeCutoffNegativeHeight",
+        "actualTerminalPrefixBound",
+        "exactTheoremTwoSourceContract",
+        "theoremTwoClosedQuarter"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/SmallRangeZeroCriterion.lean",
+      "bytes": 3685,
+      "sha256": "677e2268942863ef59f076c8b8bb76171b7e1b3502eec1089d385401bd05c209",
+      "generated": false,
+      "headings": [
+        "# The small-x local zero-window consequence"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.LocalWindowScale"
+      ],
+      "declarations": [
+        "exists_small_range_local_zero_cancellation"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/TwistBounds.lean",
+      "bytes": 12098,
+      "sha256": "7807cb599dedc31e53148e9e9ba6a2f33ee3e9ee2a9a9e94623e20cd8c223668",
+      "generated": false,
+      "headings": [
+        "# Quantitative bounds for the actual maximizing twist"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueAssembly"
+      ],
+      "declarations": [
+        "norm_comparisonFactor_le_reciprocal",
+        "norm_inverse_comparisonFactor_le",
+        "inverse_comparisonFactor_mul",
+        "eventually_distance_comparison_error",
+        "exists_large_sum_twist_bounds"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/TwistSelection.lean",
+      "bytes": 4769,
+      "sha256": "5c9cb95f6b24df8ca066ab9ec12cdca11a140f43cc91606aeefc02be06b5507c",
+      "generated": false,
+      "headings": [
+        "# The actual maximizing twist"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.ZetaSum",
+        "Mathlib.Topology.Order.Compact"
+      ],
+      "declarations": [
+        "twistZetaPoint",
+        "twistZetaPoint_re",
+        "twistZetaPoint_ne_one",
+        "continuous_twistZetaNorm",
+        "exists_maximizingTwist",
+        "primePhaseDistance",
+        "primePhaseDistance_nonneg",
+        "norm_one_sub_zetaTerm_sq",
+        "prime_phase_deviation_sq_le",
+        "prime_phase_deviation_le",
+        "primePhaseDistance_eq_twisted"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/TwoPointEuler.lean",
+      "bytes": 52900,
+      "sha256": "f65c3dce821db669f962d547df4c9127c9e8ad572ed76bfd9cc1c61f206874ec",
+      "generated": false,
+      "headings": [
+        "# Two-frequency Euler-product inputs"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.MeanValueEuler",
+        "PrimeNumberTheoremAnd.MediumPNT",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ],
+      "declarations": [
+        "abs_le_sextic_majorant",
+        "abs_cos_le_three_frequency_majorant",
+        "three_frequency_mean_lt_two_thirds",
+        "exists_theta_logarithmic_error",
+        "prime_weighted_abel_error",
+        "primeCosineTest",
+        "primeCosineTestDeriv",
+        "hasDerivAt_primeCosineTest",
+        "continuousOn_primeCosineTestDeriv",
+        "abs_primeCosineTest_le",
+        "abs_primeCosineTestDeriv_le",
+        "integral_reciprocal_log_power",
+        "prime_cosine_abel_error",
+        "exists_prime_cosine_integral_error",
+        "integral_primeCosineTest_zero",
+        "abs_integral_primeCosineTest_le",
+        "exists_prime_absolute_cosine_bound",
+        "zetaTerm_re_eq_cos",
+        "prime_phase_pair_re_le",
+        "primePhaseDistance_pair_lower_tail",
+        "exists_primePhaseDistance_pair_lower",
+        "exists_two_point_zeta_bound",
+        "exists_maximizingTwist_off_frequency_bound",
+        "exists_maximizingTwist_uniform_frequency_bound",
+        "norm_damped_difference_factor_le",
+        "scaled_frequency_envelope_le",
+        "exists_maximizingTwist_dilation_factor_bound",
+        "exists_maximizingTwist_dilation_rightward_bound"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/WeightedZeroForcing.lean",
+      "bytes": 9359,
+      "sha256": "03bd9dbea6e7d716b24b47b861fe46f7620e4a2ab1729b500d94aed475982871",
+      "generated": false,
+      "headings": [
+        "# Actual weighted-zero forcing"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.GaussianFrequency",
+        "DongWangWangZhang2026.ZeroRepulsion",
+        "DongWangWangZhang2026.XiConjugation"
+      ],
+      "declarations": [
+        "exists_zero_forcing_of_weighted_frequency",
+        "weighted_frequency_threshold_mass_lt",
+        "exists_large_sum_weighted_zero_forcing"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/XiConjugation.lean",
+      "bytes": 3874,
+      "sha256": "2fb3002489d1063f99622b8c5c4da7e61b8cca32eded92de7ca1168d64ca2684",
+      "generated": false,
+      "headings": [
+        "# Conjugation of the actual zero multiplicity index"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.XiLogDerivative",
+        "GuthMaynard.ZeroCount"
+      ],
+      "declarations": [
+        "xi_divisor_conj_point",
+        "xiZeroConj",
+        "xiZeroPoint_conj",
+        "xiZeroConj_involutive",
+        "xiZeroConjEquiv",
+        "tsum_xiZero_kernel_conj",
+        "source_zero_kernel_neg_height"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/XiLogDerivative.lean",
+      "bytes": 9806,
+      "sha256": "232948a4725462f5f225aa16278eb32a6021f7744f5973ce1f189ce8f4f65756",
+      "generated": false,
+      "headings": [
+        "# The real xi logarithmic derivative"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.XiZeros"
+      ],
+      "declarations": [
+        "summable_xiZero_re_inv",
+        "summable_xiZero_re_resolvent",
+        "xi_logDeriv_reflect",
+        "tsum_xiZero_re_reflected_inv",
+        "re_xi_logDeriv_eq_tsum",
+        "re_xi_logDeriv_eq_tsum_of_one_le_re",
+        "logDeriv_GammaReal",
+        "xi_logDeriv_eq_zeta_gamma",
+        "tsum_xiZero_re_eq_zeta_gamma",
+        "summable_xiZero_inverse_square"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/XiRepulsion.lean",
+      "bytes": 7706,
+      "sha256": "7800a397f9ee5f57e7884b0ade9723be097b76b7b9c5d447383c69f4b05e069d",
+      "generated": false,
+      "headings": [
+        "# A quantitative quotient bound for the actual xi product"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.XiLogDerivative",
+        "Mathlib.Topology.Algebra.InfiniteSum.Field"
+      ],
+      "declarations": [
+        "norm_one_add_le_exp_re_quadratic",
+        "norm_weierstrass_one_sub_real_le",
+        "norm_xi_canonicalProduct_sub_real_le",
+        "norm_xi_sub_real_le"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/XiZeros.lean",
+      "bytes": 8906,
+      "sha256": "4fa2834e072086a4292b636f7c6dc6c05462d55a9e82b467e2a376a3470ad60f",
+      "generated": false,
+      "headings": [
+        "# Actual xi zeros with multiplicity"
+      ],
+      "imports": [
+        "PrimeNumberTheoremAnd.Mathlib.NumberTheory.LSeries.RiemannZetaHadamard",
+        "Mathlib.NumberTheory.LSeries.Nonvanishing"
+      ],
+      "declarations": [
+        "xi_ne_zero_of_one_le_re",
+        "xi_zero_re_mem_Ioo",
+        "xi_eq_factor_mul_zeta",
+        "analyticAt_xi_zeta_factor",
+        "xi_analyticOrder_eq_zeta",
+        "xi_eq_zero_iff_zeta",
+        "xi_zero_fiber_card",
+        "xiZeroPoint_zero",
+        "xiZeroPoint_re",
+        "xiZeroPoint_zeta_zero",
+        "xiZeroPoint_multiplicity",
+        "xi_analyticOrder_reflect",
+        "xi_divisor_reflect",
+        "xiZeroReflect",
+        "xiZeroPoint_reflect",
+        "xiZeroReflect_involutive",
+        "xiZeroReflectEquiv",
+        "summable_xiZero_norm_inv_sq",
+        "finite_xiZero_norm_le"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZeroCounts.lean",
+      "bytes": 10052,
+      "sha256": "5ef4b8c45656e6689dc913aeaaa2a79b38b2bd800b5c742059cb551a6f037eec",
+      "generated": false,
+      "headings": [
+        "# Finite source zero counts with actual multiplicity"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.XiConjugation"
+      ],
+      "declarations": [
+        "zeroCountIn",
+        "sourceZeroDisk",
+        "sourceZeroWindow",
+        "finite_xiZero_mem_bounded",
+        "finite_xiZero_sourceDisk",
+        "finite_xiZero_sourceWindow",
+        "zeroCountIn_mono",
+        "zeroCountIn_conj",
+        "zeroCountIn_sourceDisk_neg",
+        "zeroCountIn_sourceWindow_neg",
+        "zeroCountIn_eq_sum_multiplicities",
+        "zeroCountIn_rectangle_eq",
+        "zeroCountIn_eq_rectangle_filter",
+        "rectangle_filter_count_independent",
+        "zeroCountIn_sourceWindow_eq",
+        "sourceZeroDisk_subset_window",
+        "zeroCountIn_disk_le_window",
+        "zeroCountIn_sourceDisk_nonpos"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZeroDiskTheorem.lean",
+      "bytes": 4542,
+      "sha256": "a9e35483bcc9e4d3af74f8c7ae7a97b97b39ae26cb1e427ad0ba601f783867b8",
+      "generated": false,
+      "headings": [
+        "# Theorem 1.1: large zeta sums force an actual zero disk"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.DiskZeroCount",
+        "DongWangWangZhang2026.LinkedZeroSum"
+      ],
+      "declarations": [
+        "large_zeta_sum_forces_zero_disk"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZeroRepulsion.lean",
+      "bytes": 10309,
+      "sha256": "00afd76d850acba15a8dfbfdc88d264f77d50eba6d6138415017ce0c2a3e2c01",
+      "generated": false,
+      "headings": [
+        "# Zeta growth controlled by the actual zero kernel"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.XiRepulsion",
+        "DongWangWangZhang2026.GammaRatioBounds",
+        "DongWangWangZhang2026.ZetaLogDerivativeBounds",
+        "DongWangWangZhang2026.ZetaUniformBounds",
+        "DongWangWangZhang2026.MeanValueAssembly"
+      ],
+      "declarations": [
+        "exists_re_xi_logDeriv_source_lower",
+        "norm_source_rational_factor_le",
+        "norm_zeta_source_xi_bound",
+        "exists_source_zero_repulsion"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZeroSumUpperBound.lean",
+      "bytes": 2597,
+      "sha256": "d5dfa6de3397e4292def238d38cab60617ed5ad06fb7e82b56c2713e3bcc6279",
+      "generated": false,
+      "headings": [
+        "# The source zero-sum upper bound"
+      ],
+      "imports": [
+        "DongWangWangZhang2026.XiLogDerivative",
+        "DongWangWangZhang2026.GammaLogBounds",
+        "DongWangWangZhang2026.ZetaLogDerivativeBounds"
+      ],
+      "declarations": [
+        "norm_one_div_le_half_of_two_le_abs_im",
+        "exists_source_zero_sum_upper"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZetaLogDerivativeBounds.lean",
+      "bytes": 6474,
+      "sha256": "c9d07f2439e62e5dc56e1953f6ee6c07b5c09917d10a4d482ad164689b1859c7",
+      "generated": false,
+      "headings": [
+        "# The exact pole coefficient in zeta's logarithmic derivative"
+      ],
+      "imports": [
+        "GuthMaynard.ZetaBounds",
+        "Mathlib.NumberTheory.LSeries.Dirichlet",
+        "Mathlib.NumberTheory.LSeries.Nonvanishing",
+        "Mathlib.Analysis.Calculus.FDeriv.Analytic"
+      ],
+      "declarations": [
+        "norm_mangoldt_term_eq_re",
+        "norm_logDeriv_zeta_le_real",
+        "regularized_zeta_ne_zero_real",
+        "exists_regularized_zeta_logDeriv_bound",
+        "logDeriv_zeta_eq_regularized",
+        "exists_norm_logDeriv_zeta_le_pole"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZetaSum.lean",
+      "bytes": 5158,
+      "sha256": "17642f646bc69ea3a31b7f26b2f023d3eca0f814e5a71dca2eeb2a5507ac6a55",
+      "generated": false,
+      "headings": [
+        "# The actual positive-index zeta sum"
+      ],
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic"
+      ],
+      "declarations": [
+        "zetaTerm",
+        "zetaTerm_eq_cpow",
+        "zetaTerm_eq_exp",
+        "norm_zetaTerm",
+        "zetaTerm_mul",
+        "zetaTerm_neg",
+        "zetaTerm_add",
+        "zetaTerm_sub",
+        "zetaSum",
+        "zetaSum_eq_sum_exp",
+        "zetaSum_eq_zero_of_lt_one",
+        "zetaSum_neg",
+        "norm_zetaSum_neg",
+        "norm_zetaSum_le_floor",
+        "norm_zetaSum_le",
+        "norm_normalized_zetaSum_exp_le_one",
+        "zetaTerm_div_cpow",
+        "summable_zetaTerm_div_cpow",
+        "tsum_zetaTerm_div_cpow"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026/ZetaUniformBounds.lean",
+      "bytes": 8093,
+      "sha256": "36ecd8029d23b85f4707513b4039bb18925515e917e0048c482b63c0be0b95d6",
+      "generated": false,
+      "headings": [
+        "# Uniform zeta bound to the left of one"
+      ],
+      "imports": [
+        "PrimeNumberTheoremAnd.ZetaBounds",
+        "Mathlib.Analysis.SumIntegralComparisons",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+      ],
+      "declarations": [
+        "sum_Icc_rpow_sub_one_le",
+        "norm_zeta_sub_sum_pole_le",
+        "norm_zeta_polynomial_le",
+        "norm_zeta_left_strip_le_cutoff",
+        "norm_zeta_left_strip_le"
+      ]
+    },
+    {
+      "path": "Extension/DongWangWangZhang2026.lean",
+      "bytes": 2025,
+      "sha256": "ea1cfc3abb84176bc128e7641d68107aee105475eeba703ef61b78d76414dc4f",
+      "generated": false,
+      "headings": [],
+      "imports": [
+        "DongWangWangZhang2026.ZetaSum",
+        "DongWangWangZhang2026.TwistSelection",
+        "DongWangWangZhang2026.MeanComparison",
+        "DongWangWangZhang2026.PowerSumEstimate",
+        "DongWangWangZhang2026.CoefficientMean",
+        "DongWangWangZhang2026.MeanValueTransform",
+        "DongWangWangZhang2026.MeanValueFrequency",
+        "DongWangWangZhang2026.MeanValueMaximum",
+        "DongWangWangZhang2026.MeanValueEuler",
+        "DongWangWangZhang2026.MeanValueSmoothing",
+        "DongWangWangZhang2026.MeanValueAssembly",
+        "DongWangWangZhang2026.TwistBounds",
+        "DongWangWangZhang2026.TwoPointEuler",
+        "DongWangWangZhang2026.DilationMeanSquare",
+        "DongWangWangZhang2026.DilationSmoothing",
+        "DongWangWangZhang2026.DilationAssembly",
+        "DongWangWangZhang2026.DilationLipschitz",
+        "DongWangWangZhang2026.ZetaUniformBounds",
+        "DongWangWangZhang2026.RegularizedTransform",
+        "DongWangWangZhang2026.GaussianTransform",
+        "DongWangWangZhang2026.XiZeros",
+        "DongWangWangZhang2026.XiLogDerivative",
+        "DongWangWangZhang2026.GammaLogBounds",
+        "DongWangWangZhang2026.ZetaLogDerivativeBounds",
+        "DongWangWangZhang2026.ZeroSumUpperBound",
+        "DongWangWangZhang2026.XiRepulsion",
+        "DongWangWangZhang2026.GammaRatioBounds",
+        "DongWangWangZhang2026.ZeroRepulsion",
+        "DongWangWangZhang2026.XiConjugation",
+        "DongWangWangZhang2026.ZeroCounts",
+        "DongWangWangZhang2026.GaussianConcentration",
+        "DongWangWangZhang2026.GaussianLowerBound",
+        "DongWangWangZhang2026.GaussianFrequency",
+        "DongWangWangZhang2026.WeightedZeroForcing",
+        "DongWangWangZhang2026.DiskZeroGeometry",
+        "DongWangWangZhang2026.DiskZeroCount",
+        "DongWangWangZhang2026.LinkedZeroSum",
+        "DongWangWangZhang2026.ZeroDiskTheorem",
+        "DongWangWangZhang2026.LocalWindowScale",
+        "DongWangWangZhang2026.SmallRangeZeroCriterion",
+        "DongWangWangZhang2026.LogarithmicDerivativeBounds",
+        "DongWangWangZhang2026.LogarithmicBlockBound",
+        "DongWangWangZhang2026.LargeSumEstimate",
+        "DongWangWangZhang2026.LocalZeroCriterion"
+      ],
+      "declarations": []
+    },
+    {
+      "path": "Extension/lake-manifest.json",
+      "bytes": 4981,
+      "sha256": "3bd32f161ed185489ce80a96804a0265aa25976396fac9d84dbb2a28e7ee64b2",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Extension/lakefile.toml",
+      "bytes": 350,
+      "sha256": "f85c69dac07d2b1063a162defb05dbb061aad395ea646a1aad136606c986ada4",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Extension/lean-toolchain",
+      "bytes": 25,
+      "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+      "generated": false
+    },
+    {
+      "path": "Extension/README.md",
+      "bytes": 4855,
+      "sha256": "fec80ad7393348a0d63b130f03cb94850bef05e920f54a956dd37979b3dc1192",
+      "generated": false,
+      "headings": [
+        "# Completed Lean extension"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-123730-047.log",
+      "bytes": 9602,
+      "sha256": "76068e029742a0ee757acfcc4da5506569fa943bd3dfbf4e1127a0ccc6f78571",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-125041-178.log",
+      "bytes": 15970,
+      "sha256": "17b21824255bf57931981d33a86e3487e3098038cf2b72d4f3457259906b3fe3",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-131648-336.log",
+      "bytes": 22908,
+      "sha256": "df3275cac8487b46c1d2256bb4d2d7eb46dd8afae39515ad2d660badbb1261e8",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-134751-893.log",
+      "bytes": 40886,
+      "sha256": "f1b0c7464f0d48d0bf77d3ab9360fac2693ef94027ac6239ff3934caf5a65279",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-142238-371.log",
+      "bytes": 53872,
+      "sha256": "bab0c15fd44a0778b9e0184a3c1f44733cab2697b8579aea305b5dd8388ce060",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-145225-916.log",
+      "bytes": 67376,
+      "sha256": "6b6326bad852a49206e16652fa1e9c0081b00d82c8e54948cfc3a7500e2854d2",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-153431-014.log",
+      "bytes": 1516,
+      "sha256": "2d31e7bee6e062ef11386102d8df1b10bca533dbe1712852ce3858b568db1a1f",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-153455-215.log",
+      "bytes": 88778,
+      "sha256": "ff2c7024d0154db2bde2ad3ca4c744eb83e10818de0f555568a738f87a42b9e7",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-160756-402.log",
+      "bytes": 103270,
+      "sha256": "b9a7643c57b6f4d079c866a7d40ec6236ea1c705cc3588f8fa3226f1911998c0",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-162524-713.log",
+      "bytes": 106924,
+      "sha256": "e20c4f4c50810eb2eb6dd12d7e735615913028a13022b71fac3ed5a4b694c7e2",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-165220-746.log",
+      "bytes": 114546,
+      "sha256": "b9fef919735009f6c53c926bccc1c7244f4145a30ded2dcc5a541a9894c63927",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-172524-191.log",
+      "bytes": 129541,
+      "sha256": "9ed91d3a822bea9d6dc109ebc12a53e66faad849317ef5d07165dd0d129a5a31",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-175149-509.log",
+      "bytes": 138685,
+      "sha256": "2461fa6c227fa469b9e5d6978f7fa3d291a6e32e1a0167fb77cd976eb42a6f0f",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-180750-024.log",
+      "bytes": 144499,
+      "sha256": "0aa3fb6bc1382cd0c86602bc36acddba72781be72b99a41b21b5bcc208dd2cec",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-182248-403.log",
+      "bytes": 146705,
+      "sha256": "06f337e7c02101dbcd215834757000efc3eeeaeb6be672f2995c0b346086a01d",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-185404-765.log",
+      "bytes": 162232,
+      "sha256": "782d8ac7ed9a2a544f8ced2456e8e2b272485466fca67eeed4690ef0f4c7b092",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-191717-870.log",
+      "bytes": 169062,
+      "sha256": "9a22c0fbcf01f776b26bf3dfcce8c49a5d41aa9fe24f2b1e28f302420aa3c391",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-194439-661.log",
+      "bytes": 182371,
+      "sha256": "76dd8136605ff52474a4d920da581f8d4f9369298d284bb86abf2dcd9db167b9",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-201145-555.log",
+      "bytes": 189355,
+      "sha256": "b0b285c125234fc78aec8f1c2d0c4cd02101dd1651b69d66599acc76c79e6949",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-203716-719.log",
+      "bytes": 196615,
+      "sha256": "9923b9076ed5a2cbd54764b505d7c7268bbbbbd9e489eac84259f303d953dfc8",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-204320-588.log",
+      "bytes": 196612,
+      "sha256": "03ba9936ad697bb9aa464a0f755da92c74d435e168306c984b29c5a6b332acdd",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-205353-504.log",
+      "bytes": 199513,
+      "sha256": "1b094d4bd066af69c2ec6b241d3efc8a91f6cd92e50c1a8581a9c08eb202539c",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-211249-672.log",
+      "bytes": 216949,
+      "sha256": "5d255839660f5a799eecc5ea1ccd43712f80c53ad7fe8fe4e95fc24b504294e4",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-213012-827.log",
+      "bytes": 228215,
+      "sha256": "9c3aeee5a347b3d5f50685017f2d7c779e474358e1d631124f0990c892c45b74",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-215304-015.log",
+      "bytes": 232729,
+      "sha256": "908bedaddc82c4812bc865da62993ac2b33f7793fecdd009e3396738c6d85319",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-221602-166.log",
+      "bytes": 239869,
+      "sha256": "fcb6eea6195ee4f79a86ed050b077b4126a4fbe57daae3e4b67eba6e7b76028f",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-223610-183.log",
+      "bytes": 250298,
+      "sha256": "a2159a00b1cbecfd4cda451dc6d3fc6bafddf3c9d2957d36fe038bcde67e3807",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-231858-641.log",
+      "bytes": 265277,
+      "sha256": "8f872fc2f4a6368a3094306169b194774a436c35136dc34b2bf8dc698e411559",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261004-234118-655.log",
+      "bytes": 271551,
+      "sha256": "711b0f6e6c305bed1f9406bad2c0a2d98bc4c4e0f9179cb88af3398a203f3b7a",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261005-002122-324.log",
+      "bytes": 282242,
+      "sha256": "b0745dba7b799eac1273cb32a23a9ba5287cfb8df5a1f21198833e061d0eec1b",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261005-003207-332.log",
+      "bytes": 282234,
+      "sha256": "f7ddc24e8cbaafa6b9059e2b63ae61b0f445da26e36455ac829a4e0b3b4142c4",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-build-20261005-024228-912.log",
+      "bytes": 282234,
+      "sha256": "de66f1a525f20464e295141a43726d82a325177536fc3793e1d3a56d32720b06",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-111446-271.log",
+      "bytes": 1548,
+      "sha256": "e20958834c2d631b00e6195604041e35d9f4f2c9b992da8180420857bd712057",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-111749-561.log",
+      "bytes": 1350,
+      "sha256": "7b3e0927b427f2568f94c16874cd708fbb5e3543f473aec5cc8f28d81d73657c",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-111904-312.log",
+      "bytes": 1548,
+      "sha256": "a531ca422d0bbf8bfec86e7643215b0224cec3db334adf424157b20ea670480a",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-111952-485.log",
+      "bytes": 1548,
+      "sha256": "a403847b48a1c59a4bc73b5f7ab83bbfb22f0e74dcccb31d87a8cfc669a9a8eb",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-112731-408.log",
+      "bytes": 1548,
+      "sha256": "54202b4dfea6433e8f84f069c190b26fd025e919bbee8f0cd12e69358bd80c17",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-113054-468.log",
+      "bytes": 1548,
+      "sha256": "6e710c3213b7033a5dbac9adb10e799c943d64a090863c7000982bec89d9677d",
+      "generated": true
+    },
+    {
+      "path": "logs/dong-wang-wang-zhang-scaffold-20261004-121435-808.log",
+      "bytes": 1548,
+      "sha256": "0c8fb0af13a2114a1737381d0f4b8f8ae8b5773c71c995ac4b23dcaaa6a9aafc",
+      "generated": true
+    },
+    {
+      "path": "logs/proof-inputs-20261005-003207-332.json",
+      "bytes": 9640,
+      "sha256": "5afe510e11905769892097aba1b246da66fa6764d7b3203254bd41dfa649d8ff",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/changed/a.bin",
+      "bytes": 15,
+      "sha256": "cfd8079a1fe52d475ab3db6cc62ce75224b373ec4c1e201ebe3a492362b780c6",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/changed/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/duplicate/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/duplicate/SHA256SUMS.txt",
+      "bytes": 144,
+      "sha256": "84b142feae0cba587c4036113e1563e07b96d0c36538a3952d3899398a877dbb",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/empty/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/empty/SHA256SUMS.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/extra/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/extra/extra.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/extra/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/malformed/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/malformed/SHA256SUMS.txt",
+      "bytes": 19,
+      "sha256": "a03d5c3100d8447252d4073b1310f201ac14b4ca501f95d3d72cbb54a7cb0532",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/missing/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/nonlocal/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/nonlocal/SHA256SUMS.txt",
+      "bytes": 75,
+      "sha256": "18f6af8e686234eb1143e7b9444a07efce58862bf10557ed87ad7ed6fd8b435d",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/valid/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-111447-233/valid/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/changed/a.bin",
+      "bytes": 15,
+      "sha256": "cfd8079a1fe52d475ab3db6cc62ce75224b373ec4c1e201ebe3a492362b780c6",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/changed/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/duplicate/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/duplicate/SHA256SUMS.txt",
+      "bytes": 144,
+      "sha256": "84b142feae0cba587c4036113e1563e07b96d0c36538a3952d3899398a877dbb",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/empty/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/empty/SHA256SUMS.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/extra/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/extra/extra.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/extra/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/malformed/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/malformed/SHA256SUMS.txt",
+      "bytes": 19,
+      "sha256": "a03d5c3100d8447252d4073b1310f201ac14b4ca501f95d3d72cbb54a7cb0532",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/missing/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/nonlocal/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/nonlocal/SHA256SUMS.txt",
+      "bytes": 75,
+      "sha256": "18f6af8e686234eb1143e7b9444a07efce58862bf10557ed87ad7ed6fd8b435d",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/valid/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-112732-352/valid/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/changed/a.bin",
+      "bytes": 15,
+      "sha256": "cfd8079a1fe52d475ab3db6cc62ce75224b373ec4c1e201ebe3a492362b780c6",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/changed/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/duplicate/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/duplicate/SHA256SUMS.txt",
+      "bytes": 144,
+      "sha256": "84b142feae0cba587c4036113e1563e07b96d0c36538a3952d3899398a877dbb",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/empty/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/empty/SHA256SUMS.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/extra/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/extra/extra.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/extra/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/malformed/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/malformed/SHA256SUMS.txt",
+      "bytes": 19,
+      "sha256": "a03d5c3100d8447252d4073b1310f201ac14b4ca501f95d3d72cbb54a7cb0532",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/missing/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/nonlocal/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/nonlocal/SHA256SUMS.txt",
+      "bytes": 75,
+      "sha256": "18f6af8e686234eb1143e7b9444a07efce58862bf10557ed87ad7ed6fd8b435d",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/valid/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261004-131148-584/valid/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/changed/a.bin",
+      "bytes": 15,
+      "sha256": "cfd8079a1fe52d475ab3db6cc62ce75224b373ec4c1e201ebe3a492362b780c6",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/changed/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/duplicate/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/duplicate/SHA256SUMS.txt",
+      "bytes": 144,
+      "sha256": "84b142feae0cba587c4036113e1563e07b96d0c36538a3952d3899398a877dbb",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/empty/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/empty/SHA256SUMS.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/extra/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/extra/extra.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/extra/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/malformed/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/malformed/SHA256SUMS.txt",
+      "bytes": 19,
+      "sha256": "a03d5c3100d8447252d4073b1310f201ac14b4ca501f95d3d72cbb54a7cb0532",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/missing/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/nonlocal/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/nonlocal/SHA256SUMS.txt",
+      "bytes": 75,
+      "sha256": "18f6af8e686234eb1143e7b9444a07efce58862bf10557ed87ad7ed6fd8b435d",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/valid/a.bin",
+      "bytes": 33,
+      "sha256": "9dee5c7f23b78536ba850c3920c0d1f04ea0132fe5704d416242ec4f82bb7f86",
+      "generated": true
+    },
+    {
+      "path": "logs/source-verifier-tests-20261005-001733-656/valid/SHA256SUMS.txt",
+      "bytes": 72,
+      "sha256": "d56c45850b3065fa5181206dddd81609af7460cfb305475f68b180293d2e48e1",
+      "generated": true
+    },
+    {
+      "path": "push_to_github.bat",
+      "bytes": 317,
+      "sha256": "5c87b5219c165cf977cbd957691e86e1d2da132d48a7180675a11e6e019c2769",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "README.md",
+      "bytes": 10502,
+      "sha256": "c9f5ac2ba494348043098f08d8be0085f0dc89b10f965511c82b5bde2c18c3fe",
+      "generated": false,
+      "headings": [
+        "# Dong–Wang–Wang–Zhang 2026: completed main-theorem formalization",
+        "## Public results",
+        "## Supporting proof routes",
+        "## Uniform zeta bound",
+        "## Xi and the real logarithmic derivative",
+        "## Source zero repulsion",
+        "## Exact Gaussian transform",
+        "## Start here",
+        "## Human-facing BATs",
+        "## Folder boundary"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "run_dong_wang_wang_zhang_build.bat",
+      "bytes": 572,
+      "sha256": "f09be99306d737f88aab751e50c771bd131f6fc94374884677670b24e5709879",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Sources/dong-wang-wang-zhang-2608.31060v1.pdf",
+      "bytes": 362690,
+      "sha256": "3c9ec2c584be3b00b751a96b47df0de2d96eb2657b1afbaa5cbf95b58fcc1972",
+      "generated": false
+    },
+    {
+      "path": "Sources/dong-wang-wang-zhang-2608.31060v1.tar",
+      "bytes": 13650,
+      "sha256": "5bf577f85b3248ddd630d916f54ad40fed1e39d50da533e19e0cbb58da886aa7",
+      "generated": false
+    },
+    {
+      "path": "Sources/DongWangWangZhang-v1-source/00README.json",
+      "bytes": 213,
+      "sha256": "d1f6b1a71c9accb812ec5121d1fff7910c025ca7bb201948bacdb40941bc14e5",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Sources/DongWangWangZhang-v1-source/main.tex",
+      "bytes": 41330,
+      "sha256": "d00d71b8368f8832dfa1bfe75af12e978ebbfe577760dc8c7d4aba278da4d466",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Sources/granville-soundararajan-1501.01804v2.pdf",
+      "bytes": 221756,
+      "sha256": "2b55c864541a4df336ccaae69e76b34b0c0d8ff1c09119c5c08e99a920954bd0",
+      "generated": false
+    },
+    {
+      "path": "Sources/granville-soundararajan-decay-2003-journal.pdf",
+      "bytes": 398158,
+      "sha256": "32f5b5b3eba3d2ac61451c7f66dc8f8cb3e4be537e9e52020513be5e953ebdad",
+      "generated": false
+    },
+    {
+      "path": "Sources/granville-soundararajan-large-character-2018-journal.pdf",
+      "bytes": 147830,
+      "sha256": "9b136b60a00ce9889958c11af92793e15df1f64aacd66a300f2531f3112dbf05",
+      "generated": false
+    },
+    {
+      "path": "Sources/granville-soundararajan-math-9911246.pdf",
+      "bytes": 288508,
+      "sha256": "fb6d0964943be8ac7e081fefb090be16a2c23cf25db6afe238f9cad4379a775c",
+      "generated": false
+    },
+    {
+      "path": "Sources/iwaniec-kowalski-exponential-sums-author-excerpt.pdf",
+      "bytes": 754733,
+      "sha256": "b4c346a8459e9a0450a16a22438220cf7f40926d875beacbcdeccdfc75c5eee5",
+      "generated": false
+    },
+    {
+      "path": "Sources/PINS.md",
+      "bytes": 2659,
+      "sha256": "becdd053dd2c2dde8f2979fd78ecbb38cac16e435c6a7961dad183779eafcb66",
+      "generated": false,
+      "headings": [
+        "# Source pins and provenance"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Sources/README.md",
+      "bytes": 941,
+      "sha256": "f55073d728679c77895f9ce57c901b3ec37bf3881e9c6f0cf48eb341954e76a5",
+      "generated": false,
+      "headings": [
+        "# Archived research sources"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Sources/SHA256SUMS.txt",
+      "bytes": 988,
+      "sha256": "98e0b5f582042dd9014c66d575e44d5d0cd8bdbc3ad29cabeb1cb42978269300",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/push_to_github.ps1",
+      "bytes": 2896,
+      "sha256": "310fe193a8a781f57df42a3e3e40d259f44437cf549bc4bfa3c6d4a057233451",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/README.md",
+      "bytes": 3310,
+      "sha256": "010358ac2947bbf87d197b80a35d366fe8e068730c3f6f0e1e3edda328fc58f3",
+      "generated": false,
+      "headings": [
+        "# Proof verification tooling"
+      ],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/run_dong_wang_wang_zhang_build.ps1",
+      "bytes": 12872,
+      "sha256": "fd89a31d4d4bba45f127388e12ef08ba1cac34a9fcf4e2f33b8f5f791cb0a853",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/scaffold.json",
+      "bytes": 5978,
+      "sha256": "619ec763ad61f337a378b4accba7acf4bdb798b67de9048e06a63fa58f8601fb",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/test_source_verifier.ps1",
+      "bytes": 1904,
+      "sha256": "c413d15a872c06b0b1dace98fd2b1e3c7becbaa67837d158fc7edfc9a8f7492e",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/upstream_snapshot.json",
+      "bytes": 1461,
+      "sha256": "f2d9e92f472ad5023192f78ad283c05d1b000b04b75e242a5a944340d4dabbbb",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    },
+    {
+      "path": "Tools/verify_sources.ps1",
+      "bytes": 1992,
+      "sha256": "86c16c784ff3ad00c5c26b14e2cae67cbce85e361c5fc908bfb172092d9de717",
+      "generated": false,
+      "headings": [],
+      "imports": [],
+      "declarations": []
+    }
+  ]
+}

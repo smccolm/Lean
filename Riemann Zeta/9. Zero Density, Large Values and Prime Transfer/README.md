@@ -38,3 +38,10 @@ The foundation pins are unchanged. Generic hybrid Halász, the optimal GS03
 exponent and supplementary Remark 1.3 are not claimed; accepted specializations
 and alternate supporting proofs are documented without changing either main
 statement. Internal completion is not independent review or publication.
+
+Node 78 contains the [Dhiman–Kadiri–Quesada-Herrera research scaffold](78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md),
+prepared on 5 October 2026 from node 77's full template inventory. It includes
+the inactive goal prompt, pinned paper and ancillary code, current source/repository
+survey, source-discrepancy register and existing-Lean reuse map. **Lean conversion
+has not started; all 20 proof gates are OPEN.** Its BAT checks scaffold integrity
+only, and its synchronization BAT is copied unchanged from node 63.

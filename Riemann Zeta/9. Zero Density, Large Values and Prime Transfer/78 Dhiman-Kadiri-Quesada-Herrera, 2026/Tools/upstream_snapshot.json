@@ -1,0 +1,45 @@
+{
+  "observed_on": "2026-10-05",
+  "recorded_utc": "2026-10-05T10:27:29.202365+00:00",
+  "primary_paper": "2609.00537v1",
+  "primary_submission_utc": "2026-09-01T01:21:11Z",
+  "repositories": [
+    {
+      "repository": "leanprover-community/mathlib4",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "commit": "9194f400a4ef67d0c14c98e0cf300cc9f289048e",
+      "commit_time_utc": "2026-10-05T07:59:20Z",
+      "toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "selected_for_import": false
+    },
+    {
+      "repository": "AlexKontorovich/PrimeNumberTheoremAnd",
+      "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
+      "commit": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+      "commit_time_utc": "2026-10-01T03:31:57Z",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "selected_for_import": false
+    },
+    {
+      "repository": "teorth/expdb",
+      "url": "https://github.com/teorth/expdb",
+      "commit": "c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+      "commit_time_utc": "2026-09-26T19:01:00Z",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "selected_for_import": false
+    }
+  ],
+  "github_repository_searches": [
+    {
+      "query": "2609.00537",
+      "total_count": 0
+    },
+    {
+      "query": "Dhiman Kadiri",
+      "total_count": 0
+    }
+  ],
+  "expdb_tree_truncated": false,
+  "expdb_lean_files": 18,
+  "qualification": "Live public metadata and bounded searches; not an exhaustive proof audit or a claim that no private/unindexed implementation exists. No external Lean dependency installed."
+}

@@ -1,0 +1,106 @@
+{
+  "sha": "c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+  "node_id": "C_kwDOMflpYtoAKGM4ZWRhNWU0ZjFmNTEwMjRiNmNiZjcwYzdiZWY2YzMzZGE3NGM2OTE",
+  "commit": {
+    "author": {
+      "name": "teorth",
+      "email": "tao@math.ucla.edu",
+      "date": "2026-09-26T19:01:00Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-26T19:01:00Z"
+    },
+    "message": "Merge pull request #243 from teorth/drop-unsourced-188\n\nRemove the unsourced H_1 <= 188 entry from the small prime gap table",
+    "tree": {
+      "sha": "ad6390d5ea549905f355995931cf108c14040a3b",
+      "url": "https://api.github.com/repos/teorth/expdb/git/trees/ad6390d5ea549905f355995931cf108c14040a3b"
+    },
+    "url": "https://api.github.com/repos/teorth/expdb/git/commits/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJquBZsCRC1aQ7uu5UhlAAAh5AQAIFApa07VdrR2RoAegSskF09\nrCjkNlJSXtDErt6GewjrIqAOuNRONWiqP/3bb9hmY3I+g0WBhNeCwri92dTwcazF\nlUpcskPdGdY5KDie8qN1KadufXdEEZcRL0mHY7dC8oBLaTLJf+Lb9ZxhG6gMmO7o\nCWtCG+xJ+Ugd8bzTazUMa6AnbomswqFteLVoNTl7J9/wZ/A0p2UkXkF3xh+qRy7D\nP0j0/8leD5x05v2Yl3KtehMPrmsNU6LJYHgyroxyde5vnlNjoGee/oTAum4DMyL3\nBFu3FgHQAOp/gXyyBO1ayVxxBrD/uFkOaL+MlUZsE1nabisQ81l7Q7pY+WcBHLQ0\nu0xTg8dwSUcy60WyWLsP6LpKqdMshJFLlmWVKnSPjmRIANNqyV0n5EkoiRyvVnXZ\nymfIz5gt7B42XIsNQnJTnV6zX0BhdxMctJtNjok2lc1jvJDWTS1VZTXuFdTwN3D9\nH+079w5KT9iE5LXnVvr7dHbahHzhlJqSvJYttuTRR6yHwaGiP3+M93NhMNP+SeDC\nHIcuG7fIFuidm1/P0kw1DlR/5S0e3fK88NerY+CQxNElzXhTMXLHMWLZXpToAYWQ\nYRvDVR7F3rz0ngpt25dO6Q77BpgSoVn6nCyUG30JTiUj/HlvFZyCp9Rn17AhBkHw\nAjq3gI5HkOSA6zwp89nA\n=ykcF\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree ad6390d5ea549905f355995931cf108c14040a3b\nparent 755e0e8b3471e51409d1fa69e3d2b13e90abf073\nparent 5b858c76154d22b81a63c56fba9072f88717dd28\nauthor teorth <tao@math.ucla.edu> 1790449260 -0700\ncommitter GitHub <noreply@github.com> 1790449260 -0700\n\nMerge pull request #243 from teorth/drop-unsourced-188\n\nRemove the unsourced H_1 <= 188 entry from the small prime gap table",
+      "verified_at": "2026-09-26T19:01:01Z"
+    }
+  },
+  "url": "https://api.github.com/repos/teorth/expdb/commits/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+  "html_url": "https://github.com/teorth/expdb/commit/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+  "comments_url": "https://api.github.com/repos/teorth/expdb/commits/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691/comments",
+  "author": {
+    "login": "teorth",
+    "id": 199308,
+    "node_id": "MDQ6VXNlcjE5OTMwOA==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/199308?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/teorth",
+    "html_url": "https://github.com/teorth",
+    "followers_url": "https://api.github.com/users/teorth/followers",
+    "following_url": "https://api.github.com/users/teorth/following{/other_user}",
+    "gists_url": "https://api.github.com/users/teorth/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/teorth/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/teorth/subscriptions",
+    "organizations_url": "https://api.github.com/users/teorth/orgs",
+    "repos_url": "https://api.github.com/users/teorth/repos",
+    "events_url": "https://api.github.com/users/teorth/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/teorth/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "755e0e8b3471e51409d1fa69e3d2b13e90abf073",
+      "url": "https://api.github.com/repos/teorth/expdb/commits/755e0e8b3471e51409d1fa69e3d2b13e90abf073",
+      "html_url": "https://github.com/teorth/expdb/commit/755e0e8b3471e51409d1fa69e3d2b13e90abf073"
+    },
+    {
+      "sha": "5b858c76154d22b81a63c56fba9072f88717dd28",
+      "url": "https://api.github.com/repos/teorth/expdb/commits/5b858c76154d22b81a63c56fba9072f88717dd28",
+      "html_url": "https://github.com/teorth/expdb/commit/5b858c76154d22b81a63c56fba9072f88717dd28"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 0,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "8f8dbc6246a19ccf637924e56fb731bd52ebde71",
+      "filename": "blueprint/src/chapter/primes.tex",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 4,
+      "changes": 4,
+      "blob_url": "https://github.com/teorth/expdb/blob/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691/blueprint%2Fsrc%2Fchapter%2Fprimes.tex",
+      "raw_url": "https://github.com/teorth/expdb/raw/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691/blueprint%2Fsrc%2Fchapter%2Fprimes.tex",
+      "contents_url": "https://api.github.com/repos/teorth/expdb/contents/blueprint%2Fsrc%2Fchapter%2Fprimes.tex?ref=c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+      "patch": "@@ -411,15 +411,11 @@ \\section{Extremal values of prime gaps}\n     \\hline\n     Charton--Hong--Lau--Ono--Remy--Siu--Swaminathan--Thorner--Xie (2026) \\cite{AxiomMath_212} & $H_1 \\le 212$ & \\\\\n     \\hline\n-    Anthropic (?) (2026) & $H_1 \\le 188$ & \\\\\n-    \\hline\n     OpenAI (2026) \\cite{OpenAI_186} & $H_1 \\le 186$ & \\\\\n     \\hline\n     \\end{tabular}\n     \\end{table}\n \n-Note: the bound $H_1 \\le 188$ in \\Cref{small-primegap-table} is attributed to Anthropic (2026), but we have not been able to locate a citable source for it; the attribution is marked with a question mark until a reference is supplied.\n-\n The current best known lower bound on $G(X)$ is\n \\begin{theorem}[OpenAI (2026) \\cite{OpenAI_LargeGap}]\n For unbounded $X$, one has"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "observed_on": "2026-10-05",
+  "executed_utc": "2026-10-05T10:29:35.743746+00:00",
+  "status": "REPLAY ONLY - NOT A PROOF",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "source_sha256": "9ef98162204d1435c972c9a714ed30a240db7977830ea7a25bb7cad35fb9c07d",
+  "exit_code": 0,
+  "stdout_sha256": "1c2cd8d107ec1e2800ff3dda91fa101a08adcb806c3f61a707559d0ae381453a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_directory": "logs/author-code-20261005-102935-743746",
+  "sage_replay": "not run; SageMath 9.5 unavailable during setup",
+  "observation": "Unmodified AFE2 replay; four Table 1 rows match printed output; k=1..150 emitted. Not certified bounds.",
+  "table1_rows": [
+    [
+      "6.2832",
+      "2.264445",
+      "2.265204",
+      "2.265204",
+      "5.961915e-02"
+    ],
+    [
+      "1000",
+      "1.792711",
+      "1.265977",
+      "1.792736",
+      "3.692900e-04"
+    ],
+    [
+      "1e10",
+      "1.750701",
+      "1.160079",
+      "1.750701",
+      "3.692588e-11"
+    ],
+    [
+      "3e12",
+      "1.750689",
+      "1.160048",
+      "1.750689",
+      "1.230863e-13"
+    ]
+  ]
+}

@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{abramowitz1965handbook}
+M.~Abramowitz and I.~A. Stegun.
+\newblock {\em Handbook of Mathematical Functions: With Formulas, Graphs, and Mathematical Tables}.
+\newblock Applied mathematics series. Dover Publications, 1965.
+
+\bibitem{AriasDeReyna2011}
+J.~Arias~de Reyna.
+\newblock High precision computation of {R}iemann's zeta function by the {R}iemann-{S}iegel formula, {I}.
+\newblock {\em Math. Comp.}, 80(274):995--1009, 2011.
+
+\bibitem{dereyna2024approximationzetafunctiondirichlet}
+J.~Arias~de Reyna.
+\newblock On the approximation of the zeta function by dirichlet polynomials, 2024.
+\newblock preprint available at arXiv:2406.16667.
+
+\bibitem{Brent}
+R.~P. Brent.
+\newblock {\em Algorithms for minimization without derivatives}, chapter~4.
+\newblock Prentice-Hall Series in Automatic Computation. Prentice-Hall, Inc., Englewood Cliffs, N.J., 1973.
+
+\bibitem{HL1921}
+G.H. Hardy and J.E. Littlewood.
+\newblock The zeros of riemann's zeta-function on the critical line.
+\newblock {\em Mathematische Zeitschrift}, 10:283--317, 1921.
+
+\bibitem{HL1923}
+G.H. Hardy and J.E. Littlewood.
+\newblock The approximate functional equation in the theory of the zeta-function, with applications to the divisor-problems of dirichlet and piltz.
+\newblock {\em Proceedings of the London Mathematical Society}, s2-21(1):39--74, 1923.
+
+\bibitem{Iwaniec-Kowalski}
+H.~Iwaniec and E.~Kowalski.
+\newblock {\em Analytic Number Theory}, volume~53 of {\em American Mathematical Society Colloquium Publications}.
+\newblock American Mathematical Society, Providence, RI, 2004.
+
+\bibitem{Kadiri2013}
+H.~Kadiri.
+\newblock A zero density result for the {R}iemann zeta function.
+\newblock {\em Acta Arith.}, 160(2):185--200, 2013.
+
+\bibitem{Karatsuba-Korolev-2007}
+A.~A. Karatsuba and M.~A. Korol\"ev.
+\newblock A theorem on the approximation of a trigonometric sum by a shorter one.
+\newblock {\em Izv. Ross. Akad. Nauk Ser. Mat.}, 71(2):123--150, 2007.
+
+\bibitem{PatelPHD}
+D.~Patel.
+\newblock {\em Explicit sub-Weyl bound for the Riemann zeta function}.
+\newblock PhD thesis, The Ohio State University, 2021.
+
+\bibitem{PatelYang2024}
+D.~Patel and A.~Yang.
+\newblock An explicit sub-{W}eyl bound for {$\zeta(1/2+it)$}.
+\newblock {\em Journal of Number Theory}, 262:301--334, 2024.
+
+\bibitem{Platt_2021}
+D.J. Platt and T.S. Trudgian.
+\newblock The {R}iemann hypothesis is true up to $3 \cdot 10^{12}$.
+\newblock {\em Bulletin of the London Mathematical Society}, 53:792--797, 2021.
+
+\bibitem{mpfi}
+N.~Revol and F.~Rouillier.
+\newblock Motivations for an arbitrary precision interval arithmetic and the {MPFI} library.
+\newblock {\em Reliable Computing}, 11:275--290, 2005.
+
+\bibitem{Simonic2020}
+A.~Simoni\'c.
+\newblock Explicit zero density estimate for the {R}iemann zeta-function near the critical line.
+\newblock {\em J. Math. Anal. Appl.}, 491(1):124303, 41, 2020.
+
+\bibitem{Titchmarsh}
+E.~C. Titchmarsh.
+\newblock {\em The theory of the {R}iemann zeta-function}.
+\newblock The Clarendon Press, Oxford University Press, New York, second edition, 1986.
+
+\end{thebibliography}

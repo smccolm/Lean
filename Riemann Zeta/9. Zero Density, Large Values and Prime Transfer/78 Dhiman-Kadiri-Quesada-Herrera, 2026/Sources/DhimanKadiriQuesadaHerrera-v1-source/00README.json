@@ -1,0 +1,25 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "AFE2026ago31.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "AFE2026ago31.bbl"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "anc/AFE1.sage"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "anc/AFE2.py"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "latex"
+   }
+}

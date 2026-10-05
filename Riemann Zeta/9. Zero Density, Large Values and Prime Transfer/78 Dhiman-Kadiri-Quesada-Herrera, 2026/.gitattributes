@@ -1,0 +1,8 @@
+Sources/** -text
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+.gitkeep text eol=lf
+push_to_github.bat -text

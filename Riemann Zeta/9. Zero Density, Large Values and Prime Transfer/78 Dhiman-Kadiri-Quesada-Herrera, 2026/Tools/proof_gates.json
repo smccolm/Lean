@@ -1,0 +1,142 @@
+[
+  {
+    "id": "DKKH-01",
+    "status": "OPEN",
+    "title": "Source edition and errata",
+    "acceptance": "Resolve E01–E09 against immutable PDF/TeX/code; document the exact accepted corrected or literal targets and all scope differences.",
+    "proposedModule": "SourceReview"
+  },
+  {
+    "id": "DKKH-02",
+    "status": "OPEN",
+    "title": "Actual objects and conventions",
+    "acceptance": "Define integer/positive-index sums, sharp cutoffs, exp(2πif), principal cpow, χ and literal remainder; prove sign, floor and endpoint adapters.",
+    "proposedModule": "Objects"
+  },
+  {
+    "id": "DKKH-03",
+    "status": "OPEN",
+    "title": "Harmonic and digamma estimates",
+    "acceptance": "Prove Lemma 1 and Appendix Lemma 11 with all δ and N domains, constants and special values; reuse Mathlib/PNT+ digamma APIs.",
+    "proposedModule": "HarmonicDigamma"
+  },
+  {
+    "id": "DKKH-04",
+    "status": "OPEN",
+    "title": "Finite exponential sums",
+    "acceptance": "Prove Lemma 2 for S₀, S₁ and tilde-S₁, including integer and half-integer cases and all denominator conditions.",
+    "proposedModule": "FiniteExponentialSums"
+  },
+  {
+    "id": "DKKH-05",
+    "status": "OPEN",
+    "title": "Oscillatory tails",
+    "acceptance": "Prove Lemma 3 and Appendix A.4 for Z₀/Z₁, convergence and all rational/half-integer refinements actually consumed.",
+    "proposedModule": "ExponentialTails"
+  },
+  {
+    "id": "DKKH-06",
+    "status": "OPEN",
+    "title": "Stationary phase and weighted integrals",
+    "acceptance": "Prove Lemmas 4–5 with exact boundary and error terms for the actual J(a,b,m); derive stationary points and branch phases.",
+    "proposedModule": "StationaryPhase"
+  },
+  {
+    "id": "DKKH-07",
+    "status": "OPEN",
+    "title": "Explicit χ and gamma constants",
+    "acceptance": "Prove Lemmas 6–7, exact C₀–C₃, positive/negative-height treatment and the valid functional equation orientation.",
+    "proposedModule": "ChiGamma"
+  },
+  {
+    "id": "DKKH-08",
+    "status": "OPEN",
+    "title": "Theorem 8 Part I",
+    "acceptance": "Prove the complete weighted truncated Poisson identity/error for the accepted full hypothesis set, general endpoints and all N; no assumed remainder bound.",
+    "proposedModule": "WeightedPoissonI"
+  },
+  {
+    "id": "DKKH-09",
+    "status": "OPEN",
+    "title": "Theorem 8 Part II",
+    "acceptance": "Prove the refined complete T_N estimate and each derivative monotonicity condition; verify the f−Nx substitution throughout H/H₁/B/E terms.",
+    "proposedModule": "WeightedPoissonII"
+  },
+  {
+    "id": "DKKH-10",
+    "status": "OPEN",
+    "title": "Poisson corollaries",
+    "acceptance": "Derive Corollary 0.1 and Corollary 8.1, half-integer endpoint cancellation, δ=1/2 evaluations, and rigorous constant-weight specialization.",
+    "proposedModule": "PoissonCorollaries"
+  },
+  {
+    "id": "DKKH-11",
+    "status": "OPEN",
+    "title": "Explicit B-process",
+    "acceptance": "Prove Corollary 0.2 with actual stationary dual sum, −1/8 phase and full displayed constants/error.",
+    "proposedModule": "ExplicitBProcess"
+  },
+  {
+    "id": "DKKH-12",
+    "status": "OPEN",
+    "title": "Theorem 9 AFE1",
+    "acceptance": "From actual truncation and weighted Poisson prove the source-intended n≥1 theorem with exact m(c), all σ,c,t,t₀ assumptions and small-cutoff review.",
+    "proposedModule": "AFEFirstKind"
+  },
+  {
+    "id": "DKKH-13",
+    "status": "OPEN",
+    "title": "Corollary 0.3 and AFE1 constants",
+    "acceptance": "Prove real-cutoff transfer, c₀ maximum, threshold 14 and certified stated decimal bounds at 14.13472 and 3·10^12.",
+    "proposedModule": "AFEFirstKindConstants"
+  },
+  {
+    "id": "DKKH-14",
+    "status": "OPEN",
+    "title": "Theorem 10 direct branch",
+    "acceptance": "Assemble the actual two-polynomial AFE for x≥y with A₀,B₀,C₀, the correct E₀ branch, x₀=max(h,sqrt(t₀/2π)), endpoints and all explicit losses.",
+    "proposedModule": "AFESecondKindDirect"
+  },
+  {
+    "id": "DKKH-15",
+    "status": "OPEN",
+    "title": "Theorem 10 reflected branch",
+    "acceptance": "Derive x<y from the actual functional equation/dual remainder, including σ=1 and dual σ=0, both signs of t and exact branch bounds.",
+    "proposedModule": "AFESecondKindReflection"
+  },
+  {
+    "id": "DKKH-16",
+    "status": "OPEN",
+    "title": "Corollary 0.4 / Table 1",
+    "acceptance": "Prove global σ maxima and outward-certified numerical bounds with exact t₀=2π; independently separate displayed approximations from upper bounds.",
+    "proposedModule": "AFESecondKindConstants"
+  },
+  {
+    "id": "DKKH-17",
+    "status": "OPEN",
+    "title": "Corollary 0.5 / Tables 2–3",
+    "acceptance": "Prove k=1..50 bounds, k/π+1.1601 for 11..50, constant-6 consequence and all accepted table cells; attribute Table 4 comparisons.",
+    "proposedModule": "BoundedRangeConstants"
+  },
+  {
+    "id": "DKKH-18",
+    "status": "OPEN",
+    "title": "Reuse and package integration",
+    "acceptance": "Install only justified compatible import closures; pin and license dependencies, preserve upstream proofs, include every production module in root graph.",
+    "proposedModule": "DependencyIntegration"
+  },
+  {
+    "id": "DKKH-19",
+    "status": "OPEN",
+    "title": "Semantic regressions and audit",
+    "acceptance": "Audit every public/critical theorem transitively; exact-type tests cover constants, signs, branches, endpoint weights and actual-source consumers.",
+    "proposedModule": "SemanticRegressionAndAudit"
+  },
+  {
+    "id": "DKKH-20",
+    "status": "OPEN",
+    "title": "Final sequential verification",
+    "acceptance": "Both foundation and paper BATs pass zero-diagnostic checks; all preceding gates accepted; synchronize contract/checklist/DAG/reproduction and distinguish external review.",
+    "proposedModule": "ReleaseAcceptance"
+  }
+]

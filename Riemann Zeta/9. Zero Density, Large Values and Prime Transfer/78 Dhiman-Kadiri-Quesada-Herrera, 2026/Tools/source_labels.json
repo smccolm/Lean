@@ -1,0 +1,826 @@
+{
+  "source": "Sources/DhimanKadiriQuesadaHerrera-v1-source/AFE2026ago31.tex",
+  "sha256": "4a6ca9e81f2a64983303bd2fa60203819f37c1983ae3aa2a69048b5f25fded9b",
+  "labels": [
+    {
+      "label": "eq-AFE1",
+      "line": 189
+    },
+    {
+      "label": "eq-AFE2",
+      "line": 193
+    },
+    {
+      "label": "def-oscil-exp-sum",
+      "line": 205
+    },
+    {
+      "label": "eq:poisson",
+      "line": 220
+    },
+    {
+      "label": "van-der-Corput",
+      "line": 229
+    },
+    {
+      "label": "asymp-T0-Titchmarsh",
+      "line": 235
+    },
+    {
+      "label": "cor-VDC",
+      "line": 243
+    },
+    {
+      "label": "eq:cor-VDC-1",
+      "line": 246
+    },
+    {
+      "label": "eq:cor-VDC-1-T0",
+      "line": 252
+    },
+    {
+      "label": "eq:cor-VDC-partII",
+      "line": 263
+    },
+    {
+      "label": "Explicit_B_estimate",
+      "line": 297
+    },
+    {
+      "label": "cor:all_t",
+      "line": 336
+    },
+    {
+      "label": "eq:AF1cor",
+      "line": 338
+    },
+    {
+      "label": "cor-AFE2",
+      "line": 366
+    },
+    {
+      "label": "corAFE2-explicit",
+      "line": 369
+    },
+    {
+      "label": "def:epsilon0-delta0",
+      "line": 387
+    },
+    {
+      "label": "tab:epsilon0_maxima",
+      "line": 397
+    },
+    {
+      "label": "cor-k-AFE2",
+      "line": 410
+    },
+    {
+      "label": "def:epsilonk",
+      "line": 425
+    },
+    {
+      "label": "tab:Epsilon_k",
+      "line": 437
+    },
+    {
+      "label": "eq:ek-largeK",
+      "line": 457
+    },
+    {
+      "label": "tab:Epsilon_k-large",
+      "line": 466
+    },
+    {
+      "label": "eq:AFE2-simple",
+      "line": 483
+    },
+    {
+      "label": "tab:EF_comp",
+      "line": 504
+    },
+    {
+      "label": "secn:prel-lemmas",
+      "line": 530
+    },
+    {
+      "label": "lem:harmonic-lead",
+      "line": 537
+    },
+    {
+      "label": "bnd-sum-nu(nu-y)blower-bupper",
+      "line": 541
+    },
+    {
+      "label": "bnd-sum-nu(nu-y)^2bupper",
+      "line": 550
+    },
+    {
+      "label": "bnd-sum-nu(nu-y)^3bupper",
+      "line": 553
+    },
+    {
+      "label": "eq:sum_infty_power_k",
+      "line": 560
+    },
+    {
+      "label": "def-Sxy",
+      "line": 582
+    },
+    {
+      "label": "fig:sxy",
+      "line": 597
+    },
+    {
+      "label": "lem:geometric",
+      "line": 601
+    },
+    {
+      "label": "bnd-S_0(y)",
+      "line": 608
+    },
+    {
+      "label": "bnd-Zxy",
+      "line": 615
+    },
+    {
+      "label": "bnd-ZxySpecial",
+      "line": 619
+    },
+    {
+      "label": "fig:zxy",
+      "line": 637
+    },
+    {
+      "label": "lemma_bnd_S_plus_minus",
+      "line": 644
+    },
+    {
+      "label": "bnd-Sminus",
+      "line": 647
+    },
+    {
+      "label": "bnd-Splus",
+      "line": 651
+    },
+    {
+      "label": "def:z01-halfInteger",
+      "line": 661
+    },
+    {
+      "label": "Lemma 2 arias",
+      "line": 674
+    },
+    {
+      "label": "def-intJabm",
+      "line": 681
+    },
+    {
+      "label": "lem:u-s",
+      "line": 687
+    },
+    {
+      "label": "est I2",
+      "line": 694
+    },
+    {
+      "label": "est I3",
+      "line": 698
+    },
+    {
+      "label": "ineq-J0xm",
+      "line": 708
+    },
+    {
+      "label": "bnd:m2y2y-m",
+      "line": 731
+    },
+    {
+      "label": "sec:chi",
+      "line": 790
+    },
+    {
+      "label": "def:chi",
+      "line": 797
+    },
+    {
+      "label": "eq:chi_asymptotic",
+      "line": 807
+    },
+    {
+      "label": "lem:bndchi-Simonic",
+      "line": 811
+    },
+    {
+      "label": "eq:chiBound",
+      "line": 816
+    },
+    {
+      "label": "def-C0",
+      "line": 820
+    },
+    {
+      "label": "eq:Ci",
+      "line": 828
+    },
+    {
+      "label": "lem:gamma-chi2",
+      "line": 833
+    },
+    {
+      "label": "Section-Theorem-Bestimate",
+      "line": 840
+    },
+    {
+      "label": "thm-VDC",
+      "line": 846
+    },
+    {
+      "label": "vanderCorputB",
+      "line": 850
+    },
+    {
+      "label": "def-RNab",
+      "line": 856
+    },
+    {
+      "label": "def-TNab",
+      "line": 862
+    },
+    {
+      "label": "def-TNab-integer+1/2",
+      "line": 867
+    },
+    {
+      "label": "def-TNab-partII",
+      "line": 874
+    },
+    {
+      "label": "def-TNab-integer+1/2-partII",
+      "line": 885
+    },
+    {
+      "label": "cor-thmVDC-partII",
+      "line": 899
+    },
+    {
+      "label": "def:B_f(Z+1/2)",
+      "line": 902
+    },
+    {
+      "label": "def:E1(Z+1/2)",
+      "line": 905
+    },
+    {
+      "label": "def:E2(Z+1/2)",
+      "line": 910
+    },
+    {
+      "label": "Section-Proof-Theorem-Bestimate",
+      "line": 940
+    },
+    {
+      "label": "Stieltjes",
+      "line": 949
+    },
+    {
+      "label": "bigO1",
+      "line": 955
+    },
+    {
+      "label": "fourier",
+      "line": 967
+    },
+    {
+      "label": "eqn-exp",
+      "line": 971
+    },
+    {
+      "label": "def-S1",
+      "line": 979
+    },
+    {
+      "label": "def-S2",
+      "line": 981
+    },
+    {
+      "label": "S1-S11-S12",
+      "line": 986
+    },
+    {
+      "label": "def-S11",
+      "line": 992
+    },
+    {
+      "label": "def-S12",
+      "line": 997
+    },
+    {
+      "label": "S_11",
+      "line": 1004
+    },
+    {
+      "label": "def-Sigma11",
+      "line": 1010
+    },
+    {
+      "label": "def-Sigma12",
+      "line": 1014
+    },
+    {
+      "label": "sumS1-S2+G",
+      "line": 1019
+    },
+    {
+      "label": "MainSigma12",
+      "line": 1024
+    },
+    {
+      "label": "SumS1-S2+G_nu=0",
+      "line": 1034
+    },
+    {
+      "label": "bound-sigma11ab",
+      "line": 1042
+    },
+    {
+      "label": "def-R0ab",
+      "line": 1046
+    },
+    {
+      "label": "eq:defsum(atob)",
+      "line": 1051
+    },
+    {
+      "label": "eq:defS_12",
+      "line": 1068
+    },
+    {
+      "label": "Ih",
+      "line": 1075
+    },
+    {
+      "label": "bndI_h(-nu)",
+      "line": 1080
+    },
+    {
+      "label": "bnd1-S12",
+      "line": 1086
+    },
+    {
+      "label": "rewriteS12",
+      "line": 1094
+    },
+    {
+      "label": "bnd-S_12",
+      "line": 1102
+    },
+    {
+      "label": "sum_S_2_Ig'_I_(gf')",
+      "line": 1110
+    },
+    {
+      "label": "I_h",
+      "line": 1118
+    },
+    {
+      "label": "bnd-S_2",
+      "line": 1124
+    },
+    {
+      "label": "final-R0T0part1",
+      "line": 1129
+    },
+    {
+      "label": "def-T0ab",
+      "line": 1134
+    },
+    {
+      "label": "bnd1-|I_h(-nu)|",
+      "line": 1153
+    },
+    {
+      "label": "bnd-int-h1",
+      "line": 1164
+    },
+    {
+      "label": "bnd-int-h2",
+      "line": 1169
+    },
+    {
+      "label": "final-bnd-|I_h(-nu)|",
+      "line": 1176
+    },
+    {
+      "label": "eq:S12_bound_full",
+      "line": 1184
+    },
+    {
+      "label": "bnd_sum_h(b)_f(b)",
+      "line": 1188
+    },
+    {
+      "label": "bnd_sum_h(a)_f(a)",
+      "line": 1190
+    },
+    {
+      "label": "error_sum_(nu-f'(a))^2",
+      "line": 1198
+    },
+    {
+      "label": "error_sum_(nu-f'(a)^)3",
+      "line": 1207
+    },
+    {
+      "label": "bnd-S12-final",
+      "line": 1212
+    },
+    {
+      "label": "eq:defH(x)",
+      "line": 1222
+    },
+    {
+      "label": "eq:defH_1(x)",
+      "line": 1224
+    },
+    {
+      "label": "bnd1-|I_h(+nu)|",
+      "line": 1233
+    },
+    {
+      "label": "bnd-int-plus-h1",
+      "line": 1239
+    },
+    {
+      "label": "bnd-int-plus-h2",
+      "line": 1243
+    },
+    {
+      "label": "eq:S2_bound_full",
+      "line": 1246
+    },
+    {
+      "label": "eq:S2_bound_b",
+      "line": 1254
+    },
+    {
+      "label": "eq:S2_bound_a",
+      "line": 1258
+    },
+    {
+      "label": "eq:S2_bound_+nu_power2_refined",
+      "line": 1263
+    },
+    {
+      "label": "eq:S2_bound_+nu_power3_refined",
+      "line": 1268
+    },
+    {
+      "label": "bnd-S2-final",
+      "line": 1274
+    },
+    {
+      "label": "Final_Explicit_Bound",
+      "line": 1289
+    },
+    {
+      "label": "def-B",
+      "line": 1293
+    },
+    {
+      "label": "auxilliary_error1",
+      "line": 1294
+    },
+    {
+      "label": "auxillary_error2",
+      "line": 1296
+    },
+    {
+      "label": "section-proof-cor-Explicit_B_estimate",
+      "line": 1303
+    },
+    {
+      "label": "eq:bs1",
+      "line": 1314
+    },
+    {
+      "label": "eq:S3-bound",
+      "line": 1318
+    },
+    {
+      "label": "eq:boundary-integrals",
+      "line": 1328
+    },
+    {
+      "label": "section-proof-AFE1",
+      "line": 1334
+    },
+    {
+      "label": "thm-AFE1",
+      "line": 1344
+    },
+    {
+      "label": "def-m-AEF1",
+      "line": 1352
+    },
+    {
+      "label": "5.2",
+      "line": 1366
+    },
+    {
+      "label": "5.3",
+      "line": 1370
+    },
+    {
+      "label": "Euler-Zeta-EF1",
+      "line": 1376
+    },
+    {
+      "label": "sum-xtoM-Euler-Zeta-EF1",
+      "line": 1381
+    },
+    {
+      "label": "R0-sum-xtoM-Euler-Zeta-EF1",
+      "line": 1388
+    },
+    {
+      "label": "bnd1-Zeta-EF1",
+      "line": 1393
+    },
+    {
+      "label": "sec:all_t",
+      "line": 1417
+    },
+    {
+      "label": "eq:c0-1",
+      "line": 1438
+    },
+    {
+      "label": "eq:def-c0",
+      "line": 1485
+    },
+    {
+      "label": "section-AFE2",
+      "line": 1496
+    },
+    {
+      "label": "thm-AFE2",
+      "line": 1515
+    },
+    {
+      "label": "AFE2-explicit",
+      "line": 1518
+    },
+    {
+      "label": "bnd-E-all-x-y",
+      "line": 1522
+    },
+    {
+      "label": "def-E0-all-x-y",
+      "line": 1531
+    },
+    {
+      "label": "eq:zeta_split",
+      "line": 1577
+    },
+    {
+      "label": "S.1",
+      "line": 1581
+    },
+    {
+      "label": "Euler-Zeta-EF2",
+      "line": 1608
+    },
+    {
+      "label": "S",
+      "line": 1616
+    },
+    {
+      "label": "eq:int_xtoN(m=0)",
+      "line": 1621
+    },
+    {
+      "label": "T0-sum-xtoM-Euler-Zeta-EF2",
+      "line": 1626
+    },
+    {
+      "label": "eq:bnd_int_xtoN",
+      "line": 1630
+    },
+    {
+      "label": "eq:zeta-E1_E2_E3",
+      "line": 1639
+    },
+    {
+      "label": "def-E1",
+      "line": 1643
+    },
+    {
+      "label": "def-E2",
+      "line": 1645
+    },
+    {
+      "label": "def-E3",
+      "line": 1648
+    },
+    {
+      "label": "I1 1.1",
+      "line": 1662
+    },
+    {
+      "label": "new I1",
+      "line": 1665
+    },
+    {
+      "label": "identity sum J0infinitym",
+      "line": 1670
+    },
+    {
+      "label": "est I1",
+      "line": 1689
+    },
+    {
+      "label": "4.59",
+      "line": 1695
+    },
+    {
+      "label": "def-E45",
+      "line": 1699
+    },
+    {
+      "label": "def-E6",
+      "line": 1701
+    },
+    {
+      "label": "def-E7",
+      "line": 1704
+    },
+    {
+      "label": "eq: zeta:E1toE7",
+      "line": 1709
+    },
+    {
+      "label": "limE3",
+      "line": 1721
+    },
+    {
+      "label": "bnd-E3",
+      "line": 1737
+    },
+    {
+      "label": "eq:AFE-2",
+      "line": 1744
+    },
+    {
+      "label": "epsilon_eq_A_B",
+      "line": 1748
+    },
+    {
+      "label": "def:B(s,t,x,y)",
+      "line": 1751
+    },
+    {
+      "label": "def:A(s,t,x,y)",
+      "line": 1765
+    },
+    {
+      "label": "def-A0",
+      "line": 1810
+    },
+    {
+      "label": "def-B0",
+      "line": 1834
+    },
+    {
+      "label": "A+B:case-x>y",
+      "line": 1838
+    },
+    {
+      "label": "def-E0x>y",
+      "line": 1844
+    },
+    {
+      "label": "A+B:case-x=y",
+      "line": 1853
+    },
+    {
+      "label": "zeta:swap_x&y",
+      "line": 1867
+    },
+    {
+      "label": "bnd-mathcalE",
+      "line": 1870
+    },
+    {
+      "label": "section-biblio",
+      "line": 1908
+    },
+    {
+      "label": "secn:proofs-lemmas",
+      "line": 1916
+    },
+    {
+      "label": "sec:digamma",
+      "line": 1919
+    },
+    {
+      "label": "digamma1",
+      "line": 1926
+    },
+    {
+      "label": "digamma2",
+      "line": 1932
+    },
+    {
+      "label": "digamma3",
+      "line": 1939
+    },
+    {
+      "label": "fe-digamma",
+      "line": 1943
+    },
+    {
+      "label": "gauss digamma",
+      "line": 1948
+    },
+    {
+      "label": "sum-nu(nu-y)",
+      "line": 1964
+    },
+    {
+      "label": "sum-nu(nu-y)-b",
+      "line": 1971
+    },
+    {
+      "label": "sum-(nu-y)^2",
+      "line": 1985
+    },
+    {
+      "label": "sum-(nu-y)^3",
+      "line": 1989
+    },
+    {
+      "label": "eq:explicit_bound_plus_y",
+      "line": 2005
+    },
+    {
+      "label": "eq:square_residual_bound",
+      "line": 2017
+    },
+    {
+      "label": "eq:3_residual_bound",
+      "line": 2025
+    },
+    {
+      "label": "lemma_bnd_sum_nu_powers",
+      "line": 2030
+    },
+    {
+      "label": "bound_sum_minus_nu_nu-y",
+      "line": 2033
+    },
+    {
+      "label": "bound_sum_minus_nu_nu+y",
+      "line": 2036
+    },
+    {
+      "label": "eq:partial_frac",
+      "line": 2047
+    },
+    {
+      "label": "eq:sum_split",
+      "line": 2052
+    },
+    {
+      "label": "eq:harmonic_bound",
+      "line": 2057
+    },
+    {
+      "label": "eq:shifted_sum",
+      "line": 2062
+    },
+    {
+      "label": "eq:sum_plus_y_split",
+      "line": 2087
+    },
+    {
+      "label": "eq:alt_harmonic",
+      "line": 2092
+    },
+    {
+      "label": "alt_second_sum",
+      "line": 2105
+    },
+    {
+      "label": "eq:log_bound_plus_y",
+      "line": 2115
+    },
+    {
+      "label": "eq:split_tails",
+      "line": 2195
+    },
+    {
+      "label": "eq:exp/nu",
+      "line": 2218
+    }
+  ]
+}

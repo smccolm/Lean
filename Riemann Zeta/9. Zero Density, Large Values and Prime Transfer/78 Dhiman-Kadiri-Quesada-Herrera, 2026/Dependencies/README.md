@@ -1,0 +1,11 @@
+# Dependency boundary and existing proved code
+
+**Planning only: no dependency installation or Lean import has occurred.** Proposed namespace: `DhimanKadiriQuesadaHerrera2026`. Begin from the existing root package, Lean `v4.30.0`, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`.
+
+Read the [Crosswalk](../Dhiman-Kadiri-Quesada-Herrera%20Crosswalk.md) and [exact local inventory](../Tools/local_reuse_inventory.json). The root already owns exact zeta truncation, Poisson, finite derivative, mean-value, smooth-AFE and gamma machinery. Node 63 additionally owns continuous derivative/B-process and explicit digamma work; nodes 74 and 77 contain useful sharp-cutoff/gamma/complex-power consumers; node 73 was inspected for stationary Fourier bounds. None is being called unproved simply because it is outside 78.
+
+The natural initial package design is an isolated path dependency on `../../..` from Extension, matching node 77's root-package boundary. This is a proposal recorded in prose, not a Lake file. Importing other completed extensions may cause duplicated namespaces/frozen foundations or different dependency graphs. Check this before choosing a direct package import. An attributed small proof adaptation may be cleaner than a large competing graph, but record the exact original hash, license and modifications. Do not copy compiled caches.
+
+Selection checklist on activation: inspect the actual theorem type and proof body; identify its DKKH consumer; prove all domain, sign, scale, interval and normalization adapters; enumerate the full transitive import closure; verify the source hashes and licenses; compile in one pinned graph; check every public/critical transitive axiom; update the runner's coverage. “Exists C” is not a proved decimal constant. A source theorem already proved under a different cutoff is reusable only through a proved cutoff bridge.
+
+No new freeze ledger for a vendored library is fabricated here because no such library was installed. Current upstream commits are observations in `Tools/upstream_snapshot.json`, not dependency choices. Future selected vendoring must add its own source/patch/notice ledger and verifier before it enters the build.
