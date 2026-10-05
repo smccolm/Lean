@@ -2089,5 +2089,288 @@
         "signature": "theorem tsum_zetaTerm_div_cpow (t : ℝ) {s : ℂ} (hs : 1 < s.re) :\n    (∑' n : ℕ, zetaTerm t n / (n : ℂ) ^ s) = riemannZeta (s - (t : ℂ) * I)"
       }
     ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynardExternal/PNT/ZetaBoundsUpstream.lean",
+    "sha256": "39c506e9b834b47f7af4ef35c947201b365b0c7be3d307fcfd4b7b2864764ee4",
+    "imports": [
+      "Architect",
+      "Batteries.Tactic.Lemma",
+      "Mathlib.MeasureTheory.Function.Floor",
+      "Mathlib.MeasureTheory.Order.Group.Lattice",
+      "Mathlib.NumberTheory.Harmonic.Bounds",
+      "Mathlib.NumberTheory.LSeries.Nonvanishing",
+      "PrimeNumberTheoremAnd.Auxiliary",
+      "PrimeNumberTheoremAnd.Fourier",
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "GuthMaynardExternal.PNT.ResidueCalcOnRectangles",
+      "PrimeNumberTheoremAnd.EulerMaclaurin"
+    ],
+    "declarations": [
+      {
+        "name": "riemannZeta0",
+        "line": 648,
+        "signature": "noncomputable def riemannZeta0 (N : ℕ) (s : ℂ) : ℂ"
+      },
+      {
+        "name": "riemannZeta0_apply",
+        "line": 657,
+        "signature": "lemma riemannZeta0_apply (N : ℕ) (s : ℂ) : ζ₀ N s =\n    (∑ n ∈ Finset.range (N + 1), 1 / (n : ℂ) ^ s) +\n    ((- N ^ (1 - s)) / (1 - s) + (- N ^ (-s)) / 2\n      + s * ∫ x in Ioi (N : ℝ), (⌊x⌋ + 1 / 2 - x) * (x : ℂ) ^ (-(s + 1)))"
+      },
+      {
+        "name": "ZetaBnd_aux1b",
+        "line": 1012,
+        "signature": "lemma ZetaBnd_aux1b (N : ℕ) (Npos : 1 ≤ N) {σ t : ℝ} (σpos : 0 < σ) :\n    ‖∫ x in Ioi (N : ℝ), (⌊x⌋ + 1 / 2 - x) / (x : ℂ) ^ ((σ + t * I) + 1)‖\n    ≤ N ^ (-σ) / σ"
+      },
+      {
+        "name": "Zeta0EqZeta",
+        "line": 1400,
+        "signature": "lemma Zeta0EqZeta {N : ℕ} (N_pos : 0 < N) {s : ℂ} (reS_pos : 0 < s.re) (s_ne_one : s ≠ 1) :\n    ζ₀ N s = riemannZeta s"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/ZeroCount.lean",
+    "sha256": "e2e6fed5f72d6fb3472315ea7bc48ae5bccf2944094eef057f73b1a51bbd73db",
+    "imports": [
+      "Mathlib.NumberTheory.LSeries.ZetaZeros",
+      "Mathlib.Analysis.Complex.Basic",
+      "Mathlib.Data.Finset.Basic",
+      "Mathlib.Topology.Instances.Complex",
+      "Mathlib.Data.Real.Basic",
+      "Mathlib.Analysis.Analytic.Order",
+      "Mathlib.Analysis.Calculus.Deriv.Star",
+      "Mathlib.Analysis.Complex.CauchyIntegral",
+      "Mathlib.Analysis.Complex.JensenFormula",
+      "Mathlib.Analysis.Analytic.Uniqueness",
+      "Mathlib.NumberTheory.LSeries.Dirichlet",
+      "Mathlib.NumberTheory.LSeries.HurwitzZetaValues",
+      "Mathlib.Analysis.Real.Pi.Bounds",
+      "GuthMaynard.ZetaBounds"
+    ],
+    "declarations": [
+      {
+        "name": "RiemannZeta.GuthMaynard.riemannZeta_conj",
+        "line": 182,
+        "signature": "theorem riemannZeta_conj (z : ℂ) (hz : z ≠ 1) :\n    riemannZeta (star z) = star (riemannZeta z)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/FresnelDampedTails.lean",
+    "sha256": "e932d8ad7e1d85ed131fe96212d0899a43770db95228886627b544c1804914b7",
+    "imports": [
+      "TaoTrudgianYang2025.ContinuousKernelPrimitive"
+    ],
+    "declarations": [
+      {
+        "name": "fresnelDampedKernel",
+        "line": 17,
+        "signature": "def fresnelDampedKernel (ε c x : ℝ) : ℂ"
+      },
+      {
+        "name": "continuous_fresnelDampedKernel",
+        "line": 20,
+        "signature": "theorem continuous_fresnelDampedKernel (ε c : ℝ) : Continuous (fresnelDampedKernel ε c)"
+      },
+      {
+        "name": "fresnelDampedKernel_eq_weighted",
+        "line": 24,
+        "signature": "theorem fresnelDampedKernel_eq_weighted (ε c x : ℝ) :\n    fresnelDampedKernel ε c x = (Real.exp (-ε * x ^ 2) : ℂ) *\n      Complex.exp (2 * Real.pi * I * ((-c * x ^ 2 : ℝ) : ℂ))"
+      },
+      {
+        "name": "norm_fresnelDampedKernel",
+        "line": 33,
+        "signature": "theorem norm_fresnelDampedKernel {ε : ℝ} (hε : 0 ≤ ε) (c x : ℝ) :\n    ‖fresnelDampedKernel ε c x‖ ≤ 1"
+      },
+      {
+        "name": "fresnelDampedKernel_neg",
+        "line": 45,
+        "signature": "theorem fresnelDampedKernel_neg (ε c x : ℝ) :\n    fresnelDampedKernel ε c (-x) = fresnelDampedKernel ε c x"
+      },
+      {
+        "name": "intervalC1Bound_gaussian_damping",
+        "line": 49,
+        "signature": "theorem intervalC1Bound_gaussian_damping {ε a b : ℝ}\n    (hε : 0 ≤ ε) (ha : 0 ≤ a) (hab : a ≤ b) :\n    IntervalC1Bound (fun x => (Real.exp (-ε * x ^ 2) : ℂ)) a b 1"
+      },
+      {
+        "name": "norm_fresnelPhase_integral_le",
+        "line": 66,
+        "signature": "theorem norm_fresnelPhase_integral_le {c a b : ℝ} (hc : 0 < c) (ha : 0 < a) (hab : a ≤ b) :\n    ‖∫ x in a..b, Complex.exp (2 * Real.pi * I * ((-c * x ^ 2 : ℝ) : ℂ))‖ ≤\n      1 / (2 * c * a * Real.pi)"
+      },
+      {
+        "name": "norm_integral_fresnelDampedKernel_le",
+        "line": 82,
+        "signature": "theorem norm_integral_fresnelDampedKernel_le {ε c a b : ℝ}\n    (hε : 0 ≤ ε) (hc : 0 < c) (ha : 0 < a) (hab : a ≤ b) :\n    ‖∫ x in a..b, fresnelDampedKernel ε c x‖ ≤ 1 / (c * a * Real.pi)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/FresnelGaussianComparison.lean",
+    "sha256": "e8bb85677ed70ae16bdb55f5f139fcfc88bc5ba08ad193a076c60f7f6ed2eb2d",
+    "imports": [
+      "TaoTrudgianYang2025.FresnelDampedTails",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral"
+    ],
+    "declarations": [
+      {
+        "name": "integrable_fresnelDampedKernel",
+        "line": 18,
+        "signature": "theorem integrable_fresnelDampedKernel {ε : ℝ} (hε : 0 < ε) (c : ℝ) :\n    Integrable (fresnelDampedKernel ε c)"
+      },
+      {
+        "name": "integral_Ioi_fresnelDampedKernel",
+        "line": 23,
+        "signature": "theorem integral_Ioi_fresnelDampedKernel {ε : ℝ} (hε : 0 < ε) (c : ℝ) :\n    (∫ x : ℝ in Ioi 0, fresnelDampedKernel ε c x) =\n      ((Real.pi : ℂ) / ((ε : ℂ) + 2 * Real.pi * c * I)) ^ (1 / 2 : ℂ) / 2"
+      },
+      {
+        "name": "norm_integral_Ioi_fresnelDampedKernel_le",
+        "line": 29,
+        "signature": "theorem norm_integral_Ioi_fresnelDampedKernel_le {ε c H : ℝ}\n    (hε : 0 < ε) (hc : 0 < c) (hH : 0 < H) :\n    ‖∫ x : ℝ in Ioi H, fresnelDampedKernel ε c x‖ ≤ 1 / (c * H * Real.pi)"
+      },
+      {
+        "name": "integral_symmetric_fresnelDampedKernel",
+        "line": 38,
+        "signature": "theorem integral_symmetric_fresnelDampedKernel (ε c H : ℝ) :\n    (∫ x in (-H)..H, fresnelDampedKernel ε c x) =\n      2 * ∫ x in (0 : ℝ)..H, fresnelDampedKernel ε c x"
+      },
+      {
+        "name": "norm_gaussianValue_sub_fresnelDampedWindow_le",
+        "line": 51,
+        "signature": "theorem norm_gaussianValue_sub_fresnelDampedWindow_le {ε c H : ℝ}\n    (hε : 0 < ε) (hc : 0 < c) (hH : 0 < H) :\n    ‖((Real.pi : ℂ) / ((ε : ℂ) + 2 * Real.pi * c * I)) ^ (1 / 2 : ℂ) -\n      ∫ x in (-H)..H, fresnelDampedKernel ε c x‖ ≤ 2 / (c * H * Real.pi)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/FresnelAbelLimit.lean",
+    "sha256": "e9f294b70ba26a11ecea0185dfedcb5b2a6b65c969db2f2973f5e627dc62d09e",
+    "imports": [
+      "TaoTrudgianYang2025.FresnelGaussianComparison",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Continuity"
+    ],
+    "declarations": [
+      {
+        "name": "fresnelGaussianValue",
+        "line": 19,
+        "signature": "def fresnelGaussianValue (c : ℝ) : ℂ"
+      },
+      {
+        "name": "fresnelGaussianBase",
+        "line": 22,
+        "signature": "theorem fresnelGaussianBase {c : ℝ} (hc : 0 < c) :\n    (Real.pi : ℂ) / (2 * Real.pi * c * I) = -I / ((2 * c : ℝ) : ℂ)"
+      },
+      {
+        "name": "continuousAt_fresnelGaussianValue_damping",
+        "line": 30,
+        "signature": "theorem continuousAt_fresnelGaussianValue_damping {c : ℝ} (hc : 0 < c) :\n    ContinuousAt (fun ε : ℝ =>\n      ((Real.pi : ℂ) / ((ε : ℂ) + 2 * Real.pi * c * I)) ^ (1 / 2 : ℂ)) 0"
+      },
+      {
+        "name": "fresnelDampedKernel_zero",
+        "line": 51,
+        "signature": "theorem fresnelDampedKernel_zero (c x : ℝ) :\n    fresnelDampedKernel 0 c x = Complex.exp (((-2 * Real.pi * c * x ^ 2 : ℝ) : ℂ) * I)"
+      },
+      {
+        "name": "continuous_fresnelDampedWindow",
+        "line": 58,
+        "signature": "theorem continuous_fresnelDampedWindow (c H : ℝ) :\n    Continuous (fun ε : ℝ => ∫ x in (-H)..H, fresnelDampedKernel ε c x)"
+      },
+      {
+        "name": "norm_atkinsonQuadraticWindow_sub_gaussianValue_le",
+        "line": 64,
+        "signature": "theorem norm_atkinsonQuadraticWindow_sub_gaussianValue_le {c H : ℝ}\n    (hc : 0 < c) (hH : 0 < H) :\n    ‖atkinsonQuadraticWindow c H - fresnelGaussianValue c‖ ≤ 2 / (c * H * Real.pi)"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/FresnelEvaluation.lean",
+    "sha256": "925e9fa770af5f2f44cc66b74516a6cbf407481b6eaa92fee8cc1180cd92f0c6",
+    "imports": [
+      "TaoTrudgianYang2025.FresnelAbelLimit"
+    ],
+    "declarations": [
+      {
+        "name": "fresnelGaussianValue_eq_cartesian",
+        "line": 17,
+        "signature": "theorem fresnelGaussianValue_eq_cartesian {c : ℝ} (hc : 0 < c) :\n    fresnelGaussianValue c = (1 - I) / ((2 * Real.sqrt c : ℝ) : ℂ)"
+      },
+      {
+        "name": "fresnelGaussianValue_eq_phase",
+        "line": 37,
+        "signature": "theorem fresnelGaussianValue_eq_phase {c : ℝ} (hc : 0 < c) :\n    fresnelGaussianValue c =\n      Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) / (Real.sqrt (2 * c) : ℂ)"
+      },
+      {
+        "name": "norm_fresnelGaussianValue",
+        "line": 50,
+        "signature": "theorem norm_fresnelGaussianValue {c : ℝ} (hc : 0 < c) :\n    ‖fresnelGaussianValue c‖ = 1 / Real.sqrt (2 * c)"
+      },
+      {
+        "name": "norm_atkinsonQuadraticWindow_sub_fresnel_le",
+        "line": 55,
+        "signature": "theorem norm_atkinsonQuadraticWindow_sub_fresnel_le {c H : ℝ}\n    (hc : 0 < c) (hH : 0 < H) :\n    ‖atkinsonQuadraticWindow c H -\n      Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) / (Real.sqrt (2 * c) : ℂ)‖ ≤\n        2 / (c * H * Real.pi)"
+      },
+      {
+        "name": "tendsto_atkinsonQuadraticWindow",
+        "line": 63,
+        "signature": "theorem tendsto_atkinsonQuadraticWindow {c : ℝ} (hc : 0 < c) :\n    Tendsto (atkinsonQuadraticWindow c) atTop\n      (𝓝 (Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) / (Real.sqrt (2 * c) : ℂ)))"
+      }
+    ]
+  },
+  {
+    "path": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonFiniteStationaryMain.lean",
+    "sha256": "5da1b1a3a31658e9be97305fb3e45a1bb42dc3fea1a55d9a2ab9292f55a2d4a9",
+    "imports": [
+      "TaoTrudgianYang2025.AtkinsonStationaryReduction"
+    ],
+    "declarations": [
+      {
+        "name": "atkinsonSaddleCurvature",
+        "line": 17,
+        "signature": "def atkinsonSaddleCurvature (T b : ℝ) : ℝ"
+      },
+      {
+        "name": "atkinsonQuadraticWindow",
+        "line": 20,
+        "signature": "def atkinsonQuadraticWindow (c H : ℝ) : ℂ"
+      },
+      {
+        "name": "atkinsonFiniteStationaryMain",
+        "line": 23,
+        "signature": "def atkinsonFiniteStationaryMain (T G L α b H : ℝ) : ℂ"
+      },
+      {
+        "name": "one_lt_atkinsonSaddleCurvature",
+        "line": 28,
+        "signature": "theorem one_lt_atkinsonSaddleCurvature {T : ℝ} (hT : 0 < T) (b : ℝ) :\n    1 < atkinsonSaddleCurvature T b"
+      },
+      {
+        "name": "atkinsonSaddleCurvature_mul_root",
+        "line": 36,
+        "signature": "theorem atkinsonSaddleCurvature_mul_root {T : ℝ} (hT : 0 < T) (b : ℝ) :\n    atkinsonSaddleCurvature T b * atkinsonSaddleRoot (T / (2 * Real.pi)) b =\n      Real.sqrt (b ^ 2 + 4 * (T / (2 * Real.pi)))"
+      },
+      {
+        "name": "atkinsonSaddle_squareRoot_normalization",
+        "line": 49,
+        "signature": "theorem atkinsonSaddle_squareRoot_normalization {T : ℝ} (hT : 0 < T) (b : ℝ) :\n    Real.sqrt (atkinsonSaddleCurvature T b) *\n      Real.sqrt (atkinsonSaddleRoot (T / (2 * Real.pi)) b) =\n        Real.sqrt (Real.sqrt (b ^ 2 + 4 * (T / (2 * Real.pi))))"
+      },
+      {
+        "name": "atkinsonRootQuadraticKernel_translate",
+        "line": 56,
+        "signature": "theorem atkinsonRootQuadraticKernel_translate (T b z : ℝ) :\n    atkinsonRootQuadraticKernel T b (z + atkinsonSaddleRoot (T / (2 * Real.pi)) b) =\n      atkinsonRootKernel T b (atkinsonSaddleRoot (T / (2 * Real.pi)) b) *\n        Complex.exp (((-2 * Real.pi * atkinsonSaddleCurvature T b * z ^ 2 : ℝ) : ℂ) * I)"
+      },
+      {
+        "name": "integral_atkinsonRootQuadraticKernel",
+        "line": 66,
+        "signature": "theorem integral_atkinsonRootQuadraticKernel (T b H : ℝ) :\n    (∫ y in (atkinsonSaddleRoot (T / (2 * Real.pi)) b - H)..\n      (atkinsonSaddleRoot (T / (2 * Real.pi)) b + H), atkinsonRootQuadraticKernel T b y) =\n      atkinsonRootKernel T b (atkinsonSaddleRoot (T / (2 * Real.pi)) b) *\n        atkinsonQuadraticWindow (atkinsonSaddleCurvature T b) H"
+      },
+      {
+        "name": "atkinsonFiniteStationaryMain_eq_quadratic",
+        "line": 84,
+        "signature": "theorem atkinsonFiniteStationaryMain_eq_quadratic (T G L α b H : ℝ) :\n    atkinsonFiniteStationaryMain T G L α b H =\n      2 * atkinsonPowerWeight T G L α ((atkinsonSaddleRoot (T / (2 * Real.pi)) b) ^ 2) *\n        ∫ y in (atkinsonSaddleRoot (T / (2 * Real.pi)) b - H)..\n          (atkinsonSaddleRoot (T / (2 * Real.pi)) b + H), atkinsonRootQuadraticKernel T b y"
+      },
+      {
+        "name": "exists_atkinsonPowerIntegral_finite_stationary_approximation",
+        "line": 93,
+        "signature": "theorem exists_atkinsonPowerIntegral_finite_stationary_approximation (α : ℝ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ T G L b H : ℝ, 0 < T → 1 ≤ G → G ^ 2 ≤ 2 * T →\n      1 ≤ L → 8 * L ≤ G → 0 < H →\n      Real.sqrt T / 4 ≤ atkinsonSaddleRoot (T / (2 * Real.pi)) b - H →\n      atkinsonSaddleRoot (T / (2 * Real.pi)) b + H ≤ Real.sqrt T →\n      H ≤ atkinsonSaddleRoot (T / (2 * Real.pi)) b / 2 →\n      ‖atkinsonPowerIntegral T G L α b - atkinsonFiniteStationaryMain T G L α b H‖ ≤\n        C * G * T ^ (-α) * (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 +\n          16 * T * H ^ 4 / (atkinsonSaddleRoot (T / (2 * Real.pi)) b) ^ 3)"
+      }
+    ]
   }
 ]

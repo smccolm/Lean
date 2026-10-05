@@ -1,19 +1,22 @@
 # Dhiman–Kadiri–Quesada-Herrera 2026 — whole-paper goal prompt
 
-**GOAL INACTIVE — PLANNING ONLY — DO NOT START LEAN CONVERSION during project setup.**
-Prepared 5 October 2026. The instructions below become an implementation objective only after the owner explicitly activates this goal. Creating, inspecting or verifying this template does not activate it. Current proof completion: 0/20.
+**ACTIVE GOAL — activated by the owner on 5 October 2026. 7/20 proof gates complete.**
 
-## Objective after explicit activation
+## Active objective
 
-Formalize the mathematical content of *Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function*, Dhiman–Kadiri–Quesada-Herrera, arXiv:2609.00537v1, in an isolated extension of this existing repository. Close Theorem 8 Parts I and II, Theorems 9 and 10, introductory Corollaries 0.1–0.5, Corollary 8.1, and the supporting analytic and numerical obligations required for their exact conclusions. Resolve and document the frozen source discrepancies before adopting any corrected public contract. Meet every DKKH-01–DKKH-20 acceptance test. Source references alone and unverified numerical computations are not proofs.
+Formalize the mathematical content of *Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function*, Dhiman–Kadiri–Quesada-Herrera, arXiv:2609.00537v1, in an isolated extension of this existing repository. Close Theorem 8 Parts I and II, Theorems 9 and 10, introductory Corollaries 0.1–0.5, Corollary 8.1, and the supporting analytic and numerical obligations required for their exact conclusions. Resolve and document the frozen source discrepancies before adopting any corrected public contract. Meet every DKQH-01–DKQH-20 acceptance test. Source references alone and unverified numerical computations are not proofs.
 
-Use full author names in human-facing filenames, `DhimanKadiriQuesadaHerrera2026` as the proposed Lean namespace, and `DKKH` as the task prefix. Preserve all completed work in nodes 63, 71, 73, 74 and 77, the foundation freeze, source ledgers, counterexamples, repairs, audits and owner scripts.
+Use full author names in human-facing filenames, `DhimanKadiriQuesadaHerrera2026` as the proposed Lean namespace, and `DKQH` as the task prefix. Preserve all completed work in nodes 63, 71, 73, 74 and 77, the foundation freeze, source ledgers, counterexamples, repairs, audits and owner scripts.
 
 ## Read first and freeze the actual scope
 
 Read `../../AGENTS.md`, the root README/publication audit/manuscript and node-71 status/checklist/architecture/audit; then this folder's README, Source Contract, Errata, Checklist, Architecture, Crosswalk, Research Agenda, Sources, Computation Review, Reproduction Manifest and `Dependencies/README.md`. Verify `Sources/SHA256SUMS.txt`. Read the actual PDF and TeX, `AFE2026ago31.bbl`, `anc/AFE1.sage` and `anc/AFE2.py`. Recheck arXiv and author pages for a revision newer than v1; retain the frozen v1 bytes and compare rather than silently replacing them.
 
-Start by resolving DKKH-01's source discrepancies. Separate a literal published statement, a typographical correction supported by the proof, a substantive strengthening, and a missing formal bridge. Preserve counterexamples and evidence. A false literal statement cannot be a Lean target. Record any required change to mathematical scope before implementation; do not label a corrected or weaker result as the unchanged original. Routine notation repair with an established mathematical justification need not interrupt otherwise authorized work; a materially different objective requires an explicit scope decision.
+Start by resolving DKQH-01's source discrepancies. Separate a literal published statement, a typographical correction supported by the proof, a substantive strengthening, and a missing formal bridge. Preserve counterexamples and evidence. A false literal statement cannot be a Lean target. Record any required change to mathematical scope before implementation; do not label a corrected or weaker result as the unchanged original. Routine notation repair with an established mathematical justification need not interrupt otherwise authorized work; a materially different objective requires an explicit scope decision.
+
+## Accepted source repair — 5 October 2026
+
+For Theorem 8 Part I, the owner explicitly accepted the additional hypotheses that `|g′|` and `|g′|/(1+f′−N)` are nonincreasing, as documented in Errata. Preserve the original statement and its counterexample. Prove the corrected theorem and verify the added hypotheses for every AFE application; do not label the corrected general theorem as the unchanged printed result. All other source discrepancies remain subject to their documented review.
 
 ## Mandatory mathematical outcomes
 
@@ -25,7 +28,7 @@ Start by resolving DKKH-01's source discrepancies. Separate a literal published 
 
 ## Reuse this repository before developing new foundations
 
-Consult the dated exact-type inventory `Tools/local_reuse_inventory.json`. Existing node-71 Euler–Maclaurin/zeta truncation, smooth Poisson and finite derivative tests; node-63 continuous derivative, B-process and digamma machinery; node-74 sharp truncation/gamma work; node-73 stationary Fourier bounds; and node-77 digamma, complex-power and finite logarithmic-sum work are real starting points. Inspect proof bodies and transitive import/axiom closures. Record which theorem shortens which DKKH obligation and prove the normalization adapter. A matching name does not prove matching strength: the existing `vanDerCorput_B_process` is a discrete second-difference bound, and smooth zeta-square AFEs are not this sharp unsmoothed ζ AFE.
+Consult the dated exact-type inventory `Tools/local_reuse_inventory.json`. Existing node-71 Euler–Maclaurin/zeta truncation, smooth Poisson and finite derivative tests; node-63 continuous derivative, B-process and digamma machinery; node-74 sharp truncation/gamma work; node-73 stationary Fourier bounds; and node-77 digamma, complex-power and finite logarithmic-sum work are real starting points. Inspect proof bodies and transitive import/axiom closures. Record which theorem shortens which DKQH obligation and prove the normalization adapter. A matching name does not prove matching strength: the existing `vanDerCorput_B_process` is a discrete second-difference bound, and smooth zeta-square AFEs are not this sharp unsmoothed ζ AFE.
 
 Keep the root's pinned Lean 4.30/Mathlib/PNT+ graph unless a justified, separately scoped migration is needed. Current upstream HEADs use newer toolchains and are research observations, not selected dependencies. Prefer a path dependency on the root and the smallest audited closure. Do not duplicate an entire completed extension simply to acquire one gamma lemma. If adapting code, retain provenance, license, exact source hashes, modifications and complete import closure; scan and audit that closure. The completed density results are available context but do not automatically imply this paper's explicit numerical estimates.
 
@@ -39,7 +42,7 @@ No `sorry`, `admit`, project axioms, conclusion-equivalent hypothesis, constant/
 
 ## Build, audit and synchronization interfaces
 
-Maintain `run_dhiman_kadiri_quesada_herrera_build.bat` and its Tools implementation. It currently checks only the inactive scaffold. On activation, deliberately replace that mode with complete module classification, root-import coverage, package builds, public exact-type regressions, explicit and exhaustive transitive axiom audit, integrity scans and zero-warning gates. A failed or warning-producing stage must fail the BAT. Preserve arbitrary-caller-directory operation, timestamped logs, reliable exit codes, double-click pause and `--no-pause`. Run every intended module and retained test; do not narrow coverage to get a PASS.
+Maintain `run_dhiman_kadiri_quesada_herrera_build.bat` and its Tools implementation. Its active-development mode must check complete module classification, root-import coverage, package builds, public exact-type regressions, explicit and exhaustive transitive axiom audit, integrity scans and zero-warning gates. A failed or warning-producing stage must fail the BAT. Preserve arbitrary-caller-directory operation, timestamped logs, reliable exit codes, double-click pause and `--no-pause`. Run every intended module and retained test; do not narrow coverage to get a PASS.
 
 Maintain and run `../../run_lake_build.bat --no-pause` for the existing foundation after relevant Lean/import/package/audit/runner changes. Run foundation and paper verifiers sequentially. Focused builds supplement these interfaces. Record checkout/toolchain/dependency/source hashes, exact commands, exits, diagnostics, log paths and log hashes. Keep README, Checklist, Architecture, Research Agenda, Crosswalk, contract and reproduction evidence synchronized.
 

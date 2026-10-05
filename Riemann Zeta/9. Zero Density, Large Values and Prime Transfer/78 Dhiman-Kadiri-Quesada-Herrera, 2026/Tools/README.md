@@ -1,16 +1,17 @@
-# Scaffold and research tooling
+# Active verification and research tooling
 
-Current mode: **planning-only**, 0/20 proof gates. Use `cmd /c ..\run_dhiman_kadiri_quesada_herrera_build.bat --no-pause` from this directory. The wrapper works from any caller directory and rejects unknown arguments. It checks the source ledger, exhaustive scaffold file list, no-Lean/no-package boundary, required inactive-goal markers, all twenty OPEN statuses in JSON/checklist/Mermaid, exact label index, local Markdown targets, parent file hashes/pins and node-63 BAT identity. It runs eight source-verifier negative/positive tests and writes its own timestamped log. It does not fetch, activate a goal, replay author programs, run Lean or invoke Git synchronization.
+Current mode: **active-development**, 7/20 proof gates complete. Run the folder-local paper BAT with `--no-pause`; it supports any caller directory.
 
-`verify_sources.ps1` and `test_source_verifier.ps1` were copied verbatim from node 77. `verify_scaffold.py` uses Python standard library only. PowerShell runner propagates nonzero Python/stage status and ends with `SCAFFOLD PASS — LEAN CONVERSION NOT STARTED` only on success. Logs are ignored generated files; the complete retained inventory lives in `scaffold.json`.
+The runner verifies all retained files and production/verification Lean modules, full root-import coverage, immutable source pins, parent configuration, identical dependency revisions, the original node-63 synchronization BAT, JSON/checklist/diagram status agreement, TeX labels and local links. It builds all implemented modules and executes exact-type source regressions and the exhaustive transitive axiom audit. Nonzero exits, Lean errors/warnings and tactic suggestions fail the run. A development PASS explicitly leaves uncompleted source gates open.
 
-`reproduce_author_code.py` is a separate optional numerical replay and records its actual runtime versions; it is not a proof gate. `source_labels.json` records active original-TeX labels and line numbers. `local_reuse_inventory.json` records selected existing theorem signatures and file hashes, not a promise to install their imports. `template_inventory.json` accounts for every file in node 77, including classified generated state. `upstream_snapshot.json` records live external observations without changing dependency pins.
+`verify_scaffold.py` retains its filename but validates the active package. `scaffold.json` classifies all retained artifacts and modules. The original source verifier and its eight regression cases remain mandatory. Logs are generated under `logs/`; the foundation BAT is a separate sequential gate.
 
-The exact self-contained `../push_to_github.bat` comes from node 63. No `push_to_github.ps1` helper is required or substituted. Build/scaffold tools never call this owner interface.
+`reproduce_author_code.py` independently replays the unchanged AFE2 program, reporting numerical observations only. Source-label, local-reuse, template-inventory and upstream-snapshot JSON retain their dated provenance. Existing Lean APIs must be inspected before duplicating foundations.
 
-The frozen owner BAT is marked `-text` so Git preserves its original LF bytes.
-Parent configuration and the external node-63 reference also have canonical-LF
-comparison hashes to tolerate Git checkout line-ending conversion. Their
-non-line-ending content, package revisions and the archived BAT bytes remain checked.
+The owner-operated `../push_to_github.bat` is unchanged. Verification never stages, commits, pushes or invokes synchronization. Source hashes and canonical-LF hashes retain their original purposes.
 
-When conversion is explicitly activated, replace the inactive scaffold mode with actual package coverage/build/audit/semantic-regression checks; update every status document in the same change. No excluded Lean files, linter suppression or success labels masking missing proof work are allowed. Run foundation and paper proof verifiers sequentially, preserve all prior accepted contracts and report diagnostics accurately.
+The current AFE1 development contains 87 retained files, twenty-one production modules and two verification modules. All are covered by the exact inventory and root import checks; the historical setup inventory above remains a dated record. The public N=0 and general-N general-endpoint and half-integer consumers are mandatory regressions. No additional gate has been closed.
+
+Current reflection/Lemma-7 development: 89 retained files, twenty-three production modules and two verification modules. Both new modules are classified and root-imported; 6/20 gates remain accepted.
+
+Current digamma development: 90 retained files, twenty-four production modules and two verification modules. GammaDigammaReal is classified and root-imported; 6/20 gates remain accepted.

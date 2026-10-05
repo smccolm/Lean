@@ -1,0 +1,16 @@
+name = "DhimanKadiriQuesadaHerrera2026"
+version = "0.1.0"
+defaultTargets = ["DhimanKadiriQuesadaHerrera2026"]
+packagesDir = "../../../.lake/packages"
+buildDir = "../../../../.lake/dhiman-kadiri-quesada-herrera-2026-build"
+
+[[lean_lib]]
+name = "DhimanKadiriQuesadaHerrera2026"
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "RiemannZeta"
+path = "../../.."

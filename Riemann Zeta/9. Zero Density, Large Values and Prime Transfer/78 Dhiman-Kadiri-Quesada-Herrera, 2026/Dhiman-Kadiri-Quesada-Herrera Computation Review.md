@@ -6,7 +6,7 @@ Research date: 5 October 2026. Original scripts are unchanged under `Sources/Dhi
 
 Header specifies SageMath 9.5. The code sets exact rational `g1=1413472/100000` and `H=3*10^12`, defines m(c) as C(x), differentiates symbolically, and uses `RIF` to check two interval inequalities used in the real-cutoff transfer. It then prints c₀ using ordinary `n(...)` evaluation. The existence of interval comparisons does not imply that every printed decimal is outward-certified.
 
-Read-only inspection completed; replay **NOT RUN**, because Sage is unavailable. This is not a scaffold failure or permission to start Lean conversion. A future reproduction environment should pin Sage 9.5 (or record and compare a migration), capture the boolean interval results and enclosing intervals, and check all advertised decimal rounding. Do not substitute plain Python for Sage syntax and call that the same run.
+Read-only inspection completed; replay **NOT RUN**, because Sage is unavailable. This replay limitation is independent of the subsequently activated Lean goal. A future reproduction environment should pin Sage 9.5 (or record and compare a migration), capture the boolean interval results and enclosing intervals, and check all advertised decimal rounding. Do not substitute plain Python for Sage syntax and call that the same run.
 
 ## AFE2.py
 
@@ -28,4 +28,12 @@ This optional research command verifies the archived AFE2 script hash, runs the 
 
 ## Later certification requirements
 
-Freeze the accepted analytic branch formulas first. Then prove global monotonicity/convexity or cover compact parameter intervals with exact rational/interval certificates checked in Lean. Include endpoints, all σ in the source range, exact π/gamma/digamma enclosures, every k case and outward rounding. Retain raw author results even where a repaired rigorous decimal differs. DKKH-13/16/17 remain OPEN until actual mathematical consumers use these certificates. No `native_decide`, external assertion, trusted float or assumed optimizer maximum may close them.
+Freeze the accepted analytic branch formulas first. Then prove global monotonicity/convexity or cover compact parameter intervals with exact rational/interval certificates checked in Lean. Include endpoints, all σ in the source range, exact π/gamma/digamma enclosures, every k case and outward rounding. Retain raw author results even where a repaired rigorous decimal differs. DKQH-13/16/17 remain OPEN until actual mathematical consumers use these certificates. No `native_decide`, external assertion, trusted float or assumed optimizer maximum may close them.
+
+## AFE1 decimal certification and DKQH-13 acceptance review
+
+AFEDigammaNumerics proves ψ(x)≥log(x)−1/(2x)−1/(12x²) for every x>0 by a positive logarithm series, an explicit rational remainder and a finite telescoping limit. The actual digamma recurrence and ψ(1)=−γ then bound both special-function values by 31 finite reciprocal terms and elementary logarithms. The logarithms use proved finite Taylor lower/upper bounds after argument reduction. AFEFirstConstants checks four finite rational certificates with ordinary kernel-checked norm_num; pi is rounded downward from Mathlib's proved enclosure, and each reciprocal argument is rounded upward using proved factor monotonicity.
+
+All six branches in the exact c₀ maxima are bounded. afeFirstRealConstant_small_le proves c₀(14.13472)≤1.2552; afeFirstRealConstant_large_le proves c₀(3·10^12)≤1.2127. The public afe_first_kind_small_decimal and afe_first_kind_large_decimal consume those certificates and the actual real-cutoff AFE. Two unfolded source consumers preserve σ∈(0,1], the exact thresholds, inclusion of n=1, actual ζ and the displayed decimals. No assumption about zero verification or RH occurs. The current inventory is 87 files, twenty-one production modules and two verification modules. All new public declarations and consumers are registered. DKQH-13 is DONE after the exact-source review and sequential foundation/paper checks passed; the accepted count is 6/20.
+
+The author programs remain frozen and their outputs remain computational observations. The new AFE1 certification is an independent analytic/rational proof; it does not use Sage, Python, floating-point values or an optimizer as proof evidence. The Python Fraction exploration only selected convenient outward rational endpoints; Lean independently proves their complete finite inequalities. AFE2/Table 1–3 certification remains open.
