@@ -1,5 +1,7 @@
 # Frozen source contract
 
+**Implementation status, 5 October 2026:** both frozen contracts below now have exact-type-checked public Lean proofs, `large_zeta_sum_forces_zero_disk` and `local_zero_windows_force_zeta_sum_cancellation`. Both sequential BATs, transitive audits and exact semantic acceptance passed; all twenty gates are complete. The original 4 October specification, including its historical planning-status wording, is retained verbatim below; it is not the current implementation status.
+
 Source: [arXiv:2608.31060v1](https://arxiv.org/html/2608.31060v1), [local original TeX](Sources/DongWangWangZhang-v1-source/main.tex). Recorded 4 October 2026. **Mathematical specification only; not stated or proved in Lean.** The immutable source bytes, not a paraphrase, resolve any discrepancy below.
 
 ## Actual objects

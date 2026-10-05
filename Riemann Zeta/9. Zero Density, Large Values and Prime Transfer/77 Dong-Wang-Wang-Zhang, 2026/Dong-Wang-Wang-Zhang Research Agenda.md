@@ -1,40 +1,53 @@
 # Research agenda and current status
 
-**4 October 2026 — ACTIVE DEVELOPMENT; 7/20 implementation gates complete (DWWZ-01/03/05/06/07/08/10).** The owner explicitly activated the whole-proof goal. The exact actual-sum contract and compatible package/BAT graph pass. The consumed phase-specialized mean-value/comparison/Lipschitz inputs and full same-witness Lemma 2.2 have passed both BATs and their semantic acceptance tests.
+**5 October 2026 — PROJECT COMPLETE; 20/20 implementation gates complete (DWWZ-01–20).** The owner explicitly activated the whole-proof goal. The exact actual-sum contract and compatible package/BAT graph pass. The consumed phase-specialized mean-value/comparison/Lipschitz inputs and full same-witness Lemma 2.2 have passed both BATs and their semantic acceptance tests.
 
-## Work completed in this setup
+## Historical planning survey
 
 Identified and read the primary paper's five sections and reference list using its HTML and frozen TeX, including both full theorem statements, all seven lemmas and Proposition 4.1. Archived the original PDF and source archive with extracted source. Examined the cited Granville–Soundararajan mean-value and zero-forcing inputs in journal/preprint versions and located the author-hosted exponential-sum chapter. Searched current paper metadata, author publications, web and GitHub implementation evidence, three live upstream repositories, and relevant local interfaces. Prepared the scaffold, inactive goal prompt and source-integrity runner.
 
-This is a literature/interface investigation, not a complete semantic audit of existing libraries or a new proof. The [Sources](Dong-Wang-Wang-Zhang%20Sources.md) document records limits and dated negative results.
+That historical setup was a literature/interface investigation, not a proof claim. Implementation after activation is recorded below. The [Sources](Dong-Wang-Wang-Zhang%20Sources.md) document records limits and dated negative results.
 
-## First analytic priority
+## Initial analytic priority, now closed
 
 The initially missing uniform mean-value/twist/Lipschitz package needed for **Lemma 2.2** is now proved at its consumed phase specialization. Its outputs drive the Gaussian lower bound and hence the main inverse theorem. No equivalent theorem was located in the searched local or public Lean sources. This is a search result, not a claim that the theorem is inaccessible or impossible to formalize.
 
-Aim first at the smallest genuine specialization for the completely multiplicative function `n ↦ n^(it)`, with the actual maximizing twist. DWWZ-05 must supply the analytic reason a large sum varies slowly after twisting; DWWZ-06 then assembles the exact uniform estimates. Do not settle for a generic implication assuming those estimates.
+The adopted route proves the needed specialization for the completely multiplicative function `n ↦ n^(it)`, with the actual maximizing twist. DWWZ-05 supplies the analytic reason a large sum varies slowly after twisting; DWWZ-06 assembles the exact uniform estimates. Neither conclusion is supplied as an assumed estimate.
 
-Independent branches with useful existing infrastructure are: zeta/xi zero sums (DWWZ-04/08/09/11), the Gaussian identity including its pole (DWWZ-07/10), and the classical large-x estimate (DWWZ-15). Reusing those branches should avoid reproving foundations, but they do not eliminate the need for DWWZ-05.
+The independently developed branches are also complete: zeta/xi zero sums (DWWZ-04/08/09/11), the Gaussian identity including its pole (DWWZ-07/10), and the classical large-x estimate (DWWZ-15). Their selected foundation reuse and actual consumers are recorded in Dependencies and Crosswalk.
 
 The uniform zeta consumer is now accepted: `norm_zeta_left_strip_le`
 proves Lemma 3.1 with constant 8, from the installed explicit-pole continuation.
 Four new boundary/contract regressions, both BATs and the dependency/semantic
 audit pass. DWWZ-07 is DONE.
 
-## Minimal remaining-obligation DAG
+## Completed obligation DAG
 
-1. DWWZ-02/04: exact public Lean statements and faithful zero objects; DWWZ-01/03 are DONE.
-2. DWWZ-05 → 06: analytic mean-value inputs → actual twist selection, global-in-y Lipschitz and comparison.
-3. DWWZ-04 → 08 → 09/11: multiplicity-faithful xi product/convergence → zeta growth from zeros and weighted-zero upper bound; DWWZ-07 supplies the small-height bound.
-4. DWWZ-03/07 → 10: actual shifted-series Gaussian identity with positive residue is DONE, by proved regularized Mellin continuation and Gaussian Fubini.
-5. DWWZ-06/07/09/10 → 12: weighted-zero forcing from the original large sum.
-6. DWWZ-04/11/12 → 13 → 14: actual near/far split → T1 with a common center.
-7. DWWZ-03 → 15; DWWZ-14/15 → 16: large-x cancellation plus local-window contradiction → full T2.
-8. DWWZ-17/18/19/20: exact regressions, dependency/coverage audits, both BATs and synchronized release evidence.
+The Gaussian evaluation sub-obligation of DWWZ-12 now compiles in
+`GaussianConcentration`: actual same-maximizer continuity, convergent
+Gaussian rescaling and exact main/error normalization yield the source
+one-sixth saving. `GaussianLowerBound` now consumes the actual large-sum
+comparison and proves the exact lower bound `π exp(λ log x/2)/N`, with
+one maximizing twist before every admissible λ. That lower bound alone is not
+a standalone proof of Proposition 4.1. `GaussianFrequency` and
+`WeightedZeroForcing` now assemble residue removal, both frequency tails,
+the actual frequency witness and multiplicity-preserving conjugation into
+`exists_large_sum_weighted_zero_forcing`. The full consumer compiles;
+combined BAT/audit and semantic acceptance passed (DWWZ-12 DONE).
+The final gate count is 20/20; dated receipts distinguish the forcing checkpoint from final full-proof verification.
 
-These obligations are now active. The node-73 survey is recorded in Crosswalk, with no import selected. The actual positive-index sum, unit bound, multiplicativity, conjugation and convergent spectral-shift identity are proved. The compact maximizing twist exists. The GS03 Lemma 7.1 chain now includes the exact Möbius convolution, uniform power-sum error, coefficient mean from the logarithmic convolution and Mathlib Chebyshev, reciprocal tail from Abel summation, finite Euler product and optimized short/long split. `norm_normalized_mean_comparison_le` proves (2.2) for the actual phases with constant `42(2(log 4+4)+1) exp(8)`, for all real twists and `x>1`. The original general statement remains frozen; the specialization is explicitly identified in Crosswalk.
+1. DWWZ-02 is DONE: both exact public theorems and their exact-type regressions passed final combined acceptance. DWWZ-01/03/04, including the faithful zero objects and count bridges, are DONE.
+2. DWWZ-05/06: analytic mean-value inputs and full same-witness Lemma 2.2 are DONE.
+3. DWWZ-08/11 are DONE: actual xi product/convergence and uniform zero-sum bound. DWWZ-09 is also DONE: actual xi quotient, gamma cancellation and all-height source zero repulsion.
+4. DWWZ-03 and the DWWZ-05 power-sum/transform inputs → 10: actual shifted-series Gaussian identity with positive residue is DONE, by proved regularized Mellin continuation and Gaussian Fubini. Lemma 3.1 (DWWZ-07) enters the later frequency-tail bound, not this identity.
+5. DWWZ-04/06/07/09/10 → 12: weighted-zero forcing from the original large sum, including multiplicity-preserving conjugation, is DONE.
+6. DWWZ-04/11/12 → 13 → 14: actual near/far split and full T1 with a common center now compile; combined BAT/semantic acceptance passed.
+7. DWWZ-03 → 15; DWWZ-14/15 → 16 are DONE: large-x cancellation plus local-window contradiction → full T2, including exact public-contract regressions; combined BAT/audit and semantic acceptance passed.
+8. DWWZ-17/18/19/20 are DONE: exact regressions, dependency/coverage audits, both BATs and synchronized release evidence.
 
-DWWZ-07 is complete via the installed Euler–Maclaurin continuation with its pole explicit. DWWZ-10 is now complete via the actual power-sum remainder's convergent-transform route. DWWZ-08's xi divisor and real log derivative are now complete. The next terminal analytic obligations are **DWWZ-09/11, quantitative zero repulsion and the zero-sum upper bound**. The completed Lemma 2.2 now feeds the Gaussian lower-bound branch. The xi/divisor identities are proved; the residue-bearing Gaussian identity is proved. Full source (2.1) remains an unproved reference generality, not an assumed input or a rewritten contract.
+The final integrated BAT/audit, semantic review and documentation gates passed. All mathematical consumers and all twenty acceptance gates are complete. The node-73 survey is recorded in Crosswalk, with no import selected. The actual positive-index sum, unit bound, multiplicativity, conjugation and convergent spectral-shift identity are proved. The compact maximizing twist exists. The GS03 Lemma 7.1 chain now includes the exact Möbius convolution, uniform power-sum error, coefficient mean from the logarithmic convolution and Mathlib Chebyshev, reciprocal tail from Abel summation, finite Euler product and optimized short/long split. `norm_normalized_mean_comparison_le` proves (2.2) for the actual phases with constant `42(2(log 4+4)+1) exp(8)`, for all real twists and `x>1`. The original general statement remains frozen; the specialization is explicitly identified in Crosswalk.
+
+DWWZ-07 is complete via the installed Euler–Maclaurin continuation with its pole explicit. DWWZ-10 is now complete via the actual power-sum remainder's convergent-transform route. DWWZ-08's xi divisor and real log derivative are now complete. DWWZ-09 and DWWZ-11 have passed both BATs and exact semantic review. DWWZ-12's actual weighted forcing is accepted; the actual near/far count and full T1 now compile; both BATs and exact semantic acceptance passed. **DWWZ-15/16, large-x cancellation and T2, now compile**, with DWWZ-04's conjugation/count bridges now accepted. The completed Lemma 2.2 now feeds the Gaussian lower-bound branch. The xi/divisor identities are proved; the residue-bearing Gaussian identity is proved. Full source (2.1) remains an unproved reference generality, not an assumed input or a rewritten contract.
 
 The transform entry is now proved for both the original sum and its logarithmically weighted coefficients: Mathlib's `LSeries_eq_mul_integral` and `LSeries_deriv` feed exact Laplace/Fourier formulas `ζ(s−it)/s` and `−ζ′(s−it)/s`, followed by genuine `L¹ ∩ L²` Parseval with all convergence obligations discharged. The controlled frequency regions and one-point Euler-product/finite-distance bound are proved as described below. Ordinary pointwise/parameter integration is now assembled directly on the full series, with no smooth-number adapter needed for that estimate. Neither Parseval identity alone establishes Halász or Lipschitz. The existing foundation's Schwartz Parseval consumers require smooth test functions and do not directly apply to these floor-cutoff sums; Mathlib's distributional `L²` Fourier interface supplies the bridge without importing another extension.
 
@@ -54,15 +67,15 @@ The one-point Euler input is proved: `MeanValueEuler` gives `|ζ(twistZetaPoint 
 
 The Euler substitution now gives `exists_maximizingTwist_prime_distance_mean_bound`, with ordinary majorant `D[(M+1)exp(−M)+(1+log L)/L]` and a proved absolute `D`. `exists_large_sum_prime_distance_bound` absorbs its error uniformly over `1≤N≤L^(1/100)` and proves the source's `M≤(1/100)log L+log log L+C` from `|S|=x/N`, at one actual maximizing twist. The reciprocal-prime estimate controls `M+1` before taking logarithms, preserving the exact leading coefficient. All constants precede the height, scale and `N` quantifiers.
 
-The remaining terminal DAG is now: **completed xi/divisor identities (08) → zero repulsion/zero-sum bounds (09/11), with count bridges (04) open; completed Gaussian identity with residue (10) + completed Lemma 2.2 + these inputs → forcing (12) → near/far count (13) → T1 (14); large-x bound (15) + T1 → T2 (16)**. `exists_large_sum_twist_bounds` completes the ordinary-mean-value alternate deduction of the three non-Lipschitz clauses. Its comparison majorant is uniformly at most `L^(-4/5)`; this gives `1+|t₀|≤4N`, and multiplication by the exact inverse comparison factor yields the required `L^(-3/4)` error. All constants precede height, scale and N. This is not a claim to full hybrid (2.1) or a source repair. DWWZ-05/06 are DONE; the count is 7/20.
+The now-implemented mathematical DAG is: **completed xi/divisor identities (08), zero-sum bound (11) and zero repulsion (09), with count bridges (04) accepted; completed Gaussian identity with residue (10) + completed Lemma 2.2 + these inputs → forcing (12) → near/far count (13) → T1 (14); large-x bound (15) + T1 → T2 (16)**. `exists_large_sum_twist_bounds` completes the ordinary-mean-value alternate deduction of the three non-Lipschitz clauses. Its comparison majorant is uniformly at most `L^(-4/5)`; this gives `1+|t₀|≤4N`, and multiplication by the exact inverse comparison factor yields the required `L^(-3/4)` error. All constants precede height, scale and N. This is not a claim to full hybrid (2.1) or a source repair. DWWZ-05/06 are DONE; the count is 20/20.
 
 ## Route selection and stopping source searches
 
-The two-frequency input now follows the proved installed `MediumPNT` → actual `θ` logarithmic error → exact prime Abel summation → three-frequency absolute-cosine majorant with mean `75/113<2/3` → actual distance/zeta pair → same-maximizer off-frequency bound. The prime scale is chosen internally as `exp(max(B,1/|y|,L^(1/A)))`. Crosswalk states the exact quantified consumer. A later survey found the relevant stronger node-73 quantitative PNT, but the smaller installed closure suffices, so no node-73 import was added. Multiplication by the damped difference factor and rightward transport are now proved with a bound uniform in frequency and translation. The actual weighted-difference Parseval and full near/far mean-square consumer are now proved. Difference-sum smoothing is now proved with an active-cell error independent of dilation; the mean-square bound now retains the reciprocal cap. Damping-parameter assembly and its power-loss evaluation are now proved. Scalar exponent absorption, all-real cutoff assembly and full Lemma 2.2 are kernel-checked. The next obligations are the Gaussian and zeta/zero inputs to Proposition 4.1.
+The two-frequency input now follows the proved installed `MediumPNT` → actual `θ` logarithmic error → exact prime Abel summation → three-frequency absolute-cosine majorant with mean `75/113<2/3` → actual distance/zeta pair → same-maximizer off-frequency bound. The prime scale is chosen internally as `exp(max(B,1/|y|,L^(1/A)))`. Crosswalk states the exact quantified consumer. A later survey found the relevant stronger node-73 quantitative PNT, but the smaller installed closure suffices, so no node-73 import was added. Multiplication by the damped difference factor and rightward transport are now proved with a bound uniform in frequency and translation. The actual weighted-difference Parseval and full near/far mean-square consumer are now proved. Difference-sum smoothing is now proved with an active-cell error independent of dilation; the mean-square bound now retains the reciprocal cap. Damping-parameter assembly and its power-loss evaluation are now proved. Scalar exponent absorption, all-real cutoff assembly and full Lemma 2.2 are kernel-checked. The Gaussian/zero inputs and full Proposition 4.1 are accepted; the exact T1 chain now compiles. Lemma 5.1 and exact T2 now compile; no analytic obligation remains in the twenty-gate contract.
 
-Primary route: the paper's adaptation of Granville–Soundararajan. For DWWZ-05, compare the journal's Theorems 2b/4 and Lemma 7.1 with the precise Section 2 restatement in the later zero-forcing paper. The two versions' maxima and Euler-product conventions require a bridge, not textual substitution.
+The adopted primary route follows the paper's adaptation of Granville–Soundararajan. The journal's Theorems 2b/4 and Lemma 7.1 were compared with the precise Section 2 restatement in the later zero-forcing paper. The implemented phase-specialized consumers preserve the required maximum and Euler-product conventions; the generic statements are not inferred by textual substitution.
 
-If formalizing the general multiplicative-function theory becomes disproportionate, investigate a direct proof of the needed specialized twist/Lipschitz estimate. For DWWZ-10, a vertical-line Mellin/contour argument is a possible alternative to parameter continuation, provided it proves the exact same integrals and residue. For DWWZ-15, a finite third-derivative estimate can replace the exponent-pair abstraction if its uniform range is proved. These are prospective alternatives, not proved repairs.
+The completed alternatives are recorded in Crosswalk: phase-specialized mean value/Lipschitz in place of unnecessary generic multiplicative-function theory, regularized Mellin/Gaussian Fubini in place of moving-contour continuation, and finite A/B/first-derivative large-x estimates in place of an exponent-pair abstraction. They prove the required exact conclusions without source repairs. None remains a pending route-selection task.
 
 Do not continue broad source hunting merely because a proof is difficult. Reopen it for a newly identified theorem, a concrete missing cited input, or a newer primary revision. Work on actual analytic bounds and consumers. Bibliography growth, scalar comparisons, fresh module families and conditional wrappers are not replacements for closing gates.
 
@@ -73,9 +86,8 @@ continuation. The positive/negative half-line pole fractions cancel in the
 regularized transform. Gaussian Fubini and restoration of the explicit
 exponential now prove the exact Lemma 3.3 identity, including both source
 integrals' convergence and the positive residue. Five regressions compile;
-DWWZ-10 is DONE after combined BAT/audit and semantic acceptance. The next independent mathematical
-branch is the actual xi zero divisor, summability and real log derivative
-(DWWZ-04/08 → 09/11), followed by actual forcing.
+DWWZ-10 is DONE after combined BAT/audit and semantic acceptance. The actual xi zero divisor, summability and real log derivative are now proved
+(DWWZ-08 DONE). Quantitative zero repulsion and zero-sum bounds feed actual forcing.
 
 ### Xi branch now assembled
 
@@ -85,14 +97,21 @@ critical-strip bounds, local finiteness and multiplicity-preserving reflection.
 derives its real exponential-factor cancellation, and proves both the real
 resolvent identity and exact zeta/gamma decomposition. The shifted inverse-square
 kernel is summable. Seven new regressions and both BATs pass. DWWZ-08 is accepted as DONE;
- DWWZ-04 retains the missing disk/window/rectangle and
-conjugation bridges. The next analytic obligations are the xi ratio bound and
-uniform gamma/log-derivative estimates for DWWZ-09/11, then forcing.
+DWWZ-04's disk/window/rectangle and conjugation bridges have passed combined acceptance. The xi ratio and gamma cancellation now close DWWZ-09; actual forcing is accepted and T1 now compiles. The uniform digamma and zeta
+log-derivative bounds now prove exact DWWZ-11; both BATs and semantic acceptance pass.
 
-## Regression design to retain
+### Source zero repulsion assembled
+
+The actual xi quotient, horizontal gamma quotient, rational factors and
+lower real logarithmic derivative now give exact Lemma 3.2 in
+`exists_source_zero_repulsion`. Height growth cancels with its exact
+coefficient, and Lemma 3.1 covers small heights. Six additional regressions
+retain the full source statement and boundaries. DWWZ-09 is DONE after both BATs and semantic acceptance. The near/far split (13) and full T1 (14) now compile, with both BATs and exact semantic acceptance passed; the complete weighted-forcing consumer (12) is accepted. The multiplicity-preserving conjugation/count bridges (04) are now accepted.
+
+## Regression coverage to retain
 
 Test the `n=0` exclusion; floor endpoints; `x<1`; both signs of `t`; repeated zeros; pole exclusion; `λ=1/2`; unbounded `a`; the open disk versus closed window; a single `φ` before all `L`; empty admissible intervals; the exact residue sign/denominator; Gaussian parameter distinct from height; small versus large x at `sqrt T`; nonintegral dyadic endpoints; `ε` strictness; and `K(A)` independent of `δ`. Preserve any counterexample or source correction as a permanent regression.
 
 ## Acceptance authority
 
-The [Checklist](Dong-Wang-Wang-Zhang%20Checklist.md), [Architecture](Dong-Wang-Wang-Zhang%20Architecture.md) and this agenda must always report the same gate statuses. Source Contract controls mathematical outputs. Reproduction Manifest controls evidence claims. The ready [Goal Prompt](Dong-Wang-Wang-Zhang%20Goal%20Prompt.md) includes maintenance of the paper BAT and foundation BAT. Recovery-record files are never a task dependency.
+The [Checklist](Dong-Wang-Wang-Zhang%20Checklist.md), [Architecture](Dong-Wang-Wang-Zhang%20Architecture.md) and this agenda must always report the same gate statuses. Source Contract controls mathematical outputs. Reproduction Manifest controls evidence claims. The completed [Goal Prompt](Dong-Wang-Wang-Zhang%20Goal%20Prompt.md) includes maintenance of the paper BAT and foundation BAT. Recovery-record files are never a task dependency.

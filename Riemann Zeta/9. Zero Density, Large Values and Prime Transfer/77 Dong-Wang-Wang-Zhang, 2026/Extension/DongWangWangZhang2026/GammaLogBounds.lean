@@ -101,7 +101,8 @@ theorem abs_re_digamma_sub_log_norm_le {z : ℂ} (hz : 1 / 4 ≤ z.re) :
   rw [hsum.tsum_eq] at hsplit
   have hre := congrArg Complex.re hsplit
   simp only [sum_sub_distrib, sum_inv_natCast_add_one, sub_re, add_re,
-    ratCast_re, ofReal_re, map_sum] at hre
+    ratCast_re, ofReal_re] at hre
+  rw [re_sum] at hre
   have hHlow : Real.log (‖z‖ + 2) ≤ (harmonic N : ℝ) := by
     apply le_trans ?_ (log_add_one_le_harmonic N)
     apply Real.log_le_log (by positivity)
@@ -109,14 +110,31 @@ theorem abs_re_digamma_sub_log_norm_le {z : ℂ} (hz : 1 / 4 ≤ z.re) :
     linarith
   have hHup : (harmonic N : ℝ) ≤ 1 + Real.log (‖z‖ + 2) := by
     apply (harmonic_le_one_add_log N).trans
-    exact add_le_add_left (Real.log_le_log hNpos hNupper) 1
+    linarith [Real.log_le_log hNpos hNupper]
   have htup := (re_le_norm
     (∑' i : ℕ, ((((i + N : ℕ) : ℂ) + 1)⁻¹ - (z + (i + N : ℕ))⁻¹))).trans htail
-  have htlow := (neg_norm_le_re
-    (∑' i : ℕ, ((((i + N : ℕ) : ℂ) + 1)⁻¹ - (z + (i + N : ℕ))⁻¹)))
+  have htlow := (abs_le.mp (abs_re_le_norm
+    (∑' i : ℕ, ((((i + N : ℕ) : ℂ) + 1)⁻¹ - (z + (i + N : ℕ))⁻¹)))).1
   apply abs_le.mpr
   constructor <;> linarith [le_abs_self Real.eulerMascheroniConstant,
     neg_abs_le Real.eulerMascheroniConstant]
+
+/-- The source half-argument gamma bound retains coefficient one for arbitrarily large real part. -/
+theorem re_digamma_source_upper {a v : ℝ} (ha : 0 < a) (hv : 2 ≤ |v|) :
+    (digamma ((((1 + a : ℝ) : ℂ) + (v : ℂ) * I) / 2)).re ≤
+      Real.log (2 + a + |v|) + (14 + |Real.eulerMascheroniConstant|) := by
+  let z : ℂ := (((1 + a : ℝ) : ℂ) + (v : ℂ) * I) / 2
+  have hre : z.re = (1 + a) / 2 := by simp [z]
+  have him : z.im = v / 2 := by simp [z]
+  have hq : 1 / 4 ≤ z.re := by rw [hre]; linarith
+  have h := (abs_le.mp (abs_re_digamma_sub_log_norm_le hq)).2
+  have hn : ‖z‖ + 2 ≤ 2 + a + |v| := by
+    have hb := norm_le_abs_re_add_abs_im z
+    rw [hre, him, abs_of_pos (by linarith : 0 < (1 + a) / 2),
+      abs_div, abs_of_pos (by norm_num : (0 : ℝ) < 2)] at hb
+    linarith
+  have hl := Real.log_le_log (by positivity : 0 < ‖z‖ + 2) hn
+  linarith
 
 end
 end DongWangWangZhang2026

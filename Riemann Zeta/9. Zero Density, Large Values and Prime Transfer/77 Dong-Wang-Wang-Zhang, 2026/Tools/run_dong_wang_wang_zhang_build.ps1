@@ -36,11 +36,13 @@ function Invoke-LeanGate {
 try {
     Start-Transcript -LiteralPath $logPath | Out-Null
     $transcribing = $true
-    Write-Output 'Dong-Wang-Wang-Zhang 2026: ACTIVE DEVELOPMENT VERIFICATION'
-    Write-Output 'Partial library build/audit only. Main source theorems are not yet proved.'
+    Write-Output 'Dong-Wang-Wang-Zhang 2026: COMPLETE MODULE AND CONTRACT VERIFICATION'
     $config = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'scaffold.json') -Raw -Encoding UTF8 | ConvertFrom-Json
-    if ($config.mode -ne 'active-development' -or $config.proofGatesTotal -ne 20) {
+    if ($config.mode -notin @('active-development', 'project-complete') -or $config.proofGatesTotal -ne 20) {
         throw 'Unexpected verification mode or acceptance contract.'
+    }
+    if (@(Compare-Object @('SemanticRegression', 'Audit') @($config.verificationModules)).Count -ne 0) {
+        throw 'Both semantic regression and transitive audit modules are mandatory.'
     }
     $actual = @(Get-ChildItem -LiteralPath $paperRoot -Recurse -File -Force | ForEach-Object {
         $_.FullName.Substring($paperRoot.Length + 1).Replace('\', '/')
@@ -137,14 +139,36 @@ try {
         }
     }
     $prompt = Get-Content -LiteralPath (Join-Path $paperRoot ($prefix + 'Goal Prompt.md')) -Raw -Encoding UTF8
-    foreach ($marker in @('ACTIVE GOAL', 'run_dong_wang_wang_zhang_build.bat', 'run_lake_build.bat', 'push_to_github.bat', 'Recovery-record')) {
+    $goalMarker = if ($config.mode -eq 'project-complete') { 'GOAL COMPLETE' } else { 'ACTIVE GOAL' }
+    if ($config.mode -eq 'project-complete' -and $completeCount -ne 20) {
+        throw 'Project-complete mode requires all twenty accepted gates.'
+    }
+    if ($config.mode -eq 'active-development' -and $completeCount -eq 20) {
+        throw 'Twenty accepted gates require synchronized project-complete mode.'
+    }
+    foreach ($marker in @($goalMarker, 'run_dong_wang_wang_zhang_build.bat', 'run_lake_build.bat', 'push_to_github.bat', 'Recovery-record')) {
         if (-not $prompt.Contains($marker)) { throw "Goal prompt lost required boundary: $marker" }
     }
+    $regression = Get-Content -LiteralPath (Join-Path $extensionRoot "$prefixModule/SemanticRegression.lean") -Raw -Encoding UTF8
+    $audit = Get-Content -LiteralPath (Join-Path $extensionRoot "$prefixModule/Audit.lean") -Raw -Encoding UTF8
+    foreach ($contract in @(
+        @('exactTheoremOneSourceContract', 'large_zeta_sum_forces_zero_disk'),
+        @('exactTheoremTwoSourceContract', 'local_zero_windows_force_zeta_sum_cancellation'),
+        @('exactLargeCutoffSourceContract', 'exists_large_x_zeta_sum_bound')
+    )) {
+        if ($regression -notmatch ('(?m)^theorem ' + $contract[0] + ' :') -or
+            -not $regression.Contains($contract[1]) -or
+            -not $audit.Contains('SemanticRegression.' + $contract[0]) -or
+            -not $audit.Contains($contract[1])) {
+            throw "Missing required actual public-contract regression/audit: $($contract[0])"
+        }
+    }
+    Write-Output 'CONTRACT COVERAGE PASS: both frozen main types and all-large-x source type are mandatory kernel-checked audit consumers.'
     $tex = Get-Content -LiteralPath (Join-Path $paperRoot 'Sources\DongWangWangZhang-v1-source\main.tex') -Raw -Encoding UTF8
     foreach ($label in @('thm:main', 'thm:corollary', 'lem:standard-mean', 'lem:t0', 'lem:zeta-crude', 'lem:zero-bound', 'lem:gaussian', 'lem:zero-sum-upper', 'prop:forcing', 'lem:large-x')) {
         if (-not $tex.Contains('\label{' + $label + '}')) { throw "Missing primary source label: $label" }
     }
-    Write-Output "STATUS PASS: $completeCount/20 gates complete; active goal; ten frozen source result labels present."
+    Write-Output "STATUS PASS: $completeCount/20 gates complete; mode $($config.mode); ten frozen source result labels present."
     $linkCount = 0
     foreach ($relative in @($actual | Where-Object { $_ -match '\.md$' })) {
         $doc = Get-Item -LiteralPath (Join-Path $paperRoot $relative)
@@ -171,11 +195,15 @@ try {
     foreach ($module in $config.verificationModules) {
         Invoke-LeanGate $module @('env', 'lean', ($prefixModule + '/' + $module.Replace('.', '/') + '.lean'))
     }
-    Write-Output 'DEVELOPMENT PASS - CURRENT MODULES VERIFIED; MAIN PAPER CONTRACTS INCOMPLETE'
+    if ($config.mode -eq 'project-complete') {
+        Write-Output 'PROOF PASS - BOTH FROZEN MAIN CONTRACTS VERIFIED; 20/20 GATES'
+    } else {
+        Write-Output 'DEVELOPMENT PASS - BOTH MAIN CONTRACTS VERIFIED; RELEASE GATES OPEN'
+    }
     Write-Output "Log: $logPath"
     $resultCode = 0
 } catch {
-    Write-Output "DEVELOPMENT FAIL: $($_.Exception.Message)"
+    Write-Output "VERIFICATION FAIL: $($_.Exception.Message)"
     Write-Output "Log: $logPath"
 } finally {
     if ($transcribing) { Stop-Transcript | Out-Null }

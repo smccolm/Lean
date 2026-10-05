@@ -14,5 +14,5 @@ if "%NO_PAUSE%"=="0" pause
 exit /b %BUILD_EXIT%
 :usage
 echo Usage: run_dong_wang_wang_zhang_build.bat [--no-pause]
-echo This entry point verifies the active development package, not completion of the paper.
+echo This entry point verifies all modules and contracts in the configured development or release mode.
 exit /b 2

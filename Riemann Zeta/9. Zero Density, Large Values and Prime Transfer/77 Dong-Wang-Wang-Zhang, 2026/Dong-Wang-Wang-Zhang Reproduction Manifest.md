@@ -1,8 +1,179 @@
 # Reproduction manifest
 
-4 October 2026. **ACTIVE DEVELOPMENT; the owner explicitly activated the whole-proof goal.** The setup receipts below are historical. The development package shares the pinned foundation graph; paper and foundation BATs have passed for the entry results documented in the activation receipt below. DWWZ-01/03 are DONE; both main theorems remain unproved. No release PASS is claimed.
+5 October 2026. **INTERNAL PROJECT COMPLETE; 20/20 accepted gates.** Both frozen main contracts and their analytic inputs are kernel-checked, integrated and audited. The sequential mathematical acceptance checkpoint below passed with zero Lean diagnostics. Final project-complete-mode verification also passed after status/tooling synchronization. Historical receipts retain their original scope and status; none is retroactively promoted.
 
-## Baseline and immutable inputs
+## Documentation consistency audit — 5 October 2026
+
+Reviewed all sixteen node-77 Markdown documents, the root and corridor README
+references, the stable-node note, source/dependency ledgers, package metadata,
+both BAT interfaces and their helpers. This is a documentation-consistency
+review against the existing Lean consumers and frozen TeX, not a new literature
+survey or independent mathematical review. The 4 October external snapshot
+remains explicitly dated; external URLs were not re-fetched.
+
+Corrected the corridor's stale 7/20/open-theorem summary, the agenda's pending
+acceptance wording, module-versus-namespace theorem references, the Lemma 2.2
+consumer location, and the selected-versus-historical reuse descriptions.
+The architecture now shows conjugation feeding weighted forcing, the proved
+power-sum/transform input feeding the Gaussian identity, and the zero-sum upper
+bound feeding the later near/far count rather than weighted forcing. README
+links lead directly to both public theorem files. The checklist explains the
+accepted Mellin/Fubini alternative without changing its original acceptance
+rows. Historical receipts, frozen specifications and scoped node-73 survey
+findings remain distinct from current status.
+
+Read-only checks passed: all 103 dependency/source-code hash entries, all 93
+previously recorded evidence-file hash entries, the three activation-package
+hashes, the 44-module README inventory and the 135 regression declarations.
+All 95 local links across the paper/root/corridor READMEs resolve. The paper
+BAT separately checks every local Markdown link in this node (36 after adding
+the two public theorem links). All four PowerShell helpers parse. The owner
+synchronization interface was inspected, not executed.
+
+Checkout remains `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, branch `main`,
+DIRTY, with the unchanged Lean/Mathlib/PNT pins. The commands below used
+process-local `ELAN_HOME=C:/Users/Naraphim/.elan`, ran sequentially, and had
+no intervening source, tooling or documentation edits:
+
+- Foundation, from `Riemann Zeta/`:
+  `cmd /c run_lake_build.bat --no-pause` — **PASS**, exit 0.
+  All 8,857 jobs, 301 production modules and two regressions, publication
+  contracts, 7,636 explicit / 14,290 discovered theorem audits, repository
+  integrity scans and sixteen linters passed with zero Lean diagnostics.
+  Log `../../logs/foundation_freeze_20261005_023639.log`, SHA-256
+  `239026cc969f864c46f4417249201c5b9f8e2d773a26b028f8e205734b404c4f`;
+  JSON `../../logs/foundation_freeze_20261005_023639.json`, SHA-256
+  `3a7b1084442389a41aa962ab7eb3999e97a59902b6ae28c95e9eaf8d15ed9297`.
+- Paper BAT, invoked by full path from `E:/Lean` with `--no-pause`:
+  **PROOF PASS - BOTH FROZEN MAIN CONTRACTS VERIFIED; 20/20 GATES**, exit 0.
+  All 87 classified files, 44 production and two verification modules,
+  3,872 jobs, 135 regressions, 1,149 discovered project theorems, 677 required
+  consumers, nine source pins, ten source labels and 36 local links passed.
+  Sixteen linters checked 749 declarations plus 452 generated declarations;
+  zero Lean errors, warnings, tactic suggestions or linter findings remain.
+  Log `logs/dong-wang-wang-zhang-build-20261005-024228-912.log`, SHA-256
+  `de66f1a525f20464e295141a43726d82a325177536fc3793e1d3a56d32720b06`.
+
+All 58 proof/package/tooling hashes still match
+`logs/proof-inputs-20261005-003207-332.json`, before and after these runs.
+The Source Contract document and all twenty acceptance rows are unchanged
+by this audit. No Lean source, script, pin, frozen source artifact, foundation
+or other completed node was edited. No failed verification stage remains.
+An initial direct PowerShell source-verifier invocation was blocked by the
+host execution policy; the BAT's documented process-local bypass then ran
+that verifier successfully, without changing machine policy.
+`git diff --check` passed. Only this receipt was appended after the checks;
+no recovery-record maintenance, staging, commit, pull or push occurred.
+
+## Final release-mode verification — 5 October 2026
+
+The synchronized `project-complete` checkout passed the two BATs again,
+**sequentially**, with no edits during either run. Same HEAD, DIRTY status,
+toolchain and dependency pins as the mathematical checkpoint below;
+`ELAN_HOME=C:/Users/Naraphim/.elan` was explicit for both commands.
+
+- Foundation, from `Riemann Zeta/`:
+  `cmd /c run_lake_build.bat --no-pause` — **PASS**, exit 0.
+  Full 8,857-job / 301-production-module / two-regression scope,
+  7,636 explicit and 14,290 discovered theorem audits, exact publication
+  and output checks, all sixteen linters; zero Lean errors, warnings,
+  tactic suggestions or linter findings.
+  Log `../../logs/foundation_freeze_20261005_002856.log`,
+  SHA-256 `9b4be6dc40b9dedf759fe7ed0fb9576d6ca33c17587dfe5f2997b8b88769fb25`;
+  JSON `../../logs/foundation_freeze_20261005_002856.json`,
+  SHA-256 `57774cb092ef0f70db4a7403eb9276a583a8d59e39fb8217173803f66f808489`.
+- Paper, invoked by full path from `E:/Lean` with `--no-pause`:
+  **PROOF PASS - BOTH FROZEN MAIN CONTRACTS VERIFIED; 20/20 GATES**,
+  exit 0. All 87 classified files, 44 production and two verification
+  modules, 3,872 jobs, 135 semantic regressions, 1,149 discovered
+  project theorems and 677 required audit consumers passed.
+  All sixteen linters passed (749 declarations plus 452 generated).
+  Nine source pins, 34 local links and all twenty status checks passed.
+  Zero Lean errors, warnings, tactic suggestions or linter findings;
+  no failed stage remains.
+  Log `logs/dong-wang-wang-zhang-build-20261005-003207-332.log`,
+  SHA-256 `f7ddc24e8cbaafa6b9059e2b63ae61b0f445da26e36455ac829a4e0b3b4142c4`.
+
+All 58 proof/package/tooling input hashes were compared before and after
+this final verification and were identical. The exact byte-hash list is
+`logs/proof-inputs-20261005-003207-332.json`,
+SHA-256 `5afe510e11905769892097aba1b246da66fa6764d7b3203254bd41dfa649d8ff`.
+This generated evidence is not a clean-commit claim or a source archive.
+
+The goal is internally complete. The original end statements, source pins,
+existing foundations and node-63 counterexamples are preserved.
+Node 73 was inspected with the scoped outcomes recorded in Crosswalk;
+no node-73 import was needed. Owner synchronization remains unexecuted.
+No staging, commit, pull, push or recovery-record operation occurred.
+At this checkpoint, the only post-verification edit was this receipt/status
+bookkeeping; no proof, package pin, runner, gate status or owner script changed.
+Later documentation-only checks are recorded separately.
+`git diff --check` passed (ordinary Git line-ending notices only).
+
+## Complete mathematical acceptance checkpoint — 5 October 2026
+
+All twenty original gates are accepted after exact consumer review and the
+sequential checks below. No frozen mathematical end statement or source byte
+changed. The six final production modules prove the linked local-window scale,
+small-range contradiction, finite derivative prefixes, actual all-large-x
+estimate and exact T2. Both main theorem types are explicit regression consumers.
+The canonical source objects are the positive-index finite sum and the actual
+xi divisor with analytic zeta multiplicity, proved finite in the relevant regions.
+
+Checkout: `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, branch `main`,
+**DIRTY development worktree**, not a clean committed release.
+Lean `leanprover/lean4:v4.30.0`; Mathlib
+`c5ea00351c28e24afc9f0f84379aa41082b1188f`; PNT+
+`4ecb950126c4290293c5662dfe0e884123171df5`, unchanged.
+Commands used explicit process-local
+`ELAN_HOME=C:/Users/Naraphim/.elan`.
+
+1. From `Riemann Zeta/`: `cmd /c run_lake_build.bat --no-pause`:
+   **PASS**, exit 0, 8,857 jobs, 301 production modules and two retained
+   regressions; 7,636 explicit and 14,290 discovered theorem audits;
+   exact publication/output gates and all sixteen linters.
+   Zero Lean warnings, errors, tactic suggestions or linter findings.
+   Log `../../logs/foundation_freeze_20261005_001757.log`,
+   SHA-256 `0c9bb00985cbf13be530edfe18bab46a2bf92a1a163a630dbf379621507fe43a`;
+   JSON `../../logs/foundation_freeze_20261005_001757.json`,
+   SHA-256 `062f11831794caf8a9297d68fdcbda4ebf9480ff8445e21ccbc43c033939bb9e`.
+2. After foundation completion, invoked the paper BAT by full path from
+   `E:/Lean` with `--no-pause`: **DEVELOPMENT PASS — BOTH MAIN
+   CONTRACTS VERIFIED; RELEASE GATES OPEN**, exit 0.
+   Covered 87 classified files, 44 production modules, both verification
+   modules, 3,872 jobs, 135 semantic regressions, 1,149 discovered theorem
+   declarations and 677 required consumers. All sixteen linters passed:
+   749 declarations plus 452 automatically generated ones, zero findings.
+   Nine source pins and 34 local links passed.
+   Log `logs/dong-wang-wang-zhang-build-20261005-002122-324.log`,
+   SHA-256 `b0745dba7b799eac1273cb32a23a9ba5287cfb8df5a1f21198833e061d0eec1b`.
+
+No file edits occurred during these two runs. The status check saw the
+pre-acceptance 13/20 state; the final seven gates were accepted afterward on
+their unchanged tests, with the exact semantic record in Checklist/Crosswalk.
+Only `propext`, `Classical.choice`, `Quot.sound` are permitted logical
+dependencies; no project postulate or proof placeholder was found.
+
+The source-verifier fixture suite passed 8/8, exit 0, under
+`logs/source-verifier-tests-20261005-001733-656/`. Invalid and extra BAT
+arguments returned expected child exit 2. Repository-wide lexical scans found
+no admitted/unsafe proof words; the sixteen postulate-pattern matches were
+the previously reviewed comments and two rational structure fields, not
+postulates. `git diff --check` passed; Git's LF-to-CRLF notices are not
+Lean diagnostics. Parent package files and nodes 63/71/73/74 had no diff.
+
+Post-checkpoint maintenance changes: synchronized all current statuses to
+20/20 and selected `project-complete` mode, whose separate final receipt
+must be recorded after verification. The owner BAT's existing rebase behavior
+is preserved through the checked helper's `-RebaseBeforePush` switch,
+adding main-branch/whitespace-message guards, distinct diff error handling and
+checked root entry/native exits. All four PowerShell scripts parse cleanly.
+This is static tooling verification only: no owner synchronization script,
+staging, commit, pull, push or recovery-record maintenance was executed.
+Historical no-rebase template receipts describe their then-current scripts,
+not the present owner-selected workflow.
+
+## Historical setup baseline and immutable inputs
 
 Template/reference checkout: `56fcb266457d6097f87e38ca7d45eef3231cc145`. The working tree was clean before this setup. Node 63 was inventoried, not modified or rebuilt as part of node-77 implementation. The parent package files and all existing Lean source remain unchanged.
 
@@ -10,7 +181,11 @@ The candidate foundation baseline is Lean `leanprover/lean4:v4.30.0`, Mathlib `c
 
 Nine archived source artifacts, versions and rights notices are enumerated in [Sources/PINS.md](Sources/PINS.md) and [SHA256SUMS.txt](Sources/SHA256SUMS.txt). Original source extraction used `tar -tf` to inspect the archive, then `tar -xf` into the dedicated source folder. No extraction or compilation of third-party code is performed by the verifier.
 
-## Setup commands
+## Current verification commands
+
+The recorded runs use process-local `ELAN_HOME=C:/Users/Naraphim/.elan`.
+On another machine, use that installation's actual elan directory; do not change
+the pinned Lean toolchain. No machine-wide environment change is required.
 
 From this paper directory:
 
@@ -27,7 +202,15 @@ From the `Riemann Zeta/` root, the existing foundation gate remains:
 cmd /c run_lake_build.bat --no-pause
 ```
 
-Run foundation and paper evaluation sequentially. A foundation PASS tests its existing scope and does not establish either new theorem. The historical scaffold runner did not start Lean; the active-development runner now builds and audits the entire current node-77 package.
+Run foundation and paper evaluation sequentially. A foundation PASS tests its existing scope and does not establish either new theorem. The historical scaffold runner did not start Lean; the current `project-complete` runner builds and audits the entire node-77 package and requires all twenty accepted gates.
+
+## Historical checkpoint records
+
+The dated entries below retain their then-current counts, ACTIVE/OPEN statuses
+and runner modes; they do not reopen the completed goal. Foundation paths written
+as `logs/foundation_freeze_...` are relative to `Riemann Zeta/`; paper paths written
+as `logs/dong-wang-wang-zhang-...` are relative to this paper directory. Paths
+starting `../../logs/` resolve to that same foundation log directory.
 
 ## Initial setup verification record (35-file scaffold)
 
@@ -835,7 +1018,212 @@ bridges remain open. No quantitative gamma asymptotic, zero-repulsion bound
 or zero-sum upper bound is claimed by this gate. Both main theorems remain
 open. Subsequent coefficient-one digamma work is outside this receipt.
 
-## Future proof-mode evidence requirements
+## Exact Lemma 3.4 acceptance — 4 October 2026
+
+Tested checkout: `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, main,
+DIRTY; unchanged Lean/Mathlib/PNT pins above. No source or documentation
+edits occurred during either sequential BAT run.
+
+- Foundation: `cmd /c run_lake_build.bat --no-pause`, PASS, exit 0.
+  8,857 jobs; 301 production and two regression modules; 7,636 explicit
+  declarations and 14,290 discovered theorems; all sixteen linters;
+  zero Lean diagnostics. Log `logs/foundation_freeze_20261004_215003.log`,
+  SHA-256 `665b1ed00adf801b5f61d7d4ef363cd241e790cc1cf57c38abe9ab8871f672c4`;
+  JSON `logs/foundation_freeze_20261004_215003.json`,
+  SHA-256 `36b8ee7769fc64b2aacd3a6abcf7f57a573bf56d7451e422552898a99235b272`.
+- Paper: `cmd /c run_dong_wang_wang_zhang_build.bat --no-pause`,
+  DEVELOPMENT PASS, exit 0. 68 classified files, 25 production and two
+  verification modules, 3,821 jobs, 98 semantic regressions, 949 discovered
+  theorems and 543 required consumers. Sixteen linters checked 608
+  declarations plus 386 automatic declarations. Nine source pins,
+  34 local links and complete coverage passed; zero Lean diagnostics.
+  Log `logs/dong-wang-wang-zhang-build-20261004-215304-015.log`,
+  SHA-256 `908bedaddc82c4812bc865da62993ac2b33f7793fecdd009e3396738c6d85319`.
+
+Semantic acceptance: `exists_source_zero_sum_upper` consumes actual
+`XiZero` multiplicity indices, their proved convergence and the exact
+xi/zeta/gamma identity. The actual digamma series gives coefficient-one
+logarithmic growth on the unbounded half-plane. The nonnegative Mangoldt
+series and actual pole removal give the uniform coefficient-one pole
+bound. Rational factors are bounded from the source height assumption.
+The conclusion is exactly Lemma 3.4, with one absolute remainder constant,
+every positive a, both height signs and the closed endpoints ±2.
+No analytic estimate, factorization, convergence or zero-sum bound is a
+theorem premise. Five new regressions retain the source and boundary types.
+
+DWWZ-11 is therefore DONE after this pre-acceptance 7/20 test: **8/20**.
+The status-only updates follow this receipt. Subsequent `XiRepulsion`
+work is outside its tested scope. Both main source contracts remain open.
+
+## Exact Lemma 3.2 acceptance — 4 October 2026
+
+Tested checkout: `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, main,
+DIRTY, unchanged toolchain/dependency pins. An initial foundation invocation
+failed before verification because its process lacked ELAN_HOME. The retry
+explicitly set `ELAN_HOME=C:/Users/Naraphim/.elan`; both runs below passed
+sequentially, with no intervening source/documentation edits.
+
+- Foundation: `cmd /c run_lake_build.bat --no-pause`, PASS, exit 0.
+  8,857 jobs, 301 production and two regression modules, 7,636 explicit
+  public declarations, 14,290 discovered theorems, sixteen linters and
+  zero Lean diagnostics. Log `logs/foundation_freeze_20261004_221301.log`,
+  SHA-256 `26cfba46bad29848a24fc58b007152659603a659943545443ed7dc84699f2367`;
+  JSON `logs/foundation_freeze_20261004_221301.json`,
+  SHA-256 `569f61230c347321207dcc963ca2bb3020056e1136db3e711412bae9a79c56a4`.
+- Paper: `cmd /c run_dong_wang_wang_zhang_build.bat --no-pause`,
+  DEVELOPMENT PASS, exit 0. 71 classified files, 28 production and two
+  verification modules, 3,824 jobs, 104 semantic regressions, 979 discovered
+  theorems, 565 required consumers. Sixteen linters checked 630 declarations
+  plus 394 automatic declarations. Complete coverage, nine source pins,
+  34 local links and integrity checks passed; zero Lean diagnostics.
+  Log `logs/dong-wang-wang-zhang-build-20261004-221602-166.log`,
+  SHA-256 `fcb6eea6195ee4f79a86ed050b077b4126a4fbe57daae3e4b67eba6e7b76028f`.
+
+Semantic acceptance: `exists_source_zero_repulsion` proves the exact
+all-real-height Lemma 3.2 for 0<λ≤1/2, with one positive absolute C/λ
+prefactor and the convergent actual multiplicity-indexed kernel
+Σρ 2λ²/|1+λ+iu−ρ|². The actual canonical product and degree-one
+Hadamard polynomial are consumed, including possible zeros at the left
+evaluation point. The gamma quotient has exact exponent λ; the
+coefficient-one-half lower real logarithmic derivative cancels its
+height growth. Rational factors and the right-half-plane zeta estimate
+are proved; the uniform Lemma 3.1 consumer supplies all small heights.
+No product, gamma, convergence, zero-sum or terminal growth assumption
+remains. Six regressions freeze this contract and its zero/half endpoints.
+
+DWWZ-09 is DONE after this pre-acceptance 8/20 test: **9/20**.
+The status-only updates and subsequent `XiConjugation` work are outside
+this receipt. Both frozen main source contracts remain open.
+
+## Proof acceptance evidence requirements
+
+### Exact Theorem 1.1 acceptance — 4 October 2026
+
+Checkout `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, main, DIRTY;
+unchanged Lean 4.30.0, Mathlib/PNT/package/source pins. Both BATs used
+`ELAN_HOME=C:/Users/Naraphim/.elan`, sequentially with no intervening
+file edits.
+
+- Foundation: `cmd /c run_lake_build.bat --no-pause`, PASS, exit 0.
+  8,857 jobs, 301 production and two regression modules, 7,636 explicit
+  declarations and 14,290 discovered theorems; sixteen linters, zero
+  Lean diagnostics. Log `logs/foundation_freeze_20261004_233821.log`,
+  SHA-256 `bf1376b30830e6c51aea3a36a5c646ed6e268059c37f24548d8002db62eb9591`;
+  JSON `logs/foundation_freeze_20261004_233821.json`, SHA-256
+  `eb59b349cefab21fbacfbd574ca05ecdac74350ff8d77945143b4d5dae68ce9c`.
+- Paper: `cmd /c run_dong_wang_wang_zhang_build.bat --no-pause`,
+  DEVELOPMENT PASS, exit 0. 81 classified files, 38 production and two
+  verification modules, 3,837 jobs, 127 semantic regressions, 1,107
+  discovered theorems and 653 required consumers. Sixteen linters checked
+  725 declarations plus 434 automatic declarations. Full root coverage,
+  nine source pins, 34 local links and integrity checks passed; zero Lean
+  diagnostics. Log `logs/dong-wang-wang-zhang-build-20261004-234118-655.log`,
+  SHA-256 `711b0f6e6c305bed1f9406bad2c0a2d98bc4c4e0f9179cb88af3398a203f3b7a`.
+
+Semantic acceptance: `large_zeta_sum_forces_zero_disk` has exactly the
+frozen T1 quantifier order and input ranges. One maximizing twist defines
+φ=t−t₀ before every L. Absolute c is enlarged once, jointly controlling
+displacement and the N⁶ cutoff; one absolute height threshold absorbs
+Lemma 3.4's remainder. The linked scales λ=L/(40 log x),
+a=20λ log T/log x give the actual far sum ≤5 log x/36, near sum
+≥log x/9 and open-disk multiplicity count ≥L/360. The finite near
+set and absolutely convergent complement partition the actual divisor.
+Boundary zeros stay in the far sum; both height signs and empty scale
+intervals are retained. No product, count, Gaussian, convergence, forcing
+or terminal analytic estimate is a public premise. Five new regressions
+include the complete exact T1 type. The frozen source is unchanged.
+
+DWWZ-13/14 are DONE after this pre-acceptance 11/20 test: **13/20**.
+DWWZ-02 still needs the actual T2 public theorem and exact-type regression.
+Subsequent status documentation, the neutral development-runner banner
+correction, and `LocalWindowScale` development are outside this receipt.
+The old runner's initial plural-unproved banner was stale; its final
+incomplete-paper label was and remains correct. T2 and whole-paper
+completion are not claimed.
+
+
+### Proposition 4.1 acceptance — 4 October 2026
+
+Checkout `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, main, DIRTY;
+unchanged package/source pins. Both commands below used explicit
+`ELAN_HOME=C:/Users/Naraphim/.elan` and ran sequentially without source
+or documentation edits between them.
+
+- Foundation: `cmd /c run_lake_build.bat --no-pause`, PASS, exit 0.
+  8,857 jobs, 301 production and two regression modules, 7,636 explicit
+  declarations and 14,290 discovered theorems; sixteen linters, zero
+  Lean diagnostics. Log `logs/foundation_freeze_20261004_231355.log`,
+  SHA-256 `5851f89329e04841773849040ecba4fb03b777f2a4327059c994b28f86e74099`;
+  JSON `logs/foundation_freeze_20261004_231355.json`, SHA-256
+  `af71621e97325ffb36b245331e4114e68fe4f28db1478f96659d34ca6a6b0a59`.
+- Paper: `cmd /c run_dong_wang_wang_zhang_build.bat --no-pause`,
+  DEVELOPMENT PASS, exit 0. 77 classified files, 34 production and two
+  verification modules, 3,833 jobs, 122 semantic regressions, 1,082
+  discovered theorems and 636 required consumers. Sixteen linters checked
+  708 declarations plus 426 automatic declarations. Complete root coverage,
+  nine source pins, 34 local links and all integrity scans passed; zero
+  Lean diagnostics. Log `logs/dong-wang-wang-zhang-build-20261004-231858-641.log`,
+  SHA-256 `8f872fc2f4a6368a3094306169b194774a436c35136dc34b2bf8dc698e411559`.
+
+Semantic acceptance: `exists_large_sum_weighted_zero_forcing` has the
+original `T,t,x,N` hypotheses and absolute `c,T₀`. One actual maximizing
+twist precedes all admissible λ, retaining the same c for displacement
+and the sixth-power cutoff. Each λ produces η in the exact source radius,
+a convergent sum over actual zero-multiplicity labels and lower bound
+`(log x)/4`. The proof transitively consumes actual large-sum comparison,
+all-real one-third continuity, the normalized Gaussian lower bound,
+the exact residue-bearing identity, actual zero repulsion and conjugation.
+No Gaussian, residue, tail, maximizer, convergence or zero-forcing premise
+is left to the public caller. Both signs and closed scale endpoints are
+retained. A proved uniform quotient bound covers both frequency tails;
+an integral pigeonhole proof supplies a sufficient actual frequency point
+without assuming a global maximum. These are supporting alternate steps,
+not source-contract repairs. Ten regressions cover this four-module chain.
+
+DWWZ-12 is DONE after this pre-acceptance 10/20 test: **11/20**.
+Subsequent status updates, two documentation-only numeric typo corrections
+(`199/200` and the `17/18/19/20` gate list), and `DiskZeroGeometry`
+development are outside the receipt. The Lean constants and frozen
+source bytes were not altered by those typo corrections. T1/T2 remain
+unproved; no whole-paper completion is claimed.
+
+### Zero-count and conjugation acceptance — 4 October 2026
+
+Checkout `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, main, DIRTY;
+toolchain and all dependency/source pins unchanged. Both BATs ran sequentially
+with `ELAN_HOME=C:/Users/Naraphim/.elan` and no intervening edits.
+
+- Foundation: `cmd /c run_lake_build.bat --no-pause`, PASS, exit 0;
+  8,857 jobs, 301 production and two regression modules, 7,636 explicit
+  declarations and 14,290 discovered theorems; sixteen linters, zero
+  Lean diagnostics. Log `logs/foundation_freeze_20261004_223243.log`,
+  SHA-256 `bbff13e7555b17504d279ad5d286db2f1449a634a37e45b3b1d36f4fa81046cf`;
+  JSON `logs/foundation_freeze_20261004_223243.json`, SHA-256
+  `cecddc476ced04aff8a6c83b582cb146e2b7ebac01e3e592a8e0858474660ac3`.
+- Paper: `cmd /c run_dong_wang_wang_zhang_build.bat --no-pause`,
+  DEVELOPMENT PASS, exit 0; 73 classified files, 30 production and two
+  verification modules, 3,829 jobs, 112 semantic regressions, 1,022
+  discovered theorems, 593 required consumers. Sixteen linters passed on
+  663 declarations plus 409 automatic declarations. Complete root coverage,
+  nine source pins, 34 local links and integrity scans passed; zero Lean
+  diagnostics. Log `logs/dong-wang-wang-zhang-build-20261004-223610-183.log`,
+  SHA-256 `a2159a00b1cbecfd4cda451dc6d3fc6bafddf3c9d2957d36fe038bcde67e3807`.
+
+Semantic acceptance: `zeroCountIn` counts all actual xi divisor labels;
+`zeroCountIn_eq_sum_multiplicities` identifies each complete fiber with
+zeta's analytic order. Bounded-region/disk/window finiteness is proved,
+not inferred from totalized cardinality. `zeroCountIn_rectangle_eq`,
+`zeroCountIn_eq_rectangle_filter`, `rectangle_filter_count_independent`
+and `zeroCountIn_sourceWindow_eq` consume the foundation's actual rectangle
+count, with the positive-left-edge range required by the source window.
+`xiZeroConjEquiv` preserves each multiplicity label; both-sign disk/window
+and convergent weighted-kernel equalities are proved. Disk boundaries stay
+open, window boundaries stay closed, and exact disk-to-window count transfer
+is proved. No finiteness, multiplicity or conjugation premise is left as a
+source assumption. Eight regressions and explicit/exhaustive audits retain
+these contracts. DWWZ-04 is DONE after this pre-acceptance 9/20 test: **10/20**.
+Subsequent status documentation and `GaussianConcentration` development are
+outside this receipt. Both frozen main contracts remain unproved.
 
 After explicit activation, record exact repository revision and dirty/clean status, toolchain/manifest/source hashes, all module classifications, actual imports, explicit and exhaustive transitive audits, semantic/exact-type regressions, full BAT commands, stage results, exit codes, logs and hashes. No copied historical receipt, focused build alone or scaffold PASS can satisfy DWWZ-18/19.
 

@@ -1,6 +1,6 @@
 import DongWangWangZhang2026
 
-/-! Exact consumer checks for the implemented entry objects, not the unproved main theorems. -/
+/-! Exact consumer checks for the implemented objects and both frozen main theorems. -/
 
 namespace DongWangWangZhang2026.SemanticRegression
 
@@ -742,5 +742,347 @@ theorem xiZetaGammaDecomposition (s : ℂ) (hs : 1 < s.re) :
 theorem xiRepulsionKernelConvergence (s : ℂ) (hs : 1 < s.re) :
     Summable (fun p : XiZero => 1 / ‖s - xiZeroPoint p‖ ^ 2) :=
   summable_xiZero_inverse_square hs
+
+theorem coefficientOneDigamma (z : ℂ) (hz : 1 / 4 ≤ z.re) :
+    |(Complex.digamma z).re - Real.log (‖z‖ + 2)| ≤
+      14 + |Real.eulerMascheroniConstant| :=
+  abs_re_digamma_sub_log_norm_le hz
+
+theorem uniformZetaLogDerivativePole :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ s : ℂ, 1 < s.re →
+      ‖logDeriv riemannZeta s‖ ≤ 1 / (s.re - 1) + C :=
+  exists_norm_logDeriv_zeta_le_pole
+
+theorem exactSourceZeroSumUpper :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ a v : ℝ, 0 < a → 2 ≤ |v| →
+      Summable (fun p : XiZero =>
+        (1 / ((((1 + a : ℝ) : ℂ) + (v : ℂ) * Complex.I) - xiZeroPoint p)).re) ∧
+      (∑' p : XiZero,
+        (1 / ((((1 + a : ℝ) : ℂ) + (v : ℂ) * Complex.I) - xiZeroPoint p)).re) ≤
+        (1 / 2) * Real.log (2 + a + |v|) + 1 / a + C :=
+  exists_source_zero_sum_upper
+
+theorem zeroSumBothClosedHeightEndpoints :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ a : ℝ, 0 < a → ∀ v : ℝ, v = 2 ∨ v = -2 →
+      Summable (fun p : XiZero =>
+        (1 / ((((1 + a : ℝ) : ℂ) + (v : ℂ) * Complex.I) - xiZeroPoint p)).re) ∧
+      (∑' p : XiZero,
+        (1 / ((((1 + a : ℝ) : ℂ) + (v : ℂ) * Complex.I) - xiZeroPoint p)).re) ≤
+        (1 / 2) * Real.log (4 + a) + 1 / a + C := by
+  obtain ⟨C, hC, hb⟩ := exists_source_zero_sum_upper
+  refine ⟨C, hC, ?_⟩
+  intro a ha v hv
+  have hab : |v| = 2 := by rcases hv with rfl | rfl <;> norm_num
+  simpa only [hab, show 2 + a + 2 = 4 + a by ring] using
+    hb a v ha (by rw [hab])
+
+theorem digammaClosedQuarterBoundary (v : ℝ) :
+    |(Complex.digamma ((1 / 4 : ℂ) + (v : ℂ) * Complex.I)).re -
+      Real.log (‖(1 / 4 : ℂ) + (v : ℂ) * Complex.I‖ + 2)| ≤
+        14 + |Real.eulerMascheroniConstant| :=
+  abs_re_digamma_sub_log_norm_le (by simp)
+
+theorem actualXiQuadraticShift (s : ℂ) (hs : 1 < s.re) (r : ℝ) :
+    ‖Complex.riemannXi (s - (r : ℂ))‖ ≤ ‖Complex.riemannXi s‖ *
+      Real.exp (-r * (logDeriv Complex.riemannXi s).re +
+        (r ^ 2 / 2) * ∑' p : XiZero, 1 / ‖s - xiZeroPoint p‖ ^ 2) :=
+  norm_xi_sub_real_le hs r
+
+theorem actualGammaSourceRatio (a u : ℝ)
+    (ha : 0 < a) (ha2 : a ≤ 1 / 2) (hu : 2 ≤ |u|) :
+    ‖Complex.Gammaℝ (((1 + a : ℝ) : ℂ) + (u : ℂ) * Complex.I)‖ ≤
+      ‖Complex.Gammaℝ (((1 - a : ℝ) : ℂ) + (u : ℂ) * Complex.I)‖ *
+        Real.exp (a * (Real.log (2 + |u|) + (14 + |Real.eulerMascheroniConstant|))) :=
+  norm_GammaReal_source_ratio_le ha ha2 hu
+
+theorem uniformXiLowerLogarithm :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ a : ℝ, 0 < a → ∀ u : ℝ,
+      (1 / 2) * Real.log (2 + |u|) - 1 / a - C ≤
+        (logDeriv Complex.riemannXi (((1 + a : ℝ) : ℂ) + (u : ℂ) * Complex.I)).re :=
+  exists_re_xi_logDeriv_source_lower
+
+theorem exactSourceZeroRepulsion :
+    ∃ C : ℝ, 0 < C ∧ ∀ a u : ℝ, 0 < a → a ≤ 1 / 2 →
+      Summable (fun p : XiZero =>
+        2 * a ^ 2 / ‖(((1 + a : ℝ) : ℂ) + (u : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2) ∧
+      ‖riemannZeta (((1 - a : ℝ) : ℂ) + (u : ℂ) * Complex.I)‖ ≤
+        (C / a) * Real.exp (∑' p : XiZero,
+          2 * a ^ 2 / ‖(((1 + a : ℝ) : ℂ) + (u : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2) :=
+  exists_source_zero_repulsion
+
+theorem zeroRepulsionZeroHeight :
+    ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ, 0 < a → a ≤ 1 / 2 →
+      ‖riemannZeta ((1 - a : ℝ) : ℂ)‖ ≤
+        (C / a) * Real.exp (∑' p : XiZero,
+          2 * a ^ 2 / ‖((1 + a : ℝ) : ℂ) - xiZeroPoint p‖ ^ 2) := by
+  obtain ⟨C, hC, hb⟩ := exists_source_zero_repulsion
+  exact ⟨C, hC, fun a ha ha2 => by simpa using (hb a 0 ha ha2).2⟩
+
+theorem zeroRepulsionClosedHalf :
+    ∃ C : ℝ, 0 < C ∧ ∀ u : ℝ,
+      ‖riemannZeta ((1 / 2 : ℂ) + (u : ℂ) * Complex.I)‖ ≤
+        (2 * C) * Real.exp (∑' p : XiZero,
+          (1 / 2 : ℝ) / ‖(3 / 2 : ℂ) + (u : ℂ) * Complex.I - xiZeroPoint p‖ ^ 2) := by
+  obtain ⟨C, hC, hb⟩ := exists_source_zero_repulsion
+  refine ⟨C, hC, fun u => ?_⟩
+  have h := (hb (1 / 2) u (by norm_num) (by norm_num)).2
+  norm_num at h ⊢
+  rw [show C / (1 / 2 : ℝ) = 2 * C by ring] at h
+  exact h
+
+theorem zeroConjugationLabels (p : XiZero) :
+    xiZeroConj (xiZeroConj p) = p ∧ xiZeroPoint (xiZeroConj p) = star (xiZeroPoint p) :=
+  ⟨xiZeroConj_involutive p, xiZeroPoint_conj p⟩
+
+theorem finiteSourceZeroCounts (u r δ : ℝ) :
+    {p : XiZero | xiZeroPoint p ∈ sourceZeroDisk u r}.Finite ∧
+      {p : XiZero | xiZeroPoint p ∈ sourceZeroWindow u δ}.Finite :=
+  ⟨finite_xiZero_sourceDisk u r, finite_xiZero_sourceWindow u δ⟩
+
+theorem exactClosedWindowMultiplicity {δ : ℝ} (hδ : δ < 1) (u : ℝ) :
+    zeroCountIn (sourceZeroWindow u δ) =
+      RiemannZeta.GuthMaynard.zeroCountRect (1 - δ) 1 (u - δ) (u + δ) :=
+  zeroCountIn_sourceWindow_eq hδ u
+
+theorem sourceZeroCountsBothSigns (u r δ : ℝ) :
+    zeroCountIn (sourceZeroDisk (-u) r) = zeroCountIn (sourceZeroDisk u r) ∧
+      zeroCountIn (sourceZeroWindow (-u) δ) = zeroCountIn (sourceZeroWindow u δ) :=
+  ⟨zeroCountIn_sourceDisk_neg u r, zeroCountIn_sourceWindow_neg u δ⟩
+
+theorem openDiskBoundaryExcluded (z : ℂ) (u r : ℝ)
+    (h : ‖z - (1 + (u : ℂ) * Complex.I)‖ = r) : z ∉ sourceZeroDisk u r := by
+  change ¬ ‖z - (1 + (u : ℂ) * Complex.I)‖ < r
+  rw [h]
+  exact lt_irrefl _
+
+theorem closedWindowCornerIncluded (u : ℝ) {δ : ℝ} (hδ : 0 ≤ δ) :
+    ((1 - δ : ℝ) : ℂ) + ((u + δ : ℝ) : ℂ) * Complex.I ∈ sourceZeroWindow u δ := by
+  simp [sourceZeroWindow, abs_of_nonneg hδ]
+
+theorem sourceDiskWindowCountTransfer (u δ : ℝ) :
+    zeroCountIn (sourceZeroDisk u δ) ≤ zeroCountIn (sourceZeroWindow u δ) :=
+  zeroCountIn_disk_le_window u le_rfl
+
+theorem convergentKernelBothSigns {a : ℝ} (ha : 0 < a) (v : ℝ) :
+    Summable (fun p : XiZero =>
+      a / ‖(((1 + a : ℝ) : ℂ) + (v : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2) ∧
+    (∑' p : XiZero,
+      a / ‖(((1 + a : ℝ) : ℂ) + ((-v : ℝ) : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2) =
+    ∑' p : XiZero,
+      a / ‖(((1 + a : ℝ) : ℂ) + (v : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2 :=
+  source_zero_kernel_neg_height ha v
+
+
+theorem gaussianFixedMoment :
+    MeasureTheory.Integrable gaussianMomentMajorant ∧ 0 ≤ gaussianMomentConstant :=
+  ⟨integrable_gaussianMomentMajorant, gaussianMomentConstant_nonneg⟩
+
+theorem gaussianLinkedOneSixth {a L : ℝ} (ha : 0 < a) (hL : 0 < L) :
+    (Real.sqrt (a / L) * L) ^ (1 / 3 : ℝ) = (a * L) ^ (1 / 6 : ℝ) :=
+  source_gaussian_width_third ha hL
+
+theorem gaussianActualErrorIntegrable {L r : ℝ} (hr : 0 < r) (t : ℝ) :
+    MeasureTheory.Integrable (fun y : ℝ =>
+      (zetaSum (Real.exp y) t / (Real.exp y : ℂ) -
+        zetaSum (Real.exp L) t / (Real.exp L : ℂ)) *
+        (Real.exp (-(r * (y - L)) ^ 2 / 2) : ℂ)) :=
+  integrable_normalized_zetaSum_gaussian_difference hr t
+
+theorem sourceNormalizedGaussianError :
+    ∃ L₀ : ℝ, 16 ≤ L₀ ∧ ∀ x t t₀ : ℝ, 1 < x → L₀ ≤ Real.log x →
+      (∀ u : ℝ, |u| ≤ Real.log x →
+        ‖riemannZeta (twistZetaPoint x t u)‖ ≤ ‖riemannZeta (twistZetaPoint x t t₀)‖) →
+      |t₀| ≤ Real.log x / 2 → ∀ a : ℝ, 0 < a → a ≤ 1 / 2 →
+      ‖(Real.sqrt (2 * Real.pi * (a / Real.log x)) : ℂ) *
+        (∫ y : ℝ, zetaSum (Real.exp y) (t - t₀) *
+          (Real.exp ((a - 1) * y - (a / Real.log x) * y ^ 2 / 2) : ℂ)) -
+        (2 * Real.pi : ℂ) * (Real.exp (a * Real.log x / 2) : ℂ) *
+          (zetaSum (Real.exp (Real.log x)) (t - t₀) / (Real.exp (Real.log x) : ℂ))‖ ≤
+      (Real.sqrt (2 * Real.pi) * dilationLipschitzConstant * gaussianMomentConstant) *
+        Real.exp (a * Real.log x / 2) / (a * Real.log x) ^ (1 / 6 : ℝ) :=
+  exists_maximizingTwist_source_gaussian_error
+
+
+theorem inverseComparisonCannotShrink {x : ℝ} (hx : 0 < x) (a : ℝ) :
+    1 ≤ ‖((a : ℂ) * Complex.I + 1) * (x : ℂ) ^ (-((a : ℂ) * Complex.I))‖ :=
+  one_le_norm_inverse_comparisonFactor hx a
+
+theorem actualLargeSumGaussianLower :
+    ∃ c : ℝ, 0 < c ∧ ∃ x₀ : ℝ, 3 ≤ x₀ ∧
+      ∀ x : ℝ, x₀ ≤ x → ∀ t N : ℝ, 1 ≤ N → N ≤ (Real.log x) ^ (1 / 100 : ℝ) →
+        ‖zetaSum x t‖ = x / N →
+        ∃ t₀ : ℝ, |t₀| ≤ Real.log x ∧
+          (∀ u : ℝ, |u| ≤ Real.log x →
+            ‖riemannZeta (twistZetaPoint x t u)‖ ≤ ‖riemannZeta (twistZetaPoint x t t₀)‖) ∧
+          |t₀| ≤ c * N ∧ ∀ a : ℝ, c * N ^ (6 : ℕ) / Real.log x ≤ a → a ≤ 1 / 2 →
+          (Real.pi / N) * Real.exp (a * Real.log x / 2) ≤
+            ‖(Real.sqrt (2 * Real.pi * (a / Real.log x)) : ℂ) *
+              (∫ y : ℝ, zetaSum (Real.exp y) (t - t₀) *
+                (Real.exp ((a - 1) * y - (a / Real.log x) * y ^ 2 / 2) : ℂ))‖ :=
+  exists_large_sum_gaussian_lower
+
+theorem actualWeightedZeroForcing :
+    ∃ c T₀ : ℝ, 0 < c ∧ 3 ≤ T₀ ∧
+      ∀ T t x N : ℝ, T₀ ≤ T → T ≤ |t| → |t| ≤ 2 * T →
+        Real.exp (Real.sqrt (Real.log T)) ≤ x → x ≤ Real.sqrt T →
+        1 ≤ N → N ≤ (Real.log x) ^ (1 / 100 : ℝ) → ‖zetaSum x t‖ = x / N →
+        ∃ t₀ : ℝ, |t₀| ≤ Real.log x ∧
+          (∀ u : ℝ, |u| ≤ Real.log x →
+            ‖riemannZeta (twistZetaPoint x t u)‖ ≤ ‖riemannZeta (twistZetaPoint x t t₀)‖) ∧
+          |t₀| ≤ c * N ∧ ∀ a : ℝ, c * N ^ (6 : ℕ) / Real.log x ≤ a → a ≤ 1 / 2 →
+          ∃ η : ℝ, |η| ≤ 2 * a * Real.sqrt (Real.log T / Real.log x) ∧
+            Summable (fun p : XiZero => a /
+              ‖(((1 + a : ℝ) : ℂ) + ((t - t₀ + η : ℝ) : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2) ∧
+            Real.log x / 4 ≤ ∑' p : XiZero, a /
+              ‖(((1 + a : ℝ) : ℂ) + ((t - t₀ + η : ℝ) : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2 :=
+  exists_large_sum_weighted_zero_forcing
+
+theorem actualFrequencyIntegralLower :
+    ∃ c : ℝ, 0 < c ∧ ∃ x₀ : ℝ, 3 ≤ x₀ ∧
+      ∀ x : ℝ, x₀ ≤ x → ∀ t N : ℝ, x ≤ |t| →
+        1 ≤ N → N ≤ (Real.log x) ^ (1 / 100 : ℝ) → ‖zetaSum x t‖ = x / N →
+        ∃ t₀ : ℝ, |t₀| ≤ Real.log x ∧
+          (∀ u : ℝ, |u| ≤ Real.log x →
+            ‖riemannZeta (twistZetaPoint x t u)‖ ≤ ‖riemannZeta (twistZetaPoint x t t₀)‖) ∧
+          |t₀| ≤ c * N ∧ ∀ a : ℝ, c * N ^ (6 : ℕ) / Real.log x ≤ a → a ≤ 1 / 2 →
+          MeasureTheory.Integrable (fun ξ : ℝ =>
+            (riemannZeta (((1 - a : ℝ) : ℂ) + ((ξ - (t - t₀) : ℝ) : ℂ) * Complex.I) /
+              (((1 - a : ℝ) : ℂ) + (ξ : ℂ) * Complex.I)) *
+                (Real.exp (-ξ ^ 2 / (2 * (a / Real.log x))) : ℂ)) ∧
+          (Real.pi / (2 * N)) * Real.exp (a * Real.log x / 2) ≤
+            ‖∫ ξ : ℝ, (riemannZeta (((1 - a : ℝ) : ℂ) +
+              ((ξ - (t - t₀) : ℝ) : ℂ) * Complex.I) /
+                (((1 - a : ℝ) : ℂ) + (ξ : ℂ) * Complex.I)) *
+                  (Real.exp (-ξ ^ 2 / (2 * (a / Real.log x))) : ℂ)‖ :=
+  exists_large_sum_gaussian_frequency_lower
+
+theorem sourceFrequencyTailUniform {a L T : ℝ}
+    (ha : 0 < a) (ha2 : a ≤ 1 / 2) (hL : 0 < L) (hT : 1 ≤ T)
+    {t ξ : ℝ} (ht : |t| ≤ 3 * T)
+    (hξ : 2 * a * Real.sqrt (Real.log T / L) ≤ |ξ|) :
+    ‖riemannZeta (((1 - a : ℝ) : ℂ) + ((ξ - t : ℝ) : ℂ) * Complex.I) /
+      (((1 - a : ℝ) : ℂ) + (ξ : ℂ) * Complex.I)‖ *
+        Real.exp (-ξ ^ 2 / (4 * (a / L))) ≤ 120 / a :=
+  source_gaussian_weighted_zeta_tail ha ha2 hL hT ht hξ
+
+theorem sourceResidueHalfBound {a L N t : ℝ}
+    (ha : 0 < a) (hL : 0 < L) (hN : 0 < N) (ht : 4 * N ≤ |t|) :
+    ‖(2 * Real.pi : ℂ) / (1 + (t : ℂ) * Complex.I) *
+      Complex.exp (((a : ℂ) + (t : ℂ) * Complex.I) ^ 2 / (2 * ((a / L : ℝ) : ℂ)))‖ ≤
+      (Real.pi / (2 * N)) * Real.exp (a * L / 2) :=
+  norm_source_gaussian_residue_half ha hL hN ht
+
+
+theorem farDiskBoundaryIncluded {a l η φ : ℝ} (hl : 0 < l) (hla : l ≤ a)
+    (hη : |η| ≤ a / 10) (p : XiZero)
+    (hboundary : ‖(1 + (φ : ℂ) * Complex.I) - xiZeroPoint p‖ = 2 * a) :
+    l / ‖(((1 + l : ℝ) : ℂ) + ((φ + η : ℝ) : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2 ≤
+      (5 * l / a) *
+        (1 / ((((1 + a : ℝ) : ℂ) + (φ : ℂ) * Complex.I) - xiZeroPoint p)).re :=
+  source_far_kernel_le_real_resolvent hl hla hη p hboundary.ge
+
+theorem linkedDiskMultiplicityTransfer {l Y Q η φ : ℝ}
+    (hl : 0 < l) (hY : 0 < Y) (hYQ : Y ≤ Q / 2)
+    (hη : |η| ≤ 2 * l * Real.sqrt (Q / Y))
+    (hforce : Y / 4 ≤ ∑' p : XiZero,
+      l / ‖(((1 + l : ℝ) : ℂ) + ((φ + η : ℝ) : ℂ) * Complex.I) - xiZeroPoint p‖ ^ 2)
+    (hupper : (∑' p : XiZero,
+      (1 / ((((1 + 20 * l * Q / Y : ℝ) : ℂ) + (φ : ℂ) * Complex.I) - xiZeroPoint p)).re) ≤
+        5 * Q / 9) :
+    l * Y / 9 ≤ (zeroCountIn (sourceZeroDisk φ (40 * l * Q / Y)) : ℝ) :=
+  source_disk_count_of_weighted_forcing hl hY hYQ hη hforce hupper
+
+theorem reciprocalOuterScale {l Y Q : ℝ} (hl : 0 < l) (hY : 0 < Y)
+    (hYQ : Y ≤ Q / 2) (hlY : 1 ≤ l * Y) :
+    1 / (20 * l * Q / Y) ≤ Q / 80 :=
+  source_outer_shift_reciprocal hl hY hYQ hlY
+
+theorem emptyScaleIntervalAllowed {c N Y : ℝ} (hempty : Y / 2 < c * N ^ (6 : ℕ)) :
+    ¬ ∃ L : ℝ, c * N ^ (6 : ℕ) ≤ L ∧ L ≤ Y / 2 := by
+  rintro ⟨L, hlo, hhi⟩
+  linarith
+
+theorem exactTheoremOneSourceContract :
+    ∃ c T₀ : ℝ, 0 < c ∧ 3 ≤ T₀ ∧
+      ∀ T t x N : ℝ, T₀ ≤ T → T ≤ |t| → |t| ≤ 2 * T →
+        Real.exp (Real.sqrt (Real.log T)) ≤ x → x ≤ Real.sqrt T →
+        1 ≤ N → N ≤ (Real.log x) ^ (1 / 100 : ℝ) → ‖zetaSum x t‖ = x / N →
+        ∃ φ : ℝ, |φ - t| ≤ c * N ∧
+          ∀ L : ℝ, c * N ^ (6 : ℕ) ≤ L → L ≤ Real.log x / 2 →
+            L / 360 ≤ (zeroCountIn
+              (sourceZeroDisk φ (L * Real.log T / (Real.log x) ^ (2 : ℕ))) : ℝ) :=
+  large_zeta_sum_forces_zero_disk
+
+theorem deltaOnlyScaleThreshold (c : ℝ) {δ : ℝ} (hδ : 0 < δ) :
+    ∃ Q₀ : ℝ, 1 ≤ Q₀ ∧ ∀ Q : ℝ, Q₀ ≤ Q →
+      c * Q ^ (3 / 50 : ℝ) ≤ δ * Q ^ (1 / 3 : ℝ) :=
+  exists_local_window_scale_threshold c hδ
+
+theorem smallRangeLocalWindowContract :
+    ∃ C : ℝ, 0 < C ∧ ∀ δ : ℝ, 0 < δ → δ ≤ 1 / 4 →
+      ∃ T₀ : ℝ, 3 ≤ T₀ ∧ ∀ T t ε : ℝ,
+        T₀ ≤ T → T ≤ |t| → |t| ≤ 2 * T →
+        (Real.log T) ^ (-1 / 3 : ℝ) < ε →
+        (∀ u : ℝ, |u - t| ≤ C * (Real.log T) ^ (1 / 100 : ℝ) →
+          (zeroCountIn (sourceZeroWindow u δ) : ℝ) ≤ δ * ε ^ 2 * Real.log T / 400) →
+        ∀ x : ℝ, T ^ ε ≤ x → x ≤ Real.sqrt T →
+          ‖zetaSum x t‖ ≤ x / (Real.log x) ^ (1 / 100 : ℝ) :=
+  exists_small_range_local_zero_cancellation
+
+
+theorem exactLargeCutoffSourceContract :
+    ∃ K T₀ : ℝ, 0 < K ∧ 3 ≤ T₀ ∧ ∀ T t x : ℝ,
+      T₀ ≤ T → T ≤ |t| → |t| ≤ 2 * T → Real.sqrt T ≤ x →
+      ‖zetaSum x t‖ ≤ K * x * T ^ (-1 / 13 : ℝ) :=
+  exists_large_x_zeta_sum_bound
+
+theorem largeCutoffClosedJunction {T t : ℝ} (hT : 4096 ≤ T)
+    (hlo : T ≤ |t|) (hhi : |t| ≤ 2 * T) :
+    ‖zetaSum (Real.sqrt T) t‖ ≤ 3000 * Real.sqrt T * T ^ (-1 / 13 : ℝ) :=
+  large_x_zeta_sum_bound hT hlo hhi le_rfl
+
+theorem largeCutoffNegativeHeight {T t x : ℝ} (hT : 4096 ≤ T)
+    (hlo : T ≤ |t|) (hhi : |t| ≤ 2 * T) (hx : Real.sqrt T ≤ x) :
+    ‖zetaSum x (-t)‖ ≤ 3000 * x * T ^ (-1 / 13 : ℝ) := by
+  rw [norm_zetaSum_neg]
+  exact large_x_zeta_sum_bound hT hlo hhi hx
+
+theorem actualTerminalPrefixBound {Z : ℝ} (hZ : 2 ≤ Z)
+    (A N : ℕ) (hA : 0 < A) (hNA : N ≤ A) :
+    ‖zetaSum ((A + N : ℕ) : ℝ) (-(Z ^ (12 : ℕ))) -
+      zetaSum (A : ℝ) (-(Z ^ (12 : ℕ)))‖ ≤
+        120 * (Z ^ (2 : ℕ) * Real.sqrt A + (A : ℝ) / Z) := by
+  rw [zetaSum_nat_increment_logarithmic]
+  exact source_logarithmic_prefix_uniform hZ A N hA hNA
+
+theorem exactTheoremTwoSourceContract :
+    ∃ C : ℝ, 0 < C ∧ ∀ A : ℝ, 0 < A →
+      ∃ K : ℝ, 0 < K ∧ ∀ δ : ℝ, 0 < δ → δ ≤ 1 / 4 →
+        ∃ T₀ : ℝ, 3 ≤ T₀ ∧ ∀ T t ε : ℝ,
+          T₀ ≤ T → T ≤ |t| → |t| ≤ 2 * T →
+          (Real.log T) ^ (-1 / 3 : ℝ) < ε →
+          (∀ u : ℝ, |u - t| ≤ C * (Real.log T) ^ (1 / 100 : ℝ) →
+            (zeroCountIn (sourceZeroWindow u δ) : ℝ) ≤ δ * ε ^ 2 * Real.log T / 400) →
+          ∀ x : ℝ, T ^ ε ≤ x → x ≤ T ^ A →
+            ‖zetaSum x t‖ ≤ K * x / (Real.log x) ^ (1 / 100 : ℝ) :=
+  local_zero_windows_force_zeta_sum_cancellation
+
+theorem theoremTwoClosedQuarter :
+    ∃ C : ℝ, 0 < C ∧ ∀ A : ℝ, 0 < A →
+      ∃ K T₀ : ℝ, 0 < K ∧ 3 ≤ T₀ ∧ ∀ T t ε : ℝ,
+        T₀ ≤ T → T ≤ |t| → |t| ≤ 2 * T →
+        (Real.log T) ^ (-1 / 3 : ℝ) < ε →
+        (∀ u : ℝ, |u - t| ≤ C * (Real.log T) ^ (1 / 100 : ℝ) →
+          (zeroCountIn (sourceZeroWindow u (1 / 4)) : ℝ) ≤
+            (1 / 4 : ℝ) * ε ^ 2 * Real.log T / 400) →
+        ∀ x : ℝ, T ^ ε ≤ x → x ≤ T ^ A →
+          ‖zetaSum x t‖ ≤ K * x / (Real.log x) ^ (1 / 100 : ℝ) := by
+  obtain ⟨C, hC, h⟩ := local_zero_windows_force_zeta_sum_cancellation
+  refine ⟨C, hC, ?_⟩
+  intro A hA
+  obtain ⟨K, hK, hδ⟩ := h A hA
+  obtain ⟨T₀, hT₀, hresult⟩ := hδ (1 / 4) (by norm_num) le_rfl
+  exact ⟨K, T₀, hK, hT₀, hresult⟩
+
 
 end DongWangWangZhang2026.SemanticRegression

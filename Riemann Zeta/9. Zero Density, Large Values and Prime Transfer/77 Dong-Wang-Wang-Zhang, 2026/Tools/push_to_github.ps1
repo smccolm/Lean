@@ -2,7 +2,8 @@
 param(
     [Parameter(Position = 0)]
     [string]$CommitMessage,
-    [switch]$NoPause
+    [switch]$NoPause,
+    [switch]$RebaseBeforePush
 )
 
 Set-StrictMode -Version Latest
@@ -51,12 +52,19 @@ try {
         throw "git diff --cached --quiet failed (exit $diffExit)."
     }
 
+    if ($RebaseBeforePush) {
+        Write-Host 'Updating local main from origin/main with the owner-selected rebase workflow.'
+        Invoke-CheckedGit -GitArguments @('pull', '--rebase', 'origin', 'main')
+    }
     Invoke-CheckedGit -GitArguments @('push', 'origin', 'main')
     Write-Host 'Git synchronization completed successfully.'
     $syncExit = 0
 } catch {
     [Console]::Error.WriteLine("Git synchronization FAILED: $($_.Exception.Message)")
-    [Console]::Error.WriteLine('Review Git output. Any completed local commit is retained. No automatic rebase, reset, or force-push is attempted.')
+    [Console]::Error.WriteLine('Review Git output. Any completed local commit is retained. No automatic conflict resolution, reset, or force-push is attempted.')
+    if ($RebaseBeforePush) {
+        [Console]::Error.WriteLine('If the requested pull --rebase stopped on a conflict, resolve it and run git rebase --continue before retrying synchronization.')
+    }
 } finally {
     if ($locationPushed) {
         Pop-Location

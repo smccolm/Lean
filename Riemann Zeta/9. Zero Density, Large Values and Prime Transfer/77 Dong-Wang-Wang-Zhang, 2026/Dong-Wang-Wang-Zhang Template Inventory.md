@@ -1,6 +1,6 @@
 # Node-63 template inventory and adaptation
 
-This records the **initial planning scaffold**. After the owner's explicit activation on 4 October 2026, the formerly deferred isolated package and development build/audit gate were created; the current inventory is `Tools/scaffold.json`. Historical setup omissions below are not descriptions of the now-active package.
+This records the **initial planning scaffold**. After the owner's explicit activation on 4 October 2026, the formerly deferred isolated package and development build/audit gate were created; the current inventory is `Tools/scaffold.json`. Both frozen main contracts and all twenty gates were completed internally on 5 October 2026. Historical setup omissions below are not descriptions of the completed package. The current owner BAT retains its rebase workflow through the checked helper; the original no-rebase template row below is historical.
 
 Reference checkout: `56fcb266457d6097f87e38ca7d45eef3231cc145`, inspected 4 October 2026. Node 63's entire tracked path inventory was enumerated; top-level documents, subdirectory READMEs, runner interfaces, pin conventions and relevant Lean interfaces were reviewed. This is not a claim to have re-read or re-audited every one of its 1,929 Lean files.
 

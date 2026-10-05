@@ -1,21 +1,104 @@
 # Dependency boundary
 
-ACTIVE DEVELOPMENT, 4 October 2026. The isolated extension requires the existing root RiemannZeta package by path, sharing its pinned Lean 4.30/Mathlib/PNT graph and existing package cache. No upstream upgrade or node-63/73/74 import is installed. Root `lakefile.toml`, `lake-manifest.json`, and `lean-toolchain` remain unchanged.
+## Selected finite exponential-sum closure (5 October 2026)
 
-The starting candidate graph is the existing Lean 4.30 foundation, not today's newer upstream HEADs. See [Sources](../Dong-Wang-Wang-Zhang%20Sources.md) and [Crosswalk](../Dong-Wang-Wang-Zhang%20Crosswalk.md) for observed revisions and actual declaration candidates.
+Lemma 5.1 uses the existing foundation's genuine finite A/B and
+Kusmin–Landau inputs, not an assumed exponent-pair object.
+`LogarithmicBlockBound` consumes
+`RiemannZeta.GuthMaynard.logarithmic_weyl_AB_process_simple` and the
+actual correlation majorant. `LogarithmicDerivativeBounds` adapts the
+first- and second-derivative prefix proofs from `TerminalTypeI.lean`
+(SHA-256 `b72b2d6efd64377a0fd3c1ef3f1bd0e5c5c50862feaedcdfc0a353a09695f018`)
+and `TypeIFiniteEstimates.lean`
+(`6b89e0df449c2529433e7b0fb2273baa9860fb89a6685729f6c6d67f905f58d5`).
+Their proof bodies use the narrow existing derivative interfaces.
+Attribution is retained; neither large density/dichotomy import tree is copied
+or imported. The new actual-prefix adapter, exhaustive range split,
+geometric sum assembly and both signed main consumers compile and are audited.
 
-| Candidate | Intended use | Integration decision still required |
+Origin: existing local node-71 sources, unchanged at checkout
+`9247776c9c202f66d3ff6e4ecd60e7370d21a75f`, with original notices retained.
+The exact nine-file non-Mathlib closure below was read, rehashed and
+integrity-scanned; no foundation source, package pin or license was changed.
+The root package already supplies this code; no new vendor or external
+repository is installed.
+
+| Source under node 71 | SHA-256 |
+|---|---|
+| `GuthMaynard/WeylExplicit.lean` | `9b84e618a070b0c83f65258e8d138ed7963d444bf4adc2bbd2f333bcee53185c` |
+| `GuthMaynard/Weyl.lean` | `c08762638eecb553ca08ecb15043a5d6e0b085a8fbe5d4811b0a4ca4b2b5798f` |
+| `GuthMaynard/SecondOrderMeanValue.lean` | `5ad5b1ad61cbd2e1d4d67a164e04d150bcbe0ffb4f8c05fb5d47841cd69ce134` |
+| `GuthMaynard/SecondDerivative.lean` | `fd4d4273961c4cf69806a20ad2348f649b10881f4d334d08322f47cbb11609d0` |
+| `GuthMaynard/VanDerCorput.lean` | `2e4b891fe01180ce5eb71c4f1f7be1de1e319470c2ed803b7f92b967b419046b` |
+| `GuthMaynard/LogarithmicKernel.lean` | `b5d3eb7ad7dd5c23a8f514c77c971d4259cb197582ea39bfa0433e4b0cfab2c5` |
+| `GuthMaynard/DirichletPolynomial.lean` | `d69815e49b69aedced12164e4e1b9bcd81646a7d70b24eb997f7ca2a23aa5a1b` |
+| `FiniteDirichletPolynomial.lean` | `5034ffc8cb203907c7d7b935b0714f014b96034a75531f2ac58cf175ae4aa178` |
+| `CompletedZetaSymmetry.lean` | `31a1aa9ee8062dd13c80671107dd361bc1587d0ce2a718f880b42278fa49a39a` |
+
+A second route was genuinely inspected: node 63's
+`continuous_third_derivative_bound` is a valid all-length finite derivative
+test. Its selected 42-file non-Mathlib closure is unnecessary here; the
+already-present smaller foundation closure suffices. This is a route-selection
+decision, not a failure of that theorem. No node-63/73/74 extension is imported.
+
+## Selected foundation zero-count bridge
+
+`XiConjugation` imports `GuthMaynard.ZeroCount` and consumes the proved
+`RiemannZeta.GuthMaynard.analyticVanishingOrder_conj`, not an assumed symmetry.
+`ZeroCounts` consumes its actual finite `zerosInRect`, `ZeroRectangle` and
+multiplicity-weighted `zeroCountRect`. The local import closure adds only
+`ZeroCount.lean` to the previously selected `ZetaBounds.lean`; its other
+imports are Mathlib. The exact conjugation proof and rectangle definitions
+were inspected. At unchanged checkout `9247776c9c202f66d3ff6e4ecd60e7370d21a75f`,
+`ZeroCount.lean` has SHA-256
+`e2e6fed5f72d6fb3472315ea7bc48ae5bccf2944094eef057f73b1a51bbd73db`.
+No foundation file, dependency revision or source notice was changed.
+New consumers are checked explicitly and transitively by the paper audit.
+
+## Scoped real log-norm derivative reuse
+
+`GammaRatioBounds` adapts the two generic norm-square/log-norm derivative
+proofs from node 74's `Extension/GafniTao/FordLogNormDerivative.lean`,
+SHA-256 `acf639b06147fc26f7e631875128c3136d8e5ea1899d797e7d679565ae926779`.
+The exact proof bodies and assumptions were inspected. The adaptation uses
+Mathlib only and does not import node 74's Ford detector chain. Gamma
+nonvanishing, the actual horizontal derivative, its uniform bound and
+source quotient are derived here; no conditional gamma estimate is copied.
+`XiRepulsion` uses the already-selected installed Hadamard closure.
+All new declarations are explicit and exhaustive audit consumers.
+
+## Selected digamma series input
+
+`GammaLogBounds` imports the installed
+`PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries`,
+at the same immutable PNT+ revision
+`4ecb950126c4290293c5662dfe0e884123171df5` (Apache 2.0; Robby
+Sneiderman's retained source notice). Its non-Mathlib import closure is
+this one file, SHA-256
+`496eb57daedb46fe25b84da2ef885ed68786265a3337d3a739e0f30228f2970f`.
+The actual series and inverse-square tail proofs were read and scanned;
+no dependency source or pin was changed. The new harmonic head/tail
+argument retains coefficient one rather than using the installed coarser
+O(log) bound. `ZetaLogDerivativeBounds` uses the already-selected
+foundation `ZetaBounds` pole removal and Mathlib's actual von Mangoldt
+Dirichlet series. All new consumers are in the exhaustive transitive audit.
+
+PROJECT COMPLETE, 5 October 2026. The isolated extension requires the existing root RiemannZeta package by path, sharing its pinned Lean 4.30/Mathlib/PNT graph and existing package cache. No upstream upgrade or node-63/73/74 import is installed. Root `lakefile.toml`, `lake-manifest.json`, and `lean-toolchain` remain unchanged.
+
+The selected graph is the existing Lean 4.30 foundation, not the newer upstream HEADs observed in the 4 October survey. See [Sources](../Dong-Wang-Wang-Zhang%20Sources.md) and [Crosswalk](../Dong-Wang-Wang-Zhang%20Crosswalk.md) for the dated observations and actual consumers.
+
+| Inspected source | Relevant use | Final integration decision |
 |---|---|---|
-| Root RiemannZeta / node 71 | Continuous Montgomery mean square; later zero/contour interfaces | `GuthMaynard.MeanValueProof` is now imported for DWWZ-05's actual logarithmic coefficient blocks. The four-file local closure is recorded below; zero-object bridges remain separate. No foundation source changed. |
-| Node 63 extension and ANTEDBFrozen | A/B and first derivative, logarithmic phases, Euler–Maclaurin | Inspect a narrow import closure and uniform finite estimates; no energy optimizer or historical Python replay is needed for this paper. |
-| Node 73 `Tao2026` | Inspected, no relevant reuse for the initial DWWZ-03/05/06 obligation | Scoped negative finding and actual interfaces recorded in Crosswalk. No import. Later reuse still requires a specific theorem materially shortening a node-77 obligation; no mandatory dependency is implied. |
-| Node 74 `PrimeNumberTheoremAndClean` | Entire xi, Hadamard product, zero-divisor convergence, log derivative, gamma | A candidate audited closure, not a blanket import of all upstream PNT+ or all of node 74. Node 63's derivative subset does not contain this whole tree. |
+| Root RiemannZeta / node 71 | Continuous Montgomery mean square, zero counts, pole removal and finite exponential sums | `GuthMaynard.MeanValueProof` is now imported for DWWZ-05's actual logarithmic coefficient blocks. The four-file local closure is recorded below; the separately selected zero-count and finite exponential-sum closures are also recorded. No foundation source changed. |
+| Node 63 extension and ANTEDBFrozen | A/B and first derivative, logarithmic phases, Euler–Maclaurin | Inspected the finite derivative alternatives; selected the smaller existing foundation closure above. No extension import, energy optimizer or historical Python replay is needed. |
+| Node 73 `Tao2026` | Inspected, no relevant reuse for the initial DWWZ-03/05/06 obligation; later quantitative-PNT interface found | Crosswalk preserves both scoped findings. The smaller installed `MediumPNT` closure suffices for the later obligation; no node-73 import was selected. |
+| Node 74 `PrimeNumberTheoremAndClean` / installed PNT+ | Entire xi, Hadamard product, zero-divisor convergence, log derivative, gamma | Selected the pinned installed PNT+ Hadamard and digamma closures below, not node 74's separate tree. The scoped Mathlib-only Euler/log-norm proof adaptations are separately attributed below. Node 63's derivative subset does not contain the whole Hadamard tree. |
 | Installed Mathlib | Fourier Gaussian/inversion, Cauchy kernel, Mellin, integration, compactness, arithmetic functions, analytic orders | Reuse APIs at the installed pin first; prove normalization and semantic bridges. The half-plane Poisson transform is derived from half-line exponential integrals and Fourier inversion; Cauchy supplies kernel integrability and mass. |
 | Current external repos | Discovery and comparison | Newer incompatible toolchains are recorded, not selected automatically. |
 
 Before importing any candidate: inspect theorem hypotheses, prove the actual input adapter, compute transitive axioms, verify all source files in its import closure, record upstream URL/commit/license and hashes, and compile with one chosen Mathlib revision. No reference/Python hypothesis object is proof evidence. A conditional Hadamard algebra lemma does not establish its assumed factorization.
 
-If vendoring is necessary after activation, use an immutable source ledger plus documented patches and license; wire its verifier into the paper BAT. No prebuilt olean from a different toolchain is acceptable. Do not create dependency placeholders or postulates during setup.
+If future maintenance requires vendoring, use an immutable source ledger plus documented patches and license; wire its verifier into the paper BAT. No prebuilt olean from a different toolchain is acceptable. Do not create dependency placeholders or postulates during setup.
 
 ## Selected continuous mean-value import
 

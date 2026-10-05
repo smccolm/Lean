@@ -28,8 +28,13 @@ counterexamples and authorized repairs, and the closed Pintz endpoints proved
 as original research strengthenings. Each extension has its own verification
 runner and reproduction manifest; none changes the frozen foundation's scope.
 
-Node 77 contains the [Dong–Wang–Wang–Zhang active formalization](77%20Dong-Wang-Wang-Zhang,%202026/README.md),
-explicitly activated on 4 October 2026. Its isolated Lean package and development
-BAT share the unchanged foundation pins. DWWZ-01/03/05/06/07/08/10 are DONE (7/20): compatible
-package/tooling, the actual sum/spectral shift, consumed phase-specialized analytic
-inputs, full same-witness Lemma 2.2, uniform zeta Lemma 3.1, exact residue-bearing Lemma 3.3 and xi/divisor identities. Both frozen main results and thirteen gates remain OPEN.
+Node 77 contains the [Dong–Wang–Wang–Zhang completed main-theorem formalization](77%20Dong-Wang-Wang-Zhang,%202026/README.md),
+activated on 4 October and completed internally on 5 October 2026: **20/20 gates**.
+Both frozen main contracts are kernel-checked, with actual zero multiplicities,
+the common-center disk theorem and the full local-window cancellation theorem.
+Its isolated package has 44 production modules and 135 semantic regressions;
+the sequential foundation and paper BATs passed with zero Lean diagnostics.
+The foundation pins are unchanged. Generic hybrid Halász, the optimal GS03
+exponent and supplementary Remark 1.3 are not claimed; accepted specializations
+and alternate supporting proofs are documented without changing either main
+statement. Internal completion is not independent review or publication.

@@ -25,11 +25,11 @@ Pintz endpoints by original far-correlation arguments. No weaker source-faithful
 table replaces them. This is a separate extension of the foundation above;
 its checklist and reproduction manifest record the independent paper BAT gate.
 
-Node 77 contains the [Dong–Wang–Wang–Zhang 2026 active formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/77%20Dong-Wang-Wang-Zhang,%202026/README.md),
-explicitly activated on 4 October 2026: 7/20 gates complete, with the actual zeta
+Node 77 contains the [Dong–Wang–Wang–Zhang 2026 completed main-theorem formalization](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/77%20Dong-Wang-Wang-Zhang,%202026/README.md),
+activated on 4 October and completed internally on 5 October 2026: 20/20 gates, with the actual zeta
 sum, spectral shift, consumed mean-value/Lipschitz inputs and full same-witness
-Lemma 2.2, uniform zeta Lemma 3.1, exact residue-bearing Lemma 3.3 and actual xi/divisor real log-derivative identities proved and audited. Both frozen main theorems remain unproved. Its isolated package and
-development BAT share the unchanged pinned foundation graph.
+Lemma 2.2, uniform zeta Lemma 3.1, all-height zero repulsion Lemma 3.2, exact residue-bearing Lemma 3.3, actual xi/divisor real log-derivative identities, uniform zero-sum Lemma 3.4, full Proposition 4.1, all-large-x Lemma 5.1 and both frozen main theorems proved and audited. Exact-type regressions and sequential foundation/paper BATs pass with zero Lean diagnostics. Its isolated package and
+proof BAT share the unchanged pinned foundation graph. This is internal kernel/project completion, not independent review or publication.
 
 ---
 

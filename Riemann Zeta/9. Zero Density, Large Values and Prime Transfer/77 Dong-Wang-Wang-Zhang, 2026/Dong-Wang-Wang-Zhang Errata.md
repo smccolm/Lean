@@ -1,12 +1,12 @@
 # Errata, source distinctions and audit questions
 
-4 October 2026. **ACTIVE DEVELOPMENT.** This is a local register, not an author-issued erratum. No mathematical error in the two main theorems has been established, and no source-contract repair is claimed or authorized here. Absence of an entry is not a complete correctness certification.
+5 October 2026. **PROJECT COMPLETE.** This is a local register, not an author-issued erratum. No mathematical error in the two main theorems has been established, and no source-contract repair is claimed or authorized here. Absence of an entry is not a complete correctness certification.
 
 ## Confirmed source distinctions
 
 | Item | Evidence | Treatment |
 |---|---|---|
-| Primary edition | arXiv history shows only `2608.31060v1`, 31 August 2026; original source file is `main.tex`. | Freeze bytes, preserve source labels and distinguish preprint status from publication. |
+| Primary edition | At the 4 October 2026 research/activation checks, arXiv history showed only `2608.31060v1`, 31 August 2026; original source file is `main.tex`. | Freeze bytes, preserve source labels and distinguish preprint status from publication. |
 | GS zero-forcing proposition numbering | The 2018 JEMS PDF calls it Proposition 3.4; arXiv `1501.01804v2` calls the corresponding proposition 3.1. Dong–Wang–Wang–Zhang cites the journal's 3.4. | This is **not** an erroneous citation. Both versions are archived and identified. |
 | GS mean-value editions | The 1999 arXiv preprint has 30 pages; the 2003 Canadian Journal article has 40. | Use the journal for cited Theorems 2b/4 and Lemma 7.1. Do not assume page or theorem numbering matches the preprint. |
 | Two different Yangs | The paper's reference [11] is **Daodao Yang**, not the Andrew Yang of node 63. | Preserve full author identity in the source survey. |
@@ -19,7 +19,11 @@
 - A factorization theorem with a product-equality hypothesis must be supplied an actual factorization, not used to assume it. Infinite sums need genuine summability.
 - Lemma 2.1's source conventions for maximization and multiplicative functions need an exact bridge; no general formalization is claimed from name matching.
 - Lemma 5.1 is an all-large-x power bound. The upper bound `x≤T^A` is used later to turn it into logarithmic saving, and must remain in T2.
-- Remark 1.3 is supplementary. Audit the full density-source range before claiming its displayed exceptional-set exponent. No correction or formal proof of that remark is supplied by this scaffold.
+- Remark 1.3 is supplementary. Audit the full density-source range before claiming its displayed exceptional-set exponent. No correction or formal proof of that remark is supplied by this formalization.
+
+## Formalization outcome, 5 October 2026
+
+Both frozen main contracts now compile, with exact-type regressions; both sequential BATs and semantic acceptance passed. No end statement was repaired or weakened. The actual multiplicity and boundary bridges, positive Gaussian residue, common T1 center and T2 constant order are kernel-checked. Crosswalk distinguishes faithful alternate supporting proofs from unimplemented generality: generic hybrid Halász and the optimal GS03 exponent are not claimed, and Lemma 5.1 uses an exhaustive finite derivative argument rather than an assumed exponent-pair object. The supplementary Remark 1.3 remains outside the release contract. These are scope/proof-route records, not author errata.
 
 ## Future entry format
 

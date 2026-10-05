@@ -1,22 +1,238 @@
 # Source-to-formalization crosswalk
 
-4 October 2026. **ACTIVE DEVELOPMENT.** Labels refer to the [frozen TeX](Sources/DongWangWangZhang-v1-source/main.tex). `ZetaSum`, `TwistSelection`, `MeanComparison`, `PowerSumEstimate`, `CoefficientMean`, `MeanValueTransform`, `MeanValueFrequency`, `MeanValueMaximum`, `MeanValueEuler`, `MeanValueSmoothing`, `MeanValueAssembly`, `TwistBounds`, `TwoPointEuler`, `DilationMeanSquare`, `DilationSmoothing`, `DilationAssembly`, `DilationLipschitz`, `ZetaUniformBounds`, `RegularizedTransform`, `GaussianTransform`, `XiZeros`, `XiLogDerivative`, `SemanticRegression` and `Audit` are integrated. The two-frequency prime/zeta input and its actual-maximizer consumer are proved; other module names below remain proposals. T1 and T2 are unproved.
+## Exact Theorem 1.2 and all-large-x estimate (DWWZ-02/15/16 DONE)
 
-| Source | TeX label | Owning gates / proposed module | Required mathematical bridge |
+Both frozen main contracts are accepted. The final count is **20/20**
+after the full updated sequential BAT/audit and semantic release checks passed.
+All 44 production modules and 135 semantic regressions are integrated;
+the focused audit passes with 1,149 discovered theorems, 677 required consumers
+and zero diagnostics.
+
+`source_logarithmic_prefix_uniform` proves, for every real Z≥2,
+natural A>0 and N≤A, the actual logarithmic-phase prefix bound
+`120 (Z² sqrt A + A/Z)` at height Z¹². The ranges are exhaustive:
+below the fourth-power scale use the actual unit bound; through the
+eighth-power scale use the foundation's finite A-after-B process and its
+actual correlation bound; above that scale use the second-derivative test,
+then the first-derivative test when A exceeds the height. All partial
+prefixes, including zero and terminal partial blocks, are covered.
+
+`zetaSum_nat_increment_logarithmic` identifies that prefix with the actual
+negative-height source-sum increment, with its positive-index convention.
+Strong halving induction yields
+`|S(M,Z¹²)| ≤ 1000 (Z² sqrt M + M/Z)`.
+Natural-floor transfer gives every real cutoff. Conjugation gives both
+height signs. At Z=|t|^(1/12), T≤|t|≤2T and x≥sqrt T,
+`large_x_zeta_sum_bound` proves
+`|S(x,t)| ≤ 3000 x T^(-1/13)` for T≥4096, with **no upper cutoff**.
+`exists_large_x_zeta_sum_bound` is the exact Lemma 5.1 source form.
+This finite derivative argument is a faithful alternate route to that
+source conclusion, not a proof of a generic exponent-pair interface,
+a source repair, or an assumed exponential-sum estimate.
+
+`LocalWindowScale` links Q=log T, Y=log x and L=δε²Q. Its threshold
+depends only on the fixed δ and the absolute T1 constant. It proves
+cN⁶≤L≤Y/2, LQ/Y²≤δ and cN≤cQ^(1/100), deriving all positivity.
+`exists_small_range_local_zero_cancellation` takes
+N=x/|S(x,t)| in the contradiction branch, applies the actual T1,
+transfers its multiplicity count from the open disk to the closed window,
+and derives the strict contradiction L/360>L/400.
+
+`local_zero_windows_force_zeta_sum_cancellation` in `LocalZeroCriterion`
+is the frozen T2 type. The absolute C is selected before A;
+K=max(1,3000 A^(1/100)) is selected before δ,ε,T,t,x.
+The threshold is max(Tsmall(δ),4096), an allowed stronger independence.
+The two cutoff ranges meet at sqrt T. The large branch uses x≤T^A
+to convert the power saving to the required logarithmic saving.
+Strict ε>(log T)^(-1/3), closed δ≤1/4, both height signs, every prescribed
+nearby center and the full polynomial x range are retained.
+No RH, T1 certificate or undischarged analytic bound is a public premise.
+
+The new exact-type regressions cover T2 and Lemma 5.1, the closed sqrt T
+junction, negative heights, actual terminal prefixes and δ=1/4.
+The public source statements and original TeX bytes are unchanged.
+
+## Exact Theorem 1.1 and linked disk count (DWWZ-13/14 DONE)
+
+`large_zeta_sum_forces_zero_disk` in `ZeroDiskTheorem` compiles at
+the frozen T1 type: absolute c,T₀, the actual original sum, both signed
+height slabs, all closed input bounds, one φ before every admissible L,
+the open radius L log T/(log x)² and multiplicity count at least L/360.
+No analytic input, convergence, zero count or nonempty-scale premise is
+left to the caller.
+
+`DiskZeroGeometry` proves the nine-twentieth separation on the closed
+complement of the open disk, the factor-five resolvent domination, and
+the per-zero-copy bound 1/λ. `DiskZeroCount` partitions the actual
+absolutely convergent multiplicity sum into a finite disk sum and its
+complement. `LinkedZeroSum` consumes Lemma 3.4, proves the uniform
+farther-resolvent upper bound 5 log T/9, and absorbs its absolute remainder
+with one threshold. At λ=L/(40 log x), a=20λ log T/log x,
+the far contribution is at most 5 log x/36 and the near contribution is
+at least log x/9. The same maximizing twist supplies φ=t−t₀ for every L.
+Boundary zeros are kept in the far sum, not silently included in the disk.
+
+All four modules, twelve new public theorems, five new regressions and
+explicit/exhaustive audit coverage are integrated. The regressions include
+the full T1 type, actual linked multiplicity transfer, a far-boundary zero,
+the reciprocal linked scale and empty admissible intervals. Focused builds
+pass; both BATs and exact semantic acceptance passed. Gate acceptance
+is now 20/20. T2 and its large-x input now compile; their combined BAT/audit and semantic acceptance passed.
+No frozen source statement is changed.
+
+## Full actual weighted forcing (DWWZ-12 DONE)
+
+`exists_large_sum_weighted_zero_forcing` has absolute `c>0,T₀≥3` and
+the complete original `T,t,x,N` ranges. It chooses one original maximizing
+twist, with `|t₀|≤cN`, before every `cN⁶/log x≤λ≤1/2`. For each such
+scale it produces an actual η with `|η|≤2λ sqrt(log T/log x)`, convergence
+of the multiplicity-indexed kernel, and its lower bound `(log x)/4`.
+The proof consumes the original large-sum equality, full Gaussian lower
+bound, exact positive-residue identity, actual zero repulsion and proved
+conjugation of every multiplicity label. No terminal estimate is a premise.
+
+Two faithful simplifications avoid unnecessary historical intermediates.
+First, the retained source denominator absorbs all frequency growth:
+`norm_source_zeta_quotient_le` gives `24(2+|τ|)^λ/λ`; the Gaussian then
+yields `source_gaussian_weighted_zeta_tail ≤120/λ` on the entire complement
+of the source radius whenever `|τ|≤3T`. Thus both printed frequency tails,
+including arbitrarily large frequencies, are covered by one proved bound.
+Second, an integral pigeonhole argument gives a sufficiently large actual
+frequency point without claiming an attained global maximum. All source
+scales are linked; the sixth-power cutoff is retained; conjugation gives
+η with the correct sign. The exact public source output is unchanged.
+
+The four-module Gaussian/forcing chain and ten new regressions are
+integrated into root coverage and explicit/exhaustive audits. Focused
+builds, both BATs and final semantic acceptance pass. The
+acceptance count remains 20/20; T1 now compiles, with both BATs and exact semantic acceptance passed, and T2 now compiles; combined BAT/audit and semantic acceptance passed.
+
+## Actual large-sum Gaussian lower bound (DWWZ-12 supporting progress)
+
+`exists_large_sum_gaussian_lower` in `GaussianLowerBound` proves (4.5) from
+the actual equality `|S(x,t)|=x/N`, `1≤N≤(log x)^(1/100)`, with absolute
+`c,x₀` and every `x≥x₀`. It chooses one original maximizing twist with
+`|t₀|≤cN` before every `cN⁶/log x≤λ≤1/2`, and proves the exact lower
+bound `π exp(λ log x/2)/N` for the source-normalized Gaussian integral.
+The comparison factor has norm at least one; its error is absorbed using
+the actual source comparison. The Gaussian evaluation and sixth-power
+cutoff absorb its error without a terminal analytic premise. This
+sub-obligation needs no height slab; those conditions enter the remaining
+residue and frequency-tail argument. Five public theorems and two new
+regressions are integrated. The full forcing consumer is accepted in the preceding section. DWWZ-12 is DONE after
+the combined BAT checkpoint and semantic acceptance.
+
+## Gaussian evaluation in Proposition 4.1 (DWWZ-12 supporting progress)
+
+`GaussianConcentration` proves integrability and exact rescaling of the
+fixed majorant `(1+|w|) exp(-w²/2)`. The actual maximizing twist's already
+proved one-third continuity is integrated, not assumed as a new analytic
+premise. `source_gaussian_integral_centered` proves exact completion of the
+square and central-value/error splitting, with absolute convergence.
+`exists_maximizingTwist_source_gaussian_error` gives the paper's full
+normalized evaluation: the actual Gaussian sum differs from
+`2π exp(λ log x/2) S(x,t−t₀)/x` by at most
+`sqrt(2π) dilationLipschitzConstant gaussianMomentConstant`
+times `exp(λ log x/2)/(λ log x)^(1/6)`.
+Its absolute logarithmic threshold precedes all heights and scales;
+`0<λ≤1/2` and the original maximizing witness are retained.
+Four new regressions and all sixteen public supporting theorems are
+integrated into the audit. This work follows the DWWZ-04 BAT receipt and
+is covered by the DWWZ-12 combined verification checkpoint. DWWZ-12 is DONE:
+the actual large-sum lower bound, residue removal, both frequency tails
+and full weighted-zero forcing are accepted above.
+
+## Actual zero-count conventions (DWWZ-04)
+
+`XiConjugation` transports the foundation's proved conjugation of analytic
+vanishing order through the xi/zeta unit bridge. `xiZeroConjEquiv` preserves
+each multiplicity label; `source_zero_kernel_neg_height` proves convergence
+and exact both-sign reindexing of the actual weighted kernel.
+`zeroCountIn` in `ZeroCounts` counts the actual divisor indices, not just distinct
+complex points. Bounded regions, all open source disks and all closed source
+windows have proved finite index sets. `zeroCountIn_eq_sum_multiplicities`
+identifies complete fibers with zeta's analytic order;
+`zeroCountIn_rectangle_eq` and `zeroCountIn_sourceWindow_eq` consume the
+foundation rectangle. `zeroCountIn_eq_rectangle_filter` and
+`rectangle_filter_count_independent` prove enclosure independence.
+`zeroCountIn_disk_le_window` transfers the exact open disk into a closed
+window with no lost multiplicity. Eight regressions retain finiteness,
+conjugation, both signs, rectangle equality, excluded disk boundaries,
+included window corners and convergence. Both BATs and semantic acceptance
+passed (DWWZ-04 DONE). Actual forcing is accepted; T1 now compiles and T2 now compiles; combined BAT/audit and semantic acceptance passed.
+
+5 October 2026. **PROJECT COMPLETE.** Labels refer to the [frozen TeX](Sources/DongWangWangZhang-v1-source/main.tex). `ZetaSum`, `TwistSelection`, `MeanComparison`, `PowerSumEstimate`, `CoefficientMean`, `MeanValueTransform`, `MeanValueFrequency`, `MeanValueMaximum`, `MeanValueEuler`, `MeanValueSmoothing`, `MeanValueAssembly`, `TwistBounds`, `TwoPointEuler`, `DilationMeanSquare`, `DilationSmoothing`, `DilationAssembly`, `DilationLipschitz`, `ZetaUniformBounds`, `RegularizedTransform`, `GaussianTransform`, `XiZeros`, `XiLogDerivative`, `GammaLogBounds`, `ZetaLogDerivativeBounds`, `ZeroSumUpperBound`, `XiRepulsion`, `GammaRatioBounds`, `ZeroRepulsion`, `XiConjugation`, `ZeroCounts`, `GaussianConcentration`, `GaussianLowerBound`, `GaussianFrequency`, `WeightedZeroForcing`, `DiskZeroGeometry`, `DiskZeroCount`, `LinkedZeroSum`, `ZeroDiskTheorem`, `LocalWindowScale`, `SmallRangeZeroCriterion`, `LogarithmicDerivativeBounds`, `LogarithmicBlockBound`, `LargeSumEstimate`, `LocalZeroCriterion`, `SemanticRegression` and `Audit` are integrated. The two-frequency prime/zeta input and its actual-maximizer consumer are proved; all mapped source consumers are integrated, with the explicitly excluded generic supporting generality distinguished below. T1 now compiles; both BATs and exact semantic acceptance passed. T2 now compiles; combined BAT/audit and semantic acceptance passed.
+
+| Source | TeX label | Owning gates / implemented module | Required mathematical bridge |
 |---|---|---|---|
 | (1.1), shifted Dirichlet series | `eq:def-S` | DWWZ-03 / `ZetaSum` | Positive naturals, floor cutoff, exp/log and complex-power identity, `ζ(s−it)` in Re s>1. |
-| Theorem 1.1 | `thm:main` | DWWZ-02,14 / `MainTheorems` | Exact T1 in Source Contract; consume actual forcing and disk count with a center independent of L. |
+| Theorem 1.1 | `thm:main` | DWWZ-02,14 / `ZeroDiskTheorem` | Exact T1 compiles in `large_zeta_sum_forces_zero_disk`; actual forcing and disk count are consumed with a center independent of L. |
 | Theorem 1.2 | `thm:corollary` | DWWZ-02,16 / `LocalZeroCriterion` | Exact T2; small and large x, closed zero window, all nearby centers, constants uniform as specified. |
 | Lemma 2.1, (2.1)–(2.3) | `lem:standard-mean` | DWWZ-05 / `MeanComparison`, `PowerSumEstimate`, `CoefficientMean` | Phase-specialized source-form (2.2) proved with an absolute constant; generic hybrid (2.1) and optimal (2.3) remain unproved reference generality; the faithful phase-specialized inputs consumed by Lemma 2.2 are proved below (DWWZ-05 DONE). |
-| Lemma 2.2, (2.6)–(2.9) | `lem:t0` | DWWZ-06 / `TwistSelection` | Argmax of actual shifted zeta on `[-log x,log x]`; `|t₀|≪N`; `M≤(log₂ x)/100+log₃ x+O(1)`; all-real-y exponent 1/3; full comparison with exponent 3/4. |
+| Lemma 2.2, (2.6)–(2.9) | `lem:t0` | DWWZ-06 / `DilationLipschitz` (using `TwistSelection` and `TwistBounds`) | Argmax of actual shifted zeta on `[-log x,log x]`; `|t₀|≪N`; `M≤(log₂ x)/100+log₃ x+O(1)`; all-real-y exponent 1/3; full comparison with exponent 3/4. |
 | Lemma 3.1 | `lem:zeta-crude` | DWWZ-07 / `ZetaUniformBounds` | `|ζ(1−λ+iv)|≪(2+|v|)^λ/λ`, uniformly `0<λ≤1/2`; no lost small-height or pole case. |
 | Lemma 3.2 | `lem:zero-bound` | DWWZ-04,08,09 / `ZeroRepulsion` | `|ζ(1−λ+iu)|≪λ⁻¹ exp(Σρ 2λ²/|1+λ+iu−ρ|²)`; xi factorization and cancellation of gamma growth with the real zero sum. |
 | Lemma 3.3 | `lem:gaussian` | DWWZ-10 / `GaussianTransform` | Both real-line integrals and exact residue (see below); prove Fubini and contour/continuation, not just a Gaussian identity in isolation. |
-| Lemma 3.4 | `lem:zero-sum-upper` | DWWZ-11 / `ZeroLogDerivative` | `Σρ Re(1/(1+a+iv−ρ))≤(1/2)log(2+a+|v|)+1/a+O(1)`, uniformly in `a>0, |v|≥2`. |
+| Lemma 3.4 | `lem:zero-sum-upper` | DWWZ-11 / `ZeroSumUpperBound` | `Σρ Re(1/(1+a+iv−ρ))≤(1/2)log(2+a+|v|)+1/a+O(1)`, uniformly in `a>0, |v|≥2`. |
 | Proposition 4.1 | `prop:forcing` | DWWZ-12 / `WeightedZeroForcing` | For `c₀N⁶/y₀≤λ≤1/2`, derive `∃η, |η|≤2λ√(log T/y₀)` and `Σρ λ/|1+λ+i(t−t₀+η)−ρ|²≥y₀/4`. |
-| Proof of Theorem 1.1 | `eq:outer-zero`, `eq:outer-contribution` | DWWZ-13 / `DiskZeroForcing` | Linked `λ=L/(40y₀)`, `a=20λQ/y₀`, `Q=log T`; actual infinite near/far split and multiplicity consumer. |
-| Lemma 5.1 | `lem:large-x` | DWWZ-15 / `LargeXBound` | `S(x,t)≪xT^(-1/13)` for all `x≥√T`; high-frequency pair `(1/6,2/3)` and low-frequency first derivative, arbitrary terminal subintervals. |
+| Proof of Theorem 1.1 | `eq:outer-zero`, `eq:outer-contribution` | DWWZ-13 / `DiskZeroGeometry`, `DiskZeroCount`, `LinkedZeroSum` | Linked `λ=L/(40y₀)`, `a=20λQ/y₀`, `Q=log T`; actual infinite near/far split and multiplicity consumer. |
+| Lemma 5.1 | `lem:large-x` | DWWZ-15 / `LargeSumEstimate` | Exact source bound `S(x,t)≪xT^(-1/13)` for all `x≥√T`, proved by the finite A/B/first-derivative argument above; arbitrary terminal subintervals and both signs. |
 | Proof of Theorem 1.2 | `eq:L-choice` | DWWZ-16 / `LocalZeroCriterion` | `L=δε² log T`, lower/upper L bounds, radius≤δ, center in allowed family, `L/360>L/400`; large-x bound converted using `x≤T^A`. |
+
+## Implemented source zero repulsion
+
+`exists_source_zero_repulsion` proves the full Lemma 3.2 statement,
+including a single positive absolute prefactor C, every real height,
+`0<λ≤1/2`, and the absolutely convergent actual multiplicity-indexed sum
+`Σρ 2λ²/|1+λ+iu−ρ|²`. No factorization, gamma bound, convergence
+certificate or zero-sum estimate is a hypothesis.
+
+`norm_xi_sub_real_le` in `XiRepulsion` compares individual genus-one factors,
+passes finite-product inequalities through the proved actual convergent
+product, and combines the degree-one Hadamard polynomial with the actual
+logarithmic derivative. The real shift r has quadratic coefficient r²/2;
+setting r=2λ supplies exactly 2λ². Zeros at the left evaluation point
+are allowed throughout.
+
+`GammaRatioBounds` differentiates the branch-independent real gamma
+log norm along the complete horizontal segment. The proved digamma bound
+and the real mean-value theorem retain exponent λ; the pi factor only
+improves the quotient. `ZeroRepulsion` bounds the rational factors by 2
+and proves the lower real xi logarithmic derivative with coefficient
+one half on log(2+|u|). These cancel the height growth exactly.
+The already-proved right-half-plane zeta series bound leaves C/λ.
+For |u|<2, Lemma 3.1 gives 32/λ and positivity of the kernel completes
+the same statement. There is no missing small-height or closed-half case.
+
+Six regressions retain the actual xi quotient, completed-gamma quotient,
+uniform lower logarithm, full source conclusion, zero height and λ=1/2.
+Both BATs and exact semantic acceptance pass; DWWZ-09 is DONE.
+This follows the source proof path with a direct digamma-series estimate
+in place of the cited Stirling formula, not a repair of a source error.
+
+## Implemented exact zero-sum upper bound
+
+`exists_source_zero_sum_upper` in `ZeroSumUpperBound` proves Lemma 3.4
+for every `a>0` and `|v|≥2`, with one absolute nonnegative remainder
+constant before both parameters. Its sum uses the actual `XiZero`
+multiplicity index and is proved absolutely convergent.
+
+The installed convergent digamma series, split at the norm scale, gives
+`|Re ψ(z) − log(‖z‖+2)| ≤ 14+|γ|` on the entire `Re(z)≥1/4`
+half-plane. This retains coefficient one without assuming Stirling.
+The actual nonnegative von Mangoldt series and the compact real slab of
+the pole-removed zeta give `‖ζ′/ζ(s)‖≤1/(Re(s)−1)+Cζ` for every
+`Re(s)>1`; large real parts use the same series's monotonicity.
+The exact xi/zeta/gamma identity then supplies coefficient `1/2` on
+the logarithm and `1/a`, with rational terms bounded by `1/2` each.
+No upper bound on a, large-height gap, analytic remainder premise or
+assumed zero sum is retained. This is a faithful direct-series proof,
+not a repair of the source.
+
+Five additional regressions freeze the source inequality, the same
+constant at both closed height endpoints, the digamma quarter boundary,
+and the uniform pole estimate. Focused builds pass without diagnostics;
+Both BATs and semantic acceptance pass; DWWZ-11 is DONE.
 
 ## Implemented uniform zeta continuation consumer
 
@@ -99,9 +315,8 @@ the actual shifted kernel used in Lemma 3.2.
 Seven regressions retain actual zeros, full multiplicity fibers, reflection
 labels, genus-one convergence, the real identity, the exact source
 decomposition and inverse-square convergence. Focused builds pass;
-DWWZ-08 is DONE after combined BAT/audit and semantic acceptance. DWWZ-04 remains
-OPEN for disk/window/rectangle and conjugation bridges. No gamma asymptotic,
-zero-repulsion estimate or zero-sum upper bound is claimed yet.
+DWWZ-08 is DONE after combined BAT/audit and semantic acceptance. DWWZ-04 is DONE for disk/window/rectangle and conjugation bridges. The quantitative zero-sum
+upper bound and zero repulsion are now proved, audited and accepted.
 
 Reuse survey: the installed `RiemannZetaHadamard` already supplies the
 genuine factorization and convergence. The matching node-74 family was
@@ -119,9 +334,17 @@ Dependencies records the selected 61-file source closure and hashes.
 - The outer-zero comparison gives `5λ Σρ |1+a+iφ−ρ|⁻²`; Lemma 3.4 bounds this by `5y₀/36`. The remainder is at least `y₀/9`; each zero copy contributes at most `1/λ`. Thus the count is `≥λy₀/9=L/360`.
 - Lemma 5.1 needs a finite **uniform** exponential-sum estimate. An asymptotic exponent-pair object with epsilon loss is only useful after specifying a loss budget inside `1/12−1/13=1/156` and proving every scale conversion. The regime near `X≈|t|` cannot be dropped between high- and low-frequency lemmas.
 
-## Existing code candidates, not accepted imports
+## Historical planning candidates and bridge obligations
 
-| Location inspected | Actual interface found | Remaining node-77 work |
+This table records the initial survey, not outstanding work or the current
+import graph. The completed consumers above and the selected closures in
+Dependencies supersede its provisional import decisions. In particular,
+node 71's zero-count interfaces were selected, and the installed PNT+
+Hadamard closure was selected instead of node 74's separate package.
+Unqualified local declaration names in this document belong to namespace
+`DongWangWangZhang2026`; module names identify files, not extra namespaces.
+
+| Location inspected | Actual interface found | Bridge identified at planning time |
 |---|---|---|
 | Node 71 `GuthMaynard/ZeroCount.lean` | `analyticVanishingOrder`, `zerosInRect`, `zeroCountRect`, `zeroCountRect_mono`, `analyticVanishingOrder_conj` | Exclude trivial zeros/pole correctly; build open-disk and closed-window counts and match infinite divisor indexing. |
 | Installed Mathlib `NumberTheory/LSeries/RiemannZeta.lean` | `zeta_eq_tsum_one_div_nat_cpow`, `riemannZeta_residue_one`, analytic continuation | Prove the shifted series and the exact Gaussian integrand/residue consumer. |
@@ -170,7 +393,7 @@ The sharp full-series coefficient assembly is now proved by a different route in
 
 `∫_{|y|>T} |ζ′(σ+i(y−t))/(σ+iy)|² dy ≤ 192 sqrt(π) exp(5/4) [1/T + 1/((σ−1)^3 T²)]`
 
-for every real `t`, `1<σ≤2` and `T≥4`. This closes the sharp **full-series frequency/coefficients** sub-obligation. Ordinary parameter assembly and the large-sum-to-small-distance implication are proved below; full hybrid Halász remains a reference target; phase-specialized Lipschitz and full Lemma 2.2 are kernel-checked and passed combined BAT/audit acceptance. DWWZ-05/06 are DONE; the total is **7/20**. This Gaussian majorant is not the continued DWWZ-10 identity with its pole residue. Ninety-three semantic consumers and the module-origin transitive audit cover the implemented scope; the reproduction manifest distinguishes integrated checkpoints from later additions.
+for every real `t`, `1<σ≤2` and `T≥4`. This closes the sharp **full-series frequency/coefficients** sub-obligation. Ordinary parameter assembly and the large-sum-to-small-distance implication are proved below; full hybrid Halász remains a reference target; phase-specialized Lipschitz and full Lemma 2.2 are kernel-checked and passed combined BAT/audit acceptance. DWWZ-05/06 are DONE; the total is **20/20**. This Gaussian majorant is not the continued DWWZ-10 identity with its pole residue. One hundred thirty-five semantic consumers and the module-origin transitive audit cover the implemented scope; the reproduction manifest distinguishes integrated checkpoints from later additions.
 
 `MeanValueMaximum.lean` implements the half-plane Poisson mechanism of GS03 Lemma 2.2 for absolutely convergent logarithmic-frequency series. The kernel `Kα(u)=α/[π(α²+u²)]` has proved positivity, unit mass, Fourier identity and tail integral at most `2α/(πT)`. `poissonLine_zeta` gives the actual zeta reproduction identity with absolute integrability. For `L=log x>0`, the actual source-line maximizer `t₀` and `Z=|ζ(1+1/L+i(t₀−t))|` satisfy
 
@@ -223,7 +446,7 @@ B = (log 4 + 4) + 192 sqrt(pi) exp(5/4)/(2 pi) + 2,
   [2048 * (1 + log L + 36 B * ((Z+4)*(1+log(2L/(Z+4)))+2)) + 952321] / L.
 ```
 
-`B` is the positive absolute `meanValueAssemblyConstant`; all maxima, convergence, near/far estimates, prime-power smoothing and cutoff conventions are discharged. There is no residual analytic integral or assumed mean-value bound. This is the **ordinary maximum-form** result, not the hybrid source (2.1). The full-series route avoids a smooth-number adapter for this ordinary estimate; it makes no such claim for the remaining Lipschitz work. Four regressions cover damping reconstruction, actual weighted Cauchy–Schwarz, minimum evaluation and the full actual-maximizer consumer.
+`B` is the positive absolute `meanValueAssemblyConstant`; all maxima, convergence, near/far estimates, prime-power smoothing and cutoff conventions are discharged. There is no residual analytic integral or assumed mean-value bound. This is the **ordinary maximum-form** result, not the hybrid source (2.1). The full-series route avoids a smooth-number adapter for this ordinary estimate; the completed Lipschitz route is recorded separately below. Four regressions cover damping reconstruction, actual weighted Cauchy–Schwarz, minimum evaluation and the full actual-maximizer consumer.
 
 The Euler substitution is now consumed by `exists_maximizingTwist_prime_distance_mean_bound`. With the same actual maximizing witness and `M=M_x(t−t₀)`, for `L≥8` it proves
 
@@ -290,7 +513,7 @@ integral_R exp(-2(1+delta)u) |W_b(u)|^2 du
     + 4/(2 pi) * 192 sqrt(pi) exp(5/4) * [4/L+16/(delta^3 L^2)].
 ```
 
-There is no residual local-zeta-bound or mean-square premise. Two exact regressions fix Parseval and this actual consumer; the original maximizing condition is retained to use the same witness returned by `TwistBounds`. No package/dependency change is needed beyond the already recorded closure. This closes the weighted-difference mean-square input. Difference smoothing is now proved below; the damping-parameter integral is now evaluated below; Lipschitz and full Lemma 2.2 are kernel-checked and passed combined BAT/audit acceptance; both main theorems remain open.
+There is no residual local-zeta-bound or mean-square premise. Two exact regressions fix Parseval and this actual consumer; the original maximizing condition is retained to use the same witness returned by `TwistBounds`. No package/dependency change is needed beyond the already recorded closure. This closes the weighted-difference mean-square input. Difference smoothing is now proved below; the damping-parameter integral is now evaluated below; Lipschitz and full Lemma 2.2 are kernel-checked and passed combined BAT/audit acceptance; T1 now compiles with both BATs and exact semantic acceptance passed; T2 now compiles; combined BAT/audit and semantic acceptance passed.
 
 The proved `exists_maximizingTwist_weighted_dilation_mean_square_min` strengthens the usable majorant by taking `R=min(M_A(L,b)+16,4/δ)` in the same inequality and ranges. Both branches are derived from the actual zeta product. Retaining this cap is needed for uniform parameter integration when the translation grows with the logarithmic scale.
 
@@ -302,7 +525,7 @@ exp(−Y)|S(exp Y,τ)−exp(b)S(exp(Y−b),τ)|
    +(1904642+b)/Y.
 ```
 
-The second floor error vanishes on cells whose lower endpoint exceeds `x/w`; its summed cost is at most `465x`, independent of `w`. This is an actual-difference smoothing input, not yet the uniform Lipschitz theorem. Four additional exact regressions preserve the capped mean square, original-sum convolution, active floor cost and exponential-cutoff smoothing. The translation-scale split and capped mean-square integration are now proved below, keeping the original source line and maximizer. Scalar loss absorption to the exact `1/3` exponent and all-real cutoff comparison are kernel-checked below. DWWZ-05/06 are DONE; the total is 7/20.
+The second floor error vanishes on cells whose lower endpoint exceeds `x/w`; its summed cost is at most `465x`, independent of `w`. This is an actual-difference smoothing input, not yet the uniform Lipschitz theorem. Four additional exact regressions preserve the capped mean square, original-sum convolution, active floor cost and exponential-cutoff smoothing. The translation-scale split and capped mean-square integration are now proved below, keeping the original source line and maximizer. Scalar loss absorption to the exact `1/3` exponent and all-real cutoff comparison are kernel-checked below. DWWZ-05/06 are DONE; the total is 20/20.
 
 `DilationAssembly` now proves translation-scale log-weight removal, weighted Cauchy–Schwarz, fixed-source-line reconstruction up to `Y≤2L`, and absolutely integrable Fubini. The source line remains `1+1/L` and the same maximizing twist is retained, including for cutoffs above the base scale.
 
