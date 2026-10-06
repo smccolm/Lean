@@ -1,0 +1,689 @@
+{
+  "source": "Sources/Dubon-v1-source/Zero_Density_Concentration_for_Dirichlet_Polynomials.tex",
+  "sha256": "605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b",
+  "labels": [
+    {
+      "label": "eq:intro-P",
+      "line": 74
+    },
+    {
+      "label": "eq:zetaN-intro",
+      "line": 80
+    },
+    {
+      "label": "eq:Jessen-intro",
+      "line": 92
+    },
+    {
+      "label": "sec:main-results",
+      "line": 114
+    },
+    {
+      "label": "eq:MN-intro",
+      "line": 117
+    },
+    {
+      "label": "def:concentration",
+      "line": 122
+    },
+    {
+      "label": "eq:concentration-def",
+      "line": 124
+    },
+    {
+      "label": "eq:JT-main-intro",
+      "line": 134
+    },
+    {
+      "label": "eq:global-energy-intro",
+      "line": 145
+    },
+    {
+      "label": "thm:abstract-main",
+      "line": 149
+    },
+    {
+      "label": "H1intro",
+      "line": 157
+    },
+    {
+      "label": "eq:H1-intro",
+      "line": 158
+    },
+    {
+      "label": "H2intro",
+      "line": 163
+    },
+    {
+      "label": "eq:H2comp-intro",
+      "line": 164
+    },
+    {
+      "label": "eq:isolated-energy-intro",
+      "line": 171
+    },
+    {
+      "label": "eq:H2energy-intro",
+      "line": 175
+    },
+    {
+      "label": "eq:abstract-potential-intro",
+      "line": 183
+    },
+    {
+      "label": "eq:abstract-measure-intro",
+      "line": 189
+    },
+    {
+      "label": "rem:further-families",
+      "line": 196
+    },
+    {
+      "label": "thm:zeta-intro",
+      "line": 200
+    },
+    {
+      "label": "eq:zeta-potential-intro",
+      "line": 206
+    },
+    {
+      "label": "eq:zeta-measure-intro",
+      "line": 212
+    },
+    {
+      "label": "thm:dirichlet-intro",
+      "line": 217
+    },
+    {
+      "label": "eq:dir-potential-intro",
+      "line": 227
+    },
+    {
+      "label": "eq:dir-measure-intro",
+      "line": 233
+    },
+    {
+      "label": "eq:modular-fourier-intro",
+      "line": 245
+    },
+    {
+      "label": "eq:lambda-normalization-intro",
+      "line": 257
+    },
+    {
+      "label": "thm:modular-intro",
+      "line": 263
+    },
+    {
+      "label": "eq:automorphic-partial-intro",
+      "line": 265
+    },
+    {
+      "label": "eq:modular-potential-intro",
+      "line": 269
+    },
+    {
+      "label": "eq:modular-measure-intro",
+      "line": 275
+    },
+    {
+      "label": "eq:classical-modular-intro",
+      "line": 282
+    },
+    {
+      "label": "eq:kover2-intro",
+      "line": 286
+    },
+    {
+      "label": "sec:bohr-jessen",
+      "line": 291
+    },
+    {
+      "label": "eq:prime-factorization",
+      "line": 296
+    },
+    {
+      "label": "eq:bohr-lift-general",
+      "line": 302
+    },
+    {
+      "label": "eq:vertical-restriction",
+      "line": 310
+    },
+    {
+      "label": "prop:prime-injectivity",
+      "line": 317
+    },
+    {
+      "label": "lem:log-integrable",
+      "line": 348
+    },
+    {
+      "label": "eq:circle-root-distance",
+      "line": 369
+    },
+    {
+      "label": "eq:log-integral-elementary",
+      "line": 380
+    },
+    {
+      "label": "eq:Mahler-fiber-Jensen",
+      "line": 405
+    },
+    {
+      "label": "prop:bohr-jessen",
+      "line": 466
+    },
+    {
+      "label": "eq:Jessen-general",
+      "line": 468
+    },
+    {
+      "label": "eq:bohr-jessen-identity",
+      "line": 475
+    },
+    {
+      "label": "eq:truncated-mean",
+      "line": 517
+    },
+    {
+      "label": "prop:JT-density",
+      "line": 543
+    },
+    {
+      "label": "eq:JT-density",
+      "line": 545
+    },
+    {
+      "label": "eq:Riesz-measure",
+      "line": 553
+    },
+    {
+      "label": "rem:normalization-check",
+      "line": 581
+    },
+    {
+      "label": "prop:basic-bounds",
+      "line": 593
+    },
+    {
+      "label": "eq:basic-bounds",
+      "line": 595
+    },
+    {
+      "label": "prop:total-mass",
+      "line": 642
+    },
+    {
+      "label": "eq:totalmass",
+      "line": 644
+    },
+    {
+      "label": "sec:anti",
+      "line": 721
+    },
+    {
+      "label": "eq:J0-definition",
+      "line": 726
+    },
+    {
+      "label": "eq:J0-integral",
+      "line": 733
+    },
+    {
+      "label": "lem:Steinhaus",
+      "line": 740
+    },
+    {
+      "label": "eq:comparable-b",
+      "line": 742
+    },
+    {
+      "label": "eq:S-def",
+      "line": 746
+    },
+    {
+      "label": "eq:translated-log-main",
+      "line": 750
+    },
+    {
+      "label": "eq:cj-comparable",
+      "line": 769
+    },
+    {
+      "label": "eq:char-product",
+      "line": 788
+    },
+    {
+      "label": "eq:J0-small",
+      "line": 799
+    },
+    {
+      "label": "eq:J0-large",
+      "line": 804
+    },
+    {
+      "label": "eq:J0-strict",
+      "line": 815
+    },
+    {
+      "label": "eq:region-I",
+      "line": 824
+    },
+    {
+      "label": "eq:region-I-integral",
+      "line": 831
+    },
+    {
+      "label": "eq:R-choice",
+      "line": 841
+    },
+    {
+      "label": "eq:middle-arguments",
+      "line": 845
+    },
+    {
+      "label": "eq:rhoK",
+      "line": 849
+    },
+    {
+      "label": "eq:region-II-integral",
+      "line": 856
+    },
+    {
+      "label": "eq:region-III-pointwise",
+      "line": 866
+    },
+    {
+      "label": "eq:region-III-exact",
+      "line": 884
+    },
+    {
+      "label": "eq:region-III-integral",
+      "line": 891
+    },
+    {
+      "label": "eq:L1-characteristic",
+      "line": 896
+    },
+    {
+      "label": "eq:density-definition",
+      "line": 900
+    },
+    {
+      "label": "eq:density-bound",
+      "line": 908
+    },
+    {
+      "label": "eq:small-ball",
+      "line": 919
+    },
+    {
+      "label": "eq:negative-log-tail",
+      "line": 932
+    },
+    {
+      "label": "eq:negative-log-bound",
+      "line": 946
+    },
+    {
+      "label": "eq:normalized-log-bound",
+      "line": 953
+    },
+    {
+      "label": "rem:translation-important",
+      "line": 964
+    },
+    {
+      "label": "sec:abstract",
+      "line": 968
+    },
+    {
+      "label": "eq:isolated-decomposition",
+      "line": 975
+    },
+    {
+      "label": "prop:isolated-lower-general",
+      "line": 998
+    },
+    {
+      "label": "eq:isolated-comparable-general",
+      "line": 1000
+    },
+    {
+      "label": "eq:isolated-lower-general",
+      "line": 1007
+    },
+    {
+      "label": "eq:conditioned-isolated-bound",
+      "line": 1073
+    },
+    {
+      "label": "eq:MN-growth-automatic",
+      "line": 1120
+    },
+    {
+      "label": "eq:MN-growth-intro",
+      "line": 1125
+    },
+    {
+      "label": "eq:abstract-upper",
+      "line": 1135
+    },
+    {
+      "label": "eq:limsup-abstract",
+      "line": 1141
+    },
+    {
+      "label": "eq:abstract-lower",
+      "line": 1151
+    },
+    {
+      "label": "eq:pointwise-left",
+      "line": 1163
+    },
+    {
+      "label": "eq:pointwise-right",
+      "line": 1168
+    },
+    {
+      "label": "eq:testfunction-measure",
+      "line": 1190
+    },
+    {
+      "label": "eq:testfunction-limit",
+      "line": 1193
+    },
+    {
+      "label": "sec:zeta",
+      "line": 1284
+    },
+    {
+      "label": "eq:zeta-global-energy",
+      "line": 1290
+    },
+    {
+      "label": "eq:zeta-energy-left",
+      "line": 1294
+    },
+    {
+      "label": "eq:zeta-QN",
+      "line": 1330
+    },
+    {
+      "label": "eq:dyadic-PNT",
+      "line": 1334
+    },
+    {
+      "label": "eq:zeta-comparable",
+      "line": 1340
+    },
+    {
+      "label": "eq:zeta-isolated-energy-bounds",
+      "line": 1355
+    },
+    {
+      "label": "eq:zeta-isolated-energy",
+      "line": 1367
+    },
+    {
+      "label": "cor:zeta-density",
+      "line": 1375
+    },
+    {
+      "label": "eq:zeta-density-coro",
+      "line": 1377
+    },
+    {
+      "label": "rem:zeta-support",
+      "line": 1391
+    },
+    {
+      "label": "sec:dirichlet",
+      "line": 1395
+    },
+    {
+      "label": "lem:dirichlet-energy",
+      "line": 1403
+    },
+    {
+      "label": "eq:dirichlet-energy",
+      "line": 1405
+    },
+    {
+      "label": "eq:dir-left-asymp",
+      "line": 1411
+    },
+    {
+      "label": "eq:dir-center-asymp",
+      "line": 1421
+    },
+    {
+      "label": "eq:coprime-count",
+      "line": 1436
+    },
+    {
+      "label": "eq:abel-dir",
+      "line": 1439
+    },
+    {
+      "label": "eq:dir-Abel-expanded",
+      "line": 1451
+    },
+    {
+      "label": "eq:MN-dir",
+      "line": 1520
+    },
+    {
+      "label": "rem:principal-character",
+      "line": 1530
+    },
+    {
+      "label": "sec:modular",
+      "line": 1534
+    },
+    {
+      "label": "eq:rankin-selberg",
+      "line": 1541
+    },
+    {
+      "label": "lem:modular-energy",
+      "line": 1547
+    },
+    {
+      "label": "eq:weighted-RS-left",
+      "line": 1549
+    },
+    {
+      "label": "eq:weighted-RS-center",
+      "line": 1556
+    },
+    {
+      "label": "eq:modular-Abel",
+      "line": 1565
+    },
+    {
+      "label": "eq:RS-weighted-error",
+      "line": 1580
+    },
+    {
+      "label": "eq:modular-H1",
+      "line": 1609
+    },
+    {
+      "label": "eq:ST-param",
+      "line": 1619
+    },
+    {
+      "label": "eq:ST-measure",
+      "line": 1624
+    },
+    {
+      "label": "eq:ST-semicircle",
+      "line": 1629
+    },
+    {
+      "label": "eq:ST-count-global",
+      "line": 1640
+    },
+    {
+      "label": "eq:ST-count-dyadic",
+      "line": 1645
+    },
+    {
+      "label": "eq:modular-PN",
+      "line": 1650
+    },
+    {
+      "label": "eq:modular-comparable",
+      "line": 1658
+    },
+    {
+      "label": "eq:modular-isolated-energy-def",
+      "line": 1669
+    },
+    {
+      "label": "eq:modular-isolated-energy",
+      "line": 1678
+    },
+    {
+      "label": "eq:modular-H2",
+      "line": 1682
+    },
+    {
+      "label": "eq:classical-shift",
+      "line": 1707
+    },
+    {
+      "label": "cor:level-one",
+      "line": 1715
+    }
+  ],
+  "bibliography": [
+    {
+      "key": "Andersson2026",
+      "line": 1740,
+      "tex": "V.~Andersson,\n\\textit{The Littlewood--Paley formula and mean counting function for vertical limits of Dirichlet series},\npreprint (2026), arXiv:2606.20293."
+    },
+    {
+      "key": "BLGG2011",
+      "line": 1745,
+      "tex": "T.~Barnet-Lamb, T.~Gee and D.~Geraghty,\n\\textit{The Sato--Tate conjecture for Hilbert modular forms},\nJ. Amer. Math. Soc. \\textbf{24} (2011), no.~2, 411--469,\ndoi:10.1090/S0894-0347-2010-00689-3."
+    },
+    {
+      "key": "Boyd1998",
+      "line": 1751,
+      "tex": "D.~W.~Boyd,\n\\textit{Mahler's measure and special values of $L$-functions},\nExperiment. Math. \\textbf{7} (1998), no.~1, 37--82,\ndoi:10.1080/10586458.1998.10504357."
+    },
+    {
+      "key": "BorweinEtAl2007",
+      "line": 1757,
+      "tex": "P.~Borwein, G.~Fee, R.~Ferguson and A.~van der Waall,\n\\textit{Zeros of partial sums of the Riemann zeta function},\nExperiment. Math. \\textbf{16} (2007), no.~1, 21--39,\ndoi:10.1080/10586458.2007.10128981."
+    },
+    {
+      "key": "Conway1978",
+      "line": 1763,
+      "tex": "J.~B.~Conway,\n\\textit{Functions of One Complex Variable I},\n2nd ed., Graduate Texts in Mathematics, vol.~11,\nSpringer-Verlag, New York, 1978."
+    },
+    {
+      "key": "Deligne1974",
+      "line": 1769,
+      "tex": "P.~Deligne,\n\\textit{La conjecture de Weil. I},\nPubl. Math. Inst. Hautes \\`Etudes Sci. \\textbf{43} (1974), 273--307,\ndoi:10.1007/BF02684373."
+    },
+    {
+      "key": "Dubon2025",
+      "line": 1775,
+      "tex": "E.~Dubon,\n\\textit{A note on the density of zeros of partial sums of the Dirichlet lambda, beta and eta functions},\nEur. J. Math. \\textbf{11} (2025), Paper No.~29,\ndoi:10.1007/s40879-025-00821-0."
+    },
+    {
+      "key": "Folland1999",
+      "line": 1781,
+      "tex": "G.~B.~Folland,\n\\textit{Real Analysis: Modern Techniques and Their Applications},\n2nd ed., Wiley, New York, 1999."
+    },
+    {
+      "key": "GonekLedoan2010",
+      "line": 1786,
+      "tex": "S.~M.~Gonek and A.~H.~Ledoan,\n\\textit{Zeros of partial sums of the Riemann zeta-function},\nInt. Math. Res. Not. IMRN (2010), no.~10, 1775--1791,\ndoi:10.1093/imrn/rnp186."
+    },
+    {
+      "key": "HavilandWintner1934",
+      "line": 1792,
+      "tex": "E.~K.~Haviland and A.~Wintner,\n\\textit{A note on the Kronecker--Weyl theorem},\nAmer. J. Math. \\textbf{56} (1934), no.~1, 17--24,\ndoi:10.2307/2370908."
+    },
+    {
+      "key": "IwaniecTopics",
+      "line": 1798,
+      "tex": "H.~Iwaniec,\n\\textit{Topics in Classical Automorphic Forms},\nGraduate Studies in Mathematics, vol.~17,\nAmerican Mathematical Society, Providence, RI, 1997."
+    },
+    {
+      "key": "JessenTornehave1945",
+      "line": 1804,
+      "tex": "B.~Jessen and H.~Tornehave,\n\\textit{Mean motions and zeros of almost periodic functions},\nActa Math. \\textbf{77} (1945), 137--279."
+    },
+    {
+      "key": "Kahane1985",
+      "line": 1809,
+      "tex": "J.-P.~Kahane,\n\\textit{Some Random Series of Functions},\n2nd ed., Cambridge Studies in Advanced Mathematics, vol.~5,\nCambridge University Press, Cambridge, 1985."
+    },
+    {
+      "key": "KerrKlurmanThorner2026",
+      "line": 1815,
+      "tex": "B.~Kerr, O.~Klurman and J.~Thorner,\n\\textit{Zeros of $L$-functions and large partial sums of Dirichlet coefficients},\nMath. Ann. \\textbf{396} (2026), no.~1, Article~23,\ndoi:10.1007/s00208-026-03542-1."
+    },
+    {
+      "key": "LedoanRoyZaharescu2014",
+      "line": 1821,
+      "tex": "A.~Ledoan, A.~Roy and A.~Zaharescu,\n\\textit{Zeros of partial sums of the Dedekind zeta function of a cyclotomic field},\nJ. Number Theory \\textbf{136} (2014), 118--133,\ndoi:10.1016/j.jnt.2013.09.003."
+    },
+    {
+      "key": "LiRoyZaharescu2016",
+      "line": 1827,
+      "tex": "J.~Li, A.~Roy and A.~Zaharescu,\n\\textit{Zeros of a family of approximations of Hecke $L$-functions associated with cusp forms},\nRamanujan J. \\textbf{41} (2016), no.~1--3, 391--419,\ndoi:10.1007/s11139-016-9791-3."
+    },
+    {
+      "key": "Montgomery1983",
+      "line": 1833,
+      "tex": "H.~L.~Montgomery,\n\\textit{Zeros of approximations to the zeta function},\nin \\textit{Studies in Pure Mathematics: To the Memory of Paul Tur\\'an},\nBirkh\\\"auser, Basel, 1983, 497--506."
+    },
+    {
+      "key": "Mora2013",
+      "line": 1839,
+      "tex": "G.~Mora,\n\\textit{On the asymptotically uniform distribution of the zeros of the partial sums of the Riemann zeta function},\nJ. Math. Anal. Appl. \\textbf{403} (2013), no.~1, 120--128,\ndoi:10.1016/j.jmaa.2013.02.006."
+    },
+    {
+      "key": "Rankin1939",
+      "line": 1845,
+      "tex": "R.~A.~Rankin,\n\\textit{Contributions to the theory of Ramanujan's function $\\tau(n)$ and similar arithmetical functions. II. The order of the Fourier coefficients of integral modular forms},\nProc. Cambridge Philos. Soc. \\textbf{35} (1939), 357--372,\ndoi:10.1017/S0305004100021101."
+    },
+    {
+      "key": "Rockafellar1970",
+      "line": 1851,
+      "tex": "R.~T.~Rockafellar,\n\\textit{Convex Analysis},\nPrinceton Mathematical Series, vol.~28,\nPrinceton University Press, Princeton, NJ, 1970."
+    },
+    {
+      "key": "RoyVatwani2019",
+      "line": 1857,
+      "tex": "A.~Roy and A.~Vatwani,\n\\textit{Zeros of partial sums of $L$-functions},\nAdv. Math. \\textbf{346} (2019), 467--509,\ndoi:10.1016/j.aim.2019.02.009."
+    },
+    {
+      "key": "RoyVatwani2021",
+      "line": 1863,
+      "tex": "A.~Roy and A.~Vatwani,\n\\textit{Zeros of Dirichlet polynomials},\nTrans. Amer. Math. Soc. \\textbf{374} (2021), no.~1, 643--661,\ndoi:10.1090/tran/8261."
+    },
+    {
+      "key": "Rudin1962",
+      "line": 1869,
+      "tex": "W.~Rudin,\n\\textit{Fourier Analysis on Groups},\nInterscience Publishers, New York, 1962."
+    },
+    {
+      "key": "Selberg1940",
+      "line": 1874,
+      "tex": "A.~Selberg,\n\\textit{Bemerkungen \\\"uber eine Dirichletsche Reihe, die mit der Theorie der Modulformen nahe verbunden ist},\nArch. Math. Naturvid. \\textbf{43} (1940), 47--50."
+    },
+    {
+      "key": "Watson1944",
+      "line": 1879,
+      "tex": "G.~N.~Watson,\n\\textit{A Treatise on the Theory of Bessel Functions},\n2nd ed., Cambridge University Press, Cambridge, 1944."
+    }
+  ]
+}

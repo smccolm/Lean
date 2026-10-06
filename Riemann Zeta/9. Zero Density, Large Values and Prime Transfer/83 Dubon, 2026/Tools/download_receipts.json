@@ -1,0 +1,242 @@
+[
+  {
+    "path": "Sources/dubon-2609.17875v1.pdf",
+    "url": "https://arxiv.org/pdf/2609.17875v1",
+    "finalUrl": "https://arxiv.org/pdf/2609.17875v1",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 310554,
+    "sha256": "a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/dubon-2609.17875v1.tar",
+    "url": "https://arxiv.org/src/2609.17875v1",
+    "finalUrl": "https://arxiv.org/src/2609.17875v1",
+    "status": 200,
+    "contentType": "application/gzip",
+    "bytes": 21443,
+    "sha256": "94ffdb0fa9c3b9b77072f3a4f148b0cc924161393aa10d8e40b3ff658ac05d55",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/arxiv-2609.17875-20261006.html",
+    "url": "https://arxiv.org/abs/2609.17875",
+    "finalUrl": "https://arxiv.org/abs/2609.17875",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 40604,
+    "sha256": "400db132a2831a760f8c3f66a83788a61eb86199855d8da9c053c429e28616f0",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/dubon-2609.17875v1.html",
+    "url": "https://arxiv.org/html/2609.17875v1",
+    "finalUrl": "https://arxiv.org/html/2609.17875v1",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 651775,
+    "sha256": "1bda2f077a325186279eee7ece74bf9481e788d2e018354b00445cc69a3d50bb",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/andersson-2606.20293v2.pdf",
+    "url": "https://arxiv.org/pdf/2606.20293v2",
+    "finalUrl": "https://arxiv.org/pdf/2606.20293v2",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 641715,
+    "sha256": "4fa79d3eeb670dd999ef967e1a55adf3103f3343941aaba7b5778aa21ce116d8",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/blgg-sato-tate-0912.1054v2.pdf",
+    "url": "https://arxiv.org/pdf/0912.1054v2",
+    "finalUrl": "https://arxiv.org/pdf/0912.1054v2",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 697193,
+    "sha256": "d567f94b94c1ae49d8e40ade0e37d29a566fb71ee6b0743542be47e5b0fb8b4b",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/dubon-2025-dirichlet-density.pdf",
+    "url": "https://rua.ua.es/server/api/core/bitstreams/72ba6490-c00a-4ec4-b595-bbd19fd2e270/content",
+    "finalUrl": "https://rua.ua.es/server/api/core/bitstreams/72ba6490-c00a-4ec4-b595-bbd19fd2e270/content",
+    "status": 200,
+    "contentType": "application/pdf;charset=UTF-8",
+    "bytes": 225862,
+    "sha256": "391947354b29f9dbbbf1dddd157e6d1246ab6deeaff7c1a458fb1cc21bf2131c",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/author-ua-cv-20261006.html",
+    "url": "https://cvnet.cpd.ua.es/curriculum-breve/es/dubon-eric-vincent/19872",
+    "finalUrl": "https://cvnet.cpd.ua.es/curriculum-breve/es/dubon-eric-vincent/19872",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 36890,
+    "sha256": "503195711cd396f161adffcb7dd5d7f4dfd67f62276241f453488274c4af9495",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/github-search-arxiv-20261006.json",
+    "url": "https://api.github.com/search/repositories?q=2609.17875",
+    "finalUrl": "https://api.github.com/search/repositories?q=2609.17875",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 55,
+    "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/github-search-title-20261006.json",
+    "url": "https://api.github.com/search/repositories?q=%22Zero-Density+Concentration%22",
+    "finalUrl": "https://api.github.com/search/repositories?q=%22Zero-Density+Concentration%22",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 55,
+    "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/github-search-dubon-20261006.json",
+    "url": "https://api.github.com/search/repositories?q=Dubon+Dirichlet",
+    "finalUrl": "https://api.github.com/search/repositories?q=Dubon+Dirichlet",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 55,
+    "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/mathlib-head-20261006.json",
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/commits/master",
+    "finalUrl": "https://api.github.com/repos/leanprover-community/mathlib4/commits/master",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 4723,
+    "sha256": "073e63f7298d0929a6af45f52d0eee0b9cb9c47428d3ad1fb69103fa9003e699",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/pntplus-head-20261006.json",
+    "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/commits/main",
+    "finalUrl": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/commits/main",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 75999,
+    "sha256": "c95098eeff80ade6b6d00ab703c8ab6928e33039ec71a178fb28d07ae7458de0",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/expdb-head-20261006.json",
+    "url": "https://api.github.com/repos/teorth/expdb/commits/main",
+    "finalUrl": "https://api.github.com/repos/teorth/expdb/commits/main",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 6128,
+    "sha256": "00b6e5f64cd9083956f3d3a381284838f643326b3144be8f9371fbd20006173c",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/mathlib-tree-20261006.json",
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/git/trees/331d5244f0d3aad530d9ab00ded135b4c7691502?recursive=1",
+    "finalUrl": "https://api.github.com/repos/leanprover-community/mathlib4/git/trees/331d5244f0d3aad530d9ab00ded135b4c7691502?recursive=1",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 2806009,
+    "sha256": "4d696c6fd2bf7b139cca8b3e60e1b16f043fef551d555398598d5c3e4936c65b",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/mathlib-lean-toolchain-20261006.txt",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/331d5244f0d3aad530d9ab00ded135b4c7691502/lean-toolchain",
+    "finalUrl": "https://raw.githubusercontent.com/leanprover-community/mathlib4/331d5244f0d3aad530d9ab00ded135b4c7691502/lean-toolchain",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 29,
+    "sha256": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/pntplus-tree-20261006.json",
+    "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/c39a751132c88b6e8080b74c74023fd95b3d8be0?recursive=1",
+    "finalUrl": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/c39a751132c88b6e8080b74c74023fd95b3d8be0?recursive=1",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 94378,
+    "sha256": "83a570cf189e3dac1617b1353dd004a9811276a4c52d4b80f08c4904a8c65228",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/pntplus-lean-toolchain-20261006.txt",
+    "url": "https://raw.githubusercontent.com/AlexKontorovich/PrimeNumberTheoremAnd/c39a751132c88b6e8080b74c74023fd95b3d8be0/lean-toolchain",
+    "finalUrl": "https://raw.githubusercontent.com/AlexKontorovich/PrimeNumberTheoremAnd/c39a751132c88b6e8080b74c74023fd95b3d8be0/lean-toolchain",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 24,
+    "sha256": "3f9803cfd3bce5e50120efa5412d1c92f58adbe802154353d29ac98e5722269e",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/expdb-tree-20261006.json",
+    "url": "https://api.github.com/repos/teorth/expdb/git/trees/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691?recursive=1",
+    "finalUrl": "https://api.github.com/repos/teorth/expdb/git/trees/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691?recursive=1",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 41012,
+    "sha256": "041c05a90da80dfb095713f63f603486f9356ce35d006d51701b36c9f59cc300",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/jessen-tornehave-catalogue-20261006.html",
+    "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20170108203121071731656",
+    "finalUrl": "https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20170108203121071731656",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 28033,
+    "sha256": "21f4064372a40d32e06aec1710da0d80309d380573092de06a40132d1c8cd835",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/leanbridge-readme-20261006.md",
+    "url": "https://raw.githubusercontent.com/cbirkbeck/LeanBridge/main/README.md",
+    "finalUrl": "https://raw.githubusercontent.com/cbirkbeck/LeanBridge/main/README.md",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 9587,
+    "sha256": "90fb298c6644ec7b04666266d7675dee5195212cf9bafb9daa59a1b18dcf894d",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/ramanujan-tau-readme-20261006.md",
+    "url": "https://raw.githubusercontent.com/AxiomMath/ramanujan-tau-misses-primes/main/README.md",
+    "finalUrl": "https://raw.githubusercontent.com/AxiomMath/ramanujan-tau-misses-primes/main/README.md",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 1531,
+    "sha256": "39f61de1f55431c3deb8d185c16871e9d794c5a209bcbbc89583a318274a1a29",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/mathlib-current-Bessel.lean.txt",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/331d5244f0d3aad530d9ab00ded135b4c7691502/Mathlib/Analysis/SpecialFunctions/Bessel.lean",
+    "finalUrl": "https://raw.githubusercontent.com/leanprover-community/mathlib4/331d5244f0d3aad530d9ab00ded135b4c7691502/Mathlib/Analysis/SpecialFunctions/Bessel.lean",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 4301,
+    "sha256": "9121e55083282ddf920fbf17699a294975c98f2087511daf639c1c3768926e72",
+    "retrievedOn": "2026-10-06"
+  },
+  {
+    "path": "Sources/jessen-tornehave-1945.pdf",
+    "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/117/5656-11511_2006_Article_BF02392225.pdf",
+    "finalUrl": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/117/5656-11511_2006_Article_BF02392225.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 6458521,
+    "sha256": "691b6c2726442a327cfa65cfd8ebf0ac94deffa871af98b5a3f71df8ef231a75",
+    "retrievedOn": "2026-10-06"
+  }
+]

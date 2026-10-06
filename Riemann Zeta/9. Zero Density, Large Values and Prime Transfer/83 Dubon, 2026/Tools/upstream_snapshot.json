@@ -1,0 +1,72 @@
+{
+  "asOf": "2026-10-06",
+  "paper": {
+    "arxiv": "2609.17875",
+    "frozen": "v1",
+    "submitted": "2026-09-15T22:04:33Z",
+    "pages": 28,
+    "observedVersions": [
+      "v1"
+    ],
+    "journalReferenceFound": false,
+    "erratumFound": false
+  },
+  "repositories": [
+    {
+      "repository": "leanprover-community/mathlib4",
+      "sha": "331d5244f0d3aad530d9ab00ded135b4c7691502",
+      "commitDate": "2026-10-06T06:45:16Z",
+      "treeTruncated": false,
+      "observedToolchain": "leanprover/lean4:v4.35.0-rc3",
+      "selectedDependency": false
+    },
+    {
+      "repository": "AlexKontorovich/PrimeNumberTheoremAnd",
+      "sha": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+      "commitDate": "2026-10-01T03:31:57Z",
+      "treeTruncated": false,
+      "observedToolchain": "leanprover/lean4:v4.34.0",
+      "selectedDependency": false
+    },
+    {
+      "repository": "teorth/expdb",
+      "sha": "c8eda5e4f1f51024b6cbf70c7bef6c33da74c691",
+      "commitDate": "2026-09-26T19:01:00Z",
+      "treeTruncated": false,
+      "observedToolchain": null,
+      "selectedDependency": false
+    }
+  ],
+  "githubRepositorySearch": [
+    {
+      "query": "2609.17875",
+      "totalCount": 0,
+      "evidence": "Sources/github-search-arxiv-20261006.json"
+    },
+    {
+      "query": "\"Zero-Density Concentration\"",
+      "totalCount": 0,
+      "evidence": "Sources/github-search-title-20261006.json"
+    },
+    {
+      "query": "Dubon Dirichlet",
+      "totalCount": 0,
+      "evidence": "Sources/github-search-dubon-20261006.json"
+    }
+  ],
+  "additionalWebQueries": [
+    "Dubon 2026 Dirichlet polynomial zero density",
+    "\"Zero-Density Concentration for Dirichlet Polynomials\" code repository",
+    "\"2609.17875\" erratum correction",
+    "\"2609.17875\" site:github.com",
+    "\"Jessen\" \"Bohr\" \"Lean\" formalization",
+    "Sato Tate Lean formalization",
+    "Bessel J0 Lean Mathlib"
+  ],
+  "additionalPrimaryResources": [
+    "https://cvnet.cpd.ua.es/curriculum-breve/es/dubon-eric-vincent/19872",
+    "https://github.com/cbirkbeck/LeanBridge",
+    "https://github.com/AxiomMath/ramanujan-tau-misses-primes"
+  ],
+  "limits": "Bounded public web, arXiv source/history, institutional author page, GitHub repository search and selected exact-commit trees/source inspection. No authenticated global code search, author contact or assertion about private/unindexed work. Research observations are not kernel verification."
+}

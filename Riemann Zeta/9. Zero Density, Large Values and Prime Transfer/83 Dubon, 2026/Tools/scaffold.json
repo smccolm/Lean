@@ -1,0 +1,923 @@
+{
+  "mode": "active-development",
+  "goalActivated": true,
+  "asOf": "2026-10-06",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "role": "root"
+    },
+    {
+      "path": ".gitignore",
+      "role": "root"
+    },
+    {
+      "path": ".gitkeep",
+      "role": "root"
+    },
+    {
+      "path": "Dependencies/README.md",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dubon Architecture.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Checklist.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Computation Review.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Crosswalk.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Errata.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Goal Prompt.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Reproduction Manifest.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Research Agenda.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Source Contract.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Sources.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Template Inventory.md",
+      "role": "root"
+    },
+    {
+      "path": "Extension/Dubon2026/Audit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BesselDecay.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BesselJ0.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinomialJessen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinomialMeasure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinomialZeroCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinomialZeros.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BohrLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BoundedLogExpectation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleCharacteristic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleGaussian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleMoments.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleOscillation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CirclePolynomialLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleQuarter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleRadial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CircleSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactJetCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ConvexAsymptotes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ConvexDerivativeLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ConvexDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DirichletDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DirichletPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DirichletZeros.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DyadicPrimeGrowth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DyadicPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ExponentialTailIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaussianDensityLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaussianSmoothingBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaussianTestKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaussianTestPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GridProductBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HaarChord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeightLimitTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherRolle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InterpolationDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InverseCharacteristic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InverseCharacteristicMeasure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsolatedBohrDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsolatedHaarLower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsolatedPrimeLower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsolatedPrimeMonomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsolatedPrimeSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsolatedTorusSplit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JensenZeroBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenConvexity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenDerivativeLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenIntervalLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenLeftLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenMass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenMean.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenProbability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenRightLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenSlopeBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/JessenStieltjes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LeadingBohrTerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LogarithmicScale.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LogDeficit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LogTruncation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MultivariateBohrPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NeighborhoodConcentration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PeriodicMean.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PlanarDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PlanarGaussian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PlanarSmallBall.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarRadialIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PotentialEquicontinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PotentialPointwise.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeCountAsymptotics.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeCountingPNT.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeFrequencies.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeSelection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeTorus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RadialInnerIntegrals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RadialTailIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealVerticalJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RectangleZeroCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SemanticRegression.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallBallLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausFourierL1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausIndependentLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausLogNormalized.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausLogScale.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausPhases.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausRadialIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausRegionBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SteinhausRegions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SublevelCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ThreeRegionIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusEquidistribution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusGridApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusGridAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusGridCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusGridLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusJensen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TorusPolynomialLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwistProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwistProductStrip.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UniformLocalZeroCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UniformLogIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UniformTwistZeroBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UniformVerticalSublevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnitIntervalAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnitLogTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VerticalFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VerticalJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VerticalLogTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VerticalZeroTranslation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WeakLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ZeroCountHeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ZeroFreeBoundaries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ZeroFreeHalfPlanes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/lake-manifest.json",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/lakefile.toml",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/lean-toolchain",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/README.md",
+      "role": "Extension"
+    },
+    {
+      "path": "push_to_github.bat",
+      "role": "root"
+    },
+    {
+      "path": "README.md",
+      "role": "root"
+    },
+    {
+      "path": "run_dubon_build.bat",
+      "role": "root"
+    },
+    {
+      "path": "Sources/andersson-2606.20293v2.pdf",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/arxiv-2609.17875-20261006.html",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/author-ua-cv-20261006.html",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/blgg-sato-tate-0912.1054v2.pdf",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/dubon-2025-dirichlet-density.pdf",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/dubon-2609.17875v1.html",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/dubon-2609.17875v1.pdf",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/dubon-2609.17875v1.tar",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/Dubon-v1-source/00README.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/Dubon-v1-source/Zero_Density_Concentration_for_Dirichlet_Polynomials.tex",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/expdb-head-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/expdb-tree-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/github-search-arxiv-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/github-search-dubon-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/github-search-title-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/jessen-tornehave-1945.pdf",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/jessen-tornehave-catalogue-20261006.html",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/leanbridge-readme-20261006.md",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/mathlib-current-Bessel.lean.txt",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/mathlib-head-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/mathlib-lean-toolchain-20261006.txt",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/mathlib-tree-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/PINS.md",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/pntplus-head-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/pntplus-lean-toolchain-20261006.txt",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/pntplus-tree-20261006.json",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/ramanujan-tau-readme-20261006.md",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/README.md",
+      "role": "Sources"
+    },
+    {
+      "path": "Sources/SHA256SUMS.txt",
+      "role": "Sources"
+    },
+    {
+      "path": "Tools/author_code_observation.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/download_receipts.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/inspect_source_archive.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/local_reuse_inventory.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/pnt_reuse.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/proof_gates.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/README.md",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/run_dubon_verification.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/scaffold.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source_labels.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/template_inventory.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/test_scaffold.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/test_source_verifier.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/upstream_snapshot.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/verify_scaffold.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/verify_sources.ps1",
+      "role": "Tools"
+    }
+  ],
+  "statusDocuments": [
+    "Dubon Architecture.md",
+    "Dubon Checklist.md",
+    "Dubon Computation Review.md",
+    "Dubon Crosswalk.md",
+    "Dubon Errata.md",
+    "Dubon Goal Prompt.md",
+    "Dubon Reproduction Manifest.md",
+    "Dubon Research Agenda.md",
+    "Dubon Source Contract.md",
+    "Dubon Sources.md",
+    "Dubon Template Inventory.md",
+    "README.md",
+    "Dependencies/README.md",
+    "Extension/README.md",
+    "Tools/README.md"
+  ],
+  "parentConfiguration": [
+    {
+      "path": "lean-toolchain",
+      "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "45f9c3d3c46f17435c792fb7c858ae3119c461d2e0c0eb5650d546e2a85327c0"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "f4a0e8a914fe4d3a3936777af0e77fe79e965d8fe7725113d6cef3bb1370bfaa"
+    }
+  ],
+  "ownerSyncSource": "9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/push_to_github.bat",
+  "ownerSyncSha256": "9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114",
+  "copiedVerifierFiles": [
+    {
+      "path": "Tools/verify_sources.ps1",
+      "sha256": "86c16c784ff3ad00c5c26b14e2cae67cbce85e361c5fc908bfb172092d9de717"
+    },
+    {
+      "path": "Tools/test_source_verifier.ps1",
+      "sha256": "c413d15a872c06b0b1dace98fd2b1e3c7becbaa67837d158fc7edfc9a8f7492e"
+    }
+  ],
+  "proofGatesComplete": 0,
+  "proofGatesTotal": 20,
+  "productionModules": [
+    "DirichletPolynomial",
+    "DirichletZeros",
+    "BohrLift",
+    "PrimeFrequencies",
+    "SymmetricAverage",
+    "PrimeTorus",
+    "TorusEquidistribution",
+    "TorusPolynomial",
+    "TorusEnergy",
+    "CirclePolynomialLog",
+    "MultivariateBohrPolynomial",
+    "TorusPolynomialLog",
+    "TorusJensen",
+    "LogTruncation",
+    "HigherRolle",
+    "InterpolationDerivative",
+    "SublevelCover",
+    "VerticalFamily",
+    "VerticalJets",
+    "RealVerticalJets",
+    "CompactJetCover",
+    "UniformVerticalSublevel",
+    "ExponentialTailIntegral",
+    "LogDeficit",
+    "UnitLogTail",
+    "UnitIntervalAverage",
+    "VerticalLogTail",
+    "JessenMean",
+    "TorusGridCharacters",
+    "TorusGridAverage",
+    "TorusGridApproximation",
+    "TorusGridLog",
+    "TwistProducts",
+    "TwistProductStrip",
+    "GridProductBounds",
+    "HaarChord",
+    "JessenConvexity",
+    "ConvexDerivatives",
+    "JessenStieltjes",
+    "ConvexAsymptotes",
+    "JessenRightLimit",
+    "LeadingBohrTerm",
+    "UniformLogIntegral",
+    "JessenLeftLimit",
+    "JessenMass",
+    "DirichletDivisor",
+    "RectangleZeroCount",
+    "ZeroFreeHalfPlanes",
+    "ZeroFreeBoundaries",
+    "JensenZeroBound",
+    "UniformTwistZeroBound",
+    "VerticalZeroTranslation",
+    "UniformLocalZeroCount",
+    "ZeroCountHeight",
+    "HeightLimitTransfer",
+    "PeriodicMean",
+    "BinomialJessen",
+    "BinomialMeasure",
+    "BinomialZeros",
+    "BinomialZeroCount",
+    "IsolatedPrimeSupport",
+    "CircleCharacteristic",
+    "CircleMoments",
+    "CircleGaussian",
+    "CircleSeries",
+    "BesselJ0",
+    "CircleQuarter",
+    "CircleOscillation",
+    "BesselDecay",
+    "CircleRadial",
+    "SteinhausLaw",
+    "SteinhausNormalization",
+    "SteinhausRegionBounds",
+    "SteinhausRegions",
+    "RadialTailIntegral",
+    "RadialInnerIntegrals",
+    "ThreeRegionIntegral",
+    "SteinhausRadialIntegral",
+    "PolarRadialIntegral",
+    "SteinhausFourierL1",
+    "InverseCharacteristic",
+    "PlanarGaussian",
+    "InverseCharacteristicMeasure",
+    "GaussianDensityLimit",
+    "GaussianTestKernel",
+    "GaussianSmoothingBounds",
+    "GaussianTestPairing",
+    "PlanarDensity",
+    "PlanarSmallBall",
+    "SteinhausDensity",
+    "SmallBallLog",
+    "BoundedLogExpectation",
+    "SteinhausLogNormalized",
+    "SteinhausLogScale",
+    "SteinhausIndependentLaw",
+    "SteinhausLog",
+    "IsolatedPrimeMonomials",
+    "SteinhausPhases",
+    "IsolatedBohrDecomposition",
+    "IsolatedTorusSplit",
+    "IsolatedHaarLower",
+    "PrimeSelection",
+    "IsolatedPrimeLower",
+    "PotentialPointwise",
+    "JessenSlopeBounds",
+    "PotentialEquicontinuity",
+    "ConvexDerivativeLimit",
+    "JessenDerivativeLimit",
+    "JessenProbability",
+    "JessenIntervalLimit",
+    "NeighborhoodConcentration",
+    "WeakLimit",
+    "DyadicPrimes",
+    "PrimeCountingPNT",
+    "PrimeCountAsymptotics",
+    "LogarithmicScale",
+    "DyadicPrimeGrowth"
+  ],
+  "verificationModules": [
+    "SemanticRegression",
+    "Audit"
+  ]
+}

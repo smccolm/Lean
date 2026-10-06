@@ -1,0 +1,11 @@
+# Dependency and reuse plan
+
+**GOAL ACTIVE — 0/20 proof gates complete.** The isolated package has exact path dependencies on the existing root and Project 63’s `GafniTaoNative`. Every inherited git revision and the toolchain still match the root; no parent pin has changed.
+
+Selected existing root baseline: Lean `leanprover/lean4:v4.30.0`; Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`; PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The active inventory verifier checks the exact root toolchain, lakefile and manifest bytes recorded in `../Tools/scaffold.json`.
+
+Use the root and existing isolated packages as audited path dependencies where possible. Read the [Crosswalk](../Dubon%20Crosswalk.md) and exact [local inventory](../Tools/local_reuse_inventory.json). Preserve provenance, licenses and import closures for any future port; avoid duplicating complete packages to acquire one lemma. Do not treat an upstream source declaration as proved without checking its body and transitive axioms.
+
+The live 6 October snapshots are research observations only: Mathlib HEAD uses Lean 4.35.0-rc3; PNT+ HEAD uses 4.34.0. They are not compatible drop-in replacements for the selected 4.30.0 graph. The current Mathlib Bessel source is archived as `.lean.txt` reference material; it is not compiled or imported. ANTEDB/expdb is a research reference, not a source of Lean proof certificates. The author archive has no ancillary code dependency.
+
+The selected arithmetic chain imports `GafniTao.PrimeConsequences`, whose proved Wiener source is already retained in Project 63. `Dubon2026.PrimeCountingPNT` reuses Project 73’s frozen analytic consequences block in the Dubon namespace and retains its Apache-2.0 provenance. [Selected reuse hashes](../Tools/pnt_reuse.json) record the source files and path configuration. The verifier requires this exact extra local path, preserves every inherited root git pin and checks the selected source hashes. It rejects missing/replaced dependencies and changed root revisions. Raw `PrimeNumberTheoremAnd.Consequences` is excluded from this new import chain because its Wiener dependency contains two unproved declarations. This does not change any completed project or frozen source.

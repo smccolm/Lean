@@ -10,6 +10,8 @@ Author: **S. McColm**
 
 ---
 
+Project 83 now has a [Dubon 2026 project and active goal prompt](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/83%20Dubon,%202026/README.md), researched as of 6 October 2026. The owner activated its whole-paper goal on 6 October 2026; the isolated implementation is in progress, with **0/20 proof gates complete**. The existing foundation and completed extension claims are unchanged.
+
 ## Research Map Layout
 
 The wider research workspace is organized by the nine corridors in [`The RH Map - Sep 19, 2026 - Mermaid Diagram.txt`](The%20RH%20Map%20-%20Sep%2019,%202026%20-%20Mermaid%20Diagram.txt). See [`Research Organization.md`](Research%20Organization.md) for the complete directory map and the distinction between numbered source nodes and cross-node investigations.

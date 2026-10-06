@@ -1,0 +1,32 @@
+# Source pins
+
+Frozen 6 October 2026. SHA-256 is over the original bytes; Git text conversion is disabled for Sources. All downloaded artifacts have their exact retrieval metadata in `../Tools/download_receipts.json`. Extracted members have tar-member provenance.
+
+| Artifact | Bytes | SHA-256 | Provenance |
+|---|---:|---|---|
+| [andersson-2606.20293v2.pdf](andersson-2606.20293v2.pdf) | 641715 | `4fa79d3eeb670dd999ef967e1a55adf3103f3343941aaba7b5778aa21ce116d8` | [retrieval](https://arxiv.org/pdf/2606.20293v2) |
+| [arxiv-2609.17875-20261006.html](arxiv-2609.17875-20261006.html) | 40604 | `400db132a2831a760f8c3f66a83788a61eb86199855d8da9c053c429e28616f0` | [retrieval](https://arxiv.org/abs/2609.17875) |
+| [author-ua-cv-20261006.html](author-ua-cv-20261006.html) | 36890 | `503195711cd396f161adffcb7dd5d7f4dfd67f62276241f453488274c4af9495` | [retrieval](https://cvnet.cpd.ua.es/curriculum-breve/es/dubon-eric-vincent/19872) |
+| [blgg-sato-tate-0912.1054v2.pdf](blgg-sato-tate-0912.1054v2.pdf) | 697193 | `d567f94b94c1ae49d8e40ade0e37d29a566fb71ee6b0743542be47e5b0fb8b4b` | [retrieval](https://arxiv.org/pdf/0912.1054v2) |
+| [dubon-2025-dirichlet-density.pdf](dubon-2025-dirichlet-density.pdf) | 225862 | `391947354b29f9dbbbf1dddd157e6d1246ab6deeaff7c1a458fb1cc21bf2131c` | [retrieval](https://rua.ua.es/server/api/core/bitstreams/72ba6490-c00a-4ec4-b595-bbd19fd2e270/content) |
+| [dubon-2609.17875v1.html](dubon-2609.17875v1.html) | 651775 | `1bda2f077a325186279eee7ece74bf9481e788d2e018354b00445cc69a3d50bb` | [retrieval](https://arxiv.org/html/2609.17875v1) |
+| [dubon-2609.17875v1.pdf](dubon-2609.17875v1.pdf) | 310554 | `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2` | [retrieval](https://arxiv.org/pdf/2609.17875v1) |
+| [dubon-2609.17875v1.tar](dubon-2609.17875v1.tar) | 21443 | `94ffdb0fa9c3b9b77072f3a4f148b0cc924161393aa10d8e40b3ff658ac05d55` | [retrieval](https://arxiv.org/src/2609.17875v1) |
+| [Dubon-v1-source/00README.json](Dubon-v1-source/00README.json) | 258 | `6b17835a00ca2c025d674fb8551139892bd33bd76333d41dbc082a7375da5baf` | Exact member of frozen arXiv tarball |
+| [Dubon-v1-source/Zero_Density_Concentration_for_Dirichlet_Polynomials.tex](Dubon-v1-source/Zero_Density_Concentration_for_Dirichlet_Polynomials.tex) | 69121 | `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b` | Exact member of frozen arXiv tarball |
+| [expdb-head-20261006.json](expdb-head-20261006.json) | 6128 | `00b6e5f64cd9083956f3d3a381284838f643326b3144be8f9371fbd20006173c` | [retrieval](https://api.github.com/repos/teorth/expdb/commits/main) |
+| [expdb-tree-20261006.json](expdb-tree-20261006.json) | 41012 | `041c05a90da80dfb095713f63f603486f9356ce35d006d51701b36c9f59cc300` | [retrieval](https://api.github.com/repos/teorth/expdb/git/trees/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691?recursive=1) |
+| [github-search-arxiv-20261006.json](github-search-arxiv-20261006.json) | 55 | `4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f` | [retrieval](https://api.github.com/search/repositories?q=2609.17875) |
+| [github-search-dubon-20261006.json](github-search-dubon-20261006.json) | 55 | `4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f` | [retrieval](https://api.github.com/search/repositories?q=Dubon+Dirichlet) |
+| [github-search-title-20261006.json](github-search-title-20261006.json) | 55 | `4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f` | [retrieval](https://api.github.com/search/repositories?q=%22Zero-Density+Concentration%22) |
+| [jessen-tornehave-1945.pdf](jessen-tornehave-1945.pdf) | 6458521 | `691b6c2726442a327cfa65cfd8ebf0ac94deffa871af98b5a3f71df8ef231a75` | [retrieval](https://archive.ymsc.tsinghua.edu.cn/pacm_download/117/5656-11511_2006_Article_BF02392225.pdf) |
+| [jessen-tornehave-catalogue-20261006.html](jessen-tornehave-catalogue-20261006.html) | 28033 | `21f4064372a40d32e06aec1710da0d80309d380573092de06a40132d1c8cd835` | [retrieval](https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20170108203121071731656) |
+| [leanbridge-readme-20261006.md](leanbridge-readme-20261006.md) | 9587 | `90fb298c6644ec7b04666266d7675dee5195212cf9bafb9daa59a1b18dcf894d` | [retrieval](https://raw.githubusercontent.com/cbirkbeck/LeanBridge/main/README.md) |
+| [mathlib-current-Bessel.lean.txt](mathlib-current-Bessel.lean.txt) | 4301 | `9121e55083282ddf920fbf17699a294975c98f2087511daf639c1c3768926e72` | [retrieval](https://raw.githubusercontent.com/leanprover-community/mathlib4/331d5244f0d3aad530d9ab00ded135b4c7691502/Mathlib/Analysis/SpecialFunctions/Bessel.lean) |
+| [mathlib-head-20261006.json](mathlib-head-20261006.json) | 4723 | `073e63f7298d0929a6af45f52d0eee0b9cb9c47428d3ad1fb69103fa9003e699` | [retrieval](https://api.github.com/repos/leanprover-community/mathlib4/commits/master) |
+| [mathlib-lean-toolchain-20261006.txt](mathlib-lean-toolchain-20261006.txt) | 29 | `bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47` | [retrieval](https://raw.githubusercontent.com/leanprover-community/mathlib4/331d5244f0d3aad530d9ab00ded135b4c7691502/lean-toolchain) |
+| [mathlib-tree-20261006.json](mathlib-tree-20261006.json) | 2806009 | `4d696c6fd2bf7b139cca8b3e60e1b16f043fef551d555398598d5c3e4936c65b` | [retrieval](https://api.github.com/repos/leanprover-community/mathlib4/git/trees/331d5244f0d3aad530d9ab00ded135b4c7691502?recursive=1) |
+| [pntplus-head-20261006.json](pntplus-head-20261006.json) | 75999 | `c95098eeff80ade6b6d00ab703c8ab6928e33039ec71a178fb28d07ae7458de0` | [retrieval](https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/commits/main) |
+| [pntplus-lean-toolchain-20261006.txt](pntplus-lean-toolchain-20261006.txt) | 24 | `3f9803cfd3bce5e50120efa5412d1c92f58adbe802154353d29ac98e5722269e` | [retrieval](https://raw.githubusercontent.com/AlexKontorovich/PrimeNumberTheoremAnd/c39a751132c88b6e8080b74c74023fd95b3d8be0/lean-toolchain) |
+| [pntplus-tree-20261006.json](pntplus-tree-20261006.json) | 94378 | `83a570cf189e3dac1617b1353dd004a9811276a4c52d4b80f08c4904a8c65228` | [retrieval](https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/c39a751132c88b6e8080b74c74023fd95b3d8be0?recursive=1) |
+| [ramanujan-tau-readme-20261006.md](ramanujan-tau-readme-20261006.md) | 1531 | `39f61de1f55431c3deb8d185c16871e9d794c5a209bcbbc89583a318274a1a29` | [retrieval](https://raw.githubusercontent.com/AxiomMath/ramanujan-tau-misses-primes/main/README.md) |

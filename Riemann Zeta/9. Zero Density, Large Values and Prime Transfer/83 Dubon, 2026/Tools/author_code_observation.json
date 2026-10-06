@@ -1,0 +1,19 @@
+{
+  "asOf": "2026-10-06",
+  "edition": "arXiv:2609.17875v1",
+  "archiveMembers": [
+    {
+      "path": "00README.json",
+      "bytes": 258,
+      "sha256": "6b17835a00ca2c025d674fb8551139892bd33bd76333d41dbc082a7375da5baf"
+    },
+    {
+      "path": "Zero_Density_Concentration_for_Dirichlet_Polynomials.tex",
+      "bytes": 69121,
+      "sha256": "605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b"
+    }
+  ],
+  "ancillaryPrograms": [],
+  "conclusion": "The frozen two-member arXiv source archive contains TeX and 00README.json only. No companion implementation found in the bounded public search; this does not establish universal absence.",
+  "executedAuthorCode": false
+}

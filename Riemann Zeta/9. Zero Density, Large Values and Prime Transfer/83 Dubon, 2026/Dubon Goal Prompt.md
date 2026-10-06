@@ -1,0 +1,47 @@
+# Dubon 2026 — whole-paper goal prompt
+
+**GOAL ACTIVE — 0/20 proof gates complete.** The owner explicitly activated this whole-paper goal on 6 October 2026. Implementation is authorized and in progress; the source contract and all twenty acceptance gates remain binding.
+
+## Activated objective
+
+Formalize Eric Dubon's *Zero-Density Concentration for Dirichlet Polynomials*, arXiv:2609.17875v1, in an isolated extension of this existing repository. Close Theorem 2.2, Theorems 2.4–2.6, Corollaries 6.1 and 8.2 and all supporting results needed for their exact conclusions. Meet all DUB-01–DUB-20 acceptance tests. Use `Dubon2026` as the namespace and `DUB` as the gate prefix. Preserve existing completed projects 63, 71, 73, 74, 77 and 78 and the foundation freeze.
+
+Read `../../AGENTS.md`, the root README/manuscript/publication audit and node-71 status/checklist/architecture/audit. Then read every document here, `Dependencies/README.md`, and the dated JSON inventories in Tools. Verify the source ledger and read the frozen PDF, TeX and inline bibliography. Recheck arXiv, the author page and public repositories for changes after 6 October 2026; retain the frozen original and compare any new edition explicitly.
+
+## Mathematical contract
+
+1. Model the real object `P_N(s)=Σ_{1≤n≤N} a_n n^(−s)` with actual principal complex powers and positive indices. Prove the finite Bohr lift using prime factorization and its exact evaluation on the vertical flow. Reuse `RiemannZeta.dirichletPoly` with a proved index adapter where appropriate. Do not replace a finite truncation with ζ, L(s,χ), an arbitrary analytic function or a zero-set certificate.
+2. Construct the Jessen function as the fixed-N limit of `(1/(2T))∫_{−T}^T log|P_N(σ+it)|dt`. Prove its identity with normalized Haar integration, log integrability, finiteness and convexity. Continuous-test equidistribution does not by itself handle the singular logarithm. Justify log-at-zero conventions by null-set and integrability arguments.
+3. Construct the actual multiplicity-weighted vertical zero-frequency measure `(1/(2π))J″`, prove the open-strip formula with `J′(b−)−J′(a+)`, and prove total mass `log M_N/(2π)` where `M_N` is the last nonzero coefficient. The probability normalization is `J″/log M_N`, for M_N>1. Treat finitely many degenerate N separately. Verify the source normalization example and all endpoint/atom transfers.
+4. Prove Lemma 4.1 for every K≥1, one constant C_K, every m≥5, all positive K-comparable coefficients, and every complex translation. Derive the actual circle characteristic function J₀, all three Fourier-integrability regions, planar density bound, uniform small-ball estimate and logarithmic expectation bound. Preserve the Fourier normalization. Existing K₀/Y₀ estimates are candidates for techniques, not J₀ identities. Do not substitute a centered estimate, fixed m, sampled bound or translation-dependent constant.
+5. Use the isolated primes `(N/2,N]`, the actual conditional Haar product and coefficient phase rotations to prove Proposition 5.1 uniformly on compact σ intervals. Retain the source's H1 and H2 quantifiers and derive the eventual support normalization. Prove Theorem 2.2's locally uniform potential convergence on all ℝ, including α, and **weak probability** convergence to δ_α using tightness, not only vague/distributional convergence.
+6. Discharge H1/H2 for zeta partial sums and all fixed characters modulo a positive q, including principal and imprimitive characters. Use the existing PNT and explicit coprime-counting/partial-summation bridges; no prime-number theorem in progressions is needed for the dyadic prime block. Handle the σ=1/2 transition and M_N/log normalization. Prove Corollary 6.1 with the exact multiplicities, strip/boundary convention and order `lim_N lim_T`; do not exchange or couple limits.
+7. Retain the full modular branch. Use actual normalized primitive non-CM holomorphic Hecke eigenforms of even weight k≥2, fixed level Q and trivial character. Prove/import and audit the true Rankin–Selberg, Deligne and Sato–Tate inputs and all classical-to-automorphic normalization bridges. Prove the weighted energy and positive-density comparable isolated prime blocks, consume them in Theorem 2.6, prove the coefficient shift to the line k/2, and derive the level-one corollary including its non-CM/primitive conditions. A structure whose fields assume these conclusions is not a formalization of the source modular theorem.
+
+The abstract criterion is legitimately conditional on its explicitly stated H1/H2. Intermediate deductions from individually named, narrower classical inputs may be presented as conditional. They do not close the unconditional concrete application gates until those inputs have audited proofs for the actual source objects. Do not reduce the whole-paper goal to the zeta case because the modular prerequisites are substantial.
+
+## Source review and proof integrity
+
+Start with DUB-01 and the source-review register. No false theorem or author-issued correction is asserted by this template. The classical Jessen–Tornehave Theorem 31 supports the printed open-strip one-sided derivative convention; it still requires a formal bridge. Distinguish a missing formal argument from a false source statement. Attempt an independent proof before proposing a substantive repair. Preserve the literal source, evidence, changed hypotheses/constants and application checks for any justified reformulation. Routine equivalent notation/domain repairs need no extra approval; abandoning a required result or changing the central objective needs an explicit scope decision. Project 78's specific repairs do not silently rewrite this paper.
+
+Never add `sorry`, `admit`, project axioms, conclusion-equivalent hypotheses, toy models, unsafe/native evaluation as proof, missing production imports, hidden premises or suppressed warnings. A definition is not a proof; a source citation is not a Lean theorem; a successful build does not establish source equivalence. Standard logical axioms must remain visible in real transitive dependency audits.
+
+## Reuse and implementation order
+
+Inspect `Tools/local_reuse_inventory.json` and the Crosswalk before proving new foundations. Read exact signatures, proof bodies and import/axiom closures, then write the normalization consumers. Existing finite Dirichlet polynomials, prime-counting asymptotics, Abel summation, periodic Fourier analysis and sharp power sums are real starting points. Existing zeta zero-density bounds are about a different zero measure. Existing smooth-number Rankin bounds are not Rankin–Selberg. Current Mathlib's newer Bessel definition lacks the required integral/decay package and is outside the pinned toolchain.
+
+Keep Lean 4.30.0 and the selected root Mathlib/PNT+ revisions. Treat newer upstream snapshots as research only. Prefer path dependencies and minimal audited imports to copying completed extensions. Any necessary port must retain provenance/license and its complete audited import closure. Do not silently upgrade the root or create a duplicate foundation.
+
+Follow the Architecture: exact objects → Bohr/Haar/log/Jessen/zero measure; independently J₀ → translated Steinhaus → isolated-prime lower bound; then potential limit → tightness/weak limit → zeta/character applications. Actual modular objects → Rankin–Selberg energy and Deligne/Sato–Tate prime blocks → modular application and coefficient shift. Keep all twenty gates OPEN until their own source conclusions and acceptance evidence exist.
+
+## Verification and owner interfaces
+
+The isolated package in Extension is active and the runner now performs active-development verification. Maintain `run_dubon_build.bat`, arbitrary-caller-directory operation, timestamped logs, checked exit codes and `--no-pause`. Cover every production module in the root import graph; maintain exact-type source regressions and an explicit plus exhaustive transitive axiom audit. Fail on every build/audit error, project warning or tactic-suggestion diagnostic. Do not relabel scaffold success as proof success.
+
+After relevant Lean/import/package/audit/runner changes, run the existing foundation BAT and the paper BAT sequentially. Record checkout, toolchain, dependency/source/verifier hashes, commands, exits, warnings, log paths and hashes. Keep README, Checklist, Architecture, Research Agenda, Source Contract, Crosswalk, Errata and Reproduction Manifest aligned. Count neither helper lemmas nor audited declarations as completed source theorems.
+
+Keep the unchanged node-63 `push_to_github.bat` as the owner's separate interface. Do not invoke it, stage, commit, push or hard-code a message without separate authorization. Supply a proposed commit message at handoff. Optional recovery-record maintenance is skipped.
+
+## Acceptance and persistence after activation
+
+Persist through the complete requested mathematical chain; do not replace implementation with a plan, an intermediate lemma or a progress-only handoff. Before marking a gate DONE, unfold the public statement, identify real upstream consumption, establish exact source semantics, audit all dependencies and run the required checks with zero diagnostics. A genuine unresolved source or technical obstruction remains visibly OPEN. Internal project completion is distinct from independent review or publication. **The owner’s activation request authorizes carrying out this complete goal.**

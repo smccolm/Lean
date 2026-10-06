@@ -1,0 +1,23 @@
+{
+  "asOf": "2026-10-06",
+  "scope": "Existing audited node-63 path dependency plus namespaced analytic prime-counting block from frozen node-73 source. Root pins unchanged. Raw PNT+ Consequences is not imported.",
+  "selectedFiles": [
+    {
+      "pathFromSection": "63 Tao-Trudgian-Yang, 2025/Dependencies/GafniTaoNative/lakefile.toml",
+      "sha256": "7a0b3d5f3ee0bf3b4b43d59c599f9640ce498c3e322f34bf9382a1af3a113ba1"
+    },
+    {
+      "pathFromSection": "63 Tao-Trudgian-Yang, 2025/Dependencies/GafniTaoNative/GafniTao/WienerSource.lean",
+      "sha256": "4f3f74c859bb6874c9bdcb7c918287592c6fd09f7357ec45c8f21c430eba3ce9"
+    },
+    {
+      "pathFromSection": "63 Tao-Trudgian-Yang, 2025/Dependencies/GafniTaoNative/GafniTao/PrimeConsequences.lean",
+      "sha256": "6671ccf0827591a5f7b9dbd0d698a7d31315f3c933dd5110dbb48633cb4dea29"
+    },
+    {
+      "pathFromSection": "73 Tao, 2026/Dependencies/GafniTaoFrozen/PrimeNumberTheoremAndClean/PrimeNumberTheoremAnd/Consequences.lean",
+      "sha256": "922a98be40ba87aa4dee002addb23d0506b218e6defe7f18b05ae11de14007c5"
+    }
+  ],
+  "portedModule": "Extension/Dubon2026/PrimeCountingPNT.lean"
+}

@@ -1,0 +1,442 @@
+{
+  "mode": "active-development",
+  "date": "2026-10-06",
+  "goalActivated": true,
+  "namespace": "Dubon2026",
+  "prefix": "DUB",
+  "completed": 0,
+  "total": 20,
+  "gates": [
+    {
+      "id": "DUB-01",
+      "status": "OPEN",
+      "title": "Source review and frozen contracts",
+      "proposedModule": "SourceReview",
+      "sourceLabels": [
+        "thm:abstract-main",
+        "thm:zeta-intro",
+        "thm:dirichlet-intro",
+        "thm:modular-intro"
+      ],
+      "dependsOn": [],
+      "acceptance": "Review the exact PDF/TeX, all 139 labels and 25 bibliography entries; resolve each source-review item, preserving the original and any justified reformulation.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-02",
+      "status": "OPEN",
+      "title": "Actual Dirichlet polynomials and support",
+      "proposedModule": "DirichletPolynomial",
+      "sourceLabels": [],
+      "dependsOn": [
+        "DUB-01"
+      ],
+      "acceptance": "Positive indices 1..N, actual complex powers, a₁=1, largest nonzero support M_N, entire function and multiplicity model; prove adapters to existing finite-polynomial APIs.",
+      "implementationFiles": [
+        "Extension/Dubon2026/DirichletPolynomial.lean",
+        "Extension/Dubon2026/DirichletZeros.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-03",
+      "status": "OPEN",
+      "title": "Prime factorization and Bohr flow",
+      "proposedModule": "BohrLift",
+      "sourceLabels": [
+        "prop:prime-injectivity"
+      ],
+      "dependsOn": [
+        "DUB-02"
+      ],
+      "acceptance": "Prove integer independence of log primes, injective exponent vectors, the actual finite Bohr lift and continuous-test equidistribution for the vertical flow.",
+      "implementationFiles": [
+        "Extension/Dubon2026/BohrLift.lean",
+        "Extension/Dubon2026/PrimeFrequencies.lean",
+        "Extension/Dubon2026/SymmetricAverage.lean",
+        "Extension/Dubon2026/PrimeTorus.lean",
+        "Extension/Dubon2026/TorusEquidistribution.lean",
+        "Extension/Dubon2026/TorusPolynomial.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-04",
+      "status": "OPEN",
+      "title": "Torus logarithms and Jensen bounds",
+      "proposedModule": "TorusLog",
+      "sourceLabels": [
+        "lem:log-integrable",
+        "prop:basic-bounds"
+      ],
+      "dependsOn": [
+        "DUB-03"
+      ],
+      "acceptance": "Prove zero-set nullity and log-norm integrability for nonzero multivariate polynomials, iterated Jensen, character orthogonality, and 0 ≤ J ≤ log(E)/2.",
+      "implementationFiles": [
+        "Extension/Dubon2026/TorusEnergy.lean",
+        "Extension/Dubon2026/CirclePolynomialLog.lean",
+        "Extension/Dubon2026/MultivariateBohrPolynomial.lean",
+        "Extension/Dubon2026/TorusPolynomialLog.lean",
+        "Extension/Dubon2026/TorusJensen.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-05",
+      "status": "OPEN",
+      "title": "Actual vertical Jessen identity",
+      "proposedModule": "JessenFunction",
+      "sourceLabels": [
+        "prop:bohr-jessen"
+      ],
+      "dependsOn": [
+        "DUB-04"
+      ],
+      "acceptance": "Prove existence of the fixed-N symmetric vertical log mean, its Haar identity, finiteness and convexity; control the unbounded negative logarithm, not merely continuous equidistribution.",
+      "implementationFiles": [
+        "Extension/Dubon2026/LogTruncation.lean",
+        "Extension/Dubon2026/HigherRolle.lean",
+        "Extension/Dubon2026/InterpolationDerivative.lean",
+        "Extension/Dubon2026/SublevelCover.lean",
+        "Extension/Dubon2026/VerticalFamily.lean",
+        "Extension/Dubon2026/VerticalJets.lean",
+        "Extension/Dubon2026/RealVerticalJets.lean",
+        "Extension/Dubon2026/CompactJetCover.lean",
+        "Extension/Dubon2026/UniformVerticalSublevel.lean",
+        "Extension/Dubon2026/ExponentialTailIntegral.lean",
+        "Extension/Dubon2026/LogDeficit.lean",
+        "Extension/Dubon2026/UnitLogTail.lean",
+        "Extension/Dubon2026/UnitIntervalAverage.lean",
+        "Extension/Dubon2026/VerticalLogTail.lean",
+        "Extension/Dubon2026/JessenMean.lean",
+        "Extension/Dubon2026/TorusGridCharacters.lean",
+        "Extension/Dubon2026/TorusGridAverage.lean",
+        "Extension/Dubon2026/TorusGridApproximation.lean",
+        "Extension/Dubon2026/TorusGridLog.lean",
+        "Extension/Dubon2026/TwistProducts.lean",
+        "Extension/Dubon2026/TwistProductStrip.lean",
+        "Extension/Dubon2026/GridProductBounds.lean",
+        "Extension/Dubon2026/HaarChord.lean",
+        "Extension/Dubon2026/JessenConvexity.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-06",
+      "status": "OPEN",
+      "title": "Vertical zero frequency with multiplicity",
+      "proposedModule": "ZeroFrequency",
+      "sourceLabels": [
+        "prop:JT-density"
+      ],
+      "dependsOn": [
+        "DUB-05"
+      ],
+      "acceptance": "Prove the Jessen–Tornehave count limit for every open strip with correct one-sided derivatives, analytic multiplicities and symmetric height normalization 1/(2T).",
+      "implementationFiles": [
+        "Extension/Dubon2026/DirichletDivisor.lean",
+        "Extension/Dubon2026/RectangleZeroCount.lean",
+        "Extension/Dubon2026/ZeroFreeHalfPlanes.lean",
+        "Extension/Dubon2026/ZeroFreeBoundaries.lean",
+        "Extension/Dubon2026/JensenZeroBound.lean",
+        "Extension/Dubon2026/UniformTwistZeroBound.lean",
+        "Extension/Dubon2026/VerticalZeroTranslation.lean",
+        "Extension/Dubon2026/UniformLocalZeroCount.lean",
+        "Extension/Dubon2026/ZeroCountHeight.lean",
+        "Extension/Dubon2026/HeightLimitTransfer.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-07",
+      "status": "OPEN",
+      "title": "Total mass and probability normalization",
+      "proposedModule": "JessenMeasure",
+      "sourceLabels": [
+        "prop:total-mass",
+        "rem:normalization-check"
+      ],
+      "dependsOn": [
+        "DUB-06"
+      ],
+      "acceptance": "Construct J″ as the positive Stieltjes/distributional measure, prove total mass log M_N and eventual M_N>1, and check the 1+exp(−λs) normalization example.",
+      "implementationFiles": [
+        "Extension/Dubon2026/ConvexDerivatives.lean",
+        "Extension/Dubon2026/JessenStieltjes.lean",
+        "Extension/Dubon2026/ConvexAsymptotes.lean",
+        "Extension/Dubon2026/JessenRightLimit.lean",
+        "Extension/Dubon2026/LeadingBohrTerm.lean",
+        "Extension/Dubon2026/UniformLogIntegral.lean",
+        "Extension/Dubon2026/JessenLeftLimit.lean",
+        "Extension/Dubon2026/JessenMass.lean",
+        "Extension/Dubon2026/PeriodicMean.lean",
+        "Extension/Dubon2026/BinomialJessen.lean",
+        "Extension/Dubon2026/BinomialMeasure.lean",
+        "Extension/Dubon2026/BinomialZeros.lean",
+        "Extension/Dubon2026/BinomialZeroCount.lean",
+        "Extension/Dubon2026/IsolatedPrimeSupport.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-08",
+      "status": "OPEN",
+      "title": "Bessel characteristic-function inputs",
+      "proposedModule": "BesselJ0",
+      "sourceLabels": [],
+      "dependsOn": [
+        "DUB-01"
+      ],
+      "acceptance": "Prove the actual J₀ series/circle-integral identity, Gaussian small-argument bound, strict |J₀(u)|<1 for u>0 and large-argument O(u^(−1/2)); reconcile Fourier conventions.",
+      "implementationFiles": [
+        "Extension/Dubon2026/CircleCharacteristic.lean",
+        "Extension/Dubon2026/CircleMoments.lean",
+        "Extension/Dubon2026/CircleGaussian.lean",
+        "Extension/Dubon2026/CircleSeries.lean",
+        "Extension/Dubon2026/BesselJ0.lean",
+        "Extension/Dubon2026/CircleQuarter.lean",
+        "Extension/Dubon2026/CircleOscillation.lean",
+        "Extension/Dubon2026/BesselDecay.lean",
+        "Extension/Dubon2026/CircleRadial.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-09",
+      "status": "OPEN",
+      "title": "Translated Steinhaus logarithmic bound",
+      "proposedModule": "Steinhaus",
+      "sourceLabels": [
+        "lem:Steinhaus"
+      ],
+      "dependsOn": [
+        "DUB-08"
+      ],
+      "acceptance": "For every K≥1 obtain one C_K for all m≥5, comparable positive coefficients and every complex translation; derive bounded planar density, small-ball and negative-log estimates.",
+      "implementationFiles": [
+        "Extension/Dubon2026/SteinhausLaw.lean",
+        "Extension/Dubon2026/SteinhausNormalization.lean",
+        "Extension/Dubon2026/SteinhausRegionBounds.lean",
+        "Extension/Dubon2026/SteinhausRegions.lean",
+        "Extension/Dubon2026/RadialTailIntegral.lean",
+        "Extension/Dubon2026/RadialInnerIntegrals.lean",
+        "Extension/Dubon2026/ThreeRegionIntegral.lean",
+        "Extension/Dubon2026/SteinhausRadialIntegral.lean",
+        "Extension/Dubon2026/PolarRadialIntegral.lean",
+        "Extension/Dubon2026/SteinhausFourierL1.lean",
+        "Extension/Dubon2026/InverseCharacteristic.lean",
+        "Extension/Dubon2026/PlanarGaussian.lean",
+        "Extension/Dubon2026/InverseCharacteristicMeasure.lean",
+        "Extension/Dubon2026/GaussianDensityLimit.lean",
+        "Extension/Dubon2026/GaussianTestKernel.lean",
+        "Extension/Dubon2026/GaussianSmoothingBounds.lean",
+        "Extension/Dubon2026/GaussianTestPairing.lean",
+        "Extension/Dubon2026/PlanarDensity.lean",
+        "Extension/Dubon2026/PlanarSmallBall.lean",
+        "Extension/Dubon2026/SteinhausDensity.lean",
+        "Extension/Dubon2026/SmallBallLog.lean",
+        "Extension/Dubon2026/BoundedLogExpectation.lean",
+        "Extension/Dubon2026/SteinhausLogNormalized.lean",
+        "Extension/Dubon2026/SteinhausLogScale.lean",
+        "Extension/Dubon2026/SteinhausIndependentLaw.lean",
+        "Extension/Dubon2026/SteinhausLog.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-10",
+      "status": "OPEN",
+      "title": "Isolated-prime lower bound",
+      "proposedModule": "IsolatedPrimes",
+      "sourceLabels": [
+        "prop:isolated-lower-general"
+      ],
+      "dependsOn": [
+        "DUB-04",
+        "DUB-05",
+        "DUB-09"
+      ],
+      "acceptance": "Use primes in (N/2,N], condition on complementary Haar coordinates, absorb coefficient phases, and prove the uniform lower bound J ≥ log B/2 − C_K.",
+      "implementationFiles": [
+        "Extension/Dubon2026/IsolatedPrimeMonomials.lean",
+        "Extension/Dubon2026/SteinhausPhases.lean",
+        "Extension/Dubon2026/IsolatedBohrDecomposition.lean",
+        "Extension/Dubon2026/IsolatedTorusSplit.lean",
+        "Extension/Dubon2026/IsolatedHaarLower.lean",
+        "Extension/Dubon2026/PrimeSelection.lean",
+        "Extension/Dubon2026/IsolatedPrimeLower.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-11",
+      "status": "OPEN",
+      "title": "Abstract locally uniform potential limit",
+      "proposedModule": "PotentialLimit",
+      "sourceLabels": [
+        "thm:abstract-main"
+      ],
+      "dependsOn": [
+        "DUB-07",
+        "DUB-10"
+      ],
+      "acceptance": "From the literal H1/H2 hypotheses derive J/log N → (α−σ)₊ locally uniformly on all ℝ, including σ=α, and log M_N/log N →1.",
+      "implementationFiles": [
+        "Extension/Dubon2026/PotentialPointwise.lean",
+        "Extension/Dubon2026/JessenSlopeBounds.lean",
+        "Extension/Dubon2026/PotentialEquicontinuity.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-12",
+      "status": "OPEN",
+      "title": "Weak probability limit and tightness",
+      "proposedModule": "WeakLimit",
+      "sourceLabels": [
+        "thm:abstract-main"
+      ],
+      "dependsOn": [
+        "DUB-11"
+      ],
+      "acceptance": "Consume the actual J″ measures; extend compact smooth tests through distributional convergence and tightness to all bounded continuous tests, obtaining δ_α.",
+      "implementationFiles": [
+        "Extension/Dubon2026/ConvexDerivativeLimit.lean",
+        "Extension/Dubon2026/JessenDerivativeLimit.lean",
+        "Extension/Dubon2026/JessenProbability.lean",
+        "Extension/Dubon2026/JessenIntervalLimit.lean",
+        "Extension/Dubon2026/NeighborhoodConcentration.lean",
+        "Extension/Dubon2026/WeakLimit.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-13",
+      "status": "OPEN",
+      "title": "Zeta partial sums and outside-strip density",
+      "proposedModule": "ZetaApplication",
+      "sourceLabels": [
+        "thm:zeta-intro",
+        "cor:zeta-density"
+      ],
+      "dependsOn": [
+        "DUB-12"
+      ],
+      "acceptance": "Discharge H1/H2 for a_n=1 using audited PNT, retain σ=1/2 and all compact intervals, and derive Corollary 6.1 with explicit boundary convention and nested limits.",
+      "implementationFiles": [
+        "Extension/Dubon2026/DyadicPrimes.lean",
+        "Extension/Dubon2026/PrimeCountingPNT.lean",
+        "Extension/Dubon2026/PrimeCountAsymptotics.lean",
+        "Extension/Dubon2026/LogarithmicScale.lean",
+        "Extension/Dubon2026/DyadicPrimeGrowth.lean"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "DUB-14",
+      "status": "OPEN",
+      "title": "Every fixed Dirichlet character",
+      "proposedModule": "DirichletApplication",
+      "sourceLabels": [
+        "lem:dirichlet-energy",
+        "thm:dirichlet-intro"
+      ],
+      "dependsOn": [
+        "DUB-12"
+      ],
+      "acceptance": "For every fixed positive modulus and character, including principal/imprimitive cases, prove coprime energy, ordinary dyadic-prime input and M_N normalization; no progression PNT is required.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-15",
+      "status": "OPEN",
+      "title": "Actual eigenforms and coefficient translation",
+      "proposedModule": "ModularObjects",
+      "sourceLabels": [],
+      "dependsOn": [
+        "DUB-02"
+      ],
+      "acceptance": "Use actual normalized primitive non-CM holomorphic Hecke eigenforms, even weight k≥2, fixed level and trivial character; prove λ normalization and the classical coefficient/zero-measure shift.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-16",
+      "status": "OPEN",
+      "title": "Rankin–Selberg energy input",
+      "proposedModule": "ModularEnergy",
+      "sourceLabels": [
+        "lem:modular-energy"
+      ],
+      "dependsOn": [
+        "DUB-15"
+      ],
+      "acceptance": "Prove or import and audit the genuine A_f(x)=c_f x+O_f(x^(3/5)) input with c_f>0, then weighted energy including σ=0, 3/10 and 1/2 cases; do not assume the desired energy conclusion.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-17",
+      "status": "OPEN",
+      "title": "Deligne and Sato–Tate prime blocks",
+      "proposedModule": "ModularPrimeBlock",
+      "sourceLabels": [],
+      "dependsOn": [
+        "DUB-15"
+      ],
+      "acceptance": "Prove or import and audit actual Deligne bounds and non-CM Sato–Tate equidistribution, derive positive mass for 1≤|λ_p|≤2, exclude ramified primes and prove uniform comparable dyadic blocks.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-18",
+      "status": "OPEN",
+      "title": "Modular theorem and level-one corollary",
+      "proposedModule": "ModularApplication",
+      "sourceLabels": [
+        "thm:modular-intro",
+        "cor:level-one"
+      ],
+      "dependsOn": [
+        "DUB-12",
+        "DUB-16",
+        "DUB-17"
+      ],
+      "acceptance": "Apply the abstract theorem with all arithmetic hypotheses discharged, prove classical concentration at k/2 and derive the SL₂(ℤ) corollary with primitive/non-CM bridges.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-19",
+      "status": "OPEN",
+      "title": "Integration and semantic regressions",
+      "proposedModule": "SemanticRegression",
+      "sourceLabels": [],
+      "dependsOn": [
+        "DUB-13",
+        "DUB-14",
+        "DUB-18"
+      ],
+      "acceptance": "All production modules root-imported; exact unfolded source consumers and exhaustive transitive axiom audit cover every public/critical theorem, with no shortcuts or suppressed diagnostics.",
+      "implementationFiles": [],
+      "evidence": []
+    },
+    {
+      "id": "DUB-20",
+      "status": "OPEN",
+      "title": "Sequential release verification",
+      "proposedModule": "Audit",
+      "sourceLabels": [],
+      "dependsOn": [
+        "DUB-19"
+      ],
+      "acceptance": "Run foundation then paper verifier sequentially, all intended modules and regressions, zero warnings, frozen pins/source checks and synchronized documentation; record source and kernel verdicts separately.",
+      "implementationFiles": [],
+      "evidence": []
+    }
+  ],
+  "activatedOn": "2026-10-06"
+}

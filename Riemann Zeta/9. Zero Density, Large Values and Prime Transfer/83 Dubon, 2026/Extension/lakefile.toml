@@ -1,0 +1,20 @@
+name = "Dubon2026"
+version = "0.1.0"
+defaultTargets = ["Dubon2026"]
+packagesDir = "../../../.lake/packages"
+buildDir = "../../../../.lake/dubon-2026-build"
+
+[[lean_lib]]
+name = "Dubon2026"
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "RiemannZeta"
+path = "../../.."
+
+[[require]]
+name = "GafniTaoNative"
+path = "../../63 Tao-Trudgian-Yang, 2025/Dependencies/GafniTaoNative"
