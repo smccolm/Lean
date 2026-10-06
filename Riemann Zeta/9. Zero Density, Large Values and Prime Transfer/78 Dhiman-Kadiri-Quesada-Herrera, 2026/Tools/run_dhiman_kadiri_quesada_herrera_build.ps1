@@ -34,12 +34,16 @@ function Invoke-LeanGate {
 try {
     Start-Transcript -Path $logPath | Out-Null
     $transcriptStarted = $true
-    Write-Output 'DKQH project 78: ACTIVE DEVELOPMENT VERIFICATION'
+    $config = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'scaffold.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($config.mode -eq 'project-complete') {
+        Write-Output 'DKQH project 78: CORRECTED CONTRACT VERIFICATION'
+    } else {
+        Write-Output 'DKQH project 78: ACTIVE DEVELOPMENT VERIFICATION'
+    }
     & (Join-Path $PSScriptRoot 'verify_sources.ps1')
     & python -X utf8 (Join-Path $PSScriptRoot 'verify_scaffold.py')
     if ($LASTEXITCODE -ne 0) { throw "Project validator failed with exit $LASTEXITCODE" }
     & (Join-Path $PSScriptRoot 'test_source_verifier.ps1')
-    $config = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'scaffold.json') -Raw -Encoding UTF8 | ConvertFrom-Json
     $lakeCommand = Get-Command lake -ErrorAction Stop
     if ([string]::IsNullOrWhiteSpace($env:ELAN_HOME)) {
         $elanCandidate = Split-Path -Parent (Split-Path -Parent $lakeCommand.Source)

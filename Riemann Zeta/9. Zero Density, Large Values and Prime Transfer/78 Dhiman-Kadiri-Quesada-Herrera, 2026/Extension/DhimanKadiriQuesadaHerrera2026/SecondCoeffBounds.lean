@@ -3,7 +3,7 @@ import DhimanKadiriQuesadaHerrera2026.PartIISignReview
 /-! # Actual H/H₁ assembly and AFE finite Poisson error
 
 The two square coefficients stay separate in the AFE bound.
-The proposed E₁ equality is diagnostic; adoption remains the owner’s decision.
+The E₁ equality implements the owner-adopted square-tail correction; the printed diagnostic is preserved.
 The E₂ coefficient is unchanged from the frozen source.
 -/
 

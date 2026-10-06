@@ -3,7 +3,7 @@ import DhimanKadiriQuesadaHerrera2026.PoissonApplications
 /-! # Exact amplitude-series assembly for the Poisson remainder
 
 The AFE consumer derives all four convergence inputs from the actual functions.
-This module does not adopt a corrected general Part-II error contract.
+The corrected general Part-II error contract is exposed in CorrectedPartII.
 -/
 
 namespace DhimanKadiriQuesadaHerrera2026

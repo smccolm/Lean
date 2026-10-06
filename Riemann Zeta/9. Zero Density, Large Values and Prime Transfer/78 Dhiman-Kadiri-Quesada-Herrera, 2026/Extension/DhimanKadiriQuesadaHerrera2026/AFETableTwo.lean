@@ -152,7 +152,7 @@ noncomputable def proposedTableTwoDirect (k : ℕ) : ℝ :=
   if k = 4 then 2.472239 else if k = 5 then 2.766226 else if k = 6 then 3.075280 else
   if k = 7 then 3.390202 else if k = 8 then 3.707265 else if k = 9 then 4.025116 else 4.343257
 
-/-- Proposed outward Table 2 reflected bounds; these are not yet an adopted source repair. -/
+/-- Proposed outward Table 2 reflected bounds; adopted by the owner on 5 October 2026. -/
 noncomputable def proposedTableTwoReflected (k : ℕ) : ℝ :=
   if k = 1 then 2.069008 else if k = 2 then 2.132266 else if k = 3 then 2.222296 else
   if k = 4 then 2.472236 else if k = 5 then 2.766222 else if k = 6 then 3.075277 else

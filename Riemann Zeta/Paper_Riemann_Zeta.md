@@ -24,6 +24,8 @@ The complete claim sheet and source-to-Lean comparison are in [`Publication Read
 
 ## Contribution Taxonomy & Originality Disclosure
 
+Separate extension addendum (6 October 2026): the [Dhiman–Kadiri–Quesada-Herrera project](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md) has completed all 20 gates for its explicitly adopted corrected source contracts. It preserves the literal B-process and frozen v1, proves the corrected weighted Poisson and both AFE branches, and certifies the adopted Table 1–2 replacements and unchanged Table 3 consequences. Counterexamples and every changed hypothesis, sign, branch and numerical bound remain documented. Its separate package, exact-type regressions and exhaustive audit pass the paper verifier; the foundation verifier also passes. This addendum does not alter the Guth–Maynard publication contracts or claim independent review or author-issued corrections.
+
 Separate follow-on development (4 October 2026): node 63 contains original
 far-correlation arguments for the frozen Tao--Trudgian--Yang density-table
 endpoints, culminating in

@@ -39,7 +39,7 @@ theorem exists_b_process_partI {f : ℝ → ℝ} {a b ℓ₂ ℓ₃ h₂ h₃ : 
   have ht := (norm_add_le _ _).trans (add_le_add hp hs)
   simpa only [sub_add_sub_cancel, add_comm] using ht
 
-/-- The actual discrete B-process with the proved second-order coefficients, conditional on the explicit provisional analytic regularity and half-offset condition. -/
+/-- The actual discrete B-process with the proved second-order coefficients, conditional on the explicit repaired analytic regularity and half-offset condition. -/
 theorem exists_b_process_partII {f : ℝ → ℝ} {a b ℓ₂ ℓ₃ h₂ h₃ : ℝ}
     (r : SecondOrderRegularity f (fun _ => 1) a b)
     (hδ : 1 / 2 ≤ (⌊deriv f a⌋₊ : ℝ) + 1 - deriv f a)

@@ -302,7 +302,7 @@ noncomputable def tableOneHeight (r : ℕ) : ℝ :=
 noncomputable def tableOneSymmetricCutoff (r : ℕ) : ℝ :=
   if r = 0 then 1.5 else if r = 1 then 12.5 else if r = 2 then 39894.5 else 690988.5
 
-/-- Proposed outward direct Table 1 bounds; source adoption remains separate. -/
+/-- Proposed outward direct Table 1 bounds; adopted by the owner on 5 October 2026. -/
 noncomputable def proposedTableOneDirect (r : ℕ) : ℝ :=
   if r = 0 then 2.265207 else if r = 1 then 1.792737 else if r = 2 then 1.750702 else 1.750689
 
@@ -310,7 +310,7 @@ noncomputable def proposedTableOneDirect (r : ℕ) : ℝ :=
 noncomputable def proposedTableOneReflected (r : ℕ) : ℝ :=
   if r = 0 then 2.264445 else if r = 1 then 1.792711 else if r = 2 then 1.750701 else 1.750689
 
-/-- Proposed outward symmetric Table 1 bounds; source adoption remains separate. -/
+/-- Proposed outward symmetric Table 1 bounds; adopted by the owner on 5 October 2026. -/
 noncomputable def proposedTableOneSymmetric (r : ℕ) : ℝ :=
   if r = 0 then 2.265207 else if r = 1 then 1.265978 else if r = 2 then 1.160080 else 1.160049
 

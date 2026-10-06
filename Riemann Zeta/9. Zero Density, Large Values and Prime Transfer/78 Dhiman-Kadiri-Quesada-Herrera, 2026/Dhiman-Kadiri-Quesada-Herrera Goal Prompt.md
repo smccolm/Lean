@@ -1,22 +1,30 @@
 # Dhiman–Kadiri–Quesada-Herrera 2026 — whole-paper goal prompt
 
-**ACTIVE GOAL — activated by the owner on 5 October 2026. 11/20 proof gates complete.**
+## Owner-approved corrected contracts — 5 October 2026
 
-## Active objective
+The owner has explicitly adopted all five proposals in the attached instruction accompanying “Proceed”: the Part-II E₁ envelope A−(B−C)/y; the four positive-frequency quotient monotonicity conditions for h=g′ and h=g(f′−N); the full-positive-gap Corollary 0.1 repair with halfSecondEndpointDelta and the complete finite-head coefficient; the proof-consistent Theorem-10 branch assignments; and every certified Table 1–2 proposal in Computation Review at commit a9ddec65b578914f19199443a3e8ffa3a406e8e8. The present values are identical to that commit. The literal Corollary 0.2 remains unchanged. These are owner-approved local corrected contracts, not author-issued corrections.
+
+All original displays, counterexamples and proof diagnostics remain preserved. Historical sections saying “pending” describe their original checkpoint and are superseded by this decision. All explicit public consumers, the final semantic comparison and sequential release verification have passed: 20/20 gates are accepted. No scope decision listed here remains blocked on owner approval.
+
+The owner also authorizes mathematically justified repairs of this class without repeated approval. First attempt an independent proof of the original conclusion under the original hypotheses. When a repair is necessary, preserve the original, identify the precise failure, prove the replacement, expose every changed hypothesis/constant, verify its applications, and distinguish failed proof steps from false theorems. Escalation is reserved for abandoning a required result, changing the central objective, or unresolved competing contracts that materially change the program. Proof integrity, source preservation and acceptance checks remain mandatory.
+
+**GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
+
+## Completed objective and retained instructions
 
 Formalize the mathematical content of *Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function*, Dhiman–Kadiri–Quesada-Herrera, arXiv:2609.00537v1, in an isolated extension of this existing repository. Close Theorem 8 Parts I and II, Theorems 9 and 10, introductory Corollaries 0.1–0.5, Corollary 8.1, and the supporting analytic and numerical obligations required for their exact conclusions. Resolve and document the frozen source discrepancies before adopting any corrected public contract. Meet every DKQH-01–DKQH-20 acceptance test. Source references alone and unverified numerical computations are not proofs.
 
-Use full author names in human-facing filenames, `DhimanKadiriQuesadaHerrera2026` as the proposed Lean namespace, and `DKQH` as the task prefix. Preserve all completed work in nodes 63, 71, 73, 74 and 77, the foundation freeze, source ledgers, counterexamples, repairs, audits and owner scripts.
+Use full author names in human-facing filenames, `DhimanKadiriQuesadaHerrera2026` as the Lean namespace, and `DKQH` as the task prefix. Preserve all completed work in nodes 63, 71, 73, 74 and 77, the foundation freeze, source ledgers, counterexamples, repairs, audits and owner scripts.
 
 ## Read first and freeze the actual scope
 
 Read `../../AGENTS.md`, the root README/publication audit/manuscript and node-71 status/checklist/architecture/audit; then this folder's README, Source Contract, Errata, Checklist, Architecture, Crosswalk, Research Agenda, Sources, Computation Review, Reproduction Manifest and `Dependencies/README.md`. Verify `Sources/SHA256SUMS.txt`. Read the actual PDF and TeX, `AFE2026ago31.bbl`, `anc/AFE1.sage` and `anc/AFE2.py`. Recheck arXiv and author pages for a revision newer than v1; retain the frozen v1 bytes and compare rather than silently replacing them.
 
-Start by resolving DKQH-01's source discrepancies. Separate a literal published statement, a typographical correction supported by the proof, a substantive strengthening, and a missing formal bridge. Preserve counterexamples and evidence. A false literal statement cannot be a Lean target. Record any required change to mathematical scope before implementation; do not label a corrected or weaker result as the unchanged original. Routine notation repair with an established mathematical justification need not interrupt otherwise authorized work; a materially different objective requires an explicit scope decision.
+Start by resolving DKQH-01's source discrepancies. Separate a literal published statement, a typographical correction supported by the proof, a substantive strengthening, and a missing formal bridge. Preserve counterexamples and evidence. A false literal statement cannot be a Lean target. Record any required change to mathematical scope before implementation; do not label a corrected or weaker result as the unchanged original. Routine notation repair with an established mathematical justification need not interrupt otherwise authorized work; a change to the central objective requires an explicit scope decision; the owner’s standing authorization below covers justified source repairs.
 
 ## Accepted source repair — 5 October 2026
 
-For Theorem 8 Part I, the owner explicitly accepted the additional hypotheses that `|g′|` and `|g′|/(1+f′−N)` are nonincreasing, as documented in Errata. Preserve the original statement and its counterexample. Prove the corrected theorem and verify the added hypotheses for every AFE application; do not label the corrected general theorem as the unchanged printed result. All other source discrepancies remain subject to their documented review.
+For Theorem 8 Part I, the owner explicitly accepted the additional hypotheses that `|g′|` and `|g′|/(1+f′−N)` are nonincreasing, as documented in Errata. Preserve the original statement and its counterexample. Prove the corrected theorem and verify the added hypotheses for every AFE application; do not label the corrected general theorem as the unchanged printed result. The five subsequent source repairs and standing authorization are adopted above; their semantic and verification requirements remain mandatory.
 
 ## Mandatory mathematical outcomes
 

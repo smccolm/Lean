@@ -1,10 +1,11 @@
 [
   {
     "id": "DKQH-01",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Source edition and errata",
     "acceptance": "Resolve E01–E09 against immutable PDF/TeX/code; document the exact accepted corrected or literal targets and all scope differences.",
-    "proposedModule": "SourceReview"
+    "proposedModule": "SourceReview",
+    "evidence": "All E01–E09 are resolved in Source Contract final exact-source comparison; all five owner-approved repairs are implemented. Original displays, source bytes, counterexamples and failed-proof diagnostics remain. Adopted table numeric rows match a9ddec65b578914f19199443a3e8ffa3a406e8e8; literal BProcessGeneral unchanged. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-02",
@@ -64,17 +65,19 @@
   },
   {
     "id": "DKQH-09",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Theorem 8 Part II",
     "acceptance": "Prove the refined complete T_N estimate and each derivative monotonicity condition; verify the f−Nx substitution throughout H/H₁/B/E terms.",
-    "proposedModule": "WeightedPoissonII"
+    "proposedModule": "WeightedPoissonII",
+    "evidence": "CorrectedPartII.corrected_poisson_partII and corrected_poisson_partII_half_integer prove the complete actual-sum/full-frequency conclusions for all allowed N and endpoints, with corrected E1 and unchanged E2. secondOrderRegularity_of_source derives every field from explicit source/repair assumptions; Darboux removes any extra endpoint continuity premise. AFESecondWeights/PartIIInputs prove all application conditions including sigma zero. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-10",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Poisson corollaries",
     "acceptance": "Derive Corollary 0.1 and Corollary 8.1, half-integer endpoint cancellation, δ=1/2 evaluations, and rigorous constant-weight specialization.",
-    "proposedModule": "PoissonCorollaries"
+    "proposedModule": "PoissonCorollaries",
+    "evidence": "PoissonApplications gives constant-weight Part I. CorrectedPartII.constant_secondOrderRegularity_source explicitly derives the zero-weight-derivative interface; corrected_corollary_zero_one_partII retains all positive gaps, the complete finite head and corrected square/unchanged cube coefficients; its _pi specialization requires gap >= 1/2. corrected_corollary_eight_one proves the exact half-gap specialization. Exact consumers preserve the full printed-corollary counterexample. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-11",
@@ -102,31 +105,35 @@
   },
   {
     "id": "DKQH-14",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Theorem 10 direct branch",
     "acceptance": "Assemble the actual two-polynomial AFE for x≥y with A₀,B₀,C₀, the correct E₀ branch, x₀=max(h,sqrt(t₀/2π)), endpoints and all explicit losses.",
-    "proposedModule": "AFESecondKindDirect"
+    "proposedModule": "AFESecondKindDirect",
+    "evidence": "AFESecondUniform.afe_second_uniform_direct and theorem_ten_direct_source prove the actual two-polynomial remainder with adopted A0(sigma)+C0(sigma)B0(sigma), every source term and x0 maximum, closed sigma strip, absolute heights, half-integer cutoffs, scale and direct diagonal. Upstream AFESecondLimits/Closed/Bounds discharge analytic and limit inputs. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-15",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Theorem 10 reflected branch",
     "acceptance": "Derive x<y from the actual functional equation/dual remainder, including σ=1 and dual σ=0, both signs of t and exact branch bounds.",
-    "proposedModule": "AFESecondKindReflection"
+    "proposedModule": "AFESecondKindReflection",
+    "evidence": "AFESecondUniform.afe_second_uniform_reflected/branches and theorem_ten_reflected_source consume the actual functional equation and exchanged remainder. Adopted reflected A0(1-sigma)C0(sigma)+B0(1-sigma), logarithmic factor, sigma=1/dual zero and both signs are proved; the diagonal chooses direct. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-16",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Corollary 0.4 / Table 1",
     "acceptance": "Prove global σ maxima and outward-certified numerical bounds with exact t₀=2π; independently separate displayed approximations from upper bounds.",
-    "proposedModule": "AFESecondKindConstants"
+    "proposedModule": "AFESecondKindConstants",
+    "evidence": "AFEUniformMax proves attained global maxima on [1/2,1]. AFETableOne and ChiTableBounds certify all 16 adopted cells at exact thresholds including 2*pi, derive the symmetric floor cutoff, and prove actual direct/reflected/symmetric AFE consumers. Exactly nine cells change; only the three separately refuted originals are called false. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-17",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Corollary 0.5 / Tables 2–3",
     "acceptance": "Prove k=1..50 bounds, k/π+1.1601 for 11..50, constant-6 consequence and all accepted table cells; attribute Table 4 comparisons.",
-    "proposedModule": "BoundedRangeConstants"
+    "proposedModule": "BoundedRangeConstants",
+    "evidence": "AFETableTwo certifies all 20 adopted k=1..10 branch cells (14 changes); AFETableThree proves all eight unchanged 11..50 cells; AFEBandConstants proves k/pi+1.1601; AFECoarseConstants.afe_constant_six proves both actual-remainder branches through min(x,y)<=10^6. All physical band/floor/height conditions are proved. Table 4 attribution remains separate and explicit. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-18",
@@ -134,20 +141,22 @@
     "title": "Reuse and package integration",
     "acceptance": "Install only justified compatible import closures; pin and license dependencies, preserve upstream proofs, include every production module in root graph.",
     "proposedModule": "DependencyIntegration",
-    "evidence": "All 126 production modules are classified and root-imported; isolated path dependency preserves every root package revision and Lean 4.30. Dependencies/README records selected interfaces, minimal adaptations, available license notices and source hashes; all 35 local-reuse inventory files (407 declarations) rehashed without mismatch. Complete import/axiom closure and sequential zero-diagnostic foundation/paper receipts 2026-10-05 21:31/21:34."
+    "evidence": "All 127 production modules are classified and root-imported in the unchanged Lean 4.30/Mathlib/PNT+ graph. Dependencies records exact provenance, licences and selected interfaces, including Darboux/monotone continuity. All 35 local-reuse files (407 declarations) rehashed unchanged; no upstream proof or package pin changed. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-19",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Semantic regressions and audit",
     "acceptance": "Audit every public/critical theorem transitively; exact-type tests cover constants, signs, branches, endpoint weights and actual-source consumers.",
-    "proposedModule": "SemanticRegressionAndAudit"
+    "proposedModule": "SemanticRegressionAndAudit",
+    "evidence": "299 exact-type semantic consumers plus exhaustive transitive audit of 2379 project theorems (private/generated included), 1465 explicit consumers and 16 passing linters (1629 declarations plus 897 generated). Source correspondence and analytic hypothesis discharge are independently recorded in Source Contract. No prohibited dependency or conclusion-equivalent premise remains. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest."
   },
   {
     "id": "DKQH-20",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Final sequential verification",
     "acceptance": "Both foundation and paper BATs pass zero-diagnostic checks; all preceding gates accepted; synchronize contract/checklist/DAG/reproduction and distinguish external review.",
-    "proposedModule": "ReleaseAcceptance"
+    "proposedModule": "ReleaseAcceptance",
+    "evidence": "Exact-source comparison, all preceding gates, 13 isolated active-validator fixtures, 8 source-verifier fixtures, source pins and import classification passed. Sequential foundation and paper BATs exited 0 with zero Lean diagnostics on 6 October 2026; release documentation and metadata synchronized. Reproduction Manifest records log hashes; independent review remains external. Final 193-file sequential verification: foundation 2026-10-06 00:02 and paper dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log; exact receipts in Reproduction Manifest. Completion-mode paper rerun: dhiman-kadiri-quesada-herrera-build-20261006-002012-056.log, exit 0, PROOF PASS 20/20, SHA-256 536907d40025a4063a3406a9d305d13ea58f87375e1cf1b2cbff9263fdb57e2b."
   }
 ]

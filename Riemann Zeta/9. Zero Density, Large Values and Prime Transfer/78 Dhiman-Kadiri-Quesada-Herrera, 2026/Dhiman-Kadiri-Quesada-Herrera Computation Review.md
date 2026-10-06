@@ -1,5 +1,13 @@
 # Author computations — reproduction and proof boundary
 
+## Owner-approved corrected contracts — 5 October 2026
+
+The owner has explicitly adopted all five proposals in the attached instruction accompanying “Proceed”: the Part-II E₁ envelope A−(B−C)/y; the four positive-frequency quotient monotonicity conditions for h=g′ and h=g(f′−N); the full-positive-gap Corollary 0.1 repair with halfSecondEndpointDelta and the complete finite-head coefficient; the proof-consistent Theorem-10 branch assignments; and every certified Table 1–2 proposal in Computation Review at commit a9ddec65b578914f19199443a3e8ffa3a406e8e8. The present values are identical to that commit. The literal Corollary 0.2 remains unchanged. These are owner-approved local corrected contracts, not author-issued corrections.
+
+All original displays, counterexamples and proof diagnostics remain preserved. Historical sections saying “pending” describe their original checkpoint and are superseded by this decision. All explicit public consumers, the final semantic comparison and sequential release verification have passed: 20/20 gates are accepted. No scope decision listed here remains blocked on owner approval.
+
+The owner also authorizes mathematically justified repairs of this class without repeated approval. First attempt an independent proof of the original conclusion under the original hypotheses. When a repair is necessary, preserve the original, identify the precise failure, prove the replacement, expose every changed hypothesis/constant, verify its applications, and distinguish failed proof steps from false theorems. Escalation is reserved for abandoning a required result, changing the central objective, or unresolved competing contracts that materially change the program. Proof integrity, source preservation and acceptance checks remain mandatory.
+
 Research date: 5 October 2026. Original scripts are unchanged under `Sources/DhimanKadiriQuesadaHerrera-v1-source/anc/`. Archive hashes cover both. No code from these files is imported into a Lean proof.
 
 ## AFE1.sage
@@ -46,7 +54,7 @@ AFETableTwo proves outward candidate bounds for all twenty cells at k=1,...,10, 
 
 The unchanged Table 3, large-k bound and constant-six consequence remain proved. DKQH-16/17 stay OPEN for the remaining Table 1 certificates and explicit adoption of numerical repairs. General Part-II and E03 decisions remain pending. Current scope: 137 retained files, 71 production and two verification modules, 113 semantic consumers; accepted count 8/20.
 
-| k | Printed direct | Proposed direct | Printed reflected | Proposed reflected |
+| k | Printed direct | Adopted direct | Printed reflected | Adopted reflected |
 |---|---:|---:|---:|---:|
 | 1 | 2.069011 | 2.069011 | 2.069008 | 2.069008 |
 | 2 | 2.132269 | 2.132269 | 2.132265 | 2.132266 |
@@ -73,7 +81,7 @@ AFETableOne proves all sixteen proposed Table 1 cells over the entire closed sig
 
 The complete proposed Table 1 and Table 2 replacements are listed beside the preserved printed values in Computation Review. All unchanged Table 3 entries, k/π+1.1601 and the constant-six consequence are also proved. Numerical source-repair adoption and E03 remain pending before DKQH-16/17 can be accepted. The general Part-II decisions and DKQH-09–11 obligations remain separate. Current scope: 142 retained files, 76 production and two verification modules, 129 semantic consumers; accepted count 8/20.
 
-| Exact threshold | Column | Printed | Certified proposal |
+| Exact threshold | Column | Printed | Adopted certified bound |
 |---|---|---:|---:|
 | 2π | Reflected x<y | 2.264445 | 2.264445 |
 | 2π | Symmetric x=y | 2.265204 | 2.265207 |
@@ -92,4 +100,4 @@ The complete proposed Table 1 and Table 2 replacements are listed beside the pre
 | 3·10¹² | Direct x>y | 1.750689 | 1.750689 |
 | 3·10¹² | δ₀ | 1.230863·10⁻¹³ | 1.230863·10⁻¹³ |
 
-The proposal changes nine of the sixteen Table 1 cells and fourteen of the twenty Table 2 cells. All eight Table 3 entries remain unchanged. Three direct Table 1 entries have proved strict lower-bound counterexamples; the other changed entries are justified here by independent outward upper certificates, without asserting that each original entry has separately been refuted. This is a concrete source-scope proposal, not automatic adoption.
+The proposal changes nine of the sixteen Table 1 cells and fourteen of the twenty Table 2 cells. All eight Table 3 entries remain unchanged. Three direct Table 1 entries have proved strict lower-bound counterexamples; the other changed entries are justified here by independent outward upper certificates, without asserting that each original entry has separately been refuted. The owner explicitly adopted this exact set of certificates on 5 October 2026. Public Lean identifiers beginning `proposed_table_` retain their original names for compatibility; their proved bounds are now the adopted contract.

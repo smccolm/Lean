@@ -39,9 +39,4 @@ exponent and supplementary Remark 1.3 are not claimed; accepted specializations
 and alternate supporting proofs are documented without changing either main
 statement. Internal completion is not independent review or publication.
 
-Node 78 contains the [Dhiman–Kadiri–Quesada-Herrera active formalization](78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md),
-activated on 5 October 2026. **11/20 proof gates complete: DKQH-02/03/04/05/06/07/08/11/12/13/18 DONE; nine OPEN.** Its isolated
-Lean package begins with exact source-error regressions and actual sharp-sum objects.
-The active BAT checks full module coverage, source pins, exact types and transitive
-axioms. The existing foundation and dependency pins are preserved, and its owner
-synchronization BAT remains the unchanged node-63 copy.
+Node 78 contains the [Dhiman–Kadiri–Quesada-Herrera corrected formalization](78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md), completed on 6 October 2026 with **20/20 accepted gates**. The isolated package proves the adopted corrected Poisson and AFE contracts, preserves the literal B-process, and certifies all adopted numerical consequences. The frozen paper, original displays and counterexamples remain preserved; the owner-approved hypotheses, sign/branch repairs and Table 1–2 replacements are documented explicitly. Its 127 production modules, 299 semantic consumers and exhaustive audit pass the separate paper verifier with zero Lean diagnostics; the foundation verifier also passes. This is internal completion of the corrected package, not every unchanged statement in v1 or independent review. Existing foundation contracts and dependency pins are unchanged.

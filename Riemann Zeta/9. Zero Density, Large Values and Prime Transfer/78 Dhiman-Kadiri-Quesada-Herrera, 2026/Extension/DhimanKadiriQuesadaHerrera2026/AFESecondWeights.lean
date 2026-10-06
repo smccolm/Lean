@@ -4,7 +4,7 @@ import DhimanKadiriQuesadaHerrera2026.PowerWeights
 
 The four quotient conditions are proved for the power weight and logarithmic
 phase on their positive domain, including nonnegative σ and its zero boundary.
-This does not adopt additional hypotheses for the general Part-II theorem.
+The general theorem exposes the owner-adopted additional hypotheses in CorrectedPartII.
 -/
 
 namespace DhimanKadiriQuesadaHerrera2026

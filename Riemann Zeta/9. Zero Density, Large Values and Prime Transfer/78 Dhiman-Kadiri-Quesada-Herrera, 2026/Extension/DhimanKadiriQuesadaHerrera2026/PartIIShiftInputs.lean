@@ -63,7 +63,7 @@ theorem deriv_shifted_product_eq {f g : ℝ → ℝ} {x : ℝ} (N : ℕ)
     deriv_phaseShift N (differentiableAt_of_deriv_ne_zero hfn)]
 
 
-/-- Explicit shifted analytic hypotheses construct the provisional Part-II interface; no remainder estimate is supplied. -/
+/-- Explicit shifted analytic hypotheses construct the repaired Part-II interface; no remainder estimate is supplied. -/
 theorem secondOrderRegularity_shift_of_inputs {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
     (r : PartIRegularityAt f g a b N)
     (hf : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)

@@ -127,7 +127,7 @@ theorem constant_second_poisson_delta {f : ℝ → ℝ} {a b : ℝ}
   ring
 
 
-/-- The actual discrete B-process with the proved second-order coefficients, conditional on the explicit provisional analytic regularity, with all positive frequency gaps. -/
+/-- The actual discrete B-process with the proved second-order coefficients, conditional on the explicit repaired analytic regularity, with all positive frequency gaps. -/
 theorem exists_b_process_delta {f : ℝ → ℝ} {a b ℓ₂ ℓ₃ h₂ h₃ : ℝ}
     (r : SecondOrderRegularity f (fun _ => 1) a b)
     (hℓ₂ : 0 < ℓ₂) (hℓ₃ : 0 ≤ ℓ₃) (hh₃ : 0 ≤ h₃) (hα : deriv f b < 1)

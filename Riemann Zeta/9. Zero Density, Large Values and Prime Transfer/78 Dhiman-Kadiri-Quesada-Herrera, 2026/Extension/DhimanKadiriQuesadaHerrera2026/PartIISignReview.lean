@@ -4,8 +4,7 @@ import DhimanKadiriQuesadaHerrera2026.AlternatingHarmonic
 
 Source: frozen AFE2026ago31.tex, auxilliary_error1, compared with the two
 preceding negative/positive square-tail estimates. The actual sum majorant
-is proved here, but adoption as a corrected public Part-II contract awaits
-the owner’s explicit decision. This is not a counterexample to the entire
+is proved here and was adopted by the owner on 5 October 2026. It is a local correction. This is not a counterexample to the entire
 weighted Poisson conclusion.
 -/
 

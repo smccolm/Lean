@@ -1454,7 +1454,25 @@ private def publicConsumers : Array Name := #[
   `DhimanKadiriQuesadaHerrera2026.SemanticRegression.afeRemainder_eq_integer_source_source,
   `DhimanKadiriQuesadaHerrera2026.SemanticRegression.actual_wave_principal_power_source,
   `DhimanKadiriQuesadaHerrera2026.SemanticRegression.integer_sample_endpoints_source,
-  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.integer_source_half_cutoff_source
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.integer_source_half_cutoff_source,
+  `DhimanKadiriQuesadaHerrera2026.continuousOn_deriv_of_monotone,
+  `DhimanKadiriQuesadaHerrera2026.continuousOn_deriv_of_antitone,
+  `DhimanKadiriQuesadaHerrera2026.secondOrderRegularity_of_source,
+  `DhimanKadiriQuesadaHerrera2026.corrected_poisson_partII,
+  `DhimanKadiriQuesadaHerrera2026.corrected_poisson_partII_half_integer,
+  `DhimanKadiriQuesadaHerrera2026.constant_secondOrderRegularity_source,
+  `DhimanKadiriQuesadaHerrera2026.corrected_corollary_zero_one_partII,
+  `DhimanKadiriQuesadaHerrera2026.corrected_corollary_zero_one_partII_pi,
+  `DhimanKadiriQuesadaHerrera2026.corrected_corollary_eight_one,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.continuousOn_deriv_of_monotone_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.continuousOn_deriv_of_antitone_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.secondOrderRegularity_of_source_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.corrected_poisson_partII_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.corrected_poisson_partII_half_integer_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.constant_secondOrderRegularity_source_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.corrected_corollary_zero_one_partII_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.corrected_corollary_zero_one_partII_pi_source,
+  `DhimanKadiriQuesadaHerrera2026.SemanticRegression.corrected_corollary_eight_one_source
 ]
 
 private def runAudit : CoreM Unit := do
@@ -1474,7 +1492,7 @@ private def runAudit : CoreM Unit := do
     let forbidden := axioms.filter fun a => !allowed.contains a
     if !forbidden.isEmpty then throwError "Forbidden dependencies: {name}: {forbidden}"
     logInfo m!"PASS {name}: {axioms}"
-  logInfo m!"AUDIT PASS: {names.size} project theorems, including private/generated declarations; {publicConsumers.size} required source-diagnostic consumers. No full paper theorem claimed."
+  logInfo m!"AUDIT PASS: {names.size} project theorems, including private/generated declarations; {publicConsumers.size} required source-diagnostic consumers. Kernel dependencies verified; source correspondence is checked separately."
 
 #eval runAudit
 

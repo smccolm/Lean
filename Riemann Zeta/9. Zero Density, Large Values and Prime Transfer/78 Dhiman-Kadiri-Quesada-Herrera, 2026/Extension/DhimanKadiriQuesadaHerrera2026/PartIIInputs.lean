@@ -2,7 +2,7 @@ import DhimanKadiriQuesadaHerrera2026.SecondCoeffBounds
 
 namespace DhimanKadiriQuesadaHerrera2026
 
-/-- Explicit analytic inputs for the general second-order Poisson argument; source adoption is separate. -/
+/-- Explicit analytic inputs for the general second-order Poisson argument; the explicit adopted source adapter is in CorrectedPartII. -/
 structure SecondOrderRegularity (f g : ℝ → ℝ) (a b : ℝ) : Prop extends PartIRegularity f g a b where
   f_deriv_differentiable : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u
   f_second_continuous : ContinuousOn (deriv (deriv f)) (Set.Icc a b)

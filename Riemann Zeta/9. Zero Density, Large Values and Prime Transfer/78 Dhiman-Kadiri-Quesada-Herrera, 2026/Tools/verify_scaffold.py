@@ -112,7 +112,37 @@ def validate(paper=PAPER):
         require(marker in prompt, f'Goal prompt lost required boundary: {marker}')
     regression = (paper / 'Extension' / module_root / 'SemanticRegression.lean').read_text(encoding='utf-8')
     audit = (paper / 'Extension' / module_root / 'Audit.lean').read_text(encoding='utf-8')
-    for name in ['sharpZetaSum_eq_integer_source_source', 'afeRemainder_eq_integer_source_source',
+    for name in ['continuousOn_deriv_of_monotone_source',
+                 'continuousOn_deriv_of_antitone_source',
+                 'secondOrderRegularity_of_source_source',
+                 'corrected_poisson_partII_source',
+                 'corrected_poisson_partII_half_integer_source',
+                 'constant_secondOrderRegularity_source_source',
+                 'corrected_corollary_zero_one_partII_source',
+                 'corrected_corollary_zero_one_partII_pi_source',
+                 'corrected_corollary_eight_one_source',
+                 'theorem_ten_direct_source',
+                 'theorem_ten_reflected_source',
+                 'proposed_table_one_constants_source',
+                 'proposed_table_one_direct_source',
+                 'proposed_table_one_reflected_source',
+                 'proposed_table_one_symmetric_source',
+                 'proposed_table_two_constants_source',
+                 'proposed_table_two_direct_source',
+                 'proposed_table_two_reflected_source',
+                 'table_three_constants_source',
+                 'table_three_direct_source',
+                 'table_three_reflected_source',
+                 'large_k_constants_source',
+                 'large_k_direct_source',
+                 'large_k_reflected_source',
+                 'constant_six_direct_source',
+                 'constant_six_reflected_source',
+                 'chi_table_two_pi_source',
+                 'chi_table_thousand_source',
+                 'chi_table_large_source',
+                 'chi_table_trillion_source',
+                 'sharpZetaSum_eq_integer_source_source', 'afeRemainder_eq_integer_source_source',
                  'actual_wave_principal_power_source', 'integer_source_half_cutoff_source',
                  'source_b_process_printed_source', 'exists_source_b_process_printed_full_source',
                  'actual_sum_index_discrepancy', 'actual_residual_discrepancy',
@@ -150,7 +180,7 @@ def validate(paper=PAPER):
                  'partII_negative_second_integral', 'afe_positive_second_integral_source']:
         require(re.search(r'^theorem ' + name + r'\b', regression, re.M) and
                 'SemanticRegression.' + name in audit, f'Missing required source regression/audit: {name}')
-    print(f'STATUS PASS: active goal; {complete}/20 gates complete; exact source-diagnostic regressions required.')
+    print(f'STATUS PASS: {config["mode"]}; {complete}/20 gates complete; exact source-diagnostic regressions required.')
 
     index = read_json(paper / 'Tools/source_labels.json')
     source = paper / index['source']

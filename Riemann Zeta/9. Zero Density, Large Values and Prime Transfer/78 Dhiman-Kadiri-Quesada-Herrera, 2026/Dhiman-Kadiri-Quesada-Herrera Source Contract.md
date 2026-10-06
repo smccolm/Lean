@@ -1,8 +1,16 @@
-# Frozen source and intended mathematical contract
+# Frozen source and accepted mathematical contract
 
-**ACTIVE GOAL — activated 5 October 2026. 11/20 proof gates complete.** DKQH-02 through DKQH-08, DKQH-11 through DKQH-13 and DKQH-18 are complete; nine gates remain OPEN. The full literal B-process is verified; remaining source decisions and acceptance checks are separate.
+## Owner-approved corrected contracts — 5 October 2026
 
-The immutable edition remains arXiv:2609.00537v1. Original PDF, TeX, ancillary code and the 205-label index remain frozen. E05 now contradicts the literal Part-I scope; the owner accepted the additional monotonicity hypotheses in Errata on 5 October 2026. The corrected Part-I theorem is now complete for every allowed N and general/half-integer endpoints; Part II remains open.
+The owner has explicitly adopted all five proposals in the attached instruction accompanying “Proceed”: the Part-II E₁ envelope A−(B−C)/y; the four positive-frequency quotient monotonicity conditions for h=g′ and h=g(f′−N); the full-positive-gap Corollary 0.1 repair with halfSecondEndpointDelta and the complete finite-head coefficient; the proof-consistent Theorem-10 branch assignments; and every certified Table 1–2 proposal in Computation Review at commit a9ddec65b578914f19199443a3e8ffa3a406e8e8. The present values are identical to that commit. The literal Corollary 0.2 remains unchanged. These are owner-approved local corrected contracts, not author-issued corrections.
+
+All original displays, counterexamples and proof diagnostics remain preserved. Historical sections saying “pending” describe their original checkpoint and are superseded by this decision. All explicit public consumers, the final semantic comparison and sequential release verification have passed: 20/20 gates are accepted. No scope decision listed here remains blocked on owner approval.
+
+The owner also authorizes mathematically justified repairs of this class without repeated approval. First attempt an independent proof of the original conclusion under the original hypotheses. When a repair is necessary, preserve the original, identify the precise failure, prove the replacement, expose every changed hypothesis/constant, verify its applications, and distinguish failed proof steps from false theorems. Escalation is reserved for abandoning a required result, changing the central objective, or unresolved competing contracts that materially change the program. Proof integrity, source preservation and acceptance checks remain mandatory.
+
+**GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
+
+The immutable edition remains arXiv:2609.00537v1. Original PDF, TeX, ancillary code and the 205-label index remain frozen. The accepted contracts below include the owner-approved Part-I repair and all five subsequent decisions. Both corrected Poisson parts now have complete public consumers; release acceptance has passed separately.
 
 ## Objects and notation
 
@@ -22,7 +30,7 @@ Primary label `thm-VDC`, PDF pp. 12–14. For `a<b`, positive continuous strictl
 
 `R_N(a,b)=Σ(N≤ν≤floor(f′(a))) ∫[a,b] g(u)e(f(u)−νu) du`.
 
-Prove `|Σ(a<n≤b) g(n)e(f(n))−R_N(a,b)|≤T_N(a,b)` with **every term** of `def-TNab` and its half-integer form `def-TNab-integer+1/2`. Part II adds the printed C² and derivative positivity/decrease assumptions and replaces the error by `def-TNab-partII` and `def-TNab-integer+1/2-partII`. Auxiliary `G`, `H`, `H_1`, `B`, `E_1`, `E_2` remain the actual source expressions, not free constants.
+Prove `|Σ(a<n≤b) g(n)e(f(n))−R_N(a,b)|≤T_N(a,b)` with **every term** of `def-TNab` and its half-integer form `def-TNab-integer+1/2`. Part II uses the explicit repaired analytic hypotheses and the adopted square coefficient described in the final comparison below. Its half-integer contract uses the full-positive-gap endpoint factor, with the π/2 form available on its proved gap domain. Auxiliary `G`, `H`, `H_1`, `B`, `E_1`, `E_2` remain the actual source expressions, not free constants.
 
 The source writes g(x) under a sum indexed by n: intended g(n) is E01. General-N phase shifting, the endpoint sawtooth convention, and the constant-weight non-strict boundary of the derivative assumptions must be resolved explicitly (E05–E06). Proving only N=0 or only half-integer endpoints is an incomplete P8.
 
@@ -54,7 +62,7 @@ Certify `c₀≤1.2552` at `t₀=14.13472` and `c₀≤1.2127` at `t₀=3·10^12
 
 `thm-AFE2`, PDF p.25: `1/2≤σ≤1`, `|t|≥t₀≥2π`, `x,y∈ℤ+1/2`, `x,y≥h≥3/2`, `2πxy=|t|`.
 
-The proposed proof-consistent branch functions, **pending E03 resolution**, are
+The adopted proof-consistent branch functions, resolving E03, are
 
 `E_direct(σ,h,t₀)=A₀(σ,h,t₀)+C₀(σ,t₀)B₀(σ,t₀)` and
 
@@ -74,9 +82,52 @@ Use **all** terms of `def-A0` (5.22), `def-B0` (5.23), `def-C0` (2.17), `eq:Ci` 
 
 ## Numeric consequences and scope
 
-`cor-AFE2` takes maxima over `σ∈[1/2,1]`; preserve dependence on h,t₀ and x/y branch. `cor-k-AFE2` has integer `1≤k≤50`, `h_k=floor(exp(k−1))+1/2`, `H_k=exp(k)` and `h_k≤min(x,y)≤H_k`. Its constants derive from `k/π+ε₀` or `k(1+δ₀)/π+ε₀` with the appropriate branch. Table 1, Tables 2–3, `eq:ek-largeK` and `eq:AFE2-simple` are finite certification obligations. Exact source decimals and thresholds are retained; a rounded-down approximation is not automatically a valid upper bound (E08).
+`cor-AFE2` takes maxima over `σ∈[1/2,1]`; preserve dependence on h,t₀ and x/y branch. `cor-k-AFE2` has integer `1≤k≤50`, `h_k=floor(exp(k−1))+1/2`, `H_k=exp(k)` and `h_k≤min(x,y)≤H_k`. Its constants derive from `k/π+ε₀` or `k(1+δ₀)/π+ε₀` with the appropriate branch. Table 1, Tables 2–3, `eq:ek-largeK` and `eq:AFE2-simple` are finite certification obligations. Original decimals are preserved beside the adopted outward bounds: exactly nine changed Table 1 cells and fourteen changed Table 2 cells from commit a9ddec65b578914f19199443a3e8ffa3a406e8e8. All eight Table 3 values are unchanged. Three direct Table 1 originals have independent lower-bound refutations; the other replacements make no such claim (E08).
 
 The author script's k=51..150 output, improvements to Patel–Yang's final subconvexity constant, elimination of half-integer AFE2 cutoffs, elimination of all logarithmic loss, RH itself, new zero-density bounds and a full Simonič/Riemann–Siegel formalization are outside this contract. They may be separate extensions only after the stated outputs are complete and separately scoped.
+
+## Final exact-source comparison and adopted contracts — 6 October 2026
+
+This comparison fixes mathematical scope independently of compilation and axiom checks. Frozen labels remain the reference; the public conclusions below refer to actual sums, integrals, zeta and Gamma functions. Original statements and diagnostics are preserved. Internal completion means completion of this corrected package, not every unchanged sentence of v1 or independent mathematical review.
+
+| Review | Exact resolution and distinction | Public proof / semantic consumer |
+|---|---|---|
+| E01 | Use g(n) and include the n=1 term in Theorem 9. The omitted-unit identity establishes a different sum; it is not silently identified with the printed sum. | ObjectAdapters; corrected_poisson_partI; afe_first_kind; theorem_nine_source. |
+| E02 | Use ζ(s)=χ(s)ζ(1−s) at nonreal heights. The reversed universal orientation has a counterexample at −2. | SourceReview; zeta_eq_chi_mul_zeta_one_sub; ChiReflection. |
+| E03 | Adopt direct A₀(σ)+C₀(σ)B₀(σ), reflected A₀(1−σ)C₀(σ)+B₀(1−σ). Preserve reversed (5.2). This is a statement/proof inconsistency, not a claimed counterexample to both printed inequalities. | afe_second_uniform_direct/reflected/branches; theorem_ten_direct_source/reflected_source. |
+| E04 | Real powers use |t|. Exact remainder conjugation covers both signs. The printed fixed-phase Lemma 7 is proved with its literal e^(−πt), and a conjugate-phase bound supplies decay at negative heights. | ChiReflection; ChiGammaFactor; lemma_six_source; signed AFE consumers. |
+| E05 | Original Part I is false; adopt its two weight monotonicity repairs. Part II explicitly adds four positive-frequency quotient conditions; the polynomial example disproves the source inference. Constant weight has its own nonnegative derivation. | PoissonCounterexample; PartIIMonotonicity; CorrectedPartII; actual_afe_repair_hypotheses. |
+| E06 | For F=f−Nx use y=f′(a)−N, M=floor(f′(a))−N, δ=M+1−y, F throughout G/H/H₁, and f″=F″. Integer samples and frequencies are proved equal/reindexed. Integer endpoint majorants use the exact harmonic sum. | PoissonShift; PartIIShiftInputs; corrected_poisson_partII and corrected_poisson_partII_half_integer with exact consumers. |
+| E07 | Include ct=1/2, the advertised 14.13472 threshold, σ=1 and dual σ=0; no silent strict-strip or x>1 restriction. | afe_first_kind_small_cutoff; afe_first_kind_small_decimal/large_decimal; AFESecondClosed; full Theorem-10 consumers. |
+| E08 | Analytic closed-strip maxima and exact rational bounds replace uncertified optimizer rounding; exact 2π is retained. Adopt the complete Table 1–2 certificates with printed/adopted columns; Table 3 and the large-k/constant-six conclusions retain printed values. | AFEUniformMax; AFETableOne; AFETableTwo; ChiTableBounds; AFETableThree; AFEBandConstants; AFECoarseConstants. |
+| E09 | Correct missing −2log2, alternating/Fourier signs, 1/ν and complex boundary notation, while retaining the proved Lemma 1–3/11 conclusions. Literal Corollary 0.2 has an independent proof with explicit positive scale parameters; failed intermediate deductions do not refute it. Approximate comparison prose after Theorem 10 is not a certified numerical theorem; exact adopted corollaries supply the rigorous claims. Table 4 remains attributed to Simonič (2020), with its symmetric Arias de Reyna comparison, as already scoped. | AlternatingHarmonic; AbelSawtooth; PoissonPartI; BProcessGeneral.source_b_process_printed; exact source regressions; Sources/Crosswalk attribution. |
+
+For Part II let δ=1−fract(y), A=1/δ²+1/(δ+1)²+1/(δ+1), B=log(floor(y)+1)−1/(floor(y)+1)−Re ψ(δ), C=log(y+1)+γ−(1+2y)/(2(1+y)). The adopted square coefficient is E₁=A−(B−C)/y (`partIISquareTailEnvelope`); `printedPartIIE1` preserves A−(B+C)/y and its failed-majorant diagnostic. The cube coefficient E₂ is unchanged. The assembled general error is exactly the endpoint finite-head term plus ‖poissonBoundary F g a b‖, plus [H(b)B(M,b,F′b)+H(a)B(M,a,y)]/(4π²), plus [H₁(a)E₁(y)+H(a)|f″(a)|E₂(y)]/(4π³y). `secondPoissonError_eq_envelope` and the square/cube identities prove this correspondence, rather than postulating new error functions.
+
+`corrected_poisson_partII` exposes the full analytic input list. On [a,b], a<b, f and g are differentiable, f′ and g′ continuous, f′ strictly decreasing, N<f′(b), g positive and nonincreasing, |g′| nonincreasing, |g′|/(1+f′−N) nonincreasing, |f″| positive and nonincreasing, and g″ positive and nonincreasing. For each h=g′ and h=g(f′−N), and every positive integer ν, both |h′|/(ν+f′−N)² and |h f″|/(ν+f′−N)³ are nonincreasing. These last four conditions are the approved repair. Unneeded printed positivity of |g′| and of the product derivative is omitted; the required product monotonicity is derived. No remainder estimate or equivalent hypothesis occurs.
+
+| Complete SecondOrderRegularity field group | Derivation from these explicit inputs |
+|---|---|
+| All eleven inherited PartIRegularity fields | `partIRegularityAt_of_source_hypotheses` and its shift: differentiability/continuity, positive shifted derivative from N<f′(b), nonnegative weight, and the two adopted monotonicity inputs. |
+| f_deriv_differentiable, g_deriv_differentiable | Nonzero actual second derivatives force differentiability; the shifted derivative is identified locally. |
+| f_second_continuous, g_second_continuous | f′ nonincreasing gives f″≤0, so |f″| nonincreasing gives f″ nondecreasing. g″ is nonincreasing. Darboux plus monotonicity proves both continuous on the closed interval, including endpoints. No additional endpoint C² premise is assumed. |
+| f_second_abs_antitone, g_second_abs_antitone | Direct curvature input and g″≥0; the actual second phase derivative is invariant under the shift. |
+| product_deriv_abs_antitone | |g′(f′−N)+gf″|=|g′|(f′−N)+g|f″|; both products are nonnegative and nonincreasing. This also removes any unexplained shifted product condition. |
+| positive_deriv_quotient, positive_curvature_quotient | Precisely the four approved quotient assumptions, transported through the actual shift and ν=n+1. |
+
+`secondOrderRegularity_of_source` constructs the whole interface. `afe_secondOrderRegularity` derives it independently for every positive-interval logarithmic AFE phase and weight u^(−σ), σ≥0; PowerWeights and AFESecondWeights prove the required quotient identities and monotonicity. Thus σ=0 is included directly, without assuming strict positivity of its zero weight derivatives. `afePhase_constant_secondOrderRegularity` covers the logarithmic constant-weight application. The general literal B-process has an independent proof and does not inherit these added quotient hypotheses.
+
+For Corollary 0.1 Part II, `constant_secondOrderRegularity_source` requires only explicit phase inputs: differentiability of f and f′, continuity of f′, positive f′(b), nonincreasing f′ and |f″|, and, for every ν>0, nonincreasing |f″|/(ν+f′)² and |f′f″|/(ν+f′)³. It derives all zero-amplitude fields and endpoint continuity. With M=floor(f′(a)), each endpoint uses d=M+1−f′(u)>0 and
+
+`Bδ(M,z)=[|Re ψ(d)−Re ψ((d+1)/2)−log2|+1/(M+1)+log2+3/(2(z+1))]/z`, where d=M+1−z.
+
+`corrected_corollary_zero_one_partII` retains (log2+1/f′(a))/π and the corrected square/unchanged cube coefficients for every positive gap. `corrected_corollary_zero_one_partII_pi` additionally assumes δ≥1/2, which gives both endpoint d≥1/2 and justifies replacing the digamma term by π/2. The full printed corollary is disproved in PoissonHalfReview. This replacement changes the conclusion and states its hypotheses; it is not a proof of the false printed statement. `corrected_corollary_eight_one` handles δ=1/2 with the exact adopted square/cube evaluations. Literal Corollary 0.2 is unchanged.
+
+All nine new public declarations in CorrectedPartII have separately typed source regressions and explicit audit registrations. The combined 299 regressions also fix actual endpoint weights, floors, signs, A₀/B₀/C₀ formulas, diagonal direct-branch choice, both height signs, all adopted tables and unchanged large-k/constant-six consumers. The focused audit reports 2379 project theorems including private/generated declarations, 1465 registered consumers, and zero errors under all 16 linters (1629 declarations plus 897 generated). The sequential release checks also passed; their exact commands and log hashes are recorded in the Reproduction Manifest.
+
+## Historical implementation checkpoints
+
+The sections below preserve the sequence of construction and earlier pending decisions. Their counts and provisional language are historical; the adopted contracts above determine current scope.
 
 ## H1/H11 — exact harmonic and digamma consumers
 

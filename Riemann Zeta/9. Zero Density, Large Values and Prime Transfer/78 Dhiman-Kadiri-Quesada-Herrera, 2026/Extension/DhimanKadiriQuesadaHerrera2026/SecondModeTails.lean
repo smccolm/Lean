@@ -4,7 +4,7 @@ import DhimanKadiriQuesadaHerrera2026.ExponentialTails
 /-! # Actual positive-frequency second-integration series
 
 These technical estimates expose their analytic quotient conditions explicitly.
-They do not adopt a corrected general Part-II contract.
+The corrected general Part-II consumer is in CorrectedPartII.
 -/
 
 namespace DhimanKadiriQuesadaHerrera2026

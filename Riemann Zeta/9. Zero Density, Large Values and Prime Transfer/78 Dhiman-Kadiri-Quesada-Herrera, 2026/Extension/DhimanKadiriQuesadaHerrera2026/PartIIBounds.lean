@@ -73,7 +73,7 @@ noncomputable def secondPoissonError (f g : ℝ → ℝ) (a b : ℝ) : ℝ :=
   (secondH f g a * |deriv (deriv f) a| / (4 * Real.pi ^ 3)) *
     (minusCubeBound M (deriv f a) + plusCubeBound (deriv f a))
 
-/-- The provisional general analytic inputs yield the full explicit bound at all real endpoints. -/
+/-- The repaired general analytic inputs yield the full explicit bound at all real endpoints. -/
 theorem SecondOrderRegularity.explicit_poisson_bound {f g : ℝ → ℝ} {a b : ℝ}
     (r : SecondOrderRegularity f g a b) :
     ‖(∑ n ∈ Finset.Ioc ⌊a⌋ ⌊b⌋, weightedWave f g (n : ℝ)) -

@@ -4,7 +4,7 @@ import DhimanKadiriQuesadaHerrera2026.SecondTailSharp
 /-! # Cubic Fourier tails for actual constant-weight Poisson summation
 
 The bounds derive every convergence input and retain the actual oscillatory
-endpoint series. They do not adopt any pending source repair.
+endpoint series. They are independent of the general Part-II source repairs.
 -/
 
 namespace DhimanKadiriQuesadaHerrera2026

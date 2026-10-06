@@ -1122,7 +1122,7 @@ theorem shifted_constant_poisson_source {f : ℝ → ℝ} {a b : ℝ} {N : ℕ}
             1 / (2 * (1 + (deriv f a - N))) + Real.log 2 + 1 / (deriv f a - N)) := by
   exact poisson_constant_partI_half_integer hab hfd hfc hN hfa ha hb
 
-/-- The provisional general second-order analytic interface bounds the actual sum and literal Fourier integrals. -/
+/-- The repaired general second-order analytic interface bounds the actual sum and literal Fourier integrals. -/
 theorem general_second_poisson_source {f g : ℝ → ℝ} {a b : ℝ}
     (r : SecondOrderRegularity f g a b) :
     let M : ℕ := ⌊deriv f a⌋₊
@@ -1157,7 +1157,7 @@ theorem afe_general_second_poisson_source {σ c a b : ℝ} (hσ : 0 ≤ σ) (hc 
         (minusCubeBound M (deriv f a) + plusCubeBound (deriv f a)) := by
   exact (afe_secondOrderRegularity hσ hc ha hab).finite_poisson_bound
 
-/-- The complete source-frequency range and actual weighted sum consume the explicit provisional second-order theorem. -/
+/-- The complete source-frequency range and actual weighted sum consume the explicit repaired second-order theorem. -/
 theorem general_second_poisson_shifted_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
     (h : PartIRegularityAt f g a b N)
     (r : SecondOrderRegularity (phaseShift f N) g a b) :
@@ -1169,7 +1169,7 @@ theorem general_second_poisson_shifted_source {f g : ℝ → ℝ} {a b : ℝ} {N
   simpa only [weightedWave] using second_poisson_shifted_bound h r
 
 
-/-- The complete source-frequency range and actual weighted sum consume the explicit provisional second-order theorem. -/
+/-- The complete source-frequency range and actual weighted sum consume the explicit repaired second-order theorem. -/
 theorem general_second_poisson_half_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
     (h : PartIRegularityAt f g a b N)
     (r : SecondOrderRegularity (phaseShift f N) g a b)
@@ -1460,7 +1460,7 @@ theorem proposed_table_one_symmetric_source {σ t x : ℝ} {r : ℕ} (hr : r ≤
       (Real.log x / Real.pi + proposedTableOneSymmetric r) * x ^ (-σ) := by
   simpa only [afeRemainder, sharpZetaSum, zetaTerm, neg_sub] using proposed_table_one_symmetric hr hσ ht hx hxhalf hscale
 
-/-- The exact provisional Part-II conclusion consumes analytic inputs and retains the actual sum. -/
+/-- The exact repaired Part-II conclusion consumes analytic inputs and retains the actual sum. -/
 theorem second_poisson_from_shift_inputs_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
     (r : PartIRegularityAt f g a b N)
     (hf : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)
@@ -1482,7 +1482,7 @@ theorem second_poisson_from_shift_inputs_source {f g : ℝ → ℝ} {a b : ℝ} 
       secondPoissonError (phaseShift f N) g a b := by
   simpa only [weightedWave] using second_poisson_from_shift_inputs r hf hfc hg hgc hfa hgn hga hq hc
 
-/-- The exact provisional Part-II conclusion consumes analytic inputs and retains the actual sum. -/
+/-- The exact repaired Part-II conclusion consumes analytic inputs and retains the actual sum. -/
 theorem second_poisson_half_from_shift_inputs_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
     (r : PartIRegularityAt f g a b N)
     (hf : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)
@@ -1514,7 +1514,7 @@ theorem second_poisson_half_from_shift_inputs_source {f g : ℝ → ℝ} {a b : 
         (minusCubeBound M y + plusCubeBound y) := by
   simpa only [weightedWave] using second_poisson_half_from_shift_inputs r hf hfc hg hgc hfa hgn hga hq hc hah hbh hδ
 
-/-- The exact provisional Part-II conclusion consumes analytic inputs and retains the actual sum. -/
+/-- The exact repaired Part-II conclusion consumes analytic inputs and retains the actual sum. -/
 theorem partIISquareTailEnvelope_half_offset_source {y : ℝ} (hy : 0 < y)
     (hδ : (⌊y⌋₊ : ℝ) + 1 - y = 1 / 2) :
     partIISquareTailEnvelope y = 46 / 9 +
@@ -1522,7 +1522,7 @@ theorem partIISquareTailEnvelope_half_offset_source {y : ℝ} (hy : 0 < y)
         2 * Real.log 2 - (1 + 2 * y) / (2 * (y + 1))) / y := by
   simpa only [weightedWave] using partIISquareTailEnvelope_half_offset hy hδ
 
-/-- The exact provisional Part-II conclusion consumes analytic inputs and retains the actual sum. -/
+/-- The exact repaired Part-II conclusion consumes analytic inputs and retains the actual sum. -/
 theorem partIICubeCoefficient_half_offset_source {y : ℝ} (hy : 0 < y)
     (hδ : (⌊y⌋₊ : ℝ) + 1 - y = 1 / 2) :
     partIICubeCoefficient y = 230 / 27 - (14 / 3) / y +
@@ -1531,7 +1531,7 @@ theorem partIICubeCoefficient_half_offset_source {y : ℝ} (hy : 0 < y)
         (1 + 3 * y + 3 * y ^ 2) / (2 * (y + 1) ^ 2)) / y ^ 2 := by
   simpa only [weightedWave] using partIICubeCoefficient_half_offset hy hδ
 
-/-- The exact provisional Part-II conclusion consumes analytic inputs and retains the actual sum. -/
+/-- The exact repaired Part-II conclusion consumes analytic inputs and retains the actual sum. -/
 theorem second_poisson_half_offset_from_inputs_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
     (r : PartIRegularityAt f g a b N)
     (hf : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)
@@ -3937,5 +3937,229 @@ theorem integer_source_half_cutoff_source {x : ℝ} (hx : 0 ≤ x) (s : ℂ) :
     (∑ n ∈ Finset.Ioc (0 : ℤ) ⌊afeHalfCutoff x⌋, (n : ℂ) ^ (-s)) =
       ∑ n ∈ Finset.Ioc (0 : ℤ) ⌊x⌋, (n : ℂ) ^ (-s) := by
   exact integer_source_half_cutoff hx s
+
+/-- Exact accepted-contract regression for continuousOn_deriv_of_monotone. -/
+theorem continuousOn_deriv_of_monotone_source {F : ℝ → ℝ} {a b : ℝ}
+    (hd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ F u)
+    (hm : MonotoneOn (deriv F) (Set.Icc a b)) :
+    ContinuousOn (deriv F) (Set.Icc a b) := by
+  exact DhimanKadiriQuesadaHerrera2026.continuousOn_deriv_of_monotone hd hm
+
+
+/-- Exact accepted-contract regression for continuousOn_deriv_of_antitone. -/
+theorem continuousOn_deriv_of_antitone_source {F : ℝ → ℝ} {a b : ℝ}
+    (hd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ F u)
+    (hm : AntitoneOn (deriv F) (Set.Icc a b)) :
+    ContinuousOn (deriv F) (Set.Icc a b) := by
+  exact DhimanKadiriQuesadaHerrera2026.continuousOn_deriv_of_antitone hd hm
+
+
+/-- Exact accepted-contract regression for secondOrderRegularity_of_source. -/
+theorem secondOrderRegularity_of_source_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hN : (N : ℝ) < deriv f b)
+    (hfa : StrictAntiOn (deriv f) (Set.Icc a b))
+    (hgd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ g u)
+    (hgdc : ContinuousOn (deriv g) (Set.Icc a b))
+    (hgp : ∀ u ∈ Set.Icc a b, 0 < g u) (hga : AntitoneOn g (Set.Icc a b))
+    (hgda : AntitoneOn (fun u => |deriv g u|) (Set.Icc a b))
+    (hgdq : AntitoneOn (fun u => |deriv g u| / (1 + deriv f u - N)) (Set.Icc a b))
+    (hf2p : ∀ u ∈ Set.Icc a b, 0 < |deriv (deriv f) u|)
+    (hf2a : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hg2p : ∀ u ∈ Set.Icc a b, 0 < deriv (deriv g) u)
+    (hg2a : AntitoneOn (deriv (deriv g)) (Set.Icc a b))
+    (hq : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv h u| /
+        ((ν : ℝ) + deriv f u - N) ^ 2) (Set.Icc a b))
+    (hc : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |h u * deriv (deriv f) u| /
+        ((ν : ℝ) + deriv f u - N) ^ 3) (Set.Icc a b)) :
+    SecondOrderRegularity (phaseShift f N) g a b := by
+  exact DhimanKadiriQuesadaHerrera2026.secondOrderRegularity_of_source hab hfd hfc hN hfa hgd hgdc hgp hga hgda hgdq hf2p hf2a hg2p hg2a hq hc
+
+
+/-- Exact accepted-contract regression for corrected_poisson_partII. -/
+theorem corrected_poisson_partII_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hN : (N : ℝ) < deriv f b)
+    (hfa : StrictAntiOn (deriv f) (Set.Icc a b))
+    (hgd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ g u)
+    (hgdc : ContinuousOn (deriv g) (Set.Icc a b))
+    (hgp : ∀ u ∈ Set.Icc a b, 0 < g u) (hga : AntitoneOn g (Set.Icc a b))
+    (hgda : AntitoneOn (fun u => |deriv g u|) (Set.Icc a b))
+    (hgdq : AntitoneOn (fun u => |deriv g u| / (1 + deriv f u - N)) (Set.Icc a b))
+    (hf2p : ∀ u ∈ Set.Icc a b, 0 < |deriv (deriv f) u|)
+    (hf2a : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hg2p : ∀ u ∈ Set.Icc a b, 0 < deriv (deriv g) u)
+    (hg2a : AntitoneOn (deriv (deriv g)) (Set.Icc a b))
+    (hq : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv h u| /
+        ((ν : ℝ) + deriv f u - N) ^ 2) (Set.Icc a b))
+    (hc : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |h u * deriv (deriv f) u| /
+        ((ν : ℝ) + deriv f u - N) ^ 3) (Set.Icc a b)) :
+    let F := phaseShift f N
+    let y := deriv f a - N
+    let M := ⌊deriv f a⌋₊ - N
+    ‖(∑ n ∈ Finset.Ioc ⌊a⌋ ⌊b⌋, (g (n : ℝ) : ℂ) *
+        Complex.exp (2 * Real.pi * Complex.I * (f (n : ℝ) : ℂ))) -
+      ∑ ν ∈ Finset.Icc N ⌊deriv f a⌋₊, ∫ u in a..b, (g u : ℂ) *
+        Complex.exp (2 * Real.pi * Complex.I * ((f u - (ν : ℝ) * u : ℝ) : ℂ))‖ ≤
+      (g b * poissonEndpointMajorant b y + g a * poissonEndpointMajorant a y) / (2 * Real.pi) +
+      ‖poissonBoundary F g a b‖ +
+      (secondH F g b * secondTailMajorant M b (deriv f b - N) +
+        secondH F g a * secondTailMajorant M a y) / (4 * Real.pi ^ 2) +
+      (secondH1 F g a * partIISquareTailEnvelope y +
+        secondH F g a * |deriv (deriv f) a| * partIICubeCoefficient y) /
+          (4 * Real.pi ^ 3 * y) := by
+  exact DhimanKadiriQuesadaHerrera2026.corrected_poisson_partII hab hfd hfc hN hfa hgd hgdc hgp hga hgda hgdq hf2p hf2a hg2p hg2a hq hc
+
+
+/-- Exact accepted-contract regression for corrected_poisson_partII_half_integer. -/
+theorem corrected_poisson_partII_half_integer_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hN : (N : ℝ) < deriv f b)
+    (hfa : StrictAntiOn (deriv f) (Set.Icc a b))
+    (hgd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ g u)
+    (hgdc : ContinuousOn (deriv g) (Set.Icc a b))
+    (hgp : ∀ u ∈ Set.Icc a b, 0 < g u) (hga : AntitoneOn g (Set.Icc a b))
+    (hgda : AntitoneOn (fun u => |deriv g u|) (Set.Icc a b))
+    (hgdq : AntitoneOn (fun u => |deriv g u| / (1 + deriv f u - N)) (Set.Icc a b))
+    (hf2p : ∀ u ∈ Set.Icc a b, 0 < |deriv (deriv f) u|)
+    (hf2a : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hg2p : ∀ u ∈ Set.Icc a b, 0 < deriv (deriv g) u)
+    (hg2a : AntitoneOn (deriv (deriv g)) (Set.Icc a b))
+    (hq : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv h u| /
+        ((ν : ℝ) + deriv f u - N) ^ 2) (Set.Icc a b))
+    (hc : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |h u * deriv (deriv f) u| /
+        ((ν : ℝ) + deriv f u - N) ^ 3) (Set.Icc a b))
+    (hah : ∃ k : ℤ, a = (k : ℝ) + 1 / 2) (hbh : ∃ k : ℤ, b = (k : ℝ) + 1 / 2) :
+    let F := phaseShift f N
+    let y := deriv f a - N
+    let M := ⌊deriv f a⌋₊ - N
+    ‖(∑ n ∈ Finset.Ioc ⌊a⌋ ⌊b⌋, (g (n : ℝ) : ℂ) *
+        Complex.exp (2 * Real.pi * Complex.I * (f (n : ℝ) : ℂ))) -
+      ∑ ν ∈ Finset.Icc N ⌊deriv f a⌋₊, ∫ u in a..b, (g u : ℂ) *
+        Complex.exp (2 * Real.pi * Complex.I * ((f u - (ν : ℝ) * u : ℝ) : ℂ))‖ ≤
+      ((g a + g b) / (2 * Real.pi)) * (Real.log 2 + 1 / y) +
+      secondH F g b / (4 * Real.pi ^ 2) * halfSecondEndpointDelta M (deriv f b - N) +
+      secondH F g a / (4 * Real.pi ^ 2) * halfSecondEndpointDelta M y +
+      (secondH1 F g a * partIISquareTailEnvelope y +
+        secondH F g a * |deriv (deriv f) a| * partIICubeCoefficient y) /
+          (4 * Real.pi ^ 3 * y) := by
+  exact DhimanKadiriQuesadaHerrera2026.corrected_poisson_partII_half_integer hab hfd hfc hN hfa hgd hgdc hgp hga hgda hgdq hf2p hf2a hg2p hg2a hq hc hah hbh
+
+
+/-- Exact accepted-contract regression for constant_secondOrderRegularity_source. -/
+theorem constant_secondOrderRegularity_source_source {f : ℝ → ℝ} {a b : ℝ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hpos : 0 < deriv f b)
+    (hfa : AntitoneOn (deriv f) (Set.Icc a b))
+    (hfdd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)
+    (hanti : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hq : ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv (deriv f) u| /
+      ((ν : ℝ) + deriv f u) ^ 2) (Set.Icc a b))
+    (hr : ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv f u * deriv (deriv f) u| /
+      ((ν : ℝ) + deriv f u) ^ 3) (Set.Icc a b)) :
+    SecondOrderRegularity f (fun _ => 1) a b := by
+  exact DhimanKadiriQuesadaHerrera2026.constant_secondOrderRegularity_source hab hfd hfc hpos hfa hfdd hanti hq hr
+
+
+/-- Exact accepted-contract regression for corrected_corollary_zero_one_partII. -/
+theorem corrected_corollary_zero_one_partII_source {f : ℝ → ℝ} {a b : ℝ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hpos : 0 < deriv f b)
+    (hfa : AntitoneOn (deriv f) (Set.Icc a b))
+    (hfdd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)
+    (hanti : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hq : ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv (deriv f) u| /
+      ((ν : ℝ) + deriv f u) ^ 2) (Set.Icc a b))
+    (hr : ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv f u * deriv (deriv f) u| /
+      ((ν : ℝ) + deriv f u) ^ 3) (Set.Icc a b))
+    (hah : ∃ k : ℤ, a = (k : ℝ) + 1 / 2) (hbh : ∃ k : ℤ, b = (k : ℝ) + 1 / 2) :
+    let y := deriv f a
+    let M := ⌊y⌋₊
+    ‖(∑ n ∈ Finset.Ioc ⌊a⌋ ⌊b⌋, Complex.exp (2 * Real.pi * Complex.I * (f (n : ℝ) : ℂ))) -
+      ∑ ν ∈ Finset.Icc 0 M, ∫ u in a..b,
+        Complex.exp (2 * Real.pi * Complex.I * ((f u - (ν : ℝ) * u : ℝ) : ℂ))‖ ≤
+      (Real.log 2 + 1 / y) / Real.pi +
+      (deriv f b * halfSecondEndpointDelta M (deriv f b) + y * halfSecondEndpointDelta M y) /
+        (2 * Real.pi) +
+      |deriv (deriv f) a| / (2 * Real.pi ^ 2) *
+        (partIISquareTailEnvelope y / y + partIICubeCoefficient y) := by
+  exact DhimanKadiriQuesadaHerrera2026.corrected_corollary_zero_one_partII hab hfd hfc hpos hfa hfdd hanti hq hr hah hbh
+
+
+/-- Exact accepted-contract regression for corrected_corollary_zero_one_partII_pi. -/
+theorem corrected_corollary_zero_one_partII_pi_source {f : ℝ → ℝ} {a b : ℝ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hpos : 0 < deriv f b)
+    (hfa : AntitoneOn (deriv f) (Set.Icc a b))
+    (hfdd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ (deriv f) u)
+    (hanti : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hq : ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv (deriv f) u| /
+      ((ν : ℝ) + deriv f u) ^ 2) (Set.Icc a b))
+    (hr : ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv f u * deriv (deriv f) u| /
+      ((ν : ℝ) + deriv f u) ^ 3) (Set.Icc a b))
+    (hah : ∃ k : ℤ, a = (k : ℝ) + 1 / 2) (hbh : ∃ k : ℤ, b = (k : ℝ) + 1 / 2)
+    (hδ : 1 / 2 ≤ (⌊deriv f a⌋₊ : ℝ) + 1 - deriv f a) :
+    let y := deriv f a
+    let M := ⌊y⌋₊
+    ‖(∑ n ∈ Finset.Ioc ⌊a⌋ ⌊b⌋, Complex.exp (2 * Real.pi * Complex.I * (f (n : ℝ) : ℂ))) -
+      ∑ ν ∈ Finset.Icc 0 M, ∫ u in a..b,
+        Complex.exp (2 * Real.pi * Complex.I * ((f u - (ν : ℝ) * u : ℝ) : ℂ))‖ ≤
+      (Real.log 2 + 1 / y) / Real.pi +
+      (deriv f b * halfSecondEndpointBound M (deriv f b) + y * halfSecondEndpointBound M y) /
+        (2 * Real.pi) +
+      |deriv (deriv f) a| / (2 * Real.pi ^ 2) *
+        (partIISquareTailEnvelope y / y + partIICubeCoefficient y) := by
+  exact DhimanKadiriQuesadaHerrera2026.corrected_corollary_zero_one_partII_pi hab hfd hfc hpos hfa hfdd hanti hq hr hah hbh hδ
+
+
+/-- Exact accepted-contract regression for corrected_corollary_eight_one. -/
+theorem corrected_corollary_eight_one_source {f g : ℝ → ℝ} {a b : ℝ} {N : ℕ}
+    (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
+    (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hN : (N : ℝ) < deriv f b)
+    (hfa : StrictAntiOn (deriv f) (Set.Icc a b))
+    (hgd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ g u)
+    (hgdc : ContinuousOn (deriv g) (Set.Icc a b))
+    (hgp : ∀ u ∈ Set.Icc a b, 0 < g u) (hga : AntitoneOn g (Set.Icc a b))
+    (hgda : AntitoneOn (fun u => |deriv g u|) (Set.Icc a b))
+    (hgdq : AntitoneOn (fun u => |deriv g u| / (1 + deriv f u - N)) (Set.Icc a b))
+    (hf2p : ∀ u ∈ Set.Icc a b, 0 < |deriv (deriv f) u|)
+    (hf2a : AntitoneOn (fun u => |deriv (deriv f) u|) (Set.Icc a b))
+    (hg2p : ∀ u ∈ Set.Icc a b, 0 < deriv (deriv g) u)
+    (hg2a : AntitoneOn (deriv (deriv g)) (Set.Icc a b))
+    (hq : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |deriv h u| /
+        ((ν : ℝ) + deriv f u - N) ^ 2) (Set.Icc a b))
+    (hc : ∀ h : ℝ → ℝ, (h = deriv g ∨ h = fun u => g u * (deriv f u - N)) →
+      ∀ ν : ℕ, 0 < ν → AntitoneOn (fun u => |h u * deriv (deriv f) u| /
+        ((ν : ℝ) + deriv f u - N) ^ 3) (Set.Icc a b))
+    (hah : ∃ k : ℤ, a = (k : ℝ) + 1 / 2) (hbh : ∃ k : ℤ, b = (k : ℝ) + 1 / 2)
+    (hδ : 1 - Int.fract (deriv f a) = 1 / 2) :
+    let F := phaseShift f N
+    let y := deriv f a - N
+    let z := deriv f b - N
+    ‖(∑ n ∈ Finset.Ioc ⌊a⌋ ⌊b⌋, weightedWave f g (n : ℝ)) -
+      ∑ ν ∈ Finset.Icc N ⌊deriv f a⌋₊,
+        ∫ u in a..b, (g u : ℂ) *
+          Complex.exp (2 * Real.pi * Complex.I * ((f u - (ν : ℝ) * u : ℝ) : ℂ))‖ ≤
+      ((g a + g b) / (2 * Real.pi)) * (Real.log 2 + 1 / y) +
+      secondH F g b / (4 * Real.pi ^ 2) *
+        ((1 / z) * (Real.pi / 2 + 1 / (y + 1 / 2) + Real.log 2 + 3 / (2 * (z + 1)))) +
+      secondH F g a / (4 * Real.pi ^ 2) *
+        ((1 / y) * (Real.pi / 2 + 1 / (y + 1 / 2) + Real.log 2 + 3 / (2 * (y + 1)))) +
+      secondH1 F g a / (4 * Real.pi ^ 3) *
+        ((46 / 9) / y + (Real.log (y + 1) - Real.log (y + 1 / 2) + 1 / (y + 1 / 2) -
+          2 * Real.log 2 - (1 + 2 * y) / (2 * (y + 1))) / y ^ 2) +
+      (secondH F g a * |deriv (deriv F) a| / (4 * Real.pi ^ 3)) *
+        ((230 / 27) / y - (14 / 3) / y ^ 2 +
+          (Real.log (y + 1 / 2) + Real.log (y + 1) + 2 * Real.log 2 +
+            2 * Real.eulerMascheroniConstant - 1 / (2 * (y + 1 / 2)) -
+            (1 + 3 * y + 3 * y ^ 2) / (2 * (y + 1) ^ 2)) / y ^ 3) := by
+  exact DhimanKadiriQuesadaHerrera2026.corrected_corollary_eight_one hab hfd hfc hN hfa hgd hgdc hgp hga hgda hgdq hf2p hf2a hg2p hg2a hq hc hah hbh hδ
 
 end DhimanKadiriQuesadaHerrera2026.SemanticRegression

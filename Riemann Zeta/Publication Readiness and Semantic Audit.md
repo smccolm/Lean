@@ -6,6 +6,8 @@ This document is the project's adversarial review packet. It records an internal
 
 ## 1. One-page claim sheet
 
+Separate extension addendum (6 October 2026): the [Dhiman–Kadiri–Quesada-Herrera project](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/78%20Dhiman-Kadiri-Quesada-Herrera,%202026/README.md) has completed all 20 gates for its explicitly adopted corrected source contracts. It preserves the literal B-process and frozen v1, proves the corrected weighted Poisson and both AFE branches, and certifies the adopted Table 1–2 replacements and unchanged Table 3 consequences. Counterexamples and every changed hypothesis, sign, branch and numerical bound remain documented. Its separate package, exact-type regressions and exhaustive audit pass the paper verifier; the foundation verifier also passes. This addendum does not alter the Guth–Maynard publication contracts or claim independent review or author-issued corrections.
+
 Scope addendum (4 October 2026): the foundation claim sheet below is unchanged.
 The separate Tao--Trudgian--Yang extension now has a production-kernel-checked
 proof of the frozen density envelope, including the disputed closed Pintz

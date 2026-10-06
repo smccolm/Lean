@@ -6,7 +6,7 @@ import DhimanKadiriQuesadaHerrera2026.WeightedIntegralAssembly
 
 The upper-cutoff limit, Gamma evaluation and lower-integral bound give a strict-strip
 estimate for the actual two Dirichlet polynomials. Its explicit separate square-tail
-coefficients do not adopt the pending Part-II E₁ correction. Endpoint continuation,
+coefficients are derived directly; the adopted general E₁ contract is in CorrectedPartII. Endpoint continuation,
 source error simplification and reflected bounds remain separate obligations.
 -/
 

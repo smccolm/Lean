@@ -3,7 +3,7 @@ import DhimanKadiriQuesadaHerrera2026.PoissonCorollary
 
 namespace DhimanKadiriQuesadaHerrera2026
 
-/-- Constant weight satisfies the provisional second-order interface from two explicit phase quotients. -/
+/-- Constant weight satisfies the repaired second-order interface from two explicit phase quotients. -/
 theorem constant_secondOrderRegularity {f : ℝ → ℝ} {a b : ℝ}
     (hab : a < b) (hfd : ∀ u ∈ Set.Icc a b, DifferentiableAt ℝ f u)
     (hfc : ContinuousOn (deriv f) (Set.Icc a b)) (hpos : 0 < deriv f b)

@@ -1,10 +1,12 @@
 # Research agenda and current status
 
-**ACTIVE GOAL — activated 5 October 2026. 11/20 proof gates complete.** DKQH-02 through DKQH-08, DKQH-11 through DKQH-13 and DKQH-18 are complete; nine gates remain OPEN. The full literal B-process is verified; remaining source decisions and acceptance checks are separate.
+The corrected formalization is complete: 20/20 gates, 127 production modules and 299 exact-type semantic consumers. Both sequential verifiers passed with zero Lean diagnostics. Historical checkpoint sections retain their original counts and pending-decision wording; the final accepted contracts and release receipt supersede them.
+
+**GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
 
 Corrected weighted Poisson Part I, AFE1 and its real-cutoff constants, the weighted stationary integrals, gamma/chi bounds, harmonic estimates and the full literal B-process are complete. ObjectAdapters supplies the final explicit object-convention consumers; DKQH-02 and dependency integration DKQH-18 are accepted after sequential verification.
 
-Proposed general Part-II and Corollary-0.1 repairs, proof-consistent AFE2 branches and certified outward Table 1–2 replacements are implemented and documented separately. Their adoption still awaits the owner’s recorded source decisions. Table 3, the k/pi+1.1601 estimate and the constant-six consequence have proved consumers. Preserve every original statement and counterexample while resolving those decisions; no unchanged false source contract is claimed.
+Adopted general Part-II and Corollary-0.1 repairs, proof-consistent AFE2 branches and certified outward Table 1–2 replacements are implemented and documented separately. The owner has now adopted all five repairs; the public general Part-II theorem exposes every added hypothesis and derives its complete regularity interface. Table 3, the k/pi+1.1601 estimate and the constant-six consequence have proved consumers. Preserve every original statement and counterexample with release checks complete; no unchanged false source contract is claimed.
 
 Author-code replay remains a numerical observation. The certified constants instead use analytic coverage and rational inequalities checked by Lean’s kernel. The complete verified source/reuse inventory and current sequential receipts are recorded in the Reproduction Manifest.
 
@@ -22,7 +24,7 @@ These are the existing projects' recorded statuses, supported by source/interfac
 
 No new zero-density theorem, sub-Weyl constant optimization, all-real AFE2 cutoff theorem or RH claim is required. No new external package is selected. Broad searches should stop once a useful candidate is identified and its exact interface inspected; work then moves to the actual terminal analytic obligation. Use the twenty-gate architecture to track genuine source consumers, not an ever-growing collection of conditional wrappers. No recovery record is required.
 
-## Current mathematical evidence
+## Historical mathematical evidence
 
 `SourceReview` proves the missing unit-term identity and the false universal functional-equation orientation at -2. Neither closes a full source gate. Errata now gives a concrete polynomial-weight counterexample to Theorem 8 Part I and the owner-accepted additional monotonicity hypotheses; the counterexample is kernel-checked and the two added conditions are proved for the actual AFE weights. The complete corrected Part-I theorem is now accepted; the AFE1 implementation below has passed its focused source and dependency checks. Part II and AFE2 remain required.
 

@@ -4,8 +4,8 @@ import DhimanKadiriQuesadaHerrera2026.AFESecondBounds
 
 The full A₀, B₀ and C₀ formulas bound the actual remainder in both cutoff regions,
 including both height signs and closed sigma endpoints. The formula agrees with the
-source proof and ancillary code. Equation (5.2) reverses the E₀ assignments; adopting
-this corrected public contract remains an explicit owner scope decision.
+source proof and ancillary code. Equation (5.2) reverses the E₀ assignments;
+this corrected public contract was explicitly adopted by the owner on 5 October 2026.
 -/
 
 namespace DhimanKadiriQuesadaHerrera2026

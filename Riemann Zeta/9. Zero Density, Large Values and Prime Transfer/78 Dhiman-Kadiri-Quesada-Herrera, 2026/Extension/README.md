@@ -1,10 +1,12 @@
-# Active isolated Lean extension
+# Verified isolated Lean extension
+
+The corrected formalization is complete: 20/20 gates, 127 production modules and 299 exact-type semantic consumers. Both sequential verifiers passed with zero Lean diagnostics. Historical checkpoint sections retain their original counts and pending-decision wording; the final accepted contracts and release receipt supersede them.
 
 Activated 5 October 2026. The package is `DhimanKadiriQuesadaHerrera2026`, using the unchanged root Lean 4.30 and dependency graph through a local path dependency. Its external build directory avoids Windows path-length pressure.
 
 `Objects` defines the actual sharp sums, source chi factor and AFE remainder. `SourceReview` proves source diagnostics. `PoissonCounterexample` proves that the original Part-I hypotheses do not imply its bound. `PowerWeights` proves the owner-approved additional monotonicity conditions for the actual AFE power weights and logarithmic phase, including σ = 0. `HarmonicDigamma` proves the nonalternating Lemma-1 estimates from the existing digamma series. `SemanticRegression` fixes their unfolded types, and `Audit` checks every imported project theorem transitively, including private/generated declarations, plus registered public consumers and default namespace linters.
 
-DKQH-02/03/04/05/06/07/08/11/12/13/18 are complete: 11/20 accepted gates, with nine OPEN. Run the foundation and paper BATs sequentially. A helper proof or green development build does not establish the paper's analytic estimates.
+All DKQH-01–DKQH-20 gates are complete for the adopted corrected contracts. The source comparison and sequential foundation/paper verifiers pass. The 127 production modules include CorrectedPartII, whose public consumers expose the repairs and derive the complete analytic interface. Only the standard logical axioms propext, Classical.choice and Quot.sound are permitted by the passing audit.
 
 AlternatingHarmonic proves Appendix Lemma 11, digamma duplication and the real Gamma logarithmic-derivative bridge. It retains the corrected intermediate identity and disproves the false printed one.
 

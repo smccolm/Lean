@@ -1,10 +1,12 @@
 # Proof architecture
 
-**ACTIVE GOAL — activated 5 October 2026. 11/20 proof gates complete.** DKQH-02 through DKQH-08, DKQH-11 through DKQH-13 and DKQH-18 are complete; nine gates remain OPEN. The full literal B-process is verified; remaining source decisions and acceptance checks are separate.
+The corrected formalization is complete: 20/20 gates, 127 production modules and 299 exact-type semantic consumers. Both sequential verifiers passed with zero Lean diagnostics. Historical checkpoint sections retain their original counts and pending-decision wording; the final accepted contracts and release receipt supersede them.
+
+**GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
 
 ```mermaid
 flowchart TD
-  G01["DKQH-01 Source edition and errata<br/>OPEN"]
+  G01["DKQH-01 Source edition and errata<br/>DONE"]
   G02["DKQH-02 Actual objects and conventions<br/>DONE"]
   G03["DKQH-03 Harmonic and digamma estimates<br/>DONE"]
   G04["DKQH-04 Finite exponential sums<br/>DONE"]
@@ -12,19 +14,19 @@ flowchart TD
   G06["DKQH-06 Stationary phase and weighted integrals<br/>DONE"]
   G07["DKQH-07 Explicit χ and gamma constants<br/>DONE"]
   G08["DKQH-08 Theorem 8 Part I<br/>DONE"]
-  G09["DKQH-09 Theorem 8 Part II<br/>OPEN"]
-  P2Q["DKQH-09 quotient-inference counterexample proved<br/>scope decision OPEN"]
+  G09["DKQH-09 Theorem 8 Part II<br/>DONE"]
+  P2Q["DKQH-09 quotient-inference counterexample proved<br/>repair adopted; diagnostic preserved"]
   P2Q -.-> G09
-  P2G["DKQH-09 analytic inputs, endpoints, N-shift and exact half-offset proved<br/>source contract adoption OPEN"]
-  P2Q -. explicit provisional inputs .-> P2G
+  P2G["DKQH-09 analytic inputs, endpoints, N-shift and exact half-offset proved<br/>public corrected contract proved"]
+  P2Q -. explicit adopted inputs .-> P2G
   P2G --> G09
-  P1C["DKQH-10 constant-weight Part I proved<br/>remaining corollaries OPEN"]
+  P1C["DKQH-10 constant-weight Part I proved<br/>constant-weight source adapter proved"]
   G08 --> P1C
   P1C --> G10
-  P2C["Corollary 0.1 Part II false on printed δ range<br/>full-δ digamma repair proved; adoption OPEN"]
+  P2C["Corollary 0.1 Part II false on printed δ range<br/>full-δ repair adopted and proved"]
   P2G --> P2C
   P2C --> G10
-  G10["DKQH-10 Poisson corollaries<br/>OPEN"]
+  G10["DKQH-10 Poisson corollaries<br/>DONE"]
   G11["DKQH-11 Explicit B-process<br/>DONE"]
   BSP["Complete stationary sum and exterior frequency proved"]
   BC3["Cubic Fourier tails: literal B-process for D ≤ 4 proved"]
@@ -38,13 +40,13 @@ flowchart TD
   BLD --> G11
   G12["DKQH-12 Theorem 9 AFE1<br/>DONE"]
   G13["DKQH-13 Corollary 0.3 and AFE1 constants<br/>DONE"]
-  G14["DKQH-14 Theorem 10 direct branch<br/>OPEN"]
-  G15["DKQH-15 Theorem 10 reflected branch<br/>OPEN"]
-  G16["DKQH-16 Corollary 0.4 / Table 1<br/>OPEN"]
-  G17["DKQH-17 Corollary 0.5 / Tables 2–3<br/>OPEN"]
+  G14["DKQH-14 Theorem 10 direct branch<br/>DONE"]
+  G15["DKQH-15 Theorem 10 reflected branch<br/>DONE"]
+  G16["DKQH-16 Corollary 0.4 / Table 1<br/>DONE"]
+  G17["DKQH-17 Corollary 0.5 / Tables 2–3<br/>DONE"]
   G18["DKQH-18 Reuse and package integration<br/>DONE"]
-  G19["DKQH-19 Semantic regressions and audit<br/>OPEN"]
-  G20["DKQH-20 Final sequential verification<br/>OPEN"]
+  G19["DKQH-19 Semantic regressions and audit<br/>DONE"]
+  G20["DKQH-20 Final sequential verification<br/>DONE"]
   G01 -. object-notation review completed .-> G02
   G03 --> G04
   G03 --> G05
@@ -72,7 +74,7 @@ flowchart TD
   A2C["DKQH-14/15 closed-strip signed and reflected estimates proved"]
   A2S --> A2C
   G07 --> A2C
-  A2U["DKQH-14/15 full proof-consistent A₀/B₀/C₀ branches proved<br/>E03 scope adoption OPEN"]
+  A2U["DKQH-14/15 full proof-consistent A₀/B₀/C₀ branches proved<br/>E03 branches adopted"]
   A2C --> A2U
   A2U --> G14
   A2U --> G15
@@ -81,11 +83,11 @@ flowchart TD
   G15 --> G16
   G14 --> G16
   G16 --> G17
-  A2M["DKQH-16/17 global maxima and all table certificates proved<br/>source adoption OPEN"]
+  A2M["DKQH-16/17 global maxima and all table certificates proved<br/>certified replacements adopted"]
   A2U --> A2M
   A2M --> G16
   A2M --> G17
-  A6["DKQH-17 literal constant-six, k/pi+1.1601 and Table 3 proved<br/>Table 1–2 candidates proved<br/>source adoption OPEN"]
+  A6["DKQH-17 literal constant-six, k/pi+1.1601 and Table 3 proved<br/>Table 1–2 adopted bounds proved<br/>certified replacements adopted"]
   A2U --> A6
   A6 --> G17
   G02 --> G18
@@ -112,11 +114,20 @@ flowchart TD
   style G13 fill:#d9ead3,stroke:#38761d
   L -. Poisson and phase adapters .-> G08
   L -. minimal Fresnel adaptation .-> G06
+  style G01 fill:#d9ead3,stroke:#38761d
+  style G09 fill:#d9ead3,stroke:#38761d
+  style G10 fill:#d9ead3,stroke:#38761d
+  style G14 fill:#d9ead3,stroke:#38761d
+  style G15 fill:#d9ead3,stroke:#38761d
+  style G16 fill:#d9ead3,stroke:#38761d
+  style G17 fill:#d9ead3,stroke:#38761d
+  style G19 fill:#d9ead3,stroke:#38761d
+  style G20 fill:#d9ead3,stroke:#38761d
 ```
 
 Source review precedes a fixed Lean signature. The two Poisson estimates are substantive independent outputs; an AFE specialization alone does not close the general theorem. The reflected AFE branch must consume the actual direct-branch remainder and χ identity. Numerical certification follows the analytic assembly. Preserve the distinct scaffold, development and release statuses.
 
-## Active source-review evidence
+## Historical source-review evidence
 
 E01 and E02 have exact source diagnostics. E05 has a kernel-checked Part-I counterexample and an owner-accepted repair adding two monotonicity conditions. PowerWeights proves both conditions for the actual AFE weight/phase pair, including sigma=0. These source diagnostics alone were partial evidence. The subsequent complete corrected Part-I theorem closes DKQH-08; DKQH-01/02/09 remain OPEN; the later AFE1 proof closes DKQH-12.
 

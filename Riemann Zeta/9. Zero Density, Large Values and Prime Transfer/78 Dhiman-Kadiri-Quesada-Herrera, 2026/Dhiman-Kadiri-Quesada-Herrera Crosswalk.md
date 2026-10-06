@@ -1,6 +1,8 @@
-# Source-to-Lean planning crosswalk
+# Source-to-Lean crosswalk
 
-**ACTIVE GOAL — activated 5 October 2026. 11/20 proof gates complete.** DKQH-02 through DKQH-08, DKQH-11 through DKQH-13 and DKQH-18 are complete; nine gates remain OPEN. The full literal B-process is verified; remaining source decisions and acceptance checks are separate.
+The corrected formalization is complete: 20/20 gates, 127 production modules and 299 exact-type semantic consumers. Both sequential verifiers passed with zero Lean diagnostics. Historical checkpoint sections retain their original counts and pending-decision wording; the final accepted contracts and release receipt supersede them.
+
+**GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
 
 ## Source result mapping
 
@@ -20,6 +22,10 @@
 | Corollary 0.4 `cor-AFE2`, `def:epsilon0-delta0`, Table 1 | DKQH-16 | Maxima over [1/2,1], correct three branch cases, exact 2π. |
 | Corollary 0.5 `cor-k-AFE2`, `def:epsilonk`, Tables 2–3 | DKQH-17 | Finite k range, outward rounding, h_k floor, constant-6 consequence. |
 | `eq:ek-largeK`, `eq:AFE2-simple`, comparison Table 4 | DKQH-17 | Uniform bounds versus approximate explanatory values; cited comparison attribution. |
+
+## Final public consumer map
+
+The Source Contract’s final E01–E09 matrix records each literal/corrected distinction. CorrectedPartII supplies the explicit general theorem, full-gap half-integer theorem, constant-weight source adapter and Corollaries 0.1/8.1. AFESecondUniform supplies both adopted Theorem-10 branches; AFETableOne/Two/Three, ChiTableBounds, AFEBandConstants and AFECoarseConstants supply the complete numerical consequences. BProcessGeneral retains the full literal Corollary 0.2 unchanged. Every public endpoint has an exact semantic consumer and transitive audit entry.
 
 ## Existing local proofs and required adapters
 

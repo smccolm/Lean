@@ -1,8 +1,20 @@
-# Source discrepancies, computation hazards and unresolved questions
+# Preserved source discrepancies and adopted corrections
+
+## Owner-approved corrected contracts — 5 October 2026
+
+The owner has explicitly adopted all five proposals in the attached instruction accompanying “Proceed”: the Part-II E₁ envelope A−(B−C)/y; the four positive-frequency quotient monotonicity conditions for h=g′ and h=g(f′−N); the full-positive-gap Corollary 0.1 repair with halfSecondEndpointDelta and the complete finite-head coefficient; the proof-consistent Theorem-10 branch assignments; and every certified Table 1–2 proposal in Computation Review at commit a9ddec65b578914f19199443a3e8ffa3a406e8e8. The present values are identical to that commit. The literal Corollary 0.2 remains unchanged. These are owner-approved local corrected contracts, not author-issued corrections.
+
+All original displays, counterexamples and proof diagnostics remain preserved. Historical sections saying “pending” describe their original checkpoint and are superseded by this decision. All explicit public consumers, the final semantic comparison and sequential release verification have passed: 20/20 gates are accepted. No scope decision listed here remains blocked on owner approval.
+
+The owner also authorizes mathematically justified repairs of this class without repeated approval. First attempt an independent proof of the original conclusion under the original hypotheses. When a repair is necessary, preserve the original, identify the precise failure, prove the replacement, expose every changed hypothesis/constant, verify its applications, and distinguish failed proof steps from false theorems. Escalation is reserved for abandoning a required result, changing the central objective, or unresolved competing contracts that materially change the program. Proof integrity, source preservation and acceptance checks remain mandatory.
 
 Survey date: 5 October 2026. These are **local source-review findings**, not an author-issued erratum. No later edition or author correction was found. Preserve original source bytes and this evidence. SourceReview preserves the initial exact diagnostic regressions; current accepted results and remaining decisions are summarized below. Each item belongs to DKQH-01 and the downstream gates stated below.
 
-## Remaining source decisions — current acceptance checkpoint
+## Current resolutions
+
+All five decisions above are adopted. The complete E01–E09 resolution matrix and the derivation of every Part-II regularity field are in Source Contract, “Final exact-source comparison and adopted contracts.” The literal B-process is unchanged. The new public corrected theorems and all AFE/table consumers pass their exact-type and dependency checks. Final sequential release acceptance passed on 6 October 2026; all twenty gates are complete.
+
+## Historical decision request — superseded by the owner’s approval
 
 The Part-I monotonicity repair is accepted and proved. The full literal B-process, object conventions and dependency integration are also accepted; the project stands at 11/20 gates. The following previously requested decisions remain unanswered. All candidate alternatives below have kernel-checked consumers; none has been adopted as the corrected public source contract. The Goal Prompt requires an explicit scope decision for a materially different objective.
 
@@ -14,7 +26,7 @@ The Part-I monotonicity repair is accepted and proved. The full literal B-proces
 | AFE2 branch assignment | Use A₀(σ)+C₀(σ)B₀(σ) for x≥y and A₀(1−σ)C₀(σ)+B₀(1−σ) for x<y. | AFESecondUniform proves both complete actual-remainder bounds, both height signs and closed-strip endpoints, agreeing with the derivation and ancillary call sites. DKQH-01/14/15/16/17. |
 | Table 1–2 bounds | Adopt the exact certified proposals beside the preserved originals in Computation Review: nine changed Table 1 cells and fourteen changed Table 2 cells. | AFETableOne and AFETableTwo prove all proposed cells and actual AFE consumers. Table 3, k/π+1.1601 and the constant-six consequence retain their printed bounds. DKQH-01/16/17. |
 
-The printed counterexamples prevent literal whole-paper acceptance. Independent object, analytic, B-process and numerical work is verified. DKQH-19/20 remain open for the exact final accepted contracts and their release checks after these decisions. This is an essential source-contract impasse, not a failed Lean build.
+The printed counterexamples prevent literal whole-paper acceptance. Independent object, analytic, B-process and numerical work is verified. DKQH-19/20 remain open for the exact final accepted contracts and their release checks after these decisions. This was the source-contract impasse at that checkpoint; the owner’s subsequent approval resolves it.
 
 | ID | Evidence in frozen v1 | Assessment / required resolution |
 |---|---|---|
