@@ -24,6 +24,11 @@ These are the existing projects' recorded statuses, supported by source/interfac
 
 No new zero-density theorem, sub-Weyl constant optimization, all-real AFE2 cutoff theorem or RH claim is required. No new external package is selected. Broad searches should stop once a useful candidate is identified and its exact interface inspected; work then moves to the actual terminal analytic obligation. Use the twenty-gate architecture to track genuine source consumers, not an ever-growing collection of conditional wrappers. No recovery record is required.
 
+<details>
+<summary>Historical checkpoints — superseded by the 20/20 release acceptance</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
+
 ## Historical mathematical evidence
 
 `SourceReview` proves the missing unit-term identity and the false universal functional-equation orientation at -2. Neither closes a full source gate. Errata now gives a concrete polynomial-weight counterexample to Theorem 8 Part I and the owner-accepted additional monotonicity hypotheses; the counterexample is kernel-checked and the two added conditions are proved for the actual AFE weights. The complete corrected Part-I theorem is now accepted; the AFE1 implementation below has passed its focused source and dependency checks. Part II and AFE2 remain required.
@@ -505,3 +510,5 @@ DKQH-02 and DKQH-18 are ready for acceptance after the current 192-file verifica
 The object-convention and dependency reviews above passed the 192-file sequential verification. DKQH-02 and DKQH-18 are DONE: all actual-source adapters have exact-type consumers and permitted transitive dependencies; all 126 production modules are classified and imported within the unchanged pinned foundation graph. The focused build, 13 isolated validator fixtures and both BATs passed with zero Lean diagnostics. The audit covers 2359 project theorems, 1447 explicit consumers and 290 semantic regressions; 16 linters checked 1611 declarations plus 895 generated declarations. Full receipts and hashes are in the Reproduction Manifest.
 
 The accepted total is 11/20. DKQH-01, DKQH-09, DKQH-10, DKQH-14 through DKQH-17, DKQH-19 and DKQH-20 remain OPEN. The remaining source decisions concern the Part-II E₁ formula and quotient hypotheses, the Corollary-0.1 Part-II repair, the AFE2 branch assignment and outward Table 1–2 replacements. Their proved alternatives and preserved source diagnostics are recorded in Errata and Computation Review. The earlier Part-I approval does not adopt these separate changes; the final accepted-contract audit and whole-paper release follow those decisions. No pending repair, whole-paper completion or external acceptance is claimed.
+
+</details>

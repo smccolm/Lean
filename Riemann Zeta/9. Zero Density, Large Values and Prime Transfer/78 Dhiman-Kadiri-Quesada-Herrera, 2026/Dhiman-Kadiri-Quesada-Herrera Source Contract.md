@@ -32,7 +32,7 @@ Primary label `thm-VDC`, PDF pp. 12–14. For `a<b`, positive continuous strictl
 
 Prove `|Σ(a<n≤b) g(n)e(f(n))−R_N(a,b)|≤T_N(a,b)` with **every term** of `def-TNab` and its half-integer form `def-TNab-integer+1/2`. Part II uses the explicit repaired analytic hypotheses and the adopted square coefficient described in the final comparison below. Its half-integer contract uses the full-positive-gap endpoint factor, with the π/2 form available on its proved gap domain. Auxiliary `G`, `H`, `H_1`, `B`, `E_1`, `E_2` remain the actual source expressions, not free constants.
 
-The source writes g(x) under a sum indexed by n: intended g(n) is E01. General-N phase shifting, the endpoint sawtooth convention, and the constant-weight non-strict boundary of the derivative assumptions must be resolved explicitly (E05–E06). Proving only N=0 or only half-integer endpoints is an incomplete P8.
+The source writes g(x) under a sum indexed by n: intended g(n) is E01. PoissonShift and CorrectedPartII resolve general-N phase shifting, the endpoint sawtooth convention and the constant-weight boundary explicitly (E05–E06). Their public consumers cover every allowed N and general as well as half-integer endpoints.
 
 ## PB — Corollaries 0.1, 0.2 and 8.1
 
@@ -40,7 +40,7 @@ The source writes g(x) under a sum indexed by n: intended g(n) is E01. General-N
 
 ## A1 — Theorem 9 and Corollary 0.3
 
-`thm-AFE1`, PDF p.22. Intended positive-index contract, subject to E01:
+`thm-AFE1`, PDF p.22. Accepted positive-index contract, resolving E01:
 
 `0<σ≤1`, `t≥t₀>0`, `c>1/(2π)`, `ct∈ℤ+1/2`, and
 
@@ -50,13 +50,13 @@ Let `u=1/(2πc)`. The exact source function is
 
 `m(c)=c+(1+1/t₀)/π · (log(1+u)+γ−ψ(1−u)−1/[2(1+u)]−1/2)`.
 
-The printed theorem excludes 1, whereas the proof includes it. Do not freeze that error as a required false goal. Review the proof's `x>1` restriction against the displayed general domain before closing A1 (E07).
+The printed theorem excludes 1, whereas the proof includes it. AFEFirstKind proves the accepted contract including the unit term and the smallest allowed cutoff ct=1/2; no extra x>1 hypothesis is added (E01/E07).
 
 For all real `t≥t₀≥14`, `cor:all_t` concludes the analogous sharp cutoff at t with `c₀ t^(−σ)`. With `N=floor(t₀)`, the exact `eq:def-c0` is the maximum of
 
 `m((N+1/2)/t₀)`, `m((N+3/2)/(N+1))`, and `m(1−1/[2(N+1)])/(1−1/[2(N+1)])`.
 
-Certify `c₀≤1.2552` at `t₀=14.13472` and `c₀≤1.2127` at `t₀=3·10^12`. The prose later says 14.13473; keep the advertised smaller threshold and prove it, or record a substantive correction. No hypothesis about verified zeta zeros is needed for either numerical parameter.
+AFEFirstConstants certifies `c₀≤1.2552` at `t₀=14.13472` and `c₀≤1.2127` at `t₀=3·10^12`. The later prose threshold 14.13473 is unnecessary: the proved consumer retains the advertised smaller threshold. No hypothesis about verified zeta zeros is needed for either numerical parameter.
 
 ## A2 — Theorem 10, both error branches
 
@@ -78,7 +78,7 @@ For x<y, it is
 
 The display `def-E0-all-x-y` reverses these E₀ assignments; the end of the proof and `AFE2.py` use the assignments above. Preserve the distinction. The source also writes signed t in fractional real powers while allowing negative t: use a proved positive-height reduction and conjugation bridge, not Lean's totalized real power of a negative base (E04).
 
-Use **all** terms of `def-A0` (5.22), `def-B0` (5.23), `def-C0` (2.17), `eq:Ci` and `x₀=max(h,√(t₀/(2π)))`. These expressions are pinned by source hash and label, avoiding an error-prone second transcription of several multi-line formulas. Their actual definitions and equality bridges must appear in the later Lean contract.
+Use **all** terms of `def-A0` (5.22), `def-B0` (5.23), `def-C0` (2.17), `eq:Ci` and `x₀=max(h,√(t₀/(2π)))`. These expressions are pinned by source hash and label, avoiding an error-prone second transcription of several multi-line formulas. Their actual definitions and equality bridges occur in ChiConstants, AFESecondBounds and AFESecondUniform and are checked by the exact-type source consumers.
 
 ## Numeric consequences and scope
 
@@ -124,6 +124,11 @@ For Corollary 0.1 Part II, `constant_secondOrderRegularity_source` requires only
 `corrected_corollary_zero_one_partII` retains (log2+1/f′(a))/π and the corrected square/unchanged cube coefficients for every positive gap. `corrected_corollary_zero_one_partII_pi` additionally assumes δ≥1/2, which gives both endpoint d≥1/2 and justifies replacing the digamma term by π/2. The full printed corollary is disproved in PoissonHalfReview. This replacement changes the conclusion and states its hypotheses; it is not a proof of the false printed statement. `corrected_corollary_eight_one` handles δ=1/2 with the exact adopted square/cube evaluations. Literal Corollary 0.2 is unchanged.
 
 All nine new public declarations in CorrectedPartII have separately typed source regressions and explicit audit registrations. The combined 299 regressions also fix actual endpoint weights, floors, signs, A₀/B₀/C₀ formulas, diagonal direct-branch choice, both height signs, all adopted tables and unchanged large-k/constant-six consumers. The focused audit reports 2379 project theorems including private/generated declarations, 1465 registered consumers, and zero errors under all 16 linters (1629 declarations plus 897 generated). The sequential release checks also passed; their exact commands and log hashes are recorded in the Reproduction Manifest.
+
+<details>
+<summary>Historical checkpoints — superseded by the 20/20 release acceptance</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Historical implementation checkpoints
 
@@ -596,3 +601,5 @@ DKQH-02 and DKQH-18 are ready for acceptance after the current 192-file verifica
 The object-convention and dependency reviews above passed the 192-file sequential verification. DKQH-02 and DKQH-18 are DONE: all actual-source adapters have exact-type consumers and permitted transitive dependencies; all 126 production modules are classified and imported within the unchanged pinned foundation graph. The focused build, 13 isolated validator fixtures and both BATs passed with zero Lean diagnostics. The audit covers 2359 project theorems, 1447 explicit consumers and 290 semantic regressions; 16 linters checked 1611 declarations plus 895 generated declarations. Full receipts and hashes are in the Reproduction Manifest.
 
 The accepted total is 11/20. DKQH-01, DKQH-09, DKQH-10, DKQH-14 through DKQH-17, DKQH-19 and DKQH-20 remain OPEN. The remaining source decisions concern the Part-II E₁ formula and quotient hypotheses, the Corollary-0.1 Part-II repair, the AFE2 branch assignment and outward Table 1–2 replacements. Their proved alternatives and preserved source diagnostics are recorded in Errata and Computation Review. The earlier Part-I approval does not adopt these separate changes; the final accepted-contract audit and whole-paper release follow those decisions. No pending repair, whole-paper completion or external acceptance is claimed.
+
+</details>

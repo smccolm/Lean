@@ -6,7 +6,7 @@ The corrected formalization is complete: 20/20 gates, 127 production modules and
 
 ## Source result mapping
 
-| Source / label | Proposed proof gate / consumer | Main semantic risk |
+| Source / label | Accepted proof gate / consumer | Main semantic risk |
 |---|---|---|
 | Lemma 1 `lem:harmonic-lead`; Appendix Lemma 11 `lemma_bnd_sum_nu_powers` | DKQH-03 → 08/09 | Digamma at δ, exact rational corrections, all denominator domains. |
 | Lemma 2 `lem:geometric`, `def-Sxy` | DKQH-04 → 05/08 | General x versus integer/half-integer x, finite versus limiting sums. |
@@ -59,6 +59,11 @@ At installed Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, `Complex.digamm
 The installed PNT+ `PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean` contains `hasSum_digamma`, `digamma_eq_tsum`, positive-half-plane differentiability and logarithmic growth bounds. Node 77 already used this exact installed file with a recorded one-file non-Mathlib closure. Do not vendor a second digamma-series proof or pull newer upstream simply because it was found online.
 
 The foundation's smooth zeta-square AFE, quantitative smooth reflection, zero-density and mean-value chains are completed local resources. Their smoothing, powers, constants and domains differ from this paper. Full source equality and normalization consumers are separate proof obligations. No density theorem, RH verification assertion or epsilon-power estimate substitutes for a fixed explicit constant.
+
+<details>
+<summary>Historical checkpoints — superseded by the 20/20 release acceptance</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Implemented source diagnostics
 
@@ -547,3 +552,5 @@ DKQH-02 and DKQH-18 are ready for acceptance after the current 192-file verifica
 The object-convention and dependency reviews above passed the 192-file sequential verification. DKQH-02 and DKQH-18 are DONE: all actual-source adapters have exact-type consumers and permitted transitive dependencies; all 126 production modules are classified and imported within the unchanged pinned foundation graph. The focused build, 13 isolated validator fixtures and both BATs passed with zero Lean diagnostics. The audit covers 2359 project theorems, 1447 explicit consumers and 290 semantic regressions; 16 linters checked 1611 declarations plus 895 generated declarations. Full receipts and hashes are in the Reproduction Manifest.
 
 The accepted total is 11/20. DKQH-01, DKQH-09, DKQH-10, DKQH-14 through DKQH-17, DKQH-19 and DKQH-20 remain OPEN. The remaining source decisions concern the Part-II E₁ formula and quotient hypotheses, the Corollary-0.1 Part-II repair, the AFE2 branch assignment and outward Table 1–2 replacements. Their proved alternatives and preserved source diagnostics are recorded in Errata and Computation Review. The earlier Part-I approval does not adopt these separate changes; the final accepted-contract audit and whole-paper release follow those decisions. No pending repair, whole-paper completion or external acceptance is claimed.
+
+</details>

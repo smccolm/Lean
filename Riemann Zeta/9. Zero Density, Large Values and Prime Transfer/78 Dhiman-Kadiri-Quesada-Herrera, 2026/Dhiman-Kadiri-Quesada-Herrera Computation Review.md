@@ -14,7 +14,7 @@ Research date: 5 October 2026. Original scripts are unchanged under `Sources/Dhi
 
 Header specifies SageMath 9.5. The code sets exact rational `g1=1413472/100000` and `H=3*10^12`, defines m(c) as C(x), differentiates symbolically, and uses `RIF` to check two interval inequalities used in the real-cutoff transfer. It then prints c₀ using ordinary `n(...)` evaluation. The existence of interval comparisons does not imply that every printed decimal is outward-certified.
 
-Read-only inspection completed; replay **NOT RUN**, because Sage is unavailable. This replay limitation is independent of the subsequently activated Lean goal. A future reproduction environment should pin Sage 9.5 (or record and compare a migration), capture the boolean interval results and enclosing intervals, and check all advertised decimal rounding. Do not substitute plain Python for Sage syntax and call that the same run.
+At the 5 October 2026 inspection, replay was **NOT RUN**, because Sage was unavailable. This replay limitation is independent of the subsequently activated Lean goal. A future reproduction environment should pin Sage 9.5 (or record and compare a migration), capture the boolean interval results and enclosing intervals, and check all advertised decimal rounding. Do not substitute plain Python for Sage syntax and call that the same run.
 
 ## AFE2.py
 
@@ -33,6 +33,63 @@ python Tools/reproduce_author_code.py
 ```
 
 This optional research command verifies the archived AFE2 script hash, runs the unchanged code with the current interpreter, captures versions/stdout/stderr/exit in a timestamped `logs/author-code-...` folder and reports **REPLAY ONLY — NOT A PROOF**. It does not install dependencies, execute Sage, edit source, contact the network or update proof status. The recorded setup run is summarized in `Tools/author_code_observation.json` with output hash; logs are generated evidence, not required source files. Table values should be compared under any environment change.
+
+## Completed kernel certification — 6 October 2026
+
+DKQH-13, DKQH-16 and DKQH-17 are DONE within the 20/20 corrected release. The adopted analytic branches, full closed parameter intervals, endpoints, exact π/Gamma/digamma enclosures and outward rational bounds are proved in Lean. Author replay remains separate evidence. No optimizer maximum or external numerical result is a proof premise.
+
+AFEDigammaNumerics and AFEFirstConstants certify all six branches of the exact AFE1 constant maximum. The public `afe_first_kind_small_decimal` and `afe_first_kind_large_decimal` prove the actual real-cutoff bounds with constants 1.2552 at 14.13472 and 1.2127 at 3·10^12. No zero-verification or RH hypothesis is used.
+
+AFEUniformMax proves the attained global maxima on the closed sigma interval. AFETableOne and ChiTableBounds certify all sixteen Table 1 cells at the exact thresholds, including 2π. The symmetric cutoff is derived from the physical height and half-integer conditions. Actual direct, reflected and symmetric remainder consumers retain their logarithmic factors and cover both height signs.
+
+## Adopted Table 1 bounds
+
+| Exact threshold | Column | Printed | Adopted certified bound |
+|---|---|---:|---:|
+| 2π | Reflected x<y | 2.264445 | 2.264445 |
+| 2π | Symmetric x=y | 2.265204 | 2.265207 |
+| 2π | Direct x>y | 2.265204 | 2.265207 |
+| 2π | δ₀ | 0.05961915 | 0.05961930 |
+| 1000 | Reflected x<y | 1.792711 | 1.792711 |
+| 1000 | Symmetric x=y | 1.265977 | 1.265978 |
+| 1000 | Direct x>y | 1.792736 | 1.792737 |
+| 1000 | δ₀ | 0.0003692900 | 0.0003692901 |
+| 10¹⁰ | Reflected x<y | 1.750701 | 1.750701 |
+| 10¹⁰ | Symmetric x=y | 1.160079 | 1.160080 |
+| 10¹⁰ | Direct x>y | 1.750701 | 1.750702 |
+| 10¹⁰ | δ₀ | 3.692588·10⁻¹¹ | 3.692588·10⁻¹¹ |
+| 3·10¹² | Reflected x<y | 1.750689 | 1.750689 |
+| 3·10¹² | Symmetric x=y | 1.160048 | 1.160049 |
+| 3·10¹² | Direct x>y | 1.750689 | 1.750689 |
+| 3·10¹² | δ₀ | 1.230863·10⁻¹³ | 1.230863·10⁻¹³ |
+
+## Adopted Table 2 bounds
+
+AFETableTwo certifies every direct/reflected cell for k=1,...,10, including the floor-defined lower cutoffs and full sigma ranges. Its actual two-polynomial remainder consumers use these bounds.
+
+| k | Printed direct | Adopted direct | Printed reflected | Adopted reflected |
+|---|---:|---:|---:|---:|
+| 1 | 2.069011 | 2.069011 | 2.069008 | 2.069008 |
+| 2 | 2.132269 | 2.132269 | 2.132265 | 2.132266 |
+| 3 | 2.222299 | 2.222300 | 2.222296 | 2.222296 |
+| 4 | 2.472238 | 2.472239 | 2.472235 | 2.472236 |
+| 5 | 2.766225 | 2.766226 | 2.766222 | 2.766222 |
+| 6 | 3.075279 | 3.075280 | 3.075276 | 3.075277 |
+| 7 | 3.390201 | 3.390202 | 3.390198 | 3.390198 |
+| 8 | 3.707264 | 3.707265 | 3.707261 | 3.707262 |
+| 9 | 4.025115 | 4.025116 | 4.025112 | 4.025113 |
+| 10 | 4.343256 | 4.343257 | 4.343253 | 4.343254 |
+
+Exactly nine Table 1 cells and fourteen Table 2 cells change from the printed values. Every numerical row above agrees with the owner-selected commit `a9ddec65b578914f19199443a3e8ffa3a406e8e8`. The owner adopted these replacements on 5 October 2026. Lean identifiers containing `proposedTable` or beginning `proposed_table_` retain their original names for compatibility; they now implement the adopted contract.
+
+TableLowerBounds separately disproves only three original direct Table 1 maximum bounds: 2.265204 at exact 2π, 1.792736 at 1000, and 1.750701 at 10¹⁰. These are not counterexamples to the zeta remainder inequalities. The other replacements have independent outward upper certificates; no separate refutation of each original value is claimed.
+
+AFETableThree proves all eight unchanged Table 3 cells. AFEBandConstants proves k/π+1.1601 for 11≤k≤50, and AFECoarseConstants proves the constant-six consequence through min(x,y)≤10^6. The source comparison table's attribution remains separate from these proved consequences.
+
+<details>
+<summary>Historical numerical-certification checkpoints before adoption</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Later certification requirements
 
@@ -54,18 +111,7 @@ AFETableTwo proves outward candidate bounds for all twenty cells at k=1,...,10, 
 
 The unchanged Table 3, large-k bound and constant-six consequence remain proved. DKQH-16/17 stay OPEN for the remaining Table 1 certificates and explicit adoption of numerical repairs. General Part-II and E03 decisions remain pending. Current scope: 137 retained files, 71 production and two verification modules, 113 semantic consumers; accepted count 8/20.
 
-| k | Printed direct | Adopted direct | Printed reflected | Adopted reflected |
-|---|---:|---:|---:|---:|
-| 1 | 2.069011 | 2.069011 | 2.069008 | 2.069008 |
-| 2 | 2.132269 | 2.132269 | 2.132265 | 2.132266 |
-| 3 | 2.222299 | 2.222300 | 2.222296 | 2.222296 |
-| 4 | 2.472238 | 2.472239 | 2.472235 | 2.472236 |
-| 5 | 2.766225 | 2.766226 | 2.766222 | 2.766222 |
-| 6 | 3.075279 | 3.075280 | 3.075276 | 3.075277 |
-| 7 | 3.390201 | 3.390202 | 3.390198 | 3.390198 |
-| 8 | 3.707264 | 3.707265 | 3.707261 | 3.707262 |
-| 9 | 4.025115 | 4.025116 | 4.025112 | 4.025113 |
-| 10 | 4.343256 | 4.343257 | 4.343253 | 4.343254 |
+[Numerical rows are preserved unchanged in the current adopted table above.]
 
 The proposed upper certificates do not by themselves assert that every changed original Table 2 entry is false. The three Table 1 failures above have separate lower-bound proofs. Adoption remains pending.
 
@@ -81,23 +127,8 @@ AFETableOne proves all sixteen proposed Table 1 cells over the entire closed sig
 
 The complete proposed Table 1 and Table 2 replacements are listed beside the preserved printed values in Computation Review. All unchanged Table 3 entries, k/π+1.1601 and the constant-six consequence are also proved. Numerical source-repair adoption and E03 remain pending before DKQH-16/17 can be accepted. The general Part-II decisions and DKQH-09–11 obligations remain separate. Current scope: 142 retained files, 76 production and two verification modules, 129 semantic consumers; accepted count 8/20.
 
-| Exact threshold | Column | Printed | Adopted certified bound |
-|---|---|---:|---:|
-| 2π | Reflected x<y | 2.264445 | 2.264445 |
-| 2π | Symmetric x=y | 2.265204 | 2.265207 |
-| 2π | Direct x>y | 2.265204 | 2.265207 |
-| 2π | δ₀ | 0.05961915 | 0.05961930 |
-| 1000 | Reflected x<y | 1.792711 | 1.792711 |
-| 1000 | Symmetric x=y | 1.265977 | 1.265978 |
-| 1000 | Direct x>y | 1.792736 | 1.792737 |
-| 1000 | δ₀ | 0.0003692900 | 0.0003692901 |
-| 10¹⁰ | Reflected x<y | 1.750701 | 1.750701 |
-| 10¹⁰ | Symmetric x=y | 1.160079 | 1.160080 |
-| 10¹⁰ | Direct x>y | 1.750701 | 1.750702 |
-| 10¹⁰ | δ₀ | 3.692588·10⁻¹¹ | 3.692588·10⁻¹¹ |
-| 3·10¹² | Reflected x<y | 1.750689 | 1.750689 |
-| 3·10¹² | Symmetric x=y | 1.160048 | 1.160049 |
-| 3·10¹² | Direct x>y | 1.750689 | 1.750689 |
-| 3·10¹² | δ₀ | 1.230863·10⁻¹³ | 1.230863·10⁻¹³ |
+[Numerical rows are preserved unchanged in the current adopted table above.]
 
 The proposal changes nine of the sixteen Table 1 cells and fourteen of the twenty Table 2 cells. All eight Table 3 entries remain unchanged. Three direct Table 1 entries have proved strict lower-bound counterexamples; the other changed entries are justified here by independent outward upper certificates, without asserting that each original entry has separately been refuted. The owner explicitly adopted this exact set of certificates on 5 October 2026. Public Lean identifiers beginning `proposed_table_` retain their original names for compatibility; their proved bounds are now the adopted contract.
+
+</details>

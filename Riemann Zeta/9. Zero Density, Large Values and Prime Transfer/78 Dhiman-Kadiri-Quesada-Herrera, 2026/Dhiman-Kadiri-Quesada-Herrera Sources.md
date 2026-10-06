@@ -53,10 +53,21 @@ Broad indexed AFE/Lean searches also found [Littlewood_Proof](https://github.com
 
 Executed exact-title/author/arXiv searches; title plus `code repository`; arXiv ID plus `site:github.com`; author trio plus `erratum`; general `approximate functional equation Lean github`; direct author-page checks; current public GitHub repository searches `2609.00537` and `Dhiman Kadiri`; and current upstream commit/toolchain/tree checks. Both GitHub repository queries returned `total_count=0`, with raw JSON archived. No authenticated global GitHub code search or exhaustive private-repository survey is claimed.
 
-Outcome: no dedicated public DKQH Lean formalization, separately linked GitHub companion repo, later primary revision or author erratum was found. **Two actual author programs are available on arXiv.** Negative searches do not exclude private, unindexed or differently named work. This dated evidence should be refreshed when the goal is activated; the primary paper and source code remain the mathematical references rather than search summaries.
+Outcome: no dedicated public DKQH Lean formalization, separately linked GitHub companion repo, later primary revision or author erratum was found. **Two actual author programs are available on arXiv.** Negative searches do not exclude private, unindexed or differently named work. The activation review is recorded in Errata. This remains a dated external-search snapshot, not a claim that the subsequently completed local formalization does not exist; the primary paper and source code remain the mathematical references rather than search summaries.
+
+## Local Kershner proof completed
+
+The local `KershnerBound.kershner_integral_global`, `kershner_integral_bound` and `kershner_integral_source` now prove the general bound through the internal Fresnel/stationary-phase development. BProcessGeneral consumes the completed analytic chain for the literal Corollary 0.2. The external-reading limitations recorded below remain historical research observations; no inaccessible external proof is assumed. The frozen source pins are unchanged.
+
+<details>
+<summary>Historical Kershner literature investigation — 5 October 2026</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Additional Kershner investigation — 5 October 2026
 
 Rogers’s author-hosted [Real and p-Adic Oscillatory Integrals thesis](https://web.maths.unsw.edu.au/~michaelc/Students/rogers.pdf), printed page 13 and bibliography, attributes the sharp second-derivative constant to Kershner’s 1935 and 1938 papers. The extracted formula needs visual verification before reuse; the browser PDF screenshot failed. The older [2003 preprint](https://arxiv.org/abs/math/0311013) has different historical wording and is not a kernel certificate for 1.343. The [published Rogers paper](https://doi.org/10.1090/S0002-9939-05-07918-9) and its AMS PDF were unavailable through the browsing tool during this check. No inaccessible proof was treated as read.
 
 The new FresnelSharp proof instead uses the pinned Mathlib rectangle form of Cauchy–Goursat and the already proved local Fresnel limit. These research observations neither change the 25 frozen source pins nor supply the still-missing general Kershner bound.
+
+</details>

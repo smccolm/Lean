@@ -12,10 +12,17 @@ The runner verifies all retained files and production/verification Lean modules,
 
 The owner-operated `../push_to_github.bat` is unchanged. Verification never stages, commits, pushes or invokes synchronization. Source hashes and canonical-LF hashes retain their original purposes.
 
+Current corrected-contract scope: 193 retained files, 127 production modules, two verification modules and 299 semantic consumers; 20/20 accepted gates. Exact current-checkout verification is recorded in the Reproduction Manifest.
+
+`proof_gates.json` preserves original planned names in `proposedModule` and dated acceptance narratives in `evidence`. Its `implementationFiles` lists existing paper-relative files for each gate and matches the current Checklist. Earlier per-gate counts are historical; the completed release totals above are authoritative.
+
+<details>
+<summary>Historical tooling checkpoints — superseded by the 20/20 release</summary>
+
 Historical AFE1 checkpoint: 87 retained files, twenty-one production modules and two verification modules. All are covered by the exact inventory and root import checks; the historical setup inventory above remains a dated record. The public N=0 and general-N general-endpoint and half-integer consumers are mandatory regressions. No additional gate has been closed.
 
 Historical reflection/Lemma-7 checkpoint: 89 retained files, twenty-three production modules and two verification modules. Both new modules are classified and root-imported; 6/20 gates remain accepted.
 
 Historical digamma checkpoint: 90 retained files, twenty-four production modules and two verification modules. GammaDigammaReal is classified and root-imported; 6/20 gates remain accepted.
 
-Current corrected-contract scope: 193 retained files, 127 production modules, two verification modules and 299 semantic consumers; 20/20 accepted gates. Exact current-checkout verification is recorded in the Reproduction Manifest.
+</details>

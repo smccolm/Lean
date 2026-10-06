@@ -1,6 +1,6 @@
 # Dependency boundary and existing proved code
 
-**Active implementation; existing dependency pins preserved.** Namespace: `DhimanKadiriQuesadaHerrera2026`. Begin from the existing root package, Lean `v4.30.0`, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`.
+**Completed integration; existing dependency pins preserved.** Namespace: `DhimanKadiriQuesadaHerrera2026`. The package uses the existing root package, Lean `v4.30.0`, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`.
 
 Read the [Crosswalk](../Dhiman-Kadiri-Quesada-Herrera%20Crosswalk.md) and [exact local inventory](../Tools/local_reuse_inventory.json). The root already owns exact zeta truncation, Poisson, finite derivative, mean-value, smooth-AFE and gamma machinery. Node 63 additionally owns continuous derivative/B-process and explicit digamma work; nodes 74 and 77 contain useful sharp-cutoff/gamma/complex-power consumers; node 73 was inspected for stationary Fourier bounds. None is being called unproved simply because it is outside 78.
 
@@ -8,7 +8,11 @@ The active package uses an isolated path dependency on `../../..` from Extension
 
 Selection checklist: inspect the actual theorem type and proof body; identify its DKQH consumer; prove all domain, sign, scale, interval and normalization adapters; enumerate the full transitive import closure; verify the source hashes and licenses; compile in one pinned graph; check every public/critical transitive axiom; update the runner's coverage. “Exists C” is not a proved decimal constant. A source theorem already proved under a different cutoff is reusable only through a proved cutoff bridge.
 
-No new freeze ledger for a vendored library is fabricated here because no such library was installed. Current upstream commits are observations in `Tools/upstream_snapshot.json`, not dependency choices. Future selected vendoring must add its own source/patch/notice ledger and verifier before it enters the build.
+No new freeze ledger for a vendored library is fabricated here because no such library was installed. Upstream commits observed on 5 October 2026 are research observations in `Tools/upstream_snapshot.json`, not dependency choices. Future selected vendoring must add its own source/patch/notice ledger and verifier before it enters the build.
+
+## Current integration acceptance — 6 October 2026
+
+All 127 production modules and both verification modules are in the classified import graph. The final audit covers 299 exact-type semantic regressions, 2379 theorem dependencies and 1465 registered consumers, with all 16 linters passing. The 35-file reuse inventory records 407 declarations; its source hashes and the root package pins are unchanged. DKQH-02 and DKQH-18 are DONE within the completed 20/20 release. The dated acceptance history below preserves earlier counts; the current receipts are in the Reproduction Manifest.
 
 ## Selected digamma-series dependency
 
@@ -58,8 +62,13 @@ Four Fresnel modules are adapted in the project namespace. The Gaussian comparis
 | FresnelEvaluation.lean | 925e9fa770af5f2f44cc66b74516a6cbf407481b6eaa92fee8cc1180cd92f0c6 |
 | AtkinsonFiniteStationaryMain.lean | 5da1b1a3a31658e9be97305fb3e45a1bb42dc3fea1a55d9a2ab9292f55a2d4a9 |
 
-DampedWeightedKernel directly imports the existing node-71 GuthMaynard.DFIComplexLaplace and consumes integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi and dfiComplexLaplace_eq. Source SHA-256: 1f79e5847fb9cb9e3e3d1a61fa62f9043ecf9b362c643fc06f42730607473bf9; exact imports/signatures are recorded in local_reuse_inventory.json. No upstream code is copied or changed. The current adapters prove local/absolute damped integrability, the exact actual-kernel identity and Gamma evaluation, and principal-branch continuity at zero damping. Uniform tails and removal of damping remain separate work. The import closure stays within the pinned audited foundation.
+DampedWeightedKernel directly imports the existing node-71 GuthMaynard.DFIComplexLaplace and consumes integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi and dfiComplexLaplace_eq. Source SHA-256: 1f79e5847fb9cb9e3e3d1a61fa62f9043ecf9b362c643fc06f42730607473bf9; exact imports/signatures are recorded in local_reuse_inventory.json. No upstream code is copied or changed. The current adapters prove local/absolute damped integrability, the exact actual-kernel identity and Gamma evaluation, and principal-branch continuity at zero damping. The same module now proves uniform tail bounds, removal of damping and the actual Gamma/chi integral identities; WeightedIntegralAssembly consumes them in the finite dual-sum estimate. The import closure stays within the pinned audited foundation.
 
+
+<details>
+<summary>Historical DKQH-02/18 acceptance checkpoints</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Object conventions and integration acceptance review — 5 October 2026
 
@@ -76,6 +85,7 @@ The object-convention and dependency reviews above passed the 192-file sequentia
 
 The accepted total is 11/20. DKQH-01, DKQH-09, DKQH-10, DKQH-14 through DKQH-17, DKQH-19 and DKQH-20 remain OPEN. The remaining source decisions concern the Part-II E₁ formula and quotient hypotheses, the Corollary-0.1 Part-II repair, the AFE2 branch assignment and outward Table 1–2 replacements. Their proved alternatives and preserved source diagnostics are recorded in Errata and Computation Review. The earlier Part-I approval does not adopt these separate changes; the final accepted-contract audit and whole-paper release follow those decisions. No pending repair, whole-paper completion or external acceptance is claimed.
 
+</details>
 
 ## Closed-interval derivative continuity for the corrected Part-II interface
 

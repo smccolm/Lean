@@ -1,5 +1,17 @@
 # Complete node-77 template inventory and adaptation
 
+## Current completed adaptation — 6 October 2026
+
+Node 78 contains **193 retained files, 127 production Lean modules and two verification modules**. All twenty gates are DONE in `project-complete` mode. The isolated package uses the unchanged root pins and path dependency; every production module is classified and root-imported. Verification covers 299 exact-type semantic regressions, 2379 exhaustive theorem dependencies, 1465 registered consumers and all 16 linters. [The current inventory](Tools/scaffold.json), [gate evidence](Tools/proof_gates.json) and [release receipts](Dhiman-Kadiri-Quesada-Herrera%20Reproduction%20Manifest.md) record this scope.
+
+The node-63 owner synchronization BAT remains byte-identical. Frozen paper/code artifacts, the setup inventory of node 77, original statements and source diagnostics are preserved. The corrected Poisson/AFE contracts and numerical replacements are accepted; the literal B-process is proved unchanged. No implementation gate remains open.
+
+<details>
+<summary>Historical template setup and implementation checkpoints</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
+
+
 The inventory below records the historical setup boundary. The owner activated the goal on 5 October 2026; the active adaptation is recorded after this table.
 
 Inspected on 5 October 2026 at Git checkout `baef1ac59f8ded380b91dda2b5a04a5468f798a8`. Every physical file beneath node 77 was enumerated and hashed: **199 files**, of which **87 retained files** are outside generated `.lake/`, `logs/` and Python caches. The retained roles are **16 root, 51 Extension, 12 Sources, 7 Tools and 1 Dependencies**. [Machine inventory](Tools/template_inventory.json) records every path, byte count, SHA-256, generated classification and text headings/import/declaration inventory. Text files were read for structural inspection; selected relevant theorem types/bodies were inspected in detail. This is not a new semantic audit of all node-77 proof terms.
@@ -38,3 +50,5 @@ Current post-DKQH-06 development: 110 retained files, forty-three production and
 WeightedIntegralPhase discharges the actual power/logarithmic-phase quotient monotonicity for both height signs, applies Lemma 4 on positive truncated intervals, and passes to zero by proved continuity of the integrable primitive. Its source-scale consumer bounds the literal integral of u^(2−s) exp(2πimu) by x^(2−σ)/(π(y−m)), deriving the cutoff condition from 2πxy=|t|. The complete first Lemma-5 sum is now proved in LowerIntegralEstimate and consumed literally by lemma_five_lower_sum_source. The complete upper-tail bound and convergence are now proved in UpperIntegralEstimate and checked by lemma_five_upper_sum_source.
 
 The minimal node-63 Fresnel adaptation now proves the actual symmetric quadratic-integral limit, its principal branch exp(−πi/4), and the quantitative finite-window error. StationaryPoints derives the unique point in the actual decreasing derivative range, proves the shifted phase derivative vanishes, identifies the logarithmic J-phase critical point and its height-sign restriction, and consumes the Fresnel limit to obtain exp(2πi(f(xν)−νxν−1/8))/sqrt(|f″(xν)|). Three independent source consumers check point selection, the finite-window estimate and the phase/amplitude limit. These complete DKQH-06 after the exact-source checks, exhaustive audit and sequential foundation/paper verification. DKQH-11 still requires the nonlinear replacement estimate and all printed B-process error constants. Attribution and exact source hashes are in Dependencies and local_reuse_inventory.json.
+
+</details>

@@ -8,11 +8,16 @@ All original displays, counterexamples and proof diagnostics remain preserved. H
 
 The owner also authorizes mathematically justified repairs of this class without repeated approval. First attempt an independent proof of the original conclusion under the original hypotheses. When a repair is necessary, preserve the original, identify the precise failure, prove the replacement, expose every changed hypothesis/constant, verify its applications, and distinguish failed proof steps from false theorems. Escalation is reserved for abandoning a required result, changing the central objective, or unresolved competing contracts that materially change the program. Proof integrity, source preservation and acceptance checks remain mandatory.
 
-Survey date: 5 October 2026. These are **local source-review findings**, not an author-issued erratum. No later edition or author correction was found. Preserve original source bytes and this evidence. SourceReview preserves the initial exact diagnostic regressions; current accepted results and remaining decisions are summarized below. Each item belongs to DKQH-01 and the downstream gates stated below.
+Survey date: 5 October 2026. These are **local source-review findings**, not an author-issued erratum. No later edition or author correction was found. Preserve original source bytes and this evidence. SourceReview preserves the initial exact diagnostic regressions; current accepted resolutions are summarized below; no listed scope decision remains pending. Each item belongs to DKQH-01 and the downstream gates stated below.
 
 ## Current resolutions
 
-All five decisions above are adopted. The complete E01–E09 resolution matrix and the derivation of every Part-II regularity field are in Source Contract, “Final exact-source comparison and adopted contracts.” The literal B-process is unchanged. The new public corrected theorems and all AFE/table consumers pass their exact-type and dependency checks. Final sequential release acceptance passed on 6 October 2026; all twenty gates are complete.
+All five decisions above are adopted. The complete E01–E09 resolution matrix and the derivation of every Part-II regularity field are in the [Source Contract’s final comparison](Dhiman-Kadiri-Quesada-Herrera%20Source%20Contract.md#final-exact-source-comparison-and-adopted-contracts--6-october-2026). The [Computation Review](Dhiman-Kadiri-Quesada-Herrera%20Computation%20Review.md) preserves printed and adopted numerical bounds side by side. The literal B-process is unchanged. The new public corrected theorems and all AFE/table consumers pass their exact-type and dependency checks. Final sequential release acceptance passed on 6 October 2026; all twenty gates are complete.
+
+<details>
+<summary>Historical checkpoints — superseded by the 20/20 release acceptance</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Historical decision request — superseded by the owner’s approval
 
@@ -230,3 +235,5 @@ This supersedes all earlier restricted-domain B-process status reports. Implemen
 ## DKQH-11 accepted — 5 October 2026
 
 The complete literal Corollary 0.2 is verified in BProcessGeneral. Exact-type regressions preserve every source hypothesis, actual sum, phase, scale and constant; the stationary-point family is constructed and proved unique. The exhaustive audit checks 2349 project theorems, including generated/private declarations, with 1437 explicit consumers and only standard logical axioms. Both sequential BATs passed with zero Lean diagnostics. DKQH-11 is DONE, and 9/20 gates are accepted. The diagnosed errors in the printed proof remain preserved; the new proof establishes the unchanged conclusion. This supersedes every earlier B-process OPEN/restricted-domain status. Other source decisions remain pending.
+
+</details>

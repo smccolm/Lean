@@ -5,7 +5,7 @@ The corrected formalization is complete: 20/20 gates, 127 production modules and
 **GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
 Research cutoff: **5 October 2026**, with live primary-source and GitHub checks recorded in [the snapshot](Tools/upstream_snapshot.json).
 
-Natasha Dhiman, Habiba Kadiri and Emily Quesada-Herrera, *Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function*, [arXiv:2609.00537v1](https://arxiv.org/abs/2609.00537v1), submitted 1 September 2026, 37 pages. The live arXiv history lists v1; the authors still list it as a preprint/current research work. No later revision, journal publication or author erratum was found in this survey. This is a bounded observation, not a guarantee about unindexed material.
+Natasha Dhiman, Habiba Kadiri and Emily Quesada-Herrera, *Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function*, [arXiv:2609.00537v1](https://arxiv.org/abs/2609.00537v1), submitted 1 September 2026, 37 pages. At the 5 October 2026 survey, the live arXiv history listed v1 and the authors listed it as a preprint/current research work. No later revision, journal publication or author erratum was found in this survey. This is a bounded observation, not a guarantee about unindexed material.
 
 The template follows every retained file/folder role in node 77. It now contains the isolated `DhimanKadiriQuesadaHerrera2026` package, preserves the completed local work, and includes the **unaltered node-63 `push_to_github.bat`**. The owner activated source review and Lean implementation on 5 October 2026. Existing proofs and dependency pins are preserved.
 
@@ -14,7 +14,7 @@ The template follows every retained file/folder role in node 77. It now contains
 1. [Goal Prompt](Dhiman-Kadiri-Quesada-Herrera%20Goal%20Prompt.md) — completed objective and retained proof-integrity requirements.
 2. [Source Contract](Dhiman-Kadiri-Quesada-Herrera%20Source%20Contract.md) and [Errata](Dhiman-Kadiri-Quesada-Herrera%20Errata.md) — intended results and material source discrepancies.
 3. [Checklist](Dhiman-Kadiri-Quesada-Herrera%20Checklist.md) and [Architecture](Dhiman-Kadiri-Quesada-Herrera%20Architecture.md) — all twenty proof/acceptance gates DONE.
-4. [Crosswalk](Dhiman-Kadiri-Quesada-Herrera%20Crosswalk.md) and [Dependencies](Dependencies/README.md) — exact local interfaces, mismatches and future import decisions.
+4. [Crosswalk](Dhiman-Kadiri-Quesada-Herrera%20Crosswalk.md) and [Dependencies](Dependencies/README.md) — exact local interfaces, normalization adapters and accepted dependency integration.
 5. [Sources](Dhiman-Kadiri-Quesada-Herrera%20Sources.md), [Computation Review](Dhiman-Kadiri-Quesada-Herrera%20Computation%20Review.md) and [Reproduction Manifest](Dhiman-Kadiri-Quesada-Herrera%20Reproduction%20Manifest.md) — dated research, source/code pins and evidence.
 6. [Research Agenda](Dhiman-Kadiri-Quesada-Herrera%20Research%20Agenda.md) and [Template Inventory](Dhiman-Kadiri-Quesada-Herrera%20Template%20Inventory.md) — implementation order and complete adaptation accounting.
 
@@ -22,7 +22,7 @@ The template follows every retained file/folder role in node 77. It now contains
 
 Theorem 9 prints `1 < n` although its proof and Corollary 0.3 include `n=1`. Equation (5.2) interchanges the error branches relative to the proof and `AFE2.py`. Other sign, endpoint, general-N and numerical-certification questions are catalogued in Errata. Original PDF, TeX, bibliography, figures and both ancillary programs are retained byte-for-byte. The original Part-I bound has a kernel-checked counterexample, and the owner approved two added weight hypotheses. Those conditions are proved for the AFE weights. Corrected Part I is complete; Theorem 9 AFE1 is complete with its source-intended n≥1 sum. All five subsequent repairs are now adopted, and their explicit public consumers are proved. Final source acceptance and sequential verification passed; all twenty gates are DONE.
 
-`AFE2.py` ran unmodified under the recorded local Python/NumPy/SciPy versions and reproduced the displayed Table 1 values. Its floating-point maxima and rounded displays are **computational observations**, not certified bounds. `AFE1.sage` was inspected but not executed; SageMath 9.5 is not available in this environment.
+`AFE2.py` ran unmodified under the recorded local Python/NumPy/SciPy versions and reproduced the displayed Table 1 values. Its floating-point maxima and rounded displays are **computational observations**, not certified bounds. `AFE1.sage` was inspected but not executed; SageMath 9.5 was unavailable at the recorded 5 October 2026 inspection.
 
 ## Verification and owner synchronization
 
@@ -33,6 +33,11 @@ cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause
 The active runner verifies complete file/module classification, source hashes, unchanged dependency pins, root-import coverage, exact-type regressions, exhaustive transitive axiom audits and zero Lean diagnostics. It also checks proof-status agreement, source-label anchors, local links and the exact node-63 synchronization-script bytes. In project-complete mode, PROOF PASS verifies all accepted corrected contracts and 20/20 gates. It does not assert the false unchanged source statements or independent review. Logs are written under `logs/`, and failures return nonzero.
 
 The folder-local `push_to_github.bat` retains node 63's owner-supplied message, repository-wide staging, pull/rebase and push workflow. It is present for the owner to run separately; verification never invokes it. It stages the whole Git repository, not only 78. No recovery-record maintenance is required.
+
+<details>
+<summary>Historical checkpoints — superseded by the 20/20 release acceptance</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
 
 ## Historical implementation checkpoints
 
@@ -509,3 +514,5 @@ DKQH-02 and DKQH-18 are ready for acceptance after the current 192-file verifica
 The object-convention and dependency reviews above passed the 192-file sequential verification. DKQH-02 and DKQH-18 are DONE: all actual-source adapters have exact-type consumers and permitted transitive dependencies; all 126 production modules are classified and imported within the unchanged pinned foundation graph. The focused build, 13 isolated validator fixtures and both BATs passed with zero Lean diagnostics. The audit covers 2359 project theorems, 1447 explicit consumers and 290 semantic regressions; 16 linters checked 1611 declarations plus 895 generated declarations. Full receipts and hashes are in the Reproduction Manifest.
 
 The accepted total is 11/20. DKQH-01, DKQH-09, DKQH-10, DKQH-14 through DKQH-17, DKQH-19 and DKQH-20 remain OPEN. The remaining source decisions concern the Part-II E₁ formula and quotient hypotheses, the Corollary-0.1 Part-II repair, the AFE2 branch assignment and outward Table 1–2 replacements. Their proved alternatives and preserved source diagnostics are recorded in Errata and Computation Review. The earlier Part-I approval does not adopt these separate changes; the final accepted-contract audit and whole-paper release follow those decisions. No pending repair, whole-paper completion or external acceptance is claimed.
+
+</details>

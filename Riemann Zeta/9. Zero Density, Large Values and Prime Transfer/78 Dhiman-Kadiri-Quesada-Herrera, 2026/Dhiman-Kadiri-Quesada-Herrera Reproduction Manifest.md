@@ -2,6 +2,52 @@
 
 **GOAL COMPLETE — 6 October 2026. 20/20 proof gates complete.** All DKQH-01–DKQH-20 acceptance tests pass for the adopted corrected contracts. The frozen source and its diagnostics remain preserved; this is internal kernel/project completion, not proof of every unchanged statement in v1 or independent review.
 
+## Documentation alignment and fresh verification — 6 October 2026
+
+Audited at checkout `75e28ce9a68cc1008307c00a7bb4c1db14071a70`, clean before this documentation pass. Only documentation, `.gitkeep` status text and gate metadata changed. The current descriptions now match the completed corrected contracts: 193 retained files, 127 production modules, two verification modules, 299 semantic regressions and 20/20 accepted gates. Historical implementation/source-diagnostic narratives retain their original wording inside explicitly historical sections. The Checklist and `implementationFiles` in `Tools/proof_gates.json` name existing implementation/evidence files; original planned names and dated acceptance counts remain identified as history.
+
+All 26 original/adopted Table 1–2 rows match both the owner-selected commit `a9ddec65b578914f19199443a3e8ffa3a406e8e8` and this pass’s starting HEAD. The nine Table 1 and fourteen Table 2 changes are unchanged. All 35 local-reuse files (407 recorded declarations), both additional Mathlib regularity dependencies and all three original release-log hashes were independently rechecked. The root README, category README, manuscript and publication-audit entry already matched the completed corrected scope and required no changes. The external-research cutoff remains 5 October 2026; this pass did not conduct a new web survey.
+
+The following commands ran sequentially with `ELAN_HOME=C:\Users\Naraphim\.elan`:
+
+| Command and working directory | Result | Log | SHA-256 |
+|---|---|---|---|
+| `cmd /c run_lake_build.bat --no-pause`, repository project root | exit 0; FINAL RESULT: PASS; 8857 jobs; 301 root modules plus two regressions; 7636 explicit/14290 discovered public dependencies; zero Lean diagnostics | root-relative `logs/foundation_freeze_20261006_003634.log` | `0a843ce43a4f6baf09a05bb8b17d4785e5200d158c6b7b038801c29a4b9713c4` |
+| `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause`, paper folder | exit 0; PROOF PASS; 20/20 gates; 8714 jobs; all 299 semantic regressions; zero Lean diagnostics | paper-relative `logs/dhiman-kadiri-quesada-herrera-build-20261006-003952-693.log` | `55f1b6d183c5c3cf764f34e2d552f864fd8257bc3a4ef662bb4276899cb6f808` |
+
+The paper audit passed for 2379 project theorems, including private/generated declarations, and 1465 registered consumers. All 16 linters passed over 1629 declarations plus 897 generated. No failed stage or Lean warning remains. The 13 isolated validator fixtures and eight source-ledger fixtures passed. Inventory/pin/import/status checks, all 205 source labels, seven archive members, seven PDFs, local links, owner-BAT identity and `git diff --check` passed. Repository proof-integrity scans found no prohibited proof term or postulate; broad `constant` matches were ordinary prose or rational structure fields.
+
+No Lean source, import, dependency, runner or frozen artifact changed. Original receipts below remain preserved. This receipt is the only documentation addition after the sequential proof runs; final inventory/link/status and whitespace checks were repeated afterward. No staging, commit, push or owner synchronization BAT execution occurred.
+
+## Final corrected-contract acceptance — 6 October 2026
+
+All DKQH-01–DKQH-20 gates are DONE after the exact-source comparison in Source Contract and the complete sequential checks below. The final scope is 193 retained files, 127 production modules, two verification modules and 299 exact semantic consumers. CorrectedPartII exposes every repaired analytic condition, proves the complete source-to-interface adapter using Darboux continuity, and supplies general/half-integer/constant-weight/half-gap public consumers. Its nine new public declarations and nine exact-type regressions are explicitly audited. The printed Part-I and Corollary-0.1 counterexamples, E1 failed-majorant diagnostic, quotient counterexample and all original displays remain preserved. Literal BProcessGeneral is unchanged.
+
+Checkout at the original release verification: a9ddec65b578914f19199443a3e8ffa3a406e8e8, dirty with that implementation; the checkout was clean on resumption. Toolchain and dependency revisions are unchanged from the immutable inputs preserved in the historical record below. ELAN_HOME=C:\Users\Naraphim\.elan. The research cutoff remains 5 October 2026; the release checks crossed midnight into 6 October.
+
+| Sequential command and working directory | Result | Log | SHA-256 |
+|---|---|---|---|
+| `cmd /c run_lake_build.bat --no-pause`, repository root | exit 0; FINAL RESULT: PASS; 8857 jobs; 301 root + 2 regressions; 7636 explicit/14290 discovered public dependencies; zero Lean diagnostics | `logs/foundation_freeze_20261006_000202.log` | `30ec3e80c6b5852fa01dbe09cc068508a2aaddbd78e7691941650d834d44c7f4` |
+| `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause`, paper folder | exit 0; DEVELOPMENT PASS at pre-acceptance 11/20 metadata; complete corrected scope; zero Lean diagnostics | `logs/dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log` | `21d1cb57cd3b31e59b4a8303b0f9e7355562338e86467bb7653b3b0f8dccca4a` |
+
+The paper audit checks 2379 project theorems including private/generated declarations, 1465 registered consumers and all 16 linters over 1629 declarations plus 897 generated. All diagnostics are zero. Before the BATs, 13 isolated validator fixtures passed; the paper BAT also passed all eight source-ledger fixtures, 25 source pins, 205 label anchors, seven byte-identical archive members, all import/classification/pin/link checks and owner BAT identity. Git diff --check passed; earlier Git-only line-ending notices were resolved by restoring the required working-copy endings. All 35 reused files (407 declarations) rehashed unchanged. The 26 numerical table rows match the owner-selected commit exactly, confirming the nine Table 1 and fourteen Table 2 changes and preserving every original.
+
+On this evidence the nine remaining gates are accepted and metadata changes to project-complete, 20/20. A final metadata/fixture check and paper BAT in completion mode follow below; no Lean source, import or dependency is changed after these sequential runs. Standard logical axioms propext, Classical.choice and Quot.sound remain visible; there are no project axioms, admitted proofs, unsafe proof evaluation or excluded production modules. Independent semantic review, publication and community acceptance remain external. No stage, commit, push or execution of the owner BAT occurred. The node-63 owner BAT SHA-256 remains 9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114.
+
+
+## Completion-mode verification receipt — 6 October 2026
+
+After adopting all twenty gates, `python -X utf8 Tools/verify_scaffold.py` and all thirteen isolated validator fixtures passed in project-complete mode, including rejection of inconsistent gate status and completion mode. The final owner-facing command `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause`, run from the paper folder with the same ELAN_HOME, exited 0 and printed **PROOF PASS - ALL ACCEPTED SOURCE CONTRACTS VERIFIED; 20/20 GATES**.
+
+Paper-relative log: `logs/dhiman-kadiri-quesada-herrera-build-20261006-002012-056.log`; SHA-256 `536907d40025a4063a3406a9d305d13ea58f87375e1cf1b2cbff9263fdb57e2b`. It confirms 8714 build jobs, 193 retained files, all 127 production modules, both verification modules, all eight source-ledger fixtures, 299 semantic consumers, 2379 exhaustive theorem dependencies, 1465 explicit consumers and all 16 linters. Every stage reports exit 0 and zero Lean diagnostics; no failed stage or warning remains. The final architecture styles and current research wording were synchronized during the audit; only documentation/status metadata changed after the sequential proof runs. The final inventory/status/link validator and git diff --check were rerun after this receipt.
+
+All five decisions and the standing repair authorization are recorded in the Goal Prompt, Source Contract, Errata and current documentation. Original and adopted table values remain side by side, source archives remain unchanged, and the full literal B-process remains unchanged. The repository README, category README, manuscript and publication-audit addendum now identify the completed corrected extension separately from the foundation. No staging, commit, push or owner BAT execution was performed.
+
+<details>
+<summary>Historical setup, development and pre-acceptance verification receipts</summary>
+
+The text below preserves the status and terminology at each recorded checkpoint. Its open gates, proposed repairs, counts and next steps are historical; the current accepted contracts and verification receipts above supersede them.
+
 The following setup sections are historical receipts. The active package, source review and verification changes are recorded below; they supersede the no-Lean setup boundary.
 Prepared 5 October 2026 at checkout `baef1ac59f8ded380b91dda2b5a04a5468f798a8`; working tree was clean before setup. Changes belong to node 78 plus its category README entry. That setup checkpoint included no Lean source/package/configuration change, goal activation, dependency update, commit or push.
 
@@ -611,27 +657,4 @@ Post-acceptance metadata verification also passed (session 64516, exit 0): all 1
 
 The owner’s attached five-decision instruction was read in full and adopted, including its standing authorization for mathematically justified source repairs. Attachment SHA-256: f432238954056e0278d17ada0f3b97e3a89bd232d9500bf72b3404fc3ebfc44d. Current HEAD is a9ddec65b578914f19199443a3e8ffa3a406e8e8; the checkout was clean at resumption, and `git diff a9ddec65b578914f19199443a3e8ffa3a406e8e8 -- "Dhiman-Kadiri-Quesada-Herrera Computation Review.md"` was empty. Thus the adopted table values are exactly those identified by the owner. The five decisions are no longer awaiting approval. The literal B-process and frozen source bytes are unchanged. The remaining gates stay OPEN until the explicit consumers and final acceptance checks pass.
 
-
-## Final corrected-contract acceptance — 6 October 2026
-
-All DKQH-01–DKQH-20 gates are DONE after the exact-source comparison in Source Contract and the complete sequential checks below. The final scope is 193 retained files, 127 production modules, two verification modules and 299 exact semantic consumers. CorrectedPartII exposes every repaired analytic condition, proves the complete source-to-interface adapter using Darboux continuity, and supplies general/half-integer/constant-weight/half-gap public consumers. Its nine new public declarations and nine exact-type regressions are explicitly audited. The printed Part-I and Corollary-0.1 counterexamples, E1 failed-majorant diagnostic, quotient counterexample and all original displays remain preserved. Literal BProcessGeneral is unchanged.
-
-Current checkout: a9ddec65b578914f19199443a3e8ffa3a406e8e8, dirty with this implementation; the checkout was clean on resumption. Toolchain and dependency revisions are unchanged from the immutable inputs above. ELAN_HOME=C:\Users\Naraphim\.elan. The research cutoff remains 5 October 2026; the release checks crossed midnight into 6 October.
-
-| Sequential command and working directory | Result | Log | SHA-256 |
-|---|---|---|---|
-| `cmd /c run_lake_build.bat --no-pause`, repository root | exit 0; FINAL RESULT: PASS; 8857 jobs; 301 root + 2 regressions; 7636 explicit/14290 discovered public dependencies; zero Lean diagnostics | `logs/foundation_freeze_20261006_000202.log` | `30ec3e80c6b5852fa01dbe09cc068508a2aaddbd78e7691941650d834d44c7f4` |
-| `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause`, paper folder | exit 0; DEVELOPMENT PASS at pre-acceptance 11/20 metadata; complete corrected scope; zero Lean diagnostics | `logs/dhiman-kadiri-quesada-herrera-build-20261006-000528-992.log` | `21d1cb57cd3b31e59b4a8303b0f9e7355562338e86467bb7653b3b0f8dccca4a` |
-
-The paper audit checks 2379 project theorems including private/generated declarations, 1465 registered consumers and all 16 linters over 1629 declarations plus 897 generated. All diagnostics are zero. Before the BATs, 13 isolated validator fixtures passed; the paper BAT also passed all eight source-ledger fixtures, 25 source pins, 205 label anchors, seven byte-identical archive members, all import/classification/pin/link checks and owner BAT identity. Git diff --check passed; earlier Git-only line-ending notices were resolved by restoring the required working-copy endings. All 35 reused files (407 declarations) rehashed unchanged. The 26 numerical table rows match the owner-selected commit exactly, confirming the nine Table 1 and fourteen Table 2 changes and preserving every original.
-
-On this evidence the nine remaining gates are accepted and metadata changes to project-complete, 20/20. A final metadata/fixture check and paper BAT in completion mode follow below; no Lean source, import or dependency is changed after these sequential runs. Standard logical axioms propext, Classical.choice and Quot.sound remain visible; there are no project axioms, admitted proofs, unsafe proof evaluation or excluded production modules. Independent semantic review, publication and community acceptance remain external. No stage, commit, push or execution of the owner BAT occurred. The node-63 owner BAT SHA-256 remains 9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114.
-
-
-## Completion-mode verification receipt — 6 October 2026
-
-After adopting all twenty gates, `python -X utf8 Tools/verify_scaffold.py` and all thirteen isolated validator fixtures passed in project-complete mode, including rejection of inconsistent gate status and completion mode. The final owner-facing command `cmd /c run_dhiman_kadiri_quesada_herrera_build.bat --no-pause`, run from the paper folder with the same ELAN_HOME, exited 0 and printed **PROOF PASS - ALL ACCEPTED SOURCE CONTRACTS VERIFIED; 20/20 GATES**.
-
-Paper-relative log: `logs/dhiman-kadiri-quesada-herrera-build-20261006-002012-056.log`; SHA-256 `536907d40025a4063a3406a9d305d13ea58f87375e1cf1b2cbff9263fdb57e2b`. It confirms 8714 build jobs, 193 retained files, all 127 production modules, both verification modules, all eight source-ledger fixtures, 299 semantic consumers, 2379 exhaustive theorem dependencies, 1465 explicit consumers and all 16 linters. Every stage reports exit 0 and zero Lean diagnostics; no failed stage or warning remains. The final architecture styles and current research wording were synchronized during the audit; only documentation/status metadata changed after the sequential proof runs. The final inventory/status/link validator and git diff --check were rerun after this receipt.
-
-All five decisions and the standing repair authorization are recorded in the Goal Prompt, Source Contract, Errata and current documentation. Original and adopted table values remain side by side, source archives remain unchanged, and the full literal B-process remains unchanged. The repository README, category README, manuscript and publication-audit addendum now identify the completed corrected extension separately from the foundation. No staging, commit, push or owner BAT execution was performed.
+</details>
