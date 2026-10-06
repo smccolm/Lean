@@ -112,7 +112,10 @@ def validate(paper=PAPER):
         require(marker in prompt, f'Goal prompt lost required boundary: {marker}')
     regression = (paper / 'Extension' / module_root / 'SemanticRegression.lean').read_text(encoding='utf-8')
     audit = (paper / 'Extension' / module_root / 'Audit.lean').read_text(encoding='utf-8')
-    for name in ['actual_sum_index_discrepancy', 'actual_residual_discrepancy',
+    for name in ['sharpZetaSum_eq_integer_source_source', 'afeRemainder_eq_integer_source_source',
+                 'actual_wave_principal_power_source', 'integer_source_half_cutoff_source',
+                 'source_b_process_printed_source', 'exists_source_b_process_printed_full_source',
+                 'actual_sum_index_discrepancy', 'actual_residual_discrepancy',
                  'literal_functional_equation_counterexample', 'poisson_counterexample_hypotheses',
                  'poisson_counterexample_source_inequality', 'actual_afe_repair_hypotheses',
                  'lemma_one_first_tail', 'lemma_one_second_tail', 'lemma_one_third_tail',

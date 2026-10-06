@@ -8,10 +8,11 @@
   },
   {
     "id": "DKQH-02",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Actual objects and conventions",
     "acceptance": "Define integer/positive-index sums, sharp cutoffs, exp(2πif), principal cpow, χ and literal remainder; prove sign, floor and endpoint adapters.",
-    "proposedModule": "Objects"
+    "proposedModule": "Objects",
+    "evidence": "ObjectAdapters sharpZetaSum_eq_integer_source, afeRemainder_eq_integer_source, actual_wave_principal_power, integer_sample_endpoints and integer_source_half_cutoff, with PoissonShift/EulerMaclaurin/ChiReflection consumers, prove the actual sums, principal powers, endpoints, phase shifts, chi reflection and both height signs. 290 exact consumers; 2359 exhaustive/1447 explicit dependencies; sequential zero-diagnostic foundation/paper receipts 2026-10-05 21:31/21:34."
   },
   {
     "id": "DKQH-03",
@@ -77,10 +78,11 @@
   },
   {
     "id": "DKQH-11",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Explicit B-process",
     "acceptance": "Prove Corollary 0.2 with actual stationary dual sum, −1/8 phase and full displayed constants/error.",
-    "proposedModule": "ExplicitBProcess"
+    "proposedModule": "ExplicitBProcess",
+    "evidence": "BProcessGeneral: exists_source_b_process_printed_full and source_b_process_printed prove the full literal Corollary 0.2, all frequency counts and gaps, unique actual stationary points and all printed constants. Source comparison, 285 exact consumers, 2349 exhaustive/1437 explicit audit and sequential foundation/paper receipts 2026-10-05 21:20/21:24 passed with zero Lean diagnostics."
   },
   {
     "id": "DKQH-12",
@@ -128,10 +130,11 @@
   },
   {
     "id": "DKQH-18",
-    "status": "OPEN",
+    "status": "DONE",
     "title": "Reuse and package integration",
     "acceptance": "Install only justified compatible import closures; pin and license dependencies, preserve upstream proofs, include every production module in root graph.",
-    "proposedModule": "DependencyIntegration"
+    "proposedModule": "DependencyIntegration",
+    "evidence": "All 126 production modules are classified and root-imported; isolated path dependency preserves every root package revision and Lean 4.30. Dependencies/README records selected interfaces, minimal adaptations, available license notices and source hashes; all 35 local-reuse inventory files (407 declarations) rehashed without mismatch. Complete import/axiom closure and sequential zero-diagnostic foundation/paper receipts 2026-10-05 21:31/21:34."
   },
   {
     "id": "DKQH-19",

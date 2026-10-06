@@ -14,5 +14,5 @@ if "%NO_PAUSE%"=="0" pause
 exit /b %BUILD_EXIT%
 :usage
 echo Usage: run_dhiman_kadiri_quesada_herrera_build.bat [--no-pause]
-echo Verifies the planning scaffold only. Lean conversion is not started.
+echo Verifies the active Lean package, source pins, proof gates and dependency audit.
 exit /b 2

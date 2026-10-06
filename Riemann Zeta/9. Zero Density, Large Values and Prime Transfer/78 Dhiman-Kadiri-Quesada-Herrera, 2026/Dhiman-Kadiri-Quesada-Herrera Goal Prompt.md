@@ -1,6 +1,6 @@
 # Dhiman–Kadiri–Quesada-Herrera 2026 — whole-paper goal prompt
 
-**ACTIVE GOAL — activated by the owner on 5 October 2026. 8/20 proof gates complete.**
+**ACTIVE GOAL — activated by the owner on 5 October 2026. 11/20 proof gates complete.**
 
 ## Active objective
 

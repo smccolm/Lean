@@ -1,6 +1,20 @@
 # Source discrepancies, computation hazards and unresolved questions
 
-Survey date: 5 October 2026. These are **local source-review findings**, not an author-issued erratum. No later edition or author correction was found. Preserve original source bytes and this evidence. SourceReview now contains the initial exact diagnostic regressions; the main Poisson and AFE results remain OPEN. Each item belongs to DKQH-01 and the downstream gates stated below.
+Survey date: 5 October 2026. These are **local source-review findings**, not an author-issued erratum. No later edition or author correction was found. Preserve original source bytes and this evidence. SourceReview preserves the initial exact diagnostic regressions; current accepted results and remaining decisions are summarized below. Each item belongs to DKQH-01 and the downstream gates stated below.
+
+## Remaining source decisions — current acceptance checkpoint
+
+The Part-I monotonicity repair is accepted and proved. The full literal B-process, object conventions and dependency integration are also accepted; the project stands at 11/20 gates. The following previously requested decisions remain unanswered. All candidate alternatives below have kernel-checked consumers; none has been adopted as the corrected public source contract. The Goal Prompt requires an explicit scope decision for a materially different objective.
+
+| Decision | Concrete proposed contract | Proved evidence and affected gates |
+|---|---|---|
+| Part-II E₁ | Replace A−(B+C)/y by A−(B−C)/y, with A/B/C defined in the arithmetic review below. | PartIISignReview proves the exact difference and failure of the printed square-tail majorant; PartIIShiftInputs and PartIIHalfSource consume the assembled bound. DKQH-01/09/10. |
+| Part-II hypotheses | For h=g′ and h=g(f′−N), require both absolute-value quotients with denominator powers two and three to be nonincreasing for every positive integer frequency, as specified below. | PartIIMonotonicity refutes the printed inference; the explicit shifted input theorem proves the repaired general bound, and AFESecondWeights derives all conditions for actual AFE applications including σ=0. DKQH-01/09/10. |
+| Corollary 0.1 Part II | Adopt the domain-preserving full-δ endpoint factor Bδ and the full finite-head term (log(2)+1/f′(a))/π; the separately documented δ≥1/2 alternative remains available. | PoissonHalfReview proves actual error >4 while the entire printed bound is <3. PoissonHalfDelta proves the full-δ repair; PartIIConstant proves the restricted simplification. DKQH-01/10. |
+| AFE2 branch assignment | Use A₀(σ)+C₀(σ)B₀(σ) for x≥y and A₀(1−σ)C₀(σ)+B₀(1−σ) for x<y. | AFESecondUniform proves both complete actual-remainder bounds, both height signs and closed-strip endpoints, agreeing with the derivation and ancillary call sites. DKQH-01/14/15/16/17. |
+| Table 1–2 bounds | Adopt the exact certified proposals beside the preserved originals in Computation Review: nine changed Table 1 cells and fourteen changed Table 2 cells. | AFETableOne and AFETableTwo prove all proposed cells and actual AFE consumers. Table 3, k/π+1.1601 and the constant-six consequence retain their printed bounds. DKQH-01/16/17. |
+
+The printed counterexamples prevent literal whole-paper acceptance. Independent object, analytic, B-process and numerical work is verified. DKQH-19/20 remain open for the exact final accepted contracts and their release checks after these decisions. This is an essential source-contract impasse, not a failed Lean build.
 
 | ID | Evidence in frozen v1 | Assessment / required resolution |
 |---|---|---|
@@ -180,3 +194,27 @@ StationaryTaylor proves the cubic phase remainder D|x|³/6, its derivative remai
 BProcessReview checks the smooth quadratic f(u)=651u/200−151u²/200 on [1/2,3/2]. Its derivative runs strictly down from β=5/2 to α=99/100, with constant curvature −151/100 and zero third derivative. On the paper's interior range 1≤ν≤floor(β)−1, the reciprocal endpoint majorant in the cited stationary-phase deduction equals 302/(3π), which is strictly greater than 1.251+(2/π)log(β−α). Patel–Yang's cited argument instead restricts frequencies to α+1/2<ν<β−1/2; the paper's range does not preserve that separation. This is a proved failure of the reciprocal-majorant deduction, not a counterexample to the actual complex S₃ remainder or the full B-process inequality.
 
 The review also proves that deleting the last stationary frequency changes the main sum by a term of exact norm 1/sqrt(|f″(x_M)|). The paper's proof uses frequencies 1 through M−1 whereas its conclusion uses 1 through M; a complete argument must account for that term or prove a different joint endpoint estimate. Neither diagnostic licenses an unapproved change to 2.686 or to the source conclusion. DKQH-11 remains OPEN for the nonlinear integral, boundary-frequency accounting and exact constant. Current scope: 142 retained files, 76 production and two verification modules, 129 semantic consumers; accepted count 8/20.
+
+## Corollary 0.1 Part-II counterexample and full-δ repair — 5 October 2026
+
+PoissonHalfReview now refutes the entire printed Corollary 0.1 Part-II bound. Put v=u−1/2 and f(u)=u−v/1000−v²/(2·10⁹)+v³/(6·10¹⁰) on [1/2,11/2]. This is C³; f′ is positive and strictly decreasing; |f″| is positive and strictly decreasing. Its upper derivative is 999/1000, its lower derivative is 799199997/800000000, and δ=1/1000. The five actual integer samples have sum within 1/4 of 5, while the sole retained Fourier integral has norm at most 1/2. Thus the actual remainder is greater than 4. The literal printed bound, including the cited half-integer B formula and both printed E coefficients, is less than 3. Every inequality and endpoint convention is kernel checked; this is a counterexample to the full stated corollary, not merely an intermediate estimate. It does not refute Corollary 0.2, whose additional stationary error remains separate.
+
+PoissonHalfDelta proves a proposed domain-preserving repair. For d=M+1−y>0 its half-integer endpoint factor is
+
+`Bδ(M,y) = (|Re ψ(d) − Re ψ((d+1)/2) − log(2)| + 1/(M+1) + log(2) + 3/(2(y+1))) / y`.
+
+The actual endpoint tails, full weighted Poisson bound, every permitted lower-frequency shift, constant-weight specialization and actual discrete B-process adapter are proved with this explicit factor for all positive d. The factor is bounded by the printed π/2 simplification when d≥1/2. These results retain the full finite-head coefficient (log(2)+1/f′(a))/pi in constant weight, the separately proved square/cube coefficients, and the provisional SecondOrderRegularity inputs. Adopting this changed Corollary 0.1 contract remains a separate owner decision; the already-pending general Part-II quotient and E₁ decisions are not silently adopted. The earlier statement that no complete Corollary 0.1 counterexample exists is superseded. Current scope: 168 retained files, 102 production and two verification modules, 184 semantic consumers; 8/20 gates complete.
+
+
+## Complete general B-process implementation — 5 October 2026
+
+BProcessGeneral proves exists_source_b_process_printed_full and source_b_process_printed, the literal Corollary 0.2 for every allowed source phase, frequency count and positive δ. The latter theorem covers any family of the unique stationary points. The actual half-integer discrete sum and full stationary sum retain phase −1/8, denominator sqrt(|f″|), source factors h₂,h₃,λ₂,λ₃ and every printed remainder term, including 2.686, 1.251, the logarithm and the literal B/E₁/E₂ coefficients. The scale domain is explicit: λ₂>0 and h₃,λ₃≥0; h₂≥1 and positive f′ throughout are derived.
+
+The proof combines CubicFour for D=h₃λ₃≤4 with a new argument for D≥4. For upper slope at most 26, the actual finite sums are bounded directly using curvature and rational quadratic certificates. Above 26, LargeDBudget proves a digamma chord, a global logarithmic tangent bound, an exact Poisson-error comparison and a joint length/curvature bound. The nearest exterior Fourier mode is paid from the unused stationary allowance. No source-corollary remainder, quotient monotonicity or numerical optimizer certificate is assumed. This bypasses the diagnosed gaps in the printed proof without changing the printed conclusion or adopting any pending Part-II/Corollary-0.1 repair.
+
+This supersedes all earlier restricted-domain B-process status reports. Implementation is complete; DKQH-11 acceptance is pending the current exhaustive audit and sequential verifiers. Current scope: 191 retained files, 125 production and two verification modules, 285 semantic consumers; 8/20 gates remain accepted until that verification finishes.
+
+
+## DKQH-11 accepted — 5 October 2026
+
+The complete literal Corollary 0.2 is verified in BProcessGeneral. Exact-type regressions preserve every source hypothesis, actual sum, phase, scale and constant; the stationary-point family is constructed and proved unique. The exhaustive audit checks 2349 project theorems, including generated/private declarations, with 1437 explicit consumers and only standard logical axioms. Both sequential BATs passed with zero Lean diagnostics. DKQH-11 is DONE, and 9/20 gates are accepted. The diagnosed errors in the printed proof remain preserved; the new proof establishes the unchanged conclusion. This supersedes every earlier B-process OPEN/restricted-domain status. Other source decisions remain pending.
