@@ -28,7 +28,7 @@ theorem exists_gammaRieszDualSeries_split_bound {k A : ℝ} (hk : 2 ≤ k) (hA :
     convert (hasSum_subtype_iff_indicator).mp ((Finset.Icc 1 N).hasSum
       (fun n : ℕ => a n * (n : ℝ) ^ (-(5 / 8 : ℝ)))) using 1
     funext n
-    rfl
+    simp only [Set.indicator_apply, Finset.mem_coe]
   have hhi := (linearPowerTail_summable_bound ha hB hb (by norm_num : (1 : ℝ) < 9 / 8) hN).1.hasSum
   have hmajor := (hlo.mul_left (C₀ * h ^ 2 * x ^ (3 / 8 : ℝ))).add
     (hhi.mul_left (C₂ * x ^ (15 / 8 : ℝ)))
