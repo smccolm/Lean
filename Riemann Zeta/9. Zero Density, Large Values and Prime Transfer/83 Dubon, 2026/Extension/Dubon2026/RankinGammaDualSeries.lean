@@ -68,7 +68,8 @@ theorem exists_rankinGammaDualSeries_difference_bound {Q : ℕ} [NeZero Q] {k : 
     (show 0 ≤ L * h ^ 2 * x ^ (3 / 8 : ℝ) by positivity)
   have hhigh := mul_le_mul_of_nonneg_left hp.2.2
     (show 0 ≤ H * x ^ (15 / 8 : ℝ) by positivity)
-  convert add_le_add hlow hhigh using 1 <;> ring
+  convert add_le_add hlow hhigh using 1
+  ring
 
 end
 end Dubon2026

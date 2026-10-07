@@ -1,5 +1,31 @@
 # Dubon 2026 — reproduction manifest
 
+Actual higher-prime-power correction: five further production modules construct the complete quadratic remainder in each spectral Euler logarithmic derivative and prove its prime sum holomorphic on Re(s)>1/2 using a genuine summable logarithmic prime majorant. Actual primitive Hecke roots give the unramified symmetric-power factors, their original Fourier traces and the precise prime-character L-series. The sum of their local logarithmic derivatives equals this L-series plus the proved holomorphic remainder. Removing that remainder gives the existing Tauberian/prime-average/Sato–Tate/H2 chain from an explicit local coefficient bound and continuous boundary extension of the actual logarithmic-derivative series. These two arithmetic inputs remain unproved. Three exact consumers expand registered scope to 627 production modules, 246 exact consumers and 2,960 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. No global automorphic or Galois representation, Deligne purity or symmetric-power continuation/nonvanishing is asserted. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual prime-character boundary transfer: four further production modules reuse the audited node-63 Wiener–Ikehara theorem and the genuine von Mangoldt majorant to prove signed cancellation from a displayed continuous boundary extension of the original Dirichlet series. The existing PNT removes logarithmic prime weights with an exact finite error bound; inclusive prime normalization and every finite ramified discrepancy are discharged. The genuine primitive coefficients therefore yield weak Sato–Tate and full isolated-prime H2 from two explicit arithmetic inputs: the local norm bound and boundary continuation of every positive-order prime-character series. Neither input is proved. Three exact consumers expand registered scope to 622 production modules, 243 exact consumers and 2,930 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,177 exhaustive theorem checks). The continuation premise is an actual analytic condition on a coefficient-defined L-series, not an assumed prime-average limit. Deligne, symmetric-power automorphy/continuation and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual local Hecke and Euler normalization: seven further production modules construct the two roots of the genuine normalized Hecke polynomial, prove their trace/determinant identities and the exact equivalence between unit modulus and the unramified coefficient bound. Absolute convergence of the original cusp L-series on Re(s)>1 follows from the already proved square-series convergence, without Deligne. The genuine Hecke recurrences then give every good and ramified rational Euler factor, nonvanishing denominators and the actual all-prime Euler product. Finite symmetric-power root traces equal the original prime-power coefficients; the corresponding spectral Euler polynomials have these coefficients as their first reciprocal Taylor coefficients. Four exact consumers expand registered scope to 618 production modules, 240 exact consumers and 2,914 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,134 exhaustive theorem checks). These identities do not prove purity, symmetric-power automorphy, analytic continuation/nonvanishing or prime-average cancellation. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual Sato–Tate character bridge: seven further production modules prove orthonormality of the true symmetric-power character polynomials for the actual angle pushforward law, polynomial density and weak probability convergence from character integrals. Genuine primitive Hecke coefficients satisfy the exact normalized determinant-one recurrence and equal these polynomials at every good prime power. Actual empirical integrals are finite prime averages; finite ramified-prime discrepancies become fixed finite sums and vanish after division by pi(N). The primitive-form consumer derives the genuine Sato–Tate weak limit and all isolated-prime H2 requirements from two explicit arithmetic premises: the unramified norm bound and vanishing positive-order prime-power averages. These premises remain unproved. Three exact consumers expand registered scope to 611 production modules, 236 exact consumers and 2,867 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,078 exhaustive theorem checks). DUB-01–16 remain accepted; DUB-17–20 remain OPEN. This conditional analytic bridge does not prove Deligne, non-CM Sato–Tate, their automorphic inputs or the final unconditional modular application.
+
+Actual general-level Rankin–Selberg remainder: fourteen further production modules prove the exact positive conductors and signed divisor amplitudes, the genuine reflected boundary estimate, and the finite-component Riesz transform with justified coefficient/contour limits. The existing polynomial-strip and horizontal-contour chain now applies to every positive level. Sharp second differences pass through the actual finite divisor sum; original-coefficient positivity gives forward/backward unsmoothing, and genuine Mobius deconvolution preserves the exact x^(3/5) error. Every nonzero cusp form of weight at least two and positive level therefore has its actual positive Petersson residue and normalized square sum c_f x+O_f(x^(3/5)). The literal weighted-energy conclusions and the sigma=0, 3/10 and 1/2 cases are derived from this proved input. Five exact consumers expand registered scope to 604 production modules, 233 exact consumers and 2,838 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,046 exhaustive theorem checks). DUB-16 is accepted after exact source review and sequential verification on 7 October 2026. DUB-01–16 are DONE; DUB-17–20 remain OPEN. Deligne, unconditional Sato–Tate and the final unconditional modular application remain open.
+
+Earlier entries record historical milestones. The general-level remainder and energy theorem above supersede their former Rankin–Selberg obligations.
+
+Actual general-level reflected Dirichlet series: nine further production modules prove absolute integrability and finite-coset transport of the completed lattice-Petersson density, genuine full-level Eisenstein unfolding of the invariant cusp trace, and the exact two-Gamma series identity. Analytic continuation extends the real-axis identity throughout Re(s)>1; the proved lattice reflection then identifies each original divisor component with its actual convergent rescaled cusp series on Re(s)<0. The general-level completion is the exact finite Mobius sum of those series, preserving every determinant, common-period and completion factor. Four exact consumers expand registered scope to 590 production modules, 228 exact consumers and 2,784 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,944 exhaustive theorem checks). The general-level x^(3/5) contour estimate, Deligne, unconditional Sato–Tate and final unconditional modular application remain open. The full-level x^(3/5) theorem remains proved. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+Earlier implementation entries retain their historical proof status; the reflected-series identity above supersedes the former open identification obligation.
+
+Actual general-level cusp trace: seventeen further production modules prove arbitrary-period Parseval, the actual normalized linear coefficient mean, the common-period trace identity and its absolutely convergent Mellin transform with the exact width factor. The mixed congruence subgroup is proved to be the precise diagonal conjugate of the original product-level Gamma0; both its literal coset tiling and the transformed original domain are genuine fundamental domains. The rescaled original cusp form supplies an actual finite family of principal-period cusp expansions and nonnegative real Rankin convolution coefficients with a proved linear summatory bound and absolute convergence. Five exact consumers expand registered scope to 581 production modules, 224 exact consumers and 2,737 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,884 exhaustive theorem checks). Identifying these constructed coefficients with the reflected general-level lattice integral, the resulting general-level x^(3/5) estimate, Deligne, unconditional Sato–Tate and the final unconditional modular application remain open. The full-level x^(3/5) theorem remains proved. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+Actual full-level Rankin–Selberg remainder: nineteen further production modules prove the two-pole Perron rectangle, the actual right and left vertical limits, the exact conductor-scaled coefficient transform, and both justified series/contour interchanges. A uniform bound at every Gamma cutoff supplies the summable majorant for the genuine infinite-height dual-series limit. The original Riesz sum therefore equals its cubic main term, quadratic zero-pole contribution and actual dual Gamma series. Forward and backward differences give the exact convolution error O_f(x^(3/5)); the already proved Möbius coefficient inversion then gives the literal normalized cusp square sum c_f x+O_f(x^(3/5)) with its actual Petersson residue, positive for every nonzero full-level cusp form of weight at least two. Four exact consumers expand registered scope to 564 production modules, 219 exact consumers and 2,652 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,742 exhaustive theorem checks). The general-level x^(3/5) remainder and its actual dual-coefficient construction remain open, as do Deligne, unconditional Sato–Tate and the final unconditional modular application. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+Earlier implementation entries below retain their historical proof status. The current full-level result above supersedes their former open obligations for that case.
+
+Actual Rankin continuation and full-level contour growth: ten further production modules construct the genuine global pole numerator, identify its actual positive residue, and derive the exact reflected two-Gamma Riesz factor from the proved full-level functional equation. Reciprocal-Gamma strip bounds and actual coefficient-series bounds discharge the Phragmen–Lindelof hypotheses. The numerator therefore has the exact seven-halves polynomial bound throughout the closed contour strip. The actual continued Perron integrand decays as |t|^(-1/2), and both literal horizontal edges vanish. Four exact consumers expand registered scope to 545 production modules, 215 exact consumers and 2,597 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,637 exhaustive theorem checks). The residue contour identity and justified interchange with the actual dual series remain open, so the exact Rankin summatory x^(3/5) remainder remains OPEN. General-level dual-coefficient input, Deligne and unconditional Sato–Tate remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+Actual Rankin Gamma dual series: six further production modules construct the genuine coefficient-weighted kernel series, prove absolute convergence from the actual linear coefficient mean, and justify its termwise second finite difference. The actual low/high split consumes the sharp coefficient power bounds. A proved natural cutoff floor(x^(3/5)) yields the exact C_(f,A) x^(3/5) bound for the dual-series second difference divided by h^2, at h=x^(3/5), for every x>=1. Both consumers expose the literal complex Rankin coefficients and the cusp form’s own weight in the Gamma kernel. Registered scope is 535 production modules, 211 exact consumers and 2,552 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,541 exhaustive theorem checks). Identifying this actual dual series with the Rankin Riesz error still requires the functional-equation contour transform, pole residues, polynomial strip bounds and justified contour/series interchange. Thus the exact Rankin–Selberg summatory x^(3/5) remainder remains OPEN. General-level dual-coefficient/Fricke input, Deligne and unconditional Sato–Tate remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
 Actual Rankin dual coefficient powers: four further production modules prove exact Abel formulas for genuine prefix and finite-tail sums, transfer a natural linear cumulative bound to real cutoffs, and bound the actual power integrals. Finite-subset bounds prove convergence and a uniform sharp estimate for the infinite high-frequency tail. Applied to the repo’s proved Rankin convolution mean, the actual coefficients satisfy the n^(-5/8) prefix bound C_f N^(3/8) and the n^(-9/8) tail bound C_f N^(-1/8), for every N>=1. The exact consumer takes only the actual cusp form and positive weight. Registered scope is 529 production modules, 209 exact consumers and 2,534 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,503 exhaustive theorem checks). The actual Gamma-kernel dual series, its justified interchange with the Rankin functional-equation contour transform, polynomial strip bounds and the exact x^(3/5) remainder remain open. General-level dual-coefficient/Fricke input, Deligne and unconditional Sato–Tate remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
 
 Actual Riesz kernel derivatives and finite differences: eight further production modules prove the exact adjacent-order Gamma recurrence, joint continuity and compact domination for the literal weighted integrands, and differentiation under each finite cutoff. Compact-uniform convergence on the common line passes these identities to the actual improper kernels: (x K_1(c x)) prime equals K_0(c x), and (x^2 K_2(c x)) prime equals x K_1(c x), for every c>0 and x>0. Two genuine mean-value inequalities and the sharp kernel powers give second-difference bounds C_k h^2 (c x)^(3/8) and C_k c^(-1/8) x^(15/8), for 0<=h<=x. Two exact consumers expand registered scope to 525 production modules, 208 exact consumers and 2,521 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,484 exhaustive theorem checks). The Rankin–Selberg Dirichlet-series functional-equation contour transform, polynomial strip bounds, dual coefficient sums and the exact x^(3/5) remainder remain open. General-level dual-coefficient/Fricke input, Deligne and unconditional Sato–Tate remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
@@ -22,7 +48,7 @@ Central weighted cusp energy: five further production modules identify the bound
 
 Analytic Tauberian inversion: nine further production modules prove actual bounded-function Laplace integrability, entire truncations, exact rectangular Cauchy identities, both 12B/R contour bounds and dominated convergence on the fixed left contour. These prove convergence of the literal truncated integral to the genuine continued Laplace transform at zero. One exact consumer exposes the actual integral hypothesis and conclusion. Registered scope is 458 production modules, 190 exact consumers and 2,251 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (4,022 exhaustive theorem checks). The later central-energy milestone above supplies its actual cusp application and central formula; the exact x^(3/5) remainder remains open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
 
-**GOAL ACTIVE — 15/20 proof gates complete.** Owner activation: 6 October 2026. The isolated package and active verifier are now in place; the complete paper remains unfinished.
+**GOAL ACTIVE — 16/20 proof gates complete.** Owner activation: 6 October 2026. The isolated package and active verifier are now in place; the complete paper remains unfinished.
 
 Noncentral weighted Rankin energy: four further production modules prove the exact square-supported principal-character Möbius inverse and its genuine coefficient inversion by convergent Dirichlet-series uniqueness. An affine Abel remainder bound upgrades the proved o(x) mean to the literal weighted asymptotic for every sigma<1/2, including sigma=0 and 3/10. The actual weighted energies are uniformly bounded for sigma>1/2. Two exact consumers expand registered scope to 449 production modules, 189 exact consumers and 2,210 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (3,942 exhaustive theorem checks). The later central-energy milestone above supplies c_f log N+O_f(1); the exact x^(3/5) remainder remains open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
 
@@ -48,7 +74,7 @@ Cusp Fourier/Mellin input: five new production modules prove Parseval for the ac
 
 Isolated-prime source interface: the finite-block bound now derives nonzero selected coefficients from the diagonal two-sided ratio and holds uniformly on every set of abscissae, including all compact sets in Proposition 5.1. One C_K is chosen before the coefficients, N, block and set. The expanded scope has 372 production modules, 151 exact consumers and 1,808 explicit registrations. Focused compilation, the expanded audit and sequential foundation/paper verification passed with zero Lean diagnostics. DUB-10–14 are accepted after complete source review and sequential verification.
 
-The current verified scope has 529 production modules, 209 exact consumers, 2,534 explicit audit registrations and 4,503 exhaustive theorem dependency checks. It includes the actual polynomial/Bohr/log/Jessen chain, multiplicity-weighted zero frequencies for every open strip, the abstract concentration criterion, zeta and fixed-character applications, and the genuine level-one non-CM bridge. The modular concentration application still requires the true Rankin–Selberg, Deligne, Sato–Tate and automorphic inputs. DUB-01–15 have separate source-acceptance records; DUB-16–20 remain OPEN pending their own complete review and acceptance. The dated receipts below retain the scope and gate counts at their execution times.
+The preceding verified scope had 622 production modules, 243 exact consumers, 2,930 explicit audit registrations and 5,177 exhaustive theorem dependency checks; the current expanded scope is identified above. It includes the actual polynomial/Bohr/log/Jessen chain, multiplicity-weighted zero frequencies for every open strip, the abstract concentration criterion, zeta and fixed-character applications, and the genuine level-one non-CM bridge. The general-level Rankin–Selberg theorem and weighted energy are proved and accepted. The modular concentration application still requires Deligne, Sato–Tate and the automorphic inputs. DUB-01–16 have separate source-acceptance records; DUB-17–20 remain OPEN pending their own complete review and acceptance. The dated receipts below retain the scope and gate counts at their execution times.
 
 General first-coefficient extension: `JessenGeneralMass`, `CoefficientScaling` and `NonzeroFirstCoefficientDensity` retain the printed assumption a₁≠0. The actual mass is log M_N; the scaled zero-frequency mass is log M_N/(2π), with probability normalization for M_N>1 and zero measure for M_N=1. Nonzero complex coefficient scaling preserves support, analytic zero multiplicities, every finite-height count and Jessen derivative measure; the Jessen function shifts by log |c|. The open-strip frequency theorem now holds for every nonzero first coefficient with the same one-sided endpoints. Four additional exact consumers give 372 production modules, 150 consumers and 1,806 explicit audit registrations. Focused compilation, the aggregate audit and sequential foundation/paper verification passed with zero Lean diagnostics for this scope. DUB-06–07 are accepted after complete semantic review; see Dubon Semantic Acceptance.md.
 
@@ -1287,5 +1313,336 @@ Dirty checkout `3fdbcb6ff8343bd1c38295d71b461f22372667dc`; Lean 4.30.0, Mathlib 
 - `Extension/Dubon2026/LinearMeanPowerBounds.lean`: SHA-256 `2d3710aa286bc9383f87ac8df9a1fe3d92159a7a6b7e6d30a37629955e95f0f5`.
 - `Extension/Dubon2026/LinearMeanPowerTail.lean`: SHA-256 `3c24d2aa3de45632eba4a173aa9cccb9cdfd13659b615f7cfcaa28e2b1ec3f3c`.
 - `Extension/Dubon2026/RankinConvolutionPowerBounds.lean`: SHA-256 `596fbfb2edf160cda29e49a687a6ced4788c6bd5197191b35425cd440bff4fe4`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual Rankin Gamma dual series and optimized differences — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 535 production modules, 211 exact consumers, 2,552 explicit registrations and 4,541 exhaustive theorem dependency checks. Sixteen linters passed across 3,043 declarations plus 2,070 generated declarations in the audit scope; focused consumer lint had 2,065 generated declarations. Source/inventory and tooling fixtures passed: 642 retained files, 592 local links, 4,320 unchanged existing Lean files.
+
+Six modules construct the genuine coefficient-weighted Gamma kernel series and prove absolute convergence from the actual Rankin coefficient mean. Exact termwise second differences, the sharp low/high kernel and coefficient bounds, and the proved cutoff floor(x^(3/5)) give the actual dual-series difference bound C_(f,A) x^(3/5) after division by h^2 at h=x^(3/5), for every x>=1. Both source consumers use the literal complex Rankin coefficients and the cusp form's own weight in the actual Gamma kernel. Connecting this series to the original Rankin Riesz error still requires the functional-equation contour transform, pole residues, polynomial strip bounds and justified contour/series interchange. The exact Rankin summatory x^(3/5) remainder is therefore still open. General-level dual coefficients, Deligne and unconditional Sato–Tate remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. Research cutoff remains 6 October; this verification occurred on 7 October. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_094449.log](../../logs/foundation_freeze_20261007_094449.log), SHA-256 `7078242978eb335c6d0a8cb832a5be6f8d2ba13c038dd751cd91070b6aa0184f`.
+- [foundation_freeze_20261007_094449.json](../../logs/foundation_freeze_20261007_094449.json), SHA-256 `2657bf759f7806e4fa2acdc0879fc62bafd3a9340032566052cf30baa66529e4`.
+- [dubon-build-20261007-094801-500.log](logs/dubon-build-20261007-094801-500.log), SHA-256 `c66a0fccf0605dc82fa500dcdf60dd36f3b58f45fe12244dcab042f7ea77e970`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `f7dd8dce494af68e19cdeec14d690bd10064978f956302297a6689f2e951557f`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `55e18d4eda5bfcce7bc6da4f2483a61a9f218c81acefc47c18023e353d6bd4e4`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/GammaRieszDualTerm.lean`: SHA-256 `830347a23f7d4f0910a24081190518d76287518cc7a379f8cf1ca021b67de47f`.
+- `Extension/Dubon2026/GammaRieszDualSeries.lean`: SHA-256 `6cda3f521a93ccf3af16190057eaf30fc232d413bf72501f18885e24924e9763`.
+- `Extension/Dubon2026/GammaRieszDualDifference.lean`: SHA-256 `655875acf0725092d0402d225bf6713eca604fe09b10c89fcfbd571ffab2f0c8`.
+- `Extension/Dubon2026/GammaRieszDualSplit.lean`: SHA-256 `5f2f83735ca2575ef2f1f30588c2e8df1a5b6d5399243be70d4430f83393b7c3`.
+- `Extension/Dubon2026/RankinGammaDualSeries.lean`: SHA-256 `1884e14254a241a7086781e3e0373fdbdd191ecaedc37b206c4ebc208064a5d7`.
+- `Extension/Dubon2026/RankinDualOptimization.lean`: SHA-256 `6a897cb67ef34fb4fd7ad67b93d7a04e21939f2085048d41e47c42c005c9c810`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual global Rankin continuation and full-level Perron strip — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 545 production modules, 215 exact consumers, 2,597 explicit registrations and 4,637 exhaustive theorem dependency checks. Sixteen linters passed across 3,093 declarations plus 2,121 generated declarations in the audit scope; focused consumer lint had 2,116 generated declarations. Source/inventory and tooling fixtures passed: 652 retained files, 622 local links, 4,320 unchanged existing Lean files.
+
+Ten modules construct the actual entire pole numerator using reciprocal Gamma, identify its true positive residue by analytic uniqueness, and derive the full-level reflected original-series Riesz factor with the exact conductor powers. Actual Gamma-ratio comparison, original coefficient summability, compact boundary control and genuine exponential growth discharge every Phragmen–Lindelof hypothesis. The exact seven-halves numerator bound holds throughout the closed contour strip. The literal continued Perron function has inverse-square-root height decay, and both horizontal edges vanish. Four exact consumers expose these genuine upstream objects. The residue contour identity and justified dual-series interchange still remain; consequently the original Rankin summatory x^(3/5) remainder is open. General-level dual coefficients, Deligne and unconditional Sato–Tate remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+The first foundation run at 10:18:38 passed, but paper log `dubon-build-20261007-102151-981.log` failed while elaborating the expanded audit registry at Lean's default recursion depth. A local 8192 retry was insufficient. The audit now uses `maxRecDepth 100000`, matching the canonical foundation audit; no audit declaration, axiom check, linter or diagnostic gate was removed. The focused expanded audit passed, and the required foundation/paper sequence was then repeated successfully. This setting only supplies elaboration resources and is not a proof shortcut.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. Research cutoff remains 6 October; this verification occurred on 7 October. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_103001.log](../../logs/foundation_freeze_20261007_103001.log), SHA-256 `3403f6518862acc043e3ef31b7416018f36f42919c02134ddcf27332bf487c3e`.
+- [foundation_freeze_20261007_103001.json](../../logs/foundation_freeze_20261007_103001.json), SHA-256 `fc3058b470afbe39abacbcd3c52843b62c3a73184c45c952893b075fa342b194`.
+- [dubon-build-20261007-103336-345.log](logs/dubon-build-20261007-103336-345.log), SHA-256 `c7f34eb7d20acd5159839827d663ce872fc049265a9f21b9d7d3941310c65a09`.
+- [dubon-build-20261007-102151-981.log](logs/dubon-build-20261007-102151-981.log), SHA-256 `c41701bf12b34ecac09b9ae07dcc31648a38c7ff12cd44f595925ccce524bad5`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `50e1658cc1ea77af3f62c03898db7b638d03e67c242614d1a9ceaddaa63500ad`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `c65d5f59af021d7ad6c30ee8024cfed49bfcaa9aa606495585ba175bd3107352`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RankinConvolutionGlobal.lean`: SHA-256 `d8cfa9d37230a370947a91ce15252be77b93e2ee9581e7a6532f2316bd8d68e8`.
+- `Extension/Dubon2026/RankinConvolutionGlobalResidue.lean`: SHA-256 `f93a7197403576a0215d1c95aaef396bc04aefcd91c495964cd7b8057781edad`.
+- `Extension/Dubon2026/RankinConvolutionReflection.lean`: SHA-256 `205b132310c5e9fada7374db9e8d1c3cf5348d84a426b667029f00049a0d6cff`.
+- `Extension/Dubon2026/GammaInverseStripGrowth.lean`: SHA-256 `4e08dcc7b9d0276de6a0a2766f5c018f0573221dec9d9a8be1130a50b72c8d70`.
+- `Extension/Dubon2026/RankinConvolutionExponential.lean`: SHA-256 `a50450fe3f894a4dcd4b49e4018b63ee6b5337db45a424bfa1912cab3a254e97`.
+- `Extension/Dubon2026/RankinConvolutionBoundary.lean`: SHA-256 `3112d7c7005daea285e066a318add7ae313637f0221250e771534b79db6b70cc`.
+- `Extension/Dubon2026/RankinStripNormalized.lean`: SHA-256 `19d51bae3998de1ae3139d8272badde25d39ed6adcf01f0c89a4938f7ee4dd57`.
+- `Extension/Dubon2026/RankinStripPhragmenLindelof.lean`: SHA-256 `8bcb50e5a2c41b326219a1bf410926ad7e4d89e3bdbab5ae89510ceba5077371`.
+- `Extension/Dubon2026/RankinPerronContinuation.lean`: SHA-256 `5336ae73039628dfa4d78250b2cf6d866c60a2be688286aeae505f7631e6da8c`.
+- `Extension/Dubon2026/RankinPerronHorizontal.lean`: SHA-256 `3cf61bfaf18a9e35b37705185ee336eaa4b625f6eab5842256160c66168a63eb`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Exact full-level Rankin–Selberg remainder — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 564 production modules, 219 exact consumers, 2,652 explicit registrations and 4,742 exhaustive theorem dependency checks. Sixteen linters passed across 3,152 declarations plus 2,171 generated declarations in the audit scope; focused consumer lint had 2,166 generated declarations. Source/inventory and tooling fixtures passed: 671 retained files, 709 local links, 4,320 unchanged existing Lean files.
+
+Nineteen modules close the actual full-level contour and quantitative-summation chain. Both residues, finite-contour coefficient interchange and a uniform all-cutoff majorant identify the original Riesz sum with the exact conductor-scaled dual Gamma series. The actual forward and backward differences give the precise x^(3/5) convolution error for every x>=1. The already proved Möbius inversion and its genuinely convergent inverse coefficient series transfer that error to the literal normalized cusp square sum, with the actual Petersson residue and strict positivity for nonzero forms. Four source consumers expose the contour identity, original Riesz sum, unsmoothed convolution bound and original square-sum asymptotic. The general-level x^(3/5) estimate still needs its actual dual coefficient construction; Deligne, unconditional Sato–Tate and unconditional modular concentration remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+The first foundation run at 10:59:30 passed. Paper log `dubon-build-20261007-110248-892.log` then rejected one generated audit entry because the declaration-name extraction stopped at the apostrophe in `rectangleIntegral'_symmetric_vertical_formula`. The exact fully qualified entry was corrected. No theorem, dependency check or linter was omitted. The focused expanded audit passed; the full required foundation/paper sequence was then repeated successfully. The failed elaboration's generated error term was not accepted or retained as proof evidence.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. Research cutoff remains 6 October; verification occurred on 7 October. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_110632.log](../../logs/foundation_freeze_20261007_110632.log), SHA-256 `6e88e7e6c9594a0d9af2bbe7b89c4b11e9510d821a943b9b8a01817c2df71c60`.
+- [foundation_freeze_20261007_110632.json](../../logs/foundation_freeze_20261007_110632.json), SHA-256 `3064ecb0b864705657eb76ab0fab8678b0f125d0a91de4fa87c5270983ee0c7a`.
+- [dubon-build-20261007-110917-345.log](logs/dubon-build-20261007-110917-345.log), SHA-256 `c1f32572fa3feca95882023446b88d03a963e8c63388001c0ae24ce44b4d3c8f`.
+- [dubon-build-20261007-110248-892.log](logs/dubon-build-20261007-110248-892.log), SHA-256 `8d2341a72fcb732d93d8b23218e018e5df72d826ed6f84220e40577d8e85661e`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `bbb3c7ae34103ae8e0fed127e3d99015f21de12b3b7aa602dadeaa1c56d2f938`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `0d70da336beb90e7e71e0172bca3f2f3d491b05300404b3ac7e82fceff443bfa`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/ConvolutionPowerRemainder.lean`: SHA-256 `eaa0a891376b6c45e198ef3461bb08455a503d0bc1bddbac9993c3a917cecb76`.
+- `Extension/Dubon2026/ConvolutionRealCutoff.lean`: SHA-256 `7bed334ea3566b971bf8f537e8ac7e56cc4f4fb559e7fdeb518616242a0c323d`.
+- `Extension/Dubon2026/GammaRieszAllCutoffs.lean`: SHA-256 `733a9cdc6ec649b7b72657b56dac6d805a3c4763d54b98d2e1b8802864256145`.
+- `Extension/Dubon2026/GammaRieszDualCutoff.lean`: SHA-256 `2f3d93c782f92ef3a771123f2b1f3bc7070effeeb89eb3967edd14f05a2aea29`.
+- `Extension/Dubon2026/GammaRieszPartialBounds.lean`: SHA-256 `63994d02a9110fdde354dadfb97e00b19c4a1026fe29ce6f202bf45752e3a662`.
+- `Extension/Dubon2026/LSeriesFiniteContourInterchange.lean`: SHA-256 `6d398342bc03a34491cb81b5687895792a78288ce872d5013585fd5f38154056`.
+- `Extension/Dubon2026/LevelOneRankinSelberg.lean`: SHA-256 `fee829ad8c206fad941d32f3c83ea83dfecba9c9ba134bdc7823c20f893549cb`.
+- `Extension/Dubon2026/RankinConductorMellin.lean`: SHA-256 `38c9c8938b788050befc9664459fde2c3bc013a936b3594bb3e96d2e84f2fa1c`.
+- `Extension/Dubon2026/RankinConvolutionThreeFifths.lean`: SHA-256 `11529432a0e7652db46a5cf06becfc375ad4a9c15cf65ceacbac0e2c1ded960d`.
+- `Extension/Dubon2026/RankinDeconvolutionRemainder.lean`: SHA-256 `eeac2996ceafb8ee3b5801a051c610663ccfdd04c42d8133e082f6fa965fce7e`.
+- `Extension/Dubon2026/RankinDualShiftedOptimization.lean`: SHA-256 `8852b82e4d1f94c496a7147b874ceee00b79ebde43b59c61fe9792d72449898f`.
+- `Extension/Dubon2026/RankinPerronContourShift.lean`: SHA-256 `07ef171d77d7101c7d807c1a3aec65c541b1433183ac94bf17ec06ef38ad4771`.
+- `Extension/Dubon2026/RankinPerronCutoffs.lean`: SHA-256 `b17e5abf2bfac2f9a3b846ff3ee8b3d0b80d60fefcec7be9289fb53e3ea014a0`.
+- `Extension/Dubon2026/RankinPerronDualInterchange.lean`: SHA-256 `0c5980318053a12e1ba2951d0a7076d08985406e3e40a49021f3e876f35093f3`.
+- `Extension/Dubon2026/RankinPerronPoles.lean`: SHA-256 `5f7fd661a3395aba33c6cd8c1fa868038109deb8f2ddc36bc31bb9614fe5bfa5`.
+- `Extension/Dubon2026/RankinPerronTermTransform.lean`: SHA-256 `75a1892de94fd469c13f8f0f10ec1d0278c629c187106c82d36f7c230ba454bf`.
+- `Extension/Dubon2026/RankinRectanglePoles.lean`: SHA-256 `0cece1e6a44332fd5d4ba99c7b6f52335486627dcbdcf98c07d5b531922f2821`.
+- `Extension/Dubon2026/RankinRieszDifferenceEstimate.lean`: SHA-256 `4413f9dcb99e7b1e8c38ea2f91b62f744c881590da6488b51d454e3e2cf0a183`.
+- `Extension/Dubon2026/RankinRieszDualIdentity.lean`: SHA-256 `0a85d22d2aafadb7dd88eb6a48ede71766cdbed263f3a38ce4192d155492fdd8`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual rescaled cusp traces and common-period Mellin identity — 7 October 2026
+
+The original product-level cusp form is translated by the actual inverse diagonal matrix. The mixed subgroup has exactly the upper-right divisibility by a and lower-left divisibility by b; its real image is proved equal to the diagonal conjugate of Gamma0(ab), and it contains Gamma(ab). Restricting each genuine integral coset translate to the normal principal subgroup therefore supplies one common period ab. The finite sum retains every actual coset once. Its Petersson density is full-level invariant, so its horizontal square energy is one-periodic. Exact averaging over ab periods and actual Parseval identify that unit-interval integral with the complete finite family of q-expansion squares.
+
+Every actual normalized period coefficient family has a proved linear mean. Summing the genuine finite family and convolving with the full-level principal square sequence preserves nonnegativity and the linear mean, giving absolute convergence for Re(s)>1. The exact Mellin transform has factor (4 pi / ab)^(-(s+k-1)) Gamma(s+k-1). Absolute Bochner integrability is proved by summable integral norms; no formal exchange of a divergent integral and series is used. The integer and projective coset domains have equal multiplicities because the mixed group absorbs the center, and diagonal transport of the original Gamma0 domain gives a second genuine domain for the same real projective group.
+
+This is the actual coefficient and domain construction. The reflected lattice-cusp integral has not yet been identified with this coefficient series. That identification still needs the invariant completed-Eisenstein trace unfolding and the exact determinant/conductor factors. The general-level contour estimates and x^(3/5) conclusion remain OPEN. The already verified full-level Rankin–Selberg theorem and all weighted energy regimes remain intact. Deligne and unconditional Sato–Tate remain OPEN. No gate changes: 15/20 accepted.
+
+Production files: [CongruenceTraceDomain](Extension/Dubon2026/CongruenceTraceDomain.lean), [CuspCommonPeriodIntegral](Extension/Dubon2026/CuspCommonPeriodIntegral.lean), [CuspCosetTrace](Extension/Dubon2026/CuspCosetTrace.lean), [CuspPeriodEnergyBound](Extension/Dubon2026/CuspPeriodEnergyBound.lean), [CuspPeriodFourierEnergy](Extension/Dubon2026/CuspPeriodFourierEnergy.lean), [CuspPeriodMellin](Extension/Dubon2026/CuspPeriodMellin.lean), [CuspPeriodNormalizedEnergy](Extension/Dubon2026/CuspPeriodNormalizedEnergy.lean), [CuspPeriodRankinSeries](Extension/Dubon2026/CuspPeriodRankinSeries.lean), [CuspTraceCoefficients](Extension/Dubon2026/CuspTraceCoefficients.lean), [CuspTraceMellin](Extension/Dubon2026/CuspTraceMellin.lean), [CuspTraceRankinConvolution](Extension/Dubon2026/CuspTraceRankinConvolution.lean), [ExponentialMellinSeries](Extension/Dubon2026/ExponentialMellinSeries.lean), [FiniteCosetTrace](Extension/Dubon2026/FiniteCosetTrace.lean), [RectangularCongruence](Extension/Dubon2026/RectangularCongruence.lean), [RectangularConjugation](Extension/Dubon2026/RectangularConjugation.lean), [RectangularDualCoefficients](Extension/Dubon2026/RectangularDualCoefficients.lean), [RectangularProjectiveDomain](Extension/Dubon2026/RectangularProjectiveDomain.lean).
+
+
+### Actual common-period cusp trace and Mellin transform — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 581 production modules, 224 exact consumers, 2,737 explicit registrations and 4,884 exhaustive theorem dependency checks. Sixteen linters passed across 3,259 declarations plus 2,225 generated declarations in the audit scope. Source/inventory and tooling fixtures passed: 688 retained files, 839 local links, 4,320 unchanged existing Lean files.
+
+Seventeen modules construct the genuine arbitrary-period Fourier energy and normalized linear coefficient mean, the exact mixed congruence conjugation and both actual fundamental domains, the finite principal-period cusp family and its one-periodic Petersson trace, and the real nonnegative rescaled Rankin coefficients. The actual trace Mellin transform is absolutely convergent with the exact (4 pi/N) power and weight shift. Five exact source consumers expose these actual identities and objects. Identifying the reflected lattice integral with these coefficients remains open, along with the general-level x^(3/5) estimate, Deligne, unconditional Sato–Tate and the unconditional modular application. The full-level Rankin–Selberg result remains proved. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+The first focused expanded audit passed all 4,884 dependency checks but the `docBlame` linter rejected a missing documentation string on `rectangularDualCosetsFintype`. The documentation was added. No declaration or linter was excluded. The subsequent full sequential foundation/paper verification passed.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. Research cutoff remains 6 October; verification occurred on 7 October. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_121059.log](../../logs/foundation_freeze_20261007_121059.log), SHA-256 `07e1d2e1e0edb3d7027a364cbd9df5c303f44b7ac6a27e924ef5eee7bf9df83f`.
+- [foundation_freeze_20261007_121059.json](../../logs/foundation_freeze_20261007_121059.json), SHA-256 `58ac6edb094c2b6476d8dd854c0da7ed8b681425d977b8d8b554e02f82eb093e`.
+- [dubon-build-20261007-121405-221.log](logs/dubon-build-20261007-121405-221.log), SHA-256 `11b2f49b1cc1bfafc60e1d8f26d205ce37c5d2a82a41f536f5c9d29a2df6a8d1`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `1faf796e4ca1b747021892a21c4a62616f7a19327b980acfe01b76f2404ca689`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `283fc4ec09fd4ee8bee95cd043bfdcf2667c69f24e314dc39bb7a3477842b85c`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/CongruenceTraceDomain.lean`: SHA-256 `761c7c0466139786b86480e53d1c170e3973fcb435fd9b8feff6c6305582eff8`.
+- `Extension/Dubon2026/CuspCommonPeriodIntegral.lean`: SHA-256 `2bb5e15d15571cd553915193162398f454fcd55f9079bf17ccf275fd64835f23`.
+- `Extension/Dubon2026/CuspCosetTrace.lean`: SHA-256 `5879eb4e4b2a1e965e0fa0950d86d5ada8b52199ad3d95ccc1ce5a0d8338b59c`.
+- `Extension/Dubon2026/CuspPeriodEnergyBound.lean`: SHA-256 `21b9126b884758f9a8838eb0440dc16195f559b3a853940e668739e3cd613d8a`.
+- `Extension/Dubon2026/CuspPeriodFourierEnergy.lean`: SHA-256 `826427be1c7e423191f32d53aeed0bca1204d9a15194d613e2f4b6e643fe5330`.
+- `Extension/Dubon2026/CuspPeriodMellin.lean`: SHA-256 `0e0695305112e196012767924c29426efc2c425a413b0197f69dadc9bea3d899`.
+- `Extension/Dubon2026/CuspPeriodNormalizedEnergy.lean`: SHA-256 `b1b4a4a9884a17d7d6357ee5d28147cf21456f6efe976b6dbeaaa03f080c4545`.
+- `Extension/Dubon2026/CuspPeriodRankinSeries.lean`: SHA-256 `c70f7a3e1e2e4904a62abf4d4af8eba30e6e7b3ba30d961c5d18ec7a8fe32536`.
+- `Extension/Dubon2026/CuspTraceCoefficients.lean`: SHA-256 `59d7d339fefcf969573fc8feef9fa45e60b9af2133de848ab92741937ea48be2`.
+- `Extension/Dubon2026/CuspTraceMellin.lean`: SHA-256 `8bba7b2490f6c87f6c00bbc3db8850bdc8b8d75ad6b62353705baf39d07a7245`.
+- `Extension/Dubon2026/CuspTraceRankinConvolution.lean`: SHA-256 `5c071901648123c683b0137c4300d2a6a5d442e772df60e49e5aad21b28f3752`.
+- `Extension/Dubon2026/ExponentialMellinSeries.lean`: SHA-256 `512f300c40f8a5e6b93bb30fa18a599334d0fe5d79aea30eb00c9195cab62953`.
+- `Extension/Dubon2026/FiniteCosetTrace.lean`: SHA-256 `5042e58c0bfda8df0c3928f01d0799f2c8e0f49874ff3a0fd39b99f250fd9387`.
+- `Extension/Dubon2026/RectangularCongruence.lean`: SHA-256 `4b2bafc31c86dbc2040274ed7ce548c1d3f3e52c75480bf087cbc8abab26ce26`.
+- `Extension/Dubon2026/RectangularConjugation.lean`: SHA-256 `b65e7dea9738c294751373dbe1b540df209449119a91906565e354c5f9e5905d`.
+- `Extension/Dubon2026/RectangularDualCoefficients.lean`: SHA-256 `acc414ed42a59cea71cf16e040099c16668138cb6d70489e14dc298961da9417`.
+- `Extension/Dubon2026/RectangularProjectiveDomain.lean`: SHA-256 `588ea5300f0337597dc800916a386f6f1cb236696ac08182bf348002e10c5f1e`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual reflected general-level cusp Dirichlet series — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 590 production modules, 228 exact consumers, 2,784 explicit registrations and 4,944 exhaustive theorem dependency checks. Sixteen linters passed across 3,312 declarations plus 2,237 generated declarations in the audit scope. Source/inventory and tooling fixtures passed: 697 retained files, 903 local links, 4,320 unchanged existing Lean files.
+
+Nine modules prove actual finite-domain absolute integrability, completed-lattice finite-coset transport, genuine invariant-trace Eisenstein unfolding, and the exact real-axis common-period Mellin completion. Analytic continuation identifies the actual rectangular dual series throughout Re(s)>1; lattice reflection identifies it on Re(s)<0. The exact finite Mobius assembly now supplies genuine convergent dual coefficient series for every divisor of every positive level. The coefficients and their linear means arise from the actual rescaled cusp forms, with all determinant, period and Gamma factors retained. Four exact source consumers expose the literal integrals, coefficients and completion factors. The remaining general-level work is the quantitative conductor/contour/Riesz estimate and x^(3/5) conclusion. Deligne, unconditional Sato–Tate and the final modular application remain open. DUB-01–15 remain accepted; DUB-16–20 remain OPEN.
+
+Focused compilation initially reported two unused nonzero-level section instances in elementary real-integrand lemmas. The instance was moved to precisely the theorems that use it; no warning was suppressed. Subsequent source-consumer compilation and both full verifiers passed with zero diagnostics.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. Research cutoff remains 6 October; verification occurred on 7 October. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_123303.log](../../logs/foundation_freeze_20261007_123303.log), SHA-256 `8aa5a08a95e5c16b3924b8bcf65bf477ce4d67dcec9d22b565dde9743fe9312a`.
+- [foundation_freeze_20261007_123303.json](../../logs/foundation_freeze_20261007_123303.json), SHA-256 `9d245923be09ba3ed055d7a4be9064e37908aca733c05a94723faabf88a9b840`.
+- [dubon-build-20261007-123539-200.log](logs/dubon-build-20261007-123539-200.log), SHA-256 `f316458a40d7bbdd0ed6c26caac3b9256704630775c8c5b99262ac57f3bf3dfd`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `a5afd65a9666de000ac0ccd7e662b085ba15f67fc0d5bae44d5dded62fa0aba6`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `c1166195e3f969046301e9ea9f761f914a19bfa2a83b47bd59328db72d6c041b`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/CuspTraceCompletedSeries.lean`: SHA-256 `c146dd7fff64f86e734d6ab375621a10cb31dd1a4da5cacce3a2f30b9a7fc962`.
+- `Extension/Dubon2026/CuspTraceEisensteinMellin.lean`: SHA-256 `392f91da2cf5da49d88df78493b44189a35ea516e0e9e8a18be005dd16374840`.
+- `Extension/Dubon2026/CuspTraceLatticeIntegral.lean`: SHA-256 `6cc73105c8eeda40cc6372c46e08fa7631e3cda6224bfaae8586fbba209b6851`.
+- `Extension/Dubon2026/CuspTraceStripMellin.lean`: SHA-256 `cf1d7a071501088f9b4b7acb114d58dbdd8caaa273563e83d6a1853241834759`.
+- `Extension/Dubon2026/DivisorRectangularDual.lean`: SHA-256 `4655115c25bb5c98f6598b3aea43b63600821f5968647f6fa39caa34310e54b3`.
+- `Extension/Dubon2026/FullLevelTraceUnfolding.lean`: SHA-256 `c7ec6b10cdbb262c20d4e993a9fb9c6725103149c0072cf4deabc16a451abfd4`.
+- `Extension/Dubon2026/RectangularDualSeries.lean`: SHA-256 `11a3bd6a4c91925ff302e879b11b0e77fe641c6b3ec727f3b70eb0c3b7c0650f`.
+- `Extension/Dubon2026/RectangularDualSeriesReal.lean`: SHA-256 `0106f6f1bacfd1d1dcc3e694eddc3e76427288eb2dcdb78a529461e3d4c69151`.
+- `Extension/Dubon2026/RectangularLatticeTransport.lean`: SHA-256 `d01f0b23c4417d01e9af7ca19aea42a73cddeb6c0cefb5452adae38b699a605d`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### General-level Rankin–Selberg and DUB-16 acceptance — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 604 production modules, 233 exact source consumers, 2,838 explicit registrations and 5,046 exhaustive theorem dependency checks. All sixteen linters passed across 3,371 declarations plus 2,285 generated declarations in both audit executions. The initial inventory passed with 711 retained files, 997 local links and 4,320 unchanged existing Lean files; source pins and all tooling fixtures passed.
+
+The exact general-level Rankin–Selberg theorem has the actual positive Petersson residue and uniform three-fifths error for the original normalized cusp coefficients. Five exact consumers expose the signed finite reflected series, the two-pole Riesz identity, the literal original square sum and all weighted energy regimes and transition cases. DUB-16 was accepted after checking these source conclusions against frozen TeX lines 1534–1605, without altering any acceptance clause or source byte. No Lean source, import, dependency, audit or runner changed during this acceptance step. Thus the pre-acceptance log correctly records 15/20 gates at execution; acceptance metadata now records 16/20 and is checked separately by the inventory verifier. DUB-17–20 remain OPEN.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. Research cutoff remains 6 October; implementation and verification occurred on 7 October. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_125753.log](../../logs/foundation_freeze_20261007_125753.log), SHA-256 `aef446c6ba0b178cee9bb7784fb3c5b139034b18d4e66737fb8977788b3861e9`.
+- [foundation_freeze_20261007_125753.json](../../logs/foundation_freeze_20261007_125753.json), SHA-256 `50d20adff520e511c72d9423cb62686c978535aaec83267ba1bd75e64bbd2aff`.
+- [dubon-build-20261007-130116-232.log](logs/dubon-build-20261007-130116-232.log), SHA-256 `85f7e852ef71cb5e792fb10b56df0c65ad6681902aa2bd9e9f97fd8b08a938e0`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `03d065742b2c5e4cb6f1f203c6e95049674d2ddf9ee8f41cfe7bb5f1cf8d105c`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `0ab6ca239d7242f7c15ed73f27f3ed6d40dc643664e16599398b9c5e489c9c4f`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `5da9f24f8708a38feaaf18b5c2dfe206681c301fcaa5c985e4b42712a20356e4`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- [lean-toolchain](Extension/lean-toolchain), SHA-256 `54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325`.
+- `Extension/Dubon2026/DivisorGammaDualSeries.lean`: SHA-256 `8d11b4b28bf81103c3c8314ef7932a44238c0a65c629f73b1ab4f341198556c8`.
+- `Extension/Dubon2026/GammaDualFiniteTransform.lean`: SHA-256 `fb739538f194176338dcdebda0a5995fd4810d40e6194f26924bda0bd333ce3d`.
+- `Extension/Dubon2026/GammaDualMellinTerm.lean`: SHA-256 `c0eccaf1cb7a41e7874e19d9bba714e90e9f57931f4f989fe5a63e89b72cff32`.
+- `Extension/Dubon2026/GammaDualSharpOptimization.lean`: SHA-256 `f3947d525f8aa11710cf6c0060d0f20a1a0b98fc5c5e8a0f3d74b5943ce757b5`.
+- `Extension/Dubon2026/GeneralRankinBoundary.lean`: SHA-256 `49e7192d5c0cd987b5eb150d0fb36e36e2784fb1862875353a5081d61e6a6aef`.
+- `Extension/Dubon2026/GeneralRankinDualCutoffs.lean`: SHA-256 `1b498e984fa4ec5d06faa2717a07bced0a3893f93dfad5147576ce0e92014468`.
+- `Extension/Dubon2026/GeneralRankinDualDifference.lean`: SHA-256 `fbff6ff5de66b017c7c6267acc4cf821283692f59f023183d2c60b2e557f2cc1`.
+- `Extension/Dubon2026/GeneralRankinReflection.lean`: SHA-256 `f8accbe58fa8c094f5c96940f112f68cc4048c60d73d9df9d041c101c46b3a04`.
+- `Extension/Dubon2026/GeneralRankinRieszDifference.lean`: SHA-256 `f6db31fad0302a6a5ed1533f0fb2fd1ee129d0192013ef99604705edc3dd174a`.
+- `Extension/Dubon2026/GeneralRankinRieszIdentity.lean`: SHA-256 `08b5b0e40386ed9f95a3b11eebf166b6088269079f595c978d8b0f65648e5b4f`.
+- `Extension/Dubon2026/GeneralRankinSelberg.lean`: SHA-256 `3ab99b65e32884f90675707b1ce3c6c6dcae0878800caac901fbad8facc65ce4`.
+- `Extension/Dubon2026/GeneralRankinThreeFifths.lean`: SHA-256 `abcbfc18cef965236887c30455f4828bc349a5c4686e227aed4525173fc11fed`.
+- `Extension/Dubon2026/ModularEnergy.lean`: SHA-256 `6253116c90c2b3e65eef903049d350ba0cd7d68ee2d5276832367168ae9eb6f1`.
+- `Extension/Dubon2026/RectangularConductorPower.lean`: SHA-256 `668a768997201ee679c1993af70c146821cfcb446a68a107024a936f8407b656`.
+- `Extension/Dubon2026/RankinStripNormalized.lean`: SHA-256 `d294beecef61fcc7d773afd16665b6b6c6d2e8f4d0f1e64017de7194d1a18e18`.
+- `Extension/Dubon2026/RankinStripPhragmenLindelof.lean`: SHA-256 `eca26e1e1d87dc44c3c454db0d902cfec0341f38d5dd508889ec8656cd1f2774`.
+- `Extension/Dubon2026/RankinPerronContinuation.lean`: SHA-256 `44be33822baa003124a93a6edee037d2142bbf54c263081f8c8f982a40607b17`.
+- `Extension/Dubon2026/RankinPerronHorizontal.lean`: SHA-256 `f79b99b553a6050320e4c010c645ac6e4357c9185ee62c01ddf37234e7f887ea`.
+- `Extension/Dubon2026/RankinPerronContourShift.lean`: SHA-256 `ce8eb75558f6bf9444381ae8a56203888661bc99877951c3a9851563bd521092`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual Sato–Tate character and prime-average bridge — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 611 production modules, 236 exact consumers, 2,867 explicit registrations and 5,078 exhaustive theorem dependency checks. All sixteen linters passed across 3,400 declarations plus 2,288 generated declarations in both audit executions. Initial inventory passed with 718 retained files, 1,051 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Seven modules establish exact character orthogonality for the genuine Sato–Tate coefficient law, polynomial density and actual weak probability convergence, the normalized primitive prime-power Hecke recurrence, the precise finite empirical integral, and vanishing errors from the actual finite ramified prime set. The final primitive-form consumer takes only two explicitly displayed arithmetic inputs: the good-prime norm bound and vanishing positive-order prime-power averages. It discharges real normalization, all finite ramified terms, weak convergence, positive-density selection and compact-uniform isolated-prime H2. Neither arithmetic premise has yet been proved. This is a verified conditional analytic/normalization bridge; DUB-17–20 remain OPEN. DUB-01–16 remain accepted.
+
+A focused build initially reported a deprecated probability-mass lemma. It was replaced with `probReal_univ`; subsequent focused compilation and both complete verifiers passed with zero diagnostics. Three existing module headers now accurately distinguish the separately proved general-level Rankin–Selberg input from the still-unproved Sato–Tate input. No theorem or source hypothesis was weakened.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen TeX SHA-256 `605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b`; PDF `a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2`. The 7 October bounded arithmetic-resource review is recorded separately from the frozen 6 October source inventory. No external code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_132054.log](../../logs/foundation_freeze_20261007_132054.log), SHA-256 `6f3599bdb6a1eb74a4cdb0e2d3bb5e0dab5aa9b46512b07aa5e1191e9d149cd5`.
+- [foundation_freeze_20261007_132054.json](../../logs/foundation_freeze_20261007_132054.json), SHA-256 `be3c6003b3d2289479dc310aa01e6e6338a2d6c4b1d053ec9458cfa030f44cd3`.
+- [dubon-build-20261007-132403-467.log](logs/dubon-build-20261007-132403-467.log), SHA-256 `6e6cd7a91bf5ca3659530afd0e899f72cf08a5339de6e16d9cfb7cd35c63c9cb`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `eab0af7525f09e75a0ba2f103cfc0654a7946cc1bd9b6860ed9de4ccf560014c`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `9d83a0ef6efa37d6fd3255d6d8fc393aad31e32219558ebf1e7a4974c50a620c`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `5bcd3783410dfd4a6f003c2a75346cc9353f905d603157ccb482a8eb91034ee1`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SatoTateCharacters.lean`: SHA-256 `37d9bba8679473286bc34f755af4d6c562b040b2196951611120922cfff7d9bb`.
+- `Extension/Dubon2026/PrimitiveNormalizedRecurrence.lean`: SHA-256 `02756350b579b0b7998d07a15ec676b1d68a38b49614d0e9e5bc3d9de0b87bbf`.
+- `Extension/Dubon2026/CompactPolynomialConvergence.lean`: SHA-256 `3b188816a8abe4db0bec4f68e622f9024058ce8193ccd6c49b04323ad2fb3b86`.
+- `Extension/Dubon2026/SatoTateCharacterCriterion.lean`: SHA-256 `69debfc79b0513a9b559085e846631eab118b3da5e2acd66f64f1c435964b12c`.
+- `Extension/Dubon2026/PrimeEmpiricalIntegral.lean`: SHA-256 `e7d7f25503a871d43dd3e47b3a76aeab3425c92efe8b3cff0f7c2e3ec23cfc19`.
+- `Extension/Dubon2026/FiniteBadPrimeAverages.lean`: SHA-256 `770c23fae7ae330595c55db0508497975e7e4de83c3133c854008534f2a37441`.
+- `Extension/Dubon2026/PrimeCharacterConvergence.lean`: SHA-256 `05f75aa1f9d6b77d1b7d423d0760358e68cd92c935bcdd7b64729c8712f0e4c5`.
+- `Extension/Dubon2026/CuspArithmeticConcentration.lean`: SHA-256 `46a9cd391b103ce73c12183e83f4327b17e1f2ed997ddf4ca08041bf17098716`.
+- `Extension/Dubon2026/PrimitiveArithmeticConcentration.lean`: SHA-256 `2721416b1459ea468d8b5ac4ecbdfcb7c086d43353d5aba6db3b4c60f82e3140`.
+- `Extension/Dubon2026/CuspSatoTateConcentration.lean`: SHA-256 `109f71c543ed36b32b1d4152f0e3ad176f3fbca4f976673dbef0acb302302b52`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual local roots and Euler normalization verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 618 production modules, 240 exact consumers, 2,914 explicit registrations and 5,134 exhaustive theorem dependency checks. All sixteen linters passed across 3,456 declarations plus 2,297 generated declarations in both paper audit executions. Initial inventory passed with 725 retained files, 1,097 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Seven modules and four exact consumers prove actual normalized Hecke roots, trace/determinant and purity/bound normalization, absolute convergence of the original cusp L-series without Deligne, all good and ramified rational Euler factors and their nonzero denominators, the full actual Euler product, and exact symmetric-power local trace/Taylor-coefficient identities. The prime-power dimension bound remains explicitly conditional on the good-prime bound. Deligne, actual symmetric-power automorphy/continuation/nonvanishing and non-CM Sato–Tate remain unproved; DUB-17–20 remain OPEN. DUB-01–16 remain accepted.
+
+An initial focused polynomial build reported a deprecated evaluation lemma. It was replaced with `Polynomial.eval_finsetSum`; subsequent focused production/source builds and both complete verifiers passed with zero diagnostics. No target hypothesis was weakened and no additional mathematical premise was concealed.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_134015.log](../../logs/foundation_freeze_20261007_134015.log), SHA-256 `d14c51fb999c9671e3962dec10a46e853ae79d128e772eff1b9c9b9b1d9ae061`.
+- [foundation_freeze_20261007_134015.json](../../logs/foundation_freeze_20261007_134015.json), SHA-256 `9049404994ed86bd8847e06b932ba4f9ff9e2d61c87e7b6cd7a62669576d29e8`.
+- [dubon-build-20261007-134258-874.log](logs/dubon-build-20261007-134258-874.log), SHA-256 `d9ee83c151ab44f8417bf1da8e0fffe9994af4b5bfad1431c826743a34d6195e`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `24a054e526773680cf6670d1ca8802830dd1992ece7a00e31dbb8107e8614f22`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `c5befb3611b67f761738d63fb39d78de59589895ffaff7b4945dd6cbe6df88dd`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `e8d7fcfe1bb40540ea63010f8e3e3a58006daafdcc0e6436ca6e3b3fa8780625`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/PrimitiveSatakeParameters.lean`: SHA-256 `fd6d2e0b175bf090645aaece70ee51710d9d89e7778b6d925641cfde5f057cda`.
+- `Extension/Dubon2026/CuspCoefficientLSeries.lean`: SHA-256 `7dae18c414e9b227aa7151280b359633d87e9afc64bf6bcb1c44f2dfd9b014f3`.
+- `Extension/Dubon2026/LocalRecurrenceSeries.lean`: SHA-256 `8a0afb176c10702f1cfd0d71c95b63362c232b00442b6da751e82a8a674ed31d`.
+- `Extension/Dubon2026/SatakeSymmetricTrace.lean`: SHA-256 `bb8436c6cc4d9c44e24791d1ab67cdd060e593ce1a6f7c83712fc168ba95a01e`.
+- `Extension/Dubon2026/PrimitiveEulerFactors.lean`: SHA-256 `814e25e27aca5787296051e10b523aa8c720243bb1f06e85f7b689302608d3aa`.
+- `Extension/Dubon2026/PrimitiveFullEulerProduct.lean`: SHA-256 `23c5084fd7ba03361f523585b6e28f920e28a6f77360ca7357b4d115215ccbc5`.
+- `Extension/Dubon2026/SymmetricEulerPolynomial.lean`: SHA-256 `114971bed1e4991575826ea70d5d3dbe4cb32b5f546aeb4e68642fc65aafb986`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual signed Tauberian and prime-character boundary transfer verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 622 production modules, 243 exact consumers, 2,930 explicit registrations and 5,177 exhaustive theorem dependency checks. All sixteen linters passed across 3,474 declarations plus 2,324 generated declarations in both paper audit executions. Initial inventory passed with 729 retained files, 1,128 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Four modules and three exact consumers reuse the repository's audited node-63 Wiener--Ikehara theorem and actual von Mangoldt coefficients. They prove signed cancellation from a displayed continuous boundary extension, exact removal of logarithmic prime weights using the existing PNT, inclusive prime normalization, and actual primitive Sato--Tate/isolated-prime H2 from the explicit local bound and boundary continuation of the genuine prime-character L-series. Neither arithmetic input is proved. Deligne, symmetric-power automorphy/continuation/nonvanishing and unconditional non-CM Sato--Tate remain open; DUB-17--20 remain OPEN. DUB-01--16 remain accepted.
+
+Focused production and exact-consumer compilation passed with zero diagnostics; both full verifiers and all sixteen linters passed. No theorem was weakened and no arithmetic assumption was concealed. Reuse is through the existing local audited imports; no additional external source was ported.
+
+Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push occurred.
+
+- [foundation_freeze_20261007_135135.log](../../logs/foundation_freeze_20261007_135135.log), SHA-256 `c4d5c52a7c9d0cdff74e1dcfdadefb5b473ef5c2674326d1967dd0a7d51e8d69`.
+- [foundation_freeze_20261007_135135.json](../../logs/foundation_freeze_20261007_135135.json), SHA-256 `ede98b15d98e1f1dab252d088a56fff344a9dcfaff8d3ebfc4a2c5dd89eb37f4`.
+- [dubon-build-20261007-135420-899.log](logs/dubon-build-20261007-135420-899.log), SHA-256 `add1d930084bdbd3e54bdfc21dcd421da97652c2c1523fb220f19e604c1ddb63`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `01838ea7360d0fcd23ce4f22e1c9e18ab2ef124f7399a63facb75faf593e04c1`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `73d9fdf1b794d2133c349bed13fa30ddd8db5d0f9f374745563761fc3847b9ac`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `9e5b190a8fdfdda446ddae224dae0eb4d1791bb498ed07c3ede4214f6d25f996`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SignedWienerTransfer.lean`: SHA-256 `582a5c99e175dc81dd77ae1a3cbd55b7c87770f55ade0608d86ff7533a339ac1`.
+- `Extension/Dubon2026/WeightedPrimeAverages.lean`: SHA-256 `155be1b391a6648c965fa2aa18649c43c5d6e1f1efc6c70ce7bb75533aa93a5b`.
+- `Extension/Dubon2026/PrimeDirichletCancellation.lean`: SHA-256 `b50bc8f816c9871ee492d5f465554892c6c099c934c966666f541149f2fb1460`.
+- `Extension/Dubon2026/PrimitiveCharacterBoundary.lean`: SHA-256 `24adc10c4f1fc2be5d98816afb7d7aa1dbb446c0b52674a06181592966cdd08b`.
 
 Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).

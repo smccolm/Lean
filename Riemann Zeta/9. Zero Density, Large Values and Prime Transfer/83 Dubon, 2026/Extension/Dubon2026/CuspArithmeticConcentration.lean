@@ -5,7 +5,8 @@ import Dubon2026.SatoTatePrimeBlocks
 
 For general cusp forms, Rankin–Selberg, unramified coefficient reality and Sato–Tate
 are explicit inputs. PrimitiveArithmeticConcentration discharges reality for actual
-primitive forms; the two deep arithmetic inputs remain unproved.
+primitive forms. GeneralRankinSelberg separately proves the Rankin--Selberg input;
+the Sato--Tate input remains unproved.
 All density, H1/H2, support, potential, probability and multiplicity transfers are derived.
 -/
 

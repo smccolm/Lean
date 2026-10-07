@@ -1272,5 +1272,277 @@
     "mathematics": "Exact Abel prefix/tail formulas, real cumulative and power integral bounds, finite-subset proof of infinite-tail convergence, and actual cusp Rankin coefficient n^(-5/8) prefix / n^(-9/8) tail bounds.",
     "validation": "The 529-module scope passed focused production and actual Rankin coefficient-power consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,503 exhaustive theorem checks. Logs: foundation_freeze_20261007_075706.log and dubon-build-20261007-080053-993.log.",
     "remaining": "Actual Gamma-kernel dual series, Rankin series functional-equation contour transform and residues, polynomial strip bounds, justified interchange, exact x^(3/5), general-level dual coefficient/Fricke input, Deligne and unconditional Sato–Tate."
+  },
+  "rankinGammaDualImplementation20261007": {
+    "productionModules": [
+      "GammaRieszDualTerm",
+      "GammaRieszDualSeries",
+      "GammaRieszDualDifference",
+      "GammaRieszDualSplit",
+      "RankinGammaDualSeries",
+      "RankinDualOptimization"
+    ],
+    "mathematics": "Genuine Rankin Gamma dual series, absolute convergence, exact termwise second differences, low/high split, linked actual weight/coefficients, natural floor comparison and exact three-fifths optimized dual-series bound.",
+    "validation": "The 535-module scope passed focused production and actual Rankin dual-series and optimization consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,541 exhaustive theorem checks. Logs: foundation_freeze_20261007_094449.log and dubon-build-20261007-094801-500.log.",
+    "remaining": "Identification with the Rankin Riesz error via actual functional-equation contour transform, residues, polynomial strip bounds and justified interchange; exact Rankin summatory x^(3/5); general-level dual coefficient/Fricke input; Deligne and unconditional Sato–Tate."
+  },
+  "rankinGlobalStripImplementation20261007": {
+    "productionModules": [
+      "RankinConvolutionGlobal",
+      "RankinConvolutionGlobalResidue",
+      "RankinConvolutionReflection",
+      "GammaInverseStripGrowth",
+      "RankinConvolutionExponential",
+      "RankinConvolutionBoundary",
+      "RankinStripNormalized",
+      "RankinStripPhragmenLindelof",
+      "RankinPerronContinuation",
+      "RankinPerronHorizontal"
+    ],
+    "mathematics": "Actual global entire pole numerator and positive residue; full-level reflected original-series Riesz factor; reciprocal-Gamma exponential growth; discharged Phragmen–Lindelof hypotheses; exact seven-halves numerator strip bound and vanishing actual Perron horizontal edges.",
+    "validation": "The 545-module scope passed focused production and four exact source consumers, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,637 exhaustive theorem checks. Logs: foundation_freeze_20261007_103001.log and dubon-build-20261007-103336-345.log. The initial default-recursion-limit audit failure was repaired using the canonical foundation audit limit, with the complete required sequence repeated.",
+    "remaining": "Actual residue contour identity at zero and one, justified original/dual contour-series interchange, exact Rankin summatory x^(3/5), general-level dual coefficient input, Deligne and unconditional Sato–Tate."
+  },
+  "levelOneRankinSelbergImplementation20261007": {
+    "status": "Verified: focused production/source consumers, all sixteen linters, expanded audit and sequential foundation/paper verification passed with zero diagnostics.",
+    "productionModules": 564,
+    "sourceConsumers": 219,
+    "explicitAuditRegistrations": 2652,
+    "newModules": [
+      "ConvolutionPowerRemainder",
+      "ConvolutionRealCutoff",
+      "GammaRieszAllCutoffs",
+      "GammaRieszDualCutoff",
+      "GammaRieszPartialBounds",
+      "LSeriesFiniteContourInterchange",
+      "LevelOneRankinSelberg",
+      "RankinConductorMellin",
+      "RankinConvolutionThreeFifths",
+      "RankinDeconvolutionRemainder",
+      "RankinDualShiftedOptimization",
+      "RankinPerronContourShift",
+      "RankinPerronCutoffs",
+      "RankinPerronDualInterchange",
+      "RankinPerronPoles",
+      "RankinPerronTermTransform",
+      "RankinRectanglePoles",
+      "RankinRieszDifferenceEstimate",
+      "RankinRieszDualIdentity"
+    ],
+    "result": "Actual full-level normalized cusp square sum with exact O_f(x^(3/5)) error and positive genuine Petersson residue.",
+    "remaining": "General-level dual coefficient expansion and exact error; Deligne; unconditional Sato-Tate; unconditional modular concentration.",
+    "proofGatesComplete": 15,
+    "validation": "564 production modules; 219 exact source consumers; 2652 explicit audit registrations; 4742 exhaustive theorem checks. Logs: foundation_freeze_20261007_110632.log and dubon-build-20261007-110917-345.log. Initial misspelled audit entry corrected and the complete sequence repeated."
+  },
+  "commonPeriodTraceImplementation20261007": {
+    "status": "Verified: focused production/source consumers, all sixteen linters, expanded audit and sequential foundation/paper verification passed with zero diagnostics.",
+    "modules": [
+      "CongruenceTraceDomain",
+      "CuspCommonPeriodIntegral",
+      "CuspCosetTrace",
+      "CuspPeriodEnergyBound",
+      "CuspPeriodFourierEnergy",
+      "CuspPeriodMellin",
+      "CuspPeriodNormalizedEnergy",
+      "CuspPeriodRankinSeries",
+      "CuspTraceCoefficients",
+      "CuspTraceMellin",
+      "CuspTraceRankinConvolution",
+      "ExponentialMellinSeries",
+      "FiniteCosetTrace",
+      "RectangularCongruence",
+      "RectangularConjugation",
+      "RectangularDualCoefficients",
+      "RectangularProjectiveDomain"
+    ],
+    "sourceConsumers": [
+      "cusp_period_parseval_source",
+      "cusp_period_mellin_source",
+      "rectangular_domain_source",
+      "rectangular_dual_coefficients_source",
+      "cusp_trace_mellin_source"
+    ],
+    "proved": "Actual mixed subgroup conjugation and domain transport, common-period finite cusp family, one-period trace Parseval, genuine nonnegative Rankin coefficients and linear mean, exact absolutely convergent period and trace Mellin identities.",
+    "remaining": "Identify the reflected general-level lattice integral with the actual constructed coefficients; retain exact conductor factors and prove general-level contour growth and x^(3/5). Deligne, unconditional Sato–Tate and unconditional modular application remain open.",
+    "proofGatesComplete": 15,
+    "validation": "581 production modules; 224 exact source consumers; 2737 explicit audit registrations; 4884 exhaustive theorem checks. Logs: foundation_freeze_20261007_121059.log and dubon-build-20261007-121405-221.log. The missing instance documentation string found by the focused linter was corrected before the full sequence."
+  },
+  "reflectedCuspSeriesImplementation20261007": {
+    "status": "Verified: focused production/source consumers, all sixteen linters, expanded audit and sequential foundation/paper verification passed with zero diagnostics.",
+    "modules": [
+      "CuspTraceCompletedSeries",
+      "CuspTraceEisensteinMellin",
+      "CuspTraceLatticeIntegral",
+      "CuspTraceStripMellin",
+      "DivisorRectangularDual",
+      "FullLevelTraceUnfolding",
+      "RectangularDualSeries",
+      "RectangularDualSeriesReal",
+      "RectangularLatticeTransport"
+    ],
+    "mathematics": "Actual absolutely integrable finite-coset completed-lattice trace; invariant Eisenstein unfolding; exact common-period Gamma factor; complex identity and reflected actual rescaled cusp coefficients; finite Mobius divisor assembly for every positive level.",
+    "remaining": "General-level quantitative conductor/contour/Riesz and x^(3/5) estimate; Deligne; unconditional Sato–Tate and final modular concentration.",
+    "gates": "15/20 accepted; DUB-16–20 OPEN",
+    "validation": "590 production modules; 228 exact source consumers; 2784 explicit audit registrations; 4944 exhaustive theorem checks. Logs: foundation_freeze_20261007_123303.log and dubon-build-20261007-123539-200.log. All sixteen linters passed across 3312 declarations plus 2237 generated declarations in both audit executions."
+  },
+  "generalRankinSelbergImplementation20261007": {
+    "status": "Verified and source-accepted as DUB-16 on 7 October 2026; 16/20 gates accepted. Deligne, non-CM Sato–Tate and final unconditional modular concentration remain open.",
+    "modules": [
+      "DivisorGammaDualSeries",
+      "GammaDualFiniteTransform",
+      "GammaDualMellinTerm",
+      "GammaDualSharpOptimization",
+      "GeneralRankinBoundary",
+      "GeneralRankinDualCutoffs",
+      "GeneralRankinDualDifference",
+      "GeneralRankinReflection",
+      "GeneralRankinRieszDifference",
+      "GeneralRankinRieszIdentity",
+      "GeneralRankinSelberg",
+      "GeneralRankinThreeFifths",
+      "ModularEnergy",
+      "RectangularConductorPower"
+    ],
+    "generalizedModules": [
+      "RankinStripNormalized",
+      "RankinStripPhragmenLindelof",
+      "RankinPerronContinuation",
+      "RankinPerronHorizontal",
+      "RankinPerronContourShift"
+    ],
+    "mathematics": "Actual positive-level normalized cusp square sum has genuine positive residue and exact x^(3/5) error; weighted energy all sigma with explicit 0, 3/10 and 1/2 endpoints. No arithmetic result supplied as a premise.",
+    "remaining": "DUB-16 acceptance pending source review and full verification. Deligne, unconditional Sato–Tate and final modular concentration still OPEN.",
+    "gates": "15/20 accepted; DUB-16–20 OPEN pending acceptance.",
+    "validation": "604 production modules; 233 exact consumers; 2838 explicit registrations; 5046 exhaustive theorem checks; sixteen linters across 3371 declarations plus 2285 generated, in both audit executions. Foundation 125753 and paper 130116-232 logs passed sequentially with zero diagnostics."
+  },
+  "satoTateCharacterImplementation20261007": {
+    "status": "Verified conditional character bridge: focused production/source consumers, expanded audit, all sixteen linters and sequential foundation/paper verification passed with zero diagnostics. DUB-17 remains OPEN.",
+    "scope": "Actual Sato–Tate character bridge: seven further production modules prove orthonormality of the true symmetric-power character polynomials for the actual angle pushforward law, polynomial density and weak probability convergence from character integrals. Genuine primitive Hecke coefficients satisfy the exact normalized determinant-one recurrence and equal these polynomials at every good prime power. Actual empirical integrals are finite prime averages; finite ramified-prime discrepancies become fixed finite sums and vanish after division by pi(N). The primitive-form consumer derives the genuine Sato–Tate weak limit and all isolated-prime H2 requirements from two explicit arithmetic premises: the unramified norm bound and vanishing positive-order prime-power averages. These premises remain unproved. Three exact consumers expand registered scope to 611 production modules, 236 exact consumers and 2,867 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. This conditional analytic bridge does not prove Deligne, non-CM Sato–Tate, their automorphic inputs or the final unconditional modular application.",
+    "modules": [
+      "SatoTateCharacters",
+      "PrimitiveNormalizedRecurrence",
+      "CompactPolynomialConvergence",
+      "SatoTateCharacterCriterion",
+      "PrimeEmpiricalIntegral",
+      "FiniteBadPrimeAverages",
+      "PrimeCharacterConvergence"
+    ],
+    "arithmeticInputsStillRequired": [
+      "Actual Deligne bound for every unramified prime of the actual primitive non-CM form.",
+      "Vanishing prime averages of every positive-order actual normalized prime-power coefficient, via genuine symmetric-power L-functions or another complete arithmetic proof.",
+      "Classical/automorphic and non-CM normalization bridges used by that arithmetic proof."
+    ],
+    "researchUpdateDate": "2026-10-07; separate from the frozen 2026-10-06 source inventory",
+    "boundedSearchQueries": [
+      "site:github.com Lean Deligne Ramanujan Petersson theorem formalization",
+      "site:github.com Lean Sato Tate theorem",
+      "Lean formalization Deligne Ramanujan theorem modular forms",
+      "Lean Sato-Tate formalization equidistribution"
+    ],
+    "inspectedSources": [
+      {
+        "url": "https://github.com/lioristhmus/ramanujan-petersson",
+        "finding": "The repository README explicitly describes a rank-two witness reduction conditional on representation construction/Hecke compatibility and purity; it says those deep inputs are not reproved. It therefore supplies no identified unconditional proof for DUB-17. No code imported."
+      },
+      {
+        "url": "https://leanprover.github.io/lean-eval-leaderboard/problems/ramanujan_petersson/",
+        "finding": "The inspected problem-statement page exposes an admitted benchmark statement for the discriminant form, not a reusable proved theorem. The client-side solution inventory was not audited; no broader claim about all submissions is made."
+      },
+      {
+        "url": "https://github.com/teal-sea/zeta-lab/blob/main/docs/25-the-director-run.md",
+        "finding": "The inspected project account describes the first two vertical trace moments over all Weierstrass equations over a fixed finite field, including singular equations. That is a different statement from horizontal Sato–Tate for one fixed non-CM holomorphic eigenform. Its claimed proof was not imported or independently rebuilt."
+      },
+      {
+        "url": "https://arxiv.org/html/0912.1054v2",
+        "finding": "BLGG Theorem 7.1.6 and Corollary 7.1.7 require a genuine non-CM regular algebraic cuspidal automorphic representation. The proof passes through symmetric-power potential automorphy and analytic L-function input, then the compact-group character criterion. This implementation supplies only the analytic coefficient-character bridge, without claiming those arithmetic prerequisites."
+      }
+    ],
+    "negativeSearchScope": "No unconditional required Deligne/Sato–Tate Lean theorem was identified in these bounded searches and inspected pages. This is not a claim that no formalization exists anywhere.",
+    "validation": "611 production modules; 236 exact consumers; 2867 explicit registrations; 5078 exhaustive theorem checks; sixteen linters across 3400 declarations plus 2288 generated, in both executions. Logs: ../../logs/foundation_freeze_20261007_132054.log and logs/dubon-build-20261007-132403-467.log."
+  },
+  "localEulerNormalizationImplementation20261007": {
+    "date": "2026-10-07",
+    "status": "Verified actual local Hecke/Euler normalization: focused production/source consumers, expanded audit, all sixteen linters and sequential foundation/paper verification passed with zero diagnostics. DUB-17 remains OPEN.",
+    "modules": [
+      "PrimitiveSatakeParameters",
+      "CuspCoefficientLSeries",
+      "LocalRecurrenceSeries",
+      "SatakeSymmetricTrace",
+      "PrimitiveEulerFactors",
+      "PrimitiveFullEulerProduct",
+      "SymmetricEulerPolynomial"
+    ],
+    "proved": [
+      "Constructed actual normalized Hecke roots; trace, determinant, exact unit-root/coefficient-bound equivalence.",
+      "Actual normalized cusp L-series absolute convergence on Re(s)>1 without Deligne, from proved square-series convergence.",
+      "Good and ramified rational Euler factors with nonzero denominators; actual all-prime Euler product.",
+      "Exact finite symmetric-power traces and original prime-power coefficients; actual spectral Euler polynomials and first reciprocal Taylor coefficients."
+    ],
+    "conditional": [
+      "Unit local roots require the missing arithmetic bound; the dimension bound and unit-disc nonvanishing explicitly depend on this input."
+    ],
+    "remaining": [
+      "Genuine Deligne bound/purity for actual primitive forms.",
+      "Classical-to-automorphic and Galois representation bridges.",
+      "Actual global symmetric-power analytic continuation/nonvanishing or equivalent prime-average cancellation.",
+      "Unconditional non-CM Sato-Tate and final modular concentration."
+    ],
+    "sourcePolicy": "Frozen 6 October source/pins and owner BAT unchanged. No external Lean code imported.",
+    "validation": "618 production modules; 240 exact consumers; 2914 explicit registrations; 5134 exhaustive theorem checks; sixteen linters across 3456 declarations plus 2297 generated, in both executions. Logs: ../../logs/foundation_freeze_20261007_134015.log and logs/dubon-build-20261007-134258-874.log."
+  },
+  "primeBoundaryImplementation20261007": {
+    "date": "2026-10-07",
+    "status": "Verified conditional prime-character boundary transfer: focused production/source consumers, expanded audit, all sixteen linters and sequential foundation/paper verification passed with zero diagnostics. DUB-17 remains OPEN.",
+    "modules": [
+      "SignedWienerTransfer",
+      "WeightedPrimeAverages",
+      "PrimeDirichletCancellation",
+      "PrimitiveCharacterBoundary"
+    ],
+    "proved": [
+      "Signed Wiener-Ikehara deduction from actual von Mangoldt domination and displayed continuous boundary continuation.",
+      "Exact finite logarithmic-weight removal, using actual prime-counting and Chebyshev asymptotics.",
+      "Inclusive prime normalization and genuine prime-supported Dirichlet coefficients.",
+      "Actual primitive weak Sato-Tate and full H2 derived from explicit local bound and actual prime-character series boundary extension."
+    ],
+    "conditional": [
+      "The genuine good-prime norm bound is still unproved.",
+      "The boundary continuation of each positive-order actual prime-character series is still unproved."
+    ],
+    "remaining": [
+      "Genuine Deligne bound/purity.",
+      "Actual symmetric-power global analytic continuation/nonvanishing, automorphy and normalization bridges.",
+      "Unconditional non-CM Sato-Tate and final modular concentration."
+    ],
+    "reuse": "Existing audited node-63 GafniTao.WienerSource and Dubon prime-counting/Chebyshev PNT; no external Lean code imported.",
+    "validation": "622 production modules; 243 exact consumers; 2930 explicit registrations; 5177 exhaustive theorem checks; sixteen linters across 3474 declarations plus 2324 generated, in both executions. Logs: ../../logs/foundation_freeze_20261007_135135.log and logs/dubon-build-20261007-135420-899.log."
+  },
+  "spectralTailImplementation20261007": {
+    "date": "2026-10-07",
+    "status": "Focused production compilation passed; exact-consumer compilation and full sequential verification pending. DUB-17 remains OPEN.",
+    "modules": [
+      "SpectralEulerTail",
+      "PrimeSpectralTail",
+      "LocalSpectralLogDerivative",
+      "PrimitiveSymmetricSpectral",
+      "PrimitiveSpectralBoundary"
+    ],
+    "proved": [
+      "Exact local spectral Euler logarithmic derivative and its complete quadratic remainder.",
+      "Actual prime logarithmic majorant and uniform analytic summation of the remainder on Re(s)>1/2.",
+      "Genuine primitive roots, exact unramified Euler polynomials and original prime-power trace coefficients; finite ramified factors explicitly omitted.",
+      "Original prime-character L-series equals actual local logarithmic-derivative series minus the proved analytic remainder.",
+      "Actual weak Sato-Tate and full H2 from explicit local bound and continuous boundary extension of that specific derivative series."
+    ],
+    "conditional": [
+      "Good-prime coefficient bound remains unproved.",
+      "Boundary continuation of the genuine logarithmic-derivative series remains unproved."
+    ],
+    "remaining": [
+      "Genuine global incomplete symmetric-power Euler product and its logarithmic-derivative identity.",
+      "Automorphic/Galois representation construction, Deligne purity and symmetric-power continuation/nonvanishing.",
+      "Unconditional non-CM Sato-Tate and final modular concentration."
+    ],
+    "reuse": "Pinned complex power/derivative/uniform sum APIs, actual von Mangoldt convergence, already proved primitive Hecke roots and existing conditional boundary transfer; no external Lean code imported."
   }
 }

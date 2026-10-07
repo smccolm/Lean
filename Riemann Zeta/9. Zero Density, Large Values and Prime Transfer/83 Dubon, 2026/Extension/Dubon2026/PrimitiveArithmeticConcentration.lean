@@ -3,8 +3,9 @@ import Dubon2026.CuspArithmeticConcentration
 
 /-! # Actual primitive-form concentration with coefficient reality discharged
 
-The true Rankin–Selberg estimate and Sato–Tate equidistribution remain explicit,
-unproved arithmetic inputs. Reality is derived from actual Hecke adjointness.
+The Rankin–Selberg estimate and Sato–Tate equidistribution are explicit inputs to
+this generic consumer. GeneralRankinSelberg separately proves the former; the latter
+remains unproved. Reality is derived from actual Hecke adjointness.
 -/
 
 namespace Dubon2026

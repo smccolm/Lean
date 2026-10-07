@@ -2463,4 +2463,494 @@ theorem rankin_dual_power_sums_source {Q : ℕ} [NeZero Q] {k : ℤ}
         (n : ℝ) ^ (-(9 / 8 : ℝ)) else 0) ≤ C * (N : ℝ) ^ (-(1 / 8 : ℝ)) :=
   exists_rankinConvolution_power_bounds f hk
 
+
+/-- The literal Rankin Gamma dual series converges absolutely from the actual cusp coefficient mean. -/
+theorem rankin_gamma_dual_series_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hk : 2 ≤ k) {A x : ℝ} (hA : 0 < A) (hx : 0 < x) :
+    Summable (fun n : ℕ => ‖(rankinConvolutionCoefficients f n / (n : ℂ)) *
+      ((x : ℂ) ^ 2 * gammaRieszKernel (k : ℝ) 2 (A * n * x))‖) :=
+  summable_norm_rankinGammaDualTerm f hk hA hx
+
+/-- The literal actual Rankin Gamma series has the exact three-fifths optimized second-difference bound; identification with the Riesz error is a separate obligation. -/
+theorem rankin_gamma_dual_optimization_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 2 ≤ k) {A : ℝ} (hA : 0 < A) :
+    let F : ℝ → ℂ := fun y => ∑' n : ℕ, (rankinConvolutionCoefficients f n / (n : ℂ)) *
+      ((y : ℂ) ^ 2 * gammaRieszKernel (k : ℝ) 2 (A * n * y))
+    ∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, 1 ≤ x →
+      let h : ℝ := x ^ (3 / 5 : ℝ)
+      ‖F (x + 2 * h) - 2 * F (x + h) + F x‖ / h ^ 2 ≤ C * x ^ (3 / 5 : ℝ) := by
+  obtain ⟨C, hC, hb⟩ := exists_rankinGammaDualSeries_three_fifths_bound f hk hA
+  refine ⟨C, hC, fun x hx => ?_⟩
+  simpa only [rankinGammaDualSeries_eq] using hb x hx
+
+
+/-- The actual general-level Rankin series has a global meromorphic continuation with its genuine positive residue. -/
+theorem rankin_global_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) (hf : f ≠ 0) :
+    Differentiable ℂ (rankinConvolutionEntireNumerator f) ∧
+    (∀ s : ℂ, 1 < s.re → rankinConvolutionEntireNumerator f s / (s - 1) =
+      LSeries (rankinConvolutionCoefficients f) s) ∧
+    0 < rankinConvolutionResidue f ∧
+    Tendsto (fun s : ℂ => (s - 1) * (rankinConvolutionEntireNumerator f s / (s - 1)))
+      (𝓝[≠] 1) (𝓝 (rankinConvolutionResidue f : ℂ)) :=
+  ⟨differentiable_rankinConvolutionEntireNumerator f,
+    fun _ hs => rankinConvolutionGlobalContinuation_eq_series f hk.le hs,
+    rankinConvolutionResidue_pos f hk hf, rankinConvolutionGlobalContinuation_residue_one f hk⟩
+
+/-- The actual full-level reflected Perron factor is the literal two-Gamma symbol times the original convergent coefficient series. -/
+theorem level_one_rankin_riesz_reflection_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℂ} (hl : -1 < s.re) (hr : s.re < 0) :
+    (rankinConvolutionEntireNumerator f s / (s - 1)) / (s * (s + 1) * (s + 2)) =
+      (4 * Real.pi ^ 2 : ℂ) ^ (2 * s - 1) *
+        (Complex.Gamma (1 - s) * Complex.Gamma ((k : ℂ) - s) /
+          (Complex.Gamma (s + (2 + 1)) * Complex.Gamma (s + ((k : ℂ) - 1)))) *
+        LSeries (rankinConvolutionCoefficients f) (1 - s) := by
+  simpa only [gammaRieszSymbol, Complex.ofReal_add, Complex.ofReal_sub, Complex.ofReal_one,
+    Complex.ofReal_ofNat, Complex.ofReal_intCast] using rankinConvolution_riesz_reflection f hk hl hr
+
+/-- Phragmen-Lindelof consumes the actual cusp completion and reflected series, yielding the exact seven-halves numerator bound throughout the strip. -/
+theorem level_one_rankin_polynomial_strip_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hk : 2 ≤ k) :
+    ∃ C : ℝ, 0 < C ∧ ∀ s : ℂ, -1 / 8 ≤ s.re → s.re ≤ 9 / 8 →
+      ‖rankinConvolutionEntireNumerator f s‖ ≤ C * ‖s + 2‖ ^ (7 / 2 : ℝ) :=
+  exists_rankinConvolutionEntireNumerator_polynomial_strip_bound f hk
+
+/-- Both literal horizontal integrals of the actual continued Rankin Perron function vanish. -/
+theorem level_one_rankin_perron_horizontal_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 2 ≤ k) {x : ℝ} (hx : 0 < x) :
+    let F : ℂ → ℂ := fun s => (x : ℂ) ^ (s + 2) *
+      (rankinConvolutionEntireNumerator f s / (s - 1)) / (s * (s + 1) * (s + 2))
+    Tendsto (fun T : ℝ => HIntegral F (-1 / 8) (9 / 8) T) atTop (𝓝 0) ∧
+    Tendsto (fun T : ℝ => HIntegral F (-1 / 8) (9 / 8) (-T)) atTop (𝓝 0) :=
+  tendsto_rankinPerron_horizontal_zero f hk hx
+
+
+/-- The actual continued Perron rectangle at every positive level has both literal pole contributions. -/
+theorem rankin_two_pole_contour_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) {x T : ℝ} (hx : 0 < x) (hT : 0 < T) :
+    RectangleIntegral' (rankinPerronContinuation f x) ((-1 / 8 : ℂ) - T * Complex.I)
+      ((9 / 8 : ℂ) + T * Complex.I) =
+      (rankinConvolutionResidue f : ℂ) * (x : ℂ) ^ 3 / 6 -
+        rankinConvolutionEntireNumerator f 0 * (x : ℂ) ^ 2 / 2 :=
+  rankinPerron_rectangle_residues f hk hx hT
+
+/-- The original finite full-level Riesz sum equals the actual convergent coefficient-weighted Gamma series with its exact conductor and both residues. -/
+theorem level_one_rankin_riesz_dual_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 2 ≤ k) {x : ℝ} (hx : 0 < x) :
+    ((∑ n ∈ Finset.Icc 1 ⌊x⌋₊, (rankinConvolutionCoefficients f n).re * (x - n) ^ 2 / 2 : ℝ) : ℂ) =
+      (rankinConvolutionResidue f : ℂ) * (x : ℂ) ^ 3 / 6 -
+        rankinConvolutionEntireNumerator f 0 * (x : ℂ) ^ 2 / 2 +
+        ((4 * Real.pi ^ 2 : ℝ) : ℂ)⁻¹ * ∑' n : ℕ,
+          (rankinConvolutionCoefficients f n / (n : ℂ)) *
+            ((x : ℂ) ^ 2 * gammaRieszKernel (k : ℝ) 2 (((4 * Real.pi ^ 2) ^ 2) * n * x)) := by
+  rw [← rankinConvolutionRiesz_eq, ← rankinGammaDualSeries_eq]
+  exact rankinConvolutionRiesz_eq_dual f hk hx
+
+/-- The genuine full-level convolution sum has the precise x^(3/5) error for all real cutoffs above one. -/
+theorem level_one_rankin_summatory_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 2 ≤ k) :
+    ∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, 1 ≤ x →
+      |(∑ n ∈ Finset.Icc 1 ⌊x⌋₊, (rankinConvolutionCoefficients f n).re) - rankinConvolutionResidue f * x| ≤
+        C * x ^ (3 / 5 : ℝ) :=
+  exists_level_one_rankinConvolution_three_fifths f hk
+
+/-- The actual nonzero full-level cusp form satisfies the literal source Rankin--Selberg asymptotic, with its positive Petersson residue and exact uniform exponent. -/
+theorem level_one_rankin_selberg_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 2 ≤ k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+      (∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, 1 ≤ x →
+        |(∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x| ≤
+          C * x ^ (3 / 5 : ℝ)) ∧
+      (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x)
+        =O[Filter.atTop] (fun x : ℝ => x ^ (3 / 5 : ℝ)) :=
+  ⟨(level_one_rankin_selberg f hk hf).1, exists_level_one_cusp_square_three_fifths f hk,
+    level_one_cusp_square_three_fifths_remainder f hk⟩
+
+
+section
+open scoped MatrixGroups Pointwise
+
+/-- Actual arbitrary-period cusp Fourier energy is the literal horizontal integral and coefficient-square series. -/
+theorem cusp_period_parseval_source {Γ : Subgroup (GL (Fin 2) ℝ)} {k : ℤ}
+    (f : CuspForm Γ k) {h : ℝ} (hh : 0 < h) (hΓ : h ∈ Γ.strictPeriods) {y : ℝ} (hy : 0 < y) :
+    HasSum (fun n : ℕ => ‖(UpperHalfPlane.qExpansion h f).coeff n‖ ^ 2 *
+      Real.exp (-4 * Real.pi * n * y / h))
+      (∫ x in (0 : ℝ)..1, ‖f ⟨((h * x : ℝ) : ℂ) + y * Complex.I, by simpa using hy⟩‖ ^ 2) :=
+  hasSum_cusp_period_horizontal_energy f hh hΓ hy
+
+/-- Actual period-normalized coefficients have the exact absolutely convergent Mellin identity with the full width factor. -/
+theorem cusp_period_mellin_source {Γ : Subgroup (GL (Fin 2) ℝ)} [Γ.IsArithmetic] {k : ℤ}
+    (f : CuspForm Γ k) {h : ℝ} (hh : 0 < h) (hΓ : h ∈ Γ.strictPeriods) (hk : 0 < k)
+    {s : ℂ} (hs : 1 < s.re) :
+    let F := fun y : ℝ => (y : ℂ) ^ (s + (k : ℂ) - 2) *
+      ((∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex (((h * x : ℝ) : ℂ) + y * Complex.I))‖ ^ 2 : ℝ) : ℂ)
+    IntegrableOn F (Set.Ioi 0) ∧ (∫ y : ℝ in Set.Ioi 0, F y) =
+      (((4 * Real.pi / h : ℝ) : ℂ) ^ (-(s + (k : ℂ) - 1)) * Complex.Gamma (s + (k : ℂ) - 1)) *
+        LSeries (fun n => ((‖normalizedCuspPeriodCoefficients f h n‖ ^ 2 : ℝ) : ℂ)) s :=
+  ⟨integrableOn_cuspPeriodRankin_mellin f hh hΓ hk hs, cuspPeriodRankinSeries_mellin f hh hΓ hk hs⟩
+
+/-- The original Gamma0 domain transports to the actual mixed congruence group without a multiplicity change. -/
+theorem rectangular_domain_source (a b : ℕ) [NeZero a] [NeZero b] :
+    IsFundamentalDomain (realProjectiveIntegralSubgroup (rectangularCongruenceSubgroup a b))
+      (levelRaiseMatrix a • gamma0FundamentalDomain (a * b)) (volume : Measure UpperHalfPlane) ∧
+    IsFundamentalDomain (realProjectiveIntegralSubgroup (rectangularCongruenceSubgroup a b))
+      (⋃ q : SL(2, ℤ) ⧸ rectangularCongruenceSubgroup a b,
+        (q.out : SL(2, ℤ))⁻¹ • (ModularGroup.fdo : Set UpperHalfPlane)) (volume : Measure UpperHalfPlane) :=
+  ⟨isFundamentalDomain_rectangular_translate a b, isFundamentalDomain_rectangular_coset a b⟩
+
+/-- The original cusp form supplies actual nonnegative rescaled coefficients and their genuine linear mean and convergence. -/
+theorem rectangular_dual_coefficients_source {a b : ℕ} [NeZero a] [NeZero b] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 (a * b)).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    rectangularDualCoefficients f 0 = 0 ∧ (∀ n, 0 ≤ (rectangularDualCoefficients f n).re) ∧
+      (∀ n, (rectangularDualCoefficients f n).im = 0) ∧
+      (∃ C : ℝ, 0 < C ∧ ∀ X : ℕ,
+        (∑ n ∈ Finset.Icc 1 X, (rectangularDualCoefficients f n).re) ≤ C * X) ∧
+      (∀ s : ℂ, 1 < s.re → LSeriesSummable (rectangularDualCoefficients f) s) :=
+  ⟨(rectangularDualCoefficients_positive f).1, (rectangularDualCoefficients_positive f).2.1,
+    (rectangularDualCoefficients_positive f).2.2, exists_rectangularDual_sum_upper f hk,
+    fun _ hs => rectangularDual_lseriesSummable f hk hs⟩
+
+/-- The true one-period trace consumes all common-period cusp expansions and their exact Mellin transform. -/
+theorem cusp_trace_mellin_source {N : ℕ} [NeZero N] {H : Subgroup SL(2, ℤ)}
+    [Fintype (SL(2, ℤ) ⧸ H)] (hH : CongruenceSubgroup.Gamma N ≤ H) {k : ℤ}
+    (f : CuspForm (H.map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hk : 0 < k)
+    {s : ℂ} (hs : 1 < s.re) :
+    (∫ y : ℝ in Set.Ioi 0, (y : ℂ) ^ (s + (k : ℂ) - 2) *
+      ((∫ x in (0 : ℝ)..1, ∑ q : SL(2, ℤ) ⧸ H,
+        ‖cuspCosetFamily hH f q (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2 : ℝ) : ℂ)) =
+      (((4 * Real.pi / N : ℝ) : ℂ) ^ (-(s + (k : ℂ) - 1)) * Complex.Gamma (s + (k : ℂ) - 1)) *
+        LSeries (fun n => ((∑ q : SL(2, ℤ) ⧸ H,
+          ‖normalizedCuspPeriodCoefficients (cuspCosetFamily hH f q) N n‖ ^ 2 : ℝ) : ℂ)) s :=
+  cuspTrace_mellin_identity hH f hk hs
+
+end
+
+
+section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+
+/-- The genuine finite subgroup tiling transports the absolutely integrable completed lattice density into the literal finite cusp trace. -/
+theorem cusp_lattice_trace_integral_source {N : ℕ} [NeZero N] {H : Subgroup SL(2, ℤ)}
+    [Fintype (SL(2, ℤ) ⧸ H)] (hH : Gamma N ≤ H) (hCenter : Subgroup.center SL(2, ℤ) ≤ H)
+    {k : ℤ} (f : CuspForm (H.map (mapGL ℝ)) k) {s : ℂ} (hs : 1 < s.re) :
+    IntegrableOn (fun z : ℍ => latticeCompletedMellin z s * petersson k f f z) (integralSubgroupDomain H) ∧
+      (∫ z : ℍ in integralSubgroupDomain H, latticeCompletedMellin z s * petersson k f f z) =
+        ∫ z : ℍ in ModularGroup.fdo, latticeCompletedMellin z s *
+          ∑ q : SL(2, ℤ) ⧸ H, petersson k (cuspCosetFamily hH f q) (cuspCosetFamily hH f q) z := by
+  letI : H.FiniteIndex := Subgroup.finiteIndex_of_le hH
+  exact ⟨integrableOn_lattice_petersson_integralSubgroup hCenter f hs,
+    lattice_cusp_integral_eq_trace hH hCenter f hs⟩
+
+/-- The actual primitive Eisenstein trace unfolds with the precise common-period Mellin factor and literal cusp-square coefficients. -/
+theorem cusp_trace_eisenstein_series_source {N : ℕ} [NeZero N] {H : Subgroup SL(2, ℤ)}
+    [Fintype (SL(2, ℤ) ⧸ H)] (hH : Gamma N ≤ H) {k : ℤ}
+    (f : CuspForm (H.map (mapGL ℝ)) k) (hk : 0 < k) {σ : ℝ} (hσ : 1 < σ) :
+    (∫ z : ℍ in ModularGroup.fdo, gamma0Eisenstein 1 (σ : ℂ) z *
+      ∑ q : SL(2, ℤ) ⧸ H, petersson k (cuspCosetFamily hH f q) (cuspCosetFamily hH f q) z) =
+      (((4 * Real.pi / N : ℝ) : ℂ) ^ (-((σ : ℂ) + (k : ℂ) - 1)) *
+        Complex.Gamma ((σ : ℂ) + (k : ℂ) - 1)) *
+          LSeries (fun n => ((∑ q : SL(2, ℤ) ⧸ H,
+            ‖normalizedCuspPeriodCoefficients (cuspCosetFamily hH f q) N n‖ ^ 2 : ℝ) : ℂ)) (σ : ℂ) :=
+  cuspTrace_eisenstein_mellin hH f hk hσ
+
+/-- The literal reflected rectangular cusp integral is its actual convergent dual coefficient series with the exact determinant, width and two Gamma factors. -/
+theorem rectangular_reflected_dual_series_source {a b : ℕ} [NeZero a] [NeZero b] {k : ℤ}
+    (f : CuspForm ((Gamma0 (a * b)).map (mapGL ℝ)) k) (hk : 0 < k) {s : ℂ} (hs : s.re < 0) :
+    LSeriesSummable (rectangularDualCoefficients f) (1 - s) ∧
+      (∫ z : ℍ in gamma0FundamentalDomain (a * b),
+        latticeCompletedMellin (rectangularLatticePoint (a * b) b (Nat.pos_of_neZero _) (Nat.pos_of_neZero _) z) s *
+          petersson k f f z) =
+        ((a : ℂ) ^ (k - 2) * ((Real.pi : ℂ) ^ (-(1 - s)) * Complex.Gamma (1 - s) *
+          (((4 * Real.pi / (a * b) : ℝ) : ℂ) ^ (-((1 - s) + (k : ℂ) - 1)) *
+            Complex.Gamma ((1 - s) + (k : ℂ) - 1)))) *
+              LSeries (rectangularDualCoefficients f) (1 - s) := by
+  refine ⟨rectangularDual_lseriesSummable f hk (by simp only [Complex.sub_re, Complex.one_re]; linarith), ?_⟩
+  simpa only [rectangularLatticeCuspCompleted, rectangularDualFactor, cuspTraceRankinFactor, Nat.cast_mul] using
+    rectangularLatticeCuspCompleted_reflected_dual f hk hs
+
+/-- The actual general-level completion is a finite Möbius sum of genuine convergent reflected cusp series; no scalar full-level reflection is assumed. -/
+theorem general_level_reflected_dual_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 0 < k) {s : ℂ} (hs : s.re < 0) :
+    (∀ d : Q.divisors, LSeriesSummable (divisorRectangularDualCoefficients f d) (1 - s)) ∧
+      gamma0CompletedCusp f s = ∑ d : Q.divisors,
+        (ArithmeticFunction.moebius d.val : ℂ) * ((Q : ℂ) * d.val) ^ (-s) *
+          ((Q / d.val : ℕ) : ℂ) ^ (k - 2) *
+            ((Real.pi : ℂ) ^ (-(1 - s)) * Complex.Gamma (1 - s) *
+              (((4 * Real.pi / Q : ℝ) : ℂ) ^ (-((1 - s) + (k : ℂ) - 1)) *
+                Complex.Gamma ((1 - s) + (k : ℂ) - 1))) *
+                  LSeries (divisorRectangularDualCoefficients f d) (1 - s) := by
+  refine ⟨fun d => divisorRectangularDual_lseriesSummable f hk d
+    (by simp only [Complex.sub_re, Complex.one_re]; linarith), ?_⟩
+  rw [gamma0CompletedCusp_reflected_dual f hk hs]
+  apply Finset.sum_congr rfl
+  intro d _
+  simp only [rectangularDualFactor, cuspTraceRankinFactor,
+    Nat.div_mul_cancel (Nat.dvd_of_mem_divisors d.property)]
+  ring
+
+end
+
+
+section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+
+/-- The general-level reflection uses actual divisor coefficient series, with exact positive conductors and signed amplitudes. -/
+theorem general_rankin_riesz_reflection_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 0 < k) {s : ℂ}
+    (hl : -1 < s.re) (hr : s.re < 0) :
+    rankinConvolutionGlobalContinuation f s / (s * (s + 1) * (s + 2)) =
+      ∑ d : Q.divisors,
+        ((ArithmeticFunction.moebius d.val : ℂ) * ((Q / d.val : ℕ) : ℂ) ^ (k - 2) * (Q : ℂ) ^ k /
+          (4 * Real.pi ^ 2 : ℂ)) *
+        (((4 * Real.pi ^ 2) ^ 2 / ((Q : ℝ) ^ 2 * (d.val : ℝ)) : ℝ) : ℂ) ^ s *
+          gammaRieszSymbol (k : ℝ) 2 s * LSeries (divisorRectangularDualCoefficients f d) (1 - s) :=
+  general_rankinConvolution_riesz_reflection f hk hl hr
+
+/-- The literal original finite Riesz sum equals both genuine pole terms and the actual finite family of coefficient-weighted Gamma transforms. -/
+theorem general_rankin_riesz_dual_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) {x : ℝ} (hx : 0 < x) :
+    ((∑ n ∈ Finset.Icc 1 ⌊x⌋₊, (rankinConvolutionCoefficients f n).re * (x - n) ^ 2 / 2 : ℝ) : ℂ) =
+      (rankinConvolutionResidue f : ℂ) * (x : ℂ) ^ 3 / 6 -
+        rankinConvolutionEntireNumerator f 0 * (x : ℂ) ^ 2 / 2 +
+        ∑ d : Q.divisors, divisorRankinAmplitude Q d.val k * ∑' n : ℕ,
+          (divisorRectangularDualCoefficients f d n / (n : ℂ)) *
+            ((x : ℂ) ^ 2 * gammaRieszKernel (k : ℝ) 2 (divisorRankinConductor Q d.val * n * x)) := by
+  rw [← rankinConvolutionRiesz_eq]
+  simpa only [generalRankinGammaDualSeries, divisorGammaDualSeries_eq] using
+    general_rankinConvolutionRiesz_eq_dual f hk hx
+
+/-- Every genuine nonzero cusp form of weight at least two and positive level satisfies the exact source three-fifths square-sum asymptotic, with its actual positive Petersson residue. -/
+theorem general_rankin_selberg_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+      (∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, 1 ≤ x →
+        |(∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x| ≤
+          C * x ^ (3 / 5 : ℝ)) ∧
+      (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x)
+        =O[Filter.atTop] (fun x : ℝ => x ^ (3 / 5 : ℝ)) :=
+  ⟨(general_rankin_selberg f hk hf).1, exists_general_cusp_square_three_fifths f hk,
+    general_cusp_square_three_fifths_remainder f hk⟩
+
+/-- The actual positive-level normalized cusp squares satisfy all literal source weighted-energy regimes without an assumed Rankin--Selberg input. -/
+theorem general_cusp_weighted_energy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+      (∀ σ : ℝ, σ < 1 / 2 → Tendsto (fun N : ℕ =>
+        ((∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) -
+          cuspRankinResidue f * (N : ℝ) ^ (1 - 2 * σ) / (1 - 2 * σ)) /
+            (N : ℝ) ^ (1 - 2 * σ)) atTop (𝓝 0)) ∧
+      (∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ, 1 ≤ N →
+        |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * (1 / 2 : ℝ))) -
+          cuspRankinResidue f * Real.log N| ≤ B) ∧
+      (∀ σ : ℝ, 1 / 2 < σ → ∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+        0 ≤ (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ∧
+          (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ≤ B) :=
+  general_cusp_weighted_rankin_selberg f hk hf
+
+/-- The actual source energy error includes both the unweighted endpoint and the three-tenths logarithmic transition with genuine constants. -/
+theorem general_cusp_weighted_energy_endpoints_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) :
+    (∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, 1 ≤ N →
+      |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * (0 : ℝ))) -
+        cuspRankinResidue f * N| ≤ C * (N : ℝ) ^ (3 / 5 : ℝ)) ∧
+    (∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, 1 ≤ N →
+      |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * (3 / 10 : ℝ))) -
+        weightedEnergyMain (cuspRankinResidue f) N (3 / 10)| ≤ C * (1 + (3 / 5) * Real.log N)) :=
+  ⟨exists_general_cusp_weighted_energy_zero f hk, exists_general_cusp_weighted_energy_three_tenths f hk⟩
+
+
+/-- The genuine coefficient law has the exact orthonormal symmetric-power characters, with no arithmetic input. -/
+theorem sato_tate_character_orthogonality_source (m n : ℕ) :
+    (∫ x, (Polynomial.Chebyshev.S ℝ (m : ℤ)).eval x *
+      (Polynomial.Chebyshev.S ℝ (n : ℤ)).eval x ∂(satoTateProbability : Measure ℝ)) =
+        if m = n then 1 else 0 :=
+  integral_satoTate_character_pair m n
+
+/-- Genuine primitive coefficients, rather than a separately supplied recurrence sequence, realize every symmetric-power character. -/
+theorem primitive_normalized_prime_power_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) (r : ℕ) :
+    normalizedCuspCoefficients f.toCuspForm (p ^ r) =
+      (Polynomial.Chebyshev.S ℂ (r : ℤ)).eval (normalizedCuspCoefficients f.toCuspForm p) ∧
+    (normalizedCuspCoefficients f.toCuspForm (p ^ r)).re =
+      (Polynomial.Chebyshev.S ℝ (r : ℤ)).eval (normalizedCuspCoefficients f.toCuspForm p).re :=
+  ⟨primitiveCuspForm_normalized_primePower_chebyshev f hp hpQ r,
+    primitiveCuspForm_normalized_primePower_re f hp hpQ r⟩
+
+/-- The actual arithmetic-input reduction derives both the weak Sato--Tate law and all isolated-prime H2 requirements, with the two remaining arithmetic premises displayed. -/
+theorem primitive_prime_character_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hav : ∀ r : ℕ, 0 < r → Tendsto (fun N : ℕ =>
+      (∑ p ∈ Nat.primesLE N, (normalizedCuspCoefficients f.toCuspForm (p ^ r)).re) /
+        Nat.primeCounting N) atTop (𝓝 0)) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_primePower_averages f hbound hav
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+
+end
+
+
+section
+
+/-- The genuine primitive coefficient supplies the trace, determinant and exact purity/bound equivalence for its own constructed roots. -/
+theorem primitive_satake_normalization_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) :
+    primitiveSatakePlus f p + primitiveSatakeMinus f p = normalizedCuspCoefficients f.toCuspForm p ∧
+    primitiveSatakePlus f p * primitiveSatakeMinus f p = 1 ∧
+    ((‖primitiveSatakePlus f p‖ = 1 ∧ ‖primitiveSatakeMinus f p‖ = 1) ↔
+      ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2) :=
+  ⟨(primitiveSatake_trace_det f p).1, (primitiveSatake_trace_det f p).2,
+    primitiveSatake_unit_iff_bound f hp hpQ⟩
+
+/-- The actual normalized Fourier L-series has its absolutely convergent all-prime rational Euler product, without a Deligne premise. -/
+theorem primitive_cusp_euler_product_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    Summable (fun n : ℕ => ‖normalizedCuspCoefficients f.toCuspForm n * (n : ℂ) ^ (-s)‖) ∧
+    HasProd (fun p : Nat.Primes =>
+      (1 - normalizedCuspCoefficients f.toCuspForm p * ((p : ℕ) : ℂ) ^ (-s) +
+        if (p : ℕ) ∣ Q then 0 else (((p : ℕ) : ℂ) ^ (-s)) ^ 2)⁻¹)
+      (LSeries (normalizedCuspCoefficients f.toCuspForm) s) ∧
+    (∀ p : ℕ, Nat.Prime p →
+      1 - normalizedCuspCoefficients f.toCuspForm p * (p : ℂ) ^ (-s) +
+        (if p ∣ Q then 0 else ((p : ℂ) ^ (-s)) ^ 2) ≠ 0) :=
+  ⟨summable_norm_cusp_dirichlet f.toCuspForm hk hs,
+    primitive_cusp_lseries_rational_euler_hasProd f hk hs,
+    fun _ hp => primitiveEulerDenominator_ne_zero f hk hp hs⟩
+
+/-- The genuine local symmetric-power spectral product has precisely the original normalized prime-power coefficient as its first reciprocal Taylor coefficient. -/
+theorem primitive_symmetric_euler_coefficient_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) (r : ℕ) :
+    (primitiveSymmetricEulerPolynomial f p r).coeff 1 =
+      -normalizedCuspCoefficients f.toCuspForm (p ^ r) ∧
+    HasDerivAt (fun z : ℂ =>
+      (∏ i ∈ Finset.range (r + 1),
+        (1 - primitiveSatakePlus f p ^ i * primitiveSatakeMinus f p ^ (r - i) * z))⁻¹)
+      (normalizedCuspCoefficients f.toCuspForm (p ^ r)) 0 := by
+  refine ⟨primitiveSymmetricEulerPolynomial_coeff_one f hp hpQ r, ?_⟩
+  simpa only [primitiveSymmetricEulerPolynomial, symmetricEulerPolynomial_eval] using
+    primitiveSymmetricEulerPolynomial_inverse_hasDerivAt f hp hpQ r
+
+/-- The genuine prime bound, when supplied explicitly, controls every actual prime-power Fourier coefficient by its exact symmetric-power dimension. -/
+theorem primitive_prime_power_dimension_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q)
+    (hb : ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2) :
+    ∀ r : ℕ, ‖normalizedCuspCoefficients f.toCuspForm (p ^ r)‖ ≤ (r : ℝ) + 1 :=
+  primitive_primePower_norm_le_of_prime_bound f hp hpQ hb
+
+end
+
+
+section
+
+/-- The signed Tauberian deduction uses the actual von Mangoldt majorant and a displayed genuine L-series boundary extension. -/
+theorem signed_prime_tauberian_source {a : ℕ → ℝ} {C : ℝ} (hC : 0 ≤ C)
+    (ha : ∀ n, |a n| ≤ C * ArithmeticFunction.vonMangoldt n) (G : ℂ → ℂ)
+    (hG : ContinuousOn G {s | 1 ≤ s.re})
+    (hseries : Set.EqOn G (LSeries (fun n => (a n : ℂ))) {s | 1 < s.re}) :
+    Tendsto (fun N : ℕ => (∑ n ∈ Finset.range N, a n) / (N : ℝ)) atTop (𝓝 0) :=
+  signed_wiener_vonMangoldt_cancellation hC ha G hG hseries
+
+/-- The literal bounded prime-supported logarithmic Dirichlet series supplies ordinary prime cancellation after all Tauberian and PNT normalization steps. -/
+theorem prime_boundary_cancellation_source {u : ℕ → ℝ} {C : ℝ} (hC : 0 ≤ C)
+    (hu : ∀ p, Nat.Prime p → |u p| ≤ C) (G : ℂ → ℂ)
+    (hG : ContinuousOn G {s | 1 ≤ s.re})
+    (hseries : Set.EqOn G
+      (LSeries (fun n => ((if Nat.Prime n then u n * Real.log n else 0 : ℝ) : ℂ)))
+      {s | 1 < s.re}) :
+    Tendsto (fun N : ℕ => (∑ p ∈ Nat.primesLE N, u p) / Nat.primeCounting N) atTop (𝓝 0) :=
+  prime_average_zero_of_boundary_continuation hC hu G hG hseries
+
+/-- The actual primitive object consumes the two narrower arithmetic inputs, local boundedness and genuine prime-character boundary continuation, to derive both weak Sato--Tate and the full isolated-prime H2. -/
+theorem primitive_character_boundary_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hboundary : ∀ r : ℕ, 0 < r → ∃ G : ℂ → ℂ,
+      ContinuousOn G {s | 1 ≤ s.re} ∧
+      Set.EqOn G (LSeries (fun n =>
+        ((if Nat.Prime n then (if n ∣ Q then 0 else
+          (normalizedCuspCoefficients f.toCuspForm (n ^ r)).re) * Real.log n else 0 : ℝ) : ℂ)))
+        {s | 1 < s.re}) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_character_boundary f hbound hboundary
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+
+end
+
+
+section
+
+/-- The actual primitive roots supply the literal higher-prime-power remainder and its full holomorphy half-plane, conditional only on the displayed local bound. -/
+theorem primitive_spectral_tail_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (r : ℕ) :
+    AnalyticOnNhd ℂ (fun s : ℂ => ∑' p : Nat.Primes,
+      (Real.log (p : ℕ) : ℂ) * ∑ i : Fin (r + 1),
+        (primitiveSymmetricSpectralRoots f r p i * (((p : ℕ) : ℂ) ^ (-s))) ^ 2 /
+          (1 - primitiveSymmetricSpectralRoots f r p i * (((p : ℕ) : ℂ) ^ (-s))))
+      {s : ℂ | 1 / 2 < s.re} :=
+  primitiveSymmetricSpectralTail_analyticOnNhd f hbound r
+
+/-- The original prime-character L-series is identified with the actual sum of local Euler logarithmic derivatives, with the complete higher-power correction retained. -/
+theorem primitive_spectral_log_series_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (r : ℕ) {s : ℂ} (hs : 1 < s.re) :
+    (∑' p : Nat.Primes,
+      -logDeriv (fun t : ℂ => (∏ i : Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r p i * (((p : ℕ) : ℂ) ^ (-t))))⁻¹) s) =
+      LSeries (fun n => ((if Nat.Prime n then (if n ∣ Q then 0 else
+        (normalizedCuspCoefficients f.toCuspForm (n ^ r)).re) * Real.log n else 0 : ℝ) : ℂ)) s +
+        primeSpectralTail (primitiveSymmetricSpectralRoots f r) s :=
+  primitiveSymmetricLogSeries_eq f hbound r hs
+
+/-- Actual primitive local Euler continuation data supplies weak Sato--Tate and the full isolated-prime H2 after the proved holomorphic higher-power correction, Tauberian theorem and PNT. -/
+theorem primitive_symmetric_boundary_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hboundary : ∀ r : ℕ, 0 < r → ∃ G : ℂ → ℂ,
+      ContinuousOn G {s | 1 ≤ s.re} ∧ Set.EqOn G
+        (fun s : ℂ => ∑' p : Nat.Primes,
+          -logDeriv (primeSpectralEulerFactor (primitiveSymmetricSpectralRoots f r) p) s)
+        {s | 1 < s.re}) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_symmetric_log_boundary f hbound hboundary
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+
+end
+
 end Dubon2026.SemanticRegression

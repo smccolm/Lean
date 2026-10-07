@@ -3,9 +3,9 @@ import Dubon2026.PrimitiveArithmeticConcentration
 
 /-! # Genuine cusp concentration with the mean-square input discharged
 
-The actual Rankin mean is proved analytically. Sato–Tate remains an explicit unproved
-arithmetic input here; these deductions do not close the sharp Rankin remainder or
-unconditional modular application gates.
+The actual Rankin mean is proved analytically. GeneralRankinSelberg separately proves
+the sharp general-level remainder. Sato–Tate remains an explicit unproved arithmetic
+input here, so these deductions do not close the unconditional modular application.
 -/
 
 namespace Dubon2026
