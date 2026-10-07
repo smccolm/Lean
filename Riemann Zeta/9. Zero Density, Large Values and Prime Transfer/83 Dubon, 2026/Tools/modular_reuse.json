@@ -1,0 +1,96 @@
+{
+  "repository": "https://github.com/CBirkbeck/LeanModularForms",
+  "revision": "7c41b9b1747d47298f76bdb51f07031087702198",
+  "date": "2026-06-15",
+  "license": "Apache-2.0",
+  "originalLean": "4.31.0-rc2",
+  "targetLean": "4.30.0",
+  "status": "289-module sequential checkpoint verified; adjugate and finite Gamma0 coset extension in focused verification; no full upstream package imported",
+  "files": [
+    {
+      "path": "Dependencies/ModularFormsSource/LICENSE.txt",
+      "upstreamPath": "LICENSE",
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/lean-toolchain.txt",
+      "upstreamPath": "lean-toolchain",
+      "bytes": 29,
+      "sha256": "629a2dbacab5ca71be7895bfb056a043b7e9d9e38433a67ea6ca1a679425d48e"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/lake-manifest.json.txt",
+      "upstreamPath": "lake-manifest.json",
+      "bytes": 3163,
+      "sha256": "da13f21857f238e23d0f644d1f999b8a619202c29483ebd01b6538785f502e85"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/PeterssonInnerProduct.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/PeterssonInnerProduct.lean",
+      "bytes": 22163,
+      "sha256": "77946b0607d678ca4987a04e57615861b4da097ff76c1114ab5cd8d150f22518"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/PeterssonInner.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/PeterssonInner.lean",
+      "bytes": 3025,
+      "sha256": "38cdad045fffdb1da39f0406974576f7c7310c76a4544263df4b0903b6faf59a"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/PeterssonLevelN.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/PeterssonLevelN.lean",
+      "bytes": 48805,
+      "sha256": "560d011eef09463abf793387fb0574a24f58b4383419ef736bfcce3f603e233c"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/LevelRaise.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/LevelRaise.lean",
+      "bytes": 30219,
+      "sha256": "b8451bc89fb556934ad3166716559915ab171fe65b04500f4b6a3525fbcffe3b"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/NewformsBasic.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/Newforms/Basic.lean",
+      "bytes": 22841,
+      "sha256": "70b82b7cfd607e8baa201c415bd19686a71f82ffb8acb6ec1db41da0da1691ac"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/QExpansionSlash.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/QExpansionSlash.lean",
+      "bytes": 19796,
+      "sha256": "b7b96b91ddc1ddfa18261b50ec8c8e64b2fac86a39ab18642b4a3c7ac9228693"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/HeckeModularForm.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/HeckeModularForm.lean",
+      "bytes": 19786,
+      "sha256": "e7f8de66479dcf7670f1955f83b6986081fcc19920c87ddbc66f34706f3f5635"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/HeckeT_p.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p.lean",
+      "bytes": 51064,
+      "sha256": "93870c1a7e338484c7fbf38e9c1725b0a146dcb2c46a232db1dc6e0de402c1c4"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/FourierHecke.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/FourierHecke.lean",
+      "bytes": 41806,
+      "sha256": "418da85a82df24f5ee13b5d9621a90f193c81945562e37e7394c7402efae0f71"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/PSL2Action.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/PSL2Action.lean",
+      "bytes": 34761,
+      "sha256": "acabffe47cea9ba9008d171ba8424a31c27bf50390bd28cf4040de37b908b1f2"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/AdjointTheory.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory.lean",
+      "bytes": 20176,
+      "sha256": "c0a61bbe6e9c8d91173ff5a1296c1d50c0c6c69faf9575b3402b3a726db4d8c8"
+    }
+  ],
+  "scope": "Petersson integrability/definiteness and finite-coset pairing, using existing Mathlib hyperbolic volume; actual Gamma0 degeneracy maps and sparse Fourier formula; orthogonality arguments. The local oldspace includes all d*M | N from M<N, including d=1. No admitted general GLn or main-lemma proof is imported. Selected finite root-of-unity and convergent Fourier averaging proofs from QExpansionSlash; generalized from a prime to every positive integer. The full upstream Hecke/newform package is not imported. Selected rational-cusp transport from HeckeModularForm and finite Mobius/integral matrix calculations from HeckeT_p. The local prime invariance proof is specialized directly to Gamma0, including bad primes. Selected coprime divisor reindexing and prime-power arithmetic from FourierHecke are generalized locally to a completely multiplicative weight, allowing zero at bad primes. The actual determinant-normalized slash formula is proved locally; conflicting upstream normalization comments are not adopted. Selected abstract fundamental-domain transport from PeterssonLevelN and projective integer action/domain proofs from PSL2Action. Hyperbolic volume invariance reuses the pinned Mathlib instance; no duplicate Jacobian measure construction is ported. Selected adjugate matrix identities and integral Bezout representative from AdjointTheory. The local inverse-slash transport supplies the integral consumer; explicit Gamma0 upper/lower finite cosets are proved locally."
+}

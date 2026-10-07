@@ -201,6 +201,22 @@ def main():
         path = project.parent / entry['pathFromSection']
         require(path.is_file() and sha(path) == entry['sha256'],
                 f'Audited PNT reuse source drift: {entry["pathFromSection"]}')
+    sturm = read_json(project / 'Tools/sturm_reuse.json')
+    require(sturm['revision'] == '53ce31466dc5ff520463249d470119c1e0006e22' and
+            sturm['license'] == 'Apache-2.0' and sturm['targetLean'] == '4.30.0',
+            'Sturm port provenance drift')
+    for entry in sturm['files']:
+        path = project / entry['path']
+        require(path.is_file() and path.stat().st_size == entry['bytes'] and
+                sha(path) == entry['sha256'], f'Sturm source snapshot drift: {entry["path"]}')
+    modular = read_json(project / 'Tools/modular_reuse.json')
+    require(modular['revision'] == '7c41b9b1747d47298f76bdb51f07031087702198' and
+            modular['license'] == 'Apache-2.0' and modular['targetLean'] == '4.30.0',
+            'Petersson port provenance drift')
+    for entry in modular['files']:
+        path = project / entry['path']
+        require(path.is_file() and path.stat().st_size == entry['bytes'] and
+                sha(path) == entry['sha256'], f'Petersson source snapshot drift: {entry["path"]}')
     for entry in read_json(project / 'Tools/download_receipts.json'):
         path = project / entry['path']
         require(path.stat().st_size == entry['bytes'] and sha(path) == entry['sha256'],

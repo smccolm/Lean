@@ -1,0 +1,7 @@
+# Sturm proof source and port
+
+These unmodified source snapshots come from [leanprover/hex-real-roots-mathlib](https://github.com/leanprover/hex-real-roots-mathlib/tree/53ce31466dc5ff520463249d470119c1e0006e22), commit `53ce31466dc5ff520463249d470119c1e0006e22` (12 September 2026), authored by Kim Morrison and released by Lean FRO under Apache 2.0. The full license is retained as `LICENSE.txt`; exact file hashes are in `../../Tools/sturm_reuse.json`. The `.lean.txt` snapshots are provenance records and are not compiled.
+
+The four corresponding production modules are `SturmSign`, `SturmChainDefs`, `SturmTheorem`, and `SturmCertificate` in `../../Extension/Dubon2026/`. They adapt the module/import syntax and namespace, and any changed Mathlib APIs, from upstream Lean 4.34.0-rc2 to the unchanged project Lean 4.30.0 and Mathlib pin. They are checked by the ordinary Lean kernel and project dependency audit. The upstream executable root-isolation implementation is not imported or executed.
+
+The general Sturm theorem counts actual real polynomial roots using explicitly stated local chain conditions; it does not supply a chain for a varying family of polynomials. `EuclideanSturm` now derives the chains; the root-layer and almost-analytic modules prove correctness and almost-everywhere regularity of their actual multiplicity count. `GeneralZeroDensity` consumes the phase-family bridge to prove the endpoint formula. Reuse of these proofs does not close a whole-paper gate.

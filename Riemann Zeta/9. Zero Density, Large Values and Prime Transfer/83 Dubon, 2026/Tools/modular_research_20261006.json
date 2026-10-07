@@ -1,0 +1,1040 @@
+{
+  "asOf": "2026-10-06",
+  "status": "research-only; no selected dependency or accepted proof of deep modular inputs",
+  "repository": "https://github.com/CBirkbeck/LeanModularForms",
+  "commit": "7c41b9b1747d47298f76bdb51f07031087702198",
+  "commitDate": "2026-06-15T11:04:24Z",
+  "treeTruncated": false,
+  "leanToolchain": "leanprover/lean4:v4.31.0-rc2",
+  "mathlib": "d90090f647cae4f4ad4da99c0ac8bab2ca8c34ab",
+  "downloadedFiles": 239,
+  "leanSourceFiles": 234,
+  "deepInputSearchPattern": "rankin|selberg|deligne|sato.?tate|complex multiplication|non.?cm",
+  "deepInputMatchingLeanFiles": [],
+  "scopeFindings": [
+    "Actual Hecke operators, character spaces, old/new subspaces and good-prime eigenform definitions exist.",
+    "Newforms/Basic.lean documents that upgrading the good-prime eigenform condition to bad-prime T_n eigenbehavior remains unformalized.",
+    "Newforms/MainLemma.lean line 152 contains an admitted proof. No blanket import is permitted.",
+    "No Rankin-Selberg, Deligne, Sato-Tate or non-CM theorem was found by the recorded full-source search. This is a bounded snapshot observation, not a claim of global absence.",
+    "The toolchain is newer than the pinned project. Any reuse needs a minimal licensed port and full transitive audit."
+  ],
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "LeanModularForms.lean",
+      "sha256": "1250af8e9046a6c3532e3c514e5fcde034728cf8b73a57b3f2651852bb39c3e4"
+    },
+    {
+      "path": "LeanModularForms/Blueprint.lean",
+      "sha256": "3d185e63a923b7d4e97ae44947c99df9ba858eb00a385af36f6026456918bcc3"
+    },
+    {
+      "path": "LeanModularForms/Chapters/AdjointSpectral.lean",
+      "sha256": "fc6666467c1eb9cd08a1f2628da220133c5cdd526f87c0d42931e9b243c31ceb"
+    },
+    {
+      "path": "LeanModularForms/Chapters/CPV.lean",
+      "sha256": "057c3df2b25e5eee4627af0c0022e67d0af861c98223d215881e417ba1594e1d"
+    },
+    {
+      "path": "LeanModularForms/Chapters/CharacterSpaces.lean",
+      "sha256": "9cb29279ba765ed3ae2658b0b65b1839e4d2bfb5d6d12dc17c0444e97c86a321"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Commutativity.lean",
+      "sha256": "3f329f0e325b713d37728bd641392c6765ec8b411c8ef5e3dc0b255221162094"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Conditions.lean",
+      "sha256": "695c8d497e5278b069bad543411b26cf521e23d99607c5a16c80d254b503dae8"
+    },
+    {
+      "path": "LeanModularForms/Chapters/CongruenceHecke.lean",
+      "sha256": "5d04d472f13ec70e2a693a9a3cf65763a8c41d2dfe1d639ac18ac7a936f74ecf"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Curves.lean",
+      "sha256": "8b9aa175d81af40741513a589f5281345f6dd24b2c7d5ba86135c4f2cce8bd55"
+    },
+    {
+      "path": "LeanModularForms/Chapters/DegreeHom.lean",
+      "sha256": "668c650f35653ff416d53dba71132526f208308f2a93df051f96d690c5795f9b"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Dimensions.lean",
+      "sha256": "92cc1a6b3b62c7c1f5fc4bb74ca05616154b53e6627d1560cef4cb8ee90850e4"
+    },
+    {
+      "path": "LeanModularForms/Chapters/GL2Operators.lean",
+      "sha256": "124e4d59e61bfbf0ee483f7d0533479e251422aae8c3f5bd5c1fc829323da7d5"
+    },
+    {
+      "path": "LeanModularForms/Chapters/HW33.lean",
+      "sha256": "5b4b515582865c99bde780feb3441073cb2a1955b5d20b977db75f04cb0431ee"
+    },
+    {
+      "path": "LeanModularForms/Chapters/HeckeOperators.lean",
+      "sha256": "ac9dde8c0805c73459217e032a39590420b11e0504b854796c961e1b2f1ccaae"
+    },
+    {
+      "path": "LeanModularForms/Chapters/HeckePairs.lean",
+      "sha256": "58dca4523b51f67f577f492628a75f03534cfff9ac3109c79355fca34c2439ab"
+    },
+    {
+      "path": "LeanModularForms/Chapters/MultiplicationTable.lean",
+      "sha256": "14f0eb9100b3f3c637a8e29a6e08d23e9f83e71c9df73234dd1e846726efcecc"
+    },
+    {
+      "path": "LeanModularForms/Chapters/NewformTheory.lean",
+      "sha256": "291c389f18665851472aa7f3eae3ba4739678ad691e65528bc1e32bd53251c34"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Petersson.lean",
+      "sha256": "3579ca3698b981dbe5c88621241428a25074130aa809384ed8183058bc363a9e"
+    },
+    {
+      "path": "LeanModularForms/Chapters/PolynomialStructure.lean",
+      "sha256": "d722e48100d6dd22e792f5a3feb928b320f5ad5e9f5bf1931a31a66934b545d0"
+    },
+    {
+      "path": "LeanModularForms/Chapters/RingStructure.lean",
+      "sha256": "50a5bbd74288eefc82841d3421de12ff58358bab9bbf669339027a8c3b0b1f45"
+    },
+    {
+      "path": "LeanModularForms/Chapters/StrongMultiplicityOne.lean",
+      "sha256": "cbfb5ce8cd644b5c060edd4dec9913180c573fb664dd4436011b0178f2120fd0"
+    },
+    {
+      "path": "LeanModularForms/Chapters/ValenceFormula.lean",
+      "sha256": "313420bdfbbe483be0b3ea681e664a1395ebc3a1ec2e61d61a37d066f04e05d8"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Winding.lean",
+      "sha256": "5d29bb39cd5404669394dbf861caeded9f8d4c0b44bb164043eeadfed43cbcf0"
+    },
+    {
+      "path": "LeanModularForms/Chapters/WindingElliptic.lean",
+      "sha256": "b728971cdfbba877e46d53a7f5f83a7b400c2948a7d9c0c475b43dd2ed34ce3f"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms/AtkinLehner.lean",
+      "sha256": "95e22739afe57163d5b26b18544c92afded745df3e4908de7621b55a7ff17e57"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms/ConductorTheorem.lean",
+      "sha256": "bde29bff61f1275ba5a221cbb23ae6232044085db441e66fffa0d1057c0163e6"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms/MainLemma.lean",
+      "sha256": "d8afff0283d14d9a4f45c81222100954a82e038edcf1444d16eff1ef88f0ee17"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcFTC.lean",
+      "sha256": "f2ef1213e0960d79f6f80a8c0268b6881ff98d162f68469a97286b5214516b10"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcFTCAtI.lean",
+      "sha256": "e5481c4f5a3f98bfc9519c2816130fc74726e83bb14f070cce3313af2aa9e7cb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcFTCLimit.lean",
+      "sha256": "a59f6bb64629a9e6ca1e1fb7d48005a5f0ab1100facac86afb9e3107506f1c0a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcGenericFTCProvider.lean",
+      "sha256": "dcb065ad8a54d59efbcf7a382eac25ae3322db943cee004f0fd2a52dfd7008cf"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/AsymmetricSingleCrossing.lean",
+      "sha256": "a4df0a158a9a248aa8f7d5b2419796dd88ef822d5f842bc9ccccdebeb6c91fdc"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWinding.lean",
+      "sha256": "51be526003362fe67d72ac4f190ca7169fd2ab73c92cbeaf8420ff7d42dcefb5"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWindingArcProof.lean",
+      "sha256": "ec8a53fdca43fc96079f8c0513ad1241170865ae36bcc6eafe3694649af4dbf8"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWindingSeg1Proof.lean",
+      "sha256": "147e7f5f49772a13b47f704470a4f6c6935b4628ef2ee4b22268db92719cf70e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWindingSeg4Proof.lean",
+      "sha256": "e727db561888f09fe18c57ea1935fc80de0de78eaf33bf53c806cd9cebba04a1"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CanonicalReps.lean",
+      "sha256": "2aec7e4106f2c1338b42ab558da7a47111b08bedc2c4c58851a4b627dac55bea"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CauchyPrincipalValue.lean",
+      "sha256": "6aa6b1457066c5a7fbdf521adf921e5dcdb4fb08f94246373588083f85c3ec7c"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ClassicalCPV.lean",
+      "sha256": "99f946e2fd68632a2008d47792916b2b1e9d8cbd78c8d38e156c072052422cc6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral/CrossingLimit.lean",
+      "sha256": "020a86ca9136f0656dbe2d9d2060487321e80438f2ce97b610c2674db38401ca"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral/PVSplit.lean",
+      "sha256": "765eb048d85623b38533a0a1242f2684862a6c7e9f48f8928d3a491dfdb00c95"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral/SegmentFTC.lean",
+      "sha256": "448f02488d97d49c5d05480d04e477b1d08ceeb612272b9ac94d80999e147a99"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CoreIdentityProof.lean",
+      "sha256": "c7b4b63ab86bbdd5390d9d09fa55366bf6b4e555c7d1561f59196389d27319b9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CornerFTCAtRho.lean",
+      "sha256": "8f2135adca99b1ea8285e5c8084ca75d04b87448e38d83578ee5d0c238abfd24"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CrossingAnalysis.lean",
+      "sha256": "b1db9dee5941e159a3ccedfacc10834ea8a8ed09a371283071f52d188bf2a63d"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CrossingAtI.lean",
+      "sha256": "ede31c3a60bb8697f5cf11d61f0612c14e26c019adde04ba3812625b9c248a37"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CrossingAtRho.lean",
+      "sha256": "ea12200f4c71dc6877b160298b3dd0333af2c7148a523b33b2df5573ee0f873b"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CurveMeasureZero.lean",
+      "sha256": "0d94a98b7de5bc5a6a41efe0cf065b82e8e0bc6b0ac05aa5f76d0b6ec9081ba6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CurveUtilities.lean",
+      "sha256": "e04a406a5a30ddbea7b07e8171c74c9a0d7c4b42e09fb5fe72c8f28945dac098"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DixonDef.lean",
+      "sha256": "c7fddab236f2e355e50d46d0a66fe681a721c30ac8061092a751a11a71d0b9dd"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DixonDiff.lean",
+      "sha256": "0736ad3d5e3756ea2cb9c4ef513169d974ff34518752ef6b125a359c78aa3e0e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DixonTheorem.lean",
+      "sha256": "0d81ccce727213030b25258519cf2cf19684070d25f7f9e5b86ea4eaf0e120ab"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DslopeIntegral.lean",
+      "sha256": "fae27cefb1fa16403345797ac7732d9f4d3c8f5836e7147b44dd91e2adadd259"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/EllipticPoints.lean",
+      "sha256": "9187e4ddf69c9a67d7aab6680700ca589887095ae3221aa4f64d0c3543e8d236"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ExitTime.lean",
+      "sha256": "dc8d095ba403bca680ca01096030316223fa934f0529b25dd3ff814c7173c650"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundary.lean",
+      "sha256": "953ecd192a1fd023c567ca40f76be329e98840fd1ff235c7aa441273f028418d"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundaryH.lean",
+      "sha256": "5a84e050676c24283b34f789090fb2563c6d3e9d0d3af2d47f89dfcf20a43f08"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundaryPath.lean",
+      "sha256": "6aebe8b4a6f76072ab2cbd0b5e0d531249346d0fdea947d448fd880a2a844fe0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundaryReparametrization.lean",
+      "sha256": "68da30d50a9b28f45ce029b5d3eb830fa8c6a8de0bc47d0a7ec0f6cdb2b74ca0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDWindingDataFullAssembly.lean",
+      "sha256": "c77a7cabce12bf917d1908467aafacb115438c63d591d1a1d4c555d3452e7df7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDWindingDataFullSeg1Seg4.lean",
+      "sha256": "e7c3b6d8615bb08049a6dd2f6e96fde029b2bdb7fca77fb2635a3bceb568f396"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FlatChordBound.lean",
+      "sha256": "83a633b334a3a70af3f1e967c3ee42d6bcd5af00eb9982caf7f81814b70d0802"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FlatnessConditions.lean",
+      "sha256": "5b0f0f4a56315e887aeab74532b7c84846db6f7e89843c095e0045506d8e7f20"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/ArcCalculus.lean",
+      "sha256": "0927f3f277123ceab52f390a63a5b2b278468ce4d40103541fd66d07e89a08a1"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/CauchyPrimitive.lean",
+      "sha256": "0af5ee66d49cfb40f87497d8faa8a706947a0bb7fb85db6b5b9729c9a4645d58"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Homotopy/Integrality.lean",
+      "sha256": "f11b486c4a7cf3ef33ffd6f46ba2e2af8b92f4b5359d6d353fb800ceeb092452"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Homotopy/Invariance.lean",
+      "sha256": "8ad86eb2caa39fbd3abcd748938b093451a7f46f45cd335b0a0aa16004d22865"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/OnCurvePV/Basic.lean",
+      "sha256": "55c78e40d9b38b0ec24ddf2d199adbee289383f0b4c99d2b5ba2b0ceb5fe586e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/AnnulusBounds.lean",
+      "sha256": "60776063b29508758d65d7a89cd40b75f36c656b412c18231fb1ef67aadf059e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/GammaAnalysis.lean",
+      "sha256": "e8a3432c82d398bf70920be1276ec9efbce28809f5df15a34507bc87e697c476"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/RemainderAnalysis.lean",
+      "sha256": "bfb69189ef22aa70e7214df8ce848f9b7406be1004a426be0a0a6b1fe6e056d6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/SingularAnnulus.lean",
+      "sha256": "8c189f9bb1ff08a387d60a6ce9494eb98acadbcc2630babd2fd5eac4e75cc8a8"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/StepBounds.lean",
+      "sha256": "82c64b94f8d8808e5367147555cdae36ec4eaaede4c3e9c3a1214c3cdb748ada"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/UniformStepBound.lean",
+      "sha256": "b980d7ea0e3f1a21411fcaedec130d8eb6676df7e90a6d58002d8e667b7bcf33"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue.lean",
+      "sha256": "dd942155202df0e75ae1cd1df9f3744ac5c7d0ac543ca8afa6f466548cca0da6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/GeneralizedTheoremBase.lean",
+      "sha256": "ab2754f8e9b88eb7b34f6a344c0fc7c043d4f23eff206d6c9e461ce26577b443"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MeasureHelpers.lean",
+      "sha256": "a6c5c8f456c41ebae4e8ec4983d97f908cb29b0a512a11bf9f19c7e846985526"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MultipointPV.lean",
+      "sha256": "7205f55ffb3ab3fc599d7173281d8bdd07a017b910150dc06719c38c15b3600a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MultipointPV/DominatedConvergence.lean",
+      "sha256": "eebaab470e61bf4fde4da84d97e28dfb5a4c1692f68b9ad68a95f5f09d9aeb15"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedWindingNumber.lean",
+      "sha256": "498b2197e62054b1bc7a01b343f332a9288a9c26722472d0103e359d516eaa6e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HW33Clean.lean",
+      "sha256": "57bba06ae2915f11d1348260b61360ea0c484797880f010bd466daf7df014372"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem.lean",
+      "sha256": "d5d515941363903edc5e75957bff8c54d3b985f880621e1dd5b5b30c2492e0b0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CPVExistence.lean",
+      "sha256": "bbe05d8a94103f7716d5afd1bd7c2b8259e275b8b0f436d020e33f8deee1c167"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CPVExistenceMulti.lean",
+      "sha256": "b6e7371dae422fb2b47bfc3178495852a206e445e02a60fd5dc3afad7e72e607"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/Crossing.lean",
+      "sha256": "a512aada95f1a65632d1cc3ef0b9eefebbb15e4c933eaa117ea611e9a680bafb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CrossingCPV.lean",
+      "sha256": "ffc7b9b755292a8db64488d2351a0e0becf460b9083ddc416235b1fa5724b69d"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CrossingDataBuilder.lean",
+      "sha256": "dbae677e42d80ff870688cf3759ee71c9a764b89bf8b90aab40c6cff958408e5"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CrossingHigherOrder.lean",
+      "sha256": "9a7f501b30d1ea8e9962992743d97af89b995e50114705d634dcd9e731dcbc90"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/HigherOrderAsymptotics.lean",
+      "sha256": "8709d58cef3cd60e4045bd90cfa938e5908e37519fa147723445e6d30b436196"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/LaurentExtraction.lean",
+      "sha256": "5522dd7ab22e4904beb99e932ad13ccc15d12b7a2ce8524daa323d90e2e69ad7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/LocalCutoffs.lean",
+      "sha256": "bd7df3017739d1ddfa7db4cc60ae31687349f4f33ebf432cd9d4b953d2a35d47"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/MultiCrossingCPV.lean",
+      "sha256": "4bf4c58ab56ddd482a0ce9fd83b65fa730a035b54a20a0952a94687a418023fa"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/MultiPoleDCT.lean",
+      "sha256": "b4cc3c05a47cbff5cd56314e15543a010a3b7b5bdc4361ad851464aef0baa5ae"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/SectorCancellation.lean",
+      "sha256": "d9529d2a5ae126e35f22955ad513222690f9d7a6af6dd1b11009a324c8e65ea3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/InteriorContourIntegral.lean",
+      "sha256": "7b3d197a9f213282b69db440ff8232506e5c7859edda865496d3fae11a05b176"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/InteriorWinding.lean",
+      "sha256": "f693bc9a1a42bcf4a88374cc9c4b3cfcab7d668e85caa85e88081b976d507db4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ModularInvariance.lean",
+      "sha256": "9da3083001c4f96b8fceb8ea33f24515900a1f3bdcec5870825e232d6d927042"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/MultipointPV.lean",
+      "sha256": "6b68d6526bfeb75d7ed71822490a6e6c422f04e288197e9aed6dd2650689e07f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/NullHomologous.lean",
+      "sha256": "ca7dcd90c4605addd67e2bbb1da201d8b6adb12223a1261a0fd2ade9b3aa3a19"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/OrbitPairing.lean",
+      "sha256": "44b24c1a40a1780a97ce0321d4741ced148681e4c695914f2ae914bd86d22ecb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Orbits.lean",
+      "sha256": "9eac63f70f12b47409f098ea7623f7fe12c3b0bb7c5fb10685ba72011834a272"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PVChainProof.lean",
+      "sha256": "6de61318681ef269b772886d085f07fda2d1a11436d7137938b3f2af26d554c4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PVSplitting.lean",
+      "sha256": "38670114e26388a92eb6fe706b1f9a0f79c7eb7a2612d51e58cf40fa5c9a5acc"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PaperPwC1Immersion.lean",
+      "sha256": "b03da1bd22e43d85de365f963ceedf7b25e3243aead02f5fe86c3bc374c1e95b"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PiecewiseC1Path.lean",
+      "sha256": "1482c6bfa05ba9def44f8d6139a7481aaac59268ddb385e52995418235714603"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PiecewiseC1PathOn.lean",
+      "sha256": "56c484ed81f0e326788af2f50752ba0127df974e304dbd00a5e6e2487b464322"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PiecewiseContourIntegral.lean",
+      "sha256": "a94f4254f50e0433d6e7aad835f79fad3d28acd1e9c05761678bc22d794dd79a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Residue.lean",
+      "sha256": "b43a91fa2075814c79a05a44963c0097ca87fda43a2f286c05fb1c7a740af2bf"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ResidueCircleIntegral.lean",
+      "sha256": "5d86832b751f1d4b0254f413c125af580c85ce69519903f529c064ee3e99f927"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ResidueSide.lean",
+      "sha256": "4b913a00711242a48e4646889f81dbe35b5b46353904cbfdc8f86047e48c2684"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Seg1FTCProvider.lean",
+      "sha256": "69753b937d57ca0005b0410836b01546fe8292857c67c9f76498ce1f009f57a1"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Seg4FTCProvider.lean",
+      "sha256": "0bb4932fe754858ab3acd674e037cdf2bdddb7026a0fdd850d426e455ae3f4ab"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SegmentAnalysis.lean",
+      "sha256": "e3acfa5d9554c7bedefe4c4b959f7716c4bb88372ba21b68c1cbdb93bc8d95e3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SegmentFTC.lean",
+      "sha256": "37c00d1f6a79aa741aa935ea3b9c03c3052e22b8e18bd8c90c2617b16fa5bc6e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SimplePoleIntegral.lean",
+      "sha256": "a1b4dc4c88de06c311bc5ef48b5215d133403184d56a431e8994094cbf2f6ed7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SingleCrossing.lean",
+      "sha256": "fe68fb201fcdfcfc1052626ea0c613b090deb1deef9dea9f3c9c9d7d8d417ad3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SmoothBoundaryWindingProof.lean",
+      "sha256": "45a0e7305bb71d992600a52d1376e76739d8db4fe57876f7526d402d1b7291d4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/TrigLemmas.lean",
+      "sha256": "e802bf9de3de09b79286706ead0c8fba64cecabb1b91444426d3af9d6286b488"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula.lean",
+      "sha256": "c08ffa777af697b325f94e7cc67d4e439d92e00bb723097f302ff0901868a157"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/Boundary/Bounds.lean",
+      "sha256": "82763c05e8a7e392ed4e6451bc24eaaf024012f5ad6ea9ca1c786a946c5b583d"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/Boundary/Smooth.lean",
+      "sha256": "d6dff21f1093f1477ba2c1506602a1db0ec5b43a0d363d4fe885759f28f4e537"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV/Basic.lean",
+      "sha256": "469e0d1a184f9e5c9dbd8d8eb0a1c5aaefa1cf17a4913cfc7e34045452bd9905"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV/EndpointCorner.lean",
+      "sha256": "a9eca2ab2aee89998c5d2131a14d716e470f855689fad7687c4a26bba0aca062"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV/Main.lean",
+      "sha256": "80afb62955afbfc54f6df031b00790bf7075b5144d0af499cdbd94ab865040bb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/ArcContribution.lean",
+      "sha256": "a83ea43b090684cbaf95a2a304260133d84bd1926f351a882811f35b1937b6ee"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Assembly.lean",
+      "sha256": "9587cfef15dc5a14133c1684505decf5eaa7673e6732fd6b9a437ee7c4ab8192"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Assembly/ResidueSide.lean",
+      "sha256": "b0df90837dff6b2180a58372db4d514f505e95ddaa6fb37cabefa152a5fb08e0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Helpers.lean",
+      "sha256": "895e944c34092e3b26bb3d8045e5b853059f7f00700e2d19d0221c039229d99f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/OnCurveCapture.lean",
+      "sha256": "300e375cf0556b192d3fe0d4a6af1438fa38ee86b81027ed27c42b2e63fbc7dd"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/ResidueSideInfra.lean",
+      "sha256": "f004bedb8fc6ce3affdb8d65466e592d7907a5f07ed48d50a1f173edf845cc1d"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Seg5CuspIntegral.lean",
+      "sha256": "0ee907e3e45b23327685e37ed650af4673ee516323e73cd4dec340dc70b70fbd"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/Common.lean",
+      "sha256": "66ac602c9e0fce0356eb2d7a2ff133f1b55905a03f5a16393cb83d2f704f65cf"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/I.lean",
+      "sha256": "4dccdfc713ef4e8b8df87ba199f80b96ecfe6d3d88db6461b2f381af7123a0a1"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/Rho.lean",
+      "sha256": "c328d4ed20d2bcb85a48c835da1431049ba27a24592a87d6a7ab79052dfa52ac"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/RhoPlusOne.lean",
+      "sha256": "1c861674bc423dafa74c1be60fa5650b465556b42fe0b97f75726ab97dc44860"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormulaBridged.lean",
+      "sha256": "c72d3c968016ece7285bae81b13905952fd3fc32a6da7665cf8827403ad838b7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormulaFinal.lean",
+      "sha256": "b0d3553dbd39e625302611f5a984c2553ea54dab8dbd011ff8ebe5cefb72abfa"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/VertSegFTCProvider.lean",
+      "sha256": "94ce1af3b2e4cc6168bdc7fda4b81491e66ca7e7d455a7e89d4e550a8b234494"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingArgDiff.lean",
+      "sha256": "d01447823992e7acc6cd73f8661f7a556741bd0aa236d2ef691e99137aad15a2"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingDecomposition.lean",
+      "sha256": "7473aa1f7ca58c5429142c73e9c418fd9a8c45bb99bfc1c054dcc9eb7e75c044"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingInteger.lean",
+      "sha256": "a8f65120556ee79a68029c42a2b23f39c972b734d1b704ffbffca6563a8b81de"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingWeightProofs.lean",
+      "sha256": "1da37ebfc7e1e79bb7ec4687151716c51289a365888ca7c8a0f1c392757fd6ad"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingWeightsUnconditional.lean",
+      "sha256": "cd448665f8d46b9192b31d468beeeb0cb187faa1ed8133ebb0e271eee6de9a04"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Associativity.lean",
+      "sha256": "e2683887207cb38047bc215e3326b7b23b4d6875846fd3ef18f7b450ee30755e"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Basic.lean",
+      "sha256": "c93f096c25b3b3ffdad4434f2942df99309ea12d8a469422c3d7c6c54ceb036c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Commutativity.lean",
+      "sha256": "d53d3fc6ff77de71393f514dfd951df25075eea23499ffd930b532de1cb6c4c1"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Degree.lean",
+      "sha256": "4da1a08d8ac2125ca89993c259d8415490c36655bc54ef85513d35f66aa8244b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Module.lean",
+      "sha256": "582d5ffe5ed2444d508b6953b147507c0465b1df636915d870814d89e5ac1f43"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Multiplication.lean",
+      "sha256": "be69c2c3dbe34a9b3c327d0645057c3a1926e3002e3723ef75bb08d7f2642c75"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Ring.lean",
+      "sha256": "70fad15a90d48daf3b2cb39a2a0484f795501676474180fe49446ee90164ff7c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/StabConjugation.lean",
+      "sha256": "6c330224c6bed36de5ae3337322e712ee1437d86a1921f89995b6d9a94770146"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory.lean",
+      "sha256": "c0a61bbe6e9c8d91173ff5a1296c1d50c0c6c69faf9575b3402b3a726db4d8c8"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/ConcreteFamily.lean",
+      "sha256": "9566b083cb5ddd85439060fb14515a22c01d5ba9b72bfb41f3590c883c5754d7"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/DeltaBSystem.lean",
+      "sha256": "f2e9ef3f69702115f68add003b3ebd7e7e003fbbcba16abbab6fedc65288b8e5"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/FDTransport.lean",
+      "sha256": "56e15872f06f7d82fe09b819c5923e8234add4cab688c8c2808457160eb47172"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/SummandAdjoint.lean",
+      "sha256": "2e262a7462ffd72b93ec549aa200c4d41971bc5d961cab2386b1591a2666966f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheoryPetersson.lean",
+      "sha256": "b796768430905d91cf4cdc9600543844e8ec441978e9f321b9e43acab7a361e9"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Basic.lean",
+      "sha256": "bd380a3f137972541480416442f36a01f45057cfd661c58ff01177c7fb6e6d3a"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/CharacterDecomp.lean",
+      "sha256": "10468d61551beeeb8a92ccce3a7708feca298f3ae77457a9276d28129daa3d8a"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/CongruenceIndex.lean",
+      "sha256": "ec3dca6e559c123c6d109ff901fb8e170e411cfb81f3d293589dab3b0fcaa528"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Degree.lean",
+      "sha256": "8660ba92c90bacba6dff50bfa80a8ef4259d68078aff348a7a065c535552731b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/FourierHecke.lean",
+      "sha256": "418da85a82df24f5ee13b5d9621a90f193c81945562e37e7394c7402efae0f71"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Fricke.lean",
+      "sha256": "de642153cf9b751dbffb5eea96a6c5aebf5f316840bd6e63f1daeabe0ca49cc3"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Gamma1Pair.lean",
+      "sha256": "f1602ea9a611b314cf11c2ddfde9d4ecffea842ccd1f85a79e260bb9b6e0d608"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeAction.lean",
+      "sha256": "9fedb1b2ae2a2f98bf92044e8bf728d149f427f31a3b6962cf6106d041d14b34"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeActionGeneral.lean",
+      "sha256": "66cc38fa279db937ce55fea2c74b02ddcae397afb23005d659b2c12813e002cc"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeModularForm.lean",
+      "sha256": "e7f8de66479dcf7670f1955f83b6986081fcc19920c87ddbc66f34706f3f5635"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeModularForm_Gamma0.lean",
+      "sha256": "fcec48b12078c8a1c2d32d1ad9c4280c004ddd6cacf2280490ee258fb957f026"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeRingHomCharSpace.lean",
+      "sha256": "d27b50be107b20503396404b122bd555e252058ce89ee9682a9b2d32350bdeb2"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_n.lean",
+      "sha256": "b74449d10532612a8d75214260047f9c887fa4f12222a8ef91f771b6773e7e74"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p.lean",
+      "sha256": "93870c1a7e338484c7fbf38e9c1725b0a146dcb2c46a232db1dc6e0de402c1c4"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_GLpair.lean",
+      "sha256": "3e1d9a6d8fad6e61def3f5fae1fa2db61556dda3019e0b7028d0afd77db5383f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma0.lean",
+      "sha256": "3545b9a517d09aed5aa8c0e027ce4b1396ae5b025d95c3255e08aadc911bfd94"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean",
+      "sha256": "2568c3b713afb93c0d6aad9902c7ba6ffd7e4b66314b12beffc40466e005cad5"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/LevelEmbed.lean",
+      "sha256": "1d60aed51a2e7071ce9b7bad4581ccc84ace84885337e9b3f283b265034f47d1"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/LevelRaise.lean",
+      "sha256": "b8451bc89fb556934ad3166716559915ab171fe65b04500f4b6a3525fbcffe3b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/MultiplicationTable.lean",
+      "sha256": "e052dd71f79dcf7f1a7043f95327fb2bc1f10610e1e5ade9836e34b0aac13f8c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms.lean",
+      "sha256": "f0265541a51d851882d446ecef72a0898c8c27be437e6b17a731a229ba342cb8"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/Basic.lean",
+      "sha256": "70b82b7cfd607e8baa201c415bd19686a71f82ffb8acb6ec1db41da0da1691ac"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/CoeffSeq.lean",
+      "sha256": "7d1894b38cb96b252b52c6de49f8e933a5f071f0cfd5b0f142917a362b2bf872"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/LevelRaiseComm.lean",
+      "sha256": "5c2893865b2aab7cd3edc06b00699d248a025953b6bb5d2bcb79fe8e24eda4fa"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/MainLemma.lean",
+      "sha256": "61782a1aaf5bab42e2d0a65e4e455704acd631483b60204923b44809aa15ac21"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/EigenformFromRing.lean",
+      "sha256": "1b313272b5bd8e2d4e3d8e4f68b7fcbf0f21303c107dffc959109b9e05cc8973"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/Gamma0RingDn.lean",
+      "sha256": "972cb286f2bec8393920ff7f230865a3c15e61b96700d8d298e6a53bef5de8d1"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/NebentypusHeckeRingHom.lean",
+      "sha256": "ece0f83dd4975147f5b10589e21f474a94ea73d6ca878970962038f55f193836"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/RingTransport.lean",
+      "sha256": "dcdf9f3cc6a085bd52d7ea9e5c9069593e3e3370711cb3c27286a8dd9238654f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/ShimuraHom.lean",
+      "sha256": "011fbe3a77218673450e3da56933ac140fdf831c64462dbe4eda02816bdfc89d"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/TwistedHeckeRing.lean",
+      "sha256": "c7d37d85e934283ca2cbf2ed8c4ae2b8d597c4b4d736e59b58b1609da64cacc2"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/Basic.lean",
+      "sha256": "28c06f176a26d9226033dc21beb9832a896eccc9127e0945ff6e25d4b22e09ff"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke.lean",
+      "sha256": "6eba4ae2d274f1431f059ebeae05814a3e324f40e336d025c39204c27659864f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/AtkinLehner.lean",
+      "sha256": "7268d0428132f6b34e8fc4c061e2f7516590030d8915cdb5c21cc015878a5986"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/DegreeCombinatorics.lean",
+      "sha256": "6ea1ea9598a10ba37b8538d796d0744bb441f6a4e24166ecc9bfe91aa86a63e3"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Foundation.lean",
+      "sha256": "96362f0cc383e4b257a567e93e90551905b597fa021cc6f7fd2c9f1c2048fad8"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Presentation.lean",
+      "sha256": "5c8d48fe895f35bc894608d78544671f51b48882f59d8afb80cda4272ddceee3"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Props.lean",
+      "sha256": "22b4969b4812df0bdffef5676d1ba28881729b2838c6c4f0652d37eafa732c1d"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Surjectivity.lean",
+      "sha256": "8ac3210306b3cb711a13be8135a8bac91c73e5fe92bbd1339b7fe3a2cc77c4d7"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CoprimeMul.lean",
+      "sha256": "205925c30919cfa7438de436843c994876f9b99be35dfb6bf6d9fb953ae898a6"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CosetDecomposition.lean",
+      "sha256": "cdefee07805a6a41b4660d1999327dddd5a1f974e31d0fd9d199ed97b9c9accc"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/Degree.lean",
+      "sha256": "d15b558126d746668295f8052fa56a8a4e6da6711df078e33a8c1b86574586af"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/DiagonalCosets.lean",
+      "sha256": "161a371ce4ea61e2a845625272988f626c5dc4428cd1142d4067fb805fbdd9eb"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/PolynomialRing.lean",
+      "sha256": "782e3492dac9c15a6a766c7596a81ad23062622ffaa135344d1a9c9e045993e5"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/PrimeDecomposition.lean",
+      "sha256": "7093eb656ae3ce5ba10847eb0b3be9613ef2fb59792daf15418f33d720de9faa"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/SL2Surjection.lean",
+      "sha256": "c5623fd49fe233ef658eb75c53986cf805332822dd64c86c9c9d152c3a8927a6"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/SLnTransvection.lean",
+      "sha256": "a7feeefa938b72ddbc1c45b6ca4e5895583c1f02cb6166a9cb5a09d661fffd73"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/TransposeAntiInvolution.lean",
+      "sha256": "e1128f0bc65f738a574912fdcace21bfdd0a7c7fd9408084c8643e144e7d12d4"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/AtImInfty.lean",
+      "sha256": "88ab8ee268310dd2f05e277cb6a30b5a4516ae0d80f119ee9a795ef342f3c209"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/Auxiliary.lean",
+      "sha256": "f6e1c3feacd305ce4cdac135bc81be5659d02debd8400e5d3643c174720cf079"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/Basic.lean",
+      "sha256": "ca96ffe5140d5a040c8ced05df1d172df38d49b1d94e1ae079721590b4f3003e"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/FiniteDimensional.lean",
+      "sha256": "14649cb905255857a07e7ddff16dc3c9c979e70fe8df0c5100e5a827e8071486"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/NormReduction.lean",
+      "sha256": "5b12eefc844203b186bb773e14e439c3dfb77f50db4187867ab3b25976a189a7"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/NormTransfer.lean",
+      "sha256": "afe6b2e9adef545e33b478fc7fcc249c226a06ff96e570213c2edda98bdd8dae"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimensionFormulas.lean",
+      "sha256": "53aebac683f4020488e6c49a49506d37390ad6205cbbfeaa8717d854810b0e11"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/ForMathlib_Cusps.lean",
+      "sha256": "21e6083b26fe75f11c6ef7276cf6f2a478a7cafe23bcf8100a7107f2ba657790"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/IsCuspForm.lean",
+      "sha256": "c92c8bd7919e5c9fdf6ff8ddd0ba87ce09b6322bd70417114d98432438a36075"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/LFunction.lean",
+      "sha256": "decc40b38292f61c89d930416859730009e79c302874623e97e8fbbe4bd4ca21"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PSL2Action.lean",
+      "sha256": "acabffe47cea9ba9008d171ba8424a31c27bf50390bd28cf4040de37b908b1f2"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PeterssonInner.lean",
+      "sha256": "38cdad045fffdb1da39f0406974576f7c7310c76a4544263df4b0903b6faf59a"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PeterssonInnerProduct.lean",
+      "sha256": "77946b0607d678ca4987a04e57615861b4da097ff76c1114ab5cd8d150f22518"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PeterssonLevelN.lean",
+      "sha256": "560d011eef09463abf793387fb0574a24f58b4383419ef736bfcce3f603e233c"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/QExpansionSlash.lean",
+      "sha256": "b7b96b91ddc1ddfa18261b50ec8c8e64b2fac86a39ab18642b4a3c7ac9228693"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/ResToImagAxis.lean",
+      "sha256": "35c22b93cd115ca0974845ef4b71a11aad63afa1f14121858d7d4b9e32e34738"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/SlashActionAuxil.lean",
+      "sha256": "fe059602f9d29aae1d493dbb59ae132494103c9f9f839a1e475f6b75858614ab"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations.lean",
+      "sha256": "2dfeeae485fe0dda48b25724bb4f8750f9a503bcdb89f0591ab9b58c38c0ba62"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/DescentCosets.lean",
+      "sha256": "6ae7635e2161a6fe2b627d758e5ba00a552c61f37c118ddcb2bdcccc2162045f"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/Lemma4_6_14.lean",
+      "sha256": "fc48c7bc89d2b480b7544f08af3da937246ac80fd4525437cd9f477a1279d4c9"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/Lemma4_6_8.lean",
+      "sha256": "cb29b95e585e8b77ec3fed9bcb1e531a0761e6f8b3451ad1397f3d66c2ef05d6"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/LevelCommute.lean",
+      "sha256": "475df726104894bd5fa14c3687fe379635ed56b9c5a27a1cb5be5b757946e3b4"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/Miyake465.lean",
+      "sha256": "9cae0473902dc5fb4ca7d468c550b2fd90fbd651c6959e55cac3074b5d332311"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/MiyakeDescend.lean",
+      "sha256": "09dd506ffdb46c30bcb51ded0baacc25b61bc097fb6f497014cb33569c710bf3"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/SquarefreeDecomp.lean",
+      "sha256": "dc49d60940af6a639e3532e50b61b1a0fd4642ef1a29379c3fc32e48bfe5ec16"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/StrongMultiplicityOneFull.lean",
+      "sha256": "08fe36c38ac4b2febca6b86b4afeead7d2fbd93fa90c96736477100458dd8c10"
+    },
+    {
+      "path": "LeanModularFormsHecke.lean",
+      "sha256": "6518c43f228c2f53889ab0a0d2af4b20eeb007ec7f53bbdf59153eb5a60e1403"
+    },
+    {
+      "path": "LeanModularFormsMain.lean",
+      "sha256": "4c01b9447ecf8afe467f0f157d846e0ba68172d641930827d3b31d72a34c2cad"
+    },
+    {
+      "path": "PROJECT_OVERVIEW.md",
+      "sha256": "992771d6ef4c46b35df6fc9c673e0637b5e1c79ae9de83166eb883f4c978d861"
+    },
+    {
+      "path": "README.md",
+      "sha256": "47d75ba2f1c25ba0e0663a6a4b7f14f1fa5fe7736997492fedf2ffd259330dde"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "da13f21857f238e23d0f644d1f999b8a619202c29483ebd01b6538785f502e85"
+    },
+    {
+      "path": "lakefile.lean",
+      "sha256": "0c80c2bc16d828b622cc13a646a38cd54b2960e0cbb6c9d2593b4dcacc5fd58f"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "629a2dbacab5ca71be7895bfb056a043b7e9d9e38433a67ea6ca1a679425d48e"
+    }
+  ],
+  "importClosureReview": {
+    "method": "transitive local import parsing of the complete recorded snapshot; source inspection only, not Lean dependency acceptance",
+    "targets": [
+      {
+        "module": "LeanModularForms.HeckeRIngs.GL2.Newforms.Basic",
+        "localModules": 72,
+        "sourceLines": 35465
+      },
+      {
+        "module": "LeanModularForms.HeckeRIngs.GL2.AdjointTheoryPetersson",
+        "localModules": 66,
+        "sourceLines": 32774
+      },
+      {
+        "module": "LeanModularForms.HeckeRIngs.GL2.Unified.NebentypusHeckeRingHom",
+        "localModules": 60,
+        "sourceLines": 26881
+      }
+    ],
+    "additionalAdmittedProofs": [
+      {
+        "file": "LeanModularForms/HeckeRIngs/GLn/PolynomialRing.lean",
+        "lines": [
+          970,
+          981
+        ],
+        "scope": "general-n polynomial-generation steps; transitive source import is present in all three closures; theorem-level relevance must be checked before any minimal port"
+      }
+    ]
+  },
+  "oldspaceSemanticReview": {
+    "definition": "HeckeRing.GL2.IsOldformGenerator in Newforms/Basic.lean",
+    "observedGenerators": "levelRaise M d k g with d > 1 and d*M = N; LevelRaise.lean explicitly defines levelRaiseFun as g(d*z)",
+    "missingSourceOperation": "ordinary inclusion g(z) from a proper lower level; the full degeneracy family must include d=1 while retaining a proper lower source level",
+    "diagnostic": "Every displayed dilated generator has q^1 coefficient zero by the source coefficient formula when d>1, hence so does their linear span. A normalized lower-level cusp form included without dilation need not: Mathlib discriminant_qExpansion_coeff_one gives 1 for Delta. At level 2 this distinguishes the displayed span from the usual oldspace. This is a source-level mathematical review, not an accepted Lean counterexample theorem in Project 83.",
+    "decision": "Do not port this oldspace/newform definition as the canonical source object. Preserve both inclusions and dilations in a faithful construction."
+  },
+  "classicalObjectReferences": [
+    {
+      "url": "https://math.mit.edu/classes/18.786/2024/LectureNotes15.pdf",
+      "author": "Andrew V. Sutherland",
+      "date": "2024-04-10",
+      "checked": "2026-10-06",
+      "anchors": [
+        "Definition 15.4",
+        "Definition 15.7",
+        "Theorem 15.8",
+        "Definition 15.15"
+      ],
+      "review": "Oldspace uses every divisor d of N/M, including 1. Good-prime newforms acquire all-prime eigenbehavior by a theorem, not definitionally. Nontrivial self-twists characterize CM in weights at least 2; the character conductor dividing the level is a genuine theorem needed for the level-one argument."
+    },
+    {
+      "url": "https://www.lmfdb.org/knowledge/show/mf.cm",
+      "authors": [
+        "John Cremona",
+        "John Voight"
+      ],
+      "checked": "2026-10-06",
+      "review": "Reviewed CM criterion uses nontrivial character self-twist, equivalently equality of good-prime coefficients. It supplies a semantic reference, not a Lean proof."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "repository": "https://github.com/leanprover/hex-real-roots-mathlib",
+  "revision": "53ce31466dc5ff520463249d470119c1e0006e22",
+  "date": "2026-09-12",
+  "license": "Apache-2.0",
+  "author": "Kim Morrison",
+  "originalLean": "4.34.0-rc2",
+  "targetLean": "4.30.0",
+  "files": [
+    {
+      "path": "Dependencies/SturmSource/lake-manifest.json.txt",
+      "sha256": "3f282392fd915b219b0a173ff2700626662e0dbca611663881038977012850c5",
+      "bytes": 7478
+    },
+    {
+      "path": "Dependencies/SturmSource/lakefile.toml.txt",
+      "sha256": "11fc389bd73a51242dd21df27cce5be275554f118e59be54e0c163544eb716c4",
+      "bytes": 1085
+    },
+    {
+      "path": "Dependencies/SturmSource/lean-toolchain.txt",
+      "sha256": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+      "bytes": 29
+    },
+    {
+      "path": "Dependencies/SturmSource/LICENSE.txt",
+      "sha256": "3c4b5e97aa50ecdd1cd93afae7b7a5ddcb7e79f1b965921ddf3d1d49a46ecd7b",
+      "bytes": 11314
+    },
+    {
+      "path": "Dependencies/SturmSource/README.md.txt",
+      "sha256": "16eefaf14569f66ba84865e8b7d0b900d0f068349ae0317b297c46b36911a1d7",
+      "bytes": 3687
+    },
+    {
+      "path": "Dependencies/SturmSource/Sign.lean.txt",
+      "sha256": "d8e2f81d7292114ff88f42dd59afb4a410b6bc48ff9fee4d8cdd7cd8a188b339",
+      "bytes": 1378
+    },
+    {
+      "path": "Dependencies/SturmSource/SturmCertificate.lean.txt",
+      "sha256": "c97a84e0a3a256ef7ab4d4391396660d85203daaae5aca451b34837d47e8e6da",
+      "bytes": 8403
+    },
+    {
+      "path": "Dependencies/SturmSource/SturmChainDefs.lean.txt",
+      "sha256": "c57c980de757357d4f1f88a5ac48cb1d3cd31867872e3629434217b027de5826",
+      "bytes": 10164
+    },
+    {
+      "path": "Dependencies/SturmSource/SturmTheorem.lean.txt",
+      "sha256": "e8e7a7767467eef22e1e37acc01549abe9740b2a8b848552e76cbc9c8be4aa57",
+      "bytes": 33462
+    }
+  ]
+}

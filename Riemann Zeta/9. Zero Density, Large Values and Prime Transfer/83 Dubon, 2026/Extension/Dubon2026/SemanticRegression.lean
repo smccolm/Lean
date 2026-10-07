@@ -4,7 +4,7 @@ import Dubon2026
 
 namespace Dubon2026.SemanticRegression
 
-open Filter MeasureTheory
+open Filter MeasureTheory Asymptotics
 open scoped BigOperators Topology
 
 theorem positive_index_foundation_source (a : ℕ → ℂ) (N : ℕ) (s : ℂ) :
@@ -476,5 +476,757 @@ theorem dyadic_prime_count_source :
     Tendsto (fun N : ℕ => Real.log (Q N).card / Real.log N) atTop (𝓝 1) :=
   ⟨fun _ _ => mem_dyadicPrimes, card_dyadicPrimes, tendsto_card_dyadicPrimes_ratio,
     tendsto_card_dyadicPrimes, tendsto_log_card_dyadicPrimes_ratio⟩
+
+theorem zeta_energy_source :
+    (∀ σ : ℝ, Tendsto (fun N : ℕ =>
+      Real.log (∑ n ∈ Finset.Icc 1 N, (n : ℝ) ^ (-2 * σ)) / (2 * Real.log N))
+      atTop (𝓝 (max (1 / 2 - σ) 0))) ∧
+    (∀ l u : ℝ, l ≤ u → u < 1 / 2 → ∃ K : ℝ, 1 ≤ K ∧
+      ∀ᶠ N : ℕ in atTop, ∀ σ ∈ Set.Icc l u, ∀ p ∈ dyadicPrimes N, ∀ q ∈ dyadicPrimes N,
+        K⁻¹ ≤ (p : ℝ) ^ (-σ) / (q : ℝ) ^ (-σ) ∧
+        (p : ℝ) ^ (-σ) / (q : ℝ) ^ (-σ) ≤ K) ∧
+    TendstoLocallyUniformly (fun N : ℕ => fun σ : ℝ =>
+      Real.log (∑ p ∈ dyadicPrimes N, (p : ℝ) ^ (-2 * σ)) / (2 * Real.log N))
+      (fun σ => 1 / 2 - σ) atTop := by
+  simpa only [PrimeCoefficientComparability, norm_one, one_mul] using zeta_energy_hypotheses
+
+theorem zeta_concentration_source :
+    TendstoLocallyUniformly (fun N : ℕ => fun σ : ℝ =>
+      jessenFunction (fun _ => (1 : ℂ)) N σ / Real.log N)
+      (fun σ => max (1 / 2 - σ) 0) atTop ∧
+    (∀ N : ℕ, ∀ hN : 2 ≤ N,
+      (jessenProbability (a := fun _ => (1 : ℂ)) rfl N : Measure ℝ) =
+        (ENNReal.ofReal (Real.log N))⁻¹ •
+          (jessenStieltjes (a := fun _ => (1 : ℂ)) (by omega : 1 ≤ N) one_ne_zero).measure) ∧
+    IsTightMeasureSet (Set.range (fun N =>
+      (jessenProbability (a := fun _ => (1 : ℂ)) rfl N : Measure ℝ))) ∧
+    Tendsto (jessenProbability (a := fun _ => (1 : ℂ)) rfl) atTop
+      (𝓝 (⟨Measure.dirac (1 / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ ε : ℝ, 0 < ε → Tendsto (fun N =>
+      (jessenProbability (a := fun _ => (1 : ℂ)) rfl N : Measure ℝ)
+        {x | ε ≤ |x - 1 / 2|}) atTop (𝓝 0)) :=
+  ⟨zeta_jessen_concentration.1, fun _ hN => zeta_jessenProbability_eq hN,
+    zeta_jessen_concentration.2.1, zeta_jessen_concentration.2.2.1,
+    zeta_jessen_concentration.2.2.2.2⟩
+
+theorem character_energy_source (q : ℕ) (hq : 0 < q) (χ : DirichletCharacter ℂ q) :
+    (∀ N : ℕ, ∀ σ : ℝ,
+      (∑ n ∈ Finset.Icc 1 N, ‖χ (n : ZMod q)‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) =
+        ∑ n ∈ (Finset.Icc 1 N).filter (fun n => n.Coprime q), (n : ℝ) ^ (-2 * σ)) ∧
+    (∀ σ : ℝ, Tendsto (fun N : ℕ =>
+      Real.log (∑ n ∈ Finset.Icc 1 N, ‖χ (n : ZMod q)‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) /
+        (2 * Real.log N)) atTop (𝓝 (max (1 / 2 - σ) 0))) ∧
+    TendstoLocallyUniformly (fun N : ℕ => fun σ : ℝ =>
+      Real.log (∑ p ∈ dyadicPrimes N, ‖χ (p : ZMod q)‖ ^ 2 * (p : ℝ) ^ (-2 * σ)) /
+        (2 * Real.log N)) (fun σ => 1 / 2 - σ) atTop := by
+  letI : NeZero q := ⟨hq.ne'⟩
+  exact ⟨character_coefficientEnergy_eq χ, globalEnergyAsymptotic_character χ,
+    tendstoLocallyUniformly_character_isolatedEnergy χ⟩
+
+theorem character_concentration_source (q : ℕ) (hq : 0 < q) (χ : DirichletCharacter ℂ q) :
+    TendstoLocallyUniformly (fun N : ℕ => fun σ : ℝ =>
+      jessenFunction (fun n => χ (n : ZMod q)) N σ / Real.log N)
+      (fun σ => max (1 / 2 - σ) 0) atTop ∧
+    Tendsto (fun N : ℕ => Real.log (lastIndex (fun n => χ (n : ZMod q)) N) / Real.log N)
+      atTop (𝓝 1) ∧
+    IsTightMeasureSet (Set.range (fun N =>
+      (jessenProbability (characterCoefficients_one χ) N : Measure ℝ))) ∧
+    Tendsto (jessenProbability (characterCoefficients_one χ)) atTop
+      (𝓝 (⟨Measure.dirac (1 / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ᶠ N : ℕ in atTop, ∃ hN : 1 ≤ N, 1 < lastIndex (fun n => χ (n : ZMod q)) N ∧
+      (jessenProbability (characterCoefficients_one χ) N : Measure ℝ) =
+        (ENNReal.ofReal (Real.log (lastIndex (fun n => χ (n : ZMod q)) N)))⁻¹ •
+          (jessenStieltjes hN ((characterCoefficients_one χ).trans_ne one_ne_zero)).measure) ∧
+    (∀ ε : ℝ, 0 < ε → Tendsto (fun N =>
+      (jessenProbability (characterCoefficients_one χ) N : Measure ℝ)
+        {x | ε ≤ |x - 1 / 2|}) atTop (𝓝 0)) := by
+  letI : NeZero q := ⟨hq.ne'⟩
+  have hh := dirichlet_jessen_concentration χ
+  exact ⟨hh.1, hh.2.1, hh.2.2.1, hh.2.2.2.1, hh.2.2.2.2.2,
+    fun _ hε => tendsto_dirichlet_jessenProbability_outside χ hε⟩
+
+theorem character_sharp_energy_source (q : ℕ) (hq : 0 < q) (χ : DirichletCharacter ℂ q) :
+    (∀ N : ℕ, ∀ σ : ℝ,
+      (∑ n ∈ Finset.Icc 1 N, ‖χ (n : ZMod q)‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) =
+        ∑ n ∈ (Finset.Icc 1 N).filter (fun n => n.Coprime q), (n : ℝ) ^ (-2 * σ)) ∧
+    (∀ σ : ℝ, σ < 1 / 2 → Tendsto (fun N : ℕ =>
+      ((∑ n ∈ (Finset.Icc 1 N).filter (fun n => n.Coprime q), (n : ℝ) ^ (-2 * σ)) -
+        ((q.totient : ℝ) / q) * (N : ℝ) ^ (1 - 2 * σ) / (1 - 2 * σ)) /
+          (N : ℝ) ^ (1 - 2 * σ)) atTop (𝓝 0)) ∧
+    (∃ C : ℝ, 0 ≤ C ∧ ∀ᶠ N : ℕ in atTop,
+      |(∑ n ∈ (Finset.Icc 1 N).filter (fun n => n.Coprime q), (n : ℝ)⁻¹) -
+        ((q.totient : ℝ) / q) * Real.log N| ≤ C) ∧
+    (∀ σ : ℝ, 1 / 2 < σ → ∃ C : ℝ, 0 ≤ C ∧ ∀ N : ℕ,
+      0 ≤ (∑ n ∈ (Finset.Icc 1 N).filter (fun n => n.Coprime q), (n : ℝ) ^ (-2 * σ)) ∧
+        (∑ n ∈ (Finset.Icc 1 N).filter (fun n => n.Coprime q), (n : ℝ) ^ (-2 * σ)) ≤ C) := by
+  letI : NeZero q := ⟨hq.ne'⟩
+  refine ⟨character_coefficientEnergy_eq χ, ?_, ?_, ?_⟩
+  · intro σ hσ
+    simpa only [character_coefficientEnergy_eq] using character_energy_left_asymptotic χ hσ
+  · simpa only [character_coefficientEnergy_eq,
+      show -2 * (1 / 2 : ℝ) = -1 by norm_num, Real.rpow_neg_one] using
+      character_energy_center_error χ
+  · intro σ hσ
+    simpa only [character_coefficientEnergy_eq] using character_energy_right_bounded χ hσ
+
+theorem horizontal_argument_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1) :
+    (∀ t : ℝ, ∃ Z : Finset ℝ, (∀ σ : ℝ, σ ∈ Z ↔
+      (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-((σ : ℂ) + Complex.I * t))).re = 0) ∧
+        Z.card < N) ∧
+    (∀ t l u : ℝ, l ≤ u →
+      (∀ σ ∈ Set.Icc l u,
+        (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-((σ : ℂ) + Complex.I * t))) ≠ 0) →
+      |(∫ σ in l..u, logDeriv (fun z : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-z))
+        ((σ : ℂ) + Complex.I * t)).im| ≤ Real.pi * (2 : ℝ) ^ N) :=
+  ⟨fun t => horizontal_real_zero_finset hN ha t,
+    fun t _ _ hlu hn => abs_im_horizontal_logDeriv_integral_le hN ha t hlu hn⟩
+
+theorem finite_height_log_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1)
+    (T : ℝ) (hT : 0 ≤ T) :
+    Continuous (fun σ : ℝ => (2 * T)⁻¹ * ∫ t in -T..T,
+      Real.log ‖∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-((σ : ℂ) + Complex.I * t))‖) ∧
+    (∀ σ : ℝ, (∀ t ∈ Set.Icc (-T) T,
+      (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-((σ : ℂ) + Complex.I * t))) ≠ 0) →
+      HasDerivAt (fun x : ℝ => (2 * T)⁻¹ * ∫ t in -T..T,
+        Real.log ‖∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-((x : ℂ) + Complex.I * t))‖)
+        ((∫ t in -T..T, logDeriv (fun s : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s))
+          ((σ : ℂ) + Complex.I * t)).re / (2 * T)) σ) :=
+  ⟨continuous_verticalLogMean hN (ha.trans_ne one_ne_zero) T hT,
+    fun σ hn => hasDerivAt_verticalLogMean a N σ T hT hn⟩
+
+theorem contour_error_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1)
+    (l u T : ℝ) (hlu : l ≤ u) (hT : 0 < T)
+    (hb : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) ≠ 0) :
+    |(verticalZeroCount a N hN (ha.trans_ne one_ne_zero) l u T : ℝ) / (2 * T) -
+      (((∫ t in -T..T, logDeriv (fun s : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s))
+        ((u : ℂ) + Complex.I * t)).re / (2 * T)) -
+        ((∫ t in -T..T, logDeriv (fun s : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s))
+          ((l : ℂ) + Complex.I * t)).re / (2 * T))) / (2 * Real.pi)| ≤
+            (2 : ℝ) ^ N / (2 * T) :=
+  abs_zeroDensity_sub_verticalLogDerivMean_le hN ha hlu hT hb
+
+theorem regular_zero_density_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1)
+    (l u dl du : ℝ) (hlu : l ≤ u)
+    (hl : ∀ s : ℂ, s.re = l → (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) ≠ 0)
+    (hu : ∀ s : ℂ, s.re = u → (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) ≠ 0)
+    (hdl : HasDerivAt (jessenFunction a N) dl l)
+    (hdu : HasDerivAt (jessenFunction a N) du u) :
+    Tendsto (fun T => (verticalZeroCount a N hN (ha.trans_ne one_ne_zero) l u T : ℝ) /
+      (2 * T)) atTop (𝓝 ((du - dl) / (2 * Real.pi))) :=
+  tendsto_zeroDensity_regular_endpoints hN ha hlu hl hu hdl hdu
+
+theorem atom_free_zero_density_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1)
+    (l u : ℝ) (hlu : l ≤ u)
+    (hl : (jessenStieltjes hN (ha.trans_ne one_ne_zero)).measure {l} = 0)
+    (hu : (jessenStieltjes hN (ha.trans_ne one_ne_zero)).measure {u} = 0) :
+    Tendsto (fun T => ((∑ s ∈ zerosInOpenRectangleFinset a N hN
+      (ha.trans_ne one_ne_zero) l u T, zeroMultiplicity a N s) : ℝ) / (2 * T)) atTop
+        (𝓝 (((jessenStieltjes hN (ha.trans_ne one_ne_zero)).measure (Set.Ioo l u)).toReal /
+          (2 * Real.pi))) := by
+  simpa only [verticalZeroCount, jessenMeasure, Nat.cast_sum] using
+    tendsto_zeroDensity_atom_free hN ha hlu hl hu
+
+theorem total_zero_density_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1) :
+    (∀ (T : ℝ) (s : ℂ), s ∈ verticalZerosFinset a N hN (ha.trans_ne one_ne_zero) T ↔
+      |s.im| < T ∧ (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) = 0) ∧
+    Tendsto (fun T => ((∑ s ∈ verticalZerosFinset a N hN (ha.trans_ne one_ne_zero) T,
+      zeroMultiplicity a N s) : ℝ) / (2 * T)) atTop
+        (𝓝 (Real.log (lastIndex a N) / (2 * Real.pi))) := by
+  refine ⟨mem_verticalZerosFinset a N hN (ha.trans_ne one_ne_zero), ?_⟩
+  simpa only [totalVerticalZeroCount, Nat.cast_sum] using tendsto_totalVerticalZeroDensity hN ha
+
+theorem zeta_zero_count_source :
+    ∃ B : Set ℝ, B.Countable ∧ ∀ ε : ℝ, 0 < ε → ε ∉ B →
+      ∃ D : ℕ → ℝ,
+        (∀ (N : ℕ) (hN : 2 ≤ N), Tendsto (fun T =>
+          ((∑ s ∈ (verticalZerosFinset (fun _ => (1 : ℂ)) N (by omega) one_ne_zero T).filter
+            (fun s => ε ≤ |s.re - 1 / 2|), zeroMultiplicity (fun _ => (1 : ℂ)) N s) : ℝ) /
+              (2 * T)) atTop (𝓝 (D N))) ∧
+        Tendsto (fun N : ℕ => (2 * Real.pi / Real.log N) * D N) atTop (𝓝 0) := by
+  simpa only [outsideVerticalZeroCount, Nat.cast_sum] using zeta_zero_count_concentration_off_countable
+
+theorem zeta_count_tail_source (ε δ : ℝ) (hε : 0 < ε) (hδ : 0 < δ) :
+    ∀ᶠ N : ℕ in atTop, ∃ hN : 2 ≤ N, ∀ᶠ T : ℝ in atTop,
+      (2 * Real.pi / Real.log N) *
+        (((∑ s ∈ (verticalZerosFinset (fun _ => (1 : ℂ)) N (by omega) one_ne_zero T).filter
+          (fun s => ε ≤ |s.re - 1 / 2|), zeroMultiplicity (fun _ => (1 : ℂ)) N s) : ℝ) /
+            (2 * T)) < δ := by
+  simpa only [outsideVerticalZeroCount, Nat.cast_sum] using zeta_outside_count_eventually_small hε hδ
+
+theorem zeta_atom_free_count_source (ε : ℝ) (hε : 0 < ε)
+    (hb : ∀ N : ℕ, 2 ≤ N →
+      (jessenProbability (a := fun _ => (1 : ℂ)) rfl N : Measure ℝ) {1 / 2 - ε} = 0 ∧
+      (jessenProbability (a := fun _ => (1 : ℂ)) rfl N : Measure ℝ) {1 / 2 + ε} = 0) :
+    ∃ D : ℕ → ℝ,
+      (∀ (N : ℕ) (hN : 2 ≤ N), Tendsto (fun T =>
+        ((∑ s ∈ (verticalZerosFinset (fun _ => (1 : ℂ)) N (by omega) one_ne_zero T).filter
+          (fun s => ε ≤ |s.re - 1 / 2|), zeroMultiplicity (fun _ => (1 : ℂ)) N s) : ℝ) /
+            (2 * T)) atTop (𝓝 (D N))) ∧
+      Tendsto (fun N : ℕ => (2 * Real.pi / Real.log N) * D N) atTop (𝓝 0) := by
+  simpa only [outsideVerticalZeroCount, Nat.cast_sum] using zeta_zero_count_concentration hε hb
+
+theorem coefficient_shift_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N)
+    (ha : a 1 ≠ 0) (c : ℝ) :
+    (∀ s : ℂ, (∑ n ∈ Finset.Icc 1 N, (a n * (n : ℂ) ^ (c : ℂ)) * (n : ℂ) ^ (-s)) =
+      ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-(s - c))) ∧
+    (∀ s : ℂ, zeroMultiplicity (fun n => a n * (n : ℂ) ^ (c : ℂ)) N s =
+      zeroMultiplicity a N (s - c)) ∧
+    (∀ σ : ℝ, jessenFunction (fun n => a n * (n : ℂ) ^ (c : ℂ)) N σ =
+      jessenFunction a N (σ - c)) ∧
+    jessenMeasure (a := fun n => a n * (n : ℂ) ^ (c : ℂ)) hN (by simpa using ha) =
+      Measure.map (fun x : ℝ => x + c) (jessenMeasure hN ha) :=
+  ⟨dirichletSum_shiftedCoefficients a N c, zeroMultiplicity_shiftedCoefficients a N c,
+    jessenFunction_shiftedCoefficients a N c, jessenMeasure_shiftedCoefficients hN ha c⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem cusp_coefficients_source (Q : ℕ) (k : ℤ)
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1) (N : ℕ) (hN : 1 ≤ N) :
+    (∀ τ : UpperHalfPlane, HasSum (fun n => (UpperHalfPlane.qExpansion 1 f).coeff n *
+      (Function.Periodic.qParam 1 τ) ^ n) (f τ)) ∧
+    (UpperHalfPlane.qExpansion 1 f).coeff 0 = 0 ∧
+    (∀ n : ℕ, ‖normalizedCuspCoefficients f n‖ =
+      ‖(UpperHalfPlane.qExpansion 1 f).coeff n‖ * (n : ℝ) ^ (-((k : ℝ) - 1) / 2)) ∧
+    (∀ s : ℂ, (∑ n ∈ Finset.Icc 1 N,
+      (UpperHalfPlane.qExpansion 1 f).coeff n * (n : ℂ) ^ (-s)) =
+        ∑ n ∈ Finset.Icc 1 N, normalizedCuspCoefficients f n *
+          (n : ℂ) ^ (-(s - ((k : ℂ) - 1) / 2))) ∧
+    jessenMeasure (a := fun n => (UpperHalfPlane.qExpansion 1 f).coeff n)
+      hN (hf.trans_ne one_ne_zero) =
+        Measure.map (fun x : ℝ => x + ((k : ℝ) - 1) / 2)
+          (jessenMeasure (a := normalizedCuspCoefficients f) hN
+            ((normalizedCuspCoefficients_one f hf).trans_ne one_ne_zero)) :=
+  ⟨cuspCoefficients_hasSum f, cuspCoefficients_zero f, norm_normalizedCuspCoefficients f,
+    dirichletSum_classicalCuspCoefficients f N,
+    cusp_jessenMeasure_classical f (hf.trans_ne one_ne_zero) hN⟩
+
+theorem sliding_window_integral_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (l u : ℝ) (T : ℝ) (hT : 0 ≤ T) :
+    (∀ (τ : ℝ) (s : ℂ), s ∈ slidingZerosFinset a N hN
+      (ha.trans_ne one_ne_zero) l u 1 τ ↔
+        l < s.re ∧ s.re < u ∧ |s.im - τ| < 1 ∧
+          (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) = 0) ∧
+    (∫ t in -T..T, ((∑ s ∈ slidingZerosFinset a N hN
+      (ha.trans_ne one_ne_zero) l u 1 t, zeroMultiplicity a N s) : ℝ)) =
+      ∑ s ∈ zerosInOpenRectangleFinset a N hN (ha.trans_ne one_ne_zero) l u (T + 1),
+        volume.real (Set.Ioc (-T) T ∩ Set.Ioo (s.im - 1) (s.im + 1)) *
+          (zeroMultiplicity a N s : ℝ) := by
+  refine ⟨fun τ s => mem_slidingZerosFinset a N hN (ha.trans_ne one_ne_zero) l u 1 τ s, ?_⟩
+  simpa only [slidingZeroCount, windowOverlap, Nat.cast_sum] using
+    integral_slidingZeroCount_eq a N hN (ha.trans_ne one_ne_zero) l u hT
+
+/-- The actual phase regularity and the height limit are both derived. -/
+theorem twist_count_frequency_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (l u : ℝ) :
+    Tendsto (fun T : ℝ => ((∑ s ∈ zerosInOpenRectangleFinset a N hN
+      (ha.trans_ne one_ne_zero) l u T, zeroMultiplicity a N s) : ℝ) / (2 * T)) atTop
+      (𝓝 ((∫ z, ((∑ s ∈ zerosInOpenRectangleFinset (twistedCoefficients a N z) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u 1,
+          zeroMultiplicity (twistedCoefficients a N z) N s) : ℝ) ∂torusHaar N) / 2)) := by
+  simpa only [twistZeroCount, verticalZeroCount, Nat.cast_sum] using
+    tendsto_zeroDensity_torus_mean hN (ha.trans_ne one_ne_zero) l u
+
+theorem twist_count_measurable_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (l u H : ℝ) :
+    LowerSemicontinuous (fun z : PrimeTorus N =>
+      ∑ s ∈ zerosInOpenRectangleFinset (twistedCoefficients a N z) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u H,
+          zeroMultiplicity (twistedCoefficients a N z) N s) ∧
+    Measurable (fun z : PrimeTorus N =>
+      ∑ s ∈ zerosInOpenRectangleFinset (twistedCoefficients a N z) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u H,
+          zeroMultiplicity (twistedCoefficients a N z) N s) :=
+  ⟨lowerSemicontinuous_twistZeroCount hN (ha.trans_ne one_ne_zero) l u H,
+    measurable_twistZeroCount hN (ha.trans_ne one_ne_zero) l u H⟩
+
+theorem horizontal_phase_boundary_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (l u τ : ℝ) :
+    ∀ᵐ z ∂torusHaar N, ∀ s : ℂ, l ≤ s.re → s.re ≤ u → s.im = τ →
+      (∑ n ∈ Finset.Icc 1 N,
+        (a n * bohrMonomial N n (fun p => fourier 1 (z p))) * (n : ℂ) ^ (-s)) ≠ 0 := by
+  simpa only [dirichletSum, twistedCoefficients] using
+    ae_horizontal_phase_closed_segment_ne_zero hN (ha.trans_ne one_ne_zero) l u τ
+
+theorem mean_count_small_height_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (l u : ℝ) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∀ H : ℝ, 0 ≤ H → H ≤ 1 →
+      (∫ z, ((∑ s ∈ zerosInOpenRectangleFinset (twistedCoefficients a N z) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u H,
+          zeroMultiplicity (twistedCoefficients a N z) N s) : ℝ) ∂torusHaar N) ≤ K * H := by
+  simpa only [twistZeroCount, verticalZeroCount, Nat.cast_sum] using
+    exists_integral_twistZeroCount_le_height hN (ha.trans_ne one_ne_zero) l u
+
+theorem complex_phase_extension_source (a : ℕ → ℂ) (N : ℕ)
+    (xs : (PrimeCoordinate N → ℂ) × ℂ) (x : PrimeCoordinate N → ℝ) (s : ℂ) :
+    AnalyticAt ℂ (fun ys : (PrimeCoordinate N → ℂ) × ℂ =>
+      ∑ n ∈ Finset.Icc 1 N, (a n * ∏ p : PrimeCoordinate N,
+        Complex.exp (2 * Real.pi * Complex.I * ys.1 p) ^ n.factorization p.val) *
+          (n : ℂ) ^ (-ys.2)) xs ∧
+    (∑ n ∈ Finset.Icc 1 N, (a n * ∏ p : PrimeCoordinate N,
+      Complex.exp (2 * Real.pi * Complex.I * (x p : ℂ)) ^ n.factorization p.val) *
+        (n : ℂ) ^ (-s)) =
+      dirichletSum (twistedCoefficients a N (fun p => (x p : UnitAddCircle))) N s := by
+  constructor
+  · exact analyticAt_complexPhaseFamily a N xs
+  · exact complexPhaseFamily_real a N x s
+
+theorem weighted_zero_moments_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 = 1)
+    (l u T : ℝ) (hlu : l ≤ u) (hT : 0 ≤ T)
+    (hb : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) ≠ 0) (k : ℕ) :
+    RectangleIntegral' (fun s => s ^ k * logDeriv (fun w : ℂ =>
+      ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-w)) s) (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ) =
+      ∑ s ∈ zerosInOpenRectangleFinset a N hN (ha.trans_ne one_ne_zero) l u T,
+        s ^ k * (analyticOrderNatAt (fun w : ℂ =>
+          ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-w)) s : ℂ) :=
+  rectangleIntegral_power_logDeriv_eq_zero_power_sum hN (ha.trans_ne one_ne_zero) hlu hT hb k
+
+theorem analytic_zero_polynomial_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (x : PrimeCoordinate N → ℂ)
+    (l u T : ℝ) (hlu : l ≤ u) (hT : 0 ≤ T)
+    (hn : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      dirichletSum (complexPhaseCoefficients a N x) N s ≠ 0) :
+    (∀ k : ℕ, AnalyticAt ℂ (fun y =>
+      (((rectangleZeroMultiset (complexPhaseCoefficients a N y) N hN
+        (by rw [complexPhaseCoefficients_one, ha]; exact one_ne_zero) l u T).map
+          (fun s => Polynomial.X - Polynomial.C s)).prod).coeff k) x) ∧
+    (∀ (y : PrimeCoordinate N → ℂ) (s : ℂ),
+      (((rectangleZeroMultiset (complexPhaseCoefficients a N y) N hN
+        (by rw [complexPhaseCoefficients_one, ha]; exact one_ne_zero) l u T).map
+          (fun z => Polynomial.X - Polynomial.C z)).prod).rootMultiplicity s =
+      if s ∈ zerosInOpenRectangleFinset (complexPhaseCoefficients a N y) N hN
+          (by rw [complexPhaseCoefficients_one, ha]; exact one_ne_zero) l u T then
+        analyticOrderNatAt (dirichletSum (complexPhaseCoefficients a N y) N) s else 0) := by
+  refine ⟨fun k => ?_, fun y s => ?_⟩
+  · exact analyticAt_complexPhaseZeroPolynomial_coeff hN (ha.trans_ne one_ne_zero) x hlu hT hn k
+  · exact rectangleZeroPolynomial_rootMultiplicity (complexPhaseCoefficients a N y) N hN
+      (by rw [complexPhaseCoefficients_one, ha]; exact one_ne_zero) l u T s
+
+theorem real_vertical_zero_polynomial_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (x : PrimeCoordinate N → ℝ)
+    (l u T σ : ℝ) (hlu : l ≤ u) (hT : 0 ≤ T)
+    (hn : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      dirichletSum (twistedCoefficients a N (fun p => (x p : UnitAddCircle))) N s ≠ 0) :
+    (∀ k : ℕ, AnalyticAt ℝ (fun y =>
+      (phaseVerticalRealPolynomial a N hN (ha.trans_ne one_ne_zero) l u T σ y).coeff k) x) ∧
+    (∀ (y : PrimeCoordinate N → ℝ) (t : ℝ), l < σ → σ < u → |t| < T →
+      (phaseVerticalRealPolynomial a N hN (ha.trans_ne one_ne_zero) l u T σ y).rootMultiplicity t =
+        2 * analyticOrderNatAt (fun s : ℂ => ∑ n ∈ Finset.Icc 1 N,
+          (a n * bohrMonomial N n (fun p => fourier 1 (y p : UnitAddCircle))) *
+            (n : ℂ) ^ (-s)) ((σ : ℂ) + Complex.I * t)) := by
+  have hn' : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      complexPhaseFamily a N (complexifyPhase x, s) ≠ 0 := by
+    intro s hs
+    change complexPhaseFamily a N ((fun p => (x p : ℂ)), s) ≠ 0
+    rw [complexPhaseFamily_real]
+    exact hn s hs
+  refine ⟨fun k => analyticAt_phaseVerticalRealPolynomial_coeff hN (ha.trans_ne one_ne_zero)
+    x hlu hT hn' σ k, ?_⟩
+  intro y t hl hu ht
+  exact phaseVerticalRealPolynomial_rootMultiplicity_interior a N hN
+    (ha.trans_ne one_ne_zero) hl hu ht y
+
+theorem actual_phase_polynomial_signs_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (x : PrimeCoordinate N → ℝ)
+    (l u T σ : ℝ) (hlu : l ≤ u) (hT : 0 ≤ T)
+    (hn : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      dirichletSum (twistedCoefficients a N (fun p => (x p : UnitAddCircle))) N s ≠ 0)
+    (d q : ℕ) (p : Fin q → MvPolynomial (Fin d) ℝ) (F : (Fin q → SignType) → ℕ) :
+    ∃ r > 0, ∀ᵐ y ∂(volume : Measure (PrimeCoordinate N → ℝ)).restrict (Metric.ball x r),
+      ContinuousAt (fun z => F (fun i => SignType.sign (MvPolynomial.aeval
+        (fun j : Fin d => (phaseVerticalRealPolynomial a N hN (ha.trans_ne one_ne_zero)
+          l u T σ z).coeff j.val) (p i)))) y := by
+  have hn' : ∀ s ∈ RectangleBorder (⟨l, -T⟩ : ℂ) (⟨u, T⟩ : ℂ),
+      complexPhaseFamily a N (complexifyPhase x, s) ≠ 0 := by
+    intro s hs
+    change complexPhaseFamily a N ((fun p => (x p : ℂ)), s) ≠ 0
+    rw [complexPhaseFamily_real]
+    exact hn s hs
+  exact phase_coefficient_signs_locally_ae_continuous hN (ha.trans_ne one_ne_zero)
+    x hlu hT hn' σ p F
+
+theorem sturm_multiplicity_root_count_source (P : Polynomial ℝ) (hP : P ≠ 0) (l u : ℝ) :
+    (∑ k ∈ Finset.range P.natDegree,
+      sturmOpenCount (derivativeRootQuotient (derivativeGcdLayer P k)) l u) =
+        (P.roots.filter (fun t => l < t ∧ t < u)).card :=
+  sturmMultiplicityCount_eq_root_count hP l u
+
+theorem actual_phase_sturm_vertical_count_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (x : PrimeCoordinate N → ℝ)
+    {l u T H σ : ℝ} (hl : l < σ) (hu : σ < u) (hH : H ≤ T) :
+    sturmMultiplicityCount
+      (phaseVerticalRealPolynomial a N hN (ha.trans_ne one_ne_zero) l u T σ x) (-H) H =
+      2 * ∑ s ∈ (zerosInOpenRectangleFinset
+        (twistedCoefficients a N (fun p => (x p : UnitAddCircle))) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u H).filter (fun s => s.re = σ),
+          analyticOrderNatAt (fun w : ℂ => ∑ n ∈ Finset.Icc 1 N,
+            (a n * bohrMonomial N n (fun p => fourier 1 (x p : UnitAddCircle))) *
+              (n : ℂ) ^ (-w)) s :=
+  phase_sturm_count_eq_twice_vertical_count a N hN (ha.trans_ne one_ne_zero) hl hu hH x
+
+theorem almost_analytic_root_count_source {V : Type*} [NormedAddCommGroup V]
+    [NormedSpace ℝ V] [MeasurableSpace V] [BorelSpace V] [FiniteDimensional ℝ V]
+    (μ : Measure V) [Measure.IsAddHaarMeasure μ] {s : Set V} {P : V → Polynomial ℝ}
+    {d : ℕ} (hd : ∀ y, (P y).natDegree ≤ d)
+    (hP : ∀ k : ℕ, ∀ᵐ y ∂μ.restrict s, AnalyticAt ℝ (fun z => (P z).coeff k) y)
+    (l u : ℝ) :
+    ∀ᵐ y ∂μ.restrict s, ∀ᶠ z in 𝓝 y,
+      ((P z).roots.filter (fun t => l < t ∧ t < u)).card =
+        ((P y).roots.filter (fun t => l < t ∧ t < u)).card :=
+  ae_realPolynomialRootCount_locally_constant μ hd hP l u
+
+theorem torus_vertical_multiplicity_regularity_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) {l u σ : ℝ} (hl : l < σ) (hu : σ < u) (H : ℝ) :
+    ∀ᵐ z ∂torusHaar N, ContinuousAt (fun w : PrimeTorus N =>
+      ∑ s ∈ (zerosInOpenRectangleFinset (twistedCoefficients a N w) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u H).filter (fun s => s.re = σ),
+          analyticOrderNatAt (fun v : ℂ => ∑ n ∈ Finset.Icc 1 N,
+            (a n * bohrMonomial N n (fun p => fourier 1 (w p))) * (n : ℂ) ^ (-v)) s) z :=
+  ae_torus_vertical_count_continuous hN (ha.trans_ne one_ne_zero) hl hu H
+
+theorem torus_rectangle_multiplicity_regularity_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) (l u : ℝ) {H : ℝ} (hH : 0 ≤ H) :
+    ∀ᵐ z ∂torusHaar N, ContinuousAt (fun w : PrimeTorus N =>
+      ∑ s ∈ zerosInOpenRectangleFinset (twistedCoefficients a N w) N hN
+        (by rw [twistedCoefficients_one, ha]; exact one_ne_zero) l u H,
+          analyticOrderNatAt (fun v : ℂ => ∑ n ∈ Finset.Icc 1 N,
+            (a n * bohrMonomial N n (fun p => fourier 1 (w p))) * (n : ℂ) ^ (-v)) s) z :=
+  ae_continuousAt_twistZeroCount hN (ha.trans_ne one_ne_zero) l u hH
+
+theorem jessen_tornehave_all_endpoints_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 = 1) {l u : ℝ} (hlu : l < u) :
+    Tendsto (fun T : ℝ => ((∑ s ∈ zerosInOpenRectangleFinset a N hN
+      (ha.trans_ne one_ne_zero) l u T,
+        analyticOrderNatAt (fun v : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-v)) s) : ℝ) /
+          (2 * T)) atTop (𝓝 ((derivWithin (jessenFunction a N) (Set.Iio u) u -
+            derivWithin (jessenFunction a N) (Set.Ioi l) l) / (2 * Real.pi))) := by
+  simpa only [verticalZeroCount, zeroMultiplicity, dirichletSum, Nat.cast_sum] using
+    tendsto_zeroDensity_one_sided_derivatives hN ha hlu
+
+theorem zeta_all_endpoints_count_source (ε : ℝ) (hε : 0 < ε) :
+    ∃ D : ℕ → ℝ,
+      (∀ (N : ℕ) (hN : 2 ≤ N), Tendsto (fun T =>
+        ((∑ s ∈ (verticalZerosFinset (fun _ => (1 : ℂ)) N (by omega) one_ne_zero T).filter
+          (fun s => ε ≤ |s.re - 1 / 2|), zeroMultiplicity (fun _ => (1 : ℂ)) N s) : ℝ) /
+            (2 * T)) atTop (𝓝 (D N))) ∧
+      Tendsto (fun N : ℕ => (2 * Real.pi / Real.log N) * D N) atTop (𝓝 0) := by
+  simpa only [outsideVerticalZeroCount, Nat.cast_sum] using zeta_zero_count_concentration_all_endpoints hε
+
+theorem abstract_actual_zero_measure_source {a : ℕ → ℂ} {Q : ℕ → Finset ℕ} {α : ℝ}
+    (ha : a 1 = 1) (hQ : IsolatedPrimeBlocks Q)
+    (hcard : Tendsto (fun N => (Q N).card) atTop atTop)
+    (hc : PrimeCoefficientComparability a Q α)
+    (hH1 : GlobalEnergyAsymptotic a α) (hH2 : IsolatedEnergyAsymptotic a Q α) :
+    Tendsto (jessenProbability ha) atTop
+      (𝓝 (⟨Measure.dirac α, inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ᶠ N : ℕ in atTop, ∃ hN : 1 ≤ N, 1 < lastIndex a N ∧ ∀ l u : ℝ,
+      Tendsto (fun T : ℝ => (2 * Real.pi / Real.log (lastIndex a N)) *
+        (((∑ s ∈ zerosInOpenRectangleFinset a N hN (ha.trans_ne one_ne_zero) l u T,
+          analyticOrderNatAt (fun v : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-v)) s) : ℝ) /
+            (2 * T))) atTop (𝓝 (((jessenProbability ha N : Measure ℝ) (Set.Ioo l u)).toReal))) := by
+  have hh := abstract_actual_zero_concentration ha hQ hcard hc hH1 hH2
+  simpa only [verticalZeroCount, zeroMultiplicity, dirichletSum, Nat.cast_sum] using hh.2.2.2
+
+theorem dirichlet_actual_zero_measure_source {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) :
+    Tendsto (jessenProbability (characterCoefficients_one χ)) atTop
+      (𝓝 (⟨Measure.dirac (1 / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ᶠ N : ℕ in atTop, ∃ hN : 1 ≤ N, 1 < lastIndex (fun n => χ (n : ZMod q)) N ∧ ∀ l u : ℝ,
+      Tendsto (fun T : ℝ => (2 * Real.pi / Real.log (lastIndex (fun n => χ (n : ZMod q)) N)) *
+        (((∑ s ∈ zerosInOpenRectangleFinset (characterCoefficients χ) N hN
+          ((characterCoefficients_one χ).trans_ne one_ne_zero) l u T,
+            analyticOrderNatAt (fun v : ℂ => ∑ n ∈ Finset.Icc 1 N,
+              χ (n : ZMod q) * (n : ℂ) ^ (-v)) s) : ℝ) / (2 * T))) atTop
+                (𝓝 (((jessenProbability (characterCoefficients_one χ) N : Measure ℝ)
+                  (Set.Ioo l u)).toReal))) := by
+  have hh := dirichlet_actual_zero_concentration χ
+  simpa only [verticalZeroCount, zeroMultiplicity, dirichletSum, Nat.cast_sum,
+    characterCoefficients] using hh.2.2.2
+
+/-- The dyadic prime count is derived from density among all primes and the actual PNT. -/
+theorem selected_prime_density_source {S : ℕ → Prop} {η : ℝ}
+    (hd : Tendsto (fun N : ℕ => ((selectedPrimesUpTo S N).card : ℝ) /
+      Nat.primeCounting N) atTop (𝓝 η)) :
+    Tendsto (fun N : ℕ => ((selectedDyadicPrimes S N).card : ℝ) /
+      ((N : ℝ) / Real.log N)) atTop (𝓝 (η / 2)) := selected_dyadic_density hd
+
+/-- The source quadratic sum is locally uniform; its logarithmic limit is derived. -/
+theorem selected_prime_energy_source {a : ℕ → ℂ} {S : ℕ → Prop} {η : ℝ} (hη : 0 < η)
+    (hd : Tendsto (fun N : ℕ => ((selectedPrimesUpTo S N).card : ℝ) /
+      Nat.primeCounting N) atTop (𝓝 η))
+    (hb : ∀ p, Nat.Prime p → S p → 1 ≤ ‖a p‖ ∧ ‖a p‖ ≤ 2) :
+    TendstoLocallyUniformlyOn
+      (fun N : ℕ => fun σ : ℝ => Real.log
+        (∑ p ∈ selectedDyadicPrimes S N, ‖a p‖ ^ 2 * (p : ℝ) ^ (-2 * σ)) /
+          (2 * Real.log N)) (fun σ => 1 / 2 - σ) atTop (Set.Iio (1 / 2)) :=
+  (selected_primes_H2 hη hd hb).2.2.2
+
+/-- A cumulative mean-square limit is strictly narrower than this all-abscissa energy limit. -/
+theorem mean_square_energy_source {a : ℕ → ℂ} {S : ℕ → Prop} {c η : ℝ}
+    (ha : a 1 = 1)
+    (hmean : Tendsto (fun N : ℕ => (∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2) / N) atTop (𝓝 c))
+    (hη : 0 < η)
+    (hd : Tendsto (fun N : ℕ => ((selectedPrimesUpTo S N).card : ℝ) /
+      Nat.primeCounting N) atTop (𝓝 η))
+    (hb : ∀ p, Nat.Prime p → S p → 1 ≤ ‖a p‖ ∧ ‖a p‖ ≤ 2) (σ : ℝ) :
+    Tendsto (fun N : ℕ => Real.log
+      (∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) / (2 * Real.log N))
+      atTop (𝓝 (max (1 / 2 - σ) 0)) := by
+  obtain ⟨hQ, hcard, hc, hH2⟩ := selected_primes_H2 hη hd hb
+  exact globalEnergyAsymptotic_of_mean_isolated ha hmean hQ hcard hc hH2 σ
+
+/-- Exact positive-index Abel formula; it includes sigma=0 and the critical exponent. -/
+theorem weighted_energy_abel_source (a : ℕ → ℂ) {N : ℕ} (hN : 1 ≤ N) (σ : ℝ) :
+    (∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) =
+      (∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2) * (N : ℝ) ^ (-2 * σ) +
+        2 * σ * ∫ x in Set.Ioc (1 : ℝ) N,
+          (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖a n‖ ^ 2) * x ^ (-2 * σ - 1) := by
+  simpa only [coefficientEnergy, squareSummatory, Nat.floor_natCast] using coefficientEnergy_abel a hN σ
+
+open scoped MatrixGroups CongruenceSubgroup in
+/-- The conditional classical limit uses the actual period-one Fourier coefficients. -/
+theorem cusp_classical_conditional_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1) {c density : ℝ}
+    (hmean : Tendsto (fun N : ℕ =>
+      (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2) / N) atTop (𝓝 c))
+    (hdensity : 0 < density)
+    (hd : Tendsto (fun N : ℕ => ((selectedPrimesUpTo (cuspPrimeSelection f) N).card : ℝ) /
+      Nat.primeCounting N) atTop (𝓝 density)) :
+    Tendsto (jessenProbability (a := fun n => (UpperHalfPlane.qExpansion 1 f).coeff n) hf) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) :=
+  (cusp_concentration_of_mean_prime_density f hf hmean hdensity hd).2.2.2.1
+
+/-- Exact finite quadratic sums and all three ranges from the literal cumulative O-estimate. -/
+theorem rankin_selberg_three_regimes_source {a : ℕ → ℂ} {c : ℝ}
+    (hRS : (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖a n‖ ^ 2) - c * x) =O[atTop]
+      (fun x : ℝ => x ^ (3 / 5 : ℝ))) :
+    (∀ σ : ℝ, σ < 1 / 2 → Tendsto (fun N : ℕ => ((∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) -
+      c * (N : ℝ) ^ (1 - 2 * σ) / (1 - 2 * σ)) /
+        (N : ℝ) ^ (1 - 2 * σ)) atTop (𝓝 0)) ∧
+    (∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ, 1 ≤ N →
+      |(∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2 * (n : ℝ) ^ (-2 * (1 / 2 : ℝ))) - c * Real.log N| ≤ B) ∧
+    (∀ σ : ℝ, 1 / 2 < σ → ∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+      0 ≤ (∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ∧ (∑ n ∈ Finset.Icc 1 N, ‖a n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ≤ B) :=
+  rankin_selberg_weighted_energy_of_bigO hRS
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem cusp_classical_rankin_selberg_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1) {c density : ℝ}
+    (hRS : (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - c * x) =O[atTop]
+      (fun x : ℝ => x ^ (3 / 5 : ℝ)))
+    (hdensity : 0 < density)
+    (hd : Tendsto (fun N : ℕ => ((selectedPrimesUpTo (cuspPrimeSelection f) N).card : ℝ) /
+      Nat.primeCounting N) atTop (𝓝 density)) :
+    Tendsto (jessenProbability (a := fun n => (UpperHalfPlane.qExpansion 1 f).coeff n) hf) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) :=
+  (cusp_concentration_of_rankin_selberg_prime_density f hf hRS hdensity hd).2.2.2.1
+
+
+/-- The actual angle-density measure and literal coefficient band, with derived normalization. -/
+theorem sato_tate_measure_source :
+    (∫ θ in Set.Icc (0 : ℝ) Real.pi, (2 / Real.pi) * Real.sin θ ^ 2) = 1 ∧
+    0 < (Measure.map (fun θ : ℝ => 2 * Real.cos θ)
+      ((volume.restrict (Set.Icc (0 : ℝ) Real.pi)).withDensity
+        (fun θ => ENNReal.ofReal ((2 / Real.pi) * Real.sin θ ^ 2))))
+          (Set.Icc (-2) (-1) ∪ Set.Icc 1 2) ∧
+    (satoTateProbability : Measure ℝ) (frontier (Set.Icc (-2) (-1) ∪ Set.Icc 1 2)) = 0 :=
+  ⟨integral_satoTateAngleDensity, satoTateBand_pos, satoTateBand_null_frontier⟩
+
+open scoped Classical in
+/-- Density uses the exact filtered primes and discards only primes dividing the positive level. -/
+theorem sato_tate_prime_count_source {a : ℕ → ℂ} {Q : ℕ} (hQ : 0 < Q)
+    (hreal : ∀ p, Nat.Prime p → ¬p ∣ Q → (a p).im = 0)
+    (hST : Tendsto (primeEmpirical (fun p => (a p).re)) atTop (𝓝 satoTateProbability)) :
+    0 < satoTateBandDensity ∧
+    Tendsto (fun N : ℕ =>
+      (((Nat.primesLE N).filter (fun p => ¬p ∣ Q ∧ 1 ≤ ‖a p‖ ∧ ‖a p‖ ≤ 2)).card : ℝ) /
+        Nat.primeCounting N) atTop (𝓝 satoTateBandDensity) :=
+  by
+    refine ⟨satoTateBandDensity_pos, ?_⟩
+    apply (sato_tate_selected_prime_density hQ hreal hST).congr'
+    apply Filter.Eventually.of_forall
+    intro N
+    have he : selectedPrimesUpTo (fun p => ¬p ∣ Q ∧ 1 ≤ ‖a p‖ ∧ ‖a p‖ ≤ 2) N =
+        (Nat.primesLE N).filter (fun p => ¬p ∣ Q ∧ 1 ≤ ‖a p‖ ∧ ‖a p‖ ≤ 2) := by
+      apply Finset.ext
+      intro p
+      simp only [mem_selectedPrimesUpTo, Finset.mem_filter, Nat.mem_primesLE]
+      tauto
+    exact congrArg (fun B : Finset ℕ => (B.card : ℝ) / Nat.primeCounting N) he
+
+open scoped MatrixGroups CongruenceSubgroup in
+/-- Classical Fourier coefficients consume separate cumulative energy and Sato–Tate inputs. -/
+theorem cusp_classical_arithmetic_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1) (hQ : 0 < Q) {c : ℝ}
+    (hRS : (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - c * x) =O[atTop]
+      (fun x : ℝ => x ^ (3 / 5 : ℝ)))
+    (hreal : ∀ p, Nat.Prime p → ¬p ∣ Q → (normalizedCuspCoefficients f p).im = 0)
+    (hST : Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f p).re))
+      atTop (𝓝 satoTateProbability)) :
+    Tendsto (jessenProbability (a := fun n => (UpperHalfPlane.qExpansion 1 f).coeff n) hf) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) :=
+  (cusp_concentration_of_rankin_selberg_sato_tate f hf hQ hRS hreal hST).2.2.2.1
+
+
+open scoped MatrixGroups in
+/-- The actual hyperbolic integral is integrable and detects a zero cusp form. -/
+theorem petersson_integral_source {Γ : Subgroup (GL (Fin 2) ℝ)} [Γ.IsArithmetic]
+    {k : ℤ} (f : CuspForm Γ k) :
+    IntegrableOn (fun τ : UpperHalfPlane =>
+      starRingEnd ℂ (f τ) * f τ * (τ.im : ℂ) ^ k) ModularGroup.fd volume ∧
+    ((∫ τ in ModularGroup.fd,
+      starRingEnd ℂ (f τ) * f τ * (τ.im : ℂ) ^ k ∂(volume : Measure UpperHalfPlane)) = 0 → f = 0) :=
+  ⟨peterssonInner_integrableOn k Γ f f, cuspForm_eq_zero_of_peterssonIntegral f⟩
+
+open scoped MatrixGroups ModularForm in
+/-- The level pairing is the literal sum over all Gamma0 cosets, with actual slash integrals. -/
+theorem petersson_coset_definiteness_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    letI : Fintype (SL(2, ℤ) ⧸ CongruenceSubgroup.Gamma0 Q) := Subgroup.fintypeQuotientOfFiniteIndex
+    (∑ q : SL(2, ℤ) ⧸ CongruenceSubgroup.Gamma0 Q,
+      ∫ τ in ModularGroup.fd,
+        starRingEnd ℂ ((⇑f ∣[k] q.out⁻¹) τ) * ((⇑f ∣[k] q.out⁻¹) τ) * (τ.im : ℂ) ^ k
+          ∂(volume : Measure UpperHalfPlane)) = 0 → f = 0 := by
+  intro h
+  exact cuspPetersson_definite f h
+
+
+open scoped MatrixGroups in
+/-- The actual Gamma0 degeneracy map has the literal sparse q-expansion. -/
+theorem degeneracy_coefficient_source {M N : ℕ} (d : ℕ) [NeZero d] (h : d * M ∣ N)
+    {k : ℤ} (f : CuspForm ((CongruenceSubgroup.Gamma0 M).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (n : ℕ) :
+    (UpperHalfPlane.qExpansion 1 (cuspDegeneracyMap d h k f)).coeff n =
+      if d ∣ n then (UpperHalfPlane.qExpansion 1 f).coeff (n / d) else 0 :=
+  cuspDegeneracyMap_coeff d h f n
+
+/-- The actual oldspace is zero at level one and its Petersson complement is full. -/
+theorem level_one_newspace_source (k : ℤ) :
+    cuspOldspace 1 k = ⊥ ∧ cuspNewspace 1 k = ⊤ :=
+  ⟨cuspOldspace_one k, cuspNewspace_one k⟩
+
+/-- The actual discriminant witnesses the missing ordinary inclusion at level two. -/
+theorem ordinary_inclusion_counterexample_source :
+    cuspCoefficients (levelDiscriminant 2) 1 = 1 ∧
+    levelDiscriminant 2 ∈ cuspOldspace 2 12 ∧
+    levelDiscriminant 2 ∉ strictCuspDilationSpan 2 12 :=
+  ⟨levelDiscriminant_coeff_one 2, levelDiscriminant_mem_oldspace (by norm_num),
+    levelDiscriminant_not_strictDilationSpan 2⟩
+
+
+open scoped MatrixGroups in
+/-- The literal divisor Fourier sum converges to the actual finite Hecke function. -/
+theorem classical_hecke_fourier_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (n : ℕ) (τ : UpperHalfPlane) :
+    HasSum (fun m => (∑ d ∈ n.divisors, if Nat.Coprime d Q ∧ d ∣ m then
+      (d : ℂ) ^ (k - 1) * (UpperHalfPlane.qExpansion 1 f).coeff ((n / d) * (m / d)) else 0) •
+        Function.Periodic.qParam 1 (τ : ℂ) ^ m) (classicalHeckeFunction Q k n f τ) :=
+  hasSum_classicalHeckeFunction Q k n f (cuspCoefficients f) τ
+    (fun σ => by simpa only [smul_eq_mul] using cuspCoefficients_hasSum f σ)
+
+/-- The genuine primitive-form object supplies the exact good-index multiplicativity. -/
+theorem primitive_coefficients_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {n m : ℕ} (hn : 0 < n)
+    (hnQ : Nat.Coprime n Q) (hnm : Nat.Coprime n m) :
+    (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff (n * m) =
+      (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n *
+        (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff m :=
+  cuspHeckeEigenform_coefficient_mul f.toCuspForm f.normalized f.isEigen hn hnQ hnm
+
+open scoped MatrixGroups in
+/-- Actual quadratic prime self-twists survive normalization and mean inert-prime vanishing. -/
+theorem quadratic_self_twist_source {Q D : ℕ} {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsQuadratic) :
+    (∀ p : ℕ, Nat.Prime p → Nat.Coprime p (Q * D) →
+      χ (p : ZMod D) * normalizedCuspCoefficients f p = normalizedCuspCoefficients f p) ↔
+    ∀ p : ℕ, Nat.Prime p → Nat.Coprime p (Q * D) → χ (p : ZMod D) = -1 →
+      (UpperHalfPlane.qExpansion 1 f).coeff p = 0 :=
+  (cusp_selfTwist_normalization_iff f χ).trans
+    (coefficientSelfTwist_iff_inert_zero χ hχ (cuspCoefficients f))
+
+
+open scoped MatrixGroups Manifold in
+/-- The literal finite Hecke function is holomorphic and vanishes at every cusp. -/
+theorem hecke_cusp_behavior_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (n : ℕ) :
+    MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (classicalHeckeFunction Q k n f) ∧
+    ∀ c : OnePoint ℝ, IsCusp c ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) →
+      c.IsZeroAt (classicalHeckeFunction Q k n f) k :=
+  ⟨classicalHeckeFunction_holomorphic Q k n f f.holo',
+    fun _ hc => classicalHeckeFunction_zero_at_cusps Q k n f hc⟩
+
+open scoped MatrixGroups in
+/-- A genuine same-level cusp form realizes the actual prime operator and its two-term expansion. -/
+theorem prime_hecke_cusp_source {Q p : ℕ} [NeZero Q] [NeZero p] {k : ℤ}
+    (hp : Nat.Prime p)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ g : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      (∀ τ, g τ = classicalHeckeFunction Q k p f τ) ∧
+      ∀ m : ℕ, (UpperHalfPlane.qExpansion 1 g).coeff m =
+        (UpperHalfPlane.qExpansion 1 f).coeff (p * m) +
+        if Nat.Coprime p Q ∧ p ∣ m then (p : ℂ) ^ (k - 1) *
+          (UpperHalfPlane.qExpansion 1 f).coeff (m / p) else 0 :=
+  ⟨cuspHeckePrime hp f, fun _ => rfl, cuspHeckePrime_coeff_prime hp f⟩
+
+
+open scoped MatrixGroups in
+/-- Every literal classical finite Hecke sum is an actual same-level cusp form with exact coefficients. -/
+theorem all_index_hecke_cusp_source {Q : ℕ} [NeZero Q] {k : ℤ} (n : ℕ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ g : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      (∀ τ, g τ = classicalHeckeFunction Q k n f τ) ∧
+      ∀ m, (UpperHalfPlane.qExpansion 1 g).coeff m =
+        ∑ d ∈ n.divisors, if Nat.Coprime d Q ∧ d ∣ m then
+          (d : ℂ) ^ (k - 1) * (UpperHalfPlane.qExpansion 1 f).coeff ((n / d) * (m / d)) else 0 :=
+  exists_cuspForm_hecke_function n f
+
+/-- The actual same-level operators satisfy the good/bad-prime recurrence. -/
+theorem hecke_prime_power_source (Q : ℕ) [NeZero Q] (k : ℤ)
+    {p : ℕ} [NeZero p] (hp : Nat.Prime p) (r : ℕ) :
+    cuspHeckeLinear Q k (p ^ (r + 2)) =
+      cuspHeckeLinear Q k p * cuspHeckeLinear Q k (p ^ (r + 1)) -
+        (if Nat.Coprime p Q then (p : ℂ) ^ (k - 1) else 0) • cuspHeckeLinear Q k (p ^ r) :=
+  cuspHeckeLinear_primePower_recurrence Q k hp r
+
+open scoped MatrixGroups in
+/-- Commutativity acts on actual cusp forms and the literal analytic Hecke formula. -/
+theorem hecke_commuting_functions_source {Q : ℕ} [NeZero Q] {k : ℤ} (m n : ℕ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (τ : UpperHalfPlane) :
+    classicalHeckeFunction Q k m (classicalHeckeFunction Q k n f) τ =
+      classicalHeckeFunction Q k n (classicalHeckeFunction Q k m f) τ := by
+  have h := LinearMap.congr_fun (cuspHeckeLinear_commute Q k m n).eq f
+  have he := congrArg (fun g => g τ) h
+  change cuspHecke m (cuspHecke n f) τ = cuspHecke n (cuspHecke m f) τ at he
+  simpa only [cuspHecke_apply, funext (cuspHecke_apply n f), funext (cuspHecke_apply m f)] using he
+
+
+open scoped MatrixGroups Pointwise in
+/-- The actual Gamma0 coset pairing is the literal integral over its genuine faithful domain. -/
+theorem gamma0_petersson_domain_source (Q : ℕ) [NeZero Q] {k : ℤ}
+    (f g : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    MeasureTheory.IsFundamentalDomain (realProjectiveGamma0 Q)
+      (gamma0FundamentalDomain Q) (MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) ∧
+    cuspPetersson f g = ∫ τ in gamma0FundamentalDomain Q,
+      starRingEnd ℂ (f τ) * g τ * (τ.im : ℂ) ^ k
+        ∂(MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) :=
+  ⟨isFundamentalDomain_realGamma0 Q, cuspPetersson_eq_gamma0Domain_integral Q f g⟩
+
+open scoped MatrixGroups ModularForm Pointwise in
+/-- The genuine matrix slash moves across the literal hyperbolic integral with the exact determinant. -/
+theorem petersson_inverse_slash_source (k : ℤ) (f g : UpperHalfPlane → ℂ)
+    (A : GL (Fin 2) ℝ) (hA : 0 < A.det.val) (S : Set UpperHalfPlane) :
+    ∫ τ in S, UpperHalfPlane.petersson k (f ∣[k] A) g τ
+      ∂(MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) =
+      (A.det.val : ℂ) ^ (k - 2) * ∫ τ in A • S,
+        UpperHalfPlane.petersson k f (g ∣[k] A⁻¹) τ
+          ∂(MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) :=
+  peterssonIntegral_slash_left k f g A hA S
 
 end Dubon2026.SemanticRegression

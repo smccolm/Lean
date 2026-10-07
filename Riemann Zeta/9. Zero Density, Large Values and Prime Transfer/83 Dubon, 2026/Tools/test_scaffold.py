@@ -3,6 +3,7 @@ from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 import shutil
+import re
 
 from verify_scaffold import STATUS, check_active, check_dependency_graph, check_inactive_files, check_links, check_state, read_json
 
@@ -23,13 +24,21 @@ def main():
         for name in ['Dubon Checklist.md', 'Dubon Architecture.md']:
             shutil.copyfile(project / name, folder / name)
             target=folder/name
-            target.write_text(target.read_text(encoding='utf-8').replace(
-                'GOAL ACTIVE — 0/20 proof gates complete.',STATUS),encoding='utf-8')
+            text = target.read_text(encoding='utf-8').replace(
+                'GOAL ACTIVE — 0/20 proof gates complete.', STATUS)
+            # Fixtures carry status/contracts, not the production dependency tree.
+            # Keep their link tests self-contained; the runner separately validates
+            # every link in the real project before reaching these regressions.
+            text = re.sub(r'\[([^\]\n]+)\]\([^)]+\)', r'\1', text)
+            target.write_text(text, encoding='utf-8')
+        (folder / 'reference.txt').write_text('Valid local fixture target.', encoding='utf-8')
+        with (folder / 'Dubon Architecture.md').open('a', encoding='utf-8') as out:
+            out.write('\n[Fixture reference](reference.txt)\n')
         config = deepcopy(original_config)
         config['mode']='template-only'
         config['goalActivated']=False
         config['statusDocuments'] = ['Dubon Checklist.md', 'Dubon Architecture.md']
-        config['files'] = [{'path':x} for x in config['statusDocuments']]
+        config['files'] = [{'path':x} for x in config['statusDocuments'] + ['reference.txt']]
         registry = deepcopy(original_registry)
         registry['mode']='template-only'
         registry['goalActivated']=False
@@ -59,10 +68,12 @@ def main():
                 check_inactive_files(['New.lean' if case == 'lean-file' else 'lakefile.toml'])
             check_state(folder,config,registry)
             check_links(folder)
-        except ValueError:
+        except ValueError as exc:
             accepted = False
+            rejection = str(exc)
         if accepted != (case == 'valid'):
-            raise ValueError(f'Unexpected validation result: {case}, accepted={accepted}')
+            raise ValueError(f'Unexpected validation result: {case}, accepted={accepted}: '
+                             f'{rejection if not accepted else "unexpected acceptance"}')
         print(f'TEMPLATE TEST PASS: {case} (accepted={accepted})')
     print(f'TEMPLATE TESTS PASS: {len(cases)}; no Lean proof tested. Fixtures: {fixtures}')
     if original_config['mode'] != 'template-only':
