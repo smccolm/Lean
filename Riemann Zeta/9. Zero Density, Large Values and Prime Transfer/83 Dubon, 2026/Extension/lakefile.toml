@@ -18,3 +18,7 @@ path = "../../.."
 [[require]]
 name = "GafniTaoNative"
 path = "../../63 Tao-Trudgian-Yang, 2025/Dependencies/GafniTaoNative"
+
+[[require]]
+name = "TaoTrudgianYang2025"
+path = "../../63 Tao-Trudgian-Yang, 2025/Extension"

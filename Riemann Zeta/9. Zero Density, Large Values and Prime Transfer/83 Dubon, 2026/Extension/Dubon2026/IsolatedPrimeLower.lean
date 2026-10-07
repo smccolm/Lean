@@ -43,6 +43,28 @@ theorem exists_uniform_isolated_prime_lower {K : ℝ} (hK : 1 ≤ K) :
   rw [sum_selectedPrimeCoordinates N Q hQ' (fun p : ℕ => ‖a p‖ ^ 2 * (p : ℝ) ^ (-2 * σ))] at hl
   exact hl
 
+/-- The printed two-sided ratios imply nonzero coefficients and give one bound on every
+set of abscissae. In particular this applies to every compact set in Proposition 5.1. -/
+theorem exists_uniform_isolated_prime_lower_two_sided {K : ℝ} (hK : 1 ≤ K) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (a : ℕ → ℂ) (N : ℕ), 1 ≤ N → a 1 ≠ 0 →
+      ∀ (I : Set ℝ) (Q : Finset ℕ),
+      (∀ p ∈ Q, Nat.Prime p ∧ (N : ℝ) / 2 < p ∧ p ≤ N) → 5 ≤ Q.card →
+      (∀ σ ∈ I, ∀ p ∈ Q, ∀ q ∈ Q,
+        K⁻¹ ≤ (‖a p‖ * (p : ℝ) ^ (-σ)) / (‖a q‖ * (q : ℝ) ^ (-σ)) ∧
+        (‖a p‖ * (p : ℝ) ^ (-σ)) / (‖a q‖ * (q : ℝ) ^ (-σ)) ≤ K) →
+      ∀ σ ∈ I, (1 / 2 : ℝ) * Real.log (∑ p ∈ Q, ‖a p‖ ^ 2 * (p : ℝ) ^ (-2 * σ)) - C ≤
+        jessenFunction a N σ := by
+  obtain ⟨C, hC, hbound⟩ := exists_uniform_isolated_prime_lower hK
+  refine ⟨C, hC, ?_⟩
+  intro a N hN ha I Q hQ hm hcomp σ hσ
+  apply hbound a N hN ha σ Q hQ hm
+  · intro p hp hap
+    have hh := (hcomp σ hσ p hp p hp).1
+    simp only [hap, norm_zero, zero_mul, div_zero] at hh
+    exact (not_le_of_gt (inv_pos.mpr (lt_of_lt_of_le zero_lt_one hK))) hh
+  · intro p hp q hq
+    exact (hcomp σ hσ p hp q hq).2
+
 /-- The compact-uniform Proposition 5.1 bound from the source's actual H2 comparability. -/
 theorem eventually_isolated_jessen_lower {a : ℕ → ℂ} {Q : ℕ → Finset ℕ} {α : ℝ}
     (ha : a 1 = 1) (hQ : IsolatedPrimeBlocks Q)

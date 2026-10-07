@@ -3,7 +3,9 @@ import Dubon2026.SatoTatePrimeBlocks
 
 /-! # Actual cusp concentration from individually displayed classical arithmetic inputs
 
-Rankin–Selberg, unramified coefficient reality and Sato–Tate remain conditional.
+For general cusp forms, Rankin–Selberg, unramified coefficient reality and Sato–Tate
+are explicit inputs. PrimitiveArithmeticConcentration discharges reality for actual
+primitive forms; the two deep arithmetic inputs remain unproved.
 All density, H1/H2, support, potential, probability and multiplicity transfers are derived.
 -/
 

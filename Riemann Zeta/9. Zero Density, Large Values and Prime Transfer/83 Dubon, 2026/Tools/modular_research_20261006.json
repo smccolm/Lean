@@ -16,7 +16,10 @@
     "Newforms/Basic.lean documents that upgrading the good-prime eigenform condition to bad-prime T_n eigenbehavior remains unformalized.",
     "Newforms/MainLemma.lean line 152 contains an admitted proof. No blanket import is permitted.",
     "No Rankin-Selberg, Deligne, Sato-Tate or non-CM theorem was found by the recorded full-source search. This is a bounded snapshot observation, not a claim of global absence.",
-    "The toolchain is newer than the pinned project. Any reuse needs a minimal licensed port and full transitive audit."
+    "The toolchain is newer than the pinned project. Any reuse needs a minimal licensed port and full transitive audit.",
+    "The 352-module local implementation derives actual all-positive-index primitive eigenbehavior from the original good-index primitive definition. It proves all-index full-oldspace stability, general finite-dimensionality via selected licensed norm/q-jet ports, and the genuine Petersson old/new projection. The independent source-level Rankin–Selberg, Deligne, Sato–Tate and self-twist conductor obligations remain open. Aggregate and sequential verification for this 352-module expansion passed with zero Lean diagnostics.",
+    "The 360-module local scope constructs genuine quadratic twists at D²Q from finite Gauss-weighted actual translations, proves their exact Fourier coefficients and all-index Hecke eigenbehavior. Exact twist conductor and newness remain open; all-index eigenbehavior alone is not asserted to imply newness. Focused compilation, the aggregate audit and required sequential foundation/paper verification passed with zero Lean diagnostics for this 360-module scope.",
+    "The 369-module scope proves level-one non-CM directly: the actual quadratic twist has Fricke factor χ(-1)D^(k-2), whereas genuine finite prime depletion has first Fricke coefficient zero unless D is squarefree and D^(k-3) otherwise. Their exact equality forces D=1. General Atkin–Li conductor/newness is not required by this proof and remains separate. The aggregate audit and sequential foundation/paper verification passed with zero diagnostics; Rankin–Selberg, Deligne and Sato–Tate remain open."
   ],
   "files": [
     {
@@ -1035,6 +1038,239 @@
       ],
       "checked": "2026-10-06",
       "review": "Reviewed CM criterion uses nontrivial character self-twist, equivalently equality of good-prime coefficients. It supplies a semantic reference, not a Lean proof."
+    },
+    {
+      "url": "https://arxiv.org/abs/math/9903131v1",
+      "author": "David Carlton",
+      "title": "On a Result of Atkin and Lehner",
+      "date": "1999-03-22",
+      "checked": "2026-10-06",
+      "anchors": [
+        "Theorem 1",
+        "Lemmas 2 and 3",
+        "Proposition 4"
+      ],
+      "review": "Primary six-page proof of the Gamma0 vanishing-to-oldform statement using finite SL2(Z/NZ) representations and local invariant spaces. The 339-module local implementation now proves the full positive-level support-to-oldspace statement by actual congruence actions, literal coefficient projections, finite orthogonal compression decomposition and genuine lower-level cusp-form assembly. Its exact consumers and transitive audit pass. The admitted upstream MainLemma remains excluded; no source theorem is assumed as a Lean premise."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s40993-026-00718-1",
+      "author": "Elie Studnia",
+      "title": "On obstructions to the Euler system method for Rankin-Selberg convolutions",
+      "date": "2026-06-01",
+      "checked": "2026-10-06",
+      "anchors": [
+        "Proposition 1.1",
+        "Lemma 1.3"
+      ],
+      "review": "The conductor bound for inner twists is justified through Atkin–Li Theorem 4.1 and local conductor separation. This identifies a genuine additional theorem beyond construction of the finite coefficient twist; no conductor conclusion is treated as a Lean proof or premise."
     }
-  ]
+  ],
+  "rankinContinuationReview": {
+    "checked": "2026-10-06",
+    "references": [
+      {
+        "url": "https://math.berkeley.edu/~avizeff/quals/Rankin-Selberg.pdf",
+        "author": "Avi Zeff",
+        "title": "The Rankin-Selberg method",
+        "checked": "2026-10-06",
+        "anchors": [
+          "Theorem 1",
+          "Proposition 2",
+          "Theorem 3"
+        ],
+        "review": "Reviewed the completed full-lattice normalization, continuation, functional equation and Rankin unfolding. Route guidance only; apparent typographic/OCR issues are not adopted as contracts. Local constants and proofs are independent."
+      },
+      {
+        "url": "https://arxiv.org/pdf/1304.4271",
+        "author": "Carlo Angelantonj, Ioannis Florakis, Boris Pioline",
+        "title": "Rankin-Selberg methods for closed strings on orbifolds",
+        "version": "v2, 2013-08-20",
+        "checked": "2026-10-06",
+        "anchors": [
+          "Sections 4.1–4.2",
+          "Equations 4.6, 4.12",
+          "Appendix A, levels 4 and 6"
+        ],
+        "review": "Reviewed congruence-subgroup completed Eisenstein normalization, constant pole residue and rescaled full-level formulas. An all-level primitive-row reduction still needs a local proof; no source formula is a Lean assumption."
+      },
+      {
+        "url": "https://arxiv.org/pdf/math/0603013",
+        "author": "Aleksandar Ivić",
+        "title": "Mean square estimates in the Rankin-Selberg problem",
+        "version": "v5, 2006-06-28",
+        "checked": "2026-10-06",
+        "anchors": [
+          "Sections 1–3",
+          "Equations 1.2, 2.2"
+        ],
+        "review": "Reviewed the classical 3/5 bound and degree-four completed functional equation for the convolution coefficients. This is historical literature, not a current optimality claim or a proof for the actual local cusp objects."
+      }
+    ],
+    "pinnedMathlibReuse": [
+      "Complex.tsum_exp_neg_quadratic",
+      "summable_pow_mul_jacobiTheta₂_term_bound",
+      "WeakFEPair.hasMellin",
+      "WeakFEPair.functional_equation",
+      "WeakFEPair.Λ_residue_k",
+      "WeakFEPair.Λ_residue_zero",
+      "hasSum_mellin_pi_mul"
+    ],
+    "implementation": "Actual Eisenstein unfolding, completed continuation, pole removal and positive Petersson residue are proved. The actual cusp square mean has a linear asymptotic and all three weighted energy regimes are proved, including central c_f log N + O_f(1). The 463-module scope passed sequential verification with 4,065 exhaustive theorem checks; the sharp x^(3/5) Rankin–Selberg remainder remains open."
+  },
+  "rankinQuantitativeReview20261007": {
+    "source": "https://www.impan.pl/shop/publication/transaction/download/product/82881",
+    "title": "Anne de Roton, On the mean square of the error term for an extended Selberg class, Acta Arith. 126.1 (2007)",
+    "review": "Sections 2 and 3 reviewed as a guide to the Landau/Perron/Gamma-ratio route. Theorem 2.1 gives exponent (d-1)/(d+1)+epsilon: at degree four this is not the exact x^(3/5) estimate required by DUB-16. Its scalar functional equation also remains to be justified at general level. No theorem imported or assumed, no new frozen artifact or dependency changes."
+  },
+  "rankinCentralReview20261007": {
+    "source": "https://www.math.ucdavis.edu/~romik/data/uploads/teaching/math205a-2018/complex-analysis-2018.pdf",
+    "title": "Dan Romik, Complex Analysis Lecture Notes (2018), item 162, pages 60–62",
+    "review": "Newman analytic Tauberian theorem for the Laplace transform of a bounded locally integrable function reviewed. Potential proof route for the central weighted cusp energy: apply it to A_f(exp(t))*exp(-t)-c_f using the proved linear bound and holomorphic Rankin pole removal. This is an inference for future implementation, not a proved central energy theorem. The exact x^(3/5) remainder remains independently required. No dependency or frozen-source changes.",
+    "implementation": "The genuine cusp coefficient-error Laplace transform and its analytic continuation are proved, as is the exact finite Abel bridge. The central weighted energy minus c_f log N converges to Re(cuspRankinRegular f 1), hence has uniformly bounded remainder. All three actual weighted energy regimes are now proved. The 463-module scope passed all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,065 exhaustive theorem checks. The independent exact x^(3/5) remainder remains open."
+  },
+  "rankinRieszReview20261007": {
+    "reviewDate": "2026-10-07",
+    "status": "Read-only source research and in-progress faithful local implementation; no new imported theorem or change of frozen source.",
+    "references": [
+      {
+        "url": "https://empslocal.ex.ac.uk/people/staff/mrwatkin/zeta/Ivic-Rankin.pdf",
+        "title": "Ivic, Matsumoto and Tanigawa, On Riesz means of the coefficients of the Rankin–Selberg series",
+        "finding": "Author manuscript of the 1999 paper: full-level coefficients and the two-Gamma functional equation; Section 2 develops Voronoi representations, Section 4 an alternative exact 3/5 proof. The truncated route invokes additional coefficient and short-interval estimates. It is not an already proved Lean input, and full-level hypotheses cannot silently cover all levels."
+      },
+      {
+        "url": "https://u.math.biu.ac.il/~reznikov/pap/rs.pdf",
+        "title": "Reznikov, Rankin–Selberg without unfolding and bounds for spherical Fourier coefficients of Maass forms",
+        "finding": "Representation-theoretic alternative, not a ready proof of this source contract."
+      }
+    ],
+    "implementation": "Nine modules prove actual finite convolution sums, positive reciprocal mass, genuine removed-pole continuation and the leading mean; exact positive quadratic Riesz smoothing bounds the literal unsmoothed error by actual second differences. The 472-module scope passed focused compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,158 exhaustive theorem checks. Quantitative bounds for those differences and the exact x^(3/5) remainder remain open."
+  },
+  "gammaPhaseReuse20261007": {
+    "date": "2026-10-07",
+    "kind": "Direct exact local path dependency; no copied proof or parent pin change.",
+    "package": "TaoTrudgianYang2025",
+    "inheritedLocalPackage": "ExpdbFrozen",
+    "checkedRootPinsEqual": true,
+    "files": [
+      {
+        "path": "63 Tao-Trudgian-Yang, 2025/Extension/lakefile.toml",
+        "sha256": "e83d894176dd24ab90df3a55fae3d6a6a056b93d43dd78b08aa85da40af51ce2"
+      },
+      {
+        "path": "63 Tao-Trudgian-Yang, 2025/Extension/lake-manifest.json",
+        "sha256": "42c620acf6c94c5be599b500481fd5052cc39d541bc5cf69886b43736ff8543f"
+      },
+      {
+        "path": "63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaDigammaLog.lean",
+        "sha256": "b4ee082bbfac1d665be670a4b88eac3c2587e7ef552de1d298294cd2c9d8dc26"
+      },
+      {
+        "path": "63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareGammaPhase.lean",
+        "sha256": "16545c690d2cfcfd0f553af06253bea05afa7f088050109300a1ee478fa0e3b0"
+      }
+    ],
+    "implementation": "Five modules prove the actual Gamma phase, its differential equation, the genuine trigamma reciprocal estimate and the two-Gamma Rankin frequency and curvature. The 477-module scope passed focused compilation, all sixteen linters and sequential foundation/paper verification with zero Lean diagnostics and 4,220 exhaustive theorem checks. Exact local package paths and all inherited root pins are checked by expanded fixtures. Oscillatory kernel estimates and the exact x^(3/5) remainder remain open.",
+    "lakeUpdate": "lake update TaoTrudgianYang2025 returned exit 0; Lake reported the existing ExpdbFrozen package has no manifest, then resolved the local graph. No root pin changed. This was a Lake metadata warning, not a Lean proof diagnostic."
+  },
+  "rankinPerronImplementation20261007": {
+    "modules": [
+      "RieszMellinKernel",
+      "RieszMellinInversion",
+      "RieszInverseKernel",
+      "RieszDirichletInterchange",
+      "RieszPerron",
+      "RieszPerronIntegral",
+      "RankinConvolutionPerron"
+    ],
+    "mathematics": "Exact quadratic cutoff Mellin transform and inversion; absolute Dirichlet-series interchange; actual finite Rankin convolution Riesz sum equals the literal vertical Perron integral, with every convergence premise discharged.",
+    "validation": "The 484-module scope passed focused production and exact consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,263 exhaustive theorem checks. Logs: foundation_freeze_20261007_050434.log and dubon-build-20261007-050853-164.log.",
+    "remaining": "Contour shift, oscillatory kernel bounds and exact x^(3/5) error; general level reflection remains the proved finite lattice identity, not a scalar functional equation."
+  },
+  "gammaOscillationImplementation20261007": {
+    "modules": [
+      "IntegratedFrequency",
+      "PhaseFirstDerivative",
+      "PhaseCurvatureBand",
+      "PhaseSecondDerivative",
+      "RankinOscillatoryPhase",
+      "NormalizedComplexPhase",
+      "GammaRatioPhase",
+      "GammaRatioCurvature",
+      "DoubleGammaOscillation"
+    ],
+    "mathematics": "Proved phase reconstruction, first derivative estimates in both orientations, actual frequency-band endpoints and second derivative integral bound. The actual critical-line Gamma quotient and normalized product of two unequal-shift reflected Gamma ratios have uniform 8 sqrt(T) cancellation on every subinterval of a sufficiently high dyadic block and for every linear modulation. Exact actual modulus derivatives are proved.",
+    "validation": "The 493-module scope passed focused production and literal Gamma consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,322 exhaustive theorem checks. Logs: foundation_freeze_20261007_053552.log and dubon-build-20261007-054004-774.log.",
+    "remaining": "Sharp amplitude/variation, contour shift, weighted Riesz kernel and dual sum bounds, exact x^(3/5); general-level finite reflection is not a scalar functional equation."
+  },
+  "gammaAmplitudeRieszImplementation20261007": {
+    "productionModules": [
+      "GammaHorizontalLogNorm",
+      "GammaHorizontalDigamma",
+      "GammaRatioAmplitude",
+      "OscillatoryAmplitude",
+      "DoubleGammaAmplitude",
+      "GammaDyadicAmplitude",
+      "GammaWeightedOscillation",
+      "GammaFrequencySeparation",
+      "GammaRieszSymbol",
+      "GammaRieszDyadic"
+    ],
+    "mathematics": "Actual sharp Gamma amplitudes, continuous derivative and total variation; full weighted dyadic cancellation and off-window decay. Literal Riesz symbols at beta=3/8-r/4 consume all shift, exponent, frequency and curvature bridges for 0<=r<=2.",
+    "validation": "The 503-module scope passed focused production and literal Gamma/Riesz consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,382 exhaustive theorem checks. Logs: foundation_freeze_20261007_061305.log and dubon-build-20261007-061622-495.log.",
+    "remaining": "Improper kernel convergence and full bounds, differentiation, contour shift, dual sums, exact x^(3/5); general level still requires a genuine dual coefficient/Fricke bridge. Deligne and unconditional Sato–Tate remain open."
+  },
+  "gammaImproperKernelImplementation20261007": {
+    "productionModules": [
+      "GammaTailVariation",
+      "GammaNonstationaryTail",
+      "GammaRieszTail",
+      "GammaRieszKernel",
+      "GammaRieszWindow",
+      "GammaRieszCompact",
+      "GammaRieszBounds"
+    ],
+    "mathematics": "Proved actual non-absolutely-convergent positive-half and symmetric Gamma kernel limits. Full-tail bounds, the explicit stationary window and two dyadic blocks prove uniform sharp x^(3/8-r/4) bounds for all x>0, 0<=r<=2, k>=2. The cases r=2 and r=0 have exactly x^(-1/8) and x^(3/8).",
+    "validation": "The 510-module scope passed focused production and literal improper-kernel consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,422 exhaustive theorem checks. Logs: foundation_freeze_20261007_064123.log and dubon-build-20261007-064451-032.log.",
+    "remaining": "Kernel derivative identities, actual functional-equation contour transform, polynomial strip bounds, dual sums, exact x^(3/5), general-level dual coefficient/Fricke input, Deligne and unconditional Sato–Tate."
+  },
+  "gammaContourShiftImplementation20261007": {
+    "productionModules": [
+      "GammaRieszTruncation",
+      "GammaRieszUniformConvergence",
+      "GammaRieszHolomorphic",
+      "GammaRieszStripAmplitude",
+      "GammaRieszHorizontal",
+      "GammaRieszContourShift",
+      "GammaRieszShiftUniform"
+    ],
+    "mathematics": "Proved actual inverse-square-root cutoff errors, compact-positive uniform convergence, holomorphy, finite rectangle identity, actual horizontal decay, normalized contour shift and compact-positive uniform convergence on every admissible new line.",
+    "validation": "The 517-module scope passed focused production and literal contour-shift consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,456 exhaustive theorem checks. Logs: foundation_freeze_20261007_070709.log and dubon-build-20261007-071219-486.log.",
+    "remaining": "Kernel derivative identities, actual Rankin series functional-equation contour transform and residues, polynomial strip bounds, dual sums, exact x^(3/5), general-level dual coefficient/Fricke input, Deligne and unconditional Sato–Tate."
+  },
+  "gammaKernelDerivativeImplementation20261007": {
+    "productionModules": [
+      "GammaRieszRecurrence",
+      "CompactParameterDerivative",
+      "GammaRieszJointContinuity",
+      "GammaRieszFiniteDerivative",
+      "GammaRieszWeightedConvergence",
+      "GammaRieszKernelDerivative",
+      "SecondDifferenceDerivative",
+      "GammaRieszDifferenceBounds"
+    ],
+    "mathematics": "Actual adjacent-order Gamma recurrence, compact-dominated finite-cutoff derivatives, weighted/dilated compact-uniform convergence, genuine improper-kernel derivative identities and sharp low/high second-difference bounds.",
+    "validation": "The 525-module scope passed focused production and actual-kernel derivative/difference consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,484 exhaustive theorem checks. Logs: foundation_freeze_20261007_073824.log and dubon-build-20261007-074220-735.log.",
+    "remaining": "Actual Rankin series functional-equation contour transform and residues, polynomial strip bounds, dual coefficient power sums, exact x^(3/5), general-level dual coefficient/Fricke input, Deligne and unconditional Sato–Tate."
+  },
+  "rankinDualPowerImplementation20261007": {
+    "productionModules": [
+      "LinearSummatoryPower",
+      "LinearMeanPowerBounds",
+      "LinearMeanPowerTail",
+      "RankinConvolutionPowerBounds"
+    ],
+    "mathematics": "Exact Abel prefix/tail formulas, real cumulative and power integral bounds, finite-subset proof of infinite-tail convergence, and actual cusp Rankin coefficient n^(-5/8) prefix / n^(-9/8) tail bounds.",
+    "validation": "The 529-module scope passed focused production and actual Rankin coefficient-power consumer compilation, all sixteen linters and sequential foundation/paper verification with zero diagnostics and 4,503 exhaustive theorem checks. Logs: foundation_freeze_20261007_075706.log and dubon-build-20261007-080053-993.log.",
+    "remaining": "Actual Gamma-kernel dual series, Rankin series functional-equation contour transform and residues, polynomial strip bounds, justified interchange, exact x^(3/5), general-level dual coefficient/Fricke input, Deligne and unconditional Sato–Tate."
+  }
 }

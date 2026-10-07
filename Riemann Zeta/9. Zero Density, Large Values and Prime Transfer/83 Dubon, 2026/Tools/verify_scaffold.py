@@ -134,7 +134,7 @@ def check_active(project, config):
 
 def check_dependency_graph(project, parent, extension):
     root=project.parents[1]
-    require(len(extension['packages'])==len(parent['packages'])+2,'Dependency graph size drift')
+    require(len(extension['packages'])==len(parent['packages'])+4,'Dependency graph size drift')
     for package in parent['packages']:
         matches=[p for p in extension['packages'] if p['name']==package['name']]
         require(len(matches)==1 and all(matches[0].get(k)==package.get(k)
@@ -147,6 +147,13 @@ def check_dependency_graph(project, parent, extension):
     require(len(reused)==1 and reused[0]['type']=='path' and
             (project/'Extension'/reused[0]['dir']).resolve()==reused_path.resolve(),
             'Wrong audited node-63 PNT path dependency')
+    for name, relative in [('TaoTrudgianYang2025','Extension'),
+                           ('ExpdbFrozen','Dependencies/ANTEDBFrozen')]:
+        reused=[p for p in extension['packages'] if p['name']==name]
+        reused_path=project.parent/'63 Tao-Trudgian-Yang, 2025'/relative
+        require(len(reused)==1 and reused[0]['type']=='path' and
+                (project/'Extension'/reused[0]['dir']).resolve()==reused_path.resolve(),
+                f'Wrong audited node-63 path dependency: {name}')
 
 
 def check_links(project):

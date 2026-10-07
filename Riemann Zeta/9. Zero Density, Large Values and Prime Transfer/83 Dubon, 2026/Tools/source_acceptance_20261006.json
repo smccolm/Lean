@@ -1,0 +1,981 @@
+{
+  "reviewDate": "2026-10-06",
+  "source": "Sources/Dubon-v1-source/Zero_Density_Concentration_for_Dirichlet_Polynomials.tex",
+  "sourceSha256": "605d02ea28f553ae3206cf3e0c176c93840d0a985b654d1b520b638e0a4ec08b",
+  "pdfSha256": "a9cac7a820cc2c8b0965eb9caa4eb0eaa6e3159321a90e4e43960cbe764597f2",
+  "pdfPages": 28,
+  "visuallyComparedPages": [
+    3,
+    4,
+    5,
+    6,
+    9,
+    12,
+    21,
+    26
+  ],
+  "decision": "No source repair; frozen statements and all twenty acceptance contracts retained. Deep arithmetic proof obligations remain open at DUB-16/17/18.",
+  "labels": [
+    {
+      "label": "eq:intro-P",
+      "line": 74,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:zetaN-intro",
+      "line": 80,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:Jessen-intro",
+      "line": 92,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "sec:main-results",
+      "line": 114,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:MN-intro",
+      "line": 117,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "def:concentration",
+      "line": 122,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:concentration-def",
+      "line": 124,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:JT-main-intro",
+      "line": 134,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:global-energy-intro",
+      "line": 145,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "thm:abstract-main",
+      "line": 149,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "H1intro",
+      "line": 157,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:H1-intro",
+      "line": 158,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "H2intro",
+      "line": 163,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:H2comp-intro",
+      "line": 164,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:isolated-energy-intro",
+      "line": 171,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:H2energy-intro",
+      "line": 175,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:abstract-potential-intro",
+      "line": 183,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:abstract-measure-intro",
+      "line": 189,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "rem:further-families",
+      "line": 196,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "thm:zeta-intro",
+      "line": 200,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:zeta-potential-intro",
+      "line": 206,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:zeta-measure-intro",
+      "line": 212,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "thm:dirichlet-intro",
+      "line": 217,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:dir-potential-intro",
+      "line": 227,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:dir-measure-intro",
+      "line": 233,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:modular-fourier-intro",
+      "line": 245,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:lambda-normalization-intro",
+      "line": 257,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "thm:modular-intro",
+      "line": 263,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:automorphic-partial-intro",
+      "line": 265,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:modular-potential-intro",
+      "line": 269,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:modular-measure-intro",
+      "line": 275,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:classical-modular-intro",
+      "line": 282,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "eq:kover2-intro",
+      "line": 286,
+      "owningGates": "DUB-02/11–18",
+      "review": "Actual source objects and all main-result hypotheses; height tends to infinity for each fixed truncation before the truncation limit."
+    },
+    {
+      "label": "sec:bohr-jessen",
+      "line": 291,
+      "owningGates": "DUB-03",
+      "review": "Prime factorization, injective exponent vectors, trivial integer resonance lattice and actual vertical flow."
+    },
+    {
+      "label": "eq:prime-factorization",
+      "line": 296,
+      "owningGates": "DUB-03",
+      "review": "Prime factorization, injective exponent vectors, trivial integer resonance lattice and actual vertical flow."
+    },
+    {
+      "label": "eq:bohr-lift-general",
+      "line": 302,
+      "owningGates": "DUB-03",
+      "review": "Prime factorization, injective exponent vectors, trivial integer resonance lattice and actual vertical flow."
+    },
+    {
+      "label": "eq:vertical-restriction",
+      "line": 310,
+      "owningGates": "DUB-03",
+      "review": "Prime factorization, injective exponent vectors, trivial integer resonance lattice and actual vertical flow."
+    },
+    {
+      "label": "prop:prime-injectivity",
+      "line": 317,
+      "owningGates": "DUB-03",
+      "review": "Prime factorization, injective exponent vectors, trivial integer resonance lattice and actual vertical flow."
+    },
+    {
+      "label": "lem:log-integrable",
+      "line": 348,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "eq:circle-root-distance",
+      "line": 369,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "eq:log-integral-elementary",
+      "line": 380,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "eq:Mahler-fiber-Jensen",
+      "line": 405,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "prop:bohr-jessen",
+      "line": 466,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "eq:Jessen-general",
+      "line": 468,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "eq:bohr-jessen-identity",
+      "line": 475,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "eq:truncated-mean",
+      "line": 517,
+      "owningGates": "DUB-04/05",
+      "review": "Nonzero multivariate logarithmic integrability; continuous equidistribution alone is insufficient for the logarithm; actual uniform truncation transfer required."
+    },
+    {
+      "label": "prop:JT-density",
+      "line": 543,
+      "owningGates": "DUB-06",
+      "review": "Every open strip uses analytic multiplicity, symmetric height normalization and (J′(b−)−J′(a+))/(2π), including atom-carrying boundary lines."
+    },
+    {
+      "label": "eq:JT-density",
+      "line": 545,
+      "owningGates": "DUB-06",
+      "review": "Every open strip uses analytic multiplicity, symmetric height normalization and (J′(b−)−J′(a+))/(2π), including atom-carrying boundary lines."
+    },
+    {
+      "label": "eq:Riesz-measure",
+      "line": 553,
+      "owningGates": "DUB-06",
+      "review": "Every open strip uses analytic multiplicity, symmetric height normalization and (J′(b−)−J′(a+))/(2π), including atom-carrying boundary lines."
+    },
+    {
+      "label": "rem:normalization-check",
+      "line": 581,
+      "owningGates": "DUB-06",
+      "review": "Every open strip uses analytic multiplicity, symmetric height normalization and (J′(b−)−J′(a+))/(2π), including atom-carrying boundary lines."
+    },
+    {
+      "label": "prop:basic-bounds",
+      "line": 593,
+      "owningGates": "DUB-04/07",
+      "review": "Actual energy, iterated Jensen, affine asymptotes, total mass log M; probability normalization requires M>1."
+    },
+    {
+      "label": "eq:basic-bounds",
+      "line": 595,
+      "owningGates": "DUB-04/07",
+      "review": "Actual energy, iterated Jensen, affine asymptotes, total mass log M; probability normalization requires M>1."
+    },
+    {
+      "label": "prop:total-mass",
+      "line": 642,
+      "owningGates": "DUB-04/07",
+      "review": "Actual energy, iterated Jensen, affine asymptotes, total mass log M; probability normalization requires M>1."
+    },
+    {
+      "label": "eq:totalmass",
+      "line": 644,
+      "owningGates": "DUB-04/07",
+      "review": "Actual energy, iterated Jensen, affine asymptotes, total mass log M; probability normalization requires M>1."
+    },
+    {
+      "label": "sec:anti",
+      "line": 721,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:J0-definition",
+      "line": 726,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:J0-integral",
+      "line": 733,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "lem:Steinhaus",
+      "line": 740,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:comparable-b",
+      "line": 742,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:S-def",
+      "line": 746,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:translated-log-main",
+      "line": 750,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:cj-comparable",
+      "line": 769,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:char-product",
+      "line": 788,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:J0-small",
+      "line": 799,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:J0-large",
+      "line": 804,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:J0-strict",
+      "line": 815,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:region-I",
+      "line": 824,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:region-I-integral",
+      "line": 831,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:R-choice",
+      "line": 841,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:middle-arguments",
+      "line": 845,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:rhoK",
+      "line": 849,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:region-II-integral",
+      "line": 856,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:region-III-pointwise",
+      "line": 866,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:region-III-exact",
+      "line": 884,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:region-III-integral",
+      "line": 891,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:L1-characteristic",
+      "line": 896,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:density-definition",
+      "line": 900,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:density-bound",
+      "line": 908,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:small-ball",
+      "line": 919,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:negative-log-tail",
+      "line": 932,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:negative-log-bound",
+      "line": 946,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "eq:normalized-log-bound",
+      "line": 953,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "rem:translation-important",
+      "line": 964,
+      "owningGates": "DUB-08/09",
+      "review": "Positive K-comparable weights; one constant before every m≥5 and every complex translation; three Fourier regions with the exact planar inversion factor."
+    },
+    {
+      "label": "sec:abstract",
+      "line": 968,
+      "owningGates": "DUB-10",
+      "review": "Literal isolated-prime decomposition, phase rotations and the genuine conditional product Haar integral."
+    },
+    {
+      "label": "eq:isolated-decomposition",
+      "line": 975,
+      "owningGates": "DUB-10",
+      "review": "Literal isolated-prime decomposition, phase rotations and the genuine conditional product Haar integral."
+    },
+    {
+      "label": "prop:isolated-lower-general",
+      "line": 998,
+      "owningGates": "DUB-10",
+      "review": "Literal isolated-prime decomposition, phase rotations and the genuine conditional product Haar integral."
+    },
+    {
+      "label": "eq:isolated-comparable-general",
+      "line": 1000,
+      "owningGates": "DUB-10",
+      "review": "Literal isolated-prime decomposition, phase rotations and the genuine conditional product Haar integral."
+    },
+    {
+      "label": "eq:isolated-lower-general",
+      "line": 1007,
+      "owningGates": "DUB-10",
+      "review": "Literal isolated-prime decomposition, phase rotations and the genuine conditional product Haar integral."
+    },
+    {
+      "label": "eq:conditioned-isolated-bound",
+      "line": 1073,
+      "owningGates": "DUB-10",
+      "review": "Literal isolated-prime decomposition, phase rotations and the genuine conditional product Haar integral."
+    },
+    {
+      "label": "eq:MN-growth-automatic",
+      "line": 1120,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:MN-growth-intro",
+      "line": 1125,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:abstract-upper",
+      "line": 1135,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:limsup-abstract",
+      "line": 1141,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:abstract-lower",
+      "line": 1151,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:pointwise-left",
+      "line": 1163,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:pointwise-right",
+      "line": 1168,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:testfunction-measure",
+      "line": 1190,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "eq:testfunction-limit",
+      "line": 1193,
+      "owningGates": "DUB-11/12",
+      "review": "Pointwise H1, compact-uniform H2, eventual supported maximum and local uniform potential convergence; tightness upgrades to weak probability convergence."
+    },
+    {
+      "label": "sec:zeta",
+      "line": 1284,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-global-energy",
+      "line": 1290,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-energy-left",
+      "line": 1294,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-QN",
+      "line": 1330,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:dyadic-PNT",
+      "line": 1334,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-comparable",
+      "line": 1340,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-isolated-energy-bounds",
+      "line": 1355,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-isolated-energy",
+      "line": 1367,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "cor:zeta-density",
+      "line": 1375,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "eq:zeta-density-coro",
+      "line": 1377,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "rem:zeta-support",
+      "line": 1391,
+      "owningGates": "DUB-13",
+      "review": "Inclusive dyadic PNT and all real energy regimes; Corollary 6.1 keeps the boundary-frequency convention and the nested limit order."
+    },
+    {
+      "label": "sec:dirichlet",
+      "line": 1395,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "lem:dirichlet-energy",
+      "line": 1403,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:dirichlet-energy",
+      "line": 1405,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:dir-left-asymp",
+      "line": 1411,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:dir-center-asymp",
+      "line": 1421,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:coprime-count",
+      "line": 1436,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:abel-dir",
+      "line": 1439,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:dir-Abel-expanded",
+      "line": 1451,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "eq:MN-dir",
+      "line": 1520,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "rem:principal-character",
+      "line": 1530,
+      "owningGates": "DUB-14",
+      "review": "Every fixed positive modulus, including principal and imprimitive characters; exact totient coefficient, σ=1/2 and actual support maximum."
+    },
+    {
+      "label": "sec:modular",
+      "line": 1534,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:rankin-selberg",
+      "line": 1541,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "lem:modular-energy",
+      "line": 1547,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:weighted-RS-left",
+      "line": 1549,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:weighted-RS-center",
+      "line": 1556,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:modular-Abel",
+      "line": 1565,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:RS-weighted-error",
+      "line": 1580,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:modular-H1",
+      "line": 1609,
+      "owningGates": "DUB-15/16",
+      "review": "Genuine normalized cusp coefficients; Rankin–Selberg and c_f>0 remain explicit proof obligations. Weighted asymptotics must include σ=0,3/10,1/2."
+    },
+    {
+      "label": "eq:ST-param",
+      "line": 1619,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:ST-measure",
+      "line": 1624,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:ST-semicircle",
+      "line": 1629,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:ST-count-global",
+      "line": 1640,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:ST-count-dyadic",
+      "line": 1645,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:modular-PN",
+      "line": 1650,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:modular-comparable",
+      "line": 1658,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:modular-isolated-energy-def",
+      "line": 1669,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:modular-isolated-energy",
+      "line": 1678,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:modular-H2",
+      "line": 1682,
+      "owningGates": "DUB-15/17",
+      "review": "Actual Deligne bound and non-CM Sato–Tate remain proof obligations; semicircle/angle normalization, η/2 dyadic density, ramified-prime removal and compact comparability are retained."
+    },
+    {
+      "label": "eq:classical-shift",
+      "line": 1707,
+      "owningGates": "DUB-18",
+      "review": "Actual classical shift by (k−1)/2; Corollary 8.2 explicitly quantifies over cusp eigenforms. The level-one primitive/non-CM bridge has an independent Fricke/depletion proof."
+    },
+    {
+      "label": "cor:level-one",
+      "line": 1715,
+      "owningGates": "DUB-18",
+      "review": "Actual classical shift by (k−1)/2; Corollary 8.2 explicitly quantifies over cusp eigenforms. The level-one primitive/non-CM bridge has an independent Fricke/depletion proof."
+    }
+  ],
+  "bibliography": [
+    {
+      "key": "Andersson2026",
+      "line": 1740,
+      "role": "Context: vertical limits of infinite Dirichlet series; not substituted for finite-truncation limits."
+    },
+    {
+      "key": "BLGG2011",
+      "line": 1745,
+      "role": "Required deep input: Corollary 7.1.7 and its classical-to-automorphic normalization. Not yet a Lean theorem."
+    },
+    {
+      "key": "Boyd1998",
+      "line": 1751,
+      "role": "Logarithmic Mahler measure background; actual finite-dimensional logarithmic integrability is proved locally."
+    },
+    {
+      "key": "BorweinEtAl2007",
+      "line": 1757,
+      "role": "Historical/numerical context on finite zeta zeros; no numerical proof dependency."
+    },
+    {
+      "key": "Conway1978",
+      "line": 1763,
+      "role": "Jensen and elementary complex analysis; imported analytic APIs and local exact adapters replace citation-only reasoning."
+    },
+    {
+      "key": "Deligne1974",
+      "line": 1769,
+      "role": "Required deep arithmetic bound for actual cusp eigenvalues; still an open formalization input."
+    },
+    {
+      "key": "Dubon2025",
+      "line": 1775,
+      "role": "Predecessor/support context; not the concentration theorem or a Lean dependency."
+    },
+    {
+      "key": "Folland1999",
+      "line": 1781,
+      "role": "Positive Stieltjes measures and measure theory; actual one-sided derivative measure construction is implemented."
+    },
+    {
+      "key": "GonekLedoan2010",
+      "line": 1786,
+      "role": "Different finite-height regime; no coupled limit imported into the target."
+    },
+    {
+      "key": "HavilandWintner1934",
+      "line": 1792,
+      "role": "Continuous Kronecker–Weyl context; actual prime flow equidistribution and density proved locally."
+    },
+    {
+      "key": "IwaniecTopics",
+      "line": 1798,
+      "role": "Classical newform/eigenvalue normalization; genuine old/newspace and Hecke objects implemented, automorphic bridge still separate."
+    },
+    {
+      "key": "JessenTornehave1945",
+      "line": 1804,
+      "role": "Theorems 5,7,31; retained printed p.275 fixes the open-strip convention. Finite-polynomial proof obligations are implemented locally."
+    },
+    {
+      "key": "Kahane1985",
+      "line": 1809,
+      "role": "Definition/background for independent uniform-circle variables; actual probability law and independence consumed in Lean."
+    },
+    {
+      "key": "KerrKlurmanThorner2026",
+      "line": 1815,
+      "role": "Context about zeros of infinite L-functions; not a theorem about finite-polynomial zeros."
+    },
+    {
+      "key": "LedoanRoyZaharescu2014",
+      "line": 1821,
+      "role": "Context: Dedekind-zeta partial sums; not part of the required application scope."
+    },
+    {
+      "key": "LiRoyZaharescu2016",
+      "line": 1827,
+      "role": "Context: symmetrized approximations with a dual term; not the raw truncation in this project."
+    },
+    {
+      "key": "Montgomery1983",
+      "line": 1833,
+      "role": "Context: extreme zeros of fixed finite approximations; distinct from normalized vertical mass."
+    },
+    {
+      "key": "Mora2013",
+      "line": 1839,
+      "role": "Context: broad support is compatible with concentration of vertical mass."
+    },
+    {
+      "key": "Rankin1939",
+      "line": 1845,
+      "role": "Required genuine mean-square asymptotic input, including a positive leading constant; still open."
+    },
+    {
+      "key": "Rockafellar1970",
+      "line": 1851,
+      "role": "Convex slopes and compact-uniform convergence; actual convexity and derivative inequalities are proved/consumed locally."
+    },
+    {
+      "key": "RoyVatwani2019",
+      "line": 1857,
+      "role": "Context: zero-free regions and counts for partial L-functions."
+    },
+    {
+      "key": "RoyVatwani2021",
+      "line": 1863,
+      "role": "Context: existence and support of Dirichlet-polynomial zeros."
+    },
+    {
+      "key": "Rudin1962",
+      "line": 1869,
+      "role": "Finite-measure Fourier inversion; exact Gaussian identification supplies the actual measure/density bridge locally."
+    },
+    {
+      "key": "Selberg1940",
+      "line": 1874,
+      "role": "Required Rankin–Selberg input; remains open rather than being assumed as completed."
+    },
+    {
+      "key": "Watson1944",
+      "line": 1879,
+      "role": "J₀ series, circle integral and large-argument bound; actual needed bounds proved locally with pinned dependencies."
+    }
+  ]
+}

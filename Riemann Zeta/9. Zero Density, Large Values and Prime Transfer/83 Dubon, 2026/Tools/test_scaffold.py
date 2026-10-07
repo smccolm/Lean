@@ -24,8 +24,10 @@ def main():
         for name in ['Dubon Checklist.md', 'Dubon Architecture.md']:
             shutil.copyfile(project / name, folder / name)
             target=folder/name
-            text = target.read_text(encoding='utf-8').replace(
-                'GOAL ACTIVE — 0/20 proof gates complete.', STATUS)
+            text = re.sub(r'GOAL ACTIVE — \d+/20 proof gates complete\.', STATUS,
+                          target.read_text(encoding='utf-8'))
+            text = text.replace('- [x] **DONE**', '- [ ] **OPEN**')
+            text = re.sub(r'(G\d+\["DUB-\d+) DONE<br/>', r'\1 OPEN<br/>', text)
             # Fixtures carry status/contracts, not the production dependency tree.
             # Keep their link tests self-contained; the runner separately validates
             # every link in the real project before reaching these regressions.
@@ -37,14 +39,18 @@ def main():
         config = deepcopy(original_config)
         config['mode']='template-only'
         config['goalActivated']=False
+        config['proofGatesComplete']=0
         config['statusDocuments'] = ['Dubon Checklist.md', 'Dubon Architecture.md']
         config['files'] = [{'path':x} for x in config['statusDocuments'] + ['reference.txt']]
         registry = deepcopy(original_registry)
         registry['mode']='template-only'
         registry['goalActivated']=False
+        registry['completed']=0
         for gate in registry['gates']:
+            gate['status']='OPEN'
             gate['implementationFiles']=[]
             gate['evidence']=[]
+            gate.pop('acceptedOn', None)
         if case == 'active-mode': config['mode'] = 'active-development'
         elif case == 'activated-goal': registry['goalActivated'] = True
         elif case == 'done-gate': registry['gates'][0]['status'] = 'DONE'
@@ -89,7 +95,8 @@ def main():
             print(f'ACTIVE METADATA TEST PASS: {case} (accepted={accepted})')
         parent=read_json(project.parents[1]/'lake-manifest.json')
         selected=read_json(project/'Extension/lake-manifest.json')
-        for case in ['valid','wrong-reuse-path','missing-reuse','root-pin-drift']:
+        for case in ['valid','wrong-reuse-path','missing-reuse','root-pin-drift',
+                     'wrong-gamma-reuse-path','missing-gamma-reuse','wrong-expdb-path','missing-expdb']:
             candidate=deepcopy(selected)
             if case=='wrong-reuse-path':
                 next(x for x in candidate['packages'] if x['name']=='GafniTaoNative')['dir']='../wrong'
@@ -97,6 +104,14 @@ def main():
                 candidate['packages']=[x for x in candidate['packages'] if x['name']!='GafniTaoNative']
             elif case=='root-pin-drift':
                 next(x for x in candidate['packages'] if x['name']=='mathlib')['rev']='0'*40
+            elif case=='wrong-gamma-reuse-path':
+                next(x for x in candidate['packages'] if x['name']=='TaoTrudgianYang2025')['dir']='../wrong'
+            elif case=='missing-gamma-reuse':
+                candidate['packages']=[x for x in candidate['packages'] if x['name']!='TaoTrudgianYang2025']
+            elif case=='wrong-expdb-path':
+                next(x for x in candidate['packages'] if x['name']=='ExpdbFrozen')['dir']='../wrong'
+            elif case=='missing-expdb':
+                candidate['packages']=[x for x in candidate['packages'] if x['name']!='ExpdbFrozen']
             accepted=True
             try:check_dependency_graph(project,parent,candidate)
             except ValueError:accepted=False

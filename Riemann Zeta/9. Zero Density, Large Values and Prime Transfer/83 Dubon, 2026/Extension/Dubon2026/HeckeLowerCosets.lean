@@ -121,5 +121,13 @@ def heckeLowerCosetEquiv {p Q : ℕ} (hp : Nat.Prime p) (hpQ : Nat.Coprime p Q) 
   Equiv.ofBijective (heckeLowerCoset p Q hpQ)
     ⟨heckeLowerCoset_injective hp hpQ, heckeLowerCoset_surjective hp hpQ⟩
 
+/-- Equality with an actual coset is precisely the representative membership condition. -/
+theorem heckeLowerCoset_eq_iff {p Q : ℕ} (hpQ : Nat.Coprime p Q)
+    (x : Option (ZMod p)) (γ : Gamma0 Q) :
+    heckeLowerCoset p Q hpQ x = QuotientGroup.mk γ ↔
+      heckeLowerRepresentative p Q hpQ x * γ ∈ heckeLowerSubgroup Q p := by
+  unfold heckeLowerCoset
+  rw [QuotientGroup.eq, inv_inv]
+
 end
 end Dubon2026

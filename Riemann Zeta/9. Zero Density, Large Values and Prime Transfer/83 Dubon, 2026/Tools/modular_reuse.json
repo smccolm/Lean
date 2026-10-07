@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "originalLean": "4.31.0-rc2",
   "targetLean": "4.30.0",
-  "status": "289-module sequential checkpoint verified; adjugate and finite Gamma0 coset extension in focused verification; no full upstream package imported",
+  "status": "minimal licensed ports and local deductions; complete all-index primitive eigenbehavior, all-index oldspace stability, finite-dimensionality and actual Petersson old/new decomposition compile cleanly; 352-module aggregate and sequential verification passed; no full upstream package imported",
   "files": [
     {
       "path": "Dependencies/ModularFormsSource/LICENSE.txt",
@@ -90,7 +90,43 @@
       "upstreamPath": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory.lean",
       "bytes": 20176,
       "sha256": "c0a61bbe6e9c8d91173ff5a1296c1d50c0c6c69faf9575b3402b3a726db4d8c8"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/SL2Surjection.lean.txt",
+      "upstreamPath": "LeanModularForms/HeckeRIngs/GLn/SL2Surjection.lean",
+      "bytes": 9246,
+      "sha256": "c5623fd49fe233ef658eb75c53986cf805332822dd64c86c9c9d152c3a8927a6"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsAuxiliary.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/DimGenCongLevels/Auxiliary.lean.txt",
+      "bytes": 8039,
+      "sha256": "f6e1c3feacd305ce4cdac135bc81be5659d02debd8400e5d3643c174720cf079"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsFiniteDimensional.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/DimGenCongLevels/FiniteDimensional.lean.txt",
+      "bytes": 4155,
+      "sha256": "14649cb905255857a07e7ddff16dc3c9c979e70fe8df0c5100e5a827e8071486"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsNormReduction.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/DimGenCongLevels/NormReduction.lean.txt",
+      "bytes": 5032,
+      "sha256": "5b12eefc844203b186bb773e14e439c3dfb77f50db4187867ab3b25976a189a7"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsNormTransfer.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/DimGenCongLevels/NormTransfer.lean.txt",
+      "bytes": 12927,
+      "sha256": "afe6b2e9adef545e33b478fc7fcc249c226a06ff96e570213c2edda98bdd8dae"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimensionFormulas.lean.txt",
+      "upstreamPath": "LeanModularForms/Modularforms/DimensionFormulas.lean.txt",
+      "bytes": 10311,
+      "sha256": "53aebac683f4020488e6c49a49506d37390ad6205cbbfeaa8717d854810b0e11"
     }
   ],
-  "scope": "Petersson integrability/definiteness and finite-coset pairing, using existing Mathlib hyperbolic volume; actual Gamma0 degeneracy maps and sparse Fourier formula; orthogonality arguments. The local oldspace includes all d*M | N from M<N, including d=1. No admitted general GLn or main-lemma proof is imported. Selected finite root-of-unity and convergent Fourier averaging proofs from QExpansionSlash; generalized from a prime to every positive integer. The full upstream Hecke/newform package is not imported. Selected rational-cusp transport from HeckeModularForm and finite Mobius/integral matrix calculations from HeckeT_p. The local prime invariance proof is specialized directly to Gamma0, including bad primes. Selected coprime divisor reindexing and prime-power arithmetic from FourierHecke are generalized locally to a completely multiplicative weight, allowing zero at bad primes. The actual determinant-normalized slash formula is proved locally; conflicting upstream normalization comments are not adopted. Selected abstract fundamental-domain transport from PeterssonLevelN and projective integer action/domain proofs from PSL2Action. Hyperbolic volume invariance reuses the pinned Mathlib instance; no duplicate Jacobian measure construction is ported. Selected adjugate matrix identities and integral Bezout representative from AdjointTheory. The local inverse-slash transport supplies the integral consumer; explicit Gamma0 upper/lower finite cosets are proved locally."
+  "scope": "Petersson integrability/definiteness and finite-coset pairing, using existing Mathlib hyperbolic volume; actual Gamma0 degeneracy maps and sparse Fourier formula; orthogonality arguments. The local oldspace includes all d*M | N from M<N, including d=1. No admitted general GLn or main-lemma proof is imported. Selected finite root-of-unity and convergent Fourier averaging proofs from QExpansionSlash; generalized from a prime to every positive integer. The full upstream Hecke/newform package is not imported. Selected rational-cusp transport from HeckeModularForm and finite Mobius/integral matrix calculations from HeckeT_p. The local prime invariance proof is specialized directly to Gamma0, including bad primes. Selected coprime divisor reindexing and prime-power arithmetic from FourierHecke are generalized locally to a completely multiplicative weight, allowing zero at bad primes. The actual determinant-normalized slash formula is proved locally; conflicting upstream normalization comments are not adopted. Selected abstract fundamental-domain transport from PeterssonLevelN and projective integer action/domain proofs from PSL2Action. Hyperbolic volume invariance reuses the pinned Mathlib instance; no duplicate Jacobian measure construction is ported. Selected adjugate matrix identities and integral Bezout representative from AdjointTheory. The local inverse-slash transport supplies the integral consumer; explicit Gamma0 upper/lower finite cosets are proved locally. Actual upper/lower Gamma0 traces, projective subgroup conjugation, finite-domain integrability and good-index Petersson self-adjointness are proved in local source; true primitive good-index coefficient reality is derived and consumed by the conditional arithmetic concentration theorem. Rankin–Selberg, Deligne and Sato–Tate remain open. Good-index full old/newspace stability, actual principal congruence action and finite-dimensional slash orbits are proved locally. Auxiliary invariant inner products use finite-basis coordinates and group averaging, not an asserted Petersson identity. The support-to-oldspace main lemma is now proved locally for every positive level. Selected self-contained SL2Surjection proof is retained for coprime integral lifting and surjectivity of reduction to SL2(Z/NZ); its local port passed the recorded 330-module aggregate and sequential verification. The selected LevelRaise integral T-factorization also compiles in its own local module. Actual finite cyclic divisor averages, simultaneous auxiliary symmetry, coprime-index annihilation and sparse fractional periods are implemented locally; complete oldspace decomposition is now proved using the actual finite local group averages. Actual sparse Gamma0 level lowering, exact oldspace membership and prime-power coprime-support/newspace uniqueness are now proved; all prime-power finite matrix factors and common-range compression algebra are implemented; general composite-level support decomposition is now proved in PrincipalSupportDecomposition and CuspCoprimeOldspace, using the actual Gamma0 descent, sparse lower-level forms and genuine Petersson orthogonality. Selected DimensionFormulas and DimGenCongLevels sources are retained for finite q-jet stabilization, analytic order transfer through the actual modular norm, and general finite-dimensionality. The selected dimension ports and all-index oldspace/newform deductions now compile cleanly. The full positive-index primitive eigenfunction property is derived from good-index newness and actual Petersson orthogonality; the 352-module aggregate and sequential checks passed."
 }

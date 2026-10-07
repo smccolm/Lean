@@ -4,12 +4,12 @@
   "goalActivated": true,
   "namespace": "Dubon2026",
   "prefix": "DUB",
-  "completed": 0,
+  "completed": 15,
   "total": 20,
   "gates": [
     {
       "id": "DUB-01",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Source review and frozen contracts",
       "proposedModule": "SourceReview",
       "sourceLabels": [
@@ -20,12 +20,24 @@
       ],
       "dependsOn": [],
       "acceptance": "Review the exact PDF/TeX, all 139 labels and 25 bibliography entries; resolve each source-review item, preserving the original and any justified reformulation.",
-      "implementationFiles": [],
-      "evidence": []
+      "implementationFiles": [
+        "Dubon Source Acceptance.md",
+        "Tools/source_acceptance_20261006.json"
+      ],
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-01",
+          "foundationLog": "../../logs/foundation_freeze_20261006_204211.log",
+          "paperLog": "logs/dubon-build-20261006-204535-691.log",
+          "verification": "Both exit 0; zero diagnostics. Semantic review separately recorded after the unchanged Lean scope passed."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-02",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Actual Dirichlet polynomials and support",
       "proposedModule": "DirichletPolynomial",
       "sourceLabels": [],
@@ -37,11 +49,20 @@
         "Extension/Dubon2026/DirichletPolynomial.lean",
         "Extension/Dubon2026/DirichletZeros.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-02",
+          "foundationLog": "../../logs/foundation_freeze_20261006_204211.log",
+          "paperLog": "logs/dubon-build-20261006-204535-691.log",
+          "verification": "Both exit 0; zero diagnostics. Semantic review separately recorded after the unchanged Lean scope passed."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-03",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Prime factorization and Bohr flow",
       "proposedModule": "BohrLift",
       "sourceLabels": [
@@ -62,11 +83,20 @@
         "Extension/Dubon2026/DiscreteObservable.lean",
         "Extension/Dubon2026/TorusDiscreteAverage.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-03",
+          "foundationLog": "../../logs/foundation_freeze_20261006_204211.log",
+          "paperLog": "logs/dubon-build-20261006-204535-691.log",
+          "verification": "Both exit 0; zero diagnostics. Semantic review separately recorded after the unchanged Lean scope passed."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-04",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Torus logarithms and Jensen bounds",
       "proposedModule": "TorusLog",
       "sourceLabels": [
@@ -84,11 +114,20 @@
         "Extension/Dubon2026/TorusPolynomialLog.lean",
         "Extension/Dubon2026/TorusJensen.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-04",
+          "foundationLog": "../../logs/foundation_freeze_20261006_205711.log",
+          "paperLog": "logs/dubon-build-20261006-210110-966.log",
+          "verification": "Both exit 0, zero diagnostics; complete source/consumer review recorded separately. Lean scope unchanged after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-05",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Actual vertical Jessen identity",
       "proposedModule": "JessenFunction",
       "sourceLabels": [
@@ -124,11 +163,20 @@
         "Extension/Dubon2026/HaarChord.lean",
         "Extension/Dubon2026/JessenConvexity.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-05",
+          "foundationLog": "../../logs/foundation_freeze_20261006_205711.log",
+          "paperLog": "logs/dubon-build-20261006-210110-966.log",
+          "verification": "Both exit 0, zero diagnostics; complete source/consumer review recorded separately. Lean scope unchanged after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-06",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Vertical zero frequency with multiplicity",
       "proposedModule": "ZeroFrequency",
       "sourceLabels": [
@@ -244,13 +292,24 @@
         "Extension/Dubon2026/TwistCountPartition.lean",
         "Extension/Dubon2026/TwistCountRegularity.lean",
         "Extension/Dubon2026/UniversalMonicDivision.lean",
-        "Extension/Dubon2026/VerticalLineCountRegularity.lean"
+        "Extension/Dubon2026/VerticalLineCountRegularity.lean",
+        "Extension/Dubon2026/CoefficientScaling.lean",
+        "Extension/Dubon2026/NonzeroFirstCoefficientDensity.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-06",
+          "foundationLog": "../../logs/foundation_freeze_20261006_211938.log",
+          "paperLog": "logs/dubon-build-20261006-212259-859.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer reviews recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-07",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Total mass and probability normalization",
       "proposedModule": "JessenMeasure",
       "sourceLabels": [
@@ -275,13 +334,24 @@
         "Extension/Dubon2026/BinomialMeasure.lean",
         "Extension/Dubon2026/BinomialZeros.lean",
         "Extension/Dubon2026/BinomialZeroCount.lean",
-        "Extension/Dubon2026/IsolatedPrimeSupport.lean"
+        "Extension/Dubon2026/IsolatedPrimeSupport.lean",
+        "Extension/Dubon2026/JessenGeneralMass.lean",
+        "Extension/Dubon2026/CoefficientScaling.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-07",
+          "foundationLog": "../../logs/foundation_freeze_20261006_211938.log",
+          "paperLog": "logs/dubon-build-20261006-212259-859.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer reviews recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-08",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Bessel characteristic-function inputs",
       "proposedModule": "BesselJ0",
       "sourceLabels": [],
@@ -300,11 +370,20 @@
         "Extension/Dubon2026/BesselDecay.lean",
         "Extension/Dubon2026/CircleRadial.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-08",
+          "foundationLog": "../../logs/foundation_freeze_20261006_205711.log",
+          "paperLog": "logs/dubon-build-20261006-210110-966.log",
+          "verification": "Both exit 0, zero diagnostics; complete source/consumer review recorded separately. Lean scope unchanged after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-09",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Translated Steinhaus logarithmic bound",
       "proposedModule": "Steinhaus",
       "sourceLabels": [
@@ -342,11 +421,20 @@
         "Extension/Dubon2026/SteinhausIndependentLaw.lean",
         "Extension/Dubon2026/SteinhausLog.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-09",
+          "foundationLog": "../../logs/foundation_freeze_20261006_205711.log",
+          "paperLog": "logs/dubon-build-20261006-210110-966.log",
+          "verification": "Both exit 0, zero diagnostics; complete source/consumer review recorded separately. Lean scope unchanged after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-10",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Isolated-prime lower bound",
       "proposedModule": "IsolatedPrimes",
       "sourceLabels": [
@@ -367,11 +455,20 @@
         "Extension/Dubon2026/PrimeSelection.lean",
         "Extension/Dubon2026/IsolatedPrimeLower.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-10",
+          "foundationLog": "../../logs/foundation_freeze_20261006_213900.log",
+          "paperLog": "logs/dubon-build-20261006-214209-931.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer review recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-11",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Abstract locally uniform potential limit",
       "proposedModule": "PotentialLimit",
       "sourceLabels": [
@@ -387,11 +484,20 @@
         "Extension/Dubon2026/JessenSlopeBounds.lean",
         "Extension/Dubon2026/PotentialEquicontinuity.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-11",
+          "foundationLog": "../../logs/foundation_freeze_20261006_213900.log",
+          "paperLog": "logs/dubon-build-20261006-214209-931.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer review recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-12",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Weak probability limit and tightness",
       "proposedModule": "WeakLimit",
       "sourceLabels": [
@@ -409,11 +515,20 @@
         "Extension/Dubon2026/NeighborhoodConcentration.lean",
         "Extension/Dubon2026/WeakLimit.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-12",
+          "foundationLog": "../../logs/foundation_freeze_20261006_213900.log",
+          "paperLog": "logs/dubon-build-20261006-214209-931.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer review recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-13",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Zeta partial sums and outside-strip density",
       "proposedModule": "ZetaApplication",
       "sourceLabels": [
@@ -442,11 +557,20 @@
         "Extension/Dubon2026/ZeroCountRadius.lean",
         "Extension/Dubon2026/ZetaCountTails.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-13",
+          "foundationLog": "../../logs/foundation_freeze_20261006_213900.log",
+          "paperLog": "logs/dubon-build-20261006-214209-931.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer review recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-14",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Every fixed Dirichlet character",
       "proposedModule": "DirichletApplication",
       "sourceLabels": [
@@ -470,11 +594,20 @@
         "Extension/Dubon2026/CoprimeHarmonic.lean",
         "Extension/Dubon2026/CharacterEnergyAsymptotic.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-14",
+          "foundationLog": "../../logs/foundation_freeze_20261006_213900.log",
+          "paperLog": "logs/dubon-build-20261006-214209-931.log",
+          "verification": "Both exit 0, zero diagnostics; full source/proof-body and exact consumer review recorded separately. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-15",
-      "status": "OPEN",
+      "status": "DONE",
       "title": "Actual eigenforms and coefficient translation",
       "proposedModule": "ModularObjects",
       "sourceLabels": [],
@@ -516,9 +649,97 @@
         "Extension/Dubon2026/ModularCosetProjection.lean",
         "Extension/Dubon2026/ModularGamma0Domain.lean",
         "Extension/Dubon2026/PeterssonSlashTransport.lean",
-        "Extension/Dubon2026/ModularRealProjective.lean"
+        "Extension/Dubon2026/ModularRealProjective.lean",
+        "Extension/Dubon2026/PeterssonAdjugate.lean",
+        "Extension/Dubon2026/HeckeUpperCosets.lean",
+        "Extension/Dubon2026/HeckeLowerCosets.lean",
+        "Extension/Dubon2026/HeckeTransversalTrace.lean",
+        "Extension/Dubon2026/HeckeLowerTrace.lean",
+        "Extension/Dubon2026/HeckeCongruenceConjugation.lean",
+        "Extension/Dubon2026/HeckeSlashIntegrability.lean",
+        "Extension/Dubon2026/HeckeProjectiveCosets.lean",
+        "Extension/Dubon2026/HeckeProjectiveConjugation.lean",
+        "Extension/Dubon2026/HeckeTraceIntegral.lean",
+        "Extension/Dubon2026/HeckePrimeAdjoint.lean",
+        "Extension/Dubon2026/HeckeGoodAdjoint.lean",
+        "Extension/Dubon2026/PrimitiveCoefficientReality.lean",
+        "Extension/Dubon2026/HeckeDegeneracyPrime.lean",
+        "Extension/Dubon2026/HeckeOldNewStability.lean",
+        "Extension/Dubon2026/CuspPeterssonCore.lean",
+        "Extension/Dubon2026/PrincipalCuspAction.lean",
+        "Extension/Dubon2026/PrincipalCuspOrbit.lean",
+        "Extension/Dubon2026/FiniteRepresentationInnerProduct.lean",
+        "Extension/Dubon2026/FiniteSymmetricKernels.lean",
+        "Extension/Dubon2026/FiniteGroupProjection.lean",
+        "Extension/Dubon2026/SL2Reduction.lean",
+        "Extension/Dubon2026/PrincipalCongruenceQuotient.lean",
+        "Extension/Dubon2026/CuspUpperCongruence.lean",
+        "Extension/Dubon2026/LevelLowerFactorization.lean",
+        "Extension/Dubon2026/PrincipalRescaledCoefficients.lean",
+        "Extension/Dubon2026/PrincipalTranslation.lean",
+        "Extension/Dubon2026/PrincipalDivisorProjection.lean",
+        "Extension/Dubon2026/FiniteCyclicRepresentation.lean",
+        "Extension/Dubon2026/PrincipalCyclicProjection.lean",
+        "Extension/Dubon2026/PrincipalOrbitProjection.lean",
+        "Extension/Dubon2026/PrincipalCoprimeProjection.lean",
+        "Extension/Dubon2026/FiniteProjectionCommutation.lean",
+        "Extension/Dubon2026/CuspSparsePeriod.lean",
+        "Extension/Dubon2026/CuspLowerFunction.lean",
+        "Extension/Dubon2026/CuspSparseLowering.lean",
+        "Extension/Dubon2026/CuspSparseOldspace.lean",
+        "Extension/Dubon2026/PrincipalPrimeFactors.lean",
+        "Extension/Dubon2026/FiniteProjectedKernels.lean",
+        "Extension/Dubon2026/FiniteCompressedProducts.lean",
+        "Extension/Dubon2026/FiniteLowerTriangular.lean",
+        "Extension/Dubon2026/PrincipalLowerProjection.lean",
+        "Extension/Dubon2026/PrincipalCyclicLocality.lean",
+        "Extension/Dubon2026/PrincipalUpperDescent.lean",
+        "Extension/Dubon2026/FiniteCompressionDecomposition.lean",
+        "Extension/Dubon2026/PrincipalCommonInvariant.lean",
+        "Extension/Dubon2026/PrincipalOrbitCoprime.lean",
+        "Extension/Dubon2026/PrincipalSupportDecomposition.lean",
+        "Extension/Dubon2026/CuspCoprimeOldspace.lean",
+        "Extension/Dubon2026/PrimitiveMultiplicityOne.lean",
+        "Extension/Dubon2026/PrimitiveEigenSpace.lean",
+        "Extension/Dubon2026/BadPrimeDilationArithmetic.lean",
+        "Extension/Dubon2026/HeckeBadDegeneracy.lean",
+        "Extension/Dubon2026/HeckeAllOldStability.lean",
+        "Extension/Dubon2026/ModularCoefficientOrder.lean",
+        "Extension/Dubon2026/ModularCoefficientJets.lean",
+        "Extension/Dubon2026/ModularNormFactors.lean",
+        "Extension/Dubon2026/ModularNormOrder.lean",
+        "Extension/Dubon2026/ModularFiniteDimension.lean",
+        "Extension/Dubon2026/CuspOldNewProjection.lean",
+        "Extension/Dubon2026/PrimitiveOldEigenExclusion.lean",
+        "Extension/Dubon2026/PrimitiveFullEigen.lean",
+        "Extension/Dubon2026/PrimitiveFullCoefficients.lean",
+        "Extension/Dubon2026/PrimitiveSelfTwistCoefficients.lean",
+        "Extension/Dubon2026/PrimitiveGaussTwist.lean",
+        "Extension/Dubon2026/PrincipalCharacterTwist.lean",
+        "Extension/Dubon2026/CharacterTwistCongruence.lean",
+        "Extension/Dubon2026/CharacterTwistInvariant.lean",
+        "Extension/Dubon2026/CuspQuadraticTwist.lean",
+        "Extension/Dubon2026/QuadraticTwistHecke.lean",
+        "Extension/Dubon2026/CuspTwistFunction.lean",
+        "Extension/Dubon2026/FrickeMatrices.lean",
+        "Extension/Dubon2026/TwistFrickeTransition.lean",
+        "Extension/Dubon2026/FrickeCusp.lean",
+        "Extension/Dubon2026/CuspPrimeDepletion.lean",
+        "Extension/Dubon2026/FrickeDegeneracy.lean",
+        "Extension/Dubon2026/QuadraticTwistFricke.lean",
+        "Extension/Dubon2026/CuspFiniteDepletion.lean",
+        "Extension/Dubon2026/LevelOneSelfTwist.lean"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "record": "Dubon Semantic Acceptance.md",
+          "section": "DUB-15",
+          "foundationLog": "../../logs/foundation_freeze_20261006_221220.log",
+          "paperLog": "logs/dubon-build-20261006-221648-905.log",
+          "verification": "Both exit 0, zero diagnostics; all 113 module bodies and exact source consumers reviewed. No Lean changes after verification."
+        }
+      ],
+      "acceptedOn": "2026-10-06"
     },
     {
       "id": "DUB-16",
@@ -540,7 +761,163 @@
         "Extension/Dubon2026/WeightedEnergyError.lean",
         "Extension/Dubon2026/WeightedEnergyAsymptotic.lean",
         "Extension/Dubon2026/RankinSelbergEnergyConsequences.lean",
-        "Extension/Dubon2026/RankinSelbergInputBridge.lean"
+        "Extension/Dubon2026/RankinSelbergInputBridge.lean",
+        "Extension/Dubon2026/FourierNormSeries.lean",
+        "Extension/Dubon2026/CuspFourierEnergy.lean",
+        "Extension/Dubon2026/CuspEnergyBound.lean",
+        "Extension/Dubon2026/CuspSquareDirichlet.lean",
+        "Extension/Dubon2026/CuspMellinEnergy.lean",
+        "Extension/Dubon2026/CuspComplexMellin.lean",
+        "Extension/Dubon2026/CuspRankinSeries.lean",
+        "Extension/Dubon2026/EisensteinLatticeKernel.lean",
+        "Extension/Dubon2026/Gamma0Eisenstein.lean",
+        "Extension/Dubon2026/Gamma0EisensteinHolomorphic.lean",
+        "Extension/Dubon2026/PrimitiveEisensteinCosets.lean",
+        "Extension/Dubon2026/ProjectiveTranslationStrip.lean",
+        "Extension/Dubon2026/FundamentalDomainUnfolding.lean",
+        "Extension/Dubon2026/Gamma0CosetUnfolding.lean",
+        "Extension/Dubon2026/ProjectiveEisensteinCosets.lean",
+        "Extension/Dubon2026/EisensteinRowFibers.lean",
+        "Extension/Dubon2026/EisensteinRowCosetSum.lean",
+        "Extension/Dubon2026/Gamma0EisensteinUnfolding.lean",
+        "Extension/Dubon2026/HyperbolicStripIntegral.lean",
+        "Extension/Dubon2026/PeterssonStripMellin.lean",
+        "Extension/Dubon2026/CuspRankinUnfolding.lean",
+        "Extension/Dubon2026/LatticeThetaKernel.lean",
+        "Extension/Dubon2026/ShiftedGaussianPoisson.lean",
+        "Extension/Dubon2026/LatticeThetaFourier.lean",
+        "Extension/Dubon2026/LatticeThetaPoisson.lean",
+        "Extension/Dubon2026/LatticeThetaDecay.lean",
+        "Extension/Dubon2026/LatticeThetaMellin.lean",
+        "Extension/Dubon2026/LatticeThetaHolomorphic.lean",
+        "Extension/Dubon2026/LatticeThetaFEPair.lean",
+        "Extension/Dubon2026/LatticeCompletedMellin.lean",
+        "Extension/Dubon2026/LatticeEpsteinMellin.lean",
+        "Extension/Dubon2026/PrimitiveLatticeScaling.lean",
+        "Extension/Dubon2026/PrimitiveLatticeSum.lean",
+        "Extension/Dubon2026/LatticeEpsteinPrimitive.lean",
+        "Extension/Dubon2026/LevelOneEisensteinContinuation.lean",
+        "Extension/Dubon2026/Gamma0LatticeSieve.lean",
+        "Extension/Dubon2026/Gamma0SievedPrimitive.lean",
+        "Extension/Dubon2026/Gamma0PrincipalFactor.lean",
+        "Extension/Dubon2026/RectangularLatticeRows.lean",
+        "Extension/Dubon2026/Gamma0EpsteinSieve.lean",
+        "Extension/Dubon2026/Gamma0EisensteinContinuation.lean",
+        "Extension/Dubon2026/Gamma0EisensteinResidue.lean",
+        "Extension/Dubon2026/LatticeMellinMajorant.lean",
+        "Extension/Dubon2026/LatticeMellinTailSplit.lean",
+        "Extension/Dubon2026/LatticeEpsteinMajorant.lean",
+        "Extension/Dubon2026/LatticeSpatialMeasurable.lean",
+        "Extension/Dubon2026/LatticeFundamentalBound.lean",
+        "Extension/Dubon2026/CuspPolynomialDecay.lean",
+        "Extension/Dubon2026/LatticeCuspMajorant.lean",
+        "Extension/Dubon2026/RectangularLatticeMajorant.lean",
+        "Extension/Dubon2026/LatticeCuspContinuationIntegral.lean",
+        "Extension/Dubon2026/LatticeCuspHolomorphic.lean",
+        "Extension/Dubon2026/LatticeCuspResidue.lean",
+        "Extension/Dubon2026/Gamma0CompletedCusp.lean",
+        "Extension/Dubon2026/Gamma0CuspContinuation.lean",
+        "Extension/Dubon2026/CuspRankinFactor.lean",
+        "Extension/Dubon2026/CuspRankinRealContinuation.lean",
+        "Extension/Dubon2026/CuspRankinComplexContinuation.lean",
+        "Extension/Dubon2026/CuspRankinContinuation.lean",
+        "Extension/Dubon2026/CuspRankinResidue.lean",
+        "Extension/Dubon2026/LatticeCuspFunctionalEquation.lean",
+        "Extension/Dubon2026/LatticeCuspStripBound.lean",
+        "Extension/Dubon2026/Gamma0CuspEntire.lean",
+        "Extension/Dubon2026/SquareLiftLSeries.lean",
+        "Extension/Dubon2026/PrincipalSquareSeries.lean",
+        "Extension/Dubon2026/RankinConvolution.lean",
+        "Extension/Dubon2026/RankinConvolutionCompleted.lean",
+        "Extension/Dubon2026/Gamma0CuspStripBound.lean",
+        "Extension/Dubon2026/CuspRankinPoleNumerator.lean",
+        "Extension/Dubon2026/CuspRankinRegular.lean",
+        "Extension/Dubon2026/CuspNormalizedEnergy.lean",
+        "Extension/Dubon2026/CuspRankinMean.lean",
+        "Extension/Dubon2026/MoebiusSquareSeries.lean",
+        "Extension/Dubon2026/RankinDeconvolution.lean",
+        "Extension/Dubon2026/MeanWeightedEnergy.lean",
+        "Extension/Dubon2026/CuspWeightedEnergy.lean",
+        "Extension/Dubon2026/NewmanKernel.lean",
+        "Extension/Dubon2026/NewmanLaplace.lean",
+        "Extension/Dubon2026/NewmanHolomorphic.lean",
+        "Extension/Dubon2026/NewmanRectangle.lean",
+        "Extension/Dubon2026/NewmanIntegrandBounds.lean",
+        "Extension/Dubon2026/NewmanContourBounds.lean",
+        "Extension/Dubon2026/NewmanDecay.lean",
+        "Extension/Dubon2026/NewmanContourIdentity.lean",
+        "Extension/Dubon2026/NewmanTauberian.lean",
+        "Extension/Dubon2026/NewmanSquareData.lean",
+        "Extension/Dubon2026/NewmanSquareLaplace.lean",
+        "Extension/Dubon2026/CuspCentralTauberian.lean",
+        "Extension/Dubon2026/NewmanSquareAbel.lean",
+        "Extension/Dubon2026/CuspCentralEnergy.lean",
+        "Extension/Dubon2026/ConvolutionSummatory.lean",
+        "Extension/Dubon2026/RankinConvolutionEnergy.lean",
+        "Extension/Dubon2026/PrincipalSquareMass.lean",
+        "Extension/Dubon2026/RankinConvolutionRegular.lean",
+        "Extension/Dubon2026/RankinConvolutionMean.lean",
+        "Extension/Dubon2026/RieszSecondKernel.lean",
+        "Extension/Dubon2026/RieszSecondSum.lean",
+        "Extension/Dubon2026/RieszSecondError.lean",
+        "Extension/Dubon2026/RankinConvolutionRiesz.lean",
+        "Extension/Dubon2026/GammaVerticalPhase.lean",
+        "Extension/Dubon2026/TrigammaIntegral.lean",
+        "Extension/Dubon2026/TrigammaAsymptotic.lean",
+        "Extension/Dubon2026/GammaPhaseCurvature.lean",
+        "Extension/Dubon2026/RankinGammaPhase.lean",
+        "Extension/Dubon2026/RieszMellinKernel.lean",
+        "Extension/Dubon2026/RieszMellinInversion.lean",
+        "Extension/Dubon2026/RieszInverseKernel.lean",
+        "Extension/Dubon2026/RieszDirichletInterchange.lean",
+        "Extension/Dubon2026/RieszPerron.lean",
+        "Extension/Dubon2026/RieszPerronIntegral.lean",
+        "Extension/Dubon2026/RankinConvolutionPerron.lean",
+        "Extension/Dubon2026/IntegratedFrequency.lean",
+        "Extension/Dubon2026/PhaseFirstDerivative.lean",
+        "Extension/Dubon2026/PhaseCurvatureBand.lean",
+        "Extension/Dubon2026/PhaseSecondDerivative.lean",
+        "Extension/Dubon2026/RankinOscillatoryPhase.lean",
+        "Extension/Dubon2026/NormalizedComplexPhase.lean",
+        "Extension/Dubon2026/GammaRatioPhase.lean",
+        "Extension/Dubon2026/GammaRatioCurvature.lean",
+        "Extension/Dubon2026/DoubleGammaOscillation.lean",
+        "Extension/Dubon2026/GammaHorizontalLogNorm.lean",
+        "Extension/Dubon2026/GammaHorizontalDigamma.lean",
+        "Extension/Dubon2026/GammaRatioAmplitude.lean",
+        "Extension/Dubon2026/OscillatoryAmplitude.lean",
+        "Extension/Dubon2026/DoubleGammaAmplitude.lean",
+        "Extension/Dubon2026/GammaDyadicAmplitude.lean",
+        "Extension/Dubon2026/GammaWeightedOscillation.lean",
+        "Extension/Dubon2026/GammaFrequencySeparation.lean",
+        "Extension/Dubon2026/GammaRieszSymbol.lean",
+        "Extension/Dubon2026/GammaRieszDyadic.lean",
+        "Extension/Dubon2026/GammaTailVariation.lean",
+        "Extension/Dubon2026/GammaNonstationaryTail.lean",
+        "Extension/Dubon2026/GammaRieszTail.lean",
+        "Extension/Dubon2026/GammaRieszKernel.lean",
+        "Extension/Dubon2026/GammaRieszWindow.lean",
+        "Extension/Dubon2026/GammaRieszCompact.lean",
+        "Extension/Dubon2026/GammaRieszBounds.lean",
+        "Extension/Dubon2026/GammaRieszTruncation.lean",
+        "Extension/Dubon2026/GammaRieszUniformConvergence.lean",
+        "Extension/Dubon2026/GammaRieszHolomorphic.lean",
+        "Extension/Dubon2026/GammaRieszStripAmplitude.lean",
+        "Extension/Dubon2026/GammaRieszHorizontal.lean",
+        "Extension/Dubon2026/GammaRieszContourShift.lean",
+        "Extension/Dubon2026/GammaRieszShiftUniform.lean",
+        "Extension/Dubon2026/GammaRieszRecurrence.lean",
+        "Extension/Dubon2026/CompactParameterDerivative.lean",
+        "Extension/Dubon2026/GammaRieszJointContinuity.lean",
+        "Extension/Dubon2026/GammaRieszFiniteDerivative.lean",
+        "Extension/Dubon2026/GammaRieszWeightedConvergence.lean",
+        "Extension/Dubon2026/GammaRieszKernelDerivative.lean",
+        "Extension/Dubon2026/SecondDifferenceDerivative.lean",
+        "Extension/Dubon2026/GammaRieszDifferenceBounds.lean",
+        "Extension/Dubon2026/LinearSummatoryPower.lean",
+        "Extension/Dubon2026/LinearMeanPowerBounds.lean",
+        "Extension/Dubon2026/LinearMeanPowerTail.lean",
+        "Extension/Dubon2026/RankinConvolutionPowerBounds.lean"
       ],
       "evidence": []
     },
@@ -583,7 +960,9 @@
       "implementationFiles": [
         "Extension/Dubon2026/MeanSquareConcentration.lean",
         "Extension/Dubon2026/CuspConditionalConcentration.lean",
-        "Extension/Dubon2026/CuspArithmeticConcentration.lean"
+        "Extension/Dubon2026/CuspArithmeticConcentration.lean",
+        "Extension/Dubon2026/PrimitiveArithmeticConcentration.lean",
+        "Extension/Dubon2026/LevelOneSelfTwist.lean"
       ],
       "evidence": []
     },
@@ -599,7 +978,9 @@
         "DUB-18"
       ],
       "acceptance": "All production modules root-imported; exact unfolded source consumers and exhaustive transitive axiom audit cover every public/critical theorem, with no shortcuts or suppressed diagnostics.",
-      "implementationFiles": [],
+      "implementationFiles": [
+        "Extension/Dubon2026/CuspSatoTateConcentration.lean"
+      ],
       "evidence": []
     },
     {

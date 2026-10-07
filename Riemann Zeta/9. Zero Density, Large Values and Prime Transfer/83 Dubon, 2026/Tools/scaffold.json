@@ -16,6 +16,30 @@
       "role": "root"
     },
     {
+      "path": "Dependencies/ModularFormsSource/AdjointTheory.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsAuxiliary.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsFiniteDimensional.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsNormReduction.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimGenCongLevelsNormTransfer.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/DimensionFormulas.lean.txt",
+      "role": "Dependencies"
+    },
+    {
       "path": "Dependencies/ModularFormsSource/FourierHecke.lean.txt",
       "role": "Dependencies"
     },
@@ -61,6 +85,10 @@
     },
     {
       "path": "Dependencies/ModularFormsSource/README.md",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ModularFormsSource/SL2Surjection.lean.txt",
       "role": "Dependencies"
     },
     {
@@ -148,6 +176,14 @@
       "role": "root"
     },
     {
+      "path": "Dubon Semantic Acceptance.md",
+      "role": "root"
+    },
+    {
+      "path": "Dubon Source Acceptance.md",
+      "role": "root"
+    },
+    {
       "path": "Dubon Source Contract.md",
       "role": "root"
     },
@@ -228,6 +264,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/BadPrimeDilationArithmetic.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/BesselDecay.lean",
       "role": "Extension"
     },
@@ -284,6 +324,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CharacterTwistCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CharacterTwistInvariant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CircleCharacteristic.lean",
       "role": "Extension"
     },
@@ -320,11 +368,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CoefficientScaling.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CoefficientShift.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/CompactJetCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactParameterDerivative.lean",
       "role": "Extension"
     },
     {
@@ -368,6 +424,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ConvolutionSummatory.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CoprimeHarmonic.lean",
       "role": "Extension"
     },
@@ -388,7 +448,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CuspCentralEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspCentralTauberian.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CuspCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspComplexMellin.lean",
       "role": "Extension"
     },
     {
@@ -396,11 +468,131 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CuspCoprimeOldspace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspEnergyBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspFiniteDepletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspFourierEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspLowerFunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspMellinEnergy.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CuspNormalization.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CuspNormalizedEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspOldNewProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspPeterssonCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspPolynomialDecay.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspPrimeDepletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspQuadraticTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinComplexContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinMean.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinPoleNumerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinRealContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinRegular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspRankinUnfolding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspSatoTateConcentration.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CuspSelfTwists.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspSparseLowering.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspSparseOldspace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspSparsePeriod.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspSquareDirichlet.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspTwistFunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspUpperCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspWeightedEnergy.lean",
       "role": "Extension"
     },
     {
@@ -428,6 +620,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/DoubleGammaAmplitude.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DoubleGammaOscillation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/DyadicEnergyBounds.lean",
       "role": "Extension"
     },
@@ -444,6 +644,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/EisensteinLatticeKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EisensteinRowCosetSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EisensteinRowFibers.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/EuclideanSturm.lean",
       "role": "Extension"
     },
@@ -452,11 +664,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteCompressedProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCompressionDecomposition.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCrossingArgument.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteCyclicRepresentation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteExceptionalMeanValue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGroupProjection.lean",
       "role": "Extension"
     },
     {
@@ -472,11 +700,235 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteLowerTriangular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteProjectedKernels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteProjectionCommutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteRepresentationInnerProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSymmetricKernels.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteVerticalExceptions.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FourierNormSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FrickeCusp.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FrickeDegeneracy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FrickeMatrices.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FundamentalDomainTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FundamentalDomainUnfolding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0CompletedCusp.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0CosetUnfolding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0CuspContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0CuspEntire.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0CuspStripBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0Eisenstein.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0EisensteinContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0EisensteinHolomorphic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0EisensteinResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0EisensteinUnfolding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0EpsteinSieve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0LatticeSieve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0PrincipalFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Gamma0SievedPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaDyadicAmplitude.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaFrequencySeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaHorizontalDigamma.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaHorizontalLogNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaNonstationaryTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaPhaseCurvature.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRatioAmplitude.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRatioCurvature.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRatioPhase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszContourShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszDifferenceBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszDyadic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszFiniteDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszHolomorphic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszHorizontal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszJointContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszKernelDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszRecurrence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszShiftUniform.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszStripAmplitude.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszSymbol.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszTruncation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszUniformConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszWeightedConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaRieszWindow.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaTailVariation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaVerticalPhase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GammaWeightedOscillation.lean",
       "role": "Extension"
     },
     {
@@ -520,7 +972,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HeckeAllOldStability.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HeckeAveraging.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeBadDegeneracy.lean",
       "role": "Extension"
     },
     {
@@ -528,11 +988,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HeckeCongruenceConjugation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HeckeCuspBehavior.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HeckeDegeneracyPrime.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HeckeDivisorConvolution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeGoodAdjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeLowerCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeLowerTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeOldNewStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckePrimeAdjoint.lean",
       "role": "Extension"
     },
     {
@@ -556,7 +1044,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HeckeProjectiveConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeProjectiveCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeSlashIntegrability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeTraceIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeTransversalTrace.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HeckeTriangular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeUpperCosets.lean",
       "role": "Extension"
     },
     {
@@ -588,11 +1100,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HyperbolicStripIntegral.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/InnerCountConvergence.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/InnerZeroRectangle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegratedFrequency.lean",
       "role": "Extension"
     },
     {
@@ -648,6 +1168,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/JessenGeneralMass.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/JessenIntervalLimit.lean",
       "role": "Extension"
     },
@@ -684,7 +1208,115 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LatticeCompletedMellin.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeCuspContinuationIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeCuspFunctionalEquation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeCuspHolomorphic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeCuspMajorant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeCuspResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeCuspStripBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeEpsteinMajorant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeEpsteinMellin.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeEpsteinPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeFundamentalBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeMellinMajorant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeMellinTailSplit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeSpatialMeasurable.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaDecay.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaFEPair.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaFourier.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaHolomorphic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaMellin.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LatticeThetaPoisson.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LeadingBohrTerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LevelLowerFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LevelOneEisensteinContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LevelOneSelfTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LinearMeanPowerBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LinearMeanPowerTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LinearSummatoryPower.lean",
       "role": "Extension"
     },
     {
@@ -728,6 +1360,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MeanWeightedEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ModularCoefficientJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ModularCoefficientOrder.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ModularCosetProjection.lean",
       "role": "Extension"
     },
@@ -740,11 +1384,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ModularFiniteDimension.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ModularGamma0Domain.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/ModularNewspace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ModularNormFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ModularNormOrder.lean",
       "role": "Extension"
     },
     {
@@ -772,6 +1428,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MoebiusSquareSeries.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MultivariateBohrPolynomial.lean",
       "role": "Extension"
     },
@@ -780,7 +1440,67 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/NewmanContourBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanContourIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanDecay.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanHolomorphic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanIntegrandBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanLaplace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanRectangle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanSquareAbel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanSquareData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanSquareLaplace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NewmanTauberian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NonzeroFirstCoefficientDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormalizedComplexPhase.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OrbitProbability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OscillatoryAmplitude.lean",
       "role": "Extension"
     },
     {
@@ -792,11 +1512,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PeterssonAdjugate.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PeterssonSlashTransport.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PeterssonStripMellin.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PhaseCurvatureBand.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PhaseDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PhaseFirstDerivative.lean",
       "role": "Extension"
     },
     {
@@ -805,6 +1541,10 @@
     },
     {
       "path": "Extension/Dubon2026/PhasePolynomialSigns.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PhaseSecondDerivative.lean",
       "role": "Extension"
     },
     {
@@ -888,11 +1628,151 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitiveArithmeticConcentration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveCoefficientReality.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitiveCuspForms.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitiveEigenSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveEisensteinCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveFullCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveFullEigen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveGaussTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveLatticeScaling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveLatticeSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveMultiplicityOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveOldEigenExclusion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSelfTwistCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCharacterTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCommonInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCongruenceQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCoprimeProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCuspAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCuspOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCyclicLocality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalCyclicProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalDivisorProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalLowerProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalOrbitCoprime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalOrbitProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalPrimeFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalRescaledCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalSquareMass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalSquareSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalSupportDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalTranslation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrincipalUpperDescent.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ProbabilityShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProjectiveEisensteinCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProjectiveTranslationStrip.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/QuadraticTwistFricke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/QuadraticTwistHecke.lean",
       "role": "Extension"
     },
     {
@@ -901,6 +1781,50 @@
     },
     {
       "path": "Extension/Dubon2026/RadialTailIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionCompleted.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionMean.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionPerron.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionPowerBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionRegular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinConvolutionRiesz.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinDeconvolution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinGammaPhase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinOscillatoryPhase.lean",
       "role": "Extension"
     },
     {
@@ -956,6 +1880,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RectangularLatticeMajorant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RectangularLatticeRows.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RegularAbscissae.lean",
       "role": "Extension"
     },
@@ -968,7 +1900,47 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RieszDirichletInterchange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszInverseKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszMellinInversion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszMellinKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszPerron.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszPerronIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszSecondError.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszSecondKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RieszSecondSum.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RootMultiplicityMapGcd.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SL2Reduction.lean",
       "role": "Extension"
     },
     {
@@ -985,6 +1957,10 @@
     },
     {
       "path": "Extension/Dubon2026/SecantLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SecondDifferenceDerivative.lean",
       "role": "Extension"
     },
     {
@@ -1012,6 +1988,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ShiftedGaussianPoisson.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SlidingCountIntegral.lean",
       "role": "Extension"
     },
@@ -1025,6 +2005,10 @@
     },
     {
       "path": "Extension/Dubon2026/SmallBallLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SquareLiftLSeries.lean",
       "role": "Extension"
     },
     {
@@ -1160,6 +2144,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/TrigammaAsymptotic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TrigammaIntegral.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/TwistContourContinuity.lean",
       "role": "Extension"
     },
@@ -1185,6 +2177,10 @@
     },
     {
       "path": "Extension/Dubon2026/TwistCountStationarity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwistFrickeTransition.lean",
       "role": "Extension"
     },
     {
@@ -1508,6 +2504,10 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/source_acceptance_20261006.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/source_labels.json",
       "role": "Tools"
     },
@@ -1591,7 +2591,7 @@
       "sha256": "c413d15a872c06b0b1dace98fd2b1e3c7becbaa67837d158fc7edfc9a8f7492e"
     }
   ],
-  "proofGatesComplete": 0,
+  "proofGatesComplete": 15,
   "proofGatesTotal": 20,
   "productionModules": [
     "ActualZeroConcentration",
@@ -1882,7 +2882,247 @@
     "ModularCosetProjection",
     "ModularGamma0Domain",
     "PeterssonSlashTransport",
-    "ModularRealProjective"
+    "ModularRealProjective",
+    "PeterssonAdjugate",
+    "HeckeUpperCosets",
+    "HeckeLowerCosets",
+    "HeckeTransversalTrace",
+    "HeckeLowerTrace",
+    "HeckeCongruenceConjugation",
+    "HeckeSlashIntegrability",
+    "HeckeProjectiveCosets",
+    "HeckeProjectiveConjugation",
+    "HeckeTraceIntegral",
+    "HeckePrimeAdjoint",
+    "HeckeGoodAdjoint",
+    "PrimitiveCoefficientReality",
+    "PrimitiveArithmeticConcentration",
+    "HeckeDegeneracyPrime",
+    "HeckeOldNewStability",
+    "CuspPeterssonCore",
+    "PrincipalCuspAction",
+    "PrincipalCuspOrbit",
+    "FiniteRepresentationInnerProduct",
+    "FiniteSymmetricKernels",
+    "FiniteGroupProjection",
+    "SL2Reduction",
+    "PrincipalCongruenceQuotient",
+    "CuspUpperCongruence",
+    "LevelLowerFactorization",
+    "PrincipalRescaledCoefficients",
+    "PrincipalTranslation",
+    "PrincipalDivisorProjection",
+    "FiniteCyclicRepresentation",
+    "PrincipalCyclicProjection",
+    "PrincipalOrbitProjection",
+    "PrincipalCoprimeProjection",
+    "FiniteProjectionCommutation",
+    "CuspSparsePeriod",
+    "CuspLowerFunction",
+    "CuspSparseLowering",
+    "CuspSparseOldspace",
+    "PrincipalPrimeFactors",
+    "FiniteProjectedKernels",
+    "FiniteCompressedProducts",
+    "FiniteLowerTriangular",
+    "PrincipalLowerProjection",
+    "PrincipalCyclicLocality",
+    "PrincipalUpperDescent",
+    "FiniteCompressionDecomposition",
+    "PrincipalCommonInvariant",
+    "PrincipalOrbitCoprime",
+    "PrincipalSupportDecomposition",
+    "CuspCoprimeOldspace",
+    "PrimitiveMultiplicityOne",
+    "PrimitiveEigenSpace",
+    "BadPrimeDilationArithmetic",
+    "HeckeBadDegeneracy",
+    "HeckeAllOldStability",
+    "ModularCoefficientOrder",
+    "ModularCoefficientJets",
+    "ModularNormFactors",
+    "ModularNormOrder",
+    "ModularFiniteDimension",
+    "CuspOldNewProjection",
+    "PrimitiveOldEigenExclusion",
+    "PrimitiveFullEigen",
+    "PrimitiveFullCoefficients",
+    "PrimitiveSelfTwistCoefficients",
+    "PrimitiveGaussTwist",
+    "PrincipalCharacterTwist",
+    "CharacterTwistCongruence",
+    "CharacterTwistInvariant",
+    "CuspQuadraticTwist",
+    "QuadraticTwistHecke",
+    "CuspTwistFunction",
+    "FrickeMatrices",
+    "TwistFrickeTransition",
+    "FrickeCusp",
+    "CuspPrimeDepletion",
+    "FrickeDegeneracy",
+    "QuadraticTwistFricke",
+    "CuspFiniteDepletion",
+    "LevelOneSelfTwist",
+    "JessenGeneralMass",
+    "CoefficientScaling",
+    "NonzeroFirstCoefficientDensity",
+    "FourierNormSeries",
+    "CuspFourierEnergy",
+    "CuspEnergyBound",
+    "CuspSquareDirichlet",
+    "CuspMellinEnergy",
+    "CuspComplexMellin",
+    "CuspRankinSeries",
+    "EisensteinLatticeKernel",
+    "Gamma0Eisenstein",
+    "Gamma0EisensteinHolomorphic",
+    "PrimitiveEisensteinCosets",
+    "ProjectiveTranslationStrip",
+    "FundamentalDomainUnfolding",
+    "Gamma0CosetUnfolding",
+    "ProjectiveEisensteinCosets",
+    "EisensteinRowFibers",
+    "EisensteinRowCosetSum",
+    "Gamma0EisensteinUnfolding",
+    "HyperbolicStripIntegral",
+    "PeterssonStripMellin",
+    "CuspRankinUnfolding",
+    "LatticeThetaKernel",
+    "ShiftedGaussianPoisson",
+    "LatticeThetaFourier",
+    "LatticeThetaPoisson",
+    "LatticeThetaDecay",
+    "LatticeThetaMellin",
+    "LatticeThetaHolomorphic",
+    "LatticeThetaFEPair",
+    "LatticeCompletedMellin",
+    "LatticeEpsteinMellin",
+    "PrimitiveLatticeScaling",
+    "PrimitiveLatticeSum",
+    "LatticeEpsteinPrimitive",
+    "LevelOneEisensteinContinuation",
+    "Gamma0LatticeSieve",
+    "Gamma0SievedPrimitive",
+    "Gamma0PrincipalFactor",
+    "RectangularLatticeRows",
+    "Gamma0EpsteinSieve",
+    "Gamma0EisensteinContinuation",
+    "Gamma0EisensteinResidue",
+    "LatticeMellinMajorant",
+    "LatticeMellinTailSplit",
+    "LatticeEpsteinMajorant",
+    "LatticeSpatialMeasurable",
+    "LatticeFundamentalBound",
+    "CuspPolynomialDecay",
+    "LatticeCuspMajorant",
+    "RectangularLatticeMajorant",
+    "LatticeCuspContinuationIntegral",
+    "LatticeCuspHolomorphic",
+    "LatticeCuspResidue",
+    "Gamma0CompletedCusp",
+    "Gamma0CuspContinuation",
+    "CuspRankinFactor",
+    "CuspRankinRealContinuation",
+    "CuspRankinComplexContinuation",
+    "CuspRankinContinuation",
+    "CuspRankinResidue",
+    "LatticeCuspFunctionalEquation",
+    "LatticeCuspStripBound",
+    "Gamma0CuspEntire",
+    "SquareLiftLSeries",
+    "PrincipalSquareSeries",
+    "RankinConvolution",
+    "RankinConvolutionCompleted",
+    "Gamma0CuspStripBound",
+    "CuspRankinPoleNumerator",
+    "CuspRankinRegular",
+    "CuspNormalizedEnergy",
+    "CuspRankinMean",
+    "CuspSatoTateConcentration",
+    "MoebiusSquareSeries",
+    "RankinDeconvolution",
+    "MeanWeightedEnergy",
+    "CuspWeightedEnergy",
+    "NewmanKernel",
+    "NewmanLaplace",
+    "NewmanHolomorphic",
+    "NewmanRectangle",
+    "NewmanIntegrandBounds",
+    "NewmanContourBounds",
+    "NewmanDecay",
+    "NewmanContourIdentity",
+    "NewmanTauberian",
+    "NewmanSquareData",
+    "NewmanSquareLaplace",
+    "CuspCentralTauberian",
+    "NewmanSquareAbel",
+    "CuspCentralEnergy",
+    "ConvolutionSummatory",
+    "RankinConvolutionEnergy",
+    "PrincipalSquareMass",
+    "RankinConvolutionRegular",
+    "RankinConvolutionMean",
+    "RieszSecondKernel",
+    "RieszSecondSum",
+    "RieszSecondError",
+    "RankinConvolutionRiesz",
+    "GammaVerticalPhase",
+    "TrigammaIntegral",
+    "TrigammaAsymptotic",
+    "GammaPhaseCurvature",
+    "RankinGammaPhase",
+    "RieszMellinKernel",
+    "RieszMellinInversion",
+    "RieszInverseKernel",
+    "RieszDirichletInterchange",
+    "RieszPerron",
+    "RieszPerronIntegral",
+    "RankinConvolutionPerron",
+    "IntegratedFrequency",
+    "PhaseFirstDerivative",
+    "PhaseCurvatureBand",
+    "PhaseSecondDerivative",
+    "RankinOscillatoryPhase",
+    "NormalizedComplexPhase",
+    "GammaRatioPhase",
+    "GammaRatioCurvature",
+    "DoubleGammaOscillation",
+    "GammaHorizontalLogNorm",
+    "GammaHorizontalDigamma",
+    "GammaRatioAmplitude",
+    "OscillatoryAmplitude",
+    "DoubleGammaAmplitude",
+    "GammaDyadicAmplitude",
+    "GammaWeightedOscillation",
+    "GammaFrequencySeparation",
+    "GammaRieszSymbol",
+    "GammaRieszDyadic",
+    "GammaTailVariation",
+    "GammaNonstationaryTail",
+    "GammaRieszTail",
+    "GammaRieszKernel",
+    "GammaRieszWindow",
+    "GammaRieszCompact",
+    "GammaRieszBounds",
+    "GammaRieszTruncation",
+    "GammaRieszUniformConvergence",
+    "GammaRieszHolomorphic",
+    "GammaRieszStripAmplitude",
+    "GammaRieszHorizontal",
+    "GammaRieszContourShift",
+    "GammaRieszShiftUniform",
+    "GammaRieszRecurrence",
+    "CompactParameterDerivative",
+    "GammaRieszJointContinuity",
+    "GammaRieszFiniteDerivative",
+    "GammaRieszWeightedConvergence",
+    "GammaRieszKernelDerivative",
+    "SecondDifferenceDerivative",
+    "GammaRieszDifferenceBounds",
+    "LinearSummatoryPower",
+    "LinearMeanPowerBounds",
+    "LinearMeanPowerTail",
+    "RankinConvolutionPowerBounds"
   ],
   "verificationModules": [
     "SemanticRegression",

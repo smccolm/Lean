@@ -403,6 +403,17 @@ theorem isolated_prime_finite_lower_source (K : ℝ) (hK : 1 ≤ K) :
   intro a N hN ha σ Q _ hQ hm hap hcomp
   exact hbound a N hN (ha.trans_ne one_ne_zero) σ Q hQ hm hap hcomp
 
+theorem isolated_prime_two_sided_source (K : ℝ) (hK : 1 ≤ K) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (a : ℕ → ℂ) (N : ℕ), 1 ≤ N → a 1 ≠ 0 →
+      ∀ (I : Set ℝ) (Q : Finset ℕ),
+      (∀ p ∈ Q, Nat.Prime p ∧ (N : ℝ) / 2 < p ∧ p ≤ N) → 5 ≤ Q.card →
+      (∀ σ ∈ I, ∀ p ∈ Q, ∀ q ∈ Q,
+        K⁻¹ ≤ (‖a p‖ * (p : ℝ) ^ (-σ)) / (‖a q‖ * (q : ℝ) ^ (-σ)) ∧
+        (‖a p‖ * (p : ℝ) ^ (-σ)) / (‖a q‖ * (q : ℝ) ^ (-σ)) ≤ K) →
+      ∀ σ ∈ I, (1 / 2 : ℝ) * Real.log (∑ p ∈ Q, ‖a p‖ ^ 2 * (p : ℝ) ^ (-2 * σ)) - C ≤
+        jessenFunction a N σ :=
+  exists_uniform_isolated_prime_lower_two_sided hK
+
 theorem isolated_prime_compact_lower_source (a : ℕ → ℂ) (Q : ℕ → Finset ℕ) (α : ℝ)
     (ha : a 1 = 1)
     (hQ : ∀ N p, p ∈ Q N → Nat.Prime p ∧ (N : ℝ) / 2 < p ∧ p ≤ N)
@@ -1228,5 +1239,1228 @@ theorem petersson_inverse_slash_source (k : ℤ) (f g : UpperHalfPlane → ℂ)
         UpperHalfPlane.petersson k f (g ∣[k] A⁻¹) τ
           ∂(MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) :=
   peterssonIntegral_slash_left k f g A hA S
+
+
+open scoped MatrixGroups in
+/-- The two explicit p+1 families uniquely represent the actual congruence subgroup cosets. -/
+theorem prime_hecke_transversals_source {p Q : ℕ} (hp : Nat.Prime p)
+    (hpQ : Nat.Coprime p Q) :
+    (∀ γ : CongruenceSubgroup.Gamma0 Q, ∃! x : Option (ZMod p),
+      heckeUpperRepresentative p Q hpQ x * γ ∈ heckeUpperSubgroup Q p) ∧
+    (∀ γ : CongruenceSubgroup.Gamma0 Q, ∃! x : Option (ZMod p),
+      heckeLowerRepresentative p Q hpQ x * γ ∈ heckeLowerSubgroup Q p) := by
+  constructor
+  · intro γ
+    obtain ⟨x, hx⟩ := heckeUpperCoset_surjective hp hpQ (QuotientGroup.mk γ)
+    refine ⟨x, (heckeUpperCoset_eq_iff hpQ x γ).mp hx, ?_⟩
+    intro y hy
+    exact heckeUpperCoset_injective hp hpQ (((heckeUpperCoset_eq_iff hpQ y γ).mpr hy).trans hx.symm)
+  · intro γ
+    obtain ⟨x, hx⟩ := heckeLowerCoset_surjective hp hpQ (QuotientGroup.mk γ)
+    refine ⟨x, (heckeLowerCoset_eq_iff hpQ x γ).mp hx, ?_⟩
+    intro y hy
+    exact heckeLowerCoset_injective hp hpQ (((heckeLowerCoset_eq_iff hpQ y γ).mpr hy).trans hx.symm)
+
+open scoped MatrixGroups ModularForm Pointwise in
+/-- The literal adjugate slash is the exact mixed adjoint after moving the integration domain. -/
+theorem petersson_adjugate_source (k : ℤ) (f g : UpperHalfPlane → ℂ)
+    (A : GL (Fin 2) ℝ) (hA : 0 < A.det.val) (S : Set UpperHalfPlane) :
+    ∫ τ in S, UpperHalfPlane.petersson k (f ∣[k] A) g τ
+      ∂(MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) =
+      ∫ τ in A • S, UpperHalfPlane.petersson k f (g ∣[k] peterssonAdj A) τ
+        ∂(MeasureTheory.volume : MeasureTheory.Measure UpperHalfPlane) :=
+  peterssonInner_slash_adjugate S A hA f g
+
+
+open scoped MatrixGroups in
+/-- Actual classical Hecke functions move across the literal Gamma0 Petersson integral at good indices. -/
+theorem good_hecke_petersson_source {Q : ℕ} [NeZero Q] {k : ℤ} (n : ℕ)
+    (hnQ : Nat.Coprime n Q)
+    (f g : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (∫ τ in gamma0FundamentalDomain Q,
+      starRingEnd ℂ (classicalHeckeFunction Q k n f τ) * g τ * (τ.im : ℂ) ^ k
+        ∂(volume : Measure UpperHalfPlane)) =
+      ∫ τ in gamma0FundamentalDomain Q,
+        starRingEnd ℂ (f τ) * classicalHeckeFunction Q k n g τ * (τ.im : ℂ) ^ k
+          ∂(volume : Measure UpperHalfPlane) := by
+  have h := cuspHeckeLinear_coprime_selfAdjoint Q k n hnQ f g
+  change cuspPetersson (cuspHecke n f) g = cuspPetersson f (cuspHecke n g) at h
+  rw [cuspPetersson_eq_gamma0Domain_integral Q, cuspPetersson_eq_gamma0Domain_integral Q] at h
+  simpa only [UpperHalfPlane.petersson, cuspHecke_apply] using h
+
+/-- The actual primitive q-expansion and its automorphic normalization are real at good indices. -/
+theorem primitive_coefficient_reality_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (n : ℕ) (hnQ : Nat.Coprime n Q) :
+    ((UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n).im = 0 ∧
+      (normalizedCuspCoefficients f.toCuspForm n).im = 0 :=
+  ⟨primitiveCuspForm_coefficient_im f n hnQ, primitiveCuspForm_normalizedCoefficient_im f n hnQ⟩
+
+/-- The genuine primitive form consumes the literal Rankin–Selberg and Sato–Tate inputs with reality proved. -/
+theorem primitive_classical_arithmetic_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {c : ℝ}
+    (hRS : (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊,
+      ‖normalizedCuspCoefficients f.toCuspForm n‖ ^ 2) - c * x) =O[atTop]
+        (fun x : ℝ => x ^ (3 / 5 : ℝ)))
+    (hST : Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability)) :
+    Tendsto (jessenProbability (a := fun n => (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n)
+      f.normalized) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) :=
+  (primitive_concentration_of_rankin_selberg_sato_tate f hRS hST).2.2.2.1
+
+
+open scoped MatrixGroups in
+/-- Literal good-prime Hecke functions commute with every actual lower-level dilation. -/
+theorem good_prime_degeneracy_source {M N p : ℕ} [NeZero M] [NeZero N] [NeZero p]
+    (d : ℕ) [NeZero d] (h : d * M ∣ N) (k : ℤ) (hp : Nat.Prime p)
+    (hpN : Nat.Coprime p N)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 M).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (τ : UpperHalfPlane) :
+    classicalHeckeFunction N k p (cuspDegeneracyMap d h k f) τ =
+      classicalHeckeFunction M k p f (levelRaiseMatrix d • τ) := by
+  have he := DFunLike.congr_fun (cuspHeckeLinear_prime_degeneracy d h k hp hpN f) τ
+  change cuspHecke p (cuspDegeneracyMap d h k f) τ =
+    cuspDegeneracyMap d h k (cuspHecke p f) τ at he
+  simpa only [cuspHecke_apply, cuspDegeneracyMap_apply] using he
+
+open scoped MatrixGroups in
+/-- The genuine good-index operators preserve both full classical old and new spaces. -/
+theorem old_new_hecke_stability_source {N : ℕ} [NeZero N] {k : ℤ} (n : ℕ)
+    (hnN : Nat.Coprime n N)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (f ∈ cuspOldspace N k → cuspHecke n f ∈ cuspOldspace N k) ∧
+      (f ∈ cuspNewspace N k → cuspHecke n f ∈ cuspNewspace N k) :=
+  ⟨cuspOldspace_hecke_coprime N k n hnN f, cuspNewspace_hecke_coprime n hnN f⟩
+
+open scoped MatrixGroups in
+/-- Cauchy–Schwarz holds for the literal Gamma0-domain Petersson integrals. -/
+theorem petersson_cauchy_schwarz_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f g : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ‖∫ τ in gamma0FundamentalDomain N, UpperHalfPlane.petersson k f g τ
+      ∂(volume : Measure UpperHalfPlane)‖ ≤
+    Real.sqrt (∫ τ in gamma0FundamentalDomain N, UpperHalfPlane.petersson k f f τ
+      ∂(volume : Measure UpperHalfPlane)).re *
+    Real.sqrt (∫ τ in gamma0FundamentalDomain N, UpperHalfPlane.petersson k g g τ
+      ∂(volume : Measure UpperHalfPlane)).re := by
+  simpa only [cuspPetersson_eq_gamma0Domain_integral N] using norm_cuspPetersson_le f g
+
+attribute [local instance] principalNormal
+open scoped MatrixGroups ModularForm in
+/-- Actual principal-level orbits are finite dimensional and retain the literal slash action. -/
+theorem principal_finite_slash_orbit_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    FiniteDimensional ℂ (principalCuspOrbit N k f) ∧
+      f ∈ principalCuspOrbit N k f ∧
+      ∀ (γ : SL(2, ℤ)) (v : principalCuspOrbit N k f),
+        ⇑(principalCuspOrbitRepresentation N k f (QuotientGroup.mk γ) v).val =
+          ⇑v.val ∣[k] Matrix.SpecialLinearGroup.mapGL ℝ γ⁻¹ :=
+  ⟨inferInstance, mem_principalCuspOrbit N k f, principalCuspOrbitRepresentation_apply N k f⟩
+
+
+open scoped MatrixGroups in
+/-- Every actual determinant-one residue matrix has a determinant-one integral lift. -/
+theorem finite_sl2_integral_lift_source (N : ℕ) [NeZero N] (g : SL(2, ZMod N)) :
+    ∃ γ : SL(2, ℤ), ∀ i j : Fin 2, (γ i j : ZMod N) = g i j := by
+  obtain ⟨γ, hγ⟩ := SL2Reduction.SL2_reduction_surjective N g
+  exact ⟨γ, fun i j => congrArg (fun h : SL(2, ZMod N) => h i j) hγ⟩
+
+open scoped MatrixGroups in
+/-- The actual rescaling preserves all coefficients when the cusp parameter is changed to period N. -/
+theorem principal_rescaling_coefficients_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (∀ τ : UpperHalfPlane, cuspRescaledPrincipal N k f τ = f (heckeUpperPoint N 0 τ)) ∧
+      ∀ n : ℕ, (UpperHalfPlane.qExpansion N (cuspRescaledPrincipal N k f)).coeff n =
+        (UpperHalfPlane.qExpansion 1 f).coeff n :=
+  ⟨cuspRescaledPrincipal_apply N k f, cuspRescaledPrincipal_coeff N k f⟩
+
+/-- The finite symmetric-operator decomposition used in the support-to-oldspace argument is proved. -/
+theorem finite_symmetric_kernel_source {V I : Type*} [NormedAddCommGroup V]
+    [InnerProductSpace ℂ V] [FiniteDimensional ℂ V] (s : Finset I)
+    (A : I → V →ₗ[ℂ] V)
+    (hc : Set.Pairwise (↑s) (fun i j => Commute (A i) (A j)))
+    (hA : ∀ i ∈ s, ∀ x y, inner ℂ (A i x) y = inner ℂ x (A i y)) :
+    LinearMap.ker (s.noncommProd A hc) = ⨆ i ∈ s, LinearMap.ker (A i) :=
+  symmetric_ker_noncommProd s A hc hA
+
+open scoped MatrixGroups in
+/-- Literal finite translates of the rescaled source form extract exactly its divisible coefficients. -/
+theorem principal_divisor_coefficients_source {N d : ℕ} [NeZero N] [NeZero d]
+    (hd : d ∣ N) (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (n : ℕ) :
+    (UpperHalfPlane.qExpansion N
+      (principalDivisorProjection N k d (cuspRescaledPrincipal N k f))).coeff n =
+        if d ∣ n then (UpperHalfPlane.qExpansion 1 f).coeff n else 0 := by
+  change principalCuspCoefficients
+    (principalDivisorProjection N k d (cuspRescaledPrincipal N k f)) n = _
+  rw [principalDivisorProjection_coeff hd, cuspRescaledPrincipal_coeff]
+  rfl
+
+open scoped MatrixGroups in
+/-- Coprime coefficient vanishing is equivalent to annihilation by the actual translation product. -/
+theorem principal_coprime_annihilation_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    principalAvoidProjection N k N.primeFactors (fun _ hp => Nat.dvd_of_mem_primeFactors hp)
+      (cuspRescaledPrincipal N k f) = 0 ↔
+        ∀ n, N.Coprime n → (UpperHalfPlane.qExpansion 1 f).coeff n = 0 := by
+  simpa only [cuspRescaledPrincipal_coeff, cuspCoefficients] using
+    principalCoprimeProjection_eq_zero_iff N k (cuspRescaledPrincipal N k f)
+
+open scoped MatrixGroups in
+/-- All actual divisor projections share a positive invariant inner product on the finite orbit. -/
+theorem principal_common_projection_core_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ c : InnerProductSpace.Core ℂ (principalCuspOrbit N k f),
+      ∀ (d : ℕ) [NeZero d] (hd : d ∣ N) (x y : principalCuspOrbit N k f),
+        c.inner (principalOrbitDivisorProjection hd k f x) y =
+          c.inner x (principalOrbitDivisorProjection hd k f y) :=
+  principalOrbitDivisorProjection_commonCore N k f
+
+open scoped MatrixGroups in
+/-- Actual sparse source coefficients force period one after literal divisor rescaling. -/
+theorem sparse_rescaling_period_source {N : ℕ} {k : ℤ} (d : ℕ) [NeZero d]
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : ∀ n, ¬d ∣ n → (UpperHalfPlane.qExpansion 1 f).coeff n = 0)
+    (τ : UpperHalfPlane) :
+    f (heckeUpperPoint d 0 ((1 : ℝ) +ᵥ τ)) = f (heckeUpperPoint d 0 τ) :=
+  cusp_sparse_rescaling_period d f hf τ
+
+open scoped MatrixGroups in
+/-- Actual sparse coefficients construct a genuine lower-level cusp form with the exact coefficient subsequence. -/
+theorem sparse_lower_cusp_source {N d : ℕ} [NeZero N] [NeZero d] (hd : d ∣ N) (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : ∀ n, ¬d ∣ n → (UpperHalfPlane.qExpansion 1 f).coeff n = 0) :
+    ∃ g : CuspForm ((CongruenceSubgroup.Gamma0 (N / d)).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      (∀ τ : UpperHalfPlane, g τ = f (heckeUpperPoint d 0 τ)) ∧
+      cuspDegeneracyMap d (by rw [Nat.mul_div_cancel' hd]) k g = f ∧
+      ∀ n, (UpperHalfPlane.qExpansion 1 g).coeff n = (UpperHalfPlane.qExpansion 1 f).coeff (d * n) :=
+  ⟨cuspSparseLower hd k f hf, cuspSparseLower_apply hd k f hf,
+    cuspSparseLower_degeneracy hd k f hf, cuspSparseLower_coeff hd k f hf⟩
+
+open scoped MatrixGroups in
+/-- Genuine sparse cusp forms belong to the full classical oldspace, with proper divided level. -/
+theorem sparse_oldspace_source {N d : ℕ} [NeZero N] [NeZero d] (hd : d ∣ N) (hd1 : 1 < d)
+    (k : ℤ) (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : ∀ n, ¬d ∣ n → (UpperHalfPlane.qExpansion 1 f).coeff n = 0) :
+    f ∈ cuspOldspace N k := cusp_sparse_mem_oldspace hd hd1 k f hf
+
+open scoped MatrixGroups in
+/-- At every positive prime-power level the actual newspace has no nonzero vector with all good coefficients zero. -/
+theorem primePower_newspace_coprime_source {p r : ℕ} [NeZero p] (hp : Nat.Prime p)
+    (hr : 0 < r) (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 (p ^ r)).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hnew : f ∈ cuspNewspace (p ^ r) k)
+    (hf : ∀ n, (p ^ r).Coprime n → (UpperHalfPlane.qExpansion 1 f).coeff n = 0) : f = 0 :=
+  cusp_primePower_new_coprime_eq_zero hp hr k f hnew hf
+
+open scoped MatrixGroups in
+/-- Each actual local matrix factor embeds with precisely one nonidentity component. -/
+theorem prime_factor_embedding_source (N : ℕ) [NeZero N] (p : N.primeFactors)
+    (g : SL(2, ZMod (p.val ^ N.factorization p.val))) :
+    principalPrimeFactorsEquiv N (principalPrimeFactorEmbedding N p g) = Pi.mulSingle p g :=
+  principalPrimeFactorEmbedding_components N p g
+
+
+open scoped MatrixGroups in
+/-- Distinct local lower averages commute with the actual prime Fourier projections. -/
+theorem local_lower_divisor_commute_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (p q : N.primeFactors) [NeZero q.val] (hpq : p ≠ q) :
+    Commute (principalLowerProjection N k f p)
+      (principalOrbitDivisorProjection (Nat.dvd_of_mem_primeFactors q.property) k f) :=
+  principalLowerDivisorProjection_cross_commute N k f p q hpq
+
+open scoped MatrixGroups in
+/-- Actual upper-invariant principal forms descend by literal dilation with every coefficient preserved. -/
+theorem upper_descent_coefficient_source (N : ℕ) [NeZero N] (k : ℤ)
+    (v : principalUpperInvariantSpace N k) :
+    (∀ τ : UpperHalfPlane, principalUpperToGamma0 N k v τ = v.val (levelRaiseMatrix N • τ)) ∧
+    ∀ n, (UpperHalfPlane.qExpansion 1 (principalUpperToGamma0 N k v)).coeff n =
+      (UpperHalfPlane.qExpansion N v.val).coeff n :=
+  ⟨principalUpperToGamma0_apply N k v, principalUpperToGamma0_coeff N k v⟩
+
+open scoped MatrixGroups in
+/-- Literal coprime q-expansion vanishing forces full classical oldspace membership at every positive level. -/
+theorem coprime_oldspace_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : ∀ n, N.Coprime n → (UpperHalfPlane.qExpansion 1 f).coeff n = 0) :
+    f ∈ cuspOldspace N k := cusp_coprime_support_old N k f hf
+
+open scoped MatrixGroups in
+/-- Two genuine newspace forms are equal when their actual coprime Fourier coefficients agree. -/
+theorem newspace_coprime_uniqueness_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f g : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ∈ cuspNewspace N k) (hg : g ∈ cuspNewspace N k)
+    (hfg : ∀ n, N.Coprime n → (UpperHalfPlane.qExpansion 1 f).coeff n =
+      (UpperHalfPlane.qExpansion 1 g).coeff n) : f = g :=
+  cusp_new_eq_of_coprime_coefficients N k f g hf hg hfg
+
+
+open scoped MatrixGroups in
+/-- Actual primitive good eigenvalues determine every genuine newspace eigenvector by its first coefficient. -/
+theorem primitive_multiplicity_one_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k)
+    (g : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hg : g ∈ cuspNewspace N k)
+    (he : ∀ n, 0 < n → n.Coprime N → ∀ τ : UpperHalfPlane,
+      classicalHeckeFunction N k n g τ = (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n * g τ) :
+    g = (UpperHalfPlane.qExpansion 1 g).coeff 1 • f.toCuspForm := by
+  apply primitiveCuspForm_same_eigensystem_scalar f g hg
+  intro n hn hnN
+  ext τ
+  change cuspHecke n g τ = _
+  rw [cuspHecke_apply]
+  exact he n hn hnN τ
+
+open scoped MatrixGroups in
+/-- Actual cusp forms at every positive Gamma0 level form a finite-dimensional complex space. -/
+theorem modular_finite_dimension_source (N : ℕ) [NeZero N] (k : ℤ) :
+    FiniteDimensional ℂ (CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :=
+  ModularDimension.cuspForm_finiteDimensional (CongruenceSubgroup.Gamma0 N) k
+
+open scoped MatrixGroups in
+/-- Every actual cusp form decomposes into its full oldspace and Petersson-newspace components. -/
+theorem petersson_old_new_decomposition_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ g h : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      g ∈ cuspOldspace N k ∧ h ∈ cuspNewspace N k ∧ f = g + h :=
+  ⟨cuspOldProjection N k f, f - cuspOldProjection N k f,
+    cuspOldProjection_mem N k f, cusp_sub_oldProjection_new N k f, by abel⟩
+
+open scoped MatrixGroups in
+/-- Every literal all-index Hecke function of an actual oldform is again a genuine oldform. -/
+theorem oldspace_all_hecke_source (N : ℕ) [NeZero N] (k : ℤ) (n : ℕ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ∈ cuspOldspace N k) :
+    ∃ g : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      g ∈ cuspOldspace N k ∧ ∀ τ : UpperHalfPlane, g τ = classicalHeckeFunction N k n f τ :=
+  ⟨cuspHeckeLinear N k n f, cuspOldspace_hecke_all N k n f hf, cuspHecke_apply n f⟩
+
+open scoped MatrixGroups in
+/-- Genuine primitive forms satisfy the full literal analytic eigenfunction identity at every positive index. -/
+theorem primitive_all_index_eigen_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (n : ℕ) (hn : 0 < n) (τ : UpperHalfPlane) :
+    classicalHeckeFunction N k n f.toCuspForm τ =
+      (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n * f.toCuspForm τ := by
+  have he := DFunLike.congr_fun (primitiveCuspForm_eigenvector_all f hn) τ
+  change cuspHecke n f.toCuspForm τ = _ at he
+  rwa [cuspHecke_apply] at he
+
+open scoped MatrixGroups in
+/-- The actual primitive good eigenspace has dimension one and is separated by its first Fourier coefficient. -/
+theorem primitive_eigenspace_dimension_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) :
+    Module.finrank ℂ (primitiveGoodEigenSpace f) = 1 ∧
+      Function.Injective (fun g : primitiveGoodEigenSpace f => (UpperHalfPlane.qExpansion 1 g.val).coeff 1) :=
+  ⟨primitiveGoodEigenSpace_finrank f, primitiveGoodEigenSpace_firstCoefficient_injective f⟩
+
+
+open scoped MatrixGroups in
+/-- Actual primitive Fourier coefficients have all coprime products and the full good/bad recurrence. -/
+theorem primitive_full_coefficients_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) :
+    (∀ n m, n.Coprime m → (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff (n * m) =
+      (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n * (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff m) ∧
+    (∀ p, Nat.Prime p → p ∣ N → ∀ r,
+      (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff (p ^ r) =
+        (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff p ^ r) ∧
+    ∀ p, Nat.Prime p → ∀ r,
+      (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff (p ^ (r + 2)) =
+        (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff p *
+          (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff (p ^ (r + 1)) -
+        (if p.Coprime N then (p : ℂ) ^ (k - 1) else 0) *
+          (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff (p ^ r) :=
+  ⟨primitiveCuspForm_coefficient_mul_all f,
+    fun _ hp hpN r => primitiveCuspForm_bad_prime_power f hp hpN r,
+    fun _ hp r => primitiveCuspForm_primePower_recurrence f hp r⟩
+
+open scoped MatrixGroups in
+/-- For actual primitive forms, the literal quadratic self-twist condition at primes extends to every coprime index. -/
+theorem primitive_self_twist_coefficients_source {N D : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (χ : DirichletCharacter ℂ D) (hq : χ.IsQuadratic) :
+    (∀ p, Nat.Prime p → p.Coprime (N * D) →
+      χ (p : ZMod D) * (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff p =
+        (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff p) ↔
+    ∀ n : ℕ, n.Coprime (N * D) →
+      χ (n : ZMod D) * (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n =
+        (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n :=
+  primitiveCuspForm_selfTwist_iff f χ hq
+
+/-- The actual nonzero primitive Gauss sum gives the exact finite positive-sign Fourier inversion. -/
+theorem primitive_gauss_twist_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsPrimitive) (hq : χ.IsQuadratic) :
+    (∑ a : ZMod D, χ a * ZMod.stdAddChar a) ≠ 0 ∧
+    ∀ n : ZMod D, (∑ a : ZMod D, χ a * ZMod.stdAddChar a)⁻¹ *
+      (∑ a : ZMod D, χ a * ZMod.stdAddChar (n * a)) = χ n :=
+  ⟨primitive_character_gaussSum_ne_zero χ hχ, primitive_quadratic_gauss_inversion χ hχ hq⟩
+
+open scoped MatrixGroups in
+/-- A genuine cusp form at level Q gives a normalized genuine quadratic twist at the explicit level D²Q. -/
+theorem genuine_quadratic_twist_source {Q D : ℕ} [NeZero Q] [NeZero D] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1)
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsPrimitive) (hq : χ.IsQuadratic) :
+    ∃ g : CuspForm ((CongruenceSubgroup.Gamma0 (D * (D * Q))).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      (∀ n, (UpperHalfPlane.qExpansion 1 g).coeff n = χ (n : ZMod D) * (UpperHalfPlane.qExpansion 1 f).coeff n) ∧
+      (UpperHalfPlane.qExpansion 1 g).coeff 1 = 1 ∧ g ≠ 0 :=
+  ⟨cuspQuadraticTwist k χ hq f, cuspQuadraticTwist_coeff k χ hχ hq f,
+    cuspQuadraticTwist_normalized k χ hχ hq f hf, cuspQuadraticTwist_ne_zero k χ hχ hq f hf⟩
+
+open scoped MatrixGroups in
+/-- The constructed twist satisfies the literal all-index classical eigenfunction formula and U_p vanishing. -/
+theorem quadratic_twist_hecke_source {Q D : ℕ} [NeZero Q] [NeZero D] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (χ : DirichletCharacter ℂ D)
+    (hχ : χ.IsPrimitive) (hq : χ.IsQuadratic) :
+    (∀ n, 0 < n → ∀ τ : UpperHalfPlane,
+      classicalHeckeFunction (D * (D * Q)) k n (cuspQuadraticTwist k χ hq f.toCuspForm) τ =
+        (χ (n : ZMod D) * (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n) *
+          cuspQuadraticTwist k χ hq f.toCuspForm τ) ∧
+    ∀ p, Nat.Prime p → p ∣ D → ∀ τ : UpperHalfPlane,
+      classicalHeckeFunction (D * (D * Q)) k p (cuspQuadraticTwist k χ hq f.toCuspForm) τ = 0 := by
+  constructor
+  · intro n hn τ
+    have he := DFunLike.congr_fun (cuspQuadraticTwist_eigenvector f χ hχ hq hn) τ
+    change cuspHecke n (cuspQuadraticTwist k χ hq f.toCuspForm) τ = _ at he
+    rwa [cuspHecke_apply] at he
+  · intro p hp hpD τ
+    have he := DFunLike.congr_fun (cuspQuadraticTwist_bad_prime_zero f.toCuspForm χ hχ hq hp hpD) τ
+    change cuspHecke p (cuspQuadraticTwist k χ hq f.toCuspForm) τ = 0 at he
+    rwa [cuspHecke_apply] at he
+
+
+open scoped MatrixGroups ModularForm in
+/-- The actual determinant-normalized Fricke matrix has the literal analytic action. -/
+theorem fricke_action_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : UpperHalfPlane → ℂ) (τ : UpperHalfPlane) :
+    ((frickeMatrix N • τ : UpperHalfPlane) : ℂ) = -1 / ((N : ℂ) * τ) ∧
+    (f ∣[k] frickeMatrix N) τ =
+      (N : ℂ)⁻¹ * (τ : ℂ) ^ (-k) * f (frickeMatrix N • τ) :=
+  ⟨frickeMatrix_smul N τ, fricke_slash_apply N k f τ⟩
+
+open scoped MatrixGroups in
+/-- Actual prime depletion deletes exactly the p-multiple Fourier coefficients and computes its first Fricke coefficient. -/
+theorem prime_depletion_source {M p : ℕ} [NeZero M] [NeZero p] {k : ℤ}
+    (hp : Nat.Prime p) (hpM : p.Coprime M) (eigenvalue : ℂ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 M).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : cuspHeckeLinear M k p f = eigenvalue • f) :
+    (∀ n, (UpperHalfPlane.qExpansion 1 (cuspPrimeDepletion (p := p) k eigenvalue f)).coeff n =
+      if p ∣ n then 0 else (UpperHalfPlane.qExpansion 1 f).coeff n) ∧
+    (UpperHalfPlane.qExpansion 1
+      (cuspFricke (p * (p * M)) k (cuspPrimeDepletion (p := p) k eigenvalue f))).coeff 1 =
+      (p : ℂ) ^ (k - 3) * (UpperHalfPlane.qExpansion 1 (cuspFricke M k f)).coeff 1 :=
+  ⟨cuspPrimeDepletion_coeff hp hpM eigenvalue f hf,
+    cuspFricke_primeDepletion_coeff_one hp k eigenvalue f⟩
+
+open scoped MatrixGroups ModularForm in
+/-- The constructed level-one twist has the literal Gauss sum and Fricke symmetry on genuine cusp forms. -/
+theorem twist_fricke_source {D : ℕ} [NeZero D] {k : ℤ}
+    (χ : DirichletCharacter ℂ D) (hq : χ.IsQuadratic)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (∀ τ : UpperHalfPlane, cuspQuadraticTwist k χ hq f τ =
+      (∑ a : ZMod D, χ a * ZMod.stdAddChar a)⁻¹ *
+        ∑ a : ZMod D, χ a * f (((a.val : ℝ) / D) +ᵥ τ)) ∧
+    ((cuspQuadraticTwist k χ hq f : UpperHalfPlane → ℂ) ∣[k] frickeMatrix (D * (D * 1))) =
+      (χ (-1) * (D : ℂ) ^ (k - 2)) • (cuspQuadraticTwist k χ hq f : UpperHalfPlane → ℂ) :=
+  ⟨cuspQuadraticTwist_apply χ hq f,
+    congrArg DFunLike.coe (cuspQuadraticTwist_fricke χ hq f)⟩
+
+open scoped MatrixGroups in
+/-- The finite prime construction produces a real cusp form with exactly the coprime coefficients and computed Fricke coefficient. -/
+theorem finite_depletion_source (S : Finset ℕ) (hS : ∀ p ∈ S, Nat.Prime p)
+    {R : ℕ} [NeZero R] (hR : R = ∏ p ∈ S, p) {k : ℤ} (f : PrimitiveCuspForm 1 k) :
+    ∃ g : CuspForm ((CongruenceSubgroup.Gamma0 (R * R)).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k,
+      (∀ n, (UpperHalfPlane.qExpansion 1 g).coeff n =
+        if n.Coprime R then (UpperHalfPlane.qExpansion 1 f.toCuspForm).coeff n else 0) ∧
+      (UpperHalfPlane.qExpansion 1 (cuspFricke (R * R) k g)).coeff 1 = (R : ℂ) ^ (k - 3) := by
+  obtain ⟨g, hg, _, hw⟩ := exists_cuspFiniteDepletion S hS hR (L := R * R) rfl f
+  exact ⟨g, hg, hw⟩
+
+open scoped MatrixGroups in
+/-- A normalized level-one Hecke eigenform yields the actual primitive non-CM object, with the self-twist conclusion unfolded. -/
+theorem level_one_nonCM_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : (UpperHalfPlane.qExpansion 1 f).coeff 1 = 1)
+    (he : ∀ n : ℕ, 0 < n → n.Coprime 1 → ∃ eigenvalue : ℂ,
+      ∀ τ : UpperHalfPlane, classicalHeckeFunction 1 k n f τ = eigenvalue * f τ) :
+    (∃ g : NonCMPrimitiveCuspForm 1 k, g.toPrimitiveCuspForm.toCuspForm = f) ∧
+    ¬ ∃ (D : ℕ+) (χ : DirichletCharacter ℂ D),
+      χ.IsPrimitive ∧ χ ≠ 1 ∧ χ.IsQuadratic ∧
+      ∀ p : ℕ, Nat.Prime p → p.Coprime (1 * D) →
+        χ (p : ZMod D) * (UpperHalfPlane.qExpansion 1 f).coeff p =
+          (UpperHalfPlane.qExpansion 1 f).coeff p :=
+  ⟨⟨nonCMPrimitiveCuspFormLevelOne f hf he, rfl⟩,
+    primitiveCuspForm_levelOne_nonCM (primitiveCuspFormLevelOne f hf he)⟩
+
+
+/-- Proposition 3.7 retains its printed nonzero, rather than unit, first coefficient. -/
+theorem jessen_mass_nonzero_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N) (ha : a 1 ≠ 0) :
+    jessenMeasure hN ha Set.univ = ENNReal.ofReal (Real.log (lastIndex a N)) ∧
+      (ENNReal.ofReal (1 / (2 * Real.pi)) • jessenMeasure hN ha) Set.univ =
+        ENNReal.ofReal (Real.log (lastIndex a N) / (2 * Real.pi)) :=
+  ⟨jessenMeasure_univ_nonzero hN ha, scaledJessenMeasure_univ_nonzero hN ha⟩
+
+theorem jessen_probability_nonzero_source (a : ℕ → ℂ) (N : ℕ) (hN : 1 ≤ N)
+    (ha : a 1 ≠ 0) :
+    (1 < lastIndex a N → IsProbabilityMeasure
+      ((ENNReal.ofReal (Real.log (lastIndex a N)))⁻¹ • jessenMeasure hN ha)) ∧
+    (lastIndex a N = 1 → jessenMeasure hN ha = 0) :=
+  ⟨normalizedJessenMeasure_isProbability_nonzero hN ha,
+    jessenMeasure_zero_of_lastIndex_one_nonzero hN ha⟩
+
+theorem coefficient_scaling_multiplicity_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 ≠ 0) (c : ℂ) (hc : c ≠ 0) (s : ℂ) (l u T : ℝ) :
+    (∑ n ∈ Finset.Icc 1 N, (c * a n) * (n : ℂ) ^ (-s)) =
+      c * (∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-s)) ∧
+    analyticOrderNatAt (fun z : ℂ => ∑ n ∈ Finset.Icc 1 N, (c * a n) * (n : ℂ) ^ (-z)) s =
+      analyticOrderNatAt (fun z : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-z)) s ∧
+    verticalZeroCount (fun n => c * a n) N hN (mul_ne_zero hc ha) l u T =
+      verticalZeroCount a N hN ha l u T :=
+  ⟨dirichletSum_scale a N c s, zeroMultiplicity_scale a N hc s,
+    verticalZeroCount_scale hN ha hc l u T⟩
+
+theorem jessen_tornehave_nonzero_source (a : ℕ → ℂ) (N : ℕ)
+    (hN : 1 ≤ N) (ha : a 1 ≠ 0) {l u : ℝ} (hlu : l < u) :
+    Tendsto (fun T : ℝ => ((∑ s ∈ zerosInOpenRectangleFinset a N hN ha l u T,
+      analyticOrderNatAt (fun v : ℂ => ∑ n ∈ Finset.Icc 1 N, a n * (n : ℂ) ^ (-v)) s) : ℝ) /
+        (2 * T)) atTop (𝓝 ((derivWithin (jessenFunction a N) (Set.Iio u) u -
+          derivWithin (jessenFunction a N) (Set.Ioi l) l) / (2 * Real.pi))) := by
+  simpa only [verticalZeroCount, zeroMultiplicity, dirichletSum, Nat.cast_sum] using
+    tendsto_zeroDensity_one_sided_derivatives_nonzero hN ha hlu
+
+open scoped MatrixGroups in
+/-- Actual q-expansion coefficients and the literal horizontal-period integral, with no formal series proxy. -/
+theorem cusp_parseval_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    {y : ℝ} (hy : 0 < y) :
+    HasSum (fun n : ℕ => ‖(UpperHalfPlane.qExpansion 1 f).coeff n‖ ^ 2 *
+      Real.exp (-4 * Real.pi * n * y))
+      (∫ x in (0 : ℝ)..1, ‖f ⟨(x : ℂ) + y * Complex.I, by simpa using hy⟩‖ ^ 2) :=
+  hasSum_cusp_horizontal_energy f hy
+
+open scoped MatrixGroups in
+/-- A genuine unconditional upper bound, without asserting a Rankin--Selberg asymptotic. -/
+theorem cusp_square_energy_upper_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, 1 ≤ N →
+      (∑ n ∈ Finset.Icc 1 N, ‖(UpperHalfPlane.qExpansion 1 f).coeff n‖ ^ 2) ≤ C * (N : ℝ) ^ k :=
+  exists_cusp_coefficient_energy_upper f
+
+open scoped MatrixGroups in
+/-- The true square-coefficient Dirichlet series is absolutely convergent to the right of the weight. -/
+theorem cusp_square_dirichlet_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℝ} (hs : (k : ℝ) < s) :
+    Summable (fun n : ℕ => ‖(UpperHalfPlane.qExpansion 1 f).coeff n‖ ^ 2 * (n : ℝ) ^ (-s)) :=
+  summable_cusp_square_dirichlet f hk hs
+
+open scoped MatrixGroups in
+/-- The Mellin integral converges and equals the true square series with the exact Gamma factor. -/
+theorem cusp_mellin_energy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℝ} (hs : (k : ℝ) < s) :
+    IntegrableOn (fun y : ℝ => y ^ (s - 1) *
+      (∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2))
+      (Set.Ioi 0) ∧
+    (∫ y : ℝ in Set.Ioi 0, y ^ (s - 1) *
+      (∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2)) =
+      ((4 * Real.pi) ^ (-s) * Real.Gamma s) *
+        ∑' n : ℕ, ‖(UpperHalfPlane.qExpansion 1 f).coeff n‖ ^ 2 * (n : ℝ) ^ (-s) :=
+  ⟨integrableOn_cusp_mellin_energy f hk hs, cusp_mellin_energy_identity f hk hs⟩
+
+open scoped MatrixGroups in
+/-- The complex Mellin formula consumes the literal horizontal integral and actual Fourier coefficients. -/
+theorem cusp_complex_mellin_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℂ} (hs : (k : ℝ) < s.re) :
+    IntegrableOn (fun y : ℝ => (y : ℂ) ^ (s - 1) *
+      ((∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2 : ℝ) : ℂ))
+      (Set.Ioi 0) ∧
+    (∫ y : ℝ in Set.Ioi 0, (y : ℂ) ^ (s - 1) *
+      ((∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2 : ℝ) : ℂ)) =
+      ((4 * Real.pi : ℂ) ^ (-s) * Complex.Gamma s) *
+        ∑' n : ℕ, ((‖(UpperHalfPlane.qExpansion 1 f).coeff n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-s) :=
+  ⟨integrableOn_cusp_complex_mellin_energy f hk hs, cusp_complex_mellin_energy_identity f hk hs⟩
+
+open scoped MatrixGroups in
+/-- Actual automorphically normalized coefficients give a holomorphic Rankin series and its convergent Mellin identity. -/
+theorem cusp_rankin_series_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    AnalyticOnNhd ℂ (fun t : ℂ =>
+      ∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-t))
+      {t : ℂ | 1 < t.re} ∧
+    IntegrableOn (fun y : ℝ => (y : ℂ) ^ (s + (k : ℂ) - 2) *
+      ((∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2 : ℝ) : ℂ))
+      (Set.Ioi 0) ∧
+    (∫ y : ℝ in Set.Ioi 0, (y : ℂ) ^ (s + (k : ℂ) - 2) *
+      ((∫ x in (0 : ℝ)..1, ‖f (UpperHalfPlane.ofComplex ((x : ℂ) + y * Complex.I))‖ ^ 2 : ℝ) : ℂ)) =
+      ((4 * Real.pi : ℂ) ^ (-(s + (k : ℂ) - 1)) * Complex.Gamma (s + (k : ℂ) - 1)) *
+        ∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-s) := by
+  have he : cuspRankinSeries f = (fun t : ℂ =>
+      ∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-t)) :=
+    funext (cuspRankinSeries_eq_tsum f)
+  simpa only [he, cuspHorizontalEnergy] using
+    And.intro (cuspRankinSeries_analyticOnNhd f hk)
+      (And.intro (integrableOn_cuspRankin_mellin f hk hs) (cuspRankinSeries_mellin f hk hs))
+
+open scoped MatrixGroups in
+/-- The literal primitive-row Eisenstein series has absolute convergence, actual Γ₀ invariance and parameter holomorphy. -/
+theorem gamma0_eisenstein_source (Q : ℕ) (z : UpperHalfPlane) {s : ℂ} (hs : 1 < s.re) :
+    Summable (fun v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (Q : ℤ) ∣ v 0} =>
+      ‖((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2 : ℝ) : ℂ) ^ s‖) ∧
+    (∀ A : SL(2, ℤ), A ∈ CongruenceSubgroup.Gamma0 Q →
+      gamma0Eisenstein Q s (A • z) = gamma0Eisenstein Q s z) ∧
+    AnalyticOnNhd ℂ (fun t : ℂ => (1 / 2 : ℂ) *
+      ∑' v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (Q : ℤ) ∣ v 0},
+        ((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2 : ℝ) : ℂ) ^ t)
+      {t : ℂ | 1 < t.re} :=
+  ⟨gamma0Eisenstein_summable_norm Q hs z,
+    fun A hA => gamma0Eisenstein_invariant Q s z A hA, gamma0Eisenstein_analyticOnNhd Q z⟩
+
+open scoped MatrixGroups in
+/-- The literal half-open unit strip is the true projective translation fundamental domain. -/
+theorem gamma0_translation_strip_source (Q : ℕ) :
+    IsFundamentalDomain (gamma0ProjectiveTranslations Q)
+      {z : UpperHalfPlane | 0 ≤ z.re ∧ z.re < 1} (volume : Measure UpperHalfPlane) :=
+  isFundamentalDomain_gamma0Translations Q
+
+/-- The two primitive row signs give exactly twice the literal projective-coset sum. -/
+theorem eisenstein_row_coset_source (Q : ℕ) (σ : ℝ) (z : UpperHalfPlane) :
+    (∑' v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (Q : ℤ) ∣ v 0},
+      ENNReal.ofReal ((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2) ^ σ)) =
+      2 * ∑' q : (projectiveGamma0 Q) ⧸ gamma0ProjectiveTranslations Q,
+        ENNReal.ofReal ((q.out⁻¹ • z).im ^ σ) :=
+  eisenstein_primitive_row_sum_eq_two_coset Q σ z
+
+open scoped MatrixGroups in
+/-- The true primitive-row Eisenstein series unfolds against the actual squared cusp norm. -/
+theorem eisenstein_petersson_unfold_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    {σ : ℝ} (hσ : 1 < σ) :
+    (∫⁻ z in gamma0FundamentalDomain Q,
+      ENNReal.ofReal (gamma0Eisenstein Q (σ : ℂ) z).re *
+        ENNReal.ofReal (‖f z‖ ^ 2 * z.im ^ k)) =
+      ∫⁻ z in {z : UpperHalfPlane | 0 ≤ z.re ∧ z.re < 1},
+        ENNReal.ofReal (z.im ^ σ) * ENNReal.ofReal (‖f z‖ ^ 2 * z.im ^ k) := by
+  simpa only [norm_petersson_self] using gamma0_eisenstein_petersson_unfold f hσ
+
+open scoped MatrixGroups in
+/-- Actual modular coefficients and the literal squared cusp norm satisfy the convergent Rankin unfolding formula. -/
+theorem rankin_unfolding_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {σ : ℝ} (hσ : 1 < σ) :
+    IntegrableOn (fun z : UpperHalfPlane =>
+      (gamma0Eisenstein Q (σ : ℂ) z).re * (‖f z‖ ^ 2 * z.im ^ k)) (gamma0FundamentalDomain Q) ∧
+    (∫ z in gamma0FundamentalDomain Q,
+      (gamma0Eisenstein Q (σ : ℂ) z).re * (‖f z‖ ^ 2 * z.im ^ k)) =
+      ((4 * Real.pi) ^ (-(σ + (k : ℝ) - 1)) * Real.Gamma (σ + (k : ℝ) - 1)) *
+        ∑' n : ℕ, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-σ) := by
+  simpa only [norm_petersson_self] using
+    And.intro (integrableOn_gamma0_eisenstein_petersson f hk hσ)
+      (cusp_rankin_unfolding_integral f hk hσ)
+
+/-- The literal determinant-one lattice Gaussian has the exact reciprocal-parameter transformation. -/
+theorem lattice_theta_source (z : UpperHalfPlane) {t : ℝ} (ht : 0 < t) :
+    (∑' v : ℤ × ℤ, Real.exp (-Real.pi * t * (‖(v.1 : ℂ) * z + v.2‖ ^ 2 / z.im))) =
+      t⁻¹ * ∑' v : ℤ × ℤ,
+        Real.exp (-Real.pi * t⁻¹ * (‖(v.1 : ℂ) * z + v.2‖ ^ 2 / z.im)) := by
+  simpa only [latticeTheta, latticeThetaTerm, latticeQuadratic_eq_norm] using latticeTheta_reciprocal z ht
+
+/-- The literal upper-tail integral of nonzero Gaussian rows is entire. -/
+theorem lattice_theta_tail_source (z : UpperHalfPlane) :
+    Differentiable ℂ (fun s : ℂ => ∫ t : ℝ in Set.Ioi 1, (t : ℂ) ^ (s - 1) *
+      ((∑' v : {v : ℤ × ℤ // v ≠ 0},
+        Real.exp (-Real.pi * t * (‖(v.val.1 : ℂ) * z + v.val.2‖ ^ 2 / z.im)) : ℝ) : ℂ)) := by
+  have he : latticeThetaMellinTail z = (fun s : ℂ => ∫ t : ℝ in Set.Ioi 1, (t : ℂ) ^ (s - 1) *
+      ((∑' v : {v : ℤ × ℤ // v ≠ 0},
+        Real.exp (-Real.pi * t * (‖(v.val.1 : ℂ) * z + v.val.2‖ ^ 2 / z.im)) : ℝ) : ℂ)) := by
+    funext s
+    simp only [latticeThetaMellinTail, latticeThetaMellinKernel, latticeThetaRemainder,
+      latticeThetaTerm, latticeQuadratic_eq_norm]
+  rw [← he]
+  exact differentiable_latticeThetaMellinTail z
+
+/-- The continuation equals the literal completed Epstein half-sum and has the genuine functional equation. -/
+theorem lattice_epstein_continuation_source (z : UpperHalfPlane) {s : ℂ} (hs : 1 < s.re) :
+    latticeCompletedMellin z s = ((Real.pi : ℂ) ^ (-s) * Complex.Gamma s) *
+      ((∑' v : {v : ℤ × ℤ // v ≠ 0},
+        1 / ((‖(v.val.1 : ℂ) * z + v.val.2‖ ^ 2 / z.im : ℝ) : ℂ) ^ s) / 2) ∧
+    (∀ w : ℂ, w ≠ 0 → w ≠ 1 → DifferentiableAt ℂ (latticeCompletedMellin z) w) ∧
+    (∀ w : ℂ, latticeCompletedMellin z (1 - w) = latticeCompletedMellin z w) := by
+  refine ⟨?_, fun _ h0 h1 => differentiableAt_latticeCompletedMellin z h0 h1,
+    latticeCompletedMellin_functional_equation z⟩
+  simpa only [latticeEpsteinSeries, latticeQuadratic_eq_norm] using latticeCompletedMellin_eq_epstein z hs
+
+/-- The actual half-lattice completion has the exact nonzero pole residues. -/
+theorem lattice_epstein_residue_source (z : UpperHalfPlane) :
+    Tendsto (fun s : ℂ => (s - 1) * latticeCompletedMellin z s) (𝓝[≠] 1) (𝓝 (1 / 2 : ℂ)) ∧
+    Tendsto (fun s : ℂ => s * latticeCompletedMellin z s) (𝓝[≠] 0) (𝓝 (-1 / 2 : ℂ)) :=
+  ⟨latticeCompletedMellin_residue_one z, latticeCompletedMellin_residue_zero z⟩
+
+/-- The literal Epstein lattice half-sum has the exact zeta factor multiplying primitive rows. -/
+theorem primitive_lattice_zeta_source (z : UpperHalfPlane) {s : ℂ} (hs : 1 < s.re) :
+    (∑' v : {v : ℤ × ℤ // v ≠ 0},
+      1 / ((‖(v.val.1 : ℂ) * z + v.val.2‖ ^ 2 / z.im : ℝ) : ℂ) ^ s) / 2 =
+      riemannZeta (2 * s) * ((1 / 2 : ℂ) *
+        ∑' v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (1 : ℤ) ∣ v 0},
+          ((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2 : ℝ) : ℂ) ^ s) := by
+  simpa only [latticeEpsteinSeries, latticeQuadratic_eq_norm, gamma0Eisenstein,
+    nonholomorphicEisensteinTerm, eisensteinRowHeight] using
+      latticeEpsteinSeries_eq_zeta_eisenstein z hs
+
+/-- The full-level continuation agrees with the literal primitive-row series and has residue 3/pi. -/
+theorem level_one_eisenstein_continuation_source (z : UpperHalfPlane) :
+    (∀ s : ℂ, 1 < s.re → levelOneEisensteinContinuation z s =
+      (1 / 2 : ℂ) * ∑' v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (1 : ℤ) ∣ v 0},
+        ((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2 : ℝ) : ℂ) ^ s) ∧
+      Tendsto (fun s : ℂ => (s - 1) * levelOneEisensteinContinuation z s)
+        (𝓝[≠] 1) (𝓝 (3 / (Real.pi : ℂ))) :=
+  ⟨fun _ hs => levelOneEisensteinContinuation_eq z hs,
+    levelOneEisensteinContinuation_residue_one z⟩
+
+/-- At every positive level, the continuation matches the actual primitive rows and is holomorphic in the stated strip. -/
+theorem gamma0_eisenstein_continuation_source (Q : ℕ) [NeZero Q] (z : UpperHalfPlane) :
+    (∀ s : ℂ, 1 < s.re → gamma0EisensteinContinuation Q z s =
+      (1 / 2 : ℂ) * ∑' v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (Q : ℤ) ∣ v 0},
+        ((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2 : ℝ) : ℂ) ^ s) ∧
+      ∀ s : ℂ, 1 / 2 < s.re → s ≠ 1 →
+        DifferentiableAt ℂ (gamma0EisensteinContinuation Q z) s :=
+  ⟨fun _ hs => gamma0EisensteinContinuation_eq Q z hs,
+    fun _ hs hs1 => differentiableAt_gamma0EisensteinContinuation Q z hs hs1⟩
+
+/-- The actual general-level residue is the literal positive arithmetic constant, independent of the point. -/
+theorem gamma0_eisenstein_residue_source (Q : ℕ) [NeZero Q] (z : UpperHalfPlane) :
+    0 < Real.pi * Q.totient /
+      (2 * (Q : ℝ) ^ 2 * (DirichletCharacter.LFunctionTrivChar Q 2).re) ∧
+    Tendsto (fun s : ℂ => (s - 1) * gamma0EisensteinContinuation Q z s) (𝓝[≠] 1)
+      (𝓝 ((Real.pi : ℂ) * Q.totient /
+        (2 * (Q : ℂ) ^ 2 * DirichletCharacter.LFunctionTrivChar Q 2))) :=
+  ⟨gamma0EisensteinResidue_pos Q, gamma0EisensteinContinuation_residue_one Q z⟩
+
+/-- The literal entire Mellin tail has a uniform complex-parameter bound by a convergent positive lattice value. -/
+theorem lattice_mellin_majorant_source (z : UpperHalfPlane) {s : ℂ} {σ : ℝ}
+    (hσ : 1 < σ) (hs : s.re ≤ σ) :
+    ‖∫ t : ℝ in Set.Ioi 1, (t : ℂ) ^ (s - 1) *
+      ((∑' v : {v : ℤ × ℤ // v ≠ 0},
+        Real.exp (-Real.pi * t * (‖(v.val.1 : ℂ) * z + v.val.2‖ ^ 2 / z.im)) : ℝ) : ℂ)‖ ≤
+      2 * (latticeCompletedMellin z (σ : ℂ)).re := by
+  simpa only [latticeThetaMellinTail, latticeThetaMellinKernel, latticeThetaRemainder,
+    latticeThetaTerm, latticeQuadratic_eq_norm] using norm_latticeThetaMellinTail_le_completed z hσ hs
+
+open scoped MatrixGroups in
+/-- Every actual rescaled continued lattice kernel is integrable against the literal cusp density. -/
+theorem lattice_cusp_integrability_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (s : ℂ) :
+    IntegrableOn (fun z : UpperHalfPlane =>
+      latticeCompletedMellin (rectangularLatticePoint a b ha hb z) s *
+        (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k)) (gamma0FundamentalDomain Q) :=
+  integrableOn_rectangular_lattice_completed_petersson f a b ha hb s
+
+open scoped MatrixGroups in
+/-- The true regularized integral is entire in its spectral parameter, with domination and differentiation proved. -/
+theorem lattice_cusp_entire_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) :
+    Differentiable ℂ (fun s : ℂ => ∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+      latticeCompletedMellinRegular (rectangularLatticePoint a b ha hb z) s *
+        (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k)) :=
+  differentiable_rectangularLatticeCuspRegular f a b ha hb
+
+open scoped MatrixGroups in
+/-- The actual integrated lattice residue is one half the literal cusp Petersson integral. -/
+theorem lattice_cusp_residue_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) :
+    Tendsto (fun s : ℂ => (s - 1) * ∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+      latticeCompletedMellin (rectangularLatticePoint a b ha hb z) s *
+        (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k)) (𝓝[≠] 1)
+      (𝓝 ((∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+        starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k) / 2)) := by
+  have h := rectangularLatticeCuspCompleted_residue_one f a b ha hb
+  rw [cuspPetersson_eq_gamma0Domain_integral Q] at h
+  exact h
+
+open scoped MatrixGroups in
+/-- The continued primitive Eisenstein integral has the actual Petersson residue, with integrability proved upstream. -/
+theorem gamma0_cusp_integral_residue_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    Tendsto (fun s : ℂ => (s - 1) * ∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+      gamma0EisensteinContinuation Q z s * (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k))
+      (𝓝[≠] 1) (𝓝 ((gamma0EisensteinResidue Q : ℂ) *
+        ∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+          starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k)) := by
+  have h := gamma0CuspEisensteinContinuation_residue_one f
+  rw [cuspPetersson_eq_gamma0Domain_integral Q] at h
+  exact h
+
+open scoped MatrixGroups in
+/-- The literal complex primitive-row integral equals the exact Gamma factor times the actual coefficient square series. -/
+theorem rankin_complex_unfolding_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    (∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+      ((1 / 2 : ℂ) * ∑' v : {v : Fin 2 → ℤ | (v 0).gcd (v 1) = 1 ∧ (Q : ℤ) ∣ v 0},
+        ((z.im / ‖(v.val 0 : ℂ) * z + v.val 1‖ ^ 2 : ℝ) : ℂ) ^ s) *
+          (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k)) =
+      ((4 * Real.pi : ℂ) ^ (-(s + (k : ℂ) - 1)) * Complex.Gamma (s + (k : ℂ) - 1)) *
+        ∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-s) := by
+  have h := gamma0CuspEisensteinContinuation_eq_rankin f hk hs
+  rw [gamma0CuspEisensteinContinuation_eq_integral f hs, cuspRankinSeries_eq_tsum] at h
+  exact h
+
+open scoped MatrixGroups in
+/-- The constructed Rankin continuation agrees with the actual square series and is holomorphic across the stated strip. -/
+theorem rankin_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    (∀ s : ℂ, 1 < s.re → cuspRankinContinuation f s =
+      ∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-s)) ∧
+    ∀ s : ℂ, 1 / 2 < s.re → s ≠ 1 → DifferentiableAt ℂ (cuspRankinContinuation f) s := by
+  constructor
+  · intro s hs
+    rw [cuspRankinContinuation_eq_series f hk.le hs, cuspRankinSeries_eq_tsum]
+  · exact fun _ hs hs1 => differentiableAt_cuspRankinContinuation f hk hs hs1
+
+open scoped MatrixGroups in
+/-- For every nonzero positive-weight cusp form the actual Rankin residue is a proved positive Petersson constant. -/
+theorem rankin_positive_residue_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+    cuspRankinResidue f =
+      gamma0EisensteinResidue Q *
+        (∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+          starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k).re /
+            ((4 * Real.pi) ^ (-(k : ℝ)) * Real.Gamma (k : ℝ)) ∧
+    Tendsto (fun s : ℂ => (s - 1) * cuspRankinContinuation f s) (𝓝[≠] 1)
+      (𝓝 (cuspRankinResidue f : ℂ)) := by
+  refine ⟨cuspRankinResidue_pos f hk hf, ?_, cuspRankinContinuation_residue_real f hk⟩
+  rw [cuspRankinResidue, cuspPetersson_eq_gamma0Domain_integral Q,
+    cuspRankinFactor_one, Complex.ofReal_re]
+  rfl
+
+open scoped MatrixGroups in
+/-- Every literal rescaled lattice-cusp integral obeys the exact spectral reflection. -/
+theorem lattice_cusp_functional_equation_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (s : ℂ) :
+    (∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+      latticeCompletedMellin (rectangularLatticePoint a b ha hb z) (1 - s) *
+        (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k)) =
+    ∫ z : UpperHalfPlane in gamma0FundamentalDomain Q,
+      latticeCompletedMellin (rectangularLatticePoint a b ha hb z) s *
+        (starRingEnd ℂ (f z) * f z * (z.im : ℂ) ^ k) :=
+  rectangularLatticeCuspCompleted_functional_equation f a b ha hb s
+
+open scoped MatrixGroups in
+/-- The genuine convolution has nonnegative real coefficients and the exact square-supported principal-character product. -/
+theorem rankin_convolution_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    (∀ n : ℕ, 0 ≤ (rankinConvolutionCoefficients f n).re ∧
+      (rankinConvolutionCoefficients f n).im = 0) ∧
+    (∀ n : ℕ, principalSquareCoefficients Q (n ^ 2) = if Nat.Coprime n Q then 1 else 0) ∧
+    LSeries (rankinConvolutionCoefficients f) s = DirichletCharacter.LFunctionTrivChar Q (2 * s) *
+      ∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-s) := by
+  refine ⟨fun n => ⟨rankinConvolutionCoefficients_re_nonneg f n,
+    rankinConvolutionCoefficients_im f n⟩, principalSquareCoefficients_sq Q, ?_⟩
+  rw [rankinConvolution_LSeries f hk hs, cuspRankinSeries_eq_tsum]
+
+open scoped MatrixGroups in
+/-- The entire finite lattice completion consumes the true convolution series with both exact Gamma factors. -/
+theorem completed_rankin_convolution_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    Differentiable ℂ (gamma0CuspEntire f) ∧
+    gamma0CuspEntire f s = s * (s - 1) *
+      (((Real.pi : ℂ) ^ (-s) * Complex.Gamma s *
+        ((4 * Real.pi : ℂ) ^ (-(s + (k : ℂ) - 1)) * Complex.Gamma (s + (k : ℂ) - 1))) *
+          LSeries (rankinConvolutionCoefficients f) s) := by
+  refine ⟨differentiable_gamma0CuspEntire f, ?_⟩
+  rw [gamma0CuspEntire_eq_convolution f hk hs, cuspRankinFactor]
+
+open scoped MatrixGroups in
+/-- The actual entire general-level Rankin completion has a proved polynomial bound on each closed vertical strip. -/
+theorem completed_rankin_strip_growth_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    {σ : ℝ} (hσ : 1 < σ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ s : ℂ, s.re ≤ σ → 1 - s.re ≤ σ →
+      ‖gamma0CuspEntire f s‖ ≤ C * (1 + ‖s‖) ^ 2 :=
+  exists_gamma0CuspEntire_strip_bound f hσ
+
+open scoped MatrixGroups in
+/-- At full level the genuine completed convolution integral has a scalar reflection equation. -/
+theorem level_one_completed_rankin_functional_equation_source {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 1).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (s : ℂ) : gamma0CompletedCusp f (1 - s) = gamma0CompletedCusp f s :=
+  gamma0CompletedCusp_levelOne_functional_equation f s
+
+
+open scoped MatrixGroups in
+/-- The removed-pole function is analytic on the actual half-plane and matches the literal coefficient sum. -/
+theorem rankin_regular_boundary_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    DifferentiableOn ℂ (cuspRankinRegular f) {s : ℂ | 1 / 2 < s.re} ∧
+    ContinuousOn (cuspRankinRegular f) {s : ℂ | 1 ≤ s.re} ∧
+    ∀ s : ℂ, 1 < s.re → cuspRankinRegular f s =
+      (∑' n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) * (n : ℂ) ^ (-s)) -
+        (cuspRankinResidue f : ℂ) / (s - 1) := by
+  refine ⟨differentiableOn_cuspRankinRegular f hk, continuousOn_cuspRankinRegular f hk, ?_⟩
+  intro s hs
+  rw [cuspRankinRegular_eq_series_sub_pole f hk hs, cuspRankinSeries_eq_tsum]
+
+open scoped MatrixGroups in
+/-- The genuine normalization and actual Parseval bound yield a uniform linear square sum. -/
+theorem normalized_cusp_linear_energy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ,
+      (∑ n ∈ Finset.Icc 1 N, ‖cuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (1 - (k : ℝ))) ≤ C * N := by
+  simpa only [norm_sq_normalizedCuspCoefficients] using exists_normalized_cusp_square_upper f hk
+
+open scoped MatrixGroups in
+/-- The actual positive Rankin mean is proved at natural and real cutoffs with an o(x) remainder. -/
+theorem rankin_mean_square_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+    Tendsto (fun N : ℕ => (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2) / N)
+      atTop (𝓝 (cuspRankinResidue f)) ∧
+    Tendsto (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) / x)
+      atTop (𝓝 (cuspRankinResidue f)) ∧
+    (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x)
+      =o[atTop] (fun x : ℝ => x) :=
+  ⟨cuspRankinResidue_pos f hk hf, tendsto_cusp_square_mean f hk,
+    tendsto_cusp_squareSummatory_div f hk, cusp_squareSummatory_sub_main_isLittleO f hk⟩
+
+open UpperHalfPlane ModularForm CongruenceSubgroup in
+open scoped MatrixGroups CongruenceSubgroup in
+/-- The complete primitive-form concentration consumer has only the actual Sato–Tate input left explicit. -/
+theorem primitive_concentration_with_proved_mean_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k)
+    (hST : Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability)) :
+    TendstoLocallyUniformly (normalizedJessen (normalizedCuspCoefficients f.toCuspForm))
+      (fun σ => max (1 / 2 - σ) 0) atTop ∧
+    Tendsto (jessenProbability (normalizedCuspCoefficients_one f.toCuspForm f.normalized)) atTop
+      (𝓝 (⟨Measure.dirac (1 / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    TendstoLocallyUniformly (normalizedJessen (cuspCoefficients f.toCuspForm))
+      (fun σ => max ((k : ℝ) / 2 - σ) 0) atTop ∧
+    Tendsto (jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized) atTop
+      (𝓝 (⟨Measure.dirac ((k : ℝ) / 2), inferInstance⟩ : ProbabilityMeasure ℝ)) ∧
+    (∀ᶠ N : ℕ in atTop, ∃ hN : 1 ≤ N, 1 < lastIndex (cuspCoefficients f.toCuspForm) N ∧ ∀ l u : ℝ,
+      Tendsto (fun T : ℝ => (2 * Real.pi / Real.log (lastIndex (cuspCoefficients f.toCuspForm) N)) *
+        ((verticalZeroCount (cuspCoefficients f.toCuspForm) N hN (f.normalized.trans_ne one_ne_zero) l u T : ℝ) /
+          (2 * T))) atTop
+        (𝓝 (((jessenProbability (a := cuspCoefficients f.toCuspForm) f.normalized N : Measure ℝ) (Set.Ioo l u)).toReal))) :=
+  primitive_concentration_of_sato_tate f hk hST
+
+
+open scoped MatrixGroups in
+/-- The actual normalized cusp squares are recovered from the genuine completed convolution by the square-supported Möbius inverse. -/
+theorem rankin_moebius_inversion_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) :
+    (∀ n : ℕ, moebiusSquareCoefficients Q (n ^ 2) =
+      if Nat.Coprime n Q then (ArithmeticFunction.moebius n : ℂ) else 0) ∧
+    ∀ n : ℕ, ((‖normalizedCuspCoefficients f n‖ ^ 2 : ℝ) : ℂ) =
+      ∑ uv ∈ n.divisorsAntidiagonal, moebiusSquareCoefficients Q uv.1 *
+        rankinConvolutionCoefficients f uv.2 :=
+  ⟨moebiusSquareCoefficients_sq Q, normalized_cusp_square_eq_moebius_convolution f hk⟩
+
+open scoped MatrixGroups in
+/-- Both noncentral regimes of the literal weighted cusp energy are proved using the positive actual Rankin mean. -/
+theorem cusp_noncentral_weighted_energy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+    (∀ σ : ℝ, σ < 1 / 2 → Tendsto (fun N : ℕ =>
+      ((∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) -
+        cuspRankinResidue f * (N : ℝ) ^ (1 - 2 * σ) / (1 - 2 * σ)) /
+          (N : ℝ) ^ (1 - 2 * σ)) atTop (𝓝 0)) ∧
+    (∀ σ : ℝ, 1 / 2 < σ → ∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+      0 ≤ (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ∧
+      (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ≤ B) :=
+  ⟨cuspRankinResidue_pos f hk hf, fun _ hσ => cusp_weighted_energy_left f hk hσ,
+    fun _ hσ => cusp_weighted_energy_right f hk hσ⟩
+
+/-- The auxiliary analytic Tauberian theorem consumes the literal Laplace integral, not an assumed convergence conclusion. -/
+theorem analytic_tauberian_actual_integral_source {f : ℝ → ℂ} {G : ℂ → ℂ} {B d : ℝ}
+    (hfm : AEStronglyMeasurable f volume) (hf : ∀ t : ℝ, 0 ≤ t → ‖f t‖ ≤ B)
+    (hd : 0 < d) (hG : DifferentiableOn ℂ G {z : ℂ | -d ≤ z.re})
+    (heq : ∀ z : ℂ, 0 < z.re → G z =
+      ∫ t : ℝ in Set.Ioi 0, f t * Complex.exp (-z * t)) :
+    Tendsto (fun T : ℝ => ∫ t in (0 : ℝ)..T, f t) atTop (𝓝 (G 0)) :=
+  newman_tauberian_integral hfm hf hd hG heq
+
+open scoped MatrixGroups in
+/-- The literal central cusp weighted sum has a convergent error with the exact Rankin regular-part constant. -/
+theorem cusp_central_weighted_energy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    Tendsto (fun N : ℕ => (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 / (n : ℝ)) -
+      cuspRankinResidue f * Real.log N) atTop (𝓝 ((cuspRankinRegular f 1).re)) ∧
+    ∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+      |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 / (n : ℝ)) -
+        cuspRankinResidue f * Real.log N| ≤ B := by
+  have hh := And.intro (tendsto_cusp_weighted_energy_center_error f hk) (cusp_weighted_energy_center f hk)
+  norm_num only [coefficientEnergy] at hh
+  simpa only [Real.rpow_neg_one, div_eq_mul_inv] using hh
+
+open scoped MatrixGroups in
+/-- Every regime of the source's literal weighted cusp energy is now proved, with its positive actual Petersson residue. -/
+theorem cusp_all_weighted_energy_regimes_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+    (∀ σ : ℝ, σ < 1 / 2 → Tendsto (fun N : ℕ =>
+      ((∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) -
+        cuspRankinResidue f * (N : ℝ) ^ (1 - 2 * σ) / (1 - 2 * σ)) /
+          (N : ℝ) ^ (1 - 2 * σ)) atTop (𝓝 0)) ∧
+    (∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+      |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 / (n : ℝ)) -
+        cuspRankinResidue f * Real.log N| ≤ B) ∧
+    (∀ σ : ℝ, 1 / 2 < σ → ∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+      0 ≤ (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ∧
+      (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ≤ B) :=
+  ⟨cuspRankinResidue_pos f hk hf, fun _ hσ => cusp_weighted_energy_left f hk hσ,
+    (cusp_central_weighted_energy_source f hk).2, fun _ hσ => cusp_weighted_energy_right f hk hσ⟩
+
+open scoped MatrixGroups in
+/-- The genuine Rankin convolution has its exact hyperbola sum and a proved positive leading mean. -/
+theorem rankin_convolution_mean_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) (hf : f ≠ 0) :
+    0 < rankinConvolutionResidue f ∧
+    (∀ N : ℕ, (∑ n ∈ Finset.Icc 1 N, (rankinConvolutionCoefficients f n).re) =
+      ∑ d ∈ Finset.Icc 1 N, (principalSquareCoefficients Q d).re *
+        ∑ n ∈ Finset.Icc 1 (N / d), ‖normalizedCuspCoefficients f n‖ ^ 2) ∧
+    Tendsto (fun N : ℕ => (∑ n ∈ Finset.Icc 1 N, (rankinConvolutionCoefficients f n).re) / N)
+      atTop (𝓝 (principalSquareMass Q * cuspRankinResidue f)) ∧
+    (principalSquareMass Q : ℂ) = DirichletCharacter.LFunctionTrivChar Q 2 :=
+  ⟨rankinConvolutionResidue_pos f hk hf, rankinConvolution_summatory_eq f,
+    tendsto_rankin_convolution_mean f hk, principalSquareMass_eq_LFunction Q⟩
+
+open scoped MatrixGroups in
+/-- The actual counting error is controlled by literal finite quadratic Riesz sums, with no sharp error estimate assumed. -/
+theorem rankin_convolution_riesz_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (x : ℝ) {h : ℝ} (hh : 0 < h) :
+    let R : ℝ → ℝ := fun t =>
+      (∑ n ∈ Finset.Icc 1 ⌊t⌋₊, (rankinConvolutionCoefficients f n).re * (t - n) ^ 2 / 2) -
+        rankinConvolutionResidue f * t ^ 3 / 6
+    |(∑ n ∈ Finset.Icc 1 ⌊x⌋₊, (rankinConvolutionCoefficients f n).re) - rankinConvolutionResidue f * x| ≤
+      rankinConvolutionResidue f * h +
+      max |R (x + 2 * h) - 2 * R (x + h) + R x|
+        |R x - 2 * R (x - h) + R (x - 2 * h)| / h ^ 2 := by
+  dsimp only
+  have hb := rankinConvolution_error_le_riesz f x hh
+  have he : x - 2 * h + h = x - h := by ring
+  simpa only [rankinConvolutionRieszError, rieszSecondError, rieszSecondDifference,
+    rieszSecondSum_eq, sub_add_cancel, he] using hb
+
+/-- The actual digamma derivative has a proved reciprocal asymptotic with explicit uniform error. -/
+theorem trigamma_reciprocal_asymptotic_source {z : ℂ} (hz : 0 < z.re) (hy : 1 ≤ |z.im|) :
+    ‖deriv Complex.digamma z - z⁻¹‖ ≤ 32 / |z.im| ^ 2 :=
+  norm_deriv_digamma_sub_inv_le hz hy
+
+/-- The literal reflected two-Gamma quotient has a proved phase equation, logarithmic frequency and reciprocal curvature. -/
+theorem rankin_gamma_phase_source {k : ℤ} (hk : 0 < k) {t : ℝ}
+    (ht : 128 ≤ t) (hkt : (k : ℝ) - 1 / 2 ≤ t) :
+    ‖Complex.Gamma ((1 / 2 : ℂ) - (t : ℂ) * Complex.I) *
+        Complex.Gamma (((k : ℝ) - 1 / 2 : ℝ) - (t : ℂ) * Complex.I) /
+      (Complex.Gamma ((1 / 2 : ℂ) + (t : ℂ) * Complex.I) *
+        Complex.Gamma (((k : ℝ) - 1 / 2 : ℝ) + (t : ℂ) * Complex.I))‖ = 1 ∧
+    HasDerivAt (rankinGammaPhase k)
+      (Complex.I * (rankinGammaFrequency k t : ℂ) * rankinGammaPhase k t) t ∧
+    |rankinGammaFrequency k t + 4 * Real.log t| ≤ (16 + 2 * (k : ℝ)) / t ∧
+    -8 / t ≤ deriv (rankinGammaFrequency k) t ∧ deriv (rankinGammaFrequency k) t ≤ -1 / t := by
+  refine ⟨?_, hasDerivAt_rankinGammaPhase hk t, ?_, rankinGammaFrequency_deriv_bounds hk ht hkt⟩
+  · rw [← rankinGammaPhase_eq]
+    exact norm_rankinGammaPhase hk t
+  · simpa only [abs_of_nonneg (by linarith : 0 ≤ t)] using
+      abs_rankinGammaFrequency_add_log_le hk (by rw [abs_of_nonneg (by linarith : 0 ≤ t)]; linarith : 1 ≤ |t|)
+
+
+/-- The literal quadratic cutoff has its exact Mellin symbol and an absolutely convergent inverse on every positive line. -/
+theorem riesz_quadratic_mellin_source {σ : ℝ} (hσ : 0 < σ) :
+    (∀ s : ℂ, 0 < s.re → HasMellin
+      (Set.indicator (Set.Ioc (0 : ℝ) 1) (fun x => (1 - (x : ℂ)) ^ 2 / 2))
+      s (1 / (s * (s + 1) * (s + 2)))) ∧
+    Complex.VerticalIntegrable (fun s : ℂ => 1 / (s * (s + 1) * (s + 2))) σ ∧
+    (∀ x : ℝ, 0 < x → mellinInv σ (fun s : ℂ => 1 / (s * (s + 1) * (s + 2))) x =
+      ((max (1 - x) 0 ^ 2 / 2 : ℝ) : ℂ)) := by
+  refine ⟨fun s hs => hasMellin_rieszMellinCutoff hs, verticalIntegrable_rieszMellinSymbol hσ, ?_⟩
+  intro x hx
+  exact (mellinInv_rieszMellinSymbol hσ hx).trans (rieszMellinCutoff_eq hx)
+
+open scoped MatrixGroups in
+/-- The actual Rankin quadratic sum has its absolutely convergent literal Perron integral, with all coefficient convergence proved. -/
+theorem rankin_convolution_perron_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 ≤ k) {σ x : ℝ} (hσ : 1 < σ) (hx : 0 < x) :
+    MeasureTheory.Integrable (fun t : ℝ =>
+      (x : ℂ) ^ ((σ : ℂ) + t * Complex.I + 2) *
+        LSeries (rankinConvolutionCoefficients f) (σ + t * Complex.I) /
+        (((σ : ℂ) + t * Complex.I) * ((σ : ℂ) + t * Complex.I + 1) *
+          ((σ : ℂ) + t * Complex.I + 2))) ∧
+    ((∑ n ∈ Finset.Icc 1 ⌊x⌋₊, (rankinConvolutionCoefficients f n).re * (x - n) ^ 2 / 2 : ℝ) : ℂ) =
+      (1 / (2 * Real.pi) : ℝ) • ∫ t : ℝ,
+        (x : ℂ) ^ ((σ : ℂ) + t * Complex.I + 2) *
+          LSeries (rankinConvolutionCoefficients f) (σ + t * Complex.I) /
+          (((σ : ℂ) + t * Complex.I) * ((σ : ℂ) + t * Complex.I + 1) *
+            ((σ : ℂ) + t * Complex.I + 2)) := by
+  refine ⟨integrable_rankinConvolutionPerron f hk hσ hx, ?_⟩
+  simpa only [rankinConvolutionRiesz_eq] using rankinConvolutionRiesz_eq_integral f hk hσ hx
+
+
+/-- The literal critical-line reflected two-Gamma quotient has uniform dyadic cancellation for every Mellin frequency. -/
+theorem rankin_gamma_oscillation_source {k : ℤ} (hk : 0 < k)
+    {T a b : ℝ} (hT : 128 ≤ T) (hkT : (k : ℝ) - 1 / 2 ≤ T)
+    (ha : T ≤ a) (hab : a ≤ b) (hb : b ≤ 2 * T) (v : ℝ) :
+    ‖∫ t in a..b, Complex.exp (Complex.I * ((v * t : ℝ) : ℂ)) *
+      (Complex.Gamma ((1 / 2 : ℂ) - (t : ℂ) * Complex.I) *
+        Complex.Gamma (((k : ℝ) - 1 / 2 : ℝ) - (t : ℂ) * Complex.I) /
+        (Complex.Gamma ((1 / 2 : ℂ) + (t : ℂ) * Complex.I) *
+          Complex.Gamma (((k : ℝ) - 1 / 2 : ℝ) + (t : ℂ) * Complex.I)))‖ ≤ 8 * Real.sqrt T := by
+  simpa only [rankinOscillatoryPhase, rankinGammaPhase_eq] using
+    norm_rankinOscillatoryPhase_integral_le hk hT hkT ha hab hb v
+
+/-- The literal normalized product of two unequal-shift Gamma ratios has the same uniform dyadic cancellation. -/
+theorem shifted_gamma_oscillation_source {a b c d T l r : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d)
+    (hT : 128 ≤ T) (haT : a ≤ T) (hbT : b ≤ T) (hcT : c ≤ T) (hdT : d ≤ T)
+    (hl : T ≤ l) (hlr : l ≤ r) (hr : r ≤ 2 * T) (v : ℝ) :
+    let G : ℝ → ℝ → ℝ → ℂ := fun u w t =>
+      Complex.Gamma ((u : ℂ) + ((-t : ℝ) : ℂ) * Complex.I) /
+        Complex.Gamma ((w : ℂ) + (t : ℂ) * Complex.I)
+    ‖∫ t in l..r, Complex.exp (Complex.I * ((v * t : ℝ) : ℂ)) *
+      (G a b t / (‖G a b t‖ : ℂ)) * (G c d t / (‖G c d t‖ : ℂ))‖ ≤ 8 * Real.sqrt T := by
+  exact norm_doubleGammaOscillatoryPhase_integral_le ha hb hc hd hT haT hbT hcT hdT hl hlr hr v
+
+
+/-- The literal unequal-shift reflected Gamma ratio has its sharp power and true amplitude derivative bounds. -/
+theorem gamma_ratio_amplitude_source {a b t : ℝ} (ha : 0 < a) (hb : 0 < b) (ht : 1 ≤ t) :
+    ‖Complex.Gamma ((a : ℂ) - (t : ℂ) * Complex.I) /
+      Complex.Gamma ((b : ℂ) + (t : ℂ) * Complex.I)‖ ≤
+      Real.exp ((4 + max a b) * |a - b|) * t ^ (a - b) ∧
+    |deriv (fun u : ℝ => ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * Complex.I) /
+      Complex.Gamma ((b : ℂ) + (u : ℂ) * Complex.I)‖) t| ≤
+      (33 * |a - b| / t) * ‖Complex.Gamma ((a : ℂ) - (t : ℂ) * Complex.I) /
+        Complex.Gamma ((b : ℂ) + (t : ℂ) * Complex.I)‖ := by
+  have hh := And.intro (norm_reflectedGammaRatio_le ha hb ht) (abs_deriv_norm_reflectedGammaRatio_le ha hb ht)
+  simpa only [reflectedGammaRatio, gammaVerticalPoint, Complex.ofReal_neg, neg_mul, sub_eq_add_neg] using hh
+
+/-- The literal degree-four Riesz Gamma integrand has uniform dyadic cancellation and actual decay outside its stationary window. -/
+theorem riesz_gamma_dyadic_source {k r x T l u : ℝ}
+    (hk : 2 ≤ k) (hr0 : 0 ≤ r) (hr2 : r ≤ 2) (hx : 0 < x)
+    (hT : 128 ≤ T) (hkT : 21 + 2 * k ≤ T) (hl : T ≤ l) (hlu : l ≤ u) (hu : u ≤ 2 * T) :
+    let β : ℝ := 3 / 8 - r / 4
+    let F : ℝ → ℂ := fun t =>
+      (x : ℂ) ^ ((β : ℂ) + (t : ℂ) * Complex.I) *
+        (Complex.Gamma (1 - ((β : ℂ) + (t : ℂ) * Complex.I)) *
+          Complex.Gamma ((k : ℂ) - ((β : ℂ) + (t : ℂ) * Complex.I)) /
+          (Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((r + 1 : ℝ) : ℂ)) *
+            Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((k - 1 : ℝ) : ℂ))))
+    ‖∫ t in l..u, F t‖ ≤ 8 * gammaRieszConstant k r * x ^ β ∧
+      ((Real.log x - 4 * Real.log T ≤ -2 ∨ 2 ≤ Real.log x - 4 * Real.log (2 * T)) →
+        ‖∫ t in l..u, F t‖ ≤ 2 * gammaRieszConstant k r * x ^ β / Real.sqrt T) := by
+  exact ⟨norm_gammaRieszIntegrand_integral_le hk hr0 hr2 hx hT hkT hl hlu hu,
+    fun hwindow => norm_gammaRieszIntegrand_integral_le_off_window hk hr0 hr2 hx hT hkT hl hlu hu hwindow⟩
+
+
+/-- The literal symmetric improper Riesz Gamma integral converges and has a sharp uniform power bound. -/
+theorem riesz_gamma_improper_kernel_source {k r : ℝ} (hk : 2 ≤ k) (hr0 : 0 ≤ r) (hr2 : r ≤ 2) :
+    ∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, 0 < x →
+      let β : ℝ := 3 / 8 - r / 4
+      let F : ℝ → ℂ := fun t =>
+        (x : ℂ) ^ ((β : ℂ) + (t : ℂ) * Complex.I) *
+          (Complex.Gamma (1 - ((β : ℂ) + (t : ℂ) * Complex.I)) *
+            Complex.Gamma ((k : ℂ) - ((β : ℂ) + (t : ℂ) * Complex.I)) /
+            (Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((r + 1 : ℝ) : ℂ)) *
+              Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((k - 1 : ℝ) : ℂ))))
+      Tendsto (fun u : ℝ => (1 / (2 * Real.pi) : ℝ) • ∫ t in -u..u, F t) atTop
+        (𝓝 (gammaRieszKernel k r x)) ∧ ‖gammaRieszKernel k r x‖ ≤ C * x ^ β := by
+  obtain ⟨C, hC, hbound⟩ := exists_gammaRieszKernel_bound hk hr0 hr2
+  exact ⟨C, hC, fun x hx => ⟨tendsto_gammaRieszKernel hk hr0 hr2 hx, hbound x hx⟩⟩
+
+/-- The actual order-zero and order-two kernels have exactly the two powers required by sharp Rankin unsmoothing. -/
+theorem riesz_kernel_order_zero_two_source {k : ℝ} (hk : 2 ≤ k) :
+    ∃ C₀ C₂ : ℝ, 0 < C₀ ∧ 0 < C₂ ∧ ∀ x : ℝ, 0 < x →
+      ‖gammaRieszKernel k 0 x‖ ≤ C₀ * x ^ (3 / 8 : ℝ) ∧
+        ‖gammaRieszKernel k 2 x‖ ≤ C₂ * x ^ (-(1 / 8 : ℝ)) := by
+  obtain ⟨C₀, hC₀, h0⟩ := exists_gammaRieszKernel_bound hk (r := 0) (by norm_num) (by norm_num)
+  obtain ⟨C₂, hC₂, h2⟩ := exists_gammaRieszKernel_bound hk (r := 2) (by norm_num) (by norm_num)
+  refine ⟨C₀, C₂, hC₀, hC₂, fun x hx => ?_⟩
+  constructor
+  · simpa using h0 x hx
+  · convert h2 x hx using 1
+    norm_num
+
+
+/-- The literal normalized symmetric Riesz cutoff has an explicit error from the actual improper kernel. -/
+theorem riesz_kernel_truncation_source {k r x T : ℝ}
+    (hk : 2 ≤ k) (hr0 : 0 ≤ r) (hr2 : r ≤ 2) (hx : 0 < x)
+    (hT : max 128 (max (21 + 2 * k) (Real.exp ((Real.log x + 2) / 4))) ≤ T) :
+    let β : ℝ := 3 / 8 - r / 4
+    let F : ℝ → ℂ := fun t =>
+      (x : ℂ) ^ ((β : ℂ) + (t : ℂ) * Complex.I) *
+        (Complex.Gamma (1 - ((β : ℂ) + (t : ℂ) * Complex.I)) *
+          Complex.Gamma ((k : ℂ) - ((β : ℂ) + (t : ℂ) * Complex.I)) /
+          (Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((r + 1 : ℝ) : ℂ)) *
+            Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((k - 1 : ℝ) : ℂ))))
+    ‖gammaRieszKernel k r x - (1 / (2 * Real.pi) : ℝ) • ∫ t in -T..T, F t‖ ≤
+      4 * gammaRieszConstant k r * x ^ β / (Real.pi * Real.sqrt T) :=
+  norm_gammaRieszKernel_sub_cutoff_le hk hr0 hr2 hx hT
+
+/-- The literal finite-rectangle contour shift preserves the genuine kernel, uniformly on every compact positive interval. -/
+theorem riesz_gamma_contour_shift_source {k r a b β : ℝ}
+    (hk : 2 ≤ k) (hr0 : 0 ≤ r) (hr2 : r ≤ 2) (ha : 0 < a) (hab : a ≤ b)
+    (hβ0 : 3 / 8 - r / 4 ≤ β) (hβ1 : β ≤ 3 / 8) :
+    TendstoUniformlyOn
+      (fun T x : ℝ => (1 / (2 * Real.pi) : ℝ) • ∫ t in -T..T,
+        (x : ℂ) ^ ((β : ℂ) + (t : ℂ) * Complex.I) *
+          (Complex.Gamma (1 - ((β : ℂ) + (t : ℂ) * Complex.I)) *
+            Complex.Gamma ((k : ℂ) - ((β : ℂ) + (t : ℂ) * Complex.I)) /
+            (Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((r + 1 : ℝ) : ℂ)) *
+              Complex.Gamma (((β : ℂ) + (t : ℂ) * Complex.I) + ((k - 1 : ℝ) : ℂ)))))
+      (gammaRieszKernel k r) atTop (Set.Icc a b) :=
+  tendstoUniformlyOn_gammaRieszVerticalCutoff hk hr0 hr2 ha hab hβ0 hβ1
+
+
+/-- The true improper Riesz kernels satisfy both adjacent-order derivative identities, at every positive dilation and parameter. -/
+theorem riesz_kernel_derivative_source {k c x : ℝ} (hk : 2 ≤ k) (hc : 0 < c) (hx : 0 < x) :
+    HasDerivAt (fun y : ℝ => (y : ℂ) * gammaRieszKernel k 1 (c * y))
+      (gammaRieszKernel k 0 (c * x)) x ∧
+    HasDerivAt (fun y : ℝ => (y : ℂ) ^ 2 * gammaRieszKernel k 2 (c * y))
+      ((x : ℂ) * gammaRieszKernel k 1 (c * x)) x :=
+  ⟨hasDerivAt_gammaRieszKernel_one hk hc hx, hasDerivAt_gammaRieszKernel_two hk hc hx⟩
+
+/-- The literal second difference of the actual order-two kernel has both sharp low- and high-frequency bounds, with constants depending only on k. -/
+theorem riesz_kernel_difference_source {k : ℝ} (hk : 2 ≤ k) :
+    ∃ C₀ C₂ : ℝ, 0 < C₀ ∧ 0 < C₂ ∧ ∀ c x h : ℝ, 0 < c → 0 < x → 0 ≤ h → h ≤ x →
+      let D : ℂ := ((x + 2 * h : ℝ) : ℂ) ^ 2 * gammaRieszKernel k 2 (c * (x + 2 * h)) -
+        2 * (((x + h : ℝ) : ℂ) ^ 2 * gammaRieszKernel k 2 (c * (x + h))) +
+          (x : ℂ) ^ 2 * gammaRieszKernel k 2 (c * x)
+      ‖D‖ ≤ C₀ * h ^ 2 * (c * x) ^ (3 / 8 : ℝ) ∧
+        ‖D‖ ≤ C₂ * c ^ (-(1 / 8 : ℝ)) * x ^ (15 / 8 : ℝ) := by
+  obtain ⟨C₀, hC₀, hl⟩ := exists_gammaRieszSecondDifference_low_bound hk
+  obtain ⟨C₂, hC₂, hh⟩ := exists_gammaRieszSecondDifference_high_bound hk
+  exact ⟨C₀, C₂, hC₀, hC₂, fun c x h hc hx h0 h1 => ⟨hl c x h hc hx h0 h1, hh c x h hc hx h0 h1⟩⟩
+
+
+/-- The actual cusp Rankin coefficients satisfy both sharp dual power bounds, with no mean or summability premise supplied by the consumer. -/
+theorem rankin_dual_power_sums_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hk : 0 < k) :
+    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, 1 ≤ N →
+      (∑ n ∈ Finset.Icc 1 N, (rankinConvolutionCoefficients f n).re * (n : ℝ) ^ (-(5 / 8 : ℝ))) ≤
+          C * (N : ℝ) ^ (3 / 8 : ℝ) ∧
+      Summable (fun n : ℕ => if N < n then
+        (rankinConvolutionCoefficients f n).re * (n : ℝ) ^ (-(9 / 8 : ℝ)) else 0) ∧
+      (∑' n : ℕ, if N < n then (rankinConvolutionCoefficients f n).re *
+        (n : ℝ) ^ (-(9 / 8 : ℝ)) else 0) ≤ C * (N : ℝ) ^ (-(1 / 8 : ℝ)) :=
+  exists_rankinConvolution_power_bounds f hk
 
 end Dubon2026.SemanticRegression
