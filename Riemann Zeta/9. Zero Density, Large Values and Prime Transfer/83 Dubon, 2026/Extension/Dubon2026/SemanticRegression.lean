@@ -4034,4 +4034,648 @@ theorem actual_adelic_full_unitary_source (N : ℕ) [NeZero N] {k : ℤ}
       ‖adelicProjectiveCyclicToL2 N f v‖ :=
   ⟨adelicLiftCyclic_inner N f v w h, adelicLiftCyclic_norm N f v h⟩
 
+/-- Every original full adelic cyclic orbit is continuous in its actual quotient L2 norm. -/
+theorem actual_adelic_strong_continuity_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule) :
+    Continuous (fun h : RationalAdelicGL2 => adelicProjectiveCyclicToL2 N f
+      ((adelicLiftCyclicRepresentation N k f).toRepresentation h v)) :=
+  adelicLiftCyclic_stronglyContinuous N f v
+
+/-- The original completed adelic action is strongly continuous and unitary on the genuine Hilbert completion. -/
+theorem actual_adelic_hilbert_action_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a : RationalAdelicGL2) (v w : AdelicCyclicHilbert f) :
+    Continuous (fun h : RationalAdelicGL2 => adelicCyclicHilbertRepresentation f h v) ∧
+    inner ℂ (adelicCyclicHilbertRepresentation f a v) (adelicCyclicHilbertRepresentation f a w) =
+      inner ℂ v w :=
+  ⟨adelicCyclicHilbertRepresentation_stronglyContinuous f v, adelicCyclicHilbertRepresentation_inner f a v w⟩
+
+/-- The original adelic cyclic vectors embed faithfully and densely in precisely their original L2 closure. -/
+theorem actual_adelic_hilbert_realization_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule) :
+    Function.Injective (adelicCyclicHilbertEmbedding f) ∧
+    DenseRange (adelicCyclicHilbertEmbedding f) ∧
+    Set.range (adelicCyclicHilbertToL2 f) = closure (Set.range (adelicProjectiveCyclicToL2 N f)) ∧
+    adelicCyclicHilbertToL2 f (adelicCyclicHilbertEmbedding f v) = adelicProjectiveCyclicToL2 N f v :=
+  ⟨adelicCyclicHilbertEmbedding_injective f, adelicCyclicHilbertEmbedding_dense f,
+    adelicCyclicHilbertToL2_range f, adelicCyclicHilbertToL2_embedding f v⟩
+
+/-- The genuine completed original generator is nonzero, retains its exact Petersson factor and generates a dense actual adelic cyclic span. -/
+theorem actual_adelic_hilbert_generator_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hf : f ≠ 0) :
+    adelicCyclicHilbertGenerator f ≠ 0 ∧
+    inner ℂ (adelicCyclicHilbertGenerator f) (adelicCyclicHilbertGenerator f) =
+      cuspPetersson f f * (finiteProjectiveGL2Measure (finiteProjectiveGL2Level N)).toReal ∧
+    closure ((Submodule.span ℂ (Set.range (fun a : RationalAdelicGL2 =>
+      adelicCyclicHilbertRepresentation f a (adelicCyclicHilbertGenerator f)))) :
+        Set (AdelicCyclicHilbert f)) = Set.univ :=
+  ⟨adelicCyclicHilbertGenerator_ne_zero f hf, adelicCyclicHilbertGenerator_inner f,
+    adelicCyclicHilbertGenerator_cyclic f⟩
+
+/-- Actual completed vectors have trivial full scalar action, and the original generator retains its genuine finite level invariance. -/
+theorem actual_adelic_hilbert_central_level_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (u : (NumberField.AdeleRing ℤ ℚ)ˣ) (v : AdelicCyclicHilbert f)
+    (a : finiteAdeleGL2Gamma0 N) :
+    adelicCyclicHilbertRepresentation f (Matrix.GeneralLinearGroup.scalar (Fin 2) u) v = v ∧
+    adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a.val)
+      (adelicCyclicHilbertGenerator f) = adelicCyclicHilbertGenerator f :=
+  ⟨adelicCyclicHilbert_scalar_action f u v, adelicCyclicHilbertGenerator_finite_level f a⟩
+
+/-- The actual completed original generator has precisely its original compact character. -/
+theorem actual_adelic_hilbert_compact_weight_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a : realCompactSubgroup) :
+    adelicCyclicHilbertRepresentation f (adelicRealCompactEmbedding a) (adelicCyclicHilbertGenerator f) =
+      (realCompactWeight k a : ℂ) • adelicCyclicHilbertGenerator f :=
+  adelicCyclicHilbertGenerator_compact_weight f a
+
+/-- The original canonical full adelic cusp function has the exact original real lift on every real right orbit. -/
+theorem actual_adelic_real_orbit_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : RationalAdelicGL2) (h : Matrix.SpecialLinearGroup (Fin 2) ℝ) :
+    canonicalAdelicGL2CuspLift N k f (g * adelicRealSL2Embedding h) =
+      realWeightLift k f (canonicalAdelicRealBase N g * h) :=
+  canonicalAdelicGL2CuspLift_real_orbit N k f g h
+
+/-- The original algebraic adelic generator satisfies the actual pointwise holomorphic infinitesimal identity at every adelic point. -/
+theorem actual_adelic_holomorphic_infinitesimal_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : RationalAdelicGL2) :
+    deriv (fun t : ℝ => ((adelicLiftCyclicRepresentation N k f).toRepresentation
+      (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicGenerator N f)).val g) 0 -
+      Complex.I * deriv (fun t : ℝ => ((adelicLiftCyclicRepresentation N k f).toRepresentation
+        (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicGenerator N f)).val g) 0 =
+          (k : ℂ) / 2 * (adelicCyclicGenerator N f).val g :=
+  adelicCyclicGenerator_holomorphic_infinitesimal N f g
+
+/-- The actual original cusp lift has its genuine mixed compact derivative and second-order right-curve eigenvalue. -/
+theorem actual_real_second_order_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : Matrix.SpecialLinearGroup (Fin 2) ℝ) :
+    realRightDerivative realUpperUnipotent
+      (realRightDerivative realRotationCurve (realWeightLift k f)) g =
+        (k : ℂ) * Complex.I * realRightDerivative realUpperUnipotent (realWeightLift k f) g ∧
+    realCasimirOperator (realWeightLift k f) g =
+      ((k : ℂ) / 2) * (1 - (k : ℂ) / 2) * realWeightLift k f g :=
+  ⟨realWeightLift_unipotent_rotation k (ModularFormClass.holo f) g,
+    realWeightLift_casimir k (ModularFormClass.holo f) g⟩
+
+/-- The compact curve is a genuine rotation fixing i and its original right derivative has the exact weight and sign. -/
+theorem actual_real_compact_derivative_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : Matrix.SpecialLinearGroup (Fin 2) ℝ) (t : ℝ) :
+    realRotationCurve t • UpperHalfPlane.I = UpperHalfPlane.I ∧
+    HasDerivAt (fun u : ℝ => realWeightLift k f (g * realRotationCurve u))
+      ((k : ℂ) * Complex.I * realWeightLift k f g) 0 :=
+  ⟨realRotationCurve_smul_I t, realWeightLift_right_rotation_hasDerivAt k f g⟩
+
+/-- The literal original adelic cyclic generator has the exact second-order differential eigenvalue at every actual adelic point. -/
+theorem actual_adelic_second_order_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : RationalAdelicGL2) :
+    adelicCasimirOperator (adelicCyclicGenerator N f).val g =
+      ((k : ℂ) / 2) * (1 - (k : ℂ) / 2) * (adelicCyclicGenerator N f).val g :=
+  adelicCyclicGenerator_casimir N f g
+
+open scoped ModularForm in
+/-- All genuine holomorphic jets of every original real slash transform obey one uniform Cauchy bound. -/
+theorem actual_original_holomorphic_jets_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ n : ℕ, ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ,
+      ‖iteratedDeriv n (((f : UpperHalfPlane → ℂ) ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) ∘
+        UpperHalfPlane.ofComplex) Complex.I‖ ≤ (n.factorial : ℝ) * C / (1 / 2 : ℝ) ^ n :=
+  realWeightLift_slash_jets_bounded f
+
+/-- The actual original full adelic cusp function has a common uniform increment bound along both genuine real one-parameter orbits. -/
+theorem actual_adelic_uniform_orbit_increments_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ g : RationalAdelicGL2, ∀ s t : ℝ,
+      ‖canonicalAdelicGL2CuspLift N k f (g * adelicRealSL2Embedding (realUpperUnipotent s)) -
+        canonicalAdelicGL2CuspLift N k f (g * adelicRealSL2Embedding (realUpperUnipotent t))‖ ≤
+          C * |s - t| ∧
+      ‖canonicalAdelicGL2CuspLift N k f (g * adelicRealSL2Embedding (realGeodesicCurve s)) -
+        canonicalAdelicGL2CuspLift N k f (g * adelicRealSL2Embedding (realGeodesicCurve t))‖ ≤
+          C * |s - t| :=
+  canonicalAdelicGL2CuspLift_real_orbits_lipschitz N f
+
+/-- The actual original cusp generator has both genuine arithmetic quotient L2 derivatives. -/
+theorem actual_adelic_generator_L2_derivatives_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    DifferentiableAt ℝ (fun t : ℝ => adelicProjectiveCyclicToL2 N f
+      ((adelicLiftCyclicRepresentation N k f).toRepresentation
+        (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicGenerator N f))) 0 ∧
+    DifferentiableAt ℝ (fun t : ℝ => adelicProjectiveCyclicToL2 N f
+      ((adelicLiftCyclicRepresentation N k f).toRepresentation
+        (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicGenerator N f))) 0 :=
+  ⟨adelicCyclicGenerator_unipotent_L2_differentiableAt N f,
+    adelicCyclicGenerator_geodesic_L2_differentiableAt N f⟩
+
+/-- The actual original completed generator has both genuine Hilbert norm derivatives. -/
+theorem actual_adelic_generator_Hilbert_derivatives_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    DifferentiableAt ℝ (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicHilbertGenerator f)) 0 ∧
+    DifferentiableAt ℝ (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicHilbertGenerator f)) 0 :=
+  ⟨adelicCyclicHilbertGenerator_unipotent_differentiableAt f,
+    adelicCyclicHilbertGenerator_geodesic_differentiableAt f⟩
+
+/-- The actual original completed generator's compact derivative has precisely its original weight. -/
+theorem actual_adelic_generator_compact_Hilbert_derivative_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    HasDerivAt (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realRotationCurve t)) (adelicCyclicHilbertGenerator f))
+      (((k : ℂ) * Complex.I) • adelicCyclicHilbertGenerator f) 0 :=
+  adelicCyclicHilbertGenerator_rotation_hasDerivAt f
+
+/-- The actual arithmetic quotient L2 derivatives retain the original holomorphic weight identity. -/
+theorem actual_adelic_L2_holomorphic_identity_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    deriv (fun t : ℝ => adelicProjectiveCyclicToL2 N f
+      ((adelicLiftCyclicRepresentation N k f).toRepresentation
+        (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicGenerator N f))) 0 -
+    Complex.I • deriv (fun t : ℝ => adelicProjectiveCyclicToL2 N f
+      ((adelicLiftCyclicRepresentation N k f).toRepresentation
+        (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicGenerator N f))) 0 =
+    ((k : ℂ) / 2) • adelicProjectiveCyclicToL2 N f (adelicCyclicGenerator N f) :=
+  adelicCyclicGenerator_L2_holomorphic_identity N f
+
+/-- The actual original completed generator satisfies its holomorphic identity between genuine Hilbert derivatives. -/
+theorem actual_adelic_Hilbert_holomorphic_identity_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicHilbertGenerator f)) 0 -
+    Complex.I • deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicHilbertGenerator f)) 0 =
+    ((k : ℂ) / 2) • adelicCyclicHilbertGenerator f :=
+  adelicCyclicHilbertGenerator_holomorphic_identity f
+
+open scoped ContDiff in
+/-- The actual original completed generator is smooth to every order along its genuine unipotent subgroup. -/
+theorem actual_adelic_Hilbert_unipotent_smoothness_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ContDiff ℝ ∞ (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicHilbertGenerator f)) :=
+  adelicCyclicHilbertGenerator_unipotent_contDiff f
+
+/-- Every genuine original geodesic derivative has a proved uniform bound over all full adelic points and all real parameters. -/
+theorem actual_adelic_geodesic_jets_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ∃ B : ℕ → ℝ, (∀ n, 0 ≤ B n) ∧ ∀ n : ℕ, ∀ g : RationalAdelicGL2, ∀ t : ℝ,
+      ‖iteratedDeriv n (fun u : ℝ => canonicalAdelicGL2CuspLift N k f
+        (g * adelicRealSL2Embedding (realGeodesicCurve u))) t‖ ≤ B n :=
+  canonicalAdelicGL2CuspLift_geodesic_jets_bounded N f
+
+open scoped ContDiff in
+/-- The actual original completed generator is smooth along each of its three genuine real one-parameter directions. -/
+theorem actual_adelic_Hilbert_three_orbits_smooth_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ContDiff ℝ ∞ (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicHilbertGenerator f)) ∧
+    ContDiff ℝ ∞ (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicHilbertGenerator f)) ∧
+    ContDiff ℝ ∞ (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (realRotationCurve t)) (adelicCyclicHilbertGenerator f)) :=
+  ⟨adelicCyclicHilbertGenerator_unipotent_contDiff f,
+    adelicCyclicHilbertGenerator_geodesic_contDiff f,
+    adelicCyclicHilbertGenerator_rotation_contDiff f⟩
+
+
+/-- The original quotient holomorphic vector has exactly the original slash slice as its representative. -/
+theorem actual_adelic_holomorphic_L2_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    {z : ℂ} (hz : ‖z‖ < (1 / 2 : ℝ)) :
+    DifferentiableOn ℂ (adelicHolomorphicL2Curve N f) (Metric.ball 0 (1 / 2 : ℝ)) ∧
+    ⇑(adelicHolomorphicL2Curve N f z) =ᵐ[
+      adelicProjectiveMeasure.restrict (adelicProjectiveGamma0Domain N)]
+      adelicProjectiveHolomorphicSlice N f z :=
+  ⟨adelicHolomorphicL2Curve_differentiableOn N f, adelicHolomorphicL2Curve_ae_slice N f hz⟩
+
+open scoped ContDiff in
+/-- The original completed generator has genuine joint smoothness in all three actual Iwasawa parameters. -/
+theorem actual_adelic_Hilbert_iwasawa_joint_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    ContDiffAt ℝ ∞ (fun w : (ℝ × ℝ) × ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding
+        (realAffineMatrix w.1.1 (Real.exp_pos w.1.2) * realRotationCurve w.2))
+      (adelicCyclicHilbertGenerator f)) 0 :=
+  adelicCyclicHilbertGenerator_iwasawa_contDiffAt_zero f
+
+open scoped ContDiff in
+/-- Every smooth family of actual determinant-one real matrix entries gives a smooth orbit of the original completed generator. -/
+theorem actual_adelic_Hilbert_real_families_source
+    {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (h : E → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hh : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun w => h w i j)) :
+    ContDiff ℝ ∞ (fun w => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (h w)) (adelicCyclicHilbertGenerator f)) :=
+  adelicCyclicHilbertGenerator_real_contDiff f h hh
+
+
+/-- The actual original Hilbert jets have precisely their original pointwise projective representatives. -/
+theorem actual_adelic_Hilbert_jets_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (n : ℕ) (t : ℝ) :
+    (⇑(adelicCyclicHilbertToL2 f (iteratedDeriv n (fun u : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realUpperUnipotent u)) (adelicCyclicHilbertGenerator f)) t)) =ᵐ[
+      adelicProjectiveMeasure.restrict (adelicProjectiveGamma0Domain N)]
+      fun p => iteratedDeriv n (fun u : ℝ => adelicProjectiveRealOrbit N f realUpperUnipotent u p) t) ∧
+    (⇑(adelicCyclicHilbertToL2 f (iteratedDeriv n (fun u : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realGeodesicCurve u)) (adelicCyclicHilbertGenerator f)) t)) =ᵐ[
+      adelicProjectiveMeasure.restrict (adelicProjectiveGamma0Domain N)]
+      fun p => iteratedDeriv n (fun u : ℝ => adelicProjectiveRealOrbit N f realGeodesicCurve u p) t) := by
+  constructor
+  · rw [adelicCyclicHilbertGenerator_unipotent_jet_toL2]
+    exact adelicCyclicGenerator_unipotent_L2_jets_ae N f n t
+  · rw [adelicCyclicHilbertGenerator_geodesic_jet_toL2]
+    exact adelicCyclicGenerator_geodesic_L2_jets_ae N f n t
+
+/-- The original completed representation has the exact second-order eigenvalue for literal successive Hilbert orbit derivatives. -/
+theorem actual_adelic_Hilbert_second_order_operator_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    -(deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realGeodesicCurve t)) (deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicHilbertGenerator f)) 0)) 0) +
+      (deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realGeodesicCurve t)) (adelicCyclicHilbertGenerator f)) 0) -
+      (deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realUpperUnipotent t)) (deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realUpperUnipotent t)) (adelicCyclicHilbertGenerator f)) 0)) 0) +
+      (deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realUpperUnipotent t)) (deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realRotationCurve t)) (adelicCyclicHilbertGenerator f)) 0)) 0) =
+      (((k : ℂ) / 2) * (1 - (k : ℂ) / 2)) • adelicCyclicHilbertGenerator f :=
+  adelicCyclicHilbertGenerator_casimir f
+
+
+open scoped ContDiff in
+/-- The genuine smooth-space infinitesimal operator retains the literal original Hilbert orbit derivative. -/
+theorem actual_adelic_smooth_infinitesimal_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (c : ℝ → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hc : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun t => c t i j)) (v : adelicRealSmoothSubmodule f) :
+    (adelicSmoothInfinitesimal f c hc v).val = deriv (fun t : ℝ =>
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (c t)) v.val) 0 :=
+  adelicSmoothInfinitesimal_apply f c hc v
+
+/-- The actual original generator in the genuine smooth subspace has the exact original second-order eigenvalue. -/
+theorem actual_adelic_smooth_generator_operator_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (adelicSmoothGenerator f).val = adelicCyclicHilbertGenerator f ∧
+    adelicSmoothCasimirOperator f (adelicSmoothGenerator f) =
+      (((k : ℂ) / 2) * (1 - (k : ℂ) / 2)) • adelicSmoothGenerator f :=
+  ⟨rfl, adelicSmoothGenerator_casimir f⟩
+
+
+/-- All three original smooth-space sl2 brackets are proved for the actual adelic cusp representation. -/
+theorem actual_adelic_smooth_sl2_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) * (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) = adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff ∧
+    (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) * (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) = -(adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) ∧
+    (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) = (2 : ℂ) • (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) :=
+  ⟨adelicSmoothInfinitesimal_geodesic_upper f, adelicSmoothInfinitesimal_geodesic_lower f,
+    adelicSmoothInfinitesimal_upper_lower f⟩
+
+/-- The original compact infinitesimal is exactly upper minus lower on the actual smooth space. -/
+theorem actual_adelic_smooth_compact_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    adelicSmoothInfinitesimal f realRotationCurve realRotationCurve_entries_contDiff = (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) :=
+  adelicSmoothInfinitesimal_compact f
+
+/-- The literal original second-order operator commutes with all three actual infinitesimals and retains its original generator eigenvalue. -/
+theorem actual_adelic_smooth_casimir_commutation_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    adelicSmoothCasimirOperator f * (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) = (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) * adelicSmoothCasimirOperator f ∧
+    adelicSmoothCasimirOperator f * (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) = (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) * adelicSmoothCasimirOperator f ∧
+    adelicSmoothCasimirOperator f * (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) = (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) * adelicSmoothCasimirOperator f ∧
+    adelicSmoothCasimirOperator f (adelicSmoothGenerator f) =
+      (((k : ℂ) / 2) * (1 - (k : ℂ) / 2)) • adelicSmoothGenerator f :=
+  ⟨(adelicSmoothCasimirOperator_commutes f).1.eq, (adelicSmoothCasimirOperator_commutes f).2.1.eq,
+    (adelicSmoothCasimirOperator_commutes f).2.2.eq, adelicSmoothGenerator_casimir f⟩
+
+
+open scoped ContDiff in
+/-- The actual matrix Lie algebra action on every smooth real curve is its literal original Hilbert norm derivative. -/
+theorem actual_adelic_matrix_Lie_action_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (c : ℝ → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hc : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun t => c t i j)) (hc0 : c 0 = 1)
+    (v : adelicRealSmoothSubmodule f) :
+    (adelicComplexSl2Action f (complexSl2OfRealTangent
+      (deriv (fun t => c t 0 0) 0) (deriv (fun t => c t 1 0) 0) (deriv (fun t => c t 0 1) 0)) v).val =
+      deriv (fun t : ℝ => adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (c t)) v.val) 0 := by
+  rw [adelicComplexSl2Action_curve f c hc hc0]
+  exact adelicSmoothInfinitesimal_apply f c hc v
+
+/-- The literal central element of the genuine full enveloping algebra acts by the exact original second-order Hilbert operator. -/
+theorem actual_adelic_enveloping_casimir_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    complexSl2EnvelopingCasimir ∈ Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2) ∧
+    adelicEnvelopingAction f complexSl2EnvelopingCasimir = adelicSmoothCasimirOperator f :=
+  ⟨complexSl2EnvelopingCasimir_mem_center, adelicEnvelopingAction_casimir f⟩
+
+/-- Every original enveloping-algebra translate of the genuine cusp generator has the precise central Casimir eigenvalue. -/
+theorem actual_adelic_enveloping_casimir_orbit_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (z : UniversalEnvelopingAlgebra ℂ ComplexSl2) :
+    adelicEnvelopingAction f complexSl2EnvelopingCasimir
+      (adelicEnvelopingAction f z (adelicSmoothGenerator f)) =
+      (((k : ℂ) / 2) * (1 - (k : ℂ) / 2)) •
+        adelicEnvelopingAction f z (adelicSmoothGenerator f) := by
+  exact (congrArg (fun T : Module.End ℂ (adelicRealSmoothSubmodule f) =>
+    T (adelicEnvelopingAction f z (adelicSmoothGenerator f)))
+    (adelicEnvelopingAction_casimir f)).trans (adelicEnvelopingAction_casimir_orbit f z)
+
+
+/-- The original raising derivatives are independent and have the exact original compact weights and lowering coefficients. -/
+theorem actual_adelic_raising_ladder_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) :
+    LinearIndependent ℂ (adelicRaisingJet f) ∧
+    (∀ n : ℕ, ⁅compactSl2H, adelicRaisingJet f n⁆ = ((k : ℂ) + 2 * n) • adelicRaisingJet f n) ∧
+    (∀ n : ℕ, ⁅compactSl2F, adelicRaisingJet f (n + 1)⁆ =
+      (((n : ℂ) + 1) * (-(k : ℂ) - n)) • adelicRaisingJet f n) :=
+  ⟨adelicRaisingJet_linearIndependent f hf hk, adelicRaisingJet_weight f hf,
+    adelicRaisingJet_lower f hf⟩
+
+/-- The literal original enveloping cyclic span is the irreducible original lowest-weight Lie module. -/
+theorem actual_adelic_lowest_weight_irreducible_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) :
+    adelicRaisingSpan f = Submodule.span ℂ (Set.range (fun z : UniversalEnvelopingAlgebra ℂ ComplexSl2 =>
+      adelicEnvelopingAction f z (adelicSmoothGenerator f))) ∧
+    LieModule.IsIrreducible ℂ ComplexSl2 (adelicRaisingLieSubmodule f hf) :=
+  ⟨adelicRaisingSpan_eq_enveloping f hf, adelicRaisingLieSubmodule_irreducible f hf hk⟩
+
+/-- The full genuine center acts through the actual infinitesimal character on every original cyclic vector. -/
+theorem actual_adelic_infinitesimal_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2))
+    (v : adelicRealSmoothSubmodule f) (hv : v ∈ adelicRaisingSpan f) :
+    adelicEnvelopingAction f z.val v = adelicInfinitesimalCharacter f hf z • v :=
+  adelicInfinitesimalCharacter_span f hf z v hv
+
+/-- The genuine infinitesimal character has the exact original normalized Casimir value. -/
+theorem actual_adelic_infinitesimal_character_casimir_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) :
+    adelicInfinitesimalCharacter f hf
+      ⟨complexSl2EnvelopingCasimir, complexSl2EnvelopingCasimir_mem_center⟩ =
+      ((k : ℂ) / 2) * (1 - (k : ℂ) / 2) :=
+  adelicInfinitesimalCharacter_casimir f hf
+
+
+open scoped ContDiff in
+/-- Every original smooth real-curve derivative has the actual skew identity in the original Hilbert inner product. -/
+theorem actual_adelic_unitary_infinitesimal_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (c : ℝ → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hc : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun t => c t i j)) (hc0 : c 0 = 1)
+    (v w : adelicRealSmoothSubmodule f) :
+    inner ℂ (adelicSmoothInfinitesimal f c hc v).val w.val +
+      inner ℂ v.val (adelicSmoothInfinitesimal f c hc w).val = 0 :=
+  adelicSmoothInfinitesimal_skew f c hc hc0 v w
+
+/-- Every original raising derivative has its exact original Hilbert norm, including the original generator normalization. -/
+theorem actual_adelic_raising_norm_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) :
+    ‖(adelicRaisingJet f n).val‖ ^ 2 =
+      (n.factorial : ℝ) * (∏ j ∈ Finset.range n, ((k : ℝ) + j)) *
+        ‖adelicCyclicHilbertGenerator f‖ ^ 2 :=
+  adelicRaisingJet_norm_sq f hf n
+
+/-- The genuine Hilbert basis of the original raising closure consists exactly of the original derivatives normalized in their original Hilbert norm. -/
+theorem actual_adelic_raising_Hilbert_basis_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (n : ℕ) :
+    (adelicRaisingHilbertBasis f hf hk n).val =
+      ((‖(adelicRaisingJet f n).val‖⁻¹ : ℝ) : ℂ) • (adelicRaisingJet f n).val :=
+  adelicRaisingHilbertBasis_apply f hf hk n
+
+/-- Every genuine smooth compact-weight vector in the original closed span lies on its exact original raising line. -/
+theorem actual_adelic_closed_weight_line_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (n : ℕ) (v : adelicRealSmoothSubmodule f)
+    (hv : v.val ∈ adelicRaisingClosedSpan f)
+    (hH : adelicComplexSl2Action f compactSl2H v = ((k : ℂ) + 2 * n) • v) :
+    ∃ a : ℂ, v = a • adelicRaisingJet f n :=
+  adelicRaisingClosedSpan_weight_line f hf hk n v hv hH
+
+
+/-- Original bounded real intertwiners act by one scalar on the actual raising closure when their original generator image belongs to it. -/
+theorem actual_adelic_closed_intertwiner_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (T : AdelicCyclicHilbert f →L[ℂ] AdelicCyclicHilbert f)
+    (hT : ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ, ∀ v,
+      T (adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) v) =
+        adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) (T v))
+    (hv : T (adelicCyclicHilbertGenerator f) ∈ adelicRaisingClosedSpan f) :
+    ∃ a : ℂ, ∀ v ∈ adelicRaisingClosedSpan f, T v = a • v :=
+  adelicIntertwiner_closedSpan_scalar f hf hk T hT hv
+
+open scoped ContDiff in
+/-- Every original all-order Hilbert orbit jet is the power of its original smooth infinitesimal. -/
+theorem actual_adelic_all_order_orbit_jet_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (c : ℝ → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hc : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun t => c t i j))
+    (hadd : ∀ s t, c (s + t) = c s * c t) (hc0 : c 0 = 1)
+    (v : adelicRealSmoothSubmodule f) (n : ℕ) :
+    iteratedDeriv n (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (c t)) v.val) 0 =
+        (((adelicSmoothInfinitesimal f c hc) ^ n) v).val :=
+  adelicSmoothInfinitesimal_iteratedDeriv_zero f c hc hadd hc0 v n
+
+/-- The actual normalized Hilbert orbit is holomorphic on the full upper half-plane and belongs to its original raising closure there. -/
+theorem actual_adelic_global_holomorphic_orbit_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) :
+    DifferentiableOn ℂ (adelicNormalizedAffineHilbertOrbit f) UpperHalfPlane.upperHalfPlaneSet ∧
+      ∀ z : ℂ, 0 < z.im → adelicNormalizedAffineHilbertOrbit f z ∈ adelicRaisingClosedSpan f :=
+  ⟨adelicNormalizedAffineHilbertOrbit_differentiableOn f,
+    fun _ hz => adelicNormalizedAffineHilbertOrbit_mem_closedSpan f hf hz⟩
+
+/-- The actual raising closure is exactly the original nonzero real cyclic Hilbert subspace and is invariant under the original real action. -/
+theorem actual_adelic_real_cyclic_closure_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) :
+    adelicRaisingClosedSpan f = adelicRealCyclicClosedSpan f ∧
+      adelicRealCyclicClosedSpan f ≠ ⊥ ∧
+      ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ, ∀ v ∈ adelicRaisingClosedSpan f,
+        adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) v ∈ adelicRaisingClosedSpan f :=
+  ⟨adelicRaisingClosedSpan_eq_realCyclicClosedSpan f hf, adelicRealCyclicClosedSpan_ne_bot f hf,
+    adelicRaisingClosedSpan_real_invariant f hf⟩
+
+/-- The genuine original real cyclic Hilbert representation has no nonzero proper closed invariant subspace. -/
+theorem actual_adelic_real_cyclic_irreducible_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (p : Submodule ℂ (AdelicCyclicHilbert f))
+    (hp : IsClosed (p : Set (AdelicCyclicHilbert f))) (hle : p ≤ adelicRealCyclicClosedSpan f)
+    (hinv : ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ, ∀ v ∈ p,
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) v ∈ p) :
+    p = ⊥ ∨ p = adelicRealCyclicClosedSpan f :=
+  adelicRealCyclicClosedSpan_irreducible f hf hk p hp hle hinv
+
+
+/-- The original universal central polynomial has its proved reflection identity at every complex weight. -/
+theorem actual_verma_full_center_reflection_source
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2)) (μ : ℂ) :
+    Polynomial.aeval μ (vermaUniversalCentralPolynomial z) = vermaPolynomialCentralValue μ z ∧
+      vermaPolynomialCentralValue μ z = vermaPolynomialCentralValue (-μ - 2) z :=
+  ⟨vermaUniversalCentralPolynomial_aeval μ z, vermaPolynomialCentralValue_reflection μ z⟩
+
+/-- Original polynomial monomials are the literal original cusp raising jets and the entire original enveloping action intertwines. -/
+theorem actual_adelic_verma_intertwiner_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (z : UniversalEnvelopingAlgebra ℂ ComplexSl2) (p : Polynomial ℂ) :
+    adelicVermaMap f (Polynomial.X ^ n) = adelicRaisingJet f n ∧
+      adelicVermaMap f (vermaPolynomialEnvelopingAction (-(k : ℂ)) z p) =
+        adelicEnvelopingAction f z (adelicVermaMap f p) :=
+  ⟨adelicVermaMap_X_pow f n, adelicVermaMap_enveloping f hf z p⟩
+
+/-- Every element of the genuine original cusp center character has the reflected polynomial parameter k-2. -/
+theorem actual_adelic_reflected_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2)) :
+    adelicInfinitesimalCharacter f hf z =
+      Polynomial.aeval ((k : ℂ) - 2) (vermaUniversalCentralPolynomial z) :=
+  adelicInfinitesimalCharacter_polynomial f hf z
+
+/-- The genuine finite-dimensional homogeneous representation retains actual matrix substitution and a nonzero original compact generator. -/
+theorem actual_homogeneous_matrix_representation_source (n : ℕ) (g : Matrix (Fin 2) (Fin 2) ℂ)
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) :
+    Module.Finite ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) ∧
+      (homogeneousMatrixRepresentation n g p).val = matrixPolynomialAction g p.val ∧
+      homogeneousCompactGenerator n ≠ 0 :=
+  ⟨homogeneousPolynomial_finite n, homogeneousMatrixAction_apply n g p,
+    homogeneousCompactGenerator_ne_zero n⟩
+
+/-- The original cusp character acts exactly on the actual degree-(k-2) algebraic lowest vector for every genuine central element. -/
+theorem actual_adelic_homogeneous_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (hk : k = (n : ℤ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2)) :
+    homogeneousEnvelopingAction n z.val (homogeneousCompactGenerator n) =
+      adelicInfinitesimalCharacter f hf z • homogeneousCompactGenerator n :=
+  adelicInfinitesimalCharacter_homogeneous_generator f hf n hk z
+
+
+/-- The exact original homogeneous degree-n representation has dimension n+1 and its literal raising vectors form a basis. -/
+theorem actual_homogeneous_raising_basis_source (n : ℕ) (r : Fin (n + 1)) :
+    Module.finrank ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) = n + 1 ∧
+      homogeneousRaisingBasis n r = homogeneousRaisingJet n r.val :=
+  ⟨homogeneousBinary_finrank n, homogeneousRaisingBasis_apply n r⟩
+
+/-- Every original homogeneous vector has the full original cusp central character when its degree is exactly k-2. -/
+theorem actual_adelic_full_homogeneous_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (hk : k = (n : ℤ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2))
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) :
+    homogeneousEnvelopingAction n z.val p = adelicInfinitesimalCharacter f hf z • p :=
+  adelicInfinitesimalCharacter_homogeneous_scalar f hf n hk z p
+
+/-- The actual polynomial matrix curve and its genuine pointwise derivative retain the original matrix substitution and derivation. -/
+theorem actual_polynomial_matrix_tangent_source (a : Matrix (Fin 2) (Fin 2) ℂ)
+    (p : MvPolynomial (Fin 2) ℂ) (x : Fin 2 → ℂ) (t : ℂ) :
+    Polynomial.eval (MvPolynomial.C t) (matrixPolynomialCurve a p) =
+      matrixPolynomialAction (1 + t • a) p ∧
+    HasDerivAt (fun t : ℂ => MvPolynomial.eval x (matrixPolynomialAction (1 + t • a) p))
+      (MvPolynomial.eval x (matrixPolynomialDerivation a p)) 0 :=
+  ⟨matrixPolynomialCurve_eval a t p, matrixPolynomialOrbit_hasDerivAt a p x⟩
+
+/-- The literal determinant twist of the genuine even-degree homogeneous representation has exactly trivial scalar-matrix action. -/
+theorem actual_homogeneous_determinant_twist_source (m : ℕ) (u : ℂˣ)
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    homogeneousDeterminantTwist (2 * m) (-(m : ℤ))
+      (Matrix.GeneralLinearGroup.scalar (Fin 2) u) p = p :=
+  homogeneousDeterminantTwist_trivial_center m u p
+
+/-- The original full GL₂ enveloping center projects into the actual SL₂ center through the genuine surjective trace map. -/
+theorem actual_traceless_enveloping_center_source
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ))) :
+    Function.Surjective tracelessEnvelopingProjection ∧
+      tracelessEnvelopingProjection z.val ∈ Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2) :=
+  ⟨tracelessEnvelopingProjection_surjective, tracelessEnvelopingProjection_mem_center z⟩
+
+
+/-- The genuine twisted homogeneous group action has its exact original finite-dimensional norm derivative. -/
+theorem actual_homogeneous_gl2_norm_derivative_source (m : ℕ)
+    (a : Matrix (Fin 2) (Fin 2) ℂ) (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    HasDerivAt (fun t : ℂ => homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) (complexIdentityGLCurve a t) p)
+      (homogeneousNormalizedGL2Action m a p) 0 :=
+  homogeneousNormalizedGL2Action_hasDerivAt m a p
+
+/-- The original positive real general-linear action equals its genuine normalized special-linear action on every completed vector. -/
+theorem actual_adelic_positive_normalization_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : GL(2, ℝ)⁺) (v : AdelicCyclicHilbert f) :
+    adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding g.val) v =
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realPositiveNormalize g)) v :=
+  adelicCyclicHilbert_positive_normalize f g v
+
+/-- The original full real general-linear curve has its actual original Hilbert norm derivative on every genuine smooth vector. -/
+theorem actual_adelic_gl2_norm_derivative_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : adelicRealSmoothSubmodule f) (c : ℝ → Matrix.GeneralLinearGroup (Fin 2) ℝ)
+    (hc : c 0 = 1) (a : Matrix (Fin 2) (Fin 2) ℝ)
+    (hd : ∀ i j, HasDerivAt (fun t => (c t).val i j) (a i j) 0) :
+    HasDerivAt (fun t => adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding (c t)) v.val)
+      (adelicComplexGL2Action f (a.map Complex.ofReal) v).val 0 :=
+  adelicComplexGL2Action_hasDerivAt f v c hc a hd
+
+/-- The entire original full GL₂ enveloping center has its genuine scalar action on the actual cusp cyclic Lie module. -/
+theorem actual_adelic_gl2_central_action_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (v : adelicRealSmoothSubmodule f) (hv : v ∈ adelicRaisingSpan f) :
+    adelicGL2EnvelopingAction f z.val v = adelicGL2InfinitesimalCharacter f hf z • v :=
+  adelicGL2InfinitesimalCharacter_span f hf z v hv
+
+/-- The full original cusp GL₂ infinitesimal character equals the actual full central scalar on every vector of its precise degree-(k-2) determinant twist. -/
+theorem actual_adelic_full_gl2_algebraic_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (m : ℕ) (hk : k = (2 * m : ℕ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
+  adelicGL2InfinitesimalCharacter_algebraic f hf m hk z p
+
+
+/-- The actual rotation subgroup exhausts the original compact stabilizer. -/
+theorem actual_adelic_compact_stabilizer_source (g : realCompactSubgroup) :
+    ∃ t : ℝ, g.val = realRotationCurve t := realCompactSubgroup_eq_rotation g
+
+/-- Every literal raising derivative has the exact original rotation character. -/
+theorem actual_adelic_raising_rotation_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (t : ℝ) :
+    adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realRotationCurve t))
+      (adelicRaisingJet f n).val =
+        Complex.exp ((t : ℂ) * (Complex.I * ((k : ℂ) + 2 * n))) • (adelicRaisingJet f n).val :=
+  adelicRaisingJet_rotation f hf n t
+
+/-- In the genuine original real cyclic Hilbert space, K-finiteness is exactly finite original raising expansion. -/
+theorem actual_real_kfinite_identification_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRealCyclicClosedSpan f) :
+    FiniteDimensional ℂ (adelicCompactOrbitSpan f v) ↔
+      v ∈ Submodule.span ℂ (Set.range (fun n : ℕ => (adelicRaisingJet f n).val)) :=
+  adelicRealCyclic_KFinite_iff f hf hk v hv
+
+/-- Every original real K-finite Hilbert vector is genuinely smooth, without an added smoothness premise. -/
+theorem actual_real_kfinite_smooth_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRealCyclicClosedSpan f)
+    [FiniteDimensional ℂ (adelicCompactOrbitSpan f v)] : v ∈ adelicRealSmoothSubmodule f :=
+  adelicRealKFinite_mem_smooth f hf hk v hv
+
+/-- The entire actual GL₂ center has the same original scalar on every real K-finite cusp vector and every vector of the genuine algebraic determinant twist. -/
+theorem actual_real_kfinite_full_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (m : ℕ) (hk : k = (2 * m : ℕ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (v : adelicRealSmoothSubmodule f) (hv : v.val ∈ adelicRealCyclicClosedSpan f)
+    [FiniteDimensional ℂ (adelicCompactOrbitSpan f v.val)]
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    adelicGL2EnvelopingAction f z.val v = adelicGL2InfinitesimalCharacter f hf z • v ∧
+      homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
+  adelicRealKFinite_algebraic_character f hf m hk z v hv p
+
 end Dubon2026.SemanticRegression

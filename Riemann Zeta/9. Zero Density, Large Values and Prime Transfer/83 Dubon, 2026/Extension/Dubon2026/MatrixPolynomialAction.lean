@@ -1,0 +1,87 @@
+import Mathlib.RingTheory.MvPolynomial.Homogeneous
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
+import Mathlib.RepresentationTheory.Basic
+import Mathlib.Analysis.Complex.Basic
+
+/-! # The actual matrix substitution action on homogeneous polynomials -/
+
+namespace Dubon2026
+
+noncomputable section
+open MvPolynomial
+
+variable {ι : Type*} [Fintype ι]
+
+/-- The genuine matrix action on each polynomial generator is its original column linear form. -/
+def matrixPolynomialAction (g : Matrix ι ι ℂ) : MvPolynomial ι ℂ →ₐ[ℂ] MvPolynomial ι ℂ :=
+  aeval (fun i => ∑ j, g j i • X j)
+
+/-- Substitution sends each original variable to the exact column linear form. -/
+theorem matrixPolynomialAction_X (g : Matrix ι ι ℂ) (i : ι) :
+    matrixPolynomialAction g (X i) = ∑ j, g j i • X j := aeval_X _ i
+
+/-- The actual identity matrix induces the identity polynomial substitution. -/
+theorem matrixPolynomialAction_one [DecidableEq ι] :
+    matrixPolynomialAction (1 : Matrix ι ι ℂ) = AlgHom.id ℂ (MvPolynomial ι ℂ) := by
+  apply MvPolynomial.algHom_ext
+  intro i
+  simp [matrixPolynomialAction_X, Matrix.one_apply]
+
+/-- Matrix multiplication agrees with composition of the genuine polynomial substitutions. -/
+theorem matrixPolynomialAction_mul (g h : Matrix ι ι ℂ) :
+    matrixPolynomialAction (g * h) = (matrixPolynomialAction g).comp (matrixPolynomialAction h) := by
+  apply MvPolynomial.algHom_ext
+  intro i
+  simp only [matrixPolynomialAction_X, AlgHom.comp_apply, map_sum, map_smul,
+    Matrix.mul_apply, Finset.sum_smul, Finset.smul_sum, smul_smul]
+  rw [Finset.sum_comm]
+  apply Finset.sum_congr rfl
+  intro j _
+  apply Finset.sum_congr rfl
+  intro l _
+  rw [mul_comm]
+
+/-- Every genuine linear matrix substitution preserves the original homogeneous degree. -/
+theorem matrixPolynomialAction_homogeneous (g : Matrix ι ι ℂ) {n : ℕ}
+    {p : MvPolynomial ι ℂ} (hp : p.IsHomogeneous n) : (matrixPolynomialAction g p).IsHomogeneous n := by
+  have hg : ∀ i, (∑ j, g j i • (X j : MvPolynomial ι ℂ)).IsHomogeneous 1 := by
+    intro i
+    apply IsHomogeneous.sum
+    intro j _
+    exact (homogeneousSubmodule ι ℂ 1).smul_mem (g j i) (isHomogeneous_X ℂ j)
+  have h := hp.aeval (fun i => ∑ j, g j i • X j) hg
+  simpa only [one_mul] using h
+
+/-- Restrict actual matrix substitution to the genuine space of homogeneous degree n polynomials. -/
+def homogeneousMatrixAction (n : ℕ) (g : Matrix ι ι ℂ) :
+    Module.End ℂ (homogeneousSubmodule ι ℂ n) :=
+  (matrixPolynomialAction g).toLinearMap.restrict
+    (fun _ hp => matrixPolynomialAction_homogeneous g hp)
+
+/-- The restricted action retains the exact original polynomial substitution. -/
+theorem homogeneousMatrixAction_apply (n : ℕ) (g : Matrix ι ι ℂ)
+    (p : homogeneousSubmodule ι ℂ n) :
+    (homogeneousMatrixAction n g p).val = matrixPolynomialAction g p.val := rfl
+
+/-- All original matrices act on the actual homogeneous space as a genuine monoid representation. -/
+def homogeneousMatrixRepresentation [DecidableEq ι] (n : ℕ) :
+    Representation ℂ (Matrix ι ι ℂ) (homogeneousSubmodule ι ℂ n) where
+  toFun := homogeneousMatrixAction n
+  map_one' := by
+    apply LinearMap.ext
+    intro p
+    apply Subtype.ext
+    exact AlgHom.congr_fun matrixPolynomialAction_one p.val
+  map_mul' g h := by
+    apply LinearMap.ext
+    intro p
+    apply Subtype.ext
+    exact AlgHom.congr_fun (matrixPolynomialAction_mul g h) p.val
+
+/-- The genuine complex general linear group acts by the original homogeneous polynomial substitution. -/
+def homogeneousGLRepresentation [DecidableEq ι] (n : ℕ) :
+    Representation ℂ (Matrix.GeneralLinearGroup ι ℂ) (homogeneousSubmodule ι ℂ n) :=
+  (homogeneousMatrixRepresentation n).comp (Units.coeHom (Matrix ι ι ℂ))
+
+end
+end Dubon2026

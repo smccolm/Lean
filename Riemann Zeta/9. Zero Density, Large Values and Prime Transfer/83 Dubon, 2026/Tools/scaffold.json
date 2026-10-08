@@ -204,7 +204,51 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicAffineHolomorphicFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicClosedInvariantSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicClosedSpanSchur.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicClosedWeightLines.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCompactFiniteConverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCompactWeightModule.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicComplexSl2Action.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicCyclicFiniteSmooth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicHilbertCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicHilbertGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicHilbertL2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicHilbertRange.lean",
       "role": "Extension"
     },
     {
@@ -212,11 +256,195 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicCyclicParameterContinuity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicCyclicRepresentation.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicCyclicStrongContinuity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicCyclicUnitary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEnvelopingCasimir.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFirstDerivativeBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullGL2Derivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGL2AlgebraicCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGL2Enveloping.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGL2NormDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGeneratorDerivativeRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGeneratorGeodesicSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGeneratorL2Derivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGeneratorPetersson.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGeneratorUnipotentSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGeodesicJetBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGlobalHolomorphicOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGlobalRaisingClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertAffineSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertCasimir.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertCentralLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertCompactDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertCompactWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertGeneratorDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertGeodesicSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertHolomorphicIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertIwasawaSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertRealSmoothFamilies.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertSecondOrderIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHilbertUnipotentSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHolomorphicL2Curve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHolomorphicRaisingSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHomogeneousCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHomogeneousScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicInfinitesimalCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicKFiniteGL2Character.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicKFiniteIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicL2DerivativeRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicL2HolomorphicIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicL2SecondOrderIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLiftCasimir.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLiftInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLowestWeightIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLowestWeightJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicNormalizedHolomorphicOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicOrbitDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicOrbitJetIdentification.lean",
       "role": "Extension"
     },
     {
@@ -244,6 +472,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicProjectiveHolomorphicSlice.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicProjectiveL2Embedding.lean",
       "role": "Extension"
     },
@@ -252,7 +484,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicProjectiveRealDerivative.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicProjectiveReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveRepresentative.lean",
       "role": "Extension"
     },
     {
@@ -260,7 +500,55 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicRaisingCompactFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRaisingEnvelopingSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRaisingHilbertBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRaisingHilbertNorms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRaisingLieModule.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRaisingRotation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealCyclicClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealCyclicIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealGL2Normalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealHolomorphicFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealOrbitCoordinates.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicRealScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealSmoothSubmodule.lean",
       "role": "Extension"
     },
     {
@@ -272,6 +560,34 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicSl2NormDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSmoothCasimirCommutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSmoothGeodesicBrackets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSmoothInfinitesimalOperators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSmoothIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSmoothOrbitJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSmoothSl2Brackets.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicUnipotentAverages.lean",
       "role": "Extension"
     },
@@ -280,7 +596,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicUnipotentJetBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicUnipotentJetVectors.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicUnipotentQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicUnitaryInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicVermaCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicVermaMap.lean",
       "role": "Extension"
     },
     {
@@ -388,6 +724,22 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/BoundedL2Differentiation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BoundedL2JetIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BoundedL2Series.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BoundedL2Smoothness.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/BoundedLogExpectation.lean",
       "role": "Extension"
     },
@@ -468,6 +820,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ClosedIsometryDerivative.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CoefficientScaling.lean",
       "role": "Extension"
     },
@@ -500,11 +856,43 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactSl2Basis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactSl2LieHom.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ComparablePowerWeights.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ComplexIdentityMatrixCurve.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ComplexPhaseFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ComplexSl2Basis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ComplexSl2EnvelopingCasimir.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ComplexSl2LieHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ComplexTracelessProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ComplexTracelessRealTangent.lean",
       "role": "Extension"
     },
     {
@@ -513,6 +901,10 @@
     },
     {
       "path": "Extension/Dubon2026/CongruenceTraceDomain.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCyclicScalar.lean",
       "role": "Extension"
     },
     {
@@ -828,6 +1220,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/DistinctWeightSubmodule.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/DivisorGammaDualSeries.lean",
       "role": "Extension"
     },
@@ -860,6 +1256,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/EigenlineCharacter.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/EisensteinLatticeKernel.lean",
       "role": "Extension"
     },
@@ -869,6 +1269,14 @@
     },
     {
       "path": "Extension/Dubon2026/EisensteinRowFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EnvelopingIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EnvelopingLiftComposition.lean",
       "role": "Extension"
     },
     {
@@ -980,7 +1388,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteInvariantAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteLowerTriangular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteOrbitOfEigenSpan.lean",
       "role": "Extension"
     },
     {
@@ -1008,6 +1424,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteSeparatingDerivative.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteSpectralLog.lean",
       "role": "Extension"
     },
@@ -1021,6 +1441,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteTensorEulerInequality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteUnitaryEigenSpan.lean",
       "role": "Extension"
     },
     {
@@ -1508,6 +1932,78 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HilbertFiniteCoordinateSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HolomorphicClosedSubspace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HolomorphicCurveJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HolomorphicEulerJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousCentralCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousCompactGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousDeterminantTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousEulerAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousFiniteSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousGL2Enveloping.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousNormDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousNormedSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousPolynomialLie.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousRaisingBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousScalarAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousScalarMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousTwistDerivative.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HorizontalArgumentBound.lean",
       "role": "Extension"
     },
@@ -1561,6 +2057,10 @@
     },
     {
       "path": "Extension/Dubon2026/InverseCharacteristicMeasure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IrrationalRotationCharacter.lean",
       "role": "Extension"
     },
     {
@@ -1752,6 +2252,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LinearMapSmoothJets.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LinearMeanPowerBounds.lean",
       "role": "Extension"
     },
@@ -1804,6 +2308,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MatrixPolynomialAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPolynomialCurveEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPolynomialDerivation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPolynomialOrbitDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPolynomialTangent.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MeanSquareConcentration.lean",
       "role": "Extension"
     },
@@ -1813,6 +2337,14 @@
     },
     {
       "path": "Extension/Dubon2026/MeanWeightedEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MixedCoordinateDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MixedExponentialScaling.lean",
       "role": "Extension"
     },
     {
@@ -1968,6 +2500,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OrthogonalClosureBasis.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OscillatoryAmplitude.lean",
       "role": "Extension"
     },
@@ -2049,6 +2585,18 @@
     },
     {
       "path": "Extension/Dubon2026/PolarRadialIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolynomialCyclicMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolynomialEndIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolynomialFiniteEigenSupport.lean",
       "role": "Extension"
     },
     {
@@ -2317,6 +2865,10 @@
     },
     {
       "path": "Extension/Dubon2026/PrimitiveSymmetricSpectral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveVermaIntertwiner.lean",
       "role": "Extension"
     },
     {
@@ -2640,6 +3192,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealAffineMultiplication.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealAnalyticRadialZeros.lean",
       "role": "Extension"
     },
@@ -2660,7 +3216,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealClosedCyclicSubspace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealCompactInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealCompactWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealConjugatedCurveTangents.lean",
       "role": "Extension"
     },
     {
@@ -2684,7 +3252,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealGL2CurvePositive.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealGL2Sign.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealGaussSmoothCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealGroupSmoothCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -2700,6 +3280,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealInfinitesimalEntryTangents.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealInfinitesimalGroupRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealInfinitesimalSmoothCurves.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealIwasawa.lean",
       "role": "Extension"
     },
@@ -2708,11 +3300,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealLiftCasimir.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealLiftInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealLiftJetBounds.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealLiftPetersson.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealLiftSecondDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealMatrixSmoothSubmodule.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealNormPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealOneParameterDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealOneParameterEigenvector.lean",
       "role": "Extension"
     },
     {
@@ -2721,6 +3341,10 @@
     },
     {
       "path": "Extension/Dubon2026/RealPositiveNormalize.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealPositiveNormalizeTangent.lean",
       "role": "Extension"
     },
     {
@@ -2784,11 +3408,55 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealRotationGroup.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealSL2Characters.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/RealSL2Generators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSl2NormDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothInfinitesimalOperator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothInfinitesimalTangents.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothOneParameterJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothOrbitDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothSemidirectBracket.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothSl2Brackets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSmoothUnitaryInfinitesimal.lean",
       "role": "Extension"
     },
     {
@@ -2944,6 +3612,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ScalarProjectionSubspace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarVectorODE.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ScaledPowerSum.lean",
       "role": "Extension"
     },
@@ -2988,6 +3664,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SkewLadderInnerProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Sl2CasimirAlgebra.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SlidingCountIntegral.lean",
       "role": "Extension"
     },
@@ -3001,6 +3685,10 @@
     },
     {
       "path": "Extension/Dubon2026/SmallBallLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmoothParameterDerivative.lean",
       "role": "Extension"
     },
     {
@@ -3188,6 +3876,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/TracelessEnvelopingProjection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/TrigammaAsymptotic.lean",
       "role": "Extension"
     },
@@ -3264,7 +3956,59 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/UnitaryEigenCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnitaryInvariantProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UniversalEnvelopingInduction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/UniversalMonicDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VectorGeometricPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaCentralPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaCentralReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaEnvelopingMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaPolynomialEigenline.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaPolynomialLieAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaPolynomialMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaPolynomialOperators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaPolynomialWeights.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/VermaSingularEmbedding.lean",
       "role": "Extension"
     },
     {
@@ -3300,6 +4044,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/WeightLadderIrreducibility.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/WeightedEnergyAbel.lean",
       "role": "Extension"
     },
@@ -3309,6 +4057,10 @@
     },
     {
       "path": "Extension/Dubon2026/WeightedEnergyError.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WeightedExponentialJets.lean",
       "role": "Extension"
     },
     {
@@ -4432,7 +5184,195 @@
     "PositiveReflectionCoordinates",
     "AdelicProjectiveReflection",
     "AdelicReflectionPairing",
-    "AdelicCyclicUnitary"
+    "AdelicCyclicUnitary",
+    "AdelicCyclicParameterContinuity",
+    "AdelicCyclicStrongContinuity",
+    "AdelicCyclicHilbertRange",
+    "AdelicCyclicHilbertCompletion",
+    "AdelicCyclicHilbertL2",
+    "AdelicGeneratorPetersson",
+    "AdelicCyclicHilbertGenerator",
+    "AdelicHilbertCentralLevel",
+    "AdelicHilbertCompactWeight",
+    "RealLiftInfinitesimal",
+    "AdelicRealOrbitCoordinates",
+    "AdelicLiftInfinitesimal",
+    "HolomorphicCurveJets",
+    "RealOneParameterDerivatives",
+    "RealLiftSecondDerivatives",
+    "RealCompactInfinitesimal",
+    "RealLiftCasimir",
+    "AdelicLiftCasimir",
+    "RealLiftJetBounds",
+    "AdelicOrbitDerivatives",
+    "AdelicFirstDerivativeBounds",
+    "BoundedL2Differentiation",
+    "AdelicProjectiveRealDerivative",
+    "AdelicGeneratorL2Derivatives",
+    "ClosedIsometryDerivative",
+    "AdelicHilbertGeneratorDerivatives",
+    "AdelicHilbertCompactDerivative",
+    "AdelicL2DerivativeRepresentatives",
+    "AdelicGeneratorDerivativeRepresentatives",
+    "AdelicL2HolomorphicIdentity",
+    "AdelicHilbertHolomorphicIdentity",
+    "AdelicUnipotentJetBounds",
+    "BoundedL2Smoothness",
+    "AdelicGeneratorUnipotentSmoothness",
+    "AdelicHilbertUnipotentSmoothness",
+    "HolomorphicEulerJets",
+    "WeightedExponentialJets",
+    "AdelicGeodesicJetBounds",
+    "AdelicGeneratorGeodesicSmoothness",
+    "AdelicHilbertGeodesicSmoothness",
+    "VectorGeometricPowerSeries",
+    "AdelicUnipotentJetVectors",
+    "BoundedL2Series",
+    "AdelicProjectiveRepresentative",
+    "AdelicProjectiveHolomorphicSlice",
+    "AdelicHolomorphicL2Curve",
+    "AdelicAffineHolomorphicFormula",
+    "AdelicHilbertAffineSmoothness",
+    "AdelicHilbertIwasawaSmoothness",
+    "AdelicRealHolomorphicFormula",
+    "RealGroupSmoothCoordinates",
+    "AdelicHilbertRealSmoothFamilies",
+    "BoundedL2JetIdentification",
+    "LinearMapSmoothJets",
+    "AdelicOrbitJetIdentification",
+    "AdelicL2SecondOrderIdentity",
+    "AdelicHilbertSecondOrderIdentity",
+    "AdelicHilbertInfinitesimal",
+    "AdelicHilbertCasimir",
+    "RealMatrixSmoothSubmodule",
+    "SmoothParameterDerivative",
+    "RealSmoothInfinitesimal",
+    "AdelicRealSmoothSubmodule",
+    "RealInfinitesimalSmoothCurves",
+    "RealSmoothInfinitesimalOperator",
+    "AdelicSmoothInfinitesimalOperators",
+    "MixedCoordinateDerivatives",
+    "MixedExponentialScaling",
+    "RealInfinitesimalGroupRelations",
+    "RealSmoothSemidirectBracket",
+    "AdelicSmoothGeodesicBrackets",
+    "RealGaussSmoothCoordinates",
+    "RealSmoothOrbitDifferential",
+    "RealInfinitesimalEntryTangents",
+    "RealSmoothInfinitesimalTangents",
+    "RealConjugatedCurveTangents",
+    "RealSmoothSl2Brackets",
+    "Sl2CasimirAlgebra",
+    "AdelicSmoothSl2Brackets",
+    "AdelicSmoothCasimirCommutation",
+    "ComplexSl2Basis",
+    "UniversalEnvelopingInduction",
+    "ComplexSl2EnvelopingCasimir",
+    "ComplexSl2LieHom",
+    "AdelicComplexSl2Action",
+    "AdelicEnvelopingCasimir",
+    "CompactSl2Basis",
+    "AdelicCompactWeightModule",
+    "AdelicLowestWeightJets",
+    "AdelicRaisingLieModule",
+    "AdelicRaisingEnvelopingSpan",
+    "DistinctWeightSubmodule",
+    "WeightLadderIrreducibility",
+    "AdelicLowestWeightIrreducible",
+    "EigenlineCharacter",
+    "AdelicInfinitesimalCharacter",
+    "RealSmoothUnitaryInfinitesimal",
+    "SkewLadderInnerProducts",
+    "AdelicUnitaryInfinitesimal",
+    "AdelicRaisingHilbertNorms",
+    "OrthogonalClosureBasis",
+    "AdelicRaisingHilbertBasis",
+    "AdelicClosedWeightLines",
+    "AdelicClosedInvariantSpan",
+    "AdelicClosedSpanSchur",
+    "AdelicGlobalHolomorphicOrbit",
+    "AdelicGlobalRaisingClosure",
+    "AdelicHolomorphicRaisingSpan",
+    "AdelicNormalizedHolomorphicOrbit",
+    "AdelicRealCyclicClosure",
+    "AdelicRealCyclicIrreducible",
+    "AdelicSmoothIntertwiner",
+    "AdelicSmoothOrbitJets",
+    "ContinuousCyclicScalar",
+    "HolomorphicClosedSubspace",
+    "RealAffineMultiplication",
+    "RealClosedCyclicSubspace",
+    "RealSmoothIntertwiner",
+    "RealSmoothOneParameterJets",
+    "ScalarProjectionSubspace",
+    "UnitaryInvariantProjection",
+    "AdelicHomogeneousCharacter",
+    "AdelicVermaCharacter",
+    "AdelicVermaMap",
+    "CompactSl2LieHom",
+    "EnvelopingIntertwiner",
+    "HomogeneousCentralCharacter",
+    "HomogeneousCompactGenerator",
+    "HomogeneousFiniteSpace",
+    "HomogeneousPolynomialLie",
+    "MatrixPolynomialAction",
+    "MatrixPolynomialDerivation",
+    "PolynomialCyclicMap",
+    "PrimitiveVermaIntertwiner",
+    "VermaCentralPolynomial",
+    "VermaCentralReflection",
+    "VermaEnvelopingMaps",
+    "VermaPolynomialEigenline",
+    "VermaPolynomialLieAction",
+    "VermaPolynomialMaps",
+    "VermaPolynomialOperators",
+    "VermaPolynomialWeights",
+    "VermaSingularEmbedding",
+    "AdelicHomogeneousScalar",
+    "ComplexTracelessProjection",
+    "HomogeneousDeterminantTwist",
+    "HomogeneousDimension",
+    "HomogeneousEulerAction",
+    "HomogeneousRaisingBasis",
+    "HomogeneousScalarAction",
+    "HomogeneousScalarMatrix",
+    "MatrixPolynomialCurveEvaluation",
+    "MatrixPolynomialOrbitDerivative",
+    "MatrixPolynomialTangent",
+    "TracelessEnvelopingProjection",
+    "AdelicFullGL2Derivative",
+    "AdelicGL2AlgebraicCharacter",
+    "AdelicGL2Enveloping",
+    "AdelicGL2NormDerivative",
+    "AdelicRealGL2Normalization",
+    "AdelicSl2NormDerivative",
+    "ComplexIdentityMatrixCurve",
+    "ComplexTracelessRealTangent",
+    "EnvelopingLiftComposition",
+    "FiniteSeparatingDerivative",
+    "HomogeneousGL2Enveloping",
+    "HomogeneousNormDerivative",
+    "HomogeneousNormedSpace",
+    "HomogeneousTwistDerivative",
+    "RealGL2CurvePositive",
+    "RealPositiveNormalizeTangent",
+    "RealSl2NormDerivative",
+    "AdelicCompactFiniteConverse",
+    "AdelicKFiniteGL2Character",
+    "AdelicKFiniteIdentification",
+    "AdelicRaisingCompactFinite",
+    "AdelicRaisingRotation",
+    "FiniteInvariantAnnihilator",
+    "FiniteOrbitOfEigenSpan",
+    "FiniteUnitaryEigenSpan",
+    "HilbertFiniteCoordinateSpan",
+    "IrrationalRotationCharacter",
+    "PolynomialEndIntertwiner",
+    "PolynomialFiniteEigenSupport",
+    "RealOneParameterEigenvector",
+    "RealRotationGroup",
+    "ScalarVectorODE",
+    "UnitaryEigenCoordinate"
   ],
   "verificationModules": [
     "SemanticRegression",
