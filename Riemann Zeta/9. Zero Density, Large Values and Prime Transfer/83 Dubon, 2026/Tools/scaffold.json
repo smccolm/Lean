@@ -204,6 +204,86 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicCyclicFiniteSmooth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicL2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicCyclicUnitary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPositiveRightAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveCyclicFunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveDomain.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveFunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveHaar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveL2Embedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectivePairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicProjectiveTiling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicReflectionPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicScalarCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicUnipotentAverages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicUnipotentCuspidality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicUnipotentQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AlmostAnalytic.lean",
       "role": "Extension"
     },
@@ -312,6 +392,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CanonicalAdelicCentralCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CanonicalAdelicCuspLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CanonicalAdelicGL2Coordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CanonicalAdelicGL2CuspLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CanonicalAdicIntegralDensity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CharacterCoefficients.lean",
       "role": "Extension"
     },
@@ -396,6 +496,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactRealOrbitAverage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ComparablePowerWeights.lean",
       "role": "Extension"
     },
@@ -476,6 +580,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CuspCoefficientMellin.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CuspCoefficients.lean",
       "role": "Extension"
     },
@@ -504,7 +612,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CuspEntireLFunction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CuspFiniteDepletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspFourierCoefficients.lean",
       "role": "Extension"
     },
     {
@@ -517,6 +633,10 @@
     },
     {
       "path": "Extension/Dubon2026/CuspMellinEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspMellinFEPair.lean",
       "role": "Extension"
     },
     {
@@ -533,6 +653,10 @@
     },
     {
       "path": "Extension/Dubon2026/CuspPeriodEnergyBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspPeriodFourierCoefficients.lean",
       "role": "Extension"
     },
     {
@@ -553,6 +677,10 @@
     },
     {
       "path": "Extension/Dubon2026/CuspPeterssonCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CuspPointwiseRankinBound.lean",
       "role": "Extension"
     },
     {
@@ -668,6 +796,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CuspVerticalProfile.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CuspWeightedEnergy.lean",
       "role": "Extension"
     },
@@ -744,11 +876,63 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/EulerBoundaryNonvanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EulerCoefficientAssembly.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ExponentialMellinSeries.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/ExponentialTailIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleClassicalIntersection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleIntegralCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleLevelSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleUnitPivot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicCompactLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicGL2Factorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicGL2Level.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicProjectiveCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicSL2Continuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicSL2CuspLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicScalar.lean",
       "role": "Extension"
     },
     {
@@ -800,6 +984,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FinitePadicSL2Approximation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteProjectedKernels.lean",
       "role": "Extension"
     },
@@ -808,7 +996,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteProjectiveGL2Haar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteProjectiveGL2Topology.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteRepresentationInnerProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSpectralLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSpectralPositivity.lean",
       "role": "Extension"
     },
     {
@@ -816,7 +1020,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteTensorEulerInequality.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteVerticalExceptions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FirstRankinPoleCancellation.lean",
       "role": "Extension"
     },
     {
@@ -833,6 +1045,10 @@
     },
     {
       "path": "Extension/Dubon2026/FrickeMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FullAdelicGL2CuspLift.lean",
       "role": "Extension"
     },
     {
@@ -1092,6 +1308,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GeneralLinearUnitDiagonal.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GeneralOutsideDensity.lean",
       "role": "Extension"
     },
@@ -1137,6 +1357,10 @@
     },
     {
       "path": "Extension/Dubon2026/HaarChord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HaarInvolution.lean",
       "role": "Extension"
     },
     {
@@ -1252,6 +1476,34 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HigherAugmentedEuler.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherAugmentedTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherBoundaryNonvanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherEntireCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherMixedEuler.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherNonvanishingAtOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HigherPoleCancellation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HigherRolle.lean",
       "role": "Extension"
     },
@@ -1285,6 +1537,14 @@
     },
     {
       "path": "Extension/Dubon2026/InnerZeroRectangle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralAdelicProjectiveFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralSL2PrimeProductDensity.lean",
       "role": "Extension"
     },
     {
@@ -1556,6 +1816,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MixedSpectralEulerInequality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MixedSpectralLogInequality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MixedSpectralPositivity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ModularCoefficientJets.lean",
       "role": "Extension"
     },
@@ -1704,6 +1976,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PadicIntegralSL2Density.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PeriodicMean.lean",
       "role": "Extension"
     },
@@ -1776,6 +2052,30 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PositiveAdelicGL2Continuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveAdelicGL2CuspLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveDirichletHalfPlane.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveDirichletTails.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveRationalGL2Intersection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveReflectionCoordinates.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PotentialEquicontinuity.lean",
       "role": "Extension"
     },
@@ -1844,6 +2144,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitiveAugmentedCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveAugmentedEuler.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveAugmentedTensor.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitiveCharacterBoundary.lean",
       "role": "Extension"
     },
@@ -1868,6 +2180,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitiveFirstBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveFirstContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveFirstNonvanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveFirstSpectralConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveFirstSymmetricL.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitiveFullCoefficients.lean",
       "role": "Extension"
     },
@@ -1884,11 +2216,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitiveHigherContinuationReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveHigherEulerConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveHigherTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveHigherTensorEuler.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitiveLatticeScaling.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/PrimitiveLatticeSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveMixedEulerGlobal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveMixedEulerLocal.lean",
       "role": "Extension"
     },
     {
@@ -1904,7 +2260,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitivePurityFromContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveRamifiedBounds.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitiveSatakeParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSecondContinuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSecondRankinIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSecondSpectralConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSecondSymmetricL.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSecondValueOne.lean",
       "role": "Extension"
     },
     {
@@ -1913,6 +2297,22 @@
     },
     {
       "path": "Extension/Dubon2026/PrimitiveSpectralBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSquareEulerFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSquareEulerProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSquareIncompleteProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSymmetricLFunction.lean",
       "role": "Extension"
     },
     {
@@ -2024,6 +2424,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RankinBoundaryNonvanishing.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RankinConductorMellin.lean",
       "role": "Extension"
     },
@@ -2100,6 +2504,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RankinEulerPositivity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RankinGammaDualSeries.lean",
       "role": "Extension"
     },
@@ -2152,6 +2560,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RankinSatakeBounds.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RankinSelbergEnergyConsequences.lean",
       "role": "Extension"
     },
@@ -2160,11 +2572,71 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RankinSpectralEuler.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RankinSpectralTraces.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RankinStripNormalized.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/RankinStripPhragmenLindelof.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalAdeleRealFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalAdelicAdditiveHaar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalAdelicAdditiveQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalAdelicAdditiveStrip.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalAdelicRealDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalFiniteAdeleDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalFiniteIdeleFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalFiniteValuationBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalGL2CuspFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalGL2CuspPeriod.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalProjectiveLevelIntersection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalSL2FiniteAdeleDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealAffineLift.lean",
       "role": "Extension"
     },
     {
@@ -2180,6 +2652,30 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealAutomorphicLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealCentralQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealCompactWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealCyclicCuspidal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealCyclicL2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealCyclicRepresentation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealExponentialZeroCount.lean",
       "role": "Extension"
     },
@@ -2188,7 +2684,99 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealGL2Sign.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealGroupUnimodular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealHeckeLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealHeckeRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealIwasawa.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealIwasawaMeasure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealLiftPetersson.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealNormPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealPositiveCentral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealPositiveNormalize.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealPositiveUnitaryLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveCyclic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveHilbertCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveHilbertGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveHilbertL2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveHilbertRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveL2Embedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectivePairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectivePetersson.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealProjectiveStrongContinuity.lean",
       "role": "Extension"
     },
     {
@@ -2196,7 +2784,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealSL2Characters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealSL2Generators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealUnipotentCuspPeriod.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealVerticalJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealWhittakerCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealWhittakerNormalization.lean",
       "role": "Extension"
     },
     {
@@ -2300,6 +2908,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RingSL2Elementary.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RootMultiplicityMapGcd.lean",
       "role": "Extension"
     },
@@ -2309,6 +2921,10 @@
     },
     {
       "path": "Extension/Dubon2026/SatakeSymmetricTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SatakeTensorDecomposition.lean",
       "role": "Extension"
     },
     {
@@ -2388,7 +3004,43 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SpectralDenominatorConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralDirichletCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralEulerHasProd.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralEulerLogDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralEulerProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralEulerShift.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SpectralEulerTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralFormalEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralFormalSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralLocalConvergence.lean",
       "role": "Extension"
     },
     {
@@ -2473,6 +3125,10 @@
     },
     {
       "path": "Extension/Dubon2026/SymmetricEulerPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ThirdOrderRecurrenceSeries.lean",
       "role": "Extension"
     },
     {
@@ -3612,7 +4268,171 @@
     "PrimeSpectralTail",
     "LocalSpectralLogDerivative",
     "PrimitiveSymmetricSpectral",
-    "PrimitiveSpectralBoundary"
+    "PrimitiveSpectralBoundary",
+    "SpectralEulerProduct",
+    "SpectralEulerLogDerivative",
+    "PrimitiveSymmetricLFunction",
+    "SpectralEulerHasProd",
+    "PrimitiveFirstSpectralConvergence",
+    "PrimitiveFirstSymmetricL",
+    "PrimitiveRamifiedBounds",
+    "CuspVerticalProfile",
+    "CuspMellinFEPair",
+    "CuspCoefficientMellin",
+    "CuspEntireLFunction",
+    "ThirdOrderRecurrenceSeries",
+    "PrimitiveSecondSpectralConvergence",
+    "PrimitiveSquareEulerFactors",
+    "PrimitiveSecondSymmetricL",
+    "PrimitiveSquareEulerProduct",
+    "PrimitiveSquareIncompleteProduct",
+    "PrimitiveSecondRankinIdentity",
+    "PrimitiveSecondContinuation",
+    "CuspPointwiseRankinBound",
+    "PrimitiveSecondValueOne",
+    "RankinSatakeBounds",
+    "RankinSpectralTraces",
+    "EulerBoundaryNonvanishing",
+    "FiniteSpectralLog",
+    "FiniteSpectralPositivity",
+    "RankinSpectralEuler",
+    "RankinEulerPositivity",
+    "RankinBoundaryNonvanishing",
+    "MixedSpectralPositivity",
+    "PrimitiveFirstContinuation",
+    "FirstRankinPoleCancellation",
+    "MixedSpectralLogInequality",
+    "MixedSpectralEulerInequality",
+    "PrimitiveMixedEulerLocal",
+    "PrimitiveMixedEulerGlobal",
+    "PrimitiveFirstBoundary",
+    "SpectralFormalSeries",
+    "SpectralFormalEvaluation",
+    "PrimitiveAugmentedTensor",
+    "EulerCoefficientAssembly",
+    "PrimitiveAugmentedCoefficients",
+    "PrimitiveAugmentedEuler",
+    "PrimitiveFirstNonvanishing",
+    "SpectralEulerShift",
+    "PrimitiveHigherEulerConvergence",
+    "PositiveDirichletTails",
+    "PositiveDirichletHalfPlane",
+    "SatakeTensorDecomposition",
+    "SpectralDirichletCoefficients",
+    "PrimitiveHigherTensor",
+    "PrimitiveHigherTensorEuler",
+    "SpectralDenominatorConvergence",
+    "SpectralLocalConvergence",
+    "PrimitivePurityFromContinuation",
+    "PrimitiveHigherContinuationReduction",
+    "HigherAugmentedTensor",
+    "HigherAugmentedEuler",
+    "HigherPoleCancellation",
+    "HigherNonvanishingAtOne",
+    "FiniteTensorEulerInequality",
+    "HigherMixedEuler",
+    "HigherBoundaryNonvanishing",
+    "HigherEntireCriterion",
+    "RealAutomorphicLift",
+    "RealCompactWeight",
+    "CuspFourierCoefficients",
+    "RealWhittakerCoefficients",
+    "RealWhittakerNormalization",
+    "RealAffineLift",
+    "RealHeckeRepresentatives",
+    "RealHeckeLift",
+    "RealIwasawa",
+    "RealIwasawaMeasure",
+    "RealLiftPetersson",
+    "RealCyclicRepresentation",
+    "RealSL2Generators",
+    "RealSL2Characters",
+    "RealGroupUnimodular",
+    "RealCyclicL2",
+    "RealCentralQuotient",
+    "RealProjectiveOrbit",
+    "RealProjectiveArithmetic",
+    "RealProjectiveCyclic",
+    "RealProjectivePairing",
+    "RealProjectivePetersson",
+    "RealProjectiveL2Embedding",
+    "RealProjectiveRepresentation",
+    "RealProjectiveStrongContinuity",
+    "RealProjectiveHilbertRange",
+    "RealProjectiveHilbertCompletion",
+    "RealProjectiveHilbertL2",
+    "CuspPeriodFourierCoefficients",
+    "RealUnipotentCuspPeriod",
+    "RealCyclicCuspidal",
+    "RealProjectiveHilbertGenerator",
+    "RealPositiveNormalize",
+    "RealPositiveUnitaryLift",
+    "RealPositiveCentral",
+    "PadicIntegralSL2Density",
+    "FinitePadicSL2Approximation",
+    "IntegralSL2PrimeProductDensity",
+    "CanonicalAdicIntegralDensity",
+    "RationalFiniteAdeleDensity",
+    "RingSL2Elementary",
+    "FiniteAdeleUnitPivot",
+    "RationalSL2FiniteAdeleDensity",
+    "FiniteAdeleLevelSubgroup",
+    "FiniteAdeleClassicalIntersection",
+    "FiniteAdelicSL2CuspLift",
+    "FiniteAdelicSL2Continuity",
+    "RationalAdeleRealFinite",
+    "CanonicalAdelicCuspLift",
+    "RationalFiniteValuationBasis",
+    "RationalFiniteIdeleFactorization",
+    "GeneralLinearUnitDiagonal",
+    "FiniteAdelicGL2Level",
+    "FiniteAdelicGL2Factorization",
+    "PositiveRationalGL2Intersection",
+    "PositiveAdelicGL2CuspLift",
+    "PositiveAdelicGL2Continuity",
+    "RealGL2Sign",
+    "FullAdelicGL2CuspLift",
+    "CanonicalAdelicGL2Coordinates",
+    "CanonicalAdelicGL2CuspLift",
+    "RationalGL2CuspFactor",
+    "RationalGL2CuspPeriod",
+    "FiniteAdeleIntegralCompact",
+    "RationalAdelicAdditiveStrip",
+    "RationalAdelicAdditiveQuotient",
+    "RationalAdelicRealDensity",
+    "RationalAdelicAdditiveHaar",
+    "CompactRealOrbitAverage",
+    "AdelicUnipotentQuotient",
+    "AdelicUnipotentAverages",
+    "AdelicUnipotentCuspidality",
+    "AdelicRealScalar",
+    "FiniteAdelicScalar",
+    "CanonicalAdelicCentralCharacter",
+    "FiniteAdelicCompactLevel",
+    "AdelicCyclicRepresentation",
+    "AdelicCyclicFiniteSmooth",
+    "FiniteProjectiveGL2Topology",
+    "FiniteAdelicProjectiveCharacters",
+    "FiniteProjectiveGL2Haar",
+    "AdelicProjectiveHaar",
+    "AdelicScalarCoordinates",
+    "AdelicProjectiveFunction",
+    "AdelicProjectiveCyclicFunction",
+    "AdelicProjectiveArithmetic",
+    "RationalProjectiveLevelIntersection",
+    "IntegralAdelicProjectiveFaithfulness",
+    "AdelicProjectiveDomain",
+    "AdelicProjectiveTiling",
+    "AdelicCyclicL2",
+    "AdelicProjectivePairing",
+    "AdelicProjectiveL2Embedding",
+    "AdelicPositiveRightAction",
+    "HaarInvolution",
+    "RealProjectiveReflection",
+    "PositiveReflectionCoordinates",
+    "AdelicProjectiveReflection",
+    "AdelicReflectionPairing",
+    "AdelicCyclicUnitary"
   ],
   "verificationModules": [
     "SemanticRegression",

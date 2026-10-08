@@ -1,6 +1,60 @@
 # Dubon 2026 — reproduction manifest
 
-Actual higher-prime-power correction: five further production modules construct the complete quadratic remainder in each spectral Euler logarithmic derivative and prove its prime sum holomorphic on Re(s)>1/2 using a genuine summable logarithmic prime majorant. Actual primitive Hecke roots give the unramified symmetric-power factors, their original Fourier traces and the precise prime-character L-series. The sum of their local logarithmic derivatives equals this L-series plus the proved holomorphic remainder. Removing that remainder gives the existing Tauberian/prime-average/Sato–Tate/H2 chain from an explicit local coefficient bound and continuous boundary extension of the actual logarithmic-derivative series. These two arithmetic inputs remain unproved. Three exact consumers expand registered scope to 627 production modules, 246 exact consumers and 2,960 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. No global automorphic or Galois representation, Deligne purity or symmetric-power continuation/nonvanishing is asserted. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+Actual full adelic cyclic L2 unitarity: Seven further production modules prove that the original full adelic right-regular action preserves the genuine quotient L2 inner product and norm of every original algebraic cyclic vector. Positive real/finite matrices descend exactly to the already proved projective right action. The literal rational reflection acts by negating the two real off-diagonal entries and by finite projective conjugation. Its real continuous involution preserves the actual real Haar measure; the finite inner conjugation preserves the genuine finite Haar measure. Determinant-root normalization commutes with reflection, so the original rational arithmetic subgroup is preserved. The reflected domain is a genuine arithmetic fundamental domain, giving reflection invariance of quotient integrals. Original rational left invariance identifies right reflection with this actual projective involution. The original matrix sign decomposition then covers every full adelic matrix, including the negative real component, with no unitarity premise. Three exact consumers expand registered scope to 791 production modules, 343 exact consumers and 3,800 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Strong continuity in the adelic L2 norm, the completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual adelic arithmetic fundamental domain and faithful L2 realization: Eight further production modules construct the actual positive-rational arithmetic image in PSL2(R) times PGL2(A_f), prove invariance of every original cyclic vector, and identify the finite-level intersection exactly with the faithfully embedded original integral Gamma0 group. The literal real Gamma0 fundamental domain times the genuine compact finite level subgroup is proved to be a fundamental domain for the same full arithmetic group at every nonzero level. Its Haar volume is exactly the product of the real-domain and finite-level volumes, with the latter positive and finite. Countable rational strong approximation supplies almost-everywhere coverage; the exact intersection and original real tiling give null overlaps. The original real cusp bound proves global boundedness of every full adelic cyclic vector, hence genuine square integrability on the actual domain. Quotient integrals and the actual cyclic pairing are invariant under every right projective translation. The original algebraic full adelic cyclic space embeds complex-linearly and injectively into actual L2, whose inner product is precisely the original integral pairing. Five exact consumers expand registered scope to 784 production modules, 340 exact consumers and 3,765 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,659 exhaustive theorem checks). Unitarity under the original full adelic right representation, including its negative-real action, the completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual faithful projective descent of the original adelic cyclic representation: three further production modules construct the genuine full adelic unit with prescribed real and finite components and prove its literal scalar matrix coordinates. Proved scalar invariance descends each original cyclic vector continuously through the actual real special-projective and finite general-projective quotients. Its value on every pair of matrix representatives is exactly its original canonical adelic value. The actual determinant-root identity recovers all positive real points; proved rational reflection invariance recovers the negative component, giving an injective complex-linear map from the original algebraic cyclic representation to continuous functions on PSL2(R) times PGL2(A_f). The original generator is retained exactly and recovers the original real cusp lift at finite identity. Three exact consumers expand registered scope to 776 production modules, 335 exact consumers and 3,724 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,591 exhaustive theorem checks). The rational arithmetic action and fundamental-domain theorem, invariant adelic L2 pairing, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. The finite-volume product region is not yet claimed as an adelic arithmetic fundamental domain. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual projective adelic Haar measure: four further production modules use Mathlib's genuine projective general-linear group over the canonical finite adeles. Its quotient topology is Hausdorff and locally compact; original projective level subgroups are compact and open. Haar measure is normalized to volume one on the actual full finite level. Rational strong approximation gives a countable compact cover and hence sigma-finiteness. Literal reflection, coordinate-swap, determinant-factor and elementary-generation identities prove that every nonnegative character of finite adelic PGL2 is trivial, so the actual Haar measure is invariant on both sides. Its product with the existing real projective Haar measure is a genuine sigma-finite Haar measure on PSL2(R) times PGL2(A_f), invariant under all right translations. The literal original real full-level region times the finite full-level subgroup has exactly the existing finite real volume. Two exact consumers expand registered scope to 773 production modules, 332 exact consumers and 3,707 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,562 exhaustive theorem checks). Descent of the original cyclic functions to these projective coordinates, the rational arithmetic fundamental-domain theorem, invariant adelic L2 pairing, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. The finite-volume product region is not yet claimed as an adelic arithmetic fundamental domain. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual adelic central character and smooth algebraic cusp representation: six further production modules prove triviality under every scalar unit of the canonical full adele ring, using the actual positive rational/integral-unit finite-idele factorization, rational invariance, finite-level invariance and the proved real scalar identity. The genuine finite level groups are compact and open, and the canonical finite adele ring and its GL2 group are locally compact. The original full adelic cusp function generates its actual algebraic right-regular subrepresentation. Every vector is continuous, rational-invariant and scalar-invariant; its original unipotent function has a continuous representative on the actual additive quotient with zero Haar integral at every adelic point. Each vector is fixed by a proved compact open finite subgroup, derived from conjugate original level groups and finite intersections. Four exact consumers expand registered scope to 769 production modules, 330 exact consumers and 3,687 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,513 exhaustive theorem checks). The invariant adelic L2 pairing, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual full adelic unipotent cuspidality: four further production modules descend the original upper-unipotent cusp function to the genuine compact additive quotient NumberField.AdeleRing ℤ ℚ / ℚ and prove its continuity and exact representative formula. A proved continuous-average theorem transfers the original zero real periods along the dense real line to a zero Haar integral by Fubini and actual translation invariance. Rational reflection and negation-invariance of the genuine Haar measure handle the negative real component. The public theorem canonicalAdelicGL2CuspLift_unipotent_cuspidal proves the zero unipotent Haar integral of the original classical cusp form at every point of canonical full adelic GL2, with no adelic-cuspidality premise. Two exact consumers expand registered scope to 763 production modules, 326 exact consumers and 3,657 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,467 exhaustive theorem checks). The full adelic scalar character, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual rational cusp periods and compact additive adele quotient: seven further production modules factor each positive rational matrix through a genuine integral cusp representative and an upper-triangular factor. Its literal unipotent scaling transfers the existing original zero-period theorem to every positive rational cusp translate and to the positive-real adelic function at every finite point, uniformly over the real-group point. The actual integral finite adeles are compact. Principal rational translates place every full adele in the literal half-open real unit interval times the integral finite adeles, uniquely modulo the principal subgroup. Consequently the actual additive quotient NumberField.AdeleRing ℤ ℚ / ℚ is compact, its principal subgroup is discrete and closed, and the genuine real additive line is dense. The quotient carries its actual probability Haar measure with proved translation invariance. Four exact consumers expand registered scope to 759 production modules, 324 exact consumers and 3,635 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,438 exhaustive theorem checks). The quotient unipotent function and its zero Haar integral still require assembly; adelic unipotent cuspidality is not yet claimed. Completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual canonical full adelic GL2 cusp function: seven further production modules prove that the positive rational intersection of the genuine finite level subgroup is exactly the embedded classical Gamma0 subgroup. The original cusp form then defines a faithful continuous positive-real/finite GL2 function, independent of the chosen rational factor. A literal rational reflection handles the negative real component, giving invariance under every rational GL2 matrix. Actual ring and group homeomorphisms transport this function to Mathlib's canonical GL2(NumberField.AdeleRing ℤ ℚ). Its rational left invariance, genuine finite-level right invariance, continuity, exact unitary real restriction and injectivity in the original cusp form are proved. Its restriction to canonical adelic SL2 is exactly the previously proved original function. Five exact consumers expand registered scope to 752 production modules, 320 exact consumers and 3,607 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,378 exhaustive theorem checks). Adelic unipotent cuspidality, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual finite adelic GL2 determinant and level factors: five further production modules construct genuine rational prime-ideal generators and signed products with exact local valuations. Every actual finite idele is proved to be a positive rational scalar times an everywhere-integral unit. Literal determinant diagonals and genuine special-linear factors then combine with the proved SL2 strong approximation to factor every original finite adelic GL2 matrix as a positive-determinant rational matrix times the actual level subgroup. The general-linear level group is defined by the original integral level conditions on a matrix and its inverse, and is proved open for nonzero level; original SL2 level matrices and integral unit diagonals belong to it. Three exact consumers expand registered scope to 745 production modules, 315 exact consumers and 3,562 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,297 exhaustive theorem checks). These are genuine finite-idele and positive-rational GL2 factorization statements. The exact positive-rational GL2 classical intersection, original GL2 adelic cusp-function extension, adelic unipotent cuspidality, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual canonical adelic SL2 cusp function: six further production modules construct the genuine everywhere-integral subring and level K0(N) subgroup, prove openness for nonzero level, and identify its rational intersection exactly with the original classical Gamma0(N). Strong approximation defines the original cusp function in real and finite coordinates; the exact intersection proves independence of the rational factor, rational left invariance, finite-level right invariance, recovery of the original real-group lift, continuity and injectivity in the original cusp form. The unique rational infinite completion gives an actual ring/group homeomorphism from Mathlib's canonical full adele objects to their real and finite coordinates. The resulting original cusp function on SL2(NumberField.AdeleRing ℤ ℚ) has all these proved properties. Four exact consumers expand registered scope to 740 production modules, 312 exact consumers and 3,538 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,253 exhaustive theorem checks). This is a faithful continuous rational-invariant function on the canonical full adelic SL2 group. Its GL2 extension, adelic unipotent cuspidality, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual canonical finite-adele strong approximation: five further production modules transport the proved integral matrix density through the pinned continuous local equivalences to the canonical rational completions. A genuine common integer denominator and integral-product density prove density of the rational diagonal in Mathlib's actual finite adele ring. Exact elementary matrices, Gaussian elimination at a unit pivot, and a coordinatewise zero-or-one pivot construction then prove density of SL2(Q) in the genuine finite adelic SL2 group. Every open subgroup gives an exact rational-times-subgroup factorization. Three exact consumers expand registered scope to 734 production modules, 308 exact consumers and 3,502 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,192 exhaustive theorem checks). These are actual rational adelic approximation theorems, with no approximation premise or replacement adele model. Specific level-subgroup/classical intersection bridges, adelic cuspidal globalization, irreducibility and higher symmetric continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual positive-real and local arithmetic bridges: six further production modules construct the genuine continuous determinant-root homomorphism from GL2(R)+ to SL2(R), preserving the original upper-half-plane action. The actual unitary cusp lift has the exact square-root determinant factor, and its correction to the pinned slash action is proved explicitly. It retains the original function, Petersson density and arithmetic invariance. The completed original representation extends strongly continuously and unitarily to GL2(R)+, restricts exactly to the original projective action, and has trivial action by every nonzero real scalar, including negative scalars. Reusing the existing integral SL2 reduction theorem and pinned Chinese remaindering proves actual prime-power p-adic approximation, simultaneous approximation by one integral determinant-one matrix, and density of the diagonal integral group in products of distinct p-adic compact groups. Four exact consumers expand registered scope to 729 production modules, 305 exact consumers and 3,479 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,147 exhaustive theorem checks). Compact-product integral density is not yet adelic rational strong approximation or a completed adelic cusp representation. Adelic globalization, irreducibility, higher symmetric continuation, unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual quotient realization and cusp periods: five further production modules identify the completed Hilbert space isometrically with exactly the closure of the original cyclic range in the genuine quotient L2 space. Original vectors and inner products are preserved. The literal original cusp generator is nonzero for every nonzero form, has exactly its original Petersson norm and compact weight character, and generates the completed representation densely. Actual Fourier extraction proves zero horizontal averages at every positive strict period and real offset; literal unipotent translation and genuine principal-level slash transforms then prove zero common-level-Q averages at every integral cusp for every vector of the original algebraic cyclic span. Four exact consumers expand registered scope to 723 production modules, 301 exact consumers and 3,443 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (6,048 exhaustive theorem checks). The period assertions are proved for actual continuous cyclic functions; no pointwise period assertion is made for arbitrary L2 equivalence classes. Adelic cuspidal globalization, irreducibility and higher symmetric continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual completed real representation: three further production modules prove joint continuity of the genuine quotient L2 matrix coefficients by dominated integration, then strong continuity of the original cyclic representation. The actual faithful L2 range inherits its original norm, and completion constructs a genuine Hilbert representation. Density proves the group law, norm and inner-product preservation, and strong continuity for every completed vector. The original cyclic representation embeds injectively with dense image and the exact original action is intertwined. Two exact consumers expand registered scope to 718 production modules, 297 exact consumers and 3,419 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,992 exhaustive theorem checks). This proves a strongly continuous unitary real representation of the original cusp vectors. Adelic cuspidal globalization, irreducibility, the higher symmetric continuation family, unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual projective arithmetic realization: eight further production modules prove that the real center is precisely the two signs and that its quotient map is proper. Pushing the original Haar measure gives actual left/right invariant Haar measure on PSL(2,R), whose orbit map pushes exactly to hyperbolic area. The original projective Gamma0 domain lifts to a genuine finite-volume fundamental domain in this quotient. Every original cyclic cusp vector descends continuously and arithmetically invariantly; its literal quotient function is L2, and the resulting linear L2 map is injective. The original Petersson normalization is preserved exactly. The actual right-translation representation factors through PSL(2,R) and preserves the genuine L2 inner product. Four exact consumers expand registered scope to 715 production modules, 295 exact consumers and 3,401 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,955 exhaustive theorem checks). The central quotient and algebraic unitary realization are now proved for the original objects. A completed strongly continuous representation, adelic cuspidal construction, higher symmetric continuation family, unconditional Deligne, non-CM Sato–Tate and final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual real-group Haar measure and generated representation: seven further production modules construct Haar measure by pushing hyperbolic area times normalized compact Haar measure through the proved Iwasawa homeomorphism. The genuine compact cocycle proves left invariance. Explicit unipotent commutators and Gauss decomposition show every commutative character of SL(2,R) is trivial, proving right invariance of this same measure. The original Petersson pairing is exactly the real-group integral over the full compact fiber above the projective Gamma0 fundamental domain. The actual span of right translates is a representation whose every vector is continuous, globally bounded, arithmetically left invariant, square integrable over that lifted region and, for an original primitive eigenform, has its original normalized prime Hecke eigenvalues. Four exact consumers expand registered scope to 707 production modules, 291 exact consumers and 3,355 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,862 exhaustive theorem checks). The lifted region is not asserted to be a fundamental domain for the nonprojective arithmetic group; its central quotient and unitary quotient-representation bridges remain open. The adelic cuspidal representation, higher symmetric continuation family, unconditional Deligne, non-CM Sato–Tate and final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual classical-to-real-group bridge: nine further production modules construct the original lift by evaluating its genuine slash translates at i. They prove injectivity, continuity, arithmetic left invariance, the Petersson pairing identity, the compact unitary weight character and the exact one-dimensional compact orbit. Actual unipotent integrals recover the original Fourier coefficients, vanish at nonpositive frequencies, and have the precise unitary normalization lambda_f(n)/sqrt(n) times the holomorphic Whittaker factor at ny. Genuine determinant-one Hecke representatives give the original normalized eigenvalue at every prime, including primes dividing the level, using the already proved all-index primitive-form theorem. The explicit Iwasawa decomposition is a homeomorphism and recovers the actual original lift. Six exact consumers expand registered scope to 700 production modules, 287 exact consumers and 3,323 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,782 exhaustive theorem checks). These are proved real-group bridges; the adelic automorphic representation, higher symmetric continuation family, unconditional Deligne, non-CM Sato–Tate and final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual higher nonvanishing from entire continuation: eight further production modules construct the genuine augmented tensor coefficients for every symmetric order and identify their L-series with the actual principal/even-symmetric/original-symmetric product. If an entire symmetric continuation vanished at one, its literal divided difference would cancel the two principal poles and leave an entire nonnegative-coefficient L-series with the genuine trivial zero at -2; proved Dirichlet positivity excludes this. The actual mixed Euler inequality and the simple pole of the even tensor product exclude nonreal boundary zeros. Together with the previously proved purity deduction and analytic uniqueness, an entire family of the actual positive symmetric Euler continuations now implies all closed-half-plane nonvanishing and weak Sato–Tate, with no independent purity or nonvanishing premise. Four exact consumers expand registered scope to 691 production modules, 281 exact consumers and 3,273 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,704 exhaustive theorem checks). This is an alternate conditional arithmetic criterion: the entire family is not yet constructed, and its global entireness includes order two, beyond the already proved closed-half-plane second continuation. The earlier order-at-least-three holomorphic/nonvanishing criterion remains valid. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual purity from higher continuation: twelve further production modules prove far-half-plane convergence of every literal symmetric Euler product, a half-plane positivity theorem for genuine Dirichlet coefficients, and the exact finite Clebsch–Gordan tensor decomposition. The actual higher tensor coefficients are nonnegative and their L-series equals the finite product of the even symmetric Euler functions. Holomorphy of those genuine even continuations on Re(s)>1 forces convergence of the tensor Dirichlet series there. The literal numerator-one identity excludes local denominator cancellation, so bounded powers of the original good-prime roots force their norm to equal one. Thus the actual Deligne bound and the full weak Sato–Tate deduction now follow from higher symmetric continuation alone; no separate coefficient-bound hypothesis remains in this reduction. Matching is required only on each original far convergence half-plane Re(s)>r+1, and the first two continuation cases are already proved. Six exact consumers expand registered scope to 683 production modules, 277 exact consumers and 3,243 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,636 exhaustive theorem checks). The higher continuations themselves and their nonvanishing are not yet constructed for actual non-CM forms; unconditional Deligne, Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual first symmetric nonvanishing at one: seven further production modules construct the literal finite geometric Euler products of the nine augmented Hecke tensor roots, prove their Newton recurrence and nonnegative real coefficients, and assemble the genuine multiplicative Dirichlet coefficients. A proved polynomial coefficient bound gives convergence on Re(s)>7; the exact prime products identify this series with the original principal/Rankin/first symmetric product including its finite ramified correction. If the first continuation vanished at one, the previously constructed pole-cancelled product would be entire with a real trivial zero, contradicting the pinned Dirichlet-series positivity theorem for these actual coefficients. The first symmetric continuation is therefore nonzero on every point of Re(s)>=1, without Deligne. Both orders one and two now have proved holomorphic nonvanishing continuations, and the genuine conditional Sato–Tate reduction asks for continuation only from order three onward. Four exact consumers expand registered scope to 671 production modules, 271 exact consumers and 3,180 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,545 exhaustive theorem checks). Actual good-prime Deligne purity, higher-order continuation/nonvanishing and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+Actual first symmetric nonreal boundary nonvanishing: eight further production modules prove the mixed finite and global Rankin/first-power Euler inequality from the genuine tensor power traces. The actual Rankin and principal simple-pole bounds then exclude every nonreal boundary zero of the explicit entire first symmetric continuation. The literal first Euler product now has proved nonvanishing on Re(s)>=1 except possibly at s=1, without Deligne. Its genuine Gamma-normalized trivial zero is also proved. Under a hypothetical zero at one, an actual divided-difference product is entire, agrees with the original Rankin/principal/first Euler product and retains that real trivial zero; this is a conditional contradiction setup, and nonvanishing at one is not yet proved. Three exact consumers expand registered scope to 664 production modules, 267 exact consumers and 3,137 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,475 exhaustive theorem checks). Order-two continuation/nonvanishing is already proved. The remaining order-one point s=1, higher-order continuation/nonvanishing, actual good-prime Deligne purity and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual symmetric-square boundary nonvanishing: eight further production modules derive quantitative bounds for both genuine Satake roots from the proved Rankin remainder, identify the real nonnegative power traces of the actual Rankin tensor roots, and prove the finite and global three-four-one Euler inequalities. The genuine simple-pole Rankin continuation then has no zero at any nonreal point of Re(s)=1. Horizontal continuity identifies its actual numerator with the original Rankin pole numerator. Together with the previously proved value at one and finite ramified correction, this proves a holomorphic nonvanishing continuation of the literal second symmetric Euler product on the full closed half-plane Re(s)>=1, without Deligne or an added arithmetic hypothesis. Four exact consumers expand registered scope to 656 production modules, 264 exact consumers and 3,111 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,420 exhaustive theorem checks). The order-two continuation/nonvanishing obligation is now proved. Order-one boundary nonvanishing, higher-order continuation/nonvanishing, genuine good-prime Deligne purity and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual symmetric-square continuation: ten further production modules prove the genuine cubic local Euler identity, absolute convergence and nonvanishing on Re(s)>1, and the exact global identity with the original Rankin square series, principal-character factors and finite ramified correction. The proved Rankin pole numerator and pinned principal-character continuation construct a holomorphic continuation of the actual second symmetric Euler product across Re(s)=1. The existing three-fifths Rankin remainder bounds individual coefficient squares by O_f(n^(3/5)); the actual ramified power law gives |lambda_f(p)|^2 <= p^(3/5). This proves that the finite correction is nonzero on Re(s)>3/5 and that the symmetric-square continuation is nonzero at s=1, with its exact Petersson-residue value. These results use no Deligne or new arithmetic assumption. Five exact consumers expand registered scope to 648 production modules, 260 exact consumers and 3,074 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,369 exhaustive theorem checks). Boundary nonvanishing at other points, higher-order continuation, the genuine good-prime Deligne bound and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual entire cusp L-function: four further production modules use the original imaginary-axis cusp values, their genuine modular S-transform and proved rapid decay to construct a strong Mellin functional-equation pair. Its literal Mellin integral is entire. The exact Fourier expansion, one-Gamma Mellin identity and half-weight coefficient shift identify an entire continuation of the original normalized cusp L-series. Multiplication by the proved finite ramified correction gives an entire continuation of the actual order-one incomplete symmetric Euler product. These results use no Deligne or new arithmetic assumption. Three exact consumers expand registered scope to 638 production modules, 255 exact consumers and 3,026 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,309 exhaustive theorem checks). Nonvanishing on Re(s)=1 and the higher symmetric-power arithmetic continuation inputs remain open, as do the genuine good-prime Deligne bound and unconditional non-CM Sato–Tate. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual first symmetric-power normalization: four further production modules group the genuine spectral Euler product by primes and prove, without Deligne, absolute convergence, holomorphy and nonvanishing of the order-one product on Re(s)>1. It equals the original normalized cusp L-series times exactly the finite ramified Euler denominators; the original L-series is also nonzero there. The existing actual cusp energy bound and ramified prime-power law give the unconditional bad-prime estimate |lambda_f(p)|^2 <= p, so the finite correction is nonzero on Re(s)>1/2. Thus the original L-series and the actual order-one incomplete Euler product have equivalent nonvanishing holomorphic continuation requirements on Re(s)>=1. Three exact consumers expand registered scope to 634 production modules, 252 exact consumers and 3,009 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,278 exhaustive theorem checks). This proves the order-one normalization and finite-factor bridge, not boundary continuation/nonvanishing itself or the missing higher symmetric-power arithmetic inputs. Deligne and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual global symmetric-power Euler product: three further production modules construct the genuine infinite product from the primitive form's own Hecke roots, prove local uniform convergence, holomorphy and nonvanishing on Re(s)>1 under the explicit local bound, and justify its exact logarithmic derivative as the already proved local derivative series. A nonvanishing holomorphic continuation of each positive-order actual Euler L-function then supplies the prime-character boundary extension after the analytic higher-power correction. The complete Euler/character/Tauberian/PNT deduction yields weak Sato–Tate and full isolated-prime H2. The local coefficient bound and nonvanishing continuation remain unproved arithmetic inputs. Three exact consumers expand registered scope to 630 production modules, 249 exact consumers and 2,980 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,242 exhaustive theorem checks). This conditional analytic chain does not prove Deligne or symmetric-power automorphy, or close the unconditional non-CM Sato–Tate gate. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Actual higher-prime-power correction: five further production modules construct the complete quadratic remainder in each spectral Euler logarithmic derivative and prove its prime sum holomorphic on Re(s)>1/2 using a genuine summable logarithmic prime majorant. Actual primitive Hecke roots give the unramified symmetric-power factors, their original Fourier traces and the precise prime-character L-series. The sum of their local logarithmic derivatives equals this L-series plus the proved holomorphic remainder. Removing that remainder gives the existing Tauberian/prime-average/Sato–Tate/H2 chain from an explicit local coefficient bound and continuous boundary extension of the actual logarithmic-derivative series. These two arithmetic inputs remain unproved. Three exact consumers expand registered scope to 627 production modules, 246 exact consumers and 2,960 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,222 exhaustive theorem checks). No global automorphic or Galois representation, Deligne purity or symmetric-power continuation/nonvanishing is asserted. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
 
 Actual prime-character boundary transfer: four further production modules reuse the audited node-63 Wiener–Ikehara theorem and the genuine von Mangoldt majorant to prove signed cancellation from a displayed continuous boundary extension of the original Dirichlet series. The existing PNT removes logarithmic prime weights with an exact finite error bound; inclusive prime normalization and every finite ramified discrepancy are discharged. The genuine primitive coefficients therefore yield weak Sato–Tate and full isolated-prime H2 from two explicit arithmetic inputs: the local norm bound and boundary continuation of every positive-order prime-character series. Neither input is proved. Three exact consumers expand registered scope to 622 production modules, 243 exact consumers and 2,930 explicit audit registrations. Focused compilation, all sixteen linters, the expanded dependency audit and sequential foundation/paper verification passed with zero Lean diagnostics (5,177 exhaustive theorem checks). The continuation premise is an actual analytic condition on a coefficient-defined L-series, not an assumed prime-average limit. Deligne, symmetric-power automorphy/continuation and unconditional non-CM Sato–Tate remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
 
@@ -74,7 +128,7 @@ Cusp Fourier/Mellin input: five new production modules prove Parseval for the ac
 
 Isolated-prime source interface: the finite-block bound now derives nonzero selected coefficients from the diagonal two-sided ratio and holds uniformly on every set of abscissae, including all compact sets in Proposition 5.1. One C_K is chosen before the coefficients, N, block and set. The expanded scope has 372 production modules, 151 exact consumers and 1,808 explicit registrations. Focused compilation, the expanded audit and sequential foundation/paper verification passed with zero Lean diagnostics. DUB-10–14 are accepted after complete source review and sequential verification.
 
-The preceding verified scope had 622 production modules, 243 exact consumers, 2,930 explicit audit registrations and 5,177 exhaustive theorem dependency checks; the current expanded scope is identified above. It includes the actual polynomial/Bohr/log/Jessen chain, multiplicity-weighted zero frequencies for every open strip, the abstract concentration criterion, zeta and fixed-character applications, and the genuine level-one non-CM bridge. The general-level Rankin–Selberg theorem and weighted energy are proved and accepted. The modular concentration application still requires Deligne, Sato–Tate and the automorphic inputs. DUB-01–16 have separate source-acceptance records; DUB-17–20 remain OPEN pending their own complete review and acceptance. The dated receipts below retain the scope and gate counts at their execution times.
+The current verified scope has 745 production modules, 315 exact consumers, 3,562 explicit audit registrations and 6,297 exhaustive theorem dependency checks. It includes the actual polynomial/Bohr/log/Jessen chain, multiplicity-weighted zero frequencies for every open strip, the abstract concentration criterion, zeta and fixed-character applications, and the genuine level-one non-CM bridge. The general-level Rankin–Selberg theorem and weighted energy are proved and accepted. The modular concentration application still requires Deligne, Sato–Tate and the automorphic inputs. DUB-01–16 have separate source-acceptance records; DUB-17–20 remain OPEN pending their own complete review and acceptance. The dated receipts below retain the scope and gate counts at their execution times.
 
 General first-coefficient extension: `JessenGeneralMass`, `CoefficientScaling` and `NonzeroFirstCoefficientDensity` retain the printed assumption a₁≠0. The actual mass is log M_N; the scaled zero-frequency mass is log M_N/(2π), with probability normalization for M_N>1 and zero measure for M_N=1. Nonzero complex coefficient scaling preserves support, analytic zero multiplicities, every finite-height count and Jessen derivative measure; the Jessen function shifts by log |c|. The open-strip frequency theorem now holds for every nonzero first coefficient with the same one-sided endpoints. Four additional exact consumers give 372 production modules, 150 consumers and 1,806 explicit audit registrations. Focused compilation, the aggregate audit and sequential foundation/paper verification passed with zero Lean diagnostics for this scope. DUB-06–07 are accepted after complete semantic review; see Dubon Semantic Acceptance.md.
 
@@ -1644,5 +1698,822 @@ Dirty checkout `abbed66648e1ae22078cccafc224dd68e108f54d`; Lean 4.30.0, Mathlib 
 - `Extension/Dubon2026/WeightedPrimeAverages.lean`: SHA-256 `155be1b391a6648c965fa2aa18649c43c5d6e1f1efc6c70ce7bb75533aa93a5b`.
 - `Extension/Dubon2026/PrimeDirichletCancellation.lean`: SHA-256 `b50bc8f816c9871ee492d5f465554892c6c099c934c966666f541149f2fb1460`.
 - `Extension/Dubon2026/PrimitiveCharacterBoundary.lean`: SHA-256 `24adc10c4f1fc2be5d98816afb7d7aa1dbb446c0b52674a06181592966cdd08b`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual local logarithmic derivatives and higher-prime-power correction verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 627 production modules, 246 exact consumers, 2,960 explicit registrations and 5,222 exhaustive theorem dependency checks. All sixteen linters passed across 3,511 declarations plus 2,339 generated declarations in both paper audit executions. Initial inventory passed with 734 retained files, 1,164 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Five modules and three exact consumers prove the genuine local spectral Euler logarithmic derivatives, their exact first-prime/higher-power decomposition, and the actual remainder's holomorphy on Re(s)>1/2. A uniform prime majorant log(p)p^(-2a) is summable by actual von Mangoldt convergence. Primitive Hecke roots supply the original symmetric-power trace coefficients and exact local Euler factors, with the finite ramified set explicitly removed. The original prime-character L-series is proved to be the genuine local derivative series minus that analytic remainder. Its boundary continuation therefore follows from continuation of the local derivative series, and the already proved Tauberian/PNT/character chain yields weak Sato--Tate and full H2.
+
+The actual local coefficient bound and boundary continuation of the derivative series remain explicit unproved arithmetic inputs. The genuine global spectral product/logarithmic-derivative identification, automorphic and Galois constructions, Deligne purity and required global continuation/nonvanishing remain open. DUB-17--20 remain OPEN and DUB-01--16 remain accepted. Focused production/source checks and both full verifiers passed with zero diagnostics; no target hypothesis was weakened.
+
+The foundation verifier observed clean checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9` (an externally created `Progress Update` commit detected during ongoing work); Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_140625.log](../../logs/foundation_freeze_20261007_140625.log), SHA-256 `d65fa56649589dbc648515d5e08a345cda2b7228d3aef35109e4726735108292`.
+- [foundation_freeze_20261007_140625.json](../../logs/foundation_freeze_20261007_140625.json), SHA-256 `29befcdfcb468653b33523cbbc9e335a52e71c66413f810d4cc53a8f6544d61f`.
+- [dubon-build-20261007-140919-264.log](logs/dubon-build-20261007-140919-264.log), SHA-256 `8c42cdf715dd34554f95a7f6d1ed933e742f1b5004ef4d151fdec332aeec3c0e`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `1cea7cd045e70547efed3981fdd9045fa2c805487d2feae546fb30a5ec4b2d8d`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `f4803f59ad3b3c66151d59893de688461024334f40f975b1972c93099348e91d`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `85f893b54304843f0eeafd407554e490bd7660680cd416f0534c7e67659a6eaf`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SpectralEulerTail.lean`: SHA-256 `d9c1855191601480f42e1650330841f4518f4a11c7f9ce978ba42ed5a1f1abf5`.
+- `Extension/Dubon2026/PrimeSpectralTail.lean`: SHA-256 `a0d5c0e925c581cb0f9ebbe88519be24d29e6c7bc9ea66cbc889058068b33ce6`.
+- `Extension/Dubon2026/LocalSpectralLogDerivative.lean`: SHA-256 `1afaee82ac0fbe18a3f9b916b3e5fd7a325f1ab13ef2bb37218119a2ab642e62`.
+- `Extension/Dubon2026/PrimitiveSymmetricSpectral.lean`: SHA-256 `0bc54b536ccbf13ef67e0713ce491c405a4c85f9eac5bdf7f4dda4cbebf74931`.
+- `Extension/Dubon2026/PrimitiveSpectralBoundary.lean`: SHA-256 `35310514b7ba04653e458d9933b48568d1431aab67de28c09a7365f9326bc592`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual global symmetric-power Euler product and continuation criterion verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 630 production modules, 249 exact consumers, 2,980 explicit registrations and 5,242 exhaustive theorem dependency checks. All sixteen linters passed across 3,534 declarations plus 2,339 generated declarations in both paper audit executions. Initial inventory passed with 737 retained files, 1,190 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Three modules and three exact consumers construct the literal global spectral Euler product from the actual primitive Hecke roots, prove local uniform convergence, holomorphy and nonvanishing on Re(s)>1 under the explicit local bound, and justify the exact infinite logarithmic-derivative exchange and finite local normalization. The global primitive L-function's negative logarithmic derivative equals the genuine prime-character L-series plus the already proved analytic higher-prime-power correction.
+
+The full analytic chain now derives actual weak Sato--Tate and full isolated-prime H2 from the two displayed arithmetic inputs: the local good-prime coefficient bound and nonvanishing holomorphic continuation of each positive-order actual incomplete symmetric-power Euler L-function to a neighborhood of Re(s)>=1. Neither arithmetic input is proved. Automorphic/Galois constructions, Deligne purity, symmetric-power automorphy/nonvanishing and unconditional non-CM Sato--Tate remain required. DUB-17--20 remain OPEN; DUB-01--16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics, without weakening a target or hiding an assumption.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_141814.log](../../logs/foundation_freeze_20261007_141814.log), SHA-256 `b31c0746b2c14e108a30461c563b60c6d3df0a164cc0e72d5ceddf014e9c47e0`.
+- [foundation_freeze_20261007_141814.json](../../logs/foundation_freeze_20261007_141814.json), SHA-256 `e7b2224ef0b9a31bfc9478304ca15bc2f8e6fce7af6de9ad0bee2832bbc2ee21`.
+- [dubon-build-20261007-142130-387.log](logs/dubon-build-20261007-142130-387.log), SHA-256 `efea6a2d19e1b17f5d251e23be71250c4be654f04e5e06993f14a808ac4e1efc`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `0b299e40d4dfed0ff7768a587563452570fa3631318a660e9b3928d2c1db04c0`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `d7f24924d08b6f042b213c8626db2523b4564bbb47e3d38a26040b3c73d38017`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `0c7561a22a04c54b01c8ae7ce475b809c4b85a5b053098974c2af8cb71f65ee2`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SpectralEulerProduct.lean`: SHA-256 `0b4f997e0256fe8678c903ebbdbddbc0a1fe56d68a8ace321d065fcbcf29aae5`.
+- `Extension/Dubon2026/SpectralEulerLogDerivative.lean`: SHA-256 `fa1ed46581bacb806595fe29b0027b91d0c25a5522ab6445b53a6dc901501615`.
+- `Extension/Dubon2026/PrimitiveSymmetricLFunction.lean`: SHA-256 `64c0f21eba674e67b0c0fbd9aa52abbd317e5f24b81d48c39c56e20dc5cc9da1`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Unconditional order-one Euler normalization and finite ramified-factor verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 634 production modules, 252 exact consumers, 3,009 explicit registrations and 5,278 exhaustive theorem dependency checks. All sixteen linters passed across 3,564 declarations plus 2,346 generated declarations in both paper audit executions. Initial inventory passed with 741 retained files, 1,205 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Four modules and three exact consumers prove, without Deligne or any new arithmetic assumption, absolute convergence, holomorphy and nonvanishing of the genuine first-order spectral Euler product on Re(s)>1. Its exact identity with the original cusp coefficient L-series and the finite ramified denominator product is proved by genuine prime-indexed product convergence. The original cusp L-series is nonzero there. The actual bad-prime power law and previously proved linear coefficient-energy bound give |lambda_f(p)|^2 <= p at ramified primes. Hence the finite correction is entire and nonzero on Re(s)>1/2, and the nonvanishing continuation requirements for the actual incomplete order-one product and original L-series on Re(s)>=1 are equivalent.
+
+Neither boundary continuation/nonvanishing itself nor the higher symmetric-power arithmetic inputs are supplied. Genuine good-prime Deligne purity, automorphic/Galois constructions, symmetric-power automorphy/nonvanishing and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; DUB-01–16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics, without weakening a target or hiding an assumption.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_143918.log](../../logs/foundation_freeze_20261007_143918.log), SHA-256 `a68b3e97c8b8c4a0f60dce97595bc5006a620dc32aee44e5a27f69637288c63b`.
+- [foundation_freeze_20261007_143918.json](../../logs/foundation_freeze_20261007_143918.json), SHA-256 `598f946d5946ec0738b9e091f4ad7e7c7bafcbce1a168ff9618bd68ee215bc4c`.
+- [dubon-build-20261007-144242-175.log](logs/dubon-build-20261007-144242-175.log), SHA-256 `1e04e09f83a821341879e94a0d5d41526fb3adce5b110a729744f9405acbd586`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `ee819292035cf07daf0e98316be813c8b41c4ef8d832113fb60ec87eeb44b6fb`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `f31bcd9e06ec12b6bad5e2c9481bdbed1a438b586eeaa4db8423f7ede4609d77`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `cc58d4a5cc84800b3fd65f87d27a4d8296f384ffb5f82338b066ff295584b0c9`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SpectralEulerHasProd.lean`: SHA-256 `b1eb89e062230d681072c97e6807d1a8199bcb689502f8e49db59b8bd92793da`.
+- `Extension/Dubon2026/PrimitiveFirstSpectralConvergence.lean`: SHA-256 `5eb025bfd6e7125bfd18979883e259d99bfee69b6473323a4d3ee297fdc4095a`.
+- `Extension/Dubon2026/PrimitiveFirstSymmetricL.lean`: SHA-256 `1db016d8124afd32821582bd20c913dbae2386121469cb0c1ee9278295ca6cf7`.
+- `Extension/Dubon2026/PrimitiveRamifiedBounds.lean`: SHA-256 `fac829437a08b2027f216348c96d3b076ae4093e11142ba2ef2505c2928b6811`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual entire cusp L-function and first symmetric Euler continuation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 638 production modules, 255 exact consumers, 3,026 explicit registrations and 5,309 exhaustive theorem dependency checks. All sixteen linters passed across 3,585 declarations plus 2,360 generated declarations in both paper audit executions. Initial inventory passed with 745 retained files, 1,220 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Four modules and three exact consumers construct a genuine strong Mellin functional-equation pair from the original cusp values f(iy), their actual modular S-transform and proved rapid decay. Pinned Mathlib then proves that the literal Mellin integral converges everywhere and is entire. The actual Fourier expansion, absolute coefficient convergence, one-Gamma Mellin identity and exact half-weight shift identify the original normalized cusp L-series. Removing the exact Gamma and exponential factors constructs its entire continuation. The true finite ramified correction yields an entire continuation of the actual first-order incomplete symmetric Euler product.
+
+The order-one holomorphic-continuation obligation is now proved, without Deligne or a new arithmetic hypothesis. Its nonvanishing on Re(s)=1 remains separate and unproved. Higher symmetric-power continuation and nonvanishing, genuine good-prime Deligne purity, automorphic/Galois constructions and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; DUB-01–16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics, without weakening a target or hiding an assumption.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_145302.log](../../logs/foundation_freeze_20261007_145302.log), SHA-256 `4d57997948b2126df528ef0c85ade4511c6ce0a27fdd87541151a317a0bb09b4`.
+- [foundation_freeze_20261007_145302.json](../../logs/foundation_freeze_20261007_145302.json), SHA-256 `1199f41313a133ec4c1ad431e2e3d115cd6bd0ee39e66ec63b41a5d58488af3b`.
+- [dubon-build-20261007-145619-459.log](logs/dubon-build-20261007-145619-459.log), SHA-256 `dfca17ffd2b2c8f263a0ea28e1e858a26c4d13e1e7d7982318417e770204149e`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `66751ca301be5781665fce2e490eb2d00ef60c18ed8973c8bdf489e5264bf794`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `5fc5471898a66ed5706c56ea52d0e4c84768b7e6d48770574b336a9674f29063`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `8cc47d462b5d2886024a92b04672457609b812e038ff38b1b26798cc559cfa18`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/CuspVerticalProfile.lean`: SHA-256 `081eff2cbe5fc242bef206cbf885530c99b0c56fd412f06f23ba454d33549cc0`.
+- `Extension/Dubon2026/CuspMellinFEPair.lean`: SHA-256 `9f1f607ae146d0b040e6ef99091e49e9589b2db79f37d7104386da6d24e47f1f`.
+- `Extension/Dubon2026/CuspCoefficientMellin.lean`: SHA-256 `5aaf55682f7f3105206c5e5d0bcc050924c0c96beceaf612fa058a65395472af`.
+- `Extension/Dubon2026/CuspEntireLFunction.lean`: SHA-256 `bb79b0a4b28fbde72205515e9f96791d58645fa7be61955d415bbe3a874597e3`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual symmetric-square Rankin identity, continuation and nonzero value at one verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 648 production modules, 260 exact consumers, 3,074 explicit registrations and 5,369 exhaustive theorem dependency checks. All sixteen linters passed across 3,636 declarations plus 2,372 generated declarations in both paper audit executions. Initial inventory passed with 755 retained files, 1,241 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Ten modules and five exact consumers prove the actual cubic local Rankin identity, genuine symmetric-square Euler convergence and nonvanishing on Re(s)>1, and the exact global identity with the original square series, principal-character factors and finite ramified correction. The genuine Rankin pole numerator and the pinned principal pole numerator construct a holomorphic continuation of the actual second symmetric Euler product across Re(s)=1. Consecutive square partial sums in the already proved three-fifths remainder give the genuine individual coefficient bound. The exact ramified power law removes the constant, proving |lambda_f(p)|^2 <= p^(3/5). The finite correction is therefore nonzero on Re(s)>3/5. Positive Petersson residue gives the exact nonzero value of the actual symmetric-square continuation at one.
+
+These proofs use no Deligne or new arithmetic assumption. Boundary nonvanishing at other points for orders one and two remains separate. Higher-order continuation and nonvanishing, actual good-prime Deligne purity, automorphic/Galois constructions and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; DUB-01–16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_151630.log](../../logs/foundation_freeze_20261007_151630.log), SHA-256 `587dd09c38d3e58f7f7e02f4f60dded99eb447f949e2ecbfe34f157094da6cee`.
+- [foundation_freeze_20261007_151630.json](../../logs/foundation_freeze_20261007_151630.json), SHA-256 `e65c6e63f5f2014f2dfb2a29011c3a20bdc2dedaaf4b7c500abb0bcc0655a726`.
+- [dubon-build-20261007-151912-092.log](logs/dubon-build-20261007-151912-092.log), SHA-256 `be266f3a860a0ce1fe5b3170f6c262a953e941f3f7fc3d97c1bbed3133f5c9f4`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `9fc49cff7e428971871959bc0b3d5059cd391423e21a3da2e440198a9f1d2e50`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `db4c5124b673f0aaec92d4bc5da32c0b7943afda5532cfed7497b233604a2440`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `2647421c3af0e5a6a9541885bbc78919c2a114a45a1f970890316f39623f1428`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/ThirdOrderRecurrenceSeries.lean`: SHA-256 `5b90435bdbf8dace65f15d4adaa03e0a3fda8794d37ac886fa4e1619f1246cc0`.
+- `Extension/Dubon2026/PrimitiveSecondSpectralConvergence.lean`: SHA-256 `a680549f1bbd18cb86c58602204f4c065ccab5c1e57223ed981bf384f1750a10`.
+- `Extension/Dubon2026/PrimitiveSquareEulerFactors.lean`: SHA-256 `d8a5f89da8d8b4bd766964a9f52c6e90ff13795c1462c85731e049272352c41f`.
+- `Extension/Dubon2026/PrimitiveSecondSymmetricL.lean`: SHA-256 `ad61ec8df205d7a15f216c3e3d508c253c40583c00154eb81903c30cf03ea5ce`.
+- `Extension/Dubon2026/PrimitiveSquareEulerProduct.lean`: SHA-256 `154a864d09c3d3800d9d575bbb6f5f2d0f7d0a7acc42f0e16787aebeaf2721e7`.
+- `Extension/Dubon2026/PrimitiveSquareIncompleteProduct.lean`: SHA-256 `2f35930d3057692888aa82c24596ace78a877d8e9cc7dc123282089b9039f989`.
+- `Extension/Dubon2026/PrimitiveSecondRankinIdentity.lean`: SHA-256 `8e61f939da45a6376030817331a0e683aa78262bbb9724acd08c56b7455589e0`.
+- `Extension/Dubon2026/PrimitiveSecondContinuation.lean`: SHA-256 `3dd194b896753bf264bf118aa16d51c3c6869bea33d782bc6ef82ac6f124b27c`.
+- `Extension/Dubon2026/CuspPointwiseRankinBound.lean`: SHA-256 `c252b27eb4f067b6fcf4fe106d158e1c91ceea18969a22255b161838cff403ac`.
+- `Extension/Dubon2026/PrimitiveSecondValueOne.lean`: SHA-256 `4a02f6d8884476c00f2dfa45bda44c45c8e50b34798b8bec0989bd0b4aa26aa6`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual symmetric-square holomorphic nonvanishing continuation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 656 production modules, 264 exact consumers, 3,111 explicit registrations and 5,420 exhaustive theorem dependency checks. All sixteen linters passed across 3,675 declarations plus 2,386 generated declarations in both paper audit executions. Initial inventory passed with 763 retained files, 1,260 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Eight modules and four exact consumers prove quantitative bounds for both actual Satake roots, identify the real nonnegative power traces of the genuine Rankin tensor roots, and establish the finite logarithmic and global three-four-one Euler inequalities. The actual Rankin simple-pole continuation is therefore nonzero at every nonreal point of Re(s)=1. Horizontal continuity identifies its entire numerator with the original principal-factor Rankin pole numerator on the closed half-plane. The earlier exact ramified correction and value at one then yield a holomorphic nonvanishing continuation of the literal second symmetric Euler product throughout Re(s)>=1.
+
+The order-two continuation/nonvanishing input is now proved without Deligne or an added arithmetic hypothesis. Order-one boundary nonvanishing, higher-order continuation/nonvanishing, actual good-prime Deligne purity, automorphic/Galois constructions and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; DUB-01–16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_153619.log](../../logs/foundation_freeze_20261007_153619.log), SHA-256 `ac90587b78f88ad75756e0c01c8ae39a21af8905135fa3c371c6dba55e4befdf`.
+- [foundation_freeze_20261007_153619.json](../../logs/foundation_freeze_20261007_153619.json), SHA-256 `500e3b6f841c6cafef4e926f4771377f2c95d2f528709e76ed550ccf4f13512e`.
+- [dubon-build-20261007-153859-734.log](logs/dubon-build-20261007-153859-734.log), SHA-256 `a6fb352be518aae6dcb43e562d45bc2871c89013dfa153ed6b8726fe62fabaee`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `204ec624c653701df08d3670247d6d38b4d3c2d692cee4b6764a1a27f9449ee6`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `7457463fd6a2ed3942be82f900233c872186be7b313d8103af5b30830fc303ba`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `13897a37ba1680a59eeaa32be2f6037c149b2e8fa85ed9272b7de0a55fbab127`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RankinSatakeBounds.lean`: SHA-256 `4506c403c84d28e10efcce002f6972767554975fa8884791673b977c43bbebc3`.
+- `Extension/Dubon2026/RankinSpectralTraces.lean`: SHA-256 `1fae97c6614e02707d47b93db63a8147ac9cfbae544711febb5219ab1f38e870`.
+- `Extension/Dubon2026/EulerBoundaryNonvanishing.lean`: SHA-256 `0674751de0a26036942c5965cb9f8dfc42992bdc9b1962f553086b52ff13e88c`.
+- `Extension/Dubon2026/FiniteSpectralLog.lean`: SHA-256 `ed0426d8f06207fbf256556e23cff8c97f8a9887f70a1fe7e407376db6c89f9f`.
+- `Extension/Dubon2026/FiniteSpectralPositivity.lean`: SHA-256 `2ca2740b82c48d614665f58c94e3e18e0699e48e2a327c614dbb64daeb6cdbb3`.
+- `Extension/Dubon2026/RankinSpectralEuler.lean`: SHA-256 `1ba2aaacd8b3126ad36311b48d21abea5480c299a7d6813a08bd228062cd3906`.
+- `Extension/Dubon2026/RankinEulerPositivity.lean`: SHA-256 `672444f4721d178a92fe847ca067e12249e3fa7037377a6e03612fdc37bb0736`.
+- `Extension/Dubon2026/RankinBoundaryNonvanishing.lean`: SHA-256 `3ee8ae8881690429cbeb12c6827a686e209802464428c2244f8a655660214bed`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual first symmetric nonreal boundary nonvanishing verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 664 production modules, 267 exact consumers, 3,137 explicit registrations and 5,475 exhaustive theorem dependency checks. All sixteen linters passed across 3,704 declarations plus 2,415 generated declarations in both paper audit executions. Initial inventory passed with 771 retained files, 1,279 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Eight modules and three exact consumers prove the actual mixed Rankin/first symmetric Euler-product inequality from genuine tensor power traces, and use the actual Rankin/principal pole bounds to exclude every nonreal boundary zero of the first symmetric continuation. The literal first symmetric Euler function therefore has an entire continuation, agreeing on Re(s)>1 and nonzero on Re(s)>=1 except possibly at s=1, without Deligne. Its real Gamma-normalized trivial zero is proved. Under a hypothetical zero at one, the actual divided-difference product is entire, equals the genuine mixed Euler product on Re(s)>1 and retains that trivial zero. This is a conditional contradiction setup, not a proof of nonvanishing at one.
+
+Order-two holomorphic nonvanishing continuation is already proved. Order-one nonvanishing at one, higher-order continuation/nonvanishing, actual good-prime Deligne purity and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; DUB-01–16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_155359.log](../../logs/foundation_freeze_20261007_155359.log), SHA-256 `51f85c78786491e46a5618f0e3f8c2ce78d4612f1d45f99d51a6ecd0060a6068`.
+- [foundation_freeze_20261007_155359.json](../../logs/foundation_freeze_20261007_155359.json), SHA-256 `6e3cca89f4b5c3f24da46a382f8ab5e6929f499e085c31a49ad608329104b6a4`.
+- [dubon-build-20261007-155903-541.log](logs/dubon-build-20261007-155903-541.log), SHA-256 `4aa446dbd3b37a78798a401a805e09bb6ea6a95e8edd87382fc1ada725dff299`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `ca0a65c8a4da59bf615ae3a4b9061e15cc7687f63b96e3213fa9432759c7573b`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `61601d6dac2ff10cb210d7c21c093b2d56cf6af69b057843bc096a8ab911f9aa`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `964404fb3bc6756d2d72a8bb0c0e6dced1d8bec5e35b79b54a0a5af4597577e0`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/MixedSpectralPositivity.lean`: SHA-256 `de19340432c4a73ce10935d332135a568912d1833956f81091600fb38f78d3ca`.
+- `Extension/Dubon2026/PrimitiveFirstContinuation.lean`: SHA-256 `031162008328901110e5c2f5eae8ee00aa39adf85ec310045be772f277a58556`.
+- `Extension/Dubon2026/FirstRankinPoleCancellation.lean`: SHA-256 `066e641d22b621da6795764a03d977764f9ae776ba5a3a05ac81aa4c1b7b6d85`.
+- `Extension/Dubon2026/MixedSpectralLogInequality.lean`: SHA-256 `d33f5c49723ff015b9004a22947392948e547f9710ec96fa4e8dc956e593c536`.
+- `Extension/Dubon2026/MixedSpectralEulerInequality.lean`: SHA-256 `6d246ff50c246ceac4397f092cf8385270455302b6f381280fc7db6daf7423a2`.
+- `Extension/Dubon2026/PrimitiveMixedEulerLocal.lean`: SHA-256 `901fceadb3f2ea34df6dd33f3dc05f9eb00155154f13c3e9c2a6363811a69a17`.
+- `Extension/Dubon2026/PrimitiveMixedEulerGlobal.lean`: SHA-256 `e0b3ea141aacba9de8f26618187531066b39eeb8ea6d385c958fb8467ad90186`.
+- `Extension/Dubon2026/PrimitiveFirstBoundary.lean`: SHA-256 `9109c7566c3e4e553190065668cbd07f0f816df4b0191b32c9ef19b39c9ac40e`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual first symmetric full closed-half-plane nonvanishing verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 671 production modules, 271 exact consumers, 3,180 explicit registrations and 5,545 exhaustive theorem dependency checks. All sixteen linters passed across 3,755 declarations plus 2,442 generated declarations in both paper audit executions. Initial inventory passed with 778 retained files, 1,297 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+The earlier foundation run `foundation_freeze_20261007_161650.log` returned exit 1 because the raw integrity scanner matched the English verb in a doc comment. The comment was reworded; no proof tactic or checker was changed. The retained log records that failed attempt. The subsequent foundation and paper runs above are the accepted verification.
+
+Seven modules and four exact consumers construct the true geometric Euler coefficients of the nine augmented tensor roots, prove their nonnegativity through Newton's recurrence, assemble the literal multiplicative Dirichlet coefficients, and establish a polynomial bound giving far-right convergence. Exact local and global identities identify that L-series with the genuine principal/Rankin/first symmetric Euler product including its finite ramified correction. A hypothetical first symmetric zero at one would make the actual divided-difference product entire with a real trivial zero. Pinned Mathlib's proved positivity theorem for the constructed nonnegative coefficient series excludes this possibility. Thus the actual entire first symmetric continuation is nonzero on all of Re(s)>=1, without Deligne.
+
+Orders one and two now have proved holomorphic nonvanishing continuations. The genuine Sato–Tate reduction consumes continuations only from order three onward, with the actual good-prime coefficient bound still explicit. Higher-order continuation/nonvanishing, actual Deligne purity and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; DUB-01–16 remain accepted. Focused source/consumer builds and both full verifiers passed with zero diagnostics.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_161939.log](../../logs/foundation_freeze_20261007_161939.log), SHA-256 `d9a6ea88b66546646d011ce7bc3c1fdbea8408a4856486c0ba0d924903ead525`.
+- [foundation_freeze_20261007_161939.json](../../logs/foundation_freeze_20261007_161939.json), SHA-256 `0c5fb7c9c529548edf56d57ece3f8e14afa5bea31595413237ab857e983368af`.
+- [dubon-build-20261007-162236-474.log](logs/dubon-build-20261007-162236-474.log), SHA-256 `7388594baf58cc4f82c94660c3676c3c64ea2f56124e000fa135eb6d175d780e`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `eb9b47e34881350673666f85bee012b89dc3c19940d7ce720cbc1ec71a41ce7d`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `48da1989fb5d1fb76d3ed9e3d9b5711fd9a52a4a984763b0726a7f64e32913a4`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `b06a5ea2bf0ed2e1ba844b088aaba184f54e1990301c7fc539c616f389a7c591`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SpectralFormalSeries.lean`: SHA-256 `8acbd6560e566e1bef0e3abcf3ae2b240733299cdcb08071299334b6dca36b1e`.
+- `Extension/Dubon2026/SpectralFormalEvaluation.lean`: SHA-256 `f035fc72c5b153a25b2a0476a2b589f374ba3f39b47a43e4d155ab6d08de7584`.
+- `Extension/Dubon2026/PrimitiveAugmentedTensor.lean`: SHA-256 `75a2215f03e32508537f2c1d4e2620912376ddb9ad9803250e9d1e63e75e8fe6`.
+- `Extension/Dubon2026/EulerCoefficientAssembly.lean`: SHA-256 `e13b80e41e5d5f9543daadf697009d91b6e3875cc02634c9114dca3cd3fad4d9`.
+- `Extension/Dubon2026/PrimitiveAugmentedCoefficients.lean`: SHA-256 `e6f26f97e09095497aeecc7feddc7e079f3d56a35559100f485001e25d674e76`.
+- `Extension/Dubon2026/PrimitiveAugmentedEuler.lean`: SHA-256 `df870c8d2db4abc53510ca54e73ca47f3d12a5eade75757ecd4f41978e2ddf0f`.
+- `Extension/Dubon2026/PrimitiveFirstNonvanishing.lean`: SHA-256 `aad8f6fd917979c54e68847c12e4699c97a414fdefdc3a8f96ab30d8c8136f06`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual purity and Sato–Tate from higher continuation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 683 production modules, 277 exact consumers, 3,243 explicit registrations and 5,636 exhaustive theorem dependency checks. All sixteen linters passed across 3,824 declarations plus 2,470 generated declarations in both paper audit executions. Initial inventory passed with 790 retained files, 1,320 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Twelve modules and six exact consumers prove the genuine finite tensor decomposition, construct all actual nonnegative higher tensor coefficients and identify their original L-series with the actual even symmetric Euler products. The half-plane Taylor positivity argument proves convergence wherever the genuine continuation is holomorphic. The exact numerator-one identity excludes cancellation of local denominator zeros, and prime-power restriction bounds every original local root. Uniform bounds on all tensor powers force exact unit norm and therefore the true good-prime coefficient bound. Analytic uniqueness extends far-half-plane matching, and the already proved first/second continuations and genuine character/Tauberian deduction give weak Sato–Tate from higher nonvanishing continuation alone.
+
+This is a conditional arithmetic reduction with no separate Deligne premise. Higher continuations themselves are still explicit and unproved inputs for actual non-CM forms. Unconditional Deligne, Sato–Tate and the final modular application remain open. DUB-17–20 remain OPEN; DUB-01–16 remain accepted.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_165019.log](../../logs/foundation_freeze_20261007_165019.log), SHA-256 `85f884bae675aacb695126bea79975736f0eaf6eea8c699779083cac4b6f1881`.
+- [foundation_freeze_20261007_165019.json](../../logs/foundation_freeze_20261007_165019.json), SHA-256 `d2e70d8718ac7cdd00e207dc961c291581104f029d04b6d2fe603939cbac87e1`.
+- [dubon-build-20261007-165334-578.log](logs/dubon-build-20261007-165334-578.log), SHA-256 `ecb709f8892beead864d9d9148ccabf2f6d6678e4f1b9d702383f1a48c410ff3`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `93ffc3939f7276b21baedb3bf66b5cc129333ff8e7c88222f06a2731ec92644d`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `de3a9d8cc6f5bdd63841ada36489ea3cd1f10621630fe34de3668fda6fb609f9`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `4a9af82ec552e4b789a289fc61d6c874b50cd1ecda1bddf47096f04df773e674`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/SpectralEulerShift.lean`: SHA-256 `4c1d6ccd480653b052468c99c4229ca638c02dd3389be0c3134b240e54351375`.
+- `Extension/Dubon2026/PrimitiveHigherEulerConvergence.lean`: SHA-256 `9b92955feba0513a3aaba660721c1558c3b40f649f8e665c50b47fb84a4f8a9e`.
+- `Extension/Dubon2026/PositiveDirichletTails.lean`: SHA-256 `9579ec6866377cc70346f003687bc7c3d668275c4f62f2ddd7ee691664e7c8ca`.
+- `Extension/Dubon2026/PositiveDirichletHalfPlane.lean`: SHA-256 `101d8c21c320b8e6640012e575a8db2aa6f75a8cd3d15ea7a7772a2e1e72bca8`.
+- `Extension/Dubon2026/SatakeTensorDecomposition.lean`: SHA-256 `1a8710b73a2bf7eccbe242ff54e0f397564bb556f03fb6bf4e1cef3440bc24fa`.
+- `Extension/Dubon2026/SpectralDirichletCoefficients.lean`: SHA-256 `221ec041350178c18af54b96af3b3c1610c9d66fffb934a29e807024ed0591f3`.
+- `Extension/Dubon2026/PrimitiveHigherTensor.lean`: SHA-256 `b5d085da35b891ddf11f66111a08ee8e25a32a76f4fc68ccf11e612774e2f5bf`.
+- `Extension/Dubon2026/PrimitiveHigherTensorEuler.lean`: SHA-256 `4ffe5714284144f3e98854961ad72dc5b19c3b16d3ada39d98e1c8ebdcb56ea1`.
+- `Extension/Dubon2026/SpectralDenominatorConvergence.lean`: SHA-256 `f3292558a741b76ed5f0ae9b8d0120b6a31ef62cd5d846b975441d8c5b88d3d3`.
+- `Extension/Dubon2026/SpectralLocalConvergence.lean`: SHA-256 `08792457a28398448da5ba6096079ff4abce1dff3cabbca5b953027abd733ab5`.
+- `Extension/Dubon2026/PrimitivePurityFromContinuation.lean`: SHA-256 `73df02a8bf94b6a1afa0507ef90befa9608415f59cf724308730a783ddd5103a`.
+- `Extension/Dubon2026/PrimitiveHigherContinuationReduction.lean`: SHA-256 `df4493e6d44d3aa6403a6dab927260af7738b75f7639045721bfc024cb5f1827`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual higher boundary nonvanishing from entire continuation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 691 production modules, 281 exact consumers, 3,273 explicit registrations and 5,704 exhaustive theorem dependency checks. All sixteen linters passed across 3,859 declarations plus 2,508 generated declarations in both paper audit executions. Initial inventory passed with 798 retained files, 1,339 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Eight modules and four exact consumers construct the actual augmented tensor coefficients for every positive symmetric order, prove their nonnegativity and identify their original L-series with the principal/even-symmetric/original-symmetric product. A zero at one would cancel the two principal poles through the actual divided difference, producing an entire nonnegative-coefficient Dirichlet series with a genuine trivial zero at -2, which contradicts proved Dirichlet positivity. The literal mixed local and global Euler inequalities and the even-tensor simple-pole bound exclude nonreal boundary zeros. Together with the previous purity deduction, analytic uniqueness and character/Tauberian argument, an entire family of the actual positive-order symmetric continuations implies closed-half-plane nonvanishing and weak Sato–Tate.
+
+This is an alternate conditional arithmetic criterion. The entire continuation family itself is an explicit, unproved input, including global order-two entireness beyond the proved closed-half-plane second continuation. No independent purity or nonvanishing premise remains in this deduction. The earlier order-at-least-three holomorphic/nonvanishing criterion remains valid. Actual higher automorphic continuation, unconditional Deligne, Sato–Tate and the final modular application remain open. DUB-17–20 remain OPEN; DUB-01–16 remain accepted.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_170748.log](../../logs/foundation_freeze_20261007_170748.log), SHA-256 `de70014d4a64ca8ee111df5073971d6c4e247a6827ca72b049bcac915010ba44`.
+- [foundation_freeze_20261007_170748.json](../../logs/foundation_freeze_20261007_170748.json), SHA-256 `351c4a396a564ebc4915818fe31a15cccc9ed7dbcfc66da9a73ed836920664cc`.
+- [dubon-build-20261007-171036-505.log](logs/dubon-build-20261007-171036-505.log), SHA-256 `10e8680dc5c9df4d4816359247d3d3ec2a9d03ed2c13c70f4811a2c48609a3d3`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `a6d492b905c624deeb0e4f675af5bcf46f05f2c2d3f8bb3ec9f8a3e1b226c2ad`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `0cd849e65e171b20132014b688ea09f7af25c6ca4b843b30f51e8b3d87c06ab0`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `db69e27b24725f874fb6c94f823966ebe55064e96f8d5f5dc8ac1cfd75d72ac9`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/HigherAugmentedTensor.lean`: SHA-256 `2331dbf5efa195e24ca54149e2d015fef3408765eb09d91a2bf25fc87aa0c9ea`.
+- `Extension/Dubon2026/HigherAugmentedEuler.lean`: SHA-256 `c58327026b75e3998371d859ac73e3b94f2c60926bcee1ddedaeddbf87c48c5d`.
+- `Extension/Dubon2026/HigherPoleCancellation.lean`: SHA-256 `358cda7ca91cb01336289e1739815595ed789c77cd584f53b2d9fe084510bafd`.
+- `Extension/Dubon2026/HigherNonvanishingAtOne.lean`: SHA-256 `26362c3829c2cbf4bc90d414c6531a9b81652b2bc3ece6672c0dc43d1fbfd289`.
+- `Extension/Dubon2026/FiniteTensorEulerInequality.lean`: SHA-256 `ecf1ee5f590737d953c915a8b274136dda3b81b7ade17cbf8ce1b1a376a252fe`.
+- `Extension/Dubon2026/HigherMixedEuler.lean`: SHA-256 `2d09713674a44780884983ca34099f00f839bc948c3e27ed1226360f6aef8ccd`.
+- `Extension/Dubon2026/HigherBoundaryNonvanishing.lean`: SHA-256 `c39a73f49a53c6b11b4eed85207198c98150362388dd89bbff89aa3e9b0b03ec`.
+- `Extension/Dubon2026/HigherEntireCriterion.lean`: SHA-256 `7a04b82cf5db4814abcf6813ae74dbd10f25034348786bc61913e46c0b168446`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Original real-group lift, Whittaker and Hecke normalization verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 700 production modules, 287 exact consumers, 3,323 explicit registrations and 5,782 exhaustive theorem dependency checks. All sixteen linters passed across 3,918 declarations plus 2,536 generated declarations in both paper audit executions. Initial inventory passed with 807 retained files, 1,359 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Nine modules and six exact consumers construct the original real-group lift from actual slash translates and prove arithmetic left invariance, continuity, injectivity and the original Petersson pairing. The genuine compact stabilizer has a continuous unitary weight character and the original lift's compact orbit spans one line. Actual Fourier integrals recover the original coefficients, vanish at nonpositive modes and have the exact lambda(n)/sqrt(n) Whittaker normalization. Literal determinant-one affine representatives identify the real prime Hecke correspondence with the original normalized classical operator; the already proved all-index primitive theorem gives the actual normalized eigenvalue at every prime, including bad primes. The explicit Iwasawa decomposition is an actual homeomorphism with proved reconstruction of the original lift.
+
+These real-group entry and normalization bridges are proved for the actual original objects. The adelic automorphic representation and higher symmetric continuation family are still unproved, as are unconditional Deligne, non-CM Sato–Tate and the final modular application. The earlier conditional arithmetic criteria remain available. DUB-17–20 remain OPEN; DUB-01–16 remain accepted.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_173012.log](../../logs/foundation_freeze_20261007_173012.log), SHA-256 `3ceddfb2b4a1e275b228ffc22ce0747ee980dcf5893d0f513d88922b4b9f1c10`.
+- [foundation_freeze_20261007_173012.json](../../logs/foundation_freeze_20261007_173012.json), SHA-256 `0a0849745c7945ff9ddfd9630700efc0fed780b02025e5adc91ad56df28e6a35`.
+- [dubon-build-20261007-173319-853.log](logs/dubon-build-20261007-173319-853.log), SHA-256 `9e120c92290af3d83267e942be01af6630840958f7a62c7366794c54fd4bcb41`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `bb6f9d8ff3906e0fa806fad6d6b37226e4eb7b99a5c89973b88d266fce06dd35`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `b13cd0e4b63debc7d2271c46d6861a210dd5debbe92e44146dd0466a8af39add`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `8537983eb59c3525bce0b1eadd82ce3341ba0f4fc35ca6bfa84630a7ee40a30d`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RealAutomorphicLift.lean`: SHA-256 `379474fdc3d506fa10f1b514225d91df6a0db0730032efabeb2b9393c915d372`.
+- `Extension/Dubon2026/RealCompactWeight.lean`: SHA-256 `0cb0236d36678ec53c341545f77029fdfb83e28e7d8d1a9a21dc7148b2edb63f`.
+- `Extension/Dubon2026/CuspFourierCoefficients.lean`: SHA-256 `aab28d4ba378afeaa36a3f97823b44e4a726279866342f37e9d0c5627c9cb0b4`.
+- `Extension/Dubon2026/RealWhittakerCoefficients.lean`: SHA-256 `4bd3d752968cdb422985c5b914645fcb3a96f1a53441273833998a7a4b13686d`.
+- `Extension/Dubon2026/RealWhittakerNormalization.lean`: SHA-256 `c08a21fa03ea75012123da71195d40bfd6e6a8a9f5984abfcc072e1861425fc7`.
+- `Extension/Dubon2026/RealAffineLift.lean`: SHA-256 `c9d826d77372663aa6ceb8c0bc859ff1bf42c13c6198c2eacdf9efcbde770994`.
+- `Extension/Dubon2026/RealHeckeRepresentatives.lean`: SHA-256 `6bc14b26890b5dd330f9925f470b564890874d9c76d63a9c4472bff8c3d0919c`.
+- `Extension/Dubon2026/RealHeckeLift.lean`: SHA-256 `229e80d8b34555d2918a48c129b59cc91fbd29619b96138ac2f2d603054fb0c3`.
+- `Extension/Dubon2026/RealIwasawa.lean`: SHA-256 `606ff073f167643a0c30991ce031cb07ec742c96064d0259df8bb204dd191550`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual Haar measure, Petersson integral and cyclic L2 representation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 707 production modules, 291 exact consumers, 3,355 explicit registrations and 5,862 exhaustive theorem dependency checks. All sixteen linters passed across 3,970 declarations plus 2,573 generated declarations in both paper audit executions. Initial inventory passed with 814 retained files, 1,377 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Seven modules and four exact consumers prove the actual pushed Iwasawa measure is left and right Haar invariant. Explicit unipotent commutators, Weyl/diagonal words and Gauss decomposition prove triviality of every commutative SL(2,R) character and hence of the actual modular character. The original Petersson pairing equals the actual real-group integral over the full compact fiber above the projective Gamma0 base domain. Every vector in the literal span of original right translates is continuous, globally bounded, arithmetically left invariant and L2 on that finite-volume lifted region. For an original primitive eigenform, every such vector has the original normalized prime Hecke eigenvalues at every prime.
+
+These real-group measure and representation statements are proved for the actual original objects. The lifted projective base region is not asserted to be a fundamental domain for nonprojective Gamma0: the central quotient and unitary quotient representation remain open. The adelic automorphic representation and higher symmetric continuation family are still unproved, as are unconditional Deligne, non-CM Sato–Tate and the final modular application. The earlier conditional arithmetic criteria remain available. DUB-17–20 remain OPEN; DUB-01–16 remain accepted.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. The frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_180036.log](../../logs/foundation_freeze_20261007_180036.log), SHA-256 `0427a843bb1d2b67c2d88d83a790875063e91160eda0a7d743eae90bfde59484`.
+- [foundation_freeze_20261007_180036.json](../../logs/foundation_freeze_20261007_180036.json), SHA-256 `91db80ad22c7887bf56318e410d9d85df1795be31692ede5358f6949e2f8e269`.
+- [dubon-build-20261007-180336-082.log](logs/dubon-build-20261007-180336-082.log), SHA-256 `2272a58d4835287277e03647491bca84273bc2fa35457f73a2fdfc3ecee77be5`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `b15c3725a4fc1d10203fba3c6cb2521b2fd5ae1c0151d881a7c57f0291d3b499`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `d949cd6b65177e891793007ac0033e344500fb9df304ea604196865232c40dfd`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `798b6761e7ea7480a2c4167c1aeac2382d1e37456ad2749188828555e2c6d971`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RealIwasawaMeasure.lean`: SHA-256 `859510687f14f9c250056f5a28e33980ac8153d2d5c1cf8cf52b4f048c3c4870`.
+- `Extension/Dubon2026/RealLiftPetersson.lean`: SHA-256 `6d8d154d1c93a88b1c1fb0cfcb564178d5c94ebf6bb1f1c6b21a2c566cf83927`.
+- `Extension/Dubon2026/RealCyclicRepresentation.lean`: SHA-256 `8ecdfd87f3cc4b3c1a07e8083c3b48e4a473313371c15608e70f59d517dceac7`.
+- `Extension/Dubon2026/RealSL2Generators.lean`: SHA-256 `b7249bea5d3c08088c5b9f44da65d4bf4ffe6ea6fc8b721f2979c41744a88d72`.
+- `Extension/Dubon2026/RealSL2Characters.lean`: SHA-256 `23eff3647a3999a8c93c7bbe9a7331e802132d9c4bcad2ba070e1f1e85ea3a89`.
+- `Extension/Dubon2026/RealGroupUnimodular.lean`: SHA-256 `9a9f8f6e32015e4a0c9eb6d160619248ec1e4edb05d4ffe8124120f0ba1eecd7`.
+- `Extension/Dubon2026/RealCyclicL2.lean`: SHA-256 `562d9217cf147633563483907e373bad21643a76ddf11773974fddc0222daccd`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+The earlier 707-module attempt in [dubon-build-20261007-175742-532.log](logs/dubon-build-20261007-175742-532.log) failed the naming linter for `realSpecialLinear_measurableSpace`. The instance was renamed `realSpecialLinearMeasurableSpace`; the subsequent foundation and paper runs recorded above passed all gates for the implemented scope. No linter was disabled.
+
+
+### True projective arithmetic quotient and faithful unitary realization verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 715 production modules, 295 exact consumers, 3,401 explicit registrations and 5,955 exhaustive theorem dependency checks. All sixteen linters passed across 4,034 declarations plus 2,614 generated declarations in both paper audit executions. Initial inventory passed with 822 retained files, 1,397 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Eight modules and four exact consumers prove the actual central quotient, its proper projection and its left/right Haar measure, with exact hyperbolic orbit pushforward. The original arithmetic action gives a genuine finite-volume projective group fundamental domain. Every vector in the original cyclic span descends continuously and invariantly to an actual L2 function; the linear realization is injective. The quotient pairing has the exact original Petersson normalization. The original right action factors through the true central quotient and preserves the actual L2 inner product.
+
+These are unconditional statements about the original representation and its faithful algebraic unitary realization. Completion and strong continuity, the adelic cuspidal representation and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_182043.log](../../logs/foundation_freeze_20261007_182043.log), SHA-256 `9b81c2908484c868576fdc42c7298549da15e2caecc4d98820f62eff941cf309`.
+- [foundation_freeze_20261007_182043.json](../../logs/foundation_freeze_20261007_182043.json), SHA-256 `6fdc00a6ee93cbf1f6a7cd71a9fbf5952de8e365c37e097dfed263c0c07b6aa7`.
+- [dubon-build-20261007-182323-370.log](logs/dubon-build-20261007-182323-370.log), SHA-256 `e76c97e3588b20ddef9180f8da46c4154a8d66a4caf7ae976a7a9d7c04420800`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `05cfb2b0bb9b9d0fa3c67f1cf809d7ddc7889942882fdaec95bee72c7fb43e4c`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `b0196a4626c71656476f7e8450aca212a81e9667051dc80563a994fcad0bc88a`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `73dcc21fbec33b58fba35fbd92c94ee2c61250a15b7de22ca3d14e67608ab459`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RealCentralQuotient.lean`: SHA-256 `9757904b2ebe9262b32fa8eb74ed97bad923163ad0c99a7620c9f4c9c80789f7`.
+- `Extension/Dubon2026/RealProjectiveOrbit.lean`: SHA-256 `5a5c8ec0d5b47bb7cedfa12f734755f1f674d593484242f90a5e763707635eb8`.
+- `Extension/Dubon2026/RealProjectiveArithmetic.lean`: SHA-256 `44e60aab31accd46d408c527ed2a9344e9f151c8c5a5cfaadf1aa17771aef134`.
+- `Extension/Dubon2026/RealProjectiveCyclic.lean`: SHA-256 `8dce584f7f8f1d0b500214a9ab2d0606d4f507d03cdf4c3bdc68f5775f2f4cc6`.
+- `Extension/Dubon2026/RealProjectivePairing.lean`: SHA-256 `0fa87a3fb075caa5442527f78681a489076d1ce7d3b47803c667d6748a751c92`.
+- `Extension/Dubon2026/RealProjectivePetersson.lean`: SHA-256 `dcb4366ffcebcb73a539ff109cc3a049b51b991eca02e5c41f2747b4e47b60ab`.
+- `Extension/Dubon2026/RealProjectiveL2Embedding.lean`: SHA-256 `83f3f904722e740106885149b4d290202a2e46381462dcd26aabc871450b6277`.
+- `Extension/Dubon2026/RealProjectiveRepresentation.lean`: SHA-256 `a1953abb60f4ba2ec70b9e996cffc1318bda7d03681235458ec167c2449d5fd6`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Completed original Hilbert representation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 718 production modules, 297 exact consumers, 3,419 explicit registrations and 5,992 exhaustive theorem dependency checks. All sixteen linters passed across 4,060 declarations plus 2,633 generated declarations in both paper audit executions. Initial inventory passed with 825 retained files, 1,411 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Three modules and two exact consumers prove strong continuity of the original cyclic L2 representation and construct its actual Hilbert completion. Every completed operator preserves the genuine norm and inner product, obeys the original group law and acts strongly continuously on every completed vector. The literal original cyclic vectors embed injectively with dense image and intertwine the exact original representation.
+
+These are unconditional statements about the original representation and its actual strongly continuous unitary Hilbert completion. Adelic cuspidal globalization, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_184546.log](../../logs/foundation_freeze_20261007_184546.log), SHA-256 `b9d2baf00d7f3d9802eca776c4be5ca154689f9672a1470f7f0f250d8927a8f8`.
+- [foundation_freeze_20261007_184546.json](../../logs/foundation_freeze_20261007_184546.json), SHA-256 `2d5ad6a9db90d76d3639fdfb3237e62e2c0e5bcaed876a56381d7b6da978de29`.
+- [dubon-build-20261007-184822-390.log](logs/dubon-build-20261007-184822-390.log), SHA-256 `2965f5ae2161709cc18fc4ff6af03395f0fda810f789cb38bd10908443696bbb`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `d8ccefde7b05f0ec0be9f019aaf13e34774365cff91e74be30839f7bab100f6d`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `04039da324241d78e81f5b65b52da5c715db0fe6ead532ed6dfd81d4c620dece`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `4fbc3b5f44dc9cc039119d485060b22d474c67f214034d49dd2fb1d7d8dabea8`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RealProjectiveStrongContinuity.lean`: SHA-256 `6a9839c791f1736267186f721ab22d52415537df7fed43a912f89c0b54676b31`.
+- `Extension/Dubon2026/RealProjectiveHilbertRange.lean`: SHA-256 `a53894c357582663f1cd36bc4c3823b12fc9557177a2b2d5b4bc20e3fd6b87e2`.
+- `Extension/Dubon2026/RealProjectiveHilbertCompletion.lean`: SHA-256 `c4d58d3044197011871a91b37fbb07f9726f61911e8c85c28930ddb32e90e557`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Original quotient L2 closure and integral cusp average verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 723 production modules, 301 exact consumers, 3,443 explicit registrations and 6,048 exhaustive theorem dependency checks. All sixteen linters passed across 4,087 declarations plus 2,665 generated declarations in both paper audit executions. Initial inventory passed with 830 retained files, 1,427 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Five modules and four exact consumers identify the completed representation isometrically with the exact closure of the original cyclic quotient L2 range. The original generator retains its Petersson norm, nonzero value for every nonzero form, compact weight character and dense cyclic span. Genuine Fourier extraction and periodic integration prove zero averages for every positive strict period and offset. Actual principal-level slash transforms prove zero common-level-Q unipotent averages at every integral cusp for every original continuous algebraic cyclic vector.
+
+These are unconditional statements about the original quotient realization, original generator and actual continuous cyclic functions. No pointwise cusp period is asserted for arbitrary completed L2 equivalence classes. Adelic cuspidal globalization, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_190354.log](../../logs/foundation_freeze_20261007_190354.log), SHA-256 `5ca3f0edd62c40b209eb012fb5abec2a835b25d1e920f3f7639ab373eb8dcb53`.
+- [foundation_freeze_20261007_190354.json](../../logs/foundation_freeze_20261007_190354.json), SHA-256 `926697e69ce3a529803ab9003fd72e0f7ef90f61a2026acfe245283e54dab456`.
+- [dubon-build-20261007-190633-381.log](logs/dubon-build-20261007-190633-381.log), SHA-256 `ef660e1d36c250d226b5ea63548d14bec918a081334cc598c9d46913f0be72a1`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `c8cd0c7d29d94490ab7a99832726e8fd9c18f6b54186c8c6e1fe32e11cf73d8f`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `931634ccba31ae94de191f22f61061342cfd24fa3bcac30ebecb4f095b7b2add`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `7e833ebd3edb2055eb7420b5a3c10d8ef29a5fb12869d77d0461a8a430293dff`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RealProjectiveHilbertL2.lean`: SHA-256 `5db885c07ae7de9ab368c187d8b909f62b4123b8c33a20ef58afffaba1644aab`.
+- `Extension/Dubon2026/CuspPeriodFourierCoefficients.lean`: SHA-256 `9cb41e878e9804c513a8be7feebb5c45262dc757772ef9d75a114db03a0bddec`.
+- `Extension/Dubon2026/RealUnipotentCuspPeriod.lean`: SHA-256 `2f409ee7fe704bcb4dac4cf2af660435b0ae9f6c5a2f9d292e4cca7da08b996a`.
+- `Extension/Dubon2026/RealCyclicCuspidal.lean`: SHA-256 `764652e4a53860672298a94139751525f240379ecf96ecd583322a8dd36347ef`.
+- `Extension/Dubon2026/RealProjectiveHilbertGenerator.lean`: SHA-256 `3dceb33b354b54a35ff43b4553cff2fee7a8f4f6502b4368a55e3745b8309ad6`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual positive-real unitary normalization and compact p-adic product approximation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 729 production modules, 305 exact consumers, 3,479 explicit registrations and 6,147 exhaustive theorem dependency checks. All sixteen linters passed across 4,128 declarations plus 2,744 generated declarations in both paper audit executions. Initial inventory passed with 836 retained files, 1,444 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Six modules and four exact consumers construct the genuine continuous positive-determinant normalization, prove the exact unitary correction to the pinned slash convention, retain the original function, Petersson density and arithmetic action, and extend the original Hilbert representation with trivial real scalar character. Reusing the existing integral SL2 reduction theorem and pinned Chinese remaindering proves actual simultaneous prime-power p-adic approximation by one integral determinant-one matrix and density in products of distinct p-adic compact groups.
+
+These are unconditional statements about the original positive-real representation and genuine p-adic compact matrix groups. Compact-product integral density is not yet rational adelic strong approximation. Adelic cuspidal globalization, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_192918.log](../../logs/foundation_freeze_20261007_192918.log), SHA-256 `7e3be1a5e05c382e5e82dfb835e39771cdc3328035056b3650fef2ed7b711a63`.
+- [foundation_freeze_20261007_192918.json](../../logs/foundation_freeze_20261007_192918.json), SHA-256 `4d58aa763f098729da143b11c220277174ab051d40f9add3bc8cd5b36fb9c56f`.
+- [dubon-build-20261007-193157-449.log](logs/dubon-build-20261007-193157-449.log), SHA-256 `9069c48b202e75a3d9802579d4f1205f0db3e5acd9ef77f60a08e08ee924b6bb`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `02064c86f0023cad8fbcb69aaf8750d20e51060949042fdaeea974cf0cd176e3`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `1eb95a06a20beff12fe167557d8196e4e7dca948cbaff6c26d06cd059631e2d9`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `f1dfdc23cfd4b38381d22cd2d1011a9696839597e1789970a2d9aff4019cf0c3`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RealPositiveNormalize.lean`: SHA-256 `952c1d39a2bd4125c9348f2e9d7fd9ba51e2df1e7113c07353f6a84c924d7bd4`.
+- `Extension/Dubon2026/RealPositiveUnitaryLift.lean`: SHA-256 `7e9473006265b451757b8973eb7316db95d2d477b3dcdfd6328174226d3fbdab`.
+- `Extension/Dubon2026/RealPositiveCentral.lean`: SHA-256 `b3bbfa0d5f4fb5a2f74fdf0896c64d164f9f808d3ca3c508f9fe98eb2e0f6d53`.
+- `Extension/Dubon2026/PadicIntegralSL2Density.lean`: SHA-256 `9e927c9ba2e003b070f413609b44dfd0396855a31acfe18b37c39ae389fa750f`.
+- `Extension/Dubon2026/FinitePadicSL2Approximation.lean`: SHA-256 `773e1365e1d7522c911ae70df4432931bb6708209d8e559cc4d556a0e1f49d1d`.
+- `Extension/Dubon2026/IntegralSL2PrimeProductDensity.lean`: SHA-256 `4e870f6477eb4ec987776b529cce20a5f17e235b21f7350534ebabd0e6390a43`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual canonical finite-adele and rational SL2 strong approximation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 734 production modules, 308 exact consumers, 3,502 explicit registrations and 6,192 exhaustive theorem dependency checks. All sixteen linters passed across 4,158 declarations plus 2,765 generated declarations in both paper audit executions. Initial inventory passed with 841 retained files, 1,460 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Five modules and three exact consumers transport original integral SL2 density to canonical local completions, prove integer density in their actual integral product, and construct one nonzero integer clearing every denominator of a genuine finite adele. This proves density of the actual rational diagonal. Literal elementary matrices and an explicit zero-or-one unit pivot then prove rational SL2 density and exact factorization through every open subgroup of the canonical finite adelic group.
+
+These are unconditional approximation statements about the original pinned adele objects. Specific level-subgroup and classical intersection bridges, adelic cuspidal globalization, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_194751.log](../../logs/foundation_freeze_20261007_194751.log), SHA-256 `6b390912583a4a2018347edf3298e96fb9a672c1aae1e8bb5ce038782b3b63e2`.
+- [foundation_freeze_20261007_194751.json](../../logs/foundation_freeze_20261007_194751.json), SHA-256 `46e199e1e27d9c4d0406888c882fd909410ed19fe4a04747e7f78b2cf5f8953c`.
+- [dubon-build-20261007-195030-058.log](logs/dubon-build-20261007-195030-058.log), SHA-256 `08263e300da46dc27f8484d20a284c2aa5669c1b5e2d9fc863257419f6f655b2`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `f1c8e7c8974854cd141b2f94043d3f51299f935e9c04809550264ab3ecaa173d`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `2d7ec8a9a5b8c7bafd98d2babdd5d29d542e8545b551f4464ed94c303c71c1cc`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `a5eac819675ef26b0d971795e34ae5f3545c812901642ac5b8a809589eb24a73`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/CanonicalAdicIntegralDensity.lean`: SHA-256 `633b3e0a23bf6481216da3d199fb0f13205c7ebf3c23618fdfb3f45982d0d31f`.
+- `Extension/Dubon2026/RationalFiniteAdeleDensity.lean`: SHA-256 `64da5da6f87802b47d5b38a897a27a9e51b3bc39ebbe94dd33b6cc6f2afc2c97`.
+- `Extension/Dubon2026/RingSL2Elementary.lean`: SHA-256 `b75750d6165b32f0ac26152eaee5ec01954a00bc25b5705e8dd68b2fad9a96a5`.
+- `Extension/Dubon2026/FiniteAdeleUnitPivot.lean`: SHA-256 `b3e358b28b1e8856444e3ff35bd553b882e9d465fe8876d92d73de64c264152e`.
+- `Extension/Dubon2026/RationalSL2FiniteAdeleDensity.lean`: SHA-256 `024a4a90e974d7cee73e9dd68b67cac49f4dcc47e80e5ae9ee87e359e6cbcaaa`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual canonical full adelic SL2 cusp-function verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 740 production modules, 312 exact consumers, 3,538 explicit registrations and 6,253 exhaustive theorem dependency checks. All sixteen linters passed across 4,208 declarations plus 2,790 generated declarations in both paper audit executions. Initial inventory passed with 847 retained files, 1,477 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Six modules and four exact consumers construct the actual integral level subgroup, prove its openness and exact classical rational intersection, and use genuine strong approximation to define the original cusp function independently of its rational factor. The original form is recovered, rational and finite-level invariances are proved, and the construction is continuous and injective. Pinned infinite-place completion equivalences identify the actual canonical full adele ring and group with real and finite coordinates. The resulting continuous original function on SL2(NumberField.AdeleRing ℤ ℚ) retains all these proved properties.
+
+This is a faithful canonical full adelic special-linear cusp-function construction. Its GL2 extension, adelic unipotent cuspidality, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain unproved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_200727.log](../../logs/foundation_freeze_20261007_200727.log), SHA-256 `460db36313fff02ccfa25603eb46eb88e6b393bbba06bc15f5cd08caf4c91bee`.
+- [foundation_freeze_20261007_200727.json](../../logs/foundation_freeze_20261007_200727.json), SHA-256 `f913f7900e11aba378e7d2e75247670d03da621f3d1748ff259676129e29cb6d`.
+- [dubon-build-20261007-201006-398.log](logs/dubon-build-20261007-201006-398.log), SHA-256 `21245916258d08a5e706b3ad2378970a345c2b8213aaba1b261e5c4fbc545a56`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `2efff18a768d5a7ab088c44e0b7b251d0ebcd1822b4313016744815e55fef497`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `9f1a1f0a4e52458e2af2fbf4dd162594343a13b8e7936bcad66eea87ee26993a`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `11bda04155552ee078208658d98e172fb7ea16850c8ea933f1937770c18c27ba`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/FiniteAdeleLevelSubgroup.lean`: SHA-256 `3ff29c124205849e9a01e0c83ce2b82d98a8e67a61a8aededd38d6fbb26296be`.
+- `Extension/Dubon2026/FiniteAdeleClassicalIntersection.lean`: SHA-256 `34ea12f8e8b0d2f9bf4649b46bc1600baf36cd4897a9dbafbefb37988c280b10`.
+- `Extension/Dubon2026/FiniteAdelicSL2CuspLift.lean`: SHA-256 `a2eea7f230709aecfbe40d829bd2c85f055f7616bb0f0f69366066ad8b19753f`.
+- `Extension/Dubon2026/FiniteAdelicSL2Continuity.lean`: SHA-256 `6c94cceb6bdff6fe107269f54ec452b38b5e3461bc53593b7365339cda28b3cf`.
+- `Extension/Dubon2026/RationalAdeleRealFinite.lean`: SHA-256 `dfb93ecb0177705e219cc351917ebd5fed93e8a08531995e45310aa66a453ad1`.
+- `Extension/Dubon2026/CanonicalAdelicCuspLift.lean`: SHA-256 `313349a442d4d7c2ac80224d3e2f47803b23359070d35b1670186ee6aca98252`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual finite idele normalization and positive-rational GL2 factorization verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 745 production modules, 315 exact consumers, 3,562 explicit registrations and 6,297 exhaustive theorem dependency checks. All sixteen linters passed across 4,238 declarations plus 2,810 generated declarations in both paper audit executions. Initial inventory passed with 852 retained files, 1,493 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Five modules and three exact consumers construct actual rational prime-ideal generators with exact finite valuations and prove every original finite idele is a positive rational scalar times a genuine integral unit. Literal determinant diagonals and special-linear factors combine with the actual SL2 strong approximation theorem to factor every finite adelic GL2 matrix through a positive-determinant rational matrix and the genuine open level subgroup. The level group uses the integral-entry/lower-left-divisibility conditions for the original matrix and its inverse.
+
+These are genuine finite-idele and positive-rational GL2 factorization theorems. The positive-rational GL2 classical intersection and original GL2 cusp-function extension remain to be proved, as do adelic unipotent cuspidality, the completed adelic cuspidal representation, irreducibility and higher symmetric continuation. The verified original canonical adelic cusp function remains on SL2. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_202615.log](../../logs/foundation_freeze_20261007_202615.log), SHA-256 `be3beb4f700b2fc8fbf0f5f1baebdb8ae874bb93f53540bedfd07389abf8f5f5`.
+- [foundation_freeze_20261007_202615.json](../../logs/foundation_freeze_20261007_202615.json), SHA-256 `e346d4216b5fb43f071528d5ed3421f6dd03daac1d1138104f14db22e15f4978`.
+- [dubon-build-20261007-202854-265.log](logs/dubon-build-20261007-202854-265.log), SHA-256 `163742bd4548b265cbe0e0c68ca0c345246c441c93dda4e219ae133fd91fc35d`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `cf1168041fe439e8eb7f5e6215845cc017e88d7c49452158ef2d9c6523fda69a`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `3b99e1eb9a0c5ba08a1b04fb27b2da5d11d9c0f671ba36b2ae0ed2d67095347b`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `99c4e02a5a07fcde40e0b4da91b1455bb646f6f261453216f7086511aa53a365`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RationalFiniteValuationBasis.lean`: SHA-256 `6a501cc5a247459c3b5c653039a12bd4971e4ab91325eaa94c2b5e3b1838b1a0`.
+- `Extension/Dubon2026/RationalFiniteIdeleFactorization.lean`: SHA-256 `76125118b8420c16f40a20a8e5fa4d10272e1a5322f954903ae619ff575bbe28`.
+- `Extension/Dubon2026/GeneralLinearUnitDiagonal.lean`: SHA-256 `84bac54b2ca5505874e4e43644b151fefcde1da0f15ed68b65e8f45990f823d4`.
+- `Extension/Dubon2026/FiniteAdelicGL2Level.lean`: SHA-256 `27bce456db3bf6103654d18ee9b72e415e2c72534c4c786d2cefc3216daa8dee`.
+- `Extension/Dubon2026/FiniteAdelicGL2Factorization.lean`: SHA-256 `edab067a893d5f85ef1ae9014942b65ea7ae877e8965e79f9ae21de0fd10f2bb`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual canonical full adelic GL2 cusp function verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 752 production modules, 320 exact consumers, 3,607 explicit registrations and 6,378 exhaustive theorem dependency checks. All sixteen linters passed across 4,301 declarations plus 2,846 generated declarations in both paper audit executions. Initial inventory passed with 859 retained files, 1,511 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Seven modules and five exact source consumers extend the original cusp form to the actual canonical full adelic GL2 group. The exact positive rational classical intersection proves independence of the chosen finite factorization. A literal rational reflection covers the negative real component, and actual ring/group homeomorphisms supply the canonical domain. Rational left invariance, finite-level right invariance, continuity, exact unitary real restriction, injectivity in the original cusp form and exact restriction to the previously proved canonical SL2 function are all proved.
+
+Adelic unipotent cuspidality, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_204836.log](../../logs/foundation_freeze_20261007_204836.log), SHA-256 `c8f72c81fb68a877236dc9073746c1bb4f93edcaa764b43edc2bb659079f2403`.
+- [foundation_freeze_20261007_204836.json](../../logs/foundation_freeze_20261007_204836.json), SHA-256 `8e84e5492b170de20798c930a0ff4df8f8b351fb1cb93ba1b61b9a89aea259fb`.
+- [dubon-build-20261007-205115-202.log](logs/dubon-build-20261007-205115-202.log), SHA-256 `b0ad016ebfcdfdb7bfa5a407bedaa97292614cf09f28e2d8cb84572daf4f286e`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `2b62e8b53913a6a59f90cd487a2989d8a6a4360b8d96d53a558bbf570373b4fe`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `c4e0833ec945333e42a9972720d639a8aa36985cef1c55fa8063e8831fd20ca7`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `d08e59b8cfe767534690fa07a0748cdefe3a5c718079c6ac33a6b8bb28dad2a4`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/PositiveRationalGL2Intersection.lean`: SHA-256 `e7847613892bade60d5b5a792ac45b0751c201942246a3a239cc663e5a9a2e23`.
+- `Extension/Dubon2026/PositiveAdelicGL2CuspLift.lean`: SHA-256 `bc22b71377b793fcf7487fe9ed284fbeb8ddff673cf403b566e1ad0bb3fa0fcb`.
+- `Extension/Dubon2026/PositiveAdelicGL2Continuity.lean`: SHA-256 `25d7b6393245a8943dc7ec9b1bd3bcc578bfa5a8dad66f79e43a74b90c0c81a7`.
+- `Extension/Dubon2026/RealGL2Sign.lean`: SHA-256 `00e31eae59c4f4e9706599b9b7b9abb01879120d6a66ee83f258f854b58f9195`.
+- `Extension/Dubon2026/FullAdelicGL2CuspLift.lean`: SHA-256 `0b1bc3fccce2a6ccdf95af9f3dada2b2a529573568631d4120c40d8450da878a`.
+- `Extension/Dubon2026/CanonicalAdelicGL2Coordinates.lean`: SHA-256 `7c1190bdb368f10c5ee5b9fb922f4b5e492b562d2a6435550403d285f2362012`.
+- `Extension/Dubon2026/CanonicalAdelicGL2CuspLift.lean`: SHA-256 `b1b5b1d7e43bb97dde3893ffe05d36e095fafef3f41ddaa0129b88896ea5525d`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual rational cusp periods and compact additive quotient verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 759 production modules, 324 exact consumers, 3,635 explicit registrations and 6,438 exhaustive theorem dependency checks. All sixteen linters passed across 4,342 declarations plus 2,872 generated declarations in both paper audit executions. Initial inventory passed with 866 retained files, 1,529 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+The initial paper run `logs/dubon-build-20261007-211107-037.log` passed the exhaustive dependency audit but stopped at the naming linter for the measurable-space instance. The instance was renamed to `rationalAdelicAdditiveQuotientMeasurableSpace`; the sequential verifiers were rerun after this correction. The failed transcript is retained.
+
+Seven modules and four exact source consumers prove genuine positive real zero-average unipotent periods after every positive rational cusp translate and at every finite adelic point. The canonical integral finite adeles are compact. Literal real unit-strip representatives give compactness of the actual additive rational adele quotient and discreteness of principal rationals. Genuine rational finite approximation proves density of the original real line in that quotient. Its actual normalized additive Haar measure is constructed and translation invariance is proved.
+
+The descended unipotent function and its zero Haar integral still require assembly. Adelic unipotent cuspidality, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_211430.log](../../logs/foundation_freeze_20261007_211430.log), SHA-256 `048f7f0bd0304a82199684bd3e62e8fbf36d90bc0930aa13a1a4eeff92e2e514`.
+- [foundation_freeze_20261007_211430.json](../../logs/foundation_freeze_20261007_211430.json), SHA-256 `0c5adaf67f6bce44631a67b61bb2c4721f124c75e1b3d0f4863a9a42dc948623`.
+- [dubon-build-20261007-211711-465.log](logs/dubon-build-20261007-211711-465.log), SHA-256 `309839f068f88f3195e53476ba1c6b6b7bcfe9f118b755c0c9fb437ee58e3c8d`.
+- [dubon-build-20261007-211107-037.log](logs/dubon-build-20261007-211107-037.log), SHA-256 `ab18fe498aabf71c2fc0e3a6506401578a0b04629851c6151d778c3d4f1b0f9c`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `c304b257f821f50ae0b1f420efc296795f05c8ea543834486f1814cc3bca5be6`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `d33929a9df22ebde27bf09048024a8145be54808c25c838558d8489f5689bbb4`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `83a7efd98e93ebf759f468cd59f74f9a77348cb50264ae018ea753af7e78e067`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/RationalGL2CuspFactor.lean`: SHA-256 `1bd8391c932c2e29615204f21e03d96262880f662b9407d2d02fce4773f21cdd`.
+- `Extension/Dubon2026/RationalGL2CuspPeriod.lean`: SHA-256 `030a7ca45627e84e1662098e187b0c84eb5e26d13051d3988a1f8dc963545468`.
+- `Extension/Dubon2026/FiniteAdeleIntegralCompact.lean`: SHA-256 `d31df023c0c2cb7251c335aaa78e8fb66d979fc0142d236e476ce22dddd0e47b`.
+- `Extension/Dubon2026/RationalAdelicAdditiveStrip.lean`: SHA-256 `aaaa4e05f6ebabb41d23f4324af7e353dc5565303f4f5c5efff869fb6b215772`.
+- `Extension/Dubon2026/RationalAdelicAdditiveQuotient.lean`: SHA-256 `3702e809b1ccc2184f4b99a97fb83594a0fd9acfc065ae094d422962a46930d0`.
+- `Extension/Dubon2026/RationalAdelicRealDensity.lean`: SHA-256 `75462618d05dfcf87bee825ba7539fdff8de58339723b00a5b47a14e3ce5eec5`.
+- `Extension/Dubon2026/RationalAdelicAdditiveHaar.lean`: SHA-256 `6c6ffbe0f5f09cc1214e41416908090968e6569488a3bbcc4bb5ee7e623e59f1`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Genuine full adelic unipotent cuspidality verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 763 production modules, 326 exact consumers, 3,657 explicit registrations and 6,467 exhaustive theorem dependency checks. All sixteen linters passed across 4,365 declarations plus 2,879 generated declarations in both paper audit executions. Initial inventory passed with 870 retained files, 1,545 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Four modules and two exact consumers prove that the original unipotent cusp function descends continuously to the actual compact additive rational adele quotient. Its zero averages on the dense real orbit extend by continuity; Fubini and genuine Haar translation invariance yield a zero Haar integral. Rational reflection and Haar negation invariance give the same result on the negative real component. The public theorem consumes the actual classical cusp form and proves its unipotent Haar integral zero at every point of canonical full adelic GL2, with no cuspidality assumption.
+
+The full adelic scalar character, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_212805.log](../../logs/foundation_freeze_20261007_212805.log), SHA-256 `59eb7b76215cf1e97fab5d7c4c66edfb54a4b88ca6575a25e952ae4242dddd03`.
+- [foundation_freeze_20261007_212805.json](../../logs/foundation_freeze_20261007_212805.json), SHA-256 `7b37a6d7e9fd283aece25385dd9c5f217182059ee3e1a54d7a3bc14cd90dc052`.
+- [dubon-build-20261007-213048-568.log](logs/dubon-build-20261007-213048-568.log), SHA-256 `6cafc984018a0a413dfcc14bdab4656e5ad4f12517ab6736d7f5cc6a27a407f1`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `24e6c450ce258179aab701c199c65d4d3cdbd5da84ab43e57cd1e183c5c02c05`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `f97fc5bc2e56e9c96d449ebe5203cbed0dd0fec2ae9c60cd237962416ed64f41`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `957754df711b7cfa962de8da72572883f0c157a4707ef6ae341cf58a1c6f295b`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/CompactRealOrbitAverage.lean`: SHA-256 `795a0e7762f40fcaaf0eed3e9887ca1aed1535fc6e6bfb861bab984ce069a2e1`.
+- `Extension/Dubon2026/AdelicUnipotentQuotient.lean`: SHA-256 `aed15ab267b4dc044548a891fde408952af820f640131d10fc504b2cec4de602`.
+- `Extension/Dubon2026/AdelicUnipotentAverages.lean`: SHA-256 `3a22016c6bab1e9894130850f9ce2c6c0375ef6a20d0b0d0d34950575ff6fbb3`.
+- `Extension/Dubon2026/AdelicUnipotentCuspidality.lean`: SHA-256 `25c2c373ab8579891b3bbe1f94c46277e02f47e51e907552214ff3ca8403bda7`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual adelic central character and smooth algebraic representation verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 769 production modules, 330 exact consumers, 3,687 explicit registrations and 6,513 exhaustive theorem dependency checks. All sixteen linters passed across 4,403 declarations plus 2,892 generated declarations in both paper audit executions. Initial inventory passed with 876 retained files, 1,562 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Six modules and four exact consumers prove the original full adelic scalar character is trivial, using actual finite-idele factorization and the already proved rational and level invariances. The canonical finite adele ring and GL2 group are locally compact, and the original level groups are compact and open. The original function generates its actual algebraic right-regular subrepresentation; all its vectors retain continuity, rational and scalar invariance, and genuine zero unipotent Haar periods. Every vector has a proved compact open finite stabilizer obtained from original conjugate levels and finite intersections.
+
+The invariant adelic L2 pairing, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_214457.log](../../logs/foundation_freeze_20261007_214457.log), SHA-256 `5c29e9dbae7a04d03b20c72c97ad70b4dc6a9e2fbda7e61a7a61c1c47b46ee27`.
+- [foundation_freeze_20261007_214457.json](../../logs/foundation_freeze_20261007_214457.json), SHA-256 `c8e8011f4218a6be92039977713bf7e81e918608dcc896092939dc1a93efcb4b`.
+- [dubon-build-20261007-214739-101.log](logs/dubon-build-20261007-214739-101.log), SHA-256 `258c3c04378f71bc7a3e894fdd5cd9b6c9ef334c4ee86147cbf3bfef4af4a171`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `8380b31e070282ebcd4df28f7c042cfc39a5a4012a56c66222e31e0183cfbcae`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `719dbf0eef7e1fca684445147cefd24f20de24f669eafa783addef38d1b78ad2`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `7d8b7759737987e931b6a559e80cd15fef8f59e27b0b6076a4190f10ccdf650f`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/AdelicRealScalar.lean`: SHA-256 `1ad4ee1d43617f4da7d597f3c2f2f5a993a4641a687800f9bd7088c0ea6309f7`.
+- `Extension/Dubon2026/FiniteAdelicScalar.lean`: SHA-256 `de6e7e8c24185b1585dea46d5f8bf2c1b81d2174428dd2da172245f82459ae27`.
+- `Extension/Dubon2026/CanonicalAdelicCentralCharacter.lean`: SHA-256 `bd388e7089e9ad38c821b3a601c601df130b7ee470b90d2ee78ebdbaf9772458`.
+- `Extension/Dubon2026/FiniteAdelicCompactLevel.lean`: SHA-256 `e6225b916e5f22b47b169c5d52ee5957fb7d273172b2c8d4bc8010e98f35aeed`.
+- `Extension/Dubon2026/AdelicCyclicRepresentation.lean`: SHA-256 `20167c0cc84c2e176c5c51246bc84830017d0dd9d79fec40ba3dd9d629f41d03`.
+- `Extension/Dubon2026/AdelicCyclicFiniteSmooth.lean`: SHA-256 `c75f33ea2c857c88eb4014b60adb5b98f9e76ebd51972156ffebb3427e83f579`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Genuine projective adelic Haar measure verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 773 production modules, 332 exact consumers, 3,707 explicit registrations and 6,562 exhaustive theorem dependency checks. All sixteen linters passed across 4,445 declarations plus 2,910 generated declarations in both paper audit executions. Initial inventory passed with 880 retained files, 1,577 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Four modules and two exact consumers construct the actual locally compact Hausdorff finite projective general-linear group, compact open level images and genuine Haar measure normalized on the original full-level subgroup. Rational strong approximation proves a countable compact cover and sigma-finiteness. Literal reflection and coordinate-swap identities, actual determinant factorization and finite adelic SL2 elementary generation prove that every original nonnegative character of the finite projective group is trivial. Consequently the actual modular character is one and the normalized Haar measure is right invariant. The existing real projective Haar measure and this finite measure give the genuine product Haar measure, invariant on both sides. The literal real full-level region times finite full-level compact subgroup has exactly the existing finite real volume.
+
+Descent of the original cyclic functions to these projective coordinates, the rational arithmetic fundamental-domain theorem, invariant adelic L2 pairing, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. The finite-volume product region is not yet claimed as an adelic arithmetic fundamental domain. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_220052.log](../../logs/foundation_freeze_20261007_220052.log), SHA-256 `7d7c2908d7941ee227f6a604a4b2fbb3b80b482f1d547ff5f20c0bf1c4686e86`.
+- [foundation_freeze_20261007_220052.json](../../logs/foundation_freeze_20261007_220052.json), SHA-256 `f81cd8863dd4faa0ca6e2efddf71956928525c573817a469afd49a08b6ae9e93`.
+- [dubon-build-20261007-220331-787.log](logs/dubon-build-20261007-220331-787.log), SHA-256 `ab728066b7244b94a320fed5b331368185a6e8422b127fd47909f3dccf636338`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `d27061334a0027252ea88ff29f4976af6da1fdc7bd8da3c4196e4dd69c1e5351`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `b3b829f6b9054fbce5b781b28b99f0bfc638c0efd3685e006239caae84008790`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `05ccec6a1c8b592f12d8a3a51a805ba48159a4688e362c9d1b2979a2302dde6e`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/FiniteProjectiveGL2Topology.lean`: SHA-256 `51d18c1e5b644da2627f69af9dfd07b393cee1469b72389ac4be05da04e1eddd`.
+- `Extension/Dubon2026/FiniteAdelicProjectiveCharacters.lean`: SHA-256 `42c590fe52e105664f8534d84532bbe9f69d8f13843f87d4eca1b2a1e4930a60`.
+- `Extension/Dubon2026/FiniteProjectiveGL2Haar.lean`: SHA-256 `b4e02e05d94de80a4e0b44f419f0c5548c6790c7912ae02f36fc9e8780dbfbcb`.
+- `Extension/Dubon2026/AdelicProjectiveHaar.lean`: SHA-256 `8aaf248560c9b9425bdf83e695284f14085a9e6421be78fd1e6f017100866322`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual faithful projective cyclic descent verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 776 production modules, 335 exact consumers, 3,724 explicit registrations and 6,591 exhaustive theorem dependency checks. All sixteen linters passed across 4,468 declarations plus 2,922 generated declarations in both paper audit executions. Initial inventory passed with 883 retained files, 1,591 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Three modules and three exact consumers prove the actual scalar-pair coordinates of canonical full adele units, genuine quotient compatibility, and continuous projective descent. Every original algebraic adelic cyclic vector uses its already proved scalar invariance and continuity. Its values on original matrix representatives are exact. The literal determinant-root factor recovers every positive real value; proved rational reflection invariance recovers the negative real component. The resulting map from the original algebraic cyclic representation to continuous functions on the actual projective coordinate group is complex-linear and injective. The original generator recovers exactly the original real cusp lift at finite identity.
+
+The rational arithmetic action and fundamental-domain theorem, invariant adelic L2 pairing, completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. The finite-volume product region is not yet claimed as an adelic arithmetic fundamental domain. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_221431.log](../../logs/foundation_freeze_20261007_221431.log), SHA-256 `f107ff5f762bc045aeb68b25dd89babc2daeacb1ee0f2ebdabcaed9ca6db6657`.
+- [foundation_freeze_20261007_221431.json](../../logs/foundation_freeze_20261007_221431.json), SHA-256 `c92cbc0c1dc192973ff2ccf732f89a122de11e4276d9563ebe53bc7dcf4e25e8`.
+- [dubon-build-20261007-221711-320.log](logs/dubon-build-20261007-221711-320.log), SHA-256 `670305393e13582076f693dd5225642529b6fdc346f92f232e2f1d2a6f11e1e6`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `7ca1662b65bab23fc130b9da15c77d77e5f306b8d7231e9061a0d201a22b8e5c`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `6be7bf6aeedd07bdf4809684974e91c254c7f347e1422c0bdedde645150436df`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `c7f8c1a0e0d61f414bf8792256772ba3d807aa83780bceab720ef3063c64322d`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/AdelicScalarCoordinates.lean`: SHA-256 `b49ab89066c1930423806b6848379d2a6d547031d460a9db20d0c9c467c7b44e`.
+- `Extension/Dubon2026/AdelicProjectiveFunction.lean`: SHA-256 `34000683b20a6e3d0063bf6b7eb79b2d1e9bce963b7cbc9e369c99e00b3442c2`.
+- `Extension/Dubon2026/AdelicProjectiveCyclicFunction.lean`: SHA-256 `ffe94497f5af3f336e671751ac0ddcda848ec543a6b99bf8cc9cd1491080e7a2`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+
+### Actual adelic arithmetic fundamental domain and faithful L2 verification — 7 October 2026
+
+Foundation `cmd /c run_lake_build.bat --no-pause` returned **PASS, exit 0**, followed sequentially by paper `cmd /c run_dubon_build.bat --no-pause`, **DEVELOPMENT PASS, exit 0**, with zero Lean diagnostics. Coverage: 784 production modules, 340 exact consumers, 3,765 explicit registrations and 6,659 exhaustive theorem dependency checks. All sixteen linters passed across 4,521 declarations plus 2,947 generated declarations in both paper audit executions. Initial inventory passed with 891 retained files, 1,610 local links and 4,320 unchanged existing Lean files; source pins and tooling fixtures passed.
+
+Eight further production modules construct the actual positive-rational arithmetic image in PSL2(R) times PGL2(A_f), prove invariance of every original cyclic vector, and identify the finite-level intersection exactly with the faithfully embedded original integral Gamma0 group. The literal real Gamma0 fundamental domain times the genuine compact finite level subgroup is proved to be a fundamental domain for the same full arithmetic group at every nonzero level. Its Haar volume is exactly the product of the real-domain and finite-level volumes, with the latter positive and finite. Countable rational strong approximation supplies almost-everywhere coverage; the exact intersection and original real tiling give null overlaps. The original real cusp bound proves global boundedness of every full adelic cyclic vector, hence genuine square integrability on the actual domain. Quotient integrals and the actual cyclic pairing are invariant under every right projective translation. The original algebraic full adelic cyclic space embeds complex-linearly and injectively into actual L2, whose inner product is precisely the original integral pairing. Unitarity under the original full adelic right representation, including its negative-real action, the completed adelic cuspidal representation, irreducibility and higher symmetric continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+The foundation verifier observed dirty checkout `a6b9fb6e673f992be69233a9c452d9db2ce9a4e9`; Lean 4.30.0, Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`, PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`. Frozen source and dependency revisions are unchanged. No external Lean code was imported. ELAN_HOME was inferred from the installed Lake command. No staging, commit or push was performed by this agent.
+
+- [foundation_freeze_20261007_223815.log](../../logs/foundation_freeze_20261007_223815.log), SHA-256 `c4abec86dcefc390319b20590eb4f2629d2d74e8ccc3eb9185a49c374d4c09ad`.
+- [foundation_freeze_20261007_223815.json](../../logs/foundation_freeze_20261007_223815.json), SHA-256 `4bdd98a4565c673db4bf7d40086d33b1b5df2c99f3f85b26988ac1ef7b324f1f`.
+- [dubon-build-20261007-224055-172.log](logs/dubon-build-20261007-224055-172.log), SHA-256 `28ea81086015ae1054ed37bf2a9e7e9a769734b2722044ec38f5bb94923bc756`.
+- [verify_scaffold.py](Tools/verify_scaffold.py), SHA-256 `87dcba004d9a10f6739836a981e287ffd1103460724e2149ba29e7b433ad8bbb`.
+- [test_scaffold.py](Tools/test_scaffold.py), SHA-256 `ba51319c091f1bf0c8ca56befb3acf4af0dc22c265a0e3a73afb5a7bf2d3e664`.
+- [run_dubon_verification.ps1](Tools/run_dubon_verification.ps1), SHA-256 `366c5312b4daa4db151529351591d3fe16b6210b5162b5f0e5c458f387987c29`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `996f1ab804f93a166420f3da445fc6b7c1528955a24da2c2c16d0572a0fe91b1`.
+- [SemanticRegression.lean](Extension/Dubon2026/SemanticRegression.lean), SHA-256 `fdb83c1dc8dfe6ad1e143a74524327efcbd55bd08986b03e216d47b12d97a0ff`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `f22e4b2c8a41bd2c70e68193633baa34f0d132a0a056f27a97857e91a41dec72`.
+- [lakefile.toml](Extension/lakefile.toml), SHA-256 `fe309615f00fb3c52f92e159c38a80ed4b0c8a1516249cf9e20e1e12755ac662`.
+- [lake-manifest.json](Extension/lake-manifest.json), SHA-256 `5817d3f9ddb4a6ff892d353d301d436e044023fdbcc6cf097db23f591da73d58`.
+- `Extension/Dubon2026/AdelicProjectiveArithmetic.lean`: SHA-256 `1a9377bbd3b56b101328b9ff67f5b93b9ce1e4fc272e6649db4f3156cfab2e81`.
+- `Extension/Dubon2026/RationalProjectiveLevelIntersection.lean`: SHA-256 `1b2ed7676ccf3dc9261c5de2ca156f3bc538797c007f4afa752985dcca6df4b6`.
+- `Extension/Dubon2026/IntegralAdelicProjectiveFaithfulness.lean`: SHA-256 `d9132c200ea381b17ccdc3e7f97d50c7051ae41e7dd64426470ed37b1d9bc641`.
+- `Extension/Dubon2026/AdelicProjectiveDomain.lean`: SHA-256 `97b19397d7a4b59983abd057d52f7f1959be9d73e6d0e6396b9cc6fe3624952d`.
+- `Extension/Dubon2026/AdelicProjectiveTiling.lean`: SHA-256 `493773aa2afea5d7014e539355e381201a6efec48a3162244db40e2569ee7c97`.
+- `Extension/Dubon2026/AdelicCyclicL2.lean`: SHA-256 `ceb101443c4522cd43d1bf2003df9fd0ee0a3872198515f3b5d3511e93800ee7`.
+- `Extension/Dubon2026/AdelicProjectivePairing.lean`: SHA-256 `40822b53cb016d1df7dd3381326e36d28337eaa924007ec1fc0a8e9854b7b939`.
+- `Extension/Dubon2026/AdelicProjectiveL2Embedding.lean`: SHA-256 `e1e28afaa21e84b488e7d6f794700c75f802b63de8bcc123c8de7c4f138f194c`.
 
 Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).

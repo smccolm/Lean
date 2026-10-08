@@ -2953,4 +2953,1085 @@ theorem primitive_symmetric_boundary_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ
 
 end
 
+
+section
+
+/-- The actual primitive symmetric-power L-function is the literal infinite spectral Euler product and is holomorphic and nonzero in its convergence half-plane under the displayed local bound. -/
+theorem primitive_symmetric_global_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (r : ℕ) :
+    AnalyticOnNhd ℂ (primitiveSymmetricLFunction f r) {s : ℂ | 1 < s.re} ∧
+    (∀ s : ℂ, 1 < s.re → primitiveSymmetricLFunction f r s ≠ 0) ∧
+    (∀ s : ℂ, primitiveSymmetricLFunction f r s =
+      (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹) :=
+  ⟨primitiveSymmetricLFunction_analyticOnNhd f hbound r,
+    fun _ hs => primitiveSymmetricLFunction_ne_zero f hbound r hs, fun _ => rfl⟩
+
+/-- The actual global Euler logarithmic derivative has precisely the original prime-character L-series and the fully proved higher-prime-power correction. -/
+theorem primitive_symmetric_global_log_derivative_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (r : ℕ) {s : ℂ} (hs : 1 < s.re) :
+    -logDeriv (primitiveSymmetricLFunction f r) s =
+      LSeries (fun n => ((if Nat.Prime n then (if n ∣ Q then 0 else
+        (normalizedCuspCoefficients f.toCuspForm (n ^ r)).re) * Real.log n else 0 : ℝ) : ℂ)) s +
+        primeSpectralTail (primitiveSymmetricSpectralRoots f r) s := by
+  rw [primitiveSymmetricLFunction_logDeriv f hbound r hs, primitiveSymmetricLogSeries_eq f hbound r hs]
+  rfl
+
+/-- The genuine primitive form's local bound and actual global symmetric-power nonvanishing continuation give both weak Sato--Tate and full H2 through the proved Euler, holomorphic remainder, Tauberian and PNT chain. -/
+theorem primitive_symmetric_continuation_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hcontinuation : ∀ r : ℕ, 0 < r → ∃ F : ℂ → ℂ,
+      AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (primitiveSymmetricLFunction f r) {s | 1 < s.re}) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_symmetric_L_continuation f hbound hcontinuation
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+
+end
+
+
+section
+
+/-- Without Deligne, the actual first symmetric-power Euler function is holomorphic, nonzero and exactly the original cusp L-series with precisely the finite ramified factors removed. -/
+theorem primitive_first_cusp_euler_identity_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) :
+    AnalyticOnNhd ℂ (primitiveSymmetricLFunction f 1) {s : ℂ | 1 < s.re} ∧
+    ∀ s : ℂ, 1 < s.re →
+      primitiveSymmetricLFunction f 1 s = LSeries (normalizedCuspCoefficients f.toCuspForm) s *
+        ∏ p ∈ ramifiedPrimeSet Q,
+          (1 - normalizedCuspCoefficients f.toCuspForm p * (((p : ℕ) : ℂ) ^ (-s)) +
+            if (p : ℕ) ∣ Q then 0 else ((((p : ℕ) : ℂ) ^ (-s))) ^ 2) ∧
+      primitiveSymmetricLFunction f 1 s ≠ 0 ∧ LSeries (normalizedCuspCoefficients f.toCuspForm) s ≠ 0 :=
+  ⟨primitive_first_symmetric_analyticOnNhd f hk, fun _ hs =>
+    ⟨primitive_first_symmetric_eq_cusp_lseries f hk hs,
+      primitive_first_symmetric_ne_zero f hk hs, primitive_cusp_lseries_ne_zero f hk hs⟩⟩
+
+/-- The actual ramified prime-power law and proved cusp energy bound give the square-root estimate and nonvanishing of every genuine finite correction across Re(s)=1. -/
+theorem primitive_ramified_boundary_factors_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) :
+    (∀ p : ℕ, Nat.Prime p → p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 ≤ (p : ℝ)) ∧
+    ∀ s : ℂ, 1 / 2 < s.re →
+      (∏ p ∈ ramifiedPrimeSet Q,
+        (1 - normalizedCuspCoefficients f.toCuspForm p * (((p : ℕ) : ℂ) ^ (-s)) +
+          if (p : ℕ) ∣ Q then 0 else ((((p : ℕ) : ℂ) ^ (-s))) ^ 2)) ≠ 0 :=
+  ⟨fun _ hp hpQ => primitive_bad_coefficient_norm_sq_le f hk hp hpQ,
+    fun _ hs => primitive_ramified_correction_ne_zero f hk hs⟩
+
+/-- The real order-one incomplete spectral Euler product and the original coefficient L-series have equivalent nonvanishing continuation requirements, with no purity or continuation assumption in their definitions. -/
+theorem primitive_first_continuation_normalization_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) :
+    (∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re}) ↔
+    (∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (LSeries (normalizedCuspCoefficients f.toCuspForm)) {s | 1 < s.re}) :=
+  primitive_first_nonvanishing_continuation_iff f hk
+
+end
+
+
+section
+
+/-- The actual cusp values give a convergent entire Mellin integral with the precise modular S-transform functional equation. -/
+theorem cusp_original_mellin_completion_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    Differentiable ℂ (cuspCompletedLFunction f) ∧
+    (∀ s : ℂ, HasMellin (fun y => f (UpperHalfPlane.ofComplex ((y : ℂ) * Complex.I))) s
+      (cuspCompletedLFunction f s)) ∧
+    (∀ s : ℂ, cuspCompletedLFunction f ((k : ℂ) - s) =
+      Complex.I ^ k * cuspCompletedLFunction (CuspForm.translate f ModularGroup.S) s) :=
+  ⟨cuspCompletedLFunction_differentiable f hk,
+    cuspCompletedLFunction_hasMellin f hk, cuspCompletedLFunction_functional_equation f hk⟩
+
+/-- The exact original Mellin integral and half-weight shift construct an entire continuation of the true normalized cusp coefficient L-series. -/
+theorem normalized_cusp_entire_lseries_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    Differentiable ℂ (normalizedCuspLFunction f) ∧
+    ∀ s : ℂ, 1 < s.re →
+      normalizedCuspLFunction f s = LSeries (normalizedCuspCoefficients f) s ∧
+      cuspCompletedLFunction f (s + ((k : ℂ) - 1) / 2) =
+        ((2 * Real.pi : ℝ) : ℂ) ^ (-(s + ((k : ℂ) - 1) / 2)) *
+          Complex.Gamma (s + ((k : ℂ) - 1) / 2) * LSeries (normalizedCuspCoefficients f) s :=
+  ⟨normalizedCuspLFunction_differentiable f hk, fun _ hs =>
+    ⟨normalizedCuspLFunction_eq_series f hk.le hs,
+      cuspCompletedLFunction_eq_normalized_series f hk.le hs⟩⟩
+
+/-- The genuine first symmetric-power infinite Euler product has a proved entire continuation, nonzero on Re(s)>1; nonvanishing on the boundary is deliberately not asserted. -/
+theorem primitive_first_entire_euler_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) :
+    ∃ F : ℂ → ℂ, Differentiable ℂ F ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} ∧
+      ∀ s : ℂ, 1 < s.re → F s ≠ 0 := by
+  obtain ⟨F,hFa,hFe⟩ := primitive_first_symmetric_entire_continuation f hk
+  refine ⟨F,hFa,hFe,fun s hs => ?_⟩
+  rw [hFe hs]
+  exact primitive_first_symmetric_ne_zero f hk.le hs
+
+end
+
+
+section
+
+/-- The actual prime-power coefficient squares have exactly the symmetric-square denominator and numerator 1+p^(-s). -/
+theorem primitive_square_local_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q)
+    {s : ℂ} (hs : 1 < s.re) :
+    (primitiveSymmetricEulerPolynomial f p 2).eval ((p : ℂ) ^ (-s)) *
+      (∑' r : ℕ, ((‖normalizedCuspCoefficients f.toCuspForm (p ^ r)‖ ^ 2 : ℝ) : ℂ) *
+        ((p : ℂ) ^ (-s)) ^ r) = 1 + (p : ℂ) ^ (-s) :=
+  primitive_good_square_euler_identity f hk hp hpQ hs
+
+/-- The literal symmetric-square prime product and original square Dirichlet series satisfy the exact global identity with all actual bad-prime factors. -/
+theorem primitive_second_rankin_global_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    (∏' v : Nat.Primes × Fin 3,
+      (1 - primitiveSymmetricSpectralRoots f 2 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹ *
+        DirichletCharacter.LFunctionTrivChar Q s =
+    cuspRankinSeries f.toCuspForm s *
+      (∏ p ∈ ramifiedPrimeSet Q,
+        (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-s)))) *
+          DirichletCharacter.LFunctionTrivChar Q (2 * s) :=
+  primitive_second_rankin_global_identity f hk hs
+
+/-- The actual second symmetric Euler product has proved continuation across Re(s)=1 and is nonzero in its convergence region and at the real boundary point one. -/
+theorem primitive_second_holomorphic_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 3,
+        (1 - primitiveSymmetricSpectralRoots f 2 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} ∧ F 1 ≠ 0 ∧
+      ∀ s : ℂ, 1 < s.re → F s ≠ 0 := by
+  refine ⟨primitiveSecondContinuation f, primitiveSecondContinuation_analyticOnNhd f (by omega),
+    fun _ hs => primitiveSecondContinuation_eq_symmetric f (by omega) hs,
+    primitiveSecondContinuation_one_ne_zero f hk, fun s hs => ?_⟩
+  rw [primitiveSecondContinuation_eq_symmetric f (by omega) hs]
+  exact primitive_second_symmetric_ne_zero f (by omega) hs
+
+/-- The actual Rankin remainder gives the genuine pointwise coefficient bound and a constant-free bound at every ramified prime. -/
+theorem primitive_rankin_pointwise_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∃ B : ℝ, 0 < B ∧ ∀ n : ℕ, 1 ≤ n →
+      ‖normalizedCuspCoefficients f.toCuspForm n‖ ^ 2 ≤ B * (n : ℝ) ^ (3 / 5 : ℝ)) ∧
+    ∀ p : ℕ, Nat.Prime p → p ∣ Q →
+      ‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 ≤ (p : ℝ) ^ (3 / 5 : ℝ) :=
+  ⟨exists_normalized_cusp_coefficient_three_fifths f.toCuspForm hk,
+    fun _ hp hpQ => primitive_bad_coefficient_norm_sq_le_three_fifths f hk hp hpQ⟩
+
+/-- The actual symmetric-square value at one has the true Petersson residue and literal finite Euler corrections, and is proved nonzero. -/
+theorem primitive_second_residue_value_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    primitiveSecondContinuation f 1 =
+      (cuspRankinResidue f.toCuspForm : ℂ) *
+        (∏ p ∈ ramifiedPrimeSet Q,
+          (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-(1 : ℂ))))) *
+            DirichletCharacter.LFunctionTrivChar Q 2 /
+              (∏ p ∈ Q.primeFactors, (1 - (p : ℂ)⁻¹)) ∧
+    primitiveSecondContinuation f 1 ≠ 0 :=
+  ⟨primitiveSecondContinuation_one f (by omega), primitiveSecondContinuation_one_ne_zero f hk⟩
+
+end
+
+
+section
+
+/-- The true good-prime roots obey the proved three-fifths square bound; every genuine Rankin tensor power trace is real and nonnegative. -/
+theorem primitive_rankin_spectral_positivity_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∀ p : ℕ, Nat.Prime p → ¬p ∣ Q →
+      ‖primitiveSatakePlus f p‖ ^ 2 ≤ (p : ℝ) ^ (3 / 5 : ℝ) ∧
+        ‖primitiveSatakeMinus f p‖ ^ 2 ≤ (p : ℝ) ^ (3 / 5 : ℝ)) ∧
+    (∀ (p : Nat.Primes) (r : ℕ),
+      (∑ i : Fin 4, primitiveRankinSpectralRoots f p i ^ r).im = 0 ∧
+        0 ≤ (∑ i : Fin 4, primitiveRankinSpectralRoots f p i ^ r).re) :=
+  ⟨fun _ hp hpQ => primitiveSatake_norm_sq_le_three_fifths f hk hp hpQ,
+    primitiveRankinSpectral_trace_nonneg f⟩
+
+/-- The original Rankin convolution is the true tensor Euler product and satisfies the actual three-four-one norm inequality. -/
+theorem primitive_rankin_euler_inequality_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∀ s : ℂ, 1 < s.re →
+      HasProd (fun p : Nat.Primes =>
+        (∏ i : Fin 4, (1 - primitiveRankinSpectralRoots f p i * (((p : ℕ) : ℂ) ^ (-s))))⁻¹)
+          (rankinConvolutionGlobalContinuation f.toCuspForm s)) ∧
+    ∀ (x y : ℝ), 0 < x →
+      1 ≤ ‖rankinConvolutionGlobalContinuation f.toCuspForm (1 + x) ^ 3 *
+        rankinConvolutionGlobalContinuation f.toCuspForm (1 + x + Complex.I * y) ^ 4 *
+          rankinConvolutionGlobalContinuation f.toCuspForm (1 + x + 2 * Complex.I * y)‖ :=
+  ⟨fun _ hs => primitive_rankin_spectral_hasProd f (by omega) hs,
+    fun _ y hx => primitive_rankin_global_three_four_one f hk hx y⟩
+
+/-- The genuine Rankin convolution has no zero at any nonreal boundary point, and its entire numerator agrees with the original principal-factor Rankin numerator on the closed half-plane. -/
+theorem primitive_rankin_boundary_nonvanishing_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∀ s : ℂ, s.re = 1 → s ≠ 1 → rankinConvolutionGlobalContinuation f.toCuspForm s ≠ 0) ∧
+    ∀ s : ℂ, 1 ≤ s.re → rankinConvolutionEntireNumerator f.toCuspForm s =
+      DirichletCharacter.LFunctionTrivChar Q (2 * s) * cuspRankinPoleNumerator f.toCuspForm s :=
+  ⟨fun _ hs hs1 => primitive_rankin_ne_zero_on_boundary f hk hs hs1,
+    fun _ hs => rankinConvolutionEntireNumerator_eq_pole_on_closed f (by omega) hs⟩
+
+/-- The original order-two infinite symmetric Euler product has a proved holomorphic nonvanishing continuation on Re(s)≥1, with no prime-bound or continuation hypothesis. -/
+theorem primitive_second_nonvanishing_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 3,
+        (1 - primitiveSymmetricSpectralRoots f 2 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} :=
+  primitive_second_symmetric_nonvanishing_continuation f hk
+
+end
+
+
+section
+
+/-- The actual Rankin convolution, true principal L-function and explicit first symmetric continuation satisfy the mixed Euler-product norm inequality. -/
+theorem primitive_first_mixed_global_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (x y : ℝ) (hx : 0 < x) :
+    1 ≤ ‖rankinConvolutionGlobalContinuation f.toCuspForm (1 + x) *
+      DirichletCharacter.LFunctionTrivChar Q (1 + x) ^ 2 *
+        primitiveFirstContinuation f (1 + x + Complex.I * y) ^ 4 *
+          DirichletCharacter.LFunctionTrivChar Q (1 + x + 2 * Complex.I * y) ^ 2‖ :=
+  primitive_mixed_global_inequality f hk hx y
+
+/-- The literal first symmetric Euler product has an explicit entire continuation, nonzero on the closed half-plane except possibly at one, with its genuine Gamma-normalized trivial zero. -/
+theorem primitive_first_nonreal_boundary_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    Differentiable ℂ (primitiveFirstContinuation f) ∧
+      Set.EqOn (primitiveFirstContinuation f) (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → s ≠ 1 → primitiveFirstContinuation f s ≠ 0) ∧
+      primitiveFirstContinuation f (((1 - (k : ℝ)) / 2 : ℝ) : ℂ) = 0 :=
+  ⟨primitiveFirstContinuation_differentiable f (by omega),
+    fun _ hs => primitiveFirstContinuation_eq_symmetric f (by omega) hs,
+    fun _ hs hs1 => primitiveFirstContinuation_ne_zero_of_ne_one f hk hs hs1,
+    primitiveFirstContinuation_trivial_zero f⟩
+
+/-- Under a hypothetical actual first-power zero at one, the genuine divided-difference Rankin product is entire, agrees with the original Euler product, and retains a real trivial zero. This is a conditional contradiction setup, not a proof of nonvanishing at one. -/
+theorem primitive_first_hypothetical_zero_cancellation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hz : primitiveFirstContinuation f 1 = 0) :
+    Differentiable ℂ (firstRankinPoleCancellation f) ∧
+      (∀ s : ℂ, 1 < s.re → firstRankinPoleCancellation f s =
+        DirichletCharacter.LFunctionTrivChar Q s * rankinConvolutionGlobalContinuation f.toCuspForm s *
+          (∏ p ∈ ramifiedPrimeSet Q,
+            (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-s)))) *
+              primitiveSymmetricLFunction f 1 s ^ 2) ∧
+      firstRankinPoleCancellation f (((1 - (k : ℝ)) / 2 : ℝ) : ℂ) = 0 :=
+  ⟨firstRankinPoleCancellation_differentiable f (by omega),
+    fun _ hs => firstRankinPoleCancellation_eq_product f (by omega) hz hs,
+    firstRankinPoleCancellation_trivial_zero_of_zero_at_one f hk hz⟩
+
+end
+
+
+section
+open scoped ComplexOrder Topology
+
+/-- Nonnegative coefficients of the literal finite geometric products of the actual augmented tensor roots. -/
+theorem primitive_augmented_formal_coefficient_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (p : Nat.Primes) (r : ℕ) :
+    0 ≤ PowerSeries.coeff r (∏ i : Fin 3 × Fin 3,
+      PowerSeries.mk (fun n : ℕ =>
+        (primitiveAugmentedRoots f p i.1 * primitiveAugmentedRoots f p i.2) ^ n)) :=
+  primitiveAugmentedLocalCoeff_nonneg f p r
+
+/-- Actual factorization-assembled nonnegative coefficients identify the genuine mixed Rankin L-series, including the exact finite bad correction. -/
+theorem primitive_augmented_dirichlet_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    let a : ℕ → ℂ := fun n => if n = 0 then 0 else
+      n.factorization.prod (primitiveAugmentedNatLocalCoeff f)
+    (∀ n, 0 ≤ a n) ∧ a 1 = 1 ∧
+      (∀ s : ℂ, 7 < s.re → LSeries a s =
+        DirichletCharacter.LFunctionTrivChar Q s * rankinConvolutionGlobalContinuation f.toCuspForm s *
+          (∏ p ∈ ramifiedPrimeSet Q,
+            (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-s)))) *
+              primitiveSymmetricLFunction f 1 s ^ 2) :=
+  ⟨primitiveAugmentedCoefficient_nonneg f, primitiveAugmentedCoefficient_one f,
+    fun _ hs => primitiveAugmentedCoefficient_LSeries f hk hs⟩
+
+/-- The explicit original cusp function times its finite correction is entire and nonzero on every point of Re(s)≥1, and matches the literal infinite first symmetric Euler product. -/
+theorem primitive_first_full_nonvanishing_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    let F : ℂ → ℂ := fun s => normalizedCuspLFunction f.toCuspForm s *
+      ∏ p ∈ ramifiedPrimeSet Q, primitiveEulerDenominator f p s
+    Differentiable ℂ F ∧ (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} :=
+  ⟨primitiveFirstContinuation_differentiable f (by omega),
+    fun _ hs => primitiveFirstContinuation_ne_zero f hk hs,
+    fun _ hs => primitiveFirstContinuation_eq_symmetric f (by omega) hs⟩
+
+/-- The genuine empirical Sato–Tate reduction consumes actual good-prime purity and literal symmetric Euler continuations only from order three onward. -/
+theorem primitive_sato_tate_higher_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hcontinuation : ∀ r : ℕ, 3 ≤ r → ∃ F : ℂ → ℂ,
+      AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re}) :
+    Filter.Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      Filter.atTop (𝓝 satoTateProbability) :=
+  primitive_satoTate_of_higher_symmetric_L_continuation f hk hbound hcontinuation
+
+end
+
+
+section
+open scoped ComplexOrder
+
+/-- Literal nonnegative Dirichlet coefficients converge in every half-plane of genuine holomorphy. -/
+theorem nonnegative_dirichlet_half_plane_source {a : ℕ → ℂ} (ha : ∀ n, 0 ≤ a n)
+    {F : ℂ → ℂ} {σ₀ A : ℝ} (hF : DifferentiableOn ℂ F {s : ℂ | σ₀ < s.re})
+    (hA : LSeries.abscissaOfAbsConv a ≤ A)
+    (hmatch : Set.EqOn F (fun s => ∑' n : ℕ, if n = 0 then 0 else a n / (n : ℂ) ^ s)
+      {s : ℂ | A < s.re}) :
+    LSeries.abscissaOfAbsConv a ≤ σ₀ :=
+  positive_dirichlet_abscissa_le_of_holomorphic ha hF hA hmatch
+
+/-- The actual determinant-one roots satisfy the complete finite tensor Euler identity at every order. -/
+theorem primitive_tensor_clebsch_gordan_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (p r : ℕ) (z : ℂ) :
+    (∏ i ∈ Finset.range (r + 1), ∏ j ∈ Finset.range (r + 1),
+      (1 - (primitiveSatakePlus f p ^ i * primitiveSatakeMinus f p ^ (r - i)) *
+        (primitiveSatakePlus f p ^ j * primitiveSatakeMinus f p ^ (r - j)) * z)) =
+    ∏ t ∈ Finset.range (r + 1), ∏ i ∈ Finset.range (2 * t + 1),
+      (1 - primitiveSatakePlus f p ^ i * primitiveSatakeMinus f p ^ (2 * t - i) * z) :=
+  satake_tensor_product_decomposition (primitiveSatake_trace_det f p).2 (fun w => 1 - w * z) r
+
+/-- Nonnegative coefficients of the actual higher tensor Euler series identify the genuine product of even powers. -/
+theorem primitive_higher_tensor_dirichlet_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (r : ℕ) :
+    let a : ℕ → ℂ := fun n => if n = 0 then 0 else
+      n.factorization.prod (spectralNatLocalCoeff (primitiveHigherTensorRoots f r))
+    (∀ n, 0 ≤ a n) ∧ (∀ s : ℂ, ((2 * r + (r + 1) ^ 2 + 1 : ℕ) : ℝ) + 1 < s.re →
+      LSeries a s = ∏ t ∈ Finset.range (r + 1),
+        (∏' v : Nat.Primes × Fin (2 * t + 1),
+          (1 - primitiveSymmetricSpectralRoots f (2 * t) v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹) :=
+  ⟨primitiveHigherTensorCoefficient_nonneg f r,
+    fun _ hs => primitiveHigherTensorCoefficient_LSeries f hk r hs⟩
+
+/-- Convergence of literal geometric-product coefficients bounds every original spectral root. -/
+theorem finite_euler_convergence_root_source {ι : Type*} (s : Finset ι) (w : ι → ℂ) (z : ℂ)
+    (hs : Summable (fun n : ℕ => PowerSeries.coeff n
+      (∏ i ∈ s, PowerSeries.mk (fun m : ℕ => w i ^ m)) * z ^ n))
+    {i : ι} (hi : i ∈ s) : ‖w i * z‖ < 1 :=
+  spectral_root_norm_lt_one_of_summable s w z hs hi
+
+/-- The genuine good-prime Deligne bound follows from higher holomorphy, without assuming a local bound or near-boundary Euler matching. -/
+theorem primitive_purity_from_higher_holomorphy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hcontinuation : ∀ r : ℕ, 3 ≤ r → ∃ F : ℂ → ℂ,
+      DifferentiableOn ℂ F {s | 1 < s.re} ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | (r : ℝ) + 1 < s.re})
+    {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) :
+    ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2 :=
+  primitive_prime_bound_of_higher_symmetric_holomorphy f hk hcontinuation hp hpQ
+
+/-- Actual weak Sato–Tate follows from literal higher Euler continuations alone; the theorem proves local purity internally. -/
+theorem primitive_sato_tate_higher_continuation_alone_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hcontinuation : ∀ r : ℕ, 3 ≤ r → ∃ F : ℂ → ℂ,
+      AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | (r : ℝ) + 1 < s.re}) :
+    Filter.Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      Filter.atTop (𝓝 satoTateProbability) :=
+  primitive_satoTate_of_higher_continuation_alone f hk hcontinuation
+
+end
+
+
+section
+open scoped ComplexOrder
+
+/-- Actual augmented tensor coefficients remain nonnegative and identify the literal higher Euler product. -/
+theorem primitive_higher_augmented_series_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (r : ℕ) :
+    let a : ℕ → ℂ := fun n => if n = 0 then 0 else
+      n.factorization.prod (spectralNatLocalCoeff (primitiveHigherAugmentedTensorRoots f r))
+    (∀ n, 0 ≤ a n) ∧ a 1 = 1 ∧ (∀ s : ℂ,
+      ((2 * r + (r + 2) ^ 2 + 1 : ℕ) : ℝ) + 1 < s.re →
+      LSeries a s = DirichletCharacter.LFunctionTrivChar Q s *
+        (∏ t ∈ Finset.range (r + 1), primitiveSymmetricLFunction f (2 * t) s) *
+          primitiveSymmetricLFunction f r s ^ 2) :=
+  ⟨primitiveHigherAugmentedCoefficient_nonneg f r, primitiveHigherAugmentedCoefficient_one f r,
+    fun _ hs => primitiveHigherAugmentedCoefficient_LSeries f hk r hs⟩
+
+/-- The literal divided-difference product is entire and has the actual principal trivial zero. -/
+theorem higher_actual_pole_cancellation_source (Q : ℕ) [NeZero Q]
+    (H : ℕ → ℂ → ℂ) (hH : ∀ n, 0 < n → Differentiable ℂ (H n))
+    {r : ℕ} (hr : 0 < r) :
+    let G : ℂ → ℂ := fun s => DirichletCharacter.LFunctionTrivChar₁ Q s ^ 2 *
+      (dslope (H r) 1 s) ^ 2 * ∏ t ∈ Finset.range r, H (2 * (t + 1)) s
+    Differentiable ℂ G ∧ G (-2) = 0 :=
+  ⟨higherSymmetricPoleCancellation_differentiable Q H hH hr,
+    higherSymmetricPoleCancellation_neg_two Q H r⟩
+
+/-- Entire continuations matched to the original infinite Euler products imply all actual boundary nonvanishing. -/
+theorem primitive_higher_entire_nonvanishing_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (H : ℕ → ℂ → ℂ)
+    (hH : ∀ n, 0 < n → Differentiable ℂ (H n))
+    (hmatch : ∀ n, 0 < n → Set.EqOn (H n)
+      (fun s => (∏' v : Nat.Primes × Fin (n + 1),
+        (1 - primitiveSymmetricSpectralRoots f n v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+      {s | (n : ℝ) + 1 < s.re}) {r : ℕ} (hr : 0 < r) {s : ℂ} (hs : 1 ≤ s.re) : H r s ≠ 0 :=
+  primitive_symmetric_nonvanishing_of_entire_continuation f hk H hH hmatch hr hs
+
+/-- The actual weak prime empirical law follows from entire symmetric continuation, with no independent purity or nonvanishing premise. -/
+theorem primitive_sato_tate_entire_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (H : ℕ → ℂ → ℂ)
+    (hH : ∀ n, 0 < n → Differentiable ℂ (H n))
+    (hmatch : ∀ n, 0 < n → Set.EqOn (H n)
+      (fun s => (∏' v : Nat.Primes × Fin (n + 1),
+        (1 - primitiveSymmetricSpectralRoots f n v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+      {s | (n : ℝ) + 1 < s.re}) :
+    Filter.Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      Filter.atTop (𝓝 satoTateProbability) :=
+  primitive_satoTate_of_entire_symmetric_continuation f hk H hH hmatch
+
+end
+
+
+open scoped MatrixGroups ModularForm in
+theorem real_group_original_pairing_source (k : ℤ)
+    (f f' : UpperHalfPlane → ℂ) (g : SL(2, ℝ)) :
+    starRingEnd ℂ ((f ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) *
+      ((f' ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) =
+      starRingEnd ℂ (f (g • UpperHalfPlane.I)) * f' (g • UpperHalfPlane.I) *
+        ((g • UpperHalfPlane.I).im : ℂ) ^ k := by
+  exact realWeightLift_pairing k f f' g
+
+open scoped MatrixGroups in
+theorem real_group_compact_orbit_source (k : ℤ)
+    (f : UpperHalfPlane → ℂ) (hf : f ≠ 0) :
+    IsCompact (realCompactSubgroup : Set SL(2, ℝ)) ∧
+      Module.finrank ℂ (Submodule.span ℂ (Set.range (fun h : realCompactSubgroup =>
+        TannakaDuality.FiniteGroup.rightRegular (k := ℂ) h.val (realWeightLift k f)))) = 1 :=
+  ⟨realCompactSubgroup_isCompact, realWeightLift_compact_finrank k hf⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_whittaker_normalization_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    {y : ℝ} (hy : 0 < y) {n : ℕ} (hn : 0 < n) :
+    (∫ x in (0 : ℝ)..1, fourier (-(n : ℤ)) (x : UnitAddCircle) *
+      realWeightLift k f
+        (⟨(x : ℂ) + y * Complex.I, by simpa using hy⟩ : UpperHalfPlane).toSL2R) =
+      normalizedCuspCoefficients f n * (((n : ℝ) ^ (-(1 : ℝ) / 2) : ℝ) : ℂ) *
+        (((((n : ℝ) * y) ^ ((k : ℝ) / 2) : ℝ) : ℂ) *
+          (Real.exp (-2 * Real.pi * ((n : ℝ) * y)) : ℂ)) :=
+  realWhittakerCoefficient_normalized f hy hn
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_cuspidal_frequencies_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    {y : ℝ} (hy : 0 < y) {n : ℤ} (hn : n ≤ 0) :
+    (∫ x in (0 : ℝ)..1, fourier (-n) (x : UnitAddCircle) *
+      realWeightLift k f
+        (⟨(x : ℂ) + y * Complex.I, by simpa using hy⟩ : UpperHalfPlane).toSL2R) = 0 := by
+  rcases lt_or_eq_of_le hn with h | h
+  · exact realWhittakerCoefficient_neg f hy h
+  · subst n
+    exact realWhittakerCoefficient_zero f hy
+
+open scoped MatrixGroups in
+theorem real_group_primitive_hecke_source {Q p : ℕ} [NeZero Q] [NeZero p] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hp : Nat.Prime p) (g : SL(2, ℝ)) :
+    (((p : ℝ) ^ (-(1 : ℝ) / 2) : ℝ) : ℂ) *
+      ((∑ b ∈ Finset.range p, realWeightLift k f.toCuspForm
+        (realAffineMatrix ((b : ℝ) / p)
+          (one_div_pos.mpr (Nat.cast_pos.mpr (Nat.pos_of_neZero p))) * g)) +
+        if Nat.Coprime p Q then realWeightLift k f.toCuspForm
+          (realAffineMatrix 0 (Nat.cast_pos.mpr (Nat.pos_of_neZero p)) * g) else 0) =
+      normalizedCuspCoefficients f.toCuspForm p * realWeightLift k f.toCuspForm g :=
+  primitive_realPrimeHecke_eigenvalue f hp g
+
+open scoped MatrixGroups in
+theorem real_group_iwasawa_source (k : ℤ) (f : UpperHalfPlane → ℂ) :
+    Function.Bijective (fun g : SL(2, ℝ) =>
+      (g • UpperHalfPlane.I, realIwasawaCompact g)) ∧
+    ∀ g : SL(2, ℝ), realWeightLift k f g =
+      f (g • UpperHalfPlane.I) * ((Real.sqrt (g • UpperHalfPlane.I).im : ℝ) : ℂ) ^ k *
+        (realCompactWeight k (realIwasawaCompact g) : ℂ) :=
+  ⟨realIwasawaHomeomorph.bijective, realWeightLift_iwasawa k f⟩
+
+
+open scoped MatrixGroups in
+theorem real_group_haar_source :
+    (Measure.map realIwasawaHomeomorph.symm
+      ((volume : Measure UpperHalfPlane).prod realCompactHaar)).IsHaarMeasure ∧
+    ∀ g : SL(2, ℝ),
+      MeasurePreserving (fun h : SL(2, ℝ) => g * h) realGroupMeasure realGroupMeasure ∧
+      MeasurePreserving (fun h : SL(2, ℝ) => h * g) realGroupMeasure realGroupMeasure :=
+  ⟨realGroupMeasure_isHaarMeasure,
+    fun g => ⟨realGroupMeasure_left_invariant g, realGroupMeasure_right_invariant g⟩⟩
+
+open scoped MatrixGroups ModularForm CongruenceSubgroup in
+theorem real_group_petersson_integral_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f f' : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    cuspPetersson f f' = ∫ g : SL(2, ℝ) in {g | g • UpperHalfPlane.I ∈ gamma0FundamentalDomain Q},
+      starRingEnd ℂ ((⇑f ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) *
+        ((⇑f' ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) ∂realGroupMeasure :=
+  cuspPetersson_eq_realGroup_integral f f'
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_generated_hecke_source {Q p : ℕ} [NeZero Q] [NeZero p] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hp : Nat.Prime p) {v : SL(2, ℝ) → ℂ}
+    (hv : v ∈ Submodule.span ℂ (Set.range (fun h : SL(2, ℝ) =>
+      fun g : SL(2, ℝ) => realWeightLift k f.toCuspForm (g * h)))) :
+    (∀ γ : SL(2, ℝ), Matrix.SpecialLinearGroup.mapGL ℝ γ ∈
+      (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) →
+        ∀ g : SL(2, ℝ), v (γ * g) = v g) ∧
+    ∀ g : SL(2, ℝ), realPrimeHecke Q p v g = normalizedCuspCoefficients f.toCuspForm p * v g := by
+  refine ⟨fun γ hγ g => realLiftCyclic_left_invariant f.toCuspForm hv γ hγ g, fun g => ?_⟩
+  exact congrFun (primitive_realPrimeHecke_cyclic_eigenvalue f hp hv) g
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_generated_L2_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    {v : SL(2, ℝ) → ℂ}
+    (hv : v ∈ Submodule.span ℂ (Set.range (fun h : SL(2, ℝ) =>
+      fun g : SL(2, ℝ) => realWeightLift k f (g * h)))) :
+    Continuous v ∧ (∃ C : ℝ, 0 ≤ C ∧ ∀ g : SL(2, ℝ), ‖v g‖ ≤ C) ∧
+      MemLp v 2 (realGroupMeasure.restrict
+        {g : SL(2, ℝ) | g • UpperHalfPlane.I ∈ gamma0FundamentalDomain Q}) :=
+  ⟨realLiftCyclic_continuous f hv, realLiftCyclic_bounded f hv, realLiftCyclic_memLp_two f hv⟩
+
+
+open scoped MatrixGroups in
+theorem real_projective_haar_domain_source (Q : ℕ) [NeZero Q] :
+    (Measure.map (QuotientGroup.mk : SL(2, ℝ) → PSL(2, ℝ)) realGroupMeasure).IsHaarMeasure ∧
+    IsFundamentalDomain (projectiveGamma0 Q)
+      {q : PSL(2, ℝ) | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q}
+      (Measure.map (QuotientGroup.mk : SL(2, ℝ) → PSL(2, ℝ)) realGroupMeasure) ∧
+    realProjectiveMeasure {q | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q} =
+      volume (gamma0FundamentalDomain Q) :=
+  ⟨realProjectiveMeasure_isHaarMeasure, realProjectiveGamma0Domain_isFundamental Q,
+    realProjectiveGamma0Domain_volume Q⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_cyclic_L2_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (v : (realLiftCyclicRepresentation k f).toSubmodule) :
+    (∀ g : SL(2, ℝ), realProjectiveCyclicVector f v (QuotientGroup.mk g) = v.val g) ∧
+    MemLp (realProjectiveCyclicVector f v) 2
+      (realProjectiveMeasure.restrict {q | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q}) ∧
+    Function.Injective (realProjectiveCyclicToL2 f) :=
+  ⟨realProjectiveCyclicVector_mk f v, realProjectiveCyclicVector_memLp_two f v,
+    realProjectiveCyclicToL2_injective f⟩
+
+open scoped MatrixGroups CongruenceSubgroup ModularForm in
+theorem real_projective_petersson_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f f' : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    (∀ g : SL(2, ℝ), realProjectiveCuspLift f (QuotientGroup.mk g) =
+      (⇑f ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) ∧
+    cuspPetersson f f' = ∫ q : PSL(2, ℝ) in
+      {q | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q},
+      starRingEnd ℂ (realProjectiveCuspLift f q) * realProjectiveCuspLift f' q
+        ∂realProjectiveMeasure :=
+  ⟨fun _ => rfl, cuspPetersson_eq_projectiveGroup_integral f f'⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_unitary_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (a : PSL(2, ℝ)) (v w : (realLiftCyclicRepresentation k f).toSubmodule) :
+    (∀ q : PSL(2, ℝ), realProjectiveCyclicVector f
+      (realProjectiveCyclicRepresentation f a v) q = realProjectiveCyclicVector f v (q * a)) ∧
+    inner ℂ (realProjectiveCyclicToL2 f (realProjectiveCyclicRepresentation f a v))
+      (realProjectiveCyclicToL2 f (realProjectiveCyclicRepresentation f a w)) =
+        inner ℂ (realProjectiveCyclicToL2 f v) (realProjectiveCyclicToL2 f w) :=
+  ⟨fun q => realProjectiveCyclicRepresentation_apply f a q v,
+    realProjectiveCyclicRepresentation_inner f a v w⟩
+
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_hilbert_embedding_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    Function.Injective (realProjectiveHilbertEmbedding f) ∧
+    DenseRange (realProjectiveHilbertEmbedding f) ∧
+    ∀ (a : PSL(2, ℝ)) (v : (realLiftCyclicRepresentation k f).toSubmodule),
+      realProjectiveHilbertRepresentation f a (realProjectiveHilbertEmbedding f v) =
+        realProjectiveHilbertEmbedding f (realProjectiveCyclicRepresentation f a v) :=
+  ⟨realProjectiveHilbertEmbedding_injective f, realProjectiveHilbertEmbedding_dense f,
+    realProjectiveHilbertEmbedding_intertwines f⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_hilbert_unitary_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    (∀ v : RealProjectiveHilbert f,
+      Continuous (fun a : PSL(2, ℝ) => realProjectiveHilbertRepresentation f a v)) ∧
+    ∀ (a : PSL(2, ℝ)) (v w : RealProjectiveHilbert f),
+      inner ℂ (realProjectiveHilbertRepresentation f a v)
+        (realProjectiveHilbertRepresentation f a w) = inner ℂ v w :=
+  ⟨realProjectiveHilbertRepresentation_stronglyContinuous f,
+    realProjectiveHilbertRepresentation_inner f⟩
+
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_completed_quotient_L2_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    (∀ v : RealProjectiveHilbert f, ‖realProjectiveHilbertToL2 f v‖ = ‖v‖) ∧
+    Set.range (realProjectiveHilbertToL2 f) = closure (Set.range (realProjectiveCyclicToL2 f)) ∧
+    ∀ v : (realLiftCyclicRepresentation k f).toSubmodule,
+      realProjectiveHilbertToL2 f (realProjectiveHilbertEmbedding f v) = realProjectiveCyclicToL2 f v :=
+  ⟨realProjectiveHilbertToL2_norm f, realProjectiveHilbertToL2_range f,
+    realProjectiveHilbertToL2_embedding f⟩
+
+theorem original_cusp_period_average_source {Γ : Subgroup (GL (Fin 2) ℝ)} {k : ℤ}
+    (f : CuspForm Γ k) {h : ℝ} (hh : 0 < h) (hΓ : h ∈ Γ.strictPeriods)
+    (t : ℝ) {y : ℝ} (hy : 0 < y) :
+    (∫ x in (0 : ℝ)..1,
+      f ⟨((h * x + t : ℝ) : ℂ) + y * Complex.I, by simpa using hy⟩) = 0 :=
+  cusp_period_horizontal_shift_integral_zero f hh hΓ t hy
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_cyclic_integral_cusp_average_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (v : (realLiftCyclicRepresentation k f).toSubmodule) :
+    ∀ (σ : SL(2, ℤ)) (g : SL(2, ℝ)),
+      (∫ x in (0 : ℝ)..1, v.val (integralToRealSL σ * realUpperUnipotent ((Q : ℝ) * x) * g)) = 0 :=
+  realLiftCyclic_integral_cusp_period_zero f v.property
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_completed_cusp_generator_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) (hf : f ≠ 0) :
+    realProjectiveHilbertGenerator f ≠ 0 ∧
+    inner ℂ (realProjectiveHilbertGenerator f) (realProjectiveHilbertGenerator f) = cuspPetersson f f ∧
+    (∀ a : realCompactSubgroup,
+      realProjectiveHilbertRepresentation f (QuotientGroup.mk a.val) (realProjectiveHilbertGenerator f) =
+        (realCompactWeight k a : ℂ) • realProjectiveHilbertGenerator f) ∧
+    closure ((Submodule.span ℂ (Set.range (fun a : PSL(2, ℝ) =>
+      realProjectiveHilbertRepresentation f a (realProjectiveHilbertGenerator f)))) :
+        Set (RealProjectiveHilbert f)) = Set.univ :=
+  ⟨realProjectiveHilbertGenerator_ne_zero f hf, realProjectiveHilbertGenerator_inner f,
+    realProjectiveHilbertGenerator_compact_weight f, realProjectiveHilbertGenerator_cyclic f⟩
+
+
+open scoped MatrixGroups ModularForm in
+theorem positive_real_unitary_normalization_source (k : ℤ) (f : UpperHalfPlane → ℂ) (g : GL(2, ℝ)⁺) :
+    realPositiveUnitaryLift k f g =
+      (realPositiveDetRoot g : ℂ) ^ k * f (g.val • UpperHalfPlane.I) *
+        UpperHalfPlane.denom g.val UpperHalfPlane.I ^ (-k) ∧
+    realPositiveUnitaryLift k f g =
+      (realPositiveDetRoot g : ℂ) ^ (2 - k) * (f ∣[k] g.val) UpperHalfPlane.I ∧
+    Function.Injective (realPositiveUnitaryLift k) :=
+  ⟨realPositiveUnitaryLift_apply k f g, realPositiveUnitaryLift_slash_correction k f g,
+    realPositiveUnitaryLift_injective k⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_positive_real_representation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (v : RealProjectiveHilbert f) :
+    Continuous (fun g : GL(2, ℝ)⁺ => realPositiveHilbertRepresentation f g v) ∧
+    (∀ (r : ℝ) (hr : r ≠ 0), realPositiveHilbertRepresentation f (realPositiveScalar r hr) v = v) ∧
+    ∀ g : SL(2, ℝ), realPositiveHilbertRepresentation f (Matrix.SpecialLinearGroup.toGLPos g) v =
+      realProjectiveHilbertRepresentation f (QuotientGroup.mk g) v :=
+  ⟨realPositiveHilbertRepresentation_stronglyContinuous f v,
+    fun r hr => realPositiveHilbertRepresentation_scalar f r hr v,
+    fun g => realPositiveHilbertRepresentation_toGLPos f g v⟩
+
+open scoped MatrixGroups in
+theorem actual_simultaneous_padic_SL2_source {ι : Type*} [Fintype ι]
+    (p : ι → ℕ) [∀ i, Fact (p i).Prime] (hp : Function.Injective p)
+    (g : ∀ i, SL(2, ℤ_[p i])) (n : ι → ℕ) :
+    ∃ γ : SL(2, ℤ), ∀ t : ι, ∀ i j : Fin 2,
+      ‖g t i j - ((γ i j : ℤ) : ℤ_[p t])‖ ≤ (p t : ℝ) ^ (-(n t : ℤ)) :=
+  integralSL2_finite_padic_approximation p hp g n
+
+open scoped MatrixGroups in
+theorem actual_integral_SL2_prime_product_source {ι : Type*}
+    (p : ι → ℕ) [∀ i, Fact (p i).Prime] (hp : Function.Injective p) :
+    DenseRange (fun γ : SL(2, ℤ) => fun i : ι =>
+      Matrix.SpecialLinearGroup.map (Int.castRingHom ℤ_[p i]) γ) :=
+  integralSL2_dense_prime_product p hp
+
+
+open scoped MatrixGroups
+
+/-- The original integer determinant-one group is dense in the canonical compact local product. -/
+theorem canonical_integer_matrix_density_source :
+    DenseRange (fun γ : SL(2, ℤ) => fun v : IsDedekindDomain.HeightOneSpectrum ℤ =>
+      Matrix.SpecialLinearGroup.map (Int.castRingHom (v.adicCompletionIntegers ℚ)) γ) :=
+  integralSL2_dense_adic_integer_product
+
+/-- Rational approximation concerns the pinned finite adele ring and its canonical diagonal. -/
+theorem actual_rational_adele_density_source :
+    DenseRange (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :=
+  rational_dense_finiteAdeles
+
+/-- Actual rational matrices give the exact finite-level adelic factorization. -/
+theorem actual_rational_SL2_strong_approximation_source
+    (K : Subgroup SL(2, IsDedekindDomain.FiniteAdeleRing ℤ ℚ))
+    (hK : IsOpen (K : Set SL(2, IsDedekindDomain.FiniteAdeleRing ℤ ℚ)))
+    (g : SL(2, IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :
+    ∃ γ : SL(2, ℚ), ∃ k : K,
+      g = Matrix.SpecialLinearGroup.map
+        (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) γ * k.val :=
+  rationalSL2_finiteAdeles_open_subgroup_factorization K hK g
+
+
+/-- The rational intersection of the actual adelic level subgroup is precisely the original classical Gamma0. -/
+theorem actual_adelic_level_intersection_source (N : ℕ) [NeZero N] (g : SL(2, ℚ)) :
+    Matrix.SpecialLinearGroup.map (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) g ∈
+      finiteAdeleGamma0 N ↔
+    ∃ γ : CongruenceSubgroup.Gamma0 N,
+      Matrix.SpecialLinearGroup.map (Int.castRingHom ℚ) γ.val = g :=
+  rationalSL2_mem_finiteAdeleGamma0_iff N g
+
+/-- The actual full adelic function recovers its entire original real-group cusp function. -/
+theorem actual_adelic_cusp_recovery_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : SL(2, ℝ)) :
+    canonicalAdelicCuspLift N k f (rationalAdelicSL2RealFiniteEquiv.symm (g, 1)) =
+      realWeightLift k f g :=
+  canonicalAdelicCuspLift_real_restriction N f g
+
+/-- Both invariances refer to the actual canonical full adele group and its original rational diagonal. -/
+theorem actual_adelic_cusp_invariance_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (γ : SL(2, ℚ)) (g : SL(2, NumberField.AdeleRing ℤ ℚ)) (u : finiteAdeleGamma0 N) :
+    canonicalAdelicCuspLift N k f
+      (Matrix.SpecialLinearGroup.map (algebraMap ℚ (NumberField.AdeleRing ℤ ℚ)) γ * g) =
+        canonicalAdelicCuspLift N k f g ∧
+    canonicalAdelicCuspLift N k f (g * rationalAdelicSL2RealFiniteEquiv.symm (1, u.val)) =
+      canonicalAdelicCuspLift N k f g :=
+  ⟨canonicalAdelicCuspLift_rational_invariant N f γ g,
+    canonicalAdelicCuspLift_level_invariant N f g u⟩
+
+/-- The canonical full adelic cusp construction is continuous and retains the original cusp form injectively. -/
+theorem actual_adelic_cusp_continuity_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    Continuous (canonicalAdelicCuspLift N k f) ∧
+    Function.Injective (fun h : CuspForm
+      ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k =>
+        canonicalAdelicCuspLift N k h) :=
+  ⟨canonicalAdelicCuspLift_continuous N f, canonicalAdelicCuspLift_injective N k⟩
+
+
+/-- The determinant normalization uses a proved positive rational factor of the actual finite idele. -/
+theorem finite_idele_determinant_factor_source
+    (a : (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)ˣ) :
+    ∃ q : ℚ, 0 < q ∧ ∃ u : finiteAdeleIntegerSubringˣ,
+      (a : IsDedekindDomain.FiniteAdeleRing ℤ ℚ) =
+        algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ) q * u.val.val :=
+  finiteIdele_positive_rational_integral_unit a
+
+/-- The genuine nonzero-level GL2 subgroup is open in the actual canonical finite adelic topology. -/
+theorem actual_finite_GL2_level_source (N : ℕ) [NeZero N] :
+    IsOpen (finiteAdeleGL2Gamma0 N :
+      Set (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ))) :=
+  finiteAdeleGL2Gamma0_isOpen N
+
+/-- The actual original finite adelic invertible matrix has the proved positive rational and level factors. -/
+theorem positive_rational_GL2_factor_source (N : ℕ) [NeZero N]
+    (g : Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :
+    ∃ γ : GL(2, ℚ)⁺, ∃ u : finiteAdeleGL2Gamma0 N,
+      g = Matrix.GeneralLinearGroup.map
+        (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) γ.val * u.val :=
+  rationalGL2_finiteAdeles_gamma0_factorization N g
+
+/-- The positive rational intersection is exactly the genuine embedded classical Gamma0 group. -/
+theorem actual_positive_GL2_intersection_source (N : ℕ) [NeZero N] (g : GL(2, ℚ)⁺) :
+    Matrix.GeneralLinearGroup.map (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) g.val ∈
+      finiteAdeleGL2Gamma0 N ↔
+    ∃ γ : CongruenceSubgroup.Gamma0 N,
+      Matrix.GeneralLinearGroup.map (Int.castRingHom ℚ)
+        (Matrix.SpecialLinearGroup.toGL γ.val) = g.val :=
+  positiveRationalGL2_mem_finiteAdeleGamma0_iff N g
+
+/-- The actual full adelic function recovers its entire original real-group cusp function. -/
+theorem actual_adelic_GL2_cusp_recovery_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : GL(2, ℝ)⁺) :
+    canonicalAdelicGL2CuspLift N k f (rationalAdelicGL2RealFiniteEquiv.symm (g.val, 1)) =
+      realPositiveUnitaryLift k f g :=
+  canonicalAdelicGL2CuspLift_real_restriction N f g
+
+/-- Both invariances refer to the actual canonical full adele group and its original rational diagonal. -/
+theorem actual_adelic_GL2_cusp_invariance_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (γ : Matrix.GeneralLinearGroup (Fin 2) ℚ) (g : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ)) (u : finiteAdeleGL2Gamma0 N) :
+    canonicalAdelicGL2CuspLift N k f
+      (Matrix.GeneralLinearGroup.map (algebraMap ℚ (NumberField.AdeleRing ℤ ℚ)) γ * g) =
+        canonicalAdelicGL2CuspLift N k f g ∧
+    canonicalAdelicGL2CuspLift N k f (g * rationalAdelicGL2RealFiniteEquiv.symm (1, u.val)) =
+      canonicalAdelicGL2CuspLift N k f g :=
+  ⟨canonicalAdelicGL2CuspLift_rational_invariant N f γ g,
+    canonicalAdelicGL2CuspLift_level_invariant N f g u⟩
+
+/-- The canonical full adelic cusp construction is continuous and retains the original cusp form injectively. -/
+theorem actual_adelic_GL2_cusp_continuity_source (N : ℕ) [NeZero N] (k : ℤ)
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    Continuous (canonicalAdelicGL2CuspLift N k f) ∧
+    Function.Injective (fun h : CuspForm
+      ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k =>
+        canonicalAdelicGL2CuspLift N k h) :=
+  ⟨canonicalAdelicGL2CuspLift_continuous N f, canonicalAdelicGL2CuspLift_injective N k⟩
+
+
+/-- The full general-linear lift extends the original canonical determinant-one cusp function exactly. -/
+theorem actual_adelic_GL2_SL2_compatibility_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : SL(2, NumberField.AdeleRing ℤ ℚ)) :
+    canonicalAdelicGL2CuspLift N k f (Matrix.SpecialLinearGroup.toGL g) =
+      canonicalAdelicCuspLift N k f g :=
+  canonicalAdelicGL2CuspLift_toGL N f g
+
+/-- The original cusp form has an actual positive zero-average period after every positive rational cusp translate. -/
+theorem actual_rational_GL2_cusp_period_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (γ : GL(2, ℚ)⁺) :
+    ∃ h : ℝ, 0 < h ∧ ∀ g : GL(2, ℝ)⁺,
+      (∫ x in (0 : ℝ)..1, realPositiveUnitaryLift k f
+        (rationalPositiveGL2ToReal γ * Matrix.SpecialLinearGroup.toGLPos
+          (realUpperUnipotent (h * x)) * g)) = 0 :=
+  rationalPositiveGL2_unipotent_period_zero f γ
+
+/-- The actual positive-real adelic lift has zero real unipotent averages at every original finite point. -/
+theorem actual_finite_adelic_GL2_cusp_period_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (a : Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :
+    ∃ h : ℝ, 0 < h ∧ ∀ g : GL(2, ℝ)⁺,
+      (∫ x in (0 : ℝ)..1, positiveAdelicGL2CuspLift N k f
+        (Matrix.SpecialLinearGroup.toGLPos (realUpperUnipotent (h * x)) * g) a) = 0 :=
+  positiveAdelicGL2CuspLift_unipotent_period_zero N f a
+
+/-- The original additive quotient is compact with discrete principal rationals and a genuinely dense real orbit. -/
+theorem actual_additive_adele_quotient_source :
+    CompactSpace RationalAdelicAdditiveQuotient ∧
+    DiscreteTopology (NumberField.AdeleRing.principalSubgroup ℤ ℚ) ∧
+    DenseRange rationalAdelicRealQuotientMap :=
+  ⟨rationalAdelicAdditiveQuotient_compactSpace, rationalAdelePrincipal_discreteTopology,
+    rationalAdelicRealQuotientMap_dense⟩
+
+/-- The actual full additive quotient has a normalized Haar measure preserved by every genuine translation. -/
+theorem actual_additive_adele_Haar_source (a : RationalAdelicAdditiveQuotient) :
+    rationalAdelicAdditiveHaar Set.univ = 1 ∧
+    MeasureTheory.Measure.map (fun x => a + x) rationalAdelicAdditiveHaar = rationalAdelicAdditiveHaar :=
+  ⟨rationalAdelicAdditiveHaar_univ, rationalAdelicAdditiveHaar_translate a⟩
+
+/-- The original actual unipotent function descends continuously to the genuine additive quotient, with its exact representative formula. -/
+theorem actual_adelic_unipotent_quotient_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ))
+    (x : NumberField.AdeleRing ℤ ℚ) :
+    Continuous (adelicUnipotentQuotientFunction N f g) ∧
+    adelicUnipotentQuotientFunction N f g (QuotientAddGroup.mk x) =
+      canonicalAdelicGL2CuspLift N k f (Matrix.GeneralLinearGroup.upperRightHom x * g) :=
+  ⟨adelicUnipotentQuotientFunction_continuous N f g,
+    adelicUnipotentQuotientFunction_mk N f g x⟩
+
+/-- The original classical cusp form has genuine zero unipotent Haar integral at every full canonical adelic GL2 point. -/
+theorem actual_adelic_unipotent_cuspidality_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ)) :
+    (∫ z : RationalAdelicAdditiveQuotient,
+      adelicUnipotentQuotientFunction N f g z ∂rationalAdelicAdditiveHaar) = 0 :=
+  canonicalAdelicGL2CuspLift_unipotent_cuspidal N f g
+
+/-- The original canonical full adelic cusp function has its actual rational invariance and genuine trivial full idele scalar character. -/
+theorem actual_adelic_central_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (γ : Matrix.GeneralLinearGroup (Fin 2) ℚ) (u : (NumberField.AdeleRing ℤ ℚ)ˣ)
+    (g : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ)) :
+    canonicalAdelicGL2CuspLift N k f
+      (Matrix.GeneralLinearGroup.map (algebraMap ℚ (NumberField.AdeleRing ℤ ℚ)) γ * g) =
+        canonicalAdelicGL2CuspLift N k f g ∧
+    canonicalAdelicGL2CuspLift N k f (Matrix.GeneralLinearGroup.scalar (Fin 2) u * g) =
+      canonicalAdelicGL2CuspLift N k f g :=
+  ⟨canonicalAdelicGL2CuspLift_rational_invariant N f γ g,
+    canonicalAdelicGL2CuspLift_scalar_mul N f u g⟩
+
+/-- The genuine original finite level group is compact and open in its actual locally compact general-linear group. -/
+theorem actual_finite_adelic_compact_level_source (N : ℕ) [NeZero N] :
+    LocallyCompactSpace
+      (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) ∧
+    IsCompact (finiteAdeleGL2Gamma0 N :
+      Set (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ))) ∧
+    IsOpen (finiteAdeleGL2Gamma0 N :
+      Set (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ))) :=
+  ⟨rationalFiniteAdelicGL2LocallyCompactSpace, finiteAdeleGL2Gamma0_compact_open N⟩
+
+/-- Every vector of the actual original full adelic cyclic representation retains continuity, rational invariance and the trivial scalar character. -/
+theorem actual_adelic_cyclic_invariance_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (γ : Matrix.GeneralLinearGroup (Fin 2) ℚ) (u : (NumberField.AdeleRing ℤ ℚ)ˣ)
+    (g : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ)) :
+    Continuous v.val ∧
+    v.val (Matrix.GeneralLinearGroup.map (algebraMap ℚ (NumberField.AdeleRing ℤ ℚ)) γ * g) = v.val g ∧
+    v.val (Matrix.GeneralLinearGroup.scalar (Fin 2) u * g) = v.val g :=
+  ⟨adelicLiftCyclic_continuous N f v.property,
+    adelicLiftCyclic_rational_invariant N f v.property γ g,
+    adelicLiftCyclic_scalar_invariant N f v.property u g⟩
+
+/-- Every actual original adelic cyclic vector has zero genuine quotient Haar periods and a proved compact open finite stabilizer. -/
+theorem actual_adelic_cyclic_cuspidal_smooth_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (g : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ)) :
+    (∃ φ : C(RationalAdelicAdditiveQuotient, ℂ),
+      (∀ x : NumberField.AdeleRing ℤ ℚ, φ (QuotientAddGroup.mk x) =
+        v.val (Matrix.GeneralLinearGroup.upperRightHom x * g)) ∧
+      (∫ z, φ z ∂rationalAdelicAdditiveHaar) = 0) ∧
+    (∃ K : Subgroup (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)),
+      IsCompact (K : Set (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ))) ∧
+      IsOpen (K : Set (Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ))) ∧
+      ∀ h : Matrix.GeneralLinearGroup (Fin 2) (NumberField.AdeleRing ℤ ℚ), ∀ a ∈ K,
+        v.val (h * rationalAdelicFiniteGL2Embedding a) = v.val h) :=
+  ⟨adelicLiftCyclic_unipotent_cuspidal N f v.property g,
+    adelicLiftCyclic_finite_smooth N f v.property⟩
+
+/-- The actual canonical finite projective Haar measure has the original full-level normalization and genuine right invariance. -/
+theorem actual_finite_projective_haar_source (g : RationalFiniteProjectiveGL2) :
+    finiteProjectiveGL2Measure (finiteProjectiveGL2Level 1) = 1 ∧
+    MeasurePreserving (fun h : RationalFiniteProjectiveGL2 => h * g)
+      finiteProjectiveGL2Measure finiteProjectiveGL2Measure :=
+  ⟨finiteProjectiveGL2Measure_level_one, finiteProjectiveGL2Measure_right_invariant g⟩
+
+/-- The original product projective Haar measure is genuinely right invariant and its literal base region has exactly the existing real volume. -/
+theorem actual_adelic_projective_haar_source (g : AdelicProjectiveGroup) :
+    MeasurePreserving (fun h : AdelicProjectiveGroup => h * g)
+      adelicProjectiveMeasure adelicProjectiveMeasure ∧
+    adelicProjectiveMeasure adelicProjectiveBaseRegion =
+      realProjectiveMeasure (realProjectiveGamma0Domain 1) ∧
+    adelicProjectiveMeasure adelicProjectiveBaseRegion < ⊤ :=
+  ⟨adelicProjectiveMeasure_right_invariant g,
+    adelicProjectiveBaseRegion_volume, adelicProjectiveBaseRegion_volume_lt_top⟩
+
+/-- The actual original cyclic vector has a continuous projective image with exactly its original representative values. -/
+theorem actual_adelic_cyclic_projective_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (r : Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (a : Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :
+    Continuous (adelicCyclicProjectiveFunction N f v) ∧
+    adelicCyclicProjectiveLinear N f v (QuotientGroup.mk r, Matrix.ProjGenLinGroup.mk a) =
+      v.val (rationalAdelicGL2RealFiniteEquiv.symm (Matrix.SpecialLinearGroup.toGL r, a)) :=
+  ⟨adelicCyclicProjectiveFunction_continuous N f v, rfl⟩
+
+/-- The actual projective linear map is faithful and recovers every original positive-real adelic value. -/
+theorem actual_adelic_cyclic_projective_recovery_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (r : Matrix.GLPos (Fin 2) ℝ)
+    (a : Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :
+    Function.Injective (adelicCyclicProjectiveLinear N f) ∧
+    adelicCyclicProjectiveFunction N f v
+      (QuotientGroup.mk (realPositiveNormalize r), Matrix.ProjGenLinGroup.mk a) =
+      v.val (rationalAdelicGL2RealFiniteEquiv.symm (r.val, a)) :=
+  ⟨adelicCyclicProjectiveLinear_injective N f,
+    adelicCyclicProjectiveFunction_recover_positive N f v r a⟩
+
+/-- The exact original generator of the actual adelic representation keeps the original real cusp-form lift in projective coordinates. -/
+theorem actual_adelic_projective_generator_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (r : Matrix.SpecialLinearGroup (Fin 2) ℝ) :
+    adelicCyclicProjectiveLinear N f (adelicCyclicGenerator N f) (QuotientGroup.mk r, 1) =
+      realWeightLift k f r :=
+  adelicCyclicProjectiveGenerator_real N f r
+
+/-- Every actual original projective cyclic vector is invariant under the genuine rational arithmetic image. -/
+theorem actual_adelic_projective_arithmetic_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (γ : adelicProjectiveArithmetic) (p : AdelicProjectiveGroup) :
+    adelicCyclicProjectiveFunction N f v (γ.val * p) = adelicCyclicProjectiveFunction N f v p :=
+  adelicCyclicProjectiveFunction_arithmetic_invariant N f v γ p
+
+/-- The genuine arithmetic level intersection uses original integral Gamma0 matrices and a faithful diagonal embedding. -/
+theorem actual_adelic_projective_level_intersection_source (N : ℕ) [NeZero N]
+    (γ : adelicProjectiveArithmetic) :
+    Function.Injective integralToAdelicProjective ∧
+    (γ.val.2 ∈ finiteProjectiveGL2Level N ↔
+      ∃ σ : CongruenceSubgroup.Gamma0 N,
+        integralToAdelicProjective (QuotientGroup.mk σ.val) = γ.val) :=
+  ⟨integralToAdelicProjective_injective, adelicProjectiveArithmetic_level_iff N γ⟩
+
+/-- The literal original real domain times genuine finite level is an actual finite-volume arithmetic fundamental domain. -/
+theorem actual_adelic_projective_fundamental_domain_source (N : ℕ) [NeZero N] :
+    MeasureTheory.IsFundamentalDomain adelicProjectiveArithmetic (adelicProjectiveGamma0Domain N)
+      adelicProjectiveMeasure ∧
+    adelicProjectiveMeasure (adelicProjectiveGamma0Domain N) < ⊤ ∧
+    0 < finiteProjectiveGL2Measure (finiteProjectiveGL2Level N) :=
+  ⟨adelicProjectiveGamma0Domain_isFundamental N, adelicProjectiveGamma0Domain_volume_lt_top N,
+    (finiteProjectiveGL2Level_volume N).1⟩
+
+/-- Actual original full adelic cyclic vectors are faithfully realized in genuine L2, with precisely the original integral pairing. -/
+theorem actual_adelic_projective_l2_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v w : (adelicLiftCyclicRepresentation N k f).toSubmodule) :
+    Function.Injective (adelicProjectiveCyclicToL2 N f) ∧
+    MeasureTheory.MemLp (adelicCyclicProjectiveFunction N f v) 2
+      (adelicProjectiveMeasure.restrict (adelicProjectiveGamma0Domain N)) ∧
+    inner ℂ (adelicProjectiveCyclicToL2 N f v) (adelicProjectiveCyclicToL2 N f w) =
+      adelicProjectiveCyclicPairing N f v w :=
+  ⟨adelicProjectiveCyclicToL2_injective N f, adelicCyclicProjectiveFunction_memLp_two N f v,
+    adelicProjectiveCyclicToL2_inner N f v w⟩
+
+/-- Actual right projective translation preserves the genuine integral pairing of the original adelic cyclic vectors. -/
+theorem actual_adelic_projective_pairing_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v w : (adelicLiftCyclicRepresentation N k f).toSubmodule) (a : AdelicProjectiveGroup) :
+    (∫ p in adelicProjectiveGamma0Domain N,
+      star (adelicCyclicProjectiveFunction N f v (p * a)) *
+        adelicCyclicProjectiveFunction N f w (p * a) ∂adelicProjectiveMeasure) =
+      adelicProjectiveCyclicPairing N f v w :=
+  adelicProjectiveCyclicPairing_right N f v w a
+
+/-- The original full adelic right reflection descends through the genuine Haar-preserving projective reflection. -/
+theorem actual_adelic_reflection_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule) (p : AdelicProjectiveGroup) :
+    MeasureTheory.MeasurePreserving adelicProjectiveReflection adelicProjectiveMeasure adelicProjectiveMeasure ∧
+    adelicCyclicProjectiveFunction N f
+      ((adelicLiftCyclicRepresentation N k f).toRepresentation canonicalAdelicGL2Reflection v) p =
+      adelicCyclicProjectiveFunction N f v (adelicProjectiveReflection p) :=
+  ⟨adelicProjectiveReflection_measurePreserving, adelicCyclicProjectiveFunction_reflection_right N f v p⟩
+
+/-- The actual rational reflection preserves the original arithmetic subgroup and transforms the original integration region into another genuine fundamental domain. -/
+theorem actual_adelic_reflected_domain_source (N : ℕ) [NeZero N] (γ : adelicProjectiveArithmetic) :
+    adelicProjectiveReflection γ.val ∈ adelicProjectiveArithmetic ∧
+    MeasureTheory.IsFundamentalDomain adelicProjectiveArithmetic
+      (adelicProjectiveReflection '' adelicProjectiveGamma0Domain N) adelicProjectiveMeasure :=
+  ⟨adelicProjectiveReflection_mem_arithmetic γ, adelicProjectiveGamma0Domain_reflection N⟩
+
+/-- Every matrix of the original full adelic group preserves the genuine inherited L2 inner product and norm of the actual original cyclic representation. -/
+theorem actual_adelic_full_unitary_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v w : (adelicLiftCyclicRepresentation N k f).toSubmodule) (h : RationalAdelicGL2) :
+    inner ℂ (adelicProjectiveCyclicToL2 N f ((adelicLiftCyclicRepresentation N k f).toRepresentation h v))
+      (adelicProjectiveCyclicToL2 N f ((adelicLiftCyclicRepresentation N k f).toRepresentation h w)) =
+      inner ℂ (adelicProjectiveCyclicToL2 N f v) (adelicProjectiveCyclicToL2 N f w) ∧
+    ‖adelicProjectiveCyclicToL2 N f ((adelicLiftCyclicRepresentation N k f).toRepresentation h v)‖ =
+      ‖adelicProjectiveCyclicToL2 N f v‖ :=
+  ⟨adelicLiftCyclic_inner N f v w h, adelicLiftCyclic_norm N f v h⟩
+
 end Dubon2026.SemanticRegression
