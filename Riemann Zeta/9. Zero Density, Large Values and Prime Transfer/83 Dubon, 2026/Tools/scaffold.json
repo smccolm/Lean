@@ -1496,6 +1496,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdicCoefficientCompletionMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdicCoefficientQuotientMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdicCompletionEvaluationKernels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdicMatrixProductEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdicPowerQuotientTopology.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AlmostAnalytic.lean",
       "role": "Extension"
     },
@@ -1541,6 +1561,10 @@
     },
     {
       "path": "Extension/Dubon2026/AnalyticZeroPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArtinianResidualMatrixPGroup.lean",
       "role": "Extension"
     },
     {
@@ -1756,6 +1780,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactPrimeQuotientSeparation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CompactRealOrbitAverage.lean",
       "role": "Extension"
     },
@@ -1777,6 +1805,82 @@
     },
     {
       "path": "Extension/Dubon2026/ComparablePowerWeights.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedCoefficientIdealImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedCoefficientMaximalIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedCoefficientRepresentationFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedCoefficientSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedLocalCoefficientEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedRepresentationUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualCompactness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualCongruenceBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualCongruenceImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualFiniteQuotients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualLiftFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualLocalRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualMatrixTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualPrimeKernels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualProPKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedResidualTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompletedUniversalProfiniteRepresentation.lean",
       "role": "Extension"
     },
     {
@@ -1840,6 +1944,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousImageTopologicalGenerators.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousRepresentationDeterminant.lean",
       "role": "Extension"
     },
@@ -1873,6 +1981,18 @@
     },
     {
       "path": "Extension/Dubon2026/ConvolutionSummatory.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoordinateCocycleLinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoordinateDerivationMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoordinateTangentCohomology.lean",
       "role": "Extension"
     },
     {
@@ -2208,6 +2328,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/DualNumberCoordinateKernel.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/DyadicEnergyBounds.lean",
       "role": "Extension"
     },
@@ -2412,6 +2536,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteCharactersTopologicalGeneration.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCompressedProducts.lean",
       "role": "Extension"
     },
@@ -2504,6 +2632,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteIndexTopologicalGenerators.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteIntertwinerMultiplicity.lean",
       "role": "Extension"
     },
@@ -2521,6 +2653,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteOrbitOfEigenSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePGroupCharacters.lean",
       "role": "Extension"
     },
     {
@@ -2736,6 +2872,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteVariablePowerSeriesNoetherian.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteVerticalExceptions.lean",
       "role": "Extension"
     },
@@ -2756,6 +2896,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FirstOrderRepresentationCoordinates.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FirstOrderStrictConjugation.lean",
       "role": "Extension"
     },
@@ -2769,6 +2913,26 @@
     },
     {
       "path": "Extension/Dubon2026/FixedDeterminantFirstOrderLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedProPTopologicalGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualProPKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualQuotientSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualRepresentationFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualTopologicalGeneration.lean",
       "role": "Extension"
     },
     {
@@ -3452,6 +3616,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/IdealPowerMatrixKernels.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/InnerCountConvergence.lean",
       "role": "Extension"
     },
@@ -3732,6 +3900,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalCoefficientReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCoefficientRepresentationEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCoefficientRepresentationFibers.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalInducedDiagonalValues.lean",
       "role": "Extension"
     },
@@ -3776,6 +3956,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalizedRepresentationEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalizedRepresentationFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalizedResidualEvaluation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LogDeficit.lean",
       "role": "Extension"
     },
@@ -3808,6 +4000,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MatrixCongruenceKernelImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixCongruenceKernelPGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixIdealPowerProducts.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MatrixPolynomialAction.lean",
       "role": "Extension"
     },
@@ -3825,6 +4029,10 @@
     },
     {
       "path": "Extension/Dubon2026/MatrixPolynomialTangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPrimePowerCongruence.lean",
       "role": "Extension"
     },
     {
@@ -3996,6 +4204,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/NoetherianAdicCompletion.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/NonzeroFirstCoefficientDensity.lean",
       "role": "Extension"
     },
@@ -4153,6 +4365,10 @@
     },
     {
       "path": "Extension/Dubon2026/PowerIntegralAsymptotics.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PowerSeriesVariableSplitting.lean",
       "role": "Extension"
     },
     {
@@ -4496,7 +4712,47 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ProPClosedSubgroupCharacters.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ProbabilityShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteClosedSubgroupQuotients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteCongruenceNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteProPKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteProPKernelDiscreteMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteProPKernelFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteProPKernelFunctoriality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteProPQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteProPQuotientTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ProfiniteRepresentationExtension.lean",
       "role": "Extension"
     },
     {
@@ -5140,11 +5396,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RepresentationCoordinateCotangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateDerivations.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RepresentationCoordinateEquivalence.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/RepresentationCoordinateEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateFiniteType.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinatePointIdeal.lean",
       "role": "Extension"
     },
     {
@@ -5169,6 +5449,22 @@
     },
     {
       "path": "Extension/Dubon2026/RepresentationSphericalFunctional.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualCoefficientCoordinateUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualCoordinateLocalUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualRepresentationCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualRepresentationLocalization.lean",
       "role": "Extension"
     },
     {
@@ -5493,6 +5789,18 @@
     },
     {
       "path": "Extension/Dubon2026/SymmetricAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricCohomologyKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricCohomologyMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricCoordinateDerivations.lean",
       "role": "Extension"
     },
     {
@@ -7542,7 +7850,84 @@
     "ContinuousRepresentationFiniteQuotient",
     "FiniteQuotientCoordinateEvaluation",
     "SymmetricFirstOrderLifts",
-    "SymmetricRepresentationCoordinates"
+    "SymmetricRepresentationCoordinates",
+    "DualNumberCoordinateKernel",
+    "FirstOrderRepresentationCoordinates",
+    "RepresentationCoordinateDerivations",
+    "RepresentationCoordinateFibers",
+    "RepresentationCoordinateCotangent",
+    "RepresentationCoordinateFiniteType",
+    "RepresentationCoordinateGeneration",
+    "RepresentationCoordinatePointIdeal",
+    "CoordinateCocycleLinearity",
+    "CoordinateDerivationMatrices",
+    "CoordinateTangentCohomology",
+    "SymmetricCoordinateDerivations",
+    "ResidualCoordinateLocalUnits",
+    "ResidualRepresentationCoordinates",
+    "SymmetricCohomologyKernel",
+    "SymmetricCohomologyMap",
+    "LocalizedRepresentationEvaluation",
+    "LocalizedRepresentationFibers",
+    "LocalizedResidualEvaluation",
+    "ResidualRepresentationLocalization",
+    "LocalCoefficientReduction",
+    "LocalCoefficientRepresentationEvaluation",
+    "LocalCoefficientRepresentationFibers",
+    "ResidualCoefficientCoordinateUnits",
+    "AdicCoefficientCompletionMaps",
+    "AdicCoefficientQuotientMaps",
+    "CompletedLocalCoefficientEvaluation",
+    "CompletedResidualRepresentation",
+    "AdicCompletionEvaluationKernels",
+    "CompletedRepresentationUniqueness",
+    "CompletedResidualField",
+    "CompletedResidualLocalRing",
+    "CompletedCoefficientMaximalIdeal",
+    "CompletedResidualCompactness",
+    "CompletedResidualFiniteQuotients",
+    "CompletedResidualTopology",
+    "CompletedCoefficientIdealImage",
+    "CompletedCoefficientSurjectivity",
+    "FiniteVariablePowerSeriesNoetherian",
+    "NoetherianAdicCompletion",
+    "PowerSeriesVariableSplitting",
+    "CompletedCoefficientRepresentationFibers",
+    "CompletedResidualMatrixTopology",
+    "CompletedUniversalProfiniteRepresentation",
+    "ProfiniteRepresentationExtension",
+    "ArtinianResidualMatrixPGroup",
+    "MatrixCongruenceKernelPGroup",
+    "MatrixIdealPowerProducts",
+    "MatrixPrimePowerCongruence",
+    "CompletedResidualPrimeKernels",
+    "IdealPowerMatrixKernels",
+    "CompletedResidualCongruenceImages",
+    "MatrixCongruenceKernelImages",
+    "AdicMatrixProductEmbedding",
+    "AdicPowerQuotientTopology",
+    "CompletedResidualCongruenceBasis",
+    "ProfiniteCongruenceNeighborhoods",
+    "CompletedResidualProPKernel",
+    "ProfiniteProPKernel",
+    "ProfiniteProPKernelDiscreteMaps",
+    "ProfiniteProPKernelFunctoriality",
+    "CompactPrimeQuotientSeparation",
+    "FixedResidualProPKernel",
+    "ProfiniteProPQuotient",
+    "ProfiniteProPQuotientTopology",
+    "CompletedResidualLiftFactors",
+    "FixedResidualRepresentationFactors",
+    "ProfiniteProPKernelFactors",
+    "FiniteCharactersTopologicalGeneration",
+    "FinitePGroupCharacters",
+    "FixedProPTopologicalGeneration",
+    "ProPClosedSubgroupCharacters",
+    "ProfiniteClosedSubgroupQuotients",
+    "ContinuousImageTopologicalGenerators",
+    "FiniteIndexTopologicalGenerators",
+    "FixedResidualQuotientSubgroup",
+    "FixedResidualTopologicalGeneration"
   ],
   "verificationModules": [
     "SemanticRegression",

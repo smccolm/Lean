@@ -8835,4 +8835,1427 @@ theorem actual_finite_symmetric_parameters_symmetricFirstOrderLift_cohomology_so
 
 end
 
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R A B : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing A] [CommRing B] [Algebra R A] [Algebra R B]
+
+/-- Exact original-object consumer of `representationCoordinateFiber_iff`. -/
+theorem actual_coordinate_derivation_representationCoordinateFiber_iff_source
+    (ρ : G →* GeneralLinearGroup ι B) (π : A →ₐ[R] B)
+    (f : RepresentationCoordinateAlgebra G ι R →ₐ[R] A) :
+    (GeneralLinearGroup.map π.toRingHom).comp (representationFromCoordinates f) = ρ ↔
+      π.comp f = representationCoordinateEvaluation (R := R) ρ :=
+  representationCoordinateFiber_iff ρ π f
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `firstOrderCoordinateCocycleEquiv_surjective`. -/
+theorem actual_coordinate_derivation_firstOrderCoordinateCocycleEquiv_surjective_source (ρ : G →* GeneralLinearGroup ι R) :
+    Function.Surjective (firstOrderCoordinateCocycleEquiv ρ) :=
+  firstOrderCoordinateCocycleEquiv_surjective ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+
+/-- Exact original-object consumer of `dualNumberQuotient_comp_eq_iff`. -/
+theorem actual_coordinate_derivation_dualNumberQuotient_comp_eq_iff_source (f g : A →ₐ[R] DualNumber R) :
+    (Ideal.Quotient.mkₐ R (TrivSqZeroExt.kerIdeal R R)).comp f =
+      (Ideal.Quotient.mkₐ R (TrivSqZeroExt.kerIdeal R R)).comp g ↔
+        (TrivSqZeroExt.fstHom R R R).comp f = (TrivSqZeroExt.fstHom R R R).comp g :=
+  dualNumberQuotient_comp_eq_iff f g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateDerivationEquiv_apply`. -/
+theorem actual_coordinate_derivation_representationCoordinateDerivationEquiv_apply_source (ρ : G →* GeneralLinearGroup ι R)
+    (d : RepresentationCoordinateDerivations ρ) (x : RepresentationCoordinateAlgebra G ι R) :
+    (representationCoordinateDerivationEquiv ρ d).val x =
+      (d x : DualNumber R) + representationCoordinateConstantLift ρ x :=
+  representationCoordinateDerivationEquiv_apply ρ d x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G ι R : Type*) [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateMatrix_generators_adjoin`. -/
+theorem actual_coordinate_cotangent_representationCoordinateMatrix_generators_adjoin_source (S : Set G)
+    (hS : Submonoid.closure S = ⊤) :
+    Algebra.adjoin R (Set.range (fun t : S × ι × ι =>
+      representationCoordinateMatrix G ι R t.1.val t.2.1 t.2.2)) = ⊤ :=
+  representationCoordinateMatrix_generators_adjoin G ι R S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateAlgebra_isNoetherian_of_fg`. -/
+theorem actual_coordinate_cotangent_representationCoordinateAlgebra_isNoetherian_of_fg_source [Group.FG G] [IsNoetherianRing R] :
+    IsNoetherianRing (RepresentationCoordinateAlgebra G ι R) :=
+  representationCoordinateAlgebra_isNoetherian_of_fg 
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateCotangentCocycleEquiv_surjective`. -/
+theorem actual_coordinate_cotangent_representationCoordinateCotangentCocycleEquiv_surjective_source
+    (ρ : G →* GeneralLinearGroup ι R) :
+    Function.Surjective (representationCoordinateCotangentCocycleEquiv ρ) :=
+  representationCoordinateCotangentCocycleEquiv_surjective ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinatePointQuotientEquiv_mk`. -/
+theorem actual_coordinate_cotangent_representationCoordinatePointQuotientEquiv_mk_source (ρ : G →* GeneralLinearGroup ι R)
+    (x : RepresentationCoordinateAlgebra G ι R) :
+    representationCoordinatePointQuotientEquiv ρ
+      (Ideal.Quotient.mk (representationCoordinatePointIdeal ρ) x) =
+        representationCoordinateEvaluation (R := R) ρ x :=
+  representationCoordinatePointQuotientEquiv_mk ρ x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateDerivationCocycleEquiv_value`. -/
+theorem actual_coordinate_tangent_linear_representationCoordinateDerivationCocycleEquiv_value_source
+    (ρ : G →* GeneralLinearGroup ι R) (d : RepresentationCoordinateDerivations ρ) (g : G) :
+    representationCoordinateDerivationCocycleEquiv ρ d g =
+      coordinateDerivationMatrix ρ d g * ((ρ g)⁻¹).val :=
+  representationCoordinateDerivationCocycleEquiv_value ρ d g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `coordinateDerivationCocycleLinearEquiv_apply`. -/
+theorem actual_coordinate_tangent_linear_coordinateDerivationCocycleLinearEquiv_apply_source
+    (ρ : G →* GeneralLinearGroup ι R) (d : RepresentationCoordinateDerivations ρ) :
+    coordinateDerivationCocycleLinearEquiv ρ d =
+      representationCoordinateDerivationCocycleEquiv ρ d :=
+  coordinateDerivationCocycleLinearEquiv_apply ρ d
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `coordinateTangentCohomologyMap_eq_iff`. -/
+theorem actual_coordinate_tangent_linear_coordinateTangentCohomologyMap_eq_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (d e : RepresentationCoordinateDerivations ρ) :
+    coordinateTangentCohomologyMap ρ d = coordinateTangentCohomologyMap ρ e ↔
+      MatrixFirstOrderStrictlyConjugate ρ
+        (firstOrderRepresentationCoordinateEquiv ρ (representationCoordinateDerivationEquiv ρ d))
+        (firstOrderRepresentationCoordinateEquiv ρ (representationCoordinateDerivationEquiv ρ e)) :=
+  coordinateTangentCohomologyMap_eq_iff ρ d e
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricCoordinateDerivationMap_firstOrder`. -/
+theorem actual_coordinate_tangent_linear_symmetricCoordinateDerivationMap_firstOrder_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (d : RepresentationCoordinateDerivations ρ) :
+    firstOrderRepresentationCoordinateEquiv (symmetricMatrixRepresentation n ρ)
+      (representationCoordinateDerivationEquiv (symmetricMatrixRepresentation n ρ)
+        (symmetricCoordinateDerivationMap n ρ d)) =
+      symmetricFirstOrderLift n ρ
+        (firstOrderRepresentationCoordinateEquiv ρ (representationCoordinateDerivationEquiv ρ d)) :=
+  symmetricCoordinateDerivationMap_firstOrder n ρ d
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricTangentCohomologyLift_ker`. -/
+theorem actual_symmetric_cohomology_residual_symmetricTangentCohomologyLift_ker_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) :
+    LinearMap.ker (coordinateTangentCohomologyMap ρ) ≤
+      LinearMap.ker (symmetricTangentCohomologyLift n ρ) :=
+  symmetricTangentCohomologyLift_ker n ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricAdjointCohomologyMap_firstOrder`. -/
+theorem actual_symmetric_cohomology_residual_symmetricAdjointCohomologyMap_firstOrder_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (τ : MatrixFirstOrderLift ρ) :
+    symmetricAdjointCohomologyMap n ρ
+      (groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ τ)) =
+      groupCohomology.H1π (matrixAdjointRep (symmetricMatrixRepresentation n ρ))
+        (matrixFirstOrderCocycle _ (symmetricFirstOrderLift n ρ τ)) :=
+  symmetricAdjointCohomologyMap_firstOrder n ρ τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `residualRepresentationCoordinateQuotientEquiv_mk`. -/
+theorem actual_symmetric_cohomology_residual_residualRepresentationCoordinateQuotientEquiv_mk_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (x : RepresentationCoordinateAlgebra G ι O) :
+    residualRepresentationCoordinateQuotientEquiv ρ
+      (Ideal.Quotient.mk (residualRepresentationCoordinateIdeal ρ) x) =
+        representationCoordinateEvaluation (R := O) ρ x :=
+  residualRepresentationCoordinateQuotientEquiv_mk ρ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `integralRepresentationCoordinates_isUnit`. -/
+theorem actual_symmetric_cohomology_residual_integralRepresentationCoordinates_isUnit_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (τ : MatrixRepresentationFiber ρ (Algebra.ofId O (IsLocalRing.ResidueField O)))
+    (x : RepresentationCoordinateAlgebra G ι O) (hx : x ∉ residualRepresentationCoordinateIdeal ρ) :
+    IsUnit (representationCoordinateEvaluation (R := O) τ.val x) :=
+  integralRepresentationCoordinates_isUnit ρ τ x hx
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `residualRepresentationLocalRing_isNoetherian`. -/
+theorem actual_localized_representation_residualRepresentationLocalRing_isNoetherian_source [Group.FG G] [IsNoetherianRing O]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    IsNoetherianRing (ResidualRepresentationLocalRing ρ) :=
+  residualRepresentationLocalRing_isNoetherian ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `localizedIntegralCoordinateMap_representation`. -/
+theorem actual_localized_representation_localizedIntegralCoordinateMap_representation_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (τ : MatrixRepresentationFiber ρ (Algebra.ofId O (IsLocalRing.ResidueField O))) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationLocalRing ρ) (S := O)
+      (localizedIntegralCoordinateMap ρ
+      ((representationCoordinateFiberEquiv ρ (Algebra.ofId O (IsLocalRing.ResidueField O))).symm τ)).toRingHom).comp
+        (localizedUniversalMatrixRepresentation ρ) = τ.val :=
+  localizedIntegralCoordinateMap_representation ρ τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `localizedUniversalMatrixRepresentation_reduction`. -/
+theorem actual_localized_representation_localizedUniversalMatrixRepresentation_reduction_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationLocalRing ρ)
+      (S := IsLocalRing.ResidueField O) (localizedResidualRepresentationEvaluation ρ).toRingHom).comp
+      (localizedUniversalMatrixRepresentation ρ) = ρ :=
+  localizedUniversalMatrixRepresentation_reduction ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `localizedIntegralRepresentationFiberEquiv_apply`. -/
+theorem actual_localized_representation_localizedIntegralRepresentationFiberEquiv_apply_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (f : LocalizedIntegralCoordinateFiber ρ) :
+    (localizedIntegralRepresentationFiberEquiv ρ f).val =
+      (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationLocalRing ρ) (S := O)
+        f.val.toRingHom).comp (localizedUniversalMatrixRepresentation ρ) :=
+  localizedIntegralRepresentationFiberEquiv_apply ρ f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {O A : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A]
+
+/-- Exact original-object consumer of `localCoefficientReduction_ne_zero_iff`. -/
+theorem actual_local_coefficient_representation_localCoefficientReduction_ne_zero_iff_source
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O) (x : A) :
+    localCoefficientReduction e x ≠ 0 ↔ IsUnit x :=
+  localCoefficientReduction_ne_zero_iff e x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing A] [IsLocalRing A] [Algebra O A]
+
+/-- Exact original-object consumer of `localCoefficientRepresentationCoordinates_isUnit`. -/
+theorem actual_local_coefficient_representation_localCoefficientRepresentationCoordinates_isUnit_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : MatrixRepresentationFiber ρ (localCoefficientReduction e))
+    (x : RepresentationCoordinateAlgebra G ι O) (hx : x ∉ residualRepresentationCoordinateIdeal ρ) :
+    IsUnit (representationCoordinateEvaluation (R := O) τ.val x) :=
+  localCoefficientRepresentationCoordinates_isUnit ρ e τ x hx
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing A] [IsLocalRing A] [Algebra O A]
+
+/-- Exact original-object consumer of `localizedCoefficientCoordinateMap_representation`. -/
+theorem actual_local_coefficient_representation_localizedCoefficientCoordinateMap_representation_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : MatrixRepresentationFiber ρ (localCoefficientReduction e)) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationLocalRing ρ) (S := A)
+      (localizedCoefficientCoordinateMap ρ e
+      ((representationCoordinateFiberEquiv ρ (localCoefficientReduction e)).symm τ)).toRingHom).comp
+        (localizedUniversalMatrixRepresentation ρ) = τ.val :=
+  localizedCoefficientCoordinateMap_representation ρ e τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing A] [IsLocalRing A] [Algebra O A]
+
+/-- Exact original-object consumer of `localizedCoefficientRepresentationFiberEquiv_apply`. -/
+theorem actual_local_coefficient_representation_localizedCoefficientRepresentationFiberEquiv_apply_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : LocalizedCoefficientCoordinateFiber ρ e) :
+    (localizedCoefficientRepresentationFiberEquiv ρ e f).val =
+      (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationLocalRing ρ) (S := A)
+        f.val.toRingHom).comp (localizedUniversalMatrixRepresentation ρ) :=
+  localizedCoefficientRepresentationFiberEquiv_apply ρ e f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {O R A : Type*} [CommRing O] [CommRing R] [CommRing A]
+  [Algebra O R] [Algebra O A]
+
+/-- Exact original-object consumer of `adicCoefficientQuotientMap_transition`. -/
+theorem actual_completed_representation_adicCoefficientQuotientMap_transition_source (I : Ideal R) (J : Ideal A) (f : R →ₐ[O] A)
+    (hf : I ≤ Ideal.comap f.toRingHom J) {m n : ℕ} (hmn : m ≤ n) :
+    (Ideal.Quotient.factorₐ O (Ideal.pow_le_pow_right hmn)).comp
+      (adicCoefficientQuotientMap I J f hf n) =
+    (adicCoefficientQuotientMap I J f hf m).comp
+      (Ideal.Quotient.factorₐ O (Ideal.pow_le_pow_right hmn)) :=
+  adicCoefficientQuotientMap_transition I J f hf hmn
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {O R A : Type*} [CommRing O] [CommRing R] [CommRing A]
+  [Algebra O R] [Algebra O A]
+
+/-- Exact original-object consumer of `adicCoefficientCompletionMap_of`. -/
+theorem actual_completed_representation_adicCoefficientCompletionMap_of_source (I : Ideal R) (J : Ideal A) (f : R →ₐ[O] A)
+    (hf : I ≤ Ideal.comap f.toRingHom J) (x : R) :
+    adicCoefficientCompletionMap I J f hf (AdicCompletion.of I R x) =
+      AdicCompletion.of J A (f x) :=
+  adicCoefficientCompletionMap_of I J f hf x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `completedUniversalMatrixRepresentation_reduction`. -/
+theorem actual_completed_representation_completedUniversalMatrixRepresentation_reduction_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationCompletion ρ)
+      (S := IsLocalRing.ResidueField O) (completedResidualRepresentationEvaluation ρ).toRingHom).comp
+      (completedUniversalMatrixRepresentation ρ) = ρ :=
+  completedUniversalMatrixRepresentation_reduction ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing A] [IsLocalRing A] [Algebra O A]
+
+/-- Exact original-object consumer of `completedLocalCoefficientCoordinateMap_representation`. -/
+theorem actual_completed_representation_completedLocalCoefficientCoordinateMap_representation_source
+    [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : MatrixRepresentationFiber ρ (localCoefficientReduction e)) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationCompletion ρ) (S := A)
+      (completedLocalCoefficientCoordinateMap ρ e
+      ((representationCoordinateFiberEquiv ρ (localCoefficientReduction e)).symm τ)).toRingHom).comp
+        (completedUniversalMatrixRepresentation ρ) = τ.val :=
+  completedLocalCoefficientCoordinateMap_representation ρ e τ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `adicCompletion_evaluation_kernel`. -/
+theorem actual_completed_local_representation_adicCompletion_evaluation_kernel_source (I : Ideal R) (hI : I.FG) (n : ℕ) :
+    RingHom.ker (AdicCompletion.evalₐ I n).toRingHom =
+      (I ^ n).map (algebraMap R (AdicCompletion I R)) :=
+  adicCompletion_evaluation_kernel I hI n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `residualRepresentationCompletion_completeLocal`. -/
+theorem actual_completed_local_representation_residualRepresentationCompletion_completeLocal_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    IsAdicComplete (IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ))
+      (ResidualRepresentationCompletion ρ) :=
+  residualRepresentationCompletion_completeLocal ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `completedUniversalMatrixRepresentation_trueResidue`. -/
+theorem actual_completed_local_representation_completedUniversalMatrixRepresentation_trueResidue_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationCompletion ρ)
+      (S := IsLocalRing.ResidueField O) ((completedResidualFieldEquiv ρ).toRingHom.comp
+      (IsLocalRing.residue (ResidualRepresentationCompletion ρ)))).comp
+        (completedUniversalMatrixRepresentation ρ) = ρ :=
+  completedUniversalMatrixRepresentation_trueResidue ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {O R A : Type*} [CommRing O] [CommRing R] [CommRing A]
+  [Algebra O R] [Algebra O A]
+
+variable {G ι : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [IsLocalRing O] [Group.FG G] [IsNoetherianRing O] [IsLocalRing A]
+
+/-- Exact original-object consumer of `completedLocalCoefficientCoordinateMap_unique`. -/
+theorem actual_completed_local_representation_completedLocalCoefficientCoordinateMap_unique_source
+    [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : MatrixRepresentationFiber ρ (localCoefficientReduction e))
+    (h : ResidualRepresentationCompletion ρ →ₐ[O] A)
+    (hh : (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationCompletion ρ) (S := A)
+      h.toRingHom).comp
+      (completedUniversalMatrixRepresentation ρ) = τ.val) :
+    completedLocalCoefficientCoordinateMap ρ e
+      ((representationCoordinateFiberEquiv ρ (localCoefficientReduction e)).symm τ) = h :=
+  completedLocalCoefficientCoordinateMap_unique ρ e τ h hh
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `residualRepresentationCompletion_finite_quotient`. -/
+theorem actual_completed_topology_residualRepresentationCompletion_finite_quotient_source [Finite (IsLocalRing.ResidueField O)]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (n : ℕ) :
+    Finite (ResidualRepresentationCompletion ρ ⧸
+      IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ) ^ n) :=
+  residualRepresentationCompletion_finite_quotient ρ n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedLocalCoefficientCoordinateMap_reduction`. -/
+theorem actual_completed_topology_completedLocalCoefficientCoordinateMap_reduction_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : RepresentationCoordinateFiber ρ (localCoefficientReduction e)) :
+    (localCoefficientReduction e).comp (completedLocalCoefficientCoordinateMap ρ e f) =
+      completedResidualRepresentationEvaluation ρ :=
+  completedLocalCoefficientCoordinateMap_reduction ρ e f
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `completedLocalCoefficientCoordinateMap_uniformContinuous`. -/
+theorem actual_completed_topology_completedLocalCoefficientCoordinateMap_uniformContinuous_source
+    {A : Type*} [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+    [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : RepresentationCoordinateFiber ρ (localCoefficientReduction e)) :
+    UniformContinuous (completedLocalCoefficientCoordinateMap ρ e f) :=
+  completedLocalCoefficientCoordinateMap_uniformContinuous hA ρ e f
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R : Type*} [CommRing R] [WithIdeal R]
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `residualRepresentationCompletion_compactSpace`. -/
+theorem actual_completed_topology_residualRepresentationCompletion_compactSpace_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    CompactSpace (ResidualRepresentationCompletion ρ) :=
+  residualRepresentationCompletion_compactSpace ρ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {σ τ R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `splitPowerSeriesVariables_coeff`. -/
+theorem actual_noetherian_completion_splitPowerSeriesVariables_coeff_source (f : MvPowerSeries (σ ⊕ τ) R)
+    (d : σ →₀ ℕ) (e : τ →₀ ℕ) :
+    MvPowerSeries.coeff e (MvPowerSeries.coeff d (splitPowerSeriesVariables f)) =
+      MvPowerSeries.coeff (d.sumElim e) f :=
+  splitPowerSeriesVariables_coeff f d e
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R : Type*} [CommRing R] [IsNoetherianRing R]
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `residualRepresentationLocalPowerSeries_isNoetherian`. -/
+theorem actual_noetherian_completion_residualRepresentationLocalPowerSeries_isNoetherian_source
+    (ρ : G →* Matrix.GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : Type*) [Finite σ] :
+    IsNoetherianRing (MvPowerSeries σ (ResidualRepresentationLocalRing ρ)) :=
+  residualRepresentationLocalPowerSeries_isNoetherian ρ σ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {O R A : Type*} [CommRing O] [CommRing R] [CommRing A]
+  [Algebra O R] [Algebra O A]
+
+/-- Exact original-object consumer of `adicCoefficientCompletionMap_ideal_image`. -/
+theorem actual_noetherian_completion_adicCoefficientCompletionMap_ideal_image_source
+    (I : Ideal R) (J : Ideal A) (f : R →ₐ[O] A)
+    (hf : I ≤ Ideal.comap f.toRingHom J) (hIJ : I.map f.toRingHom = J) :
+    (I.map (algebraMap R (AdicCompletion I R))).map
+      (adicCoefficientCompletionMap I J f hf).toRingHom =
+        J.map (algebraMap A (AdicCompletion J A)) :=
+  adicCoefficientCompletionMap_ideal_image I J f hf hIJ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {O R A : Type*} [CommRing O] [CommRing R] [CommRing A]
+  [Algebra O R] [Algebra O A]
+
+/-- Exact original-object consumer of `adicCoefficientCompletionMap_surjective`. -/
+theorem actual_noetherian_completion_adicCoefficientCompletionMap_surjective_source
+    (I : Ideal R) (hI : I.FG) (J : Ideal A) (hJ : J.FG)
+    (f : R →ₐ[O] A) (hf : I ≤ Ideal.comap f.toRingHom J)
+    (hIJ : I.map f.toRingHom = J) (hsurj : Function.Surjective f) :
+    Function.Surjective (adicCoefficientCompletionMap I J f hf) :=
+  adicCoefficientCompletionMap_surjective I hI J hJ f hf hIJ hsurj
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R : Type*} [CommRing R] [IsNoetherianRing R]
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `residualRepresentationCompletion_isNoetherian`. -/
+theorem actual_noetherian_completion_residualRepresentationCompletion_isNoetherian_source
+    (ρ : G →* Matrix.GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    IsNoetherianRing (ResidualRepresentationCompletion ρ) :=
+  residualRepresentationCompletion_isNoetherian ρ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedCoefficientRepresentationEquiv_evaluation`. -/
+theorem actual_completed_profinite_completedCoefficientRepresentationEquiv_evaluation_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : MatrixRepresentationFiber ρ (localCoefficientReduction e)) :
+    (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationCompletion ρ) (S := A)
+      ((completedCoefficientRepresentationEquiv ρ e).symm τ).val.toRingHom).comp
+        (completedUniversalMatrixRepresentation ρ) = τ.val :=
+  completedCoefficientRepresentationEquiv_evaluation ρ e τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [WithIdeal R] [T2Space R]
+  [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `adicMatrixGroup_totallyDisconnected`. -/
+theorem actual_completed_profinite_adicMatrixGroup_totallyDisconnected_source : TotallyDisconnectedSpace (GeneralLinearGroup ι R) :=
+  adicMatrixGroup_totallyDisconnected (R := R) (ι := ι)
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G H : Type u} [Group G] [Group H] [TopologicalSpace H]
+  [IsTopologicalGroup H] [CompactSpace H] [TotallyDisconnectedSpace H]
+
+/-- Exact original-object consumer of `profiniteRepresentationExtension_eta`. -/
+theorem actual_completed_profinite_profiniteRepresentationExtension_eta_source (τ : G →* H) (g : G) :
+    profiniteRepresentationExtension τ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) =
+      τ g :=
+  profiniteRepresentationExtension_eta τ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedUniversalProfiniteRepresentation_eta`. -/
+theorem actual_completed_profinite_completedUniversalProfiniteRepresentation_eta_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (g : G) :
+    completedUniversalProfiniteRepresentation ρ
+      (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) =
+        completedUniversalMatrixRepresentation ρ g :=
+  completedUniversalProfiniteRepresentation_eta ρ g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixIdeal_pow_mem`. -/
+theorem actual_congruence_kernel_matrixIdeal_pow_mem_source (I : Ideal R) {X : Matrix ι ι R}
+    (hX : X ∈ I.matrix ι) (n : ℕ) : X ^ n ∈ (I ^ n).matrix ι :=
+  matrixIdeal_pow_mem I hX n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrix_primePower_congruence`. -/
+theorem actual_congruence_kernel_matrix_primePower_congruence_source (I : Ideal R) {p : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I)
+    (X : Matrix ι ι R) (hX : X - 1 ∈ I.matrix ι) (n : ℕ) :
+    X ^ (p ^ n) - 1 ∈ (I ^ (n + 1)).matrix ι :=
+  matrix_primePower_congruence I hp hpI X hX n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixCongruenceKernel_isPGroup`. -/
+theorem actual_congruence_kernel_matrixCongruenceKernel_isPGroup_source (I : Ideal R) {p N : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I) (hI : I ^ N = ⊥) :
+    IsPGroup p (MatrixCongruenceKernel (ι := ι) I) :=
+  matrixCongruenceKernel_isPGroup I hp hpI hI
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {A ι : Type*} [CommRing A] [IsLocalRing A] [IsArtinianRing A]
+  [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `artinianResidualMatrixKernel_isPGroup`. -/
+theorem actual_congruence_kernel_artinianResidualMatrixKernel_isPGroup_source (p : ℕ) (hp : p.Prime)
+    [CharP (IsLocalRing.ResidueField A) p] :
+    IsPGroup p ((GeneralLinearGroup.map (n := ι) (R := A)
+      (S := IsLocalRing.ResidueField A) (IsLocalRing.residue A)).ker) :=
+  artinianResidualMatrixKernel_isPGroup p hp
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `idealPowerMatrixKernel_isPGroup`. -/
+theorem actual_completed_power_kernel_idealPowerMatrixKernel_isPGroup_source (I : Ideal R) {p : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I) (n : ℕ) :
+    IsPGroup p (MatrixCongruenceKernel (ι := ι)
+      (I.map (Ideal.Quotient.mk (I ^ n)))) :=
+  idealPowerMatrixKernel_isPGroup I hp hpI n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `residualRepresentationCompletion_powerKernel_isPGroup`. -/
+theorem actual_completed_power_kernel_residualRepresentationCompletion_powerKernel_isPGroup_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p] (n : ℕ) :
+    IsPGroup p (MatrixCongruenceKernel (ι := ι)
+      ((IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ)).map
+        (Ideal.Quotient.mk
+          (IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ) ^ n)))) :=
+  residualRepresentationCompletion_powerKernel_isPGroup ρ p hp n
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R S ι : Type*} [CommRing R] [CommRing S] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixCongruenceKernel_powerImage_isPGroup`. -/
+theorem actual_completed_congruence_image_matrixCongruenceKernel_powerImage_isPGroup_source (I : Ideal R) {p : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I) (n : ℕ) :
+    IsPGroup p ((MatrixCongruenceKernel (ι := ι) I).map
+      (GeneralLinearGroup.map (n := ι) (R := R) (S := R ⧸ I ^ n)
+        (Ideal.Quotient.mk (I ^ n)))) :=
+  matrixCongruenceKernel_powerImage_isPGroup I hp hpI n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `completedResidualCongruenceImage_isPGroup`. -/
+theorem actual_completed_congruence_image_completedResidualCongruenceImage_isPGroup_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p] (n : ℕ) :
+    IsPGroup p (CompletedResidualCongruenceImage ρ n) :=
+  completedResidualCongruenceImage_isPGroup ρ p hp n
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [WithIdeal R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `adicMatrixPowerReduction_continuous`. -/
+theorem actual_completed_congruence_basis_adicMatrixPowerReduction_continuous_source (n : ℕ) :
+    Continuous (GeneralLinearGroup.map (n := ι) (R := R)
+      (S := R ⧸ (WithIdeal.i : Ideal R) ^ n)
+      (Ideal.Quotient.mk ((WithIdeal.i : Ideal R) ^ n))) :=
+  adicMatrixPowerReduction_continuous n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [WithIdeal R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `adicMatrixReductionProduct_isClosedEmbedding`. -/
+theorem actual_completed_congruence_basis_adicMatrixReductionProduct_isClosedEmbedding_source [T2Space R] [CompactSpace R] :
+    Topology.IsClosedEmbedding (adicMatrixReductionProduct (R := R) (ι := ι)) :=
+  adicMatrixReductionProduct_isClosedEmbedding (R := R) (ι := ι)
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G : Type*} [Group G] [TopologicalSpace G]
+  {H : ℕ → Type*} [∀ n, Group (H n)] [∀ n, TopologicalSpace (H n)]
+  [∀ n, DiscreteTopology (H n)]
+
+/-- Exact original-object consumer of `discreteReduction_continuous_quotient_isPGroup`. -/
+theorem actual_completed_congruence_basis_discreteReduction_continuous_quotient_isPGroup_source
+    (π : ∀ n, G →* H n)
+    (hπ : Topology.IsEmbedding (fun g n => π n g))
+    (hmono : Antitone (fun n => (π n).ker)) (p : ℕ)
+    (hP : ∀ n, IsPGroup p (π n).range)
+    {Q : Type*} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q]
+    (f : G →* Q) (hf : Continuous f) (hsurj : Function.Surjective f) :
+    IsPGroup p Q :=
+  discreteReduction_continuous_quotient_isPGroup π hπ hmono p hP f hf hsurj
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedResidualKernel_continuous_quotient_isPGroup`. -/
+theorem actual_completed_congruence_basis_completedResidualKernel_continuous_quotient_isPGroup_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    {Q : Type*} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q]
+    (f : MatrixCongruenceKernel (ι := ι)
+      (IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ)) →* Q)
+    (hf : Continuous f) (hsurj : Function.Surjective f) : IsPGroup p Q :=
+  completedResidualKernel_continuous_quotient_isPGroup ρ p hp f hf hsurj
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteProPKernel_isClosed`. -/
+theorem actual_fixed_prop_common_kernel_profiniteProPKernel_isClosed_source (p : ℕ) (G : ProfiniteGrp) :
+    IsClosed (profiniteProPKernel p G : Set G) :=
+  profiniteProPKernel_isClosed p G
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {Q : Type*} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q]
+
+/-- Exact original-object consumer of `profiniteProPDiscreteFactor_continuous`. -/
+theorem actual_fixed_prop_common_kernel_profiniteProPDiscreteFactor_continuous_source (p : ℕ) (G : ProfiniteGrp)
+    (f : G →* Q) (hf : Continuous f) (hQ : IsPGroup p Q) :
+    Continuous (profiniteProPDiscreteFactor p G f hf hQ) :=
+  profiniteProPDiscreteFactor_continuous p G f hf hQ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteProPKernel_map_le`. -/
+theorem actual_fixed_prop_common_kernel_profiniteProPKernel_map_le_source (p : ℕ) (G H : ProfiniteGrp)
+    (f : G →* H) (hf : Continuous f) :
+    (profiniteProPKernel p G).map f ≤ profiniteProPKernel p H :=
+  profiniteProPKernel_map_le p G H f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedResidualProfiniteKernel_commonKernel_eq_bot`. -/
+theorem actual_fixed_prop_common_kernel_completedResidualProfiniteKernel_commonKernel_eq_bot_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p] :
+    profiniteProPKernel p (completedResidualProfiniteKernel ρ) = ⊥ :=
+  completedResidualProfiniteKernel_commonKernel_eq_bot ρ p hp
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G α : Type*} [Group G] [TopologicalSpace G]
+  [CompactSpace G] {H : α → Type*} [∀ i, Group (H i)]
+  [∀ i, TopologicalSpace (H i)] [∀ i, DiscreteTopology (H i)]
+
+/-- Exact original-object consumer of `compact_reduction_continuous_quotient_isPGroup`. -/
+theorem actual_fixed_prop_quotient_compact_reduction_continuous_quotient_isPGroup_source
+    (π : ∀ i, G →* H i) (hπ : ∀ i, Continuous (π i))
+    (p : ℕ) (hP : ∀ i, IsPGroup p (H i))
+    {Q : Type*} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q]
+    (f : G →* Q) (hf : Continuous f) (hsurj : Function.Surjective f)
+    (hcommon : (⨅ i, (π i).ker) ≤ f.ker) : IsPGroup p Q :=
+  compact_reduction_continuous_quotient_isPGroup π hπ p hP f hf hsurj hcommon
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteProPQuotient_continuous_quotient_isPGroup`. -/
+theorem actual_fixed_prop_quotient_profiniteProPQuotient_continuous_quotient_isPGroup_source
+    (p : ℕ) (G : ProfiniteGrp)
+    {Q : Type*} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q]
+    (f : G ⧸ profiniteProPKernel p G →* Q) (hf : Continuous f)
+    (hsurj : Function.Surjective f) : IsPGroup p Q :=
+  profiniteProPQuotient_continuous_quotient_isPGroup p G f hf hsurj
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteProPQuotientCoordinates_injective`. -/
+theorem actual_fixed_prop_quotient_profiniteProPQuotientCoordinates_injective_source (p : ℕ) (G : ProfiniteGrp) :
+    Function.Injective (profiniteProPQuotientCoordinates p G) :=
+  profiniteProPQuotientCoordinates_injective p G
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `fixedResidualProPKernel_normal`. -/
+theorem actual_fixed_prop_quotient_fixedResidualProPKernel_normal_source (p : ℕ) (G : ProfiniteGrp) (K : Subgroup G)
+    [K.Normal] (hK : IsClosed (K : Set G)) :
+    (fixedResidualProPKernel p G K hK).Normal :=
+  fixedResidualProPKernel_normal p G K hK
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteProPContinuousFactor_continuous`. -/
+theorem actual_fixed_residual_lift_profiniteProPContinuousFactor_continuous_source
+    (p : ℕ) (G H : ProfiniteGrp) (f : G →* H) (hf : Continuous f)
+    (hH : profiniteProPKernel p H = ⊥) :
+    Continuous (profiniteProPContinuousFactor p G H f hf hH) :=
+  profiniteProPContinuousFactor_continuous p G H f hf hH
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `fixedResidualProPKernel_le_representation_kernel`. -/
+theorem actual_fixed_residual_lift_fixedResidualProPKernel_le_representation_kernel_source
+    (p : ℕ) (G H : ProfiniteGrp) (K : Subgroup G) (hK : IsClosed (K : Set G))
+    (L : Subgroup H) (hL : IsClosed (L : Set H))
+    (hP : profiniteProPKernel p (closedSubgroupProfinite H L hL) = ⊥)
+    (f : G →* H) (hf : Continuous f) (hres : ∀ g ∈ K, f g ∈ L) :
+    fixedResidualProPKernel p G K hK ≤ f.ker :=
+  fixedResidualProPKernel_le_representation_kernel p G H K hK L hL hP f hf hres
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G₀ ι O : Type u} [Group G₀] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G₀] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedResidualLiftFactor_continuous`. -/
+theorem actual_fixed_residual_lift_completedResidualLiftFactor_continuous_source
+    (ρ : G₀ →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField (ResidualRepresentationCompletion ρ)))
+    (hσ : Continuous σ)
+    (f : H →* GeneralLinearGroup ι (ResidualRepresentationCompletion ρ))
+    (hf : Continuous f)
+    (hres : (GeneralLinearGroup.map (n := ι) (R := ResidualRepresentationCompletion ρ)
+      (S := IsLocalRing.ResidueField (ResidualRepresentationCompletion ρ))
+      (IsLocalRing.residue (ResidualRepresentationCompletion ρ))).comp f = σ) :
+    Continuous (completedResidualLiftFactor ρ p hp H σ hσ f hf hres) :=
+  completedResidualLiftFactor_continuous ρ p hp H σ hσ f hf hres
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G : Type*} [Group G] [Finite G]
+
+/-- Exact original-object consumer of `finitePGroup_proper_subgroup_character`. -/
+theorem actual_fixed_prop_topological_generation_finitePGroup_proper_subgroup_character_source (p : ℕ) (hp : p.Prime)
+    (hG : IsPGroup p G) (K : Subgroup G) (hK : K ≠ ⊤) :
+    ∃ f : G →* Multiplicative (ZMod p), Function.Surjective f ∧ K ≤ f.ker :=
+  finitePGroup_proper_subgroup_character p hp hG K hK
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profinite_closed_subgroup_proper_quotient`. -/
+theorem actual_fixed_prop_topological_generation_profinite_closed_subgroup_proper_quotient_source (G : ProfiniteGrp)
+    (K : Subgroup G) (hclosed : IsClosed (K : Set G)) (hK : K ≠ ⊤) :
+    ∃ U : OpenNormalSubgroup G,
+      K.map (QuotientGroup.mk' U.toSubgroup) ≠ ⊤ :=
+  profinite_closed_subgroup_proper_quotient G K hclosed hK
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `proP_closed_subgroup_character`. -/
+theorem actual_fixed_prop_topological_generation_proP_closed_subgroup_character_source (p : ℕ) (hp : p.Prime) (G : ProfiniteGrp)
+    (hP : ∀ U : OpenNormalSubgroup G, IsPGroup p (G ⧸ U.toSubgroup))
+    (K : Subgroup G) (hclosed : IsClosed (K : Set G)) (hK : K ≠ ⊤) :
+    ∃ f : G →ₜ* Multiplicative (ZMod p),
+      Function.Surjective f ∧ K ≤ f.toMonoidHom.ker :=
+  proP_closed_subgroup_character p hp G hP K hclosed hK
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `proP_finitely_generated_of_finite_characters`. -/
+theorem actual_fixed_prop_topological_generation_proP_finitely_generated_of_finite_characters_source (p : ℕ) (hp : p.Prime)
+    (G : ProfiniteGrp)
+    (hP : ∀ U : OpenNormalSubgroup G, IsPGroup p (G ⧸ U.toSubgroup))
+    [Finite (G →ₜ* Multiplicative (ZMod p))] :
+    ∃ S : Finset G, (Subgroup.closure (S : Set G)).topologicalClosure = ⊤ :=
+  proP_finitely_generated_of_finite_characters p hp G hP
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteProPQuotient_finitely_generated`. -/
+theorem actual_fixed_prop_topological_generation_profiniteProPQuotient_finitely_generated_source (p : ℕ) (hp : p.Prime) (G : ProfiniteGrp)
+    [Finite (G →ₜ* Multiplicative (ZMod p))] :
+    ∃ S : Finset (G ⧸ profiniteProPKernel p G),
+      (Subgroup.closure (S : Set (G ⧸ profiniteProPKernel p G))).topologicalClosure = ⊤ :=
+  profiniteProPQuotient_finitely_generated p hp G
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G H : Type*} [Group G] [Group H] [TopologicalSpace G] [TopologicalSpace H]
+  [IsTopologicalGroup G] [IsTopologicalGroup H] [DecidableEq H]
+
+/-- Exact original-object consumer of `continuous_surjective_image_topological_generators`. -/
+theorem actual_fixed_residual_topological_generation_continuous_surjective_image_topological_generators_source
+    (f : G →* H) (hf : Continuous f) (hsurj : Function.Surjective f)
+    (S : Finset G) (hS : (Subgroup.closure (S : Set G)).topologicalClosure = ⊤) :
+    (Subgroup.closure ((S.image f) : Set H)).topologicalClosure = ⊤ :=
+  continuous_surjective_image_topological_generators f hf hsurj S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+
+/-- Exact original-object consumer of `finiteIndex_normal_topological_generators`. -/
+theorem actual_fixed_residual_topological_generation_finiteIndex_normal_topological_generators_source
+    (K : Subgroup G) [K.Normal] [Finite (G ⧸ K)]
+    (S : Finset K) (hS : (Subgroup.closure (S : Set K)).topologicalClosure = ⊤) :
+    ∃ T : Finset G, (Subgroup.closure (T : Set G)).topologicalClosure = ⊤ :=
+  finiteIndex_normal_topological_generators K S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `fixedResidualQuotientSubgroupFactor_continuous`. -/
+theorem actual_fixed_residual_topological_generation_fixedResidualQuotientSubgroupFactor_continuous_source
+    (p : ℕ) (G : ProfiniteGrp) (K : Subgroup G) [K.Normal]
+    (hK : IsClosed (K : Set G)) :
+    Continuous (fixedResidualQuotientSubgroupFactor p G K hK) :=
+  fixedResidualQuotientSubgroupFactor_continuous p G K hK
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `fixedResidualQuotient_finitely_generated`. -/
+theorem actual_fixed_residual_topological_generation_fixedResidualQuotient_finitely_generated_source
+    (p : ℕ) (hp : p.Prime) (G : ProfiniteGrp) (K : Subgroup G) [K.Normal]
+    [Finite (G ⧸ K)] (hK : IsClosed (K : Set G))
+    [Finite (K →ₜ* Multiplicative (ZMod p))] :
+    ∃ S : Finset (G ⧸ fixedResidualProPKernel p G K hK),
+      (Subgroup.closure (S : Set (G ⧸ fixedResidualProPKernel p G K hK))).topologicalClosure = ⊤ :=
+  fixedResidualQuotient_finitely_generated p hp G K hK
+
+end
+
 end Dubon2026.SemanticRegression
