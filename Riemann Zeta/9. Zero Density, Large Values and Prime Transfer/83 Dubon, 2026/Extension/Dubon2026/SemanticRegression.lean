@@ -4678,4 +4678,4161 @@ theorem actual_real_kfinite_full_character_source (N : ℕ) [NeZero N] {k : ℤ}
       homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
   adelicRealKFinite_algebraic_character f hf m hk z v hv p
 
+
+/-- Every actual coefficient of the original determinant twist is an actual polynomial divided by a power of its nonzero determinant. -/
+theorem actual_algebraic_coefficients_source (m : ℕ)
+    (v : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m))
+    (L : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m) →ₗ[ℂ] ℂ) :
+    ∃ q : MvPolynomial (Fin 2 × Fin 2) ℂ, ∀ g : Matrix.GeneralLinearGroup (Fin 2) ℂ,
+      L (homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g v) =
+        MvPolynomial.eval (fun ij => g.val ij.1 ij.2) q / Matrix.det g.val ^ m :=
+  homogeneousDeterminantTwist_regular_coefficient m v L
+
+/-- Actual group invariance forces a subspace of the original determinant twist to be zero or the entire original space. -/
+theorem actual_algebraic_irreducibility_source (m : ℕ)
+    (p : Submodule ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)))
+    (hi : ∀ g v, v ∈ p → homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g v ∈ p) :
+    p = ⊥ ∨ p = ⊤ := homogeneousDeterminantTwist_irreducible m p hi
+
+/-- The original nonzero pure-power vector has the exact highest weight under every original diagonal torus element. -/
+theorem actual_algebraic_highest_weight_source (m : ℕ) (u v : ℂˣ) :
+    homogeneousPurePower (2 * m) (0 : Fin 2) ≠ 0 ∧
+    homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) (complexDiagonalGL u v)
+      (homogeneousPurePower (2 * m) (0 : Fin 2)) =
+      ((u : ℂ) ^ m * (v : ℂ) ^ (-(m : ℤ))) • homogeneousPurePower (2 * m) (0 : Fin 2) :=
+  ⟨homogeneousPurePower_ne_zero _ _, homogeneousDeterminantTwist_highest_weight m u v⟩
+
+/-- The original real K-finite cusp module has the same full central character as its actual irreducible algebraic model with the proved regular shifted highest weight. -/
+theorem actual_regular_algebraic_model_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hf : f ≠ 0) (m : ℕ)
+    (hk : k = (2 * m : ℕ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (v : adelicRealSmoothSubmodule f) (hv : v.val ∈ adelicRealCyclicClosedSpan f)
+    [FiniteDimensional ℂ (adelicCompactOrbitSpan f v.val)]
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    (∀ w : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m),
+      ∀ L : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m) →ₗ[ℂ] ℂ,
+      ∃ q : MvPolynomial (Fin 2 × Fin 2) ℂ, ∀ g : Matrix.GeneralLinearGroup (Fin 2) ℂ,
+        L (homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g w) =
+          MvPolynomial.eval (fun ij => g.val ij.1 ij.2) q / Matrix.det g.val ^ m) ∧
+    (∀ U : Submodule ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)),
+      (∀ g w, w ∈ U → homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g w ∈ U) →
+        U = ⊥ ∨ U = ⊤) ∧
+    homogeneousPurePower (2 * m) (0 : Fin 2) ≠ 0 ∧
+    (-(m : ℤ) ≤ (m : ℤ) ∧ (m : ℤ) + 1 - (-(m : ℤ)) = 2 * m + 1 ∧
+      0 < (m : ℤ) + 1 - (-(m : ℤ))) ∧
+    (∀ u w : ℂˣ, homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) (complexDiagonalGL u w)
+      (homogeneousPurePower (2 * m) (0 : Fin 2)) =
+      ((u : ℂ) ^ m * (w : ℂ) ^ (-(m : ℤ))) • homogeneousPurePower (2 * m) (0 : Fin 2)) ∧
+    adelicGL2EnvelopingAction f z.val v = adelicGL2InfinitesimalCharacter f hf z • v ∧
+    homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
+  adelicRealKFinite_regular_algebraic_model f hf m hk z v hv p
+
+
+/-- The original full lowest-weight subspace is defined by the genuine rotation character at every real angle. -/
+theorem actual_lowest_rotation_space_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : AdelicCyclicHilbert f) : v ∈ adelicRotationWeightSpace f ↔ ∀ t : ℝ,
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realRotationCurve t)) v =
+        Complex.exp ((t : ℂ) * (Complex.I * (k : ℂ))) • v :=
+  mem_adelicRotationWeightSpace f v
+
+/-- The actual positive lowest-weight projector annihilates the entire reflected original real component. -/
+theorem actual_reflected_lowest_projection_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRealCyclicClosedSpan f) :
+    adelicRotationWeightProjection f
+      (adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding (rationalGL2ToReal rationalGL2Reflection)) v) = 0 :=
+  adelicRotationWeightProjection_reflectedReal f hf hk v hv
+
+/-- Every original full adelic orbit vector projects to its actual finite-coordinate orbit line. -/
+theorem actual_full_adelic_lowest_projection_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (g : RationalAdelicGL2) :
+    ∃ c : ℂ, adelicRotationWeightProjection f
+      (adelicCyclicHilbertRepresentation f g (adelicCyclicHilbertGenerator f)) =
+      c • adelicCyclicHilbertRepresentation f
+        (rationalAdelicFiniteGL2Embedding (rationalAdelicGL2RealFiniteEquiv g).2)
+        (adelicCyclicHilbertGenerator f) :=
+  adelicRotationWeightProjection_fullOrbit f hf hk g
+
+/-- The entire full original lowest-weight space is precisely the closed span of the original finite-adelic cusp translates. -/
+theorem actual_full_lowest_space_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) :
+    adelicRotationWeightSpace f =
+      (Submodule.span ℂ (Set.range
+        (fun a : Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ) =>
+          adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+            (adelicCyclicHilbertGenerator f)))).topologicalClosure :=
+  adelicRotationWeightSpace_eq_finiteClosure f hf hk
+
+
+open Matrix Matrix.SpecialLinearGroup IsDedekindDomain UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+/-- Exact original-object consumer of `adelicLevelProjection_finiteSpan`. -/
+theorem actual_fixed_level_projection_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicFiniteCyclicSpan f) :
+    adelicLevelProjection f v ∈ adelicFiniteCyclicSpan f :=
+  adelicLevelProjection_finiteSpan f v hv
+
+/-- Exact original-object consumer of `adelicFixedLowest_algebraic_density`. -/
+theorem actual_fixed_lowest_density_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicFiniteCyclicSpan f ⊓ adelicLevelFixedSpace f).topologicalClosure =
+      adelicRotationWeightSpace f ⊓ adelicLevelFixedSpace f :=
+  adelicFixedLowest_algebraic_density f hf hk
+
+/-- Exact original-object consumer of `finiteAdelicClassicalTranslate_real_lift`. -/
+theorem actual_finite_translate_classical_source (N : ℕ) [NeZero N] (k : ℤ) (f : ℍ → ℂ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (g : SL(2, ℝ)) :
+    canonicalAdelicGL2CuspLift N k f (adelicRealSL2Embedding g * rationalAdelicFiniteGL2Embedding a) =
+      realWeightLift k (finiteAdelicClassicalTranslate N k f a) g :=
+  finiteAdelicClassicalTranslate_real_lift N k f a g
+
+/-- Exact original-object consumer of `adelicAlgebraicFiniteSpan_classical_full`. -/
+theorem actual_fixed_finite_classical_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (hv : v ∈ adelicAlgebraicFiniteSpan f)
+    (hlevel : adelicCyclicHilbertEmbedding f v ∈ adelicLevelFixedSpace f) :
+    ∃! F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k,
+      v.val = canonicalAdelicGL2CuspLift N k F :=
+  adelicAlgebraicFiniteSpan_classical_full f v hv hlevel
+
+/-- Exact original-object consumer of `adelicFixedLowest_finiteDimensional`. -/
+theorem actual_fixed_lowest_finite_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) :
+    FiniteDimensional ℂ ↥(adelicRotationWeightSpace f ⊓ adelicLevelFixedSpace f :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicFixedLowest_finiteDimensional f hf hk
+
+/-- Exact original-object consumer of `adelicFixedLowest_classical_reconstruction`. -/
+theorem actual_fixed_lowest_classical_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRotationWeightSpace f)
+    (hlevel : v ∈ adelicLevelFixedSpace f) :
+    ∃ w ∈ adelicAlgebraicFiniteSpan f, adelicCyclicHilbertEmbedding f w = v ∧
+      ∃! F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k,
+        w.val = canonicalAdelicGL2CuspLift N k F :=
+  adelicFixedLowest_classical_reconstruction f hf hk v hv hlevel
+
+
+/-- Exact original-object consumer of `integralGamma0_finite_dense`. -/
+theorem actual_finite_level_density_source (N : ℕ) [NeZero N]
+    (g : SL(2, FiniteAdeleRing ℤ ℚ)) (hg : g ∈ finiteAdeleGamma0 N) :
+    g ∈ closure (Set.range (fun γ : Gamma0 N =>
+      Matrix.SpecialLinearGroup.map (Int.castRingHom (FiniteAdeleRing ℤ ℚ)) γ.val)) :=
+  integralGamma0_finite_dense N g hg
+
+/-- Exact original-object consumer of `finiteAdelicHeckeUpperCoset_surjective`. -/
+theorem actual_full_finite_Hecke_cosets_source (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) : Function.Surjective (finiteAdelicHeckeUpperCoset N p hpN) :=
+  finiteAdelicHeckeUpperCoset_surjective N p hpN
+
+/-- Exact original-object consumer of `adelicHilbertHeckeTrace_primitive_generator`. -/
+theorem actual_full_adelic_Hecke_eigen_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (f : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    adelicHilbertHeckeTrace f.toCuspForm p hpN (adelicCyclicHilbertGenerator f.toCuspForm) =
+      ((Real.sqrt (p : ℝ) : ℂ) ^ (2 - k) * cuspCoefficients f.toCuspForm p) •
+        adelicCyclicHilbertGenerator f.toCuspForm :=
+  adelicHilbertHeckeTrace_primitive_generator f hpN
+
+/-- Exact original-object consumer of `primitiveCuspForm_good_prime_eigensystem_scalar`. -/
+theorem actual_classical_prime_multiplicity_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (g : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+    (hg : ∀ p, p.Prime → p.Coprime N →
+      cuspHeckeLinear N k p g = cuspCoefficients f.toCuspForm p • g) :
+    g = cuspCoefficients g 1 • f.toCuspForm :=
+  primitiveCuspForm_good_prime_eigensystem_scalar f g hg
+
+/-- Exact original-object consumer of `adelicPrimitiveIntertwiner_scalar`. -/
+theorem actual_full_adelic_scalar_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (hk : 0 < k)
+    (A : AdelicCyclicHilbert f.toCuspForm →L[ℂ] AdelicCyclicHilbert f.toCuspForm)
+    (hA : ∀ g v, A (adelicCyclicHilbertRepresentation f.toCuspForm g v) =
+      adelicCyclicHilbertRepresentation f.toCuspForm g (A v)) :
+    ∃ c : ℂ, ∀ v, A v = c • v :=
+  adelicPrimitiveIntertwiner_scalar f hk A hA
+
+/-- Exact original-object consumer of `adelicPrimitiveHilbert_irreducible`. -/
+theorem actual_full_adelic_irreducible_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (hk : 0 < k)
+    (p : Submodule ℂ (AdelicCyclicHilbert f.toCuspForm))
+    (hclosed : IsClosed (p : Set (AdelicCyclicHilbert f.toCuspForm)))
+    (hp : ∀ g v, v ∈ p → adelicCyclicHilbertRepresentation f.toCuspForm g v ∈ p) :
+    p = ⊥ ∨ p = ⊤ :=
+  adelicPrimitiveHilbert_irreducible f hk p hclosed hp
+
+/-- The full actual adelic Hecke trace equals the canonical lift of the classical Hecke operator with its exact determinant factor. -/
+theorem actual_full_adelic_Hecke_classical_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (p : ℕ) [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hF : v.val = canonicalAdelicGL2CuspLift N k F) :
+    (adelicAlgebraicHeckeTrace f p hpN v).val = canonicalAdelicGL2CuspLift N k
+      ((Real.sqrt (p : ℝ) : ℂ) ^ (2 - k) • cuspHecke p F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) :=
+  adelicAlgebraicHeckeTrace_classical_full f p hpN v F hF
+
+
+/-- Exact original-object consumer of `adelicNormalizedHecke_real_component`. -/
+theorem actual_normalized_Hecke_real_component_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (f : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (v : AdelicCyclicHilbert f.toCuspForm) (hv : v ∈ adelicRealCyclicClosedSpan f.toCuspForm) :
+    adelicNormalizedHecke f.toCuspForm p hpN v = normalizedCuspCoefficients f.toCuspForm p • v :=
+  adelicNormalizedHecke_real_component f hpN v hv
+
+/-- Exact original-object consumer of `finiteAdelicLocalGL2Hom_injective`. -/
+theorem actual_finite_place_embedding_source (v : HeightOneSpectrum ℤ) :
+    Function.Injective (finiteAdelicLocalGL2Hom v) :=
+  finiteAdelicLocalGL2Hom_injective v
+
+/-- Exact original-object consumer of `finiteAdelicLocalGL2_continuous`. -/
+theorem actual_finite_place_continuity_source (v : HeightOneSpectrum ℤ) :
+    Continuous (finiteAdelicLocalGL2Hom v) :=
+  finiteAdelicLocalGL2_continuous v
+
+/-- Exact original-object consumer of `adelicPrimitive_good_prime_spherical`. -/
+theorem actual_good_prime_spherical_source {N p : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (hp : p.Prime) (hpN : p.Coprime N) :
+    adelicCyclicHilbertGenerator f.toCuspForm ≠ 0 ∧
+      ∀ g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p hp).adicCompletionIntegers ℚ),
+        adelicCyclicLocalRepresentation f.toCuspForm (rationalPrimePlace p hp)
+          (GeneralLinearGroup.map ((rationalPrimePlace p hp).adicCompletionIntegers ℚ).subtype g)
+          (adelicCyclicHilbertGenerator f.toCuspForm) = adelicCyclicHilbertGenerator f.toCuspForm :=
+  adelicPrimitive_good_prime_spherical f hp hpN
+
+/-- Actual original bounded finite-adelic Hecke trace with its full p+1 unitary bound. -/
+theorem actual_bounded_Hecke_trace_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (p : ℕ) [NeZero p] (hpN : p.Coprime N)
+    (v : AdelicCyclicHilbert f) :
+    ‖adelicBoundedHeckeTrace f p hpN v‖ ≤ (p + 1 : ℝ) * ‖v‖ :=
+  adelicBoundedHeckeTrace_norm_le f p hpN v
+
+/-- Exact equality of the original adelic Hecke operator with the actual local-place sum on every original level-fixed vector. -/
+theorem actual_Hecke_localization_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (p : ℕ) [NeZero p] (hp : p.Prime) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLevelFixedSpace f) :
+    adelicNormalizedHecke f p hpN x = adelicLocalNormalizedHecke f p hp hpN x :=
+  adelicNormalizedHecke_eq_local f p hp hpN x hx
+
+/-- The genuine localized Hecke sum has precisely the original primitive Fourier coefficient as its eigenvalue. -/
+theorem actual_local_Hecke_eigenvalue_source {N p : ℕ} [NeZero N] [NeZero p] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hp : p.Prime) (hpN : p.Coprime N) :
+    adelicLocalNormalizedHecke F.toCuspForm p hp hpN (adelicCyclicHilbertGenerator F.toCuspForm) =
+      normalizedCuspCoefficients F.toCuspForm p • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicLocalNormalizedHecke_primitive_generator F hp hpN
+
+
+/-- Exact original-object consumer of `finiteAdelicLevelAt_surjective`. -/
+theorem actual_local_level_surjection_source (N : ℕ) [NeZero N] (v : HeightOneSpectrum ℤ) :
+    Function.Surjective (finiteAdelicLevelAt N v) :=
+  finiteAdelicLevelAt_surjective N v
+
+/-- Exact original-object consumer of `finitePlaceHeckeCosets_card`. -/
+theorem actual_intrinsic_local_Hecke_cosets_source (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) :
+    Nat.card (finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)) ⧸
+      finitePlaceHeckeUpper N p (Fact.out : p.Prime)) = p + 1 :=
+  finitePlaceHeckeCosets_card N p hpN
+
+/-- Exact original-object consumer of `finitePlaceGL2Gamma0_good_eq_one`. -/
+theorem actual_good_prime_full_integral_group_source (N p : ℕ) (hp : p.Prime) (hpN : p.Coprime N) :
+    finitePlaceGL2Gamma0 N (rationalPrimePlace p hp) = finitePlaceGL2Gamma0 1 (rationalPrimePlace p hp) :=
+  finitePlaceGL2Gamma0_good_eq_one N p hp hpN
+
+/-- Exact original-object consumer of `finitePlaceIntegralMatrix_map`. -/
+theorem actual_integral_local_matrix_source (v : HeightOneSpectrum ℤ) (g : finitePlaceGL2Gamma0 1 v) :
+    GeneralLinearGroup.map (v.adicCompletionIntegers ℚ).subtype (finitePlaceIntegralMatrix v g) = g.val :=
+  finitePlaceIntegralMatrix_map v g
+
+/-- Exact original-object consumer of `adelicLocalNormalizedHecke_local_fixed`. -/
+theorem actual_intrinsic_local_Hecke_preservation_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert f)
+    (hx : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val x = x)
+    (g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val
+      (adelicLocalNormalizedHecke f p (Fact.out : p.Prime) hpN x) =
+        adelicLocalNormalizedHecke f p (Fact.out : p.Prime) hpN x :=
+  adelicLocalNormalizedHecke_local_fixed f hpN x hx g
+
+/-- Exact original-object consumer of `adelicCyclicLocal_scalar_action`. -/
+theorem actual_local_central_character_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ)
+    (u : (v.adicCompletion ℚ)ˣ) (x : AdelicCyclicHilbert f) :
+    adelicCyclicLocalRepresentation f v (GeneralLinearGroup.scalar (Fin 2) u) x = x :=
+  adelicCyclicLocal_scalar_action f v u x
+
+
+/-- Exact original-object consumer of `adelicLocalNormalizedHecke_symmetric`. -/
+theorem actual_local_Hecke_symmetry_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hpN : p.Coprime N)
+    (x y : AdelicCyclicHilbert f)
+    (hx : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val x = x)
+    (hy : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val y = y) :
+    inner ℂ (adelicLocalNormalizedHecke f p (Fact.out : p.Prime) hpN x) y =
+      inner ℂ x (adelicLocalNormalizedHecke f p (Fact.out : p.Prime) hpN y) :=
+  adelicLocalNormalizedHecke_symmetric f hpN x y hx hy
+
+/-- Exact original-object consumer of `adelicLocalBoundedHeckeTrace_norm_le`. -/
+theorem actual_local_Hecke_bound_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+    (p : ℕ) [NeZero p] [Fact p.Prime] (hpN : p.Coprime N) (x : AdelicCyclicHilbert f) :
+    ‖adelicLocalBoundedHeckeTrace f p hpN x‖ ≤ (p + 1 : ℝ) * ‖x‖ :=
+  adelicLocalBoundedHeckeTrace_norm_le f p hpN x
+
+/-- Exact original-object consumer of `adelicLocalFixedSpace_isClosed`. -/
+theorem actual_local_fixed_space_closed_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ) :
+    IsClosed (adelicLocalFixedSpace f v : Set (AdelicCyclicHilbert f)) :=
+  adelicLocalFixedSpace_isClosed f v
+
+/-- Exact original-object consumer of `adelicCyclicHilbertGenerator_mem_localFixed`. -/
+theorem actual_local_fixed_generator_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ) :
+    adelicCyclicHilbertGenerator f ∈ adelicLocalFixedSpace f v :=
+  adelicCyclicHilbertGenerator_mem_localFixed f v
+
+/-- Exact original-object consumer of `adelicLocalSphericalHecke_selfAdjoint`. -/
+theorem actual_local_Hecke_self_adjoint_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+    (p : ℕ) [NeZero p] [Fact p.Prime] (hpN : p.Coprime N) :
+    IsSelfAdjoint (adelicLocalSphericalHecke f p hpN) :=
+  adelicLocalSphericalHecke_selfAdjoint f p hpN
+
+/-- Exact original-object consumer of `adelicLocalSphericalHecke_primitive_generator`. -/
+theorem actual_local_spherical_eigenvector_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (p : ℕ) [NeZero p] [Fact p.Prime] (hpN : p.Coprime N) :
+    adelicLocalSphericalHecke F.toCuspForm p hpN
+        (adelicLocalFixedGenerator F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) =
+      normalizedCuspCoefficients F.toCuspForm p •
+        adelicLocalFixedGenerator F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) :=
+  adelicLocalSphericalHecke_primitive_generator F p hpN
+
+
+/-- Exact original-object consumer of `rationalPrimePlaceInteger_unit_power`. -/
+theorem actual_local_uniformizer_source (p : ℕ) (hp : p.Prime)
+    (x : (rationalPrimePlace p hp).adicCompletionIntegers ℚ) (hx : x ≠ 0) :
+    ∃ u : ((rationalPrimePlace p hp).adicCompletionIntegers ℚ)ˣ, ∃ n : ℕ,
+      x = (u : (rationalPrimePlace p hp).adicCompletionIntegers ℚ) *
+        (p : (rationalPrimePlace p hp).adicCompletionIntegers ℚ) ^ n :=
+  rationalPrimePlaceInteger_unit_power p hp x hx
+
+/-- Exact original-object consumer of `finitePlaceGL2_integral_pivot`. -/
+theorem actual_local_integral_pivot_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    ∃ u : (v.adicCompletion ℚ)ˣ, ∃ l r : finitePlaceGL2Gamma0 1 v,
+      (GeneralLinearGroup.scalar (Fin 2) u⁻¹ * (l.val * g * r.val)).val 0 0 = 1 ∧
+      ∀ i j : Fin 2, (GeneralLinearGroup.scalar (Fin 2) u⁻¹ * (l.val * g * r.val)).val i j ∈
+        v.adicCompletionIntegers ℚ :=
+  finitePlaceGL2_integral_pivot v g
+
+/-- Exact original-object consumer of `finitePlaceGL2_integral_diagonal`. -/
+theorem actual_local_integral_diagonal_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    ∃ u t : (v.adicCompletion ℚ)ˣ, ∃ l r : finitePlaceGL2Gamma0 1 v,
+      (t : v.adicCompletion ℚ) ∈ v.adicCompletionIntegers ℚ ∧
+      g = GeneralLinearGroup.scalar (Fin 2) u * l.val * gl2UnitDiagonalPair 1 t * r.val :=
+  finitePlaceGL2_integral_diagonal v g
+
+/-- Exact original-object consumer of `finitePlace_integral_diagonal_hecke_power`. -/
+theorem actual_local_diagonal_Hecke_power_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (t : ((rationalPrimePlace p hp).adicCompletion ℚ)ˣ)
+    (ht : (t : (rationalPrimePlace p hp).adicCompletion ℚ) ∈ (rationalPrimePlace p hp).adicCompletionIntegers ℚ) :
+    ∃ u : ((rationalPrimePlace p hp).adicCompletionIntegers ℚ)ˣ, ∃ n : ℕ,
+      gl2UnitDiagonalPair 1 t =
+        GeneralLinearGroup.map ((rationalPrimePlace p hp).adicCompletionIntegers ℚ).subtype
+          (gl2UnitDiagonalPair 1 u) *
+        (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp)) (finiteAdelicHeckeDiagonal p)) ^ n :=
+  finitePlace_integral_diagonal_hecke_power p hp t ht
+
+/-- Exact original-object consumer of `finitePlaceGL2_cartan`. -/
+theorem actual_local_Cartan_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p hp).adicCompletion ℚ)) :
+    ∃ u : ((rationalPrimePlace p hp).adicCompletion ℚ)ˣ, ∃ n : ℕ,
+      ∃ l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p hp),
+        g = GeneralLinearGroup.scalar (Fin 2) u * l.val *
+          (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp)) (finiteAdelicHeckeDiagonal p)) ^ n * r.val :=
+  finitePlaceGL2_cartan p hp g
+
+/-- Exact original-object consumer of `adelicCyclicLocal_matrixCoefficient_cartan`. -/
+theorem actual_local_Cartan_coefficient_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hpN : p.Coprime N)
+    (x y : AdelicCyclicHilbert f)
+    (hx : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val x = x)
+    (hy : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val y = y)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    ∃ n : ℕ, inner ℂ x (adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g y) =
+      inner ℂ x (adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime))
+        ((GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+          (finiteAdelicHeckeDiagonal p)) ^ n) y) :=
+  adelicCyclicLocal_matrixCoefficient_cartan f hpN x y hx hy g
+
+
+/-- Exact original-object consumer of `finitePlaceGL2_unit_entry_hecke_power`. -/
+theorem actual_local_exact_double_coset_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p hp).adicCompletion ℚ))
+    (hint : ∀ i j, g.val i j ∈ (rationalPrimePlace p hp).adicCompletionIntegers ℚ)
+    (i j : Fin 2) (a b : ((rationalPrimePlace p hp).adicCompletionIntegers ℚ)ˣ)
+    (ha : g.val i j = (a.val : (rationalPrimePlace p hp).adicCompletion ℚ))
+    (m : ℕ)
+    (hdet : GeneralLinearGroup.det g =
+      Units.map ((rationalPrimePlace p hp).adicCompletionIntegers ℚ).subtype.toMonoidHom b *
+        (finitePlacePrimeUnit p (rationalPrimePlace p hp)) ^ m) :
+    ∃ l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p hp),
+      g = l.val * (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp))
+        (finiteAdelicHeckeDiagonal p)) ^ m * r.val :=
+  finitePlaceGL2_unit_entry_hecke_power p hp g hint i j a b ha m hdet
+
+/-- Exact original-object consumer of `finitePlaceHeckeRadial_some_forward`. -/
+theorem actual_local_radial_forward_source (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) (n : ℕ) (a : ZMod p) (ha : a ≠ 0) :
+    ∃ l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      finitePlaceHeckeRadialMatrix N p hpN (rationalPrimePlace p (Fact.out : p.Prime)) n (some a) =
+        l.val * (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+          (finiteAdelicHeckeDiagonal p)) ^ (n + 1) * r.val :=
+  finitePlaceHeckeRadial_some_forward N p hpN n a ha
+
+/-- Exact original-object consumer of `adelicLocalHeckeTrace_primitive_generator`. -/
+theorem actual_local_radial_trace_eigen_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    @finitePlaceHeckeTrace (AdelicCyclicHilbert F.toCuspForm) inferInstance inferInstance N p
+      inferInstance inferInstance inferInstance hpN
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicCyclicHilbertGenerator F.toCuspForm) =
+    ((Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p) •
+      adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicLocalHeckeTrace_primitive_generator F hpN
+
+/-- Exact original-object consumer of `adelicCyclicLocal_primitive_radial_recurrence`. -/
+theorem actual_local_radial_recurrence_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    let φ := @finitePlaceRadialCoefficient (AdelicCyclicHilbert F.toCuspForm)
+      inferInstance inferInstance p inferInstance inferInstance
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      x (adelicCyclicHilbertGenerator F.toCuspForm)
+    let μ := (Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p
+    μ * φ 0 = ((p : ℂ) + 1) * φ 1 ∧
+      ∀ n, μ * φ (n + 1) = φ n + (p : ℂ) * φ (n + 2) :=
+  adelicCyclicLocal_primitive_radial_recurrence F hpN x hx
+
+/-- Exact original-object consumer of `adelicCyclicLocal_orbit_orthogonal_zero`. -/
+theorem actual_local_orbit_orthogonal_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (horth : inner ℂ x (adelicCyclicHilbertGenerator F.toCuspForm) = 0)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    inner ℂ x (adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g (adelicCyclicHilbertGenerator F.toCuspForm)) = 0 :=
+  adelicCyclicLocal_orbit_orthogonal_zero F hpN x hx horth g
+
+/-- Exact original-object consumer of `adelicLocalCyclic_fixed_eq_generator_line`. -/
+theorem actual_local_cyclic_fixed_line_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊓
+      adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) =
+        Submodule.span ℂ {adelicCyclicHilbertGenerator F.toCuspForm} :=
+  adelicLocalCyclic_fixed_eq_generator_line F hpN
+
+/-- Exact original-object consumer of `adelicLocalCyclic_intertwiner_scalar`. -/
+theorem actual_local_cyclic_Schur_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (T : AdelicCyclicHilbert F.toCuspForm →L[ℂ] AdelicCyclicHilbert F.toCuspForm)
+    (hT : ∀ g x, T (adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g x) =
+        adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g (T x))
+    (hcyclic : T (adelicCyclicHilbertGenerator F.toCuspForm) ∈
+      adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    ∃ c : ℂ, ∀ x ∈ adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)),
+      T x = c • x :=
+  adelicLocalCyclic_intertwiner_scalar F hpN T hT hcyclic
+
+/-- Exact original-object consumer of `adelicLocalCyclicClosedSpan_irreducible`. -/
+theorem actual_local_cyclic_irreducible_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (S : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hclosed : IsClosed (S : Set (AdelicCyclicHilbert F.toCuspForm)))
+    (hle : S ≤ adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (hinv : ∀ g x, x ∈ S → adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g x ∈ S) :
+    S = ⊥ ∨ S = adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) :=
+  adelicLocalCyclicClosedSpan_irreducible F hpN S hclosed hle hinv
+
+
+/-- Exact original-object consumer of genuine local compactness and openness. -/
+theorem actual_local_level_topology_source (N : ℕ) [NeZero N] (v : HeightOneSpectrum ℤ) :
+    IsCompact (finitePlaceGL2Gamma0 N v : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+      IsOpen (finitePlaceGL2Gamma0 N v : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) :=
+  ⟨finitePlaceGL2Gamma0_isCompact N v, finitePlaceGL2Gamma0_isOpen N v⟩
+
+/-- Exact original-object consumer of `adelicLocalCyclicCore_smooth`. -/
+theorem actual_local_smooth_core_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLocalCyclicCore f v) :
+    ∃ H : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)),
+      IsOpen (H : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+        ∀ g ∈ H, adelicCyclicLocalRepresentation f v g x = x :=
+  adelicLocalCyclicCore_smooth f v x hx
+
+/-- Exact original-object consumer of `adelicLocalFixedProjection_mem_invariantCore`. -/
+theorem actual_local_core_projection_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ)
+    (W : Submodule ℂ (AdelicCyclicHilbert f)) (hW : W ≤ adelicLocalCyclicCore f v)
+    (hinv : ∀ g x, x ∈ W → adelicCyclicLocalRepresentation f v g x ∈ W)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ W) : adelicLocalFixedProjection f v x ∈ W :=
+  adelicLocalFixedProjection_mem_invariantCore f v W hW hinv x hx
+
+/-- Exact original-object consumer of `adelicLocalCyclicCore_irreducible`. -/
+theorem actual_local_algebraic_irreducible_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (W : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hW : W ≤ adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (hinv : ∀ g x, x ∈ W → adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g x ∈ W) :
+    W = ⊥ ∨ W = adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) :=
+  adelicLocalCyclicCore_irreducible F hpN W hW hinv
+
+/-- Exact original-object consumer of `adelicLocalSmoothRepresentation_smooth`. -/
+theorem actual_local_smooth_representation_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ) (x : adelicLocalCyclicCore f v) :
+    ∃ H : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)),
+      IsOpen (H : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+        ∀ g ∈ H, adelicLocalSmoothRepresentation f v g x = x :=
+  adelicLocalSmoothRepresentation_smooth f v x
+
+/-- Exact original-object consumer of `adelicLocalSmoothRepresentation_irreducible`. -/
+theorem actual_local_smooth_irreducible_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).IsIrreducible :=
+  adelicLocalSmoothRepresentation_irreducible F hpN
+
+
+/-- Exact original-object consumer of `finiteAdelicSublevelIntegerGroup_finiteIndex`. -/
+theorem actual_sublevel_integer_finite_source (N : ℕ) [NeZero N]
+    (L : Subgroup (finiteAdeleGL2Gamma0 N)) [L.FiniteIndex] :
+    (finiteAdelicSublevelIntegerGroup N L).FiniteIndex :=
+  finiteAdelicSublevelIntegerGroup_finiteIndex N L
+
+/-- Exact original-object consumer of `adelicSublevelClassicalFamily_injective`. -/
+theorem actual_sublevel_classical_family_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (L : Subgroup (finiteAdeleGL2Gamma0 N)) :
+    Function.Injective (adelicSublevelClassicalFamily f L) :=
+  adelicSublevelClassicalFamily_injective f L
+
+/-- Exact original-object consumer of `adelicSublevelFixedLowest_finiteDimensional`. -/
+theorem actual_sublevel_lowest_finite_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (L : Subgroup (finiteAdeleGL2Gamma0 N)) (hL : IsOpen (L : Set (finiteAdeleGL2Gamma0 N))) :
+    FiniteDimensional ℂ ↥(adelicRotationWeightSpace f ⊓ adelicSublevelFixedSpace f L :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicSublevelFixedLowest_finiteDimensional f hf hk L hL
+
+/-- Exact original-object consumer of `adelicLocalCyclic_level_action`. -/
+theorem actual_local_sublevel_action_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ) (a : finiteAdeleGL2Gamma0 N)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLocalCyclicClosedSpan f v) :
+    adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a.val) x =
+      adelicCyclicLocalRepresentation f v (GeneralLinearGroup.map (finiteAdelePlace v) a.val) x :=
+  adelicLocalCyclic_level_action f v a x hx
+
+/-- Exact original-object consumer of `adelicLocalCyclic_open_fixed_finiteDimensional`. -/
+theorem actual_local_open_fixed_finite_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))) :
+    FiniteDimensional ℂ ↥(adelicLocalCyclicClosedSpan f v ⊓ adelicLocalSubgroupFixedSpace f v J :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicLocalCyclic_open_fixed_finiteDimensional f hf hk v J hJ
+
+/-- Exact original-object consumer of `adelicLocalCyclic_smooth_iff_core`. -/
+theorem actual_local_smooth_completion_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLocalCyclicClosedSpan f v) :
+    (∃ J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)),
+      IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+        ∀ g ∈ J, adelicCyclicLocalRepresentation f v g x = x) ↔ x ∈ adelicLocalCyclicCore f v :=
+  adelicLocalCyclic_smooth_iff_core f hf hk v x hx
+
+/-- Exact original-object consumer of `adelicLocalSmoothRepresentation_admissible`. -/
+theorem actual_local_smooth_admissible_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicLocalSmoothRepresentation f v).comp J.subtype)) :=
+  adelicLocalSmoothRepresentation_admissible f hf hk v J hJ
+
+/-- Exact original-object consumer of `adelicLocalCyclicRepresentation_admissible`. -/
+theorem actual_local_cyclic_admissible_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicLocalCyclicRepresentation f v).comp J.subtype)) :=
+  adelicLocalCyclicRepresentation_admissible f hf hk v J hJ
+
+/-- Exact primitive source consumer combining genuine good-prime smooth irreducibility and proved admissibility of the original local representation. -/
+theorem actual_primitive_local_admissible_irreducible_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (hpN : p.Coprime N) :
+    (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).IsIrreducible ∧
+      ∀ J : Subgroup (GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)),
+        IsOpen (J : Set (GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))) →
+          FiniteDimensional ℂ (Representation.invariants
+            ((adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).comp J.subtype)) :=
+  ⟨adelicLocalSmoothRepresentation_irreducible F hpN,
+    fun J hJ => adelicLocalSmoothRepresentation_admissible F.toCuspForm (primitiveCuspForm_ne_zero F) hk _ J hJ⟩
+
+
+open scoped TensorProduct
+
+/-- Exact original-object consumer of `adelicLocalCyclicProjection_fixed_scalar`. -/
+theorem actual_local_cyclic_projection_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    ∃ c : ℂ, adelicLocalCyclicProjection F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) x =
+      c • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicLocalCyclicProjection_fixed_scalar F hpN x hx
+
+/-- Exact original-object consumer of `adelicCyclicLocal_away_mixed_gram`. -/
+theorem actual_local_away_gram_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g₁ g₂ : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (a₁ a₂ : finiteAdelicAwayGroup (rationalPrimePlace p (Fact.out : p.Prime))) :
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₁
+        (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₁
+          (adelicCyclicHilbertGenerator F.toCuspForm)))
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₂
+        (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₂
+          (adelicCyclicHilbertGenerator F.toCuspForm))) *
+      inner ℂ (adelicCyclicHilbertGenerator F.toCuspForm) (adelicCyclicHilbertGenerator F.toCuspForm) =
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) *
+    inner ℂ
+      (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) :=
+  adelicCyclicLocal_away_mixed_gram F hpN g₁ g₂ a₁ a₂
+
+/-- Exact original-object consumer of `finiteAdelicLocalAwayEquiv_apply`. -/
+theorem actual_finite_local_away_product_source  (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) (a : finiteAdelicAwayGroup v) :
+    finiteAdelicLocalAwayEquiv v (g, a) = finiteAdelicLocalGL2 v g * a.val :=
+  finiteAdelicLocalAwayEquiv_apply v g a
+
+/-- Exact original-object consumer of `adelicLocalAwayTensorIsometry_range`. -/
+theorem actual_local_away_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    (adelicLocalAwayTensorIsometry F hpN).toLinearMap.range = adelicFiniteCyclicSpan F.toCuspForm :=
+  adelicLocalAwayTensorIsometry_range F hpN
+
+/-- Exact original-object consumer of `adelicLocalAwayTensorIsometry_intertwines`. -/
+theorem actual_local_away_tensor_action_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (b : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) ×
+      finiteAdelicAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗[ℂ]
+      adelicAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalAwayTensorIsometry F hpN
+      (adelicLocalAwayTensorRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b x) =
+      adelicLocalAwayJointRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b
+        (adelicLocalAwayTensorIsometry F hpN x) :=
+  adelicLocalAwayTensorIsometry_intertwines F hpN b x
+
+/-- Exact original-object consumer of `adelicLocalAwayHilbertTensorIsometry_range`. -/
+theorem actual_local_away_completed_range_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (hk : 0 < k) :
+    (adelicLocalAwayHilbertTensorIsometry F hpN).toLinearMap.range =
+      adelicRotationWeightSpace F.toCuspForm :=
+  adelicLocalAwayHilbertTensorIsometry_range F hpN hk
+
+/-- Exact original-object consumer of `adelicLocalAwayHilbertTensorIsometry_intertwines`. -/
+theorem actual_local_away_completed_action_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (b : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) ×
+      finiteAdelicAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : AdelicLocalAwayHilbertTensor F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalAwayHilbertTensorIsometry F hpN (adelicLocalAwayHilbertTensorRepresentation F hpN b x) =
+      adelicLocalAwayJointRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b
+        (adelicLocalAwayHilbertTensorIsometry F hpN x) :=
+  adelicLocalAwayHilbertTensorIsometry_intertwines F hpN b x
+
+/-- Exact original-object consumer of `adelicLocalAwayHilbertTensorEquiv_apply`. -/
+theorem actual_local_away_completed_equiv_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (hk : 0 < k)
+    (x : AdelicLocalAwayHilbertTensor F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    (adelicLocalAwayHilbertTensorEquiv F hpN hk x).val = adelicLocalAwayHilbertTensorIsometry F hpN x :=
+  adelicLocalAwayHilbertTensorEquiv_apply F hpN hk x
+
+/-- The actual completed local-away tensor equivalence reaches every original lowest-weight Hilbert vector. -/
+theorem actual_local_away_completed_onto_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (hk : 0 < k) :
+    Function.Surjective (adelicLocalAwayHilbertTensorEquiv F hpN hk) :=
+  (adelicLocalAwayHilbertTensorEquiv F hpN hk).surjective
+
+
+/-- Exact original-object consumer of `adelicLocalFullAwayEquiv_coordinates`. -/
+theorem actual_full_local_coordinates_source  (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) (a : AdelicFullAwayGroup v) :
+    rationalAdelicGL2RealFiniteEquiv (adelicLocalFullAwayEquiv v (g, a)) =
+      (a.1, finiteAdelicLocalGL2 v g * a.2.val) :=
+  adelicLocalFullAwayEquiv_coordinates v g a
+
+/-- Exact original-object consumer of `adelicCyclicLocal_fullAway_mixed_gram`. -/
+theorem actual_full_local_gram_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g₁ g₂ : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (a₁ a₂ : AdelicFullAwayGroup (rationalPrimePlace p (Fact.out : p.Prime))) :
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₁
+        (adelicCyclicFullAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₁
+          (adelicCyclicHilbertGenerator F.toCuspForm)))
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₂
+        (adelicCyclicFullAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₂
+          (adelicCyclicHilbertGenerator F.toCuspForm))) *
+      inner ℂ (adelicCyclicHilbertGenerator F.toCuspForm) (adelicCyclicHilbertGenerator F.toCuspForm) =
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) *
+    inner ℂ
+      (adelicCyclicFullAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicFullAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) :=
+  adelicCyclicLocal_fullAway_mixed_gram F hpN g₁ g₂ a₁ a₂
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_range`. -/
+theorem actual_full_local_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    (adelicLocalFullAwayTensorIsometry F hpN).toLinearMap.range =
+      Submodule.span ℂ (Set.range (fun g : RationalAdelicGL2 =>
+        adelicCyclicHilbertRepresentation F.toCuspForm g (adelicCyclicHilbertGenerator F.toCuspForm))) :=
+  adelicLocalFullAwayTensorIsometry_range F hpN
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_intertwines`. -/
+theorem actual_full_local_tensor_action_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (b : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) ×
+      AdelicFullAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗[ℂ]
+      adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (adelicLocalFullAwayTensorRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b x) =
+      adelicLocalFullAwayJointRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b
+        (adelicLocalFullAwayTensorIsometry F hpN x) :=
+  adelicLocalFullAwayTensorIsometry_intertwines F hpN b x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorIsometry_range`. -/
+theorem actual_full_local_completed_range_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    (adelicLocalFullAwayHilbertTensorIsometry F hpN).toLinearMap.range =
+      ⊤ :=
+  adelicLocalFullAwayHilbertTensorIsometry_range F hpN
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorIsometry_intertwines`. -/
+theorem actual_full_local_completed_action_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (b : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) ×
+      AdelicFullAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : AdelicLocalFullAwayHilbertTensor F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalFullAwayHilbertTensorIsometry F hpN (adelicLocalFullAwayHilbertTensorRepresentation F hpN b x) =
+      adelicLocalFullAwayJointRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b
+        (adelicLocalFullAwayHilbertTensorIsometry F hpN x) :=
+  adelicLocalFullAwayHilbertTensorIsometry_intertwines F hpN b x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_full_local_completed_continuity_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicLocalFullAwayHilbertTensor F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    Continuous (fun b => adelicLocalFullAwayHilbertTensorRepresentation F hpN b x) :=
+  adelicLocalFullAwayHilbertTensorRepresentation_stronglyContinuous F hpN x
+
+/-- The genuine full local-complement Hilbert tensor equivalence reaches every vector of the original full adelic Hilbert representation. -/
+theorem actual_full_local_completed_onto_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    Function.Surjective (adelicLocalFullAwayHilbertTensorEquiv F hpN) :=
+  (adelicLocalFullAwayHilbertTensorEquiv F hpN).surjective
+
+
+/-- Exact original-object consumer of `adelicFullAwayEmbedding_of_place_one`. -/
+theorem actual_full_place_complement_source  (v : HeightOneSpectrum ℤ)
+    (a : RationalAdelicGL2) (ha : adelicPlaceGL2Hom v a = 1) :
+    ∃ b : AdelicFullAwayGroup v, adelicFullAwayEmbedding v b = a :=
+  adelicFullAwayEmbedding_of_place_one v a ha
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_local_mul`. -/
+theorem actual_normalized_local_product_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (a : RationalAdelicGL2) (ha : adelicPlaceGL2Hom (rationalPrimePlace p (Fact.out : p.Prime)) a = 1) :
+    adelicNormalizedCuspCoefficient F.toCuspForm
+      (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (rationalPrimePlace p (Fact.out : p.Prime)) g) * a) =
+      adelicNormalizedCuspCoefficient F.toCuspForm
+        (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (rationalPrimePlace p (Fact.out : p.Prime)) g)) *
+      adelicNormalizedCuspCoefficient F.toCuspForm a :=
+  adelicNormalizedCuspCoefficient_local_mul F hpN g a ha
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_distinct_place_product`. -/
+theorem actual_normalized_distinct_product_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (l : List AdelicPlaceMatrix)
+    (hgood : ∀ a ∈ l, IsGoodAdelicPlace N a.1)
+    (hdistinct : l.Pairwise (fun a b => a.1 ≠ b.1)) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (l.map adelicPlaceMatrixEmbedding).prod =
+      (l.map (fun a => adelicNormalizedCuspCoefficient F.toCuspForm (adelicPlaceMatrixEmbedding a))).prod :=
+  adelicNormalizedCuspCoefficient_distinct_place_product F l hgood hdistinct
+
+/-- Exact original-object consumer of `adelicLocalFullAwayEquiv_symm_continuous`. -/
+theorem actual_full_factor_inverse_continuity_source  (v : HeightOneSpectrum ℤ) :
+    Continuous (adelicLocalFullAwayEquiv v).symm :=
+  adelicLocalFullAwayEquiv_symm_continuous v
+
+/-- Exact original-object consumer of `adelicPlaceGL2Hom_finitePlaceProduct`. -/
+theorem actual_finite_place_evaluation_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (i : I)
+    (g : ∀ j, GeneralLinearGroup (Fin 2) ((v j).adicCompletion ℚ)) :
+    adelicPlaceGL2Hom (v i) (adelicFinitePlaceProduct v hv g) = g i :=
+  adelicPlaceGL2Hom_finitePlaceProduct v hv i g
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_injective`. -/
+theorem actual_finite_place_product_faithful_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) : Function.Injective (adelicFinitePlaceProduct v hv) :=
+  adelicFinitePlaceProduct_injective v hv
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_mul_removal`. -/
+theorem actual_finite_place_remainder_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (a : RationalAdelicGL2) :
+    adelicFinitePlaceProduct v hv (fun i => adelicPlaceGL2Hom (v i) a) * adelicFinitePlaceRemoval v hv a = a :=
+  adelicFinitePlaceProduct_mul_removal v hv a
+
+/-- The actual finite-local-family and full-complement coordinate map is a genuine bijection onto original full adelic GL2. -/
+theorem actual_finite_family_group_factor_source {I : Type*} [Fintype I]
+    (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) :
+    Function.Bijective (adelicFiniteFamilyEquiv v hv) :=
+  (adelicFiniteFamilyEquiv v hv).bijective
+
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_distinct_place_product_mul`. -/
+theorem actual_normalized_full_complement_product_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (l : List AdelicPlaceMatrix)
+    (hgood : ∀ x ∈ l, IsGoodAdelicPlace N x.1)
+    (hdistinct : l.Pairwise (fun x y => x.1 ≠ y.1))
+    (a : RationalAdelicGL2) (ha : ∀ x ∈ l, adelicPlaceGL2Hom x.1 a = 1) :
+    adelicNormalizedCuspCoefficient F.toCuspForm ((l.map adelicPlaceMatrixEmbedding).prod * a) =
+      (l.map (fun x => adelicNormalizedCuspCoefficient F.toCuspForm (adelicPlaceMatrixEmbedding x))).prod *
+        adelicNormalizedCuspCoefficient F.toCuspForm a :=
+  adelicNormalizedCuspCoefficient_distinct_place_product_mul F l hgood hdistinct a ha
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_norm`. -/
+theorem actual_cusp_unit_reference_norm_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) : ‖adelicCyclicUnitReference f‖ = 1 :=
+  adelicCyclicUnitReference_norm f hf
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_coefficient`. -/
+theorem actual_unit_reference_coefficient_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (a : RationalAdelicGL2) :
+    inner ℂ (adelicCyclicUnitReference f)
+      (adelicCyclicHilbertRepresentation f a (adelicCyclicUnitReference f)) =
+        adelicNormalizedCuspCoefficient f a :=
+  adelicCyclicUnitReference_coefficient f a
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_unit_reference`. -/
+theorem actual_tensor_unit_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗ₜ[ℂ]
+        adelicFullAwayUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) =
+      adelicCyclicUnitReference F.toCuspForm :=
+  adelicLocalFullAwayTensorIsometry_unit_reference F hpN
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_right_reference`. -/
+theorem actual_tensor_local_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (x ⊗ₜ[ℂ] adelicFullAwayUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) =
+        x.val :=
+  adelicLocalFullAwayTensorIsometry_right_reference F hpN x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_left_reference`. -/
+theorem actual_tensor_complement_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗ₜ[ℂ] x) =
+        x.val :=
+  adelicLocalFullAwayTensorIsometry_left_reference F hpN x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorIsometry_right_reference`. -/
+theorem actual_completed_tensor_local_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : UniformSpace.Completion (adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :
+    adelicLocalFullAwayHilbertTensorIsometry F hpN
+      (adelicLocalReferenceCompletionInclusion F.toCuspForm (primitiveCuspForm_ne_zero F)
+        (rationalPrimePlace p (Fact.out : p.Prime)) x) =
+      @linearIsometryCompletion
+        (adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+        (AdelicCyclicHilbert F.toCuspForm) inferInstance inferInstance inferInstance inferInstance inferInstance
+        (adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).subtypeₗᵢ x :=
+  adelicLocalFullAwayHilbertTensorIsometry_right_reference F hpN x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorIsometry_left_reference`. -/
+theorem actual_completed_tensor_complement_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : UniformSpace.Completion (adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :
+    adelicLocalFullAwayHilbertTensorIsometry F hpN
+      (adelicFullAwayReferenceCompletionInclusion F.toCuspForm (primitiveCuspForm_ne_zero F)
+        (rationalPrimePlace p (Fact.out : p.Prime)) x) =
+      @linearIsometryCompletion
+        (adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+        (AdelicCyclicHilbert F.toCuspForm) inferInstance inferInstance inferInstance inferInstance inferInstance
+        (adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).subtypeₗᵢ x :=
+  adelicLocalFullAwayHilbertTensorIsometry_left_reference F hpN x
+
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_finiteFamilyEquiv`. -/
+theorem actual_finite_tuple_coefficient_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (adelicFiniteFamilyEquiv v hv b) =
+      (∏ i, adelicNormalizedCuspCoefficient F.toCuspForm
+        (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b.1 i)))) *
+      adelicNormalizedCuspCoefficient F.toCuspForm b.2.val :=
+  adelicNormalizedCuspCoefficient_finiteFamilyEquiv v hv F hgood b
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_finiteFamily_gram`. -/
+theorem actual_finite_tuple_gram_source {N : ℕ} [NeZero N] {k : ℤ} {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (F : PrimitiveCuspForm N k)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b₁ b₂ : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₁)
+        (adelicCyclicUnitReference F.toCuspForm))
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₂)
+        (adelicCyclicUnitReference F.toCuspForm)) =
+      (∏ i, inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₁.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₂.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))) *
+      inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₁.2.val (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₂.2.val (adelicCyclicUnitReference F.toCuspForm)) :=
+  adelicCyclicUnitReference_finiteFamily_gram v hv F hgood b₁ b₂
+
+/-- Exact original-object consumer of `adelicFiniteFamilyEquiv_symm_continuous`. -/
+theorem actual_finite_family_inverse_topology_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) : Continuous (adelicFiniteFamilyEquiv v hv).symm :=
+  adelicFiniteFamilyEquiv_symm_continuous v hv
+
+/-- Exact original-object consumer of `adelicLocalUnitOrbit_span`. -/
+theorem actual_original_unit_local_orbit_span_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (v : HeightOneSpectrum ℤ) :
+    Submodule.span ℂ (Set.range (adelicLocalUnitOrbit f v)) = ⊤ :=
+  adelicLocalUnitOrbit_span f hf v
+
+/-- Exact original-object consumer of `adelicFiniteLocalTensorFamily_span`. -/
+theorem actual_finite_local_tensor_orbit_span_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicFiniteLocalTensorFamily f v)) = ⊤ :=
+  adelicFiniteLocalTensorFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorFamily_gram`. -/
+theorem actual_finite_hilbert_tensor_gram_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ (adelicFiniteFullTensorFamily F.toCuspForm v a) (adelicFiniteFullTensorFamily F.toCuspForm v b) =
+      inner ℂ (adelicFiniteFullMixedFamily F.toCuspForm v hv a) (adelicFiniteFullMixedFamily F.toCuspForm v hv b) :=
+  adelicFiniteFullTensorFamily_gram F v hv hgood a b
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_family`. -/
+theorem actual_finite_hilbert_tensor_family_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteFullTensorFamily F.toCuspForm v a) =
+      adelicFiniteFullMixedFamily F.toCuspForm v hv a :=
+  adelicFiniteFullTensorIsometry_family F v hv hgood a
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_range`. -/
+theorem actual_finite_hilbert_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i)) :
+    (adelicFiniteFullTensorIsometry F v hv hgood).toLinearMap.range =
+      Submodule.span ℂ (Set.range (fun g : RationalAdelicGL2 =>
+        adelicCyclicHilbertRepresentation F.toCuspForm g (adelicCyclicHilbertGenerator F.toCuspForm))) :=
+  adelicFiniteFullTensorIsometry_range F v hv hgood
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_family`. -/
+theorem actual_completed_finite_tensor_family_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood
+      (adelicFiniteFullTensorFamily F.toCuspForm v a : AdelicFiniteFullHilbertTensor F.toCuspForm v) =
+      adelicFiniteFullMixedFamily F.toCuspForm v hv a :=
+  adelicFiniteFullHilbertTensorIsometry_family F v hv hgood a
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_range`. -/
+theorem actual_completed_finite_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i)) :
+    (adelicFiniteFullHilbertTensorIsometry F v hv hgood).toLinearMap.range = ⊤ :=
+  adelicFiniteFullHilbertTensorIsometry_range F v hv hgood
+
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_intertwines`. -/
+theorem actual_finite_tensor_intertwining_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k) (hv : Function.Injective v)  (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v)
+    (x : AdelicFiniteLocalTensor F.toCuspForm v ⊗[ℂ] adelicFiniteFamilyAwayCore F.toCuspForm v) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteFullTensorRepresentation F.toCuspForm v b x) =
+      adelicFiniteFullJointRepresentation F.toCuspForm v hv b (adelicFiniteFullTensorIsometry F v hv hgood x)  :=
+  adelicFiniteFullTensorIsometry_intertwines v F hv hgood b x
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorRepresentation_norm`. -/
+theorem actual_finite_tensor_norm_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ)  (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v)
+    (x : AdelicFiniteLocalTensor F.toCuspForm v ⊗[ℂ] adelicFiniteFamilyAwayCore F.toCuspForm v) :
+    ‖adelicFiniteFullTensorRepresentation F.toCuspForm v b x‖ = ‖x‖  :=
+  adelicFiniteFullTensorRepresentation_norm F v hv hgood b x
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_intertwines`. -/
+theorem actual_completed_finite_tensor_intertwining_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ)  (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v)
+    (x : AdelicFiniteFullHilbertTensor F.toCuspForm v) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood
+      (adelicFiniteFullHilbertTensorRepresentation F v hv hgood b x) =
+      adelicFiniteFullJointRepresentation F.toCuspForm v hv b
+        (adelicFiniteFullHilbertTensorIsometry F v hv hgood x)  :=
+  adelicFiniteFullHilbertTensorIsometry_intertwines F v hv hgood b x
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_completed_finite_tensor_continuity_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ)  (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (x : AdelicFiniteFullHilbertTensor F.toCuspForm v) :
+    Continuous (fun b => adelicFiniteFullHilbertTensorRepresentation F v hv hgood b x)  :=
+  adelicFiniteFullHilbertTensorRepresentation_stronglyContinuous F v hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteFamilyEquiv_reindex`. -/
+theorem actual_finite_adelic_permutation_source {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n))  (hv : Function.Injective v)
+    (g : ∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ))
+    (a : adelicFiniteFamilyAwayGroup (fun i => v (e i))) :
+    adelicFiniteFamilyEquiv (fun i => v (e i)) (hv.comp e.injective) ((fun i => g (e i)), a) =
+      adelicFiniteFamilyEquiv v hv (g, adelicFiniteFamilyAwayReindex v e a)  :=
+  adelicFiniteFamilyEquiv_reindex v e hv g a
+
+/-- Exact original-object consumer of `adelicFiniteFamilyAwayCore_reindex`. -/
+theorem actual_finite_complement_core_permutation_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n))  :
+    adelicFiniteFamilyAwayCore f (fun i => v (e i)) = adelicFiniteFamilyAwayCore f v  :=
+  adelicFiniteFamilyAwayCore_reindex f v e
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_reindex`. -/
+theorem actual_finite_tensor_permutation_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n)) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (x : AdelicFiniteLocalTensor F.toCuspForm (fun i => v (e i)) ⊗[ℂ]
+      adelicFiniteFamilyAwayCore F.toCuspForm (fun i => v (e i))) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteFullTensorReindex F.toCuspForm v e x) =
+      adelicFiniteFullTensorIsometry F (fun i => v (e i)) (hv.comp e.injective) (fun i => hgood (e i)) x  :=
+  adelicFiniteFullTensorIsometry_reindex v e F hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_reindex`. -/
+theorem actual_completed_finite_tensor_permutation_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n)) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (x : AdelicFiniteFullHilbertTensor F.toCuspForm (fun i => v (e i))) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood (adelicFiniteFullHilbertTensorReindex F.toCuspForm v e x) =
+      adelicFiniteFullHilbertTensorIsometry F (fun i => v (e i)) (hv.comp e.injective) (fun i => hgood (e i)) x  :=
+  adelicFiniteFullHilbertTensorIsometry_reindex v e F hv hgood x
+
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_snoc_one`. -/
+theorem actual_finite_reference_coordinate_source  {n : ℕ} (v : Fin (n + 1) → HeightOneSpectrum ℤ)
+    (hv : Function.Injective v)
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v i.castSucc).adicCompletion ℚ)) :
+    adelicFinitePlaceProduct v hv (Fin.snoc g 1) =
+      adelicFinitePlaceProduct (fun i : Fin n => v i.castSucc) (hv.comp (Fin.castSucc_injective n)) g  :=
+  adelicFinitePlaceProduct_snoc_one v hv g
+
+/-- Exact original-object consumer of `adelicFiniteLocalReferenceExtension_family`. -/
+theorem actual_finite_reference_local_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (v : Fin (n + 1) → HeightOneSpectrum ℤ) 
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v i.castSucc).adicCompletion ℚ)) :
+    adelicFiniteLocalReferenceExtension f hf v
+      (adelicFiniteLocalTensorFamily f (fun i : Fin n => v i.castSucc) g) =
+      adelicFiniteLocalTensorFamily f v (Fin.snoc g 1)  :=
+  adelicFiniteLocalReferenceExtension_family f hf v g
+
+/-- Exact original-object consumer of `adelicFiniteFamilyAwayCoreInitIsometry_orbit`. -/
+theorem actual_finite_reference_complement_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin (n + 1) → HeightOneSpectrum ℤ)  (a : adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFamilyAwayCoreInitIsometry f v (adelicFiniteFamilyAwayOrbit f v a) =
+      adelicFiniteFamilyAwayOrbit f (fun i : Fin n => v i.castSucc) (adelicFiniteFamilyAwayInitHom v a)  :=
+  adelicFiniteFamilyAwayCoreInitIsometry_orbit f v a
+
+/-- Exact original-object consumer of `adelicFiniteReferenceFamily_span`. -/
+theorem actual_finite_reference_common_span_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin (n + 1) → HeightOneSpectrum ℤ)  (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicFiniteReferenceFamily f v)) = ⊤  :=
+  adelicFiniteReferenceFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicFiniteTensorIsometry_reference_extension`. -/
+theorem actual_finite_reference_realization_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin (n + 1) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : AdelicFiniteReferenceDomain F.toCuspForm v) :
+    adelicFiniteFullTensorIsometry F (fun i : Fin n => v i.castSucc)
+      (hv.comp (Fin.castSucc_injective n)) (fun i => hgood i.castSucc)
+      (adelicFiniteReferenceToShorter F.toCuspForm v x) =
+      adelicFiniteFullTensorIsometry F v hv hgood
+        (adelicFiniteReferenceToLonger F.toCuspForm v (primitiveCuspForm_ne_zero F) x)  :=
+  adelicFiniteTensorIsometry_reference_extension v F hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteHilbertTensorIsometry_reference_extension`. -/
+theorem actual_completed_finite_reference_realization_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin (n + 1) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : AdelicFiniteReferenceHilbertDomain F.toCuspForm v) :
+    adelicFiniteFullHilbertTensorIsometry F (fun i : Fin n => v i.castSucc)
+      (hv.comp (Fin.castSucc_injective n)) (fun i => hgood i.castSucc)
+      (adelicFiniteReferenceHilbertToShorter F.toCuspForm v x) =
+      adelicFiniteFullHilbertTensorIsometry F v hv hgood
+        (adelicFiniteReferenceHilbertToLonger F.toCuspForm v (primitiveCuspForm_ne_zero F) x)  :=
+  adelicFiniteHilbertTensorIsometry_reference_extension v F hv hgood x
+
+/-- Exact original-object consumer of `finiteAdeleGL2Gamma0_exists_exceptional_finset`. -/
+theorem actual_finite_adelic_level_exceptions_source  (N : ℕ)
+    (g : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    ∃ S : Finset (HeightOneSpectrum ℤ), ∀ v ∉ S,
+      GeneralLinearGroup.map (finiteAdelePlace v) g ∈ finitePlaceGL2Gamma0 N v  :=
+  finiteAdeleGL2Gamma0_exists_exceptional_finset N g
+
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_addCases`. -/
+theorem actual_finite_block_coordinate_source {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ)  (hv : Function.Injective v)
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v (Fin.castAdd m i)).adicCompletion ℚ))
+    (h : ∀ j : Fin m, GeneralLinearGroup (Fin 2) ((v (Fin.natAdd n j)).adicCompletion ℚ)) :
+    adelicFinitePlaceProduct v hv (Fin.addCases g h) =
+      adelicFinitePlaceProduct (fun i : Fin n => v (Fin.castAdd m i)) (adelicPlaceFamily_left_injective v hv) g *
+      adelicFinitePlaceProduct (fun j : Fin m => v (Fin.natAdd n j)) (adelicPlaceFamily_right_injective v hv) h  :=
+  adelicFinitePlaceProduct_addCases v hv g h
+
+/-- Exact original-object consumer of `adelicFiniteTensorAssociation_original_orbit`. -/
+theorem actual_finite_block_original_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v (Fin.castAdd m i)).adicCompletion ℚ))
+    (h : ∀ j : Fin m, GeneralLinearGroup (Fin 2) ((v (Fin.natAdd n j)).adicCompletion ℚ))
+    (a : adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFullTensorIsometry F v hv hgood
+      (adelicFiniteTensorAssociation F.toCuspForm v (adelicFiniteBlockedFamily F.toCuspForm v g h a)) =
+      adelicCyclicHilbertRepresentation F.toCuspForm
+        (adelicFinitePlaceProduct (fun i : Fin n => v (Fin.castAdd m i)) (adelicPlaceFamily_left_injective v hv) g *
+          adelicFinitePlaceProduct (fun j : Fin m => v (Fin.natAdd n j)) (adelicPlaceFamily_right_injective v hv) h * a.val)
+        (adelicCyclicUnitReference F.toCuspForm)  :=
+  adelicFiniteTensorAssociation_original_orbit v F hv hgood g h a
+
+/-- Exact original-object consumer of `adelicFiniteBlockedOrbitFamily_span`. -/
+theorem actual_finite_block_tensor_span_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin (n + m) → HeightOneSpectrum ℤ)  (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicFiniteBlockedOrbitFamily f v)) = ⊤  :=
+  adelicFiniteBlockedOrbitFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicFiniteTensorIsometry_association`. -/
+theorem actual_finite_block_association_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : AdelicFiniteBlockedTensor F.toCuspForm v) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteTensorAssociation F.toCuspForm v x) =
+      adelicFiniteBlockedTensorIsometry v F hv hgood x  :=
+  adelicFiniteTensorIsometry_association v F hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteHilbertTensorIsometry_association`. -/
+theorem actual_completed_finite_block_association_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : UniformSpace.Completion (AdelicFiniteBlockedTensor F.toCuspForm v)) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood
+      (linearIsometryCompletionFunctor (adelicFiniteTensorAssociation F.toCuspForm v) x) =
+      @linearIsometryCompletion (AdelicFiniteBlockedTensor F.toCuspForm v)
+        (AdelicCyclicHilbert F.toCuspForm)
+        inferInstance inferInstance inferInstance inferInstance inferInstance
+        (adelicFiniteBlockedTensorIsometry v F hv hgood) x  :=
+  adelicFiniteHilbertTensorIsometry_association v F hv hgood x
+
+/-- Exact original-object consumer of `adelicRestrictedBaseCore_le_finiteAway`. -/
+theorem actual_fixed_base_core_inclusion_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin n → HeightOneSpectrum ℤ)  (hgood : ∀ i, IsGoodAdelicPlace N (v i)) :
+    adelicRestrictedBaseCore f ≤ adelicFiniteFamilyAwayCore f v  :=
+  adelicRestrictedBaseCore_le_finiteAway f v hgood
+
+/-- Exact original-object consumer of `adelicRestrictedFiniteTensorFamily_span`. -/
+theorem actual_fixed_base_finite_tensor_span_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin n → HeightOneSpectrum ℤ)  (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicRestrictedFiniteTensorFamily f v)) = ⊤  :=
+  adelicRestrictedFiniteTensorFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicRestrictedFiniteTensorIsometry_family`. -/
+theorem actual_fixed_base_finite_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicRestrictedBaseGroup N) :
+    adelicRestrictedFiniteTensorIsometry v F hv hgood (adelicRestrictedFiniteTensorFamily F.toCuspForm v b) =
+      adelicCyclicHilbertRepresentation F.toCuspForm (adelicFinitePlaceProduct v hv b.1 * b.2.val)
+        (adelicCyclicUnitReference F.toCuspForm)  :=
+  adelicRestrictedFiniteTensorIsometry_family v F hv hgood b
+
+
+/-- Exact original-object consumer of `goodAdelicPrimes_infinite`. -/
+theorem actual_good_primes_infinite_source (N : ℕ) [NeZero N]  : {p : ℕ | p.Prime ∧ p.Coprime N}.Infinite  :=
+  goodAdelicPrimes_infinite N
+
+/-- Exact original-object consumer of `goodAdelicPlaceInitial_covers_finset`. -/
+theorem actual_good_place_initial_coverage_source (N : ℕ) [NeZero N]  (S : Finset (HeightOneSpectrum ℤ)) :
+    ∃ n, ∀ v ∈ S, IsGoodAdelicPlace N v → ∃ i : Fin n, goodAdelicPlaceInitial N n i = v  :=
+  goodAdelicPlaceInitial_covers_finset N S
+
+/-- Exact original-object consumer of `adelicGoodLevel_exists_base_mul_level`. -/
+theorem actual_good_level_base_decomposition_source  (N : ℕ) [NeZero N] (a : RationalAdelicGL2)
+    (ha : ∀ v, IsGoodAdelicPlace N v → adelicPlaceGL2Hom v a ∈ finitePlaceGL2Gamma0 N v) :
+    ∃ b : adelicRestrictedBaseGroup N, ∃ u : finiteAdeleGL2Gamma0 N,
+      b.val * rationalAdelicFiniteGL2Embedding u.val = a  :=
+  adelicGoodLevel_exists_base_mul_level N a ha
+
+/-- Exact original-object consumer of `adelicRestrictedStageIsometry_map`. -/
+theorem actual_restricted_reference_transition_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (n m : ℕ) (h : n ≤ m) (x : adelicRestrictedStage F.toCuspForm n) :
+    adelicRestrictedStageIsometry F m
+      (adelicRestrictedStageMap F.toCuspForm (primitiveCuspForm_ne_zero F) n m h x) =
+      adelicRestrictedStageIsometry F n x  :=
+  adelicRestrictedStageIsometry_map F n m h x
+
+/-- Exact original-object consumer of `adelicRestrictedStageIsometry_covers_original_orbit`. -/
+theorem actual_restricted_finite_orbit_coverage_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) :
+    ∃ n x, adelicRestrictedStageIsometry F n x =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicCyclicUnitReference F.toCuspForm)  :=
+  adelicRestrictedStageIsometry_covers_original_orbit F a
+
+/-- Exact original-object consumer of `adelicRestrictedTensor_exists_stage`. -/
+theorem actual_restricted_tensor_finite_representative_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (x : AdelicRestrictedAlgebraicTensor F) :
+    ∃ n y, adelicRestrictedTensorOf F n y = x  :=
+  adelicRestrictedTensor_exists_stage F x
+
+/-- Exact original-object consumer of `adelicRestrictedAlgebraicTensorIsometry_mem_range_iff`. -/
+theorem actual_restricted_algebraic_range_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (y : AdelicCyclicHilbert F.toCuspForm) :
+    y ∈ (adelicRestrictedAlgebraicTensorIsometry F).toLinearMap.range ↔
+      ∃ n x, adelicRestrictedStageIsometry F n x = y  :=
+  adelicRestrictedAlgebraicTensorIsometry_mem_range_iff F y
+
+/-- Exact original-object consumer of `adelicRestrictedAlgebraicTensorIsometry_range_closure`. -/
+theorem actual_restricted_tensor_density_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  :
+    (adelicRestrictedAlgebraicTensorIsometry F).toLinearMap.range.topologicalClosure = ⊤  :=
+  adelicRestrictedAlgebraicTensorIsometry_range_closure F
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorIsometry_of`. -/
+theorem actual_restricted_completion_finite_vector_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (n : ℕ) (x : adelicRestrictedStage F.toCuspForm n) :
+    adelicRestrictedHilbertTensorIsometry F ((adelicRestrictedTensorOf F n x : AdelicRestrictedAlgebraicTensor F) :
+      AdelicRestrictedHilbertTensor F) = adelicRestrictedStageIsometry F n x  :=
+  adelicRestrictedHilbertTensorIsometry_of F n x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorIsometry_range`. -/
+theorem actual_restricted_completion_full_range_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  :
+    (adelicRestrictedHilbertTensorIsometry F).toLinearMap.range = ⊤  :=
+  adelicRestrictedHilbertTensorIsometry_range F
+
+/-- The actual directed quotient retains exactly the original finite tensor inner product. -/
+theorem actual_restricted_quotient_inner_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)
+    (n : ℕ) (x y : adelicRestrictedStage F.toCuspForm n) :
+    inner ℂ (adelicRestrictedTensorOf F n x) (adelicRestrictedTensorOf F n y) = inner ℂ x y :=
+  @LinearIsometry.inner_map_map ℂ (adelicRestrictedStage F.toCuspForm n)
+    inferInstance inferInstance inferInstance (AdelicRestrictedAlgebraicTensor F)
+    inferInstance inferInstance (adelicRestrictedTensorOf F n) x y
+
+/-- Every actual original adelic Hilbert vector has a genuine completed restricted tensor representative. -/
+theorem actual_restricted_completion_surjective_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)
+    (y : AdelicCyclicHilbert F.toCuspForm) :
+    ∃ x : AdelicRestrictedHilbertTensor F, adelicRestrictedHilbertTensorEquiv F x = y :=
+  (adelicRestrictedHilbertTensorEquiv F).surjective y
+
+
+/-- Exact original-object consumer of `finiteAdelicGL2On_mem`. -/
+theorem actual_place_restriction_coordinate_source  (S : Set (HeightOneSpectrum ℤ))
+    (g : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (v : HeightOneSpectrum ℤ) (hv : v ∈ S) :
+    GeneralLinearGroup.map (finiteAdelePlace v) (finiteAdelicGL2On S g) = GeneralLinearGroup.map (finiteAdelePlace v) g  :=
+  finiteAdelicGL2On_mem S g v hv
+
+/-- Exact original-object consumer of `finiteAdelicGL2On_mul_compl`. -/
+theorem actual_complementary_adelic_restriction_source (S : Set (HeightOneSpectrum ℤ))  (g : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    finiteAdelicGL2On S g * finiteAdelicGL2On Sᶜ g = g  :=
+  finiteAdelicGL2On_mul_compl S g
+
+/-- Exact original-object consumer of `adelicGoodPart_mul_base`. -/
+theorem actual_good_base_original_factor_source  (N : ℕ) (a : RationalAdelicGL2) :
+    adelicGoodPartHom N a * (adelicBaseProjection N a).val = a  :=
+  adelicGoodPart_mul_base N a
+
+/-- Exact original-object consumer of `adelicBaseProjection_base`. -/
+theorem actual_fixed_base_projection_source  (N : ℕ) (b : adelicRestrictedBaseGroup N) : adelicBaseProjection N b.val = b  :=
+  adelicBaseProjection_base N b
+
+/-- Exact original-object consumer of `adelicRestrictedFiniteTensorIsometry_intertwines`. -/
+theorem actual_fixed_base_external_action_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicRestrictedBaseGroup N)
+    (x : AdelicRestrictedFiniteTensor F.toCuspForm v) :
+    adelicRestrictedFiniteTensorIsometry v F hv hgood (adelicRestrictedFiniteTensorRepresentation F.toCuspForm v b x) =
+      adelicRestrictedFiniteJointRepresentation F.toCuspForm v hv hgood b
+        (adelicRestrictedFiniteTensorIsometry v F hv hgood x)  :=
+  adelicRestrictedFiniteTensorIsometry_intertwines v F hv hgood b x
+
+/-- Exact original-object consumer of `adelicGoodTail_unitReference`. -/
+theorem actual_good_tail_reference_fixed_source (N : ℕ) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v)  [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a : RationalAdelicGL2)
+    (ha : ∀ w, IsGoodAdelicPlace N w → (∀ i, w ≠ v i) → adelicPlaceGL2Hom w a ∈ finitePlaceGL2Gamma0 N w) :
+    adelicCyclicHilbertRepresentation f (adelicGoodTail N v hv a) (adelicCyclicUnitReference f) =
+      adelicCyclicUnitReference f  :=
+  adelicGoodTail_unitReference N v hv f hgood a ha
+
+/-- Exact original-object consumer of `adelicActionStage_spec`. -/
+theorem actual_full_action_stage_bound_source (N : ℕ) [NeZero N]  (a : RationalAdelicGL2) (n : ℕ) :
+    ∀ w, IsGoodAdelicPlace N w → (∀ i : Fin (adelicActionStage N a n), w ≠ goodAdelicPlaceInitial N (adelicActionStage N a n) i) →
+      adelicPlaceGL2Hom w a ∈ finitePlaceGL2Gamma0 N w  :=
+  adelicActionStage_spec N a n
+
+/-- Exact original-object consumer of `adelicRestrictedActionOnStage_intertwines`. -/
+theorem actual_finite_stage_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (n : ℕ)
+    (x : adelicRestrictedStage F.toCuspForm n) :
+    adelicRestrictedAlgebraicTensorIsometry F (adelicRestrictedActionOnStage F a n x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedStageIsometry F n x)  :=
+  adelicRestrictedActionOnStage_intertwines F a n x
+
+/-- Exact original-object consumer of `adelicRestrictedAlgebraicAction_intertwines`. -/
+theorem actual_restricted_algebraic_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (x : AdelicRestrictedAlgebraicTensor F) :
+    adelicRestrictedAlgebraicTensorIsometry F (adelicRestrictedAlgebraicAction F a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedAlgebraicTensorIsometry F x)  :=
+  adelicRestrictedAlgebraicAction_intertwines F a x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorIsometry_intertwines`. -/
+theorem actual_restricted_completed_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (x : AdelicRestrictedHilbertTensor F) :
+    adelicRestrictedHilbertTensorIsometry F (adelicRestrictedHilbertTensorRepresentation F a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedHilbertTensorIsometry F x)  :=
+  adelicRestrictedHilbertTensorIsometry_intertwines F a x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_restricted_full_action_continuous_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (x : AdelicRestrictedHilbertTensor F) :
+    Continuous (fun a => adelicRestrictedHilbertTensorRepresentation F a x)  :=
+  adelicRestrictedHilbertTensorRepresentation_stronglyContinuous F x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorEquiv_intertwines`. -/
+theorem actual_restricted_equivalence_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (x : AdelicRestrictedHilbertTensor F) :
+    adelicRestrictedHilbertTensorEquiv F (adelicRestrictedHilbertTensorRepresentation F a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedHilbertTensorEquiv F x)  :=
+  adelicRestrictedHilbertTensorEquiv_intertwines F a x
+
+
+/-- Exact original-object consumer of `not_isGoodAdelicPlace_iff_dvd`. -/
+theorem actual_bad_place_level_divisor_source  (N : ℕ) (v : HeightOneSpectrum ℤ) :
+    ¬ IsGoodAdelicPlace N v ↔ Rat.HeightOneSpectrum.natGenerator v ∣ N :=
+  not_isGoodAdelicPlace_iff_dvd N v
+
+/-- Exact original-object consumer of `adelicFiniteOpenLowest_finiteDimensional`. -/
+theorem actual_full_finite_open_lowest_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ ↥(adelicRotationWeightSpace f ⊓ adelicFiniteSubgroupFixedSpace f J :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicFiniteOpenLowest_finiteDimensional f hf hk J hJ
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_coordinates`. -/
+theorem actual_real_finite_coefficient_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) (b : RationalAdelicGL2) :
+    adelicNormalizedCuspCoefficient f b =
+      adelicNormalizedCuspCoefficient f (adelicRealGL2Embedding (rationalAdelicGL2RealFiniteEquiv b).1) *
+      adelicNormalizedCuspCoefficient f (rationalAdelicFiniteGL2Embedding (rationalAdelicGL2RealFiniteEquiv b).2) :=
+  adelicNormalizedCuspCoefficient_coordinates f hf hk b
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_realFinite_gram`. -/
+theorem actual_real_finite_gram_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (a b : GeneralLinearGroup (Fin 2) ℝ × GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    inner ℂ
+      (adelicCyclicHilbertRepresentation f (rationalAdelicGL2RealFiniteEquiv.symm a) (adelicCyclicUnitReference f))
+      (adelicCyclicHilbertRepresentation f (rationalAdelicGL2RealFiniteEquiv.symm b) (adelicCyclicUnitReference f)) =
+    inner ℂ
+      (adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding a.1) (adelicCyclicUnitReference f))
+      (adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding b.1) (adelicCyclicUnitReference f)) *
+    inner ℂ
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a.2) (adelicCyclicUnitReference f))
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding b.2) (adelicCyclicUnitReference f)) :=
+  adelicCyclicUnitReference_realFinite_gram f hf hk a b
+
+/-- Exact original-object consumer of `adelicRealFiniteTensorIsometry_family`. -/
+theorem actual_real_finite_tensor_family_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (a : GeneralLinearGroup (Fin 2) ℝ × GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    adelicRealFiniteTensorIsometry f hf hk (adelicRealFiniteTensorFamily f a) = adelicRealFiniteMixedFamily f a :=
+  adelicRealFiniteTensorIsometry_family f hf hk a
+
+/-- Exact original-object consumer of `adelicRealFiniteTensorIsometry_range_closure`. -/
+theorem actual_real_finite_tensor_density_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicRealFiniteTensorIsometry f hf hk).toLinearMap.range.topologicalClosure = ⊤ :=
+  adelicRealFiniteTensorIsometry_range_closure f hf hk
+
+/-- Exact original-object consumer of `adelicRealFiniteHilbertTensorIsometry_range`. -/
+theorem actual_real_finite_completed_range_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicRealFiniteHilbertTensorIsometry f hf hk).toLinearMap.range = ⊤ :=
+  adelicRealFiniteHilbertTensorIsometry_range f hf hk
+
+/-- Exact original-object consumer of `adelicRealFiniteHilbertTensorEquiv_intertwines`. -/
+theorem actual_real_finite_completed_equivariance_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (a : RationalAdelicGL2) (x : AdelicRealFiniteHilbertTensor f) :
+    adelicRealFiniteHilbertTensorEquiv f hf hk
+      (adelicRealFiniteHilbertTensorRepresentation f hf hk (rationalAdelicGL2RealFiniteEquiv a) x) =
+      adelicCyclicHilbertRepresentation f a (adelicRealFiniteHilbertTensorEquiv f hf hk x) :=
+  adelicRealFiniteHilbertTensorEquiv_intertwines f hf hk a x
+
+/-- Exact original-object consumer of `adelicRealFiniteHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_real_finite_completed_continuity_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (x : AdelicRealFiniteHilbertTensor f) :
+    Continuous (fun b => adelicRealFiniteHilbertTensorRepresentation f hf hk b x) :=
+  adelicRealFiniteHilbertTensorRepresentation_stronglyContinuous f hf hk x
+
+/-- Exact original-object consumer of `adelicFullFiniteUnitCore_closure_eq_weight`. -/
+theorem actual_full_finite_factor_weight_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicFullFiniteUnitCore f).topologicalClosure = adelicRotationWeightSpace f :=
+  adelicFullFiniteUnitCore_closure_eq_weight f hf hk
+
+/-- Exact original-object consumer of `adelicFullFiniteUnitCoreRepresentation_admissible`. -/
+theorem actual_full_finite_core_admissibility_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicFullFiniteUnitCoreRepresentation f).comp J.subtype)) :=
+  adelicFullFiniteUnitCoreRepresentation_admissible f hf hk J hJ
+
+/-- Exact original-object consumer of `adelicFullFiniteHilbertRepresentation_admissible`. -/
+theorem actual_full_finite_hilbert_admissibility_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicFullFiniteHilbertRepresentation f).comp J.subtype)) :=
+  adelicFullFiniteHilbertRepresentation_admissible f hf hk J hJ
+
+
+/-- Exact original-object consumer of `adelicLocalNormalizedHecke_distinct_component`. -/
+theorem actual_distinct_local_hecke_component_source {N : ℕ} [NeZero N] {k : ℤ}  {p : ℕ} [NeZero p]
+    (F : PrimitiveCuspForm N k) (hp : p.Prime) (hpN : p.Coprime N)
+    (v : HeightOneSpectrum ℤ) (hv : v ≠ rationalPrimePlace p hp)
+    (x : AdelicCyclicHilbert F.toCuspForm) (hx : x ∈ adelicLocalCyclicClosedSpan F.toCuspForm v) :
+    adelicLocalNormalizedHecke F.toCuspForm p hp hpN x = normalizedCuspCoefficients F.toCuspForm p • x :=
+  adelicLocalNormalizedHecke_distinct_component F hp hpN v hv x hx
+
+/-- Exact original-object consumer of `adelicNormalizedHecke_eigen_iff`. -/
+theorem actual_reverse_hecke_normalization_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (p : ℕ) [NeZero p] (hpN : p.Coprime N) (x : AdelicCyclicHilbert f) :
+    adelicNormalizedHecke f p hpN x = normalizedCuspCoefficients f p • x ↔
+      adelicHilbertHeckeTrace f p hpN x =
+        ((Real.sqrt (p : ℝ) : ℂ) ^ (2 - k) * cuspCoefficients f p) • x :=
+  adelicNormalizedHecke_eigen_iff f p hpN x
+
+/-- Exact original-object consumer of `adelicBadLocalCyclic_fixed_generator_scalar`. -/
+theorem actual_bad_local_fixed_line_source {N : ℕ} [NeZero N] {k : ℤ}  (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (hv : ¬ IsGoodAdelicPlace N v)
+    (x : AdelicCyclicHilbert F.toCuspForm) (hx : x ∈ adelicLocalCyclicClosedSpan F.toCuspForm v)
+    (hfix : x ∈ adelicLocalFixedSpace F.toCuspForm v) :
+    ∃ c : ℂ, x = c • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicBadLocalCyclic_fixed_generator_scalar F hk v hv x hx hfix
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclic_fixed_eq_generator_line`. -/
+theorem actual_every_local_fixed_line_source  {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ) :
+    adelicLocalCyclicClosedSpan F.toCuspForm v ⊓ adelicLocalFixedSpace F.toCuspForm v =
+      Submodule.span ℂ {adelicCyclicHilbertGenerator F.toCuspForm} :=
+  adelicEveryLocalCyclic_fixed_eq_generator_line F hk v
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclicProjection_fixed_scalar`. -/
+theorem actual_every_local_cyclic_projection_source  {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (x : AdelicCyclicHilbert F.toCuspForm) (hx : x ∈ adelicLocalFixedSpace F.toCuspForm v) :
+    ∃ c : ℂ, adelicLocalCyclicProjection F.toCuspForm v x = c • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicEveryLocalCyclicProjection_fixed_scalar F hk v x hx
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclic_intertwiner_scalar`. -/
+theorem actual_every_local_schur_source  {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (T : AdelicCyclicHilbert F.toCuspForm →L[ℂ] AdelicCyclicHilbert F.toCuspForm)
+    (hT : ∀ g x, T (adelicCyclicLocalRepresentation F.toCuspForm
+      v g x) =
+        adelicCyclicLocalRepresentation F.toCuspForm v g (T x))
+    (hcyclic : T (adelicCyclicHilbertGenerator F.toCuspForm) ∈
+      adelicLocalCyclicClosedSpan F.toCuspForm v) :
+    ∃ c : ℂ, ∀ x ∈ adelicLocalCyclicClosedSpan F.toCuspForm v,
+      T x = c • x :=
+  adelicEveryLocalCyclic_intertwiner_scalar F hk v T hT hcyclic
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclicClosedSpan_irreducible`. -/
+theorem actual_every_local_hilbert_irreducibility_source  {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (S : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hclosed : IsClosed (S : Set (AdelicCyclicHilbert F.toCuspForm)))
+    (hle : S ≤ adelicLocalCyclicClosedSpan F.toCuspForm v)
+    (hinv : ∀ g x, x ∈ S → adelicCyclicLocalRepresentation F.toCuspForm
+      v g x ∈ S) :
+    S = ⊥ ∨ S = adelicLocalCyclicClosedSpan F.toCuspForm v :=
+  adelicEveryLocalCyclicClosedSpan_irreducible F hk v S hclosed hle hinv
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclicCore_irreducible`. -/
+theorem actual_every_local_core_irreducibility_source  {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (W : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hW : W ≤ adelicLocalCyclicCore F.toCuspForm v)
+    (hinv : ∀ g x, x ∈ W → adelicCyclicLocalRepresentation F.toCuspForm
+      v g x ∈ W) :
+    W = ⊥ ∨ W = adelicLocalCyclicCore F.toCuspForm v :=
+  adelicEveryLocalCyclicCore_irreducible F hk v W hW hinv
+
+/-- Exact original-object consumer of `adelicEveryLocal_fullAway_mixed_gram`. -/
+theorem actual_every_local_full_complement_gram_source {N : ℕ} [NeZero N] {k : ℤ}  (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (g₁ g₂ : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))
+    (a₁ a₂ : AdelicFullAwayGroup v) :
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₁
+        (adelicCyclicFullAwayRepresentation F.toCuspForm v a₁
+          (adelicCyclicHilbertGenerator F.toCuspForm)))
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₂
+        (adelicCyclicFullAwayRepresentation F.toCuspForm v a₂
+          (adelicCyclicHilbertGenerator F.toCuspForm))) *
+      inner ℂ (adelicCyclicHilbertGenerator F.toCuspForm) (adelicCyclicHilbertGenerator F.toCuspForm) =
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) *
+    inner ℂ
+      (adelicCyclicFullAwayRepresentation F.toCuspForm v a₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicFullAwayRepresentation F.toCuspForm v a₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) :=
+  adelicEveryLocal_fullAway_mixed_gram F hk v g₁ g₂ a₁ a₂
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_everyLocal_mul`. -/
+theorem actual_every_local_normalized_factor_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)  (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))
+    (a : RationalAdelicGL2) (ha : adelicPlaceGL2Hom v a = 1) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 v g) * a) =
+      adelicNormalizedCuspCoefficient F.toCuspForm (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 v g)) *
+        adelicNormalizedCuspCoefficient F.toCuspForm a :=
+  adelicNormalizedCuspCoefficient_everyLocal_mul F hk v g a ha
+
+/-- Exact original-object consumer of `adelicFullFiniteHilbert_smooth_iff_core`. -/
+theorem actual_full_finite_smooth_core_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicRotationWeightSpace f) :
+    (∃ J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)),
+      IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))) ∧
+        ∀ g ∈ J, adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding g) x = x) ↔
+      x ∈ adelicFullFiniteUnitCore f :=
+  adelicFullFiniteHilbert_smooth_iff_core f hf hk x hx
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_every_finiteFamilyEquiv`. -/
+theorem actual_every_finite_family_coefficient_source {N : ℕ} [NeZero N] {k : ℤ} {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (F : PrimitiveCuspForm N k) 
+    (hk : 0 < k)
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (adelicFiniteFamilyEquiv v hv b) =
+      (∏ i, adelicNormalizedCuspCoefficient F.toCuspForm
+        (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b.1 i)))) *
+      adelicNormalizedCuspCoefficient F.toCuspForm b.2.val :=
+  adelicNormalizedCuspCoefficient_every_finiteFamilyEquiv v hv F hk b
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_every_finiteFamily_gram`. -/
+theorem actual_every_finite_family_gram_source {N : ℕ} [NeZero N] {k : ℤ} {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (F : PrimitiveCuspForm N k) 
+    (hk : 0 < k)
+    (b₁ b₂ : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₁)
+        (adelicCyclicUnitReference F.toCuspForm))
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₂)
+        (adelicCyclicUnitReference F.toCuspForm)) =
+      (∏ i, inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₁.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₂.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))) *
+      inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₁.2.val (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₂.2.val (adelicCyclicUnitReference F.toCuspForm)) :=
+  adelicCyclicUnitReference_every_finiteFamily_gram v hv F hk b₁ b₂
+
+
+/-- Exact original-object consumer of `adelicEveryFiniteFullTensorFamily_gram`. -/
+theorem actual_full_split_adelicEveryFiniteFullTensorFamily_gram_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hk : 0 < k)
+    (a b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ (adelicFiniteFullTensorFamily F.toCuspForm v a) (adelicFiniteFullTensorFamily F.toCuspForm v b) =
+      inner ℂ (adelicFiniteFullMixedFamily F.toCuspForm v hv a) (adelicFiniteFullMixedFamily F.toCuspForm v hv b) :=
+  adelicEveryFiniteFullTensorFamily_gram F v hv hk a b
+
+/-- Exact original-object consumer of `adelicBadPlaceFamily_surjective_bad`. -/
+theorem actual_full_split_adelicBadPlaceFamily_surjective_bad_source  (N : ℕ) [NeZero N] (v : HeightOneSpectrum ℤ)
+    (hv : ¬ IsGoodAdelicPlace N v) : ∃ i, adelicBadPlaceFamily N i = v :=
+  adelicBadPlaceFamily_surjective_bad N v hv
+
+/-- Exact original-object consumer of `adelicFiniteRealJointHom_apply`. -/
+theorem actual_full_split_adelicFiniteRealJointHom_apply_source  {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ)
+    (hv : Function.Injective v)
+    (a : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × GeneralLinearGroup (Fin 2) ℝ) :
+    adelicFiniteRealJointHom v hv a = adelicFinitePlaceProduct v hv a.1 * adelicRealGL2Embedding a.2 :=
+  adelicFiniteRealJointHom_apply v hv a
+
+/-- Exact original-object consumer of `adelicBadRealJointHom_reconstruct`. -/
+theorem actual_full_split_adelicBadRealJointHom_reconstruct_source (N : ℕ) [NeZero N] (b : adelicRestrictedBaseGroup N) :
+    adelicBadRealJointHom N
+      (adelicFinitePlaceEvaluation (adelicBadPlaceFamily N) b.val, (rationalAdelicGL2RealFiniteEquiv b.val).1) = b.val :=
+  adelicBadRealJointHom_reconstruct N b
+
+/-- Exact original-object consumer of `adelicFiniteRealTensorFamily_gram`. -/
+theorem actual_full_split_adelicFiniteRealTensorFamily_gram_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hk : 0 < k)
+    (a b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × GeneralLinearGroup (Fin 2) ℝ) :
+    inner ℂ (adelicFiniteRealTensorFamily F.toCuspForm v a) (adelicFiniteRealTensorFamily F.toCuspForm v b) =
+      inner ℂ (adelicFiniteRealMixedFamily F.toCuspForm v hv a) (adelicFiniteRealMixedFamily F.toCuspForm v hv b) :=
+  adelicFiniteRealTensorFamily_gram v F hv hk a b
+
+/-- Exact original-object consumer of `adelicBadRealTensorBaseEquiv_family`. -/
+theorem actual_full_split_adelicBadRealTensorBaseEquiv_family_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (a : AdelicBadLocalTuple N × GeneralLinearGroup (Fin 2) ℝ) :
+    adelicBadRealTensorBaseEquiv F hk (adelicFiniteRealTensorFamily F.toCuspForm (adelicBadPlaceFamily N) a) =
+      adelicRestrictedBaseOrbit F.toCuspForm (adelicBadRealBaseEquiv N a) :=
+  adelicBadRealTensorBaseEquiv_family F hk a
+
+/-- Exact original-object consumer of `adelicFiniteRealTensorIsometry_intertwines`. -/
+theorem actual_full_split_adelicFiniteRealTensorIsometry_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hk : 0 < k)
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × GeneralLinearGroup (Fin 2) ℝ)
+    (x : AdelicFiniteRealTensor F.toCuspForm v) :
+    adelicFiniteRealTensorIsometry v F hv hk (adelicFiniteRealTensorRepresentation F.toCuspForm v b x) =
+      adelicFiniteRealJointRepresentation F.toCuspForm v hv b (adelicFiniteRealTensorIsometry v F hv hk x) :=
+  adelicFiniteRealTensorIsometry_intertwines v F hv hk b x
+
+/-- Exact original-object consumer of `adelicBadRealTensorBaseEquiv_intertwines`. -/
+theorem actual_full_split_adelicBadRealTensorBaseEquiv_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (a : AdelicBadLocalTuple N × GeneralLinearGroup (Fin 2) ℝ)
+    (x : AdelicFiniteRealTensor F.toCuspForm (adelicBadPlaceFamily N)) :
+    adelicBadRealTensorBaseEquiv F hk
+      (adelicFiniteRealTensorRepresentation F.toCuspForm (adelicBadPlaceFamily N) a x) =
+      adelicRestrictedBaseCoreRepresentation F.toCuspForm (adelicBadRealBaseEquiv N a)
+        (adelicBadRealTensorBaseEquiv F hk x) :=
+  adelicBadRealTensorBaseEquiv_intertwines F hk a x
+
+/-- Exact original-object consumer of `adelicSplitStageEquiv_step`. -/
+theorem actual_full_split_adelicSplitStageEquiv_step_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (n : ℕ)
+    (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitStageEquiv F hk (n + 1)
+      (adelicSplitStageStep F.toCuspForm (primitiveCuspForm_ne_zero F) n x) =
+      adelicRestrictedStageStep F.toCuspForm (primitiveCuspForm_ne_zero F) n
+        (adelicSplitStageEquiv F hk n x) :=
+  adelicSplitStageEquiv_step F hk n x
+
+/-- Exact original-object consumer of `adelicSplitAlgebraicTensorIsometry_mem_range_iff`. -/
+theorem actual_full_split_adelicSplitAlgebraicTensorIsometry_mem_range_iff_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (y : AdelicCyclicHilbert F.toCuspForm) :
+    y ∈ (adelicSplitAlgebraicTensorIsometry F hk).toLinearMap.range ↔
+      ∃ n x, adelicSplitStageIsometry F hk n x = y :=
+  adelicSplitAlgebraicTensorIsometry_mem_range_iff F hk y
+
+/-- Exact original-object consumer of `adelicSplitStageIsometry_covers_original_orbit`. -/
+theorem actual_full_split_adelicSplitStageIsometry_covers_original_orbit_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2) :
+    ∃ n x, adelicSplitStageIsometry F hk n x =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicCyclicUnitReference F.toCuspForm) :=
+  adelicSplitStageIsometry_covers_original_orbit F hk a
+
+/-- Exact original-object consumer of `adelicSplitHilbertTensorIsometry_range`. -/
+theorem actual_full_split_adelicSplitHilbertTensorIsometry_range_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) :
+    (adelicSplitHilbertTensorIsometry F hk).toLinearMap.range = ⊤ :=
+  adelicSplitHilbertTensorIsometry_range F hk
+
+/-- Exact original-object consumer of `adelicSplitStageIsometry_map`. -/
+theorem actual_full_split_adelicSplitStageIsometry_map_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (n m : ℕ) (h : n ≤ m)
+    (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitStageIsometry F hk m
+      (adelicSplitStageMap F.toCuspForm (primitiveCuspForm_ne_zero F) n m h x) =
+      adelicSplitStageIsometry F hk n x :=
+  adelicSplitStageIsometry_map F hk n m h x
+
+/-- Exact original-object consumer of `adelicSplitStageFullOperator_intertwines`. -/
+theorem actual_full_split_adelicSplitStageFullOperator_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (n : ℕ) (a : RationalAdelicGL2)
+    (ha : ∀ w, IsGoodAdelicPlace N w → (∀ i : Fin n, w ≠ goodAdelicPlaceInitial N n i) →
+      adelicPlaceGL2Hom w a ∈ finitePlaceGL2Gamma0 N w)
+    (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitStageIsometry F hk n (adelicSplitStageFullOperator F n a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicSplitStageIsometry F hk n x) :=
+  adelicSplitStageFullOperator_intertwines F hk n a ha x
+
+/-- Exact original-object consumer of `adelicSplitActionOnStage_compatible`. -/
+theorem actual_full_split_adelicSplitActionOnStage_compatible_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2)
+    (n m : ℕ) (h : n ≤ m) (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitActionOnStage F a m
+      (adelicSplitStageMap F.toCuspForm (primitiveCuspForm_ne_zero F) n m h x) =
+      adelicSplitActionOnStage F a n x :=
+  adelicSplitActionOnStage_compatible F hk a n m h x
+
+/-- Exact original-object consumer of `adelicSplitAlgebraicRepresentation_norm`. -/
+theorem actual_full_split_adelicSplitAlgebraicRepresentation_norm_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2) (x : AdelicSplitAlgebraicTensor F) :
+    ‖adelicSplitAlgebraicRepresentation F hk a x‖ = ‖x‖ :=
+  adelicSplitAlgebraicRepresentation_norm F hk a x
+
+/-- Exact original-object consumer of `adelicSplitHilbertTensorEquiv_intertwines`. -/
+theorem actual_full_split_adelicSplitHilbertTensorEquiv_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2) (x : AdelicSplitHilbertTensor F) :
+    adelicSplitHilbertTensorEquiv F hk (adelicSplitHilbertTensorRepresentation F hk a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicSplitHilbertTensorEquiv F hk x) :=
+  adelicSplitHilbertTensorEquiv_intertwines F hk a x
+
+/-- Exact original-object consumer of `adelicSplitHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_full_split_adelicSplitHilbertTensorRepresentation_stronglyContinuous_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (x : AdelicSplitHilbertTensor F) :
+    Continuous (fun a => adelicSplitHilbertTensorRepresentation F hk a x) :=
+  adelicSplitHilbertTensorRepresentation_stronglyContinuous F hk x
+
+
+/-- Exact original-object consumer of `adelicNormalizedSignedRaisingJet_orthonormal`. -/
+theorem actual_integer_weight_adelicNormalizedSignedRaisingJet_orthonormal_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) :
+    Orthonormal ℂ (adelicNormalizedSignedRaisingJet f) :=
+  adelicNormalizedSignedRaisingJet_orthonormal f hf hk
+
+/-- Exact original-object consumer of `adelicSignedRaisingClosedSpan_eq_fullRealClosure`. -/
+theorem actual_integer_weight_adelicSignedRaisingClosedSpan_eq_fullRealClosure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) :
+    adelicSignedRaisingClosedSpan f = (adelicFullRealUnitCore f).topologicalClosure :=
+  adelicSignedRaisingClosedSpan_eq_fullRealClosure f hf
+
+/-- Exact original-object consumer of `adelicFullRealHilbertBasis_apply`. -/
+theorem actual_integer_weight_adelicFullRealHilbertBasis_apply_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ) :
+    (adelicFullRealHilbertBasis f hf hk i).val = adelicNormalizedSignedRaisingJet f i :=
+  adelicFullRealHilbertBasis_apply f hf hk i
+
+/-- Exact original-object consumer of `adelicFullRealRotationEigenspace_finiteDimensional`. -/
+theorem actual_integer_weight_adelicFullRealRotationEigenspace_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (m : ℤ) :
+    FiniteDimensional ℂ (adelicFullRealRotationEigenspace f m) :=
+  adelicFullRealRotationEigenspace_finiteDimensional f hf hk m
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightProjection_finite`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightProjection_finite_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (m : ℤ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : AdelicCyclicHilbert f) :
+    adelicIntegerRotationWeightProjection f m
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a) x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicIntegerRotationWeightProjection f m x) :=
+  adelicIntegerRotationWeightProjection_finite f m a x
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightProjection_realClosure`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightProjection_realClosure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (i : ℕ ⊕ ℕ) (x : AdelicCyclicHilbert f) (hx : x ∈ (adelicFullRealUnitCore f).topologicalClosure) :
+    adelicIntegerRotationWeightProjection f (adelicSignedRaisingWeight k i) x ∈
+      Submodule.span ℂ {adelicSignedRaisingJet f i} :=
+  adelicIntegerRotationWeightProjection_realClosure f hf hk i x hx
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightSpace_eq_signedFiniteClosure`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightSpace_eq_signedFiniteClosure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ) :
+    adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) = adelicSignedFiniteCyclicClosedSpan f i :=
+  adelicIntegerRotationWeightSpace_eq_signedFiniteClosure f hf hk i
+
+/-- Exact original-object consumer of `continuous_gram_factor_closure`. -/
+theorem actual_integer_weight_continuous_gram_factor_closure_source {E F ι : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E] [NormedAddCommGroup F] [InnerProductSpace ℂ F] (u : ι → E) (T U : E →L[ℂ] F) (c : ℂ)
+    (h : ∀ i j, inner ℂ (T (u i)) (U (u j)) = inner ℂ (u i) (u j) * c)
+    (x y : E) (hx : x ∈ (Submodule.span ℂ (Set.range u)).topologicalClosure)
+    (hy : y ∈ (Submodule.span ℂ (Set.range u)).topologicalClosure) :
+    inner ℂ (T x) (U y) = inner ℂ x y * c :=
+  continuous_gram_factor_closure u T U c h x y hx hy
+
+/-- Exact original-object consumer of `adelicFullRealClosure_finite_gram`. -/
+theorem actual_integer_weight_adelicFullRealClosure_finite_gram_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (a b : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))
+    (x y : AdelicCyclicHilbert f)
+    (hx : x ∈ (adelicFullRealUnitCore f).topologicalClosure)
+    (hy : y ∈ (adelicFullRealUnitCore f).topologicalClosure) :
+    inner ℂ (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a) x)
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding b) y) =
+      inner ℂ x y * inner ℂ
+        (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a) (adelicCyclicUnitReference f))
+        (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding b) (adelicCyclicUnitReference f)) :=
+  adelicFullRealClosure_finite_gram f hf hk a b x y hx hy
+
+/-- Exact original-object consumer of `adelicSignedFiniteCoreIsometry_range_closure`. -/
+theorem actual_integer_weight_adelicSignedFiniteCoreIsometry_range_closure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ) :
+    (adelicSignedFiniteCoreIsometry f hf hk i).toLinearMap.range.topologicalClosure =
+      adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) :=
+  adelicSignedFiniteCoreIsometry_range_closure f hf hk i
+
+/-- Exact original-object consumer of `adelicFullFiniteCoreCompletionInclusion_intertwines`. -/
+theorem actual_integer_weight_adelicFullFiniteCoreCompletionInclusion_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : AdelicFullFiniteCoreCompletion f) :
+    adelicFullFiniteCoreCompletionInclusion f (adelicFullFiniteCoreCompletionRepresentation f a x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicFullFiniteCoreCompletionInclusion f x) :=
+  adelicFullFiniteCoreCompletionInclusion_intertwines f a x
+
+/-- Exact original-object consumer of `adelicSignedFiniteCoreIsometry_intertwines`. -/
+theorem actual_integer_weight_adelicSignedFiniteCoreIsometry_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : adelicFullFiniteUnitCore f) :
+    adelicSignedFiniteCoreIsometry f hf hk i (adelicFullFiniteUnitCoreRepresentation f a x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicSignedFiniteCoreIsometry f hf hk i x) :=
+  adelicSignedFiniteCoreIsometry_intertwines f hf hk i a x
+
+/-- Exact original-object consumer of `adelicSignedFiniteCompletionIsometry_intertwines`. -/
+theorem actual_integer_weight_adelicSignedFiniteCompletionIsometry_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : AdelicFullFiniteCoreCompletion f) :
+    adelicSignedFiniteCompletionIsometry f hf hk i (adelicFullFiniteCoreCompletionRepresentation f a x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicSignedFiniteCompletionIsometry f hf hk i x) :=
+  adelicSignedFiniteCompletionIsometry_intertwines f hf hk i a x
+
+/-- Exact original-object consumer of `adelicSignedWeight_finiteDimensional`. -/
+theorem actual_integer_weight_adelicSignedWeight_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ
+      (adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) ⊓ adelicFiniteSubgroupFixedSpace f J :
+        Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicSignedWeight_finiteDimensional f hf hk i J hJ
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightSpace_eq_bot`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightSpace_eq_bot_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (m : ℤ)
+    (hm : ∀ i, m ≠ adelicSignedRaisingWeight k i) : adelicIntegerRotationWeightSpace f m = ⊥ :=
+  adelicIntegerRotationWeightSpace_eq_bot f hf m hm
+
+/-- Exact original-object consumer of `adelicIntegerWeight_finiteDimensional`. -/
+theorem actual_integer_weight_adelicIntegerWeight_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (m : ℤ)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ (adelicIntegerRotationWeightSpace f m ⊓ adelicFiniteSubgroupFixedSpace f J :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicIntegerWeight_finiteDimensional f hf hk m J hJ
+
+
+/-- Exact original-object consumer of `finiteDimensional_polynomial_kernel_of_eigenspaces`. -/
+theorem actual_compact_type_finiteDimensional_polynomial_kernel_of_eigenspaces_source {V : Type*} [AddCommGroup V] [Module ℂ V] (T : Module.End ℂ V)
+    (hT : ∀ c : ℂ, FiniteDimensional ℂ (Module.End.eigenspace T c))
+    (p : Polynomial ℂ) (hp : p.Monic) : FiniteDimensional ℂ (LinearMap.ker (Polynomial.aeval T p)) :=
+  finiteDimensional_polynomial_kernel_of_eigenspaces T hT p hp
+
+/-- Exact original-object consumer of `eigenspace_eq_of_dense_eigenfamily`. -/
+theorem actual_compact_type_eigenspace_eq_of_dense_eigenfamily_source {V ι : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    (T : Module.End ℂ V) (hT : ∀ x y, inner ℂ (T x) (T y) = inner ℂ x y)
+    (u : ι → V) (θ : ι → ℂ) (hθ : ∀ i, ‖θ i‖ = 1)
+    (hu : ∀ i, T (u i) = θ i • u i)
+    (hd : (Submodule.span ℂ (Set.range u)).topologicalClosure = ⊤)
+    (c : ℂ) (S : Submodule ℂ V) [CompleteSpace S]
+    (hS : S ≤ Module.End.eigenspace T c)
+    (hm : ∀ i, θ i = c → u i ∈ S) : Module.End.eigenspace T c = S :=
+  eigenspace_eq_of_dense_eigenfamily T hT u θ hθ hu hd c S hS hm
+
+/-- Exact original-object consumer of `adelicSignedFiniteFamily_dense`. -/
+theorem actual_compact_type_adelicSignedFiniteFamily_dense_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) :
+    (Submodule.span ℂ (Set.range (adelicSignedFiniteFamily f))).topologicalClosure = ⊤ :=
+  adelicSignedFiniteFamily_dense f hf
+
+/-- Exact original-object consumer of `adelicIrrationalRotation_eigenspace`. -/
+theorem actual_compact_type_adelicIrrationalRotation_eigenspace_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (i : ℕ ⊕ ℕ) :
+    Module.End.eigenspace (adelicIrrationalRotation f) (integerIrrationalCharacter (adelicSignedRaisingWeight k i)) =
+      adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) :=
+  adelicIrrationalRotation_eigenspace f hf i
+
+/-- Exact original-object consumer of `adelicIrrationalRotation_fixed_eigenspace_finiteDimensional`. -/
+theorem actual_compact_type_adelicIrrationalRotation_fixed_eigenspace_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) (c : ℂ) :
+    FiniteDimensional ℂ (Module.End.eigenspace (adelicIrrationalRotation f) c ⊓
+      adelicFiniteSubgroupFixedSpace f J : Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicIrrationalRotation_fixed_eigenspace_finiteDimensional f hf hk J hJ c
+
+/-- Exact original-object consumer of `finiteDimensional_intertwining_of_eigenspaces`. -/
+theorem actual_compact_type_finiteDimensional_intertwining_of_eigenspaces_source {V W : Type*} [AddCommGroup V] [Module ℂ V] [AddCommGroup W] [Module ℂ W]
+    {G : Type*} [Monoid G] [FiniteDimensional ℂ V]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W) (g : G)
+    (hg : ∀ c : ℂ, FiniteDimensional ℂ (Module.End.eigenspace (σ g) c)) :
+    FiniteDimensional ℂ (Representation.IntertwiningMap ρ σ) :=
+  finiteDimensional_intertwining_of_eigenspaces ρ σ g hg
+
+/-- Exact original-object consumer of `adelicFiniteFixedRealRepresentation_eigenspace_finiteDimensional`. -/
+theorem actual_compact_type_adelicFiniteFixedRealRepresentation_eigenspace_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hf : f ≠ 0) (hk : 0 < k)
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) (c : ℂ) :
+    FiniteDimensional ℂ (Module.End.eigenspace
+      (adelicFiniteFixedRealRepresentation f J (toGL (realRotationCurve (Real.pi * Real.sqrt 2)))) c) :=
+  adelicFiniteFixedRealRepresentation_eigenspace_finiteDimensional f J hf hk hJ c
+
+/-- Exact original-object consumer of `adelicRealType_finiteMultiplicity`. -/
+theorem actual_compact_type_adelicRealType_finiteMultiplicity_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))))
+    {G V : Type*} [Monoid G] [AddCommGroup V] [Module ℂ V] [FiniteDimensional ℂ V]
+    (ι : G →* GeneralLinearGroup (Fin 2) ℝ) (g : G)
+    (hg : ι g = toGL (realRotationCurve (Real.pi * Real.sqrt 2))) (σ : Representation ℂ G V) :
+    FiniteDimensional ℂ (Representation.IntertwiningMap σ ((adelicFiniteFixedRealRepresentation f J).comp ι)) :=
+  adelicRealType_finiteMultiplicity f hf hk J hJ ι g hg σ
+
+/-- Exact original-object consumer of `adelicOrthogonalType_admissible`. -/
+theorem actual_compact_type_adelicOrthogonalType_admissible_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (Matrix.GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (Matrix.GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))))
+    {V : Type*} [AddCommGroup V] [Module ℂ V] [FiniteDimensional ℂ V]
+    (σ : Representation ℂ (Matrix.orthogonalGroup (Fin 2) ℝ) V) :
+    FiniteDimensional ℂ (Representation.IntertwiningMap σ
+      ((adelicFiniteFixedRealRepresentation f J).comp realOrthogonalGL2Embedding)) :=
+  adelicOrthogonalType_admissible f hf hk J hJ σ
+
+
+/-- Exact original-object consumer of `sphericalChebyshevCoefficient_recurrence`. -/
+theorem actual_spherical_formula_sphericalChebyshevCoefficient_recurrence_source (q r z : ℂ) (hr : r ≠ 0)
+    (hs : r ^ 2 = q) (hq : q + 1 ≠ 0) (n : ℕ) :
+    (r * z) * sphericalChebyshevCoefficient q r z (n + 1) =
+      sphericalChebyshevCoefficient q r z n + q * sphericalChebyshevCoefficient q r z (n + 2) :=
+  sphericalChebyshevCoefficient_recurrence q r z hr hs hq n
+
+/-- Exact original-object consumer of `radial_recurrence_chebyshev_formula`. -/
+theorem actual_spherical_formula_radial_recurrence_chebyshev_formula_source (p : ℕ) [NeZero p] (r z : ℂ)
+    (hr : r ≠ 0) (hs : r ^ 2 = (p : ℂ)) (φ : ℕ → ℂ)
+    (hb : (r * z) * φ 0 = ((p : ℂ) + 1) * φ 1)
+    (hrec : ∀ n, (r * z) * φ (n + 1) = φ n + (p : ℂ) * φ (n + 2)) (n : ℕ) :
+    φ n = φ 0 * sphericalChebyshevCoefficient p r z n :=
+  radial_recurrence_chebyshev_formula p r z hr hs φ hb hrec n
+
+/-- Exact original-object consumer of `sphericalChebyshevCoefficient_satake`. -/
+theorem actual_spherical_formula_sphericalChebyshevCoefficient_satake_source {α β : ℂ} (hprod : α * β = 1)
+    (q r : ℂ) (n : ℕ) :
+    sphericalChebyshevCoefficient q r (α + β) (n + 2) =
+      (r ^ (n + 2))⁻¹ *
+        (q * satakeSymmetricTrace α β (n + 2) - satakeSymmetricTrace α β n) / (q + 1) :=
+  sphericalChebyshevCoefficient_satake hprod q r n
+
+/-- Exact original-object consumer of `primitive_sphericalChebyshevCoefficient_primePower`. -/
+theorem actual_spherical_formula_primitive_sphericalChebyshevCoefficient_primePower_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (F : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) (n : ℕ) :
+    sphericalChebyshevCoefficient p (Real.sqrt p) (normalizedCuspCoefficients F.toCuspForm p) (n + 2) =
+      ((Real.sqrt p : ℂ) ^ (n + 2))⁻¹ *
+        ((p : ℂ) * normalizedCuspCoefficients F.toCuspForm (p ^ (n + 2)) -
+          normalizedCuspCoefficients F.toCuspForm (p ^ n)) / ((p : ℂ) + 1) :=
+  primitive_sphericalChebyshevCoefficient_primePower F hp hpQ n
+
+/-- Exact original-object consumer of `adelicCyclicLocal_primitive_spherical_formula`. -/
+theorem actual_spherical_formula_adelicCyclicLocal_primitive_spherical_formula_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    ∃ n : ℕ, inner ℂ x (adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g (adelicCyclicHilbertGenerator F.toCuspForm)) =
+      inner ℂ x (adelicCyclicHilbertGenerator F.toCuspForm) *
+        sphericalChebyshevCoefficient p (Real.sqrt p) (normalizedCuspCoefficients F.toCuspForm p) n :=
+  adelicCyclicLocal_primitive_spherical_formula F hpN x hx g
+
+/-- Exact original-object consumer of `adelicCyclicLocal_primitive_radial_primePowers`. -/
+theorem actual_spherical_formula_adelicCyclicLocal_primitive_radial_primePowers_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) (n : ℕ) :
+    @finitePlaceRadialCoefficient (AdelicCyclicHilbert F.toCuspForm)
+      inferInstance inferInstance p inferInstance inferInstance
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      x (adelicCyclicHilbertGenerator F.toCuspForm) (n + 2) =
+    inner ℂ x (adelicCyclicHilbertGenerator F.toCuspForm) *
+      (((Real.sqrt p : ℂ) ^ (n + 2))⁻¹ *
+        ((p : ℂ) * normalizedCuspCoefficients F.toCuspForm (p ^ (n + 2)) -
+          normalizedCuspCoefficients F.toCuspForm (p ^ n)) / ((p : ℂ) + 1)) :=
+  adelicCyclicLocal_primitive_radial_primePowers F hpN x hx n
+
+/-- Exact original-object consumer of `adelicLocalUnitReference_radial_formula`. -/
+theorem actual_spherical_formula_adelicLocalUnitReference_radial_formula_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (n : ℕ) :
+    @finitePlaceRadialCoefficient (AdelicCyclicHilbert F.toCuspForm)
+      inferInstance inferInstance p inferInstance inferInstance
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicCyclicUnitReference F.toCuspForm) (adelicCyclicUnitReference F.toCuspForm) n =
+      sphericalChebyshevCoefficient p (Real.sqrt p) (normalizedCuspCoefficients F.toCuspForm p) n :=
+  adelicLocalUnitReference_radial_formula F hpN n
+
+/-- Exact original-object consumer of `finitePlace_unit_spherical_cartan_formula`. -/
+theorem actual_spherical_formula_finitePlace_unit_spherical_cartan_formula_source {V : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (hscalar : ∀ u z, ρ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (v : V) (hv : inner ℂ v v = 1)
+    (hfixed : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ g.val v = v)
+    (z : ℂ) (heigen : @finitePlaceHeckeTrace V inferInstance inferInstance 1 p
+      inferInstance inferInstance inferInstance (Nat.coprime_one_right p) ρ v = ((Real.sqrt p : ℂ) * z) • v)
+    (u : ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)ˣ) (n : ℕ)
+    (l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime))) :
+    inner ℂ v (ρ (GeneralLinearGroup.scalar (Fin 2) u * l.val *
+      (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+        (finiteAdelicHeckeDiagonal p)) ^ n * r.val) v) =
+      sphericalChebyshevCoefficient p (Real.sqrt p) z n :=
+  finitePlace_unit_spherical_cartan_formula p ρ hρ hscalar v hv hfixed z heigen u n l r
+
+/-- Exact original-object consumer of `finitePlace_unit_spherical_orbit_gram`. -/
+theorem actual_spherical_formula_finitePlace_unit_spherical_orbit_gram_source {V W : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    [NormedAddCommGroup W] [InnerProductSpace ℂ W]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (σ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (hσ : ∀ g x y, inner ℂ (σ g x) (σ g y) = inner ℂ x y)
+    (hcρ : ∀ u z, ρ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (hcσ : ∀ u z, σ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (v : V) (w : W) (hv : inner ℂ v v = 1) (hw : inner ℂ w w = 1)
+    (hvK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ g.val v = v)
+    (hwK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), σ g.val w = w)
+    (z : ℂ)
+    (hzv : @finitePlaceHeckeTrace V inferInstance inferInstance 1 p inferInstance inferInstance
+      inferInstance (Nat.coprime_one_right p) ρ v = ((Real.sqrt p : ℂ) * z) • v)
+    (hzw : @finitePlaceHeckeTrace W inferInstance inferInstance 1 p inferInstance inferInstance
+      inferInstance (Nat.coprime_one_right p) σ w = ((Real.sqrt p : ℂ) * z) • w)
+    (g h : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    inner ℂ (ρ g v) (ρ h v) = inner ℂ (σ g w) (σ h w) :=
+  finitePlace_unit_spherical_orbit_gram p ρ σ hρ hσ hcρ hcσ v w hv hw hvK hwK z hzv hzw g h
+
+
+section
+
+
+variable {ι E F : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E]
+    [NormedAddCommGroup F] [InnerProductSpace ℂ F]
+
+
+/-- Exact source-type consumer of `gramSpanIsometry_range`. -/
+theorem actual_spherical_equivalence_gramSpanIsometry_range_source (u : ι → E) (v : ι → F)
+    (h : ∀ i j, inner ℂ (u i) (u j) = inner ℂ (v i) (v j)) :
+    (gramSpanIsometry u v h).toLinearMap.range = Submodule.span ℂ (Set.range v) :=
+  gramSpanIsometry_range u v h
+
+end
+
+section
+
+open UniformSpace
+
+variable {ι E F : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E] [CompleteSpace E]
+    [NormedAddCommGroup F] [InnerProductSpace ℂ F] [CompleteSpace F]
+
+
+omit [CompleteSpace E] in
+
+/-- Exact source-type consumer of `gramSpanIsometryCompletion_range`. -/
+theorem actual_spherical_equivalence_gramSpanIsometryCompletion_range_source (u : ι → E) (v : ι → F)
+    (h : ∀ i j, inner ℂ (u i) (u j) = inner ℂ (v i) (v j)) :
+    (linearIsometryCompletion (gramSpanIsometry u v h)).toLinearMap.range =
+      (Submodule.span ℂ (Set.range v)).topologicalClosure :=
+  gramSpanIsometryCompletion_range u v h
+
+end
+
+section
+
+open UniformSpace
+
+variable {ι E F : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E] [CompleteSpace E]
+    [NormedAddCommGroup F] [InnerProductSpace ℂ F] [CompleteSpace F]
+
+
+/-- Exact source-type consumer of `gramDenseFamilyEquiv_intertwines`. -/
+theorem actual_spherical_equivalence_gramDenseFamilyEquiv_intertwines_source (u : ι → E) (v : ι → F)
+    (h : ∀ i j, inner ℂ (u i) (u j) = inner ℂ (v i) (v j))
+    (hu : (Submodule.span ℂ (Set.range u)).topologicalClosure = ⊤)
+    (hv : (Submodule.span ℂ (Set.range v)).topologicalClosure = ⊤)
+    (A : E →L[ℂ] E) (B : F →L[ℂ] F) (τ : ι → ι)
+    (hA : ∀ i, A (u i) = u (τ i)) (hB : ∀ i, B (v i) = v (τ i)) (x : E) :
+    gramDenseFamilyEquiv u v h hu hv (A x) = B (gramDenseFamilyEquiv u v h hu hv x) :=
+  gramDenseFamilyEquiv_intertwines u v h hu hv A B τ hA hB x
+
+end
+
+section
+
+
+
+/-- Exact source-type consumer of `closedSpan_subtype_family_dense`. -/
+theorem actual_spherical_equivalence_closedSpan_subtype_family_dense_source {ι E : Type*} [NormedAddCommGroup E]
+    [NormedSpace ℂ E] (S : Submodule ℂ E) (u : ι → S)
+    (h : (Submodule.span ℂ (Set.range (fun i => (u i).val))).topologicalClosure = S) :
+    (Submodule.span ℂ (Set.range u)).topologicalClosure = ⊤ :=
+  closedSpan_subtype_family_dense S u h
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+
+/-- Exact source-type consumer of `finitePlaceHeckeTrace_good_eq_one`. -/
+theorem actual_spherical_equivalence_finitePlaceHeckeTrace_good_eq_one_source {V : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime] (hpN : p.Coprime N)
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (hscalar : ∀ u z, ρ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (y : V) (hy : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ g.val y = y) :
+    finitePlaceHeckeTrace N p hpN ρ y = finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) ρ y :=
+  finitePlaceHeckeTrace_good_eq_one N p hpN ρ hρ hscalar y hy
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {V W : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V] [CompleteSpace V]
+    [NormedAddCommGroup W] [InnerProductSpace ℂ W] [CompleteSpace W]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (σ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (hσ : ∀ g x y, inner ℂ (σ g x) (σ g y) = inner ℂ x y)
+    (hcρ : ∀ u z, ρ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (hcσ : ∀ u z, σ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (v : V) (w : W) (hv : inner ℂ v v = 1) (hw : inner ℂ w w = 1)
+    (hvK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ g.val v = v)
+    (hwK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), σ g.val w = w)
+    (z : ℂ)
+    (hzv : @finitePlaceHeckeTrace V inferInstance inferInstance 1 p inferInstance inferInstance
+      inferInstance (Nat.coprime_one_right p) ρ v = ((Real.sqrt p : ℂ) * z) • v)
+    (hzw : @finitePlaceHeckeTrace W inferInstance inferInstance 1 p inferInstance inferInstance
+      inferInstance (Nat.coprime_one_right p) σ w = ((Real.sqrt p : ℂ) * z) • w)
+
+include hρ hσ hcρ hcσ hv hw hvK hwK hzv hzw
+
+
+include hρ hσ hcρ hcσ hv hw hvK hwK hzv hzw
+
+/-- Exact source-type consumer of `finitePlaceSphericalCyclicEquiv_intertwines`. -/
+theorem actual_spherical_equivalence_finitePlaceSphericalCyclicEquiv_intertwines_source
+    (hvcyclic : (Submodule.span ℂ (Set.range (fun g => ρ g v))).topologicalClosure = ⊤)
+    (hwcyclic : (Submodule.span ℂ (Set.range (fun g => σ g w))).topologicalClosure = ⊤)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) (x : V) :
+    finitePlaceSphericalCyclicEquiv p ρ σ hρ hσ hcρ hcσ v w hv hw hvK hwK z hzv hzw hvcyclic hwcyclic (ρ g x) =
+      σ g (finitePlaceSphericalCyclicEquiv p ρ σ hρ hσ hcρ hcσ v w hv hw hvK hwK z hzv hzw hvcyclic hwcyclic x) :=
+  finitePlaceSphericalCyclicEquiv_intertwines p ρ σ hρ hσ hcρ hcσ v w hv hw hvK hwK z hzv hzw hvcyclic hwcyclic g x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup CongruenceSubgroup
+open scoped MatrixGroups
+
+variable {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+
+
+/-- Exact source-type consumer of `adelicLocalClosedUnitReference_cyclic`. -/
+theorem actual_spherical_equivalence_adelicLocalClosedUnitReference_cyclic_source (hf : f ≠ 0) (v : HeightOneSpectrum ℤ) :
+    (Submodule.span ℂ (Set.range (fun g =>
+      adelicLocalCyclicRepresentation f v g (adelicLocalClosedUnitReference f v)))).topologicalClosure = ⊤ :=
+  adelicLocalClosedUnitReference_cyclic f hf v
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup CongruenceSubgroup
+open scoped MatrixGroups
+
+variable {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+
+
+include hpN
+
+/-- Exact source-type consumer of `adelicLocalClosedUnitReference_hecke_eigen`. -/
+theorem actual_spherical_equivalence_adelicLocalClosedUnitReference_hecke_eigen_source :
+    finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p)
+      (adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicLocalClosedUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) =
+    ((Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p) •
+      adelicLocalClosedUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) :=
+  adelicLocalClosedUnitReference_hecke_eigen F hpN
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup CongruenceSubgroup
+open scoped MatrixGroups
+
+variable {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    {W : Type*} [NormedAddCommGroup W] [InnerProductSpace ℂ W] [CompleteSpace W]
+    (σ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) W)
+    (hσ : ∀ g x y, inner ℂ (σ g x) (σ g y) = inner ℂ x y)
+    (hcσ : ∀ u x, σ (GeneralLinearGroup.scalar (Fin 2) u) x = x)
+    (w : W) (hw : inner ℂ w w = 1)
+    (hwK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), σ g.val w = w)
+    (hzw : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) σ w =
+      ((Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p) • w)
+    (hwcyclic : (Submodule.span ℂ (Set.range (fun g => σ g w))).topologicalClosure = ⊤)
+
+
+include hσ hcσ hw hwK hzw hwcyclic
+
+/-- Exact source-type consumer of `adelicLocalSphericalEquiv_intertwines`. -/
+theorem actual_spherical_equivalence_adelicLocalSphericalEquiv_intertwines_source
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (x : adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalSphericalEquiv F hpN σ hσ hcσ w hw hwK hzw hwcyclic
+      (adelicLocalCyclicRepresentation F.toCuspForm _ g x) =
+    σ g (adelicLocalSphericalEquiv F hpN σ hσ hcσ w hw hwK hzw hwcyclic x) :=
+  adelicLocalSphericalEquiv_intertwines F hpN σ hσ hcσ w hw hwK hzw hwcyclic g x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup CongruenceSubgroup
+open scoped MatrixGroups
+
+variable {N M p : ℕ} [NeZero N] [NeZero M] [NeZero p] [Fact p.Prime] {k l : ℤ}
+    (F : PrimitiveCuspForm N k) (G : PrimitiveCuspForm M l)
+    (hpN : p.Coprime N) (hpM : p.Coprime M)
+    (h : normalizedCuspCoefficients F.toCuspForm p = normalizedCuspCoefficients G.toCuspForm p)
+
+
+/-- Exact source-type consumer of `adelicPrimitiveLocalEquiv_intertwines`. -/
+theorem actual_spherical_equivalence_adelicPrimitiveLocalEquiv_intertwines_source
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (x : adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicPrimitiveLocalEquiv F G hpN hpM h (adelicLocalCyclicRepresentation F.toCuspForm _ g x) =
+      adelicLocalCyclicRepresentation G.toCuspForm _ g (adelicPrimitiveLocalEquiv F G hpN hpM h x) :=
+  adelicPrimitiveLocalEquiv_intertwines F G hpN hpM h g x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+
+/-- The actual fixed-space operator consumes the literal original local coset trace. -/
+theorem actual_intrinsic_fixed_hecke_operator_source
+    (x : finitePlaceSphericalFixedSpace p
+      (adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :
+    (finitePlaceSphericalFixedHecke p
+      (adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) x).val =
+      finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p)
+        (adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) x.val :=
+  finitePlaceSphericalFixedHecke_val p _ x
+
+include hpN
+
+/-- The genuine original primitive local factor has exactly one integral-fixed dimension. -/
+theorem actual_intrinsic_fixed_dimension_source :
+    Module.finrank ℂ (Representation.invariants
+      ((adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).comp
+        (finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime))).subtype)) = 1 :=
+  adelicLocalSphericalFixedSpace_finrank F hpN
+
+/-- Actual trace normalization gives the original Fourier eigenvalue on the proved one-dimensional space. -/
+theorem actual_intrinsic_spherical_trace_source :
+    LinearMap.trace ℂ (finitePlaceSphericalFixedSpace p
+      (adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))))
+      (finitePlaceSphericalFixedHecke p
+        (adelicLocalCyclicRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) /
+      (Real.sqrt p : ℂ) = normalizedCuspCoefficients F.toCuspForm p :=
+  adelicLocalNormalizedSphericalTrace_eq_fourier F hpN
+
+/-- The original convergent prime-power series consumes the actual fixed-line Hecke polynomial. -/
+theorem actual_intrinsic_hecke_euler_series_source (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    (∑' r : ℕ, normalizedCuspCoefficients F.toCuspForm (p ^ r) * ((p : ℂ) ^ (-s)) ^ r) =
+      ((adelicLocalHeckeEulerPolynomial (p := p) F).eval ((p : ℂ) ^ (-s)))⁻¹ :=
+  primitive_good_euler_series_intrinsic_trace F hk hpN hs
+
+/-- All symmetric powers of the roots of the original local Hecke quadratic retain the original prime-power Fourier trace. -/
+theorem actual_intrinsic_hecke_symmetric_trace_source (r : ℕ) :
+    (symmetricEulerPolynomial (adelicLocalHeckeRootPlus (p := p) F)
+      (adelicLocalHeckeRootMinus (p := p) F) r).coeff 1 =
+      -normalizedCuspCoefficients F.toCuspForm (p ^ r) :=
+  adelicLocalHecke_symmetricEulerPolynomial_coeff_one F hpN r
+
+omit hpN [NeZero p] in
+/-- The actual orthogonal projector commutes with every original full complementary operator. -/
+theorem actual_full_away_fixed_projection_source
+    (a : AdelicFullAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : AdelicCyclicHilbert F.toCuspForm) :
+    adelicLocalFixedProjection F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))
+      (adelicCyclicFullAwayRepresentation F.toCuspForm _ a x) =
+      adelicCyclicFullAwayRepresentation F.toCuspForm _ a
+        (adelicLocalFixedProjection F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) x) :=
+  adelicLocalFixedProjection_fullAway_commutes F.toCuspForm _ a x
+
+/-- The entire original global local-fixed space equals the closed actual full complementary orbit span. -/
+theorem actual_full_away_fixed_closure_source :
+    adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) =
+      (Submodule.span ℂ (Set.range (fun a => adelicCyclicFullAwayRepresentation F.toCuspForm
+        (rationalPrimePlace p (Fact.out : p.Prime)) a (adelicCyclicHilbertGenerator F.toCuspForm)))).topologicalClosure :=
+  adelicLocalFixedSpace_eq_fullAwayClosure F hpN
+
+/-- Actual global fixed vectors, including images under later genuine intertwiners, retain the original Fourier Hecke eigenvalue. -/
+theorem actual_full_global_fixed_hecke_source (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalNormalizedHecke F.toCuspForm p (Fact.out : p.Prime) hpN x =
+      normalizedCuspCoefficients F.toCuspForm p • x :=
+  adelicLocalNormalizedHecke_full_fixed F hpN x hx
+
+end
+
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact original source-type consumer of `finiteIdele_integral_factor_unique`. -/
+theorem actual_idele_finiteIdele_integral_factor_unique_source (q r : ℚ) (hq : 0 < q) (hr : 0 < r)
+    (u v : finiteAdeleIntegerSubringˣ)
+    (h : algebraMap ℚ (FiniteAdeleRing ℤ ℚ) q * u.val.val =
+      algebraMap ℚ (FiniteAdeleRing ℤ ℚ) r * v.val.val) : u = v :=
+  finiteIdele_integral_factor_unique q r hq hr u v h
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact original source-type consumer of `finiteIdeleIntegralUnitPart_mul`. -/
+theorem actual_idele_finiteIdeleIntegralUnitPart_mul_source (a b : (FiniteAdeleRing ℤ ℚ)ˣ) :
+    finiteIdeleIntegralUnitPart (a * b) = finiteIdeleIntegralUnitPart a * finiteIdeleIntegralUnitPart b :=
+  finiteIdeleIntegralUnitPart_mul a b
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} [NeZero D] (χ : DirichletCharacter ℂ D)
+
+/-- Exact original source-type consumer of `finiteIdeleDirichletCharacter_integral`. -/
+theorem actual_idele_finiteIdeleDirichletCharacter_integral_source (u : finiteAdeleIntegerSubringˣ) :
+    finiteIdeleDirichletCharacter χ (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom u) =
+      (χ (finiteAdeleResidue D u.val))⁻¹ :=
+  finiteIdeleDirichletCharacter_integral χ u
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} [NeZero D] (χ : DirichletCharacter ℂ D)
+
+/-- Exact original source-type consumer of `finiteIdeleDirichletCharacter_continuous`. -/
+theorem actual_idele_finiteIdeleDirichletCharacter_continuous_source : Continuous (finiteIdeleDirichletCharacter χ) :=
+  finiteIdeleDirichletCharacter_continuous χ
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} (χ : DirichletCharacter ℂ D)
+
+/-- Exact original source-type consumer of `realDirichletSignCharacter_continuous`. -/
+theorem actual_idele_realDirichletSignCharacter_continuous_source : Continuous (realDirichletSignCharacter χ) :=
+  realDirichletSignCharacter_continuous χ
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} [NeZero D] (χ : DirichletCharacter ℂ D)
+
+/-- Exact original source-type consumer of `adelicDirichletCharacter_continuous`. -/
+theorem actual_idele_adelicDirichletCharacter_continuous_source : Continuous (adelicDirichletCharacter χ) :=
+  adelicDirichletCharacter_continuous χ
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} [NeZero D] (χ : DirichletCharacter ℂ D)
+
+/-- Exact original source-type consumer of `adelicDirichletCharacter_rational`. -/
+theorem actual_idele_adelicDirichletCharacter_rational_source (q : ℚˣ) :
+    adelicDirichletCharacter χ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1 :=
+  adelicDirichletCharacter_rational χ q
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {G V : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+
+/-- Exact original source-type consumer of `scalarTwist_intertwining_fixed`. -/
+theorem actual_idele_scalarTwist_intertwining_fixed_source (ρ : Representation ℂ G V) (χ : G →* ℂ)
+    (T : Representation.IntertwiningMap ρ (scalarTwistRepresentation ρ χ))
+    (K : Subgroup G) (hχ : ∀ g : K, χ g.val = 1)
+    (x : V) (hx : ∀ g : K, ρ g.val x = x) : ∀ g : K, ρ g.val (T x) = T x :=
+  scalarTwist_intertwining_fixed ρ χ T K hχ x hx
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime] (hpN : p.Coprime N)
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (χ : GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) →* ℂ)
+    (z : ℂ)
+    (hχ : ∀ i : Option (ZMod p), χ
+      (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+        ((integralGamma0FiniteGL2Hom N (heckeUpperRepresentative p N hpN i)).val⁻¹ *
+          (finiteAdelicHeckeDiagonal p)⁻¹)) = z)
+
+include hχ
+
+/-- Exact original source-type consumer of `finitePlaceHeckeTrace_character_intertwines`. -/
+theorem actual_idele_finitePlaceHeckeTrace_character_intertwines_source
+    (T : Representation.IntertwiningMap ρ (scalarTwistRepresentation ρ χ)) (x : V) :
+    T (finitePlaceHeckeTrace N p hpN ρ x) = z • finitePlaceHeckeTrace N p hpN ρ (T x) :=
+  finitePlaceHeckeTrace_character_intertwines N p hpN ρ χ z hχ T x
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (χ : GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) →* ℂ)
+    (T : Representation.IntertwiningMap
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (scalarTwistRepresentation
+        (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) χ))
+
+/-- Exact original source-type consumer of `adelicLocalSelfTwist_fourier_relation`. -/
+theorem actual_idele_adelicLocalSelfTwist_fourier_relation_source
+    (hχK : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)), χ g.val = 1)
+    (z : ℂ) (hχ : ∀ i : Option (ZMod p), χ
+      (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+        ((integralGamma0FiniteGL2Hom N (heckeUpperRepresentative p N hpN i)).val⁻¹ *
+          (finiteAdelicHeckeDiagonal p)⁻¹)) = z)
+    (hT : T (adelicCyclicHilbertGenerator F.toCuspForm) ≠ 0) :
+    z * normalizedCuspCoefficients F.toCuspForm p = normalizedCuspCoefficients F.toCuspForm p :=
+  adelicLocalSelfTwist_fourier_relation F hpN χ T hχK z hχ hT
+
+end
+
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `finiteAdelicLocalGL2_det`. -/
+theorem actual_dirichlet_finiteAdelicLocalGL2_det_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    GeneralLinearGroup.det (finiteAdelicLocalGL2 v g) = finiteAdeleLocalUnit v (GeneralLinearGroup.det g) :=
+  finiteAdelicLocalGL2_det v g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `finiteIdeleDirichletCharacter_local_integral`. -/
+theorem actual_dirichlet_finiteIdeleDirichletCharacter_local_integral_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (v : HeightOneSpectrum ℤ) (hD : (D : ℤ) ∉ v.asIdeal)
+    (u : (v.adicCompletion ℚ)ˣ) (hu : u.val ∈ v.adicCompletionIntegers ℚ)
+    (hui : u.inv ∈ v.adicCompletionIntegers ℚ) :
+    finiteIdeleDirichletCharacter χ (finiteAdeleLocalUnit v u) = 1 :=
+  finiteIdeleDirichletCharacter_local_integral χ v hD u hu hui
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} [NeZero D] (χ : DirichletCharacter ℂ D)
+
+
+/-- Exact source consumer of `adelicDirichletCharacter_norm`. -/
+theorem actual_dirichlet_adelicDirichletCharacter_norm_source (a : (AdeleRing ℤ ℚ)ˣ) :
+    ‖adelicDirichletCharacter χ a‖ = 1 :=
+  adelicDirichletCharacter_norm χ a
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {D : ℕ} [NeZero D] (χ : DirichletCharacter ℂ D)
+
+
+/-- Exact source consumer of `adelicDirichletDeterminant_rational`. -/
+theorem actual_dirichlet_adelicDirichletDeterminant_rational_source (g : GeneralLinearGroup (Fin 2) ℚ) :
+    adelicDirichletDeterminant χ (GeneralLinearGroup.map (algebraMap ℚ (AdeleRing ℤ ℚ)) g) = 1 :=
+  adelicDirichletDeterminant_rational χ g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `finiteIdelePrimeAway_residue`. -/
+theorem actual_dirichlet_finiteIdelePrimeAway_residue_source (D p : ℕ) [NeZero D] [NeZero p] (hp : p.Prime)
+    (hpD : p.Coprime D) :
+    finiteAdeleResidue D (finiteIdelePrimeAwayIntegerUnit p hp).val = (p : ZMod D) :=
+  finiteIdelePrimeAway_residue D p hp hpD
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `finiteIdeleDirichletCharacter_uniformizer`. -/
+theorem actual_dirichlet_finiteIdeleDirichletCharacter_uniformizer_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (p : ℕ) [NeZero p] (hp : p.Prime) (hpD : p.Coprime D) :
+    finiteIdeleDirichletCharacter χ
+      (finiteAdeleLocalUnit (rationalPrimePlace p hp) (finitePlacePrimeUnit p _)) = χ (p : ZMod D) :=
+  finiteIdeleDirichletCharacter_uniformizer χ p hp hpD
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `finitePlaceDirichletDeterminant_level`. -/
+theorem actual_dirichlet_finitePlaceDirichletDeterminant_level_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (N : ℕ) (v : HeightOneSpectrum ℤ)
+    (hD : (D : ℤ) ∉ v.asIdeal) (g : finitePlaceGL2Gamma0 N v) :
+    finitePlaceDirichletDeterminant χ v g.val = 1 :=
+  finitePlaceDirichletDeterminant_level χ N v hD g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `adelicDirichletDeterminant_local`. -/
+theorem actual_dirichlet_adelicDirichletDeterminant_local_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    adelicDirichletDeterminant χ (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 v g)) =
+      finitePlaceDirichletDeterminant χ v g :=
+  adelicDirichletDeterminant_local χ v g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `finitePlaceDirichletDeterminant_hecke_quadratic`. -/
+theorem actual_dirichlet_finitePlaceDirichletDeterminant_hecke_quadratic_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsQuadratic) (N p : ℕ) [NeZero N] [NeZero p]
+    (hp : p.Prime) (hpN : p.Coprime N) (hpD : p.Coprime D) (i : Option (ZMod p)) :
+    finitePlaceDirichletDeterminant χ (rationalPrimePlace p hp)
+      (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp))
+        ((integralGamma0FiniteGL2Hom N (heckeUpperRepresentative p N hpN i)).val⁻¹ *
+          (finiteAdelicHeckeDiagonal p)⁻¹)) = χ (p : ZMod D) :=
+  finitePlaceDirichletDeterminant_hecke_quadratic χ hχ N p hp hpN hpD i
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {N D : ℕ} [NeZero N] [NeZero D] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (χ : DirichletCharacter ℂ D)
+    (T : Representation.IntertwiningMap (adelicCyclicHilbertRepresentation F.toCuspForm)
+      (scalarTwistRepresentation (adelicCyclicHilbertRepresentation F.toCuspForm)
+        (adelicDirichletDeterminant χ)))
+
+
+/-- Exact source consumer of `adelicDirichletSelfTwist_classical`. -/
+theorem actual_dirichlet_adelicDirichletSelfTwist_classical_source (hχ : χ.IsQuadratic) (hT : Function.Injective T) :
+    IsCoefficientSelfTwist N χ (cuspCoefficients F.toCuspForm) :=
+  adelicDirichletSelfTwist_classical F χ T hχ hT
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+/-- Exact source consumer of `nonCM_no_adelicDirichletSelfTwist`. -/
+theorem actual_dirichlet_nonCM_no_adelicDirichletSelfTwist_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : NonCMPrimitiveCuspForm N k) (D : ℕ+) (χ : DirichletCharacter ℂ D)
+    (hχp : χ.IsPrimitive) (hχne : χ ≠ 1) (hχq : χ.IsQuadratic)
+    (T : Representation.IntertwiningMap (adelicCyclicHilbertRepresentation F.toCuspForm)
+      (scalarTwistRepresentation (adelicCyclicHilbertRepresentation F.toCuspForm)
+        (adelicDirichletDeterminant χ))) : ¬ Function.Injective T :=
+  nonCM_no_adelicDirichletSelfTwist F D χ hχp hχne hχq T
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `realQuadraticCharacter_negative`. -/
+theorem actual_classification_realQuadraticCharacter_negative_source (ψ : ℝˣ →* ℂ) (hψ : ∀ u, ψ u ^ 2 = 1)
+    (u : ℝˣ) (hu : u.val < 0) : ψ u = ψ (-1) :=
+  realQuadraticCharacter_negative ψ hψ u hu
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `rationalIdele_principal_factor`. -/
+theorem actual_classification_rationalIdele_principal_factor_source (q : ℚˣ) :
+    Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q =
+      rationalIdeleRealEmbedding (Units.map (Rat.castHom ℝ).toMonoidHom q) *
+        rationalIdeleFiniteEmbedding (Units.map (algebraMap ℚ (FiniteAdeleRing ℤ ℚ)).toMonoidHom q) :=
+  rationalIdele_principal_factor q
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `finiteAdeleResidue_units_surjective`. -/
+theorem actual_classification_finiteAdeleResidue_units_surjective_source (D : ℕ) [NeZero D] :
+    Function.Surjective (Units.map (finiteAdeleResidue D).toMonoidHom) :=
+  finiteAdeleResidue_units_surjective D
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+    [CompactSpace R] [T2Space R] [Infinite R]
+
+
+/-- Exact source consumer of `compactRing_positive_integer_ideal_small`. -/
+theorem actual_classification_compactRing_positive_integer_ideal_small_source (hd : DenseRange (Int.cast : ℤ → R))
+    (U : Set R) (hU : U ∈ 𝓝 (0 : R)) :
+    ∃ D : ℕ, 0 < D ∧ ∀ x : R, (D : R) * x ∈ U :=
+  compactRing_positive_integer_ideal_small hd U hU
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `finiteAdeleLevelMultiple_cofinal`. -/
+theorem actual_classification_finiteAdeleLevelMultiple_cofinal_source (U : Set (FiniteAdeleRing ℤ ℚ)) (hU : U ∈ 𝓝 0) :
+    ∃ D : ℕ, 0 < D ∧ ∀ x, finiteAdeleLevelMultiple D x → x ∈ U :=
+  finiteAdeleLevelMultiple_cofinal U hU
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+    [CompactSpace R] [T2Space R] [Infinite R]
+
+
+/-- Exact source consumer of `compactRing_unit_congruence_small`. -/
+theorem actual_classification_compactRing_unit_congruence_small_source (hd : DenseRange (Int.cast : ℤ → R))
+    (W : Set Rˣ) (hW : W ∈ 𝓝 1) :
+    ∃ D : ℕ, 0 < D ∧ ∀ u : Rˣ, (D : R) ∣ u.val - 1 → u ∈ W :=
+  compactRing_unit_congruence_small hd W hW
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `integralIdele_quadratic_congruence`. -/
+theorem actual_classification_integralIdele_quadratic_congruence_source {ψ : finiteAdeleIntegerSubringˣ →* ℂ}
+    (hc : Continuous ψ) (hq : ∀ u, ψ u ^ 2 = 1) :
+    ∃ D : ℕ, ∃ hD : 0 < D, ∀ u : finiteAdeleIntegerSubringˣ,
+      @finiteAdeleResidue D ⟨ne_of_gt hD⟩ u.val = 1 → ψ u = 1 :=
+  integralIdele_quadratic_congruence hc hq
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `integralIdele_quadratic_dirichlet_exists`. -/
+theorem actual_classification_integralIdele_quadratic_dirichlet_exists_source
+    (φ : finiteAdeleIntegerSubringˣ →* ℂ) (hc : Continuous φ) (hq : ∀ u, φ u ^ 2 = 1) :
+    ∃ D : ℕ, ∃ hD : 0 < D, ∃ χ : DirichletCharacter ℂ D,
+      χ.IsQuadratic ∧ ∀ u : finiteAdeleIntegerSubringˣ,
+        χ (@finiteAdeleResidue D ⟨ne_of_gt hD⟩ u.val) = φ u :=
+  integralIdele_quadratic_dirichlet_exists φ hc hq
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_coordinate_value`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_coordinate_value_source (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (a : (AdeleRing ℤ ℚ)ˣ) :
+    ψ a = ψ (rationalIdeleRealEmbedding (rationalIdeleRealHom a)) *
+      ψ (rationalIdeleFiniteEmbedding (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom
+        (finiteIdeleIntegralUnitPart (rationalIdeleFiniteHom a)))) :=
+  adelicQuadraticCharacter_coordinate_value ψ hq hp a
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_eq_of_integral`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_eq_of_integral_source
+    (ψ φ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hψq : ∀ a, ψ a ^ 2 = 1) (hφq : ∀ a, φ a ^ 2 = 1)
+    (hψp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hφp : ∀ q : ℚˣ, φ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hi : ∀ u : finiteAdeleIntegerSubringˣ,
+      ψ (rationalIdeleFiniteEmbedding (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom u)) =
+        φ (rationalIdeleFiniteEmbedding (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom u))) : ψ = φ :=
+  adelicQuadraticCharacter_eq_of_integral ψ φ hψq hφq hψp hφp hi
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicDirichletCharacter_quadratic`. -/
+theorem actual_fullCharacter_adelicDirichletCharacter_quadratic_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsQuadratic) (a : (AdeleRing ℤ ℚ)ˣ) :
+    adelicDirichletCharacter χ a ^ 2 = 1 :=
+  adelicDirichletCharacter_quadratic χ hχ a
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_dirichlet_exists`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_dirichlet_exists_source (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ) (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1) :
+    ∃ D : ℕ+, ∃ χ : DirichletCharacter ℂ D, χ.IsQuadratic ∧ ψ = adelicDirichletCharacter χ :=
+  adelicQuadraticCharacter_dirichlet_exists ψ hc hq hp
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `dirichlet_changeLevel_integral_residue`. -/
+theorem actual_fullCharacter_dirichlet_changeLevel_integral_residue_source {M D : ℕ} [NeZero M] [NeZero D]
+    (χ : DirichletCharacter ℂ M) (h : M ∣ D) (u : finiteAdeleIntegerSubringˣ) :
+    DirichletCharacter.changeLevel h χ (finiteAdeleResidue D u.val) = χ (finiteAdeleResidue M u.val) :=
+  dirichlet_changeLevel_integral_residue χ h u
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicDirichletCharacter_primitive`. -/
+theorem actual_fullCharacter_adelicDirichletCharacter_primitive_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsQuadratic) :
+    letI : NeZero χ.conductor := ⟨χ.conductor_ne_zero⟩
+    adelicDirichletCharacter χ.primitiveCharacter = adelicDirichletCharacter χ :=
+  adelicDirichletCharacter_primitive χ hχ
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_primitive_exists`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_primitive_exists_source (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ) (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hne : ψ ≠ 1) :
+    ∃ D : ℕ+, ∃ χ : DirichletCharacter ℂ D,
+      χ.IsPrimitive ∧ χ ≠ 1 ∧ χ.IsQuadratic ∧ ψ = adelicDirichletCharacter χ :=
+  adelicQuadraticCharacter_primitive_exists ψ hc hq hp hne
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `nonCM_no_adelicQuadraticSelfTwist`. -/
+theorem actual_fullCharacter_nonCM_no_adelicQuadraticSelfTwist_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : NonCMPrimitiveCuspForm N k) (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ) (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hne : ψ ≠ 1)
+    (T : Representation.IntertwiningMap (adelicCyclicHilbertRepresentation F.toCuspForm)
+      (scalarTwistRepresentation (adelicCyclicHilbertRepresentation F.toCuspForm)
+        (ψ.comp GeneralLinearGroup.det))) : ¬ Function.Injective T :=
+  nonCM_no_adelicQuadraticSelfTwist F ψ hc hq hp hne T
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicSelfTwist_quadratic`. -/
+theorem actual_fullCharacter_adelicSelfTwist_quadratic_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (T : Representation.IntertwiningMap (adelicCyclicHilbertRepresentation F.toCuspForm)
+      (scalarTwistRepresentation (adelicCyclicHilbertRepresentation F.toCuspForm)
+        (ψ.comp GeneralLinearGroup.det))) (hT : Function.Injective T) :
+    ∀ a, ψ a ^ 2 = 1 :=
+  adelicSelfTwist_quadratic F ψ T hT
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `nonCM_no_adelicSelfTwist`. -/
+theorem actual_fullCharacter_nonCM_no_adelicSelfTwist_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : NonCMPrimitiveCuspForm N k) (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hne : ψ ≠ 1)
+    (T : Representation.IntertwiningMap (adelicCyclicHilbertRepresentation F.toCuspForm)
+      (scalarTwistRepresentation (adelicCyclicHilbertRepresentation F.toCuspForm)
+        (ψ.comp GeneralLinearGroup.det))) : ¬ Function.Injective T :=
+  nonCM_no_adelicSelfTwist F ψ hc hp hne T
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+
+/-- Exact source consumer of `smoothInducedCharacterRepresentation_smooth`. -/
+theorem actual_induced_smoothInducedCharacterRepresentation_smooth_source (B : Subgroup G) (χ : B →* ℂ)
+    (f : smoothInducedCharacterSpace B χ) :
+    ∃ H : Subgroup G, IsOpen (H : Set G) ∧
+      ∀ h ∈ H, smoothInducedCharacterRepresentation B χ h f = f :=
+  smoothInducedCharacterRepresentation_smooth B χ f
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (B K : Subgroup G) (χ : B →* ℂ)
+    (hdec : ∀ g : G, ∃ b : B, ∃ k : K, g = b.val * k.val)
+
+/-- Exact source consumer of `iwasawaInducedSection_fixed_line`. -/
+theorem actual_induced_iwasawaInducedSection_fixed_line_source (hK : IsOpen (K : Set G))
+    (hχ : ∀ b : B, b.val ∈ K → χ b = 1)
+    (f : smoothInducedCharacterSpace B χ)
+    (hf : ∀ k : K, smoothInducedCharacterRepresentation B χ k.val f = f) :
+    f = f.val 1 • iwasawaInducedSection B K χ hdec hK hχ :=
+  iwasawaInducedSection_fixed_line B K χ hdec hK hχ f hf
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `valuationSubring_gl2_firstRow_pivot`. -/
+theorem actual_induced_valuationSubring_gl2_firstRow_pivot_source {K : Type*} [Field K] (A : ValuationSubring K)
+    (g : GeneralLinearGroup (Fin 2) K) :
+    ∃ j : Fin 2, g.val 0 j ≠ 0 ∧ ∀ s : Fin 2, g.val 0 s / g.val 0 j ∈ A :=
+  valuationSubring_gl2_firstRow_pivot A g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceGL2_iwasawa`. -/
+theorem actual_induced_finitePlaceGL2_iwasawa_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    ∃ b : gl2UpperZeroSubgroup (v.adicCompletion ℚ), ∃ k : finitePlaceGL2Gamma0 1 v,
+      g = b.val * k.val :=
+  finitePlaceGL2_iwasawa v g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceUnramifiedCharacter_prime`. -/
+theorem actual_induced_finitePlaceUnramifiedCharacter_prime_source (p : ℕ) [NeZero p] (hp : p.Prime) (z : ℂˣ) :
+    finitePlaceUnramifiedCharacter (rationalPrimePlace p hp) z
+      (finitePlacePrimeUnit p (rationalPrimePlace p hp)) = z :=
+  finitePlaceUnramifiedCharacter_prime p hp z
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceLowerCharacter_integral`. -/
+theorem actual_induced_finitePlaceLowerCharacter_integral_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ)
+    (b : gl2UpperZeroSubgroup (v.adicCompletion ℚ)) (hb : b.val ∈ finitePlaceGL2Gamma0 1 v) :
+    finitePlaceLowerCharacter v z₁ z₂ b = 1 :=
+  finitePlaceLowerCharacter_integral v z₁ z₂ b hb
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceInducedSpherical_fixed_line`. -/
+theorem actual_induced_finitePlaceInducedSpherical_fixed_line_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ)
+    (f : FinitePlaceInducedSpace v z₁ z₂)
+    (hf : ∀ k : finitePlaceGL2Gamma0 1 v,
+      smoothInducedCharacterRepresentation _ (finitePlaceLowerCharacter v z₁ z₂) k.val f = f) :
+    f = f.val 1 • finitePlaceInducedSpherical v z₁ z₂ :=
+  finitePlaceInducedSpherical_fixed_line v z₁ z₂ f hf
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `normalizedLocalPrincipalRepresentation_scalar`. -/
+theorem actual_induced_normalizedLocalPrincipalRepresentation_scalar_source (v : HeightOneSpectrum ℤ) (α β : ℂˣ)
+    (hαβ : α * β = 1) (u : (v.adicCompletion ℚ)ˣ)
+    (f : NormalizedLocalPrincipalSeries v α β) :
+    normalizedLocalPrincipalRepresentation v α β (GeneralLinearGroup.scalar (Fin 2) u) f = f :=
+  normalizedLocalPrincipalRepresentation_scalar v α β hαβ u f
+
+end
+
+section
+
+/-- Exact source consumer of `primitiveSatake_non_special`. -/
+theorem actual_induced_primitiveSatake_non_special_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 2 ≤ k) {p : ℕ} (hp : p.Prime) (hpN : ¬p ∣ N) :
+    primitiveSatakePlus F p / primitiveSatakeMinus F p ≠ (p : ℂ) ∧
+      primitiveSatakePlus F p / primitiveSatakeMinus F p ≠ (p : ℂ)⁻¹ :=
+  primitiveSatake_non_special F hk hp hpN
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+variable {G V : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [AddCommGroup V] [Module ℂ V]
+    (ρ : Representation ℂ G V) (B : Subgroup G) (χ : B →* ℂ)
+    (hρ : ∀ x : V, ∃ H : Subgroup G, IsOpen (H : Set G) ∧ ∀ h ∈ H, ρ h x = x)
+    (ℓ : V →ₗ[ℂ] ℂ) (hℓ : ∀ b : B, ∀ x : V, ℓ (ρ b.val x) = χ b * ℓ x)
+
+/-- Exact source consumer of `smoothInducedFrobeniusMap_injective`. -/
+theorem actual_induced_hecke_smoothInducedFrobeniusMap_injective_source [ρ.IsIrreducible] (hne : ℓ ≠ 0) :
+    Function.Injective (smoothInducedFrobeniusMap ρ B χ hρ ℓ hℓ) :=
+  smoothInducedFrobeniusMap_injective ρ B χ hρ ℓ hℓ hne
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `finitePlaceInducedSpherical_diagonal`. -/
+theorem actual_induced_hecke_finitePlaceInducedSpherical_diagonal_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ)
+    (a b : (v.adicCompletion ℚ)ˣ) :
+    (finitePlaceInducedSpherical v z₁ z₂).val (gl2UnitDiagonalPair a b) =
+      ((finitePlaceUnramifiedCharacter v z₁ a * finitePlaceUnramifiedCharacter v z₂ b : ℂˣ) : ℂ) :=
+  finitePlaceInducedSpherical_diagonal v z₁ z₂ a b
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `gl2_upper_inverse_diagonal_factor`. -/
+theorem actual_induced_hecke_gl2_upper_inverse_diagonal_factor_source {F : Type*} [Field F] (a q : Fˣ) :
+    toGL (ringUpperUnipotent (-a.val)) * gl2UnitDiagonalPair 1 q⁻¹ =
+      (toGL (ringLowerUnipotent (-(a⁻¹).val)) * gl2UnitDiagonalPair (-a * q⁻¹) a⁻¹) *
+        (toGL (ringUpperUnipotent (-(q * a⁻¹).val)) * gl2CoordinateSwap) :=
+  gl2_upper_inverse_diagonal_factor a q
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `finitePlaceInducedSpherical_upper_inverse`. -/
+theorem actual_induced_hecke_finitePlaceInducedSpherical_upper_inverse_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ)
+    (a q : (v.adicCompletion ℚ)ˣ)
+    (ha : a.val ∈ v.adicCompletionIntegers ℚ)
+    (hai : a.inv ∈ v.adicCompletionIntegers ℚ)
+    (hq : q.val ∈ v.adicCompletionIntegers ℚ) :
+    (finitePlaceInducedSpherical v z₁ z₂).val
+      (toGL (ringUpperUnipotent (-a.val)) * gl2UnitDiagonalPair 1 q⁻¹) =
+      ((finitePlaceUnramifiedCharacter v z₁ q)⁻¹ : ℂˣ) :=
+  finitePlaceInducedSpherical_upper_inverse v z₁ z₂ a q ha hai hq
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `finitePlaceHecke_none_inverse_pair`. -/
+theorem actual_induced_hecke_finitePlaceHecke_none_inverse_pair_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (v : HeightOneSpectrum ℤ) :
+    (finitePlaceHeckeGamma 1 p (Nat.coprime_one_right p) v none)⁻¹ *
+      (GeneralLinearGroup.map (finiteAdelePlace v) (finiteAdelicHeckeDiagonal p))⁻¹ =
+    (toGL (ringLowerUnipotent (p : v.adicCompletion ℚ)) *
+      gl2UnitDiagonalPair (finitePlacePrimeUnit p v)⁻¹ (-1)) * gl2CoordinateSwap :=
+  finitePlaceHecke_none_inverse_pair p hp v
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `finitePlaceInducedSpherical_hecke_nonzero`. -/
+theorem actual_induced_hecke_finitePlaceInducedSpherical_hecke_nonzero_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (z₁ z₂ : ℂˣ) (a : ZMod p) (ha : a ≠ 0) :
+    (finitePlaceInducedSpherical (rationalPrimePlace p hp) z₁ z₂).val
+      ((finitePlaceHeckeGamma 1 p (Nat.coprime_one_right p) (rationalPrimePlace p hp) (some a))⁻¹ *
+        (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp))
+          (finiteAdelicHeckeDiagonal p))⁻¹) = (z₁⁻¹ : ℂˣ) :=
+  finitePlaceInducedSpherical_hecke_nonzero p hp z₁ z₂ a ha
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `finitePlaceInducedSpherical_hecke_eigenvalue`. -/
+theorem actual_induced_hecke_finitePlaceInducedSpherical_hecke_eigenvalue_source (p : ℕ) [NeZero p] [Fact p.Prime]
+    (z₁ z₂ : ℂˣ) :
+    finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p)
+      (smoothInducedCharacterRepresentation _
+        (finitePlaceLowerCharacter (rationalPrimePlace p (Fact.out : p.Prime)) z₁ z₂))
+      (finitePlaceInducedSpherical (rationalPrimePlace p (Fact.out : p.Prime)) z₁ z₂) =
+    ((p : ℂ) * (z₁⁻¹ : ℂˣ) + (z₂⁻¹ : ℂˣ)) •
+      finitePlaceInducedSpherical (rationalPrimePlace p (Fact.out : p.Prime)) z₁ z₂ :=
+  finitePlaceInducedSpherical_hecke_eigenvalue p z₁ z₂
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `normalizedLocalPrincipal_hecke_eigenvalue`. -/
+theorem actual_induced_hecke_normalizedLocalPrincipal_hecke_eigenvalue_source (p : ℕ) [NeZero p] [Fact p.Prime]
+    (α β : ℂˣ) :
+    finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p)
+      (normalizedLocalPrincipalRepresentation (rationalPrimePlace p (Fact.out : p.Prime)) α β)
+      (finitePlaceInducedSpherical (rationalPrimePlace p (Fact.out : p.Prime))
+        (α * finitePlaceSqrtResidueUnit (rationalPrimePlace p (Fact.out : p.Prime)))
+        (β * (finitePlaceSqrtResidueUnit (rationalPrimePlace p (Fact.out : p.Prime)))⁻¹)) =
+    ((Real.sqrt p : ℂ) * (((α⁻¹ : ℂˣ) : ℂ) + (β⁻¹ : ℂˣ))) •
+      finitePlaceInducedSpherical (rationalPrimePlace p (Fact.out : p.Prime))
+        (α * finitePlaceSqrtResidueUnit (rationalPrimePlace p (Fact.out : p.Prime)))
+        (β * (finitePlaceSqrtResidueUnit (rationalPrimePlace p (Fact.out : p.Prime)))⁻¹) :=
+  normalizedLocalPrincipal_hecke_eigenvalue p α β
+
+end
+
+section
+
+open IsDedekindDomain Matrix Matrix.SpecialLinearGroup
+
+/-- Exact source consumer of `primitiveLocalInducedSpherical_hecke`. -/
+theorem actual_induced_hecke_primitiveLocalInducedSpherical_hecke_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (p : ℕ) [NeZero p] [Fact p.Prime] :
+    finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p)
+      (normalizedLocalPrincipalRepresentation (rationalPrimePlace p (Fact.out : p.Prime))
+        (primitiveSatakePlusUnit F p) (primitiveSatakeMinusUnit F p))
+      (primitiveLocalInducedSpherical F p Fact.out) =
+    ((Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p) •
+      primitiveLocalInducedSpherical F p Fact.out :=
+  primitiveLocalInducedSpherical_hecke F p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+
+/-- Exact source consumer of `smoothInducedCharacter_continuous`. -/
+theorem actual_induced_coefficient_smoothInducedCharacter_continuous_source (B : Subgroup G) (χ : B →* ℂ)
+    (f : smoothInducedCharacterSpace B χ) : Continuous f.val :=
+  smoothInducedCharacter_continuous B χ f
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (B K : Subgroup G) (χ : B →* ℂ) [CompactSpace K]
+    [MeasurableSpace K] [BorelSpace K] (μ : Measure K) [IsFiniteMeasure μ]
+
+/-- Exact source consumer of `smoothInducedCompactAverage_fixed`. -/
+theorem actual_induced_coefficient_smoothInducedCompactAverage_fixed_source [IsProbabilityMeasure μ]
+    (f : smoothInducedCharacterSpace B χ)
+    (hf : ∀ k : K, smoothInducedCharacterRepresentation B χ k.val f = f) :
+    smoothInducedCompactAverage B K χ μ f = f.val 1 :=
+  smoothInducedCompactAverage_fixed B K χ μ f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+/-- Exact source consumer of `finitePlaceInducedAverage_spherical`. -/
+theorem actual_induced_coefficient_finitePlaceInducedAverage_spherical_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ) :
+    finitePlaceInducedAverage v z₁ z₂ (finitePlaceInducedSpherical v z₁ z₂) = 1 :=
+  finitePlaceInducedAverage_spherical v z₁ z₂
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G V : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+    (ρ : Representation ℂ G V) (K : Subgroup G) (ℓ : V →ₗ[ℂ] ℂ)
+    (hℓ : ∀ k : K, ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (y : V) (hy : ∀ k : K, ρ k.val y = y)
+
+include hℓ hy
+
+/-- Exact source consumer of `sphericalFunctional_scalar_double_coset`. -/
+theorem actual_induced_coefficient_sphericalFunctional_scalar_double_coset_source (c a : G)
+    (hc : ∀ x : V, ρ c x = x) (l r : K) :
+    ℓ (ρ (c * l.val * a * r.val) y) = ℓ (ρ a y) :=
+  sphericalFunctional_scalar_double_coset ρ K ℓ hℓ y hy c a hc l r
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (ℓ : V →ₗ[ℂ] ℂ) (y : V)
+
+variable
+    (hℓ : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (hy : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ k.val y = y)
+
+include hℓ hy
+
+/-- Exact source consumer of `finitePlaceFunctionalRadial_forward`. -/
+theorem actual_induced_coefficient_finitePlaceFunctionalRadial_forward_source (n : ℕ) (i : Option (ZMod p))
+    (hi : i ≠ some 0) :
+    ℓ (ρ (finitePlaceHeckeRadialMatrix 1 p (Nat.coprime_one_right p)
+      (rationalPrimePlace p (Fact.out : p.Prime)) n i) y) =
+      finitePlaceFunctionalRadial p ρ ℓ y (n + 1) :=
+  finitePlaceFunctionalRadial_forward p ρ ℓ y hℓ hy n i hi
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (ℓ : V →ₗ[ℂ] ℂ) (y : V)
+    (hℓ : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (hy : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ k.val y = y)
+    (hc : ∀ u x, ρ (GeneralLinearGroup.scalar (Fin 2) u) x = x)
+
+include hℓ hy hc
+
+/-- Exact source consumer of `finitePlaceFunctionalHecke_eigen_recurrence`. -/
+theorem actual_induced_coefficient_finitePlaceFunctionalHecke_eigen_recurrence_source (μ : ℂ)
+    (heigen : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) ρ y = μ • y) :
+    μ * finitePlaceFunctionalRadial p ρ ℓ y 0 =
+      ((p : ℂ) + 1) * finitePlaceFunctionalRadial p ρ ℓ y 1 ∧
+    ∀ n, μ * finitePlaceFunctionalRadial p ρ ℓ y (n + 1) =
+      finitePlaceFunctionalRadial p ρ ℓ y n +
+        (p : ℂ) * finitePlaceFunctionalRadial p ρ ℓ y (n + 2) :=
+  finitePlaceFunctionalHecke_eigen_recurrence p ρ ℓ y hℓ hy hc μ heigen
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (ℓ : V →ₗ[ℂ] ℂ) (y : V)
+    (hℓ : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (hy : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ k.val y = y)
+    (hc : ∀ u x, ρ (GeneralLinearGroup.scalar (Fin 2) u) x = x)
+    (hn : ℓ y = 1) (z : ℂ)
+    (heigen : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) ρ y =
+      ((Real.sqrt p : ℂ) * z) • y)
+
+include hℓ hy hc hn heigen
+
+/-- Exact source consumer of `finitePlaceFunctional_unitary_unique`. -/
+theorem actual_induced_coefficient_finitePlaceFunctional_unitary_unique_source {W : Type*} [NormedAddCommGroup W]
+    [InnerProductSpace ℂ W]
+    (σ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) W)
+    (hσ : ∀ g a b, inner ℂ (σ g a) (σ g b) = inner ℂ a b)
+    (hσc : ∀ u a, σ (GeneralLinearGroup.scalar (Fin 2) u) a = a)
+    (w : W) (hw : inner ℂ w w = 1)
+    (hwK : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), σ k.val w = w)
+    (hwT : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) σ w =
+      ((Real.sqrt p : ℂ) * z) • w)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    ℓ (ρ g y) = inner ℂ w (σ g w) :=
+  finitePlaceFunctional_unitary_unique p ρ ℓ y hℓ hy hc hn z heigen σ hσ hσc w hw hwK hwT g
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G V W : Type*} [Group G] [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    [AddCommGroup W] [Module ℂ W]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (v : V) (w : W) (ℓ : W →ₗ[ℂ] ℂ)
+    (hcoeff : ∀ g, ℓ (σ g w) = inner ℂ v (ρ g v))
+
+include hρ hcoeff
+
+/-- Exact source consumer of `sphericalCoefficient_linearCombination_ker_le`. -/
+theorem actual_induced_coefficient_sphericalCoefficient_linearCombination_ker_le_source :
+    (Finsupp.linearCombination ℂ (fun g => σ g w)).ker ≤
+      (Finsupp.linearCombination ℂ (fun g => ρ g v)).ker :=
+  sphericalCoefficient_linearCombination_ker_le ρ σ hρ v w ℓ hcoeff
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+/-- Exact source consumer of `primitiveLocalInduced_smooth_coefficient`. -/
+theorem actual_induced_coefficient_primitiveLocalInduced_smooth_coefficient_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    primitiveLocalInducedAverage F p Fact.out
+      (normalizedLocalPrincipalRepresentation (rationalPrimePlace p (Fact.out : p.Prime))
+        (primitiveSatakePlusUnit F p) (primitiveSatakeMinusUnit F p) g
+        (primitiveLocalInducedSpherical F p Fact.out)) =
+    inner ℂ (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g
+        (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :=
+  primitiveLocalInduced_smooth_coefficient F hpN g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {G V : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+    (ρ : Representation ℂ G V) (v : V)
+
+/-- Exact original-object consumer of `representation_orbit_linearCombination`. -/
+theorem actual_induced_quotient_representation_orbit_linearCombination_source (g : G) (a : G →₀ ℂ) :
+    ρ g (Finsupp.linearCombination ℂ (fun h => ρ h v) a) =
+      Finsupp.linearCombination ℂ (fun h => ρ h v) (a.mapDomain (fun h => g * h)) :=
+  representation_orbit_linearCombination ρ v g a
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {G V W : Type*} [Group G] [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    [AddCommGroup W] [Module ℂ W]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (v : V) (w : W) (ℓ : W →ₗ[ℂ] ℂ)
+    (hcoeff : ∀ g, ℓ (σ g w) = inner ℂ v (ρ g v))
+
+/-- Exact original-object consumer of `sphericalCoefficientIntertwiner_surjective`. -/
+theorem actual_induced_quotient_sphericalCoefficientIntertwiner_surjective_source
+    (hspan : Submodule.span ℂ (Set.range (fun g => ρ g v)) = ⊤) :
+    Function.Surjective (sphericalCoefficientIntertwiner ρ σ hρ v w ℓ hcoeff) :=
+  sphericalCoefficientIntertwiner_surjective ρ σ hρ v w ℓ hcoeff hspan
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {G V W : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+    [AddCommGroup W] [Module ℂ W]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W)
+    (T : Representation.IntertwiningMap ρ σ)
+
+/-- Exact original-object consumer of `intertwiningQuotientEquiv_intertwines`. -/
+theorem actual_induced_quotient_intertwiningQuotientEquiv_intertwines_source (hs : Function.Surjective T)
+    (g : G) (x : V ⧸ T.toLinearMap.ker) :
+    T.toLinearMap.quotKerEquivOfSurjective hs (intertwiningQuotientRepresentation ρ σ T g x) =
+      σ g (T.toLinearMap.quotKerEquivOfSurjective hs x) :=
+  intertwiningQuotientEquiv_intertwines ρ σ T hs g x
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `primitiveLocalInduced_spherical_constituent`. -/
+theorem actual_induced_quotient_primitiveLocalInduced_spherical_constituent_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    Nonempty (Representation.Equiv (primitiveLocalInducedQuotientRepresentation F hpN)
+      (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) ∧
+      (adelicLocalSmoothRepresentation F.toCuspForm
+        (rationalPrimePlace p (Fact.out : p.Prime))).IsIrreducible :=
+  primitiveLocalInduced_spherical_constituent F hpN
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `homogeneousMatrixAction_diagonal_monomial`. -/
+theorem actual_induced_quotient_homogeneousMatrixAction_diagonal_monomial_source {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (a : ι → ℂ) (n : ℕ) (d : ι →₀ ℕ) (hd : d.degree = n) :
+    homogeneousMatrixAction n (Matrix.diagonal a) (homogeneousMonomial n d hd) =
+      (d.prod (fun i m => a i ^ m)) • homogeneousMonomial n d hd :=
+  homogeneousMatrixAction_diagonal_monomial a n d hd
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `homogeneousMonomial_span`. -/
+theorem actual_induced_quotient_homogeneousMonomial_span_source {ι : Type*} (n : ℕ) :
+    Submodule.span ℂ (Set.range (fun d : {d : ι →₀ ℕ | d.degree = n} =>
+      homogeneousMonomial (R := ℂ) n d.val d.property)) = ⊤ :=
+  homogeneousMonomial_span (R := ℂ) n
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `homogeneousUnitDiagonal_euler`. -/
+theorem actual_induced_quotient_homogeneousUnitDiagonal_euler_source (a b : ℂˣ) (n : ℕ) :
+    homogeneousMatrixEulerPolynomial n (gl2UnitDiagonalPair a b).val =
+      symmetricEulerPolynomial a.val b.val n :=
+  homogeneousUnitDiagonal_euler a b n
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `primitiveLocalInduced_actual_symmetric_factor`. -/
+theorem actual_induced_quotient_primitiveLocalInduced_actual_symmetric_factor_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (r : ℕ) (s : ℂ) :
+    Nonempty (Representation.Equiv (primitiveLocalInducedQuotientRepresentation F hpN)
+      (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) ∧
+    primeSpectralEulerFactor (primitiveSymmetricSpectralRoots F r) ⟨p, Fact.out⟩ s =
+      ((primitiveSymmetricMatrixEulerPolynomial F p r).eval ((p : ℂ) ^ (-s)))⁻¹ :=
+  primitiveLocalInduced_actual_symmetric_factor F hpN r s
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `primitiveSymmetricMatrix_hasProd_far`. -/
+theorem actual_induced_quotient_primitiveSymmetricMatrix_hasProd_far_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 2 ≤ k) (r : ℕ) {s : ℂ} (hs : (r : ℝ) + 1 < s.re) :
+    HasProd (fun p : Nat.Primes => primitiveSymmetricMatrixLocalFactor F r p s)
+      (primitiveSymmetricLFunction F r s) :=
+  primitiveSymmetricMatrix_hasProd_far F hk r hs
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R ι : Type*} [CommSemiring R] [Fintype ι]
+
+/-- Exact original-object consumer of `matrixPolynomialAction_mul`. -/
+theorem actual_arithmetic_symmetric_matrixPolynomialAction_mul_source (g h : Matrix ι ι R) :
+    matrixPolynomialAction (g * h) = (matrixPolynomialAction g).comp (matrixPolynomialAction h) :=
+  matrixPolynomialAction_mul g h
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R ι : Type*} [CommSemiring R] [Fintype ι]
+
+/-- Exact original-object consumer of `matrixCoefficientPolynomial_eval`. -/
+theorem actual_arithmetic_symmetric_matrixCoefficientPolynomial_eval_source (p : MvPolynomial ι R) (d : ι →₀ ℕ) (a : Matrix ι ι R) :
+    MvPolynomial.eval (fun ij : ι × ι => a ij.1 ij.2) (matrixCoefficientPolynomial p d) =
+      MvPolynomial.coeff d (matrixPolynomialAction a p) :=
+  matrixCoefficientPolynomial_eval p d a
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R : Type*} [CommRing R]
+open MvPolynomial Module
+
+/-- Exact original-object consumer of `homogeneousMonomial_span`. -/
+theorem actual_arithmetic_symmetric_homogeneousMonomial_span_source {ι : Type*} (n : ℕ) :
+    Submodule.span R (Set.range (fun d : {d : ι →₀ ℕ | d.degree = n} =>
+      homogeneousMonomial (R := R) n d.val d.property)) = ⊤ :=
+  homogeneousMonomial_span n
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R S ι : Type*} [CommRing R] [CommRing S] [Fintype ι]
+
+/-- Exact original-object consumer of `homogeneousCoefficientMap_GL`. -/
+theorem actual_arithmetic_symmetric_homogeneousCoefficientMap_GL_source [DecidableEq ι] (n : ℕ) (φ : R →+* S)
+    (g : Matrix.GeneralLinearGroup ι R) (p : homogeneousSubmodule ι R n) :
+    homogeneousCoefficientMap n φ (homogeneousGLRepresentation (R := R) (ι := ι) n g p) =
+      homogeneousGLRepresentation (R := S) (ι := ι) n
+        (Matrix.GeneralLinearGroup.map (n := ι) φ g)
+        (homogeneousCoefficientMap n φ p) :=
+  homogeneousCoefficientMap_GL n φ g p
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `homogeneousSymmetricGL_val`. -/
+theorem actual_arithmetic_symmetric_homogeneousSymmetricGL_val_source (n : ℕ) (g : GeneralLinearGroup (Fin 2) R) :
+    (homogeneousSymmetricGL n g).val =
+      LinearMap.toMatrix (binaryHomogeneousMonomialBasis n) (binaryHomogeneousMonomialBasis n)
+        (homogeneousGLRepresentation n g) :=
+  homogeneousSymmetricGL_val n g
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R S : Type*} [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `homogeneousSymmetricGL_map`. -/
+theorem actual_arithmetic_symmetric_homogeneousSymmetricGL_map_source (n : ℕ) (φ : R →+* S)
+    (g : GeneralLinearGroup (Fin 2) R) :
+    GeneralLinearGroup.map φ (homogeneousSymmetricGL n g) =
+      homogeneousSymmetricGL n (GeneralLinearGroup.map φ g) :=
+  homogeneousSymmetricGL_map n φ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `homogeneousSymmetricGL_continuous`. -/
+theorem actual_arithmetic_symmetric_homogeneousSymmetricGL_continuous_source (n : ℕ) :
+    Continuous (homogeneousSymmetricGL (R := R) n) :=
+  homogeneousSymmetricGL_continuous n
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {G R S : Type*} [Group G] [CommRing R]
+    [CommRing S]
+
+/-- Exact original-object consumer of `symmetricMatrixRepresentation_map`. -/
+theorem actual_arithmetic_symmetric_symmetricMatrixRepresentation_map_source (n : ℕ) (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (φ : R →+* S) :
+    (GeneralLinearGroup.map φ).comp (symmetricMatrixRepresentation n ρ) =
+      symmetricMatrixRepresentation n ((GeneralLinearGroup.map φ).comp ρ) :=
+  symmetricMatrixRepresentation_map n ρ φ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `groupAlgebraMatrix_map`. -/
+theorem actual_matrix_determinant_groupAlgebraMatrix_map_source (ρ : G →* GeneralLinearGroup ι R)
+    (φ : R →+* S) (x : MonoidAlgebra R G) :
+    φ.mapMatrix (groupAlgebraMatrix ρ x) =
+      groupAlgebraMatrix ((GeneralLinearGroup.map φ).comp ρ)
+        (MonoidAlgebra.mapRingHom G φ x) :=
+  groupAlgebraMatrix_map ρ φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `matrixRepresentationDeterminant_map`. -/
+theorem actual_matrix_determinant_matrixRepresentationDeterminant_map_source (ρ : G →* GeneralLinearGroup ι R)
+    (φ : R →+* S) (x : MonoidAlgebra R G) :
+    φ (matrixRepresentationDeterminant ρ x) =
+      matrixRepresentationDeterminant ((GeneralLinearGroup.map φ).comp ρ)
+        (MonoidAlgebra.mapRingHom G φ x) :=
+  matrixRepresentationDeterminant_map ρ φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S T : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S] [CommRing T]
+
+/-- Exact original-object consumer of `determinantCoefficientLaw_natural`. -/
+theorem actual_matrix_determinant_determinantCoefficientLaw_natural_source (ρ : G →* GeneralLinearGroup ι R)
+    (φ : R →+* S) (ψ : S →+* T) (x : MonoidAlgebra S G) :
+    ψ (determinantCoefficientLaw ρ φ x) =
+      determinantCoefficientLaw ρ (ψ.comp φ) (MonoidAlgebra.mapRingHom G ψ x) :=
+  determinantCoefficientLaw_natural ρ φ ψ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G R S : Type*} [Group G] [CommRing R] [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `groupAlgebraScalarExtensionEquiv_tmul`. -/
+theorem actual_matrix_determinant_groupAlgebraScalarExtensionEquiv_tmul_source (a : S) (x : MonoidAlgebra R G) :
+    groupAlgebraScalarExtensionEquiv (a ⊗ₜ[R] x) =
+      a • MonoidAlgebra.mapRingHom G (algebraMap R S) x :=
+  groupAlgebraScalarExtensionEquiv_tmul a x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G R S : Type*} [Group G] [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `symmetricMatrixRepresentation_determinant_baseChange`. -/
+theorem actual_matrix_determinant_symmetricMatrixRepresentation_determinant_baseChange_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (φ : R →+* S)
+    (x : MonoidAlgebra S G) :
+    determinantCoefficientLaw (symmetricMatrixRepresentation n ρ) φ x =
+      matrixRepresentationDeterminant
+        (symmetricMatrixRepresentation n ((GeneralLinearGroup.map φ).comp ρ)) x :=
+  symmetricMatrixRepresentation_determinant_baseChange n ρ φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `matrixTensorDeterminant_natural`. -/
+theorem actual_matrix_determinant_matrixTensorDeterminant_natural_source {T : Type*} [CommRing T] [Algebra R T]
+    (ρ : G →* GeneralLinearGroup ι R) (ψ : S →ₐ[R] T)
+    (x : S ⊗[R] MonoidAlgebra R G) :
+    ψ (matrixTensorDeterminant ρ x) =
+      matrixTensorDeterminant ρ
+        (Algebra.TensorProduct.map ψ (AlgHom.id R (MonoidAlgebra R G)) x) :=
+  matrixTensorDeterminant_natural ρ ψ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `determinantCharacteristicPolynomial_annihilates`. -/
+theorem actual_matrix_determinant_determinantCharacteristicPolynomial_annihilates_source
+    (ρ : G →* GeneralLinearGroup ι R) (g : G) :
+    Polynomial.aeval (ρ g).val (determinantCharacteristicPolynomial ρ g) = 0 :=
+  determinantCharacteristicPolynomial_annihilates ρ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixCharacteristicCoefficient_continuous`. -/
+theorem actual_matrix_determinant_matrixCharacteristicCoefficient_continuous_source [TopologicalSpace R] [IsTopologicalRing R]
+    (k : ℕ) : Continuous (fun A : Matrix ι ι R => A.charpoly.coeff k) :=
+  matrixCharacteristicCoefficient_continuous k
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R : Type*} [Group G] [TopologicalSpace G]
+    [Fintype ι] [DecidableEq ι] [CommRing R]
+    [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `symmetricMatrixRepresentation_determinant_continuous`. -/
+theorem actual_matrix_determinant_symmetricMatrixRepresentation_determinant_continuous_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (hρ : Continuous ρ) (k : ℕ) :
+    Continuous (fun g =>
+      (determinantCharacteristicPolynomial (symmetricMatrixRepresentation n ρ) g).coeff k) :=
+  symmetricMatrixRepresentation_determinant_continuous n ρ hρ k
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `determinantCoefficientLaw_conjugate`. -/
+theorem actual_natural_determinant_determinantCoefficientLaw_conjugate_source (ρ σ : G →* GeneralLinearGroup ι R)
+    (A : GeneralLinearGroup ι R) (h : ∀ g, σ g = A * ρ g * A⁻¹)
+    (φ : R →+* S) (x : MonoidAlgebra S G) :
+    determinantCoefficientLaw σ φ x = determinantCoefficientLaw ρ φ x :=
+  determinantCoefficientLaw_conjugate ρ σ A h φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u v w z u'
+
+variable {R : Type u} {G : Type v} {ι : Type z}
+    [CommRing R] [Group G] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixGroupDeterminantLaw_baseChange`. -/
+theorem actual_natural_determinant_matrixGroupDeterminantLaw_baseChange_source {S : Type u'} [CommRing S]
+    (ρ : G →* GeneralLinearGroup ι R) (φ : R →+* S) :
+    (matrixGroupDeterminantLaw ρ : GroupDeterminantLaw.{u, v, w} R G (Fintype.card ι)).baseChange φ =
+      matrixGroupDeterminantLaw ((GeneralLinearGroup.map φ).comp ρ) :=
+  matrixGroupDeterminantLaw_baseChange ρ φ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {σ ι R S : Type*} [Fintype σ] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `matrixCombinationDeterminant_groupAlgebra`. -/
+theorem actual_natural_determinant_matrixCombinationDeterminant_groupAlgebra_source {G : Type*} [Group G]
+    (ρ : G →* GeneralLinearGroup ι R) (g : σ → G) :
+    Matrix.det (groupAlgebraMatrix ((GeneralLinearGroup.map
+      (MvPolynomial.C : R →+* MvPolynomial σ R)).comp ρ)
+        (∑ t, MonoidAlgebra.single (g t) (MvPolynomial.X t))) =
+      matrixCombinationDeterminant (fun t => (ρ (g t)).val) :=
+  matrixCombinationDeterminant_groupAlgebra ρ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {σ ι R : Type*} [Fintype σ] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixGroupDeterminantLaw_multicoefficient_continuous`. -/
+theorem actual_natural_determinant_matrixGroupDeterminantLaw_multicoefficient_continuous_source
+    {G : Type*} [Group G] [TopologicalSpace G]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ) (d : σ →₀ ℕ) :
+    Continuous (fun g : σ → G => MvPolynomial.coeff d
+      ((matrixGroupDeterminantLaw ρ).eval (MvPolynomial σ R) MvPolynomial.C
+        (∑ t, MonoidAlgebra.single (g t) (MvPolynomial.X t)))) :=
+  matrixGroupDeterminantLaw_multicoefficient_continuous ρ hρ d
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `dualMatrixInfinitesimal_mul`. -/
+theorem actual_first_order_dualMatrixInfinitesimal_mul_source (A B : GeneralLinearGroup ι (DualNumber R)) :
+    dualMatrixInfinitesimal (A * B) = dualMatrixInfinitesimal A +
+      (dualMatrixReduction A).val * dualMatrixInfinitesimal B *
+        ((dualMatrixReduction A)⁻¹).val :=
+  dualMatrixInfinitesimal_mul A B
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderCocycle_apply`. -/
+theorem actual_first_order_matrixFirstOrderCocycle_apply_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) (g : G) :
+    matrixFirstOrderCocycle ρ τ g = dualMatrixInfinitesimal (τ.val g) :=
+  matrixFirstOrderCocycle_apply ρ τ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderCocycle_fromCocycle`. -/
+theorem actual_first_order_matrixFirstOrderCocycle_fromCocycle_source (ρ : G →* GeneralLinearGroup ι R)
+    (c : groupCohomology.cocycles₁ (matrixAdjointRep ρ)) :
+    matrixFirstOrderCocycle ρ (firstOrderLiftFromCocycle ρ c) = c :=
+  matrixFirstOrderCocycle_fromCocycle ρ c
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `firstOrderLiftFromCocycle_cocycle`. -/
+theorem actual_first_order_firstOrderLiftFromCocycle_cocycle_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) :
+    firstOrderLiftFromCocycle ρ (matrixFirstOrderCocycle ρ τ) = τ :=
+  firstOrderLiftFromCocycle_cocycle ρ τ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `dualMatrixInfinitesimal_strictConjugate`. -/
+theorem actual_strict_deformation_dualMatrixInfinitesimal_strictConjugate_source (A : GeneralLinearGroup ι (DualNumber R))
+    (X : Matrix ι ι R) :
+    dualMatrixInfinitesimal (dualMatrixStrictUnit X * A * (dualMatrixStrictUnit X)⁻¹) =
+      dualMatrixInfinitesimal A + X -
+        (dualMatrixReduction A).val * X * ((dualMatrixReduction A)⁻¹).val :=
+  dualMatrixInfinitesimal_strictConjugate A X
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderConjugate_coboundary`. -/
+theorem actual_strict_deformation_matrixFirstOrderConjugate_coboundary_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) (X : Matrix ι ι R) :
+    (fun g => matrixFirstOrderCocycle ρ τ g -
+      matrixFirstOrderCocycle ρ (matrixFirstOrderConjugate ρ τ X) g) =
+        groupCohomology.d₀₁ (matrixAdjointRep ρ) X :=
+  matrixFirstOrderConjugate_coboundary ρ τ X
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderStrictlyConjugate_iff`. -/
+theorem actual_strict_deformation_matrixFirstOrderStrictlyConjugate_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ σ : MatrixFirstOrderLift ρ) :
+    MatrixFirstOrderStrictlyConjugate ρ τ σ ↔
+      groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ τ) =
+        groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ σ) :=
+  matrixFirstOrderStrictlyConjugate_iff ρ τ σ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderLift_continuous_iff`. -/
+theorem actual_strict_deformation_matrixFirstOrderLift_continuous_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) (τ : MatrixFirstOrderLift ρ) :
+    Continuous τ.val ↔ Continuous (fun g => matrixFirstOrderCocycle ρ τ g) :=
+  matrixFirstOrderLift_continuous_iff ρ hρ τ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `dualMatrixUnit_det`. -/
+theorem actual_deformation_conditions_dualMatrixUnit_det_source (A : GeneralLinearGroup ι (DualNumber R)) :
+    Matrix.det A.val = (Matrix.det (dualMatrixReduction A).val,
+      Matrix.trace (dualMatrixInfinitesimal A) * Matrix.det (dualMatrixReduction A).val) :=
+  dualMatrixUnit_det A
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderLift_fixedDeterminant_iff`. -/
+theorem actual_deformation_conditions_matrixFirstOrderLift_fixedDeterminant_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) :
+    (∀ g, Matrix.det (τ.val g).val =
+      TrivSqZeroExt.inl (Matrix.det (ρ g).val)) ↔
+        ∀ g, Matrix.trace (matrixFirstOrderCocycle ρ τ g) = 0 :=
+  matrixFirstOrderLift_fixedDeterminant_iff ρ τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+omit [IsTopologicalGroup G] in
+/-- Exact original-object consumer of `continuousMatrixFirstOrderClass_eq_iff`. -/
+theorem actual_deformation_conditions_continuousMatrixFirstOrderClass_eq_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) (τ σ : MatrixFirstOrderLift ρ)
+    (hτ : Continuous τ.val) (hσ : Continuous σ.val) :
+    continuousMatrixFirstOrderClass ρ hρ τ hτ = continuousMatrixFirstOrderClass ρ hρ σ hσ ↔
+      MatrixFirstOrderStrictlyConjugate ρ τ σ :=
+  continuousMatrixFirstOrderClass_eq_iff ρ hρ τ σ hτ hσ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G H ι R : Type} [Group G] [Group H] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace H] [IsTopologicalGroup H]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+omit [IsTopologicalGroup G] [IsTopologicalGroup H] in
+/-- Exact original-object consumer of `continuousMatrixAdjointH1Restriction_class`. -/
+theorem actual_deformation_conditions_continuousMatrixAdjointH1Restriction_class_source (ρ : G →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) (φ : H →* G) (hφ : Continuous φ)
+    (τ : MatrixFirstOrderLift ρ) (hτ : Continuous τ.val) :
+    continuousMatrixAdjointH1Restriction ρ hρ φ hφ
+      (continuousMatrixFirstOrderClass ρ hρ τ hτ) =
+        continuousMatrixFirstOrderClass (ρ.comp φ) (hρ.comp hφ)
+          (matrixFirstOrderLiftRestriction ρ τ φ) (hτ.comp hφ) :=
+  continuousMatrixAdjointH1Restriction_class ρ hρ φ hφ τ hτ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G ι R : Type*) [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateMatrix_mul`. -/
+theorem actual_coordinate_representation_representationCoordinateMatrix_mul_source (g h : G) :
+    representationCoordinateMatrix G ι R (g * h) =
+      representationCoordinateMatrix G ι R g * representationCoordinateMatrix G ι R h :=
+  representationCoordinateMatrix_mul G ι R g h
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G ι R : Type*) [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `universalMatrixRepresentation_entry`. -/
+theorem actual_coordinate_representation_universalMatrixRepresentation_entry_source (g : G) (i j : ι) :
+    (universalMatrixRepresentation G ι R g).val i j =
+      Ideal.Quotient.mk (representationCoordinateIdeal G ι R)
+        (MvPolynomial.X (g, i, j)) :=
+  universalMatrixRepresentation_entry G ι R g i j
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `universalMatrixRepresentation_evaluation`. -/
+theorem actual_coordinate_representation_universalMatrixRepresentation_evaluation_source (ρ : G →* GeneralLinearGroup ι S) :
+    (GeneralLinearGroup.map (representationCoordinateEvaluation (R := R) ρ).toRingHom).comp
+      (universalMatrixRepresentation G ι R) = ρ :=
+  universalMatrixRepresentation_evaluation ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R S T : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing S] [Algebra R S] [CommRing T] [Algebra R T]
+
+/-- Exact original-object consumer of `representationCoordinateEvaluation_fromCoordinates`. -/
+theorem actual_coordinate_representation_representationCoordinateEvaluation_fromCoordinates_source
+    (f : RepresentationCoordinateAlgebra G ι R →ₐ[R] S) :
+    representationCoordinateEvaluation (representationFromCoordinates f) = f :=
+  representationCoordinateEvaluation_fromCoordinates f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [DiscreteTopology R]
+
+/-- Exact original-object consumer of `continuousMatrixRepresentation_quotient_finite`. -/
+theorem actual_finite_symmetric_parameters_continuousMatrixRepresentation_quotient_finite_source [CompactSpace G]
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ) : Finite (G ⧸ ρ.ker) :=
+  continuousMatrixRepresentation_quotient_finite ρ hρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `continuousMatrixRepresentation_noetherianCoordinates`. -/
+theorem actual_finite_symmetric_parameters_continuousMatrixRepresentation_noetherianCoordinates_source
+    [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G]
+    [TopologicalSpace R] [DiscreteTopology R] [IsNoetherianRing R]
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ) :
+    IsNoetherianRing (RepresentationCoordinateAlgebra (G ⧸ ρ.ker) ι R) ∧
+      ∃ f : RepresentationCoordinateAlgebra (G ⧸ ρ.ker) ι R →ₐ[R] R,
+        ((GeneralLinearGroup.map f.toRingHom).comp
+          (universalMatrixRepresentation (G ⧸ ρ.ker) ι R)).comp
+            (QuotientGroup.mk' ρ.ker) = ρ :=
+  continuousMatrixRepresentation_noetherianCoordinates ρ hρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G R : Type*) [Group G] [CommRing R]
+
+variable {G R} {S : Type*} [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `symmetricRepresentationCoordinateMap_evaluation`. -/
+theorem actual_finite_symmetric_parameters_symmetricRepresentationCoordinateMap_evaluation_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) S) :
+    representationCoordinateEvaluation (R := R) (symmetricMatrixRepresentation n ρ) =
+      (representationCoordinateEvaluation (R := R) ρ).comp
+        (symmetricRepresentationCoordinateMap G R n) :=
+  symmetricRepresentationCoordinateMap_evaluation n ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricFirstOrderLift_cohomology`. -/
+theorem actual_finite_symmetric_parameters_symmetricFirstOrderLift_cohomology_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (τ σ : MatrixFirstOrderLift ρ)
+    (h : groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ τ) =
+      groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ σ)) :
+    groupCohomology.H1π (matrixAdjointRep (symmetricMatrixRepresentation n ρ))
+      (matrixFirstOrderCocycle _ (symmetricFirstOrderLift n ρ τ)) =
+        groupCohomology.H1π (matrixAdjointRep (symmetricMatrixRepresentation n ρ))
+          (matrixFirstOrderCocycle _ (symmetricFirstOrderLift n ρ σ)) :=
+  symmetricFirstOrderLift_cohomology n ρ τ σ h
+
+end
+
 end Dubon2026.SemanticRegression

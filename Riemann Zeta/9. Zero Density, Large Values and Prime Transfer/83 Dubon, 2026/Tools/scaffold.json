@@ -208,6 +208,50 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicAlgebraicFiniteSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicAlgebraicModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBadLocalFixedLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBadPlaceFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBadPlaceFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBadRealBaseCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBadRealBaseEquivariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBadRealTensorBase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicBoundedHeckeTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicClassicalHeckeEigenBridge.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicClassicalReconstruction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicClosedInvariantSpan.lean",
       "role": "Extension"
     },
@@ -236,6 +280,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicCyclicHeckeTrace.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicCyclicHilbertCompletion.lean",
       "role": "Extension"
     },
@@ -256,6 +304,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicCyclicLevelDescent.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicCyclicParameterContinuity.lean",
       "role": "Extension"
     },
@@ -272,7 +324,207 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicDirichletCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDirichletDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDirichletLocalRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDirichletPrincipal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDirichletQuadratic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDirichletSelfTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDirichletUnitary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDistinctLocalHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicDistinctPlaceCoefficients.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicEnvelopingCasimir.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryFiniteMixedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryFiniteTensorIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryFiniteTupleCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryFiniteTupleGram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryLocalCoreIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryLocalFixedLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryLocalIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryLocalMixedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryLocalNormalizedFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicEveryLocalSchur.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteAssociationCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteClassicalCusp.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteClassicalRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteFamilyFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteFamilyMixedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteFamilyReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteFamilyTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteFixedRealRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteLowestClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteOpenLowestAdmissible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFinitePlaceProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteProductRealCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteRealTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteRealTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteReferenceCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteReferenceCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteReferenceCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteReferenceDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteReferenceExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorAssociation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorAssociationRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorCompletedAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTensorReindexCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTupleCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFiniteTupleGram.lean",
       "role": "Extension"
     },
     {
@@ -280,7 +532,43 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicFixedCoreFiniteDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFixedLowestClassical.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFixedLowestDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullFiniteAdmissible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullFiniteCoreCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullFiniteSmooth.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicFullGL2Derivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullOrbitWeightProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullRealHilbertBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicFullRealWeightLines.lean",
       "role": "Extension"
     },
     {
@@ -325,6 +613,58 @@
     },
     {
       "path": "Extension/Dubon2026/AdelicGlobalRaisingClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodActionBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodBaseProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodLevelBaseDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodPlaceEnumeration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodPrimeSpherical.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodTail.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicGoodTailTensorInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHeckeClassicalReconstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHeckeClassicalRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHeckeEigenNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHeckeLocalBridge.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHeckeRationalRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicHeckeRealComponent.lean",
       "role": "Extension"
     },
     {
@@ -400,6 +740,38 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicIntegerProjectionReal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicIntegerRotationWeightSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicIntegerWeightAdmissible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicIntegerWeightFiniteClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicIntertwinerClassical.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicIntrinsicLocalHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicInvariantReconstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicIrrationalRotationSpectrum.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicKFiniteGL2Character.lean",
       "role": "Extension"
     },
@@ -420,6 +792,22 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicLevelFamilyFaithful.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLevelFiniteSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLevelProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLevelProjectionCore.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicLiftCasimir.lean",
       "role": "Extension"
     },
@@ -428,11 +816,235 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicLocalAdmissible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalAwayFixed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalAwayTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalAwayTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalAwayTensorCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalAwayTensorRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalBoundedHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCartanCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCentralCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalClosedHeckeEigen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalClosedUnitReference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCoreIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCoreProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCyclicClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCyclicCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCyclicFixedLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCyclicIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCyclicProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalCyclicSchur.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFixedFullAwayClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFixedSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayFixedProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayTensorCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayTensorRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullAwayTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullFixedHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalFullMixedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalHeckeEulerPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalHeckeSpectralParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalHeckeSymmetric.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalMixedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalOpenFixed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalRadialRecurrence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalRadialVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSelfTwistHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSmoothCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSmoothRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSphericalEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSphericalFixedLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSphericalFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSphericalHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSphericalSatake.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSphericalTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalSubgroupProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalUnitOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicLocalUnitSphericalFormula.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicLowestWeightIrreducible.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/AdelicLowestWeightJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicMissingIntegerWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicNonCMDirichletTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicNonCMQuadraticTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicNonCMSelfTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicNormalizedCoefficientFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicNormalizedHecke.lean",
       "role": "Extension"
     },
     {
@@ -448,7 +1060,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicOrthogonalTypeAdmissible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPlaceComplementCriterion.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicPositiveRightAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPrimitiveHeckeEigen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPrimitiveIntertwinerLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPrimitiveIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPrimitiveLocalEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPrimitiveQuadraticClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicPrimitiveSchur.lean",
       "role": "Extension"
     },
     {
@@ -500,6 +1144,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicQuadraticCharacterRigidity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicQuadraticCharacterValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicQuadraticDirichletClassification.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicRaisingCompactFinite.lean",
       "role": "Extension"
     },
@@ -524,11 +1180,51 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicRationalTranslateRestriction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicRealCyclicClosure.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/AdelicRealCyclicIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteClosureGram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteCommute.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteCompletedAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFinitePlaceCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteTensorCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRealFiniteTensorRange.lean",
       "role": "Extension"
     },
     {
@@ -552,11 +1248,107 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicRealTypeMultiplicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicReflectedWeightProjection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicReflectionPairing.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicRestrictedActionOnStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedAlgebraicAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedCompletedAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedFiniteOrbitCoverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedFiniteTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedFiniteTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedReferenceExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedTensorBase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedTensorChain.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedTensorCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedTensorDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRestrictedTensorDirectLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRotationProjectionReal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicRotationWeightSpace.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicScalarCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSelfTwistQuadratic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedFiniteAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedFiniteCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedFiniteFamilyDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedFiniteIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedRaisingClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedRaisingFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSignedWeightAdmissible.lean",
       "role": "Extension"
     },
     {
@@ -588,6 +1380,86 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdelicSplitActionOnStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitAlgebraicAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitCompletedAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitStageAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitStageMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitTensorChain.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitTensorCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitTensorDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSplitTensorDirectLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelClassicalCusp.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelClassicalFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelFiniteDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelFiniteSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelFixedSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelLowestFiniteDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicSublevelProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicTensorReferenceCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicTensorReferenceInclusion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicTensorUnitReference.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdelicUnipotentAverages.lean",
       "role": "Extension"
     },
@@ -605,6 +1477,10 @@
     },
     {
       "path": "Extension/Dubon2026/AdelicUnipotentQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdelicUnitReferenceVector.lean",
       "role": "Extension"
     },
     {
@@ -760,6 +1636,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CanonicalAdelicLiftLinear.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CanonicalAdicIntegralDensity.lean",
       "role": "Extension"
     },
@@ -824,6 +1704,22 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ClosedRepresentationInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ClosedSpanFamilyDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ClosedSpanOrthogonality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CocycleFirstOrderLift.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CoefficientScaling.lean",
       "role": "Extension"
     },
@@ -832,7 +1728,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactInvariantProjection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CompactJetCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactOpenOrbitFinite.lean",
       "role": "Extension"
     },
     {
@@ -853,6 +1757,14 @@
     },
     {
       "path": "Extension/Dubon2026/CompactRealOrbitAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactRingIntegerIdeals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactRingUnitCongruence.lean",
       "role": "Extension"
     },
     {
@@ -904,11 +1816,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousAdjointCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousAdjointRestriction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCyclicScalar.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/ContinuousEndpointZeroDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFirstOrderDeformation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGramClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousRepresentationDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousRepresentationFiniteQuotient.lean",
       "role": "Extension"
     },
     {
@@ -1196,7 +2132,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CyclicProjectionCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DenseEigenfamilyEigenspace.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/DerivativeGcdLayers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DeterminantCharacteristicPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DeterminantCoefficientLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DeterminantMulticoefficientContinuity.lean",
       "role": "Extension"
     },
     {
@@ -1209,6 +2165,10 @@
     },
     {
       "path": "Extension/Dubon2026/DirichletPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DirichletPrimitiveAdelicCharacter.lean",
       "role": "Extension"
     },
     {
@@ -1237,6 +2197,14 @@
     },
     {
       "path": "Extension/Dubon2026/DoubleGammaOscillation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DualMatrixInfinitesimal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DualMatrixStrictUnits.lean",
       "role": "Extension"
     },
     {
@@ -1304,7 +2272,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteAdeleIntegerIdealBasis.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteAdeleIntegralCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleIntegralResidue.lean",
       "role": "Extension"
     },
     {
@@ -1312,11 +2288,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteAdeleResidueChangeLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleResidueRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdeleResidueUnits.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteAdeleUnitPivot.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteAdelicClassicalTranslate.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteAdelicCompactLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicCoordinateRestriction.lean",
       "role": "Extension"
     },
     {
@@ -1328,7 +2324,71 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteAdelicHeckeConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicHeckeLocalSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicHeckeTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicHeckeUpperCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLevelAlmostEverywhere.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLevelLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLevelResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalAwayProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalGL2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalUnitHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicLocalUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicPlaceRemoval.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteAdelicProjectiveCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicRestrictionHom.lean",
       "role": "Extension"
     },
     {
@@ -1341,6 +2401,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteAdelicScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteAdelicSublevel.lean",
       "role": "Extension"
     },
     {
@@ -1368,6 +2432,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteEigenPolynomialKernel.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteExceptionalMeanValue.lean",
       "role": "Extension"
     },
@@ -1388,7 +2456,63 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteHilbertReferenceExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteHilbertTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteHilbertTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteHilbertTensorAssociation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteHilbertTensorReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdeleCharacterLocalUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdeleCharacterUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdeleDirichletCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdeleDirichletContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdeleIntegralNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdelePositiveUnitUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIdelePrimeAway.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIntertwinerMultiplicity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteInvariantAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteLevelSL2Density.lean",
       "role": "Extension"
     },
     {
@@ -1401,6 +2525,166 @@
     },
     {
       "path": "Extension/Dubon2026/FinitePadicSL2Approximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceDirichletDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceFunctionalHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceFunctionalRadial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceFunctionalSpherical.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceGL2Cartan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceGL2DiagonalReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceGL2ExactDoubleCoset.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceGL2IntegralReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceGL2Iwasawa.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceGL2UnitReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeCharacterTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeCosetDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeDiagonalPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeLevelIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeRadialCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeRadialDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeRadialMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeRadialTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeRepresentativeEntries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeSwap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeSymmetric.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceHeckeUpper.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceInducedAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceIntegerUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceIntegralDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceIntegralElementary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceLevelTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceRadialCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceRadialEigenRecurrence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceSphericalCyclicEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceSphericalFixedHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceSphericalFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceSphericalInduced.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceSphericalLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceSphericalUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceUnramifiedCharacter.lean",
       "role": "Extension"
     },
     {
@@ -1417,6 +2701,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteProjectiveGL2Topology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteQuotientCoordinateEvaluation.lean",
       "role": "Extension"
     },
     {
@@ -1452,7 +2740,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteWeightLadder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FirstOrderCohomologyClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FirstOrderDeformationEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FirstOrderMatrixDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FirstOrderStrictConjugation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FirstRankinPoleCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedCosetRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedDeterminantFirstOrderLift.lean",
       "role": "Extension"
     },
     {
@@ -1485,6 +2801,22 @@
     },
     {
       "path": "Extension/Dubon2026/FundamentalDomainUnfolding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GL2CoordinatePivot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GL2DiagonalSwap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GL2LowerDiagonalCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GL2UnitDiagonalPair.lean",
       "role": "Extension"
     },
     {
@@ -1736,6 +3068,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GeneralLinearUpperZero.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GeneralOutsideDensity.lean",
       "role": "Extension"
     },
@@ -1776,7 +3112,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GramDenseFamilyEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GramFamilyIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GramSpanCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GramSpanIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GramSpanningIsometry.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GridProductBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GroupAlgebraMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GroupAlgebraScalarExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GroupDeterminantLaw.lean",
       "role": "Extension"
     },
     {
@@ -1876,6 +3244,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HeckeRadialNormalization.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HeckeSlashIntegrability.lean",
       "role": "Extension"
     },
@@ -1889,6 +3261,10 @@
     },
     {
       "path": "Extension/Dubon2026/HeckeTriangular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HeckeUnitaryScalarNormalization.lean",
       "role": "Extension"
     },
     {
@@ -1948,7 +3324,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HomogeneousAlgebraicCoefficients.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HomogeneousCentralCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousCoefficientChange.lean",
       "role": "Extension"
     },
     {
@@ -1957,6 +3341,10 @@
     },
     {
       "path": "Extension/Dubon2026/HomogeneousDeterminantTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousDiagonalAction.lean",
       "role": "Extension"
     },
     {
@@ -1976,11 +3364,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HomogeneousGroupIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousHighestWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousMonomialBasis.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HomogeneousNormDerivative.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/HomogeneousNormedSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousPolynomialCoefficients.lean",
       "role": "Extension"
     },
     {
@@ -1992,11 +3400,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HomogeneousSatakeEuler.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HomogeneousScalarAction.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/HomogeneousScalarMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousSymmetricBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousSymmetricContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousSymmetricMatrix.lean",
       "role": "Extension"
     },
     {
@@ -2036,7 +3460,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/IntegerIrrationalCharacter.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/IntegralAdelicProjectiveFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralGamma0FiniteResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralIdeleDirichletDescent.lean",
       "role": "Extension"
     },
     {
@@ -2052,6 +3488,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/IntertwiningQuotientEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InvariantProjectionPreservation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/InverseCharacteristic.lean",
       "role": "Extension"
     },
@@ -2061,6 +3505,10 @@
     },
     {
       "path": "Extension/Dubon2026/IrrationalRotationCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IrreducibleRestriction.lean",
       "role": "Extension"
     },
     {
@@ -2085,6 +3533,14 @@
     },
     {
       "path": "Extension/Dubon2026/IsolatedTorusSplit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IsometricRepresentationCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IwasawaInducedSection.lean",
       "role": "Extension"
     },
     {
@@ -2252,6 +3708,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LinearIsometryCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LinearIsometryCompletionFunctor.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LinearMapSmoothJets.lean",
       "role": "Extension"
     },
@@ -2265,6 +3729,30 @@
     },
     {
       "path": "Extension/Dubon2026/LinearSummatoryPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedDiagonalValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedHeckeCosetMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedHeckeEigenvalue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedHeckeValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedUpperFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedUpperValue.lean",
       "role": "Extension"
     },
     {
@@ -2308,6 +3796,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MatrixAdjointCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixCharacteristicContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixCombinationDeterminant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MatrixPolynomialAction.lean",
       "role": "Extension"
     },
@@ -2325,6 +3825,14 @@
     },
     {
       "path": "Extension/Dubon2026/MatrixPolynomialTangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixRepresentationDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTensorDeterminant.lean",
       "role": "Extension"
     },
     {
@@ -2496,11 +4004,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/NormalizedLocalHeckeEigenvalue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormalizedLocalPrincipalSeries.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OrbitProbability.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/OrthogonalClosureBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OrthogonalGeneratorLine.lean",
       "role": "Extension"
     },
     {
@@ -2780,11 +4300,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitiveInducedCyclicQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveInducedSphericalCoefficient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitiveLatticeScaling.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/PrimitiveLatticeSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveLocalInducedHecke.lean",
       "role": "Extension"
     },
     {
@@ -2808,11 +4340,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimitivePrimeMultiplicityOne.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimitivePurityFromContinuation.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/PrimitiveRamifiedBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSatakeNonSpecial.lean",
       "role": "Extension"
     },
     {
@@ -2857,6 +4397,14 @@
     },
     {
       "path": "Extension/Dubon2026/PrimitiveSquareIncompleteProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveStrongMultiplicityOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveSymmetricDualEuler.lean",
       "role": "Extension"
     },
     {
@@ -2952,11 +4500,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ProjectionCoreDensity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ProjectiveEisensteinCosets.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/ProjectiveTranslationStrip.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/QuadraticCharacterCongruence.lean",
       "role": "Extension"
     },
     {
@@ -2968,7 +4524,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RadialHeckeFiniteSum.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RadialInnerIntegrals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RadialRecurrenceUniqueness.lean",
       "role": "Extension"
     },
     {
@@ -3160,6 +4724,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalCuspSlashSpan.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalFiniteAdeleDensity.lean",
       "role": "Extension"
     },
@@ -3177,6 +4745,14 @@
     },
     {
       "path": "Extension/Dubon2026/RationalGL2CuspPeriod.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalIdeleCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimePlace.lean",
       "role": "Extension"
     },
     {
@@ -3241,6 +4817,10 @@
     },
     {
       "path": "Extension/Dubon2026/RealCyclicRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealDirichletSignCharacter.lean",
       "role": "Extension"
     },
     {
@@ -3348,6 +4928,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealPositiveSlashLift.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealPositiveUnitaryLift.lean",
       "role": "Extension"
     },
@@ -3404,11 +4988,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RealQuadraticCharacter.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RealRootCountLayers.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/RealRotationGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealRotationReflection.lean",
       "role": "Extension"
     },
     {
@@ -3465,6 +5057,10 @@
     },
     {
       "path": "Extension/Dubon2026/RealVerticalJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RealWeightLiftLinear.lean",
       "role": "Extension"
     },
     {
@@ -3537,6 +5133,42 @@
     },
     {
       "path": "Extension/Dubon2026/RegularZeroDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationConjugateFixed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCoordinateRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCosetTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationDeterminantConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationOrbitRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationScalarTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationSphericalFunctional.lean",
       "role": "Extension"
     },
     {
@@ -3656,6 +5288,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SequentialHilbertDirectLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SequentialHilbertIsometries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SequentialHilbertLimitRealization.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ShiftedGaussianPoisson.lean",
       "role": "Extension"
     },
@@ -3685,6 +5329,22 @@
     },
     {
       "path": "Extension/Dubon2026/SmallBallLog.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmoothInducedCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmoothInducedCompactAverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmoothInducedContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmoothInducedFrobenius.lean",
       "role": "Extension"
     },
     {
@@ -3729,6 +5389,26 @@
     },
     {
       "path": "Extension/Dubon2026/SpectralLocalConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SphericalChebyshevCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SphericalCoefficientQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SphericalCoefficientRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SphericalRadialFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SphericalSatakeFormula.lean",
       "role": "Extension"
     },
     {
@@ -3808,11 +5488,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SurjectiveCosetEquiv.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SymmetricAverage.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SymmetricDeterminantLaw.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SymmetricEulerPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricFirstOrderLifts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRepresentationCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRepresentationReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TensorOrbitSpanning.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TensorReferenceInclusion.lean",
       "role": "Extension"
     },
     {
@@ -3956,6 +5664,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/UnitaryCosetTracePairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnitaryDistinctEigenOrthogonal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnitaryDoubleCosetCoefficient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/UnitaryEigenCoordinate.lean",
       "role": "Extension"
     },
@@ -3968,7 +5688,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/UniversalMatrixPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UniversalMatrixRepresentation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/UniversalMonicDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ValuationGL2FirstRow.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ValuationGL2Pivot.lean",
       "role": "Extension"
     },
     {
@@ -5372,7 +7108,441 @@
     "RealOneParameterEigenvector",
     "RealRotationGroup",
     "ScalarVectorODE",
-    "UnitaryEigenCoordinate"
+    "UnitaryEigenCoordinate",
+    "AdelicAlgebraicModel",
+    "FiniteWeightLadder",
+    "HomogeneousAlgebraicCoefficients",
+    "HomogeneousGroupIrreducible",
+    "HomogeneousHighestWeight",
+    "HomogeneousIrreducible",
+    "HomogeneousPolynomialCoefficients",
+    "UniversalMatrixPolynomial",
+    "AdelicFiniteLowestClosure",
+    "AdelicFullOrbitWeightProjection",
+    "AdelicRealFiniteCommute",
+    "AdelicReflectedWeightProjection",
+    "AdelicRotationProjectionReal",
+    "AdelicRotationWeightSpace",
+    "IntegerIrrationalCharacter",
+    "RealRotationReflection",
+    "UnitaryDistinctEigenOrthogonal",
+    "AdelicAlgebraicFiniteSpan",
+    "AdelicClassicalReconstruction",
+    "AdelicCyclicLevelDescent",
+    "AdelicFiniteClassicalCusp",
+    "AdelicFiniteClassicalRestriction",
+    "AdelicFixedCoreFiniteDimension",
+    "AdelicFixedLowestClassical",
+    "AdelicFixedLowestDensity",
+    "AdelicInvariantReconstruction",
+    "AdelicLevelFiniteSpan",
+    "AdelicLevelProjection",
+    "AdelicLevelProjectionCore",
+    "ClosedRepresentationInvariants",
+    "CompactInvariantProjection",
+    "CompactOpenOrbitFinite",
+    "FiniteAdelicClassicalTranslate",
+    "InvariantProjectionPreservation",
+    "ProjectionCoreDensity",
+    "RationalCuspSlashSpan",
+    "RealPositiveSlashLift",
+    "RealWeightLiftLinear",
+    "AdelicClassicalHeckeEigenBridge",
+    "AdelicCyclicHeckeTrace",
+    "AdelicHeckeClassicalReconstruction",
+    "AdelicHeckeClassicalRestriction",
+    "AdelicHeckeRationalRepresentatives",
+    "AdelicIntertwinerClassical",
+    "AdelicPrimitiveHeckeEigen",
+    "AdelicPrimitiveIntertwinerLine",
+    "AdelicPrimitiveIrreducible",
+    "AdelicPrimitiveSchur",
+    "AdelicRationalTranslateRestriction",
+    "CanonicalAdelicLiftLinear",
+    "FiniteAdeleIntegralResidue",
+    "FiniteAdeleResidueRing",
+    "FiniteAdelicHeckeConjugation",
+    "FiniteAdelicHeckeTrace",
+    "FiniteAdelicHeckeUpperCosets",
+    "FiniteAdelicLevelResidue",
+    "FiniteLevelSL2Density",
+    "GeneralLinearUpperZero",
+    "IntegralGamma0FiniteResidue",
+    "PrimitivePrimeMultiplicityOne",
+    "PrimitiveStrongMultiplicityOne",
+    "RepresentationCosetTrace",
+    "AdelicBoundedHeckeTrace",
+    "AdelicGoodPrimeSpherical",
+    "AdelicHeckeLocalBridge",
+    "AdelicHeckeRealComponent",
+    "AdelicLocalRepresentation",
+    "AdelicNormalizedHecke",
+    "FiniteAdelicHeckeLocalSupport",
+    "FiniteAdelicLocalGL2",
+    "FiniteAdelicLocalHom",
+    "FiniteAdelicLocalIntegral",
+    "FiniteAdelicLocalTopology",
+    "FiniteAdelicPlaceRemoval",
+    "FinitePlaceLevel",
+    "HeckeUnitaryScalarNormalization",
+    "RationalPrimePlace",
+    "AdelicIntrinsicLocalHecke",
+    "AdelicLocalCentralCharacter",
+    "FiniteAdelicLevelLocalization",
+    "FiniteAdelicLocalUnits",
+    "FinitePlaceHeckeCosets",
+    "FinitePlaceHeckeTrace",
+    "FinitePlaceHeckeUpper",
+    "FinitePlaceSphericalLevel",
+    "RepresentationConjugateFixed",
+    "SurjectiveCosetEquiv",
+    "AdelicLocalBoundedHecke",
+    "AdelicLocalFixedSpace",
+    "AdelicLocalHeckeSymmetric",
+    "AdelicLocalSphericalHecke",
+    "FinitePlaceHeckeSwap",
+    "FinitePlaceHeckeSymmetric",
+    "GL2DiagonalSwap",
+    "UnitaryCosetTracePairing",
+    "AdelicLocalCartanCoefficient",
+    "FinitePlaceGL2Cartan",
+    "FinitePlaceGL2DiagonalReduction",
+    "FinitePlaceGL2IntegralReduction",
+    "FinitePlaceHeckeDiagonalPowers",
+    "FinitePlaceIntegralElementary",
+    "FinitePlaceUniformizer",
+    "GL2CoordinatePivot",
+    "GL2UnitDiagonalPair",
+    "UnitaryDoubleCosetCoefficient",
+    "ValuationGL2Pivot",
+    "AdelicLocalCyclicClosure",
+    "AdelicLocalCyclicFixedLine",
+    "AdelicLocalCyclicIrreducible",
+    "AdelicLocalCyclicSchur",
+    "AdelicLocalRadialRecurrence",
+    "AdelicLocalRadialVanishing",
+    "ClosedSpanOrthogonality",
+    "FinitePlaceGL2ExactDoubleCoset",
+    "FinitePlaceGL2UnitReduction",
+    "FinitePlaceHeckeRadialCosets",
+    "FinitePlaceHeckeRadialDeterminant",
+    "FinitePlaceHeckeRadialMatrices",
+    "FinitePlaceHeckeRadialTrace",
+    "FinitePlaceHeckeRepresentativeEntries",
+    "FinitePlaceIntegerUnits",
+    "FinitePlaceIntegralDeterminant",
+    "FinitePlaceRadialCoefficient",
+    "FinitePlaceRadialEigenRecurrence",
+    "HeckeRadialNormalization",
+    "OrthogonalGeneratorLine",
+    "RadialHeckeFiniteSum",
+    "RadialRecurrenceUniqueness",
+    "AdelicLocalCoreIrreducible",
+    "AdelicLocalCoreProjection",
+    "AdelicLocalCyclicCore",
+    "AdelicLocalSmoothRepresentation",
+    "FinitePlaceLevelTopology",
+    "IrreducibleRestriction",
+    "AdelicLevelFamilyFaithful",
+    "AdelicLocalAdmissible",
+    "AdelicLocalAwayFixed",
+    "AdelicLocalOpenFixed",
+    "AdelicLocalSmoothCompletion",
+    "AdelicLocalSubgroupProjection",
+    "AdelicSublevelClassicalCusp",
+    "AdelicSublevelClassicalFamily",
+    "AdelicSublevelDescent",
+    "AdelicSublevelFiniteDimension",
+    "AdelicSublevelFiniteSpan",
+    "AdelicSublevelFixedSpace",
+    "AdelicSublevelLowestFiniteDimension",
+    "AdelicSublevelProjection",
+    "FiniteAdelicSublevel",
+    "FixedCosetRepresentative",
+    "AdelicLocalAwayTensor",
+    "AdelicLocalAwayTensorAction",
+    "AdelicLocalAwayTensorCompletion",
+    "AdelicLocalAwayTensorRange",
+    "AdelicLocalCyclicProjection",
+    "AdelicLocalMixedCoefficient",
+    "CyclicProjectionCoefficient",
+    "FiniteAdelicLocalAwayProduct",
+    "GramFamilyIsometry",
+    "GramSpanningIsometry",
+    "IsometricRepresentationCompletion",
+    "LinearIsometryCompletion",
+    "TensorOrbitSpanning",
+    "AdelicLocalFullAwayProduct",
+    "AdelicLocalFullAwayTensor",
+    "AdelicLocalFullAwayTensorAction",
+    "AdelicLocalFullAwayTensorCompletion",
+    "AdelicLocalFullAwayTensorRange",
+    "AdelicLocalFullMixedCoefficient",
+    "AdelicDistinctPlaceCoefficients",
+    "AdelicFiniteFamilyFactorization",
+    "AdelicFinitePlaceProduct",
+    "AdelicLocalFullAwayTopology",
+    "AdelicNormalizedCoefficientFactor",
+    "AdelicPlaceComplementCriterion",
+    "AdelicFiniteFamilyMixedCoefficient",
+    "AdelicTensorReferenceCompletion",
+    "AdelicTensorReferenceInclusion",
+    "AdelicTensorUnitReference",
+    "AdelicUnitReferenceVector",
+    "LinearIsometryCompletionFunctor",
+    "TensorReferenceInclusion",
+    "AdelicFiniteFamilyTopology",
+    "AdelicFiniteTensorCompletion",
+    "AdelicFiniteTensorCore",
+    "AdelicFiniteTensorIsometry",
+    "AdelicFiniteTensorRange",
+    "AdelicFiniteTupleCoefficients",
+    "AdelicFiniteTupleGram",
+    "AdelicLocalUnitOrbit",
+    "FiniteHilbertTensor",
+    "AdelicFiniteFamilyReindex",
+    "AdelicFiniteTensorAction",
+    "AdelicFiniteTensorCompletedAction",
+    "AdelicFiniteTensorReindex",
+    "AdelicFiniteTensorReindexCompletion",
+    "FiniteHilbertTensorAction",
+    "FiniteHilbertTensorReindex",
+    "AdelicFiniteReferenceCompletion",
+    "AdelicFiniteReferenceCoordinates",
+    "AdelicFiniteReferenceCore",
+    "AdelicFiniteReferenceDiagram",
+    "AdelicFiniteReferenceExtension",
+    "FiniteAdelicLevelAlmostEverywhere",
+    "FiniteHilbertReferenceExtension",
+    "AdelicFiniteAssociationCoordinates",
+    "AdelicFiniteTensorAssociation",
+    "AdelicFiniteTensorAssociationRealization",
+    "AdelicRestrictedFiniteTensor",
+    "AdelicRestrictedTensorBase",
+    "FiniteHilbertTensorAssociation",
+    "AdelicGoodLevelBaseDecomposition",
+    "AdelicGoodPlaceEnumeration",
+    "AdelicRestrictedFiniteOrbitCoverage",
+    "AdelicRestrictedReferenceExtension",
+    "AdelicRestrictedTensorChain",
+    "AdelicRestrictedTensorCompletion",
+    "AdelicRestrictedTensorDensity",
+    "AdelicRestrictedTensorDirectLimit",
+    "SequentialHilbertDirectLimit",
+    "SequentialHilbertIsometries",
+    "SequentialHilbertLimitRealization",
+    "AdelicFiniteProductRealCoordinate",
+    "AdelicGoodActionBound",
+    "AdelicGoodBaseProjection",
+    "AdelicGoodTail",
+    "AdelicGoodTailTensorInvariance",
+    "AdelicRestrictedActionOnStage",
+    "AdelicRestrictedAlgebraicAction",
+    "AdelicRestrictedCompletedAction",
+    "AdelicRestrictedFiniteTensorAction",
+    "FiniteAdelicCoordinateRestriction",
+    "FiniteAdelicRestrictionHom",
+    "AdelicBadPlaceFinite",
+    "AdelicFiniteOpenLowestAdmissible",
+    "AdelicFullFiniteAdmissible",
+    "AdelicRealFiniteCoefficient",
+    "AdelicRealFiniteCompletedAction",
+    "AdelicRealFiniteTensor",
+    "AdelicRealFiniteTensorAction",
+    "AdelicRealFiniteTensorCompletion",
+    "AdelicRealFiniteTensorRange",
+    "AdelicBadLocalFixedLine",
+    "AdelicDistinctLocalHecke",
+    "AdelicEveryFiniteMixedCoefficient",
+    "AdelicEveryFiniteTupleCoefficients",
+    "AdelicEveryFiniteTupleGram",
+    "AdelicEveryLocalCoreIrreducible",
+    "AdelicEveryLocalFixedLine",
+    "AdelicEveryLocalIrreducible",
+    "AdelicEveryLocalMixedCoefficient",
+    "AdelicEveryLocalNormalizedFactor",
+    "AdelicEveryLocalSchur",
+    "AdelicFullFiniteSmooth",
+    "AdelicHeckeEigenNormalization",
+    "AdelicBadPlaceFamily",
+    "AdelicBadRealBaseCoordinates",
+    "AdelicBadRealBaseEquivariance",
+    "AdelicBadRealTensorBase",
+    "AdelicEveryFiniteTensorIsometry",
+    "AdelicFiniteRealTensor",
+    "AdelicFiniteRealTensorAction",
+    "AdelicRealFinitePlaceCoordinates",
+    "AdelicSplitActionOnStage",
+    "AdelicSplitAlgebraicAction",
+    "AdelicSplitCompletedAction",
+    "AdelicSplitStageAction",
+    "AdelicSplitStageMaps",
+    "AdelicSplitTensorChain",
+    "AdelicSplitTensorCompletion",
+    "AdelicSplitTensorDensity",
+    "AdelicSplitTensorDirectLimit",
+    "AdelicFullFiniteCoreCompletion",
+    "AdelicFullRealHilbertBasis",
+    "AdelicFullRealWeightLines",
+    "AdelicIntegerProjectionReal",
+    "AdelicIntegerRotationWeightSpace",
+    "AdelicIntegerWeightAdmissible",
+    "AdelicIntegerWeightFiniteClosure",
+    "AdelicMissingIntegerWeight",
+    "AdelicRealFiniteClosureGram",
+    "AdelicSignedFiniteAction",
+    "AdelicSignedFiniteCompletion",
+    "AdelicSignedFiniteIsometry",
+    "AdelicSignedRaisingClosure",
+    "AdelicSignedRaisingFamily",
+    "AdelicSignedWeightAdmissible",
+    "ContinuousGramClosure",
+    "AdelicFiniteFixedRealRepresentation",
+    "AdelicIrrationalRotationSpectrum",
+    "AdelicOrthogonalTypeAdmissible",
+    "AdelicRealTypeMultiplicity",
+    "AdelicSignedFiniteFamilyDensity",
+    "DenseEigenfamilyEigenspace",
+    "FiniteEigenPolynomialKernel",
+    "FiniteIntertwinerMultiplicity",
+    "AdelicLocalSphericalFormula",
+    "AdelicLocalSphericalSatake",
+    "AdelicLocalUnitSphericalFormula",
+    "FinitePlaceSphericalFormula",
+    "FinitePlaceSphericalUniqueness",
+    "SphericalChebyshevCoefficient",
+    "SphericalRadialFormula",
+    "SphericalSatakeFormula",
+    "AdelicLocalClosedHeckeEigen",
+    "AdelicLocalClosedUnitReference",
+    "AdelicLocalSphericalEquiv",
+    "AdelicPrimitiveLocalEquiv",
+    "ClosedSpanFamilyDensity",
+    "FinitePlaceHeckeLevelIndependence",
+    "FinitePlaceSphericalCyclicEquiv",
+    "GramDenseFamilyEquiv",
+    "GramSpanCompletion",
+    "GramSpanIsometry",
+    "AdelicLocalFixedFullAwayClosure",
+    "AdelicLocalFullAwayFixedProjection",
+    "AdelicLocalFullFixedHecke",
+    "AdelicLocalHeckeEulerPolynomial",
+    "AdelicLocalHeckeSpectralParameters",
+    "AdelicLocalSphericalFixedLine",
+    "AdelicLocalSphericalTrace",
+    "FinitePlaceSphericalFixedHecke",
+    "AdelicDirichletCharacter",
+    "AdelicDirichletPrincipal",
+    "AdelicLocalSelfTwistHecke",
+    "FiniteIdeleDirichletCharacter",
+    "FiniteIdeleDirichletContinuity",
+    "FiniteIdeleIntegralNormalization",
+    "FiniteIdelePositiveUnitUniqueness",
+    "FinitePlaceHeckeCharacterTwist",
+    "RealDirichletSignCharacter",
+    "RepresentationScalarTwist",
+    "AdelicDirichletDeterminant",
+    "AdelicDirichletLocalRestriction",
+    "AdelicDirichletSelfTwist",
+    "AdelicDirichletUnitary",
+    "AdelicNonCMDirichletTwist",
+    "FiniteAdelicLocalUnitHom",
+    "FiniteIdeleCharacterLocalUnits",
+    "FiniteIdeleCharacterUniformizer",
+    "FiniteIdelePrimeAway",
+    "FinitePlaceDirichletDeterminant",
+    "FinitePlaceHeckeCosetDeterminant",
+    "CompactRingIntegerIdeals",
+    "CompactRingUnitCongruence",
+    "FiniteAdeleIntegerIdealBasis",
+    "FiniteAdeleResidueUnits",
+    "IntegralIdeleDirichletDescent",
+    "QuadraticCharacterCongruence",
+    "RationalIdeleCoordinates",
+    "RealQuadraticCharacter",
+    "AdelicDirichletQuadratic",
+    "AdelicNonCMQuadraticTwist",
+    "AdelicNonCMSelfTwist",
+    "AdelicPrimitiveQuadraticClassification",
+    "AdelicQuadraticCharacterRigidity",
+    "AdelicQuadraticCharacterValues",
+    "AdelicQuadraticDirichletClassification",
+    "AdelicSelfTwistQuadratic",
+    "DirichletPrimitiveAdelicCharacter",
+    "FiniteAdeleResidueChangeLevel",
+    "FinitePlaceGL2Iwasawa",
+    "FinitePlaceSphericalInduced",
+    "FinitePlaceUnramifiedCharacter",
+    "GL2LowerDiagonalCharacter",
+    "IwasawaInducedSection",
+    "NormalizedLocalPrincipalSeries",
+    "PrimitiveSatakeNonSpecial",
+    "SmoothInducedCharacter",
+    "ValuationGL2FirstRow",
+    "LocalInducedDiagonalValues",
+    "LocalInducedHeckeCosetMatrices",
+    "LocalInducedHeckeEigenvalue",
+    "LocalInducedHeckeValues",
+    "LocalInducedUpperFactor",
+    "LocalInducedUpperValue",
+    "NormalizedLocalHeckeEigenvalue",
+    "PrimitiveLocalInducedHecke",
+    "SmoothInducedFrobenius",
+    "FinitePlaceFunctionalHecke",
+    "FinitePlaceFunctionalRadial",
+    "FinitePlaceFunctionalSpherical",
+    "FinitePlaceInducedAverage",
+    "PrimitiveInducedSphericalCoefficient",
+    "RepresentationSphericalFunctional",
+    "SmoothInducedCompactAverage",
+    "SmoothInducedContinuity",
+    "SphericalCoefficientRelations",
+    "HomogeneousDiagonalAction",
+    "HomogeneousMonomialBasis",
+    "HomogeneousSatakeEuler",
+    "IntertwiningQuotientEquiv",
+    "PrimitiveInducedCyclicQuotient",
+    "PrimitiveSymmetricDualEuler",
+    "RepresentationOrbitRange",
+    "SphericalCoefficientQuotient",
+    "HomogeneousCoefficientChange",
+    "HomogeneousSymmetricBaseChange",
+    "HomogeneousSymmetricContinuity",
+    "HomogeneousSymmetricMatrix",
+    "SymmetricRepresentationReduction",
+    "ContinuousRepresentationDeterminant",
+    "DeterminantCharacteristicPolynomial",
+    "DeterminantCoefficientLaw",
+    "GroupAlgebraMatrix",
+    "GroupAlgebraScalarExtension",
+    "MatrixCharacteristicContinuity",
+    "MatrixRepresentationDeterminant",
+    "MatrixTensorDeterminant",
+    "SymmetricDeterminantLaw",
+    "DeterminantMulticoefficientContinuity",
+    "GroupDeterminantLaw",
+    "MatrixCombinationDeterminant",
+    "RepresentationDeterminantConjugacy",
+    "CocycleFirstOrderLift",
+    "DualMatrixInfinitesimal",
+    "FirstOrderDeformationEquiv",
+    "MatrixAdjointCocycles",
+    "ContinuousFirstOrderDeformation",
+    "DualMatrixStrictUnits",
+    "FirstOrderCohomologyClassification",
+    "FirstOrderStrictConjugation",
+    "ContinuousAdjointCohomology",
+    "ContinuousAdjointRestriction",
+    "FirstOrderMatrixDeterminant",
+    "FixedDeterminantFirstOrderLift",
+    "RepresentationCoordinateEquivalence",
+    "RepresentationCoordinateEvaluation",
+    "RepresentationCoordinateRelations",
+    "UniversalMatrixRepresentation",
+    "ContinuousRepresentationFiniteQuotient",
+    "FiniteQuotientCoordinateEvaluation",
+    "SymmetricFirstOrderLifts",
+    "SymmetricRepresentationCoordinates"
   ],
   "verificationModules": [
     "SemanticRegression",
