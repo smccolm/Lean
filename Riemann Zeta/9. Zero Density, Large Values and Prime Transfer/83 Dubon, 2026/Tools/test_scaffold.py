@@ -83,9 +83,10 @@ def main():
         print(f'TEMPLATE TEST PASS: {case} (accepted={accepted})')
     print(f'TEMPLATE TESTS PASS: {len(cases)}; no Lean proof tested. Fixtures: {fixtures}')
     if original_config['mode'] != 'template-only':
-        for case in ['valid','missing-audit','missing-production','duplicate-production']:
+        for case in ['valid','missing-audit','missing-arithmetic-regression','missing-production','duplicate-production']:
             config=deepcopy(original_config)
             if case=='missing-audit':config['verificationModules']=['SemanticRegression']
+            elif case=='missing-arithmetic-regression':config['verificationModules']=['SemanticRegression','Audit']
             elif case=='missing-production':config['productionModules']=[]
             elif case=='duplicate-production':config['productionModules']*=2
             accepted=True

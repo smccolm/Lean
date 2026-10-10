@@ -25,7 +25,7 @@ function Invoke-LeanGate {
         }).Count -ne 0) { throw "$Label invocation failed" }
         if ($nativeExit -ne 0) { throw "$Label exited $nativeExit" }
         if (@($output | Where-Object {
-            "$_" -match '(^|\s)(warning:|error:)|Try this:|Found [1-9][0-9]* errors'
+            "$_" -match '(^|\s)(warning:|error:|PANIC\b)|Try this:|Found [1-9][0-9]* errors|fatal exception'
         }).Count -ne 0) { throw "$Label emitted a prohibited Lean diagnostic" }
         Write-Output "PASS: $Label; exit 0; zero Lean diagnostics"
     } finally { Pop-Location }

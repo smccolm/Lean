@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-10",
+  "status": "All nine modules1695-1703, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "sourceContext": {
+    "url": "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "location": "Proposition2.6 and section4",
+    "checked": "Live PDF reopened2026-10-10",
+    "relevance": "The trace pairing and an original matrix basis are inputs to descent of the actual representation algebra."
+  },
+  "ownDraftChain": [
+    "Apply proved closed-subalgebra locality and residue equivalence to the actual closed trace algebra. Prove the entire reduction-map identity there.",
+    "Construct the full original matrix trace pairing and explicitly represent each functional by its values on transposed matrix units. Prove the actual trace linear equivalence over the original commutative coefficient ring.",
+    "Express genuine trace-dual matrices in the original basis. Prove the actual Gram matrix has a left inverse, hence unit determinant.",
+    "Apply existing original local matrix spanning and Module.exists_basis_of_span_of_flat to obtain a genuine finite basis selected from the original representation matrices.",
+    "For an actual unit-reflecting coefficient subalgebra containing the genuine Gram entries, reflect its determinant unit and invert the matrix within that subalgebra. Solve the actual row-vector trace equation to descend original matrix coordinates and the actual subalgebra span.",
+    "For the same original representation, every needed trace pairing is its trace at an actual group product. Discharge all trace-membership inputs using the actual closed trace algebra and consume the original selected matrix basis."
+  ],
+  "exactPinnedApis": [
+    "Module.exists_basis_of_span_of_flat, Mathlib/RingTheory/LocalRing/Module.lean:238",
+    "Module.Finite.finite_basis, Mathlib/RingTheory/Finiteness/Cardinality.lean:91",
+    "Matrix.matrix_eq_sum_single",
+    "Matrix.trace_units_conj and ext_iff_trace_mul_right",
+    "Module.Basis.sum_repr and coord",
+    "Matrix.detInvertibleOfLeftInverse",
+    "Matrix.mul_nonsing_inv and vecMul_vecMul",
+    "LinearIndependent.restrict_scalars' and Module.Basis.span, for the later actual trace-matrix algebra"
+  ],
+  "reuse": "LocalMatrixRepresentationSpanning, ClosedCoefficientSubalgebraLocality, CoefficientSubalgebraResidue and ClosedMatrixTraceAlgebra remain the original canonical constructions. The actual closed trace algebra and original whole representation are preserved.",
+  "remaining": "Converge the actual idempotent iteration inside the proved actual finite free closed representation matrix algebra; construct the original-dimensional left ideal and residue-identity change of basis; prove continuity and descent of the whole original representation. Noetherian image/retraction argument, unframed universality, exceptional local deformation conditions, modular association, full Selmer theory and patching remain unproved. DUB-17-20 remain OPEN.",
+  "integrity": "No external Lean code imported, no source hypothesis weakened, no resource limit raised, and no source theorem claimed merely from these drafts.",
+  "laterOwnDrafts": [
+    "MatrixBasisSubalgebraSpan: actual coordinate characterization, trace-derived coordinate continuity and closed coefficient-basis span.",
+    "CoefficientRepresentationMatrixAlgebra: actual original image-generated algebra, whole-span equality and transported original finite free basis, with closedness.",
+    "OriginalClosedTraceMatrixAlgebra: consume actual original trace-basis existence and all-coordinate descent to derive finite, free and closed for the actual original representation matrix algebra."
+  ],
+  "pinnedApiClarification": "Module.finitePresentation_of_projective is installed explicitly for the original finite free full-matrix module before applying Module.exists_basis_of_span_of_flat.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_054130.log",
+    "paper": "logs/dubon-build-20261010-055428-653.log",
+    "scope": [
+      1703,
+      1070,
+      7159
+    ]
+  }
+}

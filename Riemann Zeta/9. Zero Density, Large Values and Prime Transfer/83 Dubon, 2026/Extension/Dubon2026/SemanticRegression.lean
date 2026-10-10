@@ -1,4 +1,5 @@
 import Dubon2026
+import Dubon2026.ArithmeticSemanticRegression
 
 /-! Exact unfolded consumers for the currently implemented source interfaces. -/
 
@@ -10257,5 +10258,2019 @@ theorem actual_fixed_residual_topological_generation_fixedResidualQuotient_finit
   fixedResidualQuotient_finitely_generated p hp G K hK
 
 end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]
+  [CompactSpace X] [T2Space X] [TotallyDisconnectedSpace X] [T2Space Y]
+
+/-- Exact original-object consumer of `compactOpenSurjection_totallySeparated`. -/
+theorem actual_fixed_residual_profinite_presentation_compactOpenSurjection_totallySeparated_source (f : X → Y)
+    (hf : Continuous f) (hopen : IsOpenMap f) (hsurj : Function.Surjective f) :
+    TotallySeparatedSpace Y :=
+  compactOpenSurjection_totallySeparated f hf hopen hsurj
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `closedProfiniteQuotient_totallyDisconnected`. -/
+theorem actual_fixed_residual_profinite_presentation_closedProfiniteQuotient_totallyDisconnected_source (G : ProfiniteGrp)
+    (N : Subgroup G) [N.Normal] (hN : IsClosed (N : Set G)) :
+    TotallyDisconnectedSpace (G ⧸ N) :=
+  closedProfiniteQuotient_totallyDisconnected G N hN
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `profiniteGeneratorPresentation_surjective`. -/
+theorem actual_fixed_residual_profinite_presentation_profiniteGeneratorPresentation_surjective_source (G : ProfiniteGrp) (S : Finset G)
+    (hS : (Subgroup.closure (S : Set G)).topologicalClosure = ⊤) :
+    Function.Surjective (profiniteGeneratorPresentation G S) :=
+  profiniteGeneratorPresentation_surjective G S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+/-- Exact original-object consumer of `fixedResidualProfiniteQuotient_has_presentation`. -/
+theorem actual_fixed_residual_profinite_presentation_fixedResidualProfiniteQuotient_has_presentation_source
+    (p : ℕ) (hp : p.Prime) (G : ProfiniteGrp) (K : Subgroup G) [K.Normal]
+    [Finite (G ⧸ K)] (hK : IsClosed (K : Set G))
+    [Finite (K →ₜ* Multiplicative (ZMod p))] :
+    ∃ S : Finset (fixedResidualProfiniteQuotient p G K hK),
+      Function.Surjective (profiniteGeneratorPresentation
+        (fixedResidualProfiniteQuotient p G K hK) S) :=
+  fixedResidualProfiniteQuotient_has_presentation p hp G K hK
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `compactNoetherianAdicQuotient_complete`. -/
+theorem actual_completed_presentation_relations_compactNoetherianAdicQuotient_complete_source
+    [CompactSpace R] [T2Space R] [IsNoetherianRing R]
+    (I J : Ideal R) (hI : IsAdic I) :
+    IsAdicComplete (I.map (Ideal.Quotient.mk J)) (R ⧸ J) :=
+  compactNoetherianAdicQuotient_complete I J hI
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing A]
+
+/-- Exact original-object consumer of `matrixRepresentationRelationIdeal_le_kernel_iff`. -/
+theorem actual_completed_presentation_relations_matrixRepresentationRelationIdeal_le_kernel_iff_source
+    (ρ : G →* GeneralLinearGroup ι R) (N : Subgroup G) (f : R →+* A) :
+    matrixRepresentationRelationIdeal ρ N ≤ RingHom.ker f ↔
+      N ≤ ((GeneralLinearGroup.map (n := ι) f).comp ρ).ker :=
+  matrixRepresentationRelationIdeal_le_kernel_iff ρ N f
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [TopologicalSpace G]
+  [Fintype ι] [DecidableEq ι] [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `matrixRelationQuotientRepresentation_continuous`. -/
+theorem actual_completed_presentation_relations_matrixRelationQuotientRepresentation_continuous_source
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (N : Subgroup G) [N.Normal] :
+    Continuous (matrixRelationQuotientRepresentation ρ N) :=
+  matrixRelationQuotientRepresentation_continuous ρ hρ N
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O R A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [CommRing A] [Algebra O R] [Algebra O A]
+
+/-- Exact original-object consumer of `matrixRelationCoefficientMap_representation`. -/
+theorem actual_completed_presentation_relations_matrixRelationCoefficientMap_representation_source
+    (ρ : G →* GeneralLinearGroup ι R) (N : Subgroup G) [N.Normal] (f : R →ₐ[O] A)
+    (hf : N ≤ ((GeneralLinearGroup.map (n := ι) f.toRingHom).comp ρ).ker) (g : G) :
+    GeneralLinearGroup.map (n := ι) (matrixRelationCoefficientMap ρ N f hf).toRingHom
+      (matrixRelationQuotientRepresentation ρ N (QuotientGroup.mk' N g)) =
+        GeneralLinearGroup.map (n := ι) f.toRingHom (ρ g) :=
+  matrixRelationCoefficientMap_representation ρ N f hf g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationCoefficientQuotient_isAdicComplete`. -/
+theorem actual_completed_presentation_relations_completedPresentationCoefficientQuotient_isAdicComplete_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G))) :
+    IsAdicComplete
+      ((IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ)).map
+        (Ideal.Quotient.mk (completedPresentationRelationIdeal ρ N)))
+      (CompletedPresentationCoefficientQuotient ρ N) :=
+  completedPresentationCoefficientQuotient_isAdicComplete ρ N
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedUniversalProfiniteRepresentation_reduction`. -/
+theorem actual_original_residue_uniform_factors_completedUniversalProfiniteRepresentation_reduction_source
+    [T2Space (IsLocalRing.ResidueField O)]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →*
+      GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (hσeta : ∀ g, σ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) = ρ g) :
+    (GeneralLinearGroup.map (n := ι)
+      (completedResidualRepresentationEvaluation ρ).toRingHom).comp
+        (completedUniversalProfiniteRepresentation ρ).toMonoidHom = σ :=
+  completedUniversalProfiniteRepresentation_reduction ρ σ hσ hσeta
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationRelationIdeal_le_maximal`. -/
+theorem actual_original_residue_uniform_factors_completedPresentationRelationIdeal_le_maximal_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →*
+      GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (hσeta : ∀ g, σ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) = ρ g)
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G)))
+    (hN : N ≤ σ.ker) :
+    completedPresentationRelationIdeal ρ N ≤
+      IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ) :=
+  completedPresentationRelationIdeal_le_maximal ρ σ hσ hσeta N hN
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {A : Type*} [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+  [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+  [Finite (IsLocalRing.ResidueField A)]
+
+/-- Exact original-object consumer of `completeLocalAdic_compactSpace`. -/
+theorem actual_original_residue_uniform_factors_completeLocalAdic_compactSpace_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A) : CompactSpace A :=
+  completeLocalAdic_compactSpace hA
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [WithIdeal R] [T2Space R] [CompactSpace R]
+  [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `adicResidualProfiniteKernel_commonKernel_eq_bot`. -/
+theorem actual_original_residue_uniform_factors_adicResidualProfiniteKernel_commonKernel_eq_bot_source
+    (p : ℕ) (hp : p.Prime) (hpI : (p : R) ∈ (WithIdeal.i : Ideal R)) :
+    profiniteProPKernel p (adicResidualProfiniteKernel (R := R) (ι := ι)) = ⊥ :=
+  adicResidualProfiniteKernel_commonKernel_eq_bot p hp hpI
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {ι O A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [IsNoetherianRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `originalResidual_fixedKernel_le_every_coefficient_lift`. -/
+theorem actual_original_residue_uniform_factors_originalResidual_fixedKernel_le_every_coefficient_lift_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (f : H →* GeneralLinearGroup ι A) (hf : Continuous f)
+    (hres : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp f = σ) :
+    fixedResidualProPKernel p H σ.ker (originalResidualMatrixKernel_isClosed H σ hσ) ≤ f.ker :=
+  originalResidual_fixedKernel_le_every_coefficient_lift hA e p hp H σ hσ f hf hres
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedCoefficientMapOfProfiniteLift_entire`. -/
+theorem actual_continuous_presentation_universality_completedCoefficientMapOfProfiniteLift_entire_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ*
+      GeneralLinearGroup ι A)
+    (hτ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction τ) = ρ) :
+    (GeneralLinearGroup.map (n := ι) (completedCoefficientMapOfProfiniteLift ρ e τ hτ).toRingHom).comp
+      (completedUniversalProfiniteRepresentation ρ).toMonoidHom = τ.toMonoidHom :=
+  completedCoefficientMapOfProfiniteLift_entire hA ρ e τ hτ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `profiniteRelationCoefficientMap_unique`. -/
+theorem actual_continuous_presentation_universality_profiniteRelationCoefficientMap_unique_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ*
+      GeneralLinearGroup ι A)
+    (hτ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction τ) = ρ)
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G)))
+    (hN : N ≤ τ.toMonoidHom.ker)
+    (f : CompletedPresentationCoefficientQuotient ρ N →ₐ[O] A)
+    (hf : ∀ g : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G),
+      GeneralLinearGroup.map (n := ι) f.toRingHom
+        (GeneralLinearGroup.map (n := ι)
+          (Ideal.Quotient.mk (completedPresentationRelationIdeal ρ N))
+          (completedUniversalProfiniteRepresentation ρ g)) = τ g) :
+    f = profiniteRelationCoefficientMap hA ρ e τ hτ N hN :=
+  profiniteRelationCoefficientMap_unique hA ρ e τ hτ N hN f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentedGroupRepresentation_continuous`. -/
+theorem actual_continuous_presentation_universality_completedPresentedGroupRepresentation_continuous_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q) : Continuous (completedPresentationRepresentation ρ H q hq) :=
+  completedPresentedGroupRepresentation_continuous ρ H q hq
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedPresentationCoefficient_exists_unique`. -/
+theorem actual_continuous_presentation_universality_completedPresentationCoefficient_exists_unique_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q) (σ : H →ₜ* GeneralLinearGroup ι A)
+    (hσ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction (σ.comp q)) = ρ) :
+    ∃! f : CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker →ₐ[O] A,
+      (∀ h : H, GeneralLinearGroup.map (n := ι) f.toRingHom
+        (completedPresentationRepresentation ρ H q hq h) = σ h) ∧
+      Continuous f ∧
+      ((localCoefficientReduction e).comp f).comp
+        (Ideal.Quotient.mkₐ O (completedPresentationRelationIdeal ρ q.toMonoidHom.ker)) =
+          completedResidualRepresentationEvaluation ρ :=
+  completedPresentationCoefficient_exists_unique hA ρ e H q hq σ hσ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `sUnitValuations_mem_ker_iff`. -/
+theorem actual_number_field_s_unit_sUnitValuations_mem_ker_iff_source (S : Set (HeightOneSpectrum R))
+    (x : S.unit K) :
+    x ∈ (sUnitValuations (K := K) S).ker ↔
+      x.val ∈ (∅ : Set (HeightOneSpectrum R)).unit K :=
+  sUnitValuations_mem_ker_iff S x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField
+
+
+/-- Exact original-object consumer of `numberField_sUnit_powerQuotient_finite`. -/
+theorem actual_number_field_s_unit_numberField_sUnit_powerQuotient_finite_source (K : Type*) [Field K] [NumberField K]
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite) (n : ℕ) (hn : n ≠ 0) :
+    Finite (S.unit K ⧸ (powMonoidHom (α := S.unit K) n).range) :=
+  numberField_sUnit_powerQuotient_finite K S hS n hn
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `fractionalIdealCountRootUnit_pow`. -/
+theorem actual_selmer_ideal_root_fractionalIdealCountRootUnit_pow_source (n : ℕ) (I : (FractionalIdeal R⁰ K)ˣ)
+    (hdiv : ∀ v : HeightOneSpectrum R, (n : ℤ) ∣ FractionalIdeal.count K v I.val) :
+    fractionalIdealCountRootUnit n I ^ n = I :=
+  fractionalIdealCountRootUnit_pow n I hdiv
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmer_mem_iff_principal_counts`. -/
+theorem actual_selmer_ideal_root_emptySelmer_mem_iff_principal_counts_source (n : ℕ) (x : Kˣ) :
+    QuotientGroup.mk' (powMonoidHom (α := Kˣ) n).range x ∈
+        (IsDedekindDomain.selmerGroup (R := R) (K := K)
+          (S := ∅) (n := n)) ↔
+      ∀ v : HeightOneSpectrum R,
+        (n : ℤ) ∣ FractionalIdeal.count K v (toPrincipalIdeal R K x).val :=
+  emptySelmer_mem_iff_principal_counts n x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmerRepresentativeIdealRoot_mul`. -/
+theorem actual_number_field_selmer_finite_emptySelmerRepresentativeIdealRoot_mul_source (n : ℕ) (hn : n ≠ 0)
+    (x y : EmptySelmerRepresentativeUnits (R := R) (K := K) n) :
+    emptySelmerRepresentativeIdealRoot n (x * y) =
+      emptySelmerRepresentativeIdealRoot n x * emptySelmerRepresentativeIdealRoot n y :=
+  emptySelmerRepresentativeIdealRoot_mul n hn x y
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmerClassMap_apply_representative`. -/
+theorem actual_number_field_selmer_finite_emptySelmerClassMap_apply_representative_source (n : ℕ) (hn : n ≠ 0)
+    (x : EmptySelmerRepresentativeUnits (R := R) (K := K) n) :
+    emptySelmerClassMap n hn (emptySelmerRepresentativeProjection n x) =
+      emptySelmerRepresentativeClass n hn x :=
+  emptySelmerClassMap_apply_representative n hn x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmerClassMap_kernel_eq_unitRange`. -/
+theorem actual_number_field_selmer_finite_emptySelmerClassMap_kernel_eq_unitRange_source (n : ℕ) (hn : n ≠ 0) :
+    (emptySelmerClassMap (R := R) (K := K) n hn).ker =
+      (IsDedekindDomain.selmerGroup.fromUnit (R := R) (K := K) (n := n)).range :=
+  emptySelmerClassMap_kernel_eq_unitRange n hn
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+/-- Exact original-object consumer of `numberField_selmer_finite`. -/
+theorem actual_number_field_selmer_finite_numberField_selmer_finite_source (K : Type*) [Field K] [NumberField K]
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite) (n : ℕ) (hn : n ≠ 0) :
+    Finite (IsDedekindDomain.selmerGroup (R := 𝓞 K) (K := K) (S := S) (n := n)) :=
+  numberField_selmer_finite K S hS n hn
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `finiteGaloisCharacter_exists_radical`. -/
+theorem actual_galois_kummer_character_finiteGaloisCharacter_exists_radical_source [FiniteDimensional K L] [IsGalois K L]
+    (χ : Gal(L/K) →* Kˣ) (n : ℕ) (hχ : ∀ g : Gal(L/K), χ g ^ n = 1) :
+    ∃ (a : Kˣ) (β : Lˣ),
+      β ^ n = Units.map (algebraMap K L).toMonoidHom a ∧
+      ∀ g : Gal(L/K), g • β / β = Units.map (algebraMap K L).toMonoidHom (χ g) :=
+  finiteGaloisCharacter_exists_radical χ n hχ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `galois_characters_eq_of_radical_power_class`. -/
+theorem actual_galois_kummer_character_galois_characters_eq_of_radical_power_class_source (n : ℕ) [NeZero n]
+    (hζ : (primitiveRoots n K).Nonempty) (χ ψ : Gal(L/K) →* Kˣ)
+    (a b : Kˣ) (β γ : Lˣ)
+    (hβ : β ^ n = Units.map (algebraMap K L).toMonoidHom a)
+    (hγ : γ ^ n = Units.map (algebraMap K L).toMonoidHom b)
+    (hχ : ∀ g : Gal(L/K), g • β / β = Units.map (algebraMap K L).toMonoidHom (χ g))
+    (hψ : ∀ g : Gal(L/K), g • γ / γ = Units.map (algebraMap K L).toMonoidHom (ψ g))
+    (hab : QuotientGroup.mk' (powMonoidHom n : Kˣ →* Kˣ).range a =
+      QuotientGroup.mk' (powMonoidHom n : Kˣ →* Kˣ).range b) : χ = ψ :=
+  galois_characters_eq_of_radical_power_class n hζ χ ψ a b β γ hβ hγ hχ hψ hab
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω T : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+  [Group T]
+
+/-- Exact original-object consumer of `continuous_galois_finite_factor`. -/
+theorem actual_continuous_galois_kummer_continuous_galois_finite_factor_source [TopologicalSpace T] [DiscreteTopology T]
+    (χ : Gal(Ω/K) →ₜ* T) :
+    ∃ F : FiniteGaloisIntermediateField K Ω,
+      ∃ ψ : Gal(F/K) →* T, ∀ g : Gal(Ω/K),
+        ψ (AlgEquiv.restrictNormalHom F g) = χ g :=
+  continuous_galois_finite_factor χ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+
+/-- Exact original-object consumer of `continuous_galois_character_exists_radical`. -/
+theorem actual_continuous_galois_kummer_continuous_galois_character_exists_radical_source
+    [TopologicalSpace Kˣ] [DiscreteTopology Kˣ]
+    (χ : Gal(Ω/K) →ₜ* Kˣ) (n : ℕ) (hχ : ∀ g : Gal(Ω/K), χ g ^ n = 1) :
+    ∃ (a : Kˣ) (β : Ωˣ),
+      β ^ n = Units.map (algebraMap K Ω).toMonoidHom a ∧
+      ∀ g : Gal(Ω/K), g • β / β = Units.map (algebraMap K Ω).toMonoidHom (χ g) :=
+  continuous_galois_character_exists_radical χ n hχ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+  [TopologicalSpace Kˣ] [DiscreteTopology Kˣ]
+
+/-- Exact original-object consumer of `continuousGaloisKummerClass_injective`. -/
+theorem actual_continuous_galois_kummer_continuousGaloisKummerClass_injective_source (n : ℕ) [NeZero n]
+    (hζ : (primitiveRoots n K).Nonempty) :
+    Function.Injective (continuousGaloisKummerClass (K := K) (Ω := Ω) n) :=
+  continuousGaloisKummerClass_injective n hζ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S : Type*} [CommRing R] [CommRing S]
+  [IsDedekindDomain R] [IsDedekindDomain S] [Algebra R S] [FaithfulSMul R S]
+
+/-- Exact original-object consumer of `unramified_intValuation_algebraMap`. -/
+theorem actual_unramified_radical_selmer_unramified_intValuation_algebraMap_source
+    (v : HeightOneSpectrum R) (w : HeightOneSpectrum S) [w.asIdeal.LiesOver v.asIdeal]
+    (he : v.asIdeal.ramificationIdx w.asIdeal = 1) (r : R) :
+    w.intValuation (algebraMap R S r) = v.intValuation r :=
+  unramified_intValuation_algebraMap v w he r
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S K L : Type*} [CommRing R] [CommRing S]
+  [IsDedekindDomain R] [IsDedekindDomain S] [Algebra R S] [FaithfulSMul R S]
+  [Field K] [Field L] [Algebra R K] [IsFractionRing R K]
+  [Algebra S L] [IsFractionRing S L] [Algebra K L] [Algebra R L]
+  [IsScalarTower R K L] [IsScalarTower R S L]
+
+/-- Exact original-object consumer of `unramified_valuationOfNeZero_algebraMap`. -/
+theorem actual_unramified_radical_selmer_unramified_valuationOfNeZero_algebraMap_source
+    (v : HeightOneSpectrum R) (w : HeightOneSpectrum S) [w.asIdeal.LiesOver v.asIdeal]
+    (he : v.asIdeal.ramificationIdx w.asIdeal = 1) (x : Kˣ) :
+    w.valuationOfNeZero (Units.map (algebraMap K L).toMonoidHom x) =
+      v.valuationOfNeZero x :=
+  unramified_valuationOfNeZero_algebraMap v w he x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S K L : Type*} [CommRing R] [CommRing S]
+  [IsDedekindDomain R] [IsDedekindDomain S] [Algebra R S] [FaithfulSMul R S]
+  [Field K] [Field L] [Algebra R K] [IsFractionRing R K]
+  [Algebra S L] [IsFractionRing S L] [Algebra K L] [Algebra R L]
+  [IsScalarTower R K L] [IsScalarTower R S L]
+
+/-- Exact original-object consumer of `unramified_radical_mem_selmer`. -/
+theorem actual_unramified_radical_selmer_unramified_radical_mem_selmer_source
+    (T : Set (HeightOneSpectrum R))
+    (hunram : ∀ v : HeightOneSpectrum R, v ∉ T →
+      ∃ w : HeightOneSpectrum S, w.asIdeal.LiesOver v.asIdeal ∧
+        v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (n : ℕ) (a : Kˣ) (β : Lˣ)
+    (hβ : β ^ n = Units.map (algebraMap K L).toMonoidHom a) :
+    QuotientGroup.mk' (powMonoidHom (α := Kˣ) n).range a ∈
+      IsDedekindDomain.selmerGroup (R := R) (K := K) (S := T) (n := n) :=
+  unramified_radical_mem_selmer T hunram n a β hβ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+
+/-- Exact original-object consumer of `continuousGaloisKummerClass_eq_of_radical`. -/
+theorem actual_galois_class_independence_restriction_continuousGaloisKummerClass_eq_of_radical_source
+    [TopologicalSpace Kˣ] [DiscreteTopology Kˣ] (n : ℕ)
+    (χ : ContinuousGaloisExponentCharacters (K := K) (Ω := Ω) n)
+    (a : Kˣ) (β : Ωˣ)
+    (hβ : β ^ n = Units.map (algebraMap K Ω).toMonoidHom a)
+    (hχ : ∀ g : Gal(Ω/K), g • β / β =
+      Units.map (algebraMap K Ω).toMonoidHom (χ.val g)) :
+    continuousGaloisKummerClass n χ =
+      QuotientGroup.mk' (powMonoidHom n : Kˣ →* Kˣ).range a :=
+  continuousGaloisKummerClass_eq_of_radical n χ a β hβ hχ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+/-- Exact original-object consumer of `coprime_quotient_continuous_characters_finite`. -/
+theorem actual_galois_class_independence_restriction_coprime_quotient_continuous_characters_finite_source
+    {G T : Type*} [Group G] [CommGroup T] [TopologicalSpace G] [TopologicalSpace T]
+    (H : Subgroup G) [H.Normal]
+    (hcard : (Nat.card (G ⧸ H)).Coprime (Nat.card T))
+    [Finite (H →ₜ* T)] : Finite (G →ₜ* T) :=
+  coprime_quotient_continuous_characters_finite H hcard
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `cyclotomic_prime_finrank_coprime`. -/
+theorem actual_cyclotomic_galois_character_descent_cyclotomic_prime_finrank_coprime_source (p : ℕ) (hp : p.Prime)
+    [IsCyclotomicExtension {p} K L] : (Module.finrank K L).Coprime p :=
+  cyclotomic_prime_finrank_coprime p hp
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `finiteBase_fixingSubgroup_characters_finite`. -/
+theorem actual_cyclotomic_galois_character_descent_finiteBase_fixingSubgroup_characters_finite_source [IsGalois K Ω]
+    {T : Type*} [Group T] [TopologicalSpace T]
+    (F : IntermediateField K Ω) [FiniteDimensional K F]
+    [Finite (Gal(Ω/F) →ₜ* T)] : Finite (F.fixingSubgroup →ₜ* T) :=
+  finiteBase_fixingSubgroup_characters_finite F
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+
+/-- Exact original-object consumer of `cyclotomic_continuous_prime_characters_finite`. -/
+theorem actual_cyclotomic_galois_character_descent_cyclotomic_continuous_prime_characters_finite_source
+    (p : ℕ) (hp : p.Prime) (F : IntermediateField K Ω)
+    [IsCyclotomicExtension {p} K F]
+    [Finite (Gal(Ω/F) →ₜ* Multiplicative (ZMod p))] :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  cyclotomic_continuous_prime_characters_finite p hp F
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K : Type*} [Field K]
+
+variable {Ω : Type*} [Field Ω] [Algebra K Ω]
+  [TopologicalSpace Kˣ]
+
+/-- Exact original-object consumer of `prime_characters_finite_of_unit_exponent_characters`. -/
+theorem actual_prime_root_unit_characters_prime_characters_finite_of_unit_exponent_characters_source (p : ℕ) (hp : p.Prime)
+    {ζ : K} (hζ : IsPrimitiveRoot ζ p)
+    [Finite (ContinuousGaloisExponentCharacters (K := K) (Ω := Ω) p)] :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  prime_characters_finite_of_unit_exponent_characters p hp hζ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+variable [IsGalois K Ω] [TopologicalSpace Kˣ] [DiscreteTopology Kˣ]
+
+/-- Exact original-object consumer of `unramified_continuous_prime_characters_finite`. -/
+theorem actual_unramified_galois_character_finiteness_unramified_continuous_prime_characters_finite_source
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite)
+    (hunram : ∀ F : FiniteGaloisIntermediateField K Ω,
+      ∀ v : HeightOneSpectrum (𝓞 K), v ∉ S →
+        ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+          v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (p : ℕ) (hp : p.Prime) {ζ : K} (hζ : IsPrimitiveRoot ζ p) :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  unramified_continuous_prime_characters_finite S hS hunram p hp hζ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {A B : Type*} [CommRing A] [IsDedekindDomain A]
+  [CommRing B] [IsDedekindDomain B] [Algebra A B]
+  [Algebra.IsIntegral A B] [Module.IsTorsionFree A B]
+
+/-- Exact original-object consumer of `heightOneUnder_preimage_finite`. -/
+theorem actual_finite_prime_base_change_heightOneUnder_preimage_finite_source
+    (S : Set (HeightOneSpectrum A)) (hS : S.Finite) :
+    {w : HeightOneSpectrum B | w.under A ∈ S}.Finite :=
+  heightOneUnder_preimage_finite S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S T : Type*} [CommRing R] [IsDomain R]
+  [CommRing S] [IsDedekindDomain S] [CommRing T] [IsDedekindDomain T]
+  [Algebra R S] [Algebra S T] [Algebra R T] [IsScalarTower R S T]
+  [Module.IsTorsionFree R S] [Module.IsTorsionFree S T]
+
+/-- Exact original-object consumer of `unramifiedIdealTower_indices`. -/
+theorem actual_finite_prime_base_change_unramifiedIdealTower_indices_source
+    (p : Ideal R) (P : Ideal S) (Q : Ideal T)
+    [Q.IsPrime] [Q.LiesOver P] [P.LiesOver p]
+    (h : p.ramificationIdx Q = 1) :
+    p.ramificationIdx P = 1 ∧ P.ramificationIdx Q = 1 :=
+  unramifiedIdealTower_indices p P Q h
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R S : Type*} [CommRing O] [CommRing R] [IsLocalRing R]
+  [CommRing S] [IsLocalRing S] [Algebra O R] [Algebra O S]
+
+/-- Exact original-object consumer of `localResidueAlgebraMap_surjective`. -/
+theorem actual_local_quotient_residue_localResidueAlgebraMap_surjective_source (f : R →ₐ[O] S) [IsLocalHom f.toRingHom]
+    (hf : Function.Surjective f) : Function.Surjective (localResidueAlgebraMap f) :=
+  localResidueAlgebraMap_surjective f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `compactLocalAdicQuotient_maximal_complete`. -/
+theorem actual_local_quotient_residue_compactLocalAdicQuotient_maximal_complete_source
+    [TopologicalSpace R] [IsTopologicalRing R] [CompactSpace R] [T2Space R]
+    [IsNoetherianRing R] (J : Ideal R) [IsLocalRing (R ⧸ J)]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R)) :
+    IsAdicComplete (IsLocalRing.maximalIdeal (R ⧸ J)) (R ⧸ J) :=
+  compactLocalAdicQuotient_maximal_complete J hR
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S : Type*} [CommRing R] [IsDomain R] [CommRing S] [IsDomain S]
+  [Algebra R S] [Algebra.IsIntegral R S] [Module.IsTorsionFree R S]
+
+/-- Exact original-object consumer of `heightOnePrime_exists_liesOver`. -/
+theorem actual_finite_base_unramified_heightOnePrime_exists_liesOver_source (v : HeightOneSpectrum R) :
+    ∃ w : HeightOneSpectrum S, w.asIdeal.LiesOver v.asIdeal :=
+  heightOnePrime_exists_liesOver v
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L] [IsGalois K L]
+
+/-- Exact original-object consumer of `numberField_galois_unramified_at_every_prime`. -/
+theorem actual_finite_base_unramified_numberField_galois_unramified_at_every_prime_source
+    (v : HeightOneSpectrum (𝓞 K))
+    (h : ∃ w : HeightOneSpectrum (𝓞 L), w.asIdeal.LiesOver v.asIdeal ∧
+      v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (z : HeightOneSpectrum (𝓞 L)) [z.asIdeal.LiesOver v.asIdeal] :
+    v.asIdeal.ramificationIdx z.asIdeal = 1 :=
+  numberField_galois_unramified_at_every_prime v h z
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+  [IsGalois K Ω]
+
+/-- Exact original-object consumer of `finiteBase_unramified_finite_subextensions`. -/
+theorem actual_finite_base_unramified_finiteBase_unramified_finite_subextensions_source
+    (S : Set (HeightOneSpectrum (𝓞 K)))
+    (hunram : ∀ F : FiniteGaloisIntermediateField K Ω,
+      ∀ v : HeightOneSpectrum (𝓞 K), v ∉ S →
+        ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+          v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (E : IntermediateField K Ω) [FiniteDimensional K E] [NumberField E]
+    (F : FiniteGaloisIntermediateField E Ω)
+    (v : HeightOneSpectrum (𝓞 E)) (hv : v.under (𝓞 K) ∉ S) :
+    ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+      v.asIdeal.ramificationIdx w.asIdeal = 1 :=
+  finiteBase_unramified_finite_subextensions S hunram E F v hv
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `numberField_isUnramifiedAt_iff_ramificationIdx_one`. -/
+theorem actual_unramified_tensor_image_numberField_isUnramifiedAt_iff_ramificationIdx_one_source
+    (v : HeightOneSpectrum (𝓞 K)) (w : HeightOneSpectrum (𝓞 L))
+    [w.asIdeal.LiesOver v.asIdeal] :
+    Algebra.IsUnramifiedAt (𝓞 K) w.asIdeal ↔
+      v.asIdeal.ramificationIdx w.asIdeal = 1 :=
+  numberField_isUnramifiedAt_iff_ramificationIdx_one v w
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+
+/-- Exact original-object consumer of `ambientTensorImage_isIntegralClosure`. -/
+theorem actual_unramified_tensor_image_ambientTensorImage_isIntegralClosure_source [IsDedekindDomain R]
+    [Module.Finite R A] [Module.Finite R B]
+    [Algebra.FormallyUnramified R A] [Algebra.FormallyUnramified R B]
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) :
+    IsIntegralClosure (AmbientTensorImage f g) R (FractionRing (AmbientTensorImage f g)) :=
+  ambientTensorImage_isIntegralClosure f g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+
+/-- Exact original-object consumer of `ambientTensorFractionEmbedding_compositum`. -/
+theorem actual_tensor_fraction_compositum_ambientTensorFractionEmbedding_compositum_source
+    {L M : Type*} [Field L] [Field M]
+    [Algebra A L] [IsFractionRing A L] [Algebra B M] [IsFractionRing B M]
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) (i : L →+* Ω) (j : M →+* Ω)
+    (hi : i.comp (algebraMap A L) = f.toRingHom)
+    (hj : j.comp (algebraMap B M) = g.toRingHom) :
+    (ambientTensorFractionEmbedding f g).fieldRange = i.fieldRange ⊔ j.fieldRange :=
+  ambientTensorFractionEmbedding_compositum f g i j hi hj
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+
+/-- Exact original-object consumer of `ambientTensorImage_mem_iff_compositum_integral`. -/
+theorem actual_tensor_compositum_integral_closure_ambientTensorImage_mem_iff_compositum_integral_source [IsDedekindDomain R]
+    [Module.Finite R A] [Module.Finite R B]
+    [Algebra.FormallyUnramified R A] [Algebra.FormallyUnramified R B]
+    {L M : Type*} [Field L] [Field M]
+    [Algebra A L] [IsFractionRing A L] [Algebra B M] [IsFractionRing B M]
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) (i : L →+* Ω) (j : M →+* Ω)
+    (hi : i.comp (algebraMap A L) = f.toRingHom)
+    (hj : j.comp (algebraMap B M) = g.toRingHom) (x : Ω) :
+    x ∈ AmbientTensorImage f g ↔
+      x ∈ i.fieldRange ⊔ j.fieldRange ∧ IsIntegral R x :=
+  ambientTensorImage_mem_iff_compositum_integral f g i j hi hj x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedPresentationFramedFiberEquiv_bijective`. -/
+theorem actual_continuous_framed_fibers_completedPresentationFramedFiberEquiv_bijective_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q) :
+    Function.Bijective (completedPresentationFramedFiberEquiv hA ρ e H q hq) :=
+  completedPresentationFramedFiberEquiv_bijective hA ρ e H q hq
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R] [IsLocalRing R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `localQuotient_maximal_adicTopology`. -/
+theorem actual_local_quotient_topology_equality_localQuotient_maximal_adicTopology_source
+    (J : Ideal R) [IsLocalRing (R ⧸ J)]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R)) :
+    (inferInstance : TopologicalSpace (R ⧸ J)) =
+      (IsLocalRing.maximalIdeal (R ⧸ J)).adicTopology :=
+  localQuotient_maximal_adicTopology J hR
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A B : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+  [CommRing B] [IsLocalRing B] [Algebra O B] [WithIdeal B]
+  [IsAdicComplete (IsLocalRing.maximalIdeal B) B]
+
+/-- Exact original-object consumer of `completedPresentationFramedFiberEquiv_natural`. -/
+theorem actual_continuous_framed_fiber_naturality_completedPresentationFramedFiberEquiv_natural_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (k : A →ₐ[O] B) (hk : Continuous k)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA)
+    (f : PresentedContinuousCoefficientFiber ρ eA H q) :
+    completedPresentationFramedFiberEquiv hB ρ eB H q hq
+      (presentedCoefficientFiberPostcomp ρ eA eB H q k hk hres f) =
+        presentedRepresentationFiberPostcomp ρ eA eB H q k hk hres
+          (completedPresentationFramedFiberEquiv hA ρ eA H q hq f) :=
+  completedPresentationFramedFiberEquiv_natural hA hB ρ eA eB H q hq k hk hres f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationCoefficientQuotient_localData`. -/
+theorem actual_completed_presentation_local_data_completedPresentationCoefficientQuotient_localData_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →*
+      GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (hσeta : ∀ g, σ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) = ρ g)
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G)))
+    (hN : N ≤ σ.ker) :
+    ∃ hlocal : IsLocalRing (CompletedPresentationCoefficientQuotient ρ N),
+      (letI := hlocal
+       ∃ e : IsLocalRing.ResidueField (CompletedPresentationCoefficientQuotient ρ N) ≃ₐ[O]
+           IsLocalRing.ResidueField O,
+         IsNoetherianRing (CompletedPresentationCoefficientQuotient ρ N) ∧
+         IsAdicComplete (IsLocalRing.maximalIdeal (CompletedPresentationCoefficientQuotient ρ N))
+           (CompletedPresentationCoefficientQuotient ρ N) ∧
+         (inferInstance : TopologicalSpace (CompletedPresentationCoefficientQuotient ρ N)) =
+           (IsLocalRing.maximalIdeal (CompletedPresentationCoefficientQuotient ρ N)).adicTopology ∧
+         ∀ r : ResidualRepresentationCompletion ρ,
+           e (IsLocalRing.residue _ (Ideal.Quotient.mk
+             (completedPresentationRelationIdeal ρ N) r)) =
+             completedResidualRepresentationEvaluation ρ r) :=
+  completedPresentationCoefficientQuotient_localData ρ σ hσ hσeta N hN
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationRepresentation_trueResidue`. -/
+theorem actual_completed_presentation_true_residue_completedPresentationRepresentation_trueResidue_source
+    [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    [IsLocalRing (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσeta : ∀ g, σ (q (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g)) = ρ g) :
+    (GeneralLinearGroup.map (n := ι)
+      (localCoefficientReduction (completedPresentationResidueEquiv ρ
+        q.toMonoidHom.ker)).toRingHom).comp
+        (completedPresentationRepresentation ρ H q hq) = σ.toMonoidHom :=
+  completedPresentationRepresentation_trueResidue ρ H q hq σ hσeta
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `numberField_formallyUnramified_away`. -/
+theorem actual_number_field_unramified_away_numberField_formallyUnramified_away_source
+    (a : 𝓞 K)
+    (hunram : ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1) :
+    Algebra.FormallyUnramified (𝓞 K)
+      (Localization.Away (algebraMap (𝓞 K) (𝓞 L) a)) :=
+  numberField_formallyUnramified_away a hunram
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `numberField_localizedIntegers_finite_unramified`. -/
+theorem actual_number_field_localized_integer_algebras_numberField_localizedIntegers_finite_unramified_source
+    (a : 𝓞 K) (Rₐ Sₐ : Type*) [CommRing Rₐ] [CommRing Sₐ]
+    [Algebra (𝓞 K) Rₐ] [Algebra (𝓞 K) Sₐ] [Algebra (𝓞 L) Sₐ]
+    [Algebra Rₐ Sₐ] [IsScalarTower (𝓞 K) (𝓞 L) Sₐ]
+    [IsScalarTower (𝓞 K) Rₐ Sₐ]
+    [IsLocalization.Away a Rₐ]
+    [IsLocalization.Away (algebraMap (𝓞 K) (𝓞 L) a) Sₐ]
+    (hunram : ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1) :
+    Module.Finite Rₐ Sₐ ∧ Algebra.FormallyUnramified Rₐ Sₐ :=
+  numberField_localizedIntegers_finite_unramified a Rₐ Sₐ hunram
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `localizedNumberFieldIntegers_integral_iff`. -/
+theorem actual_localized_integer_integral_closure_localizedNumberFieldIntegers_integral_iff_source
+    (a : 𝓞 K) (ha : a ≠ 0) (Rₐ Sₐ : Type*) [CommRing Rₐ] [CommRing Sₐ]
+    [Algebra (𝓞 K) Rₐ] [Algebra (𝓞 K) Sₐ] [Algebra (𝓞 L) Sₐ]
+    [Algebra Rₐ Sₐ] [IsScalarTower (𝓞 K) (𝓞 L) Sₐ]
+    [IsScalarTower (𝓞 K) Rₐ Sₐ]
+    [IsLocalization.Away a Rₐ]
+    [IsLocalization.Away (algebraMap (𝓞 K) (𝓞 L) a) Sₐ]
+    [Algebra Rₐ L] [Algebra Sₐ L] [IsScalarTower (𝓞 L) Sₐ L]
+    [IsScalarTower Rₐ Sₐ L] (x : L) :
+    IsIntegral Rₐ x ↔ ∃ y : Sₐ, algebraMap Sₐ L y = x :=
+  localizedNumberFieldIntegers_integral_iff a ha Rₐ Sₐ x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `numberField_localizedIntegers_unramified_iff`. -/
+theorem actual_localized_integer_ramification_equivalence_numberField_localizedIntegers_unramified_iff_source
+    (a : 𝓞 K) (Rₐ Sₐ : Type*) [CommRing Rₐ] [CommRing Sₐ]
+    [Algebra (𝓞 K) Rₐ] [Algebra (𝓞 K) Sₐ] [Algebra (𝓞 L) Sₐ]
+    [Algebra Rₐ Sₐ] [IsScalarTower (𝓞 K) (𝓞 L) Sₐ]
+    [IsScalarTower (𝓞 K) Rₐ Sₐ]
+    [IsLocalization.Away a Rₐ]
+    [IsLocalization.Away (algebraMap (𝓞 K) (𝓞 L) a) Sₐ] :
+    Algebra.FormallyUnramified Rₐ Sₐ ↔
+      ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+        (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1 :=
+  numberField_localizedIntegers_unramified_iff a Rₐ Sₐ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `originalLocalizedIntegers_map_mem`. -/
+theorem actual_canonical_localized_integer_maps_originalLocalizedIntegers_map_mem_source (a : 𝓞 K) (ha : a ≠ 0)
+    (x : originalLocalizedIntegers K a ha) :
+    algebraMap K L x.val ∈ originalLocalizedIntegers L
+      (algebraMap (𝓞 K) (𝓞 L) a) (originalIntegerMap_ne_zero (L := L) a ha) :=
+  originalLocalizedIntegers_map_mem a ha x
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `canonicalLocalizedIntegerAlgebra_data`. -/
+theorem actual_canonical_localized_integer_algebras_canonicalLocalizedIntegerAlgebra_data_source (a : 𝓞 K) (ha : a ≠ 0) :
+    (let Rₐ := originalLocalizedIntegers K a ha
+     let Sₐ := originalLocalizedIntegers L (algebraMap (𝓞 K) (𝓞 L) a)
+       (originalIntegerMap_ne_zero (L := L) a ha)
+     letI : Algebra Rₐ Sₐ := (originalLocalizedIntegersMap (L := L) a ha).toRingHom.toAlgebra
+     Module.Finite Rₐ Sₐ ∧ IsIntegralClosure Sₐ Rₐ L ∧
+       (Algebra.FormallyUnramified Rₐ Sₐ ↔
+         ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+           (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)) :=
+  canonicalLocalizedIntegerAlgebra_data a ha
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+  [IsDedekindDomain R] [Module.Finite R A] [Module.Finite R B]
+  [Algebra.FormallyUnramified R A] [Algebra.FormallyUnramified R B]
+  {L M : Type*} [Field L] [Field M]
+  [Algebra A L] [IsFractionRing A L] [Algebra B M] [IsFractionRing B M]
+
+/-- Exact original-object consumer of `integralClosure_formallyUnramified_of_compositum_top`. -/
+theorem actual_unramified_compositum_integral_closure_integralClosure_formallyUnramified_of_compositum_top_source
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) (i : L →+* Ω) (j : M →+* Ω)
+    (hi : i.comp (algebraMap A L) = f.toRingHom)
+    (hj : j.comp (algebraMap B M) = g.toRingHom)
+    (htop : i.fieldRange ⊔ j.fieldRange = ⊤)
+    (C : Type*) [CommRing C] [Algebra R C] [Algebra C Ω]
+    [IsScalarTower R C Ω] [IsIntegralClosure C R Ω] :
+    Algebra.FormallyUnramified R C :=
+  integralClosure_formallyUnramified_of_compositum_top f g i j hi hj htop C
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L M Ω : Type*} [Field K] [Field L] [Field M] [Field Ω]
+  [NumberField K] [NumberField L] [NumberField M] [NumberField Ω]
+  [Algebra K L] [Algebra K M] [Algebra K Ω] [Algebra L Ω] [Algebra M Ω]
+  [IsScalarTower K L Ω] [IsScalarTower K M Ω]
+
+/-- Exact original-object consumer of `numberField_unramified_compositum`. -/
+theorem actual_number_field_unramified_compositum_numberField_unramified_compositum_source (a : 𝓞 K) (ha : a ≠ 0)
+    (hL : ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)
+    (hM : ∀ w : HeightOneSpectrum (𝓞 M), algebraMap (𝓞 K) (𝓞 M) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)
+    (htop : (algebraMap L Ω).fieldRange ⊔ (algebraMap M Ω).fieldRange = ⊤) :
+    ∀ w : HeightOneSpectrum (𝓞 Ω), algebraMap (𝓞 K) (𝓞 Ω) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1 :=
+  numberField_unramified_compositum a ha hL hM htop
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `finiteIntermediateField_le_directed_stage`. -/
+theorem actual_finite_subextension_directed_descent_finiteIntermediateField_le_directed_stage_source
+    {ι : Type*} [Nonempty ι] (F : ι → IntermediateField K Ω)
+    (hdir : Directed (· ≤ ·) F)
+    (E : IntermediateField K Ω) [FiniteDimensional K E] [Algebra.IsSeparable K E]
+    (hE : E ≤ ⨆ i, F i) : ∃ i, E ≤ F i :=
+  finiteIntermediateField_le_directed_stage F hdir E hE
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+/-- Exact original-object consumer of `heightOnePrimes_containing_nonzero_finite`. -/
+theorem actual_finite_exceptional_integer_primes_heightOnePrimes_containing_nonzero_finite_source
+    {R : Type*} [CommRing R] [IsDedekindDomain R] (a : R) (ha : a ≠ 0) :
+    {v : HeightOneSpectrum R | a ∈ v.asIdeal}.Finite :=
+  heightOnePrimes_containing_nonzero_finite a ha
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `intermediateField_sup_inclusion_ranges`. -/
+theorem actual_intermediate_field_sup_embeddings_intermediateField_sup_inclusion_ranges_source (E F : IntermediateField K Ω) :
+    (IntermediateField.inclusion (show E ≤ E ⊔ F from le_sup_left)).toRingHom.fieldRange ⊔
+      (IntermediateField.inclusion (show F ≤ E ⊔ F from le_sup_right)).toRingHom.fieldRange =
+        ⊤ :=
+  intermediateField_sup_inclusion_ranges E F
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `finiteGalois_sup_unramified`. -/
+theorem actual_finite_galois_unramified_sup_finiteGalois_sup_unramified_source (a : 𝓞 K) (ha : a ≠ 0)
+    (F G : FiniteGaloisIntermediateField K Ω)
+    (hF : ∀ w : HeightOneSpectrum (𝓞 F), algebraMap (𝓞 K) (𝓞 F) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)
+    (hG : ∀ w : HeightOneSpectrum (𝓞 G), algebraMap (𝓞 K) (𝓞 G) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1) :
+    ∀ w : HeightOneSpectrum (𝓞 (F ⊔ G : FiniteGaloisIntermediateField K Ω)),
+      algebraMap (𝓞 K) (𝓞 (F ⊔ G : FiniteGaloisIntermediateField K Ω)) a ∉ w.asIdeal →
+        (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1 :=
+  finiteGalois_sup_unramified a ha F G hF hG
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedGaloisUnion_isGalois`. -/
+theorem actual_unramified_galois_stage_union_originalUnramifiedGaloisUnion_isGalois_source (a : 𝓞 K) :
+    IsGalois K (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  originalUnramifiedGaloisUnion_isGalois a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+variable {Ω : Type*} [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `originalUnramifiedGaloisStage_nonempty`. -/
+theorem actual_unramified_galois_stage_nonempty_originalUnramifiedGaloisStage_nonempty_source (a : 𝓞 K) :
+    Nonempty (OriginalUnramifiedGaloisStage (Ω := Ω) a) :=
+  originalUnramifiedGaloisStage_nonempty a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_finite_subextension_embeds_stage`. -/
+theorem actual_unramified_union_finite_stage_originalUnramifiedUnion_finite_subextension_embeds_stage_source
+    (a : 𝓞 K) (ha : a ≠ 0)
+    (E : IntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+    [FiniteDimensional K E] :
+    ∃ (F : OriginalUnramifiedGaloisStage (Ω := Ω) a) (i : E →ₐ[K] F.val),
+      ∀ x : E, (i x : Ω) = (x.val : Ω) :=
+  originalUnramifiedUnion_finite_subextension_embeds_stage a ha E
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_finiteGalois_unramified`. -/
+theorem actual_unramified_union_finite_ramification_originalUnramifiedUnion_finiteGalois_unramified_source
+    (a : 𝓞 K) (ha : a ≠ 0)
+    (F : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+    (v : HeightOneSpectrum (𝓞 K)) (hv : a ∉ v.asIdeal) :
+    ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+      v.asIdeal.ramificationIdx w.asIdeal = 1 :=
+  originalUnramifiedUnion_finiteGalois_unramified a ha F v hv
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_prime_characters_finite`. -/
+theorem actual_unramified_union_prime_characters_originalUnramifiedUnion_prime_characters_finite_source
+    (a : 𝓞 K) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime)
+    {ζ : K} (hζ : IsPrimitiveRoot ζ p) :
+    Finite (Gal((originalUnramifiedGaloisUnion (Ω := Ω) a)/K) →ₜ*
+      Multiplicative (ZMod p)) :=
+  originalUnramifiedUnion_prime_characters_finite a ha p hp hζ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F : Type*} [Field F] [NumberField F]
+
+/-- Exact original-object consumer of `rationalCyclotomic_originalBase_ramificationIdx_one`. -/
+theorem actual_rational_cyclotomic_ramification_rationalCyclotomic_originalBase_ramificationIdx_one_source
+    (m : ℕ) [NeZero m] [IsCyclotomicExtension {m} ℚ F]
+    (w : HeightOneSpectrum (𝓞 F)) (hm : (m : 𝓞 F) ∉ w.asIdeal) :
+    (w.asIdeal.under (𝓞 ℚ)).ramificationIdx w.asIdeal = 1 :=
+  rationalCyclotomic_originalBase_ramificationIdx_one m w hm
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {Ω : Type*} [Field Ω] [CharZero Ω] [Algebra ℚ Ω]
+
+/-- Exact original-object consumer of `originalQUnramifiedUnion_exists_primitiveRoot`. -/
+theorem actual_unramified_union_cyclotomic_roots_originalQUnramifiedUnion_exists_primitiveRoot_source [IsSepClosed Ω]
+    (a : 𝓞 ℚ) (m : ℕ) [NeZero m] (hma : (m : 𝓞 ℚ) ∣ a) :
+    ∃ ζ : originalUnramifiedGaloisUnion (Ω := Ω) a, IsPrimitiveRoot ζ m :=
+  originalQUnramifiedUnion_exists_primitiveRoot a m hma
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+  [IsGalois K Ω]
+
+/-- Exact original-object consumer of `unramified_prime_characters_finite_of_ambient_root`. -/
+theorem actual_unramified_cyclotomic_character_descent_unramified_prime_characters_finite_of_ambient_root_source
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite)
+    (hunram : ∀ F : FiniteGaloisIntermediateField K Ω,
+      ∀ v : HeightOneSpectrum (𝓞 K), v ∉ S →
+        ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+          v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (p : ℕ) (hp : p.Prime) {ζ : Ω} (hζ : IsPrimitiveRoot ζ p) :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  unramified_prime_characters_finite_of_ambient_root S hS hunram p hp hζ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {Ω : Type*} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+
+/-- Exact original-object consumer of `originalQUnramifiedUnion_finiteBase_prime_characters_finite`. -/
+theorem actual_unramified_union_finite_base_characters_originalQUnramifiedUnion_finiteBase_prime_characters_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a) :
+    (let U := originalUnramifiedGaloisUnion (Ω := Ω) a
+     letI : Algebra ℚ U := U.algebra'
+     ∀ E : IntermediateField ℚ U,
+       letI : Algebra ℚ E := E.algebra'
+       ∀ [FiniteDimensional ℚ E], Finite (Gal(U/E) →ₜ* Multiplicative (ZMod p))) :=
+  originalQUnramifiedUnion_finiteBase_prime_characters_finite a ha p hp hpa
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {Ω : Type*} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+
+/-- Exact original-object consumer of `originalQUnramifiedUnion_openSubgroup_prime_characters_finite`. -/
+theorem actual_unramified_union_open_subgroup_characters_originalQUnramifiedUnion_openSubgroup_prime_characters_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a) :
+    (let U := originalUnramifiedGaloisUnion (Ω := Ω) a
+     letI : Algebra ℚ U := U.algebra'
+     ∀ H : OpenSubgroup Gal(U/ℚ), Finite (H →ₜ* Multiplicative (ZMod p))) :=
+  originalQUnramifiedUnion_openSubgroup_prime_characters_finite a ha p hp hpa
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {Ω ι R : Type*} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+  [Fintype ι] [DecidableEq ι] [CommRing R] [TopologicalSpace R] [DiscreteTopology R]
+
+/-- Exact original-object consumer of `originalArithmeticMatrixKernel_prime_characters_finite`. -/
+theorem actual_arithmetic_residual_kernel_characters_originalArithmeticMatrixKernel_prime_characters_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a) :
+    (let U := originalUnramifiedGaloisUnion (Ω := Ω) a
+     letI : Algebra ℚ U := U.algebra'
+     ∀ (ρ : Gal(U/ℚ) →* GeneralLinearGroup ι R), Continuous ρ →
+       Finite (ρ.ker →ₜ* Multiplicative (ZMod p))) :=
+  originalArithmeticMatrixKernel_prime_characters_finite a ha p hp hpa
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_finiteGalois_le_iff`. -/
+theorem actual_unramified_union_finite_field_criterion_originalUnramifiedUnion_finiteGalois_le_iff_source
+    (a : 𝓞 K) (ha : a ≠ 0) (F : FiniteGaloisIntermediateField K Ω) :
+    F.toIntermediateField ≤ originalUnramifiedGaloisUnion (Ω := Ω) a ↔
+      ∀ w : HeightOneSpectrum (𝓞 F), algebraMap (𝓞 K) (𝓞 F) a ∉ w.asIdeal →
+        (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1 :=
+  originalUnramifiedUnion_finiteGalois_le_iff a ha F
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+
+
+/-- Exact original-object consumer of `rationalArithmeticGaloisGroup_openSubgroup_prime_characters_finite`. -/
+theorem actual_rational_arithmetic_galois_group_rationalArithmeticGaloisGroup_openSubgroup_prime_characters_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (H : OpenSubgroup (rationalArithmeticGaloisGroup a)) :
+    Finite (H →ₜ* Multiplicative (ZMod p)) :=
+  rationalArithmeticGaloisGroup_openSubgroup_prime_characters_finite a ha p hp hpa H
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace R] [DiscreteTopology R]
+
+/-- Exact original-object consumer of `rationalArithmeticResidual_has_profinite_presentation`. -/
+theorem actual_arithmetic_residual_profinite_presentation_rationalArithmeticResidual_has_profinite_presentation_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) :
+    (let hK := ρ.ker.isClosed_of_isOpen (continuousMatrixRepresentation_isOpen_ker ρ hρ)
+     ∃ S : Finset (fixedResidualProfiniteQuotient p (rationalArithmeticGaloisGroup a) ρ.ker hK),
+       Function.Surjective (profiniteGeneratorPresentation
+         (fixedResidualProfiniteQuotient p (rationalArithmeticGaloisGroup a) ρ.ker hK) S)) :=
+  rationalArithmeticResidual_has_profinite_presentation a ha p hp hpa ρ hρ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+variable [IsNoetherianRing A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `originalFramedFiberFixedQuotientEquiv_mk`. -/
+theorem actual_original_residual_framed_fibers_originalFramedFiberFixedQuotientEquiv_mk_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (f : OriginalContinuousFramedFiber e H σ) (h : H) :
+    (originalFramedFiberFixedQuotientEquiv hA e p hp H σ hσ f).val
+      (QuotientGroup.mk' (fixedResidualProPKernel p H σ.ker
+        (originalResidualMatrixKernel_isClosed H σ hσ)) h) = f.val h :=
+  originalFramedFiberFixedQuotientEquiv_mk hA e p hp H σ hσ f h
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O A : Type*} [CommRing O] [IsLocalRing O]
+  [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `localCoefficientReduction_continuous`. -/
+theorem actual_local_coefficient_reduction_topology_localCoefficientReduction_continuous_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O) :
+    Continuous (localCoefficientReduction e) :=
+  localCoefficientReduction_continuous hA e
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+omit [Group.FG G] [IsNoetherianRing O] [Finite (IsLocalRing.ResidueField O)] [IsAdicComplete (IsLocalRing.maximalIdeal A) A] in
+/-- Exact original-object consumer of `presentedFramedResidual_iff_whole`. -/
+theorem actual_original_presented_framed_fibers_presentedFramedResidual_iff_whole_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (f : H →ₜ* GeneralLinearGroup ι A) :
+    (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction (f.comp q)) =
+        (σ.toMonoidHom.comp q.toMonoidHom).comp
+          (ProfiniteGrp.ProfiniteCompletion.eta (GrpCat.of G)).hom ↔
+    (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      f.toMonoidHom = σ.toMonoidHom :=
+  presentedFramedResidual_iff_whole hA e H q hq σ f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `originalPresentedCoefficientRing_localData`. -/
+theorem actual_original_presented_coefficient_ring_originalPresentedCoefficientRing_localData_source
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    (letI := originalPresentedCoefficientRing_isLocal H q σ
+     IsNoetherianRing (OriginalPresentedCoefficientRing H q σ) ∧
+       IsAdicComplete (IsLocalRing.maximalIdeal (OriginalPresentedCoefficientRing H q σ))
+         (OriginalPresentedCoefficientRing H q σ) ∧
+       (inferInstance : TopologicalSpace (OriginalPresentedCoefficientRing H q σ)) =
+         (IsLocalRing.maximalIdeal (OriginalPresentedCoefficientRing H q σ)).adicTopology ∧
+       ∀ r : ResidualRepresentationCompletion (originalPresentedResidualRestriction H q σ),
+         localCoefficientReduction (completedPresentationResidueEquiv
+           (originalPresentedResidualRestriction H q σ) q.toMonoidHom.ker)
+           (Ideal.Quotient.mk (completedPresentationRelationIdeal
+             (originalPresentedResidualRestriction H q σ) q.toMonoidHom.ker) r) =
+               completedResidualRepresentationEvaluation (originalPresentedResidualRestriction H q σ) r) :=
+  originalPresentedCoefficientRing_localData H q σ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `originalPresentedFramedFiberEquiv_evaluation`. -/
+theorem actual_original_coefficient_framed_equivalence_originalPresentedFramedFiberEquiv_evaluation_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    (letI := originalPresentedCoefficientRing_isLocal H q σ
+     ∀ (f : OriginalContinuousCoefficientFiber (completedPresentationResidueEquiv
+       (originalPresentedResidualRestriction H q σ) q.toMonoidHom.ker) eA) (h : H),
+       (originalPresentedFramedFiberEquiv hA eA H q hq σ f).val h =
+         GeneralLinearGroup.map (n := ι) f.val.toRingHom
+           (completedPresentationRepresentation
+             (originalPresentedResidualRestriction H q σ) H q hq h)) :=
+  originalPresentedFramedFiberEquiv_evaluation hA eA H q hq σ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {O A B : Type u} [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A]
+  [CommRing B] [IsLocalRing B] [Algebra O B]
+
+variable {G ι : Type u} [Group G] [Group.FG G] [Fintype ι] [DecidableEq ι]
+  [IsNoetherianRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [WithIdeal A] [WithIdeal B]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal B) B]
+
+/-- Exact original-object consumer of `originalPresentedFramedFiberEquiv_natural`. -/
+theorem actual_original_framed_fiber_naturality_originalPresentedFramedFiberEquiv_natural_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (k : A →ₐ[O] B) (hk : Continuous k)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA) :
+    (letI := originalPresentedCoefficientRing_isLocal H q σ
+     ∀ f : OriginalContinuousCoefficientFiber (completedPresentationResidueEquiv
+       (originalPresentedResidualRestriction H q σ) q.toMonoidHom.ker) eA,
+       originalPresentedFramedFiberEquiv hB eB H q hq σ
+         (originalCoefficientFiberPostcomp _ eA eB k hk hres f) =
+           originalFramedFiberPostcomp eA eB H σ.toMonoidHom k hk hres
+             (originalPresentedFramedFiberEquiv hA eA H q hq σ f)) :=
+  originalPresentedFramedFiberEquiv_natural hA hB eA eB H q hq σ k hk hres
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `fixedResidualFramedCoefficientRing_localData`. -/
+theorem actual_fixed_residual_framed_coefficient_ring_fixedResidualFramedCoefficientRing_localData_source
+    (p : ℕ) (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (S : Finset (originalResidualProfiniteGroup p H σ hσ)) :
+    (letI := fixedResidualFramedCoefficientRing_isLocal p H σ hσ S
+     IsNoetherianRing (FixedResidualFramedCoefficientRing p H σ hσ S) ∧
+       IsAdicComplete (IsLocalRing.maximalIdeal (FixedResidualFramedCoefficientRing p H σ hσ S))
+         (FixedResidualFramedCoefficientRing p H σ hσ S) ∧
+       (inferInstance : TopologicalSpace (FixedResidualFramedCoefficientRing p H σ hσ S)) =
+         (IsLocalRing.maximalIdeal (FixedResidualFramedCoefficientRing p H σ hσ S)).adicTopology) :=
+  fixedResidualFramedCoefficientRing_localData p H σ hσ S
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+variable {A : Type u} [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+  [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+variable {B : Type u} [CommRing B] [IsLocalRing B] [IsNoetherianRing B]
+  [Algebra O B] [WithIdeal B] [IsAdicComplete (IsLocalRing.maximalIdeal B) B]
+
+/-- Exact original-object consumer of `fixedResidualFramedFiberEquiv_natural`. -/
+theorem actual_fixed_residual_framed_universality_fixedResidualFramedFiberEquiv_natural_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (S : Finset (originalResidualProfiniteGroup p H σ hσ))
+    (hS : Function.Surjective (profiniteGeneratorPresentation
+      (originalResidualProfiniteGroup p H σ hσ) S))
+    (k : A →ₐ[O] B) (hk : Continuous k)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA) :
+    (letI := fixedResidualFramedCoefficientRing_isLocal p H σ hσ S
+     ∀ f : OriginalContinuousCoefficientFiber
+       (fixedResidualFramedCoefficientResidueEquiv p H σ hσ S) eA,
+       fixedResidualFramedFiberEquiv hB eB p hp H σ hσ S hS
+         (originalCoefficientFiberPostcomp _ eA eB k hk hres f) =
+           originalFramedFiberPostcomp eA eB H σ k hk hres
+             (fixedResidualFramedFiberEquiv hA eA p hp H σ hσ S hS f)) :=
+  fixedResidualFramedFiberEquiv_natural hA hB eA eB p hp H σ hσ S hS k hk hres
+
+end
+
 
 end Dubon2026.SemanticRegression

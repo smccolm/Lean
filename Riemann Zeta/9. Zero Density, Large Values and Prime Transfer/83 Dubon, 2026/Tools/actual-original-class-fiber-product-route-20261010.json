@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-10",
+  "status": "Production increments through1694, exact consumers and both sequential verifiers PASS with actual exits0 consumed and zero diagnostics. Remaining constructions explicitly listed as unproved remain OPEN.",
+  "primarySource": {
+    "url": "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "location": "Lecture 5, Proposition 1.6, pages 2-3",
+    "checked": "Live PDF reopened 2026-10-10",
+    "relevance": "Compatible lifts glue over the coefficient fiber product; lifting the common conjugator gives surjectivity, and lifting stabilizers resolves injectivity. The general representability criterion is an additional theorem."
+  },
+  "ownImplementationPlan": [
+    "Derive continuity of every actual finite maximal-adic source coefficient morphism from finiteLocalCoefficient_discrete; retain the existing originalUnframedPostcomp definition and its composition theorem.",
+    "Define the target as the literal subtype of pairs of existing OriginalUnframedDeformationClass values whose genuine coefficient-change images agree.",
+    "Use actual matrix coefficient compatibility to prove both projections of every original coefficient-fiber-product class land in that target.",
+    "Apply the existing originalCoefficientFiberProductClass_projections_injective to the same actual pair map. Instantiate the original irreducibility field L explicitly.",
+    "Choose genuine framed representatives of a compatible class pair; their equality over the common ring supplies actual strict conjugacy. Apply originalFiniteFiberProductFramed_exists to those whole original representations.",
+    "Use its exact first projection and actual second strict conjugacy to recover the supplied pair of classes. Combine surjectivity with injectivity to obtain the canonical equivalence."
+  ],
+  "exactExistingInputs": [
+    "FiniteLocalCoefficientTopology.finiteLocalCoefficient_discrete",
+    "OriginalUnframedDeformationNaturality.originalUnframedPostcomp_comp",
+    "OriginalUnframedDeformationClasses.originalUnframedClass_eq_iff",
+    "OriginalCoefficientFiberProductClassInjectivity.originalCoefficientFiberProductClass_projections_injective",
+    "OriginalFiniteFiberProductFramedGluing.originalFiniteFiberProductFramed_exists"
+  ],
+  "preservedSemantics": "Original coefficient algebras, actual maximal-ideal residues, original continuous framed representations, original strict-conjugacy quotient, and actual maximal-adic topology. Finite coefficient hypotheses remain explicit. Absolute irreducibility is imposed on the original residual representation and is used only for injectivity.",
+  "boundary": "This canonical finite coefficient class equivalence does not construct an unframed representing ring or a modular Galois representation. Naturality and prorepresentability remain obligations. DUB-17-20 remain OPEN. No external Lean code imported and no resource limits changed."
+}
