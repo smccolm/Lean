@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-10",
+  "status": "All seven modules1855-1861, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "scope": [
+    1861,
+    1228,
+    7599
+  ],
+  "modules": [
+    {
+      "scope": 1855,
+      "name": "IntegralHopfSubgroupInvariantModel",
+      "draftSha256": "a99132a7717c2c0c99aa325dcc358a397625cf5868aa61c3bf4ec647a032b7aa",
+      "mathematics": "Apply the derived integral subgroup Hopf quotient to the original specified Galois-stable subgroup, then construct its actual invariant coordinate Hopf algebra. Finite freeness of the original subgroup coordinates and their geometric reducedness are derived. The exact original subgroup point image identifies the quotient point group with genuine points of the constructed invariant model; the original coordinate and antipode diagrams are retained.",
+      "boundary": "This assembles genuine integral Hopf coordinates and the original quotient point group. Reduced generic fiber, actual Galois-equivariant generic coordinate identification and arithmetic finite-flat deformation closure remain separate obligations. No modular gate closes.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "510332995d3e3bc62d2458fef3637f6db92fb1e1ac085d93f5ff3c45569eb0dd",
+      "productionLog": "invariantModel1855b-focus.log",
+      "productionFixes": [
+        "Add an explicit original invariant-coordinate point-group abbreviation and install it in the quotient comparison signature and body.",
+        "Omit unused Flat(R,K) from finite freeness, and unused Free(R,A)/Flat(R,K) from the point-range theorem."
+      ]
+    },
+    {
+      "scope": 1856,
+      "name": "GaloisTensorFixedCoordinates",
+      "draftSha256": "57cc0a79f85d8b2bd860c829bcb79c8cd40bcba29e559616e16934adf95335eb",
+      "mathematics": "For the actual Galois field extension and original finite basis, the extended tensor basis identifies genuine coefficient action with Galois action on each original tensor coefficient. The pinned infinite-Galois fixed-field theorem produces original-field coefficients, and the same original basis reconstructs the unique type of original vector needed for coordinate descent. The reverse implication uses genuine scalar extension of original coordinates.",
+      "boundary": "This explicitly assumes IsGalois for the actual field extension and uses an original finite basis. Descending the reconstructed geometric Hopf coordinate equivalence and assembling the full arithmetic model remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "57cc0a79f85d8b2bd860c829bcb79c8cd40bcba29e559616e16934adf95335eb",
+      "productionLog": "tensorFixed1856-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Omit unused Galois/finite-index instances in the private basis coefficient action lemma; they remain explicit in the fixed-field descent theorem."
+      ]
+    },
+    {
+      "scope": 1857,
+      "name": "GaloisTensorPointEvaluation",
+      "draftSha256": "6530f33e3a852a557e295e58ea9ac1f65eddedeb0dcd3c6495fca0374be97f53",
+      "mathematics": "Construct the actual coefficient automorphism of the original geometric tensor coordinate algebra as an algebra automorphism over the original field. Its evaluation against the original extended point is computed by inverse coefficient twisting of that same point. The proved finite-basis fixed-tensor theorem identifies precisely its fixed original coordinates.",
+      "boundary": "The coefficient action is semilinear over the geometric field and linear over the original field; no geometric-field algebra automorphism is falsely asserted. Full coordinate descent and arithmetic finite-flat realization remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "6530f33e3a852a557e295e58ea9ac1f65eddedeb0dcd3c6495fca0374be97f53",
+      "productionLog": "tensorPoint1857-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1858,
+      "name": "GaloisHopfCoordinateImage",
+      "draftSha256": "14bfed702a5b5d3fc29d742dcac52c824098eef47ebf460b135d97dea85c5861",
+      "mathematics": "Use genuine original point base change and the proved finite reduced geometric coordinate reconstruction to construct the actual geometric algebra equivalence. Retain its evaluation on original coordinates. Original Galois equivariance of the point-group equivalence, actual inverse twisting of points and geometric point separation force each reconstructed original coordinate image to be Galois-fixed. The proved finite-basis fixed-field descent produces an original coordinate preimage.",
+      "boundary": "The image theorem explicitly requires the original Galois field extension; it does not replace that hypothesis by algebraic closedness alone. The actual original-field Hopf equivalence and full arithmetic finite-flat model assembly remain unproved.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "14bfed702a5b5d3fc29d742dcac52c824098eef47ebf460b135d97dea85c5861",
+      "productionLog": "coordinateImage1858-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1859,
+      "name": "GaloisHopfOriginalCoordinateHom",
+      "draftSha256": "8cff59b1a8bfe77745de707a16920c6860e38b197a4c4c6d6145501e63301588",
+      "mathematics": "The proved image of each original coordinate under genuine geometric reconstruction lies in the actual original scalar-extension inclusion. Its proved injection and range equivalence construct the original-field algebra homomorphism. The exact original scalar-extension square and evaluation on every original point are retained.",
+      "boundary": "This constructs an original-field coordinate homomorphism with its exact genuine point action; invertibility and original Hopf compatibility require their own proofs. No source modular gate closes.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "8cff59b1a8bfe77745de707a16920c6860e38b197a4c4c6d6145501e63301588",
+      "productionLog": "originalHom1859-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1860,
+      "name": "GaloisHopfOriginalCoordinateEquiv",
+      "draftSha256": "4d885e03cea95639035543dd2367dcd3024bf004cb21ef057fdbc1f9f4728178",
+      "mathematics": "The actual inverse point-group equivalence is proved Galois-equivariant. Descend both original coordinate maps and use their exact original point evaluations and genuine reduced-coordinate point separation to prove both inverse identities. This constructs an algebra equivalence over the original field retaining the given point-group equivalence.",
+      "boundary": "Original coalgebra and antipode compatibility remain a separate assembly step. The theorem concerns the same actual finite reduced Hopf coordinate algebras, not an assumed group-scheme correspondence.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "4d885e03cea95639035543dd2367dcd3024bf004cb21ef057fdbc1f9f4728178",
+      "productionLog": "originalEquiv1860-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1861,
+      "name": "GaloisHopfOriginalBialgEquiv",
+      "draftSha256": "f57f0ab57ceeffe82d0ffa7c014b56c4ac879a7ee199355d54db510b95db609a",
+      "mathematics": "Original point identity and faithful field inclusion determine the actual original counit. Multiplication in the same original point groups, exact descended coordinate evaluation and genuine original reduced tensor-point separation derive the original comultiplication diagram. The original algebra equivalence is therefore a genuine original-field bialgebra equivalence and preserves the actual Hopf antipodes.",
+      "boundary": "This proves original-field Hopf coordinate reconstruction from an explicit genuine Galois-equivariant point-group equivalence for actual finite reduced Hopf algebras. Applying it to the original integral quotient model and actual arithmetic representation remains required. No modular gate closes.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "f57f0ab57ceeffe82d0ffa7c014b56c4ac879a7ee199355d54db510b95db609a",
+      "productionLog": "originalHopf1861-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use pinned productMap_eq_comp_map and the literal convolution definition to identify productMap evaluation, rather than equating it definitionally to the distinct lift expression in AlgHom.convMul_apply.",
+        "Match focused1844 fix: use explicit multiplication congruence for original coordinate evaluations through the local algebra-map abbreviation."
+      ]
+    }
+  ],
+  "semanticBoundary": "The intended scope assembles the genuine integral invariant model for the original specified subgroup, proves original finite-basis Galois tensor descent, and reconstructs a genuine original-field Hopf coordinate equivalence from the actual Galois-equivariant geometric point equivalence between finite reduced Hopf algebras. Actual generic-fiber reducedness and final application to the original integral quotient model and arithmetic finite-flat deformation condition remain separate obligations. No source modular gate closes.",
+  "scopeLimit": "The intended scope assembles the genuine integral invariant model for the original specified subgroup, proves original finite-basis Galois tensor descent, and reconstructs a genuine original-field Hopf coordinate equivalence from the actual Galois-equivariant geometric point equivalence between finite reduced Hopf algebras. Actual generic-fiber reducedness and final application to the original integral quotient model and arithmetic finite-flat deformation condition remain separate obligations. No source modular gate closes.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/03BE",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "apiReview": "original-field-hopf-coordinate-descent-api-review-20261010.json",
+  "next": "Apply original-field Hopf reconstruction to the original integral generic-fiber quotient model and arithmetic finite-flat deformation closure.",
+  "precompilationReview": [
+    "1861: identify actual tensor productMap with original convolution through pinned productMap_eq_comp_map; UNCOMPILED."
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_144658.log",
+    "paper": "logs/dubon-build-20261010-145038-771.log",
+    "scope": [
+      1861,
+      1228,
+      7599
+    ]
+  }
+}

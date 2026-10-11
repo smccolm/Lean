@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-10",
+  "status": "All four modules1873-1876, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "scope": [
+    1876,
+    1243,
+    7642
+  ],
+  "modules": [
+    {
+      "scope": 1873,
+      "name": "HopfCoordinateCommutativeGroupPresheaf",
+      "draftSha256": "74b672f6e11a108d6de6cff18f49ea94149924a0ea5b0394026a68728664fb32",
+      "mathematics": "Construct the genuine presheaf of original commutative convolution groups on the opposite category of original commutative algebras. Its maps are the original coefficient-composition maps. A literal bijection with original coordinate algebra morphisms proves representability by the same coordinate object, with exact coordinate evaluation. The pinned representable-presheaf construction then derives a genuine commutative group object on that original opposite algebra object.",
+      "boundary": "This derives the original algebra-category group object from actual Hopf coordinates. Transport to the actual Spec-over scheme object, exact geometric-point comparison, finite-flatness and universe adapters remain open. No arithmetic or source modular gate closes. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "74b672f6e11a108d6de6cff18f49ea94149924a0ea5b0394026a68728664fb32",
+      "productionLog": "commutativePresheaf1873b-focus.log",
+      "productionFixes": [
+        "Use anonymous binders for the definitionally natural representability proof.",
+        "Expose the actual WithConv algebra-point type before coordinate evaluation.",
+        "Use the pinned implicit-category CartesianMonoidalCategory.ofHasFiniteProducts API.",
+        "Mark the constructed class-valued group object implicit_reducible as required by the class-definition linter."
+      ],
+      "precompilationFixes": [
+        "Supply the explicit genuine Cartesian symmetry required by CommGrpObj and mirror it in the exact consumer.",
+        "Construct the commutative convolution group for arbitrary commutative point-value algebras directly from the generic point group and cocommutativity; the older finiteFreeHopfPointsCommGroup helper is field-valued.",
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869."
+      ]
+    },
+    {
+      "scope": 1874,
+      "name": "HopfCoordinateAffineGroupScheme",
+      "draftSha256": "1a266f20c0a1267c0cab515fcf9e8aed304138d196ef8d54652a29c30a0ac80c",
+      "mathematics": "Construct the original relative spectrum functor from the genuine algebra-under equivalence and original spectrum maps. Pinned finite-limit preservation yields a braided finite-product-preserving functor. Transport the already constructed original coordinate group object to a genuine commutative group object in schemes over the original base spectrum. Its structure morphism is exactly the spectrum of the original algebra map; actual finite and flat coordinate modules prove the corresponding scheme morphism properties.",
+      "boundary": "The actual group scheme is constructed from original Hopf coordinates. The point-group identification, exact original Galois comparison, universe adapters and arithmetic model existence remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "a41be0ade90862264c2a81e3aba00ca954fce966267cab3b909b4e83e2e69e44",
+      "productionLog": "affineScheme1874d-focus.log",
+      "productionFixes": [
+        "Install the proved finite-product preservation of both original equivalences and actual over-category spectrum; explicitly compose the original functors to resolve the pinned typeclass composition search.",
+        "Expose the original source spectrum in the morphism property goals before applying the actual Spec finiteness/flatness equivalences."
+      ],
+      "precompilationFixes": [
+        "Use implicit-category ofHasFiniteProducts API, following actual1873 diagnostic."
+      ]
+    },
+    {
+      "scope": 1875,
+      "name": "HopfAffineSchemePointGroup",
+      "draftSha256": "46928e4a0f6ec556279310fa4ecde3581885eb053cbc4d4b3b94f10f274ba03d",
+      "mathematics": "Use the actual representable original Hopf point presheaf and its proved Yoneda group isomorphism. Full faithfulness and finite-product preservation of original relative spectrum give a genuine group equivalence from original convolution points to morphisms from the same value algebra spectrum to the actual group scheme over the original base. The equivalence is literally the original spectrum map and original coefficient composition equals pullback of the same scheme point.",
+      "boundary": "This identifies the actual coordinate point group with genuine affine group-scheme points and their coefficient maps. Original arithmetic realization, cross-universe adapters and the all-finite-coefficient-quotients deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "0ea3c6ca5f0eb292ac600391a8817cd33f426cd671489cfed7d9da731cd61243",
+      "productionLog": "schemePoints1875b-focus.log",
+      "productionFixes": [
+        "Explicitly compose the actual fully faithful algebra-under equivalence, opposite-over equivalence and original spectrum-over functor. The point equivalence and exact coefficient/Galois-compatible spectrum formulas then compile unchanged."
+      ],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Use implicit-category ofHasFiniteProducts API, following actual1873 diagnostic."
+      ]
+    },
+    {
+      "scope": 1876,
+      "name": "FiniteFreeHopfModelSchemeRealization",
+      "draftSha256": "7649aa7a0404b7859b0445ff89a9129d8169952bb02a0d2923f90977443167b0",
+      "mathematics": "Construct the genuine affine commutative group scheme from the actual integral coordinates of a given finite free Hopf point model. Its structure morphism is finite and flat by the same original finite free module. Compose the original model point equivalence with the actual affine-scheme point group comparison. The model Galois law and exact coefficient naturality prove that the scheme points realize precisely the specified original Galois action.",
+      "boundary": "The original coordinate model is an explicit input, and the target finite-flat scheme and point/Galois realization are constructed. This common-universe result does not supply arithmetic model existence or the model condition at all finite coefficient quotients; cross-universe adapters and the full finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "7649aa7a0404b7859b0445ff89a9129d8169952bb02a0d2923f90977443167b0",
+      "productionLog": "modelScheme1876-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869."
+      ]
+    }
+  ],
+  "semanticBoundary": "The intended scope constructs the actual representable commutative convolution point presheaf, transports its genuine group object through the original relative spectrum functor, proves finite and flat structure-morphism properties from the same coordinates, and identifies its true scheme points and coefficient action. For a given original finite free Hopf point model, this constructs its actual finite-flat group scheme and exact original Galois realization. All rings and coordinates here share a common universe. Existence of arithmetic models at every finite coefficient quotient, cross-universe adapters and the full finite-flat deformation functor remain unproved. No source modular gate closes.",
+  "scopeLimit": "The intended scope constructs the actual representable commutative convolution point presheaf, transports its genuine group object through the original relative spectrum functor, proves finite and flat structure-morphism properties from the same coordinates, and identifies its true scheme points and coefficient action. For a given original finite free Hopf point model, this constructs its actual finite-flat group scheme and exact original Galois realization. All rings and coordinates here share a common universe. Existence of arithmetic models at every finite coefficient quotient, cross-universe adapters and the full finite-flat deformation functor remain unproved. No source modular gate closes.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/01I1",
+    "https://stacks.math.columbia.edu/tag/022R",
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "next": "Assemble the actual arithmetic model condition at all finite coefficient quotients and prove the required finite-flat deformation closure.",
+  "assembledFixes": [
+    "Preserve the original exact-consumer monoidal structure explicitly under the full import graph."
+  ],
+  "failedAssembledLogs": [
+    "assembled1876-focus.log"
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_172228.log",
+    "paper": "logs/dubon-build-20261010-172850-151.log",
+    "scope": [
+      1876,
+      1243,
+      7642
+    ]
+  }
+}

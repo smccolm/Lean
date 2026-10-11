@@ -1532,6 +1532,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AlgebraBaseChangePoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraEqualizerBaseChange.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AlgebraIdempotentLeftIdeal.lean",
       "role": "Extension"
     },
@@ -1716,7 +1724,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticUnframedDeterminantOrdinaryUniversality.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticUnframedInertiaUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnframedOrdinaryUniversality.lean",
       "role": "Extension"
     },
     {
@@ -1752,6 +1768,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArtinianAlgebraPointKernelOrbit.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArtinianResidualMatrixPGroup.lean",
       "role": "Extension"
     },
@@ -1777,6 +1797,22 @@
     },
     {
       "path": "Extension/Dubon2026/BesselJ0.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BialgebraCocommutativeDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BialgebraCoordinateComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BialgebraInjectiveDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BialgebraSurjectiveDescent.lean",
       "role": "Extension"
     },
     {
@@ -2017,6 +2053,14 @@
     },
     {
       "path": "Extension/Dubon2026/CoefficientSubalgebraRetraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CommutativeHopfPointsCoefficientChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CommutativeHopfPointsGroup.lean",
       "role": "Extension"
     },
     {
@@ -2285,6 +2329,10 @@
     },
     {
       "path": "Extension/Dubon2026/ContinuousEndpointZeroDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFiberProductHopfModels.lean",
       "role": "Extension"
     },
     {
@@ -2956,6 +3004,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteAlgebraPointRestriction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteBadPrimeAverages.lean",
       "role": "Extension"
     },
@@ -2972,11 +3024,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteCoefficientExtensionHopfModel.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCoefficientFiberProductProjectionTopology.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/FiniteCoefficientFiberProductTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCoefficientVectorSpanning.lean",
       "role": "Extension"
     },
     {
@@ -3012,11 +3072,67 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteFreeHopfGaloisAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfModelCoordinateResize.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfModelSchemeRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelFinitePower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointModelSurjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPointProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFreeHopfPoints.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteGaloisCharacterRadicals.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/FiniteGaloisUnramifiedSup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGroupInvariantPointOrbit.lean",
       "role": "Extension"
     },
     {
@@ -3312,6 +3428,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteReducedAlgebraPointSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteReducedHopfPointReconstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteReducedPointEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteReducedScalarExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteReducedTensorPointSeparation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteRepresentationInnerProduct.lean",
       "role": "Extension"
     },
@@ -3444,6 +3580,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FreeHopfCoordinateTransfer.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FrickeCusp.lean",
       "role": "Extension"
     },
@@ -3496,7 +3636,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisHopfCoordinateImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisHopfOriginalBialgEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisHopfOriginalCoordinateEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisHopfOriginalCoordinateHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisModuleSubquotientActions.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisRadicalClassIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisTensorFixedCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisTensorPointEvaluation.lean",
       "role": "Extension"
     },
     {
@@ -3789,6 +3957,10 @@
     },
     {
       "path": "Extension/Dubon2026/GeneralZeroDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GenericFiberTensorCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -4112,6 +4284,154 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/HopfAffineSchemePointGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfAntipodeCoordinateDiagrams.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfBaseChangePoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantAntipode.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantBaseChangeEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantComulAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantComultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantCoordinateAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantFieldQuotientPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantPointBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantPointFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantPointTranslations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoinvariantTensorImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoordinateAffineGroupScheme.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoordinateCommutativeGroupPresheaf.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoordinateEquivPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfCoordinateQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfFieldSubgroupComultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfGaloisStablePointClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfInjectiveAntipodeDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointBaseChangeNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointQuotientGeometricReduced.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointTranslations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointVanishingKernelSelection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointsCoordinateQuotientFree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointsRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfPointsVanishingIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfQuotientPointCoefficientAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfSubgroupCoinvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfSubgroupCoordinateQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfSubgroupFixedCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfSubgroupQuotientAntipodeCounit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfSubgroupVanishingAntipode.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfSurjectiveAntipodeDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfTensorCoordinateInclusions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HopfTensorPointsProduct.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/HorizontalArgumentBound.lean",
       "role": "Extension"
     },
@@ -4161,6 +4481,58 @@
     },
     {
       "path": "Extension/Dubon2026/IntegralGamma0FiniteResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfCoinvariantPointFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfCoinvariantQuotientPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfInvariantGenericCoordinateEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfInvariantGenericPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfInvariantGenericReduced.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfQuotientPointGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupCocommutativity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupComultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupGenericPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupInvariantGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupInvariantModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupPointEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHopfSubgroupQuotient.lean",
       "role": "Extension"
     },
     {
@@ -4532,6 +4904,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalizedAlgebraPointInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalizedHopfPointClosure.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalizedIntegerIntegralClosure.lean",
       "role": "Extension"
     },
@@ -4572,6 +4952,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MatrixAdicHopfFlatCondition.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MatrixAdjointCocycles.lean",
       "role": "Extension"
     },
@@ -4604,6 +4988,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MatrixCoefficientHopfModels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixCoefficientPointActions.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MatrixCombinationDeterminant.lean",
       "role": "Extension"
     },
@@ -4616,7 +5008,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MatrixConjugacyHopfModels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixConjugacyVectorEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixConjugateFixedVectors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixFiberProductHopfModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixFiberProductPointEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixFixedColumnFromRelations.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MatrixIdealPowerProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixIdealQuotientHopfModels.lean",
       "role": "Extension"
     },
     {
@@ -4629,6 +5049,26 @@
     },
     {
       "path": "Extension/Dubon2026/MatrixIdempotentNewtonBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixInvariantSubmoduleConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixOrdinaryIdealInvariantCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixOrdinaryInvariantDirectSummand.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixOrdinaryRelationCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixOrdinaryRelationIdeal.lean",
       "role": "Extension"
     },
     {
@@ -4653,6 +5093,10 @@
     },
     {
       "path": "Extension/Dubon2026/MatrixPrimePowerCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPrimitiveVectorBasis.lean",
       "role": "Extension"
     },
     {
@@ -4713,6 +5157,30 @@
     },
     {
       "path": "Extension/Dubon2026/MatrixTraceGram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTwoDeterminantComplement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTwoInvariantAxis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTwoOrdinaryInvariantLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTwoOrdinaryRelationConverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTwoPrimitiveInvariantLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixTwoResidualInvariantAxis.lean",
       "role": "Extension"
     },
     {
@@ -5112,7 +5580,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalUnframedDeterminantOrdinaryCoefficientIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnframedDeterminantOrdinaryQuotientEquivalence.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalUnframedFixedQuotientEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnframedOrdinaryCoefficientIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnframedOrdinaryCondition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnframedOrdinaryQuotientEquivalence.lean",
       "role": "Extension"
     },
     {
@@ -5129,6 +5617,10 @@
     },
     {
       "path": "Extension/Dubon2026/OutsideZeroDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PIDKernelRetraction.lean",
       "role": "Extension"
     },
     {
@@ -6388,6 +6880,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RepresentationHopfModelMaps.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RepresentationIrreducibilityFromRestriction.lean",
       "role": "Extension"
     },
@@ -6404,6 +6900,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RepresentationUnderlyingGroupAction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ResidualCoefficientCoordinateUnits.lean",
       "role": "Extension"
     },
@@ -6416,6 +6916,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ResidualDeterminantOrdinaryQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ResidualDeterminantQuotient.lean",
       "role": "Extension"
     },
@@ -6425,6 +6929,14 @@
     },
     {
       "path": "Extension/Dubon2026/ResidualMatrixColumnIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualOrdinaryNontrivialElement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualOrdinaryRelationQuotient.lean",
       "role": "Extension"
     },
     {
@@ -6768,6 +7280,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SubmoduleCoordinateLineSplitting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SubmoduleRankOnePrimitiveVector.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SurjectiveCosetEquiv.lean",
       "role": "Extension"
     },
@@ -6816,7 +7336,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/TensorKernelRetraction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/TensorOrbitSpanning.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TensorPointFamilySeparation.lean",
       "role": "Extension"
     },
     {
@@ -7408,6 +7936,18 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-affine-hopf-group-scheme-and-point-realization-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-arithmetic-ordinary-and-hopf-coordinate-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-arithmetic-ordinary-quotient-route-20261010.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-arithmetic-unframed-route-20261010.json",
       "role": "Tools"
     },
@@ -7420,11 +7960,47 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-coordinate-resize-representation-and-coefficient-model-closure-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-finite-free-hopf-models-and-cocommutativity-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-geometric-points-and-integral-subgroup-descent-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-hopf-model-subgroup-and-quotient-closure-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-hopf-points-products-and-conditional-quotient-route-20261010.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-idempotent-left-ideal-route-20261010.json",
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-invariant-coordinate-quotient-points-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-invariant-generic-coordinate-realization-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-ordinary-invariant-line-route-20261010.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-original-class-fiber-product-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-field-hopf-coordinate-descent-route-20261010.json",
       "role": "Tools"
     },
     {
@@ -7433,6 +8009,14 @@
     },
     {
       "path": "Tools/actual-original-unframed-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-reduced-hopf-and-integral-quotient-point-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-subgroup-model-and-invariant-hopf-coordinate-route-20261010.json",
       "role": "Tools"
     },
     {
@@ -9337,7 +9921,139 @@
     "OriginalAdicLocalQuotientData",
     "ResidualDeterminantSubgroupQuotient",
     "OriginalUnframedConditionQuotientEquivalence",
-    "ArithmeticUnframedInertiaUniversality"
+    "ArithmeticUnframedInertiaUniversality",
+    "MatrixPrimitiveVectorBasis",
+    "MatrixTwoInvariantAxis",
+    "MatrixTwoResidualInvariantAxis",
+    "MatrixTwoDeterminantComplement",
+    "MatrixConjugateFixedVectors",
+    "MatrixTwoPrimitiveInvariantLine",
+    "MatrixFixedColumnFromRelations",
+    "MatrixTwoOrdinaryInvariantLine",
+    "SubmoduleCoordinateLineSplitting",
+    "MatrixOrdinaryInvariantDirectSummand",
+    "MatrixTwoOrdinaryRelationConverse",
+    "SubmoduleRankOnePrimitiveVector",
+    "MatrixOrdinaryRelationCriterion",
+    "ResidualOrdinaryNontrivialElement",
+    "MatrixOrdinaryRelationIdeal",
+    "MatrixOrdinaryIdealInvariantCriterion",
+    "MatrixInvariantSubmoduleConjugacy",
+    "OriginalUnframedOrdinaryCondition",
+    "ResidualOrdinaryRelationQuotient",
+    "OriginalUnframedOrdinaryCoefficientIdeal",
+    "OriginalUnframedOrdinaryQuotientEquivalence",
+    "ArithmeticUnframedOrdinaryUniversality",
+    "OriginalUnframedDeterminantOrdinaryCoefficientIdeal",
+    "ResidualDeterminantOrdinaryQuotient",
+    "OriginalUnframedDeterminantOrdinaryQuotientEquivalence",
+    "ArithmeticUnframedDeterminantOrdinaryUniversality",
+    "CommutativeHopfPointsGroup",
+    "CommutativeHopfPointsCoefficientChange",
+    "FiniteFreeHopfPoints",
+    "HopfPointsVanishingIdeal",
+    "HopfSubgroupVanishingAntipode",
+    "HopfPointsCoordinateQuotientFree",
+    "HopfPointsRestriction",
+    "HopfSubgroupQuotientAntipodeCounit",
+    "FiniteFreeHopfGaloisAction",
+    "HopfTensorCoordinateInclusions",
+    "HopfTensorPointsProduct",
+    "FiniteFreeHopfPointProducts",
+    "BialgebraSurjectiveDescent",
+    "HopfSurjectiveAntipodeDescent",
+    "HopfCoordinateQuotient",
+    "HopfSubgroupCoordinateQuotient",
+    "ArtinianAlgebraPointKernelOrbit",
+    "HopfPointVanishingKernelSelection",
+    "HopfGaloisStablePointClosure",
+    "FiniteReducedAlgebraPointSeparation",
+    "FiniteReducedTensorPointSeparation",
+    "HopfFieldSubgroupComultiplication",
+    "AlgebraBaseChangePoints",
+    "HopfBaseChangePoints",
+    "LocalizedAlgebraPointInjection",
+    "LocalizedHopfPointClosure",
+    "GenericFiberTensorCoordinates",
+    "IntegralHopfSubgroupComultiplication",
+    "IntegralHopfSubgroupQuotient",
+    "IntegralHopfSubgroupPointEquivalence",
+    "IntegralHopfSubgroupGenericPoints",
+    "PIDKernelRetraction",
+    "HopfSubgroupCoinvariants",
+    "TensorKernelRetraction",
+    "HopfCoinvariantComultiplication",
+    "HopfCoinvariantTensorImage",
+    "HopfCoinvariantComulAlgebra",
+    "BialgebraInjectiveDescent",
+    "HopfAntipodeCoordinateDiagrams",
+    "HopfCoinvariantAntipode",
+    "HopfInjectiveAntipodeDescent",
+    "HopfCoinvariantCoordinateAlgebra",
+    "AlgebraEqualizerBaseChange",
+    "FiniteAlgebraPointRestriction",
+    "FiniteGroupInvariantPointOrbit",
+    "HopfPointTranslations",
+    "HopfCoinvariantBaseChange",
+    "TensorPointFamilySeparation",
+    "HopfCoinvariantPointTranslations",
+    "HopfSubgroupFixedCoordinates",
+    "HopfCoinvariantPointFibers",
+    "HopfCoinvariantFieldQuotientPoints",
+    "FiniteReducedPointEvaluation",
+    "FiniteReducedHopfPointReconstruction",
+    "FiniteReducedScalarExtension",
+    "HopfPointQuotientGeometricReduced",
+    "BialgebraCoordinateComparison",
+    "HopfCoinvariantBaseChangeEquivalence",
+    "HopfPointBaseChangeNaturality",
+    "HopfCoinvariantPointBaseChange",
+    "IntegralHopfCoinvariantPointFibers",
+    "IntegralHopfCoinvariantQuotientPoints",
+    "HopfQuotientPointCoefficientAction",
+    "IntegralHopfQuotientPointGalois",
+    "IntegralHopfSubgroupInvariantModel",
+    "GaloisTensorFixedCoordinates",
+    "GaloisTensorPointEvaluation",
+    "GaloisHopfCoordinateImage",
+    "GaloisHopfOriginalCoordinateHom",
+    "GaloisHopfOriginalCoordinateEquiv",
+    "GaloisHopfOriginalBialgEquiv",
+    "IntegralHopfInvariantGenericReduced",
+    "IntegralHopfSubgroupInvariantGalois",
+    "IntegralHopfInvariantGenericPoints",
+    "IntegralHopfInvariantGenericCoordinateEquiv",
+    "BialgebraCocommutativeDescent",
+    "IntegralHopfSubgroupCocommutativity",
+    "FiniteFreeHopfPointModel",
+    "FiniteFreeHopfPointModelProduct",
+    "GaloisModuleSubquotientActions",
+    "FiniteFreeHopfPointModelSubgroup",
+    "FiniteFreeHopfPointModelQuotient",
+    "HopfCoordinateCommutativeGroupPresheaf",
+    "HopfCoordinateAffineGroupScheme",
+    "HopfAffineSchemePointGroup",
+    "FiniteFreeHopfModelSchemeRealization",
+    "FreeHopfCoordinateTransfer",
+    "HopfCoordinateEquivPoints",
+    "FiniteFreeHopfModelCoordinateResize",
+    "FiniteFreeHopfPointModelEquiv",
+    "FiniteFreeHopfPointModelEmbedding",
+    "FiniteFreeHopfPointModelSurjection",
+    "RepresentationUnderlyingGroupAction",
+    "RepresentationHopfModelMaps",
+    "MatrixCoefficientPointActions",
+    "MatrixCoefficientHopfModels",
+    "MatrixFiberProductPointEmbedding",
+    "MatrixFiberProductHopfModel",
+    "MatrixConjugacyVectorEquiv",
+    "MatrixConjugacyHopfModels",
+    "ContinuousFiberProductHopfModels",
+    "MatrixIdealQuotientHopfModels",
+    "MatrixAdicHopfFlatCondition",
+    "FiniteCoefficientVectorSpanning",
+    "FiniteFreeHopfPointModelFinitePower",
+    "FiniteCoefficientExtensionHopfModel"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-10",
+  "status": "All thirteen modules1765-1777, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "expectedScope": [
+    1777,
+    1144,
+    7347
+  ],
+  "sources": [
+    {
+      "url": "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+      "rechecked": "2026-10-10",
+      "location": "Section6.2,p12",
+      "scope": "Ordinary condition is an invariant rank-one direct summand; the source supplies actual polynomial relations for a nonidentity residual inertia element. The present drafts develop the constructive invariant-line direction."
+    }
+  ],
+  "modules": [
+    {
+      "scope": 1765,
+      "name": "MatrixPrimitiveVectorBasis",
+      "mathematics": "Use the actual unit coordinate of the original two-dimensional vector to construct an explicit invertible matrix with that vector as its first column. Its original determinant is a unit by a direct two-dimensional calculation.",
+      "boundary": "This constructs a genuine original coefficient basis. It does not yet assert that any representation has a primitive invariant vector.",
+      "draftSha256": "e5bbfec385b365c1960bfe7e9d6f5a45db2dfa24b1f2f60b0e911e713fdd6ccd",
+      "productionSha256": "e5bbfec385b365c1960bfe7e9d6f5a45db2dfa24b1f2f60b0e911e713fdd6ccd",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "primitiveVectorBasis1765-focus.log"
+    },
+    {
+      "scope": 1766,
+      "name": "MatrixTwoInvariantAxis",
+      "mathematics": "For the original matrix family fixing the first axis, use a genuine unit in the second-column difference of one original matrix to force the second coordinate of every fixed vector to vanish. Conversely every original first-axis vector is fixed by all matrices.",
+      "boundary": "The unit-entry condition is an explicit upstream algebraic input. The entire invariant-space equality is derived for the original matrices.",
+      "draftSha256": "40c59fa25a2100abc6655e3c2cb22e44f3d643e6590e9ad8b3af301e92af5b8c",
+      "preCompilationApiFix": "Use pinned IsUnit.mul_right_inj and explicit add_left_cancel with add_zero.",
+      "productionSha256": "626af6aebdfc42ddd9efa17ebe3c4fc0b016a89f950db745a80aa357ec9a9ee6",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [
+        "Replace the unnecessary simpa in the second unit-cancellation branch with simp, fixing the emitted linter diagnostic without changing the statement or disabling the check."
+      ],
+      "preCompilationApiFixes": [
+        "Pinned IsUnit.mul_right_inj cancels the unit on the left in a*b=a*c. Corrected the cancellation direction after exact API inspection; mathematical statement unchanged.",
+        "Use explicit add_left_cancel after adding zero, instead of an unlocated add_left_eq_self name."
+      ],
+      "productionLog": "invariantAxis1766b-focus.log"
+    },
+    {
+      "scope": 1767,
+      "name": "MatrixTwoResidualInvariantAxis",
+      "mathematics": "If both original second-column differences were nonunits, their images under the genuine local field residue map would vanish, contradicting the original residual matrix being nonidentity. This derives the unit relation and then the exact full original invariant-axis equality.",
+      "boundary": "Original local residue reflection and actual residual nonidentity are retained. Neither a unit relation nor invariant-module equality is assumed.",
+      "draftSha256": "cd7bfb35b6dde112f223d262eedd0abb08cb6a852fef4c6e76e9fc8187660984",
+      "productionSha256": "cd7bfb35b6dde112f223d262eedd0abb08cb6a852fef4c6e76e9fc8187660984",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "residualInvariantAxis1767-focus.log"
+    },
+    {
+      "scope": 1768,
+      "name": "MatrixTwoDeterminantComplement",
+      "mathematics": "Show that an invertible two-dimensional matrix equal to its determinant times the identity must itself be the identity, by computing and cancelling its unit determinant. Separately derive a genuine original unit entry from an actual matrix nonzero under the local field residue map.",
+      "boundary": "These are actual matrix and residue statements. Their later combination must use the original determinant-complement operator, not an unrelated nonzero matrix.",
+      "draftSha256": "06a64c4ecbdb97c5d22b851c92f14afc6c402868217f9e57cbdcbbc50008a612",
+      "preCompilationApiFix": "Use pinned IsUnit.mul_right_inj to cancel the left unit.",
+      "productionSha256": "2aa40c53b950650c2836e00faa12831a3252c7c5cd5575273b1bc7b40282c213",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [
+        "Normalize the actual two-dimensional determinant square using pow_two. The determinant cancellation argument and nonvanishing statement are unchanged."
+      ],
+      "preCompilationApiFixes": [
+        "Pinned IsUnit.mul_right_inj cancels the unit on the left in a*b=a*c. Corrected the cancellation direction after exact API inspection; mathematical statement unchanged."
+      ],
+      "productionLog": "detComplement1768b-focus.log"
+    },
+    {
+      "scope": 1769,
+      "name": "MatrixConjugateFixedVectors",
+      "mathematics": "Use actual invertible matrix multiplication and injectivity of its original vector action to identify the fixed vectors of a matrix with those of its genuine conjugate in the changed coordinates.",
+      "boundary": "This uses an actual original invertible basis change. The matrix family and fixed vectors are preserved.",
+      "draftSha256": "9cabc10c37d43623a047b6f314a1b6ad75f8770fbdff731e33869ed0f79c3a16",
+      "productionSha256": "9cabc10c37d43623a047b6f314a1b6ad75f8770fbdff731e33869ed0f79c3a16",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "conjugateFixed1769-focus.log"
+    },
+    {
+      "scope": 1770,
+      "name": "MatrixTwoPrimitiveInvariantLine",
+      "mathematics": "Extend the actual primitive fixed vector to an original invertible basis. Conjugation makes every original matrix fix the first axis. Genuine residual nonidentity survives this original basis change, so the derived residual criterion proves that the entire invariant module is precisely that first coordinate line.",
+      "boundary": "A primitive original invariant vector and an original nonidentity residual element are explicit upstream inputs. The full invariant-line basis and equality are derived.",
+      "draftSha256": "87dd6d22d1f3c81b7d16854cf1ada1822f7a6a475fc642704c8c7143910adccc",
+      "productionSha256": "87dd6d22d1f3c81b7d16854cf1ada1822f7a6a475fc642704c8c7143910adccc",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "primitiveInvariantLine1770-focus.log"
+    },
+    {
+      "scope": 1771,
+      "name": "MatrixFixedColumnFromRelations",
+      "mathematics": "A matrix nonzero in the actual residue has an original unit entry. Select its corresponding genuine column. Actual matrix-minus-identity relations fix that entire column for every original matrix, giving a primitive invariant vector over the original coefficient ring.",
+      "boundary": "The original annihilating matrix and its actual residual nonvanishing are explicit narrower inputs. The primitive fixed vector is constructed from an original column.",
+      "draftSha256": "9b9de51b1da748c251e758754330843c49614bba9386f6ae1a682be94734b1ff",
+      "productionSha256": "9b9de51b1da748c251e758754330843c49614bba9386f6ae1a682be94734b1ff",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "fixedColumn1771-focus.log"
+    },
+    {
+      "scope": 1772,
+      "name": "MatrixTwoOrdinaryInvariantLine",
+      "mathematics": "Use the literal original operator consisting of the chosen matrix minus its own determinant times the identity. Its residue is the same determinant-complement operator of the genuine nonidentity residual matrix, hence nonzero. The original ordinary relations construct a primitive fixed column. Extend that column to a genuine original basis and derive equality of the entire invariant module with the first coordinate line.",
+      "boundary": "This proves the constructive direction from the actual ordinary polynomial relations to the original full invariant line. The converse, its exact identification with a rank-one invariant direct summand, coefficient quotient representation, exceptional finite-flat/p-adic Hodge conditions and source modular conclusions remain separate obligations.",
+      "draftSha256": "c7d1bcea8cda81d26b97c88c45152f84ca29dfe8b8a58f25728bfa23a38ca2fc",
+      "productionSha256": "c7d1bcea8cda81d26b97c88c45152f84ca29dfe8b8a58f25728bfa23a38ca2fc",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "ordinaryInvariantLine1772-focus.log"
+    },
+    {
+      "scope": 1773,
+      "name": "SubmoduleCoordinateLineSplitting",
+      "mathematics": "Restrict the actual first-coordinate linear map to the original submodule identified with the first axis. Prove it bijective using the actual inverse coordinate map, obtaining a genuine linear equivalence with the coefficient ring. Compose its inverse with the original first-coordinate map to construct a projection onto the same submodule; its kernel is an actual complementary submodule.",
+      "boundary": "The original submodule coordinate equality is an explicit upstream input. Freeness of rank one and existence of an actual complement are derived.",
+      "draftSha256": "3e78932e03283afd3a586684aedd1a7d74535d1d5f54b83c645cbf50130f319c",
+      "productionSha256": "3e78932e03283afd3a586684aedd1a7d74535d1d5f54b83c645cbf50130f319c",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "coordinateLineSplitting1773-focus.log"
+    },
+    {
+      "scope": 1774,
+      "name": "MatrixOrdinaryInvariantDirectSummand",
+      "mathematics": "Consume the original invariant-line basis constructed from the actual ordinary matrix relations. Use the genuine linear action of the inverse basis and the original two-coordinate product equivalence to identify the actual invariant submodule of the existing column representation. Derive a true coefficient-linear equivalence with the original ring and an actual complementary submodule of the same original two-dimensional module.",
+      "boundary": "The same existing column representation definition is generalized from fields to commutative rings, with its formula and proof unchanged; the original field Schur results retain their assumptions. This proves the actual rank-one invariant direct-summand conclusion from the original polynomial relations. It does not yet construct an ordinary coefficient quotient.",
+      "draftSha256": "f29c247df58391dae92176ec7a87008e9dfb394a6345afc9b366fb51913aa648",
+      "productionSha256": "f29c247df58391dae92176ec7a87008e9dfb394a6345afc9b366fb51913aa648",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [
+        "Generalize the existing matrixStandardRepresentation definition to commutative coefficient rings and arbitrary universes, retaining its exact matrix-action formula and proof. All later original field Schur declarations are byte-identical; the source hash was checked before editing. Full package and exact existing consumers will be reverified."
+      ],
+      "preCompilationApiFixes": [],
+      "productionLog": "ordinaryInvariantSummand1774-focus.log"
+    },
+    {
+      "scope": 1775,
+      "name": "MatrixTwoOrdinaryRelationConverse",
+      "mathematics": "Use the actual invariant-line basis to conjugate every original matrix into a matrix fixing the first coordinate. Its original determinant equals its second diagonal entry. Therefore the genuine determinant-complement operator maps every original vector into the invariant line. All original matrices fix that image, proving every literal ordinary relation is zero.",
+      "boundary": "This is the reverse criterion for the proved concrete invariant-line basis. A primitive invariant vector still must be derived from an arbitrary rank-one direct-summand presentation before claiming equivalence with that full source formulation.",
+      "draftSha256": "d0dc6158114c58eba0301ddb744e42b82395cb6683de1fb28f01ee67f156e62f",
+      "productionSha256": "562d147824a3f8761d924824f7e7200bd768fde7556369e37e790ad4d526687b",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [
+        "Expand the local fixed-vector expression with change before matrix multiplication, rather than attempting to rewrite by its value.",
+        "Name the first-column identities for the same local conjugate V explicitly so determinant and row simplification match the intended matrix. This removes the unused simp diagnostic and closes the actual row calculation; no mathematical input changed."
+      ],
+      "preCompilationApiFixes": [],
+      "productionLog": "ordinaryRelationConverse1775b-focus.log"
+    },
+    {
+      "scope": 1776,
+      "name": "SubmoduleRankOnePrimitiveVector",
+      "mathematics": "An actual linear functional taking value one on an original two-coordinate vector forces at least one coordinate to be a unit in the local coefficient ring. Construct that functional from the genuine projection onto the original direct summand followed by its actual rank-one equivalence with the coefficient ring. The inverse image of one is the required primitive vector in the original submodule.",
+      "boundary": "The original rank-one equivalence and actual complementary submodule are explicit source geometric inputs. A primitive coordinate vector is derived, not assumed.",
+      "draftSha256": "65e84ab6e942f07b7a1b7d3c2aa482e649d9943f2949e55bf0bb0485aa71655c",
+      "productionSha256": "65e84ab6e942f07b7a1b7d3c2aa482e649d9943f2949e55bf0bb0485aa71655c",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "rankOnePrimitive1776-focus.log"
+    },
+    {
+      "scope": 1777,
+      "name": "MatrixOrdinaryRelationCriterion",
+      "mathematics": "Prove both directions of the original ordinary criterion. Genuine polynomial relations construct a primitive invariant column and the entire rank-one invariant direct summand. Conversely a true rank-one invariant direct summand gives a primitive invariant vector through its original projection. Residual nonidentity then constructs a genuine invariant-line basis, and the actual determinant-complement calculation yields every original ordinary relation.",
+      "boundary": "This is the exact local algebraic criterion for a specified original two-dimensional representation and an actual nonidentity residual element. The original source group must still be specialized to actual inertia, residual ordinary data must supply such an element, and the ordinary quotient and class representation must be constructed. No finite-flat/p-adic Hodge condition, full Selmer or modular conclusion is claimed.",
+      "draftSha256": "122f858f2dc66427bc56385690d3b36ac9eb95d5c855b2d585502a6ce490ac41",
+      "productionSha256": "122f858f2dc66427bc56385690d3b36ac9eb95d5c855b2d585502a6ce490ac41",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionFixes": [],
+      "preCompilationApiFixes": [],
+      "productionLog": "ordinaryCriterion1777-focus.log"
+    }
+  ],
+  "localReuse": [
+    "GeneralLinearGroup.mk''",
+    "GeneralLinearGroup.map_det",
+    "Matrix.mulVec_injective_of_isUnit",
+    "isUnit_of_map_unit",
+    "Representation.invariants (for the ensuing module-level comparison)",
+    "MatrixRepresentationConjugation (for the ensuing full representation quotient)",
+    "RepresentationDeterminantConjugacy.groupAlgebraMatrix_conjugate (for the ensuing operator conjugacy)"
+  ],
+  "next": "Derive the actual residual nonidentity element, specialize to original arithmetic inertia, and construct the genuine ordinary coefficient quotient and class classification.",
+  "boundary": "No finite-flat group scheme, p-adic Hodge local condition, full Selmer comparison, patching or modular source theorem is claimed.",
+  "resourceLimitsChanged": false,
+  "externalLeanCodeImported": false,
+  "prerequisiteExistingCodeGeneralization": "Applied and fully verified, including all existing downstream consumers; before/after hashes retained in existingCodeGeneralization.",
+  "extraDrafts": [
+    {
+      "name": "ResidualOrdinaryNontrivialElement",
+      "status": "UNCOMPILED; no metadata yet",
+      "draftSha256": "cc1fe13e2afdd1a19bf913bf21a7ad5e20217f9126e79fa41d775b7669c4a9e5",
+      "meaning": "Derive a nonidentity original residual group element from the actual invariant-submodule rank-one equivalence, using its genuine two-dimensional ambient space."
+    }
+  ],
+  "scopeLimit": "The actual ordinary invariant rank-one direct-summand equivalence is verified. Original arithmetic quotient assembly, finite-flat and p-adic Hodge conditions and source modular conclusions remain open.",
+  "existingCodeGeneralization": {
+    "status": "APPLIED; generalized action, original field Schur results and all existing consumers passed full assembled verification with zero diagnostics.",
+    "source": "MatrixAdjointSchur.lean",
+    "sourceSha256": "b12acb6930900a4a7646abb2c4f9d99a7b008963ab63fc72321407781d86bd91",
+    "proposed": "MatrixAdjointSchur-generalized-original-action.lean.txt",
+    "reason": "The existing matrixStandardRepresentation proof uses only a commutative ring; retain the same action and proof while generalizing that definition to arbitrary original commutative coefficient rings and universes. Later field Schur results retain their original fields.",
+    "timing": "Apply only after current verification and only when compiling actual rank-one module consumer; then run full checks covering existing import consumers.",
+    "productionSha256": "540bd28f5cfb0b4d2e87a737530baad3b75958dce70fb8e19a99ff5d3833c64b"
+  },
+  "semanticBoundary": "Verified exact equivalence between the actual ordinary matrix relations and the genuine full invariant submodule being free of rank one and a direct summand. The original representation, local residue map and nonidentity residual element remain explicit. Arithmetic inertia specialization, deriving the residual element, literal ordinary quotient and class classification, finite-flat and p-adic Hodge conditions, full Selmer comparison, modular association and patching remain open.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_092551.log",
+    "paper": "logs/dubon-build-20261010-092947-853.log",
+    "scope": [
+      1777,
+      1144,
+      7347
+    ]
+  }
+}

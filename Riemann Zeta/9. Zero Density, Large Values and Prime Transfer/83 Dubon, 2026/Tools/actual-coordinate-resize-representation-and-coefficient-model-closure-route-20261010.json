@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-10",
+  "status": "All modules1877-1896 passed focused compilation with actual exits0 consumed and zero diagnostics; exact consumers registered, full sequential verification pending.",
+  "scope": [
+    1896,
+    1263,
+    7700
+  ],
+  "parentVerifiedScope": 1876,
+  "modules": [
+    {
+      "scope": 1877,
+      "name": "FreeHopfCoordinateTransfer",
+      "draftSha256": "e2c90207fa88874de0cf6dc848eaa88456a1b325e83afe13b9cc410d6a9e246a",
+      "mathematics": "Express the original comultiplication and antipode through the specified genuine algebra equivalence. Freeness transfers through the same linear equivalence. Original injective bialgebra and antipode descent derive the actual Hopf structure on the equivalent coordinates, with a genuine bialgebra equivalence, exact antipode evaluation and inherited cocommutativity.",
+      "boundary": "The coordinate Hopf structure is constructed from the original algebra equivalence. This supports universe resizing; no target arithmetic model or source modular theorem is assumed or closed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "142227c321c3eba82a3424bc553b759c87ba4411695718082524769028678791",
+      "productionLog": "coordinateTransfer1877b-focus.log",
+      "productionFixes": [
+        "Omit the unused freeness hypothesis from the two private coordinate-diagram identities. The actual Hopf construction retains its required free-module input."
+      ]
+    },
+    {
+      "scope": 1878,
+      "name": "HopfCoordinateEquivPoints",
+      "draftSha256": "1dc5384d0dc9434e59fba45be0cb6873730c31f76f94fc3be9144a340136d1ae",
+      "mathematics": "Use actual original point restriction along the original bialgebra equivalence and its inverse to construct the genuine contravariant convolution point-group equivalence. Original coordinate inverse identities prove both inverse laws. Exact point evaluation and original coefficient composition prove coefficient-automorphism compatibility.",
+      "boundary": "This is the genuine original point comparison for an existing coordinate equivalence. It does not construct arithmetic models. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "1dc5384d0dc9434e59fba45be0cb6873730c31f76f94fc3be9144a340136d1ae",
+      "productionLog": "coordinatePoints1878-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1879,
+      "name": "FiniteFreeHopfModelCoordinateResize",
+      "draftSha256": "5e10b1baaeb77142d02a6ea9a2ac6c4dcdf0210203882d576562b454f0d54051",
+      "mathematics": "Finiteness of the actual original coordinate module proves it is small in the base ring universe. Shrink.algEquiv gives its genuine original algebra equivalence. Transport the actual Hopf structure, cocommutativity, finite freeness and point realization through that equivalence. Coefficient naturality proves the constructed model realizes the unchanged original group and specified Galois action in smaller coordinates.",
+      "boundary": "The resized model is derived from the actual original model, whose existence is an explicit input. Original arithmetic realization at every finite coefficient quotient, scheme realization with independently sized point fields and the finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "46f38c4f5d946f92ae2ca1b95f296899ea5585cd949bd96a7502571f737f4b71",
+      "productionLog": "coordinateResize1879b-focus.log",
+      "productionFixes": [
+        "Supply the actual original coordinate module as the explicit argument to pinned Module.Finite.small; no mathematical hypothesis changes."
+      ],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869."
+      ]
+    },
+    {
+      "scope": 1880,
+      "name": "FiniteFreeHopfPointModelEquiv",
+      "draftSha256": "ccdce80c5757c6ec7dca6ccee2ca0d58b7870bc0490817ca8cb8727371be07b2",
+      "mathematics": "Retain the same original integral Hopf coordinates, finite freeness and convolution points. Compose the original model point equivalence with the specified original group equivalence. The original model action identity and equivariance of that equivalence prove the transported model realizes the given target action.",
+      "boundary": "An actual model of the source action is an explicit input. The target realization is constructed; arithmetic existence remains open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "ccdce80c5757c6ec7dca6ccee2ca0d58b7870bc0490817ca8cb8727371be07b2",
+      "productionLog": "modelEquiv1880-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1881,
+      "name": "FiniteFreeHopfPointModelEmbedding",
+      "draftSha256": "477967a768263a54d8177d04d4717a0add48ad85199418a86893ba3d97d17c20",
+      "mathematics": "Prove stability of the actual range of the original equivariant injection. Construct its integral subgroup coordinate model from the given ambient model. The genuine injective range equivalence intertwines the original actions, so its inverse transports that constructed model to the original source group.",
+      "boundary": "The source model is derived from a genuine modeled ambient group. No target-equivalent existence hypothesis or arithmetic realization theorem is supplied. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "477967a768263a54d8177d04d4717a0add48ad85199418a86893ba3d97d17c20",
+      "productionLog": "modelEmbedding1881-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1882,
+      "name": "FiniteFreeHopfPointModelSurjection",
+      "draftSha256": "dd0782cd2b5ebbc4886688069a3dd610134141b0ccc6d97dea63e229698036cf",
+      "mathematics": "Prove stability of the actual kernel of the original equivariant surjection. Construct the original invariant-coordinate quotient model. The actual first-isomorphism group equivalence is equivariant on every original representative, and transports the quotient model to the specified original target action.",
+      "boundary": "A genuine source model is explicit; the target model is constructed using actual invariant coordinates. Arithmetic finite-flat model existence remains open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "dd0782cd2b5ebbc4886688069a3dd610134141b0ccc6d97dea63e229698036cf",
+      "productionLog": "modelSurjection1882-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1883,
+      "name": "RepresentationUnderlyingGroupAction",
+      "draftSha256": "9607b911358a2fadadaf2edd540113fe0e4cbb4b12100ad22dcce3c49a850772",
+      "mathematics": "Use the actual invertible linear operators of the original representation to construct its action on the same additive group, written multiplicatively solely for the Hopf point API. Exact evaluation retains the original operator on every vector. An original intertwining linear map induces the same original equivariant group map.",
+      "boundary": "This is an exact additive-to-multiplicative interface for the original representation. It does not assume or prove arithmetic model existence. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "0a606462af51f47ea96308e75e390580233242e0527610bbff1a921b614bcc33",
+      "productionLog": "representationGroup1883b-focus.log",
+      "productionFixes": [
+        "Use the pinned qualified LinearMap.GeneralLinearGroup.toLinearEquiv constructor on the original representation unit. Units field notation does not resolve this declaration."
+      ]
+    },
+    {
+      "scope": 1884,
+      "name": "RepresentationHopfModelMaps",
+      "draftSha256": "006423d65a84457279a6fa0cc2fed6fe1628f5ef8c66f8a7b5cf6995fee94caa",
+      "mathematics": "Transport injectivity or surjectivity of the original linear map to its actual underlying additive group map. The proved exact intertwining identity supplies original equivariance. The actual stable-range and invariant-kernel coordinate constructions therefore give models of the same source or target linear representation.",
+      "boundary": "These results construct group-scheme point models from a given model and an actual representation map. They do not construct an integral coefficient-ring action on the group scheme or prove arithmetic finite-flat existence at every finite coefficient quotient. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "006423d65a84457279a6fa0cc2fed6fe1628f5ef8c66f8a7b5cf6995fee94caa",
+      "productionLog": "representationModels1884-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1885,
+      "name": "MatrixCoefficientPointActions",
+      "draftSha256": "6219f54edea9eb2876ff60baf9d19d6144dbbded08dbcd6f0bb9a05fa92e4a70",
+      "mathematics": "Reuse the already proved original matrixStandardRepresentation. Its underlying point-group action is exactly original matrix-vector multiplication. Actual coefficient ring maps act on every original vector coordinate; injectivity and surjectivity pass to these maps. The pinned ring-hom matrix-vector identity proves exact equivariance for the same original coefficient-change representation.",
+      "boundary": "This retains the actual matrix, coefficient and vector objects. It does not construct arithmetic Hopf models. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "6219f54edea9eb2876ff60baf9d19d6144dbbded08dbcd6f0bb9a05fa92e4a70",
+      "productionLog": "matrixActions1885-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1886,
+      "name": "MatrixCoefficientHopfModels",
+      "draftSha256": "11ae4b5fb12baed70018f1486d079f73ace744c8b171d170d06a3d9f2fe23383",
+      "mathematics": "Apply the actual equivariant vector-group embedding and quotient constructions to original coefficient ring injections and surjections. A model after an injective coefficient change gives a model before it; a model before an actual coefficient quotient gives a model after it. The original whole matrix representation and column actions remain explicit.",
+      "boundary": "Existence of the original ambient/source model is explicit. The inherited model is constructed; arithmetic initial model existence and the condition at all finite coefficient quotients remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "11ae4b5fb12baed70018f1486d079f73ace744c8b171d170d06a3d9f2fe23383",
+      "productionLog": "matrixModels1886-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1887,
+      "name": "MatrixFiberProductPointEmbedding",
+      "draftSha256": "8d19477439b6970f61d1d7047960d254961b35a51ad97972c403cfcf99856d2b",
+      "mathematics": "Use the actual compatible-pair coefficient ring and its genuine two ring projections to embed its original vector group into the product of the two original vector groups. Equality of both original coordinates proves injectivity. Exact coefficient-change equivariance proves this is an embedding of the original Galois representation into the product of its actual projected representations.",
+      "boundary": "The compatible-vector constraint and original action are retained. This supplies the representation embedding; model construction is the next step. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "8d19477439b6970f61d1d7047960d254961b35a51ad97972c403cfcf99856d2b",
+      "productionLog": "fiberEmbedding1887-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1888,
+      "name": "MatrixFiberProductHopfModel",
+      "draftSha256": "654a17f4dc37245cd2b264e857b7b146902d5f202019cc0d740f2ec8234517d2",
+      "mathematics": "Construct the genuine tensor-coordinate product model of the two original projected matrix representations. Apply actual model inheritance along the proved compatible-vector embedding. This constructs a subgroup-coordinate Hopf model of the original representation over the literal coefficient fiber product.",
+      "boundary": "Models of both actual projected representations are explicit inputs; the original fiber-product model is derived. Original strict-class gluing, all finite coefficient quotients, initial arithmetic realization and the full finite-flat deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "654a17f4dc37245cd2b264e857b7b146902d5f202019cc0d740f2ec8234517d2",
+      "productionLog": "fiberModel1888-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1889,
+      "name": "MatrixConjugacyVectorEquiv",
+      "draftSha256": "4a0e8705365ced8d57dd3bb9f481594fff836a116cb1f0a36757d06a7fb19df3",
+      "mathematics": "The original invertible change of basis defines an actual multiplicative equivalence of the same original column-vector additive group. The genuine matrix conjugacy equation proves exact equivariance of the two original matrix actions.",
+      "boundary": "This retains the whole original representation and vector space. It supplies the equivariant comparison without asserting existence of an arithmetic model. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "4a0e8705365ced8d57dd3bb9f481594fff836a116cb1f0a36757d06a7fb19df3",
+      "productionLog": "conjugacyVectors1889-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1890,
+      "name": "MatrixConjugacyHopfModels",
+      "draftSha256": "af03c5cd0ee55115b215777c93197f07a8f89502d55d361540a0560223b5bdc4",
+      "mathematics": "Transport the actual finite free Hopf model along the original equivariant change of basis, retaining exactly its integral coordinate algebra. Inverting the same genuine conjugator proves both directions of model existence. Original strict conjugacy supplies the required original whole-representation equation.",
+      "boundary": "The given model is an explicit upstream object; existence for the genuinely conjugate representation is derived. No modular Galois association or initial arithmetic model is asserted. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "af03c5cd0ee55115b215777c93197f07a8f89502d55d361540a0560223b5bdc4",
+      "productionLog": "conjugacyModels1890-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1891,
+      "name": "ContinuousFiberProductHopfModels",
+      "draftSha256": "08e3112be65e050f744cde6bc0872f754192af41e328c14ae11faca316c882ca",
+      "mathematics": "Consume the existing actual continuous strict-conjugacy gluing theorem. Its first projection retains the original first model, and strict-conjugacy invariance derives a model for the actual second projection. The proved tensor-coordinate product and compatible-vector subgroup construction then give a genuine model of the original glued coefficient-fiber-product representation.",
+      "boundary": "Initial models of the two actual representations remain explicit inputs. Realization at all finite coefficient quotients and the complete arithmetic deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "08e3112be65e050f744cde6bc0872f754192af41e328c14ae11faca316c882ca",
+      "productionLog": "continuousGluing1891-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1892,
+      "name": "MatrixIdealQuotientHopfModels",
+      "draftSha256": "0e8057863d3ca200a9908becc9ecd0e14b9fc5ed54e8936c09a1e78d5302fa94",
+      "mathematics": "The original ideal inclusion gives the genuine surjective quotient map, and its actual matrix coefficient change is proved equal to the original representation at the larger ideal. Actual quotient-model construction therefore derives a model at the coarser ideal. Point-field flatness is derived through the original fraction field using pinned localization and flatness transitivity.",
+      "boundary": "Initial model existence at the finer coefficient ideal remains explicit. The new model and exact original quotient representation are derived; no arithmetic flatness is asserted. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "0e8057863d3ca200a9908becc9ecd0e14b9fc5ed54e8936c09a1e78d5302fa94",
+      "productionLog": "idealModels1892-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869.",
+        "Bind source and target coordinate universes explicitly, following actual1871/1872 focused elaboration failures. Single-source constructions retain that coordinate universe; two-source products use its actual maximum. No new mathematical hypothesis. Still UNCOMPILED."
+      ]
+    },
+    {
+      "scope": 1893,
+      "name": "MatrixAdicHopfFlatCondition",
+      "draftSha256": "cedee8046901cd7c7e2df79e4f64b908778c6da999773a36998b398c8936a142",
+      "mathematics": "Define the actual model condition for every positive power of the original maximal ideal. The same original whole matrix conjugacy induces conjugacy at every level and hence preserves this complete condition. Models at a cofinal family of actual powers give every positive-level model through the proved genuine ideal-quotient transition.",
+      "boundary": "The predicate is a definition, not an unconditional arithmetic theorem. The cofinal-family input is strictly smaller than all-level existence; its target is derived. General local coefficient functoriality and initial arithmetic realization remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "cedee8046901cd7c7e2df79e4f64b908778c6da999773a36998b398c8936a142",
+      "productionLog": "adicCondition1893-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1894,
+      "name": "FiniteCoefficientVectorSpanning",
+      "draftSha256": "4bb802d72693e756a96a1e876c617f58b3e7f177284a332cddf24a46ebdbb75e",
+      "mathematics": "Use the actual finite target coefficients as the index of source-vector copies. Weighted sums in the actual target ring define a genuine surjective group map, with each original target vector lifted by its original coordinate values. Exchange the two actual finite sums to prove exact equivariance under the original matrix coefficient change.",
+      "boundary": "This is a genuine equivariant surjection between the original vector groups. It does not by itself construct any Hopf model. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "44a55d611f86934a799d246ed71d7676d7b4cf85e51db3c8ae83d0f0dca31825",
+      "productionLog": "coefficientSpanning1894b-focus.log",
+      "productionFixes": [
+        "Omit the unused decidable-equality binder from the original finite-sum matrix-vector identity; the statement and finite index set are unchanged."
+      ]
+    },
+    {
+      "scope": 1895,
+      "name": "FiniteFreeHopfPointModelFinitePower",
+      "draftSha256": "bee2524b30523da5a06be9f63691ec6b00eafb052d88375a690b7a9e23cbe860",
+      "mathematics": "The original group acts on the actual indexed function group by the pinned pointwise equivalence. Starting from the given original model, binary tensor-coordinate products construct each positive finite power. The genuine finite index equivalence transports this model to the original finite nonempty indexed product, preserving every original coordinate action.",
+      "boundary": "The initial original model is explicit; all positive-power and finite indexed models are derived. The coefficient-ring index is nonempty in the intended application. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "bee2524b30523da5a06be9f63691ec6b00eafb052d88375a690b7a9e23cbe860",
+      "productionLog": "finitePower1895-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869."
+      ]
+    },
+    {
+      "scope": 1896,
+      "name": "FiniteCoefficientExtensionHopfModel",
+      "draftSha256": "d33e2556ce3736f65fa93dc95c4133d0899a12b69ad1e178c34a000230445813",
+      "mathematics": "Construct the actual product of source models indexed by all original target coefficients. The original equivariant spanning map is surjective, so the genuine quotient-model construction derives a model of the same original coefficient-changed matrix representation. Actual point-field flatness is derived through the original fraction field. No injectivity or surjectivity condition is imposed on the coefficient ring map.",
+      "boundary": "The original source model remains an explicit input. Application at every original maximal-adic level and initial arithmetic model realization remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused production compilation PASS; full assembled verification pending.",
+      "productionSha256": "d33e2556ce3736f65fa93dc95c4133d0899a12b69ad1e178c34a000230445813",
+      "productionLog": "coefficientExtension1896-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Use lowerCamelCase for data definitions and their exact references; theorem names and mathematical statements unchanged. This follows the actual defsWithUnderscore diagnostic in assembled1869."
+      ]
+    }
+  ],
+  "semanticBoundary": "The intended scope transfers the actual Hopf coordinates through genuine algebra equivalences and resizes them using finite-module smallness. It constructs models under original equivariant group and representation maps, actual matrix coefficient embeddings and quotients, compatible-vector fiber products and whole conjugacies. The actual original strict continuous gluing output is consumed. Original ideal-quotient transitions define the all-positive-adic model condition. Actual finite target coefficients give an equivariant spanning surjection from a genuine finite product model, constructing the target coefficient model. Source model existence remains explicit. Applying this closure at every original coefficient level and constructing concrete initial arithmetic models remain open. No source modular gate closes.",
+  "scopeLimit": "The intended scope transfers the actual Hopf coordinates through genuine algebra equivalences and resizes them using finite-module smallness. It constructs models under original equivariant group and representation maps, actual matrix coefficient embeddings and quotients, compatible-vector fiber products and whole conjugacies. The actual original strict continuous gluing output is consumed. Original ideal-quotient transitions define the all-positive-adic model condition. Actual finite target coefficients give an equivariant spanning surjection from a genuine finite product model, constructing the target coefficient model. Source model existence remains explicit. Applying this closure at every original coefficient level and constructing concrete initial arithmetic models remain open. No source modular gate closes.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "verificationGrouping": "Compile and register each original module and exact consumer separately, check all twenty exact consumers under the complete import graph, then run assembled root/regressions/audit plus sequential unchanged foundation and paper BATs. No scope or diagnostics excluded.",
+  "next": "Run assembled exact consumers, audits, all linters and sequential foundation/paper verification before advancing the production scope."
+}

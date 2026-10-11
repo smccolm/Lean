@@ -1,27 +1,423 @@
 # Dubon 2026 — source contract
 
-Actual original arithmetic unframed determinant and inertia universality: Consume the constructed arithmetic trace universal ring and its one whole original arithmetic representation. Use residual determinant compatibility and original inertia-killing at the genuine arithmetic height-one prime to derive locality and complete Noetherian maximal-adic data of the literal determinant-plus-inertia coefficient quotient. For every complete Noetherian local target, apply the existing quotient coefficient equivalence and the derived whole class bijection. The resulting actual class equivalence evaluates the same universal matrices through the same quotient coefficient map. One exact consumer expands registered scope to 1764 production modules, 1131 exact consumers and 7,318 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Actual model after a finite coefficient extension: Construct the actual product of source models indexed by all original target coefficients. The original equivariant spanning map is surjective, so the genuine quotient-model construction derives a model of the same original coefficient-changed matrix representation. Actual point-field flatness is derived through the original fraction field. No injectivity or surjectivity condition is imposed on the coefficient ring map. One exact consumer expands registered scope to 1896 production modules, 1263 exact consumers and 7,700 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The original source model remains an explicit input. Application at every original maximal-adic level and initial arithmetic model realization remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual quotient classification of original class conditions: Compose the existing genuine local quotient coefficient-fiber equivalence with the subtype restriction of the proved whole original class bijection. The exact coefficient-ideal/class-condition bridge identifies its domain and codomain. Prove that each resulting class is evaluation of the same original universal matrices through the actual quotient coefficient map. One exact consumer expands registered scope to 1763 production modules, 1130 exact consumers and 7,316 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Actual finite nonempty product models: The original group acts on the actual indexed function group by the pinned pointwise equivalence. Starting from the given original model, binary tensor-coordinate products construct each positive finite power. The genuine finite index equivalence transports this model to the original finite nonempty indexed product, preserving every original coordinate action. One exact consumer expands registered scope to 1895 production modules, 1262 exact consumers and 7,698 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The initial original model is explicit; all positive-power and finite indexed models are derived. The coefficient-ring index is nonempty in the intended application. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual residual-compatible determinant and subgroup quotient: Use the existing original determinant and subgroup-relation ideal containment theorems to place their literal sum in the genuine original maximal ideal. This derives properness and locality of the actual quotient. Transfer finite residue through the actual original residue equivalence and apply genuine original complete local quotient data to obtain Noetherianity, its own maximal-adic topology and completeness. One exact consumer expands registered scope to 1762 production modules, 1129 exact consumers and 7,314 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Original finite coefficient spanning map: Use the actual finite target coefficients as the index of source-vector copies. Weighted sums in the actual target ring define a genuine surjective group map, with each original target vector lifted by its original coordinate values. Exchange the two actual finite sums to prove exact equivariance under the original matrix coefficient change. One exact consumer expands registered scope to 1894 production modules, 1261 exact consumers and 7,694 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This is a genuine equivariant surjection between the original vector groups. It does not by itself construct any Hopf model. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual original complete local quotient data: Derive compactness and Hausdorffness of the original complete Noetherian finite-residue coefficient ring in its proved original maximal-adic topology. Apply the existing actual local quotient theorems to obtain Noetherianity, maximal-adic quotient topology and maximal-ideal completeness of the genuine coefficient quotient. One exact consumer expands registered scope to 1761 production modules, 1128 exact consumers and 7,311 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+All-positive-level original flat model condition: Define the actual model condition for every positive power of the original maximal ideal. The same original whole matrix conjugacy induces conjugacy at every level and hence preserves this complete condition. Models at a cofinal family of actual powers give every positive-level model through the proved genuine ideal-quotient transition. One exact consumer expands registered scope to 1893 production modules, 1260 exact consumers and 7,690 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The predicate is a definition, not an unconditional arithmetic theorem. The cofinal-family input is strictly smaller than all-level existence; its target is derived. General local coefficient functoriality and initial arithmetic realization remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual original complete local coefficient compactness: Transport the named original topology along its proved maximal-adic equality. Apply the existing complete local Hausdorff theorem and finite-residue Noetherian compactness theorem in that same topology, then preserve the original topology in the conclusions. One exact consumer expands registered scope to 1760 production modules, 1127 exact consumers and 7,309 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Original ideal-quotient transition models: The original ideal inclusion gives the genuine surjective quotient map, and its actual matrix coefficient change is proved equal to the original representation at the larger ideal. Actual quotient-model construction therefore derives a model at the coarser ideal. Point-field flatness is derived through the original fraction field using pinned localization and flatness transitivity. One exact consumer expands registered scope to 1892 production modules, 1259 exact consumers and 7,687 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Initial model existence at the finer coefficient ideal remains explicit. The new model and exact original quotient representation are derived; no arithmetic flatness is asserted. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual original class conditions and coefficient ideals: Evaluate the same original whole representation through the genuine existing continuous residue-preserving coefficient fiber. Consume the existing determinant-ideal and matrix-relation-ideal kernel equivalences to identify the original unframed determinant and subgroup conditions. Their conjunction is exactly annihilation of the literal sum of these actual ideals. One exact consumer expands registered scope to 1759 production modules, 1126 exact consumers and 7,306 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Actual models under continuous representation gluing: Consume the existing actual continuous strict-conjugacy gluing theorem. Its first projection retains the original first model, and strict-conjugacy invariance derives a model for the actual second projection. The proved tensor-coordinate product and compatible-vector subgroup construction then give a genuine model of the original glued coefficient-fiber-product representation. One exact consumer expands registered scope to 1891 production modules, 1258 exact consumers and 7,684 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Initial models of the two actual representations remain explicit inputs. Realization at all finite coefficient quotients and the complete arithmetic deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual determinant and subgroup conditions on original classes: Descend the genuine whole determinant condition and genuine subgroup-killing condition to the existing original unframed quotient. Prove well-definedness with actual strict-conjugacy invariance and identify each condition on every original framed representative. One exact consumer expands registered scope to 1758 production modules, 1125 exact consumers and 7,302 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Actual Hopf models under original strict conjugacy: Transport the actual finite free Hopf model along the original equivariant change of basis, retaining exactly its integral coordinate algebra. Inverting the same genuine conjugator proves both directions of model existence. Original strict conjugacy supplies the required original whole-representation equation. One exact consumer expands registered scope to 1890 production modules, 1257 exact consumers and 7,682 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The given model is an explicit upstream object; existence for the genuinely conjugate representation is derived. No modular Galois association or initial arithmetic model is asserted. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual actual determinant and kernel invariance under strict conjugacy: Apply the actual original strict-conjugacy identity to every whole representation matrix. The genuine group determinant map cancels the original conjugator, and conjugation preserves equality to the identity. Derive equality of all original determinants and of the entire actual representation kernels. One exact consumer expands registered scope to 1757 production modules, 1124 exact consumers and 7,299 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+Original matrix change of basis on vector groups: The original invertible change of basis defines an actual multiplicative equivalence of the same original column-vector additive group. The genuine matrix conjugacy equation proves exact equivariance of the two original matrix actions. One exact consumer expands registered scope to 1889 production modules, 1256 exact consumers and 7,679 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This retains the whole original representation and vector space. It supplies the equivariant comparison without asserting existence of an arithmetic model. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual model of an original coefficient fiber-product representation: Construct the genuine tensor-coordinate product model of the two original projected matrix representations. Apply actual model inheritance along the proved compatible-vector embedding. This constructs a subgroup-coordinate Hopf model of the original representation over the literal coefficient fiber product. One exact consumer expands registered scope to 1888 production modules, 1255 exact consumers and 7,676 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Models of both actual projected representations are explicit inputs; the original fiber-product model is derived. Original strict-class gluing, all finite coefficient quotients, initial arithmetic realization and the full finite-flat deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original coefficient fiber-product vector embedding: Use the actual compatible-pair coefficient ring and its genuine two ring projections to embed its original vector group into the product of the two original vector groups. Equality of both original coordinates proves injectivity. Exact coefficient-change equivariance proves this is an embedding of the original Galois representation into the product of its actual projected representations. One exact consumer expands registered scope to 1887 production modules, 1254 exact consumers and 7,674 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The compatible-vector constraint and original action are retained. This supplies the representation embedding; model construction is the next step. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Hopf models under original matrix coefficient changes: Apply the actual equivariant vector-group embedding and quotient constructions to original coefficient ring injections and surjections. A model after an injective coefficient change gives a model before it; a model before an actual coefficient quotient gives a model after it. The original whole matrix representation and column actions remain explicit. One exact consumer expands registered scope to 1886 production modules, 1253 exact consumers and 7,671 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Existence of the original ambient/source model is explicit. The inherited model is constructed; arithmetic initial model existence and the condition at all finite coefficient quotients remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original matrix coefficient-vector group actions: Reuse the already proved original matrixStandardRepresentation. Its underlying point-group action is exactly original matrix-vector multiplication. Actual coefficient ring maps act on every original vector coordinate; injectivity and surjectivity pass to these maps. The pinned ring-hom matrix-vector identity proves exact equivariance for the same original coefficient-change representation. One exact consumer expands registered scope to 1885 production modules, 1252 exact consumers and 7,668 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This retains the actual matrix, coefficient and vector objects. It does not construct arithmetic Hopf models. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Hopf model inheritance for original linear representation maps: Transport injectivity or surjectivity of the original linear map to its actual underlying additive group map. The proved exact intertwining identity supplies original equivariance. The actual stable-range and invariant-kernel coordinate constructions therefore give models of the same source or target linear representation. One exact consumer expands registered scope to 1884 production modules, 1251 exact consumers and 7,662 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. These results construct group-scheme point models from a given model and an actual representation map. They do not construct an integral coefficient-ring action on the group scheme or prove arithmetic finite-flat existence at every finite coefficient quotient. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Underlying original group action of linear representations: Use the actual invertible linear operators of the original representation to construct its action on the same additive group, written multiplicatively solely for the Hopf point API. Exact evaluation retains the original operator on every vector. An original intertwining linear map induces the same original equivariant group map. One exact consumer expands registered scope to 1883 production modules, 1250 exact consumers and 7,659 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This is an exact additive-to-multiplicative interface for the original representation. It does not assume or prove arithmetic model existence. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Hopf models inherited through original equivariant surjections: Prove stability of the actual kernel of the original equivariant surjection. Construct the original invariant-coordinate quotient model. The actual first-isomorphism group equivalence is equivariant on every original representative, and transports the quotient model to the specified original target action. One exact consumer expands registered scope to 1882 production modules, 1249 exact consumers and 7,656 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. A genuine source model is explicit; the target model is constructed using actual invariant coordinates. Arithmetic finite-flat model existence remains open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Hopf models inherited through original equivariant embeddings: Prove stability of the actual range of the original equivariant injection. Construct its integral subgroup coordinate model from the given ambient model. The genuine injective range equivalence intertwines the original actions, so its inverse transports that constructed model to the original source group. One exact consumer expands registered scope to 1881 production modules, 1248 exact consumers and 7,654 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The source model is derived from a genuine modeled ambient group. No target-equivalent existence hypothesis or arithmetic realization theorem is supplied. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Equivariant transport of the original Hopf point model: Retain the same original integral Hopf coordinates, finite freeness and convolution points. Compose the original model point equivalence with the specified original group equivalence. The original model action identity and equivariance of that equivalence prove the transported model realizes the given target action. One exact consumer expands registered scope to 1880 production modules, 1247 exact consumers and 7,652 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. An actual model of the source action is an explicit input. The target realization is constructed; arithmetic existence remains open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual model coordinate resizing to the base universe: Finiteness of the actual original coordinate module proves it is small in the base ring universe. Shrink.algEquiv gives its genuine original algebra equivalence. Transport the actual Hopf structure, cocommutativity, finite freeness and point realization through that equivalence. Coefficient naturality proves the constructed model realizes the unchanged original group and specified Galois action in smaller coordinates. One exact consumer expands registered scope to 1879 production modules, 1246 exact consumers and 7,650 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The resized model is derived from the actual original model, whose existence is an explicit input. Original arithmetic realization at every finite coefficient quotient, scheme realization with independently sized point fields and the finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual point group under genuine coordinate equivalence: Use actual original point restriction along the original bialgebra equivalence and its inverse to construct the genuine contravariant convolution point-group equivalence. Original coordinate inverse identities prove both inverse laws. Exact point evaluation and original coefficient composition prove coefficient-automorphism compatibility. One exact consumer expands registered scope to 1878 production modules, 1245 exact consumers and 7,648 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This is the genuine original point comparison for an existing coordinate equivalence. It does not construct arithmetic models. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual free Hopf coordinate transport: Express the original comultiplication and antipode through the specified genuine algebra equivalence. Freeness transfers through the same linear equivalence. Original injective bialgebra and antipode descent derive the actual Hopf structure on the equivalent coordinates, with a genuine bialgebra equivalence, exact antipode evaluation and inherited cocommutativity. One exact consumer expands registered scope to 1877 production modules, 1244 exact consumers and 7,645 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The coordinate Hopf structure is constructed from the original algebra equivalence. This supports universe resizing; no target arithmetic model or source modular theorem is assumed or closed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite-flat group scheme realizing the given original model: Construct the genuine affine commutative group scheme from the actual integral coordinates of a given finite free Hopf point model. Its structure morphism is finite and flat by the same original finite free module. Compose the original model point equivalence with the actual affine-scheme point group comparison. The model Galois law and exact coefficient naturality prove that the scheme points realize precisely the specified original Galois action. One exact consumer expands registered scope to 1876 production modules, 1243 exact consumers and 7,642 explicit audit registrations. Focused production compilation and the assembled 1876-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,258 exhaustive theorem checks passed. The original coordinate model is an explicit input, and the target finite-flat scheme and point/Galois realization are constructed. This common-universe result does not supply arithmetic model existence or the model condition at all finite coefficient quotients; cross-universe adapters and the full finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual affine scheme point group and original coefficient action: Use the actual representable original Hopf point presheaf and its proved Yoneda group isomorphism. Full faithfulness and finite-product preservation of original relative spectrum give a genuine group equivalence from original convolution points to morphisms from the same value algebra spectrum to the actual group scheme over the original base. The equivalence is literally the original spectrum map and original coefficient composition equals pullback of the same scheme point. One exact consumer expands registered scope to 1875 production modules, 1242 exact consumers and 7,639 explicit audit registrations. Focused production compilation and the assembled 1876-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,258 exhaustive theorem checks passed. This identifies the actual coordinate point group with genuine affine group-scheme points and their coefficient maps. Original arithmetic realization, cross-universe adapters and the all-finite-coefficient-quotients deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual affine group scheme of original Hopf coordinates: Construct the original relative spectrum functor from the genuine algebra-under equivalence and original spectrum maps. Pinned finite-limit preservation yields a braided finite-product-preserving functor. Transport the already constructed original coordinate group object to a genuine commutative group object in schemes over the original base spectrum. Its structure morphism is exactly the spectrum of the original algebra map; actual finite and flat coordinate modules prove the corresponding scheme morphism properties. One exact consumer expands registered scope to 1874 production modules, 1241 exact consumers and 7,636 explicit audit registrations. Focused production compilation and the assembled 1876-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,258 exhaustive theorem checks passed. The actual group scheme is constructed from original Hopf coordinates. The point-group identification, exact original Galois comparison, universe adapters and arithmetic model existence remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual representable commutative Hopf point presheaf: Construct the genuine presheaf of original commutative convolution groups on the opposite category of original commutative algebras. Its maps are the original coefficient-composition maps. A literal bijection with original coordinate algebra morphisms proves representability by the same coordinate object, with exact coordinate evaluation. The pinned representable-presheaf construction then derives a genuine commutative group object on that original opposite algebra object. One exact consumer expands registered scope to 1873 production modules, 1240 exact consumers and 7,632 explicit audit registrations. Focused production compilation and the assembled 1876-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,258 exhaustive theorem checks passed. This derives the original algebra-category group object from actual Hopf coordinates. Transport to the actual Spec-over scheme object, exact geometric-point comparison, finite-flatness and universe adapters remain open. No arithmetic or source modular gate closes. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual invariant Hopf model of the original quotient action: Pull back the original stable subgroup through the given model, then use its literal invariant coordinate algebra. The proved finite free Hopf structure and actual cocommutativity supply the integral coordinates. Compose the genuine invariant-coordinate point quotient equivalence with the original quotient group comparison. Original representative evaluation and the derived quotient Galois comparison identify its action with the specified original quotient action, constructing the target model. One exact consumer expands registered scope to 1872 production modules, 1239 exact consumers and 7,629 explicit audit registrations. Focused production compilation and the assembled 1872-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,225 exhaustive theorem checks passed. The quotient model is derived without assuming its existence. Original arithmetic realization at every finite coefficient quotient, categorical affine group-scheme realization and the full finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual integral Hopf model of a stable original subgroup: Pull the specified stable original subgroup back along the given model point equivalence. Original Galois equivariance proves stability of that actual point subgroup. The genuine integral Hopf quotient coordinate construction derives finite free cocommutative coordinates and identifies their original points with the specified subgroup. Its original Galois comparison yields a model for precisely the restricted original action. One exact consumer expands registered scope to 1871 production modules, 1238 exact consumers and 7,627 explicit audit registrations. Focused production compilation and the assembled 1872-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,225 exhaustive theorem checks passed. The target subgroup model is constructed from the original model. This is coordinate-model closure, not a proof that the required modular arithmetic representation has a model or a proof of the categorical scheme realization. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original Galois subgroup and quotient actions: Use the specified original Galois action and stability under original elements and their inverses to construct the genuine action on the stable subgroup and its actual group quotient. Multiplication and identity are inherited from the same original action, and original representatives evaluate exactly. One exact consumer expands registered scope to 1870 production modules, 1237 exact consumers and 7,625 explicit audit registrations. Focused production compilation and the assembled 1872-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,225 exhaustive theorem checks passed. These are actual actions on the original subgroup and quotient. Realization by the constructed integral coordinate models and the final arithmetic condition remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual tensor-coordinate product of original Galois models: Construct the specified componentwise original Galois action on the product group. Tensor the actual original model coordinate algebras, retain their genuine Hopf operations and cocommutativity, and derive finite freeness from the original finite free coordinates. The genuine tensor-point product equivalence and its proved original Galois comparison produce a model of the original product representation. The exact consumer retains evaluation through the actual two coordinate restrictions. One exact consumer expands registered scope to 1869 production modules, 1236 exact consumers and 7,622 explicit audit registrations. Focused production compilation and the assembled 1869-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,189 exhaustive theorem checks passed. This supplies the actual binary product model. Original subgroup and quotient model closure, arithmetic realization at all finite coefficient quotients, and the final finite-flat deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite free Hopf point model of a specified Galois action: Define a model using an actual commutative coordinate algebra, genuine cocommutative Hopf operations, finite free original coordinates and an exact multiplicative point realization intertwining the specified original Galois action. Actual finiteness of the coordinate point group derives finiteness of the represented group. Equality of the two genuine action kernels transfers the original finite-coordinate open-kernel theorem to the specified representation. One exact consumer expands registered scope to 1868 production modules, 1235 exact consumers and 7,620 explicit audit registrations. Focused production compilation and the assembled 1869-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,189 exhaustive theorem checks passed. This faithfully defines a model and derives finiteness and an open kernel from a given model. Existence for the required arithmetic representations, subgroup and quotient closure, and the finite-flat deformation functor remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual cocommutative subgroup and invariant Hopf models: The original surjective subgroup coordinate map proves the constructed subgroup Hopf quotient cocommutative. The actual invariant Hopf algebra has proved finite free coordinates and injects into the original cocommutative coordinates; faithful tensor reflection therefore derives its cocommutativity as well. One exact consumer expands registered scope to 1867 production modules, 1234 exact consumers and 7,617 explicit audit registrations. Focused production compilation and the assembled 1869-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,189 exhaustive theorem checks passed. Both constructed integral Hopf coordinate algebras now have the genuine commutative-group law property. Arithmetic realization for the given representation and closure of the finite-flat deformation condition remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual cocommutativity under faithful and surjective coordinate maps: Actual flat tensor injectivity reflects cocommutativity through an injective bialgebra map. Surjectivity of an original bialgebra map transfers cocommutativity to its actual quotient. Both proofs use the genuine tensor-swap naturality and original comultiplication diagram. One exact consumer expands registered scope to 1866 production modules, 1233 exact consumers and 7,614 explicit audit registrations. Focused production compilation and the assembled 1869-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,189 exhaustive theorem checks passed. These are original coordinate inheritance theorems. Packaging the actual subgroup and invariant models and deriving arithmetic finite-flat deformation closure remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual generic coordinate realization of the integral invariant model: The genuine generic quotient point realization and a specified original Galois-equivariant comparison with an independently given finite reduced Hopf algebra yield a Galois-equivariant comparison of the actual generic point groups. Original-field Hopf coordinate reconstruction then constructs a bialgebra equivalence from the given coordinate algebra onto the literal generic fiber of the constructed finite free invariant model. Its original point evaluation and actual antipode compatibility are retained. One exact consumer expands registered scope to 1865 production modules, 1232 exact consumers and 7,611 explicit audit registrations. Focused production compilation and the assembled 1865-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,163 exhaustive theorem checks passed. Reducedness of the original ambient generic fiber and the specified original point comparison are explicit upstream hypotheses. The actual generic coordinate equivalence is constructed, not assumed. Arithmetic realization for the given Galois representation at every finite coefficient quotient and finite-flat deformation closure remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine generic-fiber quotient points and original Galois action: Compose the actual original subgroup quotient point equivalence with the genuine point scalar-extension equivalence to realize the original quotient as points of the literal generic fiber of the constructed invariant Hopf algebra. The original pure invariant coordinate evaluation is retained, and the proved original integral Galois comparison and exact base-change equivariance derive the genuine generic-fiber Galois comparison. One exact consumer expands registered scope to 1864 production modules, 1231 exact consumers and 7,608 explicit audit registrations. Focused production compilation and the assembled 1865-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,163 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual Galois quotient action for the original invariant model: The genuine original Galois action descends to the quotient by the specified original subgroup, with both directions of subgroup stability proved using the original automorphism and its inverse. The actual constructed integral invariant-model point equivalence intertwines this original quotient action with the genuine coordinate coefficient action, retaining the original representative. One exact consumer expands registered scope to 1863 production modules, 1230 exact consumers and 7,605 explicit audit registrations. Focused production compilation and the assembled 1865-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,163 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual reduced and formally etale invariant generic fiber: The literal generic fiber of the original invariant coordinate subalgebra injects into the same original generic coordinate algebra by actual flat tensor inclusion. Original generic reducedness therefore implies invariant generic reducedness. The proved finite original coordinates and perfect fraction field derive formal etaleness of that same genuine generic fiber. One exact consumer expands registered scope to 1862 production modules, 1229 exact consumers and 7,602 explicit audit registrations. Focused production compilation and the assembled 1865-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,163 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine original Hopf coordinate equivalence from Galois points: Original point identity and faithful field inclusion determine the actual original counit. Multiplication in the same original point groups, exact descended coordinate evaluation and genuine original reduced tensor-point separation derive the original comultiplication diagram. The original algebra equivalence is therefore a genuine original-field bialgebra equivalence and preserves the actual Hopf antipodes. One exact consumer expands registered scope to 1861 production modules, 1228 exact consumers and 7,599 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual original-field coordinate algebra equivalence: The actual inverse point-group equivalence is proved Galois-equivariant. Descend both original coordinate maps and use their exact original point evaluations and genuine reduced-coordinate point separation to prove both inverse identities. This constructs an algebra equivalence over the original field retaining the given point-group equivalence. One exact consumer expands registered scope to 1860 production modules, 1227 exact consumers and 7,595 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual original-field coordinate homomorphism from Galois points: The proved image of each original coordinate under genuine geometric reconstruction lies in the actual original scalar-extension inclusion. Its proved injection and range equivalence construct the original-field algebra homomorphism. The exact original scalar-extension square and evaluation on every original point are retained. One exact consumer expands registered scope to 1859 production modules, 1226 exact consumers and 7,593 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original coordinate image of a Galois point equivalence: Use genuine original point base change and the proved finite reduced geometric coordinate reconstruction to construct the actual geometric algebra equivalence. Retain its evaluation on original coordinates. Original Galois equivariance of the point-group equivalence, actual inverse twisting of points and geometric point separation force each reconstructed original coordinate image to be Galois-fixed. The proved finite-basis fixed-field descent produces an original coordinate preimage. One exact consumer expands registered scope to 1858 production modules, 1225 exact consumers and 7,590 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual semilinear Galois tensor point evaluation: Construct the actual coefficient automorphism of the original geometric tensor coordinate algebra as an algebra automorphism over the original field. Its evaluation against the original extended point is computed by inverse coefficient twisting of that same point. The proved finite-basis fixed-tensor theorem identifies precisely its fixed original coordinates. One exact consumer expands registered scope to 1857 production modules, 1224 exact consumers and 7,586 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original coordinates from Galois-fixed tensors: For the actual Galois field extension and original finite basis, the extended tensor basis identifies genuine coefficient action with Galois action on each original tensor coefficient. The pinned infinite-Galois fixed-field theorem produces original-field coefficients, and the same original basis reconstructs the unique type of original vector needed for coordinate descent. The reverse implication uses genuine scalar extension of original coordinates. One exact consumer expands registered scope to 1856 production modules, 1223 exact consumers and 7,583 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual invariant Hopf model for the original Galois-stable subgroup: Apply the derived integral subgroup Hopf quotient to the original specified Galois-stable subgroup, then construct its actual invariant coordinate Hopf algebra. Finite freeness of the original subgroup coordinates and their geometric reducedness are derived. The exact original subgroup point image identifies the quotient point group with genuine points of the constructed invariant model; the original coordinate and antipode diagrams are retained. One exact consumer expands registered scope to 1855 production modules, 1222 exact consumers and 7,581 explicit audit registrations. Focused production compilation and the assembled 1861-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,138 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original integral quotient point realization and Galois action: The genuine integral quotient point equivalence intertwines every original coefficient automorphism with the actual coefficient action on the constructed invariant Hopf coordinate algebra. Quotient induction retains the original representative and coordinate evaluation; genuine field Galois automorphisms are obtained by restricting scalars. One exact consumer expands registered scope to 1854 production modules, 1221 exact consumers and 7,577 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine coefficient action on original quotient points: Original coefficient automorphisms commute with the actual subgroup point restriction. Its image is therefore stable with equality proved using the actual inverse coefficient automorphism. The pinned quotient congruence constructs a genuine automorphism of the original quotient point group and retains its exact action on every original representative. One exact consumer expands registered scope to 1853 production modules, 1220 exact consumers and 7,575 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine integral invariant Hopf quotient points: The actual inclusion of the constructed integral invariant Hopf algebra induces a surjective original point homomorphism whose kernel is precisely the image of the original subgroup point map. The genuine first isomorphism theorem yields an exact multiplicative equivalence from the original quotient point group to the actual constructed integral Hopf point group, retaining evaluation on each original representative and invariant coordinate. One exact consumer expands registered scope to 1852 production modules, 1219 exact consumers and 7,571 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original integral invariant point fibers and subgroup orbits: Transport the proved geometric invariant fiber theorem through the actual flat invariant-coordinate equivalence and original point-map naturality. Equality on original integral invariants is exactly multiplication by an actual subgroup point. Every point of the original integral invariant algebra extends to a point of the same original finite coordinate algebra by genuine geometric lying-over and original tensor evaluation. One exact consumer expands registered scope to 1851 production modules, 1218 exact consumers and 7,567 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original invariant point restrictions under flat base change: Restriction of the extended original point to the genuine geometric invariant coordinates, pulled back through the proved original invariant algebra equivalence, equals the actual scalar extension of the integral restriction. This proves an exact equivalence between equality of the original integral restrictions and equality of the geometric restrictions. One exact consumer expands registered scope to 1850 production modules, 1217 exact consumers and 7,564 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original point restriction under genuine scalar extension: The genuine original point-group scalar extension and its inverse commute with the actual subgroup point restriction map. The proof uses the same original tensor coordinates and the existing point lift equivalence, retaining the actual extended bialgebra map. One exact consumer expands registered scope to 1849 production modules, 1216 exact consumers and 7,561 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine Hopf equivalence for invariant coordinate base change: The proved flat equalizer range and injection construct the actual algebra equivalence between scalar-extended integral invariants and invariants of the extended coordinates. Their original ambient bialgebra inclusions derive both coalgebra diagrams; the genuine constructed Hopf base-change equivalence retains pure-coordinate evaluation and commutes with the actual antipodes. One exact consumer expands registered scope to 1848 production modules, 1215 exact consumers and 7,558 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual bialgebra comparison through faithful coordinates: A genuine algebra equivalence agreeing with two original bialgebra inclusions inherits the original counit and comultiplication laws. Flatness of the displayed free coordinate modules makes the original tensor inclusion injective, reflecting the actual comultiplication diagram and constructing a genuine bialgebra equivalence. One exact consumer expands registered scope to 1847 production modules, 1214 exact consumers and 7,554 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual reduced geometric fibers of original point-coordinate quotients: The original quotient by vanishing on actual points injects into the same product of point-value fields. Clearing denominators proves its actual generic fiber reduced. Finiteness and the perfect fraction field then prove the original geometric scalar extension reduced through genuine field extension and tensor cancellation. One exact consumer expands registered scope to 1846 production modules, 1213 exact consumers and 7,551 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual reduced generic and geometric scalar extensions: The existing finite reduced algebra formal-etaleness theorem and genuine tensor base change prove reducedness after arbitrary field extension of the perfect ground field. The literal tensor cancellation equivalence carries this to the original geometric fiber of a finite integral coordinate algebra. Flat extension of an original subalgebra inherits reducedness through the actual tensor-coordinate inclusion. One exact consumer expands registered scope to 1845 production modules, 1212 exact consumers and 7,548 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite reduced Hopf coordinates reconstructed from genuine points: For two actual finite reduced Hopf coordinate algebras over the algebraically closed field, the proved bijective original point evaluation reconstructs a contravariant algebra equivalence from the genuine point-group equivalence. Original multiplication and identity of points determine both coalgebra diagrams by proved original tensor-point separation, yielding a genuine bialgebra equivalence commuting with the original antipodes. One exact consumer expands registered scope to 1844 production modules, 1211 exact consumers and 7,544 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite reduced coordinate reconstruction from geometric points: For the actual finite coordinate algebra, distinct original field-valued point kernels are distinct maximal ideals. The pinned Chinese remainder theorem realizes every assignment of values at those same genuine points. Over the algebraically closed field, original reduced-algebra point separation proves injectivity, constructing the actual coordinate algebra equivalence with the full function algebra on its genuine geometric points and retaining exact original evaluation. One exact consumer expands registered scope to 1843 production modules, 1210 exact consumers and 7,539 explicit audit registrations. Focused production compilation and the assembled 1854-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,090 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual quotient point group of invariant Hopf coordinates: Restrict original geometric points along the genuine constructed invariant-coordinate bialgebra inclusion. The original point-extension theorem proves surjectivity. Both directions of the actual point-fiber/orbit equivalence identify its kernel exactly with the original subgroup point image. The pinned quotient-by-kernel isomorphism constructs the genuine multiplicative quotient-point equivalence and preserves evaluation of the same original representative on each actual invariant coordinate. One exact consumer expands registered scope to 1842 production modules, 1209 exact consumers and 7,535 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual invariant-coordinate point fibers and subgroup orbits: Identify the literal coaction coinvariants with the actual subgroup point fixed subalgebra. Equal restrictions of original points give an actual subgroup point witness through the pinned invariant-prime orbit theorem and original point-kernel comparison. The proved translation evaluation turns that witness into the same original convolution product. Independently, every genuine invariant-coordinate point extends to the original finite coordinate algebra by actual lying-over. One exact consumer expands registered scope to 1841 production modules, 1208 exact consumers and 7,531 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual subgroup point action and fixed coordinate algebra: Compose original point restriction with the genuine translation action to obtain the actual subgroup point action by algebra automorphisms, including original scalar compatibility. For finite reduced subgroup coordinates over the original algebraically closed field, derive their point evaluation injection from genuine geometric point separation. Apply the proved original coaction-translation identity and derived tensor separation to identify the literal coinvariant subalgebra with the actual fixed-coordinate subalgebra. One exact consumer expands registered scope to 1840 production modules, 1207 exact consumers and 7,528 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual literal subgroup coinvariants and original point translations: Evaluate the actual subgroup factor of the original coaction at a genuine original subgroup point. The tensor coordinate diagram identifies this with the already constructed original point translation. When the given finite point family separates the original subgroup coordinate algebra, derived flat tensor separation proves that literal coaction invariance is exactly invariance under those same original translations. One exact consumer expands registered scope to 1839 production modules, 1206 exact consumers and 7,524 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual tensor separation by a finite original point family: A genuine finite family of original algebra-valued points gives an injective original coordinate evaluation. Tensor this actual injection with the original flat module, then use the pinned finite product tensor equivalence. Each resulting original coordinate is the literal tensor of the same original point, so these actual partial point evaluations separate the original tensors. One exact consumer expands registered scope to 1838 production modules, 1205 exact consumers and 7,521 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual flat base change of subgroup coinvariants: Construct the genuine scalar extension of the original subgroup bialgebra map. Prove the actual coaction and original unit-inclusion diagrams through tensor base-change distributivity. Transfer the pinned flat equalizer theorem through this genuine linear equivalence to identify the exact range of the scalar-extended original invariant-coordinate algebra with the literal base-changed subgroup coinvariants. One exact consumer expands registered scope to 1837 production modules, 1204 exact consumers and 7,519 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine original Hopf point translation action: Convolve the actual universal coordinate point with the scalar-extended original point. Existing coefficient-change multiplication and original convolution associativity derive the translation composition law. Original antipode inverses yield algebra automorphisms and a genuine action; evaluation gives exactly the original convolution product point. One exact consumer expands registered scope to 1836 production modules, 1203 exact consumers and 7,515 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual invariant coordinates distinguish finite group point orbits: For the given finite group action on the original finite algebra, use the literal fixed subalgebra. Equal restrictions of actual points give equal contractions of their prime kernels. The pinned invariant-prime orbit theorem and original Artinian point-kernel comparison then give an element of the same acting group relating the original points. One exact consumer expands registered scope to 1835 production modules, 1202 exact consumers and 7,511 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine geometric points extend across finite subcoordinates: For an actual subalgebra of a finite algebra over the original algebraically closed field, lift the kernel of its genuine point through the original integral inclusion using lying-over. Map the actual quotient field into the original algebraically closed field and compare original point kernels to obtain the required genuine extension. One exact consumer expands registered scope to 1834 production modules, 1201 exact consumers and 7,509 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual flat base change of coordinate equalizers: Apply the pinned flat linear-equalizer theorem to the actual underlying coordinate algebra maps. The scalar-extended original equalizer inclusion is injective, and its exact algebra range is the literal equalizer of the actual scalar-extended maps. One exact consumer expands registered scope to 1833 production modules, 1200 exact consumers and 7,507 explicit audit registrations. Focused production compilation and the assembled 1842-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 14,021 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine finite free invariant coordinate Hopf algebra: Assemble the proved invariant-coordinate algebra comultiplication, original counit restriction and original antipode restriction. Derive all bialgebra and Hopf identities through the actual coordinate inclusion. The genuine original equalizer coordinates are finite free over the original PID. One exact consumer expands registered scope to 1832 production modules, 1199 exact consumers and 7,504 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original Hopf identities through coordinate inclusions: A genuine injective coordinate bialgebra map and the literal antipode compatibility diagram reflect both original convolution inverse identities. Construct the actual subcoordinate Hopf structure with these derived antipode laws. One exact consumer expands registered scope to 1831 production modules, 1198 exact consumers and 7,501 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original antipode preserves subgroup invariant coordinates: Compose the proved original antipode-comultiplication and coordinate-map diagrams. Apply the original invariant-coordinate identity to derive antipode invariance, then restrict the genuine antipode algebra map to the literal original equalizer. One exact consumer expands registered scope to 1830 production modules, 1197 exact consumers and 7,498 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original antipode coordinate diagrams: The already constructed actual point restriction preserves inverses, so original antipodes commute with genuine coordinate bialgebra maps. Express original comultiplication as the product of the two universal tensor-coordinate points; their inverses and original cocommutativity derive the original antipode-comultiplication diagram. One exact consumer expands registered scope to 1829 production modules, 1196 exact consumers and 7,495 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original bialgebra laws through free coordinate inclusions: The actual free coordinate inclusion induces injective twofold and threefold tensor maps. Original coassociativity and both counit laws, together with the literal coordinate compatibility diagrams, derive all target coalgebra identities and construct the genuine bialgebra. One exact consumer expands registered scope to 1828 production modules, 1195 exact consumers and 7,492 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual algebra laws for actual invariant comultiplication: The actual invariant-coordinate tensor inclusion is injective by finite freeness and the pinned flat tensor theorem. Reflect the original unit and product identities through it, upgrading the proved linear comultiplication to a genuine algebra map with its original coordinate diagram. One exact consumer expands registered scope to 1827 production modules, 1194 exact consumers and 7,488 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine invariant tensor comultiplication preimage: The proved right tensor-kernel identity and actual PID retraction fix one comultiplication factor. Original cocommutativity fixes the other factor. Apply both actual retractions to produce a genuine invariant-coordinate tensor preimage and a compatible linear comultiplication. One exact consumer expands registered scope to 1826 production modules, 1193 exact consumers and 7,486 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original coassociativity gives right tensor invariance: The original coassociativity identity and actual subgroup coaction diagrams show that comultiplication of an original invariant coordinate is killed by the tensor of the literal coaction difference. One exact consumer expands registered scope to 1825 production modules, 1192 exact consumers and 7,483 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original tensor kernel and retraction images: Use the pinned flat tensor-kernel theorem to show that a genuine kernel retraction fixes the original tensors killed by the tensored map. Two original one-factor retraction identities then exhibit an explicit preimage under the tensor of the actual inclusions. One exact consumer expands registered scope to 1824 production modules, 1191 exact consumers and 7,481 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original subgroup invariant coordinates and retraction: Define the original right subgroup coaction and its literal equalizer subalgebra. Identify its underlying module with the actual coaction-difference kernel. Derive finite free coordinates and an actual linear retraction over the original PID from the torsion-free tensor target. One exact consumer expands registered scope to 1823 production modules, 1190 exact consumers and 7,477 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual PID kernel retraction: The actual image of a map from a finite module into a torsion-free module over the original PID is finite free. Split its genuine range surjection and subtract its section to construct a retraction onto the literal original kernel. One exact consumer expands registered scope to 1822 production modules, 1189 exact consumers and 7,472 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine generic-fiber subgroup point identification: Compose the genuine Hopf point base-change equivalence with the constructed original quotient point equivalence. This identifies points of the literal fraction-field tensor Hopf algebra with the original subgroup, preserving each original scalar-extended quotient coordinate and the actual field Galois action. One exact consumer expands registered scope to 1821 production modules, 1188 exact consumers and 7,470 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual subgroup point group equivalence and Galois action: The original quotient coordinate map is a genuine bialgebra homomorphism. Its actual point restriction lands in exactly the original subgroup; coordinate surjectivity proves injectivity and the proved exact range supplies surjectivity. Construct the multiplicative equivalence and retain exact original coordinate evaluation and Galois compatibility. One exact consumer expands registered scope to 1820 production modules, 1187 exact consumers and 7,467 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual integral subgroup Hopf quotient and original points: Consume the proved integral comultiplication vanishing and original subgroup antipode and counit stability to construct the actual quotient Hopf algebra. Derive finite free coordinates and finite actual points. The proved original point closure and actual quotient lifts identify the restriction range exactly with the original subgroup. One exact consumer expands registered scope to 1819 production modules, 1186 exact consumers and 7,464 explicit audit registrations. Focused production compilation and the assembled 1832-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,974 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual integral subgroup comultiplication descent: Derive faithful scalar action through the original fraction field and finite freeness of the actual PID quotient coordinates. Its genuine evaluation injection proves the localized quotient reduced. Original point closure puts every quotient-point restriction in the subgroup; actual generic tensor separation and faithful tensor injection turn subgroup multiplication into the required original quotient-tensor comultiplication vanishing. One exact consumer expands registered scope to 1818 production modules, 1185 exact consumers and 7,461 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual faithful original tensor coordinates in the generic fiber: Construct the literal map from the original tensor into the tensor of its scalar-extended factors. Genuine tensor base-change associativity gives its pure-coordinate formula; flatness of the actual free original tensor proves injectivity under faithful scalar extension. Evaluation by actual generic point pairs equals evaluation by their original coordinate restrictions. One exact consumer expands registered scope to 1817 production modules, 1184 exact consumers and 7,459 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original integral point closure through the generic fiber: Transport the original Galois-stable point set through the genuine base-change group equivalence. The generic coordinate algebra is finite over its field and therefore Artinian. Actual denominator clearing transfers vanishing back to the original integral ideal; generic Galois-stable point closure then proves exact original point closure. One exact consumer expands registered scope to 1816 production modules, 1183 exact consumers and 7,455 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual faithful original coordinates after localization: Clear an actual common denominator in the tensor localization. The original injective coordinate map kills the resulting numerator only when it is zero; invertibility of the denominator proves the entire scalar-extended map injective. A reduced target therefore makes the actual localized algebra reduced. One exact consumer expands registered scope to 1815 production modules, 1182 exact consumers and 7,453 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine Hopf point equivalence under base change: Prove that the actual algebra-point base-change equivalence preserves the original convolution multiplication using the genuine tensor comultiplication. Construct the resulting point-group equivalence and derive its exact Galois equivariance. One exact consumer expands registered scope to 1814 production modules, 1181 exact consumers and 7,450 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual coordinate points under base change: Reuse the pinned algebra tensor universal-property equivalence, prove its exact original and scalar tensor evaluations, and show that actual coefficient automorphisms fixing the extension field commute with this same scalar-extension point map. One exact consumer expands registered scope to 1813 production modules, 1180 exact consumers and 7,447 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original subgroup comultiplication descent over a perfect field: The actual subgroup coordinate quotient injects into its original field-valued evaluations, giving reducedness. Exact Galois-stable point closure places every quotient point restriction in the original subgroup. Tensor point separation and genuine subgroup multiplication derive the literal quotient-tensor vanishing of the original comultiplication. One exact consumer expands registered scope to 1812 production modules, 1179 exact consumers and 7,443 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual tensor-coordinate separation over a perfect field: Decompose the original finite reduced algebras into their actual Artinian field factors. Perfect-field separability gives formal etaleness; base change and composition prove the tensor algebra reduced. Genuine tensor points are products of the two original point restrictions, so point pairs separate its coordinates. One exact consumer expands registered scope to 1811 production modules, 1178 exact consumers and 7,441 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine geometric separation of finite reduced coordinates: Each prime quotient of the original finite algebra is an actual field and embeds in the algebraically closed value field. Vanishing at all genuine points puts the original coordinate in every prime ideal; reducedness makes it zero. One exact consumer expands registered scope to 1810 production modules, 1177 exact consumers and 7,437 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual exact original Galois-stable point closure: Combine actual finite kernel selection with extension of the original quotient embeddings. Genuine Galois stability then identifies the original finite point set exactly with all points annihilating its actual joint vanishing ideal. One exact consumer expands registered scope to 1809 production modules, 1176 exact consumers and 7,435 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual point kernel selection from a finite vanishing ideal: Express the original joint vanishing ideal as the finite intersection of actual point kernels. Primality of the new point kernel selects an original kernel below it; Artinian maximality proves equality. One exact consumer expands registered scope to 1808 production modules, 1175 exact consumers and 7,433 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual Galois conjugacy of original Artinian point kernels: Pass to the original common point-kernel quotient, use its Artinian maximality to obtain a field, and extend the second actual quotient embedding inside the same normal field. The constructed field automorphism carries the first original point to the second. One exact consumer expands registered scope to 1807 production modules, 1174 exact consumers and 7,431 explicit audit registrations. Focused production compilation and the assembled 1818-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,892 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original subgroup coordinate quotient with explicit comultiplication obligation: Consume the actual subgroup ideal and its already proved antipode and counit stability in the constructed coordinate Hopf quotient. Keep the remaining literal quotient-tensor comultiplication vanishing explicit. Over the original PID base, derive finite free quotient coordinates and the finite actual point set with its original coordinate-rank bound. One exact consumer expands registered scope to 1806 production modules, 1173 exact consumers and 7,429 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual Hopf coordinate quotient from explicit ideal stability: Construct the actual quotient comultiplication and counit from their displayed original ideal-vanishing conditions. The genuine quotient surjection and proved descent lemmas derive all bialgebra and Hopf axioms. The original antipode descends through its explicit ideal stability; retain exact original comultiplication and antipode formulas on quotient coordinates. One exact consumer expands registered scope to 1805 production modules, 1172 exact consumers and 7,427 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original antipode identities under coordinate surjection: The original Hopf-algebra point inverse laws and genuine convolution compatibility with a surjective coordinate bialgebra map derive both target antipode identities. Construct the target Hopf structure using the same descended algebra antipode and original target bialgebra. One exact consumer expands registered scope to 1804 production modules, 1171 exact consumers and 7,424 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original bialgebra identities under coordinate surjection: Derive target coassociativity and both counit identities by pulling them back along the same surjective original coordinate algebra map. Actual tensor-map identities transport the source coalgebra laws, constructing the target bialgebra with its given compatible comultiplication and counit. One exact consumer expands registered scope to 1803 production modules, 1170 exact consumers and 7,421 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original finite-free Hopf point products and Galois compatibility: Prove that actual bialgebra point restriction commutes with the original field-automorphism action. Derive equivariance of the genuine tensor-coordinate product equivalence. Reuse the original tensor module constructions to derive finite freeness of the actual tensor-coordinate algebra from finite freeness of its original factors. One exact consumer expands registered scope to 1802 production modules, 1169 exact consumers and 7,417 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual tensor-coordinate Hopf point product equivalence: Use the genuine coordinate inclusions and their proved contravariant point homomorphisms. Construct the inverse from the original algebra tensor-product universal property. Prove both inverse laws and preservation of convolution multiplication, retaining the exact product of coordinate values on pure tensors. One exact consumer expands registered scope to 1801 production modules, 1168 exact consumers and 7,413 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine tensor Hopf coordinate inclusions: Construct each original coordinate inclusion as a genuine bialgebra homomorphism using the actual tensor bialgebra map, original unit, and original left or right tensor identity. Prove the exact original pure-tensor formula for each inclusion. One exact consumer expands registered scope to 1800 production modules, 1167 exact consumers and 7,411 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual continuous Galois action on finite free Hopf points: Construct the actual field-automorphism action on original Hopf-algebra points by restriction of scalars and coordinate composition. Use the finite original point set and a finite basis of the same coordinate algebra to identify its kernel with finitely many original field-value stabilizers. Algebraicity makes these stabilizers open in the Krull topology, proving continuity into the genuine discrete point automorphism group. One exact consumer expands registered scope to 1799 production modules, 1166 exact consumers and 7,408 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual subgroup quotient antipode and counit: Descend the original antipode through the actual subgroup vanishing ideal using its proved inverse stability. Descend the original counit using the proved identity-point vanishing and faithful base embedding. Both quotient maps retain their exact original coordinate formulas. One exact consumer expands registered scope to 1798 production modules, 1165 exact consumers and 7,404 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual coordinate restriction on Hopf points: Construct the genuine contravariant homomorphism on original Hopf-algebra points from a coordinate bialgebra map. The counit and comultiplication identities prove preservation of the original identity and convolution product; the exact original coordinate evaluation is retained. One exact consumer expands registered scope to 1797 production modules, 1164 exact consumers and 7,401 explicit audit registrations. Focused production compilation and the assembled 1806-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,844 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual point closure coordinate quotient finite freeness: The actual coordinate quotient embeds by its joint evaluation into a product of faithful field algebras. Transfer torsion-freeness along this actual injection. Over a principal ideal domain, derive finite freeness from finite generation of the original coordinate algebra using the existing torsion-free module theorem. One exact consumer expands registered scope to 1796 production modules, 1163 exact consumers and 7,399 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original subgroup vanishing antipode and counit stability: Use inversion and the identity in the constructed actual point group. The original subgroup vanishing ideal is stable under the original antipode, and its counit vanishes when the original base embeds in the point-value ring. One exact consumer expands registered scope to 1795 production modules, 1162 exact consumers and 7,396 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual point vanishing ideal and quotient evaluation: Construct simultaneous evaluation of each original coordinate at the specified genuine Hopf points. Its literal kernel is the vanishing ideal. The actual quotient embeds into the product of point-value rings, and the exact original coordinate-evaluation formula is retained. One exact consumer expands registered scope to 1794 production modules, 1161 exact consumers and 7,393 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite free coordinate algebra genuine point bound: Reuse the pinned finite-algebra-hom API to derive finiteness and the rank bound for the actual field-valued points of the original finite free coordinate algebra. Cocommutativity supplies a commutative group using the previously constructed true point-group inverse. One exact consumer expands registered scope to 1793 production modules, 1160 exact consumers and 7,389 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual Hopf point coefficient automorphism action: Use genuine coefficient composition on the original algebra-valued points. Prove that it preserves the existing convolution multiplication, construct the point automorphisms for coefficient automorphisms, and assemble their actual group action with the exact coordinate-evaluation formula. One exact consumer expands registered scope to 1792 production modules, 1159 exact consumers and 7,386 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual commutative Hopf algebra actual point group: Construct the original antipode as an algebra homomorphism for a commutative Hopf coordinate algebra. Derive the inverse law for actual algebra-valued points from the Hopf antipode identity and existing convolution multiplication, then construct their group and its exact inverse-evaluation formula. One exact consumer expands registered scope to 1791 production modules, 1158 exact consumers and 7,382 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual arithmetic original determinant and ordinary unframed universality: Use the actual arithmetic trace universal ring and its derived whole class classification. Derive a nonidentity element of the genuine arithmetic inertia subgroup from its original residual invariant rank. Residual determinant compatibility and genuine residual ordinarity derive the literal sum-ideal quotient, with complete Noetherian local structure in its own maximal-adic topology. For every complete Noetherian local target, its actual coefficient fiber classifies precisely the original fixed-determinant ordinary classes, with the original matrix evaluation formula. One exact consumer expands registered scope to 1790 production modules, 1157 exact consumers and 7,378 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original determinant and ordinary quotient class equivalence: Compose the existing original quotient coefficient-fiber equivalence with the restriction of the genuine whole class bijection. The proved literal sum-ideal criterion identifies exactly the original fixed-determinant ordinary classes. Its evaluation formula retains the same original matrices and the same quotient coefficient map. One exact consumer expands registered scope to 1789 production modules, 1156 exact consumers and 7,376 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original residual determinant and ordinary quotient structure: Restrict the actual original residual reduction to the same subgroup. The genuine residual determinant compatibility and rank-one ordinary invariant module place both literal coefficient ideals in the true maximal ideal. Their sum is proper, so the actual combined quotient is local. Derive its Noetherianity, own maximal-adic topology and completeness from the original complete local ring. One exact consumer expands registered scope to 1788 production modules, 1155 exact consumers and 7,374 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original simultaneous determinant and ordinary coefficient ideal: Consume the exact original determinant and ordinary class coefficient criteria for the same universal matrices and the same coefficient map. Their conjunction is precisely annihilation of the literal sum of the original determinant and ordinary ideals. One exact consumer expands registered scope to 1787 production modules, 1154 exact consumers and 7,371 explicit audit registrations. Focused production compilation and the assembled 1796-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,764 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original arithmetic ordinary unframed universality: The original residual ordinary invariant module supplies the nontrivial inertia element. The existing actual arithmetic trace ring supplies the whole universal classification. The literal ordinary ideal yields a derived complete local quotient, and the same coefficient evaluations classify genuine original ordinary classes. No whole class bijection, quotient locality, primitive vector or chosen nontrivial element is an extra public assumption. One exact consumer expands registered scope to 1786 production modules, 1153 exact consumers and 7,369 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original ordinary quotient class equivalence: Restrict the proved whole class bijection along the literal ordinary coefficient quotient and prove that its class is evaluation of the same original universal matrices. One exact consumer expands registered scope to 1785 production modules, 1152 exact consumers and 7,367 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual ordinary class coefficient ideal criterion: Consume the same original residue-preserving coefficient evaluation; identify its genuine ordinary class condition with annihilation of the original ordinary ideal. One exact consumer expands registered scope to 1784 production modules, 1151 exact consumers and 7,365 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual residual ordinary quotient local structure: Use actual residual ordinary invariants to put the literal ordinary ideal in the maximal ideal and derive quotient locality, Noetherianity, own maximal-adic topology and completeness. One exact consumer expands registered scope to 1783 production modules, 1150 exact consumers and 7,363 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine ordinary condition on original classes: Define the actual rank-one invariant direct-summand condition on the existing original deformation quotient and derive well-definedness through genuine basis transport. One exact consumer expands registered scope to 1782 production modules, 1149 exact consumers and 7,359 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual genuine invariant direct-summand basis invariance: Use the actual invertible matrix action to identify whole invariant submodules; transport the actual rank-one linear equivalence and complementary submodule. One exact consumer expands registered scope to 1781 production modules, 1148 exact consumers and 7,357 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual ordinary ideal and genuine invariant direct summand: Combine literal ideal annihilation with the genuine invariant rank-one direct-summand criterion for the same coefficient-changed original representation. One exact consumer expands registered scope to 1780 production modules, 1147 exact consumers and 7,354 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual literal ordinary coefficient relation ideal: Define the literal ordinary matrix polynomial operator, prove its exact coefficient-change formula and identify annihilation of the span of all its entries with vanishing of all actual changed operators. One exact consumer expands registered scope to 1779 production modules, 1146 exact consumers and 7,352 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual residual ordinary nonidentity element: Derive a nonidentity original residual group element from the actual rank-one invariant module by comparing its finite dimension with the two-dimensional trivial action. One exact consumer expands registered scope to 1778 production modules, 1145 exact consumers and 7,349 explicit audit registrations. Focused production compilation and the assembled 1786-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,711 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual exact ordinary invariant-summand relation criterion: Prove both directions of the original ordinary criterion. Genuine polynomial relations construct a primitive invariant column and the entire rank-one invariant direct summand. Conversely a true rank-one invariant direct summand gives a primitive invariant vector through its original projection. Residual nonidentity then constructs a genuine invariant-line basis, and the actual determinant-complement calculation yields every original ordinary relation. One exact consumer expands registered scope to 1777 production modules, 1144 exact consumers and 7,347 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual primitive vector in a rank-one direct summand: An actual linear functional taking value one on an original two-coordinate vector forces at least one coordinate to be a unit in the local coefficient ring. Construct that functional from the genuine projection onto the original direct summand followed by its actual rank-one equivalence with the coefficient ring. The inverse image of one is the required primitive vector in the original submodule. One exact consumer expands registered scope to 1776 production modules, 1143 exact consumers and 7,345 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual reverse ordinary relation criterion: Use the actual invariant-line basis to conjugate every original matrix into a matrix fixing the first coordinate. Its original determinant equals its second diagonal entry. Therefore the genuine determinant-complement operator maps every original vector into the invariant line. All original matrices fix that image, proving every literal ordinary relation is zero. One exact consumer expands registered scope to 1775 production modules, 1142 exact consumers and 7,342 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual free rank-one ordinary invariant direct summand: Consume the original invariant-line basis constructed from the actual ordinary matrix relations. Use the genuine linear action of the inverse basis and the original two-coordinate product equivalence to identify the actual invariant submodule of the existing column representation. Derive a true coefficient-linear equivalence with the original ring and an actual complementary submodule of the same original two-dimensional module. One exact consumer expands registered scope to 1774 production modules, 1141 exact consumers and 7,340 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual rank-one direct summand from original coordinates: Restrict the actual first-coordinate linear map to the original submodule identified with the first axis. Prove it bijective using the actual inverse coordinate map, obtaining a genuine linear equivalence with the coefficient ring. Compose its inverse with the original first-coordinate map to construct a projection onto the same submodule; its kernel is an actual complementary submodule. One exact consumer expands registered scope to 1773 production modules, 1140 exact consumers and 7,338 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual invariant line from ordinary matrix relations: Use the literal original operator consisting of the chosen matrix minus its own determinant times the identity. Its residue is the same determinant-complement operator of the genuine nonidentity residual matrix, hence nonzero. The original ordinary relations construct a primitive fixed column. Extend that column to a genuine original basis and derive equality of the entire invariant module with the first coordinate line. One exact consumer expands registered scope to 1772 production modules, 1139 exact consumers and 7,336 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual primitive fixed column from original relations: A matrix nonzero in the actual residue has an original unit entry. Select its corresponding genuine column. Actual matrix-minus-identity relations fix that entire column for every original matrix, giving a primitive invariant vector over the original coefficient ring. One exact consumer expands registered scope to 1771 production modules, 1138 exact consumers and 7,334 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual whole invariant line from a primitive vector: Extend the actual primitive fixed vector to an original invertible basis. Conjugation makes every original matrix fix the first axis. Genuine residual nonidentity survives this original basis change, so the derived residual criterion proves that the entire invariant module is precisely that first coordinate line. One exact consumer expands registered scope to 1770 production modules, 1137 exact consumers and 7,332 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual fixed-vector basis transport: Use actual invertible matrix multiplication and injectivity of its original vector action to identify the fixed vectors of a matrix with those of its genuine conjugate in the changed coordinates. One exact consumer expands registered scope to 1769 production modules, 1136 exact consumers and 7,330 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual residual determinant-complement nonvanishing: Show that an invertible two-dimensional matrix equal to its determinant times the identity must itself be the identity, by computing and cancelling its unit determinant. Separately derive a genuine original unit entry from an actual matrix nonzero under the local field residue map. One exact consumer expands registered scope to 1768 production modules, 1135 exact consumers and 7,328 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual residual detection of the full invariant axis: If both original second-column differences were nonunits, their images under the genuine local field residue map would vanish, contradicting the original residual matrix being nonidentity. This derives the unit relation and then the exact full original invariant-axis equality. One exact consumer expands registered scope to 1767 production modules, 1134 exact consumers and 7,325 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual entire invariant first axis: For the original matrix family fixing the first axis, use a genuine unit in the second-column difference of one original matrix to force the second coordinate of every fixed vector to vanish. Conversely every original first-axis vector is fixed by all matrices. One exact consumer expands registered scope to 1766 production modules, 1133 exact consumers and 7,322 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual primitive two-dimensional vector basis: Use the actual unit coordinate of the original two-dimensional vector to construct an explicit invertible matrix with that vector as its first column. Its original determinant is a unit by a direct two-dimensional calculation. One exact consumer expands registered scope to 1765 production modules, 1132 exact consumers and 7,320 explicit audit registrations. Focused production compilation and the assembled 1777-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,679 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original arithmetic unframed determinant and inertia universality: Consume the constructed arithmetic trace universal ring and its one whole original arithmetic representation. Use residual determinant compatibility and original inertia-killing at the genuine arithmetic height-one prime to derive locality and complete Noetherian maximal-adic data of the literal determinant-plus-inertia coefficient quotient. For every complete Noetherian local target, apply the existing quotient coefficient equivalence and the derived whole class bijection. The resulting actual class equivalence evaluates the same universal matrices through the same quotient coefficient map. One exact consumer expands registered scope to 1764 production modules, 1131 exact consumers and 7,318 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual quotient classification of original class conditions: Compose the existing genuine local quotient coefficient-fiber equivalence with the subtype restriction of the proved whole original class bijection. The exact coefficient-ideal/class-condition bridge identifies its domain and codomain. Prove that each resulting class is evaluation of the same original universal matrices through the actual quotient coefficient map. One exact consumer expands registered scope to 1763 production modules, 1130 exact consumers and 7,316 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual residual-compatible determinant and subgroup quotient: Use the existing original determinant and subgroup-relation ideal containment theorems to place their literal sum in the genuine original maximal ideal. This derives properness and locality of the actual quotient. Transfer finite residue through the actual original residue equivalence and apply genuine original complete local quotient data to obtain Noetherianity, its own maximal-adic topology and completeness. One exact consumer expands registered scope to 1762 production modules, 1129 exact consumers and 7,314 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual original complete local quotient data: Derive compactness and Hausdorffness of the original complete Noetherian finite-residue coefficient ring in its proved original maximal-adic topology. Apply the existing actual local quotient theorems to obtain Noetherianity, maximal-adic quotient topology and maximal-ideal completeness of the genuine coefficient quotient. One exact consumer expands registered scope to 1761 production modules, 1128 exact consumers and 7,311 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual original complete local coefficient compactness: Transport the named original topology along its proved maximal-adic equality. Apply the existing complete local Hausdorff theorem and finite-residue Noetherian compactness theorem in that same topology, then preserve the original topology in the conclusions. One exact consumer expands registered scope to 1760 production modules, 1127 exact consumers and 7,309 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual original class conditions and coefficient ideals: Evaluate the same original whole representation through the genuine existing continuous residue-preserving coefficient fiber. Consume the existing determinant-ideal and matrix-relation-ideal kernel equivalences to identify the original unframed determinant and subgroup conditions. Their conjunction is exactly annihilation of the literal sum of these actual ideals. One exact consumer expands registered scope to 1759 production modules, 1126 exact consumers and 7,306 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual determinant and subgroup conditions on original classes: Descend the genuine whole determinant condition and genuine subgroup-killing condition to the existing original unframed quotient. Prove well-definedness with actual strict-conjugacy invariance and identify each condition on every original framed representative. One exact consumer expands registered scope to 1758 production modules, 1125 exact consumers and 7,302 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual actual determinant and kernel invariance under strict conjugacy: Apply the actual original strict-conjugacy identity to every whole representation matrix. The genuine group determinant map cancels the original conjugator, and conjugation preserves equality to the identity. Derive equality of all original determinants and of the entire actual representation kernels. One exact consumer expands registered scope to 1757 production modules, 1124 exact consumers and 7,299 explicit audit registrations. Focused production compilation and the assembled 1764-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,644 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
 Actual actual original arithmetic unframed universal trace ring: Consume the proved actual finite-generator presentation of the original arithmetic fixed-residual quotient. Apply whole-group trace universality to the literal original arithmetic trace ring. Obtain its complete local Noetherian data and one genuine continuous representation of the original rational arithmetic Galois group, with the exact original residue, which classifies all original unframed lifts over every complete Noetherian local target through the existing continuous residue-preserving coefficient fibers. One exact consumer expands registered scope to 1756 production modules, 1123 exact consumers and 7,296 explicit audit registrations. Focused production compilation and the assembled 1756-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 13,612 exhaustive theorem checks passed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN. Earlier milestone paragraphs retain their historical scope.
@@ -4422,3 +4818,1059 @@ Consume the constructed arithmetic trace universal ring and its one whole origin
 Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
 
 - [ArithmeticUnframedInertiaUniversality](Extension/Dubon2026/ArithmeticUnframedInertiaUniversality.lean).
+
+### Actual primitive two-dimensional vector basis — 10 October 2026
+
+Use the actual unit coordinate of the original two-dimensional vector to construct an explicit invertible matrix with that vector as its first column. Its original determinant is a unit by a direct two-dimensional calculation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixPrimitiveVectorBasis](Extension/Dubon2026/MatrixPrimitiveVectorBasis.lean).
+
+### Actual entire invariant first axis — 10 October 2026
+
+For the original matrix family fixing the first axis, use a genuine unit in the second-column difference of one original matrix to force the second coordinate of every fixed vector to vanish. Conversely every original first-axis vector is fixed by all matrices.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoInvariantAxis](Extension/Dubon2026/MatrixTwoInvariantAxis.lean).
+
+### Actual residual detection of the full invariant axis — 10 October 2026
+
+If both original second-column differences were nonunits, their images under the genuine local field residue map would vanish, contradicting the original residual matrix being nonidentity. This derives the unit relation and then the exact full original invariant-axis equality.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoResidualInvariantAxis](Extension/Dubon2026/MatrixTwoResidualInvariantAxis.lean).
+
+### Actual residual determinant-complement nonvanishing — 10 October 2026
+
+Show that an invertible two-dimensional matrix equal to its determinant times the identity must itself be the identity, by computing and cancelling its unit determinant. Separately derive a genuine original unit entry from an actual matrix nonzero under the local field residue map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoDeterminantComplement](Extension/Dubon2026/MatrixTwoDeterminantComplement.lean).
+
+### Actual fixed-vector basis transport — 10 October 2026
+
+Use actual invertible matrix multiplication and injectivity of its original vector action to identify the fixed vectors of a matrix with those of its genuine conjugate in the changed coordinates.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixConjugateFixedVectors](Extension/Dubon2026/MatrixConjugateFixedVectors.lean).
+
+### Actual whole invariant line from a primitive vector — 10 October 2026
+
+Extend the actual primitive fixed vector to an original invertible basis. Conjugation makes every original matrix fix the first axis. Genuine residual nonidentity survives this original basis change, so the derived residual criterion proves that the entire invariant module is precisely that first coordinate line.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoPrimitiveInvariantLine](Extension/Dubon2026/MatrixTwoPrimitiveInvariantLine.lean).
+
+### Actual primitive fixed column from original relations — 10 October 2026
+
+A matrix nonzero in the actual residue has an original unit entry. Select its corresponding genuine column. Actual matrix-minus-identity relations fix that entire column for every original matrix, giving a primitive invariant vector over the original coefficient ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixFixedColumnFromRelations](Extension/Dubon2026/MatrixFixedColumnFromRelations.lean).
+
+### Actual invariant line from ordinary matrix relations — 10 October 2026
+
+Use the literal original operator consisting of the chosen matrix minus its own determinant times the identity. Its residue is the same determinant-complement operator of the genuine nonidentity residual matrix, hence nonzero. The original ordinary relations construct a primitive fixed column. Extend that column to a genuine original basis and derive equality of the entire invariant module with the first coordinate line.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoOrdinaryInvariantLine](Extension/Dubon2026/MatrixTwoOrdinaryInvariantLine.lean).
+
+### Actual rank-one direct summand from original coordinates — 10 October 2026
+
+Restrict the actual first-coordinate linear map to the original submodule identified with the first axis. Prove it bijective using the actual inverse coordinate map, obtaining a genuine linear equivalence with the coefficient ring. Compose its inverse with the original first-coordinate map to construct a projection onto the same submodule; its kernel is an actual complementary submodule.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [SubmoduleCoordinateLineSplitting](Extension/Dubon2026/SubmoduleCoordinateLineSplitting.lean).
+
+### Actual free rank-one ordinary invariant direct summand — 10 October 2026
+
+Consume the original invariant-line basis constructed from the actual ordinary matrix relations. Use the genuine linear action of the inverse basis and the original two-coordinate product equivalence to identify the actual invariant submodule of the existing column representation. Derive a true coefficient-linear equivalence with the original ring and an actual complementary submodule of the same original two-dimensional module.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryInvariantDirectSummand](Extension/Dubon2026/MatrixOrdinaryInvariantDirectSummand.lean).
+
+### Actual reverse ordinary relation criterion — 10 October 2026
+
+Use the actual invariant-line basis to conjugate every original matrix into a matrix fixing the first coordinate. Its original determinant equals its second diagonal entry. Therefore the genuine determinant-complement operator maps every original vector into the invariant line. All original matrices fix that image, proving every literal ordinary relation is zero.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoOrdinaryRelationConverse](Extension/Dubon2026/MatrixTwoOrdinaryRelationConverse.lean).
+
+### Actual primitive vector in a rank-one direct summand — 10 October 2026
+
+An actual linear functional taking value one on an original two-coordinate vector forces at least one coordinate to be a unit in the local coefficient ring. Construct that functional from the genuine projection onto the original direct summand followed by its actual rank-one equivalence with the coefficient ring. The inverse image of one is the required primitive vector in the original submodule.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [SubmoduleRankOnePrimitiveVector](Extension/Dubon2026/SubmoduleRankOnePrimitiveVector.lean).
+
+### Actual exact ordinary invariant-summand relation criterion — 10 October 2026
+
+Prove both directions of the original ordinary criterion. Genuine polynomial relations construct a primitive invariant column and the entire rank-one invariant direct summand. Conversely a true rank-one invariant direct summand gives a primitive invariant vector through its original projection. Residual nonidentity then constructs a genuine invariant-line basis, and the actual determinant-complement calculation yields every original ordinary relation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryRelationCriterion](Extension/Dubon2026/MatrixOrdinaryRelationCriterion.lean).
+
+### Actual residual ordinary nonidentity element — 10 October 2026
+
+Derive a nonidentity original residual group element from the actual rank-one invariant module by comparing its finite dimension with the two-dimensional trivial action.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualOrdinaryNontrivialElement](Extension/Dubon2026/ResidualOrdinaryNontrivialElement.lean).
+
+### Actual literal ordinary coefficient relation ideal — 10 October 2026
+
+Define the literal ordinary matrix polynomial operator, prove its exact coefficient-change formula and identify annihilation of the span of all its entries with vanishing of all actual changed operators.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryRelationIdeal](Extension/Dubon2026/MatrixOrdinaryRelationIdeal.lean).
+
+### Actual ordinary ideal and genuine invariant direct summand — 10 October 2026
+
+Combine literal ideal annihilation with the genuine invariant rank-one direct-summand criterion for the same coefficient-changed original representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryIdealInvariantCriterion](Extension/Dubon2026/MatrixOrdinaryIdealInvariantCriterion.lean).
+
+### Actual genuine invariant direct-summand basis invariance — 10 October 2026
+
+Use the actual invertible matrix action to identify whole invariant submodules; transport the actual rank-one linear equivalence and complementary submodule.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixInvariantSubmoduleConjugacy](Extension/Dubon2026/MatrixInvariantSubmoduleConjugacy.lean).
+
+### Actual genuine ordinary condition on original classes — 10 October 2026
+
+Define the actual rank-one invariant direct-summand condition on the existing original deformation quotient and derive well-definedness through genuine basis transport.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedOrdinaryCondition](Extension/Dubon2026/OriginalUnframedOrdinaryCondition.lean).
+
+### Actual residual ordinary quotient local structure — 10 October 2026
+
+Use actual residual ordinary invariants to put the literal ordinary ideal in the maximal ideal and derive quotient locality, Noetherianity, own maximal-adic topology and completeness.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualOrdinaryRelationQuotient](Extension/Dubon2026/ResidualOrdinaryRelationQuotient.lean).
+
+### Actual ordinary class coefficient ideal criterion — 10 October 2026
+
+Consume the same original residue-preserving coefficient evaluation; identify its genuine ordinary class condition with annihilation of the original ordinary ideal.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedOrdinaryCoefficientIdeal](Extension/Dubon2026/OriginalUnframedOrdinaryCoefficientIdeal.lean).
+
+### Actual original ordinary quotient class equivalence — 10 October 2026
+
+Restrict the proved whole class bijection along the literal ordinary coefficient quotient and prove that its class is evaluation of the same original universal matrices.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedOrdinaryQuotientEquivalence](Extension/Dubon2026/OriginalUnframedOrdinaryQuotientEquivalence.lean).
+
+### Actual original arithmetic ordinary unframed universality — 10 October 2026
+
+The original residual ordinary invariant module supplies the nontrivial inertia element. The existing actual arithmetic trace ring supplies the whole universal classification. The literal ordinary ideal yields a derived complete local quotient, and the same coefficient evaluations classify genuine original ordinary classes. No whole class bijection, quotient locality, primitive vector or chosen nontrivial element is an extra public assumption.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnframedOrdinaryUniversality](Extension/Dubon2026/ArithmeticUnframedOrdinaryUniversality.lean).
+
+### Actual original simultaneous determinant and ordinary coefficient ideal — 10 October 2026
+
+Consume the exact original determinant and ordinary class coefficient criteria for the same universal matrices and the same coefficient map. Their conjunction is precisely annihilation of the literal sum of the original determinant and ordinary ideals.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedDeterminantOrdinaryCoefficientIdeal](Extension/Dubon2026/OriginalUnframedDeterminantOrdinaryCoefficientIdeal.lean).
+
+### Actual original residual determinant and ordinary quotient structure — 10 October 2026
+
+Restrict the actual original residual reduction to the same subgroup. The genuine residual determinant compatibility and rank-one ordinary invariant module place both literal coefficient ideals in the true maximal ideal. Their sum is proper, so the actual combined quotient is local. Derive its Noetherianity, own maximal-adic topology and completeness from the original complete local ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualDeterminantOrdinaryQuotient](Extension/Dubon2026/ResidualDeterminantOrdinaryQuotient.lean).
+
+### Actual original determinant and ordinary quotient class equivalence — 10 October 2026
+
+Compose the existing original quotient coefficient-fiber equivalence with the restriction of the genuine whole class bijection. The proved literal sum-ideal criterion identifies exactly the original fixed-determinant ordinary classes. Its evaluation formula retains the same original matrices and the same quotient coefficient map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedDeterminantOrdinaryQuotientEquivalence](Extension/Dubon2026/OriginalUnframedDeterminantOrdinaryQuotientEquivalence.lean).
+
+### Actual arithmetic original determinant and ordinary unframed universality — 10 October 2026
+
+Use the actual arithmetic trace universal ring and its derived whole class classification. Derive a nonidentity element of the genuine arithmetic inertia subgroup from its original residual invariant rank. Residual determinant compatibility and genuine residual ordinarity derive the literal sum-ideal quotient, with complete Noetherian local structure in its own maximal-adic topology. For every complete Noetherian local target, its actual coefficient fiber classifies precisely the original fixed-determinant ordinary classes, with the original matrix evaluation formula.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnframedDeterminantOrdinaryUniversality](Extension/Dubon2026/ArithmeticUnframedDeterminantOrdinaryUniversality.lean).
+
+### Actual commutative Hopf algebra actual point group — 10 October 2026
+
+Construct the original antipode as an algebra homomorphism for a commutative Hopf coordinate algebra. Derive the inverse law for actual algebra-valued points from the Hopf antipode identity and existing convolution multiplication, then construct their group and its exact inverse-evaluation formula.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CommutativeHopfPointsGroup](Extension/Dubon2026/CommutativeHopfPointsGroup.lean).
+
+### Actual Hopf point coefficient automorphism action — 10 October 2026
+
+Use genuine coefficient composition on the original algebra-valued points. Prove that it preserves the existing convolution multiplication, construct the point automorphisms for coefficient automorphisms, and assemble their actual group action with the exact coordinate-evaluation formula.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CommutativeHopfPointsCoefficientChange](Extension/Dubon2026/CommutativeHopfPointsCoefficientChange.lean).
+
+### Actual finite free coordinate algebra genuine point bound — 10 October 2026
+
+Reuse the pinned finite-algebra-hom API to derive finiteness and the rank bound for the actual field-valued points of the original finite free coordinate algebra. Cocommutativity supplies a commutative group using the previously constructed true point-group inverse.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPoints](Extension/Dubon2026/FiniteFreeHopfPoints.lean).
+
+### Actual point vanishing ideal and quotient evaluation — 10 October 2026
+
+Construct simultaneous evaluation of each original coordinate at the specified genuine Hopf points. Its literal kernel is the vanishing ideal. The actual quotient embeds into the product of point-value rings, and the exact original coordinate-evaluation formula is retained.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointsVanishingIdeal](Extension/Dubon2026/HopfPointsVanishingIdeal.lean).
+
+### Actual original subgroup vanishing antipode and counit stability — 10 October 2026
+
+Use inversion and the identity in the constructed actual point group. The original subgroup vanishing ideal is stable under the original antipode, and its counit vanishes when the original base embeds in the point-value ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSubgroupVanishingAntipode](Extension/Dubon2026/HopfSubgroupVanishingAntipode.lean).
+
+### Actual point closure coordinate quotient finite freeness — 10 October 2026
+
+The actual coordinate quotient embeds by its joint evaluation into a product of faithful field algebras. Transfer torsion-freeness along this actual injection. Over a principal ideal domain, derive finite freeness from finite generation of the original coordinate algebra using the existing torsion-free module theorem.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointsCoordinateQuotientFree](Extension/Dubon2026/HopfPointsCoordinateQuotientFree.lean).
+
+### Actual coordinate restriction on Hopf points — 10 October 2026
+
+Construct the genuine contravariant homomorphism on original Hopf-algebra points from a coordinate bialgebra map. The counit and comultiplication identities prove preservation of the original identity and convolution product; the exact original coordinate evaluation is retained.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointsRestriction](Extension/Dubon2026/HopfPointsRestriction.lean).
+
+### Actual subgroup quotient antipode and counit — 10 October 2026
+
+Descend the original antipode through the actual subgroup vanishing ideal using its proved inverse stability. Descend the original counit using the proved identity-point vanishing and faithful base embedding. Both quotient maps retain their exact original coordinate formulas.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSubgroupQuotientAntipodeCounit](Extension/Dubon2026/HopfSubgroupQuotientAntipodeCounit.lean).
+
+### Actual continuous Galois action on finite free Hopf points — 10 October 2026
+
+Construct the actual field-automorphism action on original Hopf-algebra points by restriction of scalars and coordinate composition. Use the finite original point set and a finite basis of the same coordinate algebra to identify its kernel with finitely many original field-value stabilizers. Algebraicity makes these stabilizers open in the Krull topology, proving continuity into the genuine discrete point automorphism group.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfGaloisAction](Extension/Dubon2026/FiniteFreeHopfGaloisAction.lean).
+
+### Actual genuine tensor Hopf coordinate inclusions — 10 October 2026
+
+Construct each original coordinate inclusion as a genuine bialgebra homomorphism using the actual tensor bialgebra map, original unit, and original left or right tensor identity. Prove the exact original pure-tensor formula for each inclusion.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfTensorCoordinateInclusions](Extension/Dubon2026/HopfTensorCoordinateInclusions.lean).
+
+### Actual tensor-coordinate Hopf point product equivalence — 10 October 2026
+
+Use the genuine coordinate inclusions and their proved contravariant point homomorphisms. Construct the inverse from the original algebra tensor-product universal property. Prove both inverse laws and preservation of convolution multiplication, retaining the exact product of coordinate values on pure tensors.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfTensorPointsProduct](Extension/Dubon2026/HopfTensorPointsProduct.lean).
+
+### Actual original finite-free Hopf point products and Galois compatibility — 10 October 2026
+
+Prove that actual bialgebra point restriction commutes with the original field-automorphism action. Derive equivariance of the genuine tensor-coordinate product equivalence. Reuse the original tensor module constructions to derive finite freeness of the actual tensor-coordinate algebra from finite freeness of its original factors.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointProducts](Extension/Dubon2026/FiniteFreeHopfPointProducts.lean).
+
+### Actual original bialgebra identities under coordinate surjection — 10 October 2026
+
+Derive target coassociativity and both counit identities by pulling them back along the same surjective original coordinate algebra map. Actual tensor-map identities transport the source coalgebra laws, constructing the target bialgebra with its given compatible comultiplication and counit.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [BialgebraSurjectiveDescent](Extension/Dubon2026/BialgebraSurjectiveDescent.lean).
+
+### Actual original antipode identities under coordinate surjection — 10 October 2026
+
+The original Hopf-algebra point inverse laws and genuine convolution compatibility with a surjective coordinate bialgebra map derive both target antipode identities. Construct the target Hopf structure using the same descended algebra antipode and original target bialgebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSurjectiveAntipodeDescent](Extension/Dubon2026/HopfSurjectiveAntipodeDescent.lean).
+
+### Actual Hopf coordinate quotient from explicit ideal stability — 10 October 2026
+
+Construct the actual quotient comultiplication and counit from their displayed original ideal-vanishing conditions. The genuine quotient surjection and proved descent lemmas derive all bialgebra and Hopf axioms. The original antipode descends through its explicit ideal stability; retain exact original comultiplication and antipode formulas on quotient coordinates.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoordinateQuotient](Extension/Dubon2026/HopfCoordinateQuotient.lean).
+
+### Actual original subgroup coordinate quotient with explicit comultiplication obligation — 10 October 2026
+
+Consume the actual subgroup ideal and its already proved antipode and counit stability in the constructed coordinate Hopf quotient. Keep the remaining literal quotient-tensor comultiplication vanishing explicit. Over the original PID base, derive finite free quotient coordinates and the finite actual point set with its original coordinate-rank bound.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSubgroupCoordinateQuotient](Extension/Dubon2026/HopfSubgroupCoordinateQuotient.lean).
+
+### Actual Galois conjugacy of original Artinian point kernels — 10 October 2026
+
+Pass to the original common point-kernel quotient, use its Artinian maximality to obtain a field, and extend the second actual quotient embedding inside the same normal field. The constructed field automorphism carries the first original point to the second.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArtinianAlgebraPointKernelOrbit](Extension/Dubon2026/ArtinianAlgebraPointKernelOrbit.lean).
+
+### Actual point kernel selection from a finite vanishing ideal — 10 October 2026
+
+Express the original joint vanishing ideal as the finite intersection of actual point kernels. Primality of the new point kernel selects an original kernel below it; Artinian maximality proves equality.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointVanishingKernelSelection](Extension/Dubon2026/HopfPointVanishingKernelSelection.lean).
+
+### Actual exact original Galois-stable point closure — 10 October 2026
+
+Combine actual finite kernel selection with extension of the original quotient embeddings. Genuine Galois stability then identifies the original finite point set exactly with all points annihilating its actual joint vanishing ideal.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfGaloisStablePointClosure](Extension/Dubon2026/HopfGaloisStablePointClosure.lean).
+
+### Actual genuine geometric separation of finite reduced coordinates — 10 October 2026
+
+Each prime quotient of the original finite algebra is an actual field and embeds in the algebraically closed value field. Vanishing at all genuine points puts the original coordinate in every prime ideal; reducedness makes it zero.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteReducedAlgebraPointSeparation](Extension/Dubon2026/FiniteReducedAlgebraPointSeparation.lean).
+
+### Actual tensor-coordinate separation over a perfect field — 10 October 2026
+
+Decompose the original finite reduced algebras into their actual Artinian field factors. Perfect-field separability gives formal etaleness; base change and composition prove the tensor algebra reduced. Genuine tensor points are products of the two original point restrictions, so point pairs separate its coordinates.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteReducedTensorPointSeparation](Extension/Dubon2026/FiniteReducedTensorPointSeparation.lean).
+
+### Actual original subgroup comultiplication descent over a perfect field — 10 October 2026
+
+The actual subgroup coordinate quotient injects into its original field-valued evaluations, giving reducedness. Exact Galois-stable point closure places every quotient point restriction in the original subgroup. Tensor point separation and genuine subgroup multiplication derive the literal quotient-tensor vanishing of the original comultiplication.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfFieldSubgroupComultiplication](Extension/Dubon2026/HopfFieldSubgroupComultiplication.lean).
+
+### Actual coordinate points under base change — 10 October 2026
+
+Reuse the pinned algebra tensor universal-property equivalence, prove its exact original and scalar tensor evaluations, and show that actual coefficient automorphisms fixing the extension field commute with this same scalar-extension point map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [AlgebraBaseChangePoints](Extension/Dubon2026/AlgebraBaseChangePoints.lean).
+
+### Actual genuine Hopf point equivalence under base change — 10 October 2026
+
+Prove that the actual algebra-point base-change equivalence preserves the original convolution multiplication using the genuine tensor comultiplication. Construct the resulting point-group equivalence and derive its exact Galois equivariance.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfBaseChangePoints](Extension/Dubon2026/HopfBaseChangePoints.lean).
+
+### Actual faithful original coordinates after localization — 10 October 2026
+
+Clear an actual common denominator in the tensor localization. The original injective coordinate map kills the resulting numerator only when it is zero; invertibility of the denominator proves the entire scalar-extended map injective. A reduced target therefore makes the actual localized algebra reduced.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalizedAlgebraPointInjection](Extension/Dubon2026/LocalizedAlgebraPointInjection.lean).
+
+### Actual original integral point closure through the generic fiber — 10 October 2026
+
+Transport the original Galois-stable point set through the genuine base-change group equivalence. The generic coordinate algebra is finite over its field and therefore Artinian. Actual denominator clearing transfers vanishing back to the original integral ideal; generic Galois-stable point closure then proves exact original point closure.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalizedHopfPointClosure](Extension/Dubon2026/LocalizedHopfPointClosure.lean).
+
+### Actual faithful original tensor coordinates in the generic fiber — 10 October 2026
+
+Construct the literal map from the original tensor into the tensor of its scalar-extended factors. Genuine tensor base-change associativity gives its pure-coordinate formula; flatness of the actual free original tensor proves injectivity under faithful scalar extension. Evaluation by actual generic point pairs equals evaluation by their original coordinate restrictions.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GenericFiberTensorCoordinates](Extension/Dubon2026/GenericFiberTensorCoordinates.lean).
+
+### Actual integral subgroup comultiplication descent — 10 October 2026
+
+Derive faithful scalar action through the original fraction field and finite freeness of the actual PID quotient coordinates. Its genuine evaluation injection proves the localized quotient reduced. Original point closure puts every quotient-point restriction in the subgroup; actual generic tensor separation and faithful tensor injection turn subgroup multiplication into the required original quotient-tensor comultiplication vanishing.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupComultiplication](Extension/Dubon2026/IntegralHopfSubgroupComultiplication.lean).
+
+### Actual integral subgroup Hopf quotient and original points — 10 October 2026
+
+Consume the proved integral comultiplication vanishing and original subgroup antipode and counit stability to construct the actual quotient Hopf algebra. Derive finite free coordinates and finite actual points. The proved original point closure and actual quotient lifts identify the restriction range exactly with the original subgroup.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupQuotient](Extension/Dubon2026/IntegralHopfSubgroupQuotient.lean).
+
+### Actual subgroup point group equivalence and Galois action — 10 October 2026
+
+The original quotient coordinate map is a genuine bialgebra homomorphism. Its actual point restriction lands in exactly the original subgroup; coordinate surjectivity proves injectivity and the proved exact range supplies surjectivity. Construct the multiplicative equivalence and retain exact original coordinate evaluation and Galois compatibility.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupPointEquivalence](Extension/Dubon2026/IntegralHopfSubgroupPointEquivalence.lean).
+
+### Actual genuine generic-fiber subgroup point identification — 10 October 2026
+
+Compose the genuine Hopf point base-change equivalence with the constructed original quotient point equivalence. This identifies points of the literal fraction-field tensor Hopf algebra with the original subgroup, preserving each original scalar-extended quotient coordinate and the actual field Galois action.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupGenericPoints](Extension/Dubon2026/IntegralHopfSubgroupGenericPoints.lean).
+
+### Actual PID kernel retraction — 10 October 2026
+
+The actual image of a map from a finite module into a torsion-free module over the original PID is finite free. Split its genuine range surjection and subtract its section to construct a retraction onto the literal original kernel.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [PIDKernelRetraction](Extension/Dubon2026/PIDKernelRetraction.lean).
+
+### Actual original subgroup invariant coordinates and retraction — 10 October 2026
+
+Define the original right subgroup coaction and its literal equalizer subalgebra. Identify its underlying module with the actual coaction-difference kernel. Derive finite free coordinates and an actual linear retraction over the original PID from the torsion-free tensor target.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSubgroupCoinvariants](Extension/Dubon2026/HopfSubgroupCoinvariants.lean).
+
+### Actual original tensor kernel and retraction images — 10 October 2026
+
+Use the pinned flat tensor-kernel theorem to show that a genuine kernel retraction fixes the original tensors killed by the tensored map. Two original one-factor retraction identities then exhibit an explicit preimage under the tensor of the actual inclusions.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [TensorKernelRetraction](Extension/Dubon2026/TensorKernelRetraction.lean).
+
+### Actual original coassociativity gives right tensor invariance — 10 October 2026
+
+The original coassociativity identity and actual subgroup coaction diagrams show that comultiplication of an original invariant coordinate is killed by the tensor of the literal coaction difference.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantComultiplication](Extension/Dubon2026/HopfCoinvariantComultiplication.lean).
+
+### Actual genuine invariant tensor comultiplication preimage — 10 October 2026
+
+The proved right tensor-kernel identity and actual PID retraction fix one comultiplication factor. Original cocommutativity fixes the other factor. Apply both actual retractions to produce a genuine invariant-coordinate tensor preimage and a compatible linear comultiplication.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantTensorImage](Extension/Dubon2026/HopfCoinvariantTensorImage.lean).
+
+### Actual algebra laws for actual invariant comultiplication — 10 October 2026
+
+The actual invariant-coordinate tensor inclusion is injective by finite freeness and the pinned flat tensor theorem. Reflect the original unit and product identities through it, upgrading the proved linear comultiplication to a genuine algebra map with its original coordinate diagram.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantComulAlgebra](Extension/Dubon2026/HopfCoinvariantComulAlgebra.lean).
+
+### Actual original bialgebra laws through free coordinate inclusions — 10 October 2026
+
+The actual free coordinate inclusion induces injective twofold and threefold tensor maps. Original coassociativity and both counit laws, together with the literal coordinate compatibility diagrams, derive all target coalgebra identities and construct the genuine bialgebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [BialgebraInjectiveDescent](Extension/Dubon2026/BialgebraInjectiveDescent.lean).
+
+### Actual original antipode coordinate diagrams — 10 October 2026
+
+The already constructed actual point restriction preserves inverses, so original antipodes commute with genuine coordinate bialgebra maps. Express original comultiplication as the product of the two universal tensor-coordinate points; their inverses and original cocommutativity derive the original antipode-comultiplication diagram.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfAntipodeCoordinateDiagrams](Extension/Dubon2026/HopfAntipodeCoordinateDiagrams.lean).
+
+### Actual original antipode preserves subgroup invariant coordinates — 10 October 2026
+
+Compose the proved original antipode-comultiplication and coordinate-map diagrams. Apply the original invariant-coordinate identity to derive antipode invariance, then restrict the genuine antipode algebra map to the literal original equalizer.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantAntipode](Extension/Dubon2026/HopfCoinvariantAntipode.lean).
+
+### Actual original Hopf identities through coordinate inclusions — 10 October 2026
+
+A genuine injective coordinate bialgebra map and the literal antipode compatibility diagram reflect both original convolution inverse identities. Construct the actual subcoordinate Hopf structure with these derived antipode laws.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfInjectiveAntipodeDescent](Extension/Dubon2026/HopfInjectiveAntipodeDescent.lean).
+
+### Actual genuine finite free invariant coordinate Hopf algebra — 10 October 2026
+
+Assemble the proved invariant-coordinate algebra comultiplication, original counit restriction and original antipode restriction. Derive all bialgebra and Hopf identities through the actual coordinate inclusion. The genuine original equalizer coordinates are finite free over the original PID.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantCoordinateAlgebra](Extension/Dubon2026/HopfCoinvariantCoordinateAlgebra.lean).
+
+### Actual flat base change of coordinate equalizers — 10 October 2026
+
+Apply the pinned flat linear-equalizer theorem to the actual underlying coordinate algebra maps. The scalar-extended original equalizer inclusion is injective, and its exact algebra range is the literal equalizer of the actual scalar-extended maps.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [AlgebraEqualizerBaseChange](Extension/Dubon2026/AlgebraEqualizerBaseChange.lean).
+
+### Actual genuine geometric points extend across finite subcoordinates — 10 October 2026
+
+For an actual subalgebra of a finite algebra over the original algebraically closed field, lift the kernel of its genuine point through the original integral inclusion using lying-over. Map the actual quotient field into the original algebraically closed field and compare original point kernels to obtain the required genuine extension.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteAlgebraPointRestriction](Extension/Dubon2026/FiniteAlgebraPointRestriction.lean).
+
+### Actual invariant coordinates distinguish finite group point orbits — 10 October 2026
+
+For the given finite group action on the original finite algebra, use the literal fixed subalgebra. Equal restrictions of actual points give equal contractions of their prime kernels. The pinned invariant-prime orbit theorem and original Artinian point-kernel comparison then give an element of the same acting group relating the original points.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteGroupInvariantPointOrbit](Extension/Dubon2026/FiniteGroupInvariantPointOrbit.lean).
+
+### Actual genuine original Hopf point translation action — 10 October 2026
+
+Convolve the actual universal coordinate point with the scalar-extended original point. Existing coefficient-change multiplication and original convolution associativity derive the translation composition law. Original antipode inverses yield algebra automorphisms and a genuine action; evaluation gives exactly the original convolution product point.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointTranslations](Extension/Dubon2026/HopfPointTranslations.lean).
+
+### Actual flat base change of subgroup coinvariants — 10 October 2026
+
+Construct the genuine scalar extension of the original subgroup bialgebra map. Prove the actual coaction and original unit-inclusion diagrams through tensor base-change distributivity. Transfer the pinned flat equalizer theorem through this genuine linear equivalence to identify the exact range of the scalar-extended original invariant-coordinate algebra with the literal base-changed subgroup coinvariants.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantBaseChange](Extension/Dubon2026/HopfCoinvariantBaseChange.lean).
+
+### Actual tensor separation by a finite original point family — 10 October 2026
+
+A genuine finite family of original algebra-valued points gives an injective original coordinate evaluation. Tensor this actual injection with the original flat module, then use the pinned finite product tensor equivalence. Each resulting original coordinate is the literal tensor of the same original point, so these actual partial point evaluations separate the original tensors.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [TensorPointFamilySeparation](Extension/Dubon2026/TensorPointFamilySeparation.lean).
+
+### Actual literal subgroup coinvariants and original point translations — 10 October 2026
+
+Evaluate the actual subgroup factor of the original coaction at a genuine original subgroup point. The tensor coordinate diagram identifies this with the already constructed original point translation. When the given finite point family separates the original subgroup coordinate algebra, derived flat tensor separation proves that literal coaction invariance is exactly invariance under those same original translations.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantPointTranslations](Extension/Dubon2026/HopfCoinvariantPointTranslations.lean).
+
+### Actual subgroup point action and fixed coordinate algebra — 10 October 2026
+
+Compose original point restriction with the genuine translation action to obtain the actual subgroup point action by algebra automorphisms, including original scalar compatibility. For finite reduced subgroup coordinates over the original algebraically closed field, derive their point evaluation injection from genuine geometric point separation. Apply the proved original coaction-translation identity and derived tensor separation to identify the literal coinvariant subalgebra with the actual fixed-coordinate subalgebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSubgroupFixedCoordinates](Extension/Dubon2026/HopfSubgroupFixedCoordinates.lean).
+
+### Actual invariant-coordinate point fibers and subgroup orbits — 10 October 2026
+
+Identify the literal coaction coinvariants with the actual subgroup point fixed subalgebra. Equal restrictions of original points give an actual subgroup point witness through the pinned invariant-prime orbit theorem and original point-kernel comparison. The proved translation evaluation turns that witness into the same original convolution product. Independently, every genuine invariant-coordinate point extends to the original finite coordinate algebra by actual lying-over.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantPointFibers](Extension/Dubon2026/HopfCoinvariantPointFibers.lean).
+
+### Actual quotient point group of invariant Hopf coordinates — 10 October 2026
+
+Restrict original geometric points along the genuine constructed invariant-coordinate bialgebra inclusion. The original point-extension theorem proves surjectivity. Both directions of the actual point-fiber/orbit equivalence identify its kernel exactly with the original subgroup point image. The pinned quotient-by-kernel isomorphism constructs the genuine multiplicative quotient-point equivalence and preserves evaluation of the same original representative on each actual invariant coordinate.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantFieldQuotientPoints](Extension/Dubon2026/HopfCoinvariantFieldQuotientPoints.lean).
+
+### Actual finite reduced coordinate reconstruction from geometric points — 10 October 2026
+
+For the actual finite coordinate algebra, distinct original field-valued point kernels are distinct maximal ideals. The pinned Chinese remainder theorem realizes every assignment of values at those same genuine points. Over the algebraically closed field, original reduced-algebra point separation proves injectivity, constructing the actual coordinate algebra equivalence with the full function algebra on its genuine geometric points and retaining exact original evaluation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteReducedPointEvaluation](Extension/Dubon2026/FiniteReducedPointEvaluation.lean).
+
+### Actual finite reduced Hopf coordinates reconstructed from genuine points — 10 October 2026
+
+For two actual finite reduced Hopf coordinate algebras over the algebraically closed field, the proved bijective original point evaluation reconstructs a contravariant algebra equivalence from the genuine point-group equivalence. Original multiplication and identity of points determine both coalgebra diagrams by proved original tensor-point separation, yielding a genuine bialgebra equivalence commuting with the original antipodes.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteReducedHopfPointReconstruction](Extension/Dubon2026/FiniteReducedHopfPointReconstruction.lean).
+
+### Actual actual reduced generic and geometric scalar extensions — 10 October 2026
+
+The existing finite reduced algebra formal-etaleness theorem and genuine tensor base change prove reducedness after arbitrary field extension of the perfect ground field. The literal tensor cancellation equivalence carries this to the original geometric fiber of a finite integral coordinate algebra. Flat extension of an original subalgebra inherits reducedness through the actual tensor-coordinate inclusion.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteReducedScalarExtension](Extension/Dubon2026/FiniteReducedScalarExtension.lean).
+
+### Actual reduced geometric fibers of original point-coordinate quotients — 10 October 2026
+
+The original quotient by vanishing on actual points injects into the same product of point-value fields. Clearing denominators proves its actual generic fiber reduced. Finiteness and the perfect fraction field then prove the original geometric scalar extension reduced through genuine field extension and tensor cancellation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointQuotientGeometricReduced](Extension/Dubon2026/HopfPointQuotientGeometricReduced.lean).
+
+### Actual actual bialgebra comparison through faithful coordinates — 10 October 2026
+
+A genuine algebra equivalence agreeing with two original bialgebra inclusions inherits the original counit and comultiplication laws. Flatness of the displayed free coordinate modules makes the original tensor inclusion injective, reflecting the actual comultiplication diagram and constructing a genuine bialgebra equivalence.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [BialgebraCoordinateComparison](Extension/Dubon2026/BialgebraCoordinateComparison.lean).
+
+### Actual genuine Hopf equivalence for invariant coordinate base change — 10 October 2026
+
+The proved flat equalizer range and injection construct the actual algebra equivalence between scalar-extended integral invariants and invariants of the extended coordinates. Their original ambient bialgebra inclusions derive both coalgebra diagrams; the genuine constructed Hopf base-change equivalence retains pure-coordinate evaluation and commutes with the actual antipodes.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantBaseChangeEquivalence](Extension/Dubon2026/HopfCoinvariantBaseChangeEquivalence.lean).
+
+### Actual original point restriction under genuine scalar extension — 10 October 2026
+
+The genuine original point-group scalar extension and its inverse commute with the actual subgroup point restriction map. The proof uses the same original tensor coordinates and the existing point lift equivalence, retaining the actual extended bialgebra map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointBaseChangeNaturality](Extension/Dubon2026/HopfPointBaseChangeNaturality.lean).
+
+### Actual original invariant point restrictions under flat base change — 10 October 2026
+
+Restriction of the extended original point to the genuine geometric invariant coordinates, pulled back through the proved original invariant algebra equivalence, equals the actual scalar extension of the integral restriction. This proves an exact equivalence between equality of the original integral restrictions and equality of the geometric restrictions.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoinvariantPointBaseChange](Extension/Dubon2026/HopfCoinvariantPointBaseChange.lean).
+
+### Actual original integral invariant point fibers and subgroup orbits — 10 October 2026
+
+Transport the proved geometric invariant fiber theorem through the actual flat invariant-coordinate equivalence and original point-map naturality. Equality on original integral invariants is exactly multiplication by an actual subgroup point. Every point of the original integral invariant algebra extends to a point of the same original finite coordinate algebra by genuine geometric lying-over and original tensor evaluation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfCoinvariantPointFibers](Extension/Dubon2026/IntegralHopfCoinvariantPointFibers.lean).
+
+### Actual genuine integral invariant Hopf quotient points — 10 October 2026
+
+The actual inclusion of the constructed integral invariant Hopf algebra induces a surjective original point homomorphism whose kernel is precisely the image of the original subgroup point map. The genuine first isomorphism theorem yields an exact multiplicative equivalence from the original quotient point group to the actual constructed integral Hopf point group, retaining evaluation on each original representative and invariant coordinate.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfCoinvariantQuotientPoints](Extension/Dubon2026/IntegralHopfCoinvariantQuotientPoints.lean).
+
+### Actual genuine coefficient action on original quotient points — 10 October 2026
+
+Original coefficient automorphisms commute with the actual subgroup point restriction. Its image is therefore stable with equality proved using the actual inverse coefficient automorphism. The pinned quotient congruence constructs a genuine automorphism of the original quotient point group and retains its exact action on every original representative.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfQuotientPointCoefficientAction](Extension/Dubon2026/HopfQuotientPointCoefficientAction.lean).
+
+### Actual original integral quotient point realization and Galois action — 10 October 2026
+
+The genuine integral quotient point equivalence intertwines every original coefficient automorphism with the actual coefficient action on the constructed invariant Hopf coordinate algebra. Quotient induction retains the original representative and coordinate evaluation; genuine field Galois automorphisms are obtained by restricting scalars.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfQuotientPointGalois](Extension/Dubon2026/IntegralHopfQuotientPointGalois.lean).
+
+### Actual invariant Hopf model for the original Galois-stable subgroup — 10 October 2026
+
+Apply the derived integral subgroup Hopf quotient to the original specified Galois-stable subgroup, then construct its actual invariant coordinate Hopf algebra. Finite freeness of the original subgroup coordinates and their geometric reducedness are derived. The exact original subgroup point image identifies the quotient point group with genuine points of the constructed invariant model; the original coordinate and antipode diagrams are retained.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupInvariantModel](Extension/Dubon2026/IntegralHopfSubgroupInvariantModel.lean).
+
+### Actual original coordinates from Galois-fixed tensors — 10 October 2026
+
+For the actual Galois field extension and original finite basis, the extended tensor basis identifies genuine coefficient action with Galois action on each original tensor coefficient. The pinned infinite-Galois fixed-field theorem produces original-field coefficients, and the same original basis reconstructs the unique type of original vector needed for coordinate descent. The reverse implication uses genuine scalar extension of original coordinates.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisTensorFixedCoordinates](Extension/Dubon2026/GaloisTensorFixedCoordinates.lean).
+
+### Actual semilinear Galois tensor point evaluation — 10 October 2026
+
+Construct the actual coefficient automorphism of the original geometric tensor coordinate algebra as an algebra automorphism over the original field. Its evaluation against the original extended point is computed by inverse coefficient twisting of that same point. The proved finite-basis fixed-tensor theorem identifies precisely its fixed original coordinates.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisTensorPointEvaluation](Extension/Dubon2026/GaloisTensorPointEvaluation.lean).
+
+### Actual original coordinate image of a Galois point equivalence — 10 October 2026
+
+Use genuine original point base change and the proved finite reduced geometric coordinate reconstruction to construct the actual geometric algebra equivalence. Retain its evaluation on original coordinates. Original Galois equivariance of the point-group equivalence, actual inverse twisting of points and geometric point separation force each reconstructed original coordinate image to be Galois-fixed. The proved finite-basis fixed-field descent produces an original coordinate preimage.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisHopfCoordinateImage](Extension/Dubon2026/GaloisHopfCoordinateImage.lean).
+
+### Actual actual original-field coordinate homomorphism from Galois points — 10 October 2026
+
+The proved image of each original coordinate under genuine geometric reconstruction lies in the actual original scalar-extension inclusion. Its proved injection and range equivalence construct the original-field algebra homomorphism. The exact original scalar-extension square and evaluation on every original point are retained.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisHopfOriginalCoordinateHom](Extension/Dubon2026/GaloisHopfOriginalCoordinateHom.lean).
+
+### Actual actual original-field coordinate algebra equivalence — 10 October 2026
+
+The actual inverse point-group equivalence is proved Galois-equivariant. Descend both original coordinate maps and use their exact original point evaluations and genuine reduced-coordinate point separation to prove both inverse identities. This constructs an algebra equivalence over the original field retaining the given point-group equivalence.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisHopfOriginalCoordinateEquiv](Extension/Dubon2026/GaloisHopfOriginalCoordinateEquiv.lean).
+
+### Actual genuine original Hopf coordinate equivalence from Galois points — 10 October 2026
+
+Original point identity and faithful field inclusion determine the actual original counit. Multiplication in the same original point groups, exact descended coordinate evaluation and genuine original reduced tensor-point separation derive the original comultiplication diagram. The original algebra equivalence is therefore a genuine original-field bialgebra equivalence and preserves the actual Hopf antipodes.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisHopfOriginalBialgEquiv](Extension/Dubon2026/GaloisHopfOriginalBialgEquiv.lean).
+
+### Actual actual reduced and formally etale invariant generic fiber — 10 October 2026
+
+The literal generic fiber of the original invariant coordinate subalgebra injects into the same original generic coordinate algebra by actual flat tensor inclusion. Original generic reducedness therefore implies invariant generic reducedness. The proved finite original coordinates and perfect fraction field derive formal etaleness of that same genuine generic fiber.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfInvariantGenericReduced](Extension/Dubon2026/IntegralHopfInvariantGenericReduced.lean).
+
+### Actual actual Galois quotient action for the original invariant model — 10 October 2026
+
+The genuine original Galois action descends to the quotient by the specified original subgroup, with both directions of subgroup stability proved using the original automorphism and its inverse. The actual constructed integral invariant-model point equivalence intertwines this original quotient action with the genuine coordinate coefficient action, retaining the original representative.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupInvariantGalois](Extension/Dubon2026/IntegralHopfSubgroupInvariantGalois.lean).
+
+### Actual genuine generic-fiber quotient points and original Galois action — 10 October 2026
+
+Compose the actual original subgroup quotient point equivalence with the genuine point scalar-extension equivalence to realize the original quotient as points of the literal generic fiber of the constructed invariant Hopf algebra. The original pure invariant coordinate evaluation is retained, and the proved original integral Galois comparison and exact base-change equivariance derive the genuine generic-fiber Galois comparison.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfInvariantGenericPoints](Extension/Dubon2026/IntegralHopfInvariantGenericPoints.lean).
+
+### Actual generic coordinate realization of the integral invariant model — 10 October 2026
+
+The genuine generic quotient point realization and a specified original Galois-equivariant comparison with an independently given finite reduced Hopf algebra yield a Galois-equivariant comparison of the actual generic point groups. Original-field Hopf coordinate reconstruction then constructs a bialgebra equivalence from the given coordinate algebra onto the literal generic fiber of the constructed finite free invariant model. Its original point evaluation and actual antipode compatibility are retained.
+
+Reducedness of the original ambient generic fiber and the specified original point comparison are explicit upstream hypotheses. The actual generic coordinate equivalence is constructed, not assumed. Arithmetic realization for the given Galois representation at every finite coefficient quotient and finite-flat deformation closure remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfInvariantGenericCoordinateEquiv](Extension/Dubon2026/IntegralHopfInvariantGenericCoordinateEquiv.lean).
+
+### Actual cocommutativity under faithful and surjective coordinate maps — 10 October 2026
+
+Actual flat tensor injectivity reflects cocommutativity through an injective bialgebra map. Surjectivity of an original bialgebra map transfers cocommutativity to its actual quotient. Both proofs use the genuine tensor-swap naturality and original comultiplication diagram.
+
+These are original coordinate inheritance theorems. Packaging the actual subgroup and invariant models and deriving arithmetic finite-flat deformation closure remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [BialgebraCocommutativeDescent](Extension/Dubon2026/BialgebraCocommutativeDescent.lean).
+
+### Actual cocommutative subgroup and invariant Hopf models — 10 October 2026
+
+The original surjective subgroup coordinate map proves the constructed subgroup Hopf quotient cocommutative. The actual invariant Hopf algebra has proved finite free coordinates and injects into the original cocommutative coordinates; faithful tensor reflection therefore derives its cocommutativity as well.
+
+Both constructed integral Hopf coordinate algebras now have the genuine commutative-group law property. Arithmetic realization for the given representation and closure of the finite-flat deformation condition remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralHopfSubgroupCocommutativity](Extension/Dubon2026/IntegralHopfSubgroupCocommutativity.lean).
+
+### Actual finite free Hopf point model of a specified Galois action — 10 October 2026
+
+Define a model using an actual commutative coordinate algebra, genuine cocommutative Hopf operations, finite free original coordinates and an exact multiplicative point realization intertwining the specified original Galois action. Actual finiteness of the coordinate point group derives finiteness of the represented group. Equality of the two genuine action kernels transfers the original finite-coordinate open-kernel theorem to the specified representation.
+
+This faithfully defines a model and derives finiteness and an open kernel from a given model. Existence for the required arithmetic representations, subgroup and quotient closure, and the finite-flat deformation functor remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModel](Extension/Dubon2026/FiniteFreeHopfPointModel.lean).
+
+### Actual tensor-coordinate product of original Galois models — 10 October 2026
+
+Construct the specified componentwise original Galois action on the product group. Tensor the actual original model coordinate algebras, retain their genuine Hopf operations and cocommutativity, and derive finite freeness from the original finite free coordinates. The genuine tensor-point product equivalence and its proved original Galois comparison produce a model of the original product representation. The exact consumer retains evaluation through the actual two coordinate restrictions.
+
+This supplies the actual binary product model. Original subgroup and quotient model closure, arithmetic realization at all finite coefficient quotients, and the final finite-flat deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelProduct](Extension/Dubon2026/FiniteFreeHopfPointModelProduct.lean).
+
+### Actual original Galois subgroup and quotient actions — 10 October 2026
+
+Use the specified original Galois action and stability under original elements and their inverses to construct the genuine action on the stable subgroup and its actual group quotient. Multiplication and identity are inherited from the same original action, and original representatives evaluate exactly.
+
+These are actual actions on the original subgroup and quotient. Realization by the constructed integral coordinate models and the final arithmetic condition remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [GaloisModuleSubquotientActions](Extension/Dubon2026/GaloisModuleSubquotientActions.lean).
+
+### Actual integral Hopf model of a stable original subgroup — 10 October 2026
+
+Pull the specified stable original subgroup back along the given model point equivalence. Original Galois equivariance proves stability of that actual point subgroup. The genuine integral Hopf quotient coordinate construction derives finite free cocommutative coordinates and identifies their original points with the specified subgroup. Its original Galois comparison yields a model for precisely the restricted original action.
+
+The target subgroup model is constructed from the original model. This is coordinate-model closure, not a proof that the required modular arithmetic representation has a model or a proof of the categorical scheme realization. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelSubgroup](Extension/Dubon2026/FiniteFreeHopfPointModelSubgroup.lean).
+
+### Actual invariant Hopf model of the original quotient action — 10 October 2026
+
+Pull back the original stable subgroup through the given model, then use its literal invariant coordinate algebra. The proved finite free Hopf structure and actual cocommutativity supply the integral coordinates. Compose the genuine invariant-coordinate point quotient equivalence with the original quotient group comparison. Original representative evaluation and the derived quotient Galois comparison identify its action with the specified original quotient action, constructing the target model.
+
+The quotient model is derived without assuming its existence. Original arithmetic realization at every finite coefficient quotient, categorical affine group-scheme realization and the full finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelQuotient](Extension/Dubon2026/FiniteFreeHopfPointModelQuotient.lean).
+
+### Actual representable commutative Hopf point presheaf — 10 October 2026
+
+Construct the genuine presheaf of original commutative convolution groups on the opposite category of original commutative algebras. Its maps are the original coefficient-composition maps. A literal bijection with original coordinate algebra morphisms proves representability by the same coordinate object, with exact coordinate evaluation. The pinned representable-presheaf construction then derives a genuine commutative group object on that original opposite algebra object.
+
+This derives the original algebra-category group object from actual Hopf coordinates. Transport to the actual Spec-over scheme object, exact geometric-point comparison, finite-flatness and universe adapters remain open. No arithmetic or source modular gate closes. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoordinateCommutativeGroupPresheaf](Extension/Dubon2026/HopfCoordinateCommutativeGroupPresheaf.lean).
+
+### Actual affine group scheme of original Hopf coordinates — 10 October 2026
+
+Construct the original relative spectrum functor from the genuine algebra-under equivalence and original spectrum maps. Pinned finite-limit preservation yields a braided finite-product-preserving functor. Transport the already constructed original coordinate group object to a genuine commutative group object in schemes over the original base spectrum. Its structure morphism is exactly the spectrum of the original algebra map; actual finite and flat coordinate modules prove the corresponding scheme morphism properties.
+
+The actual group scheme is constructed from original Hopf coordinates. The point-group identification, exact original Galois comparison, universe adapters and arithmetic model existence remain separate obligations. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoordinateAffineGroupScheme](Extension/Dubon2026/HopfCoordinateAffineGroupScheme.lean).
+
+### Actual affine scheme point group and original coefficient action — 10 October 2026
+
+Use the actual representable original Hopf point presheaf and its proved Yoneda group isomorphism. Full faithfulness and finite-product preservation of original relative spectrum give a genuine group equivalence from original convolution points to morphisms from the same value algebra spectrum to the actual group scheme over the original base. The equivalence is literally the original spectrum map and original coefficient composition equals pullback of the same scheme point.
+
+This identifies the actual coordinate point group with genuine affine group-scheme points and their coefficient maps. Original arithmetic realization, cross-universe adapters and the all-finite-coefficient-quotients deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfAffineSchemePointGroup](Extension/Dubon2026/HopfAffineSchemePointGroup.lean).
+
+### Actual finite-flat group scheme realizing the given original model — 10 October 2026
+
+Construct the genuine affine commutative group scheme from the actual integral coordinates of a given finite free Hopf point model. Its structure morphism is finite and flat by the same original finite free module. Compose the original model point equivalence with the actual affine-scheme point group comparison. The model Galois law and exact coefficient naturality prove that the scheme points realize precisely the specified original Galois action.
+
+The original coordinate model is an explicit input, and the target finite-flat scheme and point/Galois realization are constructed. This common-universe result does not supply arithmetic model existence or the model condition at all finite coefficient quotients; cross-universe adapters and the full finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfModelSchemeRealization](Extension/Dubon2026/FiniteFreeHopfModelSchemeRealization.lean).
+
+### Actual free Hopf coordinate transport — 10 October 2026
+
+Express the original comultiplication and antipode through the specified genuine algebra equivalence. Freeness transfers through the same linear equivalence. Original injective bialgebra and antipode descent derive the actual Hopf structure on the equivalent coordinates, with a genuine bialgebra equivalence, exact antipode evaluation and inherited cocommutativity.
+
+The coordinate Hopf structure is constructed from the original algebra equivalence. This supports universe resizing; no target arithmetic model or source modular theorem is assumed or closed. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FreeHopfCoordinateTransfer](Extension/Dubon2026/FreeHopfCoordinateTransfer.lean).
+
+### Actual point group under genuine coordinate equivalence — 10 October 2026
+
+Use actual original point restriction along the original bialgebra equivalence and its inverse to construct the genuine contravariant convolution point-group equivalence. Original coordinate inverse identities prove both inverse laws. Exact point evaluation and original coefficient composition prove coefficient-automorphism compatibility.
+
+This is the genuine original point comparison for an existing coordinate equivalence. It does not construct arithmetic models. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfCoordinateEquivPoints](Extension/Dubon2026/HopfCoordinateEquivPoints.lean).
+
+### Actual model coordinate resizing to the base universe — 10 October 2026
+
+Finiteness of the actual original coordinate module proves it is small in the base ring universe. Shrink.algEquiv gives its genuine original algebra equivalence. Transport the actual Hopf structure, cocommutativity, finite freeness and point realization through that equivalence. Coefficient naturality proves the constructed model realizes the unchanged original group and specified Galois action in smaller coordinates.
+
+The resized model is derived from the actual original model, whose existence is an explicit input. Original arithmetic realization at every finite coefficient quotient, scheme realization with independently sized point fields and the finite-flat deformation functor remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfModelCoordinateResize](Extension/Dubon2026/FiniteFreeHopfModelCoordinateResize.lean).
+
+### Equivariant transport of the original Hopf point model — 10 October 2026
+
+Retain the same original integral Hopf coordinates, finite freeness and convolution points. Compose the original model point equivalence with the specified original group equivalence. The original model action identity and equivariance of that equivalence prove the transported model realizes the given target action.
+
+An actual model of the source action is an explicit input. The target realization is constructed; arithmetic existence remains open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelEquiv](Extension/Dubon2026/FiniteFreeHopfPointModelEquiv.lean).
+
+### Hopf models inherited through original equivariant embeddings — 10 October 2026
+
+Prove stability of the actual range of the original equivariant injection. Construct its integral subgroup coordinate model from the given ambient model. The genuine injective range equivalence intertwines the original actions, so its inverse transports that constructed model to the original source group.
+
+The source model is derived from a genuine modeled ambient group. No target-equivalent existence hypothesis or arithmetic realization theorem is supplied. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelEmbedding](Extension/Dubon2026/FiniteFreeHopfPointModelEmbedding.lean).
+
+### Hopf models inherited through original equivariant surjections — 10 October 2026
+
+Prove stability of the actual kernel of the original equivariant surjection. Construct the original invariant-coordinate quotient model. The actual first-isomorphism group equivalence is equivariant on every original representative, and transports the quotient model to the specified original target action.
+
+A genuine source model is explicit; the target model is constructed using actual invariant coordinates. Arithmetic finite-flat model existence remains open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelSurjection](Extension/Dubon2026/FiniteFreeHopfPointModelSurjection.lean).
+
+### Underlying original group action of linear representations — 10 October 2026
+
+Use the actual invertible linear operators of the original representation to construct its action on the same additive group, written multiplicatively solely for the Hopf point API. Exact evaluation retains the original operator on every vector. An original intertwining linear map induces the same original equivariant group map.
+
+This is an exact additive-to-multiplicative interface for the original representation. It does not assume or prove arithmetic model existence. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [RepresentationUnderlyingGroupAction](Extension/Dubon2026/RepresentationUnderlyingGroupAction.lean).
+
+### Hopf model inheritance for original linear representation maps — 10 October 2026
+
+Transport injectivity or surjectivity of the original linear map to its actual underlying additive group map. The proved exact intertwining identity supplies original equivariance. The actual stable-range and invariant-kernel coordinate constructions therefore give models of the same source or target linear representation.
+
+These results construct group-scheme point models from a given model and an actual representation map. They do not construct an integral coefficient-ring action on the group scheme or prove arithmetic finite-flat existence at every finite coefficient quotient. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [RepresentationHopfModelMaps](Extension/Dubon2026/RepresentationHopfModelMaps.lean).
+
+### Original matrix coefficient-vector group actions — 10 October 2026
+
+Reuse the already proved original matrixStandardRepresentation. Its underlying point-group action is exactly original matrix-vector multiplication. Actual coefficient ring maps act on every original vector coordinate; injectivity and surjectivity pass to these maps. The pinned ring-hom matrix-vector identity proves exact equivariance for the same original coefficient-change representation.
+
+This retains the actual matrix, coefficient and vector objects. It does not construct arithmetic Hopf models. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixCoefficientPointActions](Extension/Dubon2026/MatrixCoefficientPointActions.lean).
+
+### Hopf models under original matrix coefficient changes — 10 October 2026
+
+Apply the actual equivariant vector-group embedding and quotient constructions to original coefficient ring injections and surjections. A model after an injective coefficient change gives a model before it; a model before an actual coefficient quotient gives a model after it. The original whole matrix representation and column actions remain explicit.
+
+Existence of the original ambient/source model is explicit. The inherited model is constructed; arithmetic initial model existence and the condition at all finite coefficient quotients remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixCoefficientHopfModels](Extension/Dubon2026/MatrixCoefficientHopfModels.lean).
+
+### Original coefficient fiber-product vector embedding — 10 October 2026
+
+Use the actual compatible-pair coefficient ring and its genuine two ring projections to embed its original vector group into the product of the two original vector groups. Equality of both original coordinates proves injectivity. Exact coefficient-change equivariance proves this is an embedding of the original Galois representation into the product of its actual projected representations.
+
+The compatible-vector constraint and original action are retained. This supplies the representation embedding; model construction is the next step. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixFiberProductPointEmbedding](Extension/Dubon2026/MatrixFiberProductPointEmbedding.lean).
+
+### Actual model of an original coefficient fiber-product representation — 10 October 2026
+
+Construct the genuine tensor-coordinate product model of the two original projected matrix representations. Apply actual model inheritance along the proved compatible-vector embedding. This constructs a subgroup-coordinate Hopf model of the original representation over the literal coefficient fiber product.
+
+Models of both actual projected representations are explicit inputs; the original fiber-product model is derived. Original strict-class gluing, all finite coefficient quotients, initial arithmetic realization and the full finite-flat deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixFiberProductHopfModel](Extension/Dubon2026/MatrixFiberProductHopfModel.lean).
+
+### Original matrix change of basis on vector groups — 10 October 2026
+
+The original invertible change of basis defines an actual multiplicative equivalence of the same original column-vector additive group. The genuine matrix conjugacy equation proves exact equivariance of the two original matrix actions.
+
+This retains the whole original representation and vector space. It supplies the equivariant comparison without asserting existence of an arithmetic model. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixConjugacyVectorEquiv](Extension/Dubon2026/MatrixConjugacyVectorEquiv.lean).
+
+### Actual Hopf models under original strict conjugacy — 10 October 2026
+
+Transport the actual finite free Hopf model along the original equivariant change of basis, retaining exactly its integral coordinate algebra. Inverting the same genuine conjugator proves both directions of model existence. Original strict conjugacy supplies the required original whole-representation equation.
+
+The given model is an explicit upstream object; existence for the genuinely conjugate representation is derived. No modular Galois association or initial arithmetic model is asserted. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixConjugacyHopfModels](Extension/Dubon2026/MatrixConjugacyHopfModels.lean).
+
+### Actual models under continuous representation gluing — 10 October 2026
+
+Consume the existing actual continuous strict-conjugacy gluing theorem. Its first projection retains the original first model, and strict-conjugacy invariance derives a model for the actual second projection. The proved tensor-coordinate product and compatible-vector subgroup construction then give a genuine model of the original glued coefficient-fiber-product representation.
+
+Initial models of the two actual representations remain explicit inputs. Realization at all finite coefficient quotients and the complete arithmetic deformation condition remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousFiberProductHopfModels](Extension/Dubon2026/ContinuousFiberProductHopfModels.lean).
+
+### Original ideal-quotient transition models — 10 October 2026
+
+The original ideal inclusion gives the genuine surjective quotient map, and its actual matrix coefficient change is proved equal to the original representation at the larger ideal. Actual quotient-model construction therefore derives a model at the coarser ideal. Point-field flatness is derived through the original fraction field using pinned localization and flatness transitivity.
+
+Initial model existence at the finer coefficient ideal remains explicit. The new model and exact original quotient representation are derived; no arithmetic flatness is asserted. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixIdealQuotientHopfModels](Extension/Dubon2026/MatrixIdealQuotientHopfModels.lean).
+
+### All-positive-level original flat model condition — 10 October 2026
+
+Define the actual model condition for every positive power of the original maximal ideal. The same original whole matrix conjugacy induces conjugacy at every level and hence preserves this complete condition. Models at a cofinal family of actual powers give every positive-level model through the proved genuine ideal-quotient transition.
+
+The predicate is a definition, not an unconditional arithmetic theorem. The cofinal-family input is strictly smaller than all-level existence; its target is derived. General local coefficient functoriality and initial arithmetic realization remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixAdicHopfFlatCondition](Extension/Dubon2026/MatrixAdicHopfFlatCondition.lean).
+
+### Original finite coefficient spanning map — 10 October 2026
+
+Use the actual finite target coefficients as the index of source-vector copies. Weighted sums in the actual target ring define a genuine surjective group map, with each original target vector lifted by its original coordinate values. Exchange the two actual finite sums to prove exact equivariance under the original matrix coefficient change.
+
+This is a genuine equivariant surjection between the original vector groups. It does not by itself construct any Hopf model. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteCoefficientVectorSpanning](Extension/Dubon2026/FiniteCoefficientVectorSpanning.lean).
+
+### Actual finite nonempty product models — 10 October 2026
+
+The original group acts on the actual indexed function group by the pinned pointwise equivalence. Starting from the given original model, binary tensor-coordinate products construct each positive finite power. The genuine finite index equivalence transports this model to the original finite nonempty indexed product, preserving every original coordinate action.
+
+The initial original model is explicit; all positive-power and finite indexed models are derived. The coefficient-ring index is nonempty in the intended application. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPointModelFinitePower](Extension/Dubon2026/FiniteFreeHopfPointModelFinitePower.lean).
+
+### Actual model after a finite coefficient extension — 10 October 2026
+
+Construct the actual product of source models indexed by all original target coefficients. The original equivariant spanning map is surjective, so the genuine quotient-model construction derives a model of the same original coefficient-changed matrix representation. Actual point-field flatness is derived through the original fraction field. No injectivity or surjectivity condition is imposed on the coefficient ring map.
+
+The original source model remains an explicit input. Application at every original maximal-adic level and initial arithmetic model realization remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteCoefficientExtensionHopfModel](Extension/Dubon2026/FiniteCoefficientExtensionHopfModel.lean).

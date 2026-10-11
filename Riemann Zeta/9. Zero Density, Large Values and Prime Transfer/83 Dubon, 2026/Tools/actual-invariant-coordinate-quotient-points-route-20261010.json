@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-10",
+  "status": "All ten modules1833-1842, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "scope": [
+    1842,
+    1209,
+    7535
+  ],
+  "modules": [
+    {
+      "scope": 1833,
+      "name": "AlgebraEqualizerBaseChange",
+      "draftSha256": "a8f8b08ebef4315771858a43c6367563b901cc7e798d27272c1b9f5b0ee2f9f1",
+      "mathematics": "Apply the pinned flat linear-equalizer theorem to the actual underlying coordinate algebra maps. The scalar-extended original equalizer inclusion is injective, and its exact algebra range is the literal equalizer of the actual scalar-extended maps.",
+      "boundary": "These are actual coordinate and point constructions. Identifying the scalar-extended subgroup coaction equalizer with the original translation invariants, then deriving the exact generic-fiber quotient point equivalence and original arithmetic finite-flat realization, remains open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "a8f8b08ebef4315771858a43c6367563b901cc7e798d27272c1b9f5b0ee2f9f1",
+      "productionLog": "equalizerBaseChange1833-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1834,
+      "name": "FiniteAlgebraPointRestriction",
+      "draftSha256": "06530af08e128735a3a1de0749358b1effa0a574edaa19149c0a21c50dc3c7b6",
+      "mathematics": "For an actual subalgebra of a finite algebra over the original algebraically closed field, lift the kernel of its genuine point through the original integral inclusion using lying-over. Map the actual quotient field into the original algebraically closed field and compare original point kernels to obtain the required genuine extension.",
+      "boundary": "These are actual coordinate and point constructions. Identifying the scalar-extended subgroup coaction equalizer with the original translation invariants, then deriving the exact generic-fiber quotient point equivalence and original arithmetic finite-flat realization, remains open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "06530af08e128735a3a1de0749358b1effa0a574edaa19149c0a21c50dc3c7b6",
+      "productionLog": "pointRestriction1834-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1835,
+      "name": "FiniteGroupInvariantPointOrbit",
+      "draftSha256": "4f32b6593d05cdf219b89c0641e077d0addfc3b7e3f4279c227b046b3322b7e9",
+      "mathematics": "For the given finite group action on the original finite algebra, use the literal fixed subalgebra. Equal restrictions of actual points give equal contractions of their prime kernels. The pinned invariant-prime orbit theorem and original Artinian point-kernel comparison then give an element of the same acting group relating the original points.",
+      "boundary": "These are actual coordinate and point constructions. Identifying the scalar-extended subgroup coaction equalizer with the original translation invariants, then deriving the exact generic-fiber quotient point equivalence and original arithmetic finite-flat realization, remains open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "4f32b6593d05cdf219b89c0641e077d0addfc3b7e3f4279c227b046b3322b7e9",
+      "productionLog": "pointOrbit1835-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1836,
+      "name": "HopfPointTranslations",
+      "draftSha256": "db919490ff58994adc4c197beb6b4ff04d56173ee0c011374a3b6ed512707ba0",
+      "mathematics": "Convolve the actual universal coordinate point with the scalar-extended original point. Existing coefficient-change multiplication and original convolution associativity derive the translation composition law. Original antipode inverses yield algebra automorphisms and a genuine action; evaluation gives exactly the original convolution product point.",
+      "boundary": "These are actual coordinate and point constructions. Identifying the scalar-extended subgroup coaction equalizer with the original translation invariants, then deriving the exact generic-fiber quotient point equivalence and original arithmetic finite-flat realization, remains open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "87eee6b37368b0e1551af7bc2cabda368f9698542b55feee80f97e3c7f4c1398",
+      "productionLog": "pointTranslations1836b-focus.log",
+      "productionFixes": [
+        "Specify the original source coordinate algebra A in the two local coefficient-change homomorphisms."
+      ],
+      "precompilationFixes": [
+        "Use pinned AlgEquiv.coe_algHom_injective, verified directly in Algebra/Algebra/Equiv.lean; toAlgHom_injective is not the pinned declaration name."
+      ]
+    },
+    {
+      "scope": 1837,
+      "name": "HopfCoinvariantBaseChange",
+      "draftSha256": "95f99663c5892395378d27995ce2f9a8010fe92f5ac2554e7a404b7d48990358",
+      "mathematics": "Construct the genuine scalar extension of the original subgroup bialgebra map. Prove the actual coaction and original unit-inclusion diagrams through tensor base-change distributivity. Transfer the pinned flat equalizer theorem through this genuine linear equivalence to identify the exact range of the scalar-extended original invariant-coordinate algebra with the literal base-changed subgroup coinvariants.",
+      "boundary": "This is the actual coordinate equalizer base-change bridge. Its identification with original point-translation invariants and the exact generic-fiber quotient point equivalence remain open; no original arithmetic finite-flat realization or source modular conclusion is supplied.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "e87abeebb88ac962f0f56401371be6c32dd5e04d2b97c1f41e77c16a0988ae2f",
+      "productionLog": "coinvariantBaseChange1837c-focus.log",
+      "productionFixes": [
+        "Use specific linear-map and linear-equivalence zero lemmas, with explicitly typed algebra-map equalities, to avoid the pinned tensor coalgebra typeclass-search issue.",
+        "Use the actual tensor scalar identity and explicitly expose algebra homomorphisms as linear maps for scalar compatibility. No statement or resource limit changed."
+      ]
+    },
+    {
+      "scope": 1838,
+      "name": "TensorPointFamilySeparation",
+      "draftSha256": "495f5736d802af4889a09e55a2b9360e1a3ddfcdc8e41838db95333c64feb939",
+      "mathematics": "A genuine finite family of original algebra-valued points gives an injective original coordinate evaluation. Tensor this actual injection with the original flat module, then use the pinned finite product tensor equivalence. Each resulting original coordinate is the literal tensor of the same original point, so these actual partial point evaluations separate the original tensors.",
+      "boundary": "The input is separation of the original coordinate algebra by the given actual point family; it does not assume tensor separation. Applying this to the original subgroup evaluation and coaction remains required, as do generic-fiber quotient point identification and original arithmetic finite-flat realization.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "495f5736d802af4889a09e55a2b9360e1a3ddfcdc8e41838db95333c64feb939",
+      "productionLog": "tensorPointSeparation1838-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1839,
+      "name": "HopfCoinvariantPointTranslations",
+      "draftSha256": "f342b9cfc67d50d9657c20a4eb392e2e89d71b44936ce750b275a5676e0c4baa",
+      "mathematics": "Evaluate the actual subgroup factor of the original coaction at a genuine original subgroup point. The tensor coordinate diagram identifies this with the already constructed original point translation. When the given finite point family separates the original subgroup coordinate algebra, derived flat tensor separation proves that literal coaction invariance is exactly invariance under those same original translations.",
+      "boundary": "The theorem consumes the genuine subgroup bialgebra map and actual finite point evaluation injection. The remaining assembly must supply that injection from the original subgroup model, construct its actual group action on base-changed coordinates and derive the exact quotient generic-fiber Galois comparison. No original arithmetic finite-flat realization or source modular conclusion is claimed.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "f342b9cfc67d50d9657c20a4eb392e2e89d71b44936ce750b275a5676e0c4baa",
+      "productionLog": "coinvariantTranslations1839-focus.log",
+      "productionFixes": [],
+      "consumerFixes": [
+        "Open WithConv in the exact consumer section so its unchanged literal source signature resolves toConv; the initial assembled build failed before audit."
+      ]
+    },
+    {
+      "scope": 1840,
+      "name": "HopfSubgroupFixedCoordinates",
+      "draftSha256": "e5102e46b9c2e673c69fedff65d88ebf9c45ae24e29d92af68d0f090111f48c9",
+      "mathematics": "Compose original point restriction with the genuine translation action to obtain the actual subgroup point action by algebra automorphisms, including original scalar compatibility. For finite reduced subgroup coordinates over the original algebraically closed field, derive their point evaluation injection from genuine geometric point separation. Apply the proved original coaction-translation identity and derived tensor separation to identify the literal coinvariant subalgebra with the actual fixed-coordinate subalgebra.",
+      "boundary": "Reducedness is required only for the actual subgroup coordinates, not the entire original coordinate algebra. The exact quotient point and Galois comparison, original integral subgroup model specialization, and arithmetic finite-flat realization still require assembled proofs. No source modular gate closes.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "fa2fc95c92ff9abe78d21ed5b7c6534dda45f0b3fbefcc754fcaf1a35c633508",
+      "productionLog": "subgroupFixed1840e-focus.log",
+      "productionFixes": [
+        "Use the actual algebra equivalence linear-equivalence scalar compatibility theorem.",
+        "Specify the finite point-family index and lambda type explicitly, avoiding expansive inference through convolution coordinate maps; expose fixed-coordinate membership and use the proved action evaluation lemma. No theorem or resource limit changed.",
+        "Declare the scalar-commutation proposition as a theorem, as required by the defLemma linter, and include it explicitly in the audit. No linter exemption or diagnostic suppression is used."
+      ]
+    },
+    {
+      "scope": 1841,
+      "name": "HopfCoinvariantPointFibers",
+      "draftSha256": "c32d59a3ec49a6a6acc09df749086c83a1203a5e91aa0ad04caede36522bbad6",
+      "mathematics": "Identify the literal coaction coinvariants with the actual subgroup point fixed subalgebra. Equal restrictions of original points give an actual subgroup point witness through the pinned invariant-prime orbit theorem and original point-kernel comparison. The proved translation evaluation turns that witness into the same original convolution product. Independently, every genuine invariant-coordinate point extends to the original finite coordinate algebra by actual lying-over.",
+      "boundary": "This gives genuine subgroup witnesses for the original point fibers and actual surjectivity over the algebraically closed field. Constructed Hopf quotient point equivalence, original integral base-change and Galois compatibility, and arithmetic finite-flat realization remain to be assembled. No source modular gate closes.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "c32d59a3ec49a6a6acc09df749086c83a1203a5e91aa0ad04caede36522bbad6",
+      "productionLog": "coinvariantFibers1841-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "State and prove both directions of the exact original point-fiber/orbit equivalence. The reverse direction uses literal coaction invariance and the original point translation evaluation. No extra hypotheses or public theorem count change."
+      ]
+    },
+    {
+      "scope": 1842,
+      "name": "HopfCoinvariantFieldQuotientPoints",
+      "draftSha256": "9fc95d524183b4ec9494d36f5cef3af50f2ddf41c57edc2d69e73e323431aa60",
+      "mathematics": "Restrict original geometric points along the genuine constructed invariant-coordinate bialgebra inclusion. The original point-extension theorem proves surjectivity. Both directions of the actual point-fiber/orbit equivalence identify its kernel exactly with the original subgroup point image. The pinned quotient-by-kernel isomorphism constructs the genuine multiplicative quotient-point equivalence and preserves evaluation of the same original representative on each actual invariant coordinate.",
+      "boundary": "This constructs the point quotient of the actual invariant-coordinate Hopf algebra over an algebraically closed field with finite reduced subgroup coordinates. The original integral base-change comparison, original Galois equivariance, and arithmetic finite-flat realization remain open. No source modular gate closes.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "b996f06af48944ed7c7ed554c4218e2e4a79decf3d4ee28d1c50c531102eaf4a",
+      "productionLog": "fieldQuotientPoints1842b-focus.log",
+      "productionFixes": [
+        "Omit the unused reducedness hypothesis from point restriction surjectivity; it remains on the orbit/kernel theorem where it is mathematically required."
+      ]
+    }
+  ],
+  "semanticBoundary": "The intended scope is the actual flat base-change equalizer, original Hopf point translations, literal subgroup fixed-coordinate identification and genuine point quotient of the constructed invariant-coordinate Hopf algebra over an algebraically closed field with finite reduced subgroup coordinates. The original integral generic-fiber comparison, original Galois equivariance and arithmetic finite-flat realization remain unproved. No source modular gate closes.",
+  "scopeLimit": "The intended scope is the actual flat base-change equalizer, original Hopf point translations, literal subgroup fixed-coordinate identification and genuine point quotient of the constructed invariant-coordinate Hopf algebra over an algebraically closed field with finite reduced subgroup coordinates. The original integral generic-fiber comparison, original Galois equivariance and arithmetic finite-flat realization remain unproved. No source modular gate closes.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/03BE",
+    "https://stacks.math.columbia.edu/tag/07S5",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "apiReview": "generic-quotient-point-api-review-20261010.json",
+  "next": "Assemble the original integral generic-fiber quotient point comparison, its original Galois equivariance and actual arithmetic finite-flat realization.",
+  "failedAssembledLogs": [
+    "assembled1842-focus.log",
+    "assembled1842b-focus.log (dependency audit PASS; defLemma linter FAIL)"
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_134129.log",
+    "paper": "logs/dubon-build-20261010-134537-413.log",
+    "scope": [
+      1842,
+      1209,
+      7535
+    ]
+  }
+}

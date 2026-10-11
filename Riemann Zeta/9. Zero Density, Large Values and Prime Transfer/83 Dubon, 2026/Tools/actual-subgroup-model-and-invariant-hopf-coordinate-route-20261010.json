@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-10",
+  "status": "All fourteen modules1819-1832, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "scope": [
+    1832,
+    1199,
+    7504
+  ],
+  "modules": [
+    {
+      "scope": 1819,
+      "name": "IntegralHopfSubgroupQuotient",
+      "draftSha256": "5922f06a3c1e483948a6de76a2256c3aecb6a2582b75fd3c2b7bd646a75652de",
+      "mathematics": "Consume the proved integral comultiplication vanishing and original subgroup antipode and counit stability to construct the actual quotient Hopf algebra. Derive finite free coordinates and finite actual points. The proved original point closure and actual quotient lifts identify the restriction range exactly with the original subgroup.",
+      "boundary": "This is the actual subgroup coordinate Hopf model over a PID with perfect fraction field. Multiplicative generic-fiber comparison, finite-flat quotient closure and arithmetic realization remain separate.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "221956ded968fdd01c657478371cec5af56157623f380c3988a06bf90191c9bb",
+      "productionLog": "subgroupQuotient1819c-focus.log",
+      "productionFixes": [
+        "Use pointwise set-membership equivalence rather than rewriting a set occurring in quotient-point types.",
+        "Omit four genuinely unused section assumptions in the exact point-range theorem; quotient construction hypotheses unchanged."
+      ]
+    },
+    {
+      "scope": 1820,
+      "name": "IntegralHopfSubgroupPointEquivalence",
+      "draftSha256": "a86ed1ef1c9c36f2f923f2ba3a570a3fd00098d31dafcae83c64c779bbbeb33a",
+      "mathematics": "The original quotient coordinate map is a genuine bialgebra homomorphism. Its actual point restriction lands in exactly the original subgroup; coordinate surjectivity proves injectivity and the proved exact range supplies surjectivity. Construct the multiplicative equivalence and retain exact original coordinate evaluation and Galois compatibility.",
+      "boundary": "This identifies the actual integral quotient points with the original subgroup as a group and intertwines the original coefficient Galois action. Explicit generic-fiber base change and arithmetic finite-flat realization remain separate.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "579f667498842169f5423e3372c137b54317466d77e3daa6c692b4b674b90b02",
+      "productionLog": "subgroupPoints1820b-focus.log",
+      "productionFixes": [
+        "Use exact pointwise set-membership equivalences for the restriction codomain and its surjectivity, avoiding dependent substitution across point types."
+      ]
+    },
+    {
+      "scope": 1821,
+      "name": "IntegralHopfSubgroupGenericPoints",
+      "draftSha256": "5e2d3e8120ac7df037333f03e4d77074c00583dcba8eab3a99dd0170c910d190",
+      "mathematics": "Compose the genuine Hopf point base-change equivalence with the constructed original quotient point equivalence. This identifies points of the literal fraction-field tensor Hopf algebra with the original subgroup, preserving each original scalar-extended quotient coordinate and the actual field Galois action.",
+      "boundary": "The constructed subgroup model has its actual generic-fiber point group and Galois comparison. Closure under finite-flat quotients, realization of the original arithmetic representations, and the finite-flat deformation functor still require proofs.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "0e44dc26506d02b09f8dc32700246be9fb1989b0d23d9ade4dcdafd32d902e98",
+      "productionLog": "subgroupGeneric1821b-focus.log",
+      "productionFixes": [
+        "Reduce the outer genuine quotient-type let before introducing the generic point; exact statement unchanged."
+      ]
+    },
+    {
+      "scope": 1822,
+      "name": "PIDKernelRetraction",
+      "draftSha256": "6df1849f4aa7ad47339bc2729111649a99a8da5c63204b3821b4174b77de5314",
+      "mathematics": "The actual image of a map from a finite module into a torsion-free module over the original PID is finite free. Split its genuine range surjection and subtract its section to construct a retraction onto the literal original kernel.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "6df1849f4aa7ad47339bc2729111649a99a8da5c63204b3821b4174b77de5314",
+      "productionLog": "kernelRetraction1822-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1823,
+      "name": "HopfSubgroupCoinvariants",
+      "draftSha256": "d3de8566a10275e4fa676b48e3ab99297512a8288659fa3049353b8ff5f3cbe5",
+      "mathematics": "Define the original right subgroup coaction and its literal equalizer subalgebra. Identify its underlying module with the actual coaction-difference kernel. Derive finite free coordinates and an actual linear retraction over the original PID from the torsion-free tensor target.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "c686daba0c143d5a0fee6e9bcaad8c4e6d1c66960378effe868ac6cf6ada72a2",
+      "productionLog": "coinvariants1823b-focus.log",
+      "productionFixes": [
+        "Infer finite/free structures on the literal underlying submodule.",
+        "Use the pinned underlying-value theorem for LinearEquiv.ofEq in the original retraction identity."
+      ]
+    },
+    {
+      "scope": 1824,
+      "name": "TensorKernelRetraction",
+      "draftSha256": "66df6ba1173cc0e281f8b5073550fa8d43c8687a09937d30ebe4c9484f9be3cc",
+      "mathematics": "Use the pinned flat tensor-kernel theorem to show that a genuine kernel retraction fixes the original tensors killed by the tensored map. Two original one-factor retraction identities then exhibit an explicit preimage under the tensor of the actual inclusions.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "7b7d1cda808d4b3f7fce81395b6c95c84689fab091362cfa9c52e09c857d6a2c",
+      "productionLog": "tensorRetraction1824b-focus.log",
+      "productionFixes": [
+        "Use pinned TensorProduct.ext prime for equality on pure tensors; unprimed ext expects equality of bilinear maps."
+      ],
+      "precompilationFixes": [
+        "Qualify TensorProduct.AlgebraTensorModule.lTensor according to the pinned namespace, following compiled1817."
+      ]
+    },
+    {
+      "scope": 1825,
+      "name": "HopfCoinvariantComultiplication",
+      "draftSha256": "eaa4ec9dc54e5c43ebdce7510e88329d07c32697530f59f05c758475ff3698e2",
+      "mathematics": "The original coassociativity identity and actual subgroup coaction diagrams show that comultiplication of an original invariant coordinate is killed by the tensor of the literal coaction difference.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "eaa4ec9dc54e5c43ebdce7510e88329d07c32697530f59f05c758475ff3698e2",
+      "productionLog": "coinvariantComul1825-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1826,
+      "name": "HopfCoinvariantTensorImage",
+      "draftSha256": "92583041edb8684d09f06e85f670ed0bf66a0b87450d1c36ceaa53c51ccf11f7",
+      "mathematics": "The proved right tensor-kernel identity and actual PID retraction fix one comultiplication factor. Original cocommutativity fixes the other factor. Apply both actual retractions to produce a genuine invariant-coordinate tensor preimage and a compatible linear comultiplication.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "18b195ace915f3c00e1dade21f29a11853ab92034840a02e537bb77bbf2b0826",
+      "productionLog": "coinvariantTensor1826b-focus.log",
+      "productionFixes": [
+        "Omit four unused assumptions from the tensor-image theorem with an explicit retraction; the theorem constructing that retraction still consumes the original PID and freeness hypotheses."
+      ]
+    },
+    {
+      "scope": 1827,
+      "name": "HopfCoinvariantComulAlgebra",
+      "draftSha256": "bd2e316c3c9d77bb5a1dc71d1403d8fbab7f8e8e8761252b7cd1cdb026dcb4aa",
+      "mathematics": "The actual invariant-coordinate tensor inclusion is injective by finite freeness and the pinned flat tensor theorem. Reflect the original unit and product identities through it, upgrading the proved linear comultiplication to a genuine algebra map with its original coordinate diagram.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "bd2e316c3c9d77bb5a1dc71d1403d8fbab7f8e8e8761252b7cd1cdb026dcb4aa",
+      "productionLog": "coinvariantAlg1827-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1828,
+      "name": "BialgebraInjectiveDescent",
+      "draftSha256": "73a2e7ec24a8b7fc2cdb1d095079859dd88411957471eb59653c11977efefe5b",
+      "mathematics": "The actual free coordinate inclusion induces injective twofold and threefold tensor maps. Original coassociativity and both counit laws, together with the literal coordinate compatibility diagrams, derive all target coalgebra identities and construct the genuine bialgebra.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "100fa6297171135a8a7cfcac03ca2216e72ab1509f0937355b6410ce6701e245",
+      "productionLog": "bialgebraDescent1828c-focus.log",
+      "productionFixes": [
+        "Apply congrArg to the exact original comultiplication diagram instead of rewriting an opaque composed AlgHom evaluation.",
+        "Omit the separately unused source/target freeness assumption in each counit theorem; coassociativity and combined construction retain their hypotheses."
+      ]
+    },
+    {
+      "scope": 1829,
+      "name": "HopfAntipodeCoordinateDiagrams",
+      "draftSha256": "f9d1d77a6ae9777e15b09a9e98dfa58749d1b5a5807173dd07da5f8f05cf9584",
+      "mathematics": "The already constructed actual point restriction preserves inverses, so original antipodes commute with genuine coordinate bialgebra maps. Express original comultiplication as the product of the two universal tensor-coordinate points; their inverses and original cocommutativity derive the original antipode-comultiplication diagram.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "387ae69060a3ede90fdb22db549a070a304e35e4d22eb570f0a27bc0ad7e6ed9",
+      "productionLog": "antipodeDiagrams1829b-focus.log",
+      "productionFixes": [
+        "Specify the genuine original tensor codomain on both universal coordinate inclusions so convolution multiplication elaborates before evaluation."
+      ]
+    },
+    {
+      "scope": 1830,
+      "name": "HopfCoinvariantAntipode",
+      "draftSha256": "eeaf6c5af2ca1984b98b071404f8a53fb9f3027e21a2c7fe6a29624e17333a3d",
+      "mathematics": "Compose the proved original antipode-comultiplication and coordinate-map diagrams. Apply the original invariant-coordinate identity to derive antipode invariance, then restrict the genuine antipode algebra map to the literal original equalizer.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "eeaf6c5af2ca1984b98b071404f8a53fb9f3027e21a2c7fe6a29624e17333a3d",
+      "productionLog": "coinvariantAntipode1830-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1831,
+      "name": "HopfInjectiveAntipodeDescent",
+      "draftSha256": "483d88f9271b05c360933a06943dedbd5a7c4457c1d4f9ba67a9969bd971e094",
+      "mathematics": "A genuine injective coordinate bialgebra map and the literal antipode compatibility diagram reflect both original convolution inverse identities. Construct the actual subcoordinate Hopf structure with these derived antipode laws.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "3518a6f5bbcc5efb381acba6db58904a5a359174a5e9365ce3c193419947d018",
+      "productionLog": "antipodeDescent1831b-focus.log",
+      "productionFixes": [
+        "Specify the original algebra A on the antipode to determine convolution point multiplication before function coercion."
+      ]
+    },
+    {
+      "scope": 1832,
+      "name": "HopfCoinvariantCoordinateAlgebra",
+      "draftSha256": "b46bfe7754564c0d26b3c8a5bae49e643e48c841fa2950b62cf8b0ee2dbfc202",
+      "mathematics": "Assemble the proved invariant-coordinate algebra comultiplication, original counit restriction and original antipode restriction. Derive all bialgebra and Hopf identities through the actual coordinate inclusion. The genuine original equalizer coordinates are finite free over the original PID.",
+      "boundary": "This supplies supporting original-coordinate algebra. Exact generic-fiber quotient point identification, original arithmetic finite-flat realization and the source modular conclusions remain open.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "b46bfe7754564c0d26b3c8a5bae49e643e48c841fa2950b62cf8b0ee2dbfc202",
+      "productionLog": "coinvariantHopf1832-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Strengthen the exact assembly consumer with original comultiplication and antipode coordinate diagrams for the actual constructed Hopf operations. A let-bound Hopf structure followed only by Module.Finite/Free would not establish actual structure consumption. No hypotheses added; two public theorem count unchanged."
+      ]
+    }
+  ],
+  "semanticBoundary": "The intended scope assembles the original integral subgroup Hopf model and its exact generic-fiber Galois-equivariant points, then constructs a finite free Hopf algebra on the literal subgroup-invariant coordinates of an original finite free cocommutative Hopf algebra over a PID. The latter still requires exact generic-fiber quotient point identification. No full finite-flat group-scheme quotient theorem, original arithmetic finite-flat realization, deformation functor, modular Galois association or source modular gate is claimed.",
+  "scopeLimit": "The intended scope assembles the original integral subgroup Hopf model and its exact generic-fiber Galois-equivariant points, then constructs a finite free Hopf algebra on the literal subgroup-invariant coordinates of an original finite free cocommutative Hopf algebra over a PID. The latter still requires exact generic-fiber quotient point identification. No full finite-flat group-scheme quotient theorem, original arithmetic finite-flat realization, deformation functor, modular Galois association or source modular gate is claimed.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf",
+    "https://stacks.math.columbia.edu/tag/03BE",
+    "https://stacks.math.columbia.edu/tag/07S5"
+  ],
+  "apiReview": [
+    "finite-flat-subgroup-assembly-drafts-20261010.json",
+    "finite-flat-quotient-invariant-drafts-20261010.json"
+  ],
+  "next": "Prove the actual invariant-coordinate generic-fiber quotient point comparison and original arithmetic finite-flat realization.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_124235.log",
+    "paper": "logs/dubon-build-20261010-124544-855.log",
+    "scope": [
+      1832,
+      1199,
+      7504
+    ]
+  }
+}

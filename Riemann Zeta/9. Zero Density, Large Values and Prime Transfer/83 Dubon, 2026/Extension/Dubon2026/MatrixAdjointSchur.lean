@@ -10,7 +10,9 @@ namespace Dubon2026
 noncomputable section
 open Matrix
 
-variable {G ι K : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field K]
+section StandardAction
+
+variable {G ι K : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing K]
 
 /-- The same original general-linear representation acts on its original column vectors. -/
 def matrixStandardRepresentation (ρ : G →* GeneralLinearGroup ι K) :
@@ -24,6 +26,10 @@ def matrixStandardRepresentation (ρ : G →* GeneralLinearGroup ι K) :
     change Matrix.toLin' (ρ (g * h)).val = Matrix.toLin' (ρ g).val * Matrix.toLin' (ρ h).val
     rw [map_mul, Units.val_mul, Matrix.toLin'_mul]
     rfl
+
+end StandardAction
+
+variable {G ι K : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field K]
 
 /-- Invariance under the original adjoint action implies commutation with every original representation matrix. -/
 theorem matrixAdjointInvariant_commute (ρ : G →* GeneralLinearGroup ι K)

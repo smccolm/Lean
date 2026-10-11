@@ -4581,4 +4581,3126 @@ theorem actual_arithmetic_unframed_inertia_universality_arithmeticUnframedInerti
 
 end
 
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `matrixTwo_exists_basis_column_of_unit`. -/
+theorem actual_matrix_primitive_vector_basis_matrixTwo_exists_basis_column_of_unit_source (v : Fin 2 → R)
+    (hv : ∃ i, IsUnit (v i)) :
+    ∃ U : GeneralLinearGroup (Fin 2) R, ∀ i, U i 0 = v i :=
+  matrixTwo_exists_basis_column_of_unit v hv
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `matrixTwo_fixed_iff_second_zero`. -/
+theorem actual_matrix_two_invariant_axis_matrixTwo_fixed_iff_second_zero_source
+    (A : G → Matrix (Fin 2) (Fin 2) R)
+    (hfirst : ∀ g, A g 0 0 = 1 ∧ A g 1 0 = 0)
+    (g₀ : G) (hunit : IsUnit (A g₀ 0 1) ∨ IsUnit (A g₀ 1 1 - 1))
+    (v : Fin 2 → R) :
+    (∀ g, A g *ᵥ v = v) ↔ v 1 = 0 :=
+  matrixTwo_fixed_iff_second_zero A hfirst g₀ hunit v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixTwo_fixed_iff_second_zero_of_residue`. -/
+theorem actual_matrix_two_residual_invariant_axis_matrixTwo_fixed_iff_second_zero_of_residue_source (r : R →+* K) [IsLocalHom r]
+    (A : G → GeneralLinearGroup (Fin 2) R)
+    (hfirst : ∀ g, A g 0 0 = 1 ∧ A g 1 0 = 0)
+    (g₀ : G) (hA : GeneralLinearGroup.map r (A g₀) ≠ 1) (v : Fin 2 → R) :
+    (∀ g, (A g).val *ᵥ v = v) ↔ v 1 = 0 :=
+  matrixTwo_fixed_iff_second_zero_of_residue r A hfirst g₀ hA v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K ι : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrix_exists_unit_entry_of_residue`. -/
+theorem actual_matrix_two_determinant_complement_matrix_exists_unit_entry_of_residue_source (r : R →+* K) [IsLocalHom r]
+    (A : Matrix ι ι R) (hA : A.map r ≠ 0) : ∃ i j, IsUnit (A i j) :=
+  matrix_exists_unit_entry_of_residue r A hA
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrix_conjugate_fixed_iff`. -/
+theorem actual_matrix_conjugate_fixed_vectors_matrix_conjugate_fixed_iff_source (A U : GeneralLinearGroup ι R) (v : ι → R) :
+    (U⁻¹ * A * U).val *ᵥ (U⁻¹.val *ᵥ v) = U⁻¹.val *ᵥ v ↔ A.val *ᵥ v = v :=
+  matrix_conjugate_fixed_iff A U v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixTwo_invariant_line_of_primitive_vector`. -/
+theorem actual_matrix_two_primitive_invariant_line_matrixTwo_invariant_line_of_primitive_vector_source (r : R →+* K) [IsLocalHom r]
+    (A : G → GeneralLinearGroup (Fin 2) R)
+    (g₀ : G) (hA : GeneralLinearGroup.map r (A g₀) ≠ 1)
+    (v : Fin 2 → R) (hv : ∃ i, IsUnit (v i)) (hfix : ∀ g, (A g).val *ᵥ v = v) :
+    ∃ U : GeneralLinearGroup (Fin 2) R, ∀ w : Fin 2 → R,
+      (∀ g, (A g).val *ᵥ w = w) ↔ (U⁻¹.val *ᵥ w) 1 = 0 :=
+  matrixTwo_invariant_line_of_primitive_vector r A g₀ hA v hv hfix
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R K : Type*} [Fintype ι] [DecidableEq ι] [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrix_exists_primitive_fixed_column`. -/
+theorem actual_matrix_fixed_column_from_relations_matrix_exists_primitive_fixed_column_source (r : R →+* K) [IsLocalHom r]
+    (A : G → Matrix ι ι R) (B : Matrix ι ι R) (hB : B.map r ≠ 0)
+    (hrel : ∀ g, (A g - 1) * B = 0) :
+    ∃ v : ι → R, (∃ i, IsUnit (v i)) ∧ ∀ g, A g *ᵥ v = v :=
+  matrix_exists_primitive_fixed_column r A B hB hrel
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixTwo_invariant_line_of_ordinary_relations`. -/
+theorem actual_matrix_two_ordinary_invariant_line_matrixTwo_invariant_line_of_ordinary_relations_source (r : R →+* K) [IsLocalHom r]
+    (A : G → GeneralLinearGroup (Fin 2) R)
+    (g₀ : G) (hA : GeneralLinearGroup.map r (A g₀) ≠ 1)
+    (hrel : ∀ g, ((A g).val - 1) *
+      ((A g₀).val - (GeneralLinearGroup.det (A g₀) : R) • (1 : Matrix (Fin 2) (Fin 2) R)) = 0) :
+    ∃ U : GeneralLinearGroup (Fin 2) R, ∀ w : Fin 2 → R,
+      (∀ g, (A g).val *ᵥ w = w) ↔ (U⁻¹.val *ᵥ w) 1 = 0 :=
+  matrixTwo_invariant_line_of_ordinary_relations r A g₀ hA hrel
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
+
+/-- Exact original-object consumer of `submodule_rankOne_split_of_coordinates`. -/
+theorem actual_submodule_coordinate_line_splitting_submodule_rankOne_split_of_coordinates_source (S : Submodule R V)
+    (e : V ≃ₗ[R] R × R) (hS : ∀ v, v ∈ S ↔ (e v).2 = 0) :
+    Nonempty (S ≃ₗ[R] R) ∧ ∃ N : Submodule R V, IsCompl S N :=
+  submodule_rankOne_split_of_coordinates S e hS
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [Group G] [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixOrdinary_invariants_rankOne_directSummand`. -/
+theorem actual_matrix_ordinary_invariant_direct_summand_matrixOrdinary_invariants_rankOne_directSummand_source (r : R →+* K) [IsLocalHom r]
+    (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (g₀ : G) (hρ : GeneralLinearGroup.map r (ρ g₀) ≠ 1)
+    (hrel : ∀ g, ((ρ g).val - 1) *
+      ((ρ g₀).val - (GeneralLinearGroup.det (ρ g₀) : R) • (1 : Matrix (Fin 2) (Fin 2) R)) = 0) :
+    Nonempty ((matrixStandardRepresentation ρ).invariants ≃ₗ[R] R) ∧
+      ∃ N : Submodule R (Fin 2 → R), IsCompl (matrixStandardRepresentation ρ).invariants N :=
+  matrixOrdinary_invariants_rankOne_directSummand r ρ g₀ hρ hrel
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `matrixTwo_ordinary_relations_of_invariant_line`. -/
+theorem actual_matrix_two_ordinary_relation_converse_matrixTwo_ordinary_relations_of_invariant_line_source
+    (A : G → GeneralLinearGroup (Fin 2) R) (U : GeneralLinearGroup (Fin 2) R)
+    (hU : ∀ w : Fin 2 → R,
+      (∀ g, (A g).val *ᵥ w = w) ↔ (U⁻¹.val *ᵥ w) 1 = 0) (g₀ g : G) :
+    ((A g).val - 1) *
+      ((A g₀).val - (GeneralLinearGroup.det (A g₀) : R) •
+        (1 : Matrix (Fin 2) (Fin 2) R)) = 0 :=
+  matrixTwo_ordinary_relations_of_invariant_line A U hU g₀ g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R] [IsLocalRing R]
+
+/-- Exact original-object consumer of `submodule_rankOne_exists_primitive_vector`. -/
+theorem actual_submodule_rank_one_primitive_vector_submodule_rankOne_exists_primitive_vector_source
+    (S N : Submodule R (Fin 2 → R)) (hSN : IsCompl S N) (e : S ≃ₗ[R] R) :
+    ∃ v : Fin 2 → R, v ∈ S ∧ ∃ i, IsUnit (v i) :=
+  submodule_rankOne_exists_primitive_vector S N hSN e
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [Group G] [CommRing R] [IsLocalRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixOrdinary_relations_iff_invariants_split`. -/
+theorem actual_matrix_ordinary_relation_criterion_matrixOrdinary_relations_iff_invariants_split_source (r : R →+* K) [IsLocalHom r]
+    (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (g₀ : G) (hρ : GeneralLinearGroup.map r (ρ g₀) ≠ 1) :
+    (∀ g, ((ρ g).val - 1) *
+      ((ρ g₀).val - (GeneralLinearGroup.det (ρ g₀) : R) •
+        (1 : Matrix (Fin 2) (Fin 2) R)) = 0) ↔
+      (Nonempty ((matrixStandardRepresentation ρ).invariants ≃ₗ[R] R) ∧
+        ∃ N : Submodule R (Fin 2 → R), IsCompl (matrixStandardRepresentation ρ).invariants N) :=
+  matrixOrdinary_relations_iff_invariants_split r ρ g₀ hρ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G K : Type*} [Group G] [Field K]
+
+/-- Exact original-object consumer of `residualOrdinary_exists_nonidentity`. -/
+theorem actual_residual_ordinary_nontrivial_element_residualOrdinary_exists_nonidentity_source
+    (ρ : G →* GeneralLinearGroup (Fin 2) K)
+    (e : (matrixStandardRepresentation ρ).invariants ≃ₗ[K] K) :
+    ∃ g, ρ g ≠ 1 :=
+  residualOrdinary_exists_nonidentity ρ e
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R A : Type*} [Group G] [CommRing R] [CommRing A]
+
+/-- Exact original-object consumer of `matrixOrdinaryRelationIdeal_le_kernel_iff`. -/
+theorem actual_matrix_ordinary_relation_ideal_matrixOrdinaryRelationIdeal_le_kernel_iff_source
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (g₀ : G) (f : R →+* A) :
+    matrixOrdinaryRelationIdeal ρ g₀ ≤ RingHom.ker f ↔
+      ∀ g, matrixOrdinaryRelation ((GeneralLinearGroup.map f).comp ρ) g₀ g = 0 :=
+  matrixOrdinaryRelationIdeal_le_kernel_iff ρ g₀ f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R A K : Type*} [Group G] [CommRing R]
+  [CommRing A] [IsLocalRing A] [Field K]
+
+/-- Exact original-object consumer of `matrixOrdinaryRelationIdeal_le_kernel_iff_invariants`. -/
+theorem actual_matrix_ordinary_ideal_invariant_criterion_matrixOrdinaryRelationIdeal_le_kernel_iff_invariants_source
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (g₀ : G)
+    (f : R →+* A) (r : A →+* K) [IsLocalHom r]
+    (hρ : GeneralLinearGroup.map (r.comp f) (ρ g₀) ≠ 1) :
+    matrixOrdinaryRelationIdeal ρ g₀ ≤ RingHom.ker f ↔
+      (Nonempty ((matrixStandardRepresentation ((GeneralLinearGroup.map f).comp ρ)).invariants
+          ≃ₗ[A] A) ∧
+        ∃ N : Submodule A (Fin 2 → A),
+          IsCompl (matrixStandardRepresentation ((GeneralLinearGroup.map f).comp ρ)).invariants N) :=
+  matrixOrdinaryRelationIdeal_le_kernel_iff_invariants ρ g₀ f r hρ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrix_invariants_rankOne_split_conjugacy_iff`. -/
+theorem actual_matrix_invariant_submodule_conjugacy_matrix_invariants_rankOne_split_conjugacy_iff_source
+    (ρ τ : G →* GeneralLinearGroup ι R) (U : GeneralLinearGroup ι R)
+    (hc : ∀ g, τ g = U * ρ g * U⁻¹) :
+    (Nonempty ((matrixStandardRepresentation ρ).invariants ≃ₗ[R] R) ∧
+      ∃ N : Submodule R (ι → R), IsCompl (matrixStandardRepresentation ρ).invariants N) ↔
+    (Nonempty ((matrixStandardRepresentation τ).invariants ≃ₗ[R] R) ∧
+      ∃ N : Submodule R (ι → R), IsCompl (matrixStandardRepresentation τ).invariants N) :=
+  matrix_invariants_rankOne_split_conjugacy_iff ρ τ U hc
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedOrdinary_class_iff`. -/
+theorem actual_original_unframed_ordinary_condition_originalUnframedOrdinary_class_iff_source
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (N : Subgroup H) (ρ : OriginalContinuousFramedFiber eA H σ) :
+    originalUnframedOrdinary eA H σ N (originalUnframedClass eA H σ ρ) ↔
+      (Nonempty ((matrixStandardRepresentation (ρ.val.toMonoidHom.comp N.subtype)).invariants ≃ₗ[A] A) ∧
+        ∃ W : Submodule A (Fin 2 → A),
+          IsCompl (matrixStandardRepresentation (ρ.val.toMonoidHom.comp N.subtype)).invariants W) :=
+  originalUnframedOrdinary_class_iff eA H σ N ρ
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G O R : Type*} [Group G] [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `matrixOrdinaryRelationQuotient_localData`. -/
+theorem actual_residual_ordinary_relation_quotient_matrixOrdinaryRelationQuotient_localData_source
+    [IsNoetherianRing R] [Finite (IsLocalRing.ResidueField O)]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    [IsAdicComplete (IsLocalRing.maximalIdeal R) R]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R))
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (σ : G →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (hρ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (g₀ : G) (hg₀ : σ g₀ ≠ 1)
+    (hOrd : Nonempty ((matrixStandardRepresentation σ).invariants ≃ₗ[IsLocalRing.ResidueField O]
+        IsLocalRing.ResidueField O) ∧
+      ∃ N : Submodule (IsLocalRing.ResidueField O) (Fin 2 → IsLocalRing.ResidueField O),
+        IsCompl (matrixStandardRepresentation σ).invariants N) :
+    let J := matrixOrdinaryRelationIdeal ρ g₀
+    letI := matrixOrdinaryRelationQuotient_isLocal eR ρ σ hρ g₀ hg₀ hOrd
+    IsNoetherianRing (R ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (R ⧸ J)) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal (R ⧸ J)) (R ⧸ J) :=
+  matrixOrdinaryRelationQuotient_localData hR eR ρ σ hρ g₀ hg₀ hOrd
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedOrdinary_coefficient_iff`. -/
+theorem actual_original_unframed_ordinary_coefficient_ideal_originalUnframedOrdinary_coefficient_iff_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup (Fin 2) R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (N : Subgroup H) (g₀ : N) (hg₀ : σ g₀.val ≠ 1)
+    (f : OriginalContinuousCoefficientFiber eR eA) :
+    originalUnframedOrdinary eA H σ N
+        (originalCoefficientRepresentationClass eR eA H σ τ hτ f) ↔
+      matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀ ≤
+        RingHom.ker f.val.toRingHom :=
+  originalUnframedOrdinary_coefficient_iff eR eA H σ τ hτ N g₀ hg₀ f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R] [IsTopologicalRing R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedOrdinaryQuotientEquiv_evaluation`. -/
+theorem actual_original_unframed_ordinary_quotient_equivalence_originalUnframedOrdinaryQuotientEquiv_evaluation_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup (Fin 2) R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (N : Subgroup H) (g₀ : N) (hg₀ : σ g₀.val ≠ 1)
+    [IsLocalRing (R ⧸ matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀)]
+    (hbij : Function.Bijective (originalCoefficientRepresentationClass eR eA H σ τ hτ))
+    (f : OriginalContinuousCoefficientFiber (originalLocalQuotientResidueEquiv eR
+      (matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀)) eA) :
+    (originalUnframedOrdinaryQuotientEquiv eR eA H σ τ hτ N g₀ hg₀ hbij f).val =
+      originalCoefficientRepresentationClass eR eA H σ τ hτ
+        (originalQuotientCoefficientRestriction eR eA
+          (matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀) f).val :=
+  originalUnframedOrdinaryQuotientEquiv_evaluation eR eA H σ τ hτ N g₀ hg₀ hbij f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O L : Type} [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `arithmeticUnframedOrdinaryUniversality_exists`. -/
+theorem actual_arithmetic_unframed_ordinary_universality_arithmeticUnframedOrdinaryUniversality_exists_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))]
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hOrd : Nonempty ((matrixStandardRepresentation (σ.comp (rationalArithmeticInertia a P.asIdeal).subtype)).invariants
+      ≃ₗ[IsLocalRing.ResidueField O] IsLocalRing.ResidueField O) ∧
+    ∃ W : Submodule (IsLocalRing.ResidueField O) (Fin 2 → IsLocalRing.ResidueField O),
+      IsCompl (matrixStandardRepresentation (σ.comp (rationalArithmeticInertia a P.asIdeal).subtype)).invariants W) :
+    ∃ T : Subalgebra O (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ),
+      T = ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ ∧
+      (letI : IsTopologicalRing T := inferInstanceAs (IsTopologicalRing T.toSubring)
+    ∃ hlocal : IsLocalRing T,
+      letI := hlocal
+      IsNoetherianRing T ∧ IsAdic (IsLocalRing.maximalIdeal T) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal T) T ∧
+      ∃ (eT : IsLocalRing.ResidueField T ≃ₐ[O] IsLocalRing.ResidueField O)
+        (τ : (rationalArithmeticGaloisGroup a) →ₜ* GeneralLinearGroup (Fin 2) T)
+        (hτ : (GeneralLinearGroup.map (localCoefficientReduction eT).toRingHom).comp
+          τ.toMonoidHom = σ),
+        ∃ g₀ : rationalArithmeticInertia a P.asIdeal, σ g₀.val ≠ 1 ∧
+        let J := matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp (rationalArithmeticInertia a P.asIdeal).subtype) g₀
+        ∃ hquot : IsLocalRing (T ⧸ J),
+          letI := hquot
+          IsNoetherianRing (T ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (T ⧸ J)) ∧
+          IsAdicComplete (IsLocalRing.maximalIdeal (T ⧸ J)) (T ⧸ J) ∧
+          ∀ (A : Type) [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+            [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+            (_hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+            (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O),
+            ∃ e : OriginalContinuousCoefficientFiber (originalLocalQuotientResidueEquiv eT J) eA ≃
+              {c : OriginalUnframedDeformationClass eA (rationalArithmeticGaloisGroup a) σ // originalUnframedOrdinary eA (rationalArithmeticGaloisGroup a) σ (rationalArithmeticInertia a P.asIdeal) c},
+              ∀ f, (e f).val = originalCoefficientRepresentationClass eT eA (rationalArithmeticGaloisGroup a) σ τ hτ
+                (originalQuotientCoefficientRestriction eT eA J f).val) :=
+  arithmeticUnframedOrdinaryUniversality_exists (L := L) a ha p hp hpa σ hσ P hOrd
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedDeterminantOrdinary_coefficient_iff`. -/
+theorem actual_original_unframed_determinant_ordinary_coefficient_ideal_originalUnframedDeterminantOrdinary_coefficient_iff_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup (Fin 2) R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (δ : H →* Oˣ) (N : Subgroup H) (g₀ : N) (hg₀ : σ g₀.val ≠ 1)
+    (f : OriginalContinuousCoefficientFiber eR eA) :
+    (originalUnframedHasDeterminant eA H σ δ
+        (originalCoefficientRepresentationClass eR eA H σ τ hτ f) ∧
+      originalUnframedOrdinary eA H σ N
+        (originalCoefficientRepresentationClass eR eA H σ τ hτ f)) ↔
+      representationDeterminantIdeal τ.toMonoidHom δ ⊔
+        matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀ ≤
+          RingHom.ker f.val.toRingHom :=
+  originalUnframedDeterminantOrdinary_coefficient_iff eR eA H σ τ hτ δ N g₀ hg₀ f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G O R : Type*} [Group G] [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `representationDeterminantOrdinaryQuotient_localData`. -/
+theorem actual_residual_determinant_ordinary_quotient_representationDeterminantOrdinaryQuotient_localData_source
+    [IsNoetherianRing R] [Finite (IsLocalRing.ResidueField O)]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    [IsAdicComplete (IsLocalRing.maximalIdeal R) R]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R))
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (σ : G →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (hρ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (δ : G →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (N : Subgroup G) (g₀ : N) (hg₀ : σ g₀.val ≠ 1)
+    (hOrd : Nonempty ((matrixStandardRepresentation (σ.comp N.subtype)).invariants
+        ≃ₗ[IsLocalRing.ResidueField O] IsLocalRing.ResidueField O) ∧
+      ∃ W : Submodule (IsLocalRing.ResidueField O) (Fin 2 → IsLocalRing.ResidueField O),
+        IsCompl (matrixStandardRepresentation (σ.comp N.subtype)).invariants W) :
+    let J := representationDeterminantIdeal ρ δ ⊔ matrixOrdinaryRelationIdeal (ρ.comp N.subtype) g₀
+    letI := representationDeterminantOrdinaryQuotient_isLocal eR ρ σ hρ δ hδ N g₀ hg₀ hOrd
+    IsNoetherianRing (R ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (R ⧸ J)) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal (R ⧸ J)) (R ⧸ J) :=
+  representationDeterminantOrdinaryQuotient_localData hR eR ρ σ hρ δ hδ N g₀ hg₀ hOrd
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R] [IsTopologicalRing R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedDeterminantOrdinaryQuotientEquiv_evaluation`. -/
+theorem actual_original_unframed_determinant_ordinary_quotient_equivalence_originalUnframedDeterminantOrdinaryQuotientEquiv_evaluation_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup (Fin 2) R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (δ : H →* Oˣ) (N : Subgroup H) (g₀ : N) (hg₀ : σ g₀.val ≠ 1)
+    [IsLocalRing (R ⧸ (representationDeterminantIdeal τ.toMonoidHom δ ⊔ matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀))]
+    (hbij : Function.Bijective (originalCoefficientRepresentationClass eR eA H σ τ hτ))
+    (f : OriginalContinuousCoefficientFiber (originalLocalQuotientResidueEquiv eR
+      ((representationDeterminantIdeal τ.toMonoidHom δ ⊔ matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀))) eA) :
+    (originalUnframedDeterminantOrdinaryQuotientEquiv eR eA H σ τ hτ δ N g₀ hg₀ hbij f).val =
+      originalCoefficientRepresentationClass eR eA H σ τ hτ
+        (originalQuotientCoefficientRestriction eR eA
+          ((representationDeterminantIdeal τ.toMonoidHom δ ⊔ matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀)) f).val :=
+  originalUnframedDeterminantOrdinaryQuotientEquiv_evaluation eR eA H σ τ hτ δ N g₀ hg₀ hbij f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O L : Type} [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `arithmeticUnframedDeterminantOrdinaryUniversality_exists`. -/
+theorem actual_arithmetic_unframed_determinant_ordinary_universality_arithmeticUnframedDeterminantOrdinaryUniversality_exists_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))]
+    (δ : rationalArithmeticGaloisGroup a →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hOrd : Nonempty ((matrixStandardRepresentation (σ.comp (rationalArithmeticInertia a P.asIdeal).subtype)).invariants
+      ≃ₗ[IsLocalRing.ResidueField O] IsLocalRing.ResidueField O) ∧
+    ∃ W : Submodule (IsLocalRing.ResidueField O) (Fin 2 → IsLocalRing.ResidueField O),
+      IsCompl (matrixStandardRepresentation (σ.comp (rationalArithmeticInertia a P.asIdeal).subtype)).invariants W) :
+    ∃ T : Subalgebra O (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ),
+      T = ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ ∧
+      (letI : IsTopologicalRing T := inferInstanceAs (IsTopologicalRing T.toSubring)
+    ∃ hlocal : IsLocalRing T,
+      letI := hlocal
+      IsNoetherianRing T ∧ IsAdic (IsLocalRing.maximalIdeal T) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal T) T ∧
+      ∃ (eT : IsLocalRing.ResidueField T ≃ₐ[O] IsLocalRing.ResidueField O)
+        (τ : (rationalArithmeticGaloisGroup a) →ₜ* GeneralLinearGroup (Fin 2) T)
+        (hτ : (GeneralLinearGroup.map (localCoefficientReduction eT).toRingHom).comp
+          τ.toMonoidHom = σ),
+        ∃ g₀ : rationalArithmeticInertia a P.asIdeal, σ g₀.val ≠ 1 ∧
+        let J := representationDeterminantIdeal τ.toMonoidHom δ ⊔ matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp (rationalArithmeticInertia a P.asIdeal).subtype) g₀
+        ∃ hquot : IsLocalRing (T ⧸ J),
+          letI := hquot
+          IsNoetherianRing (T ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (T ⧸ J)) ∧
+          IsAdicComplete (IsLocalRing.maximalIdeal (T ⧸ J)) (T ⧸ J) ∧
+          ∀ (A : Type) [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+            [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+            (_hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+            (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O),
+            ∃ e : OriginalContinuousCoefficientFiber (originalLocalQuotientResidueEquiv eT J) eA ≃
+              {c : OriginalUnframedDeformationClass eA (rationalArithmeticGaloisGroup a) σ // originalUnframedHasDeterminant eA (rationalArithmeticGaloisGroup a) σ δ c ∧ originalUnframedOrdinary eA (rationalArithmeticGaloisGroup a) σ (rationalArithmeticInertia a P.asIdeal) c},
+              ∀ f, (e f).val = originalCoefficientRepresentationClass eT eA (rationalArithmeticGaloisGroup a) σ τ hτ
+                (originalQuotientCoefficientRestriction eT eA J f).val) :=
+  arithmeticUnframedDeterminantOrdinaryUniversality_exists (L := L) a ha p hp hpa σ hσ δ hδ P hOrd
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommSemiring R] [CommSemiring A]
+  [HopfAlgebra R A] [CommSemiring B] [Algebra R B]
+
+/-- Exact original-object consumer of `commutativeHopfPointsGroup_inv_apply`. -/
+theorem actual_commutative_hopf_points_group_commutativeHopfPointsGroup_inv_apply_source (f : WithConv (A →ₐ[R] B)) (a : A) :
+    letI := commutativeHopfPointsGroup (R := R) (A := A) (B := B)
+    (f⁻¹) a = f (HopfAlgebra.antipode R a) :=
+  commutativeHopfPointsGroup_inv_apply f a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B C : Type*} [CommSemiring R] [CommSemiring A] [HopfAlgebra R A]
+  [CommSemiring B] [Algebra R B] [CommSemiring C] [Algebra R C]
+
+/-- Exact original-object consumer of `commutativeHopfPointsCoefficientAction_apply`. -/
+theorem actual_commutative_hopf_points_coefficient_change_commutativeHopfPointsCoefficientAction_apply_source (e : B ≃ₐ[R] B)
+    (p : WithConv (A →ₐ[R] B)) (a : A) :
+    commutativeHopfPointsCoefficientAction e p a = e (p a) :=
+  commutativeHopfPointsCoefficientAction_apply e p a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [Module.Free R A] [Module.Finite R A] [Field K] [Algebra R K]
+
+/-- Exact original-object consumer of `finiteFreeHopfPoints_card_le`. -/
+theorem actual_finite_free_hopf_points_finiteFreeHopfPoints_card_le_source :
+    Nat.card (WithConv (A →ₐ[R] K)) ≤ Module.finrank R A :=
+  finiteFreeHopfPoints_card_le (R := R) (A := A) (K := K)
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfPointsQuotientEvaluation_mk`. -/
+theorem actual_hopf_points_vanishing_ideal_hopfPointsQuotientEvaluation_mk_source (X : Set (WithConv (A →ₐ[R] K))) (a : A) (p : X) :
+    hopfPointsQuotientEvaluation X (Ideal.Quotient.mk (hopfPointsVanishingIdeal X) a) p = p.val a :=
+  hopfPointsQuotientEvaluation_mk X a p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing K] [Algebra R K]
+
+/-- The same original Hopf point group in the exact subgroup vanishing consumer. -/
+noncomputable local instance hopfSubgroupPointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfSubgroupVanishingIdeal_counit`. -/
+theorem actual_hopf_subgroup_vanishing_antipode_hopfSubgroupVanishingIdeal_counit_source
+    (hinj : Function.Injective (algebraMap R K))
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (a : A) (ha : a ∈ hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))) :
+    Coalgebra.counit (R := R) a = 0 :=
+  hopfSubgroupVanishingIdeal_counit hinj X a ha
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [IsDomain R] [CommRing A] [HopfAlgebra R A]
+  [Field K] [Algebra R K] [FaithfulSMul R K]
+
+/-- Exact original-object consumer of `hopfPointsCoordinateQuotient_finite_free`. -/
+theorem actual_hopf_points_coordinate_quotient_free_hopfPointsCoordinateQuotient_finite_free_source [IsPrincipalIdealRing R] [Module.Finite R A]
+    (X : Set (WithConv (A →ₐ[R] K))) :
+    Module.Finite R (A ⧸ hopfPointsVanishingIdeal X) ∧
+      Module.Free R (A ⧸ hopfPointsVanishingIdeal X) :=
+  hopfPointsCoordinateQuotient_finite_free X
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B K : Type*} [CommSemiring R] [CommSemiring A] [HopfAlgebra R A]
+  [CommSemiring B] [HopfAlgebra R B] [CommSemiring K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfPointsRestriction_apply`. -/
+theorem actual_hopf_points_restriction_hopfPointsRestriction_apply_source (h : A →ₐc[R] B)
+    (p : WithConv (B →ₐ[R] K)) (a : A) :
+    hopfPointsRestriction h p a = p (h a) :=
+  hopfPointsRestriction_apply h p a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing K] [Algebra R K]
+
+/-- The same original Hopf point group in the quotient counit consumer. -/
+noncomputable local instance hopfSubgroupQuotientPointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfSubgroupQuotientCounit_mk`. -/
+theorem actual_hopf_subgroup_quotient_antipode_counit_hopfSubgroupQuotientCounit_mk_source (hinj : Function.Injective (algebraMap R K))
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R))) (a : A) :
+    hopfSubgroupQuotientCounit hinj X (Ideal.Quotient.mk _ a) = Coalgebra.counit (R := R) a :=
+  hopfSubgroupQuotientCounit_mk hinj X a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A F K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [Field F] [Field K] [Algebra R F] [Algebra F K] [Algebra R K]
+  [IsScalarTower R F K]
+
+/-- Exact original-object consumer of `hopfPointsGaloisAction_continuous`. -/
+theorem actual_finite_free_hopf_galois_action_hopfPointsGaloisAction_continuous_source [Module.Free R A] [Module.Finite R A]
+    [Algebra.IsIntegral F K]
+    [TopologicalSpace (MulAut (WithConv (A →ₐ[R] K)))]
+    [DiscreteTopology (MulAut (WithConv (A →ₐ[R] K)))] :
+    Continuous (hopfPointsGaloisAction (R := R) (A := A) (F := F) (K := K)) :=
+  hopfPointsGaloisAction_continuous (R := R) (A := A) (F := F) (K := K)
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing B] [HopfAlgebra R B]
+
+/-- Exact original-object consumer of `hopfTensorIncludeRight_apply`. -/
+theorem actual_hopf_tensor_coordinate_inclusions_hopfTensorIncludeRight_apply_source (b : B) :
+    hopfTensorIncludeRight (R := R) (A := A) b = (1 : A) ⊗ₜ[R] b :=
+  hopfTensorIncludeRight_apply b
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing B] [HopfAlgebra R B] [CommRing K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfTensorPointsProductEquiv_symm_tmul`. -/
+theorem actual_hopf_tensor_points_product_hopfTensorPointsProductEquiv_symm_tmul_source
+    (p : WithConv (A →ₐ[R] K) × WithConv (B →ₐ[R] K)) (a : A) (b : B) :
+    (hopfTensorPointsProductEquiv (R := R)).symm p (a ⊗ₜ[R] b) = p.1 a * p.2 b :=
+  hopfTensorPointsProductEquiv_symm_tmul p a b
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B F K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing B] [HopfAlgebra R B] [Field F] [Field K]
+  [Algebra R F] [Algebra F K] [Algebra R K] [IsScalarTower R F K]
+
+/-- Exact original-object consumer of `hopfTensorPointsProductEquiv_galois`. -/
+theorem actual_finite_free_hopf_point_products_hopfTensorPointsProductEquiv_galois_source (g : K ≃ₐ[F] K)
+    (p : WithConv ((A ⊗[R] B) →ₐ[R] K)) :
+    hopfTensorPointsProductEquiv (hopfPointsGaloisAction (R := R) g p) =
+      (hopfPointsGaloisAction (R := R) g (hopfTensorPointsProductEquiv p).1,
+       hopfPointsGaloisAction (R := R) g (hopfTensorPointsProductEquiv p).2) :=
+  hopfTensorPointsProductEquiv_galois g p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [Bialgebra R A]
+  [CommRing B] [Algebra R B]
+
+/-- Exact original-object consumer of `bialgebraSurjective_rightCounit`. -/
+theorem actual_bialgebra_surjective_descent_bialgebraSurjective_rightCounit_source (q : A →ₐ[R] B) (hq : Function.Surjective q)
+    (d : B →ₐ[R] B ⊗[R] B) (e : B →ₐ[R] R)
+    (hd : d.comp q = (Algebra.TensorProduct.map q q).comp (Bialgebra.comulAlgHom R A))
+    (he : e.comp q = Bialgebra.counitAlgHom R A) :
+    (Algebra.TensorProduct.map (.id R B) e).comp d =
+      (Algebra.TensorProduct.rid R R B).symm :=
+  bialgebraSurjective_rightCounit q hq d e hd he
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `hopfSurjectiveAntipode_right`. -/
+theorem actual_hopf_surjective_antipode_descent_hopfSurjectiveAntipode_right_source (q : A →ₐc[R] B) (hq : Function.Surjective q)
+    (s : B →ₐ[R] B)
+    (hs : s.comp q.toAlgHom = q.toAlgHom.comp (commutativeHopfAntipode (R := R))) :
+    LinearMap.mul' R B ∘ₗ s.toLinearMap.lTensor B ∘ₗ Coalgebra.comul =
+      Algebra.linearMap R B ∘ₗ Coalgebra.counit :=
+  hopfSurjectiveAntipode_right q hq s hs
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+
+/-- Exact original-object consumer of `hopfCoordinateQuotient_comul_mk`. -/
+theorem actual_hopf_coordinate_quotient_hopfCoordinateQuotient_comul_mk_source (I : Ideal A)
+    (hd : I ≤ RingHom.ker (((Algebra.TensorProduct.map (Ideal.Quotient.mkₐ R I)
+      (Ideal.Quotient.mkₐ R I)).comp (Bialgebra.comulAlgHom R A)).toRingHom))
+    (he : I ≤ RingHom.ker (Bialgebra.counitAlgHom R A).toRingHom)
+    (hs : I ≤ I.comap (commutativeHopfAntipode (R := R)).toRingHom) (a : A) :
+    letI := hopfCoordinateQuotient I hd he hs
+    Coalgebra.comul (R := R) (Ideal.Quotient.mk I a) =
+      (Algebra.TensorProduct.map (Ideal.Quotient.mkₐ R I) (Ideal.Quotient.mkₐ R I))
+        (Coalgebra.comul a) :=
+  hopfCoordinateQuotient_comul_mk I hd he hs a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [CommRing A] [HopfAlgebra R A] [Module.Finite R A]
+  [Field K] [Algebra R K] [FaithfulSMul R K]
+
+/-- The same original Hopf point group in the finite-coordinate quotient consumer. -/
+noncomputable local instance hopfSubgroupCoordinateFinitePointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfSubgroupCoordinateQuotient_finitePoints`. -/
+theorem actual_hopf_subgroup_coordinate_quotient_hopfSubgroupCoordinateQuotient_finitePoints_source
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (hd : let I := hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))
+      I ≤ RingHom.ker (((Algebra.TensorProduct.map (Ideal.Quotient.mkₐ R I)
+        (Ideal.Quotient.mkₐ R I)).comp (Bialgebra.comulAlgHom R A)).toRingHom)) :
+    let Q := A ⧸ hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))
+    letI := hopfSubgroupCoordinateQuotient (FaithfulSMul.algebraMap_injective R K) X hd
+    Module.Finite R Q ∧ Module.Free R Q ∧
+      Finite (WithConv (Q →ₐ[R] K)) ∧
+        Nat.card (WithConv (Q →ₐ[R] K)) ≤ Module.finrank R Q :=
+  hopfSubgroupCoordinateQuotient_finitePoints X hd
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F A K : Type*} [Field F] [CommRing A] [Algebra F A]
+  [IsArtinianRing A] [Field K] [Algebra F K] [Normal F K]
+
+/-- Exact original-object consumer of `artinianAlgebraPoint_sameKernel_galois`. -/
+theorem actual_artinian_algebra_point_kernel_orbit_artinianAlgebraPoint_sameKernel_galois_source (p q : A →ₐ[F] K)
+    (h : RingHom.ker p.toRingHom = RingHom.ker q.toRingHom) :
+    ∃ g : K ≃ₐ[F] K, g.toAlgHom.comp p = q :=
+  artinianAlgebraPoint_sameKernel_galois p q h
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [IsArtinianRing A] [Field K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfPointVanishingIdeal_kernel_selection`. -/
+theorem actual_hopf_point_vanishing_kernel_selection_hopfPointVanishingIdeal_kernel_selection_source
+    (X : Set (WithConv (A →ₐ[R] K))) [Finite X]
+    (p : WithConv (A →ₐ[R] K))
+    (hp : hopfPointsVanishingIdeal X ≤ RingHom.ker p.ofConv.toRingHom) :
+    ∃ q : X, RingHom.ker q.val.ofConv.toRingHom = RingHom.ker p.ofConv.toRingHom :=
+  hopfPointVanishingIdeal_kernel_selection X p hp
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F A K : Type*} [Field F] [CommRing A] [HopfAlgebra F A]
+  [IsArtinianRing A] [Field K] [Algebra F K] [Normal F K]
+
+/-- Exact original-object consumer of `hopfGaloisStablePointSet_eq_vanishing`. -/
+theorem actual_hopf_galois_stable_point_closure_hopfGaloisStablePointSet_eq_vanishing_source
+    (X : Set (WithConv (A →ₐ[F] K))) [Finite X]
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[F] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism g p ∈ X) :
+    X = {p : WithConv (A →ₐ[F] K) |
+      hopfPointsVanishingIdeal X ≤ RingHom.ker p.ofConv.toRingHom} :=
+  hopfGaloisStablePointSet_eq_vanishing X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F A K : Type*} [Field F] [CommRing A] [Algebra F A]
+  [Module.Finite F A] [IsReduced A] [Field K] [Algebra F K] [IsAlgClosed K]
+
+/-- Exact original-object consumer of `finiteReducedAlgebra_eq_zero_of_points`. -/
+theorem actual_finite_reduced_algebra_point_separation_finiteReducedAlgebra_eq_zero_of_points_source (a : A)
+    (ha : ∀ p : A →ₐ[F] K, p a = 0) : a = 0 :=
+  finiteReducedAlgebra_eq_zero_of_points a ha
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F A B K : Type*} [Field F] [PerfectField F]
+  [CommRing A] [Algebra F A] [Module.Finite F A] [IsReduced A]
+  [CommRing B] [Algebra F B] [Module.Finite F B] [IsReduced B]
+
+/-- Exact original-object consumer of `finiteReducedTensor_eq_zero_of_point_pairs`. -/
+theorem actual_finite_reduced_tensor_point_separation_finiteReducedTensor_eq_zero_of_point_pairs_source [Field K] [Algebra F K] [IsAlgClosed K]
+    (z : A ⊗[F] B)
+    (hz : ∀ (p : A →ₐ[F] K) (q : B →ₐ[F] K),
+      Algebra.TensorProduct.productMap p q z = 0) : z = 0 :=
+  finiteReducedTensor_eq_zero_of_point_pairs z hz
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F A K : Type*} [Field F] [PerfectField F] [CommRing A] [HopfAlgebra F A]
+  [Module.Finite F A] [Field K] [Algebra F K] [Normal F K] [IsAlgClosed K]
+
+/-- The original Hopf point group in the exact field subgroup consumer. -/
+noncomputable local instance hopfFieldSubgroupPointGroupSource : Group (WithConv (A →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfFieldSubgroup_comultiplication_vanishing`. -/
+theorem actual_hopf_field_subgroup_comultiplication_hopfFieldSubgroup_comultiplication_vanishing_source
+    (X : @Subgroup (WithConv (A →ₐ[F] K)) (commutativeHopfPointsGroup (R := F)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[F] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism g p ∈ X) :
+    let I := hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[F] K)))
+    I ≤ RingHom.ker (((Algebra.TensorProduct.map (Ideal.Quotient.mkₐ F I)
+      (Ideal.Quotient.mkₐ F I)).comp (Bialgebra.comulAlgHom F A)).toRingHom) :=
+  hopfFieldSubgroup_comultiplication_vanishing X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [CommRing F] [Algebra R F]
+  [CommRing A] [Algebra R A] [CommRing K] [Algebra R K] [Algebra F K]
+  [IsScalarTower R F K]
+
+/-- Exact original-object consumer of `algebraBaseChangePoint_galois`. -/
+theorem actual_algebra_base_change_points_algebraBaseChangePoint_galois_source (g : K ≃ₐ[F] K) (p : A →ₐ[R] K) :
+    AlgHom.liftEquiv R F A K ((g.restrictScalars R).toAlgHom.comp p) =
+      g.toAlgHom.comp (AlgHom.liftEquiv R F A K p) :=
+  algebraBaseChangePoint_galois g p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [CommRing F] [Algebra R F]
+  [CommRing A] [HopfAlgebra R A] [CommRing K] [Algebra R K] [Algebra F K]
+  [IsScalarTower R F K]
+
+/-- Exact original-object consumer of `hopfBaseChangePointsEquiv_galois`. -/
+theorem actual_hopf_base_change_points_hopfBaseChangePointsEquiv_galois_source (g : K ≃ₐ[F] K)
+    (p : WithConv (A →ₐ[R] K)) :
+    hopfBaseChangePointsEquiv (commutativeHopfPointsAutomorphism (g.restrictScalars R) p) =
+      commutativeHopfPointsAutomorphism g (hopfBaseChangePointsEquiv p) :=
+  hopfBaseChangePointsEquiv_galois g p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A B : Type*} [CommRing R] [CommRing F] [Algebra R F]
+  [CommRing A] [Algebra R A] [CommRing B] [Algebra R B] [Algebra F B]
+  [IsScalarTower R F B]
+
+/-- Exact original-object consumer of `localizedAlgebraPoint_injective`. -/
+theorem actual_localized_algebra_point_injection_localizedAlgebraPoint_injective_source (S : Submonoid R) [IsLocalization S F]
+    (p : A →ₐ[R] B) (hp : Function.Injective p) :
+    Function.Injective (AlgHom.liftEquiv R F A B p) :=
+  localizedAlgebraPoint_injective S p hp
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [Field F]
+  [Algebra R F] [IsFractionRing R F] [CommRing A] [HopfAlgebra R A]
+  [Module.Finite R A] [Field K] [Algebra R K] [Algebra F K]
+  [IsScalarTower R F K] [Normal F K]
+
+omit [IsDomain R] in
+/-- Exact original-object consumer of `localizedHopfPointSet_eq_vanishing`. -/
+theorem actual_localized_hopf_point_closure_localizedHopfPointSet_eq_vanishing_source
+    (X : Set (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X) :
+    X = {p : WithConv (A →ₐ[R] K) |
+      hopfPointsVanishingIdeal X ≤ RingHom.ker p.ofConv.toRingHom} :=
+  localizedHopfPointSet_eq_vanishing X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A B K : Type*} [CommRing R] [CommRing F] [Algebra R F]
+  [CommRing A] [Algebra R A] [CommRing B] [Algebra R B]
+
+/-- Exact original-object consumer of `genericFiberTensorCoordinates_point_pair`. -/
+theorem actual_generic_fiber_tensor_coordinates_genericFiberTensorCoordinates_point_pair_source [CommRing K] [Algebra R K]
+    [Algebra F K] [IsScalarTower R F K]
+    (p : F ⊗[R] A →ₐ[F] K) (q : F ⊗[R] B →ₐ[F] K) (z : A ⊗[R] B) :
+    Algebra.TensorProduct.productMap p q (genericFiberTensorCoordinates z) =
+      Algebra.TensorProduct.productMap ((AlgHom.liftEquiv R F A K).symm p)
+        ((AlgHom.liftEquiv R F B K).symm q) z :=
+  genericFiberTensorCoordinates_point_pair p q z
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Module.Finite R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Normal F K] [IsAlgClosed K]
+
+/-- The original integral Hopf point group in the exact comultiplication consumer. -/
+noncomputable local instance integralHopfSubgroupPointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroup_comultiplication_vanishing`. -/
+theorem actual_integral_hopf_subgroup_comultiplication_integralHopfSubgroup_comultiplication_vanishing_source
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X) :
+    let I := hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))
+    I ≤ RingHom.ker (((Algebra.TensorProduct.map (Ideal.Quotient.mkₐ R I)
+      (Ideal.Quotient.mkₐ R I)).comp (Bialgebra.comulAlgHom R A)).toRingHom) :=
+  integralHopfSubgroup_comultiplication_vanishing X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Module.Finite R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Normal F K] [IsAlgClosed K]
+
+/-- The original integral Hopf point group in the exact subgroup assembly consumer. -/
+noncomputable local instance integralHopfQuotientPointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupQuotient_finitePoints`. -/
+theorem actual_integral_hopf_subgroup_quotient_integralHopfSubgroupQuotient_finitePoints_source
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X) :
+    let Q := A ⧸ hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))
+    letI := integralHopfSubgroupQuotient X hX
+    Module.Finite R Q ∧ Module.Free R Q ∧ Finite (WithConv (Q →ₐ[R] K)) ∧
+      Nat.card (WithConv (Q →ₐ[R] K)) ≤ Module.finrank R Q :=
+  integralHopfSubgroupQuotient_finitePoints X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Module.Finite R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Normal F K] [IsAlgClosed K]
+
+/-- The original integral Hopf point group in the exact subgroup assembly consumer. -/
+noncomputable local instance integralHopfPointEquivalenceGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupPointsEquiv_galois`. -/
+theorem actual_integral_hopf_subgroup_point_equivalence_integralHopfSubgroupPointsEquiv_galois_source
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X)
+    (g : K ≃ₐ[F] K) :
+    letI := integralHopfSubgroupQuotient X hX
+    ∀ p : WithConv (A ⧸ hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K))) →ₐ[R] K),
+      (integralHopfSubgroupPointsEquiv X hX
+        (commutativeHopfPointsAutomorphism (g.restrictScalars R) p)).val =
+      commutativeHopfPointsAutomorphism (g.restrictScalars R)
+        (integralHopfSubgroupPointsEquiv X hX p).val :=
+  integralHopfSubgroupPointsEquiv_galois X hX g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Module.Finite R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Normal F K] [IsAlgClosed K]
+
+/-- The original integral Hopf point group in the exact subgroup assembly consumer. -/
+noncomputable local instance integralHopfGenericPointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupGenericPointsEquiv_galois`. -/
+theorem actual_integral_hopf_subgroup_generic_points_integralHopfSubgroupGenericPointsEquiv_galois_source
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X)
+    (g : K ≃ₐ[F] K) :
+    let Q := A ⧸ hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))
+    letI := integralHopfSubgroupQuotient X hX
+    ∀ p : WithConv (F ⊗[R] Q →ₐ[F] K),
+      (integralHopfSubgroupGenericPointsEquiv X hX
+        (commutativeHopfPointsAutomorphism g p)).val =
+      commutativeHopfPointsAutomorphism (g.restrictScalars R)
+        (integralHopfSubgroupGenericPointsEquiv X hX p).val :=
+  integralHopfSubgroupGenericPointsEquiv_galois X hX g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R M N : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [AddCommGroup M] [Module R M] [Module.Finite R M]
+  [AddCommGroup N] [Module R N] [Module.IsTorsionFree R N]
+
+/-- Exact original-object consumer of `pidKernel_exists_retraction`. -/
+theorem actual_p_i_d_kernel_retraction_pidKernel_exists_retraction_source (f : M →ₗ[R] N) :
+    ∃ p : M →ₗ[R] LinearMap.ker f,
+      p.comp (LinearMap.ker f).subtype = LinearMap.id :=
+  pidKernel_exists_retraction f
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [Bialgebra R A]
+  [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `hopfSubgroupCoinvariants_exists_retraction`. -/
+theorem actual_hopf_subgroup_coinvariants_hopfSubgroupCoinvariants_exists_retraction_source [IsDomain R] [IsPrincipalIdealRing R]
+    [Module.Finite R A] [Module.Free R A] [Module.Free R B] (q : A →ₐc[R] B) :
+    ∃ p : A →ₗ[R] hopfSubgroupCoinvariants q,
+      p.comp (hopfSubgroupCoinvariants q).val.toLinearMap = LinearMap.id :=
+  hopfSubgroupCoinvariants_exists_retraction q
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R M N P U : Type*} [CommRing R]
+  [AddCommGroup M] [Module R M] [AddCommGroup N] [Module R N]
+  [AddCommGroup P] [Module R P] [AddCommGroup U] [Module R U]
+
+/-- Exact original-object consumer of `tensorRetraction_pair_image`. -/
+theorem actual_tensor_kernel_retraction_tensorRetraction_pair_image_source (i : U →ₗ[R] M) (p : M →ₗ[R] U)
+    (z : M ⊗[R] M)
+    (hleft : TensorProduct.map (i.comp p) (LinearMap.id : M →ₗ[R] M) z = z)
+    (hright : TensorProduct.map (LinearMap.id : M →ₗ[R] M) (i.comp p) z = z) :
+    TensorProduct.map i i (TensorProduct.map p p z) = z :=
+  tensorRetraction_pair_image i p z hleft hright
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [Bialgebra R A]
+  [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `hopfCoinvariant_comul_right`. -/
+theorem actual_hopf_coinvariant_comultiplication_hopfCoinvariant_comul_right_source (q : A →ₐc[R] B) (a : A)
+    (ha : a ∈ hopfSubgroupCoinvariants q) :
+    (((hopfSubgroupRightCoaction q).toLinearMap -
+      (Algebra.TensorProduct.includeLeft : A →ₐ[R] A ⊗[R] B).toLinearMap).lTensor A)
+        (Coalgebra.comul a) = 0 :=
+  hopfCoinvariant_comul_right q a ha
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [CommRing A] [Bialgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [CommRing B] [Bialgebra R B] [Module.Free R B]
+
+/-- Exact original-object consumer of `hopfCoinvariant_exists_comultiplication`. -/
+theorem actual_hopf_coinvariant_tensor_image_hopfCoinvariant_exists_comultiplication_source (q : A →ₐc[R] B) :
+    ∃ d : hopfSubgroupCoinvariants q →ₗ[R]
+        (hopfSubgroupCoinvariants q) ⊗[R] (hopfSubgroupCoinvariants q),
+      (TensorProduct.map (hopfSubgroupCoinvariants q).val.toLinearMap
+        (hopfSubgroupCoinvariants q).val.toLinearMap).comp d =
+      Coalgebra.comul.comp (hopfSubgroupCoinvariants q).val.toLinearMap :=
+  hopfCoinvariant_exists_comultiplication q
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [CommRing A] [Bialgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [CommRing B] [Bialgebra R B] [Module.Free R B]
+
+/-- Exact original-object consumer of `hopfCoinvariant_exists_comulAlgHom`. -/
+theorem actual_hopf_coinvariant_comul_algebra_hopfCoinvariant_exists_comulAlgHom_source (q : A →ₐc[R] B) :
+    ∃ d : hopfSubgroupCoinvariants q →ₐ[R]
+        (hopfSubgroupCoinvariants q) ⊗[R] (hopfSubgroupCoinvariants q),
+      (Algebra.TensorProduct.map (hopfSubgroupCoinvariants q).val
+        (hopfSubgroupCoinvariants q).val).comp d =
+      (Bialgebra.comulAlgHom R A).comp (hopfSubgroupCoinvariants q).val :=
+  hopfCoinvariant_exists_comulAlgHom q
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [Bialgebra R A] [Module.Free R A]
+  [CommRing B] [Algebra R B] [Module.Free R B]
+
+/-- Exact original-object consumer of `bialgebraInjective_coassoc`. -/
+theorem actual_bialgebra_injective_descent_bialgebraInjective_coassoc_source (q : B →ₐ[R] A) (hq : Function.Injective q)
+    (d : B →ₐ[R] B ⊗[R] B)
+    (hd : (Algebra.TensorProduct.map q q).comp d = (Bialgebra.comulAlgHom R A).comp q) :
+    (Algebra.TensorProduct.assoc R R R B B B).toAlgHom.comp
+      ((Algebra.TensorProduct.map d (.id R B)).comp d) =
+      (Algebra.TensorProduct.map (.id R B) d).comp d :=
+  bialgebraInjective_coassoc q hq d hd
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing B] [HopfAlgebra R B]
+
+/-- Exact original-object consumer of `hopfCocommutative_antipode_comul`. -/
+theorem actual_hopf_antipode_coordinate_diagrams_hopfCocommutative_antipode_comul_source [Coalgebra.IsCocomm R A] (a : A) :
+    Coalgebra.comul (HopfAlgebra.antipode R a) =
+      (Algebra.TensorProduct.map (commutativeHopfAntipode (R := R))
+        (commutativeHopfAntipode (R := R))) (Coalgebra.comul a) :=
+  hopfCocommutative_antipode_comul a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [Coalgebra.IsCocomm R A] [CommRing B] [HopfAlgebra R B]
+
+/-- Exact original-object consumer of `hopfCoinvariant_antipode_mem`. -/
+theorem actual_hopf_coinvariant_antipode_hopfCoinvariant_antipode_mem_source (q : A →ₐc[R] B) (a : A)
+    (ha : a ∈ hopfSubgroupCoinvariants q) :
+    HopfAlgebra.antipode R a ∈ hopfSubgroupCoinvariants q :=
+  hopfCoinvariant_antipode_mem q a ha
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `hopfInjectiveAntipode_left`. -/
+theorem actual_hopf_injective_antipode_descent_hopfInjectiveAntipode_left_source (q : B →ₐc[R] A) (hq : Function.Injective q)
+    (s : B →ₐ[R] B)
+    (hs : q.toAlgHom.comp s = (commutativeHopfAntipode (R := R) (A := A)).comp q.toAlgHom) :
+    LinearMap.mul' R B ∘ₗ s.toLinearMap.rTensor B ∘ₗ Coalgebra.comul =
+      Algebra.linearMap R B ∘ₗ Coalgebra.counit :=
+  hopfInjectiveAntipode_left q hq s hs
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [CommRing B] [HopfAlgebra R B] [Module.Free R B]
+
+/-- Exact original-object consumer of `hopfCoinvariantHopfAlgebra_finite_free`. -/
+theorem actual_hopf_coinvariant_coordinate_algebra_hopfCoinvariantHopfAlgebra_finite_free_source (q : A →ₐc[R] B) :
+    letI := hopfCoinvariantHopfAlgebra q
+    Module.Finite R (hopfSubgroupCoinvariants q) ∧ Module.Free R (hopfSubgroupCoinvariants q) ∧
+      (Algebra.TensorProduct.map (hopfSubgroupCoinvariants q).val
+        (hopfSubgroupCoinvariants q).val).comp
+        (Bialgebra.comulAlgHom R (hopfSubgroupCoinvariants q)) =
+        (Bialgebra.comulAlgHom R A).comp (hopfSubgroupCoinvariants q).val ∧
+      (hopfSubgroupCoinvariants q).val.toLinearMap.comp (HopfAlgebra.antipode R) =
+        (HopfAlgebra.antipode R).comp (hopfSubgroupCoinvariants q).val.toLinearMap :=
+  hopfCoinvariantHopfAlgebra_finite_free q
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S A B : Type*} [CommRing R] [CommRing S] [Algebra R S]
+  [Module.Flat R S] [CommRing A] [Algebra R A] [CommRing B] [Algebra R B]
+
+/-- Exact original-object consumer of `algebraEqualizerBaseChange_range`. -/
+theorem actual_algebra_equalizer_base_change_algebraEqualizerBaseChange_range_source (f g : A →ₐ[R] B) :
+    (Algebra.TensorProduct.map (AlgHom.id S S) (AlgHom.equalizer f g).val).range =
+      AlgHom.equalizer (Algebra.TensorProduct.map (AlgHom.id S S) f)
+        (Algebra.TensorProduct.map (AlgHom.id S S) g) :=
+  algebraEqualizerBaseChange_range f g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A : Type*} [Field K] [IsAlgClosed K] [CommRing A] [Algebra K A]
+  [Module.Finite K A]
+
+/-- Exact original-object consumer of `finiteAlgebraPointRestriction_surjective`. -/
+theorem actual_finite_algebra_point_restriction_finiteAlgebraPointRestriction_surjective_source (S : Subalgebra K A) :
+    Function.Surjective (fun q : A →ₐ[K] K => q.comp S.val) :=
+  finiteAlgebraPointRestriction_surjective S
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A G : Type*} [Field K] [CommRing A] [Algebra K A]
+  [Module.Finite K A] [Group G] [Finite G]
+  [MulSemiringAction G A] [SMulCommClass G K A]
+
+/-- Exact original-object consumer of `finiteGroupInvariantPoint_sameRestriction_orbit`. -/
+theorem actual_finite_group_invariant_point_orbit_finiteGroupInvariantPoint_sameRestriction_orbit_source (p q : A →ₐ[K] K)
+    (h : p.comp (FixedPoints.subalgebra K A G).val =
+      q.comp (FixedPoints.subalgebra K A G).val) :
+    ∃ g : G, p.comp (MulSemiringAction.toAlgHom K A g) = q :=
+  finiteGroupInvariantPoint_sameRestriction_orbit p q h
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+
+/-- Exact original-object consumer of `hopfPointTranslation_evaluation`. -/
+theorem actual_hopf_point_translations_hopfPointTranslation_evaluation_source (p q : WithConv (A →ₐ[R] R)) (a : A) :
+    p (hopfPointTranslation q a) = (p * q) a :=
+  hopfPointTranslation_evaluation p q a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S A B : Type*} [CommRing R] [CommRing S] [Algebra R S]
+  [CommRing A] [Bialgebra R A] [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `hopfCoinvariantBaseChange_range`. -/
+theorem actual_hopf_coinvariant_base_change_hopfCoinvariantBaseChange_range_source [Module.Flat R S] (q : A →ₐc[R] B) :
+    (Algebra.TensorProduct.map (AlgHom.id S S) (hopfSubgroupCoinvariants q).val).range =
+      hopfSubgroupCoinvariants (hopfBaseChangeCoordinateMap (S := S) q) :=
+  hopfCoinvariantBaseChange_range q
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A B ι : Type*} [CommRing K] [AddCommGroup A] [Module K A]
+  [Module.Flat K A] [CommRing B] [Algebra K B] [Finite ι]
+
+/-- Exact original-object consumer of `tensorPointFamily_separates`. -/
+theorem actual_tensor_point_family_separation_tensorPointFamily_separates_source (p : ι → B →ₐ[K] K)
+    (hp : Function.Injective (fun b : B => fun i : ι => p i b)) :
+    Function.Injective (fun z : A ⊗[K] B => fun i : ι => (p i).toLinearMap.lTensor A z) :=
+  tensorPointFamily_separates p hp
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A B ι : Type*} [CommRing K] [CommRing A] [HopfAlgebra K A]
+  [CommRing B] [Bialgebra K B]
+
+/-- Exact original-object consumer of `hopfCoinvariant_iff_pointTranslations`. -/
+theorem actual_hopf_coinvariant_point_translations_hopfCoinvariant_iff_pointTranslations_source [Module.Flat K A] [Finite ι]
+    (q : A →ₐc[K] B) (p : ι → B →ₐ[K] K)
+    (hp : Function.Injective (fun b : B => fun i : ι => p i b)) (a : A) :
+    a ∈ hopfSubgroupCoinvariants q ↔
+      ∀ i : ι, hopfPointTranslation (toConv ((p i).comp q.toAlgHom)) a = a :=
+  hopfCoinvariant_iff_pointTranslations q p hp a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A B : Type*} [Field K] [CommRing A] [HopfAlgebra K A]
+  [CommRing B] [HopfAlgebra K B]
+
+/-- The genuine original subgroup point group in the exact fixed-coordinate consumer. -/
+noncomputable local instance hopfFixedCoordinatePointGroupSource : Group (WithConv (B →ₐ[K] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfSubgroupCoinvariants_eq_fixed`. -/
+theorem actual_hopf_subgroup_fixed_coordinates_hopfSubgroupCoinvariants_eq_fixed_source [IsAlgClosed K] [Module.Finite K B] [IsReduced B]
+    (q : A →ₐc[K] B) :
+    letI := hopfSubgroupTranslationMulSemiringAction q
+    letI := hopfSubgroupTranslationScalarComm q
+    hopfSubgroupCoinvariants q = FixedPoints.subalgebra K A (WithConv (B →ₐ[K] K)) :=
+  hopfSubgroupCoinvariants_eq_fixed q
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A B : Type*} [Field K] [IsAlgClosed K]
+  [CommRing A] [HopfAlgebra K A] [Module.Finite K A]
+  [CommRing B] [HopfAlgebra K B] [Module.Finite K B] [IsReduced B]
+
+/-- Exact original-object consumer of `hopfCoinvariantPoints_fiber_orbit`. -/
+theorem actual_hopf_coinvariant_point_fibers_hopfCoinvariantPoints_fiber_orbit_source (q : A →ₐc[K] B)
+    (p r : WithConv (A →ₐ[K] K)) :
+    p.ofConv.comp (hopfSubgroupCoinvariants q).val =
+      r.ofConv.comp (hopfSubgroupCoinvariants q).val ↔
+    ∃ s : WithConv (B →ₐ[K] K), p * hopfPointsRestriction q s = r :=
+  hopfCoinvariantPoints_fiber_orbit q p r
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A B : Type*} [Field K] [IsAlgClosed K]
+  [CommRing A] [HopfAlgebra K A] [Coalgebra.IsCocomm K A] [Module.Finite K A]
+  [CommRing B] [HopfAlgebra K B] [Module.Finite K B] [IsReduced B]
+
+/-- The actual commutative source point group in the exact constructed quotient consumer. -/
+noncomputable local instance hopfFieldQuotientSourcePointGroupSource : CommGroup (WithConv (A →ₐ[K] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- The original subgroup point group in the exact constructed quotient consumer. -/
+noncomputable local instance hopfFieldQuotientSubgroupPointGroupSource : Group (WithConv (B →ₐ[K] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfCoinvariantFieldQuotientPoints_mk`. -/
+theorem actual_hopf_coinvariant_field_quotient_points_hopfCoinvariantFieldQuotientPoints_mk_source (q : A →ₐc[K] B)
+    (p : WithConv (A →ₐ[K] K)) (a : hopfSubgroupCoinvariants q) :
+    letI := hopfCoinvariantHopfAlgebra q
+    letI := hopfCoinvariantFieldPointGroup q
+    hopfCoinvariantFieldQuotientPoints q (QuotientGroup.mk p) a = p a.val :=
+  hopfCoinvariantFieldQuotientPoints_mk q p a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A : Type*} [Field K] [CommRing A] [Algebra K A] [Module.Finite K A]
+
+/-- Exact original-object consumer of `finiteReducedPointEvaluationEquiv_apply`. -/
+theorem actual_finite_reduced_point_evaluation_finiteReducedPointEvaluationEquiv_apply_source [IsAlgClosed K] [IsReduced A]
+    (a : A) (p : A →ₐ[K] K) : finiteReducedPointEvaluationEquiv a p = p a :=
+  finiteReducedPointEvaluationEquiv_apply a p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K A B : Type*} [Field K] [IsAlgClosed K]
+  [CommRing A] [HopfAlgebra K A] [Module.Finite K A] [IsReduced A]
+  [CommRing B] [HopfAlgebra K B] [Module.Finite K B] [IsReduced B]
+
+/-- The original source point group for the exact Hopf reconstruction consumer. -/
+noncomputable local instance reducedHopfSourcePointsSource : Group (WithConv (A →ₐ[K] K)) :=
+  commutativeHopfPointsGroup
+
+/-- The original target point group for the exact Hopf reconstruction consumer. -/
+noncomputable local instance reducedHopfTargetPointsSource : Group (WithConv (B →ₐ[K] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `finiteReducedHopfPointBialgEquiv_antipode`. -/
+theorem actual_finite_reduced_hopf_point_reconstruction_finiteReducedHopfPointBialgEquiv_antipode_source
+    (e : WithConv (A →ₐ[K] K) ≃* WithConv (B →ₐ[K] K)) (b : B) :
+    finiteReducedHopfPointBialgEquiv e (HopfAlgebra.antipode K b) =
+      HopfAlgebra.antipode K (finiteReducedHopfPointBialgEquiv e b) :=
+  finiteReducedHopfPointBialgEquiv_antipode e b
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+
+
+/-- Exact original-object consumer of `finiteReducedGenericFiber_geometric_isReduced`. -/
+theorem actual_finite_reduced_scalar_extension_finiteReducedGenericFiber_geometric_isReduced_source
+    {R F K A : Type*} [CommRing R] [Field F] [PerfectField F]
+    [Algebra R F] [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+    [CommRing A] [Algebra R A] [Module.Finite R A] [IsReduced (F ⊗[R] A)] :
+    IsReduced (K ⊗[R] A) :=
+  finiteReducedGenericFiber_geometric_isReduced (R := R) (F := F) (K := K) (A := A)
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R]
+  [Field F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+
+/-- Exact original-object consumer of `hopfPointQuotient_geometric_isReduced`. -/
+theorem actual_hopf_point_quotient_geometric_reduced_hopfPointQuotient_geometric_isReduced_source [PerfectField F] [Module.Finite R A]
+    (X : Set (WithConv (A →ₐ[R] K))) :
+    IsReduced (K ⊗[R] (A ⧸ hopfPointsVanishingIdeal X)) :=
+  hopfPointQuotient_geometric_isReduced (F := F) X
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B C : Type*} [CommRing R]
+  [CommRing A] [Bialgebra R A] [Module.Free R A]
+  [CommRing B] [Bialgebra R B]
+  [CommRing C] [Bialgebra R C] [Module.Free R C]
+
+/-- Exact original-object consumer of `bialgebraCoordinateComparison_comul`. -/
+theorem actual_bialgebra_coordinate_comparison_bialgebraCoordinateComparison_comul_source
+    (i : C →ₐc[R] A) (hi : Function.Injective i) (j : B →ₐc[R] A) (e : B ≃ₐ[R] C)
+    (h : i.toAlgHom.comp e.toAlgHom = j.toAlgHom) :
+    (Algebra.TensorProduct.map e.toAlgHom e.toAlgHom).comp (Bialgebra.comulAlgHom R B) =
+      (Bialgebra.comulAlgHom R C).comp e.toAlgHom :=
+  bialgebraCoordinateComparison_comul i hi j e h
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field K] [Algebra R K] [Module.Flat R K]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [CommRing B] [HopfAlgebra R B] [Module.Free R B]
+
+/-- Exact original-object consumer of `hopfCoinvariantBaseChangeBialgEquiv_antipode`. -/
+theorem actual_hopf_coinvariant_base_change_equivalence_hopfCoinvariantBaseChangeBialgEquiv_antipode_source (q : A →ₐc[R] B)
+    (z : K ⊗[R] hopfSubgroupCoinvariants q) :
+    letI := hopfCoinvariantHopfAlgebra q
+    letI := hopfCoinvariantHopfAlgebra (hopfBaseChangeCoordinateMap (S := K) q)
+    hopfCoinvariantBaseChangeBialgEquiv q (HopfAlgebra.antipode K z) =
+      HopfAlgebra.antipode K (hopfCoinvariantBaseChangeBialgEquiv q z) :=
+  hopfCoinvariantBaseChangeBialgEquiv_antipode q z
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S A B K : Type*} [CommRing R] [CommRing S] [Algebra R S]
+  [CommRing A] [HopfAlgebra R A] [CommRing B] [HopfAlgebra R B]
+  [CommRing K] [Algebra R K] [Algebra S K] [IsScalarTower R S K]
+
+/-- Exact original-object consumer of `hopfBaseChangePointsEquiv_symm_restriction`. -/
+theorem actual_hopf_point_base_change_naturality_hopfBaseChangePointsEquiv_symm_restriction_source (q : A →ₐc[R] B)
+    (p : WithConv (S ⊗[R] B →ₐ[S] K)) :
+    (hopfBaseChangePointsEquiv (R := R) (F := S) (A := A) (K := K)).symm
+        (hopfPointsRestriction (hopfBaseChangeCoordinateMap (S := S) q) p) =
+      hopfPointsRestriction q ((hopfBaseChangePointsEquiv (F := S)).symm p) :=
+  hopfBaseChangePointsEquiv_symm_restriction q p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K A B : Type*} [CommRing R] [CommRing K] [Algebra R K] [Module.Flat R K]
+  [CommRing A] [Bialgebra R A] [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `hopfCoinvariantPointBaseChange_restriction_iff`. -/
+theorem actual_hopf_coinvariant_point_base_change_hopfCoinvariantPointBaseChange_restriction_iff_source (q : A →ₐc[R] B)
+    (p r : A →ₐ[R] K) :
+    p.comp (hopfSubgroupCoinvariants q).val = r.comp (hopfSubgroupCoinvariants q).val ↔
+      (AlgHom.liftEquiv R K A K p).comp
+        (hopfSubgroupCoinvariants (hopfBaseChangeCoordinateMap (S := K) q)).val =
+      (AlgHom.liftEquiv R K A K r).comp
+        (hopfSubgroupCoinvariants (hopfBaseChangeCoordinateMap (S := K) q)).val :=
+  hopfCoinvariantPointBaseChange_restriction_iff q p r
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K A B : Type*} [CommRing R] [Field K] [IsAlgClosed K]
+  [Algebra R K] [Module.Flat R K]
+  [CommRing A] [HopfAlgebra R A] [Module.Finite R A]
+  [CommRing B] [HopfAlgebra R B] [Module.Finite R B] [IsReduced (K ⊗[R] B)]
+
+/-- Exact original-object consumer of `integralHopfCoinvariantPoints_fiber_orbit`. -/
+theorem actual_integral_hopf_coinvariant_point_fibers_integralHopfCoinvariantPoints_fiber_orbit_source (q : A →ₐc[R] B)
+    (p r : WithConv (A →ₐ[R] K)) :
+    p.ofConv.comp (hopfSubgroupCoinvariants q).val =
+      r.ofConv.comp (hopfSubgroupCoinvariants q).val ↔
+    ∃ s : WithConv (B →ₐ[R] K), p * hopfPointsRestriction q s = r :=
+  integralHopfCoinvariantPoints_fiber_orbit q p r
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field K] [IsAlgClosed K] [Algebra R K] [Module.Flat R K]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [CommRing B] [HopfAlgebra R B] [Module.Finite R B] [Module.Free R B]
+  [IsReduced (K ⊗[R] B)]
+
+/-- The same original source point group for the exact quotient consumer. -/
+noncomputable local instance integralHopfQuotientSourcePointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- The same original subgroup point group for the exact quotient consumer. -/
+noncomputable local instance integralHopfQuotientSubgroupPointGroupSource : Group (WithConv (B →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfCoinvariantQuotientPoints_mk`. -/
+theorem actual_integral_hopf_coinvariant_quotient_points_integralHopfCoinvariantQuotientPoints_mk_source (q : A →ₐc[R] B)
+    (p : WithConv (A →ₐ[R] K)) (a : hopfSubgroupCoinvariants q) :
+    letI := hopfCoinvariantHopfAlgebra q
+    letI := integralHopfCoinvariantPointGroup (K := K) q
+    integralHopfCoinvariantQuotientPoints (K := K) q (QuotientGroup.mk p) a = p a.val :=
+  integralHopfCoinvariantQuotientPoints_mk q p a
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [Coalgebra.IsCocomm R A] [CommRing B] [HopfAlgebra R B]
+  [Field K] [Algebra R K]
+
+/-- The same original source point group for the exact quotient consumer. -/
+noncomputable local instance coefficientQuotientSourcePointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- The same original subgroup point group for the exact quotient consumer. -/
+noncomputable local instance coefficientQuotientSubgroupPointGroupSource : Group (WithConv (B →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfQuotientPointCoefficientAutomorphism_mk`. -/
+theorem actual_hopf_quotient_point_coefficient_action_hopfQuotientPointCoefficientAutomorphism_mk_source (q : A →ₐc[R] B) (g : K ≃ₐ[R] K)
+    (p : WithConv (A →ₐ[R] K)) :
+    hopfQuotientPointCoefficientAutomorphism q g (QuotientGroup.mk p) =
+      QuotientGroup.mk (commutativeHopfPointsAutomorphism g p) :=
+  hopfQuotientPointCoefficientAutomorphism_mk q g p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field K] [IsAlgClosed K] [Algebra R K] [Module.Flat R K]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [CommRing B] [HopfAlgebra R B] [Module.Finite R B] [Module.Free R B]
+  [IsReduced (K ⊗[R] B)]
+
+/-- The same original source point group for the exact quotient consumer. -/
+noncomputable local instance integralQuotientGaloisSourcePointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- The same original subgroup point group for the exact quotient consumer. -/
+noncomputable local instance integralQuotientGaloisSubgroupPointGroupSource : Group (WithConv (B →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfCoinvariantQuotientPoints_galois`. -/
+theorem actual_integral_hopf_quotient_point_galois_integralHopfCoinvariantQuotientPoints_galois_source (q : A →ₐc[R] B) (g : K ≃ₐ[R] K) :
+    letI := hopfCoinvariantHopfAlgebra q
+    letI := integralHopfCoinvariantPointGroup (K := K) q
+    ∀ z : WithConv (A →ₐ[R] K) ⧸ (hopfPointsRestriction (K := K) q).range,
+      integralHopfCoinvariantQuotientPoints q (hopfQuotientPointCoefficientAutomorphism q g z) =
+        commutativeHopfPointsAutomorphism g (integralHopfCoinvariantQuotientPoints q z) :=
+  integralHopfCoinvariantQuotientPoints_galois q g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Module.Flat R K] [Normal F K] [IsAlgClosed K]
+
+/-- The original commutative source point group in the exact invariant model consumer. -/
+noncomputable local instance subgroupInvariantModelPointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+omit [Module.Flat R K] in
+/-- Exact original-object consumer of `integralHopfSubgroupInvariantHopfAlgebra_finite_free`. -/
+theorem actual_integral_hopf_subgroup_invariant_model_integralHopfSubgroupInvariantHopfAlgebra_finite_free_source
+    (X : Subgroup (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X) :
+    let C := integralHopfSubgroupInvariantCoordinates X hX
+    letI := integralHopfSubgroupInvariantHopfAlgebra X hX
+    Module.Finite R C ∧ Module.Free R C ∧
+      (Algebra.TensorProduct.map C.val C.val).comp (Bialgebra.comulAlgHom R C) =
+        (Bialgebra.comulAlgHom R A).comp C.val ∧
+      C.val.toLinearMap.comp (HopfAlgebra.antipode R) =
+        (HopfAlgebra.antipode R).comp C.val.toLinearMap :=
+  integralHopfSubgroupInvariantHopfAlgebra_finite_free X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K M ι : Type*} [Field F] [Field K] [Algebra F K] [IsGalois F K]
+  [AddCommGroup M] [Module F M] [Finite ι]
+
+/-- Exact original-object consumer of `galoisTensor_fixed_iff_original`. -/
+theorem actual_galois_tensor_fixed_coordinates_galoisTensor_fixed_iff_original_source (b : Basis ι F M) (z : K ⊗[F] M) :
+    (∀ g : K ≃ₐ[F] K,
+      TensorProduct.map g.toLinearMap (LinearMap.id : M →ₗ[F] M) z = z) ↔
+      ∃ m : M, (1 : K) ⊗ₜ[F] m = z :=
+  galoisTensor_fixed_iff_original b z
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K A : Type*} [Field F] [Field K] [Algebra F K]
+  [CommRing A] [Algebra F A]
+
+/-- Exact original-object consumer of `galoisTensorCoefficientAutomorphism_fixed_iff`. -/
+theorem actual_galois_tensor_point_evaluation_galoisTensorCoefficientAutomorphism_fixed_iff_source [IsGalois F K]
+    {ι : Type*} [Finite ι] (b : Basis ι F A) (z : K ⊗[F] A) :
+    (∀ g : K ≃ₐ[F] K, galoisTensorCoefficientAutomorphism g z = z) ↔
+      ∃ a : A, (1 : K) ⊗ₜ[F] a = z :=
+  galoisTensorCoefficientAutomorphism_fixed_iff b z
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K A B : Type*} [Field F] [PerfectField F]
+  [Field K] [Algebra F K] [IsAlgClosed K]
+  [CommRing A] [HopfAlgebra F A] [Module.Finite F A] [IsReduced A]
+  [CommRing B] [HopfAlgebra F B] [Module.Finite F B] [IsReduced B]
+
+/-- The original source point group in the exact Galois coordinate consumer. -/
+noncomputable local instance galoisCoordinateSourcePointsSource : Group (WithConv (A →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- The original target point group in the exact Galois coordinate consumer. -/
+noncomputable local instance galoisCoordinateTargetPointsSource : Group (WithConv (B →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `galoisHopfGeometricCoordinateEquiv_original_image`. -/
+theorem actual_galois_hopf_coordinate_image_galoisHopfGeometricCoordinateEquiv_original_image_source [IsGalois F K]
+    (e : WithConv (A →ₐ[F] K) ≃* WithConv (B →ₐ[F] K))
+    (he : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[F] K)),
+      e (commutativeHopfPointsAutomorphism g p) = commutativeHopfPointsAutomorphism g (e p))
+    (b : B) :
+    ∃ a : A, (1 : K) ⊗ₜ[F] a = galoisHopfGeometricCoordinateEquiv e ((1 : K) ⊗ₜ[F] b) :=
+  galoisHopfGeometricCoordinateEquiv_original_image e he b
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K A B : Type*} [Field F] [PerfectField F]
+  [Field K] [Algebra F K] [IsAlgClosed K] [IsGalois F K]
+  [CommRing A] [HopfAlgebra F A] [Module.Finite F A] [IsReduced A]
+  [CommRing B] [HopfAlgebra F B] [Module.Finite F B] [IsReduced B]
+
+/-- The original source point group in the exact coordinate descent consumer. -/
+noncomputable local instance originalCoordinateHomSourcePointsSource : Group (WithConv (A →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- The original target point group in the exact coordinate descent consumer. -/
+noncomputable local instance originalCoordinateHomTargetPointsSource : Group (WithConv (B →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `galoisHopfOriginalCoordinateHom_eval`. -/
+theorem actual_galois_hopf_original_coordinate_hom_galoisHopfOriginalCoordinateHom_eval_source
+    (e : WithConv (A →ₐ[F] K) ≃* WithConv (B →ₐ[F] K))
+    (he : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[F] K)),
+      e (commutativeHopfPointsAutomorphism g p) = commutativeHopfPointsAutomorphism g (e p))
+    (b : B) (p : WithConv (A →ₐ[F] K)) :
+    p (galoisHopfOriginalCoordinateHom e he b) = e p b :=
+  galoisHopfOriginalCoordinateHom_eval e he b p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K A B : Type*} [Field F] [PerfectField F]
+  [Field K] [Algebra F K] [IsAlgClosed K] [IsGalois F K]
+  [CommRing A] [HopfAlgebra F A] [Module.Finite F A] [IsReduced A]
+  [CommRing B] [HopfAlgebra F B] [Module.Finite F B] [IsReduced B]
+
+/-- The original source point group in the exact coordinate descent consumer. -/
+noncomputable local instance originalCoordinateEquivSourcePointsSource : Group (WithConv (A →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- The original target point group in the exact coordinate descent consumer. -/
+noncomputable local instance originalCoordinateEquivTargetPointsSource : Group (WithConv (B →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `galoisHopfOriginalCoordinateEquiv_eval`. -/
+theorem actual_galois_hopf_original_coordinate_equiv_galoisHopfOriginalCoordinateEquiv_eval_source
+    (e : WithConv (A →ₐ[F] K) ≃* WithConv (B →ₐ[F] K))
+    (he : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[F] K)),
+      e (commutativeHopfPointsAutomorphism g p) = commutativeHopfPointsAutomorphism g (e p))
+    (b : B) (p : WithConv (A →ₐ[F] K)) :
+    p (galoisHopfOriginalCoordinateEquiv e he b) = e p b :=
+  galoisHopfOriginalCoordinateEquiv_eval e he b p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K A B : Type*} [Field F] [PerfectField F]
+  [Field K] [Algebra F K] [IsAlgClosed K] [IsGalois F K]
+  [CommRing A] [HopfAlgebra F A] [Module.Finite F A] [IsReduced A]
+  [CommRing B] [HopfAlgebra F B] [Module.Finite F B] [IsReduced B]
+
+/-- The original source point group in the exact coordinate descent consumer. -/
+noncomputable local instance originalBialgEquivSourcePointsSource : Group (WithConv (A →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- The original target point group in the exact coordinate descent consumer. -/
+noncomputable local instance originalBialgEquivTargetPointsSource : Group (WithConv (B →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `galoisHopfOriginalBialgEquiv_antipode`. -/
+theorem actual_galois_hopf_original_bialg_equiv_galoisHopfOriginalBialgEquiv_antipode_source
+    (e : WithConv (A →ₐ[F] K) ≃* WithConv (B →ₐ[F] K))
+    (he : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[F] K)),
+      e (commutativeHopfPointsAutomorphism g p) = commutativeHopfPointsAutomorphism g (e p))
+    (b : B) :
+    galoisHopfOriginalBialgEquiv e he (HopfAlgebra.antipode F b) =
+      HopfAlgebra.antipode F (galoisHopfOriginalBialgEquiv e he b) :=
+  galoisHopfOriginalBialgEquiv_antipode e he b
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A] [IsReduced (F ⊗[R] A)]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Normal F K] [IsAlgClosed K]
+
+/-- The same original commutative point group in the exact invariant generic-model consumer. -/
+noncomputable local instance invariantGenericReducedPointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupInvariant_generic_formallyEtale`. -/
+theorem actual_integral_hopf_invariant_generic_reduced_integralHopfSubgroupInvariant_generic_formallyEtale_source
+    (X : Subgroup (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X) :
+    Algebra.FormallyEtale F (F ⊗[R] integralHopfSubgroupInvariantCoordinates X hX) :=
+  integralHopfSubgroupInvariant_generic_formallyEtale X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Module.Flat R K] [Normal F K] [IsAlgClosed K]
+
+/-- The same original commutative point group in the exact invariant generic-model consumer. -/
+noncomputable local instance subgroupInvariantGaloisPointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupInvariantQuotientPoints_galois`. -/
+theorem actual_integral_hopf_subgroup_invariant_galois_integralHopfSubgroupInvariantQuotientPoints_galois_source
+    (X : Subgroup (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X)
+    (g : K ≃ₐ[F] K) :
+    letI := integralHopfSubgroupInvariantHopfAlgebra X hX
+    letI := integralHopfSubgroupInvariantPointGroup X hX
+    ∀ z : WithConv (A →ₐ[R] K) ⧸ X,
+      integralHopfSubgroupInvariantQuotientPoints X hX
+          (integralHopfSubgroupQuotientGaloisAutomorphism X hX g z) =
+        commutativeHopfPointsAutomorphism (g.restrictScalars R)
+          (integralHopfSubgroupInvariantQuotientPoints X hX z) :=
+  integralHopfSubgroupInvariantQuotientPoints_galois X hX g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Module.Flat R K] [Normal F K] [IsAlgClosed K]
+
+/-- The same original commutative point group in the exact invariant generic-model consumer. -/
+noncomputable local instance invariantGenericPointGroupSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupInvariantGenericQuotientPoints_galois`. -/
+theorem actual_integral_hopf_invariant_generic_points_integralHopfSubgroupInvariantGenericQuotientPoints_galois_source
+    (X : Subgroup (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X)
+    (g : K ≃ₐ[F] K) :
+    letI := integralHopfSubgroupInvariantHopfAlgebra X hX
+    letI := integralHopfSubgroupInvariantGenericHopfAlgebra X hX
+    letI := integralHopfSubgroupInvariantGenericPointGroup X hX
+    ∀ z : WithConv (A →ₐ[R] K) ⧸ X,
+      integralHopfSubgroupInvariantGenericQuotientPoints X hX
+          (integralHopfSubgroupQuotientGaloisAutomorphism X hX g z) =
+        commutativeHopfPointsAutomorphism
+          (A := F ⊗[R] integralHopfSubgroupInvariantCoordinates X hX) g
+          (integralHopfSubgroupInvariantGenericQuotientPoints X hX z) :=
+  integralHopfSubgroupInvariantGenericQuotientPoints_galois X hX g
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A] [IsReduced (F ⊗[R] A)]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Module.Flat R K] [IsGalois F K] [IsAlgClosed K]
+  [CommRing B] [HopfAlgebra F B] [Module.Finite F B] [IsReduced B]
+
+/-- The same original commutative point group in the exact invariant generic-model consumer. -/
+noncomputable local instance invariantGenericCoordinateAmbientPointsSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- The actual independent generic coordinate point group in the exact consumer. -/
+noncomputable local instance invariantGenericCoordinateTargetPointsSource : Group (WithConv (B →ₐ[F] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupInvariantGenericCoordinateEquiv_eval`. -/
+theorem actual_integral_hopf_invariant_generic_coordinate_integralHopfSubgroupInvariantGenericCoordinateEquiv_eval_source
+    (X : Subgroup (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X)
+    (e : (WithConv (A →ₐ[R] K) ⧸ X) ≃* WithConv (B →ₐ[F] K))
+    (he : ∀ (g : K ≃ₐ[F] K) (z : WithConv (A →ₐ[R] K) ⧸ X),
+      e (integralHopfSubgroupQuotientGaloisAutomorphism X hX g z) =
+        commutativeHopfPointsAutomorphism g (e z))
+    (b : B) (z : WithConv (A →ₐ[R] K) ⧸ X) :
+    integralHopfSubgroupInvariantGenericQuotientPoints X hX z
+      (integralHopfSubgroupInvariantGenericCoordinateEquiv X hX e he b) = e z b :=
+  integralHopfSubgroupInvariantGenericCoordinateEquiv_eval X hX e he b z
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [Bialgebra R A]
+  [CommRing B] [Bialgebra R B]
+
+/-- Exact original-object consumer of `bialgebraIsCocomm_of_injective`. -/
+theorem actual_bialgebra_cocommutative_descent_bialgebraIsCocomm_of_injective_source [Module.Flat R A] [Module.Flat R B]
+    [Coalgebra.IsCocomm R B] (q : A →ₐc[R] B) (hq : Function.Injective q) :
+    Coalgebra.IsCocomm R A :=
+  bialgebraIsCocomm_of_injective q hq
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F A K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Algebra R F] [IsFractionRing R F]
+  [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+  [Module.Finite R A] [Module.Free R A]
+  [Field K] [Algebra R K] [Algebra F K] [IsScalarTower R F K]
+  [Normal F K] [IsAlgClosed K]
+
+/-- The actual original point group in the exact cocommutativity consumer. -/
+noncomputable local instance subgroupCocommutativityPointsSource : CommGroup (WithConv (A →ₐ[R] K)) :=
+  finiteFreeHopfPointsCommGroup
+
+/-- Exact original-object consumer of `integralHopfSubgroupInvariant_isCocomm`. -/
+theorem actual_integral_hopf_subgroup_cocommutativity_integralHopfSubgroupInvariant_isCocomm_source
+    (X : Subgroup (WithConv (A →ₐ[R] K)))
+    (hX : ∀ (g : K ≃ₐ[F] K) (p : WithConv (A →ₐ[R] K)), p ∈ X →
+      commutativeHopfPointsAutomorphism (g.restrictScalars R) p ∈ X) :
+    letI := integralHopfSubgroupInvariantHopfAlgebra X hX
+    letI : Coalgebra R (integralHopfSubgroupInvariantCoordinates X hX) :=
+      (integralHopfSubgroupInvariantHopfAlgebra X hX).toCoalgebra
+    Coalgebra.IsCocomm R (integralHopfSubgroupInvariantCoordinates X hX) :=
+  integralHopfSubgroupInvariant_isCocomm X hX
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uR uF uK uV uC
+
+variable (R : Type uR) (F : Type uF) (K : Type uK) (V : Type uV)
+  [CommRing R] [Field F] [Field K] [Algebra R F] [Algebra F K] [Algebra R K]
+  [IsScalarTower R F K] [CommGroup V]
+
+variable {R F K V} {ρ : (K ≃ₐ[F] K) →* MulAut V}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_isOpen_ker`. -/
+theorem actual_finite_free_hopf_point_model_finiteFreeHopfPointModel_isOpen_ker_source [Algebra.IsIntegral F K]
+    (m : FiniteFreeHopfPointModel R F K V ρ) :
+    IsOpen (ρ.ker : Set (K ≃ₐ[F] K)) :=
+  finiteFreeHopfPointModel_isOpen_ker m
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R F K V W : Type*} [CommRing R] [Field F] [Field K]
+  [Algebra R F] [Algebra F K] [Algebra R K] [IsScalarTower R F K]
+  [CommGroup V] [CommGroup W]
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_product_points`. -/
+theorem actual_finite_free_hopf_point_model_product_finiteFreeHopfPointModel_product_points_source
+    {ρ : (K ≃ₐ[F] K) →* MulAut V} {τ : (K ≃ₐ[F] K) →* MulAut W}
+    (m : FiniteFreeHopfPointModel R F K V ρ) (n : FiniteFreeHopfPointModel R F K W τ) :
+    letI := m.commRing
+    letI := m.hopf
+    letI := n.commRing
+    letI := n.hopf
+    ∀ p : WithConv ((m.Coordinates ⊗[R] n.Coordinates) →ₐ[R] K),
+      (finiteFreeHopfPointModelProduct m n).pointEquiv p =
+        (m.pointEquiv (hopfTensorPointsProductEquiv p).1,
+         n.pointEquiv (hopfTensorPointsProductEquiv p).2) :=
+  finiteFreeHopfPointModel_product_points m n
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K V : Type*} [Field F] [Field K] [Algebra F K] [CommGroup V]
+
+/-- Exact original-object consumer of `galoisModuleQuotientAction_mk`. -/
+theorem actual_galois_module_subquotient_actions_galoisModuleQuotientAction_mk_source
+    (ρ : (K ≃ₐ[F] K) →* MulAut V) (H : Subgroup V)
+    (hH : ∀ (g : K ≃ₐ[F] K) (v : V), v ∈ H → ρ g v ∈ H)
+    (g : K ≃ₐ[F] K) (v : V) :
+    galoisModuleQuotientAction ρ H hH g (QuotientGroup.mk v) =
+      QuotientGroup.mk (ρ g v) :=
+  galoisModuleQuotientAction_mk ρ H hH g v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uR uF uK uV uC
+
+variable {R : Type uR} {F : Type uF} {K : Type uK} {V : Type uV}
+  [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [CommGroup V] {ρ : (K ≃ₐ[F] K) →* MulAut V}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_subgroup_exists`. -/
+theorem actual_finite_free_hopf_point_model_subgroup_finiteFreeHopfPointModel_subgroup_exists_source
+    (m : FiniteFreeHopfPointModel.{uR,uF,uK,uV,uC} R F K V ρ) (H : Subgroup V)
+    (hH : ∀ (g : K ≃ₐ[F] K) (v : V), v ∈ H → ρ g v ∈ H) :
+    Nonempty (FiniteFreeHopfPointModel.{uR,uF,uK,uV,uC} R F K H
+      (galoisModuleSubgroupAction ρ H hH)) :=
+  finiteFreeHopfPointModel_subgroup_exists m H hH
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uR uF uK uV uC
+
+variable {R : Type uR} {F : Type uF} {K : Type uK} {V : Type uV}
+  [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [Module.Flat R K] [CommGroup V] {ρ : (K ≃ₐ[F] K) →* MulAut V}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_quotient_exists`. -/
+theorem actual_finite_free_hopf_point_model_quotient_finiteFreeHopfPointModel_quotient_exists_source
+    (m : FiniteFreeHopfPointModel.{uR,uF,uK,uV,uC} R F K V ρ) (H : Subgroup V)
+    (hH : ∀ (g : K ≃ₐ[F] K) (v : V), v ∈ H → ρ g v ∈ H) :
+    Nonempty (FiniteFreeHopfPointModel.{uR,uF,uK,uV,uC} R F K (V ⧸ H)
+      (galoisModuleQuotientAction ρ H hH)) :=
+  finiteFreeHopfPointModel_quotient_exists m H hH
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv CategoryTheory Opposite
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {R A : Type u} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [Coalgebra.IsCocomm R A]
+
+/-- The same original opposite-algebra Cartesian category in the exact consumer. -/
+noncomputable local instance coordinatePresheafCartesianSource : CartesianMonoidalCategory ((CommAlgCat.{u} R)ᵒᵖ) :=
+  CartesianMonoidalCategory.ofHasFiniteProducts
+
+/-- Retain the original chosen-product monoidal structure in the wider import graph. -/
+noncomputable local instance coordinatePresheafMonoidalSource : MonoidalCategory ((CommAlgCat.{u} R)ᵒᵖ) :=
+  coordinatePresheafCartesianSource.toSemiCartesianMonoidalCategory.toMonoidalCategory
+
+/-- The same actual product symmetry in the exact consumer. -/
+noncomputable local instance coordinatePresheafBraidedSource : BraidedCategory ((CommAlgCat.{u} R)ᵒᵖ) :=
+  BraidedCategory.ofCartesianMonoidalCategory
+
+/-- Exact original-object consumer of `hopfCoordinateCommutativeGroupObject_exists`. -/
+theorem actual_hopf_coordinate_commutative_group_presheaf_hopfCoordinateCommutativeGroupObject_exists_source :
+    Nonempty (CommGrpObj (op (CommAlgCat.of R A))) :=
+  hopfCoordinateCommutativeGroupObject_exists (R := R) (A := A)
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv CategoryTheory Opposite AlgebraicGeometry
+open scoped TensorProduct NumberField nonZeroDivisors CategoryTheory.MonObj CategoryTheory.Obj
+
+universe u
+
+variable {R : Type u} [CommRing R]
+
+variable {A : Type u} [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A]
+
+/-- Exact original-object consumer of `hopfCoordinateAffineGroupScheme_flat`. -/
+theorem actual_hopf_coordinate_affine_group_scheme_hopfCoordinateAffineGroupScheme_flat_source [Module.Flat R A] :
+    AlgebraicGeometry.Flat (hopfCoordinateAffineGroupScheme (R := R) (A := A)).X.hom :=
+  hopfCoordinateAffineGroupScheme_flat (R := R) (A := A)
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv CategoryTheory Opposite AlgebraicGeometry
+open scoped TensorProduct NumberField nonZeroDivisors CategoryTheory.MonObj CategoryTheory.Obj
+
+universe u
+
+variable {R A : Type u} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [Coalgebra.IsCocomm R A]
+
+/-- Exact original-object consumer of `hopfAffineSchemePointGroupEquiv_coefficient`. -/
+theorem actual_hopf_affine_scheme_point_group_hopfAffineSchemePointGroupEquiv_coefficient_source (B C : CommAlgCat.{u} R)
+    (f : B ⟶ C) (p : WithConv (A →ₐ[R] B)) :
+    hopfAffineSchemePointGroupEquiv C (commutativeHopfPointsMap f.hom p) =
+      (coordinateRelativeSpec (R := R)).map f.op ≫ hopfAffineSchemePointGroupEquiv B p :=
+  hopfAffineSchemePointGroupEquiv_coefficient B C f p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv CategoryTheory Opposite AlgebraicGeometry
+open scoped TensorProduct NumberField nonZeroDivisors CategoryTheory.MonObj CategoryTheory.Obj
+
+universe u
+
+variable {R F K V : Type u} [CommRing R] [Field F] [Field K]
+  [Algebra R F] [Algebra F K] [Algebra R K] [IsScalarTower R F K]
+  [CommGroup V] {ρ : (K ≃ₐ[F] K) →* MulAut V}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_schemePoints_galois`. -/
+theorem actual_finite_free_hopf_model_scheme_realization_finiteFreeHopfPointModel_schemePoints_galois_source
+    (m : FiniteFreeHopfPointModel.{u, u, u, u, u} R F K V ρ)
+    (g : K ≃ₐ[F] K) (v : V) :
+    finiteFreeHopfPointModelSchemePoints m (ρ g v) =
+      (coordinateRelativeSpec (R := R)).map
+        (CommAlgCat.ofHom (g.restrictScalars R).toAlgHom).op ≫
+          finiteFreeHopfPointModelSchemePoints m v :=
+  finiteFreeHopfPointModel_schemePoints_galois m g v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A] [Module.Free R A]
+  [CommRing B] [Algebra R B]
+
+/-- Exact original-object consumer of `freeHopfCoordinateTransfer_antipode`. -/
+theorem actual_free_hopf_coordinate_transfer_freeHopfCoordinateTransfer_antipode_source (e : B ≃ₐ[R] A) (b : B) :
+    letI := freeHopfCoordinateTransfer e
+    e (HopfAlgebra.antipode R b) = HopfAlgebra.antipode R (e b) :=
+  freeHopfCoordinateTransfer_antipode e b
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B K : Type*} [CommRing R]
+  [CommRing A] [HopfAlgebra R A] [CommRing B] [HopfAlgebra R B]
+  [CommRing K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfCoordinateEquivPoints_coefficient`. -/
+theorem actual_hopf_coordinate_equiv_points_hopfCoordinateEquivPoints_coefficient_source (e : B ≃ₐc[R] A)
+    (g : K ≃ₐ[R] K) (p : WithConv (A →ₐ[R] K)) :
+    hopfCoordinateEquivPoints e (commutativeHopfPointsAutomorphism g p) =
+      commutativeHopfPointsAutomorphism g (hopfCoordinateEquivPoints e p) :=
+  hopfCoordinateEquivPoints_coefficient e g p
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uR uF uK uV uC
+
+variable {R : Type uR} {F : Type uF} {K : Type uK} {V : Type uV}
+  [CommRing R] [Field F] [Field K] [Algebra R F] [Algebra F K] [Algebra R K]
+  [IsScalarTower R F K] [CommGroup V] {ρ : (K ≃ₐ[F] K) →* MulAut V}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_resize_exists`. -/
+theorem actual_finite_free_hopf_model_coordinate_resize_finiteFreeHopfPointModel_resize_exists_source
+    (m : FiniteFreeHopfPointModel.{uR, uF, uK, uV, uC} R F K V ρ) :
+    Nonempty (FiniteFreeHopfPointModel.{uR, uF, uK, uV, uR} R F K V ρ) :=
+  finiteFreeHopfPointModel_resize_exists m
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {R F K V W : Type*} [CommRing R] [Field F] [Field K]
+  [Algebra R F] [Algebra F K] [Algebra R K] [IsScalarTower R F K]
+  [CommGroup V] [CommGroup W]
+  {ρ : (K ≃ₐ[F] K) →* MulAut V} {τ : (K ≃ₐ[F] K) →* MulAut W}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_equiv_points`. -/
+theorem actual_finite_free_hopf_point_model_equiv_finiteFreeHopfPointModel_equiv_points_source
+    (m : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K V ρ) (e : V ≃* W)
+    (he : ∀ (g : K ≃ₐ[F] K) (v : V), e (ρ g v) = τ g (e v)) :
+    (finiteFreeHopfPointModelEquiv m e he).pointEquiv = m.pointEquiv.trans e :=
+  finiteFreeHopfPointModel_equiv_points m e he
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {R F K V W : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [CommGroup V] [CommGroup W]
+  {ρ : (K ≃ₐ[F] K) →* MulAut V} {τ : (K ≃ₐ[F] K) →* MulAut W}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_of_injective_exists`. -/
+theorem actual_finite_free_hopf_point_model_embedding_finiteFreeHopfPointModel_of_injective_exists_source
+    (m : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K W τ) (f : V →* W)
+    (hf : Function.Injective f)
+    (he : ∀ (g : K ≃ₐ[F] K) (v : V), f (ρ g v) = τ g (f v)) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K V ρ) :=
+  finiteFreeHopfPointModel_of_injective_exists m f hf he
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {R F K V W : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [Module.Flat R K] [CommGroup V] [CommGroup W]
+  {ρ : (K ≃ₐ[F] K) →* MulAut V} {τ : (K ≃ₐ[F] K) →* MulAut W}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_of_surjective_exists`. -/
+theorem actual_finite_free_hopf_point_model_surjection_finiteFreeHopfPointModel_of_surjective_exists_source
+    (m : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K V ρ) (f : V →* W)
+    (hf : Function.Surjective f)
+    (he : ∀ (g : K ≃ₐ[F] K) (v : V), f (ρ g v) = τ g (f v)) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K W τ) :=
+  finiteFreeHopfPointModel_of_surjective_exists m f hf he
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O G V W : Type*} [CommRing O] [Group G]
+  [AddCommGroup V] [Module O V] [AddCommGroup W] [Module O W]
+
+/-- Exact original-object consumer of `representationUnderlyingGroupAction_intertwining`. -/
+theorem actual_representation_underlying_group_action_representationUnderlyingGroupAction_intertwining_source
+    (ρ : Representation O G V) (τ : Representation O G W) (f : V →ₗ[O] W)
+    (hf : ∀ (g : G) (v : V), f (ρ g v) = τ g (f v))
+    (g : G) (v : Multiplicative V) :
+    f.toAddMonoidHom.toMultiplicative (representationUnderlyingGroupAction ρ g v) =
+      representationUnderlyingGroupAction τ g (f.toAddMonoidHom.toMultiplicative v) :=
+  representationUnderlyingGroupAction_intertwining ρ τ f hf g v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {R F K O V W : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [CommRing O] [AddCommGroup V] [Module O V] [AddCommGroup W] [Module O W]
+
+/-- Exact original-object consumer of `representationHopfModel_of_surjective_exists`. -/
+theorem actual_representation_hopf_model_maps_representationHopfModel_of_surjective_exists_source [Module.Flat R K]
+    (ρ : Representation O (K ≃ₐ[F] K) V) (τ : Representation O (K ≃ₐ[F] K) W)
+    (m : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative V)
+      (representationUnderlyingGroupAction ρ))
+    (f : V →ₗ[O] W) (hf : Function.Surjective f)
+    (he : ∀ (g : K ≃ₐ[F] K) (v : V), f (ρ g v) = τ g (f v)) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative W)
+      (representationUnderlyingGroupAction τ)) :=
+  representationHopfModel_of_surjective_exists ρ τ m f hf he
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing A] [CommRing B]
+
+/-- Exact original-object consumer of `matrixCoefficientVectorMap_equivariant`. -/
+theorem actual_matrix_coefficient_point_actions_matrixCoefficientVectorMap_equivariant_source (f : A →+* B)
+    (ρ : G →* GeneralLinearGroup ι A) (g : G) (v : Multiplicative (ι → A)) :
+    matrixCoefficientVectorMap f (matrixUnderlyingGroupAction ρ g v) =
+      matrixUnderlyingGroupAction ((GeneralLinearGroup.map f).comp ρ) g
+        (matrixCoefficientVectorMap f v) :=
+  matrixCoefficientVectorMap_equivariant f ρ g v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {R F K ι A B : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [Fintype ι] [DecidableEq ι] [CommRing A] [CommRing B]
+
+/-- Exact original-object consumer of `matrixCoefficientHopfModel_of_surjective_exists`. -/
+theorem actual_matrix_coefficient_hopf_models_matrixCoefficientHopfModel_of_surjective_exists_source [Module.Flat R K]
+    (f : A →+* B) (hf : Function.Surjective f)
+    (ρ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι A)
+    (m : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A))
+      (matrixUnderlyingGroupAction ρ)) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → B))
+      (matrixUnderlyingGroupAction ((GeneralLinearGroup.map f).comp ρ))) :=
+  matrixCoefficientHopfModel_of_surjective_exists f hf ρ m
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F K ι A B C : Type*} [Field F] [Field K] [Algebra F K]
+  [Fintype ι] [DecidableEq ι] [CommRing A] [CommRing B] [CommRing C]
+
+/-- Exact original-object consumer of `matrixFiberProductVectorMap_equivariant`. -/
+theorem actual_matrix_fiber_product_point_embedding_matrixFiberProductVectorMap_equivariant_source (f : A →+* C) (g : B →+* C)
+    (ρ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι (CoefficientFiberProduct f g))
+    (s : K ≃ₐ[F] K) (v : Multiplicative (ι → CoefficientFiberProduct f g)) :
+    matrixFiberProductVectorMap f g (matrixUnderlyingGroupAction ρ s v) =
+      galoisModuleProductAction
+        (matrixUnderlyingGroupAction ((GeneralLinearGroup.map
+          (coefficientFiberProductFst f g)).comp ρ))
+        (matrixUnderlyingGroupAction ((GeneralLinearGroup.map
+          (coefficientFiberProductSnd f g)).comp ρ)) s
+        (matrixFiberProductVectorMap f g v) :=
+  matrixFiberProductVectorMap_equivariant f g ρ s v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC uD
+
+variable {R F K ι A B C : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [Fintype ι] [DecidableEq ι] [CommRing A] [CommRing B] [CommRing C]
+
+/-- Exact original-object consumer of `matrixFiberProductHopfModel_exists`. -/
+theorem actual_matrix_fiber_product_hopf_model_matrixFiberProductHopfModel_exists_source (f : A →+* C) (g : B →+* C)
+    (ρ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι (CoefficientFiberProduct f g))
+    (mA : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A))
+      (matrixUnderlyingGroupAction ((GeneralLinearGroup.map
+        (coefficientFiberProductFst f g)).comp ρ)))
+    (mB : FiniteFreeHopfPointModel.{_, _, _, _, uD} R F K (Multiplicative (ι → B))
+      (matrixUnderlyingGroupAction ((GeneralLinearGroup.map
+        (coefficientFiberProductSnd f g)).comp ρ))) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, max uC uD} R F K (Multiplicative (ι → CoefficientFiberProduct f g))
+      (matrixUnderlyingGroupAction ρ)) :=
+  matrixFiberProductHopfModel_exists f g ρ mA mB
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing A]
+
+/-- Exact original-object consumer of `matrixConjugacyVectorEquiv_equivariant`. -/
+theorem actual_matrix_conjugacy_vector_equiv_matrixConjugacyVectorEquiv_equivariant_source
+    (ρ τ : G →* GeneralLinearGroup ι A) (U : GeneralLinearGroup ι A)
+    (hc : ∀ g, τ g = U * ρ g * U⁻¹) (g : G) (v : Multiplicative (ι → A)) :
+    matrixConjugacyVectorEquiv U (matrixUnderlyingGroupAction ρ g v) =
+      matrixUnderlyingGroupAction τ g (matrixConjugacyVectorEquiv U v) :=
+  matrixConjugacyVectorEquiv_equivariant ρ τ U hc g v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {R F K ι A : Type*} [CommRing R] [Field F] [Field K]
+  [Algebra R F] [Algebra F K] [Algebra R K] [IsScalarTower R F K]
+  [Fintype ι] [DecidableEq ι] [CommRing A]
+
+/-- Exact original-object consumer of `matrixHopfModel_strictConjugacy_iff`. -/
+theorem actual_matrix_conjugacy_hopf_models_matrixHopfModel_strictConjugacy_iff_source {k : Type*} [CommRing k]
+    (r : A →+* k) (ρ τ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι A)
+    (h : MatrixStrictlyConjugate r ρ τ) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A))
+      (matrixUnderlyingGroupAction ρ)) ↔
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A))
+      (matrixUnderlyingGroupAction τ)) :=
+  matrixHopfModel_strictConjugacy_iff r ρ τ h
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC uD
+
+variable {R F K ι A B C k : Type} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [Fintype ι] [DecidableEq ι] [CommRing A] [CommRing B] [CommRing C] [CommRing k]
+  [TopologicalSpace A] [TopologicalSpace B] [IsTopologicalRing B]
+
+/-- Exact original-object consumer of `continuousCoefficientFiberProductHopfModel_exists`. -/
+theorem actual_continuous_fiber_product_hopf_models_continuousCoefficientFiberProductHopfModel_exists_source
+    (f : A →+* C) (g : B →+* C) (hg : Function.Surjective g) [IsLocalHom g]
+    (rC : C →+* k)
+    (ρA : (K ≃ₐ[F] K) →ₜ* GeneralLinearGroup ι A)
+    (ρB : (K ≃ₐ[F] K) →ₜ* GeneralLinearGroup ι B)
+    (h : MatrixStrictlyConjugate rC
+      ((GeneralLinearGroup.map g).comp ρB.toMonoidHom)
+      ((GeneralLinearGroup.map f).comp ρA.toMonoidHom))
+    (mA : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A))
+      (matrixUnderlyingGroupAction ρA.toMonoidHom))
+    (mB : FiniteFreeHopfPointModel.{_, _, _, _, uD} R F K (Multiplicative (ι → B))
+      (matrixUnderlyingGroupAction ρB.toMonoidHom)) :
+    ∃ ρ : (K ≃ₐ[F] K) →ₜ* GeneralLinearGroup ι (CoefficientFiberProduct f g),
+      (GeneralLinearGroup.map (coefficientFiberProductFst f g)).comp ρ.toMonoidHom =
+        ρA.toMonoidHom ∧
+      MatrixStrictlyConjugate (rC.comp g) ρB.toMonoidHom
+        ((GeneralLinearGroup.map (coefficientFiberProductSnd f g)).comp ρ.toMonoidHom) ∧
+      Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, max uC uD} R F K (Multiplicative (ι → CoefficientFiberProduct f g))
+        (matrixUnderlyingGroupAction ρ.toMonoidHom)) :=
+  continuousCoefficientFiberProductHopfModel_exists f g hg rC ρA ρB h mA mB
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe uC
+
+variable {G ι A : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing A]
+
+variable {R F K : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+
+/-- Exact original-object consumer of `matrixIdealQuotientHopfModel_transition_exists`. -/
+theorem actual_matrix_ideal_quotient_hopf_models_matrixIdealQuotientHopfModel_transition_exists_source (I J : Ideal A) (hIJ : I ≤ J)
+    (ρ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι A)
+    (m : FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A ⧸ I))
+      (matrixUnderlyingGroupAction (matrixIdealQuotientRepresentation I ρ))) :
+    Nonempty (FiniteFreeHopfPointModel.{_, _, _, _, uC} R F K (Multiplicative (ι → A ⧸ J))
+      (matrixUnderlyingGroupAction (matrixIdealQuotientRepresentation J ρ))) :=
+  matrixIdealQuotientHopfModel_transition_exists I J hIJ ρ m
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable (R F K : Type u) {ι A : Type u}
+  [CommRing R] [Field F] [Field K] [Algebra R F] [Algebra F K] [Algebra R K]
+  [IsScalarTower R F K] [Fintype ι] [DecidableEq ι] [CommRing A] [IsLocalRing A]
+
+variable {R F K}
+
+variable [IsDomain R] [IsPrincipalIdealRing R] [PerfectField F] [IsFractionRing R F]
+  [Normal F K] [IsAlgClosed K]
+
+/-- Exact original-object consumer of `matrixAdicHopfFlat_of_cofinal`. -/
+theorem actual_matrix_adic_hopf_flat_condition_matrixAdicHopfFlat_of_cofinal_source
+    (ρ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι A)
+    (levels : Set ℕ)
+    (hlevels : ∀ n : ℕ, 0 < n → ∃ m ∈ levels, n ≤ m)
+    (hmodels : ∀ m ∈ levels,
+      Nonempty (FiniteFreeHopfPointModel.{u,u,u,u,u} R F K
+        (Multiplicative (ι → A ⧸ IsLocalRing.maximalIdeal A ^ m))
+        (matrixUnderlyingGroupAction
+          (matrixIdealQuotientRepresentation (IsLocalRing.maximalIdeal A ^ m) ρ)))) :
+    MatrixAdicHopfFlat R F K ρ :=
+  matrixAdicHopfFlat_of_cofinal ρ levels hlevels hmodels
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B : Type*} [Group G] [CommRing A] [CommRing B]
+  [Fintype B]
+
+variable [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `finiteCoefficientVectorSpanningMap_equivariant`. -/
+theorem actual_finite_coefficient_vector_spanning_finiteCoefficientVectorSpanningMap_equivariant_source (f : A →+* B)
+    (ρ : G →* GeneralLinearGroup ι A) (g : G) (v : B → Multiplicative (ι → A)) :
+    finiteCoefficientVectorSpanningMap f (fun b => matrixUnderlyingGroupAction ρ g (v b)) =
+      matrixUnderlyingGroupAction ((GeneralLinearGroup.map f).comp ρ) g
+        (finiteCoefficientVectorSpanningMap f v) :=
+  finiteCoefficientVectorSpanningMap_equivariant f ρ g v
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G V : Type*} [Group G] [CommGroup V]
+
+variable {R F K W : Type u} [CommRing R] [Field F] [Field K]
+  [Algebra R F] [Algebra F K] [Algebra R K] [IsScalarTower R F K] [CommGroup W]
+  {τ : (K ≃ₐ[F] K) →* MulAut W}
+
+/-- Exact original-object consumer of `finiteFreeHopfPointModel_finitePi_exists`. -/
+theorem actual_finite_free_hopf_point_model_finite_power_finiteFreeHopfPointModel_finitePi_exists_source (J : Type u) [Fintype J] [Nonempty J]
+    (m : FiniteFreeHopfPointModel.{u,u,u,u,u} R F K W τ) :
+    Nonempty (FiniteFreeHopfPointModel.{u,u,u,u,u} R F K (J → W) (galoisModulePiAction J τ)) :=
+  finiteFreeHopfPointModel_finitePi_exists J m
+
+end
+
+
+section
+
+open IsDedekindDomain Matrix Module WithConv
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {R F K ι A B : Type u} [CommRing R] [IsDomain R] [IsPrincipalIdealRing R]
+  [Field F] [PerfectField F] [Field K] [Algebra R F] [IsFractionRing R F]
+  [Algebra R K] [Algebra F K] [IsScalarTower R F K] [Normal F K] [IsAlgClosed K]
+  [Fintype ι] [DecidableEq ι] [CommRing A] [CommRing B] [Fintype B]
+
+/-- Exact original-object consumer of `finiteCoefficientExtensionHopfModel_exists`. -/
+theorem actual_finite_coefficient_extension_hopf_model_finiteCoefficientExtensionHopfModel_exists_source (f : A →+* B)
+    (ρ : (K ≃ₐ[F] K) →* GeneralLinearGroup ι A)
+    (m : FiniteFreeHopfPointModel.{u,u,u,u,u} R F K (Multiplicative (ι → A))
+      (matrixUnderlyingGroupAction ρ)) :
+    Nonempty (FiniteFreeHopfPointModel.{u,u,u,u,u} R F K (Multiplicative (ι → B))
+      (matrixUnderlyingGroupAction ((GeneralLinearGroup.map f).comp ρ))) :=
+  finiteCoefficientExtensionHopfModel_exists f ρ m
+
+end
+
 end Dubon2026.SemanticRegression

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-10",
+  "status": "All four modules1862-1865, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "scope": [
+    1865,
+    1232,
+    7611
+  ],
+  "modules": [
+    {
+      "scope": 1862,
+      "name": "IntegralHopfInvariantGenericReduced",
+      "draftSha256": "7d2ea28865b75125432d13f85f8624c02213a96e60734e3f31745b113dcb586b",
+      "mathematics": "The literal generic fiber of the original invariant coordinate subalgebra injects into the same original generic coordinate algebra by actual flat tensor inclusion. Original generic reducedness therefore implies invariant generic reducedness. The proved finite original coordinates and perfect fraction field derive formal etaleness of that same genuine generic fiber.",
+      "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "78ab5992284e929d41b02545c51cdfc116bfa413a6bf802d3ff6706039fed55a",
+      "productionLog": "invariantReduced1862c-focus.log",
+      "productionFixes": [
+        "Import pinned Flat.Localization and derive Module.Flat R F from the actual fraction-field localization.",
+        "Remove unused flatness over K and omit unused ambient freeness in the reducedness theorem; finite-freeness remains used by the formally etale theorem."
+      ]
+    },
+    {
+      "scope": 1863,
+      "name": "IntegralHopfSubgroupInvariantGalois",
+      "draftSha256": "fb047bcfebc77656646829edd0c00249b54c508191c72acea5dcb5c6215a46ee",
+      "mathematics": "The genuine original Galois action descends to the quotient by the specified original subgroup, with both directions of subgroup stability proved using the original automorphism and its inverse. The actual constructed integral invariant-model point equivalence intertwines this original quotient action with the genuine coordinate coefficient action, retaining the original representative.",
+      "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "47bedbe844a537e428daa87c15f996952be5b57aa42627d42051e63e519d9e05",
+      "productionLog": "invariantGalois1863b-focus.log",
+      "productionFixes": [
+        "Omit nine unused original ambient finite/freeness, base-domain and field-closure hypotheses from the quotient representative evaluation theorem. Its original group and coefficient action are unchanged."
+      ]
+    },
+    {
+      "scope": 1864,
+      "name": "IntegralHopfInvariantGenericPoints",
+      "draftSha256": "d8b7dcea944b75765f59bdd7c2363a114a0c760b95848c9d7bd4dfd41f4de11e",
+      "mathematics": "Compose the actual original subgroup quotient point equivalence with the genuine point scalar-extension equivalence to realize the original quotient as points of the literal generic fiber of the constructed invariant Hopf algebra. The original pure invariant coordinate evaluation is retained, and the proved original integral Galois comparison and exact base-change equivariance derive the genuine generic-fiber Galois comparison.",
+      "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "fefe74ced733c481993ccecc3760489a591803aee072aa9b9d640f384357bb44",
+      "productionLog": "invariantPoints1864d-focus.log",
+      "productionFixes": [
+        "Specify the original base field, invariant-coordinate algebra and point field in genuine base-change and point-group APIs.",
+        "Derive an explicit generic Hopf algebra abbreviation from pinned TensorProduct.instHopfAlgebra, retaining the actual invariant coordinate algebra and both original tensor factors. Install it in signatures and proofs, resolving reducibility-limited typeclass search.",
+        "Retain exact original coordinate evaluation and original Galois action; no hypotheses or algebraic objects changed."
+      ]
+    },
+    {
+      "scope": 1865,
+      "name": "IntegralHopfInvariantGenericCoordinateEquiv",
+      "draftSha256": "728524b1597fa85b5ceb5a61016359b870fddf97eef761be6e68a75eb82be674",
+      "mathematics": "The genuine generic quotient point realization and a specified original Galois-equivariant comparison with an independently given finite reduced Hopf algebra yield a Galois-equivariant comparison of the actual generic point groups. Original-field Hopf coordinate reconstruction then constructs a bialgebra equivalence from the given coordinate algebra onto the literal generic fiber of the constructed finite free invariant model. Its original point evaluation and actual antipode compatibility are retained.",
+      "boundary": "Reducedness of the original ambient generic fiber and the specified original point comparison are explicit upstream hypotheses. The actual generic coordinate equivalence is constructed, not assumed. Arithmetic realization for the given Galois representation at every finite coefficient quotient and finite-flat deformation closure remain open. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "productionSha256": "557bdf4e7c454dccd38d5ac48fcca1fde3a7042b6741b7931efee5be4ef34efc",
+      "productionLog": "invariantCoordinates1865g-focus.log",
+      "productionFixes": [
+        "Install the genuine generic tensor Hopf structure and its point group explicitly in the statements and proof bodies.",
+        "Expose the actual generic coalgebra structure and the finite-module proof for precisely the Hopf algebra scalar action; the finite-module proof is derived from original finite coordinates and pinned Module.Finite.base_change.",
+        "Give explicit original fields and coordinate types to descent and antipode APIs.",
+        "Prove original point evaluation by an explicit composition and inverse identity, avoiding simplifier transparency problems."
+      ],
+      "consumerFixes": [
+        "Give the coordinate-equivalence consumer its distinct local instance name invariantGenericCoordinateAmbientPointsSource; no proposition or proof changed."
+      ]
+    }
+  ],
+  "semanticBoundary": "The intended scope derives reducedness and formal etaleness of the literal invariant generic fiber from the original ambient generic reducedness, proves original quotient Galois equivariance, and constructs the actual original-field Hopf coordinate equivalence from a specified Galois-equivariant comparison with an independently given finite reduced Hopf algebra. Arithmetic realization at every finite coefficient quotient and finite-flat deformation closure remain unproved. No source modular gate closes.",
+  "scopeLimit": "The intended scope derives reducedness and formal etaleness of the literal invariant generic fiber from the original ambient generic reducedness, proves original quotient Galois equivariance, and constructs the actual original-field Hopf coordinate equivalence from a specified Galois-equivariant comparison with an independently given finite reduced Hopf algebra. Arithmetic realization at every finite coefficient quotient and finite-flat deformation closure remain unproved. No source modular gate closes.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf",
+    "https://stacks.math.columbia.edu/tag/03BE"
+  ],
+  "next": "Assemble the actual arithmetic model condition at all finite coefficient quotients and prove the required finite-flat deformation closure.",
+  "assembledFailedLogs": [
+    "assembled1865-focus.log: actual exit1, duplicate local instance name and consequent missing instance"
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_152651.log",
+    "paper": "logs/dubon-build-20261010-153051-390.log",
+    "scope": [
+      1865,
+      1232,
+      7611
+    ]
+  }
+}
