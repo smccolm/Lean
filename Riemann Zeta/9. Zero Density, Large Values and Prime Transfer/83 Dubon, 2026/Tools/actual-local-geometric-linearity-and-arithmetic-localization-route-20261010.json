@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-10",
+  "status": "All fifteen modules1953-1967, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "parent": 1952,
+  "scope": [
+    1967,
+    1334,
+    7878
+  ],
+  "modules": [
+    {
+      "scope": 1953,
+      "name": "RelativeDualNumberDeterminantCohomology",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the actual original unframed-class and first-order-fiber equivalences. The genuine original coefficient algebra map sends the determinant character to its constant residue dual number. Residual determinant compatibility and the existing whole first-order determinant theorem prove that the original prescribed determinant is exactly membership in the actual continuous trace kernel.",
+      "boundary": "Residual determinant compatibility is explicit. This is an exact class-condition comparison, not a modular representation construction or numerical Selmer result.",
+      "draftSha256": "7257a11007a117cbee94447afbccd70b64b6e02eae4a84c6ad4fd84224e51f36",
+      "productionSha256": "13866d62d23beaa44760942b4dd9c7805e3d8ed7ea25b1e2d287d16356d6d57f",
+      "productionLog": "determinantCohomology1953b-focus.log",
+      "productionFixes": [
+        "Initial focused build exited1 at the dual-number Units.map application: supply the canonical coefficient ring map via its explicit toMonoidHom projection to fix the inferred codomain. No mathematical statement change."
+      ]
+    },
+    {
+      "scope": 1954,
+      "name": "ArithmeticPrimeGeometricCohomologySubmodule",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Choose the unique intrinsic submodule already derived from actual arithmetic trace universality, with its exact original geometric membership criterion and proved finite dimension. The original determinant/cohomology comparison derives its inclusion in the existing trace kernel.",
+      "boundary": "Original residual arithmetic continuity, absolute irreducibility, determinant compatibility and actual residual prime-local model remain inputs. No trace-kernel inclusion is assumed. Numerical Selmer formulas, modular Galois association and local models remain separate.",
+      "draftSha256": "48119799ac074d874656ef9dadda84d7a2cf28d90309a522b9ba456ea932548f",
+      "productionSha256": "48119799ac074d874656ef9dadda84d7a2cf28d90309a522b9ba456ea932548f",
+      "productionLog": "arithmeticGeometricClasses1954-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1955,
+      "name": "ArithmeticPrimeGeometricTraceZeroCohomology",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Take the actual geometric submodule comap through the existing continuous trace-zero H1 inclusion. The proved determinant condition places the original geometric submodule in its genuine range. Existing injectivity under nonzero residue matrix dimension and the pinned submodule comap equivalence construct the actual linear equivalence. Transfer finite dimension and prove equal finranks.",
+      "boundary": "The matrix dimension must be nonzero in the residue field; this hypothesis is retained. Residual arithmetic and local-model inputs remain explicit. Equal finranks of two actual presentations are not a numerical Selmer formula.",
+      "draftSha256": "ea0e7aa00bd2b7178ac8d6175a776032870c648ba8a2b6a0eb0191519e7ce36f",
+      "productionSha256": "d90e3ca072c238d089251f45010b6481388ae68bb78647214b2b7cae93da5dd0",
+      "productionLog": "geometricTraceZero1955-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Keep the exact dimension-comparison proof term in a by/exact body so the retained exact-consumer signature extractor recognizes its top-level proof boundary. Statement and proof dependency unchanged."
+      ]
+    },
+    {
+      "scope": 1956,
+      "name": "LocalGeometricFiniteFlatCohomology",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Define the local geometric condition using actual continuous first-order lifts and genuine finite-flat scheme realizations at every positive adic level. Equality of original continuous cohomology classes gives a strict conjugator, whose original scheme-model transport proves representative independence.",
+      "boundary": "This proves an intrinsic local condition and its representative criterion. It does not assume or establish local linear closure or a numerical Selmer formula.",
+      "draftSha256": "254a3d1c2e53af731fc4a33906459fb8174523156aed8fa7377cb24fc2f78ddd",
+      "productionSha256": "597c5c3eb854002761e3cd84102d0f4331ec57a944570eb7ea4f9a594705a160",
+      "productionLog": "localGeometricCohomology1956b-focus.log",
+      "productionFixes": [
+        "Initial focused build exited1 because the generic local class module did not import the pinned Mathlib.RingTheory.DualNumber local-ring instance. Add that actual instance provider; no assumptions or statement weakened."
+      ]
+    },
+    {
+      "scope": 1957,
+      "name": "OriginalGeometricCohomologyRestriction",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Choose an actual continuous first-order representative of the same original global cohomology class. The proved original class/cohomology bijection, determinant trace criterion, actual cohomology restriction and local geometric representative criterion identify global membership exactly with the global trace condition and genuine local finite-flat membership.",
+      "boundary": "The original restriction is explicitly continuous and residual determinant compatibility is retained. No finite-flat model, local cohomology dimension or modular Galois representation is supplied by this comparison.",
+      "draftSha256": "b589700d2507d80c0f76546716863a97b0c2038cdbca65ba10aba48b17dc01da",
+      "productionSha256": "b589700d2507d80c0f76546716863a97b0c2038cdbca65ba10aba48b17dc01da",
+      "productionLog": "geometricRestriction1957-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1958,
+      "name": "ArithmeticPrimeGeometricCohomologyRestriction",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Combine the intrinsic arithmetic geometric membership theorem with the proved original restriction comparison. Use the constructed continuous local-to-arithmetic map at the actual rational prime completion; retain the same global representation and actual restricted local Galois matrices.",
+      "boundary": "Actual residual continuity, absolute irreducibility, determinant compatibility and the residual finite-flat model remain inputs. The theorem identifies the local condition; numerical Selmer formulas and modular models remain open.",
+      "draftSha256": "7e77b0901661501944e5b363df7f0ffe8a6394a5b0eeaaf25d578e7a1c11138e",
+      "productionSha256": "7e77b0901661501944e5b363df7f0ffe8a6394a5b0eeaaf25d578e7a1c11138e",
+      "productionLog": "arithmeticGeometricRestriction1958-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1959,
+      "name": "ArithmeticPrimeGeometricTraceZeroRestriction",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Unfold the original geometric trace-zero comap, use the proved full-adjoint local restriction criterion, and commute the genuine trace-zero inclusion with actual continuous cohomology restriction. The original inclusion supplies the global trace condition automatically.",
+      "boundary": "This characterizes the existing geometric submodule through actual trace-zero localization without a nonzero-dimension premise. It does not compute its dimension or provide modular residual models.",
+      "draftSha256": "83d18290dfa47540e09b35e73c7f1260a8cfc297c43e8195ef94e0bd320a6f22",
+      "productionSha256": "eefa82586014f2ed9ea76ee428a60432ce06f1432fd0ea4dee7889b5033894df",
+      "productionLog": "arithmeticTraceZeroRestriction1959b-focus.log",
+      "productionFixes": [
+        "Initial focused build exited1 at the uninstantiated rewrite with the default heartbeat limit. Instantiate the actual restriction/inclusion identity explicitly and compose the fully applied arithmetic membership equivalence with the proved trace condition. No resource option or statement change."
+      ]
+    },
+    {
+      "scope": 1960,
+      "name": "DualNumberCoefficientOperations",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Construct the actual ring map from compatible dual-number pairs by adding their original epsilon coordinates and retaining their common residue. Prove its ring laws using the original compatibility equation. Reuse the pinned square-zero extension map for actual epsilon scaling and retain exact component formulas.",
+      "boundary": "These are genuine coefficient maps, not a local linearity theorem by themselves.",
+      "draftSha256": "f2b84eb6453b531610174d8b569b95a32e593dbfdbb922115731ec72b1fdde88",
+      "productionSha256": "a10bebec4bb2a23d135128c85caac9bdb94f47d3ce15beef0208895397b6abbc",
+      "productionLog": "dualCoefficientOperations1960b-focus.log",
+      "productionFixes": [
+        "Initial focused build exited1: TrivSqZeroExt.Basic does not expose the DualNumber alias. Import its actual Mathlib.Algebra.DualNumber provider. The elaborator recovery warning from the failed run is rejected and is not proof acceptance; no placeholder was written."
+      ]
+    },
+    {
+      "scope": 1961,
+      "name": "FirstOrderCoefficientAddition",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Glue the two original lifts over the genuine coefficient fiber product, map their coefficients through the actual epsilon addition, and prove the resulting whole representation reduces to the same residual representation. Its original right-logarithmic cocycle is exactly the sum, which derives continuity of the entire lift.",
+      "boundary": "The statement preserves both entire original representations and their original cocycle convention. It supplies no finite-flat model until the following construction.",
+      "draftSha256": "57686e8ddb2adb80be21ecf3c0ea021579158c63d592dc4194128f33efab5ae4",
+      "productionSha256": "fc1bd9464634e623e4793747c7f2779e8fd1b4fff455575286c736d792a9da0f",
+      "productionLog": "firstOrderAddition1961b-focus.log",
+      "productionFixes": [
+        "Initial build exited1 because residue equalities remained displayed through MonoidHom.comp and did not match the original infinitesimal formula. Give those same proved equalities their explicit pointwise dualMatrixReduction types; remove the resulting source of unused simp diagnostics without suppressing any linter."
+      ]
+    },
+    {
+      "scope": 1962,
+      "name": "FirstOrderAdditionFiniteFlatModel",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Over the finite residue field, derive actual full dual-number models from both original all-adic geometric conditions. The original fiber-product model construction glues the models. The proved finite coefficient-extension construction through epsilon addition supplies the sum model and hence every original positive adic level.",
+      "boundary": "Finite residue coefficients and the original integral/Galois model hypotheses are explicit. No additive closure is postulated.",
+      "draftSha256": "04aba358c65ef7b2de2a543daed033321a0787b8046dd11a7eaa4d9e75b9188f",
+      "productionSha256": "f4b950eea12897e61964f9e6267c6cac28e26c72823f0d7ab9fdb1596496e164",
+      "productionLog": "firstOrderAdditionModel1962b-focus.log",
+      "productionFixes": [
+        "Initial focused build exited1 because projection rewrite matching did not unfold the named actual paired representation. Restate the existing projection conjunction at that definitionally equal named representation before transporting the original two models. No new model input or closure assumption."
+      ]
+    },
+    {
+      "scope": 1963,
+      "name": "FirstOrderCoefficientScaling",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Map the original whole lift through genuine epsilon scaling and prove the exact original cocycle scalar law. Reuse the original continuity equivalence. Identify the zero-cocycle lift with the actual residual representation changed through the constant coefficient inclusion.",
+      "boundary": "These exact operation comparisons supply no local model or dimension formula themselves.",
+      "draftSha256": "6f91a3ab89d5213981e0ed9534cf7cfcb6dd1b3959f8e43408774f0885baa9a1",
+      "productionSha256": "459c1bb7da9550e52ea8766a6a3c85867c04bd1fe0688046cd7af6cee83958d8",
+      "productionLog": "firstOrderScaling1963-focus.log",
+      "productionFixes": [],
+      "precompilationFixes": [
+        "Normalize original residue equalities to explicit pointwise dualMatrixReduction types, following the actual1961 diagnostic. This changes no statement or proof input."
+      ]
+    },
+    {
+      "scope": 1964,
+      "name": "FirstOrderScalingFiniteFlatModel",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the existing actual full-model/all-adic equivalence and finite coefficient-extension model construction to preserve geometric models under every original epsilon scaling. A genuine residual model constructs the original constant first-order model.",
+      "boundary": "A true residual local model is retained for the zero lift. No modular residual-model existence is claimed.",
+      "draftSha256": "47690ab2962fde765196e5a050c341ac28c07c2d7caa85e7ebd16875dc157b04",
+      "productionSha256": "47690ab2962fde765196e5a050c341ac28c07c2d7caa85e7ebd16875dc157b04",
+      "productionLog": "firstOrderScalingModel1964-confirm-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1965,
+      "name": "FirstOrderCoefficientClassOperations",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Apply the actual cocycle addition, scaling and zero identities to the original continuous cocycle quotient. This proves that the constructed full first-order lifts represent the original cohomology sum, scalar multiple and zero, without changing representatives by a separate convention.",
+      "boundary": "This is an exact operation comparison in existing continuous adjoint cohomology. It is not a local model-existence or numerical Selmer theorem.",
+      "draftSha256": "2a988c23078d8f09e841af38d4fe5db2ff7e6f569261175d45f7cd04335c1871",
+      "productionSha256": "2a988c23078d8f09e841af38d4fe5db2ff7e6f569261175d45f7cd04335c1871",
+      "productionLog": "firstOrderClasses1965-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1966,
+      "name": "LocalGeometricFiniteFlatLinearity",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Construct the actual submodule with carrier equal to the original local geometric set. Zero follows from the true residual model; addition and scalar multiplication follow from the newly constructed finite-flat first-order models and their exact cohomology operations. Prove uniqueness of the submodule with this membership predicate.",
+      "boundary": "No irreducibility or closure hypothesis is assumed. The true residual model and finite residue field remain inputs. No local dimension or modular residual model is constructed.",
+      "draftSha256": "84f72f92a01bbbd8a1475196f2e5000d46d5b1fe990f23b18e8ac8822ca965c6",
+      "productionSha256": "cd395637169e06f34c3ea5a744799aecc0ed19690e8ff7574998e5a4a0c6422e",
+      "productionLog": "localGeometricLinearity1966b-focus.log",
+      "productionFixes": [
+        "Initial build left continuity side goals at uninstantiated class-operation rewrites. Supplied the original h? and h? proofs explicitly in both rewrites; theorem statements and assumptions unchanged."
+      ]
+    },
+    {
+      "scope": 1967,
+      "name": "ArithmeticPrimeGeometricLocalization",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the established original local restriction criteria and the constructed local geometric submodule. Identify the actual global geometric submodule with the intersection of the original global trace kernel and the genuine localization preimage. Identify the original trace-zero geometric space with the corresponding trace-zero localization preimage.",
+      "boundary": "This proves the prime-local linear-condition description with actual models and actual Galois restriction. Other exceptional-prime local conditions and numerical Selmer formulas remain separate.",
+      "draftSha256": "a5545f74fbcc9d805174ac4669b1095b70db8ad3b6b3cd4002e633633c3a4da6",
+      "productionSha256": "9758bcd6d3839310b7c9d2b27f526d817a5a3516e741a9a10ddc44e7c7b75b00",
+      "productionLog": "arithmeticGeometricLocalization1967d-focus.log",
+      "productionFixes": [
+        "Initial actual arithmetic comap elaboration reached default typeclass heartbeats. Explicit local quotient instances did not resolve it. Factored the same full and trace-zero preimages into generic definitions, then specialized to the actual restriction. Definitions unfold to the original intersection/comaps; no hypotheses or mathematical conclusion changed, and no resource options changed.",
+        "Full assembled audit found two unusedArguments errors: IsTopologicalGroup G and H in each generic preimage definition. Removed those unused explicit instances; definitions and arithmetic theorem remain mathematically identical. The failed full run is not acceptance. Refocused production compile returned actual exit0 with no diagnostics; full verification must be rerun."
+      ]
+    }
+  ],
+  "semanticBoundary": "The fifteen-module scope identifies the original determinant condition with the actual continuous trace kernel, constructs the intrinsic finite-dimensional arithmetic geometric submodule and its trace-zero comparison, and proves its exact prime-local restriction criteria. Actual compatible dual-number addition, epsilon scaling, full first-order cocycle identities and existing model fiber-product/coefficient-extension theorems construct genuine local geometric zero, sums and scalar multiples from a residual model. These prove linear closure of the literal local condition without assumed closure or irreducibility, and identify the actual arithmetic full-adjoint and trace-zero spaces with linear localization preimages. Finite coefficients, original integral/Galois structures and genuine residual models remain explicit; perfect trace-zero comparison retains nonzero matrix dimension. Numerical Selmer formulas, other exceptional-prime conditions, modular Galois association and modular models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The fifteen-module scope identifies the original determinant condition with the actual continuous trace kernel, constructs the intrinsic finite-dimensional arithmetic geometric submodule and its trace-zero comparison, and proves its exact prime-local restriction criteria. Actual compatible dual-number addition, epsilon scaling, full first-order cocycle identities and existing model fiber-product/coefficient-extension theorems construct genuine local geometric zero, sums and scalar multiples from a residual model. These prove linear closure of the literal local condition without assumed closure or irreducibility, and identify the actual arithmetic full-adjoint and trace-zero spaces with linear localization preimages. Finite coefficients, original integral/Galois structures and genuine residual models remain explicit; perfect trace-zero comparison retains nonzero matrix dimension. Numerical Selmer formulas, other exceptional-prime conditions, modular Galois association and modular models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Derive the required additional local conditions, local/global cohomology and numerical Selmer input, preserving the constructed actual local geometric submodule and modular-model obligations.",
+  "failedAssembledVerification": {
+    "log": "E:/Lean/.tmp/dubon83/assembled1967-focus.log",
+    "result": "FAIL actual exit1 consumed; dependency audit14745/7878 passed, all three regression builds passed, but unusedArguments found two declarations with unnecessary topological-group instances. No full PASS accepted.",
+    "repair": "Remove unused explicit group-topology instances in generic preimage definitions; refocused compile passes; rerun all required checks.",
+    "retainedLog": "logs/dubon-assembled-1967-unused-arguments-failure.log",
+    "sha256": "8a05ad4e37b659ccd9510b044a71bf1e2797c81f07f88888e812e1b3c1b08a61",
+    "encoding": "UTF-16"
+  },
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261010_233843.log",
+    "paper": "logs/dubon-build-20261010-234433-281.log",
+    "scope": [
+      1967,
+      1334,
+      7878
+    ]
+  }
+}

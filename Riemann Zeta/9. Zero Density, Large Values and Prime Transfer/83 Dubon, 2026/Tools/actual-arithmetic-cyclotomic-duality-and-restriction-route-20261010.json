@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-10",
+  "status": "All eleven modules1968-1978, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "parent": 1967,
+  "scope": [
+    1978,
+    1345,
+    7909
+  ],
+  "modules": [
+    {
+      "scope": 1968,
+      "name": "FullAdjointTraceDuality",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Prove equivariance of the existing perfect full-matrix trace pairing for the original conjugation representation and its genuine contragredient action. Construct the resulting equivalence of representations over the original commutative coefficient ring.",
+      "boundary": "This is coefficient-module duality, not local or global arithmetic duality.",
+      "draftSha256": "e69fcf2f571502dc49eb0a84878ec20eb8c8227f1d60628e0f9b25753e6c461d",
+      "productionSha256": "ebe44b754fe0ebd25ef7748438f5c29c40dc64b3e5b557086ae5ebefc93134b9",
+      "productionLog": "fullAdjointDuality1968b-focus.log",
+      "productionFixes": [
+        "Replace recursive ext by one LinearMap.ext in the intertwining law: the original lemma is equality of dual vectors, not their further scalar evaluations."
+      ]
+    },
+    {
+      "scope": 1969,
+      "name": "TraceZeroAdjointDuality",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Restrict both arguments of the genuine full-matrix trace form to the original trace kernel. The existing trace-free correction and full pairing injectivity prove injectivity when the original matrix dimension is nonzero in the coefficient field. Finite-dimensional linear algebra proves bijectivity; the original adjoint equivariance constructs a genuine representation equivalence with the contragredient.",
+      "boundary": "The nonzero-dimension hypothesis is essential and remains explicit. This proves coefficient self-duality only; Tate twists, arithmetic duality, local annihilator comparisons and numerical Selmer formulas remain separate.",
+      "draftSha256": "035d2ffe4345670c52a5f5b2855ffbcebe7bbdc5046852d86a32a9a13e8dba61",
+      "productionSha256": "c581191d9007052270b57b21d22600a708cabf0e3420eca4275d652228f33219",
+      "productionLog": "traceZeroDuality1969b-focus.log",
+      "productionFixes": [
+        "Use one LinearMap.ext in the intertwining law so the proved equality of original dual vectors is consumed at its actual type."
+      ]
+    },
+    {
+      "scope": 1970,
+      "name": "PrimitiveRootCyclotomicContinuity",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the pinned primitive-root power character. Its independence of the primitive root follows from the genuine modular cyclotomic character. Prove its kernel is exactly the actual primitive-root stabilizer, which is open in the original Krull topology, and derive continuity of the entire character.",
+      "boundary": "An algebraic extension and an actual primitive root are explicit inputs. This is a finite cyclotomic character theorem, not arithmetic duality.",
+      "draftSha256": "e113ae146d6c1386b37ee58e458577e54852373d3fa1fcb6035dd2e7be96c2b1",
+      "productionSha256": "3e561f1c342f6722a15db6a8a1a26607222cf53e46495d36fe884e2794fcbadd",
+      "productionLog": "cyclotomicContinuity1970b-focus.log",
+      "productionFixes": [
+        "Expose the genuine automorphism evaluation g μ before rewriting its primitive-root exponent, since the stabilizer API displays the same action as g • μ."
+      ]
+    },
+    {
+      "scope": 1971,
+      "name": "RationalArithmeticCyclotomicCharacter",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Reuse the existing primitive root inside the original rational unramified extension when its conductor divides the exceptional integer. Construct the continuous finite cyclotomic character on the actual arithmetic Galois group, and prove its literal exponent action on every original primitive root.",
+      "boundary": "No root-containing or continuity hypothesis is added to the arithmetic specialization. This constructs the finite cyclotomic character only; its twists and arithmetic duality remain separate.",
+      "draftSha256": "9b9e21fdc50c05831de8972b5cc64680a0ba355b802d47afa54f8b26878e05e3",
+      "productionSha256": "6bb9b14b3af4054a62888344f4d30c038dc21a1c5bec366e2a140020676e834d",
+      "productionLog": "arithmeticCyclotomic1971b-focus.log",
+      "productionFixes": [
+        "Install the already proved originalUnramifiedGaloisUnion_isGalois instance for the exact U.algebra' used by the actual Galois group. Its normality yields the required integrality; no algebraicity assumption is added."
+      ]
+    },
+    {
+      "scope": 1972,
+      "name": "CoefficientCharacterTwist",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Construct the original scalar-character twist over the coefficient ring and transport actual intertwining equivalences through the same character. Identify the twisted contragredient representation with the actual linear-map representation into the one-dimensional character module, retaining the inverse group action in the evaluation formula.",
+      "boundary": "This is an algebraic coefficient construction. Continuity, actual arithmetic specialization and cohomological duality remain separate.",
+      "draftSha256": "0e1bc0ea066918a06e48c529442533717542e2c71c4bb5cf9c8d98761a193965",
+      "productionSha256": "0e1bc0ea066918a06e48c529442533717542e2c71c4bb5cf9c8d98761a193965",
+      "productionLog": "characterTwist1972-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1973,
+      "name": "TraceZeroTwistedDuality",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the proved original trace-zero trace self-duality and character twist to identify the twisted adjoint with its genuine character-valued linear dual. Prove the underlying pairing is the literal matrix trace and that the original untwisted and twisted actions transform that pairing by the original character.",
+      "boundary": "Perfectness retains the nonzero matrix-dimension premise. The equivariance identity itself does not need that premise. No arithmetic cup-product perfectness, invariant map or local annihilator theorem is assumed or proved here.",
+      "draftSha256": "da47d317772fe4ec0347d920455f40644de511a27f8751665d544388623deebb",
+      "productionSha256": "da47d317772fe4ec0347d920455f40644de511a27f8751665d544388623deebb",
+      "productionLog": "traceZeroTwist1973-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1974,
+      "name": "RationalPrimeCyclotomicCharacter",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Construct the continuous finite cyclotomic character on the original prime-completion absolute Galois group. Derive primitive roots in the actual algebraic closure and identify the character with the literal exponent action on every original primitive root.",
+      "boundary": "This constructs the actual local coefficient character only; no local cohomological duality is claimed.",
+      "draftSha256": "e14880cf11d46154837c08e4445d8d719a9406385b9d656f176017e3fe0a106a",
+      "productionSha256": "e14880cf11d46154837c08e4445d8d719a9406385b9d656f176017e3fe0a106a",
+      "productionLog": "primeCyclotomic1974-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1975,
+      "name": "ArithmeticCyclotomicRestriction",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Map an original primitive root of the arithmetic extension into the same actual prime-local closure used by arithmetic restriction. Compare the two exponent actions using the proved field-element commutation and injectivity of powers of the original primitive root. Obtain equality of the entire continuous characters.",
+      "boundary": "The conductor still divides the original exceptional integer. The local prime is arbitrary; this is coefficient compatibility, not a cohomological duality theorem.",
+      "draftSha256": "5e6e8b9f3c3feb2db2c09cd54a7b287b6abf3c7f64986e550c3629a0019c5f63",
+      "productionSha256": "5e6e8b9f3c3feb2db2c09cd54a7b287b6abf3c7f64986e550c3629a0019c5f63",
+      "productionLog": "cyclotomicRestriction1975-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1976,
+      "name": "ArithmeticCyclotomicCoefficientCharacter",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Construct the continuous scalar characteristic map from the finite cyclotomic exponent units into the original coefficient ring. Compose it with the constructed arithmetic and local characters and transport their exact restriction equality through the same characteristic map.",
+      "boundary": "The original coefficient characteristic is explicit. No assumption that the local prime equals that characteristic is needed. Arithmetic duality remains open.",
+      "draftSha256": "ab02c4200f701a0849c50026705cb631880ce45f9089529229202a59a0504d9f",
+      "productionSha256": "ab02c4200f701a0849c50026705cb631880ce45f9089529229202a59a0504d9f",
+      "productionLog": "cyclotomicCoefficient1976-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 1977,
+      "name": "ArithmeticTraceZeroCyclotomicDuality",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Construct the cyclotomic twist of the original arithmetic trace-zero adjoint using the derived coefficient character. Apply the proved perfect trace pairing to identify its character-valued linear dual, retaining literal matrix trace evaluation, and prove equality of the entire restricted action with the genuine prime-local twist.",
+      "boundary": "Perfect coefficient duality retains nonzero matrix dimension. This is not perfectness of a cohomological cup product and does not construct a local invariant map or numerical Selmer formula.",
+      "draftSha256": "64c5d108d8844e7de46cf3de0e86c767f3760fd00e4a5ee4cc4f6cd19f11410d",
+      "productionSha256": "580e866ca14aa9b1d60c1d9c32bc655578e24b3e5c40fb8acce1721ee2bc014d",
+      "productionLog": "arithmeticCyclotomicDuality1977c-focus.log",
+      "productionFixes": [
+        "Use exactly MonoidHom.ext and LinearMap.ext, retaining equality of original trace-zero vectors before applying the character restriction and actual inverse-map law.",
+        "Expose both actual conjugation matrices and apply congrArg to the explicit restriction map_inv g identity; this avoids rewriting through the ContinuousMonoidHom coercion."
+      ],
+      "precompilationFixes": [
+        "Instantiate the actual continuous arithmetic restriction map explicitly in the inverse rewrite. No mathematical statement change."
+      ]
+    },
+    {
+      "scope": 1978,
+      "name": "TraceZeroTwistedActionContinuity",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Derive joint continuity of the original conjugation action from the same continuous matrix representation and its actual matrix topology. Multiplication by the genuine continuous coefficient character proves joint continuity of the entire trace-zero twisted action.",
+      "boundary": "The generic input representation and character are explicitly continuous. This supplies topology for the actual coefficient modules; continuous cup products, local invariant maps, arithmetic perfectness and numerical Selmer statements remain open.",
+      "draftSha256": "b68b5bcb0341dfad99ebae42fb576392eae908d0fbd8cf76540b1663245a9a37",
+      "productionSha256": "b68b5bcb0341dfad99ebae42fb576392eae908d0fbd8cf76540b1663245a9a37",
+      "productionLog": "twistedActionContinuity1978-focus.log",
+      "productionFixes": []
+    }
+  ],
+  "semanticBoundary": "The eleven-module scope proves actual full-matrix and trace-zero adjoint trace self-duality, retaining nonzero matrix dimension for perfectness. It constructs continuous finite cyclotomic characters on the original arithmetic Galois group and actual prime completions from genuine primitive roots, and proves their equality under the same original arithmetic restriction. The canonical coefficient characteristic map transports this equality to the original ring. Character twists identify the actual twisted contragredient with linear maps into the character representation, retain the literal trace pairing, specialize to the genuine arithmetic character and commute with prime-local restriction. Joint continuity of the same original trace-zero character action is derived. These are coefficient and character results. Continuous cup products, local/global arithmetic duality, geometric local annihilator comparisons, numerical Selmer formulas, modular Galois association and local models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The eleven-module scope proves actual full-matrix and trace-zero adjoint trace self-duality, retaining nonzero matrix dimension for perfectness. It constructs continuous finite cyclotomic characters on the original arithmetic Galois group and actual prime completions from genuine primitive roots, and proves their equality under the same original arithmetic restriction. The canonical coefficient characteristic map transports this equality to the original ring. Character twists identify the actual twisted contragredient with linear maps into the character representation, retain the literal trace pairing, specialize to the genuine arithmetic character and commute with prime-local restriction. Joint continuity of the same original trace-zero character action is derived. These are coefficient and character results. Continuous cup products, local/global arithmetic duality, geometric local annihilator comparisons, numerical Selmer formulas, modular Galois association and local models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Construct continuous cup products and actual cohomological duality and numerical Selmer inputs; coefficient duality and character compatibility are not those theorems.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261011_004049.log",
+    "paper": "logs/dubon-build-20261011-004357-827.log",
+    "scope": [
+      1978,
+      1345,
+      7909
+    ]
+  }
+}

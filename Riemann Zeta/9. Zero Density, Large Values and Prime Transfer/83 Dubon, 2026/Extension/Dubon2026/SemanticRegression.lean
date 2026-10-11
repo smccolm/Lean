@@ -1,5 +1,6 @@
 import Dubon2026
 import Dubon2026.ArithmeticSemanticRegression
+import Dubon2026.GeometricSemanticRegression
 
 /-! Exact unfolded consumers for the currently implemented source interfaces. -/
 

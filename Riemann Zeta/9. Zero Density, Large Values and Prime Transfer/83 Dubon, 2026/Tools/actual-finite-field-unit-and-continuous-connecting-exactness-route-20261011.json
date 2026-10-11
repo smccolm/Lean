@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-11",
+  "status": "All thirteen modules2012-2024, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "parent": 2011,
+  "scope": [
+    2024,
+    1391,
+    8070
+  ],
+  "modules": [
+    {
+      "scope": 2012,
+      "name": "FiniteGaloisUnitNormRange",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Retain the pinned original Galois unit representation and its proved field-norm identity. Original finite-field unit norm surjectivity places each original base unit in the representation norm range. Actual finite Galois fixed-field descent identifies every invariant coefficient with an original base-field unit, giving the genuine invariant norm-range theorem.",
+      "boundary": "Finite-field coefficients only for surjectivity. No local unramified unit norm theorem, local invariant, Frobenius normalization or arithmetic duality is asserted.",
+      "draftSha256": "5d0385102a8a7590bb00f2265c38894e8ba6c424559032488121c3b1064b07de",
+      "productionSha256": "f166d7b5674d9f5036c20c870494b8f6618b8903391152e3175c1bd3dd61c098",
+      "productionLog": "finiteGaloisUnitNorm2012b-focus.log",
+      "productionFixes": [
+        "First focused run failed on the draft namespace IntermediateField.mem_range_algebraMap_iff_fixed. The pinned finite-dimensional theorem is IsGalois.mem_range_algebraMap_iff_fixed; corrected only that API reference."
+      ]
+    },
+    {
+      "scope": 2013,
+      "name": "ContinuousFiniteFieldGaloisUnitH2",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the original discrete Galois unit representation and derive cyclicity from the actual finite fields. Every original continuous H2 class comes from an invariant coefficient by the proved finite-cyclic computation. Actual fixed-field descent and finite-field unit norm surjectivity place that coefficient in the original norm range and force its original continuous H2 class to vanish.",
+      "boundary": "Both group and coefficient topologies are explicitly discrete. This finite-field result is not a local-field invariant or arithmetic duality theorem; the unramified local norm and valuation/Frobenius normalization steps remain open.",
+      "draftSha256": "90fe57128c21360edad20a788381c99bb5d2a6b0814d784960adb6d8969fde19",
+      "productionSha256": "db9ef04758b96eb2aa157c8d6c7e5810e1b5b1f81ee627d0eac1481b785aee07",
+      "productionLog": "finiteFieldGaloisH2_2013d-focus.log",
+      "productionFixes": [
+        "Omitted unused finite-dimensional/Galois/finite-field section assumptions from the elementary discrete action-continuity theorem.",
+        "Constructed actual joint scalar continuity for the representation module explicitly via Rep.hV2.toSMul. The generic integer additive-group scalar instance is not definitionally the same Lean instance; the original representation/module/topology is unchanged. All failed focused logs retained."
+      ]
+    },
+    {
+      "scope": 2014,
+      "name": "ContinuousGaloisUnitH1Vanishing",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Apply the pinned original finite-extension Hilbert90 theorem to each original continuous Galois unit cocycle. Its actual degree-zero coefficient witness gives the same original continuous coboundary, proving vanishing of the original continuous H1 without replacing the unit action or coefficient topology.",
+      "boundary": "Finite-dimensional field extension only, with the original action continuity explicit. Infinite-extension Hilbert90, local invariants and arithmetic duality remain open.",
+      "draftSha256": "c78d3b9ab4d341f5e04bacbfbe8391334e02affdf95eb2a15f74cfa4bcd4d2e6",
+      "productionSha256": "98490263bba86c279ec08157500ff0369265ba91597a502486f364be175f8683",
+      "productionLog": "galoisUnitH1_2014-focus.log",
+      "productionFixes": [
+        "Made the continuous integer scalar hypothesis explicitly use Rep.hV2.toSMul, preserving the original representation module."
+      ]
+    },
+    {
+      "scope": 2015,
+      "name": "ContinuousEquivariantCoefficientMap",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The actual continuous equivariant linear coefficient map postcomposes the original continuous one- and two-cocycles. The original cocycle laws and literal representative functions are preserved. Original degree-zero coefficient witnesses and genuine continuous degree-one cochain witnesses map to their exact original coefficient images under the same differentials.",
+      "boundary": "Only genuine coefficient functoriality is asserted. No exact cohomology sequence, Kummer connecting map, local invariant or arithmetic perfectness is assumed.",
+      "draftSha256": "fa1ecc8a6427e233c148780434574a03535fa383e613e2b2d9e624cad3e510db",
+      "productionSha256": "fa1ecc8a6427e233c148780434574a03535fa383e613e2b2d9e624cad3e510db",
+      "productionLog": "equivariantCoefficient2015-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2016,
+      "name": "ContinuousCohomologyCoefficientMap",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the proved preservation of original continuous coboundary witnesses to descend the genuine coefficient maps to the original continuous H1 and H2 quotients. Both quotient maps have the exact original pointwise coefficient-image cocycle as representative.",
+      "boundary": "These genuine cohomology functor maps do not supply a Kummer connecting homomorphism or a long exact sequence. Local invariants, arithmetic duality and numerical Selmer conclusions remain open.",
+      "draftSha256": "c24c60d7f659102881d261edc555c9a7fbe00a16e510b46e67e83248dc914efc",
+      "productionSha256": "c24c60d7f659102881d261edc555c9a7fbe00a16e510b46e67e83248dc914efc",
+      "productionLog": "cohomologyCoefficient2016-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2017,
+      "name": "ContinuousExactCoefficientLifts",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Normalize a genuine set-theoretic section of the original surjective linear coefficient map at zero. Invert the original injective coefficient map on its actual range and extend that function by zero outside the range. Prove exact right- and left-inverse identities on their intended domains and continuity under the explicit original discrete source topologies.",
+      "boundary": "The section and extended inverse are not asserted to be linear. These actual coefficient lifts do not by themselves prove cohomological exactness or a Kummer connecting homomorphism.",
+      "draftSha256": "19f3e62192f985c2c8fc1ed223adcedabf910c1f93207ca346293c81680ef3ca",
+      "productionSha256": "e5f5149dd2e6b81ee2803f209b6ac2925dce10579aeaf21c8cf5069d56404254",
+      "productionLog": "exactCoefficientLifts2017b-focus.log",
+      "productionFixes": [
+        "Specified the original surjection and coefficient in both Function.surjInv_eq rewrites; the draft polymorphic rewrite could not infer its map."
+      ]
+    },
+    {
+      "scope": 2018,
+      "name": "ContinuousCoefficientConnectingLift",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Lift the original continuous one-cocycle through the normalized section of the original surjective coefficient map. Equivariance and the original cocycle identity prove that its original degree-one boundary is killed by the quotient map. Exactness of the original coefficient sequence then places that boundary in the actual inclusion range.",
+      "boundary": "Only exactness of the coefficient sequence is an upstream hypothesis; no cohomological exactness is assumed. The chosen lift is a continuous cochain and is not assumed to be a cocycle.",
+      "draftSha256": "69a4e83858dc0b71c631d2502b79d798fb4fd3b9be58bf4590b15883c6cfdadc",
+      "productionSha256": "ec0f49c9a1b5fb1e61aef432d31ce4eaa7a473ee34ca3e7991c2acf4ceb70351",
+      "productionLog": "connectingLift2018b-focus.log",
+      "productionFixes": [
+        "Omitted unused coefficient-topology and scalar instances from the elementary projection/range lemmas. Exact-consumer generation now retains consecutive include/omit directives."
+      ]
+    },
+    {
+      "scope": 2019,
+      "name": "ContinuousCoefficientConnectingCocycle",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Take the genuine inclusion preimage of the original lift boundary. Original injectivity, equivariance and the actual boundary-squared-zero identity give its two-cocycle law, and discrete coefficient lifts give continuity. Its original H2 class maps to zero under the genuine coefficient map with the original lifted continuous cochain as an explicit witness.",
+      "boundary": "Additivity, scalar compatibility, source coboundary invariance and descent to H1 are still separate obligations. Actual Kummer specialization, infinite-extension Hilbert90, local invariants and arithmetic duality remain open.",
+      "draftSha256": "6c6acb6638903f7b87f4d7714c217a377ab6c95604c8a2b8797ebae1fbb063d4",
+      "productionSha256": "6c6acb6638903f7b87f4d7714c217a377ab6c95604c8a2b8797ebae1fbb063d4",
+      "productionLog": "connectingCocycle2019-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2020,
+      "name": "ContinuousConnectingLiftIndependence",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Compare the chosen lift with any original continuous lift and an actual original two-cocycle preimage of its boundary. The original coefficient kernel gives a continuous difference cochain. Its actual differential is the difference of the original two-cocycles, proving equality in the original continuous H2 quotient.",
+      "boundary": "The comparison retains the actual coefficient exactness, injectivity, equivariance and discrete coefficient continuity hypotheses. It does not assume cohomological exactness or a linear section.",
+      "draftSha256": "ccd2d2a5961ec7277878b132c09de9fd510cb86624fa0572dfc55cbdc88be4b2",
+      "productionSha256": "bbfb792f02225183edc96f98a7e85fad54ebab4085c044f5184aa1fea0ef34d4",
+      "productionLog": "connectingIndependence2020b-focus.log",
+      "productionFixes": [
+        "Matched the explicit final cochain identity to the already expanded map_sub normal form; the actual difference witness and statement are unchanged."
+      ]
+    },
+    {
+      "scope": 2021,
+      "name": "ContinuousConnectingCocycleClass",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Original sums and scalar multiples of the continuous lifts, combined with the proved lift comparison, prove additivity and scalar compatibility of the original connecting class. The normalized coefficient section is not assumed linear.",
+      "boundary": "The linear class is still defined on original cocycles at this stage; source coboundary invariance and quotient descent require the next module.",
+      "draftSha256": "91f5a555dab1ceb48fc45c5d6cd2fdee0eccae46385742218ae12bfcd2803357",
+      "productionSha256": "91f5a555dab1ceb48fc45c5d6cd2fdee0eccae46385742218ae12bfcd2803357",
+      "productionLog": "connectingLinearClass2021-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2022,
+      "name": "ContinuousCoefficientConnectingMap",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Lift the original coefficient of each source coboundary and use its original continuous degree-zero boundary. Its next differential is zero, so the original connecting class kills actual source coboundaries. Descend the proved linear class to the actual continuous H1 quotient and retain its exact cocycle formula and zero coefficient H2 image.",
+      "boundary": "No cohomological exactness is assumed. This construction is for the original displayed discrete-coefficient exact sequence, not yet the arithmetic Kummer specialization.",
+      "draftSha256": "0a5bfdabd61c91137fd75dc38780450d4e003099b73242d05bf2a7358bc73289",
+      "productionSha256": "0a5bfdabd61c91137fd75dc38780450d4e003099b73242d05bf2a7358bc73289",
+      "productionLog": "connectingMap2022-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2023,
+      "name": "ContinuousConnectingH2Exactness",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "For an original H2 class whose actual coefficient image vanishes, its genuine continuous middle-coefficient coboundary witness projects to an original quotient-coefficient cocycle. The proved lift comparison shows that its connecting image is the original H2 class, giving equality of the actual range and kernel.",
+      "boundary": "Only exactness of the original coefficient sequence is input; exactness at cohomology is the proved conclusion. Arithmetic specialization and local invariants remain separate.",
+      "draftSha256": "b1066a98e2e96d9004f9cc15845d21d468cb4d1e6b6e0afe83d01c841c219bae",
+      "productionSha256": "b1066a98e2e96d9004f9cc15845d21d468cb4d1e6b6e0afe83d01c841c219bae",
+      "productionLog": "connectingH2Exact2023-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2024,
+      "name": "ContinuousConnectingH1Exactness",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "An original middle-coefficient cocycle already gives a continuous lift with zero boundary. Conversely, vanishing of the actual connecting class gives a genuine continuous source-coefficient coboundary witness. Subtract its actual coefficient image from the chosen lift to construct an original middle-coefficient cocycle mapping to the given quotient cocycle. This proves equality of the original coefficient H1 range and connecting-map kernel.",
+      "boundary": "The result is the actual degree-one exactness statement for the original displayed coefficient sequence. Kummer coefficients, infinite-extension Hilbert90, arithmetic invariants and perfectness remain unproved applications.",
+      "draftSha256": "8964a05a1b77a66e6d08f1194a705ebb0b5219363f6e1514dc717023ebd87d01",
+      "productionSha256": "43f061c41ff0fc0ce75f1560d7ffda242bf3a197f782030d351be8f37eeed36c",
+      "productionLog": "connectingH1Exact2024b-focus.log",
+      "productionFixes": [
+        "Included the proof-used original inclusion continuity hypothesis in both converse exactness statements. The genuine continuous difference cochain uses this hypothesis; it is not hidden."
+      ]
+    }
+  ],
+  "semanticBoundary": "The thirteen-module scope retains the pinned original Galois unit representation and its actual field norm. Actual finite-field norm surjectivity, fixed-field descent and derived cyclicity prove continuous finite-field unit H2 vanishing for explicitly discrete group and coefficients. Pinned finite-extension Hilbert90 supplies actual continuous H1 coboundary witnesses with the original action and topology. Genuine continuous equivariant coefficient maps induce original H1/H2 maps. Normalized coefficient sections and range inverses are continuous only under the stated discrete source topologies and are not asserted to be linear. The original lifted cocycle has its boundary in the actual coefficient kernel, giving the actual connecting two-cocycle. Original continuous difference-cochain witnesses prove independence of the chosen lift. Actual sums and scalar multiples of lifts prove class linearity. Original lifted coefficient coboundaries give source-coboundary invariance and the actual H1-to-H2 connecting map. Original continuous coboundary witnesses then prove the actual range-kernel identities at H1 and H2. Only the actual coefficient sequence exactness is an upstream hypothesis; the cohomological exactness is proved. No infinite-extension Hilbert90, arithmetic Kummer specialization, local unramified norm theorem, valuation or Frobenius normalization, local invariant, arithmetic perfectness, annihilator identity, Euler or Poitou-Tate formula is supplied by these results. Those obligations, numerical Selmer theory, modular Galois association and local models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The thirteen-module scope retains the pinned original Galois unit representation and its actual field norm. Actual finite-field norm surjectivity, fixed-field descent and derived cyclicity prove continuous finite-field unit H2 vanishing for explicitly discrete group and coefficients. Pinned finite-extension Hilbert90 supplies actual continuous H1 coboundary witnesses with the original action and topology. Genuine continuous equivariant coefficient maps induce original H1/H2 maps. Normalized coefficient sections and range inverses are continuous only under the stated discrete source topologies and are not asserted to be linear. The original lifted cocycle has its boundary in the actual coefficient kernel, giving the actual connecting two-cocycle. Original continuous difference-cochain witnesses prove independence of the chosen lift. Actual sums and scalar multiples of lifts prove class linearity. Original lifted coefficient coboundaries give source-coboundary invariance and the actual H1-to-H2 connecting map. Original continuous coboundary witnesses then prove the actual range-kernel identities at H1 and H2. Only the actual coefficient sequence exactness is an upstream hypothesis; the cohomological exactness is proved. No infinite-extension Hilbert90, arithmetic Kummer specialization, local unramified norm theorem, valuation or Frobenius normalization, local invariant, arithmetic perfectness, annihilator identity, Euler or Poitou-Tate formula is supplied by these results. Those obligations, numerical Selmer theory, modular Galois association and local models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Specialize the proved original connecting maps and exactness to actual Kummer coefficients. Prove infinite-extension Hilbert90 by descending the original nontrivial cocycle to its actual finite Galois coefficient field; then prove original local norm/invariant and arithmetic duality inputs.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261011_043658.log",
+    "paper": "logs/dubon-build-20261011-044010-666.log",
+    "scope": [
+      2024,
+      1391,
+      8070
+    ]
+  }
+}
