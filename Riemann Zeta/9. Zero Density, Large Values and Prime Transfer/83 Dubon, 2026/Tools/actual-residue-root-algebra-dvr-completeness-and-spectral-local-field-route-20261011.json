@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-11",
+  "status": "All eight modules2116-2123, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "parent": 2115,
+  "scope": [
+    2123,
+    1490,
+    8345
+  ],
+  "modules": [
+    {
+      "scope": 2116,
+      "name": "LocalFieldResidueExtensionPolynomial",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "A primitive element in the genuine finite residue-field extension supplies a monic irreducible separable polynomial of each positive degree. Pinned monic lifting preserves its actual degree. Original reduction proves irreducibility over the actual integer ring, and the original fraction-field Gauss lemma proves irreducibility over the base local field.",
+      "boundary": "This constructs actual polynomial data; the unramified local-field extension is not yet constructed.",
+      "draftSha256": "33a26ab461dd2d7074fd9f2cb9bc0c362086744800fc9770f2bd9d3631d27c7e",
+      "initialDraftSha256": "c0640895183a7d53982a0b001235a7f86fd08185cf22264918627ef9e8d19667",
+      "productionSha256": "33a26ab461dd2d7074fd9f2cb9bc0c362086744800fc9770f2bd9d3631d27c7e",
+      "productionLog": "residuePolynomial2116b-focus.log",
+      "productionFixes": [
+        "Import pinned Valuation.Integral to expose the proved integrally-closed integer-ring instance required by the actual fraction-field Gauss lemma; no statement changes."
+      ]
+    },
+    {
+      "scope": 2117,
+      "name": "LocalMonicSeparableReduction",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Monicity removes the leading-coefficient factor in actual resultant base change even when the second polynomial loses degree. The nonzero resultant of the actual separable residue polynomial lifts to a unit of the original local ring, proving separability of the original monic polynomial.",
+      "boundary": "This proves the actual polynomial separability bridge, not a local-field or Galois extension construction.",
+      "draftSha256": "77cf3d816eb6f72ffce25888398bf69629a698b47719fe23449b94318a710f0c",
+      "initialDraftSha256": "f44f04d0f6108f6e3b7feeae63baa82a656dcc942d5aecf056bc5999bd954f90",
+      "productionSha256": "77cf3d816eb6f72ffce25888398bf69629a698b47719fe23449b94318a710f0c",
+      "productionLog": "separableReduction2117b-focus.log",
+      "productionFixes": [
+        "Supply the original polynomial argument to the pinned separable_def equivalence before applying its mp/mpr projections; statement unchanged."
+      ]
+    },
+    {
+      "scope": 2118,
+      "name": "MonicSeparableAdjoinRootEtale",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The original Bezout identity supplies a standard etale pair with localization polynomial one. Actual universal maps in both directions identify its genuine algebra with the original AdjoinRoot quotient, and the proved algebra equivalence transfers etaleness.",
+      "boundary": "The theorem consumes the original polynomial and actual quotient; local-field valuation and integer-ring comparisons remain separate.",
+      "draftSha256": "2d1b0b55545b1f014c069817f6e4bace4b517ef3f1714fd4ef9e0b1ad83d17f2",
+      "initialDraftSha256": "5c81760eca55f02d5c455fcb6b40261aec38dc9ffbc6c57a69e58edd20a9b281",
+      "productionSha256": "2d1b0b55545b1f014c069817f6e4bace4b517ef3f1714fd4ef9e0b1ad83d17f2",
+      "productionLog": "rootEtale2118b-focus.log",
+      "productionFixes": [
+        "Supply f to the pinned separable_def before extracting the original Bezout coefficients; actual universal-map proof unchanged."
+      ]
+    },
+    {
+      "scope": 2119,
+      "name": "MonicResidueIrreducibleLocalAlgebra",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Reduction of the original root quotient modulo the extended maximal ideal is the genuine residue root field, so that extended ideal is maximal. The actual monic root algebra is finite integral; every maximal ideal contracts to the original maximal ideal and hence equals the proved maximal extension.",
+      "boundary": "This proves locality of the original integral quotient; no local-field or unramified-extension certificate is assumed.",
+      "draftSha256": "168608530b9aa493c23e2559bef86788462b6ce6499ab1a006d4ea51237e4977",
+      "initialDraftSha256": "168608530b9aa493c23e2559bef86788462b6ce6499ab1a006d4ea51237e4977",
+      "productionSha256": "168608530b9aa493c23e2559bef86788462b6ce6499ab1a006d4ea51237e4977",
+      "productionLog": "rootLocal2119-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2120,
+      "name": "MonicResidueIrreducibleDVR",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Original residue irreducibility proves irreducibility of the original monic polynomial over the DVR. Its actual quotient is a domain and the proved locality identifies its maximal ideal with the principal extension of the original maximal ideal. Injective finite integrality excludes a field. The original Noetherian local-domain equivalence then proves the genuine quotient is a DVR.",
+      "boundary": "The actual DVR is constructed; the intended original fraction-field valuation, topology and unramified comparison remain open.",
+      "draftSha256": "3e7c10e62b4aa1dbdce0367141287f46a950165d7713df4b16b6ee2c9e09c687",
+      "initialDraftSha256": "3e7c10e62b4aa1dbdce0367141287f46a950165d7713df4b16b6ee2c9e09c687",
+      "productionSha256": "3e7c10e62b4aa1dbdce0367141287f46a950165d7713df4b16b6ee2c9e09c687",
+      "productionLog": "rootDvr2120-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2121,
+      "name": "FiniteBasisAdicCompleteness",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Membership in original ideal multiples is characterized by the actual finite basis coordinates. Coordinate Cauchy limits and separatedness in the original complete base ring prove genuine module adic completeness. The actual AdjoinRoot power basis and exact extension-of-ideal scalar identity give completeness of the original root algebra.",
+      "boundary": "No replacement topology or completion is introduced; compatibility with the later local-field topology remains a separate proof obligation.",
+      "draftSha256": "c5e7c0fe0734cc460afb0f1db1af4645f3fd7c09cc0d1c3e5eb79bb018ff289c",
+      "initialDraftSha256": "dbb71e34cddcf66a38a2da13168acfa6c65cb23c2f02292aaad7fd17fc751f77",
+      "productionSha256": "c5e7c0fe0734cc460afb0f1db1af4645f3fd7c09cc0d1c3e5eb79bb018ff289c",
+      "productionLog": "adicBasis2121b-focus.log",
+      "productionFixes": [
+        "Open the pinned Module namespace for Basis; actual coordinate completeness proof and statements unchanged."
+      ]
+    },
+    {
+      "scope": 2122,
+      "name": "MonicRootResidueCardinality",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The proved original maximal-ideal equality identifies the genuine root-algebra residue field with the actual residue AdjoinRoot. Its original power basis and finite-field cardinality formula prove that the true residue cardinality is the original residue cardinality raised to the original polynomial degree.",
+      "boundary": "The actual quotient is identified, not merely assigned a matching cardinality; the complete unramified field construction remains open.",
+      "draftSha256": "24aa264994d83fd1fd29c8d313720b32df578ff5f5031f0da9d7cd51917e0403",
+      "initialDraftSha256": "393c02ead67330fa14c2f49d2223deb1924ad3bc66bc56495419457db4781005",
+      "productionSha256": "24aa264994d83fd1fd29c8d313720b32df578ff5f5031f0da9d7cd51917e0403",
+      "productionLog": "rootResidue2122b-focus.log",
+      "productionFixes": [
+        "Specify the actual base residue field in Module.natCard_eq_pow_finrank to resolve its scalar type; original quotient equivalence and degree conclusion unchanged."
+      ]
+    },
+    {
+      "scope": 2123,
+      "name": "SpectralFiniteExtensionLocalField",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The genuine norm valuation and its original zero-neighborhood formula supply the existing valuative local-field structure without changing the original norm topology. For a genuine finite extension, pinned spectral norm construction supplies the actual normed algebra and finite-dimensional properness proves local compactness.",
+      "boundary": "Original-base norm and valuation transport, the constructed integral-root comparison and Galois/unramified properties still require their actual maps and proofs.",
+      "draftSha256": "de50b5f835e2a7f336011774afbc3fe923bbdd001039291f30a26b569cc9d544",
+      "initialDraftSha256": "54a8eb4585edc842b5569c766ebb4a237950c0d749d5ab1c37b31d6ac4c66684",
+      "productionSha256": "de50b5f835e2a7f336011774afbc3fe923bbdd001039291f30a26b569cc9d544",
+      "productionLog": "spectralLocal2123b-focus.log",
+      "productionFixes": [
+        "Use the pinned zero-explicit-field local-field constructor after deriving its three parent instances; topology, nontriviality and local compactness proofs unchanged."
+      ]
+    }
+  ],
+  "semanticBoundary": "The eight-module scope retains the genuine finite residue-field extensions, original monic polynomials, actual integer rings and original root quotients. A true primitive element supplies every positive residue degree; pinned monic lifting preserves that degree and original reduction plus Gauss lemma prove irreducibility over the integer ring and its fraction field. Actual resultant base change lifts residue separability to the original polynomial. The original Bezout identity and genuine quotient universal maps identify the root algebra with a standard etale algebra. Its actual reduction is a field, and integral contraction proves locality with the extended original maximal ideal. Over the original DVR this actual quotient is a domain, its maximal ideal is principal and injective integrality excludes a field, proving the genuine root algebra is a DVR. Original finite basis coordinates prove adic completeness of the actual root algebra; the true residue quotient and its original power basis give the exact residue cardinality. Separately, the genuine spectral norm equips an actual finite extension of a complete locally compact ultrametric normed field with the existing valuative local-field structure, preserving its norm topology. Original-base topology and valuation transport, the actual fraction-field inclusion and degree, identification of the constructed root algebra with the genuine integer ring, and its Galois and unramified properties remain open. These results do not yet construct every intended unramified local-field extension or detect all original local H2 classes by unramified stages. The full local invariant, base-field compatibility, reciprocity, arithmetic duality, local annihilator identities, Euler and Poitou-Tate formulas remain open. Selmer theory, modular Galois association, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The eight-module scope retains the genuine finite residue-field extensions, original monic polynomials, actual integer rings and original root quotients. A true primitive element supplies every positive residue degree; pinned monic lifting preserves that degree and original reduction plus Gauss lemma prove irreducibility over the integer ring and its fraction field. Actual resultant base change lifts residue separability to the original polynomial. The original Bezout identity and genuine quotient universal maps identify the root algebra with a standard etale algebra. Its actual reduction is a field, and integral contraction proves locality with the extended original maximal ideal. Over the original DVR this actual quotient is a domain, its maximal ideal is principal and injective integrality excludes a field, proving the genuine root algebra is a DVR. Original finite basis coordinates prove adic completeness of the actual root algebra; the true residue quotient and its original power basis give the exact residue cardinality. Separately, the genuine spectral norm equips an actual finite extension of a complete locally compact ultrametric normed field with the existing valuative local-field structure, preserving its norm topology. Original-base topology and valuation transport, the actual fraction-field inclusion and degree, identification of the constructed root algebra with the genuine integer ring, and its Galois and unramified properties remain open. These results do not yet construct every intended unramified local-field extension or detect all original local H2 classes by unramified stages. The full local invariant, base-field compatibility, reciprocity, arithmetic duality, local annihilator identities, Euler and Poitou-Tate formulas remain open. Selmer theory, modular Galois association, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Assemble the actual fraction-field extension, prove original valuation restriction and integer-ring comparison, then Galois/unramified properties and all-local-H2 detection.",
+  "primaryResearch": {
+    "status": "All eight modules2116-2123 promoted and individually compiled with actual exits0 consumed and zero diagnostics; exact consumers registered; full assembled verification pending.",
+    "parentPlannedScope": 2115,
+    "modules": [
+      {
+        "module": "LocalFieldResidueExtensionPolynomial",
+        "sha256": "33a26ab461dd2d7074fd9f2cb9bc0c362086744800fc9770f2bd9d3631d27c7e",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2116,
+        "initialDraftSha256": "c0640895183a7d53982a0b001235a7f86fd08185cf22264918627ef9e8d19667",
+        "productionLog": "residuePolynomial2116b-focus.log",
+        "productionFixes": [
+          "Import pinned Valuation.Integral to expose the proved integrally-closed integer-ring instance required by the actual fraction-field Gauss lemma; no statement changes."
+        ],
+        "failedProductionLogs": [
+          "residuePolynomial2116-focus.log"
+        ]
+      },
+      {
+        "module": "LocalMonicSeparableReduction",
+        "sha256": "77cf3d816eb6f72ffce25888398bf69629a698b47719fe23449b94318a710f0c",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2117,
+        "initialDraftSha256": "f44f04d0f6108f6e3b7feeae63baa82a656dcc942d5aecf056bc5999bd954f90",
+        "productionLog": "separableReduction2117b-focus.log",
+        "productionFixes": [
+          "Supply the original polynomial argument to the pinned separable_def equivalence before applying its mp/mpr projections; statement unchanged."
+        ],
+        "failedProductionLogs": [
+          "separableReduction2117-focus.log"
+        ]
+      },
+      {
+        "module": "MonicSeparableAdjoinRootEtale",
+        "sha256": "2d1b0b55545b1f014c069817f6e4bace4b517ef3f1714fd4ef9e0b1ad83d17f2",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2118,
+        "initialDraftSha256": "5c81760eca55f02d5c455fcb6b40261aec38dc9ffbc6c57a69e58edd20a9b281",
+        "productionLog": "rootEtale2118b-focus.log",
+        "productionFixes": [
+          "Supply f to the pinned separable_def before extracting the original Bezout coefficients; actual universal-map proof unchanged."
+        ],
+        "failedProductionLogs": [
+          "rootEtale2118-focus.log"
+        ]
+      },
+      {
+        "module": "MonicResidueIrreducibleLocalAlgebra",
+        "sha256": "168608530b9aa493c23e2559bef86788462b6ce6499ab1a006d4ea51237e4977",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2119,
+        "initialDraftSha256": "168608530b9aa493c23e2559bef86788462b6ce6499ab1a006d4ea51237e4977",
+        "productionLog": "rootLocal2119-focus.log",
+        "productionFixes": [],
+        "failedProductionLogs": []
+      },
+      {
+        "module": "MonicResidueIrreducibleDVR",
+        "sha256": "3e7c10e62b4aa1dbdce0367141287f46a950165d7713df4b16b6ee2c9e09c687",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2120,
+        "initialDraftSha256": "3e7c10e62b4aa1dbdce0367141287f46a950165d7713df4b16b6ee2c9e09c687",
+        "productionLog": "rootDvr2120-focus.log",
+        "productionFixes": [],
+        "failedProductionLogs": []
+      },
+      {
+        "module": "FiniteBasisAdicCompleteness",
+        "sha256": "c5e7c0fe0734cc460afb0f1db1af4645f3fd7c09cc0d1c3e5eb79bb018ff289c",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2121,
+        "initialDraftSha256": "dbb71e34cddcf66a38a2da13168acfa6c65cb23c2f02292aaad7fd17fc751f77",
+        "productionLog": "adicBasis2121b-focus.log",
+        "productionFixes": [
+          "Open the pinned Module namespace for Basis; actual coordinate completeness proof and statements unchanged."
+        ],
+        "failedProductionLogs": [
+          "adicBasis2121-focus.log"
+        ]
+      },
+      {
+        "module": "MonicRootResidueCardinality",
+        "sha256": "24aa264994d83fd1fd29c8d313720b32df578ff5f5031f0da9d7cd51917e0403",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2122,
+        "initialDraftSha256": "393c02ead67330fa14c2f49d2223deb1924ad3bc66bc56495419457db4781005",
+        "productionLog": "rootResidue2122b-focus.log",
+        "productionFixes": [
+          "Specify the actual base residue field in Module.natCard_eq_pow_finrank to resolve its scalar type; original quotient equivalence and degree conclusion unchanged."
+        ],
+        "failedProductionLogs": [
+          "rootResidue2122-focus.log"
+        ]
+      },
+      {
+        "module": "SpectralFiniteExtensionLocalField",
+        "sha256": "de50b5f835e2a7f336011774afbc3fe923bbdd001039291f30a26b569cc9d544",
+        "status": "Focused clean compilation PASS; full verification pending.",
+        "scope": 2123,
+        "initialDraftSha256": "54a8eb4585edc842b5569c766ebb4a237950c0d749d5ab1c37b31d6ac4c66684",
+        "productionLog": "spectralLocal2123b-focus.log",
+        "productionFixes": [
+          "Use the pinned zero-explicit-field local-field constructor after deriving its three parent instances; topology, nontriviality and local compactness proofs unchanged."
+        ],
+        "failedProductionLogs": [
+          "spectralLocal2123-focus.log"
+        ]
+      }
+    ],
+    "mathematicalRoute": [
+      "Use the genuine FiniteField.Extension and a power-basis primitive element to construct an irreducible separable monic residue polynomial of each positive degree.",
+      "Use existing Polynomial.lifts_and_degree_eq_and_monic, not a duplicate lifting construction; reduction proves irreducibility over the integer ring and Gauss lemma over the original fraction field.",
+      "Monicity removes the leading-coefficient correction to resultant base change even when derivative degree drops. A nonzero residue resultant lifts to a local-ring unit, proving original polynomial separability.",
+      "Compare the actual AdjoinRoot quotient with StandardEtalePair using g=1 and the original universal maps; transfer genuine etaleness.",
+      "The actual AdjoinRoot quotient modulo the extended maximal ideal is the genuine irreducible residue root field. Integral contraction of every maximal ideal proves locality.",
+      "Over a DVR the monic lift is irreducible, hence its actual quotient is a domain. The extended maximal ideal is principal; finite integrality and injectivity exclude a field. Apply the original DVR equivalence.",
+      "Prove actual ideal-power membership in finite basis coordinates. Coordinate Cauchy limits in the original complete base ring prove finite free module adic completeness; apply the genuine AdjoinRoot power basis and exact map_algebraMap_iff.",
+      "Identify the actual residue field of the original integral root algebra with the genuine residue AdjoinRoot through the proved maximal-ideal equality. Its original power basis gives the exact residue cardinality q^degree.",
+      "Use the actual NormedField norm valuation, its original zero-neighborhood formula and valuation compatibility to obtain the existing valuative local-field class without changing the original norm topology. Apply this to the genuine spectral norm on an actual finite extension; finite-dimensional properness gives local compactness."
+    ],
+    "pinnedApis": [
+      "Mathlib/FieldTheory/Finite/Extension.lean: FiniteField.Extension and finrank_extension",
+      "Mathlib/FieldTheory/PrimitiveElement.lean: Field.powerBasisOfFiniteOfSeparable",
+      "Mathlib/Algebra/Polynomial/Lifts.lean: lifts_and_degree_eq_and_monic",
+      "Mathlib/Algebra/Polynomial/Eval/Irreducible.lean: Monic.irreducible_of_irreducible_map",
+      "Mathlib/RingTheory/Polynomial/GaussLemma.lean: Monic.irreducible_iff_irreducible_map_fraction_map",
+      "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean: resultant_map_map, resultant_add_right_deg, isUnit_resultant_iff_isCoprime",
+      "Mathlib/RingTheory/Etale/StandardEtale.lean: StandardEtalePair, HasMap, lift, hom_ext, actual Algebra.Etale instance",
+      "Mathlib/RingTheory/AdjoinRoot.lean: quotAdjoinRootEquivQuotPolynomialQuot, isDomain_of_prime, of.injective_of_degree_ne_zero",
+      "Mathlib/RingTheory/Ideal/GoingUp.lean: isMaximal_comap_of_isIntegral_of_isMaximal",
+      "Mathlib/RingTheory/DiscreteValuationRing/TFAE.lean: IsDiscreteValuationRing.TFAE",
+      "Mathlib/RingTheory/Ideal/Operations.lean: smul_top_le_comap_smul_top",
+      "Mathlib/LinearAlgebra/Basis/Defs.lean: coord, sum_repr, equivFun",
+      "Mathlib/RingTheory/AdicCompletion/Basic.lean: actual IsHausdorff/IsPrecomplete definitions and IsAdicComplete.map_algebraMap_iff",
+      "Mathlib/FieldTheory/Finiteness.lean: Module.natCard_eq_pow_finrank",
+      "Mathlib/RingTheory/Valuation/ValuativeRel/Basic.lean: ofValuation, Valuation.Compatible.ofValuation, isNontrivial_iff_isNontrivial",
+      "Mathlib/Topology/Algebra/Valued/ValuativeRel.lean: IsValuativeTopology.of_zero",
+      "Mathlib/Topology/Algebra/ValuativeRel/ValuativeTopology.lean: Valuation.exists_setOf_restrict_le_iff",
+      "Mathlib/Analysis/Normed/Algebra/Ultra.lean: IsUltrametricDist.of_normedAlgebra"
+    ],
+    "remaining": [
+      "Compile each draft only after the pending full2099 receipt/inventory and planned focused2100-2115/full2115 cycle.",
+      "Assemble actual chosen integral root algebra, its finite residue field and adic completeness; use existing originalAdicCompleteLocal_compactSpace where appropriate.",
+      "Equip its actual fraction field with the genuine DVR valuation and local topology; prove restriction to original base valuation and field degree.",
+      "Use actual henselian root lifting in the constructed integer algebra to prove normality/Galois and unramified integer-ring comparison.",
+      "Prove all-local-H2 detection by unramified stages; explicit period inflation compatibility alone does not establish this."
+    ],
+    "sourceGates": "DUB-17-20 OPEN; these uncompiled polynomial and root-algebra drafts do not prove the full unramified extension construction, local duality, Selmer theory, patching, Deligne or non-CM Sato-Tate.",
+    "topologyRouteRecheck": {
+      "status": "Pinned source inspected and D-only SpectralFiniteExtensionLocalField draft written; UNCOMPILED. Original-base topology/valuation transport and integer-ring comparison remain open.",
+      "preferredCandidate": "For the genuine finite fraction-field extension, reuse spectralNorm.nontriviallyNormedField and spectralNorm.normedAlgebra over the original complete rank-one base. FiniteDimensional.proper supplies local compactness. NormedField.valuation/toValued supplies the actual norm valuation. Prove agreement with the original base valuation and identify the constructed integral root algebra with its integer ring using the proved DVR/integral closure.",
+      "pinnedApis": [
+        "Mathlib/Analysis/Normed/Unbundled/SpectralNorm.lean: spectralNorm.normedField, nontriviallyNormedField, normedAlgebra and completeSpace, under actual complete nontrivially normed ultrametric base and algebraic extension",
+        "Mathlib/Analysis/Normed/Module/FiniteDimension.lean: FiniteDimensional.proper over locally compact nontrivially normed base",
+        "Mathlib/Topology/Algebra/Valued/NormedValued.lean: NormedField.valuation, toValued and actual rank-one instance",
+        "Mathlib/RingTheory/Valuation/Discrete/Basic.lean: actual DVR fraction-field maximal-ideal valuation and equivValuationSubring as alternative route"
+      ],
+      "boundary": "No topology transport, valuation agreement, integer-ring equivalence, Galois property or all-degree unramified extension has yet been proved by these drafts."
+    },
+    "fractionFieldComparisonRecheck": {
+      "status": "Exact existing and pinned source signatures inspected; comparison not implemented yet.",
+      "existingReuse": "Dubon2026.LocalFieldIntegerIntegralClosure.localField_integer_isIntegralClosure proves the genuine original integer ring is the integral closure, deriving finiteness from original local compactness. Use its actual conclusion after proving valuation restriction.",
+      "degreeApi": "Mathlib/RingTheory/Algebraic/Integral.lean: Algebra.IsAlgebraic.finrank_of_isFractionRing identifies the original integral algebra rank and original fraction extension degree, with actual algebraic extension, faithful scalar action, genuine fraction rings and commuting scalar towers.",
+      "fieldConstructionApi": "Mathlib/RingTheory/Localization/FractionRing.lean: IsFractionRing.lift constructs the actual base-field inclusion into FractionRing of the proved root DVR; the actual scalar tower must be proved.",
+      "boundary": "Do not assume the resulting local-field/valuation restriction or identify two integer algebras from a matching rank. Prove the actual algebra maps and apply the original integral-closure equivalence."
+    }
+  },
+  "sourceGates": "DUB-01-16 accepted; DUB-17-20 OPEN.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261011_111932.log",
+    "paper": "logs/dubon-build-20261011-112333-973.log",
+    "scope": [
+      2123,
+      1490,
+      8345
+    ]
+  }
+}

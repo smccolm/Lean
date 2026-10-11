@@ -1,0 +1,418 @@
+{
+  "date": "2026-10-11",
+  "status": "Seven focused increments and root/preflight passed at2139; full verification supplied by actual combined2176-from2132 run.",
+  "parent": 2132,
+  "scope": [
+    2139,
+    1506,
+    8390
+  ],
+  "modules": [
+    {
+      "scope": 2133,
+      "name": "FiniteGaloisEmbeddingStage",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "An actual separable embedding identifies the original finite Galois extension with its genuine image intermediate field. The actual range equivalence retains each coefficient and its exact degree.",
+      "boundary": "This is an algebraic image-stage realization. Local structures and all-local-H2 detection are separate.",
+      "draftSha256": "7779e3b6da5db5d3e68f80569f659b304cd62da15ea3033b85b8ce8dcd361742",
+      "initialDraftSha256": "7779e3b6da5db5d3e68f80569f659b304cd62da15ea3033b85b8ce8dcd361742",
+      "productionLog": "embeddingStage2133-focus.log",
+      "failedProductionLogs": [],
+      "productionFixes": [],
+      "productionSha256": "7779e3b6da5db5d3e68f80569f659b304cd62da15ea3033b85b8ce8dcd361742"
+    },
+    {
+      "scope": 2134,
+      "name": "LocalFieldIntegerAlgEquiv",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "The proved original integer integral closures and the actual ambient field equivalence induce an integer-ring algebra equivalence. Its literal coefficient formula is retained and transports unramifiedness.",
+      "boundary": "This requires actual extending local-field structures on both fields; it does not construct a compatible system of stage valuations.",
+      "draftSha256": "37844c0b4c17c71a544f2d78ff7b3e897cc8844c4fe8e7965dccaaea007a986a",
+      "initialDraftSha256": "6e887fb20a0ba414890c5aa567db063d94b108302b1b81c1a3dfeb34f84ee3ad",
+      "productionLog": "integerEquiv2134b-focus.log",
+      "failedProductionLogs": [
+        "integerEquiv2134-focus.log"
+      ],
+      "productionFixes": [
+        "Finish the literal original coefficient comparison with the pinned integral-closure algebraMap equivalence theorem after simplification. Mathematical statement unchanged."
+      ],
+      "productionSha256": "37844c0b4c17c71a544f2d78ff7b3e897cc8844c4fe8e7965dccaaea007a986a"
+    },
+    {
+      "scope": 2135,
+      "name": "LocalFieldOriginalUnramifiedStageExistence",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "Embed each genuinely constructed all-degree unramified extension into the original separably closed field. Equip the actual image field with its spectral local structure and proved extending valuation; the original integral-closure equivalence transports unramifiedness and retains the exact degree.",
+      "boundary": "These are individual original stages. Compatibility under inclusions, all-local-H2 detection and the full invariant remain open.",
+      "draftSha256": "579f086e93ba6d4f6ccfbc45f83ff2fa1524c2ce26ad494ec2de546b86cfee79",
+      "initialDraftSha256": "579f086e93ba6d4f6ccfbc45f83ff2fa1524c2ce26ad494ec2de546b86cfee79",
+      "productionLog": "originalUnramifiedStage2135-focus.log",
+      "failedProductionLogs": [],
+      "productionFixes": [],
+      "productionSha256": "579f086e93ba6d4f6ccfbc45f83ff2fa1524c2ce26ad494ec2de546b86cfee79"
+    },
+    {
+      "scope": 2136,
+      "name": "IntegralNormalBasisLattice",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "One nonzero original base denominator makes the actual normal-basis generator integral. Scaling by its nonzero base-field image preserves the basis and its original Galois orbit. The original span is Galois-stable by span induction.",
+      "boundary": "The integral normal basis spans a full lattice; it is not claimed to span the entire integer ring. Unit filtrations and local norm indices remain open.",
+      "draftSha256": "2122d5e045ac45a620677e0d08e4da85a907885e2a0474ab66a548378df3d3f9",
+      "initialDraftSha256": "865fd6c3e961f9abc23c1222cddcb1d05b31e086363b2dc011082577ca47d682",
+      "productionLog": "normalLattice2136b-focus.log",
+      "failedProductionLogs": [
+        "normalLattice2136-focus.log"
+      ],
+      "productionFixes": [
+        "Omit unused domain, fraction-field, finite-dimensional and Galois section premises from the span-stability lemma; its statement is strengthened by removing unused assumptions. The earlier exit0 run emitted a warning and was not accepted."
+      ],
+      "productionSha256": "2122d5e045ac45a620677e0d08e4da85a907885e2a0474ab66a548378df3d3f9"
+    },
+    {
+      "scope": 2137,
+      "name": "RegularBasisCohomology",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "Inversion of the original basis index constructs an actual representation isomorphism with coinduction from the trivial subgroup. Pinned Shapiro and genuine trivial-group cohomology prove positive cohomology vanishing.",
+      "boundary": "The regular basis and its exact original action are explicit upstream inputs; a genuine lattice consumer is required. Unit-filtration cohomology remains open.",
+      "draftSha256": "f4edf2cd06f3b366d5060cce39dcbf68d379fccdc1139d27f98c68aee6467b30",
+      "initialDraftSha256": "9470a3700b8520ec2533c410cb617939afabf2ca7ad5cd2670ea8d678477ff6f",
+      "productionLog": "regularCohomology2137b-focus.log",
+      "failedProductionLogs": [
+        "regularCohomology2137-focus.log"
+      ],
+      "productionFixes": [
+        "Install classical decidable equality for the actual finite basis-coordinate comparison and use the pinned root-namespace trivial-group cohomology theorem. Original Shapiro construction and statement unchanged."
+      ],
+      "productionSha256": "f4edf2cd06f3b366d5060cce39dcbf68d379fccdc1139d27f98c68aee6467b30"
+    },
+    {
+      "scope": 2138,
+      "name": "RegularBasisNorm",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "A basis-coordinate calculation proves each original invariant vector has constant coordinates. The identity basis vector multiplied by that original coordinate is an explicit preimage under the actual full action norm.",
+      "boundary": "This is an additive regular-module norm calculation; it does not prove the multiplicative local-field norm index.",
+      "draftSha256": "75cd96283e8d50b4e752ed0d0ecdb76f7cd60c58d731bfd9ce790bb3e0adb276",
+      "initialDraftSha256": "052f581e4c9d6b5f4c94492cafbdafab940ce42dfeed60a07a79e759f3acf038",
+      "productionLog": "regularNorm2138c-focus.log",
+      "failedProductionLogs": [
+        "regularNorm2138-focus.log",
+        "regularNorm2138b-focus.log"
+      ],
+      "productionFixes": [
+        "Explicitly include the original regular-action hypothesis used only in the proof bodies; install classical decidable equality for coordinates, omit the unused Fintype premise from the coordinate lemma, and rewrite the displayed coordinate index specifically. The intended norm and original-basis statements are unchanged."
+      ],
+      "productionSha256": "75cd96283e8d50b4e752ed0d0ecdb76f7cd60c58d731bfd9ce790bb3e0adb276"
+    },
+    {
+      "scope": 2139,
+      "name": "NormalBasisLatticeCohomology",
+      "status": "Focused PASS; full verification covered by actual combined2176-from2132 run.",
+      "mathematics": "Construct the original Galois representation on the genuine base-ring span of the displayed normal basis. Its actual restricted basis is regularly permuted; the proved coinduction and norm results give positive cohomology vanishing and actual invariant norm preimages for that same lattice.",
+      "boundary": "Comparison with original multiplicative unit filtrations, completeness, the unit Herbrand quotient, general cyclic norm index and full local H2 detection remain open.",
+      "draftSha256": "a555ffb45790cc8f58c42da9a602c64e523e72bf57a1dca1bf83066b0bfecc38",
+      "initialDraftSha256": "26ea2bc64447c3277edd0c9757ee28aab862a3877f46b58c2ff89cfaf244351b",
+      "productionLog": "normalLatticeCohomology2139c-focus.log",
+      "failedProductionLogs": [
+        "normalLatticeCohomology2139-focus.log",
+        "normalLatticeCohomology2139b-focus.log"
+      ],
+      "productionFixes": [
+        "Expose the original field coefficients in the restricted action laws and use the actual scalar linear map. Remove redundant subtype extensionality after ext and omit unused finite-dimensional/Galois premises from the applicable supporting theorems. The original lattice cohomology and norm conclusions are unchanged."
+      ],
+      "productionSha256": "a555ffb45790cc8f58c42da9a602c64e523e72bf57a1dca1bf83066b0bfecc38"
+    }
+  ],
+  "semanticBoundary": "The seven-module scope retains the original finite Galois fields, actual embeddings, integer rings, normal bases, full lattices and coefficient representations. The actual separable embedding realizes each constructed extension as an original finite Galois intermediate field, preserving every coefficient and the exact degree. The original integer integral closures transport actual unramifiedness through the original field equivalence. Actual spectral local structures therefore give individual unramified stages of every positive degree inside the original separably closed field. A single nonzero base denominator makes the genuine normal-basis generator and its original orbit integral while preserving the field basis. Its original base-ring span is a Galois-stable full lattice, not necessarily the entire integer ring. Its actual restricted basis is regularly permuted. Original basis-coordinate inversion constructs a coinduction isomorphism, so genuine Shapiro gives positive additive cohomology vanishing. Invariant vectors have constant original coordinates; an explicit identity basis vector gives their actual action-norm preimages. Compatibility of local structures across original stage inclusions, the multiplicative unit filtration and its complete cohomology comparison, the unit Herbrand quotient, general cyclic norm index, all-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer theory, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The seven-module scope retains the original finite Galois fields, actual embeddings, integer rings, normal bases, full lattices and coefficient representations. The actual separable embedding realizes each constructed extension as an original finite Galois intermediate field, preserving every coefficient and the exact degree. The original integer integral closures transport actual unramifiedness through the original field equivalence. Actual spectral local structures therefore give individual unramified stages of every positive degree inside the original separably closed field. A single nonzero base denominator makes the genuine normal-basis generator and its original orbit integral while preserving the field basis. Its original base-ring span is a Galois-stable full lattice, not necessarily the entire integer ring. Its actual restricted basis is regularly permuted. Original basis-coordinate inversion constructs a coinduction isomorphism, so genuine Shapiro gives positive additive cohomology vanishing. Invariant vectors have constant original coordinates; an explicit identity basis vector gives their actual action-norm preimages. Compatibility of local structures across original stage inclusions, the multiplicative unit filtration and its complete cohomology comparison, the unit Herbrand quotient, general cyclic norm index, all-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer theory, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Run assembled exact consumers, audits, all linters and sequential foundation/paper verification before advancing the production scope.",
+  "primaryResearch": {
+    "status": "All seven modules2133-2139 passed focused compilation with actual exit0 consumed and zero diagnostics; full verification pending.",
+    "sourceReview": "actual-original-stage-and-normal-basis-drafts-20261011.json",
+    "review": {
+      "status": "All seven modules2133-2139 passed focused compilation with actual exit0 consumed and zero diagnostics; full verification pending.",
+      "records": [
+        "actual-finite-galois-embedding-stage-draft-20261011.json",
+        "actual-local-field-integer-equivalence-draft-20261011.json",
+        "actual-original-unramified-stage-existence-draft-20261011.json",
+        "actual-integral-normal-basis-lattice-draft-20261011.json",
+        "actual-normal-basis-lattice-cohomology-drafts-20261011.json"
+      ],
+      "scope": [
+        2139,
+        1506,
+        8390
+      ],
+      "parent": 2132,
+      "sourceGates": "DUB01-16 accepted;DUB17-20 OPEN.",
+      "focusedResults": {
+        "FiniteGaloisEmbeddingStage": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "7779e3b6da5db5d3e68f80569f659b304cd62da15ea3033b85b8ce8dcd361742",
+          "productionLog": "embeddingStage2133-focus.log",
+          "failedProductionLogs": [],
+          "productionFixes": []
+        },
+        "LocalFieldIntegerAlgEquiv": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "37844c0b4c17c71a544f2d78ff7b3e897cc8844c4fe8e7965dccaaea007a986a",
+          "productionLog": "integerEquiv2134b-focus.log",
+          "failedProductionLogs": [
+            "integerEquiv2134-focus.log"
+          ],
+          "productionFixes": [
+            "Finish the literal original coefficient comparison with the pinned integral-closure algebraMap equivalence theorem after simplification. Mathematical statement unchanged."
+          ]
+        },
+        "LocalFieldOriginalUnramifiedStageExistence": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "579f086e93ba6d4f6ccfbc45f83ff2fa1524c2ce26ad494ec2de546b86cfee79",
+          "productionLog": "originalUnramifiedStage2135-focus.log",
+          "failedProductionLogs": [],
+          "productionFixes": []
+        },
+        "IntegralNormalBasisLattice": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "2122d5e045ac45a620677e0d08e4da85a907885e2a0474ab66a548378df3d3f9",
+          "productionLog": "normalLattice2136b-focus.log",
+          "failedProductionLogs": [
+            "normalLattice2136-focus.log"
+          ],
+          "productionFixes": [
+            "Omit unused domain, fraction-field, finite-dimensional and Galois section premises from the span-stability lemma; its statement is strengthened by removing unused assumptions. The earlier exit0 run emitted a warning and was not accepted."
+          ]
+        },
+        "RegularBasisCohomology": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "f4edf2cd06f3b366d5060cce39dcbf68d379fccdc1139d27f98c68aee6467b30",
+          "productionLog": "regularCohomology2137b-focus.log",
+          "failedProductionLogs": [
+            "regularCohomology2137-focus.log"
+          ],
+          "productionFixes": [
+            "Install classical decidable equality for the actual finite basis-coordinate comparison and use the pinned root-namespace trivial-group cohomology theorem. Original Shapiro construction and statement unchanged."
+          ]
+        },
+        "RegularBasisNorm": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "75cd96283e8d50b4e752ed0d0ecdb76f7cd60c58d731bfd9ce790bb3e0adb276",
+          "productionLog": "regularNorm2138c-focus.log",
+          "failedProductionLogs": [
+            "regularNorm2138-focus.log",
+            "regularNorm2138b-focus.log"
+          ],
+          "productionFixes": [
+            "Explicitly include the original regular-action hypothesis used only in the proof bodies; install classical decidable equality for coordinates, omit the unused Fintype premise from the coordinate lemma, and rewrite the displayed coordinate index specifically. The intended norm and original-basis statements are unchanged."
+          ]
+        },
+        "NormalBasisLatticeCohomology": {
+          "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+          "sha256": "a555ffb45790cc8f58c42da9a602c64e523e72bf57a1dca1bf83066b0bfecc38",
+          "productionLog": "normalLatticeCohomology2139c-focus.log",
+          "failedProductionLogs": [
+            "normalLatticeCohomology2139-focus.log",
+            "normalLatticeCohomology2139b-focus.log"
+          ],
+          "productionFixes": [
+            "Expose the original field coefficients in the restricted action laws and use the actual scalar linear map. Remove redundant subtype extensionality after ext and omit unused finite-dimensional/Galois premises from the applicable supporting theorems. The original lattice cohomology and norm conclusions are unchanged."
+          ]
+        }
+      }
+    },
+    "sourceRecords": {
+      "actual-finite-galois-embedding-stage-draft-20261011.json": {
+        "status": "All modules in this source record passed focused production compilation with actual exit0 consumed; full assembled verification pending.",
+        "module": "FiniteGaloisEmbeddingStage.lean",
+        "sha256": "7779e3b6da5db5d3e68f80569f659b304cd62da15ea3033b85b8ce8dcd361742",
+        "mathematicalRole": "Realize an actual finite Galois extension inside the original separably closed coefficient field through the image of an actual algebra embedding; retain literal coefficient inclusion and exact degree.",
+        "primaryApis": [
+          {
+            "file": "Mathlib/FieldTheory/IsSepClosed.lean",
+            "declaration": "IsSepClosed.lift",
+            "line": 289
+          },
+          {
+            "file": "Mathlib/Algebra/Algebra/Subalgebra/Basic.lean",
+            "declaration": "AlgEquiv.ofInjective",
+            "line": 633
+          },
+          {
+            "file": "Mathlib/FieldTheory/Galois/Basic.lean",
+            "declaration": "IsGalois.of_algEquiv",
+            "line": 169
+          },
+          {
+            "file": "Mathlib/LinearAlgebra/FiniteDimensional/Defs.lean",
+            "declaration": "LinearEquiv.finiteDimensional",
+            "line": 250
+          },
+          {
+            "file": "Mathlib/FieldTheory/Galois/GaloisClosure.lean",
+            "declaration": "FiniteGaloisIntermediateField",
+            "line": 36
+          }
+        ],
+        "reuseReview": "Targeted production search found other genuine range-equivalence uses, but no existing IsSepClosed.lift or finite Galois image-stage construction. No global absence claim.",
+        "scopeLimit": "Algebraic realization only. Transfer of original local topology, valuation and integer ring, cofinal unramified stages, full local H2 detection and all DUB17-20 conclusions remain open.",
+        "initialDraftSha256": "7779e3b6da5db5d3e68f80569f659b304cd62da15ea3033b85b8ce8dcd361742",
+        "productionLog": "embeddingStage2133-focus.log",
+        "failedProductionLogs": [],
+        "productionFixes": []
+      },
+      "actual-local-field-integer-equivalence-draft-20261011.json": {
+        "status": "All modules in this source record passed focused production compilation with actual exit0 consumed; full assembled verification pending.",
+        "module": "LocalFieldIntegerAlgEquiv.lean",
+        "sha256": "37844c0b4c17c71a544f2d78ff7b3e897cc8844c4fe8e7965dccaaea007a986a",
+        "role": "Transport actual integer rings and unramifiedness through the original field equivalence by genuine integral closures.",
+        "primaryApis": [
+          {
+            "file": "Dubon2026/LocalFieldIntegerIntegralClosure.lean",
+            "declaration": "localField_integer_isIntegralClosure"
+          },
+          {
+            "file": "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean",
+            "declarations": [
+              "AlgEquiv.mapIntegralClosure",
+              "AlgEquiv.coe_mapIntegralClosure",
+              "IsIntegralClosure.equiv",
+              "IsIntegralClosure.algebraMap_equiv"
+            ]
+          },
+          {
+            "file": "Mathlib/RingTheory/Unramified/Basic.lean",
+            "declaration": "Algebra.FormallyUnramified.of_equiv"
+          }
+        ],
+        "boundary": "Does not construct a local-field topology on a finite stage or prove full local H2 detection; all DUB17-20 remain open.",
+        "initialDraftSha256": "6e887fb20a0ba414890c5aa567db063d94b108302b1b81c1a3dfeb34f84ee3ad",
+        "productionLog": "integerEquiv2134b-focus.log",
+        "failedProductionLogs": [
+          "integerEquiv2134-focus.log"
+        ],
+        "productionFixes": [
+          "Finish the literal original coefficient comparison with the pinned integral-closure algebraMap equivalence theorem after simplification. Mathematical statement unchanged."
+        ]
+      },
+      "actual-original-unramified-stage-existence-draft-20261011.json": {
+        "status": "All modules in this source record passed focused production compilation with actual exit0 consumed; full assembled verification pending.",
+        "module": "LocalFieldOriginalUnramifiedStageExistence.lean",
+        "sha256": "579f086e93ba6d4f6ccfbc45f83ff2fa1524c2ce26ad494ec2de546b86cfee79",
+        "dependencyDrafts": [
+          "LocalFieldUnramifiedExtensionExistence",
+          "FiniteGaloisEmbeddingStage",
+          "LocalFieldIntegerAlgEquiv"
+        ],
+        "mathematics": "Embed the genuinely constructed unramified extension into the original separably closed field, equip its actual range with the spectral local topology and extending valuation, transfer actual integer unramifiedness through the integral-closure equivalence, and preserve the exact field degree.",
+        "scopeLimit": "Existence of individual original unramified stages only. Compatibility of chosen valuations across original inclusions, cofinality, all-local-H2 detection, full invariant and duality still unproved. DUB17-20 remain OPEN.",
+        "initialDraftSha256": "579f086e93ba6d4f6ccfbc45f83ff2fa1524c2ce26ad494ec2de546b86cfee79",
+        "productionLog": "originalUnramifiedStage2135-focus.log",
+        "failedProductionLogs": [],
+        "productionFixes": []
+      },
+      "actual-integral-normal-basis-lattice-draft-20261011.json": {
+        "status": "All modules in this source record passed focused production compilation with actual exit0 consumed; full assembled verification pending.",
+        "module": "IntegralNormalBasisLattice.lean",
+        "sha256": "2122d5e045ac45a620677e0d08e4da85a907885e2a0474ab66a548378df3d3f9",
+        "role": "Construct a genuine integral normal basis for a full lattice in the original finite Galois field; derive actual Galois stability of its original base-ring span.",
+        "primaryApis": [
+          {
+            "file": "Mathlib/FieldTheory/Galois/NormalBasis.lean",
+            "declarations": [
+              "IsGalois.normalBasis",
+              "IsGalois.normalBasis_apply"
+            ]
+          },
+          {
+            "file": "Mathlib/RingTheory/Localization/Integral.lean",
+            "declaration": "IsIntegral.exists_multiple_integral_of_isLocalization"
+          },
+          {
+            "file": "Mathlib/LinearAlgebra/Basis/SMul.lean",
+            "declaration": "Module.Basis.smul_apply"
+          },
+          {
+            "file": "Mathlib/LinearAlgebra/Basis/Submodule.lean",
+            "futureReuse": "Module.Basis.restrictScalars"
+          }
+        ],
+        "argument": "One nonzero base-ring denominator makes the actual original normal-basis generator integral. Scalar multiplication by its nonzero image in the original base field retains the basis; actual Galois maps fix this scalar and preserve integrality. Span induction derives stability.",
+        "scopeLimit": "This is an integral full lattice, not an integral normal basis of the entire integer ring. Openness, unit-filtration comparison, Tate acyclicity, unit Herbrand quotient and general cyclic norm index remain unproved. DUB17-20 remain open.",
+        "initialDraftSha256": "865fd6c3e961f9abc23c1222cddcb1d05b31e086363b2dc011082577ca47d682",
+        "productionLog": "normalLattice2136b-focus.log",
+        "failedProductionLogs": [
+          "normalLattice2136-focus.log"
+        ],
+        "productionFixes": [
+          "Omit unused domain, fraction-field, finite-dimensional and Galois section premises from the span-stability lemma; its statement is strengthened by removing unused assumptions. The earlier exit0 run emitted a warning and was not accepted."
+        ]
+      },
+      "actual-normal-basis-lattice-cohomology-drafts-20261011.json": {
+        "status": "All modules in this source record passed focused production compilation with actual exit0 consumed; full assembled verification pending.",
+        "modules": [
+          {
+            "name": "RegularBasisCohomology",
+            "sha256": "f4edf2cd06f3b366d5060cce39dcbf68d379fccdc1139d27f98c68aee6467b30",
+            "initialDraftSha256": "9470a3700b8520ec2533c410cb617939afabf2ca7ad5cd2670ea8d678477ff6f",
+            "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+            "productionLog": "regularCohomology2137b-focus.log",
+            "failedProductionLogs": [
+              "regularCohomology2137-focus.log"
+            ],
+            "productionFixes": [
+              "Install classical decidable equality for the actual finite basis-coordinate comparison and use the pinned root-namespace trivial-group cohomology theorem. Original Shapiro construction and statement unchanged."
+            ]
+          },
+          {
+            "name": "RegularBasisNorm",
+            "sha256": "75cd96283e8d50b4e752ed0d0ecdb76f7cd60c58d731bfd9ce790bb3e0adb276",
+            "initialDraftSha256": "052f581e4c9d6b5f4c94492cafbdafab940ce42dfeed60a07a79e759f3acf038",
+            "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+            "productionLog": "regularNorm2138c-focus.log",
+            "failedProductionLogs": [
+              "regularNorm2138-focus.log",
+              "regularNorm2138b-focus.log"
+            ],
+            "productionFixes": [
+              "Explicitly include the original regular-action hypothesis used only in the proof bodies; install classical decidable equality for coordinates, omit the unused Fintype premise from the coordinate lemma, and rewrite the displayed coordinate index specifically. The intended norm and original-basis statements are unchanged."
+            ]
+          },
+          {
+            "name": "NormalBasisLatticeCohomology",
+            "sha256": "a555ffb45790cc8f58c42da9a602c64e523e72bf57a1dca1bf83066b0bfecc38",
+            "initialDraftSha256": "26ea2bc64447c3277edd0c9757ee28aab862a3877f46b58c2ff89cfaf244351b",
+            "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+            "productionLog": "normalLatticeCohomology2139c-focus.log",
+            "failedProductionLogs": [
+              "normalLatticeCohomology2139-focus.log",
+              "normalLatticeCohomology2139b-focus.log"
+            ],
+            "productionFixes": [
+              "Expose the original field coefficients in the restricted action laws and use the actual scalar linear map. Remove redundant subtype extensionality after ext and omit unused finite-dimensional/Galois premises from the applicable supporting theorems. The original lattice cohomology and norm conclusions are unchanged."
+            ]
+          }
+        ],
+        "pinnedApis": [
+          "Mathlib/RepresentationTheory/Homological/GroupCohomology/Shapiro.lean: groupCohomology.coindIso",
+          "Mathlib/RepresentationTheory/Homological/GroupCohomology/Basic.lean: isZero_groupCohomology_succ_of_subsingleton",
+          "Mathlib/RepresentationTheory/Homological/GroupCohomology/Functoriality.lean: groupCohomology.functor",
+          "Mathlib/LinearAlgebra/Basis/Submodule.lean: Module.Basis.restrictScalars, restrictScalars_apply"
+        ],
+        "argument": "For a genuine regularly permuted basis, inversion of its coordinate index identifies the original representation with coinduction from the trivial subgroup. Shapiro and the actual trivial-subgroup positive-cohomology theorem then give vanishing. The consumer constructs the original Galois action on its original normal-basis span, proves the actual action on its restricted basis, and applies the generic theorem.",
+        "scopeLimit": "Additive lattice positive cohomology and original invariant action norms only. The original unit-filtration comparison and completeness, unit Herbrand quotient, general cyclic norm index and full local H2 detection remain open.",
+        "normArgument": "A basis-coordinate calculation proves invariants have constant original coordinates. Their literal full action-norm preimage is the identity basis vector times that coordinate; the actual normal-basis lattice consumer applies its proved original regular action.",
+        "initialDraftBoundary": "Additive lattice positive cohomology and original invariant action norms only, still uncompiled. The original unit-filtration comparison and completeness, unit Herbrand quotient, general cyclic norm index and full local H2 detection remain open."
+      }
+    }
+  },
+  "sourceGates": "DUB-01-16 accepted; DUB-17-20 OPEN.",
+  "validation": {
+    "coveredBy": "Tools/actual-original-stages-lattices-and-small-unit-cohomology-route-20261011.json",
+    "foundation": "../../logs/foundation_freeze_20261011_140503.log",
+    "paper": "logs/dubon-build-20261011-140855-433.log",
+    "verifiedScope": [
+      2176,
+      1543,
+      8506
+    ],
+    "standaloneFull2139": false
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-11",
+  "status": "All fourteen modules2086-2099, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "parent": 2085,
+  "scope": [
+    2099,
+    1466,
+    8282
+  ],
+  "modules": [
+    {
+      "scope": 2086,
+      "name": "RationalCyclicInvariant",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Adapt the pinned original quotient map to rational coefficients, retaining its license and provenance. Prove the literal j/n formula, injectivity and that its original image is exactly the rational classes annihilated by n.",
+      "boundary": "The positive degree is explicit. This constructs the actual rational quotient map; no arithmetic invariant is assumed.",
+      "draftSha256": "89c21edef79b1cb30aa46825acdc6cdae35390cdd43044a936b12973871b9d87",
+      "productionSha256": "ca8490ee3523322bb7dfcfa598722e813dd60a8a36685441904d412f7bb76b34",
+      "productionLog": "rationalInvariant2086b-focus.log",
+      "productionFixes": [
+        "Keep the finite-representative bound inside the paired tactic block and parenthesize its application; original statement unchanged."
+      ]
+    },
+    {
+      "scope": 2087,
+      "name": "UnramifiedLocalRationalH2Invariant",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Compose the proved original arithmetic-Frobenius normalized H2 equivalence with the genuine rational cyclic embedding. Derive the exact original order divided by extension degree formula, injectivity, and image equal to the original degree-torsion subgroup.",
+      "boundary": "This is a finite unramified-stage invariant. Its compatibility with actual inflation and the full local invariant remain separate obligations.",
+      "draftSha256": "c340e643fca75c235d4cef5174bb1676fc489d0ec7fb16d4de8d8ae7cb1c842b",
+      "productionSha256": "c340e643fca75c235d4cef5174bb1676fc489d0ec7fb16d4de8d8ae7cb1c842b",
+      "productionLog": "localRationalH2_2087-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2088,
+      "name": "LocalFieldArithmeticFrobeniusUniqueness",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Actual unramified residue-action faithfulness makes an original field automorphism with the proved cardinality-power residue action equal to the constructed original arithmetic Frobenius.",
+      "boundary": "The residue formula is a characterization of the original automorphism, not an assumed cohomological normalization.",
+      "draftSha256": "1854712cc83aa4e89389a8ec943ee6b552dc4c1edae248adf188f50d33b8db4c",
+      "productionSha256": "1854712cc83aa4e89389a8ec943ee6b552dc4c1edae248adf188f50d33b8db4c",
+      "productionLog": "frobeniusUniqueness2088-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2089,
+      "name": "LocalFieldIntegerGaloisTower",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Apply injectivity of the original integer-ring inclusion into the field. The proved original restriction formula and pinned normal-restriction commutation identify the two actual integer elements.",
+      "boundary": "All field embeddings and valuation-compatible structures are original scalar towers. No action-compatibility certificate is assumed.",
+      "draftSha256": "ad1339765acdec7e3d136178c9834dd2e64844392142112e0c191faaa5ba7fbe",
+      "productionSha256": "ad1339765acdec7e3d136178c9834dd2e64844392142112e0c191faaa5ba7fbe",
+      "productionLog": "integerGaloisTower2089-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2090,
+      "name": "LocalFieldArithmeticFrobeniusRestriction",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Transport the actual upper residue cardinality-power formula through the original residue-field inclusion. Its injectivity, the proved integer restriction identity and genuine Frobenius uniqueness identify the restricted original automorphism.",
+      "boundary": "This proves automorphism restriction compatibility. Compatibility of the original H2 invariant under inflation remains a separate proof.",
+      "draftSha256": "23a883f92c11684eb472c30ee67cab5e45fe5642e853b22a3f82f48f36a4f59d",
+      "productionSha256": "23a883f92c11684eb472c30ee67cab5e45fe5642e853b22a3f82f48f36a4f59d",
+      "productionLog": "frobeniusRestriction2090-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2091,
+      "name": "GaloisUnitCochainFiniteDescent",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Actual restriction surjectivity selects original lifts. Genuine finite-field coefficient membership defines original finite units; the displayed original periods prove exact independence and recover every original cochain value.",
+      "boundary": "Finite coefficient membership and periods are explicit narrower hypotheses already constructed for original continuous cochains.",
+      "draftSha256": "f83dadb08ab9f16af58b363eab279d85fd9fab56c53fb3645cbc038f8a8770f5",
+      "productionSha256": "37f97d87315bd5127b60d7619470649158ea224091bc561ac0286b7aad79ae42",
+      "productionLog": "cochainFiniteDescent2091b-focus.log",
+      "productionFixes": [
+        "Expose the original coefficient equality after unit extensionality and type the original unit-value projection."
+      ]
+    },
+    {
+      "scope": 2092,
+      "name": "GaloisUnitFiniteCoboundaryReflection",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Descend the original unit cochain by its actual finite values and periods. Surjective original Galois restriction and injective original field inclusion reflect the actual coboundary identity in the original finite field.",
+      "boundary": "The displayed witness conditions are narrower than finite-stage vanishing and are discharged by the later compact descent proof.",
+      "draftSha256": "dd729274bd322076a5485d99aaef7f104fc185ab890b44392a400ee6700bb12f",
+      "productionSha256": "dd729274bd322076a5485d99aaef7f104fc185ab890b44392a400ee6700bb12f",
+      "productionLog": "finiteCoboundary2092c-focus.log",
+      "productionFixes": [
+        "Annotate the original finite Galois variables and the original unit action result in the exact public signature to bound typeclass inference under full imports; mathematical type unchanged.",
+        "Write the original finite Galois unit action as Units.map of the same automorphism. Pinned AlgEquiv.smul_units_def proves this is definitionally the original action; avoids overloaded HSMul inference under full imports."
+      ]
+    },
+    {
+      "scope": 2093,
+      "name": "FiniteGaloisUnitTowerInflation",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The original unit inclusion intertwines actual restriction of the original Galois action. Compose genuine continuous restriction with the proved coefficient map, retaining exact original cocycle and H2 representative formulas.",
+      "boundary": "This is actual inflation on existing continuous cohomology, not a new quotient chosen to force an invariant formula.",
+      "draftSha256": "e595f51e91cd488cdd76186006553460d92344a04e59bfec0b4fc6a278fd5255",
+      "productionSha256": "cbf2d4d860e4f4d83eb41a21cc3af120419ca158c553abae771ebb62a5ac8714",
+      "productionLog": "finiteTowerInflation2093b-focus.log",
+      "productionFixes": [
+        "Remove unused lower-field finite-dimensionality and omit the unused upper Galois hypothesis from the literal cocycle-value identity; maps and conclusions unchanged."
+      ]
+    },
+    {
+      "scope": 2094,
+      "name": "GaloisUnitFiniteStageTower",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Induct on original continuous H2 representatives. Pinned original normal-restriction composition and literal original field inclusions prove the actual stage-to-infinite inflation identity.",
+      "boundary": "Both genuine original cohomology maps are retained. Their equality is proved on the actual continuous representatives.",
+      "draftSha256": "cf21a70857323116ca9f90adcefe0ad34d09f8df3fbf0d0e449b9534e1d57dff",
+      "productionSha256": "cf21a70857323116ca9f90adcefe0ad34d09f8df3fbf0d0e449b9534e1d57dff",
+      "productionLog": "finiteStageTower2094-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2095,
+      "name": "ContinuousGaloisUnitH2FiniteZeroDetection",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Extract the original continuous coboundary witness from actual H2 vanishing. Compact finite coefficient and period descent supplies a larger genuine finite Galois field containing the original stage. Reflect the literal coboundary identity using actual restriction and coefficient inclusions to make the original finite-tower class zero there.",
+      "boundary": "No individual stage inflation injectivity is assumed. Actual continuous witnesses prove finite-stage zero detection. This is not arithmetic local duality.",
+      "draftSha256": "f59f707bf728d62194b4c9b7538c66a234183cb90e2401ef199006cac08e84a1",
+      "productionSha256": "4b7e68d4d6e0c9046ff7bb574ec18114a64d3dcbba8c44ead59f4e69091d3481",
+      "productionLog": "finiteZeroDetection2095d-focus.log",
+      "productionFixes": [
+        "Expose original finite coefficient membership with explicit field parameters.",
+        "Separate the literal original unit-inclusion/restriction tower identity and the genuine finite continuous-coboundary construction into private lemmas. Original public statement and resource limits unchanged.",
+        "Omit topology and Galois hypotheses unused by the raw original unit-map identity."
+      ]
+    },
+    {
+      "scope": 2096,
+      "name": "FiniteGaloisUnitTowerComposition",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Original restriction composition in both cocycle variables and the actual scalar-tower algebra-map identity prove transitivity of the original H2 inflation maps.",
+      "boundary": "The equality concerns actual original finite-field maps and is proved by the original quotient representatives.",
+      "draftSha256": "dbb38c6d1c1cfb3b377822effcbd022fd01f2cc12e59a3a2b4817dff50f52b9f",
+      "productionSha256": "8404f2f4c11514744f188db9a421ec58510af328e781736e586c6c4154ea45b7",
+      "productionLog": "finiteTowerComposition2096b-focus.log",
+      "productionFixes": [
+        "Remove the unused first extension finite-dimensionality hypothesis; actual inflation composition unchanged."
+      ]
+    },
+    {
+      "scope": 2097,
+      "name": "GaloisUnitH2FiniteDirectedSystem",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Use the original discrete coefficient modules and actual finite-field inclusions. Prove the identity transition on original representatives and composition along original inclusions, then construct the actual directed-system instance.",
+      "boundary": "Only the actual finite Galois fields index this system. No direct-limit comparison or arithmetic invariant is built into its definition.",
+      "draftSha256": "9259f88070516ffbb887fcc7087d4327f65867b028d12af420971e8289a2ada4",
+      "productionSha256": "2a95e4c339714082dc9e109f6e0b5033dedca96dd2001c4598549fa728e8d132",
+      "productionLog": "finiteDirectedSystem2097b-focus.log",
+      "productionFixes": [
+        "Use original algebra-equivalence extensionality without descending into the field subtype.",
+        "Bind the actual directed-system implicit indices explicitly in its identity and composition proofs."
+      ]
+    },
+    {
+      "scope": 2098,
+      "name": "GaloisUnitH2FiniteColimitMap",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The proved actual inflation compatibility gives a cocone over the genuine finite-stage directed system. Pinned module direct-limit universality constructs its linear map to the existing original continuous H2, retaining the exact stage representative.",
+      "boundary": "This constructs the original colimit map. Bijectivity requires the separately proved finite cocycle realization and continuous coboundary descent.",
+      "draftSha256": "e89e88d54344b3d60041aaed7cd173f34db05a57be9b3f84530e51d73d7f3d92",
+      "productionSha256": "e89e88d54344b3d60041aaed7cd173f34db05a57be9b3f84530e51d73d7f3d92",
+      "productionLog": "finiteColimitMap2098-focus.log",
+      "productionFixes": []
+    },
+    {
+      "scope": 2099,
+      "name": "GaloisUnitH2FiniteColimitEquiv",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "Exact original finite cocycle realization proves surjectivity of the genuine colimit map. Represent a kernel element at an actual finite stage and apply the proved original continuous coboundary descent to kill it at a larger stage. The actual colimit relation then proves injectivity, yielding the original linear equivalence with its exact stage formula.",
+      "boundary": "This proves the genuine finite-stage comparison. It does not prove that unramified stages detect every local H2 class, rational invariant inflation compatibility, local reciprocity or arithmetic duality.",
+      "draftSha256": "0941644507c22010dc2f29c6a86e4ab6e3eb704fc1fe2bf35a4c5f4c2effb4e6",
+      "productionSha256": "0941644507c22010dc2f29c6a86e4ab6e3eb704fc1fe2bf35a4c5f4c2effb4e6",
+      "productionLog": "finiteColimitEquiv2099-focus.log",
+      "productionFixes": []
+    }
+  ],
+  "semanticBoundary": "The fourteen-module scope retains the original local fields, genuine canonical normalized orders, original arithmetic Frobenius, original discrete unit coefficients and existing continuous Galois H2. The rational cyclic map uses the actual quotient of rational numbers by integers and retains the upstream quotient construction provenance. Its exact representative formula, injectivity and degree-torsion image are proved. Composition with the actual arithmetic-Frobenius H2 equivalence gives a genuine finite unramified-stage rational invariant, with exact normalized order divided by the original extension degree, injectivity and its actual degree-torsion image. Original unramified residue faithfulness characterizes arithmetic Frobenius. Original integer-ring Galois restriction commutes with actual field inclusion; injectivity of actual residue inclusion then proves arithmetic Frobenius restriction compatibility. Separately, original finite cochain values and genuine Galois periods descend exact cochain witnesses. Injective original coefficient inclusion and surjective restriction reflect actual finite-stage coboundary identities. Actual finite-tower H2 inflation is constructed from the original continuous restriction and coefficient maps, with exact cocycle and class formulas. The genuine finite-stage-to-infinite maps agree through larger original fields. If an original finite-stage class becomes zero in continuous H2, its actual continuous coboundary witness has finite coefficient and period data in a larger genuine finite Galois field containing the original stage. Exact witness descent proves the actual finite-tower class vanishes there. Original inflation identity and composition give a genuine directed system over the actual finite Galois fields. Its actual module colimit maps to existing continuous H2 by original inflation compatibility. Finite cocycle realization proves surjectivity; the proved finite-stage zero detection and actual colimit relation prove injectivity. The resulting linear equivalence retains the exact original stage representatives. This finite-stage colimit comparison does not identify unramified stages as cofinal in local H2 and does not prove compatibility of the rational invariant with actual H2 inflation. Those arithmetic comparisons, construction of all intended unramified stages, the rational invariant on full local Galois H2, reciprocity, arithmetic duality, local annihilator identities, Euler and Poitou-Tate formulas remain open. Numerical Selmer theory, modular Galois association and local models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The fourteen-module scope retains the original local fields, genuine canonical normalized orders, original arithmetic Frobenius, original discrete unit coefficients and existing continuous Galois H2. The rational cyclic map uses the actual quotient of rational numbers by integers and retains the upstream quotient construction provenance. Its exact representative formula, injectivity and degree-torsion image are proved. Composition with the actual arithmetic-Frobenius H2 equivalence gives a genuine finite unramified-stage rational invariant, with exact normalized order divided by the original extension degree, injectivity and its actual degree-torsion image. Original unramified residue faithfulness characterizes arithmetic Frobenius. Original integer-ring Galois restriction commutes with actual field inclusion; injectivity of actual residue inclusion then proves arithmetic Frobenius restriction compatibility. Separately, original finite cochain values and genuine Galois periods descend exact cochain witnesses. Injective original coefficient inclusion and surjective restriction reflect actual finite-stage coboundary identities. Actual finite-tower H2 inflation is constructed from the original continuous restriction and coefficient maps, with exact cocycle and class formulas. The genuine finite-stage-to-infinite maps agree through larger original fields. If an original finite-stage class becomes zero in continuous H2, its actual continuous coboundary witness has finite coefficient and period data in a larger genuine finite Galois field containing the original stage. Exact witness descent proves the actual finite-tower class vanishes there. Original inflation identity and composition give a genuine directed system over the actual finite Galois fields. Its actual module colimit maps to existing continuous H2 by original inflation compatibility. Finite cocycle realization proves surjectivity; the proved finite-stage zero detection and actual colimit relation prove injectivity. The resulting linear equivalence retains the exact original stage representatives. This finite-stage colimit comparison does not identify unramified stages as cofinal in local H2 and does not prove compatibility of the rational invariant with actual H2 inflation. Those arithmetic comparisons, construction of all intended unramified stages, the rational invariant on full local Galois H2, reciprocity, arithmetic duality, local annihilator identities, Euler and Poitou-Tate formulas remain open. Numerical Selmer theory, modular Galois association and local models, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Prove arithmetic compatibility of rational H2 invariants with original inflation and detection of all local classes by genuine unramified stages, then construct the full local invariant and arithmetic duality.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261011_091241.log",
+    "paper": "logs/dubon-build-20261011-091721-271.log",
+    "scope": [
+      2099,
+      1466,
+      8282
+    ]
+  }
+}

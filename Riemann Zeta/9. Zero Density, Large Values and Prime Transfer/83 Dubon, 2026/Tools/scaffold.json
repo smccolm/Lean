@@ -1508,6 +1508,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdicCompleteResidueSplitting.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdicCompleteSimpleRoot.lean",
       "role": "Extension"
     },
@@ -1541,6 +1545,10 @@
     },
     {
       "path": "Extension/Dubon2026/AdicResidualProfiniteKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdjoinRootFractionGeneration.lean",
       "role": "Extension"
     },
     {
@@ -2188,6 +2196,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactDVRLocalAlgebraFinite.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CompactDiscreteFiniteQuotient.lean",
       "role": "Extension"
     },
@@ -2200,11 +2212,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactFilteredExactness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactFilteredUnitCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactFilteredUnitNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactFiniteResidueModule.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CompactInvariantProjection.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/CompactJetCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactLatticeUnitSubgroup.lean",
       "role": "Extension"
     },
     {
@@ -2248,11 +2280,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CompactSeparatedLocalAdicTopology.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CompactSl2Basis.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/CompactSl2LieHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactSubmonoidInverse.lean",
       "role": "Extension"
     },
     {
@@ -2648,6 +2688,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousGaloisUnitH2FiniteZeroDetection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousGaloisUnitH2Torsion.lean",
       "role": "Extension"
     },
@@ -2717,6 +2761,10 @@
     },
     {
       "path": "Extension/Dubon2026/ContinuousTwoCocyclePeriodInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedCyclicGaloisH2Order.lean",
       "role": "Extension"
     },
     {
@@ -3028,7 +3076,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CyclicGaloisH2PeriodNormMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicGaloisH2PeriodSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicGeneratorNormSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicGeneratorRepeatedPeriod.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicPositiveCohomologyVanishing.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CyclicProjectionCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicTwoCocyclePeriodSum.lean",
       "role": "Extension"
     },
     {
@@ -3232,6 +3304,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteActionUnitNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteAdeleClassicalIntersection.lean",
       "role": "Extension"
     },
@@ -3388,6 +3464,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteBasisAdicCompleteness.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCharactersTopologicalGeneration.lean",
       "role": "Extension"
     },
@@ -3425,6 +3505,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteCrossingArgument.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCyclicCohomologyCardinality.lean",
       "role": "Extension"
     },
     {
@@ -3520,7 +3604,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteGaloisEmbeddingStage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteGaloisUnitNormRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisUnitTowerComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisUnitTowerInflation.lean",
       "role": "Extension"
     },
     {
@@ -3637,6 +3733,10 @@
     },
     {
       "path": "Extension/Dubon2026/FinitePadicSL2Approximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePeriodicHomologyCardinality.lean",
       "role": "Extension"
     },
     {
@@ -3848,6 +3948,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteResidueCompleteAlgebraSplitting.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteSeparatingDerivative.lean",
       "role": "Extension"
     },
@@ -4020,6 +4124,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FullBasisLatticeBounds.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FullLevelTraceUnfolding.lean",
       "role": "Extension"
     },
@@ -4053,6 +4161,10 @@
     },
     {
       "path": "Extension/Dubon2026/GaloisCharacterKummerInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisGeneratorInvariantBaseEquiv.lean",
       "role": "Extension"
     },
     {
@@ -4100,7 +4212,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisUnitCarryCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitCochainFiniteDescent.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisUnitCocycleFiniteDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitCyclicPeriodBase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitFiniteCoboundaryReflection.lean",
       "role": "Extension"
     },
     {
@@ -4108,7 +4236,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisUnitFiniteStageTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitH2FiniteColimitEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitH2FiniteColimitMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitH2FiniteDirectedSystem.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisUnitInvariantBaseDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitPeriodTower.lean",
       "role": "Extension"
     },
     {
@@ -4916,6 +5064,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/InjectiveUnitCohomologyTransfer.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/InnerCountConvergence.lean",
       "role": "Extension"
     },
@@ -4997,6 +5149,10 @@
     },
     {
       "path": "Extension/Dubon2026/IntegralInertiaRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralNormalBasisLattice.lean",
       "role": "Extension"
     },
     {
@@ -5264,6 +5420,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalAlgebraAutMaximalStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalAlgebraAutResidueHom.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalCoefficientFiberProduct.lean",
       "role": "Extension"
     },
@@ -5288,7 +5452,167 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldAlgEquivContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldArithmeticFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldArithmeticFrobeniusRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldArithmeticFrobeniusUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldArithmeticH2Normalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCompactLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCompleteNormalLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCyclicSmallUnitAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerAlgEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerAlgebraFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerGaloisRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerGaloisTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerIntegralClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerUnitAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerUnitCohomologyOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerUnitNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegerUnitOrderKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegralNormalLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegralSmallUnitCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldIntegralSmallUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldMonicRootIntegerEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldNormOrderCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldNormalLatticeUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldNormalUnitLevelCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldNormalUnitLevelNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldNormalizedUnitOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldOpenLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldOpenSmallUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldOriginalNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldOriginalUnramifiedStageExistence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldPeriodH2Equiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldPeriodInvariantInflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldPeriodRationalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldResidueExtensionPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldScalarUnitFiltration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSeparatedNormalUnitFiltration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSmallLatticeUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSmallUnitCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSmallUnitNormSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldUniformizerOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldUnramifiedExtensionExistence.lean",
       "role": "Extension"
     },
     {
@@ -5337,6 +5661,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalMatrixRepresentationSpanning.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalMonicSeparableReduction.lean",
       "role": "Extension"
     },
     {
@@ -5820,6 +6148,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MonicResidueIrreducibleDVR.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MonicResidueIrreducibleLocalAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MonicRootFractionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MonicRootResidueCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MonicSeparableAdjoinRootEtale.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MultivariateBohrPolynomial.lean",
       "role": "Extension"
     },
@@ -5881,6 +6229,18 @@
     },
     {
       "path": "Extension/Dubon2026/NonzeroFirstCoefficientDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormalBasisLatticeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormalLatticeUnitCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormalLatticeUnitGradedMap.lean",
       "role": "Extension"
     },
     {
@@ -6013,6 +6373,10 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalFiniteFiberProductFramedGluing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFractionScalarAlgebra.lean",
       "role": "Extension"
     },
     {
@@ -6996,6 +7360,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalCyclicInvariant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalFiniteAdeleDensity.lean",
       "role": "Extension"
     },
@@ -7408,6 +7776,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RegularBasisCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RegularBasisNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RegularZeroDensity.lean",
       "role": "Extension"
     },
@@ -7445,6 +7821,14 @@
     },
     {
       "path": "Extension/Dubon2026/RelativeMaximalCotangentUniversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCarryCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationCarryPeriod.lean",
       "role": "Extension"
     },
     {
@@ -7513,6 +7897,10 @@
     },
     {
       "path": "Extension/Dubon2026/RepresentationOrbitRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationPeriodInflation.lean",
       "role": "Extension"
     },
     {
@@ -7656,11 +8044,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ScalarLatticeFiltration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarLatticeFiltrationSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarNormalLatticeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarNormalLatticeQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ScalarProjectionSubspace.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ScalarQuotientInvariantLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarRepresentationQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ScalarVectorODE.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScaledLatticeProducts.lean",
       "role": "Extension"
     },
     {
@@ -7752,6 +8168,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SmallLatticeNormError.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLatticeProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallUnitGradedQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SmoothInducedCharacter.lean",
       "role": "Extension"
     },
@@ -7800,6 +8228,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SpectralFiniteExtensionLocalField.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SpectralFormalEvaluation.lean",
       "role": "Extension"
     },
@@ -7809,6 +8241,10 @@
     },
     {
       "path": "Extension/Dubon2026/SpectralLocalConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralValuationExtension.lean",
       "role": "Extension"
     },
     {
@@ -7833,6 +8269,14 @@
     },
     {
       "path": "Extension/Dubon2026/SquareLiftLSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/StableSubgroupCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/StableSubgroupQuotientCohomology.lean",
       "role": "Extension"
     },
     {
@@ -7913,6 +8357,10 @@
     },
     {
       "path": "Extension/Dubon2026/SubmoduleRankOnePrimitiveVector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SubringUnitSubgroupEquiv.lean",
       "role": "Extension"
     },
     {
@@ -8164,6 +8612,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/UnitCocycleCorrections.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnitGradedCorrection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/UnitIntervalAverage.lean",
       "role": "Extension"
     },
@@ -8248,7 +8704,51 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/UnramifiedLocalFieldArithmeticH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalFieldNormImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalFieldNormOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalFieldResidueGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalFieldUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalFieldZeroOrderNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalFractionFieldNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalNormQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalRationalH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedLocalResidueAutEquiv.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/UnramifiedRadicalSelmer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedSeparatedResidueFaithfulness.lean",
       "role": "Extension"
     },
     {
@@ -8405,6 +8905,10 @@
     },
     {
       "path": "Extension/Dubon2026/WeightedRectangleZeros.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ZModAdditionCarry.lean",
       "role": "Extension"
     },
     {
@@ -8684,6 +9188,10 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-literal-frobenius-cocycle-period-invariant-and-inflation-route-20261011.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-local-geometric-linearity-and-arithmetic-localization-route-20261010.json",
       "role": "Tools"
     },
@@ -8700,6 +9208,18 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-original-integer-unit-cohomology-and-order-route-20261011.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-local-field-fraction-and-unramified-existence-route-20261011.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-stages-lattices-and-small-unit-cohomology-route-20261011.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-original-trace-basis-route-20261010.json",
       "role": "Tools"
     },
@@ -8708,11 +9228,23 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-original-unramified-stages-and-normal-basis-lattice-route-20261011.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-prime-local-arithmetic-restriction-and-geometric-universality-route-20261010.json",
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-rational-unramified-invariant-frobenius-restriction-and-finite-h2-colimit-route-20261011.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-reduced-hopf-and-integral-quotient-point-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-residue-root-algebra-dvr-completeness-and-spectral-local-field-route-20261011.json",
       "role": "Tools"
     },
     {
@@ -8721,6 +9253,10 @@
     },
     {
       "path": "Tools/actual-unframed-condition-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-unramified-local-field-norm-integer-finiteness-and-arithmetic-frobenius-h2-route-20261011.json",
       "role": "Tools"
     },
     {
@@ -10921,7 +11457,133 @@
     "AdicCompleteUnitNormLifting",
     "LocalRingNormReduction",
     "CompleteLocalFiniteResidueNorm",
-    "UnramifiedCompleteLocalUnitNorm"
+    "UnramifiedCompleteLocalUnitNorm",
+    "LocalFieldIntegerUnitOrderKernel",
+    "UnramifiedLocalFractionFieldNorm",
+    "UnramifiedLocalFieldZeroOrderNorm",
+    "LocalFieldUniformizerOrder",
+    "LocalFieldIntegerUnitNorm",
+    "UnramifiedLocalFieldUniformizer",
+    "UnramifiedLocalFieldNormOrder",
+    "LocalFieldNormOrderCriterion",
+    "UnramifiedLocalFieldNormImage",
+    "UnramifiedLocalNormQuotient",
+    "ContinuousUnramifiedCyclicGaloisH2Order",
+    "CompactSeparatedLocalAdicTopology",
+    "CompactFiniteResidueModule",
+    "CompactDVRLocalAlgebraFinite",
+    "LocalFieldIntegerAlgebraFinite",
+    "UnramifiedLocalFieldArithmeticH2",
+    "LocalFieldIntegerIntegralClosure",
+    "LocalFieldIntegerGaloisRestriction",
+    "UnramifiedSeparatedResidueFaithfulness",
+    "LocalAlgebraAutMaximalStabilizer",
+    "LocalAlgebraAutResidueHom",
+    "UnramifiedLocalResidueAutEquiv",
+    "UnramifiedLocalFieldResidueGalois",
+    "LocalFieldArithmeticFrobenius",
+    "LocalFieldArithmeticH2Normalization",
+    "RationalCyclicInvariant",
+    "UnramifiedLocalRationalH2Invariant",
+    "LocalFieldArithmeticFrobeniusUniqueness",
+    "LocalFieldIntegerGaloisTower",
+    "LocalFieldArithmeticFrobeniusRestriction",
+    "GaloisUnitCochainFiniteDescent",
+    "GaloisUnitFiniteCoboundaryReflection",
+    "FiniteGaloisUnitTowerInflation",
+    "GaloisUnitFiniteStageTower",
+    "ContinuousGaloisUnitH2FiniteZeroDetection",
+    "FiniteGaloisUnitTowerComposition",
+    "GaloisUnitH2FiniteDirectedSystem",
+    "GaloisUnitH2FiniteColimitMap",
+    "GaloisUnitH2FiniteColimitEquiv",
+    "CyclicTwoCocyclePeriodSum",
+    "CyclicGeneratorNormSum",
+    "GaloisGeneratorInvariantBaseEquiv",
+    "GaloisUnitCyclicPeriodBase",
+    "CyclicGaloisH2PeriodNormMap",
+    "ZModAdditionCarry",
+    "RepresentationCarryCocycle",
+    "RepresentationCarryPeriod",
+    "GaloisUnitCarryCocycle",
+    "CyclicGaloisH2PeriodSurjective",
+    "CyclicGeneratorRepeatedPeriod",
+    "LocalFieldPeriodH2Equiv",
+    "LocalFieldPeriodRationalInvariant",
+    "RepresentationPeriodInflation",
+    "GaloisUnitPeriodTower",
+    "LocalFieldPeriodInvariantInflation",
+    "LocalFieldResidueExtensionPolynomial",
+    "LocalMonicSeparableReduction",
+    "MonicSeparableAdjoinRootEtale",
+    "MonicResidueIrreducibleLocalAlgebra",
+    "MonicResidueIrreducibleDVR",
+    "FiniteBasisAdicCompleteness",
+    "MonicRootResidueCardinality",
+    "SpectralFiniteExtensionLocalField",
+    "LocalFieldOriginalNorm",
+    "SpectralValuationExtension",
+    "AdicCompleteResidueSplitting",
+    "FiniteResidueCompleteAlgebraSplitting",
+    "OriginalFractionScalarAlgebra",
+    "MonicRootFractionDegree",
+    "AdjoinRootFractionGeneration",
+    "LocalFieldMonicRootIntegerEquiv",
+    "LocalFieldUnramifiedExtensionExistence",
+    "FiniteGaloisEmbeddingStage",
+    "LocalFieldIntegerAlgEquiv",
+    "LocalFieldOriginalUnramifiedStageExistence",
+    "IntegralNormalBasisLattice",
+    "RegularBasisCohomology",
+    "RegularBasisNorm",
+    "NormalBasisLatticeCohomology",
+    "FullBasisLatticeBounds",
+    "SmallLatticeProduct",
+    "LocalFieldIntegralNormalLattice",
+    "LocalFieldCompleteNormalLattice",
+    "CompactSubmonoidInverse",
+    "CompactLatticeUnitSubgroup",
+    "LocalFieldCompactLattice",
+    "CompactFilteredExactness",
+    "ScaledLatticeProducts",
+    "LocalFieldSmallLatticeUnits",
+    "SmallLatticeNormError",
+    "LocalFieldNormalLatticeUnits",
+    "LocalFieldOpenLattice",
+    "LocalFieldOpenSmallUnits",
+    "SubringUnitSubgroupEquiv",
+    "LocalFieldIntegralSmallUnits",
+    "SmallUnitGradedQuotient",
+    "ScalarNormalLatticeCohomology",
+    "ScalarRepresentationQuotient",
+    "ScalarQuotientInvariantLift",
+    "ScalarNormalLatticeQuotient",
+    "NormalLatticeUnitGradedMap",
+    "UnitGradedCorrection",
+    "NormalLatticeUnitCorrection",
+    "ScalarLatticeFiltration",
+    "ScalarLatticeFiltrationSeparation",
+    "LocalFieldScalarUnitFiltration",
+    "LocalFieldSeparatedNormalUnitFiltration",
+    "FiniteActionUnitNorm",
+    "CompactFilteredUnitNorm",
+    "LocalFieldAlgEquivContinuity",
+    "LocalFieldNormalUnitLevelNorm",
+    "LocalFieldSmallUnitNormSurjectivity",
+    "UnitCocycleCorrections",
+    "CompactFilteredUnitCocycles",
+    "LocalFieldNormalUnitLevelCocycle",
+    "LocalFieldSmallUnitCohomology",
+    "LocalFieldIntegerUnitAction",
+    "InjectiveUnitCohomologyTransfer",
+    "LocalFieldIntegralSmallUnitCohomology",
+    "StableSubgroupCohomology",
+    "CyclicPositiveCohomologyVanishing",
+    "LocalFieldCyclicSmallUnitAcyclicity",
+    "FinitePeriodicHomologyCardinality",
+    "FiniteCyclicCohomologyCardinality",
+    "StableSubgroupQuotientCohomology",
+    "LocalFieldIntegerUnitCohomologyOrders"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

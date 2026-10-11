@@ -1,0 +1,319 @@
+{
+  "date": "2026-10-11",
+  "status": "All nine modules2124-2132, exact consumers, independent regression/audit executions and sequential foundation/paper verifiers PASS with actual exits0 consumed and zero diagnostics.",
+  "parent": 2123,
+  "scope": [
+    2132,
+    1499,
+    8370
+  ],
+  "modules": [
+    {
+      "scope": 2124,
+      "name": "LocalFieldOriginalNorm",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The actual rank-one value-group embedding and pinned norm constructor retain the original uniform space. Original norm comparisons equal original valuation comparisons, proving the norm valuation is compatible; ultrametricity and completeness are retained.",
+      "boundary": "This is actual norm transport on the original field, not an unramified-extension or local-duality theorem.",
+      "draftSha256": "ab672f3921672541561f2ec0ce0ced6eb26808e6b7a423eba13b07930cc995be",
+      "initialDraftSha256": "58a5089dace66be9b8556207d3c6c6ca4928ad117c67670ef205a8cff05a188e",
+      "productionLog": "originalNorm2124c-focus.log",
+      "failedProductionLogs": [
+        "originalNorm2124-focus.log",
+        "originalNorm2124b-focus.log"
+      ],
+      "productionFixes": [
+        "Supply the pinned norm constructor explicit field/value-group arguments and fully qualify the value group; mark class-valued definitions reducible as required by the linter. All original statements unchanged."
+      ],
+      "productionSha256": "ab672f3921672541561f2ec0ce0ced6eb26808e6b7a423eba13b07930cc995be"
+    },
+    {
+      "scope": 2125,
+      "name": "SpectralValuationExtension",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The original compatible norm valuation and the actual spectral norm agree on the original base field. Their literal inequalities identify the original valuation with the comap of the actual extension valuation, proving HasExtension.",
+      "boundary": "No valuation-extension certificate is assumed; the full unramified construction is separate.",
+      "draftSha256": "7cf651eceda08745c64492946162a6b7598a1e09f4c28d0b1ce638e3606b9fac",
+      "initialDraftSha256": "7cf651eceda08745c64492946162a6b7598a1e09f4c28d0b1ce638e3606b9fac",
+      "productionLog": "spectralExtension2125-focus.log",
+      "failedProductionLogs": [],
+      "productionFixes": [],
+      "productionSha256": "7cf651eceda08745c64492946162a6b7598a1e09f4c28d0b1ce638e3606b9fac"
+    },
+    {
+      "scope": 2126,
+      "name": "AdicCompleteResidueSplitting",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The existing original complete-ring Newton theorem lifts each actual simple residue root with its prescribed residue. Distinct residues give distinct original roots. The original degree and actual root cardinality prove that the original monic polynomial splits.",
+      "boundary": "This proves the actual splitting bridge, not the full field construction.",
+      "draftSha256": "55017ded7c4cf345a202031b9fc0653f7950543bf43170055fdf1b63feb31e55",
+      "initialDraftSha256": "0e8cf584c6904ac0dc3a1b307c0b26982d4190d95f755c2b36ea5e2eca306b8c",
+      "productionLog": "henselSplitting2126b-focus.log",
+      "failedProductionLogs": [
+        "henselSplitting2126-focus.log"
+      ],
+      "productionFixes": [
+        "Expose the actual residue-field type in the derivative-unit goal so the pinned field instance is available. Mathematical statement unchanged."
+      ],
+      "productionSha256": "55017ded7c4cf345a202031b9fc0653f7950543bf43170055fdf1b63feb31e55"
+    },
+    {
+      "scope": 2127,
+      "name": "FiniteResidueCompleteAlgebraSplitting",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The original finite local algebra has a genuine finite residue field. Actual residue-field normality and the original root identify the residue minimal polynomial and supply all its roots. The original Hensel lifting and root count then prove splitting in the actual complete local algebra.",
+      "boundary": "Only one original polynomial root is supplied; full splitting is proved, not assumed.",
+      "draftSha256": "4b94ec71fb041ace92367e39c9e498c9643004528e3014394ef17f465a52ab65",
+      "initialDraftSha256": "3cd5bf5e4e50ee0768e451027db7506ec9ccf9b01fae03cdc72fb728512839c0",
+      "productionLog": "finiteResidueSplitting2127c-focus.log",
+      "failedProductionLogs": [
+        "finiteResidueSplitting2127-focus.log",
+        "finiteResidueSplitting2127b-focus.log"
+      ],
+      "productionFixes": [
+        "Remove redundant extensionality steps after congr closes the genuine residue-map identity by definitional equality. Statement unchanged."
+      ],
+      "productionSha256": "4b94ec71fb041ace92367e39c9e498c9643004528e3014394ef17f465a52ab65"
+    },
+    {
+      "scope": 2128,
+      "name": "OriginalFractionScalarAlgebra",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The genuine fraction-ring universal map extends the injective original coefficient map. Its exact evaluation identity proves the original scalar triangle and constructs the original base-field algebra structure.",
+      "boundary": "The actual fraction map is constructed; finiteness, topology and Galois properties are separate.",
+      "draftSha256": "99b0c0b6f3a6cfa328e4252ccd07e9d1eee11b5171def4750959830660aaa86b",
+      "initialDraftSha256": "a6ed220f9e2ef5d4087c0269ae672939c7323260e0a757b07a50128522c8f2a3",
+      "productionLog": "fractionScalar2128b-focus.log",
+      "failedProductionLogs": [
+        "fractionScalar2128-focus.log"
+      ],
+      "productionFixes": [
+        "Mark the constructed class-valued algebra definition reducible to satisfy the pinned linter; the earlier exit0 run had a warning and was not accepted. Statement unchanged."
+      ],
+      "productionSha256": "99b0c0b6f3a6cfa328e4252ccd07e9d1eee11b5171def4750959830660aaa86b"
+    },
+    {
+      "scope": 2129,
+      "name": "MonicRootFractionDegree",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The original monic root quotient has its genuine power basis and injective original scalar map. Exact localization rank equality gives the actual fraction-field degree, whose positivity proves finite dimensionality.",
+      "boundary": "Neither the field degree nor finite dimensionality is assumed.",
+      "draftSha256": "caca78146dfc0b5c9e43b95c89a64b7367b62c557cd6f1734f982e7eae0acd2a",
+      "initialDraftSha256": "caca78146dfc0b5c9e43b95c89a64b7367b62c557cd6f1734f982e7eae0acd2a",
+      "productionLog": "rootFractionDegree2129-focus.log",
+      "failedProductionLogs": [],
+      "productionFixes": [],
+      "productionSha256": "caca78146dfc0b5c9e43b95c89a64b7367b62c557cd6f1734f982e7eae0acd2a"
+    },
+    {
+      "scope": 2130,
+      "name": "AdjoinRootFractionGeneration",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The actual root quotient is generated by its original root. Every original fraction is a quotient of original integral elements, proving generation of the actual fraction field. Once original splitting is proved, this generation establishes the genuine splitting-field structure.",
+      "boundary": "Polynomial splitting is an explicit upstream input to this generic generation theorem and is discharged by the Hensel construction in the later assembly.",
+      "draftSha256": "61ba886cdf2900b5cde0b44bdab861c2c2d9bbb317cfaf59d0a90f4e505ce441",
+      "initialDraftSha256": "e397776d102122233f90569d9ae179b2bf9f6e05e8cf02de8088b7a0595e690d",
+      "productionLog": "rootFractionGeneration2130b-focus.log",
+      "failedProductionLogs": [
+        "rootFractionGeneration2130-focus.log"
+      ],
+      "productionFixes": [
+        "Give the original adjoin-subalgebra equality an explicit type before rewriting. Remove an unused root-domain section premise from both generation statements; conclusions are unchanged and hypotheses are reduced, not strengthened."
+      ],
+      "productionSha256": "61ba886cdf2900b5cde0b44bdab861c2c2d9bbb317cfaf59d0a90f4e505ce441"
+    },
+    {
+      "scope": 2131,
+      "name": "LocalFieldMonicRootIntegerEquiv",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "The original integrally closed monic root algebra and the actual local-field integer ring are the two genuine integral closures in the same original fraction field. Their actual universal equivalence preserves original coefficients. Proved residue separability and actual root-algebra etaleness transfer to the genuine integer ring.",
+      "boundary": "The integral-closure equivalence and etale property are proved from actual objects; integrally closedness and the original fraction-field/local-field structures remain explicit upstream inputs.",
+      "draftSha256": "7690211a9b4c42186caef477b300acaa946b26c53de487604ab03a95e827ef15",
+      "initialDraftSha256": "3cdf8b21f7eeaf61505d06ada72dc413ce15f9fb505b36887d635acde60b27ec",
+      "productionLog": "rootIntegerEquiv2131c-focus.log",
+      "failedProductionLogs": [
+        "rootIntegerEquiv2131-focus.log",
+        "rootIntegerEquiv2131b-focus.log"
+      ],
+      "productionFixes": [
+        "Explicitly include the original monicity hypothesis in the etale theorem, where its use is in the proof body. Omit the unused root-domain premise from the coefficient and etale theorems. The earlier exit0 run still had a warning and was not accepted; conclusions unchanged."
+      ],
+      "productionSha256": "7690211a9b4c42186caef477b300acaa946b26c53de487604ab03a95e827ef15"
+    },
+    {
+      "scope": 2132,
+      "name": "LocalFieldUnramifiedExtensionExistence",
+      "status": "Focused and full assembled verification PASS with zero diagnostics.",
+      "mathematics": "For each positive degree, an actual irreducible separable residue polynomial is lifted monically. The original integral root quotient is a complete DVR, and actual residue-root lifting proves splitting. Its genuine fraction field has the original scalar embedding and exact required degree. Proved root generation gives actual Galois structure. Original norm transport and the spectral norm prove local-field topology and valuation restriction; the actual integral-closure equivalence proves etaleness of the true integer ring.",
+      "boundary": "This constructs the actual all-degree unramified Galois extension. Embedding and comparing its stages in the original separable closure, detection of all original local H2, the full invariant and arithmetic duality remain open.",
+      "draftSha256": "0b3a4834235d04421631cd4e0e972d5266296ae2723ec49d0a7769d9b520bd96",
+      "initialDraftSha256": "605ab4a3696fc4aa5a474cb5b2fd85a3fe95d81497e99bca88fd81a922d70ec4",
+      "productionLog": "unramifiedExistence2132g-focus.log",
+      "failedProductionLogs": [
+        "unramifiedExistence2132-focus.log",
+        "unramifiedExistence2132b-focus.log",
+        "unramifiedExistence2132c-focus.log",
+        "unramifiedExistence2132d-focus.log",
+        "unramifiedExistence2132e-focus.log",
+        "unramifiedExistence2132f-focus.log"
+      ],
+      "productionFixes": [
+        "Retain the canonical fraction-ring algebra as a transparent local instance; prove its injectivity using the actual scalar tower. Specify the separability coefficient map. Prove the literal original base coefficient triangle and use it to rebuild the canonical integer scalar tower for the final integral-closure comparison. The intended existence statement is unchanged."
+      ],
+      "productionSha256": "0b3a4834235d04421631cd4e0e972d5266296ae2723ec49d0a7769d9b520bd96"
+    }
+  ],
+  "semanticBoundary": "The nine-module scope retains the original local field, valuation, uniform space, integer ring, residue polynomials and actual fraction fields. The genuine compatible base norm retains the original uniform structure and valuation comparisons. The actual spectral norm on a genuine finite extension proves its valuation restriction. Original simple residue roots lift by the existing complete-ring Newton theorem; their distinct residues and actual root count prove splitting. Actual normal finite residue fields turn one original root in a finite complete local algebra into all original polynomial roots. The actual fraction-ring lift supplies the original base-field scalar structure; localization of the original root power basis proves its exact degree and finiteness. The original root generates the actual fraction field, yielding a genuine splitting field once splitting is proved. The actual integral-closure equivalence preserves coefficients and transfers proved etaleness to the true extension integer ring. These constructions assemble an actual unramified Galois local-field extension of every positive degree. Embedding and comparing the constructed stages in the original separable closure remain separate. Detection of all original local H2 classes by unramified stages, the full invariant, base-field compatibility, reciprocity, arithmetic duality, local annihilator identities, Euler and Poitou-Tate formulas remain open. Selmer theory, modular Galois association, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "scopeLimit": "The nine-module scope retains the original local field, valuation, uniform space, integer ring, residue polynomials and actual fraction fields. The genuine compatible base norm retains the original uniform structure and valuation comparisons. The actual spectral norm on a genuine finite extension proves its valuation restriction. Original simple residue roots lift by the existing complete-ring Newton theorem; their distinct residues and actual root count prove splitting. Actual normal finite residue fields turn one original root in a finite complete local algebra into all original polynomial roots. The actual fraction-ring lift supplies the original base-field scalar structure; localization of the original root power basis proves its exact degree and finiteness. The original root generates the actual fraction field, yielding a genuine splitting field once splitting is proved. The actual integral-closure equivalence preserves coefficients and transfers proved etaleness to the true extension integer ring. These constructions assemble an actual unramified Galois local-field extension of every positive degree. Embedding and comparing the constructed stages in the original separable closure remain separate. Detection of all original local H2 classes by unramified stages, the full invariant, base-field compatibility, reciprocity, arithmetic duality, local annihilator identities, Euler and Poitou-Tate formulas remain open. Selmer theory, modular Galois association, patching, Deligne, higher symmetric automorphy and non-CM Sato-Tate remain open. DUB-17-20 remain OPEN.",
+  "next": "Embed and compare the actual constructed unramified stages inside the original separable closure; prove all-local-H2 detection, the full invariant and arithmetic duality.",
+  "primaryResearch": {
+    "date": "2026-10-11",
+    "status": "All nine modules focused PASS; full assembled verification pending.",
+    "modules": [
+      {
+        "name": "LocalFieldOriginalNorm",
+        "sha256": "ab672f3921672541561f2ec0ce0ced6eb26808e6b7a423eba13b07930cc995be",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The actual rank-one value-group embedding and pinned norm constructor retain the original uniform space. Original norm comparisons equal original valuation comparisons, proving the norm valuation is compatible; ultrametricity and completeness are retained.",
+        "initialDraftSha256": "58a5089dace66be9b8556207d3c6c6ca4928ad117c67670ef205a8cff05a188e",
+        "productionLog": "originalNorm2124c-focus.log",
+        "failedProductionLogs": [
+          "originalNorm2124-focus.log",
+          "originalNorm2124b-focus.log"
+        ],
+        "productionFixes": [
+          "Supply the pinned norm constructor explicit field/value-group arguments and fully qualify the value group; mark class-valued definitions reducible as required by the linter. All original statements unchanged."
+        ]
+      },
+      {
+        "name": "SpectralValuationExtension",
+        "sha256": "7cf651eceda08745c64492946162a6b7598a1e09f4c28d0b1ce638e3606b9fac",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The original compatible norm valuation and the actual spectral norm agree on the original base field. Their literal inequalities identify the original valuation with the comap of the actual extension valuation, proving HasExtension.",
+        "initialDraftSha256": "7cf651eceda08745c64492946162a6b7598a1e09f4c28d0b1ce638e3606b9fac",
+        "productionLog": "spectralExtension2125-focus.log",
+        "failedProductionLogs": [],
+        "productionFixes": []
+      },
+      {
+        "name": "AdicCompleteResidueSplitting",
+        "sha256": "55017ded7c4cf345a202031b9fc0653f7950543bf43170055fdf1b63feb31e55",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The existing original complete-ring Newton theorem lifts each actual simple residue root with its prescribed residue. Distinct residues give distinct original roots. The original degree and actual root cardinality prove that the original monic polynomial splits.",
+        "initialDraftSha256": "0e8cf584c6904ac0dc3a1b307c0b26982d4190d95f755c2b36ea5e2eca306b8c",
+        "productionLog": "henselSplitting2126b-focus.log",
+        "failedProductionLogs": [
+          "henselSplitting2126-focus.log"
+        ],
+        "productionFixes": [
+          "Expose the actual residue-field type in the derivative-unit goal so the pinned field instance is available. Mathematical statement unchanged."
+        ]
+      },
+      {
+        "name": "FiniteResidueCompleteAlgebraSplitting",
+        "sha256": "4b94ec71fb041ace92367e39c9e498c9643004528e3014394ef17f465a52ab65",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The original finite local algebra has a genuine finite residue field. Actual residue-field normality and the original root identify the residue minimal polynomial and supply all its roots. The original Hensel lifting and root count then prove splitting in the actual complete local algebra.",
+        "initialDraftSha256": "3cd5bf5e4e50ee0768e451027db7506ec9ccf9b01fae03cdc72fb728512839c0",
+        "productionLog": "finiteResidueSplitting2127c-focus.log",
+        "failedProductionLogs": [
+          "finiteResidueSplitting2127-focus.log",
+          "finiteResidueSplitting2127b-focus.log"
+        ],
+        "productionFixes": [
+          "Remove redundant extensionality steps after congr closes the genuine residue-map identity by definitional equality. Statement unchanged."
+        ]
+      },
+      {
+        "name": "OriginalFractionScalarAlgebra",
+        "sha256": "99b0c0b6f3a6cfa328e4252ccd07e9d1eee11b5171def4750959830660aaa86b",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The genuine fraction-ring universal map extends the injective original coefficient map. Its exact evaluation identity proves the original scalar triangle and constructs the original base-field algebra structure.",
+        "initialDraftSha256": "a6ed220f9e2ef5d4087c0269ae672939c7323260e0a757b07a50128522c8f2a3",
+        "productionLog": "fractionScalar2128b-focus.log",
+        "failedProductionLogs": [
+          "fractionScalar2128-focus.log"
+        ],
+        "productionFixes": [
+          "Mark the constructed class-valued algebra definition reducible to satisfy the pinned linter; the earlier exit0 run had a warning and was not accepted. Statement unchanged."
+        ]
+      },
+      {
+        "name": "MonicRootFractionDegree",
+        "sha256": "caca78146dfc0b5c9e43b95c89a64b7367b62c557cd6f1734f982e7eae0acd2a",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The original monic root quotient has its genuine power basis and injective original scalar map. Exact localization rank equality gives the actual fraction-field degree, whose positivity proves finite dimensionality.",
+        "initialDraftSha256": "caca78146dfc0b5c9e43b95c89a64b7367b62c557cd6f1734f982e7eae0acd2a",
+        "productionLog": "rootFractionDegree2129-focus.log",
+        "failedProductionLogs": [],
+        "productionFixes": []
+      },
+      {
+        "name": "AdjoinRootFractionGeneration",
+        "sha256": "61ba886cdf2900b5cde0b44bdab861c2c2d9bbb317cfaf59d0a90f4e505ce441",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The actual root quotient is generated by its original root. Every original fraction is a quotient of original integral elements, proving generation of the actual fraction field. Once original splitting is proved, this generation establishes the genuine splitting-field structure.",
+        "initialDraftSha256": "e397776d102122233f90569d9ae179b2bf9f6e05e8cf02de8088b7a0595e690d",
+        "productionLog": "rootFractionGeneration2130b-focus.log",
+        "failedProductionLogs": [
+          "rootFractionGeneration2130-focus.log"
+        ],
+        "productionFixes": [
+          "Give the original adjoin-subalgebra equality an explicit type before rewriting. Remove an unused root-domain section premise from both generation statements; conclusions are unchanged and hypotheses are reduced, not strengthened."
+        ]
+      },
+      {
+        "name": "LocalFieldMonicRootIntegerEquiv",
+        "sha256": "7690211a9b4c42186caef477b300acaa946b26c53de487604ab03a95e827ef15",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "The original integrally closed monic root algebra and the actual local-field integer ring are the two genuine integral closures in the same original fraction field. Their actual universal equivalence preserves original coefficients. Proved residue separability and actual root-algebra etaleness transfer to the genuine integer ring.",
+        "initialDraftSha256": "3cdf8b21f7eeaf61505d06ada72dc413ce15f9fb505b36887d635acde60b27ec",
+        "productionLog": "rootIntegerEquiv2131c-focus.log",
+        "failedProductionLogs": [
+          "rootIntegerEquiv2131-focus.log",
+          "rootIntegerEquiv2131b-focus.log"
+        ],
+        "productionFixes": [
+          "Explicitly include the original monicity hypothesis in the etale theorem, where its use is in the proof body. Omit the unused root-domain premise from the coefficient and etale theorems. The earlier exit0 run still had a warning and was not accepted; conclusions unchanged."
+        ]
+      },
+      {
+        "name": "LocalFieldUnramifiedExtensionExistence",
+        "sha256": "0b3a4834235d04421631cd4e0e972d5266296ae2723ec49d0a7769d9b520bd96",
+        "status": "Focused production compilation PASS actual exit0 consumed; zero diagnostics; full verification pending.",
+        "mathematics": "For each positive degree, an actual irreducible separable residue polynomial is lifted monically. The original integral root quotient is a complete DVR, and actual residue-root lifting proves splitting. Its genuine fraction field has the original scalar embedding and exact required degree. Proved root generation gives actual Galois structure. Original norm transport and the spectral norm prove local-field topology and valuation restriction; the actual integral-closure equivalence proves etaleness of the true integer ring.",
+        "initialDraftSha256": "605ab4a3696fc4aa5a474cb5b2fd85a3fe95d81497e99bca88fd81a922d70ec4",
+        "productionLog": "unramifiedExistence2132g-focus.log",
+        "failedProductionLogs": [
+          "unramifiedExistence2132-focus.log",
+          "unramifiedExistence2132b-focus.log",
+          "unramifiedExistence2132c-focus.log",
+          "unramifiedExistence2132d-focus.log",
+          "unramifiedExistence2132e-focus.log",
+          "unramifiedExistence2132f-focus.log"
+        ],
+        "productionFixes": [
+          "Retain the canonical fraction-ring algebra as a transparent local instance; prove its injectivity using the actual scalar tower. Specify the separability coefficient map. Prove the literal original base coefficient triangle and use it to rebuild the canonical integer scalar tower for the final integral-closure comparison. The intended existence statement is unchanged."
+        ]
+      }
+    ],
+    "records": [
+      "original-local-norm-spectral-extension-drafts-20261011.json",
+      "actual-hensel-residue-splitting-drafts-20261011.json",
+      "actual-root-fraction-assembly-drafts-20261011.json",
+      "actual-monic-root-integer-identification-draft-20261011.json",
+      "actual-unramified-extension-existence-assembly-draft-20261011.json"
+    ],
+    "boundary": "All nine modules2124-2132 passed focused production compilation with actual exits0 consumed and zero diagnostics. The actual all-positive-degree unramified Galois extension statement is compiled, with its exact consumer registered; full assembled regression/audit and sequential verification remain pending. Original embedded stage construction, unit cohomology, all-local-H2 detection, full local invariant and arithmetic duality remain open. DUB-17-20 OPEN.",
+    "initialDraftBoundary": "No all-degree unramified-extension theorem is yet verified. All nine drafts remain uncompiled. DUB-17-20 OPEN."
+  },
+  "sourceGates": "DUB-01-16 accepted; DUB-17-20 OPEN.",
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261011_122533.log",
+    "paper": "logs/dubon-build-20261011-122842-914.log",
+    "scope": [
+      2132,
+      1499,
+      8370
+    ]
+  }
+}
