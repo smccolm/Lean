@@ -1,33 +1,366 @@
 # Dubon 2026 — existing-code crosswalk
 
-Finite equal cohomology orders of original local integer units: For an actual finite cyclic local extension, construct the original open small-unit subgroup with zero positive cohomology. Its genuine finite quotient computes the first and second cohomology of the original integer units through their literal quotient map. Counting the finite cyclic resolution proves that both original groups are finite and have equal orders. One exact consumer expands registered scope to 2186 production modules, 1553 exact consumers and 8,538 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This is the integer-unit cohomology order identity. The valuation exact sequence, cyclic field norm index, all-local-H2 detection and arithmetic duality still require proof. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+The actual local invariant commutes with genuine continuous corestriction: Corestriction defined by the genuine finite coset trace preserves the original rational invariant for every finite separable local extension. The proof uses the proved restriction degree formula and an explicit continuous restriction-corestriction homotopy on the actual cocycles. One exact consumer expands registered scope to 2297 production modules, 1664 exact consumers and 8,849 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction multiplies the original local invariant by every finite separable base degree; the independently constructed actual finite-coset corestriction preserves it. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual subgroup quotient sequence and cohomology comparison: Construct the actual integer submodule from the original invariant multiplicative subgroup. The literal inclusion and quotient maps form a proved short exact sequence. The long exact cohomology sequence makes the original quotient map an isomorphism in a degree when the two adjacent subgroup cohomologies vanish; finiteness retains the original quotient. One exact consumer expands registered scope to 2185 production modules, 1552 exact consumers and 8,536 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Adjacent subgroup vanishing remains explicit in this generic comparison. The original local-field consumer obtains it from its constructed small-unit filtration. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+Surjectivity of original continuous local H2 restriction: Actual restriction on original continuous local H2 is surjective for every finite separable intermediate field. The preimage is obtained from the proved degree formula and divisibility of the genuine rational circle. One exact consumer expands registered scope to 2296 production modules, 1663 exact consumers and 8,846 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Finite cyclic cohomology orders from the genuine resolution: Actual cocycles inject into the finite cochain space and map onto the genuine cohomology, proving finiteness for finite coefficients. The original cyclic norm and generator-minus-identity resolution identifies first and second cohomology with the two periodic homologies and proves their cardinalities equal. One exact consumer expands registered scope to 2184 production modules, 1551 exact consumers and 8,531 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Only finite coefficient modules are handled here. The later original integer-unit consumer supplies an actual finite quotient and the required cohomology comparison. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+Actual continuous corestriction for the original finite field extension: Actual continuous field restriction followed by the original coset corestriction equals multiplication by the exact original field degree. One exact consumer expands registered scope to 2295 production modules, 1662 exact consumers and 8,844 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Equal orders of actual finite periodic homologies: Count the actual kernel and image using the linear first isomorphism theorem. For two original endomorphisms of a finite module whose compositions vanish, count both genuine homology quotients and cancel the positive finite image orders to prove equality of their cardinalities. One exact consumer expands registered scope to 2183 production modules, 1550 exact consumers and 8,528 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The finite module and two original maps are explicit. This is a counting proof for actual homology quotients, not an assumed Herbrand identity. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+Original continuous H2 on the genuine Galois fixing subgroup: Original field restriction, followed by the genuine fixing-subgroup identification, is exactly literal subgroup restriction on original classes. One exact consumer expands registered scope to 2294 production modules, 1661 exact consumers and 8,842 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Positive cyclic cohomology of actual open integer units: For the original finite cyclic local extension, construct one open subgroup of its genuine integer units with finite quotient and zero positive group cohomology. The proof consumes its constructed normal-lattice norm and cocycle preimages and the periodic cochain resolution on that same subgroup. One exact consumer expands registered scope to 2182 production modules, 1549 exact consumers and 8,525 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The assertion is positive cohomology for the displayed whole cyclic Galois group. The unit Herbrand quotient, cyclic field norm index and all-local-H2 detection still require proof. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+Original continuous Galois unit cocycles on the actual fixing subgroup: Reindexing preserves the literal original differential and its continuous one-cochain witness. One exact consumer expands registered scope to 2293 production modules, 1660 exact consumers and 8,839 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Positive cohomology through the cyclic periodic resolution: Use the pinned actual cyclic periodic resolution. Positive even classes are original invariants modulo the norm image, while odd groups identify with the first cohomology of the same representation. Actual norm preimages and vanishing first cohomology therefore give zero in every positive degree. One exact consumer expands registered scope to 2181 production modules, 1548 exact consumers and 8,523 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. Cyclicity, the genuine norm preimages and first cohomology input are explicit; no all-subgroup Tate-cohomology assertion is made. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+The original finite-base fixing subgroup with its genuine Krull topology: The exact number of genuine fixing cosets is the original field degree. One exact consumer expands registered scope to 2292 production modules, 1659 exact consumers and 8,837 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Actual subgroup action and first group cohomology: Restrict the original action to its literal invariant subgroup. Its norm is the original finite product after inclusion. Mathlib's cochain quotient identifies the proved original coboundary preimages with zero first group cohomology; original invariant norm preimages give preimages under the actual subgroup representation norm. One exact consumer expands registered scope to 2180 production modules, 1547 exact consumers and 8,519 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The generic bridges retain their explicit preimage hypotheses and are consumed by the constructed local-field subgroup below. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+Actual continuous corestriction and its exact restriction-index identity: Actual continuous restriction followed by the genuine coset-sum corestriction is multiplication by the exact original subgroup index. The equality is proved with an explicit continuous coboundary. One exact consumer expands registered scope to 2291 production modules, 1658 exact consumers and 8,832 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Exact norm and cocycle preimages in original integer units: The proved normal-lattice small-unit subgroup has an actual open preimage inside the original integer units with finite quotient. The genuine coefficient-preserving equivalence supplies every original invariant norm preimage and every original multiplicative coboundary in this same subgroup. One exact consumer expands registered scope to 2179 production modules, 1546 exact consumers and 8,515 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This establishes exact original norm and first-cocycle preimages, not the unit Herbrand quotient or the cyclic field norm index. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+An explicit original-cochain homotopy for restriction followed by coset trace: The original differential of the explicit correction is exactly the index multiple of the cocycle minus its actual restriction trace. One exact consumer expands registered scope to 2290 production modules, 1657 exact consumers and 8,828 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Exact cohomological preimages through coefficient inclusions: An injective equivariant coefficient homomorphism preserves the literal finite action norm. When the displayed subgroups have the same coefficient image, actual norm preimages and multiplicative coboundaries descend to the original domain with every cocycle value preserved. One exact consumer expands registered scope to 2178 production modules, 1545 exact consumers and 8,513 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. The transfer is conditional on its explicit original coefficient map and preimages; the following local-field consumer constructs and supplies them. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+Continuous original cochains and cocycles under the genuine finite coset trace: Every original continuous coboundary is sent to the coboundary of its actual continuous traced cochain. One exact consumer expands registered scope to 2289 production modules, 1656 exact consumers and 8,825 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
-Original action on local integer units: Restrict each original local field automorphism to its actual integer ring and units. The literal integer-unit inclusion is injective and commutes coefficient by coefficient with the original Galois action. One exact consumer expands registered scope to 2177 production modules, 1544 exact consumers and 8,509 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This action and inclusion do not themselves assert cohomology vanishing or a norm index. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+The original coset trace preserves actual coboundaries: The genuine finite coset trace of a coboundary is the actual coboundary of the same finite trace of its original one-cochain. One exact consumer expands registered scope to 2288 production modules, 1655 exact consumers and 8,821 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Literal finite coset sums on the original inhomogeneous cochains: The genuine finite coset trace takes original subgroup two-cocycles to original group two-cocycles. The proof reindexes the original cosets. One exact consumer expands registered scope to 2287 production modules, 1654 exact consumers and 8,818 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Literal subgroup transition coordinates for the original finite coset trace: The genuine transition coordinates satisfy their crossed-product identity inside the original subgroup. One exact consumer expands registered scope to 2286 production modules, 1653 exact consumers and 8,814 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Genuine finite separable restriction multiplies the full local invariant by the degree: For every original finite intermediate field of the separably closed Galois coefficient field, actual continuous restriction multiplies the full local invariant by the actual degree. The new base need not be normal over K. The unramified representative and compositum are constructed from the original class, and all local structures are the original ones. One exact consumer expands registered scope to 2285 production modules, 1652 exact consumers and 8,810 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original local invariant on unramified representatives over arbitrary bases: If an original unramified finite representative is embedded in a genuine unramified stage over the new base, restriction multiplies its full original invariant by the degree of that base. Normality of E/K is not assumed. The finite and infinite maps act on the actual cocycles. One exact consumer expands registered scope to 2284 production modules, 1651 exact consumers and 8,808 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original compositum with a finite Galois field over an arbitrary base: After adjoining the original finite Galois subfield to any intermediate base, a genuine separable polynomial still splits and generates the entire compositum. One exact consumer expands registered scope to 2283 production modules, 1650 exact consumers and 8,806 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Restriction to an arbitrary intermediate base on genuine finite stages: Actual restriction of an inflated class is the original finite base change inflated from a genuine stage over the new intermediate base. One exact consumer expands registered scope to 2282 production modules, 1649 exact consumers and 8,802 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite Galois restriction multiplies the full local invariant by the degree: For every original finite Galois subfield E of the original separably closed coefficient field, genuine continuous restriction multiplies the full arithmetic invariant by the actual degree E/K. The representative and unramified compositum are constructed from the original class. One exact consumer expands registered scope to 2281 production modules, 1648 exact consumers and 8,800 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original full invariant restriction formula on actual unramified representatives: For an actual unramified representative and an actual common extension unramified over the new base, the full original invariant of its restriction is multiplied by the actual base degree. The cohomology maps are the original infinite restriction and literal finite-stage inflations. One exact consumer expands registered scope to 2280 production modules, 1647 exact consumers and 8,798 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual original rebased composita preserve spectral unramifiedness: The literal supremum of the original finite Galois stages is unramified over E whenever F is unramified over K. All norms, valuations, inclusions and valuation extension instances come from the actual spectral tower. One exact consumer expands registered scope to 2279 production modules, 1646 exact consumers and 8,796 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual full restriction is inflation from the original rebased finite stage: Restricting an original inflated finite-stage class equals inflation of its actual finite base change in any genuine common finite extension. The upper stage is the same field with its fixed base extended. One exact consumer expands registered scope to 2278 production modules, 1645 exact consumers and 8,794 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original H2 classes of the same field under a rebased stage description: The rebased original-stage identification is bijective on the actual continuous H2 classes of the same original field. One exact consumer expands registered scope to 2277 production modules, 1644 exact consumers and 8,792 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual continuous Galois H2 respects equality of original algebra structures: The transport along proved equality of the actual algebra structures is bijective on the original continuous cohomology classes. One exact consumer expands registered scope to 2276 production modules, 1643 exact consumers and 8,790 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The literal algebra structure of a rebased original finite stage: Both descriptions of the original E-algebra H have the same literal algebra map and hence the same actual algebra structure. One exact consumer expands registered scope to 2275 production modules, 1642 exact consumers and 8,788 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual full restriction is detected on the original finite compositum: Restricting an original inflated finite-stage class equals inflation of its actual finite base change in any genuine common finite extension. The upper stage is the same field with its fixed base extended. One exact consumer expands registered scope to 2274 production modules, 1641 exact consumers and 8,786 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original finite Galois stages under extension of the fixed base: Extending the fixed base retains the exact original ambient set. One exact consumer expands registered scope to 2273 production modules, 1640 exact consumers and 8,784 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original finite-stage inflation is actual continuous Galois base change: The original finite-stage inflation is the same original group restriction and coefficient inclusion used by continuous base change. One exact consumer expands registered scope to 2272 production modules, 1639 exact consumers and 8,782 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Composition of the actual infinite Galois unit base-change maps: The actual original continuous H2 maps compose under the genuine field towers, with the original Krull topologies retained. One exact consumer expands registered scope to 2271 production modules, 1638 exact consumers and 8,780 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual base change on original infinite continuous Galois unit H2: Base change retains the literal original cocycle representative. One exact consumer expands registered scope to 2270 production modules, 1637 exact consumers and 8,776 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Continuity of actual Galois base change for original infinite extensions: Literal Galois base change is continuous for the original Krull topologies. The existing finite-basis neighborhood proof applies through the original field embedding; no discrete Galois topology is substituted. One exact consumer expands registered scope to 2269 production modules, 1636 exact consumers and 8,773 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The full local invariant has the original arithmetic-Frobenius normalization: On every actual unramified finite subfield, the full invariant is the literal arithmetic-Frobenius period computed with the supplied original local structures, independent of the spectral construction. One exact consumer expands registered scope to 2268 production modules, 1635 exact consumers and 8,771 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Spectral stage invariants equal the periods of the original local structures: The spectral invariant agrees with the actual arithmetic period computed from any original extending local structures on the same unramified field. Both its valuation and topology are proved equal to the spectral ones. One exact consumer expands registered scope to 2267 production modules, 1634 exact consumers and 8,769 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The canonical spectral structures equal the original local structures: The spectral valuation and topology on the same original finite local extension equal its supplied extending local structures. One exact consumer expands registered scope to 2266 production modules, 1633 exact consumers and 8,767 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Uniqueness of the actual extending local valuative relation: Two actual local valuations extending the same original local field agree, even when their topological structures were constructed separately. Both integer rings are the original integral closure. One exact consumer expands registered scope to 2265 production modules, 1632 exact consumers and 8,763 explicit audit registrations. Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending. This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The full rational invariant for every original nonarchimedean local field: The full original continuous local H2 has the genuine additive group and integer-module structure of the rational circle. One exact consumer expands registered scope to 2264 production modules, 1631 exact consumers and 8,759 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full original continuous invariant equivalence is constructed using actual arithmetic periods. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original continuous local H2 is the rational circle via arithmetic periods: The full equivalence evaluates on each original unramified class as its genuine arithmetic period invariant. One exact consumer expands registered scope to 2263 production modules, 1630 exact consumers and 8,755 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full original continuous invariant equivalence is constructed using actual arithmetic periods. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The arithmetic period invariant of the original continuous local H2: The full continuous class has a unique rational value obtained from an actual unramified arithmetic-Frobenius period. Existence and independence are proved for the original class rather than assumed. One exact consumer expands registered scope to 2262 production modules, 1629 exact consumers and 8,750 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The unique full invariant is constructed; linear equivalence follows in the next increment. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original unramified period invariants agree on actual common extensions: Two original unramified representatives of the same actual continuous class have the same arithmetic period invariant. One exact consumer expands registered scope to 2261 production modules, 1628 exact consumers and 8,745 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual spectral unramified stages and their arithmetic period invariants: The image is exactly the rational classes annihilated by the actual original field degree. One exact consumer expands registered scope to 2260 production modules, 1627 exact consumers and 8,741 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Every original local continuous H2 class has an actual unramified representative: Every original continuous unit H2 class comes from an actual finite unramified Galois subfield of the original separably closed coefficient field. All extending local structures are constructed on that same subfield. One exact consumer expands registered scope to 2259 production modules, 1626 exact consumers and 8,738 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original finite-stage classes come from genuine unramified spectral stages: Every genuine finite-stage class has the same original absolute inflation as a class of an actual unramified stage of the same degree. The proof constructs the literal compositum with compatible spectral structures. One exact consumer expands registered scope to 2258 production modules, 1625 exact consumers and 8,736 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Every original finite local H2 class is detected by an actual unramified compositum: If L/K is the actual unramified extension of the same degree as E/K, every original E/K unit H2 class agrees with a genuine L/K class after inflation to the literal compositum. Unramifiedness over E and all H2 order bounds are proved from the original fields, rather than assumed as certificates. One exact consumer expands registered scope to 2257 production modules, 1624 exact consumers and 8,734 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original finite Galois H2 classes descend exactly when actual base change vanishes: An original finite L/K class inflates from an actual E/K class in the genuine common Galois extension exactly when its actual base change to M/E vanishes. Actual Hilbert90 and exact inflation-restriction prove descent. One exact consumer expands registered scope to 2256 production modules, 1623 exact consumers and 8,732 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Same-cocycle comparisons for actual Galois H2 base change: The original continuous-to-algebraic comparison commutes with the literal base-change map, preserving the same actual cocycle values. One exact consumer expands registered scope to 2255 production modules, 1622 exact consumers and 8,730 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Exact original unit H2 inflation and restriction in finite Galois towers: The kernel of the actual field-tower restriction is exactly the image of the literal field-tower inflation. Both maps use the original field units and actual automorphisms; Hilbert90 discharges the kernel H1. One exact consumer expands registered scope to 2254 production modules, 1621 exact consumers and 8,727 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original unit H2 restriction when the fixed field is enlarged: Actual restriction followed by the genuine kernel identification is exactly restriction to the original normal subgroup, on the same cochains. One exact consumer expands registered scope to 2253 production modules, 1620 exact consumers and 8,725 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual finite Galois composita preserve original spectral unramifiedness: The literal supremum of the original finite Galois stages is unramified over E whenever F is unramified over K. All norms, valuations, inclusions and valuation extension instances come from the actual spectral tower. One exact consumer expands registered scope to 2252 production modules, 1619 exact consumers and 8,723 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original unramified stages with their genuine compatible spectral structures: Every positive degree occurs inside the original separably closed field with the actual spectral norm over K. The original finite field and its unramified integer extension are constructed, not postulated. One exact consumer expands registered scope to 2251 production modules, 1618 exact consumers and 8,721 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual unramified integer rings under the canonical spectral norm: The canonical spectral structure on the same original finite field retains unramifiedness. Both integer rings are proved to be the actual integral closure, so no unramifiedness or valuation-comparison certificate is assumed. One exact consumer expands registered scope to 2250 production modules, 1617 exact consumers and 8,719 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original unramified local extensions remain unramified in actual composita: If the actual images of E and L generate M, unramifiedness of the original L/K integer extension implies unramifiedness of the original M/E integer extension. The base extension E/K may be ramified. One exact consumer expands registered scope to 2249 production modules, 1616 exact consumers and 8,717 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The genuine unramified base-change image is the original integral closure: The actual integral closure in the compositum is unramified over the new base. Only the original algebra A over R is required to be unramified. One exact consumer expands registered scope to 2248 production modules, 1615 exact consumers and 8,715 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Genuine unramified tensor images after arbitrary integral base change: Its actual range is exactly the field compositum of the original fraction fields of the new base and the original unramified algebra. One exact consumer expands registered scope to 2247 production modules, 1614 exact consumers and 8,711 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Restriction of every original unramified local H2 invariant: For every original unramified H2 class, genuine base change multiplies the original rational invariant by the actual extension degree of the base. No unramified hypothesis on E over K is imposed. One exact consumer expands registered scope to 2246 production modules, 1613 exact consumers and 8,706 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual carry representatives cover every original unramified local H2 class: Every original continuous unramified local H2 class has a genuine carry representative using the actual arithmetic Frobenius and an actual base-field unit. The original degree-one case is included. One exact consumer expands registered scope to 2245 production modules, 1612 exact consumers and 8,703 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original unramified carry invariants scale by the actual base degree: Genuine base change multiplies the original rational invariant of every character carry class by the actual base-field extension degree. The ramification and residue factors are both derived from original objects. One exact consumer expands registered scope to 2244 production modules, 1611 exact consumers and 8,701 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual base change of original field-unit carry cocycles: The original carry identity descends to the literal continuous H2 base-change map and the original quotient classes. One exact consumer expands registered scope to 2243 production modules, 1610 exact consumers and 8,699 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original unramified invariant on every actual character carry cocycle: The same invariant is integer multiplication of the genuine finite cyclic invariant by the original base unit's normalized order. One exact consumer expands registered scope to 2242 production modules, 1609 exact consumers and 8,696 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original field-unit carry cocycles for arbitrary finite cyclic characters: The actual period, multiplied by the character modulus, equals the group period times the character value times the genuine original base unit. One exact consumer expands registered scope to 2241 production modules, 1608 exact consumers and 8,693 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original arithmetic Frobenius under actual finite base change: The original upper arithmetic Frobenius restricts to the original lower Frobenius raised to the actual residue degree of E over K. The base extension may be ramified. One exact consumer expands registered scope to 2240 production modules, 1607 exact consumers and 8,690 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Powers of actual local arithmetic Frobenius on original residues: The actual residue action determines the corresponding power of the original arithmetic Frobenius. One exact consumer expands registered scope to 2239 production modules, 1606 exact consumers and 8,687 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original unit-cohomology maps for genuine changes of base field: Base change retains the literal original cocycle representative. One exact consumer expands registered scope to 2238 production modules, 1605 exact consumers and 8,684 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original normalized orders scale by the actual ramification index: On every actual base-field unit, the original normalized extension order equals the original base order times the actual ramification index. One exact consumer expands registered scope to 2237 production modules, 1604 exact consumers and 8,681 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original local-field degree is ramification times residue degree: The actual maximal ideals of the original integer rings give the ramification index, and the original residue fields give the residue degree. Their product is the degree of the original field extension. One exact consumer expands registered scope to 2236 production modules, 1603 exact consumers and 8,678 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Exact original carry periods for arbitrary cyclic character values: The original cocycle period satisfies the exact character identity along every closed original group period. No generator or coprimality assumption is needed. One exact consumer expands registered scope to 2235 production modules, 1602 exact consumers and 8,676 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Exact addition-carry sums for every original finite cyclic step: Along an actual closed cyclic period the original carry sum is determined exactly by the step's canonical representative. One exact consumer expands registered scope to 2234 production modules, 1601 exact consumers and 8,673 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original finite Galois H2 embeds in the actual continuous Galois H2: Actual inflation embeds each genuine finite Galois stage into the original continuous unit H2, with its original Krull topology. One exact consumer expands registered scope to 2233 production modules, 1600 exact consumers and 8,670 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual continuous unit H2 inflation is injective in finite Galois towers: The original continuous finite field-tower H2 inflation is injective. The proof uses the same-cocycle comparison and the proved actual algebraic inflation injection, with no inflation certificate. One exact consumer expands registered scope to 2232 production modules, 1599 exact consumers and 8,667 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Genuine algebraic unit H2 inflation is injective in every finite Galois field tower: Actual finite Galois field-tower H2 inflation is injective. Its coefficient inclusion, group restriction and kernel H1 are the original ones, with kernel H1 vanishing derived from genuine Hilbert90. One exact consumer expands registered scope to 2231 production modules, 1598 exact consumers and 8,664 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original middle-field units are the actual restriction-kernel invariants: The original middle-field unit inclusion is bijective onto the actual restriction-kernel invariants, by genuine Galois fixed-field descent. One exact consumer expands registered scope to 2230 production modules, 1597 exact consumers and 8,661 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original automorphism restriction kernel and its genuine unit H1: Hilbert90 for the actual upper field extension gives vanishing H1 of the original restriction kernel acting on the original upper-field units. One exact consumer expands registered scope to 2229 production modules, 1596 exact consumers and 8,659 explicit audit registrations. Focused production compilation and the assembled 2264-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,382 exhaustive theorem checks passed. This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original intermediate-field H2 inflation injection: Reconstruct each actual normal intermediate field as the fixed field of its original fixing subgroup to obtain injectivity for its literal field inclusion and automorphism restriction map. One exact consumer expands registered scope to 2228 production modules, 1595 exact consumers and 8,656 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual fixed-field unit H2 inflation injection: Identify the composite of the actual fixed-field coefficient isomorphism and original H2 inflation with the literal field-tower map on cochains. Hilbert90 proves that this original field map is injective. One exact consumer expands registered scope to 2227 production modules, 1594 exact consumers and 8,654 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original cohomology under group and coefficient isomorphisms: Prove that actual group reindexing and an actual coefficient isomorphism give an isomorphism of the original cochain complexes and all original cohomology groups. One exact consumer expands registered scope to 2226 production modules, 1593 exact consumers and 8,651 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual second-degree inflation-restriction exactness: Use the original natural dimension shifts and pinned H1 sequence to prove actual H2 inflation injective and its image equal to the kernel of actual subgroup restriction when the original subgroup H1 vanishes. One exact consumer expands registered scope to 2225 production modules, 1592 exact consumers and 8,649 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual inflation and restriction under dimension shift: Show the original quotient invariant inclusions form a map of actual coefficient sequences. Both original inflation and restriction commute with their genuine connecting maps. One exact consumer expands registered scope to 2224 production modules, 1591 exact consumers and 8,645 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Naturality of original connecting maps: Construct the actual cochain map of original short sequences under group and coefficient changes and prove connecting-map naturality by the pinned homological snake sequence. One exact consumer expands registered scope to 2223 production modules, 1590 exact consumers and 8,642 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original finite continuous local H2 order bound: Transport the proved original algebraic H2 bound through the existing same-cocycle continuous/discrete comparison to the original continuous Galois-unit H2 quotient. One exact consumer expands registered scope to 2222 production modules, 1589 exact consumers and 8,640 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual H2 bound over every original local field: Construct the compatible norm on the original local field and the spectral norm on the same finite extension field. The actual unit action is unchanged, yielding finite H2 of order dividing the actual extension degree. One exact consumer expands registered scope to 2221 production modules, 1588 exact consumers and 8,638 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual H2 bound for every normed local Galois extension: Apply the local p-group theorem to every genuine Sylow fixed-field extension. Actual Sylow detection proves finite original H2 with order dividing the whole Galois group order and the extension degree. One exact consumer expands registered scope to 2220 production modules, 1587 exact consumers and 8,635 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual second cohomology order from Sylow comparisons: Inject each actual cohomology Sylow subgroup under the genuine primary comparison and apply additive-group Lagrange and prime-power divisibility to recover the full original H2 order bound. One exact consumer expands registered scope to 2219 production modules, 1586 exact consumers and 8,632 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original local H2 order for p-group extensions: Induct on the actual Galois group order through constructed central cyclic fixed fields. Genuine cyclic H2 orders and the original tower bound prove finiteness and order divisibility for every local p-group extension. One exact consumer expands registered scope to 2218 production modules, 1585 exact consumers and 8,629 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Cyclic local H2 for the original normed fields: Prove norm valuation compatibility from the actual normed algebra map and apply the proved cyclic H2 calculation to the unchanged original normed local fields. One exact consumer expands registered scope to 2217 production modules, 1584 exact consumers and 8,627 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+An actual central cyclic subgroup of a finite p-group: Construct an actual nontrivial central cyclic normal subgroup of each nontrivial finite p-group and prove the genuine quotient order is smaller. One exact consumer expands registered scope to 2216 production modules, 1583 exact consumers and 8,624 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Second cohomology orders in the original field tower: Identify both actual normal-subgroup coefficient groups with the original fixed-field tower. The original H2 order divides the product of their actual finite H2 orders. One exact consumer expands registered scope to 2215 production modules, 1582 exact consumers and 8,622 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual normal invariant fixed-field units: Prove the original fixed-field unit inclusion is a bijective map of the actual normal quotient representations, by literal fixed-field descent. One exact consumer expands registered scope to 2214 production modules, 1581 exact consumers and 8,620 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual fixed-field subgroup unit cohomology: Identify the literal restricted unit action with actual fixed-field Galois cohomology and derive original subgroup H1 vanishing from Hilbert90. One exact consumer expands registered scope to 2213 production modules, 1580 exact consumers and 8,618 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original cohomology under group isomorphism: Prove the original cochain pullback is an isomorphism degree by degree along an actual group isomorphism, keeping the same coefficient action. One exact consumer expands registered scope to 2212 production modules, 1579 exact consumers and 8,615 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual normal subgroup second cohomology orders: Combine the constructed dimension shifts with pinned H1 inflation-restriction to bound actual H2 by the product of the original finite subgroup and quotient-invariant H2 orders. One exact consumer expands registered scope to 2211 production modules, 1578 exact consumers and 8,613 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Order divisibility of actual exact modules: Prove finiteness of an original exact middle module from the finite outer modules and prove its order divides their product using the actual kernel, image and quotient. One exact consumer expands registered scope to 2210 production modules, 1577 exact consumers and 8,611 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual global and quotient dimension shifts: Prove the original global and normal quotient connecting maps are isomorphisms on the genuine coinduced short exact sequences. One exact consumer expands registered scope to 2209 production modules, 1576 exact consumers and 8,609 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The actual normal invariant coefficient sequence: Assemble the original normal quotient representations and actual invariant coefficient maps into a short exact sequence using proved original H1 vanishing. One exact consumer expands registered scope to 2208 production modules, 1575 exact consumers and 8,604 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual invariant coefficient exactness: Use the original H0 long exact sequence and the literal kernel-image equality to prove short exactness of invariant coefficients when the original kernel H1 vanishes. One exact consumer expands registered scope to 2207 production modules, 1574 exact consumers and 8,602 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual positive cohomology of invariant functions: Apply pinned Shapiro to the original bottom-subgroup coinduction and the proved quotient-function isomorphism to obtain genuine positive-degree vanishing. One exact consumer expands registered scope to 2206 production modules, 1573 exact consumers and 8,599 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original invariant functions on the quotient group: Construct mutually inverse maps between actual normal-subgroup-invariant coinduced functions and original functions on the genuine quotient group, preserving the original coefficient values and action. One exact consumer expands registered scope to 2205 production modules, 1572 exact consumers and 8,596 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original subgroup coinduced dimension shift: Construct the genuine orbit-function embedding, its actual quotient and the restricted short exact sequence. The actual connecting map identifies subgroup H1 of the quotient with original subgroup H2. One exact consumer expands registered scope to 2204 production modules, 1571 exact consumers and 8,594 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual coinduced subgroup acyclicity: Construct explicit original one- and two-cocycle coboundary witnesses under every actual subgroup restriction, proving the two cohomology groups vanish. One exact consumer expands registered scope to 2203 production modules, 1570 exact consumers and 8,589 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original coinduced function coefficients: Realize arbitrary original coefficient-valued functions in the pinned coinduced representation and identify its actual right translation action. One exact consumer expands registered scope to 2202 production modules, 1569 exact consumers and 8,584 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original subgroup coset coordinates: Construct the actual left-coset representatives and subgroup remainders and prove their exact multiplication identities. One exact consumer expands registered scope to 2201 production modules, 1568 exact consumers and 8,581 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Finiteness from original Sylow cohomology: Inject original H2 into the finite product of the actual Sylow cohomology groups, indexed by the actual prime factors of the acting group order. One exact consumer expands registered scope to 2200 production modules, 1567 exact consumers and 8,577 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual Sylow detection of original second cohomology: The original undivided cocycle sum annihilates H2 by the actual finite group order. Comparison with genuine Sylow subgroups then detects every original zero class. One exact consumer expands registered scope to 2199 production modules, 1566 exact consumers and 8,575 explicit audit registrations. Focused production compilation and the assembled 2228-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,191 exhaustive theorem checks passed. This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original primary cohomology detection by Sylow subgroups: Combine the actual coset-index annihilation with Bezout to detect zero on original torsion classes coprime to that index. Obtain injectivity on the actual primary subgroup and then on each primary component under the genuine comparison to original Sylow subgroup cohomology. One exact consumer expands registered scope to 2198 production modules, 1565 exact consumers and 8,572 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. This proves primary-component injection, not finiteness or the total arbitrary-Galois H2 order bound. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual subgroup cohomology comparison and trace: Transport the original restriction-coinduction unit and explicit coset trace through the pinned Shapiro isomorphism. Prove additivity of the original cohomology functor from genuine cochain and homology maps. Their composite in every degree is the actual subgroup index times the identity, so the index kills the comparison kernel. One exact consumer expands registered scope to 2197 production modules, 1564 exact consumers and 8,568 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. The subgroup comparison is explicitly the unit followed by Shapiro. No unproved identification with a separately defined restriction map is used. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original coset trace and exact index composition: Sum the actual untwisted values over the genuine finite coset space. Reindex by its original group action to prove equivariance. The actual restriction-coinduction unit followed by this trace is exactly the coset cardinality times the original identity. One exact consumer expands registered scope to 2196 production modules, 1563 exact consumers and 8,565 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. The trace is an explicit original coefficient map, defined without division by subgroup orders. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual coinduced values on original subgroup cosets: Untwist the original coinduced functions by the genuine coefficient action. Prove that these literal values descend to actual left cosets and that the original coinduced action becomes simultaneous coset translation and original coefficient action. One exact consumer expands registered scope to 2195 production modules, 1562 exact consumers and 8,562 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. No finite-group or cohomology conclusion is assumed. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The actual cyclic local field norm index: Compose the already proved original continuous norm-quotient equivalence and continuous-discrete H2 comparison with the genuine cyclic local cohomology order. The original base-field units modulo actual extension-field norms form a finite quotient of order exactly the original extension degree. One exact consumer expands registered scope to 2194 production modules, 1561 exact consumers and 8,559 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. All cyclic local extensions are covered, including ramified ones. The coefficient topology chosen internally is the usual discrete topology for Galois cohomology, while the original field topologies and valuations remain unchanged. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original cyclic local second cohomology order: Combine the proved original valuation sequence with actual Hilbert 90, cyclic periodicity, finite equal integer-unit cohomology orders and the actual integer cohomology calculation. Cancel the proved positive integer-unit order to obtain finite second cohomology of the original multiplicative group with cardinality exactly the Galois group order. One exact consumer expands registered scope to 2193 production modules, 1560 exact consumers and 8,556 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. The cyclic local-field H2 order is derived without assuming a Herbrand quotient or norm index. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Cardinality from the actual cohomology long exact sequence: Use the genuine long exact sequence of the original coefficient short exact sequence. Adjacent vanishing gives the literal injective first map and surjective connecting map. Original kernel-image counts derive middle finiteness and the four-term cardinal identity. One exact consumer expands registered scope to 2192 production modules, 1559 exact consumers and 8,554 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. Adjacent vanishing and finite outer cohomology are explicit upstream inputs to this generic lemma; the local-field application proves them. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual even integer cohomology and its exact order: Identify the original norm image with the ideal generated by the group order. Compose the true cyclic resolution, its actual cokernel and the integer quotient ring equivalence to identify every positive even cohomology group with ZMod of that order, proving finiteness and its exact cardinality. One exact consumer expands registered scope to 2191 production modules, 1558 exact consumers and 8,552 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. This computes actual cohomology through its original periodic resolution; no order certificate is assumed. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Cardinalities of actual exact module sequences: Use the actual kernel, image and first isomorphism theorem to derive finiteness of a middle module from finite outer modules. Count a literal four-term exact sequence with injective first and surjective last map. One exact consumer expands registered scope to 2190 production modules, 1557 exact consumers and 8,549 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. All original maps and their actual kernel-image equalities remain explicit. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original integer norm and odd cyclic cohomology: Evaluate the true representation norm on trivial integers as multiplication by the actual group order. Its zero kernel and the genuine periodic resolution prove vanishing of every odd integer cohomology group. One exact consumer expands registered scope to 2189 production modules, 1556 exact consumers and 8,545 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. The result concerns the original trivial integer representation and actual group cardinality. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+The original equivariant unit valuation sequence: Construct the genuine representation short complex from the original integer-unit inclusion and normalized order into the integers with trivial action. Prove injectivity, exactness at the original field units and surjectivity onto all integers. One exact consumer expands registered scope to 2188 production modules, 1555 exact consumers and 8,542 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. This is the actual valuation sequence, with exactness derived from the original zero-order kernel and surjectivity. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Galois invariance of the original normalized valuation: The actual Galois restriction to the original integer ring preserves irreducible uniformizers. The original integer-unit times uniformizer decomposition then proves invariance of the actual normalized order on extension-field units. One exact consumer expands registered scope to 2187 production modules, 1554 exact consumers and 8,540 explicit audit registrations. Focused production compilation and the assembled 2198-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,074 exhaustive theorem checks passed. The fields, valuation and Galois action are unchanged. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Finite equal cohomology orders of original local integer units: For an actual finite cyclic local extension, construct the original open small-unit subgroup with zero positive cohomology. Its genuine finite quotient computes the first and second cohomology of the original integer units through their literal quotient map. Counting the finite cyclic resolution proves that both original groups are finite and have equal orders. One exact consumer expands registered scope to 2186 production modules, 1553 exact consumers and 8,538 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. This is the integer-unit cohomology order identity. The valuation exact sequence, cyclic field norm index, all-local-H2 detection and arithmetic duality still require proof. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual subgroup quotient sequence and cohomology comparison: Construct the actual integer submodule from the original invariant multiplicative subgroup. The literal inclusion and quotient maps form a proved short exact sequence. The long exact cohomology sequence makes the original quotient map an isomorphism in a degree when the two adjacent subgroup cohomologies vanish; finiteness retains the original quotient. One exact consumer expands registered scope to 2185 production modules, 1552 exact consumers and 8,536 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. Adjacent subgroup vanishing remains explicit in this generic comparison. The original local-field consumer obtains it from its constructed small-unit filtration. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Finite cyclic cohomology orders from the genuine resolution: Actual cocycles inject into the finite cochain space and map onto the genuine cohomology, proving finiteness for finite coefficients. The original cyclic norm and generator-minus-identity resolution identifies first and second cohomology with the two periodic homologies and proves their cardinalities equal. One exact consumer expands registered scope to 2184 production modules, 1551 exact consumers and 8,531 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. Only finite coefficient modules are handled here. The later original integer-unit consumer supplies an actual finite quotient and the required cohomology comparison. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Equal orders of actual finite periodic homologies: Count the actual kernel and image using the linear first isomorphism theorem. For two original endomorphisms of a finite module whose compositions vanish, count both genuine homology quotients and cancel the positive finite image orders to prove equality of their cardinalities. One exact consumer expands registered scope to 2183 production modules, 1550 exact consumers and 8,528 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. The finite module and two original maps are explicit. This is a counting proof for actual homology quotients, not an assumed Herbrand identity. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Positive cyclic cohomology of actual open integer units: For the original finite cyclic local extension, construct one open subgroup of its genuine integer units with finite quotient and zero positive group cohomology. The proof consumes its constructed normal-lattice norm and cocycle preimages and the periodic cochain resolution on that same subgroup. One exact consumer expands registered scope to 2182 production modules, 1549 exact consumers and 8,525 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. The assertion is positive cohomology for the displayed whole cyclic Galois group. The unit Herbrand quotient, cyclic field norm index and all-local-H2 detection still require proof. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Positive cohomology through the cyclic periodic resolution: Use the pinned actual cyclic periodic resolution. Positive even classes are original invariants modulo the norm image, while odd groups identify with the first cohomology of the same representation. Actual norm preimages and vanishing first cohomology therefore give zero in every positive degree. One exact consumer expands registered scope to 2181 production modules, 1548 exact consumers and 8,523 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. Cyclicity, the genuine norm preimages and first cohomology input are explicit; no all-subgroup Tate-cohomology assertion is made. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Actual subgroup action and first group cohomology: Restrict the original action to its literal invariant subgroup. Its norm is the original finite product after inclusion. Mathlib's cochain quotient identifies the proved original coboundary preimages with zero first group cohomology; original invariant norm preimages give preimages under the actual subgroup representation norm. One exact consumer expands registered scope to 2180 production modules, 1547 exact consumers and 8,519 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. The generic bridges retain their explicit preimage hypotheses and are consumed by the constructed local-field subgroup below. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Exact norm and cocycle preimages in original integer units: The proved normal-lattice small-unit subgroup has an actual open preimage inside the original integer units with finite quotient. The genuine coefficient-preserving equivalence supplies every original invariant norm preimage and every original multiplicative coboundary in this same subgroup. One exact consumer expands registered scope to 2179 production modules, 1546 exact consumers and 8,515 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. This establishes exact original norm and first-cocycle preimages, not the unit Herbrand quotient or the cyclic field norm index. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Exact cohomological preimages through coefficient inclusions: An injective equivariant coefficient homomorphism preserves the literal finite action norm. When the displayed subgroups have the same coefficient image, actual norm preimages and multiplicative coboundaries descend to the original domain with every cocycle value preserved. One exact consumer expands registered scope to 2178 production modules, 1545 exact consumers and 8,513 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. The transfer is conditional on its explicit original coefficient map and preimages; the following local-field consumer constructs and supplies them. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
+
+
+Original action on local integer units: Restrict each original local field automorphism to its actual integer ring and units. The literal integer-unit inclusion is injective and commutes coefficient by coefficient with the original Galois action. One exact consumer expands registered scope to 2177 production modules, 1544 exact consumers and 8,509 explicit audit registrations. Focused production compilation and the assembled 2186-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 16,017 exhaustive theorem checks passed. This action and inclusion do not themselves assert cohomology vanishing or a norm index. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
 
 
 Original norms and coboundaries in the same small units: The exact original norm theorem retains its own constructed normal basis and separating unit filtration. Every-level original cocycle corrections and genuine Galois continuity are consumed in the compact cocycle theorem using that same filtration. The resulting one actual compact open Galois-stable subgroup has both original invariant norm preimages and exact original unit preimages for every original multiplicative one-cocycle, with its actual finite integer-unit quotient. One exact consumer expands registered scope to 2176 production modules, 1543 exact consumers and 8,506 explicit audit registrations. Focused production compilation and the assembled 2176-module sequential foundation/paper verification passed with zero Lean diagnostics; exact consumers, all sixteen linters and 15,972 exhaustive theorem checks passed. Norm and multiplicative one-cocycle triviality for the actual small-unit subgroup. Actual integer-unit cohomology transport, unit Herbrand quotient, general cyclic norm index, all-local-H2 detection, full invariant and arithmetic duality remain open. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN. Earlier milestone paragraphs retain their historical scope.
@@ -9827,3 +10160,891 @@ For an actual finite cyclic local extension, construct the original open small-u
 This is the integer-unit cohomology order identity. The valuation exact sequence, cyclic field norm index, all-local-H2 detection and arithmetic duality still require proof. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
 
 - [LocalFieldIntegerUnitCohomologyOrders](Extension/Dubon2026/LocalFieldIntegerUnitCohomologyOrders.lean).
+
+### Galois invariance of the original normalized valuation — 11 October 2026
+
+The actual Galois restriction to the original integer ring preserves irreducible uniformizers. The original integer-unit times uniformizer decomposition then proves invariance of the actual normalized order on extension-field units.
+
+The fields, valuation and Galois action are unchanged. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldGaloisUnitOrder](Extension/Dubon2026/LocalFieldGaloisUnitOrder.lean).
+
+### The original equivariant unit valuation sequence — 11 October 2026
+
+Construct the genuine representation short complex from the original integer-unit inclusion and normalized order into the integers with trivial action. Prove injectivity, exactness at the original field units and surjectivity onto all integers.
+
+This is the actual valuation sequence, with exactness derived from the original zero-order kernel and surjectivity. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldUnitValuationSequence](Extension/Dubon2026/LocalFieldUnitValuationSequence.lean).
+
+### The original integer norm and odd cyclic cohomology — 11 October 2026
+
+Evaluate the true representation norm on trivial integers as multiplication by the actual group order. Its zero kernel and the genuine periodic resolution prove vanishing of every odd integer cohomology group.
+
+The result concerns the original trivial integer representation and actual group cardinality. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CyclicTrivialIntegerCohomology](Extension/Dubon2026/CyclicTrivialIntegerCohomology.lean).
+
+### Cardinalities of actual exact module sequences — 11 October 2026
+
+Use the actual kernel, image and first isomorphism theorem to derive finiteness of a middle module from finite outer modules. Count a literal four-term exact sequence with injective first and surjective last map.
+
+All original maps and their actual kernel-image equalities remain explicit. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteExactModuleCardinality](Extension/Dubon2026/FiniteExactModuleCardinality.lean).
+
+### Actual even integer cohomology and its exact order — 11 October 2026
+
+Identify the original norm image with the ideal generated by the group order. Compose the true cyclic resolution, its actual cokernel and the integer quotient ring equivalence to identify every positive even cohomology group with ZMod of that order, proving finiteness and its exact cardinality.
+
+This computes actual cohomology through its original periodic resolution; no order certificate is assumed. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CyclicIntegerEvenCohomology](Extension/Dubon2026/CyclicIntegerEvenCohomology.lean).
+
+### Cardinality from the actual cohomology long exact sequence — 11 October 2026
+
+Use the genuine long exact sequence of the original coefficient short exact sequence. Adjacent vanishing gives the literal injective first map and surjective connecting map. Original kernel-image counts derive middle finiteness and the four-term cardinal identity.
+
+Adjacent vanishing and finite outer cohomology are explicit upstream inputs to this generic lemma; the local-field application proves them. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ExactCohomologyCardinality](Extension/Dubon2026/ExactCohomologyCardinality.lean).
+
+### The original cyclic local second cohomology order — 11 October 2026
+
+Combine the proved original valuation sequence with actual Hilbert 90, cyclic periodicity, finite equal integer-unit cohomology orders and the actual integer cohomology calculation. Cancel the proved positive integer-unit order to obtain finite second cohomology of the original multiplicative group with cardinality exactly the Galois group order.
+
+The cyclic local-field H2 order is derived without assuming a Herbrand quotient or norm index. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldCyclicSecondCohomologyOrder](Extension/Dubon2026/LocalFieldCyclicSecondCohomologyOrder.lean).
+
+### The actual cyclic local field norm index — 11 October 2026
+
+Compose the already proved original continuous norm-quotient equivalence and continuous-discrete H2 comparison with the genuine cyclic local cohomology order. The original base-field units modulo actual extension-field norms form a finite quotient of order exactly the original extension degree.
+
+All cyclic local extensions are covered, including ramified ones. The coefficient topology chosen internally is the usual discrete topology for Galois cohomology, while the original field topologies and valuations remain unchanged. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldCyclicNormIndex](Extension/Dubon2026/LocalFieldCyclicNormIndex.lean).
+
+### Actual coinduced values on original subgroup cosets — 11 October 2026
+
+Untwist the original coinduced functions by the genuine coefficient action. Prove that these literal values descend to actual left cosets and that the original coinduced action becomes simultaneous coset translation and original coefficient action.
+
+No finite-group or cohomology conclusion is assumed. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CoinducedCosetValues](Extension/Dubon2026/CoinducedCosetValues.lean).
+
+### The original coset trace and exact index composition — 11 October 2026
+
+Sum the actual untwisted values over the genuine finite coset space. Reindex by its original group action to prove equivariance. The actual restriction-coinduction unit followed by this trace is exactly the coset cardinality times the original identity.
+
+The trace is an explicit original coefficient map, defined without division by subgroup orders. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CoinducedCosetTrace](Extension/Dubon2026/CoinducedCosetTrace.lean).
+
+### Actual subgroup cohomology comparison and trace — 11 October 2026
+
+Transport the original restriction-coinduction unit and explicit coset trace through the pinned Shapiro isomorphism. Prove additivity of the original cohomology functor from genuine cochain and homology maps. Their composite in every degree is the actual subgroup index times the identity, so the index kills the comparison kernel.
+
+The subgroup comparison is explicitly the unit followed by Shapiro. No unproved identification with a separately defined restriction map is used. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CoinducedCohomologyTrace](Extension/Dubon2026/CoinducedCohomologyTrace.lean).
+
+### Original primary cohomology detection by Sylow subgroups — 11 October 2026
+
+Combine the actual coset-index annihilation with Bezout to detect zero on original torsion classes coprime to that index. Obtain injectivity on the actual primary subgroup and then on each primary component under the genuine comparison to original Sylow subgroup cohomology.
+
+This proves primary-component injection, not finiteness or the total arbitrary-Galois H2 order bound. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SubgroupCohomologyCoprimeDetection](Extension/Dubon2026/SubgroupCohomologyCoprimeDetection.lean).
+
+### Actual Sylow detection of original second cohomology — 11 October 2026
+
+The original undivided cocycle sum annihilates H2 by the actual finite group order. Comparison with genuine Sylow subgroups then detects every original zero class.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteSecondCohomologySylowDetection](Extension/Dubon2026/FiniteSecondCohomologySylowDetection.lean).
+
+### Finiteness from original Sylow cohomology — 11 October 2026
+
+Inject original H2 into the finite product of the actual Sylow cohomology groups, indexed by the actual prime factors of the acting group order.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteSecondCohomologyFromSylows](Extension/Dubon2026/FiniteSecondCohomologyFromSylows.lean).
+
+### Original subgroup coset coordinates — 11 October 2026
+
+Construct the actual left-coset representatives and subgroup remainders and prove their exact multiplication identities.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalSubgroupCosetCoordinates](Extension/Dubon2026/OriginalSubgroupCosetCoordinates.lean).
+
+### Original coinduced function coefficients — 11 October 2026
+
+Realize arbitrary original coefficient-valued functions in the pinned coinduced representation and identify its actual right translation action.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCoinducedFunctionCoefficients](Extension/Dubon2026/OriginalCoinducedFunctionCoefficients.lean).
+
+### Actual coinduced subgroup acyclicity — 11 October 2026
+
+Construct explicit original one- and two-cocycle coboundary witnesses under every actual subgroup restriction, proving the two cohomology groups vanish.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCoinducedSubgroupAcyclicity](Extension/Dubon2026/OriginalCoinducedSubgroupAcyclicity.lean).
+
+### Original subgroup coinduced dimension shift — 11 October 2026
+
+Construct the genuine orbit-function embedding, its actual quotient and the restricted short exact sequence. The actual connecting map identifies subgroup H1 of the quotient with original subgroup H2.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCoinducedDimensionShift](Extension/Dubon2026/OriginalCoinducedDimensionShift.lean).
+
+### Original invariant functions on the quotient group — 11 October 2026
+
+Construct mutually inverse maps between actual normal-subgroup-invariant coinduced functions and original functions on the genuine quotient group, preserving the original coefficient values and action.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCoinducedInvariantQuotient](Extension/Dubon2026/OriginalCoinducedInvariantQuotient.lean).
+
+### Actual positive cohomology of invariant functions — 11 October 2026
+
+Apply pinned Shapiro to the original bottom-subgroup coinduction and the proved quotient-function isomorphism to obtain genuine positive-degree vanishing.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCoinducedInvariantAcyclicity](Extension/Dubon2026/OriginalCoinducedInvariantAcyclicity.lean).
+
+### Actual invariant coefficient exactness — 11 October 2026
+
+Use the original H0 long exact sequence and the literal kernel-image equality to prove short exactness of invariant coefficients when the original kernel H1 vanishes.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [InvariantCoefficientExactness](Extension/Dubon2026/InvariantCoefficientExactness.lean).
+
+### The actual normal invariant coefficient sequence — 11 October 2026
+
+Assemble the original normal quotient representations and actual invariant coefficient maps into a short exact sequence using proved original H1 vanishing.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [NormalInvariantCoefficientSequence](Extension/Dubon2026/NormalInvariantCoefficientSequence.lean).
+
+### Actual global and quotient dimension shifts — 11 October 2026
+
+Prove the original global and normal quotient connecting maps are isomorphisms on the genuine coinduced short exact sequences.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCoinducedGlobalDimensionShift](Extension/Dubon2026/OriginalCoinducedGlobalDimensionShift.lean).
+
+### Order divisibility of actual exact modules — 11 October 2026
+
+Prove finiteness of an original exact middle module from the finite outer modules and prove its order divides their product using the actual kernel, image and quotient.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteExactModuleDivisibility](Extension/Dubon2026/FiniteExactModuleDivisibility.lean).
+
+### Actual normal subgroup second cohomology orders — 11 October 2026
+
+Combine the constructed dimension shifts with pinned H1 inflation-restriction to bound actual H2 by the product of the original finite subgroup and quotient-invariant H2 orders.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SecondCohomologyNormalSubgroupCardinality](Extension/Dubon2026/SecondCohomologyNormalSubgroupCardinality.lean).
+
+### Original cohomology under group isomorphism — 11 October 2026
+
+Prove the original cochain pullback is an isomorphism degree by degree along an actual group isomorphism, keeping the same coefficient action.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalGroupCohomologyReindex](Extension/Dubon2026/OriginalGroupCohomologyReindex.lean).
+
+### Actual fixed-field subgroup unit cohomology — 11 October 2026
+
+Identify the literal restricted unit action with actual fixed-field Galois cohomology and derive original subgroup H1 vanishing from Hilbert90.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisSubgroupUnitCohomology](Extension/Dubon2026/GaloisSubgroupUnitCohomology.lean).
+
+### Actual normal invariant fixed-field units — 11 October 2026
+
+Prove the original fixed-field unit inclusion is a bijective map of the actual normal quotient representations, by literal fixed-field descent.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisNormalInvariantUnitCoefficients](Extension/Dubon2026/GaloisNormalInvariantUnitCoefficients.lean).
+
+### Second cohomology orders in the original field tower — 11 October 2026
+
+Identify both actual normal-subgroup coefficient groups with the original fixed-field tower. The original H2 order divides the product of their actual finite H2 orders.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisFixedFieldSecondCohomology](Extension/Dubon2026/GaloisFixedFieldSecondCohomology.lean).
+
+### An actual central cyclic subgroup of a finite p-group — 11 October 2026
+
+Construct an actual nontrivial central cyclic normal subgroup of each nontrivial finite p-group and prove the genuine quotient order is smaller.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [PGroupCentralCyclicReduction](Extension/Dubon2026/PGroupCentralCyclicReduction.lean).
+
+### Cyclic local H2 for the original normed fields — 11 October 2026
+
+Prove norm valuation compatibility from the actual normed algebra map and apply the proved cyclic H2 calculation to the unchanged original normed local fields.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [NormedLocalFieldCyclicCohomology](Extension/Dubon2026/NormedLocalFieldCyclicCohomology.lean).
+
+### Original local H2 order for p-group extensions — 11 October 2026
+
+Induct on the actual Galois group order through constructed central cyclic fixed fields. Genuine cyclic H2 orders and the original tower bound prove finiteness and order divisibility for every local p-group extension.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [NormedLocalFieldPGroupSecondCohomology](Extension/Dubon2026/NormedLocalFieldPGroupSecondCohomology.lean).
+
+### Actual second cohomology order from Sylow comparisons — 11 October 2026
+
+Inject each actual cohomology Sylow subgroup under the genuine primary comparison and apply additive-group Lagrange and prime-power divisibility to recover the full original H2 order bound.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SecondCohomologySylowCardinality](Extension/Dubon2026/SecondCohomologySylowCardinality.lean).
+
+### Actual H2 bound for every normed local Galois extension — 11 October 2026
+
+Apply the local p-group theorem to every genuine Sylow fixed-field extension. Actual Sylow detection proves finite original H2 with order dividing the whole Galois group order and the extension degree.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [NormedLocalFieldSecondCohomologyBound](Extension/Dubon2026/NormedLocalFieldSecondCohomologyBound.lean).
+
+### Actual H2 bound over every original local field — 11 October 2026
+
+Construct the compatible norm on the original local field and the spectral norm on the same finite extension field. The actual unit action is unchanged, yielding finite H2 of order dividing the actual extension degree.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldFiniteGaloisSecondCohomologyBound](Extension/Dubon2026/LocalFieldFiniteGaloisSecondCohomologyBound.lean).
+
+### The original finite continuous local H2 order bound — 11 October 2026
+
+Transport the proved original algebraic H2 bound through the existing same-cocycle continuous/discrete comparison to the original continuous Galois-unit H2 quotient.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldFiniteContinuousH2Bound](Extension/Dubon2026/LocalFieldFiniteContinuousH2Bound.lean).
+
+### Naturality of original connecting maps — 11 October 2026
+
+Construct the actual cochain map of original short sequences under group and coefficient changes and prove connecting-map naturality by the pinned homological snake sequence.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalCohomologyGroupChangeNaturality](Extension/Dubon2026/OriginalCohomologyGroupChangeNaturality.lean).
+
+### Actual inflation and restriction under dimension shift — 11 October 2026
+
+Show the original quotient invariant inclusions form a map of actual coefficient sequences. Both original inflation and restriction commute with their genuine connecting maps.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalNormalSequenceCohomologyMaps](Extension/Dubon2026/OriginalNormalSequenceCohomologyMaps.lean).
+
+### Actual second-degree inflation-restriction exactness — 11 October 2026
+
+Use the original natural dimension shifts and pinned H1 sequence to prove actual H2 inflation injective and its image equal to the kernel of actual subgroup restriction when the original subgroup H1 vanishes.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalSecondCohomologyInflationRestriction](Extension/Dubon2026/OriginalSecondCohomologyInflationRestriction.lean).
+
+### Original cohomology under group and coefficient isomorphisms — 11 October 2026
+
+Prove that actual group reindexing and an actual coefficient isomorphism give an isomorphism of the original cochain complexes and all original cohomology groups.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [OriginalGroupChangeCohomologyIsomorphism](Extension/Dubon2026/OriginalGroupChangeCohomologyIsomorphism.lean).
+
+### Actual fixed-field unit H2 inflation injection — 11 October 2026
+
+Identify the composite of the actual fixed-field coefficient isomorphism and original H2 inflation with the literal field-tower map on cochains. Hilbert90 proves that this original field map is injective.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisFixedFieldH2InflationInjection](Extension/Dubon2026/GaloisFixedFieldH2InflationInjection.lean).
+
+### Original intermediate-field H2 inflation injection — 11 October 2026
+
+Reconstruct each actual normal intermediate field as the fixed field of its original fixing subgroup to obtain injectivity for its literal field inclusion and automorphism restriction map.
+
+This increment proves the displayed original-object statement; it does not assert the full local invariant or the modular application. All-local-H2 detection, the full invariant, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisIntermediateFieldH2InflationInjection](Extension/Dubon2026/GaloisIntermediateFieldH2InflationInjection.lean).
+
+### The original automorphism restriction kernel and its genuine unit H1 — 11 October 2026
+
+Hilbert90 for the actual upper field extension gives vanishing H1 of the original restriction kernel acting on the original upper-field units.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisTowerKernelCohomology](Extension/Dubon2026/GaloisTowerKernelCohomology.lean).
+
+### Original middle-field units are the actual restriction-kernel invariants — 11 October 2026
+
+The original middle-field unit inclusion is bijective onto the actual restriction-kernel invariants, by genuine Galois fixed-field descent.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisTowerQuotientUnitCoefficients](Extension/Dubon2026/GaloisTowerQuotientUnitCoefficients.lean).
+
+### Genuine algebraic unit H2 inflation is injective in every finite Galois field tower — 11 October 2026
+
+Actual finite Galois field-tower H2 inflation is injective. Its coefficient inclusion, group restriction and kernel H1 are the original ones, with kernel H1 vanishing derived from genuine Hilbert90.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisUnitH2InflationInjection](Extension/Dubon2026/FiniteGaloisUnitH2InflationInjection.lean).
+
+### Actual continuous unit H2 inflation is injective in finite Galois towers — 11 October 2026
+
+The original continuous finite field-tower H2 inflation is injective. The proof uses the same-cocycle comparison and the proved actual algebraic inflation injection, with no inflation certificate.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteContinuousGaloisH2InflationInjection](Extension/Dubon2026/FiniteContinuousGaloisH2InflationInjection.lean).
+
+### Original finite Galois H2 embeds in the actual continuous Galois H2 — 11 October 2026
+
+Actual inflation embeds each genuine finite Galois stage into the original continuous unit H2, with its original Krull topology.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousGaloisUnitFiniteStageInjection](Extension/Dubon2026/ContinuousGaloisUnitFiniteStageInjection.lean).
+
+### Exact addition-carry sums for every original finite cyclic step — 11 October 2026
+
+Along an actual closed cyclic period the original carry sum is determined exactly by the step's canonical representative.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ZModCarryPeriod](Extension/Dubon2026/ZModCarryPeriod.lean).
+
+### Exact original carry periods for arbitrary cyclic character values — 11 October 2026
+
+The original cocycle period satisfies the exact character identity along every closed original group period. No generator or coprimality assumption is needed.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [RepresentationCarryCharacterPeriod](Extension/Dubon2026/RepresentationCarryCharacterPeriod.lean).
+
+### The original local-field degree is ramification times residue degree — 11 October 2026
+
+The actual maximal ideals of the original integer rings give the ramification index, and the original residue fields give the residue degree. Their product is the degree of the original field extension.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldRamificationDegree](Extension/Dubon2026/LocalFieldRamificationDegree.lean).
+
+### Original normalized orders scale by the actual ramification index — 11 October 2026
+
+On every actual base-field unit, the original normalized extension order equals the original base order times the actual ramification index.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldUnitOrderBaseChange](Extension/Dubon2026/LocalFieldUnitOrderBaseChange.lean).
+
+### Original unit-cohomology maps for genuine changes of base field — 11 October 2026
+
+Base change retains the literal original cocycle representative.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitBaseChange](Extension/Dubon2026/GaloisUnitBaseChange.lean).
+
+### Powers of actual local arithmetic Frobenius on original residues — 11 October 2026
+
+The actual residue action determines the corresponding power of the original arithmetic Frobenius.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldArithmeticFrobeniusPowers](Extension/Dubon2026/LocalFieldArithmeticFrobeniusPowers.lean).
+
+### Original arithmetic Frobenius under actual finite base change — 11 October 2026
+
+The original upper arithmetic Frobenius restricts to the original lower Frobenius raised to the actual residue degree of E over K. The base extension may be ramified.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldFrobeniusBaseChange](Extension/Dubon2026/LocalFieldFrobeniusBaseChange.lean).
+
+### Original field-unit carry cocycles for arbitrary finite cyclic characters — 11 October 2026
+
+The actual period, multiplied by the character modulus, equals the group period times the character value times the genuine original base unit.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitCharacterCarryPeriod](Extension/Dubon2026/GaloisUnitCharacterCarryPeriod.lean).
+
+### The original unramified invariant on every actual character carry cocycle — 11 October 2026
+
+The same invariant is integer multiplication of the genuine finite cyclic invariant by the original base unit's normalized order.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldCharacterCarryInvariant](Extension/Dubon2026/LocalFieldCharacterCarryInvariant.lean).
+
+### Actual base change of original field-unit carry cocycles — 11 October 2026
+
+The original carry identity descends to the literal continuous H2 base-change map and the original quotient classes.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitCarryBaseChange](Extension/Dubon2026/GaloisUnitCarryBaseChange.lean).
+
+### Original unramified carry invariants scale by the actual base degree — 11 October 2026
+
+Genuine base change multiplies the original rational invariant of every character carry class by the actual base-field extension degree. The ramification and residue factors are both derived from original objects.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldCarryInvariantBaseChange](Extension/Dubon2026/LocalFieldCarryInvariantBaseChange.lean).
+
+### Actual carry representatives cover every original unramified local H2 class — 11 October 2026
+
+Every original continuous unramified local H2 class has a genuine carry representative using the actual arithmetic Frobenius and an actual base-field unit. The original degree-one case is included.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldH2CarryRepresentatives](Extension/Dubon2026/LocalFieldH2CarryRepresentatives.lean).
+
+### Restriction of every original unramified local H2 invariant — 11 October 2026
+
+For every original unramified H2 class, genuine base change multiplies the original rational invariant by the actual extension degree of the base. No unramified hypothesis on E over K is imposed.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldInvariantBaseChange](Extension/Dubon2026/LocalFieldInvariantBaseChange.lean).
+
+### Genuine unramified tensor images after arbitrary integral base change — 11 October 2026
+
+Its actual range is exactly the field compositum of the original fraction fields of the new base and the original unramified algebra.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [BaseChangedUnramifiedTensorImage](Extension/Dubon2026/BaseChangedUnramifiedTensorImage.lean).
+
+### The genuine unramified base-change image is the original integral closure — 11 October 2026
+
+The actual integral closure in the compositum is unramified over the new base. Only the original algebra A over R is required to be unramified.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [BaseChangedUnramifiedIntegralClosure](Extension/Dubon2026/BaseChangedUnramifiedIntegralClosure.lean).
+
+### Original unramified local extensions remain unramified in actual composita — 11 October 2026
+
+If the actual images of E and L generate M, unramifiedness of the original L/K integer extension implies unramifiedness of the original M/E integer extension. The base extension E/K may be ramified.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldUnramifiedCompositum](Extension/Dubon2026/LocalFieldUnramifiedCompositum.lean).
+
+### Actual unramified integer rings under the canonical spectral norm — 11 October 2026
+
+The canonical spectral structure on the same original finite field retains unramifiedness. Both integer rings are proved to be the actual integral closure, so no unramifiedness or valuation-comparison certificate is assumed.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralUnramifiedIntegerExtension](Extension/Dubon2026/SpectralUnramifiedIntegerExtension.lean).
+
+### Original unramified stages with their genuine compatible spectral structures — 11 October 2026
+
+Every positive degree occurs inside the original separably closed field with the actual spectral norm over K. The original finite field and its unramified integer extension are constructed, not postulated.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralOriginalUnramifiedStage](Extension/Dubon2026/SpectralOriginalUnramifiedStage.lean).
+
+### Actual finite Galois composita preserve original spectral unramifiedness — 11 October 2026
+
+The literal supremum of the original finite Galois stages is unramified over E whenever F is unramified over K. All norms, valuations, inclusions and valuation extension instances come from the actual spectral tower.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralFiniteGaloisUnramifiedSup](Extension/Dubon2026/SpectralFiniteGaloisUnramifiedSup.lean).
+
+### Original unit H2 restriction when the fixed field is enlarged — 11 October 2026
+
+Actual restriction followed by the genuine kernel identification is exactly restriction to the original normal subgroup, on the same cochains.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitTowerRestriction](Extension/Dubon2026/GaloisUnitTowerRestriction.lean).
+
+### Exact original unit H2 inflation and restriction in finite Galois towers — 11 October 2026
+
+The kernel of the actual field-tower restriction is exactly the image of the literal field-tower inflation. Both maps use the original field units and actual automorphisms; Hilbert90 discharges the kernel H1.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisUnitH2InflationRestriction](Extension/Dubon2026/FiniteGaloisUnitH2InflationRestriction.lean).
+
+### Same-cocycle comparisons for actual Galois H2 base change — 11 October 2026
+
+The original continuous-to-algebraic comparison commutes with the literal base-change map, preserving the same actual cocycle values.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisH2BaseChangeComparison](Extension/Dubon2026/FiniteGaloisH2BaseChangeComparison.lean).
+
+### Original finite Galois H2 classes descend exactly when actual base change vanishes — 11 October 2026
+
+An original finite L/K class inflates from an actual E/K class in the genuine common Galois extension exactly when its actual base change to M/E vanishes. Actual Hilbert90 and exact inflation-restriction prove descent.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisH2DescentUnderBaseChange](Extension/Dubon2026/FiniteGaloisH2DescentUnderBaseChange.lean).
+
+### Every original finite local H2 class is detected by an actual unramified compositum — 11 October 2026
+
+If L/K is the actual unramified extension of the same degree as E/K, every original E/K unit H2 class agrees with a genuine L/K class after inflation to the literal compositum. Unramifiedness over E and all H2 order bounds are proved from the original fields, rather than assumed as certificates.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldH2UnramifiedCompositumDetection](Extension/Dubon2026/LocalFieldH2UnramifiedCompositumDetection.lean).
+
+### Original finite-stage classes come from genuine unramified spectral stages — 11 October 2026
+
+Every genuine finite-stage class has the same original absolute inflation as a class of an actual unramified stage of the same degree. The proof constructs the literal compositum with compatible spectral structures.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralFiniteStageUnramifiedH2Detection](Extension/Dubon2026/SpectralFiniteStageUnramifiedH2Detection.lean).
+
+### Every original local continuous H2 class has an actual unramified representative — 11 October 2026
+
+Every original continuous unit H2 class comes from an actual finite unramified Galois subfield of the original separably closed coefficient field. All extending local structures are constructed on that same subfield.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousH2UnramifiedDetection](Extension/Dubon2026/LocalFieldContinuousH2UnramifiedDetection.lean).
+
+### Actual spectral unramified stages and their arithmetic period invariants — 11 October 2026
+
+The image is exactly the rational classes annihilated by the actual original field degree.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralUnramifiedStageInvariant](Extension/Dubon2026/SpectralUnramifiedStageInvariant.lean).
+
+### Original unramified period invariants agree on actual common extensions — 11 October 2026
+
+Two original unramified representatives of the same actual continuous class have the same arithmetic period invariant.
+
+This increment proves its displayed original-object statement. The full continuous invariant is not yet assembled at this intermediate scope. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralUnramifiedInvariantCompatibility](Extension/Dubon2026/SpectralUnramifiedInvariantCompatibility.lean).
+
+### The arithmetic period invariant of the original continuous local H2 — 11 October 2026
+
+The full continuous class has a unique rational value obtained from an actual unramified arithmetic-Frobenius period. Existence and independence are proved for the original class rather than assumed.
+
+This increment proves its displayed original-object statement. The unique full invariant is constructed; linear equivalence follows in the next increment. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralContinuousH2Invariant](Extension/Dubon2026/SpectralContinuousH2Invariant.lean).
+
+### Original continuous local H2 is the rational circle via arithmetic periods — 11 October 2026
+
+The full equivalence evaluates on each original unramified class as its genuine arithmetic period invariant.
+
+This increment proves its displayed original-object statement. The full original continuous invariant equivalence is constructed using actual arithmetic periods. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralContinuousH2InvariantEquiv](Extension/Dubon2026/SpectralContinuousH2InvariantEquiv.lean).
+
+### The full rational invariant for every original nonarchimedean local field — 11 October 2026
+
+The full original continuous local H2 has the genuine additive group and integer-module structure of the rational circle.
+
+This increment proves its displayed original-object statement. The full original continuous invariant equivalence is constructed using actual arithmetic periods. Full invariant compatibility under arbitrary finite base-field restriction, corestriction, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousH2Invariant](Extension/Dubon2026/LocalFieldContinuousH2Invariant.lean).
+
+### Uniqueness of the actual extending local valuative relation — 11 October 2026
+
+Two actual local valuations extending the same original local field agree, even when their topological structures were constructed separately. Both integer rings are the original integral closure.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldValuativeExtensionUniqueness](Extension/Dubon2026/LocalFieldValuativeExtensionUniqueness.lean).
+
+### The canonical spectral structures equal the original local structures — 11 October 2026
+
+The spectral valuation and topology on the same original finite local extension equal its supplied extending local structures.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldSpectralStructureUniqueness](Extension/Dubon2026/LocalFieldSpectralStructureUniqueness.lean).
+
+### Spectral stage invariants equal the periods of the original local structures — 11 October 2026
+
+The spectral invariant agrees with the actual arithmetic period computed from any original extending local structures on the same unramified field. Both its valuation and topology are proved equal to the spectral ones.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralInvariantOriginalPeriod](Extension/Dubon2026/SpectralInvariantOriginalPeriod.lean).
+
+### The full local invariant has the original arithmetic-Frobenius normalization — 11 October 2026
+
+On every actual unramified finite subfield, the full invariant is the literal arithmetic-Frobenius period computed with the supplied original local structures, independent of the spectral construction.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousInvariantNormalization](Extension/Dubon2026/LocalFieldContinuousInvariantNormalization.lean).
+
+### Continuity of actual Galois base change for original infinite extensions — 11 October 2026
+
+Literal Galois base change is continuous for the original Krull topologies. The existing finite-basis neighborhood proof applies through the original field embedding; no discrete Galois topology is substituted.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitBaseChangeContinuity](Extension/Dubon2026/GaloisUnitBaseChangeContinuity.lean).
+
+### Actual base change on original infinite continuous Galois unit H2 — 11 October 2026
+
+Base change retains the literal original cocycle representative.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousGaloisUnitBaseChange](Extension/Dubon2026/ContinuousGaloisUnitBaseChange.lean).
+
+### Composition of the actual infinite Galois unit base-change maps — 11 October 2026
+
+The actual original continuous H2 maps compose under the genuine field towers, with the original Krull topologies retained.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitBaseChangeComposition](Extension/Dubon2026/GaloisUnitBaseChangeComposition.lean).
+
+### Original finite-stage inflation is actual continuous Galois base change — 11 October 2026
+
+The original finite-stage inflation is the same original group restriction and coefficient inclusion used by continuous base change.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousGaloisBaseChangeFiniteStage](Extension/Dubon2026/ContinuousGaloisBaseChangeFiniteStage.lean).
+
+### Original finite Galois stages under extension of the fixed base — 11 October 2026
+
+Extending the fixed base retains the exact original ambient set.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisStageExtendScalars](Extension/Dubon2026/FiniteGaloisStageExtendScalars.lean).
+
+### Actual full restriction is detected on the original finite compositum — 11 October 2026
+
+Restricting an original inflated finite-stage class equals inflation of its actual finite base change in any genuine common finite extension. The upper stage is the same field with its fixed base extended.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousGaloisRestrictionFiniteCompositum](Extension/Dubon2026/ContinuousGaloisRestrictionFiniteCompositum.lean).
+
+### The literal algebra structure of a rebased original finite stage — 11 October 2026
+
+Both descriptions of the original E-algebra H have the same literal algebra map and hence the same actual algebra structure.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisRebasedAlgebra](Extension/Dubon2026/FiniteGaloisRebasedAlgebra.lean).
+
+### Actual continuous Galois H2 respects equality of original algebra structures — 11 October 2026
+
+The transport along proved equality of the actual algebra structures is bijective on the original continuous cohomology classes.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitH2AlgebraCongruence](Extension/Dubon2026/GaloisUnitH2AlgebraCongruence.lean).
+
+### Original H2 classes of the same field under a rebased stage description — 11 October 2026
+
+The rebased original-stage identification is bijective on the actual continuous H2 classes of the same original field.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisStageRebasedCohomology](Extension/Dubon2026/FiniteGaloisStageRebasedCohomology.lean).
+
+### Actual full restriction is inflation from the original rebased finite stage — 11 October 2026
+
+Restricting an original inflated finite-stage class equals inflation of its actual finite base change in any genuine common finite extension. The upper stage is the same field with its fixed base extended.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousGaloisRestrictionRebasedStage](Extension/Dubon2026/ContinuousGaloisRestrictionRebasedStage.lean).
+
+### Actual original rebased composita preserve spectral unramifiedness — 11 October 2026
+
+The literal supremum of the original finite Galois stages is unramified over E whenever F is unramified over K. All norms, valuations, inclusions and valuation extension instances come from the actual spectral tower.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [SpectralRebasedUnramifiedSup](Extension/Dubon2026/SpectralRebasedUnramifiedSup.lean).
+
+### The original full invariant restriction formula on actual unramified representatives — 11 October 2026
+
+For an actual unramified representative and an actual common extension unramified over the new base, the full original invariant of its restriction is multiplied by the actual base degree. The cohomology maps are the original infinite restriction and literal finite-stage inflations.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldInvariantRestrictionOnStage](Extension/Dubon2026/LocalFieldInvariantRestrictionOnStage.lean).
+
+### Actual finite Galois restriction multiplies the full local invariant by the degree — 11 October 2026
+
+For every original finite Galois subfield E of the original separably closed coefficient field, genuine continuous restriction multiplies the full arithmetic invariant by the actual degree E/K. The representative and unramified compositum are constructed from the original class.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousInvariantRestriction](Extension/Dubon2026/LocalFieldContinuousInvariantRestriction.lean).
+
+### Restriction to an arbitrary intermediate base on genuine finite stages — 11 October 2026
+
+Actual restriction of an inflated class is the original finite base change inflated from a genuine stage over the new intermediate base.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousGaloisRestrictionGeneralStage](Extension/Dubon2026/ContinuousGaloisRestrictionGeneralStage.lean).
+
+### The original compositum with a finite Galois field over an arbitrary base — 11 October 2026
+
+After adjoining the original finite Galois subfield to any intermediate base, a genuine separable polynomial still splits and generates the entire compositum.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [FiniteGaloisCompositumOverIntermediate](Extension/Dubon2026/FiniteGaloisCompositumOverIntermediate.lean).
+
+### The original local invariant on unramified representatives over arbitrary bases — 11 October 2026
+
+If an original unramified finite representative is embedded in a genuine unramified stage over the new base, restriction multiplies its full original invariant by the degree of that base. Normality of E/K is not assumed. The finite and infinite maps act on the actual cocycles.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldInvariantRestrictionGeneralStage](Extension/Dubon2026/LocalFieldInvariantRestrictionGeneralStage.lean).
+
+### Genuine finite separable restriction multiplies the full local invariant by the degree — 11 October 2026
+
+For every original finite intermediate field of the separably closed Galois coefficient field, actual continuous restriction multiplies the full local invariant by the actual degree. The new base need not be normal over K. The unramified representative and compositum are constructed from the original class, and all local structures are the original ones.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousInvariantFiniteRestriction](Extension/Dubon2026/LocalFieldContinuousInvariantFiniteRestriction.lean).
+
+### Literal subgroup transition coordinates for the original finite coset trace — 11 October 2026
+
+The genuine transition coordinates satisfy their crossed-product identity inside the original subgroup.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CosetTransitionCoordinates](Extension/Dubon2026/CosetTransitionCoordinates.lean).
+
+### Literal finite coset sums on the original inhomogeneous cochains — 11 October 2026
+
+The genuine finite coset trace takes original subgroup two-cocycles to original group two-cocycles. The proof reindexes the original cosets.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CosetTraceCochains](Extension/Dubon2026/CosetTraceCochains.lean).
+
+### The original coset trace preserves actual coboundaries — 11 October 2026
+
+The genuine finite coset trace of a coboundary is the actual coboundary of the same finite trace of its original one-cochain.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CosetTraceDifferential](Extension/Dubon2026/CosetTraceDifferential.lean).
+
+### Continuous original cochains and cocycles under the genuine finite coset trace — 11 October 2026
+
+Every original continuous coboundary is sent to the coboundary of its actual continuous traced cochain.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousCosetTrace](Extension/Dubon2026/ContinuousCosetTrace.lean).
+
+### An explicit original-cochain homotopy for restriction followed by coset trace — 11 October 2026
+
+The original differential of the explicit correction is exactly the index multiple of the cocycle minus its actual restriction trace.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [CosetTraceRestrictionHomotopy](Extension/Dubon2026/CosetTraceRestrictionHomotopy.lean).
+
+### Actual continuous corestriction and its exact restriction-index identity — 11 October 2026
+
+Actual continuous restriction followed by the genuine coset-sum corestriction is multiplication by the exact original subgroup index. The equality is proved with an explicit continuous coboundary.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [ContinuousCohomologyCorestriction](Extension/Dubon2026/ContinuousCohomologyCorestriction.lean).
+
+### The original finite-base fixing subgroup with its genuine Krull topology — 11 October 2026
+
+The exact number of genuine fixing cosets is the original field degree.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisFixingSubgroupTopology](Extension/Dubon2026/GaloisFixingSubgroupTopology.lean).
+
+### Original continuous Galois unit cocycles on the actual fixing subgroup — 11 October 2026
+
+Reindexing preserves the literal original differential and its continuous one-cochain witness.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisFixingSubgroupUnitCocycles](Extension/Dubon2026/GaloisFixingSubgroupUnitCocycles.lean).
+
+### Original continuous H2 on the genuine Galois fixing subgroup — 11 October 2026
+
+Original field restriction, followed by the genuine fixing-subgroup identification, is exactly literal subgroup restriction on original classes.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisFixingSubgroupUnitCohomology](Extension/Dubon2026/GaloisFixingSubgroupUnitCohomology.lean).
+
+### Actual continuous corestriction for the original finite field extension — 11 October 2026
+
+Actual continuous field restriction followed by the original coset corestriction equals multiplication by the exact original field degree.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [GaloisUnitContinuousCorestriction](Extension/Dubon2026/GaloisUnitContinuousCorestriction.lean).
+
+### Surjectivity of original continuous local H2 restriction — 11 October 2026
+
+Actual restriction on original continuous local H2 is surjective for every finite separable intermediate field. The preimage is obtained from the proved degree formula and divisibility of the genuine rational circle.
+
+This increment proves its displayed original-object statement. Full restriction and corestriction compatibility are not yet assembled at this intermediate increment. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousRestrictionSurjective](Extension/Dubon2026/LocalFieldContinuousRestrictionSurjective.lean).
+
+### The actual local invariant commutes with genuine continuous corestriction — 11 October 2026
+
+Corestriction defined by the genuine finite coset trace preserves the original rational invariant for every finite separable local extension. The proof uses the proved restriction degree formula and an explicit continuous restriction-corestriction homotopy on the actual cocycles.
+
+This increment proves its displayed original-object statement. Full restriction multiplies the original local invariant by every finite separable base degree; the independently constructed actual finite-coset corestriction preserves it. Class formation assembly, relative fundamental classes, reciprocity and arithmetic duality remain open. Modular Galois association, local deformation conditions, Selmer inputs, patching, Deligne and non-CM Sato-Tate remain open. DUB-01-16 accepted; DUB-17-20 OPEN.
+
+- [LocalFieldContinuousInvariantCorestriction](Extension/Dubon2026/LocalFieldContinuousInvariantCorestriction.lean).

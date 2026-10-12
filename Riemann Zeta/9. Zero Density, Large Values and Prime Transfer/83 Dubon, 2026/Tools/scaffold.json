@@ -1908,6 +1908,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/BaseChangedUnramifiedIntegralClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BaseChangedUnramifiedTensorImage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/BesselDecay.lean",
       "role": "Extension"
     },
@@ -2177,6 +2185,18 @@
     },
     {
       "path": "Extension/Dubon2026/CoefficientSubalgebraRetraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedCohomologyTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedCosetTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedCosetValues.lean",
       "role": "Extension"
     },
     {
@@ -2544,6 +2564,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousCohomologyCorestriction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCohomologyCup.lean",
       "role": "Extension"
     },
@@ -2573,6 +2597,10 @@
     },
     {
       "path": "Extension/Dubon2026/ContinuousConnectingLiftIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCosetTrace.lean",
       "role": "Extension"
     },
     {
@@ -2656,6 +2684,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousGaloisBaseChangeFiniteStage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousGaloisCharacterRadicals.lean",
       "role": "Extension"
     },
@@ -2676,7 +2708,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousGaloisRestrictionFiniteCompositum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGaloisRestrictionGeneralStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGaloisRestrictionRebasedStage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousGaloisTwoCocycleFiniteField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGaloisUnitBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGaloisUnitFiniteStageInjection.lean",
       "role": "Extension"
     },
     {
@@ -2833,6 +2885,22 @@
     },
     {
       "path": "Extension/Dubon2026/CoprimeWeightSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTraceCochains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTraceDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTraceRestrictionHomotopy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTransitionCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -3092,11 +3160,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CyclicIntegerEvenCohomology.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CyclicPositiveCohomologyVanishing.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/CyclicProjectionCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicTrivialIntegerCohomology.lean",
       "role": "Extension"
     },
     {
@@ -3293,6 +3369,10 @@
     },
     {
       "path": "Extension/Dubon2026/EulerCoefficientAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ExactCohomologyCardinality.lean",
       "role": "Extension"
     },
     {
@@ -3500,6 +3580,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteContinuousGaloisH2InflationInjection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCosetTrace.lean",
       "role": "Extension"
     },
@@ -3517,6 +3601,14 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteEigenPolynomialKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteExactModuleCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteExactModuleDivisibility.lean",
       "role": "Extension"
     },
     {
@@ -3604,7 +3696,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteGaloisCompositumOverIntermediate.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteGaloisEmbeddingStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisH2BaseChangeComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisH2DescentUnderBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisRebasedAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisStageExtendScalars.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisStageRebasedCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisUnitH2InflationInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisUnitH2InflationRestriction.lean",
       "role": "Extension"
     },
     {
@@ -3952,6 +4076,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteSecondCohomologyFromSylows.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSecondCohomologySylowDetection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteSeparatingDerivative.lean",
       "role": "Extension"
     },
@@ -4164,6 +4296,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisFixedFieldH2InflationInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisFixedFieldSecondCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisFixingSubgroupTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisFixingSubgroupUnitCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisFixingSubgroupUnitCohomology.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisGeneratorInvariantBaseEquiv.lean",
       "role": "Extension"
     },
@@ -4184,6 +4336,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisIntermediateFieldH2InflationInjection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisInvariantValuationNorm.lean",
       "role": "Extension"
     },
@@ -4196,11 +4352,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisNormalInvariantUnitCoefficients.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisRadicalClassIndependence.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/GaloisRootOfUnityRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisSubgroupUnitCohomology.lean",
       "role": "Extension"
     },
     {
@@ -4212,7 +4376,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisTowerKernelCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisTowerQuotientUnitCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitBaseChangeComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitBaseChangeContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitCarryBaseChange.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisUnitCarryCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitCharacterCarryPeriod.lean",
       "role": "Extension"
     },
     {
@@ -4221,6 +4413,10 @@
     },
     {
       "path": "Extension/Dubon2026/GaloisUnitCocycleFiniteDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitContinuousCorestriction.lean",
       "role": "Extension"
     },
     {
@@ -4237,6 +4433,10 @@
     },
     {
       "path": "Extension/Dubon2026/GaloisUnitFiniteStageTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitH2AlgebraCongruence.lean",
       "role": "Extension"
     },
     {
@@ -4257,6 +4457,10 @@
     },
     {
       "path": "Extension/Dubon2026/GaloisUnitPeriodTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitTowerRestriction.lean",
       "role": "Extension"
     },
     {
@@ -5176,6 +5380,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/InvariantCoefficientExactness.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/InvariantProjectionPreservation.lean",
       "role": "Extension"
     },
@@ -5460,6 +5668,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldArithmeticFrobeniusPowers.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldArithmeticFrobeniusRestriction.lean",
       "role": "Extension"
     },
@@ -5472,6 +5684,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldCarryInvariantBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCharacterCarryInvariant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldCompactLattice.lean",
       "role": "Extension"
     },
@@ -5480,7 +5700,67 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldContinuousH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldContinuousH2UnramifiedDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldContinuousInvariantCorestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldContinuousInvariantFiniteRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldContinuousInvariantNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldContinuousInvariantRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldContinuousRestrictionSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCyclicNormIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCyclicSecondCohomologyOrder.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldCyclicSmallUnitAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteContinuousH2Bound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteGaloisSecondCohomologyBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFrobeniusBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldGaloisUnitOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldH2CarryRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldH2UnramifiedCompositumDetection.lean",
       "role": "Extension"
     },
     {
@@ -5529,6 +5809,18 @@
     },
     {
       "path": "Extension/Dubon2026/LocalFieldIntegralSmallUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldInvariantBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldInvariantRestrictionGeneralStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldInvariantRestrictionOnStage.lean",
       "role": "Extension"
     },
     {
@@ -5584,6 +5876,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldRamificationDegree.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldResidueExtensionPolynomial.lean",
       "role": "Extension"
     },
@@ -5608,11 +5904,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldSpectralStructureUniqueness.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldUniformizerOrder.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldUnitOrderBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldUnitValuationSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldUnramifiedCompositum.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldUnramifiedExtensionExistence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldValuativeExtensionUniqueness.lean",
       "role": "Extension"
     },
     {
@@ -6236,6 +6552,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/NormalInvariantCoefficientSequence.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/NormalLatticeUnitCorrection.lean",
       "role": "Extension"
     },
@@ -6253,6 +6573,18 @@
     },
     {
       "path": "Extension/Dubon2026/NormalizedLocalPrincipalSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedLocalFieldCyclicCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedLocalFieldPGroupSecondCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedLocalFieldSecondCohomologyBound.lean",
       "role": "Extension"
     },
     {
@@ -6352,6 +6684,34 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalCohomologyGroupChangeNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedDimensionShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedFunctionCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedGlobalDimensionShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedInvariantAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedInvariantQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedSubgroupAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalContinuousTraceRepresentationDescent.lean",
       "role": "Extension"
     },
@@ -6396,7 +6756,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalGroupChangeCohomologyIsomorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGroupCohomologyReindex.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalMatrixTraceBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalSequenceCohomologyMaps.lean",
       "role": "Extension"
     },
     {
@@ -6457,6 +6829,14 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalResidueMaximalCotangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSecondCohomologyInflationRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSubgroupCosetCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -6569,6 +6949,10 @@
     },
     {
       "path": "Extension/Dubon2026/OutsideZeroDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PGroupCentralCyclicReduction.lean",
       "role": "Extension"
     },
     {
@@ -7824,6 +8208,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RepresentationCarryCharacterPeriod.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RepresentationCarryCocycle.lean",
       "role": "Extension"
     },
@@ -8088,6 +8476,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SecondCohomologyNormalSubgroupCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SecondCohomologySylowCardinality.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SecondDifferenceDerivative.lean",
       "role": "Extension"
     },
@@ -8200,6 +8596,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SpectralContinuousH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralContinuousH2InvariantEquiv.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SpectralDenominatorConvergence.lean",
       "role": "Extension"
     },
@@ -8232,6 +8636,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SpectralFiniteGaloisUnramifiedSup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralFiniteStageUnramifiedH2Detection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SpectralFormalEvaluation.lean",
       "role": "Extension"
     },
@@ -8240,7 +8652,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SpectralInvariantOriginalPeriod.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SpectralLocalConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralOriginalUnramifiedStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralRebasedUnramifiedSup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralUnramifiedIntegerExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralUnramifiedInvariantCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralUnramifiedStageInvariant.lean",
       "role": "Extension"
     },
     {
@@ -8345,6 +8781,10 @@
     },
     {
       "path": "Extension/Dubon2026/SturmTheorem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SubgroupCohomologyCoprimeDetection.lean",
       "role": "Extension"
     },
     {
@@ -8912,6 +9352,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ZModCarryPeriod.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ZeroCountHeight.lean",
       "role": "Extension"
     },
@@ -9200,7 +9644,19 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-original-all-finite-local-h2-bound-and-inflation-route-20261011.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-original-class-fiber-product-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-continuous-local-h2-invariant-route-20261011.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-cyclic-norm-index-and-primary-cohomology-detection-route-20261011.json",
       "role": "Tools"
     },
     {
@@ -9213,6 +9669,10 @@
     },
     {
       "path": "Tools/actual-original-local-field-fraction-and-unramified-existence-route-20261011.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-local-invariant-functoriality-route-20261011.json",
       "role": "Tools"
     },
     {
@@ -11583,7 +12043,118 @@
     "FinitePeriodicHomologyCardinality",
     "FiniteCyclicCohomologyCardinality",
     "StableSubgroupQuotientCohomology",
-    "LocalFieldIntegerUnitCohomologyOrders"
+    "LocalFieldIntegerUnitCohomologyOrders",
+    "LocalFieldGaloisUnitOrder",
+    "LocalFieldUnitValuationSequence",
+    "CyclicTrivialIntegerCohomology",
+    "FiniteExactModuleCardinality",
+    "CyclicIntegerEvenCohomology",
+    "ExactCohomologyCardinality",
+    "LocalFieldCyclicSecondCohomologyOrder",
+    "LocalFieldCyclicNormIndex",
+    "CoinducedCosetValues",
+    "CoinducedCosetTrace",
+    "CoinducedCohomologyTrace",
+    "SubgroupCohomologyCoprimeDetection",
+    "FiniteSecondCohomologySylowDetection",
+    "FiniteSecondCohomologyFromSylows",
+    "OriginalSubgroupCosetCoordinates",
+    "OriginalCoinducedFunctionCoefficients",
+    "OriginalCoinducedSubgroupAcyclicity",
+    "OriginalCoinducedDimensionShift",
+    "OriginalCoinducedInvariantQuotient",
+    "OriginalCoinducedInvariantAcyclicity",
+    "InvariantCoefficientExactness",
+    "NormalInvariantCoefficientSequence",
+    "OriginalCoinducedGlobalDimensionShift",
+    "FiniteExactModuleDivisibility",
+    "SecondCohomologyNormalSubgroupCardinality",
+    "OriginalGroupCohomologyReindex",
+    "GaloisSubgroupUnitCohomology",
+    "GaloisNormalInvariantUnitCoefficients",
+    "GaloisFixedFieldSecondCohomology",
+    "PGroupCentralCyclicReduction",
+    "NormedLocalFieldCyclicCohomology",
+    "NormedLocalFieldPGroupSecondCohomology",
+    "SecondCohomologySylowCardinality",
+    "NormedLocalFieldSecondCohomologyBound",
+    "LocalFieldFiniteGaloisSecondCohomologyBound",
+    "LocalFieldFiniteContinuousH2Bound",
+    "OriginalCohomologyGroupChangeNaturality",
+    "OriginalNormalSequenceCohomologyMaps",
+    "OriginalSecondCohomologyInflationRestriction",
+    "OriginalGroupChangeCohomologyIsomorphism",
+    "GaloisFixedFieldH2InflationInjection",
+    "GaloisIntermediateFieldH2InflationInjection",
+    "GaloisTowerKernelCohomology",
+    "GaloisTowerQuotientUnitCoefficients",
+    "FiniteGaloisUnitH2InflationInjection",
+    "FiniteContinuousGaloisH2InflationInjection",
+    "ContinuousGaloisUnitFiniteStageInjection",
+    "ZModCarryPeriod",
+    "RepresentationCarryCharacterPeriod",
+    "LocalFieldRamificationDegree",
+    "LocalFieldUnitOrderBaseChange",
+    "GaloisUnitBaseChange",
+    "LocalFieldArithmeticFrobeniusPowers",
+    "LocalFieldFrobeniusBaseChange",
+    "GaloisUnitCharacterCarryPeriod",
+    "LocalFieldCharacterCarryInvariant",
+    "GaloisUnitCarryBaseChange",
+    "LocalFieldCarryInvariantBaseChange",
+    "LocalFieldH2CarryRepresentatives",
+    "LocalFieldInvariantBaseChange",
+    "BaseChangedUnramifiedTensorImage",
+    "BaseChangedUnramifiedIntegralClosure",
+    "LocalFieldUnramifiedCompositum",
+    "SpectralUnramifiedIntegerExtension",
+    "SpectralOriginalUnramifiedStage",
+    "SpectralFiniteGaloisUnramifiedSup",
+    "GaloisUnitTowerRestriction",
+    "FiniteGaloisUnitH2InflationRestriction",
+    "FiniteGaloisH2BaseChangeComparison",
+    "FiniteGaloisH2DescentUnderBaseChange",
+    "LocalFieldH2UnramifiedCompositumDetection",
+    "SpectralFiniteStageUnramifiedH2Detection",
+    "LocalFieldContinuousH2UnramifiedDetection",
+    "SpectralUnramifiedStageInvariant",
+    "SpectralUnramifiedInvariantCompatibility",
+    "SpectralContinuousH2Invariant",
+    "SpectralContinuousH2InvariantEquiv",
+    "LocalFieldContinuousH2Invariant",
+    "LocalFieldValuativeExtensionUniqueness",
+    "LocalFieldSpectralStructureUniqueness",
+    "SpectralInvariantOriginalPeriod",
+    "LocalFieldContinuousInvariantNormalization",
+    "GaloisUnitBaseChangeContinuity",
+    "ContinuousGaloisUnitBaseChange",
+    "GaloisUnitBaseChangeComposition",
+    "ContinuousGaloisBaseChangeFiniteStage",
+    "FiniteGaloisStageExtendScalars",
+    "ContinuousGaloisRestrictionFiniteCompositum",
+    "FiniteGaloisRebasedAlgebra",
+    "GaloisUnitH2AlgebraCongruence",
+    "FiniteGaloisStageRebasedCohomology",
+    "ContinuousGaloisRestrictionRebasedStage",
+    "SpectralRebasedUnramifiedSup",
+    "LocalFieldInvariantRestrictionOnStage",
+    "LocalFieldContinuousInvariantRestriction",
+    "ContinuousGaloisRestrictionGeneralStage",
+    "FiniteGaloisCompositumOverIntermediate",
+    "LocalFieldInvariantRestrictionGeneralStage",
+    "LocalFieldContinuousInvariantFiniteRestriction",
+    "CosetTransitionCoordinates",
+    "CosetTraceCochains",
+    "CosetTraceDifferential",
+    "ContinuousCosetTrace",
+    "CosetTraceRestrictionHomotopy",
+    "ContinuousCohomologyCorestriction",
+    "GaloisFixingSubgroupTopology",
+    "GaloisFixingSubgroupUnitCocycles",
+    "GaloisFixingSubgroupUnitCohomology",
+    "GaloisUnitContinuousCorestriction",
+    "LocalFieldContinuousRestrictionSurjective",
+    "LocalFieldContinuousInvariantCorestriction"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",
