@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-11",
+  "sourceGate": "DUB-17; downstream DUB-18",
+  "status": "Full assembled verification and sequential foundation/paper verifiers PASS: actual exits 0 consumed, zero diagnostics, exact consumers, exhaustive dependency audit and all sixteen linters.",
+  "mathematics": "The actual local root H2 invariant is injective with exact n-torsion image and gives H2(K,mu_n) equivalent to Z/n, preserving the Kummer inclusion. The actual rational prime completion has its original valuation/topology and characteristic-zero Galois structures derived. The continuous H2 coefficient bridge preserves original cocycles and continuous coboundaries across coefficient rings. It identifies the actual prime-field cyclotomic H2 linearly with Z/q. Composing the original trace cup gives a scalar bilinear pairing, detects exactly the original H2 zero class, and commutes with actual global-to-prime restriction.",
+  "serves": "The finite H2 target and scalar local pairing are required for local duality. Local duality, still-open global duality and actual local conditions serve the Selmer bounds for patching/automorphy lifting. Together with the separately missing modular Galois association, purity/local compatibility and potential automorphy/descent/analytic results, this route serves the literal higher symmetric-power continuation premise in PrimitiveHigherContinuationReduction, hence DUB-17 and the modular source application DUB-18.",
+  "remaining": "Local H1 perfectness is OPEN; this batch does not prove nondegeneracy, general finite-module duality, a Selmer formula, automorphy, higher continuation or Sato-Tate. The scalar identification here covers coefficient prime fields; the required finite extension-field coefficients remain to be handled. DUB-17-20 remain OPEN.",
+  "reuse": "Reused actual Kummer H2 exactness, full local invariant, primitive-root action identity, and original arithmetic trace-cup restriction. QuotientAddGroup.congr gives the additive change-of-coefficients bridge. No general finite or inverse-limit reciprocity expansion was needed for this obligation.",
+  "next": "Prove nondegeneracy from the actual local arithmetic objects, beginning with the Kummer/cyclic-character pairing and connecting it to the original cohomology cup; then finite-module duality. Recheck existing results before each expansion.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/BSDseminar/refs/MilneADT.pdf",
+    "https://kskedlaya.org/cft/sec_tatethm.html"
+  ],
+  "modules": [
+    {
+      "batch": 2317,
+      "module": "LocalFieldRootH2Invariant",
+      "theorem": "localFieldRootH2Invariant_mem_range_iff",
+      "arguments": "K Ω n q",
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "LocalFieldRootH2Invariant",
+        "sourceSha256": "ae8c31d560c9efc9636c1c46ee2feeabfa218a7b411bbc52062341e02cd12b8b",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\LocalFieldRootH2Invariant.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\LocalFieldRootH2Invariant.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\LocalFieldRootH2Invariant.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\LocalFieldRootH2Invariant.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "cafef3abae91b167f697749d6dfe030fad70b63609f72dc4028feee9324598b8",
+        "scratchSetupSha256": "b3c1479ba59310e8422d4767605383f2045eda2046ca5cb1d1653f1982fc2fb5",
+        "log": "scratchLocalFieldRootH2Invariant-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "localFieldRootH2Invariant_injective",
+        "localFieldRootH2Invariant_mem_range_iff",
+        "localFieldRootH2Invariant_range",
+        "localFieldRootH2CyclicEquiv_invariant",
+        "localFieldRootH2_card"
+      ],
+      "productionSha256": "ae8c31d560c9efc9636c1c46ee2feeabfa218a7b411bbc52062341e02cd12b8b",
+      "status": "Actual original-object statement fully verified in the assembled 2321 scope."
+    },
+    {
+      "batch": 2318,
+      "module": "RationalPrimeRootH2Invariant",
+      "theorem": "rationalPrimeRootH2CyclicEquiv_invariant",
+      "arguments": "p hp n x",
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeRootH2Invariant",
+        "sourceSha256": "7b47f30568b1e0e5a2a9daa82ab454f3d22cd71337da17b99b9547838cbdb40d",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeRootH2Invariant.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeRootH2Invariant.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeRootH2Invariant.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeRootH2Invariant.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "cafef3abae91b167f697749d6dfe030fad70b63609f72dc4028feee9324598b8",
+        "scratchSetupSha256": "09d92125da6ff285073f31801049c62be339dfa53c21d5f3e620aadb37a7a499",
+        "log": "scratchRationalPrimeRootH2Invariant-e.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "rationalPrimeRootH2CyclicEquiv_invariant",
+        "rationalPrimeRootH2_card"
+      ],
+      "productionSha256": "ac49d7a8f28da5cb3077b59b6fe6e8ed836737240fa40afcace4f48832fa82b8",
+      "status": "Actual original-object statement fully verified in the assembled 2321 scope."
+    },
+    {
+      "batch": 2319,
+      "module": "ContinuousH2AdditiveCoefficientEquiv",
+      "theorem": "continuousH2AdditiveCoefficientEquiv_mk",
+      "arguments": "A B e he hei heρ hA hB c",
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "ContinuousH2AdditiveCoefficientEquiv",
+        "sourceSha256": "ad8b94ce367176594a2af1b38e731d9ac2eae7423067508241e22bed6b312ff4",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\ContinuousH2AdditiveCoefficientEquiv.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\ContinuousH2AdditiveCoefficientEquiv.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\ContinuousH2AdditiveCoefficientEquiv.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\ContinuousH2AdditiveCoefficientEquiv.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "cafef3abae91b167f697749d6dfe030fad70b63609f72dc4028feee9324598b8",
+        "scratchSetupSha256": "b8072fe1e747d4d2b2f6b13ab6084863a704ee50470fb71db03e0835cc907a85",
+        "log": "scratchContinuousH2AdditiveCoefficientEquiv-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "continuousCocycleTwoAdditiveEquiv_map_coboundaries",
+        "continuousH2AdditiveCoefficientEquiv_mk"
+      ],
+      "productionSha256": "ad8b94ce367176594a2af1b38e731d9ac2eae7423067508241e22bed6b312ff4",
+      "status": "Actual original-object statement fully verified in the assembled 2321 scope."
+    },
+    {
+      "batch": 2320,
+      "module": "RationalPrimeCyclotomicH2Scalar",
+      "theorem": "rationalPrimeCyclotomicH2ScalarEquiv_invariant",
+      "arguments": "p hp q x",
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeCyclotomicH2Scalar",
+        "sourceSha256": "64a4ee08a349840d6765b262d73b390b0ace11408049ea0893e6d25c606d475e",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeCyclotomicH2Scalar.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeCyclotomicH2Scalar.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeCyclotomicH2Scalar.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeCyclotomicH2Scalar.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "cafef3abae91b167f697749d6dfe030fad70b63609f72dc4028feee9324598b8",
+        "scratchSetupSha256": "99b3bf1b1b9ab8d8f2c7a84607be1e26eda4334e4fd5d0d877d331f06d6fe662",
+        "log": "scratchRationalPrimeCyclotomicH2Scalar-c.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "rationalPrimeCyclotomicRootCoefficientEquiv_equivariant",
+        "rationalPrimeCyclotomicH2ScalarEquiv_invariant"
+      ],
+      "productionSha256": "7e0b308daa91e37d79b00897963fc72efda0ca0c11a6a47b56d3df710503d483",
+      "status": "Actual original-object statement fully verified in the assembled 2321 scope."
+    },
+    {
+      "batch": 2321,
+      "module": "RationalPrimeTraceCupInvariant",
+      "theorem": "rationalArithmeticTraceH1ScalarCup_prime_restriction",
+      "arguments": "p hp q a hqa σ hσ x y",
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeTraceCupInvariant",
+        "sourceSha256": "18e02b0392ffc004f6d617a86dbe6fc0af6b81607b524de3e54301ccc9a23040",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeTraceCupInvariant.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeTraceCupInvariant.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeTraceCupInvariant.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeTraceCupInvariant.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "cafef3abae91b167f697749d6dfe030fad70b63609f72dc4028feee9324598b8",
+        "scratchSetupSha256": "138188c4cb97403b930db63b1428fb1b9bb13deac1e1509095fa3bd9f99cc899",
+        "log": "scratchRationalPrimeTraceCupInvariant-b.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "rationalPrimeTraceH1ScalarCup_eq_zero_iff",
+        "rationalArithmeticTraceH1ScalarCup_prime_restriction"
+      ],
+      "productionSha256": "18e02b0392ffc004f6d617a86dbe6fc0af6b81607b524de3e54301ccc9a23040",
+      "status": "Actual original-object statement fully verified in the assembled 2321 scope."
+    }
+  ],
+  "preflight": {
+    "kind": "isolated direct pinned Lean draft check only",
+    "module": "FutureLocalCupConsumers",
+    "sourceSha256": "e0a2a2e35d44a208d31454462e91e7c75436d68a301d1d6345c3c71daad40207",
+    "command": [
+      "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+      "-DautoImplicit=false",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureLocalCupConsumers.lean",
+      "-o",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureLocalCupConsumers.olean",
+      "-i",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureLocalCupConsumers.ilean",
+      "--setup",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureLocalCupConsumers.setup.json"
+    ],
+    "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+    "exit": 0,
+    "diagnostics": false,
+    "baselineSetupSha256": "cafef3abae91b167f697749d6dfe030fad70b63609f72dc4028feee9324598b8",
+    "scratchSetupSha256": "401c7c666f24dd5c6109fbee9eb16c642c5be0fe6399843718cdcafc0463756f",
+    "log": "scratchFutureLocalCupConsumers-c.log",
+    "logSha256": "9f8db7c8e6b41bc2f704568d639f95550da0bcfd458ccee6f9ab3c808ca55cd5",
+    "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+  },
+  "nativeFocused": {
+    "exit": 0,
+    "actualExitConsumed": true,
+    "log": "localCup2321-focus.log",
+    "sha256": "2b02c9c085511f7c848f6acfb9477df1d90c2fed6b46d962582cc6e357c8199e"
+  },
+  "scope": [
+    2321,
+    1688,
+    8930
+  ],
+  "instanceRepair": {
+    "reason": "The first assembled check exposed a rational-Algebra inference change from a global CharZero instance. The proof is now a theorem with local instance use; the actual IsGalois instance is separately derived. All original consumer statements are unchanged.",
+    "nativeExit": 0,
+    "diagnostics": false,
+    "log": "localCup2321-instance-repair-c.log",
+    "preflight": "localCupConsumers2321-repair-b.log",
+    "modifiedSources": {
+      "RationalPrimeRootH2Invariant": "ac49d7a8f28da5cb3077b59b6fe6e8ed836737240fa40afcace4f48832fa82b8",
+      "RationalPrimeCyclotomicH2Scalar": "7e0b308daa91e37d79b00897963fc72efda0ca0c11a6a47b56d3df710503d483"
+    },
+    "status": "Final focused, existing-consumer, all-linter, assembled and sequential checks PASS. Earlier failed and warning-producing attempts remain recorded; they are not accepted checks."
+  },
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261011_232847.log",
+    "paper": "logs/dubon-build-20261011-233213-642.log",
+    "exhaustive": 16837,
+    "explicit": 8930,
+    "linters": [
+      11292,
+      8075
+    ],
+    "assembledLog": "assembled2321-partition.log",
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true
+  },
+  "verificationPartition": {
+    "reason": "Lean 4.30.0 symbolFrequency export traverses all local theorem signatures in one default-budget MetaM computation; the large geometric regression reached that limit.",
+    "failedLog": "assembled2321-repair.log",
+    "failedLogSha256": "7de30d4fdedbd2565f9f19b773ec7fed017f796511060432af63c0b925dfaea7",
+    "originalSourceSha256": "c921bc5dbfeee97fe43c70bf0a3bd061fc40d103ef2922276354e3f1ef489a4e",
+    "preservation": "All 445 original sections retained byte-for-byte, in order, with every theorem name and proof; no exclusions or resource-limit increases.",
+    "partitions": [
+      {
+        "module": "GeometricSemanticRegression",
+        "exactConsumers": 100,
+        "sourceSha256": "bac762b5b4f0e4087cdccf4e1c83e32599527acd3785603b11dd841103153130"
+      },
+      {
+        "module": "ContinuousCohomologySemanticRegression",
+        "exactConsumers": 120,
+        "sourceSha256": "f4dab3fd12211b44982885fef2c5ebd8d60b968b36cdb2f0f37e309d4bffcc44"
+      },
+      {
+        "module": "LocalFieldSemanticRegression",
+        "exactConsumers": 110,
+        "sourceSha256": "d0e83c696ddb2d19e5c0c1be3e48fa83efa03fe5bcab67c29b3ea6a621b24b5c"
+      },
+      {
+        "module": "LocalInvariantSemanticRegression",
+        "exactConsumers": 115,
+        "sourceSha256": "b4b488a5db5189e45aa3367d548ef95932fa384098d4baf170a34025ea73016c"
+      }
+    ],
+    "verificationModules": [
+      "ArithmeticSemanticRegression",
+      "GeometricSemanticRegression",
+      "ContinuousCohomologySemanticRegression",
+      "LocalFieldSemanticRegression",
+      "LocalInvariantSemanticRegression",
+      "SemanticRegression",
+      "Audit"
+    ],
+    "status": "All six regressions, exhaustive audit, all sixteen linters and sequential verifiers PASS."
+  },
+  "additionalExplicitTheorem": "Dubon2026.rationalPrimeLocalField_charZero"
+}

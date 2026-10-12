@@ -83,12 +83,14 @@ def main():
         print(f'TEMPLATE TEST PASS: {case} (accepted={accepted})')
     print(f'TEMPLATE TESTS PASS: {len(cases)}; no Lean proof tested. Fixtures: {fixtures}')
     if original_config['mode'] != 'template-only':
-        for case in ['valid','missing-audit','missing-arithmetic-regression','missing-geometric-regression','missing-semantic-regression','missing-production','duplicate-production']:
+        required_regressions = ['ArithmeticSemanticRegression', 'GeometricSemanticRegression',
+                                'ContinuousCohomologySemanticRegression', 'LocalFieldSemanticRegression',
+                                'LocalInvariantSemanticRegression', 'LocalDualitySemanticRegression', 'SemanticRegression']
+        missing_cases = {'missing-' + name: name for name in required_regressions + ['Audit']}
+        for case in ['valid', *missing_cases, 'missing-production', 'duplicate-production']:
             config=deepcopy(original_config)
-            if case=='missing-audit':config['verificationModules']=['ArithmeticSemanticRegression','GeometricSemanticRegression','SemanticRegression']
-            elif case=='missing-arithmetic-regression':config['verificationModules']=['GeometricSemanticRegression','SemanticRegression','Audit']
-            elif case=='missing-geometric-regression':config['verificationModules']=['ArithmeticSemanticRegression','SemanticRegression','Audit']
-            elif case=='missing-semantic-regression':config['verificationModules']=['ArithmeticSemanticRegression','GeometricSemanticRegression','Audit']
+            if case in missing_cases:
+                config['verificationModules'].remove(missing_cases[case])
             elif case=='missing-production':config['productionModules']=[]
             elif case=='duplicate-production':config['productionModules']*=2
             accepted=True

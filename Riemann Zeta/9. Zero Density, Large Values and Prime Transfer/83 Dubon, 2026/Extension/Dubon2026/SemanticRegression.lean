@@ -1,6 +1,10 @@
 import Dubon2026
 import Dubon2026.ArithmeticSemanticRegression
 import Dubon2026.GeometricSemanticRegression
+import Dubon2026.ContinuousCohomologySemanticRegression
+import Dubon2026.LocalFieldSemanticRegression
+import Dubon2026.LocalInvariantSemanticRegression
+import Dubon2026.LocalDualitySemanticRegression
 
 /-! Exact unfolded consumers for the currently implemented source interfaces. -/
 

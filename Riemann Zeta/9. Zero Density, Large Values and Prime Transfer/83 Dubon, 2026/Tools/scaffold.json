@@ -168,6 +168,10 @@
       "role": "root"
     },
     {
+      "path": "Dubon Remaining Obligations.md",
+      "role": "documentation"
+    },
+    {
       "path": "Dubon Reproduction Manifest.md",
       "role": "root"
     },
@@ -1640,6 +1644,22 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticCoherentLocalH1Duality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCoherentLocalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCoherentTraceCup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCompatibleRootCoefficients.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticContinuousAdjointFinite.lean",
       "role": "Extension"
     },
@@ -1740,6 +1760,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticLocalNormalizationComparison.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticLocalResidueDerivations.lean",
       "role": "Extension"
     },
@@ -1796,6 +1820,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticRootCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRootH2Restriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRootLocalMap.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticSemanticRegression.lean",
       "role": "Extension"
     },
@@ -1849,6 +1885,14 @@
     },
     {
       "path": "Extension/Dubon2026/ArithmeticUnframedOrdinaryUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnitH2Restriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnitLocalMap.lean",
       "role": "Extension"
     },
     {
@@ -1913,6 +1957,18 @@
     },
     {
       "path": "Extension/Dubon2026/BaseChangedUnramifiedTensorImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BasePrimitiveRootCocycleCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BasePrimitiveRootCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BasePrimitiveRootCupSkew.lean",
       "role": "Extension"
     },
     {
@@ -2025,6 +2081,14 @@
     },
     {
       "path": "Extension/Dubon2026/CharacterCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CharacterDualCoefficientSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CharacterDualTrivialLine.lean",
       "role": "Extension"
     },
     {
@@ -2188,7 +2252,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CoinducedCharacterDuality.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CoinducedCohomologyTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedCosetReconstruction.lean",
       "role": "Extension"
     },
     {
@@ -2197,6 +2269,58 @@
     },
     {
       "path": "Extension/Dubon2026/CoinducedCosetValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedEvaluationTwoHomotopy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedHomogeneousCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedHomogeneousPrism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedInvariantEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroCochains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroCoordinateValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroCupCochains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroCupTerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroInvariantPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroOneHomotopy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedShapiroTwoHomotopy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CoinducedSubgroupCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -2508,6 +2632,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ConnectingCupAdjunctionBoundary.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousAdjointCoboundaryDimension.lean",
       "role": "Extension"
     },
@@ -2528,7 +2656,51 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousCharacterBidualCup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterBidualInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterDualCupGroupEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterDualCupNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterDualH2GroupEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterDualH2Naturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterDualH2Pairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterDualLowDegreeDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterH2DualInvariantPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCharacterH2EffacementDescent.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCocyclePeriodInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCocycleRestrictionFiniteness.lean",
       "role": "Extension"
     },
     {
@@ -2576,6 +2748,62 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousCohomologyRestrictionEffacement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCohomologySemanticRegression.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedCharacterDualH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedCharacterDualH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedCharacterDualShapiro.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedHomogeneousValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroCochains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroCup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroH1Equiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroH2Equiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoinducedShapiroTwoHomotopy.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCompactTrivialH1Vanishing.lean",
       "role": "Extension"
     },
@@ -2585,6 +2813,10 @@
     },
     {
       "path": "Extension/Dubon2026/ContinuousConnectingCocycleClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousConnectingCupAdjunction.lean",
       "role": "Extension"
     },
     {
@@ -2600,11 +2832,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousCorestrictionCoefficientMap.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCosetTrace.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousCupAdditiveCoefficientEquiv.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCupCoefficientCongr.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCupCorestriction.lean",
       "role": "Extension"
     },
     {
@@ -2648,6 +2892,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousFaithfulCyclicFactor.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousFiberProductHopfModels.lean",
       "role": "Extension"
     },
@@ -2657,6 +2905,22 @@
     },
     {
       "path": "Extension/Dubon2026/ContinuousFiniteBaseRootH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFiniteCharacterCarryInflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFiniteCharacterH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFiniteCoefficientEffacement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFiniteCoefficientSplitting.lean",
       "role": "Extension"
     },
     {
@@ -2752,11 +3016,79 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousH1AdditiveCoefficientEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousH1Corestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousH1CorestrictionIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousH1GroupReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousH2AdditiveCoefficientEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousH2AdditiveCorestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousH2GroupReindex.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousImageTopologicalGenerators.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousInducedCharacterDualAnnihilators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInducedCharacterDualH2Annihilators.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousInfiniteGaloisUnitH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingExactness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantH2Pairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousKummerCarryBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousKummerCarryClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousKummerCharacterPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousKummerH1Map.lean",
       "role": "Extension"
     },
     {
@@ -2788,6 +3120,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousRootCharacterCup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousRootH1Radicals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousRootRadicalCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousScalarH1Coordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousScalarH2Coordinates.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousStrictConjugacyGluing.lean",
       "role": "Extension"
     },
@@ -2808,7 +3160,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousTrivialCharacterDualH2Left.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousTrivialCharacterDualH2Right.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousTrivialCocycleCoordinates.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousTrivialCocycleFiniteQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousTrivialDualCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousTrivialDualityLeftReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousTrivialDualityRightReduction.lean",
       "role": "Extension"
     },
     {
@@ -2888,11 +3264,27 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/CosetCupProjectionHomotopy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetCupProjectionTerms.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/CosetTraceCochains.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/CosetTraceDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTraceOneCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTraceOneRestriction.lean",
       "role": "Extension"
     },
     {
@@ -3141,6 +3533,10 @@
     },
     {
       "path": "Extension/Dubon2026/CuspWeightedEnergy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicCharacterInvariantPairing.lean",
       "role": "Extension"
     },
     {
@@ -3548,6 +3944,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteCharacterDualActionContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCharacterDualCupAdjunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCharacterDualInvariantAdjunction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCharactersTopologicalGeneration.lean",
       "role": "Extension"
     },
@@ -3568,7 +3976,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteCoefficientFixingCocycles.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteCoefficientVectorSpanning.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCoinducedCoefficientAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCoinducedCoefficientQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCoinducedCoefficientUnit.lean",
       "role": "Extension"
     },
     {
@@ -3689,6 +4113,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteFreeNormLinePolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisCharacterCarryInflation.lean",
       "role": "Extension"
     },
     {
@@ -4076,6 +4504,34 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteScalarCharacterH2Coordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteScalarCharacterH2Normalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteScalarCharacterH2TraceNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteScalarTraceCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteScalarTraceCup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteScalarTraceDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteScalarTraceH2Pairing.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteSecondCohomologyFromSylows.lean",
       "role": "Extension"
     },
@@ -4304,6 +4760,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisFixingRootCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisFixingRootCup.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisFixingSubgroupTopology.lean",
       "role": "Extension"
     },
@@ -4357,6 +4821,22 @@
     },
     {
       "path": "Extension/Dubon2026/GaloisRadicalClassIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisRootContinuousCorestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisRootContinuousRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisRootCupCorestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisRootExponentPairing.lean",
       "role": "Extension"
     },
     {
@@ -5492,6 +5972,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/KummerCharacterZModModules.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LSeriesFiniteContourInterchange.lean",
       "role": "Extension"
     },
@@ -5636,6 +6120,34 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalCharacterDualH1Left.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCharacterDualH1Perfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCharacterDualH2Perfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCharacterDualH2Surjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCharacterDualScalarCup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCharacterH2DualInvariantLeft.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCharacterLineCorestrictionInjection.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalCoefficientFiberProduct.lean",
       "role": "Extension"
     },
@@ -5657,6 +6169,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalCoefficientRepresentationFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalDualitySemanticRegression.lean",
       "role": "Extension"
     },
     {
@@ -5740,11 +6256,67 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCoefficientH1.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldFiniteContinuousH2Bound.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicCarryInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicCharacterPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicNormPeriod.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicNormResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicReciprocityTower.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldFiniteGaloisSecondCohomologyBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteScalarCoefficientH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteStageCyclicH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteStageFundamentalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteStageFundamentalTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteStageInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteTrivialCocycles.lean",
       "role": "Extension"
     },
     {
@@ -5761,6 +6333,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalFieldH2UnramifiedCompositumDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldH2UnramifiedDescent.lean",
       "role": "Extension"
     },
     {
@@ -5824,6 +6400,30 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldKummerCharacterFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldKummerCharacterNondegeneracy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldKummerCoprimeDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldKummerCyclicNormCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldKummerH1Finite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldKummerRootNondegeneracy.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldMonicRootIntegerEquiv.lean",
       "role": "Extension"
     },
@@ -5876,6 +6476,22 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldPrimeKummerDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldPrimeKummerPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldPrimeKummerPerfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldPrimeKummerPerfectDescent.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldRamificationDegree.lean",
       "role": "Extension"
     },
@@ -5884,7 +6500,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldRootCorestrictionInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldRootH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldScalarUnitFiltration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSemanticRegression.lean",
       "role": "Extension"
     },
     {
@@ -5916,6 +6544,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldUnitPowerFinite.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldUnitValuationSequence.lean",
       "role": "Extension"
     },
@@ -5932,11 +6564,47 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFiniteInducedPerfectEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFiniteInducedPerfectEndpoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFiniteScalarCharacterDualAnnihilators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFiniteScalarCharacterDualH2Perfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFiniteScalarCharacterDualPerfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFixingCharacterDualAnnihilators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFixingCharacterDualH2Annihilators.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalGeometricFiniteFlatCohomology.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/LocalGeometricFiniteFlatLinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedCharacterDualH2Perfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInducedCharacterDualPerfect.lean",
       "role": "Extension"
     },
     {
@@ -5961,6 +6629,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalInducedUpperValue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalInvariantSemanticRegression.lean",
       "role": "Extension"
     },
     {
@@ -6000,7 +6672,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalScalarCharacterDualNondegeneracy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalScalarCharacterDualRight.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalSpectralLogDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalTrivialCharacterDualH2Perfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalTrivialCharacterDualLeft.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalTrivialCharacterDualPerfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalTrivialCharacterDualRight.lean",
       "role": "Extension"
     },
     {
@@ -6061,6 +6757,14 @@
     },
     {
       "path": "Extension/Dubon2026/LogarithmicScale.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LowDegreeDualityAnnihilatorDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LowDegreeH2AnnihilatorDescent.lean",
       "role": "Extension"
     },
     {
@@ -6576,6 +7280,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/NormedFieldUnitPowerOpen.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/NormedLocalFieldCyclicCohomology.lean",
       "role": "Extension"
     },
@@ -6721,6 +7429,10 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalCotangentCohomologyClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclotomicPrimeStage.lean",
       "role": "Extension"
     },
     {
@@ -7776,11 +8488,59 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalPrimeCharacterDualH1Perfect.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalPrimeCyclotomicCharacter.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicH2Scalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeFiniteScalarCharacterDual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeFiniteScalarCyclotomicH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeFiniteScalarH2Duality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeFiniteScalarTraceDuality.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalPrimePlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimePrimitiveRootCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeRootH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTraceCupInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTraceCupPerfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTraceZeroH1Finite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTrivialCharacterDualPerfect.lean",
       "role": "Extension"
     },
     {
@@ -8432,6 +9192,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ScalarCharacterDualKummerCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarCharacterDualKummerCohomology.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ScalarLatticeFiltration.lean",
       "role": "Extension"
     },
@@ -8640,6 +9408,22 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/SpectralFiniteStageCyclicH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralFiniteStageFundamentalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralFiniteStageFundamentalTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralFiniteStageInvariantRange.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/SpectralFiniteStageUnramifiedH2Detection.lean",
       "role": "Extension"
     },
@@ -8673,6 +9457,10 @@
     },
     {
       "path": "Extension/Dubon2026/SpectralUnramifiedInvariantCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SpectralUnramifiedStageDescent.lean",
       "role": "Extension"
     },
     {
@@ -8960,7 +9748,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/TraceZeroCharacterDualH1Comparison.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/TraceZeroContinuousCharacterPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TraceZeroNormalizedH1Perfect.lean",
       "role": "Extension"
     },
     {
@@ -8981,6 +9777,10 @@
     },
     {
       "path": "Extension/Dubon2026/TrigammaIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TrivialCharacterDualCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -9632,11 +10432,27 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-kummer-cup-prime-perfect-pairing-route-20261011.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-kummer-cyclotomic-descent-route-20261012.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-literal-frobenius-cocycle-period-invariant-and-inflation-route-20261011.json",
       "role": "Tools"
     },
     {
+      "path": "Tools/actual-local-duality-inputs-route-20261012.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/actual-local-geometric-linearity-and-arithmetic-localization-route-20261010.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-local-root-h2-and-arithmetic-cup-route-20261011.json",
       "role": "Tools"
     },
     {
@@ -9673,6 +10489,10 @@
     },
     {
       "path": "Tools/actual-original-local-invariant-functoriality-route-20261011.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/actual-original-relative-fundamental-and-cyclic-reciprocity-route-20261011.json",
       "role": "Tools"
     },
     {
@@ -9724,7 +10544,15 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/arithmetic-root-coherence-route-20261012.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/author_code_observation.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/continuous-duality-comparison-route-20261012.json",
       "role": "Tools"
     },
     {
@@ -9732,7 +10560,23 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/finite-field-trace-duality-route-20261012.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/finite-local-h1-route-20261012.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/induced-split-duality-route-20261012.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/inspect_source_archive.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/local-h0-h2-duality-route-20261012.json",
       "role": "Tools"
     },
     {
@@ -12154,11 +12998,210 @@
     "GaloisFixingSubgroupUnitCohomology",
     "GaloisUnitContinuousCorestriction",
     "LocalFieldContinuousRestrictionSurjective",
-    "LocalFieldContinuousInvariantCorestriction"
+    "LocalFieldContinuousInvariantCorestriction",
+    "LocalFieldH2UnramifiedDescent",
+    "SpectralUnramifiedStageDescent",
+    "SpectralFiniteStageInvariantRange",
+    "SpectralFiniteStageCyclicH2",
+    "SpectralFiniteStageFundamentalClass",
+    "SpectralFiniteStageFundamentalTower",
+    "LocalFieldFiniteStageInvariant",
+    "LocalFieldFiniteStageCyclicH2",
+    "LocalFieldFiniteStageFundamentalClass",
+    "LocalFieldFiniteStageFundamentalTower",
+    "LocalFieldFiniteCyclicNormPeriod",
+    "LocalFieldFiniteCyclicNormResidue",
+    "LocalFieldFiniteCyclicCarryInvariant",
+    "CyclicCharacterInvariantPairing",
+    "LocalFieldFiniteCyclicCharacterPairing",
+    "LocalFieldFiniteCyclicReciprocity",
+    "LocalFieldFiniteCyclicFrobenius",
+    "FiniteGaloisCharacterCarryInflation",
+    "LocalFieldFiniteCyclicReciprocityTower",
+    "LocalFieldRootH2Invariant",
+    "RationalPrimeRootH2Invariant",
+    "ContinuousH2AdditiveCoefficientEquiv",
+    "RationalPrimeCyclotomicH2Scalar",
+    "RationalPrimeTraceCupInvariant",
+    "ContinuousRootH1Radicals",
+    "ContinuousRootRadicalCocycle",
+    "ContinuousKummerH1Map",
+    "GaloisRootExponentPairing",
+    "ContinuousRootCharacterCup",
+    "ContinuousKummerCarryBoundary",
+    "ContinuousKummerCarryClass",
+    "ContinuousFiniteCharacterCarryInflation",
+    "LocalFieldKummerCyclicNormCriterion",
+    "ContinuousFaithfulCyclicFactor",
+    "LocalFieldKummerCharacterNondegeneracy",
+    "BasePrimitiveRootCoefficients",
+    "BasePrimitiveRootCocycleCharacter",
+    "BasePrimitiveRootCupSkew",
+    "LocalFieldKummerRootNondegeneracy",
+    "NormedFieldUnitPowerOpen",
+    "LocalFieldUnitPowerFinite",
+    "LocalFieldKummerH1Finite",
+    "ContinuousKummerCharacterPairing",
+    "LocalFieldKummerCharacterFinite",
+    "KummerCharacterZModModules",
+    "LocalFieldPrimeKummerPairing",
+    "LocalFieldPrimeKummerPerfect",
+    "CosetTraceOneCocycles",
+    "ContinuousH1Corestriction",
+    "CosetTraceOneRestriction",
+    "ContinuousH1CorestrictionIndex",
+    "CosetCupProjectionTerms",
+    "CosetCupProjectionHomotopy",
+    "ContinuousCupCorestriction",
+    "ContinuousCorestrictionCoefficientMap",
+    "OriginalCyclotomicPrimeStage",
+    "ContinuousH1GroupReindex",
+    "ContinuousH2GroupReindex",
+    "GaloisFixingRootCohomology",
+    "GaloisRootContinuousRestriction",
+    "GaloisRootContinuousCorestriction",
+    "LocalFieldRootCorestrictionInjection",
+    "ContinuousFiniteCharacterH1",
+    "GaloisFixingRootCup",
+    "GaloisRootCupCorestriction",
+    "LocalFieldKummerCoprimeDescent",
+    "LocalFieldPrimeKummerDescent",
+    "LocalFieldPrimeKummerPerfectDescent",
+    "ContinuousTrivialCocycleCoordinates",
+    "LocalFieldFiniteTrivialCocycles",
+    "ContinuousCocycleRestrictionFiniteness",
+    "ContinuousFiniteCoefficientSplitting",
+    "FiniteCoefficientFixingCocycles",
+    "LocalFieldFiniteCoefficientH1",
+    "LocalFieldFiniteScalarCoefficientH1",
+    "RationalPrimeTraceZeroH1Finite",
+    "ContinuousInvariantConnectingCocycle",
+    "ContinuousInvariantConnectingMap",
+    "ConnectingCupAdjunctionBoundary",
+    "ContinuousInvariantH2Pairing",
+    "ContinuousConnectingCupAdjunction",
+    "CharacterDualCoefficientSequence",
+    "FiniteCharacterDualActionContinuity",
+    "ContinuousInvariantConnectingExactness",
+    "FiniteCharacterDualCupAdjunction",
+    "FiniteCoinducedCoefficientAction",
+    "CoinducedCosetReconstruction",
+    "CoinducedShapiroCochains",
+    "CoinducedShapiroDifferentials",
+    "ContinuousCoinducedShapiroCochains",
+    "ContinuousCoinducedShapiroMaps",
+    "ContinuousCoinducedEvaluation",
+    "CoinducedSubgroupCoordinates",
+    "CoinducedHomogeneousCocycles",
+    "CoinducedHomogeneousPrism",
+    "CoinducedShapiroCoordinateValues",
+    "CoinducedShapiroOneHomotopy",
+    "ContinuousCoinducedShapiroH1Equiv",
+    "ContinuousCoinducedHomogeneousValues",
+    "CoinducedShapiroTwoHomotopy",
+    "ContinuousCoinducedShapiroTwoHomotopy",
+    "CoinducedEvaluationTwoHomotopy",
+    "ContinuousCoinducedShapiroH2Equiv",
+    "CoinducedCharacterDuality",
+    "CoinducedShapiroCupTerms",
+    "CoinducedShapiroCupCochains",
+    "ContinuousCoinducedShapiroCup",
+    "FiniteCoinducedCoefficientUnit",
+    "ContinuousCohomologyRestrictionEffacement",
+    "ContinuousFiniteCoefficientEffacement",
+    "FiniteCoinducedCoefficientQuotient",
+    "ContinuousScalarH1Coordinates",
+    "ContinuousCharacterDualCupNaturality",
+    "ContinuousTrivialDualityLeftReduction",
+    "ContinuousH1AdditiveCoefficientEquiv",
+    "ContinuousCupAdditiveCoefficientEquiv",
+    "CharacterDualTrivialLine",
+    "ScalarCharacterDualKummerCoefficients",
+    "ScalarCharacterDualKummerCohomology",
+    "LocalScalarCharacterDualNondegeneracy",
+    "LocalTrivialCharacterDualLeft",
+    "LocalScalarCharacterDualRight",
+    "TrivialCharacterDualCoordinates",
+    "ContinuousTrivialDualCoordinates",
+    "ContinuousTrivialDualityRightReduction",
+    "LocalTrivialCharacterDualRight",
+    "LocalCharacterDualScalarCup",
+    "LocalTrivialCharacterDualPerfect",
+    "RationalPrimeTrivialCharacterDualPerfect",
+    "ContinuousCoinducedCharacterDualH1",
+    "ContinuousCoinducedCharacterDualShapiro",
+    "ContinuousInducedCharacterDualAnnihilators",
+    "ContinuousH2AdditiveCorestriction",
+    "LocalCharacterLineCorestrictionInjection",
+    "ContinuousCharacterDualCupGroupEquiv",
+    "LocalFixingCharacterDualAnnihilators",
+    "LocalInducedCharacterDualPerfect",
+    "LocalFiniteInducedPerfectEmbedding",
+    "ContinuousScalarH2Coordinates",
+    "ContinuousCharacterDualH2Pairing",
+    "ContinuousTrivialCharacterDualH2Left",
+    "ContinuousTrivialCharacterDualH2Right",
+    "LocalTrivialCharacterDualH2Perfect",
+    "CoinducedInvariantEquiv",
+    "CoinducedShapiroInvariantPairing",
+    "ContinuousCoinducedCharacterDualH2",
+    "ContinuousCoinducedShapiroH2Invariant",
+    "ContinuousCharacterDualH2GroupEquiv",
+    "LocalFixingCharacterDualH2Annihilators",
+    "ContinuousInducedCharacterDualH2Annihilators",
+    "LocalInducedCharacterDualH2Perfect",
+    "LocalFiniteInducedPerfectEndpoints",
+    "ContinuousCharacterDualH2Naturality",
+    "LocalCharacterDualH2Surjectivity",
+    "LowDegreeDualityAnnihilatorDescent",
+    "FiniteCharacterDualInvariantAdjunction",
+    "ContinuousCharacterDualLowDegreeDescent",
+    "LocalCharacterDualH1Left",
+    "ContinuousCharacterBidualCup",
+    "LocalCharacterDualH1Perfect",
+    "RationalPrimeCharacterDualH1Perfect",
+    "FiniteScalarTraceDuality",
+    "FiniteScalarTraceCohomology",
+    "FiniteScalarTraceCup",
+    "LocalFiniteScalarCharacterDualAnnihilators",
+    "FiniteScalarCharacterH2Coordinates",
+    "FiniteScalarCharacterH2Normalization",
+    "FiniteScalarCharacterH2TraceNormalization",
+    "LocalFiniteScalarCharacterDualPerfect",
+    "RationalPrimeFiniteScalarCyclotomicH2",
+    "TraceZeroCharacterDualH1Comparison",
+    "RationalPrimeFiniteScalarCharacterDual",
+    "TraceZeroNormalizedH1Perfect",
+    "RationalPrimeFiniteScalarTraceDuality",
+    "RationalPrimeTraceCupPerfect",
+    "LowDegreeH2AnnihilatorDescent",
+    "ContinuousCharacterH2DualInvariantPairing",
+    "ContinuousCharacterH2EffacementDescent",
+    "LocalCharacterH2DualInvariantLeft",
+    "ContinuousCharacterBidualInvariant",
+    "LocalCharacterDualH2Perfect",
+    "FiniteScalarTraceH2Pairing",
+    "LocalFiniteScalarCharacterDualH2Perfect",
+    "RationalPrimeFiniteScalarH2Duality",
+    "RationalPrimePrimitiveRootCoefficients",
+    "ArithmeticCompatibleRootCoefficients",
+    "ArithmeticRootCoefficients",
+    "ArithmeticRootLocalMap",
+    "ArithmeticRootH2Restriction",
+    "ArithmeticUnitLocalMap",
+    "ArithmeticUnitH2Restriction",
+    "ArithmeticCoherentLocalInvariant",
+    "ArithmeticLocalNormalizationComparison",
+    "ArithmeticCoherentLocalH1Duality",
+    "ArithmeticCoherentTraceCup"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",
     "GeometricSemanticRegression",
+    "ContinuousCohomologySemanticRegression",
+    "LocalFieldSemanticRegression",
+    "LocalInvariantSemanticRegression",
+    "LocalDualitySemanticRegression",
     "SemanticRegression",
     "Audit"
   ]
