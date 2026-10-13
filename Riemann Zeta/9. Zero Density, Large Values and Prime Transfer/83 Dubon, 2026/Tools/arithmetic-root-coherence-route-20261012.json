@@ -1,7 +1,7 @@
 {
   "date": "2026-10-12",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "status": "Focused production and all eleven exact consumers/all sixteen linters PASS; full assembled and sequential verification pending.",
+  "status": "Assembled verification and sequential foundation/paper verifiers PASS: actual exits0 consumed, zero diagnostics, all seven regressions, dependency audits and all sixteen linters.",
   "mathematics": "One proved primitive root in the original unramified arithmetic extension supplies the genuine global coefficient identification and its images under the exact arithmetic local embeddings. Original root and unit maps intertwine arithmetic restriction and commute with Kummer inclusions on continuous H2. Coherent local scalar coordinates evaluate restricted global classes by the original unit-cohomology invariants. Their exact nonzero scalar comparison with the earlier independent local normalization is proved. Existing local H1 duality remains perfect for the coherent choice. An exact consumer of the existing arithmetic trace-cup restriction identifies the invariant of the actual restricted deformation classes with the same original global Kummer cup class.",
   "discharged": "One proved primitive root in the original unramified arithmetic extension supplies the genuine global coefficient identification and its images under the exact arithmetic local embeddings. Original root and unit maps intertwine arithmetic restriction and commute with Kummer inclusions on continuous H2. Coherent local scalar coordinates evaluate restricted global classes by the original unit-cohomology invariants. Their exact nonzero scalar comparison with the earlier independent local normalization is proved. Existing local H1 duality remains perfect for the coherent choice. An exact consumer of the existing arithmetic trace-cup restriction identifies the invariant of the actual restricted deformation classes with the same original global Kummer cup class.",
   "exactEndpoint": [
@@ -17,7 +17,7 @@
   "reuse": "Reused the existing primitive-root inclusion in the arithmetic extension, actual arithmetic embeddings and character restriction, continuous coefficient equivalences and cohomology restriction, Kummer inclusion, local invariant, full local H1 duality and original arithmetic trace-cup restriction. No new general class-formation or unrelated reciprocity infrastructure was introduced.",
   "routeAdjustment": "The global duality route needs a coherent coefficient normalization before summing local invariants. Independent local primitive-root choices give valid local perfectness but cannot be silently identified with a single global root. Explicit original-object commuting squares and the derived comparison scalar remove that ambiguity without changing any existing local pairing.",
   "next": "Prove finite support of the original local-invariant family and its global sum-zero identity, then the genuine global duality exactness with the actual local conditions. For support control, reuse the original finite-stage descent and cyclic period-inflation formula: prove finite cyclic period detection and the q-fold inflation vanishing, then connect those to actual unramified local quotients and arithmetic restriction away from the exceptional primes. Those intervening arithmetic edges remain to be proved; a finite-group lemma alone does not close support or reciprocity. Preserve the required archimedean contribution.",
-  "draftRepairs": "Preserved the original algebra, module and discrete coefficient structures with explicit local instances. Replaced broad dependent rewrites with typed pointwise equalities. One slow normalization simplification was canceled, its actual exit1 consumed, and the proof was replaced by the direct linear-map identity; no heartbeat, recursion, source-contract or proof-policy setting changed. Added the required documentation for eight original coefficient instances and their copied consumer instances; the complete eleven-module preflight then passed.",
+  "draftRepairs": "Preserved the original algebra, module and discrete coefficient structures with explicit local instances. Replaced broad dependent rewrites with typed pointwise equalities. One slow normalization simplification was canceled, its actual exit1 consumed, and the proof was replaced by the direct linear-map identity; no heartbeat, recursion, source-contract or proof-policy setting changed. Added the required documentation for eight original coefficient instances and their copied consumer instances; the complete eleven-module preflight then passed. The first assembled run rejected copied local field instances outside a noncomputable section in the retained regression; that run was canceled with actual exit1 consumed. A bounded noncomputable section repaired the retained source without changing any theorem, resource setting or verification coverage. A stale registration-count guard was corrected to the observed9413 prior registrations and the interrupted registration was resumed after validating all already-written original imports and consumers.",
   "primarySources": [
     "https://math.stanford.edu/~conrad/BSDseminar/refs/MilneADT.pdf",
     "https://arxiv.org/html/0912.1054v2"
@@ -93,7 +93,9 @@
         "log": "scratchRationalPrimePrimitiveRootCoefficients-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "0f7e4e17d8a357946a6c06fe8174d73c07a5907cd46a34c16575b298b2dd0469",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticCompatibleRootCoefficients",
@@ -158,7 +160,9 @@
         "log": "scratchArithmeticCompatibleRootCoefficients-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "bff0e1ca2e5b4792198fa9b1c7fd01911e6bbc061a901c20cfc3604195c6a8c5",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticRootCoefficients",
@@ -221,7 +225,9 @@
         "log": "scratchArithmeticRootCoefficients-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "35aa5f0130f947034ede2f025a86e784bdc5461275fc2d6c97ad764f1542201a",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticRootLocalMap",
@@ -284,7 +290,9 @@
         "log": "scratchArithmeticRootLocalMap-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "79986bb060ccab3531b6cc6cde154a8a723a7c6bcfd9d3efcc4b4949fef04306",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticRootH2Restriction",
@@ -347,7 +355,9 @@
         "log": "scratchArithmeticRootH2Restriction-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "c45d84f715df177119ab1de2325b7e493a724f43b57d3c8f87e0ad35c19596a8",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticUnitLocalMap",
@@ -410,7 +420,9 @@
         "log": "scratchArithmeticUnitLocalMap-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "a7325bca22b3864ed0ac0ab886e748d160dc20107324422d0675f1f69f7e826e",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticUnitH2Restriction",
@@ -473,7 +485,9 @@
         "log": "scratchArithmeticUnitH2Restriction-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "4ff7624b08bc86c7a5f6851c92fcafcd51fa76c9e7560459a25dd953ea6bdc44",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticCoherentLocalInvariant",
@@ -535,7 +549,9 @@
         "log": "scratchArithmeticCoherentLocalInvariant-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "24185a15d136e84dd4901f2804041d1ede68bf78430412c4200d16bea26e99f2",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticLocalNormalizationComparison",
@@ -598,7 +614,9 @@
         "log": "scratchArithmeticLocalNormalizationComparison-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "2b1db4c139b4ed16e78c9a280a12a0566264b60e8f70f32e36cffbd26d64954c",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticCoherentLocalH1Duality",
@@ -660,7 +678,9 @@
         "log": "scratchArithmeticCoherentLocalH1Duality-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "d240a00be338631f0a2665520db07ec518e71eb23ee220cf53f84010d1fd5a61",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     },
     {
       "module": "ArithmeticCoherentTraceCup",
@@ -722,7 +742,9 @@
         "log": "scratchArithmeticCoherentTraceCup-doc.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "2f297f2faf887c4ae03561f083c7dc10ff3214dccb7a2099af2eb05e8d7f458d",
+      "status": "Fully verified in the assembled2492 scope; exact original-object consumer retained."
     }
   ],
   "preflight": {
@@ -769,5 +791,24 @@
     2492,
     1859,
     9446
-  ]
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261012_084023.log",
+    "paper": "logs/dubon-build-20261012-084830-248.log",
+    "assembledLog": "assembled2492.log",
+    "exhaustive": 18279,
+    "explicit": 9446,
+    "exactConsumers": 1859,
+    "linters": [
+      12016,
+      8985
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
 }
