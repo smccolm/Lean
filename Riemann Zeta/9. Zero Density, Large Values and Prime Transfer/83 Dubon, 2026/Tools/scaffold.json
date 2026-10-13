@@ -4460,6 +4460,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/FiniteIndependentAbsoluteValueApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteIndexEndomorphismKernel.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/FiniteIndexHerbrandComparison.lean",
       "role": "Extension"
     },
@@ -6452,6 +6460,14 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldBallIntegerCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldBallScalarQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldCarryInvariantBaseChange.lean",
       "role": "Extension"
     },
@@ -6632,6 +6648,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldIntegerUnitPowerIndex.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldIntegralNormalLattice.lean",
       "role": "Extension"
     },
@@ -6732,6 +6752,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldPowerIndexScalar.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldPrimeKummerDescent.lean",
       "role": "Extension"
     },
@@ -6793,6 +6817,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalFieldUniformizerOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldUniformizerProduct.lean",
       "role": "Extension"
     },
     {
@@ -6885,6 +6913,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalInducedUpperValue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalIntegerUnitFixedUniformizerNorm.lean",
       "role": "Extension"
     },
     {
@@ -7540,6 +7572,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/NormedFieldPowerLocalScaling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedFieldPowerSmallBall.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedFieldSmallUnitBalls.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedFieldSmallUnitGradedQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormedFieldSmallUnitPowerImage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/NormedFieldUnitPowerOpen.lean",
       "role": "Extension"
     },
@@ -7728,11 +7780,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalAdeleBaseChange.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalAdicBaseChangeClosed.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/OriginalAdicBaseChangeMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicBaseChangeNaturality.lean",
       "role": "Extension"
     },
     {
@@ -7752,6 +7812,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalAdicDecompositionAction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalAdicFieldRestriction.lean",
       "role": "Extension"
     },
@@ -7765,6 +7829,22 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalAdicLocalQuotientData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicNormGaloisProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicNormIntegralPreimage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicScalarIdealPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicScalarQuotientCardinality.lean",
       "role": "Extension"
     },
     {
@@ -7856,6 +7936,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalCoordinatePrimeSet.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalCotangentCohomologyClass.lean",
       "role": "Extension"
     },
@@ -7868,11 +7952,31 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalDecompositionRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalDecompositionTower.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalDeterminantFiniteFlatCotangentImage.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalDistinctCoordinatePrimes.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalDualNumberFramedEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteAdeleBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteAdeleFixedDescent.lean",
       "role": "Extension"
     },
     {
@@ -7889,6 +7993,22 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalFinitePlaceWeakApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFinitePowerIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFinitePowerIndexProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFinitePowerQuotientFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFinitePrimeOrbits.lean",
       "role": "Extension"
     },
     {
@@ -7928,6 +8048,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalIdeleBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleClassBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleClassBaseInvariants.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalIdeleClassHerbrand.lean",
       "role": "Extension"
     },
@@ -7936,7 +8068,99 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalIdeleClassNativeNormQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleClassNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalIdeleClassNormQuotientTorsion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleFiniteOrbitNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleInfiniteOrbitNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleLocalNormMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleLocalUnitAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNormFiniteComponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNormFiniteLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNormInfiniteLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNormLocalGlobal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNormSingleFiniteOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleNormSingleInfiniteOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdelePowerLocalNormContainment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdelePowerLocalUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfiniteAdeleBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfiniteAdeleFixedDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfiniteCompletionFixedDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfiniteDecompositionAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfiniteNormGaloisProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfinitePowerIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfinitePowerIndexProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInfiniteUnitPowerRoots.lean",
       "role": "Extension"
     },
     {
@@ -7953,6 +8177,10 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalKummerClassRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalKummerCoordinateLocalization.lean",
       "role": "Extension"
     },
     {
@@ -7976,6 +8204,26 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalLocalKummerFixedRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalNormDegreePowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalNormSplitPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalNormUnitProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalNormUnramifiedUnits.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalLocalizedIntegerLocalMap.lean",
       "role": "Extension"
     },
@@ -7984,7 +8232,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalMixedPlaceApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormRamificationSupport.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalNormalSequenceCohomologyMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPowerLocalUnitNormQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPowerQuotientFiniteness.lean",
       "role": "Extension"
     },
     {
@@ -8005,6 +8269,30 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalPresentedTraceLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeDegreeFullDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeTowerSelection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrincipalApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrincipalPowerApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrincipalPowerExactSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrincipalPowerIndex.lean",
       "role": "Extension"
     },
     {
@@ -8064,11 +8352,39 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalSUnitKummerPrimeCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSUnitPowerLocalQuotient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalSecondCohomologyInflationRestriction.lean",
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalSplitOutsideNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalSubgroupCosetCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportedClassPowerMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportedPowerClassMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportedPowerIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportedPowerQuotient.lean",
       "role": "Extension"
     },
     {
@@ -8165,6 +8481,10 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalUnframedOrdinaryQuotientEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnramifiedDecompositionCyclic.lean",
       "role": "Extension"
     },
     {
@@ -8368,6 +8688,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimeCoordinateGenerators.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimeCountAsymptotics.lean",
       "role": "Extension"
     },
@@ -8385,6 +8709,10 @@
     },
     {
       "path": "Extension/Dubon2026/PrimeEmpiricalIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeExponentCoordinates.lean",
       "role": "Extension"
     },
     {
@@ -11452,11 +11780,31 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/original-base-norm-route-20261012.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/original-idele-herbrand-route-20261012.json",
       "role": "Tools"
     },
     {
+      "path": "Tools/original-local-norm-route-20261012.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/original-norm-descent-route-20261012.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-power-index-route-20261012.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-power-quotient-route-20261012.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-prime-selection-route-20261012.json",
       "role": "Tools"
     },
     {
@@ -14284,7 +14632,89 @@
     "OriginalFinitePlaceIndependence",
     "OriginalFinitePlaceWeakApproximation",
     "OriginalCompletionOrbitTrace",
-    "OriginalAdicFixedFieldDescent"
+    "OriginalAdicFixedFieldDescent",
+    "OriginalFinitePrimeOrbits",
+    "OriginalAdicBaseChangeNaturality",
+    "OriginalFiniteAdeleBaseChange",
+    "OriginalFiniteAdeleFixedDescent",
+    "OriginalInfiniteAdeleBaseChange",
+    "OriginalInfiniteAdeleFixedDescent",
+    "OriginalAdeleBaseChange",
+    "OriginalIdeleBaseChange",
+    "OriginalIdeleClassBaseChange",
+    "OriginalIdeleNorm",
+    "OriginalIdeleClassNorm",
+    "OriginalIdeleClassBaseInvariants",
+    "OriginalIdeleClassNativeNormQuotient",
+    "OriginalAdicDecompositionAction",
+    "OriginalAdicNormGaloisProduct",
+    "OriginalIdeleNormFiniteComponent",
+    "OriginalIdeleFiniteOrbitNorm",
+    "OriginalIdeleNormFiniteLocal",
+    "OriginalInfiniteCompletionFixedDescent",
+    "OriginalInfiniteDecompositionAction",
+    "OriginalInfiniteNormGaloisProduct",
+    "OriginalIdeleInfiniteOrbitNorm",
+    "OriginalIdeleNormInfiniteLocal",
+    "OriginalAdicNormIntegralPreimage",
+    "OriginalIdeleLocalNormMaps",
+    "OriginalIdeleLocalUnitAssembly",
+    "OriginalLocalNormUnitProducts",
+    "OriginalIdeleNormSingleFiniteOrbit",
+    "OriginalIdeleNormSingleInfiniteOrbit",
+    "OriginalIdeleNormLocalGlobal",
+    "OriginalLocalNormDegreePowers",
+    "LocalIntegerUnitFixedUniformizerNorm",
+    "OriginalLocalNormUnramifiedUnits",
+    "OriginalLocalNormSplitPrime",
+    "OriginalIdelePowerLocalUnits",
+    "OriginalIdelePowerLocalNormContainment",
+    "OriginalNormRamificationSupport",
+    "OriginalPowerLocalUnitNormQuotient",
+    "OriginalSupportedPowerClassMap",
+    "OriginalSupportedPowerQuotient",
+    "OriginalSUnitPowerLocalQuotient",
+    "OriginalSupportedClassPowerMap",
+    "OriginalPrincipalPowerExactSequence",
+    "OriginalFinitePowerQuotientFinite",
+    "OriginalInfiniteUnitPowerRoots",
+    "OriginalInfinitePowerIndex",
+    "OriginalPowerQuotientFiniteness",
+    "NormedFieldPowerLocalScaling",
+    "NormedFieldPowerSmallBall",
+    "FiniteIndexEndomorphismKernel",
+    "NormedFieldSmallUnitBalls",
+    "NormedFieldSmallUnitPowerImage",
+    "NormedFieldSmallUnitGradedQuotient",
+    "LocalFieldBallIntegerCoordinates",
+    "LocalFieldBallScalarQuotient",
+    "LocalFieldIntegerUnitPowerIndex",
+    "LocalFieldUniformizerProduct",
+    "LocalFieldPowerIndexScalar",
+    "OriginalAdicScalarIdealPower",
+    "OriginalAdicScalarQuotientCardinality",
+    "OriginalFinitePowerIndex",
+    "OriginalFinitePowerIndexProduct",
+    "OriginalInfinitePowerIndexProduct",
+    "OriginalSupportedPowerIndex",
+    "OriginalPrincipalPowerIndex",
+    "FiniteIndependentAbsoluteValueApproximation",
+    "OriginalMixedPlaceApproximation",
+    "OriginalPrincipalApproximation",
+    "OriginalPrincipalPowerApproximation",
+    "OriginalSplitOutsideNorm",
+    "OriginalPrimeDegreeFullDecomposition",
+    "PrimeExponentCoordinates",
+    "OriginalSUnitKummerPrimeCoordinates",
+    "PrimeCoordinateGenerators",
+    "OriginalPrimeTowerSelection",
+    "OriginalDistinctCoordinatePrimes",
+    "OriginalUnramifiedDecompositionCyclic",
+    "OriginalDecompositionTower",
+    "OriginalDecompositionRestriction",
+    "OriginalCoordinatePrimeSet",
+    "OriginalLocalKummerFixedRoot",
+    "OriginalKummerCoordinateLocalization"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

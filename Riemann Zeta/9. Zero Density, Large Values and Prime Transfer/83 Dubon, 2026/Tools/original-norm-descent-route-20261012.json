@@ -29,7 +29,7 @@
   ],
   "date": "2026-10-12",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "status": "Focused production and 12 original-root exact consumers/all16 linters PASS; full assembled and sequential verification pending.",
+  "status": "Assembled and sequential foundation/paper verification PASS: actual exits0 consumed, zero diagnostics, all eight regressions, both dependency audits and all sixteen linters.",
   "mathematics": "The quotient of actual generator-fixed original idele classes by the actual representation norm is identified with original cyclic H2 via the pinned periodic projection. The coefficient norm is proved to be the product of the original Galois class maps, and an actual quotient representative vanishes exactly when it is such a product. The proved global Herbrand formula makes this actual invariant norm quotient finite with order at least |Gal(L/K)|; under the genuine IsGalois hypothesis this is the extension degree. Existing finite-H2 annihilation proves that same degree annihilates the original quotient. The actual full sequence L-units -> original adele-ring units -> original idele classes is proved short exact. Existing Hilbert90 then proves H0 surjectivity. The pinned natural H0/invariant comparison consumes that output to produce an actual original invariant idele representative for every actual original invariant idele class. In addition, the exact original integral and field valuation restriction formula is proved at every finite place, including ramified places. The actual base-field map extends continuously to the original completions, preserves and reflects original integral membership, and is a closed embedding fixed pointwise by the actual stabilizer. Pinned absolute-value approximation is adapted to arbitrary finite sets of actual finite places, retaining the original completion targets. The actual finite-orbit Galois trace is continuous and lies in the original base-completion image by this density and closedness. A tuple supported at one prime has trace equal to the nonzero stabilizer count times the original fixed element. Dividing this actual trace preimage constructs a base-completion preimage. Thus the original base-completion image is exactly the fixed set of the actual decomposition group, with no assumed comparison or norm-lifting hypothesis.",
   "discharged": "The quotient of actual generator-fixed original idele classes by the actual representation norm is identified with original cyclic H2 via the pinned periodic projection. The coefficient norm is proved to be the product of the original Galois class maps, and an actual quotient representative vanishes exactly when it is such a product. The proved global Herbrand formula makes this actual invariant norm quotient finite with order at least |Gal(L/K)|; under the genuine IsGalois hypothesis this is the extension degree. Existing finite-H2 annihilation proves that same degree annihilates the original quotient. The actual full sequence L-units -> original adele-ring units -> original idele classes is proved short exact. Existing Hilbert90 then proves H0 surjectivity. The pinned natural H0/invariant comparison consumes that output to produce an actual original invariant idele representative for every actual original invariant idele class. In addition, the exact original integral and field valuation restriction formula is proved at every finite place, including ramified places. The actual base-field map extends continuously to the original completions, preserves and reflects original integral membership, and is a closed embedding fixed pointwise by the actual stabilizer. Pinned absolute-value approximation is adapted to arbitrary finite sets of actual finite places, retaining the original completion targets. The actual finite-orbit Galois trace is continuous and lies in the original base-completion image by this density and closedness. A tuple supported at one prime has trace equal to the nonzero stabilizer count times the original fixed element. Dividing this actual trace preimage constructs a base-completion preimage. Thus the original base-completion image is exactly the fixed set of the actual decomposition group, with no assumed comparison or norm-lifting hypothesis.",
   "modules": [
@@ -96,7 +96,9 @@
         "log": "scratchOriginalIdeleClassInvariantNormQuotient-g.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "d080e8144639fd8bedfd3e79b114a8de28d9aeb1baf29a8ccaba0ad02fbc9d59",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalIdeleClassNormQuotientTorsion",
@@ -159,7 +161,9 @@
         "log": "scratchOriginalIdeleClassNormQuotientTorsion-c.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "638573c5c58c4787691eebad1d59c09e85e5eec79330e2b085df4d1e56106d54",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalFullIdeleCohomologySequence",
@@ -222,7 +226,9 @@
         "log": "scratchOriginalFullIdeleCohomologySequence-c.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "71650827147e87c9f7502cfbb24aff99f4e27c15dc1bf12d5fd9fbcd3c56d437",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalInvariantIdeleClassLifting",
@@ -284,7 +290,9 @@
         "log": "scratchOriginalInvariantIdeleClassLifting-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "d258b0eee421d26893129b50888ce22d542e3fa09ea33b39a6c1449eb4748f30",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalRamifiedValuationRestriction",
@@ -346,7 +354,9 @@
         "log": "originalRamifiedValuationRestriction-d.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "de0875ba06dee31c083536e8caa022641fdc0bc660a16289697bb9236425a897",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalAdicFieldRestriction",
@@ -409,7 +419,9 @@
         "log": "originalAdicFieldRestriction-e.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "eb69655f596ffaa695001a9f3455c1a19ebb4799728268154c62304d877641a9",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalAdicBaseChangeMap",
@@ -474,7 +486,9 @@
         "log": "originalAdicBaseChangeMap-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "1102e70d2217913eb5514e4a29df351cfb86c34c3a030448ef0fa36cdb2439f5",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalAdicBaseChangeClosed",
@@ -538,7 +552,9 @@
         "log": "originalAdicBaseChangeClosed-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "5d3aabc1d28f02aa0d9332784b8917feed5b2ad628343683f28a5a6a156a28e0",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalFinitePlaceIndependence",
@@ -601,7 +617,9 @@
         "log": "originalFinitePlaceIndependence-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "6efceb8402795fb2430a8f205b0de55a0b5e49ff648b47d138efb8e085746787",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalFinitePlaceWeakApproximation",
@@ -664,7 +682,9 @@
         "log": "originalFinitePlaceWeakApproximation-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "a6928150a2a1f0ae1222b0f83d71d412277a495faac808d704728d62895fea74",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalCompletionOrbitTrace",
@@ -729,7 +749,9 @@
         "log": "originalCompletionOrbitTrace-c.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "098a01c5f09de24b82ef67bde4292042a3a0a6dcaa43eedeb4c92ebc7745f8db",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     },
     {
       "module": "OriginalAdicFixedFieldDescent",
@@ -792,7 +814,9 @@
         "log": "originalAdicFixedFieldDescent-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "65bcd925348730bd17d54d9635da9f138fb65a34ecff9fb2b9bd330c384369ce",
+      "status": "Fully verified in assembled2695; exact original-object consumer retained."
     }
   ],
   "preflight": {
@@ -865,5 +889,24 @@
       "sha256": "f56d17c0aee8ed04c2d4b010340a8e25d5abe0b5c8dd8b29807c04a56566e8e1",
       "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
     }
-  ]
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261012_192018.log",
+    "paper": "logs/dubon-build-20261012-192507-560.log",
+    "assembledLog": "assembled2695.log",
+    "exhaustive": 19813,
+    "explicit": 10063,
+    "exactConsumers": 2062,
+    "linters": [
+      12862,
+      9917
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
 }
