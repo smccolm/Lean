@@ -1,0 +1,713 @@
+{
+  "serves": "DUB-17 literal higher symmetric-power continuation: proved original supported-idele, S-unit Herbrand and local cohomology calculations -> proved original_cyclic_normQuotient_card -> OPEN original reciprocity/class formation and original H2 invariant sum-zero -> OPEN global duality for actual deformation conditions -> numerical Selmer bounds -> patching/automorphy/potential automorphy/descent -> original primitiveSymmetricLFunction continuation. Modular Galois association/local compatibility and upstream purity remain separate required obligations.",
+  "remaining": "The original cyclic norm-index dependency has passed full project verification. No primitive-root, support, local-correction, embedding, norm-compatibility or norm-index upper-bound hypothesis remains in its endpoint. Original reciprocity/class formation, the actual global H2 invariant sum-zero, global duality for actual local deformation conditions, numerical Selmer bounds, patching/automorphy, modular Galois association/local compatibility/upstream purity and literal DUB17-20 endpoints remain open.",
+  "reuse": "Checked original norm, base embedding, prime contraction, Galois restriction and cohomology tower APIs before expansion. Reused the original adic completion maps and prime-contraction tower identity, pinned density of the actual number field in its infinite adeles, and the proved galoisTowerKernelEquiv. Reused original degree annihilation and the degree lower bound. Reused originalPrimitiveRootStage, its primitive root and exact coprime degree, plus pinned IntermediateField.LinearDisjoint.of_finrank_coprime and finrank_sup. Reused the pinned third-isomorphism cardinal formula, prime-order group element theorem, fixed-field degree and cyclic quotient instances. No new dependency, pin or source asset.",
+  "routeAdjustment": "Use density to establish exactly the original map composition and equivariance needed for norm transitivity. For coprime descent, reflect norm membership with the two tower norm identities, then choose original representatives to obtain the required injection of sets; a canonical pushout quotient homomorphism and broad base-change norm compatibility are unnecessary for the cardinal bound. Construct the native compositum using existing intermediate fields and linear disjointness, preserving the original arbitrary upper field by its algebra embedding; no new tensor-product field machinery or relative-idele model is introduced. Use the pinned third-isomorphism cardinal formula for the exact cyclic induction step. Defer general abelian norm constructions and unrelated local-field infrastructure.",
+  "next": "Complete root imports, original-object exact consumers, exhaustive/explicit dependency audits, all16 linters, assembled verification and sequential foundation/paper receipts for the full original cyclic norm index. Then inspect the existing reciprocity/class-formation and invariant H2 constructions for the shortest route from this same original class-field axiom to original global invariant sum-zero and duality. State the exact arithmetic objects and discharge the local-condition assumptions needed by the DUB17 numerical Selmer and automorphy chain.",
+  "draftRepairs": "Specified actual original quotient maps at coercion-sensitive rewrite sites. Removed unused bottom NumberField instances from equivariance statements. Used explicit product functions and a proved quotient-representative bijection for the Galois product, avoiding dependent cast computation in the general coset equivalence. Used explicit additive-order and quotient lemmas and linear-map subtraction identities. Every accepted direct check has native exit0 and zero diagnostics under the unchanged pinned resources.",
+  "portedSources": [
+    {
+      "commit": "dc55774a7fe03e742f2b4c6114aab5e7d01edfb1",
+      "source": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/ClassFieldAxiom/CyclicIdeleClassNormIndex.lean",
+      "modules": [
+        "OriginalNormQuotientCoprime"
+      ],
+      "scope": "Coprime-order cancellation argument adapted to the literal original additive norm quotient. The representative injection, native compositum assembly and original norm tower are proved through local original APIs and pinned Mathlib, without importing the relative-idele or pushout norm infrastructure.",
+      "license": "Dependencies/NYLL-ClassFieldTheory-LICENSE.txt"
+    }
+  ],
+  "endpointAssumptions": [
+    "The final original_cyclic_normQuotient_card theorem assumes only original number fields K and L and their actual finite cyclic Galois algebra extension. Its conclusion is Nat.card (OriginalIdeleClassNormQuotient K L) = Module.finrank K L.",
+    "The unconditional prime-degree theorem constructs all primitive roots, cyclotomic stages, composita, embeddings, coprime degrees and quotient comparisons internally.",
+    "No reciprocity, global duality, analytic continuation, automorphy or DUB17-20 completion is assumed or asserted."
+  ],
+  "date": "2026-10-13",
+  "sourceGate": "DUB-17; downstream DUB-18",
+  "status": "Assembled and sequential foundation/paper verification PASS: actual exits0 consumed, zero diagnostics, all eight regressions, both dependency audits and all sixteen linters.",
+  "mathematics": "The literal original finite-completion, finite/infinite adele, idele and class embeddings compose in actual algebra towers and intertwine normal Galois restriction. Existing original restriction-kernel identification and quotient representatives partition the Galois product, proving transitivity of the original idele and class norms. The proved degree annihilation gives coprime cancellation in the literal class norm quotient. Tower transitivity therefore reflects norm membership after a coprime Galois base extension; actual class representatives construct an injection of the literal original norm quotients and their cardinal comparison. The existing original cyclotomic stage supplies a primitive root and coprime base degree. Its actual compositum with the original upper-field image has prime degree over the stage by pinned linear disjointness; the original field embeds into that compositum and is retained unchanged in the norm comparison. This removes the primitive-root hypothesis and gives exact original norm index for every finite prime-degree Galois number-field extension. The original upper norm quotient surjects onto the quotient of the two lower norm ranges; pinned third-isomorphism cardinality bounds the original tower quotient. Strong induction using the fixed field of an actual prime-order automorphism and the existing degree lower bound proves the full literal original cyclic norm index equals the actual extension degree.",
+  "discharged": "The literal original finite-completion, finite/infinite adele, idele and class embeddings compose in actual algebra towers and intertwine normal Galois restriction. Existing original restriction-kernel identification and quotient representatives partition the Galois product, proving transitivity of the original idele and class norms. The proved degree annihilation gives coprime cancellation in the literal class norm quotient. Tower transitivity therefore reflects norm membership after a coprime Galois base extension; actual class representatives construct an injection of the literal original norm quotients and their cardinal comparison. The existing original cyclotomic stage supplies a primitive root and coprime base degree. Its actual compositum with the original upper-field image has prime degree over the stage by pinned linear disjointness; the original field embeds into that compositum and is retained unchanged in the norm comparison. This removes the primitive-root hypothesis and gives exact original norm index for every finite prime-degree Galois number-field extension. The original upper norm quotient surjects onto the quotient of the two lower norm ranges; pinned third-isomorphism cardinality bounds the original tower quotient. Strong induction using the fixed field of an actual prime-order automorphism and the existing degree lower bound proves the full literal original cyclic norm index equals the actual extension degree.",
+  "modules": [
+    {
+      "module": "OriginalIdeleBaseChangeTower",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleBaseChangeTower",
+        "sourceSha256": "b51ab7156ae70ef7ecf411c02065d8242d96d6f4fc117c23609a171605cdd01c",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "fedadc98e7e32fef49bf90ebcf3246aed4d1c4414aeef453a9c22faf6a896974",
+        "log": "OriginalIdeleBaseChangeTower-b.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "originalIdeleClassBaseChangeMap_tower",
+      "publicTheorems": [
+        "originalAdicBaseChangeMap_tower",
+        "originalFiniteAdeleBaseChangeMap_tower",
+        "originalInfiniteAdeleBaseChangeMap_tower",
+        "originalAdeleBaseChangeMap_tower",
+        "originalIdeleBaseChangeMap_tower",
+        "originalIdeleClassBaseChangeMap_tower"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleBaseChangeTower",
+        "sourceSha256": "b51ab7156ae70ef7ecf411c02065d8242d96d6f4fc117c23609a171605cdd01c",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleBaseChangeTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "fedadc98e7e32fef49bf90ebcf3246aed4d1c4414aeef453a9c22faf6a896974",
+        "log": "OriginalIdeleBaseChangeTower-b.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "b51ab7156ae70ef7ecf411c02065d8242d96d6f4fc117c23609a171605cdd01c",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalIdeleGaloisTower",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleGaloisTower",
+        "sourceSha256": "e83b9109b7e8c1dc2cb9a05db5f97392641cbf818f088d25b32fffc88e32b3de",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "54dc181b1b39070ce42f6ec332dd4b7545befca0c5466b073d001326bd1766b1",
+        "log": "OriginalIdeleGaloisTower-c.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "originalIdeleClassBaseChangeMap_restrictNormal",
+      "publicTheorems": [
+        "originalAdicBaseChangeMap_restrictNormal",
+        "originalFiniteAdeleBaseChangeMap_restrictNormal",
+        "originalInfiniteAdeleBaseChangeMap_restrictNormal",
+        "originalIdeleBaseChangeMap_restrictNormal",
+        "originalIdeleClassBaseChangeMap_restrictNormal"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleGaloisTower",
+        "sourceSha256": "e83b9109b7e8c1dc2cb9a05db5f97392641cbf818f088d25b32fffc88e32b3de",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleGaloisTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "54dc181b1b39070ce42f6ec332dd4b7545befca0c5466b073d001326bd1766b1",
+        "log": "OriginalIdeleGaloisTower-c.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "e83b9109b7e8c1dc2cb9a05db5f97392641cbf818f088d25b32fffc88e32b3de",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalIdeleRestrictScalars",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleRestrictScalars",
+        "sourceSha256": "7a0e3c696c5f408e7af5d789309ac372babea40a11e069ba1611454e256ab3a9",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "c9595c31b1e3fd1dc363c8d44fa0d7249cd8faf5d05f2ff0b7cdbbd56d9b3014",
+        "log": "OriginalIdeleRestrictScalars-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "numberFieldIdeleClassGaloisMap_restrictScalars",
+      "publicTheorems": [
+        "numberFieldIdeleGaloisMap_restrictScalars",
+        "numberFieldIdeleClassGaloisMap_restrictScalars"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleRestrictScalars",
+        "sourceSha256": "7a0e3c696c5f408e7af5d789309ac372babea40a11e069ba1611454e256ab3a9",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleRestrictScalars.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "c9595c31b1e3fd1dc363c8d44fa0d7249cd8faf5d05f2ff0b7cdbbd56d9b3014",
+        "log": "OriginalIdeleRestrictScalars-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "7a0e3c696c5f408e7af5d789309ac372babea40a11e069ba1611454e256ab3a9",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalIdeleNormTower",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleNormTower",
+        "sourceSha256": "d602f2ab80800ea802413298f61d9dff9cfea373ad953c1e0a9bb9eecfc23494",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "d218ab47ec5886c184abce4c7b8259f2d9ee8e538ec062dadb15d5ad2f5e27fb",
+        "log": "OriginalIdeleNormTower-e.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "originalIdeleClassNorm_tower",
+      "publicTheorems": [
+        "originalIdeleNorm_tower",
+        "originalIdeleClassNorm_tower"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalIdeleNormTower",
+        "sourceSha256": "d602f2ab80800ea802413298f61d9dff9cfea373ad953c1e0a9bb9eecfc23494",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalIdeleNormTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "d218ab47ec5886c184abce4c7b8259f2d9ee8e538ec062dadb15d5ad2f5e27fb",
+        "log": "OriginalIdeleNormTower-e.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "d602f2ab80800ea802413298f61d9dff9cfea373ad953c1e0a9bb9eecfc23494",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalNormQuotientCoprime",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalNormQuotientCoprime",
+        "sourceSha256": "15ddf91b68189b3362aad9b3e81851a5f2de0a73489b01da62230fdfff3f6c6e",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "6921265c338c1f04478e1345e6f5910cda7a5056f971fb5dce5ffae6d6aa585a",
+        "log": "OriginalNormQuotientCoprime-d.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "originalIdeleClassNorm_mem_of_coprime_pow",
+      "publicTheorems": [
+        "originalIdeleClassNormQuotient_coprime_nsmul_injective",
+        "originalIdeleClassNorm_mem_of_coprime_pow"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalNormQuotientCoprime",
+        "sourceSha256": "15ddf91b68189b3362aad9b3e81851a5f2de0a73489b01da62230fdfff3f6c6e",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientCoprime.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "6921265c338c1f04478e1345e6f5910cda7a5056f971fb5dce5ffae6d6aa585a",
+        "log": "OriginalNormQuotientCoprime-d.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "15ddf91b68189b3362aad9b3e81851a5f2de0a73489b01da62230fdfff3f6c6e",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalNormCoprimeBaseChange",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalNormCoprimeBaseChange",
+        "sourceSha256": "084862547adfebd676562288f0a68cc39e1d33cb7f855538320dc69e16ecfe8c",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "4d9c2effbf08bd56bce7fdf6c25c21620be55ef4e182f30f130d2887e50c1f75",
+        "log": "OriginalNormCoprimeBaseChange-b.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "originalIdeleClassNormQuotient_card_le_coprime_baseChange",
+      "publicTheorems": [
+        "originalIdeleClassNorm_reflects_coprime_baseChange",
+        "originalIdeleClassNormQuotient_coprime_embedding",
+        "originalIdeleClassNormQuotient_card_le_coprime_baseChange"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalNormCoprimeBaseChange",
+        "sourceSha256": "084862547adfebd676562288f0a68cc39e1d33cb7f855538320dc69e16ecfe8c",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormCoprimeBaseChange.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "4d9c2effbf08bd56bce7fdf6c25c21620be55ef4e182f30f130d2887e50c1f75",
+        "log": "OriginalNormCoprimeBaseChange-b.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "084862547adfebd676562288f0a68cc39e1d33cb7f855538320dc69e16ecfe8c",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalPrimeNormIndex",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalPrimeNormIndex",
+        "sourceSha256": "a500a3c614532f521299373448b5d994c01221222f2a4c0045d411553d166928",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "11dc63fd341214948d24d740ed4858e672895e688c450ab481ff2ee9919df0a8",
+        "log": "OriginalPrimeNormIndex-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "original_primeDegree_normQuotient_card",
+      "publicTheorems": [
+        "original_primeDegree_normQuotient_card"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalPrimeNormIndex",
+        "sourceSha256": "a500a3c614532f521299373448b5d994c01221222f2a4c0045d411553d166928",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalPrimeNormIndex.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "11dc63fd341214948d24d740ed4858e672895e688c450ab481ff2ee9919df0a8",
+        "log": "OriginalPrimeNormIndex-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "a500a3c614532f521299373448b5d994c01221222f2a4c0045d411553d166928",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalNormQuotientTower",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalNormQuotientTower",
+        "sourceSha256": "65a0cddca53c39040746caa079dd469816cad4a32b87cd79e72a51ff0c4b1255",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "c6c9ada58604d73fafd8805bbf7db160e8d4e05d101b54c5f39ed97b758d69fa",
+        "log": "OriginalNormQuotientTower-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "originalIdeleClassNormQuotient_card_le_tower",
+      "publicTheorems": [
+        "originalIdeleClassNormQuotient_card_le_tower"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalNormQuotientTower",
+        "sourceSha256": "65a0cddca53c39040746caa079dd469816cad4a32b87cd79e72a51ff0c4b1255",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalNormQuotientTower.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "c6c9ada58604d73fafd8805bbf7db160e8d4e05d101b54c5f39ed97b758d69fa",
+        "log": "OriginalNormQuotientTower-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "65a0cddca53c39040746caa079dd469816cad4a32b87cd79e72a51ff0c4b1255",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    },
+    {
+      "module": "OriginalCyclicNormIndex",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalCyclicNormIndex",
+        "sourceSha256": "0baa49a8b926c2bb86cb167f832a4b95f4abf39ea0d0e51f650a7d043ebfa1a5",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "1706e83fbf2abce844fd2f84ff21e98640a7f6b48b9c3137d58e2a4a5115a68e",
+        "log": "OriginalCyclicNormIndex-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "consumer": "original_cyclic_normQuotient_card",
+      "publicTheorems": [
+        "original_cyclic_normQuotient_card"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "OriginalCyclicNormIndex",
+        "sourceSha256": "0baa49a8b926c2bb86cb167f832a4b95f4abf39ea0d0e51f650a7d043ebfa1a5",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\OriginalCyclicNormIndex.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+        "scratchSetupSha256": "1706e83fbf2abce844fd2f84ff21e98640a7f6b48b9c3137d58e2a4a5115a68e",
+        "log": "OriginalCyclicNormIndex-a.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "0baa49a8b926c2bb86cb167f832a4b95f4abf39ea0d0e51f650a7d043ebfa1a5",
+      "status": "Fully verified in assembled2809; exact original-object consumer retained."
+    }
+  ],
+  "preflight": {
+    "kind": "isolated direct pinned Lean draft check only",
+    "module": "FutureOriginalCyclicNormConsumers",
+    "sourceSha256": "a6a1b26972397f77b59e6a983bdc91233c90d8dcb6d4c482d91b9fa614440c83",
+    "command": [
+      "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+      "-DautoImplicit=false",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureOriginalCyclicNormConsumers.lean",
+      "-o",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureOriginalCyclicNormConsumers.olean",
+      "-i",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureOriginalCyclicNormConsumers.ilean",
+      "--setup",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureOriginalCyclicNormConsumers.setup.json"
+    ],
+    "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+    "exit": 0,
+    "diagnostics": false,
+    "baselineSetupSha256": "4fb28aa183474b627200fe8f5ab64d0736d6e97b6720412472f4666710b5dd8c",
+    "scratchSetupSha256": "cef44363ecb03557b2a2378eeb7293a27d4276611c4b7fb7c62e898a0c467118",
+    "log": "preflightFutureOriginalCyclicNormConsumers-a.log",
+    "logSha256": "78277263706087df206b2d4a7a64aee132fb2deec1efb23fefd421364a265caf",
+    "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed.",
+    "actualExitConsumed": true
+  },
+  "nativeFocused": {
+    "exit": 0,
+    "actualExitConsumed": true,
+    "log": "originalCyclicNorm2809-focus.log",
+    "sha256": "b33d64d878e60b4aaf49c2d321f0094e0fc5b085341ada0dd84f86cc49ab50a1"
+  },
+  "scope": [
+    2809,
+    2176,
+    10439
+  ],
+  "exactEndpoint": [
+    "originalIdeleClassNorm_tower",
+    "originalIdeleClassNormQuotient_coprime_embedding",
+    "original_primeDegree_normQuotient_card",
+    "originalIdeleClassNormQuotient_card_le_tower",
+    "original_cyclic_normQuotient_card"
+  ],
+  "primarySources": [
+    "https://github.com/n-yamaguchi-0729/ClassFieldTheory/tree/dc55774a7fe03e742f2b4c6114aab5e7d01edfb1",
+    "https://www.jmilne.org/math/CourseNotes/CFTc.pdf",
+    "https://math.stanford.edu/~conrad/BSDseminar/refs/MilneADT.pdf"
+  ],
+  "licensedReferenceAssets": [
+    {
+      "path": "Dependencies/NYLL-SUnit-LogLattice-dc55774a7fe0.lean.txt",
+      "sha256": "77c5cb84b7efbe83c09d349f0340271c4612d979a4ca4724393f42aa7fb2a496",
+      "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
+    },
+    {
+      "path": "Dependencies/NYLL-SUnit-GaloisAction-dc55774a7fe0.lean.txt",
+      "sha256": "34467e8f1425fc73f969669126f7299afe61c52008841129033f053bfc6e5fb8",
+      "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
+    },
+    {
+      "path": "Dependencies/NYLL-SUnit-Herbrand-dc55774a7fe0.lean.txt",
+      "sha256": "1430ec7366cb1bae59d4f3acaea3ac8e7e53a4b6fb633d23f728693f18b573a4",
+      "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
+    },
+    {
+      "path": "Dependencies/NYLL-Permutation-Lattice-dc55774a7fe0.lean.txt",
+      "sha256": "f56d17c0aee8ed04c2d4b010340a8e25d5abe0b5c8dd8b29807c04a56566e8e1",
+      "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
+    }
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261013_032118.log",
+    "paper": "logs/dubon-build-20261013-032605-531.log",
+    "assembledLog": "assembled2809.log",
+    "exhaustive": 20526,
+    "explicit": 10439,
+    "exactConsumers": 2176,
+    "linters": [
+      13320,
+      10264
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
+}

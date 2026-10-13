@@ -33,7 +33,7 @@
   ],
   "date": "2026-10-12",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "status": "Focused production and seventeen original-root exact consumers/all16 linters PASS; full assembled and sequential verification pending.",
+  "status": "Assembled and sequential foundation/paper verification PASS: actual exits0 consumed, zero diagnostics, all eight regressions, both dependency audits and all sixteen linters.",
   "mathematics": "Original finite and infinite absolute values form the actual independent mixed family, and the existing pinned approximation proof gives density in all original completions. One actual global unit satisfies any given open local subgroup conditions. The original local power subgroups are open, so a principal correction makes all exceptional finite and every infinite local component a degree power. Existing actual degree-power norm containment, split-prime surjectivity and the original idele norm-image criterion give surjectivity of the actual class norm if every finite place outside a finite set splits. The proved original norm-quotient degree lower bound then proves full-decomposition prime avoidance and infinitude in every actual prime-degree Galois extension. The original prime-degree S-unit Kummer restriction kernel now has actual residue-field coordinates of dimension s-1. This uses its already proved cardinality and exponent. The resulting original coordinate generators have exact order p and generate the actual kernel. Their genuine fixed fields have top degree p; original prime contraction in towers and finite fibers give full-decomposition primes avoiding any prescribed finite set of original base primes. Finite Hall selection then gives simultaneous coordinate primes with pairwise distinct original base primes. The actual unramified decomposition stabilizer embeds faithfully in the finite residue Galois group and is cyclic. Full relative decomposition puts the actual coordinate subgroup into that stabilizer; the actual Kummer exponent and coordinate order identify the two. Restriction of actual prime stabilizers is surjective by lifting and the existing original prime-orbit theorem. Hence coordinate membership in the original restriction kernel proves splitting throughout the prescribed subextension. Distinct selection avoids the finite original ramification support and gives a disjoint set of exactly the coordinate count. The actual local-power condition is proved equivalent to fixation of the original Kummer root by the original decomposition group. The coordinate generators then identify simultaneous selected-prime local-power conditions with membership of that root in the prescribed original subextension. No completed fixed-field or coordinate-span input is assumed.",
   "discharged": "Original finite and infinite absolute values form the actual independent mixed family, and the existing pinned approximation proof gives density in all original completions. One actual global unit satisfies any given open local subgroup conditions. The original local power subgroups are open, so a principal correction makes all exceptional finite and every infinite local component a degree power. Existing actual degree-power norm containment, split-prime surjectivity and the original idele norm-image criterion give surjectivity of the actual class norm if every finite place outside a finite set splits. The proved original norm-quotient degree lower bound then proves full-decomposition prime avoidance and infinitude in every actual prime-degree Galois extension. The original prime-degree S-unit Kummer restriction kernel now has actual residue-field coordinates of dimension s-1. This uses its already proved cardinality and exponent. The resulting original coordinate generators have exact order p and generate the actual kernel. Their genuine fixed fields have top degree p; original prime contraction in towers and finite fibers give full-decomposition primes avoiding any prescribed finite set of original base primes. Finite Hall selection then gives simultaneous coordinate primes with pairwise distinct original base primes. The actual unramified decomposition stabilizer embeds faithfully in the finite residue Galois group and is cyclic. Full relative decomposition puts the actual coordinate subgroup into that stabilizer; the actual Kummer exponent and coordinate order identify the two. Restriction of actual prime stabilizers is surjective by lifting and the existing original prime-orbit theorem. Hence coordinate membership in the original restriction kernel proves splitting throughout the prescribed subextension. Distinct selection avoids the finite original ramification support and gives a disjoint set of exactly the coordinate count. The actual local-power condition is proved equivalent to fixation of the original Kummer root by the original decomposition group. The coordinate generators then identify simultaneous selected-prime local-power conditions with membership of that root in the prescribed original subextension. No completed fixed-field or coordinate-span input is assumed.",
   "modules": [
@@ -97,7 +97,9 @@
         "log": "finiteIndependentAbsoluteValueApproximation-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "e5a1df3d276f43141bb08aeb16890b6ee03582421f826a931708fb117a344cad",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalMixedPlaceApproximation",
@@ -161,7 +163,9 @@
         "log": "originalMixedPlaceApproximation-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "ddb69ee2e6ea20dc794b12798b8e32757f71f47c4227e4085100a241d01de0a6",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalPrincipalApproximation",
@@ -223,7 +227,9 @@
         "log": "originalPrincipalApproximation-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "a6dff5112e3cf4cb094426ff781aa0eef3d4adcbd29bd0a66272148e98958d43",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalPrincipalPowerApproximation",
@@ -286,7 +292,9 @@
         "log": "originalPrincipalPowerApproximation-c.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "5994a1a5290661d91f07ee775bb0317e5b4dd032d77eb5606b0217e102c39e0a",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalSplitOutsideNorm",
@@ -349,7 +357,9 @@
         "log": "originalSplitOutsideNorm-attributed.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "38a11019d4df2057292219ff6faeebe5b6fb686b714ac74fb198ac7ae81971f7",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalPrimeDegreeFullDecomposition",
@@ -413,7 +423,9 @@
         "log": "originalPrimeDegreeFullDecomposition-attributed.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "e087fb868acebda91c3be94228f1af7e54d7a8b2f8e6f182494d69f28786ce98",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "PrimeExponentCoordinates",
@@ -475,7 +487,9 @@
         "log": "primeExponentCoordinates-j.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "e843e87caeb0334fec83577fc6d03d1c750c7d4c4e1203f159e7805505fe3c2f",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalSUnitKummerPrimeCoordinates",
@@ -537,7 +551,9 @@
         "log": "originalSUnitKummerPrimeCoordinates-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "59d57bf8167c717b1c00a30620ae1cc31128c82a38ee4f6bfe253c3d41458633",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "PrimeCoordinateGenerators",
@@ -600,7 +616,9 @@
         "log": "primeCoordinateGenerators-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "6221bc8737cf234c93820d18aea4158e3afb6cd30b4e8fa1ab51c32103eaa5ca",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalPrimeTowerSelection",
@@ -664,7 +682,9 @@
         "log": "originalPrimeTowerSelection-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "40d271634594c2f0b1eb2d8c9dcb462b532dc5bfedcff97182ecc24f79d03070",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalDistinctCoordinatePrimes",
@@ -726,7 +746,9 @@
         "log": "originalDistinctCoordinatePrimes-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "d24d45df2068e0b97eca82f6fb7df8a39cdb248b8cfebe9072a1690d29b7e89a",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalUnramifiedDecompositionCyclic",
@@ -789,7 +811,9 @@
         "log": "originalUnramifiedDecompositionCyclic-e.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "140be92bfeb72e52e5d063e26789c4de595af9de4c0514f35bccebffbe5d43c5",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalDecompositionTower",
@@ -853,7 +877,9 @@
         "log": "originalDecompositionTower-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "7706c3488b39c35655f4d6c4cab36aac003cc8c638a1c6ccf1ff183032fa9e67",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalDecompositionRestriction",
@@ -917,7 +943,9 @@
         "log": "originalDecompositionRestriction-f.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "31b99930d63d9b1c37af2cc5bac4720111741f2e34db4f1c2f10b8dfc889e23a",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalCoordinatePrimeSet",
@@ -981,7 +1009,9 @@
         "log": "originalCoordinatePrimeSet-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "f6d842b8523bb6398d7f9ad466e05cb168e66dee9e8a03b9d669565b351a8c31",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalLocalKummerFixedRoot",
@@ -1043,7 +1073,9 @@
         "log": "originalLocalKummerFixedRoot-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "b799cbdeb9f43a1a3ff39636658a0e99cc6ab03575a1507b13a55da2fff8e4f2",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     },
     {
       "module": "OriginalKummerCoordinateLocalization",
@@ -1106,7 +1138,9 @@
         "log": "originalKummerCoordinateLocalization-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "14eb16eb773d0f63e7ed2bd5f0d31ca342a37b7c90d7b553dc6ea8105646dd9a",
+      "status": "Fully verified in assembled2777; exact original-object consumer retained."
     }
   ],
   "preflight": {
@@ -1180,5 +1214,24 @@
       "sha256": "f56d17c0aee8ed04c2d4b010340a8e25d5abe0b5c8dd8b29807c04a56566e8e1",
       "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
     }
-  ]
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261013_001833.log",
+    "paper": "logs/dubon-build-20261013-002318-036.log",
+    "assembledLog": "assembled2777.log",
+    "exhaustive": 20383,
+    "explicit": 10341,
+    "exactConsumers": 2144,
+    "linters": [
+      13216,
+      10207
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
 }
