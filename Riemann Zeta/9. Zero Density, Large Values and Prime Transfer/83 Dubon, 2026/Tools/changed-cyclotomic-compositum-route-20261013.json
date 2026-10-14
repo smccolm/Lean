@@ -1,14 +1,14 @@
 {
   "date": "2026-10-13",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "mathematics": "The literal prime-power primitive root in the Witt cyclotomic fraction field retains its exact order and generates an actual finite Galois cyclotomic stage over the original rational-prime completion. Its literal compositum with the changed auxiliary field is finite Galois over that auxiliary field. The proved diagonal Frobenius preserves both generating fields, restricts to an automorphism of the actual compositum over the auxiliary field, and acts on the same primitive root by the required inverse-unit power. The compositum receives the spectral finite-extension local-field structure. A proved local-ring criterion now reduces its formal unramifiedness to preservation of one actual auxiliary uniformizer as an irreducible element upstairs.",
-  "serves": "Exact unresolved DUB-17 chain: the verified auxiliary local field and integer uniformizer feed the actual finite Galois compositum constructed here; its restricted diagonal automorphism supplies the exact inverse-unit root action. Proving that the mapped auxiliary uniformizer remains irreducible will discharge formal unramifiedness through the new maximal-ideal criterion. Identifying this same automorphism with positive arithmetic Frobenius then supplies the remaining hypothesis of localFieldFiniteCyclicReciprocity_norm_uniformizer.",
-  "remaining": "Formal unramifiedness still awaits the actual upstairs irreducibility proof, and the restricted diagonal automorphism still must be identified with arithmetic Frobenius. Rational-unit extension, ramified inverse-unit reciprocity, principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and DUB17-20 remain open.",
-  "reuse": "Reused originalPrimitiveRootStage, finiteGaloisCompositumOverIntermediate, the proved fixed changed auxiliary field, the exact diagonal root action, spectral finite-extension local structures, and Algebra.FormallyUnramified.of_map_maximalIdeal. Existing signatures were checked before expansion; no replacement local field or abstract Galois certificate was introduced.",
-  "routeAdjustment": "The generic unramified-compositum base-change theorem was rejected for this step because the original prime-power cyclotomic stage over the rational local field is ramified. The rigorous route constructs the source compositum directly and reduces unramifiedness to equality of its actual local maximal ideals via the transported uniformizer. This preserves the source objects and avoids an inapplicable hypothesis.",
-  "next": "Prove that the transported changed auxiliary uniformizer remains irreducible in the actual compositum integer ring, apply the proved formal-unramifiedness criterion, and identify the restricted diagonal automorphism with positive arithmetic Frobenius before consuming norm-uniformizer reciprocity.",
+  "mathematics": "The natural-unit closure endpoint constructs u, the inverse exponent b, all coprimality and congruence facts, all closure local-field structures, the exact norm a*p, formal unramifiedness, and the inverse-b root action under normalized local reciprocity from only p, n, a and p not dividing a.",
+  "serves": "Exact unresolved DUB-17 chain: all supplied witnesses have been removed from the positive-natural-unit local reciprocity endpoint. The next dependency extends to rational units and separates the unit action from the p-uniformizer factor before the cyclotomic principal product.",
+  "remaining": "Rational-unit extension, separation of unit and p-uniformizer actions, principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and DUB17-20 remain open.",
+  "reuse": "The natural endpoint reuses rationalPrimeNaturalWittNorm_exists, primePowerNaturalUnit_exists_inverse, Nat.Prime.coprime_pow_of_not_dvd, rationalPrimeChangedCyclotomicClosure_exists_local_structure, and rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer_root.",
+  "routeAdjustment": "Existing proved existence theorems discharge every witness and instance in one bounded wrapper theorem. No additional inverse arithmetic, local-field model, or Witt ambient construction is introduced. The next reuse check targets reciprocity multiplicativity and the a=1 case.",
+  "next": "Extend from positive natural units to rational local units and isolate the unit contribution by comparing the a*p action with the a=1 p-uniformizer action through local reciprocity multiplicativity.",
   "draftRepairs": "The primitive-root map proof was corrected to use forward injective transport. Preservation was factored into the original cyclotomic stage and then the compositum, keeping adjoin induction bounded. The restricted automorphism uses finite-dimensional injective-implies-surjective rather than constructing an unrelated inverse. Explicit algebraicity was installed for deterministic spectral-norm synthesis. Failed scratch logs remain non-acceptance evidence.",
-  "status": "Assembled and sequential foundation/paper verification PASS: actual exits 0 consumed, zero diagnostics, all eleven regressions, both dependency audits and all sixteen linters.",
+  "status": "Focused production and exact-consumer builds PASS. Expanded exhaustive audit and assembled verification are in progress. Source acceptance remains 16/20.",
   "modules": [
     {
       "module": "RationalPrimeChangedCyclotomicCompositum",
@@ -89,6 +89,96 @@
       },
       "productionSha256": "c56bcd2d87c7869e806c0f3d103c7b126348aefaac30d78bb53a7607bea2a2c0",
       "status": "Fully verified in assembled2972; exact original-object consumer retained."
+    },
+    {
+      "module": "LocalFieldAmbientUniformizer",
+      "publicTheorems": [
+        "localField_integer_valuationSubring_eq_comap_of_integral_embedding",
+        "localField_isUniformizer_of_integral_ambient_embedding"
+      ],
+      "productionSha256": "988b78dffe726e32c917e8a1afb0e9418a77bcce531707bda5415955dbebb927",
+      "status": "Full assembled and sequential verification pass; retained in the 21,625-theorem exhaustive audit with zero Lean diagnostics and all linters passing."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicUniformizer",
+      "publicTheorems": [
+        "rationalPrimeChangedIntegralPolynomial_ambient_aeval",
+        "rationalPrimeChangedIntegralRootAmbientAlgHom_field",
+        "rationalPrimeChangedAuxiliaryIntegerAmbientMap_field",
+        "rationalPrimeChangedAuxiliary_exists_compositum_integer_uniformizer",
+        "rationalPrimeChangedCyclotomicCompositum_formallyUnramified"
+      ],
+      "productionSha256": "51833da07b035e83913fedb2b8e6f6c1678a00af017368ca57e8999dc6667f94",
+      "status": "Full assembled and sequential verification pass; retained in the 21,625-theorem exhaustive audit with zero Lean diagnostics and all linters passing."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicFrobenius",
+      "publicTheorems": [
+        "wittCyclotomicDiagonalFrobenius_residue",
+        "rationalPrimeChangedAuxiliary_residue_card",
+        "rationalPrimeChangedCyclotomicCompositum_valuationSubring_eq_ambient",
+        "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_residue",
+        "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_eq_arithmeticFrobenius"
+      ],
+      "productionSha256": "c85744616e750abc0ec9b4301c7e3af773d11c04a1bffa016ca3660f173c781b",
+      "status": "Full assembled and sequential verification pass; retained in the 21,625-theorem exhaustive audit with zero Lean diagnostics and all linters passing."
+    },
+    {
+      "module": "LocalFieldArithmeticFrobeniusEquiv",
+      "publicTheorems": [
+        "localFieldIntegerGaloisEquiv_conjugate",
+        "localFieldArithmeticFrobenius_conjugate"
+      ],
+      "productionSha256": "993cb62513be98728b403879465a25cc6607a16f402a0522bab230ccda3da477",
+      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicClosureReciprocity",
+      "publicTheorems": [
+        "rationalPrimeOriginalCyclotomicClosureStage_isCyclic",
+        "rationalPrimeChangedCyclotomicFiniteAmbient_map_eq_closureCompositum",
+        "localFieldIntegerAlgEquiv_algebraMap",
+        "rationalPrimeChangedCyclotomicClosureCompositumEquiv_auxiliary",
+        "rationalPrimeChangedCyclotomicWitt_exists_tower_local_structure",
+        "rationalPrimeChangedCyclotomicClosure_exists_local_structure",
+        "rationalPrimeChangedCyclotomicClosure_exists_integer_uniformizer_core",
+        "rationalPrimeChangedCyclotomicClosure_exists_integer_uniformizer",
+        "rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer"
+      ],
+      "productionSha256": "e77e6373c39f1c9f869f69adf7eeb089bdf725544c5cf6f2ce556e8dd46612d5",
+      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicClosureFrobenius",
+      "publicTheorems": [
+        "rationalPrimeChangedCyclotomicClosureFrobenius_equiv",
+        "rationalPrimeChangedCyclotomicClosureFrobenius_root",
+        "rationalPrimeChangedCyclotomicClosureCompositumEquiv_coe",
+        "rationalPrimeOriginalCyclotomicClosureEquiv_coe",
+        "rationalPrimeOriginalCyclotomicSourceInclusion",
+        "rationalPrimeChangedCyclotomicClosureCompositumEquiv_cyclotomic",
+        "rationalPrimeOriginalCyclotomicCompositumInclusion_root",
+        "rationalPrimeOriginalCyclotomicClosureRoot_inclusion"
+      ],
+      "productionSha256": "b5d40935516f0ca1b5da2cfb828bbf40b9bc93a67388237f7b0af9d4427ef68a",
+      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicClosureReciprocityAction",
+      "publicTheorems": [
+        "rationalPrimeChangedCyclotomicClosure_baseChangeFrobenius_root",
+        "rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer_root"
+      ],
+      "productionSha256": "693036673fc7e01e0957f184420853e943b3c2bc8632a2f30b722e45337087c6",
+      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicClosureNaturalAction",
+      "publicTheorems": [
+        "rationalPrimeNaturalChangedCyclotomicClosure_reciprocity_root"
+      ],
+      "productionSha256": "caf95f2f2d138f6814f5240cd833aa5d3e61420758fa6bd24b29432696902297",
+      "status": "Focused production and exact-consumer builds pass; exhaustive audit and assembled verification pending."
     }
   ],
   "consumers": [
@@ -99,7 +189,12 @@
     "actual_changed_cyclotomic_compositum_preserved_source",
     "actual_changed_cyclotomic_compositum_algEquiv_root_source",
     "actual_changed_cyclotomic_local_structure_source",
-    "actual_changed_cyclotomic_unramified_criterion_source"
+    "actual_changed_cyclotomic_unramified_criterion_source",
+    "actual_changed_cyclotomic_frobenius_chain_source",
+    "actual_local_field_arithmetic_frobenius_equiv_source",
+    "actual_changed_cyclotomic_closure_frobenius_root_source",
+    "actual_changed_cyclotomic_closure_reciprocity_root_source",
+    "actual_natural_changed_cyclotomic_closure_reciprocity_root_source"
   ],
   "preflights": [
     {
@@ -166,9 +261,9 @@
     "sha256": "74bf8f533247bc22caf77316ab04f8c62888620fde5b783691b5480cff2ed3c1"
   },
   "scope": [
-    2972,
-    2346,
-    10968
+    2980,
+    2351,
+    11009
   ],
   "exactEndpoint": [
     [
@@ -182,25 +277,57 @@
     [
       "rationalPrimeChangedCyclotomicCompositum_exists_local_structure",
       "localField_integer_formallyUnramified_of_irreducible_algebraMap"
+    ],
+    [
+      "localField_integer_valuationSubring_eq_comap_of_integral_embedding",
+      "localField_isUniformizer_of_integral_ambient_embedding",
+      "rationalPrimeChangedIntegralPolynomial_ambient_aeval",
+      "rationalPrimeChangedIntegralRootAmbientAlgHom_field",
+      "rationalPrimeChangedAuxiliaryIntegerAmbientMap_field",
+      "rationalPrimeChangedAuxiliary_exists_compositum_integer_uniformizer",
+      "rationalPrimeChangedCyclotomicCompositum_formallyUnramified",
+      "wittCyclotomicDiagonalFrobenius_residue",
+      "rationalPrimeChangedAuxiliary_residue_card",
+      "rationalPrimeChangedCyclotomicCompositum_valuationSubring_eq_ambient",
+      "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_residue",
+      "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_eq_arithmeticFrobenius"
     ]
   ],
   "validation": {
-    "foundation": "../../logs/foundation_freeze_20261013_204050.log",
-    "paper": "logs/dubon-build-20261013-204406-697.log",
-    "assembledLog": "assembled2972.log",
-    "exhaustive": 21593,
-    "explicit": 10968,
-    "exactConsumers": 2346,
+    "foundation": "../../logs/foundation_freeze_20261014_004630.log",
+    "paper": "logs/dubon-build-20261013-235653-270.log",
+    "assembledLog": "logs/dubon-build-20261013-235653-270.log",
+    "exhaustive": 21625,
+    "explicit": 10981,
+    "exactConsumers": 2347,
     "linters": [
-      14010,
-      10801
+      14026,
+      10820
     ],
     "nativeExits": [
-      0,
       0,
       0
     ],
     "actualExitsConsumed": true,
-    "diagnostics": false
+    "diagnostics": false,
+    "foundationManifest": "../../logs/foundation_freeze_20261014_004630.json",
+    "paperSha256": "3235382eca7c14c78f5d0775973c2b94d65d95637ea795e796e5598e17ed0141",
+    "foundationLogSha256": "562b251c73483a245f209c2fdf6c749ead5f30c9b12002a1300e3453bac12c8c",
+    "foundationManifestSha256": "d985a1d5ec32e1506328918eb776c6af091a26551c07baa6db75d3ba418147fd",
+    "pendingIncrementAudit": {
+      "exhaustive": 21717,
+      "explicit": 11007,
+      "linters": [
+        14067,
+        10886
+      ],
+      "assembledPending": true
+    },
+    "naturalUnitIncrement": {
+      "focusedProduction": true,
+      "focusedConsumer": true,
+      "auditPending": true,
+      "assembledPending": true
+    }
   }
 }

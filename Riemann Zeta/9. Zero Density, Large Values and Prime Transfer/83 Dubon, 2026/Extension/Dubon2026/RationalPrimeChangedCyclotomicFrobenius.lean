@@ -18,7 +18,7 @@ noncomputable section
 open Polynomial
 open scoped ValuativeRel
 
-set_option maxHeartbeats 2400000
+set_option maxHeartbeats 800000
 
 attribute [local instance] wittCyclotomicRootDomain wittCyclotomicRootDVR
   wittCyclotomicRootFinite
@@ -335,8 +335,19 @@ theorem rationalPrimeChangedCyclotomicDiagonalAlgEquiv_residue
     simpa only [map_one] using htarget
   let y : 𝒪[M] := localFieldIntegerGaloisEquiv E M g x - x ^ q
   have hyValuation : vM (y : M) < 1 := by
-    simpa only [y, map_sub, map_pow, localFieldIntegerGaloisEquiv_apply]
-      using htargetDiff
+    let ιM : 𝒪[M] →+* M := algebraMap 𝒪[M] M
+    have hAction : ιM (localFieldIntegerGaloisEquiv E M g x) = g (x : M) := by
+      simpa only [ιM] using localFieldIntegerGaloisEquiv_apply E M g x
+    have hyCoe : ιM (localFieldIntegerGaloisEquiv E M g x - x ^ q) =
+        g (x : M) - (x : M) ^ q := by
+      calc
+        ιM (localFieldIntegerGaloisEquiv E M g x - x ^ q) =
+            ιM (localFieldIntegerGaloisEquiv E M g x) - ιM (x ^ q) :=
+          ιM.map_sub _ _
+        _ = g (x : M) - (ιM x) ^ q := congrArg₂ (· - ·) hAction (ιM.map_pow x q)
+        _ = g (x : M) - (x : M) ^ q := by rfl
+    change vM (ιM (localFieldIntegerGaloisEquiv E M g x - x ^ q)) < 1
+    exact hyCoe.symm ▸ htargetDiff
   have hyMaximal : y ∈ IsLocalRing.maximalIdeal 𝒪[M] :=
     (Valuation.mem_maximalIdeal_iff (v := vM)).2 hyValuation
   have hyResidue : IsLocalRing.residue 𝒪[M] y = 0 :=

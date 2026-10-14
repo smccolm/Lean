@@ -6576,6 +6576,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldArithmeticFrobeniusEquiv.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldArithmeticFrobeniusPowers.lean",
       "role": "Extension"
     },
@@ -10028,6 +10032,18 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicClosureReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicClosureFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicClosureReciprocityAction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicCompositum.lean",
       "role": "Extension"
     },
@@ -12758,6 +12774,18 @@
     {
       "path": "run_dubon_build.bat",
       "role": "root"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicClosureNaturalAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeOriginalCyclotomicNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicClosureNaturalUnitAction.lean",
+      "role": "Extension"
     }
   ],
   "statusDocuments": [
@@ -15780,7 +15808,14 @@
     "RationalPrimeChangedCyclotomicLocalField",
     "LocalFieldAmbientUniformizer",
     "RationalPrimeChangedCyclotomicUniformizer",
-    "RationalPrimeChangedCyclotomicFrobenius"
+    "RationalPrimeChangedCyclotomicFrobenius",
+    "LocalFieldArithmeticFrobeniusEquiv",
+    "RationalPrimeChangedCyclotomicClosureReciprocity",
+    "RationalPrimeChangedCyclotomicClosureFrobenius",
+    "RationalPrimeChangedCyclotomicClosureReciprocityAction",
+    "RationalPrimeChangedCyclotomicClosureNaturalAction",
+    "RationalPrimeOriginalCyclotomicNorm",
+    "RationalPrimeChangedCyclotomicClosureNaturalUnitAction"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

@@ -26,6 +26,8 @@ attribute [local instance] rationalPrimeWittPrime wittCyclotomicRootDomain
   rationalPrimeWittCyclotomicModule rationalPrimeWittCyclotomicMulAction
   rationalPrimeChangedIntegralRootDomain rationalPrimeChangedIntegralRootDVR
 
+/-- The integer ring of the original rational local field acts on the explicit
+Witt cyclotomic root algebra through the already constructed Witt embedding. -/
 local instance rationalPrimeCyclotomicRootIntegerAlgebra
     (p : ℕ) (hp : p.Prime) (n : ℕ) :
     Algebra 𝒪[rationalPrimeLocalField p hp]
@@ -66,6 +68,8 @@ theorem rationalPrimeChangedIntegralPolynomial_ambient_aeval
   rw [primeChangedPrimitivePolynomial_map]
   simpa only [q, v, map_mul, map_natCast, rationalPrimePlace_natGenerator] using h
 
+/-- The changed integral root algebra maps to the explicit Witt cyclotomic DVR
+by sending its root to the constructed changed cyclotomic point. -/
 def rationalPrimeChangedIntegralRootAmbientAlgHom
     (p : ℕ) (hp : p.Prime) (n a : ℕ)
     (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a) :
@@ -180,11 +184,11 @@ theorem rationalPrimeChangedIntegralRootAmbientAlgHom_field
     rw [rationalPrimeChangedIntegralRootAlgHom_root]
     rfl
 
+/-- The integer ring of the changed auxiliary local field embeds into the
+explicit Witt cyclotomic DVR through its monic-root presentation. -/
 def rationalPrimeChangedAuxiliaryIntegerAmbientMap
     (p : ℕ) (hp : p.Prime) (n a : ℕ)
     (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
-    [FiniteDimensional (rationalPrimeLocalField p hp)
-      (rationalPrimeChangedAuxiliaryField p hp n u)]
     [ValuativeRel (rationalPrimeChangedAuxiliaryField p hp n u)]
     [TopologicalSpace (rationalPrimeChangedAuxiliaryField p hp n u)]
     [IsNonarchimedeanLocalField (rationalPrimeChangedAuxiliaryField p hp n u)]

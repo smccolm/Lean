@@ -4432,4 +4432,321 @@ theorem actual_changed_cyclotomic_frobenius_chain_source
       p hp n a b u hu ha hcoprimeA hcoprimeB hab⟩
 
 end
+open scoped ValuativeRel
+set_option maxHeartbeats 800000
+set_option synthInstance.maxHeartbeats 200000
+/-- Exact original-object consumer of the closure-level norm-uniformizer reciprocity endpoint. -/
+theorem actual_changed_cyclotomic_closure_reciprocity_norm_uniformizer_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n a : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    [FiniteDimensional (rationalPrimeLocalField p hp)
+      (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [ValuativeRel (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha))]
+    [ValuativeRel (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+    [(ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))] :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+    let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+    let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+    let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+    let algebraLM : Algebra L M := j.toRingHom.toAlgebra
+    letI : SMul L M := algebraLM.toSMul
+    letI : Algebra L M := algebraLM
+    letI : IsScalarTower K L M := IsScalarTower.of_algHom j
+    letI : IsScalarTower L M Ω := IsScalarTower.of_algebraMap_eq' rfl
+    letI : IsCyclic Gal(L/K) :=
+      rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits E Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits E Ω) := ⟨rfl⟩
+    ∃ θE : 𝒪[E], ∃ hθE : Irreducible θE,
+      ∃ (_ : Algebra.FormallyUnramified 𝒪[E] 𝒪[M]),
+        Algebra.norm K (-algebraMap 𝒪[E] E θE) = (a : K) * p ∧
+        (localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (Units.map (Algebra.norm K (S := E))
+            (Units.mk0 (-algebraMap 𝒪[E] E θE)
+              (by intro h; exact hθE.ne_zero (Subtype.ext (neg_eq_zero.mp h))))))).toMul =
+          galoisBaseChangeRestriction K E L M (localFieldArithmeticFrobenius E M) :=
+  rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer p hp hp2 n a u hu ha
+
+/-- Exact original-object consumer of arithmetic Frobenius transport through compatible local-field tower equivalences. -/
+theorem actual_local_field_arithmetic_frobenius_equiv_source
+    {K E₀ M₀ E M : Type}
+    [Field K] [Field E₀] [Field M₀] [Field E] [Field M]
+    [Algebra K E₀] [Algebra K M₀] [Algebra E₀ M₀]
+    [Algebra K E] [Algebra K M] [Algebra E M]
+    [IsGalois E₀ M₀] [IsGalois E M]
+    [ValuativeRel K] [ValuativeRel E₀] [ValuativeRel M₀]
+    [ValuativeRel E] [ValuativeRel M]
+    [TopologicalSpace K] [TopologicalSpace E₀] [TopologicalSpace M₀]
+    [TopologicalSpace E] [TopologicalSpace M]
+    [IsNonarchimedeanLocalField K] [IsNonarchimedeanLocalField E₀]
+    [IsNonarchimedeanLocalField M₀] [IsNonarchimedeanLocalField E]
+    [IsNonarchimedeanLocalField M]
+    [(ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation E₀)]
+    [(ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation M₀)]
+    [(ValuativeRel.valuation E₀).HasExtension (ValuativeRel.valuation M₀)]
+    [(ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation E)]
+    [(ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation M)]
+    [(ValuativeRel.valuation E).HasExtension (ValuativeRel.valuation M)]
+    [Algebra.FormallyUnramified 𝒪[E₀] 𝒪[M₀]]
+    [Algebra.FormallyUnramified 𝒪[E] 𝒪[M]]
+    (eE : E₀ ≃ₐ[K] E) (eM : M₀ ≃ₐ[K] M)
+    (hcompat : ∀ z : E₀,
+      eM (algebraMap E₀ M₀ z) = algebraMap E M (eE z)) :
+    localFieldGaloisConjugate eE eM hcompat
+        (localFieldArithmeticFrobenius E₀ M₀) =
+      localFieldArithmeticFrobenius E M :=
+  localFieldArithmeticFrobenius_conjugate eE eM hcompat
+
+/-- Exact original-object consumer of the inverse-unit Frobenius action on the actual closure root. -/
+theorem actual_changed_cyclotomic_closure_frobenius_root_source
+    (p : ℕ) (hp : p.Prime) (n a b : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    (hcoprimeA : a.Coprime
+      ((Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)))
+    (hcoprimeB : b.Coprime
+      ((Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)))
+    (hab : a * b ≡ 1 [MOD
+      (Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)])
+    [FiniteDimensional (rationalPrimeLocalField p hp)
+      (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [ValuativeRel (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha))]
+    [ValuativeRel (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+    [(ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+    [Algebra.FormallyUnramified
+      𝒪[rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha]
+      𝒪[rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha]] :
+    localFieldArithmeticFrobenius
+        (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)
+        (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)
+        (rationalPrimeChangedCyclotomicClosureRoot p hp n a u hu ha) =
+      (rationalPrimeChangedCyclotomicClosureRoot p hp n a u hu ha) ^ b :=
+  rationalPrimeChangedCyclotomicClosureFrobenius_root
+    p hp n a b u hu ha hcoprimeA hcoprimeB hab
+
+/-- Exact original-object consumer of ramified norm-uniformizer reciprocity on the actual closure root. -/
+theorem actual_changed_cyclotomic_closure_reciprocity_root_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n a b : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    (hcoprimeA : a.Coprime
+      ((Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)))
+    (hcoprimeB : b.Coprime
+      ((Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)))
+    (hab : a * b ≡ 1 [MOD
+      (Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)])
+    [FiniteDimensional (rationalPrimeLocalField p hp)
+      (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [ValuativeRel (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha))]
+    [ValuativeRel (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+    [(ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))] :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+    let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+    let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+    let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+    let algebraLM : Algebra L M := j.toRingHom.toAlgebra
+    letI : SMul L M := algebraLM.toSMul
+    letI : Algebra L M := algebraLM
+    letI : IsScalarTower K L M := IsScalarTower.of_algHom j
+    letI : IsScalarTower L M Ω := IsScalarTower.of_algebraMap_eq' rfl
+    letI : IsCyclic Gal(L/K) :=
+      rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits E Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits E Ω) := ⟨rfl⟩
+    ∃ θE : 𝒪[E], ∃ hθE : Irreducible θE,
+      ∃ (_ : Algebra.FormallyUnramified 𝒪[E] 𝒪[M]),
+        Algebra.norm K (-algebraMap 𝒪[E] E θE) = (a : K) * p ∧
+        (localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (Units.map (Algebra.norm K (S := E))
+            (Units.mk0 (-algebraMap 𝒪[E] E θE)
+              (by intro h; exact hθE.ne_zero (Subtype.ext (neg_eq_zero.mp h))))))).toMul
+            (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+          (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ b :=
+  rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer_root
+    p hp hp2 n a b u hu ha hcoprimeA hcoprimeB hab
+
+/-- Exact original-object consumer of the closure reciprocity action with all
+natural-unit, inverse-exponent, and local-structure witnesses constructed. -/
+theorem actual_natural_changed_cyclotomic_closure_reciprocity_root_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n a : ℕ) (ha : ¬p ∣ a) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let q := Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)
+    ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b : ℕ,
+      a.Coprime (q ^ (n + 1)) ∧ b.Coprime (q ^ (n + 1)) ∧
+      a * b ≡ 1 [MOD q ^ (n + 1)] ∧
+      let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+      let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+      ∃ (_ : FiniteDimensional K E) (_ : ValuativeRel E)
+        (_ : TopologicalSpace E) (_ : IsNonarchimedeanLocalField E)
+        (_ : (ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation E))
+        (_ : ValuativeRel M) (_ : TopologicalSpace M)
+        (_ : IsNonarchimedeanLocalField M)
+        (_ : (ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation M))
+        (_ : (ValuativeRel.valuation E).HasExtension (ValuativeRel.valuation M)),
+        let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+        let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+        let algebraLM : Algebra L M := j.toRingHom.toAlgebra
+        letI : SMul L M := algebraLM.toSMul
+        letI : Algebra L M := algebraLM
+        letI : IsScalarTower K L M := IsScalarTower.of_algHom j
+        letI : IsScalarTower L M Ω := IsScalarTower.of_algebraMap_eq' rfl
+        letI : IsCyclic Gal(L/K) :=
+          rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits E Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits E Ω) := ⟨rfl⟩
+        ∃ θE : 𝒪[E], Irreducible θE ∧
+          ∃ (_ : Algebra.FormallyUnramified 𝒪[E] 𝒪[M]),
+            Algebra.norm K (-algebraMap 𝒪[E] E θE) = (a : K) * p ∧
+            (localFieldFiniteCyclicReciprocity K Ω L
+              (Additive.ofMul (rationalPrimeNaturalMulPrimeUnit p hp a ha))).toMul
+                (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+              (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ b :=
+  rationalPrimeNaturalChangedCyclotomicClosure_reciprocity_root p hp hp2 n a ha
+
+/-- Exact original-object consumer of the literal natural-unit reciprocity
+action on the actual closure prime-power root. -/
+theorem actual_changed_cyclotomic_closure_reciprocity_natural_root_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n a b : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    (hcoprimeA : a.Coprime
+      ((Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)))
+    (hcoprimeB : b.Coprime
+      ((Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)))
+    (hab : a * b ≡ 1 [MOD
+      (Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)) ^ (n + 1)])
+    [FiniteDimensional (rationalPrimeLocalField p hp)
+      (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [ValuativeRel (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha))]
+    [ValuativeRel (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+    [(ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))] :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+    let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+    let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+    let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+    let algebraLM : Algebra L M := j.toRingHom.toAlgebra
+    letI : SMul L M := algebraLM.toSMul
+    letI : Algebra L M := algebraLM
+    letI : IsScalarTower K L M := IsScalarTower.of_algHom j
+    letI : IsScalarTower L M Ω := IsScalarTower.of_algebraMap_eq' rfl
+    letI : IsCyclic Gal(L/K) :=
+      rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits E Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits E Ω) := ⟨rfl⟩
+    (localFieldFiniteCyclicReciprocity K Ω L
+      (Additive.ofMul (rationalPrimeNaturalUnit p hp a ha))).toMul
+        (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+      (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ b := by
+  dsimp only
+  let K := rationalPrimeLocalField p hp
+  let Ω := rationalPrimeLocalClosure p hp
+  let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+  let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+  let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+  let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+  let algebraLM : Algebra L M := j.toRingHom.toAlgebra
+  letI : SMul L M := algebraLM.toSMul
+  letI : Algebra L M := algebraLM
+  letI : IsScalarTower K L M := IsScalarTower.of_algHom j
+  letI : IsScalarTower L M Ω := IsScalarTower.of_algebraMap_eq' rfl
+  letI : IsCyclic Gal(L/K) :=
+    rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+  letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+  letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+  letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits E Ω) := ⊥
+  letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits E Ω) := ⟨rfl⟩
+  obtain ⟨_θE, _hθE, _hunramified, _hnorm, haction⟩ :=
+    rationalPrimeChangedCyclotomicClosure_reciprocity_natural_root
+      p hp hp2 n a b u hu ha hcoprimeA hcoprimeB hab
+  exact haction
+
+
+/-- Exact original-object consumer of the literal natural-unit action with every
+natural-unit, inverse-exponent, and local-structure witness constructed. -/
+theorem actual_natural_unit_changed_cyclotomic_closure_reciprocity_root_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n a : ℕ) (ha : ¬p ∣ a) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let q := Rat.HeightOneSpectrum.natGenerator (rationalPrimePlace p hp)
+    ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b : ℕ,
+      a.Coprime (q ^ (n + 1)) ∧ b.Coprime (q ^ (n + 1)) ∧
+      a * b ≡ 1 [MOD q ^ (n + 1)] ∧
+      let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+      let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+      ∃ (_ : FiniteDimensional K E) (_ : ValuativeRel E)
+        (_ : TopologicalSpace E) (_ : IsNonarchimedeanLocalField E)
+        (_ : (ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation E))
+        (_ : ValuativeRel M) (_ : TopologicalSpace M)
+        (_ : IsNonarchimedeanLocalField M)
+        (_ : (ValuativeRel.valuation K).HasExtension (ValuativeRel.valuation M))
+        (_ : (ValuativeRel.valuation E).HasExtension (ValuativeRel.valuation M)),
+        let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+        let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+        let algebraLM : Algebra L M := j.toRingHom.toAlgebra
+        letI : SMul L M := algebraLM.toSMul
+        letI : Algebra L M := algebraLM
+        letI : IsScalarTower K L M := IsScalarTower.of_algHom j
+        letI : IsScalarTower L M Ω := IsScalarTower.of_algebraMap_eq' rfl
+        letI : IsCyclic Gal(L/K) :=
+          rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits E Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits E Ω) := ⟨rfl⟩
+        ∃ θE : 𝒪[E], Irreducible θE ∧
+          ∃ (_ : Algebra.FormallyUnramified 𝒪[E] 𝒪[M]),
+            Algebra.norm K (-algebraMap 𝒪[E] E θE) = (a : K) * p ∧
+            (localFieldFiniteCyclicReciprocity K Ω L
+              (Additive.ofMul (rationalPrimeNaturalUnit p hp a ha))).toMul
+                (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+              (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ b :=
+  rationalPrimeNaturalUnitChangedCyclotomicClosure_reciprocity_root p hp hp2 n a ha
 end Dubon2026.SemanticRegression
