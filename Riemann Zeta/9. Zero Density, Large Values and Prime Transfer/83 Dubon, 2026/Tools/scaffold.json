@@ -1564,6 +1564,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/AdicContractingAdditiveEquation.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/AdicMatrixIdempotentLifting.lean",
       "role": "Extension"
     },
@@ -1581,6 +1585,10 @@
     },
     {
       "path": "Extension/Dubon2026/AdicResidualProfiniteKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AdicRootPowerEvaluation.lean",
       "role": "Extension"
     },
     {
@@ -1708,6 +1716,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicFrobeniusCharacter.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticCyclotomicH2FiniteStage.lean",
       "role": "Extension"
     },
@@ -1720,7 +1732,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicLocalFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicLocalUnramified.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicReciprocityAwayConductor.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticCyclotomicRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicUnramifiedReciprocity.lean",
       "role": "Extension"
     },
     {
@@ -1732,11 +1760,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ArithmeticFiniteCarryInvariant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ArithmeticFiniteInvariantSum.lean",
       "role": "Extension"
     },
     {
       "path": "Extension/Dubon2026/ArithmeticFiniteInvariantSumComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteLocalCyclicity.lean",
       "role": "Extension"
     },
     {
@@ -1793,6 +1829,22 @@
     },
     {
       "path": "Extension/Dubon2026/ArithmeticH2UnramifiedRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticKummerCyclicCarry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticKummerCyclicFiniteStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticKummerCyclicH2Stage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticKummerUnitH2FiniteStage.lean",
       "role": "Extension"
     },
     {
@@ -1973,6 +2025,10 @@
     },
     {
       "path": "Extension/Dubon2026/ArithmeticUnframedOrdinaryUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnitH2BaseChange.lean",
       "role": "Extension"
     },
     {
@@ -2752,6 +2808,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousCarryCorestriction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousCharacterBidualCup.lean",
       "role": "Extension"
     },
@@ -3068,6 +3128,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/ContinuousGaloisH2TorsionFiniteStage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ContinuousGaloisKummerClasses.lean",
       "role": "Extension"
     },
@@ -3369,6 +3433,14 @@
     },
     {
       "path": "Extension/Dubon2026/CoprimeWeightSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetCarryProjectionHomotopy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetCarryProjectionTerms.lean",
       "role": "Extension"
     },
     {
@@ -4141,6 +4213,10 @@
     },
     {
       "path": "Extension/Dubon2026/FiniteBasisAdicCompleteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCharacterBaseRestrictionInflation.lean",
       "role": "Extension"
     },
     {
@@ -5008,7 +5084,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/GaloisCarryNormCorestriction.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/GaloisCharacterKummerInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisCosetUnitNorm.lean",
       "role": "Extension"
     },
     {
@@ -5509,6 +5593,18 @@
     },
     {
       "path": "Extension/Dubon2026/GeometricSemanticRegression.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GlobalCohomologySemanticRegression.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GlobalNormSemanticRegression.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GlobalReciprocitySemanticRegression.lean",
       "role": "Extension"
     },
     {
@@ -6472,6 +6568,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldAmbientUniformizer.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldArithmeticFrobenius.lean",
       "role": "Extension"
     },
@@ -6500,7 +6600,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldBaseChangedCarryInvariant.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldCarryInvariantBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCarryNormInvariant.lean",
       "role": "Extension"
     },
     {
@@ -6588,6 +6696,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldFiniteCyclicReciprocityNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldFiniteCyclicReciprocityTower.lean",
       "role": "Extension"
     },
@@ -6629,6 +6741,18 @@
     },
     {
       "path": "Extension/Dubon2026/LocalFieldFrobeniusBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFrobeniusCharacterImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFrobeniusFieldRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFrobeniusUnitRoots.lean",
       "role": "Extension"
     },
     {
@@ -6760,6 +6884,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/LocalFieldNormedUniformizerReciprocity.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/LocalFieldOpenLattice.lean",
       "role": "Extension"
     },
@@ -6825,6 +6953,10 @@
     },
     {
       "path": "Extension/Dubon2026/LocalFieldRootH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldRootIntegerUnit.lean",
       "role": "Extension"
     },
     {
@@ -7504,6 +7636,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/MonicEisensteinRootDVR.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/MonicResidueIrreducibleDVR.lean",
       "role": "Extension"
     },
@@ -7820,6 +7956,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OddPrimeCyclotomicGaloisNontrivial.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OrbitProbability.lean",
       "role": "Extension"
     },
@@ -8032,6 +8172,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalCyclicContinuousH2CarryRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalCyclicGaloisH2CarryRepresentatives.lean",
       "role": "Extension"
     },
@@ -8041,6 +8185,10 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalCyclicNormIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclotomicContinuousH2Descent.lean",
       "role": "Extension"
     },
     {
@@ -8104,7 +8252,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalFiniteGaloisImageInflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteGaloisStageLift.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalFiniteH2BaseChangeDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteH2ContinuousDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteH2ContinuousInflation.lean",
       "role": "Extension"
     },
     {
@@ -8153,6 +8317,10 @@
     },
     {
       "path": "Extension/Dubon2026/OriginalFullIdeleCohomologySequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGaloisCosetNorm.lean",
       "role": "Extension"
     },
     {
@@ -8864,6 +9032,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/OriginalUnramifiedCyclicH2Stage.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/OriginalUnramifiedCyclotomicPowerRoots.lean",
       "role": "Extension"
     },
@@ -9048,7 +9220,19 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PowerBasisNegativeGeneratorNorm.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PowerIntegralAsymptotics.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PowerSeriesFiniteCoefficientSubstitution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PowerSeriesLinearSubstitution.lean",
       "role": "Extension"
     },
     {
@@ -9068,7 +9252,23 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimeChangedDivisionPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeChangedPolynomialMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeChangedPrimitiveEisenstein.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimeCharacterConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeConstantRootIdeal.lean",
       "role": "Extension"
     },
     {
@@ -9104,6 +9304,10 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimePowerCyclotomicEisenstein.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimeRootUnitCharacters.lean",
       "role": "Extension"
     },
@@ -9116,7 +9320,51 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/PrimeToResidueRootUniqueness.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/PrimeTorus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittCoefficientEquation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittDefectCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittFrobeniusRotation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittIntertwinerFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittIntertwinerInverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittNaturalIntertwining.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittNaturalSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittSemilinearDefect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeWittUniformizerSeries.lean",
       "role": "Extension"
     },
     {
@@ -9736,7 +9984,15 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalFinitePrimeProduct.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalFiniteValuationBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalFiniteValuationUniqueness.lean",
       "role": "Extension"
     },
     {
@@ -9752,7 +10008,51 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalNormalizedPrimeProduct.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalPrimeArithmeticRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedAuxiliaryField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedAuxiliaryFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedAuxiliaryLocalField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicCompositum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicLocalField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedIntegralRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedPrimitiveEquation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeChangedRootAuxiliaryMap.lean",
       "role": "Extension"
     },
     {
@@ -9784,7 +10084,35 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/RationalPrimeFrobeniusFieldRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeHigherWittCoefficient.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/RationalPrimeLocalizedIntegerUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeNaturalWittIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeNaturalWittNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeNormalizedValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeOriginalResidueCard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeOriginalUniformizer.lean",
       "role": "Extension"
     },
     {
@@ -9813,6 +10141,26 @@
     },
     {
       "path": "Extension/Dubon2026/RationalPrimeTrivialCharacterDualPerfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeWittCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeWittCyclotomicAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeWittFixedField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeWittFixedRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeWittFractionField.lean",
       "role": "Extension"
     },
     {
@@ -11712,6 +12060,74 @@
       "role": "Extension"
     },
     {
+      "path": "Extension/Dubon2026/WittCyclotomicChangedIterates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicChangedMinpoly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicChangedNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicChangedPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicChangedUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicCoefficientFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicDiagonalCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicDiagonalField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicDiagonalFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicFractionField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicIntertwinerEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicNaturalIntertwining.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicPowerAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicPrimitiveRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicRootAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/WittCyclotomicRootDVR.lean",
+      "role": "Extension"
+    },
+    {
       "path": "Extension/Dubon2026/ZModAdditionCarry.lean",
       "role": "Extension"
     },
@@ -12108,6 +12524,10 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/arithmetic-cyclic-carry-route-20261013.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/arithmetic-local-support-route-20261012.json",
       "role": "Tools"
     },
@@ -12120,7 +12540,31 @@
       "role": "Tools"
     },
     {
+      "path": "Tools/carry-norm-reciprocity-route-20261013.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/changed-auxiliary-local-route-20261013.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/changed-cyclotomic-compositum-route-20261013.json",
+      "role": "Tools"
+    },
+    {
       "path": "Tools/continuous-duality-comparison-route-20261012.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cyclotomic-changed-norm-route-20261013.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cyclotomic-prime-product-route-20261013.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/diagonal-auxiliary-dvr-route-20261013.json",
       "role": "Tools"
     },
     {
@@ -12249,6 +12693,10 @@
     },
     {
       "path": "Tools/scaffold.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/semilinear-uniformizer-route-20261013.json",
       "role": "Tools"
     },
     {
@@ -15231,7 +15679,108 @@
     "OriginalCompletionCarryLocalization",
     "LocalFieldOriginalCarryInvariant",
     "OriginalFiniteGaloisImage",
-    "OriginalCompletionCarryInvariant"
+    "OriginalCompletionCarryInvariant",
+    "ContinuousGaloisH2TorsionFiniteStage",
+    "ArithmeticKummerUnitH2FiniteStage",
+    "OriginalFiniteGaloisStageLift",
+    "OriginalFiniteH2ContinuousInflation",
+    "OriginalFiniteH2ContinuousDescent",
+    "OriginalCyclotomicContinuousH2Descent",
+    "OriginalUnramifiedCyclicH2Stage",
+    "ArithmeticKummerCyclicH2Stage",
+    "ArithmeticUnitH2BaseChange",
+    "ArithmeticFiniteLocalCyclicity",
+    "OriginalFiniteGaloisImageInflation",
+    "ArithmeticKummerCyclicFiniteStage",
+    "LocalFieldBaseChangedCarryInvariant",
+    "ArithmeticFiniteCarryInvariant",
+    "OriginalCyclicContinuousH2CarryRepresentatives",
+    "OddPrimeCyclotomicGaloisNontrivial",
+    "ArithmeticKummerCyclicCarry",
+    "CosetCarryProjectionTerms",
+    "CosetCarryProjectionHomotopy",
+    "ContinuousCarryCorestriction",
+    "OriginalGaloisCosetNorm",
+    "GaloisCosetUnitNorm",
+    "GaloisCarryNormCorestriction",
+    "LocalFieldCarryNormInvariant",
+    "FiniteCharacterBaseRestrictionInflation",
+    "LocalFieldFiniteCyclicReciprocityNorm",
+    "PrimeToResidueRootUniqueness",
+    "LocalFieldFrobeniusUnitRoots",
+    "LocalFieldRootIntegerUnit",
+    "LocalFieldFrobeniusFieldRoots",
+    "RationalPrimeOriginalResidueCard",
+    "RationalPrimeFrobeniusFieldRoots",
+    "ArithmeticCyclotomicLocalUnramified",
+    "ArithmeticCyclotomicLocalFrobenius",
+    "ArithmeticCyclotomicFrobeniusCharacter",
+    "LocalFieldFrobeniusCharacterImage",
+    "ArithmeticCyclotomicUnramifiedReciprocity",
+    "ArithmeticCyclotomicReciprocityAwayConductor",
+    "RationalPrimeOriginalUniformizer",
+    "RationalPrimeNormalizedValuation",
+    "RationalFiniteValuationUniqueness",
+    "RationalFinitePrimeProduct",
+    "RationalNormalizedPrimeProduct",
+    "LocalFieldNormedUniformizerReciprocity",
+    "PrimeWittFrobeniusRotation",
+    "RationalPrimeWittCoefficient",
+    "AdicContractingAdditiveEquation",
+    "PrimeWittCoefficientEquation",
+    "RationalPrimeHigherWittCoefficient",
+    "PrimeWittUniformizerSeries",
+    "PrimeWittSemilinearDefect",
+    "PowerSeriesFiniteCoefficientSubstitution",
+    "PrimeWittDefectCorrection",
+    "PrimeWittIntertwiner",
+    "PrimeWittIntertwinerInverse",
+    "PowerSeriesLinearSubstitution",
+    "PrimeWittNaturalSeries",
+    "PrimeWittIntertwinerFrobenius",
+    "RationalPrimeNaturalWittIntertwiner",
+    "RationalPrimeWittFixedRing",
+    "RationalPrimeWittFractionField",
+    "RationalPrimeWittFixedField",
+    "PrimePowerCyclotomicEisenstein",
+    "WittCyclotomicRootAlgebra",
+    "AdicRootPowerEvaluation",
+    "WittCyclotomicEvaluation",
+    "WittCyclotomicIntertwinerEvaluation",
+    "WittCyclotomicPrimitiveRoot",
+    "PrimeWittNaturalIntertwining",
+    "PrimeChangedDivisionPolynomial",
+    "WittCyclotomicNaturalIntertwining",
+    "PrimeChangedPrimitiveEisenstein",
+    "WittCyclotomicChangedIterates",
+    "WittCyclotomicChangedPrimitive",
+    "WittCyclotomicFractionField",
+    "WittCyclotomicChangedMinpoly",
+    "WittCyclotomicChangedNorm",
+    "RationalPrimeNaturalWittNorm",
+    "WittCyclotomicPowerAction",
+    "WittCyclotomicCoefficientFrobenius",
+    "WittCyclotomicDiagonalFrobenius",
+    "WittCyclotomicDiagonalField",
+    "PrimeChangedPolynomialMap",
+    "RationalPrimeWittCyclotomicAlgebra",
+    "RationalPrimeChangedPrimitiveEquation",
+    "PowerBasisNegativeGeneratorNorm",
+    "RationalPrimeChangedAuxiliaryField",
+    "WittCyclotomicDiagonalCoefficients",
+    "RationalPrimeChangedAuxiliaryFrobenius",
+    "PrimeConstantRootIdeal",
+    "MonicEisensteinRootDVR",
+    "WittCyclotomicRootDVR",
+    "WittCyclotomicChangedUniformizer",
+    "RationalPrimeChangedIntegralRoot",
+    "RationalPrimeChangedRootAuxiliaryMap",
+    "RationalPrimeChangedAuxiliaryLocalField",
+    "RationalPrimeChangedCyclotomicCompositum",
+    "RationalPrimeChangedCyclotomicLocalField",
+    "LocalFieldAmbientUniformizer",
+    "RationalPrimeChangedCyclotomicUniformizer",
+    "RationalPrimeChangedCyclotomicFrobenius"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",
@@ -15241,6 +15790,9 @@
     "LocalInvariantSemanticRegression",
     "LocalDualitySemanticRegression",
     "ArithmeticDualitySemanticRegression",
+    "GlobalNormSemanticRegression",
+    "GlobalCohomologySemanticRegression",
+    "GlobalReciprocitySemanticRegression",
     "SemanticRegression",
     "Audit"
   ]

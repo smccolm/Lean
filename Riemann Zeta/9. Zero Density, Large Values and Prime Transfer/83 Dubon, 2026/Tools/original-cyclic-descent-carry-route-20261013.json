@@ -1,6 +1,6 @@
 {
   "serves": "DUB-17 literal primitiveSymmetricLFunction higher continuation: constructed actual cyclic killing -> exact cyclic descent preserving original torsion -> actual base-unit carry representatives and literal completion character pairing -> cyclotomic principal product -> actual odd-prime arithmetic invariant sum-zero -> normalized global class invariant and global duality for actual local deformation conditions -> numerical Selmer -> patching, automorphy, potential automorphy and descent. Original modular Galois association, local compatibility and upstream purity remain separate required obligations.",
-  "remaining": "Exact-consumer and full production acceptance remain pending. The arithmetic continuous finite-stage cyclic descent consumer, the cyclotomic principal product with the correctly normalized ramified local formula, comparison with the original arithmetic local restriction maps, and actual arithmetic invariant sum-zero remain open. Global duality for actual local deformation conditions, numerical Selmer, automorphy, separate modular association/local compatibility/upstream purity and literal DUB17-20 remain open.",
+  "remaining": "The connected original cyclic-descent and completion-carry increment has passed exact-consumer and full production verification. The arithmetic continuous finite-stage cyclic descent consumer, the cyclotomic principal product with the correctly normalized ramified local formula, comparison with the original arithmetic local restriction maps, and actual arithmetic invariant sum-zero remain open. Global duality for actual local deformation conditions, numerical Selmer, automorphy, separate modular association/local compatibility/upstream purity and literal DUB17-20 remain open.",
   "reuse": "Reused actual finite H2 inflation-restriction and injective inflation, the fully constructed original cyclic killing stage, original continuous/discrete H2 equivalence, literal completion localization and completed scalar embeddings, and the proved normalized finite cyclic local reciprocity character pairing. Existing cyclic global period bijectivity would require a finite global norm quotient; an explicit coboundary supplies the shorter valid carry comparison without that assumption. No alternative completion or idele model, global class-H2 limit, source asset, pin or resource increase.",
   "routeAdjustment": "Continue Milne CFT VII7-8 before VIII4. The odd-prime rational branch needs actual cyclic descent and literal character pairing before the cyclotomic principal product. Retained NYLL finite-place and principal-product files need an exact convention comparison: positive arithmetic Frobenius is already proved here, so no ramified formula is inferred merely from equality of norm kernels. Defer general class-H2 limits and broad local transport infrastructure until the required sum-zero dependency needs them.",
   "next": "Assemble the original arithmetic continuous finite-stage cyclic descent consumer. Prove the actual cyclotomic principal product, including its ramified local normalization, and identify the original arithmetic local maps with the proved completion pairing. Then prove the original arithmetic invariant sum-zero before global class-invariant/duality construction.",
@@ -14,7 +14,7 @@
   ],
   "date": "2026-10-13",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "status": "Focused production and ten original-root exact consumers/all16 linters PASS; full assembled and sequential verification pending.",
+  "status": "Assembled and sequential foundation/paper verification PASS: actual exits0 consumed, zero diagnostics, all eight regressions, both dependency audits and all sixteen linters.",
   "mathematics": "The existing exact original finite inflation-restriction sequence turns actual base-change killing into a descended class whose original annihilator is preserved by injective inflation. Applied to the constructed cyclotomic killing stage, this gives an actual cyclic class with identical inflation in the literal compositum, retaining both fields and that compositum inside the original unramified union. An explicit partial cochain changes every original cyclic two-cocycle to its literal carry cocycle; generator-column detection proves the identity and actual fixed-field descent supplies a base-field unit. No finite global norm-quotient assumption is used. Original completion localization sends that carry class to the carry of the literal restricted character and the embedded original base unit. Actual continuous inflation factors through its constructed finite image in the same local closure. The original field/image equivalence supplies its scalar towers, and injective completion restriction derives cyclicity from the original cyclic global extension. The existing normalized local reciprocity character pairing therefore evaluates the original completion invariant of the same original global carry class.",
   "discharged": "The existing exact original finite inflation-restriction sequence turns actual base-change killing into a descended class whose original annihilator is preserved by injective inflation. Applied to the constructed cyclotomic killing stage, this gives an actual cyclic class with identical inflation in the literal compositum, retaining both fields and that compositum inside the original unramified union. An explicit partial cochain changes every original cyclic two-cocycle to its literal carry cocycle; generator-column detection proves the identity and actual fixed-field descent supplies a base-field unit. No finite global norm-quotient assumption is used. Original completion localization sends that carry class to the carry of the literal restricted character and the embedded original base unit. Actual continuous inflation factors through its constructed finite image in the same local closure. The original field/image equivalence supplies its scalar towers, and injective completion restriction derives cyclicity from the original cyclic global extension. The existing normalized local reciprocity character pairing therefore evaluates the original completion invariant of the same original global carry class.",
   "modules": [
@@ -78,7 +78,9 @@
         "log": "originalFiniteH2BaseChangeDescent-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "86ebf28ffd13220e46d74a0f2dacadef751bfd78df1a411a20c460bafcce5b60",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "OriginalCyclotomicGlobalH2Descent",
@@ -140,7 +142,9 @@
         "log": "originalCyclotomicGlobalH2Descent-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "b6a10d96c8db84dcc2545f19e13183b98879d442c583189ad058c588a3cdfda7",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "CyclicTwoCocycleColumnDetection",
@@ -203,7 +207,9 @@
         "log": "cyclicTwoCocycleColumnDetection-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "3749b62f4051b7f5055abb4e3e652015eb7f63f9df7f2f3506ebe61f436c87a7",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "CyclicCarryPartialCochain",
@@ -268,7 +274,9 @@
         "log": "cyclicCarryPartialCochain-d.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "5752dd2a592e3fa7c0ccbfc98e7010bb1b1f7faf7466e07d5424743d08b01e92",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "CyclicTwoCocycleCarryComparison",
@@ -331,7 +339,9 @@
         "log": "cyclicTwoCocycleCarryComparison-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "8aa1781b22ee6395292e03a78cdf36bcb2797af2b9c0f0c152e508419e5242c2",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "OriginalCyclicGaloisH2CarryRepresentatives",
@@ -393,7 +403,9 @@
         "log": "originalCyclicGaloisH2CarryRepresentatives-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "f06b4e4d530c36e3ef07d86122651b4077c3367b0875563d990fde3f50505aff",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "OriginalCompletionCarryLocalization",
@@ -455,7 +467,9 @@
         "log": "originalCompletionCarryLocalization-a.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "7dd9b9e658a15bbdb1467606781e5938be6aca8daf7eac6cb0c39541324eff9f",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "LocalFieldOriginalCarryInvariant",
@@ -517,7 +531,9 @@
         "log": "localFieldOriginalCarryInvariant-b.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "f72b7b08d9ff2c454023192270e28132a0ab8b798eda48dbc573da0c9412c711",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "OriginalFiniteGaloisImage",
@@ -582,7 +598,9 @@
         "log": "originalFiniteGaloisImage-d.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "6bc2685d886b93f80ec13ba8d12c84d1a928c6eba4fb3ebf00baa7579deffeb5",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     },
     {
       "module": "OriginalCompletionCarryInvariant",
@@ -645,7 +663,9 @@
         "log": "originalCompletionCarryInvariant-d.log",
         "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
-      }
+      },
+      "productionSha256": "c1f1d50716d7d4f55a25848f3fadb778b78f6ae7959d345db57c1000b56fc1cf",
+      "status": "Fully verified in assembled2874; exact original-object consumer retained."
     }
   ],
   "preflight": {
@@ -719,5 +739,24 @@
       "sha256": "f56d17c0aee8ed04c2d4b010340a8e25d5abe0b5c8dd8b29807c04a56566e8e1",
       "status": "Frozen Apache2 licensed reference text; not an imported Lean dependency. License retained in Dependencies/NYLL-ClassFieldTheory-LICENSE.txt."
     }
-  ]
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261013_082227.log",
+    "paper": "logs/dubon-build-20261013-082708-537.log",
+    "assembledLog": "assembled2874.log",
+    "exhaustive": 20974,
+    "explicit": 10620,
+    "exactConsumers": 2241,
+    "linters": [
+      13562,
+      10532
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
 }

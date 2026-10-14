@@ -6,6 +6,9 @@ import Dubon2026.LocalFieldSemanticRegression
 import Dubon2026.LocalInvariantSemanticRegression
 import Dubon2026.LocalDualitySemanticRegression
 import Dubon2026.ArithmeticDualitySemanticRegression
+import Dubon2026.GlobalNormSemanticRegression
+import Dubon2026.GlobalCohomologySemanticRegression
+import Dubon2026.GlobalReciprocitySemanticRegression
 
 /-! Exact unfolded consumers for the currently implemented source interfaces. -/
 

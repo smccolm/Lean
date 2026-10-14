@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-13",
+  "sourceGate": "DUB-17; downstream DUB-18",
+  "mathematics": "The literal changed Eisenstein root algebra now embeds injectively into the actual finite auxiliary field, and denominator clearing proves every auxiliary-field element is a quotient from that algebra. Thus the actual auxiliary field is its genuine fraction field. The existing spectral finite-extension construction supplies an actual nonarchimedean local-field structure extending the original completion. The existing integral-closure equivalence then transports the changed root to an irreducible element of the actual auxiliary integer ring, preserves its field value, and proves that its negative has exact norm a*p.",
+  "serves": "Exact unresolved DUB-17 chain: the fraction-field theorem discharges the algebraic hypothesis of the existing local-field integer-ring equivalence; the spectral structure discharges the local-field and valuation-extension hypotheses; the transported irreducible element is the exact uniformizer input of localFieldFiniteCyclicReciprocity_norm_uniformizer. The next necessary dependency is the actual unramified compositum over this auxiliary field and its arithmetic Frobenius identification.",
+  "remaining": "The auxiliary fraction-field, spectral local-field and transported integer-uniformizer increment has passed exact-consumer and full production verification. The actual unramified compositum and Frobenius comparison, rational-unit extension, ramified inverse-unit reciprocity, principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and DUB17-20 remain open.",
+  "reuse": "Reused the existing DVR result for the literal root algebra, the actual auxiliary intermediate field and its power basis, coefficient denominator clearing for fraction fields, localFieldOriginalNorm, spectralFiniteExtension_isNonarchimedeanLocalField, spectralValuation_hasExtension, and localFieldMonicRootIntegerEquiv. No parallel local-field model or general valuation transport layer was introduced.",
+  "routeAdjustment": "Identify the already constructed auxiliary intermediate field directly as the fraction field of the proved DVR, then use the existing spectral and integral-closure APIs. This is shorter than constructing a second fraction-field model and a field equivalence. The construction is split into a spectral-structure existence theorem and an integer-uniformizer theorem to keep elaboration bounded while preserving the exact source objects.",
+  "next": "Construct the unramified extension over the actual auxiliary local field required by the ramified reciprocity diagram, embed the cyclotomic comparison field into the same algebraic closure, and identify the restricted positive arithmetic Frobenius before applying the proved norm-uniformizer reciprocity theorem.",
+  "draftRepairs": "Factored the local-field package into two exact theorems after a monolithic existential theorem exceeded deterministic elaboration limits. Replaced a concrete denominator-clearing proof that timed out with a generic fraction-ring lemma, then specialized it to the actual power-basis representation. Failed scratch logs remain non-acceptance evidence.",
+  "status": "Assembled and sequential foundation/paper verification PASS: actual exits0 consumed, zero diagnostics, all eleven regressions, both dependency audits and all sixteen linters.",
+  "modules": [
+    {
+      "module": "RationalPrimeChangedRootAuxiliaryMap",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeChangedRootAuxiliaryMap",
+        "sourceSha256": "a5f324f38343edb1f7c7bf208167ba9f622a4ed8022667278f73b717e37d87dd",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "6d63aca4a1db8fd4e4f0138b446d9ccdd4698af61cefa880b9f3febaf82ce910",
+        "scratchSetupSha256": "7b28c1c7d73943344cb93215681e66f01a9fdeb25383887d15e22eb469f175e7",
+        "log": "rational-prime-changed-root-auxiliary-map-u.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "rationalPrimeChangedIntegralPolynomial_map_original",
+        "rationalPrimeChangedAuxiliaryPoint_integral_aeval",
+        "rationalPrimeChangedIntegralRootAlgHom_root",
+        "rationalPrimeChangedAuxiliaryPoint_ne_zero",
+        "rationalPrimeChangedIntegralRootAlgHom_injective",
+        "adjoinRoot_eval_eq_div_of_fractionRing",
+        "rationalPrimeChangedIntegralRoot_div_surjective",
+        "rationalPrimeChangedAuxiliaryField_isFractionRing"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeChangedRootAuxiliaryMap",
+        "sourceSha256": "a5f324f38343edb1f7c7bf208167ba9f622a4ed8022667278f73b717e37d87dd",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedRootAuxiliaryMap.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "6d63aca4a1db8fd4e4f0138b446d9ccdd4698af61cefa880b9f3febaf82ce910",
+        "scratchSetupSha256": "7b28c1c7d73943344cb93215681e66f01a9fdeb25383887d15e22eb469f175e7",
+        "log": "rational-prime-changed-root-auxiliary-map-u.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "a5f324f38343edb1f7c7bf208167ba9f622a4ed8022667278f73b717e37d87dd",
+      "status": "Fully verified in assembled2970; exact original-object consumer retained."
+    },
+    {
+      "module": "RationalPrimeChangedAuxiliaryLocalField",
+      "receipt": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeChangedAuxiliaryLocalField",
+        "sourceSha256": "edd87eb5b87b29c2cdbaf4eb205c68a655dd4310203c3632ca2e668b8cc22e2c",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "6d63aca4a1db8fd4e4f0138b446d9ccdd4698af61cefa880b9f3febaf82ce910",
+        "scratchSetupSha256": "34d9cca69d6ed5c79d0212e185d87eaf3fd900713180e1fd481d1ba0b11d1780",
+        "log": "rational-prime-changed-auxiliary-local-field-c.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "actualExitConsumed": true,
+      "publicTheorems": [
+        "rationalPrimeChangedAuxiliary_exists_local_structure",
+        "rationalPrimeChangedAuxiliary_exists_integer_uniformizer"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeChangedAuxiliaryLocalField",
+        "sourceSha256": "edd87eb5b87b29c2cdbaf4eb205c68a655dd4310203c3632ca2e668b8cc22e2c",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedAuxiliaryLocalField.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "6d63aca4a1db8fd4e4f0138b446d9ccdd4698af61cefa880b9f3febaf82ce910",
+        "scratchSetupSha256": "34d9cca69d6ed5c79d0212e185d87eaf3fd900713180e1fd481d1ba0b11d1780",
+        "log": "rational-prime-changed-auxiliary-local-field-c.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed."
+      },
+      "productionSha256": "edd87eb5b87b29c2cdbaf4eb205c68a655dd4310203c3632ca2e668b8cc22e2c",
+      "status": "Fully verified in assembled2970; exact original-object consumer retained."
+    }
+  ],
+  "consumers": [
+    {
+      "module": "RationalPrimeChangedRootAuxiliaryMap",
+      "consumer": "rationalPrimeChangedAuxiliaryField_isFractionRing",
+      "consumerName": "actual_changed_auxiliary_local_rationalPrimeChangedAuxiliaryField_isFractionRing_source"
+    },
+    {
+      "module": "RationalPrimeChangedAuxiliaryLocalField",
+      "consumer": "rationalPrimeChangedAuxiliary_exists_local_structure",
+      "consumerName": "actual_changed_auxiliary_local_rationalPrimeChangedAuxiliary_exists_local_structure_source"
+    },
+    {
+      "module": "RationalPrimeChangedAuxiliaryLocalField",
+      "consumer": "rationalPrimeChangedAuxiliary_exists_integer_uniformizer",
+      "consumerName": "actual_changed_auxiliary_local_rationalPrimeChangedAuxiliary_exists_integer_uniformizer_source"
+    }
+  ],
+  "preflight": {
+    "kind": "isolated direct pinned Lean draft check only",
+    "module": "FutureChangedAuxiliaryLocalConsumers",
+    "sourceSha256": "7208a7a3827d4fc2dddecaf4031346bc49bc54d3b957cba15c35389b2934fc9d",
+    "command": [
+      "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+      "-DautoImplicit=false",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedAuxiliaryLocalConsumers.lean",
+      "-o",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedAuxiliaryLocalConsumers.olean",
+      "-i",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedAuxiliaryLocalConsumers.ilean",
+      "--setup",
+      "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedAuxiliaryLocalConsumers.setup.json"
+    ],
+    "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+    "exit": 0,
+    "diagnostics": false,
+    "baselineSetupSha256": "6d63aca4a1db8fd4e4f0138b446d9ccdd4698af61cefa880b9f3febaf82ce910",
+    "scratchSetupSha256": "e796ace397ded88ef3ed13a29521e0883cd04fed0b1cbde03d7806e41b25f987",
+    "log": "preflightFutureChangedAuxiliaryLocalConsumers-a.log",
+    "logSha256": "eb9911abd218be60ff22a26fc5c9c428873cf676ef45706988e2ff3753e91b07",
+    "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed.",
+    "actualExitConsumed": true
+  },
+  "nativeFocused": {
+    "exit": 0,
+    "actualExitConsumed": true,
+    "log": "changedAuxiliaryLocal2970-focus.log",
+    "sha256": "0d2d4b9fd303b87e4e1eb945f10240d1f2d57679e0c6c1a7a283e99060af184b"
+  },
+  "scope": [
+    2970,
+    2338,
+    10952
+  ],
+  "exactEndpoint": [
+    "rationalPrimeChangedAuxiliaryField_isFractionRing",
+    "rationalPrimeChangedAuxiliary_exists_local_structure",
+    "rationalPrimeChangedAuxiliary_exists_integer_uniformizer"
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261013_194011.log",
+    "paper": "logs/dubon-build-20261013-194513-719.log",
+    "assembledLog": "assembled2970.log",
+    "exhaustive": 21561,
+    "explicit": 10952,
+    "exactConsumers": 2338,
+    "linters": [
+      13988,
+      10785
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
+}

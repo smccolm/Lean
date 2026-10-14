@@ -1,0 +1,206 @@
+{
+  "date": "2026-10-13",
+  "sourceGate": "DUB-17; downstream DUB-18",
+  "mathematics": "The literal prime-power primitive root in the Witt cyclotomic fraction field retains its exact order and generates an actual finite Galois cyclotomic stage over the original rational-prime completion. Its literal compositum with the changed auxiliary field is finite Galois over that auxiliary field. The proved diagonal Frobenius preserves both generating fields, restricts to an automorphism of the actual compositum over the auxiliary field, and acts on the same primitive root by the required inverse-unit power. The compositum receives the spectral finite-extension local-field structure. A proved local-ring criterion now reduces its formal unramifiedness to preservation of one actual auxiliary uniformizer as an irreducible element upstairs.",
+  "serves": "Exact unresolved DUB-17 chain: the verified auxiliary local field and integer uniformizer feed the actual finite Galois compositum constructed here; its restricted diagonal automorphism supplies the exact inverse-unit root action. Proving that the mapped auxiliary uniformizer remains irreducible will discharge formal unramifiedness through the new maximal-ideal criterion. Identifying this same automorphism with positive arithmetic Frobenius then supplies the remaining hypothesis of localFieldFiniteCyclicReciprocity_norm_uniformizer.",
+  "remaining": "Formal unramifiedness still awaits the actual upstairs irreducibility proof, and the restricted diagonal automorphism still must be identified with arithmetic Frobenius. Rational-unit extension, ramified inverse-unit reciprocity, principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and DUB17-20 remain open.",
+  "reuse": "Reused originalPrimitiveRootStage, finiteGaloisCompositumOverIntermediate, the proved fixed changed auxiliary field, the exact diagonal root action, spectral finite-extension local structures, and Algebra.FormallyUnramified.of_map_maximalIdeal. Existing signatures were checked before expansion; no replacement local field or abstract Galois certificate was introduced.",
+  "routeAdjustment": "The generic unramified-compositum base-change theorem was rejected for this step because the original prime-power cyclotomic stage over the rational local field is ramified. The rigorous route constructs the source compositum directly and reduces unramifiedness to equality of its actual local maximal ideals via the transported uniformizer. This preserves the source objects and avoids an inapplicable hypothesis.",
+  "next": "Prove that the transported changed auxiliary uniformizer remains irreducible in the actual compositum integer ring, apply the proved formal-unramifiedness criterion, and identify the restricted diagonal automorphism with positive arithmetic Frobenius before consuming norm-uniformizer reciprocity.",
+  "draftRepairs": "The primitive-root map proof was corrected to use forward injective transport. Preservation was factored into the original cyclotomic stage and then the compositum, keeping adjoin induction bounded. The restricted automorphism uses finite-dimensional injective-implies-surjective rather than constructing an unrelated inverse. Explicit algebraicity was installed for deterministic spectral-norm synthesis. Failed scratch logs remain non-acceptance evidence.",
+  "status": "Assembled and sequential foundation/paper verification PASS: actual exits 0 consumed, zero diagnostics, all eleven regressions, both dependency audits and all sixteen linters.",
+  "modules": [
+    {
+      "module": "RationalPrimeChangedCyclotomicCompositum",
+      "log": "changed-cyclotomic-compositum-j.log",
+      "publicTheorems": [
+        "rationalPrimeWittCyclotomicFieldPrimitiveRoot_isPrimitive",
+        "rationalPrimeChangedCyclotomicCompositum_coe",
+        "rationalPrimeDiagonalFrobenius_primitiveRoot",
+        "rationalPrimeDiagonalFrobenius_originalCyclotomicStage",
+        "rationalPrimeDiagonalFrobenius_changedCyclotomicCompositum",
+        "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_root"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeChangedCyclotomicCompositum",
+        "sourceSha256": "8acc959264db92c60e5db21478a75d3794e136ac2341a4912c09e559fcb186cc",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicCompositum.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicCompositum.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicCompositum.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicCompositum.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "844e17795a76423498a47c434583b07bfba3e7685799b64b42258faded54c3ad",
+        "scratchSetupSha256": "0c1eef9bef0b8f5e0dc20faf020681da7d033118368fc490579d7f8cb9b02efa",
+        "log": "changed-cyclotomic-compositum-j.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed.",
+        "actualExitConsumed": true
+      },
+      "productionSha256": "8acc959264db92c60e5db21478a75d3794e136ac2341a4912c09e559fcb186cc",
+      "status": "Fully verified in assembled2972; exact original-object consumer retained."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicLocalField",
+      "log": "changed-cyclotomic-local-c.log",
+      "publicTheorems": [
+        "rationalPrimeChangedCyclotomicCompositum_exists_local_structure",
+        "localField_integer_formallyUnramified_of_irreducible_algebraMap"
+      ],
+      "scratchCheck": {
+        "kind": "isolated direct pinned Lean draft check only",
+        "module": "RationalPrimeChangedCyclotomicLocalField",
+        "sourceSha256": "c56bcd2d87c7869e806c0f3d103c7b126348aefaac30d78bb53a7607bea2a2c0",
+        "command": [
+          "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-Dpp.unicode.fun=true",
+          "-R",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicLocalField.lean",
+          "-o",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicLocalField.olean",
+          "-i",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicLocalField.ilean",
+          "--setup",
+          "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\RationalPrimeChangedCyclotomicLocalField.setup.json"
+        ],
+        "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+        "exit": 0,
+        "diagnostics": false,
+        "baselineSetupSha256": "844e17795a76423498a47c434583b07bfba3e7685799b64b42258faded54c3ad",
+        "scratchSetupSha256": "711fa2855778070056cd6412222ad51d5e7bc15d5751a36c6f49fe141f1babe5",
+        "log": "changed-cyclotomic-local-c.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed.",
+        "actualExitConsumed": true
+      },
+      "productionSha256": "c56bcd2d87c7869e806c0f3d103c7b126348aefaac30d78bb53a7607bea2a2c0",
+      "status": "Fully verified in assembled2972; exact original-object consumer retained."
+    }
+  ],
+  "consumers": [
+    "actual_changed_cyclotomic_compositum_primitiveRoot_source",
+    "actual_changed_cyclotomic_compositum_coe_source",
+    "actual_changed_cyclotomic_compositum_diagonal_root_source",
+    "actual_changed_cyclotomic_compositum_originalStage_source",
+    "actual_changed_cyclotomic_compositum_preserved_source",
+    "actual_changed_cyclotomic_compositum_algEquiv_root_source",
+    "actual_changed_cyclotomic_local_structure_source",
+    "actual_changed_cyclotomic_unramified_criterion_source"
+  ],
+  "preflights": [
+    {
+      "kind": "isolated direct pinned Lean draft check only",
+      "module": "FutureChangedCyclotomicCompositumConsumers",
+      "sourceSha256": "7ef0b900a8d76a205ddbe98f2372b357841a8ef8ba8ed89eb46d26e11d067e75",
+      "command": [
+        "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+        "-DautoImplicit=false",
+        "-Dpp.unicode.fun=true",
+        "-R",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicCompositumConsumers.lean",
+        "-o",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicCompositumConsumers.olean",
+        "-i",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicCompositumConsumers.ilean",
+        "--setup",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicCompositumConsumers.setup.json"
+      ],
+      "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+      "exit": 0,
+      "diagnostics": false,
+      "baselineSetupSha256": "844e17795a76423498a47c434583b07bfba3e7685799b64b42258faded54c3ad",
+      "scratchSetupSha256": "93c2cfc46ece20ade23efc963582d82f4010704055d203b9d378e90b471f0723",
+      "log": "preflight-changed-cyclotomic-compositum-a.log",
+      "logSha256": "cfe7f555ae08edcfc0a96d54f4e008efb7aab40735c2cfc3ab675dc96ea3d200",
+      "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed.",
+      "actualExitConsumed": true
+    },
+    {
+      "kind": "isolated direct pinned Lean draft check only",
+      "module": "FutureChangedCyclotomicLocalConsumers",
+      "sourceSha256": "334ffe70997162f9727b22d6d09ad5e6e962a4bcad4e19cd467c79e877beb6bb",
+      "command": [
+        "c:\\Users\\Naraphim\\.elan\\toolchains\\leanprover--lean4---v4.30.0\\bin\\lean.exe",
+        "-DautoImplicit=false",
+        "-Dpp.unicode.fun=true",
+        "-R",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicLocalConsumers.lean",
+        "-o",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicLocalConsumers.olean",
+        "-i",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicLocalConsumers.ilean",
+        "--setup",
+        "E:\\Lean\\.tmp\\dubon83\\scratch2186\\Dubon2026\\FutureChangedCyclotomicLocalConsumers.setup.json"
+      ],
+      "leanPath": "E:\\Lean\\.tmp\\dubon83\\scratch2186;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanArchitect\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\checkdecls\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\leancert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeCert\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\PrimeNumberTheoremAnd\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-expdb-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\.lake\\build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-gafnitao-build\\lib\\lean;E:\\Lean\\.lake\\tao-trudgian-yang-2025-build\\lib\\lean;E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\..\\..\\..\\..\\.lake\\dubon-2026-build\\lib\\lean",
+      "exit": 0,
+      "diagnostics": false,
+      "baselineSetupSha256": "844e17795a76423498a47c434583b07bfba3e7685799b64b42258faded54c3ad",
+      "scratchSetupSha256": "48c5f717f7724edecb790201e256cb74dbf0a727900cc8bcda2f11f33e657bfe",
+      "log": "preflight-changed-cyclotomic-local-a.log",
+      "logSha256": "e53f186d6522b58d33f49f8bc467ce495741339f9e35a886450dc104905ef69f",
+      "scopeBoundary": "No production files, package configuration, native verification inputs or proof acceptance changed.",
+      "actualExitConsumed": true
+    }
+  ],
+  "nativeFocused": {
+    "exit": 0,
+    "actualExitConsumed": true,
+    "log": "changedCyclotomic2972-focus.log",
+    "sha256": "74bf8f533247bc22caf77316ab04f8c62888620fde5b783691b5480cff2ed3c1"
+  },
+  "scope": [
+    2972,
+    2346,
+    10968
+  ],
+  "exactEndpoint": [
+    [
+      "rationalPrimeWittCyclotomicFieldPrimitiveRoot_isPrimitive",
+      "rationalPrimeChangedCyclotomicCompositum_coe",
+      "rationalPrimeDiagonalFrobenius_primitiveRoot",
+      "rationalPrimeDiagonalFrobenius_originalCyclotomicStage",
+      "rationalPrimeDiagonalFrobenius_changedCyclotomicCompositum",
+      "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_root"
+    ],
+    [
+      "rationalPrimeChangedCyclotomicCompositum_exists_local_structure",
+      "localField_integer_formallyUnramified_of_irreducible_algebraMap"
+    ]
+  ],
+  "validation": {
+    "foundation": "../../logs/foundation_freeze_20261013_204050.log",
+    "paper": "logs/dubon-build-20261013-204406-697.log",
+    "assembledLog": "assembled2972.log",
+    "exhaustive": 21593,
+    "explicit": 10968,
+    "exactConsumers": 2346,
+    "linters": [
+      14010,
+      10801
+    ],
+    "nativeExits": [
+      0,
+      0,
+      0
+    ],
+    "actualExitsConsumed": true,
+    "diagnostics": false
+  }
+}
