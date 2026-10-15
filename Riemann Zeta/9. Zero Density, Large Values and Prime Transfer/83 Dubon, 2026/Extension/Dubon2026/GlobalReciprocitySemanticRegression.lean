@@ -3185,6 +3185,146 @@ theorem actual_cyclotomic_unramified_rationalPositivePrimeProduct_exists_support
               (Rat.HeightOneSpectrum.prime_natGenerator v))).toMonoidHom u))) = |u.val| :=
   rationalPositivePrimeProduct_exists_support u
 
+/-- Exact original-object consumer of the signed normalized-prime
+factorization used by the cyclotomic principal-product assembly. -/
+theorem actual_cyclotomic_unramified_rationalSignedPrimeProduct_exists_support_source
+    (u : ℚˣ) :
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      (∀ v ∉ S, v.valuation ℚ u.val = 1) ∧
+      (if 0 < u.val then (1 : ℚ) else -1) *
+        (∏ v ∈ S, (Rat.HeightOneSpectrum.natGenerator v : ℚ) ^
+          localFieldUnitOrder
+            (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator v)
+              (Rat.HeightOneSpectrum.prime_natGenerator v))
+            (Additive.ofMul (Units.map (algebraMap ℚ
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator v)
+                (Rat.HeightOneSpectrum.prime_natGenerator v))).toMonoidHom u))) = u.val :=
+  rationalSignedPrimeProduct_exists_support u
+
+/-- Exact original-object consumer of the p-normalized rational residual and
+its signed finite-prime reconstruction with the ramified place removed. -/
+theorem actual_cyclotomic_unramified_rationalPrimeNormalizedResidual_away_product_source
+    (p : ℕ) (hp : p.Prime) (q : ℚˣ) :
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      rationalPrimePlace p hp ∉ S ∧
+      (∀ v ∉ S, v.valuation ℚ (rationalPrimeNormalizedResidual p hp q).val = 1) ∧
+      (if 0 < (rationalPrimeNormalizedResidual p hp q).val then (1 : ℚ) else -1) *
+        (∏ v ∈ S, (Rat.HeightOneSpectrum.natGenerator v : ℚ) ^
+          localFieldUnitOrder
+            (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator v)
+              (Rat.HeightOneSpectrum.prime_natGenerator v))
+            (Additive.ofMul (Units.map (algebraMap ℚ
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator v)
+                (Rat.HeightOneSpectrum.prime_natGenerator v))).toMonoidHom
+                  (rationalPrimeNormalizedResidual p hp q)))) =
+        (rationalPrimeNormalizedResidual p hp q).val :=
+  rationalPrimeNormalizedResidual_exists_away_signed_prime_product p hp q
+
+/-- Exact original-object consumer of the actual rational cyclotomic
+real-sign automorphism on an arbitrary primitive root. -/
+theorem actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source
+    (n : ℕ) [NeZero n] (F : Type*) [Field F] [Algebra ℚ F]
+    [IsCyclotomicExtension {n} ℚ F] (q : ℚˣ)
+    {ζ : F} (hζ : IsPrimitiveRoot ζ n) :
+    rationalCyclotomicRealSignAut n F q ζ =
+      ζ ^ ((rationalCyclotomicRealSignUnit n q : (ZMod n)ˣ) : ZMod n).val :=
+  rationalCyclotomicRealSignAut_apply_root n F q hζ
+
+/-- Exact original-object consumer of the normalized residual's real and
+away-prime product action on one actual prime-power cyclotomic stage. -/
+theorem actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source
+    (a : 𝓞 ℚ) (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    [IsCyclic Gal(F/ℚ)] (p : ℕ) (hp : p.Prime) (m : ℕ)
+    [IsCyclotomicExtension {p ^ (m + 1)} ℚ F]
+    {ζ : F} (hζ : IsPrimitiveRoot ζ (p ^ (m + 1))) (q : ℚˣ) :
+    let N := p ^ (m + 1)
+    letI : NeZero N := ⟨pow_ne_zero _ hp.ne_zero⟩
+    let r := rationalPrimeNormalizedResidual p hp q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ hS : ∀ v ∈ S, ¬Rat.HeightOneSpectrum.natGenerator v ∣ N,
+        (∀ v ∉ S, v.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ v ∈ S, (Rat.HeightOneSpectrum.natGenerator v : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator v)
+                (Rat.HeightOneSpectrum.prime_natGenerator v))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator v)
+                  (Rat.HeightOneSpectrum.prime_natGenerator v) r))) = r.val ∧
+        arithmeticCyclotomicSignedAwayProduct a F N S r ζ =
+          ζ ^ ((arithmeticCyclotomicSignedAwayProductUnit N S hS r : (ZMod N)ˣ) :
+            ZMod N).val :=
+  rationalPrimeNormalizedResidual_exists_signedAwayProduct_action a F p hp m hζ q
+
+/-- Exact original-object consumer of the ramified reciprocity character's
+cancellation by the forward quotient unit. -/
+theorem actual_cyclotomic_ramified_rationalUnit_character_cancellation_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n : ℕ) (q : ℚˣ) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    ∃ (a c : ℕ), 0 < a ∧ 0 < c ∧ ¬p ∣ c ∧
+      ∃ ha : ¬p ∣ a, ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b d : ℕ,
+        ∃ hca : a.Coprime (p ^ (n + 1)),
+        ∃ hcd : d.Coprime (p ^ (n + 1)),
+        b.Coprime (p ^ (n + 1)) ∧ c.Coprime (p ^ (n + 1)) ∧
+        a * b ≡ 1 [MOD p ^ (n + 1)] ∧
+        c * d ≡ 1 [MOD p ^ (n + 1)] ∧
+        let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+        letI : IsCyclic Gal(L/K) :=
+          rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+        let ζ := rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha
+        let σ := (localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (rationalPrimeRationalUnit p hp q))).toMul
+        letI : NeZero (p ^ (n + 1)) := ⟨pow_ne_zero _ hp.ne_zero⟩
+        σ ζ = ζ ^ (b * c) ∧
+        (σ ζ) ^ (a * d) = ζ ∧
+        (rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive p hp n a u hu ha).autToPow
+            K σ * ZMod.unitOfCoprime (a * d) (hca.mul_left hcd) = 1 :=
+  rationalPrimeRationalUnit_exists_reciprocity_character_cancellation p hp hp2 n q
+
+/-- Exact original-object consumer of the conductor-residue bridge: the
+normalized residual's signed away-prime character is the same forward unit
+that cancels its ramified reciprocity character. -/
+theorem actual_cyclotomic_normalizedResidual_forwardUnit_identity_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (m : ℕ) (q : ℚˣ) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let N := p ^ (m + 1)
+    let r := rationalPrimeNormalizedResidual p hp q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ hS : ∀ v ∈ S, ¬Rat.HeightOneSpectrum.natGenerator v ∣ N,
+        (∀ v ∉ S, v.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ v ∈ S, (Rat.HeightOneSpectrum.natGenerator v : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator v)
+                (Rat.HeightOneSpectrum.prime_natGenerator v))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator v)
+                  (Rat.HeightOneSpectrum.prime_natGenerator v) r))) = r.val ∧
+        ∃ (a c : ℕ), 0 < a ∧ 0 < c ∧ ¬p ∣ c ∧
+          ∃ ha : ¬p ∣ a, ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b d : ℕ,
+            ∃ hca : a.Coprime N, ∃ hcd : d.Coprime N,
+            b.Coprime N ∧ c.Coprime N ∧
+            a * b ≡ 1 [MOD N] ∧ c * d ≡ 1 [MOD N] ∧
+            let L := rationalPrimeOriginalCyclotomicClosureStage p hp m a u hu ha
+            letI : IsCyclic Gal(L/K) :=
+              rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 m a u hu ha
+            letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+            letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+            let ζ := rationalPrimeOriginalCyclotomicClosureRoot p hp m a u hu ha
+            let σ := (localFieldFiniteCyclicReciprocity K Ω L
+              (Additive.ofMul (rationalPrimeRationalUnit p hp r))).toMul
+            letI : NeZero N := ⟨pow_ne_zero _ hp.ne_zero⟩
+            σ ζ = ζ ^ (b * c) ∧
+            (rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive p hp m a u hu ha).autToPow
+                K σ * ZMod.unitOfCoprime (a * d) (hca.mul_left hcd) = 1 ∧
+            arithmeticCyclotomicSignedAwayProductUnit N S hS r =
+              ZMod.unitOfCoprime (a * d) (hca.mul_left hcd) :=
+  rationalPrimeNormalizedResidual_exists_forwardUnit_identity p hp hp2 m q
+
 end
 
 
@@ -4749,4 +4889,143 @@ theorem actual_natural_unit_changed_cyclotomic_closure_reciprocity_root_source
                 (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
               (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ b :=
   rationalPrimeNaturalUnitChangedCyclotomicClosure_reciprocity_root p hp hp2 n a ha
+
+/-- Exact original-object consumer that removes the apparent dependence of
+the cyclotomic closure stage on the natural-unit embedding choice. -/
+theorem actual_original_cyclotomic_closure_stage_independence_source
+    (p : ℕ) (hp : p.Prime) (n a c : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    (v : 𝒪[rationalPrimeLocalField p hp]ˣ) (hv : v.val = c) (hc : ¬p ∣ c) :
+    rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha =
+      rationalPrimeOriginalCyclotomicClosureStage p hp n c v hv hc :=
+  rationalPrimeOriginalCyclotomicClosureStage_eq
+    p hp n a c u hu ha v hv hc
+
+/-- Exact original-object consumer of the fixed-stage primitive-root
+transport between two natural-unit constructions. -/
+theorem actual_original_cyclotomic_closure_stage_root_transport_source
+    (p : ℕ) (hp : p.Prime) (n a c : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    (v : 𝒪[rationalPrimeLocalField p hp]ˣ) (hv : v.val = c) (hc : ¬p ∣ c) :
+    ((rationalPrimeOriginalCyclotomicClosureStageAut
+        p hp n a c u hu ha v hv hc
+        (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) :
+      rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha) :
+      rationalPrimeLocalClosure p hp) =
+    ((rationalPrimeOriginalCyclotomicClosureRoot p hp n c v hv hc :
+      rationalPrimeOriginalCyclotomicClosureStage p hp n c v hv hc) :
+      rationalPrimeLocalClosure p hp) :=
+  rationalPrimeOriginalCyclotomicClosureStageAut_root
+    p hp n a c u hu ha v hv hc
+
+/-- Exact original-object consumer of the numerator/denominator quotient
+action after both natural-unit actions have been placed in one stage. -/
+theorem actual_natural_quotient_cyclotomic_reciprocity_root_source
+    (p : ℕ) (hp : p.Prime) (n a b c d : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    [IsCyclic Gal(rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha /
+      rationalPrimeLocalField p hp)]
+    [TopologicalSpace (Rep.ofAlgebraAutOnUnits
+      (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp))]
+    [DiscreteTopology (Rep.ofAlgebraAutOnUnits
+      (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp))]
+    (hc : ¬p ∣ c)
+    (hA :
+      (localFieldFiniteCyclicReciprocity (rationalPrimeLocalField p hp)
+        (rationalPrimeLocalClosure p hp)
+        (rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha)
+        (Additive.ofMul (rationalPrimeNaturalUnit p hp a ha))).toMul
+          (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+        (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ b)
+    (hC :
+      (localFieldFiniteCyclicReciprocity (rationalPrimeLocalField p hp)
+        (rationalPrimeLocalClosure p hp)
+        (rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha)
+        (Additive.ofMul (rationalPrimeNaturalUnit p hp c hc))).toMul
+          (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+        (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ d)
+    (hdc : d * c ≡ 1 [MOD p ^ (n + 1)]) :
+    (localFieldFiniteCyclicReciprocity (rationalPrimeLocalField p hp)
+      (rationalPrimeLocalClosure p hp)
+      (rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha)
+      (Additive.ofMul
+        (rationalPrimeNaturalQuotientUnit p hp a c ha hc))).toMul
+        (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+      (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ (b * c) :=
+  rationalPrimeNaturalQuotient_reciprocity_root
+    p hp n a b c d u hu ha hc hA hC hdc
+
+/-- Exact original-object consumer of the witness-producing positive rational
+quotient action, including the common-stage rewrite. -/
+theorem actual_natural_quotient_exists_cyclotomic_reciprocity_root_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n a c : ℕ)
+    (ha : ¬p ∣ a) (hc : ¬p ∣ c) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b d : ℕ,
+      a.Coprime (p ^ (n + 1)) ∧ b.Coprime (p ^ (n + 1)) ∧
+      c.Coprime (p ^ (n + 1)) ∧ d.Coprime (p ^ (n + 1)) ∧
+      a * b ≡ 1 [MOD p ^ (n + 1)] ∧
+      c * d ≡ 1 [MOD p ^ (n + 1)] ∧
+      let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+      letI : IsCyclic Gal(L/K) :=
+        rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+      letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+      letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+      (localFieldFiniteCyclicReciprocity K Ω L
+        (Additive.ofMul (rationalPrimeNaturalQuotientUnit p hp a c ha hc))).toMul
+          (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+        (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ (b * c) :=
+  rationalPrimeNaturalQuotient_exists_reciprocity_root_action
+    p hp hp2 n a c ha hc
+
+/-- Exact original-object consumer of the arbitrary rational-unit
+cyclotomic reciprocity action. The constructed positive quotient and its
+modular inverse data are exposed, while the prime-power and signed residual
+comparisons are discharged internally by actual norm witnesses. -/
+theorem actual_rational_unit_exists_cyclotomic_reciprocity_root_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n : ℕ) (q : ℚˣ) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    ∃ (a c : ℕ), 0 < a ∧ 0 < c ∧ ¬p ∣ c ∧
+      ∃ ha : ¬p ∣ a, ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b d : ℕ,
+        a.Coprime (p ^ (n + 1)) ∧ b.Coprime (p ^ (n + 1)) ∧
+        c.Coprime (p ^ (n + 1)) ∧ d.Coprime (p ^ (n + 1)) ∧
+        a * b ≡ 1 [MOD p ^ (n + 1)] ∧
+        c * d ≡ 1 [MOD p ^ (n + 1)] ∧
+        let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+        letI : IsCyclic Gal(L/K) :=
+          rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+        (localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (rationalPrimeRationalUnit p hp q))).toMul
+            (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) =
+          (rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha) ^ (b * c) :=
+  rationalPrimeRationalUnit_exists_reciprocity_root_action p hp hp2 n q
+
+/-- Exact original-object consumer of the finite cyclic cancellation between
+the arbitrary ramified rational-unit action and its constructed positive
+quotient representative. -/
+theorem actual_rational_unit_exists_cyclotomic_reciprocity_root_cancellation_source
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (n : ℕ) (q : ℚˣ) :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    ∃ (a c : ℕ), 0 < a ∧ 0 < c ∧ ¬p ∣ c ∧
+      ∃ ha : ¬p ∣ a, ∃ u : 𝒪[K]ˣ, ∃ hu : u.val = a, ∃ b d : ℕ,
+        a.Coprime (p ^ (n + 1)) ∧ b.Coprime (p ^ (n + 1)) ∧
+        c.Coprime (p ^ (n + 1)) ∧ d.Coprime (p ^ (n + 1)) ∧
+        a * b ≡ 1 [MOD p ^ (n + 1)] ∧
+        c * d ≡ 1 [MOD p ^ (n + 1)] ∧
+        let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+        letI : IsCyclic Gal(L/K) :=
+          rationalPrimeOriginalCyclotomicClosureStage_isCyclic p hp hp2 n a u hu ha
+        letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+        letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+        let ζ := rationalPrimeOriginalCyclotomicClosureRoot p hp n a u hu ha
+        (localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (rationalPrimeRationalUnit p hp q))).toMul ζ = ζ ^ (b * c) ∧
+        ((localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (rationalPrimeRationalUnit p hp q))).toMul ζ) ^ (a * d) = ζ :=
+  rationalPrimeRationalUnit_exists_reciprocity_root_cancellation p hp hp2 n q
 end Dubon2026.SemanticRegression

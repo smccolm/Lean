@@ -1,7 +1,7 @@
 {
   "mode": "active-development",
   "goalActivated": true,
-  "asOf": "2026-10-06",
+  "asOf": "2026-10-14",
   "files": [
     {
       "path": ".gitattributes",
@@ -12786,6 +12786,50 @@
     {
       "path": "Extension/Dubon2026/RationalPrimeChangedCyclotomicClosureNaturalUnitAction.lean",
       "role": "Extension"
+    },
+    {
+      "path": "Tools/lean-reuse-audit-20261014.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeOriginalCyclotomicClosureStageIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityQuotientAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalSignedPrimeProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeNormalizedResidual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicRealSignAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicSignedAwayProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityCharacterCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicResidualReduction.lean",
+      "role": "Extension"
     }
   ],
   "statusDocuments": [
@@ -15815,7 +15859,17 @@
     "RationalPrimeChangedCyclotomicClosureReciprocityAction",
     "RationalPrimeChangedCyclotomicClosureNaturalAction",
     "RationalPrimeOriginalCyclotomicNorm",
-    "RationalPrimeChangedCyclotomicClosureNaturalUnitAction"
+    "RationalPrimeChangedCyclotomicClosureNaturalUnitAction",
+    "RationalPrimeOriginalCyclotomicClosureStageIndependence",
+    "RationalPrimeCyclotomicReciprocityQuotientAction",
+    "RationalPrimeCyclotomicReciprocityRationalUnitAction",
+    "RationalPrimeCyclotomicReciprocityRationalUnitCancellation",
+    "RationalSignedPrimeProduct",
+    "RationalPrimeNormalizedResidual",
+    "ArithmeticCyclotomicRealSignAction",
+    "ArithmeticCyclotomicSignedAwayProduct",
+    "RationalPrimeCyclotomicReciprocityCharacterCancellation",
+    "RationalPrimeCyclotomicResidualReduction"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

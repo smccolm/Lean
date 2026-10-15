@@ -10729,6 +10729,25 @@ private def publicConsumers : Array Name := #[
   ``Dubon2026.rationalPositivePrimeProduct_normalized_order,
   ``Dubon2026.rationalFiniteValuation_ne_one_finite,
   ``Dubon2026.rationalPositivePrimeProduct_exists_support,
+  ``Dubon2026.rationalSignedPrimeProduct_eq,
+  ``Dubon2026.rationalSignedPrimeProduct_exists_support,
+  ``Dubon2026.rationalPrimeRationalUnit_prime,
+  ``Dubon2026.rationalPrimeRationalUnit_normalizedResidual,
+  ``Dubon2026.rationalPrimeNormalizedResidual_order,
+  ``Dubon2026.rationalPrimeNormalizedResidual_valuation_eq_one,
+  ``Dubon2026.rationalPrimeNormalizedResidual_exists_signed_prime_product,
+  ``Dubon2026.rationalPrimeNormalizedResidual_exists_away_signed_prime_product,
+  ``Dubon2026.rationalCyclotomicConjugation_autToPow,
+  ``Dubon2026.rationalCyclotomicConjugation_apply_root,
+  ``Dubon2026.rationalCyclotomicRealSignAut_autToPow,
+  ``Dubon2026.rationalCyclotomicRealSignAut_apply_root,
+  ``Dubon2026.arithmeticCyclotomicAwayAut_autToPow,
+  ``Dubon2026.arithmeticCyclotomicAwayProduct_autToPow,
+  ``Dubon2026.arithmeticCyclotomicSignedAwayProduct_autToPow,
+  ``Dubon2026.arithmeticCyclotomicSignedAwayProduct_apply_root,
+  ``Dubon2026.finiteSupport_away_primePower,
+  ``Dubon2026.rationalPrimeNormalizedResidual_exists_signedAwayProduct_action,
+  ``Dubon2026.rationalPrimeRationalUnit_exists_reciprocity_character_cancellation,
   ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_primeToResidue_unit_roots_eq_source,
   ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_localFieldArithmeticFrobenius_unit_root_source,
   ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_localFieldRoot_exists_integer_unit_source,
@@ -10746,6 +10765,11 @@ private def publicConsumers : Array Name := #[
   ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_rational_abs_eq_of_finite_valuations_source,
   ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_rationalPositivePrimeProduct_eq_abs_source,
   ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_rationalPositivePrimeProduct_exists_support_source,
+  ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_rationalSignedPrimeProduct_exists_support_source,
+  ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_rationalPrimeNormalizedResidual_away_product_source,
+  ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source,
+  ``Dubon2026.SemanticRegression.actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source,
+  ``Dubon2026.SemanticRegression.actual_cyclotomic_ramified_rationalUnit_character_cancellation_source,
   ``Dubon2026.localFieldFiniteCyclicReciprocity_norm_frobenius,
   ``Dubon2026.localFieldFiniteCyclicReciprocity_norm_uniformizer,
   ``Dubon2026.primeWitt_exists_frobenius_unit_rotation,
@@ -11037,7 +11061,51 @@ private def publicConsumers : Array Name := #[
   ``Dubon2026.rationalPrimeChangedCyclotomicClosure_reciprocity_natural_root,
   ``Dubon2026.SemanticRegression.actual_changed_cyclotomic_closure_reciprocity_natural_root_source,
   ``Dubon2026.rationalPrimeNaturalUnitChangedCyclotomicClosure_reciprocity_root,
-  ``Dubon2026.SemanticRegression.actual_natural_unit_changed_cyclotomic_closure_reciprocity_root_source
+  ``Dubon2026.SemanticRegression.actual_natural_unit_changed_cyclotomic_closure_reciprocity_root_source,
+  ``Dubon2026.finiteGaloisEmbeddingStage_eq,
+  ``Dubon2026.finiteGaloisEmbeddingStageAut_apply,
+  ``Dubon2026.finiteGaloisEmbeddingStage_action_transport,
+  ``Dubon2026.rationalPrimeOriginalCyclotomicClosureStage_eq,
+  ``Dubon2026.rationalPrimeOriginalCyclotomicClosureStageAut_root,
+  ``Dubon2026.rationalPrimeOriginalCyclotomicClosure_root_action_transport,
+  ``Dubon2026.SemanticRegression.actual_original_cyclotomic_closure_stage_independence_source,
+  ``Dubon2026.SemanticRegression.actual_original_cyclotomic_closure_stage_root_transport_source
+  ,``Dubon2026.algEquiv_inv_primitiveRoot_action
+  ,``Dubon2026.addMonoidHom_quotient_primitiveRoot_action
+  ,``Dubon2026.cyclic_action_of_conjugate_root_action
+  ,``Dubon2026.finiteGaloisStage_cast_coe
+  ,``Dubon2026.finiteGaloisStageAutCast_apply
+  ,``Dubon2026.localFieldFiniteCyclicReciprocity_stage_cast
+  ,``Dubon2026.localFieldFiniteCyclicReciprocity_action_transport_stage_eq
+  ,``Dubon2026.rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive
+  ,``Dubon2026.rationalPrimeNaturalQuotientUnit_val
+  ,``Dubon2026.rationalPrimeNaturalQuotient_reciprocity_root
+  ,``Dubon2026.rationalPrimeNaturalUnit_exists_reciprocity_root_action
+  ,``Dubon2026.rationalPrimeNaturalQuotient_exists_reciprocity_root_action
+  ,``Dubon2026.SemanticRegression.actual_natural_quotient_cyclotomic_reciprocity_root_source
+  ,``Dubon2026.SemanticRegression.actual_natural_quotient_exists_cyclotomic_reciprocity_root_source
+  ,``Dubon2026.rationalPrime_exists_positive_rational_norm_sub_lt
+  ,``Dubon2026.positiveRational_eq_coprimeNaturalQuotient
+  ,``Dubon2026.finiteDimensional_exists_norm_near_one
+  ,``Dubon2026.rationalPrime_exists_positive_quotient_norm_comparison
+  ,``Dubon2026.rationalPrime_norm_eq_one_of_order_zero
+  ,``Dubon2026.algEquiv_unit_norm_transport
+  ,``Dubon2026.rationalPrimeRationalUnit_exists_reciprocity_root_action
+  ,``Dubon2026.SemanticRegression.actual_rational_unit_exists_cyclotomic_reciprocity_root_source
+  ,``Dubon2026.rationalPrimeRationalUnit_exists_reciprocity_root_cancellation
+  ,``Dubon2026.SemanticRegression.actual_rational_unit_exists_cyclotomic_reciprocity_root_cancellation_source
+  ,``Dubon2026.rationalPrimeIntegerReduction_natCast
+  ,``Dubon2026.rationalPrimeValuationNaturalUnit_val
+  ,``Dubon2026.rationalPrimeOrderZeroReduction_naturalUnit
+  ,``Dubon2026.rationalPrimeOrderZeroReduction_eq_of_sub_eq_primePow_mul_nat
+  ,``Dubon2026.rationalPrime_exists_positive_primePower_shift_norm_sub_lt
+  ,``Dubon2026.rationalPrime_exists_positive_quotient_norm_comparison_reduction
+  ,``Dubon2026.rationalPrimeOrderZero_exists_character_cancellation_reduction
+  ,``Dubon2026.rationalPrime_finiteSupport_generator_not_dvd
+  ,``Dubon2026.rationalPrimeOrderZeroReduction_signedProduct
+  ,``Dubon2026.rationalPrimeSignedProductOrderZero_eq_rationalUnit
+  ,``Dubon2026.rationalPrimeNormalizedResidual_exists_forwardUnit_identity
+  ,``Dubon2026.SemanticRegression.actual_cyclotomic_normalizedResidual_forwardUnit_identity_source
 ]
 
 private def runAudit : CoreM Unit := do

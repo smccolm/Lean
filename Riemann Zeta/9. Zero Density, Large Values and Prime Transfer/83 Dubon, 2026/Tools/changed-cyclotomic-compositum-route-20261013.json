@@ -1,14 +1,44 @@
 {
   "date": "2026-10-13",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "mathematics": "The natural-unit closure endpoint constructs u, the inverse exponent b, all coprimality and congruence facts, all closure local-field structures, the exact norm a*p, formal unramifiedness, and the inverse-b root action under normalized local reciprocity from only p, n, a and p not dividing a.",
-  "serves": "Exact unresolved DUB-17 chain: all supplied witnesses have been removed from the positive-natural-unit local reciprocity endpoint. The next dependency extends to rational units and separates the unit action from the p-uniformizer factor before the cyclotomic principal product.",
-  "remaining": "Rational-unit extension, separation of unit and p-uniformizer actions, principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and DUB17-20 remain open.",
-  "reuse": "The natural endpoint reuses rationalPrimeNaturalWittNorm_exists, primePowerNaturalUnit_exists_inverse, Nat.Prime.coprime_pow_of_not_dvd, rationalPrimeChangedCyclotomicClosure_exists_local_structure, and rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer_root.",
-  "routeAdjustment": "Existing proved existence theorems discharge every witness and instance in one bounded wrapper theorem. No additional inverse arithmetic, local-field model, or Witt ambient construction is introduced. The next reuse check targets reciprocity multiplicativity and the a=1 case.",
-  "next": "Extend from positive natural units to rational local units and isolate the unit contribution by comparing the a*p action with the a=1 p-uniformizer action through local reciprocity multiplicativity.",
+  "mathematics": "The actual real-sign automorphism and every away-prime reciprocity value now live in one rational cyclotomic Galois group. Their product has the proved signed-away power character, p-free support gives conductor avoidance, and the actual ramified character times the explicit forward quotient unit is exactly one.",
+  "serves": "Exact unresolved DUB-17 chain: actual real-sign action, common-stage multiplication, conductor-prime avoidance, and ramified character cancellation are proved. They reduce the cyclotomic principal product to equality of two explicit ZMod units.",
+  "remaining": "Prove that arithmeticCyclotomicSignedAwayProductUnit for the normalized residual equals the forward unit ZMod.unitOfCoprime (a*d) selected by the ramified rational-unit construction; then prove the cyclotomic principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and the remaining DUB-17–20 conclusions.",
+  "reuse": "Reuses Mathlib's IsCyclotomicExtension.autEquivPow and cyclotomic.irreducible_rat, the existing autToPow_eq_modularCyclotomicCharacter bridge, the proved away-conductor reciprocity theorem, rationalPrimeNormalizedResidual_exists_away_signed_prime_product, and the existing finite cyclic cancellation arithmetic.",
+  "routeAdjustment": "The earlier planned real-sign and common-stage constructions are now closed directly inside the actual cyclotomic Galois group. The ramified cancellation was strengthened from equality of root actions to an exact equality of power-character units, leaving one explicit unit identification rather than another automorphism-composition layer.",
+  "next": "Compare arithmeticCyclotomicSignedAwayProductUnit with the forward quotient unit from rationalPrimeRationalUnit_exists_reciprocity_character_cancellation, first reusing or strengthening the positive rational norm-comparison witness to retain its residue modulo p^(m+1).",
   "draftRepairs": "The primitive-root map proof was corrected to use forward injective transport. Preservation was factored into the original cyclotomic stage and then the compositum, keeping adjoin induction bounded. The restricted automorphism uses finite-dimensional injective-implies-surjective rather than constructing an unrelated inverse. Explicit algebraicity was installed for deterministic spectral-norm synthesis. Failed scratch logs remain non-acceptance evidence.",
-  "status": "Focused production and exact-consumer builds PASS. Expanded exhaustive audit and assembled verification are in progress. Source acceptance remains 16/20.",
+  "status": "Focused production and exact-consumer builds PASS. Exhaustive audit PASS with 21,876 project theorems, 11,083 registered consumers, 14,163 declarations plus 10,970 generated declarations, and all sixteen linters. Authoritative assembled development verification PASS with zero Lean diagnostics; source acceptance remains 16/20.",
+  "reuseRefresh": {
+    "date": "2026-10-14",
+    "record": "lean-reuse-audit-20261014.json",
+    "reusedPinnedDeclaration": "AlgHom.fieldRange_of_normal",
+    "discharged": "Every away-prime reciprocity factor and the actual real-sign action are multiplied on one cyclotomic stage; p-free support proves conductor avoidance; the actual ramified power character multiplied by the explicit forward quotient unit equals one.",
+    "productionModules": [
+      "RationalPrimeCyclotomicReciprocityRationalUnitCancellation",
+      "RationalSignedPrimeProduct",
+      "RationalPrimeNormalizedResidual",
+      "ArithmeticCyclotomicRealSignAction",
+      "ArithmeticCyclotomicSignedAwayProduct",
+      "RationalPrimeCyclotomicReciprocityCharacterCancellation"
+    ],
+    "assembledLog": "logs/dubon-build-20261014-192520-724.log",
+    "assembledLogSha256": "92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6",
+    "reusedPinnedDeclarations": [
+      "AlgHom.fieldRange_of_normal",
+      "normedField_power_small_closedBall",
+      "Algebra.norm_algebraMap"
+    ],
+    "exactConsumers": [
+      "actual_rational_unit_exists_cyclotomic_reciprocity_root_cancellation_source",
+      "actual_cyclotomic_unramified_rationalSignedPrimeProduct_exists_support_source",
+      "actual_cyclotomic_unramified_rationalPrimeNormalizedResidual_away_product_source",
+      "actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source",
+      "actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source",
+      "actual_cyclotomic_ramified_rationalUnit_character_cancellation_source"
+    ],
+    "assembledLogBytes": 5127841
+  },
   "modules": [
     {
       "module": "RationalPrimeChangedCyclotomicCompositum",
@@ -130,7 +160,7 @@
         "localFieldArithmeticFrobenius_conjugate"
       ],
       "productionSha256": "993cb62513be98728b403879465a25cc6607a16f402a0522bab230ccda3da477",
-      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+      "status": "Focused build, exhaustive audit and authoritative assembled verification pass."
     },
     {
       "module": "RationalPrimeChangedCyclotomicClosureReciprocity",
@@ -146,7 +176,7 @@
         "rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer"
       ],
       "productionSha256": "e77e6373c39f1c9f869f69adf7eeb089bdf725544c5cf6f2ce556e8dd46612d5",
-      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+      "status": "Focused build, exhaustive audit and authoritative assembled verification pass."
     },
     {
       "module": "RationalPrimeChangedCyclotomicClosureFrobenius",
@@ -161,7 +191,7 @@
         "rationalPrimeOriginalCyclotomicClosureRoot_inclusion"
       ],
       "productionSha256": "b5d40935516f0ca1b5da2cfb828bbf40b9bc93a67388237f7b0af9d4427ef68a",
-      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+      "status": "Focused build, exhaustive audit and authoritative assembled verification pass."
     },
     {
       "module": "RationalPrimeChangedCyclotomicClosureReciprocityAction",
@@ -170,7 +200,7 @@
         "rationalPrimeChangedCyclotomicClosure_reciprocity_norm_uniformizer_root"
       ],
       "productionSha256": "693036673fc7e01e0957f184420853e943b3c2bc8632a2f30b722e45337087c6",
-      "status": "Focused build and exhaustive audit pass; assembled verification pending for this increment."
+      "status": "Focused build, exhaustive audit and authoritative assembled verification pass."
     },
     {
       "module": "RationalPrimeChangedCyclotomicClosureNaturalAction",
@@ -178,7 +208,89 @@
         "rationalPrimeNaturalChangedCyclotomicClosure_reciprocity_root"
       ],
       "productionSha256": "caf95f2f2d138f6814f5240cd833aa5d3e61420758fa6bd24b29432696902297",
-      "status": "Focused production and exact-consumer builds pass; exhaustive audit and assembled verification pending."
+      "status": "Focused production, exact-consumer, exhaustive-audit and authoritative assembled verification pass."
+    },
+    {
+      "module": "RationalPrimeOriginalCyclotomicNorm",
+      "publicTheorems": [
+        "rationalPrimePolynomial_irreducible_of_comp_X_add_C",
+        "rationalPrimePowerShiftedCyclotomic_irreducible",
+        "rationalPrimePowerCyclotomic_irreducible",
+        "rationalPrimeOriginalCyclotomicStageRoot_isPrimitive",
+        "rationalPrimeOriginalCyclotomicStage_isCyclotomic",
+        "rationalPrimeOriginalCyclotomicStageRoot_norm_sub_one",
+        "rationalPrimeOriginalCyclotomicClosureRoot_norm_sub_one",
+        "rationalPrimePrimeUnit_val",
+        "rationalPrimeOriginalCyclotomicClosure_exists_prime_norm",
+        "rationalPrimeOriginalCyclotomicClosure_reciprocity_prime"
+      ],
+      "productionSha256": "96ab8e38a3e4960072a228b25ed229db4ee4db09b3e6dc4ccad92d62fd5c283c",
+      "status": "Focused build, expanded exhaustive audit and authoritative assembled verification pass."
+    },
+    {
+      "module": "RationalPrimeChangedCyclotomicClosureNaturalUnitAction",
+      "publicTheorems": [
+        "rationalPrimeNaturalUnit_val",
+        "rationalPrimeNaturalUnit_mul_prime",
+        "rationalPrimeOriginalCyclotomicClosure_reciprocity_mul_prime_eq_natural",
+        "rationalPrimeChangedCyclotomicClosure_reciprocity_natural_root",
+        "rationalPrimeNaturalUnitChangedCyclotomicClosure_reciprocity_root"
+      ],
+      "productionSha256": "65995a221136fb8e0425dc3bcdc90a3c51a78be8b6c01edd19448c30f7974031",
+      "status": "Focused build, exact consumers, expanded exhaustive audit and authoritative assembled verification pass."
+    },
+    {
+      "module": "RationalPrimeCyclotomicReciprocityQuotientAction",
+      "publicTheorems": [
+        "algEquiv_inv_primitiveRoot_action",
+        "addMonoidHom_quotient_primitiveRoot_action",
+        "cyclic_action_of_conjugate_root_action",
+        "finiteGaloisStageAutCast",
+        "finiteGaloisStage_cast_coe",
+        "finiteGaloisStageAutCast_apply",
+        "localFieldFiniteCyclicReciprocity_stage_cast",
+        "localFieldFiniteCyclicReciprocity_action_transport_stage_eq",
+        "rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive",
+        "rationalPrimeNaturalQuotientUnit",
+        "rationalPrimeNaturalQuotientUnit_val",
+        "rationalPrimeNaturalQuotient_reciprocity_root",
+        "rationalPrimeNaturalUnit_exists_reciprocity_root_action",
+        "rationalPrimeNaturalQuotient_exists_reciprocity_root_action"
+      ],
+      "productionSha256": "d462c342dc3f530a77d9a45025cbbf67fca24a816d788118a5aaf2896cee4bcf",
+      "status": "Focused production build, both exact consumers, all eleven semantic regressions, expanded exhaustive audit, all sixteen linters and authoritative assembled verification pass."
+    },
+    {
+      "module": "ArithmeticCyclotomicRealSignAction",
+      "publicTheorems": [
+        "rationalCyclotomicConjugation_autToPow",
+        "rationalCyclotomicConjugation_apply_root",
+        "rationalCyclotomicRealSignAut_autToPow",
+        "rationalCyclotomicRealSignAut_apply_root"
+      ],
+      "productionSha256": "03e413be28674ed99ae38ace4047b6fb3c9b3f3a64f84dc1b77cb2d56408e5c3",
+      "status": "Focused production, exact-consumer, exhaustive-audit and authoritative assembled verification pass."
+    },
+    {
+      "module": "ArithmeticCyclotomicSignedAwayProduct",
+      "publicTheorems": [
+        "arithmeticCyclotomicAwayAut_autToPow",
+        "arithmeticCyclotomicAwayProduct_autToPow",
+        "arithmeticCyclotomicSignedAwayProduct_autToPow",
+        "arithmeticCyclotomicSignedAwayProduct_apply_root",
+        "finiteSupport_away_primePower",
+        "rationalPrimeNormalizedResidual_exists_signedAwayProduct_action"
+      ],
+      "productionSha256": "ab2769c2f21fc67554c11aa9e7d3745773e71a62522a0ed80e3a8848fc38e522",
+      "status": "Focused production, exact-consumer, exhaustive-audit and authoritative assembled verification pass."
+    },
+    {
+      "module": "RationalPrimeCyclotomicReciprocityCharacterCancellation",
+      "publicTheorems": [
+        "rationalPrimeRationalUnit_exists_reciprocity_character_cancellation"
+      ],
+      "productionSha256": "3fce1043e99556f6b628ae74ac7f60d9e9abb5c806c03a6a0df8b43fb672396b",
+      "status": "Focused production, exact-consumer, exhaustive-audit and authoritative assembled verification pass."
     }
   ],
   "consumers": [
@@ -194,7 +306,14 @@
     "actual_local_field_arithmetic_frobenius_equiv_source",
     "actual_changed_cyclotomic_closure_frobenius_root_source",
     "actual_changed_cyclotomic_closure_reciprocity_root_source",
-    "actual_natural_changed_cyclotomic_closure_reciprocity_root_source"
+    "actual_natural_changed_cyclotomic_closure_reciprocity_root_source",
+    "actual_changed_cyclotomic_closure_reciprocity_natural_root_source",
+    "actual_natural_unit_changed_cyclotomic_closure_reciprocity_root_source",
+    "actual_natural_quotient_cyclotomic_reciprocity_root_source",
+    "actual_natural_quotient_exists_cyclotomic_reciprocity_root_source",
+    "actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source",
+    "actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source",
+    "actual_cyclotomic_ramified_rationalUnit_character_cancellation_source"
   ],
   "preflights": [
     {
@@ -261,9 +380,9 @@
     "sha256": "74bf8f533247bc22caf77316ab04f8c62888620fde5b783691b5480cff2ed3c1"
   },
   "scope": [
-    2980,
-    2351,
-    11009
+    2991,
+    2364,
+    11083
   ],
   "exactEndpoint": [
     [
@@ -291,18 +410,43 @@
       "rationalPrimeChangedCyclotomicCompositum_valuationSubring_eq_ambient",
       "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_residue",
       "rationalPrimeChangedCyclotomicDiagonalAlgEquiv_eq_arithmeticFrobenius"
+    ],
+    [
+      "rationalPrimePowerCyclotomic_irreducible",
+      "rationalPrimeOriginalCyclotomicStageRoot_norm_sub_one",
+      "rationalPrimeOriginalCyclotomicClosureRoot_norm_sub_one",
+      "rationalPrimeOriginalCyclotomicClosure_exists_prime_norm",
+      "rationalPrimeOriginalCyclotomicClosure_reciprocity_prime"
+    ],
+    [
+      "rationalPrimeOriginalCyclotomicClosure_reciprocity_mul_prime_eq_natural",
+      "rationalPrimeChangedCyclotomicClosure_reciprocity_natural_root",
+      "rationalPrimeNaturalUnitChangedCyclotomicClosure_reciprocity_root"
+    ],
+    [
+      "rationalCyclotomicConjugation_apply_root",
+      "rationalCyclotomicRealSignAut_apply_root"
+    ],
+    [
+      "arithmeticCyclotomicAwayProduct_autToPow",
+      "arithmeticCyclotomicSignedAwayProduct_apply_root",
+      "finiteSupport_away_primePower",
+      "rationalPrimeNormalizedResidual_exists_signedAwayProduct_action"
+    ],
+    [
+      "rationalPrimeRationalUnit_exists_reciprocity_character_cancellation"
     ]
   ],
   "validation": {
     "foundation": "../../logs/foundation_freeze_20261014_004630.log",
-    "paper": "logs/dubon-build-20261013-235653-270.log",
-    "assembledLog": "logs/dubon-build-20261013-235653-270.log",
-    "exhaustive": 21625,
-    "explicit": 10981,
-    "exactConsumers": 2347,
+    "paper": "logs/dubon-build-20261014-192520-724.log",
+    "assembledLog": "logs/dubon-build-20261014-192520-724.log",
+    "exhaustive": 21876,
+    "explicit": 11083,
+    "exactConsumers": 2364,
     "linters": [
-      14026,
-      10820
+      14163,
+      10970
     ],
     "nativeExits": [
       0,
@@ -311,23 +455,55 @@
     "actualExitsConsumed": true,
     "diagnostics": false,
     "foundationManifest": "../../logs/foundation_freeze_20261014_004630.json",
-    "paperSha256": "3235382eca7c14c78f5d0775973c2b94d65d95637ea795e796e5598e17ed0141",
+    "paperSha256": "92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6",
     "foundationLogSha256": "562b251c73483a245f209c2fdf6c749ead5f30c9b12002a1300e3453bac12c8c",
     "foundationManifestSha256": "d985a1d5ec32e1506328918eb776c6af091a26551c07baa6db75d3ba418147fd",
     "pendingIncrementAudit": {
-      "exhaustive": 21717,
-      "explicit": 11007,
+      "exhaustive": 21876,
+      "explicit": 11083,
       "linters": [
-        14067,
-        10886
+        14163,
+        10970
       ],
-      "assembledPending": true
+      "assembledPending": false
     },
     "naturalUnitIncrement": {
       "focusedProduction": true,
       "focusedConsumer": true,
-      "auditPending": true,
-      "assembledPending": true
+      "exhaustiveAudit": true,
+      "assembledPending": false,
+      "exhaustive": 21834,
+      "explicit": 11069,
+      "declarations": [
+        14140,
+        10942
+      ]
+    },
+    "principalProductResidualIncrement": {
+      "focusedProduction": true,
+      "focusedConsumer": true,
+      "exhaustiveAudit": true,
+      "assembledVerification": true,
+      "productionModules": 2991,
+      "exactConsumers": 2364,
+      "remaining": "Equality of the signed-away cyclotomic character unit and the forward quotient unit."
+    },
+    "actualCyclotomicActionIncrement": {
+      "focusedProduction": true,
+      "focusedConsumers": 3,
+      "exhaustiveAudit": true,
+      "assembledVerification": true,
+      "exhaustive": 21876,
+      "explicit": 11083,
+      "declarations": [
+        14163,
+        10970
+      ],
+      "productionModules": 2991,
+      "exactConsumers": 2364,
+      "assembledLog": "logs/dubon-build-20261014-192520-724.log",
+      "assembledLogSha256": "92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6",
+      "assembledLogBytes": 5127841
     }
   }
 }

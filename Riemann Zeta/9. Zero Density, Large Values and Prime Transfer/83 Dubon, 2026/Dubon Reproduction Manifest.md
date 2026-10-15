@@ -1,6 +1,84 @@
 # Dubon 2026 — reproduction manifest
 
-Actual changed/cyclotomic compositum and restricted diagonal Frobenius (13 October 2026): The literal prime-power primitive root in the Witt cyclotomic fraction field retains its exact order and generates an actual finite Galois cyclotomic stage over the original rational-prime completion. Its literal compositum with the changed auxiliary field is finite Galois over that auxiliary field. The proved diagonal Frobenius preserves both generating fields, restricts to an automorphism of the actual compositum over the auxiliary field, and acts on the same primitive root by the required inverse-unit power. The compositum receives the spectral finite-extension local-field structure. A proved local-ring criterion now reduces its formal unramifiedness to preservation of one actual auxiliary uniformizer as an irreducible element upstairs. Formal unramifiedness still awaits the actual upstairs irreducibility proof, and the restricted diagonal automorphism still must be identified with arithmetic Frobenius. Rational-unit extension, ramified inverse-unit reciprocity, principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and DUB17-20 remain open. Assembled verification and both sequential native verifiers passed with zero diagnostics, all eleven regression modules, all sixteen linters and 21,593 exhaustive theorem checks. Fully verified scope: 2972 production modules, 2346 exact consumers and 10,968 explicit theorem registrations. The exact DUB-17 dependency chain remains in the remaining-obligation map.
+Actual real-sign, common-stage away-product, and ramified-character checkpoint (14 October 2026): The current Lean reuse search remains recorded in `Tools/lean-reuse-audit-20261014.json`; it found no upstream result that closes the pinned-toolchain p-power principal-product endpoint. The local route now proves the actual complex-conjugation action through `rationalCyclotomicRealSignAut_apply_root`. `rationalPrimeNormalizedResidual_exists_signedAwayProduct_action` restricts every away-prime reciprocity factor to one actual cyclotomic stage, multiplies those factors with the real-sign automorphism there, and uses `finiteSupport_away_primePower` to discharge the conductor-coprimality premise from the p-free support. `rationalPrimeRationalUnit_exists_reciprocity_character_cancellation` strengthens the ramified root cancellation to the exact unit equation saying that the ramified power character times the forward quotient unit is one. The remaining cyclotomic principal-product obligation is therefore the exact equality between `arithmeticCyclotomicSignedAwayProductUnit` for the normalized residual and the constructed forward quotient unit `ZMod.unitOfCoprime (a * d) ...`; no real-sign, common-stage multiplication, or conductor-avoidance premise remains. Arithmetic invariant sum-zero and global duality remain downstream. DUB-17–20 remain open and acceptance stays 16/20. The complete production aggregate, all eleven semantic regressions and the exhaustive audit pass: 21,876 project theorems, 11,083 registered consumers, 14,163 declarations plus 10,970 generated declarations, and all sixteen linters. Current scope is 2,991 production modules and 2,364 exact consumers. The authoritative assembled verifier passes with zero Lean diagnostics; log `logs/dubon-build-20261014-192520-724.log`, SHA-256 `92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6`.
+
+## Actual real-sign and common-stage character checkpoint — 14 October 2026
+
+[ArithmeticCyclotomicRealSignAction.lean](Extension/Dubon2026/ArithmeticCyclotomicRealSignAction.lean) constructs actual rational cyclotomic conjugation, selects it exactly for a negative rational unit, computes its `autToPow` character, and proves its action on the primitive root. [ArithmeticCyclotomicSignedAwayProduct.lean](Extension/Dubon2026/ArithmeticCyclotomicSignedAwayProduct.lean) gives the actual cyclotomic Galois group its proved commutative structure, restricts every away-prime reciprocity value to that one stage, multiplies the factors there, and incorporates the real-sign automorphism. Its endpoint `rationalPrimeNormalizedResidual_exists_signedAwayProduct_action` starts from the already proved signed p-normalized residual and supplies a finite p-free support, conductor avoidance for every selected prime, and the resulting actual root action. [RationalPrimeCyclotomicReciprocityCharacterCancellation.lean](Extension/Dubon2026/RationalPrimeCyclotomicReciprocityCharacterCancellation.lean) proves the exact equality in `(ZMod (p^(n+1)))ˣ` that the actual ramified reciprocity character multiplied by the constructed forward quotient unit is one.
+
+The three exact consumers `actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source`, `actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source`, and `actual_cyclotomic_ramified_rationalUnit_character_cancellation_source` retain these results in `GlobalReciprocitySemanticRegression`. This closes the real-sign construction, common-stage multiplication, conductor-prime avoidance, and ramified inverse-character comparison. The remaining arithmetic bridge is the exact equality between `arithmeticCyclotomicSignedAwayProductUnit` for the normalized residual and the forward unit `ZMod.unitOfCoprime (a * d) ...` selected by ramified cancellation. That equality is required before the cyclotomic principal-product root action, arithmetic invariant sum-zero, and global duality can close.
+
+Verification passed for 2,991 production modules and 2,364 exact consumers. The exhaustive audit reports 21,876 project theorems, 11,083 registered consumers, 14,163 declarations plus 10,970 generated declarations, and all sixteen linters. The authoritative verifier completed all eleven retained semantic regressions and the audit with zero Lean diagnostics.
+
+- Log: [logs/dubon-build-20261014-192520-724.log](logs/dubon-build-20261014-192520-724.log)
+- Log SHA-256: `92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6`
+- Log size: `5,127,841` bytes
+- Acceptance: `16/20`; DUB-17–20 remain open.
+- Remaining DUB-17 chain: signed-away unit = forward quotient unit → cyclotomic principal product → arithmetic invariant sum-zero → global duality.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+## Signed p-normalized residual checkpoint — 14 October 2026
+
+The new production module [RationalSignedPrimeProduct.lean](Extension/Dubon2026/RationalSignedPrimeProduct.lean) upgrades the existing absolute-value prime product to an exact equality by multiplying by the original rational unit's real sign. [RationalPrimeNormalizedResidual.lean](Extension/Dubon2026/RationalPrimeNormalizedResidual.lean) then defines the rational residual obtained after removing the normalized p-power, proves that its local p-order is zero and its original p-place valuation is one, and removes p from an actual finite support without changing the signed product. The endpoint `rationalPrimeNormalizedResidual_exists_away_signed_prime_product` therefore reconstructs that exact residual from finite places all eligible for `arithmeticCyclotomic_reciprocity_away_conductor`. The exact consumer `actual_cyclotomic_unramified_rationalPrimeNormalizedResidual_away_product_source` retains the result in the global reciprocity regression.
+
+This removes two necessary obstacles in the principal-product chain: the finite product now carries the missing real sign, and the selected finite support contains no conductor prime. The remaining step is substantive: construct the real-place automorphism on the actual primitive root, assemble the individual away-prime reciprocity character values on one cyclotomic stage, and identify their combined exponent with the forward exponent already cancelled by `rationalPrimeRationalUnit_exists_reciprocity_root_cancellation`.
+
+Verification passed for 2,988 production modules and 2,361 exact consumers. The exhaustive audit reports 21,834 project theorems, 11,069 registered consumers, 14,140 declarations plus 10,942 generated declarations, and all sixteen linters. The authoritative verifier completed all eleven retained semantic regressions and the audit with zero Lean diagnostics.
+
+- Log: [logs/dubon-build-20261014-170340-035.log](logs/dubon-build-20261014-170340-035.log)
+- Log SHA-256: `E12A778A87D52383EF0A8949853C27F0CDB3E83B94E4CA24E13204FE8C9E9396`
+- Log size: `5,116,886` bytes
+- Acceptance: `16/20`; DUB-17–20 remain open.
+- Remaining DUB-17 chain: real-sign root action + common-stage away-prime reciprocity product → cyclotomic principal product → arithmetic invariant sum-zero → global duality.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+## Ramified rational-unit cancellation checkpoint — 14 October 2026
+
+The new production module [RationalPrimeCyclotomicReciprocityRationalUnitCancellation.lean](Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitCancellation.lean) consumes `rationalPrimeRationalUnit_exists_reciprocity_root_action`. Its theorem `rationalPrimeRationalUnit_exists_reciprocity_root_cancellation` retains the same actual cyclotomic stage and primitive root, and proves that the ramified action followed by exponent `a*d` fixes the root. The calculation is exact: `(b*c)*(a*d)` is congruent to one modulo `p^(n+1)` because `a*b` and `c*d` are each congruent to one. The exact consumer `actual_rational_unit_exists_cyclotomic_reciprocity_root_cancellation_source` exposes this cancellation in the global reciprocity regression.
+
+This removes the finite cyclic multiplication obstacle in the principal-product chain. The unresolved step is narrower: prove that the already constructed away-from-conductor local factors, together with the actual real-sign factor, act by the same forward exponent `a*d`. Once that identification is available, the new cancellation theorem closes the root action of the full cyclotomic principal product.
+
+Verification passed for 2,986 production modules and 2,359 exact consumers. The exhaustive audit reports 21,816 project theorems, 11,059 registered consumers, 14,128 declarations plus 10,934 generated declarations, and all sixteen linters. The authoritative verifier completed all eleven retained semantic regressions and the audit with zero Lean diagnostics.
+
+- Log: [logs/dubon-build-20261014-154134-209.log](logs/dubon-build-20261014-154134-209.log)
+- Log SHA-256: `F602ABA078FD6960AB05B0FAAF57F77570F50085DA32C0AA8E6D17A11E7A637E`
+- Log size: `5,112,462` bytes
+- Acceptance: `16/20`; DUB-17–20 remain open.
+- Remaining DUB-17 chain: identify away-prime product + real-sign action with the forward quotient exponent → cyclotomic principal product → arithmetic invariant sum-zero → global duality.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+## Arbitrary rational-unit cyclotomic reciprocity checkpoint — 14 October 2026
+
+The new production module [RationalPrimeCyclotomicReciprocityRationalUnitAction.lean](Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitAction.lean) proves positive rational approximation in the rational p-adic completion, the exact positive coprime natural quotient representation, the finite-dimensional near-one norm lemma, the resulting finite-stage norm comparison, the norm-one characterization of order-zero units, norm transport across a stage equivalence, and the endpoint `rationalPrimeRationalUnit_exists_reciprocity_root_action`. The exact consumer `actual_rational_unit_exists_cyclotomic_reciprocity_root_source` supplies only an odd rational prime, cyclotomic level and arbitrary `q : ℚˣ`.
+
+The proof splits the mapped rational unit into its normalized p-power and an order-zero residual. The prime-power action vanishes by `rationalPrimeOriginalCyclotomicClosure_reciprocity_prime`. Positive p-adic approximation and `positiveRational_eq_coprimeNaturalQuotient` replace the residual by positive `a/c`; `normedField_power_small_closedBall` and `Algebra.norm_algebraMap` make the residual quotient an actual finite-stage norm. `algEquiv_unit_norm_transport` moves that witness to the closure stage used by the root action, the reciprocity norm kernel identifies the two actions, and `rationalPrimeNaturalQuotient_exists_reciprocity_root_action` supplies the exponent. This handles negative rational units without a false premise that `-1` has trivial action.
+
+The current-upstream audit is recorded in [lean-reuse-audit-20261014.json](Tools/lean-reuse-audit-20261014.json). Yamaguchi's exact principal-unit norm-subgroup theorem confirms the mathematics, while the pinned small-ball route avoids a Lean/Mathlib upgrade and a large class-field-theory port. Current kbuzzard, gq2 and LANA revisions do not discharge this p-power cyclotomic endpoint under the project's proof rules.
+
+Verification passed for 2,985 production modules and 2,358 exact consumers. The exhaustive audit reports 21,814 project theorems, 11,057 registered consumers, 14,126 declarations plus 10,934 generated declarations, and all sixteen linters. The authoritative verifier completed all eleven retained semantic regressions and the audit with zero Lean diagnostics.
+
+- Log: [logs/dubon-build-20261014-143851-091.log](logs/dubon-build-20261014-143851-091.log)
+- Log SHA-256: `91CD8FDE934CBEF4654AD7EC597CE6D7CE543F13462E6A9B117B3FD494203A18`
+- Log size: `5,111,838` bytes
+- Acceptance: `16/20`; DUB-17–20 remain open.
+- Remaining DUB-17 chain: normalized away-prime product + ramified arbitrary-unit factor + real-sign factor → cyclotomic principal product → arithmetic invariant sum-zero → global duality.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+## Positive rational-quotient cyclotomic reciprocity checkpoint — 14 October 2026
+
+The new production module [RationalPrimeCyclotomicReciprocityQuotientAction.lean](Extension/Dubon2026/RationalPrimeCyclotomicReciprocityQuotientAction.lean) proves the inverse primitive-root calculation, finite-stage cast and local reciprocity transport, cyclic conjugate-root transport, the literal natural quotient unit, and the witness-producing endpoint `rationalPrimeNaturalQuotient_exists_reciprocity_root_action`. The exact consumers `actual_natural_quotient_cyclotomic_reciprocity_root_source` and `actual_natural_quotient_exists_cyclotomic_reciprocity_root_source` connect the supplied-action and constructed-witness forms to the global reciprocity regression.
+
+Verification passed for 2,984 production modules and 2,357 exact consumers. The exhaustive audit reports 21,800 project theorems, 11,049 registered consumers, 14,117 declarations plus 10,928 generated declarations, and all sixteen linters. The authoritative verifier completed all eleven retained semantic regressions and the audit with zero Lean diagnostics.
+
+- Log: [logs/dubon-build-20261014-124623-305.log](logs/dubon-build-20261014-124623-305.log)
+- Log SHA-256: `582C611040243E4879C932D10FF1FE81CC0F01E07336C2A90A0990483518EEBD`
+- Log size: `5,108,436` bytes
+- Acceptance: `16/20`; DUB-17–20 remain open.
+- Remaining DUB-17 chain: arbitrary `ℚˣ` factorization and sign/residue comparison → cyclotomic principal product → arithmetic invariant sum-zero → global duality.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -3615,6 +3693,28 @@ Dirty checkout `3fdbcb6ff8343bd1c38295d71b461f22372667dc`; Lean 4.30.0, Mathlib 
 - `Extension/Dubon2026/EisensteinLatticeKernel.lean`: SHA-256 `fa7f682769fd00300292a38743bf17329ba5568db95ff27712962507b32c12f4`.
 - `Extension/Dubon2026/Gamma0Eisenstein.lean`: SHA-256 `ec588f809389c31bbe215f3c3a81fef8a3795cf43874464be086acac9860db97`.
 - `Extension/Dubon2026/Gamma0EisensteinHolomorphic.lean`: SHA-256 `aa4822c3f07d852884433b8357e041b82b25c4fcd61ec5ebce31373c7bfe7252`.
+
+Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
+
+### Fixed cyclotomic closure stage and current Lean reuse audit — 14 October 2026
+
+The current external search identified Naganori Yamaguchi's finite/profinite local and global class-field-theory development and Palomar's verified finite abelian local and global reciprocity records. The exact inspected commit, toolchain, Mathlib pin, declaration names and source hashes are preserved in `lean-reuse-audit-20261014.json`. The complete external stack is newer than this project's pin, so no dependency was added. `gq2-lean` was rejected for this obligation because its local reciprocity endpoint remains a literature input, and the inspected `kbuzzard/ClassFieldTheory` tree did not provide the finished endpoint.
+
+The shorter adopted route reuses pinned Mathlib's `AlgHom.fieldRange_of_normal`. `finiteGaloisEmbeddingStage_eq` proves equality of the actual ranges of two embeddings of one finite Galois extension. The associated stage automorphism transports embedding values and commutes with every action because the stage is cyclic. The specialized module proves equality of the separately chosen original cyclotomic closure stages, carries one selected primitive root to the other, and transports their cyclic power actions. This discharges the previously open unrelated-closure-stage obstruction in the DUB-17 local reciprocity chain.
+
+The exact remaining local obligation is now the rational numerator/denominator assembly: choose positive representatives prime to `p`, rewrite both reciprocity values into the proved common stage, transport the denominator action, and combine them using reciprocity multiplicativity in `Additive Kˣ`. The cyclotomic principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy and higher symmetric continuation remain downstream. DUB-17–20 remain open; acceptance remains 16/20.
+
+The authoritative assembled verifier passed the full 11,895-job package build, all retained semantic regressions and the independent exhaustive audit with zero Lean diagnostics. The audit covered 21,781 project theorems, 11,035 registered consumers, 14,101 declarations plus 10,923 generated declarations, and all sixteen linters. Verified scope is 2,983 production modules and 2,355 exact consumers. The verdict remains `DEVELOPMENT PASS — IMPLEMENTED SCOPE VERIFIED; 16/20 GATES COMPLETE; PAPER INCOMPLETE`.
+
+- [dubon-build-20261014-104635-356.log](logs/dubon-build-20261014-104635-356.log), SHA-256 `B1F0193CD481696BFED7D96053190FD31A850E667A4FA2192B44CCEB9D613731`.
+- [lean-reuse-audit-20261014.json](Tools/lean-reuse-audit-20261014.json), SHA-256 `3772DDAE441E3F29686CB40D639E2F426E91DE5C62D0C0821C6EF18769711F41`.
+- [FiniteGaloisEmbeddingStage.lean](Extension/Dubon2026/FiniteGaloisEmbeddingStage.lean), SHA-256 `AE4F0BC003F9B3D3A38F4D97E6051C65923C2FBFE988E0C2B43B1EF664CAB075`.
+- [RationalPrimeOriginalCyclotomicClosureStageIndependence.lean](Extension/Dubon2026/RationalPrimeOriginalCyclotomicClosureStageIndependence.lean), SHA-256 `3EC6043A3833E9228982F094F1D0F4E54A216ADA766EE8653491F155C56727CF`.
+- [GlobalReciprocitySemanticRegression.lean](Extension/Dubon2026/GlobalReciprocitySemanticRegression.lean), SHA-256 `5827C14858DB9C4EC11A000C1ED812FFB3BA2E25FAE5D75B48B34224CA0C3075`.
+- [Audit.lean](Extension/Dubon2026/Audit.lean), SHA-256 `F440C8740A68849E4BB55C9B0AA7B527B82B8B96173682E3D8816382CBEABCE0`.
+- [Dubon2026.lean](Extension/Dubon2026.lean), SHA-256 `21226F9968DDEFC5120533AE504A6BA518DE5721A7B7F0A9C363E9BCA7536469`.
+- [scaffold.json](Tools/scaffold.json), SHA-256 `A0B087C516444DA501FE8C22A788D5F9824831D767ED9A3CE15631E8D1828018`.
+- [changed-cyclotomic-compositum-route-20261013.json](Tools/changed-cyclotomic-compositum-route-20261013.json), SHA-256 `CC4A79B9033A35E0DD161B1BE0B9D55A7BFD844D83B2991EB2F03415DCC3B912`.
 
 Owner BAT SHA-256 `9dd7c9f61aeb2704832c897475a76d471f855150ff6cde03e08cee141a090114` (unchanged; not executed).
 

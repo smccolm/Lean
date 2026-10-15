@@ -1,0 +1,177 @@
+{
+  "asOf": "2026-10-14",
+  "objective": "Find existing Lean proofs that can shorten the unresolved Dubon dependency chain, with priority on the rational-unit local reciprocity action required by DUB-17.",
+  "projectPin": {
+    "lean": "leanprover/lean4:v4.30.0",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+  },
+  "externalCandidates": [
+    {
+      "name": "Naganori Yamaguchi ClassFieldTheory",
+      "repository": "https://github.com/n-yamaguchi-0729/ClassFieldTheory",
+      "inspectedCommit": "26f52ca8574bd7bf39cfa069466a70099f515382",
+      "lean": "leanprover/lean4:v4.35.0-rc2",
+      "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "relevantDeclarations": [
+        {
+          "declaration": "finiteGaloisEmbeddingConjugator",
+          "file": "Nyll/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ConcreteReciprocityCanonical.lean",
+          "fileSha256": "ABE49A192A2E82D848E0B8C78B111018A50ACAA75DDA9E8A57CFFEC00363814F"
+        },
+        {
+          "declaration": "finiteGaloisEmbeddingConjugator_apply",
+          "file": "Nyll/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ConcreteReciprocityCanonical.lean",
+          "fileSha256": "ABE49A192A2E82D848E0B8C78B111018A50ACAA75DDA9E8A57CFFEC00363814F"
+        },
+        {
+          "declaration": "concreteNormResidueSymbolOfEmbedding_conjugation",
+          "file": "Nyll/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ConjugationNaturality.lean",
+          "fileSha256": "8C59845C8E098CCB1FD750007E8C0F41AC89F92F7E058D0CA80B1B9A33E0DF8C"
+        },
+        {
+          "declaration": "localArtinMap_conjugation",
+          "file": "Nyll/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ConjugationNaturality.lean",
+          "fileSha256": "8C59845C8E098CCB1FD750007E8C0F41AC89F92F7E058D0CA80B1B9A33E0DF8C"
+        },
+        {
+          "declaration": "localNormSubgroup_eq_uniformizerPrincipalSubgroup_cyclotomicPrimePower",
+          "file": "Nyll/ClassFieldTheory/LocalClassFieldTheory/Finite/CyclotomicNorm/PrincipalUnits.lean",
+          "fileSha256": "56869B02389932392CECF74528B6B05A891B19A5E3C6213D2826A9B04C174B3E"
+        },
+        {
+          "declaration": "arithmeticGlobalArtinMonoidHom_principalIdele",
+          "file": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ArithmeticNormalization.lean",
+          "fileSha256": "5C8936F9A5AA74B69414EEEB30CA5D45BF595291701A8D3524825D9325D18C2C"
+        },
+        {
+          "declaration": "finitePlaceAdicHilbertPairingFamily_productFormula",
+          "file": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/FinitePlaceAdicHilbertProductFormula.lean",
+          "fileSha256": "E186DAF68313A0596E0C0BD9C14491A5D74BD1B9FAC128344598EAD67E6DC42C"
+        }
+      ],
+      "adoptionDecision": "The exact upstream theorem fieldPrincipalUnits_le_normSubgroup_cyclotomic_odd confirms the principal-unit inclusion needed for the rational-unit step. Do not port the complete newer Lean/Mathlib stack: the pinned project has the shorter normedField_power_small_closedBall plus Algebra.norm_algebraMap route, now used to prove the required finite-stage norm comparison. Retain the upstream local Artin naturality, principal-idele and product-formula declarations as candidates at the next global reciprocity boundary.",
+      "currentHead": "26f52ca8574bd7bf39cfa069466a70099f515382"
+    },
+    {
+      "name": "Palomar finite abelian global class field theory",
+      "record": "https://palomar-registry.org/entry?id=PALOMAR-2026-09-28-000001&version=1",
+      "inspectedCommit": "01b4bcb786c458c9af029860c9bbdbd67dd7c978",
+      "relevantDeclaration": "ClassFieldTheory.GlobalClassFieldComparison.finiteAbelianGlobalReciprocity_relativeNormQuotient",
+      "reportedAxioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "adoptionDecision": "Retain as a concrete later route from a relative determinant-norm quotient to finite abelian global reciprocity. It does not replace the still-open local rational-unit assembly."
+    },
+    {
+      "name": "Palomar finite abelian local class field theory",
+      "record": "https://palomar-registry.org/entry?id=PALOMAR-2026-09-28-000002&version=1",
+      "repository": "n-yamaguchi-0729/FiniteAbelianLocalReciprocityv2",
+      "relevantDeclaration": "ClassFieldTheory.finiteAbelianLocalReciprocity_quotient",
+      "adoptionDecision": "Retain as verified evidence for the broader finite abelian endpoint. The current project already has the finite cyclic reciprocity theorem needed by the immediate Dubon chain."
+    },
+    {
+      "name": "roed-math/gq2-lean",
+      "repository": "https://github.com/roed-math/gq2-lean",
+      "adoptionDecision": "Rejected for discharging the Dubon obligation: current local reciprocity is still retained in LiteratureInputs or supplied axiomatically, so importing it would not meet the project proof standard.",
+      "inspectedCommit": "3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33",
+      "commitDate": "2026-08-11",
+      "lean": "leanprover/lean4:v4.31.0-rc2"
+    },
+    {
+      "name": "kbuzzard/ClassFieldTheory",
+      "repository": "https://github.com/kbuzzard/ClassFieldTheory",
+      "adoptionDecision": "No replacement endpoint found. The current tree supplies useful local class field theory foundations, but no finished cyclotomic norm-subgroup or local Artin action theorem that shortens the proved pinned route.",
+      "inspectedCommit": "ccc3323c6750abca25b49b35106f54eb3a398509",
+      "commitDate": "2026-07-31",
+      "lean": "leanprover/lean4:v4.33.0-rc1"
+    },
+    {
+      "name": "LANA IUT",
+      "repository": "https://github.com/lana-agents/iut",
+      "inspectedCommit": "43e1e548ca0759d2aa853f69cf15b66b1b1164a8",
+      "commitDate": "2026-10-14",
+      "lean": "leanprover/lean4:v4.32.0",
+      "relevantDeclaration": "ker_resUnits_le_powRange",
+      "adoptionDecision": "The project proves that principal units are n-th powers when the residue characteristic does not divide n. The Dubon cyclotomic stage has p-power degree, so that coprime-exponent Hensel result does not discharge the needed norm comparison. The pinned small-ball power theorem is both applicable and shorter."
+    }
+  ],
+  "localReuse": {
+    "mathlibDeclaration": "AlgHom.fieldRange_of_normal",
+    "reason": "Normality identifies the chosen finite Galois image stages. Density of rational numbers in the rational p-adic completion, the small-ball power bijection, and the norm of scalar embeddings then turn every order-zero residual rational unit into the norm-equivalent image of a positive coprime natural quotient. This is the shortest pinned route and avoids an upgrade or a new principal-unit hierarchy.",
+    "newDeclarations": [
+      "finiteGaloisEmbeddingStage_eq",
+      "finiteGaloisEmbeddingStageAut",
+      "finiteGaloisEmbeddingStageAut_apply",
+      "finiteGaloisEmbeddingStage_action_transport",
+      "rationalPrimeOriginalCyclotomicClosureEmbedding",
+      "rationalPrimeOriginalCyclotomicClosureStage_eq",
+      "rationalPrimeOriginalCyclotomicClosureStageAut",
+      "rationalPrimeOriginalCyclotomicClosureStageAut_root",
+      "rationalPrimeOriginalCyclotomicClosure_root_action_transport",
+      "algEquiv_inv_primitiveRoot_action",
+      "addMonoidHom_quotient_primitiveRoot_action",
+      "cyclic_action_of_conjugate_root_action",
+      "finiteGaloisStageAutCast",
+      "finiteGaloisStage_cast_coe",
+      "finiteGaloisStageAutCast_apply",
+      "localFieldFiniteCyclicReciprocity_stage_cast",
+      "localFieldFiniteCyclicReciprocity_action_transport_stage_eq",
+      "rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive",
+      "rationalPrimeNaturalQuotientUnit",
+      "rationalPrimeNaturalQuotientUnit_val",
+      "rationalPrimeNaturalQuotient_reciprocity_root",
+      "rationalPrimeNaturalUnit_exists_reciprocity_root_action",
+      "rationalPrimeNaturalQuotient_exists_reciprocity_root_action",
+      "rationalPrime_exists_positive_rational_norm_sub_lt",
+      "positiveRational_eq_coprimeNaturalQuotient",
+      "finiteDimensional_exists_norm_near_one",
+      "rationalPrime_exists_positive_quotient_norm_comparison",
+      "rationalPrime_norm_eq_one_of_order_zero",
+      "algEquiv_unit_norm_transport",
+      "rationalPrimeRationalUnit",
+      "rationalPrimeRationalUnit_exists_reciprocity_root_action",
+      "rationalPrimeRationalUnit_exists_reciprocity_root_cancellation"
+    ],
+    "productionFiles": [
+      "Extension/Dubon2026/FiniteGaloisEmbeddingStage.lean",
+      "Extension/Dubon2026/RationalPrimeOriginalCyclotomicClosureStageIndependence.lean",
+      "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityQuotientAction.lean",
+      "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitAction.lean",
+      "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitCancellation.lean"
+    ],
+    "mathlibDeclarations": [
+      "AlgHom.fieldRange_of_normal",
+      "normedField_power_small_closedBall",
+      "Algebra.norm_algebraMap"
+    ]
+  },
+  "obligationEffect": {
+    "serves": "DUB-17 local reciprocity chain: arbitrary rational-unit reciprocity action -> cyclotomic principal product -> arithmetic invariant sum-zero -> global duality.",
+    "discharged": "For every q : ℚˣ, the proof splits off its p-power, proves that the remaining order-zero unit has norm one, compares it through an actual finite-stage norm with a positive p-coprime quotient, transports the norm witness between the selected cyclotomic stages, kills both the norm-kernel and prime-power terms, and invokes the proved positive-quotient root action. The sign is absorbed by positive p-adic approximation; no trivial action of -1 is assumed. The modular inverse data now also prove that composing the ramified action with the constructed quotient's forward exponent fixes the actual primitive root.",
+    "stillOpen": "Identify the forward positive-quotient exponent with the existing normalized away-prime product and the actual real-sign action. Then conclude the cyclotomic principal product and prove arithmetic invariant sum-zero.",
+    "gateImpact": "A necessary local DUB-17 sub-obligation is closed, but DUB-17 through DUB-20 remain open and source acceptance remains 16/20."
+  },
+  "verification": {
+    "focusedModuleBuild": "PASS (11,886 jobs, zero diagnostics)",
+    "aggregateRegressionAudit": "PASS",
+    "projectTheorems": 21816,
+    "registeredConsumers": 11059,
+    "declarations": 14128,
+    "generatedDeclarations": 10934,
+    "lintersPassed": 16,
+    "productionModules": 2986,
+    "exactConsumers": 2359,
+    "assembledVerification": "PASS",
+    "assembledLog": "logs/dubon-build-20261014-154134-209.log",
+    "assembledLogSha256": "F602ABA078FD6960AB05B0FAAF57F77570F50085DA32C0AA8E6D17A11E7A637E",
+    "assembledLogBytes": 5112462,
+    "leanDiagnostics": 0
+  },
+  "upstreamSnapshot": {
+    "mathlibHead": "e438a8a8329af5bd73274043f9f21795594c6bfb",
+    "checkedAt": "2026-10-14",
+    "policy": "Research snapshot only; the project remains on its frozen pin."
+  }
+}
