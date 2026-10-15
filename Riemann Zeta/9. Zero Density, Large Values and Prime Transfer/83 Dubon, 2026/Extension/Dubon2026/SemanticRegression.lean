@@ -9,6 +9,7 @@ import Dubon2026.ArithmeticDualitySemanticRegression
 import Dubon2026.GlobalNormSemanticRegression
 import Dubon2026.GlobalCohomologySemanticRegression
 import Dubon2026.GlobalReciprocitySemanticRegression
+import Dubon2026.ClassFormationSemanticRegression
 
 /-! Exact unfolded consumers for the currently implemented source interfaces. -/
 

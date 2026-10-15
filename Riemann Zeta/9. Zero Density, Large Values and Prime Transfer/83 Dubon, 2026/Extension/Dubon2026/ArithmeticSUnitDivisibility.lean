@@ -15,7 +15,8 @@ noncomputable section
 open IntermediateField
 open scoped NumberField
 
-private theorem integralUnit_preimage {R E L : Type} [CommRing R] [Field E] [Field L]
+/-- An original integral-closure unit whose value comes from a subfield has an actual integral-closure unit preimage in that same subfield. -/
+theorem originalIntegralUnit_preimage {R E L : Type} [CommRing R] [Field E] [Field L]
     [Algebra R E] [Algebra R L] (j : E →ₐ[R] L)
     (u : (integralClosure R L)ˣ) (b : E) (hb : j b = u.val.val) :
     ∃ v : (integralClosure R E)ˣ, v.val.val = b := by
@@ -82,7 +83,7 @@ theorem originalArithmeticSUnit_exists_finiteStage
   let b : E := AdjoinSimple.gen K x
   let j : E →ₐ[R] Ω := { E.val.toRingHom with commutes' := fun _ => rfl }
   let uΩ : (integralClosure R Ω)ˣ := Units.map i.mapIntegralClosure.toMonoidHom u
-  obtain ⟨vE, hvE⟩ := integralUnit_preimage j uΩ b rfl
+  obtain ⟨vE, hvE⟩ := originalIntegralUnit_preimage j uΩ b rfl
   let aE := algebraMap (𝓞 K) (𝓞 E) a
   have haE : aE ≠ 0 := originalIntegerMap_ne_zero (L := E) a ha
   let S := originalLocalizedIntegers E aE haE

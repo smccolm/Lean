@@ -1,6 +1,8 @@
 # Dubon 2026 — proof architecture
 
-Arithmetic S-unit and source idele entry (15 October 2026): The previous Hom/Ext increment passed sequential foundation/paper verification with zero Lean diagnostics. The next increment identifies the original localized rings with the valuation-defined S-integer rings, descends every actual arithmetic S-unit to a finite Galois stage inside the same unramified union, and constructs the source S-place short exact idele sequence at exactly the original exceptional support. Its class quotient injects into the actual full idele classes modulo outside integral units. The original localized-unit and supported-idele base-change maps commute with the same principal inclusion. These proofs remove coefficient-identification, finite-Galois-stage and fixed-support sequence assumptions in DUB-17. Source S-place ideles are the local factors at S and infinity; full supported ideles also contain outside integral-unit factors. Their class quotients are not silently identified with the full idele-class group. Continuous/equivariant Ext, arithmetic colimit and class-formation comparisons, reverse localization inclusion and the exact dual Selmer relation remain open before patching, modular association/purity, potential automorphy and higher symmetric-power continuation. Seven new modules, ten exact consumers and all 43 new theorem audit registrations pass focused checks. Expanded assembled verification is pending. **16/20 accepted; DUB-17–20 open.**
+Original finite class generators and invariant normalization (15 October 2026): The pinned Shapiro comparison now equals literal subgroup restriction. The existing actual coset trace therefore proves the original restriction-index identity, removing an assumed corestriction formula. Genuine fixed-field cohomology supplies all subgroup H1 vanishing and H2 size premises in the auxiliary-generator transfer. From one full-order genuine class, the proved subgroup generators and existing rational cyclic invariant give injective global/subgroup invariant maps, exact torsion images and the restriction-index normalization. The auxiliary cyclic extension of any prescribed positive degree is now constructed using the native primes-congruent-to-one theorem and original root stage. The full-order class is still an explicit arithmetic input. Constructing an auxiliary generator with zero restriction, matching local fundamental classes and finite-field tower maps, and the arithmetic extension/separation and localization assembly remain open on the DUB-17 dual Selmer and patching route. Actual modular association, purity and higher automorphy/continuation remain separate. The preceding 3,123-module scope passes sequential foundation/paper verification. The nine-module increment passes default-limit scratch compilation, four exact consumers, forty-three axiom checks and all sixteen linters over eleven explicit module scopes across two harnesses. Expanded production, four exact consumers, forty-three axiom checks and ten explicit module linter scopes pass with zero diagnostics. Sequential foundation verification passes; the assembled paper verification is pending. **16/20 accepted; DUB-17–20 open.**
+
+Additional proof-reuse discovery (15 October 2026): [Anthropic FLT at `6e837e7`](https://github.com/anthropics/fermats-last-theorem/tree/6e837e75355538c7f80bab5b956861e86c4eacc2) contains an actual global H1 localization-image/orthogonality proof and normalized finite idele-class H2 invariant constructions. These are substantially closer to the open reverse-localization obligation than the previously inspected predicate. Their full dependency closure and native arithmetic-map comparisons are not yet verified. The current nine-module native adaptation increment and its exact arithmetic consumers are described above; the initial three-module scratch checkpoint is historical. Full-order class construction and its required local/tower normalization remain open. The finite-stage relation-module proof is being assessed as a shorter route than general continuous Ext infrastructure. No acceptance gate closes: **16/20; DUB-17–20 open**. Exact statements, source hashes and limits are recorded in [the reuse audit](Tools/lean-reuse-audit-20261015.json).
 
 Proof-reuse refresh (15 October 2026, 10:57 UTC): [The new audit](Tools/lean-reuse-audit-20261015.json) records eleven current public repository heads, the newest 200 Palomar entries, exact candidate statements and the source-inspected FLT patching closure. `ker_RtoT_le_nilradical` is a promising later port once the actual arithmetic patching hypotheses are proved; it has not been imported or kernel-checked here. Existing Dubon Selmer finiteness and S-unit results cover the corresponding Stoll candidates. The immediate unresolved obligation remains the arithmetic localization-image/annihilator equality. `IsPerfectCompl` requires complementary subspaces and is not that equality. No newly located proof discharges a gate: **16/20 accepted; DUB-17–20 open**.
 
@@ -3727,6 +3729,43 @@ flowchart LR
   SUNITEXT3012 --> EXT3005["OPEN DUB-17: equivariant Ext/continuous-cohomology and original idele/class sequence comparisons"]
   SUNIT3005 --> SUNITSTAGE3019["Proved DUB-17 input: same S-integers and units; actual finite Galois stage descent"]
   SUNITSTAGE3019 --> SIDSEQ3019["Proved DUB-17 input: fixed S-place exact sequence; class comparison injection; original transition squares"]
+  SUNITSTAGE3019 --> SUNITH23030["Proved DUB-17 input: actual S-unit H2 colimit; original cocycle and coboundary descent"]
+  SUNITH23030 --> SIDCOL3030["Proved DUB-17 input: original continuous source coefficient colimits and ES/JS/CS exact sequence"]
+  SIDSEQ3019 --> SIDCOL3030
+  SIDCOL3030 --> EXT3005
+  SIDCOL3030 --> HOM3048["Proved DUB-17 input: original prime-field Hom sequence; actual trace-zero consumer"]
+  SUNITEXT3012 --> HOM3048
+  HOM3048 --> EXT3005
+  HOM3048 --> HOMH13060["Proved DUB-17 input: continuous source Hom H1/H2 exactness and actual trace-dual kernel"]
+  HOMH13060 --> EXT3005
+  SIDCOL3030 --> CLASSINJ3060["Proved DUB-17 input: original continuous full-class quotient colimit and source comparison injection"]
+  CLASSINJ3060 --> CLASS3048
+  CLASSINJ3060 --> CLASSHOM3094["Proved DUB-17 input: prime-torsion lifting and actual class Hom H1/H2 comparison"]
+  CLASSHOM3094 --> EXT3005
+  CLASSINJ3060 --> CLASSFIN3094["Proved DUB-17 input: original quotient finite H1 zero and cyclic H2 degree formula"]
+  CLASSFIN3094 --> CLASSCONT3094["Proved DUB-17 input: actual continuous class H1 vanishes at the rational arithmetic group"]
+  CLASSCONT3094 --> CLASS3048
+  CLASSFIN3094 --> CLASSINV3094["Proved DUB-17 input: faithful arithmetic transitions and actual rational invariant coefficient identity"]
+  CLASSINV3094 --> CLASS3048
+  CLASSCONT3094 --> OPENH13109["Proved DUB-17 input: actual class H1 vanishes on every open arithmetic subgroup"]
+  OPENH13109 --> CLASS3048
+  CLASSINV3094 --> CLASSNORM3109["Proved DUB-17 input: actual finite normal-invariant coefficient and H2 comparisons"]
+  CLASSNORM3109 --> CLASS3048
+  CLASSDEG3109["Proved DUB-17 input: actual prime-power cyclotomic degree witnesses"] --> CLASS3048
+  CLASSINV3094 --> CLASSH23109["Proved DUB-17 input: actual open-subgroup H2 finite representatives and coboundary witnesses"]
+  CLASSH23109 --> CLASS3048
+  CLASSINV3094 --> OPENINV3123["Proved DUB-17 input: genuine fixed-field classes equal actual open-subgroup invariants"]
+  OPENINV3123 --> OPENQUOT3123["Proved DUB-17 input: original relative restriction, quotient action and H2 comparison"]
+  CLASSH23109 --> CLASSH23123["Proved DUB-17 input: outside-unit H3 and noncyclic full-class H2 quotient isomorphism"]
+  CLASSH23123 --> OPENH23123["Proved DUB-17 input: actual open-quotient H2 has unique full-class lifts and order dividing subgroup index"]
+  OPENQUOT3123 --> OPENH23123
+  OPENH23123 --> CLASS3048
+  OPENH23123 --> RAWRES3132["Proved DUB-17 input: Shapiro equals literal restriction; original trace-index identity"]
+  RAWRES3132 --> GENINV3132["Conditional DUB-17 input: full-order original class gives subgroup generators and normalized invariant injections"]
+  FULLGEN3132["OPEN DUB-17: construct full-order arithmetic class and local/tower normalization"] --> GENINV3132
+  GENINV3132 --> CLASS3048
+  SIDCOL3030 --> CLASS3048["OPEN DUB-17: full class surjectivity, capitulation and arithmetic class formation"]
+  CLASS3048 --> EXT3005
   SIDSEQ3019 --> EXT3005
   EXT3005 --> GDUAL2481
   GLOBALLOC3000 --> GDUAL2481["OPEN DUB-17: reverse arithmetic inclusion and exact dual Selmer relation for actual local conditions"]

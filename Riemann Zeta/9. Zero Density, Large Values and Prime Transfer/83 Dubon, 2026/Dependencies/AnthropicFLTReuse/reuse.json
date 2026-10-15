@@ -1,0 +1,126 @@
+{
+  "repository": "https://github.com/anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "sourceFiles": [
+    {
+      "path": "P2M/Sol/S_groupCohomology_coindIso_hom_eq_map_subtype_comp_map_eval_one.lean",
+      "bytes": 15399,
+      "sha256": "56e5ead9e1f4298ab1ca26fb543ccd451265068c80d116ec956b7dd633916786",
+      "gitBlob": "919c85154b2ac2e38349fe7eb9a229850396ff27",
+      "gitBlobVerified": true,
+      "archiveNormalization": "none",
+      "prohibitedTokenLines": [],
+      "resourceOptionLines": [
+        31,
+        235,
+        275
+      ],
+      "imports": [
+        "Mathlib",
+        "P2M.Util"
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_groupCohomology_exists_corestriction_comp_res_eq_index_nsmul.lean",
+      "bytes": 2867,
+      "sha256": "d88b6f6ed2b60afffa5ee0d47affb37a1686dd07e0f74b80a37959d9e3686e17",
+      "gitBlob": "46abadfe4336cfc5abaddf41b458d36570b9f683",
+      "gitBlobVerified": true,
+      "archiveNormalization": "none",
+      "prohibitedTokenLines": [],
+      "resourceOptionLines": [],
+      "imports": [
+        "Mathlib",
+        "Theorems.Thm_Rep_exists_hom_coind_res_comp_eq_index_smul",
+        "Theorems.Thm_groupCohomology_coindIso_hom_eq_map_subtype_comp_map_eval_one",
+        "P2M.Util"
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_groupCohomology_exists_natCard_H2_eq_and_span_eq_top_of_map_res_inf_smul_eq_zero.lean",
+      "bytes": 3990,
+      "sha256": "e3b5b8d3c0bfdb9d77a80d7b09fb56dd051c183331621f7283d7e39a9efa391e",
+      "gitBlob": "110269a877e21569c24f6ff25591a71be952cf65",
+      "gitBlobVerified": true,
+      "archiveNormalization": "none",
+      "prohibitedTokenLines": [],
+      "resourceOptionLines": [],
+      "imports": [
+        "Mathlib",
+        "Theorems.Thm_groupCohomology_map_two_injective_and_range_eq_ker_of_isZero_H1",
+        "P2M.Util"
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_groupCohomology_natCard_eq_and_span_map_eq_top_of_addOrderOf_eq_natCard.lean",
+      "bytes": 3571,
+      "sha256": "47a80392c87bb9808f09d0fe93c371f1a017597f08ab2376d0f0d3599390def6",
+      "gitBlob": "e030d50ac89bafc77dd4157ac40111fcf0985158",
+      "gitBlobVerified": true,
+      "archiveNormalization": "none",
+      "prohibitedTokenLines": [],
+      "resourceOptionLines": [],
+      "imports": [
+        "Mathlib",
+        "P2M.Util"
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_NumberField_exists_isCyclic_finrank_eq.lean",
+      "bytes": 8566,
+      "sha256": "dc8b9e4de3b3c7be41a36df2343c8ced0ee6f52fe1ef7f653506ef154994901f",
+      "gitBlob": "2ac50d98a425e5ced50b5f1e9ec66c305012ad00",
+      "gitBlobVerified": true,
+      "archiveNormalization": "none",
+      "prohibitedTokenLines": [],
+      "resourceOptionLines": [],
+      "imports": [
+        "Mathlib",
+        "Definitions.Def_NumberField_PlaceDecompositionAction",
+        "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+        "Theorems.Thm_NumberField_exists_isCyclic_algHom_cyclotomicField_dvd_natCard_decomp",
+        "P2M.Util"
+      ]
+    }
+  ],
+  "nativeModules": [
+    "OriginalH2GeneratorInflationTransfer",
+    "OriginalH2GeneratorRestriction",
+    "OriginalClassH2GeneratorTransfer",
+    "OriginalShapiroRestriction",
+    "OriginalCohomologyRestrictionTrace",
+    "OriginalClassH2SubgroupGenerators",
+    "OriginalFiniteCyclicInvariant",
+    "OriginalClassH2InvariantFromGenerator",
+    "OriginalAuxiliaryCyclicExtension"
+  ],
+  "nativeSourceHashes": {
+    "OriginalH2GeneratorInflationTransfer": "664c466ebd135dacbd482f382039fea30098e031d81a2dd2067ad71d29dd6eee",
+    "OriginalH2GeneratorRestriction": "35c7e5b7baef6191916770d46cb7770eba924729dd413cc70fd0fb3fe472814a",
+    "OriginalClassH2GeneratorTransfer": "7245455bfe6b9d92e73a16b15250429f9bad7e09e65331bcdd1c7f802fab133b",
+    "OriginalShapiroRestriction": "14571bf2dbb735803f52a9030d4f8f76dd7955ec08daa716b816c653ba0f1b6c",
+    "OriginalCohomologyRestrictionTrace": "e7bda945aeb34fe42dd076c6f328019aff693f13202c21a28156ecd0c1939c17",
+    "OriginalClassH2SubgroupGenerators": "32754961681caca56a74c6063f3a1e5e7a73e278905dcb8b7ce437225751978d",
+    "OriginalFiniteCyclicInvariant": "21d5fefaea8373a27d8b39edd484c4712d1278207f2d43deabe7f1a033ab1e33",
+    "OriginalClassH2InvariantFromGenerator": "7b3f091837d3c8dffd9643578352dfed2e9ae5ceb21da8868f3ac6ee59f0e1e2",
+    "OriginalAuxiliaryCyclicExtension": "b3e9ef7328a332d3ebc7aa858fb4b5f788e735bce722acf2d0ec866861eca395"
+  },
+  "changes": "Native inflation-restriction and coset trace replace upstream counterparts; bar comparison adapted to frozen APIs at default limits; native rational cyclic invariant avoids the longer upstream normalization construction; genuine fixed-field class consumers discharge arithmetic vanishing and size premises.",
+  "verification": "Production aggregate, exact consumers, 43 axiom checks, ten explicit linter scopes and sequential foundation verification PASS; paper assembled verification pending.",
+  "boundary": "Full-order original H2 class, auxiliary generator/zero restriction, local fundamental-class normalization, tower compatibility, arithmetic separation/capitulation and reverse localization remain to be proved.",
+  "productionFocusedReceipt": {
+    "log": "E:\\Lean\\.tmp\\dubon83\\class-generator-production-focused-3132.log",
+    "sha256": "AEA65735C0A214365F688385BC72322438BD950AD46062150FB92F54833CCF4B",
+    "exit": 0,
+    "diagnostics": 0,
+    "axiomChecks": 43,
+    "exactConsumers": 4,
+    "explicitLinterScopes": 10,
+    "lintersPerScope": 16,
+    "aggregateJobs": 12032,
+    "foundationLog": "logs/foundation_freeze_20261015_160712.log",
+    "foundationSha256": "EA5F261D07CD57FC7C1226EDB6D9D61D3DFA5F62C3A1E301CF44E9F40D0C97DC",
+    "boundary": "Nine production generator, literal restriction/trace, conditional invariant and auxiliary field modules; later scratch representative/Mackey work excluded."
+  }
+}

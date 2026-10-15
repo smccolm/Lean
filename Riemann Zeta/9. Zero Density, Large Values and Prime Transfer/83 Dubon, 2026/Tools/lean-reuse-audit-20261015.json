@@ -16,7 +16,19 @@
       "DUB-19",
       "DUB-20"
     ],
-    "newMathematicalObligationsDischarged": []
+    "newMathematicalObligationsDischarged": [
+      "Every actual open-subgroup invariant class-colimit coefficient has a unique genuine fixed-field class preimage",
+      "Literal continuous relative restriction has the original normal subgroup as kernel, is onto the actual relative Galois group, and identifies quotient order with relative degree",
+      "Original class base change preserves the actual quotient action; the quotient invariant coefficient and H2 equal the genuine relative fixed-field class coefficient and H2",
+      "Original outside-unit H3 vanishing for arbitrary finite arithmetic Galois extensions",
+      "Literal full-class to outside-unit quotient map induces an H2 isomorphism without a cyclic global-group hypothesis",
+      "Actual open-quotient H2 has unique genuine relative full-class lifts and finite order dividing the original subgroup index, with unramifiedness derived",
+      "Shapiro/native comparison equals literal restriction",
+      "Actual corestriction/restriction index identity",
+      "Actual subgroup H1 and H2 size premises in auxiliary generator transfer",
+      "Existence of a genuine cyclic number-field extension of any prescribed positive degree",
+      "Subgroup generation, injective rational invariants, exact torsion images and restriction-index normalization from one full-order genuine class"
+    ]
   },
   "scope": "Fresh public repository heads, web discovery, the newest 200 Palomar records, selected exact statements and source import closures, and already proved local/pinned APIs. This is not an exhaustive audit of every public repository.",
   "repositories": [
@@ -751,7 +763,7 @@
     }
   },
   "appliedSourceIdeleReuse": {
-    "status": "Focused checks pass; expanded sequential assembled verification pending.",
+    "status": "Sequential foundation and paper verification pass; exit 0, zero Lean diagnostics.",
     "source": "Milne, Arithmetic Duality Theorems, I.4.1 and I.4.10–4.13; pp.49–50 and 57–62. Printed page 49 visually checked to resolve lost PDF notation.",
     "existingProjectReuse": [
       "originalArithmeticSUnit_exists_finiteStage",
@@ -810,6 +822,2310 @@
       }
     ],
     "foreignProofImported": false,
-    "rootPinsChanged": false
+    "rootPinsChanged": false,
+    "receipt": {
+      "log": "logs/dubon-build-20261015-074033-692.log",
+      "sha256": "A2322EDB3D3052162C10DEE31030AA776A6F29F494CF66E3DA93DC5141EF425C",
+      "bytes": 5234204,
+      "exit": 0,
+      "diagnostics": 0,
+      "projectTheorems": 22305,
+      "registeredConsumers": 11245,
+      "declarations": 14406,
+      "generated": 11236,
+      "linters": 16
+    }
+  },
+  "appliedArithmeticCohomologyColimitReuse": {
+    "status": "Sequential foundation and paper verification pass; exit 0, zero Lean diagnostics.",
+    "source": "Milne ADT I.4: actual arithmetic ES/JS/CS coefficients and finite-stage cohomology; ES H2 comparison only. Equivariant Ext and I.4.10(b) remain open.",
+    "existingProjectReuse": [
+      "continuousTwoCocycle_exists_openNormal_periods_and_fixed",
+      "continuousGaloisUnitCochain_exists_finiteField",
+      "galoisUnitCochain_exists_finite_descent",
+      "galoisUnitTwoCocycle_exists_finite_descent",
+      "originalIntegralUnit_preimage",
+      "originalLocalizedUnitsEquivSupportedSUnits",
+      "continuousCoefficientH2Map",
+      "continuousRepresentationH2Restriction",
+      "originalSPlaceIdeleShortComplex_shortExact"
+    ],
+    "pinnedMathlibReuse": [
+      "MonoidHom.ofInjective",
+      "IsScalarTower.AlgEquiv.restrictNormalHom_comp_apply",
+      "Module.DirectLimit.lift",
+      "Module.DirectLimit.exists_of",
+      "Module.DirectLimit.of_f"
+    ],
+    "discharged": [
+      "Actual continuous S-unit two-cocycles descend to genuine finite Galois S-unit stages",
+      "Original continuous S-unit coboundary witnesses descend above a prescribed finite stage",
+      "Actual finite coefficient/H2 transition identity, composition and global compatibility",
+      "Global vanishing of finite S-unit H2 classes is detected at a larger genuine finite stage",
+      "Original arithmetic S-unit continuous H2 is its actual finite-stage module colimit",
+      "Finite H2 representatives use the same coefficient as the fixed-support source idele sequence"
+    ],
+    "remaining": [
+      "Source idele/class colimit and map compatibility",
+      "Class cokernel/capitulation and class-formation comparison",
+      "Continuous/equivariant Ext identification",
+      "Reverse arithmetic localization inclusion",
+      "Exact dual Selmer relation, arithmetic patching and remaining automorphy/analytic inputs"
+    ],
+    "productionModules": [
+      "ArithmeticSUnitCocycleFiniteField",
+      "ArithmeticSUnitFiniteFieldCoefficients",
+      "ArithmeticSUnitTwoCocycleFiniteDescent",
+      "ArithmeticSUnitFiniteStageInclusion",
+      "ArithmeticSUnitFiniteStageH2",
+      "ArithmeticSUnitFiniteTransitions",
+      "ArithmeticSUnitCochainFiniteDescent",
+      "ArithmeticSUnitH2FiniteTransitions",
+      "ArithmeticSUnitH2FiniteZeroDetection",
+      "ArithmeticSUnitH2FiniteDirectedSystem",
+      "ArithmeticSUnitH2FiniteColimit"
+    ],
+    "sourceHashes": {
+      "ArithmeticSUnitCocycleFiniteField": "04710787be8eb69d4facdf852daba05984650b1ea9217f8b98e9b305f8d57061",
+      "ArithmeticSUnitFiniteFieldCoefficients": "c4819ac10ddaaf9e82f82a161f3308fa853e4369c86599f20fad42545f096d48",
+      "ArithmeticSUnitTwoCocycleFiniteDescent": "9790455f23ff775ef6840b74619ad040bc7432623eaa876cd376b02628235250",
+      "ArithmeticSUnitFiniteStageInclusion": "19718d640f3059e629aa31b0b04ed974aaadfeb82caf47ff76a63358faf3f10a",
+      "ArithmeticSUnitFiniteStageH2": "d412ceb4943150a1d15657a26fa05150d44d81a49ca048d0d53499a83479a7c3",
+      "ArithmeticSUnitFiniteTransitions": "0f8996c44546afac8dce131a012fe9bd18386f80283e39a0c63982cbd66157c9",
+      "ArithmeticSUnitCochainFiniteDescent": "697bc4944e1a59a7ebd4f2b875509dea1dede33b6df6d1bf504ff7d1dbd62cd4",
+      "ArithmeticSUnitH2FiniteTransitions": "a73169078cdf52885446d1b2ad1dfcab507070cf30abed5034f8e5a836989d34",
+      "ArithmeticSUnitH2FiniteZeroDetection": "dd594e16bfee6109f87c66fa6d536cb3033f30c3a8656d4af080b8f209f29088",
+      "ArithmeticSUnitH2FiniteDirectedSystem": "290c0bbf25f9947d4214814c903d030810b8b2e5fb5678c332f4ab11aaaa084e",
+      "ArithmeticSUnitH2FiniteColimit": "5b5c2c9938804b007c34a89f1b9502e4bc70c5510dd8ae0337c55609163601c8"
+    },
+    "acceptance": "16/20 accepted; DUB-17–20 open; no source-facing gate closed.",
+    "receipt": {
+      "log": "logs/dubon-build-20261015-085130-276.log",
+      "sha256": "1CBCB1E995D31D8BF2DEC8FA856A7EEF76D17AFDED95354D80A97F6ECE516795",
+      "bytes": 5271359,
+      "exit": 0,
+      "diagnostics": 0,
+      "projectTheorems": 22449,
+      "registeredConsumers": 11281,
+      "declarations": 14475,
+      "generated": 11329,
+      "linters": 16
+    }
+  },
+  "principalizationFollowup": {
+    "checkedAtUtc": "2026-10-15T15:45:04.779048+00:00",
+    "commit": "26f52ca8574bd7bf39cfa069466a70099f515382",
+    "scope": "Eleven named source files inspected; the complete arithmetic import closure is not audited or kernel-checked here.",
+    "endpoint": "ClassFieldTheory.ideals_becomePrincipalInSmallHilbertClassField",
+    "statement": "For a number field K and actual finite abelian E with IsSmallHilbertClassField E, every ideal I of O_K has principal image in O_E.",
+    "hypothesisMeaning": "IsSmallHilbertClassField means everywhere unramified and maximal among finite abelian everywhere-unramified extensions; principalization is not included in the predicate.",
+    "selectedFieldEndpoint": "GlobalClassFieldTheory.IdealClassFieldTheory.allIdealsBecomePrincipalInSmallHilbertClassField",
+    "proofRoute": [
+      "Actual second Hilbert class field and maximal abelian intermediate field",
+      "Class-field reciprocity naturality and Witt commutator transfer",
+      "Actual idele-class extension lies in the second-stage norm range",
+      "Original idele/ideal-class extension naturality",
+      "ClassGroup.extendedHom_eq_one_iff_forall_ideal_map_isPrincipal"
+    ],
+    "wittCandidate": "GroupTheory.Transfer.Witt.commutatorTransfer_eq_one_of_finite_abelianization",
+    "wittNyllImportClosure": [
+      "Nyll/GaloisCohomology/GroupTheory/Transfer/Witt.lean",
+      "Nyll/GaloisCohomology/GroupTheory/Augmentation.lean",
+      "Nyll/GaloisCohomology/GroupTheory/Transfer/RelativeAugmentation.lean"
+    ],
+    "wittMissingPinnedMathlibImports": [],
+    "files": [
+      {
+        "path": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/IdealClassFieldTheory/PrincipalIdealTheorem.lean",
+        "bytes": 4639,
+        "sha256": "7a785ebfa8226a48ecd58d730bc3ea8b831446b7d02dd7bf6bd0ef64fa25b7d5",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/IdealClassFieldTheory/AbstractCapitulation.lean",
+        "bytes": 11175,
+        "sha256": "fbc750e634c23acb74f3367a39d9180b3fd28ad6373fb2c390e2846bece3f319",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/Theorems/FrobeniusAndHilbertClassFields/SmallHilbertClassFieldPrincipalization.lean",
+        "bytes": 1250,
+        "sha256": "0fcc5b3323532f92fdd74308f669d0060833a6579c66fdaaadafad71a6a5e892",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/MathlibFrobeniusHilbertComparison.lean",
+        "bytes": 39234,
+        "sha256": "ac48fe2d201dbb7efe130071fc52172f1b8452aef01d330aec396f9f29b75800",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/IdealClassFieldTheory/PrincipalIdealTower.lean",
+        "bytes": 8136,
+        "sha256": "3034a101ff01b3060e20cd6efc9d0d51b95a46d616b771ced0cd99e8a200ea7f",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/IdealClassFieldTheory/PrincipalIdealTransfer.lean",
+        "bytes": 26943,
+        "sha256": "3c3f2116e24d89394d159b826db28638022cc5fb4bac7dfe634440a53f993cf8",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/Definitions/FrobeniusAndHilbertClassFields/IsSmallHilbertClassField.lean",
+        "bytes": 889,
+        "sha256": "4fcdfc57c54c2adf6725d66fe34d3e69e659007a487b14c6c643755c3a92bafc",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/ClassFieldTheory/GlobalClassFieldTheory/IdealClassFieldTheory/SmallHilbertPrincipalization.lean",
+        "bytes": 8611,
+        "sha256": "1a52e54500fef348ea9e0aa774befb2143138edbd30cb78d8411a84d478af93f",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/GaloisCohomology/GroupTheory/Transfer/Witt.lean",
+        "bytes": 41288,
+        "sha256": "47313c4d353e9dc87f4b408d089046aff06a19480e2af6658c4310e41e0d4ff8",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/GaloisCohomology/GroupTheory/Augmentation.lean",
+        "bytes": 16441,
+        "sha256": "15065e7c3014617b4f947301eb6d3525cbfb9c737ad9a202dba61d87dd87aff5",
+        "lexicalProofShortcutHits": []
+      },
+      {
+        "path": "Nyll/GaloisCohomology/GroupTheory/Transfer/RelativeAugmentation.lean",
+        "bytes": 36550,
+        "sha256": "00fa3d7c0625e405b2c1ace4818417927baa0b9a245906be330e2ba26d303f41",
+        "lexicalProofShortcutHits": []
+      }
+    ],
+    "decision": "Retain as the first external principalization candidate for the source class-cokernel step. Do not infer a full port from the wrapper or filename. First finish the original source idele/class transition and quotient comparisons; then assess the concrete Hilbert-class-field/reciprocity interfaces and full dependency audit. No external Lean code imported and no root pin changed.",
+    "connection": "Principalization can remove the ideal-class cokernel in Milne I.4.3 at the original fixed support, after proving the actual unramified extension and idele/ideal-class comparison. That feeds the class/Ext comparison for I.4.10(b), the reverse localization inclusion, dual Selmer bounds, automorphy lifting and DUB-17 higher symmetric-power continuation."
+  },
+  "appliedSourceColimitHomReuse": {
+    "status": "Sequential foundation and paper verification pass; exit 0, zero Lean diagnostics.",
+    "source": "Milne ADT I.4: original fixed-support ES/JS/CS coefficient exact sequence and prime-field Hom exactness. Full class comparison, class formation and equivariant/continuous Ext remain open.",
+    "existingProjectReuse": [
+      "originalSupportedIdeleBaseChangeMap",
+      "originalIdeleBaseChangeMap_tower",
+      "originalSPlaceIdeleShortComplex_shortExact",
+      "arithmeticSUnitCochain_exists_finite_descent",
+      "arithmeticSUnitFiniteStageInclusion",
+      "arithmeticSUnitFiniteTransitionInclusion",
+      "originalArithmeticSUnit_integerExt_eq_zero"
+    ],
+    "pinnedMathlibReuse": [
+      "Module.DirectLimit.map",
+      "Module.DirectLimit.of.zero_exact",
+      "IsScalarTower.AlgEquiv.restrictNormalHom_comp_apply",
+      "InfiniteGalois.restrictNormalHom_continuous",
+      "Ext.covariant_sequence_exact₃",
+      "CategoryTheory.ihom",
+      "ShortComplex.Exact.map_of_mono_of_preservesKernel"
+    ],
+    "discharged": [
+      "Actual fixed-support source transition maps, principal/quotient squares and tower laws",
+      "Original source coefficient colimits and their jointly continuous arithmetic actions",
+      "Actual arithmetic S-unit identification and original source short exact sequence",
+      "Literal finite-stage values for every original arithmetic S-unit diagonal",
+      "Original prime-field Hom lifting derived from actual integer Ext vanishing",
+      "Actual internal Hom short exact sequence and original trace-zero consumers"
+    ],
+    "remaining": [
+      "Full arithmetic class-colimit comparison and capitulation",
+      "Arithmetic class formation and continuous/equivariant Ext identifications",
+      "Reverse localization inclusion and exact dual Selmer relation",
+      "Actual patching, modular association, purity and automorphy/continuation inputs"
+    ],
+    "productionModules": [
+      "OriginalSPlaceBaseChange",
+      "OriginalSPlaceBaseChangeRepresentations",
+      "OriginalSPlaceClassBaseChange",
+      "ArithmeticSPlaceFiniteStages",
+      "OriginalSPlaceBaseChangeTower",
+      "ArithmeticSPlaceDirectedSystems",
+      "ArithmeticSUnitCoefficientColimit",
+      "ArithmeticSPlaceCoefficientColimits",
+      "ArithmeticSPlaceColimitExactness",
+      "CoefficientRepresentationColimit",
+      "CoefficientRepresentationColimitMap",
+      "ArithmeticGlobalSourceStages",
+      "ArithmeticGlobalSourceColimits",
+      "ArithmeticGlobalSourceMaps",
+      "ArithmeticSUnitCoefficientColimitIso",
+      "ArithmeticSourceIdeleExactSequence",
+      "ArithmeticSourceHomLifting",
+      "ArithmeticSourceHomExactSequence"
+    ],
+    "sourceHashes": {
+      "OriginalSPlaceBaseChange": "c7b01e9b650a44eb4183ce7f0e093e05145c8cb65ec2f4ad39cf59eee9865a30",
+      "OriginalSPlaceBaseChangeRepresentations": "5b07e1f03a355a6104c6e42861448a832a67321f08a1c624968ced426c5e27f1",
+      "OriginalSPlaceClassBaseChange": "4d9950aef16aac690442f3cc4693c20981db29062758d6f6136365e564175d1b",
+      "ArithmeticSPlaceFiniteStages": "72d0b2b344fee56e880a2772966583909dc18b80fa1af30faaa0e49e62ba94cd",
+      "OriginalSPlaceBaseChangeTower": "651fa3ea6bb2f0f9d748d35249dce2b1d2bdd82aea7ce0bcc12011bd6914f431",
+      "ArithmeticSPlaceDirectedSystems": "8225416fb9af10267822768fe3bed659db1b71242f4dcdddd91d6eaafec5a24f",
+      "ArithmeticSUnitCoefficientColimit": "79f383ab7bcc8cd03c1f595247e7ea8e643b56b532afc35c78a12de03156387f",
+      "ArithmeticSPlaceCoefficientColimits": "601369c3f18c21d91ee843112d6f157410ec5925fae2b83ee3d92fb249cff261",
+      "ArithmeticSPlaceColimitExactness": "027e1da69ee8c664ec3f82d32fcaaba4aede3881b9d1de3af98c5e65fb49a6e6",
+      "CoefficientRepresentationColimit": "6dfc6a1e534ac755650ae48893c86e5ebdbb1c58b9f5431e90e4eb6d2edbbee4",
+      "CoefficientRepresentationColimitMap": "9402e2fb6b903fbf1399fa4cca92d05a79b504492eb6777afcb62d07bc22d6f3",
+      "ArithmeticGlobalSourceStages": "ee0d35e596d2dff764da90d7426328313b566d6a68b56aa265d09dfcdb3ce87a",
+      "ArithmeticGlobalSourceColimits": "ab04fab57176e2ee0681add65c0e15408ddb4d2bc08960bfb47639fdc4060191",
+      "ArithmeticGlobalSourceMaps": "d0ec1331f5b953a4682ac9c28873fff0ade63be025a83f0d685f7ec3079d3c27",
+      "ArithmeticSUnitCoefficientColimitIso": "253e4c157043ec5d53a4cc1e3e2dd3a443950168d170e89beff6194f3dd6e6ee",
+      "ArithmeticSourceIdeleExactSequence": "8503a02743e07d693b015350b4481a028b866afd6833cd31e1ea1ad2821097b4",
+      "ArithmeticSourceHomLifting": "3e44a8ead54dbf024d3cf67071492119956e9c2f2b034cca1976edc5d6a2ecc3",
+      "ArithmeticSourceHomExactSequence": "6002eb5a2b87ad4cde1c8863062554b60a1e4c3a1a83a7dc74c81f0c5f2871fd"
+    },
+    "acceptance": "16/20 accepted; DUB-17–20 open; no source-facing gate closed.",
+    "foundationReceipt": {
+      "rootLog": "logs/foundation_freeze_20261015_095005.log",
+      "sha256": "B791E260DCBAF2925290CACF196C2608F2EEAEC47DB9305B41DCEDD0C65E9155",
+      "exit": 0,
+      "diagnostics": 0
+    },
+    "receipt": {
+      "log": "logs/dubon-build-20261015-095425-035.log",
+      "sha256": "91AA213DCF263A8F16AAA00EB9D6D93531D91922984FE472367FD2738DC9978A",
+      "bytes": 5312207,
+      "exit": 0,
+      "diagnostics": 0,
+      "projectTheorems": 22615,
+      "registeredConsumers": 11336,
+      "declarations": 14581,
+      "generated": 11439,
+      "linters": 16
+    }
+  },
+  "appliedSourceHomClassComparisonReuse": {
+    "status": "Sequential foundation and paper verification pass; exit 0, zero Lean diagnostics.",
+    "source": "Milne ADT I.4: actual source Hom continuous cohomology and injective comparison with full classes modulo outside units. Surjectivity, class formation, Ext/localization identifications remain open.",
+    "existingProjectReuse": [
+      "continuousInvariantConnecting_mem_range_iff",
+      "continuousConnectingH1_range_eq_ker",
+      "continuousConnectingH2_range_eq_ker",
+      "continuousCoefficientH2_middle_range_eq_ker",
+      "matrixTraceZeroAdjointAction_continuous",
+      "rationalArithmeticTraceSUnitH1Equiv",
+      "originalSPlaceBaseChange_projection",
+      "originalSPlaceClassComparison_injective",
+      "originalIdeleClassBaseChangeMap_tower",
+      "coefficientRepresentationColimitMap_of"
+    ],
+    "pinnedMathlibReuse": [
+      "Module.DirectLimit.of.zero_exact",
+      "Module.DirectLimit.of_f",
+      "InfiniteGalois.restrictNormalHom_continuous"
+    ],
+    "discharged": [
+      "Original source Hom actions continuous from actual finite source action",
+      "Original continuous source Hom H1/H2 connecting and middle exactness",
+      "Actual trace-dual source-idele kernel through original invariant source-class Hom",
+      "Original full-class quotient transition maps and source comparison naturality",
+      "Continuous arithmetic full-class quotient colimit and injective original source comparison",
+      "Original arithmetic S-unit diagonal for source ideles killed in the full-class quotient"
+    ],
+    "remaining": [
+      "Full class comparison surjectivity and capitulation",
+      "Arithmetic class formation and continuous/equivariant Ext identifications",
+      "Original source-idele/local restriction comparison and reverse localization inclusion",
+      "Exact dual Selmer relation, arithmetic patching, modular association/purity and automorphy/continuation"
+    ],
+    "primaryLiteratureFollowup": {
+      "url": "https://www.math.ucla.edu/~sharifi/notes/iwasawa-ch01.html",
+      "statements": [
+        "Proposition 1.4.4",
+        "Proposition 1.4.5",
+        "Theorem 1.5.4 proof"
+      ],
+      "status": "Primary mathematical source only; no Lean proof. The S-class comparison uses Hilbert-class-field principalization.",
+      "alternative": "The q-primary direct-idele route has now been proved for the required prime-field Hom comparison, including original-support root containment and literal quotient/cohomology compatibility. Full class principalization remains unclaimed and is deferred for this edge."
+    },
+    "productionModules": [
+      "FiniteSourceHomActionContinuity",
+      "ArithmeticSourceHomContinuity",
+      "ArithmeticSourceHomH2Exactness",
+      "ArithmeticSourceHomConnectingSequence",
+      "ArithmeticSourceHomH1Kernel",
+      "RationalTraceIntegerActionContinuity",
+      "RationalTraceSourceHomH1",
+      "OriginalOutsideClassBaseChange",
+      "OriginalClassesModOutsideBaseChange",
+      "ArithmeticClassesModOutsideStages",
+      "ArithmeticClassesModOutsideColimit",
+      "ArithmeticSourceClassColimitInjection"
+    ],
+    "sourceHashes": {
+      "FiniteSourceHomActionContinuity": "b73a1bbba716fdb719c03153bebf973eb2d6994f099bb0cbfece80f931c55fee",
+      "ArithmeticSourceHomContinuity": "e0f873637ddc68e669b2c72c59d2d0cf2e12e6d574372b7d130e0fb916344f8c",
+      "ArithmeticSourceHomH2Exactness": "5fd21b956d6dae55f6c719b93a3cdafb5b1784d999cd9c7639f45b941f2e7417",
+      "ArithmeticSourceHomConnectingSequence": "169963dd1e188588ea95c1f314bf6ea037579c68f974b4a287123aaaf00836ca",
+      "ArithmeticSourceHomH1Kernel": "aad741e99be1d8a78c04fd6783e6e43ece2a968b52a54ed768c36814b569863e",
+      "RationalTraceIntegerActionContinuity": "2988cc8c5f23c6249dfe267a0bf22579f2daa35363011df46d9d1e0958a5dd69",
+      "RationalTraceSourceHomH1": "df6d8554d0cdf51444d4083e1c4605f07ae4ed234b18c074b46f16e94a07a7a3",
+      "OriginalOutsideClassBaseChange": "69e0881acfaec5ab077accc1a84c3505bee159e7a2152c19e56084efeb0d3da0",
+      "OriginalClassesModOutsideBaseChange": "37c9f62e3ee8f1ec85c1f9a09cefd03dc703c8055a61038d393018495838f1b5",
+      "ArithmeticClassesModOutsideStages": "f1cfbd6e18429c5550617634997b8cf80b064cdbdeaefe4808c7f257ba9caa92",
+      "ArithmeticClassesModOutsideColimit": "e49fa18e27dc3a32571db5c6984a51bb299b143b5523f27a9d7b6f9f1b8103e8",
+      "ArithmeticSourceClassColimitInjection": "aa7f65abd4b506527dbc81f4a29cfa40c07321bc726bbd1ebdd19e0377433876"
+    },
+    "acceptance": "16/20 accepted; DUB-17–20 open; no source-facing gate closed.",
+    "foundationReceipt": {
+      "rootLog": "logs/foundation_freeze_20261015_105436.log",
+      "sha256": "D5BF9D8BF4EF5E79E47322BE9D53FB122D9E4326B86A02C82FD917593FBDEB5E",
+      "exit": 0,
+      "diagnostics": 0
+    },
+    "failedAssembledAttempt": {
+      "log": "logs/dubon-build-20261015-105801-340.log",
+      "sha256": "77d19c5a8e461f8a59f640b669cf9479aebe8a7bc79fd35c1a9a588d7ea33d4a",
+      "exit": 1,
+      "cause": "Seven docBlame errors on generated Module/TopologicalSpace instances. The theorem axiom audit passed: 22769 project theorems, 11366 registered consumers. Added precise documentation strings; complete verification must be rerun."
+    },
+    "receipt": {
+      "log": "logs/dubon-build-20261015-115013-831.log",
+      "sha256": "3B0E71336B752713E2D1F3FEEA409453A7E6CD6A41CE136D9E3CEACB8E3E5714",
+      "bytes": 5356744,
+      "exit": 0,
+      "diagnostics": 0,
+      "projectTheorems": 22769,
+      "registeredConsumers": 11366,
+      "declarations": 14661,
+      "generated": 11547,
+      "linters": 16
+    }
+  },
+  "appliedPrimeClassHomReuse": {
+    "status": "Sequential foundation and assembled paper verification pass for the combined 3,109-module production scope; exit 0 and zero diagnostics.",
+    "source": "Milne ADT I.4: original fixed-support source class Hom comparison and finite class-formation cohomology inputs; no complete arithmetic class formation or Ext/localization identification claimed.",
+    "existingProjectReuse": [
+      "originalLocalizedUnitKummer_unramifiedAway",
+      "numberField_normalClosure_unramified",
+      "originalSPlaceClassComparison_of_supported",
+      "arithmeticSourceClassColimitComparison_injective",
+      "continuousRepresentationH1_addCoeffEquiv",
+      "originalOutsideUnit_second_zero_of_unramified",
+      "originalIdeleClass_finiteGalois_first_zero",
+      "supportedOutsideUnit_cohomology_zero_of_local",
+      "cyclic_oddCohomology_zero_of_first",
+      "original_ideleClass_second_card",
+      "originalUnramifiedUnion_finite_ramification",
+      "compactDiscreteFunction_exists_openNormalPeriods",
+      "coefficientRepresentationColimitOf",
+      "arithmeticClassesModOutsideStageTransition",
+      "localIntegerUnit_first_second_zero_of_fixed_uniformizer",
+      "transportedOrbitFactorCohomologyIso",
+      "originalIdeleClassBaseChangeMap_surjective_fixed",
+      "originalIdeleBaseChangeMap_surjective_fixed",
+      "originalAdicBaseChangeMap_valuation"
+    ],
+    "pinnedMathlibReuse": [
+      "HeightOneSpectrum.exists_primeCompl_mul_eq_of_integer",
+      "Module.DirectLimit.of.zero_exact",
+      "FiniteGaloisIntermediateField.adjoin",
+      "LinearEquiv.ofInjective",
+      "LinearEquiv.ofBijective",
+      "groupCohomology.mapShortComplex₃_exact"
+    ],
+    "discharged": [
+      "Every actual prime-torsion full-class quotient colimit element lifts uniquely to source classes",
+      "Literal prime-field internal Hom coefficient isomorphism at the same exceptional support",
+      "Original continuous Hom H1/H2 comparison and transported connecting exactness",
+      "Original outside units embed in full classes, giving the literal quotient short exact sequence",
+      "Original rational arithmetic finite-stage quotient H1 vanishing",
+      "Literal cyclic quotient H2 comparison and exact field-degree cardinality",
+      "Every original continuous class-quotient one-cocycle descends to an actual finite Galois stage",
+      "Actual continuous class-quotient H1 vanishes at the rational arithmetic group",
+      "Original invariant quotient classes descend uniquely to the original base quotient",
+      "Literal arithmetic transitions and finite-stage colimit inclusions are injective",
+      "Actual rational base quotient equals the original global arithmetic invariant coefficient"
+    ],
+    "remaining": [
+      "Full class comparison surjectivity is not claimed; only the required prime-field Hom edge is discharged",
+      "All required open-subgroup H1/fixed-coefficient comparisons and compatible P-class-formation H2 invariant maps",
+      "Finite-quotient invariant normalization and the required coefficient-prime primary surjectivity; full Q/Z surjectivity is not claimed at restricted support",
+      "Arithmetic class formation and continuous/equivariant Ext identifications",
+      "Original source-idele/local restriction compatibility and reverse localization inclusion",
+      "Dual Selmer relation, arithmetic patching, modular association/purity and automorphy/continuation"
+    ],
+    "routeDecision": "Use native prime-torsion Kummer lifting for this Hom edge; defer full Hilbert principalization. Use native finite outside-unit/full-class cohomology and cyclic periodicity, not a new infinite-product theory.",
+    "productionModules": [
+      "OriginalValuationUnitLocalization",
+      "OriginalValuationDivisibleKummer",
+      "ValuationDivisibleRootsInUnramifiedUnion",
+      "ArithmeticValuationDivisibleRootStages",
+      "OriginalClassTorsionValuationWitness",
+      "OriginalIdeleRootCorrection",
+      "OriginalIdeleRootSourceClass",
+      "ArithmeticTorsionClassStageLifting",
+      "ArithmeticTorsionClassColimitLifting",
+      "ArithmeticSourceClassHomComparison",
+      "ArithmeticClassHomCohomologyComparison",
+      "ArithmeticFullClassHomConnectingSequence",
+      "OriginalOutsideClassExactSequence",
+      "OriginalClassesModOutsideH1",
+      "ArithmeticClassesModOutsideH1",
+      "OriginalClassesModOutsideCyclicH2",
+      "ArithmeticClassesModOutsideCyclicH2",
+      "CompactCoefficientColimitLift",
+      "ContinuousCoefficientColimitCocycleLift",
+      "ContinuousGaloisFunctionFinitePeriods",
+      "RestrictedOneCocycleDescent",
+      "ArithmeticClassOneCocycleFiniteDescent",
+      "ArithmeticClassesModOutsideContinuousH1",
+      "OriginalProductH1Detection",
+      "OriginalOutsidePointVanishing",
+      "OriginalClassQuotientInvariantLifting",
+      "OriginalSPlaceBaseChangeInjective",
+      "OriginalSupportedBaseChangeReflection",
+      "OriginalOutsideUnitFixedDescent",
+      "OriginalClassQuotientBaseInvariants",
+      "ArithmeticClassQuotientTransitionInjectivity",
+      "RationalArithmeticClassQuotientInvariants",
+      "ArithmeticClassColimitFixedStages",
+      "RationalArithmeticClassColimitInvariants"
+    ],
+    "modifiedProductionModules": [
+      "OriginalSupportedOutsideH2"
+    ],
+    "sharedLocalProof": "Existing H2 statements now consume the same proved local H1/H2 pair used by outside-unit invariant descent; their statements are unchanged.",
+    "sourceHashes": {
+      "OriginalValuationUnitLocalization": "2a5b1e653c147b336e8e96d5392c3b9de5053189391dd8fb851a255f51e982c5",
+      "OriginalValuationDivisibleKummer": "4319922b0aa938d55ff20f7b1416f8ccdc08fca6e59a735df298127843361be9",
+      "ValuationDivisibleRootsInUnramifiedUnion": "6689ffb076d0b15c16f761d826ae30bd7415f71e875c74d535fb58b602ecce55",
+      "ArithmeticValuationDivisibleRootStages": "81af2ff6e12419df930bd47b0792264524dbc5cd044ffa6323a8fee184f49bbd",
+      "OriginalClassTorsionValuationWitness": "2f5a24ffbade3a7c66293a33e5ebf8bbb583040d546f91fa8dad5f21efb568c2",
+      "OriginalIdeleRootCorrection": "e215d1cf4edf18121a8b0230b7db36b08d87f2d000a94c84b61438d4db843fa3",
+      "OriginalIdeleRootSourceClass": "74533103fc72882aac4359c2bf83a9cc7def4ffc627ab3bebd1f381305807b42",
+      "ArithmeticTorsionClassStageLifting": "880973626a9b494add5a992c2a2e4294a3607f9b99d884b74cfa205869aa2ac4",
+      "ArithmeticTorsionClassColimitLifting": "93161a2d8e467f69c792d14a4008d839d174bb115246b616a0ebdd87754200ba",
+      "ArithmeticSourceClassHomComparison": "4f84a730920ed05b7a47c34238e15e8e4be676807bf9045211f1dd39e42816be",
+      "ArithmeticClassHomCohomologyComparison": "a20498b14778aed6af91b05028e3bf745849d309f1664489808f4fb4ffa0928e",
+      "ArithmeticFullClassHomConnectingSequence": "a4cc5b805283665eccc7d702afd2f8a6bf14fd22d3d95cb60456b944410156c8",
+      "OriginalOutsideClassExactSequence": "25f1b230dc1b02956cdf5724acd25aa48bf0d916b1db3275d44032baf319737f",
+      "OriginalClassesModOutsideH1": "b5ec46d73aef7acf19a32c5069354453288577a605b492fcce80ae81f1d4e333",
+      "ArithmeticClassesModOutsideH1": "f50cd9c38916b1d5e986eaa3ab1d9877b8c6918306808dee6020df5ddbd33dfe",
+      "OriginalClassesModOutsideCyclicH2": "5894e8758f8d390a5b51d00eea7ac1d2a7c5d44bf2c4d67671fd81bdae905458",
+      "ArithmeticClassesModOutsideCyclicH2": "d2a409dee5353f605df059e6a85c7f975e5b4c35d1acf9c96a864a721760e93f",
+      "CompactCoefficientColimitLift": "76f5844077732500a0b4386d195b3bdc79854cc35cfcc16d773465e849beba21",
+      "ContinuousCoefficientColimitCocycleLift": "93914aab32f966ae8a36fd6950d287e539e17ea289548707bf22ba38bdfc79d3",
+      "ContinuousGaloisFunctionFinitePeriods": "c7cd73f8ba74cdd214c4a94eb6386a9d5217328541617c9be4111b3032ad6d16",
+      "RestrictedOneCocycleDescent": "aaf80cf45941501f6eb784f7a9a9adb3e96d58026c29febc7d3ed4bd03057108",
+      "ArithmeticClassOneCocycleFiniteDescent": "5a70cc140a709bd372c938704da127cade2e36593a5806fdb20c65b46134818e",
+      "ArithmeticClassesModOutsideContinuousH1": "dfc2f385f4ea657ee6b5312b916166bb6a6a503e527e5f3b6a8eaa822e9888bd",
+      "OriginalProductH1Detection": "7bfc893c80f87378ff7530e32ffef666f5c0a1c454484e4796ec077b3389f546",
+      "OriginalOutsidePointVanishing": "7dc72052f3c7aaf5af5b7e06c9ff7ea49eb060cab3a14f0dea289be755054ca6",
+      "OriginalClassQuotientInvariantLifting": "0ce207cc8d6bce9f025602d490add1f149118200809adf2b6a774fa5686b597a",
+      "OriginalSPlaceBaseChangeInjective": "c61980801bbab5028d6c14bc689ed1107dc13920f926374b8eae2bd83c68ac3c",
+      "OriginalSupportedBaseChangeReflection": "d286b7cc6081f8b4942519dd42b8de72de505a6594ad9b43c192cc9161d75050",
+      "OriginalOutsideUnitFixedDescent": "88c55fe2f7fd0c0c4acf2315c8d964acbed168c6224103d4a3b671c95c68ae33",
+      "OriginalClassQuotientBaseInvariants": "c24e5d71451b289345d15459afb34a950319ddc8aaf5e4fefc7751913eeee1c0",
+      "ArithmeticClassQuotientTransitionInjectivity": "913d5bcbdb7bfb1c305411691c97e8ffff9d814afc431228fb1dd5d9a74e943f",
+      "RationalArithmeticClassQuotientInvariants": "e25f8d0aa85066854ad1c5a730f12ff2785233e0dd5df72941d91f6891bf7c24",
+      "ArithmeticClassColimitFixedStages": "8567eb902b1b0e812faff271e98ded37c0d50e858e41e49069a6aeb9a270a6c4",
+      "RationalArithmeticClassColimitInvariants": "23cfdf652d6f9d8e026b5947276c9bb8e3b9d417b59de191aa2c6ef3b1f0fc1c",
+      "OriginalSupportedOutsideH2": "0ecac6c82c7475284437ca6dcf7e1d16faa1c022f0e6da50dea03a1c1bc413e0"
+    },
+    "acceptance": "16/20 accepted; DUB-17–20 open; no source-facing gate closed.",
+    "integrationRepair": "The first aggregate build detected an autogenerated local-instance name collision. All new local instances now have distinct explicit names and documentation; theorem statements and proofs are unchanged.",
+    "focusedVerification": {
+      "productionModules": 3094,
+      "aggregateExit": 0,
+      "consumerExit": 0,
+      "exactConsumers": 12,
+      "axiomRegistrations": 77,
+      "diagnostics": 0,
+      "permittedAxioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "foundationReceipt": {
+      "rootLog": "logs/foundation_freeze_20261015_124600.log",
+      "sha256": "DE9E2D7E6C7D81212F7E760E11C8E4FFC71ECFF7739742E3E1076397D04BC1A9",
+      "exit": 0,
+      "diagnostics": 0,
+      "boundary": "Foundation receipt precedes the documented local-instance naming repair; current paper verification covers that repair."
+    },
+    "pendingPaperLog": "logs/dubon-build-20261015-125443-593.log",
+    "failedAssembledAttempt": {
+      "log": "logs/dubon-build-20261015-125443-593.log",
+      "sha256": "8FBEE17289F7072D2994FCCBFB011F1B3887D76FC0E73507D3E1AEB6DBCFB6B4",
+      "exit": 1,
+      "cause": "Four new GlobalReciprocitySemanticRegression local instances required noncomputable annotations. The scratch consumer harness had an outer noncomputable section that masked the production-context difference.",
+      "repair": "The actual consumer sections explicitly declare noncomputable; focused harnesses now use the same section context as production."
+    },
+    "focusedLinterCoverageCorrection": "Historical scratch audits using #lint in Dubon2026 covered imported production modules, not newly defined scratch modules with other module-name prefixes. Their compilation and explicit axiom checks were valid, but the reported package linter totals did not certify those new scratch declarations. Current explicit module lint commands cover all 49 new production modules, the modified OriginalSupportedOutsideH2 module and all 20 exact consumers. The consumer context has no enclosing noncomputable section; each source section carries its own required annotation. Four generated-name linter diagnostics were repaired by naming all 15 previously anonymous local consumer instances explicitly; every such instance has a documentation comment. No linter was suppressed.",
+    "receipt3109": {
+      "log": "logs/dubon-build-20261015-143123-021.log",
+      "sha256": "7B6B041E41B60874A76137041E021BEA3B45E3ADCFFDAC34946A4D5CB83112E6",
+      "bytes": 5419374,
+      "exit": 0,
+      "diagnostics": 0,
+      "productionModules": 3109,
+      "projectTheorems": 23027,
+      "registeredConsumers": 11473,
+      "declarations": 14861,
+      "generated": 11661,
+      "linters": 16,
+      "foundationLog": "logs/foundation_freeze_20261015_142815.log",
+      "foundationSha256": "EE64FEA6FD66C0423E27E3ECF2A9392093929F809FD5CDA8A1B5120656720D29",
+      "regressions": 12,
+      "boundary": "Includes all 49 added production modules, the original H2 shared-proof refactor, explicit consumer section annotations, named local consumer instances and the byte-preserving partition of all 297 original reciprocity/class-formation consumers into two mandatory regression modules. Excludes later scratch-only open-invariant, noncyclic H2 and relative fixed-field proofs."
+    }
+  },
+  "targetedDualitySearchFollowup": {
+    "checkedAtUtc": "2026-10-15T19:14:00Z",
+    "scope": "Four exact identifier web searches (ClassFormation, PoitouTate, TateNakayama, SatoTate with Lean/GitHub), followed by three broader formalization queries. This is a bounded indexed search, not a new exhaustive repository audit.",
+    "finding": "No additional proved endpoint for the current arithmetic global-duality or Sato-Tate obligations was located.",
+    "primaryPage": "https://roed314.github.io/gq2/formalizations/axioms/",
+    "pageSourceLink": "https://github.com/roed-math/gq2-lean/blob/d0714a7c431b64e18c422fb16cb5e93d79e5be25/GQ2/Foundations/Axioms.lean",
+    "pageBoundary": "The primary axiom catalogue still explicitly lists local reciprocity and tateDualityAt as assumed inputs. Its source link is a documentation snapshot, not the current head previously inspected in the repository audit. GitHub fetch of that linked snapshot returned 503; no fresh source-closure or kernel audit is claimed.",
+    "decision": "Keep the existing source-inspected FLT patching candidate and native original class-cohomology route. Do not import a conditional local-duality interface as a proof of global duality."
+  },
+  "appliedOpenClassFormationReuse": {
+    "status": "Sequential foundation and assembled paper verification pass for the combined 3,109-module production scope; exit 0 and zero diagnostics.",
+    "source": "Milne ADT I.4.2 and I.1.13: precise P-class-formation inputs, without full Q/Z surjectivity at restricted support.",
+    "exactDependency": "DUB-17 higher symmetric-power continuation: original class formation and Ext/local restriction comparison -> reverse global localization inclusion -> exact dual Selmer relation -> arithmetic patching; actual modular association/purity and automorphy/descent remain separate obligations.",
+    "discharged": [
+      "Actual continuous class H1 vanishes on every open arithmetic subgroup",
+      "Original finite normal invariant quotient coefficient and H2 comparisons, with actual support and unramifiedness derived",
+      "Actual cyclotomic stages have degree q^n(q-1), supplying every selected prime-power degree divisor",
+      "Original continuous class two-cocycles descend to their actual finite Galois image with unchanged values",
+      "Original continuous coboundary cochains descend above any prescribed stage",
+      "Zero in actual continuous class H2 yields an original finite arithmetic coboundary witness"
+    ],
+    "remaining": [
+      "Required open-subgroup colimit invariant coefficient identities",
+      "Compatible H2 invariant injections, finite-quotient normalization and required primary surjectivity",
+      "Continuous/equivariant Ext and original JS/Shapiro/local restriction comparison",
+      "Reverse arithmetic localization inclusion, exact dual Selmer relation and arithmetic patching",
+      "Actual modular association, purity and automorphy/continuation; DUB-17–20"
+    ],
+    "reuse": [
+      "originalClassesModOutside_first_zero",
+      "originalCohomologyReindex",
+      "compactCoefficientColimit_exists_lift",
+      "arithmeticClassesModOutsideColimitOf_injective",
+      "compactDiscreteTwoFunction_exists_commonPeriods",
+      "originalClassesModOutsideBaseInvariant_bijective",
+      "originalQUnramifiedUnion_exists_powerRoot",
+      "IsCyclotomicExtension.finrank",
+      "Nat.totient_prime_pow_succ"
+    ],
+    "routeDecision": "Faithful original stage maps reflect cocycle and coboundary identities directly; defer a general cohomology-colimit framework. Reuse native finite invariant descent and cyclotomic roots. Rechecked the cached Nyll class-field-axiom source; no normalized H2 endpoint located in that bounded inspection.",
+    "verificationDecision": "After the repaired 3,094-module consumer-context failure, combine the already checked next proofs with the repaired source for one expanded sequential assembled verification. No full PASS is claimed for that failed attempt.",
+    "productionModules": [
+      "OriginalClassQuotientSubgroupCohomology",
+      "OpenSubgroupContinuousFunctionPeriods",
+      "ContinuousGaloisOpenSubgroupFinitePeriods",
+      "ArithmeticOpenSubgroupClassCoefficientLift",
+      "ArithmeticOpenSubgroupClassCocycleDescent",
+      "RationalArithmeticOpenSubgroupClassH1",
+      "OriginalClassQuotientNormalInvariants",
+      "RationalArithmeticClassNormalInvariants",
+      "RationalArithmeticPrimePowerDegrees",
+      "OpenSubgroupTwoCochainFinitePeriods",
+      "RestrictedTwoCocycleDescent",
+      "ArithmeticOpenSubgroupClassTwoCocycleLift",
+      "ArithmeticOpenSubgroupClassTwoCocycleDescent",
+      "ArithmeticOpenSubgroupClassCochainDescent",
+      "ArithmeticOpenSubgroupClassH2ZeroDetection"
+    ],
+    "exactConsumers": 8,
+    "axiomRegistrations": 30,
+    "sourceHashes": {
+      "OriginalClassQuotientSubgroupCohomology": "0b83ede5af657eee86c3afff2e0ebe58ac0de1bf708b0fccd56de467a7319031",
+      "OpenSubgroupContinuousFunctionPeriods": "c657d721e2e90b00cceec837800b13c2bd9f6846df846ca56f409fe437b3d292",
+      "ContinuousGaloisOpenSubgroupFinitePeriods": "906241190f67d962f71e298284e4a41aca428959e10158eb2c741a3112acc4be",
+      "ArithmeticOpenSubgroupClassCoefficientLift": "860366a22239618adb7dad0317c9e97d629444cd73553949b42849d09076b4bc",
+      "ArithmeticOpenSubgroupClassCocycleDescent": "890a76aa4754f379beb4c794f1552956e31ce7505a7024a6e7e52d0d43589db7",
+      "RationalArithmeticOpenSubgroupClassH1": "2b46e707bff9c8dc2cca2a1d6167a044ce789b42e7bea8f67bca0fa36e116774",
+      "OriginalClassQuotientNormalInvariants": "5ec0c532406d67d081c01d4f4e9d022a2adc9ec63dc54959a4bd635766a15ace",
+      "RationalArithmeticClassNormalInvariants": "ccf318cca99101f9a6bf54ac2877274787e806086ac16a07a912b0f259304f9b",
+      "RationalArithmeticPrimePowerDegrees": "8d3c2739ea7db860c9f24e55783c7e7163292da067e840eef8fb6f8284e619e7",
+      "OpenSubgroupTwoCochainFinitePeriods": "a2e550a798d9ef05cdfac2c8fafd947daf63be91cb5101ed791ebb3d04c67c43",
+      "RestrictedTwoCocycleDescent": "146b4c2b2fa8d642e87bc02b41da32161f6aa63649a2fbff648b1e38e7de8903",
+      "ArithmeticOpenSubgroupClassTwoCocycleLift": "692c16df81de55d11878382f1c2eedd15f0fedcfc4e85a1127574dc993cb1be3",
+      "ArithmeticOpenSubgroupClassTwoCocycleDescent": "1afe3710901ea0c4e938a150978bb78b73335f88b30a4a6e20c4c5e551c6da4d",
+      "ArithmeticOpenSubgroupClassCochainDescent": "90624be50057f2bf7127c5b8c1a4079a46e1624aee94831d379a7cc32c236923",
+      "ArithmeticOpenSubgroupClassH2ZeroDetection": "da4363cf4973b81179f403d0091bc8b7175d755839d6e943819be1702c4617e4"
+    },
+    "acceptance": "16/20 accepted; DUB-17–20 remain open.",
+    "receipt3109": {
+      "log": "logs/dubon-build-20261015-143123-021.log",
+      "sha256": "7B6B041E41B60874A76137041E021BEA3B45E3ADCFFDAC34946A4D5CB83112E6",
+      "bytes": 5419374,
+      "exit": 0,
+      "diagnostics": 0,
+      "productionModules": 3109,
+      "projectTheorems": 23027,
+      "registeredConsumers": 11473,
+      "declarations": 14861,
+      "generated": 11661,
+      "linters": 16,
+      "foundationLog": "logs/foundation_freeze_20261015_142815.log",
+      "foundationSha256": "EE64FEA6FD66C0423E27E3ECF2A9392093929F809FD5CDA8A1B5120656720D29",
+      "regressions": 12,
+      "boundary": "Includes all 49 added production modules, the original H2 shared-proof refactor, explicit consumer section annotations, named local consumer instances and the byte-preserving partition of all 297 original reciprocity/class-formation consumers into two mandatory regression modules. Excludes later scratch-only open-invariant, noncyclic H2 and relative fixed-field proofs."
+    }
+  },
+  "classProductionFocusedVerification3109": {
+    "status": "Focused checks and sequential assembled foundation/paper verification PASS.",
+    "productionModules": 3109,
+    "newProductionModules": 49,
+    "exactConsumers": 20,
+    "axiomRegistrations": 107,
+    "linterScopes": 51,
+    "lintersPerScope": 16,
+    "diagnostics": 0,
+    "exitCode": 0,
+    "permittedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\class-production-focused-audit-3109.log",
+    "sha256": "E5715000464A4E2AFACF5E2F8DBC1DAB8F1FA16C1B41DA72FF7E25A57EB886DF",
+    "coverageCorrection": "Historical scratch audits using #lint in Dubon2026 covered imported production modules, not newly defined scratch modules with other module-name prefixes. Their compilation and explicit axiom checks were valid, but the reported package linter totals did not certify those new scratch declarations. Current explicit module lint commands cover all 49 new production modules, the modified OriginalSupportedOutsideH2 module and all 20 exact consumers. The consumer context has no enclosing noncomputable section; each source section carries its own required annotation. Four generated-name linter diagnostics were repaired by naming all 15 previously anonymous local consumer instances explicitly; every such instance has a documentation comment. No linter was suppressed.",
+    "consumerSourceSha256": "65E1FE8C1DAC05280A759178EDB2780542E8A99F2B0FFE206BAC6894F2A22021",
+    "assembledPartitionRepair": {
+      "failedLog": "logs/dubon-build-20261015-134255-187.log",
+      "failedLogSha256": "0DE4A5F548A8A6D26F71FAEBDA3950B0F4C477B6077C226866DE17761081DD07",
+      "exit": 1,
+      "diagnostic": "Default-heartbeat Lean library-suggestions symbol-frequency export PANIC in GlobalReciprocitySemanticRegression.",
+      "auditBoundary": "Kernel build, 23,027 exhaustive theorem checks and all sixteen declaration linters passed, but the assembled diagnostic gate failed before independent regression executions. No complete PASS is claimed.",
+      "repair": "Move the exact contiguous original consumer sections beginning ExceptionalLocalization into ClassFormationSemanticRegression; both modules remain mandatory in the aggregate semantic regression, native verifier and omission fixtures.",
+      "originalTheorems": 297,
+      "retainedTheorems": 226,
+      "movedTheorems": 71,
+      "movedBytes": 76861,
+      "movedSha256": "73B8715A8CFFF695AD65A98EC6706EC71FA8477AB96D573872AEB2F8AD656D84",
+      "sourceBeforeSha256": "65E1FE8C1DAC05280A759178EDB2780542E8A99F2B0FFE206BAC6894F2A22021",
+      "retainedSourceSha256": "D85EAA2C1FF848341533EC38CFD34EEE1233BB0E6BB77EAE2187D50FBFEA6D67",
+      "newSourceSha256": "C7B145931B12C33CF7966D357DB8C5E1828C684734B42357C3366C60AA8936DB",
+      "preservation": "Moved source bytes and ordered theorem declarations are preserved exactly. No theorem statement, proof, mathematical premise, audit registration, resource limit or diagnostic policy is changed.",
+      "verification": "All twelve independent regressions and Audit pass in sequential root/paper verification; exit 0 and zero diagnostics.",
+      "receipt3109": {
+        "log": "logs/dubon-build-20261015-143123-021.log",
+        "sha256": "7B6B041E41B60874A76137041E021BEA3B45E3ADCFFDAC34946A4D5CB83112E6",
+        "bytes": 5419374,
+        "exit": 0,
+        "diagnostics": 0,
+        "productionModules": 3109,
+        "projectTheorems": 23027,
+        "registeredConsumers": 11473,
+        "declarations": 14861,
+        "generated": 11661,
+        "linters": 16,
+        "foundationLog": "logs/foundation_freeze_20261015_142815.log",
+        "foundationSha256": "EE64FEA6FD66C0423E27E3ECF2A9392093929F809FD5CDA8A1B5120656720D29",
+        "regressions": 12,
+        "boundary": "Includes all 49 added production modules, the original H2 shared-proof refactor, explicit consumer section annotations, named local consumer instances and the byte-preserving partition of all 297 original reciprocity/class-formation consumers into two mandatory regression modules. Excludes later scratch-only open-invariant, noncyclic H2 and relative fixed-field proofs."
+      }
+    }
+  },
+  "appliedOpenClassInvariantAndGeneralH2Reuse": {
+    "status": "Expanded production, focused exact consumers and sequential foundation/paper verification PASS; zero diagnostics.",
+    "exactDependency": "DUB-17 higher continuation: original P-class formation and Ext/local restriction comparison -> reverse localization -> exact dual Selmer -> arithmetic patching. Actual modular association/purity and automorphy/descent remain separate.",
+    "discharged": [
+      "Every actual open-subgroup invariant class-colimit coefficient has a unique genuine fixed-field class preimage",
+      "Literal continuous relative restriction has the original normal subgroup as kernel, is onto the actual relative Galois group, and identifies quotient order with relative degree",
+      "Original class base change preserves the actual quotient action; the quotient invariant coefficient and H2 equal the genuine relative fixed-field class coefficient and H2",
+      "Original outside-unit H3 vanishing for arbitrary finite arithmetic Galois extensions",
+      "Literal full-class to outside-unit quotient map induces an H2 isomorphism without a cyclic global-group hypothesis",
+      "Actual open-quotient H2 has unique genuine relative full-class lifts and finite order dividing the original subgroup index, with unramifiedness derived"
+    ],
+    "remaining": [
+      "Normalized H2 invariant injections, finite-quotient normalization and required primary image",
+      "Continuous/equivariant Ext and original local restriction comparison",
+      "Reverse localization, exact dual Selmer, arithmetic patching and DUB-17–20"
+    ],
+    "routeDecision": "Reuse pinned infinite Galois correspondence, restriction tower compatibility, actual finite class descent and faithful stage maps. Reuse original equivariant class base change and cohomology reindexing; prove only required product H3 using coordinate primitives, cyclic periodicity and original orbit/Shapiro. No rebased arithmetic union or general cohomology-colimit framework.",
+    "productionModules": [
+      "OpenSubgroupFixedFieldRestriction",
+      "RationalArithmeticOpenClassStageInvariants",
+      "ArithmeticOpenClassColimitFixedStages",
+      "RationalArithmeticOpenClassColimitInvariants",
+      "OriginalProductH3Vanishing",
+      "OriginalOutsideUnitH3Vanishing",
+      "OriginalClassesModOutsideH2Comparison",
+      "ArithmeticClassesModOutsideH2Comparison",
+      "OpenSubgroupRelativeFixedFields",
+      "OpenSubgroupRelativeRestriction",
+      "OpenSubgroupRelativeRestrictionTopology",
+      "RationalArithmeticRelativeClassAction",
+      "RationalArithmeticOpenQuotientClassInvariants",
+      "RationalArithmeticOpenQuotientClassH2"
+    ],
+    "axiomRegistrations": 55,
+    "focusedAxiomChecks": 75,
+    "exactConsumers": 7,
+    "focusedReceipts": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\class-invariant-h2-focused.log",
+        "sha256": "97786296DADA32952E4137BFD674B6FCC2D8CD159DD159655AFB4004953FF962",
+        "axiomChecks": 45,
+        "explicitLinterScopes": 9,
+        "lintersPerScope": 16,
+        "exit": 0,
+        "diagnostics": 0
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\relative-open-class-focused.log",
+        "sha256": "D6BF05FA468F25DC2DFEF2D5FAB5BB13636210973EF9515C7CD843A60ECDCCCF",
+        "axiomChecks": 30,
+        "explicitLinterScopes": 7,
+        "lintersPerScope": 16,
+        "exit": 0,
+        "diagnostics": 0
+      }
+    ],
+    "sourceHashes": {
+      "OpenSubgroupFixedFieldRestriction": "6725bae616322265728c635842ab56dd3fac57d3d5fc65d721d6981df5e696e6",
+      "RationalArithmeticOpenClassStageInvariants": "1a64bd6c0ceeafd8f110badaeb7fa22fe0cbb7b8d8cb9b809da8682d8ec5c906",
+      "ArithmeticOpenClassColimitFixedStages": "2080b624c0d53b80d552ca84150d167d3c25cc5d75ade7ed0ba0b70f33211c7a",
+      "RationalArithmeticOpenClassColimitInvariants": "ed085244209376d2cae153c11264c2e1ea38bb2e6488741a6ba622e4f4a04cbc",
+      "OriginalProductH3Vanishing": "75b219b3f6763f7dcc057773c5800cfab5ac9b8c15256a79a9a266b221f103a0",
+      "OriginalOutsideUnitH3Vanishing": "b361a561597df7b05b5e03a2c95bf1e5166e1d84c65fff01fb4be8c8b20ee7e5",
+      "OriginalClassesModOutsideH2Comparison": "bf50dc7030ec9a4edf69b2c359a416a5ba136342aec08aace5ebfb7d0e7fbf0e",
+      "ArithmeticClassesModOutsideH2Comparison": "c26c03ea173797f6413a21c732ee0ba31dc3f8fcd65d9da030de4a71aa394bfb",
+      "OpenSubgroupRelativeFixedFields": "616f4a5a7e5083cd9f21d9413ba498dda9ea5b74b3e147d0e2cae880f6c82d69",
+      "OpenSubgroupRelativeRestriction": "5c6a5122a1c3e1b73ba2604ed2ae456c89f7f20a196c032374fda6dec91bd2c0",
+      "OpenSubgroupRelativeRestrictionTopology": "b813b7b50305284b6e6968eea07ec5bdbc7cebd166acd8986a6a3527b0e59ff2",
+      "RationalArithmeticRelativeClassAction": "ed67c2e23880c13399de7a4d6122bd0437573d57247aafeb8248c8c2f1fd1cb1",
+      "RationalArithmeticOpenQuotientClassInvariants": "d3def072c278756c2defe7de7d4f013d2a14d4ca6359db16763b07a210646439",
+      "RationalArithmeticOpenQuotientClassH2": "6ab686443f1968ead218b46ec9e40523ff0dcbb73350ddf40c5ecb3c83565e5a"
+    },
+    "acceptance": "16/20 accepted; DUB-17–20 remain open.",
+    "productionFocusedReceipt": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\class-quotient-production-focused-3123.log",
+      "sha256": "29C560518FF63BC4A29604A8EDFCAC5D637C1EE1CB2E4A1FB224CA38CC454299",
+      "axiomChecks": 75,
+      "explicitLinterScopes": 15,
+      "lintersPerScope": 16,
+      "exit": 0,
+      "diagnostics": 0
+    },
+    "receipt3123": {
+      "log": "logs/dubon-build-20261015-150902-188.log",
+      "sha256": "73D13AB1EBA21F9CE7F8CB139C895620FEB6B2E7E7F04E884C8885E7A573FC94",
+      "bytes": 5461056,
+      "exit": 0,
+      "diagnostics": 0,
+      "productionModules": 3123,
+      "projectTheorems": 23200,
+      "registeredConsumers": 11528,
+      "declarations": 15045,
+      "generated": 11733,
+      "linters": 16,
+      "regressions": 12,
+      "foundationLog": "logs/foundation_freeze_20261015_150404.log",
+      "foundationSha256": "8ABB905AC1EC55F7EB049B35096A7494636D80FD7A86D175FD2C992ECEC25525",
+      "boundary": "Includes the fourteen open-quotient class coefficient, relative action and general H2 modules with seven exact consumers. Excludes the later nine scratch generator, literal restriction/trace, conditional invariant and auxiliary cyclic extension modules."
+    }
+  },
+  "nyllClassAxiomFollowup": {
+    "snapshotCommit": "26f52ca8574bd7bf39cfa069466a70099f515382",
+    "files": [
+      {
+        "path": "Nyll/ClassFieldTheory/AbstractClassFieldTheory/Reciprocity/ClassFieldAxiom.lean",
+        "cachedGitBlobSha1": "ee3873a4c81d2f432e085b17589ea374cd3a4b7c",
+        "snapshotGitBlobSha1": "ee3873a4c81d2f432e085b17589ea374cd3a4b7c",
+        "matchesSnapshot": true,
+        "sha256": "5251ee8dafd55cbbf1dc7258b7a0a577b2a2b3c1d9a4f020f4afce8013211814",
+        "bytes": 4029
+      },
+      {
+        "path": "Nyll/GaloisCohomology/Cyclic/TateComparison.lean",
+        "cachedGitBlobSha1": "f0177ce46b3642dafd37536fc13a9920ae9bcf27",
+        "snapshotGitBlobSha1": "f0177ce46b3642dafd37536fc13a9920ae9bcf27",
+        "matchesSnapshot": true,
+        "sha256": "ff93d3cc28192093aa7cc151f542862281ec0df60164d7fd420dfbe303a49fa3",
+        "bytes": 5518
+      }
+    ],
+    "finding": "The inspected SatisfiesClassFieldAxiom is cyclic Tate H0/H-1 cardinality data. The inspected TateComparison proves finite cyclic Tate comparisons. Neither inspected endpoint supplies the required normalized continuous H2 invariant map. Cached source bytes match Git blob hashes at the recorded snapshot; no port is claimed.",
+    "networkBoundary": "Additional raw and GitHub web fetches on 15 October returned cache misses. The matching cached Git blobs support this source inspection, not a newer repository-head claim."
+  },
+  "anthropicTargetedFollowup": {
+    "asOf": "2026-10-15",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "commitDate": "2026-09-24T14:06:36Z",
+    "lean": "leanprover/lean4:v4.33.1",
+    "mathlib": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "license": "Apache-2.0; LICENSE, NOTICE and ATTRIBUTION.md inspected. Preserve notices for production adaptations.",
+    "scope": "Additional targeted repository, discovered after the original eleven-head refresh. Selected source inspection and four locally audited adapted theorems, not a full repository build or transitive endpoint audit.",
+    "tree": {
+      "truncated": true,
+      "entries": 45950,
+      "boundary": "The recursive listing contains Definitions and P2M/Sol but truncates inside Theorems. No completeness claim for Theorems or HTML."
+    },
+    "inspectedFiles": [
+      {
+        "path": "ATTRIBUTION.md",
+        "bytes": 50635,
+        "sha256": "698fb76c8d80b2ed78ebd48b271f2ee5815b3654fb8ec5c699b21b16ce0d9698",
+        "gitBlob": "ac80b9de81c8132d3bccc57f13463b293a340422",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": []
+      },
+      {
+        "path": "Definitions/Def_ExtCitation_LocalLevel_FundamentalClass.lean",
+        "bytes": 4972,
+        "sha256": "4330524bddbc190a42c19958cffdb9f840274dbc00931d7c4a93844a86d4feae",
+        "gitBlob": "cc497701f7268a2e66c1f4fadef7f3070d2c50ce",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_ExtCitation_LocalLevelResidues",
+          "Definitions.Def_GroupCohomology_CyclicCarry"
+        ]
+      },
+      {
+        "path": "Definitions/Def_GroupCohomology_ContinuousDuality.lean",
+        "bytes": 1574,
+        "sha256": "b56bbeeb2e57924046b8b745a370ea2fc59784215d8a9b21f343bf1e65675c8f",
+        "gitBlob": "47549358387131e6d0c11cf4e195a8016ad9667a",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousH2",
+          "Definitions.Def_GroupCohomology_ContinuousH1",
+          "Definitions.Def_GroupCohomology_CupProduct"
+        ]
+      },
+      {
+        "path": "Definitions/Def_GroupCohomology_PoitouTate.lean",
+        "bytes": 1667,
+        "sha256": "ec454a72a36aa4ca67b76acaf1822eac28dfd82bca40d4c81467a59c5af42358",
+        "gitBlob": "7b04bb84363e17764f1b4d3cf783b14c75f6779d",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_Selmer"
+        ]
+      },
+      {
+        "path": "Definitions/Def_GroupCohomology_RelationModule.lean",
+        "bytes": 3474,
+        "sha256": "13bb1134e2f5eac41b70459586fc3a9bc0f785d9f2275ecc73d25b9c83110b42",
+        "gitBlob": "dc36bf58690190e51dc48bfd532023621c04a72f",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib"
+        ]
+      },
+      {
+        "path": "Definitions/Def_M4aHerbrand_SIdeleClassGroup.lean",
+        "bytes": 16393,
+        "sha256": "51a0cc71d2b312ff54332edbd7c80c13fc1520fb1fe9f5a8425c1626e245b8e8",
+        "gitBlob": "232a558d698d50487fc5a63e2038e74e996bcbb3",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Definitions.Def_IsDedekindDomain_FiniteUnitIdelesOutside"
+        ]
+      },
+      {
+        "path": "lake-manifest.json",
+        "bytes": 3159,
+        "sha256": "dc38cf3838d44c42634b5e662174ca098403e9318230be01705fa36099220946",
+        "gitBlob": null,
+        "gitBlobVerified": false,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": []
+      },
+      {
+        "path": "lean-toolchain",
+        "bytes": 26,
+        "sha256": "3e237b01ed208f3feae92c0848414c030fedbe2068f698e93c0d20aea4811a01",
+        "gitBlob": null,
+        "gitBlobVerified": false,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": []
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 11345,
+        "sha256": "746bc52848eabf8765635fe532e0680756a10b18e7b3fb26e7433ab4edf34034",
+        "gitBlob": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": []
+      },
+      {
+        "path": "NOTICE",
+        "bytes": 7128,
+        "sha256": "42b1821f19a6aaa25e6811d22ab8f2fdc6433d4a37bc810b1cfafa5b6dd6b0b6",
+        "gitBlob": "5411679f5f1878e72d1622a88c54b8fbb3f29282",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": []
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_coindIso_hom_eq_map_subtype_comp_map_eval_one.lean",
+        "bytes": 15399,
+        "sha256": "56e5ead9e1f4298ab1ca26fb543ccd451265068c80d116ec956b7dd633916786",
+        "gitBlob": "919c85154b2ac2e38349fe7eb9a229850396ff27",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          31,
+          235,
+          275
+        ],
+        "imports": [
+          "Mathlib",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_cor_map_res_two_eq_index_smul.lean",
+        "bytes": 791,
+        "sha256": "c33fcffcc690efb48b395e3ec1e7e379016dc38896260451b8cd1c6bb286d96d",
+        "gitBlob": "8dd4270cb7a8e6b6f10017639a14bbad70964747",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_Corestriction2",
+          "Theorems.Thm_groupCohomology_Cores_cores_map_res_eq_index_smul",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_corestriction_comp_res_eq_index_nsmul.lean",
+        "bytes": 2867,
+        "sha256": "d88b6f6ed2b60afffa5ee0d47affb37a1686dd07e0f74b80a37959d9e3686e17",
+        "gitBlob": "46abadfe4336cfc5abaddf41b458d36570b9f683",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Theorems.Thm_Rep_exists_hom_coind_res_comp_eq_index_smul",
+          "Theorems.Thm_groupCohomology_coindIso_hom_eq_map_subtype_comp_map_eval_one",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_invariant_addCircle_of_natCard_H2_eq_of_span_eq_top.lean",
+        "bytes": 8951,
+        "sha256": "e2caaef21f30d91605f5968132eef32de2e64bc087290050bfeb4b88c867b097",
+        "gitBlob": "463ad2ae93bfec5f1bee796a07be574bbc8f6b33",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          112
+        ],
+        "imports": [
+          "Mathlib",
+          "Theorems.Thm_groupCohomology_nonempty_linearEquiv_of_iso_res_mulEquiv",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_mem_continuousH1S_locRes_eq_iff_forall_sum_theta_eq_zero_arch_of_ne_two.lean",
+        "bytes": 20672,
+        "sha256": "1e1a0db8aaa837d8772f095800f3dafffcf61330c907612167a6ebe861d9d36f",
+        "gitBlob": "6123636262becc0ebf813ce3dbed6f7af0620179",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_GroupCohomology_LocalInvariant",
+          "Theorems.Thm_groupCohomology_sum_theta1_locRes_eq_zero_of_mem_continuousH1S_arch_of_ne_two",
+          "Theorems.Thm_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_arch_of_ne_two",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_mem_continuousH1S_locRes_eq_iff_forall_sum_theta_eq_zero_of_ne_two.lean",
+        "bytes": 20203,
+        "sha256": "0560cf49673d0b3e7850a6ddcbd24271ea0ed7d7d2ab2aaef3d88faa75030cf2",
+        "gitBlob": "4541b2f20ba9f2a32645b4218bc35f04b41217f0",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_GroupCohomology_LocalInvariant",
+          "Theorems.Thm_groupCohomology_sum_theta1_locRes_eq_zero_of_mem_continuousH1S_of_ne_two",
+          "Theorems.Thm_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_of_ne_two",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_arch_of_ne_two.lean",
+        "bytes": 434899,
+        "sha256": "284eb1ffca9ddc2e5d383e21af4c819ae82a17bc7db512136afff5218b5d03f2",
+        "gitBlob": "7bd6fcd7b93d4aadfbe620e4c3ecfbb6c62d2fde",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          770,
+          771,
+          1798,
+          3627,
+          3633,
+          3725,
+          3757,
+          3859,
+          3874,
+          3929,
+          3997,
+          4061,
+          4132,
+          4148,
+          4152,
+          4252,
+          4430,
+          4628,
+          4734,
+          5007,
+          5125,
+          5137,
+          5360,
+          5457,
+          5468,
+          5525,
+          5857,
+          5956,
+          5990,
+          6068,
+          6268,
+          6269
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_DedekindDomain_Completion_BaseChange",
+          "Definitions.Def_ExtEndgame_ProductionDatum",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_GroupCohomology_ContinuousH1",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_GlobalBridge",
+          "Definitions.Def_GroupCohomology_LevelQuotient",
+          "Definitions.Def_GroupCohomology_RelationHomDefect",
+          "Definitions.Def_GroupCohomology_RelationModule",
+          "Definitions.Def_GroupCohomology_RelationModuleRes",
+          "Definitions.Def_GroupCohomology_RepImage",
+          "Definitions.Def_GroupCohomology_RepToIntRep",
+          "Definitions.Def_GroupCohomology_Selmer",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_M4aHerbrand_SIdeleClassTower",
+          "Definitions.Def_NumberField_InfinitePlaceTransport",
+          "Definitions.Def_NumberField_SArchIdeleModule",
+          "Definitions.Def_NumberField_SUnitsModule",
+          "Theorems.Thm_GroupCohomology_RepImage_seq_shortExact",
+          "Theorems.Thm_GroupCohomology_RepPi_forall_exists_comp_proj_and_iff_exists_eq_comp_of_coind",
+          "Theorems.Thm_IntermediateField_adjoin_isUnramifiedOutside_of_isPrimitiveRoot_pow",
+          "Theorems.Thm_IntermediateField_exists_normal_isUnramifiedOutside_of_le",
+          "Theorems.Thm_IsDedekindDomain_HeightOneSpectrum_under_under_ringOfIntegers",
+          "Theorems.Thm_M4aHerbrand_IdeleGaloisDescent_stabilizesUnitIdeles_placesOverPrimes",
+          "Theorems.Thm_M4aHerbrand_bijective_groupCohomology_map_toSIdeleClass",
+          "Theorems.Thm_M4aHerbrand_exists_adeleBaseChange_invariant_groupCohomology_ideleClassGroup_map_eq_of_invariant",
+          "Theorems.Thm_M4aHerbrand_exists_hom_adicCompletion_res_decomp_ideles_apply",
+          "Theorems.Thm_M4aHerbrand_exists_invariant_groupCohomology_ideleClassGroup_forall_comp_eq_index_smul_of_ne_two",
+          "Theorems.Thm_M4aHerbrand_exists_level_forall_relationHom_sIdeleClassGroup_extends_or_map_delta_ne_zero",
+          "Theorems.Thm_M4aHerbrand_nonempty_ideleGaloisDescent",
+          "Theorems.Thm_NumberField_AdeleRing_finiteIndex_principalIdeles_sup_unitIdelesOutside",
+          "Theorems.Thm_NumberField_InfPlaceDecomp_exists_isLocalBridge1_archimedean",
+          "Theorems.Thm_NumberField_InfPlaceDecomp_exists_restrictNormalHom_conj_complexConjugation_mem_decomp",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_forall_mem_asIdeal_iff_norm_padicEmbedding_lt_one",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_isLocalBridge1_padicAlgCl",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_restrict_decomp_surjective_of_tower",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_ringHom_adicCompletion_padicAlgCl_extends_padicEmbedding",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_ringHom_adicCompletion_padicAlgCl_of_forall_mem_asIdeal_iff",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_unit_inv_map_delta_res_eq_theta_localBridge_primary",
+          "Theorems.Thm_NumberField_PlaceDecomp_localBridge_hypotheses_padicAlgCl",
+          "Theorems.Thm_NumberField_PlaceDecomp_mem_asIdeal_iff_norm_padicEmbedding_lt_one_of_continuous",
+          "Theorems.Thm_NumberField_PlaceTransport_orbit_eq_setOf_under_eq",
+          "Theorems.Thm_NumberField_PlaceTransport_stabilizer_eq_decomp",
+          "Theorems.Thm_NumberField_SArchIdele_existsUnique_hom_res_obj_comp_toSIdele_eq",
+          "Theorems.Thm_NumberField_SArchIdele_toSIdeleClass_mk_comp_diagS_eq_one_and_exists_of_eq_one",
+          "Theorems.Thm_NumberField_SIdele_exists_addMonoidHom_obj_adeleRing_units_apply",
+          "Theorems.Thm_NumberField_SUnits_exists_ihom_extension_fixed_of_sLevel_of_injective",
+          "Theorems.Thm_NumberField_SUnits_isLocalBridge1_apply_mem_continuousH1S",
+          "Theorems.Thm_NumberField_SUnits_locRes_isLocalBridge1_apply_eq_of_finite",
+          "Theorems.Thm_NumberField_exists_le_isGalois_forall_mem_range_sup_unitIdelesOutside_of_pow_mem",
+          "Theorems.Thm_NumberField_ramificationIdx_span_eq_one_of_forall_liesOverPrime_inertiaSubgroupIn_le_fixingSubgroup",
+          "Theorems.Thm_Rep_card_smul_eq_zero_of_tateCohomology",
+          "Theorems.Thm_Rep_dualTwist_cycloChar_smooth",
+          "Theorems.Thm_Rep_dualTwist_cycloChar_unramifiedOutside",
+          "Theorems.Thm_Rep_exists_preIota_eq_map_extInflR_zero_of_exists_preIota_eq_of_pit",
+          "Theorems.Thm_Rep_map_delta_resMap_comp_eq_map_map_delta",
+          "Theorems.Thm_Rep_moduleFree_relationCarrier",
+          "Theorems.Thm_Rep_relationSeqInt_shortExact",
+          "Theorems.Thm_groupCohomology_alpha1Read_comp_eq_sum_theta_of_forall_local",
+          "Theorems.Thm_groupCohomology_exists_alpha1Read_of_injective_invariant",
+          "Theorems.Thm_groupCohomology_exists_corestriction_comp_res_eq_index_nsmul",
+          "Theorems.Thm_groupCohomology_exists_inflate_H1_injective_range_iff_split",
+          "Theorems.Thm_groupCohomology_exists_isGalois_forall_mem_continuousH1S_exists_cocyclesOne",
+          "Theorems.Thm_groupCohomology_exists_isLocalBridge1",
+          "Theorems.Thm_groupCohomology_exists_isUnramifiedOutside_forall_apply_eq_one_of_smooth",
+          "Theorems.Thm_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_of_assembly",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1S",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1_of_isOpen_of_primeLocal",
+          "Theorems.Thm_groupCohomology_finrank_H1_res_extArithLoc_archSlot_eq_zero",
+          "Theorems.Thm_groupCohomology_finrank_submodule_res_extArithLoc_archSlot_eq_zero",
+          "Theorems.Thm_groupCohomology_isLocalBridge1_apply_resFunctor_map_comp_eq_of_exact",
+          "Theorems.Thm_groupCohomology_locRes_mem_continuousH1_of_mem_continuousH1S",
+          "Theorems.Thm_groupCohomology_nonempty_continuous_linearEquiv_of_mulEquiv",
+          "Theorems.Thm_groupCohomology_sum_theta1_locRes_eq_zero_of_mem_continuousH1S_arch_of_ne_two",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_of_assembly.lean",
+        "bytes": 11898,
+        "sha256": "2d54f3a776ced14519b5d125965c8d3dbbe0f1cd0b375d8773401798c6b50ac0",
+        "gitBlob": "53b1069449ae81a6959bd260f72bc1d0d9166d73",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_GroupCohomology_LocalInvariant",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_of_ne_two.lean",
+        "bytes": 22948,
+        "sha256": "16e0d3171b770b5ba0e2153bda15ca5c91fc3203313c036c61be8adedfd338ad",
+        "gitBlob": "9cbcf8dd1c314507854fe01b7fc2461d06f960ce",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          25
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_GroupCohomology_LocalInvariant",
+          "Theorems.Thm_groupCohomology_exists_mem_continuousH1S_locRes_eq_iff_forall_sum_theta_eq_zero_arch_of_ne_two",
+          "Theorems.Thm_groupCohomology_exists_injective_dual_continuousH2_archimedean",
+          "Theorems.Thm_groupCohomology_exists_theta1",
+          "Theorems.Thm_Rep_dualTwist_cycloChar_smooth",
+          "Theorems.Thm_Rep_isEquivariantBilinear_eval_dualTwist",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_natCard_H2_eq_and_span_eq_top_of_carry_of_exists_norm_eq.lean",
+        "bytes": 7638,
+        "sha256": "d988e4296a74e145de0ef6ae693bdd3b282637240aed251fa15b43fa01804fa3",
+        "gitBlob": "b9186a01044a27c9c65a1d9c35ec4c4e3942b106",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_CyclicCarry",
+          "Theorems.Thm_groupCohomology_exists_natCard_H2_eq_and_span_eq_top_of_map_res_inf_smul_eq_zero",
+          "Theorems.Thm_groupCohomology_map_carry_H2pi_eq_smul_carry",
+          "Theorems.Thm_groupCohomology_carry_H2pi_eq_zero_iff",
+          "Theorems.Thm_groupCohomology_carryFun_mem_cocycles2",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_natCard_H2_eq_and_span_eq_top_of_map_res_inf_smul_eq_zero.lean",
+        "bytes": 3990,
+        "sha256": "e3b5b8d3c0bfdb9d77a80d7b09fb56dd051c183331621f7283d7e39a9efa391e",
+        "gitBlob": "110269a877e21569c24f6ff25591a71be952cf65",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Theorems.Thm_groupCohomology_map_two_injective_and_range_eq_ker_of_isZero_H1",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_exists_range_locRes_continuousH2S_sup_eq_top_finrank_le_finrank_invariants_dualTwist_of_ne_two.lean",
+        "bytes": 41831,
+        "sha256": "35829b4c624be51e11488d7afddc173957c47aa598e0f0e7d2e7c08ed163044e",
+        "gitBlob": "e2b1361eb47250abc24de518443ec861865b1f97",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          24,
+          25
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_ExtCitation_KummerBridge",
+          "Theorems.Thm_groupCohomology_exists_range_locRes_continuousH2S_sup_eq_top_of_surjective_of_ne_two",
+          "Theorems.Thm_groupCohomology_exists_isUnramifiedOutside_forall_apply_eq_one_of_smooth",
+          "Theorems.Thm_IntermediateField_IsUnramifiedOutside_normalClosure",
+          "Theorems.Thm_groupCohomology_exists_level_ofChar_cycloChar_comp",
+          "Theorems.Thm_groupCohomology_exists_forall_locRes_continuousH2S_coind_eq_add_sum_of_exists_sq_eq_neg_one",
+          "Definitions.Def_GroupCohomology_LevelSubgroup",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_greenbergWiles_eq_unramifiedMenu_extArithLoc.lean",
+        "bytes": 89915,
+        "sha256": "32cdf8b1788dbc216394011f52b573ddb53688d2dd6a92e7cfb6f582dc7c3d23",
+        "gitBlob": "fc0c8f9499ae1fbece1fe564797d98422963e06e",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Definitions.Def_ExtEndgame_ProductionDatum",
+          "Definitions.Def_GroupCohomology_SelmerAdm",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Theorems.Thm_groupCohomology_greenbergWilesLeAdm_extArithLoc_of_isTheta1_eval_of_ne_two",
+          "Theorems.Thm_groupCohomology_eq_continuousH1S_of_forall_mem_iff",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1S",
+          "Theorems.Thm_groupCohomology_mem_orthogonal_iff_of_agree_on_continuous",
+          "Theorems.Thm_groupCohomology_theta1_nondegenerate_of_bijective",
+          "Theorems.Thm_groupCohomology_locRes_extArithLoc_apply_mem_continuousH1",
+          "Theorems.Thm_TWNum_subsingleton_H1_extArithLoc_inl_dualTwist",
+          "Theorems.Thm_groupCohomology_exists_localDualityPackage_res_dualTwist_extArithLoc",
+          "Definitions.Def_GroupCohomology_ContinuousH1",
+          "Theorems.Thm_groupCohomology_finrank_finiteQuotientH1_eq_invariants_add_dualTwist_of_primeLocal_ne",
+          "Theorems.Thm_groupCohomology_finrank_finiteQuotientH1_eq_invariants_add_dualTwist_add_finrank_of_primeLocal",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1_of_isOpen_of_primeLocal",
+          "Theorems.Thm_groupCohomology_map_apply_mem_continuousH1_comp",
+          "Theorems.Thm_groupCohomology_injective_H1_restriction_of_isUnit_index",
+          "Theorems.Thm_groupCohomology_finrank_submodule_res_extArithLoc_archSlot_eq_zero",
+          "Theorems.Thm_ExtCitation_finrank_unramifiedContinuousClasses_eq_finrank_invariants",
+          "Theorems.Thm_Rep_finrank_invariants_res_dualTwist_eq",
+          "Theorems.Thm_Rep_dualTwist_cycloChar_smooth",
+          "Theorems.Thm_Rep_nonempty_dualTwist_dualTwist_iso",
+          "Theorems.Thm_groupCohomology_finrank_invariants_archimedean_add_dualTwist_add_H1_eq",
+          "Theorems.Thm_TWNum_finrank_continuousH2_extArithLoc_inl_eq_zero",
+          "Theorems.Thm_groupCohomology_theta1_apply_eq_zero_of_mem_unramified_of_mem_unramified",
+          "Theorems.Thm_Rep_dualTwist_cycloChar_unramifiedOutside",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_greenbergWiles_le_strict_relaxed_continuousH1S.lean",
+        "bytes": 37962,
+        "sha256": "3e4ab6bc6e12d7daeb772ef4b80ae5cd78a72533e0fece5bf7ef43629099deb3",
+        "gitBlob": "116ff76ab988ce5a2adba2ab0acf9ee85f14a0a0",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_SelmerAdm",
+          "Theorems.Thm_groupCohomology_greenbergWiles_eq_unramifiedMenu_extArithLoc",
+          "Theorems.Thm_groupCohomology_subsingleton_H1_of_isUnit_card",
+          "Theorems.Thm_groupCohomology_map_apply_mem_continuousH1_comp",
+          "Theorems.Thm_groupCohomology_eq_continuousH1S_of_forall_mem_iff",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1S",
+          "Theorems.Thm_ExtCitation_cycloChar_eq_one_of_apply_eq_self_of_isPrimitiveRoot",
+          "Theorems.Thm_ValuationSubring_smul_eq_self_of_mem_inertiaSubgroupIn_of_pow_eq_one",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_greenbergWilesLeAdm_extArithLoc_of_isTheta1_eval_of_ne_two.lean",
+        "bytes": 82247,
+        "sha256": "6d2bdb7fdb06b90e72a23efe321e6aebce4168490fe31b138ddb6f6020915105",
+        "gitBlob": "3f0e7a8a92fc5b18af866986b3404b09bbde8db1",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          549,
+          699
+        ],
+        "imports": [
+          "Definitions.Def_ExtEndgame_ProductionDatum",
+          "Definitions.Def_GroupCohomology_Selmer",
+          "Definitions.Def_GroupCohomology_SelmerAdm",
+          "Definitions.Def_GroupCohomology_ContinuousDuality",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_LocalInvariant",
+          "Theorems.Thm_groupCohomology_eq_continuousH1S_of_forall_mem_iff",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1S",
+          "Theorems.Thm_groupCohomology_exists_mem_continuousH1S_locRes_eq_iff_forall_sum_theta_eq_zero_of_ne_two",
+          "Theorems.Thm_groupCohomology_isLocalInv_localInv_and_bijective",
+          "Theorems.Thm_groupCohomology_finiteDimensional_continuousH1_of_isOpen_of_primeLocal",
+          "Theorems.Thm_groupCohomology_map_apply_mem_continuousH1_comp",
+          "Theorems.Thm_groupCohomology_finrank_finiteQuotientH1_eq_invariants_add_dualTwist_add_finrank_of_primeLocal",
+          "Theorems.Thm_groupCohomology_finrank_finiteQuotientH1_eq_invariants_add_dualTwist_of_primeLocal_ne",
+          "Theorems.Thm_groupCohomology_finrank_invariants_add_finrank_continuousH2S_add_finrank_eq_of_ne_two",
+          "Theorems.Thm_groupCohomology_finrank_sha1_dualTwist_eq_finrank_sha2_of_ne_two",
+          "Theorems.Thm_groupCohomology_exists_continuousH2S_locRes_eq_iff_and_surjective_sum_theta2_of_ne_two",
+          "Theorems.Thm_groupCohomology_exists_theta0_and_theta2",
+          "Theorems.Thm_groupCohomology_exists_theta1",
+          "Theorems.Thm_groupCohomology_bijective_theta_dualTwist_of_primeLocal",
+          "Theorems.Thm_groupCohomology_locRes_extArithLoc_apply_mem_continuousH1",
+          "Theorems.Thm_Rep_isEquivariantBilinear_eval_dualTwist",
+          "Theorems.Thm_Rep_dualTwist_smooth",
+          "Theorems.Thm_groupCohomology_exists_level_ofChar_cycloChar_comp",
+          "Theorems.Thm_TWNum_finiteDimensional_continuousH2S",
+          "Theorems.Thm_TWNum_subsingleton_continuousH2_extArithLoc_inl",
+          "Theorems.Thm_TWNum_subsingleton_H1_extArithLoc_inl_dualTwist",
+          "Theorems.Thm_ValuationSubring_apply_eq_self_of_pow_eq_one_of_mem_inertiaSubgroupIn",
+          "Theorems.Thm_Submodule_finrank_comap_eq_finrank_ker_add_finrank_range_inf",
+          "Theorems.Thm_Submodule_finrank_pi_univ_eq_sum",
+          "Theorems.Thm_groupCohomology_injective_H1_restriction_of_isUnit_index",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_map_two_injective_and_range_eq_ker_of_isZero_H1.lean",
+        "bytes": 18154,
+        "sha256": "64843e493e8bc4287f9b6d5a556222bffa8c9964d77f7de6f2a7500d7dc847a5",
+        "gitBlob": "93daffd548a4fc3328f3d1efc4c26f610f983e43",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          8,
+          9
+        ],
+        "imports": [
+          "Mathlib",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_groupCohomology_natCard_eq_and_span_map_eq_top_of_addOrderOf_eq_natCard.lean",
+        "bytes": 3571,
+        "sha256": "47a80392c87bb9808f09d0fe93c371f1a017597f08ab2376d0f0d3599390def6",
+        "gitBlob": "e030d50ac89bafc77dd4157ac40111fcf0985158",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_LanglandsTunnell_Artin_artinSymbol_surjective_and_ker_eq_normRaySubgroup_of_isAdmissibleModulusOfDegree.lean",
+        "bytes": 135542,
+        "sha256": "42f2a416e447f2139ee32cdeacaad43d8cf2729cf80a95919aadc4560ad48657",
+        "gitBlob": "ba8b23df1aae6e9631af40e2d5a710062df8ca0c",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          413
+        ],
+        "imports": [
+          "Definitions.Def_NormIndex_AdmissibleExpOfDegree",
+          "Definitions.Def_LanglandsTunnell_ArtinCoreCTM",
+          "Mathlib.GroupTheory.FiniteAbelian.Basic",
+          "Theorems.Thm_LanglandsTunnell_Artin_exists_artinFieldCore_exists_artinPairCore_of_isAdmissibleModulusOfDegree",
+          "Theorems.Thm_LanglandsTunnell_Artin_exists_Ni_eq_Ni_and_symbol_eq_of_artinPairCore",
+          "Theorems.Thm_LanglandsTunnell_Artin_Ni_mem_normRaySubgroup_of_symbol_eq_one",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_normRaySubgroup_index_eq_of_anchors",
+          "Theorems.Thm_NumberField_NormIndex_ideleFirstIneqData_unitIdeles_le_range_of_isCyclic_of_finrank_dvd",
+          "Theorems.Thm_M4aKummer_normClassIndex_dvd_card_aut_of_isSolvable",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_LanglandsTunnell_Artin_artinSymbol_surjective_and_ker_eq_normRaySubgroup_of_pow_eq_one_of_isAdmissibleModulusOfDegree.lean",
+        "bytes": 76149,
+        "sha256": "43a6a54203ffbb2278fffeb663a89cf17e322d39b6b39c1dcd0c1b40c5380165",
+        "gitBlob": "390a2620989c311405310c2e544270ba3608ec9e",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          252
+        ],
+        "imports": [
+          "Definitions.Def_NormIndex_AdmissibleExpOfDegree",
+          "Theorems.Thm_LanglandsTunnell_Artin_artinSymbol_surjective_and_ker_eq_normRaySubgroup_of_isAdmissibleModulusOfDegree",
+          "Theorems.Thm_M4aKummer_normClassIndex_dvd_card_aut_of_isSolvable",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_addOrderOf_carry_eq_card_and_span_eq_top_ideleClassGroup_of_isCyclic.lean",
+        "bytes": 21421,
+        "sha256": "6901b5843d83f73c200c4a0e339ec2192e4400bfade1d329c01dd13382411dee",
+        "gitBlob": "853c15c9e32598c6667601e4a1c08b220a89fd14",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Definitions.Def_GroupCohomology_CyclicCarry",
+          "Theorems.Thm_NumberField_IdeleClassGroup_isZero_H1_and_natCard_H2_eq_card_of_isCyclic",
+          "Theorems.Thm_groupCohomology_nonempty_linearEquiv_of_iso_res_mulEquiv",
+          "Theorems.Thm_M4aHerbrand_exists_classAct_eq_and_pow_mem_range_ideleClassNorm_iff_of_isCyclic",
+          "Theorems.Thm_groupCohomology_carryFun_mem_cocycles2",
+          "Theorems.Thm_groupCohomology_carry_H2pi_eq_zero_iff",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_classAct_eq_and_pow_mem_range_ideleClassNorm_iff_of_isCyclic.lean",
+        "bytes": 6068,
+        "sha256": "7cbcdbc5702a709f5b5e87ff8f138c044b392f4e52e8f6c07952bee06338ad06",
+        "gitBlob": "2fb3d0d5bd341da149ef24c2fb1092cf56cd16d6",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Definitions.Def_LanglandsTunnell_ArtinCoreCTM",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_exists_ne_bot_and_unitIdeles_le_range_idelicNorm",
+          "Theorems.Thm_NumberField_exists_idelicArtinMap_ker_eq_and_surjective_and_eq_finprod_artinFrob_of_unitIdeles_le",
+          "Theorems.Thm_M4aHerbrand_GenuineDescent_injective_beta_and_fixed_iff_and_h90_and_prod_unitsAct_eq_idelicNorm",
+          "Theorems.Thm_M4aHerbrand_GenuineDescent_unitsMap_beta_mem_principalIdeles_iff",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_fundamentalClass_ideleClassGroup.lean",
+        "bytes": 18641,
+        "sha256": "9be117525fe59e5b90bb6955a247d5a7075493250b76a873f68b66eeed7749e4",
+        "gitBlob": "15ff82d1cf91eb20ee5179c1b08aaf5ede7a3606",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Theorems.Thm_M4aHerbrand_exists_natCard_H2_eq_card_and_span_eq_top_ideleClassGroup",
+          "Theorems.Thm_NumberField_IdeleClassGroup_isZero_H1",
+          "Theorems.Thm_NumberField_IdeleClassGroup_finite_H2_and_natCard_H2_le_card",
+          "Theorems.Thm_groupCohomology_natCard_eq_and_span_map_eq_top_of_addOrderOf_eq_natCard",
+          "Theorems.Thm_groupCohomology_exists_cor_map_res_two_eq_index_smul",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_fundamentalClass_ideleClassGroup_smul_res_eq_smul_localFundamentalClass_of_ne_two.lean",
+        "bytes": 24481,
+        "sha256": "8522d87b97f2aabcf76ee3e93d15ee9f1c5bd730590d5ecefcd071474a00d8f3",
+        "gitBlob": "e410b62a6d0645da6f220da291470166b36f37fc",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          17
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Theorems.Thm_M4aHerbrand_exists_fundamentalClass_ideleClassGroup",
+          "Theorems.Thm_M4aHerbrand_exists_unit_forall_exists_localFundamentalClass_eq_smul_res_and_pow_dvd_of_ne_two",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_invariant_forall_inv_map_eq_finsum_of_forall_localFundamentalClass_of_isPGroup.lean",
+        "bytes": 19118,
+        "sha256": "072786be068402ac6178bad8a1a0433b6d8bdf9f65fa0d43418f8a470ecedfd9",
+        "gitBlob": "c724b33d748470dd74d3b72d1eb93bd2e3833281",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          25,
+          26
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Definitions.Def_NumberField_SIdeleModule",
+          "Definitions.Def_NumberField_PlaceAbove",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Definitions.Def_GroupCohomology_Corestriction2",
+          "Theorems.Thm_M4aHerbrand_exists_invariant_forall_inv_map_eq_finsum_of_forall_localFundamentalClass_of_isPGroup_of_children",
+          "Theorems.Thm_M4aHerbrand_exists_surjective_and_invariant_map_eq_finsum_of_isCyclic",
+          "Theorems.Thm_NumberField_exists_isCyclic_algHom_cyclotomicField_dvd_natCard_decomp",
+          "Theorems.Thm_M4aHerbrand_finsum_div_natCard_decomp_eq_zero_of_isPGroup",
+          "Theorems.Thm_M4aHerbrand_exists_hom_res_ideles_and_ideleClassGroup_injective_range_eq_invariants_of_isScalarTower",
+          "Theorems.Thm_M4aHerbrand_finsum_div_natCard_decomp_map_eq_finsum_div_natCard_decomp_of_isScalarTower",
+          "Theorems.Thm_M4aHerbrand_finsum_div_natCard_decomp_cores_eq_finsum_div_natCard_inf_decomp",
+          "Theorems.Thm_M4aHerbrand_map_prG_eq_smul_fixedField_of_map_prG_eq_smul",
+          "Theorems.Thm_NumberField_PlaceDecomp_finsum_div_natCard_decomp_eq_finrank_smul_finsum",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_invariant_forall_inv_map_eq_finsum_of_forall_localFundamentalClass_of_isPGroup_of_children.lean",
+        "bytes": 156737,
+        "sha256": "3faf7c4c1364eecc0d3b698dceccfa69f5c3c2eda2c09f2ca060adb78117c3d5",
+        "gitBlob": "c9c475d4401907889394446761566a9ef549338c",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          456,
+          493,
+          494,
+          567,
+          568,
+          758,
+          865,
+          866,
+          981,
+          982,
+          986
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Definitions.Def_GroupCohomology_Corestriction2",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Definitions.Def_NumberField_PlaceAbove",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_NumberField_SIdeleModule",
+          "Theorems.Thm_ExtCitation_LocalLevel_existsUnique_isLocalFundamentalClass",
+          "Theorems.Thm_ExtCitation_LocalLevel_isZero_H1_and_natCard_H2_and_span_res_of_isLocalFundamentalClass",
+          "Theorems.Thm_groupCohomology_Cores_cores_map_res_eq_index_smul",
+          "Theorems.Thm_groupCohomology_Cores_map_cores_eq_cores_map",
+          "Theorems.Thm_groupCohomology_exists_invariant_addCircle_of_natCard_H2_eq_of_span_eq_top",
+          "Theorems.Thm_groupCohomology_map_two_injective_and_range_eq_ker_of_isZero_H1",
+          "Theorems.Thm_groupCohomology_natCard_eq_and_span_map_eq_top_of_addOrderOf_eq_natCard",
+          "Theorems.Thm_groupCohomology_nonempty_linearEquiv_of_iso_res_mulEquiv",
+          "Theorems.Thm_M4aHerbrand_exists_hom_ideles_ideleClassGroup_apply",
+          "Theorems.Thm_M4aHerbrand_exists_hom_res_decomp_ideles_adicCompletion_apply",
+          "Theorems.Thm_M4aHerbrand_exists_hom_res_infPlaceDecomp_ideles_localUnits_apply",
+          "Theorems.Thm_M4aHerbrand_exists_natCard_H2_eq_card_and_span_eq_top_ideleClassGroup_of_isPGroup",
+          "Theorems.Thm_M4aHerbrand_exists_res_ideles_iso_res_mulEquiv_fixedField",
+          "Theorems.Thm_M4aHerbrand_finsum_div_natCard_decomp_cores_eq_finsum_div_natCard_inf_decomp",
+          "Theorems.Thm_M4aHerbrand_ideleGaloisDescent_restrict_intermediateField",
+          "Theorems.Thm_M4aHerbrand_injective_and_finite_and_surjective_localCoordinates_groupCohomology_ideles",
+          "Theorems.Thm_M4aHerbrand_nonempty_ideleGaloisDescent",
+          "Theorems.Thm_NumberField_compositum_isPGroup_and_normal_and_inf_eq_bot_and_exists_generators",
+          "Theorems.Thm_NumberField_exists_isGalois_compositum",
+          "Theorems.Thm_NumberField_IdeleClassGroup_finite_H2_and_natCard_H2_le_card_of_isPGroup",
+          "Theorems.Thm_NumberField_IdeleClassGroup_isZero_H1_of_isPGroup",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_eq_zsmul_map_of_isLocalFundamentalClass",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_localLevel_ringEquiv_adicCompletion",
+          "Theorems.Thm_NumberField_PlaceDecomp_faithfulSMul_decomp",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_invariant_forall_inv_map_localFundamentalClass_eq_one_div_natCard_decomp_of_isPGroup.lean",
+        "bytes": 45825,
+        "sha256": "806be1c76d591a2040a98097095ccd69f1b0e1e5759f31a11ff42f4982a1113a",
+        "gitBlob": "3543acafbe182d087ce3723d079405d15dd5e7be",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          28,
+          29
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Definitions.Def_NumberField_SIdeleModule",
+          "Definitions.Def_NumberField_PlaceAbove",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Definitions.Def_NumberField_PlaceTransport",
+          "Theorems.Thm_M4aHerbrand_exists_invariant_forall_inv_map_eq_finsum_of_forall_localFundamentalClass_of_isPGroup",
+          "Theorems.Thm_M4aHerbrand_exists_hom_adicCompletion_res_decomp_ideles_apply",
+          "Theorems.Thm_M4aHerbrand_exists_hom_ideles_ideleClassGroup_apply",
+          "Theorems.Thm_M4aHerbrand_exists_hom_res_decomp_ideles_adicCompletion_apply",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_localLevel_ringEquiv_adicCompletion",
+          "Theorems.Thm_NumberField_PlaceDecomp_map_eq_map_of_isLocalFundamentalClass_of_ringEquiv_adicCompletion",
+          "Theorems.Thm_NumberField_PlaceDecomp_faithfulSMul_decomp",
+          "Theorems.Thm_ExtCitation_LocalLevel_existsUnique_isLocalFundamentalClass",
+          "Theorems.Thm_NumberField_PlaceDecomp_mem_adicCompletionIntegers_iff_norm_le_one_and_natCast_mem_asIdeal_of_ringEquiv",
+          "Theorems.Thm_NumberField_PlaceTransport_stabilizer_eq_decomp",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_invariant_groupCohomology_ideleClassGroup_forall_comp_eq_index_smul_of_ne_two.lean",
+        "bytes": 21580,
+        "sha256": "bf67e3663551232d241bcd7f6ce54ddb7c74fa98b946be8d39eb207068c5e134",
+        "gitBlob": "699c706c7cb2de80f68d622e265bc871c49322e7",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          17,
+          56
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Theorems.Thm_groupCohomology_exists_invariant_addCircle_of_natCard_H2_eq_of_span_eq_top",
+          "Theorems.Thm_M4aHerbrand_exists_fundamentalClass_ideleClassGroup_smul_res_eq_smul_localFundamentalClass_of_ne_two",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_invariant_groupCohomology_ideleClassGroup_of_isPGroup_of_ne_two.lean",
+        "bytes": 19405,
+        "sha256": "628fe3cece35c8450829b6e9616f1593d1b8df251d244e8b913cc0464bd538e5",
+        "gitBlob": "8358b0a3043b6239f11f5a8d0da0ea25409de5c3",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          17,
+          45
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Theorems.Thm_M4aHerbrand_exists_invariant_forall_inv_map_localFundamentalClass_eq_one_div_natCard_decomp_of_isPGroup",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_level_forall_relationHom_sIdeleClassGroup_extends_or_map_delta_ne_zero.lean",
+        "bytes": 49187,
+        "sha256": "0d8f213affe3ab6ffe57e8631ed1a7283f878308106ab1f2ce6774680b800c41",
+        "gitBlob": "fdfa04b4e0821978f58c795e81de5a3717302c94",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          33,
+          302,
+          405
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_ExtEndgame_ProductionDatum",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_GroupCohomology_RelationModule",
+          "Definitions.Def_GroupCohomology_RelationModuleRes",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Theorems.Thm_Rep_exists_comp_eq_or_exists_map_delta_ne_zero_of_devissage",
+          "Theorems.Thm_Rep_exists_eq_comp_add_comp_of_forall_map_delta_eq_zero_of_shortExact_of_projective",
+          "Theorems.Thm_Rep_exists_ind_map_comp_eq_iff_exists_comp_eq_homEquiv",
+          "Theorems.Thm_Rep_exists_shapiro_corestriction_map_delta_ind_eq",
+          "Theorems.Thm_Rep_exists_hom_ind_injective_exact_of_forall_rho_eq",
+          "Theorems.Thm_Rep_shortExact_map_indFunctor",
+          "Theorems.Thm_Rep_exists_comp_eq_or_exists_map_delta_ne_zero_of_forall_sum_rho_eq_nsmul",
+          "Theorems.Thm_Rep_relationSeqInt_shortExact",
+          "Theorems.Thm_Rep_exists_hom_relationModuleInt_forall_map_delta_eq",
+          "Theorems.Thm_M4aHerbrand_exists_fundamentalClass_sIdeleClassGroup",
+          "Theorems.Thm_IntermediateField_adjoin_isUnramifiedOutside_of_isPrimitiveRoot_pow",
+          "Theorems.Thm_IntermediateField_exists_le_isGalois_dvd_finrank_forall_prod_fixingSubgroup_sClassAct_eq_pow",
+          "Theorems.Thm_NumberField_ramificationIdx_span_eq_one_of_forall_liesOverPrime_inertiaSubgroupIn_le_fixingSubgroup",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_natCard_H2_eq_card_and_span_eq_top_ideleClassGroup.lean",
+        "bytes": 22953,
+        "sha256": "ec0127b03dc553f0d3d49116abb20b7edd2a944728f803f25bcbe4703b225dbc",
+        "gitBlob": "04c64e27a2cca46fe00683993802cd6c7f17598f",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Definitions.Def_GroupCohomology_CyclicCarry",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Theorems.Thm_NumberField_IdeleClassGroup_isZero_H1",
+          "Theorems.Thm_NumberField_IdeleClassGroup_finite_H2_and_natCard_H2_le_card",
+          "Theorems.Thm_NumberField_IdeleClassGroup_nonempty_quotientToInvariants_iso_of_isScalarTower",
+          "Theorems.Thm_groupCohomology_exists_natCard_H2_eq_and_span_eq_top_of_carry_of_exists_norm_eq",
+          "Theorems.Thm_NumberField_exists_isGalois_compositum",
+          "Theorems.Thm_NumberField_exists_isCyclic_finrank_eq",
+          "Theorems.Thm_NumberField_compositum_normal_and_inf_eq_bot_and_exists_generators",
+          "Theorems.Thm_M4aHerbrand_IdeleGaloisDescent_exists_mulDistribMulAction_smul_eq_classAct",
+          "Theorems.Thm_groupCohomology_nonempty_linearEquiv_of_iso_res_mulEquiv",
+          "Theorems.Thm_M4aHerbrand_exists_addOrderOf_carry_eq_card_and_span_eq_top_ideleClassGroup_of_isCyclic",
+          "Theorems.Thm_groupCohomology_map_carry_H2pi_eq_smul_carry",
+          "Theorems.Thm_groupCohomology_carryFun_mem_cocycles2",
+          "Theorems.Thm_NumberField_IdeleClassGroup_exists_sum_rho_pow_eq_of_forall_rho_eq",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_natCard_H2_eq_card_and_span_eq_top_ideleClassGroup_of_isPGroup.lean",
+        "bytes": 21318,
+        "sha256": "df789b859adb964900033625d55a64334786bc03d77a1f71f8af4cbfa33be9bd",
+        "gitBlob": "231a9c3a6c170a37ec641d7bdec1a34fc237869d",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Definitions.Def_GroupCohomology_CyclicCarry",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Theorems.Thm_NumberField_IdeleClassGroup_isZero_H1_of_isPGroup",
+          "Theorems.Thm_NumberField_IdeleClassGroup_finite_H2_and_natCard_H2_le_card_of_isPGroup",
+          "Theorems.Thm_NumberField_IdeleClassGroup_nonempty_quotientToInvariants_iso_of_isScalarTower",
+          "Theorems.Thm_groupCohomology_exists_natCard_H2_eq_and_span_eq_top_of_carry_of_exists_norm_eq",
+          "Theorems.Thm_NumberField_exists_isGalois_compositum",
+          "Theorems.Thm_NumberField_exists_intermediateField_cyclotomicField_isCyclic_finrank_eq_pow",
+          "Theorems.Thm_NumberField_compositum_isPGroup_and_normal_and_inf_eq_bot_and_exists_generators",
+          "Theorems.Thm_M4aHerbrand_IdeleGaloisDescent_exists_mulDistribMulAction_smul_eq_classAct",
+          "Theorems.Thm_groupCohomology_nonempty_linearEquiv_of_iso_res_mulEquiv",
+          "Theorems.Thm_M4aHerbrand_exists_addOrderOf_carry_eq_card_and_span_eq_top_ideleClassGroup_of_isCyclic",
+          "Theorems.Thm_groupCohomology_map_carry_H2pi_eq_smul_carry",
+          "Theorems.Thm_groupCohomology_carryFun_mem_cocycles2",
+          "Theorems.Thm_NumberField_IdeleClassGroup_exists_sum_rho_pow_eq_of_forall_rho_eq",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_M4aHerbrand_exists_surjective_and_invariant_map_eq_finsum_of_isCyclic.lean",
+        "bytes": 32602,
+        "sha256": "38818e0e01af8eb6b7d61b4be1977331aa7cf16857db1f9ee66bc28bf3b4f68c",
+        "gitBlob": "a37b3d3b271f2b001fd7df0a6b32b8a14603183a",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          25,
+          26
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Definitions.Def_NumberField_SIdeleModule",
+          "Definitions.Def_NumberField_PlaceAbove",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Definitions.Def_GroupCohomology_CyclicCarry",
+          "Theorems.Thm_M4aHerbrand_exists_map_eq_groupCohomology_ideleClassGroup_of_isCyclic",
+          "Theorems.Thm_M4aHerbrand_exists_map_eq_of_map_eq_zero_groupCohomology_ideles_of_isCyclic",
+          "Theorems.Thm_NumberField_PlaceDecomp_iSup_decomp_eq_top_of_isCyclic",
+          "Theorems.Thm_M4aHerbrand_exists_localSum_forall_eq_finsum_groupCohomology_ideles",
+          "Theorems.Thm_M4aHerbrand_card_nsmul_eq_zero_and_map_eq_zero_and_exists_eq_one_div_of_forall_localSum_eq_finsum",
+          "Theorems.Thm_M4aHerbrand_exists_addOrderOf_carry_eq_card_and_span_eq_top_ideleClassGroup_of_isCyclic",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_NumberField_exists_idelicArtinMap_ker_eq_and_surjective_and_eq_finprod_artinFrob_of_isAdmissibleModulusOfDegree_finrank.lean",
+        "bytes": 6423,
+        "sha256": "da37744acb1821c2b403fdc9ad9f7a73dc12b7c202ee5c1d5609fab77af4018f",
+        "gitBlob": "5a67f722375003726f4c7403572d969db1069e96",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_LanglandsTunnell_ArtinCoreCTM",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Definitions.Def_NormIndex_AdmissibleExpOfDegree",
+          "Theorems.Thm_LanglandsTunnell_Artin_artinSymbol_surjective_and_ker_eq_normRaySubgroup_of_pow_eq_one_of_isAdmissibleModulusOfDegree",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_exists_mulEquiv_quotient_normRaySubgroup_apply_eq_contents_of_anchors",
+          "Theorems.Thm_HeckeCharacter_isAdjuster_idelicNorm_of_isAdjuster",
+          "Theorems.Thm_HeckeCharacter_fadContentHom_projFin_idelicNorm_eq_fracRelNormUnit",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_unitIdeles_le_range_idelicNorm_of_isAdmissibleModulusOfDegree",
+          "Theorems.Thm_HeckeCharacter_fadContentHom_projFin_mem_coprimeToModulus_of_isAdjuster_one",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_artinSymbol_fadContentHom",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_NumberField_exists_idelicArtinMap_ker_eq_and_surjective_and_eq_finprod_artinFrob_of_unitIdeles_le.lean",
+        "bytes": 4314,
+        "sha256": "a37e177ad7a1cd25a92f68edb4a642db246d6f5707cce107700a617d3513786b",
+        "gitBlob": "96a6c7f234e8bd44cb3cba60157ab9f13a352c84",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_LanglandsTunnell_ArtinCoreCTM",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Definitions.Def_NormIndex_AdmissibleExpOfDegree",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_exists_dvd_and_isAdmissibleModulusOfDegree_of_ramified_dvd",
+          "Theorems.Thm_NumberField_exists_idelicArtinMap_ker_eq_and_surjective_and_eq_finprod_artinFrob_of_isAdmissibleModulusOfDegree_finrank",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_eq_finprod_artinFrob_pow_placeOrd_of_isAdjuster_one_of_dvd",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_NumberField_exists_isCyclic_finrank_eq.lean",
+        "bytes": 8566,
+        "sha256": "dc8b9e4de3b3c7be41a36df2343c8ced0ee6f52fe1ef7f653506ef154994901f",
+        "gitBlob": "2ac50d98a425e5ced50b5f1e9ec66c305012ad00",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Theorems.Thm_NumberField_exists_isCyclic_algHom_cyclotomicField_dvd_natCard_decomp",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_NumberField_IdeleClassGroup_exists_sum_rho_pow_eq_of_forall_rho_eq.lean",
+        "bytes": 14021,
+        "sha256": "6ee1236f29c12408c4e899c7c109e33f60fa29e67ff8815cd0e20ad2c07257d4",
+        "gitBlob": "2fac0c99fec19c7fe47df2dfe5f607d0d6d2de00",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          14
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_IdeleClassVocab",
+          "Definitions.Def_LanglandsTunnell_ArtinCoreCTM",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Theorems.Thm_NumberField_pow_map_genuineBaseChange_mem_principalIdeles_sup_range_idelicNorm",
+          "Theorems.Thm_M4aHerbrand_GenuineDescent_injective_beta_and_fixed_iff_and_h90_and_prod_unitsAct_eq_idelicNorm",
+          "Theorems.Thm_M4aHerbrand_Bridge_genuineBeta_comp_of_tower",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_NumberField_LevelArith_finsum_apply_eq_zero_of_isBrauerLocalInv.lean",
+        "bytes": 29839,
+        "sha256": "736cb854031e01ba611bc94a2a6eb56876977f8f8de397d7f0913a15d3c8dd31",
+        "gitBlob": "2edbe4fc52bbff2fd76740fd62b2b25c85714b12",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          46,
+          47,
+          108
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Definitions.Def_DualSelmer_ExtConditions",
+          "Definitions.Def_ExtCitation_KummerBridge",
+          "Definitions.Def_GroupCohomology_ContinuousUnramifiedLevel",
+          "Definitions.Def_GroupCohomology_ContinuousUnramifiedLevelMap",
+          "Definitions.Def_NumberField_LevelArithmeticModP",
+          "Definitions.Def_NumberField_SelmerRepModP",
+          "Definitions.Def_NumberField_SUnitsMax",
+          "Definitions.Def_NumberField_IdeleLocalInvariant",
+          "Definitions.Def_NumberField_BrauerLocalInvariantChar",
+          "Definitions.Def_NumberField_SUnitsModule",
+          "Definitions.Def_NumberField_PlaceAbove",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "Theorems.Thm_NumberField_LevelArith_exists_layer_presentation_and_pow_smul_eq_zero",
+          "Theorems.Thm_NumberField_LevelArith_map_prG_map_principalIdele_eq_zero_of_forall_comap_ne",
+          "Theorems.Thm_groupCohomology_exists_continuousH2SrInflation_eq_of_nsmul_eq_zero",
+          "Theorems.Thm_IntermediateField_exists_normal_isUnramifiedOutside_of_le",
+          "Theorems.Thm_groupCohomology_continuousH2SrInflation_H2pi_eq_of_le",
+          "Theorems.Thm_NumberField_LevelArith_exists_monoidHom_levelGal_exists_hom_res_quotientToInvariants_sUnitsRep_bijective",
+          "Theorems.Thm_M4aHerbrand_nonempty_ideleGaloisDescent",
+          "Theorems.Thm_NumberField_IdeleLocalInv_exists_hasLocalInv",
+          "Theorems.Thm_NumberField_IdeleLocalInv_eq_of_hasLocalInv",
+          "Theorems.Thm_M4aHerbrand_map_pi_eq_zero_iff_finsum_eq_zero_of_pow_smul_eq_zero",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_forall_isLocalFundamentalClass_above",
+          "Theorems.Thm_M4aHerbrand_exists_hom_res_decomp_ideles_adicCompletion_apply",
+          "Theorems.Thm_NumberField_PlaceDecomp_exists_eq_zsmul_map_of_isLocalFundamentalClass",
+          "Theorems.Thm_NumberField_PlaceDecomp_zsmul_map_eq_zero_iff_natCard_decomp_dvd_of_isLocalFundamentalClass",
+          "Theorems.Thm_M4aHerbrand_IdeleGaloisDescent_exists_mulDistribMulAction_smul_eq_classAct",
+          "Theorems.Thm_NumberField_LevelArith_ramificationIdx_eq_one_of_isUnramifiedOutside_of_under_not_mem_placesOverPrimesFinset",
+          "Theorems.Thm_ExtCitation_LocalLevel_isSolvable_of_faithfulSMul_of_padic",
+          "Theorems.Thm_NumberField_PlaceDecomp_mem_adicCompletionIntegers_iff_norm_le_one_and_natCast_mem_asIdeal_of_ringEquiv",
+          "Theorems.Thm_NumberField_InfPlaceDecomp_eq_one_of_mem_decomp_of_sq_eq_neg_one",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_NumberField_pow_map_genuineBaseChange_mem_principalIdeles_sup_range_idelicNorm.lean",
+        "bytes": 6887,
+        "sha256": "61ec95245ec16d2624cb9a81af1d58f66cdde15c5c27c689ae0f4871a00d4710",
+        "gitBlob": "ea931200323d3113a224d7fc8d41b4bcfa8fca5a",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_LanglandsTunnell_ArtinCoreCTM",
+          "Definitions.Def_M4aHerbrand_GenuineDescent",
+          "Theorems.Thm_NumberField_exists_idelicArtinMap_ker_eq_and_surjective_and_eq_finprod_artinFrob_of_unitIdeles_le",
+          "Theorems.Thm_HeckeCharacter_exists_isAdjuster",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_exists_ne_bot_and_unitIdeles_le_range_idelicNorm",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_exists_ne_bot_forall_inertia_ne_bot_dvd",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_unitIdeles_le_unitIdeles_of_dvd",
+          "Theorems.Thm_HeckeCharacter_isAdjuster_unitsMap_genuineBaseChange_one_of_isAdjuster_one",
+          "Theorems.Thm_LanglandsTunnell_P2_Artin_resHom_finprod_artinFrob_pow_placeOrd_map_eq_finprod_pow_finrank",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "P2M/Sol/S_ResidualGaloisRep_finrank_strictSelmer_adZero_le_card_taylorWilesPrimes_add_finrank_dualSelmer.lean",
+        "bytes": 37429,
+        "sha256": "2d0c0362f8be72a461486eb3c4d31f8667d91608e2d5146b9ba6140fa4ca0263",
+        "gitBlob": "8f625e407dbee723cedbedfb6b44bd45b1a874e7",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_GaloisRep_AdZero",
+          "Definitions.Def_GaloisRep_LocalConditions",
+          "Definitions.Def_GroupCohomology_ContinuousUnramified",
+          "Theorems.Thm_groupCohomology_greenbergWiles_le_strict_relaxed_continuousH1S",
+          "Theorems.Thm_ResidualGaloisRep_exists_eq_smul_one_of_forall_mul_eq_smul_mul",
+          "Theorems.Thm_ResidualGaloisRep_det_complexConjugation_eq_neg_one_of_detIsCyclotomic",
+          "Theorems.Thm_ResidualGaloisRep_finrank_invariants_adZero_res_zpowers_eq_one_of_det_eq_neg_one",
+          "Theorems.Thm_groupCohomology_finrank_continuousClasses_le_invariants_add_dualTwist",
+          "Theorems.Thm_ExtCitation_exists_isFrobeniusAt_apply_primeLocalToGlobal",
+          "Theorems.Thm_ExtCitation_coe_cycloChar_primeLocalToGlobal_eq_natCast_of_isFrobeniusAt",
+          "Theorems.Thm_ResidualGaloisRep_finrank_ker_adZeroRep_sub_one_eq_one_of_charpoly_eq",
+          "Theorems.Thm_ExtCitation_liesOverPrime_primeLocalPlace",
+          "P2M.Util"
+        ]
+      },
+      {
+        "path": "README.md",
+        "bytes": 8612,
+        "sha256": "98b5a23ccd09ed697b7462cc6854280a6baddfbeebf4f90b2873ab585e87c3d0",
+        "gitBlob": "b2a839c8674977b3a8fa18fa1004da12af5277ec",
+        "gitBlobVerified": true,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [],
+        "imports": []
+      },
+      {
+        "path": "Theorems/Thm_M4aHerbrand_exists_fundamentalClass_ideleClassGroup_smul_res_eq_smul_localFundamentalClass_of_ne_two.lean",
+        "bytes": 17778,
+        "sha256": "c54049622f05cafe13b400052c6c7a27369a9852b7f6a60322179e946462b90e",
+        "gitBlob": null,
+        "gitBlobVerified": false,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          15
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "P2M.Util",
+          "P2M.Sol.S_M4aHerbrand_exists_fundamentalClass_ideleClassGroup_smul_res_eq_smul_localFundamentalClass_of_ne_two"
+        ]
+      },
+      {
+        "path": "Theorems/Thm_M4aHerbrand_exists_invariant_forall_inv_map_localFundamentalClass_eq_one_div_natCard_decomp_of_isPGroup.lean",
+        "bytes": 21975,
+        "sha256": "c561354d69e5950d8a95cb70ec8e5939c3615f871995f1dbcc6aaedee62c9946",
+        "gitBlob": null,
+        "gitBlobVerified": false,
+        "archiveNormalization": "none",
+        "prohibitedTokenLines": [],
+        "resourceOptionLines": [
+          18,
+          19
+        ],
+        "imports": [
+          "Mathlib",
+          "Definitions.Def_M4aHerbrand_SIdeleClassGroup",
+          "Definitions.Def_NumberField_PlaceDecompositionAction",
+          "Definitions.Def_NumberField_ArchimedeanIdeleModule",
+          "Definitions.Def_NumberField_SIdeleModule",
+          "Definitions.Def_NumberField_PlaceAbove",
+          "Definitions.Def_ExtCitation_LocalLevel_FundamentalClass",
+          "P2M.Util",
+          "P2M.Sol.S_M4aHerbrand_exists_invariant_forall_inv_map_localFundamentalClass_eq_one_div_natCard_decomp_of_isPGroup"
+        ]
+      }
+    ],
+    "searches": [
+      {
+        "query": "symmetricPower",
+        "paths": [
+          "html/def/AlgebraicCurve_SymmetricPower.html",
+          "Definitions/Def_SymmetricPowerPowerSeriesFTSym.lean",
+          "Definitions/Def_SymmetricPowerBlockwiseFTSym.lean",
+          "html/def/SymmetricPowerPowerSeriesFTSym.html",
+          "html/def/SymmetricPowerBlockwiseFTSym.html",
+          "Definitions/Def_AlgebraicCurve_SymmetricPower.lean",
+          "html/def/index.html",
+          "P2M/Sol/S_MvFormalGroup_BigWittLaw_exists_hom_subst_curveFam_eq.lean",
+          "Definitions/Def_AlgebraicGeometry_RelEffCartierDivSum.lean",
+          "html/def/AlgebraicGeometry_RelEffCartierDivSum.html",
+          "Theorems/Thm_AlgebraicGeometry_RelEffCartierDiv_exists_isUniversal.lean",
+          "Theorems/Thm_AlgebraicGeometry_RelEffCartierDiv_IsUniversal_isProper.lean",
+          "Theorems/Thm_AlgebraicGeometry_RelEffCartierDiv_isRepresentable_supportedIn.lean",
+          "Theorems/Thm_AlgebraicGeometry_RelEffCartierDiv_exists_isUniversal_of_isAffine.lean",
+          "Theorems/Thm_AlgebraicGeometry_RelEffCartierDiv_IsUniversal_geometricallyConnected.lean",
+          "P2M/Sol/S_FreyPackage_atPNewLowering.lean",
+          "P2M/Sol/S_AlgebraicGeometry_RelEffCartierDiv_exists_isUniversal.lean",
+          "P2M/Sol/S_FreyPackage_frey_isModular.lean",
+          "Theorems/Thm_FreyPackage_atPNewLowering.lean",
+          "Theorems/Thm_FreyPackage_frey_isModular.lean"
+        ],
+        "status": "fulfilled"
+      },
+      {
+        "query": "potential automorphy",
+        "paths": [],
+        "status": "fulfilled"
+      },
+      {
+        "query": "SatoTate",
+        "paths": [],
+        "status": "fulfilled"
+      },
+      {
+        "query": "greenbergWiles_eq_unramifiedMenu_extArithLoc",
+        "paths": [
+          "Theorems/Thm_groupCohomology_greenbergWiles_eq_unramifiedMenu_extArithLoc.lean",
+          "P2M/Sol/S_groupCohomology_greenbergWiles_eq_unramifiedMenu_extArithLoc.lean",
+          "P2M/Sol/S_groupCohomology_greenbergWiles_le_strict_relaxed_continuousH1S.lean"
+        ],
+        "status": "fulfilled"
+      }
+    ],
+    "publisherClaims": "README reports a full FLT formalization, standard logical axioms and independent checking. These are publisher claims, not verified by this targeted inspection.",
+    "exactCandidates": [
+      {
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_exists_mem_continuousH1S_locRes_eq_of_forall_sum_theta_eq_zero_arch_of_ne_two.lean",
+        "finding": "Actual odd-prime rational arithmetic localization-image/orthogonality theorem. Inputs are finite-dimensional smooth Galois module, outside-S unramifiedness, coefficient prime in S, genuine local cup/invariant compatibility and orthogonality. Its proof constructs a global continuous S-unramified H1 preimage; the reverse inclusion is not a parameter.",
+        "boundary": "6,611-line finite-stage relation-module assembly, with original idele/S-unit sequences, normalized finite class invariants, local bridges, finite-stage extension/separation and principal ideal theorem. Raised resource options upstream are not adopted. Imported proof closure and cross-representation/local-map compatibility remain to be checked; no native endpoint claim."
+      },
+      {
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_M4aHerbrand_exists_invariant_groupCohomology_ideleClassGroup_forall_comp_eq_index_smul_of_ne_two.lean",
+        "finding": "Normalized genuine finite-Galois idele-class H2 injections with subgroup restriction/index compatibility and odd-primary local fundamental-class normalization.",
+        "boundary": "Explicit actual idele descent/actions and local coordinate embeddings are inputs. This is not a ready-made continuous restricted-support P-class formation."
+      },
+      {
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_greenbergWilesLeAdm_extArithLoc_of_isTheta1_eval_of_ne_two.lean",
+        "finding": "Arithmetic numerical Selmer inequality with actual local duality inputs. Inspection shows its proof depends on the preceding global localization-image theorem; it does not bypass that obstacle."
+      },
+      {
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_GroupCohomology_PoitouTate.lean",
+        "finding": "IsPoitouTateOrthogonality alone is a predicate storing the equalities. Later search of localization-image theorem names found the separate proved candidate above; the predicate search was not sufficient."
+      }
+    ],
+    "locallyAdapted": {
+      "status": "Production aggregate, exact consumers, 43 axiom checks, ten explicit linter scopes and sequential foundation verification PASS; paper assembled verification pending.",
+      "modules": [
+        "OriginalH2GeneratorInflationTransfer",
+        "OriginalH2GeneratorRestriction",
+        "OriginalClassH2GeneratorTransfer",
+        "OriginalShapiroRestriction",
+        "OriginalCohomologyRestrictionTrace",
+        "OriginalClassH2SubgroupGenerators",
+        "OriginalFiniteCyclicInvariant",
+        "OriginalClassH2InvariantFromGenerator",
+        "OriginalAuxiliaryCyclicExtension"
+      ],
+      "receipt": {
+        "log": "E:\\Lean\\.tmp\\dubon83\\class-generator-focused-audit.log",
+        "sha256": "CEC802BE1D471C9929AEEACE5F2AD98EB1543A8F6A2CE88DB1E66C90DA9A056C",
+        "exit": 0,
+        "diagnostics": 0,
+        "axiomChecks": 40,
+        "exactConsumers": 3,
+        "explicitLinterScopes": 9,
+        "lintersPerScope": 16
+      },
+      "auxiliaryReceipt": {
+        "log": "E:\\Lean\\.tmp\\dubon83\\auxiliary-cyclic-focused.log",
+        "sha256": "F9DACB9E96461C44B8D4EFAD15BCAE37DF7B539520E91FA6B73E7BF2F924143C",
+        "exit": 0,
+        "diagnostics": 0,
+        "axiomChecks": 3,
+        "exactConsumers": 1,
+        "explicitLinterScopes": 2,
+        "lintersPerScope": 16
+      },
+      "details": "See appliedFiniteClassGeneratorReuse; the former three-module scratch-only checkpoint is superseded."
+    },
+    "routeDecision": "First inspect the finite-stage relation-module assembly against existing genuine local/S-unit/class code. It may avoid constructing a general continuous Ext/class-formation theory. Its normalized finite class invariants and arithmetic separation/capitulation are real dependencies, so continue only the exact required finite invariant/generator chain while auditing this potential shorter route.",
+    "acceptance": "16/20 accepted; DUB-17–20 open. No Sato-Tate or higher symmetric-power automorphy endpoint located by these bounded queries; this is not an absence proof."
+  },
+  "appliedFiniteClassGeneratorReuse": {
+    "status": "Production aggregate, exact consumers, 43 axiom checks, ten explicit linter scopes and sequential foundation verification PASS; paper assembled verification pending.",
+    "productionModules": [
+      "OriginalH2GeneratorInflationTransfer",
+      "OriginalH2GeneratorRestriction",
+      "OriginalClassH2GeneratorTransfer",
+      "OriginalShapiroRestriction",
+      "OriginalCohomologyRestrictionTrace",
+      "OriginalClassH2SubgroupGenerators",
+      "OriginalFiniteCyclicInvariant",
+      "OriginalClassH2InvariantFromGenerator",
+      "OriginalAuxiliaryCyclicExtension"
+    ],
+    "theoremRegistrations": 38,
+    "focusedReceipt": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\class-generator-focused-audit.log",
+      "sha256": "CEC802BE1D471C9929AEEACE5F2AD98EB1543A8F6A2CE88DB1E66C90DA9A056C",
+      "exit": 0,
+      "diagnostics": 0,
+      "axiomChecks": 40,
+      "exactConsumers": 3,
+      "explicitLinterScopes": 9,
+      "lintersPerScope": 16
+    },
+    "auxiliaryFocusedReceipt": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\auxiliary-cyclic-focused.log",
+      "sha256": "F9DACB9E96461C44B8D4EFAD15BCAE37DF7B539520E91FA6B73E7BF2F924143C",
+      "exit": 0,
+      "diagnostics": 0,
+      "axiomChecks": 3,
+      "exactConsumers": 1,
+      "explicitLinterScopes": 2,
+      "lintersPerScope": 16
+    },
+    "sourceHashes": {
+      "OriginalH2GeneratorInflationTransfer": "664c466ebd135dacbd482f382039fea30098e031d81a2dd2067ad71d29dd6eee",
+      "OriginalH2GeneratorRestriction": "35c7e5b7baef6191916770d46cb7770eba924729dd413cc70fd0fb3fe472814a",
+      "OriginalClassH2GeneratorTransfer": "7245455bfe6b9d92e73a16b15250429f9bad7e09e65331bcdd1c7f802fab133b",
+      "OriginalShapiroRestriction": "14571bf2dbb735803f52a9030d4f8f76dd7955ec08daa716b816c653ba0f1b6c",
+      "OriginalCohomologyRestrictionTrace": "e7bda945aeb34fe42dd076c6f328019aff693f13202c21a28156ecd0c1939c17",
+      "OriginalClassH2SubgroupGenerators": "32754961681caca56a74c6063f3a1e5e7a73e278905dcb8b7ce437225751978d",
+      "OriginalFiniteCyclicInvariant": "21d5fefaea8373a27d8b39edd484c4712d1278207f2d43deabe7f1a033ab1e33",
+      "OriginalClassH2InvariantFromGenerator": "7b3f091837d3c8dffd9643578352dfed2e9ae5ceb21da8868f3ac6ee59f0e1e2",
+      "OriginalAuxiliaryCyclicExtension": "b3e9ef7328a332d3ebc7aa858fb4b5f788e735bce722acf2d0ec866861eca395"
+    },
+    "exactDependency": "DUB-17 higher continuation <- arithmetic lifting/patching <- exact dual Selmer <- reverse arithmetic localization <- finite-stage relation-module assembly with normalized finite class invariants.",
+    "discharged": [
+      "Shapiro/native comparison equals literal restriction",
+      "Actual corestriction/restriction index identity",
+      "Actual subgroup H1 and H2 size premises in auxiliary generator transfer",
+      "Existence of a genuine cyclic number-field extension of any prescribed positive degree",
+      "Subgroup generation, injective rational invariants, exact torsion images and restriction-index normalization from one full-order genuine class"
+    ],
+    "remaining": [
+      "Construct the full-order original class (auxiliary cyclic class and its vanishing restriction)",
+      "Local fundamental-class normalization and finite-field tower compatibility",
+      "Finite-stage arithmetic extension/separation, principal-ideal/capitulation and exact local bridge assembly",
+      "Reverse localization, exact dual Selmer, arithmetic patching; separate actual modular association, purity, automorphy/descent and DUB-17–20"
+    ],
+    "routeDecision": "Reuse native inflation-restriction, fixed-field class cohomology, coset trace and rational cyclic invariant. Adapt only the missing bar-resolution comparison and generator transfers. Assess the source finite-stage relation-module route before expanding general continuous Ext infrastructure.",
+    "acceptance": "16/20 accepted; DUB-17–20 open.",
+    "productionFocusedReceipt": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\class-generator-production-focused-3132.log",
+      "sha256": "AEA65735C0A214365F688385BC72322438BD950AD46062150FB92F54833CCF4B",
+      "exit": 0,
+      "diagnostics": 0,
+      "axiomChecks": 43,
+      "exactConsumers": 4,
+      "explicitLinterScopes": 10,
+      "lintersPerScope": 16,
+      "aggregateJobs": 12032,
+      "foundationLog": "logs/foundation_freeze_20261015_160712.log",
+      "foundationSha256": "EA5F261D07CD57FC7C1226EDB6D9D61D3DFA5F62C3A1E301CF44E9F40D0C97DC",
+      "boundary": "Nine production generator, literal restriction/trace, conditional invariant and auxiliary field modules; later scratch representative/Mackey work excluded."
+    }
+  },
+  "additionalRouteResearch20261015": {
+    "recordedAtUTC": "2026-10-15T23:09:37Z",
+    "queries": [
+      "Lean formalization Sato Tate symmetric power automorphy GitHub October 2026",
+      "Lean number field Brauer Hasse Noether reciprocity class field theory proof github"
+    ],
+    "boundedFindings": "No matching higher symmetric-power automorphy or Sato-Tate endpoint located in these web results or the complete Definitions/P2M source-path inventory of the pinned Anthropic repository. This is not a global absence claim.",
+    "primarySources": [
+      "https://github.com/anthropics/fermats-last-theorem/tree/6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "https://tianyipeng.github.io/fermats-last-theorem/def/NumberField_IdeleLocalInvariant.html",
+      "https://leanprover-community.github.io/mathlib4_docs/Mathlib/RepresentationTheory/Homological/ContCohomology/Sha.html"
+    ],
+    "additionalExactSource": "P2M/Sol/S_NumberField_LevelArith_finsum_apply_eq_zero_of_isBrauerLocalInv.lean",
+    "dependencyFinding": "The source reciprocity theorem over finite number-field levels imports normalized idele-class invariant exactness. It therefore does not bypass that arithmetic prerequisite.",
+    "nativeRouteAssessment": "Assess extension of the proved odd-primary rational reciprocity by actual global-to-local corestriction comparison. Existing local invariants commute with actual corestriction. Neither the pinned Mathlib representation/cohomology sources nor the pinned Anthropic complete P2M path inventory supplied a matching Mackey theorem. Native continuous representative independence is now scratch-checked; orbit comparison is in development. Completion-map identification and extension of the rational coefficient/support interface remain separate obligations.",
+    "scope": "DUB-17 reverse localization <- normalized finite class invariants <- full-order class and local compatibility; no gate closed."
   }
 }

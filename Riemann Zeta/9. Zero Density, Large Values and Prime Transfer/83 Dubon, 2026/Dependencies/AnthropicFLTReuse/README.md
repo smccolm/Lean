@@ -1,0 +1,9 @@
+# Selected Anthropic FLT proof adaptations
+
+Selected proofs are adapted from [anthropics/fermats-last-theorem](https://github.com/anthropics/fermats-last-theorem/tree/6e837e75355538c7f80bab5b956861e86c4eacc2), commit `6e837e75355538c7f80bab5b956861e86c4eacc2` (24 September 2026). The original repository uses Lean 4.33.1 and Mathlib `db584cd6d46c92f209a44c0f1c829460d327499d`. Dubon's frozen pins are unchanged. No upstream package, generated binary or resource-limit override is imported.
+
+[LICENSE](LICENSE), [NOTICE](NOTICE) and [ATTRIBUTION.txt](ATTRIBUTION.txt) preserve the upstream license and attribution texts. The last file preserves the original Markdown bytes with a text extension because its links refer to the upstream tree. [reuse.json](reuse.json) identifies the selected source proofs, hashes and changed native modules. The selected five source files are not listed among the externally derived files in the upstream attribution index.
+
+The adapted algebraic generator transfers use the existing native inflation–restriction exact sequence. The bar-resolution comparison proves that the pinned Shapiro map is literal subgroup restriction followed by identity evaluation. The native coset trace then supplies the original restriction-index identity. Genuine idele-class consumers derive subgroup vanishing and size premises, subgroup generators, and normalized invariant injections with exact images from a supplied full-order class. The last premise is still an arithmetic construction obligation; the full class-formation or localization theorem is not asserted.
+
+The whole-paper reuse assessment and bounded source-inspection evidence are in [the reuse audit](../../Tools/lean-reuse-audit-20261015.json). Only the native adapted files are compiled here; the source repository's full-FLT claims are not verified by this adaptation.

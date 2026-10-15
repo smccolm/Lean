@@ -85,7 +85,7 @@ def main():
     if original_config['mode'] != 'template-only':
         required_regressions = ['ArithmeticSemanticRegression', 'GeometricSemanticRegression',
                                 'ContinuousCohomologySemanticRegression', 'LocalFieldSemanticRegression',
-                                'LocalInvariantSemanticRegression', 'LocalDualitySemanticRegression', 'ArithmeticDualitySemanticRegression', 'GlobalNormSemanticRegression', 'GlobalCohomologySemanticRegression', 'GlobalReciprocitySemanticRegression', 'SemanticRegression']
+                                'LocalInvariantSemanticRegression', 'LocalDualitySemanticRegression', 'ArithmeticDualitySemanticRegression', 'GlobalNormSemanticRegression', 'GlobalCohomologySemanticRegression', 'GlobalReciprocitySemanticRegression', 'ClassFormationSemanticRegression', 'SemanticRegression']
         missing_cases = {'missing-' + name: name for name in required_regressions + ['Audit']}
         for case in ['valid', *missing_cases, 'missing-production', 'duplicate-production']:
             config=deepcopy(original_config)
