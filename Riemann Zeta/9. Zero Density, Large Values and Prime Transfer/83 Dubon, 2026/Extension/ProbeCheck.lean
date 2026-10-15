@@ -1,4 +1,0 @@
-import Dubon2026.RationalPrimeCyclotomicResidualReduction
-open Dubon2026
-#check @rationalArithmeticFiniteLocalStage
-#check @rationalArithmeticFiniteLocalEmbedding

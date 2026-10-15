@@ -4,8 +4,9 @@ import Mathlib.LinearAlgebra.Finsupp.LinearCombination
 /-! # The actual finite-prime invariant sum of original arithmetic H2
 
 Proved finite support, rather than an assumed summability condition, defines
-the coherent family and its sum. The exact finite-sum evaluation below is the
-map whose zero value remains the global reciprocity obligation for DUB-17.
+the coherent family and its sum. `ArithmeticPrincipalCarryInvariant` proves
+that this map is zero for odd coefficient primes. `ArithmeticExceptionalLocalization`
+uses it to prove orthogonality of the actual global images for DUB-17.
 -/
 
 namespace Dubon2026

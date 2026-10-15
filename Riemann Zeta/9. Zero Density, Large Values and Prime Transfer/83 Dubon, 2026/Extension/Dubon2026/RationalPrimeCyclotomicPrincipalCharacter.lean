@@ -1,6 +1,6 @@
 import Dubon2026.RationalPrimeCyclotomicResidualReduction
 
-/-! # Probe: the actual cyclotomic principal character product -/
+/-! # The actual cyclotomic principal character product -/
 
 namespace Dubon2026
 noncomputable section

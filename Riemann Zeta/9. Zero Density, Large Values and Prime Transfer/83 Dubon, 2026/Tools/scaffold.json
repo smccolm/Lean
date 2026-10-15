@@ -1,7 +1,7 @@
 {
   "mode": "active-development",
   "goalActivated": true,
-  "asOf": "2026-10-14",
+  "asOf": "2026-10-15",
   "files": [
     {
       "path": ".gitattributes",
@@ -12830,6 +12830,118 @@
     {
       "path": "Extension/Dubon2026/RationalPrimeCyclotomicResidualReduction.lean",
       "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticGlobalCupOrthogonality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrincipalCarryInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCyclotomicPrincipalCharacterSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCyclotomicPrincipalProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCyclotomicPrincipalStageBridge.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicPrincipalCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/lean-reuse-audit-20261015.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTraceDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRealTraceH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalizedUnitKummerAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/UnramifiedNormalClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalizedUnitRootsInUnramifiedUnion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitDivisibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitKummerSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitCartierHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceSUnitCartierDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeDivisibleIntegerExt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitIntegerExt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceSUnitCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalizedIntegerSUnitComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitValuationStages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalSUnitSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSPlaceIdeleSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitGaloisStages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSPlaceClassComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitIdeleBaseChange.lean",
+      "role": "Extension"
     }
   ],
   "statusDocuments": [
@@ -15869,7 +15981,34 @@
     "ArithmeticCyclotomicRealSignAction",
     "ArithmeticCyclotomicSignedAwayProduct",
     "RationalPrimeCyclotomicReciprocityCharacterCancellation",
-    "RationalPrimeCyclotomicResidualReduction"
+    "RationalPrimeCyclotomicResidualReduction",
+    "RationalPrimeCyclotomicPrincipalCharacter",
+    "RationalCyclotomicPrincipalStageBridge",
+    "RationalCyclotomicPrincipalProduct",
+    "RationalCyclotomicPrincipalCharacterSum",
+    "ArithmeticPrincipalCarryInvariant",
+    "ArithmeticGlobalCupOrthogonality",
+    "ArithmeticExceptionalTraceDuality",
+    "ArithmeticExceptionalLocalization",
+    "ArithmeticRealTraceH1",
+    "LocalizedUnitKummerAlgebra",
+    "UnramifiedNormalClosure",
+    "LocalizedUnitRootsInUnramifiedUnion",
+    "ArithmeticSUnitDivisibility",
+    "ArithmeticSUnitRepresentation",
+    "ArithmeticSUnitKummerSequence",
+    "ArithmeticSUnitCartierHom",
+    "ArithmeticTraceSUnitCartierDuality",
+    "PrimeDivisibleIntegerExt",
+    "ArithmeticSUnitIntegerExt",
+    "ArithmeticTraceSUnitCohomology",
+    "LocalizedIntegerSUnitComparison",
+    "ArithmeticSUnitValuationStages",
+    "ArithmeticExceptionalSUnitSupport",
+    "OriginalSPlaceIdeleSequence",
+    "ArithmeticSUnitGaloisStages",
+    "OriginalSPlaceClassComparison",
+    "ArithmeticSUnitIdeleBaseChange"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

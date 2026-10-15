@@ -1,43 +1,65 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-15",
   "sourceGate": "DUB-17; downstream DUB-18",
-  "mathematics": "The actual real-sign automorphism and every away-prime reciprocity value now live in one rational cyclotomic Galois group. Their product has the proved signed-away power character, p-free support gives conductor avoidance, and the actual ramified character times the explicit forward quotient unit is exactly one.",
-  "serves": "Exact unresolved DUB-17 chain: actual real-sign action, common-stage multiplication, conductor-prime avoidance, and ramified character cancellation are proved. They reduce the cyclotomic principal product to equality of two explicit ZMod units.",
-  "remaining": "Prove that arithmeticCyclotomicSignedAwayProductUnit for the normalized residual equals the forward unit ZMod.unitOfCoprime (a*d) selected by the ramified rational-unit construction; then prove the cyclotomic principal product, arithmetic invariant sum-zero, global duality, Selmer, automorphy, and the remaining DUB-17–20 conclusions.",
-  "reuse": "Reuses Mathlib's IsCyclotomicExtension.autEquivPow and cyclotomic.irreducible_rat, the existing autToPow_eq_modularCyclotomicCharacter bridge, the proved away-conductor reciprocity theorem, rationalPrimeNormalizedResidual_exists_away_signed_prime_product, and the existing finite cyclic cancellation arithmetic.",
-  "routeAdjustment": "The earlier planned real-sign and common-stage constructions are now closed directly inside the actual cyclotomic Galois group. The ramified cancellation was strengthened from equality of root actions to an exact equality of power-character units, leaving one explicit unit identification rather than another automorphism-composition layer.",
-  "next": "Compare arithmeticCyclotomicSignedAwayProductUnit with the forward quotient unit from rationalPrimeRationalUnit_exists_reciprocity_character_cancellation, first reusing or strengthening the positive rational norm-comparison witness to retain its residue modulo p^(m+1).",
+  "mathematics": "The actual rational cyclotomic principal product, its additive finite character sum, the odd-prime arithmetic finite H2 invariant sum-zero theorem, and the resulting global trace-cup orthogonality theorem are proved on the original objects.",
+  "serves": "Exact unresolved DUB-17 chain: the finite-support reciprocity and global trace-cup orthogonality obligations are closed; these now supply the global isotropy input for the actual localization pairing and numerical Selmer sequence.",
+  "remaining": "Prove the arithmetic global localization-image equality supplied classically by Poitou-Tate, instantiate the existing local perfect pairing and pinned perfect-complement/annihilator APIs, prove the actual primal/dual local conditions are orthogonal complements, derive the numerical Selmer relation, then continue to automorphy and DUB-17–20.",
+  "reuse": "Reuses Rat.HeightOneSpectrum.primesEquiv, Finset.toAdd_prod, Multiplicative.toAdd_mul, Finset.sum_subset, rationalArithmeticFiniteCarryInvariant, rationalArithmeticFiniteH2InvariantSum_unit_invariants, rationalArithmeticLocalH1ScalarCup_isPerfPair, the existing trace-cup restriction theorem, LinearMap.IsPerfectCompl, LinearMap.IsPerfPair.restrict, Subspace.finrank_add_finrank_dualAnnihilator_eq, and the dual-map annihilator identities.",
+  "routeAdjustment": "The pinned character-sum and support route was shorter than porting Nyll's newer class-field interfaces and is now complete through global trace-cup orthogonality. A current check of Michael Stoll's sorry-free explicit 2-Selmer development found reusable local-condition organization but no general Poitou-Tate theorem compatible with Dubon's trace-zero modules. At the global-duality boundary, prove the native arithmetic localization-image equality and reuse the pinned perfect-complement and annihilator API; defer unrelated general class-field infrastructure.",
+  "next": "Prove the exact arithmetic global localization-image equality for the trace-zero module, then use local perfectness, proved orthogonality, and pinned Mathlib's perfect-complement/annihilator dimension lemmas to identify orthogonal complements and derive the primal/dual Selmer dimension formula required by the source automorphy chain.",
   "draftRepairs": "The primitive-root map proof was corrected to use forward injective transport. Preservation was factored into the original cyclotomic stage and then the compositum, keeping adjoin induction bounded. The restricted automorphism uses finite-dimensional injective-implies-surjective rather than constructing an unrelated inverse. Explicit algebraicity was installed for deterministic spectral-norm synthesis. Failed scratch logs remain non-acceptance evidence.",
-  "status": "Focused production and exact-consumer builds PASS. Exhaustive audit PASS with 21,876 project theorems, 11,083 registered consumers, 14,163 declarations plus 10,970 generated declarations, and all sixteen linters. Authoritative assembled development verification PASS with zero Lean diagnostics; source acceptance remains 16/20.",
+  "status": "Focused production, aggregate and exact-consumer builds PASS. Inventory PASS with 2,998 production modules and 3,213 retained files. The post-orthogonality exhaustive audit PASS has 21,989 project theorems, 11,119 registered consumers, 14,210 declarations plus 11,047 generated declarations, and all sixteen linters. The authoritative assembled verifier for this increment passes the full package and every independent retained regression and audit with zero Lean diagnostics. Source acceptance remains 16/20.",
   "reuseRefresh": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "record": "lean-reuse-audit-20261014.json",
     "reusedPinnedDeclaration": "AlgHom.fieldRange_of_normal",
-    "discharged": "Every away-prime reciprocity factor and the actual real-sign action are multiplied on one cyclotomic stage; p-free support proves conductor avoidance; the actual ramified power character multiplied by the explicit forward quotient unit equals one.",
+    "discharged": "The additive principal character sum, odd-prime arithmetic invariant sum-zero, and global trace-cup orthogonality are proved on the actual coherent finite support.",
     "productionModules": [
-      "RationalPrimeCyclotomicReciprocityRationalUnitCancellation",
-      "RationalSignedPrimeProduct",
-      "RationalPrimeNormalizedResidual",
-      "ArithmeticCyclotomicRealSignAction",
-      "ArithmeticCyclotomicSignedAwayProduct",
-      "RationalPrimeCyclotomicReciprocityCharacterCancellation"
+      "RationalPrimeCyclotomicPrincipalCharacter",
+      "RationalCyclotomicPrincipalStageBridge",
+      "RationalCyclotomicPrincipalProduct",
+      "RationalCyclotomicPrincipalCharacterSum",
+      "ArithmeticPrincipalCarryInvariant",
+      "ArithmeticGlobalCupOrthogonality"
     ],
-    "assembledLog": "logs/dubon-build-20261014-192520-724.log",
-    "assembledLogSha256": "92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6",
+    "assembledLog": "logs/dubon-build-20261015-025528-985.log",
+    "assembledLogSha256": "4B616996E2CFFCB8ACF5C46B98F824300DBFAA2EC3E7813CBAC5A8B6AC48A88F",
     "reusedPinnedDeclarations": [
-      "AlgHom.fieldRange_of_normal",
-      "normedField_power_small_closedBall",
-      "Algebra.norm_algebraMap"
+      "Rat.HeightOneSpectrum.primesEquiv",
+      "Finset.toAdd_prod",
+      "Multiplicative.toAdd_mul",
+      "Multiplicative.toAdd_one",
+      "Finset.sum_subset",
+      "LinearMap.IsPerfectCompl",
+      "LinearMap.IsPerfPair.restrict",
+      "Subspace.finrank_add_finrank_dualAnnihilator_eq",
+      "LinearMap.range_dualMap_eq_dualAnnihilator_ker",
+      "LinearMap.ker_dualMap_eq_dualAnnihilator_range"
     ],
     "exactConsumers": [
-      "actual_rational_unit_exists_cyclotomic_reciprocity_root_cancellation_source",
-      "actual_cyclotomic_unramified_rationalSignedPrimeProduct_exists_support_source",
-      "actual_cyclotomic_unramified_rationalPrimeNormalizedResidual_away_product_source",
-      "actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source",
-      "actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source",
-      "actual_cyclotomic_ramified_rationalUnit_character_cancellation_source"
+      "actual_cyclotomic_normalizedResidual_arithmetic_principal_product_source",
+      "actual_cyclotomic_normalizedResidual_arithmetic_principal_character_sum_source",
+      "actual_arithmetic_principal_finiteH2InvariantSum_eq_zero_source",
+      "actual_arithmetic_traceCup_primeInvariant_sum_eq_zero_source"
     ],
-    "assembledLogBytes": 5127841
+    "assembledLogBytes": 5155927,
+    "projectTheorems": 21989,
+    "registeredConsumers": 11119,
+    "declarations": 14210,
+    "generatedDeclarations": 11047,
+    "lintersPassed": 16,
+    "productionModuleCount": 2998,
+    "exactConsumerCount": 2369,
+    "retainedFiles": 3213,
+    "nextObligation": "global localization duality and numerical Selmer relation",
+    "currentIncrementAssembledPending": false,
+    "externalReuseCheck": {
+      "repository": "https://github.com/MichaelStollBayreuth/EllipticCurves",
+      "commit": "f8fc1fe88f4f3227e7057232654a5474a61ceafb",
+      "lean": "leanprover/lean4:v4.35.0-rc3",
+      "mathlib": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+      "result": "The explicit 2-Selmer development supplies useful local-condition and finite-place/cardinality patterns, but no general Poitou-Tate localization-image equality or trace-zero pairing compatible with the Dubon modules."
+    }
   },
   "modules": [
     {
@@ -291,6 +313,33 @@
       ],
       "productionSha256": "3fce1043e99556f6b628ae74ac7f60d9e9abb5c806c03a6a0df8b43fb672396b",
       "status": "Focused production, exact-consumer, exhaustive-audit and authoritative assembled verification pass."
+    },
+    {
+      "module": "RationalCyclotomicPrincipalCharacterSum",
+      "publicTheorems": [
+        "rationalPrimeNormalizedResidual_exists_arithmetic_principal_character_sum",
+        "arithmeticCyclotomicAwayAut_eq_finiteLocalReciprocity"
+      ],
+      "productionSha256": "06791B1ACA8411F683E03B3183AD0E1750933707E69A77FE11738D33F71D9196",
+      "status": "Focused production, aggregate, exact-consumer, exhaustive-audit and current-increment authoritative assembled verification pass."
+    },
+    {
+      "module": "ArithmeticPrincipalCarryInvariant",
+      "publicTheorems": [
+        "rationalArithmeticKummerUnitPrimeInvariant_eq_finiteCarryInvariant",
+        "rationalArithmeticFiniteH2InvariantSum_eq_zero"
+      ],
+      "productionSha256": "94581926B58DCA46D7023494E314B46C70C579D889DE7AF4CA70230A0C6C55F3",
+      "status": "Focused production, aggregate, exact-consumer, exhaustive-audit and current-increment authoritative assembled verification pass."
+    },
+    {
+      "module": "ArithmeticGlobalCupOrthogonality",
+      "publicTheorems": [
+        "rationalArithmeticTraceZeroH1Cup_finiteInvariantSum_eq_zero",
+        "rationalArithmeticTraceZeroH1Cup_primeInvariant_sum_eq_zero"
+      ],
+      "productionSha256": "9B62122161D20336D4E9AFF79DFB2BD15C032CCB51D1BC9E9F6290FC59F7C90F",
+      "status": "Focused production, aggregate, exact-consumer, exhaustive-audit and current-increment authoritative assembled verification pass."
     }
   ],
   "consumers": [
@@ -313,7 +362,10 @@
     "actual_natural_quotient_exists_cyclotomic_reciprocity_root_source",
     "actual_cyclotomic_unramified_rationalCyclotomicRealSignAut_apply_root_source",
     "actual_cyclotomic_unramified_normalizedResidual_signedAwayProduct_action_source",
-    "actual_cyclotomic_ramified_rationalUnit_character_cancellation_source"
+    "actual_cyclotomic_ramified_rationalUnit_character_cancellation_source",
+    "actual_cyclotomic_normalizedResidual_arithmetic_principal_character_sum_source",
+    "actual_arithmetic_principal_finiteH2InvariantSum_eq_zero_source",
+    "actual_arithmetic_traceCup_primeInvariant_sum_eq_zero_source"
   ],
   "preflights": [
     {
@@ -380,9 +432,9 @@
     "sha256": "74bf8f533247bc22caf77316ab04f8c62888620fde5b783691b5480cff2ed3c1"
   },
   "scope": [
-    2991,
-    2364,
-    11083
+    2998,
+    2369,
+    11119
   ],
   "exactEndpoint": [
     [
@@ -439,14 +491,14 @@
   ],
   "validation": {
     "foundation": "../../logs/foundation_freeze_20261014_004630.log",
-    "paper": "logs/dubon-build-20261014-192520-724.log",
-    "assembledLog": "logs/dubon-build-20261014-192520-724.log",
-    "exhaustive": 21876,
-    "explicit": 11083,
-    "exactConsumers": 2364,
+    "paper": "logs/dubon-build-20261015-025528-985.log",
+    "assembledLog": "logs/dubon-build-20261015-025528-985.log",
+    "exhaustive": 21989,
+    "explicit": 11119,
+    "exactConsumers": 2369,
     "linters": [
-      14163,
-      10970
+      14210,
+      11047
     ],
     "nativeExits": [
       0,
@@ -455,18 +507,9 @@
     "actualExitsConsumed": true,
     "diagnostics": false,
     "foundationManifest": "../../logs/foundation_freeze_20261014_004630.json",
-    "paperSha256": "92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6",
+    "paperSha256": "4B616996E2CFFCB8ACF5C46B98F824300DBFAA2EC3E7813CBAC5A8B6AC48A88F",
     "foundationLogSha256": "562b251c73483a245f209c2fdf6c749ead5f30c9b12002a1300e3453bac12c8c",
     "foundationManifestSha256": "d985a1d5ec32e1506328918eb776c6af091a26551c07baa6db75d3ba418147fd",
-    "pendingIncrementAudit": {
-      "exhaustive": 21876,
-      "explicit": 11083,
-      "linters": [
-        14163,
-        10970
-      ],
-      "assembledPending": false
-    },
     "naturalUnitIncrement": {
       "focusedProduction": true,
       "focusedConsumer": true,
@@ -504,6 +547,42 @@
       "assembledLog": "logs/dubon-build-20261014-192520-724.log",
       "assembledLogSha256": "92538EC290422CB08CD02074C29105CA3571B9A576D15C3BFEC1027D9B67CDA6",
       "assembledLogBytes": 5127841
+    },
+    "arithmeticInvariantAndOrthogonalityIncrement": {
+      "focusedProduction": true,
+      "focusedAggregate": true,
+      "focusedConsumers": 3,
+      "inventoryVerification": true,
+      "exhaustiveAudit": true,
+      "assembledVerification": true,
+      "assembledPending": false,
+      "projectTheorems": 21989,
+      "registeredConsumers": 11119,
+      "declarations": [
+        14210,
+        11047
+      ],
+      "productionModules": 2998,
+      "exactConsumers": 2369,
+      "retainedFiles": 3213,
+      "assembledLog": "logs/dubon-build-20261015-025528-985.log",
+      "assembledLogSha256": "4B616996E2CFFCB8ACF5C46B98F824300DBFAA2EC3E7813CBAC5A8B6AC48A88F",
+      "assembledLogBytes": 5155927
+    },
+    "currentIncrementAudit": {
+      "exhaustive": 21989,
+      "explicit": 11119,
+      "linters": [
+        14210,
+        11047
+      ],
+      "focusedBuildJobs": 11899,
+      "retainedFiles": 3213,
+      "assembledPending": false,
+      "assembledVerification": true,
+      "assembledLog": "logs/dubon-build-20261015-025528-985.log",
+      "assembledLogSha256": "4B616996E2CFFCB8ACF5C46B98F824300DBFAA2EC3E7813CBAC5A8B6AC48A88F",
+      "assembledLogBytes": 5155927
     }
   }
 }

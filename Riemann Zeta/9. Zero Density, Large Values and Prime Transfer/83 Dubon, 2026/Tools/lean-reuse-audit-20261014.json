@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-14",
-  "objective": "Find existing Lean proofs that can shorten the unresolved Dubon dependency chain, with priority on the rational-unit local reciprocity action required by DUB-17.",
+  "asOf": "2026-10-15",
+  "objective": "Recheck current public and pinned-tree Lean proofs that can shorten the remaining Dubon arithmetic invariant-sum, global-duality, and automorphy chain required by DUB-17.",
   "projectPin": {
     "lean": "leanprover/lean4:v4.30.0",
     "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
@@ -49,8 +49,24 @@
           "fileSha256": "E186DAF68313A0596E0C0BD9C14491A5D74BD1B9FAC128344598EAD67E6DC42C"
         }
       ],
-      "adoptionDecision": "The exact upstream theorem fieldPrincipalUnits_le_normSubgroup_cyclotomic_odd confirms the principal-unit inclusion needed for the rational-unit step. Do not port the complete newer Lean/Mathlib stack: the pinned project has the shorter normedField_power_small_closedBall plus Algebra.norm_algebraMap route, now used to prove the required finite-stage norm comparison. Retain the upstream local Artin naturality, principal-idele and product-formula declarations as candidates at the next global reciprocity boundary.",
-      "currentHead": "26f52ca8574bd7bf39cfa069466a70099f515382"
+      "adoptionDecision": "The current public API provides a genuine Hilbert product formula and finite abelian global reciprocity. The exact Hilbert statement existentially constructs Nyll's GlobalHilbertPairingFamily, while the global reciprocity statement constructs ray-class FiniteAbelianReciprocityData. Neither is definitionally connected to Dubon's already proved rationalArithmeticFiniteCarryInvariant or rationalArithmeticFiniteH2InvariantSum_unit_invariants. Porting the Lean 4.35.0-rc2/Mathlib 0653561 stack plus an interface comparison is longer than the pinned finite-support character-sum route, so defer adoption until the later global-duality boundary.",
+      "currentHead": "26f52ca8574bd7bf39cfa069466a70099f515382",
+      "currentInspectionDate": "2026-10-15",
+      "currentPublicApi": [
+        {
+          "declaration": "ClassFieldTheory.exists_globalHilbertPairingFamily_productFormula",
+          "file": "Nyll/ClassFieldTheory/Theorems/HilbertSymbols/HilbertProductFormula.lean",
+          "source": "https://github.com/n-yamaguchi-0729/ClassFieldTheory",
+          "exactConclusion": "For a number field F containing an n-th primitive root, there exists B : GlobalHilbertPairingFamily F n satisfying IsLocallyHilbert, HasFiniteSupport, and the infinite-place times finite finprod product formula."
+        },
+        {
+          "declaration": "ClassFieldTheory.finiteAbelianGlobalReciprocity",
+          "file": "Nyll/ClassFieldTheory/Theorems/GlobalClassFieldTheory/FiniteAbelianGlobalReciprocity.lean",
+          "source": "https://github.com/n-yamaguchi-0729/ClassFieldTheory",
+          "exactConclusion": "For a finite abelian Galois extension L/K, Nonempty (FiniteAbelianReciprocityData K L), including a modulus, unramifiedness, a surjective ray-class Artin map, and Frobenius normalization."
+        }
+      ],
+      "previouslyRecordedMathlib": "5ed2965256430c3649e86755f9576b54eca72435"
     },
     {
       "name": "Palomar finite abelian global class field theory",
@@ -63,6 +79,24 @@
         "Classical.choice"
       ],
       "adoptionDecision": "Retain as a concrete later route from a relative determinant-norm quotient to finite abelian global reciprocity. It does not replace the still-open local rational-unit assembly."
+    },
+    {
+      "name": "Michael Stoll EllipticCurves",
+      "repository": "https://github.com/MichaelStollBayreuth/EllipticCurves",
+      "inspectedCommit": "f8fc1fe88f4f3227e7057232654a5474a61ceafb",
+      "inspectionDate": "2026-10-15",
+      "lean": "leanprover/lean4:v4.35.0-rc3",
+      "mathlib": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+      "relevantFile": "EllipticCurves/SelmerGroup.lean",
+      "relevantDeclarations": [
+        "WeierstrassCurve.Affine.localCondition",
+        "WeierstrassCurve.Affine.selmerGroup₂",
+        "WeierstrassCurve.Affine.range_μ_le_selmerGroup₂",
+        "WeierstrassCurve.Affine.selmerGroup₂_eq_badPrimes₂",
+        "WeierstrassCurve.Affine.finite_selmerGroup₂",
+        "WeierstrassCurve.Affine.pow_rank_le_card_of_range_μ_le"
+      ],
+      "adoptionDecision": "Reuse the organization of local conditions, finite exceptional-place reduction, and cardinality-to-rank deductions as a design reference. The project treats explicit 2-descent for elliptic curves and does not provide a general Poitou-Tate exact sequence, an orthogonal-complement theorem for global H1 localization images, or a pairing definitionally compatible with Dubon's trace-zero representations. Its newer Lean/Mathlib pin also prevents direct drop-in reuse."
     },
     {
       "name": "Palomar finite abelian local class field theory",
@@ -99,7 +133,7 @@
   ],
   "localReuse": {
     "mathlibDeclaration": "AlgHom.fieldRange_of_normal",
-    "reason": "Normality identifies the chosen finite Galois image stages. Density of rational numbers in the rational p-adic completion, the small-ball power bijection, and the norm of scalar embeddings then turn every order-zero residual rational unit into the norm-equivalent image of a positive coprime natural quotient. This is the shortest pinned route and avoids an upgrade or a new principal-unit hierarchy.",
+    "reason": "The shortest pinned route reuses the established cyclotomic principal product, Rat.HeightOneSpectrum.primesEquiv, Finset.toAdd_prod, Finset.sum_subset, the cyclic carry theorem, and the exact local invariant comparison. These identify the coherent support with the explicit principal support, prove the odd-prime arithmetic invariant sum is zero, and immediately give global trace-cup orthogonality without porting a newer class-field-theory stack.",
     "newDeclarations": [
       "finiteGaloisEmbeddingStage_eq",
       "finiteGaloisEmbeddingStageAut",
@@ -132,46 +166,131 @@
       "algEquiv_unit_norm_transport",
       "rationalPrimeRationalUnit",
       "rationalPrimeRationalUnit_exists_reciprocity_root_action",
-      "rationalPrimeRationalUnit_exists_reciprocity_root_cancellation"
+      "rationalPrimeRationalUnit_exists_reciprocity_root_cancellation",
+      "embeddedFiniteGaloisCompositum_isCyclotomic_of_primitiveRoot",
+      "embeddedFiniteGaloisCompositum_restriction_autToPow",
+      "finiteGaloisStageAutCast_autToPow",
+      "rationalArithmeticFiniteLocalReciprocityAut",
+      "rationalPrimeOriginalCyclotomicReciprocityAut",
+      "rationalArithmeticFiniteLocalRestriction_ramified_autToPow",
+      "rationalPrimeNormalizedResidual_exists_cyclotomic_principal_character",
+      "rationalPrimeNormalizedResidual_exists_arithmetic_principal_product",
+      "rationalCyclotomicRealSignAut_mul_self",
+      "rationalCyclotomicRealSignCharacter_two_nsmul",
+      "rationalArithmeticFiniteLocalReciprocityAut_prime_eq_one",
+      "rationalArithmeticFiniteLocalReciprocityAut_normalizedResidual",
+      "rationalHeightOneSpectrum_valuation_prime_eq_one_of_ne",
+      "arithmeticCyclotomicAwayAut_normalizedResidual",
+      "arithmeticCyclotomicAwayAut_eq_one_of_valuation_eq_one",
+      "arithmeticCyclotomicAwayAut_eq_finiteLocalReciprocity",
+      "rationalPrimeNormalizedResidual_exists_arithmetic_principal_character_sum",
+      "eq_zero_of_two_nsmul_eq_zero_of_odd_nsmul_eq_zero",
+      "rationalArithmeticKummerUnitPrimeInvariant_eq_finiteCarryInvariant",
+      "rationalArithmeticFiniteH2InvariantSum_eq_zero",
+      "rationalArithmeticTraceZeroH1Cup_finiteInvariantSum_eq_zero",
+      "rationalArithmeticTraceZeroH1Cup_primeInvariant_sum_eq_zero"
     ],
     "productionFiles": [
       "Extension/Dubon2026/FiniteGaloisEmbeddingStage.lean",
       "Extension/Dubon2026/RationalPrimeOriginalCyclotomicClosureStageIndependence.lean",
       "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityQuotientAction.lean",
       "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitAction.lean",
-      "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitCancellation.lean"
+      "Extension/Dubon2026/RationalPrimeCyclotomicReciprocityRationalUnitCancellation.lean",
+      "Extension/Dubon2026/RationalPrimeCyclotomicPrincipalCharacter.lean",
+      "Extension/Dubon2026/RationalCyclotomicPrincipalStageBridge.lean",
+      "Extension/Dubon2026/RationalCyclotomicPrincipalProduct.lean",
+      "Extension/Dubon2026/RationalCyclotomicPrincipalCharacterSum.lean",
+      "Extension/Dubon2026/ArithmeticPrincipalCarryInvariant.lean",
+      "Extension/Dubon2026/ArithmeticGlobalCupOrthogonality.lean"
     ],
     "mathlibDeclarations": [
       "AlgHom.fieldRange_of_normal",
       "normedField_power_small_closedBall",
-      "Algebra.norm_algebraMap"
-    ]
+      "Algebra.norm_algebraMap",
+      "Finset.toAdd_prod",
+      "Multiplicative.toAdd_mul",
+      "Multiplicative.toAdd_one",
+      "Finset.sum_subset",
+      "Finset.prod_subset",
+      "Rat.HeightOneSpectrum.primesEquiv",
+      "LinearMap.IsPerfectCompl",
+      "LinearMap.IsPerfPair.restrict",
+      "Subspace.finrank_add_finrank_dualAnnihilator_eq",
+      "LinearMap.range_dualMap_eq_dualAnnihilator_ker",
+      "LinearMap.ker_dualMap_eq_dualAnnihilator_range",
+      "LinearMap.finrank_range_add_finrank_ker"
+    ],
+    "nextShortestRoute": "Prove the arithmetic global localization-image/annihilator equality, then use the already pinned dual-annihilator and rank-nullity APIs for the numerical Selmer relation. IsPerfectCompl describes complementary subspaces, not mutual annihilators; its restriction theorem is not the Poitou-Tate equality."
   },
   "obligationEffect": {
-    "serves": "DUB-17 local reciprocity chain: arbitrary rational-unit reciprocity action -> cyclotomic principal product -> arithmetic invariant sum-zero -> global duality.",
-    "discharged": "For every q : ℚˣ, the proof splits off its p-power, proves that the remaining order-zero unit has norm one, compares it through an actual finite-stage norm with a positive p-coprime quotient, transports the norm witness between the selected cyclotomic stages, kills both the norm-kernel and prime-power terms, and invokes the proved positive-quotient root action. The sign is absorbed by positive p-adic approximation; no trivial action of -1 is assumed. The modular inverse data now also prove that composing the ramified action with the constructed quotient's forward exponent fixes the actual primitive root.",
-    "stillOpen": "Identify the forward positive-quotient exponent with the existing normalized away-prime product and the actual real-sign action. Then conclude the cyclotomic principal product and prove arithmetic invariant sum-zero.",
-    "gateImpact": "A necessary local DUB-17 sub-obligation is closed, but DUB-17 through DUB-20 remain open and source acceptance remains 16/20."
+    "serves": "DUB-17 reciprocity and Selmer chain: cyclic carry -> principal character sum -> arithmetic invariant sum-zero -> global trace-cup orthogonality -> global duality.",
+    "discharged": "The actual odd-prime finite H2 invariant sum is zero with no reciprocity premise, and the literal coherent finite-prime sum of local coordinates of every global arithmetic trace cup is zero.",
+    "stillOpen": "Assemble the proved local perfect pairings and global orthogonality into the exact global-duality/localization sequence, prove orthogonal-complement statements for the actual deformation conditions, and derive the numerical primal/dual Selmer relation. Automorphy and higher symmetric continuation remain downstream.",
+    "gateImpact": "The finite-support reciprocity and global trace-cup orthogonality obstruction is closed. DUB-17 through DUB-20 remain open and source acceptance remains 16/20."
   },
   "verification": {
-    "focusedModuleBuild": "PASS (11,886 jobs, zero diagnostics)",
-    "aggregateRegressionAudit": "PASS",
-    "projectTheorems": 21816,
-    "registeredConsumers": 11059,
-    "declarations": 14128,
-    "generatedDeclarations": 10934,
+    "focusedModuleBuild": "PASS (principal character sum, arithmetic invariant sum-zero and global trace-cup orthogonality; zero diagnostics)",
+    "aggregateRegressionAudit": "PASS for focused aggregate and exact-consumer builds; post-orthogonality exhaustive rerun recorded below",
+    "projectTheorems": 21989,
+    "registeredConsumers": 11119,
+    "declarations": 14210,
+    "generatedDeclarations": 11047,
     "lintersPassed": 16,
-    "productionModules": 2986,
-    "exactConsumers": 2359,
-    "assembledVerification": "PASS",
-    "assembledLog": "logs/dubon-build-20261014-154134-209.log",
-    "assembledLogSha256": "F602ABA078FD6960AB05B0FAAF57F77570F50085DA32C0AA8E6D17A11E7A637E",
-    "assembledLogBytes": 5112462,
-    "leanDiagnostics": 0
+    "productionModules": 2998,
+    "exactConsumers": 2369,
+    "retainedFiles": 3213,
+    "assembledVerification": "PASS; CURRENT INCREMENT VERIFIED; 16/20 GATES COMPLETE; PAPER INCOMPLETE",
+    "assembledLog": "logs/dubon-build-20261015-025528-985.log",
+    "assembledLogSha256": "4B616996E2CFFCB8ACF5C46B98F824300DBFAA2EC3E7813CBAC5A8B6AC48A88F",
+    "assembledLogBytes": 5155927,
+    "leanDiagnostics": 0,
+    "currentIncrement": {
+      "focusedProduction": true,
+      "focusedAggregate": true,
+      "focusedExactConsumers": 3,
+      "inventoryVerification": true,
+      "exhaustiveAudit": true,
+      "assembledVerification": true,
+      "assembledPending": false,
+      "projectTheorems": 21989,
+      "registeredConsumers": 11119,
+      "declarations": 14210,
+      "generatedDeclarations": 11047,
+      "lintersPassed": 16,
+      "productionModules": 2998,
+      "exactConsumers": 2369,
+      "retainedFiles": 3213,
+      "focusedBuildJobs": 11899
+    }
   },
   "upstreamSnapshot": {
     "mathlibHead": "e438a8a8329af5bd73274043f9f21795594c6bfb",
-    "checkedAt": "2026-10-14",
-    "policy": "Research snapshot only; the project remains on its frozen pin."
-  }
+    "checkedAt": "2026-10-15",
+    "policy": "Research snapshot only; the project remains on its frozen pin.",
+    "nyllLean": "leanprover/lean4:v4.35.0-rc2",
+    "nyllMathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+    "negativeResult": "No current reusable Lean formalization of the required Sato-Tate or symmetric-power automorphy endpoint was found in the refreshed public-code search."
+  },
+  "searchRefresh20261015": {
+    "checkedSources": [
+      "https://github.com/n-yamaguchi-0729/ClassFieldTheory",
+      "https://github.com/n-yamaguchi-0729/ClassFieldTheory/blob/main/Nyll/ClassFieldTheory/Theorems/HilbertSymbols/HilbertProductFormula.lean",
+      "https://github.com/n-yamaguchi-0729/ClassFieldTheory/blob/main/Nyll/ClassFieldTheory/Theorems/GlobalClassFieldTheory/FiniteAbelianGlobalReciprocity.lean",
+      "https://palomar-registry.org/entry?id=PALOMAR-2026-09-28-000001&version=1",
+      "https://github.com/MichaelStollBayreuth/EllipticCurves",
+      "https://github.com/MichaelStollBayreuth/EllipticCurves/blob/main/EllipticCurves/SelmerGroup.lean"
+    ],
+    "exactRevision": "26f52ca8574bd7bf39cfa069466a70099f515382",
+    "externalResult": "Nyll remains the only located current public Lean development with the exact class-field-theory layer. Its APIs are genuine but require a nontrivial interface and toolchain port. Stoll's current EllipticCurves project supplies sorry-free explicit 2-Selmer local-condition and cardinality machinery, but no general Poitou-Tate or compatible trace-zero localization theorem. No public Sato-Tate or symmetric-power automorphy endpoint was located.",
+    "pinnedTreeResult": [
+      "Rat.HeightOneSpectrum.primesEquiv supplies the exact established bijection needed to move the explicit finite-place support into Nat.Primes.",
+      "Finset.toAdd_prod converts the character image of the principal automorphism product into the required additive sum.",
+      "Finset.sum_subset replaces the coherent support by the explicit principal support after the outside terms are proved zero.",
+      "rationalArithmeticFiniteCarryInvariant and rationalArithmeticFiniteH2InvariantSum_unit_invariants identify every original local term with the finite cyclic character.",
+      "rationalArithmeticLocalH1ScalarCup_isPerfPair and the trace-cup restriction theorem let invariant sum-zero discharge global cup orthogonality directly.",
+      "Subspace.finrank_add_finrank_dualAnnihilator_eq and the dual-map kernel/range identities provide the later dimension algebra. IsPerfectCompl and IsPerfPair.restrict require separately proved complement hypotheses and do not supply mutual-annihilator equality."
+    ],
+    "routeDecision": "Global trace-cup orthogonality is proved. The arithmetic reverse image/annihilator inclusion remains open. Use existing local perfectness and pinned annihilator/dimension APIs; see the subsequent 15 October audit for the source-inspected FLT patching candidate."
+  },
+  "followupReview": "Tools/lean-reuse-audit-20261015.json supersedes current-head and route-selection observations, preserving this earlier proof/build receipt."
 }
