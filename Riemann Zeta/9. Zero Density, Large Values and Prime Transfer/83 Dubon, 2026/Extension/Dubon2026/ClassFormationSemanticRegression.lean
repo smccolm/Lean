@@ -1,4 +1,5 @@
 import Dubon2026
+import Dubon2026.PrimeReciprocitySemanticRegression
 
 /-! Exact original arithmetic source sequences and class-formation consumers. -/
 
@@ -1438,6 +1439,7 @@ theorem actual_arithmetic_open_quotient_h2_unique_finite
 end OriginalArithmeticOpenQuotientClasses
 
 noncomputable section OriginalClassGeneratorReuse
+open CategoryTheory groupCohomology Rep
 variable (F : IntermediateField ℚ (AlgebraicClosure ℚ))
   [FiniteDimensional ℚ F] [IsGalois ℚ F]
 
@@ -1512,5 +1514,501 @@ theorem regression_original_auxiliary_cyclic_degree (n : ℕ) (hn : 0 < n) :
   originalNumberField_exists_cyclic_degree F n hn
 
 end OriginalAuxiliaryCyclicExtensionReuse
+
+noncomputable section MackeyOriginalConsumer1
+
+/-- The canonical rational algebra on the original closure agrees with
+the algebra used by the pinned closure construction. -/
+local instance representativeConsumerClosure : IsAlgClosure ℚ (AlgebraicClosure ℚ) := by
+  have hAlg : @AlgebraicClosure.instAlgebra ℚ _ ℚ _ (Algebra.id ℚ) =
+      (DivisionRing.toRatAlgebra : Algebra ℚ (AlgebraicClosure ℚ)) := Subsingleton.elim _ _
+  have h := AlgebraicClosure.instIsAlgClosure ℚ
+  rw [hAlg] at h
+  exact h
+
+variable (F : IntermediateField ℚ (AlgebraicClosure ℚ)) [FiniteDimensional ℚ F]
+
+/-- The original rational unit coefficient has its discrete topology. -/
+local instance rationalUnitDiscreteTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits ℚ (AlgebraicClosure ℚ)) := ⊥
+/-- The rational unit topology is discrete by construction. -/
+local instance rationalUnitDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits ℚ (AlgebraicClosure ℚ)) := ⟨rfl⟩
+/-- The original extension unit coefficient has its discrete topology. -/
+local instance extensionUnitDiscreteTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits F (AlgebraicClosure ℚ)) := ⊥
+/-- The extension unit topology is discrete by construction. -/
+local instance extensionUnitDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits F (AlgebraicClosure ℚ)) := ⟨rfl⟩
+
+/-- The actual finite rational field and algebraic closure consume the
+changed-representative transfer theorem on their original unit cocycles. -/
+theorem regression_original_arithmetic_corestriction_representatives
+    (a : Gal(AlgebraicClosure ℚ/ℚ) ⧸ F.fixingSubgroup → F.fixingSubgroup)
+    (c : continuousRepresentationCocyclesTwo (Rep.ofAlgebraAutOnUnits F (AlgebraicClosure ℚ))) :
+    letI : Fintype (Gal(AlgebraicClosure ℚ/ℚ) ⧸ F.fixingSubgroup) := Fintype.ofFinite _
+    (Submodule.Quotient.mk
+      (continuousChangedCosetTraceCocycle (Rep.ofAlgebraAutOnUnits ℚ (AlgebraicClosure ℚ))
+        (discreteGaloisUnitAction_continuous (K := ℚ) (Ω := AlgebraicClosure ℚ))
+        F.fixingSubgroup F.fixingSubgroup_isOpen a
+        (galoisFixingUnitCocycle ℚ (AlgebraicClosure ℚ) F c)) :
+      GaloisUnitContinuousH2 (K := ℚ) (Ω := AlgebraicClosure ℚ)) =
+        galoisUnitContinuousCorestriction ℚ (AlgebraicClosure ℚ) F (Submodule.Quotient.mk c) :=
+  galoisUnitContinuousCorestriction_changed_representatives ℚ (AlgebraicClosure ℚ) F a c
+
+end MackeyOriginalConsumer1
+
+noncomputable section MackeyOriginalConsumer2
+open scoped BigOperators NumberField
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+
+/-- Retain the rational algebra of the original arithmetic union. -/
+local instance orbitConsumerAlgebra : Algebra ℚ (rationalUnramifiedExtension a) :=
+  (rationalUnramifiedExtension a).algebra'
+
+/-- The original arithmetic union is Galois by its proved construction. -/
+local instance orbitConsumerGalois : IsGalois ℚ (rationalUnramifiedExtension a) :=
+  originalUnramifiedGaloisUnion_isGalois a
+
+variable (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+  [TopologicalSpace (Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp))]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp))]
+
+/-- The actual finite field fixing subgroup, with the original arithmetic
+group structure retained explicitly for its coset instances. -/
+def orbitConsumerFixingSubgroup : Subgroup (rationalArithmeticGaloisGroup a) := F.fixingSubgroup
+
+/-- The actual finite field fixes an open subgroup of the original compact arithmetic group. -/
+local instance orbitConsumerFiniteCosets :
+    Finite (rationalArithmeticGaloisGroup a ⧸ (orbitConsumerFixingSubgroup a F)) :=
+  Subgroup.quotient_finite_of_isOpen (orbitConsumerFixingSubgroup a F) F.fixingSubgroup_isOpen
+
+/-- Enumerate the actual finite fixing cosets. -/
+local instance orbitConsumerCosetsFintype :
+    Fintype (rationalArithmeticGaloisGroup a ⧸ (orbitConsumerFixingSubgroup a F)) := Fintype.ofFinite _
+
+/-- The actual orbit set is finite as a quotient of the original finite cosets. -/
+local instance orbitConsumerIndexFinite :
+    Finite (cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) :=
+  Finite.of_surjective
+    (fun q : rationalArithmeticGaloisGroup a ⧸ (orbitConsumerFixingSubgroup a F) =>
+      (Quotient.mk'' q : cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)))
+    (fun q => Quotient.inductionOn' q (fun x => ⟨x, rfl⟩))
+
+/-- Enumerate the actual local orbits. -/
+local instance orbitConsumerIndexFintype :
+    Fintype (cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) := Fintype.ofFinite _
+
+/-- The stabilizer cosets embed in the actual finite global coset space. -/
+local instance orbitConsumerStabilizerFintype
+    (ω : cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) :
+    Fintype (Gal(rationalPrimeLocalClosure p hp / rationalPrimeLocalField p hp) ⧸
+      cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out) := by
+  letI := orbitConsumerCosetsFintype a F
+  exact Fintype.ofInjective (cosetOrbitMap (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out)
+    (cosetOrbitMap_injective (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out)
+
+/-- The actual discrete arithmetic unit module retains its integer action. -/
+local instance orbitConsumerContinuousSMul :
+    @ContinuousSMul ℤ (rationalArithmeticUnitRepresentation a)
+      (rationalArithmeticUnitRepresentation a).hV2.toSMul inferInstance inferInstance :=
+  ⟨continuous_of_discreteTopology⟩
+
+/-- The actual finite arithmetic field, original prime restriction and
+original unit embedding consume Mackey with every finite orbit instance derived. -/
+theorem regression_actual_arithmetic_unit_corestriction_orbits
+    (c : continuousRepresentationCocyclesTwo
+      (restrictedCoefficientRep (rationalArithmeticUnitRepresentation a) (orbitConsumerFixingSubgroup a F).subtype)) :
+  letI : Fintype (rationalArithmeticGaloisGroup a ⧸ (orbitConsumerFixingSubgroup a F)) := orbitConsumerCosetsFintype a F
+  letI : Fintype (cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) := orbitConsumerIndexFintype a p hp F
+  letI (ω : cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) :
+      Fintype (Gal(rationalPrimeLocalClosure p hp / rationalPrimeLocalField p hp) ⧸
+        cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out) := orbitConsumerStabilizerFintype a p hp F ω
+    let A := rationalArithmeticUnitRepresentation a
+    let j := rationalPrimeArithmeticRestriction a p hp
+    let B := Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)
+    let hB := discreteGaloisUnitAction_continuous
+      (K := rationalPrimeLocalField p hp) (Ω := rationalPrimeLocalClosure p hp)
+    rationalArithmeticUnitH2Restriction a p hp
+        (continuousRepresentationH2Corestriction A (rationalArithmeticUnitAction_continuous a)
+          (orbitConsumerFixingSubgroup a F) F.fixingSubgroup_isOpen (Submodule.Quotient.mk c)) =
+      ∑ ω : cosetOrbitIndex j.toMonoidHom (orbitConsumerFixingSubgroup a F),
+        continuousRepresentationH2Corestriction B hB
+          (cosetOrbitStabilizer j.toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out)
+          (cosetOrbitStabilizer_isOpen j.toMonoidHom j.continuous (orbitConsumerFixingSubgroup a F) F.fixingSubgroup_isOpen ω.out)
+          (Submodule.Quotient.mk
+            (continuousCoefficientCocycleTwoMap
+              (restrictedCoefficientRep (restrictedCoefficientRep A j.toMonoidHom)
+                (cosetOrbitStabilizer j.toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out).subtype)
+              (restrictedCoefficientRep B (cosetOrbitStabilizer j.toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out).subtype)
+              (rationalArithmeticUnitLocalMap a p hp) continuous_of_discreteTopology
+              (fun g x => rationalArithmeticUnitLocalMap_equivariant a p hp g x)
+              (continuousCosetOrbitCocycle A (rationalArithmeticUnitAction_continuous a)
+                j.toMonoidHom j.continuous (orbitConsumerFixingSubgroup a F) ω.out c))) := by
+  letI : Fintype (rationalArithmeticGaloisGroup a ⧸ (orbitConsumerFixingSubgroup a F)) := orbitConsumerCosetsFintype a F
+  letI : Fintype (cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) := orbitConsumerIndexFintype a p hp F
+  letI (ω : cosetOrbitIndex (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F)) :
+      Fintype (Gal(rationalPrimeLocalClosure p hp / rationalPrimeLocalField p hp) ⧸
+        cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom (orbitConsumerFixingSubgroup a F) ω.out) := orbitConsumerStabilizerFintype a p hp F ω
+  exact rationalArithmeticUnitH2_restriction_corestriction_orbits a p hp (orbitConsumerFixingSubgroup a F)
+    F.fixingSubgroup_isOpen c
+
+end MackeyOriginalConsumer2
+
+noncomputable section OddPrimaryReciprocityConsumers
+open NumberField IsDedekindDomain
+open scoped NumberField BigOperators
+
+section FullDecomposition
+
+variable (F : IntermediateField ℚ (AlgebraicClosure ℚ))
+  [FiniteDimensional ℚ F] [IsGalois ℚ F] [IsCyclic Gal(F/ℚ)]
+
+/-- The actual finite rational subfield has its derived number-field structure. -/
+local instance oddPrimaryConsumerNumberField : NumberField F := NumberField.of_module_finite ℚ F
+
+/-- The original finite rational field supplies a full-decomposition prime
+outside the actual prescribed rational prime support. -/
+theorem regression_original_cyclic_prime_power_full_decomposition
+    (q n : ℕ) (hq : q.Prime) (hn : 0 < n) (hdegree : Module.finrank ℚ F = q ^ n)
+    (S : Finset (HeightOneSpectrum (𝓞 ℚ))) :
+    ∃ w : HeightOneSpectrum (𝓞 F), originalFinitePrimeBelow ℚ F w ∉ S ∧
+      OriginalFiniteDecompositionGroup ℚ F w = ⊤ :=
+  original_cyclicPrimePower_exists_fullDecomposition_outside ℚ F q n hq hn hdegree S
+
+end FullDecomposition
+
+section OriginalArithmeticCorestriction
+
+attribute [-instance] DivisionRing.toRatAlgebra SubfieldClass.instSMulRat
+
+variable (a : 𝓞 ℚ)
+
+/-- Retain the original rational algebra on the actual arithmetic union. -/
+local instance oddPrimaryConsumerAlgebra : Algebra ℚ (rationalUnramifiedExtension a) :=
+  (rationalUnramifiedExtension a).algebra'
+/-- The actual arithmetic union is Galois by its proved construction. -/
+local instance oddPrimaryConsumerGalois : IsGalois ℚ (rationalUnramifiedExtension a) :=
+  originalUnramifiedGaloisUnion_isGalois a
+/-- The actual original global unit coefficients carry their discrete topology. -/
+local instance oddPrimaryConsumerUnitTopology : TopologicalSpace (rationalArithmeticUnitRepresentation a) := ⊥
+/-- That original unit topology is discrete. -/
+local instance oddPrimaryConsumerUnitDiscrete : DiscreteTopology (rationalArithmeticUnitRepresentation a) := ⟨rfl⟩
+/-- Retain the same discrete topology on the literal global unit representation. -/
+local instance oddPrimaryConsumerRawUnitTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits ℚ (rationalUnramifiedExtension a)) := ⊥
+/-- The literal original global unit representation is discrete. -/
+local instance oddPrimaryConsumerRawUnitDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits ℚ (rationalUnramifiedExtension a)) := ⟨rfl⟩
+
+variable (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+
+/-- The same arithmetic union is Galois over the actual finite subfield. -/
+local instance oddPrimaryConsumerUpperGalois : IsGalois F (rationalUnramifiedExtension a) :=
+  IsGalois.tower_top_of_isGalois ℚ F (rationalUnramifiedExtension a)
+/-- Retain the discrete unit coefficients for the same upper field over the finite subfield. -/
+local instance oddPrimaryConsumerUpperTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)) := ⊥
+/-- Those original relative unit coefficients are discrete. -/
+local instance oddPrimaryConsumerUpperDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)) := ⟨rfl⟩
+
+/-- The original finite arithmetic subfield and actual coset corestriction
+consume odd-primary rational reciprocity with derived Galois structures. -/
+theorem regression_original_odd_primary_corestriction_invariant_sum
+    (q r : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (y : GaloisUnitContinuousH2 (K := F) (Ω := rationalUnramifiedExtension a))
+    (hy : q ^ (r + 1) • y = 0) :
+    ∃ S : Finset Nat.Primes,
+      (∀ p ∉ S, rationalArithmeticUnitPrimeInvariant a p.val p.property
+        (galoisUnitContinuousCorestriction ℚ (rationalUnramifiedExtension a) F y) = 0) ∧
+      (∑ p ∈ S, rationalArithmeticUnitPrimeInvariant a p.val p.property
+        (galoisUnitContinuousCorestriction ℚ (rationalUnramifiedExtension a) F y)) = 0 :=
+  rationalArithmeticUnitCorestriction_exists_support_sum_zero a q r hq hq2 hqa F y hy
+
+end OriginalArithmeticCorestriction
+end OddPrimaryReciprocityConsumers
+
+noncomputable section ArithmeticOrbitOriginalConsumer1
+open scoped NumberField
+attribute [local instance] arithmeticOrbitFieldRationalAlgebra
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+
+/-- Keep the original rational algebra of the actual arithmetic union. -/
+local instance orbitFieldConsumerAlgebra : Algebra ℚ (rationalUnramifiedExtension a) :=
+  (rationalUnramifiedExtension a).algebra'
+
+/-- Every actual finite arithmetic subfield and coset yields the actual
+finite local field with exactly the Mackey stabilizer as its fixing subgroup. -/
+theorem regression_original_arithmetic_orbit_local_field
+    (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+    (c : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F) :
+    (rationalArithmeticOrbitLocalField a p hp F c).fixingSubgroup =
+        cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom
+          (rationalArithmeticOrbitFixingSubgroup a F) c ∧
+      FiniteDimensional (rationalPrimeLocalField p hp) (rationalArithmeticOrbitLocalField a p hp F c) :=
+  ⟨rationalArithmeticOrbitLocalField_fixingSubgroup a p hp F c,
+    rationalArithmeticOrbitLocalField_finiteDimensional a p hp F c⟩
+
+/-- The actual global field image and original prime completion generate
+the same local field, with literal field-element values preserved. -/
+theorem regression_original_arithmetic_orbit_field_embedding
+    (F : IntermediateField ℚ (rationalUnramifiedExtension a))
+    (c : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F) :
+    (algebraMap (rationalPrimeLocalField p hp) (rationalArithmeticOrbitLocalField a p hp F c)).fieldRange ⊔
+        (rationalArithmeticOrbitFieldInclusion a p hp F c).toRingHom.fieldRange = ⊤ ∧
+      ∀ x : F, (rationalArithmeticOrbitFieldInclusion a p hp F c x : rationalPrimeLocalClosure p hp) =
+        rationalArithmeticOrbitEmbedding a p hp F c (x : rationalUnramifiedExtension a) :=
+  ⟨rationalArithmeticOrbitField_ranges a p hp F c,
+    rationalArithmeticOrbitFieldInclusion_coe a p hp F c⟩
+
+end ArithmeticOrbitOriginalConsumer1
+
+noncomputable section ArithmeticOrbitOriginalConsumer2
+open scoped NumberField
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitFieldRationalAlgebra
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+  (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+  (c : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField)
+
+/-- The actual arithmetic unit coefficient has its discrete topology. -/
+local instance orbitUnitConsumerGlobalTopology : TopologicalSpace (rationalArithmeticUnitRepresentation a) := ⊥
+/-- The actual arithmetic unit topology is discrete by construction. -/
+local instance orbitUnitConsumerGlobalDiscrete : DiscreteTopology (rationalArithmeticUnitRepresentation a) := ⟨rfl⟩
+/-- The same original arithmetic union over the actual finite stage has discrete unit coefficients. -/
+local instance orbitUnitConsumerRelativeTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)) := ⊥
+/-- The original relative unit topology is discrete by construction. -/
+local instance orbitUnitConsumerRelativeDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)) := ⟨rfl⟩
+/-- The actual orbit local field uses discrete original algebraic-closure units. -/
+local instance orbitUnitConsumerLocalTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c)
+      (rationalPrimeLocalClosure p hp)) := ⊥
+/-- Those original local unit coefficients are discrete. -/
+local instance orbitUnitConsumerLocalDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c)
+      (rationalPrimeLocalClosure p hp)) := ⟨rfl⟩
+
+/-- An actual finite Galois arithmetic stage consumes the same-cocycle
+comparison between its Mackey orbit and genuine local field base change. -/
+theorem regression_original_arithmetic_orbit_unit_base_change
+    (y : continuousRepresentationCocyclesTwo (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)))
+    (d e : cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom
+      (rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField) c) :
+    (rationalArithmeticOrbitUnitBaseChangeCocycle a p hp F.toIntermediateField c y).val
+        (rationalArithmeticOrbitLocalAutomorphism a p hp F.toIntermediateField c d,
+          rationalArithmeticOrbitLocalAutomorphism a p hp F.toIntermediateField c e) =
+      rationalArithmeticOrbitUnitCocycleValue a p hp F.toIntermediateField c y (d, e) :=
+  rationalArithmeticOrbitUnitCocycle_eq_baseChange a p hp F.toIntermediateField c y d e
+
+/-- The actual finite Galois arithmetic stage supplies the extending
+local valuation and topology without an assumed local-field certificate. -/
+theorem regression_original_arithmetic_orbit_local_structure :
+    let E := rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c
+    ∃ (_ : ValuativeRel E) (_ : TopologicalSpace E), IsNonarchimedeanLocalField E ∧
+      (ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension (ValuativeRel.valuation E) :=
+  rationalArithmeticOrbitLocalField_exists_structure a p hp F.toIntermediateField c
+
+end ArithmeticOrbitOriginalConsumer2
+
+noncomputable section ArithmeticOrbitOriginalConsumer3
+open scoped NumberField
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitFieldRationalAlgebra
+  arithmeticOrbitUpperGalois arithmeticOrbitLocalGalois arithmeticGlobalUnitContinuousSMul
+  orbitUnitComparisonGlobalGalois orbitUnitComparisonRawTopology orbitUnitComparisonRawDiscrete
+  arithmeticOrbitComparisonLocalFinite arithmeticOrbitComparisonLocalTopology arithmeticOrbitComparisonLocalDiscrete
+  orbitUnitConsumerGlobalTopology orbitUnitConsumerGlobalDiscrete
+  orbitUnitConsumerRelativeTopology orbitUnitConsumerRelativeDiscrete
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+  (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+  (c : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField)
+
+/-- The actual prime-completion unit coefficients have the discrete topology. -/
+local instance orbitInvariantConsumerPrimeTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)) := ⊥
+/-- The original prime-completion unit topology is discrete. -/
+local instance orbitInvariantConsumerPrimeDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)) := ⟨rfl⟩
+/-- Finiteness of the actual stabilizer quotient follows from openness of the actual finite-field fixing subgroup. -/
+local instance orbitInvariantConsumerCosets :
+    Fintype (Gal(rationalPrimeLocalClosure p hp / rationalPrimeLocalField p hp) ⧸
+      cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom
+        (rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField) c) := by
+  let H := cosetOrbitStabilizer (rationalPrimeArithmeticRestriction a p hp).toMonoidHom
+    (rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField) c
+  haveI : Finite (Gal(rationalPrimeLocalClosure p hp / rationalPrimeLocalField p hp) ⧸ H) :=
+    Subgroup.quotient_finite_of_isOpen H
+      (cosetOrbitStabilizer_isOpen (rationalPrimeArithmeticRestriction a p hp).toMonoidHom
+        (rationalPrimeArithmeticRestriction a p hp).continuous
+        (rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField)
+        F.toIntermediateField.fixingSubgroup_isOpen c)
+  exact Fintype.ofFinite _
+
+/-- Choose the actual orbit valuation from the proved spectral construction. -/
+local instance orbitInvariantConsumerValuation :
+    ValuativeRel (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c) :=
+  (rationalArithmeticOrbitLocalField_exists_structure a p hp F.toIntermediateField c).choose
+/-- Retain the local topology accompanying that constructed valuation. -/
+local instance orbitInvariantConsumerTopology :
+    TopologicalSpace (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c) :=
+  (rationalArithmeticOrbitLocalField_exists_structure a p hp F.toIntermediateField c).choose_spec.choose
+/-- The chosen structures satisfy the proved local-field property. -/
+local instance orbitInvariantConsumerLocalField :
+    IsNonarchimedeanLocalField (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c) :=
+  (rationalArithmeticOrbitLocalField_exists_structure a p hp F.toIntermediateField c).choose_spec.choose_spec.1
+/-- The constructed valuation extends the original prime-completion valuation. -/
+local instance orbitInvariantConsumerExtension :
+    (ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c)) :=
+  (rationalArithmeticOrbitLocalField_exists_structure a p hp F.toIntermediateField c).choose_spec.choose_spec.2
+
+/-- The original arithmetic stage constructs every local-field premise
+and consumes the exact invariant identity for its literal Mackey orbit trace. -/
+theorem regression_original_arithmetic_orbit_trace_invariant
+    (y : continuousRepresentationCocyclesTwo (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a))) :
+    localFieldContinuousH2InvariantEquiv (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)
+        (rationalArithmeticOrbitUnitTrace a p hp F.toIntermediateField c y) =
+      localFieldContinuousH2InvariantEquiv (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c)
+        (rationalPrimeLocalClosure p hp)
+        (Submodule.Quotient.mk (rationalArithmeticOrbitUnitBaseChangeCocycle a p hp F.toIntermediateField c y)) := by
+  exact rationalArithmeticOrbitUnitTrace_invariant a p hp F.toIntermediateField c y
+
+end ArithmeticOrbitOriginalConsumer3
+
+noncomputable section CompletionInvariantOriginalConsumer1
+open scoped NumberField
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitFieldRationalAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticOrbitCompletionBaseAlgebra
+  arithmeticOrbitCompletionValuation arithmeticOrbitCompletionTopology arithmeticOrbitCompletionLocalField
+  arithmeticOrbitCompletionValuationExtension arithmeticOrbitCompletionUniformity arithmeticOrbitCompletionUniformAdd
+  arithmeticOrbitCompletionGlobalAlgebra
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+  (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+  (c : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField)
+
+/-- The actual finite arithmetic stage constructs its original prime over the chosen rational prime. -/
+theorem regression_original_arithmetic_orbit_prime :
+    originalIntegerPrimeBelow F
+      (rationalArithmeticOrbitPrime a p hp F.toIntermediateField c) = rationalPrimePlace p hp :=
+  rationalArithmeticOrbitPrime_below a p hp F.toIntermediateField c
+
+/-- The actual finite arithmetic stage has a completion equivalence retaining the literal global embedding. -/
+theorem regression_original_arithmetic_orbit_completion (x : F) :
+    (rationalArithmeticOrbitCompletionEquiv a p hp F.toIntermediateField c
+      (algebraMap F ((rationalArithmeticOrbitPrime a p hp F.toIntermediateField c).adicCompletion F) x) :
+        rationalPrimeLocalClosure p hp) =
+      rationalArithmeticOrbitEmbedding a p hp F.toIntermediateField c (x : rationalUnramifiedExtension a) :=
+  rationalArithmeticOrbitCompletionEquiv_coe a p hp F.toIntermediateField c x
+
+/-- The actual stage's completion equivalence supplies the original valuation-extension premise. -/
+theorem regression_original_arithmetic_orbit_completion_valuation :
+    let W := (rationalArithmeticOrbitPrime a p hp F.toIntermediateField c).adicCompletion F
+    letI : Algebra W (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c) :=
+      (rationalArithmeticOrbitCompletionEquiv a p hp F.toIntermediateField c).toRingHom.toAlgebra
+    letI : ValuativeRel W := ValuativeRel.ofValuation (NormedField.valuation (K := W))
+    (ValuativeRel.valuation W).HasExtension
+      (ValuativeRel.valuation (rationalArithmeticOrbitLocalField a p hp F.toIntermediateField c)) :=
+  rationalArithmeticOrbitCompletion_hasExtension a p hp F.toIntermediateField c
+
+end CompletionInvariantOriginalConsumer1
+
+noncomputable section CompletionInvariantOriginalConsumer2
+open scoped NumberField
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitFieldRationalAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticOrbitCompletionBaseAlgebra
+  arithmeticOrbitCompletionValuation arithmeticOrbitCompletionTopology arithmeticOrbitCompletionLocalField
+  arithmeticOrbitCompletionValuationExtension arithmeticOrbitCompletionUniformity arithmeticOrbitCompletionUniformAdd
+  arithmeticOrbitCompletionTargetAlgebra arithmeticOrbitCompletionClosureAlgebra arithmeticOrbitCompletionClosureTower
+  arithmeticOrbitCompletionSourceValuation arithmeticOrbitCompletionSourceLocalField
+  arithmeticOrbitCompletionSourceExtension arithmeticOrbitCompletionSourceGalois
+  arithmeticOrbitUpperGalois arithmeticOrbitLocalGalois arithmeticGlobalUnitContinuousSMul
+  orbitUnitComparisonGlobalGalois orbitUnitComparisonRawTopology orbitUnitComparisonRawDiscrete
+  arithmeticOrbitComparisonLocalFinite arithmeticOrbitComparisonLocalTopology arithmeticOrbitComparisonLocalDiscrete
+  arithmeticOrbitCompletionCoefficientTopology arithmeticOrbitCompletionCoefficientDiscrete arithmeticOrbitCompletionCosets
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+  (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+  (c : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField)
+
+/-- Retain discrete original arithmetic unit coefficients. -/
+local instance orbitCompletionInvariantConsumerGlobalTopology :
+    TopologicalSpace (rationalArithmeticUnitRepresentation a) := ⊥
+/-- The original arithmetic coefficient topology is discrete. -/
+local instance orbitCompletionInvariantConsumerGlobalDiscrete :
+    DiscreteTopology (rationalArithmeticUnitRepresentation a) := ⟨rfl⟩
+/-- Retain discrete unit coefficients over the original finite arithmetic stage. -/
+local instance orbitCompletionInvariantConsumerRelativeTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)) := ⊥
+/-- The finite-stage coefficient topology is discrete. -/
+local instance orbitCompletionInvariantConsumerRelativeDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)) := ⟨rfl⟩
+/-- Use the original prime-closure unit coefficients with their discrete topology. -/
+local instance orbitCompletionInvariantConsumerPrimeTopology :
+    TopologicalSpace (Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)) := ⊥
+/-- The actual prime coefficient topology is discrete. -/
+local instance orbitCompletionInvariantConsumerPrimeDiscrete :
+    DiscreteTopology (Rep.ofAlgebraAutOnUnits (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)) := ⟨rfl⟩
+
+/-- The original finite Galois arithmetic stage identifies its literal Mackey summand with its genuine number-field completion localization, constructing every field, valuation, tower and quotient-finiteness premise. -/
+theorem regression_original_arithmetic_trace_completion_invariant
+    (y : continuousRepresentationCocyclesTwo (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a))) :
+    localFieldContinuousH2InvariantEquiv (rationalPrimeLocalField p hp) (rationalPrimeLocalClosure p hp)
+      (rationalArithmeticOrbitUnitTrace a p hp F.toIntermediateField c y) =
+      localFieldContinuousH2InvariantEquiv (rationalArithmeticOrbitPrimeCompletion a p hp F.toIntermediateField c)
+        (rationalPrimeLocalClosure p hp)
+        (Submodule.Quotient.mk (rationalArithmeticOrbitCompletionUnitCocycle a p hp F.toIntermediateField c y)) :=
+  rationalArithmeticOrbitUnitTrace_completion_invariant a p hp F.toIntermediateField c y
+
+end CompletionInvariantOriginalConsumer2
+
+noncomputable section PrimeBijectionOriginalConsumer
+open scoped NumberField
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitFieldRationalAlgebra
+  arithmeticOrbitCompletionNumberField
+
+variable (a : 𝓞 ℚ) (p : ℕ) (hp : p.Prime)
+  (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+  (c c' : rationalArithmeticGaloisGroup a ⧸ rationalArithmeticOrbitFixingSubgroup a F.toIntermediateField)
+
+/-- The genuine finite arithmetic-stage primes identify exactly the actual local Galois coset orbits, with all local comparisons constructed. -/
+theorem regression_original_arithmetic_prime_fibers :
+    rationalArithmeticOrbitPrime a p hp F.toIntermediateField c =
+      rationalArithmeticOrbitPrime a p hp F.toIntermediateField c' ↔
+    ∃ d : Gal(rationalPrimeLocalClosure p hp / rationalPrimeLocalField p hp),
+      rationalPrimeArithmeticRestriction a p hp d • c = c' :=
+  rationalArithmeticOrbitPrime_eq_iff a p hp F.toIntermediateField c c'
+
+/-- The exact Mackey orbit quotient of an original finite arithmetic stage embeds into its genuine primes above the original rational prime. -/
+theorem regression_original_arithmetic_prime_index_injective :
+    Function.Injective (rationalArithmeticOrbitPrimeIndex a p hp F.toIntermediateField) :=
+  rationalArithmeticOrbitPrimeIndex_injective a p hp F.toIntermediateField
+
+/-- The exact original finite-stage Mackey index reaches every genuine prime above p and identifies no distinct orbits. -/
+theorem regression_original_arithmetic_prime_index_bijective :
+    Function.Bijective (rationalArithmeticOrbitPrimeIndex a p hp F.toIntermediateField) :=
+  ⟨rationalArithmeticOrbitPrimeIndex_injective a p hp F.toIntermediateField,
+    rationalArithmeticOrbitPrimeIndex_surjective a p hp F.toIntermediateField⟩
+
+/-- The actual finite-stage orbit equivalence retains the literal original prime used in its completion-localization cocycle. -/
+theorem regression_original_arithmetic_prime_equiv_literal :
+    (rationalArithmeticOrbitPrimeEquiv a p hp F.toIntermediateField (Quotient.mk'' c)).val =
+      rationalArithmeticOrbitPrime a p hp F.toIntermediateField c :=
+  rationalArithmeticOrbitPrimeEquiv_mk a p hp F.toIntermediateField c
+
+end PrimeBijectionOriginalConsumer
+
+
+
+
+
+
 
 end Dubon2026.SemanticRegression

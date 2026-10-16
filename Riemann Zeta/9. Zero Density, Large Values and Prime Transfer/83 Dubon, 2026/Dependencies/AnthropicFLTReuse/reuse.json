@@ -107,7 +107,7 @@
     "OriginalAuxiliaryCyclicExtension": "b3e9ef7328a332d3ebc7aa858fb4b5f788e735bce722acf2d0ec866861eca395"
   },
   "changes": "Native inflation-restriction and coset trace replace upstream counterparts; bar comparison adapted to frozen APIs at default limits; native rational cyclic invariant avoids the longer upstream normalization construction; genuine fixed-field class consumers discharge arithmetic vanishing and size premises.",
-  "verification": "Production aggregate, exact consumers, 43 axiom checks, ten explicit linter scopes and sequential foundation verification PASS; paper assembled verification pending.",
+  "verification": "Production, exact consumers, focused checks and sequential foundation/paper verification PASS; zero diagnostics.",
   "boundary": "Full-order original H2 class, auxiliary generator/zero restriction, local fundamental-class normalization, tower compatibility, arithmetic separation/capitulation and reverse localization remain to be proved.",
   "productionFocusedReceipt": {
     "log": "E:\\Lean\\.tmp\\dubon83\\class-generator-production-focused-3132.log",
@@ -122,5 +122,22 @@
     "foundationLog": "logs/foundation_freeze_20261015_160712.log",
     "foundationSha256": "EA5F261D07CD57FC7C1226EDB6D9D61D3DFA5F62C3A1E301CF44E9F40D0C97DC",
     "boundary": "Nine production generator, literal restriction/trace, conditional invariant and auxiliary field modules; later scratch representative/Mackey work excluded."
+  },
+  "receipt3132": {
+    "log": "logs/dubon-build-20261015-164705-967.log",
+    "sha256": "7B6C9F386FEF54635B09C3A3C84976D390F395D22B25767F3F5289BB2E9E9B27",
+    "bytes": 5477500,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 3132,
+    "projectTheorems": 23268,
+    "registeredConsumers": 11566,
+    "declarations": 15090,
+    "generated": 11761,
+    "linters": 16,
+    "regressions": 12,
+    "foundationLog": "logs/foundation_freeze_20261015_164309.log",
+    "foundationSha256": "17FE68E84CAA180676B7D933F9CF9E6BCFE688DDAC88F28F9EF6C9822A2D9A0C",
+    "boundary": "Includes nine generator, literal restriction/trace, conditional invariant and auxiliary cyclic field modules with four exact consumers. Excludes later scratch representative-independence/Mackey modules."
   }
 }

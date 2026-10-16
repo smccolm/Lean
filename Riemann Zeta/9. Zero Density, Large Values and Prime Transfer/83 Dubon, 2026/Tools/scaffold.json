@@ -13418,6 +13418,1050 @@
     {
       "path": "Dependencies/AnthropicFLTReuse/reuse.json",
       "role": "Dependencies"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetTraceRepresentativeChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCosetRepresentativeChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitRepresentativeChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetOrbitCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetOrbitCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetOrbitDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetOrbitTraceComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CosetOrbitTraceSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCosetOrbitCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCorestrictionMackey.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCoefficientMackey.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnitCorestrictionOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicPrimePowerSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicPrimePowerFullDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalOddPrimaryH2Detection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclotomicHigherResidueOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclotomicHigherLocalDegreeStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalOddPrimaryH2Killing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalOddPrimaryCyclicDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalOddPrimaryUnramifiedCyclicStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOddPrimaryCyclicCarry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrincipalCharacterSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnitPrimeInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOddPrimaryInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/NYLL-Finite-Cyclic-Prime-Power-dc55774a7fe0.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/NYLL-Odd-Primary-Reuse.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitLocalField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFieldEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFieldAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFieldBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitLocalStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitUnitBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitUnitCocycleComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitCorestrictionCocycleComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitUnitCorestrictionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitUnitTraceEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitUnitTraceInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeLocalValuationPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingUniformity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalCompletionMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalScalarContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalCompletionSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalCompletionValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SurjectiveBaseGaloisStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SurjectiveBaseValuationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SurjectiveBaseLocalStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldActualBaseChangeStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSurjectiveBaseInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionStructures.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionGlobalTowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionUnitBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionUnitComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitTraceCompletionInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalCompletionEquivContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeContinuousScalarMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalEqualPrimeCompletionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitEqualPrimeTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCosetEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitEqualPrimeLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingPrimeComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFieldTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldAlgHomValuationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingPrimeContraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalEmbeddingPrimeGaloisComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRationalPrimeOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitRepresentativeEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitNormalField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitNormalPrimeAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitNormalRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitNormalPrimeSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitSubfieldTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeContraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeBijection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitIndexFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitUnitMackey.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCorestrictionInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionInvariantTerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldAlgHomContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalCompletionMapTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionGaloisAmbientComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalCompletionCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalCompletionCocycleAmbientComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalCompletionH2AmbientComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalCompletionH2FiniteSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCosetProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCompletionFiniteStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFiniteGlobalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGlobalCompletionInvariantVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFiniteStageInflationTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFiniteStageCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFiniteStageLocalizationInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitPrimeInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitOddPrimaryInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitFiniteStageInvariantSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalPrimeInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalPrimeFiniteSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalPrimeFiberSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalPrimeInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleCompletionH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleCompletionInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeReciprocitySemanticRegression.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleOrbitInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleInvariantSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdelePrimeInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleTotalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicClassH2Surjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageClassInvariantDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleSingleFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleSingleFiniteEquivariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullDecompositionIdeleH2Lift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisImageH2Surjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteLocalNormalizedClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullDecompositionPrimeUnique.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullDecompositionNormalizedIdeleClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleSinglePrimeSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleNormalizedOrbitClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageNormalizedIdeleTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageFullOrderClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteCyclicNormalizedHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageNormalizedClassInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageIdeleClassKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassInvariantSubgroupNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassInvariantSystemFromWitness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteStageNormalizedClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleBaseChangeH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleCompletionCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleCompletionBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldActualFiniteInvariantRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteBaseChangeNormalizedInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteGaloisH2InverseBaseChangeComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleInvariantBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeFibreDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeFibreInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldOriginalUnramifiedInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldInvariantClosureTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldFiniteInvariantClosureIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleInvariantClosureIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitRelativeStageCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitRelativeGlobalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitRelativeStageLocalizationInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitRelativeStageInvariantSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativePrimeFiniteSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleOrbitInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleInvariantSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdelePrimeInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleTotalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageClassInvariantDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleSinglePrimeSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleNormalizedOrbitClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageNormalizedIdeleTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageFullOrderClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageNormalizedClassInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleClassKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageNormalizedClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCommonRepresentativeTowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleRepresentativeInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCommonPrimeDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleCommonInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleNormalizedRepresentativeClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullIdeleInvariantPrimeSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleRepresentativeComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCommonPrimeDegreeCard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdeleRepresentativeValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeFullDecompositionRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeSinglePrimeInvariantClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageIdelePrimeRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeIdeleBaseChangePrimeValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeIdeleBaseChangeZeroTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeSinglePrimeTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeClassOrderFromTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageClassProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeIdeleBaseChangeClassZero.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassBaseChangeInflationRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassGeneratorTowerTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleGeneratorBaseChangeTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntermediateFieldGeneratorTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeClassGeneratorFromIdele.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeStageClassGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclicPrimePowerSubfield.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicCompositumDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicCompositumLargeDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelativeGaloisCompositum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicAuxiliaryComposita.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclicAuxiliaryComposita.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerClassGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassFullOrderFromSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerFullOrderClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassInvariantSystemFromFullOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerClassInvariantSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOrbitCommonPrimeSelfDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeIdeleVerticalTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalVerticalIdeleClassInflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerIdeleKernelTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassInvariantFromInflatedIdele.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCanonicalClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassInvariantFromAuxiliaryIdele.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntermediateFieldCanonicalClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntermediateFieldPrimePowerTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeCanonicalComparisonAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeCanonicalSystemFromIdele.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeCanonicalClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerCanonicalClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCanonicalClassSystemKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassInvariantCorestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCanonicalClassSystemTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerCanonicalTraceSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCohomologyTraceNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCanonicalSubgroupIdeleTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSinglePrimeTraceCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSinglePrimeIdeleH2Lift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSinglePrimeNormalizedLocalLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeIdelePrimeOrbitSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeNormalizedPrimeLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeNormalizedPrimeTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCanonicalLocalClassNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerCanonicalLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalClassFullOrderImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalH2InnerConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicPrimeConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdelePrimeConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdelePrimeInvariantTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIdeleInvariantPrimeIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeIdeleRepresentativeIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeRepresentativeNormalizedLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativePrimeInvariantRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeRepresentativeNormalizedTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeAnyPrimeNormalizedTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerAnyPrimeLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCanonicalClassLocalRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerLocalRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLocalTraceTotalFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeLocalTraceTotal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalizedLocalClassChoice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUniversalLocalRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerUniversalLocalRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativePrimeCompletionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteCompletionLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionClassRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerCompletionRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteNormalizedClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientH2SubgroupGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientCompletionRestrictions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRelativeOutsideClassSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteNormalizedQuotientSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerNormalizedQuotientSystem.lean",
+      "role": "Extension"
     }
   ],
   "statusDocuments": [
@@ -16597,7 +17641,265 @@
     "OriginalClassH2SubgroupGenerators",
     "OriginalFiniteCyclicInvariant",
     "OriginalClassH2InvariantFromGenerator",
-    "OriginalAuxiliaryCyclicExtension"
+    "OriginalAuxiliaryCyclicExtension",
+    "CosetTraceRepresentativeChange",
+    "ContinuousCosetRepresentativeChange",
+    "GaloisUnitRepresentativeChange",
+    "CosetOrbitCoordinates",
+    "CosetOrbitCocycles",
+    "CosetOrbitDecomposition",
+    "CosetOrbitTraceComparison",
+    "CosetOrbitTraceSum",
+    "ContinuousCosetOrbitCocycles",
+    "ContinuousCorestrictionMackey",
+    "ContinuousCoefficientMackey",
+    "ArithmeticUnitCorestrictionOrbits",
+    "OriginalCyclicPrimePowerSubgroup",
+    "OriginalCyclicPrimePowerFullDecomposition",
+    "OriginalGlobalOddPrimaryH2Detection",
+    "CyclotomicHigherResidueOrder",
+    "CyclotomicHigherLocalDegreeStage",
+    "OriginalGlobalOddPrimaryH2Killing",
+    "OriginalOddPrimaryCyclicDescent",
+    "OriginalOddPrimaryUnramifiedCyclicStage",
+    "ArithmeticOddPrimaryCyclicCarry",
+    "ArithmeticPrincipalCharacterSupport",
+    "ArithmeticUnitPrimeInvariant",
+    "ArithmeticOddPrimaryInvariantSum",
+    "ArithmeticOrbitLocalField",
+    "ArithmeticOrbitFieldEmbedding",
+    "ArithmeticOrbitFieldAction",
+    "ArithmeticOrbitFieldBaseChange",
+    "ArithmeticOrbitLocalStructure",
+    "ArithmeticOrbitUnitBaseChange",
+    "ArithmeticOrbitUnitCocycleComparison",
+    "GaloisUnitCorestrictionCocycleComparison",
+    "ArithmeticOrbitUnitCorestrictionComparison",
+    "ArithmeticOrbitUnitTraceEquality",
+    "ArithmeticOrbitUnitTraceInvariant",
+    "RationalPrimeLocalValuationPrime",
+    "OriginalLocalEmbeddingPrime",
+    "OriginalLocalEmbeddingValuation",
+    "OriginalLocalEmbeddingContinuity",
+    "OriginalLocalEmbeddingUniformity",
+    "OriginalLocalCompletionMap",
+    "OriginalLocalScalarContinuity",
+    "OriginalLocalCompletionSurjective",
+    "OriginalLocalCompletionValuation",
+    "ArithmeticOrbitPrimeCompletion",
+    "SurjectiveBaseGaloisStage",
+    "SurjectiveBaseValuationExtension",
+    "SurjectiveBaseLocalStage",
+    "LocalFieldActualBaseChangeStage",
+    "LocalFieldSurjectiveBaseInvariant",
+    "ArithmeticOrbitCompletionStructures",
+    "ArithmeticOrbitCompletionInvariant",
+    "ArithmeticOrbitCompletionGlobalTowers",
+    "ArithmeticOrbitCompletionUnitBaseChange",
+    "ArithmeticOrbitCompletionUnitComparison",
+    "ArithmeticOrbitTraceCompletionInvariant",
+    "OriginalLocalCompletionEquivContinuity",
+    "RationalPrimeContinuousScalarMap",
+    "OriginalEqualPrimeCompletionComparison",
+    "ArithmeticOrbitEqualPrimeTransport",
+    "ArithmeticOrbitCosetEmbedding",
+    "ArithmeticOrbitEqualPrimeLift",
+    "OriginalLocalEmbeddingPrimeComparison",
+    "ArithmeticOrbitFieldTransport",
+    "ArithmeticOrbitPrimeFibers",
+    "ArithmeticOrbitPrimeIndex",
+    "LocalFieldAlgHomValuationComparison",
+    "OriginalLocalEmbeddingPrimeContraction",
+    "OriginalLocalEmbeddingPrimeGaloisComparison",
+    "OriginalRationalPrimeOrbits",
+    "ArithmeticOrbitRepresentativeEmbedding",
+    "ArithmeticOrbitNormalField",
+    "ArithmeticOrbitNormalPrimeAction",
+    "ArithmeticOrbitNormalRepresentative",
+    "ArithmeticOrbitNormalPrimeSurjectivity",
+    "ArithmeticOrbitSubfieldTransport",
+    "ArithmeticOrbitPrimeContraction",
+    "ArithmeticOrbitPrimeSurjectivity",
+    "ArithmeticOrbitPrimeBijection",
+    "ArithmeticOrbitIndexFiniteness",
+    "ArithmeticOrbitUnitMackey",
+    "ArithmeticOrbitCorestrictionInvariantSum",
+    "ArithmeticOrbitCompletionInvariantTerm",
+    "LocalFieldAlgHomContinuity",
+    "OriginalLocalCompletionMapTower",
+    "OriginalCompletionGaloisAmbientComparison",
+    "OriginalGlobalCompletionCocycle",
+    "OriginalGlobalCompletionCocycleAmbientComparison",
+    "OriginalGlobalCompletionH2AmbientComparison",
+    "OriginalGlobalCompletionH2FiniteSupport",
+    "ArithmeticOrbitCompletionTower",
+    "ArithmeticOrbitCosetProjection",
+    "ArithmeticOrbitCompletionFiniteStage",
+    "ArithmeticOrbitFiniteGlobalInvariant",
+    "OriginalGlobalCompletionInvariantVanishing",
+    "ArithmeticOrbitFiniteStageInflationTower",
+    "ArithmeticOrbitFiniteStageCocycle",
+    "ArithmeticOrbitFiniteStageLocalizationInvariant",
+    "ArithmeticOrbitPrimeInvariantSum",
+    "ArithmeticOrbitOddPrimaryInvariantSum",
+    "ArithmeticFiniteStageCocycles",
+    "ArithmeticOrbitFiniteStageInvariantSupport",
+    "ArithmeticOriginalPrimeInvariant",
+    "ArithmeticOriginalPrimeFiniteSupport",
+    "ArithmeticOriginalPrimeFiberSum",
+    "ArithmeticOriginalPrimeInvariantSum",
+    "ArithmeticFiniteStageReciprocity",
+    "OriginalFullIdeleCompletionH2",
+    "OriginalFullIdeleCompletionInvariant",
+    "ArithmeticFiniteStageIdeleCohomology",
+    "ArithmeticFiniteStageIdeleOrbitInvariant",
+    "ArithmeticFiniteStageIdeleInvariantSupport",
+    "ArithmeticFiniteStageIdelePrimeInvariant",
+    "ArithmeticFiniteStageIdeleTotalInvariant",
+    "OriginalCyclicClassH2Surjectivity",
+    "ArithmeticFiniteStageClassInvariantDescent",
+    "OriginalIdeleSingleFinite",
+    "OriginalIdeleSingleFiniteEquivariance",
+    "OriginalFullDecompositionIdeleH2Lift",
+    "FiniteGaloisImageH2Surjectivity",
+    "OriginalFiniteLocalNormalizedClass",
+    "OriginalFullDecompositionPrimeUnique",
+    "OriginalFullDecompositionNormalizedIdeleClass",
+    "ArithmeticFiniteStageIdeleSinglePrimeSupport",
+    "ArithmeticFiniteStageIdeleNormalizedOrbitClass",
+    "ArithmeticFiniteStageNormalizedIdeleTotal",
+    "ArithmeticFiniteStageFullOrderClass",
+    "OriginalFiniteCyclicNormalizedHom",
+    "ArithmeticFiniteStageNormalizedClassInvariants",
+    "ArithmeticFiniteStageIdeleClassKernel",
+    "OriginalClassInvariantSubgroupNormalization",
+    "OriginalClassInvariantSystemFromWitness",
+    "ArithmeticFiniteStageNormalizedClassSystem",
+    "OriginalFullIdeleBaseChangeH2",
+    "OriginalFullIdeleCompletionCocycle",
+    "OriginalFullIdeleCompletionBaseChange",
+    "LocalFieldActualFiniteInvariantRestriction",
+    "LocalFieldFiniteBaseChangeNormalizedInvariant",
+    "FiniteGaloisH2InverseBaseChangeComparison",
+    "OriginalFullIdeleInvariantBaseChange",
+    "OriginalPrimeFibreDegree",
+    "OriginalPrimeFibreInvariantSum",
+    "LocalFieldOriginalUnramifiedInvariant",
+    "LocalFieldInvariantClosureTransport",
+    "LocalFieldFiniteInvariantClosureIndependence",
+    "OriginalFullIdeleInvariantClosureIndependence",
+    "ArithmeticOrbitRelativeStageCocycle",
+    "ArithmeticOrbitRelativeGlobalInvariant",
+    "ArithmeticOrbitRelativeStageLocalizationInvariant",
+    "ArithmeticRelativeStageCocycles",
+    "ArithmeticOrbitRelativeStageInvariantSupport",
+    "ArithmeticRelativePrimeFiniteSupport",
+    "ArithmeticRelativeStageReciprocity",
+    "ArithmeticRelativeStageIdeleCohomology",
+    "ArithmeticRelativeStageIdeleOrbitInvariant",
+    "ArithmeticRelativeStageIdeleInvariantSupport",
+    "ArithmeticRelativeStageIdelePrimeInvariant",
+    "ArithmeticRelativeStageIdeleTotalInvariant",
+    "ArithmeticRelativeStageClassInvariantDescent",
+    "ArithmeticRelativeStageIdeleSinglePrimeSupport",
+    "ArithmeticRelativeStageIdeleNormalizedOrbitClass",
+    "ArithmeticRelativeStageNormalizedIdeleTotal",
+    "ArithmeticRelativeStageFullOrderClass",
+    "ArithmeticRelativeStageNormalizedClassInvariants",
+    "ArithmeticRelativeStageIdeleClassKernel",
+    "ArithmeticRelativeStageNormalizedClassSystem",
+    "ArithmeticOrbitCommonRepresentativeTowers",
+    "ArithmeticRelativeStageIdeleBaseChange",
+    "ArithmeticRelativeStageIdeleRepresentativeInvariant",
+    "ArithmeticOrbitCommonPrimeDegree",
+    "ArithmeticRelativeStageIdeleCommonInvariant",
+    "ArithmeticRelativeStageIdeleNormalizedRepresentativeClass",
+    "OriginalFullIdeleInvariantPrimeSupport",
+    "ArithmeticRelativeStageIdeleRepresentativeComparison",
+    "ArithmeticOrbitCommonPrimeDegreeCard",
+    "ArithmeticRelativeStageIdeleRepresentativeValues",
+    "ArithmeticRelativeFullDecompositionRepresentative",
+    "ArithmeticRelativeSinglePrimeInvariantClass",
+    "ArithmeticRelativeStageIdelePrimeRepresentative",
+    "ArithmeticRelativeIdeleBaseChangePrimeValues",
+    "ArithmeticRelativeIdeleBaseChangeZeroTotal",
+    "ArithmeticRelativeSinglePrimeTotal",
+    "ArithmeticRelativeClassOrderFromTotal",
+    "ArithmeticRelativeStageClassProjection",
+    "ArithmeticRelativeIdeleBaseChangeClassZero",
+    "OriginalClassBaseChangeInflationRestriction",
+    "OriginalClassGeneratorTowerTransfer",
+    "OriginalIdeleGeneratorBaseChangeTransfer",
+    "OriginalIntermediateFieldGeneratorTransfer",
+    "ArithmeticRelativeClassGeneratorFromIdele",
+    "ArithmeticRelativeStageClassGenerator",
+    "ArithmeticCyclicPrimePowerSubfield",
+    "OriginalCyclicCompositumDegree",
+    "OriginalCyclicCompositumLargeDegree",
+    "OriginalRelativeGaloisCompositum",
+    "OriginalCyclicAuxiliaryComposita",
+    "ArithmeticCyclicAuxiliaryComposita",
+    "ArithmeticPrimePowerClassGenerator",
+    "OriginalClassFullOrderFromSpan",
+    "ArithmeticPrimePowerFullOrderClass",
+    "OriginalClassInvariantSystemFromFullOrder",
+    "ArithmeticPrimePowerClassInvariantSystem",
+    "ArithmeticOrbitCommonPrimeSelfDegree",
+    "ArithmeticRelativeIdeleVerticalTotal",
+    "OriginalVerticalIdeleClassInflation",
+    "ArithmeticPrimePowerIdeleKernelTotal",
+    "OriginalClassInvariantFromInflatedIdele",
+    "OriginalCanonicalClassSystem",
+    "OriginalClassInvariantFromAuxiliaryIdele",
+    "OriginalIntermediateFieldCanonicalClassSystem",
+    "OriginalIntermediateFieldPrimePowerTower",
+    "ArithmeticRelativeCanonicalComparisonAssembly",
+    "ArithmeticRelativeCanonicalSystemFromIdele",
+    "ArithmeticRelativeCanonicalClassSystem",
+    "ArithmeticPrimePowerCanonicalClassSystem",
+    "OriginalCanonicalClassSystemKernel",
+    "OriginalClassInvariantCorestriction",
+    "OriginalCanonicalClassSystemTrace",
+    "ArithmeticPrimePowerCanonicalTraceSystem",
+    "OriginalCohomologyTraceNaturality",
+    "OriginalCanonicalSubgroupIdeleTotal",
+    "OriginalSinglePrimeTraceCoefficients",
+    "OriginalSinglePrimeIdeleH2Lift",
+    "OriginalSinglePrimeNormalizedLocalLift",
+    "ArithmeticRelativeIdelePrimeOrbitSupport",
+    "ArithmeticRelativeNormalizedPrimeLift",
+    "ArithmeticRelativeNormalizedPrimeTotal",
+    "OriginalCanonicalLocalClassNormalization",
+    "ArithmeticPrimePowerCanonicalLocalClass",
+    "OriginalLocalClassFullOrderImage",
+    "OriginalH2InnerConjugation",
+    "OriginalAdicPrimeConjugation",
+    "OriginalIdelePrimeConjugation",
+    "OriginalIdelePrimeInvariantTransport",
+    "OriginalIdeleInvariantPrimeIndependence",
+    "ArithmeticRelativeIdeleRepresentativeIndependence",
+    "ArithmeticRelativeRepresentativeNormalizedLift",
+    "ArithmeticRelativePrimeInvariantRepresentative",
+    "ArithmeticRelativeRepresentativeNormalizedTotal",
+    "ArithmeticRelativeAnyPrimeNormalizedTotal",
+    "ArithmeticPrimePowerAnyPrimeLocalClass",
+    "OriginalCanonicalClassLocalRestrictions",
+    "ArithmeticPrimePowerLocalRestrictions",
+    "OriginalLocalTraceTotalFormula",
+    "ArithmeticRelativeLocalTraceTotal",
+    "OriginalNormalizedLocalClassChoice",
+    "OriginalUniversalLocalRestrictions",
+    "ArithmeticPrimePowerUniversalLocalRestrictions",
+    "ArithmeticRelativePrimeCompletionComparison",
+    "OriginalFiniteCompletionLocalClass",
+    "OriginalCompletionClassRestrictions",
+    "ArithmeticPrimePowerCompletionRestrictions",
+    "OriginalFiniteNormalizedClassSystem",
+    "OriginalQuotientH2SubgroupGenerators",
+    "OriginalQuotientCompletionRestrictions",
+    "ArithmeticRelativeOutsideClassSupport",
+    "OriginalFiniteNormalizedQuotientSystem",
+    "ArithmeticPrimePowerNormalizedQuotientSystem"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",
@@ -16610,6 +17912,7 @@
     "GlobalNormSemanticRegression",
     "GlobalCohomologySemanticRegression",
     "GlobalReciprocitySemanticRegression",
+    "PrimeReciprocitySemanticRegression",
     "ClassFormationSemanticRegression",
     "SemanticRegression",
     "Audit"

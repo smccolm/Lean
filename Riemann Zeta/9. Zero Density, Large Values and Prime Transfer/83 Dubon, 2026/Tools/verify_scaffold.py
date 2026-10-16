@@ -101,8 +101,8 @@ def check_state(project, config, registry):
 
 def check_active(project, config):
     namespace = 'Dubon2026'
-    require(config['verificationModules'] == ['ArithmeticSemanticRegression', 'GeometricSemanticRegression', 'ContinuousCohomologySemanticRegression', 'LocalFieldSemanticRegression', 'LocalInvariantSemanticRegression', 'LocalDualitySemanticRegression', 'ArithmeticDualitySemanticRegression', 'GlobalNormSemanticRegression', 'GlobalCohomologySemanticRegression', 'GlobalReciprocitySemanticRegression', 'ClassFormationSemanticRegression', 'SemanticRegression', 'Audit'],
-            'All twelve semantic regression modules and the audit are mandatory')
+    require(config['verificationModules'] == ['ArithmeticSemanticRegression', 'GeometricSemanticRegression', 'ContinuousCohomologySemanticRegression', 'LocalFieldSemanticRegression', 'LocalInvariantSemanticRegression', 'LocalDualitySemanticRegression', 'ArithmeticDualitySemanticRegression', 'GlobalNormSemanticRegression', 'GlobalCohomologySemanticRegression', 'GlobalReciprocitySemanticRegression', 'PrimeReciprocitySemanticRegression', 'ClassFormationSemanticRegression', 'SemanticRegression', 'Audit'],
+            'All thirteen semantic regression modules and the audit are mandatory')
     require(config['productionModules'], 'Active package must contain real production modules')
     modules = config['productionModules'] + config['verificationModules']
     classified = {f'Extension/{namespace}.lean'} | {

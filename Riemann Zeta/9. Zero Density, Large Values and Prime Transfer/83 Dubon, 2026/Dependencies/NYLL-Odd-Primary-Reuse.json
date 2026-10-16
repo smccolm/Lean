@@ -1,0 +1,52 @@
+{
+  "repo": "n-yamaguchi-0729/ClassFieldTheory",
+  "commit": "dc55774a7fe03e742f2b4c6114aab5e7d01edfb1",
+  "source": {
+    "path": "Nyll/GaloisCohomology/GroupTheory/Finite.lean",
+    "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/ClassFieldTheory/dc55774a7fe03e742f2b4c6114aab5e7d01edfb1/Nyll/GaloisCohomology/GroupTheory/Finite.lean",
+    "bytes": 9920,
+    "sha256": "d33a336266b3ed805da03a243b4f23789c2e58cefbfb1cbfbd9483af2790f460",
+    "imports": [
+      "Mathlib.GroupTheory.DoubleCoset",
+      "Mathlib.GroupTheory.Sylow"
+    ]
+  },
+  "retainedSourceSha256": "d33a336266b3ed805da03a243b4f23789c2e58cefbfb1cbfbd9483af2790f460",
+  "adaptedTheorem": "subgroup_le_index_prime_subgroup_of_ne_top_cyclic_prime_power",
+  "nativeTheorem": "Dubon2026.originalCyclicPrimePower_subgroup_le_index_prime",
+  "license": "Apache-2.0; Dependencies/NYLL-ClassFieldTheory-LICENSE.txt",
+  "route": "The existing original prime-degree avoidance and actual decomposition restriction prove the prime-power arithmetic endpoint. The rest reuses original native cyclotomic, finite-stage, inflation-restriction, local-invariant and principal-product proofs.",
+  "productionFocusedReceipt3156": {
+    "log": "E:\\Lean\\.tmp\\dubon83\\CombinedReuseProductionAudit3156.log",
+    "sha256": "703AE70D31CA2B80F3FDFD245CF57DDA1537D216F987DCC1152F7F844350B35E",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\combined-reuse-production-3156-build.log",
+    "aggregateSha256": "B3C1B5C04DA27B94A5D57EADB4ABDF399C797501D2AC592F937A5D502C86CF99",
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 3156,
+    "incrementModules": 24,
+    "exactConsumers": 4,
+    "axiomChecks": 75,
+    "explicitLinterScopes": 27,
+    "lintersPerScope": 16,
+    "boundary": "Includes actual Mackey, odd-primary rational reciprocity and cyclic prime-power prime avoidance. Excludes subsequent ArithmeticOrbitLocalField and ArithmeticOrbitFieldEmbedding scratch work."
+  },
+  "receipt3156": {
+    "log": "logs/dubon-build-20261015-174638-776.log",
+    "sha256": "F8E027CFA3D9D14CCDA4C3B647CC1EFF5D4EE11DF7A6C3F6B6DAB46252100F15",
+    "bytes": 5511481,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 3156,
+    "projectTheorems": 23415,
+    "registeredConsumers": 11622,
+    "declarations": 15190,
+    "generated": 11838,
+    "linters": 16,
+    "regressions": 12,
+    "foundationLog": "logs/foundation_freeze_20261015_174234.log",
+    "foundationSha256": "20B47C44DA78A1E1E6ADB1FDD3BDAB219DAAD7BD15E8FD5FA2BC65B1D63BE1EA",
+    "boundary": "Includes actual continuous Mackey transfer, odd-primary rational unit-H2 reciprocity and cyclic prime-power full-decomposition prime avoidance. Excludes later arithmetic orbit-field, embedding, action, base-change and local-structure scratch work."
+  },
+  "verification": "Production, exact consumers, focused checks and sequential foundation/paper verification PASS with zero diagnostics; 16/20 gates, paper incomplete."
+}
