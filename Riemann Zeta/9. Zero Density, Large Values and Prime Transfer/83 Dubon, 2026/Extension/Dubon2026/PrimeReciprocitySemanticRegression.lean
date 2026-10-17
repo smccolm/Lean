@@ -3503,4 +3503,1755 @@ theorem regression_original_prime_power_unit_invariant_sum
 
 end PrimePowerUnitInvariantSumConsumerAuxiliaryScope
 
+noncomputable section RealInfiniteKernelConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+attribute [-instance] UniformSpace.Completion.instSMul SubfieldClass.instSMulRat
+  DivisionRing.toRatAlgebra AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] arithmeticKummerStageAlgebra arithmeticKummerStageGalois
+  arithmeticKummerStageTopology arithmeticKummerStageDiscrete arithmeticGlobalUnitContinuousSMul
+  originalRealPeriodQuadratic arithmeticRealGlobalClosureAlgebra arithmeticRealGlobalClosureSMul
+  arithmeticRealGlobalClosureTower arithmeticRelativeStageUpperTopology arithmeticRelativeStageUpperDiscrete
+  arithmeticRealOrbitUpperGalois arithmeticRealOrbitGlobalFinite arithmeticRealOrbitGlobalFintype
+  arithmeticRealOrbitIndexFinite arithmeticRealOrbitIndexFintype
+  arithmeticRealOrbitStabilizerFintype arithmeticRealOrbitStabilizerFamily
+
+variable (a : 𝓞 ℚ)
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+  [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+  (H : IntermediateField ℚ (rationalUnramifiedExtension a)) (hFH : F ≤ H)
+  [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    IsGalois F H]
+
+/-- Exact consumer retaining the original objects, all parameters and the derived conclusion. -/
+theorem regression_rationalArithmeticRealCorestriction_eq_zero_of_infinite
+    (y : rationalArithmeticRelativeStageCocycles a F H hFH)
+    (hy : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits F H) := ⊥
+      letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits F H) := ⟨rfl⟩
+      let z : continuousRepresentationCocyclesTwo (Rep.ofAlgebraAutOnUnits F H) := y
+      ∀ v : NumberField.InfinitePlace H,
+        originalGlobalInfiniteH2 F H v (groupCohomology.H2π _ z.val) = 0) :
+    rationalArithmeticRealUnitH2Restriction a
+      (galoisUnitContinuousCorestriction ℚ (rationalUnramifiedExtension a) F
+        (Submodule.Quotient.mk (@rationalArithmeticRelativeStageInflation a F H hFH hGal y))) = 0 :=
+  rationalArithmeticRealCorestriction_eq_zero_of_infinite a F H hFH y hy
+
+end RealInfiniteKernelConsumerAuxiliaryScope
+
+noncomputable section PrimePowerOriginalSumConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitFieldRationalAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticOrbitCompletionBaseAlgebra
+  arithmeticOrbitCompletionValuation arithmeticOrbitCompletionTopology arithmeticOrbitCompletionLocalField
+  arithmeticOrbitCompletionValuationExtension arithmeticOrbitCompletionUniformity arithmeticOrbitCompletionUniformAdd
+  arithmeticOrbitCompletionTargetAlgebra arithmeticOrbitCompletionClosureAlgebra arithmeticOrbitCompletionClosureTower
+  arithmeticOrbitCompletionSourceValuation arithmeticOrbitCompletionSourceLocalField
+  arithmeticOrbitCompletionSourceExtension arithmeticOrbitCompletionSourceGalois
+  arithmeticOrbitUpperGalois arithmeticOrbitLocalGalois arithmeticGlobalUnitContinuousSMul
+  orbitUnitComparisonGlobalGalois orbitUnitComparisonRawTopology orbitUnitComparisonRawDiscrete
+  arithmeticOrbitComparisonLocalFinite arithmeticOrbitComparisonLocalTopology arithmeticOrbitComparisonLocalDiscrete
+  arithmeticOrbitCompletionCoefficientTopology arithmeticOrbitCompletionCoefficientDiscrete arithmeticOrbitCompletionCosets
+  arithmeticOrbitGlobalCosetsFinite arithmeticOrbitGlobalCosetsFintype
+  arithmeticOrbitIndexFinite arithmeticOrbitIndexFintype
+  arithmeticPrimeInvariantUnitTopology arithmeticPrimeInvariantUnitDiscrete
+  arithmeticOrbitNormalSubfieldAlgebra arithmeticOriginalPrimeFiberFintype
+
+variable (a : 𝓞 ℚ)
+  (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+  [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  [TopologicalSpace (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a))]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a))]
+
+/-- Exact consumer retaining the original objects, all parameters and the derived conclusion. -/
+theorem regression_rationalArithmeticOriginalPrimeInvariant_prime_power_sum_add_real_zero
+    (q r : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (y : continuousRepresentationCocyclesTwo (Rep.ofAlgebraAutOnUnits F (rationalUnramifiedExtension a)))
+    (hy : q ^ (r + 1) • (Submodule.Quotient.mk y : GaloisUnitContinuousH2
+      (K := F) (Ω := rationalUnramifiedExtension a)) = 0)
+    (T : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 F)))
+    (hT : ∀ w ∉ T, rationalArithmeticOriginalPrimeInvariant a F y w = 0) :
+    (∑ w ∈ T, rationalArithmeticOriginalPrimeInvariant a F y w) +
+      originalRealUnitH2Invariant (rationalArithmeticRealUnitH2Restriction a
+        (galoisUnitContinuousCorestriction ℚ (rationalUnramifiedExtension a) F
+          (Submodule.Quotient.mk y))) = 0 :=
+  rationalArithmeticOriginalPrimeInvariant_prime_power_sum_add_real_zero a F q r hq hqa y hy T hT
+
+end PrimePowerOriginalSumConsumerAuxiliaryScope
+
+noncomputable section AllPrimeCyclicClassConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageUpperTopology arithmeticRelativeStageUpperDiscrete arithmeticOrbitUpperGalois
+
+variable (a : 𝓞 ℚ)
+  (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+  (H : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ H]
+  (hFH : F ≤ H)
+  [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    IsGalois F H]
+
+/-- Exact consumer retaining the original objects, all parameters and the derived conclusion. -/
+theorem regression_rationalArithmeticRelativeStage_exists_prime_power_full_order_idele
+    (q r : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hcyclic : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsCyclic Gal(H/F))
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ (r + 1)) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    ∃ x : rationalArithmeticRelativeStageIdeleH2 a F H hFH,
+      rationalArithmeticRelativeStageIdeleTotalInvariant a F H hFH x =
+        (↑((1 : ℚ) / (q ^ (r + 1) : ℕ)) : AddCircle (1 : ℚ)) ∧
+      (∀ v : NumberField.InfinitePlace H, originalFullIdeleInfiniteH2 F H v x = 0) ∧
+      addOrderOf ((groupCohomology.functor ℤ Gal(H/F) 2).map (originalFullClassRepHom F H) x) =
+        q ^ (r + 1) :=
+  rationalArithmeticRelativeStage_exists_prime_power_full_order_idele a F H hFH q r hq hqa hcyclic hdegree
+
+end AllPrimeCyclicClassConsumerAuxiliaryScope
+
+noncomputable section AllPrimeClassKernelConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageUpperTopology arithmeticRelativeStageUpperDiscrete arithmeticOrbitUpperGalois
+
+variable (a : 𝓞 ℚ)
+  (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+  (H : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ H]
+  (hFH : F ≤ H)
+  [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    IsGalois F H]
+
+/-- Exact consumer retaining the original objects, all parameters and the derived conclusion. -/
+theorem regression_rationalArithmeticRelativeStage_class_zero_iff_total_of_infinite
+    (q r : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hcyclic : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsCyclic Gal(H/F))
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ (r + 1)) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    ∀ x : rationalArithmeticRelativeStageIdeleH2 a F H hFH,
+      (∀ v : NumberField.InfinitePlace H, originalFullIdeleInfiniteH2 F H v x = 0) →
+      ((groupCohomology.functor ℤ Gal(H/F) 2).map (originalFullClassRepHom F H) x = 0 ↔
+        rationalArithmeticRelativeStageIdeleTotalInvariant a F H hFH x = 0) :=
+  rationalArithmeticRelativeStage_class_zero_iff_total_of_infinite a F H hFH q r hq hqa hcyclic hdegree
+
+end AllPrimeClassKernelConsumerAuxiliaryScope
+
+noncomputable section CyclicTwoPowerFieldConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra
+
+/-- Exact consumer of the actual constructed fields and class maps, retaining every source parameter. -/
+theorem regression_rationalArithmetic_exists_cyclic_twoPower_subfield
+    (a : 𝓞 ℚ) (n : ℕ) (h2a : (2 : 𝓞 ℚ) ∣ a) :
+    ∃ D : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a),
+      IsCyclic Gal(D/ℚ) ∧ Module.finrank ℚ D = 2 ^ n :=
+  rationalArithmetic_exists_cyclic_twoPower_subfield a n h2a
+
+end CyclicTwoPowerFieldConsumerAuxiliaryScope
+
+noncomputable section SinglePrimeBaseChangeInfiniteConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+
+variable (a : 𝓞 ℚ)
+  (K E L M : IntermediateField ℚ (rationalUnramifiedExtension a))
+  [FiniteDimensional ℚ L] [FiniteDimensional ℚ M]
+  (hKE : K ≤ E) (hKL : K ≤ L) (hEM : E ≤ M) (hLM : L ≤ M)
+  [hGalKL : letI : Algebra K L := (IntermediateField.inclusion hKL).toAlgebra
+    IsGalois K L]
+
+/-- Exact consumer of the actual constructed fields and class maps, retaining every source parameter. -/
+theorem regression_rationalArithmeticRelativeStageIdeleBaseChange_lift_infinite_zero
+    (w : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    (hw : letI : Algebra K L := (IntermediateField.inclusion hKL).toAlgebra
+      OriginalFiniteDecompositionGroup K L w = ⊤)
+    (x : rationalArithmeticRelativeStageIdeleH2 a K L hKL)
+    (hx : letI : Algebra K L := (IntermediateField.inclusion hKL).toAlgebra
+      ∃ y : groupCohomology (originalAdicUnitRep K L w) 2,
+        x = originalFullDecompositionIdeleH2Lift K L w hw y) :
+    letI : Algebra E M := (IntermediateField.inclusion hEM).toAlgebra
+    ∀ v : NumberField.InfinitePlace M, originalFullIdeleInfiniteH2 E M v
+      (rationalArithmeticRelativeStageIdeleBaseChange a K E L M hKE hKL hEM hLM x) = 0 :=
+  rationalArithmeticRelativeStageIdeleBaseChange_lift_infinite_zero a K E L M hKE hKL hEM hLM w hw x hx
+
+end SinglePrimeBaseChangeInfiniteConsumerAuxiliaryScope
+
+noncomputable section AllPrimePowerGeneratorConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageClassAddCommGroup
+
+/-- Exact consumer of the actual constructed fields and class maps, retaining every source parameter. -/
+theorem regression_rationalArithmeticRelativeAllPrimePower_exists_class_generator
+    (a : 𝓞 ℚ) (K E : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ K] [FiniteDimensional ℚ E] (hKE : K ≤ E)
+    [hGalKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      IsGalois K E]
+    (q t : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegreeKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      letI : Module K E := Algebra.toModule
+      Module.finrank K E = q ^ t) :
+    letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+    letI : Module K E := Algebra.toModule
+    ∃ y : groupCohomology (originalIdeleClassRep K E) 2,
+      Nat.card (groupCohomology (originalIdeleClassRep K E) 2) = Module.finrank K E ∧
+      Submodule.span ℤ {y} = ⊤ :=
+  rationalArithmeticRelativeAllPrimePower_exists_class_generator a K E hKE q t hq hqa hdegreeKE
+
+end AllPrimePowerGeneratorConsumerAuxiliaryScope
+
+noncomputable section AllPrimePowerInvariantSystemConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageClassAddCommGroup
+
+/-- Exact consumer of the actual constructed fields and class maps, retaining every source parameter. -/
+theorem regression_rationalArithmeticRelativeAllPrimePower_exists_class_invariant_system
+    (a : 𝓞 ℚ) (K E : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ K] [FiniteDimensional ℚ E] (hKE : K ≤ E)
+    [hGalKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      IsGalois K E]
+    (q t : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegreeKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      letI : Module K E := Algebra.toModule
+      Module.finrank K E = q ^ t) :
+    letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+    letI : Module K E := Algebra.toModule
+    ∃ u : groupCohomology (originalIdeleClassRep K E) 2,
+      addOrderOf u = Module.finrank K E ∧
+      ∃ invG : groupCohomology (originalIdeleClassRep K E) 2 →+ AddCircle (1 : ℚ),
+        Function.Injective invG ∧
+        (∀ z : AddCircle (1 : ℚ), z ∈ invG.range ↔ Module.finrank K E • z = 0) ∧
+        invG u = ↑((1 : ℚ) / Module.finrank K E) ∧
+        ∀ S : Subgroup Gal(E/K),
+          ∃ invS : groupCohomology (Rep.res S.subtype (originalIdeleClassRep K E)) 2 →+ AddCircle (1 : ℚ),
+            Function.Injective invS ∧
+            (∀ z : AddCircle (1 : ℚ), z ∈ invS.range ↔ Nat.card S • z = 0) ∧
+            ∀ x : groupCohomology (originalIdeleClassRep K E) 2,
+              invS ((groupCohomology.map S.subtype (𝟙 (Rep.res S.subtype (originalIdeleClassRep K E))) 2).hom x) =
+                S.index • invG x :=
+  rationalArithmeticRelativeAllPrimePower_exists_class_invariant_system a K E hKE q t hq hqa hdegreeKE
+
+end AllPrimePowerInvariantSystemConsumerAuxiliaryScope
+
+noncomputable section OriginalInfiniteBaseChangeConsumerAuxiliaryScope
+open NumberField CategoryTheory
+attribute [local instance 1100] Rep.hV2
+
+variable (K E L M : Type) [Field K] [Field E] [Field L] [NumberField L]
+  [Field M] [NumberField M]
+  [Algebra K E] [Algebra K L] [Algebra K M] [Algebra E M] [Algebra L M]
+  [IsScalarTower K E M] [IsScalarTower K L M] [IsGalois K L]
+
+/-- Exact original-object consumer of the constructed arithmetic class system and its source-normalized completion maps. -/
+theorem regression_originalFullIdeleInfiniteH2_baseChange
+    (v : InfinitePlace M) (x : groupCohomology (originalFullIdeleRep K L) 2) :
+    originalFullIdeleInfiniteH2 E M v (originalFullIdeleBaseChangeH2 K E L M x) =
+      groupCohomology.map (originalInfiniteBaseChangeStabilizerHom K E L M v)
+        (originalInfiniteBaseChangeRepHom K E L M v) 2
+        (originalFullIdeleInfiniteH2 K L (v.comap (algebraMap L M)) x) :=
+  originalFullIdeleInfiniteH2_baseChange K E L M v x
+
+end OriginalInfiniteBaseChangeConsumerAuxiliaryScope
+
+noncomputable section AllPrimeInfiniteKernelSystemConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageClassAddCommGroup arithmeticRelativeStageIdeleAddCommGroup
+
+/-- Exact original-object consumer of the constructed arithmetic class system and its source-normalized completion maps. -/
+theorem regression_rationalArithmeticRelativeAllPrimePower_exists_infinite_kernel_class_system
+    (a : 𝓞 ℚ) (K E : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ K] [FiniteDimensional ℚ E] (hKE : K ≤ E)
+    [hGalKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      IsGalois K E]
+    (q t : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegreeKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      letI : Module K E := Algebra.toModule
+      Module.finrank K E = q ^ t) :
+    letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+    letI : Module K E := Algebra.toModule
+    OriginalInfiniteKernelClassInvariantSystem K E
+      (rationalArithmeticRelativeStageIdeleTotalInvariant a K E hKE) :=
+  rationalArithmeticRelativeAllPrimePower_exists_infinite_kernel_class_system a K E hKE q t hq hqa hdegreeKE
+
+end AllPrimeInfiniteKernelSystemConsumerAuxiliaryScope
+
+noncomputable section AllPrimeCompletionRestrictionConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- Exact original-object consumer of the constructed arithmetic class system and its source-normalized completion maps. -/
+theorem regression_rationalArithmeticRelativeAllPrimePower_exists_completion_local_restrictions
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ∃ u : groupCohomology (originalIdeleClassRep F H) 2,
+      addOrderOf u = Module.finrank F H ∧ OriginalCompletionClassRestrictions F H u :=
+  rationalArithmeticRelativeAllPrimePower_exists_completion_local_restrictions a F H hFH q t hq hqa hdegree
+
+end AllPrimeCompletionRestrictionConsumerAuxiliaryScope
+
+noncomputable section AllPrimeFiniteClassSystemConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- Exact original-object consumer of the constructed arithmetic class system and its source-normalized completion maps. -/
+theorem regression_rationalArithmeticRelativeAllPrimePower_finite_normalized_class_system
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    OriginalFiniteNormalizedClassSystem F H :=
+  rationalArithmeticRelativeAllPrimePower_finite_normalized_class_system a F H hFH q t hq hqa hdegree
+
+end AllPrimeFiniteClassSystemConsumerAuxiliaryScope
+
+noncomputable section MixedPrimaryOrderConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageClassAddCommGroup
+
+/-- Exact consumer retaining the original fields, coefficients, maps and quantifiers. -/
+theorem regression_rationalArithmeticRelativeStage_exists_prime_power_order_class
+    (a : 𝓞 ℚ) (K E : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ K] [FiniteDimensional ℚ E] (hKE : K ≤ E)
+    [hGalKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      IsGalois K E]
+    (q t : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegreeKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      letI : Module K E := Algebra.toModule
+      q ^ t ∣ Module.finrank K E) :
+    letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+    letI : Module K E := Algebra.toModule
+    ∃ y : groupCohomology (originalIdeleClassRep K E) 2,
+      addOrderOf y = q ^ t :=
+  rationalArithmeticRelativeStage_exists_prime_power_order_class a K E hKE q t hq hqa hdegreeKE
+
+end MixedPrimaryOrderConsumerAuxiliaryScope
+
+noncomputable section MixedFullOrderConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageClassAddCommGroup
+
+/-- Exact consumer retaining the original fields, coefficients, maps and quantifiers. -/
+theorem regression_rationalArithmeticRelativeStage_exists_mixed_degree_full_order_class
+    (a : 𝓞 ℚ) (K E : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ K] [FiniteDimensional ℚ E] (hKE : K ≤ E)
+    [hGalKE : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      IsGalois K E]
+    (hallowed : letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      letI : Module K E := Algebra.toModule
+      ∀ q : ℕ, q.Prime → q ∣ Module.finrank K E → (q : 𝓞 ℚ) ∣ a) :
+    letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+    letI : Module K E := Algebra.toModule
+    ∃ x : groupCohomology (originalIdeleClassRep K E) 2,
+      addOrderOf x = Module.finrank K E :=
+  rationalArithmeticRelativeStage_exists_mixed_degree_full_order_class a K E hKE hallowed
+
+end MixedFullOrderConsumerAuxiliaryScope
+
+noncomputable section RationalFullOrderConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField
+
+/-- Exact consumer retaining the original fields, coefficients, maps and quantifiers. -/
+theorem regression_originalRationalNumberField_exists_full_order_class_of_algebra
+    (K : Type) [Field K] [NumberField K] [hAlg : Algebra ℚ K] [IsGalois ℚ K] :
+    ∃ u : groupCohomology (originalIdeleClassRep ℚ K) 2,
+      addOrderOf u = Module.finrank ℚ K :=
+  originalRationalNumberField_exists_full_order_class_of_algebra K
+
+end RationalFullOrderConsumerAuxiliaryScope
+
+noncomputable section ConstructedRelationCriterionConsumerAuxiliaryScope
+open CategoryTheory IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+
+/-- Use the actual stage inclusion as the rational algebra throughout
+the assembled field towers and coefficient restrictions. -/
+local instance consumerConstructedStageRelationRationalAlgebra {Ω : Type} [Field Ω] [Algebra ℚ Ω]
+    (F : FiniteGaloisIntermediateField ℚ Ω) : Algebra ℚ F := F.algebra'
+
+/-- Exact consumer retaining the original fields, coefficients, maps and quantifiers. -/
+theorem regression_originalUnramifiedStage_exists_constructed_relation_criterion
+    (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω]
+    (a : 𝓞 ℚ) (ha : a ≠ 0)
+    (P : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (B : Rep.{0} ℤ Gal(P.val/ℚ)) [Finite B] (hB : ∀ b : B, p • b = 0) :
+    ∃ N : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+      ∃ hPN : P.val.toIntermediateField ≤ N.val.toIntermediateField,
+        letI : Algebra P.val N.val := (IntermediateField.inclusion hPN).toRingHom.toAlgebra
+        letI : IsScalarTower ℚ P.val N.val := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+          (originalIntegerMap_ne_zero (L := N.val) a ha)
+        let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+        let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+        let BN := Rep.res (AlgEquiv.restrictNormalHom P.val : Gal(N.val/ℚ) →* Gal(P.val/ℚ)) B
+        ∀ χ : originalRelationModule BN ⟶ C,
+            originalRelationExtensionObstruction BN C χ = 0 ↔
+              ∃ f : Rep.free ℤ Gal(N.val/ℚ) BN ⟶ C, originalRelationInclusion BN ≫ f = χ :=
+  originalUnramifiedStage_exists_constructed_relation_criterion Ω a ha P p hp2 hpa B hB
+
+end ConstructedRelationCriterionConsumerAuxiliaryScope
+
+noncomputable section RelationObstructionTransitionConsumerAuxiliaryScope
+open CategoryTheory
+variable {G H : Type} [Group G] [Group H] (f : G →* H)
+  (B C : Rep ℤ H) (D : Rep ℤ G)
+
+/-- Exact consumer of the original relation and arithmetic stage maps. -/
+theorem regression_originalRelationExtensionObstruction_groupChange
+    (φ : originalRelationModule B ⟶ C) (j : Rep.res f C ⟶ D) :
+    groupCohomology.map f (𝟙 (Rep.res f B)) 1 ≫
+      originalRelationExtensionObstruction (Rep.res f B) D
+        (originalRelationGroupChange f B ≫ (Rep.resFunctor f).map φ ≫ j) =
+      originalRelationExtensionObstruction B C φ ≫ groupCohomology.map f j 2 :=
+  originalRelationExtensionObstruction_groupChange f B C D φ j
+
+end RelationObstructionTransitionConsumerAuxiliaryScope
+
+noncomputable section ConstructedRelationLevelConsumerAuxiliaryScope
+open CategoryTheory IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+
+/-- Use the actual stage inclusion as the rational algebra throughout
+the assembled field towers and coefficient restrictions. -/
+local instance consumerLevelDichotomyRationalAlgebra {Ω : Type} [Field Ω] [Algebra ℚ Ω]
+    (F : FiniteGaloisIntermediateField ℚ Ω) : Algebra ℚ F := F.algebra'
+
+/-- Exact consumer of the original relation and arithmetic stage maps. -/
+theorem regression_originalUnramifiedStage_exists_relation_level_dichotomy
+    (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω]
+    (a : 𝓞 ℚ) (ha : a ≠ 0)
+    (P : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (B : Rep.{0} ℤ Gal(P.val/ℚ)) [Finite B] (hB : ∀ b : B, p • b = 0) :
+    let S := originalExceptionalIntegerSupport P.val (algebraMap (𝓞 ℚ) (𝓞 P.val) a)
+      (originalIntegerMap_ne_zero (L := P.val) a ha)
+    let hS := originalExceptionalIntegerSupport_galoisStable P.val ℚ a ha
+    let CP := originalIdeleClassesModOutsideRep ℚ P.val S hS
+    ∃ N : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+      ∃ hPN : P.val.toIntermediateField ≤ N.val.toIntermediateField,
+        letI : Algebra P.val N.val := (IntermediateField.inclusion hPN).toRingHom.toAlgebra
+        letI : IsScalarTower ℚ P.val N.val := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+          (originalIntegerMap_ne_zero (L := N.val) a ha)
+        let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+        let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+        let BN := Rep.res (AlgEquiv.restrictNormalHom P.val : Gal(N.val/ℚ) →* Gal(P.val/ℚ)) B
+        ∀ φ : originalRelationModule B ⟶ CP,
+          let π : Gal(N.val/ℚ) →* Gal(P.val/ℚ) := AlgEquiv.restrictNormalHom P.val
+          let ψ := originalRelationGroupChange π B ≫ (Rep.resFunctor π).map φ ≫
+            originalRationalExceptionalClassTransition P.val N.val a ha
+          (∃ f : Rep.free ℤ Gal(N.val/ℚ) BN ⟶ C, originalRelationInclusion BN ≫ f = ψ) ∨
+            ∃ y : groupCohomology BN 1, (originalRelationExtensionObstruction BN C ψ).hom y ≠ 0 :=
+  originalUnramifiedStage_exists_relation_level_dichotomy Ω a ha P p hp2 hpa B hB
+
+end ConstructedRelationLevelConsumerAuxiliaryScope
+
+noncomputable section ArithmeticPrimeRelationPairingConsumerAuxiliaryScope
+open CategoryTheory IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+
+/-- Retain the original stage's rational algebra in the scalar pairing. -/
+local instance consumerRelationPrimePairingRationalAlgebra {Ω : Type} [Field Ω] [Algebra ℚ Ω]
+    (F : FiniteGaloisIntermediateField ℚ Ω) : Algebra ℚ F := F.algebra'
+
+/-- Exact consumer of the constructed original scalar relation pairing. -/
+theorem regression_originalUnramifiedStage_exists_prime_relation_pairing
+    {Ω : Type} [Field Ω] [Algebra ℚ Ω]
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (N : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+    (p : ℕ) [NeZero p] (B : Rep.{0} ℤ Gal(N.val/ℚ)) (hB : ∀ b : B, p • b = 0) :
+    let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+      (originalIntegerMap_ne_zero (L := N.val) a ha)
+    let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+    let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+    ∃ inv : groupCohomology C 2 →+ AddCircle (1 : ℚ), Function.Injective inv ∧
+      ∃ α : (originalRelationModule B ⟶ C) →+ (groupCohomology B 1 →+ ZMod p),
+        (∀ φ y, rationalCyclicInvariant p (α φ y) =
+          inv ((originalRelationExtensionObstruction B C φ).hom y)) ∧
+        ∀ φ y, α φ y = 0 ↔ (originalRelationExtensionObstruction B C φ).hom y = 0 :=
+  originalUnramifiedStage_exists_prime_relation_pairing a ha N p B hB
+
+end ArithmeticPrimeRelationPairingConsumerAuxiliaryScope
+
+noncomputable section ScalarRelationCriterionConsumerAuxiliaryScope
+open CategoryTheory IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+
+/-- Keep the actual stage's displayed rational algebra. -/
+local instance consumerScalarCriterionRationalAlgebra {Ω : Type} [Field Ω] [Algebra ℚ Ω]
+    (F : FiniteGaloisIntermediateField ℚ Ω) : Algebra ℚ F := F.algebra'
+
+/-- Exact consumer of the constructed original scalar relation pairing. -/
+theorem regression_originalUnramifiedStage_exists_scalar_relation_criterion
+    (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω]
+    (a : 𝓞 ℚ) (ha : a ≠ 0)
+    (P : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (B : Rep.{0} ℤ Gal(P.val/ℚ)) [Finite B] (hB : ∀ b : B, p • b = 0) :
+    ∃ N : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+      ∃ hPN : P.val.toIntermediateField ≤ N.val.toIntermediateField,
+        letI : Algebra P.val N.val := (IntermediateField.inclusion hPN).toRingHom.toAlgebra
+        letI : IsScalarTower ℚ P.val N.val := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+          (originalIntegerMap_ne_zero (L := N.val) a ha)
+        let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+        let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+        let BN := Rep.res (AlgEquiv.restrictNormalHom P.val : Gal(N.val/ℚ) →* Gal(P.val/ℚ)) B
+        ∃ d : OriginalRelationPrimePairingData BN C p,
+          ∀ ψ : originalRelationModule BN ⟶ C,
+            (∀ y, d.readout ψ y = 0) ↔
+              ∃ f : Rep.free ℤ Gal(N.val/ℚ) BN ⟶ C, originalRelationInclusion BN ≫ f = ψ :=
+  originalUnramifiedStage_exists_scalar_relation_criterion Ω a ha P p hp2 hpa B hB
+
+end ScalarRelationCriterionConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRelationDualExactConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+
+/-- Exact consumer of the original arithmetic S-unit dual relation comparison. -/
+theorem regression_arithmeticRelationSUnitDualSequence_shortExact
+    (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+    [IsAlgClosure K Ω] (a : 𝓞 K) (ha : a ≠ 0)
+    (q : ℕ) [Fact q.Prime] (hqa : (q : 𝓞 K) ∣ a)
+    (F : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+    (B : Rep.{0} ℤ Gal(F/K)) (hB : ∀ b : B, q • b = 0) :
+    (originalContravariantHomShortComplex
+      ((originalRelationShortComplex B).map
+        (Rep.resFunctor (AlgEquiv.restrictNormalHom F :
+          Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(F/K))))
+      (originalArithmeticSUnitRepresentation K Ω a ha)).ShortExact :=
+  arithmeticRelationSUnitDualSequence_shortExact K Ω a ha q hqa F B hB
+
+end ArithmeticRelationDualExactConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRelationFreeContinuityConsumerAuxiliaryScope
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  (a : 𝓞 K) (ha : a ≠ 0)
+  (F : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(F/K))
+
+/-- Exact consumer of the original arithmetic S-unit dual relation comparison. -/
+theorem regression_arithmeticRelationFreeSUnitDualAction_continuous [Finite B]
+    [TopologicalSpace (arithmeticRelationFreeSUnitDual K Ω a ha F B)]
+    [DiscreteTopology (arithmeticRelationFreeSUnitDual K Ω a ha F B)] :
+    Continuous (fun z : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) ×
+      arithmeticRelationFreeSUnitDual K Ω a ha F B =>
+        (arithmeticRelationFreeSUnitDual K Ω a ha F B).ρ z.1 z.2) :=
+  arithmeticRelationFreeSUnitDualAction_continuous K Ω a ha F B
+
+end ArithmeticRelationFreeContinuityConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRelationCupConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  [IsAlgClosure K Ω] (a : 𝓞 K) (ha : a ≠ 0)
+  (q : ℕ) [Fact q.Prime] (hqa : (q : 𝓞 K) ∣ a)
+  (F : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(F/K)) [Finite B] (hCoeff : ∀ b : B, q • b = 0)
+
+/-- Exact consumer of the original arithmetic S-unit dual relation comparison. -/
+theorem regression_arithmeticRelationSUnitCup_adjunction :
+    let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(F/K) := AlgEquiv.restrictNormalHom F;
+    let X : ShortComplex (Rep ℤ Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K)) := {
+      X₁ := Rep.res π (originalRelationModule B)
+      X₂ := Rep.res π (Rep.free ℤ Gal(F/K) B)
+      X₃ := Rep.res π B
+      f := (Rep.resFunctor π).map (originalRelationInclusion B)
+      g := (Rep.resFunctor π).map (originalRelationFreeCover B)
+      zero := ((originalRelationShortComplex B).map (Rep.resFunctor π)).zero };
+    let D := originalArithmeticSUnitRepresentation K Ω a ha;
+    letI : TopologicalSpace X.X₁ := ⊥;
+    letI : DiscreteTopology X.X₁ := ⟨rfl⟩;
+    letI : TopologicalSpace X.X₂ := ⊥;
+    letI : DiscreteTopology X.X₂ := ⟨rfl⟩;
+    letI : TopologicalSpace X.X₃ := ⊥;
+    letI : DiscreteTopology X.X₃ := ⟨rfl⟩;
+    letI : TopologicalSpace D := ⊥;
+    letI : DiscreteTopology D := ⟨rfl⟩;
+    letI : TopologicalSpace ((Rep.ihom X.X₃).obj D) := ⊥;
+    letI : DiscreteTopology ((Rep.ihom X.X₃).obj D) := ⟨rfl⟩;
+    letI : TopologicalSpace ((Rep.ihom X.X₂).obj D) := ⊥;
+    letI : DiscreteTopology ((Rep.ihom X.X₂).obj D) := ⟨rfl⟩;
+    letI : TopologicalSpace ((Rep.ihom X.X₁).obj D) := ⊥;
+    letI : DiscreteTopology ((Rep.ihom X.X₁).obj D) := ⟨rfl⟩;
+    letI : @ContinuousSMul ℤ X.X₁ (X.X₁).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ X.X₁ (X.X₁).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ X.X₂ (X.X₂).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ X.X₂ (X.X₂).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ X.X₃ (X.X₃).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ X.X₃ (X.X₃).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ D (D).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ D (D).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ ((Rep.ihom X.X₃).obj D) (((Rep.ihom X.X₃).obj D)).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ ((Rep.ihom X.X₃).obj D) (((Rep.ihom X.X₃).obj D)).hV2.toSMul _ _ continuous_of_discreteTopology;
+    let hA := arithmeticFiniteStageRepresentationAction_continuous K Ω a F (originalRelationModule B);
+    let hB := arithmeticFiniteStageRepresentationAction_continuous K Ω a F (Rep.free ℤ Gal(F/K) B);
+    let hC := arithmeticFiniteStageRepresentationAction_continuous K Ω a F B;
+    let hD := originalArithmeticSUnitAction_continuous K Ω a ha;
+    let hU := originalInternalHomAction_continuous_of_finite X.X₃ D hC hD;
+    let hV := arithmeticRelationFreeSUnitDualAction_continuous K Ω a ha F B;
+    let hX : X.ShortExact := originalRelationGroupChange_shortExact π B;
+    let hY : (originalContravariantHomShortComplex X D).ShortExact := arithmeticRelationSUnitDualSequence_shortExact K Ω a ha q hqa F B hCoeff;
+    ∀ (x : ContinuousRepresentationH1 X.X₃ hC)
+    (w : ((Rep.ihom X.X₁).obj D).ρ.invariants),
+    continuousInvariantRightH2Map X.X₁ ((Rep.ihom X.X₁).obj D) D
+      (originalInternalHomEvaluation X.X₁ D)
+      (originalInternalHomEvaluation_equivariant X.X₁ D)
+      continuous_of_discreteTopology hA hD w
+      (continuousShortComplexConnectingMap X hX hA hB hC x) =
+    continuousH1Cup X.X₃ ((Rep.ihom X.X₃).obj D) D
+      (originalInternalHomEvaluation X.X₃ D)
+      (originalInternalHomEvaluation_equivariant X.X₃ D)
+      continuous_of_discreteTopology hC hU hD x
+      (continuousShortComplexInvariantConnectingMap
+        (originalContravariantHomShortComplex X D) hY hU hV w) :=
+  arithmeticRelationSUnitCup_adjunction K Ω a ha q hqa F B hCoeff
+
+end ArithmeticRelationCupConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRelationCupAlgebraicConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  [IsAlgClosure K Ω] (a : 𝓞 K) (ha : a ≠ 0)
+  (q : ℕ) [Fact q.Prime] (hqa : (q : 𝓞 K) ∣ a)
+  (F : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(F/K)) [Finite B] (hCoeff : ∀ b : B, q • b = 0)
+
+/-- Exact consumer of the original arithmetic S-unit dual relation comparison. -/
+theorem regression_arithmeticRelationSUnitCup_toAlgebraic :
+    let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(F/K) := AlgEquiv.restrictNormalHom F;
+    let X : ShortComplex (Rep ℤ Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K)) := {
+      X₁ := Rep.res π (originalRelationModule B)
+      X₂ := Rep.res π (Rep.free ℤ Gal(F/K) B)
+      X₃ := Rep.res π B
+      f := (Rep.resFunctor π).map (originalRelationInclusion B)
+      g := (Rep.resFunctor π).map (originalRelationFreeCover B)
+      zero := ((originalRelationShortComplex B).map (Rep.resFunctor π)).zero };
+    let D := originalArithmeticSUnitRepresentation K Ω a ha;
+    letI : TopologicalSpace X.X₁ := ⊥;
+    letI : DiscreteTopology X.X₁ := ⟨rfl⟩;
+    letI : TopologicalSpace X.X₂ := ⊥;
+    letI : DiscreteTopology X.X₂ := ⟨rfl⟩;
+    letI : TopologicalSpace X.X₃ := ⊥;
+    letI : DiscreteTopology X.X₃ := ⟨rfl⟩;
+    letI : TopologicalSpace D := ⊥;
+    letI : DiscreteTopology D := ⟨rfl⟩;
+    letI : TopologicalSpace ((Rep.ihom X.X₃).obj D) := ⊥;
+    letI : DiscreteTopology ((Rep.ihom X.X₃).obj D) := ⟨rfl⟩;
+    letI : TopologicalSpace ((Rep.ihom X.X₂).obj D) := ⊥;
+    letI : DiscreteTopology ((Rep.ihom X.X₂).obj D) := ⟨rfl⟩;
+    letI : TopologicalSpace ((Rep.ihom X.X₁).obj D) := ⊥;
+    letI : DiscreteTopology ((Rep.ihom X.X₁).obj D) := ⟨rfl⟩;
+    letI : @ContinuousSMul ℤ X.X₁ (X.X₁).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ X.X₁ (X.X₁).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ X.X₂ (X.X₂).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ X.X₂ (X.X₂).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ X.X₃ (X.X₃).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ X.X₃ (X.X₃).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ D (D).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ D (D).hV2.toSMul _ _ continuous_of_discreteTopology;
+    letI : @ContinuousSMul ℤ ((Rep.ihom X.X₃).obj D) (((Rep.ihom X.X₃).obj D)).hV2.toSMul inferInstance inferInstance :=
+      @ContinuousSMul.mk ℤ ((Rep.ihom X.X₃).obj D) (((Rep.ihom X.X₃).obj D)).hV2.toSMul _ _ continuous_of_discreteTopology;
+    let hC := arithmeticFiniteStageRepresentationAction_continuous K Ω a F B;
+    let hD := originalArithmeticSUnitAction_continuous K Ω a ha;
+    let hU := originalInternalHomAction_continuous_of_finite X.X₃ D hC hD;
+    let hV := arithmeticRelationFreeSUnitDualAction_continuous K Ω a ha F B;
+    let hX : X.ShortExact := originalRelationGroupChange_shortExact π B;
+    let hY : (originalContravariantHomShortComplex X D).ShortExact := arithmeticRelationSUnitDualSequence_shortExact K Ω a ha q hqa F B hCoeff;
+    ∀ (x : ContinuousRepresentationH1 X.X₃ hC)
+    (w : ((Rep.ihom X.X₁).obj D).ρ.invariants),
+    continuousH2ToAlgebraic D hD
+      (continuousH1Cup X.X₃ ((Rep.ihom X.X₃).obj D) D
+        (originalInternalHomEvaluation X.X₃ D)
+        (originalInternalHomEvaluation_equivariant X.X₃ D)
+        continuous_of_discreteTopology hC hU hD x
+        (continuousShortComplexInvariantConnectingMap
+          (originalContravariantHomShortComplex X D) hY hU hV w)) =
+    groupCohomology.map (MonoidHom.id Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K)) (originalInvariantHomMorphism X.X₁ D w) 2
+      (groupCohomology.δ hX 1 2 rfl (continuousH1ToAlgebraic X.X₃ hC x)) :=
+  arithmeticRelationSUnitCup_toAlgebraic K Ω a ha q hqa F B hCoeff
+
+end ArithmeticRelationCupAlgebraicConsumerAuxiliaryScope
+
+noncomputable section ArithmeticClassHomDescentConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  (a : 𝓞 K) (ha : a ≠ 0)
+  [DecidableEq (FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(P/K)) [Finite B]
+
+/-- Exact consumer preserving the original finite stage and source-class coefficient values. -/
+theorem regression_arithmeticFiniteClassHom_exists_galois_descent
+    (φ : Rep.res (AlgEquiv.restrictNormalHom P :
+      Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(P/K)) B ⟶
+        arithmeticClassesModOutsideColimitRep K Ω a ha) :
+    ∃ N : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a),
+      ∃ hPN : P ≤ N,
+        letI : Algebra P N := (IntermediateField.inclusion hPN).toAlgebra
+        letI : Module P N := (IntermediateField.inclusion hPN).toAlgebra.toModule
+        letI : SMul P N := (IntermediateField.inclusion hPN).toAlgebra.toSMul
+        letI : IsScalarTower K P N := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        ∃ η : Rep.res (AlgEquiv.restrictNormalHom P : Gal(N/K) →* Gal(P/K)) B ⟶
+            arithmeticClassesModOutsideStageRep K Ω a ha N,
+          ∀ b : B, (coefficientRepresentationColimitOf _
+            (arithmeticGlobalClassesModOutsideStageTransition K Ω a ha) N).hom (η.hom b) =
+              φ.hom b :=
+  arithmeticFiniteClassHom_exists_galois_descent K Ω a ha P B φ
+
+end ArithmeticClassHomDescentConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceClassInvariantDescentConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  (a : 𝓞 K) (ha : a ≠ 0)
+  [DecidableEq (FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(P/K)) [Finite B]
+
+/-- Exact consumer preserving the original finite stage and source-class coefficient values. -/
+theorem regression_arithmeticSourceInvariantClass_exists_finite_descent
+    (w : (arithmeticSourceClassHomRep K Ω a ha
+      (Rep.res (AlgEquiv.restrictNormalHom P :
+        Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(P/K)) B)).ρ.invariants) :
+    ∃ N : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a),
+      ∃ hPN : P ≤ N,
+        letI : Algebra P N := (IntermediateField.inclusion hPN).toAlgebra
+        letI : Module P N := (IntermediateField.inclusion hPN).toAlgebra.toModule
+        letI : SMul P N := (IntermediateField.inclusion hPN).toAlgebra.toSMul
+        letI : IsScalarTower K P N := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        ∃ η : Rep.res (AlgEquiv.restrictNormalHom P : Gal(N/K) →* Gal(P/K)) B ⟶
+            arithmeticClassesModOutsideStageRep K Ω a ha N,
+          ∀ b : B, (coefficientRepresentationColimitOf _
+            (arithmeticGlobalClassesModOutsideStageTransition K Ω a ha) N).hom (η.hom b) =
+              (arithmeticSourceClassColimitComparison K Ω a ha).hom
+                ((show B →ₗ[ℤ] arithmeticSPlaceClassColimitRep K Ω a ha from w.val) b) :=
+  arithmeticSourceInvariantClass_exists_finite_descent K Ω a ha P B w
+
+end ArithmeticSourceClassInvariantDescentConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRelationClassStageConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  (a : 𝓞 K) (ha : a ≠ 0)
+  [DecidableEq (FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(P/K)) [Finite B]
+
+/-- Exact consumer of the original relation lattice and actual finite class stage. -/
+theorem regression_arithmeticRelationClassHom_exists_stage
+    (φ : Rep.res (AlgEquiv.restrictNormalHom P :
+      Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(P/K)) (originalRelationModule B) ⟶
+        arithmeticClassesModOutsideColimitRep K Ω a ha) :
+    ∃ N : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a),
+      P ≤ N ∧ ∃ ψ : Rep.res (AlgEquiv.restrictNormalHom P :
+        Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(P/K)) (originalRelationModule B) ⟶
+          arithmeticGlobalClassesModOutsideStageRep K Ω a ha N,
+        ψ ≫ coefficientRepresentationColimitOf _
+          (arithmeticGlobalClassesModOutsideStageTransition K Ω a ha) N = φ :=
+  arithmeticRelationClassHom_exists_stage K Ω a ha P B φ
+
+end ArithmeticRelationClassStageConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRelationClassGaloisConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (K Ω : Type) [Field K] [Field Ω] [NumberField K] [Algebra K Ω]
+  (a : 𝓞 K) (ha : a ≠ 0)
+  [DecidableEq (FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+  (B : Rep.{0} ℤ Gal(P/K)) [Finite B]
+
+/-- Exact consumer of the original relation lattice and actual finite class stage. -/
+theorem regression_arithmeticRelationClassHom_exists_finite_relation_descent
+    (φ : Rep.res (AlgEquiv.restrictNormalHom P :
+      Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / K) →* Gal(P/K))
+        (originalRelationModule B) ⟶ arithmeticClassesModOutsideColimitRep K Ω a ha) :
+    ∃ N : FiniteGaloisIntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a),
+      ∃ hPN : P ≤ N,
+        letI : Algebra P N := (IntermediateField.inclusion hPN).toAlgebra
+        letI : Module P N := (IntermediateField.inclusion hPN).toAlgebra.toModule
+        letI : SMul P N := (IntermediateField.inclusion hPN).toAlgebra.toSMul
+        letI : IsScalarTower K P N := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        let τ : Gal(N/K) →* Gal(P/K) := AlgEquiv.restrictNormalHom P
+        ∃ η : originalRelationModule (Rep.res τ B) ⟶ arithmeticClassesModOutsideStageRep K Ω a ha N,
+          ∀ r, (coefficientRepresentationColimitOf _
+            (arithmeticGlobalClassesModOutsideStageTransition K Ω a ha) N).hom (η.hom r) =
+              φ.hom ((originalRelationGroupChange τ B).hom r) :=
+  arithmeticRelationClassHom_exists_finite_relation_descent K Ω a ha P B φ
+
+end ArithmeticRelationClassGaloisConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFreeClassHomCocycleConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Retain the original union's displayed rational inclusion. -/
+local instance freeClassHomUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Retain the original finite stage's displayed rational inclusion. -/
+local instance freeClassHomStageAlgebra : Algebra ℚ P := P.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticRelationFreeClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticRelationFreeClassHom Ω a ha P B)]
+
+/-- The original discrete Hom coefficient has continuous integer scalar action. -/
+local instance freeClassHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticRelationFreeClassHom Ω a ha P B)
+      (arithmeticRelationFreeClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticRelationFreeClassHom Ω a ha P B)
+    (arithmeticRelationFreeClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The original discrete class coefficient has continuous integer scalar action. -/
+local instance classHomTargetContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)
+      (arithmeticClassesModOutsideColimitRep ℚ Ω a ha).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)
+    (arithmeticClassesModOutsideColimitRep ℚ Ω a ha).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- Exact consumer retaining the actual original cocycle, relation morphism and coefficient maps. -/
+theorem regression_arithmeticRelationFreeClassHomCocycle_exists_coboundary
+    (c : continuousRepresentationCocyclesOne (arithmeticRelationFreeClassHom Ω a ha P B)) :
+    ∃ v : arithmeticRelationFreeClassHom Ω a ha P B,
+      ∀ g, (arithmeticRelationFreeClassHom Ω a ha P B).ρ g v - v = c.val g :=
+  arithmeticRelationFreeClassHomCocycle_exists_coboundary Ω a ha P B c
+
+end ArithmeticFreeClassHomCocycleConsumerAuxiliaryScope
+
+noncomputable section ArithmeticClassCocycleFiniteRelationConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance finiteClassRelationUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance finiteClassRelationStageAlgebra
+    (F : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a)) :
+    Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance finiteClassRelationHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- Exact consumer retaining the actual original cocycle, relation morphism and coefficient maps. -/
+theorem regression_arithmeticClassHomCocycle_exists_finite_relation_representative
+    [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientClassHom Ω a ha P B)) :
+    let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) →* Gal(P/ℚ) :=
+      AlgEquiv.restrictNormalHom P
+    let X := (originalRelationShortComplex B).map (Rep.resFunctor π)
+    let C := arithmeticClassesModOutsideColimitRep ℚ Ω a ha
+    ∃ v : arithmeticRelationFreeClassHom Ω a ha P B, ∃ φ : X.X₁ ⟶ C,
+      φ.hom.toLinearMap = (show X.X₂ →ₗ[ℤ] C from v).comp X.f.hom.toLinearMap ∧
+      (∀ g, (arithmeticRelationFreeClassHom Ω a ha P B).ρ g v - v =
+        (originalInternalHomPrecomposition C X.g).hom (c.val g)) ∧
+      ∃ N : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a),
+        ∃ hPN : P ≤ N,
+          letI : Algebra P N := (IntermediateField.inclusion hPN).toAlgebra
+          letI : Module P N := Algebra.toModule
+          letI : SMul P N := (IntermediateField.inclusion hPN).toAlgebra.toSMul
+          letI : IsScalarTower ℚ P N := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+          let τ : Gal(N/ℚ) →* Gal(P/ℚ) := AlgEquiv.restrictNormalHom P
+          ∃ η : originalRelationModule (Rep.res τ B) ⟶ arithmeticClassesModOutsideStageRep ℚ Ω a ha N,
+            ∀ r, (coefficientRepresentationColimitOf _
+              (arithmeticGlobalClassesModOutsideStageTransition ℚ Ω a ha) N).hom (η.hom r) =
+                φ.hom ((originalRelationGroupChange τ B).hom r) :=
+  arithmeticClassHomCocycle_exists_finite_relation_representative Ω a ha P B c
+
+end ArithmeticClassCocycleFiniteRelationConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceClassCocycleFiniteRelationConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceFiniteRelationUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceFiniteRelationStageAlgebra
+    (F : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a)) :
+    Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceFiniteRelationHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- Exact consumer retaining the actual original cocycle, relation morphism and coefficient maps. -/
+theorem regression_arithmeticSourceClassHomCocycle_exists_finite_relation_representative
+    [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) →* Gal(P/ℚ) :=
+      AlgEquiv.restrictNormalHom P
+    let X := (originalRelationShortComplex B).map (Rep.resFunctor π)
+    let C := arithmeticClassesModOutsideColimitRep ℚ Ω a ha
+    ∃ v : arithmeticRelationFreeClassHom Ω a ha P B, ∃ φ : X.X₁ ⟶ C,
+      φ.hom.toLinearMap = (show X.X₂ →ₗ[ℤ] C from v).comp X.f.hom.toLinearMap ∧
+      (∀ g, (arithmeticRelationFreeClassHom Ω a ha P B).ρ g v - v =
+        (originalInternalHomPrecomposition C X.g).hom
+          ((arithmeticSourceClassHomComparison ℚ Ω a ha (Rep.res π B)).hom (c.val g))) ∧
+      ∃ N : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a),
+        ∃ hPN : P ≤ N,
+          letI : Algebra P N := (IntermediateField.inclusion hPN).toAlgebra
+          letI : Module P N := Algebra.toModule
+          letI : SMul P N := (IntermediateField.inclusion hPN).toAlgebra.toSMul
+          letI : IsScalarTower ℚ P N := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+          let τ : Gal(N/ℚ) →* Gal(P/ℚ) := AlgEquiv.restrictNormalHom P
+          ∃ η : originalRelationModule (Rep.res τ B) ⟶ arithmeticClassesModOutsideStageRep ℚ Ω a ha N,
+            ∀ r, (coefficientRepresentationColimitOf _
+              (arithmeticGlobalClassesModOutsideStageTransition ℚ Ω a ha) N).hom (η.hom r) =
+                φ.hom ((originalRelationGroupChange τ B).hom r) :=
+  arithmeticSourceClassHomCocycle_exists_finite_relation_representative Ω a ha P B c
+
+end ArithmeticSourceClassCocycleFiniteRelationConsumerAuxiliaryScope
+
+noncomputable section ArithmeticEmbeddedRelationScalarConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω]
+  (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Keep the original arithmetic union's rational inclusion. -/
+local instance relationScalarPlacementUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+/-- Keep every original finite stage's displayed rational algebra. -/
+local instance relationScalarPlacementStageAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+/-- Exact consumer of the actual field transport and constructed scalar relation criterion. -/
+theorem regression_arithmeticClassRelation_exists_original_scalar_criterion
+    (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (B : Rep.{0} ℤ Gal(P/ℚ)) [Finite B] (hB : ∀ b : B, p • b = 0) :
+    ∃ F : OriginalUnramifiedGaloisStage (Ω := Ω) a, ∃ i : P →ₐ[ℚ] F.val,
+      (∀ x : P, (i x : Ω) = (x.val : Ω)) ∧
+      let BF := arithmeticOriginalStageRestrictedCoefficient Ω a P F i B
+      ∃ N : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+        ∃ hFN : F.val.toIntermediateField ≤ N.val.toIntermediateField,
+          letI : Algebra F.val N.val := (IntermediateField.inclusion hFN).toRingHom.toAlgebra
+          letI : IsScalarTower ℚ F.val N.val := IsScalarTower.of_algHom (IntermediateField.inclusion hFN)
+          let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+            (originalIntegerMap_ne_zero (L := N.val) a ha)
+          let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+          let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+          let BN := Rep.res (AlgEquiv.restrictNormalHom F.val : Gal(N.val/ℚ) →* Gal(F.val/ℚ)) BF
+          ∃ d : OriginalRelationPrimePairingData BN C p,
+            ∀ φ : originalRelationModule B ⟶ arithmeticClassesModOutsideStageRep ℚ Ω a ha P,
+              let ψ := arithmeticOriginalEnlargedRelationClassTransport Ω a ha P F i B N hFN φ
+              (∀ y, d.readout ψ y = 0) ↔
+                ∃ f : Rep.free ℤ Gal(N.val/ℚ) BN ⟶ C, originalRelationInclusion BN ≫ f = ψ :=
+  arithmeticClassRelation_exists_original_scalar_criterion Ω a ha P p hp2 hpa B hB
+
+end ArithmeticEmbeddedRelationScalarConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceClassScalarStageConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceScalarStageUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceScalarStageFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceScalarStageHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- Exact consumer of the actual field transport and constructed scalar relation criterion. -/
+theorem regression_arithmeticSourceClassHomCocycle_exists_scalar_relation_stage
+    [Finite B]
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (hB : ∀ b : B, p • b = 0)
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      ∃ F : OriginalUnramifiedGaloisStage (Ω := Ω) a, ∃ i : r.stage →ₐ[ℚ] F.val,
+        (∀ x : r.stage, (i x : Ω) = (x.val : Ω)) ∧
+        let BF := arithmeticOriginalStageRestrictedCoefficient Ω a r.stage F i
+          (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r)
+        ∃ L : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+          ∃ hFL : F.val.toIntermediateField ≤ L.val.toIntermediateField,
+            letI : Algebra F.val L.val := (IntermediateField.inclusion hFL).toRingHom.toAlgebra
+            letI : IsScalarTower ℚ F.val L.val := IsScalarTower.of_algHom (IntermediateField.inclusion hFL)
+            let T := originalExceptionalIntegerSupport L.val (algebraMap (𝓞 ℚ) (𝓞 L.val) a)
+              (originalIntegerMap_ne_zero (L := L.val) a ha)
+            let hT := originalExceptionalIntegerSupport_galoisStable L.val ℚ a ha
+            let C := originalIdeleClassesModOutsideRep ℚ L.val T hT
+            let BL := Rep.res (AlgEquiv.restrictNormalHom F.val : Gal(L.val/ℚ) →* Gal(F.val/ℚ)) BF
+            ∃ d : OriginalRelationPrimePairingData BL C p,
+              let ψ := arithmeticOriginalEnlargedRelationClassTransport Ω a ha r.stage F i
+                (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r) L hFL
+                  (arithmeticSourceClassRelationStageHom Ω a ha P B c r)
+              (∀ y, d.readout ψ y = 0) ↔
+                ∃ f : Rep.free ℤ Gal(L.val/ℚ) BL ⟶ C, originalRelationInclusion BL ≫ f = ψ :=
+  arithmeticSourceClassHomCocycle_exists_scalar_relation_stage Ω a ha P B p hp2 hpa hB c
+
+end ArithmeticSourceClassScalarStageConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceRelationDataValuesConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceDataRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceDataRegressionStageAlgebra
+    (F : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a)) :
+    Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceDataRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- Unfold the constructed data into the full original source-cocycle lift and finite-value contract. -/
+theorem regression_arithmeticSourceClassRelationData_values
+    [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) →* Gal(P/ℚ) :=
+      AlgEquiv.restrictNormalHom P
+    let X := (originalRelationShortComplex B).map (Rep.resFunctor π)
+    let C := arithmeticClassesModOutsideColimitRep ℚ Ω a ha
+    ∃ v : arithmeticRelationFreeClassHom Ω a ha P B, ∃ φ : X.X₁ ⟶ C,
+      φ.hom.toLinearMap = (show X.X₂ →ₗ[ℤ] C from v).comp X.f.hom.toLinearMap ∧
+      (∀ g, (arithmeticRelationFreeClassHom Ω a ha P B).ρ g v - v =
+        (originalInternalHomPrecomposition C X.g).hom
+          ((arithmeticSourceClassHomComparison ℚ Ω a ha (Rep.res π B)).hom (c.val g))) ∧
+      ∃ N : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a),
+        ∃ hPN : P ≤ N,
+          letI : Algebra P N := (IntermediateField.inclusion hPN).toAlgebra
+          letI : Module P N := Algebra.toModule
+          letI : SMul P N := (IntermediateField.inclusion hPN).toAlgebra.toSMul
+          letI : IsScalarTower ℚ P N := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+          let τ : Gal(N/ℚ) →* Gal(P/ℚ) := AlgEquiv.restrictNormalHom P
+          ∃ η : originalRelationModule (Rep.res τ B) ⟶ arithmeticClassesModOutsideStageRep ℚ Ω a ha N,
+            ∀ r, (coefficientRepresentationColimitOf _
+              (arithmeticGlobalClassesModOutsideStageTransition ℚ Ω a ha) N).hom (η.hom r) =
+                φ.hom ((originalRelationGroupChange τ B).hom r) := by
+  let r := Classical.choice (arithmeticSourceClassRelationData_nonempty Ω a ha P B c)
+  refine ⟨r.lift, r.relation, r.relation_eq, r.lift_coboundary, r.stage, r.le_stage, ?_⟩
+  letI : Algebra P r.stage := (IntermediateField.inclusion r.le_stage).toAlgebra
+  letI : Module P r.stage := Algebra.toModule
+  letI : SMul P r.stage := (IntermediateField.inclusion r.le_stage).toAlgebra.toSMul
+  letI : IsScalarTower ℚ P r.stage := IsScalarTower.of_algHom (IntermediateField.inclusion r.le_stage)
+  exact ⟨r.finiteRelation, r.finiteRelation_values⟩
+
+end ArithmeticSourceRelationDataValuesConsumerAuxiliaryScope
+
+noncomputable section ArithmeticConstructedSourceCupConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceCupRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceCupRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceCupRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- An actual source cocycle constructs the relation data and the equality
+of the literal cup and connecting maps; no relation witness is supplied. -/
+theorem regression_arithmeticSourceClassCocycle_cup_relation [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      ∀ x : arithmeticSourceRelationContinuousH1 Ω a P B,
+        arithmeticSourceRelationCupClass Ω a ha P B c x =
+          arithmeticSourceRelationConnectingClass Ω a ha P B r.relation x := by
+  let r := Classical.choice (arithmeticSourceClassRelationData_nonempty Ω a ha P B c)
+  exact ⟨r, arithmeticSourceClassRelationData_cup_toAlgebraic Ω a ha P B c r⟩
+
+end ArithmeticConstructedSourceCupConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceCupScalarStageConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceCupScalarRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceCupScalarRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceCupScalarRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The same constructed source relation gives the actual cup identity and the complete original scalar-stage criterion. -/
+theorem regression_arithmeticSourceClassCocycle_cup_scalar_stage
+    [Finite B]
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (hB : ∀ b : B, p • b = 0)
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      (∀ x : arithmeticSourceRelationContinuousH1 Ω a P B,
+        arithmeticSourceRelationCupClass Ω a ha P B c x =
+          arithmeticSourceRelationConnectingClass Ω a ha P B r.relation x) ∧
+      ∃ F : OriginalUnramifiedGaloisStage (Ω := Ω) a, ∃ i : r.stage →ₐ[ℚ] F.val,
+        (∀ x : r.stage, (i x : Ω) = (x.val : Ω)) ∧
+        let BF := arithmeticOriginalStageRestrictedCoefficient Ω a r.stage F i
+          (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r)
+        ∃ L : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+          ∃ hFL : F.val.toIntermediateField ≤ L.val.toIntermediateField,
+            letI : Algebra F.val L.val := (IntermediateField.inclusion hFL).toRingHom.toAlgebra
+            letI : IsScalarTower ℚ F.val L.val := IsScalarTower.of_algHom (IntermediateField.inclusion hFL)
+            let T := originalExceptionalIntegerSupport L.val (algebraMap (𝓞 ℚ) (𝓞 L.val) a)
+              (originalIntegerMap_ne_zero (L := L.val) a ha)
+            let hT := originalExceptionalIntegerSupport_galoisStable L.val ℚ a ha
+            let C := originalIdeleClassesModOutsideRep ℚ L.val T hT
+            let BL := Rep.res (AlgEquiv.restrictNormalHom F.val : Gal(L.val/ℚ) →* Gal(F.val/ℚ)) BF
+            ∃ d : OriginalRelationPrimePairingData BL C p,
+              let ψ := arithmeticOriginalEnlargedRelationClassTransport Ω a ha r.stage F i
+                (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r) L hFL
+                  (arithmeticSourceClassRelationStageHom Ω a ha P B c r)
+              (∀ y, d.readout ψ y = 0) ↔
+                ∃ f : Rep.free ℤ Gal(L.val/ℚ) BL ⟶ C, originalRelationInclusion BL ≫ f = ψ := by
+  let h := arithmeticSourceClassHomCocycle_exists_scalar_relation_stage Ω a ha P B p hp2 hpa hB c
+  let r := Classical.choose h
+  exact ⟨r, arithmeticSourceClassRelationData_cup_toAlgebraic Ω a ha P B c r,
+    Classical.choose_spec h⟩
+
+end ArithmeticSourceCupScalarStageConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceFiniteObstructionConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceInflationRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceInflationRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceInflationRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The original source cocycle constructs its own finite relation; the
+finite obstruction has exactly the displayed global colimit image. -/
+theorem regression_arithmeticSourceClassCocycle_finite_obstruction [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      let BN := arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r
+      let η := arithmeticSourceClassRelationStageHom Ω a ha P B c r
+      let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) →* Gal(r.stage/ℚ) :=
+        AlgEquiv.restrictNormalHom r.stage
+      let C := arithmeticClassesModOutsideStageRep ℚ Ω a ha r.stage
+      let j := coefficientRepresentationColimitOf _
+        (arithmeticGlobalClassesModOutsideStageTransition ℚ Ω a ha) r.stage
+      ∀ y : groupCohomology BN 1,
+    groupCohomology.map π j 2 ((originalRelationExtensionObstruction BN C η).hom y) =
+      (groupCohomology.functor ℤ Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) 2).map
+        ((Rep.resFunctor π).map η ≫ j)
+        (groupCohomology.δ (originalRelationGroupChange_shortExact π BN) 1 2 rfl
+          (groupCohomology.map π (𝟙 (Rep.res π BN)) 1 y)) := by
+  let r := Classical.choice (arithmeticSourceClassRelationData_nonempty Ω a ha P B c)
+  refine ⟨r, ?_⟩
+  let BN := arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r
+  let η := arithmeticSourceClassRelationStageHom Ω a ha P B c r
+  let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) →* Gal(r.stage/ℚ) :=
+    AlgEquiv.restrictNormalHom r.stage
+  let C := arithmeticClassesModOutsideStageRep ℚ Ω a ha r.stage
+  let j := coefficientRepresentationColimitOf _
+    (arithmeticGlobalClassesModOutsideStageTransition ℚ Ω a ha) r.stage
+  change ∀ y : groupCohomology BN 1,
+    groupCohomology.map π j 2 ((originalRelationExtensionObstruction BN C η).hom y) =
+      (groupCohomology.functor ℤ Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) 2).map
+        ((Rep.resFunctor π).map η ≫ j)
+        (groupCohomology.δ (originalRelationGroupChange_shortExact π BN) 1 2 rfl
+          (groupCohomology.map π (𝟙 (Rep.res π BN)) 1 y))
+  intro y
+  exact arithmeticFiniteRelationObstruction_inflation ℚ Ω a ha r.stage BN η y
+
+end ArithmeticSourceFiniteObstructionConsumerAuxiliaryScope
+
+noncomputable section ArithmeticConstructedSourceFiniteCupConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceFiniteCupRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceFiniteCupRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceFiniteCupRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The actual source cocycle constructs the relation data used in the finite cup comparison. -/
+theorem regression_arithmeticSourceClassCocycle_finite_obstruction_cup [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B))
+    : ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+    letI : Algebra P r.stage := (IntermediateField.inclusion r.le_stage).toAlgebra
+    letI : Module P r.stage := (IntermediateField.inclusion r.le_stage).toAlgebra.toModule
+    letI : SMul P r.stage := (IntermediateField.inclusion r.le_stage).toAlgebra.toSMul
+    letI : IsScalarTower ℚ P r.stage := IsScalarTower.of_algHom (IntermediateField.inclusion r.le_stage)
+    letI : IsScalarTower P r.stage (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+      IsScalarTower.of_algebraMap_eq' rfl
+    let π : Gal(originalUnramifiedGaloisUnion (Ω := Ω) a / ℚ) →* Gal(r.stage/ℚ) :=
+      AlgEquiv.restrictNormalHom r.stage
+    let BN := arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r
+    let η := arithmeticSourceClassRelationStageHom Ω a ha P B c r
+    let C := arithmeticClassesModOutsideStageRep ℚ Ω a ha r.stage
+    let j := coefficientRepresentationColimitOf _
+      (arithmeticGlobalClassesModOutsideStageTransition ℚ Ω a ha) r.stage
+    ∀ y : groupCohomology BN 1,
+      ∃ x : arithmeticSourceRelationContinuousH1 Ω a P B,
+        arithmeticSourceRelationCupClass Ω a ha P B c x =
+          groupCohomology.map π j 2 ((originalRelationExtensionObstruction BN C η).hom y) := by
+  let r := Classical.choice (arithmeticSourceClassRelationData_nonempty Ω a ha P B c)
+  exact ⟨r, arithmeticSourceClassRelationData_finite_obstruction_cup Ω a ha P B c r⟩
+
+end ArithmeticConstructedSourceFiniteCupConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceContinuousFiniteCupConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceContinuousFiniteRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceContinuousFiniteRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceContinuousFiniteRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The original source cocycle constructs its relation and realizes every
+finite algebraic H1 input with the same continuous cup and finite obstruction. -/
+theorem regression_arithmeticSourceCocycle_every_finite_continuous_cup [Finite B]
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      ∀ y : groupCohomology (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r) 1,
+        ∃ v : arithmeticSourceRelationStageContinuousH1 Ω a ha P B c r,
+          arithmeticSourceRelationStageH1ToAlgebraic Ω a ha P B c r v = y ∧
+          arithmeticSourceRelationContinuousCupClass Ω a ha P B c
+            (arithmeticSourceRelationFiniteContinuousH1Inflation Ω a ha P B c r v) =
+            arithmeticSourceRelationFiniteContinuousObstruction Ω a ha P B c r v ∧
+          arithmeticSourceRelationContinuousH2ToAlgebraic Ω a ha
+            (arithmeticSourceRelationFiniteContinuousObstruction Ω a ha P B c r v) =
+            arithmeticSourceRelationFiniteObstructionImage Ω a ha P B c r y := by
+  let r := Classical.choice (arithmeticSourceClassRelationData_nonempty Ω a ha P B c)
+  refine ⟨r, ?_⟩
+  intro y
+  obtain ⟨v, hv⟩ := arithmeticSourceRelationStageH1ToAlgebraic_surjective Ω a ha P B c r y
+  refine ⟨v, hv, arithmeticSourceClassRelationData_finite_continuous_cup Ω a ha P B c r v, ?_⟩
+  rw [arithmeticSourceRelationFiniteContinuousObstruction_toAlgebraic, hv]
+
+end ArithmeticSourceContinuousFiniteCupConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceScalarContinuousCupConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceScalarCupRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceScalarCupRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceScalarCupRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The actual source cocycle constructs one enlarged scalar criterion
+and realizes every one of its algebraic H1 inputs with the same original
+continuous cup and literal algebraic obstruction image. -/
+theorem regression_arithmeticSourceCocycle_scalar_criterion_continuous_cup
+    [Finite B]
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (hB : ∀ b : B, p • b = 0)
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      ∃ F : OriginalUnramifiedGaloisStage (Ω := Ω) a, ∃ i : r.stage →ₐ[ℚ] F.val,
+        ∃ hi : ∀ x : r.stage, (i x : Ω) = (x.val : Ω),
+        let BF := arithmeticOriginalStageRestrictedCoefficient Ω a r.stage F i
+          (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r)
+        ∃ L : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+          ∃ hFL : F.val.toIntermediateField ≤ L.val.toIntermediateField,
+            r.stage ≤ originalUnramifiedStageInUnion a L ∧
+            letI : Algebra F.val L.val := (IntermediateField.inclusion hFL).toRingHom.toAlgebra
+            letI : IsScalarTower ℚ F.val L.val := IsScalarTower.of_algHom (IntermediateField.inclusion hFL)
+            let T := originalExceptionalIntegerSupport L.val (algebraMap (𝓞 ℚ) (𝓞 L.val) a)
+              (originalIntegerMap_ne_zero (L := L.val) a ha)
+            let hT := originalExceptionalIntegerSupport_galoisStable L.val ℚ a ha
+            let C := originalIdeleClassesModOutsideRep ℚ L.val T hT
+            let BL := Rep.res (AlgEquiv.restrictNormalHom F.val : Gal(L.val/ℚ) →* Gal(F.val/ℚ)) BF
+            ∃ d : OriginalRelationPrimePairingData BL C p,
+              let ψ := arithmeticOriginalEnlargedRelationClassTransport Ω a ha r.stage F i
+                (arithmeticSourceClassRelationStageCoefficient Ω a ha P B c r) L hFL
+                  (arithmeticSourceClassRelationStageHom Ω a ha P B c r)
+              ((∀ y, d.readout ψ y = 0) ↔
+                ∃ f : Rep.free ℤ Gal(L.val/ℚ) BL ⟶ C, originalRelationInclusion BL ≫ f = ψ) ∧
+              ∀ y : groupCohomology BL 1,
+                ∃ v : arithmeticSourceScalarStageContinuousH1 Ω a ha P B c r F i L hFL,
+                  arithmeticSourceScalarStageH1ToAlgebraic Ω a ha P B c r F i L hFL v = y ∧
+                  arithmeticSourceRelationContinuousCupClass Ω a ha P B c
+                    (arithmeticSourceScalarContinuousH1Inflation Ω a ha P B c r F i L hFL hi v) =
+                    arithmeticSourceScalarContinuousObstruction Ω a ha P B c r F i L hFL v ∧
+                  arithmeticSourceRelationContinuousH2ToAlgebraic Ω a ha
+                    (arithmeticSourceScalarContinuousObstruction Ω a ha P B c r F i L hFL v) =
+                    arithmeticSourceScalarObstructionImage Ω a ha P B c r F i L hFL y := by
+  obtain ⟨r, F, i, hi, L, hFL, hle, d, hd⟩ :=
+    arithmeticSourceClassHomCocycle_exists_scalar_stage_in_union Ω a ha P B p hp2 hpa hB c
+  refine ⟨r, F, i, hi, L, hFL, hle, d, hd, ?_⟩
+  intro y
+  obtain ⟨v, hv⟩ := arithmeticSourceScalarStageH1ToAlgebraic_surjective Ω a ha P B c r F i L hFL y
+  refine ⟨v, hv, arithmeticSourceClassRelationData_scalar_continuous_cup Ω a ha P B c r F i L hFL hi v, ?_⟩
+  rw [arithmeticSourceScalarContinuousObstruction_toAlgebraic, hv]
+
+end ArithmeticSourceScalarContinuousCupConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceScalarSylowClassConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceSylowClassRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  (originalUnramifiedGaloisUnion (Ω := Ω) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceSylowClassRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ Ω a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceSylowClassRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- The actual source cocycle constructs its relation. At every
+embedded and enlarged scalar stage, the same obstruction is detected by
+a full-class element over an actual prime-power field
+extension. No mixed-degree normalization premise is supplied. -/
+theorem regression_arithmeticSourceCocycle_scalar_sylow_full_class [Finite B]
+    (p : ℕ) [Fact p.Prime] (hB : ∀ b : B, p • b = 0)
+    (c : continuousRepresentationCocyclesOne (arithmeticFiniteCoefficientSourceClassHom Ω a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData Ω a ha P B c,
+      ∀ (F : OriginalUnramifiedGaloisStage (Ω := Ω) a) (i : r.stage →ₐ[ℚ] F.val)
+        (L : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+        (hFL : F.val.toIntermediateField ≤ L.val.toIntermediateField)
+        (S : Sylow p Gal(L.val/ℚ)),
+          ∃ t : ℕ,
+            Module.finrank (IntermediateField.fixedField (S : Subgroup Gal(L.val/ℚ))) L.val = p ^ t ∧
+            ∀ y : groupCohomology (arithmeticSourceScalarStageCoefficient Ω a ha P B c r F i L hFL) 1,
+              let BL := arithmeticSourceScalarStageCoefficient Ω a ha P B c r F i L hFL
+              let C := arithmeticOriginalStageClassRep Ω a ha L
+              let ψ := arithmeticSourceScalarStageRelationTransport Ω a ha P B c r F i L hFL
+              (originalRelationExtensionObstruction BL C ψ).hom y = 0 ↔
+                arithmeticSourceScalarSylowClass Ω a ha P B c r F i L hFL p S y = 0 := by
+  let r := Classical.choice (arithmeticSourceClassRelationData_nonempty Ω a ha P B c)
+  refine ⟨r, ?_⟩
+  intro F i L hFL S
+  obtain ⟨t, ht⟩ := originalScalarStage_sylow_fixedField_degree Ω a L p S
+  refine ⟨t, ht, ?_⟩
+  intro y
+  exact arithmeticSourceScalarObstruction_eq_zero_iff_sylowClass Ω a ha P B c r F i L hFL p S hB y
+
+end ArithmeticSourceScalarSylowClassConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSourceScalarNormalizedReadoutConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat
+variable (a : 𝓞 ℚ) (ha : a ≠ 0)
+
+/-- Use the original arithmetic union inclusion. -/
+local instance sourceNormalizedReadoutRegressionUnionAlgebra : Algebra ℚ (originalUnramifiedGaloisUnion (Ω := AlgebraicClosure ℚ) a) :=
+  (originalUnramifiedGaloisUnion (Ω := AlgebraicClosure ℚ) a).algebra'
+
+variable [DecidableEq (FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := AlgebraicClosure ℚ) a))]
+  (P : FiniteGaloisIntermediateField ℚ (originalUnramifiedGaloisUnion (Ω := AlgebraicClosure ℚ) a))
+
+/-- Use the actual finite stage inclusion. -/
+local instance sourceNormalizedReadoutRegressionFiniteAlgebra {L : Type} [Field L] [Algebra ℚ L]
+    (F : FiniteGaloisIntermediateField ℚ L) : Algebra ℚ F := F.algebra'
+
+variable (B : Rep.{0} ℤ Gal(P/ℚ))
+
+variable [TopologicalSpace (arithmeticClassesModOutsideColimitRep ℚ (AlgebraicClosure ℚ) a ha)]
+  [DiscreteTopology (arithmeticClassesModOutsideColimitRep ℚ (AlgebraicClosure ℚ) a ha)]
+  [TopologicalSpace (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B)]
+  [DiscreteTopology (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B)]
+
+/-- Integer scalar multiplication on the original discrete Hom is continuous. -/
+local instance sourceNormalizedReadoutRegressionHomContinuousSMul :
+    @ContinuousSMul ℤ (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B)
+      (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B).hV2.toSMul inferInstance inferInstance :=
+  @ContinuousSMul.mk ℤ (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B)
+    (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B).hV2.toSMul _ _ continuous_of_discreteTopology
+
+/-- Every actual source Hom cocycle constructs its relation; the original
+scalar obstruction at every embedded enlarged stage is detected by the
+proved canonical normalized class invariant of its realized Sylow class. -/
+theorem regression_arithmeticSourceCocycle_scalar_normalized_readout [Finite B]
+    (p : ℕ) [Fact p.Prime] (hpa : (p : 𝓞 ℚ) ∣ a) (hB : ∀ b : B, p • b = 0)
+    (c : continuousRepresentationCocyclesOne
+      (arithmeticFiniteCoefficientSourceClassHom (AlgebraicClosure ℚ) a ha P B)) :
+    ∃ r : ArithmeticSourceClassRelationData (AlgebraicClosure ℚ) a ha P B c,
+      ∀ (F : OriginalUnramifiedGaloisStage (Ω := AlgebraicClosure ℚ) a) (i : r.stage →ₐ[ℚ] F.val)
+        (L : OriginalUnramifiedGaloisStage (Ω := AlgebraicClosure ℚ) a)
+        (hFL : F.val.toIntermediateField ≤ L.val.toIntermediateField)
+        (S : Sylow p Gal(L.val/ℚ))
+        (y : groupCohomology
+          (arithmeticSourceScalarStageCoefficient (AlgebraicClosure ℚ) a ha P B c r F i L hFL) 1),
+          let BL := arithmeticSourceScalarStageCoefficient (AlgebraicClosure ℚ) a ha P B c r F i L hFL
+          let C := arithmeticOriginalStageClassRep (AlgebraicClosure ℚ) a ha L
+          let ψ := arithmeticSourceScalarStageRelationTransport (AlgebraicClosure ℚ) a ha P B c r F i L hFL
+          (originalRelationExtensionObstruction BL C ψ).hom y = 0 ↔
+            arithmeticSourceScalarNormalizedReadout a ha P B c r F i L hFL p hpa S y = 0 := by
+  let r := Classical.choice
+    (arithmeticSourceClassRelationData_nonempty (AlgebraicClosure ℚ) a ha P B c)
+  refine ⟨r, ?_⟩
+  intro F i L hFL S y
+  exact arithmeticSourceScalarObstruction_eq_zero_iff_normalizedReadout
+    a ha P B c r F i L hFL p hpa S hB y
+
+end ArithmeticSourceScalarNormalizedReadoutConsumerAuxiliaryScope
+
+noncomputable section ArithmeticNonNormalBaseChangeTotalConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+
+/-- Inside the actual finite Galois upper field, every intermediate field
+has the canonical total restriction formula. Its upper Galois structure is
+derived, and its normality over the lower field is not a premise. -/
+theorem regression_actual_arithmetic_intermediate_idele_total
+    (a : 𝓞 ℚ) (K E M : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ K] [FiniteDimensional ℚ E] [FiniteDimensional ℚ M]
+    (hKE : K ≤ E) (hEM : E ≤ M)
+    [hGalKM : letI : Algebra K M := (IntermediateField.inclusion (hKE.trans hEM)).toAlgebra
+      IsGalois K M] :
+    ∃ hGalEM : (letI : Algebra E M := (IntermediateField.inclusion hEM).toAlgebra; IsGalois E M),
+      letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+      letI : Module K E := Algebra.toModule
+      ∀ x : rationalArithmeticRelativeStageIdeleH2 a K M (hKE.trans hEM),
+        rationalArithmeticRelativeStageIdeleTotalInvariant (hGal := hGalEM) a E M hEM
+          (rationalArithmeticRelativeStageIdeleBaseChange a K E M M hKE (hKE.trans hEM) hEM le_rfl x) =
+        Module.finrank K E • rationalArithmeticRelativeStageIdeleTotalInvariant a K M (hKE.trans hEM) x := by
+  letI : Algebra K E := (IntermediateField.inclusion hKE).toAlgebra
+  letI : Module K E := Algebra.toModule
+  letI : SMul K E := ((IntermediateField.inclusion hKE).toAlgebra).toSMul
+  letI : Algebra E M := (IntermediateField.inclusion hEM).toAlgebra
+  letI : Module E M := Algebra.toModule
+  letI : SMul E M := ((IntermediateField.inclusion hEM).toAlgebra).toSMul
+  letI : Algebra K M := (IntermediateField.inclusion (hKE.trans hEM)).toAlgebra
+  letI : Module K M := Algebra.toModule
+  letI : SMul K M := ((IntermediateField.inclusion (hKE.trans hEM)).toAlgebra).toSMul
+  letI : IsScalarTower K E M := IsScalarTower.of_algebraMap_eq' rfl
+  letI : IsGalois K M := hGalKM
+  let hGalEM : IsGalois E M := IsGalois.tower_top_of_isGalois K E M
+  exact ⟨hGalEM, fun x => rationalArithmeticRelativeStageIdeleBaseChange_total_in_galois_overfield
+    (hGalKM := hGalKM) (hGalEM := hGalEM)
+    a K E M hKE hEM x⟩
+
+end ArithmeticNonNormalBaseChangeTotalConsumerAuxiliaryScope
+
 end Dubon2026.SemanticRegression

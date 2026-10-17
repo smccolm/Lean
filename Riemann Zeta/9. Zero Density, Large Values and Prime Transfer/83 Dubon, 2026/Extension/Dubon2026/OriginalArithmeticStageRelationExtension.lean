@@ -5,11 +5,11 @@ import Dubon2026.ArithmeticClassesModOutsideH1
 
 /-! # The constructed arithmetic stage realizes the relation criterion
 
-The norm tower and actual coefficient restriction now feed the same
-relation-extension theorem. Its only remaining class-field input is a
-full-order original H2 element at the constructed enlarged stage. This
-is the precise outstanding arithmetic premise on DUB-17's class/Ext,
-reverse H1 localization, dual Selmer and patching dependency chain.
+The norm tower and actual coefficient restriction feed the same
+relation-extension theorem. This interface takes a full-order original H2
+element at the constructed stage. OriginalArithmeticConstructedRelationExtension
+now derives that input at this same stage. Continuous/source comparisons,
+reverse H1 localization, dual Selmer and patching remain on DUB-17's chain.
 -/
 namespace Dubon2026
 noncomputable section

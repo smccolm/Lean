@@ -4,8 +4,10 @@ import Dubon2026.OriginalFiniteRelationAcyclicity
 
 Use the actual connecting isomorphism and coefficient map. Extension
 through the free cover kills this obstruction by the original exact
-sequence. Its converse for the normalized arithmetic class coefficient
-is still the required finite class/Ext duality theorem on DUB-17's route.
+sequence. OriginalArithmeticConstructedRelationExtension proves its
+converse at a constructed arithmetic stage. The scalar readout and its
+extension kernel are assembled in OriginalArithmeticRelationScalarCriterion;
+continuous/source-local duality comparisons remain on DUB-17's route.
 -/
 namespace Dubon2026
 noncomputable section

@@ -7,7 +7,8 @@ The existing original full-class/quotient isomorphism, subgroup H1
 vanishing and restriction-generator theorem discharge all finite class
 data from a single full-order original idele-class H2 element. DUB-17's
 relation step therefore needs no completion-normalized class-system
-premise. Constructing that element at the enlarged stage remains open.
+premise. OriginalRationalFullOrderClass now constructs that element for
+every rational finite Galois field, including the actual enlarged stage.
 -/
 namespace Dubon2026
 noncomputable section
