@@ -14462,6 +14462,1270 @@
     {
       "path": "Extension/Dubon2026/ArithmeticPrimePowerNormalizedQuotientSystem.lean",
       "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationModuleSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteRelationModule.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteRelationAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationExtensionObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoefficientNormCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationNormObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeCoefficientCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationFreeCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationNormExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormQuotientCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationNormQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedSubgroupRetract.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPositiveCoinducedShifts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPositiveInflationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclicTwoDegreeVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientSubgroupPreimage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientSubgroupInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientSubgroupVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupTwoDegreeVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRepresentationNormTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupInvariantNorms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAugmentationSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalCocycleTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalSplittingSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalClassKilling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRegularSubgroupAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTrivialIntegerFirstVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteSplittingVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedInvariantNorms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAugmentationSubgroupSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAugmentationInvariantImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantConnectingKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAugmentationConnectingKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAugmentationFirstCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalSubgroupSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalTwoDegreeVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalPGroupVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalizedQuotientSplitting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticNormalizedFundamentalSplitting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalArbitraryFreeCoinduced.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNestedSubgroupNorms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormInvariantLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalArbitraryRelationSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantLiftFirstVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationKernelTwoDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalArbitraryPIDSubmodule.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalArbitraryRelationFree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupRelationKernelPreparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedNormKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormCoinvariantTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormCoinvariantExact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupNormCoinvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFreeHomologyVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinvariantNormMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalHomologyFirstFromCoinvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupFirstHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalScalarReductionSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupFixedVector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalScalarReductionHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupCoinvariantDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntegralPrimeCoinvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoefficientKernelSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoefficientRangeQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeCoinvariantSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalKernelCoinvariantVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedLinearLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinvariantSectionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeCoinvariantIsomorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeCoinvariantSection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeCoinducedClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeReductionClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedPointCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedInternalHomMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedInternalHomIso.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomScalarReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomScalarExact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomCoinducedTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalScalarCohomologyLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomSplitting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntegralInternalHomVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupRelationKernelProjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomCoinducedTarget.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalProjectiveTargetInternalHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomShortExact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupInternalHomAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPGroupInternalHomNorms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCharacterNormDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCharacterNormQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCharacterChainEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCharacterHomologyDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCharacterHomologyFunctionals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCharacterFirstDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRationalCharacterDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRationalCharacterSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRationalHomCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntegralCharacterDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLatticeIntegralDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormHomologyBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormWitnessCoinvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoSequenceNormHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomNormHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomNormQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalHomologyWitness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantLinearExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIntegralInvariantNormCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedLatticeShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInternalHomPrecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedContravariantHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedEquivariantExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedExtensionDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalDoubleConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoefficientNormComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoinducedNormPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoefficientConnectingNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalDoubleShiftDivisibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalConverseNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalNormQuotientInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalRelationCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassQuotientNormComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassQuotientInvariantNormDivisibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoSequenceHomologyNormLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalHomologySurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalHomologyNormUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalHomologyWitnessLinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalNormHomologyEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTrivialDualHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalAbelianNormIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTrivialSourceInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantNormQuotientEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullClassNormQuotientComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullClassAbelianNormIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnramifiedUnitNormGeneral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullSupportPowerIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalOutsideUnitNormContainment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportedPowerDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassPowerOutsideComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullSupportNormEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInertiaUnitRadicalFixed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSUnitKummerUnramified.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSUnitKummerNormField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalHomologyGroupChangeNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalHomologyCoinvariantGroupChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormHomologySubgroupTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalSubgroupNormHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTrivialHomologyNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTrivialDualHomologyNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFixedFieldNormTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSubgroupTraceEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantAbelianTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullClassAbelianNormMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFixedFieldNormPreimage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrescribedNormSubfield.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAugmentationGroupChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalTwistComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalClassCochainComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalGroupChangeSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormHomologySubgroupDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFundamentalNormGroupChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantAbelianGroupChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldSubgroupCohomologyBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicSubgroupCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicFundamentalAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionClassMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalizedCompletionCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalizedCompletionNormMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalizedCompletionNormSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSingleUnitOutsideClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalOutsideClassRelativeTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionUnitNormImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicGroupNormValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicIntegralNormRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInertiaFixedField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicInertiaNormRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInvariantTraceNormClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicIntegralRelativeTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalDecompositionInertiaNormal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAdicInertiaNormImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInertiaOutsideNormImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFullClassSpecifiedNormMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFixedFieldInertiaUnramified.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionNormComparisonClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrescribedNormInertiaField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrescribedSupportNormField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalOutsideClassAntitone.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportReductionNormField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSUnitKummerSupportReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormFieldTowerDivisibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalKummerNormSupportChoice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormFieldUnramifiedPlacement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormFieldStageNormRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalEmbeddedNormFieldStageRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalOutsideClassNormDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormFieldBaseDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnrestrictedGaloisUnion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnrestrictedNormalizedClassSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnrestrictedKummerNormField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnrestrictedNumberFieldRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalDegreeOneNormFieldTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRationalNormFieldExistence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalConstructedStageNormRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCyclotomicNormDegreeStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeDegreeStageNormRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticEnlargedInvariantNormRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteInternalHomFirstVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteFundamentalConverseNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteFundamentalRelationCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteQuotientRelationCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimitiveRootNormBase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormRootsAboveStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassQuotientKernelNormRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalArithmeticKernelNormTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalClassH2TraceInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGaloisKernelCoefficientTriviality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalStageKernelCoefficientAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteInvariantNorms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCohomologySylowDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteNormHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteInternalHomNormHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteFundamentalHomologyWitness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteFundamentalNormHomologyEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteQuotientNormHomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCircleFiniteCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCircleFiniteCyclicEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalLatticeDualHomologyFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteFundamentalH2Surjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteRelationH2Surjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientRelationObstructionSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNormalSubgroupInducedEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInducedFiniteCoefficientSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPresentationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationHorseshoe.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationNormDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationObstructionDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInducedRelationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientInducedRelationDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInducedRelationAcyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInducedRelationH2Detection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRestrictedFundamentalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInducedRelationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientInducedRelationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimeTorsionFunctionalExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPrimeCoefficientCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRelationDevissage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientNontrivialRelationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteClassRelationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalQuotientRelationFromFullOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalArithmeticStageRelationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCircleElementCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwoPowerCyclotomicCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalCircleFiniteSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclotomicConjugationPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwoPowerCyclotomicComplexSubfield.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalIndexTwoDecompositionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TwoPowerCyclicSubfieldLocalDegrees.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoPrimaryLocalDegreeStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTotallyComplexH2Detection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTotallyComplexGlobalH2Killing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoPrimaryStageComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoPrimaryGlobalKillingStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAlgebraicContinuousInflationMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalNestedStageContinuousInflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoPrimaryCyclicDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoPrimaryContinuousDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalTwoPrimaryUnramifiedCyclicStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/TauCetiReuse/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/TauCetiReuse/ATTRIBUTION.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCyclicSubfieldNormedUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclicSubfieldNormedReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclotomicPrimeNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldCyclicSubfieldNormKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldPrimeReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldPrimeCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeEmbeddedCyclotomicFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldNaturalAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldConstructedNaturalAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldFixedStageAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldQuotientAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PrimitiveRootQuotientCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldOrderZeroCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldNormalizedResidual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoSignedResidualReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldPrincipalCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteLocalStageMonotone.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticCyclotomicContainingStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticSubfieldRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticPrincipalCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticContainingEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/EmbeddedNormalGaloisRestrictionCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticContainingRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticContainingCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticContainingPrincipalCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicContainingFieldAway.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteLocalRestrictionTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicContainingAwayRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicContainingSignedProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticContainingPrincipalProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalNormalizedResidualAwayOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticContainingNormalizedResidual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticOriginalPrincipalProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRealCyclotomicRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRealSubfieldRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticActualPrincipalProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRealComplexPeriodSign.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalRealH2Invariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteRealCarryInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticContainingAwayTriviality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoCyclicSubfieldSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticPrincipalInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTwoArithmeticPrincipalPrimeSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRealUnitH2Inflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTwoPrimaryCarryInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalFiniteGaloisImageContainment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTwoPrimaryCyclicFiniteStage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTwoPrimaryCyclicCarry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTwoPrimaryInvariantSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimePowerUnitInvariantSum.lean",
+      "role": "Extension"
     }
   ],
   "statusDocuments": [
@@ -17899,7 +19163,321 @@
     "OriginalQuotientCompletionRestrictions",
     "ArithmeticRelativeOutsideClassSupport",
     "OriginalFiniteNormalizedQuotientSystem",
-    "ArithmeticPrimePowerNormalizedQuotientSystem"
+    "ArithmeticPrimePowerNormalizedQuotientSystem",
+    "OriginalRelationModuleSequence",
+    "OriginalFiniteRelationModule",
+    "OriginalFiniteRelationAcyclicity",
+    "OriginalRelationExtensionObstruction",
+    "OriginalCoefficientNormCohomology",
+    "OriginalRelationNormObstruction",
+    "OriginalPrimeCoefficientCoordinates",
+    "OriginalRelationFreeCoordinates",
+    "OriginalRelationNormExtension",
+    "OriginalNormQuotientCohomology",
+    "OriginalRelationNormQuotient",
+    "OriginalCoinducedSubgroupRetract",
+    "OriginalPositiveCoinducedShifts",
+    "OriginalPositiveInflationComparison",
+    "OriginalCyclicTwoDegreeVanishing",
+    "OriginalQuotientSubgroupPreimage",
+    "OriginalQuotientSubgroupInvariants",
+    "OriginalQuotientSubgroupVanishing",
+    "OriginalPGroupTwoDegreeVanishing",
+    "OriginalRepresentationNormTower",
+    "OriginalPGroupInvariantNorms",
+    "OriginalAugmentationSequence",
+    "OriginalFundamentalCocycleTwist",
+    "OriginalFundamentalSplittingSequence",
+    "OriginalFundamentalClassKilling",
+    "OriginalRegularSubgroupAcyclicity",
+    "OriginalTrivialIntegerFirstVanishing",
+    "OriginalFiniteSplittingVanishing",
+    "OriginalCoinducedInvariantNorms",
+    "OriginalAugmentationSubgroupSequence",
+    "OriginalAugmentationInvariantImage",
+    "OriginalInvariantConnectingKernel",
+    "OriginalAugmentationConnectingKernel",
+    "OriginalAugmentationFirstCardinality",
+    "OriginalFundamentalSubgroupSequence",
+    "OriginalFundamentalTwoDegreeVanishing",
+    "OriginalFundamentalPGroupVanishing",
+    "OriginalNormalizedQuotientSplitting",
+    "ArithmeticNormalizedFundamentalSplitting",
+    "OriginalArbitraryFreeCoinduced",
+    "OriginalNestedSubgroupNorms",
+    "OriginalNormInvariantLifting",
+    "OriginalArbitraryRelationSubgroup",
+    "OriginalInvariantLiftFirstVanishing",
+    "OriginalRelationKernelTwoDegree",
+    "OriginalArbitraryPIDSubmodule",
+    "OriginalArbitraryRelationFree",
+    "OriginalPGroupRelationKernelPreparation",
+    "OriginalCoinducedNormKernel",
+    "OriginalNormCoinvariantTransfer",
+    "OriginalNormCoinvariantExact",
+    "OriginalPGroupNormCoinvariants",
+    "OriginalFreeHomologyVanishing",
+    "OriginalCoinvariantNormMap",
+    "OriginalHomologyFirstFromCoinvariants",
+    "OriginalPGroupFirstHomology",
+    "OriginalScalarReductionSequence",
+    "OriginalPGroupFixedVector",
+    "OriginalScalarReductionHomology",
+    "OriginalPGroupCoinvariantDetection",
+    "OriginalIntegralPrimeCoinvariants",
+    "OriginalCoefficientKernelSequence",
+    "OriginalCoefficientRangeQuotient",
+    "OriginalPrimeCoinvariantSurjectivity",
+    "OriginalKernelCoinvariantVanishing",
+    "OriginalCoinducedLinearLift",
+    "OriginalCoinvariantSectionComparison",
+    "OriginalPrimeCoinvariantIsomorphism",
+    "OriginalPrimeCoinvariantSection",
+    "OriginalPrimeCoinducedClassification",
+    "OriginalPrimeReductionClassification",
+    "OriginalCoinducedPointCoordinates",
+    "OriginalCoinducedInternalHomMaps",
+    "OriginalCoinducedInternalHomIso",
+    "OriginalInternalHomScalarReduction",
+    "OriginalInternalHomScalarExact",
+    "OriginalInternalHomCoinducedTransfer",
+    "OriginalScalarCohomologyLifting",
+    "OriginalInternalHomSplitting",
+    "OriginalIntegralInternalHomVanishing",
+    "OriginalPGroupRelationKernelProjective",
+    "OriginalInternalHomCoinducedTarget",
+    "OriginalProjectiveTargetInternalHom",
+    "OriginalInternalHomShortExact",
+    "OriginalPGroupInternalHomAcyclicity",
+    "OriginalPGroupInternalHomNorms",
+    "OriginalCharacterNormDetection",
+    "OriginalCharacterNormQuotient",
+    "OriginalCharacterChainEvaluation",
+    "OriginalCharacterHomologyDescent",
+    "OriginalCharacterHomologyFunctionals",
+    "OriginalCharacterFirstDuality",
+    "OriginalRationalCharacterDuality",
+    "OriginalRationalCharacterSequence",
+    "OriginalRationalHomCohomology",
+    "OriginalIntegralCharacterDuality",
+    "OriginalLatticeIntegralDuality",
+    "OriginalNormHomologyBoundary",
+    "OriginalNormWitnessCoinvariants",
+    "OriginalTwoSequenceNormHomology",
+    "OriginalInternalHomNormHomology",
+    "OriginalInternalHomNormQuotient",
+    "OriginalFundamentalHomologyWitness",
+    "OriginalInvariantLinearExtension",
+    "OriginalIntegralInvariantNormCriterion",
+    "OriginalCoinducedLatticeShift",
+    "OriginalInternalHomPrecomposition",
+    "OriginalCoinducedContravariantHom",
+    "OriginalCoinducedEquivariantExtension",
+    "OriginalCoinducedExtensionDiagram",
+    "OriginalFundamentalDoubleConnecting",
+    "OriginalCoefficientNormComposition",
+    "OriginalCoinducedNormPullback",
+    "OriginalCoefficientConnectingNaturality",
+    "OriginalDoubleShiftDivisibility",
+    "OriginalFundamentalConverseNorm",
+    "OriginalFundamentalNormQuotientInjectivity",
+    "OriginalFundamentalRelationCriterion",
+    "OriginalClassQuotientNormComparison",
+    "OriginalClassQuotientInvariantNormDivisibility",
+    "OriginalTwoSequenceHomologyNormLift",
+    "OriginalFundamentalHomologySurjectivity",
+    "OriginalFundamentalHomologyNormUniqueness",
+    "OriginalFundamentalHomologyWitnessLinear",
+    "OriginalFundamentalNormHomologyEquiv",
+    "OriginalTrivialDualHomology",
+    "OriginalFundamentalAbelianNormIndex",
+    "OriginalTrivialSourceInvariants",
+    "OriginalInvariantNormQuotientEquiv",
+    "OriginalFullClassNormQuotientComparison",
+    "OriginalFullClassAbelianNormIndex",
+    "OriginalUnramifiedUnitNormGeneral",
+    "OriginalFullSupportPowerIndex",
+    "OriginalOutsideUnitNormContainment",
+    "OriginalSupportedPowerDecomposition",
+    "OriginalClassPowerOutsideComparison",
+    "OriginalFullSupportNormEquality",
+    "OriginalInertiaUnitRadicalFixed",
+    "OriginalSUnitKummerUnramified",
+    "OriginalSUnitKummerNormField",
+    "OriginalHomologyGroupChangeNaturality",
+    "OriginalHomologyCoinvariantGroupChange",
+    "OriginalNormHomologySubgroupTransfer",
+    "OriginalFundamentalSubgroupNormHomology",
+    "OriginalTrivialHomologyNaturality",
+    "OriginalTrivialDualHomologyNaturality",
+    "OriginalFixedFieldNormTrace",
+    "OriginalSubgroupTraceEvaluation",
+    "OriginalInvariantAbelianTrace",
+    "OriginalFullClassAbelianNormMap",
+    "OriginalFixedFieldNormPreimage",
+    "OriginalPrescribedNormSubfield",
+    "OriginalAugmentationGroupChange",
+    "OriginalFundamentalTwistComparison",
+    "OriginalFundamentalClassCochainComparison",
+    "OriginalFundamentalGroupChangeSequence",
+    "OriginalNormHomologySubgroupDiagram",
+    "OriginalFundamentalNormGroupChange",
+    "OriginalInvariantAbelianGroupChange",
+    "LocalFieldSubgroupCohomologyBound",
+    "OriginalAdicSubgroupCohomology",
+    "OriginalAdicFundamentalAcyclicity",
+    "OriginalCompletionClassMap",
+    "OriginalNormalizedCompletionCocycle",
+    "OriginalNormalizedCompletionNormMap",
+    "OriginalNormalizedCompletionNormSystem",
+    "OriginalSingleUnitOutsideClass",
+    "OriginalOutsideClassRelativeTrace",
+    "OriginalCompletionUnitNormImage",
+    "OriginalAdicGroupNormValuation",
+    "OriginalAdicIntegralNormRepresentative",
+    "OriginalInertiaFixedField",
+    "OriginalAdicInertiaNormRepresentatives",
+    "OriginalInvariantTraceNormClass",
+    "OriginalAdicIntegralRelativeTrace",
+    "OriginalDecompositionInertiaNormal",
+    "OriginalAdicInertiaNormImage",
+    "OriginalInertiaOutsideNormImage",
+    "OriginalFullClassSpecifiedNormMap",
+    "OriginalFixedFieldInertiaUnramified",
+    "OriginalCompletionNormComparisonClosure",
+    "OriginalPrescribedNormInertiaField",
+    "OriginalPrescribedSupportNormField",
+    "OriginalOutsideClassAntitone",
+    "OriginalSupportReductionNormField",
+    "OriginalSUnitKummerSupportReduction",
+    "OriginalNormFieldTowerDivisibility",
+    "OriginalKummerNormSupportChoice",
+    "OriginalNormFieldUnramifiedPlacement",
+    "OriginalNormFieldStageNormRoots",
+    "OriginalEmbeddedNormFieldStageRoots",
+    "OriginalOutsideClassNormDescent",
+    "OriginalNormFieldBaseDescent",
+    "OriginalUnrestrictedGaloisUnion",
+    "OriginalUnrestrictedNormalizedClassSystem",
+    "OriginalUnrestrictedKummerNormField",
+    "OriginalUnrestrictedNumberFieldRealization",
+    "OriginalDegreeOneNormFieldTower",
+    "OriginalRationalNormFieldExistence",
+    "OriginalConstructedStageNormRoots",
+    "OriginalCyclotomicNormDegreeStage",
+    "OriginalPrimeDegreeStageNormRoots",
+    "ArithmeticEnlargedInvariantNormRoots",
+    "OriginalFiniteInternalHomFirstVanishing",
+    "OriginalFiniteFundamentalConverseNorm",
+    "OriginalFiniteFundamentalRelationCriterion",
+    "OriginalFiniteQuotientRelationCriterion",
+    "OriginalPrimitiveRootNormBase",
+    "OriginalNormRootsAboveStage",
+    "OriginalClassQuotientKernelNormRoots",
+    "OriginalArithmeticKernelNormTower",
+    "OriginalClassH2TraceInjection",
+    "OriginalGaloisKernelCoefficientTriviality",
+    "OriginalStageKernelCoefficientAction",
+    "OriginalFiniteInvariantNorms",
+    "FiniteCohomologySylowDetection",
+    "OriginalFiniteNormHomology",
+    "OriginalFiniteInternalHomNormHomology",
+    "OriginalFiniteFundamentalHomologyWitness",
+    "OriginalFiniteFundamentalNormHomologyEquiv",
+    "OriginalFiniteQuotientNormHomology",
+    "RationalCircleFiniteCharacters",
+    "RationalCircleFiniteCyclicEmbedding",
+    "OriginalLatticeDualHomologyFinite",
+    "OriginalFiniteFundamentalH2Surjectivity",
+    "OriginalFiniteRelationH2Surjectivity",
+    "OriginalQuotientRelationObstructionSurjectivity",
+    "OriginalNormalSubgroupInducedEmbedding",
+    "OriginalInducedFiniteCoefficientSequence",
+    "OriginalPresentationComparison",
+    "OriginalRelationHorseshoe",
+    "OriginalRelationNormDecomposition",
+    "OriginalRelationObstructionDecomposition",
+    "OriginalInducedRelationComparison",
+    "OriginalQuotientInducedRelationDecomposition",
+    "OriginalInducedRelationAcyclicity",
+    "OriginalInducedRelationH2Detection",
+    "OriginalRestrictedFundamentalData",
+    "OriginalInducedRelationExtension",
+    "OriginalQuotientInducedRelationExtension",
+    "PrimeTorsionFunctionalExtension",
+    "OriginalPrimeCoefficientCohomology",
+    "OriginalRelationDevissage",
+    "OriginalQuotientNontrivialRelationExtension",
+    "OriginalFiniteClassRelationExtension",
+    "OriginalQuotientRelationFromFullOrder",
+    "OriginalArithmeticStageRelationExtension",
+    "RationalCircleElementCharacter",
+    "TwoPowerCyclotomicCharacter",
+    "RationalCircleFiniteSubgroup",
+    "CyclotomicConjugationPower",
+    "TwoPowerCyclotomicComplexSubfield",
+    "OriginalIndexTwoDecompositionDegree",
+    "TwoPowerCyclicSubfieldLocalDegrees",
+    "OriginalTwoPrimaryLocalDegreeStage",
+    "OriginalTotallyComplexH2Detection",
+    "OriginalTotallyComplexGlobalH2Killing",
+    "OriginalTwoPrimaryStageComparison",
+    "OriginalTwoPrimaryGlobalKillingStage",
+    "OriginalAlgebraicContinuousInflationMap",
+    "OriginalNestedStageContinuousInflation",
+    "OriginalTwoPrimaryCyclicDescent",
+    "OriginalTwoPrimaryContinuousDescent",
+    "OriginalTwoPrimaryUnramifiedCyclicStage",
+    "LocalFieldCyclicSubfieldNormedUniformizer",
+    "RationalPrimeCyclicSubfieldNormedReciprocity",
+    "RationalTwoCyclotomicPrimeNorm",
+    "LocalFieldCyclicSubfieldNormKernel",
+    "RationalTwoCyclicSubfieldPrimeReciprocity",
+    "RationalTwoCyclicSubfieldPrimeCancellation",
+    "RationalPrimeEmbeddedCyclotomicFrobenius",
+    "RationalTwoCyclicSubfieldNaturalAction",
+    "RationalTwoCyclicSubfieldConstructedNaturalAction",
+    "RationalTwoCyclicSubfieldFixedStageAction",
+    "RationalTwoCyclicSubfieldQuotientAction",
+    "PrimitiveRootQuotientCharacter",
+    "RationalTwoCyclicSubfieldOrderZeroCharacter",
+    "RationalTwoCyclicSubfieldNormalizedResidual",
+    "RationalTwoSignedResidualReduction",
+    "RationalTwoCyclicSubfieldPrincipalCharacter",
+    "ArithmeticFiniteLocalStageMonotone",
+    "RationalTwoArithmeticCyclotomicContainingStage",
+    "RationalTwoArithmeticSubfieldRestriction",
+    "RationalTwoArithmeticPrincipalCharacter",
+    "RationalTwoArithmeticContainingEmbedding",
+    "EmbeddedNormalGaloisRestrictionCharacter",
+    "RationalTwoArithmeticContainingRestriction",
+    "RationalTwoArithmeticContainingCharacter",
+    "RationalTwoArithmeticContainingPrincipalCharacter",
+    "ArithmeticCyclotomicContainingFieldAway",
+    "ArithmeticFiniteLocalRestrictionTower",
+    "ArithmeticCyclotomicContainingAwayRestriction",
+    "ArithmeticCyclotomicContainingSignedProduct",
+    "RationalTwoArithmeticContainingPrincipalProduct",
+    "RationalNormalizedResidualAwayOrder",
+    "ArithmeticContainingNormalizedResidual",
+    "RationalTwoArithmeticOriginalPrincipalProduct",
+    "ArithmeticRealCyclotomicRestriction",
+    "ArithmeticRealSubfieldRestriction",
+    "RationalTwoArithmeticActualPrincipalProduct",
+    "OriginalRealComplexPeriodSign",
+    "OriginalRealH2Invariant",
+    "ArithmeticFiniteRealCarryInvariant",
+    "ArithmeticContainingAwayTriviality",
+    "RationalTwoCyclicSubfieldSupport",
+    "RationalTwoArithmeticPrincipalInvariantSum",
+    "RationalTwoArithmeticPrincipalPrimeSum",
+    "ArithmeticRealUnitH2Inflation",
+    "ArithmeticTwoPrimaryCarryInvariantSum",
+    "OriginalFiniteGaloisImageContainment",
+    "ArithmeticTwoPrimaryCyclicFiniteStage",
+    "ArithmeticTwoPrimaryCyclicCarry",
+    "ArithmeticTwoPrimaryInvariantSum",
+    "ArithmeticPrimePowerUnitInvariantSum"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

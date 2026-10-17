@@ -1,0 +1,7 @@
+Tau Ceti contributors, Copyright (c) 2026. Apache-2.0.
+Repository: https://github.com/TauCetiProject/TauCeti
+Revision: 5f93ad556efb2f77494162e13d1e0c7ac37d5ff2
+Adapted sources: TauCeti/Data/ZMod/TwoPowerCharacter.lean and TauCeti/NumberTheory/NumberField/Cyclotomic/CyclicSubextension.lean.
+Native adaptations: TwoPowerCyclotomicCharacter.lean and TwoPowerCyclotomicComplexSubfield.lean.
+Changes: unchanged Lean 4.30.0 pins, pinned character extension and conjugation, native rational-circle finite-image cyclicity, and original arithmetic local-degree/global-cohomology consumers. No external code is an active package dependency.
+The source tree at this revision contains LICENSE and no top-level NOTICE file.

@@ -1078,4 +1078,2429 @@ theorem regression_original_arithmetic_quotient_explicit_generators
 
 end ArithmeticNormalizedQuotientConsumerAuxiliaryScope
 
+noncomputable section OriginalQuotientRelationConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+
+/-- At an actual finite arithmetic coefficient and original outside-unit class quotient, the literal relation sequence and its connecting map need no exactness, projectivity, lattice or acyclicity certificates. The converse extension criterion remains separate. -/
+theorem regression_original_quotient_relation_obstruction
+    (K L : Type) [Field K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (B : Rep ℤ Gal(L/K)) [Finite B] :
+    (originalRelationShortComplex B).ShortExact ∧
+    Projective (originalRelationShortComplex B).X₂ ∧
+    Module.Finite ℤ (originalRelationModule B) ∧
+    Module.Free ℤ (originalRelationModule B) ∧
+    IsIso (groupCohomology.δ (originalRelationShortComplex_shortExact B) 1 2 rfl) ∧
+    (∀ φ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS,
+      originalRelationExtensionObstruction B (originalIdeleClassesModOutsideRep K L S hS) φ = 0 ↔
+        (groupCohomology.functor ℤ Gal(L/K) 2).map φ = 0) ∧
+    (∀ (φ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS)
+      (χ : Rep.free ℤ Gal(L/K) B ⟶ originalIdeleClassesModOutsideRep K L S hS),
+      originalRelationInclusion B ≫ χ = φ →
+        originalRelationExtensionObstruction B (originalIdeleClassesModOutsideRep K L S hS) φ = 0) := by
+  exact ⟨originalRelationShortComplex_shortExact B,
+    originalRelationFreeCover_projective B, originalRelationModule_finite B,
+    originalRelationModule_free B, originalRelationConnecting_isIso B,
+    fun φ => originalRelationExtensionObstruction_zero_iff B _ φ,
+    fun φ χ hχ => originalRelationExtensionObstruction_zero_of_extension B _ φ χ hχ⟩
+
+end OriginalQuotientRelationConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientNormExtensionConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField BigOperators
+
+variable (K L : Type) [Field K] [Field L] [NumberField L]
+  [Algebra K L] [FiniteDimensional K L]
+
+/-- The original finite Galois group has its actual finite enumeration. -/
+local instance quotientNormGaloisFintype : Fintype (Gal(L/K)) := Fintype.ofFinite _
+
+/-- In the literal outside-unit quotient, prime torsion, trivial action, invariant norm divisibility and an actual additive norm witness construct an extension and kill the connecting obstruction. Arithmetic divisibility and the converse norm criterion are not assumed proved. -/
+theorem regression_original_quotient_norm_extension
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (p : ℕ) [Fact p.Prime]
+    (hnorm : ∀ c : originalIdeleClassesModOutsideRep K L S hS,
+      ∃ d : originalIdeleClassesModOutsideRep K L S hS,
+        (∀ g : Gal(L/K), (originalIdeleClassesModOutsideRep K L S hS).ρ g d = d) ∧
+        (∑ g : Gal(L/K), (originalIdeleClassesModOutsideRep K L S hS).ρ g c) = p • d)
+    (B : Rep ℤ Gal(L/K)) (hB : ∀ b : B, p • b = 0)
+    (htriv : ∀ (g : Gal(L/K)) (b : B), B.ρ g b = b)
+    (φ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS)
+    (ψ : originalRelationModule B →+ originalIdeleClassesModOutsideRep K L S hS)
+    (hφ : ∀ x : originalRelationModule B,
+      φ.hom x = ∑ g : Gal(L/K), (originalIdeleClassesModOutsideRep K L S hS).ρ g
+        (ψ ((originalRelationModule B).ρ g⁻¹ x))) :
+    (∃ χ : Rep.free ℤ Gal(L/K) B ⟶ originalIdeleClassesModOutsideRep K L S hS,
+      originalRelationInclusion B ≫ χ = φ) ∧
+    originalRelationExtensionObstruction B (originalIdeleClassesModOutsideRep K L S hS) φ = 0 := by
+  obtain ⟨χ, hχ⟩ := originalRelation_exists_extension_of_norm
+    (originalIdeleClassesModOutsideRep K L S hS) p hnorm B hB htriv φ ψ hφ
+  exact ⟨⟨χ, hχ⟩, originalRelationExtensionObstruction_zero_of_extension B _ φ χ hχ⟩
+
+end OriginalQuotientNormExtensionConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientNormMapConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField BigOperators
+
+variable (K L : Type) [Field K] [Field L] [NumberField L]
+  [Algebra K L] [FiniteDimensional K L]
+
+/-- Enumerate the actual finite Galois group for the literal norm. -/
+local instance quotientNormMapGaloisFintype : Fintype (Gal(L/K)) := Fintype.ofFinite _
+
+/-- For the original outside-unit quotient, the genuine obstruction is exactly the degree-two image of the norm class, and that class vanishes precisely when a genuine norm witness exists. Injectivity of the displayed map remains the substantive converse obligation. -/
+theorem regression_original_quotient_norm_map
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (B : Rep ℤ Gal(L/K)) [Finite B]
+    (φ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS) :
+    (originalRelationExtensionObstruction B (originalIdeleClassesModOutsideRep K L S hS) φ = 0 ↔
+      originalNormQuotientCohomologyMap (originalRelationModule B)
+        (originalIdeleClassesModOutsideRep K L S hS) 1 (Submodule.Quotient.mk φ) = 0) ∧
+    ((Submodule.Quotient.mk φ : OriginalCoefficientNormQuotient
+      (originalRelationModule B) (originalIdeleClassesModOutsideRep K L S hS)) = 0 ↔
+      ∃ η : originalRelationModule B →ₗ[ℤ] originalIdeleClassesModOutsideRep K L S hS,
+        ∀ x : originalRelationModule B,
+          φ.hom x = ∑ g : Gal(L/K), (originalIdeleClassesModOutsideRep K L S hS).ρ g
+            (η ((originalRelationModule B).ρ g⁻¹ x))) := by
+  exact ⟨originalRelationObstruction_zero_iff_norm_quotient_image_zero B _ φ,
+    originalCoefficientNormQuotient_mk_eq_zero_iff (originalRelationModule B) _ φ⟩
+
+end OriginalQuotientNormMapConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientPositiveConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+
+/-- Apply the two-degree criterion and the literal normal-quotient inflation comparison to coinduction of the actual outside-unit quotient. All subgroup vanishing inputs come from the original explicit coboundaries; this does not construct the separate fundamental-class splitting module. -/
+theorem regression_original_quotient_positive_inflation
+    (K L : Type) [Field K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (p : ℕ) [Fact p.Prime] (hG : IsPGroup p Gal(L/K))
+    (N : Subgroup Gal(L/K)) [N.Normal] (n : ℕ) :
+    let A := originalCoinducedFunctionRep (originalIdeleClassesModOutsideRep K L S hS)
+    Limits.IsZero (groupCohomology A (n + 1)) ∧
+      IsIso (groupCohomology.map (A := A.quotientToInvariants N) (B := A)
+        (QuotientGroup.mk' N) (Rep.ofHom (A.ρ.quotientToInvariants_lift N)) (n + 1)) := by
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  exact ⟨originalPGroup_positive_zero_of_subgroup_first_second p hG
+    (originalCoinducedFunctionRep C)
+    (fun T => ⟨originalCoinducedSubgroup_first_zero C T,
+      originalCoinducedSubgroup_second_zero C T⟩) n,
+    originalPositiveInflation_isIso_of_subgroup_zero (originalCoinducedFunctionRep C) N
+      (originalCoinducedSubgroup_positive_zero C N) n⟩
+
+end OriginalQuotientPositiveConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientInvariantNormConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+
+variable (K L : Type) [Field K] [Field L] [NumberField L]
+  [Algebra K L] [FiniteDimensional K L]
+
+/-- The actual finite Galois group is enumerated for the literal norm. -/
+local instance quotientInvariantNormGaloisFintype : Fintype (Gal(L/K)) := Fintype.ofFinite _
+
+/-- The two-degree criterion constructs a norm preimage for every invariant in coinduction of the actual outside-unit quotient. Subgroup H1/H2 vanish by the existing explicit coboundaries; the separate fundamental-class extension is not assumed constructed. -/
+theorem regression_original_quotient_invariant_norm_preimages
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (p : ℕ) [Fact p.Prime] (hG : IsPGroup p Gal(L/K)) :
+    let A := originalCoinducedFunctionRep (originalIdeleClassesModOutsideRep K L S hS)
+    ∀ x : A, x ∈ A.ρ.invariants → ∃ y : A, A.ρ.norm y = x := by
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  exact originalPGroup_norm_preimages_of_subgroup_first_second p hG
+    (originalCoinducedFunctionRep C)
+    (fun T => ⟨originalCoinducedSubgroup_first_zero C T,
+      originalCoinducedSubgroup_second_zero C T⟩)
+
+end OriginalQuotientInvariantNormConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalSplittingConsumerAuxiliaryScope
+open CategoryTheory
+attribute [local instance 1100] Rep.hV2
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- An actual normalized outside-unit quotient cocycle whose literal fundamental extension kills the whole original H2 group and has invariant norm preimages. This proposition alone asserts no existence. -/
+def ActualNormalizedFundamentalConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    (originalFundamentalSplittingShortComplex C φ).ShortExact ∧
+    (groupCohomology.functor ℤ Gal(L/K) 2).map (originalFundamentalSplittingInclusion C φ) = 0 ∧
+    OriginalInvariantNormSurjective (originalFundamentalSplittingModule C φ)
+
+/-- The actual arithmetic constructor gives a normalized original cocycle whose literal extension kills every original quotient H2 class, with an actual short exact sequence and invariant norm preimages. No class-system, splitting or acyclicity input is supplied. -/
+theorem regression_arithmetic_fundamental_splitting_kills_second
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualNormalizedFundamentalConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  obtain ⟨φ, ho, hl, he, _, hp, hn⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  exact ⟨φ, ho, hl, he, (hp 1).eq_zero_of_tgt _, hn⟩
+
+end ArithmeticFundamentalSplittingConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalKernelConsumerAuxiliaryScope
+open CategoryTheory
+attribute [local instance 1100] Rep.hV2
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original normalized cocycle's literal fundamental free kernel, with integral freeness and derived subgroup vanishing. This proposition alone asserts no existence. -/
+def ActualNormalizedFundamentalKernelConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    (originalRelationShortComplex (originalFundamentalSplittingModule C φ)).ShortExact ∧
+    Module.Free ℤ (originalRelationModule (originalFundamentalSplittingModule C φ)) ∧
+    (∀ U : Subgroup Gal(L/K),
+      Limits.IsZero (groupCohomology
+        (Rep.res U.subtype (originalRelationModule (originalFundamentalSplittingModule C φ))) 1) ∧
+      Limits.IsZero (groupCohomology
+        (Rep.res U.subtype (originalRelationModule (originalFundamentalSplittingModule C φ))) 2)) ∧
+    (∀ n : ℕ, Limits.IsZero
+      (groupCohomology (originalRelationModule (originalFundamentalSplittingModule C φ)) (n + 1))) ∧
+    OriginalInvariantNormSurjective (originalRelationModule (originalFundamentalSplittingModule C φ)) ∧
+    OriginalNormCoinvariantInjective (originalRelationModule (originalFundamentalSplittingModule C φ)) ∧
+    Limits.IsZero (groupHomology (originalRelationModule (originalFundamentalSplittingModule C φ)) 1)
+
+/-- The actual arithmetic construction discharges integral freeness, subgroup H1/H2, positive vanishing, both norm properties and first homology vanishing for its literal fundamental free kernel, retaining all normalized class restrictions. -/
+theorem regression_arithmetic_fundamental_kernel_prepared
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualNormalizedFundamentalKernelConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  obtain ⟨hf, hsub, hp, hn⟩ := originalPGroup_relationKernel_prepared
+    (originalFundamentalSplittingModule _ φ) q hG hv
+  exact ⟨φ, ho, hl, originalRelationShortComplex_shortExact _, hf, hsub, hp, hn,
+    originalPGroup_normCoinvariantInjective _ q hG hsub,
+    originalPGroup_first_homology_zero _ q hG hsub⟩
+
+end ArithmeticFundamentalKernelConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalPrimeReductionConsumerAuxiliaryScope
+open CategoryTheory
+attribute [local instance 1100] Rep.hV2
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original normalized cocycle and the literal mod-p reduction of its actual fundamental free kernel. This proposition alone asserts no existence. -/
+def ActualNormalizedFundamentalPrimeReductionConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) (p : ℕ) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    Nonempty (originalScalarReduction (originalRelationModule (originalFundamentalSplittingModule C φ)) (p : ℤ) ≅
+      originalCoinducedFunctionRep (originalCoinvariantTrivialRep
+        (originalScalarReduction (originalRelationModule (originalFundamentalSplittingModule C φ)) (p : ℤ))))
+
+/-- The actual arithmetic construction proves the literal mod-p reduction of its fundamental free kernel is coinduced from its own coinvariants. No section, classification, freeness, norm or homology certificate is supplied. -/
+theorem regression_arithmetic_fundamental_kernel_prime_coinduced
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualNormalizedFundamentalPrimeReductionConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) q := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  exact ⟨φ, ho, hl, originalPGroup_relationKernel_prime_coinduced
+    (originalFundamentalSplittingModule _ φ) q hG hv⟩
+
+end ArithmeticFundamentalPrimeReductionConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalProjectiveKernelConsumerAuxiliaryScope
+open CategoryTheory
+attribute [local instance 1100] Rep.hV2
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original normalized cocycle and the actual projective presentation of its fundamental coefficient. This proposition alone asserts no existence. -/
+def ActualNormalizedFundamentalProjectiveKernelConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    (originalRelationShortComplex (originalFundamentalSplittingModule C φ)).ShortExact ∧
+    Projective (originalRelationModule (originalFundamentalSplittingModule C φ)) ∧
+    Projective (originalRelationShortComplex (originalFundamentalSplittingModule C φ)).X₂ ∧
+    Nonempty (originalRelationShortComplex
+      (originalRelationModule (originalFundamentalSplittingModule C φ))).Splitting
+
+/-- The actual arithmetic construction proves its literal fundamental coefficient has an actual short exact projective presentation and constructs a splitting of the kernel's own free cover. No projectivity, splitting, freeness, norm, cohomology or homology certificate is supplied. -/
+theorem regression_arithmetic_fundamental_kernel_projective
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualNormalizedFundamentalProjectiveKernelConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  exact ⟨φ, ho, hl, originalRelationShortComplex_shortExact _,
+    originalPGroup_relationKernel_projective (originalFundamentalSplittingModule _ φ) q hG hv,
+    originalRelationFreeCover_projective _,
+    originalPGroup_relationKernel_cover_splits (originalFundamentalSplittingModule _ φ) q hG hv⟩
+
+end ArithmeticFundamentalProjectiveKernelConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalInternalHomConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators
+attribute [local instance 1100] Rep.hV2
+open scoped NumberField
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original normalized cocycle and the actual internal Hom into its fundamental coefficient, with subgroup acyclicity and literal norm witnesses. This proposition alone asserts no existence. -/
+def ActualNormalizedFundamentalInternalHomConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    ∀ (M : Rep.{0} ℤ Gal(L/K)), Module.Projective ℤ M →
+      (∀ (T : Subgroup Gal(L/K)) (n : ℕ), Limits.IsZero (groupCohomology
+        (Rep.res T.subtype ((Rep.ihom M).obj (originalFundamentalSplittingModule C φ))) (n + 1))) ∧
+      OriginalInvariantNormSurjective ((Rep.ihom M).obj (originalFundamentalSplittingModule C φ)) ∧
+      (∀ χ : M ⟶ originalFundamentalSplittingModule C φ,
+        ∃ η : M →ₗ[ℤ] originalFundamentalSplittingModule C φ, ∀ x : M,
+          χ.hom x = ∑ g : Gal(L/K), (originalFundamentalSplittingModule C φ).ρ g (η (M.ρ g⁻¹ x)))
+
+/-- The actual normalized arithmetic coefficient has vanishing lattice internal Hom on every subgroup and constructs the exact sum-of-conjugates witness for every original lattice map. Its coefficient acyclicity, projective presentation and norm conditions are all derived. -/
+theorem regression_arithmetic_fundamental_internalHom_acyclic
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualNormalizedFundamentalInternalHomConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  refine ⟨φ, ho, hl, fun M hM => ?_⟩
+  letI := hM
+  exact ⟨originalPGroup_internalHom_subgroup_positive_zero M
+      (originalFundamentalSplittingModule _ φ) q hG hv,
+    originalPGroup_internalHom_norm_preimages M (originalFundamentalSplittingModule _ φ) q hG hv,
+    originalPGroup_internalHom_map_norm_witness M (originalFundamentalSplittingModule _ φ) q hG hv⟩
+
+end ArithmeticFundamentalInternalHomConsumerAuxiliaryScope
+
+noncomputable section ArithmeticLatticeDualityConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original normalized fundamental coefficient together with derived lattice duality and its literal norm witnesses. This proposition alone asserts no existence or comparison between the two pairings. -/
+def ActualArithmeticLatticeDualityConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    ∀ (M : Rep.{0} ℤ Gal(L/K)) (hfinite : Module.Finite ℤ M)
+        (hprojective : Module.Projective ℤ M),
+      letI := hfinite
+      letI := hprojective
+      (∀ x : groupCohomology M 2,
+        (∀ y, originalLatticeIntegralDuality M x y = 0) → x = 0) ∧
+      (∀ y : groupHomology (originalLinearCharacterRep ℤ M) 1,
+        (∀ x, originalLatticeIntegralDuality M x y = 0) → y = 0) ∧
+      (∀ χ : M ⟶ originalFundamentalSplittingModule C φ,
+        ∃ η : M →ₗ[ℤ] originalFundamentalSplittingModule C φ, ∀ x : M,
+          χ.hom x = ∑ g : Gal(L/K), (originalFundamentalSplittingModule C φ).ρ g (η (M.ρ g⁻¹ x)))
+
+/-- At the actual relative odd-primary arithmetic stage, both sides of lattice duality and the fundamental coefficient norm witnesses are derived, with the same original normalized class and completion restrictions retained. -/
+theorem regression_arithmetic_lattice_duality_and_fundamental_norms
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticLatticeDualityConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  refine ⟨φ, ho, hl, fun M hfinite hprojective => ?_⟩
+  letI := hfinite
+  letI := hprojective
+  exact ⟨originalLatticeIntegralDuality_left_nondegenerate M,
+    originalLatticeIntegralDuality_right_nondegenerate M,
+    originalPGroup_internalHom_map_norm_witness M (originalFundamentalSplittingModule _ φ) q hG hv⟩
+
+end ArithmeticLatticeDualityConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalHomologyConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original full-order class and completion restrictions, with the exact homology witness and integral pairing criterion for every finite lattice morphism. This proposition alone asserts no existence or induced-H2-map comparison. -/
+def ActualArithmeticFundamentalHomologyConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    ∀ (M : Rep.{0} ℤ Gal(L/K)) (hfinite : Module.Finite ℤ M)
+        (hprojective : Module.Projective ℤ M),
+      letI := hfinite
+      letI := hprojective
+      ∀ χ : M ⟶ C,
+        ∃ y : groupHomology ((Rep.ihom M).obj (Rep.trivial ℤ Gal(L/K) ℤ)) 1,
+          OriginalFundamentalHomologyWitness M C φ χ y ∧
+            ((Submodule.Quotient.mk χ : OriginalCoefficientNormQuotient M C) = 0 ↔
+              ∀ x : groupCohomology M 2, originalLatticeIntegralDuality M x y = 0)
+
+/-- The actual relative arithmetic construction represents every original lattice morphism norm class by its exact augmentation homology boundary and proves the integral pairing zero criterion, retaining the same full-order class and every normalized completion restriction. -/
+theorem regression_arithmetic_fundamental_homology_norm_detection
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticFundamentalHomologyConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  refine ⟨φ, ho, hl, fun M hfinite hprojective => ?_⟩
+  letI := hfinite
+  letI := hprojective
+  exact originalFundamentalHomology_pairing_criterion M _ φ q hG hv
+
+
+end ArithmeticFundamentalHomologyConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalConverseNormConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The same original full-order class and completion restrictions, with actual norm-quotient H2 injectivity and the literal norm criterion for every finite projective lattice. This proposition alone asserts no witness. -/
+def ActualArithmeticFundamentalConverseNormConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    ∀ (M : Rep.{0} ℤ Gal(L/K)) (hfinite : Module.Finite ℤ M)
+        (hprojective : Module.Projective ℤ M),
+      letI := hfinite
+      letI := hprojective
+      Function.Injective (originalNormQuotientCohomologyMap M C 1) ∧
+        ∀ χ : M ⟶ C,
+          (groupCohomology.functor ℤ Gal(L/K) 2).map χ = 0 ↔
+            ∃ η : M →ₗ[ℤ] C, originalCoefficientNormMorphism M C η = χ
+
+/-- The actual relative odd-primary arithmetic construction proves injectivity of the original norm-quotient H2 map and the converse literal norm criterion, retaining the same full-order class and every normalized completion restriction. -/
+theorem regression_arithmetic_fundamental_converse_norm
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticFundamentalConverseNormConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  have ho' : addOrderOf (groupCohomology.H2π _ φ) = Fintype.card Gal(H/F) :=
+    ho.trans ((IsGalois.card_aut_eq_finrank F H).symm.trans Fintype.card_eq_nat_card.symm)
+  refine ⟨φ, ho, hl, fun M hfinite hprojective => ?_⟩
+  letI := hfinite
+  letI := hprojective
+  exact ⟨originalFundamental_normQuotient_h2_injective M _ φ q hG ho' hv,
+    originalFundamental_h2_zero_iff_norm M _ φ q hG ho' hv⟩
+
+end ArithmeticFundamentalConverseNormConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFundamentalRelationConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] Rep.hV2
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original normalized class and completion restrictions with the actual finite relation norm criterion and extension equivalence conditional on invariant norm divisibility. This proposition alone asserts no witness. -/
+def ActualArithmeticFundamentalRelationConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (p : ℕ) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    ∀ (B : Rep.{0} ℤ Gal(L/K)) (hfinite : Finite B),
+      letI := hfinite
+      (∀ χ : originalRelationModule B ⟶ C,
+        originalRelationExtensionObstruction B C χ = 0 ↔
+          ∃ η : originalRelationModule B →ₗ[ℤ] C,
+            originalCoefficientNormMorphism (originalRelationModule B) C η = χ) ∧
+      (∀ (_hnorm : ∀ c : C, ∃ d : C, (∀ g : Gal(L/K), C.ρ g d = d) ∧
+          (∑ g : Gal(L/K), C.ρ g c) = p • d)
+        (_hB : ∀ b : B, p • b = 0)
+        (_htriv : ∀ (g : Gal(L/K)) (b : B), B.ρ g b = b)
+        (χ : originalRelationModule B ⟶ C),
+        originalRelationExtensionObstruction B C χ = 0 ↔
+          ∃ a : Rep.free ℤ Gal(L/K) B ⟶ C, originalRelationInclusion B ≫ a = χ)
+
+/-- The actual arithmetic construction supplies the finite relation converse norm criterion and the conditional extension equivalence for the same class coefficient, retaining every completion restriction and leaving invariant norm divisibility explicit. -/
+theorem regression_arithmetic_fundamental_relation_criterion
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticFundamentalRelationConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) q := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  have ho' : addOrderOf (groupCohomology.H2π _ φ) = Fintype.card Gal(H/F) :=
+    ho.trans ((IsGalois.card_aut_eq_finrank F H).symm.trans Fintype.card_eq_nat_card.symm)
+  refine ⟨φ, ho, hl, fun B hfinite => ?_⟩
+  letI := hfinite
+  exact ⟨originalFundamental_relation_obstruction_zero_iff_norm _ φ q hG ho' hv B,
+    fun hnorm hB htriv χ =>
+      originalFundamental_relation_obstruction_zero_iff_extension _ φ q hG ho' hv hnorm B hB htriv χ⟩
+
+end ArithmeticFundamentalRelationConsumerAuxiliaryScope
+
+noncomputable section ArithmeticInvariantNormIndexConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The actual class quotient retains its full-order normalized class and completion restrictions, and its literal invariant norm quotient has the derived abelianization, order and exponent. This proposition alone supplies no witness. -/
+def ActualArithmeticInvariantNormIndexConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S) : Prop :=
+  let C := originalIdeleClassesModOutsideRep K L S hS
+  ∃ φ : groupCohomology.cocycles₂ C,
+    addOrderOf (groupCohomology.H2π C φ) = Module.finrank K L ∧
+    OriginalCompletionQuotientRestrictions K L S hS (groupCohomology.H2π C φ) ∧
+    Nonempty (OriginalInvariantNormQuotient C ≃+ Additive (Abelianization Gal(L/K))) ∧
+    Nat.card (OriginalInvariantNormQuotient C) = Nat.card (Abelianization Gal(L/K)) ∧
+    ∀ (n : ℕ), (∀ g : Gal(L/K), g ^ n = 1) →
+      ∀ c : C.ρ.invariants, ∃ b : C, originalInvariantNormLinear C b = n • c
+
+/-- The actual odd-primary arithmetic stage has the original invariant norm quotient, its exact abelianization order and literal norm witnesses for group-exponent multiples of invariants, with the same full-order class and all completion restrictions. -/
+theorem regression_arithmetic_invariant_norm_index
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticInvariantNormIndexConsumer F H
+      (originalExceptionalIntegerSupport H (algebraMap (𝓞 ℚ) (𝓞 H) a)
+        (originalIntegerMap_ne_zero (L := H) a ha))
+      (rationalArithmeticIntermediateRelativeClassSupport_stable a ha F H hFH) := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  obtain ⟨φ, ho, hl, _, hv, _, _⟩ :=
+    rationalArithmeticRelativePrimePower_normalized_fundamental_splitting
+      (hGal := hGal) a ha F H hFH q t hq hq2 hqa hdegree
+  exact ⟨φ, ho, hl, ⟨originalInvariantNormAbelianEquiv _ φ q hG hv⟩,
+    originalInvariantNormQuotient_card _ φ q hG hv,
+    originalInvariant_multiple_is_norm _ φ q hG hv⟩
+
+end ArithmeticInvariantNormIndexConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFullNormIndexConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The original full normalized class system and the literal field norm quotient retain their actual objects, abelianization order and power norm preimages. This proposition alone supplies no witness. -/
+def ActualArithmeticFullNormIndexConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L] : Prop :=
+  OriginalFiniteNormalizedClassSystem K L ∧
+  Nonempty (OriginalIdeleClassNormQuotient K L ≃+ Additive (Abelianization Gal(L/K))) ∧
+  Nat.card (OriginalIdeleClassNormQuotient K L) = Nat.card (Abelianization Gal(L/K)) ∧
+  ∀ (n : ℕ), (∀ g : Gal(L/K), g ^ n = 1) →
+    ∀ c : OriginalNumberFieldIdeleClassGroup K,
+      ∃ b : OriginalNumberFieldIdeleClassGroup L, originalIdeleClassNorm K L b = c ^ n
+
+/-- The actual relative odd-primary arithmetic stage has the source-normalized full class system and the literal full class-norm quotient, with its exact abelianization order and group-exponent power norm preimages. -/
+theorem regression_arithmetic_full_norm_index
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticFullNormIndexConsumer F H := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  exact ⟨hs, originalFullClass_abelian_norm_index F H q hG hs⟩
+
+end ArithmeticFullNormIndexConsumerAuxiliaryScope
+
+noncomputable section ArithmeticLargeSupportNormConsumerAuxiliaryScope
+open CategoryTheory
+open IsDedekindDomain
+open scoped BigOperators NumberField IsMulCommutative
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The precise large-support norm-field deduction on the original field
+objects. The field degree, exponent and support conditions are explicit;
+no normalized class system or norm-index conclusion is an input. -/
+def ActualArithmeticLargeSupportNormConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L] (q : ℕ) : Prop :=
+  ∀ [IsMulCommutative Gal(L/K)] (_hexp : ∀ g : Gal(L/K), g ^ q = 1)
+    (ζ : K) (_hζ : IsPrimitiveRoot ζ q)
+    (S : Finset (HeightOneSpectrum (𝓞 K)))
+    (hS : ∀ (σ : Gal(K/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K K σ v ∈ S),
+    Function.Surjective (numberFieldSupportedIdeleClassMap K S) →
+    (∀ v : HeightOneSpectrum (𝓞 K), v ∉ S → Algebra.IsUnramifiedAt ℤ v.asIdeal) →
+    (∀ v : HeightOneSpectrum (𝓞 K), v ∉ S → (q : 𝓞 K) ∉ v.asIdeal) →
+    (∀ w : HeightOneSpectrum (𝓞 L), originalFinitePrimeBelow K L w ∉ S →
+      Algebra.IsUnramifiedAt ℤ w.asIdeal) →
+    Module.finrank K L = q ^ (Fintype.card (NumberField.InfinitePlace K) + S.card) →
+    (LinearMap.range (originalIdeleClassNormLinear K L) =
+      LinearMap.range ((q : ℤ) • (LinearMap.id :
+        originalIdeleClassRep K K →ₗ[ℤ] originalIdeleClassRep K K)) ⊔
+      LinearMap.range (originalOutsideIdeleClassRepHom K K S hS).hom.toLinearMap) ∧
+    ∀ (T : Finset (HeightOneSpectrum (𝓞 L)))
+      (hT : ∀ (σ : Gal(L/K)) w, w ∈ T ↔ numberFieldGaloisPlaceEquiv K L σ w ∈ T)
+      (_hST : ∀ w, w ∈ T ↔ originalFinitePrimeBelow K L w ∈ S)
+      (x : originalIdeleClassesModOutsideRep K L T hT),
+      ∃ d : originalIdeleClassesModOutsideRep K L T hT,
+        (∀ g, (originalIdeleClassesModOutsideRep K L T hT).ρ g d = d) ∧
+        (∑ g : Gal(L/K), (originalIdeleClassesModOutsideRep K L T hT).ρ g x) = q • d
+
+/-- The actual relative odd-primary arithmetic stage constructs the
+normalized class system and uses it to prove the large-support norm
+subgroup equality from the specified Kummer field data. -/
+theorem regression_arithmetic_large_support_norm
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticLargeSupportNormConsumer F H q := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  intro hcomm hexp ζ hζ S hS hClasses hBase hAway hUpper hDegree
+  have hn := originalFullSupport_normRange_eq_power_sup_outside F H q hG hs
+    hexp ζ hζ S hS hClasses hBase hAway hUpper hDegree
+  refine ⟨hn, ?_⟩
+  intro T hT hST x
+  exact originalClassesModOutside_invariant_norm_divisibility F H S T hS hT hST q hn.le x
+
+end ArithmeticLargeSupportNormConsumerAuxiliaryScope
+
+noncomputable section ArithmeticSubgroupNormMapConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The actual normalized class system and an abelianized norm map with
+its literal kernel and every normal fixed-field subgroup image. This
+proposition alone constructs no witness. -/
+def ActualArithmeticSubgroupNormMapConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L] : Prop :=
+  OriginalFiniteNormalizedClassSystem K L ∧
+  ∃ r : Additive (OriginalNumberFieldIdeleClassGroup K) →+ Additive (Abelianization Gal(L/K)),
+    Function.Surjective r ∧
+    (∀ c, r c = 0 ↔ ∃ b, originalIdeleClassNormLinear K L b = c) ∧
+    ∀ (S : Subgroup Gal(L/K)) (hS : S.Normal),
+      letI : S.Normal := hS
+      Set.range (fun c => r (originalIdeleClassNormLinear K (IntermediateField.fixedField S) c)) =
+        Set.range (Abelianization.map S.subtype).toAdditive
+
+/-- The actual relative odd-primary stage constructs its normalized
+class system and a surjective norm map whose kernel and all normal
+fixed-field norm images are the literal arithmetic ones. -/
+theorem regression_arithmetic_subgroup_norm_map
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticSubgroupNormMapConsumer F H := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  exact ⟨hs, originalFullClass_abelian_norm_map F H q hG hs⟩
+
+end ArithmeticSubgroupNormMapConsumerAuxiliaryScope
+
+noncomputable section ArithmeticPrescribedNormSubfieldConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The actual class system constructs a normal fixed field realizing
+every submodule above the original norm range. This proposition alone
+does not construct a field or assert any ramification support. -/
+def ActualArithmeticPrescribedNormSubfieldConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L] : Prop :=
+  OriginalFiniteNormalizedClassSystem K L ∧
+  ∀ (U : Submodule ℤ (Additive (OriginalNumberFieldIdeleClassGroup K))),
+    (originalIdeleClassNormLinear K L).range ≤ U →
+    ∃ (S : Subgroup Gal(L/K)) (hS : S.Normal),
+      letI : S.Normal := hS
+      (originalIdeleClassNormLinear K (IntermediateField.fixedField S)).range = U
+
+/-- The actual relative odd-primary stage constructs a normal fixed
+field with the specified literal class-norm range. The normalized class
+system and the norm correspondence are derived from the original stage. -/
+theorem regression_arithmetic_prescribed_norm_subfield
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticPrescribedNormSubfieldConsumer F H := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  refine ⟨hs, ?_⟩
+  intro U hU
+  exact originalFullClass_exists_prescribed_norm_subfield F H q hG hs U hU
+
+end ArithmeticPrescribedNormSubfieldConsumerAuxiliaryScope
+
+noncomputable section ArithmeticCompletionNormConsumerAuxiliaryScope
+open CategoryTheory
+open scoped BigOperators NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The actual global fundamental data and all completion norm squares.
+This proposition alone constructs no witness. -/
+def ActualArithmeticCompletionNormConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (p : ℕ) [Fact p.Prime] : Prop :=
+  ∃ hG : IsPGroup p Gal(L/K), OriginalNormalizedClassCompletionNormSystem K L p hG
+
+/-- The actual relative odd-primary stage constructs one normalized
+global cocycle, its acyclicity and every normal-decomposition completion
+norm comparison, without those inputs being assumed. -/
+theorem regression_arithmetic_completion_norm_system
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    letI : Fact q.Prime := ⟨hq⟩
+    ActualArithmeticCompletionNormConsumer F H q := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  exact ⟨hG, originalNormalizedClass_completion_norm_system F H q hG hs⟩
+
+end ArithmeticCompletionNormConsumerAuxiliaryScope
+
+noncomputable section ArithmeticPrescribedSupportNormFieldConsumerAuxiliaryScope
+open CategoryTheory IsDedekindDomain
+open scoped BigOperators NumberField IsMulCommutative
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The actual class system and the universal prescribed-support
+norm-field conclusion for the original arithmetic stage. The abelian
+stage condition and the two necessary submodule inclusions are explicit.
+This proposition alone constructs no witness. -/
+def ActualArithmeticPrescribedSupportNormFieldConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L] : Prop :=
+  OriginalFiniteNormalizedClassSystem K L ∧
+  (IsMulCommutative Gal(L/K) →
+  ∀ (S : Finset (HeightOneSpectrum (𝓞 K)))
+    (hS : ∀ (σ : Gal(K/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K K σ v ∈ S)
+    (U : Submodule ℤ (Additive (OriginalNumberFieldIdeleClassGroup K))),
+    (originalIdeleClassNormLinear K L).range ≤ U →
+    (∀ z, (originalOutsideIdeleClassRepHom K K S hS).hom z ∈ U) →
+    ∃ (H : Subgroup Gal(L/K)) (hH : H.Normal),
+      letI : H.Normal := hH
+      (originalIdeleClassNormLinear K (IntermediateField.fixedField H)).range = U ∧
+      ∀ q : HeightOneSpectrum (𝓞 (IntermediateField.fixedField H)),
+        originalFinitePrimeBelow K (IntermediateField.fixedField H) q ∉ S →
+        (q.asIdeal.under (𝓞 K)).ramificationIdx q.asIdeal = 1)
+
+/-- The actual relative odd-primary stage constructs the normalized
+class system and prescribed-support norm fields. No local comparison,
+inertia image, norm correspondence or ramification certificate is supplied. -/
+theorem regression_arithmetic_prescribed_support_norm_field
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticPrescribedSupportNormFieldConsumer F H := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  refine ⟨hs, ?_⟩
+  intro hComm S hS U hU hOutside
+  letI : IsMulCommutative Gal(H/F) := hComm
+  exact originalFullClass_exists_prescribed_support_norm_field_of_base_support
+    F H S hS q hG hs U hU hOutside
+
+end ArithmeticPrescribedSupportNormFieldConsumerAuxiliaryScope
+
+noncomputable section ArithmeticReducedSupportNormFieldConsumerAuxiliaryScope
+open CategoryTheory
+open IsDedekindDomain
+open scoped BigOperators NumberField IsMulCommutative
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module Submodule.Quotient.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField arithmeticRelativeStageIdeleAddCommGroup
+  arithmeticRelativeStageClassAddCommGroup
+
+/-- The precise large-support norm-field deduction on the original field
+objects. The field degree, exponent and support conditions are explicit;
+no normalized class system or norm-index conclusion is an input. -/
+def ActualArithmeticReducedSupportNormFieldConsumer
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L] (q : ℕ) : Prop :=
+  ∀ [IsMulCommutative Gal(L/K)] (_hexp : ∀ g : Gal(L/K), g ^ q = 1)
+    (ζ : K) (_hζ : IsPrimitiveRoot ζ q)
+    (S : Finset (HeightOneSpectrum (𝓞 K)))
+    (_hS : ∀ (σ : Gal(K/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K K σ v ∈ S),
+    Function.Surjective (numberFieldSupportedIdeleClassMap K S) →
+    (∀ v : HeightOneSpectrum (𝓞 K), v ∉ S → Algebra.IsUnramifiedAt ℤ v.asIdeal) →
+    (∀ v : HeightOneSpectrum (𝓞 K), v ∉ S → (q : 𝓞 K) ∉ v.asIdeal) →
+    (∀ w : HeightOneSpectrum (𝓞 L), originalFinitePrimeBelow K L w ∉ S →
+      Algebra.IsUnramifiedAt ℤ w.asIdeal) →
+    Module.finrank K L = q ^ (Fintype.card (NumberField.InfinitePlace K) + S.card) →
+    ∀ (S₀ : Finset (HeightOneSpectrum (𝓞 K)))
+      (hS₀ : ∀ (σ : Gal(K/K)) v, v ∈ S₀ ↔ numberFieldGaloisPlaceEquiv K K σ v ∈ S₀),
+      S₀ ⊆ S →
+      ∃ (J : Subgroup Gal(L/K)) (hJ : J.Normal),
+        letI : J.Normal := hJ
+        LinearMap.range (originalIdeleClassNormLinear K (IntermediateField.fixedField J)) =
+          LinearMap.range ((q : ℤ) • (LinearMap.id :
+            originalIdeleClassRep K K →ₗ[ℤ] originalIdeleClassRep K K)) ⊔
+          LinearMap.range (originalOutsideIdeleClassRepHom K K S₀ hS₀).hom.toLinearMap ∧
+        (∀ v : HeightOneSpectrum (𝓞 (IntermediateField.fixedField J)),
+          originalFinitePrimeBelow K (IntermediateField.fixedField J) v ∉ S₀ →
+          (v.asIdeal.under (𝓞 K)).ramificationIdx v.asIdeal = 1) ∧
+        ∀ (T : Finset (HeightOneSpectrum (𝓞 (IntermediateField.fixedField J))))
+          (hT : ∀ (σ : Gal(IntermediateField.fixedField J/K)) v,
+            v ∈ T ↔ numberFieldGaloisPlaceEquiv K (IntermediateField.fixedField J) σ v ∈ T)
+          (_hST : ∀ v, v ∈ T ↔ originalFinitePrimeBelow K (IntermediateField.fixedField J) v ∈ S₀)
+          (x : originalIdeleClassesModOutsideRep K (IntermediateField.fixedField J) T hT),
+          ∃ d : originalIdeleClassesModOutsideRep K (IntermediateField.fixedField J) T hT,
+            (∀ g, (originalIdeleClassesModOutsideRep K (IntermediateField.fixedField J) T hT).ρ g d = d) ∧
+            (∑ g : Gal(IntermediateField.fixedField J/K),
+              (originalIdeleClassesModOutsideRep K (IntermediateField.fixedField J) T hT).ρ g x) = q • d
+
+/-- The specified original class system and large-support field data
+give the exact support-reduction consumer on abstract original fields. -/
+theorem arithmeticReducedSupportNormFieldConsumer_of_normalized_system
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (q : ℕ) [Fact q.Prime] (hG : IsPGroup q Gal(L/K))
+    (hs : OriginalFiniteNormalizedClassSystem K L) :
+    ActualArithmeticReducedSupportNormFieldConsumer K L q := by
+  intro hcomm hexp ζ hζ S hS hClasses hBase hAway hUpper hDegree
+  have hn := originalFullSupport_normRange_eq_power_sup_outside K L q hG hs
+    hexp ζ hζ S hS hClasses hBase hAway hUpper hDegree
+  intro S₀ hS₀ hS₀S
+  obtain ⟨J, hJ, hNorm, hUnram⟩ := originalFullClass_exists_reduced_support_norm_field
+    K L S₀ S hS₀ hS q hG hs hS₀S hn
+  letI : J.Normal := hJ
+  letI : IsGalois K (IntermediateField.fixedField J) := IsGalois.of_fixedField_normal_subgroup J
+  refine ⟨J, hJ, hNorm, hUnram, ?_⟩
+  intro T hT hST x
+  exact originalClassesModOutside_invariant_norm_divisibility
+    K (IntermediateField.fixedField J) S₀ T hS₀ hT hST q hNorm.le x
+
+
+/-- The actual odd-primary stage constructs a fixed field with the
+prescribed smaller norm subgroup, index one outside that support and
+invariant roots of all its actual quotient norms. The large-support
+field data remain explicit; normalization and the norm field are derived. -/
+theorem regression_arithmetic_reduced_support_norm_field
+    (a : 𝓞 ℚ) (F H : IntermediateField ℚ (rationalUnramifiedExtension a))
+    [FiniteDimensional ℚ F] [FiniteDimensional ℚ H] (hFH : F ≤ H)
+    [hGal : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      IsGalois F H]
+    (q t : ℕ) (hq : q.Prime) (hq2 : q ≠ 2) (hqa : (q : 𝓞 ℚ) ∣ a)
+    (hdegree : letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+      letI : Module F H := Algebra.toModule
+      Module.finrank F H = q ^ t) :
+    letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+    letI : Module F H := Algebra.toModule
+    letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+    letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+    letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+    letI : IsGalois F H := hGal
+    ActualArithmeticReducedSupportNormFieldConsumer F H q := by
+  letI : Algebra F H := (IntermediateField.inclusion hFH).toAlgebra
+  letI : Module F H := Algebra.toModule
+  letI : SMul F H := ((IntermediateField.inclusion hFH).toAlgebra).toSMul
+  letI : IsScalarTower ℚ F H := IsScalarTower.of_algHom (IntermediateField.inclusion hFH)
+  letI : FiniteDimensional F H := FiniteDimensional.right ℚ F H
+  letI : IsGalois F H := hGal
+  letI : Fact q.Prime := ⟨hq⟩
+  have hG : IsPGroup q Gal(H/F) := IsPGroup.of_card
+    ((IsGalois.card_aut_eq_finrank F H).trans hdegree)
+  have hs : OriginalFiniteNormalizedClassSystem F H :=
+    originalIdeleClass_finite_normalized_system_of_completion_restrictions F H
+      (rationalArithmeticRelativePrimePower_exists_completion_local_restrictions
+        (hGal := hGal) a F H hFH q t hq hq2 hqa hdegree)
+  intro hcomm
+  exact @arithmeticReducedSupportNormFieldConsumer_of_normalized_system
+    F H _ _ _ _ _ _ _ q _ hG hs hcomm
+
+end ArithmeticReducedSupportNormFieldConsumerAuxiliaryScope
+
+noncomputable section ArithmeticUnrestrictedKummerNormFieldConsumerAuxiliaryScope
+open NumberField IsDedekindDomain
+open scoped NumberField IsMulCommutative
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField unrestrictedArithmeticUnionClosed
+  unrestrictedArithmeticUnionRelativeGalois
+variable (F : IntermediateField ℚ (rationalUnramifiedExtension 0)) [FiniteDimensional ℚ F]
+
+/-- The actual arithmetic Kummer field constructs the prescribed norm
+subfield without normalized-class or large-support field hypotheses. -/
+theorem regression_arithmetic_unrestricted_kummer_norm_field
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (ζ : F) (hζ : IsPrimitiveRoot ζ p)
+    (S : Finset (HeightOneSpectrum (𝓞 F)))
+    (hS : ∀ (σ : Gal(F/F)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv F F σ v ∈ S) :
+    ∃ T : Finset (HeightOneSpectrum (𝓞 F)), S ⊆ T ∧
+      let N := OriginalSUnitKummerField F (rationalUnramifiedExtension 0) T p
+      letI : FiniteDimensional F N := numberField_sUnit_kummerField_finiteDimensional
+        F (rationalUnramifiedExtension 0) T T.finite_toSet p (Fact.out : p.Prime).pos
+        ⟨ζ, (mem_primitiveRoots (Fact.out : p.Prime).pos).mpr hζ⟩
+      letI : NumberField N := NumberField.of_module_finite F N
+      letI : IsGalois F N := originalKummerRadicalField_isGalois p _
+      OriginalPrescribedSupportNormSubfield F N S hS p :=
+  originalUnrestricted_exists_prescribed_support_norm_field F p hp2 ζ hζ S hS
+
+end ArithmeticUnrestrictedKummerNormFieldConsumerAuxiliaryScope
+
+noncomputable section ArithmeticEnlargedInvariantNormRootsConsumerAuxiliaryScope
+open IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNormalSubfieldAlgebra
+  arithmeticOrbitCompletionNumberField
+
+/-- The constructed actual stage has prime-divisible relative degree
+and invariant roots of its literal quotient norm, with the original base
+embedding and prescribed lower stage retained. -/
+theorem regression_arithmetic_enlarged_stage_invariant_norm_roots
+    (a : 𝓞 ℚ) (ha : a ≠ 0)
+    (F : IntermediateField ℚ (rationalUnramifiedExtension a)) [FiniteDimensional ℚ F]
+    (P : OriginalUnramifiedGaloisStage (Ω := AlgebraicClosure ℚ) a)
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (ζ : F) (hζ : IsPrimitiveRoot ζ p) :
+    let S := originalExceptionalIntegerSupport F (algebraMap (𝓞 ℚ) (𝓞 F) a)
+      (originalIntegerMap_ne_zero (L := F) a ha)
+    ∃ N : OriginalUnramifiedGaloisStage (Ω := AlgebraicClosure ℚ) a,
+      letI : Algebra ℚ N.val := N.val.algebra'
+      ∃ j : F →ₐ[ℚ] N.val,
+        (∀ x : F, (j x : AlgebraicClosure ℚ) = (x.val : AlgebraicClosure ℚ)) ∧
+        P.val.toIntermediateField ≤ N.val.toIntermediateField ∧
+        letI : Algebra F N.val := j.toRingHom.toAlgebra
+        letI : Module F N.val := Algebra.toModule
+        letI : SMul F N.val := j.toRingHom.toAlgebra.toSMul
+        letI : IsScalarTower ℚ F N.val := IsScalarTower.of_algHom j
+        letI : FiniteDimensional F N.val := FiniteDimensional.right ℚ F N.val
+        p ∣ Module.finrank F N.val ∧
+          
+          ∀ (T : Finset (HeightOneSpectrum (𝓞 N.val)))
+            (hT : ∀ (σ : Gal(N.val/F)) v,
+              v ∈ T ↔ numberFieldGaloisPlaceEquiv F N.val σ v ∈ T)
+            (_hST : ∀ w, w ∈ T ↔ originalFinitePrimeBelow F N.val w ∈ S)
+            (x : originalIdeleClassesModOutsideRep F N.val T hT),
+            ∃ d : originalIdeleClassesModOutsideRep F N.val T hT,
+              (∀ g, (originalIdeleClassesModOutsideRep F N.val T hT).ρ g d = d) ∧
+              (∑ g : Gal(N.val/F),
+                (originalIdeleClassesModOutsideRep F N.val T hT).ρ g x) = p • d :=
+  rationalArithmetic_exists_enlarged_stage_invariant_norm_roots a ha F P p hp2 hpa ζ hζ
+
+end ArithmeticEnlargedInvariantNormRootsConsumerAuxiliaryScope
+
+noncomputable section OriginalFiniteQuotientRelationConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+
+variable (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+  [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+  (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+  (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+
+/-- The actual finite quotient class system and invariant norm roots
+give the literal relation-extension criterion. No fundamental cocycle,
+subgroup acyclicity or p-group certificate is assumed. -/
+theorem regression_original_finite_quotient_relation_criterion
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L S hS)
+    (p : ℕ) [Fact p.Prime]
+    (hnorm : ∀ c : originalIdeleClassesModOutsideRep K L S hS,
+      ∃ d : originalIdeleClassesModOutsideRep K L S hS,
+        (∀ g, (originalIdeleClassesModOutsideRep K L S hS).ρ g d = d) ∧
+        (∑ g : Gal(L/K), (originalIdeleClassesModOutsideRep K L S hS).ρ g c) = p • d)
+    (B : Rep.{0} ℤ Gal(L/K)) [Finite B] (hB : ∀ b : B, p • b = 0)
+    (htriv : ∀ (g : Gal(L/K)) (b : B), B.ρ g b = b)
+    (χ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS) :
+    (groupCohomology.δ (originalRelationShortComplex_shortExact B) 1 2 rfl ≫
+      (groupCohomology.functor ℤ Gal(L/K) 2).map χ) = 0 ↔
+      ∃ a : Rep.free ℤ Gal(L/K) B ⟶ originalIdeleClassesModOutsideRep K L S hS,
+        originalRelationInclusion B ≫ a = χ :=
+  originalClassQuotient_relation_obstruction_zero_iff_extension K L S hS hsys
+    p hnorm B hB htriv χ
+
+end OriginalFiniteQuotientRelationConsumerAuxiliaryScope
+
+noncomputable section ArithmeticKernelNormTowerConsumerAuxiliaryScope
+open IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] AddCommGroup.toAddCommMonoid Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+variable (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω]
+
+/-- A constructed literal arithmetic tower has a normal restriction
+kernel of prime-divisible order and invariant roots of its quotient norms.
+No primitive root, norm field, class normalization or degree is supplied. -/
+theorem regression_original_arithmetic_kernel_norm_tower
+    (a : 𝓞 ℚ) (ha : a ≠ 0)
+    (P : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a) :
+    ∃ E N : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+      P.val.toIntermediateField ≤ E.val.toIntermediateField ∧
+      ∃ hEN : E.val.toIntermediateField ≤ N.val.toIntermediateField,
+        letI : Algebra ℚ E.val := E.val.algebra'
+        letI : Algebra ℚ N.val := N.val.algebra'
+        letI : Algebra E.val N.val := (IntermediateField.inclusion hEN).toRingHom.toAlgebra
+        letI : Module E.val N.val := Algebra.toModule
+        letI : SMul E.val N.val := (IntermediateField.inclusion hEN).toRingHom.toAlgebra.toSMul
+        letI : IsScalarTower ℚ E.val N.val := IsScalarTower.of_algHom (IntermediateField.inclusion hEN)
+        letI : FiniteDimensional E.val N.val := FiniteDimensional.right ℚ E.val N.val
+        let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+          (originalIntegerMap_ne_zero (L := N.val) a ha)
+        let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+        
+        let H := (AlgEquiv.restrictNormalHom E.val : Gal(N.val/ℚ) →* Gal(E.val/ℚ)).ker
+        letI : Fintype H := Fintype.ofFinite H
+        let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+        p ∣ Nat.card H ∧ ∀ c : C, ∃ d : C,
+          (∀ g : H, C.ρ g.val d = d) ∧ (∑ g : H, C.ρ g.val c) = p • d :=
+  originalUnramifiedStage_exists_kernel_norm_tower Ω a ha P p hp2 hpa
+
+end ArithmeticKernelNormTowerConsumerAuxiliaryScope
+
+noncomputable section OriginalClassQuotientTraceConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+
+/-- Consume the actual source objects and the literal maps of the
+kernel/trace comparison, with its stated upstream hypotheses retained. -/
+theorem regression_original_class_quotient_trace_injective
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (T : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hT : ∀ (σ : Gal(L/K)) v, v ∈ T ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ T)
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L T hT)
+    (S : Subgroup Gal(L/K)) [Fintype S] [Fintype (Gal(L/K) ⧸ S)] :
+    Function.Injective (subgroupCohomologyTrace
+      (originalIdeleClassesModOutsideRep K L T hT) S 2).hom :=
+  originalClassQuotient_subgroup_trace_injective K L T hT hsys S
+
+end OriginalClassQuotientTraceConsumerAuxiliaryScope
+
+noncomputable section OriginalStageKernelActionConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2
+
+/-- Consume the actual source objects and the literal maps of the
+kernel/trace comparison, with its stated upstream hypotheses retained. -/
+theorem regression_original_stage_kernel_coefficient_trivial
+    {K Ω : Type} [Field K] [Field Ω] [Algebra K Ω]
+    (P E N : FiniteGaloisIntermediateField K Ω)
+    (hPE : P.toIntermediateField ≤ E.toIntermediateField)
+    (hEN : E.toIntermediateField ≤ N.toIntermediateField) :
+    letI : Algebra P E := (IntermediateField.inclusion hPE).toRingHom.toAlgebra
+    letI : Algebra E N := (IntermediateField.inclusion hEN).toRingHom.toAlgebra
+    letI : Algebra P N := (IntermediateField.inclusion (hPE.trans hEN)).toRingHom.toAlgebra
+    letI : IsScalarTower K P E := IsScalarTower.of_algHom (IntermediateField.inclusion hPE)
+    letI : IsScalarTower K E N := IsScalarTower.of_algHom (IntermediateField.inclusion hEN)
+    letI : IsScalarTower K P N := IsScalarTower.of_algHom (IntermediateField.inclusion (hPE.trans hEN))
+    ∀ (B : Rep ℤ Gal(P/K))
+      (g : (AlgEquiv.restrictNormalHom E : Gal(N/K) →* Gal(E/K)).ker)
+      (b : Rep.res (AlgEquiv.restrictNormalHom P : Gal(N/K) →* Gal(P/K)) B),
+      (Rep.res (AlgEquiv.restrictNormalHom P : Gal(N/K) →* Gal(P/K)) B).ρ g.val b = b :=
+  originalFiniteGaloisStages_kernel_coefficient_trivial P E N hPE hEN
+
+end OriginalStageKernelActionConsumerAuxiliaryScope
+
+noncomputable section OriginalFiniteQuotientNormHomologyConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+
+variable (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+  [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+  (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+  (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+
+/-- The actual normalized outside-unit quotient system constructs the
+norm-class/homology equivalence without supplied fundamental cocycles,
+subgroup vanishing, norm lifts or a p-group degree hypothesis. -/
+theorem regression_original_finite_quotient_norm_homology
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L S hS)
+    (M : Rep.{0} ℤ Gal(L/K)) [Module.Projective ℤ M] :
+    Nonempty (((M ⟶ originalIdeleClassesModOutsideRep K L S hS) ⧸
+      (originalCoefficientNormLinearMap M (originalIdeleClassesModOutsideRep K L S hS)).range) ≃ₗ[ℤ]
+      groupHomology ((Rep.ihom M).obj (Rep.trivial ℤ Gal(L/K) ℤ)) 1) :=
+  originalClassQuotient_norm_homology_equiv K L S hS hsys M
+
+end OriginalFiniteQuotientNormHomologyConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientRelationSurjectivityConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+
+/-- The actual normalized quotient realizes every literal H1-to-H2
+functional by a morphism from the original relation lattice. -/
+theorem regression_original_quotient_relation_obstruction_surjectivity
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L S hS)
+    (B : Rep.{0} ℤ Gal(L/K)) [Finite B]
+    (θ : groupCohomology B 1 ⟶
+      groupCohomology (originalIdeleClassesModOutsideRep K L S hS) 2) :
+    ∃ χ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS,
+      groupCohomology.δ (originalRelationShortComplex_shortExact B) 1 2 rfl ≫
+        (groupCohomology.functor ℤ Gal(L/K) 2).map χ = θ :=
+  originalClassQuotient_relation_obstruction_surjective K L S hS hsys B θ
+
+end OriginalQuotientRelationSurjectivityConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientInducedDecompositionConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+
+/-- Every zero obstruction into the actual arithmetic quotient decomposes
+through its constructed induced relation comparison. -/
+theorem regression_original_quotient_induced_relation_decomposition
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L S hS)
+    (N : Subgroup Gal(L/K)) (B : Rep.{0} ℤ Gal(L/K)) [Finite B] :
+    let C := originalIdeleClassesModOutsideRep K L S hS
+    let SB := originalSubgroupInducedSequence N B
+    let TI := (originalRelationShortComplex (Rep.res N.subtype B)).map
+      (Rep.indFunctor ℤ N.subtype)
+    ∃ (ιR : originalRelationModule B ⟶ TI.X₁)
+      (ιP : Rep.free ℤ Gal(L/K) B ⟶ TI.X₂)
+      (ρR : TI.X₁ ⟶ originalRelationModule SB.X₃)
+      (ρP : TI.X₂ ⟶ Rep.free ℤ Gal(L/K) SB.X₃),
+      originalRelationInclusion B ≫ ιP = ιR ≫ TI.f ∧
+      originalRelationFreeCover B ≫ SB.f = ιP ≫ TI.g ∧
+      TI.f ≫ ρP = ρR ≫ originalRelationInclusion SB.X₃ ∧
+      TI.g ≫ SB.g = ρP ≫ originalRelationFreeCover SB.X₃ ∧
+      ∀ χ : originalRelationModule B ⟶ C,
+        groupCohomology.δ (originalRelationShortComplex_shortExact B) 1 2 rfl ≫
+          (groupCohomology.functor ℤ Gal(L/K) 2).map χ = 0 →
+        ∃ (ψ : TI.X₁ ⟶ C) (a : Rep.free ℤ Gal(L/K) B ⟶ C),
+          χ = ιR ≫ ψ + originalRelationInclusion B ≫ a :=
+  originalClassQuotient_induced_relation_decomposition K L S hS hsys N B
+
+end OriginalQuotientInducedDecompositionConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientInducedExtensionConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+
+/-- The actual arithmetic quotient has the induced extension criterion,
+with all class-system and comparison inputs derived from its original
+normalized quotient system. -/
+theorem regression_original_quotient_induced_relation_extension
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L S hS)
+    (p : ℕ) [Fact p.Prime] (N : Subgroup Gal(L/K)) [Fintype N]
+    (hnorm : ∀ c : originalIdeleClassesModOutsideRep K L S hS,
+      ∃ d : originalIdeleClassesModOutsideRep K L S hS,
+        (∀ g : N, (originalIdeleClassesModOutsideRep K L S hS).ρ g d = d) ∧
+        (∑ g : N, (originalIdeleClassesModOutsideRep K L S hS).ρ g c) = p • d)
+    (B : Rep.{0} ℤ Gal(L/K)) [Finite B] (hB : ∀ b : B, p • b = 0)
+    (hNB : ∀ g ∈ N, ∀ b : B, B.ρ g b = b)
+    (ψ : Rep.ind N.subtype (originalRelationModule (Rep.res N.subtype B)) ⟶
+      originalIdeleClassesModOutsideRep K L S hS) :
+    groupCohomology.δ (originalInducedRelationSequence_shortExact N B) 1 2 rfl ≫
+        (groupCohomology.functor ℤ Gal(L/K) 2).map ψ = 0 ↔
+      ∃ χ : Rep.ind N.subtype (Rep.free ℤ N (Rep.res N.subtype B)) ⟶
+        originalIdeleClassesModOutsideRep K L S hS,
+        (Rep.indFunctor ℤ N.subtype).map (originalRelationInclusion (Rep.res N.subtype B)) ≫ χ = ψ :=
+  originalClassQuotient_induced_relation_extension K L S hS hsys p N hnorm B hB hNB ψ
+
+end OriginalQuotientInducedExtensionConsumerAuxiliaryScope
+
+noncomputable section OriginalQuotientNontrivialExtensionConsumerAuxiliaryScope
+open CategoryTheory
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+
+/-- For the original arithmetic quotient and a finite prime coefficient,
+zero of the actual obstruction is equivalent to extension through the
+original free cover. Only the specified subgroup must fix the coefficient. -/
+theorem regression_original_quotient_nontrivial_relation_extension
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+    (S : Finset (IsDedekindDomain.HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ (σ : Gal(L/K)) v, v ∈ S ↔ numberFieldGaloisPlaceEquiv K L σ v ∈ S)
+    (hsys : OriginalFiniteNormalizedQuotientSystem K L S hS)
+    (p : ℕ) [Fact p.Prime] (N : Subgroup Gal(L/K)) [Fintype N]
+    (hnorm : ∀ c : originalIdeleClassesModOutsideRep K L S hS,
+      ∃ d : originalIdeleClassesModOutsideRep K L S hS,
+        (∀ g : N, (originalIdeleClassesModOutsideRep K L S hS).ρ g d = d) ∧
+        (∑ g : N, (originalIdeleClassesModOutsideRep K L S hS).ρ g c) = p • d)
+    (B : Rep.{0} ℤ Gal(L/K)) [Finite B] (hB : ∀ b : B, p • b = 0)
+    (hNB : ∀ g ∈ N, ∀ b : B, B.ρ g b = b)
+    (χ : originalRelationModule B ⟶ originalIdeleClassesModOutsideRep K L S hS) :
+    groupCohomology.δ (originalRelationShortComplex_shortExact B) 1 2 rfl ≫
+      (groupCohomology.functor ℤ Gal(L/K) 2).map χ = 0 ↔
+      ∃ a : Rep.free ℤ Gal(L/K) B ⟶ originalIdeleClassesModOutsideRep K L S hS,
+        originalRelationInclusion B ≫ a = χ :=
+  originalClassQuotient_nontrivial_relation_extension_iff K L S hS hsys p N hnorm B hB hNB χ
+
+end OriginalQuotientNontrivialExtensionConsumerAuxiliaryScope
+
+noncomputable section OriginalArithmeticStageRelationConsumerAuxiliaryScope
+open CategoryTheory IsDedekindDomain
+open scoped NumberField
+attribute [local instance 1100] Rep.hV2 Submodule.module
+attribute [-instance] SubfieldClass.instSMulRat AlgebraicClosure.instSMulOfIsScalarTower
+  UniformSpace.Completion.instSMul
+attribute [local instance] stageRelationRationalAlgebra
+
+/-- At a constructed stage above the original coefficient stage,
+the actual zero-obstruction/extension equivalence follows from one
+full-order original class. The norm roots, kernel action, support
+unramifiedness and all comparison data are constructed. -/
+theorem regression_original_constructed_stage_relation_criterion
+    (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω]
+    (a : 𝓞 ℚ) (ha : a ≠ 0)
+    (P : OriginalUnramifiedGaloisStage (Ω := Ω) a)
+    (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (B : Rep.{0} ℤ Gal(P.val/ℚ)) [Finite B] (hB : ∀ b : B, p • b = 0) :
+    ∃ N : OriginalUnramifiedGaloisStage (Ω := Ω) a,
+      ∃ hPN : P.val.toIntermediateField ≤ N.val.toIntermediateField,
+        letI : Algebra P.val N.val := (IntermediateField.inclusion hPN).toRingHom.toAlgebra
+        letI : IsScalarTower ℚ P.val N.val := IsScalarTower.of_algHom (IntermediateField.inclusion hPN)
+        let T := originalExceptionalIntegerSupport N.val (algebraMap (𝓞 ℚ) (𝓞 N.val) a)
+          (originalIntegerMap_ne_zero (L := N.val) a ha)
+        let hT := originalExceptionalIntegerSupport_galoisStable N.val ℚ a ha
+        let C := originalIdeleClassesModOutsideRep ℚ N.val T hT
+        let BN := Rep.res (AlgEquiv.restrictNormalHom P.val : Gal(N.val/ℚ) →* Gal(P.val/ℚ)) B
+        ∀ (u : groupCohomology (originalIdeleClassRep ℚ N.val) 2),
+          addOrderOf u = Module.finrank ℚ N.val →
+          ∀ χ : originalRelationModule BN ⟶ C,
+            groupCohomology.δ (originalRelationShortComplex_shortExact BN) 1 2 rfl ≫
+              (groupCohomology.functor ℤ Gal(N.val/ℚ) 2).map χ = 0 ↔
+              ∃ f : Rep.free ℤ Gal(N.val/ℚ) BN ⟶ C, originalRelationInclusion BN ≫ f = χ :=
+  originalUnramifiedStage_exists_relation_criterion Ω a ha P p hp2 hpa B hB
+
+end OriginalArithmeticStageRelationConsumerAuxiliaryScope
+
+noncomputable section OriginalTwoPrimaryLocalDegreeStageConsumerAuxiliaryScope
+open NumberField IsDedekindDomain CategoryTheory
+open scoped NumberField Classical
+attribute [-instance] UniformSpace.Completion.instSMul
+
+/-- Construct a cyclotomic stage in the original arithmetic union and a
+totally complex cyclic subfield with the required local degrees on all
+of the prescribed finite support. -/
+theorem regression_original_two_primary_localDegree_subfield
+    {Ω : Type} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+    (a : 𝓞 ℚ) (r : ℕ) (h2a : (2 : 𝓞 ℚ) ∣ a)
+    (S : Finset ℕ) (hS : ∀ p ∈ S, p.Prime) :
+    ∃ (k : ℕ) (F : FiniteGaloisIntermediateField ℚ Ω),
+      letI : NumberField F := NumberField.of_module_finite ℚ F
+      r + 2 ≤ k ∧ IsCyclotomicExtension {2 ^ (k + 1)} ℚ F ∧
+      F.toIntermediateField ≤ originalUnramifiedGaloisUnion (Ω := Ω) a ∧
+      ∃ E : IntermediateField ℚ F,
+        IsGalois ℚ E ∧ IsCyclic Gal(E/ℚ) ∧ IsTotallyComplex E ∧
+        Module.finrank E F ≤ 2 ∧
+        ∀ p ∈ S, ∀ w : HeightOneSpectrum (𝓞 E),
+          w.asIdeal.LiesOver (Ideal.span {(p : ℤ)}) →
+          let v := originalFinitePrimeBelow ℚ E w
+          letI := originalFinitePrimeBelow_liesOver ℚ E w
+          letI : Algebra (v.adicCompletion ℚ) (w.adicCompletion E) :=
+            (originalAdicBaseChangeMap ℚ E v w).toAlgebra
+          2 ^ (r + 1) ∣ Module.finrank (v.adicCompletion ℚ) (w.adicCompletion E) :=
+  originalUnramifiedUnion_exists_two_primary_localDegree_subfield a r h2a S hS
+
+end OriginalTwoPrimaryLocalDegreeStageConsumerAuxiliaryScope
+
+noncomputable section OriginalTotallyComplexGlobalH2KillingConsumerAuxiliaryScope
+open NumberField IsDedekindDomain CategoryTheory
+open scoped NumberField Classical
+attribute [-instance] UniformSpace.Completion.instSMul
+
+/-- Divisible actual completion degrees on the original finite localization support kill the actual globally base-changed class over the totally complex field. -/
+theorem regression_original_totallyComplex_global_killing
+    (K E L M : Type) [Field K] [NumberField K] [Field E] [NumberField E]
+    [Field L] [NumberField L] [Field M] [NumberField M]
+    [Algebra K E] [Algebra K L] [Algebra K M] [Algebra E M] [Algebra L M]
+    [IsScalarTower K E M] [IsScalarTower K L M]
+    [FiniteDimensional K E] [FiniteDimensional K L] [FiniteDimensional E M]
+    [IsGalois K E] [IsGalois K L] [IsGalois E M]
+    [IsTotallyComplex E] (n : ℕ)
+    (x : groupCohomology (Rep.ofAlgebraAutOnUnits K L) 2) (hx : n • x = 0)
+    (S : Finset (HeightOneSpectrum (𝓞 L)))
+    (hS : ∀ w : HeightOneSpectrum (𝓞 L), w ∉ S → originalGlobalAdicH2 K L w x = 0)
+    (hdegree : ∀ t : HeightOneSpectrum (𝓞 M), originalFinitePrimeBelow L M t ∈ S →
+      let u := originalFinitePrimeBelow E M t
+      let v := originalFinitePrimeBelow K E u
+      letI := originalFinitePrimeBelow_liesOver K E u
+      letI : Algebra (v.adicCompletion K) (u.adicCompletion E) :=
+        (originalAdicBaseChangeMap K E v u).toAlgebra
+      n ∣ Module.finrank (v.adicCompletion K) (u.adicCompletion E)) :
+    groupCohomology.map (galoisBaseChangeRestriction K E L M)
+      (galoisUnitBaseChangeInclusion K E L M) 2 x = 0 :=
+  originalGlobalUnitH2_baseChange_zero_of_totallyComplex_degrees K E L M n x hx S hS hdegree
+
+end OriginalTotallyComplexGlobalH2KillingConsumerAuxiliaryScope
+
+noncomputable section OriginalTwoPrimaryGlobalKillingConsumerAuxiliaryScope
+open NumberField IsDedekindDomain CategoryTheory
+open scoped NumberField Classical
+attribute [-instance] UniformSpace.Completion.instSMul DivisionRing.toRatAlgebra SubfieldClass.instSMulRat
+  AlgebraicClosure.instSMulOfIsScalarTower
+
+/-- An actual two-primary global unit class becomes zero over a constructed
+totally complex cyclic subfield in the original arithmetic union. -/
+theorem regression_original_constructed_two_primary_globalH2_killing
+    {Ω : Type} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+    (L : FiniteGaloisIntermediateField ℚ Ω) (a : 𝓞 ℚ) (r : ℕ)
+    (h2a : (2 : 𝓞 ℚ) ∣ a)
+    (x : groupCohomology (Rep.ofAlgebraAutOnUnits ℚ L) 2) (hx : 2 ^ (r + 1) • x = 0) :
+    ∃ (k : ℕ) (F : FiniteGaloisIntermediateField ℚ Ω),
+      r + 2 ≤ k ∧ IsCyclotomicExtension {2 ^ (k + 1)} ℚ F ∧
+      F.toIntermediateField ≤ originalUnramifiedGaloisUnion (Ω := Ω) a ∧
+      ∃ E : IntermediateField ℚ F,
+        IsGalois ℚ E ∧ IsCyclic Gal(E/ℚ) ∧ IsTotallyComplex E ∧
+        let M := L.toIntermediateField ⊔ F.toIntermediateField
+        let iL : L →ₐ[ℚ] M := IntermediateField.inclusion (show L.toIntermediateField ≤ M from le_sup_left)
+        let iF : F →ₐ[ℚ] M := IntermediateField.inclusion (show F.toIntermediateField ≤ M from le_sup_right)
+        let iE : E →ₐ[ℚ] M := iF.comp E.val
+        letI : Algebra L M := iL.toAlgebra
+        letI : Algebra E M := iE.toAlgebra
+        letI : Module E M := Algebra.toModule
+        letI : SMul E M := iE.toAlgebra.toSMul
+        letI : IsScalarTower ℚ L M := IsScalarTower.of_algHom iL
+        letI : IsScalarTower ℚ E M := IsScalarTower.of_algHom iE
+        groupCohomology.map (galoisBaseChangeRestriction ℚ E L M)
+          (galoisUnitBaseChangeInclusion ℚ E L M) 2 x = 0 :=
+  originalUnramifiedUnion_exists_two_primary_globalH2_killing L a r h2a x hx
+
+end OriginalTwoPrimaryGlobalKillingConsumerAuxiliaryScope
+
+noncomputable section OriginalTwoPrimaryCyclicDescentConsumerAuxiliaryScope
+open NumberField IsDedekindDomain CategoryTheory
+open scoped NumberField Classical
+attribute [-instance] UniformSpace.Completion.instSMul DivisionRing.toRatAlgebra SubfieldClass.instSMulRat
+  AlgebraicClosure.instSMulOfIsScalarTower
+
+/-- An original two-primary class descends to an actual cyclic class with
+the same annihilator and identical inflation inside the original union. -/
+theorem regression_original_two_primary_cyclic_descent
+    {Ω : Type} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+    (L : FiniteGaloisIntermediateField ℚ Ω) (a : 𝓞 ℚ) (r : ℕ)
+    (h2a : (2 : 𝓞 ℚ) ∣ a)
+    (hL : L.toIntermediateField ≤ originalUnramifiedGaloisUnion (Ω := Ω) a)
+    (x : groupCohomology (Rep.ofAlgebraAutOnUnits ℚ L) 2) (hx : 2 ^ (r + 1) • x = 0) :
+    ∃ (k : ℕ) (F : FiniteGaloisIntermediateField ℚ Ω),
+      r + 2 ≤ k ∧ IsCyclotomicExtension {2 ^ (k + 1)} ℚ F ∧
+      F.toIntermediateField ≤ originalUnramifiedGaloisUnion (Ω := Ω) a ∧
+      ∃ E : IntermediateField ℚ F,
+        ∃ hgal : IsGalois ℚ E,
+        letI := hgal
+        IsCyclic Gal(E/ℚ) ∧ IsTotallyComplex E ∧
+        let M := L.toIntermediateField ⊔ F.toIntermediateField
+        let iL : L →ₐ[ℚ] M := IntermediateField.inclusion (show L.toIntermediateField ≤ M from le_sup_left)
+        let iF : F →ₐ[ℚ] M := IntermediateField.inclusion (show F.toIntermediateField ≤ M from le_sup_right)
+        let iE : E →ₐ[ℚ] M := iF.comp E.val
+        letI : Algebra L M := iL.toAlgebra
+        letI : Algebra E M := iE.toAlgebra
+        letI : Module E M := Algebra.toModule
+        letI : SMul E M := iE.toAlgebra.toSMul
+        letI : IsScalarTower ℚ L M := IsScalarTower.of_algHom iL
+        letI : IsScalarTower ℚ E M := IsScalarTower.of_algHom iE
+        M ≤ originalUnramifiedGaloisUnion (Ω := Ω) a ∧
+        ∃ y : groupCohomology (Rep.ofAlgebraAutOnUnits ℚ E) 2,
+          2 ^ (r + 1) • y = 0 ∧
+          groupCohomology.map (AlgEquiv.restrictNormalHom E)
+            (finiteGaloisUnitTowerInclusion ℚ E M) 2 y =
+          groupCohomology.map (AlgEquiv.restrictNormalHom L)
+            (finiteGaloisUnitTowerInclusion ℚ L M) 2 x :=
+  originalUnramifiedUnion_exists_two_primary_cyclic_descent L a r h2a hL x hx
+
+end OriginalTwoPrimaryCyclicDescentConsumerAuxiliaryScope
+
+noncomputable section OriginalTwoPrimarySourceEntryConsumerAuxiliaryScope
+open NumberField
+open scoped NumberField Classical
+attribute [-instance] UniformSpace.Completion.instSMul DivisionRing.toRatAlgebra SubfieldClass.instSMulRat
+  AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] originalContinuousCyclicUnionGalois
+
+variable {Ω : Type} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+  (a : 𝓞 ℚ)
+  [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℚ (originalUnramifiedGaloisUnion (Ω := Ω) a))]
+
+/-- Every actual two-primary continuous class is the original inflation
+of a constructed cyclic totally complex finite-field class in the same union. -/
+theorem regression_original_two_primary_continuous_source_entry
+    (r : ℕ) (h2a : (2 : 𝓞 ℚ) ∣ a)
+    (x : GaloisUnitContinuousH2 (K := ℚ) (Ω := originalUnramifiedGaloisUnion (Ω := Ω) a))
+    (hx : 2 ^ (r + 1) • x = 0) :
+    let U := originalUnramifiedGaloisUnion (Ω := Ω) a
+    ∃ (k : ℕ) (F : FiniteGaloisIntermediateField ℚ Ω),
+      r + 2 ≤ k ∧ IsCyclotomicExtension {2 ^ (k + 1)} ℚ F ∧
+      ∃ hF : F.toIntermediateField ≤ U,
+      ∃ E : IntermediateField ℚ F, ∃ hgal : IsGalois ℚ E,
+      letI := hgal
+      IsCyclic Gal(E/ℚ) ∧ IsTotallyComplex E ∧
+      let iE := (IntermediateField.inclusion hF).comp E.val
+      letI : Algebra E U := iE.toAlgebra
+      letI : SMul E U := iE.toAlgebra.toSMul
+      letI : IsScalarTower ℚ E U := IsScalarTower.of_algHom iE
+      letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits ℚ E) := ⊥
+      letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits ℚ E) := ⟨rfl⟩
+      ∃ y : groupCohomology (Rep.ofAlgebraAutOnUnits ℚ E) 2,
+        2 ^ (r + 1) • y = 0 ∧
+        continuousGaloisUnitBaseChangeH2 ℚ ℚ E U
+          ((continuousDiscreteH2Equiv (Rep.ofAlgebraAutOnUnits ℚ E)
+            (discreteGaloisUnitAction_continuous (K := ℚ) (Ω := E))).symm y) = x :=
+  originalUnramifiedUnitH2_exists_two_primary_cyclic_subfield a r h2a x hx
+
+end OriginalTwoPrimarySourceEntryConsumerAuxiliaryScope
+
+noncomputable section RationalPrimeCyclicSubfieldNormConsumerAuxiliaryScope
+open scoped ValuativeRel
+
+attribute [local instance] rationalPrimeWittPrime wittCyclotomicRootDomain
+  wittCyclotomicRootFaithful wittCyclotomicFieldAlgebra wittCyclotomicFieldTower
+  rationalPrimeWittOriginalAlgebra rationalPrimeWittCyclotomicAlgebra
+  rationalPrimeWittCyclotomicTower rationalPrimeWittCyclotomicModule
+  rationalPrimeWittCyclotomicMulAction
+
+variable
+    (p : ℕ) (hp : p.Prime) (n a : ℕ)
+    (u : 𝒪[rationalPrimeLocalField p hp]ˣ) (hu : u.val = a) (ha : ¬p ∣ a)
+    (L₀ : FiniteGaloisIntermediateField (rationalPrimeLocalField p hp)
+      (rationalPrimeLocalClosure p hp))
+    (hL₀ : L₀.toIntermediateField ≤
+      (rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha).toIntermediateField)
+    [IsCyclic Gal(L₀/rationalPrimeLocalField p hp)]
+    [FiniteDimensional (rationalPrimeLocalField p hp)
+      (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [ValuativeRel (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha))]
+    [ValuativeRel (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [TopologicalSpace (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [IsNonarchimedeanLocalField (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha)]
+    [(ValuativeRel.valuation (rationalPrimeLocalField p hp)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+    [(ValuativeRel.valuation (rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha)).HasExtension
+      (ValuativeRel.valuation (rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha))]
+
+/-- The constructed normed uniformizer has its literal restricted Frobenius
+image on every cyclic subfield, including at the prime two. -/
+theorem regression_original_cyclic_subfield_normed_reciprocity :
+    let K := rationalPrimeLocalField p hp
+    let Ω := rationalPrimeLocalClosure p hp
+    let E := rationalPrimeChangedAuxiliaryClosureField p hp n a u hu ha
+    let L := rationalPrimeOriginalCyclotomicClosureStage p hp n a u hu ha
+    let M := rationalPrimeChangedCyclotomicClosureCompositum p hp n a u hu ha
+    let j := rationalPrimeOriginalCyclotomicClosureInclusion p hp n a u hu ha
+    let i₀ : L₀ →ₐ[K] L := IntermediateField.inclusion hL₀
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    ∃ (_ : Algebra.FormallyUnramified 𝒪[E] 𝒪[M]),
+    (localFieldFiniteCyclicReciprocity K Ω L₀
+      (Additive.ofMul (rationalPrimeNaturalMulPrimeUnit p hp a ha))).toMul =
+          embeddedNormalGaloisRestriction (F := K) i₀
+            (embeddedNormalGaloisRestriction (F := E) j
+              (localFieldArithmeticFrobenius E M)) :=
+  rationalPrimeChangedCyclotomicClosure_cyclicSubfield_reciprocity_natural_mul_prime p hp n a u hu ha L₀ hL₀
+
+end RationalPrimeCyclicSubfieldNormConsumerAuxiliaryScope
+
+noncomputable section RationalTwoCyclicSubfieldCancellationConsumerAuxiliaryScope
+open scoped ValuativeRel
+
+/-- On the same cyclic subfield, the original reciprocity of `a * 2`
+equals the original reciprocity of the natural unit `a`. -/
+theorem regression_original_two_cyclic_subfield_prime_cancellation
+    (n a : ℕ) (hn : 1 ≤ n)
+    (u : 𝒪[rationalPrimeLocalField 2 Nat.prime_two]ˣ) (hu : u.val = a) (ha : ¬2 ∣ a)
+    (L : FiniteGaloisIntermediateField (rationalPrimeLocalField 2 Nat.prime_two)
+      (rationalPrimeLocalClosure 2 Nat.prime_two))
+    (hL : L.toIntermediateField ≤
+      (rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n a u hu ha).toIntermediateField)
+    [IsCyclic Gal(L/rationalPrimeLocalField 2 Nat.prime_two)] :
+    let K := rationalPrimeLocalField 2 Nat.prime_two
+    let Ω := rationalPrimeLocalClosure 2 Nat.prime_two
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    (localFieldFiniteCyclicReciprocity K Ω L
+      (Additive.ofMul (rationalPrimeNaturalMulPrimeUnit 2 Nat.prime_two a ha))).toMul =
+    (localFieldFiniteCyclicReciprocity K Ω L
+      (Additive.ofMul (rationalPrimeNaturalUnit 2 Nat.prime_two a ha))).toMul :=
+  rationalTwoOriginalCyclotomicClosure_cyclicSubfield_reciprocity_mul_prime_eq_natural n a hn u hu ha L hL
+
+end RationalTwoCyclicSubfieldCancellationConsumerAuxiliaryScope
+
+noncomputable section RationalTwoCyclicSubfieldNaturalActionConsumerAuxiliaryScope
+open scoped ValuativeRel
+
+variable
+    (n a : ℕ) (hn : 1 ≤ n)
+    (u : 𝒪[rationalPrimeLocalField 2 Nat.prime_two]ˣ) (hu : u.val = a) (ha : ¬2 ∣ a)
+    (L₀ : FiniteGaloisIntermediateField (rationalPrimeLocalField 2 Nat.prime_two)
+      (rationalPrimeLocalClosure 2 Nat.prime_two))
+    (hL₀ : L₀.toIntermediateField ≤
+      (rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n a u hu ha).toIntermediateField)
+    [IsCyclic Gal(L₀/rationalPrimeLocalField 2 Nat.prime_two)]
+
+include hn
+
+/-- Exact consumer with derived auxiliary structures and inverse exponent. -/
+theorem regression_original_two_cyclic_subfield_constructed_natural_action :
+    let K := rationalPrimeLocalField 2 Nat.prime_two
+    let Ω := rationalPrimeLocalClosure 2 Nat.prime_two
+    let F := rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n a u hu ha
+    let i₀ : L₀ →ₐ[K] F := IntermediateField.inclusion hL₀
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    let ζ := rationalPrimeOriginalCyclotomicClosureRoot 2 Nat.prime_two n a u hu ha
+    ∃ b : ℕ, b.Coprime (2 ^ (n + 1)) ∧ a * b ≡ 1 [MOD 2 ^ (n + 1)] ∧
+      ∃ σ : Gal(F/K), σ ζ = ζ ^ b ∧
+        (localFieldFiniteCyclicReciprocity K Ω L₀
+          (Additive.ofMul (rationalPrimeNaturalUnit 2 Nat.prime_two a ha))).toMul =
+          embeddedNormalGaloisRestriction (F := K) i₀ σ :=
+  rationalTwoOriginalCyclotomicClosure_cyclicSubfield_constructed_natural_action n a hn u hu ha L₀ hL₀
+
+end RationalTwoCyclicSubfieldNaturalActionConsumerAuxiliaryScope
+
+noncomputable section RationalTwoFixedNaturalActionConsumerAuxiliaryScope
+open IsDedekindDomain HeightOneSpectrum
+open scoped BigOperators ValuativeRel
+
+variable
+    (n c : ℕ) (hn : 1 ≤ n)
+    (v : 𝒪[rationalPrimeLocalField 2 Nat.prime_two]ˣ) (hv : v.val = c) (hc : ¬2 ∣ c)
+    (L : FiniteGaloisIntermediateField (rationalPrimeLocalField 2 Nat.prime_two)
+      (rationalPrimeLocalClosure 2 Nat.prime_two))
+    (hL : L.toIntermediateField ≤
+      (rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n c v hv hc).toIntermediateField)
+    [IsCyclic Gal(L/rationalPrimeLocalField 2 Nat.prime_two)]
+
+include hn
+
+/-- Exact consumer of the constructed original-object reciprocity result. -/
+theorem regression_original_two_fixed_natural_action
+    (a : ℕ) (ha : ¬2 ∣ a) :
+    let K := rationalPrimeLocalField 2 Nat.prime_two
+    let Ω := rationalPrimeLocalClosure 2 Nat.prime_two
+    let F := rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n c v hv hc
+    let i : L →ₐ[K] F := IntermediateField.inclusion hL
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    let ζ := rationalPrimeOriginalCyclotomicClosureRoot 2 Nat.prime_two n c v hv hc
+    ∃ b : ℕ, b.Coprime (2 ^ (n + 1)) ∧ a * b ≡ 1 [MOD 2 ^ (n + 1)] ∧
+      ∃ σ : Gal(F/K), σ ζ = ζ ^ b ∧
+        (localFieldFiniteCyclicReciprocity K Ω L
+          (Additive.ofMul (rationalPrimeNaturalUnit 2 Nat.prime_two a ha))).toMul =
+          embeddedNormalGaloisRestriction (F := K) i σ :=
+  rationalTwoOriginalCyclotomicClosure_cyclicSubfield_fixed_natural_action n c hn v hv hc L hL a ha
+
+end RationalTwoFixedNaturalActionConsumerAuxiliaryScope
+
+noncomputable section RationalTwoPrincipalCharacterConsumerAuxiliaryScope
+open IsDedekindDomain HeightOneSpectrum
+open scoped BigOperators ValuativeRel
+
+variable
+    (n c : ℕ) (hn : 1 ≤ n)
+    (v : 𝒪[rationalPrimeLocalField 2 Nat.prime_two]ˣ) (hv : v.val = c) (hc : ¬2 ∣ c)
+    (L : FiniteGaloisIntermediateField (rationalPrimeLocalField 2 Nat.prime_two)
+      (rationalPrimeLocalClosure 2 Nat.prime_two))
+    (hL : L.toIntermediateField ≤
+      (rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n c v hv hc).toIntermediateField)
+    [IsCyclic Gal(L/rationalPrimeLocalField 2 Nat.prime_two)]
+    (q : ℚˣ)
+
+include hn
+
+/-- Exact consumer of the constructed original-object reciprocity result. -/
+theorem regression_original_two_cyclic_subfield_principal_character :
+    let K := rationalPrimeLocalField 2 Nat.prime_two
+    let Ω := rationalPrimeLocalClosure 2 Nat.prime_two
+    let F := rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n c v hv hc
+    let i : L →ₐ[K] F := IntermediateField.inclusion hL
+    letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits K Ω) := ⊥
+    letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits K Ω) := ⟨rfl⟩
+    let r := rationalPrimeNormalizedResidual 2 Nat.prime_two q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ hS : ∀ w ∈ S, ¬Rat.HeightOneSpectrum.natGenerator w ∣ 2 ^ (n + 1),
+        (∀ w ∉ S, w.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ w ∈ S, (Rat.HeightOneSpectrum.natGenerator w : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator w)
+                (Rat.HeightOneSpectrum.prime_natGenerator w))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator w)
+                  (Rat.HeightOneSpectrum.prime_natGenerator w) r))) = r.val ∧
+        ∃ σ : Gal(F/K),
+          (rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive
+            2 Nat.prime_two n c v hv hc).autToPow K σ *
+            arithmeticCyclotomicSignedAwayProductUnit (2 ^ (n + 1)) S hS r = 1 ∧
+          (localFieldFiniteCyclicReciprocity K Ω L
+            (Additive.ofMul (rationalPrimeRationalUnit 2 Nat.prime_two q))).toMul =
+            embeddedNormalGaloisRestriction (F := K) i σ :=
+  rationalTwoOriginalCyclotomicClosure_cyclicSubfield_principal_character n c hn v hv hc L hL q
+
+end RationalTwoPrincipalCharacterConsumerAuxiliaryScope
+
+noncomputable section RationalTwoArithmeticPrincipalCharacterConsumerAuxiliaryScope
+open IsDedekindDomain HeightOneSpectrum
+open scoped BigOperators NumberField ValuativeRel
+
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois arithmeticFiniteLocalStageRationalAlgebra
+
+variable (a : 𝓞 ℚ)
+    (E F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (hEF : E.toIntermediateField ≤ F.toIntermediateField)
+    [IsCyclic Gal(E/ℚ)]
+    (n : ℕ) (hn : 1 ≤ n) [IsCyclotomicExtension {2 ^ (n + 1)} ℚ F]
+    (q : ℚˣ)
+
+include hn
+
+/-- Exact arithmetic source consumer with derived local stage and reference unit. -/
+theorem regression_original_two_arithmetic_principal_character :
+    let K := rationalPrimeLocalField 2 Nat.prime_two
+    let h1 : (1 : 𝒪[rationalPrimeLocalField 2 Nat.prime_two]ˣ).val = (1 : ℕ) :=
+      by simp only [Units.val_one, Nat.cast_one]
+    let C := rationalPrimeOriginalCyclotomicClosureStage 2 Nat.prime_two n 1 1 h1
+      Nat.prime_two.not_dvd_one
+    let r := rationalPrimeNormalizedResidual 2 Nat.prime_two q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ hS : ∀ w ∈ S, ¬Rat.HeightOneSpectrum.natGenerator w ∣ 2 ^ (n + 1),
+        (∀ w ∉ S, w.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ w ∈ S, (Rat.HeightOneSpectrum.natGenerator w : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator w)
+                (Rat.HeightOneSpectrum.prime_natGenerator w))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator w)
+                  (Rat.HeightOneSpectrum.prime_natGenerator w) r))) = r.val ∧
+        ∃ σ : Gal(C/K),
+          (rationalPrimeOriginalCyclotomicClosureRoot_isPrimitive
+            2 Nat.prime_two n 1 1 h1 Nat.prime_two.not_dvd_one).autToPow K σ *
+            arithmeticCyclotomicSignedAwayProductUnit (2 ^ (n + 1)) S hS r = 1 ∧
+          rationalArithmeticFiniteLocalReciprocityAut a E 2 Nat.prime_two q =
+            rationalTwoArithmeticSubfieldRestriction a E F hEF n σ :=
+  rationalTwoArithmeticCyclicSubfield_exists_principal_character a E F hEF n hn q
+
+end RationalTwoArithmeticPrincipalCharacterConsumerAuxiliaryScope
+
+noncomputable section RationalTwoArithmeticContainingPrincipalConsumerAuxiliaryScope
+open IsDedekindDomain HeightOneSpectrum
+open scoped BigOperators NumberField ValuativeRel
+
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois arithmeticFiniteLocalStageRationalAlgebra
+
+variable (a : 𝓞 ℚ)
+    (E F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (hEF : E.toIntermediateField ≤ F.toIntermediateField)
+    [IsCyclic Gal(E/ℚ)]
+    (n : ℕ) [IsCyclotomicExtension {2 ^ (n + 1)} ℚ F]
+    {ζ : F} (hζ : IsPrimitiveRoot ζ (2 ^ (n + 1))) (q : ℚˣ)
+
+variable (hn : 1 ≤ n)
+include hn
+
+/-- Exact original containing-field principal-character consumer. -/
+theorem regression_original_two_containing_principal_character :
+    let r := rationalPrimeNormalizedResidual 2 Nat.prime_two q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ hS : ∀ w ∈ S, ¬Rat.HeightOneSpectrum.natGenerator w ∣ 2 ^ (n + 1),
+        (∀ w ∉ S, w.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ w ∈ S, (Rat.HeightOneSpectrum.natGenerator w : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator w)
+                (Rat.HeightOneSpectrum.prime_natGenerator w))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator w)
+                  (Rat.HeightOneSpectrum.prime_natGenerator w) r))) = r.val ∧
+        ∃ τ : Gal(F/ℚ),
+          hζ.autToPow ℚ τ *
+            arithmeticCyclotomicSignedAwayProductUnit (2 ^ (n + 1)) S hS r = 1 ∧
+          rationalArithmeticFiniteLocalReciprocityAut a E 2 Nat.prime_two q =
+            embeddedNormalGaloisRestriction (F := ℚ) (IntermediateField.inclusion hEF) τ :=
+  rationalTwoArithmeticContainingField_exists_principal_character a E F hEF n hζ q hn
+
+end RationalTwoArithmeticContainingPrincipalConsumerAuxiliaryScope
+
+noncomputable section RationalTwoOriginalPrincipalProductConsumerAuxiliaryScope
+open IsDedekindDomain HeightOneSpectrum
+open scoped BigOperators NumberField
+
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois arithmeticFiniteLocalStageRationalAlgebra
+
+variable (a : 𝓞 ℚ)
+    (E F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (hEF : E.toIntermediateField ≤ F.toIntermediateField) [IsCyclic Gal(E/ℚ)]
+    (n : ℕ) [IsCyclotomicExtension {2 ^ (n + 1)} ℚ F] (q : ℚˣ)
+
+variable (hn : 1 ≤ n)
+include hn
+
+/-- Exact principal product on the original arithmetic cyclic subfield. -/
+theorem regression_original_two_cyclic_principal_product :
+    let r := rationalPrimeNormalizedResidual 2 Nat.prime_two q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ _hS : ∀ w ∈ S, ¬Rat.HeightOneSpectrum.natGenerator w ∣ 2 ^ (n + 1),
+        (∀ w ∉ S, w.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ w ∈ S, (Rat.HeightOneSpectrum.natGenerator w : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator w)
+                (Rat.HeightOneSpectrum.prime_natGenerator w))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator w)
+                  (Rat.HeightOneSpectrum.prime_natGenerator w) r))) = r.val ∧
+        (letI : CommGroup Gal(E/ℚ) := IsCyclic.commGroup
+         let R : Gal(F/ℚ) →* Gal(E/ℚ) :=
+           embeddedNormalGaloisRestriction (F := ℚ) (IntermediateField.inclusion hEF)
+         rationalArithmeticFiniteLocalReciprocityAut a E 2 Nat.prime_two q *
+           (R (rationalCyclotomicRealSignAut (2 ^ (n + 1)) F q) *
+             S.attach.prod (fun w => rationalArithmeticFiniteLocalReciprocityAut a E
+               (Rat.HeightOneSpectrum.natGenerator w.1)
+               (Rat.HeightOneSpectrum.prime_natGenerator w.1) q)) = 1) :=
+  rationalTwoArithmeticCyclicSubfield_exists_principal_product a E F hEF n q hn
+
+end RationalTwoOriginalPrincipalProductConsumerAuxiliaryScope
+
+noncomputable section ArithmeticContainingAwayRestrictionConsumerAuxiliaryScope
+open scoped NumberField
+
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois arithmeticFiniteLocalStageRationalAlgebra
+
+variable (a : 𝓞 ℚ) (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+  (p : ℕ) (hp : p.Prime) (n : ℕ) [NeZero n]
+  [IsCyclotomicExtension {n} ℚ F] (hpn : ¬p ∣ n) (q : ℚˣ)
+
+include hp hpn q
+
+variable (E : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (hEF : E.toIntermediateField ≤ F.toIntermediateField) [IsCyclic Gal(E/ℚ)]
+
+/-- Exact restriction of original away-prime reciprocity to the cyclic subfield. -/
+theorem regression_original_containing_away_restriction :
+    embeddedNormalGaloisRestriction (F := ℚ) (IntermediateField.inclusion hEF)
+      (arithmeticCyclotomicContainingAwayAut a F p hp n hpn q) =
+      rationalArithmeticFiniteLocalReciprocityAut a E p hp q :=
+  arithmeticCyclotomicContainingAwayAut_restrict a F p hp n hpn q E hEF
+
+end ArithmeticContainingAwayRestrictionConsumerAuxiliaryScope
+
+noncomputable section RationalTwoActualPrincipalProductConsumerAuxiliaryScope
+open IsDedekindDomain HeightOneSpectrum
+open scoped BigOperators NumberField
+
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois arithmeticFiniteLocalStageRationalAlgebra
+
+variable (a : 𝓞 ℚ)
+    (E F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (hEF : E.toIntermediateField ≤ F.toIntermediateField) [IsCyclic Gal(E/ℚ)]
+    (n : ℕ) [IsCyclotomicExtension {2 ^ (n + 1)} ℚ F] (q : ℚˣ)
+
+variable (hn : 1 ≤ n)
+include hn hEF
+
+/-- Exact principal product with the actual original real and finite arithmetic maps. -/
+theorem regression_original_two_actual_principal_product :
+    let r := rationalPrimeNormalizedResidual 2 Nat.prime_two q
+    ∃ S : Finset (HeightOneSpectrum ℤ),
+      ∃ _hS : ∀ w ∈ S, ¬Rat.HeightOneSpectrum.natGenerator w ∣ 2 ^ (n + 1),
+        (∀ w ∉ S, w.valuation ℚ r.val = 1) ∧
+        (if 0 < r.val then (1 : ℚ) else -1) *
+          (∏ w ∈ S, (Rat.HeightOneSpectrum.natGenerator w : ℚ) ^
+            localFieldUnitOrder
+              (rationalPrimeLocalField (Rat.HeightOneSpectrum.natGenerator w)
+                (Rat.HeightOneSpectrum.prime_natGenerator w))
+              (Additive.ofMul
+                (rationalPrimeRationalUnit (Rat.HeightOneSpectrum.natGenerator w)
+                  (Rat.HeightOneSpectrum.prime_natGenerator w) r))) = r.val ∧
+        (letI : CommGroup Gal(E/ℚ) := IsCyclic.commGroup
+         rationalArithmeticFiniteLocalReciprocityAut a E 2 Nat.prime_two q *
+           (rationalRealArithmeticFiniteRestriction a E (if 0 < q.val then 1 else Complex.conjAe) *
+             S.attach.prod (fun w => rationalArithmeticFiniteLocalReciprocityAut a E
+               (Rat.HeightOneSpectrum.natGenerator w.1)
+               (Rat.HeightOneSpectrum.prime_natGenerator w.1) q)) = 1) :=
+  rationalTwoArithmeticCyclicSubfield_exists_actual_principal_product a E F hEF n q hn
+
+end RationalTwoActualPrincipalProductConsumerAuxiliaryScope
+
+noncomputable section ArithmeticFiniteRealCarryInvariantConsumerAuxiliaryScope
+open scoped NumberField
+attribute [-instance] UniformSpace.Completion.instSMul SubfieldClass.instSMulRat
+  DivisionRing.toRatAlgebra AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois originalRealPeriodQuadratic
+  arithmeticFiniteRealRationalAlgebra
+  arithmeticFiniteRealClosureAlgebra arithmeticFiniteRealClosureSMul arithmeticFiniteRealClosureTower
+
+variable (a : 𝓞 ℚ) (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℚ F)]
+    [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℚ F)]
+    [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+    [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+
+/-- Exact original arithmetic carry, actual real unit-H2 restriction and normalized real invariant. -/
+theorem regression_original_arithmetic_real_carry_invariant
+    {n : ℕ} [NeZero n] (χ : Gal(F/ℚ) →* Multiplicative (ZMod n)) (q : ℚˣ) :
+    originalRealUnitH2Invariant (rationalArithmeticFiniteRealUnitH2 a F
+      (Submodule.Quotient.mk (galoisUnitCharacterCarryCocycle χ q))) =
+      rationalCyclicInvariant n
+        (χ (rationalRealArithmeticFiniteRestriction a F
+          (if 0 < q.val then 1 else Complex.conjAe))).toAdd :=
+  rationalArithmeticFiniteRealCarryInvariant a F χ q
+
+end ArithmeticFiniteRealCarryInvariantConsumerAuxiliaryScope
+
+noncomputable section TwoPrimaryPrincipalPrimeSumConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+attribute [local instance] arithmeticFiniteLocalStageAlgebra
+  arithmeticFiniteLocalStageGalois arithmeticFiniteLocalStageRationalAlgebra
+
+/-- Exact principal sum on the original rational primes and actual real restriction. -/
+theorem regression_original_two_primary_principal_prime_sum
+    (a : 𝓞 ℚ) (E : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    [IsCyclic Gal(E/ℚ)] (q : ℚˣ)
+    {d : ℕ} [NeZero d] (χ : Gal(E/ℚ) →* Multiplicative (ZMod d))
+    (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+    (hEF : E.toIntermediateField ≤ F.toIntermediateField)
+    (n : ℕ) (hn : 1 ≤ n) [IsCyclotomicExtension {2 ^ (n + 1)} ℚ F] :
+    ∃ T : Finset Nat.Primes,
+      (∀ p ∉ T, rationalCyclicInvariant d
+        (χ (rationalArithmeticFiniteLocalReciprocityAut a E p.val p.property q)).toAdd = 0) ∧
+      (∑ p ∈ T, rationalCyclicInvariant d
+        (χ (rationalArithmeticFiniteLocalReciprocityAut a E p.val p.property q)).toAdd) +
+        rationalCyclicInvariant d (χ (rationalRealArithmeticFiniteRestriction a E
+          (if 0 < q.val then 1 else Complex.conjAe))).toAdd = 0 :=
+  rationalTwoArithmeticCyclicSubfield_exists_principal_prime_sum a E q χ F hEF n hn
+
+end TwoPrimaryPrincipalPrimeSumConsumerAuxiliaryScope
+
+noncomputable section ArithmeticRealInflationConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+attribute [-instance] UniformSpace.Completion.instSMul SubfieldClass.instSMulRat
+  DivisionRing.toRatAlgebra AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] arithmeticKummerStageAlgebra arithmeticKummerStageGalois
+  arithmeticKummerStageTopology arithmeticKummerStageDiscrete arithmeticGlobalUnitContinuousSMul
+  originalRealPeriodQuadratic
+
+attribute [local instance] arithmeticFiniteCarryGlobalAlgebra arithmeticFiniteCarryTopology
+  arithmeticFiniteCarryDiscrete
+variable (a : 𝓞 ℚ)
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+  [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  (F : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a))
+
+/-- Exact real invariant of the same original globally inflated carry. -/
+theorem regression_original_real_inflated_carry_invariant
+    {n : ℕ} [NeZero n] (χ : Gal(F/ℚ) →* Multiplicative (ZMod n)) (q : ℚˣ) :
+    originalRealUnitH2Invariant (rationalArithmeticRealUnitH2Restriction a
+      (galoisUnitFiniteStageH2Inflation F
+        (Submodule.Quotient.mk (galoisUnitCharacterCarryCocycle χ q)))) =
+      rationalCyclicInvariant n
+        (χ (rationalRealArithmeticFiniteRestriction a F
+          (if 0 < q.val then 1 else Complex.conjAe))).toAdd :=
+  rationalArithmeticRealInflatedCarryInvariant a F χ q
+
+end ArithmeticRealInflationConsumerAuxiliaryScope
+
+noncomputable section TwoPrimaryCyclicFiniteStageConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+open NumberField
+attribute [-instance] UniformSpace.Completion.instSMul SubfieldClass.instSMulRat
+  DivisionRing.toRatAlgebra AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] arithmeticKummerStageAlgebra arithmeticKummerStageGalois
+  arithmeticKummerStageTopology arithmeticKummerStageDiscrete arithmeticGlobalUnitContinuousSMul
+variable (a : 𝓞 ℚ) (r : ℕ) (h2a : (2 : 𝓞 ℚ) ∣ a)
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+include h2a
+
+/-- Exact original annihilator, containing cyclotomic field, subfield inclusion and inflation. -/
+theorem regression_original_two_primary_retained_cyclic_stage
+    (x : GaloisUnitContinuousH2 (K := ℚ) (Ω := rationalUnramifiedExtension a))
+    (hx : 2 ^ (r + 1) • x = 0) :
+    ∃ (k : ℕ) (F E : FiniteGaloisIntermediateField ℚ (rationalUnramifiedExtension a)),
+      r + 2 ≤ k ∧ IsCyclotomicExtension {2 ^ (k + 1)} ℚ F ∧
+      E.toIntermediateField ≤ F.toIntermediateField ∧ IsCyclic Gal(E/ℚ) ∧ IsTotallyComplex E ∧
+      letI : TopologicalSpace (Rep.ofAlgebraAutOnUnits ℚ E) := ⊥
+      letI : DiscreteTopology (Rep.ofAlgebraAutOnUnits ℚ E) := ⟨rfl⟩
+      ∃ y : GaloisUnitH2FiniteStage ℚ (rationalUnramifiedExtension a) E,
+        2 ^ (r + 1) • y = 0 ∧ galoisUnitFiniteStageH2Inflation E y = x :=
+  rationalArithmeticUnitH2_exists_two_primary_cyclic_finite_stage a r h2a x hx
+
+end TwoPrimaryCyclicFiniteStageConsumerAuxiliaryScope
+
+noncomputable section TwoPrimaryUnitInvariantSumConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+attribute [-instance] UniformSpace.Completion.instSMul SubfieldClass.instSMulRat
+  DivisionRing.toRatAlgebra AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] arithmeticKummerStageAlgebra arithmeticKummerStageGalois
+  arithmeticKummerStageTopology arithmeticKummerStageDiscrete arithmeticGlobalUnitContinuousSMul
+  originalRealPeriodQuadratic
+variable (a : 𝓞 ℚ) (r : ℕ) (h2a : (2 : 𝓞 ℚ) ∣ a)
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+include h2a
+variable [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+
+/-- Exact finite support and finite-plus-real sum for every original two-primary arithmetic unit class. -/
+theorem regression_original_two_primary_unit_invariant_support_sum
+    (x : GaloisUnitContinuousH2 (K := ℚ) (Ω := rationalUnramifiedExtension a))
+    (hx : 2 ^ (r + 1) • x = 0) :
+    ∃ T : Finset Nat.Primes,
+      (∀ p ∉ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x = 0) ∧
+      (∑ p ∈ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x) +
+        originalRealUnitH2Invariant (rationalArithmeticRealUnitH2Restriction a x) = 0 :=
+  rationalArithmeticUnitInvariant_exists_two_primary_support_sum_zero a r h2a x hx
+
+/-- Exact sum on every finite support of the same original two-primary class. -/
+theorem regression_original_two_primary_unit_invariant_sum
+    (x : GaloisUnitContinuousH2 (K := ℚ) (Ω := rationalUnramifiedExtension a))
+    (hx : 2 ^ (r + 1) • x = 0) (T : Finset Nat.Primes)
+    (hT : ∀ p ∉ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x = 0) :
+    (∑ p ∈ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x) +
+      originalRealUnitH2Invariant (rationalArithmeticRealUnitH2Restriction a x) = 0 :=
+  rationalArithmeticUnitInvariant_two_primary_sum_zero a r h2a x hx T hT
+
+end TwoPrimaryUnitInvariantSumConsumerAuxiliaryScope
+
+noncomputable section PrimePowerUnitInvariantSumConsumerAuxiliaryScope
+open scoped NumberField BigOperators
+attribute [-instance] UniformSpace.Completion.instSMul SubfieldClass.instSMulRat
+  DivisionRing.toRatAlgebra AlgebraicClosure.instSMulOfIsScalarTower
+attribute [local instance] arithmeticKummerStageAlgebra arithmeticKummerStageGalois
+  arithmeticKummerStageTopology arithmeticKummerStageDiscrete arithmeticGlobalUnitContinuousSMul
+  originalRealPeriodQuadratic
+variable [TopologicalSpace (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+  [DiscreteTopology (Rep.ofAlgebraAutOnUnits ℝ ℂ)]
+variable (a : 𝓞 ℚ) (q r : ℕ) (hq : q.Prime) (hqa : (q : 𝓞 ℚ) ∣ a)
+  [TopologicalSpace (rationalArithmeticUnitRepresentation a)]
+  [DiscreteTopology (rationalArithmeticUnitRepresentation a)]
+include hq hqa
+
+/-- Exact finite-plus-real sum on the original prime-power arithmetic unit class, including two. -/
+theorem regression_original_prime_power_unit_invariant_support_sum
+    (x : GaloisUnitContinuousH2 (K := ℚ) (Ω := rationalUnramifiedExtension a))
+    (hx : q ^ (r + 1) • x = 0) :
+    ∃ T : Finset Nat.Primes,
+      (∀ p ∉ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x = 0) ∧
+      (∑ p ∈ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x) +
+        originalRealUnitH2Invariant (rationalArithmeticRealUnitH2Restriction a x) = 0 :=
+  rationalArithmeticUnitInvariant_exists_prime_power_support_sum_zero a q r hq hqa x hx
+
+/-- Exact finite-plus-real sum on the original prime-power arithmetic unit class, including two. -/
+theorem regression_original_prime_power_unit_invariant_sum
+    (x : GaloisUnitContinuousH2 (K := ℚ) (Ω := rationalUnramifiedExtension a))
+    (hx : q ^ (r + 1) • x = 0) (T : Finset Nat.Primes)
+    (hT : ∀ p ∉ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x = 0) :
+    (∑ p ∈ T, rationalArithmeticUnitPrimeInvariant a p.val p.property x) +
+      originalRealUnitH2Invariant (rationalArithmeticRealUnitH2Restriction a x) = 0 :=
+  rationalArithmeticUnitInvariant_prime_power_sum_zero a q r hq hqa x hx T hT
+
+end PrimePowerUnitInvariantSumConsumerAuxiliaryScope
+
 end Dubon2026.SemanticRegression
