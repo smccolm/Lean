@@ -1,0 +1,1611 @@
+{
+  "recordedUTC": "2026-10-18T21:29:23.600288+00:00",
+  "productionModules": 4212,
+  "modules": [
+    "Dubon2026.Reuse.Imperial.Patching.Utils.InverseLimit",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.Lemmas",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.AdicTopology",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.TopologicallyFG",
+    "Dubon2026.Reuse.Imperial.Mathlib.Algebra.Module.TransferInstance",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.StructureFiniteness",
+    "Dubon2026.Reuse.Imperial.Patching.Ultraproduct",
+    "Dubon2026.Reuse.Imperial.Mathlib.GroupTheory.Index",
+    "Dubon2026.Reuse.Imperial.Mathlib.Topology.Algebra.Group.Basic",
+    "Dubon2026.Reuse.Imperial.Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+    "Dubon2026.Reuse.Imperial.Deformations.Lemmas",
+    "Dubon2026.Reuse.Imperial.Patching.Algebra",
+    "Dubon2026.Reuse.Imperial.Patching.Module",
+    "Dubon2026.Reuse.Imperial.Patching.Over",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.Depth",
+    "Dubon2026.Reuse.Imperial.Patching.System",
+    "Dubon2026.Reuse.Imperial.Patching.REqualsT",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.LogOneDivSubOne",
+    "Dubon2026.Reuse.Chebotarev.NumberFieldEulerProduct",
+    "Dubon2026.Reuse.Chebotarev.Density",
+    "Dubon2026.Reuse.Chebotarev.Frobenius",
+    "Dubon2026.Reuse.Chebotarev.CyclotomicNormResidue",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.CharacterOrthogonality",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.LatticePointCount",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.NormLeOneLipschitz",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.IdealCongruenceCount",
+    "Dubon2026.Reuse.Chebotarev.ZetaProduct",
+    "Dubon2026.Reuse.Chebotarev.Cyclotomic",
+    "Dubon2026.Reuse.Chebotarev.FixedFieldDensity",
+    "Dubon2026.Reuse.Chebotarev.Abelian",
+    "Dubon2026.Reuse.Chebotarev.Main",
+    "Dubon2026.ChebotarevFiniteFactorPrime",
+    "Dubon2026.ChebotarevRationalPrime",
+    "Dubon2026.ChebotarevRootCongruence",
+    "Dubon2026.ContinuousCyclotomicFiniteFactor",
+    "Dubon2026.ChebotarevCyclotomicPrimes",
+    "Dubon2026.ContinuousCyclotomicFrobeniusPrimes",
+    "Dubon2026.ArithmeticCyclotomicAuxiliaryPrimes"
+  ],
+  "theoremRegistrations": [
+    "ker_RtoT_le_nilradical",
+    "support_eq_top",
+    "PatchingAlgebra.faithfulSMul",
+    "Module.faithfulSMul_of_depth_eq_ringKrullDim",
+    "Module.depth_le_krullDim_support",
+    "Chebotarev.chebotarev_density",
+    "Chebotarev.chebotarev_abelian",
+    "Chebotarev.infinite_setOf_frobenius_class",
+    "Chebotarev.frobeniusClass_eq_mk_of_isArithFrobAt",
+    "Dubon2026.continuous_galois_exists_frobenius_prime",
+    "Dubon2026.rationalNonzeroPrime_eq_span",
+    "Dubon2026.continuous_rational_galois_exists_frobenius_prime",
+    "Dubon2026.finiteGalois_frobenius_root_power",
+    "Dubon2026.finiteGalois_frobenius_cyclotomic_character",
+    "Dubon2026.continuous_galois_finite_factor_with_root",
+    "Dubon2026.finiteGalois_exists_prime_congruent_one_of_fixed_root",
+    "Dubon2026.continuous_rational_galois_exists_cyclotomic_frobenius_prime",
+    "Dubon2026.rationalArithmetic_exists_cyclotomic_auxiliary_prime"
+  ],
+  "sourceHashes": {
+    "Dubon2026.Reuse.Imperial.Patching.Utils.InverseLimit": "75A6AE454B84D303D5BD2988FD9F5BCB11CC8877B3A583224CBA6FFA2264D17E",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.Lemmas": "916081B2E78A6EF40F2EC4D8237A1AB426F98D4C42DE7D6BAEB6BEAC20E3F717",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.AdicTopology": "27A9632D3F2D234BC1861EC0DBB78B18E77E3B454ED629C293ADBDE9524111C4",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.TopologicallyFG": "6E4DF558B6561D7DB0CFABFCBC20B2E709719535D68FF254AEF297CC5E8E7659",
+    "Dubon2026.Reuse.Imperial.Mathlib.Algebra.Module.TransferInstance": "8E6258B73F8AAC63741D33D38F1F7499EE5AB50F716055B843D0D212EE3161F6",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.StructureFiniteness": "BAF9376F3BB6C6B4EFFC71B8CC113F7BCA850B2C2629A2617C51255D848B4714",
+    "Dubon2026.Reuse.Imperial.Patching.Ultraproduct": "EAC23787374EF1D927AE3A645B90BA592FD2193B69E88B4AAF74A47CAA7FB2BD",
+    "Dubon2026.Reuse.Imperial.Mathlib.GroupTheory.Index": "DF7518A5828AA731C22FD014528432A89515E1F6851B5A64F7ACCA816A123886",
+    "Dubon2026.Reuse.Imperial.Mathlib.Topology.Algebra.Group.Basic": "58A856BE65CDDB7852062034A8FDBCDDDE60B741E38A60BE3B38C4819F589582",
+    "Dubon2026.Reuse.Imperial.Mathlib.Topology.Algebra.IsUniformGroup.Basic": "FFA92D1961108CF6B4CFF536AE118888CF28C3736400E3F29F38CA3DD1855609",
+    "Dubon2026.Reuse.Imperial.Deformations.Lemmas": "F92FF1801023DA655FD256978E3E9F83B653A185234934693B3CD3AA37FFF21D",
+    "Dubon2026.Reuse.Imperial.Patching.Algebra": "1A2BE87F7DF105C73D8A5FD9BF3B7B6FF377DBEB2584EC23A6C61A2B0F9313FD",
+    "Dubon2026.Reuse.Imperial.Patching.Module": "B9A3ADA497DFB834772C557842A20FF1C8D5F0A6A9501757C4281032D8064B39",
+    "Dubon2026.Reuse.Imperial.Patching.Over": "D3D1943977F89F6CB97C58A5FBAB098DB590B2CF562D140CF0D0D742780BC2EF",
+    "Dubon2026.Reuse.Imperial.Patching.Utils.Depth": "93CE489039E6D5386CDD92993D0BCBCC5710821D912E9DFE125587D8A276CBFA",
+    "Dubon2026.Reuse.Imperial.Patching.System": "7540F7930D0FD63053F896AF9C3200C6DDCF6853B8900FD51EF247351CBE8D7E",
+    "Dubon2026.Reuse.Imperial.Patching.REqualsT": "4FFBE21EECD649B3ECBABB82EBEAFBDCF0E13F423962EE3D563C22E0158A27A6",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.LogOneDivSubOne": "EDCF40065B213B627002C28ECBFAC498206EA68E61D4F64130CD2628442FE16F",
+    "Dubon2026.Reuse.Chebotarev.NumberFieldEulerProduct": "95FBF338D5838E9F63BAA069EC0EBC6C6BF3D2CE7FC1BBE9BAB62A24849B8CA1",
+    "Dubon2026.Reuse.Chebotarev.Density": "1B1DF9D8E6B933CFD0BE24B83F7261D923F49F26A4F797AE4B8B680F445812DC",
+    "Dubon2026.Reuse.Chebotarev.Frobenius": "CBE34444362545BA98110DA840B5151342BE6729A11B4EA086C0E67A4AC8BD62",
+    "Dubon2026.Reuse.Chebotarev.CyclotomicNormResidue": "303D0DE2BAFF999F7C9CD7562BE8F04CD5615CB259CE4D82B2AC4F0C1BCBCC62",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.CharacterOrthogonality": "CBA3B12F02ECDB1864ED5A09C2300F0E89EB1D3E71B7D98717A5A8BA0D431CE9",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.LatticePointCount": "D7A259336413C11782E7A5C4FAEAD16887A4EF248A74D42B7223CABD2603A822",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.NormLeOneLipschitz": "4389B189DC0894AC6DB4357713AE66B7F71630292E352760D18808C20982BE0A",
+    "Dubon2026.Reuse.Chebotarev.ForMathlib.IdealCongruenceCount": "499DFE1217BFF028493194A32AE8D574E70E4BBE74ED7F85044A5B43E992C04C",
+    "Dubon2026.Reuse.Chebotarev.ZetaProduct": "3B52367C351ED74271912B976A32EE43C7C382AC47D9C2825BCBE4872488B1CD",
+    "Dubon2026.Reuse.Chebotarev.Cyclotomic": "399CD2002BCA1C794DD1ED425624AB617910611D1F879B72634AE7BFE604F6D2",
+    "Dubon2026.Reuse.Chebotarev.FixedFieldDensity": "25CBFB41192FF05A1B5389D8664372BF099317BBE959A32A7F175E068C344E4A",
+    "Dubon2026.Reuse.Chebotarev.Abelian": "489DEBE58ECB9C596A156405DD84EC19CE6806B8DF0D62BE478CD6145AC288A9",
+    "Dubon2026.Reuse.Chebotarev.Main": "00CFCC4CFEDBC247F6E5A153551A5A56E8CF17601D907651D36B1B7CE88DB54C",
+    "Dubon2026.ChebotarevFiniteFactorPrime": "24B12A11C1569965A03455591CB6BD35DB9A2524DE14ADA91867C0BF9AED6EB3",
+    "Dubon2026.ChebotarevRationalPrime": "F2B632D9E224385F9B1BCC994CD5145AE05AEBC21C77322D7A03ED9DE9DF3C2E",
+    "Dubon2026.ChebotarevRootCongruence": "F4683F68CB8B946CD82E67677E45ACE945B608CBEAC37FE976911E1C91755A69",
+    "Dubon2026.ContinuousCyclotomicFiniteFactor": "94A2FE31517B5DA28A5B3B39092C6A504133E8DCAC483E6C61118D7911A5D7C3",
+    "Dubon2026.ChebotarevCyclotomicPrimes": "C15681B7103F1494FDA906494CBCA370F59D23BBF74BDF7CC901913C0321744C",
+    "Dubon2026.ContinuousCyclotomicFrobeniusPrimes": "635204ACB28969BFE248C2CBBEBA1AEA70DBAA2B3DEE04661EADA0F6605017A6",
+    "Dubon2026.ArithmeticCyclotomicAuxiliaryPrimes": "E8BDC72D1A1A1BAD3E8F4F4197C5E783E71D48A426389648CC6F0A04B7C8BADF"
+  },
+  "sourceRecords": [
+    {
+      "path": "FLT/Patching/REqualsT.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/REqualsT.lean",
+      "gitBlob": "f64fa1bca71e62e48c6119060608e1f81ca81151",
+      "sha256": "07193D1CE609F4F769D214A4A20D59655472234E8AC9DF775B0FF6C581E7A0FA",
+      "bytes": 5067,
+      "imports": [
+        "FLT.Patching.System"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/REqualsT.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/System.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/System.lean",
+      "gitBlob": "014112b52160e1bd2a6a8719320116bc5668f275",
+      "sha256": "BCE45A4397075670EB01CC091ACC6D9EDFF70389FB4301965B1B1A1F933510BB",
+      "bytes": 22293,
+      "imports": [
+        "FLT.Patching.Over",
+        "FLT.Patching.Utils.Depth",
+        "Mathlib.RingTheory.Length"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/System.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Over.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Over.lean",
+      "gitBlob": "176b856a3783fe19e6585bbd4e4af30ddbd7d247",
+      "sha256": "C527306E23384034D0DAC539F18F5DDC8A74F1642AD00408517F3948AB564A77",
+      "bytes": 21552,
+      "imports": [
+        "FLT.Patching.Algebra",
+        "FLT.Patching.Module",
+        "FLT.Patching.Utils.AdicTopology",
+        "Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected",
+        "FLT.Patching.Utils.InverseLimit",
+        "Mathlib.RingTheory.LocalRing.Quotient",
+        "Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected",
+        "Mathlib.Topology.Algebra.Ring.Compact"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Over.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Utils/Depth.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/Depth.lean",
+      "gitBlob": "ce316a88b5da25900f3d6c6c97f8c02fb1a1c731",
+      "sha256": "AA866BCB3847D14E8AFE5AD32FB34E28385953FDC0129FF933CDB94D418CDF97",
+      "bytes": 11249,
+      "imports": [
+        "Mathlib.RingTheory.Regular.RegularSequence",
+        "Mathlib.RingTheory.Support",
+        "Mathlib.RingTheory.KrullDimension.Basic",
+        "Mathlib.GroupTheory.GroupAction.Ring",
+        "Mathlib.RingTheory.Flat.FaithfullyFlat.Basic",
+        "Mathlib.RingTheory.KrullDimension.NonZeroDivisors",
+        "Mathlib.RingTheory.Spectrum.Prime.RingHom",
+        "Mathlib.RingTheory.TensorProduct.Free",
+        "Mathlib.Tactic.Continuity.Init",
+        "Mathlib.Tactic.Positivity.Finset"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/Depth.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Algebra.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Algebra.lean",
+      "gitBlob": "cc351446f6b0c812320b14aaa07dcae07b0aff0d",
+      "sha256": "2B30FB9A24C4AD091859E6A6F0DC15B1CB344083166A16F82AD1EFABCB7DEF2B",
+      "bytes": 24045,
+      "imports": [
+        "FLT.Patching.Utils.AdicTopology",
+        "FLT.Patching.Ultraproduct",
+        "FLT.Deformations.Lemmas",
+        "Mathlib.CategoryTheory.Types.Basic",
+        "Mathlib.RingTheory.Filtration",
+        "FLT.Patching.Utils.InverseLimit",
+        "Mathlib.Topology.Algebra.Group.ClosedSubgroup",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "Mathlib.Topology.Connected.Separation"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Algebra.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Module.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Module.lean",
+      "gitBlob": "418ac87388e46502494b674448e67707d40c7941",
+      "sha256": "815DE625E7118C3525F0B95052AC73483E20A6E1F6FBCF958747BFDE21DEE6FA",
+      "bytes": 30228,
+      "imports": [
+        "FLT.Patching.Ultraproduct",
+        "FLT.Patching.Utils.AdicTopology",
+        "Mathlib.Algebra.Module.Torsion.Basic",
+        "Mathlib.CategoryTheory.Types.Basic",
+        "Mathlib.LinearAlgebra.Dimension.Finrank",
+        "Mathlib.RingTheory.Filtration",
+        "Mathlib.RingTheory.FractionalIdeal.Basic",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "FLT.Patching.Utils.InverseLimit",
+        "Mathlib.RingTheory.LocalRing.Quotient",
+        "Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "Mathlib.Topology.Compactness.Paracompact",
+        "Mathlib.Topology.Connected.Separation"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Module.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Utils/AdicTopology.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/AdicTopology.lean",
+      "gitBlob": "081f65b35c49e7daaa612acb6f087c39dfc19313",
+      "sha256": "08E8CD670A2D7F2D10A6EF5436553156AEF857B3660225A44D210A623FB89A62",
+      "bytes": 10641,
+      "imports": [
+        "Mathlib.RingTheory.AdicCompletion.Basic",
+        "Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology",
+        "Mathlib.RingTheory.Artinian.Defs",
+        "Mathlib.RingTheory.LocalRing.ResidueField.Defs",
+        "Mathlib.RingTheory.Noetherian.Defs",
+        "Mathlib.Topology.Algebra.Module.ModuleTopology",
+        "Mathlib.Topology.Algebra.Ring.Ideal",
+        "FLT.Patching.Utils.InverseLimit",
+        "FLT.Patching.Utils.Lemmas",
+        "Mathlib.RingTheory.LocalRing.Quotient",
+        "Mathlib.Topology.Algebra.Algebra",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "Mathlib.Topology.Connected.Separation"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/AdicTopology.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Utils/InverseLimit.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/InverseLimit.lean",
+      "gitBlob": "b55a8367716229fe61b69c453be77a94cfc2a40f",
+      "sha256": "7FA0B175248295E2DB3C588DFC73081F40767A02872764F6D1F4A26E8CAE39A2",
+      "bytes": 3085,
+      "imports": [
+        "Mathlib.Topology.Constructions",
+        "Mathlib.CategoryTheory.CofilteredSystem",
+        "Mathlib.Data.Finset.Order"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/InverseLimit.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Ultraproduct.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Ultraproduct.lean",
+      "gitBlob": "fa45223d60e685991891cc8d1b1794e107f59c81",
+      "sha256": "6FFBB29CFD3DCE17A5EBE14478E9995EE56CDFB5041DFAA406EEDD237B65DC44",
+      "bytes": 20293,
+      "imports": [
+        "FLT.Patching.Utils.Lemmas",
+        "FLT.Patching.Utils.TopologicallyFG",
+        "FLT.Patching.Utils.StructureFiniteness",
+        "Mathlib.Tactic.ContinuousFunctionalCalculus"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Ultraproduct.lean.txt"
+    },
+    {
+      "path": "FLT/Deformations/Lemmas.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Deformations/Lemmas.lean",
+      "gitBlob": "53be3d4284a4df37263ef2c146ee7d79c408d985",
+      "sha256": "0C7440FC74B4103F63D11F6EFD91AD3B6A91651FDAD234E59C10B8AD35925B10",
+      "bytes": 14876,
+      "imports": [
+        "FLT.Mathlib.GroupTheory.Index",
+        "FLT.Mathlib.Topology.Algebra.Group.Basic",
+        "FLT.Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+        "Mathlib.NumberTheory.NumberField.Basic",
+        "Mathlib.RingTheory.Valuation.ValuationSubring",
+        "Mathlib.Topology.Algebra.Algebra.Equiv",
+        "Mathlib.Topology.Algebra.LinearTopology",
+        "Mathlib.Topology.Algebra.Module.ModuleTopology",
+        "Mathlib.Topology.Instances.Matrix"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Deformations/Lemmas.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Utils/Lemmas.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/Lemmas.lean",
+      "gitBlob": "492073a29bb2c0a1de56b6d6febeb23a4246c5e4",
+      "sha256": "544982B9E02737FD4AB3C950EA3619ACF532EB7A6D3D38FCB549C6E99D0DF3F5",
+      "bytes": 18872,
+      "imports": [
+        "Mathlib.Topology.Algebra.Module.ModuleTopology",
+        "Mathlib.Topology.Algebra.Ring.Ideal",
+        "Mathlib.RingTheory.Ideal.MinimalPrime.Basic",
+        "Mathlib.RingTheory.Jacobson.Ideal",
+        "Mathlib.RingTheory.LocalRing.MaximalIdeal.Defs",
+        "Mathlib.RingTheory.Noetherian.Defs",
+        "Mathlib.Data.Set.Card",
+        "Mathlib.Data.SetLike.Fintype",
+        "Mathlib.RingTheory.Filtration",
+        "Mathlib.RingTheory.Localization.AtPrime.Basic",
+        "Mathlib.Topology.Algebra.Module.Compact",
+        "Mathlib.Topology.Algebra.OpenSubgroup",
+        "Mathlib.Topology.Separation.Profinite"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/Lemmas.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Utils/TopologicallyFG.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/TopologicallyFG.lean",
+      "gitBlob": "f126bb65e417f76116e1decf05ff0a668cd4879e",
+      "sha256": "46EA27018ECABCA7822B9507344D35DFBB81E863014ADA7B478B75383211A03D",
+      "bytes": 2354,
+      "imports": [
+        "Mathlib.RingTheory.FiniteType",
+        "Mathlib.Topology.Algebra.Ring.Basic"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/TopologicallyFG.lean.txt"
+    },
+    {
+      "path": "FLT/Patching/Utils/StructureFiniteness.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/StructureFiniteness.lean",
+      "gitBlob": "c323d3590cbe2122f1a46b59d8da2eee32733efa",
+      "sha256": "7D0CF2D0FD7B06EB6AF31EA0AD382EF2FD3DDC6B4B8770D6E1C7B648EE738529",
+      "bytes": 13658,
+      "imports": [
+        "FLT.Patching.Utils.TopologicallyFG",
+        "Mathlib.Topology.Algebra.Module.Equiv.Basic",
+        "Mathlib.Algebra.Algebra.TransferInstance",
+        "FLT.Mathlib.Algebra.Module.TransferInstance",
+        "Mathlib.Algebra.Group.Ext",
+        "Mathlib.Algebra.Ring.Ext"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/StructureFiniteness.lean.txt"
+    },
+    {
+      "path": "FLT/Mathlib/GroupTheory/Index.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/GroupTheory/Index.lean",
+      "gitBlob": "4b7a2fb31f90997e556b570bf81f720cadfc3e12",
+      "sha256": "BE285001E017B4C0ABA8E798D61E322CA3111E695F18BC7FD0A6501C2BEA32DA",
+      "bytes": 1275,
+      "imports": [
+        "Mathlib.GroupTheory.Index",
+        "Mathlib.Data.Finset.Attr",
+        "Mathlib.Tactic.Bound.Init",
+        "Mathlib.Tactic.Finiteness.Attr",
+        "Mathlib.Tactic.ScopedNS",
+        "Mathlib.Tactic.SetLike"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/GroupTheory/Index.lean.txt"
+    },
+    {
+      "path": "FLT/Mathlib/Topology/Algebra/Group/Basic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/Topology/Algebra/Group/Basic.lean",
+      "gitBlob": "7cb9166fd0d163cdab0ca04be3ca96d69f8a5e44",
+      "sha256": "E982DE4EEF66F8B956B5BB2320DB7F44F4B7412017561B98D9DC87332C4BA29C",
+      "bytes": 1491,
+      "imports": [
+        "Mathlib.Topology.Algebra.Group.Neighborhood"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/Topology/Algebra/Group/Basic.lean.txt"
+    },
+    {
+      "path": "FLT/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean",
+      "gitBlob": "4393528bab6c72c3b5b64037a2cc307e1855b37e",
+      "sha256": "093C79C417AF28C4FEBA6C67DF5C29537D92A75C26999D06C7B5675252721599",
+      "bytes": 1299,
+      "imports": [
+        "Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+        "FLT.Mathlib.GroupTheory.Index"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean.txt"
+    },
+    {
+      "path": "FLT/Mathlib/Algebra/Module/TransferInstance.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/Algebra/Module/TransferInstance.lean",
+      "gitBlob": "0e0cfc71bb95798fdff84844397658c8ed48e959",
+      "sha256": "71D558D813A52198A79AC1F9DAAF0B50EC8AC8FACAEB6A2D25E76E0FA6970979",
+      "bytes": 1772,
+      "imports": [
+        "Mathlib.Algebra.Module.TransferInstance"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": [],
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/Algebra/Module/TransferInstance.lean.txt"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "retainedPath": "Dependencies/ImperialPatchingReuse/LICENSE",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "role": "license"
+    },
+    {
+      "module": "CebotarevDensity.Main",
+      "path": "projects/Chebotarev/CebotarevDensity/Main.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Main.lean",
+      "gitBlob": "678f99731a3984b00cf38e44a603c6020b01ab69",
+      "sha256": "D2B7B56411B59FCD9900DAA7FDC760CCA28196A9ABEE03EC9303FF13AD97EDF8",
+      "bytes": 28268,
+      "imports": [
+        "CebotarevDensity.Abelian",
+        "CebotarevDensity.FixedFieldDensity",
+        "Mathlib.NumberTheory.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter",
+        "Mathlib.NumberTheory.Cyclotomic.Gal",
+        "Mathlib.RingTheory.Ideal.NatInt",
+        "Mathlib.RingTheory.Ideal.Over"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Main.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.Abelian",
+      "path": "projects/Chebotarev/CebotarevDensity/Abelian.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Abelian.lean",
+      "gitBlob": "4afb1b22f188b261c209161a2a5fe14452bd75ef",
+      "sha256": "21A49D45E5C6BDFC94EE4E2DED570D3957D79C892D55786B878F2F469B3FDF98",
+      "bytes": 95805,
+      "imports": [
+        "CebotarevDensity.Cyclotomic",
+        "CebotarevDensity.FixedFieldDensity",
+        "Mathlib.NumberTheory.ArithmeticFunction.Carmichael",
+        "Mathlib.NumberTheory.LSeries.PrimesInAP",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Ideal",
+        "Mathlib.RingTheory.ZMod.UnitsCyclic",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Abelian.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.FixedFieldDensity",
+      "path": "projects/Chebotarev/CebotarevDensity/FixedFieldDensity.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/FixedFieldDensity.lean",
+      "gitBlob": "7d40bad6a09112255b5bafca096d2f143083fd8c",
+      "sha256": "D1FD19CD8B0DA42D53AA03FC211643D453BFA328D5A5842828183BF96FCA51BD",
+      "bytes": 80657,
+      "imports": [
+        "Mathlib.RingTheory.Ideal.Over",
+        "Mathlib.NumberTheory.RamificationInertia.Basic",
+        "CebotarevDensity.Cyclotomic"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/FixedFieldDensity.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.Cyclotomic",
+      "path": "projects/Chebotarev/CebotarevDensity/Cyclotomic.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Cyclotomic.lean",
+      "gitBlob": "0c070be84b811c059ee86b17fd299c7ef193dd29",
+      "sha256": "C6BA515447F60D75C218F8E4274DFCD75A9E3BE6764DF9CFD5C850B2F01674D5",
+      "bytes": 62573,
+      "imports": [
+        "CebotarevDensity.ZetaProduct",
+        "CebotarevDensity.CyclotomicNormResidue",
+        "CebotarevDensity.ForMathlib.CharacterOrthogonality",
+        "Mathlib.GroupTheory.FiniteAbelian.Duality",
+        "Mathlib.NumberTheory.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.NumberField.Ideal.Basic",
+        "Mathlib.Analysis.Calculus.SmoothSeries"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Cyclotomic.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.CyclotomicNormResidue",
+      "path": "projects/Chebotarev/CebotarevDensity/CyclotomicNormResidue.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/CyclotomicNormResidue.lean",
+      "gitBlob": "4cf9574ba4ddb4e5a82976f17d632fce55129b70",
+      "sha256": "4EB734E12D2AC2BD58EB6DE86C1F8367CDE5A34340011E185BDA0E24259402E5",
+      "bytes": 38554,
+      "imports": [
+        "CebotarevDensity.Frobenius",
+        "Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots",
+        "Mathlib.NumberTheory.NumberField.Ideal.Basic"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/CyclotomicNormResidue.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.CharacterOrthogonality",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/CharacterOrthogonality.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/CharacterOrthogonality.lean",
+      "gitBlob": "a82fed3f75f964ded6d5aa78ab315f0dad069094",
+      "sha256": "676D91543052E5B07A3CEEEA670E8793E4CE203DF4CFF68221A500BD69C4DE71",
+      "bytes": 6712,
+      "imports": [
+        "Mathlib.Analysis.Complex.Polynomial.Basic",
+        "Mathlib.GroupTheory.FiniteAbelian.Duality",
+        "Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/CharacterOrthogonality.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.ZetaProduct",
+      "path": "projects/Chebotarev/CebotarevDensity/ZetaProduct.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ZetaProduct.lean",
+      "gitBlob": "066833f2e42589a4af666f4c7fa3859286cf8492",
+      "sha256": "F0D592F399F07BA9C4BB1B5079E85A82010FE38310FA22D452DEB5C1B22EEC6D",
+      "bytes": 201993,
+      "imports": [
+        "CebotarevDensity.Frobenius",
+        "CebotarevDensity.CyclotomicNormResidue",
+        "CebotarevDensity.ForMathlib.IdealCongruenceCount",
+        "CebotarevDensity.ForMathlib.LatticePointCount",
+        "CebotarevDensity.ForMathlib.NormLeOneLipschitz",
+        "Mathlib.NumberTheory.LSeries.DirichletContinuation",
+        "Mathlib.NumberTheory.NumberField.Ideal.Asymptotics",
+        "Mathlib.GroupTheory.FiniteAbelian.Duality",
+        "Mathlib.NumberTheory.Cyclotomic.Gal",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Basic",
+        "Mathlib.RingTheory.Polynomial.Cyclotomic.Basic",
+        "Mathlib.RingTheory.RootsOfUnity.CyclotomicUnits",
+        "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+        "Mathlib.Analysis.Asymptotics.SpecificAsymptotics"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ZetaProduct.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.IdealCongruenceCount",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/IdealCongruenceCount.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/IdealCongruenceCount.lean",
+      "gitBlob": "96f816150367fc0862b64cb7e339679cc0dcfe57",
+      "sha256": "5D229129E894CDDA4EF89639ADFF76968D01F4E69202FEB63503E4D72ACC86E8",
+      "bytes": 217456,
+      "imports": [
+        "CebotarevDensity.ForMathlib.CharacterOrthogonality",
+        "CebotarevDensity.ForMathlib.LatticePointCount",
+        "CebotarevDensity.ForMathlib.NormLeOneLipschitz",
+        "Mathlib.NumberTheory.NumberField.Ideal.Asymptotics",
+        "Mathlib.RingTheory.DedekindDomain.Factorization"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/IdealCongruenceCount.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.LatticePointCount",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/LatticePointCount.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/LatticePointCount.lean",
+      "gitBlob": "d1ed572f5188dc02cb22334f6c68ec404bae34af",
+      "sha256": "C87C6EDA4A38C79FA0E2C774229ED5902BE3D185ABBABB480060FC2330DC87EC",
+      "bytes": 20671,
+      "imports": [
+        "Mathlib.Analysis.BoxIntegral.UnitPartition",
+        "Mathlib.Data.Pi.Interval",
+        "Mathlib.Data.Set.Card.Arithmetic",
+        "Mathlib.Topology.MetricSpace.Lipschitz"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/LatticePointCount.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.NormLeOneLipschitz",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/NormLeOneLipschitz.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/NormLeOneLipschitz.lean",
+      "gitBlob": "5e16a4bbfbf4fd2cb6bcd66018dd558cd366471c",
+      "sha256": "DED69C86594DCA3A2E5A0E85795F2AF91EE97288C2BDC0639E7C144DF008EEF7",
+      "bytes": 40135,
+      "imports": [
+        "Mathlib.NumberTheory.NumberField.CanonicalEmbedding.NormLeOne"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/NormLeOneLipschitz.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.Frobenius",
+      "path": "projects/Chebotarev/CebotarevDensity/Frobenius.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Frobenius.lean",
+      "gitBlob": "8af8216d139a744a2650745bf1a729eb482b6482",
+      "sha256": "0DF5817D0F47D8EE77E0588655B754119B8A2306515AC5A1ED9CD5DAE17765D6",
+      "bytes": 23917,
+      "imports": [
+        "Mathlib.FieldTheory.Galois.IsGaloisGroup",
+        "Mathlib.RingTheory.DedekindDomain.Different",
+        "Mathlib.RingTheory.DedekindDomain.Factorization",
+        "Mathlib.RingTheory.Frobenius",
+        "Mathlib.NumberTheory.RamificationInertia.Inertia",
+        "CebotarevDensity.Density",
+        "Mathlib.FieldTheory.Finite.GaloisField"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Frobenius.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.Density",
+      "path": "projects/Chebotarev/CebotarevDensity/Density.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Density.lean",
+      "gitBlob": "9b82ea30533bd73b4db2ea02795eb07f5cfde33f",
+      "sha256": "2449797846805D94A8F5AC3466C855CA094D4D749D3DC04913D7037E9EFE88E9",
+      "bytes": 33201,
+      "imports": [
+        "CebotarevDensity.ForMathlib.LogOneDivSubOne",
+        "CebotarevDensity.NumberFieldEulerProduct",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.NumberTheory.NumberField.DedekindZeta",
+        "Mathlib.Topology.Algebra.InfiniteSum.Basic",
+        "Mathlib.Topology.Algebra.InfiniteSum.Order",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Topology.Order.LiminfLimsup"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Density.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.LogOneDivSubOne",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/LogOneDivSubOne.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/LogOneDivSubOne.lean",
+      "gitBlob": "05b0497a03c6d7305f5ee5b4305bbd90ebfc6a0a",
+      "sha256": "B1ABF715E1E79041EB61922F7F0EBB323F3BFCB90F6D5541C1161DB3C5B5D5DD",
+      "bytes": 3917,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Topology.Algebra.Order.Field"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/LogOneDivSubOne.lean.txt"
+    },
+    {
+      "module": "CebotarevDensity.NumberFieldEulerProduct",
+      "path": "projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean",
+      "gitBlob": "0ca0327911772bfa88455f853ebdec2c216fedea",
+      "sha256": "ABC011E0C70F37FBEACC46B1073AEAADD5DE1AEFA7BC0D75F8F304046BFD6E57",
+      "bytes": 47313,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Data.Finite.Vector",
+        "Mathlib.Data.Finsupp.Multiset",
+        "Mathlib.Data.Sym.Card",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.NumberField.DedekindZeta",
+        "Mathlib.NumberTheory.NumberField.Ideal.KummerDedekind",
+        "Mathlib.NumberTheory.NumberField.Ideal.Asymptotics",
+        "Mathlib.RingTheory.Polynomial.Cyclotomic.Expand",
+        "Mathlib.RingTheory.Polynomial.Cyclotomic.Factorization",
+        "Mathlib.NumberTheory.EulerProduct.Basic",
+        "Mathlib.NumberTheory.LSeries.SumCoeff",
+        "Mathlib.Algebra.BigOperators.Ring.Nat"
+      ],
+      "integrityCandidates": [],
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean.txt"
+    },
+    {
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "retainedPath": "Dependencies/AintlibChebotarevReuse/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "role": "license"
+    }
+  ],
+  "scratchCertificates": [
+    {
+      "checkedUTC": "2026-10-18T19:58:29.082706+00:00",
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "upstreamReceipt": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\patching\\receipt.json",
+      "upstreamReceiptSha256": "DB682FA9BB01BD063643DD2A03E23FEF28F405B81454C5F378AA864BF759AB5E",
+      "license": "Apache-2.0; original copyright notices and LICENSE retained",
+      "files": [
+        {
+          "module": "DubonPatching.Patching.Utils.InverseLimit",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Utils\\InverseLimit.lean",
+          "sha256": "24B73CF44F4DE2A2F85DF4C55CC7B9FC7DFAD57F15256CEEA8EB0EC245ED2861",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Utils.InverseLimit.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Utils.Lemmas",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Utils\\Lemmas.lean",
+          "sha256": "1850BE07B1558E06EDCFEFB279C8EA1590EAA0AB5E5C6B15A90AA6AD79AA57E1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Utils.Lemmas.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Utils.AdicTopology",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Utils\\AdicTopology.lean",
+          "sha256": "3CA4056427BF9A3CA5FC184DE5198077E9ED3FE43A40BB20A9970C8559F2F6E0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Utils.AdicTopology.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Utils.TopologicallyFG",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Utils\\TopologicallyFG.lean",
+          "sha256": "76EA9303D26EBC366211336DE482C1009B6711DE4F944F8D8D40B26C45542932",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Utils.TopologicallyFG.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Mathlib.Algebra.Module.TransferInstance",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Mathlib\\Algebra\\Module\\TransferInstance.lean",
+          "sha256": "AA831524A231E7CC53F1232AF4025533747FDFC1883EF60F2526C65B6435D8D0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Mathlib.Algebra.Module.TransferInstance.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Utils.StructureFiniteness",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Utils\\StructureFiniteness.lean",
+          "sha256": "DC1C0D097CF9D0AF6F6B6F82FD94934FD53CA023603F80967A91FE54F77161CB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Utils.StructureFiniteness.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Ultraproduct",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Ultraproduct.lean",
+          "sha256": "3AAF219E6DCF8470B282107B87710D8740AE98AA44A5922145A3A92BC3607712",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Ultraproduct.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Mathlib.GroupTheory.Index",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Mathlib\\GroupTheory\\Index.lean",
+          "sha256": "F1E4FBC238569B820B15BC8E1065825E9C6D2A875EA9FDE0DFE9D06B4453515F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Mathlib.GroupTheory.Index.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Mathlib.Topology.Algebra.Group.Basic",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Mathlib\\Topology\\Algebra\\Group\\Basic.lean",
+          "sha256": "AA14425F6D0E248232194737C8D36764352CB4386D785623027CF91FBA2663DD",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Mathlib.Topology.Algebra.Group.Basic.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Mathlib\\Topology\\Algebra\\IsUniformGroup\\Basic.lean",
+          "sha256": "710BA8AC4F3237470186A0964D34E88DCFD1DD922B202BF2DCB80D7127CE4EC4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Mathlib.Topology.Algebra.IsUniformGroup.Basic.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Deformations.Lemmas",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Deformations\\Lemmas.lean",
+          "sha256": "0385DC0A6FC1AFD2682A630474B326F7648B1A90506537E75345018382534A30",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Deformations.Lemmas.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Algebra",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Algebra.lean",
+          "sha256": "3D58CB9140E894ECA61AEDAB8DFC50F7F6842EF5B7BEBDCEA7F9F4634441DA25",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Algebra.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Module",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Module.lean",
+          "sha256": "43E575F1A2B942CE40B6A7D039C4743DAF577E37A9FFF2D5EEF3F409EE746DE9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Module.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Over",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Over.lean",
+          "sha256": "5FF92818E986D1AD3B56DC63B00DA7168A2AE551819CD4C4ACDE1C06D3A1FA0C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Over.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.Utils.Depth",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\Utils\\Depth.lean",
+          "sha256": "6AEC1E41EAE70EC21949B1BD8C8D90D0DE7C819B670818515F43DC119BB168FE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.Utils.Depth.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.System",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\System.lean",
+          "sha256": "3E59B1568AFF272285E9E3B1CB0D080EB864B8D53086DBE7D1FD32E46D1E2115",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.System.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonPatching.Patching.REqualsT",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonPatching\\Patching\\REqualsT.lean",
+          "sha256": "433E8F50D665F0EF9847DC1FD202F06AB0382F1FC35A45A981768AA89B6EAAE7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonPatching.Patching.REqualsT.log",
+          "exit": 0,
+          "diagnostics": 0
+        }
+      ],
+      "auditLog": "E:\\Lean\\.tmp\\dubon83\\PatchingPortAudit.log",
+      "auditSha256": "FE18306C9E7D7D1F26A35050E3462E34A7809AEE09E534EA9414BC960BBDBE08",
+      "exhaustiveTheorems": 724,
+      "publicEndpointQueries": 5,
+      "declarations": 397,
+      "generatedDeclarations": 548,
+      "nativeCompatibilityLog": "E:\\Lean\\.tmp\\dubon83\\PatchingCompatibilityAudit.log",
+      "nativeCompatibilitySha256": "D118AA3B3675AD4BE450BC70A33F3398E2F7761F728F26D7D3EE6E13B1C06F43",
+      "nativeCompatibilityProductionModules": 4159,
+      "linters": 16,
+      "exit": 0,
+      "diagnostics": 0,
+      "endpoint": "ker_RtoT_le_nilradical",
+      "conclusion": "The kernel of the supplied compatible R0-to-T0 ring map lies in the nilradical of R0. Surjectivity of that map is separate and is not asserted.",
+      "dependencyChain": "DUB-17 primitive_satoTate_of_higher_continuation_alone (frozen source 1616-1687) <- higher symmetric-power continuation <- arithmetic automorphy lifting <- realization of actual deformation rings and Hecke modules <- generic patching support/kernel theorem.",
+      "assumptionsRetained": [
+        "Compact noetherian local adic base and finite-level rings with uniformly bounded quotient sizes.",
+        "Nontrivial modules free over the base modulo their annihilators, with uniformly bounded ranks and annihilators tending to zero along the ultrafilter.",
+        "Actual compatible quotient identifications with R0 and M0.",
+        "A compact topologically finitely generated local domain R-infinity mapping continuously and surjectively to every finite-level ring.",
+        "Finite Krull dimension of R-infinity equal to the depth of the base.",
+        "Compatibility of the supplied R0-to-T0 map with the action on M0."
+      ],
+      "stillOpen": "Actual arithmetic realization of every patching input, higher-weight local deformation conditions, auxiliary-prime construction for the intended representations, modular association, purity, automorphy and all required higher symmetric-power continuation. DUB-17-20 remain open; acceptance 16/20.",
+      "status": "Kernel-checked scratch adaptation only; not integrated into native production.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "upstreamAssumptionModulesImported": false,
+      "adaptations": "Pinned import/API names and syntax; explicit quotient representatives, scalar towers, finite transported structures and coordinate linear maps; explicit instance names satisfy the naming linter; removed upstream backward elaboration overrides; clarified the kernel theorem documentation. Mathematical hypotheses and conclusion retained."
+    },
+    {
+      "checkedUTC": "2026-10-18T20:33:56.616279+00:00",
+      "repository": "CBirkbeck/aintlib",
+      "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+      "upstreamReceipt": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\aintlib-density-closure\\closure-receipt.json",
+      "upstreamReceiptSha256": "9875EECC2AB4E40E9632A0E71C36E094CD1A942756ECE3AD1BC16433C85C21B7",
+      "license": "Apache-2.0; source attribution and LICENSE retained",
+      "files": [
+        {
+          "module": "DubonChebotarev.ForMathlib.LogOneDivSubOne",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\ForMathlib\\LogOneDivSubOne.lean",
+          "sha256": "84FB4470602FBC93031EDD1671EACC628DC1C1B293C29463393D92F6F9A373D4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.ForMathlib.LogOneDivSubOne.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.NumberFieldEulerProduct",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\NumberFieldEulerProduct.lean",
+          "sha256": "01F49BCC9CF9EEEA15B9F5BB51A5012561D43731B0BBC31A7F7A2997F0622779",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.NumberFieldEulerProduct.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.Density",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\Density.lean",
+          "sha256": "2677B6AF8E834253D330581B7261CBE9E32E0602FD6B5AFD992A58C275DC4DCD",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.Density.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.Frobenius",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\Frobenius.lean",
+          "sha256": "E825C4277690E05E9697DBF02FA169B2EB758D5F349320C94F5AAD5CCB064585",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.Frobenius.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.CyclotomicNormResidue",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\CyclotomicNormResidue.lean",
+          "sha256": "EE16E8731147766DE0EF90B287889DD90BE6F240C133AA62E3103FCC1C446D81",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.CyclotomicNormResidue.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.ForMathlib.CharacterOrthogonality",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\ForMathlib\\CharacterOrthogonality.lean",
+          "sha256": "DB0F667920AB98505AC9A180C5571B009A74C629D51BBDC8D9D5B8CE9CBC450C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.ForMathlib.CharacterOrthogonality.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.ForMathlib.LatticePointCount",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\ForMathlib\\LatticePointCount.lean",
+          "sha256": "9A15C282A0817F92A28BFA2706160DB4E05C8EADAE62EBF7605E3F7164099719",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.ForMathlib.LatticePointCount.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.ForMathlib.NormLeOneLipschitz",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\ForMathlib\\NormLeOneLipschitz.lean",
+          "sha256": "7A268E020FB1857AC20F9F39D3EF07306C8BE75048C8D890BEB63FB3BA5CFFEF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.ForMathlib.NormLeOneLipschitz.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.ForMathlib.IdealCongruenceCount",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\ForMathlib\\IdealCongruenceCount.lean",
+          "sha256": "B3D0997DE79E9F66D0BD756FD94AEC1450A345B8354463371FD5697DA436DD40",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.ForMathlib.IdealCongruenceCount.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.ZetaProduct",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\ZetaProduct.lean",
+          "sha256": "7AD64A15F8527AF46EE9072B5A5CD63E81AB2B4FAB454FFC1EF3832F82F94FF5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.ZetaProduct.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.Cyclotomic",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\Cyclotomic.lean",
+          "sha256": "A4DAB7E1FFD3434E78F4F3D70940E12429816CECA7D71A6BD924BA134B7F88A2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.Cyclotomic.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.FixedFieldDensity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\FixedFieldDensity.lean",
+          "sha256": "2A6CB92B92BF843545AA12A8BD716DF2D7B391FA2561B199E3F10C6CA03C1522",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.FixedFieldDensity.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.Abelian",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\Abelian.lean",
+          "sha256": "5C653ED415ED2B1C04D48D4ABF36E0B19EA41F6037DE741D757B598E24E839AF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.Abelian.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "DubonChebotarev.Main",
+          "path": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev\\Main.lean",
+          "sha256": "283B0AE851CDBD3B0133FD9DE53C97EDCA05A25DF6F2A31E5C4F83DF91B2DB36",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\DubonChebotarev.Main.log",
+          "exit": 0,
+          "diagnostics": 0
+        },
+        {
+          "module": "ChebotarevFiniteFactorPrime",
+          "path": "E:\\Lean\\.tmp\\dubon83\\ChebotarevFiniteFactorPrime.lean",
+          "sha256": "D172A772784CEBA2E0254399DF4CD46486A55D6B0C939C14AB410C7BEE8EE617",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\ChebotarevFiniteFactorPrime.log",
+          "exit": 0,
+          "diagnostics": 0
+        }
+      ],
+      "audit": {
+        "file": "E:\\Lean\\.tmp\\dubon83\\ChebotarevPortAudit.log",
+        "sha256": "5EC4E110C060CD9D26E884643DB1AA3EE4BFEB5CC535F9BC23861579C41D65BC",
+        "queries": 4,
+        "declarations": 174,
+        "generatedDeclarations": 711,
+        "linters": 16,
+        "exit": 0,
+        "diagnostics": 0
+      },
+      "exhaustiveTheorems": 821,
+      "jointNativeCompatibility": {
+        "file": "E:\\Lean\\.tmp\\dubon83\\ChebotarevCompatibilityAudit.log",
+        "sha256": "F9090593CC38312D48C19C36705C61048580CAA4777276E0135DAD8A15CB2AC5",
+        "queries": 4,
+        "declarations": 1,
+        "generatedDeclarations": 0,
+        "linters": 16,
+        "exit": 0,
+        "diagnostics": 0
+      },
+      "compatibilityScope": "Complete native 4174 production aggregate plus both Imperial patching and AINTLIB Chebotarev scratch ports and the new original-representation consumer.",
+      "endpoints": [
+        "Chebotarev.chebotarev_density",
+        "Chebotarev.infinite_setOf_frobenius_class",
+        "Dubon2026.continuous_galois_exists_frobenius_prime"
+      ],
+      "mathematicalConclusion": "For every finite Galois extension of number fields, every conjugacy class occurs at infinitely many actual unramified prime ideals. For each original continuous Galois homomorphism to a discrete group, the native factorization constructs an actual finite Galois field and representation factor; outside every specified finite prime set, a prime realizes the conjugacy class of the image of any original Galois element. Continuity discharges the open-kernel condition.",
+      "exactDependency": "DUB-17 primitive_satoTate_of_higher_continuation_alone (frozen source 1616-1687) <- higher symmetric-power continuation <- arithmetic automorphy lifting <- actual arithmetic patching system <- prescribed-Frobenius auxiliary primes and dual Selmer control.",
+      "reuse": [
+        "Native continuous_galois_finite_factor and its proved open-kernel field construction.",
+        "AINTLIB density and infinitude endpoints with their complete required project import closure.",
+        "Pinned Mathlib finite-character duality, ramification, ideal-counting, continuity and finite-set removal."
+      ],
+      "adaptations": "Module paths; frozen API names for finite duality, ideal inclusions, ramification/inertia, cardinalities, continuity and set operations; explicit beta reduction and original-prime contractions; removed upstream elaboration overrides and linter suppressions; removed unused typeclass requirements and added missing documentation. Main retains the density and infinitude endpoints; unrelated arithmetic-progression and splitting corollaries were deferred.",
+      "stillOpen": "Prescribed Frobenius existence is now available, but constructing the intended auxiliary-prime systems still requires the actual residual representation and cyclotomic compatibility, appropriate image conditions and dual-Selmer detection. Higher-weight local deformation conditions and their numerical dimensions, arithmetic patching realization, modular association, purity, automorphy and higher symmetric-power continuation remain open. Acceptance 16/20, DUB-17-20 open.",
+      "status": "Kernel-checked scratch port and native-object consumer; not integrated into production BAT scope.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "exit": 0,
+      "diagnostics": 0
+    }
+  ],
+  "rationalConsumerCertificate": {
+    "checkedUTC": "2026-10-18T20:40:43.046371+00:00",
+    "source": "E:\\Lean\\.tmp\\dubon83\\ChebotarevRationalPrime.lean",
+    "sourceSha256": "1FD2138F73633587F58BDEAD579F7EA9AAB953C5DB849325FE96EAD5F1535ACB",
+    "auditLog": "E:\\Lean\\.tmp\\dubon83\\ChebotarevRationalPrimeAudit.log",
+    "auditSha256": "BDF0F37A895787E72855EFCB0EC1A79710A1E2E7AD93AA159094FFDB9F57EAFC",
+    "queries": [
+      "Dubon2026.rationalNonzeroPrime_eq_span",
+      "Dubon2026.continuous_rational_galois_exists_frobenius_prime"
+    ],
+    "linters": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "reuse": [
+      "originalIntegerPrimeBelow_exists_prime",
+      "continuous_galois_exists_frobenius_prime",
+      "Mathlib rational integral closure surjectivity and ideal map/comap"
+    ],
+    "conclusion": "The finite field and representation factor of an original continuous rational Galois representation are constructed. Outside every finite set of rational integers, a genuine prime integer realizes any prescribed image conjugacy class.",
+    "remaining": "Cyclotomic compatibility, appropriate residual image conditions and nonzero dual Selmer detection remain necessary for the intended auxiliary-prime system."
+  },
+  "cyclotomicConsumerCertificate": {
+    "checkedUTC": "2026-10-18T20:49:31.756024+00:00",
+    "files": [
+      {
+        "module": "ChebotarevRootCongruence",
+        "path": "E:\\Lean\\.tmp\\dubon83\\ChebotarevRootCongruence.lean",
+        "sha256": "ABC41BDB283A7E3F90A661A5EAFFF0025848097612E486ACF68817D2626B7E6F"
+      },
+      {
+        "module": "ContinuousCyclotomicFiniteFactor",
+        "path": "E:\\Lean\\.tmp\\dubon83\\ContinuousCyclotomicFiniteFactor.lean",
+        "sha256": "36CD6EA0BEC67887AE3D10C0EB183D32295ED6F7C401BBC26FE892DAA0455746"
+      },
+      {
+        "module": "ChebotarevCyclotomicPrimes",
+        "path": "E:\\Lean\\.tmp\\dubon83\\ChebotarevCyclotomicPrimes.lean",
+        "sha256": "B784F48945F0F89E5539E16F556104F6334472C6935D7E4422F79865F37948CC"
+      },
+      {
+        "module": "ContinuousCyclotomicFrobeniusPrimes",
+        "path": "E:\\Lean\\.tmp\\dubon83\\ContinuousCyclotomicFrobeniusPrimes.lean",
+        "sha256": "4A7F1ECAA06EDBA47D756054F28FD7700609B04FF41E67E68A1CE64B540D6653"
+      }
+    ],
+    "auditLog": "E:\\Lean\\.tmp\\dubon83\\CyclotomicPrimeAssemblyAudit.log",
+    "auditSha256": "CF96203D8D4F919EECE852DFB74D2EF54E655B102A61BAF31B8D940EE7480771",
+    "queries": [
+      "Dubon2026.finiteGalois_frobenius_root_power",
+      "Dubon2026.finiteGalois_frobenius_cyclotomic_character",
+      "Dubon2026.continuous_galois_finite_factor_with_root",
+      "Dubon2026.finiteGalois_exists_prime_congruent_one_of_fixed_root",
+      "Dubon2026.continuous_rational_galois_exists_cyclotomic_frobenius_prime"
+    ],
+    "lintersPerScope": 16,
+    "scopes": 4,
+    "exit": 0,
+    "diagnostics": 0,
+    "compatibility": "Complete native 4174 aggregate and both certified external scratch ports imported.",
+    "exactDependency": "DUB-17 higher symmetric-power continuation <- arithmetic automorphy lifting <- actual arithmetic patching <- prescribed Frobenius auxiliary primes with cyclotomic congruences and dual Selmer detection.",
+    "discharged": [
+      "No cyclotomic generation assumption on the finite Galois field: the original primitive root suffices for its Frobenius exponent formula.",
+      "Native continuity, finite factorization and Galois correspondence construct a single finite field containing the root and the original representation.",
+      "For any original Galois element fixing the root, a genuine rational prime outside every finite exclusion set realizes its image conjugacy class and is one modulo the root order."
+    ],
+    "remaining": "An appropriate original element with residual regularity and nonzero dual-class detection still has to be constructed. Actual finite auxiliary-prime systems and arithmetic patching inputs, higher-weight local conditions/dimensions, modular association, purity, automorphy and higher symmetric-power continuation remain open. DUB-17-20 remain open, acceptance 16/20."
+  },
+  "arithmeticConsumerCertificate": {
+    "checkedUTC": "2026-10-18T20:52:56.053854+00:00",
+    "module": "ArithmeticCyclotomicAuxiliaryPrimes",
+    "source": "E:\\Lean\\.tmp\\dubon83\\ArithmeticCyclotomicAuxiliaryPrimes.lean",
+    "sourceSha256": "F4164894F4BBC40D40218F20D1B134C5BA21FBB6E27DBD38AD4C9F23904971E9",
+    "auditLog": "E:\\Lean\\.tmp\\dubon83\\ArithmeticCyclotomicAuxiliaryPrimeAudit.log",
+    "auditSha256": "318DDF97941DD5824C86B99258289A7D51625A116EE841B64F66F1ED5CA7B220",
+    "queries": [
+      "Dubon2026.rationalArithmetic_exists_cyclotomic_auxiliary_prime"
+    ],
+    "linters": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "compatibility": "Full native 4174 aggregate plus both external ports and new cyclotomic-prime consumers.",
+    "discharged": "For the original rational arithmetic Galois group and fixed nonzero exceptional integer, native prime-power root existence constructs the primitive root at every level q^n when q divides the original exceptional integer; native exceptional-prime finiteness makes the selected genuine rational prime avoid its entire original bad support. The field and representation factor are constructed, with congruence and prescribed image conjugacy retained. No separate root, finite bad set, field or open-kernel witness is supplied.",
+    "remaining": "An original Galois element fixing that root and satisfying residual regularity and dual-class detection must still be produced. The required finite auxiliary-prime systems and arithmetic patching realization remain open; DUB-17-20 remain open."
+  },
+  "auxiliaryPrimeSourceReview": {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "files": [
+      {
+        "path": "Definitions/Def_TaylorWiles_Primes.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_TaylorWiles_Primes.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\Definitions\\Def_TaylorWiles_Primes.lean.txt",
+        "gitBlob": "450dd6e896c8cb43c23b4bd93b04f4e77204deba",
+        "sha256": "F5916220FA1182882878B1AE5AE74173C80C926F57B076C00251663F7949F77B",
+        "bytes": 3848
+      },
+      {
+        "path": "Definitions/Def_DualSelmer_ExtConditions.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_DualSelmer_ExtConditions.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\Definitions\\Def_DualSelmer_ExtConditions.lean.txt",
+        "gitBlob": "f7a5b308e73cd99082de453333b9c7ff29c43150",
+        "sha256": "007355ED7FBB6D276AA0EF3A69E5BCA07452ED47086AA2C85BE6200D55DEF93C",
+        "bytes": 1031
+      },
+      {
+        "path": "Definitions/Def_TaylorWiles_CyclotomicChar.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_TaylorWiles_CyclotomicChar.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\Definitions\\Def_TaylorWiles_CyclotomicChar.lean.txt",
+        "gitBlob": "f4267d519909cfbde6d822ead550aa196b887b01",
+        "sha256": "ED83FE2CEED1D0C1D1B055A1EB4A26607BEF5553E7FED9286270F0862B50C6F1",
+        "bytes": 4780
+      },
+      {
+        "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_notMem_of_isAbsolutelyIrreducible.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_notMem_of_isAbsolutelyIrreducible.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrime_notMem_of_isAbsolutelyIrreducible.lean.txt",
+        "gitBlob": "bc956137f40f235716e4a9a0a8db707d7995957b",
+        "sha256": "1BED8FD2D6D5E1DDB28D22D68CC4715659A8A308E49F1C84F94220830D422638",
+        "bytes": 9333
+      },
+      {
+        "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_H1_ne_zero_of_notMem_range.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_H1_ne_zero_of_notMem_range.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrime_map_H1_ne_zero_of_notMem_range.lean.txt",
+        "gitBlob": "b3b45b3d1c619adf356d1b66c336a1223793cfc4",
+        "sha256": "EE462E3B1C5C6B79AD8E1C52913A93050BA7AFC49331B9173E915374664B8AD3",
+        "bytes": 21625
+      },
+      {
+        "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_ne_zero_of_mem_continuousH1S.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_ne_zero_of_mem_continuousH1S.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrime_map_ne_zero_of_mem_continuousH1S.lean.txt",
+        "gitBlob": "924e428a8ad0139e8e361aa74a280af53009ce4a",
+        "sha256": "4587C316510230CDA9DF8AA3B108D1428F5111FB895E6DAE6927A6F091032BC7",
+        "bytes": 22677
+      },
+      {
+        "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrimes_card_eq_finrank_continuousH1S_dualTwist.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrimes_card_eq_finrank_continuousH1S_dualTwist.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrimes_card_eq_finrank_continuousH1S_dualTwist.lean.txt",
+        "gitBlob": "a50c3ecdbe70166aa8d3c5f4481b0f734ce87337",
+        "sha256": "3291BFBCCB8BF3BBBA49EF6D59C074AD7CB6645383F89E4D967775CB875192AE",
+        "bytes": 13370
+      },
+      {
+        "path": "P2M/Sol/S_TaylorWiles_exists_mem_ker_cycloChar_hasDistinctRationalEigenvalues.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_TaylorWiles_exists_mem_ker_cycloChar_hasDistinctRationalEigenvalues.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_TaylorWiles_exists_mem_ker_cycloChar_hasDistinctRationalEigenvalues.lean.txt",
+        "gitBlob": "a65296531d72c8317e5d7049116ef01e0e6a9ffa",
+        "sha256": "EFE6D0DE46D983F8592D738385EABA8FD926B0E4FEE67280A7363A88559EDD0A",
+        "bytes": 1883
+      }
+    ],
+    "scope": "Eight selected files only; the cached repository tree is truncated. No complete closure or local kernel certification is claimed.",
+    "exactDependency": "DUB-17 higher symmetric-power continuation <- arithmetic automorphy lifting <- patching <- actual auxiliary-prime systems detecting dual Selmer classes.",
+    "reviewedUTC": "2026-10-18T20:40:03.508521+00:00",
+    "reviewStatus": "Selected source signatures and proof bodies inspected; full imports and local kernel status not certified.",
+    "objects": "ResidualGaloisRep is used through an explicit rank-two basis; the endpoints concern actual rational primes, cyclotomic congruences, unramifiedness, distinct residual eigenvalues and restrictions of continuous H1 classes.",
+    "hypotheses": [
+      "Odd coefficient prime p and characteristic p finite field.",
+      "Absolute irreducibility of the actual rank-two residual representation.",
+      "Every residual characteristic polynomial splits over the coefficient field.",
+      "For dual Selmer detection: absolute irreducibility after restriction to every index-two subgroup.",
+      "Specified original unramified set containing p and the literal trace-zero adjoint coefficient representation."
+    ],
+    "proofChain": [
+      "Finite residual factor plus adjoining an actual primitive root and taking normal closure.",
+      "Find an element of the cyclotomic kernel with distinct eigenvalues.",
+      "Frobenius prime selection and transport to actual valuation Frobenius.",
+      "For nonzero dual classes, find a cyclotomic-kernel element detected by the cocycle, then a prime with nonzero localization.",
+      "Finite-dimensional separating linear maps choose a prime set of cardinality equal to the original unramified H1 dimension."
+    ],
+    "reuseDecision": "Retain as a rank-two route and proof decomposition. Do not import the endpoints as a solution for every higher symmetric power. The complete AINTLIB Chebotarev port plus native continuous finite factorization already provides the more general prescribed-prime existence foundation. Reuse native H1 finiteness and exact Selmer comparison instead of importing duplicate cohomology infrastructure. Defer the abstract linear selection lemma until the required arithmetic detection hypothesis is proved.",
+    "stillNeeded": "Residual image and cyclotomic compatibility, nonzero dual-class detection in the source dimension, finite auxiliary-prime systems, and actual patching realization. No gate status changes."
+  },
+  "auxiliaryImageSourceReview": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "checkedUTC": "2026-10-18T21:28:01.502636+00:00",
+    "files": [
+      {
+        "path": "P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+        "sha": "796af577bfff96f47f5f92401894cf4287f5a098",
+        "size": 34730,
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-image-review\\S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean.txt",
+        "sha256": "5D13D13D8A16B5F1A507E6F778E546BE356F78BC7AA39102A5F3528F9CC6F527"
+      },
+      {
+        "path": "P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+        "sha": "6b561235f0597e1705e2894cf77dc7602dbd8540",
+        "size": 20608,
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-image-review\\S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean.txt",
+        "sha256": "4B7C4FDC3B617A8CA45B4AFFE64C2B25579A778737A52E8C9D64540CB1B04D10"
+      }
+    ],
+    "scope": "Two selected source bodies only, not their full dependency closure; no kernel certificate.",
+    "reviewedUTC": "2026-10-18T21:28:58.286425+00:00",
+    "exactDependency": "DUB-17 primitive_satoTate_of_higher_continuation_alone <- higher continuation <- potential automorphy and descent <- arithmetic lifting/patching <- auxiliary primes detecting dual Selmer classes <- detecting global elements.",
+    "findings": [
+      {
+        "source": "P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+        "scope": "Pure linear algebra, but explicitly finrank k V = 2, characteristic not 2, irreducibility, split degree-two characteristic polynomials, and a proper conjugation-stable additive subgroup of endomorphisms. It produces a distinct-eigenvalue element with a commuting trace-zero witness outside that subgroup."
+      },
+      {
+        "source": "P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+        "scope": "Actual absolute rational Galois group, rank-two residual representation, finite characteristic-p coefficients, odd p, absolute irreducibility and absolute irreducibility on every index-two subgroup. Nonzero dual adjoint H1 yields a root-fixing element acting trivially on the adjoint with nonzero cocycle value. The proof imports finite-image cohomology vanishing and further irreducibility/invariant results whose full closure has not been certified here."
+      }
+    ],
+    "decision": "Do not import these rank-two endpoints as arbitrary-dimensional auxiliary-prime detection. Preserve the concrete decomposition for possible later native adaptation; first establish the residual-image hypotheses required by the selected higher symmetric-power route. Native continuous H1 and the newly compiled actual local-detection bridge avoid duplicating source cohomology and Frobenius infrastructure. No acceptance gate closes.",
+    "rootPinsChanged": false
+  },
+  "broaderEndpointSearch": {
+    "checkedUTC": "2026-10-18T20:47:56.635321+00:00",
+    "method": "Public web search and primary repository descriptions; source-level triage only, not a complete repository search or kernel certificate.",
+    "queries": [
+      "Lean formalization Sato Tate symmetric power automorphy GitHub 2026",
+      "Lean theorem Deligne Weil conjectures purity modular form GitHub",
+      "Lean Taylor Wiles auxiliary primes dual Selmer GitHub",
+      "site:github.com \"SatoTate\" \"lean\"",
+      "site:github.com \"Sato-Tate\" \"Lean\" automorphy",
+      "site:github.com \"symmetric power\" \"automorphy\" \"lean\""
+    ],
+    "findings": [
+      {
+        "url": "https://github.com/mkaratarakis/CICM24_Deligne",
+        "decision": "The author describes a partial formalization of the statement of Deligne association, not a proved association or purity theorem. No replacement for the open Dubon endpoint."
+      },
+      {
+        "url": "https://github.com/teal-sea/zeta-lab/blob/main/docs/25-the-director-run.md",
+        "decision": "The described Lean results are the first two vertical finite-field moments over all Weierstrass pairs, including singular pairs. This is a different averaging domain from prime equidistribution for a fixed non-CM modular form."
+      },
+      {
+        "url": "https://github.com/aster2024/openai-math-followups",
+        "decision": "The described Sato-Tate/symmetric-power consequences concern CM curves and CM newforms. They do not match the required non-CM full modular branch; no dependency closure certified here."
+      },
+      {
+        "url": "https://github.com/CBirkbeck/ModularForms",
+        "decision": "Older Lean 3 modular-form definitions and Eisenstein work; author description explicitly leaves modularity unfinished. Native completed modular infrastructure remains preferable."
+      }
+    ],
+    "conclusion": "This additional bounded search yielded no verified direct non-CM Sato-Tate, full modular Galois association/purity, or all-higher-symmetric-power continuation endpoint. The certified patching and Chebotarev ports remain the concrete reusable gains; no global nonexistence claim is made.",
+    "adequacyFollowup": {
+      "checkedUTC": "2026-10-18T21:27:12.652708+00:00",
+      "queries": [
+        "Lean formalization adequate Galois representation symmetric power Taylor Wiles GitHub",
+        "Lean \"automorphy lifting\" proof \"symmetric\" GitHub"
+      ],
+      "assessment": "These bounded queries located the previously reviewed rank-two FLT sources and classical research papers, but no locally certified arbitrary-rank adequacy or symmetric-power automorphy proof. This is not a global absence claim.",
+      "primaryReferences": [
+        "https://github.com/anthropics/fermats-last-theorem/blob/main/formalization.yaml",
+        "https://arxiv.org/abs/2205.05062",
+        "https://arxiv.org/abs/1912.11261"
+      ],
+      "nativeRouteReview": "PrimitiveHigherContinuationReduction.lean proves primitive_prime_bound_of_higher_symmetric_holomorphy and primitive_satoTate_of_higher_continuation_alone. Exact higher holomorphic nonvanishing continuation suffices for both required purity and Sato-Tate; retain potential automorphy and analytic descent as the selected arithmetic route, without adding an independent Weil-conjectures development."
+    }
+  },
+  "exactDependency": "DUB-17 primitive_satoTate_of_higher_continuation_alone (frozen lines 1616-1687) <- higher symmetric-power continuation <- potential automorphy and analytic descent <- arithmetic automorphy lifting <- actual arithmetic patching system <- prescribed-Frobenius primes and dual Selmer control.",
+  "stillOpen": "The actual deformation rings and Hecke modules must satisfy the patching theorem: compact local ring and module bounds, freeness over annihilator quotients, annihilators tending to zero, compatible quotient identifications and actions, the domain and dimension/depth conditions, and separate surjectivity of R to T. The cyclotomic congruence is proved for the constructed finite factor and any original element fixing the specified primitive root. Auxiliary primes still require an element with the appropriate residual-image regularity and dual-Selmer detection. The full higher-weight/crystalline local conditions and dimensions, modular association, potential automorphy, analytic descent and higher symmetric-power continuation remain open. The existing primitive_prime_bound_of_higher_symmetric_holomorphy and primitive_satoTate_of_higher_continuation_alone already derive actual purity and Sato-Tate from that continuation; a separate Weil-conjectures development is not required by this route. Acceptance is 16/20; DUB-17-20 remain open.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,212-module scope: all thirteen retained regressions, 30,909 exhaustive theorem checks, 13,261 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "failedFullVerification4212": {
+    "log": "logs/dubon-build-20261018-143856-025.log",
+    "sha256": "C640792427854FF7F3185A0105259E3EDF45BF0B1BF40E0D26260292E85A0EF7",
+    "exit": 1,
+    "stage": "complete package and retained verification builds",
+    "failures": [
+      "ArithmeticSemanticRegression: scalar instance search at lines 3086 and 3127",
+      "GeometricSemanticRegression: elaboration at lines 1611, 1855, 2214",
+      "PrimeReciprocitySemanticRegression: completion module instance search at line 2796"
+    ],
+    "scope": "Initial production port; no source conclusion or test has been weakened."
+  },
+  "compatibilityRepair": {
+    "recordedUTC": "2026-10-18T22:07:11.336289+00:00",
+    "sourceChanges": {
+      "Dubon2026.Reuse.Imperial.Patching.Utils.AdicTopology": {
+        "beforeSha256": "3763B815095118208A5D8FC35626993F96570751EC8CBE7E20B383C388E80138",
+        "afterSha256": "27A9632D3F2D234BC1861EC0DBB78B18E77E3B454ED629C293ADBDE9524111C4"
+      },
+      "Dubon2026.Reuse.Imperial.Deformations.Lemmas": {
+        "beforeSha256": "90EB6CD7FCB5D4AD6046F270AA87753FD4B55A6FC97D01D3A9835535F247D60F",
+        "afterSha256": "F92FF1801023DA655FD256978E3E9F83B653A185234934693B3CD3AA37FFF21D"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.Algebra": {
+        "beforeSha256": "A07A62CC1A9A22718C932F13CDFD4766EE53054C97EADD4A815AB1F7A9D9B7E4",
+        "afterSha256": "1A2BE87F7DF105C73D8A5FD9BF3B7B6FF377DBEB2584EC23A6C61A2B0F9313FD"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.Module": {
+        "beforeSha256": "E513E8D068C01BB3E0F0D6927A6ADA3D90C68E592D6A7E151AB87B4E734D1718",
+        "afterSha256": "B9A3ADA497DFB834772C557842A20FF1C8D5F0A6A9501757C4281032D8064B39"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.Over": {
+        "beforeSha256": "7D2D959C9F007BFE90FA279227968ABCA5C2DF377D3D7B27A6BE8791691DCBC8",
+        "afterSha256": "D3D1943977F89F6CB97C58A5FBAB098DB590B2CF562D140CF0D0D742780BC2EF"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.System": {
+        "beforeSha256": "9B350328E4CC349CB47D1614259C7D3ED2CB6AC9BE6165A52BD19F80B9924923",
+        "afterSha256": "7540F7930D0FD63053F896AF9C3200C6DDCF6853B8900FD51EF247351CBE8D7E"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.REqualsT": {
+        "beforeSha256": "F333C9D2A9824B0619357288A7E8F2060096940913880E1EC1E237E132DA6FA3",
+        "afterSha256": "4FFBE21EECD649B3ECBABB82EBEAFBDCF0E13F423962EE3D563C22E0158A27A6"
+      }
+    },
+    "changes": [
+      "Document the already local ideal/submodule action.",
+      "Make the valuation-subring algebra compatibility instance local; the exact geometry consumer then elaborates unchanged.",
+      "Scope the adic-to-nonarchimedean instance to IsLocalRing, opening it explicitly in the five patching consumers; the exact original completion-degree consumer then elaborates unchanged."
+    ],
+    "evidence": {
+      "geometryBaseline": "GeometryCompatibilityBaseline.log",
+      "geometryValuationLocal": "GeometryCompatibilityValuation.log",
+      "primeValuationOnlyFailure": "PrimeCompatibilityValuation.log",
+      "primeAdicScopedSuccess": "PrimeCompatibilityAdic.log",
+      "arithmeticRegression": "patching-compatibility-regressions4212.log"
+    },
+    "priorFailures": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\PatchingChebotarevProductionAudit4212Repaired.log",
+        "sha256": "BEEC0D4745F95F48DD36AF6439DFD7C740CECD7ECC0A7293C5B70AEA47A610C5",
+        "reason": "The newly local ideal-action definition required a documentation string."
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\patching-compatibility-regressions4212.log",
+        "sha256": "EA2FD0F5FEE0007A049D9EAA2DE4A739C3D183DFB69C5045DA895DA01880C0F4",
+        "reason": "Arithmetic regression passed; geometry and prime-completion instance searches still timed out."
+      }
+    ],
+    "buildPrefix": "patching-compatibility-repair2-build4212",
+    "focusedPrefix": "PatchingChebotarevProductionAudit4212Scoped",
+    "proofLimitsChanged": false,
+    "testsExcluded": false,
+    "regressionStatementsChanged": false
+  },
+  "preCompatibilityFixFocusedReceipt4212": {
+    "log": "E:\\Lean\\.tmp\\dubon83\\PatchingChebotarevProductionAudit4212.log",
+    "sha256": "91BC9DD81FAAFF763A3FBE350BA648D9C8EF09FB1D220D35620D8B5703273F45",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\patching-chebotarev-production-4212-build.log",
+    "aggregateSha256": "0E36327810560B8619DDDA7CDC0108D2C6707121984FF5F57D926BAD13F69FD5",
+    "productionModules": 4212,
+    "incrementModules": 38,
+    "axiomChecks": 18,
+    "exhaustiveReuseTheorems": 1557,
+    "linterScopes": 9,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "boundary": "The actual deformation rings and Hecke modules must satisfy the patching theorem: compact local ring and module bounds, freeness over annihilator quotients, annihilators tending to zero, compatible quotient identifications and actions, the domain and dimension/depth conditions, and separate surjectivity of R to T. The cyclotomic congruence is proved for the constructed finite factor and any original element fixing the specified primitive root. Auxiliary primes still require an element with the appropriate residual-image regularity and dual-Selmer detection. The full higher-weight/crystalline local conditions and dimensions, modular association, potential automorphy, analytic descent and higher symmetric-power continuation remain open. The existing primitive_prime_bound_of_higher_symmetric_holomorphy and primitive_satoTate_of_higher_continuation_alone already derive actual purity and Sato-Tate from that continuation; a separate Weil-conjectures development is not required by this route. Acceptance is 16/20; DUB-17-20 remain open."
+  },
+  "compatibilityRepair1": {
+    "recordedUTC": "2026-10-18T21:50:52.225385+00:00",
+    "module": "Dubon2026.Reuse.Imperial.Patching.System",
+    "beforeSha256": "B6942E28EC38A38269EA451635FB64D450A4FB18417250B92AB6A90237B23AAF",
+    "afterSha256": "9B350328E4CC349CB47D1614259C7D3ED2CB6AC9BE6165A52BD19F80B9924923",
+    "change": "Make instPatchingIdealSubmoduleSMul local to Patching.System. The proved action remains available by name. Patching.REqualsT and the aggregate compile unchanged; native ideal/subalgebra scalar search no longer uses this compatibility rule globally.",
+    "evidence": "The exact matrix-reduction consumer fails with the global rule and compiles with it disabled in the reproducer. Other retained regressions are still being checked.",
+    "buildPrefix": "patching-compatibility-repair-build4212",
+    "focusedPrefix": "PatchingChebotarevProductionAudit4212Repaired",
+    "proofLimitsChanged": false,
+    "testsExcluded": false
+  },
+  "compatibilityRepair2": {
+    "recordedUTC": "2026-10-18T22:07:11.336289+00:00",
+    "sourceChanges": {
+      "Dubon2026.Reuse.Imperial.Patching.Utils.AdicTopology": {
+        "beforeSha256": "3763B815095118208A5D8FC35626993F96570751EC8CBE7E20B383C388E80138",
+        "afterSha256": "27A9632D3F2D234BC1861EC0DBB78B18E77E3B454ED629C293ADBDE9524111C4"
+      },
+      "Dubon2026.Reuse.Imperial.Deformations.Lemmas": {
+        "beforeSha256": "90EB6CD7FCB5D4AD6046F270AA87753FD4B55A6FC97D01D3A9835535F247D60F",
+        "afterSha256": "F92FF1801023DA655FD256978E3E9F83B653A185234934693B3CD3AA37FFF21D"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.Algebra": {
+        "beforeSha256": "A07A62CC1A9A22718C932F13CDFD4766EE53054C97EADD4A815AB1F7A9D9B7E4",
+        "afterSha256": "1A2BE87F7DF105C73D8A5FD9BF3B7B6FF377DBEB2584EC23A6C61A2B0F9313FD"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.Module": {
+        "beforeSha256": "E513E8D068C01BB3E0F0D6927A6ADA3D90C68E592D6A7E151AB87B4E734D1718",
+        "afterSha256": "B9A3ADA497DFB834772C557842A20FF1C8D5F0A6A9501757C4281032D8064B39"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.Over": {
+        "beforeSha256": "7D2D959C9F007BFE90FA279227968ABCA5C2DF377D3D7B27A6BE8791691DCBC8",
+        "afterSha256": "D3D1943977F89F6CB97C58A5FBAB098DB590B2CF562D140CF0D0D742780BC2EF"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.System": {
+        "beforeSha256": "9B350328E4CC349CB47D1614259C7D3ED2CB6AC9BE6165A52BD19F80B9924923",
+        "afterSha256": "7540F7930D0FD63053F896AF9C3200C6DDCF6853B8900FD51EF247351CBE8D7E"
+      },
+      "Dubon2026.Reuse.Imperial.Patching.REqualsT": {
+        "beforeSha256": "F333C9D2A9824B0619357288A7E8F2060096940913880E1EC1E237E132DA6FA3",
+        "afterSha256": "4FFBE21EECD649B3ECBABB82EBEAFBDCF0E13F423962EE3D563C22E0158A27A6"
+      }
+    },
+    "changes": [
+      "Document the already local ideal/submodule action.",
+      "Make the valuation-subring algebra compatibility instance local; the exact geometry consumer then elaborates unchanged.",
+      "Scope the adic-to-nonarchimedean instance to IsLocalRing, opening it explicitly in the five patching consumers; the exact original completion-degree consumer then elaborates unchanged."
+    ],
+    "evidence": {
+      "geometryBaseline": "GeometryCompatibilityBaseline.log",
+      "geometryValuationLocal": "GeometryCompatibilityValuation.log",
+      "primeValuationOnlyFailure": "PrimeCompatibilityValuation.log",
+      "primeAdicScopedSuccess": "PrimeCompatibilityAdic.log",
+      "arithmeticRegression": "patching-compatibility-regressions4212.log"
+    },
+    "priorFailures": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\PatchingChebotarevProductionAudit4212Repaired.log",
+        "sha256": "BEEC0D4745F95F48DD36AF6439DFD7C740CECD7ECC0A7293C5B70AEA47A610C5",
+        "reason": "The newly local ideal-action definition required a documentation string."
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\patching-compatibility-regressions4212.log",
+        "sha256": "EA2FD0F5FEE0007A049D9EAA2DE4A739C3D183DFB69C5045DA895DA01880C0F4",
+        "reason": "Arithmetic regression passed; geometry and prime-completion instance searches still timed out."
+      }
+    ],
+    "buildPrefix": "patching-compatibility-repair2-build4212",
+    "focusedPrefix": "PatchingChebotarevProductionAudit4212Scoped",
+    "proofLimitsChanged": false,
+    "testsExcluded": false,
+    "regressionStatementsChanged": false
+  },
+  "productionFocusedReceipt4212": {
+    "log": "E:\\Lean\\.tmp\\dubon83\\PatchingChebotarevProductionAudit4212Scoped.log",
+    "sha256": "91BC9DD81FAAFF763A3FBE350BA648D9C8EF09FB1D220D35620D8B5703273F45",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\patching-compatibility-repair2-build4212.log",
+    "aggregateSha256": "F89000BAF2748083F89E9070C4186C4A6BA0CC0EAADFE45AEDF44165212EBA92",
+    "productionModules": 4212,
+    "incrementModules": 38,
+    "axiomChecks": 18,
+    "exhaustiveReuseTheorems": 1557,
+    "linterScopes": 9,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "boundary": "The actual deformation rings and Hecke modules must satisfy the patching theorem: compact local ring and module bounds, freeness over annihilator quotients, annihilators tending to zero, compatible quotient identifications and actions, the domain and dimension/depth conditions, and separate surjectivity of R to T. The cyclotomic congruence is proved for the constructed finite factor and any original element fixing the specified primitive root. Auxiliary primes still require an element with the appropriate residual-image regularity and dual-Selmer detection. The full higher-weight/crystalline local conditions and dimensions, modular association, potential automorphy, analytic descent and higher symmetric-power continuation remain open. The existing primitive_prime_bound_of_higher_symmetric_holomorphy and primitive_satoTate_of_higher_continuation_alone already derive actual purity and Sato-Tate from that continuation; a separate Weil-conjectures development is not required by this route. Acceptance is 16/20; DUB-17-20 remain open."
+  },
+  "compatibilityRepair3": {
+    "recordedUTC": "2026-10-18T22:54:07.521291+00:00",
+    "failedFullRun": {
+      "log": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261018-151209-858.log",
+      "sha256": "7BBEFEC70C1837A945D79B5D793034E40B719B08FB14DEB468533C11840ADFC0",
+      "exit": 1,
+      "reason": "SemanticRegression original Hilbert inner-product inference timed out at 20000 typeclass heartbeats; all twelve other retained regression builds passed."
+    },
+    "change": "Prefer the already proved InnerProductSpace.toInner projection locally, at instance priority 1100, only in the section containing the unchanged primitiveLocalInduced_smooth_coefficient regression. The new CStarModule.toInner search path otherwise exhausts the unchanged budget before reaching the canonical Hilbert structure.",
+    "verificationSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SemanticRegression.lean",
+    "verificationSourceSha256": "8B7F3FCB669843CF49840F4F48F1E26E6171156E89C40D4A08DAC845CFE7F59C",
+    "unchangedConsumerTextSha256": "71013CA1607BB94F00D6C90C58803DE8FAD81A165E9C3FD3614C2943104C4C6E",
+    "isolatedPassLog": "E:\\Lean\\.tmp\\dubon83\\HilbertCompatibilityInnerPriority.log",
+    "isolatedPassExit": 0,
+    "isolatedPassDiagnostics": 0,
+    "traceLog": "E:\\Lean\\.tmp\\dubon83\\HilbertCompatibilityTrace.log",
+    "traceSha256": "55E130D5874534B1521E165D576AFB3784B7B81D5E31286E690AC002AF4AFF40",
+    "productionSourcesChanged": false,
+    "rootPinsChanged": false,
+    "proofLimitsChanged": false,
+    "testsExcluded": false,
+    "regressionStatementsChanged": false,
+    "fullRegressionAndAuditBuild": "patching-compatibility-repair3-regression4212.log"
+  },
+  "compatibilityRepair4": {
+    "recordedUTC": "2026-10-18T23:06:34.854059+00:00",
+    "previousBuildLog": "E:\\Lean\\.tmp\\dubon83\\patching-compatibility-repair3-regression4212.log",
+    "previousBuildSha256": "043D4860463B4DEC5F7262CF3CAB9CA2AC4E00D37161D11A592D30BF06CE33C1",
+    "previousBuildExit": 1,
+    "previousBuildResults": "SemanticRegression built successfully. All 30909 exhaustive theorem dependency checks passed. The 16-linter audit found one unused NumberField L argument in ActualArithmeticReducedSupportNormFieldConsumer.",
+    "change": "Remove the redundant NumberField L argument from the regression proposition definition: the finite extension of NumberField K already provides it. Preserve every mathematical condition, conclusion, and both consuming theorem statements/proofs.",
+    "source": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimeReciprocitySemanticRegression.lean",
+    "sourceSha256": "48DF789492B1CDE580FC34859D9A2DE71C0777DBD38CF658883FDE077AAAAF39",
+    "previousSourceSha256": "112E05CC278C3D5EE55FE5BFAC77A8DA6D5DF932D27D0CB98574C6D6E87D2592",
+    "isolatedLinterLog": "E:\\Lean\\.tmp\\dubon83\\NormFieldUnusedInstanceProbe.log",
+    "isolatedLinterSha256": "96FA3F6691ED3A20D64237CB7EA26E0DF336EECF3B3FCEB6D5B55EFF4FC2C420",
+    "isolatedLinterExit": 0,
+    "isolatedLinterDiagnostics": 0,
+    "proofLimitsChanged": false,
+    "testsExcluded": false,
+    "regressionTheoremStatementsChanged": false,
+    "buildPrefix": "patching-compatibility-repair4-regression4212"
+  },
+  "assembledCompatibilityReceipt4212": {
+    "log": "E:\\Lean\\.tmp\\dubon83\\patching-compatibility-repair4-regression4212.log",
+    "sha256": "01D3809A646404C621E6D9BF4E3AFDAFBAAD1B3551A81C7CCF70A16DC98171DE",
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4212,
+    "exhaustiveTheorems": 30909,
+    "registeredConsumers": 13261,
+    "declarations": 18542,
+    "generated": 17177,
+    "linters": 16,
+    "jobs": 13125,
+    "boundary": "Assembled build/audit pass; full paper runner with independent retained regressions still required."
+  },
+  "receipt4212": {
+    "date": "2026-10-18 America/Vancouver",
+    "log": "logs/dubon-build-20261018-163217-665.log",
+    "sha256": "B71B2F7B702E9784ECFF34B1799E2602B9B3FF5C0972B2EC74F5D2A9E134C490",
+    "bytes": 7403742,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4212,
+    "projectTheorems": 30909,
+    "registeredConsumers": 13261,
+    "declarations": 18542,
+    "generated": 17177,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261018_160649.log",
+    "foundationSha256": "93887EE2AAC87C474B03AF02A37AEBC9FD9A71719CF6E7A04A33EB63819FB64E",
+    "boundary": "The actual deformation rings and Hecke modules must satisfy the patching theorem: compact local ring and module bounds, freeness over annihilator quotients, annihilators tending to zero, compatible quotient identifications and actions, the domain and dimension/depth conditions, and separate surjectivity of R to T. The cyclotomic congruence is proved for the constructed finite factor and any original element fixing the specified primitive root. Auxiliary primes still require an element with the appropriate residual-image regularity and dual-Selmer detection. The full higher-weight/crystalline local conditions and dimensions, modular association, potential automorphy, analytic descent and higher symmetric-power continuation remain open. The existing primitive_prime_bound_of_higher_symmetric_holomorphy and primitive_satoTate_of_higher_continuation_alone already derive actual purity and Sato-Tate from that continuation; a separate Weil-conjectures development is not required by this route. Acceptance is 16/20; DUB-17-20 remain open."
+  }
+}

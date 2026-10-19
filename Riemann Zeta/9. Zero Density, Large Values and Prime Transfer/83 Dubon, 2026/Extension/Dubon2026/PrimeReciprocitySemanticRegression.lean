@@ -2301,9 +2301,11 @@ attribute [local instance] arithmeticOrbitLocalUnionAlgebra arithmeticOrbitNorma
 
 /-- The precise large-support norm-field deduction on the original field
 objects. The field degree, exponent and support conditions are explicit;
-no normalized class system or norm-index conclusion is an input. -/
+no normalized class system or norm-index conclusion is an input.
+The number-field structure on `L` is already supplied by its finite
+extension of `K`; it is not a separate argument to this specification. -/
 def ActualArithmeticReducedSupportNormFieldConsumer
-    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L]
+    (K L : Type) [Field K] [NumberField K] [Field L]
     [Algebra K L] [FiniteDimensional K L] [IsGalois K L] (q : ℕ) : Prop :=
   ∀ [IsMulCommutative Gal(L/K)] (_hexp : ∀ g : Gal(L/K), g ^ q = 1)
     (ζ : K) (_hζ : IsPrimitiveRoot ζ q)

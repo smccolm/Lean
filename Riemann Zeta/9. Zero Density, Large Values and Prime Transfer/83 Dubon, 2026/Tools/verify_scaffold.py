@@ -172,6 +172,33 @@ def check_links(project):
     return count
 
 
+def check_port_reuse(project, record):
+    """Check the exact retained external sources and their audited adaptations."""
+    revisions = {'ImperialCollegeLondon/FLT': '1ab58c167e4fc60bef518cc02caa3fc15c9590d5',
+                 'CBirkbeck/aintlib': '1e63feb21e2dd9e54908d14c9c07058eff3ff1d4'}
+    require(record['rootPinsChanged'] is False and record['proofLimitsChanged'] is False,
+            'Patching/Chebotarev proof-policy drift')
+    rows = record['sourceRecords']
+    require(len(rows) == 33 and len({x['retainedPath'] for x in rows}) == 33,
+            'Patching/Chebotarev source closure mismatch')
+    for x in rows:
+        require(x['commit'] == revisions.get(x['repository']), 'Patching/Chebotarev revision drift')
+        rel = Path(x['retainedPath'])
+        require(not rel.is_absolute() and '..' not in rel.parts and rel.parts[0] == 'Dependencies',
+                'Nonlocal patching/Chebotarev source path')
+        f = project / rel
+        require(f.is_file() and sha(f).upper() == x['sha256'],
+                f'Reused source/license drift: {rel}')
+    modules = record['modules']
+    require(len(modules) == len(set(modules)) == 38 and set(modules) == set(record['sourceHashes']),
+            'Patching/Chebotarev adaptation coverage mismatch')
+    for module, digest in record['sourceHashes'].items():
+        require(module.startswith('Dubon2026.') and all(part.isidentifier() for part in module.split('.')),
+                'Invalid patching/Chebotarev module path')
+        f = project / 'Extension' / (module.replace('.', '/') + '.lean')
+        require(f.is_file() and sha(f).upper() == digest, f'Reused adaptation drift: {module}')
+
+
 def main():
     project = Path(__file__).resolve().parents[1]
     root = project.parents[1]
@@ -209,6 +236,7 @@ def main():
         path = project.parent / entry['pathFromSection']
         require(path.is_file() and sha(path) == entry['sha256'],
                 f'Audited PNT reuse source drift: {entry["pathFromSection"]}')
+    check_port_reuse(project, read_json(project / 'Tools/reuse-patching-chebotarev-20261018.json'))
     sturm = read_json(project / 'Tools/sturm_reuse.json')
     require(sturm['revision'] == '53ce31466dc5ff520463249d470119c1e0006e22' and
             sturm['license'] == 'Apache-2.0' and sturm['targetLean'] == '4.30.0',

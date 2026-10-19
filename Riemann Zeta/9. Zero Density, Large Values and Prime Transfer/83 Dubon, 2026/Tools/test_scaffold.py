@@ -5,13 +5,27 @@ from pathlib import Path
 import shutil
 import re
 
-from verify_scaffold import STATUS, check_active, check_dependency_graph, check_inactive_files, check_links, check_state, read_json
+from verify_scaffold import check_port_reuse, STATUS, check_active, check_dependency_graph, check_inactive_files, check_links, check_state, read_json
 
 
 def main():
     project = Path(__file__).resolve().parents[1]
     fixtures = project / 'logs' / ('scaffold-tests-' + datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
     fixtures.mkdir(parents=True)
+    reused = read_json(project / 'Tools/reuse-patching-chebotarev-20261018.json')
+    for case in ['valid', 'source-hash', 'adaptation-hash', 'missing-source', 'revision']:
+        candidate = deepcopy(reused)
+        if case == 'source-hash': candidate['sourceRecords'][0]['sha256'] = '0' * 64
+        elif case == 'adaptation-hash':
+            candidate['sourceHashes'][candidate['modules'][0]] = '0' * 64
+        elif case == 'missing-source': candidate['sourceRecords'].pop()
+        elif case == 'revision': candidate['sourceRecords'][0]['commit'] = '0' * 40
+        accepted = True
+        try: check_port_reuse(project, candidate)
+        except ValueError: accepted = False
+        if accepted != (case == 'valid'):
+            raise ValueError(f'Unexpected reused-source validation: {case}')
+        print(f'REUSE PROVENANCE TEST PASS: {case} (accepted={accepted})')
     original_config = read_json(project / 'Tools/scaffold.json')
     original_registry = read_json(project / 'Tools/proof_gates.json')
     # Minimal self-contained documentation fixture; no source archive or Lean proof is copied.

@@ -17238,6 +17238,1174 @@
     {
       "path": "Extension/Dubon2026/ArithmeticFiniteSUnitCorrectionGlobal.lean",
       "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitDualConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteTowerRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteSUnitDualClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteTowerSUnitDualClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteCorrectionClassWitness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalGlobalDualClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitLocalMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceSUnitLocalHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceSUnitLocalH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceLocalH1TargetValue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceSUnitLocalH1Comparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSUnitLocalMorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisUnitRelationDualSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingFreeCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalDualConnectingFreeCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalDualRestrictedPostcomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitLocalDualDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousInvariantConnectingRestrictedNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimeRestrictedUnitHomContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitLocalConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalContravariantHomPrecompositionDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimeUnitDualConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSPlaceBaseChangeFiniteValue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticOriginalPrimeTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSPlaceLocalMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceOriginalLocalHomH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTraceUnitCupSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GaloisTowerLocalUnitDualConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteGlobalHomH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitHomH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUnitHomTowerCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticLocalDualTowerDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticOriginalCompletionFiniteTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSPlaceLocalPrincipal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitLocalCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteLocalHomCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticOriginalCompletionHomMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceOriginalLocalH1Cup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceOriginalCartierH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitHomTowerH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitLocalH1Map.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticLocalDualTowerConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSPlaceLocalTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitLocalCorrectionClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteLocalHomH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticOriginalCompletionDualDiagram.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceOriginalMappedCupSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceOriginalCartierH1Cup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitPrincipalInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceCoherentSourceH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteCorrectionDirectDualClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticPrimeUnitHomTowerH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSPlaceLocalRelationInvariantTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticOriginalCompletionConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalExceptionalSPlaceLocalRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteCompletionH1Comparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteSUnitLocalizationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitTowerLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteSUnitPrincipalConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceOriginalSourceCupSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalExceptionalSPlaceLocalConnecting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSPlaceDualClassTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteCorrectionLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteSUnitNormalizedLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalSPlaceDualClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteTowerCorrectionLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceNormalizedLocalInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalSPlaceClassRecovery.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceFiniteCorrectionDirectLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalRecoveredCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalDirectLocalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalPrescribedRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalRecoveredGlobalClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalReverseLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalTraceExceptionalLocalizationExactness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTraceSelmerExactness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTraceLocalConditions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTraceSelmerQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTraceSelmerPrescription.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteCoefficientH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceGlobalH1Finite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SelmerAnnihilatorDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTraceSelmerDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExceptionalTracePrimeSelmerDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalGeometricTraceCondition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeGeometricTraceCondition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalGeometricTraceFirstOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeGeometricTraceFirstOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticGeometricTraceSelmer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticGeometricTraceSelmerDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Utils/InverseLimit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Utils/Lemmas.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Utils/AdicTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Utils/TopologicallyFG.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Mathlib/Algebra/Module/TransferInstance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Utils/StructureFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Ultraproduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Mathlib/GroupTheory/Index.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Mathlib/Topology/Algebra/Group/Basic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Deformations/Lemmas.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Algebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Module.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Over.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/Utils/Depth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/System.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Imperial/Patching/REqualsT.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/ForMathlib/LogOneDivSubOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/NumberFieldEulerProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/Density.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/Frobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/CyclotomicNormResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/ForMathlib/CharacterOrthogonality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/ForMathlib/LatticePointCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/ForMathlib/NormLeOneLipschitz.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/ForMathlib/IdealCongruenceCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/ZetaProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/Cyclotomic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/FixedFieldDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/Abelian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/Reuse/Chebotarev/Main.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ChebotarevFiniteFactorPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ChebotarevRationalPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ChebotarevRootCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCyclotomicFiniteFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ChebotarevCyclotomicPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCyclotomicFrobeniusPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicAuxiliaryPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/REqualsT.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/System.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Over.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/Depth.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Algebra.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Module.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/AdicTopology.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/InverseLimit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Ultraproduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Deformations/Lemmas.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/Lemmas.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/TopologicallyFG.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Patching/Utils/StructureFiniteness.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/GroupTheory/Index.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/Topology/Algebra/Group/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/FLT/Mathlib/Algebra/Module/TransferInstance.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/ImperialPatchingReuse/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Main.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Abelian.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/FixedFieldDensity.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Cyclotomic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/CyclotomicNormResidue.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/CharacterOrthogonality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ZetaProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/IdealCongruenceCount.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/LatticePointCount.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/NormLeOneLipschitz.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Frobenius.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/Density.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/ForMathlib/LogOneDivSubOne.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/AintlibChebotarevReuse/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/reuse-patching-chebotarev-20261018.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/CocycleAffinePermutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousCocycleAffinePermutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CocycleAffineH1Detection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCocycleAuxiliaryPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionFrobeniusLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticFrobeniusLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCocycleLocalDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CocycleKernelTranslateDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticKernelFunctionalPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TraceCocycleKernelDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicRootKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTraceCocycleDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FieldSL2Perfect.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricResidualRootLifts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSymmetricRegularDiagonal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRegularRootElement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricRegularPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricTraceDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticRegularCocycleFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricTraceFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSymmetricMonomialOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSymmetricIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSymmetricMatrixIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSymmetricAbsoluteIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricResidualDeformationConsumers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CocycleCentralScalarKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualGL2CentralScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricTwistedKernelDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticCyclotomicCharacterSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricKernelDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixConjugationColumnSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricProjectorOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricProjectorConjugationSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricProjectorTraceDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRegularCommutingTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricNonzeroClassPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteDetectingFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricDetectingFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DistinctDiagonalTraceFixed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RepresentationConjugateFixedSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRegularTraceFixedDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCyclicH1Dimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCyclicNormZero.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCyclicInflationDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedFiniteInflation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedDimensionBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousFiniteInflationUnramified.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalIntegerAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalResidueLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalResidueRootSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalInertiaDepth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteFieldFrobeniusClosedSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalResidueGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalResidueGaloisContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalInertiaCyclicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormLocalResidueFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalUnramifiedDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalUnramifiedFrobeniusGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCompletionFrobeniusGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticFrobeniusImageGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicMatrixTraceInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeUnramifiedDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeSymmetricUnramifiedDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRegularConjugateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticConjugateCocycleFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricConjugateClassPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeUnramifiedTraceClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricDimensionalPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricDimensionalFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricDimensionalSelmer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalIntegralResiduePrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalIntegralPrimeBelow.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalIntegralUnramifiedInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeOriginalNormPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticFiniteInertiaTrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedFirstOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedTraceDeformation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousUnramifiedDeformationClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalRegularPrimeInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricDeformationSelmer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalUnramifiedHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalUnramifiedMatrixLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCoefficientFixedDeterminantLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalUnramifiedLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeUnramifiedLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameUniformizerCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameInertiaCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameFrobeniusRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameWildOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameHigherCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DedekindTameUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldTameWild.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameCharacterFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldTameCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalIntegralPrimeAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameCharacterGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteTameImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalFiniteTameGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeNormResidueCard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameFrobeniusOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeFiniteTameGenerator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameArtinianMatrixFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeArtinianTameMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/AnthropicFLTReuse/tame-reuse.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Extension/Dubon2026/RegularResidueEigenvalueLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RegularResidueAdjugate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RegularResidueStrictDiagonalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameOffDiagonalPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameRegularDiagonal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameStrictDiagonalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimePrescribedFrobeniusMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTameStrictDiagonalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteEmbeddedGaloisKernelOpen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalFiniteInertiaGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DiagonalCharacterFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTameCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalNormFrobeniusClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticNormFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusAuxiliaryPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricTorusPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricTorusFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricTorusSelmer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualConjugateBasisLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusPrimeCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusGlobalLiftCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/AnthropicFLTReuse/regular-tame-reuse.json",
+      "role": "Dependencies"
     }
   ],
   "statusDocuments": [
@@ -21367,7 +22535,263 @@
     "ArithmeticOriginalStageImageExtensionColimit",
     "ArithmeticOriginalStageImageSUnitCorrection",
     "RationalTraceExceptionalCartierFiniteSUnitCorrection",
-    "ArithmeticFiniteSUnitCorrectionGlobal"
+    "ArithmeticFiniteSUnitCorrectionGlobal",
+    "ArithmeticFiniteSUnitDualConnecting",
+    "ContinuousInvariantConnectingRestriction",
+    "ContinuousInvariantConnectingNaturality",
+    "RationalTraceFiniteTowerRepresentation",
+    "RationalTraceFiniteSUnitDualClass",
+    "RationalTraceFiniteTowerSUnitDualClass",
+    "RationalTraceFiniteCorrectionClassWitness",
+    "RationalTraceExceptionalGlobalDualClass",
+    "ArithmeticSUnitLocalMap",
+    "ArithmeticTraceSUnitLocalHom",
+    "ArithmeticTraceSUnitLocalH1",
+    "RationalTraceLocalH1TargetValue",
+    "ArithmeticTraceSUnitLocalH1Comparison",
+    "ArithmeticSUnitLocalMorphism",
+    "GaloisUnitRelationDualSequence",
+    "ContinuousInvariantConnectingFreeCorrection",
+    "OriginalDualConnectingFreeCorrection",
+    "OriginalDualRestrictedPostcomposition",
+    "ArithmeticFiniteSUnitLocalDualDiagram",
+    "ContinuousInvariantConnectingRestrictedNaturality",
+    "ArithmeticPrimeRestrictedUnitHomContinuity",
+    "ArithmeticFiniteSUnitLocalConnecting",
+    "OriginalContravariantHomPrecompositionDiagram",
+    "ArithmeticPrimeUnitDualConnecting",
+    "OriginalSPlaceBaseChangeFiniteValue",
+    "RationalArithmeticOriginalPrimeTower",
+    "ArithmeticSPlaceLocalMap",
+    "RationalTraceOriginalLocalHomH1",
+    "RationalPrimeTraceUnitCupSeparation",
+    "GaloisTowerLocalUnitDualConnecting",
+    "RationalTraceFiniteGlobalHomH1",
+    "ArithmeticFiniteSUnitHomH1",
+    "ArithmeticUnitHomTowerCoefficient",
+    "ArithmeticLocalDualTowerDiagram",
+    "RationalArithmeticOriginalCompletionFiniteTower",
+    "ArithmeticSPlaceLocalPrincipal",
+    "ArithmeticFiniteSUnitLocalCorrection",
+    "RationalTraceFiniteLocalHomCoefficient",
+    "RationalArithmeticOriginalCompletionHomMap",
+    "RationalTraceOriginalLocalH1Cup",
+    "RationalTraceOriginalCartierH1",
+    "ArithmeticFiniteSUnitHomTowerH1",
+    "ArithmeticFiniteSUnitLocalH1Map",
+    "ArithmeticLocalDualTowerConnecting",
+    "ArithmeticSPlaceLocalTower",
+    "ArithmeticFiniteSUnitLocalCorrectionClass",
+    "RationalTraceFiniteLocalHomH1",
+    "RationalArithmeticOriginalCompletionDualDiagram",
+    "RationalTraceOriginalMappedCupSeparation",
+    "RationalTraceOriginalCartierH1Cup",
+    "ArithmeticFiniteSUnitPrincipalInvariant",
+    "RationalTraceCoherentSourceH1",
+    "RationalTraceFiniteCorrectionDirectDualClass",
+    "ArithmeticPrimeUnitHomTowerH1",
+    "ArithmeticSPlaceLocalRelationInvariantTower",
+    "RationalArithmeticOriginalCompletionConnecting",
+    "RationalExceptionalSPlaceLocalRelation",
+    "RationalTraceFiniteCompletionH1Comparison",
+    "RationalTraceFiniteSUnitLocalizationComparison",
+    "ArithmeticFiniteSUnitTowerLocalization",
+    "ArithmeticFiniteSUnitPrincipalConnecting",
+    "RationalTraceOriginalSourceCupSeparation",
+    "RationalExceptionalSPlaceLocalConnecting",
+    "ArithmeticSPlaceDualClassTower",
+    "ArithmeticFiniteCorrectionLocalClass",
+    "RationalTraceFiniteSUnitNormalizedLocalization",
+    "RationalTraceExceptionalSPlaceDualClass",
+    "ArithmeticFiniteTowerCorrectionLocalClass",
+    "RationalTraceNormalizedLocalInjectivity",
+    "RationalTraceExceptionalSPlaceClassRecovery",
+    "RationalTraceFiniteCorrectionDirectLocalClass",
+    "RationalTraceExceptionalRecoveredCorrection",
+    "RationalTraceExceptionalDirectLocalClass",
+    "RationalTraceExceptionalPrescribedRestriction",
+    "RationalTraceExceptionalRecoveredGlobalClass",
+    "RationalTraceExceptionalReverseLocalization",
+    "RationalTraceExceptionalLocalizationExactness",
+    "ArithmeticExceptionalTraceSelmerExactness",
+    "ArithmeticExceptionalTraceLocalConditions",
+    "ArithmeticExceptionalTraceSelmerQuotient",
+    "ArithmeticExceptionalTraceSelmerPrescription",
+    "ArithmeticFiniteCoefficientH1",
+    "ArithmeticTraceGlobalH1Finite",
+    "SelmerAnnihilatorDimension",
+    "ArithmeticExceptionalTraceSelmerDimension",
+    "ArithmeticExceptionalTracePrimeSelmerDimension",
+    "LocalGeometricTraceCondition",
+    "RationalPrimeGeometricTraceCondition",
+    "LocalGeometricTraceFirstOrder",
+    "RationalPrimeGeometricTraceFirstOrder",
+    "ArithmeticGeometricTraceSelmer",
+    "ArithmeticGeometricTraceSelmerDimension",
+    "Reuse.Imperial.Patching.Utils.InverseLimit",
+    "Reuse.Imperial.Patching.Utils.Lemmas",
+    "Reuse.Imperial.Patching.Utils.AdicTopology",
+    "Reuse.Imperial.Patching.Utils.TopologicallyFG",
+    "Reuse.Imperial.Mathlib.Algebra.Module.TransferInstance",
+    "Reuse.Imperial.Patching.Utils.StructureFiniteness",
+    "Reuse.Imperial.Patching.Ultraproduct",
+    "Reuse.Imperial.Mathlib.GroupTheory.Index",
+    "Reuse.Imperial.Mathlib.Topology.Algebra.Group.Basic",
+    "Reuse.Imperial.Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+    "Reuse.Imperial.Deformations.Lemmas",
+    "Reuse.Imperial.Patching.Algebra",
+    "Reuse.Imperial.Patching.Module",
+    "Reuse.Imperial.Patching.Over",
+    "Reuse.Imperial.Patching.Utils.Depth",
+    "Reuse.Imperial.Patching.System",
+    "Reuse.Imperial.Patching.REqualsT",
+    "Reuse.Chebotarev.ForMathlib.LogOneDivSubOne",
+    "Reuse.Chebotarev.NumberFieldEulerProduct",
+    "Reuse.Chebotarev.Density",
+    "Reuse.Chebotarev.Frobenius",
+    "Reuse.Chebotarev.CyclotomicNormResidue",
+    "Reuse.Chebotarev.ForMathlib.CharacterOrthogonality",
+    "Reuse.Chebotarev.ForMathlib.LatticePointCount",
+    "Reuse.Chebotarev.ForMathlib.NormLeOneLipschitz",
+    "Reuse.Chebotarev.ForMathlib.IdealCongruenceCount",
+    "Reuse.Chebotarev.ZetaProduct",
+    "Reuse.Chebotarev.Cyclotomic",
+    "Reuse.Chebotarev.FixedFieldDensity",
+    "Reuse.Chebotarev.Abelian",
+    "Reuse.Chebotarev.Main",
+    "ChebotarevFiniteFactorPrime",
+    "ChebotarevRationalPrime",
+    "ChebotarevRootCongruence",
+    "ContinuousCyclotomicFiniteFactor",
+    "ChebotarevCyclotomicPrimes",
+    "ContinuousCyclotomicFrobeniusPrimes",
+    "ArithmeticCyclotomicAuxiliaryPrimes",
+    "CocycleAffinePermutation",
+    "ContinuousCocycleAffinePermutation",
+    "CocycleAffineH1Detection",
+    "ArithmeticCocycleAuxiliaryPrimes",
+    "OriginalCompletionFrobeniusLift",
+    "RationalArithmeticFrobeniusLift",
+    "ArithmeticCocycleLocalDetection",
+    "CocycleKernelTranslateDetection",
+    "ArithmeticKernelFunctionalPrimes",
+    "TraceCocycleKernelDetection",
+    "ArithmeticCyclotomicRootKernel",
+    "ArithmeticTraceCocycleDetection",
+    "FieldSL2Perfect",
+    "SymmetricResidualRootLifts",
+    "FiniteSymmetricRegularDiagonal",
+    "SymmetricRegularRootElement",
+    "ArithmeticSymmetricRegularPrimes",
+    "ArithmeticSymmetricTraceDetection",
+    "ArithmeticRegularCocycleFrobenius",
+    "ArithmeticSymmetricTraceFrobenius",
+    "FiniteSymmetricMonomialOrbit",
+    "FiniteSymmetricIrreducible",
+    "FiniteSymmetricMatrixIrreducible",
+    "FiniteSymmetricAbsoluteIrreducible",
+    "SymmetricResidualDeformationConsumers",
+    "CocycleCentralScalarKernel",
+    "ResidualGL2CentralScalar",
+    "SymmetricTwistedKernelDetection",
+    "ArithmeticCyclotomicCharacterSurjective",
+    "ArithmeticSymmetricKernelDetection",
+    "MatrixConjugationColumnSpan",
+    "SymmetricProjectorOrbit",
+    "SymmetricProjectorConjugationSpan",
+    "SymmetricProjectorTraceDetection",
+    "SymmetricRegularCommutingTrace",
+    "ArithmeticSymmetricNonzeroClassPrimes",
+    "FiniteDetectingFamily",
+    "ArithmeticSymmetricDetectingFamily",
+    "DistinctDiagonalTraceFixed",
+    "RepresentationConjugateFixedSpace",
+    "SymmetricRegularTraceFixedDimension",
+    "FiniteCyclicH1Dimension",
+    "FiniteCyclicNormZero",
+    "FiniteCyclicInflationDimension",
+    "ContinuousUnramifiedFiniteInflation",
+    "ContinuousUnramifiedDimensionBound",
+    "ContinuousFiniteInflationUnramified",
+    "ContinuousUnramifiedDimension",
+    "AlgebraicLocalIntegerAction",
+    "AlgebraicLocalResidueLift",
+    "AlgebraicLocalInertia",
+    "LocalResidueRootSeparation",
+    "AlgebraicLocalInertiaDepth",
+    "FiniteFieldFrobeniusClosedSubgroup",
+    "AlgebraicLocalResidueGalois",
+    "AlgebraicLocalResidueGaloisContinuity",
+    "AlgebraicLocalInertiaCyclicity",
+    "NormLocalResidueFinite",
+    "AlgebraicLocalUnramifiedDimension",
+    "OriginalUnramifiedFrobeniusGenerator",
+    "OriginalCompletionFrobeniusGenerator",
+    "RationalArithmeticFrobeniusImageGenerator",
+    "CyclicMatrixTraceInvariants",
+    "RationalPrimeUnramifiedDimension",
+    "RationalPrimeSymmetricUnramifiedDimension",
+    "SymmetricRegularConjugateTrace",
+    "ArithmeticConjugateCocycleFrobenius",
+    "ArithmeticSymmetricConjugateClassPrimes",
+    "RationalPrimeUnramifiedTraceClasses",
+    "ArithmeticSymmetricDimensionalPrime",
+    "ArithmeticSymmetricDimensionalFamily",
+    "ArithmeticSymmetricDimensionalSelmer",
+    "LocalIntegralResiduePrime",
+    "LocalIntegralPrimeBelow",
+    "LocalIntegralUnramifiedInertia",
+    "RationalPrimeOriginalNormPrime",
+    "RationalArithmeticFiniteInertiaTrivial",
+    "ContinuousUnramifiedFirstOrder",
+    "ContinuousUnramifiedTraceDeformation",
+    "ContinuousUnramifiedDeformationClasses",
+    "RationalRegularPrimeInertia",
+    "ArithmeticSymmetricDeformationSelmer",
+    "AlgebraicLocalUnramifiedHom",
+    "AlgebraicLocalUnramifiedMatrixLift",
+    "LocalCoefficientFixedDeterminantLifting",
+    "AlgebraicLocalUnramifiedLifting",
+    "RationalPrimeUnramifiedLifting",
+    "TameUniformizerCongruence",
+    "TameInertiaCharacter",
+    "TameFrobeniusRelation",
+    "TameWildOrder",
+    "TameHigherCongruence",
+    "DedekindTameUniformizer",
+    "NumberFieldTameWild",
+    "TameCharacterFrobenius",
+    "NumberFieldTameCharacter",
+    "LocalIntegralPrimeAction",
+    "TameCharacterGenerator",
+    "FiniteTameImage",
+    "AlgebraicLocalFiniteTameGenerator",
+    "RationalPrimeNormResidueCard",
+    "TameFrobeniusOrder",
+    "RationalPrimeFiniteTameGenerator",
+    "TameArtinianMatrixFactor",
+    "RationalPrimeArtinianTameMatrices",
+    "RegularResidueEigenvalueLifting",
+    "RegularResidueAdjugate",
+    "RegularResidueStrictDiagonalization",
+    "TameOffDiagonalPowers",
+    "TameRegularDiagonal",
+    "TameStrictDiagonalization",
+    "RationalPrimePrescribedFrobeniusMatrices",
+    "RationalPrimeTameStrictDiagonalization",
+    "FiniteEmbeddedGaloisKernelOpen",
+    "AlgebraicLocalFiniteInertiaGeneration",
+    "DiagonalCharacterFactorization",
+    "RationalPrimeTameCharacters",
+    "RationalNormFrobeniusClass",
+    "RationalArithmeticNormFrobenius",
+    "ArithmeticTorusAuxiliaryPrime",
+    "ArithmeticSymmetricTorusPrime",
+    "ArithmeticSymmetricTorusFamily",
+    "ArithmeticSymmetricTorusSelmer",
+    "ResidualConjugateBasisLift",
+    "ArithmeticTorusPrimeCharacters",
+    "ArithmeticTorusGlobalLiftCharacters"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

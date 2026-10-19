@@ -7985,6 +7985,11 @@ section
 
 open IsDedekindDomain Matrix MeasureTheory
 
+-- This consumer uses the existing Hilbert inner product. Prefer its canonical
+-- projection locally: the additional C*-module import otherwise searches for
+-- a different structure on this completion before reaching the proved one.
+attribute [local instance 1100] InnerProductSpace.toInner
+
 /-- Exact source consumer of `primitiveLocalInduced_smooth_coefficient`. -/
 theorem actual_induced_coefficient_primitiveLocalInduced_smooth_coefficient_source {N p : ℕ} [NeZero N] [NeZero p]
     [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)

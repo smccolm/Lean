@@ -1,0 +1,174 @@
+{
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "sources": [
+    {
+      "path": "P2M/Sol/S_Matrix_exists_eigenvalues_of_henselianLocalRing.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Matrix_exists_eigenvalues_of_henselianLocalRing.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_Matrix_exists_eigenvalues_of_henselianLocalRing.lean.txt",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "gitBlob": "1531fcb4ffea833e6c580d09964bb0df8df2f275",
+      "bytes": 2536,
+      "sha256": "5C9FB00133F36C6A1EB9CAE16920E5B45C6E17F1F7037A7C771D0D3A8C1B062E",
+      "reviewScope": "full proof body",
+      "disposition": "Research only: rank two; existing native simple-root lifting plus Mathlib adjugates proves the arbitrary-rank strict basis without a new external Henselian dependency."
+    },
+    {
+      "path": "P2M/Sol/S_Matrix_apply_eq_zero_of_diagonal_mul_eq_pow_mul_diagonal_of_sub_one_mem.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Matrix_apply_eq_zero_of_diagonal_mul_eq_pow_mul_diagonal_of_sub_one_mem.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_Matrix_apply_eq_zero_of_diagonal_mul_eq_pow_mul_diagonal_of_sub_one_mem.lean.txt",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "gitBlob": "e3dc73c97c5a57114830b935312310ae85ca9b70",
+      "bytes": 5930,
+      "sha256": "7C6B01F23E69C06DE4EF0FA29D8DC49B0F59714661A1C826CCFE51A40DF399CF",
+      "reviewScope": "full proof body",
+      "disposition": "Adapted ideal-power off-diagonal argument to arbitrary rank in TameOffDiagonalPowers and TameRegularDiagonal; original native matrix-ideal operations reused. No proof limits or linter settings changed."
+    },
+    {
+      "path": "Definitions/Def_Deformations_TameDescent.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_Deformations_TameDescent.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__Def_Deformations_TameDescent.lean.txt",
+      "gitBlob": "5a9453c38cb8673995914c1eb47fe9348314dd54",
+      "sha256": "4D5C47F4896D02C1466828964232C41D3710E15C45A7A4914E75580C13FE2574",
+      "bytes": 441,
+      "reviewScope": "Full definition/proof body",
+      "disposition": "Research only: generic descent through a supplied surjection and killed kernel. Native quotient homomorphisms and the proved residual-kernel p-group argument already provide these operations. This is not construction of the actual Delta_Q quotient."
+    },
+    {
+      "path": "P2M/Sol/S_TaylorWiles_tameDescentChar_comp_eq.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_TaylorWiles_tameDescentChar_comp_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_TaylorWiles_tameDescentChar_comp_eq.lean.txt",
+      "gitBlob": "9eccfc58dba01826d8d5d0fa0dcc1427be046508",
+      "sha256": "747051036E9BFEB020546A5AD9301D840AB4068EC844BDF0BB8F90CDC0543F6B",
+      "bytes": 877,
+      "reviewScope": "Full definition/proof body",
+      "disposition": "Research only: generic descent through a supplied surjection and killed kernel. Native quotient homomorphisms and the proved residual-kernel p-group argument already provide these operations. This is not construction of the actual Delta_Q quotient."
+    },
+    {
+      "path": "P2M/Sol/S_MonoidHom_exists_eq_comp_of_forall_val_sub_one_mem_maximalIdeal_of_coprime_card_ker.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_MonoidHom_exists_eq_comp_of_forall_val_sub_one_mem_maximalIdeal_of_coprime_card_ker.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_MonoidHom_exists_eq_comp_of_forall_val_sub_one_mem_maximalIdeal_of_coprime_card_ker.lean.txt",
+      "gitBlob": "06df6079086d4d112beec60d313ef59845553dee",
+      "sha256": "964FBFE1D08DC9FF8146988BCF5F26778D1D5CE5E954D02604CE8378DDF500DA",
+      "bytes": 1838,
+      "reviewScope": "Full definition/proof body",
+      "disposition": "Research only: generic descent through a supplied surjection and killed kernel. Native quotient homomorphisms and the proved residual-kernel p-group argument already provide these operations. This is not construction of the actual Delta_Q quotient."
+    },
+    {
+      "path": "P2M/Sol/S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean.txt",
+      "gitBlob": "c291b33117c90308ec6e92c85e64d706fc087c5c",
+      "sha256": "F7681C9388F07C1CB3631D4EEB48EE0A94A07F30AA24293FF55A299267D7A2DE",
+      "bytes": 49517,
+      "reviewScope": "Imports, final public statement/wrapper, and main proof lines 122-293. Earlier coefficient-ring helpers and transitive imports not audited.",
+      "disposition": "Research only: actual weight-two Gamma1 eigenform Galois representation with a supplied coefficient embedding and finite coefficient extension. Its main body uses modular-Jacobian Tate modules, Hecke/diamond realization and a 16000000-heartbeat setting. It does not cover every even weight required by Dubon, and no unchanged-pin transitive audit has been performed. No proof imported or limits changed."
+    }
+  ],
+  "adaptedModules": [
+    "Dubon2026.TameOffDiagonalPowers",
+    "Dubon2026.TameRegularDiagonal"
+  ],
+  "modules": [
+    "Dubon2026.RegularResidueEigenvalueLifting",
+    "Dubon2026.RegularResidueAdjugate",
+    "Dubon2026.RegularResidueStrictDiagonalization",
+    "Dubon2026.TameOffDiagonalPowers",
+    "Dubon2026.TameRegularDiagonal",
+    "Dubon2026.TameStrictDiagonalization",
+    "Dubon2026.RationalPrimePrescribedFrobeniusMatrices",
+    "Dubon2026.RationalPrimeTameStrictDiagonalization",
+    "Dubon2026.FiniteEmbeddedGaloisKernelOpen",
+    "Dubon2026.AlgebraicLocalFiniteInertiaGeneration",
+    "Dubon2026.DiagonalCharacterFactorization",
+    "Dubon2026.RationalPrimeTameCharacters",
+    "Dubon2026.RationalNormFrobeniusClass",
+    "Dubon2026.RationalArithmeticNormFrobenius",
+    "Dubon2026.ArithmeticTorusAuxiliaryPrime",
+    "Dubon2026.ArithmeticSymmetricTorusPrime",
+    "Dubon2026.ArithmeticSymmetricTorusFamily",
+    "Dubon2026.ArithmeticSymmetricTorusSelmer",
+    "Dubon2026.ResidualConjugateBasisLift",
+    "Dubon2026.ArithmeticTorusPrimeCharacters",
+    "Dubon2026.ArithmeticTorusGlobalLiftCharacters"
+  ],
+  "consumers": [
+    "Dubon2026.rationalArithmetic_symmetric_torus_auxiliary_dualSelmer_eq_bot",
+    "Dubon2026.rationalArithmetic_torus_prime_character_decomposition",
+    "Dubon2026.rationalArithmetic_torus_global_lift_characters"
+  ],
+  "nativeReuse": [
+    "adicComplete_lift_separable_residue_root",
+    "Matrix.adjugate_diagonal",
+    "Matrix.mul_adjugate",
+    "matrixIdeal_mul_right_mem",
+    "Mathlib IsArtinianRing -> IsAdicComplete instance",
+    "algebraicLocal_frobenius_generates_inertia_quotient",
+    "rationalArithmetic_symmetric_nonzero_class_conjugate_primes",
+    "generalLinearGroup_map_surjective",
+    "rationalArithmetic_regular_auxiliary_inertia",
+    "continuous_galois_finite_factor"
+  ],
+  "discharged": [
+    "In arbitrary rank, native simple-root lifting and Mathlib adjugates construct a strict Frobenius basis; the adapted ideal-power argument makes actual tame inertia diagonal.",
+    "The original embedding square gives an open finite restriction kernel; native residue Frobenius generation then decomposes the whole actual finite local representation into unit-valued characters, with cyclic inertia and coordinate equations b^p=b.",
+    "The native selected-prime construction retains its explicit split torus witness through the dimension-bounded family killing the original dual Selmer group. An actual original norm-residue Frobenius has that same finite conjugacy class.",
+    "At these selected primes the local consumer derives residual inertia triviality, the residue characteristic, p different from q, p=1 in the residue field, distinct weights, and the coefficient eigenbasis.",
+    "For an actual continuous global Artinian deformation into discrete coefficients, the existing finite Galois factorization constructs the finite number field, local restriction and commuting embedding square. The resulting character theorem applies to the whole original local restriction, allowing an enlarged ramification set."
+  ],
+  "boundary": "Actual modular residual representation, prime-field coefficient realization and the SL2 image required by prime selection remain open. The global character consumer assumes the actual continuous Artinian deformation and its literal local reduction compatibility; it does not assume a finite factor, inertia triviality or a diagonal Frobenius basis. Complete local-ring realization with Delta_Q action and quotient comparison, crystalline conditions, arithmetic Hecke comparison, automorphy and higher continuation remain open. No source gate closes: 16/20 gates, DUB-17-20 open.",
+  "researchResolution": "The earlier review boundary about a missing selected split witness is discharged by retaining the native conjugacy, proving original residue-Frobenius compatibility and lifting its actual residual basis. The frozen earlier review is historical, not the current boundary.",
+  "directModularFollowup": {
+    "date": "2026-10-18 America/Vancouver",
+    "dependency": "DUB-17 Theorem 2.6: direct higher-weight Galois realization or Sato-Tate replacement for the remaining arithmetic chain",
+    "queries": [
+      "\"Sato Tate\" \"Lean\" formalization github",
+      "\"Deligne\" \"Lean\" \"Galois\" modular forms formalization",
+      "site:github.com \"lean\" \"symmetric power\" \"automorphy\"",
+      "SatoTate in anthropics/fermats-last-theorem",
+      "SatoTate in leanprover-community/mathlib4",
+      "galoisRepAdic weight in anthropics/fermats-last-theorem"
+    ],
+    "sources": [
+      {
+        "name": "Theorem21",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\direct-modular-review\\Theorem21.lean.txt",
+        "url": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Theorem21.lean",
+        "reviewScope": "Entire displayed proof body; transitive import closure not audited.",
+        "sha256": "70D5DA85BC65CCDC8B770DB86DF1D61FF46CC9354BFF09285E2613D15E612285"
+      },
+      {
+        "name": "Theorem31",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\direct-modular-review\\Theorem31.lean.txt",
+        "url": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Theorem31.lean",
+        "reviewScope": "Entire displayed proof body; transitive import closure not audited.",
+        "sha256": "02483C5E1ACB15FA6C91C4C55FF19A6F9E4025F2AFEAC6EE69CCCA829D3B3391"
+      },
+      {
+        "name": "Theorem41",
+        "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\direct-modular-review\\Theorem41.lean.txt",
+        "url": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Theorem41.lean",
+        "reviewScope": "Entire displayed proof body; transitive import closure not audited.",
+        "sha256": "97CF956F7499C68AE5CB24C92B33658D3296073FC9F4765E00A537AAEFD0787A"
+      }
+    ],
+    "additionalPrimaryPages": [
+      {
+        "url": "https://anr-false.github.io/",
+        "scope": "Project landing page read; states a research programme toward the modular-form Galois representation and p-adic prerequisites; no proof package accepted from this page."
+      },
+      {
+        "url": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/README.md",
+        "scope": "Full scope README; explicitly leaves Galois realization and purity abstract."
+      }
+    ],
+    "assessment": "Theorem21 assumes both eigenvalue norm equalities and the trace identity. Theorem41 returns the supplied norm equalities. Theorem31 assumes the characteristic polynomial and extracts trace/determinant. None discharges the missing modular realization or purity, and native Dubon proofs already cover the corresponding elementary deductions. Do not import these as proofs of the source arithmetic inputs. Exact-token SatoTate searches returned no matches in the two queried repositories; this is not an exhaustive absence result.",
+    "productionImported": false,
+    "absenceClaim": false
+  },
+  "upstreamPackageImported": false,
+  "proofLimitsChanged": false,
+  "license": "LICENSE",
+  "notice": "NOTICE",
+  "attribution": "ATTRIBUTION.txt",
+  "scope": "The rank-two off-diagonal ideal-power argument is adapted to arbitrary rank. Native simple-root lifting, adjugates, finite Galois factorization and the retained split torus witness replace further external foundations. Other reviewed results remain research only."
+}
