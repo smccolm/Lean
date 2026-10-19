@@ -18406,6 +18406,842 @@
     {
       "path": "Dependencies/AnthropicFLTReuse/regular-tame-reuse.json",
       "role": "Dependencies"
+    },
+    {
+      "path": "Extension/Dubon2026/RegularResidueStrictIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DiagonalCharacterStrictUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTameUniqueCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameCharacterInertiaExponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalInertiaRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldGaloisNormOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalFieldNormUniformizerResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormLocalTotalInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameCyclicQuotientKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameCyclicCharacterDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeCyclotomicFiniteFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeArtinianCyclotomicDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGaloisFiniteFactorContaining.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TameDiagonalMatrixExponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusCyclotomicDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeTameCoefficientQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArtinianCyclotomicPrimaryDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusPrimaryDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusPrimaryCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusAdicPrimaryDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusAdicCommutativity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RegularResidueCommutingCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusAdicCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusAdicPrimaryCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryCharacterGroupAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryCharacterAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InertiaCharacterAugmentationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusAugmentationComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalTorusAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedDeterminantCharacterParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InertiaFixedDeterminantParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusFixedAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalFixedTorusAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/AnthropicFLTReuse/tame-augmentation-reuse.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFamilyGroupAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFamilyAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAuxiliaryFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticOutsideInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalSupportAuxiliaryFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NormalEmbeddingRestrictionConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportLocalConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixRelationIdealConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticTorusConjugateFixedAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalConjugateTorusAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalConjugateAuxiliaryFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousGaloisFaithfulFiniteFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AlgebraicLocalDenseInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalInertiaNormCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGeneratedLocalInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGeneratedLocalAutomorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalGeneratedLocalInertiaLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalArithmeticFiniteInertiaLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldUnramifiedOfTrivialInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFaithfulFactorUnramified.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticAuxiliarySupportRamification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalSupportRamificationTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFiniteOriginalSupportEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalSupportKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalSupportDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalSupportFramedFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixFamilyRelationQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticAuxiliaryInertiaRelationIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/original-support-descent.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/lean-reuse-audit-20261019.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticAuxiliaryQuotientFramedFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAuxiliaryQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFamilyAugmentationSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAugmentationQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalAlgebraicCoefficientFiber.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFixedDeterminantAlgebraicFiber.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FramedCoefficientClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFixedDeterminantSupportClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidueMatrixCoefficientEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FramedCoefficientMatrixRigidity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FramedCoefficientRingEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FramedCoefficientRingCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FramedCoefficientClassificationRingEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidueMatrixRingComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FramedCoefficientUniversalRingComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFixedDeterminantRepresentingComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAuxiliaryLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAuxiliaryUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAuxiliaryRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalAuxiliaryEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOriginalSupportFramedEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportAlgebraicClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportRingComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFamilyAugmentationRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticAuxiliaryAugmentationRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalCoefficientEquivContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFixedDeterminantCoefficientTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportRepresentationLocalConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/original-support-quotient.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalQuotientAlgEquivContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalOriginalSupportTopologicalAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSelectedSupportFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSelectedSupportAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFamilyCyclicParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeAuxiliaryCyclicParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryCharacterParameterConvergence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFamilyPowerSeriesParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompleteLocalAuxiliaryPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryPowerSeriesParameterData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryPowerSeriesAugmentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalSupportPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ExactFiniteDetectingFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricExactTorusFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSymmetricExactTorusSelmer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExactSelectedSupportFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryPowerSeriesFixedParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFixedPowerSeriesComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalFixedPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePowerSeriesVariableIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PowerSeriesAugmentationScalarComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFixedPowerSeriesPatchingRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalPatchingRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExactSelectedPatchingRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/fixed-patching-parameters.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePowerSeriesPatchingTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PowerSeriesLocalParameterMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFixedParameterContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalQuotientGeneratorBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalQuotientCardinalityBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryPatchingRingCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryBoundedTopologicalPatchingRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticUniversalBoundedPatchingRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticExactSelectedBoundedPatchingRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportRingFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportUniformRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSelectedUniformRingFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalQuotientUniformRankDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportFamilyLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportQuotientUniformRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/uniform-arithmetic-patching.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/ScalarPrimePowerCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclicParameterFiniteQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeParameterQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryFiniteParameterQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePrimaryGroupAlgebraLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePrimaryGroupAlgebraComplete.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompleteLocalSpecifiedPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePrimaryGroupAlgebraPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ContinuousPowerSeriesHomExt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryGroupAlgebraPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryParameterKernelBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryConvergingParameterAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryComparisonConvergingAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryParameterActionFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticFixedDeterminantConvergingAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticConvergingParameterAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSelectedConvergingParameterAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FreeAuxiliaryModuleAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FreeSurjectiveCoefficientRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryParameterSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportFreePatchingSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticSupportFreeQuotientModules.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/converging-auxiliary-actions.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/automorphic-module-source-review-20261019.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedContragredient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedSwitch.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedGaloisGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedGaloisGroupLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCoefficientMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedBlockMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedBlockRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedBlockFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedBlockNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedBlockEquations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTargetEquations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedRepresentationFromEquations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedRelationMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedRelationNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedRepresentationIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedResidualIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedQuotientRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedLocalCoefficientQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedLocalCoefficientRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedRepresentationMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedRepresentationCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedResidualComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedPointTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedBlockContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedFramedMatrixFiber.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedFramedFiberEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedAlgebraCoefficientCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedQuotientUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FixedResidualPolarizedNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OpenSubgroupCharacterFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ArithmeticOpenResidualPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseArithmeticResidualPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBasePolarizedPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBasePolarizedCoefficientRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBasePolarizedRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBasePolarizedUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/finite-base-polarized-deformation.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -22791,7 +23627,207 @@
     "ArithmeticSymmetricTorusSelmer",
     "ResidualConjugateBasisLift",
     "ArithmeticTorusPrimeCharacters",
-    "ArithmeticTorusGlobalLiftCharacters"
+    "ArithmeticTorusGlobalLiftCharacters",
+    "RegularResidueStrictIntertwiner",
+    "DiagonalCharacterStrictUniqueness",
+    "RationalPrimeTameUniqueCharacters",
+    "TameCharacterInertiaExponent",
+    "AlgebraicLocalInertiaRestriction",
+    "LocalFieldGaloisNormOrder",
+    "LocalFieldNormUniformizerResidue",
+    "NormLocalTotalInertia",
+    "RationalPrimeCyclotomicInertia",
+    "TameCyclicQuotientKernel",
+    "TameCyclicCharacterDescent",
+    "RationalPrimeCyclotomicFiniteFactor",
+    "RationalPrimeArtinianCyclotomicDescent",
+    "ContinuousGaloisFiniteFactorContaining",
+    "TameDiagonalMatrixExponent",
+    "ArithmeticTorusCyclotomicDescent",
+    "RationalPrimeTameCoefficientQuotient",
+    "ArtinianCyclotomicPrimaryDescent",
+    "ArithmeticTorusPrimaryDescent",
+    "ArithmeticTorusPrimaryCharacters",
+    "ArithmeticTorusAdicPrimaryDescent",
+    "ArithmeticTorusAdicCommutativity",
+    "RegularResidueCommutingCharacters",
+    "ArithmeticTorusAdicCharacters",
+    "ArithmeticTorusAdicPrimaryCharacters",
+    "AuxiliaryCharacterGroupAlgebra",
+    "AuxiliaryCharacterAugmentation",
+    "InertiaCharacterAugmentationComparison",
+    "ArithmeticTorusAugmentationComparison",
+    "ArithmeticUniversalTorusAugmentation",
+    "FixedDeterminantCharacterParameters",
+    "InertiaFixedDeterminantParameters",
+    "ArithmeticTorusFixedAugmentation",
+    "ArithmeticUniversalFixedTorusAugmentation",
+    "AuxiliaryFamilyGroupAlgebra",
+    "AuxiliaryFamilyAugmentation",
+    "ArithmeticUniversalAuxiliaryFamily",
+    "RationalArithmeticOutsideInertia",
+    "ArithmeticSupportRestriction",
+    "ArithmeticSupportInertia",
+    "ArithmeticUniversalSupportAuxiliaryFamily",
+    "NormalEmbeddingRestrictionConjugacy",
+    "ArithmeticSupportLocalConjugacy",
+    "MatrixRelationIdealConjugacy",
+    "ArithmeticTorusConjugateFixedAugmentation",
+    "ArithmeticUniversalConjugateTorusAugmentation",
+    "ArithmeticUniversalConjugateAuxiliaryFamily",
+    "ArithmeticUniversalOriginalSupportFamily",
+    "ContinuousGaloisFaithfulFiniteFactor",
+    "AlgebraicLocalDenseInertia",
+    "OriginalInertiaNormCompletion",
+    "OriginalGeneratedLocalInertia",
+    "OriginalGeneratedLocalAutomorphism",
+    "OriginalGeneratedLocalInertiaLift",
+    "RationalArithmeticFiniteInertiaLift",
+    "NumberFieldUnramifiedOfTrivialInertia",
+    "ArithmeticFaithfulFactorUnramified",
+    "ArithmeticAuxiliarySupportRamification",
+    "OriginalSupportRamificationTransport",
+    "ArithmeticFiniteOriginalSupportEmbedding",
+    "ArithmeticOriginalSupportKernel",
+    "ArithmeticOriginalSupportDescent",
+    "ArithmeticOriginalSupportFramedFibers",
+    "MatrixFamilyRelationQuotient",
+    "ArithmeticAuxiliaryInertiaRelationIdeal",
+    "ArithmeticAuxiliaryQuotientFramedFibers",
+    "ArithmeticUniversalAuxiliaryQuotient",
+    "AuxiliaryFamilyAugmentationSpecialization",
+    "ArithmeticUniversalAugmentationQuotient",
+    "OriginalAlgebraicCoefficientFiber",
+    "ArithmeticFixedDeterminantAlgebraicFiber",
+    "FramedCoefficientClassification",
+    "ArithmeticFixedDeterminantSupportClassification",
+    "ResidueMatrixCoefficientEquiv",
+    "FramedCoefficientMatrixRigidity",
+    "FramedCoefficientRingEquiv",
+    "FramedCoefficientRingCompatibility",
+    "FramedCoefficientClassificationRingEquiv",
+    "ResidueMatrixRingComparison",
+    "FramedCoefficientUniversalRingComparison",
+    "ArithmeticFixedDeterminantRepresentingComparison",
+    "ArithmeticUniversalAuxiliaryLocalData",
+    "ArithmeticUniversalAuxiliaryUniversality",
+    "ArithmeticUniversalAuxiliaryRepresentation",
+    "ArithmeticUniversalAuxiliaryEvaluation",
+    "ArithmeticOriginalSupportFramedEvaluation",
+    "ArithmeticUniversalOriginalSupportAlgebraicClassification",
+    "ArithmeticUniversalOriginalSupportRingComparison",
+    "AuxiliaryFamilyAugmentationRepresentation",
+    "ArithmeticAuxiliaryAugmentationRepresentation",
+    "ArithmeticUniversalOriginalSupportAugmentation",
+    "OriginalCoefficientEquivContinuity",
+    "ArithmeticFixedDeterminantCoefficientTopology",
+    "ArithmeticUniversalOriginalSupportTopology",
+    "ArithmeticSupportRepresentationLocalConjugacy",
+    "ArithmeticUniversalOriginalSupportLocal",
+    "LocalQuotientAlgEquivContinuity",
+    "ArithmeticUniversalOriginalSupportTopologicalAugmentation",
+    "ArithmeticSelectedSupportFamily",
+    "ArithmeticSelectedSupportAugmentation",
+    "AuxiliaryFamilyCyclicParameters",
+    "RationalPrimeAuxiliaryCyclicParameters",
+    "AuxiliaryCharacterParameterConvergence",
+    "AuxiliaryFamilyPowerSeriesParameters",
+    "CompleteLocalAuxiliaryPowerSeries",
+    "AuxiliaryPowerSeriesParameterData",
+    "AuxiliaryPowerSeriesAugmentation",
+    "ArithmeticUniversalSupportPowerSeries",
+    "ExactFiniteDetectingFamily",
+    "ArithmeticSymmetricExactTorusFamily",
+    "ArithmeticSymmetricExactTorusSelmer",
+    "ArithmeticExactSelectedSupportFamily",
+    "AuxiliaryPowerSeriesFixedParameters",
+    "AuxiliaryFixedPowerSeriesComparison",
+    "ArithmeticUniversalFixedPowerSeries",
+    "FinitePowerSeriesVariableIdeal",
+    "PowerSeriesAugmentationScalarComparison",
+    "AuxiliaryFixedPowerSeriesPatchingRing",
+    "ArithmeticUniversalPatchingRing",
+    "ArithmeticExactSelectedPatchingRing",
+    "FinitePowerSeriesPatchingTopology",
+    "PowerSeriesLocalParameterMap",
+    "AuxiliaryFixedParameterContinuity",
+    "LocalQuotientGeneratorBound",
+    "LocalQuotientCardinalityBound",
+    "AuxiliaryPatchingRingCardinality",
+    "AuxiliaryBoundedTopologicalPatchingRing",
+    "ArithmeticUniversalBoundedPatchingRing",
+    "ArithmeticExactSelectedBoundedPatchingRing",
+    "ArithmeticSupportRingFamily",
+    "ArithmeticSupportUniformRank",
+    "ArithmeticSelectedUniformRingFamily",
+    "LocalQuotientUniformRankDescent",
+    "ArithmeticSupportFamilyLocalData",
+    "ArithmeticSupportQuotientUniformRank",
+    "ScalarPrimePowerCongruence",
+    "CyclicParameterFiniteQuotient",
+    "RationalPrimeParameterQuotient",
+    "AuxiliaryFiniteParameterQuotient",
+    "FinitePrimaryGroupAlgebraLocal",
+    "FinitePrimaryGroupAlgebraComplete",
+    "CompleteLocalSpecifiedPowerSeries",
+    "FinitePrimaryGroupAlgebraPowerSeries",
+    "ContinuousPowerSeriesHomExt",
+    "AuxiliaryGroupAlgebraPowerSeries",
+    "AuxiliaryParameterKernelBound",
+    "AuxiliaryConvergingParameterAction",
+    "AuxiliaryComparisonConvergingAction",
+    "AuxiliaryParameterActionFactorization",
+    "ArithmeticFixedDeterminantConvergingAction",
+    "ArithmeticConvergingParameterAction",
+    "ArithmeticSelectedConvergingParameterAction",
+    "FreeAuxiliaryModuleAnnihilator",
+    "FreeSurjectiveCoefficientRestriction",
+    "AuxiliaryParameterSurjectivity",
+    "ArithmeticSupportFreePatchingSystem",
+    "ArithmeticSupportFreeQuotientModules",
+    "PolarizedContragredient",
+    "PolarizedSwitch",
+    "PolarizedGaloisGroup",
+    "PolarizedGaloisGroupLaws",
+    "PolarizedCoefficientMap",
+    "PolarizedBlockMatrices",
+    "PolarizedBlockRepresentation",
+    "PolarizedBlockFaithfulness",
+    "PolarizedBlockNaturality",
+    "PolarizedBlockEquations",
+    "PolarizedTargetEquations",
+    "PolarizedRepresentationFromEquations",
+    "PolarizedRelationMatrix",
+    "PolarizedRelationNaturality",
+    "PolarizedRepresentationIdeal",
+    "PolarizedResidualIdeal",
+    "PolarizedQuotientRepresentation",
+    "PolarizedLocalCoefficientQuotient",
+    "PolarizedLocalCoefficientRepresentation",
+    "FixedResidualPolarizedQuotient",
+    "FixedResidualPolarizedLocalData",
+    "FixedResidualPolarizedRepresentation",
+    "FixedResidualPolarizedRepresentationMatrices",
+    "FixedResidualPolarizedRepresentationCharacters",
+    "PolarizedResidualComparison",
+    "FixedResidualPolarizedResidue",
+    "PolarizedPointTopology",
+    "PolarizedBlockContinuity",
+    "FixedResidualPolarizedContinuity",
+    "PolarizedFramedMatrixFiber",
+    "PolarizedFramedFiberEquivalence",
+    "PolarizedAlgebraCoefficientCriterion",
+    "PolarizedQuotientUniversality",
+    "FixedResidualPolarizedUniversality",
+    "FixedResidualPolarizedEvaluation",
+    "FixedResidualPolarizedNaturality",
+    "OpenSubgroupCharacterFiniteness",
+    "ArithmeticOpenResidualPresentation",
+    "FiniteBaseArithmeticResidualPresentation",
+    "FiniteBasePolarizedPresentation",
+    "FiniteBasePolarizedCoefficientRing",
+    "FiniteBasePolarizedRepresentation",
+    "FiniteBasePolarizedUniversality"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

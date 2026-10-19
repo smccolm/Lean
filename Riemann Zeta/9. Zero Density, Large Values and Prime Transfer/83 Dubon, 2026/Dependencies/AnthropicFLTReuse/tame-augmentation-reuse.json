@@ -1,0 +1,172 @@
+{
+  "externalCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "externalSources": [
+    {
+      "path": "P2M/Sol/S_ValuationSubring_exists_inertiaCharacter_eq_comp_of_forall_cyclotomic_eq_one.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_exists_inertiaCharacter_eq_comp_of_forall_cyclotomic_eq_one.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_exists_inertiaCharacter_eq_comp_of_forall_cyclotomic_eq_one.lean.txt",
+      "gitBlob": "d9e82db2fd66e88f7b33d422fb5f28924faee31d",
+      "gitBlobVerified": true,
+      "bytes": 4766,
+      "sha256": "FB8FECB3179BCDC93EEC0FF71055E805B94611F010952F3A357F5584BF99689E",
+      "reviewScope": "Full displayed proof body; transitive dependencies not audited. Requires the cyclotomic-kernel condition and surjective prime-power projection."
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRepAdic_exists_inertiaCharacter_of_detIsCyclotomic_of_regular.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_GaloisRepAdic_exists_inertiaCharacter_of_detIsCyclotomic_of_regular.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_GaloisRepAdic_exists_inertiaCharacter_of_detIsCyclotomic_of_regular.lean.txt",
+      "gitBlob": "d3ed4831350c91561ee2b9c78f91a119979cfb61",
+      "gitBlobVerified": true,
+      "bytes": 17195,
+      "sha256": "3CD63AC1AF0FE4B3E5ABB755A5B996501072392325B398AEAE34C84CDC012359",
+      "reviewScope": "Full displayed main proof body; transitive dependencies not audited. Rank two and cyclotomic determinant; source sets maxHeartbeats to zero. Research only; no limit setting or proof imported."
+    },
+    {
+      "path": "P2M/Sol/S_ValuationSubring_inertiaCharacter_eq_one_of_cyclotomic_eq_one.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_inertiaCharacter_eq_one_of_cyclotomic_eq_one.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_inertiaCharacter_eq_one_of_cyclotomic_eq_one.lean.txt",
+      "gitBlob": "dcd5c762bf66b61104da9c12bc84aa557ac23949",
+      "gitBlobVerified": true,
+      "bytes": 2188,
+      "sha256": "55783E77C5810DE7B1EF1A6DC15DB13CD9B33703C77CF5599125BB928D58B0BD",
+      "reviewScope": "Full displayed proof body; two Kummer-root dependencies not reviewed. Research only."
+    },
+    {
+      "path": "P2M/Sol/S_ValuationSubring_exists_mem_inertiaSubgroupIn_apply_eq_pow.lean",
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_exists_mem_inertiaSubgroupIn_apply_eq_pow.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_exists_mem_inertiaSubgroupIn_apply_eq_pow.lean.txt",
+      "gitBlob": "394ae95ec48cc4d879df49e06a7b8ff8493d6bc9",
+      "gitBlobVerified": true,
+      "bytes": 55308,
+      "sha256": "E7CE0E647BF5E493E07D79489BBFD6A852E203636AB60AE76751280A65FD0B9B",
+      "reviewScope": "Imports, Lift section lines 483-713, Cyclotomic section and final wrapper reviewed. Remaining 1050-line file not fully reviewed. Native complete-local norm invariance and residue-automorphism lifting replace its global valuation dictionary."
+    }
+  ],
+  "externalReview": {
+    "recordedUTC": "2026-10-19T04:26:19.544460+00:00",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "treeTruncated": true,
+    "absenceClaim": false,
+    "sources": [
+      {
+        "path": "P2M/Sol/S_ValuationSubring_exists_inertiaCharacter_eq_comp_of_forall_cyclotomic_eq_one.lean",
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_exists_inertiaCharacter_eq_comp_of_forall_cyclotomic_eq_one.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_exists_inertiaCharacter_eq_comp_of_forall_cyclotomic_eq_one.lean.txt",
+        "gitBlob": "d9e82db2fd66e88f7b33d422fb5f28924faee31d",
+        "gitBlobVerified": true,
+        "bytes": 4766,
+        "sha256": "FB8FECB3179BCDC93EEC0FF71055E805B94611F010952F3A357F5584BF99689E",
+        "reviewScope": "Full displayed proof body; transitive dependencies not audited. Requires the cyclotomic-kernel condition and surjective prime-power projection."
+      },
+      {
+        "path": "P2M/Sol/S_GaloisRepAdic_exists_inertiaCharacter_of_detIsCyclotomic_of_regular.lean",
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_GaloisRepAdic_exists_inertiaCharacter_of_detIsCyclotomic_of_regular.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_GaloisRepAdic_exists_inertiaCharacter_of_detIsCyclotomic_of_regular.lean.txt",
+        "gitBlob": "d3ed4831350c91561ee2b9c78f91a119979cfb61",
+        "gitBlobVerified": true,
+        "bytes": 17195,
+        "sha256": "3CD63AC1AF0FE4B3E5ABB755A5B996501072392325B398AEAE34C84CDC012359",
+        "reviewScope": "Full displayed main proof body; transitive dependencies not audited. Rank two and cyclotomic determinant; source sets maxHeartbeats to zero. Research only; no limit setting or proof imported."
+      },
+      {
+        "path": "P2M/Sol/S_ValuationSubring_inertiaCharacter_eq_one_of_cyclotomic_eq_one.lean",
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_inertiaCharacter_eq_one_of_cyclotomic_eq_one.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_inertiaCharacter_eq_one_of_cyclotomic_eq_one.lean.txt",
+        "gitBlob": "dcd5c762bf66b61104da9c12bc84aa557ac23949",
+        "gitBlobVerified": true,
+        "bytes": 2188,
+        "sha256": "55783E77C5810DE7B1EF1A6DC15DB13CD9B33703C77CF5599125BB928D58B0BD",
+        "reviewScope": "Full displayed proof body; two Kummer-root dependencies not reviewed. Research only."
+      },
+      {
+        "path": "P2M/Sol/S_ValuationSubring_exists_mem_inertiaSubgroupIn_apply_eq_pow.lean",
+        "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_exists_mem_inertiaSubgroupIn_apply_eq_pow.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_exists_mem_inertiaSubgroupIn_apply_eq_pow.lean.txt",
+        "gitBlob": "394ae95ec48cc4d879df49e06a7b8ff8493d6bc9",
+        "gitBlobVerified": true,
+        "bytes": 55308,
+        "sha256": "E7CE0E647BF5E493E07D79489BBFD6A852E203636AB60AE76751280A65FD0B9B",
+        "reviewScope": "Imports, Lift section lines 483-713, Cyclotomic section and final wrapper reviewed. Remaining 1050-line file not fully reviewed. Native complete-local norm invariance and residue-automorphism lifting replace its global valuation dictionary."
+      }
+    ],
+    "dependency": "DUB-17 Theorem 2.6 <- higher continuation <- arithmetic automorphy/patching <- actual local deformation ring with Delta_Q action <- cyclotomic tame-character descent <- actual inertia restriction and cyclotomic surjectivity",
+    "route": "Reuse native original norm inertia and algebraicLocal_residueAut_exists_lift to lift inertia through a complete-local tower. The proved whole local character decomposition supplies cyclic image and exponent p-1. The actual cyclotomic tame quotient, its surjectivity, character kernel descent and local-ring comparison remain required.",
+    "currentNativeProof": "AlgebraicLocalInertiaRestriction.lean compiles at unchanged default limits; assembled audit pending.",
+    "productionImported": false,
+    "proofLimitsChanged": false
+  },
+  "adaptedModules": [
+    "Dubon2026.AlgebraicLocalInertiaRestriction"
+  ],
+  "nativeReuse": [
+    "Dubon2026.algebraicLocal_residueAut_exists_lift",
+    "Dubon2026.rationalPrimePowerCyclotomic_irreducible",
+    "IsPrimitiveRoot.norm_sub_one_of_prime_ne_two'",
+    "Dubon2026.rationalArithmetic_torus_global_lift_characters",
+    "Dubon2026.artinian_residual_unramified_kills_wild",
+    "Dubon2026.localQuotientResidueAlgEquiv_residue",
+    "IsHausdorff.eq_iff_smodEq",
+    "Dubon2026.adicMatrixReductionProduct_injective",
+    "Dubon2026.regularResidue_strict_diagonalization",
+    "Dubon2026.matrixRepresentationRelationIdeal_le_kernel_iff",
+    "Dubon2026.arithmeticFixedDeterminantRing_localData",
+    "Dubon2026.arithmeticFixedDeterminantRepresentation_residue",
+    "Dubon2026.arithmeticFixedDeterminantRepresentation_det"
+  ],
+  "discharged": [
+    "Strict residue-one conjugacy uniquely identifies every labelled diagonal character.",
+    "Original complete-local inertia restriction is surjective. The original Galois norm order, native cyclotomic irreducibility and N(zeta-1)=p prove surjectivity of the actual prime cyclotomic character on the same original norm inertia.",
+    "Finite tame generation, the common killed wild subgroup and the inertia exponent now prove the cyclotomic kernel inclusion. Continuous finite factorization is enlarged to contain the original primitive root, so no finite factor, root, inertia exponent or cyclotomic-kernel certificate is supplied to the global consumer.",
+    "The fixed quotient Delta_(p,q) is the actual quotient of (Z/pZ) units by the image of the q-primary power map. Its order is q^v_q(p-1), and q^level divides it at the selected prime. Prime-to-q residual torsion is killed, giving the unique actual inertia action through this fixed quotient.",
+    "Over Artinian coefficients, the same diagonal basis supplies whole local characters and fixed-quotient characters with the exact selected Frobenius weights and trivial residual quotient values.",
+    "Artinian power reductions and native Krull separation remove the Artinian restriction for the unique matrix-valued inertia action over the original Noetherian maximal-adic coefficient ring. No compatible diagonal bases or completeness premise is needed for this factorization.",
+    "Whole Artinian character decompositions and native adic separation prove that the entire original local image commutes over Noetherian adic coefficients. Native Hensel-adjugate diagonalization then supplies one complete-coefficient basis and all labelled characters; no compatible family of quotient bases is chosen.",
+    "The actual characters construct the scalar map from the group algebra of the fixed primary quotient to the original coefficient ring. Its literal augmentation image equals the original matrix relation ideal imposing trivial norm inertia, after every coefficient change.",
+    "The existing arithmetic universal fixed-determinant representation, residue equivalence and complete Noetherian local data instantiate the comparison on the literal universal ring, removing the supplied global lift.",
+    "When the prescribed determinant is unramified on this original inertia group, its actual determinant formula proves that the last of degree+1 characters is determined by the first degree. The group algebra of exactly degree copies of the fixed quotient has the same unramified augmentation specialization on the actual universal arithmetic ring."
+  ],
+  "dependency": "DUB-17, frozen Theorem 2.6 (lines 1616-1687), and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and patching -> auxiliary local deformation rings and coefficient-group action -> fixed cyclotomic primary quotient and labelled local characters.",
+  "boundary": "The actual residual arithmetic representation, its prime-field identification and literal local compatibility with the selected residual torus remain displayed inputs; the degree-parameter version also retains unramifiedness of the prescribed determinant. The universal ring and universal lift are constructed inputs from the existing repository, not supplied lift hypotheses. Joint auxiliary-family parameter maps, identification with the base-support global deformation quotient, the actual determinant/local crystalline conditions, arithmetic Hecke modules and freeness, compatible patching/automorphy, modular Galois realization and higher continuation remain open. Acceptance remains 16/20; DUB-17-20 are not closed.",
+  "researchResolution": "Only the complete-local inertia-lifting strategy is adapted from the reviewed external Lift section. Native norm/cyclotomic results and finite tame presentation replace the larger Kummer and valuation-dictionary dependencies. External rank-two determinant-specific adic classification remains research only; no external package or proof-limit setting is imported. Native adic separation, single-basis Hensel diagonalization, group-algebra universality and the existing arithmetic universal ring now replace the remaining external adic classification dependency in this local comparison.",
+  "modules": [
+    "Dubon2026.RegularResidueStrictIntertwiner",
+    "Dubon2026.DiagonalCharacterStrictUniqueness",
+    "Dubon2026.RationalPrimeTameUniqueCharacters",
+    "Dubon2026.TameCharacterInertiaExponent",
+    "Dubon2026.AlgebraicLocalInertiaRestriction",
+    "Dubon2026.LocalFieldGaloisNormOrder",
+    "Dubon2026.LocalFieldNormUniformizerResidue",
+    "Dubon2026.NormLocalTotalInertia",
+    "Dubon2026.RationalPrimeCyclotomicInertia",
+    "Dubon2026.TameCyclicQuotientKernel",
+    "Dubon2026.TameCyclicCharacterDescent",
+    "Dubon2026.RationalPrimeCyclotomicFiniteFactor",
+    "Dubon2026.RationalPrimeArtinianCyclotomicDescent",
+    "Dubon2026.ContinuousGaloisFiniteFactorContaining",
+    "Dubon2026.TameDiagonalMatrixExponent",
+    "Dubon2026.ArithmeticTorusCyclotomicDescent",
+    "Dubon2026.RationalPrimeTameCoefficientQuotient",
+    "Dubon2026.ArtinianCyclotomicPrimaryDescent",
+    "Dubon2026.ArithmeticTorusPrimaryDescent",
+    "Dubon2026.ArithmeticTorusPrimaryCharacters",
+    "Dubon2026.ArithmeticTorusAdicPrimaryDescent",
+    "Dubon2026.ArithmeticTorusAdicCommutativity",
+    "Dubon2026.RegularResidueCommutingCharacters",
+    "Dubon2026.ArithmeticTorusAdicCharacters",
+    "Dubon2026.ArithmeticTorusAdicPrimaryCharacters",
+    "Dubon2026.AuxiliaryCharacterGroupAlgebra",
+    "Dubon2026.AuxiliaryCharacterAugmentation",
+    "Dubon2026.InertiaCharacterAugmentationComparison",
+    "Dubon2026.ArithmeticTorusAugmentationComparison",
+    "Dubon2026.ArithmeticUniversalTorusAugmentation",
+    "Dubon2026.FixedDeterminantCharacterParameters",
+    "Dubon2026.InertiaFixedDeterminantParameters",
+    "Dubon2026.ArithmeticTorusFixedAugmentation",
+    "Dubon2026.ArithmeticUniversalFixedTorusAugmentation"
+  ],
+  "license": "LICENSE",
+  "notice": "NOTICE",
+  "attribution": "ATTRIBUTION.txt",
+  "upstreamPackageImported": false,
+  "proofLimitsChanged": false
+}

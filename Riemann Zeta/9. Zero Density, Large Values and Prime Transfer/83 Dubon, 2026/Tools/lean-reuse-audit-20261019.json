@@ -1,0 +1,241 @@
+{
+  "recordedUTC": "2026-10-19T09:42:37.298432+00:00",
+  "purpose": "Fresh proof reuse assessment for the unresolved DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 dependencies.",
+  "directModularReview": {
+    "date": "2026-10-19",
+    "scope": "Fresh targeted search for direct modular Galois, purity and higher symmetric-power continuation proofs that could shorten DUB-17/18. Research only; no dependency added.",
+    "repositoryHeads": {
+      "ramanujanPetersson": {
+        "sha": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+        "message": "Add files via upload",
+        "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/commits/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+        "html_url": "https://github.com/lioristhmus/ramanujan-petersson/commit/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+        "diff": null,
+        "files": null,
+        "repository_full_name": "lioristhmus/ramanujan-petersson",
+        "comments": null,
+        "author": null,
+        "committer": null,
+        "created_at": "2026-03-20T15:35:54Z",
+        "git_author_email": null,
+        "display_url": "https://github.com/lioristhmus/ramanujan-petersson/commit/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+        "display_title": "Add files via upload"
+      },
+      "adelicSpectralZeta": {
+        "sha": "0c3e98c144796f99534f372b4aba977e6b76ee19",
+        "message": "chore: trim AI/ML sparse attention packages, preprints, benchmarks, circuits, and Lean lemmas moved to sparse-ai",
+        "url": "https://api.github.com/repos/sneed-and-feed/adelic-spectral-zeta/commits/0c3e98c144796f99534f372b4aba977e6b76ee19",
+        "html_url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/commit/0c3e98c144796f99534f372b4aba977e6b76ee19",
+        "diff": null,
+        "files": null,
+        "repository_full_name": "sneed-and-feed/adelic-spectral-zeta",
+        "comments": null,
+        "author": null,
+        "committer": null,
+        "created_at": "2026-09-16T10:10:52Z",
+        "git_author_email": null,
+        "display_url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/commit/0c3e98c144796f99534f372b4aba977e6b76ee19",
+        "display_title": "chore: trim AI/ML sparse attention packages, preprints, benchmarks, circuits, and Lean lemmas moved to sparse-ai"
+      }
+    },
+    "reviewedFiles": [
+      {
+        "file": "adelic-spectral-zeta__RamanujanTau.lean.txt",
+        "gitBlob": "876c468ccbdcac328302e04512977903b3d03342",
+        "url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/blob/0c3e98c144796f99534f372b4aba977e6b76ee19/formalization/Formalization/Spectral/RamanujanTau.lean",
+        "coverage": "Entire file",
+        "finding": "Defines a truncated-power-series tau coefficient and proves a modulo-691 congruence conditional on an abstract power-series modular-form space, its dimension/span property and an integral form with specified first coefficients. No Deligne bound, attached Galois representation or symmetric-power continuation is proved in this file. Its final unlimited heartbeat setting is not adopted.",
+        "sha256": "7fff32a8ec8d3533ac3a303ab0151c52c37b528b8d950efcf096aace12ad9617",
+        "bytes": 4982,
+        "gitBlobVerified": true
+      },
+      {
+        "file": "adelic-spectral-zeta__CLAIMS.md.txt",
+        "gitBlob": "fb4a417e4514fc8b4ab6ce5d360ae753f2b73192",
+        "url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/blob/0c3e98c144796f99534f372b4aba977e6b76ee19/docs/CLAIMS.md",
+        "coverage": "Entire claims file",
+        "finding": "The tau entry reports computational verification for n=1..4. No endpoint reuse is justified by that claim.",
+        "sha256": "ac98c924844ba56b381ac03bd0ac62d04a2132471f18e02794fcff40c5bfcdd7",
+        "bytes": 18465,
+        "gitBlobVerified": true
+      }
+    ],
+    "otherChecks": [
+      {
+        "url": "https://anr-false.github.io/",
+        "finding": "Still describes attached Deligne representations as a project objective, not a proof package."
+      },
+      {
+        "url": "https://github.com/mkaratarakis/CICM24_Deligne",
+        "finding": "Repository describes partial formalization of the statement of Deligne's theorem."
+      },
+      {
+        "query": "symmetric power Lean automorphy",
+        "provider": "GitHub repository search",
+        "returnedRepositories": 0,
+        "limitation": "Search result only; not a global absence claim."
+      }
+    ],
+    "decision": "No new direct modular endpoint adopted. The previously reviewed Ramanujan-Petersson repository head is unchanged. Continue actual native coefficient classification and augmentation comparison; reuse existing generic patching when its arithmetic hypotheses are discharged.",
+    "proofStatus": "External candidates not built or audited transitively. Root pins unchanged."
+  },
+  "crystallineAndAutomorphyReview": {
+    "repository": "tadamcz/annals-results",
+    "commit": "e37fac79bedddf40773e5e02dc5f9585247710ce",
+    "checkedAt": "2026-10-19",
+    "sourceContract": "DUB-17 Theorem 2.6: higher-weight crystalline local deformation conditions and symmetric-power potential automorphy; DUB-18 Corollary 8.2",
+    "verdict": "Not a reusable proof endpoint. The reviewed automorphy theorem is admitted. Reviewed crystalline actions, period-ring completeness, logarithm convergence and nontriviality contain admitted proofs. README explicitly describes statement-only output. No code adopted or build/dependency audit claimed.",
+    "files": [
+      {
+        "encoding": "utf-8",
+        "sha": "b74071f3dfe0d5f8a55ae1d5097dc4fa8b3ed64a",
+        "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/README.md",
+        "display_title": "README.md",
+        "gitBlobVerified": true,
+        "sha256": "31CCC6324F7AA6A499F770A56EFE012F4BE1E190DF175E189BC0E120CA7D23F0",
+        "bytes": 2335
+      },
+      {
+        "encoding": "utf-8",
+        "sha": "9ed866a710b3e05568f429ab2a9006e34e92fafc",
+        "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate.lean",
+        "display_title": "Candidate.lean",
+        "gitBlobVerified": true,
+        "sha256": "8F19E7F89E1BC65478867F443A5820EF8A1B2E99290B6BFAD839694E5288547C",
+        "bytes": 4613
+      },
+      {
+        "encoding": "utf-8",
+        "sha": "5887364bb24a3dfb44ffd43fc4ac220fd6044487",
+        "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate/PadicHodge/Crystalline.lean",
+        "display_title": "Crystalline.lean",
+        "gitBlobVerified": true,
+        "sha256": "47C90F5A9868D5E85DE691A82DC69FF37EAA19E54C2262C6D3966C6FDCC053F9",
+        "bytes": 4331
+      },
+      {
+        "encoding": "utf-8",
+        "sha": "2408b13d8f1eaedf56c18241fd1552ea65ad67f9",
+        "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate/PadicHodge/CrystallinePeriodRing.lean",
+        "display_title": "CrystallinePeriodRing.lean",
+        "gitBlobVerified": true,
+        "sha256": "000079DD811F3342C02827B5D2B3B81C20D4F3C2B6504B057A75B177813E1FCF",
+        "bytes": 6804
+      }
+    ]
+  },
+  "otherEndpointReview": {
+    "checkedAt": "2026-10-19",
+    "scope": "Fresh indexed code search for exact open DUB-17/DUB-18 automorphy, higher-weight crystalline and Sato-Tate obligations.",
+    "queries": [
+      "\"crystalline\" language:Lean",
+      "\"potentiallyAutomorphic\" language:Lean",
+      "\"Fontaine\" \"Laffaille\" language:Lean",
+      "\"SatoTate\" language:Lean"
+    ],
+    "results": [
+      {
+        "encoding": "utf-8",
+        "sha": "6375ba86ae9e87b6c09ac25321e792aefebed965",
+        "display_url": "https://github.com/google-deepmind/formal-conjectures/blob/197f7f8dcc457f556754f826389d2ec7a0d85b92/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+        "display_title": "SatoTateConjecture.lean",
+        "gitBlobVerified": true,
+        "sha256": "47305F3CE59626692ADDD68CF2F04D11069B10AC9BD28BA87F23F1D216154AD3",
+        "bytes": 7923
+      },
+      {
+        "encoding": "utf-8",
+        "sha": "e5ed2db8c1f0c79e787eb5a5f4510c3fc0faf18a",
+        "display_url": "https://github.com/CitizenGardens/Foundry/blob/5e8ef60537cb41cff95d67aca78e9610236371f0/Foundations/FontaineLaffaille.lean",
+        "display_title": "FontaineLaffaille.lean",
+        "gitBlobVerified": true,
+        "sha256": "69644B686A1B94E519472DA8C8C850B71DB4582C59FC5022A19EF23B8F970FFE",
+        "bytes": 702
+      }
+    ],
+    "verdicts": [
+      {
+        "url": "https://github.com/google-deepmind/formal-conjectures/blob/197f7f8dcc457f556754f826389d2ec7a0d85b92/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+        "finding": "The endpoint satoTate_conjecture is admitted, despite category research solved referring to the informal theorem. The interval-integral sanity theorem has an actual proof, but the current repo already supplies the required Sato-Tate analytic transfer. No endpoint or dependency adoption."
+      },
+      {
+        "url": "https://github.com/CitizenGardens/Foundry/blob/5e8ef60537cb41cff95d67aca78e9610236371f0/Foundations/FontaineLaffaille.lean",
+        "finding": "The file defines a certificate structure, with admissibility supplied as a field. It contains no theorem constructing crystalline representations or proving Fontaine-Laffaille comparison/local deformation dimensions. No code adopted."
+      }
+    ],
+    "limitations": "Search results are bounded. Reviewed exact source blobs, not full repository dependency closures or builds. No global absence claim.",
+    "filesAreResearchOnly": true
+  },
+  "adoptedExternalCode": false,
+  "pinsChanged": false,
+  "acceptance": "16/20; DUB-17-20 remain open",
+  "routeDecision": "No reviewed endpoint discharges modular association, higher-weight crystalline deformation conditions, potential automorphy or higher symmetric-power continuation. Reuse the proved native support descent, framed classifications, automatic coefficient continuity and local conjugacy for the actual universal-ring and augmentation comparison. Continue with actual remaining local deformation, Hecke and patching inputs; no admitted theorem is imported.",
+  "limitations": "Exact reviewed blobs and bounded searches only. These repositories were not all built or transitively audited here. Neither a global absence claim nor an inference from a research-solved label to a Lean proof is made.",
+  "finalHeadRecheck": {
+    "checkedAt": "2026-10-19",
+    "method": "GitHub commit search ordered by committer date, newest indexed commit per repository",
+    "results": [
+      {
+        "commits": [
+          {
+            "sha": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+            "message": "Merge pull request #9 from anthropics/tianyi-ant-patch-1\n\nUpdate README.md",
+            "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/6e837e75355538c7f80bab5b956861e86c4eacc2",
+            "html_url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+            "diff": null,
+            "files": null,
+            "repository_full_name": "anthropics/fermats-last-theorem",
+            "comments": null,
+            "author": null,
+            "committer": null,
+            "created_at": "2026-09-24T14:06:36Z",
+            "git_author_email": null,
+            "display_url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+            "display_title": "Merge pull request #9 from anthropics/tianyi-ant-patch-1"
+          }
+        ]
+      },
+      {
+        "commits": [
+          {
+            "sha": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+            "message": "chore: bump mathlib to 300d0e5, fix breaking changes (#1201)\n\nBumps mathlib from c0da404 to 300d0e5, 159 commits on.\n\n- mathlib#41702 made `v` and `w` explicit in\n`NumberField.LiesOver.completionMap`, `continuous_completionMap` and\n`completionMap_coe`; updated the three call sites in\n`FLT/NumberField/Completion/Infinite.lean`. Every other error in that\nfile came from this one.\n- `Mathlib.Data.Int.SuccPred` is deprecated;\n`FLT/AutomorphicForm/Stuff.lean` now imports\n`Mathlib.Order.SuccPred.Int`.\n- Mathlib now warns when a non-module file imports it, which fails `lake\ntest --iofail`; `FLTTest/MathlibCompatibility.lean` is now a module.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\n---------\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+            "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+            "html_url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+            "diff": null,
+            "files": null,
+            "repository_full_name": "ImperialCollegeLondon/FLT",
+            "comments": null,
+            "author": null,
+            "committer": null,
+            "created_at": "2026-10-16T15:52:45Z",
+            "git_author_email": null,
+            "display_url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+            "display_title": "chore: bump mathlib to 300d0e5, fix breaking changes (#1201)"
+          }
+        ]
+      },
+      {
+        "commits": [
+          {
+            "sha": "197f7f8dcc457f556754f826389d2ec7a0d85b92",
+            "message": "refactor: extract optimization constants for tagging (#7431)\n\nAnother follow on to #4950\n\nThis PR refactors some files so that the constant from the Optimization\nConstants tracking page has its own definition, so we can tag it and\nbetter link the two definitions.\n\nI used Claude Code to assist in identifying candidates for which this\ncould be done easily.",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/197f7f8dcc457f556754f826389d2ec7a0d85b92",
+            "html_url": "https://github.com/google-deepmind/formal-conjectures/commit/197f7f8dcc457f556754f826389d2ec7a0d85b92",
+            "diff": null,
+            "files": null,
+            "repository_full_name": "google-deepmind/formal-conjectures",
+            "comments": null,
+            "author": null,
+            "committer": null,
+            "created_at": "2026-10-18T07:16:08Z",
+            "git_author_email": null,
+            "display_url": "https://github.com/google-deepmind/formal-conjectures/commit/197f7f8dcc457f556754f826389d2ec7a0d85b92",
+            "display_title": "refactor: extract optimization constants for tagging (#7431)"
+          }
+        ]
+      }
+    ],
+    "assessment": "The indexed Anthropic FLT, Imperial FLT and Formal Conjectures revisions match the already reviewed pins. This is a revision-bounded check, not a claim about unseen branches or unpublished proofs."
+  }
+}

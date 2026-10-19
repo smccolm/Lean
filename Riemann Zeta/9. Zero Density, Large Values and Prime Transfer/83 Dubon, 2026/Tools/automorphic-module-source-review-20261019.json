@@ -1,0 +1,39 @@
+{
+  "recordedUTC": "2026-10-19T13:38:34.576047+00:00",
+  "dependency": "DUB-17 Theorem 2.6: genuine modular-form Sato-Tate, higher symmetric-power continuation, potential automorphy, compatible arithmetic patching modules.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/0912.1054v2",
+      "localFrozenPdf": "Sources/blgg-sato-tate-0912.1054v2.pdf",
+      "locations": [
+        "Section 3.3.1: crystalline local quotients and dimensions",
+        "Section 3.6, pp. 18-19: auxiliary Hecke modules and their freeness",
+        "Theorem 3.6.2: automorphy lifting with local component comparisons",
+        "Corollaries 7.1.5 and 7.1.7: continuation and full Sato-Tate"
+      ]
+    },
+    {
+      "url": "https://www.numdam.org/article/PMIHES_2008__108__1_0.pdf",
+      "title": "Clozel-Harris-Taylor, Automorphy for some l-adic lifts of automorphic mod l Galois representations",
+      "locations": [
+        "Section 3.3, pp. 95-100: actual unitary groups and algebraic automorphic forms",
+        "Lemma 3.3.1, pp. 99-100: small-level finite freeness and trace coinvariants",
+        "Proposition 3.4.4: compatible Galois representations and Hecke characters"
+      ]
+    }
+  ],
+  "sourceObligations": [
+    "Construct actual localized algebraic automorphic modules on the appropriate unitary group and CM/totally real field; supply the weight lattice, actual level subgroups and arithmetic finite double cosets.",
+    "Use small-level stabilizer triviality to derive freeness of the level-V module over the finite level-quotient group algebra and identify trace coinvariants, as in CHT Lemma 3.3.1.",
+    "Construct the local Hecke projection defining the BLGG auxiliary summand, prove its nonzero freeness and specialization, and derive a common rank bound from specialization.",
+    "Identify the actual diamond-action quotient and its scalar map with the deformation-side characters, including the polarized/CM deformation comparison and required local crystalline components.",
+    "Match the number of auxiliary character directions. BLGG uses the maximal l-power quotient of its (n-1,1)-parabolic level quotient. The current rational full-torus family has Fin degree directions per prime. A proved full-Iwahori variant or a source-compatible parabolic action is required; no identification of these distinct parameter families is assumed.",
+    "BLGG obtains the auxiliary scalar map from the determinant of its universal deformation (pp. 18-19). This must not be silently identified with the current fixed-determinant rational deformation problem: in the parabolic local model, an unramified complementary block and fixed unramified determinant would force the remaining inertia character to be trivial. Use the actual polarized/CM deformation problem or fully prove the alternative full-Iwahori fixed-determinant route."
+  ],
+  "provedPreliminaryBoundary": "The currently constructed rational enlarged-support fixed-determinant rings and their full torus character algebras are preliminary arithmetic objects. They are not identified with the source unitary-group Hecke deformation family. Generic parameter convergence and quotient-module transfers do not construct that missing identification.",
+  "nativeReuseReview": "Reviewed native adelic normalized/spherical Hecke and primitive eigenfunction modules. They prove complex Hecke action and eigenvalue facts, not finite freeness of the required integral unitary-group auxiliary modules. No native polarized deformation realization was found by the targeted production-source search. Pinned Mathlib Module.free_of_flat_of_isLocalRing already gives finite projective-module freeness over a local coefficient ring; reuse it for the genuine Hecke summand instead of reproving projective-module freeness. Mathlib DoubleCoset.Quotient and the group-action orbit/stabilizer equivalences are the existing foundations for CHT Lemma 3.3.1.",
+  "sequencing": "Finish and audit the bounded coefficient-action increment. Defer further rational-family wrappers. Next arithmetic expansion must address the source unitary/CM module construction or a documented rigorous alternative satisfying the same full continuation contract.",
+  "changedSourceContract": false,
+  "externalCodeAdopted": false,
+  "acceptance": "16/20; DUB-17-20 open"
+}
