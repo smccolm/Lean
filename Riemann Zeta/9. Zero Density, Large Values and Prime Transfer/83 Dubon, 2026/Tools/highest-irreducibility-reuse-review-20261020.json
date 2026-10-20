@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG/Geraghty actual induced coefficient modules -> generation and characteristic-zero irreducibility.",
+  "files": [
+    {
+      "file": "Atlas-LeviDecomposition.lean.txt",
+      "url": "https://github.com/facebookresearch/atlas-lean/blob/b619e3f1a69ea6a0e900bc348f803e4c5d53bba4/MathlibExt/Algebra/Lie/LeviDecomposition.lean",
+      "gitBlob": "3eb025c3c323e3cea6e29da8fc441946735db306",
+      "sha256": "4E9EA0C2934F9A5AE832979136D630232AF789D80D51508FF0EEFA29BBCFC78E"
+    },
+    {
+      "file": "Atlas-LICENSE.txt",
+      "url": "https://github.com/facebookresearch/atlas-lean/blob/b619e3f1a69ea6a0e900bc348f803e4c5d53bba4/LICENSE",
+      "gitBlob": "010649b7a667d0a6ac6ae9ad56e45102a51a86dd",
+      "sha256": "91EB6A92B2168965541BCB8E8AB3FCEFFC62DACA810921893950E7A851CF3A87"
+    },
+    {
+      "file": "Atlas-lean-toolchain.txt",
+      "url": "https://github.com/facebookresearch/atlas-lean/blob/b619e3f1a69ea6a0e900bc348f803e4c5d53bba4/lean-toolchain",
+      "gitBlob": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+      "sha256": "0FBD6253482EA3F6F129D0F176C9F6296E49A67B71D52F4C2C23BDC058BF9350"
+    },
+    {
+      "file": "RS-Rational-GL.lean.txt",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Rational/GL.lean",
+      "gitBlob": "b2fcb9bc479de7ba86a4e1e60f825b51a64227e2",
+      "sha256": "40738EA3A9B7497D504F1ECBC96B6246CA8E4BC4B1DE665D20A8FC7E810E8985"
+    },
+    {
+      "file": "RS-BorelWeil-excerpt.lean.txt",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/FlagVarieties/Modules/BorelWeil.lean",
+      "gitBlob": "dc35bc25b16aeac5677c17bd30faafcdb7ca435b",
+      "sha256": "86AC3F856B058E2BF6AE083D725EAC30448D8C8E8104FB9D7E97FA37F73D9304"
+    },
+    {
+      "file": "RS-Regular-excerpt.lean.txt",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Borel/Regular.lean",
+      "gitBlob": "1cb2ded7dbd5b4b7a82194288210c633b4f13e77",
+      "sha256": "F3C736396B1F75FD467D867637B95BDD996A584F4EB0328C06830CD27F999E34"
+    },
+    {
+      "file": "RS-lean-toolchain.txt",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/lean-toolchain",
+      "gitBlob": "f0e00b3338bac0d6f050d9a64e277314a9f7830f",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+    }
+  ],
+  "candidates": [
+    {
+      "repository": "facebookresearch/atlas-lean",
+      "commit": "b619e3f1a69ea6a0e900bc348f803e4c5d53bba4",
+      "toolchain": "v4.34.1",
+      "statement": "LieModule.exists_isCompl_of_isSemisimple: every submodule of a finite-dimensional module over a finite-dimensional semisimple Lie algebra in characteristic zero has an invariant complement.",
+      "inspection": "Full 1723-line source fetched; complete required lines 1-822 inspected. The unrelated Levi decomposition is deferred.",
+      "decision": "Selected shorter route. The required Weyl prefix has only Mathlib imports. Adapted to SourceLieCompleteReducibility with namespace changes, original 4.30 TFAE indices (2,0) and two explicit beta-reduction changes. It compiles with zero diagnostics. Exhaustive audit passes 64 theorems and 16 linters; proof-value dependency audit passes all 12 required edges.",
+      "assumptionsDischarged": "The complete-reducibility foundation is proved, not an assumed complement oracle.",
+      "remaining": "Actual induced Lie action, source sl_n semisimplicity, group-stability recovery, existence of unipotent invariants and the final irreducibility consumer."
+    },
+    {
+      "repository": "rhodges-math/rs-counterexample",
+      "commit": "8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6",
+      "toolchain": "v4.35.0-rc3",
+      "statement": "Regular-function Borel-Weil over complex numbers identifies the actual induced representation with a dual irreducible highest-weight representation. Rational GL representations are semisimple over characteristic-zero fields.",
+      "inspection": "Borel-Weil first 180 lines and regular-function source first 85 lines inspected; full Rational/GL.lean fetched, determinant-twist semisimplicity theorem inspected. HighestWeight/CompleteReducibility first 90 lines inspected.",
+      "decision": "Useful exact-model reference, not adopted. Borel-Weil uses complex flag sections, standard monomial dimensions and a larger closure; rational semisimplicity uses integral gl_n highest-weight classification. The shorter selected Weyl proof avoids these unrelated classification and character computations.",
+      "remaining": "Conventions differ: its right Borel covariance and left translation must be related to the original reversed-weight left covariance and right translation; the complex theorem alone does not discharge the local integral source contract."
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "b1f31fb193647dfb5f4b18c918b0f30841892d07",
+      "toolchain": "v4.36.0-rc1",
+      "statement": "General-linear rational comodules are completely reducible; Lie-Kolchin supplies weight vectors for reduced connected solvable algebraic groups.",
+      "decision": "Reviewed as a viable broader route; the Atlas Weyl prefix supplies a much smaller directly compatible foundation. Actual original coordinate action comparison would still be required."
+    }
+  ],
+  "localVerification": "Root pins and proof limits unchanged. 4,860-module production frozen during verification. Highest-line and unipotent-line scratch certificates are separate from production. No final Dubon acceptance gate closes.",
+  "rootPinsChanged": false
+}

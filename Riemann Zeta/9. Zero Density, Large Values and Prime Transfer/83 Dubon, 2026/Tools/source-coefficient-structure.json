@@ -1,0 +1,1074 @@
+{
+  "date": "20 October 2026",
+  "modules": [
+    "Dubon2026.IntegralWeightBlockTriangular",
+    "Dubon2026.IntegralWeightLeadingLU",
+    "Dubon2026.IntegralWeightGenericMinors",
+    "Dubon2026.IntegralWeightBorelOpenCell",
+    "Dubon2026.IntegralInducedOppositeLine",
+    "Dubon2026.IntegralHighestOppositeTransport",
+    "Dubon2026.IntegralDominantHighestLine",
+    "Dubon2026.IntegralWeightUnitriangularCell",
+    "Dubon2026.IntegralUnipotentLine",
+    "Dubon2026.SourceLieCompleteReducibility",
+    "Dubon2026.SourceSpecialLinearMatrices",
+    "Dubon2026.SourceSpecialLinearRadical",
+    "Dubon2026.SourceSpecialLinearComplements",
+    "Dubon2026.SourceRegularDifferential",
+    "Dubon2026.SourceRegularDifferentialLie",
+    "Dubon2026.SourceRegularDifferentialEvaluation",
+    "Dubon2026.SourceInducedDifferential",
+    "Dubon2026.SourceInducedLieComplements",
+    "Dubon2026.SourceSquareZeroLine",
+    "Dubon2026.SourceRegularSquareZeroCurve",
+    "Dubon2026.SourceSquareZeroCurveDifferential",
+    "Dubon2026.SourceSquareZeroOrbitExponential",
+    "Dubon2026.SourceSquareZeroGroupStability",
+    "Dubon2026.SourceInducedSquareZeroStability",
+    "Dubon2026.SourceSpecialLinearGenerationBasics",
+    "Dubon2026.SourceSpecialLinearGeneration",
+    "Dubon2026.SourceInducedSpecialLinearStability"
+  ],
+  "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "discharged": "The actual highest-character line and the actual upper-unipotent invariant line are each uniquely determined by evaluation at the longest matrix. Generic open-cell factorization and faithful original-coordinate evaluation discharge the uniqueness assumptions. The original induced module has an actual matrix Lie action obtained from its right translation over dual numbers; its Borel covariance is proved stable and its finite dimension follows from the original denominator and numerator bounds. Adapted Atlas Weyl complete reducibility and TauCeti trace-zero matrix semisimplicity construct invariant Lie complements. The exact polynomial orbit and finite exponential, followed by adapted Mathlib/TauCeti elementary generation, prove that every original induced Lie submodule and every such complement is stable under every original special-linear matrix.",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,887-module scope: all thirteen retained regressions, 34,574 exhaustive theorem checks, 14,737 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.integralDominantHighestLine_eq",
+    "Dubon2026.integralInduced_unipotent_eq_highest",
+    "Dubon2026.sourceLieModule_exists_complement",
+    "Dubon2026.sourceSpecialLinearModule_exists_complement",
+    "Dubon2026.sourceInducedSpecialLinear_exists_complement",
+    "Dubon2026.sourceInduced_exists_squareZero_stable_complement",
+    "Dubon2026.sourceInduced_exists_specialLinear_stable_complement"
+  ],
+  "scratchCertificates": [
+    {
+      "date": "2026-10-19 America/Vancouver",
+      "modules": [
+        "IntegralWeightBlockTriangular",
+        "IntegralWeightLeadingLU",
+        "IntegralWeightGenericMinors",
+        "IntegralWeightBorelOpenCell",
+        "IntegralInducedOppositeLine",
+        "IntegralHighestOppositeTransport",
+        "IntegralDominantHighestLine"
+      ],
+      "files": [
+        {
+          "module": "IntegralWeightBlockTriangular",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralWeightBlockTriangular.lean",
+          "sha256": "747E362F98E16BFE8E3AD21BADB37BB6D1D9C4F696C022DE315C2700BB74154E",
+          "oleanSha256": "9EFCE12C7624BDE03C15AF53D276EE7AB4F8CCA7C54141E1EA0DFA12B98E4DF7"
+        },
+        {
+          "module": "IntegralWeightLeadingLU",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralWeightLeadingLU.lean",
+          "sha256": "927C4F34820B164FF57BB2AA4C79E7B69FD74C45995F998A20BFC75DF10BA7ED",
+          "oleanSha256": "7956BB8BE53FDD389B61CD98C26D39380F8D6D931252EF17264FF9A0712AEF5D"
+        },
+        {
+          "module": "IntegralWeightGenericMinors",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralWeightGenericMinors.lean",
+          "sha256": "A011386AB8DD287024C724ABDE3134CDD5FC6DF420697125E7933AFCB8E9F4B9",
+          "oleanSha256": "106F516A6CB7CED236D634D3369B64FE707985A66DAE9286A11A1E14D3EE2C28"
+        },
+        {
+          "module": "IntegralWeightBorelOpenCell",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralWeightBorelOpenCell.lean",
+          "sha256": "26A25D574C5E7EFE33CB14D3E3FC63B1C9E6CF76522BAB36F30ABACD891A865D",
+          "oleanSha256": "10A4766EEABD7FABC8E67ECE3A16693DD31D5FB71667AF69F857ACA9F49849B7"
+        },
+        {
+          "module": "IntegralInducedOppositeLine",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedOppositeLine.lean",
+          "sha256": "5C2AE8C5A961901660BD9FDC3CE2225250E80E57CAF226AEFCDE48A6011F66FF",
+          "oleanSha256": "BBB68445015F266AC473CCC77DBAFDC853A98500763ECD5860EA2A9F0919BF6E"
+        },
+        {
+          "module": "IntegralHighestOppositeTransport",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralHighestOppositeTransport.lean",
+          "sha256": "58768943C9EEC84ADE1F4A12225D0DAE4276B7D426D8E4553941AA0EAC6F2075",
+          "oleanSha256": "6EC360E9D9EC97F281C88D1998B17EF3CCC1FB81D55DA8212E1CEC1E84E5F83F"
+        },
+        {
+          "module": "IntegralDominantHighestLine",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantHighestLine.lean",
+          "sha256": "72FD8CB875C5F5465D6812435553BB2FBDE589F9FF22FD0BDF6EC76B29916D64",
+          "oleanSha256": "3FA496636F84AAAEA0DCE2B4D3E849EB7C51B662B74D42420F03B5C96789B6B4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.integralWeightLastBlock",
+        "Dubon2026.integralWeightLastBlock_upper",
+        "Dubon2026.integralWeightLastBlock_lower",
+        "Dubon2026.integralWeightLastBlock_mul",
+        "Dubon2026.integralWeightLastBlock_schur",
+        "Dubon2026.integralWeightLastBlock_exists_LU",
+        "Dubon2026.integralWeight_exists_LU_of_leading",
+        "Dubon2026.integralWeightGenericInverse_leading_ne_zero",
+        "Dubon2026.integralWeightGenericInverse_fraction_leading_ne_zero",
+        "Dubon2026.integralWeight_borel_openCell",
+        "Dubon2026.integralWeightGeneric_fraction_openCell",
+        "Dubon2026.integralWeight_eval_one_baseChange",
+        "Dubon2026.integralInduced_opposite_character_ext",
+        "Dubon2026.integralInduced_opposite_character_eq_dominant",
+        "Dubon2026.integralWeightLongestBorel_highest_character",
+        "Dubon2026.integralWeightLongestBorel_transport",
+        "Dubon2026.integralWeightLongestTranslate_opposite",
+        "Dubon2026.integralDominantHighestLine_eq",
+        "Dubon2026.integralDominantHighestLine_normalized_unique"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.integralWeightLastBlock_upper",
+        "Dubon2026.integralWeightLastBlock_lower",
+        "Dubon2026.integralWeightLastBlock_mul",
+        "Dubon2026.integralWeightLastBlock_schur",
+        "Dubon2026.integralWeightLastBlock_exists_LU",
+        "Dubon2026.integralWeight_exists_LU_of_leading",
+        "Dubon2026.integralWeightGenericInverse_leading_ne_zero",
+        "Dubon2026.integralWeightGenericInverse_fraction_leading_ne_zero",
+        "Dubon2026.integralWeight_borel_openCell",
+        "Dubon2026.integralWeightGeneric_fraction_openCell",
+        "Dubon2026.integralWeight_eval_one_baseChange",
+        "Dubon2026.integralInduced_opposite_character_ext",
+        "Dubon2026.integralInduced_opposite_character_eq_dominant",
+        "Dubon2026.integralWeightLongestBorel_highest_character",
+        "Dubon2026.integralWeightLongestBorel_transport",
+        "Dubon2026.integralWeightLongestTranslate_opposite",
+        "Dubon2026.integralDominantHighestLine_eq",
+        "Dubon2026.integralDominantHighestLine_normalized_unique"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.integralWeightLastBlock"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\HighestLineAudit7.log",
+      "logSha256": "4CD90F5BCDAB8E4AA47C12B65EE49E01DABC07D72E964F8C3F10242BC4FB72D2",
+      "auditSha256": "E4F94E24432D3D9859A383ABA07FF81672C718DAF57C7E97053521F5127B24E5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 25,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\HighestLineDependencyAudit.log",
+      "dependencyAuditSha256": "EA0CA034B5443A0E80D205815FFEAA2414BEE04FFA147F0BD8AC8BD68FC02BE9",
+      "dependencyAuditSourceSha256": "C4762380156A4A20476A35F6D1B3F1721FDC3745E09461D133E552BD19D647C9",
+      "consumer": "Dubon2026.integralDominantHighestLine_eq",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> Geraghty 2.2.1/2.2.3 and BLGG 3.2 original highest-weight coefficient modules -> generation and characteristic-zero irreducibility.",
+      "discharged": "Native Schur factorization and induction produce an actual LU decomposition on the leading-minor open cell. Evaluation at the identity proves every needed minor of the original generic inverse nonzero. The original generic matrix over its coordinate fraction field therefore factors as an actual upper-Borel times lower-Borel matrix. Faithful generic evaluation and literal all-algebra source covariance prove the opposite-character line is determined by its identity value. Actual longest translation proves every source vector with the exact highest character equals its longest-matrix value times the constructed highest vector, and normalized uniqueness follows. No minor, factorization or highest-line uniqueness assumption remains.",
+      "boundary": "Scratch only, excluded from the 4,860-module scope now entering verification. Generation and characteristic-zero irreducibility, prescribed source unitary fields/forms and remaining local choices, actual modular residual representation/image, nonzero prescribed Hecke/Galois localization, crystalline/Selmer dimensions, R=T and automorphy continuation remain open. DUB-17-20 remain open; acceptance 16/20.",
+      "reuse": "Native pinned Schur block factorization and original source covariance/generic coordinate proofs. New external complete-reducibility and Lie-Kolchin sources inspected, but not adopted or locally verified; toolchain and exact representation comparison remain adaptation obligations.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\highest-line-reuse-review-20261019.json",
+      "reuseReviewSha256": "F570FCEC3101A4471DFB6B1ED0037D5F20FD1C6381F898F47E7F14313301F13E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "IntegralWeightUnitriangularCell",
+        "IntegralUnipotentLine"
+      ],
+      "files": [
+        {
+          "module": "IntegralWeightUnitriangularCell",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralWeightUnitriangularCell.lean",
+          "sha256": "961F9AC22129E4BC2C0EF35F714E92D851D49FDFDECE88D92688720641E2640C",
+          "oleanSha256": "061014E0E6DE0270694864B2023D30F9A88A3310509C6C4BC2D03282EC09DF63"
+        },
+        {
+          "module": "IntegralUnipotentLine",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralUnipotentLine.lean",
+          "sha256": "5DEB5E60A647498262902533D0A1A9D57C834A5F6C38FA9E2ABFE9BF81BF170A",
+          "oleanSha256": "A0D882E0A801B58D8116D31E138FAB79156D89810C1080A20A68A1823379B3FA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.integralWeightBorelDiagonalMatrix",
+        "Dubon2026.integralWeightBorelDiagonalMatrix_diagonal",
+        "Dubon2026.integralWeightBorelDiagonalMatrix_transpose",
+        "Dubon2026.integralWeightBorel_unitriangular_diagonal",
+        "Dubon2026.integralWeightGeneric_fraction_unitriangularCell",
+        "Dubon2026.integralInduced_opposite_unipotent_ext",
+        "Dubon2026.integralInduced_opposite_unipotent_eq_dominant",
+        "Dubon2026.integralInduced_unipotent_eq_highest"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.integralWeightBorelDiagonalMatrix_diagonal",
+        "Dubon2026.integralWeightBorelDiagonalMatrix_transpose",
+        "Dubon2026.integralWeightBorel_unitriangular_diagonal",
+        "Dubon2026.integralWeightGeneric_fraction_unitriangularCell",
+        "Dubon2026.integralInduced_opposite_unipotent_ext",
+        "Dubon2026.integralInduced_opposite_unipotent_eq_dominant",
+        "Dubon2026.integralInduced_unipotent_eq_highest"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.integralWeightBorelDiagonalMatrix"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\UnipotentLineAudit2.log",
+      "logSha256": "DB958962A301C861A8329E4C30A8C41B44D83D3F3A550C83B00AF0C0A2298F30",
+      "auditSha256": "466F39A6A4A2344B2C2A26E590A96111DB8CD00109B8FE02CE3B71B853F3D4BB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\UnipotentLineDependencyAudit.log",
+      "dependencyAuditSha256": "A31C06F01C47130D1CC41B0012167E03E80AC23A979B4EE52090F440F5B203F9",
+      "dependencyAuditSourceSha256": "1753C418E183027AD430B4B575E8692120AFE1A72FD4EDFA70660089980424B7",
+      "consumer": "Dubon2026.integralInduced_unipotent_eq_highest",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG/Geraghty actual coefficient modules -> irreducibility via the unique unipotent invariant line and complete reducibility.",
+      "discharged": "The original generic open cell is normalized by its actual diagonal to upper-Borel times lower-unitriangular. Literal source covariance and all-algebra unipotent invariance show an original invariant function is determined by its identity value. Actual longest translation proves every upper-unitriangular invariant equals its longest value times the explicit highest vector. The highest-character hypothesis has been removed; it is a consequence of membership in the resulting actual line.",
+      "boundary": "Scratch only; 4,860-module production remains frozen during sequential canonical verification. Nonzero invariant existence in each nonzero stable subspace, complete reducibility of the actual original induced group action, generation, irreducibility and the remaining arithmetic/automorphy obligations are not claimed. DUB-17-20 remain open; acceptance 16/20.",
+      "reuse": "Native matrix diagonal operations and the checked original generic-cell and highest-vector proofs. No external code copied for this increment.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceLieCompleteReducibility"
+      ],
+      "files": [
+        {
+          "module": "SourceLieCompleteReducibility",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLieCompleteReducibility.lean",
+          "sha256": "A4C2D4E4FBDF508620C148B93BA0D866F1D5F0D4CD5FE094218472BE4EB25415",
+          "oleanSha256": "2F9E35BF6913D905A4B13F2D37A584951C492D9A8951DB61E6742FEC0BC22C02"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceLieModule_exists_complement"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceLieModule_exists_complement"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLieCompleteReducibilityAudit.log",
+      "logSha256": "68EDC78264B198CF7BAB061574DE88D77886E245E128ED97EE1D011421A1D584",
+      "auditSha256": "DDBD61559877CA3953DA31BED56AC347F6799DC1CFFC9B1332A38677744AF1D8",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 64,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLieCompleteReducibilityDependencyAudit.log",
+      "dependencyAuditSha256": "2E2BD5B7CCC435A92AC8E32B4C003097757D29C695807A77294B9920E0BC09AA",
+      "dependencyAuditSourceSha256": "E7956C93791D200300B9DE1C3972165199E90F262171223F95841870141D6071",
+      "consumer": "Dubon2026.sourceLieModule_exists_complement",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG/Geraghty actual induced coefficient modules -> generation and characteristic-zero irreducibility.",
+      "discharged": "The exact characteristic-zero Weyl complete-reducibility theorem for finite-dimensional modules over finite-dimensional semisimple Lie algebras is proved under the pinned local toolchain. The proof constructs actual invariant complements using the faithful trace form, the actual Casimir operator with nonzero trace, codimension-one induction and an invariant retraction. No complement certificate is assumed.",
+      "boundary": "Scratch only, excluded from 4,860-module production verification. The actual source induced Lie action, semisimplicity of its special-linear Lie algebra, recovery of group-stability, nonzero unipotent invariants in each nonzero stable subspace and the actual generation/irreducibility consumer remain open. The unchanged arithmetic/automorphy source obligations and DUB-17-20 remain open; acceptance 16/20.",
+      "reuse": {
+        "repository": "facebookresearch/atlas-lean",
+        "commit": "b619e3f1a69ea6a0e900bc348f803e4c5d53bba4",
+        "toolchain": "v4.34.1",
+        "statement": "LieModule.exists_isCompl_of_isSemisimple: every submodule of a finite-dimensional module over a finite-dimensional semisimple Lie algebra in characteristic zero has an invariant complement.",
+        "inspection": "Full 1723-line source fetched; complete required lines 1-822 inspected. The unrelated Levi decomposition is deferred.",
+        "decision": "Selected shorter route. The required Weyl prefix has only Mathlib imports. Adapted to SourceLieCompleteReducibility with namespace changes, original 4.30 TFAE indices (2,0) and two explicit beta-reduction changes. It compiles with zero diagnostics. Exhaustive audit passes 64 theorems and 16 linters; proof-value dependency audit passes all 12 required edges.",
+        "assumptionsDischarged": "The complete-reducibility foundation is proved, not an assumed complement oracle.",
+        "remaining": "Actual induced Lie action, source sl_n semisimplicity, group-stability recovery, existence of unipotent invariants and the final irreducibility consumer."
+      },
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\highest-irreducibility-reuse-review-20261020.json",
+      "reuseReviewSha256": "D3714844FADEFEB1383FD327293F36814422E196805447B96C6951EE43FD200A",
+      "externalSource": {
+        "file": "Atlas-LeviDecomposition.lean.txt",
+        "url": "https://github.com/facebookresearch/atlas-lean/blob/b619e3f1a69ea6a0e900bc348f803e4c5d53bba4/MathlibExt/Algebra/Lie/LeviDecomposition.lean",
+        "gitBlob": "3eb025c3c323e3cea6e29da8fc441946735db306",
+        "sha256": "4E9EA0C2934F9A5AE832979136D630232AF789D80D51508FF0EEFA29BBCFC78E"
+      },
+      "license": {
+        "file": "Atlas-LICENSE.txt",
+        "url": "https://github.com/facebookresearch/atlas-lean/blob/b619e3f1a69ea6a0e900bc348f803e4c5d53bba4/LICENSE",
+        "gitBlob": "010649b7a667d0a6ac6ae9ad56e45102a51a86dd",
+        "sha256": "91EB6A92B2168965541BCB8E8AB3FCEFFC62DACA810921893950E7A851CF3A87"
+      },
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceSpecialLinearMatrices",
+        "SourceSpecialLinearRadical",
+        "SourceSpecialLinearComplements"
+      ],
+      "files": [
+        {
+          "module": "SourceSpecialLinearMatrices",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearMatrices.lean",
+          "sha256": "1A9C01D83C381E524C0CE0B752354920DB6B6A47716C8AC0F160FA40CBB31189",
+          "oleanSha256": "335E8E945BADFBF369FE6C44849B8FCBD5D319E7C1BC076AB75179529D53572A"
+        },
+        {
+          "module": "SourceSpecialLinearRadical",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearRadical.lean",
+          "sha256": "BE4076AC5843B6510EA0BBD0504B9D76370A8B8BD2068D224363E2E165321022",
+          "oleanSha256": "4DF92D4C8A645C813BD8D0DB199E534E60657661AD1E2A2CD6DD2C2FE98E722E"
+        },
+        {
+          "module": "SourceSpecialLinearComplements",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearComplements.lean",
+          "sha256": "FBA45D91173D36208A0B8D51A0DB4BE67CF73CE5F78E728AF796A4B56EC389A9",
+          "oleanSha256": "CF88FA7FBA6235C1EBA746433B7EAE520895B5F298E7FA71DA5E4736346AEBC7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.mem_of_trace_eq_zero_of_single_mem",
+        "Dubon2026.lie_single_single",
+        "Dubon2026.lie_single_self_single_of_ne",
+        "Dubon2026.lie_single_single_eq_sub",
+        "Dubon2026.lie_single_self_sub_single_self_single",
+        "Dubon2026.lie_single_lie_single_of_ne",
+        "Dubon2026.mem_center_matrix_iff",
+        "Dubon2026.center_matrix_eq_top",
+        "Dubon2026.slIdeal",
+        "Dubon2026.mem_slIdeal_iff",
+        "Dubon2026.slIdeal_toLieSubalgebra_eq_sl",
+        "Dubon2026.sourceSpecialLinear_mem_iff",
+        "Dubon2026.derivedSeries_one_eq_slIdeal",
+        "Dubon2026.derivedSeries_one_toLieSubalgebra_eq_sl",
+        "Dubon2026.isCompl_center_derivedSeries_one_matrix",
+        "Dubon2026.exists_sl_add_smul_one_eq",
+        "Dubon2026.sourceLie_diagonal_single",
+        "Dubon2026.single_mem_of_diagonal_mem",
+        "Dubon2026.single_mem_of_apply_ne_zero",
+        "Dubon2026.slIdeal_le_of_single_mem",
+        "Dubon2026.slIdeal_le_of_notMem_center",
+        "Dubon2026.lie_slIdeal_slIdeal",
+        "Dubon2026.slIdeal_ne_bot",
+        "Dubon2026.not_isSolvable_slIdeal",
+        "Dubon2026.radical_matrix_eq_center",
+        "Dubon2026.hasTrivialRadical_sl",
+        "Dubon2026.sourceSpecialLinearHasTrivialRadical",
+        "Dubon2026.sourceSpecialLinear_isSemisimple",
+        "Dubon2026.sourceSpecialLinearModule_exists_complement"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.mem_of_trace_eq_zero_of_single_mem",
+        "Dubon2026.lie_single_single",
+        "Dubon2026.lie_single_self_single_of_ne",
+        "Dubon2026.lie_single_single_eq_sub",
+        "Dubon2026.lie_single_self_sub_single_self_single",
+        "Dubon2026.lie_single_lie_single_of_ne",
+        "Dubon2026.mem_center_matrix_iff",
+        "Dubon2026.center_matrix_eq_top",
+        "Dubon2026.mem_slIdeal_iff",
+        "Dubon2026.slIdeal_toLieSubalgebra_eq_sl",
+        "Dubon2026.sourceSpecialLinear_mem_iff",
+        "Dubon2026.derivedSeries_one_eq_slIdeal",
+        "Dubon2026.derivedSeries_one_toLieSubalgebra_eq_sl",
+        "Dubon2026.isCompl_center_derivedSeries_one_matrix",
+        "Dubon2026.exists_sl_add_smul_one_eq",
+        "Dubon2026.sourceLie_diagonal_single",
+        "Dubon2026.single_mem_of_diagonal_mem",
+        "Dubon2026.single_mem_of_apply_ne_zero",
+        "Dubon2026.slIdeal_le_of_single_mem",
+        "Dubon2026.slIdeal_le_of_notMem_center",
+        "Dubon2026.lie_slIdeal_slIdeal",
+        "Dubon2026.slIdeal_ne_bot",
+        "Dubon2026.not_isSolvable_slIdeal",
+        "Dubon2026.radical_matrix_eq_center",
+        "Dubon2026.hasTrivialRadical_sl",
+        "Dubon2026.sourceSpecialLinearHasTrivialRadical",
+        "Dubon2026.sourceSpecialLinear_isSemisimple",
+        "Dubon2026.sourceSpecialLinearModule_exists_complement"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.slIdeal"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearAudit3.log",
+      "logSha256": "08DD046E375D7AD772700D3EDFF67C22DCED3131BD506A74C10D10CE4C6F7311",
+      "auditSha256": "9ED8E5307F148113F7B6E3321109103659806A9AEB8E63A7A920C1EA8DED69E1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 44,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearDependencyAudit.log",
+      "dependencyAuditSha256": "48BC4C09FC65CC98AE841771BFC87AC8A2111D975C929A4376BECB038C308528",
+      "dependencyAuditSourceSha256": "420C6C6E952A38163084200C2EBCAA219421AC6E8EF8372BEDDFD8E3B4F83CF9",
+      "consumer": "Dubon2026.sourceSpecialLinearModule_exists_complement",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy and unitary patching -> Geraghty/BLGG actual algebraic coefficient representation -> characteristic-zero irreducibility -> complete reducibility of the original induced action.",
+      "discharged": "Every finite-dimensional module over the actual characteristic-zero trace-zero matrix Lie algebra has an invariant complement, using the already checked Atlas Weyl theorem. Semisimplicity is derived from actual matrices, not supplied.",
+      "boundary": "Scratch only; 4,860-module production remains frozen during canonical verification. Construct the original induced Lie action and recover group-stable complements. Prove nonzero unipotent invariants and conclude irreducibility of the actual source representation. These and the remaining arithmetic/automorphy obligations keep DUB-17-20 open; 16/20 acceptance gates.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-special-linear-reuse-review-20261020.json",
+      "reuseReviewSha256": "77B5B8E0C2B1B6931A4C1225FA238298057E34C2BD8F343B2BE7B39BD46A0030",
+      "externalSources": [
+        {
+          "file": "GeneralLinearBasic.lean.txt",
+          "gitBlob": "4c18ae17c7558870d050b6139b640b1132ead76b",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/GeneralLinear/Basic.lean",
+          "sha256": "A6675EA858CB744526EFCEC5E3E4D540FD63C7253D20918C19E0C796D1A38DE2"
+        },
+        {
+          "file": "DiagonalCartan.lean.txt",
+          "gitBlob": "d560339a4eef0dd7b045fb460deef4c2302be508",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/GeneralLinear/DiagonalCartan.lean",
+          "sha256": "C45E06E0F6C994EDA927432D787DAF0DB15BDFFF4341B688881132ED49C85A3C"
+        },
+        {
+          "file": "GeneralLinearRadical.lean.txt",
+          "gitBlob": "35eb755badeb76658579a470ef9f150f14d977eb",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/GeneralLinear/Radical.lean",
+          "sha256": "CE415227195E2F7A312694E7A75845BD888AB685835544DD65382EBD602DA0D0"
+        },
+        {
+          "file": "LICENSE",
+          "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/LICENSE",
+          "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08"
+        }
+      ],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceRegularDifferential",
+        "SourceRegularDifferentialLie",
+        "SourceRegularDifferentialEvaluation",
+        "SourceInducedDifferential",
+        "SourceInducedLieComplements"
+      ],
+      "files": [
+        {
+          "module": "SourceRegularDifferential",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRegularDifferential.lean",
+          "sha256": "29598B9E221C4F34D3AEF782F8D5AC87ABB5C075E92911CB98360865CE2417CF",
+          "oleanSha256": "BDF64ECADA46227CC70A854ECFFFDE256F537E3492BA6A12E807463483ECBF4F"
+        },
+        {
+          "module": "SourceRegularDifferentialLie",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRegularDifferentialLie.lean",
+          "sha256": "9690134A33D6912DD7BAC5CB88E7E7C13615EFCC6D0857046231DE4DA83CBA26",
+          "oleanSha256": "A1A7ED4D20599FCA0C11A0CC6AFAC6203F832B4E646F944E783E2861075CAC26"
+        },
+        {
+          "module": "SourceRegularDifferentialEvaluation",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRegularDifferentialEvaluation.lean",
+          "sha256": "CACB7CF305F3B613AE54E40114B962EDF4D48A2F46307BD02023587EA16A5D51",
+          "oleanSha256": "21B2856086A600E5A502409B92465A8D30F6C07BF8A51B75049BA5D26B8791C9"
+        },
+        {
+          "module": "SourceInducedDifferential",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInducedDifferential.lean",
+          "sha256": "8E4DCB9F28D75BAD8A58E09B39EE17A463EFD8A6CB70C6583088F1940FF3A49E",
+          "oleanSha256": "183FB0FBDB7DABCF9FCF080143F76B6A86436D58E71E320BAA9F75D90205DA65"
+        },
+        {
+          "module": "SourceInducedLieComplements",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInducedLieComplements.lean",
+          "sha256": "B245906E15F9491DC98A5E7D81F9D3C1E22A866745FF0C66ED613F15839C3F14",
+          "oleanSha256": "D1A37E249BCF423C689A29D95497182EFEEF752E7F26BF04833326E8B9AA3C4B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceInfinitesimalMatrix",
+        "Dubon2026.sourceInfinitesimalMatrix_fst",
+        "Dubon2026.sourceRegularInfinitesimalPoint",
+        "Dubon2026.sourceRegularInfinitesimalPoint_fst",
+        "Dubon2026.sourceRegularInfinitesimalEval",
+        "Dubon2026.sourceRegularInfinitesimalEval_fst",
+        "Dubon2026.sourceRegularDifferential",
+        "Dubon2026.sourceRegularDifferential_X",
+        "Dubon2026.sourceRegular_derivation_ext",
+        "Dubon2026.sourceRegularDifferential_add",
+        "Dubon2026.sourceRegularDifferential_smul",
+        "Dubon2026.sourceRegularDifferential_generic_mul",
+        "Dubon2026.sourceRegularDifferential_X_matrix",
+        "Dubon2026.sourceRegularDifferential_lie",
+        "Dubon2026.sourceRegularDifferentialLieHom",
+        "Dubon2026.sourceDualCoefficientMap",
+        "Dubon2026.sourceDualCoefficientMap_snd",
+        "Dubon2026.sourceInfinitesimalMatrix_map",
+        "Dubon2026.sourceInfinitesimalPointAt",
+        "Dubon2026.sourceRegularInfinitesimalPoint_map",
+        "Dubon2026.sourceRegularInfinitesimalEval_natural",
+        "Dubon2026.sourceRegularDifferential_eval",
+        "Dubon2026.sourceRegularDifferential_induced_mem",
+        "Dubon2026.sourceInducedDifferential",
+        "Dubon2026.sourceInducedDifferentialLieHom",
+        "Dubon2026.sourceInducedSpecialLinearLieHom",
+        "Dubon2026.sourceInducedSpecialLinearLieRingModule",
+        "Dubon2026.sourceInducedSpecialLinearLieModule",
+        "Dubon2026.sourceInducedSpecialLinear_exists_complement"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceInfinitesimalMatrix_fst",
+        "Dubon2026.sourceRegularInfinitesimalPoint_fst",
+        "Dubon2026.sourceRegularInfinitesimalEval_fst",
+        "Dubon2026.sourceRegularDifferential_X",
+        "Dubon2026.sourceRegular_derivation_ext",
+        "Dubon2026.sourceRegularDifferential_add",
+        "Dubon2026.sourceRegularDifferential_smul",
+        "Dubon2026.sourceRegularDifferential_generic_mul",
+        "Dubon2026.sourceRegularDifferential_X_matrix",
+        "Dubon2026.sourceRegularDifferential_lie",
+        "Dubon2026.sourceDualCoefficientMap_snd",
+        "Dubon2026.sourceInfinitesimalMatrix_map",
+        "Dubon2026.sourceRegularInfinitesimalPoint_map",
+        "Dubon2026.sourceRegularInfinitesimalEval_natural",
+        "Dubon2026.sourceRegularDifferential_eval",
+        "Dubon2026.sourceRegularDifferential_induced_mem",
+        "Dubon2026.sourceInducedSpecialLinearLieModule",
+        "Dubon2026.sourceInducedSpecialLinear_exists_complement"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceInfinitesimalMatrix",
+        "Dubon2026.sourceRegularInfinitesimalPoint",
+        "Dubon2026.sourceRegularInfinitesimalEval",
+        "Dubon2026.sourceRegularDifferential",
+        "Dubon2026.sourceRegularDifferentialLieHom",
+        "Dubon2026.sourceDualCoefficientMap",
+        "Dubon2026.sourceInfinitesimalPointAt",
+        "Dubon2026.sourceInducedDifferential",
+        "Dubon2026.sourceInducedDifferentialLieHom",
+        "Dubon2026.sourceInducedSpecialLinearLieHom",
+        "Dubon2026.sourceInducedSpecialLinearLieRingModule"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInducedLieAudit5.log",
+      "logSha256": "76EF22DDA6573EFC51BD8D539B3C2A963B446EA725A8AA370972CF99B588F1FD",
+      "auditSha256": "4C9CDC4D8F1ED2E97B90EE88834481A080721153950CC549036A46A8A88E4CFF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 78,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceInducedLieDependencyAudit.log",
+      "dependencyAuditSha256": "A4753C940C5DCC3669C3B7D8B7125AB210F3C48468B734BFFD5585E73304C0CD",
+      "dependencyAuditSourceSha256": "9BE74AA411C08FC9318A459E58E8631A3F4FACBFDD0C9701079E50FC088B3B54",
+      "consumer": "Dubon2026.sourceInducedSpecialLinear_exists_complement",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+      "discharged": "The original induced coefficient module over every characteristic-zero field in positive rank has actual invariant special-linear Lie complements. Its differential is constructed from its exact right translation, its Borel covariance is proved stable by all-algebra epsilon evaluation, its finite dimension is derived from original degree/denominator bounds, and its acting trace-zero Lie algebra is proved semisimple.",
+      "boundary": "Scratch only; excludes the frozen 4,860-module production verification. Group-stability of these complements, nonzero unipotent-fixed vectors in each nonzero stable subspace, full actual coefficient irreducibility/base-change identification, and the existing arithmetic and automorphy obligations remain open. DUB-17-20 remain open; acceptance 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-induced-lie-reuse-review-20261020.json",
+      "reuseReviewSha256": "B41425D3FAEEB84982FBA110A2378CE81BFF7E3B8905453B1B7A489F2F747AA5",
+      "externalSources": [
+        {
+          "file": "RS-Exponential.lean.txt",
+          "gitBlob": "3d62a85a9e48aa28f23f81b6bef11e8da1e2133d",
+          "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Exponential.lean",
+          "sha256": "BAAADCFBC5657E5F3CAD65BA28674A4F445FA62F269FE7C93B07657C186A49F9"
+        },
+        {
+          "file": "RS-Extension.lean.txt",
+          "gitBlob": "30972d5ad6a5906f98ac610437c22caf02f1f2c8",
+          "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Extension.lean",
+          "sha256": "CC7B130B3F42C22C87289CC800EB3A3441BB824E6FFEBD8CF4248FED4839F58A"
+        },
+        {
+          "file": "RS-Differential.lean.txt",
+          "gitBlob": "57e1ac67c0f151fadebf86e6a588c8a57d38e6a8",
+          "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Differential.lean",
+          "sha256": "8C7E16FAFF2336CB1A1BC6A58412388BBA22A55B1CC94A75391B6F758C8E8B19"
+        },
+        {
+          "file": "Annals-PotentialAutomorphy-final-audit.txt",
+          "gitBlob": "622ec2bbc5da60388187708b7747db55cdf768d8",
+          "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/scratch/1812.09999/c01/final-audit.txt",
+          "sha256": "3CE68668C55EC7D0C80FF41E91733B66E1A9157F9F4374EC2F9B5A644BC309BB"
+        }
+      ],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceSquareZeroLine",
+        "SourceRegularSquareZeroCurve",
+        "SourceSquareZeroCurveDifferential",
+        "SourceSquareZeroOrbitExponential",
+        "SourceSquareZeroGroupStability",
+        "SourceInducedSquareZeroStability"
+      ],
+      "files": [
+        {
+          "module": "SourceSquareZeroLine",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroLine.lean",
+          "sha256": "2700460D4A90E6782863D45C02357C30AA5C3C2D01DE093552EDCE1976B48174",
+          "oleanSha256": "6F24787F650B597195AF7F6DFC96B2E8E99B5132AC5C484ED2D22FD8A3B3B0C1"
+        },
+        {
+          "module": "SourceRegularSquareZeroCurve",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRegularSquareZeroCurve.lean",
+          "sha256": "41299741BFC801FBAF6FF5D87AB2A7AD0A335B8A05F38F342E627E5336E666E3",
+          "oleanSha256": "F1569CD62978BAFC8EA119CC9D0A41AAFD327A99CF5F3312DFB6E932A96D9F32"
+        },
+        {
+          "module": "SourceSquareZeroCurveDifferential",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroCurveDifferential.lean",
+          "sha256": "B1DFFA006286CA34C8A8E1186604EE4D358EEE9338A9BB05ED9F5705FE7BDFF6",
+          "oleanSha256": "D17DC385A351C7963D2A86FF731A8CC23B7E585056CC29BC796E4CC5425EB45A"
+        },
+        {
+          "module": "SourceSquareZeroOrbitExponential",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroOrbitExponential.lean",
+          "sha256": "28EEC327AAB1097EFB1EB127C8B8F4E35328D5C3D97D47F5DDB1B20EF9836066",
+          "oleanSha256": "4794BE904FA6EF6C3B2CAC10E61B707EDAA41214DC955E3F16A58F49952FF671"
+        },
+        {
+          "module": "SourceSquareZeroGroupStability",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroGroupStability.lean",
+          "sha256": "067F84E05FBD2FF922C5C4D186C2B1FBBC4F64035CD747D65E316453EC825BFB",
+          "oleanSha256": "E1B052F0D862199AE3B38BA45D255EC6C5BF1C12F5861520A14B6DCEAF6BAAA4"
+        },
+        {
+          "module": "SourceInducedSquareZeroStability",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInducedSquareZeroStability.lean",
+          "sha256": "6D0E881E4CC4D344F81496C2827E4E7AFA85718FBAF3C97FCD4DD35D6CE67814",
+          "oleanSha256": "8878B8BFCC2F6B0C106A195B3FBC780501CB43C7507450396150020956CB5715"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceSquareZeroLine",
+        "Dubon2026.sourceSquareZeroMatrix_map",
+        "Dubon2026.sourceSquareZeroLine_add",
+        "Dubon2026.sourceSquareZeroLine_map",
+        "Dubon2026.sourceSquareZeroLine_zero",
+        "Dubon2026.sourceSquareZeroCurvePoint",
+        "Dubon2026.sourceRegularSquareZeroCurve",
+        "Dubon2026.sourceSquareZeroCurvePoint_aeval",
+        "Dubon2026.sourceRegularSquareZeroCurve_aeval",
+        "Dubon2026.sourceRegularSquareZeroCurve_zero",
+        "Dubon2026.sourceSquareZeroLine_infinitesimalPoint",
+        "Dubon2026.sourcePolynomialDualShift",
+        "Dubon2026.sourceSquareZeroCurve_infinitesimalPoint",
+        "Dubon2026.sourcePolynomial_derivative_dual",
+        "Dubon2026.sourceRegularSquareZeroCurve_derivative",
+        "Dubon2026.sourceSquareZeroCurve_coeff_succ",
+        "Dubon2026.sourceSquareZeroCurve_coeff",
+        "Dubon2026.sourceSquareZeroCurve_eval_action",
+        "Dubon2026.sourceSquareZero_action_eq_finite_exp",
+        "Dubon2026.sourceRegularDifferential_pow_mem",
+        "Dubon2026.sourceSquareZero_action_mem_of_differential",
+        "Dubon2026.sourceSquareZero_action_eq_of_differential_zero",
+        "Dubon2026.sourceInducedLieSubmodule_squareZero_stable",
+        "Dubon2026.sourceInduced_exists_squareZero_stable_complement",
+        "Dubon2026.sourceCurvePolynomialSemiring",
+        "Dubon2026.sourceCurveDualSemiring"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceSquareZeroMatrix_map",
+        "Dubon2026.sourceSquareZeroLine_add",
+        "Dubon2026.sourceSquareZeroLine_map",
+        "Dubon2026.sourceSquareZeroLine_zero",
+        "Dubon2026.sourceSquareZeroCurvePoint_aeval",
+        "Dubon2026.sourceRegularSquareZeroCurve_aeval",
+        "Dubon2026.sourceRegularSquareZeroCurve_zero",
+        "Dubon2026.sourceSquareZeroLine_infinitesimalPoint",
+        "Dubon2026.sourceSquareZeroCurve_infinitesimalPoint",
+        "Dubon2026.sourcePolynomial_derivative_dual",
+        "Dubon2026.sourceRegularSquareZeroCurve_derivative",
+        "Dubon2026.sourceSquareZeroCurve_coeff_succ",
+        "Dubon2026.sourceSquareZeroCurve_coeff",
+        "Dubon2026.sourceSquareZeroCurve_eval_action",
+        "Dubon2026.sourceSquareZero_action_eq_finite_exp",
+        "Dubon2026.sourceRegularDifferential_pow_mem",
+        "Dubon2026.sourceSquareZero_action_mem_of_differential",
+        "Dubon2026.sourceSquareZero_action_eq_of_differential_zero",
+        "Dubon2026.sourceInducedLieSubmodule_squareZero_stable",
+        "Dubon2026.sourceInduced_exists_squareZero_stable_complement"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceSquareZeroLine",
+        "Dubon2026.sourceSquareZeroCurvePoint",
+        "Dubon2026.sourceRegularSquareZeroCurve",
+        "Dubon2026.sourcePolynomialDualShift",
+        "Dubon2026.sourceCurvePolynomialSemiring",
+        "Dubon2026.sourceCurveDualSemiring"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroAudit6.log",
+      "logSha256": "74C7392C7A8AEC182005DFDF2283E4B88E728C7F3297286FBFAB19184E38A071",
+      "auditSha256": "55C91EF0B43C2FA6BC4B20FFB701D1800070F30CE1429AC0FC64DBC4F895C8BA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 38,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroDependencyAudit.log",
+      "dependencyAuditSha256": "E494B371AB33868A0B05BFC10CBAA0AD50BCC1C01133166E5BE84DE0E294E9A6",
+      "dependencyAuditSourceSha256": "8D75E189AA5BD36C817DEAFAF10846CF726A1EAC9EA5019E11BF648E65416E1F",
+      "consumer": "Dubon2026.sourceInduced_exists_squareZero_stable_complement",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+      "discharged": "The actual source square-zero matrix orbit is a polynomial over its original regular-function ring. Native Taylor expansion proves that its derivative equals the orbit of the actual matrix differential. The coefficient recurrence gives the factorial-scaled powers of that differential and the exact finite exponential. Every original induced Lie submodule, including the already constructed invariant complements, is stable under all original square-zero special-linear directions.",
+      "boundary": "Scratch only; excludes frozen 4,860-module production verification. Full special-linear and general-linear group stability, nonzero unipotent-fixed vectors in every nonzero stable subspace, full coefficient irreducibility and base-change identification, and the existing arithmetic and automorphy obligations remain open. DUB-17-20 remain open; acceptance 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-square-zero-reuse-review-20261020.json",
+      "reuseReviewSha256": "BB04F3EF8CE5B4B1D01D9CF751489EF7A55C79FFB051D6F0A9BB63F541F8609F",
+      "externalSources": [
+        {
+          "file": "RS-Exponential.lean.txt",
+          "gitBlob": "3d62a85a9e48aa28f23f81b6bef11e8da1e2133d",
+          "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Exponential.lean",
+          "sha256": "BAAADCFBC5657E5F3CAD65BA28674A4F445FA62F269FE7C93B07657C186A49F9"
+        }
+      ],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceSpecialLinearGenerationBasics",
+        "SourceSpecialLinearGeneration",
+        "SourceInducedSpecialLinearStability"
+      ],
+      "files": [
+        {
+          "module": "SourceSpecialLinearGenerationBasics",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearGenerationBasics.lean",
+          "sha256": "016D860105CE9D1FAE9CDBF09F32ED5EAF865E19F13982F73E086AC8805D1525",
+          "oleanSha256": "AD3513C3D5D058DEF1BD34DFD35C717807961745E74A0B23DF0C4975E0276B85"
+        },
+        {
+          "module": "SourceSpecialLinearGeneration",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearGeneration.lean",
+          "sha256": "EB5DAEDE25F4886EECD285E64BEEB88685AFAB68C9B33C59F6D7A1080132E7A4",
+          "oleanSha256": "C0E52C09047FDEA0E53BA5857A60AB2B60F6FB9304CDE30CAA294D8463EA745C"
+        },
+        {
+          "module": "SourceInducedSpecialLinearStability",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInducedSpecialLinearStability.lean",
+          "sha256": "712E9D6BB4B73A600129B3354C9652FB0D5CB297B769A347EC6C125B3F47DE56",
+          "oleanSha256": "F2A622E6B8ECAB850134FEF412715F6F6EBF0AD724F9B4A220E16C360FE0B22C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceSLTransvection",
+        "Dubon2026.sourceSLTransvection_coe",
+        "Dubon2026.sourceSLTransvection_zero",
+        "Dubon2026.sourceSLPairDiagonal",
+        "Dubon2026.sourceSLPairDiagonal_coe",
+        "Dubon2026.sourceSLMatrixHom",
+        "Dubon2026.sourceSLMatrixHom_apply",
+        "Dubon2026.sourceSLMatrixHom_injective",
+        "Dubon2026.sourceSL_diagonal_ne_zero",
+        "Dubon2026.sourceSL_diagonal_commute",
+        "Dubon2026.sourceSL_diagonal_product",
+        "Dubon2026.sourceSL_diagonal_transvection_decomposition",
+        "Dubon2026.sourceSL_pairDiagonal_decompose",
+        "Dubon2026.sourceSL_transvection_induction",
+        "Dubon2026.sourceInducedLieSubmodule_specialLinear_stable",
+        "Dubon2026.sourceInduced_exists_specialLinear_stable_complement"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceSLTransvection_coe",
+        "Dubon2026.sourceSLTransvection_zero",
+        "Dubon2026.sourceSLPairDiagonal_coe",
+        "Dubon2026.sourceSLMatrixHom_apply",
+        "Dubon2026.sourceSLMatrixHom_injective",
+        "Dubon2026.sourceSL_diagonal_ne_zero",
+        "Dubon2026.sourceSL_diagonal_commute",
+        "Dubon2026.sourceSL_diagonal_product",
+        "Dubon2026.sourceSL_diagonal_transvection_decomposition",
+        "Dubon2026.sourceSL_pairDiagonal_decompose",
+        "Dubon2026.sourceSL_transvection_induction",
+        "Dubon2026.sourceInducedLieSubmodule_specialLinear_stable",
+        "Dubon2026.sourceInduced_exists_specialLinear_stable_complement"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceSLTransvection",
+        "Dubon2026.sourceSLPairDiagonal",
+        "Dubon2026.sourceSLMatrixHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSLGroupAudit3.log",
+      "logSha256": "69F56A2B5E85328AC872BAC8E3A801C6E13A703F9BB624B5E090FC62F03E996B",
+      "auditSha256": "9CED2A1AF81B6C399403ECC3839E82197F4F0734CEED1F14A8660AC3598ED30B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceSLGroupDependencyAudit.log",
+      "dependencyAuditSha256": "AF330C23F4AA2682044899A4869EB19236FF935216E2F2B3B41222EFA4D820D8",
+      "dependencyAuditSourceSha256": "B2FEB56CDC4B20EA1453E5794637954CB2C2329C6285D9FE20CF9AAFE1A58F93",
+      "consumer": "Dubon2026.sourceInduced_exists_specialLinear_stable_complement",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+      "discharged": "Every actual source-induced Lie submodule, including the already constructed Lie complements, is stable under every original determinant-one matrix. The field generation theorem is proved from exact matrix factorization, determinant-one diagonal decomposition and six actual elementary factors. No special-linear generation or group-stability certificate remains.",
+      "boundary": "Scratch only; excludes frozen 4,860-module production verification. General-linear stability, nonzero unipotent-fixed vectors in every nonzero stable subspace, coefficient irreducibility and base-change identification, and all previously open arithmetic and automorphy obligations remain open. Acceptance remains 16/20; DUB-17-20 remain open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-sl-group-reuse-review-20261020.json",
+      "reuseReviewSha256": "22913D31BDCBA6F0C03501F67C3B0FA7B325F40F395E7A14BB857AD04E5B5EB8",
+      "externalSources": [
+        {
+          "file": "TauCeti-Transvection.lean.txt",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/cc73e43d461427571b62274c83057192b01aa567/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Transvection.lean",
+          "gitBlob": "76e2ec2fe4cc2b43849d123fa3e25a939d4d157d",
+          "decision": "Adapt field generation, excluding the integer Euclidean algorithm.",
+          "sha256": "BFA14486CA5A08347E4F02E0249579A4B22B6A82694F12FA1F24026DD1FE502D"
+        },
+        {
+          "file": "TauCeti-Diagonal.lean.txt",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/cc73e43d461427571b62274c83057192b01aa567/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Diagonal/Basic.lean",
+          "gitBlob": "1fb7696e20bd0f778c4502fdfe9996450217305e",
+          "decision": "Adapt the six-transvection factorization directly over fields, omitting general ring and torus infrastructure.",
+          "sha256": "AB57054F65E372F43E46717BA38B954B9C31FD8E0A235C694A5A5D555BB57A15"
+        },
+        {
+          "file": "Mathlib-SpecialLinearGroup.lean.txt",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/8af27d91704d4e7c4a0cdf149d8ce56034e96c93/Mathlib/LinearAlgebra/Matrix/SpecialLinearGroup.lean",
+          "gitBlob": "13aa110aaabcb98d0853a80cdd55ba8e39c1e4fa",
+          "decision": "Adapt determinant-one diagonal decomposition and the original native matrix factorization bridge. Local names, qualified native coercion and dif_pos replace newer interfaces. No upstream set_option is adopted.",
+          "sha256": "BE4F9A944DD76F975719AEE7DEC262EB93347EFCD045B4911D94E34B89C30455"
+        },
+        {
+          "file": "TauCeti-LICENSE.txt",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/cc73e43d461427571b62274c83057192b01aa567/LICENSE",
+          "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+          "decision": "Apache-2.0 license.",
+          "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08"
+        },
+        {
+          "file": "Mathlib-LICENSE.txt",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/8af27d91704d4e7c4a0cdf149d8ce56034e96c93/LICENSE",
+          "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+          "decision": "Apache-2.0 license.",
+          "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08"
+        },
+        {
+          "file": "RS-Integration.lean.txt",
+          "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Integration.lean",
+          "gitBlob": "878e3c2001d70c7d7a9bc2ea83bd7a1eb07c4d2a",
+          "decision": "Reference only. Full polynomial-weight interpolation framework deferred; native matrix factorization plus the actual source finite exponential is shorter for special-linear stability.",
+          "sha256": "887B6BE6DB0132B5EE82C4FFBA5AD462B1344DF2D45085F14B6A7387BB915835"
+        },
+        {
+          "file": "TauCeti-LocallyNilpotent.lean.txt",
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/8fdd17266a8b40ae0c490f85cdd9a01966a54b2b/TauCeti/Algebra/Lie/Derivation/LocallyNilpotent.lean",
+          "gitBlob": "f9cd5f179c4e204e8ea50a90e57e055e41b58b07",
+          "decision": "Reviewed next-step candidate, not adopted or proved by this three-module receipt.",
+          "sha256": "1398BA7C291647A728CD4918D8247B3B7E1A1404494B857AE744D7B16B6AD87B"
+        },
+        {
+          "file": "RS-HighestWeight-Basic.lean.txt",
+          "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/HighestWeight/Basic.lean",
+          "gitBlob": "0d78eeec749b5a6b81e64be401d19bfbd3222c03",
+          "decision": "Reference only. Requires a nonzero integral weight space and more imported weight infrastructure; direct nilpotence plus pinned Engel theorem is being assessed first.",
+          "sha256": "CDFD46437E65B612938774502B988B8417071652149217E833EDC60BB8645CB1"
+        }
+      ],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/highest-line-reuse-review-20261019.json",
+    "Tools/highest-irreducibility-reuse-review-20261020.json",
+    "Tools/source-special-linear-reuse-review-20261020.json",
+    "Tools/source-induced-lie-reuse-review-20261020.json",
+    "Tools/source-square-zero-reuse-review-20261020.json",
+    "Tools/source-sl-group-reuse-review-20261020.json"
+  ],
+  "archives": [
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-lean-toolchain.txt",
+      "sha256": "0FBD6253482EA3F6F129D0F176C9F6296E49A67B71D52F4C2C23BDC058BF9350",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-LeviDecomposition.lean.txt",
+      "sha256": "4E9EA0C2934F9A5AE832979136D630232AF789D80D51508FF0EEFA29BBCFC78E",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-LICENSE.txt",
+      "sha256": "91EB6A92B2168965541BCB8E8AB3FCEFFC62DACA810921893950E7A851CF3A87",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-BorelWeil-excerpt.lean.txt",
+      "sha256": "86AC3F856B058E2BF6AE083D725EAC30448D8C8E8104FB9D7E97FA37F73D9304",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-Rational-GL.lean.txt",
+      "sha256": "40738EA3A9B7497D504F1ECBC96B6246CA8E4BC4B1DE665D20A8FC7E810E8985",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-Regular-excerpt.lean.txt",
+      "sha256": "F3C736396B1F75FD467D867637B95BDD996A584F4EB0328C06830CD27F999E34",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/DiagonalCartan.lean.txt",
+      "sha256": "C45E06E0F6C994EDA927432D787DAF0DB15BDFFF4341B688881132ED49C85A3C",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/GeneralLinearBasic.lean.txt",
+      "sha256": "A6675EA858CB744526EFCEC5E3E4D540FD63C7253D20918C19E0C796D1A38DE2",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/GeneralLinearRadical.lean.txt",
+      "sha256": "CE415227195E2F7A312694E7A75845BD888AB685835544DD65382EBD602DA0D0",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/LICENSE",
+      "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/Annals-PotentialAutomorphy-final-audit.txt",
+      "sha256": "3CE68668C55EC7D0C80FF41E91733B66E1A9157F9F4374EC2F9B5A644BC309BB",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Differential.lean.txt",
+      "sha256": "8C7E16FAFF2336CB1A1BC6A58412388BBA22A55B1CC94A75391B6F758C8E8B19",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Exponential.lean.txt",
+      "sha256": "BAAADCFBC5657E5F3CAD65BA28674A4F445FA62F269FE7C93B07657C186A49F9",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Extension.lean.txt",
+      "sha256": "CC7B130B3F42C22C87289CC800EB3A3441BB824E6FFEBD8CF4248FED4839F58A",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/Mathlib-LICENSE.txt",
+      "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/Mathlib-SpecialLinearGroup.lean.txt",
+      "sha256": "BE4F9A944DD76F975719AEE7DEC262EB93347EFCD045B4911D94E34B89C30455",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/RS-HighestWeight-Basic.lean.txt",
+      "sha256": "CDFD46437E65B612938774502B988B8417071652149217E833EDC60BB8645CB1",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/RS-Integration.lean.txt",
+      "sha256": "887B6BE6DB0132B5EE82C4FFBA5AD462B1344DF2D45085F14B6A7387BB915835",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-Diagonal.lean.txt",
+      "sha256": "AB57054F65E372F43E46717BA38B954B9C31FD8E0A235C694A5A5D555BB57A15",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-LICENSE.txt",
+      "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-LocallyNilpotent.lean.txt",
+      "sha256": "1398BA7C291647A728CD4918D8247B3B7E1A1404494B857AE744D7B16B6AD87B",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-Transvection.lean.txt",
+      "sha256": "BFA14486CA5A08347E4F02E0249579A4B22B6A82694F12FA1F24026DD1FE502D",
+      "status": "External evidence only; .lean.txt is not imported as Lean proof."
+    }
+  ],
+  "productionFocusedReceipt4887": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\HighestLineDependencyAuditProduction4887.log",
+        "sha256": "EA0CA034B5443A0E80D205815FFEAA2414BEE04FFA147F0BD8AC8BD68FC02BE9",
+        "requiredProofValueEdges": 13,
+        "consumer": "Dubon2026.integralDominantHighestLine_eq",
+        "sourceSha256": "6A3BF9E7A022A0B796124BB514A8C3C7EC1CCBA16B3828360EB5F7F53806CE0F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\UnipotentLineDependencyAuditProduction4887.log",
+        "sha256": "A31C06F01C47130D1CC41B0012167E03E80AC23A979B4EE52090F440F5B203F9",
+        "requiredProofValueEdges": 14,
+        "consumer": "Dubon2026.integralInduced_unipotent_eq_highest",
+        "sourceSha256": "A27F8305503EF48C46EF6A7DF2D24AE5597BC02714071A7072BA7B137F4CD131"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceLieCompleteReducibilityDependencyAuditProduction4887.log",
+        "sha256": "2E2BD5B7CCC435A92AC8E32B4C003097757D29C695807A77294B9920E0BC09AA",
+        "requiredProofValueEdges": 12,
+        "consumer": "Dubon2026.sourceLieModule_exists_complement",
+        "sourceSha256": "2E2D7AEF45E81E6C4E31DAFBE8CAF7FC25E49061A0AF8573BAF1D814B517FE22"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearDependencyAuditProduction4887.log",
+        "sha256": "48BC4C09FC65CC98AE841771BFC87AC8A2111D975C929A4376BECB038C308528",
+        "requiredProofValueEdges": 11,
+        "consumer": "Dubon2026.sourceSpecialLinearModule_exists_complement",
+        "sourceSha256": "7B44A5DB0031D57BF6A0E0631CAB09329430CEE691EB8FD31296C9655690582C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceInducedLieDependencyAuditProduction4887.log",
+        "sha256": "A4753C940C5DCC3669C3B7D8B7125AB210F3C48468B734BFFD5585E73304C0CD",
+        "requiredProofValueEdges": 16,
+        "consumer": "Dubon2026.sourceInducedSpecialLinear_exists_complement",
+        "sourceSha256": "AB2B41B2F1AFE113DA6B2F494C7516378FB819F305A31F0F4223599A18C62F51"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroDependencyAuditProduction4887.log",
+        "sha256": "E494B371AB33868A0B05BFC10CBAA0AD50BCC1C01133166E5BE84DE0E294E9A6",
+        "requiredProofValueEdges": 16,
+        "consumer": "Dubon2026.sourceInduced_exists_squareZero_stable_complement",
+        "sourceSha256": "DB1AFC4357C81C311320460F0433B032025789332B156F84C69C9FF48C7CD6E1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceSLGroupDependencyAuditProduction4887.log",
+        "sha256": "AF330C23F4AA2682044899A4869EB19236FF935216E2F2B3B41222EFA4D820D8",
+        "requiredProofValueEdges": 14,
+        "consumer": "Dubon2026.sourceInduced_exists_specialLinear_stable_complement",
+        "sourceSha256": "D1CC2FACB2D77FAF22B4889DF5B80B5D5C7535E1A07BEFBB7A6A431AEB101BB2"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientStructureProductionAudit4887.log",
+    "sha256": "9F399B8A227112A10124DA839AFC9A0C898BD239918E33409E3B0F558A941E42",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-production-4887-build.log",
+    "aggregateSha256": "A21766401D277414CF15091023C14516989AB17287ADB1772B4105D0786A28DE",
+    "productionModules": 4887,
+    "incrementModules": 27,
+    "axiomChecks": 128,
+    "exhaustiveIncrementTheorems": 289,
+    "linterScopes": 27,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed."
+  },
+  "receipt4887": {
+    "recordedUTC": "2026-10-20T09:56:24.741045+00:00",
+    "log": "logs/dubon-build-20261020-014447-457.log",
+    "sha256": "F908EF017360A936275DA5D6017427E63327E115B726B0269E1D741FC0F0BB92",
+    "bytes": 8363892,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4887,
+    "projectTheorems": 34574,
+    "registeredConsumers": 14737,
+    "registeredConstructions": 438,
+    "declarations": 20575,
+    "generated": 19456,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_014143.log",
+    "foundationSha256": "4A3D33C9D27AB3CF8434FB546B653B73C8556A341181CC9CC5BE815D335CE8F8",
+    "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed."
+  }
+}

@@ -20498,6 +20498,3934 @@
     {
       "path": "Tools/integral-source-weight.json",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedTrailingMinor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedFundamentalVector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralDominantWeightDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedWeightProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralDominantInducedVector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralDominantTensorNontrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAutomorphicNontrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceAutomorphicNontrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearRegularFieldEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearRegularEvaluationContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedEvaluationTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedOrbitContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedActionContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedTensorContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMIntegralInducedTensorContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceIntegralWeightContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CommonCoefficientField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CommonCoefficientLocalField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceCoefficientProperties.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMCommonCoefficientWeights.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceAuxiliaryCoefficientProperties.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMCommonCoefficientAuxiliary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralDominantVectorTranspose.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralWeightLongestPermutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralDominantHighestVector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHighestWeightAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHighestTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceHighestTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/highest-weight-reuse-review-20261019.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/integral-coefficient-realization.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralWeightBlockTriangular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralWeightLeadingLU.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralWeightGenericMinors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralWeightBorelOpenCell.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedOppositeLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralHighestOppositeTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralDominantHighestLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralWeightUnitriangularCell.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralUnipotentLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLieCompleteReducibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpecialLinearMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpecialLinearRadical.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpecialLinearComplements.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularDifferentialLie.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularDifferentialEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedLieComplements.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSquareZeroLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularSquareZeroCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSquareZeroCurveDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSquareZeroOrbitExponential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSquareZeroGroupStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedSquareZeroStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpecialLinearGenerationBasics.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpecialLinearGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedSpecialLinearStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/highest-line-reuse-review-20261019.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/highest-irreducibility-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-special-linear-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-induced-lie-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-square-zero-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-sl-group-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-LeviDecomposition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-BorelWeil-excerpt.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-Rational-GL.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-Regular-excerpt.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/DiagonalCartan.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/GeneralLinearBasic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/GeneralLinearRadical.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/Annals-PotentialAutomorphy-final-audit.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Differential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Exponential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Extension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/Mathlib-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/Mathlib-SpecialLinearGroup.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/RS-HighestWeight-Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/RS-Integration.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-Diagonal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-LocallyNilpotent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-Transvection.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/source-coefficient-structure.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/lean-reuse-audit-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDerivationLocalNilpotence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularDifferentialPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularDeterminantDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularLocalNilpotence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceStrictUpperLie.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedEngelInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceUpperTransvection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceUnipotentGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllAlgebraSquareZeroInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllAlgebraUnipotentInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedUnipotentInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedLieIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePolynomialCoefficientSubmodule.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSquareZeroDifferentialStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularSpecialLinearStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedGroupLieStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedGroupIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedHighestOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRegularCoefficientMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedCoefficientMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoefficientDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInducedCoefficientDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoefficientHighest.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoefficientSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFractionTensorInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralGenericFibre.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoefficientGroupAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralGenericFibreAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceIntegralFactorIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePiTensorBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralTensorGenericFibre.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralTensorGenericFibreAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceIntegralTensorIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceHighestWeightProperties.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMCommonCoefficientHighestWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-engel-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-lie-irreducible-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-group-irreducible-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-generic-fibre-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-highest-tensor-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-unipotent-reuse-20261020/RS-Borel-Generation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-unipotent-reuse-20261020/RS-Borel-Stability-Differential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/source-unipotent-reuse-20261020/RS-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/source-highest-weight-identification.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularBinaryForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularDivisorDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularRationalCusps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCuspDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralModularSymbols.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePairingFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckePeriodReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodSlash.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodAxis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodAxisReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGeodesicIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodIntegrand.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCoefficientAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEichlerPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEichlerIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEichlerTransformation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckePrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePeriodSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeHeckeGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePrimeAdjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-hecke-symbols-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-actual-period-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-injectivity-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/arithmetic-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-EichlerInjective.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-HeckeAlgFiniteFinal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-NewformOrbit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/final-arithmetic-searches.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/FLT-HardlyRamifiedLift.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/FLT-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/formal-conjectures-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/KN-Deligne.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/KN-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/retrieval.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/SatoTateConjecture.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/BigOperators/Fin.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/BigOperators/Finset/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/Group/Subgroup/Centralizer.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/Group/Subgroup/Map.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/GroupWithZero/Divisibility.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/MonoidAlgebra/Basis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/MvPolynomial/PDeriv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Asymptotics/MvPolynomial.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/Periodic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Int/ChineseRemainder.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Int/Fin2Tuple.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Int/LinearCongruence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Nat/GCD.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/ZMod/Divisibility.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/ZMod/FinEquiv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/ZMod/Units.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/Coset/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/DoubleCoset/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/DoubleCoset/Inv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/DoubleCoset/Normalizer.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/Index/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Dual/FiniteAlgebra.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Adjugate/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Adjugate/FinTwo.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Commute.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Diagonal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Divisibility.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Adjugate.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Diagonal/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/DoubleCoset.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Equivalence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/RationalCanonicalFormFinTwo.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/SmithNormalForm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Equivalence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Trace/FinTwo.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Triangular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Logic/Equiv/Fin/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/MeasureTheory/Integral/Bochner/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/MeasureTheory/Integral/ExpDecay.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Associativity.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Delta0.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/CosetMap.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Diagonal/Coset.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/DoubleCoset.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/UpperTriFactorization.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/CoprimeCosets.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/DiamondCosets.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/PairCoset.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GLn/CosetDecomposition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GLn/DiagonalCosets.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplication.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Handedness.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Support.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Unit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Normalizer.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/One.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Representation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/StabConjugation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/BinaryForms.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/BoundedAtCusp.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Units.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Slash.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/DiamondOperators.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/CuspRing.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Cusps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Diamond.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Form.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Holomorphic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Independence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Invariance.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/ModularForm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Operators.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Prime.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Reindex.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Ring.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Trace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Cusps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/DoubleCoset.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Holomorphic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Invariance.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/ModularForm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Primitive.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/QExpansion/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/SlashActionRat.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Augmentation/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Coset.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/FDRep.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Intertwining.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Rep/TensorShortExact.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Subrepresentation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/Finrank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/LinearSubst.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/Trace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/Polynomial/Dickson.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Topology/DiscreteSeparation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period-manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/TauCeti-LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/TauCeti-PrescribedLocalForms.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/source-original-integral-hecke.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveHeckeCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveCoefficientField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveLocalCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveFieldHeckeCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveResidualHeckeCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveResidualCharacteristic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-primitive-coefficients-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residual-character-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residual-characteristic-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/modular-association-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/anthropic-flt-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/tau-yone-closure-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/AdditiveCoefficientAction.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/Adic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/ConstantPullbackFunctoriality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/FullTateModule.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/lake-manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/PullbackCohomology.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/RationalAdic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/SequentialLimit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/etale/verified-manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/lake-manifest.json.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Algebra/Hom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Algebra/Pi.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/BaseChange/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/CommHopfAlgCat/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/CommHopfAlgCat/SchemePoints.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/CommHopfAlgCat/Yoneda.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/FunctorOfPoints.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/Hopf/Conjugation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/Hopf/Map.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/KilledByRank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/PointsFunctor.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/AlgebraicGroup/Product.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Bialgebra/TensorProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Coalgebra/Convolution.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Group/Equiv/Pi.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Group/Subgroup/ZPowers.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/GroupWithZero/Hom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/HopfAlgebra/FiniteDual/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/HopfAlgebra/FiniteDual/CartierDuality/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/HopfAlgebra/FiniteDual/Functoriality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/HopfAlgebra/TensorShear.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Module/Equiv/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Module/Submodule/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Module/Torsion/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Module/Torsion/Decomposition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Module/Torsion/Snake.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/MvPolynomial/PDeriv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Polynomial/CommonXPower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/Ring/Subgroup.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/TensorProduct/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Algebra/TensorProduct/Maps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineGroupScheme/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineGroupScheme/CartierDuality/FiniteLocallyFree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineGroupScheme/CartierDuality/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineGroupScheme/Equivalence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineGroupScheme/HopfSpec.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineGroupScheme/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/AffineScheme.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing/Basis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing/LaurentExpansion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing/VariableChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRingMap.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Derivative.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Formula/Chord.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Formula/Derivation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Formula/TwoTorsion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Formula/VariableChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/AdjoinTower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Basis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/CoordinateRingIntegral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/DivisionPolynomialTower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Galois/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Galois/Descent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Galois/FixedField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GeneratedByY.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Reduction.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Genus.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/Unique.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Map/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Map/Differential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Norm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/PointPlace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/PowerTower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Separable.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Separating.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/FixedField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/Place.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/InvariantDifferential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/IsAlgClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/IsSepClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/DegreeOneReduction.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/Derivation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/Galois.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/MapAlong.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/MapEquiv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/Place.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/PolePoints.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TwoTorsion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/VariableChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/RelativeFrobenius.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/ScalarExtension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/ValuationIntegrality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Denominator.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Coprimality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Cusp.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Discriminant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Eval.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Invariant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/NormEDS.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Omega.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/RatFuncDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Torsion/AlgClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Torsion/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Torsion/IsSepClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Torsion/Roots.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Universal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/ZSMul.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Add/Assoc.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Add/Inverse.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Add/PairSubst.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Add/Series.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Add/Unit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/AdicPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Chord.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Eval.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Inverse.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/PairEval.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Add.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/AdicCompletion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Hom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Range.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/ThirdPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/WExpansion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Integrality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/BaseChange/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/BaseChange/Degree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/BaseChange/Separability.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Degree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Descent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Differential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Dual/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Dual/Separable.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Factorisation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Galois.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/GenericPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Hom/Add.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Hom/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Hom/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Hom/Differential.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Hom/PointMap.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Hom/Ring.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/InfinityPlace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IntermediateRing/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IntermediateRing/Dedekind.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IntermediateRing/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IntermediateRing/PointIdeal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IntermediateRing/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Kernel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MapsInfinity.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Commute.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Comp.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Degree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/DivisionPolynomialSeparable.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/GenericPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Hom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/IsSepClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Kernel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/KernelCard.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/MapsInfinity.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/PrimeKernel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Separability.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Torsion/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Torsion/Structure.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/MulByInt/Torsion/Surjective.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Neg.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Kernel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Place.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PullbackAdd.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/RelativeFrobenius/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/RelativeFrobenius/Factorisation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/RelativeFrobenius/Naturality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/RelativeFrobenius/Point.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/RelativeFrobenius/Supersingular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/RelativeFrobenius/Verschiebung.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Separability.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/TautologicalPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Unramified.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/AdditionLaw/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/AdditionLaw/Equation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/AdditionLaw/Unit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Chart/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Chart/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/CoordinateRing.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Neg.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Nonsingular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Point.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Prime.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Unimodular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/VariableChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Assoc.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Chart.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Comm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Cover.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Inverse.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/MonObj.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Morphism.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Pointed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Points.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/Unit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Addition/VariableChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Chart.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/FieldPoints.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/FormalPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/FunctionField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Addition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/BaseChange/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/BaseChange/GroupLaw.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/BaseChange/Points.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Glue.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/GroupLaw.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Hom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/JInvariant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/MulBy/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/MulBy/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/MulBy.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/NaiveExactOrder/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/NaiveExactOrder/FiniteEtale.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/NaiveLevel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Neg.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Rigidity.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/TateNormalForm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Torsion/Equalizer.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Torsion/Etale/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Torsion/Etale/Locus.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Torsion/Unramified.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Geom/Torsion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/GroupLaw.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/JInvariant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/MulBy.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Neg.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/OfWeierstrass.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Points.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/ProjModel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/Smooth.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/TateNormalForm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/TautologicalPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/VariableChange/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Scheme/ZeroSection.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Supersingular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/TateNormalForm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Universal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EllipticCurve/Weierstrass.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/EqualizerCarrier.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/GroupScheme/ClosedSubgroup/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/GroupScheme/ClosedSubgroup/Criterion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/GroupScheme/FiniteFlat.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/GroupScheme/Kernel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/GroupScheme/KilledByRank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/GroupScheme/Torsion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/IdealSheaf/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/IdealSheaf/Comap.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/IdealSheaf/Locality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/IdealSheaf/OfIdealTop.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/IdealSheaf/Section.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ModularCurve/Ell.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ModularCurve/HomLevel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ModularCurve/ModuliProblem.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ModularCurve/NaiveLevel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ModularCurve/YOne.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Modules/GlobalSections.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Modules/RationalFunctions.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/ClosedImmersion/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Dominant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Etale.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Finite/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Finite/FlatDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/FinitePresentation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Flat/Dominant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Flat/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Flat/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/FormallyUnramified.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/RelativeDimension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/SchemeTheoreticallyDominant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Smooth/Regular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Smooth/RelativeDimension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Smooth/Retract.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Smooth/StandardSmooth.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/StandardSyntomic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Syntomic/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Morphisms/Syntomic/Smooth.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ProjectiveSpectrum/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ProjectiveSpectrum/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ProjectiveSpectrum/SchemeTheoreticallyDominant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/RationalPoint/Affine.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/RationalPoint/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ResidueDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/ResidueField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/BaseAlgebra.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/CodimensionOnePoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/DiscreteValuationStalk.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/FunctionField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/GenericPoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/KrullDimension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/Opens.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/PowerSeries.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/RegularLocalRing.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/Scheme/SpecOver.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/Dedekind/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/Dedekind/ClassGroup.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/Degree/Order.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/FiniteSum.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/FixedDegree/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/FractionalIdealDivisor/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/LinearSystem/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/Order.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/PicZeroQuotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/AlgebraicGeometry/WeilDivisor/Principal/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/InvolutiveDual.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Limits/Shapes/Pullback/Section.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Limits/Shapes/Pullback/SplitEpi.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Cartesian/CommGrp.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Functor.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Grp/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Grp/Over.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Grp/Subobject.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Grp/Translation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Monoidal/Mon.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/MorphismProperty/Limits.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/CategoryTheory/Preadditive/CoprimeKernels.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Data/Fin/Sum.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Data/Int/CastNeZero.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Data/ZMod/MonoidHomEquiv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Data/ZMod/Torsion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/AffineModel/Extension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/AffineModel/IntegralClosure.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/AffineModel/Place.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/AffineModel/Prime.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Consequences/HighDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Consequences/PointSeparation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Consequences/WeierstrassGaps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/ConstantField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Different/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Different/Complementary.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Different/Divisor.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Different/Hurwitz.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Different/Tame.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/CanonicalDivisor.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/Cotrace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/Dimension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/Kaehler.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/LocalComponent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/LocalOrder.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Differential/Weil.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Divisor/AffineModel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Divisor/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Divisor/Conorm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Divisor/Principal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Divisor/ProductFormula.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Divisor/RatFunc.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Elliptic/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/GeometricDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/HolomorphyRing/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Adic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Approximation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/BoundedDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Degree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Existence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Degree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Existence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Fibre.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Fundamental.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Galois.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/IntegralBasis/AlmostEverywhere.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/IntegralBasis/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Splitting/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Extension/Tower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Filtration.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Map.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/OfValuationSubring.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/RatFunc/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/RatFunc/Order.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Place/Zeros.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Repartition/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Repartition/Cokernel.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Repartition/IndexOfSpecialty.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Repartition/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/Repartition/Trace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/AffineClassNumber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/ClassNumber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/DegreeZero.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/Genus.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/Principal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/RatFunc.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/RiemannRoch/Uniqueness.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/FunctionField/SeparablyGenerated.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/Galois/FixedField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/Adjoin/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/Adjoin/EqTop.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/Adjoin/Inv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/Adjoin/Roots.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/Adjoin/Transcendental.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/ExtendRight.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/FieldRange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/LinearDisjoint.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IntermediateField/ScalarTower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/IsSepClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/Minpoly/IsIntegrallyClosedIn.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/Normal/FixedField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/PurelyInseparable/Embedding.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/PurelyInseparable/Exponent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/RatFunc/Automorphism.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/RatFunc/Galois.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/RatFunc/NumDenom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/RatFunc/PowerTower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/RatFunc/Transcendental.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/Separable/OfRootCount.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/Separable/TranscendenceDegreeOne.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/FieldTheory/SeparableDegree.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/GroupTheory/Coset/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/GroupTheory/FiniteAbelian/RankTwo.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/CrossProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Dimension/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Dimension/Tower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Dual/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Dual/Lemmas.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Dual/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/LinearIndependent/Algebra.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Basis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/ZModProdAut.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Span/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/TensorProduct/ScalarExtension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Trace/Exact.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Trace/Prod.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/LinearAlgebra/Unimodular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/DedekindDomain/RelNorm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/ComplAux.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Complement.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Elementary.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Ext.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Invariant/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Invariant/NormEDS.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/NormEDS.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Recurrence.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/ReducedInvariant.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Six.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/EllipticDivisibilitySequence/Universal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/NumberTheory/RamificationInertia/Tower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Order/CompactlyGenerated.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/AdjoinRoot/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Algebraic/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Algebraic/LinearIndependent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/AlgebraicIndependent/TranscendenceBasis.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Artinian/Finrank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/ClassGroup/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/ClassGroup/RelNorm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/AdicValuation/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/AdicValuation/Completion.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/Different/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/Different.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/Factorization.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/Ideal/QuotientPow.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/IntegralClosure.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/DedekindDomain/Overring.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Flat/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Flat/NonZeroDivisors.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Flat/Rank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Flat/TensorProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/FractionalIdeal/Divisibility.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/FractionalIdeal/Operations.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/GradedAlgebra/Homogeneous/Maps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/GradedAlgebra/Homogeneous/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/GradedAlgebra/HomogeneousLocalization/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/GradedAlgebra/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Henselian/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/Extended.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/GoingDown.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/Maps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/MinimalPrime/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/MinimalPrime/Localization.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/MinimalPrime/TensorProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/Operations.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/Quotient/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Ideal/Quotient/Invertible.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/IntegrallyClosed.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/IsIntegral/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/MvPolynomial.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/NormalizationFinite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/PurelyInseparable.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/IntegralClosure/Transfer.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Kaehler/BaseChange.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Kaehler/FormallyEtale.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Kaehler/MapSemilinear.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Kaehler/Separable.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Equidimensional.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/FiniteType.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Integral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Presentation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/KrullDimension/Regular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Length.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/LocalRing/MaximalIdeal/Square.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPolynomial/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPolynomial/Expand.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPolynomial/LinearSubst.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPowerSeries/Equiv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPowerSeries/Evaluation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPowerSeries/Inverse.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPowerSeries/NonZeroDivisors.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPowerSeries/Rename.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/MvPowerSeries/Substitution.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/PicardGroup/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Polynomial/HeightOneSpectrum.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Polynomial/IsIntegral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/PowerSeries/SelfConvolution.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/PowerSeries/SubstInv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/RegularLocalRing/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/RegularLocalRing/Flat.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/RingHom/StandardSyntomic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Smooth/Jacobian.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Smooth/KrullDimension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Smooth/Regular.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Smooth/Retract.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Spectrum/Prime/PowerSeries.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Spectrum/Prime/Topology.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Syntomic/Composition.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Syntomic/Localization.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Syntomic/Smooth.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Syntomic/StandardSyntomic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/TensorProduct/IsDomain.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/TensorProduct/Maps.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/TotallySplit.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Trace/Dual.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Trace/QuotientPow.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Unramified/Fiber.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/AbsoluteValue.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Approximation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Center.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Discrete/Normalize.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Discrete/Order.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Integral/OfValuationLeOne.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/IsTrivialOn.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/NontrivialComap.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Polynomial.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/RamificationGroup.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/RootMonic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/Sum.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/ValuativeRel/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/RingTheory/Valuation/ValuativeRel/Comap.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Topology/Algebra/Nonarchimedean/AdicTopology.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Topology/Algebra/Nonarchimedean/GeometricSeries.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Topology/Algebra/TopologicallyNilpotent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Topology/JacobsonSpace.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Topology/KrullDimension/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/tau-yone/TauCeti/Topology/PureDimension.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Definitions/Def_GaloisRep_DeligneOrdinaryShape.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Definitions/Def_Gamma0CoeffCohomology.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Definitions/Def_HeckeEis_BinaryFormRep.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Definitions/Def_HeckeEis_EichlerIntegral.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Definitions/Def_HeckeGalois_EichlerShimura.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/lakefile.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/NOTICE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_eichlerShimuraMap_eq_coeffH1parMk.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_eichlerShimuraMap_injective.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_exists_eichlerShimura_coeffH1par_binaryFormRepSL.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_exists_eichlerShimura_coeffH1par_binaryFormRepSL_forall_prime.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_exists_isEichlerIntegral_isParabolicCocycle.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_existsEichlerShimuraMapLinear.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_IsEichlerIntegral_eq_zero_of_eval_eq_const.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_IsEichlerIntegral_hasDerivAt_eval_iterate_pderiv.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_IsEichlerIntegral_isBoundedAtImInfty_eval.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_IsEichlerIntegral_slash.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_HeckeEis_jFactor_pow_mul_eval_binaryFormRepSL.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Sol/S_UpperHalfPlane_isBoundedAtImInfty_of_hasDerivAt_of_periodic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/P2M/Util.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/PROOF-PATH.md.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/README.md.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Theorems/Thm_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Theorems/Thm_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Theorems/Thm_HeckeEis_eichlerShimuraMap_injective.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/Theorems/Thm_HeckeEis_IsEichlerIntegral_exists_sub_eq_const.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/source-primitive-coefficient-arithmetic.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodPolynomialBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCorrectionPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodPolynomialAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCohomologyPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEichlerPolynomialPeriodicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEichlerCuspPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCohomologyBounded.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCohomologyInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralReductionExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveAlgebraicIntegerReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-period-cohomology-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-h1-injectivity-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-algebraic-integer-reduction-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/anthropic-flt-residual-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/anthropic-flt-residual-closure-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/Definitions/Def_GaloisRep_Residual.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/Definitions/Def_Gamma0CoeffCohomologyEigen.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/NOTICE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_ringHom_heckeAlgebra_two.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_HeckeEis_eichlerShimuraMap_heckeTLin.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_HeckeEis_exists_isEigensystemH1_binaryFormRepSL_empty_of_isEigensystemH1_of_ringHom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_HeckeEis_exists_isEigensystemH1_one_dvd_mul_sq_of_isEigensystemH1_binaryFormRepSL.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/P2M/Sol/S_HeckeEis_isEigensystemH1_binaryFormRepSL_of_heckeTLin_eq_smul.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/Theorems/Thm_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual-closure.zip",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/source-period-h1-and-specialization.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -25377,7 +29305,145 @@
     "CMIntegralInducedAuxiliaryComparison",
     "IntegralCoefficientEmbedding",
     "CMSourceIntegralWeight",
-    "CMSourceIntegralWeightComparison"
+    "CMSourceIntegralWeightComparison",
+    "IntegralInducedTrailingMinor",
+    "IntegralInducedFundamentalVector",
+    "IntegralDominantWeightDecomposition",
+    "IntegralInducedWeightProducts",
+    "IntegralDominantInducedVector",
+    "IntegralDominantTensorNontrivial",
+    "SmallLevelAutomorphicNontrivial",
+    "CMSourceAutomorphicNontrivial",
+    "GeneralLinearRegularFieldEvaluation",
+    "GeneralLinearRegularEvaluationContinuity",
+    "IntegralInducedEvaluationTopology",
+    "IntegralInducedOrbitContinuity",
+    "IntegralInducedActionContinuity",
+    "IntegralInducedTensorContinuity",
+    "CMIntegralInducedTensorContinuity",
+    "CMSourceIntegralWeightContinuity",
+    "CommonCoefficientField",
+    "CommonCoefficientLocalField",
+    "CMSourceCoefficientProperties",
+    "CMCommonCoefficientWeights",
+    "CMSourceAuxiliaryCoefficientProperties",
+    "CMCommonCoefficientAuxiliary",
+    "IntegralDominantVectorTranspose",
+    "IntegralWeightLongestPermutation",
+    "IntegralDominantHighestVector",
+    "IntegralHighestWeightAction",
+    "IntegralHighestTensor",
+    "CMSourceHighestTensor",
+    "IntegralWeightBlockTriangular",
+    "IntegralWeightLeadingLU",
+    "IntegralWeightGenericMinors",
+    "IntegralWeightBorelOpenCell",
+    "IntegralInducedOppositeLine",
+    "IntegralHighestOppositeTransport",
+    "IntegralDominantHighestLine",
+    "IntegralWeightUnitriangularCell",
+    "IntegralUnipotentLine",
+    "SourceLieCompleteReducibility",
+    "SourceSpecialLinearMatrices",
+    "SourceSpecialLinearRadical",
+    "SourceSpecialLinearComplements",
+    "SourceRegularDifferential",
+    "SourceRegularDifferentialLie",
+    "SourceRegularDifferentialEvaluation",
+    "SourceInducedDifferential",
+    "SourceInducedLieComplements",
+    "SourceSquareZeroLine",
+    "SourceRegularSquareZeroCurve",
+    "SourceSquareZeroCurveDifferential",
+    "SourceSquareZeroOrbitExponential",
+    "SourceSquareZeroGroupStability",
+    "SourceInducedSquareZeroStability",
+    "SourceSpecialLinearGenerationBasics",
+    "SourceSpecialLinearGeneration",
+    "SourceInducedSpecialLinearStability",
+    "SourceDerivationLocalNilpotence",
+    "SourceRegularDifferentialPowers",
+    "SourceRegularDeterminantDifferential",
+    "SourceRegularLocalNilpotence",
+    "SourceStrictUpperLie",
+    "SourceInducedEngelInvariant",
+    "SourceUpperTransvection",
+    "SourceUnipotentGeneration",
+    "SourceAllAlgebraSquareZeroInvariant",
+    "SourceAllAlgebraUnipotentInvariant",
+    "SourceInducedUnipotentInvariant",
+    "SourceInducedLieIrreducible",
+    "SourcePolynomialCoefficientSubmodule",
+    "SourceSquareZeroDifferentialStability",
+    "SourceRegularSpecialLinearStability",
+    "SourceInducedGroupLieStability",
+    "SourceInducedGroupIrreducible",
+    "SourceInducedHighestOrbit",
+    "SourceRegularCoefficientMap",
+    "SourceInducedCoefficientMap",
+    "SourceCoefficientDifferential",
+    "SourceInducedCoefficientDifferential",
+    "SourceCoefficientHighest",
+    "SourceCoefficientSpan",
+    "SourceFractionTensorInjective",
+    "SourceIntegralGenericFibre",
+    "SourceCoefficientGroupAction",
+    "SourceIntegralGenericFibreAction",
+    "CMSourceIntegralFactorIdentification",
+    "SourcePiTensorBaseChange",
+    "SourceIntegralTensorGenericFibre",
+    "SourceIntegralTensorGenericFibreAction",
+    "CMSourceIntegralTensorIdentification",
+    "CMSourceHighestWeightProperties",
+    "CMCommonCoefficientHighestWeight",
+    "SourceModularBinaryForms",
+    "SourceModularDivisorDegree",
+    "SourceModularRationalCusps",
+    "SourceModularCuspDivisors",
+    "SourceIntegralModularSymbols",
+    "SourceHeckePairingFinite",
+    "SourceOriginalHeckePeriodReduction",
+    "SourcePeriodPrimitive",
+    "SourcePeriodSlash",
+    "SourcePeriodAxis",
+    "SourcePeriodAxisReflection",
+    "SourceGeodesicIntegral",
+    "SourceCuspIntegral",
+    "SourcePeriodPolynomial",
+    "SourcePeriodIntegrand",
+    "SourcePeriodCoefficientAction",
+    "SourcePeriodPairing",
+    "SourcePeriodMap",
+    "SourceOriginalPeriodMap",
+    "SourceEichlerPrimitive",
+    "SourceEichlerIntegral",
+    "SourceEichlerTransformation",
+    "SourcePeriodInjective",
+    "SourceOriginalPeriodInjective",
+    "SourceIntegralHeckeAction",
+    "SourceIntegralHeckePrime",
+    "SourceHeckePeriodSum",
+    "SourcePrimeHeckeGeneration",
+    "SourceHeckePrimeAdjoint",
+    "SourceOriginalIntegralHecke",
+    "SourcePrimitiveHeckeCharacter",
+    "SourcePrimitiveCoefficientField",
+    "SourcePrimitiveLocalCoefficients",
+    "SourcePrimitiveFieldHeckeCharacter",
+    "SourcePrimitiveResidualHeckeCharacter",
+    "SourcePrimitiveResidualCharacteristic",
+    "SourcePeriodCocycle",
+    "SourceOriginalPeriodCohomology",
+    "SourcePeriodPolynomialBound",
+    "SourcePeriodCorrectionPolynomial",
+    "SourcePeriodPolynomialAction",
+    "SourcePeriodCohomologyPrimitive",
+    "SourceEichlerPolynomialPeriodicity",
+    "SourceEichlerCuspPolynomial",
+    "SourcePeriodCohomologyBounded",
+    "SourcePeriodCohomologyInjective",
+    "SourceIntegralReductionExtension",
+    "SourcePrimitiveAlgebraicIntegerReduction"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

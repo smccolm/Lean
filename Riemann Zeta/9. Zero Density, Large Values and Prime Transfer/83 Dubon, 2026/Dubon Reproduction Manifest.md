@@ -1,6 +1,30 @@
 # Dubon 2026 — reproduction manifest
 
-Original integral induced tensor, actual coefficient embeddings and source auxiliary comparison (19 October 2026): Geraghty Definition 2.2.1 is constructed literally as original determinant-localized regular functions with reversed-weight upper-Borel covariance over every coefficient algebra and right translation. Generic determinant primality over the original PID, extension of polynomial covariance to singular matrices, adjugate row elimination and original-ring divisibility give a uniform determinant denominator B=max(0,-lambda_last). A constructed infinite-order scalar in the original local ring gives numerator degree D=max(0,sum(lambda)+rank*B). The entire module lies in one finite polynomial stage, so finite generation and freeness follow without a supplied lattice or dimension bound. The actual finite embedding tensor uses the proved individual factors and native tensor bases. Its original embedding index is finite by number-field degree. Existing completion extension and valuation comparison construct its local integer maps and their continuity from actual field embeddings. Original unitary local evaluation constructs the algebraic tensor action. The final actual source consumer derives finite freeness of the original auxiliary automorphic module over the actual primary quotient group ring and its exact unnormalized weighted-trace coinvariant comparison; no coefficient representation, finite-free coefficient module, integral embedding maps or finite-index certificate is supplied. Exact unresolved source dependency: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> CHT/Geraghty integral unitary auxiliary modules -> Geraghty Definitions 2.2.1 and 2.2.3 original integral induced tensor coefficients and arithmetic action. Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed. The 4,832-module production aggregate and focused exhaustive original integral induced tensor, constructed field-embedding coefficients and exact primary auxiliary comparison audit pass with zero diagnostics. Sequential foundation/paper verification of the 4,832-module scope is pending. The preceding 4,805-module scope passed sequential canonical verification. Selected coordinate, determinant and GL-density proofs are adapted from frozen TauCeti, Subspace-Theorems and newer Mathlib sources; original source files, licenses and provenance are retained.
+Injective original period cohomology, faithful coefficient specialization and renewed residual-association research (20 October 2026): The original period map into native group-cohomology H1 is injective for every finite-index subgroup of SL(2,Z), every source weight k=n+2, and every rational base cusp. Its actual original Gamma0 and normalized primitive-form consumers derive a nonzero H1 class. The native H1 kernel gives the dual coboundary; the exact binary action and original Eichler transformation give the corrected invariant primitive. Actual Fourier periodicity makes its polynomial correction constant at each cusp, discharging all-cusp boundedness. Pinned nonpositive-weight vanishing/constancy and original Fourier decay kill the Eichler integral; its proved derivative recovers the original cusp form. No injectivity, nonzero period, primitive invariance or cusp-boundedness premise is supplied to these final consumers. The original primitive cusp form defines a native group-cohomology H1 class through its already proved convergent cusp integrals. The cocycle law, exact dual binary action, complex linearity, base-cusp independence and an explicit coboundary on each rational-cusp stabilizer are proved, with no supplied period cocycle, covariance, or parabolicity assumption. At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed. Exact unresolved source dependency: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> injectivity and nonvanishing of the original analytic period H1 class. DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic. The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The 4,970-module production aggregate and focused exhaustive original period H1 and coefficient specialization audit pass with zero diagnostics. All three proof-value audits pass, including the actual nonzero native H1 class of every original primitive form at every source weight and the faithful specialization of its original Hecke values. Sequential foundation/paper verification of the 4,970-module scope is pending. The preceding 4,958-module coefficient-field and residual eigensystem scope passed sequential canonical verification with zero diagnostics. The shorter analytic route adapts the published negative-weight argument using the already proved original scalar Eichler integral and pinned Mathlib vanishing. A further exact-commit search found an all-weight k>=3 residual Galois-association candidate, beyond the previously inspected weight-two adic endpoints. Its selected proof sources are archived; full transitive audit, pinned replay, original Hecke/H1 comparison remain pending. The actual original coefficient specialization adapter is now proved. This candidate does not supply an all-weight adic system, purity, crystallinity or Sato-Tate. Its complete 3,072-module repository import closure is now Git-blob verified and archived with license, notices and per-file attribution. The raw source scan has no prohibited proof tokens or postulates; 2,221 additional source-option lines and two missing pinned Mathlib imports remain adaptation concerns. An import-closure inspection is not a kernel audit. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original primitive coefficient number field and realized residual Hecke eigencharacter (20 October 2026): Every actual Fourier coefficient a_f(n) of the original primitive Gamma0 form of weight k >= 2 is an algebraic integer, including bad indices. The actual integral Hecke eigencharacter is derived from the existing all-index primitive eigenvector theorem. Its finite image bounds the literal ring generated by all coefficients; finite integral generators prove that their literal intermediate field over the rationals is a number field. The existing common coefficient-field construction, instantiated with that field and the actual rational prime completion, gives a finite genuine local extension preserving the original valuation and containing every embedded original coefficient integrally. No coefficient integrality, number-field or local-extension existence premise is supplied. The original integral Hecke eigencharacter has image exactly the ring generated by the actual primitive Fourier coefficients. Its values are realized in the literal coefficient number field and every value is integral. At each original rational prime the derived finite genuine local coefficient extension admits a constructed embedding of the original coefficient field. Reduction in its actual finite residue field gives a Hecke eigencharacter with maximal kernel and exactly the reduced original Fourier coefficients at all positive indices. No coefficient field, local extension, embedding or residual eigencharacter existence premise is supplied to the final existence theorem. The original primitive residual Hecke eigensystem is realized over a finite actual residue field of the prescribed rational prime characteristic, with maximal kernel and exact reduced original Fourier values. The characteristic follows from the existing exact residue cardinality of the genuine prime completion and native valuation-extension residue algebras; no residue-characteristic premise is supplied. Exact unresolved source dependency: DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> the original primitive coefficient number field and finite genuine local coefficient extensions. The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open. Sequential foundation/paper verification passes with zero diagnostics for the 4,958-module scope: all thirteen retained regressions, 35,137 exhaustive theorem checks, 15,006 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,952-module original period and integral Hecke scope passed sequential canonical verification with zero diagnostics. The shorter route reuses the existing all-index primitive eigenvectors, native integral-adjoin and finite-domain results, and the constructed common local coefficient field and original prime completion. These are the original Fourier coefficients a_f(n). No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original periods and finite integral Hecke algebra (20 October 2026): The original positive-index Gamma0 Hecke algebra is finite over the integers at every weight k >= 2, and each original Hecke operator is integral. Original integral Gamma0 transition matrices and finite permutations make the prime matrix sum descend to integral modular symbols, including bad primes. Actual convergent cusp integrals prove adjointness to the same original analytic prime operator. Existing prime-power recurrences with derived integral coefficients and coprime composition prove all-index integral generation; the proved free-algebra pairing identity extends prime adjoints to all positive indices. Actual period construction, injectivity and finite integral symbols are derived. No supplied period, injectivity, lattice, finite-cycle or Hecke-adjointness premise remains in the final finite-algebra/integrality consumers. Exact unresolved source dependency: DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> coefficient-field arithmetic through finite integral original Hecke algebra. The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open. Sequential foundation/paper verification passes with zero diagnostics for the 4,952-module scope: all thirteen retained regressions, 35,089 exhaustive theorem checks, 14,980 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,922-module highest-weight coefficient scope passed sequential canonical verification, all thirteen semantic regressions and sixteen linters with zero diagnostics. No root pin, proof limit, source contract or acceptance criterion changed. Selected TauCeti period/Eichler proofs are adapted to the pinned toolchain and the existing integral coefficient action. Original Gamma0 prime transitions and recurrences supply the shorter Hecke route. The refreshed candidate review and exact commits are preserved in Tools/lean-reuse-audit-20261020.json.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original highest-weight coefficients and exact arithmetic generic fibre (20 October 2026): Every nonzero original source Lie submodule has a derived nonzero upper-unipotent invariant over every coefficient algebra. Highest-line uniqueness and the constructed Weyl complement prove actual Lie irreducibility and highest-vector generation. Coefficient extraction from the original polynomial group orbit recovers Lie stability from group invariance, proving native general-linear irreducibility and group generation. The literal integral induction has exactly the original field induction as its generic fibre: actual coefficient evaluation preserves covariance, the differential and right translation; normalized highest-line uniqueness and Lie generation prove surjectivity; native fraction-module localization proves tensor injectivity. Native tensor bases give the exact finite embedding-tensor base change, preserving every original function and the normalized highest tensor. The same constructed arithmetic embedding maps intertwine the original unitary action. The final constructed-common-field consumer proves finite dimensionality, irreducibility and the exact highest-weight character of every field factor, retaining the same continuous finite-free integral tensor and original auxiliary comparison. No coefficient-identification witness is supplied. Exact unresolved source dependency: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 / Geraghty Definitions 2.2.1 and 2.2.3 -> original integral highest-weight embedding tensor and its actual unitary auxiliary comparison. Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed. Sequential foundation/paper verification passes with zero diagnostics for the 4,922-module scope: all thirteen retained regressions, 34,715 exhaustive theorem checks, 14,806 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,887-module scope passed sequential canonical verification. The refreshed reuse search has now supplied checked adaptations of Atlas complete reducibility, TauCeti matrix semisimplicity and local nilpotence, and RS unitriangular generation and polynomial coefficient extraction. Pinned native localization and tensor-basis results supply the shorter generic-fibre route. Exact source provenance and receipts are recorded in Tools/lean-reuse-audit-20261020.json.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Unique original highest/unipotent line and constructed special-linear-stable complements (20 October 2026): The actual highest-character line and the actual upper-unipotent invariant line are each uniquely determined by evaluation at the longest matrix. Generic open-cell factorization and faithful original-coordinate evaluation discharge the uniqueness assumptions. The original induced module has an actual matrix Lie action obtained from its right translation over dual numbers; its Borel covariance is proved stable and its finite dimension follows from the original denominator and numerator bounds. Adapted Atlas Weyl complete reducibility and TauCeti trace-zero matrix semisimplicity construct invariant Lie complements. The exact polynomial orbit and finite exponential, followed by adapted Mathlib/TauCeti elementary generation, prove that every original induced Lie submodule and every such complement is stable under every original special-linear matrix. Exact unresolved source dependency: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line. Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed. Sequential foundation/paper verification passes with zero diagnostics for the 4,887-module scope: all thirteen retained regressions, 34,574 exhaustive theorem checks, 14,737 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,860-module scope passed sequential canonical verification. Current external proofs were inspected and the minimal relevant closures adapted on the unchanged Lean 4.30/Mathlib pin. Archived sources, licenses, rejected candidates and exact proof receipts are recorded in Tools/lean-reuse-audit-20261020.json.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Constructed adequate common local field, nonzero continuous integral coefficients and actual highest tensor (19 October 2026): Adjoining the images of a finite rational basis under every original number-field embedding in the algebraic closure constructs an actual finite common coefficient field. Basis expansion proves adequacy for every entire embedding, and the original embedding equivalence is explicit. Existing spectral norm, finite-extension local-field and valuation-extension proofs give an actual local field extending the original rational prime completion. The final common-field consumer derives nonzero finite-free dominant integral tensor coefficients with continuous original unitary action and the original auxiliary module comparison: finite freeness over the actual quotient group ring, exact unnormalized weighted-trace coinvariants, nonzero upper and lower forms before localization, and continuous original small-level action. No common-field adequacy, coefficient lattice, nonzero coefficient/form witness or continuous representation is supplied. The literal dominant minor vector is transpose invariant, giving its opposite-Borel right character from the proved source covariance. Native longest permutation matrices give an actual highest vector with the precise original upper-Borel character over every coefficient algebra and evaluation one at the longest matrix. Generic-matrix evaluation proves the corresponding eigenvector identity in the original integral induced representation. Native tensor duality constructs an actual functional evaluating the highest pure tensor to one, proving it nonzero. The source arithmetic consumer gives this normalized highest tensor in the same original coefficient module and its exact product character on original unitary elements whose constructed embedding matrices lie in the upper Borels. No highest-vector witness, replacement representation or coefficient map is supplied. Exact unresolved source dependency: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 / Geraghty Definitions 2.2.1 and 2.2.3 -> adequate finite common local field and original continuous integral tensor coefficients in actual unitary auxiliary automorphic modules. Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed. Sequential foundation/paper verification passes with zero diagnostics for the 4,860-module scope: all thirteen retained regressions, 34,285 exhaustive theorem checks, 14,632 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,832-module scope passed sequential canonical verification. Native finite adjoining, rational basis expansion, tensor duality, permutation matrices and the existing spectral local-field and compact-module results provide the shorter rigorous routes. The current TauCeti rational Weyl sources were reviewed at 6320487e0e3d2803bf553a49913a18563fcd396e; their irreducible Young-symmetrizer representation does not identify the literal integral regular-function induction. No additional external proof code is adopted in this increment.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original integral induced tensor, actual coefficient embeddings and source auxiliary comparison (19 October 2026): Geraghty Definition 2.2.1 is constructed literally as original determinant-localized regular functions with reversed-weight upper-Borel covariance over every coefficient algebra and right translation. Generic determinant primality over the original PID, extension of polynomial covariance to singular matrices, adjugate row elimination and original-ring divisibility give a uniform determinant denominator B=max(0,-lambda_last). A constructed infinite-order scalar in the original local ring gives numerator degree D=max(0,sum(lambda)+rank*B). The entire module lies in one finite polynomial stage, so finite generation and freeness follow without a supplied lattice or dimension bound. The actual finite embedding tensor uses the proved individual factors and native tensor bases. Its original embedding index is finite by number-field degree. Existing completion extension and valuation comparison construct its local integer maps and their continuity from actual field embeddings. Original unitary local evaluation constructs the algebraic tensor action. The final actual source consumer derives finite freeness of the original auxiliary automorphic module over the actual primary quotient group ring and its exact unnormalized weighted-trace coinvariant comparison; no coefficient representation, finite-free coefficient module, integral embedding maps or finite-index certificate is supplied. Exact unresolved source dependency: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> CHT/Geraghty integral unitary auxiliary modules -> Geraghty Definitions 2.2.1 and 2.2.3 original integral induced tensor coefficients and arithmetic action. Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed. Sequential foundation/paper verification passes with zero diagnostics for the 4,832-module scope: all thirteen retained regressions, 34,151 exhaustive theorem checks, 14,552 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,805-module scope passed sequential canonical verification. Selected coordinate, determinant and GL-density proofs are adapted from frozen TauCeti, Subspace-Theorems and newer Mathlib sources; original source files, licenses and provenance are retained.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -17864,7 +17888,7 @@ Acceptance remains 16/20; DUB-17-20 remain open. The actual primary auxiliary mo
 
 ## Production original integral induced tensor, constructed field-embedding coefficients and exact primary auxiliary comparison verification pending full run - 19 October 2026
 
-The 4,832-module production aggregate and focused exhaustive original integral induced tensor, constructed field-embedding coefficients and exact primary auxiliary comparison audit pass with zero diagnostics. Sequential foundation/paper verification of the 4,832-module scope is pending.
+Sequential foundation/paper verification passes with zero diagnostics for the 4,832-module scope: all thirteen retained regressions, 34,151 exhaustive theorem checks, 14,552 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
 
 Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed.
 
@@ -17886,5 +17910,502 @@ Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual rep
   "exit": 0,
   "diagnostics": 0,
   "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed."
+}
+```
+
+## Verified original integral induced tensor, constructed field-embedding coefficients and exact primary auxiliary comparison - 19 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,832-module scope: all thirteen retained regressions, 34,151 exhaustive theorem checks, 14,552 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed.
+
+```json
+{
+  "date": "2026-10-19 America/Vancouver",
+  "log": "logs/dubon-build-20261019-232243-696.log",
+  "sha256": "5F86ABFB55746A92B7DF7DDDE54D74AAE7627B1E378E8B8AC7D85277ABE723C8",
+  "bytes": 8254106,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4832,
+  "projectTheorems": 34151,
+  "registeredConsumers": 14552,
+  "registeredConstructions": 394,
+  "declarations": 20346,
+  "generated": 19192,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261019_194216.log",
+  "foundationSha256": "32FF6606952C4D5D352A9E2A343BD12676289E4666E67C3C4782D931A94DA34F",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed."
+}
+```
+
+## Production original coefficient realization verification pending full run - 19 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,860-module scope: all thirteen retained regressions, 34,285 exhaustive theorem checks, 14,632 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\CoefficientAuxiliaryProductionDependencyAudit4860.log",
+      "sha256": "5BF719F738C7E46CFFDC2C746A376452B67C993988B0794E59CE5EE162524109",
+      "requiredProofValueEdges": 38,
+      "consumer": "Dubon2026.cmCommonCoefficientAuxiliary_exists"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\HighestTensorProductionDependencyAudit4860.log",
+      "sha256": "2D79A3B98309B2243B42003B57D2A0165959D5E0914A9CD53383AD5A37196DA1",
+      "requiredProofValueEdges": 13,
+      "consumer": "Dubon2026.cmSourceIntegralWeight_exists_highestTensor"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\CoefficientRealizationProductionAudit4860.log",
+  "sha256": "A405B5EE1147D8CB7EC949D1770B0CC650D365D9953C7CE502DD04B49224C0AE",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\coefficient-realization-production-4860-build.log",
+  "aggregateSha256": "836E90289FC7AABBD951AE034BFC4CA1314F0F62D53A95AA188E38F766016181",
+  "productionModules": 4860,
+  "incrementModules": 28,
+  "axiomChecks": 101,
+  "exhaustiveIncrementTheorems": 135,
+  "linterScopes": 28,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed."
+}
+```
+
+## Verified original common field, continuous coefficients, highest tensor and auxiliary comparison - 19 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,860-module scope: all thirteen retained regressions, 34,285 exhaustive theorem checks, 14,632 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed.
+
+```json
+{
+  "recordedUTC": "2026-10-20T08:21:16.143804+00:00",
+  "log": "logs/dubon-build-20261020-001000-560.log",
+  "sha256": "25588B7471B21A4FA24ED73D6C903D9313767D4B509F73B0707F928808C2D967",
+  "bytes": 8289999,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4860,
+  "projectTheorems": 34285,
+  "registeredConsumers": 14632,
+  "registeredConstructions": 415,
+  "declarations": 20447,
+  "generated": 19247,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_000621.log",
+  "foundationSha256": "3CC2DB2628A32FFA9B948DF852BD0C91255DAD218473C9AB1B6C2432F0A5257A",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed."
+}
+```
+
+## Production original coefficient structure verification pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,887-module scope: all thirteen retained regressions, 34,574 exhaustive theorem checks, 14,737 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\HighestLineDependencyAuditProduction4887.log",
+      "sha256": "EA0CA034B5443A0E80D205815FFEAA2414BEE04FFA147F0BD8AC8BD68FC02BE9",
+      "requiredProofValueEdges": 13,
+      "consumer": "Dubon2026.integralDominantHighestLine_eq",
+      "sourceSha256": "6A3BF9E7A022A0B796124BB514A8C3C7EC1CCBA16B3828360EB5F7F53806CE0F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\UnipotentLineDependencyAuditProduction4887.log",
+      "sha256": "A31C06F01C47130D1CC41B0012167E03E80AC23A979B4EE52090F440F5B203F9",
+      "requiredProofValueEdges": 14,
+      "consumer": "Dubon2026.integralInduced_unipotent_eq_highest",
+      "sourceSha256": "A27F8305503EF48C46EF6A7DF2D24AE5597BC02714071A7072BA7B137F4CD131"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLieCompleteReducibilityDependencyAuditProduction4887.log",
+      "sha256": "2E2BD5B7CCC435A92AC8E32B4C003097757D29C695807A77294B9920E0BC09AA",
+      "requiredProofValueEdges": 12,
+      "consumer": "Dubon2026.sourceLieModule_exists_complement",
+      "sourceSha256": "2E2D7AEF45E81E6C4E31DAFBE8CAF7FC25E49061A0AF8573BAF1D814B517FE22"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearDependencyAuditProduction4887.log",
+      "sha256": "48BC4C09FC65CC98AE841771BFC87AC8A2111D975C929A4376BECB038C308528",
+      "requiredProofValueEdges": 11,
+      "consumer": "Dubon2026.sourceSpecialLinearModule_exists_complement",
+      "sourceSha256": "7B44A5DB0031D57BF6A0E0631CAB09329430CEE691EB8FD31296C9655690582C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInducedLieDependencyAuditProduction4887.log",
+      "sha256": "A4753C940C5DCC3669C3B7D8B7125AB210F3C48468B734BFFD5585E73304C0CD",
+      "requiredProofValueEdges": 16,
+      "consumer": "Dubon2026.sourceInducedSpecialLinear_exists_complement",
+      "sourceSha256": "AB2B41B2F1AFE113DA6B2F494C7516378FB819F305A31F0F4223599A18C62F51"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroDependencyAuditProduction4887.log",
+      "sha256": "E494B371AB33868A0B05BFC10CBAA0AD50BCC1C01133166E5BE84DE0E294E9A6",
+      "requiredProofValueEdges": 16,
+      "consumer": "Dubon2026.sourceInduced_exists_squareZero_stable_complement",
+      "sourceSha256": "DB1AFC4357C81C311320460F0433B032025789332B156F84C69C9FF48C7CD6E1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSLGroupDependencyAuditProduction4887.log",
+      "sha256": "AF330C23F4AA2682044899A4869EB19236FF935216E2F2B3B41222EFA4D820D8",
+      "requiredProofValueEdges": 14,
+      "consumer": "Dubon2026.sourceInduced_exists_specialLinear_stable_complement",
+      "sourceSha256": "D1CC2FACB2D77FAF22B4889DF5B80B5D5C7535E1A07BEFBB7A6A431AEB101BB2"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientStructureProductionAudit4887.log",
+  "sha256": "9F399B8A227112A10124DA839AFC9A0C898BD239918E33409E3B0F558A941E42",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-production-4887-build.log",
+  "aggregateSha256": "A21766401D277414CF15091023C14516989AB17287ADB1772B4105D0786A28DE",
+  "productionModules": 4887,
+  "incrementModules": 27,
+  "axiomChecks": 128,
+  "exhaustiveIncrementTheorems": 289,
+  "linterScopes": 27,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed."
+}
+```
+
+## Verified unique original highest line and special-linear-stable complements - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,887-module scope: all thirteen retained regressions, 34,574 exhaustive theorem checks, 14,737 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed.
+
+```json
+{
+  "recordedUTC": "2026-10-20T09:56:24.741045+00:00",
+  "log": "logs/dubon-build-20261020-014447-457.log",
+  "sha256": "F908EF017360A936275DA5D6017427E63327E115B726B0269E1D741FC0F0BB92",
+  "bytes": 8363892,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4887,
+  "projectTheorems": 34574,
+  "registeredConsumers": 14737,
+  "registeredConstructions": 438,
+  "declarations": 20575,
+  "generated": 19456,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_014143.log",
+  "foundationSha256": "4A3D33C9D27AB3CF8434FB546B653B73C8556A341181CC9CC5BE815D335CE8F8",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed."
+}
+```
+
+## Production original highest-weight identification pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,922-module scope: all thirteen retained regressions, 34,715 exhaustive theorem checks, 14,806 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEngelDependencyAuditProduction4922.log",
+      "sha256": "E324A4DB66AA8FEA204F58533129DE716ED9A8DC226374FCA1B49FF4CEF4495D",
+      "requiredProofValueEdges": 18,
+      "consumer": "Dubon2026.sourceInduced_exists_nonzero_strictUpper_invariant",
+      "sourceSha256": "353583B5AA8BD588B25491EBE4B5F7ECDEB7C856CF45043599CBBDBB1BBCA756"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLieIrreducibleDependencyAuditProduction4922.log",
+      "sha256": "1E9DC13E32527A0ABE6D28E86E1116F949640E10307550D6F58E54DE9B84697F",
+      "requiredProofValueEdges": 21,
+      "consumer": "Dubon2026.sourceInduced_highest_lieSpan",
+      "sourceSha256": "D16B22D1BB2D8DE409EFD58C06701537438124F629B6387294E2453BAC719759"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGroupIrreducibleDependencyAuditProduction4922.log",
+      "sha256": "8D73B6D80BE611DEDD1F5E4C17D71A96EE9CC1ED857BA90A07410E89269ACD24",
+      "requiredProofValueEdges": 34,
+      "consumer": "Dubon2026.sourceInduced_highest_groupSpan",
+      "sourceSha256": "DCF9734D91D482FF7107F9D79605BA7AA873312172C69AA0BECBCD91393C128B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenericFibreDependencyAuditProduction4922.log",
+      "sha256": "BF11FA29DCD9AC0F8B8975507C227ED6824182AB515950F9F3977EE768968448",
+      "requiredProofValueEdges": 54,
+      "consumer": "Dubon2026.cmSourceIntegralWeight_factor_identification",
+      "sourceSha256": "E05FEBF47AFFD1083906E99FD269151D65600983ED5F86D8BB15FB25BF4C04F2"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHighestTensorDependencyAuditProduction4922.log",
+      "sha256": "DAF71A19C054D0F8220CBB931B181B353D7DF5BF6C7DF82DB9E83BA82B80D177",
+      "requiredProofValueEdges": 72,
+      "consumer": "Dubon2026.cmCommonCoefficientHighestWeight_exists",
+      "sourceSha256": "1A50B3896B19F3AC2DB620342D135A2E83EC2538F93710A412887DF647016F59"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceHighestWeightIdentificationProductionAudit4922.log",
+  "sha256": "EF6328225F50D0F56FBACEE920AEF72B7F121671A72F52561328FC93619319C1",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-highest-weight-production-4922-build.log",
+  "aggregateSha256": "328E9FE5728341DB8D63317FFD90FBF3C37D1BAF3A43D6E3E2334AD2177A4B34",
+  "productionModules": 4922,
+  "incrementModules": 35,
+  "axiomChecks": 81,
+  "exhaustiveIncrementTheorems": 142,
+  "linterScopes": 35,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed."
+}
+```
+
+## Verified original highest-weight coefficients and exact arithmetic generic fibre - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,922-module scope: all thirteen retained regressions, 34,715 exhaustive theorem checks, 14,806 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed.
+
+```json
+{
+  "recordedUTC": "2026-10-20T11:25:12.545317+00:00",
+  "log": "logs/dubon-build-20261020-030851-480.log",
+  "sha256": "B7F9161CF96D13ADCEF701EC62A10FB6401050D560944ACAEFD1C602BBD58D1F",
+  "bytes": 8398386,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4922,
+  "projectTheorems": 34715,
+  "registeredConsumers": 14806,
+  "registeredConstructions": 450,
+  "declarations": 20656,
+  "generated": 19543,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_030538.log",
+  "foundationSha256": "6159E9731B187C40ED05839FE5394C9FCA797E32204CE4A4AC3A533C0C1527BE",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed."
+}
+```
+
+## Production original periods and integral Hecke algebra pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,952-module scope: all thirteen retained regressions, 35,089 exhaustive theorem checks, 14,980 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeSymbolsDependencyAuditProduction4952.log",
+      "sha256": "C7F941D6D35EA0974A6E1155D788EC61C6BDF9DD7C92DC77DDD6A6C8DD8E127E",
+      "requiredProofValueEdges": 17,
+      "consumer": "Dubon2026.sourceOriginalHecke_isIntegral_of_period",
+      "sourceSha256": "E51CF27F596D47263B0DEAC89999CDDBA3169C22885A680D028607893A5D8516"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualPeriodDependencyAuditProduction4952.log",
+      "sha256": "7B8FCBCD27EBFEED59FAD6240FC1DB1F829F6DA4E8644A5DA8403DA990618EE1",
+      "requiredProofValueEdges": 30,
+      "consumer": "Dubon2026.sourceOriginalHecke_isIntegral_of_actual_period",
+      "sourceSha256": "A0478603FFC4054F8D0FAFBDBB35256B6FF2ACD8FC5A0CFFFBC8CD86FFA1EA42"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodInjectivityDependencyAuditProduction4952.log",
+      "sha256": "2EC16E0A413CDA5C526A9E2BB18EC23C525BF755A55BD8370A300EBC330BFAE2",
+      "requiredProofValueEdges": 27,
+      "consumer": "Dubon2026.sourceOriginalHecke_isIntegral_of_adjoint",
+      "sourceSha256": "6B444F732F81D30238A366367A0FE1F8863DBC325B965DE028707023227405A9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeDependencyAuditProduction4952.log",
+      "sha256": "856C5A33D121AE82768449152302608440735EE0994701F1D221F2B81B16F00E",
+      "requiredProofValueEdges": 51,
+      "consumer": "Dubon2026.sourceOriginalHecke_isIntegral",
+      "sourceSha256": "3D9FEA577C5BAC550D94CA83FBBCDC34BB46DB8FA7B9AB0C0EDF386E8A9AF409"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeProductionAudit4952.log",
+  "sha256": "333627A99E3D0BB476B574157CEC20C676FD9B18A2E6C520EB16D6B095C62A40",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-production-4952-build.log",
+  "aggregateSha256": "1F0AF1BD13EFC14781EE4DDCA6BE7F34DF212825E4B7332C117FF44177D47151",
+  "productionModules": 4952,
+  "incrementModules": 30,
+  "axiomChecks": 204,
+  "exhaustiveIncrementTheorems": 375,
+  "linterScopes": 30,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open."
+}
+```
+
+## Verified original periods and finite integral Hecke algebra - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,952-module scope: all thirteen retained regressions, 35,089 exhaustive theorem checks, 14,980 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T12:56:40.777436+00:00",
+  "log": "logs/dubon-build-20261020-044759-595.log",
+  "sha256": "2859E040CDA4A06794D3C58A357661E1B291CF216400CC2D0855E8E2C173E613",
+  "bytes": 8495847,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4952,
+  "projectTheorems": 35089,
+  "registeredConsumers": 14980,
+  "registeredConstructions": 480,
+  "declarations": 20860,
+  "generated": 19755,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_044054.log",
+  "foundationSha256": "E7ACEC5FF2223E02B9AB39B69300D7C09C2CBA74AE70FB3394635F4E58DB7E5E",
+  "boundary": "The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open."
+}
+```
+
+## Production original coefficient arithmetic pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,958-module scope: all thirteen retained regressions, 35,137 exhaustive theorem checks, 15,006 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientsDependencyAuditProduction4958.log",
+      "sha256": "D53CDE6E4807EDFB77914DE527EFD8AA5566404D5552BE92833ABB9029BFA77A",
+      "requiredProofValueEdges": 68,
+      "consumer": "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+      "sourceSha256": "537328520A3DC99229E8D3B298AFEA9233672D17357CD287BC6D1323ACD35C4E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacterDependencyAuditProduction4958.log",
+      "sha256": "A957787F4447EBB9FD7112A1EF7578BC90F171C7F0FD6EE494BA5C0AED7FF5A1",
+      "requiredProofValueEdges": 76,
+      "consumer": "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter",
+      "sourceSha256": "D979A9BE74D448FB0B6C355B3250627B275EB2E9EFBAEF692B36FB6A97C03DB0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacteristicDependencyAuditProduction4958.log",
+      "sha256": "E7176E8B29312120339E3895E106B9254FE1C6535FDBFF298D81770A0D45D408",
+      "requiredProofValueEdges": 80,
+      "consumer": "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP",
+      "sourceSha256": "BE42DDFE08844B8D46BF201425E35A272241E77FC34EE364DCC3FAF1A7C1D9E9"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientsProductionAudit4958.log",
+  "sha256": "C86110A5941A5A3EA5E96A7DCEF3653B36E96FC78E3D48A7A5DE55E45D04B587",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-coefficients-production-4958-build.log",
+  "aggregateSha256": "445CD31D04CA28AAD3211D84ACC7CEABAAA51471DB3785B933DB9047A53A7180",
+  "productionModules": 4958,
+  "incrementModules": 6,
+  "axiomChecks": 33,
+  "exhaustiveIncrementTheorems": 48,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open."
+}
+```
+
+## Verified original coefficient number field and residual Hecke eigensystem - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,958-module scope: all thirteen retained regressions, 35,137 exhaustive theorem checks, 15,006 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T14:16:46.685051+00:00",
+  "log": "logs/dubon-build-20261020-060615-416.log",
+  "sha256": "71F2EC7484307CEEDBA4AFE981A7EA06A88CEB1E5FF92EB9CB798AE3CAFA6EFE",
+  "bytes": 8508807,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4958,
+  "projectTheorems": 35137,
+  "registeredConsumers": 15006,
+  "registeredConstructions": 487,
+  "declarations": 20893,
+  "generated": 19777,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_060319.log",
+  "foundationSha256": "95371D02C073F940E9FCB646BECDE54A84C769D695CC744D06E0CB7B1E8A7356",
+  "boundary": "The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open."
+}
+```
+
+## Production original period H1 injectivity and specialization pending full run - 20 October 2026
+
+The 4,970-module production aggregate and focused exhaustive original period H1 and coefficient specialization audit pass with zero diagnostics. All three proof-value audits pass, including the actual nonzero native H1 class of every original primitive form at every source weight and the faithful specialization of its original Hecke values. Sequential foundation/paper verification of the 4,970-module scope is pending.
+
+The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyDependencyAuditProduction4970.log",
+      "sha256": "18A6F60FF08DD24FA01BE4288731C1BDEA00000E8774677FD73AA39643273427",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_periodCohomology_realization",
+        "Dubon2026.sourcePeriodCohomologyLinear_base_independent"
+      ],
+      "sourceSha256": "F265BE59A03E28581BAD1D7C632906EA54130F19B6D42248EFB55B9024B87CC6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodH1InjectivityDependencyAuditProduction4970.log",
+      "sha256": "0EE0F527EFBC7A303DE221CC889930D2365610B96C2BB85E6F267B606210ECAC",
+      "requiredProofValueEdges": 39,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_periodCohomology_ne_zero"
+      ],
+      "sourceSha256": "C236C80FC67F9BE693293EF69BD5ED82382548C4BD30FB2B28D39FC5FA7B9F75"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicIntegerReductionDependencyAuditProduction4970.log",
+      "sha256": "8B68DA0BA3E8D590B58EEA8F214D20B5F6D0FFB75ABBC4F0F3AE8A8D2C5DEFF3",
+      "requiredProofValueEdges": 85,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction_charP"
+      ],
+      "sourceSha256": "A936FC1916D0EB9AC8D019E9B7BBA25475436831B012FFF03A8D8CEE6E418638"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodH1ProductionAudit4970.log",
+  "sha256": "6CA3FE39C9D22F7C4047BDF00EB753632EC341A809ED6E8B05EEE6774B5452A4",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-period-h1-production-4970-build.log",
+  "aggregateSha256": "C9F0855E9FF59FE531F2CE8D2A189610F0994D38CCF3E78DA63A750B6338323B",
+  "productionModules": 4970,
+  "incrementModules": 12,
+  "axiomChecks": 46,
+  "exhaustiveIncrementTheorems": 86,
+  "linterScopes": 12,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open."
 }
 ```

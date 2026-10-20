@@ -1,0 +1,566 @@
+import RSCounterexample.GLRep.Rational.Torus
+
+/-!
+# Rational representations of `GL_n`
+
+A representation of `GL_n(K)`, `K` a field of characteristic zero, is **rational** when some twist
+of it by a power `det^k` of the determinant is polynomial (`GLRep.IsRationalRep`). Rational
+representations are semisimple (`GLRep.IsRationalRep.isSemisimpleRepresentation`), their
+characters are Laurent polynomials (`GLRep.ratCharacter`), and twisting by `det^c`, `c ∈ ℤ`,
+multiplies the character by `(x_0 ⋯ x_{n-1})^c`.
+
+The irreducible rational representations are the twists
+`GLRep.ratIrrep K n λ = V(λ − λ_n) ⊗ det^{λ_n}` for dominant weights `λ ∈ ℤ^n`
+(`GLRep.IsRationalRep.exists_nonempty_equiv_ratIrrep`, `GLRep.eq_of_nonempty_equiv_ratIrrep`),
+with characters the rational Schur polynomials `GLRep.ratSchur n λ` (`GLRep.ratCharacter_ratIrrep`).
+The character of a rational representation is the sum of the rational Schur polynomials weighted
+by the multiplicities (`GLRep.IsRationalRep.exists_ratCharacter_eq_sum`):
+
+`ch ρ = ∑_λ dim Hom(V(λ), ρ) · s_λ`.
+
+The proofs reduce to polynomial representations by twisting with a power of the determinant.
+
+## Main definitions
+
+* `GLRep.detZPow K n k`, `GLRep.IsRationalRep`, `GLRep.ratCharacter`.
+* `GLRep.ratIrrep K n λ`, `GLRep.ratSchur n λ`, `GLRep.ratMultiplicity ρ λ`.
+
+## Main results
+
+* `GLRep.IsRationalRep.isSemisimpleRepresentation`, `GLRep.IsRationalRep.trace_diagGL_eq`,
+  `GLRep.IsRationalRep.ratCharacter_scaledRep`.
+* `GLRep.IsRationalRep.nonempty_equiv_of_ratCharacter_eq`.
+* `GLRep.ratCharacter_ratIrrep`, `GLRep.isIrreducible_ratIrrep`,
+  `GLRep.nonempty_equiv_ratIrrep_irrep`, `GLRep.nonempty_equiv_scaledRep_ratIrrep`.
+* `GLRep.IsRationalRep.exists_nonempty_equiv_ratIrrep`, `GLRep.eq_of_nonempty_equiv_ratIrrep`.
+* `GLRep.IsRationalRep.exists_ratCharacter_eq_sum`.
+-/
+
+namespace GLRep
+
+open Module Representation TauCeti
+
+noncomputable section
+
+/-! ### Twists -/
+
+section Generic
+
+variable {K G W V : Type*} [Field K] [Monoid G] [AddCommGroup W] [Module K W] [AddCommGroup V]
+  [Module K V]
+
+theorem scaledRep_scaledRep (ρ : Representation K G W) (χ χ' : G →* Kˣ) :
+    scaledRep (scaledRep ρ χ) χ' = scaledRep ρ (χ' * χ) := by
+  ext g w
+  simp [mul_smul]
+
+theorem scaledRep_one (ρ : Representation K G W) : scaledRep ρ 1 = ρ := by
+  ext g w
+  simp
+
+/-- Twisting both representations by the same character does not change the intertwining
+maps. -/
+def intertwiningMapScaledEquiv (ρ : Representation K G W) (σ : Representation K G V)
+    (χ : G →* Kˣ) : IntertwiningMap ρ σ ≃ₗ[K] IntertwiningMap (scaledRep ρ χ) (scaledRep σ χ) where
+  toFun f := ⟨f.toLinearMap, fun g => LinearMap.ext fun w => by
+    change f ((χ g : K) • ρ g w) = (χ g : K) • σ g (f w)
+    rw [map_smul, f.isIntertwining]⟩
+  invFun f := ⟨f.toLinearMap, fun g => LinearMap.ext fun w => by
+    have h := IntertwiningMap.isIntertwining _ _ f g w
+    change f ((χ g : K) • ρ g w) = (χ g : K) • σ g (f w) at h
+    rw [map_smul] at h
+    change f (ρ g w) = σ g (f w)
+    exact smul_right_injective _ (Units.ne_zero (χ g)) h⟩
+  map_add' _ _ := rfl
+  map_smul' _ _ := rfl
+  left_inv _ := rfl
+  right_inv _ := rfl
+
+theorem scaledRep_scaledRep_inv (ρ : Representation K G W) (χ : G →* Kˣ) :
+    scaledRep (scaledRep ρ χ) χ⁻¹ = ρ := by
+  ext g w
+  simp only [scaledRep_apply, smul_smul, MonoidHom.inv_apply]
+  rw [← Units.val_mul, inv_mul_cancel, Units.val_one, one_smul]
+
+/-- Twisting by a character does not change whether two representations are equivalent. -/
+theorem nonempty_equiv_scaledRep_iff {ρ : Representation K G W} {σ : Representation K G V}
+    (χ : G →* Kˣ) : Nonempty ((scaledRep ρ χ).Equiv (scaledRep σ χ)) ↔ Nonempty (ρ.Equiv σ) := by
+  refine ⟨fun ⟨e⟩ => ?_, fun ⟨e⟩ => ⟨scaledRepEquiv e χ⟩⟩
+  have e' := scaledRepEquiv e χ⁻¹
+  rw [scaledRep_scaledRep_inv, scaledRep_scaledRep_inv] at e'
+  exact ⟨e'⟩
+
+end Generic
+
+/-! ### Monomials -/
+
+section Monomial
+
+variable {κ : Type*}
+
+theorem single_const_mul_single_const (a b : ℤ) :
+    (AddMonoidAlgebra.single (fun _ : κ => a) 1 : TorusLaurent κ) *
+      AddMonoidAlgebra.single (fun _ => b) 1 = AddMonoidAlgebra.single (fun _ => a + b) 1 := by
+  rw [AddMonoidAlgebra.single_mul_single, mul_one]
+  rfl
+
+theorem single_const_zero :
+    (AddMonoidAlgebra.single (fun _ : κ => (0 : ℤ)) 1 : TorusLaurent κ) = 1 :=
+  rfl
+
+theorem polyToLaurent_X [DecidableEq κ] (i : κ) :
+    polyToLaurent κ (MvPolynomial.X i) = AddMonoidAlgebra.single (Pi.single i 1) 1 := by
+  have hw : expWeight κ (Finsupp.single i 1) = Pi.single i 1 := by
+    funext j
+    simp [expWeight, Finsupp.single_apply, Pi.single_apply, eq_comm]
+  rw [← hw]
+  exact AddMonoidAlgebra.mapDomain_single
+
+/-- `(x_0 ⋯ x_{n-1})^k` as a Laurent polynomial. -/
+theorem polyToLaurent_prod_X_pow [Fintype κ] (k : ℕ) :
+    polyToLaurent κ ((∏ i, MvPolynomial.X i) ^ k) =
+      AddMonoidAlgebra.single (fun _ => (k : ℤ)) 1 := by
+  classical
+  simp only [map_pow, map_prod, polyToLaurent_X, AddMonoidAlgebra.prod_single,
+    AddMonoidAlgebra.single_pow, Finset.prod_const_one, one_pow]
+  congr 1
+  funext j
+  simp [Finset.sum_apply, Pi.single_apply]
+
+end Monomial
+
+/-! ### Shifting dominant weights -/
+
+section Shift
+
+variable {n : ℕ}
+
+theorem isPolynomial_shift {l : DominantWeight n} {c : ℤ} (hc : 0 ≤ l.detShift + c) :
+    (l.shift c).IsPolynomial := fun i => by
+  have := l.detShift_le i
+  rw [DominantWeight.shift_apply]
+  omega
+
+theorem shift_neg_detShift_shift (l : DominantWeight n) (c : ℤ) :
+    (l.shift c).shift (-(l.shift c).detShift) = l.shift (-l.detShift) := by
+  cases n with
+  | zero => exact Subtype.ext (funext fun i => i.elim0)
+  | succ n =>
+    rw [DominantWeight.detShift_shift, DominantWeight.shift_shift]
+    congr 1
+    ring
+
+/-- Finitely many dominant weights become polynomial after a common shift. -/
+theorem exists_forall_isPolynomial_shift {ι : Type*} [Fintype ι] {m : ι → ℕ}
+    (l : (i : ι) → DominantWeight (m i)) : ∃ k : ℕ, ∀ i, ((l i).shift k).IsPolynomial := by
+  classical
+  refine ⟨Finset.univ.sup fun i => (-(l i).detShift).toNat, fun i => isPolynomial_shift ?_⟩
+  have h₁ : (-(l i).detShift).toNat ≤ Finset.univ.sup fun i => (-(l i).detShift).toNat :=
+    Finset.le_sup (f := fun i => (-(l i).detShift).toNat) (Finset.mem_univ i)
+  omega
+
+/-- Shifting a dominant weight does not change its polynomial part. -/
+theorem detShiftShape_shift (l : DominantWeight n) (c : ℤ) :
+    (l.shift c).detShiftShape = l.detShiftShape := by
+  rw [DominantWeight.detShiftShape, DominantWeight.detShiftShape, shift_neg_detShift_shift]
+
+end Shift
+
+variable {K : Type*} [Field K] {n : ℕ}
+variable {W : Type*} [AddCommGroup W] [Module K W] {ρ : Representation K (GL (Fin n) K) W}
+variable {V : Type*} [AddCommGroup V] [Module K V] {σ : Representation K (GL (Fin n) K) V}
+
+variable (K n) in
+/-- The character `det^k` of `GL_n(K)`, `k ∈ ℤ`. -/
+def detZPow (k : ℤ) : GL (Fin n) K →* Kˣ := Matrix.GeneralLinearGroup.det ^ k
+
+theorem detZPow_natCast (k : ℕ) : detZPow K n k = detPow K n k :=
+  MonoidHom.ext fun g => by rw [detZPow, detPow, MonoidHom.zpow_apply, MonoidHom.pow_apply,
+    zpow_natCast]
+
+theorem detZPow_add (a b : ℤ) : detZPow K n (a + b) = detZPow K n a * detZPow K n b :=
+  MonoidHom.ext fun g => by
+    simp only [detZPow, MonoidHom.mul_apply, MonoidHom.zpow_apply, zpow_add]
+
+theorem detZPow_zero : detZPow K n 0 = 1 :=
+  MonoidHom.ext fun g => by simp only [detZPow, MonoidHom.zpow_apply, zpow_zero,
+    MonoidHom.one_apply]
+
+theorem detPow_zero : detPow K n 0 = 1 := by
+  rw [← detZPow_natCast, Nat.cast_zero, detZPow_zero]
+
+theorem detPow_add (a b : ℕ) : detPow K n (a + b) = detPow K n a * detPow K n b := by
+  rw [← detZPow_natCast, Nat.cast_add, detZPow_add, detZPow_natCast, detZPow_natCast]
+
+theorem detZPow_of_zero (k : ℤ) : detZPow K 0 k = 1 := by
+  ext g
+  simp [detZPow, Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_isEmpty]
+
+theorem detZPow_diagGL (k : ℤ) (t : Fin n → Kˣ) :
+    detZPow K n k (diagGL t) = weightChar K (fun _ => k) t := by
+  rw [weightChar_const, detZPow, MonoidHom.zpow_apply, det_diagGL]
+
+/-! ### Rational representations -/
+
+/-- A representation of `GL_n(K)` is **rational** when some twist of it by a power `det^k`,
+`k ≥ 0`, of the determinant is polynomial. -/
+def IsRationalRep (ρ : Representation K (GL (Fin n) K) W) : Prop :=
+  ∃ k : ℕ, IsPolynomialRep (scaledRep ρ (detPow K n k))
+
+theorem IsPolynomialRep.isRationalRep (h : IsPolynomialRep ρ) : IsRationalRep ρ :=
+  ⟨0, by rwa [detPow_zero, scaledRep_one]⟩
+
+namespace IsRationalRep
+
+theorem finiteDimensional (h : IsRationalRep ρ) : FiniteDimensional K W :=
+  h.choose_spec.finiteDimensional
+
+theorem of_equiv (h : IsRationalRep ρ) (e : ρ.Equiv σ) : IsRationalRep σ :=
+  ⟨h.choose, HasCoeffsIn.of_equiv h.choose_spec (scaledRepEquiv e _)⟩
+
+/-- Twists of rational representations by powers of the determinant are rational. -/
+theorem scaledRep_detZPow (h : IsRationalRep ρ) (c : ℤ) :
+    IsRationalRep (scaledRep ρ (detZPow K n c)) := by
+  obtain ⟨k, hk⟩ := h
+  refine ⟨k + c.natAbs, ?_⟩
+  have hm : (k + c.natAbs : ℤ) + c = k + ((c.natAbs : ℤ) + c).toNat := by omega
+  have heq : scaledRep (scaledRep ρ (detZPow K n c)) (detPow K n (k + c.natAbs)) =
+      scaledRep (scaledRep ρ (detPow K n k)) (detPow K n ((c.natAbs : ℤ) + c).toNat) := by
+    rw [scaledRep_scaledRep, scaledRep_scaledRep, ← detZPow_natCast, ← detZPow_natCast,
+      ← detZPow_natCast, ← detZPow_add, ← detZPow_add, Nat.cast_add, hm, add_comm]
+  rw [heq]
+  exact hk.scaledRep_detPow _
+
+/-- **Rational representations are semisimple.** -/
+theorem isSemisimpleRepresentation [CharZero K] (h : IsRationalRep ρ) :
+    Representation.IsSemisimpleRepresentation ρ := by
+  obtain ⟨k, hk⟩ := h
+  exact (OrderIso.complementedLattice_iff (subrepScaledOrderIso ρ (detPow K n k))).mpr
+    hk.isSemisimpleRepresentation
+
+theorem comp_diagGL_scaledRep (c : ℤ) :
+    (scaledRep ρ (detZPow K n c)).comp diagGL =
+      scaledRep (ρ.comp diagGL) (weightChar K fun _ => c) := by
+  ext t w
+  simp only [MonoidHom.comp_apply, scaledRep_apply, detZPow_diagGL]
+
+/-- The restriction to the torus of a rational representation is rational. -/
+theorem isRationalTorusRep (h : IsRationalRep ρ) : IsRationalTorusRep (ρ.comp diagGL) := by
+  obtain ⟨k, hk⟩ := h
+  refine ⟨fun _ => (k : ℤ), ?_⟩
+  rw [← comp_diagGL_scaledRep, detZPow_natCast]
+  exact hk.comp_diagGL
+
+end IsRationalRep
+
+/-! ### Rational characters -/
+
+variable (ρ) in
+/-- The **character** `∑_μ dim W_μ · x^μ` of a rational representation, a Laurent polynomial. -/
+def ratCharacter : TorusLaurent (Fin n) := laurentCharacter (ρ.comp diagGL)
+
+section Infinite
+
+variable [Infinite K]
+
+theorem coeff_ratCharacter [FiniteDimensional K W] (μ : Fin n → ℤ) :
+    (ratCharacter ρ).coeff μ = finrank K (weightSpace ρ μ) :=
+  coeff_laurentCharacter _ μ
+
+/-- **The trace formula** for a rational representation. -/
+theorem IsRationalRep.trace_diagGL_eq (h : IsRationalRep ρ) (t : Fin n → Kˣ) :
+    LinearMap.trace K W (ρ (diagGL t)) = laurentEval K t (ratCharacter ρ) :=
+  h.isRationalTorusRep.trace_eq_laurentEval t
+
+/-- **Twisting by `det^c` multiplies the character by `(x_0 ⋯ x_{n-1})^c`.** -/
+theorem IsRationalRep.ratCharacter_scaledRep (h : IsRationalRep ρ) (c : ℤ) :
+    ratCharacter (scaledRep ρ (detZPow K n c)) =
+      AddMonoidAlgebra.single (fun _ => c) 1 * ratCharacter ρ := by
+  have := h.finiteDimensional
+  rw [ratCharacter, IsRationalRep.comp_diagGL_scaledRep, laurentCharacter_scaledRep]
+  rfl
+
+end Infinite
+
+variable [CharZero K]
+
+/-- The character of a rational representation is the only Laurent polynomial whose values on
+the diagonal torus are the traces. -/
+theorem IsRationalRep.eq_ratCharacter_of_forall (h : IsRationalRep ρ) (f : TorusLaurent (Fin n))
+    (hf : ∀ t, laurentEval K t f = LinearMap.trace K W (ρ (diagGL t))) : f = ratCharacter ρ :=
+  h.isRationalTorusRep.eq_laurentCharacter_of_forall f hf
+
+theorem ratCharacter_eq_of_equiv (hρ : IsRationalRep ρ) (hσ : IsRationalRep σ)
+    (e : ρ.Equiv σ) : ratCharacter ρ = ratCharacter σ := by
+  refine hσ.eq_ratCharacter_of_forall _ fun t => ?_
+  rw [← hρ.trace_diagGL_eq]
+  have : σ (diagGL t) = e.toLinearEquiv.conj (ρ (diagGL t)) := by
+    ext v
+    obtain ⟨w, rfl⟩ := e.toLinearEquiv.surjective v
+    simp only [LinearEquiv.conj_apply, LinearMap.coe_comp, LinearEquiv.coe_coe,
+      Function.comp_apply, LinearEquiv.symm_apply_apply]
+    exact (IntertwiningMap.isIntertwining _ _ e.toIntertwiningMap _ w).symm
+  rw [this, LinearMap.trace_conj']
+
+/-- For a polynomial representation the rational character is the character. -/
+theorem IsPolynomialRep.ratCharacter_eq (h : IsPolynomialRep ρ) :
+    ratCharacter ρ = polyToLaurent (Fin n) (character ρ) :=
+  laurentCharacter_eq_polyToLaurent h.comp_diagGL
+
+/-- The character of `ρ` in terms of that of a polynomial twist `ρ ⊗ det^k`. -/
+theorem ratCharacter_eq_of_isPolynomialRep_scaledRep {k : ℕ}
+    (hk : IsPolynomialRep (scaledRep ρ (detPow K n k))) :
+    ratCharacter ρ = AddMonoidAlgebra.single (fun _ => -(k : ℤ)) 1 *
+      polyToLaurent (Fin n) (character (scaledRep ρ (detPow K n k))) := by
+  have h : IsRationalRep ρ := ⟨k, hk⟩
+  rw [← hk.ratCharacter_eq, ← detZPow_natCast, h.ratCharacter_scaledRep, ← mul_assoc,
+    single_const_mul_single_const, neg_add_cancel, single_const_zero, one_mul]
+
+/-- **Irreducible rational representations with the same character are equivalent.** -/
+theorem IsRationalRep.nonempty_equiv_of_ratCharacter_eq (hρ : IsRationalRep ρ)
+    (hσ : IsRationalRep σ) (hirrρ : ρ.IsIrreducible) (hirrσ : σ.IsIrreducible)
+    (hχ : ratCharacter ρ = ratCharacter σ) : Nonempty (ρ.Equiv σ) := by
+  obtain ⟨a, ha⟩ := id hρ
+  obtain ⟨b, hb⟩ := id hσ
+  have ha' : IsPolynomialRep (scaledRep ρ (detPow K n (b + a))) := by
+    have := ha.scaledRep_detPow b
+    rwa [scaledRep_scaledRep, ← detPow_add] at this
+  have hb' : IsPolynomialRep (scaledRep σ (detPow K n (b + a))) := by
+    have := hb.scaledRep_detPow a
+    rwa [scaledRep_scaledRep, ← detPow_add, Nat.add_comm a b] at this
+  refine (nonempty_equiv_scaledRep_iff (detPow K n (b + a))).mp
+    (IsPolynomialRep.nonempty_equiv_of_character_eq ha' hb'
+      ((isIrreducible_scaledRep_iff _ _).mpr hirrρ) ((isIrreducible_scaledRep_iff _ _).mpr hirrσ)
+      (polyToLaurent_injective ?_))
+  rw [← ha'.ratCharacter_eq, ← hb'.ratCharacter_eq, ← detZPow_natCast,
+    hρ.ratCharacter_scaledRep, hσ.ratCharacter_scaledRep, hχ]
+
+/-! ### Rational Schur polynomials -/
+
+section Schur
+
+/-- Schur polynomials in `n` variables of Young diagrams with at most `n` rows are distinct. -/
+theorem eq_of_diagramSchurPoly_eq {μ ν : YoungDiagram} (hμ : μ.colLen 0 ≤ n)
+    (hν : ν.colLen 0 ≤ n) (h : diagramSchurPoly n ℤ μ = diagramSchurPoly n ℤ ν) : μ = ν :=
+  irrep_eq_of_nonempty_equiv (K := ℚ) hμ hν <| IsPolynomialRep.nonempty_equiv_of_character_eq
+    (isPolynomialRep_irrep μ) (isPolynomialRep_irrep ν) (isIrreducible_irrep hμ)
+    (isIrreducible_irrep hν) (by rw [character_irrep hμ, character_irrep hν, h])
+
+variable (n) in
+/-- The **rational Schur polynomial** `s_λ = (x_0 ⋯ x_{n-1})^{λ_n} s_{λ − λ_n}` of a dominant
+weight `λ ∈ ℤ^n`, a Laurent polynomial. -/
+def ratSchur (l : DominantWeight n) : TorusLaurent (Fin n) :=
+  AddMonoidAlgebra.single (fun _ => l.detShift) 1 *
+    polyToLaurent (Fin n) (diagramSchurPoly n ℤ l.detShiftShape)
+
+/-- **`s_{λ + c} = (x_0 ⋯ x_{n-1})^c s_λ`.** -/
+theorem ratSchur_shift (l : DominantWeight n) (c : ℤ) :
+    ratSchur n (l.shift c) = AddMonoidAlgebra.single (fun _ => c) 1 * ratSchur n l := by
+  have hc : (fun _ : Fin n => (l.shift c).detShift) = fun _ => c + l.detShift := by
+    cases n with
+    | zero => exact funext fun i => i.elim0
+    | succ n =>
+      funext i
+      rw [DominantWeight.detShift_shift, add_comm]
+  rw [ratSchur, ratSchur, detShiftShape_shift, ← mul_assoc, single_const_mul_single_const, hc]
+
+/-- For a polynomial dominant weight the rational Schur polynomial is the Schur polynomial. -/
+theorem ratSchur_of_isPolynomial {l : DominantWeight n} (hl : l.IsPolynomial) :
+    ratSchur n l = polyToLaurent (Fin n) (diagramSchurPoly n ℤ l.shape) := by
+  have hk := (DominantWeight.isPolynomial_iff_zero_le_detShift l).mp hl
+  have hsh : (l.shift (-l.detShift)).shift (l.detShift.toNat : ℤ) = l := by
+    rw [DominantWeight.shift_shift, show -l.detShift + (l.detShift.toNat : ℤ) = 0 by omega,
+      DominantWeight.shift_zero]
+  conv_rhs => rw [← hsh]
+  rw [diagramSchurPoly_shift (DominantWeight.isPolynomial_shift_neg_detShift l), map_mul,
+    polyToLaurent_prod_X_pow, Int.toNat_of_nonneg hk, ratSchur]
+  rfl
+
+/-- **The rational Schur polynomials are distinct.** -/
+theorem ratSchur_injective : Function.Injective (ratSchur n) := by
+  intro l l' h
+  set c := max (-l.detShift) (-l'.detShift)
+  have h₁ : (l.shift c).IsPolynomial := isPolynomial_shift (by omega)
+  have h₂ : (l'.shift c).IsPolynomial := isPolynomial_shift (by omega)
+  have hs : ratSchur n (l.shift c) = ratSchur n (l'.shift c) := by
+    rw [ratSchur_shift, ratSchur_shift, h]
+  rw [ratSchur_of_isPolynomial h₁, ratSchur_of_isPolynomial h₂] at hs
+  have hshape := eq_of_diagramSchurPoly_eq (DominantWeight.colLen_zero_shape_le _)
+    (DominantWeight.colLen_zero_shape_le _) (polyToLaurent_injective hs)
+  have hl : l.shift c = l'.shift c := by
+    rw [← weightOfShape_shape h₁, hshape, weightOfShape_shape h₂]
+  have := congrArg (fun m : DominantWeight n => m.shift (-c)) hl
+  simpa only [DominantWeight.shift_shift, add_neg_cancel, DominantWeight.shift_zero] using this
+
+end Schur
+
+/-! ### The irreducible rational representations -/
+
+variable (K n) in
+/-- The **irreducible rational representation** `V(λ) = V(λ − λ_n) ⊗ det^{λ_n}` of `GL_n(K)`
+attached to a dominant weight `λ ∈ ℤ^n`. For a polynomial `λ` it is equivalent to the
+irreducible polynomial representation `GLRep.irrep K n λ` (`GLRep.nonempty_equiv_ratIrrep_irrep`).
+-/
+def ratIrrep (l : DominantWeight n) :
+    Representation K (GL (Fin n) K) (IrrepSpace K n l.detShiftShape) :=
+  scaledRep (irrep K n l.detShiftShape) (detZPow K n l.detShift)
+
+theorem isRationalRep_ratIrrep (l : DominantWeight n) : IsRationalRep (ratIrrep K n l) :=
+  (isPolynomialRep_irrep _).isRationalRep.scaledRep_detZPow _
+
+theorem isIrreducible_ratIrrep (l : DominantWeight n) : (ratIrrep K n l).IsIrreducible :=
+  (isIrreducible_scaledRep_iff _ _).mpr
+    (isIrreducible_irrep (DominantWeight.colLen_zero_detShiftShape_le l))
+
+/-- **The character of `V(λ)` is the rational Schur polynomial `s_λ`.** -/
+theorem ratCharacter_ratIrrep (l : DominantWeight n) :
+    ratCharacter (ratIrrep K n l) = ratSchur n l := by
+  rw [ratIrrep, (isPolynomialRep_irrep _).isRationalRep.ratCharacter_scaledRep,
+    (isPolynomialRep_irrep _).ratCharacter_eq,
+    character_irrep (DominantWeight.colLen_zero_detShiftShape_le l), ratSchur]
+
+/-- **The irreducible rational representations are distinct.** -/
+theorem eq_of_nonempty_equiv_ratIrrep {l l' : DominantWeight n}
+    (e : Nonempty ((ratIrrep K n l).Equiv (ratIrrep K n l'))) : l = l' := by
+  obtain ⟨e⟩ := e
+  have := ratCharacter_eq_of_equiv (isRationalRep_ratIrrep l) (isRationalRep_ratIrrep l') e
+  rw [ratCharacter_ratIrrep, ratCharacter_ratIrrep] at this
+  exact ratSchur_injective this
+
+/-- For a polynomial dominant weight `λ`, `GLRep.ratIrrep K n λ` is `GLRep.irrep K n λ`. -/
+theorem nonempty_equiv_ratIrrep_irrep {l : DominantWeight n} (hl : l.IsPolynomial) :
+    Nonempty ((ratIrrep K n l).Equiv (irrep K n l.shape)) :=
+  (isRationalRep_ratIrrep l).nonempty_equiv_of_ratCharacter_eq
+    (isPolynomialRep_irrep _).isRationalRep (isIrreducible_ratIrrep l)
+    (isIrreducible_irrep (DominantWeight.colLen_zero_shape_le l)) (by
+      rw [ratCharacter_ratIrrep, ratSchur_of_isPolynomial hl,
+        (isPolynomialRep_irrep _).ratCharacter_eq,
+        character_irrep (DominantWeight.colLen_zero_shape_le l)])
+
+/-- **The twist of `V(λ)` by `det^c` is `V(λ + c)`.** -/
+theorem nonempty_equiv_scaledRep_ratIrrep (l : DominantWeight n) (c : ℤ) :
+    Nonempty ((scaledRep (ratIrrep K n l) (detZPow K n c)).Equiv (ratIrrep K n (l.shift c))) :=
+  ((isRationalRep_ratIrrep l).scaledRep_detZPow c).nonempty_equiv_of_ratCharacter_eq
+    (isRationalRep_ratIrrep _) ((isIrreducible_scaledRep_iff _ _).mpr (isIrreducible_ratIrrep l))
+    (isIrreducible_ratIrrep _) (by
+      rw [(isRationalRep_ratIrrep l).ratCharacter_scaledRep, ratCharacter_ratIrrep,
+        ratCharacter_ratIrrep, ratSchur_shift])
+
+/-- **Classification of the irreducible rational representations**: every irreducible rational
+representation of `GL_n(K)` is equivalent to `V(λ)` for a dominant weight `λ ∈ ℤ^n`, unique by
+`GLRep.eq_of_nonempty_equiv_ratIrrep`. -/
+theorem IsRationalRep.exists_nonempty_equiv_ratIrrep (h : IsRationalRep ρ)
+    (hirr : ρ.IsIrreducible) : ∃ l : DominantWeight n, Nonempty (ρ.Equiv (ratIrrep K n l)) := by
+  obtain ⟨k, hk⟩ := id h
+  obtain ⟨μ, hμ, ⟨e⟩⟩ := IsPolynomialRep.exists_nonempty_equiv_irrep hk
+    ((isIrreducible_scaledRep_iff _ _).mpr hirr)
+  refine ⟨(weightOfShape n μ).shift (-(k : ℤ)), h.nonempty_equiv_of_ratCharacter_eq
+    (isRationalRep_ratIrrep _) hirr (isIrreducible_ratIrrep _) ?_⟩
+  rw [ratCharacter_eq_of_isPolynomialRep_scaledRep hk,
+    character_eq_of_equiv hk (isPolynomialRep_irrep μ) e, character_irrep hμ,
+    ratCharacter_ratIrrep, ratSchur_shift,
+    ratSchur_of_isPolynomial (isPolynomial_weightOfShape n μ), shape_weightOfShape hμ]
+
+/-- **Schur's lemma** for `V(λ)`. -/
+theorem finrank_intertwiningMap_ratIrrep_self (l : DominantWeight n) :
+    finrank K ((ratIrrep K n l).IntertwiningMap (ratIrrep K n l)) = 1 := by
+  rw [← finrank_intertwiningMap_irrep_self (K := K)
+    (DominantWeight.colLen_zero_detShiftShape_le l)]
+  exact (intertwiningMapScaledEquiv _ _ _).finrank_eq.symm
+
+/-- There are no nonzero intertwining maps between `V(λ)` and `V(λ')` for `λ ≠ λ'`. -/
+theorem finrank_intertwiningMap_ratIrrep_of_ne {l l' : DominantWeight n} (hne : l ≠ l') :
+    finrank K ((ratIrrep K n l).IntertwiningMap (ratIrrep K n l')) = 0 := by
+  have : (ratIrrep K n l).IsIrreducible := isIrreducible_ratIrrep l
+  have : (ratIrrep K n l').IsIrreducible := isIrreducible_ratIrrep l'
+  have : IsEmpty ((ratIrrep K n l).Equiv (ratIrrep K n l')) :=
+    ⟨fun e => hne (eq_of_nonempty_equiv_ratIrrep ⟨e⟩)⟩
+  exact Module.finrank_zero_of_subsingleton
+
+/-! ### Multiplicities -/
+
+variable (ρ) in
+/-- The **multiplicity** of `V(λ)` in `ρ`: the dimension of `Hom(V(λ), ρ)`. -/
+def ratMultiplicity (l : DominantWeight n) : ℕ := finrank K ((ratIrrep K n l).IntertwiningMap ρ)
+
+theorem ratMultiplicity_eq_of_equiv (e : ρ.Equiv σ) (l : DominantWeight n) :
+    ratMultiplicity ρ l = ratMultiplicity σ l :=
+  (intertwiningMapCongrRight e).finrank_eq
+
+/-- For a polynomial dominant weight `λ` the multiplicity of `V(λ)` is the polynomial one. -/
+theorem ratMultiplicity_eq_multiplicity {l : DominantWeight n} (hl : l.IsPolynomial) :
+    ratMultiplicity ρ l = multiplicity ρ l.shape :=
+  (intertwiningMapCongrLeft (nonempty_equiv_ratIrrep_irrep hl).some).finrank_eq
+
+/-- A polynomial representation admits no nonzero intertwining map from `V(λ)` for a dominant
+weight `λ` with a negative entry. -/
+theorem IsPolynomialRep.intertwiningMap_ratIrrep_eq_zero (h : IsPolynomialRep ρ)
+    {l : DominantWeight n} (hl : ¬ l.IsPolynomial) (f : (ratIrrep K n l).IntertwiningMap ρ) :
+    f = 0 := by
+  have : (ratIrrep K n l).IsIrreducible := isIrreducible_ratIrrep l
+  refine (_root_.Representation.IsIrreducible.injective_or_eq_zero f).resolve_left
+    fun hf => hl ?_
+  obtain ⟨μ, hμ, ⟨e⟩⟩ := IsPolynomialRep.exists_nonempty_equiv_irrep
+    (HasCoeffsIn.of_injective h f hf) (isIrreducible_ratIrrep l)
+  obtain ⟨e'⟩ := nonempty_equiv_ratIrrep_irrep (K := K) (isPolynomial_weightOfShape n μ)
+  rw [shape_weightOfShape hμ] at e'
+  rw [eq_of_nonempty_equiv_ratIrrep ⟨e.trans e'.symm⟩]
+  exact isPolynomial_weightOfShape n μ
+
+/-- A polynomial representation does not contain `V(λ)` for a dominant weight `λ` with a negative
+entry. -/
+theorem IsPolynomialRep.ratMultiplicity_eq_zero (h : IsPolynomialRep ρ) {l : DominantWeight n}
+    (hl : ¬ l.IsPolynomial) : ratMultiplicity ρ l = 0 := by
+  have : Subsingleton ((ratIrrep K n l).IntertwiningMap ρ) :=
+    subsingleton_of_forall_eq 0 (IsPolynomialRep.intertwiningMap_ratIrrep_eq_zero h hl)
+  exact Module.finrank_zero_of_subsingleton
+
+/-- Twisting by `det^c` shifts the multiplicities by `c`. -/
+theorem ratMultiplicity_scaledRep (l : DominantWeight n) (c : ℤ) :
+    ratMultiplicity (scaledRep ρ (detZPow K n c)) (l.shift c) = ratMultiplicity ρ l := by
+  obtain ⟨e⟩ := nonempty_equiv_scaledRep_ratIrrep (K := K) l c
+  rw [ratMultiplicity, ratMultiplicity, ← (intertwiningMapCongrLeft e).finrank_eq]
+  exact (intertwiningMapScaledEquiv _ _ _).finrank_eq.symm
+
+/-- **The character of a rational representation in the basis of rational Schur polynomials**: it
+is the sum of the `s_λ` weighted by the multiplicities `dim Hom(V(λ), ρ)`. -/
+theorem IsRationalRep.exists_ratCharacter_eq_sum (h : IsRationalRep ρ) :
+    ∃ S : Finset (DominantWeight n), (∀ l ∉ S, ratMultiplicity ρ l = 0) ∧
+      ratCharacter ρ = ∑ l ∈ S, (ratMultiplicity ρ l : ℤ) • ratSchur n l := by
+  classical
+  obtain ⟨k, hk⟩ := h
+  obtain ⟨S', hS'n, hS'z, hS'χ⟩ := hk.exists_character_eq_sum
+  have hmult : ∀ l : DominantWeight n,
+      ratMultiplicity ρ l = ratMultiplicity (scaledRep ρ (detPow K n k)) (l.shift k) := by
+    intro l
+    rw [← detZPow_natCast, ratMultiplicity_scaledRep]
+  have hφ : ∀ μ ∈ S', ratMultiplicity ρ ((weightOfShape n μ).shift (-(k : ℤ))) =
+      multiplicity (scaledRep ρ (detPow K n k)) μ := by
+    intro μ hμ
+    rw [hmult, DominantWeight.shift_shift, neg_add_cancel, DominantWeight.shift_zero,
+      ratMultiplicity_eq_multiplicity (isPolynomial_weightOfShape n μ),
+      shape_weightOfShape (hS'n μ hμ)]
+  have hinj : Set.InjOn (fun μ => (weightOfShape n μ).shift (-(k : ℤ))) S' := by
+    intro μ hμ ν hν hμν
+    have := congrArg (fun m : DominantWeight n => m.shift k) hμν
+    simp only [DominantWeight.shift_shift, neg_add_cancel, DominantWeight.shift_zero] at this
+    rw [← shape_weightOfShape (hS'n μ hμ), this, shape_weightOfShape (hS'n ν hν)]
+  refine ⟨S'.image fun μ => (weightOfShape n μ).shift (-(k : ℤ)), fun l hl => ?_, ?_⟩
+  · rw [hmult]
+    by_cases hp : (l.shift k).IsPolynomial
+    · rw [ratMultiplicity_eq_multiplicity hp]
+      refine hS'z _ (DominantWeight.colLen_zero_shape_le _) fun hm => hl ?_
+      refine Finset.mem_image.mpr ⟨_, hm, ?_⟩
+      simp only [weightOfShape_shape hp, DominantWeight.shift_shift, add_neg_cancel,
+        DominantWeight.shift_zero]
+    · exact (hk : IsPolynomialRep _).ratMultiplicity_eq_zero hp
+  · rw [ratCharacter_eq_of_isPolynomialRep_scaledRep hk, hS'χ, map_sum, Finset.mul_sum,
+      Finset.sum_image hinj]
+    refine Finset.sum_congr rfl fun μ hμ => ?_
+    rw [hφ μ hμ, map_zsmul, mul_smul_comm, ratSchur_shift,
+      ratSchur_of_isPolynomial (isPolynomial_weightOfShape n μ), shape_weightOfShape (hS'n μ hμ)]
+
+end
+
+end GLRep
+

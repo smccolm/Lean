@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "files": [
+    {
+      "file": "RS-Exponential.lean.txt",
+      "gitBlob": "3d62a85a9e48aa28f23f81b6bef11e8da1e2133d",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Exponential.lean",
+      "sha256": "BAAADCFBC5657E5F3CAD65BA28674A4F445FA62F269FE7C93B07657C186A49F9"
+    },
+    {
+      "file": "RS-Extension.lean.txt",
+      "gitBlob": "30972d5ad6a5906f98ac610437c22caf02f1f2c8",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Extension.lean",
+      "sha256": "CC7B130B3F42C22C87289CC800EB3A3441BB824E6FFEBD8CF4248FED4839F58A"
+    },
+    {
+      "file": "RS-Differential.lean.txt",
+      "gitBlob": "57e1ac67c0f151fadebf86e6a588c8a57d38e6a8",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Differential.lean",
+      "sha256": "8C7E16FAFF2336CB1A1BC6A58412388BBA22A55B1CC94A75391B6F758C8E8B19"
+    },
+    {
+      "file": "Annals-PotentialAutomorphy-final-audit.txt",
+      "gitBlob": "622ec2bbc5da60388187708b7747db55cdf768d8",
+      "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/scratch/1812.09999/c01/final-audit.txt",
+      "sha256": "3CE68668C55EC7D0C80FF41E91733B66E1A9157F9F4374EC2F9B5A644BC309BB"
+    }
+  ],
+  "decisions": [
+    {
+      "repository": "rhodges-math/rs-counterexample",
+      "commit": "8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6",
+      "result": "Polynomial-representation differential and square-zero subgroup exponential formula.",
+      "decision": "Method reference. The original localized-coordinate model already supplies universal evaluation, so use its exact generic dual-number translation directly. This avoids importing the external polynomial matrix coefficient framework or changing the coefficient module. The actual matrix-coordinate Lie bracket and covariance stability are now checked. The curve/exponential group-stability proof is subsequent work, not covered by this receipt."
+    },
+    {
+      "repository": "tadamcz/annals-results",
+      "commit": "e37fac79bedddf40773e5e02dc5f9585247710ce",
+      "result": "PotentialAutomorphy.automorphy_lifting in data/scratch/1812.09999/c01.",
+      "decision": "Rejected as proof evidence: the published final-audit text explicitly reports 37 sorry occurrences and displays the automorphy-lifting proof as sorry. No code adopted."
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "b971ef7017efd17b28899a41289f2f11cdced2a2",
+      "result": "Refreshed searches for Automorphy, GaloisRepresentation and Crystalline.",
+      "decision": "Returned modular slash-action facts, Tate-module representations, and divided-power augmentation. These do not directly discharge the required arbitrary-weight modular Galois realization, BLGG potential automorphy or crystalline/Selmer dimensions. No absence claim is made."
+    }
+  ],
+  "localReuse": [
+    {
+      "module": "GeneralLinearRegularPoints",
+      "use": "Exact original localization point equivalence and all-algebra evaluation naturality."
+    },
+    {
+      "module": "IntegralHighestWeightAction",
+      "use": "Actual Borel base change and exact integral character, including negative weights."
+    },
+    {
+      "module": "IntegralInducedFiniteFree",
+      "use": "Original determinant denominator and numerator degree bounds derive finite dimension."
+    },
+    {
+      "module": "SourceSpecialLinearComplements",
+      "use": "Adapted actual matrix semisimplicity and Atlas Weyl complement theorem."
+    },
+    {
+      "module": "MatrixPolynomialDerivation",
+      "use": "Inspected existing complex polynomial Lie-action proof; its carrier is the unlocalized complex polynomial ring. Coordinate calculation pattern reused for the actual localization over every coefficient ring."
+    },
+    {
+      "module": "DualMatrixInfinitesimal / DualMatrixStrictUnits / RelativeDualNumberDerivations",
+      "use": "Inspected existing first-order deformation constructions. The residue-local and Type-level interfaces do not directly provide a right-action derivation of the actual universal localization. Use native dual numbers and the existing generic-point evaluator."
+    }
+  ],
+  "discharged": "The original induced coefficient module over every characteristic-zero field in positive rank has actual invariant special-linear Lie complements. Its differential is constructed from its exact right translation, its Borel covariance is proved stable by all-algebra epsilon evaluation, its finite dimension is derived from original degree/denominator bounds, and its acting trace-zero Lie algebra is proved semisimple.",
+  "remaining": "Group-stability of these complements, nonzero unipotent-fixed vectors in each nonzero stable subspace, full actual coefficient irreducibility/base-change identification, and the existing arithmetic and automorphy obligations remain open. DUB-17-20 remain open; acceptance 16/20.",
+  "production": "Scratch only; excludes the frozen 4,860-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

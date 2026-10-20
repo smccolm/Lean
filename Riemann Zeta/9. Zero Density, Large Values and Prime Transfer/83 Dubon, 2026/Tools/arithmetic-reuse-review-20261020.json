@@ -1,0 +1,91 @@
+{
+  "recordedUTC": "2026-10-20T09:54:44.411604+00:00",
+  "exactDependency": "DUB-17 frozen Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> potential automorphy plus modular Galois association -> actual primitive form coefficient number field/integral Hecke algebra -> integral modular symbols, injective period map and the actual Hecke comparison.",
+  "candidateReviews": [
+    {
+      "source": {
+        "name": "KN-Deligne.lean.txt",
+        "encoding": "utf-8",
+        "sha": "ebbf6c794fd6b588d50bf95dab1d0d4c90b02aec",
+        "display_url": "https://github.com/loefflerd/KN-scratch/blob/ba97a154bf2550c5210b6adf1a308329ed6bc8cc/Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+        "display_title": "Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+        "characters": 4493,
+        "sha256": "A1214A299850282958D0A9FEDF471039D15A60D13E7F4DAD8A82BCAD2443BFC8"
+      },
+      "verdict": "Not a proof of representation existence.",
+      "reason": "The theorem explicitly assumes HasContinuousLocalFieldRepresentations and its body projects exists_representation from that hypothesis."
+    },
+    {
+      "source": {
+        "name": "FLT-HardlyRamifiedLift.lean.txt",
+        "encoding": "utf-8",
+        "sha": "4265b53a4e4cf1ce8163cbdc6061b9596dc404b8",
+        "display_url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/GaloisRepresentation/HardlyRamified/Lift.lean",
+        "display_title": "Lift.lean",
+        "characters": 1729,
+        "sha256": "09A5D45E5E88C5AEF7CA792A65E5EFFC3508DE679A37275A99FB0096FD4AEDE2"
+      },
+      "verdict": "Not accepted as proof.",
+      "reason": "The actual IsHardlyRamified.lifts theorem body is sorry."
+    },
+    {
+      "source": {
+        "name": "TauCeti-PrescribedLocalForms.lean.txt",
+        "encoding": "utf-8",
+        "sha": "b6e4d077304682c999d4a0e4fce9e3492c8f09a5",
+        "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+        "display_title": "PrescribedLocalForms.lean",
+        "characters": 10084,
+        "sha256": "D67205A5EF1F722F0C6DFF88421517039216F4628E997ECEC29DBEAB2DCE3D90"
+      },
+      "verdict": "Partial quadratic-form result; deferred.",
+      "reason": "Produces local correction data and retains a global representation premise. It does not directly construct the prescribed everywhere quasi-split finite-place and definite infinite-place unitary group over the required CM extension."
+    },
+    {
+      "source": {
+        "name": "AINTLIB-HeckeAlgFiniteFinal.lean.txt",
+        "encoding": "utf-8",
+        "sha": "7c81e2bc5b1d79179b9cb3f4d8cd50bdbb50dddf",
+        "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/Labels/HeckeAlgFiniteFinal.lean",
+        "display_title": "HeckeAlgFiniteFinal.lean",
+        "characters": 4788,
+        "sha256": "D868CCA240F34F8731468A7EDEE44A2D25F73D73602D3041A73A78E3541B597B"
+      },
+      "verdict": "Relevant period-route candidate.",
+      "reason": "The weight >= 2 specialization uses Eichler period injectivity. The all-weight instance still takes an admitted lattice route below weight two. No transitive kernel-audit claim is made from the file comments.",
+      "toolchain": "Lean 4.36.0-rc1; root project remains Lean 4.30.0."
+    },
+    {
+      "sourceManifest": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period-manifest.json",
+      "verdict": "Preferred smaller mathematical route.",
+      "reason": "TauCeti proves finite integral operator algebra using an injective pairing with finite integral cycles and a free-algebra/opposite-algebra argument. This avoids separate commutativity and integral lattices in cusp forms.",
+      "sourceRevision": "199786c594817a82fdd2fab04d3ae4cc5eb837d5",
+      "sourceModules": 133,
+      "verificationLimit": "Full source closure retrieved; full closure not ported or kernel-audited."
+    }
+  ],
+  "localReuseDecision": "Use the already proved MatrixPolynomialAction, HomogeneousMonomialBasis and HomogeneousCoefficientChange for the original binary coefficients. Transpose changes the existing column substitution to the right row substitution. Avoid the external Dickson-trace, rational canonical form, general representation-category and unrelated Gamma1 Hecke frameworks where native original-object proofs suffice. Construct the period pairing for the original Gamma0 cusp forms and compare their existing operators.",
+  "appliedScratchTransfer": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePairingFinite.lean",
+    "sha256": "22046B6028D7891A124DB15205ACC0A34619B156737AE00BF5749AA0C744C9CC",
+    "oleanSha256": "0D1F265A0ACCFF144A3A449FBD010D0539E7F5FBB885A638F7B9151CC80D6956",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePairingAudit.log",
+    "auditLogSha256": "9F70FDC1B8481523F7E33C3DD118DE906FEE40EA5C0114F5C7213061D6C8BAF5",
+    "auditSourceSha256": "315076B381BE6FFAFDE597A6979CF6529DB9DA14B221262096A925D63B59D9DB",
+    "explicitAxiomQueries": [
+      "Dubon2026.sourcePairing_freeAlgebra_lift",
+      "Dubon2026.sourceOperatorAlgebra_finite_of_pairing"
+    ],
+    "exhaustiveTheorems": 2,
+    "linters": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "discharged": "An injective pairing with a Noetherian cycle module and generator adjointness rigorously imply finiteness of the entire generated operator algebra.",
+    "remainingInputs": "The actual integral modular symbols, actual period-map injectivity, and adjointness of the original cusp-form Hecke operators are still required."
+  },
+  "productionImported": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "acceptance": "16/20; DUB-17-20 remain open.",
+  "absenceClaim": false
+}

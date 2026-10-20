@@ -36,7 +36,7 @@
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "externalCodeAdopted": true,
-  "status": "The 27-module source assembly passes 225 exhaustive theorem checks, 141 explicit dependency queries and sixteen linters in every scope with zero diagnostics. A separate proof-value traversal verifies twelve required source dependency edges. Production aggregate, focused audit and sequential foundation/paper verification of the 4,832-module scope are pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,832-module scope: all thirteen retained regressions, 34,151 exhaustive theorem checks, 14,552 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "archives": [
     "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019",
     "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019",
@@ -87,5 +87,24 @@
       "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/manifest.json",
       "sha256": "A1415E0BCBFD47B260BD820C7893509A93845895E726F9DC1622E2283135E30E"
     }
-  ]
+  ],
+  "receipt4832": {
+    "date": "2026-10-19 America/Vancouver",
+    "log": "logs/dubon-build-20261019-232243-696.log",
+    "sha256": "5F86ABFB55746A92B7DF7DDDE54D74AAE7627B1E378E8B8AC7D85277ABE723C8",
+    "bytes": 8254106,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4832,
+    "projectTheorems": 34151,
+    "registeredConsumers": 14552,
+    "registeredConstructions": 394,
+    "declarations": 20346,
+    "generated": 19192,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261019_194216.log",
+    "foundationSha256": "32FF6606952C4D5D352A9E2A343BD12676289E4666E67C3C4782D931A94DA34F",
+    "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed."
+  }
 }

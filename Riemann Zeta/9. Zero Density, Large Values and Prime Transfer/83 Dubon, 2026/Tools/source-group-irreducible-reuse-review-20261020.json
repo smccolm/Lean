@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "externalSource": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-unipotent-reuse-20261020\\RS-Borel-Stability-Differential.lean.txt",
+    "sha256": "BD160EDDF7D3001F3C78B5CBEE40E9634A66E149C44435A77051727FA3266CBF",
+    "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Borel/BorelStabilityDifferential.lean",
+    "gitBlob": "e78a6c336bf3e4d4b8d1b117e6f1066c116faa0d",
+    "adaptation": "Only finite polynomial coefficient extraction is retained, using algebraic-dual separation and infinitely many polynomial roots. The newer Set.mem_ofPred_eq simplification is unnecessary under the unchanged pin. No external representation, Borel or differential framework is imported."
+  },
+  "license": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-unipotent-reuse-20261020\\RS-LICENSE.txt",
+    "sha256": "F82A91CE7E6879493ECD8CE9D078798DB8B893C0FB33055D7292198779042456",
+    "gitBlob": "a0d86c5f7235ddf0cb0a8e4749ae393c8bad6b88",
+    "license": "Apache-2.0; Copyright 2026 Reuven Hodges"
+  },
+  "localReuse": [
+    "Original source finite square-zero exponential with exact factorial coefficients",
+    "Original off-diagonal matrix units, commutator formula and trace-zero spanning",
+    "Original actual group and Lie actions on the same induced regular functions",
+    "Derived original special-linear Lie irreducibility and highest-vector nonzeroness",
+    "Pinned native Representation.IsIrreducible and Subrepresentation"
+  ],
+  "routeDecision": "Coefficient extraction recovers the original differential directly from the same original polynomial group orbit. Matrix commutators extend off-diagonal stability to all trace-zero matrices. The actual group-invariant subspace is therefore an actual source Lie submodule, and the proved source Lie irreducibility applies. The ordinary orbit-span argument is proved over an abstract carrier and applied to the constructed irreducible source representation; this avoids expanding the large coordinate carrier and leaves all proof limits unchanged.",
+  "discharged": "For every dominant source weight over every characteristic-zero coefficient field in positive rank, the original general-linear induced representation is irreducible in Mathlib terminology, with nontriviality derived. Its actual normalized highest-vector group orbit spans the whole original coefficient module. Group-to-Lie invariance, irreducibility and generation are proved, not supplied.",
+  "remaining": "Integral-to-field base-change identification and source tensor irreducibility remain open, as do all existing source arithmetic/automorphy obligations. Acceptance remains 16/20; DUB-17-20 remain open.",
+  "production": "Scratch only; excludes frozen 4,887-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "externalSource": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-unipotent-reuse-20261020\\RS-Borel-Generation.lean.txt",
+    "sha256": "0E39A9EFB63E294177E7BB6C23DD0775BB571C38C61B81CA15FD874E9A09B7F0",
+    "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Borel/Generation.lean",
+    "gitBlob": "1dc8bef548fde5c5d79b442b6ed5a05d69ea1da2",
+    "adaptation": "Only the upper-unitriangular support reduction and generation proof is retained. It uses no division and is checked over every commutative coefficient algebra, as required by the source contract. The original local Borel, actual elementary matrix and regular-function evaluation replace the external representation framework. No general Borel, torus or polynomial-representation framework is imported."
+  },
+  "license": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-unipotent-reuse-20261020\\RS-LICENSE.txt",
+    "sha256": "F82A91CE7E6879493ECD8CE9D078798DB8B893C0FB33055D7292198779042456",
+    "gitBlob": "a0d86c5f7235ddf0cb0a8e4749ae393c8bad6b88",
+    "license": "Apache-2.0; Copyright 2026 Reuven Hodges"
+  },
+  "localReuse": [
+    "Original source orbit polynomial and factorial coefficient formula",
+    "Original all-algebra evaluation and evaluation-induced algebra tower",
+    "Derived nonzero Engel invariant in each actual nonzero source Lie submodule",
+    "Original unipotent-line uniqueness via faithful generic open cell",
+    "Original highest-vector nonzeroness and actual constructed Weyl complement"
+  ],
+  "routeDecision": "The original orbit polynomial is constant when its actual differential vanishes. Evaluating the same polynomial through each original matrix evaluation gives invariance over every coefficient algebra. Exact upper-root generation supplies the source all-algebra unipotent contract. Every nonzero Lie submodule then contains the same actual highest vector; applying this to a constructed Lie complement proves irreducibility. This argument does not require a separately supplied general-linear stability certificate for the complement.",
+  "discharged": "For every dominant source weight over every characteristic-zero coefficient field in positive rank, the actual induced special-linear Lie action is irreducible and its actual normalized highest vector generates the entire original coefficient module. Every nonzero original Lie submodule contains that highest vector, derived from its nonzero all-algebra unipotent invariant. No nonzero invariant, highest-line or complete-reducibility witness is supplied.",
+  "remaining": "Group irreducibility and group generation still require recovering Lie stability from the original group action. Integral-to-field base-change identification, tensor irreducibility and all existing source arithmetic/automorphy obligations remain open. Acceptance remains 16/20; DUB-17-20 remain open.",
+  "production": "Scratch only; excludes frozen 4,887-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

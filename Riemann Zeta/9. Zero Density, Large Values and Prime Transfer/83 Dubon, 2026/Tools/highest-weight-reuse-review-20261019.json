@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-19 America/Vancouver",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "6320487e0e3d2803bf553a49913a18563fcd396e",
+  "purpose": "Before expanding the remaining highest-weight identification for BLGG Section 3.2 / Geraghty Definition 2.2.3 on the DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 automorphy chain, inspect current reusable proofs.",
+  "reviewed": [
+    {
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/6320487e0e3d2803bf553a49913a18563fcd396e/TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Irreducible.lean",
+      "gitBlob": "de6960215b9cd3e8bd62a66a0b1b30254019a8c6",
+      "inspection": "Full file fetched; module scope and hypotheses inspected.",
+      "disposition": "Characteristic-zero irreducibility of the Young-symmetrizer image; not yet an equivalence with the literal integral regular-function induction. No adaptation made."
+    },
+    {
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/6320487e0e3d2803bf553a49913a18563fcd396e/TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Rational.lean",
+      "gitBlob": "35c6085db2ef100e26d6e4ce2682c5d08e7a56e7",
+      "inspection": "Full file fetched; module scope and hypotheses inspected.",
+      "disposition": "Determinant-twisted characteristic-zero Weyl representations; source explicitly leaves highest-weight identification and classification unproved here. Not a replacement for the required identification."
+    },
+    {
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/6320487e0e3d2803bf553a49913a18563fcd396e/TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Basic.lean",
+      "gitBlob": "7710997097f8b01e0cb4d340d9a34b616e393075",
+      "inspection": "Full file fetched; module scope and hypotheses inspected.",
+      "disposition": "Weyl construction over a rational algebra; it cannot replace the original local integer coefficient module. No adaptation made."
+    }
+  ],
+  "additionalSearch": "Targeted induced/irreducible, highest-weight/Borel, regular-functions/weight and comodule-flag searches. Search results are not an exhaustive absence proof.",
+  "flagReview": {
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/6320487e0e3d2803bf553a49913a18563fcd396e/TauCeti/Algebra/Coalgebra/Comodule/Flag/Induction.lean",
+    "inspection": "Search excerpt only.",
+    "disposition": "Finite-dimensional comodule flag induction conditional on nonzero fixed vectors; not the literal Borel regular-function induction."
+  },
+  "localShorterRoute": "For common-field adequacy, native finite algebraic adjoining of every embedding image of a finite rational basis and existing spectral local-field/valuation-extension proofs give a short exact construction. Implemented in CommonCoefficientField and CommonCoefficientLocalField, and consumed in the exact source coefficient and auxiliary theorems. No new external proof code or dependency-pin change.",
+  "externalCodeAdopted": false,
+  "rootPinsChanged": false
+}

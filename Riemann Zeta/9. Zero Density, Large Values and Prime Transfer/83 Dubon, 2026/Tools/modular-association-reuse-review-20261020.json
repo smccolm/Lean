@@ -1,0 +1,513 @@
+{
+  "date": "2026-10-20",
+  "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association, after deriving original coefficient arithmetic and a residual Hecke eigensystem.",
+  "queries": [
+    "Lean theorem Deligne Galois representation modular forms formalization GitHub",
+    "Lean Eichler Shimura etale cohomology Galois representation proof github 2026",
+    "site:github.com/TauCetiProject/TauCeti GaloisRepresentation modular"
+  ],
+  "candidates": [
+    {
+      "repository": "mkaratarakis/CICM24_Deligne",
+      "revision": "8e5b163b30e434e6f68549e9399650923b75fb60",
+      "path": "Statement.lean",
+      "blobSha1": "e32b99f1bb1af727eda1caff1aad001c62188149",
+      "url": "https://github.com/mkaratarakis/CICM24_Deligne/blob/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+      "inspection": "Full source read at the exact commit; not imported or compiled as proof.",
+      "verdict": "Rejected as a proof of modular Galois association: the final theorem Deligne and the prerequisite EigenvaluesAlgebraic have admitted proof bodies."
+    },
+    {
+      "repository": "eluckydog/flt-from-scratch",
+      "revision": "0e14fc0fe1c5ec41e405815be19fac16b8e7fc9c",
+      "path": "lean/ch04_galois.lean",
+      "blobSha1": "4efefabedbbb00b6279ca76e05d1ead20d618653",
+      "url": "https://github.com/eluckydog/flt-from-scratch/blob/0e14fc0fe1c5ec41e405815be19fac16b8e7fc9c/lean/ch04_galois.lean",
+      "inspection": "Full source read at the exact commit; not imported or compiled as proof.",
+      "verdict": "Rejected: the representation, continuity, cyclotomic and Hodge-theoretic properties are True placeholders; the Tate-module section also contains an admission."
+    }
+  ],
+  "projectStatus": [
+    {
+      "url": "https://anr-false.github.io/",
+      "verdict": "Project states its development goal is to define the Galois representation associated by Deligne to a modular form. This is a roadmap, not evidence of a completed theorem.",
+      "latestNewsObserved": "26 September 2026"
+    },
+    {
+      "url": "https://leanprover.github.io/lean-eval-leaderboard/problems/ramanujan_petersson/",
+      "verdict": "The displayed benchmark statement is admitted. It does not itself provide a proof. Client-side leaderboard submissions were not inspected, so this is not a verdict on every submission."
+    }
+  ],
+  "conclusion": "New candidates were found for actual modular geometry, classical etale coefficients and finite rank-two subgroup classification. None of the inspected endpoints provides a verified source-complete modular Galois association or automorphy theorem. Candidate retrieval and static scans are research evidence; only separately checked local adaptations count as proof progress.",
+  "appliedReuse": "The earlier TauCeti period/Eichler adaptations and native/local original Hecke arithmetic now yield a checked original coefficient number field and residual Hecke eigensystem in scratch; canonical production promotion remains pending.",
+  "rootPinsChanged": false,
+  "additionalQueries": [
+    "Lean crystalline representations Fontaine p-adic Hodge theory GitHub",
+    "Lean modular curves universal elliptic curve Eichler Shimura 2026",
+    "Lean automorphy lifting Taylor Wiles GitHub",
+    "Lean Dickson classification subgroups GL2 SL2 Galois image",
+    "Lean Ribet Momose large image modular forms"
+  ],
+  "sourceRoute": {
+    "url": "https://publications.ias.edu/sites/default/files/5_FormesModulaires.pdf",
+    "sections": [
+      "2.10",
+      "3.9-3.11",
+      "3.18-3.19",
+      "4.9"
+    ],
+    "finding": "The analytic/etale realization uses parabolic H1 with the symmetric power of the universal elliptic R1 coefficient system. A constant-coefficient adic package alone does not provide it. The comparison must preserve original Hecke operators.",
+    "decision": "Reuse existing cusp periods and native group cohomology to construct the actual analytic parabolic cocycle. Investigate the modular geometric family before importing a generic etale closure. All source weights remain in scope; no separate Weil-purity or pro-etale expansion is selected."
+  },
+  "additionalCandidates": [
+    {
+      "repository": "rkirov/ClassificationOfFiniteSubgroupsOfPGL",
+      "revision": "c4609e300c1c99217546efe5f379392d14130500",
+      "date": "2026-07-19T00:26:29Z",
+      "lean": "4.32.0-rc1",
+      "mathlib": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+      "dependency": "DUB-17/18 -> BLGG 7.1(B1) -> Dimitrov residual image bound -> finite rank-two subgroup classification.",
+      "inspection": "All 18 non-Mathlib files in the positive-characteristic import closure retrieved (25,399 lines). Comment-aware static scan found no admitted proof/custom axiom/unsafe proof token. Final statements, comparator bridge and selected conjugacy internals inspected. No kernel replay performed.",
+      "boundary": "Headline classifications give abstract group isomorphisms. Matrix containment requires retained conjugacy and subfield witnesses, plus arithmetic exclusion of exceptional images. The source contains 46 option scopes including unlimited/increased limits and a disabled linter; those cannot be copied. No LICENSE entry found in the complete tree and LICENSE fetch returned 404. No production source copied.",
+      "decision": "Promising candidate for a necessary finite-group dependency, not a proved modular-image theorem or current accepted import.",
+      "files": [
+        {
+          "path": "ClassificationOfSubgroups/Ch4_PGLIsoPSLOverAlgClosedField/ProjectiveGeneralLinearGroup.lean",
+          "blobSha1": "58b6d4cb6e8ab457ce72c5ab679e4622ad642dc2",
+          "chars": 11528,
+          "lines": 297,
+          "imports": [
+            "import Mathlib.FieldTheory.IsAlgClosed.Basic",
+            "import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option linter.style.longLine true",
+            "set_option autoImplicit false",
+            "set_option maxHeartbeats 0"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch5_PropertiesOfSLOverAlgClosedField/S1_SpecialMatrices.lean",
+          "blobSha1": "4bcae74a84779489602ccf86478209fd52a4995f",
+          "chars": 5710,
+          "lines": 207,
+          "imports": [
+            "import Mathlib.Algebra.Lie.OfAssociative",
+            "import Mathlib.Data.Fintype.Parity",
+            "import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup",
+            "import Mathlib.RingTheory.Henselian"
+          ],
+          "prohibitedTokens": [],
+          "options": []
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch5_PropertiesOfSLOverAlgClosedField/S2_SpecialSubgroups.lean",
+          "blobSha1": "6f9eea4c5770e9dfcb3d77c67cd2f124013ca6af",
+          "chars": 30239,
+          "lines": 946,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch5_PropertiesOfSLOverAlgClosedField.S1_SpecialMatrices",
+            "import Mathlib.Algebra.Category.Grp.Images",
+            "import Mathlib.Analysis.Normed.Field.Lemmas",
+            "import Mathlib.Order.CompletePartialOrder",
+            "import Mathlib.GroupTheory.Sylow"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option linter.style.longLine true",
+            "set_option maxHeartbeats 0"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch5_PropertiesOfSLOverAlgClosedField/S3_JordanNormalFormOfSL.lean",
+          "blobSha1": "08473a6c5419f2d223d23b1a12f18f63588082dd",
+          "chars": 14224,
+          "lines": 370,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch5_PropertiesOfSLOverAlgClosedField.S2_SpecialSubgroups",
+            "import Mathlib.Algebra.GroupWithZero.Conj",
+            "import Mathlib.FieldTheory.IsAlgClosed.Basic",
+            "import Mathlib.RingTheory.Artinian.Instances",
+            "import Mathlib.RingTheory.FiniteLength",
+            "import Mathlib.RingTheory.PicardGroup",
+            "import Mathlib.RingTheory.SimpleRing.Principal"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option autoImplicit false",
+            "set_option linter.style.longLine true"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch5_PropertiesOfSLOverAlgClosedField/S4_PropertiesOfCentralizers.lean",
+          "blobSha1": "e913b2f67e79a3c61faffa9d69379f09b0a3e6d0",
+          "chars": 6140,
+          "lines": 179,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch5_PropertiesOfSLOverAlgClosedField.S3_JordanNormalFormOfSL"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option autoImplicit false",
+            "set_option linter.style.longLine true"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch5_PropertiesOfSLOverAlgClosedField/S5_PropertiesOfNormalizers.lean",
+          "blobSha1": "ccfe2b4c04a6b6b8527f0da1c9021726ad06fe42",
+          "chars": 9571,
+          "lines": 235,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch5_PropertiesOfSLOverAlgClosedField.S3_JordanNormalFormOfSL"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option autoImplicit false",
+            "set_option linter.style.longLine true"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch5_PropertiesOfSLOverAlgClosedField/S6_TripleTransitivity.lean",
+          "blobSha1": "32fd8db567fbc3c4668909fb50041e45d7572010",
+          "chars": 22911,
+          "lines": 500,
+          "imports": [
+            "import Mathlib"
+          ],
+          "prohibitedTokens": [],
+          "options": []
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch6_MaximalAbelianSubgroupClassEquation/S1_ElementaryAbelian.lean",
+          "blobSha1": "d27a1845d02bdaadd82977316e2394bd025a0e94",
+          "chars": 3908,
+          "lines": 112,
+          "imports": [
+            "import Mathlib.Data.Nat.Factorization.PrimePow",
+            "import Mathlib.GroupTheory.PGroup",
+            "import Mathlib.Order.CompletePartialOrder"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\n\nset_option linter.style.longLine true",
+            "set_option autoImplicit false",
+            "set_option maxHeartbeats 0",
+            "set_option synthInstance.maxHeartbeats 0"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch6_MaximalAbelianSubgroupClassEquation/S2_A_MaximalAbelianSubgroup.lean",
+          "blobSha1": "2d3a3a97a991b870bc7fe338899026f23c73784c",
+          "chars": 93286,
+          "lines": 2024,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch5_PropertiesOfSLOverAlgClosedField.S4_PropertiesOfCentralizers",
+            "import ClassificationOfSubgroups.Ch5_PropertiesOfSLOverAlgClosedField.S5_PropertiesOfNormalizers",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S1_ElementaryAbelian",
+            "import Mathlib.Algebra.Order.Ring.Star",
+            "import Mathlib.Data.Int.Star",
+            "import Mathlib.FieldTheory.Finite.Basic"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option linter.style.longLine true",
+            "set_option autoImplicit false",
+            "set_option maxHeartbeats 0",
+            "set_option synthInstance.maxHeartbeats 0",
+            "set_option linter.unusedTactic false"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch6_MaximalAbelianSubgroupClassEquation/S2_B_MaximalAbelianSubgroup.lean",
+          "blobSha1": "27b8dae80fce1c0ebfca9c686400fe0620643781",
+          "chars": 77017,
+          "lines": 1463,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S2_A_MaximalAbelianSubgroup",
+            "import Mathlib.GroupTheory.SchurZassenhaus"
+          ],
+          "prohibitedTokens": [],
+          "options": []
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch6_MaximalAbelianSubgroupClassEquation/S3_NoncenterClassEquation.lean",
+          "blobSha1": "4161383823ec65570d9e1aebe961165289374b55",
+          "chars": 48479,
+          "lines": 1214,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S2_A_MaximalAbelianSubgroup",
+            "import Mathlib.Data.Setoid.Partition",
+            "import Mathlib.Data.Set.Card.Arithmetic"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option linter.style.longLine true",
+            "set_option autoImplicit false",
+            "set_option maxHeartbeats 0",
+            "set_option synthInstance.maxHeartbeats 0"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch6_MaximalAbelianSubgroupClassEquation/S4_CaseArithmetic.lean",
+          "blobSha1": "69b2377e116768a93b3b89f5426ef9f768dfa607",
+          "chars": 23643,
+          "lines": 510,
+          "imports": [
+            "import Mathlib"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option autoImplicit false"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch6_MaximalAbelianSubgroupClassEquation/S5_NumericClassEquation.lean",
+          "blobSha1": "ba74858ae49a4b55e7bb9ad41586ee41d3f8b52d",
+          "chars": 91115,
+          "lines": 1604,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S3_NoncenterClassEquation",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S4_CaseArithmetic",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S2_B_MaximalAbelianSubgroup"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option linter.style.longLine true",
+            "set_option autoImplicit false",
+            "set_option maxHeartbeats 0",
+            "set_option synthInstance.maxHeartbeats 0"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch7_CaseVd_2I.lean",
+          "blobSha1": "9d7005f4cd049abb712b5dd69c3512826d446577",
+          "chars": 115714,
+          "lines": 1156,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch7_GroupRecognition"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option maxHeartbeats 4000000 in",
+            "set_option maxRecDepth 16000 in",
+            "\nset_option maxRecDepth 40000 in"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch7_DicksonsClassificationTheorem.lean",
+          "blobSha1": "9085d3dff4c8fc028e5d4f5d8b5ec54520a1ab9a",
+          "chars": 619464,
+          "lines": 11516,
+          "imports": [
+            "import ClassificationOfSubgroups.Ch4_PGLIsoPSLOverAlgClosedField.ProjectiveGeneralLinearGroup",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S2_A_MaximalAbelianSubgroup",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S2_B_MaximalAbelianSubgroup",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S4_CaseArithmetic",
+            "import ClassificationOfSubgroups.Ch6_MaximalAbelianSubgroupClassEquation.S5_NumericClassEquation",
+            "import ClassificationOfSubgroups.Ch7_GroupRecognition",
+            "import ClassificationOfSubgroups.Ch7_SimpleGroup60",
+            "import ClassificationOfSubgroups.Ch7_S4Recognition",
+            "import ClassificationOfSubgroups.Ch7_CaseVd_2I",
+            "import Mathlib.FieldTheory.Finite.GaloisField",
+            "import Mathlib.GroupTheory.Complement",
+            "import Mathlib.GroupTheory.Nilpotent",
+            "import Mathlib.GroupTheory.PresentedGroup",
+            "import Mathlib.GroupTheory.SpecificGroups.Alternating",
+            "import Mathlib.GroupTheory.SpecificGroups.Dihedral",
+            "import Mathlib.GroupTheory.SpecificGroups.Quaternion",
+            "import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option linter.style.longLine true",
+            "set_option maxHeartbeats 0",
+            "\nset_option maxHeartbeats 1000000 in",
+            "set_option maxHeartbeats 1000000 in",
+            "\nset_option maxHeartbeats 1600000 in",
+            "\nset_option maxHeartbeats 3200000 in",
+            "\nset_option maxRecDepth 40000 in"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch7_GroupRecognition.lean",
+          "blobSha1": "1fdf479fc48fb842a39998a63fc6630b6649014b",
+          "chars": 121523,
+          "lines": 1891,
+          "imports": [
+            "import Mathlib"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\nset_option autoImplicit false",
+            "\nset_option maxHeartbeats 1600000 in"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch7_S4Recognition.lean",
+          "blobSha1": "1e2545895d110d9171d05c3caa68cfb9be8a0ab6",
+          "chars": 16924,
+          "lines": 338,
+          "imports": [
+            "import Mathlib"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\n \n                                                \n\n                                                                                             \n                                                     \n                                                                                \n\n                                      \n                       \n\n                                      \n\n                                          \n\n                                                                                        \n                                                                                            \n               \n                                                                            \n                                                                                            \n                                                                                              \n                                                                                               \n                                                                                      \n                                                             \n                                                                                               \n                                 \n\n                                                                                   \n                                                                       \n                                                                                              \n                                                                                        \n                                                                                 \n\n                                                                                               \n                                                                                           \n                                                                                  \n\n              \n\n                                                                                       \n                                                                                   \n                                                                                             \n                                                                                             \n                                                                                           \n                                                                 \n\n\nset_option linter.style.longLine true",
+            "set_option maxHeartbeats 400000"
+          ]
+        },
+        {
+          "path": "ClassificationOfSubgroups/Ch7_SimpleGroup60.lean",
+          "blobSha1": "2fa5a85c00c6932d35bd7aed1d1361b701c6f8df",
+          "chars": 45492,
+          "lines": 837,
+          "imports": [
+            "import Mathlib"
+          ],
+          "prohibitedTokens": [],
+          "options": [
+            "\n \n                                                        \n\n                                                                                           \n                                                                                          \n                                             \n\n                                                                                               \n                                                                                                 \n                                                               \n                                                                                   \n\n                                                                             \n\n                                                                                               \n                                                                                          \n                     \n                                                                                           \n                                                                                          \n                                                                                               \n                                           \n                                                                                           \n                                                                                                 \n                                                                                                 \n                                                                                                \n                                                                                             \n                                                                                                \n             \n                                                                                                   \n                                 \n                                                                                                  \n                                                                                           \n                                                                                               \n                                                                                                 \n                                                                                                   \n                                                                                                \n                                                                                               \n                                                                                                 \n                                                                                                        \n                                                                                                    \n                                                                                               \n                                                                              \n                                               \n                                                                   \n\n              \n\n                                                                                              \n                                                                                                 \n                                                                                       \n\n\nset_option linter.style.longLine true",
+            "set_option maxHeartbeats 400000",
+            "\nset_option maxHeartbeats 1000000"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "davidsavitt/KLSposet",
+      "revision": "8bc19a7f8498d5cdff5cb1ebcc0fa9b8785be91a",
+      "path": "README.md",
+      "blobSha1": "956bffd93a10ec216529e066444b8b64fc74908c",
+      "inspection": "README scope explicitly restricts the project to finite combinatorial support sets, excluding actual local Galois constructions and crystalline-locus geometry.",
+      "decision": "Does not discharge the required crystalline deformation dimensions; no source imported."
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "revision": "9194f400a4ef67d0c14c98e0cf300cc9f289048e",
+      "path": "Mathlib/RingTheory/Perfectoid/FontaineTheta.lean",
+      "blobSha1": "b66a2b6d7ccd3afa4f9151c89ebd601d075ef1ff",
+      "inspection": "Current theta-map file inspected. Its construction and surjectivity are already present in the pinned local Mathlib and were reviewed in cm-unframed-hermitian.json.",
+      "decision": "Use pinned results when needed. This is not a new crystalline comparison or dimension theorem, and does not justify changing pins."
+    }
+  ],
+  "modularGeometryCandidate": {
+    "repository": "TauCetiProject/TauCeti",
+    "revision": "199786c594817a82fdd2fab04d3ae4cc5eb837d5",
+    "license": "Apache-2.0, headers checked.",
+    "dependency": "DUB-17/18 -> modular Galois association -> actual universal elliptic family in Deligne 3.9-3.10.",
+    "inspection": "Nine roots retrieved. Exact YOne universal-property/representability consumers and principal declarations inspected; full transitive closure remains unreviewed and unreplayed.",
+    "content": "YOne constructs a torsion-locus open subscheme of the universal Tate parameter scheme, proves its universal property for N >= 4, and represents the naive Gamma1(N) problem and proves smoothness where N is invertible. Gamma/Full supplies relative finite representability; Comparison supplies full-level etaleness away from N and naive/Drinfeld equivalence. Simultaneous provides representability with an already representable factor.",
+    "boundary": "Relative representability is not itself a global modular curve. The original Gamma0 analytic identification, nonconstant coefficient realization, cohomological comparison, continuous Galois action and Frobenius polynomial still need proofs. Y1(N) is only a candidate auxiliary geometric level.",
+    "decision": "Inspect the required YOne geometric closure before adaptation; prefer native existing analytic periods for the next local cohomology step. No geometric code promoted or root pin changed.",
+    "files": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/Comparison.lean",
+        "blobSha1": "4fd339c5dc3e05dbfc12e6bc8585f825dfc6b899",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/Comparison.lean",
+        "chars": 14956,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.DrinfeldBasis.Naive",
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.ExactOrder.Naive",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.Gamma.Full",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.Gamma.One",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.NaiveLevel",
+          "import TauCeti.AlgebraicGeometry.ResidueField"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/FullLevel.lean",
+        "blobSha1": "a53cfd0b3e59261c729440877417923eac820ea7",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/FullLevel.lean",
+        "chars": 7821,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.DrinfeldBasis.Basic",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.HomLevel",
+          "public import TauCeti.LinearAlgebra.Matrix.GeneralLinearGroup.ZModProdAut"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/Ell.lean",
+        "blobSha1": "e3a0b6c82609bf1caab919812661a2ecbc61dbbd",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/Ell.lean",
+        "chars": 32573,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.BaseChange.Points",
+          "public import Mathlib.CategoryTheory.FiberedCategory.Fibered"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/LegendreLine.lean",
+        "blobSha1": "d207fb55a2b4600ad730a8af22f467eb12215173",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/LegendreLine.lean",
+        "chars": 26715,
+        "imports": [
+          "public import Mathlib.RingTheory.AdjoinRoot",
+          "public import Mathlib.RingTheory.Invariant.Defs",
+          "public import Mathlib.RingTheory.Localization.Away.Basic",
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.FreyCurve.Basic",
+          "import TauCeti.Algebra.Polynomial.AlgHom",
+          "import Mathlib.RingTheory.IsAdjoinRoot",
+          "import Mathlib.Tactic.ComputeDegree"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/ModuliProblem.lean",
+        "blobSha1": "c943b06b8b084d4396709dd460aa97839c1b1916",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/ModuliProblem.lean",
+        "chars": 16367,
+        "imports": [
+          "public import Mathlib.CategoryTheory.Monoidal.Cartesian.FunctorCategory",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.Ell"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/YOne.lean",
+        "blobSha1": "7c088798fb33342b71918ff11f28035456db07f9",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/YOne.lean",
+        "chars": 45410,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.NaiveExactOrder.FiniteEtale",
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.TateNormalForm",
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.OfWeierstrass",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.NaiveLevel",
+          "public import TauCeti.AlgebraicGeometry.ResidueField",
+          "public import Mathlib.AlgebraicGeometry.Morphisms.Separated",
+          "public import Mathlib.AlgebraicGeometry.Restrict",
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.NaiveLevel",
+          "public import TauCeti.AlgebraicGeometry.Morphisms.Smooth.Retract"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/Simultaneous.lean",
+        "blobSha1": "cf8408031810faada0e6c596ffebd6f3991c091c",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/Simultaneous.lean",
+        "chars": 14315,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.ModuliProblem",
+          "public import TauCeti.CategoryTheory.Monoidal.Cartesian.FunctorCategory"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/Rigidifier/LevelThree.lean",
+        "blobSha1": "43ae6262915d5b2ad06e1a65c897530bbfd30d24",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/Rigidifier/LevelThree.lean",
+        "chars": 15337,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.LevelThreeNormalForm",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.NaiveLevel"
+        ]
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/ModularCurve/Gamma/Full.lean",
+        "blobSha1": "75b6bc6491df46c9b7a1214a1ec3eb0d4a6fe71f",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/ModularCurve/Gamma/Full.lean",
+        "chars": 16745,
+        "imports": [
+          "public import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.DrinfeldBasis.Locus",
+          "public import TauCeti.AlgebraicGeometry.ModularCurve.FullLevel",
+          "import TauCeti.AlgebraicGeometry.EllipticCurve.Scheme.Geom.MulBy.Rank"
+        ]
+      }
+    ]
+  }
+}

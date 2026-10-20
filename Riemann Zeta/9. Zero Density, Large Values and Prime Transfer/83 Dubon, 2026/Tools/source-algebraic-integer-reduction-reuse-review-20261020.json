@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic.",
+  "precedingScratchReceipt": "E:\\Lean\\.tmp\\dubon83\\source-residual-characteristic-1-scratch-receipt.json",
+  "precedingScratchReceiptSha256": "FC853690774F53969F46D6BBA23E4C14DCE98244333FBA0213F2092F1BA66DE3",
+  "candidateReview": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-reuse-review-20261020.json",
+  "candidateReviewSha256": "F14959DAE8D0BD8DADA6A454E72ACA2B1396570D2934A8CD6E076685D6A4E460",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\GoingUp.lean",
+      "sha256": "E86D37349BCDC34A2787D75FC1F9D132DE04B0E049B7E62700C7200F47506952"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IsAlgClosed\\Basic.lean",
+      "sha256": "D2B68358C83D98742A4D665E45D7B0B63405B660667687AE7FB1D41DC6CEC671"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IsIntegralClosure\\Basic.lean",
+      "sha256": "85A508491871F6D36928AE6012BF70316FE96CDDC924B08AE91C9F739A783B9B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\Quotient\\Operations.lean",
+      "sha256": "4A960580A05B3256FA7847DC98B871FB0295F24D80776058C2070124A6D2F2FD"
+    }
+  ],
+  "reuseSearch": "Checked the pinned integral-closure, algebraically closed field and quotient APIs and existing project coefficient, residue and integral modules before implementing the missing specialization adapter.",
+  "routeAdjustment": "Extend the actual reduction using a prime lying over its kernel and the native algebraic quotient embedding, rather than constructing a separate valuation on all complex algebraic numbers.",
+  "discharged": "At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed.",
+  "remaining": "The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.",
+  "production": "Scratch only; promotion and production verification remain pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

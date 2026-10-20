@@ -1,0 +1,206 @@
+{
+  "recordedUTC": "2026-10-20T12:54:49.991697+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "Definitions/Def_GaloisRep_DeligneOrdinaryShape.lean",
+      "gitBlobSha1": "56232c9716d4097249a14e4f3cebaceb558e4757",
+      "archive": "Definitions\\Def_GaloisRep_DeligneOrdinaryShape.lean.txt",
+      "bytes": 738,
+      "sha256": "DB6F387DEFD528D1ABED13CD80C8B3253623504DFF186F5A57E51655B594D33D"
+    },
+    {
+      "path": "Definitions/Def_Gamma0CoeffCohomology.lean",
+      "gitBlobSha1": "375186a06f33fb6d0ef6c9eec7f3aa9913edc31c",
+      "archive": "Definitions\\Def_Gamma0CoeffCohomology.lean.txt",
+      "bytes": 5848,
+      "sha256": "83461A231B326E2A6390273B95FB1B3108CDCC602C42161E6DB02D516C286ADA"
+    },
+    {
+      "path": "Definitions/Def_HeckeEis_BinaryFormRep.lean",
+      "gitBlobSha1": "50db018439254220c9a018b3702a58e59f72178e",
+      "archive": "Definitions\\Def_HeckeEis_BinaryFormRep.lean.txt",
+      "bytes": 6251,
+      "sha256": "5FBC92223180C7C5FB3621CC785DF32916C77B093DFF73C5C94822FD7B9CA353"
+    },
+    {
+      "path": "Definitions/Def_HeckeEis_EichlerIntegral.lean",
+      "gitBlobSha1": "8e72cec89deba6f40250ba81b1a5c8c54c9e88fc",
+      "archive": "Definitions\\Def_HeckeEis_EichlerIntegral.lean.txt",
+      "bytes": 6548,
+      "sha256": "EED0C3DBE54108F481B5D38E777D1F4E7D3A185E68DEC18B8174F94579D29F42"
+    },
+    {
+      "path": "Definitions/Def_HeckeGalois_EichlerShimura.lean",
+      "gitBlobSha1": "fd4787e3f8f4b817dcea45a1ea3c5a6381d52d4f",
+      "archive": "Definitions\\Def_HeckeGalois_EichlerShimura.lean.txt",
+      "bytes": 8585,
+      "sha256": "0235053A0DABA3C2763FC42DBBA23F6EADFAA66E50325176A43461AAC9D4606B"
+    },
+    {
+      "path": "LICENSE",
+      "gitBlobSha1": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+      "archive": "LICENSE.txt",
+      "bytes": 11345,
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034"
+    },
+    {
+      "path": "NOTICE",
+      "gitBlobSha1": "5411679f5f1878e72d1622a88c54b8fbb3f29282",
+      "archive": "NOTICE.txt",
+      "bytes": 7128,
+      "sha256": "42B1821F19A6AAA25E6811D22AB8F2FDC6433D4A37BC810B1CFAFA5B6DD6B0B6"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_IsEichlerIntegral_eq_zero_of_eval_eq_const.lean",
+      "gitBlobSha1": "c7a6f418e376e9cc2c086352603255fc2e7a5c26",
+      "archive": "P2M\\Sol\\S_HeckeEis_IsEichlerIntegral_eq_zero_of_eval_eq_const.lean.txt",
+      "bytes": 4001,
+      "sha256": "8E46984F1AB1B67AB7EC2711AC9300A3BD5628603F610E02C87260CD1C76817F"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_IsEichlerIntegral_hasDerivAt_eval_iterate_pderiv.lean",
+      "gitBlobSha1": "48fbdd111b50388589de370c1d2c07ba4c97dceb",
+      "archive": "P2M\\Sol\\S_HeckeEis_IsEichlerIntegral_hasDerivAt_eval_iterate_pderiv.lean.txt",
+      "bytes": 14671,
+      "sha256": "0DE89548F3985F50FD09F781650F96455F5441D9CBB13A9EE24BFB1C4AE1F442"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_IsEichlerIntegral_isBoundedAtImInfty_eval.lean",
+      "gitBlobSha1": "a2fe4d51613c1f742524d70af689ff5ea85f8bd9",
+      "archive": "P2M\\Sol\\S_HeckeEis_IsEichlerIntegral_isBoundedAtImInfty_eval.lean.txt",
+      "bytes": 8764,
+      "sha256": "C1F89A671F3E8CA7307AC972DD12CC2CF03E6028157BF6643961C4786EF37F7B"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_IsEichlerIntegral_slash.lean",
+      "gitBlobSha1": "3b1b00f64657a88f099f986abd97f0b49f23efad",
+      "archive": "P2M\\Sol\\S_HeckeEis_IsEichlerIntegral_slash.lean.txt",
+      "bytes": 8731,
+      "sha256": "0D7D01C0B75319BF4E9DCE564C39343CE035683971941420CA09D7E5B5C03B0E"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_eichlerShimuraMap_eq_coeffH1parMk.lean",
+      "gitBlobSha1": "9627ac912fd8dd764ff512b71adf631fde3aa252",
+      "archive": "P2M\\Sol\\S_HeckeEis_eichlerShimuraMap_eq_coeffH1parMk.lean.txt",
+      "bytes": 2281,
+      "sha256": "7EE10324B7D3A08AF4950BC52923F5D2B8A798A3A7EDE399F59A491936AA2BA2"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_eichlerShimuraMap_injective.lean",
+      "gitBlobSha1": "501af5c37489c03ca50844efb90e660933b468e3",
+      "archive": "P2M\\Sol\\S_HeckeEis_eichlerShimuraMap_injective.lean.txt",
+      "bytes": 9931,
+      "sha256": "65771725405DEAC012562ED9AD19C23BC73870B428072B4AF759F7EAE9C1C59E"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_existsEichlerShimuraMapLinear.lean",
+      "gitBlobSha1": "0905d1bfa35380e35cbb21e3c190ee9d4f2c9f90",
+      "archive": "P2M\\Sol\\S_HeckeEis_existsEichlerShimuraMapLinear.lean.txt",
+      "bytes": 1555,
+      "sha256": "8CBBA9909F5B67FB7266A4D081985AFE8E2458AD1D7BF04E57F2EAFB0DE74598"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_eichlerShimura_coeffH1par_binaryFormRepSL.lean",
+      "gitBlobSha1": "e0ba9ab6d60606f299b8a18789e0e64f1b4b4b1f",
+      "archive": "P2M\\Sol\\S_HeckeEis_exists_eichlerShimura_coeffH1par_binaryFormRepSL.lean.txt",
+      "bytes": 22548,
+      "sha256": "5874B6465B0B30C95DD862039A8A68C25A7B6BDDAB2E72FC2ECC18EC0A1BE1C2"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_eichlerShimura_coeffH1par_binaryFormRepSL_forall_prime.lean",
+      "gitBlobSha1": "2b323cf3a33fbf49e9d00cde490171ce02498b32",
+      "archive": "P2M\\Sol\\S_HeckeEis_exists_eichlerShimura_coeffH1par_binaryFormRepSL_forall_prime.lean.txt",
+      "bytes": 26844,
+      "sha256": "3E3EBC0C35CDD438E0B4E17A432C8C15BE0D216B44ECFD62F554E6D93EAE1603"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_isEichlerIntegral_isParabolicCocycle.lean",
+      "gitBlobSha1": "44921acebe09fd0e237d88e54e06eab31c9280e9",
+      "archive": "P2M\\Sol\\S_HeckeEis_exists_isEichlerIntegral_isParabolicCocycle.lean.txt",
+      "bytes": 1533,
+      "sha256": "610D2FCF45EF20F0A00EDCAB7DA784ACC47400B0A4F9C3C7F15BBDDE97813D17"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_jFactor_pow_mul_eval_binaryFormRepSL.lean",
+      "gitBlobSha1": "9e5136794f87de114dfa3bdb881651bbf7c20cc9",
+      "archive": "P2M\\Sol\\S_HeckeEis_jFactor_pow_mul_eval_binaryFormRepSL.lean.txt",
+      "bytes": 4084,
+      "sha256": "E3979411F3BF4E66373D91FF026BC08CCF2C0604FE7D32F97DEE4848502C7261"
+    },
+    {
+      "path": "P2M/Util.lean",
+      "gitBlobSha1": "0a73367f78bc165bb5d35e42ca14f5055252e7f6",
+      "archive": "P2M\\Util.lean.txt",
+      "bytes": 5737,
+      "sha256": "66F62069B83C0CF97531F88E5BD2C249E471DF011AD873B0BD034EB959B1D8DA"
+    },
+    {
+      "path": "PROOF-PATH.md",
+      "gitBlobSha1": "5a5d69b8f946ddc7587e300632cf924d6bf3373c",
+      "archive": "PROOF-PATH.md.txt",
+      "bytes": 8666,
+      "sha256": "ADA9B1B2F69184B9A9334D51ED9F2E2E241D16DF364D9E53DF418339748C6705"
+    },
+    {
+      "path": "Theorems/Thm_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean",
+      "gitBlobSha1": "0e6d522f673e65bb397a0c3704d96b8e51ab6996",
+      "archive": "Theorems\\Thm_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean.txt",
+      "bytes": 38685,
+      "sha256": "0E78EA21B1D8D4EAAEFB9580B9B133C8136BD4BC4E8440D1EDF9A473F02AC53E"
+    },
+    {
+      "path": "Theorems/Thm_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean",
+      "gitBlobSha1": "9ecc82b4024471ab00e9ada4fb6bec02ae26c780",
+      "archive": "Theorems\\Thm_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean.txt",
+      "bytes": 28495,
+      "sha256": "9D9FA97EC808CF56DB173689825280B2885E22E4E65078DAAC706FE0E57A2537"
+    },
+    {
+      "path": "Theorems/Thm_HeckeEis_IsEichlerIntegral_exists_sub_eq_const.lean",
+      "gitBlobSha1": "cfd7f722bdd93d1985f0049e73cfe25135eb8bf3",
+      "archive": "Theorems\\Thm_HeckeEis_IsEichlerIntegral_exists_sub_eq_const.lean.txt",
+      "bytes": 728,
+      "sha256": "7247F1E5061387574C1CDB15840541EC4D6BC2AB53522D942C74D5FF781FC5B4"
+    },
+    {
+      "path": "Theorems/Thm_HeckeEis_eichlerShimuraMap_injective.lean",
+      "gitBlobSha1": "a89340909eba3fc8c518b9214fa89c4929fa5ba8",
+      "archive": "Theorems\\Thm_HeckeEis_eichlerShimuraMap_injective.lean.txt",
+      "bytes": 599,
+      "sha256": "DAB83D8AAFEF3BC115DE329AF51E8058AF44CEDF3A90F2F7DA1044ABFBCC0594"
+    },
+    {
+      "path": "lean-toolchain",
+      "gitBlobSha1": "a8afa7d1b02d96f0671eba854a8dc4b416beb473",
+      "archive": "lean-toolchain.txt",
+      "bytes": 25,
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71"
+    },
+    {
+      "path": "lakefile.lean",
+      "gitBlobSha1": "ad978e1f72e1aab6ad45cca9835d640a0c6f63b9",
+      "archive": "lakefile.lean.txt",
+      "bytes": 641,
+      "sha256": "D8BA763B04133C72E1182738F530CDD48C9B676DFB210ED551995287F319BD29"
+    },
+    {
+      "path": "README.md",
+      "gitBlobSha1": "b2a839c8674977b3a8fa18fa1004da12af5277ec",
+      "archive": "README.md.txt",
+      "bytes": 8612,
+      "sha256": "98B5A23CCD09ED697B7462CC6854280A6BADDFBEEBF4F90B2873AB585E87C3D0"
+    },
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_isBoundedAtImInfty_of_hasDerivAt_of_periodic.lean",
+      "gitBlobSha1": "c1fba2ba1afeeab154fc188ba5440d69d225c417",
+      "archive": "P2M\\Sol\\S_UpperHalfPlane_isBoundedAtImInfty_of_hasDerivAt_of_periodic.lean.txt",
+      "bytes": 7911,
+      "sha256": "8D3111A84124BD719EEF58E4387714407C75A1ABE788592CAD59036FD7F71764"
+    }
+  ],
+  "completeImportClosure": false,
+  "kernelReplay": false,
+  "production": false
+}

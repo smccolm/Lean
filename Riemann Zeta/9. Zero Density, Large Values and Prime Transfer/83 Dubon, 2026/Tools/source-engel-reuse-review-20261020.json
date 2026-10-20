@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "externalSource": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-sl-generation-reuse-20261020\\TauCeti-LocallyNilpotent.lean.txt",
+    "sha256": "1398BA7C291647A728CD4918D8247B3B7E1A1404494B857AE744D7B16B6AD87B",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8fdd17266a8b40ae0c490f85cdd9a01966a54b2b/TauCeti/Algebra/Lie/Derivation/LocallyNilpotent.lean",
+    "gitBlob": "f9cd5f179c4e204e8ea50a90e57e055e41b58b07",
+    "adaptation": "Only the multiplication induction is adapted to pinned native commutative-algebra derivations. The polynomial generator consumer uses native polynomial induction. The external noncommutative derivation framework, enveloping quotients and incidental generalizations are deferred."
+  },
+  "license": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-sl-generation-reuse-20261020\\TauCeti-LICENSE.txt",
+    "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+    "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "license": "Apache-2.0"
+  },
+  "localReuse": [
+    "Original source dual-number differential and exact matrix-coordinate formula",
+    "Original actual determinant unit and fraction representation",
+    "Original induced Lie action and finite dimension from proved denominator/numerator bounds",
+    "Pinned Matrix.det_one_add_smul",
+    "Pinned Module.End.isNilpotent_iff_of_finite",
+    "Pinned LieModule.isNilpotent_iff_forall'",
+    "Pinned LieModule.nontrivial_max_triv_of_isNilpotent"
+  ],
+  "routeDecision": "No integral-weight decomposition or scalar extension is required. Original strictly upper matrices have rank-bounded nilpotence. Their actual coordinate differentials are locally nilpotent on every polynomial numerator, while their determinant denominators have zero derivative. The exact original localization therefore inherits local nilpotence. Native finite-module and Engel theorems apply over the original characteristic-zero coefficient field.",
+  "discharged": "Every nonzero original induced special-linear Lie submodule contains a nonzero vector annihilated by every original strictly upper triangular infinitesimal direction. All matrix nilpotence, differential local nilpotence, denominator invariance and finite-dimensionality premises of Engel are derived. No annihilator or eigenvector witness is supplied.",
+  "remaining": "The all-algebra upper-unipotent group-invariance bridge, coefficient generation and irreducibility/base-change identification, and existing source arithmetic/automorphy obligations remain open. Acceptance remains 16/20; DUB-17-20 remain open.",
+  "production": "Scratch only; excludes frozen 4,887-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

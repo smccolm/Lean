@@ -9,8 +9,9 @@ tensored. No arbitrary finite-free representation is an input.
 
 The source coefficient embeddings are explicit ring maps here.
 IntegralCoefficientEmbedding and CMSourceIntegralWeight construct them from
-actual field embeddings and prove their continuity. Continuity of the tensor
-action in its natural module topology remains a separate obligation.
+actual field embeddings and prove their continuity.
+CMSourceIntegralWeightContinuity proves joint continuity of the original tensor
+action in its canonical coefficient-module topology.
 -/
 
 namespace Dubon2026

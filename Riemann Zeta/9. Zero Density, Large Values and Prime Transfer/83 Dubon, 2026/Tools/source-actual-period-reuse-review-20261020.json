@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> coefficient-field arithmetic through finite integral original Hecke algebra -> injective, Hecke-adjoint actual period pairing on finite integral modular symbols.",
+  "revision": "199786c594817a82fdd2fab04d3ae4cc5eb837d5",
+  "externalSources": [
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+      "gitBlob": "1b59a67e3c8b2943db3ce945d77f73dfb29dc760",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean"
+      ],
+      "characters": 6119,
+      "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD",
+      "bytes": 6418
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean",
+      "gitBlob": "755afb3f4d195d9b31dc5467590f95fcd03c5ae0",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean"
+      ],
+      "characters": 6988,
+      "sha256": "DC15C9AC96C034828B7BD489EB67E4FE17F7FC197E48B5FD97EDAAEE2A144B18",
+      "bytes": 7238
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+      "gitBlob": "88824b70924070bcd64f94ae7821a769f13ab1d0",
+      "imports": [
+        "TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean",
+        "TauCeti/NumberTheory/ModularForms/BinaryForms.lean",
+        "TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean",
+        "TauCeti/RingTheory/MvPolynomial/Homogeneous.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean"
+      ],
+      "characters": 29152,
+      "sha256": "533369CB0D9491B6252B5454F2CE3F45C0D491507C20C41E594DFD2235AA7E77",
+      "bytes": 30611
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean",
+      "gitBlob": "368cff188e22ef2a030b10a0aee5d440a62166ef",
+      "imports": [
+        "TauCeti/Topology/DiscreteSeparation.lean"
+      ],
+      "characters": 6255,
+      "sha256": "B131261207846D92818EC791D0F90CBEE6A3E69598379A1F0D67E4C33888ED93",
+      "bytes": 6569
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean",
+      "gitBlob": "01916a9b14ba6060f51407a956d427b6374d1455",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean",
+        "TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean",
+        "TauCeti/NumberTheory/ModularForms/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean",
+        "TauCeti/NumberTheory/ModularForms/Primitive.lean"
+      ],
+      "characters": 29213,
+      "sha256": "0FA472EF16B3FA3A8A74B892A8252C8CCB2A70F36BADBDAF384ADB9C80CD4949",
+      "bytes": 30932
+    },
+    {
+      "path": "tau-period/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean",
+      "gitBlob": "9a45cb10212394846987c88e6594de639c4a7f9c",
+      "imports": [],
+      "characters": 8804,
+      "sha256": "305B892A32CD9ED8ECB21B834B8D850D58AF4A4ECEA957EB3C2A830D2FD3F37A",
+      "bytes": 8983
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Basic.lean",
+      "gitBlob": "136a062307e8870d13882c901487a0273b65abee",
+      "imports": [
+        "TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean"
+      ],
+      "characters": 25500,
+      "sha256": "E182F02E59EFB04903AEAE90CAE646DC5E40464FBF8BD7E7D46C10DB7587FAAE",
+      "bytes": 26721
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/SlashActionRat.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/SlashActionRat.lean",
+      "gitBlob": "b737f9f3367f2765e64fe3fa064f9fa2e7fb77a9",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Basic.lean"
+      ],
+      "characters": 14521,
+      "sha256": "90475AB717384BB62084A798219AEC9E6C44454EA7278DE3D01028B3D7DBB847",
+      "bytes": 15258
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean",
+      "gitBlob": "152d0a3a4588a7198bcd44eb6676e6a4b5181fa4",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean"
+      ],
+      "characters": 11941,
+      "sha256": "3CE63150F4F25ACC475254F8F462A81F0ABB3711CA234E343027E5275B11F221",
+      "bytes": 12474
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean",
+      "gitBlob": "76332391191d24d80b1cffd93b9a3c108fba6f41",
+      "imports": [],
+      "characters": 6366,
+      "sha256": "95FDD2AC07E9AC0F0B604319E9771688C1A3204831C6EB594A291D6BB41F6085",
+      "bytes": 6568
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Primitive.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Primitive.lean",
+      "gitBlob": "3409a902913a6bb8e4e2461929aab7fbec9543df",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/Basic.lean"
+      ],
+      "characters": 1836,
+      "sha256": "E9D7AA2E2A2CA8996E909C507D4778FB6A0693E1CF3E0C2605B342956135D51F",
+      "bytes": 1923
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean",
+      "gitBlob": "ba89d4c62566d5d3056d7276ffe6629cafde3ab0",
+      "imports": [
+        "TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean"
+      ],
+      "characters": 11081,
+      "sha256": "0C32646C0E3ACF253A2F2C397C3E85C4FE22C32ADA0E2984584F2D641FDDD45D",
+      "bytes": 11502
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean",
+      "gitBlob": "5f77668395fc5309b7b5c2dd1df2fa44d4d65d68",
+      "imports": [
+        "TauCeti/Analysis/Asymptotics/MvPolynomial.lean"
+      ],
+      "characters": 16047,
+      "sha256": "A080A1899B3F851AC5EDCA3CC66D6CCD11DAB53E14C94250ACA994DB1C8B91BE",
+      "bytes": 16542
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Asymptotics/MvPolynomial.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Asymptotics/MvPolynomial.lean",
+      "gitBlob": "3105149efbb2ffa7f7ff809df94673bf49a7c589",
+      "imports": [],
+      "characters": 2555,
+      "sha256": "70DC5EDD6B21A1CE77BEDC599E74947C85F5936EF6A8261D2CDB48D16F3EA4C3",
+      "bytes": 2664
+    }
+  ],
+  "license": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\TauCeti-LICENSE.txt",
+    "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+    "license": "Apache-2.0"
+  },
+  "precedingScratchReceipt": "E:\\Lean\\.tmp\\dubon83\\source-hecke-symbols-7-scratch-receipt.json",
+  "precedingScratchReceiptSha256": "8F77DD9ACDA3BAEABE462C79CFB209B5512B3CE83FD5E32392F5AB5E339B3408",
+  "localReuse": [
+    "Dubon2026.HomogeneousMonomialBasis and MatrixPolynomialAction",
+    "Dubon2026.CuspVerticalProfile.tendsto_cuspVerticalPoint",
+    "Existing original cuspHeckeLinear operators",
+    "Pinned native cusp decay, holomorphy, improper FTC and coinvariants"
+  ],
+  "deferred": [
+    "Ball-intersection extension of primitives",
+    "Real/positive imaginary-axis predicate API",
+    "Full external rational Hecke and Gamma1 framework",
+    "General representation-category and Dickson trace developments"
+  ],
+  "discharged": "The period map on the original Gamma0 cusp space is constructed from convergent actual integrals of f(z)P(z,1). A common holomorphic primitive and cusp limits prove geometric additivity. Homogeneous scaling and existing cusp decay derive holomorphy, convergence, and uniform strip decay for the actual integrand. The slash identities use the existing integral polynomial representation; its inverse action proves invariance, allowing descent to the actual coinvariants. The map is complex-linear and its value on each symbol is the original integral. The original Hecke-finiteness reduction now uses this constructed map, removing the separately supplied pairing premise. Positive integral matrix substitution is proved as an input to, but not a proof of, original Hecke adjointness.",
+  "remaining": "Injectivity of the constructed period map and the actual integral adjoint operators for the original positive-index Hecke operators are open. Both remain explicit premises of the final integral-Hecke consumers. The modular residual Galois representation and image bounds, prescribed CM/unitary fields/forms and local choices, nonzero prescribed Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 are open.",
+  "production": "Scratch only, excluded from the frozen 4,922-module canonical verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

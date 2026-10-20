@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "files": [
+    {
+      "file": "RS-Exponential.lean.txt",
+      "gitBlob": "3d62a85a9e48aa28f23f81b6bef11e8da1e2133d",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Exponential.lean",
+      "sha256": "BAAADCFBC5657E5F3CAD65BA28674A4F445FA62F269FE7C93B07657C186A49F9"
+    }
+  ],
+  "decision": "The external finite-exponential proof supplies a method reference. The existing original localized-coordinate evaluator permits a shorter direct proof for the actual source carrier, without importing the external polynomial-representation framework. No external Lean proof text is copied in this six-module increment.",
+  "localReuse": "Original all-algebra evaluation, actual source matrix differential and Lie complements; native Polynomial.aeval_add_of_sq_eq_zero; exact polynomial coefficient extraction and finite evaluation sum.",
+  "discharged": "The actual source square-zero matrix orbit is a polynomial over its original regular-function ring. Native Taylor expansion proves that its derivative equals the orbit of the actual matrix differential. The coefficient recurrence gives the factorial-scaled powers of that differential and the exact finite exponential. Every original induced Lie submodule, including the already constructed invariant complements, is stable under all original square-zero special-linear directions.",
+  "remaining": "Full special-linear and general-linear group stability, nonzero unipotent-fixed vectors in every nonzero stable subspace, full coefficient irreducibility and base-change identification, and the existing arithmetic and automorphy obligations remain open. DUB-17-20 remain open; acceptance 16/20.",
+  "production": "Scratch only; excludes frozen 4,860-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

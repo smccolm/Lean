@@ -1,0 +1,2190 @@
+{
+  "date": "20 October 2026",
+  "modules": [
+    "Dubon2026.SourcePeriodCocycle",
+    "Dubon2026.SourceOriginalPeriodCohomology",
+    "Dubon2026.SourcePeriodPolynomialBound",
+    "Dubon2026.SourcePeriodCorrectionPolynomial",
+    "Dubon2026.SourcePeriodPolynomialAction",
+    "Dubon2026.SourcePeriodCohomologyPrimitive",
+    "Dubon2026.SourceEichlerPolynomialPeriodicity",
+    "Dubon2026.SourceEichlerCuspPolynomial",
+    "Dubon2026.SourcePeriodCohomologyBounded",
+    "Dubon2026.SourcePeriodCohomologyInjective",
+    "Dubon2026.SourceIntegralReductionExtension",
+    "Dubon2026.SourcePrimitiveAlgebraicIntegerReduction"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> injectivity and nonvanishing of the original analytic period H1 class. DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic.",
+  "discharged": "The original period map into native group-cohomology H1 is injective for every finite-index subgroup of SL(2,Z), every source weight k=n+2, and every rational base cusp. Its actual original Gamma0 and normalized primitive-form consumers derive a nonzero H1 class. The native H1 kernel gives the dual coboundary; the exact binary action and original Eichler transformation give the corrected invariant primitive. Actual Fourier periodicity makes its polynomial correction constant at each cusp, discharging all-cusp boundedness. Pinned nonpositive-weight vanishing/constancy and original Fourier decay kill the Eichler integral; its proved derivative recovers the original cusp form. No injectivity, nonzero period, primitive invariance or cusp-boundedness premise is supplied to these final consumers. The original primitive cusp form defines a native group-cohomology H1 class through its already proved convergent cusp integrals. The cocycle law, exact dual binary action, complex linearity, base-cusp independence and an explicit coboundary on each rational-cusp stabilizer are proved, with no supplied period cocycle, covariance, or parabolicity assumption. At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed.",
+  "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.",
+  "status": "The 4,970-module production aggregate and focused exhaustive original period H1 and coefficient specialization audit pass with zero diagnostics. All three proof-value audits pass, including the actual nonzero native H1 class of every original primitive form at every source weight and the faithful specialization of its original Hecke values. Sequential foundation/paper verification of the 4,970-module scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.sourcePrimitive_periodCohomology_realization",
+    "Dubon2026.sourcePeriodCohomologyLinear_base_independent",
+    "Dubon2026.sourcePrimitive_periodCohomology_ne_zero",
+    "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction_charP"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-20T12:50:51.811266+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourcePeriodCocycle",
+        "SourceOriginalPeriodCohomology"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCocycle.lean",
+          "sha256": "A2A2BB8A47341121FB41CE5314EE100B584F0D617F90BFFA6A55BCE86AEDAF49",
+          "oleanSha256": "B44690D9D7EC510154D50E60A06B447F372C627A2B7306420167278415A61028"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodCohomology.lean",
+          "sha256": "91CDD156E3BFB8E80B359E03CED9F29E17F6FA5CD5884562645C9A30014FD3AE",
+          "oleanSha256": "FD03A150370149130C70C692A500090C68FDEFF07EDA74491806F09A3D9E357A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourcePeriodDualRep_apply",
+        "Dubon2026.sourcePeriodBetween_apply",
+        "Dubon2026.sourcePeriodBetween_add",
+        "Dubon2026.sourcePeriodBetween_equivariant",
+        "Dubon2026.sourcePeriodCocycle_apply",
+        "Dubon2026.sourcePeriodCocycle_change_base",
+        "Dubon2026.sourcePeriodCocycle_parabolic",
+        "Dubon2026.sourcePeriodH1_base_independent",
+        "Dubon2026.sourcePeriodCohomologyLinear_apply",
+        "Dubon2026.sourcePeriodCohomologyLinear_base_independent",
+        "Dubon2026.sourcePrimitive_periodCohomology_realization",
+        "Dubon2026.sourcePeriodDualRep",
+        "Dubon2026.sourcePeriodBetween",
+        "Dubon2026.sourcePeriodCocycle",
+        "Dubon2026.sourcePeriodH1",
+        "Dubon2026.sourcePeriodCocycleLinear",
+        "Dubon2026.sourcePeriodCohomologyLinear",
+        "Dubon2026.sourceOriginalPeriodCohomology"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourcePeriodDualRep_apply",
+        "Dubon2026.sourcePeriodBetween_apply",
+        "Dubon2026.sourcePeriodBetween_add",
+        "Dubon2026.sourcePeriodBetween_equivariant",
+        "Dubon2026.sourcePeriodCocycle_apply",
+        "Dubon2026.sourcePeriodCocycle_change_base",
+        "Dubon2026.sourcePeriodCocycle_parabolic",
+        "Dubon2026.sourcePeriodH1_base_independent",
+        "Dubon2026.sourcePeriodCohomologyLinear_apply",
+        "Dubon2026.sourcePeriodCohomologyLinear_base_independent",
+        "Dubon2026.sourcePrimitive_periodCohomology_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourcePeriodDualRep",
+        "Dubon2026.sourcePeriodBetween",
+        "Dubon2026.sourcePeriodCocycle",
+        "Dubon2026.sourcePeriodH1",
+        "Dubon2026.sourcePeriodCocycleLinear",
+        "Dubon2026.sourcePeriodCohomologyLinear",
+        "Dubon2026.sourceOriginalPeriodCohomology"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyAudit2.log",
+      "logSha256": "4E320882C4A75A6E8C44CAEB7BE3E78D2A1B21B3E9A81CA4B65A710C5A9231E5",
+      "auditSha256": "04B3D40BAFA0890F73014ED2A8F8F0EF5FC270A794E8B29E7C7CDAA2C0DA4D2C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyDependencyAudit.log",
+      "dependencyAuditSha256": "18A6F60FF08DD24FA01BE4288731C1BDEA00000E8774677FD73AA39643273427",
+      "dependencyAuditSourceSha256": "DC655189354A7C22E5D39BEBBCE3FBF1A73DDCE9CC1498A3CAAC8ABECFED9514",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_periodCohomology_realization",
+        "Dubon2026.sourcePeriodCohomologyLinear_base_independent"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> original analytic period cohomology class and its rational-cusp parabolicity.",
+      "discharged": "The original primitive cusp form defines a native group-cohomology H1 class through its already proved convergent cusp integrals. The cocycle law, exact dual binary action, complex linearity, base-cusp independence and an explicit coboundary on each rational-cusp stabilizer are proved, with no supplied period cocycle, covariance, or parabolicity assumption.",
+      "boundary": "Scratch only; promotion and production verification remain pending. Injectivity and nonvanishing in H1, the geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual-image theorem, crystalline result, Selmer theorem, R=T theorem or automorphy theorem is claimed. DUB-17--20 remain open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-cohomology-reuse-review-20261020.json",
+      "reuseReviewSha256": "7550773B61A8CE2E1F6F759F43CDE57B2172617EB0FCFA88B3B6902ACD6F2C2E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T13:39:24.484543+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourcePeriodPolynomialBound",
+        "SourcePeriodCorrectionPolynomial",
+        "SourcePeriodPolynomialAction",
+        "SourcePeriodCohomologyPrimitive",
+        "SourceEichlerPolynomialPeriodicity",
+        "SourceEichlerCuspPolynomial",
+        "SourcePeriodCohomologyBounded",
+        "SourcePeriodCohomologyInjective"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPolynomialBound.lean",
+          "sha256": "CD515C8FCB6374A9DBF6394484C8D5AB97018439375328B0B513CECC772B2A1F",
+          "oleanSha256": "5790FE0C50ABEE154189BCEB293DA24C51ED920B1147FDA7957793CD291FB712"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCorrectionPolynomial.lean",
+          "sha256": "8D786F6F97CE25488FB9FA1F58E6174AE5A138A419BAB319830F96504E635DC9",
+          "oleanSha256": "98CAE702319F10F4DF2B7D73A8471ED454B0048FBF9A873935A69A220ED05BE6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPolynomialAction.lean",
+          "sha256": "B23682FD9C1CC69650E1CFDF69DF85311B7424FD11FB007A75318A618E149DA7",
+          "oleanSha256": "A504E44A9ABB84817E370F0D0C2DE5EDF7E12D827E94F03818C0CFCE83350601"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyPrimitive.lean",
+          "sha256": "951C60B73B50171672570CE9E75BA054A8919F0A7741954BE12D9AA05098ED4D",
+          "oleanSha256": "9291C1BB083FCCE0F002E234B45FDFFDE5272D63BA9049A8C833DEE98F6F9A72"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEichlerPolynomialPeriodicity.lean",
+          "sha256": "37903E1B62A0D5CD993586B5686647A6772727B07CC44978E372D1F77B512B3B",
+          "oleanSha256": "6BFEDBC47688862FB7CDDF8D5740B80D68EEED877265A91FA104A43E90C1AA02"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEichlerCuspPolynomial.lean",
+          "sha256": "D1DED51D2D66B4E3C92358F3B6B92074F49B06C397887A998CBC2FC821681A4A",
+          "oleanSha256": "B6A5D3E0A338F320AF14B9733AB3799A408595497E72EAA0AE046C9E3A089B04"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyBounded.lean",
+          "sha256": "98DF724EC02D9552727E76C70E0BE6E707B52395D62C957AE47F5EC402C63BFA",
+          "oleanSha256": "02011546C78C8348EA784F0AF1005A2E95E7027CEE79C4A2F41A35A13A7FBCBF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyInjective.lean",
+          "sha256": "CAE9C7AB0A39E3C8B9484A2D5D660B8B7A96D5B11CBD514F0A3C7BF0218FA524",
+          "oleanSha256": "3B47A66EC5EA490057F474E33E8E52C0C265D67BBB9A09685505C6D7F5A40FF6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourcePolynomial_eq_const_of_upperHalfPlane_periodic",
+        "Dubon2026.sourceEichlerBinaryForm_periodIntegrand",
+        "Dubon2026.sourceEichlerBinaryForm_eq_sum",
+        "Dubon2026.sourcePeriodCorrectionPolynomial_eval",
+        "Dubon2026.sourceEichlerBinaryForm_action",
+        "Dubon2026.sourcePeriodCorrectionPolynomial_slash",
+        "Dubon2026.sourcePeriodH1_eq_zero_coboundary",
+        "Dubon2026.sourceEichlerIntegral_corrected_slash",
+        "Dubon2026.sourceEichlerIntegral_vadd",
+        "Dubon2026.sourceEichlerIntegral_polynomial_eq_const",
+        "Dubon2026.sourceEichlerIntegral_polynomial_bounded",
+        "Dubon2026.sourceCuspIntegral_exists_polynomial",
+        "Dubon2026.sourceEichlerIntegral_corrected_slash_exists_polynomial",
+        "Dubon2026.sourceCorrectedEichler_bounded_slash",
+        "Dubon2026.sourcePeriodH1_eq_zero_imp",
+        "Dubon2026.sourcePeriodCohomologyLinear_injective",
+        "Dubon2026.sourceOriginalPeriodCohomology_injective",
+        "Dubon2026.sourceOriginalPeriodCohomology_ne_zero",
+        "Dubon2026.sourcePrimitive_periodCohomology_ne_zero",
+        "Dubon2026.sourceEichlerBinaryForm",
+        "Dubon2026.sourcePeriodCorrectionPolynomial",
+        "Dubon2026.sourceCorrectedEichlerSlashInvariant",
+        "Dubon2026.sourceCorrectedEichlerModularForm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourcePolynomial_eq_const_of_upperHalfPlane_periodic",
+        "Dubon2026.sourceEichlerBinaryForm_periodIntegrand",
+        "Dubon2026.sourceEichlerBinaryForm_eq_sum",
+        "Dubon2026.sourcePeriodCorrectionPolynomial_eval",
+        "Dubon2026.sourceEichlerBinaryForm_action",
+        "Dubon2026.sourcePeriodCorrectionPolynomial_slash",
+        "Dubon2026.sourcePeriodH1_eq_zero_coboundary",
+        "Dubon2026.sourceEichlerIntegral_corrected_slash",
+        "Dubon2026.sourceEichlerIntegral_vadd",
+        "Dubon2026.sourceEichlerIntegral_polynomial_eq_const",
+        "Dubon2026.sourceEichlerIntegral_polynomial_bounded",
+        "Dubon2026.sourceCuspIntegral_exists_polynomial",
+        "Dubon2026.sourceEichlerIntegral_corrected_slash_exists_polynomial",
+        "Dubon2026.sourceCorrectedEichler_bounded_slash",
+        "Dubon2026.sourcePeriodH1_eq_zero_imp",
+        "Dubon2026.sourcePeriodCohomologyLinear_injective",
+        "Dubon2026.sourceOriginalPeriodCohomology_injective",
+        "Dubon2026.sourceOriginalPeriodCohomology_ne_zero",
+        "Dubon2026.sourcePrimitive_periodCohomology_ne_zero"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceEichlerBinaryForm",
+        "Dubon2026.sourcePeriodCorrectionPolynomial",
+        "Dubon2026.sourceCorrectedEichlerSlashInvariant",
+        "Dubon2026.sourceCorrectedEichlerModularForm"
+      ],
+      "predecessorReceipt": "E:\\Lean\\.tmp\\dubon83\\source-period-cohomology-2-scratch-receipt.json",
+      "predecessorReceiptSha256": "2E33F268A974C9BD13FBB8906C0592F0D72A70B2A69A1741AFCB2D2F74140560",
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodH1InjectivityAudit8.log",
+      "logSha256": "2C028C0C4C9A05B729D28F85C11001CE9F6CCE12CA1CC289F15029F8B1F71BB6",
+      "auditSha256": "12599664BCE1DEDA26523B83C2D46A3AE80BF9F33DCA0BD2CED8EFDE80A889FE",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 42,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 39,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodH1InjectivityDependencyAudit.log",
+      "dependencyAuditSha256": "0EE0F527EFBC7A303DE221CC889930D2365610B96C2BB85E6F267B606210ECAC",
+      "dependencyAuditSourceSha256": "305C7909963E9F72D5BF0D6EEA13D0299E82229166B49AE5D8742EEF0388943C",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_periodCohomology_ne_zero"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> injectivity and nonvanishing of the original analytic period H1 class.",
+      "discharged": "The original period map into native group-cohomology H1 is injective for every finite-index subgroup of SL(2,Z), every source weight k=n+2, and every rational base cusp. Its actual original Gamma0 and normalized primitive-form consumers derive a nonzero H1 class. The native H1 kernel gives the dual coboundary; the exact binary action and original Eichler transformation give the corrected invariant primitive. Actual Fourier periodicity makes its polynomial correction constant at each cusp, discharging all-cusp boundedness. Pinned nonpositive-weight vanishing/constancy and original Fourier decay kill the Eichler integral; its proved derivative recovers the original cusp form. No injectivity, nonzero period, primitive invariance or cusp-boundedness premise is supplied to these final consumers.",
+      "boundary": "Scratch only; promotion and production verification remain pending. The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-h1-injectivity-reuse-review-20261020.json",
+      "reuseReviewSha256": "D1909097BC16432D9993974911BA4A6FB30E7CC838F4CFC83CAC241A513C944F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T13:59:11.337515+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceIntegralReductionExtension",
+        "SourcePrimitiveAlgebraicIntegerReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralReductionExtension.lean",
+          "sha256": "7AC2418FC8FE9DC1106065401E785ADA828B7B4E10E2FB8C3DE44B66AFBE00B0",
+          "oleanSha256": "D9D86C69F23FF8FB656B2499821C5776799CF25E290B9B7A64629772C7E2EF1F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAlgebraicIntegerReduction.lean",
+          "sha256": "5B6809018A98BC0071AB058D16C1578850889470BFAE960FFF5E53AAE69E5B58",
+          "oleanSha256": "D8DC563DECCF605AAE4321C1AB2E325EAEA320C5496EB8182BAFFA93C27AE577"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceIntegralReduction_exists_extension",
+        "Dubon2026.sourcePrimitiveIntegralHeckeCharacter_coe",
+        "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction",
+        "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction_charP",
+        "Dubon2026.sourcePrimitiveIntegralHeckeCharacter"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceIntegralReduction_exists_extension",
+        "Dubon2026.sourcePrimitiveIntegralHeckeCharacter_coe",
+        "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction",
+        "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourcePrimitiveIntegralHeckeCharacter"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicIntegerReductionAudit2.log",
+      "logSha256": "DA41837CE7F4E9FF7D8F650E414F10894EB5109C8392855A42DB1E6BD222C229",
+      "auditSha256": "57780471BFF6273FAD61AFACE2143E4D85839A615101220D45A5E7498FAFF422",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 85,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicIntegerReductionDependencyAudit.log",
+      "dependencyAuditSha256": "8B68DA0BA3E8D590B58EEA8F214D20B5F6D0FFB75ABBC4F0F3AE8A8D2C5DEFF3",
+      "dependencyAuditSourceSha256": "AD5E74DAEE36994B9B3522E1CD1AA438E8A1FDAC250D837C48E1201BEAA03538",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic.",
+      "discharged": "At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed.",
+      "boundary": "Scratch only; promotion and production verification remain pending. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-algebraic-integer-reduction-reuse-review-20261020.json",
+      "reuseReviewSha256": "0F7C2F1CD04AAE320006083228A5CEC1CD24AD2B3F455A67AF71295B2A8A445F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-period-cohomology-reuse-review-20261020.json",
+    "Tools/source-period-h1-injectivity-reuse-review-20261020.json",
+    "Tools/source-algebraic-integer-reduction-reuse-review-20261020.json",
+    "Tools/anthropic-flt-residual-reuse-review-20261020.json",
+    "Tools/anthropic-flt-residual-closure-review-20261020.json"
+  ],
+  "currentApplication": "Tools/source-period-h1-and-specialization.json",
+  "metadata": "Tools/lean-reuse-audit-20261015.json#appliedSourcePeriodH1AndSpecialization",
+  "previousApplication": {
+    "date": "20 October 2026",
+    "modules": [
+      "Dubon2026.SourcePrimitiveHeckeCharacter",
+      "Dubon2026.SourcePrimitiveCoefficientField",
+      "Dubon2026.SourcePrimitiveLocalCoefficients",
+      "Dubon2026.SourcePrimitiveFieldHeckeCharacter",
+      "Dubon2026.SourcePrimitiveResidualHeckeCharacter",
+      "Dubon2026.SourcePrimitiveResidualCharacteristic"
+    ],
+    "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> the original primitive coefficient number field and finite genuine local coefficient extensions.",
+    "discharged": "Every actual Fourier coefficient a_f(n) of the original primitive Gamma0 form of weight k >= 2 is an algebraic integer, including bad indices. The actual integral Hecke eigencharacter is derived from the existing all-index primitive eigenvector theorem. Its finite image bounds the literal ring generated by all coefficients; finite integral generators prove that their literal intermediate field over the rationals is a number field. The existing common coefficient-field construction, instantiated with that field and the actual rational prime completion, gives a finite genuine local extension preserving the original valuation and containing every embedded original coefficient integrally. No coefficient integrality, number-field or local-extension existence premise is supplied. The original integral Hecke eigencharacter has image exactly the ring generated by the actual primitive Fourier coefficients. Its values are realized in the literal coefficient number field and every value is integral. At each original rational prime the derived finite genuine local coefficient extension admits a constructed embedding of the original coefficient field. Reduction in its actual finite residue field gives a Hecke eigencharacter with maximal kernel and exactly the reduced original Fourier coefficients at all positive indices. No coefficient field, local extension, embedding or residual eigencharacter existence premise is supplied to the final existence theorem. The original primitive residual Hecke eigensystem is realized over a finite actual residue field of the prescribed rational prime characteristic, with maximal kernel and exact reduced original Fourier values. The characteristic follows from the existing exact residue cardinality of the genuine prime completion and native valuation-extension residue algebras; no residue-characteristic premise is supplied.",
+    "boundary": "The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open.",
+    "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,958-module scope: all thirteen retained regressions, 35,137 exhaustive theorem checks, 15,006 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+    "rootPinsChanged": false,
+    "proofLimitsChanged": false,
+    "sourceConsumers": [
+      "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+      "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter",
+      "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP"
+    ],
+    "scratchCertificates": [
+      {
+        "recordedUTC": "2026-10-20T11:52:23.468772+00:00",
+        "date": "2026-10-20 America/Vancouver",
+        "modules": [
+          "SourcePrimitiveHeckeCharacter",
+          "SourcePrimitiveCoefficientField",
+          "SourcePrimitiveLocalCoefficients"
+        ],
+        "files": [
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveHeckeCharacter.lean",
+            "sha256": "D4BE75EEAD12539A7A7E68DED7BFA1D5C289005A9338DAE91393D82AF3AFC7C6",
+            "oleanSha256": "F4676041CAAF03EFCCE9D72E1D0147D3E076BA27559F0E22DEF5CAA379BCC512"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientField.lean",
+            "sha256": "C5C3C7774D5B557AE332DF176C4A139B679232A6250D6814AC267A7B9AB8DDF2",
+            "oleanSha256": "6426D124BDFB2806638AA7A0128C99E4EAD8E606029ED3F03A3A8964A4AA2415"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalCoefficients.lean",
+            "sha256": "0200A230D3EDB35ECCE8E722CF4D2A00590FD6F014FAE07E73F79946779D12FC",
+            "oleanSha256": "F75FBB1774FD7367E979EFC9F9174AA5764E7E6CBD982FCBBA1915299B0A8929"
+          }
+        ],
+        "queries": [
+          "Dubon2026.sourcePrimitiveHecke_eigenline",
+          "Dubon2026.sourcePrimitiveHeckeCharacter_hecke",
+          "Dubon2026.sourcePrimitiveCoefficient_isIntegral",
+          "Dubon2026.sourcePrimitiveCoefficient_mem_characterRange",
+          "Dubon2026.sourcePrimitiveCoefficientRing_le_characterRange",
+          "Dubon2026.sourcePrimitiveHeckeCharacter_range_finite",
+          "Dubon2026.sourcePrimitiveCoefficientRing_finite",
+          "Dubon2026.sourcePrimitiveCoefficientField_finite",
+          "Dubon2026.sourcePrimitiveCoefficientField_numberField",
+          "Dubon2026.sourcePrimitiveFieldCoefficient_coe",
+          "Dubon2026.sourcePrimitiveFieldCoefficient_isIntegral",
+          "Dubon2026.sourcePrimitiveCoefficient_valuation_le_one",
+          "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+          "Dubon2026.sourcePrimitiveHeckeCharacter",
+          "Dubon2026.sourcePrimitiveCoefficientRing",
+          "Dubon2026.sourcePrimitiveCoefficientField",
+          "Dubon2026.sourcePrimitiveFieldCoefficient"
+        ],
+        "theoremRegistrations": [
+          "Dubon2026.sourcePrimitiveHecke_eigenline",
+          "Dubon2026.sourcePrimitiveHeckeCharacter_hecke",
+          "Dubon2026.sourcePrimitiveCoefficient_isIntegral",
+          "Dubon2026.sourcePrimitiveCoefficient_mem_characterRange",
+          "Dubon2026.sourcePrimitiveCoefficientRing_le_characterRange",
+          "Dubon2026.sourcePrimitiveHeckeCharacter_range_finite",
+          "Dubon2026.sourcePrimitiveCoefficientRing_finite",
+          "Dubon2026.sourcePrimitiveCoefficientField_finite",
+          "Dubon2026.sourcePrimitiveCoefficientField_numberField",
+          "Dubon2026.sourcePrimitiveFieldCoefficient_coe",
+          "Dubon2026.sourcePrimitiveFieldCoefficient_isIntegral",
+          "Dubon2026.sourcePrimitiveCoefficient_valuation_le_one",
+          "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure"
+        ],
+        "constructionRegistrations": [
+          "Dubon2026.sourcePrimitiveHeckeCharacter",
+          "Dubon2026.sourcePrimitiveCoefficientRing",
+          "Dubon2026.sourcePrimitiveCoefficientField",
+          "Dubon2026.sourcePrimitiveFieldCoefficient"
+        ],
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientsAudit3.log",
+        "logSha256": "D09D26C29CA2E1BAFDDC6F0956EF37A18D38D7561F3495675EBD8D0E3F650378",
+        "auditSha256": "97EA4CF741D0E16FC3AF7FC89BB7835AF9ADE73DB34877B52BF5875DEC65D65F",
+        "exit": 0,
+        "diagnostics": 0,
+        "exhaustiveTheorems": 21,
+        "linterScopes": 3,
+        "lintersPerScope": 16,
+        "requiredProofValueEdges": 68,
+        "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientsDependencyAudit.log",
+        "dependencyAuditSha256": "D53CDE6E4807EDFB77914DE527EFD8AA5566404D5552BE92833ABB9029BFA77A",
+        "dependencyAuditSourceSha256": "EC43ADB4D66853CAC41061B8B2952E8D57E67131860D84D389E7B547DC841BD7",
+        "consumer": "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+        "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> the original primitive coefficient number field and finite genuine local coefficient extensions.",
+        "discharged": "Every actual Fourier coefficient a_f(n) of the original primitive Gamma0 form of weight k >= 2 is an algebraic integer, including bad indices. The actual integral Hecke eigencharacter is derived from the existing all-index primitive eigenvector theorem. Its finite image bounds the literal ring generated by all coefficients; finite integral generators prove that their literal intermediate field over the rationals is a number field. The existing common coefficient-field construction, instantiated with that field and the actual rational prime completion, gives a finite genuine local extension preserving the original valuation and containing every embedded original coefficient integrally. No coefficient integrality, number-field or local-extension existence premise is supplied.",
+        "boundary": "Scratch only; promotion and production verification remain pending. The actual modular residual Galois representation and source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Coefficient arithmetic does not construct a Galois action. The coefficients here are the original a_f(n), not the normalized lambda_f(n). Acceptance stays 16/20; DUB-17-20 open.",
+        "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-coefficients-reuse-review-20261020.json",
+        "reuseReviewSha256": "FE3117A1B257B7181F848EE68E504762B66AFDB298F0B89A861D0963612BE07F",
+        "rootPinsChanged": false,
+        "proofLimitsChanged": false
+      },
+      {
+        "recordedUTC": "2026-10-20T12:01:55.492194+00:00",
+        "date": "2026-10-20 America/Vancouver",
+        "modules": [
+          "SourcePrimitiveFieldHeckeCharacter",
+          "SourcePrimitiveResidualHeckeCharacter"
+        ],
+        "files": [
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFieldHeckeCharacter.lean",
+            "sha256": "A3852AE4F26595E9EC88198FA13E8ECE33E47BA6891862C78B8BABC0CB0F5FF3",
+            "oleanSha256": "3F6F0A16E5E15899147494C89D9FB99C889CD3EF2AD508456B944AF591F7398A"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualHeckeCharacter.lean",
+            "sha256": "21AD6501C3C94DA5DED8F5DD7751104B8536BABCB970918E70832E5BFBC3DD95",
+            "oleanSha256": "599CC01F1902FF8E2D51B36636876FFB3F28FCFBCA3A80EA035F7C57ECA44A00"
+          }
+        ],
+        "queries": [
+          "Dubon2026.sourcePrimitiveHeckeCharacter_mem_coefficientRing",
+          "Dubon2026.sourcePrimitiveHeckeCharacter_range_eq",
+          "Dubon2026.sourcePrimitiveCoefficientRing_le_field",
+          "Dubon2026.sourcePrimitiveFieldHeckeCharacter_hecke",
+          "Dubon2026.sourcePrimitiveFieldHeckeCharacter_isIntegral",
+          "Dubon2026.sourcePrimitiveLocalHeckeCharacter_coe",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter_hecke",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter_range_finite",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter_ker_isMaximal",
+          "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter",
+          "Dubon2026.sourcePrimitiveFieldHeckeCharacter",
+          "Dubon2026.sourcePrimitiveLocalHeckeCharacter",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter"
+        ],
+        "theoremRegistrations": [
+          "Dubon2026.sourcePrimitiveHeckeCharacter_mem_coefficientRing",
+          "Dubon2026.sourcePrimitiveHeckeCharacter_range_eq",
+          "Dubon2026.sourcePrimitiveCoefficientRing_le_field",
+          "Dubon2026.sourcePrimitiveFieldHeckeCharacter_hecke",
+          "Dubon2026.sourcePrimitiveFieldHeckeCharacter_isIntegral",
+          "Dubon2026.sourcePrimitiveLocalHeckeCharacter_coe",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter_hecke",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter_range_finite",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter_ker_isMaximal",
+          "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter"
+        ],
+        "constructionRegistrations": [
+          "Dubon2026.sourcePrimitiveFieldHeckeCharacter",
+          "Dubon2026.sourcePrimitiveLocalHeckeCharacter",
+          "Dubon2026.sourcePrimitiveResidualHeckeCharacter"
+        ],
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacterAudit2.log",
+        "logSha256": "2526595CB146C71651E9E8887B16F935D971D084E6CC3117680AD280846DDDAE",
+        "auditSha256": "347DC967C86C21DA97AF3803FA32C08FBA285A92F1422F968715614F7CA1C106",
+        "exit": 0,
+        "diagnostics": 0,
+        "exhaustiveTheorems": 24,
+        "linterScopes": 2,
+        "lintersPerScope": 16,
+        "requiredProofValueEdges": 76,
+        "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacterDependencyAudit.log",
+        "dependencyAuditSha256": "A957787F4447EBB9FD7112A1EF7578BC90F171C7F0FD6EE494BA5C0AED7FF5A1",
+        "dependencyAuditSourceSha256": "C4EDC9307010818EA5309CB86380D9CE797D9844C749C09497EB35A587AB0799",
+        "consumer": "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter",
+        "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> the original primitive coefficient number field and finite genuine local coefficient extensions.",
+        "discharged": "The original integral Hecke eigencharacter has image exactly the ring generated by the actual primitive Fourier coefficients. Its values are realized in the literal coefficient number field and every value is integral. At each original rational prime the derived finite genuine local coefficient extension admits a constructed embedding of the original coefficient field. Reduction in its actual finite residue field gives a Hecke eigencharacter with maximal kernel and exactly the reduced original Fourier coefficients at all positive indices. No coefficient field, local extension, embedding or residual eigencharacter existence premise is supplied to the final existence theorem.",
+        "boundary": "Scratch only; promotion and production verification remain pending. The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open.",
+        "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-residual-character-reuse-review-20261020.json",
+        "reuseReviewSha256": "3E06A646FDCE6D5614A3ECC3290D34B6817AA9E32ED35C8B5209F68B50613B05",
+        "rootPinsChanged": false,
+        "proofLimitsChanged": false
+      },
+      {
+        "recordedUTC": "2026-10-20T12:08:37.233473+00:00",
+        "date": "2026-10-20 America/Vancouver",
+        "modules": [
+          "SourcePrimitiveResidualCharacteristic"
+        ],
+        "files": [
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualCharacteristic.lean",
+            "sha256": "55A7ED92609CBC69B6594E797B60703E7DAB92377D635A7ED29648F0B92C36C1",
+            "oleanSha256": "FD72A67FBC72C2B35BAA8F85B6B7E9CFE47CF2680495AE65CFBAE82180700A87"
+          }
+        ],
+        "queries": [
+          "Dubon2026.sourceRationalPrimeLocalResidue_charP",
+          "Dubon2026.sourceRationalPrimeExtensionResidue_charP",
+          "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP"
+        ],
+        "theoremRegistrations": [
+          "Dubon2026.sourceRationalPrimeLocalResidue_charP",
+          "Dubon2026.sourceRationalPrimeExtensionResidue_charP",
+          "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP"
+        ],
+        "constructionRegistrations": [],
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacteristicAudit1.log",
+        "logSha256": "E7D9A05BC65A920AC0A051D044F751856E61FE2C07C511C22E8CACF91E14E120",
+        "auditSha256": "56F69C85850FC8727D7DE96BFDBE2C31A6BCE7FAB1053C142773FC5BDF572E32",
+        "exit": 0,
+        "diagnostics": 0,
+        "exhaustiveTheorems": 3,
+        "linterScopes": 1,
+        "lintersPerScope": 16,
+        "requiredProofValueEdges": 80,
+        "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacteristicDependencyAudit.log",
+        "dependencyAuditSha256": "E7176E8B29312120339E3895E106B9254FE1C6535FDBFF298D81770A0D45D408",
+        "dependencyAuditSourceSha256": "999E59920E3B0A9EE62F76537542C01B624C7D589A8A57D6C10BD8E174F2246A",
+        "consumer": "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP",
+        "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> the original primitive coefficient number field and finite genuine local coefficient extensions.",
+        "discharged": "The original primitive residual Hecke eigensystem is realized over a finite actual residue field of the prescribed rational prime characteristic, with maximal kernel and exact reduced original Fourier values. The characteristic follows from the existing exact residue cardinality of the genuine prime completion and native valuation-extension residue algebras; no residue-characteristic premise is supplied.",
+        "boundary": "Scratch only; promotion and production verification remain pending. The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open.",
+        "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-residual-characteristic-reuse-review-20261020.json",
+        "reuseReviewSha256": "4117DB66DD34D10C4714ADDA327C52884FF0712A92EEAB1D361A5B6724A6CBC9",
+        "rootPinsChanged": false,
+        "proofLimitsChanged": false
+      }
+    ],
+    "reviews": [
+      "Tools/source-primitive-coefficients-reuse-review-20261020.json",
+      "Tools/source-residual-character-reuse-review-20261020.json",
+      "Tools/source-residual-characteristic-reuse-review-20261020.json",
+      "Tools/modular-association-reuse-review-20261020.json",
+      "Tools/anthropic-flt-reuse-review-20261020.json",
+      "Tools/tau-yone-closure-review-20261020.json"
+    ],
+    "currentApplication": "Tools/source-primitive-coefficient-arithmetic.json",
+    "metadata": "Tools/lean-reuse-audit-20261015.json#appliedSourcePrimitiveCoefficientArithmetic",
+    "previousApplication": {
+      "date": "20 October 2026",
+      "currentApplication": "Tools/source-original-integral-hecke.json",
+      "metadata": "Tools/lean-reuse-audit-20261015.json#appliedSourceOriginalIntegralHecke",
+      "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,952-module scope: all thirteen retained regressions, 35,089 exhaustive theorem checks, 14,980 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+      "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> coefficient-field arithmetic through finite integral original Hecke algebra.",
+      "discharged": "The original positive-index Gamma0 Hecke algebra is finite over the integers at every weight k >= 2, and each original Hecke operator is integral. Original integral Gamma0 transition matrices and finite permutations make the prime matrix sum descend to integral modular symbols, including bad primes. Actual convergent cusp integrals prove adjointness to the same original analytic prime operator. Existing prime-power recurrences with derived integral coefficients and coprime composition prove all-index integral generation; the proved free-algebra pairing identity extends prime adjoints to all positive indices. Actual period construction, injectivity and finite integral symbols are derived. No supplied period, injectivity, lattice, finite-cycle or Hecke-adjointness premise remains in the final finite-algebra/integrality consumers.",
+      "boundary": "The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open.",
+      "reviews": [
+        "Tools/source-hecke-symbols-reuse-review-20261020.json",
+        "Tools/source-actual-period-reuse-review-20261020.json",
+        "Tools/source-period-injectivity-reuse-review-20261020.json",
+        "Tools/source-original-hecke-reuse-review-20261020.json",
+        "Tools/arithmetic-reuse-review-20261020.json"
+      ],
+      "archives": [
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\AINTLIB-EichlerInjective.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-EichlerInjective.lean.txt",
+          "sha256": "A4913428AC70E37CD61736F7409509F39EA577AAA3D1644AFC8675CDD042ECBF",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\AINTLIB-HeckeAlgFiniteFinal.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-HeckeAlgFiniteFinal.lean.txt",
+          "sha256": "D868CCA240F34F8731468A7EDEE44A2D25F73D73602D3041A73A78E3541B597B",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\AINTLIB-LICENSE.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-LICENSE.txt",
+          "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\AINTLIB-NewformOrbit.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/AINTLIB-NewformOrbit.lean.txt",
+          "sha256": "984EFAA3018218EC5F887679CC3ED982CE000491381490A3A6292B8379EE7D33",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\final-arithmetic-searches.json",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/final-arithmetic-searches.json",
+          "sha256": "0D4C8A33DAA36DE3372C8A1BE081748DDD3D1C7698F544C35DF2F6C3CBBD67A5",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\FLT-HardlyRamifiedLift.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/FLT-HardlyRamifiedLift.lean.txt",
+          "sha256": "09A5D45E5E88C5AEF7CA792A65E5EFFC3508DE679A37275A99FB0096FD4AEDE2",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\FLT-LICENSE.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/FLT-LICENSE.txt",
+          "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\formal-conjectures-LICENSE.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/formal-conjectures-LICENSE.txt",
+          "sha256": "CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\KN-Deligne.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/KN-Deligne.lean.txt",
+          "sha256": "A1214A299850282958D0A9FEDF471039D15A60D13E7F4DAD8A82BCAD2443BFC8",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\KN-LICENSE.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/KN-LICENSE.txt",
+          "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\retrieval.json",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/retrieval.json",
+          "sha256": "1251DE82C4F8F9F8DC99694C37797B666A4321894E1006605C166C0C915D5DDD",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\SatoTateConjecture.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/SatoTateConjecture.lean.txt",
+          "sha256": "47305F3CE59626692ADDD68CF2F04D11069B10AC9BD28BA87F23F1D216154AD3",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\BigOperators\\Fin.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/BigOperators/Fin.lean.txt",
+          "sha256": "4F87C6422B8DB76D63CC2BC99C727AA2FF5B5A8012C09E36D45583B13E3BD0BF",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\BigOperators\\Finset\\Fiber.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/BigOperators/Finset/Fiber.lean.txt",
+          "sha256": "3F7E787C73B6A62030601633299FF2A72CA753203853090CE116A47660282597",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\Group\\Subgroup\\Centralizer.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/Group/Subgroup/Centralizer.lean.txt",
+          "sha256": "77438E9033D818A12D5784457F64F92C9F50D138D7B5CF07B90DE9C6D217ACE4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\Group\\Subgroup\\Map.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/Group/Subgroup/Map.lean.txt",
+          "sha256": "640B6F62F9B6964513AD1F615B5238CD5E3CE922305EB411EDDF6ABB2A303E38",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\GroupWithZero\\Divisibility.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/GroupWithZero/Divisibility.lean.txt",
+          "sha256": "BFC02767DAA1AEA4C2D22C5F524A4BAFA077DE7A410B9254DC361A238356A99C",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\MonoidAlgebra\\Basis.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/MonoidAlgebra/Basis.lean.txt",
+          "sha256": "E4BE408015882672842F4CAC1AD38F3D7123BE9813670E1D376BBEFB14CE62E5",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Algebra\\MvPolynomial\\PDeriv.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Algebra/MvPolynomial/PDeriv.lean.txt",
+          "sha256": "82AEA3164242199A493A023E68C99ABD4532DC4CF233A7C01E8C4C09D44127E8",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Analysis\\Asymptotics\\MvPolynomial.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Asymptotics/MvPolynomial.lean.txt",
+          "sha256": "70DC5EDD6B21A1CE77BEDC599E74947C85F5936EF6A8261D2CDB48D16F3EA4C3",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Analysis\\Complex\\Periodic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/Periodic.lean.txt",
+          "sha256": "838FF5199AA79F91AA3478C458C1AEE8111E74E826A94C70F9D60BC45C9B7665",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Analysis\\Complex\\UpperHalfPlane\\Manifold.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean.txt",
+          "sha256": "B131261207846D92818EC791D0F90CBEE6A3E69598379A1F0D67E4C33888ED93",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Analysis\\Complex\\UpperHalfPlane\\MoebiusAction.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean.txt",
+          "sha256": "AD6B3DC51F107115B5F2CB0A0DBC0FE9AA9BA87A9A72BF5CA589826FADB1FD1E",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Analysis\\Complex\\UpperHalfPlane\\Primitive.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean.txt",
+          "sha256": "95FDD2AC07E9AC0F0B604319E9771688C1A3204831C6EB594A291D6BB41F6085",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Analysis\\Complex\\UpperHalfPlane\\ResToImagAxis.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean.txt",
+          "sha256": "A080A1899B3F851AC5EDCA3CC66D6CCD11DAB53E14C94250ACA994DB1C8B91BE",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\Int\\ChineseRemainder.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Int/ChineseRemainder.lean.txt",
+          "sha256": "C7CC2A39A74BDA3D66F1B0DBBF004DE798073C0A9A5D24DDCA8453C336594CE2",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\Int\\Fin2Tuple.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Int/Fin2Tuple.lean.txt",
+          "sha256": "C3FE61067B13488D7A4B6CDB4FF97DF5EFE8B9203442D2C6C2D6447D2694B5F3",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\Int\\LinearCongruence.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Int/LinearCongruence.lean.txt",
+          "sha256": "04ECA2D4D77F4197CDB69271870E930B878EF4B561193DC0B13EFFC1E3A48020",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\Nat\\GCD.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/Nat/GCD.lean.txt",
+          "sha256": "EEB918BC37637DFB9B3922900268E30BF4E6ACCD5395782FE7B1461FCF31D165",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\ZMod\\Divisibility.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/ZMod/Divisibility.lean.txt",
+          "sha256": "9726B876B8C8CB2E5786E93D1C04AD2FE938744223869667CB3C29BCF2B01B3B",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\ZMod\\FinEquiv.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/ZMod/FinEquiv.lean.txt",
+          "sha256": "0F22861C6CF8DB0CCE13553299A198B36216B7E2918FDFFE9D4E7567A961F4AE",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Data\\ZMod\\Units.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Data/ZMod/Units.lean.txt",
+          "sha256": "7ED0F752ADA221993EAA071631BC192500134A022FD6EA5AC5954F021900C2BD",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\GroupTheory\\Coset\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/Coset/Basic.lean.txt",
+          "sha256": "181E027EE0C838C1DFE99B89E0E736A262A3D3FA7A998FD7CA1A6D4864A58025",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\GroupTheory\\DoubleCoset\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/DoubleCoset/Basic.lean.txt",
+          "sha256": "637304378F8BD8D6EE4118804CFD73C3D3B00E574F075EC5298A1DD1E93DE18D",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\GroupTheory\\DoubleCoset\\Inv.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/DoubleCoset/Inv.lean.txt",
+          "sha256": "CB7E4629D5D024F952A5B4E1924761AF4766B860A820E82DC2B9BCD5057B1D28",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\GroupTheory\\DoubleCoset\\Normalizer.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/DoubleCoset/Normalizer.lean.txt",
+          "sha256": "01D669824FB933C544306C54772BF34E5076D67CC7E7ABC0B8B97E7D28C8AFEE",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\GroupTheory\\Index\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/GroupTheory/Index/Basic.lean.txt",
+          "sha256": "004F50E8137343B85E13F66274320CEE61D5A2C66444A7D414AF86505194470D",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Dual\\FiniteAlgebra.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Dual/FiniteAlgebra.lean.txt",
+          "sha256": "07726BC2E895327F8E1C159385FFBA3C0A9D0E5E4219C3FD68F1DF367C3CBAAC",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Adjugate\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Adjugate/Basic.lean.txt",
+          "sha256": "E395B44F5D55CF953E759EF61E7E9BFC700CBB0B04A2ABB7D056513C1AE5F06B",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Adjugate\\FinTwo.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Adjugate/FinTwo.lean.txt",
+          "sha256": "0955ECBE5ED41B855D575161EFE360D681BFE7BD2C1A4C408F3378C804F58352",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Commute.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Commute.lean.txt",
+          "sha256": "7301C3A70FDFBF428D5FD8F9CAB65261F3D4644FE3487C6CF6D5240B1DD0F5D6",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Diagonal.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Diagonal.lean.txt",
+          "sha256": "7EAB07196478B7CBBE16A5607192B78F8867E1DB6295E18C8F8F696B78A26183",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Divisibility.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Divisibility.lean.txt",
+          "sha256": "C01EDE2E99D1961A435310A478A5E64CF3AB89B50F0B7B35E0D39EFC522B89B1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\GeneralLinearGroup\\Adjugate.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Adjugate.lean.txt",
+          "sha256": "8060E897437FA562BFD42C316CF8560A14068015B54C1FCF3339CC918DAF3735",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\GeneralLinearGroup\\Diagonal\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Diagonal/Basic.lean.txt",
+          "sha256": "10C9F1167B57B0BA840EECAF07A73C44DD9768EC98BB826A810467D586A1AC89",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\GeneralLinearGroup\\DoubleCoset.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/DoubleCoset.lean.txt",
+          "sha256": "D253175C16960A9BFE1A4308746CEDE693C067237F9AAA4D4BE1ED58D51F525C",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\GeneralLinearGroup\\Equivalence.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Equivalence.lean.txt",
+          "sha256": "8C68540D45FB59F7043328A8515E248E2355CD758EF7CA27AE27CB2DB9B09B11",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\GeneralLinearGroup\\Map.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean.txt",
+          "sha256": "1E7A88A4840BFBE2F2D5FDF2B019614EAC7A5F1A15E8C05C36B4CA7E9F3DE88B",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\RationalCanonicalFormFinTwo.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/RationalCanonicalFormFinTwo.lean.txt",
+          "sha256": "7B6D6E4B40A342C2D43CF3958D35DAD7C77F50E9B9A8C70D8C667A591BF2836A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\SmithNormalForm.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/SmithNormalForm.lean.txt",
+          "sha256": "BB162DC8F3B53320A030726124B670EC2C18B6612BEFB24EC2D3EF128A7D2C51",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\SpecialLinearGroup\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Basic.lean.txt",
+          "sha256": "820D2F85C201468BE83BA79DCA8D970EB9248077C57900D7C92D537EC5A40204",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\SpecialLinearGroup\\Equivalence.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Equivalence.lean.txt",
+          "sha256": "B689411B340C31E939FADB8E0CFF9613FFA0DCC6A3626B37239E4A0F57FF5072",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Trace\\FinTwo.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Trace/FinTwo.lean.txt",
+          "sha256": "A83390BC6AA963D564070A8557EACA634BFEFB35090B626E0F601EEC7D548E2E",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\LinearAlgebra\\Matrix\\Triangular.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/LinearAlgebra/Matrix/Triangular.lean.txt",
+          "sha256": "F01B68C487FFA4B0F9A30B0B763F70C280628A5F75457EDA3CD4F759D58B7537",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Logic\\Equiv\\Fin\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Logic/Equiv/Fin/Basic.lean.txt",
+          "sha256": "AEA882B4AE715AC254901340A8D2BC342A6698CB7FFCBA4A042670B2403F61C1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\MeasureTheory\\Integral\\Bochner\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/MeasureTheory/Integral/Bochner/Basic.lean.txt",
+          "sha256": "CA20E8B5F26FB7CCB68D62B600E35279B3341FD64D697BD3094E0CA9A41DD5E2",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\MeasureTheory\\Integral\\ExpDecay.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/MeasureTheory/Integral/ExpDecay.lean.txt",
+          "sha256": "3034B4163E73781D126AC8079CD424C17693306C369640D35D8495719D46BF68",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Associativity.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Associativity.lean.txt",
+          "sha256": "B07DDE87E8C627020028D8378A9F7946C869BE3FBEDCCC1A1A78C06299497C7D",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Basic.lean.txt",
+          "sha256": "67D4E0C90589EFBF65B6F5E0DF0CAEEF330295F23CE9C4D14D35666899FBFF7D",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\CosetDecomposition.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean.txt",
+          "sha256": "8ECA81B65A3E30A26599E93422B3C20719FE5279E831B5CF916FB32DEBB676AB",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Delta0.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Delta0.lean.txt",
+          "sha256": "B3B6162E9A5A8C8EE8415A3D19D5281F0B03FB2FC982D53C7B67CF3D0C1627F4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma0\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Basic.lean.txt",
+          "sha256": "D4E4AAA8EDF949B9452836B9595ED83D331884A6D1CAD5DD3AAB2E0BB421A116",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma0\\CosetMap.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/CosetMap.lean.txt",
+          "sha256": "795BDDD4FF6FD423D7E55D19BA06CAC910916CA457EA6D4B1BA1B3BFE52A04EB",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma0\\Diagonal\\Coset.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Diagonal/Coset.lean.txt",
+          "sha256": "C0583F2DD1277DA4EDDCAA6E8226C80FDE038166B01DE80BFDCB5AE91D5E489C",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma0\\DoubleCoset.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/DoubleCoset.lean.txt",
+          "sha256": "B2B64DDEAFD0A5D698D24BD6D01C0BD50CB97722B7C359D5BB64765082BA0D61",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma0\\UpperTriFactorization.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/UpperTriFactorization.lean.txt",
+          "sha256": "61CC1DD05FAD825128CE54118A18694EA574D9142DE87B82B0CE49A41359D35C",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma1\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean.txt",
+          "sha256": "67825458A4B550B9C9D5DEF62048436F6850350B45B192221F4F94F40B4C66B1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma1\\CoprimeCosets.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/CoprimeCosets.lean.txt",
+          "sha256": "13E9A01C3219B117D67D18943853D0A70AB99F05D42DE958E45CFC1FC7757E04",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma1\\DiamondCosets.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/DiamondCosets.lean.txt",
+          "sha256": "35D1EEEA62D0443BFDF6906A73F4E0304057B296770A00E027389DC005B7444A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\Gamma1\\UpperTriCosets.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean.txt",
+          "sha256": "117EED98C5185A20EAD67269EF244384403FF97BF9110386329D16416668C52A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GL2\\PairCoset.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GL2/PairCoset.lean.txt",
+          "sha256": "D7C4E831DC77C971E1DF262D7577025BDF5D987A8A2E62E8403CC8923199B342",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GLn\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean.txt",
+          "sha256": "096AEE29EA18EBE3344DC587F0BFC2B8445E3F4530AC4C14D5AD95FB26D2A0DE",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GLn\\CosetDecomposition.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GLn/CosetDecomposition.lean.txt",
+          "sha256": "F58D4A9CF97B5E6AA38798E68A0D8D9D6DB9257479F0D163E61024459DD3A65E",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\GLn\\DiagonalCosets.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/GLn/DiagonalCosets.lean.txt",
+          "sha256": "0155F1C0A270B2EB395DA9F11DC28303D7E6039AFBA2CE599336C2AF569A6AA9",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Multiplication.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplication.lean.txt",
+          "sha256": "1FD8FC578C7FC81974EBBAF1EC9FCA84F47298ED9F2EAE0E7EF2959B1C61A4A7",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Multiplicity\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Basic.lean.txt",
+          "sha256": "49FEB9E32902EAD8F72F99A5F74B74B7075A7948D3F949E8D2D7610648745886",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Multiplicity\\Handedness.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Handedness.lean.txt",
+          "sha256": "15B0A41FE5696E3B015C830CCB0B7C4D191C3EA484B830094577467DBFB5018C",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Multiplicity\\Support.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Support.lean.txt",
+          "sha256": "6DD55601116BA13FD7B8F585506AD5D06462DEAA771BEC987537C1064266FE9B",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Multiplicity\\Unit.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Unit.lean.txt",
+          "sha256": "0AF967F7DD18D43D73E98C0C3234C30AD2DB3ED5B57FB3C30134196E1639914D",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Normalizer.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Normalizer.lean.txt",
+          "sha256": "A5AF33CAF9CD71A9EA3604788640B9BAAA3A1DB0B7D91A6FF7516A291CD4576A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\One.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/One.lean.txt",
+          "sha256": "A9A92700858C1B738A8FC85E66737D09176D827E6FB7A1C595AA79FC3024BDF9",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\Representation.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/Representation.lean.txt",
+          "sha256": "69762D986FAD6969F3F3F3F9F355855376B4A8734EC742F495CE9035D265BEF7",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\HeckeRing\\StabConjugation.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/HeckeRing/StabConjugation.lean.txt",
+          "sha256": "0D1D43AF3E0A5C7CC5A42403350AD55F90752A44736416EA61CDA3CC7A4E8456",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Basic.lean.txt",
+          "sha256": "E182F02E59EFB04903AEAE90CAE646DC5E40464FBF8BD7E7D46C10DB7587FAAE",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\BinaryForms.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/BinaryForms.lean.txt",
+          "sha256": "7EDCB51B2AF0DF31F84CCEE1D88BE45EB7E6121D3E8856A5045CD91B1EDEFB99",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\BoundedAtCusp.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/BoundedAtCusp.lean.txt",
+          "sha256": "B2FA970BACBBE11B89090B7CD85FCBE96224F6DA7BCD408C85ACE9DDA3B0542F",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\CongruenceSubgroups\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean.txt",
+          "sha256": "097B36C016D09EBE97269BE45240ED8BF004FF5B8EAE7ED9172902054BFF94D4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\CongruenceSubgroups\\Units.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Units.lean.txt",
+          "sha256": "03CE2DBED0025A5D3C5A821A8328ECB9BB632A1EA3F687686A25D32C668E0621",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\Cusps\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean.txt",
+          "sha256": "BC73FBED221D23BDF1233EB8FAA75FB45ED916E2370F8FE1BBEE0E18CACE03FF",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\Cusps\\ModularGroup.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean.txt",
+          "sha256": "9B9BFCA418F7DEB09C7764B25A05EAD8443ABACE1AE7A67134E9F9097573F016",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\Cusps\\Rat\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Basic.lean.txt",
+          "sha256": "74423F681769E52FCFAF9623BB2EF703B575DAFCDDFC3F6DDF0BD7065D9137AC",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\Cusps\\Rat\\Slash.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Slash.lean.txt",
+          "sha256": "77F9D5EC774632C790E4369A4FA524617B741DD84D201D61C66DC05A29C5F37A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\DiamondOperators.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/DiamondOperators.lean.txt",
+          "sha256": "B61B24B0FE81D5D412CB8E1140D4E006C0F3A3F9AD6282BB1171DF2C8A4905BA",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\EichlerIntegral\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean.txt",
+          "sha256": "1E5B7DB0526B7120361DA354D99C1CB9CF936F96A046E8590E77AF43188B1460",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\EichlerIntegral\\Integral.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean.txt",
+          "sha256": "59CFAA79690C8FC42145B77DC0854E1F73CD825F200DC3E6441BCA748B4B3E83",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\EichlerIntegral\\Transformation.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean.txt",
+          "sha256": "4A3AC9A68FCB8501E198195838F8416E4DC2D9FDA8CFF4AB51545C4C1C2732E8",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\GeodesicIntegral\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean.txt",
+          "sha256": "3CE63150F4F25ACC475254F8F462A81F0ABB3711CA234E343027E5275B11F221",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\GeodesicIntegral\\BetweenCusps.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean.txt",
+          "sha256": "0FA472EF16B3FA3A8A74B892A8252C8CCB2A70F36BADBDAF384ADB9C80CD4949",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean.txt",
+          "sha256": "39DA88C2DCA85E2B1135B52687BAD58E2A0278D322A79C766C99B1572A7C4C44",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\CuspRing.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/CuspRing.lean.txt",
+          "sha256": "49A5394816AC1645472F4040641660E04FDC03E5A06F20DD4EC5E70BD063ECF6",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Cusps.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Cusps.lean.txt",
+          "sha256": "0EA6B9D06F3D50C757555E0D7A28577A650DA58320BD21F07CCC9FF817B99AB8",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Diamond.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Diamond.lean.txt",
+          "sha256": "5C99CD53F8C94211CD8F9991EB9F5A1AC20D8ED4D106D496FB981DDC7264BCBD",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Finite.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Finite.lean.txt",
+          "sha256": "715743313FC751636266EA064D9CF5766A9EA2E2C570D566A64D301B2032CA54",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Form.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Form.lean.txt",
+          "sha256": "D18C9A00EE731CE19BF756AFC9165CE195C7C8344AC2369D04A7D82CDB1EEABE",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Gamma1.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean.txt",
+          "sha256": "D281F88247AC0549ADB06D4BF93A9C42AE4A36C2EA844DF77A0B2051041D8D52",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Holomorphic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Holomorphic.lean.txt",
+          "sha256": "41E776ECA24BA306DDABDF16168F7DE8EF35E93A513551D0D5584DA7E5045DC9",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Independence.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Independence.lean.txt",
+          "sha256": "4C462FCE83E74C0C6963E926B9F7CB49B679825C36B4E051AB3122C87FDB0ECB",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Invariance.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Invariance.lean.txt",
+          "sha256": "BA7BB6A3BA2EC7FF3480C964D822F985F6511C57B91B35F0B0D2B5751EEEE40C",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\ModularForm.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/ModularForm.lean.txt",
+          "sha256": "582C67D2E8E624498915768A4A2DEB85602942E94254392EC23AB7746D4AFECC",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Operators.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Operators.lean.txt",
+          "sha256": "8D94E27EF3CD7920655D7273881B63422DF519FF5655FE45EDBAB334677E4433",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Prime.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Prime.lean.txt",
+          "sha256": "E2751BDF0FD6A6491314A31D078B154FEDD95D7013A9639ED0048CFE12CF56E4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Reindex.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Reindex.lean.txt",
+          "sha256": "EF2150B3D2026F195C7EC1993424D8536DC680910427C9336DC8D63795859724",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Ring.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Ring.lean.txt",
+          "sha256": "1E70BFF5D48971DE88A991DF8A0C1199067273F759A197BAE94CF361387EB866",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\Trace.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Trace.lean.txt",
+          "sha256": "0D929B72FD9DCC66A916EA2D6C33DB93EE273AF8315B06D8310E193D109049D1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\UpperTri\\Cusps.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Cusps.lean.txt",
+          "sha256": "DB7EB48FD084576D09BB7FD8C792DD15D2DC0EF031C077D05DE535BAC10DE047",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\UpperTri\\DoubleCoset.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/DoubleCoset.lean.txt",
+          "sha256": "4430E664688D6E3495D8CA01FDB91F5839A1C419DA4CD93FC4C16C22C86233D7",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\UpperTri\\Holomorphic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Holomorphic.lean.txt",
+          "sha256": "7B988C643A86A27D769BD4246B2ED794A50A25D758C0BC2141C6F560D1BBD89F",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\UpperTri\\Invariance.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Invariance.lean.txt",
+          "sha256": "55BA6C6CF4823DE7D9C272D014B5FD4808B3D6EF753870CA21023E610FDCF066",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\UpperTri\\ModularForm.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/ModularForm.lean.txt",
+          "sha256": "03E5AE094A684B5D2471A2297196971DB636BBBA6B531EF314E6B2997F7F37A8",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\HeckeSlash\\UpperTri\\Sum.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean.txt",
+          "sha256": "9A8BD08515E665FB40734F2C83C69338C15ABD40016F33EA3875C6793CF34D63",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean.txt",
+          "sha256": "B3026D4FDCDA46D4708105F83C21C9881A5D578BBA863915118057E4807AA359",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Hecke\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean.txt",
+          "sha256": "19DCC245E2CA2BF4BB13CD08CF6F23256CA06B40C65DA218AE2065744F7056BB",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Hecke\\Composition.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean.txt",
+          "sha256": "846F380F52EBE8C8572A4B4A9C1E46FDAB8D17E860021653C17023283C5A19AC",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Hecke\\Diamond.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean.txt",
+          "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Period\\Hecke.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean.txt",
+          "sha256": "29CB759CB8E2CD9C8DD094874409CC5A0A427F761F8C0CFFAF14508149471C05",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Period\\Injective.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean.txt",
+          "sha256": "52DC9C7A724628298B6781112E9A6354F29636B2A544B02FBF8DF462AED75C04",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Period\\Integral.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean.txt",
+          "sha256": "533369CB0D9491B6252B5454F2CE3F45C0D491507C20C41E594DFD2235AA7E77",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Period\\Map.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean.txt",
+          "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ModularSymbols\\Period\\Pairing.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean.txt",
+          "sha256": "DC15C9AC96C034828B7BD489EB67E4FE17F7FC197E48B5FD97EDAAEE2A144B18",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\Primitive.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/Primitive.lean.txt",
+          "sha256": "E9D7AA2E2A2CA8996E909C507D4778FB6A0693E1CF3E0C2605B342956135D51F",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\QExpansion\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/QExpansion/Basic.lean.txt",
+          "sha256": "D7920B947E1D5E1FF2D0CCBADEC15B06AE3E7462C32CCA9FDE551921A1D54FF4",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\ResToImagAxis.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean.txt",
+          "sha256": "0C32646C0E3ACF253A2F2C397C3E85C4FE22C32ADA0E2984584F2D641FDDD45D",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\NumberTheory\\ModularForms\\SlashActionRat.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/NumberTheory/ModularForms/SlashActionRat.lean.txt",
+          "sha256": "90475AB717384BB62084A798219AEC9E6C44454EA7278DE3D01028B3D7DBB847",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RepresentationTheory\\Augmentation\\Basic.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Augmentation/Basic.lean.txt",
+          "sha256": "FFFA0E9A84275A6D3D6677D4D9F4B26232F488F99D889370897CBC939B258F35",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RepresentationTheory\\Coset.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Coset.lean.txt",
+          "sha256": "08AC52FDB6C465ACEE014971CAA6830579492ED49BA54236F11CCB66C575E4B0",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RepresentationTheory\\FDRep.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/FDRep.lean.txt",
+          "sha256": "2ED37B93D9F4C22803B4C280B0EC03CC3F1602036DCC40C6EF52BB18D0925CB1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RepresentationTheory\\Intertwining.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Intertwining.lean.txt",
+          "sha256": "BCAE8A1350FBBA96444B2C1C530135A4F100EA550C1657810FABB79BF37A1670",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RepresentationTheory\\Rep\\TensorShortExact.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Rep/TensorShortExact.lean.txt",
+          "sha256": "EA191BF2AD6C72CD55B87B63EBEFC1B7C6E4D3EC0E0D80CF747CB624705416DD",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RepresentationTheory\\Subrepresentation.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RepresentationTheory/Subrepresentation.lean.txt",
+          "sha256": "7626E6028BFA4ADC95C8B7561F8F644A1600A928F7BB189FCDEC8716DDF2C286",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RingTheory\\MvPolynomial\\Finrank.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/Finrank.lean.txt",
+          "sha256": "383CAAAB250A4F25C266739FF2C8F9D812AFA22AA7A79C770A36434F1295B5A6",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RingTheory\\MvPolynomial\\Homogeneous.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean.txt",
+          "sha256": "305B892A32CD9ED8ECB21B834B8D850D58AF4A4ECEA957EB3C2A830D2FD3F37A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RingTheory\\MvPolynomial\\LinearSubst.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/LinearSubst.lean.txt",
+          "sha256": "E4B212FC1F9C24F5DC3E7F2CF9DA64F8808E8ACDB5606F2F92430F2A473F13AA",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RingTheory\\MvPolynomial\\Trace.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/MvPolynomial/Trace.lean.txt",
+          "sha256": "93BA679B47C76BBA1C0ADEFC6FCCBB923E6B0C77312EA38CCF87E8D4580713F6",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\RingTheory\\Polynomial\\Dickson.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/RingTheory/Polynomial/Dickson.lean.txt",
+          "sha256": "93D971F54E807C32D725F227BA24BF4785CA08B2540560E59DB483F933B97CDF",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period\\TauCeti\\Topology\\DiscreteSeparation.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period/TauCeti/Topology/DiscreteSeparation.lean.txt",
+          "sha256": "F834F59FE607D0BE0E3FA54DA3DD1E5F5C1EA17E1953F3489FA7FDA1EC20541A",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period-manifest.json",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/tau-period-manifest.json",
+          "sha256": "6B5CAC8894FFBBF7D27610B7DB68317D38816B31A4EFBA85366E9BDEA6B58382",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\TauCeti-LICENSE.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/TauCeti-LICENSE.txt",
+          "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+          "status": "External research evidence only; not imported as Lean proof."
+        },
+        {
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\TauCeti-PrescribedLocalForms.lean.txt",
+          "path": "Dependencies/Lean Reuse 2026-10-20/arithmetic/TauCeti-PrescribedLocalForms.lean.txt",
+          "sha256": "D67205A5EF1F722F0C6DFF88421517039216F4628E997ECEC29DBEAB2DCE3D90",
+          "status": "External research evidence only; not imported as Lean proof."
+        }
+      ],
+      "candidateReview": {
+        "recordedUTC": "2026-10-20T09:54:44.411604+00:00",
+        "exactDependency": "DUB-17 frozen Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> potential automorphy plus modular Galois association -> actual primitive form coefficient number field/integral Hecke algebra -> integral modular symbols, injective period map and the actual Hecke comparison.",
+        "candidateReviews": [
+          {
+            "source": {
+              "name": "KN-Deligne.lean.txt",
+              "encoding": "utf-8",
+              "sha": "ebbf6c794fd6b588d50bf95dab1d0d4c90b02aec",
+              "display_url": "https://github.com/loefflerd/KN-scratch/blob/ba97a154bf2550c5210b6adf1a308329ed6bc8cc/Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+              "display_title": "Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+              "characters": 4493,
+              "sha256": "A1214A299850282958D0A9FEDF471039D15A60D13E7F4DAD8A82BCAD2443BFC8"
+            },
+            "verdict": "Not a proof of representation existence.",
+            "reason": "The theorem explicitly assumes HasContinuousLocalFieldRepresentations and its body projects exists_representation from that hypothesis."
+          },
+          {
+            "source": {
+              "name": "FLT-HardlyRamifiedLift.lean.txt",
+              "encoding": "utf-8",
+              "sha": "4265b53a4e4cf1ce8163cbdc6061b9596dc404b8",
+              "display_url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/GaloisRepresentation/HardlyRamified/Lift.lean",
+              "display_title": "Lift.lean",
+              "characters": 1729,
+              "sha256": "09A5D45E5E88C5AEF7CA792A65E5EFFC3508DE679A37275A99FB0096FD4AEDE2"
+            },
+            "verdict": "Not accepted as proof.",
+            "reason": "The actual IsHardlyRamified.lifts theorem body is sorry."
+          },
+          {
+            "source": {
+              "name": "TauCeti-PrescribedLocalForms.lean.txt",
+              "encoding": "utf-8",
+              "sha": "b6e4d077304682c999d4a0e4fce9e3492c8f09a5",
+              "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+              "display_title": "PrescribedLocalForms.lean",
+              "characters": 10084,
+              "sha256": "D67205A5EF1F722F0C6DFF88421517039216F4628E997ECEC29DBEAB2DCE3D90"
+            },
+            "verdict": "Partial quadratic-form result; deferred.",
+            "reason": "Produces local correction data and retains a global representation premise. It does not directly construct the prescribed everywhere quasi-split finite-place and definite infinite-place unitary group over the required CM extension."
+          },
+          {
+            "source": {
+              "name": "AINTLIB-HeckeAlgFiniteFinal.lean.txt",
+              "encoding": "utf-8",
+              "sha": "7c81e2bc5b1d79179b9cb3f4d8cd50bdbb50dddf",
+              "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/Labels/HeckeAlgFiniteFinal.lean",
+              "display_title": "HeckeAlgFiniteFinal.lean",
+              "characters": 4788,
+              "sha256": "D868CCA240F34F8731468A7EDEE44A2D25F73D73602D3041A73A78E3541B597B"
+            },
+            "verdict": "Relevant period-route candidate.",
+            "reason": "The weight >= 2 specialization uses Eichler period injectivity. The all-weight instance still takes an admitted lattice route below weight two. No transitive kernel-audit claim is made from the file comments.",
+            "toolchain": "Lean 4.36.0-rc1; root project remains Lean 4.30.0."
+          },
+          {
+            "sourceManifest": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\tau-period-manifest.json",
+            "verdict": "Preferred smaller mathematical route.",
+            "reason": "TauCeti proves finite integral operator algebra using an injective pairing with finite integral cycles and a free-algebra/opposite-algebra argument. This avoids separate commutativity and integral lattices in cusp forms.",
+            "sourceRevision": "199786c594817a82fdd2fab04d3ae4cc5eb837d5",
+            "sourceModules": 133,
+            "verificationLimit": "Full source closure retrieved; full closure not ported or kernel-audited."
+          }
+        ],
+        "localReuseDecision": "Use the already proved MatrixPolynomialAction, HomogeneousMonomialBasis and HomogeneousCoefficientChange for the original binary coefficients. Transpose changes the existing column substitution to the right row substitution. Avoid the external Dickson-trace, rational canonical form, general representation-category and unrelated Gamma1 Hecke frameworks where native original-object proofs suffice. Construct the period pairing for the original Gamma0 cusp forms and compare their existing operators.",
+        "appliedScratchTransfer": {
+          "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePairingFinite.lean",
+          "sha256": "22046B6028D7891A124DB15205ACC0A34619B156737AE00BF5749AA0C744C9CC",
+          "oleanSha256": "0D1F265A0ACCFF144A3A449FBD010D0539E7F5FBB885A638F7B9151CC80D6956",
+          "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePairingAudit.log",
+          "auditLogSha256": "9F70FDC1B8481523F7E33C3DD118DE906FEE40EA5C0114F5C7213061D6C8BAF5",
+          "auditSourceSha256": "315076B381BE6FFAFDE597A6979CF6529DB9DA14B221262096A925D63B59D9DB",
+          "explicitAxiomQueries": [
+            "Dubon2026.sourcePairing_freeAlgebra_lift",
+            "Dubon2026.sourceOperatorAlgebra_finite_of_pairing"
+          ],
+          "exhaustiveTheorems": 2,
+          "linters": 16,
+          "exit": 0,
+          "diagnostics": 0,
+          "discharged": "An injective pairing with a Noetherian cycle module and generator adjointness rigorously imply finiteness of the entire generated operator algebra.",
+          "remainingInputs": "The actual integral modular symbols, actual period-map injectivity, and adjointness of the original cusp-form Hecke operators are still required."
+        },
+        "productionImported": false,
+        "rootPinsChanged": false,
+        "proofLimitsChanged": false,
+        "acceptance": "16/20; DUB-17-20 remain open.",
+        "absenceClaim": false
+      },
+      "previousApplication": {
+        "date": "20 October 2026",
+        "currentApplication": "Tools/source-highest-weight-identification.json",
+        "metadata": "Tools/lean-reuse-audit-20261015.json#appliedSourceHighestWeightIdentification",
+        "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,922-module scope: all thirteen retained regressions, 34,715 exhaustive theorem checks, 14,806 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+        "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 / Geraghty Definitions 2.2.1 and 2.2.3 -> original integral highest-weight embedding tensor and its actual unitary auxiliary comparison.",
+        "discharged": "Every nonzero original source Lie submodule has a derived nonzero upper-unipotent invariant over every coefficient algebra. Highest-line uniqueness and the constructed Weyl complement prove actual Lie irreducibility and highest-vector generation. Coefficient extraction from the original polynomial group orbit recovers Lie stability from group invariance, proving native general-linear irreducibility and group generation. The literal integral induction has exactly the original field induction as its generic fibre: actual coefficient evaluation preserves covariance, the differential and right translation; normalized highest-line uniqueness and Lie generation prove surjectivity; native fraction-module localization proves tensor injectivity. Native tensor bases give the exact finite embedding-tensor base change, preserving every original function and the normalized highest tensor. The same constructed arithmetic embedding maps intertwine the original unitary action. The final constructed-common-field consumer proves finite dimensionality, irreducibility and the exact highest-weight character of every field factor, retaining the same continuous finite-free integral tensor and original auxiliary comparison. No coefficient-identification witness is supplied.",
+        "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed.",
+        "reviews": [
+          "Tools/source-engel-reuse-review-20261020.json",
+          "Tools/source-lie-irreducible-reuse-review-20261020.json",
+          "Tools/source-group-irreducible-reuse-review-20261020.json",
+          "Tools/source-generic-fibre-reuse-review-20261020.json",
+          "Tools/source-highest-tensor-reuse-review-20261020.json"
+        ],
+        "archives": [
+          {
+            "path": "Dependencies/Lean Reuse 2026-10-20/source-unipotent-reuse-20261020/RS-Borel-Generation.lean.txt",
+            "sha256": "0E39A9EFB63E294177E7BB6C23DD0775BB571C38C61B81CA15FD874E9A09B7F0",
+            "status": "External evidence only; .lean.txt is not imported as Lean proof."
+          },
+          {
+            "path": "Dependencies/Lean Reuse 2026-10-20/source-unipotent-reuse-20261020/RS-Borel-Stability-Differential.lean.txt",
+            "sha256": "BD160EDDF7D3001F3C78B5CBEE40E9634A66E149C44435A77051727FA3266CBF",
+            "status": "External evidence only; .lean.txt is not imported as Lean proof."
+          },
+          {
+            "path": "Dependencies/Lean Reuse 2026-10-20/source-unipotent-reuse-20261020/RS-LICENSE.txt",
+            "sha256": "F82A91CE7E6879493ECD8CE9D078798DB8B893C0FB33055D7292198779042456",
+            "status": "External evidence only; .lean.txt is not imported as Lean proof."
+          }
+        ],
+        "previousApplication": {
+          "date": "20 October 2026",
+          "currentApplication": "Tools/source-coefficient-structure.json",
+          "metadata": "Tools/lean-reuse-audit-20261015.json#appliedSourceCoefficientStructure",
+          "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,887-module scope: all thirteen retained regressions, 34,574 exhaustive theorem checks, 14,737 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+          "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+          "discharged": "The actual highest-character line and the actual upper-unipotent invariant line are each uniquely determined by evaluation at the longest matrix. Generic open-cell factorization and faithful original-coordinate evaluation discharge the uniqueness assumptions. The original induced module has an actual matrix Lie action obtained from its right translation over dual numbers; its Borel covariance is proved stable and its finite dimension follows from the original denominator and numerator bounds. Adapted Atlas Weyl complete reducibility and TauCeti trace-zero matrix semisimplicity construct invariant Lie complements. The exact polynomial orbit and finite exponential, followed by adapted Mathlib/TauCeti elementary generation, prove that every original induced Lie submodule and every such complement is stable under every original special-linear matrix.",
+          "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed.",
+          "reviews": [
+            "Tools/highest-line-reuse-review-20261019.json",
+            "Tools/highest-irreducibility-reuse-review-20261020.json",
+            "Tools/source-special-linear-reuse-review-20261020.json",
+            "Tools/source-induced-lie-reuse-review-20261020.json",
+            "Tools/source-square-zero-reuse-review-20261020.json",
+            "Tools/source-sl-group-reuse-review-20261020.json"
+          ],
+          "archives": [
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-lean-toolchain.txt",
+              "sha256": "0FBD6253482EA3F6F129D0F176C9F6296E49A67B71D52F4C2C23BDC058BF9350",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-LeviDecomposition.lean.txt",
+              "sha256": "4E9EA0C2934F9A5AE832979136D630232AF789D80D51508FF0EEFA29BBCFC78E",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/Atlas-LICENSE.txt",
+              "sha256": "91EB6A92B2168965541BCB8E8AB3FCEFFC62DACA810921893950E7A851CF3A87",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-BorelWeil-excerpt.lean.txt",
+              "sha256": "86AC3F856B058E2BF6AE083D725EAC30448D8C8E8104FB9D7E97FA37F73D9304",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-lean-toolchain.txt",
+              "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-Rational-GL.lean.txt",
+              "sha256": "40738EA3A9B7497D504F1ECBC96B6246CA8E4BC4B1DE665D20A8FC7E810E8985",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/highest-irreducibility-external-review/RS-Regular-excerpt.lean.txt",
+              "sha256": "F3C736396B1F75FD467D867637B95BDD996A584F4EB0328C06830CD27F999E34",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/DiagonalCartan.lean.txt",
+              "sha256": "C45E06E0F6C994EDA927432D787DAF0DB15BDFFF4341B688881132ED49C85A3C",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/GeneralLinearBasic.lean.txt",
+              "sha256": "A6675EA858CB744526EFCEC5E3E4D540FD63C7253D20918C19E0C796D1A38DE2",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/GeneralLinearRadical.lean.txt",
+              "sha256": "CE415227195E2F7A312694E7A75845BD888AB685835544DD65382EBD602DA0D0",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-reuse-20261020/LICENSE",
+              "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/Annals-PotentialAutomorphy-final-audit.txt",
+              "sha256": "3CE68668C55EC7D0C80FF41E91733B66E1A9157F9F4374EC2F9B5A644BC309BB",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Differential.lean.txt",
+              "sha256": "8C7E16FAFF2336CB1A1BC6A58412388BBA22A55B1CC94A75391B6F758C8E8B19",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Exponential.lean.txt",
+              "sha256": "BAAADCFBC5657E5F3CAD65BA28674A4F445FA62F269FE7C93B07657C186A49F9",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/differential-reuse-20261020/RS-Extension.lean.txt",
+              "sha256": "CC7B130B3F42C22C87289CC800EB3A3441BB824E6FFEBD8CF4248FED4839F58A",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/Mathlib-LICENSE.txt",
+              "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/Mathlib-SpecialLinearGroup.lean.txt",
+              "sha256": "BE4F9A944DD76F975719AEE7DEC262EB93347EFCD045B4911D94E34B89C30455",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/RS-HighestWeight-Basic.lean.txt",
+              "sha256": "CDFD46437E65B612938774502B988B8417071652149217E833EDC60BB8645CB1",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/RS-Integration.lean.txt",
+              "sha256": "887B6BE6DB0132B5EE82C4FFBA5AD462B1344DF2D45085F14B6A7387BB915835",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-Diagonal.lean.txt",
+              "sha256": "AB57054F65E372F43E46717BA38B954B9C31FD8E0A235C694A5A5D555BB57A15",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-LICENSE.txt",
+              "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-LocallyNilpotent.lean.txt",
+              "sha256": "1398BA7C291647A728CD4918D8247B3B7E1A1404494B857AE744D7B16B6AD87B",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            },
+            {
+              "path": "Dependencies/Lean Reuse 2026-10-20/source-sl-generation-reuse-20261020/TauCeti-Transvection.lean.txt",
+              "sha256": "BFA14486CA5A08347E4F02E0249579A4B22B6A82694F12FA1F24026DD1FE502D",
+              "status": "External evidence only; .lean.txt is not imported as Lean proof."
+            }
+          ],
+          "researchConclusion": "Atlas complete reducibility, TauCeti actual matrix semisimplicity, and newer Mathlib/TauCeti special-linear generation substantially shorten the coefficient irreducibility chain and have checked consumers for the original source objects. RS polynomial-representation proofs supply method references; their larger framework is deferred. The inspected Annals potential-automorphy candidate reports 37 admitted proofs, including automorphy lifting, and is not proof evidence. Refreshed arithmetic search results did not discharge the required source automorphy obligations; this is not a claim that no such proof exists.",
+          "productionFocusedReceipt4887": {
+            "proofDependencyAudits": [
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\HighestLineDependencyAuditProduction4887.log",
+                "sha256": "EA0CA034B5443A0E80D205815FFEAA2414BEE04FFA147F0BD8AC8BD68FC02BE9",
+                "requiredProofValueEdges": 13,
+                "consumer": "Dubon2026.integralDominantHighestLine_eq",
+                "sourceSha256": "6A3BF9E7A022A0B796124BB514A8C3C7EC1CCBA16B3828360EB5F7F53806CE0F"
+              },
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\UnipotentLineDependencyAuditProduction4887.log",
+                "sha256": "A31C06F01C47130D1CC41B0012167E03E80AC23A979B4EE52090F440F5B203F9",
+                "requiredProofValueEdges": 14,
+                "consumer": "Dubon2026.integralInduced_unipotent_eq_highest",
+                "sourceSha256": "A27F8305503EF48C46EF6A7DF2D24AE5597BC02714071A7072BA7B137F4CD131"
+              },
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\SourceLieCompleteReducibilityDependencyAuditProduction4887.log",
+                "sha256": "2E2BD5B7CCC435A92AC8E32B4C003097757D29C695807A77294B9920E0BC09AA",
+                "requiredProofValueEdges": 12,
+                "consumer": "Dubon2026.sourceLieModule_exists_complement",
+                "sourceSha256": "2E2D7AEF45E81E6C4E31DAFBE8CAF7FC25E49061A0AF8573BAF1D814B517FE22"
+              },
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\SourceSpecialLinearDependencyAuditProduction4887.log",
+                "sha256": "48BC4C09FC65CC98AE841771BFC87AC8A2111D975C929A4376BECB038C308528",
+                "requiredProofValueEdges": 11,
+                "consumer": "Dubon2026.sourceSpecialLinearModule_exists_complement",
+                "sourceSha256": "7B44A5DB0031D57BF6A0E0631CAB09329430CEE691EB8FD31296C9655690582C"
+              },
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\SourceInducedLieDependencyAuditProduction4887.log",
+                "sha256": "A4753C940C5DCC3669C3B7D8B7125AB210F3C48468B734BFFD5585E73304C0CD",
+                "requiredProofValueEdges": 16,
+                "consumer": "Dubon2026.sourceInducedSpecialLinear_exists_complement",
+                "sourceSha256": "AB2B41B2F1AFE113DA6B2F494C7516378FB819F305A31F0F4223599A18C62F51"
+              },
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\SourceSquareZeroDependencyAuditProduction4887.log",
+                "sha256": "E494B371AB33868A0B05BFC10CBAA0AD50BCC1C01133166E5BE84DE0E294E9A6",
+                "requiredProofValueEdges": 16,
+                "consumer": "Dubon2026.sourceInduced_exists_squareZero_stable_complement",
+                "sourceSha256": "DB1AFC4357C81C311320460F0433B032025789332B156F84C69C9FF48C7CD6E1"
+              },
+              {
+                "log": "E:\\Lean\\.tmp\\dubon83\\SourceSLGroupDependencyAuditProduction4887.log",
+                "sha256": "AF330C23F4AA2682044899A4869EB19236FF935216E2F2B3B41222EFA4D820D8",
+                "requiredProofValueEdges": 14,
+                "consumer": "Dubon2026.sourceInduced_exists_specialLinear_stable_complement",
+                "sourceSha256": "D1CC2FACB2D77FAF22B4889DF5B80B5D5C7535E1A07BEFBB7A6A431AEB101BB2"
+              }
+            ],
+            "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientStructureProductionAudit4887.log",
+            "sha256": "9F399B8A227112A10124DA839AFC9A0C898BD239918E33409E3B0F558A941E42",
+            "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-production-4887-build.log",
+            "aggregateSha256": "A21766401D277414CF15091023C14516989AB17287ADB1772B4105D0786A28DE",
+            "productionModules": 4887,
+            "incrementModules": 27,
+            "axiomChecks": 128,
+            "exhaustiveIncrementTheorems": 289,
+            "linterScopes": 27,
+            "lintersPerScope": 16,
+            "exit": 0,
+            "diagnostics": 0,
+            "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed."
+          },
+          "receipt4887": {
+            "recordedUTC": "2026-10-20T09:56:24.741045+00:00",
+            "log": "logs/dubon-build-20261020-014447-457.log",
+            "sha256": "F908EF017360A936275DA5D6017427E63327E115B726B0269E1D741FC0F0BB92",
+            "bytes": 8363892,
+            "exit": 0,
+            "diagnostics": 0,
+            "productionModules": 4887,
+            "projectTheorems": 34574,
+            "registeredConsumers": 14737,
+            "registeredConstructions": 438,
+            "declarations": 20575,
+            "generated": 19456,
+            "linters": 16,
+            "regressions": 13,
+            "foundationLog": "logs/foundation_freeze_20261020_014143.log",
+            "foundationSha256": "4A3D33C9D27AB3CF8434FB546B653B73C8556A341181CC9CC5BE815D335CE8F8",
+            "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Nonzero unipotent-fixed vectors in each nonzero stable subspace, general-linear stability, source coefficient generation and irreducibility, and integral-to-field base-change identification remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. No root pin or proof limit changed."
+          }
+        },
+        "researchConclusion": "The refreshed external proof search has reduced the actual source coefficient-identification work: Atlas Weyl complete reducibility, TauCeti actual matrix semisimplicity and local-nilpotence multiplication, RS unitriangular generation over all coefficient algebras and polynomial coefficient extraction are now used by checked original-object consumers. Native localization and tensor bases give the shorter exact integral generic-fibre comparison. The larger external representation frameworks and incidental general tensor irreducibility are deferred. The previously inspected admitted Annals automorphy candidate remains excluded as proof evidence. The search does not establish absence of other complete arithmetic/automorphy proofs.",
+        "productionFocusedReceipt4922": {
+          "proofDependencyAudits": [
+            {
+              "log": "E:\\Lean\\.tmp\\dubon83\\SourceEngelDependencyAuditProduction4922.log",
+              "sha256": "E324A4DB66AA8FEA204F58533129DE716ED9A8DC226374FCA1B49FF4CEF4495D",
+              "requiredProofValueEdges": 18,
+              "consumer": "Dubon2026.sourceInduced_exists_nonzero_strictUpper_invariant",
+              "sourceSha256": "353583B5AA8BD588B25491EBE4B5F7ECDEB7C856CF45043599CBBDBB1BBCA756"
+            },
+            {
+              "log": "E:\\Lean\\.tmp\\dubon83\\SourceLieIrreducibleDependencyAuditProduction4922.log",
+              "sha256": "1E9DC13E32527A0ABE6D28E86E1116F949640E10307550D6F58E54DE9B84697F",
+              "requiredProofValueEdges": 21,
+              "consumer": "Dubon2026.sourceInduced_highest_lieSpan",
+              "sourceSha256": "D16B22D1BB2D8DE409EFD58C06701537438124F629B6387294E2453BAC719759"
+            },
+            {
+              "log": "E:\\Lean\\.tmp\\dubon83\\SourceGroupIrreducibleDependencyAuditProduction4922.log",
+              "sha256": "8D73B6D80BE611DEDD1F5E4C17D71A96EE9CC1ED857BA90A07410E89269ACD24",
+              "requiredProofValueEdges": 34,
+              "consumer": "Dubon2026.sourceInduced_highest_groupSpan",
+              "sourceSha256": "DCF9734D91D482FF7107F9D79605BA7AA873312172C69AA0BECBCD91393C128B"
+            },
+            {
+              "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenericFibreDependencyAuditProduction4922.log",
+              "sha256": "BF11FA29DCD9AC0F8B8975507C227ED6824182AB515950F9F3977EE768968448",
+              "requiredProofValueEdges": 54,
+              "consumer": "Dubon2026.cmSourceIntegralWeight_factor_identification",
+              "sourceSha256": "E05FEBF47AFFD1083906E99FD269151D65600983ED5F86D8BB15FB25BF4C04F2"
+            },
+            {
+              "log": "E:\\Lean\\.tmp\\dubon83\\SourceHighestTensorDependencyAuditProduction4922.log",
+              "sha256": "DAF71A19C054D0F8220CBB931B181B353D7DF5BF6C7DF82DB9E83BA82B80D177",
+              "requiredProofValueEdges": 72,
+              "consumer": "Dubon2026.cmCommonCoefficientHighestWeight_exists",
+              "sourceSha256": "1A50B3896B19F3AC2DB620342D135A2E83EC2538F93710A412887DF647016F59"
+            }
+          ],
+          "log": "E:\\Lean\\.tmp\\dubon83\\SourceHighestWeightIdentificationProductionAudit4922.log",
+          "sha256": "EF6328225F50D0F56FBACEE920AEF72B7F121671A72F52561328FC93619319C1",
+          "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-highest-weight-production-4922-build.log",
+          "aggregateSha256": "328E9FE5728341DB8D63317FFD90FBF3C37D1BAF3A43D6E3E2334AD2177A4B34",
+          "productionModules": 4922,
+          "incrementModules": 35,
+          "axiomChecks": 81,
+          "exhaustiveIncrementTheorems": 142,
+          "linterScopes": 35,
+          "lintersPerScope": 16,
+          "exit": 0,
+          "diagnostics": 0,
+          "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed."
+        },
+        "receipt4922": {
+          "recordedUTC": "2026-10-20T11:25:12.545317+00:00",
+          "log": "logs/dubon-build-20261020-030851-480.log",
+          "sha256": "B7F9161CF96D13ADCEF701EC62A10FB6401050D560944ACAEFD1C602BBD58D1F",
+          "bytes": 8398386,
+          "exit": 0,
+          "diagnostics": 0,
+          "productionModules": 4922,
+          "projectTheorems": 34715,
+          "registeredConsumers": 14806,
+          "registeredConstructions": 450,
+          "declarations": 20656,
+          "generated": 19543,
+          "linters": 16,
+          "regressions": 13,
+          "foundationLog": "logs/foundation_freeze_20261020_030538.log",
+          "foundationSha256": "6159E9731B187C40ED05839FE5394C9FCA797E32204CE4A4AC3A533C0C1527BE",
+          "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. Auxiliary-form nonzeroness is before prescribed Hecke localization. BLGG Section 3.2 uses the specified tensor of irreducible highest-weight factors; a general tensor-irreducibility framework is deferred unless a later exact consumer requires it. No source contract, root pin or proof limit changed."
+        }
+      },
+      "researchConclusion": "Selected TauCeti period, Eichler and integral-symbol proofs substantially reduce the original Hecke arithmetic work. The pinned native cusp-decay and nonpositive-weight theorems and the existing original Gamma0 prime transitions/recurrences give a shorter route than the external general Hecke framework. The inspected KN representation-existence declaration assumes the existence class, FLT's selected lift is admitted, and the formal-conjectures Sato-Tate entry is a statement with an admitted proof. These are not accepted as Galois or automorphy evidence. This search does not establish absence of other complete proofs.",
+      "productionRepairs": [
+        {
+          "module": "Dubon2026.SourceEichlerIntegral",
+          "beforeSha256": "44012E335886D60977D161AB86FCFA57F73F439C057A1D6C12EFE19D63353B08",
+          "afterSha256": "571E662AED712C710AA4511C3BF4FB3062F145DD4873A6CA8361E333260BFB1B",
+          "change": "Make the previously implicitly generalized real period h explicit in two private q-parameter helpers, as required by production autoImplicit=false. Quantifiers, conclusions and proof bodies are unchanged.",
+          "initialFailedBuild": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-production-4952-build-initial.log"
+        }
+      ],
+      "productionFocusedReceipt4952": {
+        "proofDependencyAudits": [
+          {
+            "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeSymbolsDependencyAuditProduction4952.log",
+            "sha256": "C7F941D6D35EA0974A6E1155D788EC61C6BDF9DD7C92DC77DDD6A6C8DD8E127E",
+            "requiredProofValueEdges": 17,
+            "consumer": "Dubon2026.sourceOriginalHecke_isIntegral_of_period",
+            "sourceSha256": "E51CF27F596D47263B0DEAC89999CDDBA3169C22885A680D028607893A5D8516"
+          },
+          {
+            "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualPeriodDependencyAuditProduction4952.log",
+            "sha256": "7B8FCBCD27EBFEED59FAD6240FC1DB1F829F6DA4E8644A5DA8403DA990618EE1",
+            "requiredProofValueEdges": 30,
+            "consumer": "Dubon2026.sourceOriginalHecke_isIntegral_of_actual_period",
+            "sourceSha256": "A0478603FFC4054F8D0FAFBDBB35256B6FF2ACD8FC5A0CFFFBC8CD86FFA1EA42"
+          },
+          {
+            "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodInjectivityDependencyAuditProduction4952.log",
+            "sha256": "2EC16E0A413CDA5C526A9E2BB18EC23C525BF755A55BD8370A300EBC330BFAE2",
+            "requiredProofValueEdges": 27,
+            "consumer": "Dubon2026.sourceOriginalHecke_isIntegral_of_adjoint",
+            "sourceSha256": "6B444F732F81D30238A366367A0FE1F8863DBC325B965DE028707023227405A9"
+          },
+          {
+            "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeDependencyAuditProduction4952.log",
+            "sha256": "856C5A33D121AE82768449152302608440735EE0994701F1D221F2B81B16F00E",
+            "requiredProofValueEdges": 51,
+            "consumer": "Dubon2026.sourceOriginalHecke_isIntegral",
+            "sourceSha256": "3D9FEA577C5BAC550D94CA83FBBCDC34BB46DB8FA7B9AB0C0EDF386E8A9AF409"
+          }
+        ],
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeProductionAudit4952.log",
+        "sha256": "333627A99E3D0BB476B574157CEC20C676FD9B18A2E6C520EB16D6B095C62A40",
+        "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-production-4952-build.log",
+        "aggregateSha256": "1F0AF1BD13EFC14781EE4DDCA6BE7F34DF212825E4B7332C117FF44177D47151",
+        "productionModules": 4952,
+        "incrementModules": 30,
+        "axiomChecks": 204,
+        "exhaustiveIncrementTheorems": 375,
+        "linterScopes": 30,
+        "lintersPerScope": 16,
+        "exit": 0,
+        "diagnostics": 0,
+        "boundary": "The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open."
+      },
+      "receipt4952": {
+        "recordedUTC": "2026-10-20T12:56:40.777436+00:00",
+        "log": "logs/dubon-build-20261020-044759-595.log",
+        "sha256": "2859E040CDA4A06794D3C58A357661E1B291CF216400CC2D0855E8E2C173E613",
+        "bytes": 8495847,
+        "exit": 0,
+        "diagnostics": 0,
+        "productionModules": 4952,
+        "projectTheorems": 35089,
+        "registeredConsumers": 14980,
+        "registeredConstructions": 480,
+        "declarations": 20860,
+        "generated": 19755,
+        "linters": 16,
+        "regressions": 13,
+        "foundationLog": "logs/foundation_freeze_20261020_044054.log",
+        "foundationSha256": "E7ACEC5FF2223E02B9AB39B69300D7C09C2CBA74AE70FB3394635F4E58DB7E5E",
+        "boundary": "The original coefficient number-field realization and modular residual Galois representation/image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open."
+      }
+    },
+    "researchConclusion": "Selected TauCeti period, Eichler and integral-symbol proofs substantially reduce the original Hecke arithmetic work. The pinned native cusp-decay and nonpositive-weight theorems and the existing original Gamma0 prime transitions/recurrences give a shorter route than the external general Hecke framework. The inspected KN representation-existence declaration assumes the existence class, FLT's selected lift is admitted, and the formal-conjectures Sato-Tate entry is a statement with an admitted proof. These are not accepted as Galois or automorphy evidence. This search does not establish absence of other complete proofs.",
+    "additionalEtaleCandidates": {
+      "repository": "n-yamaguchi-0729/NYLL",
+      "revision": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+      "date": "2026-10-20",
+      "sourceLean": "4.35.0-rc2",
+      "sourceMathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "files": [
+        {
+          "path": "Adic.lean.txt",
+          "blobSha1": "da76f3ebe4b176ff6c17f98aa55cf7a0d7fc0496",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/Adic.lean",
+          "sourcePath": "Nyll/EtaleCohomology/Classical/Adic.lean",
+          "sha256": "13D219745BCAD049B6CDAC8066C6E2B77C79322F0854528C0E43B4753C4A9C92"
+        },
+        {
+          "path": "RationalAdic.lean.txt",
+          "blobSha1": "c5c76eef0c064de1f3efe0a1a872f1dd8bf53799",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/RationalAdic.lean",
+          "sourcePath": "Nyll/EtaleCohomology/Classical/RationalAdic.lean",
+          "sha256": "3DB0929E6BB7529343A190B55878BA133C052CC876241F9CB8013E578F453505"
+        },
+        {
+          "path": "SequentialLimit.lean.txt",
+          "blobSha1": "93c74c6b34fde91b235220dd3dbe809caf04b83b",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/SequentialLimit.lean",
+          "sourcePath": "Nyll/EtaleCohomology/Classical/SequentialLimit.lean",
+          "sha256": "C80325A242A36181C7D04A6C4DB7FA232C3AC9CDFBCBE1200AED063E885F99A7"
+        },
+        {
+          "path": "AdditiveCoefficientAction.lean.txt",
+          "blobSha1": "3fb05f1deb5914cfd830c1f569d8e2b593681161",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/AdditiveCoefficientAction.lean",
+          "sourcePath": "Nyll/EtaleCohomology/Classical/AdditiveCoefficientAction.lean",
+          "sha256": "22CD0BD8C3E33D42FCF21E220922BBFE131B8EC29B5F417D8E8153CF4194E305"
+        },
+        {
+          "path": "PullbackCohomology.lean.txt",
+          "blobSha1": "a2c03a86777fbab4add8e210fc11a53d79c9fe62",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/PullbackCohomology.lean",
+          "sourcePath": "Nyll/EtaleCohomology/Classical/PullbackCohomology.lean",
+          "sha256": "72626D9249E3300F8CBF47E525A196AC7F5F1D86B4243C44653DA3550354045B"
+        },
+        {
+          "path": "ConstantPullbackFunctoriality.lean.txt",
+          "blobSha1": "2b5d76a4829c2cb73c5ff9de9c801df09b9fb4dd",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/ConstantPullbackFunctoriality.lean",
+          "sourcePath": "Nyll/EtaleCohomology/Classical/ConstantPullbackFunctoriality.lean",
+          "sha256": "CAB7C7B806C706115C0B8762B6D8A1EEAD987AFD370E3F05253E7DF784A56EAD"
+        },
+        {
+          "path": "FullTateModule.lean.txt",
+          "blobSha1": "7a362452c8e8825321a9ef690ce95d4171c947af",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AbelianVarieties/Tate/FullTateModule.lean",
+          "sourcePath": "Nyll/AbelianVarieties/Tate/FullTateModule.lean",
+          "sha256": "A49081274C947055A0E683E19A71380B51F01FABBC51602CAD8F150F8BC5E583"
+        },
+        {
+          "path": "LICENSE.txt",
+          "blobSha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/LICENSE",
+          "sourcePath": "LICENSE",
+          "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+        },
+        {
+          "path": "lean-toolchain.txt",
+          "blobSha1": "acc704ffe6eefbbe8ec09452a276202748aac923",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/lean-toolchain",
+          "sourcePath": "lean-toolchain",
+          "sha256": "8DC8D6F560141069D9073E370611716EF77ADA0DA8FFA37E2149F44B2E63AC7A"
+        },
+        {
+          "path": "lake-manifest.json",
+          "blobSha1": "ccba651b0243520961663c1a3780d0808dbe0c16",
+          "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/lake-manifest.json",
+          "sourcePath": "lake-manifest.json",
+          "sha256": "AD850380B47B59868A88C7B76F8775A3FA5A55E432E1D111A007FF2EBF056DED"
+        }
+      ],
+      "selectedCompleteNyllImportClosure": [
+        "Adic.lean.txt",
+        "RationalAdic.lean.txt",
+        "SequentialLimit.lean.txt",
+        "AdditiveCoefficientAction.lean.txt"
+      ],
+      "rootFilesInspectedWithoutFullClosure": [
+        "PullbackCohomology.lean.txt",
+        "ConstantPullbackFunctoriality.lean.txt",
+        "FullTateModule.lean.txt"
+      ],
+      "verification": "Sources retrieved and inspected; no port or transitive kernel-audit claim.",
+      "dependency": "DUB-17/18 -> modular Galois association -> actual etale cohomological realization and its integral/rational coefficient actions.",
+      "routeDecision": "Preserve as candidates. The small classical adic coefficient closure avoids a proetale comparison, but the original modular geometric object and its comparison with the original primitive form must be specified before promotion. Do not import unrelated generalizations.",
+      "limitations": [
+        "The classical adic files construct inverse limits of constant-coefficient etale cohomology and scalar extension, not the associated modular representation.",
+        "Pullback maps act on actual sheaf cohomology, but the inspected functoriality file treats constant coefficients.",
+        "The full Tate module file derives finiteness and compactness for actual proper smooth commutative group schemes in characteristic zero. It does not construct the modular Jacobian or identify its eigenspaces.",
+        "The untruncated repository tree contains no Lean path named Modular, Eichler, Deligne or Shimura; this filename search is not proof of absence of relevant results."
+      ],
+      "alternative": {
+        "repository": "chrisflav/proetale",
+        "revision": "c815a07678fc5937809e6d4c8af78a107b064056",
+        "lean": "4.30.0",
+        "review": "README and untruncated tree inspected. Work in progress on the proetale site; no named cohomology/Galois/adic module was found by the limited filename search. No proof closure audited."
+      },
+      "rootPinsChanged": false
+    },
+    "additionalCandidateArchives": {
+      "tau-yone": {
+        "manifest": "Dependencies/Lean Reuse 2026-10-20/tau-yone/manifest.json",
+        "sha256": "92E9A7E867E56D716D462484948B468306C8E56E47E0E9D0B2394F5F7325A322",
+        "files": 575,
+        "kernelReplay": false,
+        "productionCodeCopied": false
+      },
+      "anthropic-flt": {
+        "manifest": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt/manifest.json",
+        "sha256": "E6E7200721004A37C5BAE58D684A42858881371591086903CD06E8098AF2627C",
+        "files": 28,
+        "kernelReplay": false,
+        "productionCodeCopied": false
+      }
+    },
+    "etaleCandidateArchive": "Dependencies/Lean Reuse 2026-10-20/etale/verified-manifest.json",
+    "productionFocusedReceipt4958": {
+      "proofDependencyAudits": [
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientsDependencyAuditProduction4958.log",
+          "sha256": "D53CDE6E4807EDFB77914DE527EFD8AA5566404D5552BE92833ABB9029BFA77A",
+          "requiredProofValueEdges": 68,
+          "consumer": "Dubon2026.sourcePrimitiveCoefficient_exists_local_structure",
+          "sourceSha256": "537328520A3DC99229E8D3B298AFEA9233672D17357CD287BC6D1323ACD35C4E"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacterDependencyAuditProduction4958.log",
+          "sha256": "A957787F4447EBB9FD7112A1EF7578BC90F171C7F0FD6EE494BA5C0AED7FF5A1",
+          "requiredProofValueEdges": 76,
+          "consumer": "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter",
+          "sourceSha256": "D979A9BE74D448FB0B6C355B3250627B275EB2E9EFBAEF692B36FB6A97C03DB0"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCharacteristicDependencyAuditProduction4958.log",
+          "sha256": "E7176E8B29312120339E3895E106B9254FE1C6535FDBFF298D81770A0D45D408",
+          "requiredProofValueEdges": 80,
+          "consumer": "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP",
+          "sourceSha256": "BE42DDFE08844B8D46BF201425E35A272241E77FC34EE364DCC3FAF1A7C1D9E9"
+        }
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientsProductionAudit4958.log",
+      "sha256": "C86110A5941A5A3EA5E96A7DCEF3653B36E96FC78E3D48A7A5DE55E45D04B587",
+      "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-coefficients-production-4958-build.log",
+      "aggregateSha256": "445CD31D04CA28AAD3211D84ACC7CEABAAA51471DB3785B933DB9047A53A7180",
+      "productionModules": 4958,
+      "incrementModules": 6,
+      "axiomChecks": 33,
+      "exhaustiveIncrementTheorems": 48,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "exit": 0,
+      "diagnostics": 0,
+      "boundary": "The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open."
+    },
+    "receipt4958": {
+      "recordedUTC": "2026-10-20T14:16:46.685051+00:00",
+      "log": "logs/dubon-build-20261020-060615-416.log",
+      "sha256": "71F2EC7484307CEEDBA4AFE981A7EA06A88CEB1E5FF92EB9CB798AE3CAFA6EFE",
+      "bytes": 8508807,
+      "exit": 0,
+      "diagnostics": 0,
+      "productionModules": 4958,
+      "projectTheorems": 35137,
+      "registeredConsumers": 15006,
+      "registeredConstructions": 487,
+      "declarations": 20893,
+      "generated": 19777,
+      "linters": 16,
+      "regressions": 13,
+      "foundationLog": "logs/foundation_freeze_20261020_060319.log",
+      "foundationSha256": "95371D02C073F940E9FCB646BECDE54A84C769D695CC744D06E0CB7B1E8A7356",
+      "boundary": "The modular residual Galois representation and its source image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero unitary Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. An actual residual Hecke eigensystem is not a Galois action or a prescribed unitary localization. Acceptance stays 16/20; DUB-17-20 open."
+    }
+  },
+  "researchConclusion": "The original analytic H1 injectivity obligation is proved. A stronger all-weight residual Galois candidate was found and archived; its remaining original-object adapters and transitive proof closure remain unverified; the required original coefficient specialization is now proved. Full Dubon acceptance remains open.",
+  "additionalCandidateArchive": {
+    "manifest": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/manifest.json",
+    "sha256": "BD5D22728F6072318C889AA9AABBC05DA19C2C6716C36BDFDFAFF4E9E7CEC3A5",
+    "files": 16,
+    "kernelReplay": false,
+    "productionCodeCopied": false
+  },
+  "additionalCompleteClosureArchive": {
+    "archive": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual-closure.zip",
+    "sha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "review": "Tools/anthropic-flt-residual-closure-review-20261020.json",
+    "reviewSha256": "00C914AE8FD1BC724FEE272DBAEBBEC5E4FB974FF28EE32AAEE78E8315808A61",
+    "sourceModules": 3072,
+    "kernelReplay": false
+  },
+  "productionFocusedReceipt4970": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCohomologyDependencyAuditProduction4970.log",
+        "sha256": "18A6F60FF08DD24FA01BE4288731C1BDEA00000E8774677FD73AA39643273427",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_periodCohomology_realization",
+          "Dubon2026.sourcePeriodCohomologyLinear_base_independent"
+        ],
+        "sourceSha256": "F265BE59A03E28581BAD1D7C632906EA54130F19B6D42248EFB55B9024B87CC6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodH1InjectivityDependencyAuditProduction4970.log",
+        "sha256": "0EE0F527EFBC7A303DE221CC889930D2365610B96C2BB85E6F267B606210ECAC",
+        "requiredProofValueEdges": 39,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_periodCohomology_ne_zero"
+        ],
+        "sourceSha256": "C236C80FC67F9BE693293EF69BD5ED82382548C4BD30FB2B28D39FC5FA7B9F75"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicIntegerReductionDependencyAuditProduction4970.log",
+        "sha256": "8B68DA0BA3E8D590B58EEA8F214D20B5F6D0FFB75ABBC4F0F3AE8A8D2C5DEFF3",
+        "requiredProofValueEdges": 85,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_algebraicIntegerReduction_charP"
+        ],
+        "sourceSha256": "A936FC1916D0EB9AC8D019E9B7BBA25475436831B012FFF03A8D8CEE6E418638"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodH1ProductionAudit4970.log",
+    "sha256": "6CA3FE39C9D22F7C4047BDF00EB753632EC341A809ED6E8B05EEE6774B5452A4",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-period-h1-production-4970-build.log",
+    "aggregateSha256": "C9F0855E9FF59FE531F2CE8D2A189610F0994D38CCF3E78DA63A750B6338323B",
+    "productionModules": 4970,
+    "incrementModules": 12,
+    "axiomChecks": 46,
+    "exhaustiveIncrementTheorems": 86,
+    "linterScopes": 12,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open."
+  }
+}

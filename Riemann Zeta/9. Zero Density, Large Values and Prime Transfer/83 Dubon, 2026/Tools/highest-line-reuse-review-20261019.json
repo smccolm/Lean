@@ -1,0 +1,51 @@
+{
+  "checkedAtUTC": "2026-10-20T06:58:20Z",
+  "localDate": "2026-10-19 America/Vancouver",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "b1f31fb193647dfb5f4b18c918b0f30841892d07",
+  "exactSourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> Geraghty 2.2.1/2.2.3 and BLGG 3.2 original highest-weight coefficient modules -> generation and characteristic-zero irreducibility.",
+  "files": [
+    {
+      "file": "GLCompleteReducibility.txt",
+      "source": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/AlgebraicGroup/GeneralLinear/LinearlyReductive/Basic.lean",
+      "gitBlob": "683e63de7aed55c3f215e585b13cbfa39d8a0a9d",
+      "sha256": "2875F59904EAC27A2B47AA40D8B092633443085561304E03E9D1131144580381"
+    },
+    {
+      "file": "LieKolchin.txt",
+      "source": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/AlgebraicGroup/Solvable/LieKolchin.lean",
+      "gitBlob": "ed1ae3b5cf134edc1c397f283d5b869c0689a0e1",
+      "sha256": "64D17E45A0F54A6BE68C7057F8EAA0644938BD29E1EC666EFCF9AD01B6FCF2B8"
+    },
+    {
+      "file": "LieWeylCompleteReducibilityHeader.txt",
+      "source": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/HighestWeight/CompleteReducibility.lean",
+      "gitBlob": "8a0c9fe6bb583ee7fd9e39ac19bce6878081bfa0",
+      "sha256": "F1B6C268C3C61D7A597D2D66DAFC988CCC518C81F21686B7260040C408018305"
+    },
+    {
+      "file": "lean-toolchain.txt",
+      "source": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/lean-toolchain",
+      "gitBlob": "2afd38716ad6182657562d3dac3c98461c1385f2",
+      "sha256": "C817D70E536A04C6D3B17151CFC31CA2739940671162BC159B0C5B02D49CBCAD"
+    },
+    {
+      "file": "SLCompleteReducibility.txt",
+      "source": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/AlgebraicGroup/SpecialLinear/LinearlyReductive/Basic.lean",
+      "gitBlob": "fe14e695696a0dbb305a014bffb84f781e5483a3",
+      "sha256": "1B23DFD25CE49FE505386D9E4AC47A7FD7C885CAE102C746469D5860774D1972"
+    }
+  ],
+  "observations": [
+    "Full GL complete-reducibility file inspected: every finite-dimensional rational GL comodule over a characteristic-zero field is completely reducible, including rank zero and without an algebraically closed base-field hypothesis.",
+    "Full Lie-Kolchin file inspected: a nonzero finite-dimensional comodule over a reduced connected solvable affine group of finite type over an algebraically closed field has a weight vector. Its existence theorem proves the weight vector; it does not assume that vector.",
+    "Special-linear complete-reducibility file inspected (entire 67-line source returned): identifies the tangent Lie algebra with sl_n and uses nondegenerate Killing form and a connected algebraic-group complete-reducibility theorem.",
+    "Lie Weyl complete-reducibility header/imports inspected, not its complete proof body in this refresh.",
+    "External Lean pin is v4.36.0-rc1. Local v4.30.0 and Mathlib c5ea00351c28e24afc9f0f84379aa41082b1188f remain unchanged. External code is not locally verified or adopted here.",
+    "Native pinned Schur block factorization provided the shorter rigorous route to the actual highest line. Seven new scratch modules prove the generic open-cell conditions and exact all-algebra highest-line uniqueness, without the full external Bruhat closure.",
+    "Required adaptation boundary: construct the actual induced coaction or prove an exact comparison with the external rational-comodule carrier, verify complete dependency closure under local pins, and connect unipotent invariants to irreducibility. A result for a different representation does not discharge the source obligation."
+  ],
+  "auditStatus": "Seven highest-line modules pass individual and assembled exhaustive/axiom/linter checks: 25 exhaustive theorems, 19 explicit declarations, 7 scopes with 16 linters, and 13 required proof-value dependency edges. No final Dubon gate closed.",
+  "externalCodeAdopted": false,
+  "rootPinsChanged": false
+}

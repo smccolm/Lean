@@ -5,8 +5,8 @@ import Mathlib.RingTheory.Noetherian.Basic
 /-! Exact polynomial stages of the original integral induced module.
 Each stage bounds the actual determinant denominator and numerator degree;
 over the source PID it is finite free, and every original induced function
-belongs to some stage. A uniform stage for a fixed source weight is still
-required. Exhaustion by finite stages is not finite generation of the union.
+belongs to some stage. IntegralInducedFiniteFree proves a uniform stage
+for each fixed source weight and deduces finite generation of the whole module.
 -/
 
 namespace Dubon2026

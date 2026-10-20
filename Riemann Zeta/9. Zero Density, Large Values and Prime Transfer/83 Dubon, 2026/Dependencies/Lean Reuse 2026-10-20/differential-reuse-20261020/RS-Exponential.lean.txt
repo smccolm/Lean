@@ -1,0 +1,145 @@
+import RSCounterexample.GLRep.Lie.Curves
+import Mathlib.Algebra.Polynomial.Taylor
+import Mathlib.Algebra.Polynomial.Derivative
+
+/-!
+# Transvections act by exponentials
+
+Let `ρ` be a polynomial representation of `GL_n(K)` over a field of characteristic zero, and let
+`E` be a matrix with `E² = 0` (for instance a matrix unit `E_ab`, `a ≠ b`). Then `1 + tE` is
+invertible for every `t`, `t ↦ ρ(1 + tE)` is a one-parameter group, and
+
+`ρ(1 + tE) = ∑_k tᵏ/k! · dρ(E)ᵏ`,
+
+a finite sum (`GLRep.IsPolynomialRep.rho_lineGL_eq_exp`). The proof differentiates over the dual
+numbers: `(1 + tE)(1 + εE) = 1 + (t + ε)E` gives `Φ' = Φ · dρ(E)` for the polynomial matrix
+`Φ(t) = ρ(1 + tE)`, so the coefficients satisfy `(k + 1) Φ_{k+1} = Φ_k · dρ(E)` with `Φ_0 = 1`.
+
+## Main results
+
+* `GLRep.IsPolynomialRep.derivative_curve`: `Φ' = Φ · dρ(E)`.
+* `GLRep.IsPolynomialRep.curveCoeff_eq_pow`: `Φ_k = dρ(E)ᵏ / k!`.
+* `GLRep.IsPolynomialRep.rho_lineGL_eq_exp`: the exponential formula.
+* `GLRep.IsPolynomialRep.isNilpotent_lie`: `dρ(E)` is nilpotent.
+-/
+
+namespace GLRep
+
+open Module Polynomial
+
+noncomputable section
+
+variable {K : Type*} [Field K] {n : ℕ}
+variable {W : Type*} [AddCommGroup W] [Module K W] {ρ : Representation K (GL (Fin n) K) W}
+
+theorem det_one_add_smul_of_sq_eq_zero {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) (t : K) :
+    (1 + t • E).det ≠ 0 := by
+  have h1 : (1 + t • E) * (1 - t • E) = 1 := by
+    rw [mul_sub, mul_one, add_mul, one_mul, smul_mul_smul_comm, hE, smul_zero, add_zero,
+      add_sub_cancel_right]
+  intro h0
+  have := congrArg Matrix.det h1
+  rw [Matrix.det_mul, h0, zero_mul, Matrix.det_one] at this
+  exact zero_ne_one this
+
+namespace IsPolynomialRep
+
+variable (h : IsPolynomialRep ρ) [Infinite K]
+
+/-- **The differential equation of a one-parameter group**: if `E² = 0`, the polynomial matrix
+`Φ(t) = ρ(1 + tE)` satisfies `Φ' = Φ · dρ(E)`. -/
+theorem derivative_curve {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) :
+    (h.curve E).map derivative = h.curve E * (h.lieMatrix E).map C := by
+  set ι := algebraMap K[X] (DualNumber K[X])
+  set e : DualNumber K[X] := DualNumber.eps
+  have he : e * e = 0 := DualNumber.eps_mul_eps
+  have he2 : e ^ 2 = 0 := by rw [sq, he]
+  set E' := E.map (algebraMap K (DualNumber K[X]))
+  have hE' : E' * E' = 0 := by
+    rw [← Matrix.map_mul, hE, Matrix.map_zero _ (map_zero _)]
+  have hsplit : (1 : Matrix (Fin n) (Fin n) _) + (ι X + e) • E' =
+      (1 + ι X • E') * (1 + e • E') :=
+    (one_add_smul_mul_one_add_smul_of_mul_self _ _ _ hE').symm
+  have hcurve := congrArg (h.extend _) hsplit
+  rw [h.extend_mul, ← h.curve_map_aeval, ← h.curve_map_aeval, h.extend_one_add_smul e he]
+    at hcurve
+  have haeval : ∀ p : K[X], aeval (ι X) p = ι p := fun p => by
+    rw [aeval_algebraMap_apply, aeval_X_left_apply]
+  have hL : (h.lieMatrix E).map (algebraMap K (DualNumber K[X])) =
+      ((h.lieMatrix E).map C).map ι := Matrix.ext fun i j => by
+    rw [Matrix.map_apply, Matrix.map_apply, Matrix.map_apply,
+      IsScalarTower.algebraMap_apply K K[X] (DualNumber K[X])]
+    rfl
+  have hΦ : (h.curve E).map (aeval (ι X)) = (h.curve E).map ι := Matrix.ext fun _ _ => haeval _
+  have hR : (h.curve E).map (aeval (ι X)) * (1 + e • (h.lieMatrix E).map (algebraMap K _)) =
+      (h.curve E).map ι + e • (h.curve E * (h.lieMatrix E).map C).map ι := by
+    rw [hΦ, hL, mul_one_add_smul, ← Matrix.map_mul]
+  have hLHS : (h.curve E).map (aeval (ι X + e)) =
+      (h.curve E).map ι + e • ((h.curve E).map derivative).map ι := Matrix.ext fun i j => by
+    simp only [Matrix.map_apply, Matrix.add_apply, Matrix.smul_apply, smul_eq_mul]
+    rw [aeval_add_of_sq_eq_zero _ _ _ he2, haeval, haeval, mul_comm]
+  rw [hLHS, hR] at hcurve
+  have hc := add_left_cancel hcurve
+  refine Matrix.ext fun i j => ?_
+  have := congrArg (fun M : Matrix _ _ (DualNumber K[X]) => (M i j).snd) hc
+  simpa [ι, e, TrivSqZeroExt.algebraMap_eq_inl] using this
+
+/-- The coefficients of `Φ(t) = ρ(1 + tE)` satisfy `(k + 1) Φ_{k+1} = Φ_k · dρ(E)`. -/
+theorem succ_smul_coeff_curve {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) (k : ℕ) :
+    ((k + 1 : ℕ) : K) • (h.curve E).map (coeff · (k + 1)) =
+      (h.curve E).map (coeff · k) * h.lieMatrix E := by
+  have hd := h.derivative_curve hE
+  refine Matrix.ext fun i j => ?_
+  have hij := congrArg (coeff · k) (congrFun (congrFun hd i) j)
+  simp only [Matrix.map_apply, coeff_derivative, Matrix.mul_apply, finsetSum_coeff,
+    coeff_mul_C] at hij
+  rw [Matrix.smul_apply, Matrix.map_apply, smul_eq_mul, Matrix.mul_apply, mul_comm]
+  push_cast
+  rw [hij]
+  rfl
+
+variable [CharZero K]
+
+/-- **The coefficients of a one-parameter group**: `Φ_k = dρ(E)ᵏ / k!`. -/
+theorem coeff_curve_eq_pow {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) (k : ℕ) :
+    (h.curve E).map (coeff · k) = ((k.factorial : K)⁻¹) • h.lieMatrix E ^ k := by
+  induction k with
+  | zero => rw [h.coeff_zero_curve, Nat.factorial_zero, Nat.cast_one, inv_one, one_smul, pow_zero]
+  | succ k ih =>
+    have hs := h.succ_smul_coeff_curve hE k
+    rw [ih, Matrix.smul_mul, ← pow_succ] at hs
+    have hk : ((k + 1 : ℕ) : K) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.succ_ne_zero k)
+    calc (h.curve E).map (coeff · (k + 1))
+        = ((k + 1 : ℕ) : K)⁻¹ • (((k + 1 : ℕ) : K) • (h.curve E).map (coeff · (k + 1))) := by
+          rw [smul_smul, inv_mul_cancel₀ hk, one_smul]
+      _ = (((k + 1).factorial : K)⁻¹) • h.lieMatrix E ^ (k + 1) := by
+          rw [hs, smul_smul, Nat.factorial_succ, Nat.cast_mul, mul_inv]
+
+theorem curveCoeff_eq_pow {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) (k : ℕ) :
+    h.curveCoeff E k = ((k.factorial : K)⁻¹) • h.lie E ^ k := by
+  rw [curveCoeff, h.coeff_curve_eq_pow hE, map_smul, lie_apply, ← Matrix.toLin_pow]
+
+/-- **`ρ(1 + tE) = exp(t · dρ(E))`** for `E² = 0`, as a finite sum. -/
+theorem rho_lineGL_eq_exp {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) (t : K)
+    {N : ℕ} (hN : h.curveDegree E < N) :
+    ρ (lineGL E t (det_one_add_smul_of_sq_eq_zero hE t)) =
+      ∑ k ∈ Finset.range N, (t ^ k * (k.factorial : K)⁻¹) • h.lie E ^ k := by
+  rw [h.rho_lineGL_eq_sum E t _ hN]
+  refine Finset.sum_congr rfl fun k _ => ?_
+  rw [h.curveCoeff_eq_pow hE, smul_smul]
+
+/-- `dρ(E)` is nilpotent when `E² = 0`. -/
+theorem isNilpotent_lie {E : Matrix (Fin n) (Fin n) K} (hE : E * E = 0) :
+    IsNilpotent (h.lie E) := by
+  refine ⟨h.curveDegree E + 1, ?_⟩
+  have h0 := h.curveCoeff_eq_zero E (Nat.lt_succ_self (h.curveDegree E))
+  rw [h.curveCoeff_eq_pow hE] at h0
+  exact (smul_eq_zero.mp h0).resolve_left (inv_ne_zero (Nat.cast_ne_zero.mpr
+    (Nat.factorial_ne_zero _)))
+
+end IsPolynomialRep
+
+end
+
+end GLRep
+

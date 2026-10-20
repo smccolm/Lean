@@ -1,0 +1,133 @@
+{
+  "recordedUTC": "2026-10-20T13:38:57.333804+00:00",
+  "date": "2026-10-20 America/Vancouver",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "toolchain": "Lean 4.33.1",
+  "mathlib": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy -> actual modular residual Galois association and image bounds.",
+  "newFinding": "Beyond the previously inspected weight-two adic endpoints, published proof bodies construct a rank-two residual representation at every weight k >= 3 from a nonzero genuine Gamma0 cusp eigenform, an integral Hecke eigencharacter, and a ring homomorphism from the integral closure of Z in C to the characteristic-p coefficient field. The theorem derives finite-level factorization, good-prime Frobenius traces, determinant ell^(k-1), and inertia triviality away from Np.",
+  "endpoint": "GaloisRep.exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le",
+  "endpointSource": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean",
+  "proofRoute": [
+    "An actual modular Hecke eigenform gives a nonzero binary-coefficient H1 eigensystem after reduction.",
+    "Commuting finite-dimensional Hecke actions extend the eigensystem to all good primes.",
+    "Finite-characteristic coefficient and level changes reduce it, after cyclotomic twist, to trivial-coefficient H1 at a level M dividing N*p^2.",
+    "Weight-two geometric Galois association or an Eisenstein character-pair construction supplies the residual representation.",
+    "The explicit cyclotomic twist restores traces and determinant and preserves unramifiedness away from Np."
+  ],
+  "actualDefinitionsInspected": {
+    "finiteLevel": "An actual finite-dimensional intermediate field of the algebraic closure whose pointwise stabilizer lies in the kernel.",
+    "eigensystem": "A nonzero class in the actual cocycle/coboundary quotient, with each Hecke operator required to realize the explicit finite-coset coefficient formula.",
+    "coefficientRepresentation": "Actual column substitution on homogeneous binary polynomials."
+  },
+  "necessaryAdapters": [
+    "Compare the source's native cusp form and literal finite Hecke sums with the external declarations.",
+    "Reuse the derived integral original Hecke eigencharacter; extend the actual reduction to an algebraically closed characteristic-p field. The endpoint's map from all algebraic integers is not supplied by the finite original residue field alone.",
+    "Identify the original dual period coefficient action with column binary substitution and transport the actual Hecke correspondence. Existing binomial symmetric duality and homogeneous monomial basis results should be reused; factorial nonvanishing must be derived wherever needed.",
+    "Construct the nonzero residual H1 eigensystem using genuine coefficient base change, including torsion, rather than assuming it.",
+    "Audit and adapt the finite-characteristic level-reduction and weight-two geometric proof closures under the unchanged local pins.",
+    "Connect finite-level factorization with the repository's actual Krull continuity and finite residual coefficient realization."
+  ],
+  "localReuse": [
+    "sourcePrimitiveHeckeCharacter and sourcePrimitiveFieldHeckeCharacter_isIntegral",
+    "sourcePrimitiveCoefficientField",
+    "SourcePrimitiveResidualHeckeCharacter",
+    "SourcePrimitiveResidualCharacteristic",
+    "sourcePrimitive_periodCohomology_ne_zero (audited scratch; production pending)",
+    "symmetricDualityGL_intertwine",
+    "symmetricDualityMatrix_isUnit",
+    "binaryHomogeneousMonomialBasis",
+    "SourceIntegralHeckePrime",
+    "SourceHeckePrimeAdjoint"
+  ],
+  "limits": [
+    "This is a residual representation result, not an all-weight adic compatible system, purity, crystallinity or Sato-Tate.",
+    "The selected files are not the complete transitive proof closure, and have not been kernel-replayed on the pinned local toolchain.",
+    "A selected weight-two reduction proof disables the unused-section-variable linter. That setting is not acceptable in local proof code; any adaptation must fix diagnostics.",
+    "No residual-image bound, prescribed unitary Hecke localization, Selmer dimension, R=T or automorphy gate is closed.",
+    "The prior candidate review remains a historical record of the endpoints then inspected; this supplements its weight-two finding rather than asserting that no higher-weight residual source existed."
+  ],
+  "selectionOptionLines": [
+    {
+      "path": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean",
+      "line": 23,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean",
+      "line": 27,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean",
+      "line": 26,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "Theorems/Thm_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean",
+      "line": 10,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean",
+      "line": 29,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean",
+      "line": 34,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean",
+      "line": 37,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "Definitions/Def_GaloisRep_Residual.lean",
+      "line": 10,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "Definitions/Def_Gamma0CoeffCohomologyEigen.lean",
+      "line": 5,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_isEigensystemH1_one_dvd_mul_sq_of_isEigensystemH1_binaryFormRepSL.lean",
+      "line": 12,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_isEigensystemH1_binaryFormRepSL_empty_of_isEigensystemH1_of_ringHom.lean",
+      "line": 14,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_isEigensystemH1_binaryFormRepSL_of_heckeTLin_eq_smul.lean",
+      "line": 24,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_ringHom_heckeAlgebra_two.lean",
+      "line": 26,
+      "text": "set_option autoImplicit false"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_ringHom_heckeAlgebra_two.lean",
+      "line": 27,
+      "text": "set_option linter.unusedSectionVars false"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_eichlerShimuraMap_heckeTLin.lean",
+      "line": 16,
+      "text": "set_option autoImplicit false"
+    }
+  ],
+  "archive": "Dependencies/Lean Reuse 2026-10-20/anthropic-flt-residual/manifest.json",
+  "archiveManifestSha256": "BD5D22728F6072318C889AA9AABBC05DA19C2C6716C36BDFDFAFF4E9E7CEC3A5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "acceptance": "16/20; DUB-17--20 open"
+}

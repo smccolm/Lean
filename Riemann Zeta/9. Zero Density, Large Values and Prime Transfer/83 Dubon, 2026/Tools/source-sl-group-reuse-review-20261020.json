@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line.",
+  "files": [
+    {
+      "file": "TauCeti-Transvection.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/cc73e43d461427571b62274c83057192b01aa567/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Transvection.lean",
+      "gitBlob": "76e2ec2fe4cc2b43849d123fa3e25a939d4d157d",
+      "decision": "Adapt field generation, excluding the integer Euclidean algorithm.",
+      "sha256": "BFA14486CA5A08347E4F02E0249579A4B22B6A82694F12FA1F24026DD1FE502D"
+    },
+    {
+      "file": "TauCeti-Diagonal.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/cc73e43d461427571b62274c83057192b01aa567/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Diagonal/Basic.lean",
+      "gitBlob": "1fb7696e20bd0f778c4502fdfe9996450217305e",
+      "decision": "Adapt the six-transvection factorization directly over fields, omitting general ring and torus infrastructure.",
+      "sha256": "AB57054F65E372F43E46717BA38B954B9C31FD8E0A235C694A5A5D555BB57A15"
+    },
+    {
+      "file": "Mathlib-SpecialLinearGroup.lean.txt",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/8af27d91704d4e7c4a0cdf149d8ce56034e96c93/Mathlib/LinearAlgebra/Matrix/SpecialLinearGroup.lean",
+      "gitBlob": "13aa110aaabcb98d0853a80cdd55ba8e39c1e4fa",
+      "decision": "Adapt determinant-one diagonal decomposition and the original native matrix factorization bridge. Local names, qualified native coercion and dif_pos replace newer interfaces. No upstream set_option is adopted.",
+      "sha256": "BE4F9A944DD76F975719AEE7DEC262EB93347EFCD045B4911D94E34B89C30455"
+    },
+    {
+      "file": "TauCeti-LICENSE.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/cc73e43d461427571b62274c83057192b01aa567/LICENSE",
+      "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "decision": "Apache-2.0 license.",
+      "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08"
+    },
+    {
+      "file": "Mathlib-LICENSE.txt",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/8af27d91704d4e7c4a0cdf149d8ce56034e96c93/LICENSE",
+      "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "decision": "Apache-2.0 license.",
+      "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08"
+    },
+    {
+      "file": "RS-Integration.lean.txt",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/Lie/Integration.lean",
+      "gitBlob": "878e3c2001d70c7d7a9bc2ea83bd7a1eb07c4d2a",
+      "decision": "Reference only. Full polynomial-weight interpolation framework deferred; native matrix factorization plus the actual source finite exponential is shorter for special-linear stability.",
+      "sha256": "887B6BE6DB0132B5EE82C4FFBA5AD462B1344DF2D45085F14B6A7387BB915835"
+    },
+    {
+      "file": "TauCeti-LocallyNilpotent.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/8fdd17266a8b40ae0c490f85cdd9a01966a54b2b/TauCeti/Algebra/Lie/Derivation/LocallyNilpotent.lean",
+      "gitBlob": "f9cd5f179c4e204e8ea50a90e57e055e41b58b07",
+      "decision": "Reviewed next-step candidate, not adopted or proved by this three-module receipt.",
+      "sha256": "1398BA7C291647A728CD4918D8247B3B7E1A1404494B857AE744D7B16B6AD87B"
+    },
+    {
+      "file": "RS-HighestWeight-Basic.lean.txt",
+      "url": "https://github.com/rhodges-math/rs-counterexample/blob/8fb1989aa7342e9e1db97f25dd8f5eda9c6353c6/RSCounterexample/GLRep/HighestWeight/Basic.lean",
+      "gitBlob": "0d78eeec749b5a6b81e64be401d19bfbd3222c03",
+      "decision": "Reference only. Requires a nonzero integral weight space and more imported weight infrastructure; direct nilpotence plus pinned Engel theorem is being assessed first.",
+      "sha256": "CDFD46437E65B612938774502B988B8417071652149217E833EDC60BB8645CB1"
+    }
+  ],
+  "localReuse": "Pinned Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec; original induced right action and its exact finite exponential; actual trace-zero Lie action, finite dimension and constructed Weyl complements.",
+  "discharged": "Every actual source-induced Lie submodule, including the already constructed Lie complements, is stable under every original determinant-one matrix. The field generation theorem is proved from exact matrix factorization, determinant-one diagonal decomposition and six actual elementary factors. No special-linear generation or group-stability certificate remains.",
+  "remaining": "General-linear stability, nonzero unipotent-fixed vectors in every nonzero stable subspace, coefficient irreducibility and base-change identification, and all previously open arithmetic and automorphy obligations remain open. Acceptance remains 16/20; DUB-17-20 remain open.",
+  "production": "Scratch only; excludes frozen 4,860-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

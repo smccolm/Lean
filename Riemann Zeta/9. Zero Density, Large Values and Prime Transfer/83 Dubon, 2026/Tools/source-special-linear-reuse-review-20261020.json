@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy and unitary patching -> Geraghty/BLGG actual algebraic coefficient representation -> characteristic-zero irreducibility -> complete reducibility of the original induced action.",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "b1f31fb193647dfb5f4b18c918b0f30841892d07",
+  "upstreamToolchain": "leanprover/lean4:v4.36.0-rc1",
+  "files": [
+    {
+      "file": "GeneralLinearBasic.lean.txt",
+      "gitBlob": "4c18ae17c7558870d050b6139b640b1132ead76b",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/GeneralLinear/Basic.lean",
+      "sha256": "A6675EA858CB744526EFCEC5E3E4D540FD63C7253D20918C19E0C796D1A38DE2"
+    },
+    {
+      "file": "DiagonalCartan.lean.txt",
+      "gitBlob": "d560339a4eef0dd7b045fb460deef4c2302be508",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/GeneralLinear/DiagonalCartan.lean",
+      "sha256": "C45E06E0F6C994EDA927432D787DAF0DB15BDFFF4341B688881132ED49C85A3C"
+    },
+    {
+      "file": "GeneralLinearRadical.lean.txt",
+      "gitBlob": "35eb755badeb76658579a470ef9f150f14d977eb",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/TauCeti/Algebra/Lie/GeneralLinear/Radical.lean",
+      "sha256": "CE415227195E2F7A312694E7A75845BD888AB685835544DD65382EBD602DA0D0"
+    },
+    {
+      "file": "LICENSE",
+      "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/b1f31fb193647dfb5f4b18c918b0f30841892d07/LICENSE",
+      "sha256": "C6596EB7BE8581C18BE736C846FB9173B69ECCF6EF94C5135893EC56BD92BA08"
+    }
+  ],
+  "selection": "Matrix-unit brackets, trace-zero decomposition, ideal propagation, radical of gl_n and trivial radical of the actual sl_n. The diagonal single-bracket identity is proved directly using native matrix operations, avoiding the external diagonal Cartan/weight dependency. Unused reductive interfaces and Cartan classification are deferred.",
+  "compatibilityChanges": [
+    "Replaced absent single_neg by map_neg of the native matrix single additive homomorphism.",
+    "Replaced newer Set.mem_ofPred_eq and IsConcreteLE.not_le_iff_exists interfaces by explicit change and native SetLike.not_le_iff_exists.",
+    "Localized declarations in Dubon2026; imported native matrix diagonal API; omitted unused declarations."
+  ],
+  "discharged": "Every finite-dimensional module over the actual characteristic-zero trace-zero matrix Lie algebra has an invariant complement, using the already checked Atlas Weyl theorem. Semisimplicity is derived from actual matrices, not supplied.",
+  "remaining": "Construct the original induced Lie action and recover group-stable complements. Prove nonzero unipotent invariants and conclude irreducibility of the actual source representation. These and the remaining arithmetic/automorphy obligations keep DUB-17-20 open; 16/20 acceptance gates.",
+  "pinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,197 @@
+import RSCounterexample.GLRep.Polynomial.Representation
+
+/-!
+# Polynomial representations at points over commutative algebras
+
+Let `ρ` be a polynomial representation of `GL_n(K)` on `W`, over an infinite field `K`. Against
+the basis `Module.finBasis K W`, the entries of the matrices `ρ g` are polynomials in the entries
+of `g`, and these polynomials are unique because `GL_n(K)` is Zariski dense
+(`GLRep.IsPolynomialRep.coeffPoly`).
+
+Evaluating them at a matrix `A` with entries in a commutative `K`-algebra `R` defines
+`GLRep.IsPolynomialRep.extend R A`. Since `ρ(gh) = ρ(g)ρ(h)` on the dense subset
+`GL_n(K) × GL_n(K)`, it is an identity of polynomials. So `extend` is multiplicative and unital on
+all matrices over all commutative `K`-algebras, and natural in the algebra. This is what lets the
+representation be differentiated over the dual numbers.
+
+## Main definitions
+
+* `GLRep.IsPolynomialRep.coeffPoly`: the polynomial matrix coefficients.
+* `GLRep.IsPolynomialRep.extend`: the representation at points over a commutative `K`-algebra.
+
+## Main results
+
+* `GLRep.IsPolynomialRep.extend_glCoord`: at a point of `GL_n(K)` it is the matrix of `ρ g`.
+* `GLRep.IsPolynomialRep.extend_map`: naturality.
+* `GLRep.IsPolynomialRep.extend_mul`, `GLRep.IsPolynomialRep.extend_one`.
+-/
+
+namespace GLRep
+
+open Module MvPolynomial
+
+noncomputable section
+
+variable {K : Type*} [Field K] {n : ℕ}
+variable {W : Type*} [AddCommGroup W] [Module K W] {ρ : Representation K (GL (Fin n) K) W}
+
+/-! ### Density of pairs of invertible matrices -/
+
+section Pairs
+
+variable (K n)
+
+/-- The matrix entries of a pair of elements of `GL_n(K)`. -/
+def glPairCoord : GL (Fin n) K × GL (Fin n) K → (Fin n × Fin n) ⊕ (Fin n × Fin n) → K :=
+  fun g => Sum.elim (glCoord K n g.1) (glCoord K n g.2)
+
+/-- `GL_n(K) × GL_n(K)` is Zariski dense in pairs of matrices. -/
+theorem isZariskiDense_glPairCoord [Infinite K] : IsZariskiDense (glPairCoord K n) := by
+  refine isZariskiDense_of_ne_zero (rename Sum.inl (detPoly K n) * rename Sum.inr (detPoly K n))
+    (mul_ne_zero
+      (fun h => detPoly_ne_zero K n (rename_injective _ Sum.inl_injective (by rw [h, map_zero])))
+      (fun h => detPoly_ne_zero K n (rename_injective _ Sum.inr_injective (by rw [h, map_zero]))))
+    fun x hx => ?_
+  rw [map_mul, eval_rename, eval_rename, eval_detPoly, eval_detPoly] at hx
+  refine ⟨(Matrix.GeneralLinearGroup.mkOfDetNeZero _ (left_ne_zero_of_mul hx),
+    Matrix.GeneralLinearGroup.mkOfDetNeZero _ (right_ne_zero_of_mul hx)), ?_⟩
+  funext p
+  cases p <;> rfl
+
+end Pairs
+
+namespace IsPolynomialRep
+
+variable (h : IsPolynomialRep ρ)
+
+/-- The index type of the fixed basis of `W`. -/
+abbrev Idx (W : Type*) [AddCommGroup W] [Module K W] := Fin (finrank K W)
+
+/-- The fixed basis `Module.finBasis K W` of the space of a polynomial representation. -/
+def basis : Basis (Idx (K := K) W) K W :=
+  have := h.finiteDimensional
+  finBasis K W
+
+private theorem exists_coeffPoly (i j : Idx (K := K) W) :
+    ∃ P : MvPolynomial (Fin n × Fin n) K, ∀ g,
+      LinearMap.toMatrix h.basis h.basis (ρ g) i j = eval (glCoord K n g) P :=
+  mem_coordFunctions.mp (h.toMatrix_mem h.basis i j)
+
+/-- The **polynomial matrix coefficients** of a polynomial representation against the basis
+`Module.finBasis K W`. -/
+def coeffPoly (i j : Idx (K := K) W) : MvPolynomial (Fin n × Fin n) K :=
+  (exists_coeffPoly h i j).choose
+
+theorem eval_coeffPoly (g : GL (Fin n) K) (i j : Idx (K := K) W) :
+    eval (glCoord K n g) (h.coeffPoly i j) =
+      LinearMap.toMatrix h.basis h.basis (ρ g) i j :=
+  ((exists_coeffPoly h i j).choose_spec g).symm
+
+/-- The polynomial matrix coefficients are the only polynomials with these values on
+`GL_n(K)`. -/
+theorem eq_coeffPoly [Infinite K] {i j : Idx (K := K) W} {P : MvPolynomial (Fin n × Fin n) K}
+    (hP : ∀ g, eval (glCoord K n g) P = LinearMap.toMatrix h.basis h.basis (ρ g) i j) :
+    P = h.coeffPoly i j :=
+  (isZariskiDense_glCoord K n).eq_of_forall_eval_eq fun g => by rw [hP, eval_coeffPoly]
+
+variable (R : Type*) [CommRing R] [Algebra K R]
+
+/-- The representation **at a point over a commutative algebra** `R`: the matrix whose entries are
+the polynomial matrix coefficients evaluated at the entries of `A`. -/
+def extend (A : Matrix (Fin n) (Fin n) R) : Matrix (Idx (K := K) W) (Idx (K := K) W) R :=
+  Matrix.of fun i j => aeval (fun p => A p.1 p.2) (h.coeffPoly i j)
+
+variable {R}
+
+theorem extend_apply (A : Matrix (Fin n) (Fin n) R) (i j : Idx (K := K) W) :
+    h.extend R A i j = aeval (fun p => A p.1 p.2) (h.coeffPoly i j) := rfl
+
+/-- **Naturality** of `extend` in the algebra. -/
+theorem extend_map {S : Type*} [CommRing S] [Algebra K S] (f : R →ₐ[K] S)
+    (A : Matrix (Fin n) (Fin n) R) : h.extend S (A.map f) = (h.extend R A).map f := by
+  ext i j
+  simp only [extend_apply, Matrix.map_apply]
+  rw [← comp_aeval_apply]
+
+/-- At a point of `GL_n(K)`, `extend` is the matrix of `ρ g`. -/
+theorem extend_glCoord (g : GL (Fin n) K) :
+    h.extend K (g : Matrix (Fin n) (Fin n) K) =
+      LinearMap.toMatrix h.basis h.basis (ρ g) := by
+  ext i j
+  rw [extend_apply, ← eval_coeffPoly h g, aeval_eq_eval]
+  rfl
+
+/-- The generic pair of matrices: the matrices of variables of the two halves. -/
+private def genericLeft : Matrix (Fin n) (Fin n)
+    (MvPolynomial ((Fin n × Fin n) ⊕ (Fin n × Fin n)) K) :=
+  Matrix.of fun a b => X (Sum.inl (a, b))
+
+private def genericRight : Matrix (Fin n) (Fin n)
+    (MvPolynomial ((Fin n × Fin n) ⊕ (Fin n × Fin n)) K) :=
+  Matrix.of fun a b => X (Sum.inr (a, b))
+
+private theorem map_genericLeft (x : (Fin n × Fin n) ⊕ (Fin n × Fin n) → R) :
+    (genericLeft (K := K) (n := n)).map (aeval x) = Matrix.of fun a b => x (Sum.inl (a, b)) := by
+  ext a b
+  simp [genericLeft]
+
+private theorem map_genericRight (x : (Fin n × Fin n) ⊕ (Fin n × Fin n) → R) :
+    (genericRight (K := K) (n := n)).map (aeval x) = Matrix.of fun a b => x (Sum.inr (a, b)) := by
+  ext a b
+  simp [genericRight]
+
+/-- Multiplicativity at the generic pair of matrices: an identity of polynomials. -/
+private theorem extend_generic_mul [Infinite K] :
+    h.extend _ (genericLeft (K := K) (n := n) * genericRight) =
+      h.extend _ genericLeft * h.extend _ genericRight := by
+  refine Matrix.ext fun i j => (isZariskiDense_glPairCoord K n).eq_of_forall_eval_eq fun g => ?_
+  have hnat : ∀ M : Matrix (Fin n) (Fin n) (MvPolynomial ((Fin n × Fin n) ⊕ (Fin n × Fin n)) K),
+      (h.extend _ M).map (eval (glPairCoord K n g)) =
+        h.extend K (M.map (eval (glPairCoord K n g))) := fun M =>
+    (h.extend_map (aeval (glPairCoord K n g)) M).symm
+  have hL : genericLeft.map (eval (glPairCoord K n g)) = (g.1 : Matrix (Fin n) (Fin n) K) := by
+    ext a b
+    simp [genericLeft, glPairCoord]
+  have hR : genericRight.map (eval (glPairCoord K n g)) = (g.2 : Matrix (Fin n) (Fin n) K) := by
+    ext a b
+    simp [genericRight, glPairCoord]
+  have key : (h.extend _ (genericLeft * genericRight)).map (eval (glPairCoord K n g)) =
+      (h.extend _ genericLeft * h.extend _ genericRight).map (eval (glPairCoord K n g)) := by
+    rw [hnat, Matrix.map_mul, Matrix.map_mul, hnat, hnat, hL, hR, ← Units.val_mul,
+      extend_glCoord, extend_glCoord, extend_glCoord, map_mul, LinearMap.toMatrix_mul]
+  exact congrFun (congrFun key i) j
+
+/-- **Multiplicativity**: `extend` is multiplicative on all matrices over every commutative
+`K`-algebra. -/
+theorem extend_mul [Infinite K] (A B : Matrix (Fin n) (Fin n) R) :
+    h.extend R (A * B) = h.extend R A * h.extend R B := by
+  let x : (Fin n × Fin n) ⊕ (Fin n × Fin n) → R := Sum.elim (fun p => A p.1 p.2) fun p => B p.1 p.2
+  have hA : (genericLeft (K := K) (n := n)).map (aeval x) = A := by
+    rw [map_genericLeft]
+    ext a b
+    rfl
+  have hB : (genericRight (K := K) (n := n)).map (aeval x) = B := by
+    rw [map_genericRight]
+    ext a b
+    rfl
+  have := congrArg (Matrix.map · (aeval x)) h.extend_generic_mul
+  simp only [← h.extend_map, Matrix.map_mul, hA, hB] at this
+  simpa [Matrix.map_mul] using this
+
+/-- **Unitality**: `extend` sends the identity matrix to the identity matrix. -/
+theorem extend_one : h.extend R (1 : Matrix (Fin n) (Fin n) R) = 1 := by
+  have h1 : h.extend K (1 : Matrix (Fin n) (Fin n) K) = 1 := by
+    have := h.extend_glCoord 1
+    rw [Units.val_one, map_one, LinearMap.toMatrix_one] at this
+    exact this
+  have := h.extend_map (Algebra.ofId K R) 1
+  rw [Matrix.map_one _ (map_zero _) (map_one _), h1, Matrix.map_one _ (map_zero _) (map_one _)]
+    at this
+  exact this
+
+end IsPolynomialRep
+
+end
+
+end GLRep
+

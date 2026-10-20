@@ -9,9 +9,10 @@ coefficient embeddings. Its finite freeness is derived from the uniform
 denominator and degree proof and the native tensor-product basis theorem.
 
 CMSourceIntegralWeightComparison constructs the embedding family in a given
-common coefficient field. Its required adequacy, source fields/forms/local
-choices, dominant highest-weight and
-nonzero localized Hecke realization, and automorphy remain unresolved.
+common coefficient field. CMCommonCoefficientAuxiliary constructs an adequate
+finite common local field and the original auxiliary comparison. Source
+unitary fields/forms and remaining local choices, full highest-weight
+identification, prescribed nonzero Hecke localization and automorphy remain open.
 This theorem does not close DUB-17 or DUB-18.
 -/
 

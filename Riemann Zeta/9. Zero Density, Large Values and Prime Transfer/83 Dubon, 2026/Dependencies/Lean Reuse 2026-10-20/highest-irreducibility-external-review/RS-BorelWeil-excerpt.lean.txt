@@ -1,0 +1,180 @@
+import RSCounterexample.FlagVarieties.Modules.SectionCharacter
+import RSCounterexample.FlagVarieties.PointModel.Complex.BorelWeil
+import RSCounterexample.Demazure.HighestWeight.GLRepBridge
+import RSCounterexample.Demazure.HighestWeight.LongestDemazure
+import RSCounterexample.Demazure.SchubertUnions.OrbitDuality
+import RSCounterexample.GLRep.Borel.Dual
+import RSCounterexample.GLRep.Borel.IndTwist
+import RSCounterexample.GLRep.Borel.Vanishing
+
+/-!
+# Borel–Weil as representations of `GL_n(ℂ)`
+
+The global sections `H⁰(G/B, 𝓛(η)) = ind_B^G(η)` (`GLRep.indBorelRep ℂ n η`: regular functions with
+`f(g b) = η(b)⁻¹ f(g)`, with `GL_n(ℂ)` acting by left translation) are:
+
+* for a dominant weight `λ`, the dual of the irreducible representation `V(λ)` (GLRep's
+  `ratIrrep`): `H⁰(G/B, 𝓛(−λ)) ≅ V(λ)^∨` (`FlagVarieties.borelWeil_ratIrrep`); equivalently
+  `H⁰(G/B, 𝓛(η)) ≅ V(−η)^∨` for antidominant `η` (`FlagVarieties.borelWeil_of_isAntidominant`);
+* zero otherwise: `H⁰(G/B, 𝓛(η)) = 0` unless `η` is antidominant
+  (`FlagVarieties.indBorelSubrep_eq_bot`, from `GLRep.indBorelSubrep_eq_bot`, over any infinite
+  field).
+
+The proof goes through the flag-minor algebra `A_λ` of the ring-level Borel–Weil theorem
+(`FlagVarieties.PointModel.Complex.semiInvSpace_univ_of_globalSectionsConstant`) at the level of
+sections (`FlagVarieties.PointModel.Complex.semiInvSpace_univ_of_globalSectionsConstant`):
+
+* left translation on the image of a polynomial is the row action of `θ(g) = (g⁻¹)ᵀ`
+  (`FlagVarieties.leftTranslHom_algebraMap`);
+* `A_λ` is stable under the row action and contains the highest flag polynomial, and its
+  dimension `#chainSet h Sₙ` is at most that of the flag-orbit span, so `A_λ` is the flag-orbit
+  span (`FlagVarieties.flagOrbitSpan_eq_minorSpan`), an irreducible representation equivalent to
+  `V(λ)` (`Demazure.HighestWeight.nonempty_equiv_flagOrbitRepresentation_irrep`);
+* hence `ind_B^G(−λ) ≅ V(λ) ∘ θ ≅ V(λ)^∨` (`FlagVarieties.nonempty_equiv_indBorelRep_irrep_dual`,
+  `GLRep.nonempty_equiv_comp_inverseTranspose_dual`), and twisting by powers of the determinant
+  (`GLRep.indBorelDetTwist`) gives every dominant weight.
+
+The equality `Γ(X_w, 𝒪) = ℂ` (`FlagVarieties.PointModel.Complex.GlobalSectionsConstant`) used by
+the ring-level Borel–Weil theorem is `FlagVarieties.globalSectionsConstant_complex`, so the results
+have no hypothesis.
+-/
+
+open Schubert GLRep TauCeti Module Demazure.FlagModule Demazure.HighestWeight
+  Demazure.SchubertUnions Demazure.Filtrations FinPermutation
+
+namespace FlagVarieties
+
+open PointModel.Complex
+
+open scoped Matrix
+
+noncomputable section
+
+variable {n : ℕ}
+
+/-! ### The induced representation in terms of semi-invariants -/
+
+/-- `ind_B^G(−η)` is the space `PointModel.Complex.semiInvSpace` of semi-invariants of weight `η` on
+`GL_n(ℂ)`. -/
+theorem indBorelSubrep_neg_eq_semiInvSpace (η : Fin n → ℤ) :
+    (indBorelSubrep ℂ n (-η)).toSubmodule = semiInvSpace Set.univ η := by
+  ext t
+  rw [mem_indBorelSubrep_iff_glEval, mem_semiInvSpace, isSemiInvOn_iff]
+  simp only [Set.mem_univ, true_implies]
+
+/-! ### Left translation of polynomials -/
+
+theorem evalAt_rowAction (x M : Matrix (Fin n) (Fin n) ℂ) (p : MatrixPolynomial n) :
+    PointModel.Complex.evalAt x (rowAction M p) = PointModel.Complex.evalAt (Mᵀ * x) p := by
+  have : (PointModel.Complex.evalAt x).comp (rowAction M) = PointModel.Complex.evalAt (Mᵀ * x) := by
+    refine MvPolynomial.algHom_ext fun rc => ?_
+    obtain ⟨r, c⟩ := rc
+    rw [AlgHom.comp_apply, rowAction_X]
+    simp only [map_sum, map_smul, evalAt_X, smul_eq_mul, Matrix.mul_apply, Matrix.transpose_apply]
+  exact AlgHom.congr_fun this p
+
+/-- **Left translation of a polynomial is the row action of `θ(g) = (g⁻¹)ᵀ`.** -/
+theorem leftTranslHom_algebraMap (g : GL (Fin n) ℂ) (p : MatrixPolynomial n) :
+    leftTranslHom ℂ n g (algebraMap (MatrixPolynomial n) (GLCoord ℂ n) p) =
+      algebraMap (MatrixPolynomial n) (GLCoord ℂ n)
+        (polynomialGL n (inverseTranspose ℂ n g) p) := by
+  refine glCoord_ext fun x => ?_
+  rw [glEval_leftTranslHom, glEval_algebraMap, glEval_algebraMap]
+  change PointModel.Complex.evalAt _ p = PointModel.Complex.evalAt _ (rowAction _ p)
+  rw [evalAt_rowAction, coe_inverseTranspose, Matrix.transpose_transpose, Units.val_mul]
+
+/-! ### The flag-minor algebra is the flag-orbit span -/
+
+theorem rowAction_familyProd_mem (M : Square n) {d : ℕ} (x : Fin d → MinorDatum n) :
+    rowAction M (familyProd x) ∈ minorSpan (familyShape x) := by
+  classical
+  simp only [familyProd, PointModel.MinorDatum.poly, map_prod]
+  rw [Finset.prod_congr rfl fun j _ => rowAction_flagRowMinor_sum M (x j).1 (x j).2,
+    Fintype.prod_sum]
+  refine Submodule.sum_mem _ fun T _ => ?_
+  rw [Finset.prod_smul]
+  exact Submodule.smul_mem _ _ (familyProd_mem_minorSpan fun j => ⟨(x j).1, (T j).rows⟩)
+
+/-- `A_λ` is stable under the row action of `GL_n(ℂ)`. -/
+theorem isGLStable_minorSpan (m : ColumnShape n) : IsGLStable (minorSpan m) := by
+  intro g p hp
+  change rowAction (g : Square n) p ∈ minorSpan m
+  induction hp using Submodule.span_induction with
+  | mem p hp =>
+    obtain ⟨d, x, rfl, rfl⟩ := hp
+    exact rowAction_familyProd_mem _ x
+  | zero => rw [map_zero]; exact zero_mem _
+  | add p q _ _ hp hq => rw [map_add]; exact add_mem hp hq
+  | smul c p _ hp => rw [map_smul]; exact Submodule.smul_mem _ c hp
+
+theorem highestFlag_mem_minorSpan (m : ColumnShape n) : highestFlag m ∈ minorSpan m := by
+  classical
+  have key : ∀ s : Finset (Fin n),
+      ∏ k ∈ s, flagMinor k ^ m k ∈ minorSpan (∑ k ∈ s, m k • Pi.single k 1) := by
+    intro s
+    induction s using Finset.induction_on with
+    | empty => simpa using one_mem_minorSpan
+    | insert k s hk ih =>
+      rw [Finset.prod_insert hk, Finset.sum_insert hk]
+      exact mul_mem_minorSpan (pow_mem_minorSpan (poly_mem_minorSpan ⟨k, prefixIndex k⟩) (m k)) ih
+  have hm : (∑ k, m k • Pi.single k 1 : ColumnShape n) = m := by
+    funext i
+    simp [Finset.sum_apply, Pi.single_apply]
+  have := key Finset.univ
+  rwa [hm] at this
+
+theorem flagOrbitSpan_le_minorSpan (m : ColumnShape n) : flagOrbitSpan m ≤ minorSpan m :=
+  flagOrbitSpan_le_of_isGLStable m (isGLStable_minorSpan m) (highestFlag_mem_minorSpan m)
+
+theorem finiteDimensional_minorSpan (m : ColumnShape n) : FiniteDimensional ℂ (minorSpan m) := by
+  obtain ⟨d, h, rfl⟩ := exists_columnMultiplicity m
+  rw [minorSpan_columnMultiplicity]
+  exact FiniteDimensional.span_of_finite ℂ (Set.finite_range _)
+
+/-- `dim A_λ = #chainSet h Sₙ`. -/
+theorem finrank_minorSpan {d : ℕ} (h : Fin d → Fin n) :
+    finrank ℂ (minorSpan (columnMultiplicity h)) = (chainSet h Finset.univ).card := by
+  have hadd := finrank_vanishSpan_add h (bruhatLower_univ (n := n))
+  rw [vanishSpan_univ, finrank_bot, zero_add, ← minorSpan_columnMultiplicity] at hadd
+  exact hadd.symm
+
+theorem demazureUnion_le_flagOrbitSpan (m : ColumnShape n) (S : Finset (Equiv.Perm (Fin n))) :
+    demazureUnion m S ≤ flagOrbitSpan m := by
+  unfold demazureUnion
+  exact iSup_le fun _ => flagDemazure_le_flagOrbitSpan _ _
+
+/-- **The flag-minor algebra `A_λ` is the flag-orbit span** (the irreducible model of `V(λ)`). -/
+theorem flagOrbitSpan_eq_minorSpan (m : ColumnShape n) : flagOrbitSpan m = minorSpan m := by
+  have := finiteDimensional_minorSpan m
+  have hle := flagOrbitSpan_le_minorSpan m
+  have : FiniteDimensional ℂ (flagOrbitSpan m) := Submodule.finiteDimensional_of_le hle
+  refine Submodule.eq_of_le_of_finrank_le hle ?_
+  obtain ⟨d, h, rfl⟩ := exists_columnMultiplicity m
+  calc finrank ℂ (minorSpan (columnMultiplicity h)) = (chainSet h Finset.univ).card :=
+        finrank_minorSpan h
+    _ ≤ finrank ℂ (demazureUnion (columnMultiplicity h) Finset.univ) :=
+        card_chainSet_le_finrank h Finset.univ
+    _ ≤ finrank ℂ (flagOrbitSpan (columnMultiplicity h)) :=
+        Submodule.finrank_mono (demazureUnion_le_flagOrbitSpan _ _)
+
+/-! ### Borel–Weil -/
+
+/-- The image of the flag-orbit span in `𝒪(GL_n)` is `ind_B^G(−λ)`. -/
+theorem map_flagOrbitSpan
+    (m : ColumnShape n) :
+    (flagOrbitSpan m).map
+        (IsScalarTower.toAlgHom ℂ (MatrixPolynomial n) (GLCoord ℂ n)).toLinearMap =
+      (indBorelSubrep ℂ n (-shapeWeightZ m)).toSubmodule := by
+  rw [indBorelSubrep_neg_eq_semiInvSpace, semiInvSpace_univ_of_globalSectionsConstant
+      (globalSectionsConstant_complex _) m,
+    flagOrbitSpan_eq_minorSpan]
+
+/-- **`ind_B^G(−λ)` is the flag-orbit representation twisted by `θ(g) = (g⁻¹)ᵀ`.** -/
+def flagOrbitEquivInducedRep
+    (m : ColumnShape n) :
+    Representation.Equiv ((flagOrbitRepresentation m).comp (inverseTranspose ℂ n))
+      (indBorelRep ℂ n (-shapeWeightZ m)) :=
+  .mk ((Submodule.equivMapOfInjective _ (fun _ _ hab => algebraMap_coordRing_injective hab)
+      (flagOrbitSpan m)).trans (LinearEquiv.ofEq _ _ (map_flagOrbitSpan m)))
+    fun g => LinearMap.ext fun p => Subtype.ext <| by
+      change algebraMap (MatrixPolynomial n) (GLCoord ℂ n)

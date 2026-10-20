@@ -1,0 +1,650 @@
+{
+  "modules": [
+    "Dubon2026.IntegralInducedTrailingMinor",
+    "Dubon2026.IntegralInducedFundamentalVector",
+    "Dubon2026.IntegralDominantWeightDecomposition",
+    "Dubon2026.IntegralInducedWeightProducts",
+    "Dubon2026.IntegralDominantInducedVector",
+    "Dubon2026.IntegralDominantTensorNontrivial",
+    "Dubon2026.SmallLevelAutomorphicNontrivial",
+    "Dubon2026.CMSourceAutomorphicNontrivial",
+    "Dubon2026.GeneralLinearRegularFieldEvaluation",
+    "Dubon2026.GeneralLinearRegularEvaluationContinuity",
+    "Dubon2026.IntegralInducedEvaluationTopology",
+    "Dubon2026.IntegralInducedOrbitContinuity",
+    "Dubon2026.IntegralInducedActionContinuity",
+    "Dubon2026.IntegralInducedTensorContinuity",
+    "Dubon2026.CMIntegralInducedTensorContinuity",
+    "Dubon2026.CMSourceIntegralWeightContinuity",
+    "Dubon2026.CommonCoefficientField",
+    "Dubon2026.CommonCoefficientLocalField",
+    "Dubon2026.CMSourceCoefficientProperties",
+    "Dubon2026.CMCommonCoefficientWeights",
+    "Dubon2026.CMSourceAuxiliaryCoefficientProperties",
+    "Dubon2026.CMCommonCoefficientAuxiliary",
+    "Dubon2026.IntegralDominantVectorTranspose",
+    "Dubon2026.IntegralWeightLongestPermutation",
+    "Dubon2026.IntegralDominantHighestVector",
+    "Dubon2026.IntegralHighestWeightAction",
+    "Dubon2026.IntegralHighestTensor",
+    "Dubon2026.CMSourceHighestTensor"
+  ],
+  "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 / Geraghty Definitions 2.2.1 and 2.2.3 -> adequate finite common local field and original continuous integral tensor coefficients in actual unitary auxiliary automorphic modules.",
+  "discharged": "Adjoining the images of a finite rational basis under every original number-field embedding in the algebraic closure constructs an actual finite common coefficient field. Basis expansion proves adequacy for every entire embedding, and the original embedding equivalence is explicit. Existing spectral norm, finite-extension local-field and valuation-extension proofs give an actual local field extending the original rational prime completion. The final common-field consumer derives nonzero finite-free dominant integral tensor coefficients with continuous original unitary action and the original auxiliary module comparison: finite freeness over the actual quotient group ring, exact unnormalized weighted-trace coinvariants, nonzero upper and lower forms before localization, and continuous original small-level action. No common-field adequacy, coefficient lattice, nonzero coefficient/form witness or continuous representation is supplied. The literal dominant minor vector is transpose invariant, giving its opposite-Borel right character from the proved source covariance. Native longest permutation matrices give an actual highest vector with the precise original upper-Borel character over every coefficient algebra and evaluation one at the longest matrix. Generic-matrix evaluation proves the corresponding eigenvector identity in the original integral induced representation. Native tensor duality constructs an actual functional evaluating the highest pure tensor to one, proving it nonzero. The source arithmetic consumer gives this normalized highest tensor in the same original coefficient module and its exact product character on original unitary elements whose constructed embedding matrices lie in the upper Borels. No highest-vector witness, replacement representation or coefficient map is supplied.",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,860-module scope: all thirteen retained regressions, 34,285 exhaustive theorem checks, 14,632 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalCodeAdopted": false,
+  "sourceConsumers": [
+    "Dubon2026.cmSourceIntegralWeightAutomorphic_nontrivial",
+    "Dubon2026.cmSourceSmallParabolicWeightRepresentation_continuous",
+    "Dubon2026.cmCommonCoefficientAuxiliary_exists",
+    "Dubon2026.cmSourceIntegralWeight_exists_highestTensor"
+  ],
+  "scratchCertificates": [
+    {
+      "date": "2026-10-19 America/Vancouver",
+      "modules": [
+        "IntegralInducedTrailingMinor",
+        "IntegralInducedFundamentalVector",
+        "IntegralDominantWeightDecomposition",
+        "IntegralInducedWeightProducts",
+        "IntegralDominantInducedVector",
+        "IntegralDominantTensorNontrivial",
+        "SmallLevelAutomorphicNontrivial",
+        "CMSourceAutomorphicNontrivial"
+      ],
+      "files": [
+        {
+          "module": "IntegralInducedTrailingMinor",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedTrailingMinor.lean",
+          "sha256": "06DB8E94ABB82F4061F55DB2AF3F8700BDB01DF5F1239B3346A986AE8512F8D4",
+          "oleanSha256": "740981FB5AA2599D8376FDABCDCCDE2621380A259EF8B4C5418A8301407AB489"
+        },
+        {
+          "module": "IntegralInducedFundamentalVector",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedFundamentalVector.lean",
+          "sha256": "8D1910CF1C2E4836FE06A498EC797397232668D79C7887AADDBF13F2BA232A3E",
+          "oleanSha256": "87FE68487955BD13B1FC175159816CD4B0216DF78371FAFCAE6D6150AA705E3F"
+        },
+        {
+          "module": "IntegralDominantWeightDecomposition",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantWeightDecomposition.lean",
+          "sha256": "3B058D902CCEA4CC801C9B16A692ED2BDACC9E6FF22AA8778EF4CBA737821065",
+          "oleanSha256": "1763E17C0AD775BD2AB2965EDFC8E25BB38121305EE914CFF7A36D87B30DEA30"
+        },
+        {
+          "module": "IntegralInducedWeightProducts",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedWeightProducts.lean",
+          "sha256": "AAB67FABA26A53695BFC5023EBC6E8D026B03CA724C0A2AB92BC1E5D70760FC9",
+          "oleanSha256": "A4FA5ABD69B43E6503D0D9F4D7A660E9BFC2CB2ACBB7D907DF2EC758FF6C6F36"
+        },
+        {
+          "module": "IntegralDominantInducedVector",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantInducedVector.lean",
+          "sha256": "4D552150A456F17A1D0B809578C5925CFD9D3DA66CDAB92661F30877B586DE35",
+          "oleanSha256": "D5ED359134E2763D840D450ADA7CF5E4DB5E46326B7A638E65BF1223C4551AE6"
+        },
+        {
+          "module": "IntegralDominantTensorNontrivial",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantTensorNontrivial.lean",
+          "sha256": "D739CB37F87548E95C3A5D86FDDA7924DE61CF9B8D1B6999859EABA6F55913D0",
+          "oleanSha256": "612C73263BDB24C4E5CE74D136816DAAFBDA78B5CB786006FE2D3912601BBE94"
+        },
+        {
+          "module": "SmallLevelAutomorphicNontrivial",
+          "path": "E:\\Lean\\.tmp\\dubon83\\SmallLevelAutomorphicNontrivial.lean",
+          "sha256": "BD1514015B9BE71A913E5651BD31CD6D914A9F219A4B49B001B1F4C9F59B0A4E",
+          "oleanSha256": "0ACE8F2D6CB49F591DF848DDE0E93452932AB493C7484DF69D67DA346B9220F4"
+        },
+        {
+          "module": "CMSourceAutomorphicNontrivial",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceAutomorphicNontrivial.lean",
+          "sha256": "33FB1EDC3DDD9796187C44EF3523B7D81E724DFFE3B8D45F8727801BE181D310",
+          "oleanSha256": "C141E386A5C1E0531772C7593A5EC7E8E78D2C230A378AEFDCB44089C0B8D96F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.upperTriangular_trailing_block_mul",
+        "Dubon2026.upperTriangular_trailing_minor_mul",
+        "Dubon2026.integralInducedTrailingMinorPolynomial",
+        "Dubon2026.integralInducedTrailingMinorPolynomial_eval",
+        "Dubon2026.integralInducedFundamentalWeight",
+        "Dubon2026.integralInducedFundamentalWeight_character",
+        "Dubon2026.integralInducedFundamentalVector",
+        "Dubon2026.integralInducedFundamentalVector_mem",
+        "Dubon2026.integralInducedFundamentalVector_one",
+        "Dubon2026.integralInducedFundamentalVector_ne_zero",
+        "Dubon2026.integralWeight_adjacent_sum",
+        "Dubon2026.integralDominantWeightExponent",
+        "Dubon2026.integralDominantWeightExponent_coe",
+        "Dubon2026.integralDominantWeight_decomposition",
+        "Dubon2026.generalLinearBorelWeight_add",
+        "Dubon2026.generalLinearBorelWeight_nat_mul",
+        "Dubon2026.generalLinearBorelWeight_sum",
+        "Dubon2026.generalLinearIntegralInduced_pow",
+        "Dubon2026.generalLinearIntegralInduced_prod",
+        "Dubon2026.integralDominantInducedVector",
+        "Dubon2026.integralDominantInducedVector_mem",
+        "Dubon2026.integralDominantInducedVector_one",
+        "Dubon2026.integralDominantInducedVector_ne_zero",
+        "Dubon2026.integralDominantInduced_nontrivial",
+        "Dubon2026.integralDominantTensor_nontrivial",
+        "Dubon2026.cmSourceIntegralWeight_nontrivial",
+        "Dubon2026.smallLevelAutomorphic_nontrivial",
+        "Dubon2026.smallLevelAuxiliary_nontrivial",
+        "Dubon2026.cmSourceIntegralWeightAutomorphic_nontrivial"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.upperTriangular_trailing_block_mul",
+        "Dubon2026.upperTriangular_trailing_minor_mul",
+        "Dubon2026.integralInducedTrailingMinorPolynomial_eval",
+        "Dubon2026.integralInducedFundamentalWeight_character",
+        "Dubon2026.integralInducedFundamentalVector_mem",
+        "Dubon2026.integralInducedFundamentalVector_one",
+        "Dubon2026.integralInducedFundamentalVector_ne_zero",
+        "Dubon2026.integralWeight_adjacent_sum",
+        "Dubon2026.integralDominantWeightExponent_coe",
+        "Dubon2026.integralDominantWeight_decomposition",
+        "Dubon2026.generalLinearBorelWeight_add",
+        "Dubon2026.generalLinearBorelWeight_nat_mul",
+        "Dubon2026.generalLinearBorelWeight_sum",
+        "Dubon2026.generalLinearIntegralInduced_pow",
+        "Dubon2026.generalLinearIntegralInduced_prod",
+        "Dubon2026.integralDominantInducedVector_mem",
+        "Dubon2026.integralDominantInducedVector_one",
+        "Dubon2026.integralDominantInducedVector_ne_zero",
+        "Dubon2026.integralDominantInduced_nontrivial",
+        "Dubon2026.integralDominantTensor_nontrivial",
+        "Dubon2026.cmSourceIntegralWeight_nontrivial",
+        "Dubon2026.smallLevelAutomorphic_nontrivial",
+        "Dubon2026.smallLevelAuxiliary_nontrivial",
+        "Dubon2026.cmSourceIntegralWeightAutomorphic_nontrivial"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.integralInducedTrailingMinorPolynomial",
+        "Dubon2026.integralInducedFundamentalWeight",
+        "Dubon2026.integralInducedFundamentalVector",
+        "Dubon2026.integralDominantWeightExponent",
+        "Dubon2026.integralDominantInducedVector"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantNontrivialAudit8.log",
+      "logSha256": "8DF783912D2BFBBB2E3DC75420D931F23D2D8B8519338963E6E4122A1DA17C74",
+      "auditSha256": "A5D8D5B90F3C8891DC10F97476DB73FA0265CF7AB1DCD4BB1C4CF99425E4AC38",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 32,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantDependencyAudit.log",
+      "dependencyAuditSha256": "26665405BB9F36B62A005E1B8DF594673FEA5CCDCFFD3B92FA59855F04AA13EC",
+      "dependencyAuditSourceSha256": "317DBDEA949AE1D9246D4A7214D858712CF812B50740C456F15C9B0229D51739",
+      "consumer": "Dubon2026.cmSourceIntegralWeightAutomorphic_nontrivial",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy/patching -> original unitary auxiliary automorphic modules -> nonzero dominant integral coefficient modules and nonzero actual unlocalized forms.",
+      "discharged": "Actual trailing-minor regular functions satisfy source Borel covariance over every coefficient algebra. Native finite telescoping gives every original dominant integral weight as a sum of fundamental weights with nonnegative adjacent exponents and the original last-weight determinant twist. The constructed regular vector evaluates to one at identity. The individual induced module and original field-embedding tensor are therefore nontrivial. Existing actual unitary arithmetic smallness and exact automorphic coordinate equivalences give nonzero upper and lower primary auxiliary forms. No nonzero coefficient, representation or automorphic-form witness is supplied.",
+      "boundary": "Scratch assembly only; production is frozen at 4,832 modules during canonical verification. Coefficient nonzeroness and unlocalized automorphic nonzeroness are proved, not nonzeroness at the prescribed Hecke localization. Full highest-weight identification, tensor-action continuity in its canonical topology, prescribed source choices, actual modular Galois/image and nonzero localized Hecke realization, crystalline/Selmer dimensions, R=T and automorphy continuation remain open. DUB-17-20 remain open; acceptance is 16/20.",
+      "reuse": "Native Fin.sum_Iic_sub and existing determinant twist, tensor basis, original smallness and automorphic coordinate equivalences. No new external proof code.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-19 America/Vancouver",
+      "modules": [
+        "GeneralLinearRegularFieldEvaluation",
+        "GeneralLinearRegularEvaluationContinuity",
+        "IntegralInducedEvaluationTopology",
+        "IntegralInducedOrbitContinuity",
+        "IntegralInducedActionContinuity",
+        "IntegralInducedTensorContinuity",
+        "CMIntegralInducedTensorContinuity",
+        "CMSourceIntegralWeightContinuity"
+      ],
+      "files": [
+        {
+          "module": "GeneralLinearRegularFieldEvaluation",
+          "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearRegularFieldEvaluation.lean",
+          "sha256": "80E6C85826DC75397934AA99BB357A70E483D8BBC9005EDF59D31CE68A795E6A",
+          "oleanSha256": "1C821D58D8654A3FAF01437965D3CFDD090D197CF4A75EB61E7E6155A366EE8F"
+        },
+        {
+          "module": "GeneralLinearRegularEvaluationContinuity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearRegularEvaluationContinuity.lean",
+          "sha256": "3FE1F07E372AC716744397D3AD2F6ACF35AB823B7A9BE8CC7B12983C9953F3A4",
+          "oleanSha256": "E5DFCEFF0642B5D8F3153C7C0D14BFFB79E0E098CC7193A3FD2BD748860C6EE9"
+        },
+        {
+          "module": "IntegralInducedEvaluationTopology",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedEvaluationTopology.lean",
+          "sha256": "5348FC0D9954EFFDCBF5F36391543C6CC2792F67E941E27DC81C541A0ACC35A3",
+          "oleanSha256": "0A6214C9FCFAC7A58F491AC586465AFFE335CEA859FF12BECC215466BDA8F062"
+        },
+        {
+          "module": "IntegralInducedOrbitContinuity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedOrbitContinuity.lean",
+          "sha256": "4B5C5EEECAAB936A7D8FC03D94ED580EEBAC3A02D0E9C2C48281CA97EEA341D8",
+          "oleanSha256": "49437BB8547ECE3277FC04DD271E4631FFE3B8985328A44F3C8F0936968C6A9C"
+        },
+        {
+          "module": "IntegralInducedActionContinuity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedActionContinuity.lean",
+          "sha256": "D848E8D56F178DE55FA3DB38708DFBBB27A9AA52056D2A1C5D8B80B4BDD20757",
+          "oleanSha256": "0C3FD1B171E6C022DFF79DC916B4BEF1B283AE492D0D00E7A917FF02F6F9DFE7"
+        },
+        {
+          "module": "IntegralInducedTensorContinuity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedTensorContinuity.lean",
+          "sha256": "7BE5809EEEE40BC65234FE6CD0508145A388F52CA278D274F242E81211883FBF",
+          "oleanSha256": "4CB8C6D269C5F1A0AB947190D2FF6C6EC148F120F534AA21BEFECB8A1D2D79FC"
+        },
+        {
+          "module": "CMIntegralInducedTensorContinuity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMIntegralInducedTensorContinuity.lean",
+          "sha256": "087816A7580336025B2144862F82DEFDCF31D7880AF56CBBFF5DCB4990544C2C",
+          "oleanSha256": "F3F34799EF8B8BB548A13CF150DD4F44052616813C0326CD3D4F5FF40D6E5038"
+        },
+        {
+          "module": "CMSourceIntegralWeightContinuity",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceIntegralWeightContinuity.lean",
+          "sha256": "B0B376F2F992D989690556D478DC641154E8AFCC6B9814296E372777691FF2A1",
+          "oleanSha256": "97C9C3515ABE921A239AE9953B423F0D9B1282B05BD561392BD3B9D6126BA0C6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.generalLinearRegularFieldEvaluation",
+        "Dubon2026.generalLinearRegular_eq_zero_of_field_eval",
+        "Dubon2026.generalLinearRegularFieldEvaluation_injective",
+        "Dubon2026.generalLinearRegularFractionMap_eval",
+        "Dubon2026.generalLinearRegularEval_continuous",
+        "Dubon2026.integralInducedFieldEvaluation",
+        "Dubon2026.integralInducedFieldEvaluation_injective",
+        "Dubon2026.integralInducedFieldEvaluation_continuous",
+        "Dubon2026.integralLocalInducedFieldEvaluation_isClosedEmbedding",
+        "Dubon2026.generalLinearCoefficientMap_continuous",
+        "Dubon2026.integralLocalInducedRepresentation_orbit_continuous",
+        "Dubon2026.finiteBasis_linearFamily_continuous",
+        "Dubon2026.integralLocalInducedRepresentation_continuous",
+        "Dubon2026.finiteBasis_piTensorProduct_continuous",
+        "Dubon2026.integralLocalInducedTensorRepresentation_continuous",
+        "Dubon2026.cmIntegralCoefficientMatrixMap_continuous",
+        "Dubon2026.cmIntegralInducedTensorRepresentation_continuous",
+        "Dubon2026.cmSmallParabolicIntegralInclusion_continuous",
+        "Dubon2026.cmSmallParabolicInducedTensorRepresentation_continuous",
+        "Dubon2026.cmSourceIntegralCoefficientMatrixMap_continuous",
+        "Dubon2026.cmSourceIntegralWeightRepresentation_continuous",
+        "Dubon2026.cmSourceSmallParabolicWeightRepresentation_continuous"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.generalLinearRegular_eq_zero_of_field_eval",
+        "Dubon2026.generalLinearRegularFieldEvaluation_injective",
+        "Dubon2026.generalLinearRegularFractionMap_eval",
+        "Dubon2026.generalLinearRegularEval_continuous",
+        "Dubon2026.integralInducedFieldEvaluation_injective",
+        "Dubon2026.integralInducedFieldEvaluation_continuous",
+        "Dubon2026.integralLocalInducedFieldEvaluation_isClosedEmbedding",
+        "Dubon2026.generalLinearCoefficientMap_continuous",
+        "Dubon2026.integralLocalInducedRepresentation_orbit_continuous",
+        "Dubon2026.finiteBasis_linearFamily_continuous",
+        "Dubon2026.integralLocalInducedRepresentation_continuous",
+        "Dubon2026.finiteBasis_piTensorProduct_continuous",
+        "Dubon2026.integralLocalInducedTensorRepresentation_continuous",
+        "Dubon2026.cmIntegralCoefficientMatrixMap_continuous",
+        "Dubon2026.cmIntegralInducedTensorRepresentation_continuous",
+        "Dubon2026.cmSmallParabolicIntegralInclusion_continuous",
+        "Dubon2026.cmSmallParabolicInducedTensorRepresentation_continuous",
+        "Dubon2026.cmSourceIntegralCoefficientMatrixMap_continuous",
+        "Dubon2026.cmSourceIntegralWeightRepresentation_continuous",
+        "Dubon2026.cmSourceSmallParabolicWeightRepresentation_continuous"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.generalLinearRegularFieldEvaluation",
+        "Dubon2026.integralInducedFieldEvaluation"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\IntegralContinuityAudit8.log",
+      "logSha256": "5B46035527C0A617686437D8B97DCF65ECA749CAE0AD1D46A584C4504AE8908A",
+      "auditSha256": "CE47E49A500D0D13FB37168EADD586D0ABEE32A9DC8577098D20FC12DDDB2330",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\IntegralContinuityDependencyAudit.log",
+      "dependencyAuditSha256": "E3345BDFBF6EFFE8F31F332E5F74683BA01A8012F5643567EC34620CE0D9AC14",
+      "dependencyAuditSourceSha256": "CFBEC336862F734AB948B15D958BF980341F28832140B6C458ECE05E6DEA47B1",
+      "consumer": "Dubon2026.cmSourceSmallParabolicWeightRepresentation_continuous",
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy/patching -> BLGG Section 3.2 and Geraghty Definition 2.2.3 original continuous integral coefficient tensor action.",
+      "discharged": "Original coefficient-field evaluations separate the literal regular functions. The derived finite induced module is compact in its canonical module topology and embeds faithfully in these evaluations. Original regular-function evaluation and right-translation orbits are continuous. Native finite basis and tensor-basis coordinates give joint continuity of the literal tensor action. Existing original continuous unitary local evaluations and constructed continuous completion integer embeddings give the actual continuous source arithmetic action and its small auxiliary restriction. No continuous coefficient representation or independent compact lattice is supplied.",
+      "boundary": "Scratch assembly only; production is frozen at 4,832 modules during canonical verification. Full highest-weight identification, prescribed source choices and common-field adequacy, actual modular Galois/image and nonzero localized Hecke realization, crystalline/Selmer dimensions, R=T and automorphy continuation remain open. DUB-17-20 remain open; acceptance is 16/20.",
+      "reuse": "Native polynomial continuity, module-topology automatic linear continuity, tensor-basis coordinate formula and already adapted FLT compact finite-module topology; previously adapted polynomial identity on GL. No new external proof code.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-19 America/Vancouver",
+      "modules": [
+        "CommonCoefficientField",
+        "CommonCoefficientLocalField",
+        "CMSourceCoefficientProperties",
+        "CMCommonCoefficientWeights",
+        "CMSourceAuxiliaryCoefficientProperties",
+        "CMCommonCoefficientAuxiliary"
+      ],
+      "files": [
+        {
+          "module": "CommonCoefficientField",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CommonCoefficientField.lean",
+          "sha256": "2FF01DDFD22B8E1F6054521AFC3CABDC8948859BA2D56556E5FD6ECFACE8409E",
+          "oleanSha256": "A347154ACB73C780B01D355F38FC048A9DBBF36319373C5E901909F37C69B269"
+        },
+        {
+          "module": "CommonCoefficientLocalField",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CommonCoefficientLocalField.lean",
+          "sha256": "8454E0E8D38B8CFE9A7AA2D48036D00F70E1100D7AEE71210112D7DCEA89FDA7",
+          "oleanSha256": "7F217BC99C79049A47CB98211E877F5723350146F8B9CAE5C1234A1F172AE81E"
+        },
+        {
+          "module": "CMSourceCoefficientProperties",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceCoefficientProperties.lean",
+          "sha256": "61CF66ED232FEEEA4E8E5BC32C20FD70E0016DBAE0B8D154072EAA12BF9FF845",
+          "oleanSha256": "504353702D66278DE92F6B666D4B92BA69BF6ED9FC4C4DA24DABB4E7C116B314"
+        },
+        {
+          "module": "CMCommonCoefficientWeights",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMCommonCoefficientWeights.lean",
+          "sha256": "629D89E739C11FB21B2FA0C45996FBB4EA9B8DC543354CBBB797963B03DE306D",
+          "oleanSha256": "B834C5DA24FF3F5396D292165B0BD33DF683C19899D546D225D681504D02FD04"
+        },
+        {
+          "module": "CMSourceAuxiliaryCoefficientProperties",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceAuxiliaryCoefficientProperties.lean",
+          "sha256": "311DBBC0894FF56F95D93D70FCADF6D6FC5CAA6ED7E514B7126B931A0081827F",
+          "oleanSha256": "18C931334B0D885215C1CB4B8032194518665EB2A1B4E2E6B7E7D16EE521A436"
+        },
+        {
+          "module": "CMCommonCoefficientAuxiliary",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMCommonCoefficientAuxiliary.lean",
+          "sha256": "8D60C9C828070951B85064961709680E1A46CA4F5A62E6A68BA70594528D7634",
+          "oleanSha256": "88D65DFC96003F443E13720F465D9627BC9E1ACBFFB01BD9293D8CE9415622A0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.commonCoefficientField",
+        "Dubon2026.commonCoefficientFieldFinite",
+        "Dubon2026.commonCoefficientField_contains",
+        "Dubon2026.commonCoefficientEmbedding",
+        "Dubon2026.commonCoefficientEmbedding_coe",
+        "Dubon2026.commonCoefficientEmbeddingEquiv",
+        "Dubon2026.commonCoefficientField_exists_local_structure",
+        "Dubon2026.CMSourceIntegralWeightProperties",
+        "Dubon2026.cmSourceIntegralWeight_properties",
+        "Dubon2026.cmCommonCoefficientWeight_exists",
+        "Dubon2026.CMSourceAuxiliaryWeightProperties",
+        "Dubon2026.cmSourceAuxiliaryWeight_properties",
+        "Dubon2026.cmCommonCoefficientAuxiliary_exists"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.commonCoefficientFieldFinite",
+        "Dubon2026.commonCoefficientField_contains",
+        "Dubon2026.commonCoefficientEmbedding_coe",
+        "Dubon2026.commonCoefficientField_exists_local_structure",
+        "Dubon2026.cmSourceIntegralWeight_properties",
+        "Dubon2026.cmCommonCoefficientWeight_exists",
+        "Dubon2026.cmSourceAuxiliaryWeight_properties",
+        "Dubon2026.cmCommonCoefficientAuxiliary_exists"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.commonCoefficientField",
+        "Dubon2026.commonCoefficientEmbedding",
+        "Dubon2026.commonCoefficientEmbeddingEquiv",
+        "Dubon2026.CMSourceIntegralWeightProperties",
+        "Dubon2026.CMSourceAuxiliaryWeightProperties"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\CommonCoefficientAudit6.log",
+      "logSha256": "3C0F922466F29A2E3BB83AE62D85A2E9FA6EE06E09174F56160DAF4FAF732E85",
+      "auditSha256": "8D6CFE8D5BD59BA40BBE746606B67CD62D6B4DC23179B0B9E21BED9C8A149B8B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 32,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\CommonAuxiliaryDependencyAudit.log",
+      "dependencyAuditSha256": "79B01E815144475C8756DECD1937AE9F8A8874013A0A858C987E8F59D91DFEF3",
+      "dependencyAuditSourceSha256": "843603B4D3433BD978164EAD69CE720A8CCE245A91F14DBE19300985B8936D8E",
+      "consumer": "Dubon2026.cmCommonCoefficientAuxiliary_exists",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 / Geraghty Definitions 2.2.1 and 2.2.3 -> adequate finite common local field and original continuous integral tensor coefficients in actual unitary auxiliary automorphic modules.",
+      "discharged": "Adjoining the images of a finite rational basis under every original number-field embedding in the algebraic closure constructs an actual finite common coefficient field. Basis expansion proves adequacy for every entire embedding, and the original embedding equivalence is explicit. Existing spectral norm, finite-extension local-field and valuation-extension proofs give an actual local field extending the original rational prime completion. The final common-field consumer derives nonzero finite-free dominant integral tensor coefficients with continuous original unitary action and the original auxiliary module comparison: finite freeness over the actual quotient group ring, exact unnormalized weighted-trace coinvariants, nonzero upper and lower forms before localization, and continuous original small-level action. No common-field adequacy, coefficient lattice, nonzero coefficient/form witness or continuous representation is supplied.",
+      "boundary": "Scratch assembly only; production is frozen at 4,832 modules during canonical verification. Full highest-weight identification, prescribed source unitary fields/forms and remaining local choices, actual modular residual Galois representation and image bounds, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain open. Nonzeroness is before Hecke localization. DUB-17-20 remain open; acceptance is 16/20.",
+      "reuse": "Native finite algebraic adjoining, finite field-embedding index, rational basis expansion, and existing original spectral norm/local-field/valuation-extension results. Current TauCeti Weyl sources were reviewed at 6320487e0e3d2803bf553a49913a18563fcd396e; they do not directly identify the literal integral induction. No new external proof code adopted.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\highest-weight-reuse-review-20261019.json",
+      "reuseReviewSha256": "867CFFBD9A2DEAC9039F3AFEA122E554BA4E78C98DBFC1A263A4678EA910DF21",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "date": "2026-10-19 America/Vancouver",
+      "modules": [
+        "IntegralDominantVectorTranspose",
+        "IntegralWeightLongestPermutation",
+        "IntegralDominantHighestVector",
+        "IntegralHighestWeightAction",
+        "IntegralHighestTensor",
+        "CMSourceHighestTensor"
+      ],
+      "files": [
+        {
+          "module": "IntegralDominantVectorTranspose",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantVectorTranspose.lean",
+          "sha256": "8E45583A17FFFFE53EEFDEF9581099DFC902B2057AF41604E6F2FB0507488F88",
+          "oleanSha256": "A0F4B32F7F831AE32F744413DDFA6B820DC5268060DAC85D5C7F444A7FF7D31C"
+        },
+        {
+          "module": "IntegralWeightLongestPermutation",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralWeightLongestPermutation.lean",
+          "sha256": "E315F3D3F04C5DEACBBC8952243FF033BBC9F9144E5B3FD17D3B043190525F53",
+          "oleanSha256": "B71D397B9550C1047BCF8B23EBD485639A334709991061C4FDD9B978F038F8EA"
+        },
+        {
+          "module": "IntegralDominantHighestVector",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralDominantHighestVector.lean",
+          "sha256": "A101B8EFFC6B1A559267AF02F1A21244962D04ED29BEA09268C8471EC7E202D9",
+          "oleanSha256": "E1AF818894914F5EA4CAE1C14C38FC8BC76E32066608E8CCC460A2B038C66C33"
+        },
+        {
+          "module": "IntegralHighestWeightAction",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralHighestWeightAction.lean",
+          "sha256": "487BFF2055985B5513425A0E20C6931A37705CCBDA6189E613F8F9BAE7A565AA",
+          "oleanSha256": "A3A433B6318FC611FBFCF5C3F29CE79B3F3C36CB88CED84E68F35EB8BBB0BD09"
+        },
+        {
+          "module": "IntegralHighestTensor",
+          "path": "E:\\Lean\\.tmp\\dubon83\\IntegralHighestTensor.lean",
+          "sha256": "5D151888EC4803D04CFD284835F6D00656225822020B7D84E236BDCF7428C8F1",
+          "oleanSha256": "EC1D31FA1791A231A63618231D1A3AD19ADD3A3543F2FB767541A98E7E760433"
+        },
+        {
+          "module": "CMSourceHighestTensor",
+          "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceHighestTensor.lean",
+          "sha256": "9AF7FC683502B8D07A899E03B49C6815F9164CBD1F8534E8DBEE3A7CFBAE13C2",
+          "oleanSha256": "D74249D87BDC72DCA9EA41FEFB72CF0D427400D20F6AD1136C0BCC1C95757D0A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.integralWeightTranspose",
+        "Dubon2026.integralWeightTranspose_involutive",
+        "Dubon2026.integralWeightTranspose_det",
+        "Dubon2026.integralWeightTranspose_mul",
+        "Dubon2026.integralInducedFundamentalVector_eval_transpose",
+        "Dubon2026.integralDominantInducedVector_eval_transpose",
+        "Dubon2026.integralDominantInducedVector_right_transpose_borel",
+        "Dubon2026.integralWeightLongest",
+        "Dubon2026.integralWeightLongest_val",
+        "Dubon2026.integralWeightLongest_mul_self",
+        "Dubon2026.integralWeightLongest_mul",
+        "Dubon2026.integralWeightLongest_mul_right",
+        "Dubon2026.integralWeightLongest_conjugate",
+        "Dubon2026.integralWeightLongestBorel",
+        "Dubon2026.integralWeightLongestBorel_diagonal",
+        "Dubon2026.integralWeightLongestBorel_character",
+        "Dubon2026.integralWeightLongest_map",
+        "Dubon2026.integralDominantHighestRegular",
+        "Dubon2026.integralDominantHighestRegular_mem",
+        "Dubon2026.integralDominantHighestRegular_eval",
+        "Dubon2026.integralDominantHighestRegular_longest",
+        "Dubon2026.integralDominantHighestRegular_right_borel",
+        "Dubon2026.integralDominantHighestVector",
+        "Dubon2026.integralDominantHighestVector_ne_zero",
+        "Dubon2026.integralDominantInduced_exists_highestVector",
+        "Dubon2026.integralWeightBorelBaseChange",
+        "Dubon2026.integralWeightBorelBaseChange_diagonal",
+        "Dubon2026.integralWeightBorelBaseChange_character",
+        "Dubon2026.integralDominantHighestVector_action",
+        "Dubon2026.integralHighestEvaluation",
+        "Dubon2026.integralHighestEvaluation_vector",
+        "Dubon2026.integralHighestTensor",
+        "Dubon2026.integralHighestTensorEvaluation",
+        "Dubon2026.integralHighestTensorEvaluation_vector",
+        "Dubon2026.integralHighestTensor_ne_zero",
+        "Dubon2026.integralHighestTensor_action",
+        "Dubon2026.cmSourceIntegralWeight_exists_highestTensor"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.integralWeightTranspose_involutive",
+        "Dubon2026.integralWeightTranspose_det",
+        "Dubon2026.integralWeightTranspose_mul",
+        "Dubon2026.integralInducedFundamentalVector_eval_transpose",
+        "Dubon2026.integralDominantInducedVector_eval_transpose",
+        "Dubon2026.integralDominantInducedVector_right_transpose_borel",
+        "Dubon2026.integralWeightLongest_val",
+        "Dubon2026.integralWeightLongest_mul_self",
+        "Dubon2026.integralWeightLongest_mul",
+        "Dubon2026.integralWeightLongest_mul_right",
+        "Dubon2026.integralWeightLongest_conjugate",
+        "Dubon2026.integralWeightLongestBorel_diagonal",
+        "Dubon2026.integralWeightLongestBorel_character",
+        "Dubon2026.integralWeightLongest_map",
+        "Dubon2026.integralDominantHighestRegular_mem",
+        "Dubon2026.integralDominantHighestRegular_eval",
+        "Dubon2026.integralDominantHighestRegular_longest",
+        "Dubon2026.integralDominantHighestRegular_right_borel",
+        "Dubon2026.integralDominantHighestVector_ne_zero",
+        "Dubon2026.integralDominantInduced_exists_highestVector",
+        "Dubon2026.integralWeightBorelBaseChange_diagonal",
+        "Dubon2026.integralWeightBorelBaseChange_character",
+        "Dubon2026.integralDominantHighestVector_action",
+        "Dubon2026.integralHighestEvaluation_vector",
+        "Dubon2026.integralHighestTensorEvaluation_vector",
+        "Dubon2026.integralHighestTensor_ne_zero",
+        "Dubon2026.integralHighestTensor_action",
+        "Dubon2026.cmSourceIntegralWeight_exists_highestTensor"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.integralWeightTranspose",
+        "Dubon2026.integralWeightLongest",
+        "Dubon2026.integralWeightLongestBorel",
+        "Dubon2026.integralDominantHighestRegular",
+        "Dubon2026.integralDominantHighestVector",
+        "Dubon2026.integralWeightBorelBaseChange",
+        "Dubon2026.integralHighestEvaluation",
+        "Dubon2026.integralHighestTensor",
+        "Dubon2026.integralHighestTensorEvaluation"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\HighestTensorAudit6.log",
+      "logSha256": "372F97E6959EA5B6626537326580B08BEC5C144776945E8593C1CF3BD97B21F7",
+      "auditSha256": "C523F8E4102935EB4B35C4C18AEF96D4A7C1FDFF932FEE1C86BC0DFC6B7D8B0B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 41,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\HighestTensorDependencyAudit.log",
+      "dependencyAuditSha256": "2D79A3B98309B2243B42003B57D2A0165959D5E0914A9CD53383AD5A37196DA1",
+      "dependencyAuditSourceSha256": "57C8D54408B802539F0B2DC8481D8D5A63002FAC5EAFBAC381478F62C9C8928F",
+      "consumer": "Dubon2026.cmSourceIntegralWeight_exists_highestTensor",
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 original integral highest-weight coefficient module -> actual nonzero highest vector and exact source arithmetic character.",
+      "discharged": "The literal dominant minor vector is transpose invariant, giving its opposite-Borel right character from the proved source covariance. Native longest permutation matrices give an actual highest vector with the precise original upper-Borel character over every coefficient algebra and evaluation one at the longest matrix. Generic-matrix evaluation proves the corresponding eigenvector identity in the original integral induced representation. Native tensor duality constructs an actual functional evaluating the highest pure tensor to one, proving it nonzero. The source arithmetic consumer gives this normalized highest tensor in the same original coefficient module and its exact product character on original unitary elements whose constructed embedding matrices lie in the upper Borels. No highest-vector witness, replacement representation or coefficient map is supplied.",
+      "boundary": "Scratch assembly only; production is frozen at 4,832 modules during canonical verification. Highest-vector existence and exact source action are proved; uniqueness of its line, generation and irreducibility are not. Prescribed source unitary fields/forms and remaining local choices, actual modular residual Galois representation and image bounds, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain open. DUB-17-20 remain open; acceptance is 16/20.",
+      "reuse": "Native permutation-matrix homomorphism, finite multilinear scalar identity, and tensor duality; original regular-function covariance and generic evaluation. No new external proof code.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "commentAlignments": [
+    {
+      "module": "Dubon2026.GeneralLinearIntegralPolynomialStages",
+      "beforeSha256": "F5A2A02A110A60F95FAFB71527D23AA6B6011DF5557E04C1B57BD4CF6550FDC9",
+      "afterSha256": "787AD6787ACDFBE1D9352DB7E76D6D5E9863A78785C5E143082C61CB9150CC42",
+      "change": "Module documentation only; proof statements and terms unchanged."
+    },
+    {
+      "module": "Dubon2026.CMIntegralInducedTensorAction",
+      "beforeSha256": "9FF6B05BDD108B78116619328B4E0C4908F08AE1947970ECB2050D50D50228BB",
+      "afterSha256": "F796778628A467CD14216678536C9F9DD3755C7FCD812C36874050BE1CCFB7C9",
+      "change": "Module documentation only; proof statements and terms unchanged."
+    },
+    {
+      "module": "Dubon2026.CMIntegralInducedAuxiliaryComparison",
+      "beforeSha256": "6EE1DD4A98C49D38EB0448A95042175CF9A5512EA541F0616859C7B611D589E2",
+      "afterSha256": "A2907794EE8FBAE44F7FBAC66219A01060EAB0A8C48B0BEA1A6A4301B3156D0C",
+      "change": "Module documentation only; proof statements and terms unchanged."
+    },
+    {
+      "module": "Dubon2026.CMSourceIntegralWeight",
+      "beforeSha256": "7D9DDF97E12BAE267A8028823D5C2714359FD63CA43F2AD278A879D0E176BADC",
+      "afterSha256": "BD69AC17F6DC6110359AF2975472DC960410B0DD520B35F05B55779CE008421A",
+      "change": "Module documentation only; proof statements and terms unchanged."
+    }
+  ],
+  "review": "Tools/highest-weight-reuse-review-20261019.json",
+  "productionFocusedReceipt4860": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\CoefficientAuxiliaryProductionDependencyAudit4860.log",
+        "sha256": "5BF719F738C7E46CFFDC2C746A376452B67C993988B0794E59CE5EE162524109",
+        "requiredProofValueEdges": 38,
+        "consumer": "Dubon2026.cmCommonCoefficientAuxiliary_exists"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\HighestTensorProductionDependencyAudit4860.log",
+        "sha256": "2D79A3B98309B2243B42003B57D2A0165959D5E0914A9CD53383AD5A37196DA1",
+        "requiredProofValueEdges": 13,
+        "consumer": "Dubon2026.cmSourceIntegralWeight_exists_highestTensor"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\CoefficientRealizationProductionAudit4860.log",
+    "sha256": "A405B5EE1147D8CB7EC949D1770B0CC650D365D9953C7CE502DD04B49224C0AE",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\coefficient-realization-production-4860-build.log",
+    "aggregateSha256": "836E90289FC7AABBD951AE034BFC4CA1314F0F62D53A95AA188E38F766016181",
+    "productionModules": 4860,
+    "incrementModules": 28,
+    "axiomChecks": 101,
+    "exhaustiveIncrementTheorems": 135,
+    "linterScopes": 28,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed."
+  },
+  "receipt4860": {
+    "recordedUTC": "2026-10-20T08:21:16.143804+00:00",
+    "log": "logs/dubon-build-20261020-001000-560.log",
+    "sha256": "25588B7471B21A4FA24ED73D6C903D9313767D4B509F73B0707F928808C2D967",
+    "bytes": 8289999,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4860,
+    "projectTheorems": 34285,
+    "registeredConsumers": 14632,
+    "registeredConstructions": 415,
+    "declarations": 20447,
+    "generated": 19247,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_000621.log",
+    "foundationSha256": "3CC2DB2628A32FFA9B948DF852BD0C91255DAD218473C9AB1B6C2432F0A5257A",
+    "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. Highest-vector existence and its exact source action are proved; uniqueness of the highest line, generation and irreducibility remain open. Nonzeroness of the auxiliary forms is before prescribed Hecke localization. The actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain unresolved. No root pin or proof limit changed."
+  }
+}

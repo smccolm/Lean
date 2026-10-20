@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> coefficient-field arithmetic through finite integral original Hecke algebra -> injective, Hecke-adjoint actual period pairing on finite integral modular symbols.",
+  "revision": "199786c594817a82fdd2fab04d3ae4cc5eb837d5",
+  "externalSources": [
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean",
+      "gitBlob": "839f898499d7ac55a75a6d40fbd55e2056ae86da",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+        "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean"
+      ],
+      "characters": 8052,
+      "sha256": "52DC9C7A724628298B6781112E9A6354F29636B2A544B02FBF8DF462AED75C04",
+      "bytes": 8339
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean",
+      "gitBlob": "8eecbe587baa0c174c96f90c223f601297468dd9",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+        "TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean"
+      ],
+      "characters": 12122,
+      "sha256": "4A3AC9A68FCB8501E198195838F8416E4DC2D9FDA8CFF4AB51545C4C1C2732E8",
+      "bytes": 12958
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean",
+      "gitBlob": "5b6597498fefd16f8872930fe33fe0e4e1e772aa",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean",
+        "TauCeti/Analysis/Complex/Periodic.lean",
+        "TauCeti/MeasureTheory/Integral/ExpDecay.lean"
+      ],
+      "characters": 11618,
+      "sha256": "59CFAA79690C8FC42145B77DC0854E1F73CD825F200DC3E6441BCA748B4B3E83",
+      "bytes": 12232
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean",
+      "gitBlob": "359f4d351e0136a1bf47b296d2e44d4a4ca6f023",
+      "imports": [],
+      "characters": 8807,
+      "sha256": "AD6B3DC51F107115B5F2CB0A0DBC0FE9AA9BA87A9A72BF5CA589826FADB1FD1E",
+      "bytes": 9076
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean",
+      "gitBlob": "5a98805258bc699d9f4f315d15f53f06771fbb15",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/QExpansion/Basic.lean"
+      ],
+      "characters": 17305,
+      "sha256": "1E5B7DB0526B7120361DA354D99C1CB9CF936F96A046E8590E77AF43188B1460",
+      "bytes": 17871
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/Periodic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/Periodic.lean",
+      "gitBlob": "168869747ed81f8d05658bf50ef3e0eb6b4394b8",
+      "imports": [],
+      "characters": 6453,
+      "sha256": "838FF5199AA79F91AA3478C458C1AEE8111E74E826A94C70F9D60BC45C9B7665",
+      "bytes": 6661
+    },
+    {
+      "path": "tau-period/TauCeti/MeasureTheory/Integral/ExpDecay.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Integral/ExpDecay.lean",
+      "gitBlob": "35f266022c61e32612448d143c787cb9fa6739ee",
+      "imports": [
+        "TauCeti/MeasureTheory/Integral/Bochner/Basic.lean"
+      ],
+      "characters": 7198,
+      "sha256": "3034B4163E73781D126AC8079CD424C17693306C369640D35D8495719D46BF68",
+      "bytes": 7438
+    }
+  ],
+  "license": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\arithmetic-reuse-20261020\\TauCeti-LICENSE.txt",
+    "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+    "license": "Apache-2.0"
+  },
+  "precedingScratchReceipt": "E:\\Lean\\.tmp\\dubon83\\source-actual-period-12-scratch-receipt.json",
+  "precedingScratchReceiptSha256": "81F419E5C4AC69C96090429BEDB96E072474B1803B952A4BA31383D49DA92A29",
+  "localReuse": [
+    "Actual original convergent periods and finite integral symbols",
+    "Native ModularForm.isZero_of_neg_weight and eq_const_of_weight_zero",
+    "Native Tannery dominated convergence for vanishing Eichler series",
+    "Existing original cuspHeckeLinear operators"
+  ],
+  "deferred": [
+    "Eichler coefficient identification and standalone linearity API",
+    "Full external rational Hecke and Gamma1 framework"
+  ],
+  "discharged": "The actual original Gamma0 period map is injective for every weight k >= 2. The constructed Eichler q-series equals its convergent vertical integral, obeys the exact period transformation and recovers the cusp form by differentiation. Vanishing periods make it a modular form of weight 2-k vanishing at all cusps; native nonpositive-weight vanishing then forces zero. The original Hecke-integrality consumer derives injectivity rather than accepting it as a premise.",
+  "remaining": "Integral adjoint endomorphisms for the original Hecke operators and their actual adjointness identity remain explicit premises. Modular residual Galois representation and image bounds, prescribed CM/unitary fields/forms and local choices, prescribed nonzero Hecke localization/Galois realization, crystalline and Selmer dimensions, R=T and higher symmetric-power automorphy remain open. Acceptance stays 16/20; DUB-17-20 open.",
+  "production": "Scratch only, excluded from the frozen 4,922-module canonical verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power automorphy -> BLGG potential automorphy / unitary patching -> actual algebraic coefficient representation -> irreducibility via complete reducibility and the unique unipotent invariant line. -> identification of the literal integral induced lattice and its original generic fibre.",
+  "externalProofCodeAdopted": false,
+  "localReuse": [
+    "Original generic-matrix evaluation and naturality, all-algebra induced covariance",
+    "Original normalized highest-line uniqueness; no new trailing-minor expansion",
+    "Original induced differential and actual highest-vector Lie generation",
+    "Pinned polynomial coefficient injectivity and determinant-localization injectivity",
+    "Pinned IsLocalizedModule.injective_of_map_eq and isLocalizedModule_iff_isBaseChange",
+    "Pinned LinearMap.liftBaseChange and its exact range",
+    "Original arithmetic coefficient embedding index and native fraction-field instance for its valuation ring"
+  ],
+  "routeDecision": "Evaluate original coordinates at the new generic matrix. This preserves actual covariance and the original infinitesimal/group actions. Highest-character normalization identifies the same highest vector without a new minor calculation. The field span of the integral image is actually Lie invariant; original highest-vector generation makes it the whole field module. Native module localization proves injectivity of the literal fraction-field tensor map. Thus neither a general flat coordinate-algebra equalizer theory nor a coordinate-algebra tensor presentation is needed.",
+  "discharged": "Each original integral source-induced factor has exactly the original field induction as its generic fibre through its actual coefficient map. The constructed linear equivalence preserves every pure tensor, the actual highest vector and every integral group operator. The final consumer uses the actual source embedding index and derives native irreducibility of the field factor; it supplies no comparison, generation, Lie stability or irreducibility witness.",
+  "remaining": "The full original embedding-tensor generic-fibre comparison and all source arithmetic/automorphy obligations remain open. Acceptance remains 16/20; DUB-17-20 remain open.",
+  "production": "Scratch only; excludes frozen 4,887-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

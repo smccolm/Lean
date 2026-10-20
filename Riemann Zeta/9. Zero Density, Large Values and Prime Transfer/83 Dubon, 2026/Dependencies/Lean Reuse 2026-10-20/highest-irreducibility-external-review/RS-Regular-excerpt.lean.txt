@@ -1,0 +1,85 @@
+import RSCounterexample.GLRep.Borel.Induced
+import RSCounterexample.FlagVarieties.LineBundle.Model
+import TauCeti.Algebra.AlgebraicGroup.GeneralLinear.Coordinate.HopfAlgebra
+
+/-!
+# The regular representations of `GL_n` on its coordinate ring
+
+Let `𝒪(G) = K[x_ij][det⁻¹]` be the coordinate ring of `G = GL_n` over a commutative ring `K`
+(Tau Ceti's `TauCeti.GeneralLinear.CoordinateRing`, here `FlagVarieties.GLCoord K n`). An invertible
+matrix `g ∈ GL_n(K)` acts on `𝒪(G)` by K-algebra automorphisms in two commuting ways:
+
+* **left translation** `(g · f)(x) = f(g⁻¹ x)` (`GLRep.leftTranslHom`), substituting `g⁻¹ X` for
+  the generic matrix `X`;
+* **right translation** `(g · f)(x) = f(x g)` (`GLRep.rightTranslHom`), substituting `X g`.
+
+These are the representations `GLRep.leftRegularRep` and `GLRep.rightRegularRep` of `GL_n(K)`.
+
+**Rationality.** Restricted to the Borel subgroup `B`, every matrix coefficient of the left
+regular representation is a regular function on `B`
+(`GLRep.hasLocalCoeffsIn_leftRegularRep_borel`): `x_ij` is sent to `∑_k (b⁻¹)_ik x_kj` and
+`det⁻¹` to `det(b) det⁻¹`.
+
+**Sections.** For an ideal `I ⊆ 𝒪(G)` stable under left and right translations by `B` (for
+instance the ideal of the preimage in `G` of a `B`-stable closed subscheme of `G/B`) and a
+weight `η ∈ ℤⁿ`, the semi-invariants
+
+  `(𝒪(G)/I)^{(B, η)} = {f | f(x b) = η(b)⁻¹ f(x) for all b ∈ B}`
+
+(`GLRep.borelSemiInvariants`) form a representation of `B` by left translation
+(`GLRep.borelSemiInvariantRep`). This is the representation of `B` on the sections of the line
+bundle `𝓛(η)` over the subscheme, in the conventions of
+`RSCounterexample.FlagVarieties.Modules.Character`. When it is finite-dimensional it is rational
+(`GLRep.isRationalBorelRep_borelSemiInvariantRep`).
+-/
+
+namespace GLRep
+
+open MvPolynomial TauCeti
+
+noncomputable section
+
+/-! ### Linear substitutions of the generic matrix -/
+
+section Subst
+
+variable {K : Type*} [CommRing K] {n : ℕ}
+
+/-- The substitution `f(X) ↦ f(M X)` of the generic matrix `X`. -/
+def leftSubst (M : Matrix (Fin n) (Fin n) K) :
+    MvPolynomial (Fin n × Fin n) K →ₐ[K] MvPolynomial (Fin n × Fin n) K :=
+  aeval fun p => ∑ k, M p.1 k • X (k, p.2)
+
+/-- The substitution `f(X) ↦ f(X M)` of the generic matrix `X`. -/
+def rightSubst (M : Matrix (Fin n) (Fin n) K) :
+    MvPolynomial (Fin n × Fin n) K →ₐ[K] MvPolynomial (Fin n × Fin n) K :=
+  aeval fun p => ∑ k, M k p.2 • X (p.1, k)
+
+@[simp]
+theorem leftSubst_X (M : Matrix (Fin n) (Fin n) K) (i j : Fin n) :
+    leftSubst M (X (i, j)) = ∑ k, M i k • X (k, j) :=
+  aeval_X _ _
+
+@[simp]
+theorem rightSubst_X (M : Matrix (Fin n) (Fin n) K) (i j : Fin n) :
+    rightSubst M (X (i, j)) = ∑ k, M k j • X (i, k) :=
+  aeval_X _ _
+
+theorem leftSubst_one : leftSubst (1 : Matrix (Fin n) (Fin n) K) = AlgHom.id K _ := by
+  apply MvPolynomial.algHom_ext
+  rintro ⟨i, j⟩
+  simp [Matrix.one_apply]
+
+theorem rightSubst_one : rightSubst (1 : Matrix (Fin n) (Fin n) K) = AlgHom.id K _ := by
+  apply MvPolynomial.algHom_ext
+  rintro ⟨i, j⟩
+  simp [Matrix.one_apply]
+
+theorem leftSubst_mul (M N : Matrix (Fin n) (Fin n) K) :
+    leftSubst (M * N) = (leftSubst N).comp (leftSubst M) := by
+  apply MvPolynomial.algHom_ext
+  rintro ⟨i, j⟩
+  simp only [leftSubst_X, AlgHom.comp_apply, map_sum, map_smul, Matrix.mul_apply,
+    Finset.sum_smul, Finset.smul_sum, smul_smul]
+  exact Finset.sum_comm
+

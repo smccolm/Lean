@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> BLGG Section 3.2 / Geraghty Definitions 2.2.1 and 2.2.3 -> original integral highest-weight embedding tensor and its actual unitary auxiliary comparison.",
+  "sourceReference": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\blgg-sato-tate-0912.1054v2.txt",
+    "sha256": "56D81E7F8C2634D282F5ACF39CEBB039A9D86748CFBDC65DC1B01CD4D9E3A4C9",
+    "url": "https://arxiv.org/abs/0912.1054v2",
+    "section": "3.2",
+    "contract": "The specified finite-free continuous integral coefficient module is the original embedding tensor of the irreducible algebraic highest-weight factors, with the actual unitary action."
+  },
+  "externalProofCodeAdopted": false,
+  "localReuse": [
+    "Pinned Basis.baseChange and its original pure-tensor coordinate formula",
+    "Pinned Basis.piTensorProduct and its original product coordinate formula",
+    "Pinned PiTensorProduct.congr and its original pure-tensor formula",
+    "Constructed original factor generic-fibre equivalences and actual group action comparisons",
+    "Original source embedding matrix maps and highest tensor",
+    "Actual adequate common-field construction, continuous finite-free coefficient tensor and original auxiliary comparison"
+  ],
+  "routeDecision": "Native tensor bases give the literal finite tensor base-change equivalence. Its proved pure-tensor formula removes dependence of the identification on the chosen bases. The tensor of actual factor equivalences then gives precisely the original field coefficient tensor and its original arithmetic action. Each factor is proved finite dimensional and irreducible with the exact source highest-weight Borel character. BLGG Section 3.2 specifies this tensor of irreducible factors; an independent general product-group tensor-irreducibility framework is deferred unless an exact later consumer requires it. This is a route adjustment preserving the full source contract, not a weaker coefficient model.",
+  "discharged": "The constructed adequate finite common local field supplies the exact source integral highest-weight coefficient tensor. Its literal generic fibre is the tensor of the original finite-dimensional irreducible field factors of the precise weights. The comparison preserves the normalized highest tensor and every actual unitary action operator. The same source consumer retains finite freeness, nonzeroness and continuity of the original integral coefficient module, and the original auxiliary quotient-group-ring and unnormalized trace comparison. No coefficient-identification, highest-vector, group/Lie invariance, irreducibility or base-change witness is supplied.",
+  "remaining": "Actual modular residual Galois representation and source image bounds, prescribed unitary fields/forms and remaining local choices, nonzero prescribed Hecke localization and Galois realization, crystalline/Selmer dimensions, R=T and higher symmetric-power automorphy continuation remain open. Auxiliary-form nonzeroness is before prescribed Hecke localization. Acceptance remains 16/20; DUB-17-20 remain open.",
+  "production": "Scratch only; excludes frozen 4,887-module production verification.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

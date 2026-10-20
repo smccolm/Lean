@@ -6,8 +6,9 @@ The index is the set of original embeddings inducing the prescribed
 coefficient places. The local integer maps are constructed from their
 completion extensions, and finite freeness is proved for the literal
 integral induced tensor over the original local coefficient integer ring.
-The source existence and adequacy of the common coefficient field and
-the prescribed places are not asserted by this construction.
+CommonCoefficientLocalField constructs an adequate finite common local field,
+consumed by CMCommonCoefficientAuxiliary. Prescribed unitary fields/forms
+and remaining local choices remain separate source obligations.
 -/
 
 namespace Dubon2026

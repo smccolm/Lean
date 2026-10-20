@@ -1,0 +1,1507 @@
+{
+  "revision": "199786c594817a82fdd2fab04d3ae4cc5eb837d5",
+  "leanToolchain": "leanprover/lean4:v4.36.0-rc1",
+  "target": "TauCeti/NumberTheory/ModularForms/HeckeSlash/Finite.lean",
+  "files": [
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Finite.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Finite.lean",
+      "gitBlob": "9df73ba8ea98887349a764c854ddba43518878b5",
+      "imports": [
+        "TauCeti/LinearAlgebra/Dual/FiniteAlgebra.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean"
+      ],
+      "characters": 6931,
+      "sha256": "715743313FC751636266EA064D9CF5766A9EA2E2C570D566A64D301B2032CA54",
+      "bytes": 7194
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+      "gitBlob": "1b59a67e3c8b2943db3ce945d77f73dfb29dc760",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean"
+      ],
+      "characters": 6119,
+      "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD",
+      "bytes": 6418
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean",
+      "gitBlob": "839f898499d7ac55a75a6d40fbd55e2056ae86da",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+        "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean"
+      ],
+      "characters": 8052,
+      "sha256": "52DC9C7A724628298B6781112E9A6354F29636B2A544B02FBF8DF462AED75C04",
+      "bytes": 8339
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Dual/FiniteAlgebra.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Dual/FiniteAlgebra.lean",
+      "gitBlob": "bc36d013b36b0ccbe8309f8c1c2808b89d002598",
+      "imports": [],
+      "characters": 4205,
+      "sha256": "07726BC2E895327F8E1C159385FFBA3C0A9D0E5E4219C3FD68F1DF367C3CBAAC",
+      "bytes": 4272
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean",
+      "gitBlob": "2637371ac3f65f180e8d06b2cd10a79ec0b40d12",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Operators.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Diamond.lean"
+      ],
+      "characters": 7307,
+      "sha256": "29CB759CB8E2CD9C8DD094874409CC5A0A427F761F8C0CFFAF14508149471C05",
+      "bytes": 7585
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Pairing.lean",
+      "gitBlob": "755afb3f4d195d9b31dc5467590f95fcd03c5ae0",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean"
+      ],
+      "characters": 6988,
+      "sha256": "DC15C9AC96C034828B7BD489EB67E4FE17F7FC197E48B5FD97EDAAEE2A144B18",
+      "bytes": 7238
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Transformation.lean",
+      "gitBlob": "8eecbe587baa0c174c96f90c223f601297468dd9",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+        "TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean"
+      ],
+      "characters": 12122,
+      "sha256": "4A3AC9A68FCB8501E198195838F8416E4DC2D9FDA8CFF4AB51545C4C1C2732E8",
+      "bytes": 12958
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean",
+      "gitBlob": "a037c73025e15cd03c77be577a18e7d38ddc94bc",
+      "imports": [],
+      "characters": 12410,
+      "sha256": "BC73FBED221D23BDF1233EB8FAA75FB45ED916E2370F8FE1BBEE0E18CACE03FF",
+      "bytes": 13199
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Operators.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Operators.lean",
+      "gitBlob": "e530e3b4590b1b8109fa6715257a0b85487f5221",
+      "imports": [
+        "TauCeti/Algebra/GroupWithZero/Divisibility.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Prime.lean"
+      ],
+      "characters": 9323,
+      "sha256": "8D94E27EF3CD7920655D7273881B63422DF519FF5655FE45EDBAB334677E4433",
+      "bytes": 9491
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean",
+      "gitBlob": "e1b3e95ff3bd04b3177ec12b35ac4a7fd5e26549",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/DiamondCosets.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean"
+      ],
+      "characters": 7719,
+      "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703",
+      "bytes": 8000
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Diamond.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Diamond.lean",
+      "gitBlob": "57d6a8f8c46fb37345fb0a74547d9eb0b99a2830",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/DiamondCosets.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/CoprimeCosets.lean",
+        "TauCeti/NumberTheory/ModularForms/DiamondOperators.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/CuspRing.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Ring.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Trace.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean"
+      ],
+      "characters": 16872,
+      "sha256": "5C99CD53F8C94211CD8F9991EB9F5A1AC20D8ED4D106D496FB981DDC7264BCBD",
+      "bytes": 17460
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean",
+      "gitBlob": "2c1497985b1196fc18506af64f4d781763c7026f",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/BinaryForms.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean",
+        "TauCeti/RepresentationTheory/Augmentation/Basic.lean",
+        "TauCeti/RingTheory/MvPolynomial/Finrank.lean"
+      ],
+      "characters": 23056,
+      "sha256": "B3026D4FDCDA46D4708105F83C21C9881A5D578BBA863915118057E4807AA359",
+      "bytes": 24501
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+      "gitBlob": "88824b70924070bcd64f94ae7821a769f13ab1d0",
+      "imports": [
+        "TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean",
+        "TauCeti/NumberTheory/ModularForms/BinaryForms.lean",
+        "TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean",
+        "TauCeti/RingTheory/MvPolynomial/Homogeneous.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean"
+      ],
+      "characters": 29152,
+      "sha256": "533369CB0D9491B6252B5454F2CE3F45C0D491507C20C41E594DFD2235AA7E77",
+      "bytes": 30611
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Integral.lean",
+      "gitBlob": "5b6597498fefd16f8872930fe33fe0e4e1e772aa",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean",
+        "TauCeti/Analysis/Complex/Periodic.lean",
+        "TauCeti/MeasureTheory/Integral/ExpDecay.lean"
+      ],
+      "characters": 11618,
+      "sha256": "59CFAA79690C8FC42145B77DC0854E1F73CD825F200DC3E6441BCA748B4B3E83",
+      "bytes": 12232
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean",
+      "gitBlob": "359f4d351e0136a1bf47b296d2e44d4a4ca6f023",
+      "imports": [],
+      "characters": 8807,
+      "sha256": "AD6B3DC51F107115B5F2CB0A0DBC0FE9AA9BA87A9A72BF5CA589826FADB1FD1E",
+      "bytes": 9076
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean",
+      "gitBlob": "46df7d9b183aeda64a77542724efbdafb6c90cc9",
+      "imports": [],
+      "characters": 3302,
+      "sha256": "1E7A88A4840BFBE2F2D5FDF2B019614EAC7A5F1A15E8C05C36B4CA7E9F3DE88B",
+      "bytes": 3329
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/GroupWithZero/Divisibility.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/GroupWithZero/Divisibility.lean",
+      "gitBlob": "faf5e4956b491c93bec3ad055a8a41c82522045c",
+      "imports": [],
+      "characters": 1416,
+      "sha256": "BFC02767DAA1AEA4C2D22C5F524A4BAFA077DE7A410B9254DC361A238356A99C",
+      "bytes": 1435
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Prime.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Prime.lean",
+      "gitBlob": "781ffb4a0fc8cda82ce3e563347dd90f73835cbd",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/CoprimeCosets.lean",
+        "TauCeti/NumberTheory/ModularForms/DiamondOperators.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/DoubleCoset.lean"
+      ],
+      "characters": 8333,
+      "sha256": "E2751BDF0FD6A6491314A31D078B154FEDD95D7013A9639ED0048CFE12CF56E4",
+      "bytes": 8622
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/DiamondCosets.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/DiamondCosets.lean",
+      "gitBlob": "c31aa1b25958c1528a098ed27a989d0596dedb7f",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Associativity.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/Normalizer.lean",
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean"
+      ],
+      "characters": 12250,
+      "sha256": "35D1EEEA62D0443BFDF6906A73F4E0304057B296770A00E027389DC005B7444A",
+      "bytes": 12888
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Composition.lean",
+      "gitBlob": "c3cc3a44904eedf53084e342d5e6eb2690e1f82e",
+      "imports": [
+        "TauCeti/Algebra/BigOperators/Finset/Fiber.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/PairCoset.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean"
+      ],
+      "characters": 20896,
+      "sha256": "846F380F52EBE8C8572A4B4A9C1E46FDAB8D17E860021653C17023283C5A19AC",
+      "bytes": 22299
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/CoprimeCosets.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/CoprimeCosets.lean",
+      "gitBlob": "12540b932864f6d01ab52fce3c05f48c9af7894b",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Adjugate.lean",
+        "TauCeti/Data/ZMod/Divisibility.lean",
+        "TauCeti/Data/ZMod/Units.lean"
+      ],
+      "characters": 22971,
+      "sha256": "13E9A01C3219B117D67D18943853D0A70AB99F05D42DE958E45CFC1FC7757E04",
+      "bytes": 24288
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/DiamondOperators.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/DiamondOperators.lean",
+      "gitBlob": "3d54b6c5a26ec303b7cc6c8268f1f9a267642505",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Units.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean"
+      ],
+      "characters": 29669,
+      "sha256": "B61B24B0FE81D5D412CB8E1140D4E006C0F3A3F9AD6282BB1171DF2C8A4905BA",
+      "bytes": 31329
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/CuspRing.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/CuspRing.lean",
+      "gitBlob": "015a90824cb78773dcb2c53e91ab730e9216200d",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean",
+        "TauCeti/NumberTheory/HeckeRing/Associativity.lean"
+      ],
+      "characters": 3053,
+      "sha256": "49A5394816AC1645472F4040641660E04FDC03E5A06F20DD4EC5E70BD063ECF6",
+      "bytes": 3124
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Ring.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Ring.lean",
+      "gitBlob": "cb9b048a41f7272684ab3e8510719a7d27029a38",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean"
+      ],
+      "characters": 3739,
+      "sha256": "1E70BFF5D48971DE88A991DF8A0C1199067273F759A197BAE94CF361387EB866",
+      "bytes": 3828
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Trace.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Trace.lean",
+      "gitBlob": "e9786bb889ed060c50abccfc6504ab91c37ee387",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Operators.lean",
+        "TauCeti/NumberTheory/HeckeRing/StabConjugation.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Map.lean"
+      ],
+      "characters": 12011,
+      "sha256": "0D929B72FD9DCC66A916EA2D6C33DB93EE273AF8315B06D8310E193D109049D1",
+      "bytes": 12728
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/BinaryForms.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/BinaryForms.lean",
+      "gitBlob": "14681931bc7d09fad4389ef41b862e9848189b14",
+      "imports": [
+        "TauCeti/RingTheory/MvPolynomial/Finrank.lean",
+        "TauCeti/RingTheory/MvPolynomial/Trace.lean"
+      ],
+      "characters": 16850,
+      "sha256": "7EDCB51B2AF0DF31F84CCEE1D88BE45EB7E6121D3E8856A5045CD91B1EDEFB99",
+      "bytes": 17314
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean",
+      "gitBlob": "509079f8c30b2a1df6b4224871916d22f793b789",
+      "imports": [],
+      "characters": 3343,
+      "sha256": "9B9BFCA418F7DEB09C7764B25A05EAD8443ABACE1AE7A67134E9F9097573F016",
+      "bytes": 3557
+    },
+    {
+      "path": "tau-period/TauCeti/RepresentationTheory/Augmentation/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Augmentation/Basic.lean",
+      "gitBlob": "2ebdf4a4d7d4a55c564b7934c59ebf3ed0c695ea",
+      "imports": [
+        "TauCeti/Algebra/MonoidAlgebra/Basis.lean",
+        "TauCeti/RepresentationTheory/FDRep.lean",
+        "TauCeti/RepresentationTheory/Subrepresentation.lean",
+        "TauCeti/RepresentationTheory/Rep/TensorShortExact.lean"
+      ],
+      "characters": 29437,
+      "sha256": "FFFA0E9A84275A6D3D6677D4D9F4B26232F488F99D889370897CBC939B258F35",
+      "bytes": 29713
+    },
+    {
+      "path": "tau-period/TauCeti/RingTheory/MvPolynomial/Finrank.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/MvPolynomial/Finrank.lean",
+      "gitBlob": "5ea72294e7398b1fca9fb6347de9d35a25ca0cfa",
+      "imports": [],
+      "characters": 7367,
+      "sha256": "383CAAAB250A4F25C266739FF2C8F9D812AFA22AA7A79C770A36434F1295B5A6",
+      "bytes": 7573
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/Manifold.lean",
+      "gitBlob": "368cff188e22ef2a030b10a0aee5d440a62166ef",
+      "imports": [
+        "TauCeti/Topology/DiscreteSeparation.lean"
+      ],
+      "characters": 6255,
+      "sha256": "B131261207846D92818EC791D0F90CBEE6A3E69598379A1F0D67E4C33888ED93",
+      "bytes": 6569
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/BetweenCusps.lean",
+      "gitBlob": "01916a9b14ba6060f51407a956d427b6374d1455",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean",
+        "TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean",
+        "TauCeti/NumberTheory/ModularForms/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/ModularGroup.lean",
+        "TauCeti/NumberTheory/ModularForms/Primitive.lean"
+      ],
+      "characters": 29213,
+      "sha256": "0FA472EF16B3FA3A8A74B892A8252C8CCB2A70F36BADBDAF384ADB9C80CD4949",
+      "bytes": 30932
+    },
+    {
+      "path": "tau-period/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/MvPolynomial/Homogeneous.lean",
+      "gitBlob": "9a45cb10212394846987c88e6594de639c4a7f9c",
+      "imports": [],
+      "characters": 8804,
+      "sha256": "305B892A32CD9ED8ECB21B834B8D850D58AF4A4ECEA957EB3C2A830D2FD3F37A",
+      "bytes": 8983
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/EichlerIntegral/Basic.lean",
+      "gitBlob": "5a98805258bc699d9f4f315d15f53f06771fbb15",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/QExpansion/Basic.lean"
+      ],
+      "characters": 17305,
+      "sha256": "1E5B7DB0526B7120361DA354D99C1CB9CF936F96A046E8590E77AF43188B1460",
+      "bytes": 17871
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/Periodic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/Periodic.lean",
+      "gitBlob": "168869747ed81f8d05658bf50ef3e0eb6b4394b8",
+      "imports": [],
+      "characters": 6453,
+      "sha256": "838FF5199AA79F91AA3478C458C1AEE8111E74E826A94C70F9D60BC45C9B7665",
+      "bytes": 6661
+    },
+    {
+      "path": "tau-period/TauCeti/MeasureTheory/Integral/ExpDecay.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Integral/ExpDecay.lean",
+      "gitBlob": "35f266022c61e32612448d143c787cb9fa6739ee",
+      "imports": [
+        "TauCeti/MeasureTheory/Integral/Bochner/Basic.lean"
+      ],
+      "characters": 7198,
+      "sha256": "3034B4163E73781D126AC8079CD424C17693306C369640D35D8495719D46BF68",
+      "bytes": 7438
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/DoubleCoset.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/DoubleCoset.lean",
+      "gitBlob": "2d380365c2cfeaa9355d7d2f5a22aed904541460",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/ModularForm.lean"
+      ],
+      "characters": 6688,
+      "sha256": "4430E664688D6E3495D8CA01FDB91F5839A1C419DA4CD93FC4C16C22C86233D7",
+      "bytes": 6815
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Associativity.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Associativity.lean",
+      "gitBlob": "6abe9794e1a46a8c21d201bf54a333d5bafcff7d",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/One.lean",
+        "TauCeti/GroupTheory/Coset/Basic.lean"
+      ],
+      "characters": 26245,
+      "sha256": "B07DDE87E8C627020028D8378A9F7946C869BE3FBEDCCC1A1A78C06299497C7D",
+      "bytes": 28587
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean",
+      "gitBlob": "61e440b98a2ac3f91f96b9d4ce17e2a5309ee50f",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Basic.lean"
+      ],
+      "characters": 3028,
+      "sha256": "67825458A4B550B9C9D5DEF62048436F6850350B45B192221F4F94F40B4C66B1",
+      "bytes": 3132
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Normalizer.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Normalizer.lean",
+      "gitBlob": "e097c73608a9ca6a1e01961bdc2e490e5afd3a69",
+      "imports": [
+        "TauCeti/GroupTheory/DoubleCoset/Normalizer.lean",
+        "TauCeti/NumberTheory/HeckeRing/Multiplication.lean"
+      ],
+      "characters": 14025,
+      "sha256": "A5AF33CAF9CD71A9EA3604788640B9BAAA3A1DB0B7D91A6FF7516A291CD4576A",
+      "bytes": 14585
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean",
+      "gitBlob": "35328912e76df7d1eccecfdd2219819a7b0b50ad",
+      "imports": [
+        "TauCeti/GroupTheory/Index/Basic.lean",
+        "TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Basic.lean",
+        "TauCeti/Data/Int/ChineseRemainder.lean",
+        "TauCeti/Data/ZMod/Divisibility.lean"
+      ],
+      "characters": 51170,
+      "sha256": "097B36C016D09EBE97269BE45240ED8BF004FF5B8EAE7ED9172902054BFF94D4",
+      "bytes": 53759
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/BigOperators/Finset/Fiber.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/BigOperators/Finset/Fiber.lean",
+      "gitBlob": "369a27b15ed95f964cd5b5997b65898430d79bc8",
+      "imports": [],
+      "characters": 5437,
+      "sha256": "3F7E787C73B6A62030601633299FF2A72CA753203853090CE116A47660282597",
+      "bytes": 5606
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/PairCoset.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/PairCoset.lean",
+      "gitBlob": "8592176e1486d8439c694c50e0f90d0c6ff4216b",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/Multiplicity/Handedness.lean"
+      ],
+      "characters": 10866,
+      "sha256": "D7C4E831DC77C971E1DF262D7577025BDF5D987A8A2E62E8403CC8923199B342",
+      "bytes": 11717
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Basic.lean",
+      "gitBlob": "96e61b9a307b8cca9bc9f4fb679e334a4382f213",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean",
+        "TauCeti/NumberTheory/HeckeRing/Representation.lean",
+        "TauCeti/NumberTheory/ModularForms/ModularSymbols/Basic.lean"
+      ],
+      "characters": 17614,
+      "sha256": "19DCC245E2CA2BF4BB13CD08CF6F23256CA06B40C65DA218AE2065744F7056BB",
+      "bytes": 18842
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/UpperTriCosets.lean",
+      "gitBlob": "3a06c2e74d72f825d7a9f96dfc38ad6d6ff1472d",
+      "imports": [
+        "TauCeti/Data/Int/LinearCongruence.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Diagonal/Coset.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean"
+      ],
+      "characters": 18202,
+      "sha256": "117EED98C5185A20EAD67269EF244384403FF97BF9110386329D16416668C52A",
+      "bytes": 18984
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Adjugate.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Adjugate.lean",
+      "gitBlob": "0044a9e186494c349cc47a27c00ae3af3c673ec9",
+      "imports": [],
+      "characters": 6665,
+      "sha256": "8060E897437FA562BFD42C316CF8560A14068015B54C1FCF3339CC918DAF3735",
+      "bytes": 6755
+    },
+    {
+      "path": "tau-period/TauCeti/Data/ZMod/Divisibility.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/ZMod/Divisibility.lean",
+      "gitBlob": "2480d80c87b0de33387e873558fb0ee9b7e4f524",
+      "imports": [],
+      "characters": 10091,
+      "sha256": "9726B876B8C8CB2E5786E93D1C04AD2FE938744223869667CB3C29BCF2B01B3B",
+      "bytes": 10376
+    },
+    {
+      "path": "tau-period/TauCeti/Data/ZMod/Units.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/ZMod/Units.lean",
+      "gitBlob": "7d881d5ac4f34579a946639a092118945ef63d03",
+      "imports": [
+        "TauCeti/Data/Nat/GCD.lean"
+      ],
+      "characters": 14036,
+      "sha256": "7ED0F752ADA221993EAA071631BC192500134A022FD6EA5AC5954F021900C2BD",
+      "bytes": 14491
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Basic.lean",
+      "gitBlob": "136a062307e8870d13882c901487a0273b65abee",
+      "imports": [
+        "TauCeti/Analysis/Complex/UpperHalfPlane/MoebiusAction.lean"
+      ],
+      "characters": 25500,
+      "sha256": "E182F02E59EFB04903AEAE90CAE646DC5E40464FBF8BD7E7D46C10DB7587FAAE",
+      "bytes": 26721
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Units.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Units.lean",
+      "gitBlob": "8f078db07871a81894535aee3fad90f45aae6d11",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean"
+      ],
+      "characters": 2280,
+      "sha256": "03CE2DBED0025A5D3C5A821A8328ECB9BB632A1EA3F687686A25D32C668E0621",
+      "bytes": 2343
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/SlashActionRat.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/SlashActionRat.lean",
+      "gitBlob": "b737f9f3367f2765e64fe3fa064f9fa2e7fb77a9",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/Basic.lean"
+      ],
+      "characters": 14521,
+      "sha256": "90475AB717384BB62084A798219AEC9E6C44454EA7278DE3D01028B3D7DBB847",
+      "bytes": 15258
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Gamma1.lean",
+      "gitBlob": "be5c6df42116b5d6285078d3b6fb835b18ce3a61",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma1/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/ModularForm.lean"
+      ],
+      "characters": 5062,
+      "sha256": "D281F88247AC0549ADB06D4BF93A9C42AE4A36C2EA844DF77A0B2051041D8D52",
+      "bytes": 5204
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/StabConjugation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/StabConjugation.lean",
+      "gitBlob": "c0da9bf1f4779caf094ba9e4009b373a8deac59f",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Basic.lean",
+        "TauCeti/GroupTheory/DoubleCoset/Basic.lean"
+      ],
+      "characters": 5561,
+      "sha256": "0D1D43AF3E0A5C7CC5A42403350AD55F90752A44736416EA61CDA3CC7A4E8456",
+      "bytes": 5801
+    },
+    {
+      "path": "tau-period/TauCeti/RingTheory/MvPolynomial/Trace.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/MvPolynomial/Trace.lean",
+      "gitBlob": "d16fcc833abfa66e44e9741fdaeba757995e6ff2",
+      "imports": [
+        "TauCeti/RingTheory/MvPolynomial/LinearSubst.lean",
+        "TauCeti/RingTheory/Polynomial/Dickson.lean",
+        "TauCeti/RingTheory/MvPolynomial/Finrank.lean",
+        "TauCeti/LinearAlgebra/Matrix/RationalCanonicalFormFinTwo.lean"
+      ],
+      "characters": 9414,
+      "sha256": "93BA679B47C76BBA1C0ADEFC6FCCBB923E6B0C77312EA38CCF87E8D4580713F6",
+      "bytes": 9576
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/MonoidAlgebra/Basis.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/MonoidAlgebra/Basis.lean",
+      "gitBlob": "231730ec3930c08dc5fc22c35f50c089cfbc8761",
+      "imports": [],
+      "characters": 5300,
+      "sha256": "E4BE408015882672842F4CAC1AD38F3D7123BE9813670E1D376BBEFB14CE62E5",
+      "bytes": 5374
+    },
+    {
+      "path": "tau-period/TauCeti/RepresentationTheory/FDRep.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/FDRep.lean",
+      "gitBlob": "2a48c234000158652171d32900cff42da3008f16",
+      "imports": [
+        "TauCeti/RepresentationTheory/Subrepresentation.lean"
+      ],
+      "characters": 23859,
+      "sha256": "2ED37B93D9F4C22803B4C280B0EC03CC3F1602036DCC40C6EF52BB18D0925CB1",
+      "bytes": 24237
+    },
+    {
+      "path": "tau-period/TauCeti/RepresentationTheory/Subrepresentation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Subrepresentation.lean",
+      "gitBlob": "822f09eeb3d8a5d2d3abac06cb3abd4771f52bd3",
+      "imports": [
+        "TauCeti/RepresentationTheory/Intertwining.lean"
+      ],
+      "characters": 20400,
+      "sha256": "7626E6028BFA4ADC95C8B7561F8F644A1600A928F7BB189FCDEC8716DDF2C286",
+      "bytes": 20862
+    },
+    {
+      "path": "tau-period/TauCeti/RepresentationTheory/Rep/TensorShortExact.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Rep/TensorShortExact.lean",
+      "gitBlob": "caa0bc7a99440eea119b41ef30fd1b093c2fb4c1",
+      "imports": [],
+      "characters": 9718,
+      "sha256": "EA191BF2AD6C72CD55B87B63EBEFC1B7C6E4D3EC0E0D80CF747CB624705416DD",
+      "bytes": 9870
+    },
+    {
+      "path": "tau-period/TauCeti/Topology/DiscreteSeparation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Topology/DiscreteSeparation.lean",
+      "gitBlob": "c26a442bac07817f5602c8cf7471ff5fac4fe000",
+      "imports": [],
+      "characters": 2299,
+      "sha256": "F834F59FE607D0BE0E3FA54DA3DD1E5F5C1EA17E1953F3489FA7FDA1EC20541A",
+      "bytes": 2392
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/GeodesicIntegral/Basic.lean",
+      "gitBlob": "152d0a3a4588a7198bcd44eb6676e6a4b5181fa4",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Basic.lean"
+      ],
+      "characters": 11941,
+      "sha256": "3CE63150F4F25ACC475254F8F462A81F0ABB3711CA234E343027E5275B11F221",
+      "bytes": 12474
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/Primitive.lean",
+      "gitBlob": "76332391191d24d80b1cffd93b9a3c108fba6f41",
+      "imports": [],
+      "characters": 6366,
+      "sha256": "95FDD2AC07E9AC0F0B604319E9771688C1A3204831C6EB594A291D6BB41F6085",
+      "bytes": 6568
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Primitive.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Primitive.lean",
+      "gitBlob": "3409a902913a6bb8e4e2461929aab7fbec9543df",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/Basic.lean"
+      ],
+      "characters": 1836,
+      "sha256": "E9D7AA2E2A2CA8996E909C507D4778FB6A0693E1CF3E0C2605B342956135D51F",
+      "bytes": 1923
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/QExpansion/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/QExpansion/Basic.lean",
+      "gitBlob": "b35130b61b10fcb13545b1b116b89dcfa10a8148",
+      "imports": [
+        "TauCeti/Analysis/Complex/Periodic.lean"
+      ],
+      "characters": 11388,
+      "sha256": "D7920B947E1D5E1FF2D0CCBADEC15B06AE3E7462C32CCA9FDE551921A1D54FF4",
+      "bytes": 11796
+    },
+    {
+      "path": "tau-period/TauCeti/MeasureTheory/Integral/Bochner/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Integral/Bochner/Basic.lean",
+      "gitBlob": "b947ed243f085c69ae5ff2cefb1ba2459c948e9c",
+      "imports": [],
+      "characters": 17328,
+      "sha256": "CA20E8B5F26FB7CCB68D62B600E35279B3341FD64D697BD3094E0CA9A41DD5E2",
+      "bytes": 18114
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/ModularForm.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/ModularForm.lean",
+      "gitBlob": "ac453018a581b0d3c0a64c5f762ac0ba4baed9f8",
+      "imports": [
+        "TauCeti/Algebra/GroupWithZero/Divisibility.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Holomorphic.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Cusps.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Invariance.lean"
+      ],
+      "characters": 7218,
+      "sha256": "03E5AE094A684B5D2471A2297196971DB636BBBA6B531EF314E6B2997F7F37A8",
+      "bytes": 7384
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/One.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/One.lean",
+      "gitBlob": "d883d09c8f48e580186ae590a8027bbb29de69d0",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Multiplication.lean",
+        "TauCeti/NumberTheory/HeckeRing/Multiplicity/Unit.lean"
+      ],
+      "characters": 6108,
+      "sha256": "A9A92700858C1B738A8FC85E66737D09176D827E6FB7A1C595AA79FC3024BDF9",
+      "bytes": 6434
+    },
+    {
+      "path": "tau-period/TauCeti/GroupTheory/Coset/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/GroupTheory/Coset/Basic.lean",
+      "gitBlob": "9dc94a5797fe06e5ddfa94a9318ca57b0addcf71",
+      "imports": [],
+      "characters": 11353,
+      "sha256": "181E027EE0C838C1DFE99B89E0E736A262A3D3FA7A998FD7CA1A6D4864A58025",
+      "bytes": 11675
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Basic.lean",
+      "gitBlob": "0fed3173e889e45dba9339b06236b1c9e3d7dd93",
+      "imports": [
+        "TauCeti/GroupTheory/Index/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/Delta0.lean",
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean"
+      ],
+      "characters": 7286,
+      "sha256": "D4E4AAA8EDF949B9452836B9595ED83D331884A6D1CAD5DD3AAB2E0BB421A116",
+      "bytes": 7656
+    },
+    {
+      "path": "tau-period/TauCeti/GroupTheory/DoubleCoset/Normalizer.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/GroupTheory/DoubleCoset/Normalizer.lean",
+      "gitBlob": "b4c4845457ddccb93bb24781583e5cca7ebfcd1e",
+      "imports": [],
+      "characters": 6350,
+      "sha256": "01D669824FB933C544306C54772BF34E5076D67CC7E7ABC0B8B97E7D28C8AFEE",
+      "bytes": 6659
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Multiplication.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Multiplication.lean",
+      "gitBlob": "23a56bf6eb2c8df20217227e9eb3e7e9fd04b544",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Multiplicity/Support.lean"
+      ],
+      "characters": 9615,
+      "sha256": "1FD8FC578C7FC81974EBBAF1EC9FCA84F47298ED9F2EAE0E7EF2959B1C61A4A7",
+      "bytes": 10349
+    },
+    {
+      "path": "tau-period/TauCeti/GroupTheory/Index/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/GroupTheory/Index/Basic.lean",
+      "gitBlob": "d991237cd83a52bd15479bbc81b08d571bf51810",
+      "imports": [
+        "TauCeti/Algebra/Group/Subgroup/Map.lean"
+      ],
+      "characters": 22328,
+      "sha256": "004F50E8137343B85E13F66274320CEE61D5A2C66444A7D414AF86505194470D",
+      "bytes": 23125
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Basic.lean",
+      "gitBlob": "4a3f4c70f832c9d0229745e46f94eac5caaf8124",
+      "imports": [
+        "TauCeti/Data/ZMod/Units.lean"
+      ],
+      "characters": 28890,
+      "sha256": "820D2F85C201468BE83BA79DCA8D970EB9248077C57900D7C92D537EC5A40204",
+      "bytes": 29584
+    },
+    {
+      "path": "tau-period/TauCeti/Data/Int/ChineseRemainder.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/Int/ChineseRemainder.lean",
+      "gitBlob": "6156391ec06aff810246a4b9314fe93527373bf8",
+      "imports": [],
+      "characters": 2669,
+      "sha256": "C7CC2A39A74BDA3D66F1B0DBBF004DE798073C0A9A5D24DDCA8453C336594CE2",
+      "bytes": 2740
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean",
+      "gitBlob": "927b9640513ec4bf08cd2e56491e705917e0a1b3",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/DoubleCoset.lean"
+      ],
+      "characters": 39817,
+      "sha256": "096AEE29EA18EBE3344DC587F0BFC2B8445E3F4530AC4C14D5AD95FB26D2A0DE",
+      "bytes": 41816
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Handedness.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Multiplicity/Handedness.lean",
+      "gitBlob": "9cf1f2f8712b71c0529b1e3ea4204dd9fe65b922",
+      "imports": [
+        "TauCeti/GroupTheory/DoubleCoset/Inv.lean",
+        "TauCeti/NumberTheory/HeckeRing/Associativity.lean"
+      ],
+      "characters": 4811,
+      "sha256": "15B0A41FE5696E3B015C830CCB0B7C4D191C3EA484B830094577467DBFB5018C",
+      "bytes": 5232
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Representation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Representation.lean",
+      "gitBlob": "0e46fbf09004395b90596723143d0d1e3261bba4",
+      "imports": [
+        "TauCeti/RepresentationTheory/Coset.lean",
+        "TauCeti/NumberTheory/HeckeRing/Basic.lean",
+        "TauCeti/GroupTheory/DoubleCoset/Normalizer.lean"
+      ],
+      "characters": 10636,
+      "sha256": "69762D986FAD6969F3F3F3F9F355855376B4A8734EC742F495CE9035D265BEF7",
+      "bytes": 11574
+    },
+    {
+      "path": "tau-period/TauCeti/Data/Int/LinearCongruence.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/Int/LinearCongruence.lean",
+      "gitBlob": "1717356cb6c4c3498d85be6d4f8dfdbd9a602eff",
+      "imports": [
+        "TauCeti/Data/ZMod/Divisibility.lean",
+        "TauCeti/Data/ZMod/Units.lean"
+      ],
+      "characters": 1316,
+      "sha256": "04ECA2D4D77F4197CDB69271870E930B878EF4B561193DC0B13EFFC1E3A48020",
+      "bytes": 1356
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean",
+      "gitBlob": "933816d23314ad1c4892753c9272510dab49b247",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GLn/CosetDecomposition.lean"
+      ],
+      "characters": 13531,
+      "sha256": "8ECA81B65A3E30A26599E93422B3C20719FE5279E831B5CF916FB32DEBB676AB",
+      "bytes": 13730
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Diagonal/Coset.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Diagonal/Coset.lean",
+      "gitBlob": "6ef4a4dc79a7f012ab8626530e219b77fd007d1b",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/CosetMap.lean",
+        "TauCeti/NumberTheory/HeckeRing/GLn/DiagonalCosets.lean",
+        "TauCeti/NumberTheory/HeckeRing/Normalizer.lean"
+      ],
+      "characters": 9851,
+      "sha256": "C0583F2DD1277DA4EDDCAA6E8226C80FDE038166B01DE80BFDCB5AE91D5E489C",
+      "bytes": 10157
+    },
+    {
+      "path": "tau-period/TauCeti/Data/Nat/GCD.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/Nat/GCD.lean",
+      "gitBlob": "b9a37cb0660f041d7a80277085cdb39969109df9",
+      "imports": [],
+      "characters": 1216,
+      "sha256": "EEB918BC37637DFB9B3922900268E30BF4E6ACCD5395782FE7B1461FCF31D165",
+      "bytes": 1222
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/ModularForm.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/ModularForm.lean",
+      "gitBlob": "b0cde09096494960e2bd222bee44f9fbf805aa76",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Cusps.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Form.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Holomorphic.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Independence.lean"
+      ],
+      "characters": 9813,
+      "sha256": "582C67D2E8E624498915768A4A2DEB85602942E94254392EC23AB7746D4AFECC",
+      "bytes": 10072
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Basic.lean",
+      "gitBlob": "5e57769481a079ede2f57ad942f6ea719678083c",
+      "imports": [
+        "TauCeti/Algebra/Group/Subgroup/Map.lean"
+      ],
+      "characters": 60188,
+      "sha256": "67D4E0C90589EFBF65B6F5E0DF0CAEEF330295F23CE9C4D14D35666899FBFF7D",
+      "bytes": 64512
+    },
+    {
+      "path": "tau-period/TauCeti/GroupTheory/DoubleCoset/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/GroupTheory/DoubleCoset/Basic.lean",
+      "gitBlob": "d6da41564a5fead68427bad60a55be6159761de4",
+      "imports": [],
+      "characters": 6432,
+      "sha256": "637304378F8BD8D6EE4118804CFD73C3D3B00E574F075EC5298A1DD1E93DE18D",
+      "bytes": 6688
+    },
+    {
+      "path": "tau-period/TauCeti/RingTheory/MvPolynomial/LinearSubst.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/MvPolynomial/LinearSubst.lean",
+      "gitBlob": "bf3cec2ad65cde7b9313fcbbd110868edcd52b81",
+      "imports": [
+        "TauCeti/Algebra/MvPolynomial/PDeriv.lean"
+      ],
+      "characters": 13185,
+      "sha256": "E4B212FC1F9C24F5DC3E7F2CF9DA64F8808E8ACDB5606F2F92430F2A473F13AA",
+      "bytes": 13609
+    },
+    {
+      "path": "tau-period/TauCeti/RingTheory/Polynomial/Dickson.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Polynomial/Dickson.lean",
+      "gitBlob": "bca541056d6cacafcd3d16a0116434f22abdf1d4",
+      "imports": [],
+      "characters": 9908,
+      "sha256": "93D971F54E807C32D725F227BA24BF4785CA08B2540560E59DB483F933B97CDF",
+      "bytes": 10055
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/RationalCanonicalFormFinTwo.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/RationalCanonicalFormFinTwo.lean",
+      "gitBlob": "fb6aefee25b8bba28755b5e127a2615e573ee825",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/Commute.lean",
+        "TauCeti/LinearAlgebra/Matrix/Trace/FinTwo.lean"
+      ],
+      "characters": 6600,
+      "sha256": "7B6D6E4B40A342C2D43CF3958D35DAD7C77F50E9B9A8C70D8C667A591BF2836A",
+      "bytes": 6709
+    },
+    {
+      "path": "tau-period/TauCeti/RepresentationTheory/Intertwining.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Intertwining.lean",
+      "gitBlob": "20f0995df586a500fcee9cd394edd8fb4cf90d2c",
+      "imports": [],
+      "characters": 11391,
+      "sha256": "BCAE8A1350FBBA96444B2C1C530135A4F100EA550C1657810FABB79BF37A1670",
+      "bytes": 11701
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/ResToImagAxis.lean",
+      "gitBlob": "ba89d4c62566d5d3056d7276ffe6629cafde3ab0",
+      "imports": [
+        "TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean"
+      ],
+      "characters": 11081,
+      "sha256": "0C32646C0E3ACF253A2F2C397C3E85C4FE22C32ADA0E2984584F2D641FDDD45D",
+      "bytes": 11502
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Holomorphic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Holomorphic.lean",
+      "gitBlob": "ab6bb8f7dc98fa3c029f105300152952fe1cf6f2",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean"
+      ],
+      "characters": 1959,
+      "sha256": "7B988C643A86A27D769BD4246B2ED794A50A25D758C0BC2141C6F560D1BBD89F",
+      "bytes": 1976
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Cusps.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Cusps.lean",
+      "gitBlob": "9fdb99366aa0d3f1932d27b5b742671ea72530c9",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/Cusps/Rat/Slash.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean"
+      ],
+      "characters": 2817,
+      "sha256": "DB7EB48FD084576D09BB7FD8C792DD15D2DC0EF031C077D05DE535BAC10DE047",
+      "bytes": 2871
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Invariance.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Invariance.lean",
+      "gitBlob": "b5dd8cc35a57520393fa6a89dc70527954e3d7ad",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/UpperTriFactorization.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean"
+      ],
+      "characters": 10156,
+      "sha256": "55BA6C6CF4823DE7D9C272D014B5FD4808B3D6EF753870CA21023E610FDCF066",
+      "bytes": 10610
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Unit.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Multiplicity/Unit.lean",
+      "gitBlob": "c536b8b8eb16c2065f01e64b408b08fe65e05c77",
+      "imports": [
+        "TauCeti/GroupTheory/DoubleCoset/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/Multiplicity/Basic.lean"
+      ],
+      "characters": 7761,
+      "sha256": "0AF967F7DD18D43D73E98C0C3234C30AD2DB3ED5B57FB3C30134196E1639914D",
+      "bytes": 8588
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Delta0.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Delta0.lean",
+      "gitBlob": "fd9f6ff9f7cbd299c1c8d6af3d7b4cfd0fbc8d16",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean"
+      ],
+      "characters": 15469,
+      "sha256": "B3B6162E9A5A8C8EE8415A3D19D5281F0B03FB2FC982D53C7B67CF3D0C1627F4",
+      "bytes": 16097
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Support.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Multiplicity/Support.lean",
+      "gitBlob": "c8042efe85bd87eb4516bb2cc6bd2a5af8c018c3",
+      "imports": [
+        "TauCeti/GroupTheory/DoubleCoset/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/Multiplicity/Basic.lean"
+      ],
+      "characters": 5065,
+      "sha256": "6DD55601116BA13FD7B8F585506AD5D06462DEAA771BEC987537C1064266FE9B",
+      "bytes": 5431
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/Group/Subgroup/Map.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Group/Subgroup/Map.lean",
+      "gitBlob": "6d9226389922a3764eb31bb039bcf9a66489cbb9",
+      "imports": [],
+      "characters": 24742,
+      "sha256": "640B6F62F9B6964513AD1F615B5238CD5E3CE922305EB411EDDF6ABB2A303E38",
+      "bytes": 25102
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/DoubleCoset.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/DoubleCoset.lean",
+      "gitBlob": "8ea39590135b791b70838bd5caed8b1ada433f39",
+      "imports": [],
+      "characters": 1673,
+      "sha256": "D253175C16960A9BFE1A4308746CEDE693C067237F9AAA4D4BE1ED58D51F525C",
+      "bytes": 1769
+    },
+    {
+      "path": "tau-period/TauCeti/GroupTheory/DoubleCoset/Inv.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/GroupTheory/DoubleCoset/Inv.lean",
+      "gitBlob": "41cb509626009000d3c9549f971aae8f5880a410",
+      "imports": [
+        "TauCeti/GroupTheory/DoubleCoset/Basic.lean"
+      ],
+      "characters": 2027,
+      "sha256": "CB7E4629D5D024F952A5B4E1924761AF4766B860A820E82DC2B9BCD5057B1D28",
+      "bytes": 2158
+    },
+    {
+      "path": "tau-period/TauCeti/RepresentationTheory/Coset.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Coset.lean",
+      "gitBlob": "0074598ffc432fb3562453d7e55d9bb5be4062f5",
+      "imports": [],
+      "characters": 2567,
+      "sha256": "08AC52FDB6C465ACEE014971CAA6830579492ED49BA54236F11CCB66C575E4B0",
+      "bytes": 2771
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GLn/CosetDecomposition.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GLn/CosetDecomposition.lean",
+      "gitBlob": "984974bae645775e490cd9be2979e11873677917",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/Triangular.lean",
+        "TauCeti/NumberTheory/HeckeRing/GLn/DiagonalCosets.lean"
+      ],
+      "characters": 18445,
+      "sha256": "F58D4A9CF97B5E6AA38798E68A0D8D9D6DB9257479F0D163E61024459DD3A65E",
+      "bytes": 19166
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/CosetMap.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/CosetMap.lean",
+      "gitBlob": "d925ad08e0261d83a662b8f58285b9778ce47984",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/DoubleCoset.lean"
+      ],
+      "characters": 8674,
+      "sha256": "795BDDD4FF6FD423D7E55D19BA06CAC910916CA457EA6D4B1BA1B3BFE52A04EB",
+      "bytes": 9091
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GLn/DiagonalCosets.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GLn/DiagonalCosets.lean",
+      "gitBlob": "762b750a1f5a203d6bd04a1ddc87e9a210244a10",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GLn/Basic.lean",
+        "TauCeti/NumberTheory/HeckeRing/One.lean",
+        "TauCeti/LinearAlgebra/Matrix/SmithNormalForm.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Diagonal/Basic.lean"
+      ],
+      "characters": 21371,
+      "sha256": "0155F1C0A270B2EB395DA9F11DC28303D7E6039AFBA2CE599336C2AF569A6AA9",
+      "bytes": 22238
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Cusps.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Cusps.lean",
+      "gitBlob": "8522454d50a60c32c20ef58a12b10df3e1e9f591",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/Cusps/Rat/Slash.lean",
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean"
+      ],
+      "characters": 2998,
+      "sha256": "0EA6B9D06F3D50C757555E0D7A28577A650DA58320BD21F07CCC9FF817B99AB8",
+      "bytes": 3081
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Form.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Form.lean",
+      "gitBlob": "2db93632cd1058153cf0561c0791b85393a4219e",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Invariance.lean"
+      ],
+      "characters": 5652,
+      "sha256": "D18C9A00EE731CE19BF756AFC9165CE195C7C8344AC2369D04A7D82CDB1EEABE",
+      "bytes": 5792
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Holomorphic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Holomorphic.lean",
+      "gitBlob": "f507b8fa2a43b677ba46e9d8f14476a7bfb8f1b4",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean"
+      ],
+      "characters": 2215,
+      "sha256": "41E776ECA24BA306DDABDF16168F7DE8EF35E93A513551D0D5584DA7E5045DC9",
+      "bytes": 2261
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Independence.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Independence.lean",
+      "gitBlob": "b5a81ba5c23819c9b321aecd1d4520024a9003c9",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Reindex.lean"
+      ],
+      "characters": 13078,
+      "sha256": "4C462FCE83E74C0C6963E926B9F7CB49B679825C36B4E051AB3122C87FDB0ECB",
+      "bytes": 13822
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/MvPolynomial/PDeriv.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/MvPolynomial/PDeriv.lean",
+      "gitBlob": "6dfd2edd8877a7b02944913f0f417bf6b39a5b07",
+      "imports": [],
+      "characters": 2489,
+      "sha256": "82AEA3164242199A493A023E68C99ABD4532DC4CF233A7C01E8C4C09D44127E8",
+      "bytes": 2611
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Commute.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Commute.lean",
+      "gitBlob": "e5949f8b82871b6d7f0830e0bb64d48207545d91",
+      "imports": [],
+      "characters": 6983,
+      "sha256": "7301C3A70FDFBF428D5FD8F9CAB65261F3D4644FE3487C6CF6D5240B1DD0F5D6",
+      "bytes": 7136
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Trace/FinTwo.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Trace/FinTwo.lean",
+      "gitBlob": "a4e188c7e74bd7c9dd403fbd491c336105a5bd2d",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/Adjugate/FinTwo.lean"
+      ],
+      "characters": 7105,
+      "sha256": "A83390BC6AA963D564070A8557EACA634BFEFB35090B626E0F601EEC7D548E2E",
+      "bytes": 7206
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Complex/UpperHalfPlane/ResToImagAxis.lean",
+      "gitBlob": "5f77668395fc5309b7b5c2dd1df2fa44d4d65d68",
+      "imports": [
+        "TauCeti/Analysis/Asymptotics/MvPolynomial.lean"
+      ],
+      "characters": 16047,
+      "sha256": "A080A1899B3F851AC5EDCA3CC66D6CCD11DAB53E14C94250ACA994DB1C8B91BE",
+      "bytes": 16542
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/UpperTri/Sum.lean",
+      "gitBlob": "81275c22f8b1ee6ab9d662e4f499da7173d6061b",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean"
+      ],
+      "characters": 6545,
+      "sha256": "9A8BD08515E665FB40734F2C83C69338C15ABD40016F33EA3875C6793CF34D63",
+      "bytes": 6724
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Slash.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Slash.lean",
+      "gitBlob": "3c24c4ffbf0e787b6eb07d6a8f1eef0b18363a2c",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/BoundedAtCusp.lean",
+        "TauCeti/NumberTheory/ModularForms/Cusps/Rat/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean"
+      ],
+      "characters": 3689,
+      "sha256": "77F9D5EC774632C790E4369A4FA524617B741DD84D201D61C66DC05A29C5F37A",
+      "bytes": 3780
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/UpperTriFactorization.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/UpperTriFactorization.lean",
+      "gitBlob": "c920e8ab6512bed38687703f139256f44fd47c3c",
+      "imports": [
+        "TauCeti/Data/ZMod/FinEquiv.lean",
+        "TauCeti/NumberTheory/HeckeRing/GL2/CosetDecomposition.lean",
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean"
+      ],
+      "characters": 15221,
+      "sha256": "61CC1DD05FAD825128CE54118A18694EA574D9142DE87B82B0CE49A41359D35C",
+      "bytes": 15977
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/Multiplicity/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/Multiplicity/Basic.lean",
+      "gitBlob": "d00439635e4b1fdbd77249adb3d596dd38716c4b",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Basic.lean"
+      ],
+      "characters": 10777,
+      "sha256": "49FEB9E32902EAD8F72F99A5F74B74B7075A7948D3F949E8D2D7610648745886",
+      "bytes": 11935
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Triangular.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Triangular.lean",
+      "gitBlob": "22af77192989bc0ca373d400dee0dafcdfb44769",
+      "imports": [],
+      "characters": 22121,
+      "sha256": "F01B68C487FFA4B0F9A30B0B763F70C280628A5F75457EDA3CD4F759D58B7537",
+      "bytes": 22552
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/DoubleCoset.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/DoubleCoset.lean",
+      "gitBlob": "43a55e0a87787ec3c2cc161998c439fb7cb8679e",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/GL2/Gamma0/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/CongruenceSubgroups/Basic.lean"
+      ],
+      "characters": 12162,
+      "sha256": "B2B64DDEAFD0A5D698D24BD6D01C0BD50CB97722B7C359D5BB64765082BA0D61",
+      "bytes": 13037
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/SmithNormalForm.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/SmithNormalForm.lean",
+      "gitBlob": "a2c2ae73acf2aecd409da1cca3faf23c243959c1",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/Divisibility.lean",
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Equivalence.lean",
+        "TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Equivalence.lean",
+        "TauCeti/Data/Int/Fin2Tuple.lean"
+      ],
+      "characters": 53472,
+      "sha256": "BB162DC8F3B53320A030726124B670EC2C18B6612BEFB24EC2D3EF128A7D2C51",
+      "bytes": 55661
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Diagonal/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Diagonal/Basic.lean",
+      "gitBlob": "c4b1e64bd56db0765fabf160390ec1b9048b1e30",
+      "imports": [
+        "TauCeti/Algebra/Group/Subgroup/Centralizer.lean",
+        "TauCeti/LinearAlgebra/Matrix/Diagonal.lean"
+      ],
+      "characters": 20744,
+      "sha256": "10C9F1167B57B0BA840EECAF07A73C44DD9768EC98BB826A810467D586A1AC89",
+      "bytes": 21166
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean",
+      "gitBlob": "ce7435d06d65b40385229966e4c3e2049c7b9bea",
+      "imports": [
+        "TauCeti/NumberTheory/HeckeRing/Basic.lean",
+        "TauCeti/NumberTheory/ModularForms/SlashActionRat.lean"
+      ],
+      "characters": 13725,
+      "sha256": "39DA88C2DCA85E2B1135B52687BAD58E2A0278D322A79C766C99B1572A7C4C44",
+      "bytes": 14371
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Invariance.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Invariance.lean",
+      "gitBlob": "ef4dcccaaa3e41f6eccf0e73f226c94e9a2812bd",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Reindex.lean"
+      ],
+      "characters": 4772,
+      "sha256": "BA7BB6A3BA2EC7FF3480C964D822F985F6511C57B91B35F0B0D2B5751EEEE40C",
+      "bytes": 5117
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/HeckeSlash/Reindex.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/HeckeSlash/Reindex.lean",
+      "gitBlob": "f9d77c9e6911513a20e5b071c7a695c995d34a23",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/HeckeSlash/Basic.lean"
+      ],
+      "characters": 6044,
+      "sha256": "EF2150B3D2026F195C7EC1993424D8536DC680910427C9336DC8D63795859724",
+      "bytes": 6597
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Adjugate/FinTwo.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Adjugate/FinTwo.lean",
+      "gitBlob": "805f7eb54adfa805947513d7ee943eca588a3012",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/Adjugate/Basic.lean"
+      ],
+      "characters": 7089,
+      "sha256": "0955ECBE5ED41B855D575161EFE360D681BFE7BD2C1A4C408F3378C804F58352",
+      "bytes": 7200
+    },
+    {
+      "path": "tau-period/TauCeti/Analysis/Asymptotics/MvPolynomial.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Asymptotics/MvPolynomial.lean",
+      "gitBlob": "3105149efbb2ffa7f7ff809df94673bf49a7c589",
+      "imports": [],
+      "characters": 2555,
+      "sha256": "70DC5EDD6B21A1CE77BEDC599E74947C85F5936EF6A8261D2CDB48D16F3EA4C3",
+      "bytes": 2664
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/BoundedAtCusp.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/BoundedAtCusp.lean",
+      "gitBlob": "967e42dbb6a69b335c8f69cb41841f04aa139407",
+      "imports": [],
+      "characters": 5877,
+      "sha256": "B2FA970BACBBE11B89090B7CD85FCBE96224F6DA7BCD408C85ACE9DDA3B0542F",
+      "bytes": 5991
+    },
+    {
+      "path": "tau-period/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ModularForms/Cusps/Rat/Basic.lean",
+      "gitBlob": "f76029c1a4197dd7857c6a2968d48a2f9eeb99ff",
+      "imports": [
+        "TauCeti/NumberTheory/ModularForms/Basic.lean"
+      ],
+      "characters": 2790,
+      "sha256": "74423F681769E52FCFAF9623BB2EF703B575DAFCDDFC3F6DDF0BD7065D9137AC",
+      "bytes": 2850
+    },
+    {
+      "path": "tau-period/TauCeti/Data/ZMod/FinEquiv.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/ZMod/FinEquiv.lean",
+      "gitBlob": "727443bb1474c76204417206401696c800eb8d0c",
+      "imports": [],
+      "characters": 3637,
+      "sha256": "0F22861C6CF8DB0CCE13553299A198B36216B7E2918FDFFE9D4E7567A961F4AE",
+      "bytes": 3669
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Divisibility.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Divisibility.lean",
+      "gitBlob": "294bc730a0f134883a468db3ffbae67961d612ac",
+      "imports": [
+        "TauCeti/Algebra/BigOperators/Fin.lean"
+      ],
+      "characters": 11314,
+      "sha256": "C01EDE2E99D1961A435310A478A5E64CF3AB89B50F0B7B35E0D39EFC522B89B1",
+      "bytes": 11702
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Equivalence.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Equivalence.lean",
+      "gitBlob": "1544f052132c7c98dd84e7d54c132348a508c485",
+      "imports": [],
+      "characters": 3748,
+      "sha256": "8C68540D45FB59F7043328A8515E248E2355CD758EF7CA27AE27CB2DB9B09B11",
+      "bytes": 3810
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Equivalence.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Equivalence.lean",
+      "gitBlob": "c9bd47248b0d104da38e5e847e9b86d8897dcf21",
+      "imports": [
+        "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Equivalence.lean"
+      ],
+      "characters": 4016,
+      "sha256": "B689411B340C31E939FADB8E0CFF9613FFA0DCC6A3626B37239E4A0F57FF5072",
+      "bytes": 4121
+    },
+    {
+      "path": "tau-period/TauCeti/Data/Int/Fin2Tuple.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Data/Int/Fin2Tuple.lean",
+      "gitBlob": "0706442fea22272c1ddbdcec13dee0b51fe338ad",
+      "imports": [],
+      "characters": 1976,
+      "sha256": "C3FE61067B13488D7A4B6CDB4FF97DF5EFE8B9203442D2C6C2D6447D2694B5F3",
+      "bytes": 1994
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/Group/Subgroup/Centralizer.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Group/Subgroup/Centralizer.lean",
+      "gitBlob": "b1a7cb6336bd226cb6dc4835f4e26922adf9868b",
+      "imports": [],
+      "characters": 2172,
+      "sha256": "77438E9033D818A12D5784457F64F92C9F50D138D7B5CF07B90DE9C6D217ACE4",
+      "bytes": 2190
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Diagonal.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Diagonal.lean",
+      "gitBlob": "3a770130b2a18ecd42a6cc4585c8840a2c2d0cd8",
+      "imports": [],
+      "characters": 4752,
+      "sha256": "7EAB07196478B7CBBE16A5607192B78F8867E1DB6295E18C8F8F696B78A26183",
+      "bytes": 4812
+    },
+    {
+      "path": "tau-period/TauCeti/LinearAlgebra/Matrix/Adjugate/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/Matrix/Adjugate/Basic.lean",
+      "gitBlob": "2098d7aeaed2815f3952f749f6439c8b92054ea3",
+      "imports": [],
+      "characters": 2266,
+      "sha256": "E395B44F5D55CF953E759EF61E7E9BFC700CBB0B04A2ABB7D056513C1AE5F06B",
+      "bytes": 2321
+    },
+    {
+      "path": "tau-period/TauCeti/Algebra/BigOperators/Fin.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/BigOperators/Fin.lean",
+      "gitBlob": "b07fd3e44c6b638e9db9823c4640bf1b5311ecd4",
+      "imports": [
+        "TauCeti/Logic/Equiv/Fin/Basic.lean"
+      ],
+      "characters": 3686,
+      "sha256": "4F87C6422B8DB76D63CC2BC99C727AA2FF5B5A8012C09E36D45583B13E3BD0BF",
+      "bytes": 3799
+    },
+    {
+      "path": "tau-period/TauCeti/Logic/Equiv/Fin/Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Logic/Equiv/Fin/Basic.lean",
+      "gitBlob": "e7d76bc5e5acc9e7bb01e3fa7a9a2b7593700951",
+      "imports": [],
+      "characters": 2445,
+      "sha256": "AEA882B4AE715AC254901340A8D2BC342A6698CB7FFCBA4A042670B2403F61C1",
+      "bytes": 2478
+    }
+  ],
+  "status": "Complete source import closure retrieved and Git-blob-verified at the frozen revision. This is source evidence, not a kernel audit. Only the separately recorded two-theorem algebraic transfer has been ported and audited."
+}
