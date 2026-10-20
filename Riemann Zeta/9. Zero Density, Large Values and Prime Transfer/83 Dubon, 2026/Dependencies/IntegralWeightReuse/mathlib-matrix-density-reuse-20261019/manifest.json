@@ -1,0 +1,17 @@
+{
+  "repository": "leanprover-community/mathlib4",
+  "commit": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+  "commitUTC": "2026-10-20T00:10:44Z",
+  "tree": "7ae168e659ad7a9b29ff9e9fa2799c4eea160cb5",
+  "sourcePath": "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/MvPolynomial.lean",
+  "url": "https://github.com/leanprover-community/mathlib4/blob/4dc3912c3394dbf46f97c6fe75494ae9197b230f/Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/MvPolynomial.lean",
+  "gitBlob": "d7a6e58b5848139da98af23f6d56cd5f982bb827",
+  "sourceSha256": "8FDFA04FC79EA80785EBD75D6FCA8D1E4C5CF0DC5646D7420864D0507097A222",
+  "license": "Apache-2.0",
+  "licenseSha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+  "sourceGitBlobRecomputed": true,
+  "localPinsChanged": false,
+  "adaptation": "The polynomial identity theorem on GL over an infinite field is adapted to the unchanged local pin. A private evaluation-of-generic-determinant lemma replaces the newer API. The actual source covariance on GL now extends to all matrices, permitting singular specialization and original-coefficient determinant divisibility.",
+  "exactDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy -> CHT/Geraghty integral unitary automorphic modules -> Geraghty Definition 2.2.1 literal integral Borel induction -> uniform denominator and degree bounds -> finite generation and freeness over the original coefficient PID.",
+  "consumer": "Dubon2026.integralLocalInduced_finite_free"
+}

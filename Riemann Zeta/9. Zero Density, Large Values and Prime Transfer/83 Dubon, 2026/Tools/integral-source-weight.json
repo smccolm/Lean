@@ -1,0 +1,91 @@
+{
+  "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> CHT/Geraghty integral unitary auxiliary modules -> Geraghty Definitions 2.2.1 and 2.2.3 original integral induced tensor coefficients and arithmetic action.",
+  "discharged": "Geraghty Definition 2.2.1 is constructed literally as original determinant-localized regular functions with reversed-weight upper-Borel covariance over every coefficient algebra and right translation. Generic determinant primality over the original PID, extension of polynomial covariance to singular matrices, adjugate row elimination and original-ring divisibility give a uniform determinant denominator B=max(0,-lambda_last). A constructed infinite-order scalar in the original local ring gives numerator degree D=max(0,sum(lambda)+rank*B). The entire module lies in one finite polynomial stage, so finite generation and freeness follow without a supplied lattice or dimension bound. The actual finite embedding tensor uses the proved individual factors and native tensor bases. Its original embedding index is finite by number-field degree. Existing completion extension and valuation comparison construct its local integer maps and their continuity from actual field embeddings. Original unitary local evaluation constructs the algebraic tensor action. The final actual source consumer derives finite freeness of the original auxiliary automorphic module over the actual primary quotient group ring and its exact unnormalized weighted-trace coinvariant comparison; no coefficient representation, finite-free coefficient module, integral embedding maps or finite-index certificate is supplied.",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed.",
+  "consumer": "Dubon2026.cmSourceIntegralWeightAuxiliaryModule_comparison",
+  "requiredProofValueEdges": 12,
+  "modules": [
+    "Dubon2026.GeneralLinearRegularFunctions",
+    "Dubon2026.GeneralLinearRegularPoints",
+    "Dubon2026.GeneralLinearRegularTranslation",
+    "Dubon2026.GeneralLinearBorelCharacter",
+    "Dubon2026.GeneralLinearIntegralInduction",
+    "Dubon2026.GeneralLinearIntegralTorsion",
+    "Dubon2026.GeneralLinearIntegralDeterminantTwist",
+    "Dubon2026.GeneralLinearIntegralPolynomialStages",
+    "Dubon2026.GeneralLinearIntegralCentralWeight",
+    "Dubon2026.PolynomialCentralWeight",
+    "Dubon2026.GeneralLinearIntegralNumeratorDegree",
+    "Dubon2026.IntegralLocalCentralScalar",
+    "Dubon2026.GenericDeterminantPrime",
+    "Dubon2026.GenericSingularMatrix",
+    "Dubon2026.SingularUpperRowElimination",
+    "Dubon2026.MatrixPolynomialDensity",
+    "Dubon2026.IntegralPolynomialBorelCovariance",
+    "Dubon2026.IntegralPolynomialSingularVanishing",
+    "Dubon2026.IntegralInducedDeterminantDivisibility",
+    "Dubon2026.IntegralInducedDenominatorBound",
+    "Dubon2026.IntegralInducedFiniteFree",
+    "Dubon2026.IntegralInducedTensor",
+    "Dubon2026.CMIntegralInducedTensorAction",
+    "Dubon2026.CMIntegralInducedAuxiliaryComparison",
+    "Dubon2026.IntegralCoefficientEmbedding",
+    "Dubon2026.CMSourceIntegralWeight",
+    "Dubon2026.CMSourceIntegralWeightComparison"
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalCodeAdopted": true,
+  "status": "The 27-module source assembly passes 225 exhaustive theorem checks, 141 explicit dependency queries and sixteen linters in every scope with zero diagnostics. A separate proof-value traversal verifies twelve required source dependency edges. Production aggregate, focused audit and sequential foundation/paper verification of the 4,832-module scope are pending.",
+  "archives": [
+    "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019",
+    "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019",
+    "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019"
+  ],
+  "sources": [
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/GeneralLinearHopf.lean.txt",
+      "sha256": "86A517ECC474409597D7BA4B966DAFE84415A0FD6D6B0E4C3984531D58370CD7"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/GeneralLinearPoints.lean.txt",
+      "sha256": "04302B1D246C30368A34793435D62F3B18BA1D432033A3061ECC85E349BDF0B1"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/manifest.json",
+      "sha256": "855466D5C5FFCF9033FA03F9AC6A0D1379C05949533F021F3A63F168864082EF"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/MatrixBialgebra.lean.txt",
+      "sha256": "29891D726A0621DB2C738817102D6899C924EA983A5BC91042326C62684CCCAD"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019/IrreducibleDet.lean.txt",
+      "sha256": "2A9A926FC4498271B306F7FDC68751FEDC234DA2E6E92EE02E0E66AE79871C7D"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019/manifest.json",
+      "sha256": "6C949658D2386B2039504747BB71404115D2E2732A6C15B3968AF24FACE16063"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/GeneralLinearGroupMvPolynomial.lean.txt",
+      "sha256": "8FDFA04FC79EA80785EBD75D6FCA8D1E4C5CF0DC5646D7420864D0507097A222"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/manifest.json",
+      "sha256": "A1415E0BCBFD47B260BD820C7893509A93845895E726F9DC1622E2283135E30E"
+    }
+  ]
+}

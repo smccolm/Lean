@@ -1,0 +1,41 @@
+{
+  "repository": "rwst/Subspace-Theorems",
+  "commit": "09835cb23557ae5ae0cf55a9c4ab9055f5d60338",
+  "commitUTC": "2026-10-18T15:21:56Z",
+  "tree": "3a6e7738bd33088ba9aebe8d7b7aaf0c06f4b3fc",
+  "treeEntries": 612,
+  "truncated": false,
+  "noticeFiles": [],
+  "license": "Apache-2.0",
+  "licenseSha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+  "sourcePath": "STForMathlib/LinearAlgebra/Matrix/IrreducibleDet.lean",
+  "gitBlob": "d0b492e9b73b2f54ad401724c895c8b20bbb51c5",
+  "sourceSha256": "2A9A926FC4498271B306F7FDC68751FEDC234DA2E6E92EE02E0E66AE79871C7D",
+  "sourceGitBlobRecomputed": true,
+  "upstreamLean": "leanprover/lean4:v4.35.0-rc3",
+  "upstreamMathlib": "5e0c4e5239cb0a2d86d68a884bf52cfd963fce22",
+  "localLean": "leanprover/lean4:v4.30.0",
+  "localMathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "localPinsChanged": false,
+  "adaptation": "Module/import syntax adapted. Missing eval_det_mvPolynomialX replaced by a private proof from native map_det. The field-specific constant-factor unit argument is replaced by evaluation at the identity matrix. This extends irreducibility to the original domain and primality to the original UFD without fraction-field descent.",
+  "exactDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> BLGG potential automorphy -> integral unitary auxiliary modules -> Geraghty Definition 2.2.1 original integral Borel induction -> uniform determinant denominator -> generic determinant primality and numerator divisibility.",
+  "receipt": {
+    "modules": [
+      {
+        "module": "GenericDeterminantPrime",
+        "sha256": "CC18E974778A36DE576A00DC6C02F6F1F925FCF76E9354CB90E97583BECBE30D",
+        "oleanSha256": "AF3F6628B480E8459706639EBDE1C290B317D34ED8CF2961A7B2242FF611B081"
+      }
+    ],
+    "auditLog": "GenericDeterminantPrimeAudit.log",
+    "auditSha256": "A9E8205A6C0EBD79B1B023A5D6494C472F61695F129742EACCA571377158C33E",
+    "auditSourceSha256": "6F7B0D7D884E00162AF64EF44E9D7F64D7443650BC53EB80311E5C2B22D1F364",
+    "exit": 0,
+    "diagnostics": 0,
+    "exhaustiveTheorems": 17,
+    "explicitQueries": 6,
+    "linterScopes": 1,
+    "lintersPerScope": 16,
+    "boundary": "Scratch-only increment, not production promoted. Acceptance remains 16/20; DUB-17-20 remain open. The exact original induced module and action, torsion freeness, determinant twist, finite free bounded stages and degree bound deg(P) <= max(0, sum(lambda)+n*d) are proved. An infinite-order scalar is constructed from 2 or 3 in the original characteristic-zero local ring, so the final degree consumer has no scalar witness input. Stage exhaustion is not finite generation. A uniform determinant-denominator bound remains unproved. The adapted generic determinant is now proved irreducible over domains and prime over UFDs, including the source PID; the numerator-divisibility consumer remains to be proved. Integral highest-weight identification, embedding tensor products, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain open."
+  }
+}

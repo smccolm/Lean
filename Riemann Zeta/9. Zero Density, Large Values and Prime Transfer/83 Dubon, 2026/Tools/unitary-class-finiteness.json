@@ -1,0 +1,230 @@
+{
+  "externalCommit": "51d586d1cdfd170cd66989af5fda3e6a9e07ca4d",
+  "externalIndexedCommit": "9fc5d5a87d00cb696e606ccdae66420cc837c05e",
+  "externalSources": [
+    "https://github.com/TauCetiProject/TauCeti/tree/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/LinearAlgebra/BilinearForm",
+    "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/RingTheory/DedekindDomain/AdicValuation/Approximation.lean",
+    "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/LinearAlgebra/QuadraticForm/PosDef.lean"
+  ],
+  "adaptedModules": [
+    "IntegralPrimitiveBasis",
+    "IntegralNearestMultiple",
+    "IntegralMatrixCondensation",
+    "IntegralBilinearGramDet",
+    "IntegralBilinearHermite",
+    "IntegralBilinearFiniteClasses",
+    "NumberFieldIntegralPlaceApproximation",
+    "NumberFieldIntegralProductDensity",
+    "IntegralBilinearFiniteSublevel"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> CHT integral unitary auxiliary modules -> finite original arithmetic double cosets at the prescribed open level. The same exact module chain also requires the source smallness prime of BLGG 3.6.1.",
+  "discharged": "For the original specified positive CM Hermitian form, the actual attached adelic lattices are finite free of full rational rank and recover their original adelic and local lattice regions. A fixed positive integer gives positive integral trace forms. Native trace-dual bases and density prove uniform dual-lattice containment and hence a uniform Gram determinant bound. Adapted proved integral reduction yields finite actual Gram classes; original complex embeddings bound the original CM scalar actions, and adapted finite integral sublevels give finitely many joint action invariants. Equality of the invariants recovers an original field-linear Hermitian isometry and a rational unitary matrix carrying one actual lattice onto the other. Density then recovers the actual integral adelic level. The original unitary arithmetic double-coset quotient is therefore finite at the integral level, and compactness transfers finiteness to every original open level. The existing finite-freeness, coinvariant and exact unnormalized auxiliary trace comparison now derives arithmetic class finiteness instead of assuming it. The original prescribed Frobenius class can be realized outside every finite set of original places with arbitrarily large original rational residue characteristic. The same size bound implies [K(zeta_p):K] exceeds the required rank. Kernel noncontainment of the two original continuous Galois maps yields simultaneous trivial first Frobenius image, nontrivial second image, absolute unramifiedness and the cyclotomic degree restriction. Applied to the specified positive definite CM form, this constructs an actual compact open principal unitary level with trivial arithmetic stabilizers and finite original arithmetic double cosets at that prime. The cyclotomic map is now constructed from the actual primitive root and its established continuity; source root noncontainment in the fixed field of the residual kernel proves the required kernel separation.",
+  "boundary": "The final theorem accepts the original continuous residual map and the explicit source hypothesis that the primitive root does not belong to the field fixed by its kernel. It constructs the genuine cyclotomic map and proves the prime/level conclusions. The actual modular adjoint residual representation and its source root noncontainment are not yet supplied. The source solvable CM extension and prescribed local splitting/form conditions, highest-weight integral coefficient module, nonzero localized Hecke summand, crystalline dimensions, Selmer and Hecke/deformation comparisons and higher symmetric-power continuation remain open. DUB-17-20 remain open; acceptance remains 16/20. Class finiteness holds for every original open subgroup of the specified definite CM group.",
+  "routeAssessment": "Reused Tau Ceti proved integral Gram-class reduction, integral-place approximation and finite integral sublevels with unchanged local pins. Reused pinned Mathlib trace-dual bases, native CRT, basis extension, Cauchy-Schwarz, determinant multiplicativity, nondegenerate field trace and compact-open quotient finiteness. Checked proved Tau Ceti finite-adelic base change and semilocal trace comparison, then deferred that broader chain because uniform trace-dual containment gives the required determinant bound directly. No general IntegralLattice framework, new completion, supplied local-isometry or determinant certificate, or entire-local-group torsion-freeness assertion is used. Reused the already proved continuous Galois finite factor and Chebotarev prime-existence theorem, finite original prime fibers, original completion residue characteristic comparison, finite absolute ramification, and existing original CM principal levels. Pinned Mathlib primitive-root degree bounds and tower degrees prove the cyclotomic restriction directly. No new Chebotarev, cyclotomic irreducibility or local torsion theory was introduced. Reused the existing primitive-root cyclotomic continuity theorem and literal fixed-field membership characterization to remove an independent cyclotomic-character premise.",
+  "modules": [
+    "Dubon2026.IntegralPrimitiveBasis",
+    "Dubon2026.IntegralNearestMultiple",
+    "Dubon2026.IntegralMatrixCondensation",
+    "Dubon2026.IntegralBilinearGramDet",
+    "Dubon2026.IntegralBilinearHermite",
+    "Dubon2026.IntegralBilinearFiniteClasses",
+    "Dubon2026.NumberFieldFiniteAdeleDenominator",
+    "Dubon2026.NumberFieldAdelicLattice",
+    "Dubon2026.NumberFieldAdelicLatticeBound",
+    "Dubon2026.NumberFieldAdelicLatticeFinite",
+    "Dubon2026.NumberFieldAdelicLatticeRank",
+    "Dubon2026.NumberFieldIntegralPlaceApproximation",
+    "Dubon2026.NumberFieldIntegralProductDensity",
+    "Dubon2026.NumberFieldFiniteAdeleDensity",
+    "Dubon2026.NumberFieldAdelicLatticeClosure",
+    "Dubon2026.NumberFieldAdelicLatticeLocalClosure",
+    "Dubon2026.CMHermitianRationalTraceForm",
+    "Dubon2026.CMHermitianTracePositive",
+    "Dubon2026.NumberFieldPositiveIntegralMultiple",
+    "Dubon2026.CMFiniteAdelicPairing",
+    "Dubon2026.CMAdelicLatticePairingIntegral",
+    "Dubon2026.CMAdelicLatticeIntegralTraceForm",
+    "Dubon2026.NumberFieldTraceDualDenominator",
+    "Dubon2026.CMAdelicTraceDualPairing",
+    "Dubon2026.CMAdelicPairingClosure",
+    "Dubon2026.CMAdelicPairingDualContainment",
+    "Dubon2026.CMHermitianPositiveMatrix",
+    "Dubon2026.CMAdelicTraceDualUniformContainment",
+    "Dubon2026.NumberFieldAdelicLatticeRationalBasis",
+    "Dubon2026.CMAdelicTraceDualBasis",
+    "Dubon2026.CMAdelicTraceGramDetBound",
+    "Dubon2026.CMAdelicTraceFiniteGramClasses",
+    "Dubon2026.IntegralBilinearFiniteSublevel",
+    "Dubon2026.CMHermitianTraceScalarBound",
+    "Dubon2026.CMAdelicLatticeScalarBound",
+    "Dubon2026.IntegralBilinearCoordinates",
+    "Dubon2026.CMAdelicLatticeActionMatrix",
+    "Dubon2026.CMAdelicTraceActionFiniteInvariants",
+    "Dubon2026.CMAdelicLatticeBasisEquiv",
+    "Dubon2026.NumberFieldAdelicLatticeBasisEquiv",
+    "Dubon2026.CMAdelicLatticeFieldEquiv",
+    "Dubon2026.CMAdelicLatticeTraceIsometry",
+    "Dubon2026.CMAdelicLatticeHermitianIsometry",
+    "Dubon2026.CMAdelicLatticeUnitaryRecovery",
+    "Dubon2026.NumberFieldAdelicLatticeTransport",
+    "Dubon2026.NumberFieldAdelicLatticeLevelRecovery",
+    "Dubon2026.CMFiniteAdelicIntegralDoubleCoset",
+    "Dubon2026.CMFiniteAdelicIntegralClassFiniteness",
+    "Dubon2026.DoubleCosetFiniteOpenRefinement",
+    "Dubon2026.CMFiniteAdelicClassFiniteness",
+    "Dubon2026.CMFiniteAdelicOpenAuxiliaryComparison",
+    "Dubon2026.NumberFieldCyclotomicDegreeLowerBound",
+    "Dubon2026.NumberFieldLargeFrobeniusPrime",
+    "Dubon2026.SourceSmallnessFrobeniusPrime",
+    "Dubon2026.CMFiniteAdelicFrobeniusSmallLevel",
+    "Dubon2026.CMFiniteAdelicCyclotomicSmallLevel"
+  ],
+  "upstreamPackageImported": false,
+  "license": "Dependencies/TauCetiReuse/LICENSE",
+  "upstreamSourceIndex": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-finite-classes.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/BilinearForm/FiniteClasses.lean",
+      "gitBlob": "811a3bcea42aa13803e7c788449ebe5358be93ce",
+      "sha256": "2086B2EEF6969E33935E2364E46149D75B8FCAF4CE3DFDB0788885595855E87E",
+      "bytes": 14000
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-hermite.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/BilinearForm/Hermite.lean",
+      "gitBlob": "735d4724e3916f1e4840b71324af979e4840ca1f",
+      "sha256": "A0F37D8D9316B749FC26C3142862EC2F0D6B12E606598331EA0BBEAD3E7B31A9",
+      "bytes": 12099
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-gram-congruence.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/BilinearMap/GramCongruence.lean",
+      "gitBlob": "1bb7d868e201a558a1ce8aac849b51fd54fdfee1",
+      "sha256": "EDFC36AD609099316436E1B4289647085C718A187BEE228E418742A726E8677C",
+      "bytes": 11747
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-condensation.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/Matrix/Condensation.lean",
+      "gitBlob": "0264aa2b2b76a98f26e585fdade72ff55bcfd6c7",
+      "sha256": "0F527A9307F3321E145ABB30E71A2279DE417336C55BE8BC685E0CF22CC501A0",
+      "bytes": 2970
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-primitive.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/Algebra/Module/Primitive.lean",
+      "gitBlob": "7a3e3491256625d910623a83f3bc8ef443988f85",
+      "sha256": "1C68DEE8E2DB26C09997B8122CE6C828DEB2C6B2C6F245DF7500A47C5D0C1DA8",
+      "bytes": 11793
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-round.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/Data/Int/Round.lean",
+      "gitBlob": "382d54ecd8bd076e0c1621d2e2d3f68a1e48a68c",
+      "sha256": "AB09C90F7C3A94FAFAE4967C6AEA6DF2FD3C38E1B852AA8E111835DE3BAF6F6F",
+      "bytes": 1284
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-lattice-classes.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/IntegralLattice/PosDef/Classes.lean",
+      "gitBlob": "11b3f1607d64270bed39fc8231c58ea82b6f7b19",
+      "sha256": "2830AF74F6E5279B277A050536044EB6617D930B7F86EB8F70C93B7AFC1DFB04",
+      "bytes": 3962
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-lattice-genus.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/NumberTheory/IntegralLattice/Genus.lean",
+      "gitBlob": "fa0e04c1112c2c121cbf43fb1c533d00e3bf4941",
+      "sha256": "EC803AA91644D3B9DB8E3D895EE15911F14AF3BCA1775A700263EE89A578F1B3",
+      "bytes": 6298
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tauceti-explorer-proposal.lean.txt",
+      "url": "https://github.com/CBirkbeck/tauceti-explorer/blob/0f18b3a7fceed5854be7d232482d158c981448f8/research/blueprint/suggested/PotentialAutomorphyInfrastructurePartII--PL.7.lean",
+      "gitBlob": "ffe9df987e8f5a30306ff349c9db49c1f79968e0",
+      "sha256": "C52E23099106E04507D104B3BB4C62C6A292ABD79064815A2F482379BE90817C",
+      "bytes": 18814
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\brockian-sato-tate.lean.txt",
+      "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/sato_tate.lean",
+      "gitBlob": "cff8e3705ea29ddde873674d64a26448ade7e127",
+      "sha256": "AA6D28C5D160AA435D145DFFFB7E1749DBBCB922F686B866A724BB9CE9B30A7D",
+      "bytes": 4683
+    }
+  ],
+  "additionalSourceIndex": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\finite-adele-base-change.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/Global/Adeles/FiniteBaseChange.lean",
+      "gitBlob": "9f46d268a1188e80aec477bd9e92d18035adcee1",
+      "sha256": "962BDF49B811C09CBE0300A16431A4C607282DA3D47B4BC484D0273F62AF1860",
+      "bytes": 17065
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\adele-base-change.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/Global/Adeles/BaseChange.lean",
+      "gitBlob": "19d0dd21f90041386d7f4dfda6145c2c0ee78bf2",
+      "sha256": "89EEAE26FB582670DC24784039C05B9E208BB49D2471A74FFE549A8973FA6079",
+      "bytes": 14806
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\semilocal-basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/LocalGlobal/Semilocal/Basic.lean",
+      "gitBlob": "22be8f00c2a011a33e1934237b7c87ac5144bf14",
+      "sha256": "71286F2AF1A630615C1478989B1666A8470A3959C0C0F82D225A0278621037CC",
+      "bytes": 14126
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\semilocal-integers.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/LocalGlobal/Semilocal/Integers.lean",
+      "gitBlob": "aad7f9da34cf20d93c9d0402312815d78811a987",
+      "sha256": "9306E734C8A9249E0A2B0C9BB079E137AB6395E3FFB26C9F416F0B0F5D4D4426",
+      "bytes": 15713
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\semilocal-trace.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/LocalGlobal/Semilocal/Norm/Trace.lean",
+      "gitBlob": "f06656bd89354e84f68697f7faf7023ebc94d371",
+      "sha256": "1965156F26ADA8A712C514F1A85134A21A32BBDD6D61079434B950767CC44818",
+      "bytes": 6852
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\positive-lattice-finite.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/LinearAlgebra/IntegralLattice/PosDef/Finite.lean",
+      "gitBlob": "d94812ae07ebfcc97d5f32e8936632d69fa6cb60",
+      "sha256": "4E50FDE8714F3FBB4FDFCB302DA3B7FBC54FDEE74736B7C0639095D03D1579AF",
+      "bytes": 7479
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\quadratic-positive-finite.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/LinearAlgebra/QuadraticForm/PosDef.lean",
+      "gitBlob": "c8782d6a75d94b56e44b8806fe854af60446b286",
+      "sha256": "45CA4B91A7E361EDEAF3E9FE8A2D83ED83593914C77A995A42A79A2646682C65",
+      "bytes": 7028
+    }
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "highestWeightRouteReview": {
+    "source": "Geraghty, Modularity lifting theorems for ordinary Galois representations, Definition 2.2.1 and 2.2.3, March 12 2010 preprint.",
+    "url": "https://citeseerx.ist.psu.edu/document?doi=8faa2d675c94ae78d0ac8ebb3f9d4f69ede42d44&repid=rep1&type=pdf",
+    "exactContract": "The coefficient module is the algebraically induced integral GL_n representation Ind_B^GL_n(w_0 lambda), with right translation, tensorized over the specified embeddings. An arbitrary stable lattice or a characteristic-zero highest-weight vector alone is not this integral source construction.",
+    "candidateCommit": "51d586d1cdfd170cd66989af5fda3e6a9e07ca4d",
+    "candidates": [
+      {
+        "path": "TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Basic.lean",
+        "gitBlob": "7710997097f8b01e0cb4d340d9a34b616e393075"
+      },
+      {
+        "path": "TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Rationality.lean",
+        "gitBlob": "f9b71aa0e6ae3da877e71688278b818c12c2668c"
+      },
+      {
+        "path": "TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Weight/HighestWeight.lean",
+        "gitBlob": "7ceb982807ba78eb8961c48edfc0732e825b4dee"
+      }
+    ],
+    "assessment": "Read the fetched file introductions and declarations, not a complete transitive audit. Basic is a Young-symmetrizer image over a Q-algebra; Rationality is over C; HighestWeight gives highest weights over characteristic-zero fields. These are promising later characteristic-zero inputs but do not supply the required integral induced lattice. Deferred porting their broader dependency graph while proving the immediately consumable prime-choice obligation."
+  }
+}

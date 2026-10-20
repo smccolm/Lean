@@ -1,0 +1,94 @@
+{
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> genuine higher-symmetric-power continuation -> source potential automorphy/patching -> integral unitary auxiliary automorphic modules -> actual source split-place parabolic family and maximal-primary quotient inside the original small CM unitary level. The same required chain uses BLGG 3.6.1: actual residual symmetric-power adjoint -> primitive-root noncontainment -> original simultaneous Frobenius smallness prime -> actual compact-open small principal level. BLGG Lemma 6.1.2 also requires the strict cyclotomic degree over the actual symmetric-adjoint fixed field for arbitrary positive m, with the source coefficient-subfield image bounds.",
+  "discharged": "Original arbitrary-rank finite-place matrices have a genuine paired-CM-place unitary insertion; original integral evaluation has a section under precisely the original form's local integrality condition. The condition fails at only finitely many original places. Supported finite-family lifts preserve the separate original principal-congruence smallness place. The actual upper/lower parabolic levels and maximal-primary intermediate level are compact open in the full original CM unitary adelic group, with the exact original arithmetic quotient and finiteness proved. The actual primary auxiliary automorphic module is finite free over its actual quotient group ring; coinvariants recover upper-level forms by the exact unnormalized weighted trace. Topology, arithmetic smallness, arithmetic class finiteness, quotient finiteness and local-to-global source-level realization are derived in the consumer, not independent supplied certificates. For the original continuous rank-two representation with full SL2 image, the exact full adjoint of its actual homogeneous symmetric power now constructs the smallness prime. Native cyclotomic degree and cyclic Galois results derive a nontrivial character square from 2*[K:Q]<l-1. The existing scalar-witness theorem and actual adjoint scalar cancellation prove that the original primitive l-th root lies outside the fixed field of the adjoint kernel. Root noncontainment and a separately supplied residual adjoint representation are no longer inputs to that consumer; continuity of the actual adjoint is constructed from the original discrete rank-two representation. The actual original cyclotomic character has a Galois value of order equal to the original adjoined-field degree. Original scalar lifts give the factor-two bound [K(zeta_l):K] <= 2*[E(zeta_l):E], for E the actual symmetric-adjoint fixed field. The strict source degree conclusion follows for every positive m. This now holds for the exact lower SL2(k-prime) and upper k-units*GL2(k-prime) image conditions via the original coefficient embedding, without identifying k-prime with k. The source degree hypothesis itself excludes characteristics two and three. The m=1 conclusion derives root noncontainment and feeds the actual continuous-adjoint smallness-prime consumer under those same subfield image conditions.",
+  "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual primary auxiliary module consumer still takes an original CM number field, specified positive invertible form, finite family of distinct split CM-place pairs outside bad-form places and the separate principal place, a large residue prime, and an explicit finite free coefficient representation. The actual source subfield prime consumer takes an original continuous rank-two representation, its SL2-subfield lower and scalar-GL2-subfield upper image bounds, a primitive l-th root and [K(zeta_l):K]>2. It derives root noncontainment and the smallness-prime/level conditions; it does not construct the modular representation or prove its image bounds. BLGG 6.1.2's degree conclusion is proved under its source degree and image inputs. Its separate unramified-prime sufficient condition is not claimed; the available explicit large-prime number-field sufficient bound is stated separately. Prescribed source fields/forms and remaining prime/local/refinement constraints, exact integral induced highest-weight coefficient representation, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. No final Dubon acceptance gate closes here.",
+  "routeAssessment": "Reused the repository's original FiniteAdelicLocalGL2 insertion at the required original CM field and arbitrary rank, actual place-permuting CM conjugation, proved local residue parabolics and maximal-primary family quotient, original principal compact-open small level, positive-matrix Hermitian theorem, all-open-level arithmetic class finiteness and exact auxiliary automorphic comparison. Native restricted-product insertion, subgroup inverse/image quotient isomorphisms, finite intersections and PGroup transfer suffice. A direct paired-place element A*(H^-1*star(A)*H)^-1 and finite supported insertion avoid a general adelic unitary decomposition. The exact source integral induced highest-weight lattice remains required; generic characteristic-zero Weyl modules are not substituted. Reused originalPrimitiveRootStage, numberField_cyclotomic_degree_gt, residualGL2_exists_scalar_character_square, homogeneousSymmetricGL_scalar_ring and matrixAdjoint_scalar. Native restriction surjectivity and cyclic exponent/cardinality give the exact number-field cyclotomic square witness. This avoids a new residual-image or SL2-perfectness development and removes the root-noncontainment input without assuming full cyclotomic surjectivity over the number field. The exact source subfield image route uses existing field-SL2 perfection and perfect_subgroup_le_map_character_kernel to lift a determinant correction inside the character kernel. Scalar change of coefficients then yields the square witness. Native cyclic generator order, restriction to the original cyclotomic stage and the actual fixing-subgroup equivalence bound its order over the adjoint fixed field. This proves the required BLGG 6.1.2 degree conclusion without an incidental projective-simple-group development.",
+  "sourceContract": "BLGG arXiv:0912.1054v2, sections 3.2 and 3.6: original split-place GL factors, last-row U0/U1, maximal coefficient-primary quotient, separate small principal place; Geraghty Definition 2.2.1 integral induction still required. BLGG Lemma 6.1.2: [F(zeta_l):F]>2*m and SL2(k-prime) <= image <= k-units*GL2(k-prime) imply [E(zeta_l):E]>m for the original E fixed by ad Sym. The originalStage is the literal original primitive-root adjoin; n in Lean is the symmetric degree (source dimension minus one).",
+  "reuseSources": [
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/FiniteAdelicLocalGL2.lean",
+      "use": "Adapted actual single-place insertion to the required original number field and rank."
+    },
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/CMFiniteAdeleConjugation.lean",
+      "use": "Actual CM place permutation and local transport, never coordinatewise conjugation."
+    },
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/FinitePlaceParabolicFamilyQuotient.lean",
+      "use": "Original local family quotient, arithmetic residue factors and maximal-primary quotient."
+    },
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/CMFiniteAdelicOpenAuxiliaryComparison.lean",
+      "use": "Exact original automorphic comparison with arithmetic class finiteness already proved."
+    },
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/ResidualGL2CentralScalar.lean",
+      "use": "Existing full-SL2 scalar witness and exact symmetric scalar formula remove the root-noncontainment assumption."
+    },
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/OriginalCyclotomicPrimeStage.lean",
+      "use": "Original adjoined primitive-root field and actual finite Galois/cyclotomic structure."
+    },
+    {
+      "kind": "existing repository",
+      "path": "Extension/Dubon2026/CMFiniteAdelicCyclotomicSmallLevel.lean",
+      "use": "Existing original simultaneous Frobenius prime and actual compact-open small level, now with root noncontainment proved."
+    }
+  ],
+  "deferredCheckedProbes": [
+    "CMFiniteAdelicParabolicQuotient",
+    "CMFiniteAdelicParabolicFamilyQuotient"
+  ],
+  "deferredReason": "These two compiling intermediate quotient probes are unnecessary in the final principal-level consumer dependency closure; only the shorter required chain is prepared for production.",
+  "modules": [
+    "Dubon2026.NumberFieldFiniteAdelicLocalGL",
+    "Dubon2026.HermitianCommutingUnitary",
+    "Dubon2026.NumberFieldFiniteAdelicLocalGLMap",
+    "Dubon2026.CMFiniteAdelicLocalConjugation",
+    "Dubon2026.CMFiniteAdelicLocalSplitElement",
+    "Dubon2026.CMFiniteAdelicLocalSplitHom",
+    "Dubon2026.NumberFieldFiniteAdelicLocalIntegral",
+    "Dubon2026.CMFiniteAdelicLocalSplitIntegral",
+    "Dubon2026.NumberFieldFiniteAdelicMatrixIntegralSupport",
+    "Dubon2026.CMFiniteAdelicIntegralLocalMap",
+    "Dubon2026.CMFiniteAdelicIntegralLocalFaithful",
+    "Dubon2026.CMFiniteAdelicIntegralSplitHom",
+    "Dubon2026.CMFiniteAdelicParabolicLevels",
+    "Dubon2026.ParabolicResidueLevelTopology",
+    "Dubon2026.CMFiniteAdelicSplitExceptionalPlaces",
+    "Dubon2026.CMFiniteAdelicParabolicTopology",
+    "Dubon2026.CMFiniteAdelicLocalSplitSupport",
+    "Dubon2026.CMFiniteAdelicSplitFamilySurjective",
+    "Dubon2026.CMFiniteAdelicParabolicFamilyLevels",
+    "Dubon2026.SubgroupPairImageQuotient",
+    "Dubon2026.CMFiniteAdelicParabolicFamilyTopology",
+    "Dubon2026.CMFiniteAdelicPrincipalIntegralMap",
+    "Dubon2026.SubgroupPairPreimageQuotient",
+    "Dubon2026.CMFiniteAdelicPrincipalFamilyMap",
+    "Dubon2026.CMFiniteAdelicSmallParabolicLevels",
+    "Dubon2026.CMFiniteAdelicSmallParabolicQuotient",
+    "Dubon2026.CMFiniteAdelicSmallParabolicTopology",
+    "Dubon2026.CMFiniteAdelicSmallPrimaryLevel",
+    "Dubon2026.CMFiniteAdelicSmallPrimaryTopology",
+    "Dubon2026.CMHermitianPositiveUnitStar",
+    "Dubon2026.CMFiniteAdelicSmallPrimaryAuxiliaryComparison",
+    "Dubon2026.NumberFieldCyclotomicSquareWitness",
+    "Dubon2026.SymmetricAdjointCyclotomicSeparation",
+    "Dubon2026.CMFiniteAdelicSymmetricSmallLevel",
+    "Dubon2026.CyclotomicCharacterOrder",
+    "Dubon2026.ResidualSubfieldCentralScalar",
+    "Dubon2026.SymmetricAdjointCyclotomicDegree",
+    "Dubon2026.SubfieldSymmetricAdjointCyclotomicDegree",
+    "Dubon2026.CMFiniteAdelicSubfieldSmallLevel"
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalCodeAdopted": false,
+  "integralWeightReview": "Tools/integral-weight-reuse-review-20261019.json"
+}

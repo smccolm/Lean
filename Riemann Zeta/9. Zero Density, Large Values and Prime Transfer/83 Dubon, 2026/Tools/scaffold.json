@@ -19242,6 +19242,1262 @@
     {
       "path": "Tools/finite-base-polarized-deformation.json",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/QuadraticGaloisComponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseQuadraticComponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseRealConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMComponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMGroupExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMKernelCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTopologicalGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMRepresentationExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedInvolution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/InvolutionComponentHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedInvolutionAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMPolarizedExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMCharacterComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMDeformationRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinaryDeterminantCovariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinaryTensorPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousMatrixPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/BinaryTensorCovariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousMatrixColumns.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HomogeneousMatrixPolynomialCovariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricDualityMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricDualityInvertible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricDualityTranspose.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricDualityIntertwining.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricRealPolarization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricSimilitude.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricDeformationRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedAdjointSwitch.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedAdjointRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedAdjointTraceDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DualMatrixStrictAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedStrictKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedStrictConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedFirstOrderFiber.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedFirstOrderCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCocycleLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedDiscreteContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedFirstOrderConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedContinuousFirstOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricIrreducible.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedAdjointScalarSign.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricAdjointInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/finite-base-symmetric-cm-tangent.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedDualCoefficientBridge.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCotangentCocyclePoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedFirstOrderMatrixCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCotangentEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCotangentLinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedAdjointCoboundaryDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCotangentDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBasePolarizedCotangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricCotangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SkewTransposeCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedRealInvariantDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricRealInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseRealRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricRealCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedIdentityRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricUniversalMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricUniversalSpanning.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedScalarStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricStrictRigidity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMResidualPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ClosedMatrixTraceImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalResidualTraceNoetherian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceNoetherian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactLocalCoefficientImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalResidualTraceLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/TraceCoefficientStrictConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalResidualTraceStrictConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMTraceStrictConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceDescentData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTwistedDual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedOddInvolutionMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTraceMultiplier.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedConjugateDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricUniversalPolarization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedDualStrictConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTraceDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricResidualDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMPolarizationIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/cm-polarization-intertwiner.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizationCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizationIntertwinerSymmetry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTraceSymmetry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalPrincipalUnitSquareRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMPolarizationFromDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricTracePolarization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizationScalarAdjustment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizationCongruenceInvolution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/LocalCoefficientResidueUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedStrictMatrixAlignment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricPolarizationResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricStrictAlignment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMPolarizedAlignment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCoefficientConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricFullTraceDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedRepresentationStrictConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPolarizedUnframedClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedCoefficientContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPolarizedCoefficientClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTraceCoefficientUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolarizedTraceUnframedCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/OriginalPolarizedUnframedNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteBaseCMSymmetricUnframedUniversality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelDoubleCosetCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAlgebraicAutomorphicForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAuxiliaryCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAuxiliaryAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryRepresentationModuleEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryRegularCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAuxiliaryFreeness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryCoordinateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryCoordinateCoinvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliaryCoinvariantsCongr.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAuxiliaryTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelAuxiliaryModuleComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMMatrixComplexEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldIntegralFiniteAdeles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldPrincipalAdelesDiscrete.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicCompactFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PositiveHermitianUnitaryCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianUnitaryGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianArithmeticFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdelicMatrixProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelFromFiniteStabilizers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianArithmeticSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelSubgroupRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianAdelicSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianAuxiliaryModuleComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/cm-unframed-hermitian.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/ParabolicLastRowGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ParabolicLastRowQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ParabolicResidueLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ParabolicResidueAmbientQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceParabolicQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCommutativePrimaryQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCyclicPrimaryQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceParabolicPrimaryQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/AuxiliarySubgroupFamilyQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceParabolicFamilyQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FinitePlaceParabolicCoefficientRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteSeparatedReductionPGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteLocalCongruenceSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/RationalPrimeOrderEndomorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldPrimeOrderMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteCongruenceImageSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/FiniteArithmeticCongruenceTrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SmallLevelFromLargeCongruence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianCongruenceSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianCongruenceAuxiliaryComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdeleConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicUnitaryGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicAuxiliaryComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldIntegralFiniteAdelesCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldIntegralMatrixLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicIntegralLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralMatrixSubringEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralFiniteAdelicLocalMatrixMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CompactLocalMatrixCongruenceTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldPrincipalMatrixLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicPrincipalLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicPrincipalAuxiliaryComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldLargeResiduePrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallLevelExists.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/unitary-parabolic.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralPrimitiveBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralNearestMultiple.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralMatrixCondensation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralBilinearGramDet.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralBilinearHermite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralBilinearFiniteClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdeleDenominator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldIntegralPlaceApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldIntegralProductDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdeleDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeLocalClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianRationalTraceForm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianTracePositive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldPositiveIntegralMultiple.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticePairingIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeIntegralTraceForm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldTraceDualDenominator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicTraceDualPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicPairingClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicPairingDualContainment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianPositiveMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicTraceDualUniformContainment.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeRationalBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicTraceDualBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicTraceGramDetBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicTraceFiniteGramClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralBilinearFiniteSublevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianTraceScalarBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeScalarBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralBilinearCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeActionMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicTraceActionFiniteInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeBasisEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeBasisEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeFieldEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeTraceIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeHermitianIsometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMAdelicLatticeUnitaryRecovery.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldAdelicLatticeLevelRecovery.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicIntegralDoubleCoset.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicIntegralClassFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/DoubleCosetFiniteOpenRefinement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicClassFiniteness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicOpenAuxiliaryComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldCyclotomicDegreeLowerBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldLargeFrobeniusPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSmallnessFrobeniusPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicFrobeniusSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicCyclotomicSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/unitary-class-finiteness.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdelicLocalGL.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/HermitianCommutingUnitary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdelicLocalGLMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicLocalConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicLocalSplitElement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicLocalSplitHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdelicLocalIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicLocalSplitIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldFiniteAdelicMatrixIntegralSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicIntegralLocalMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicIntegralLocalFaithful.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicIntegralSplitHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicParabolicLevels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ParabolicResidueLevelTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSplitExceptionalPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicParabolicTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicLocalSplitSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSplitFamilySurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicParabolicFamilyLevels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SubgroupPairImageQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicParabolicFamilyTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicPrincipalIntegralMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SubgroupPairPreimageQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicPrincipalFamilyMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallParabolicLevels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallParabolicQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallParabolicTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallPrimaryLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallPrimaryTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMHermitianPositiveUnitStar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSmallPrimaryAuxiliaryComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/NumberFieldCyclotomicSquareWitness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricAdjointCyclotomicSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSymmetricSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CyclotomicCharacterOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/ResidualSubfieldCentralScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SymmetricAdjointCyclotomicDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SubfieldSymmetricAdjointCyclotomicDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMFiniteAdelicSubfieldSmallLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/unitary-split-levels.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/integral-weight-reuse-review-20261019.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearRegularFunctions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearRegularPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearRegularTranslation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearBorelCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearIntegralInduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearIntegralTorsion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearIntegralDeterminantTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearIntegralPolynomialStages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearIntegralCentralWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/PolynomialCentralWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GeneralLinearIntegralNumeratorDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralLocalCentralScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GenericDeterminantPrime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/GenericSingularMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SingularUpperRowElimination.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/MatrixPolynomialDensity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralPolynomialBorelCovariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralPolynomialSingularVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedDeterminantDivisibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedDenominatorBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedFiniteFree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralInducedTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMIntegralInducedTensorAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMIntegralInducedAuxiliaryComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/IntegralCoefficientEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceIntegralWeight.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/CMSourceIntegralWeightComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/GeneralLinearHopf.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/GeneralLinearPoints.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/tau-ceti-integral-coordinate-20261019/MatrixBialgebra.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019/IrreducibleDet.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/subspace-determinant-reuse-20261019/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/GeneralLinearGroupMvPolynomial.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/LICENSE",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/mathlib-matrix-density-reuse-20261019/manifest.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/IntegralWeightReuse/ATTRIBUTION.md",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/integral-source-weight.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -23827,7 +25083,301 @@
     "FiniteBasePolarizedPresentation",
     "FiniteBasePolarizedCoefficientRing",
     "FiniteBasePolarizedRepresentation",
-    "FiniteBasePolarizedUniversality"
+    "FiniteBasePolarizedUniversality",
+    "QuadraticGaloisComponent",
+    "FiniteBaseQuadraticComponent",
+    "FiniteBaseRealConjugation",
+    "FiniteBaseCMComponent",
+    "FiniteBaseCMSection",
+    "FiniteBaseCMGroupExtension",
+    "FiniteBaseCMKernel",
+    "FiniteBaseCMKernelCoordinate",
+    "PolarizedTopologicalGroup",
+    "FiniteBaseCMRepresentationExtension",
+    "PolarizedInvolution",
+    "InvolutionComponentHom",
+    "PolarizedInvolutionAction",
+    "FiniteBaseCMPolarizedExtension",
+    "FiniteBaseCMCharacterComparison",
+    "FiniteBaseCMDeformationRing",
+    "BinaryDeterminantCovariant",
+    "BinaryTensorPolynomial",
+    "HomogeneousMatrixPolynomial",
+    "BinaryTensorCovariance",
+    "HomogeneousMatrixColumns",
+    "HomogeneousMatrixPolynomialCovariance",
+    "SymmetricDualityMatrix",
+    "SymmetricDualityInvertible",
+    "SymmetricDualityTranspose",
+    "SymmetricDualityIntertwining",
+    "SymmetricRealPolarization",
+    "FiniteBaseCMSymmetricMatrices",
+    "FiniteBaseCMSymmetricRepresentation",
+    "FiniteBaseCMSymmetricSimilitude",
+    "FiniteBaseCMSymmetricDeformationRing",
+    "PolarizedAdjointSwitch",
+    "PolarizedAdjointRepresentation",
+    "PolarizedAdjointTraceDuality",
+    "DualMatrixStrictAlgebra",
+    "PolarizedStrictKernel",
+    "PolarizedStrictConjugation",
+    "PolarizedFirstOrderFiber",
+    "PolarizedFirstOrderCocycles",
+    "PolarizedCocycleLift",
+    "PolarizedDiscreteContinuity",
+    "PolarizedFirstOrderConjugacy",
+    "PolarizedContinuousFirstOrder",
+    "FiniteBaseCMSymmetricTangent",
+    "FiniteBaseCMSymmetricIrreducible",
+    "PolarizedAdjointScalarSign",
+    "FiniteBaseCMSymmetricAdjointInvariants",
+    "PolarizedDualCoefficientBridge",
+    "PolarizedCotangentCocyclePoints",
+    "PolarizedFirstOrderMatrixCoordinate",
+    "PolarizedCotangentEvaluation",
+    "PolarizedCotangentLinearity",
+    "PolarizedAdjointCoboundaryDimension",
+    "PolarizedCotangentDimension",
+    "FiniteBasePolarizedCotangent",
+    "FiniteBaseCMSymmetricCotangent",
+    "SkewTransposeCoordinates",
+    "PolarizedRealInvariantDimension",
+    "FiniteBaseCMSymmetricRealInvariants",
+    "FiniteBaseRealRestriction",
+    "FiniteBaseCMSymmetricRealCohomology",
+    "PolarizedIdentityRestriction",
+    "FiniteBaseCMSymmetricUniversalMatrices",
+    "FiniteBaseCMSymmetricUniversalSpanning",
+    "PolarizedScalarStabilizer",
+    "FiniteBaseCMSymmetricStrictRigidity",
+    "FiniteBaseCMSymmetricTraceDescent",
+    "FiniteBaseCMResidualPresentation",
+    "ClosedMatrixTraceImage",
+    "OriginalResidualTraceNoetherian",
+    "FiniteBaseCMSymmetricTraceNoetherian",
+    "CompactLocalCoefficientImage",
+    "OriginalResidualTraceLocalData",
+    "FiniteBaseCMSymmetricTraceLocalData",
+    "TraceCoefficientStrictConjugacy",
+    "OriginalResidualTraceStrictConjugacy",
+    "FiniteBaseCMTraceStrictConjugacy",
+    "FiniteBaseCMConjugation",
+    "FiniteBaseCMSymmetricTraceDescentData",
+    "PolarizedTwistedDual",
+    "PolarizedOddInvolutionMatrix",
+    "PolarizedTraceMultiplier",
+    "PolarizedConjugateDuality",
+    "FiniteBaseCMSymmetricUniversalPolarization",
+    "PolarizedDualStrictConjugacy",
+    "PolarizedTraceDuality",
+    "FiniteBaseCMSymmetricTraceDuality",
+    "FiniteBaseCMSymmetricResidualDuality",
+    "FiniteBaseCMPolarizationIntertwiner",
+    "FiniteBaseCMSymmetricTraceIntertwiner",
+    "PolarizationCongruence",
+    "PolarizationIntertwinerSymmetry",
+    "FiniteBaseCMSymmetricTraceSymmetry",
+    "LocalPrincipalUnitSquareRoot",
+    "FiniteBaseCMPolarizationFromDuality",
+    "FiniteBaseCMSymmetricTracePolarization",
+    "PolarizationScalarAdjustment",
+    "PolarizationCongruenceInvolution",
+    "LocalCoefficientResidueUniqueness",
+    "PolarizedStrictMatrixAlignment",
+    "FiniteBaseCMSymmetricPolarizationResidue",
+    "FiniteBaseCMSymmetricStrictAlignment",
+    "FiniteBaseCMPolarizedAlignment",
+    "PolarizedCoefficientConjugacy",
+    "FiniteBaseCMSymmetricFullTraceDescent",
+    "PolarizedRepresentationStrictConjugacy",
+    "OriginalPolarizedUnframedClasses",
+    "PolarizedCoefficientContinuity",
+    "OriginalPolarizedCoefficientClass",
+    "PolarizedTraceCoefficientUniqueness",
+    "PolarizedTraceUnframedCriterion",
+    "OriginalPolarizedUnframedNaturality",
+    "FiniteBaseCMSymmetricUnframedUniversality",
+    "SmallLevelDoubleCosetCoordinates",
+    "SmallLevelAlgebraicAutomorphicForms",
+    "SmallLevelAuxiliaryCoordinates",
+    "SmallLevelAuxiliaryAction",
+    "AuxiliaryRepresentationModuleEquiv",
+    "AuxiliaryRegularCoordinates",
+    "SmallLevelAuxiliaryFreeness",
+    "AuxiliaryCoordinateTrace",
+    "AuxiliaryCoordinateCoinvariants",
+    "AuxiliaryCoinvariantsCongr",
+    "SmallLevelAuxiliaryTrace",
+    "SmallLevelAuxiliaryModuleComparison",
+    "CMMatrixComplexEmbedding",
+    "NumberFieldIntegralFiniteAdeles",
+    "NumberFieldPrincipalAdelesDiscrete",
+    "NumberFieldAdelicCompactFiniteness",
+    "PositiveHermitianUnitaryCompact",
+    "CMHermitianUnitaryGroup",
+    "CMHermitianArithmeticFiniteness",
+    "NumberFieldFiniteAdelicMatrixProjection",
+    "SmallLevelFromFiniteStabilizers",
+    "CMHermitianArithmeticSmallLevel",
+    "SmallLevelSubgroupRestriction",
+    "CMHermitianAdelicSmallLevel",
+    "CMHermitianAuxiliaryModuleComparison",
+    "ParabolicLastRowGroup",
+    "ParabolicLastRowQuotient",
+    "ParabolicResidueLevel",
+    "ParabolicResidueAmbientQuotient",
+    "FinitePlaceParabolicQuotient",
+    "FiniteCommutativePrimaryQuotient",
+    "FiniteCyclicPrimaryQuotient",
+    "FinitePlaceParabolicPrimaryQuotient",
+    "AuxiliarySubgroupFamilyQuotient",
+    "FinitePlaceParabolicFamilyQuotient",
+    "FinitePlaceParabolicCoefficientRing",
+    "FiniteSeparatedReductionPGroup",
+    "FiniteLocalCongruenceSubgroup",
+    "RationalPrimeOrderEndomorphism",
+    "NumberFieldPrimeOrderMatrix",
+    "FiniteCongruenceImageSubgroup",
+    "FiniteArithmeticCongruenceTrivial",
+    "SmallLevelFromLargeCongruence",
+    "CMHermitianCongruenceSmallLevel",
+    "CMHermitianCongruenceAuxiliaryComparison",
+    "CMFiniteAdeleConjugation",
+    "CMFiniteAdelicUnitaryGroup",
+    "CMFiniteAdelicAuxiliaryComparison",
+    "NumberFieldIntegralFiniteAdelesCompact",
+    "NumberFieldIntegralMatrixLevel",
+    "CMFiniteAdelicIntegralLevel",
+    "IntegralMatrixSubringEquiv",
+    "IntegralFiniteAdelicLocalMatrixMap",
+    "CompactLocalMatrixCongruenceTopology",
+    "NumberFieldPrincipalMatrixLevel",
+    "CMFiniteAdelicPrincipalLevel",
+    "CMFiniteAdelicPrincipalAuxiliaryComparison",
+    "NumberFieldLargeResiduePrime",
+    "CMFiniteAdelicSmallLevelExists",
+    "IntegralPrimitiveBasis",
+    "IntegralNearestMultiple",
+    "IntegralMatrixCondensation",
+    "IntegralBilinearGramDet",
+    "IntegralBilinearHermite",
+    "IntegralBilinearFiniteClasses",
+    "NumberFieldFiniteAdeleDenominator",
+    "NumberFieldAdelicLattice",
+    "NumberFieldAdelicLatticeBound",
+    "NumberFieldAdelicLatticeFinite",
+    "NumberFieldAdelicLatticeRank",
+    "NumberFieldIntegralPlaceApproximation",
+    "NumberFieldIntegralProductDensity",
+    "NumberFieldFiniteAdeleDensity",
+    "NumberFieldAdelicLatticeClosure",
+    "NumberFieldAdelicLatticeLocalClosure",
+    "CMHermitianRationalTraceForm",
+    "CMHermitianTracePositive",
+    "NumberFieldPositiveIntegralMultiple",
+    "CMFiniteAdelicPairing",
+    "CMAdelicLatticePairingIntegral",
+    "CMAdelicLatticeIntegralTraceForm",
+    "NumberFieldTraceDualDenominator",
+    "CMAdelicTraceDualPairing",
+    "CMAdelicPairingClosure",
+    "CMAdelicPairingDualContainment",
+    "CMHermitianPositiveMatrix",
+    "CMAdelicTraceDualUniformContainment",
+    "NumberFieldAdelicLatticeRationalBasis",
+    "CMAdelicTraceDualBasis",
+    "CMAdelicTraceGramDetBound",
+    "CMAdelicTraceFiniteGramClasses",
+    "IntegralBilinearFiniteSublevel",
+    "CMHermitianTraceScalarBound",
+    "CMAdelicLatticeScalarBound",
+    "IntegralBilinearCoordinates",
+    "CMAdelicLatticeActionMatrix",
+    "CMAdelicTraceActionFiniteInvariants",
+    "CMAdelicLatticeBasisEquiv",
+    "NumberFieldAdelicLatticeBasisEquiv",
+    "CMAdelicLatticeFieldEquiv",
+    "CMAdelicLatticeTraceIsometry",
+    "CMAdelicLatticeHermitianIsometry",
+    "CMAdelicLatticeUnitaryRecovery",
+    "NumberFieldAdelicLatticeTransport",
+    "NumberFieldAdelicLatticeLevelRecovery",
+    "CMFiniteAdelicIntegralDoubleCoset",
+    "CMFiniteAdelicIntegralClassFiniteness",
+    "DoubleCosetFiniteOpenRefinement",
+    "CMFiniteAdelicClassFiniteness",
+    "CMFiniteAdelicOpenAuxiliaryComparison",
+    "NumberFieldCyclotomicDegreeLowerBound",
+    "NumberFieldLargeFrobeniusPrime",
+    "SourceSmallnessFrobeniusPrime",
+    "CMFiniteAdelicFrobeniusSmallLevel",
+    "CMFiniteAdelicCyclotomicSmallLevel",
+    "NumberFieldFiniteAdelicLocalGL",
+    "HermitianCommutingUnitary",
+    "NumberFieldFiniteAdelicLocalGLMap",
+    "CMFiniteAdelicLocalConjugation",
+    "CMFiniteAdelicLocalSplitElement",
+    "CMFiniteAdelicLocalSplitHom",
+    "NumberFieldFiniteAdelicLocalIntegral",
+    "CMFiniteAdelicLocalSplitIntegral",
+    "NumberFieldFiniteAdelicMatrixIntegralSupport",
+    "CMFiniteAdelicIntegralLocalMap",
+    "CMFiniteAdelicIntegralLocalFaithful",
+    "CMFiniteAdelicIntegralSplitHom",
+    "CMFiniteAdelicParabolicLevels",
+    "ParabolicResidueLevelTopology",
+    "CMFiniteAdelicSplitExceptionalPlaces",
+    "CMFiniteAdelicParabolicTopology",
+    "CMFiniteAdelicLocalSplitSupport",
+    "CMFiniteAdelicSplitFamilySurjective",
+    "CMFiniteAdelicParabolicFamilyLevels",
+    "SubgroupPairImageQuotient",
+    "CMFiniteAdelicParabolicFamilyTopology",
+    "CMFiniteAdelicPrincipalIntegralMap",
+    "SubgroupPairPreimageQuotient",
+    "CMFiniteAdelicPrincipalFamilyMap",
+    "CMFiniteAdelicSmallParabolicLevels",
+    "CMFiniteAdelicSmallParabolicQuotient",
+    "CMFiniteAdelicSmallParabolicTopology",
+    "CMFiniteAdelicSmallPrimaryLevel",
+    "CMFiniteAdelicSmallPrimaryTopology",
+    "CMHermitianPositiveUnitStar",
+    "CMFiniteAdelicSmallPrimaryAuxiliaryComparison",
+    "NumberFieldCyclotomicSquareWitness",
+    "SymmetricAdjointCyclotomicSeparation",
+    "CMFiniteAdelicSymmetricSmallLevel",
+    "CyclotomicCharacterOrder",
+    "ResidualSubfieldCentralScalar",
+    "SymmetricAdjointCyclotomicDegree",
+    "SubfieldSymmetricAdjointCyclotomicDegree",
+    "CMFiniteAdelicSubfieldSmallLevel",
+    "GeneralLinearRegularFunctions",
+    "GeneralLinearRegularPoints",
+    "GeneralLinearRegularTranslation",
+    "GeneralLinearBorelCharacter",
+    "GeneralLinearIntegralInduction",
+    "GeneralLinearIntegralTorsion",
+    "GeneralLinearIntegralDeterminantTwist",
+    "GeneralLinearIntegralPolynomialStages",
+    "GeneralLinearIntegralCentralWeight",
+    "PolynomialCentralWeight",
+    "GeneralLinearIntegralNumeratorDegree",
+    "IntegralLocalCentralScalar",
+    "GenericDeterminantPrime",
+    "GenericSingularMatrix",
+    "SingularUpperRowElimination",
+    "MatrixPolynomialDensity",
+    "IntegralPolynomialBorelCovariance",
+    "IntegralPolynomialSingularVanishing",
+    "IntegralInducedDeterminantDivisibility",
+    "IntegralInducedDenominatorBound",
+    "IntegralInducedFiniteFree",
+    "IntegralInducedTensor",
+    "CMIntegralInducedTensorAction",
+    "CMIntegralInducedAuxiliaryComparison",
+    "IntegralCoefficientEmbedding",
+    "CMSourceIntegralWeight",
+    "CMSourceIntegralWeightComparison"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

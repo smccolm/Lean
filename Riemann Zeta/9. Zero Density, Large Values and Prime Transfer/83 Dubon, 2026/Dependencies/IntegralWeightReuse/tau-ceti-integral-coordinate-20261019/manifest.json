@@ -1,0 +1,40 @@
+{
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "469cd8e08a918e133b260bcad0b60b8a1daf591a",
+  "commitUTC": "2026-10-20T00:15:00Z",
+  "localDate": "2026-10-19 America/Vancouver",
+  "license": "Apache-2.0; archived LICENSE",
+  "licenseSha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+  "status": "Scratch adaptation only; not promoted; no source finite-freeness conclusion claimed.",
+  "localPinsChanged": false,
+  "sourceConsumer": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy -> CHT/Geraghty integral unitary automorphic forms -> Geraghty Definition 2.2.1 exact integral Borel-induced coefficient module.",
+  "files": [
+    {
+      "file": "MatrixBialgebra.lean.txt",
+      "sourcePath": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Coordinate/Bialgebra.lean",
+      "gitBlob": "971918ea2454d618ab72c085f1185a9dd97c3715",
+      "sha256": "29891D726A0621DB2C738817102D6899C924EA983A5BC91042326C62684CCCAD",
+      "bytes": 14369,
+      "purpose": "Reference only; original matrix-polynomial coordinate construction.",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/469cd8e08a918e133b260bcad0b60b8a1daf591a/TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Coordinate/Bialgebra.lean"
+    },
+    {
+      "file": "GeneralLinearHopf.lean.txt",
+      "sourcePath": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Coordinate/HopfAlgebra.lean",
+      "gitBlob": "4e96bb0923a19a85affb45872a7e27a59af3dab5",
+      "sha256": "86A517ECC474409597D7BA4B966DAFE84415A0FD6D6B0E4C3984531D58370CD7",
+      "bytes": 35420,
+      "purpose": "Partial adaptation: determinant-localization carrier only; no Hopf/category infrastructure imported.",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/469cd8e08a918e133b260bcad0b60b8a1daf591a/TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Coordinate/HopfAlgebra.lean"
+    },
+    {
+      "file": "GeneralLinearPoints.lean.txt",
+      "sourcePath": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/FunctorOfPoints.lean",
+      "gitBlob": "4add7598a2056f079866903244eee73d07b3b525",
+      "sha256": "04302B1D246C30368A34793435D62F3B18BA1D432033A3061ECC85E349BDF0B1",
+      "bytes": 16265,
+      "purpose": "Partial adaptation: original matrix evaluation, generic matrix, point equivalence and naturality.",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/469cd8e08a918e133b260bcad0b60b8a1daf591a/TauCeti/Algebra/AlgebraicGroup/GeneralLinear/FunctorOfPoints.lean"
+    }
+  ]
+}

@@ -5,3 +5,7 @@ Adapted sources: TauCeti/Data/ZMod/TwoPowerCharacter.lean and TauCeti/NumberTheo
 Native adaptations: TwoPowerCyclotomicCharacter.lean and TwoPowerCyclotomicComplexSubfield.lean.
 Changes: unchanged Lean 4.30.0 pins, pinned character extension and conjugation, native rational-circle finite-image cyclicity, and original arithmetic local-degree/global-cohomology consumers. No external code is an active package dependency.
 The source tree at this revision contains LICENSE and no top-level NOTICE file.
+
+
+19 October 2026: Project 83 scope 4766
+Adapted proved integral Gram-class reduction, integral-place approximation and finite integral sublevels from TauCetiProject/TauCeti at 51d586d1cdfd170cd66989af5fda3e6a9e07ca4d (the seven reduction blobs are unchanged from indexed commit 9fc5d5a87d00cb696e606ccdae66420cc837c05e). Apache-2.0; original copyright headers retained. No upstream NOTICE exists in the verified tree. The unchanged upstream license is adjacent. Exact module mappings, source hashes, local changes and proof boundaries: Tools/unitary-class-finiteness.json.

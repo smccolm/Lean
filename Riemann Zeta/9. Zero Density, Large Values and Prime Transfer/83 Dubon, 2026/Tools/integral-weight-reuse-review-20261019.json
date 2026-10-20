@@ -1,0 +1,776 @@
+{
+  "date": "2026-10-19 America/Vancouver",
+  "purpose": "Before expanding the exact integral induced highest-weight coefficient dependency of DUB-17's actual primary auxiliary automorphic module, refresh the available primary Lean sources.",
+  "sourceContract": "Geraghty Definition 2.2.1 / BLGG section 3.2: the original integral algebraic induction Ind_B^GL_n(w0 lambda) over the coefficient ring, with right translation and the specified embedding tensor product. A separate characteristic-zero module or arbitrary stable lattice does not discharge this object.",
+  "repositories": [
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "commitUTC": "2026-10-16T15:52:45Z",
+      "tree": "76f7413a9efaa22e858c89f197053d76367ce390",
+      "treeEntries": 542,
+      "truncated": false
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "469cd8e08a918e133b260bcad0b60b8a1daf591a",
+      "commitUTC": "2026-10-20T00:15:00Z",
+      "tree": "d539fedce5186a18e40d4c50f1f4698312308242",
+      "treeEntries": 20230,
+      "truncated": false
+    }
+  ],
+  "candidates": [
+    {
+      "path": "TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Basic.lean",
+      "blob": "7710997097f8b01e0cb4d340d9a34b616e393075",
+      "inspectedLines": [
+        1,
+        150
+      ],
+      "verdict": "The same already reviewed blob is unchanged at the refreshed commit. Its actual Weyl-module construction requires Algebra Q k. It does not construct or identify the required integral induced lattice."
+    },
+    {
+      "path": "TauCeti/Algebra/AlgebraicGroup/Representation/Coordinate.lean",
+      "blob": "f57765c25e20488ca90e78cd4a16411efc729298",
+      "inspectedLines": [
+        1,
+        150
+      ],
+      "verdict": "Constructs the coordinate bialgebra map from an existing comodule with a supplied finite basis. It does not establish finite freeness of the source induced module; using it for that conclusion would reverse its dependency."
+    },
+    {
+      "path": "TauCeti/Algebra/Coalgebra/Comodule/Flag/Induction.lean",
+      "blob": "54fbf96309c057a341af0264168c8d297f909efe",
+      "inspectedLines": [
+        1,
+        150
+      ],
+      "verdict": "Induction builds a triangular basis for an already finite-dimensional field comodule from a uniform fixed-vector assumption. This is not algebraic induction from a Borel over the integral coefficient ring."
+    },
+    {
+      "path": "TauCeti/RepresentationTheory/Symmetric/Specht/Straightening.lean",
+      "blob": "55726c5ca338b408f59d6787f66d428f5dde7231",
+      "inspectedLines": [
+        1,
+        150
+      ],
+      "verdict": "The displayed Garnir relation and straightening use rational polytabloids and division by a positive multiplicity. This is not a proved integral bideterminant basis or an identification with the source integral algebraic induction."
+    },
+    {
+      "path": "TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/SchurWeyl.lean",
+      "blob": "06eb93996bc39b796696654aaf57b1f6232a508c",
+      "inspectedLines": [
+        1,
+        150
+      ],
+      "verdict": "Character identities over a characteristic-zero field, using inverse factorials. These do not identify the required integral induced lattice or prove its finite freeness."
+    }
+  ],
+  "searches": [
+    "Lean formalization integral Schur module Borel Weil algebraic induction GLn",
+    "site:github.com/TauCetiProject/TauCeti \"Induction\" \"Algebraic\"",
+    "site:github.com ImperialCollegeLondon FLT \"weight\" \"representation\" integral"
+  ],
+  "boundedConclusion": "Selected external coordinate, determinant and GL-density proofs shorten the required chain. Their unchanged-pin adaptations now feed a kernel-checked proof of finite freeness of the exact integral induced module over its original characteristic-zero local PID. The earlier negative candidate assessments concern their specified interfaces, not a claim of universal absence. No field Weyl module or supplied stable lattice replaces the literal source integral regular-function module.",
+  "furtherLocalReuse": "Applied in the assembled scratch chain: original field-SL2 perfection, perfect_subgroup_le_map_character_kernel, ResidualGL2CentralScalar, the exact homogeneous symmetric scalar formula, matrixAdjoint_scalar, originalPrimitiveRootStage and native cyclic-order results. These prove the factor-two and strict cyclotomic degree bounds over the actual symmetric-adjoint fixed field, including the exact coefficient-subfield upper/lower image assumptions of BLGG Lemma 6.1.2. Root noncontainment is derived and feeds the actual continuous-adjoint smallness-prime consumer. The original modular representation and its source residual-image bounds remain unresolved.",
+  "rootPinsChanged": false,
+  "externalCodeAdopted": true,
+  "sourceDegreeContract": {
+    "url": "https://arxiv.org/html/0912.1054v2",
+    "location": "Lemma 6.1.2 and Theorem 3.6.1 prime choice",
+    "proved": "The strict degree conclusion under the source degree and subfield image conditions, and the resulting root noncontainment/smallness-prime construction.",
+    "notClaimed": "The separate assertion that unramifiedness of l in the base number field alone supplies cyclotomic degree l-1. The number-field explicit size sufficient bound is proved separately."
+  },
+  "selectedAdaptations": [
+    {
+      "archive": "tau-ceti-integral-coordinate-20261019",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "469cd8e08a918e133b260bcad0b60b8a1daf591a",
+      "purpose": "Determinant-localized coordinate carrier, generic evaluation and original point equivalence; only the needed coordinate construction is adapted.",
+      "license": "Apache-2.0; archived LICENSE",
+      "manifest": "tau-ceti-integral-coordinate-20261019/manifest.json"
+    },
+    {
+      "archive": "subspace-determinant-reuse-20261019",
+      "repository": "rwst/Subspace-Theorems",
+      "commit": "09835cb23557ae5ae0cf55a9c4ab9055f5d60338",
+      "purpose": "Generic determinant irreducibility, adapted from the field proof to the original domain by evaluation at identity. Original-UFD primality feeds actual numerator divisibility.",
+      "license": "Apache-2.0",
+      "manifest": "subspace-determinant-reuse-20261019/manifest.json"
+    },
+    {
+      "archive": "mathlib-matrix-density-reuse-20261019",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+      "purpose": "Polynomial identity from equality on GL, adapted to the unchanged native pin. Original Borel covariance extends to singular matrices and forces original-coefficient determinant divisibility.",
+      "license": "Apache-2.0",
+      "manifest": "mathlib-matrix-density-reuse-20261019/manifest.json"
+    }
+  ],
+  "additionalInspectedCandidates": [
+    {
+      "repository": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "lean/OAI/RepresentationTheory/RestrictedTilting/BinarySequences.lean",
+      "blob": "5208fe74c55b9cc46e6f019c90d711a29f47476e",
+      "verdict": "The field-valued SL2 binary-form exact sequences and good filtrations do not construct the literal general-GLn integral Borel-induced module. Not adopted."
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "469cd8e08a918e133b260bcad0b60b8a1daf591a",
+      "path": "TauCeti/LinearAlgebra/Matrix/GeneralLinearGroup/Diagonal/Bruhat.lean",
+      "verdict": "General-rank field Bruhat decomposition was inspected. The generic determinant, singular specialization and adjugate row elimination give a shorter rigorous route to the required original-ring denominator bound. Bruhat infrastructure was not imported."
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "4faf50c84bbcf3bc8b4088c5ceeb975f9ba894fc",
+      "path": "TauCeti/RepresentationTheory/ClassicalGroups/Weight/HighestWeight.lean",
+      "verdict": "Search excerpt starts from a nontrivial rational representation and produces a highest-weight vector. It does not by itself prove nonzeroness of this literal integral induced module. Not adopted; excerpt-level evidence only."
+    }
+  ],
+  "nativeReuse": [
+    "Localization.Away.surj; localization fraction representation and native nonzero-divisor domain instances.",
+    "MvPolynomial restrictTotalDegree finite basis, homogeneity/coefficients and original-ring injectivity.",
+    "Native local-ring unit alternative for -2+3=1 and infinite-order unit power criterion.",
+    "Native Noetherian submodule finiteness and finite torsion-free module freeness over a PID.",
+    "PiTensorProduct map and Basis.piTensorProduct: original tensor action and actual finite-free tensor basis.",
+    "Existing Dubon parabolicLastRowDiagonal: exact arbitrary-rank single-diagonal-unit matrix.",
+    "Existing originalLocalCompletionMap and originalLocalCompletionMap_le_one_iff: actual embedding completion and integral preservation.",
+    "Existing actual CM unitary integral evaluation, small auxiliary levels, maximal-primary quotient and exact weighted-trace comparison."
+  ],
+  "appliedIntegralInductionScratch": {
+    "date": "2026-10-19 America/Vancouver",
+    "modules": [
+      {
+        "module": "GeneralLinearRegularFunctions",
+        "sha256": "73B620D9E2DC1FF25C299C52CA790BBF7BA10B89365A798168FF755E88AA1F74",
+        "oleanSha256": "787AF4FFFAE8B28A52705244A4A652683E53A11D25F65420F81D3B31D5C8EED3"
+      },
+      {
+        "module": "GeneralLinearRegularPoints",
+        "sha256": "59A7CFF5ADF0BB7E66A6EAEEB194EA3033746D4465BAC83AAD3D246848E2DD53",
+        "oleanSha256": "E41995CCEBBDCD2FDB147E8C24F37501B1E2494677FAFB1A225E6570E4F726E1"
+      },
+      {
+        "module": "GeneralLinearRegularTranslation",
+        "sha256": "57517DA5370DFC16B80213252BEFA20646A51C7EBD0239FC2752AAAFD8DCA5BC",
+        "oleanSha256": "F64CBA53948D86853B9C52D24FEBD71FB3C67EEC65A91C46A9248DC752E7562B"
+      },
+      {
+        "module": "GeneralLinearBorelCharacter",
+        "sha256": "FE3B54CCCD97E91349E857B503DBE4AE9B6006EA4DC7B652204C664D044BC4BB",
+        "oleanSha256": "FB0D8A4866F96C30B2FCBB18827A99D7158DE04A6DA7274EDBF34AE0F67D7C51"
+      },
+      {
+        "module": "GeneralLinearIntegralInduction",
+        "sha256": "8EB5B6CEE69E2F74F279C9EE1FBBC61ED8CC70B32C1C4955FECA1AC013B7823A",
+        "oleanSha256": "1B20B8EC8285C96BA6BE8A2A8DC353212A1891F03499EEDCC9F308C56E9CD58C"
+      },
+      {
+        "module": "GeneralLinearIntegralTorsion",
+        "sha256": "21AF157AD17DC596253DD0E19645A11943A54FA86C2A50247B0D9421D735B881",
+        "oleanSha256": "6E9B7997F578144672D08542AB205F7178F0E578D264B2746ABA0D44F7EF2352"
+      },
+      {
+        "module": "GeneralLinearIntegralDeterminantTwist",
+        "sha256": "5784C5355855F79915598AC9CD517B8344A73044794A342DEE0247ED6D594BA4",
+        "oleanSha256": "936EB41A0AF36C188543A0FBBD36C1B80189FC90D65C81848D1B7AD0B5100CE9"
+      },
+      {
+        "module": "GeneralLinearIntegralPolynomialStages",
+        "sha256": "114EE3E5AC33C3790B2F8CE7B1D9A5253E1531B42CD35C5045671127CA397236",
+        "oleanSha256": "D6DD23C37427F75DFAE800A2ED4254F9BE38E80550D709256672CB13289CC1C6"
+      },
+      {
+        "module": "GeneralLinearIntegralCentralWeight",
+        "sha256": "EE4BE36D1C074ABD7A0833DB0D5F7663923874366892C445C3C7DDAF2215518F",
+        "oleanSha256": "87E1533178258E2982A4E8705A4C3912B9AB0D4267611592241DD1E25FA01B36"
+      },
+      {
+        "module": "PolynomialCentralWeight",
+        "sha256": "2A9C7212673C3C7D573B799C9C52B5B7C1305D2A1C28891209D5C6A3DDF09FF8",
+        "oleanSha256": "892A7B2BC33FB853067C6E3F516D06A828779DD6D3EEE181B3D20B0515A1D01B"
+      },
+      {
+        "module": "GeneralLinearIntegralNumeratorDegree",
+        "sha256": "DB3563D71DAECCC93B5294235D1CC609DEB625DC6F6AA09C4562C968CDF8467D",
+        "oleanSha256": "EFCE57037D1F0A87E2A250CFBB5F87F0B79C82F38E1E0074322591922C6DDF9A"
+      },
+      {
+        "module": "IntegralLocalCentralScalar",
+        "sha256": "5677943B570CC80B1EC0B5996968678A35016C542A61861BD1F9878C5BE99E6D",
+        "oleanSha256": "73EAC9E1FE5ADE2B5E42A0E107B3ED9C5E85B1CEFC79FD511E1493D66645EF6F"
+      },
+      {
+        "module": "GenericDeterminantPrime",
+        "sha256": "CC18E974778A36DE576A00DC6C02F6F1F925FCF76E9354CB90E97583BECBE30D",
+        "oleanSha256": "AF3F6628B480E8459706639EBDE1C290B317D34ED8CF2961A7B2242FF611B081"
+      },
+      {
+        "module": "GenericSingularMatrix",
+        "sha256": "AF0B4C983658910B82B987973673241AF4D896FFBD0DCADCD2FD11FFACC2606D",
+        "oleanSha256": "AD29224DCCE07FEC57321AF2BB940E8DAF0D90A42B4B2FB3A029685230A519F4"
+      },
+      {
+        "module": "SingularUpperRowElimination",
+        "sha256": "FC20582F7F1BF01A2FB066EC070289C9C02ACE60421E67D8684DC660F757BF10",
+        "oleanSha256": "7E180C313D23F18DA84146CA063C7EF085C915F4E37C4CEE14CA66FF8E0ADCA9"
+      },
+      {
+        "module": "MatrixPolynomialDensity",
+        "sha256": "7EB00EDB6E2853AAA0299CD3DFA2CD4126DC169632CA6D3F91682939D25DCC16",
+        "oleanSha256": "766BA7371E9ECE1CFFBB46445B935008D7F36B33DFA345B0082493B180B284DF"
+      },
+      {
+        "module": "IntegralPolynomialBorelCovariance",
+        "sha256": "75B1F7AFA03C8C038A0940AC50617F64E5481FBAA33A0047D2080BC15541CC48",
+        "oleanSha256": "36D77A3F120DFBF94921437B39B630689A309BFAC24E3E3F855EEF3219A5023D"
+      },
+      {
+        "module": "IntegralPolynomialSingularVanishing",
+        "sha256": "259A637130374306949B9F597869AFB71895089EFEEC676E6372F5638FF8E6BC",
+        "oleanSha256": "765DA1BFEA20B94BC9E122733E2EAFA65A2E9F84FC829F151781E6CFBEBC9A58"
+      },
+      {
+        "module": "IntegralInducedDeterminantDivisibility",
+        "sha256": "AD117BFF1CC3B86E572FEBAC42AD0BA08B2108E7CC75F37764E1F1717EE465AE",
+        "oleanSha256": "F0EFF9C740CBCDA83908CEB2DE447B8CA83E1D955ADC5417A3B04B2296C0C161"
+      },
+      {
+        "module": "IntegralInducedDenominatorBound",
+        "sha256": "C57F6EC43514647E173B9340795CA97F7E3F3A2028B95DFAA0F230C87BD8B127",
+        "oleanSha256": "B33277FC3BA0B08A62515C27F937343C971A40C9687B315FA9898FD8965A6DCA"
+      },
+      {
+        "module": "IntegralInducedFiniteFree",
+        "sha256": "B316CAC7FD027649857B402071854392D76C94FF7D4D6380BCB91E2C8F4F4E79",
+        "oleanSha256": "B1802229E258D18426AB9F52436815DCC0E66F6DEA4AB018F1E0F432731FF73F"
+      }
+    ],
+    "auditLog": "IntegralInducedFiniteFreeAudit21.log",
+    "auditSha256": "5E586CA52C3D8C8BA81689B92D89C9AFB27197209C12187BE3453E998E92F3E6",
+    "auditSourceSha256": "11D9C2633858709CC3090156B9983CB3617DB709F68E18AA5A891F56BEB03FA4",
+    "exit": 0,
+    "diagnostics": 0,
+    "exhaustiveTheorems": 158,
+    "explicitQueries": 111,
+    "theoremRegistrations": 84,
+    "constructionRegistrations": 27,
+    "linterScopes": 21,
+    "lintersPerScope": 16,
+    "densityReuseManifestSha256": "A1415E0BCBFD47B260BD820C7893509A93845895E726F9DC1622E2283135E30E",
+    "sourceConsumer": "Dubon2026.integralLocalInduced_finite_free",
+    "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy -> CHT/Geraghty integral unitary automorphic modules -> Geraghty Definition 2.2.1 literal integral Borel induction -> uniform denominator and degree bounds -> finite generation and freeness over the original coefficient PID.",
+    "boundary": "Scratch-only verified, not yet promoted. The exact regular-function induced module, original upper-Borel reversed-weight covariance over every coefficient algebra, and original right-translation action are constructed. Uniform denominator B=max(0,-lambda_last) and degree D=max(0,sum(lambda)+rank*B) are derived, proving finite generation and freeness over the original characteristic-zero local PID without a supplied lattice, basis, finite-dimensionality or finite-generation assumption. Dominant-weight nonzeroness and highest-weight identification, embedding tensor products and arithmetic coefficient action, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and automorphy continuation remain open. Acceptance remains 16/20; DUB-17-20 remain open.",
+    "supersedesMathematicalBoundaryOf": [
+      "integral-induced-initial-scratch-receipt.json",
+      "integral-induced-degree-and-determinant-scratch-receipt.json"
+    ]
+  },
+  "currentBoundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed.",
+  "appliedIntegralSourceWeightScratch": {
+    "date": "2026-10-19 America/Vancouver",
+    "modules": [
+      "GeneralLinearRegularFunctions",
+      "GeneralLinearRegularPoints",
+      "GeneralLinearRegularTranslation",
+      "GeneralLinearBorelCharacter",
+      "GeneralLinearIntegralInduction",
+      "GeneralLinearIntegralTorsion",
+      "GeneralLinearIntegralDeterminantTwist",
+      "GeneralLinearIntegralPolynomialStages",
+      "GeneralLinearIntegralCentralWeight",
+      "PolynomialCentralWeight",
+      "GeneralLinearIntegralNumeratorDegree",
+      "IntegralLocalCentralScalar",
+      "GenericDeterminantPrime",
+      "GenericSingularMatrix",
+      "SingularUpperRowElimination",
+      "MatrixPolynomialDensity",
+      "IntegralPolynomialBorelCovariance",
+      "IntegralPolynomialSingularVanishing",
+      "IntegralInducedDeterminantDivisibility",
+      "IntegralInducedDenominatorBound",
+      "IntegralInducedFiniteFree",
+      "IntegralInducedTensor",
+      "CMIntegralInducedTensorAction",
+      "CMIntegralInducedAuxiliaryComparison",
+      "IntegralCoefficientEmbedding",
+      "CMSourceIntegralWeight",
+      "CMSourceIntegralWeightComparison"
+    ],
+    "files": [
+      {
+        "module": "GeneralLinearRegularFunctions",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearRegularFunctions.lean",
+        "sha256": "73B620D9E2DC1FF25C299C52CA790BBF7BA10B89365A798168FF755E88AA1F74",
+        "oleanSha256": "787AF4FFFAE8B28A52705244A4A652683E53A11D25F65420F81D3B31D5C8EED3"
+      },
+      {
+        "module": "GeneralLinearRegularPoints",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearRegularPoints.lean",
+        "sha256": "59A7CFF5ADF0BB7E66A6EAEEB194EA3033746D4465BAC83AAD3D246848E2DD53",
+        "oleanSha256": "E41995CCEBBDCD2FDB147E8C24F37501B1E2494677FAFB1A225E6570E4F726E1"
+      },
+      {
+        "module": "GeneralLinearRegularTranslation",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearRegularTranslation.lean",
+        "sha256": "57517DA5370DFC16B80213252BEFA20646A51C7EBD0239FC2752AAAFD8DCA5BC",
+        "oleanSha256": "F64CBA53948D86853B9C52D24FEBD71FB3C67EEC65A91C46A9248DC752E7562B"
+      },
+      {
+        "module": "GeneralLinearBorelCharacter",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearBorelCharacter.lean",
+        "sha256": "FE3B54CCCD97E91349E857B503DBE4AE9B6006EA4DC7B652204C664D044BC4BB",
+        "oleanSha256": "FB0D8A4866F96C30B2FCBB18827A99D7158DE04A6DA7274EDBF34AE0F67D7C51"
+      },
+      {
+        "module": "GeneralLinearIntegralInduction",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearIntegralInduction.lean",
+        "sha256": "8EB5B6CEE69E2F74F279C9EE1FBBC61ED8CC70B32C1C4955FECA1AC013B7823A",
+        "oleanSha256": "1B20B8EC8285C96BA6BE8A2A8DC353212A1891F03499EEDCC9F308C56E9CD58C"
+      },
+      {
+        "module": "GeneralLinearIntegralTorsion",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearIntegralTorsion.lean",
+        "sha256": "21AF157AD17DC596253DD0E19645A11943A54FA86C2A50247B0D9421D735B881",
+        "oleanSha256": "6E9B7997F578144672D08542AB205F7178F0E578D264B2746ABA0D44F7EF2352"
+      },
+      {
+        "module": "GeneralLinearIntegralDeterminantTwist",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearIntegralDeterminantTwist.lean",
+        "sha256": "5784C5355855F79915598AC9CD517B8344A73044794A342DEE0247ED6D594BA4",
+        "oleanSha256": "936EB41A0AF36C188543A0FBBD36C1B80189FC90D65C81848D1B7AD0B5100CE9"
+      },
+      {
+        "module": "GeneralLinearIntegralPolynomialStages",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearIntegralPolynomialStages.lean",
+        "sha256": "114EE3E5AC33C3790B2F8CE7B1D9A5253E1531B42CD35C5045671127CA397236",
+        "oleanSha256": "D6DD23C37427F75DFAE800A2ED4254F9BE38E80550D709256672CB13289CC1C6"
+      },
+      {
+        "module": "GeneralLinearIntegralCentralWeight",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearIntegralCentralWeight.lean",
+        "sha256": "EE4BE36D1C074ABD7A0833DB0D5F7663923874366892C445C3C7DDAF2215518F",
+        "oleanSha256": "87E1533178258E2982A4E8705A4C3912B9AB0D4267611592241DD1E25FA01B36"
+      },
+      {
+        "module": "PolynomialCentralWeight",
+        "path": "E:\\Lean\\.tmp\\dubon83\\PolynomialCentralWeight.lean",
+        "sha256": "2A9C7212673C3C7D573B799C9C52B5B7C1305D2A1C28891209D5C6A3DDF09FF8",
+        "oleanSha256": "892A7B2BC33FB853067C6E3F516D06A828779DD6D3EEE181B3D20B0515A1D01B"
+      },
+      {
+        "module": "GeneralLinearIntegralNumeratorDegree",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GeneralLinearIntegralNumeratorDegree.lean",
+        "sha256": "DB3563D71DAECCC93B5294235D1CC609DEB625DC6F6AA09C4562C968CDF8467D",
+        "oleanSha256": "EFCE57037D1F0A87E2A250CFBB5F87F0B79C82F38E1E0074322591922C6DDF9A"
+      },
+      {
+        "module": "IntegralLocalCentralScalar",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralLocalCentralScalar.lean",
+        "sha256": "5677943B570CC80B1EC0B5996968678A35016C542A61861BD1F9878C5BE99E6D",
+        "oleanSha256": "73EAC9E1FE5ADE2B5E42A0E107B3ED9C5E85B1CEFC79FD511E1493D66645EF6F"
+      },
+      {
+        "module": "GenericDeterminantPrime",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GenericDeterminantPrime.lean",
+        "sha256": "CC18E974778A36DE576A00DC6C02F6F1F925FCF76E9354CB90E97583BECBE30D",
+        "oleanSha256": "AF3F6628B480E8459706639EBDE1C290B317D34ED8CF2961A7B2242FF611B081"
+      },
+      {
+        "module": "GenericSingularMatrix",
+        "path": "E:\\Lean\\.tmp\\dubon83\\GenericSingularMatrix.lean",
+        "sha256": "AF0B4C983658910B82B987973673241AF4D896FFBD0DCADCD2FD11FFACC2606D",
+        "oleanSha256": "AD29224DCCE07FEC57321AF2BB940E8DAF0D90A42B4B2FB3A029685230A519F4"
+      },
+      {
+        "module": "SingularUpperRowElimination",
+        "path": "E:\\Lean\\.tmp\\dubon83\\SingularUpperRowElimination.lean",
+        "sha256": "FC20582F7F1BF01A2FB066EC070289C9C02ACE60421E67D8684DC660F757BF10",
+        "oleanSha256": "7E180C313D23F18DA84146CA063C7EF085C915F4E37C4CEE14CA66FF8E0ADCA9"
+      },
+      {
+        "module": "MatrixPolynomialDensity",
+        "path": "E:\\Lean\\.tmp\\dubon83\\MatrixPolynomialDensity.lean",
+        "sha256": "7EB00EDB6E2853AAA0299CD3DFA2CD4126DC169632CA6D3F91682939D25DCC16",
+        "oleanSha256": "766BA7371E9ECE1CFFBB46445B935008D7F36B33DFA345B0082493B180B284DF"
+      },
+      {
+        "module": "IntegralPolynomialBorelCovariance",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralPolynomialBorelCovariance.lean",
+        "sha256": "75B1F7AFA03C8C038A0940AC50617F64E5481FBAA33A0047D2080BC15541CC48",
+        "oleanSha256": "36D77A3F120DFBF94921437B39B630689A309BFAC24E3E3F855EEF3219A5023D"
+      },
+      {
+        "module": "IntegralPolynomialSingularVanishing",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralPolynomialSingularVanishing.lean",
+        "sha256": "259A637130374306949B9F597869AFB71895089EFEEC676E6372F5638FF8E6BC",
+        "oleanSha256": "765DA1BFEA20B94BC9E122733E2EAFA65A2E9F84FC829F151781E6CFBEBC9A58"
+      },
+      {
+        "module": "IntegralInducedDeterminantDivisibility",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedDeterminantDivisibility.lean",
+        "sha256": "AD117BFF1CC3B86E572FEBAC42AD0BA08B2108E7CC75F37764E1F1717EE465AE",
+        "oleanSha256": "F0EFF9C740CBCDA83908CEB2DE447B8CA83E1D955ADC5417A3B04B2296C0C161"
+      },
+      {
+        "module": "IntegralInducedDenominatorBound",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedDenominatorBound.lean",
+        "sha256": "C57F6EC43514647E173B9340795CA97F7E3F3A2028B95DFAA0F230C87BD8B127",
+        "oleanSha256": "B33277FC3BA0B08A62515C27F937343C971A40C9687B315FA9898FD8965A6DCA"
+      },
+      {
+        "module": "IntegralInducedFiniteFree",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedFiniteFree.lean",
+        "sha256": "B316CAC7FD027649857B402071854392D76C94FF7D4D6380BCB91E2C8F4F4E79",
+        "oleanSha256": "B1802229E258D18426AB9F52436815DCC0E66F6DEA4AB018F1E0F432731FF73F"
+      },
+      {
+        "module": "IntegralInducedTensor",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralInducedTensor.lean",
+        "sha256": "E996B2879BCE836B3A98B836C66761E5EB1FA969113047A6FF94E110C75D31DC",
+        "oleanSha256": "66EB4CB79B16D907DAF56D072B51351A17B4494CD839B76C0D3B60D3BECABB35"
+      },
+      {
+        "module": "CMIntegralInducedTensorAction",
+        "path": "E:\\Lean\\.tmp\\dubon83\\CMIntegralInducedTensorAction.lean",
+        "sha256": "87A609B1BDC95D7109C0826DB4266C00A32931F0C18A1DA52E1BDE0A576D4DA6",
+        "oleanSha256": "43D8E4347BE9D5A7C8DD059A2175520B75BAF19FCD168DCD64485549319B3789"
+      },
+      {
+        "module": "CMIntegralInducedAuxiliaryComparison",
+        "path": "E:\\Lean\\.tmp\\dubon83\\CMIntegralInducedAuxiliaryComparison.lean",
+        "sha256": "284CE2F3F8F2744198BA68A2D4084226D5E064FC92B03D008313E29108386A1D",
+        "oleanSha256": "34A36B73F85E5AF117C32C88A1F5197CBDE8A0A76FA4669B21C66C2A4E61AFB8"
+      },
+      {
+        "module": "IntegralCoefficientEmbedding",
+        "path": "E:\\Lean\\.tmp\\dubon83\\IntegralCoefficientEmbedding.lean",
+        "sha256": "28A49C6FFAF6E9E71DE2A643AB6CB08B4A262D8D3150295FF72E42B982F0B618",
+        "oleanSha256": "05FDBF62B9766D8A000589CC921CF263625D59F050D6284910399CCF0EBCC5F8"
+      },
+      {
+        "module": "CMSourceIntegralWeight",
+        "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceIntegralWeight.lean",
+        "sha256": "B5DD88BCB12DEA85AB256A43CF04064E9A1C95C6017C74D65DF1D318F4EDD631",
+        "oleanSha256": "7EAC55BC4AC18C7E5841271181FFF6F4DC6ABAF99A90D4919FB731030D9B8253"
+      },
+      {
+        "module": "CMSourceIntegralWeightComparison",
+        "path": "E:\\Lean\\.tmp\\dubon83\\CMSourceIntegralWeightComparison.lean",
+        "sha256": "9438F968CB3372856AF82D2044613C5457A7EA34549AC8B2FA035477EC4B4945",
+        "oleanSha256": "D1F3706E1F160042190B59EBF3156D701369A92765681855076696E3DAAE23F2"
+      }
+    ],
+    "queries": [
+      "Dubon2026.GeneralLinearRegularFunctions",
+      "Dubon2026.generalLinearRegularPolynomialMap",
+      "Dubon2026.generalLinearRegularEval_det_isUnit",
+      "Dubon2026.generalLinearRegularEval",
+      "Dubon2026.generalLinearRegularEval_polynomial",
+      "Dubon2026.generalLinearRegularEval_X",
+      "Dubon2026.generalLinearRegularGeneric",
+      "Dubon2026.generalLinearRegularGeneric_apply",
+      "Dubon2026.generalLinearRegularGeneric_eval",
+      "Dubon2026.generalLinearRegular_algHom_ext",
+      "Dubon2026.generalLinearRegularEval_map_generic",
+      "Dubon2026.generalLinearRegularEval_generic",
+      "Dubon2026.generalLinearRegularPointsEquiv",
+      "Dubon2026.generalLinearRegularEval_natural",
+      "Dubon2026.generalLinearRegularRightTranslate",
+      "Dubon2026.generalLinearRegularEval_rightTranslate",
+      "Dubon2026.generalLinearRegularRightTranslate_one",
+      "Dubon2026.generalLinearRegularRightTranslate_mul",
+      "Dubon2026.generalLinearRegularRepresentation",
+      "Dubon2026.upperTriangular_mul_diagonal",
+      "Dubon2026.generalLinearBorel",
+      "Dubon2026.generalLinearBorelDiagonalUnit",
+      "Dubon2026.generalLinearBorelDiagonal",
+      "Dubon2026.generalLinearBorelWeight",
+      "Dubon2026.generalLinearBorelWeight_apply",
+      "Dubon2026.generalLinearIntegralInducedSubmodule",
+      "Dubon2026.generalLinearIntegralInducedSubmodule_mem",
+      "Dubon2026.generalLinearIntegralInducedSubmodule_stable",
+      "Dubon2026.generalLinearIntegralInduced",
+      "Dubon2026.generalLinearIntegralInducedRepresentation",
+      "Dubon2026.generalLinearIntegralInducedRepresentation_eval",
+      "Dubon2026.generalLinearRegular_powers_le_nonZeroDivisors",
+      "Dubon2026.generalLinearRegularPolynomialMap_injective",
+      "Dubon2026.generalLinearRegularIsDomain",
+      "Dubon2026.generalLinearRegular_algebraMap_injective",
+      "Dubon2026.generalLinearRegularIsTorsionFree",
+      "Dubon2026.generalLinearIntegralInducedIsTorsionFree",
+      "Dubon2026.generalLinearIntegralInduced_free_of_finite",
+      "Dubon2026.generalLinearRegularDeterminantUnit",
+      "Dubon2026.generalLinearRegularEval_determinantUnit",
+      "Dubon2026.generalLinearRegularEval_determinant_zpow",
+      "Dubon2026.generalLinearBorel_det",
+      "Dubon2026.generalLinearBorelWeight_shift",
+      "Dubon2026.generalLinearIntegralInduced_determinant_twist",
+      "Dubon2026.generalLinearIntegralInducedDeterminantEquiv",
+      "Dubon2026.generalLinearIntegralInduced_finite_iff_shift",
+      "Dubon2026.generalLinearRegularDeterminantUnit_val",
+      "Dubon2026.generalLinearRegularFractionMap",
+      "Dubon2026.generalLinearRegular_exists_fraction",
+      "Dubon2026.generalLinearIntegralInduced_polynomial_numerator",
+      "Dubon2026.generalLinearRegularPolynomialStage",
+      "Dubon2026.generalLinearIntegralInducedStage",
+      "Dubon2026.generalLinearRegularPolynomialStageFinite",
+      "Dubon2026.generalLinearIntegralInducedStageFinite",
+      "Dubon2026.generalLinearIntegralInducedStageFree",
+      "Dubon2026.generalLinearIntegralInducedStage_exhausts",
+      "Dubon2026.generalLinearBorelScalar",
+      "Dubon2026.generalLinearBorelScalar_diagonal",
+      "Dubon2026.generalLinearBorelWeight_scalar",
+      "Dubon2026.generalLinearIntegralInduced_scalar",
+      "Dubon2026.generalLinearIntegralInduced_numerator_scalar",
+      "Dubon2026.polynomialCentralScale_monomial",
+      "Dubon2026.polynomialCentralScale_coeff",
+      "Dubon2026.polynomialCentralWeight_isHomogeneous",
+      "Dubon2026.generalLinearIntegralPolynomial_scalar",
+      "Dubon2026.generalLinearIntegralInduced_numerator_homogeneous",
+      "Dubon2026.generalLinearIntegralInduced_numerator_degree_le",
+      "Dubon2026.integralLocal_exists_infinite_order_unit",
+      "Dubon2026.integralLocal_induced_numerator_degree_le",
+      "Dubon2026.integralLocal_induced_exists_degree_bounded_fraction",
+      "Matrix.degreeOf_rename_det_mvPolynomialX_le",
+      "Matrix.mem_vars_det_mvPolynomialX",
+      "Matrix.degreeOf_det_mvPolynomialX",
+      "Matrix.degreeOf_eq_one_of_mul_eq_det",
+      "Matrix.irreducible_det_mvPolynomialX",
+      "Matrix.prime_det_mvPolynomialX",
+      "Dubon2026.genericDeterminantIdeal",
+      "Dubon2026.GenericSingularCoordinate",
+      "Dubon2026.genericDeterminantIdealIsPrime",
+      "Dubon2026.genericSingularCoordinateIsDomain",
+      "Dubon2026.genericSingularMatrix",
+      "Dubon2026.genericSingularMatrix_det",
+      "Dubon2026.genericSingularEval",
+      "Dubon2026.genericSingularEval_matrix",
+      "Dubon2026.genericSingular_algebraMap_injective",
+      "Dubon2026.genericSingularCoordinateCharZero",
+      "Dubon2026.genericSingularMatrix_diagonal_cofactor_ne_zero",
+      "Dubon2026.singularUpperRowMatrix",
+      "Dubon2026.singularUpperRowMatrix_upper",
+      "Dubon2026.singularUpperRowMatrix_diagonal",
+      "Dubon2026.singularUpperRowMatrix_det",
+      "Dubon2026.singularUpperRowMatrix_mul_firstRow",
+      "Dubon2026.singularMatrix_exists_upperBorel_firstRow_zero",
+      "MvPolynomial.eq_of_eval_eq_on_gl",
+      "Dubon2026.polynomialMatrixLeftSubstitute",
+      "Dubon2026.polynomialMatrixLeftSubstitute_eval",
+      "Dubon2026.generalLinearIntegralPolynomial_borel_matrix",
+      "Dubon2026.generalLinearBorelSingleDiagonal",
+      "Dubon2026.generalLinearBorelSingleDiagonal_diagonal",
+      "Dubon2026.generalLinearBorelWeight_singleDiagonal",
+      "Dubon2026.generalLinearBorelSingleDiagonal_mul_of_row_zero",
+      "Dubon2026.generalLinearIntegralPolynomial_zero_row",
+      "Dubon2026.generalLinearIntegralPolynomial_singular_cofactor",
+      "Dubon2026.integralInducedPolynomial_determinant_dvd",
+      "Dubon2026.generalLinearRegularFractionMap_add_detpow",
+      "Dubon2026.generalLinearRegularFractionMap_succ_det",
+      "Dubon2026.integralInduced_exists_fixed_denominator",
+      "Dubon2026.integralLocalInduced_le_fixed_polynomial_stage",
+      "Dubon2026.integralLocalInducedFinite",
+      "Dubon2026.integralLocalInducedFree",
+      "Dubon2026.integralLocalInduced_finite_free",
+      "Dubon2026.IntegralInducedTensor",
+      "Dubon2026.integralInducedTensorAddCommGroup",
+      "Dubon2026.integralInducedTensorModule",
+      "Dubon2026.integralInducedTensorRepresentation",
+      "Dubon2026.integralInducedTensorRepresentation_tprod",
+      "Dubon2026.integralLocalInducedTensorBasis",
+      "Dubon2026.integralLocalInducedTensorFinite",
+      "Dubon2026.integralLocalInducedTensorFree",
+      "Dubon2026.integralLocalInducedTensor_finite_free",
+      "Dubon2026.cmIntegralCoefficientMatrixMap",
+      "Dubon2026.cmIntegralInducedTensorRepresentation",
+      "Dubon2026.cmIntegralInducedTensorRepresentation_tprod",
+      "Dubon2026.cmIntegralInducedFactor_eval",
+      "Dubon2026.cmSmallParabolicIntegralInclusion",
+      "Dubon2026.cmSmallParabolicInducedTensorRepresentation",
+      "Dubon2026.CMPrimaryAuxiliaryComparisonStatement",
+      "Dubon2026.cmFiniteAdelicSmallPrimaryAuxiliaryStatement",
+      "Dubon2026.cmFiniteAdelicIntegralWeightAuxiliaryModule_comparison",
+      "Dubon2026.integralCoefficientEmbeddingPrime",
+      "Dubon2026.integralCoefficientEmbedding",
+      "Dubon2026.integralCoefficientEmbedding_coe",
+      "Dubon2026.integralCoefficientEmbedding_continuous",
+      "Dubon2026.IntegralCoefficientEmbeddingIndex",
+      "Dubon2026.integralCoefficientEmbeddingIndexFinite",
+      "Dubon2026.CMSourceIntegralWeight",
+      "Dubon2026.cmSourceIntegralWeight_finite_free",
+      "Dubon2026.cmSourceIntegralWeightRepresentation",
+      "Dubon2026.cmSourceSmallParabolicWeightRepresentation",
+      "Dubon2026.cmSourceIntegralWeightRepresentation_tprod",
+      "Dubon2026.cmSourceIntegralWeightAuxiliaryModule_comparison"
+    ],
+    "theoremRegistrations": [
+      "Dubon2026.generalLinearRegularEval_det_isUnit",
+      "Dubon2026.generalLinearRegularEval_polynomial",
+      "Dubon2026.generalLinearRegularEval_X",
+      "Dubon2026.generalLinearRegularGeneric_apply",
+      "Dubon2026.generalLinearRegularGeneric_eval",
+      "Dubon2026.generalLinearRegular_algHom_ext",
+      "Dubon2026.generalLinearRegularEval_map_generic",
+      "Dubon2026.generalLinearRegularEval_generic",
+      "Dubon2026.generalLinearRegularEval_natural",
+      "Dubon2026.generalLinearRegularEval_rightTranslate",
+      "Dubon2026.generalLinearRegularRightTranslate_one",
+      "Dubon2026.generalLinearRegularRightTranslate_mul",
+      "Dubon2026.upperTriangular_mul_diagonal",
+      "Dubon2026.generalLinearBorelWeight_apply",
+      "Dubon2026.generalLinearIntegralInducedSubmodule_mem",
+      "Dubon2026.generalLinearIntegralInducedSubmodule_stable",
+      "Dubon2026.generalLinearIntegralInducedRepresentation_eval",
+      "Dubon2026.generalLinearRegular_powers_le_nonZeroDivisors",
+      "Dubon2026.generalLinearRegularPolynomialMap_injective",
+      "Dubon2026.generalLinearRegularIsDomain",
+      "Dubon2026.generalLinearRegular_algebraMap_injective",
+      "Dubon2026.generalLinearRegularIsTorsionFree",
+      "Dubon2026.generalLinearIntegralInducedIsTorsionFree",
+      "Dubon2026.generalLinearIntegralInduced_free_of_finite",
+      "Dubon2026.generalLinearRegularEval_determinantUnit",
+      "Dubon2026.generalLinearRegularEval_determinant_zpow",
+      "Dubon2026.generalLinearBorel_det",
+      "Dubon2026.generalLinearBorelWeight_shift",
+      "Dubon2026.generalLinearIntegralInduced_determinant_twist",
+      "Dubon2026.generalLinearIntegralInduced_finite_iff_shift",
+      "Dubon2026.generalLinearRegularDeterminantUnit_val",
+      "Dubon2026.generalLinearRegular_exists_fraction",
+      "Dubon2026.generalLinearIntegralInduced_polynomial_numerator",
+      "Dubon2026.generalLinearRegularPolynomialStageFinite",
+      "Dubon2026.generalLinearIntegralInducedStageFinite",
+      "Dubon2026.generalLinearIntegralInducedStageFree",
+      "Dubon2026.generalLinearIntegralInducedStage_exhausts",
+      "Dubon2026.generalLinearBorelScalar_diagonal",
+      "Dubon2026.generalLinearBorelWeight_scalar",
+      "Dubon2026.generalLinearIntegralInduced_scalar",
+      "Dubon2026.generalLinearIntegralInduced_numerator_scalar",
+      "Dubon2026.polynomialCentralScale_monomial",
+      "Dubon2026.polynomialCentralScale_coeff",
+      "Dubon2026.polynomialCentralWeight_isHomogeneous",
+      "Dubon2026.generalLinearIntegralPolynomial_scalar",
+      "Dubon2026.generalLinearIntegralInduced_numerator_homogeneous",
+      "Dubon2026.generalLinearIntegralInduced_numerator_degree_le",
+      "Dubon2026.integralLocal_exists_infinite_order_unit",
+      "Dubon2026.integralLocal_induced_numerator_degree_le",
+      "Dubon2026.integralLocal_induced_exists_degree_bounded_fraction",
+      "Matrix.degreeOf_rename_det_mvPolynomialX_le",
+      "Matrix.mem_vars_det_mvPolynomialX",
+      "Matrix.degreeOf_det_mvPolynomialX",
+      "Matrix.degreeOf_eq_one_of_mul_eq_det",
+      "Matrix.irreducible_det_mvPolynomialX",
+      "Matrix.prime_det_mvPolynomialX",
+      "Dubon2026.genericDeterminantIdealIsPrime",
+      "Dubon2026.genericSingularCoordinateIsDomain",
+      "Dubon2026.genericSingularMatrix_det",
+      "Dubon2026.genericSingularEval_matrix",
+      "Dubon2026.genericSingular_algebraMap_injective",
+      "Dubon2026.genericSingularCoordinateCharZero",
+      "Dubon2026.genericSingularMatrix_diagonal_cofactor_ne_zero",
+      "Dubon2026.singularUpperRowMatrix_upper",
+      "Dubon2026.singularUpperRowMatrix_diagonal",
+      "Dubon2026.singularUpperRowMatrix_det",
+      "Dubon2026.singularUpperRowMatrix_mul_firstRow",
+      "Dubon2026.singularMatrix_exists_upperBorel_firstRow_zero",
+      "MvPolynomial.eq_of_eval_eq_on_gl",
+      "Dubon2026.polynomialMatrixLeftSubstitute_eval",
+      "Dubon2026.generalLinearIntegralPolynomial_borel_matrix",
+      "Dubon2026.generalLinearBorelSingleDiagonal_diagonal",
+      "Dubon2026.generalLinearBorelWeight_singleDiagonal",
+      "Dubon2026.generalLinearBorelSingleDiagonal_mul_of_row_zero",
+      "Dubon2026.generalLinearIntegralPolynomial_zero_row",
+      "Dubon2026.generalLinearIntegralPolynomial_singular_cofactor",
+      "Dubon2026.integralInducedPolynomial_determinant_dvd",
+      "Dubon2026.generalLinearRegularFractionMap_add_detpow",
+      "Dubon2026.generalLinearRegularFractionMap_succ_det",
+      "Dubon2026.integralInduced_exists_fixed_denominator",
+      "Dubon2026.integralLocalInduced_le_fixed_polynomial_stage",
+      "Dubon2026.integralLocalInducedFinite",
+      "Dubon2026.integralLocalInducedFree",
+      "Dubon2026.integralLocalInduced_finite_free",
+      "Dubon2026.integralInducedTensorRepresentation_tprod",
+      "Dubon2026.integralLocalInducedTensorFinite",
+      "Dubon2026.integralLocalInducedTensorFree",
+      "Dubon2026.integralLocalInducedTensor_finite_free",
+      "Dubon2026.cmIntegralInducedTensorRepresentation_tprod",
+      "Dubon2026.cmIntegralInducedFactor_eval",
+      "Dubon2026.cmFiniteAdelicSmallPrimaryAuxiliaryStatement",
+      "Dubon2026.cmFiniteAdelicIntegralWeightAuxiliaryModule_comparison",
+      "Dubon2026.integralCoefficientEmbedding_coe",
+      "Dubon2026.integralCoefficientEmbedding_continuous",
+      "Dubon2026.integralCoefficientEmbeddingIndexFinite",
+      "Dubon2026.cmSourceIntegralWeight_finite_free",
+      "Dubon2026.cmSourceIntegralWeightRepresentation_tprod",
+      "Dubon2026.cmSourceIntegralWeightAuxiliaryModule_comparison"
+    ],
+    "constructionRegistrations": [
+      "Dubon2026.GeneralLinearRegularFunctions",
+      "Dubon2026.generalLinearRegularPolynomialMap",
+      "Dubon2026.generalLinearRegularEval",
+      "Dubon2026.generalLinearRegularGeneric",
+      "Dubon2026.generalLinearRegularPointsEquiv",
+      "Dubon2026.generalLinearRegularRightTranslate",
+      "Dubon2026.generalLinearRegularRepresentation",
+      "Dubon2026.generalLinearBorel",
+      "Dubon2026.generalLinearBorelDiagonalUnit",
+      "Dubon2026.generalLinearBorelDiagonal",
+      "Dubon2026.generalLinearBorelWeight",
+      "Dubon2026.generalLinearIntegralInducedSubmodule",
+      "Dubon2026.generalLinearIntegralInduced",
+      "Dubon2026.generalLinearIntegralInducedRepresentation",
+      "Dubon2026.generalLinearRegularDeterminantUnit",
+      "Dubon2026.generalLinearIntegralInducedDeterminantEquiv",
+      "Dubon2026.generalLinearRegularFractionMap",
+      "Dubon2026.generalLinearRegularPolynomialStage",
+      "Dubon2026.generalLinearIntegralInducedStage",
+      "Dubon2026.generalLinearBorelScalar",
+      "Dubon2026.genericDeterminantIdeal",
+      "Dubon2026.GenericSingularCoordinate",
+      "Dubon2026.genericSingularMatrix",
+      "Dubon2026.genericSingularEval",
+      "Dubon2026.singularUpperRowMatrix",
+      "Dubon2026.polynomialMatrixLeftSubstitute",
+      "Dubon2026.generalLinearBorelSingleDiagonal",
+      "Dubon2026.IntegralInducedTensor",
+      "Dubon2026.integralInducedTensorAddCommGroup",
+      "Dubon2026.integralInducedTensorModule",
+      "Dubon2026.integralInducedTensorRepresentation",
+      "Dubon2026.integralLocalInducedTensorBasis",
+      "Dubon2026.cmIntegralCoefficientMatrixMap",
+      "Dubon2026.cmIntegralInducedTensorRepresentation",
+      "Dubon2026.cmSmallParabolicIntegralInclusion",
+      "Dubon2026.cmSmallParabolicInducedTensorRepresentation",
+      "Dubon2026.CMPrimaryAuxiliaryComparisonStatement",
+      "Dubon2026.integralCoefficientEmbeddingPrime",
+      "Dubon2026.integralCoefficientEmbedding",
+      "Dubon2026.IntegralCoefficientEmbeddingIndex",
+      "Dubon2026.CMSourceIntegralWeight",
+      "Dubon2026.cmSourceIntegralWeightRepresentation",
+      "Dubon2026.cmSourceSmallParabolicWeightRepresentation"
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\IntegralSourceWeightAudit27.log",
+    "logSha256": "B1870F721431E4FD19639CCB643D9D18E0E364F3749C4C13282BC5F8F27F427A",
+    "auditSha256": "C9CF7D2B0E2C3A5071426DF5AE54C41A3BC5B40CB8426DBF454625686C3E0373",
+    "exit": 0,
+    "diagnostics": 0,
+    "exhaustiveTheorems": 225,
+    "linterScopes": 27,
+    "lintersPerScope": 16,
+    "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\IntegralSourceDependencyAudit.log",
+    "dependencyAuditSha256": "645CD78BC24FFDA0BC2C7E2B8221931C86271EF84EB727994FB91F4BFC1EB284",
+    "dependencyAuditSourceSha256": "679E3DAC4FA4C6531830C8B87303E891FABA749EC1C291BDD96F58047378E49C",
+    "requiredProofValueEdges": 12,
+    "consumer": "Dubon2026.cmSourceIntegralWeightAuxiliaryModule_comparison",
+    "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> BLGG potential automorphy and patching -> CHT/Geraghty integral unitary auxiliary modules -> Geraghty Definitions 2.2.1 and 2.2.3 original integral induced tensor coefficients and arithmetic action.",
+    "discharged": "Geraghty Definition 2.2.1 is constructed literally as original determinant-localized regular functions with reversed-weight upper-Borel covariance over every coefficient algebra and right translation. Generic determinant primality over the original PID, extension of polynomial covariance to singular matrices, adjugate row elimination and original-ring divisibility give a uniform determinant denominator B=max(0,-lambda_last). A constructed infinite-order scalar in the original local ring gives numerator degree D=max(0,sum(lambda)+rank*B). The entire module lies in one finite polynomial stage, so finite generation and freeness follow without a supplied lattice or dimension bound. The actual finite embedding tensor uses the proved individual factors and native tensor bases. Its original embedding index is finite by number-field degree. Existing completion extension and valuation comparison construct its local integer maps and their continuity from actual field embeddings. Original unitary local evaluation constructs the algebraic tensor action. The final actual source consumer derives finite freeness of the original auxiliary automorphic module over the actual primary quotient group ring and its exact unnormalized weighted-trace coinvariant comparison; no coefficient representation, finite-free coefficient module, integral embedding maps or finite-index certificate is supplied.",
+    "boundary": "Acceptance remains 16/20; DUB-17-20 remain open. The actual modular residual representation and its source image bounds, existence and prescribed adequacy of the common coefficient field, source unitary fields/forms and remaining local choices, dominant highest-weight identification and nonzeroness, continuity of the tensor action in the canonical coefficient-module topology, nonzero localized Hecke/Galois realization, crystalline/Selmer dimensions, R=T and source automorphy continuation remain unresolved. Continuity is proved for the constructed integer embeddings, not yet for the full tensor action. The unramified-prime sufficient condition for cyclotomic degree is not newly asserted. No root pin or proof limit changed.",
+    "reuseReviewSha256": "DCE9B0A920D72C164F553000F8888473A984F067EC419CD8A281A975F6A64C01",
+    "rootPinsChanged": false,
+    "proofLimitsChanged": false,
+    "status": "Scratch assembly verified; production promotion and canonical verification pending."
+  }
+}
