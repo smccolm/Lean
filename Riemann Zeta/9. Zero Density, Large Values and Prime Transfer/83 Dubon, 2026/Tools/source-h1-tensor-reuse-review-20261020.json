@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> nonzero residual H1 eigensystem -> injective Hecke-compatible tensor coefficient change.",
+  "precedingScratchReceipts": {
+    "source-integral-span-5-scratch-receipt.json": "D992E2F6BB8B6B9874C37FFD8AD983221702FCECE0AC6E27801C6040F43F128A",
+    "source-integral-h1-7-scratch-receipt.json": "D566A71808480552B0719A680DC751D74F9DF39CC42809F520289683E9983B76"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousCoefficientChange.lean",
+      "sha256": "B806B57E532D0D081B6357241DDC25E8D7610FEDECF1F124E38A5121606EF45D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCohomologyChange.lean",
+      "sha256": "AF0B8FA671F58D6FAB44624EF6136F9B20E485B8C7029F5334216B9F4843C926"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeChange.lean",
+      "sha256": "14FBDF7A7649342C7713B51CC34D81457D59B514C66226C1A366E58B95A39C84"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSemilinearCohomology.lean",
+      "sha256": "57EC10FB101EF4BF45434761F2F53F09F63D79F4F010E37EF507EE8B9CCA3B17"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Module\\NatInt.lean",
+      "sha256": "8C3988BA51EAB4A65B1E0B2433B2DF786C3CB52058CD14979089F6FEF6301E4A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\ZMod\\Basic.lean",
+      "sha256": "337C0BD9F636B7765A956AFEBF856689AF95845B3909BDB508C00849CEA24864"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\TensorProduct\\Basic.lean",
+      "sha256": "CE9029B727E3CBDBA08D690B1245E2A25034817739EE3BBD36E6036AA5645AB6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Homological\\GroupCohomology\\LowDegree.lean",
+      "sha256": "5870D5D2EA7251F9F41BB0E1F22BF819D888009D63D06F35237AA30D0780128F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_HeckeEis_exists_coeffH1_map_ringHom_binaryFormRepSL.lean.txt",
+      "sha256": "B2C49D93D97870D8B2C0DAD7F247FCF78A707505F032CC2CBDFE2E9FB28C059F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_HeckeEis_exists_injective_baseChange_coeffH1_binaryFormRepSL.lean.txt",
+      "sha256": "BA9E73DA1DDAF12C0CED9945ECDACACA56B78704B920556F499E813D48E79C8A"
+    }
+  ],
+  "reuseSearch": "Checked native cohomology and local coefficient-change results before adapting the archived prime-kernel and tensor-injection arguments. Existing additive matrix substitution compatibility and full Hecke coefficient compatibility discharge the original action and operator bridges.",
+  "routeAdjustment": "Use the native H1 cocycle quotient throughout. Lift the existing actual coefficient map with native LinearMap.liftBaseChange, replacing the external hand-built tensor map. Derive the kernel through regular scalar division of cocycles, and detect tensor coordinates using the already proved additive polynomial action. Preserve Apache-2.0 attribution and the archived LICENSE/NOTICE.",
+  "discharged": "For every source level and binary degree, the actual integral H1 class reduces to zero modulo a prime exactly when it is a prime multiple in integral H1. Coefficient lifting, kernel division and scalar regularity are proved for the literal homogeneous integral polynomial module. The existing native coefficient map extends linearly to the actual tensor product with any field of that prime characteristic and is injective. Finite prime-field coordinates and the exact reduction kernel prove injectivity. The same tensor map commutes with every full original Hecke correspondence. No kernel, lifting, coordinate, tensor injection or Hecke-compatibility assumption is supplied in these original-object consumers.",
+  "remaining": "The nonzero tensor eigenclass with the prescribed integral H1 character and full original H1 Hecke commutativity still require proof. The injection preserves a nonzero tensor class; it does not assert that every nonzero integral class reduces nontrivially. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

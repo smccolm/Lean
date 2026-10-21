@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> global index stabilization and residue duality -> exact finite local repartition quotient dimensions and bounded global functions.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finiteDimensional_lSpace.lean.txt",
+        "sha256": "C21B533D50CBFA1976A51726B090EE8A0882D9C690599F096B4EFB7F45E4174F"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_AdelicIndex.lean.txt",
+        "sha256": "2715C02227FD6BA1AB0E66EFFC7C33FCA1A889A00459CDB0057762540DEA008E"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Finiteness\\Finsupp.lean",
+      "sha256": "94A32F88302B06E2C9C0D31F3D6D53C54AA58F405475E9322C255A13AD584147"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Isomorphisms.lean",
+      "sha256": "CC41F361F1F2B3CCB3B60C8A9C86DFCF49666716DD61C6B7933A253D22AA8DF7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Dimension\\Finrank.lean",
+      "sha256": "E5C99C7A4767B80FBE2543C2B15CCD6127F6C37E9197E5F68A294B8DB6BA28D1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LocalRing\\ResidueField\\Basic.lean",
+      "sha256": "2179EBA548E1C11A1E84977806ED757806181F389C6E430C783AC854A0F41220"
+    }
+  ],
+  "routeAdjustment": "Select the exact source repartition model and local residue quotient, reusing the proved local order criterion and residue-map kernel. Use the pinned third isomorphism and finite-submodule/quotient theorems for nested quotients. Derive nonempty original places from the positive-order degree identity instead of constructing rational-function prolongations. The actual original consumer supplies finite residues and finite divisor spaces; no general curve input is assumed.",
+  "discharged": "For the literal original field, the repartition quotient between two finite divisor bounds is finite-dimensional and its dimension is exactly their degree difference. A scaled local residue map is surjective with kernel the bound decreased by one; pinned quotient isomorphisms and finite-submodule/quotient theory assemble the degree difference. The already proved finite actual residue fields discharge all finiteness inputs. The positive-order degree identity gives an actual place, so bounded global repartitions are linearly equivalent to the proved finite original divisor spaces. Actual principal divisors bound every global function. No finite-residue or nonempty-place premise remains.",
+  "remaining": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.mem_adeleBdd",
+    "Dubon2026.SourceCurve.adeleBdd_mono",
+    "Dubon2026.SourceCurve.diagonalHom_apply",
+    "Dubon2026.SourceCurve.diagonalHom_injective",
+    "Dubon2026.SourceCurve.diagonal_mem_adeleBdd_iff",
+    "Dubon2026.SourceCurve.adeleBdd_le_adeleSpace",
+    "Dubon2026.SourceCurve.diagonal_mem_globalSub",
+    "Dubon2026.SourceCurve.finrank_adeleBdd_inf_global_eq_ell"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

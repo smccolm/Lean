@@ -17,7 +17,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> injectivity and nonvanishing of the original analytic period H1 class. DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic.",
   "discharged": "The original period map into native group-cohomology H1 is injective for every finite-index subgroup of SL(2,Z), every source weight k=n+2, and every rational base cusp. Its actual original Gamma0 and normalized primitive-form consumers derive a nonzero H1 class. The native H1 kernel gives the dual coboundary; the exact binary action and original Eichler transformation give the corrected invariant primitive. Actual Fourier periodicity makes its polynomial correction constant at each cusp, discharging all-cusp boundedness. Pinned nonpositive-weight vanishing/constancy and original Fourier decay kill the Eichler integral; its proved derivative recovers the original cusp form. No injectivity, nonzero period, primitive invariance or cusp-boundedness premise is supplied to these final consumers. The original primitive cusp form defines a native group-cohomology H1 class through its already proved convergent cusp integrals. The cocycle law, exact dual binary action, complex linearity, base-cusp independence and an explicit coboundary on each rational-cusp stabilizer are proved, with no supplied period cocycle, covariance, or parabolicity assumption. At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed.",
   "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.",
-  "status": "The 4,970-module production aggregate and focused exhaustive original period H1 and coefficient specialization audit pass with zero diagnostics. All three proof-value audits pass, including the actual nonzero native H1 class of every original primitive form at every source weight and the faithful specialization of its original Hecke values. Sequential foundation/paper verification of the 4,970-module scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,970-module scope: all thirteen retained regressions, 35,222 exhaustive theorem checks, 15,040 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "sourceConsumers": [
@@ -353,6 +353,25 @@
     "lintersPerScope": 16,
     "exit": 0,
     "diagnostics": 0,
+    "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open."
+  },
+  "receipt4970": {
+    "recordedUTC": "2026-10-20T15:49:33.688623+00:00",
+    "log": "logs/dubon-build-20261020-073443-467.log",
+    "sha256": "0E13CCB7205048ABBCE7FAE788670877028666195AE2AC42AD1FAFA10F11492A",
+    "bytes": 8530122,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4970,
+    "projectTheorems": 35222,
+    "registeredConsumers": 15040,
+    "registeredConstructions": 499,
+    "declarations": 20939,
+    "generated": 19828,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_073115.log",
+    "foundationSha256": "8AA46A40851B1C5B70F11660BDD7C2B602D37CEABA9CD9A74B7635675E0D1001",
     "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open."
   }
 }

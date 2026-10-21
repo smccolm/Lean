@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> original parabolic complex Hecke lift -> genuine cusp-form Hecke realization -> surjectivity of the original period pair -> reverse dimension inequality -> actual parabolic characters inject into finite Manin relations with cusp data.",
+  "precedingScratchReceipts": {
+    "source-period-pair-13-scratch-receipt.json": "099790E937477DC3D8743AC2227E5F25653C08E06448923DD387550D92CC4778"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFile": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_Period_six_mul_finrank_parabolicHoms_add_le_index.lean.txt",
+    "selectedFileSha256": "0370D2C2F3F8F7B8BDC891A384D95E824365A91E47261852758FAC1B545AEA69"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspBoundaryValues.lean",
+      "sha256": "3C986752E3B18470F7BCBF3D394E803EF349198673D56CF1CB7725B15BE087FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularRationalCusps.lean",
+      "sha256": "05386FEC98568F4AFF1663E0897788FF98BF817C19691216E996133649EAC376"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTrivialIntegralHecke.lean",
+      "sha256": "B3C1EFE7514D065BA096544E9FBF9F1417B4C7058E2C7711BDA2C10B7C58237C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    }
+  ],
+  "reuseSearch": "Searched pinned mathlib and existing repository Lean modules for parabolic rank, genus, Manin-relation and cusp-form dimension results. Existing integral cusp divisor generation and H1 finiteness were available; no matching reverse dimension theorem was found. Reviewed the archived finite relation proof and geometric cusp-form lower-bound dependency closure.",
+  "routeAdjustment": "Use the exact existing complex parabolic subspace and native H1 finiteness, specializing the actual cusp-potential consumer to complex coefficients. Retain only the required cusp-orbit quotient; defer denominator normal forms and other arithmetic cusp classifications until the numerical comparison consumes them. Pinned orbit counting and dual annihilator dimensions supply the finite relation bound. No external global options, attribute removals or framework commands are imported.",
+  "ancillaryTheorems": [
+    "Dubon2026.SourceManin.mem_Gamma0Q",
+    "Dubon2026.SourceManin.CuspSpace.instNonempty"
+  ],
+  "discharged": "At every nonzero original level N, actual parabolic characters and one value per original cusp orbit inject into the exact two-term/three-term Manin relation space with one normalization coordinate. Vanishing on actual cusp stabilizers follows from the original squared-trace-four definition. The original S and ST coset actions have orders dividing two and three and are jointly connected by the integral modular-group generators. Pinned orbit counting and dual annihilator dimensions give the unconditional bound 6*dim(parabolicHoms N)+6*#cusps+3*#S-fixed-cosets+4*#ST-fixed-cosets <=12+[SL2(Z):Gamma0 N]. Native H1 finiteness is reused. No cusp potential, injectivity, orbit count, relation rank or parabolic dimension bound is assumed.",
+  "remaining": "The matching lower bound for original weight-two cusp forms is still required, including geometric differential realization and the numerical cusp, elliptic and index comparisons along the archived route. Period surjectivity, Hecke comparison and parabolic Galois realization remain open, as do the all-weight adic and symmetric-power inputs. Acceptance remains 16/20; DUB-17--20 remain open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

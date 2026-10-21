@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke lift -> cusp-form realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization -> original differential expansion injectivity -> finite extension over j -> actual monic relations -> rational Laurent coefficient polynomial descent.",
+  "precedingScratchReceipts": {
+    "source-analytic-j-6-scratch-receipt.json": "69FD9E4D8F3C9DB169357D00E6BB47E2D934EEBEBA7925164EE8C7C2A50259ED"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty.lean.txt",
+        "sha256": "F689F494FC817F9AF5DA00CAA762B8ED3519C31E66F0F7C7BC6E9430092E53EA"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant.lean.txt",
+        "sha256": "2E353646702173A217E190950EFF6B37B35D81E182B6D8C3DC8CD017BD27899E"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_hasSum_qParam_mul.lean.txt",
+        "sha256": "F4BA460F37A5E226BFADAFF9D29D83CD9E260EACDB87B4AF6CF187AD9ACD42BC"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_hasSum_qParam_mul_laurent.lean.txt",
+        "sha256": "AE21D24742357B1C3A0C67DC8F060526707E1DBAC3C9CBDC773B65E3B37DC08B"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant.lean.txt",
+        "sha256": "7FF437F642C8201AEFFCC94662C74966456C04EC30B1B1B9E2A5B60514D45687"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\NormTrace.lean",
+      "sha256": "83D70D1EEB5224B86AA4BBC21A0E165E559D300DD7EA87624518DE9C290DAC52"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\QExpansion.lean",
+      "sha256": "2E6E4E3D2456AB5C8C6EAD4BA3A355F76351F82E53294946FC8616590BDC1890"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LaurentSeries.lean",
+      "sha256": "1FEEF96EECF138CBB40923D2484BEEBA0B9A7F45AB95E1F430765B14CAB74A06"
+    }
+  ],
+  "routeAdjustment": "Reused pinned weight-zero constancy and q-expansion coefficient uniqueness directly, omitting the external custom uniqueness development. Selected principal-part cancellation and necessary convergence/product proofs only. Pinned antidiagonal names adapted without changing limits.",
+  "discharged": "For the original rational j series, every rational Laurent series whose bilateral sum realizes an SL2Z-invariant function on the full upper half-plane belongs to Q[j]. A polynomial in the literal j series removes the finite principal part. The convergent remaining power series derives actual holomorphy and cusp boundedness; pinned weight-zero constancy and q-expansion uniqueness kill every positive coefficient. Laurent products and finite product coefficients are analytically realized with all summability obligations derived.",
+  "remaining": "The actual prime conjugate product, its rational descent, analytic invariance and monic polynomial relation remain required. This is a proved coefficient-descent theorem, not an assumed modular polynomial and not the completed finite-extension endpoint. Regular differential dimension, geometric genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization and adic/symmetric-power inputs remain required. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceFunctionField.poleOrderLE_iff_le_order",
+    "Dubon2026.SourceFunctionField.poleOrderLE_aeval_jq",
+    "Dubon2026.SourceFunctionField.coeff_aeval_jq_neg",
+    "Dubon2026.SourceFunctionField.Realized.norm_qParam_lt_one_of_pos",
+    "Dubon2026.SourceFunctionField.Realized.hasSum_cuspFunction_punctured",
+    "Dubon2026.SourceFunctionField.Realized.hasSum_discFun",
+    "Dubon2026.SourceFunctionField.Realized.apply_eq_discFun",
+    "Dubon2026.SourceFunctionField.Realized.differentiableOn_discFun",
+    "Dubon2026.SourceFunctionField.Realized.continuousAt_discFun",
+    "Dubon2026.SourceFunctionField.Realized.discFun_zero",
+    "Dubon2026.SourceFunctionField.Realized.tendsto_atImInfty",
+    "Dubon2026.SourceFunctionField.Realized.hasSum_single_mul_coe_iff",
+    "Dubon2026.SourceFunctionField.RealL.add",
+    "Dubon2026.SourceFunctionField.RealL.neg",
+    "Dubon2026.SourceFunctionField.RealL.sub",
+    "Dubon2026.SourceFunctionField.RealL.single",
+    "Dubon2026.SourceFunctionField.RealL.C",
+    "Dubon2026.SourceFunctionField.RealL.one",
+    "Dubon2026.SourceFunctionField.RealL.zero",
+    "Dubon2026.SourceFunctionField.RealL.congr",
+    "Dubon2026.SourceFunctionField.RealL.prod",
+    "Dubon2026.SourceFunctionField.jqC_coeff",
+    "Dubon2026.SourceFunctionField.realL_jqC",
+    "Dubon2026.SourceFunctionField.jt_smul"
+  ],
+  "additionalAuditedTheoremsMeaning": "Audited public theorems not individually selected in the required-edge array; no claim of non-use is made.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

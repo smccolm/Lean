@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> character-to-weight-two reduction -> survival of the actual character eigenlift in the full function representation or its exact Eisenstein exception.",
+  "precedingScratchReceipts": {
+    "source-affine-lift-8-scratch-receipt.json": "8D3416246D8CF5B5FADD6F6D17CF0EB5BDB691FF55BACC925F9D96233BCEF28A"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Factorization\\Basic.lean",
+      "sha256": "EB479A5E726E16B9F73A3AC4B579E01AD392B62BC52EACECB32AFA8B48DB951F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\ModEq.lean",
+      "sha256": "0A0DC19922B79E21C1E0C689255CDFD1CA7E38ACE31F4FC82C11FA1C40803905"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Homological\\GroupCohomology\\LowDegree.lean",
+      "sha256": "5870D5D2EA7251F9F41BB0E1F22BF819D888009D63D06F35237AA30D0780128F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteFunctionBasis.lean",
+      "sha256": "842FF74E4063114C1440274617D222AC61A1F84688374CB48073B6196A744193"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAffineFunctionFlag.lean",
+      "sha256": "A7C37F62B3318FF2BF4CD14FCB8CD873E4A9F9EE7876EAC2CFD98A96417F7DAD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAffineFlagH1Lifting.lean",
+      "sha256": "20DF563095CD15E7CD9EBEF9B60D9C63DC1D1526312276A206F3BC4685F09643"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeHeckeNaturality.lean",
+      "sha256": "98B997D7788D08614EA6E3D4CDA6E6CFD92A6D1F0868142144B625E596BA1191"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCorrespondenceOne.lean",
+      "sha256": "56865777F8E753689C88391169BF54E3A0DEDB203F8D0C8552C7A57460348ED4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_HeckeEis_exists_isEigensystemH1_one_of_isEigensystemH1_gamma0NebenRep.lean.txt",
+      "sha256": "46170F1A691110B3BD748049A1BD3E0C3FE0B65423E672D04070D945CB181D80"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_HeckeEis_isEigensystemH1_or_of_isEigensystemH1_of_injective.lean.txt",
+      "sha256": "DEFF47A7ED3CBC666E619E816A701945FDBD9CAC2CE3821D14B0F94E7B39FC43"
+    }
+  ],
+  "reuseSearch": "Checked native H1 kernel and functoriality APIs, existing actual full-coset naturality, coboundary trace, interpolation basis, diagonal characters and the original Hecke transversal before adapting the inclusion-kernel argument.",
+  "routeAdjustment": "Native H1 and the existing coset trace replace the external custom cohomology setup. The exact kernel Hecke scalar uses direct range membership of the trace primitive, avoiding a second primitive decomposition. Terminal-flag survival uses the native coefficient isomorphism instead of another H1 surjective eigenlift. Only the original flag invariant and its required exceptional character are developed.",
+  "discharged": "Every actual character H1 eigensystem of d^(2*j), j<p, after inverting six gives either a nonzero native full-function H1 eigensystem with the exact inverse-prime twist, or j+1<p, p-1 divides 2*(j+1), and all twisted good-prime eigenvalues are exactly (ell+1)*ell^(-j-1). The original translation and proved monomial basis determine the invariant quotient; actual Gamma0 diagonal-unit matrices and cyclic prime-field units determine the exponent divisibility. Native H1 inclusion, its exact coboundary primitive, the original full finite trace and the genuine ell+1 transversal compute the exceptional eigenvalues. Terminal-flag survival follows from a proved coefficient isomorphism. No survival, quotient dimension, exceptional exponent or eigenvalue is assumed.",
+  "remaining": "Raised-level evaluation, removal of the exceptional alternative, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

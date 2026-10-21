@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> original parabolic complex Hecke lift -> genuine cusp-form Hecke realization -> surjectivity of the original period pair -> matching dimensions -> original parabolic upper bound with proved index, elliptic and rational cusp counts.",
+  "precedingScratchReceipts": {
+    "source-manin-dimension-6-scratch-receipt.json": "B2597DC36EEE6B3BBC73D6B4E17B293B617447A2E36994AD0B6839D0EF181C0E"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_ProjectiveLine.lean.txt",
+        "sha256": "AABE4813C8FCABC7E1E3D3817764D0D232F713EB05ACF89244774108067EDEAA"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_GenusNumerics.lean.txt",
+        "sha256": "806DDA2A417468A138C15488C60506FBF25A2A9C8DAACE299A540B09204E8720"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_CuspSpace.lean.txt",
+        "sha256": "6E6FB07D110DF292A61D943CB3A96A5A3C348DAFF0CB63733CFB06C2179EB2BD"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_Gamma0_index.lean.txt",
+        "sha256": "3CBF65DB31640CB2BFF1622D4FAB6F50FD49D6D34F257F33398D8F10062C92CD"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_card_projectiveLine_zmod.lean.txt",
+        "sha256": "BE73B3AD2C8BC5439D830BAFCDD9D89E452649056198F43536F4196A2C61BD00"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_dedekindPsi_prime_pow.lean.txt",
+        "sha256": "4325B136278AD9E5B4BDFEE22ED109CEEE7402E375E424716BBCEC200A4D6738"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_dedekindPsi_mul_of_coprime.lean.txt",
+        "sha256": "2D55F029EFE52D8DE27721D03AEE3C0F71F29FDE2133017AAF72196D7577733B"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_natCard_fixedPoints_S_cosets_Gamma0_eq_nuTwo.lean.txt",
+        "sha256": "4F9DC27C4F0FA7C4CE72D17B54701A57C012E9B21BBCC5D749E7D26D45BD3018"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ratPoint_eq_ratPoint_iff_of_isCoprime.lean.txt",
+        "sha256": "B33193AF0896F173306E064B60853312B92F6E9F3D92EF04742AB39B0511B17D"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_CuspSpace_exists_normalForm.lean.txt",
+        "sha256": "DAF9787462CEC234F5750A213CB42BE5E7FB7B276A3D04829307C7AFC38E8488"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_CuspSpace_normalFormCriterion.lean.txt",
+        "sha256": "863E0644EDD5C22BAA553771D7A962BAC4F762CDA0D75C8E52584F845B455C00"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_CuspSpace_classification.lean.txt",
+        "sha256": "D2A24B83BBE03457AE3B5561D672F78FAA40CDEFED01D02CBEE4BDAEC2C59F9C"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_CuspSpace_card_cuspSpace_eq_cuspCount.lean.txt",
+        "sha256": "8F41A9A6B9BCCF2C1E4A6B9375EF08A2FFFE9A7D0323CBD995AF89150A092681"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCuspBoundary.lean",
+      "sha256": "E6125B4FE9C92B91BEFD04CD45A0ABDD843F8F397B21D9BAA25C8B3BFCC14EA4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspBoundaryValues.lean",
+      "sha256": "3C986752E3B18470F7BCBF3D394E803EF349198673D56CF1CB7725B15BE087FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriodDimension.lean",
+      "sha256": "3EB5847E518C15E12F6F0E43E2D71D7888502BE2A7DC22FFAA7292BBD655AC14"
+    }
+  ],
+  "reuseSearch": "Checked pinned mathlib and current production for Gamma0 index, rational cusp normal forms, elliptic coset counts and genus dimension formulas. Existing SL2 reduction eliminates the external duplicate lifting argument. Pinned coprimality, CRT, arithmetic-function multiplicativity, unitsMap_surjective and unit cardinality are used. The already proved original cusp quotient is reused.",
+  "routeAdjustment": "Keep only the finite index/count proof chain. Omit the unrelated modular-polynomial and function-field developments from shared upstream files; one elliptic companion-matrix proof supplies both counts; reuse the coprime-lift lemma instead of its upstream duplicate. Cusp widths and ramification are deferred. Remove two redundant simp lemmas caught by the full linter, without linter exclusions. No external options, attribute removals or framework commands are imported.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceLevelProjective.instFiniteProjectiveLine",
+    "Dubon2026.SourceLevelProjective.ProjectiveLine.map_mk",
+    "Dubon2026.SourceLevelProjective.mem_borel_iff",
+    "Dubon2026.SourceLevelProjective.dedekindPsi_one",
+    "Dubon2026.SourceLevelProjective.cuspCount_one",
+    "Dubon2026.SourceElliptic.V_zero",
+    "Dubon2026.SourceElliptic.V_one",
+    "Dubon2026.SourceElliptic.V_00",
+    "Dubon2026.SourceElliptic.V_01",
+    "Dubon2026.SourceElliptic.V_10",
+    "Dubon2026.SourceElliptic.V_11",
+    "Dubon2026.SourceElliptic.gl_00",
+    "Dubon2026.SourceElliptic.gl_01",
+    "Dubon2026.SourceElliptic.gl_10",
+    "Dubon2026.SourceElliptic.gl_11",
+    "Dubon2026.SourceElliptic.inv_mul_lower",
+    "Dubon2026.SourceElliptic.V_mul_00",
+    "Dubon2026.SourceElliptic.V_mul_10",
+    "Dubon2026.SourceElliptic.mk_eq_mk_iff",
+    "Dubon2026.SourceElliptic.fixed_iff",
+    "Dubon2026.SourceElliptic.cast_val",
+    "Dubon2026.SourceManin.ratPoint_zero_right",
+    "Dubon2026.SourceManin.ratPoint_of_ne_zero",
+    "Dubon2026.SourceManin.ratPoint_zero_one",
+    "Dubon2026.SourceManin.ratPoint_eq_infty_iff",
+    "Dubon2026.SourceManin.ratPoint_mul_left",
+    "Dubon2026.SourceManin.ratPoint_neg_neg",
+    "Dubon2026.SourceManin.exists_ratPoint_eq",
+    "Dubon2026.SourceManin.mapGL_apply_coe",
+    "Dubon2026.SourceManin.mapGL_smul_infty",
+    "Dubon2026.SourceManin.isCoprime_smul_pair",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenomAux_infty",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenomAux_coe",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenomAux_ratPoint",
+    "Dubon2026.SourceManin.CuspSpace.gamma0_mem_iff_dvd",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenomAux_dvd_smul",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenom_mk",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenom_mk_ratPoint",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenom_mk_infty",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenom_dvd",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenom_pos",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenom_mk_ratPoint_one_dvd",
+    "Dubon2026.SourceManin.CuspSpace.isCoprime_normalNumerator",
+    "Dubon2026.SourceManin.CuspSpace.mk_ratPoint_normalNumerator",
+    "Dubon2026.SourceManin.CuspSpace.isUnit_intCast_of_isCoprime",
+    "Dubon2026.SourceManin.CuspSpace.exists_intCast_eq_unit",
+    "Dubon2026.SourceManin.CuspSpace.val_fiberToUnits",
+    "Dubon2026.SourceManin.CuspSpace.eq_mk_ratPoint_normalNumerator",
+    "Dubon2026.SourceManin.CuspSpace.cuspDenomDvd_coe",
+    "Dubon2026.SourceManin.CuspSpace.card_eq_cuspCount_of_classification"
+  ],
+  "additionalAuditedTheoremsMeaning": "Public audited theorems not individually selected in the required proof-edge array; this is not a claim that they are unused.",
+  "discharged": "For every nonzero original level N, the actual Gamma0 index equals the squarefree-divisor Dedekind psi expression, using existing integral SL2 reduction, projective primitive rows, prime-power charts and CRT. One actual quadratic-root/coset bijection gives the S and ST fixed-point counts. Original rational cusp orbits are classified by divisors d of N and units modulo gcd(d,N/d), with normal-form existence and both directions of orbit equivalence proved. Their cardinality equals the exact totient sum. The consumer combines these with the previously proved actual Manin inequality to prove dim_C(parabolicHoms N) <= 2*genusFormula N, with no assumed index, elliptic count, cusp count, normal form or classification.",
+  "remaining": "The arithmetic expression has not yet been identified with the geometric genus, and the matching genusFormula <= dim_C(weight-two original cusp forms) inequality remains open. Regular differential realization, period surjectivity, Hecke comparison and parabolic Galois realization remain required, along with the all-weight adic and symmetric-power inputs. Acceptance remains 16/20; DUB-17--20 open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

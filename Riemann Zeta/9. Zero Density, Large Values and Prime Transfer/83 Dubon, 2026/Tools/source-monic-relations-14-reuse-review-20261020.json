@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke lift -> cusp-form realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization -> injective original differential expansion -> original field finite over j -> actual integral monic relations for all nonzero divisor substitutions.",
+  "precedingScratchReceipts": {
+    "source-j-descent-7-scratch-receipt.json": "195411F4DDB64502C486614EA50EDDD93745FD7F8A91C909E9A50EC625771AE3"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_PhiGen_exists_phiGenDescends.lean.txt",
+        "sha256": "5C40373DF1132B24FF8E9EA780033389CC8D3924B6D91247E4714CEBAEE0FE5A"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_coeff.lean.txt",
+        "sha256": "78380B6967A6270F7AC691A5BBABCEB6AA385A0364C2264A6670960D6EFA8573"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_hasSum_qParam_heckeMatrix_smul.lean.txt",
+        "sha256": "9E4A52894807B41488204AA67DF99FF2A2B637B9FBAA19809277B1B3846BC5BD"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul.lean.txt",
+        "sha256": "4080FE3559F84A8B9B74E043106996F5F85639D8896696642667D08761621622"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends.lean.txt",
+        "sha256": "82614E9AFB86EDA6340436AE21C9C1FD6BD4F141107C620F1A77F81B2D92ADA0"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs.lean.txt",
+        "sha256": "6A384677303181C3064CFD6F6CEBDB7C08211A5A4B4A5418B1D73FC036044383"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent.lean.txt",
+        "sha256": "65284CE896F1E3D812E43318BADC3154858F309D7BC5088D81DD0599892D0B45"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_phiIrreducible_evalSymm.lean.txt",
+        "sha256": "EAF34C9B4140A0E612A2B957636A8BCC9BB6B49667808A1B14E7C4751BF81DC5"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero.lean.txt",
+        "sha256": "E6C3B6936BD47E882F1CF0F6D521C1049A2154042568952B29F6AABC3D795F7E"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Polynomial\\Lifts.lean",
+      "sha256": "7131CE7FB73D294573C1E7BAB955AAEE59EA52BED254D91DAE9D1D64D9E40744"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Galois\\Basic.lean",
+      "sha256": "D4924352BEFDF0394818C8988F531A760686D3C7F0B50551534586B837DA69E6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Cyclotomic\\PrimitiveRoots.lean",
+      "sha256": "101B31612656A31177257A2066E52C15D6278552B20EF2B5AF624D46C1903ABB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Factorization\\Induction.lean",
+      "sha256": "4790E369A417A86889AC05F66487A9798705FB7B2173E083E2965569B8750724"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeTriangular.lean",
+      "sha256": "4EE6D4B05014A95AB941D36473AE98261C8040A828D775F358E917F00A61D249"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckePrimeOrbits.lean",
+      "sha256": "39178CFDE857BDF40014BA81976581A6DE8A035C14852E200D55B18D4B08DBDA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckePrimeReindex.lean",
+      "sha256": "9F60E7A5DA720CE46AB0C9C260AB2EE1BE5E493A51B7773FC6059F27EC459A98"
+    }
+  ],
+  "routeAdjustment": "Inspected existing native Hecke and pinned polynomial APIs before extending the external route. Reused the actual native triangular matrices, their integral transition factorizations and residue permutation, avoiding a duplicate external projective-coset development. Reused pinned monic polynomial lifting instead of the external explicit coefficient and degree construction. Selected integral coefficient descent only; deferred general pole bounds, irreducibility, symmetry and exact relative degree. All analytic and algebraic input premises of the finite-field consumer are actually proved. No proof limits or diagnostic settings changed.",
+  "discharged": "The actual cyclotomic conjugate product descends to rational Laurent series by its literal root-of-unity permutation and Galois action. Every conjugate is realized analytically on the full upper half-plane. Native proved Hecke representatives, integral transition factorizations and residue permutations give the analytic product invariance. Polynomial descent and integral Laurent coefficients put its coefficients in Z[j]. Pinned monic polynomial lifting gives the prime relation. Prime-factor induction and transitivity of integrality derive a monic relation for every nonzero substitution. The actual original divisor-generated field is therefore finite over its original j coordinate. Characteristic zero gives separability and the earlier separating-coordinate consumer proves actual differential q-expansion injective, without the prior monic-relation, separability or nonzero-Euler-derivative premises.",
+  "remaining": "Regular differential dimension, the geometric genus formula and analytic realization by actual cusp forms remain required for the matching cusp-form lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. The arithmetic genus expression is not yet identified with the geometric genus. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceFunctionField.qTwistFun_coeff",
+    "Dubon2026.SourceFunctionField.support_qTwistFun",
+    "Dubon2026.SourceFunctionField.qTwist_coeff",
+    "Dubon2026.SourceFunctionField.support_qTwist",
+    "Dubon2026.SourceFunctionField.qTwist_one_apply",
+    "Dubon2026.SourceFunctionField.qTwist_qTwist",
+    "Dubon2026.SourceFunctionField.qTwist_qExpand",
+    "Dubon2026.SourceFunctionField.PhiGen.conj_zero",
+    "Dubon2026.SourceFunctionField.PhiGen.conj_succ",
+    "Dubon2026.SourceFunctionField.PhiGen.phiProd_natDegree",
+    "Dubon2026.SourceFunctionField.PhiGen.phiProd_ne_zero",
+    "Dubon2026.SourceFunctionField.coeffMap_qExpand",
+    "Dubon2026.SourceFunctionField.coeffMap_coeffEmb",
+    "Dubon2026.SourceFunctionField.coe_primeUpper_smul",
+    "Dubon2026.SourceFunctionField.coe_primeDiagonal_smul",
+    "Dubon2026.SourceFunctionField.isPrimitiveRoot_expRoot",
+    "Dubon2026.SourceFunctionField.sigma_ratCast'",
+    "Dubon2026.SourceFunctionField.rep_zero",
+    "Dubon2026.SourceFunctionField.rep_succ",
+    "Dubon2026.SourceFunctionField.expRoot_pow_zpow",
+    "Dubon2026.SourceFunctionField.realL_conjC",
+    "Dubon2026.SourceFunctionField.map_phiProd",
+    "Dubon2026.SourceFunctionField.realL_one_of_realL_qExpand",
+    "Dubon2026.SourceFunctionField.coeffMap_sigma_coeffEmb",
+    "Dubon2026.SourceFunctionField.PhiGen.intCoeffs_jq",
+    "Dubon2026.SourceFunctionField.PhiGen.intCoeffs_algebraMap_int_mul_jq_pow",
+    "Dubon2026.SourceFunctionField.relationAtSeed_map",
+    "Dubon2026.SourceFunctionField.relationAtSeed_jq_eval"
+  ],
+  "additionalAuditedTheoremsMeaning": "Audited public theorems not individually selected in the required-edge array; no claim of non-use is made.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

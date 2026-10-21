@@ -1,0 +1,722 @@
+{
+  "date": "20 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurvePlaces",
+    "Dubon2026.SourceCurveLocalDifferentials",
+    "Dubon2026.SourceOriginalDifferentialRank",
+    "Dubon2026.SourceOriginalLocalDifferentials",
+    "Dubon2026.SourceOriginalEssentialFiniteType",
+    "Dubon2026.SourceCurveOrders",
+    "Dubon2026.SourceOriginalRegularOrders",
+    "Dubon2026.SourceCurveTranscendence",
+    "Dubon2026.SourceCurveCoordinateExchange",
+    "Dubon2026.SourceOriginalUniformizerFinite",
+    "Dubon2026.SourceCurvePlaceRestriction",
+    "Dubon2026.SourceCurveResidueAlgebraic",
+    "Dubon2026.SourceOriginalResidueFinite",
+    "Dubon2026.SourceCurvePlaceCenters",
+    "Dubon2026.SourceCurveCoordinateSupport",
+    "Dubon2026.SourceCurveFiniteSupport",
+    "Dubon2026.SourceOriginalDivisorSupport",
+    "Dubon2026.SourceCurveChartOrders",
+    "Dubon2026.SourceCurvePrimePlaces",
+    "Dubon2026.SourceCurvePrimeResidues",
+    "Dubon2026.SourceCurveRamificationOrders",
+    "Dubon2026.SourceCurveCoordinateResidues",
+    "Dubon2026.SourceCurveCoordinatePlaces",
+    "Dubon2026.SourceCurveCoordinateDegree",
+    "Dubon2026.SourceCurvePositiveDegree",
+    "Dubon2026.SourceCurveTranscendentalDegree",
+    "Dubon2026.SourceCurvePrincipalDegree",
+    "Dubon2026.SourceCurveDivisors",
+    "Dubon2026.SourceOriginalPrincipalDivisors"
+  ],
+  "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch -> actual original curve: principal-divisor finite support and degree zero, finite residues, and differential rank one.",
+  "discharged": "For the actual original modular function field, the proved finite extension over the original j coordinate gives a one-dimensional differential space. The literal Euler-derivative kernel gives exactly the base constants. Every actual place uniformizer has order one while constants have order zero, so its differential is nonzero and spans. Thus regularity is equivalent to integrality of the actual local differential coefficient at every place. Q-expansion of the actual regular differential subspace is injective. No local spanning or separability premise remains. The actual original divisor-generated field is essentially of finite type. It is finite over every transcendental coordinate, in particular every actual place uniformizer. Actual regularity equals nonnegative local differential order. Every actual place residue is algebraic over the base: a transcendental residue would put its lifted rational function field, and hence the entire finite extension, in a proper integrally closed valuation ring. Over algebraically closed constants the actual residue map is bijective and the residue is finite. No finite-residue, finite-coordinate or local-spanning premise remains on these consumers. Every function in the actual original modular function field has only finitely many nonzero normalized place orders. For a transcendental function the proved finite coordinate extension gives a Dedekind integral-closure chart. Actual places containing the chart are identified with their actual prime centers. Pinned finiteness of prime ideal factors bounds the positive support; inversion handles negative support. Algebraic functions have order zero at every actual place. No finite-support or place-classification premise remains. Every actual original-field function has a finite normalized-order divisor with degree zero. The actual chart primes and positive-order places correspond bijectively; their normalized orders equal pinned ramification indices, and their residue degrees equal pinned inertia degrees. The pinned ramification/inertia sum gives the degree of the positive divisor. Applying this to the function and its inverse proves degree zero, since both generate the same rational subfield. The integral-closure chart discharges all chart containment, module-finiteness, normalization and scalar-comparison inputs. Over algebraically closed constants the original curve interface is fully derived from these principal divisors, proved finite residues and proved differential rank one; no curve or principal-divisor premise remains.",
+  "boundary": "Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,290-module scope: all thirteen retained regressions, 37,556 exhaustive theorem checks, 16,155 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff",
+    "Dubon2026.SourceFunctionField.regularDifferential_qExpansion_injective",
+    "Dubon2026.SourceFunctionField.finite_original_place_residue",
+    "Dubon2026.SourceFunctionField.finiteDimensional_original_over_uniformizer",
+    "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff_ord_nonneg",
+    "Dubon2026.SourceFunctionField.finite_original_divisor_support",
+    "Dubon2026.SourceFunctionField.isCurveOver_original"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T03:18:12.127270+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurvePlaces",
+        "SourceCurveLocalDifferentials",
+        "SourceOriginalDifferentialRank",
+        "SourceOriginalLocalDifferentials"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePlaces.lean",
+          "sha256": "2A1A29440219E1D30FF4173B3BE8164A0C1E4A16686BA9F09F35F57A31B64E68",
+          "oleanSha256": "F4D082CE2382FD7913CD654D526441181264C03FC8F2409E89157DD7C49F3149"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalDifferentials.lean",
+          "sha256": "E27B54648C716438AE75D42D1A76B6B7FD05842FE8B9AF35D1627289AEC1CBB1",
+          "oleanSha256": "E3733E1291BAD2ED9A59B624EE778B435FA1301339E029E142102D0E129B4022"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialRank.lean",
+          "sha256": "991084969A6BE9251D53C3B8050AF4701BAE5B72021E81EFB63C6AA026A040AA",
+          "oleanSha256": "3D33CBBF12C1289BE373AD85F51FFC2F303D91194ECC22A47D3B79EA3D4117D0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalDifferentials.lean",
+          "sha256": "D1E4F7082CEC7AE677917B3A81D84358688E99DF37AF10DB732712CCCA31CEF7",
+          "oleanSha256": "99A2F250CFE35587011736ED498D79D95B80001657790EB0C4542A8D8F3F39BC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.valuationSubring_not_isField_of_ne_top",
+        "Dubon2026.SourceCurve.Place.toValuationSubring_injective",
+        "Dubon2026.SourceCurve.Place.ext",
+        "Dubon2026.SourceCurve.Place.coe_algebraMap",
+        "Dubon2026.SourceCurve.Place.heightOneSpectrum_asIdeal",
+        "Dubon2026.SourceCurve.Place.adicValuation_ne_zero",
+        "Dubon2026.SourceCurve.Place.adicValuation_coe",
+        "Dubon2026.SourceCurve.Place.adicValuation_coe_eq_one_iff",
+        "Dubon2026.SourceCurve.Place.adicValuation_coe_irreducible",
+        "Dubon2026.SourceCurve.Place.ord_zero",
+        "Dubon2026.SourceCurve.Place.ord_one",
+        "Dubon2026.SourceCurve.Place.ord_mul",
+        "Dubon2026.SourceCurve.Place.ord_inv",
+        "Dubon2026.SourceCurve.Place.ord_coe_unit",
+        "Dubon2026.SourceCurve.Place.ord_coe_irreducible",
+        "Dubon2026.SourceCurve.Place.ord_zpow",
+        "Dubon2026.SourceCurve.Place.ord_unit_smul_zpow",
+        "Dubon2026.SourceCurve.Place.exists_unit_mul_zpow",
+        "Dubon2026.SourceCurve.Place.ord_uniformizer",
+        "Dubon2026.SourceCurve.Place.uniformizer_ne_zero",
+        "Dubon2026.SourceCurve.Place.dCoord_ne_zero",
+        "Dubon2026.SourceCurve.Place.exists_eq_smul_dCoord",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_smul_dCoord",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_unique",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_dCoord",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_zero",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_smul",
+        "Dubon2026.SourceCurve.Place.gate_ordDifferential_dCoord",
+        "Dubon2026.SourceCurve.Place.ordDifferential_smul",
+        "Dubon2026.SourceCurve.Place.ord_algebraMap",
+        "Dubon2026.SourceCurve.mem_regularDifferentials_iff",
+        "Dubon2026.SourceFunctionField.D_jOver_ne_zero",
+        "Dubon2026.SourceFunctionField.span_D_jOver",
+        "Dubon2026.SourceFunctionField.finrank_original_differentials",
+        "Dubon2026.SourceFunctionField.D_original_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.original_place_dCoord_ne_zero",
+        "Dubon2026.SourceFunctionField.original_place_dCoordGenerates",
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff",
+        "Dubon2026.SourceFunctionField.regularDifferential_qExpansion_injective",
+        "Dubon2026.SourceCurve.Place",
+        "Dubon2026.SourceCurve.Place.heightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.adicValuation",
+        "Dubon2026.SourceCurve.Place.ord",
+        "Dubon2026.SourceCurve.Place.uniformizer",
+        "Dubon2026.SourceCurve.Place.dCoord",
+        "Dubon2026.SourceCurve.Place.DCoordGenerates",
+        "Dubon2026.SourceCurve.Place.differentialCoeff",
+        "Dubon2026.SourceCurve.Place.ordDifferential",
+        "Dubon2026.SourceCurve.regularDifferentials"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.valuationSubring_not_isField_of_ne_top",
+        "Dubon2026.SourceCurve.Place.toValuationSubring_injective",
+        "Dubon2026.SourceCurve.Place.ext",
+        "Dubon2026.SourceCurve.Place.coe_algebraMap",
+        "Dubon2026.SourceCurve.Place.heightOneSpectrum_asIdeal",
+        "Dubon2026.SourceCurve.Place.adicValuation_ne_zero",
+        "Dubon2026.SourceCurve.Place.adicValuation_coe",
+        "Dubon2026.SourceCurve.Place.adicValuation_coe_eq_one_iff",
+        "Dubon2026.SourceCurve.Place.adicValuation_coe_irreducible",
+        "Dubon2026.SourceCurve.Place.ord_zero",
+        "Dubon2026.SourceCurve.Place.ord_one",
+        "Dubon2026.SourceCurve.Place.ord_mul",
+        "Dubon2026.SourceCurve.Place.ord_inv",
+        "Dubon2026.SourceCurve.Place.ord_coe_unit",
+        "Dubon2026.SourceCurve.Place.ord_coe_irreducible",
+        "Dubon2026.SourceCurve.Place.ord_zpow",
+        "Dubon2026.SourceCurve.Place.ord_unit_smul_zpow",
+        "Dubon2026.SourceCurve.Place.exists_unit_mul_zpow",
+        "Dubon2026.SourceCurve.Place.ord_uniformizer",
+        "Dubon2026.SourceCurve.Place.uniformizer_ne_zero",
+        "Dubon2026.SourceCurve.Place.dCoord_ne_zero",
+        "Dubon2026.SourceCurve.Place.exists_eq_smul_dCoord",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_smul_dCoord",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_unique",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_dCoord",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_zero",
+        "Dubon2026.SourceCurve.Place.differentialCoeff_smul",
+        "Dubon2026.SourceCurve.Place.gate_ordDifferential_dCoord",
+        "Dubon2026.SourceCurve.Place.ordDifferential_smul",
+        "Dubon2026.SourceCurve.Place.ord_algebraMap",
+        "Dubon2026.SourceCurve.mem_regularDifferentials_iff",
+        "Dubon2026.SourceFunctionField.D_jOver_ne_zero",
+        "Dubon2026.SourceFunctionField.span_D_jOver",
+        "Dubon2026.SourceFunctionField.finrank_original_differentials",
+        "Dubon2026.SourceFunctionField.D_original_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.original_place_dCoord_ne_zero",
+        "Dubon2026.SourceFunctionField.original_place_dCoordGenerates",
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff",
+        "Dubon2026.SourceFunctionField.regularDifferential_qExpansion_injective"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place",
+        "Dubon2026.SourceCurve.Place.heightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.adicValuation",
+        "Dubon2026.SourceCurve.Place.ord",
+        "Dubon2026.SourceCurve.Place.uniformizer",
+        "Dubon2026.SourceCurve.Place.dCoord",
+        "Dubon2026.SourceCurve.Place.DCoordGenerates",
+        "Dubon2026.SourceCurve.Place.differentialCoeff",
+        "Dubon2026.SourceCurve.Place.ordDifferential",
+        "Dubon2026.SourceCurve.regularDifferentials"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalDifferentialsAudit4.log",
+      "logSha256": "30F4CCBEFDCDFB071B0F9449DD5EA8F2C9E9A4E8975B83711029AEB486FF51B9",
+      "auditSha256": "EC6445A45CD5D5ED9BAC1F779D2EBAF6F95AA7DD1BC096646526D6A3AFE99B3E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 71,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLocalDifferentialsDependencyAudit.log",
+      "dependencyAuditSha256": "B8C1EB5EF88646BAE3DE023E495387AB68E992D0F51A764B6D7A9514C02D0D34",
+      "dependencyAuditSourceSha256": "3D700409FE6EE6A1E490C0585E29639A51B9F72A30EFB0181A36D5FD81E39DBC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff",
+        "Dubon2026.SourceFunctionField.regularDifferential_qExpansion_injective"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization -> actual local differential coordinates and injective original q-expansion.",
+      "discharged": "For the actual original modular function field, the proved finite extension over the original j coordinate gives a one-dimensional differential space. The literal Euler-derivative kernel gives exactly the base constants. Every actual place uniformizer has order one while constants have order zero, so its differential is nonzero and spans. Thus regularity is equivalent to integrality of the actual local differential coefficient at every place. Q-expansion of the actual regular differential subspace is injective. No local spanning or separability premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Regular differential dimension, geometric genus and actual analytic cusp-form realization are still required for the matching cusp-form lower bound. Principal divisors, residue finiteness and Riemann--Roch are not postulated by this scope. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-local-differentials-4-reuse-review-20261020.json",
+      "reuseReviewSha256": "D34CE0CE502D58620A766B7F7816EC5F1AE71B91480FA9EACD9F148EFDB49F1A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-21T03:42:21.731568+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceOriginalEssentialFiniteType",
+        "SourceCurveOrders",
+        "SourceOriginalRegularOrders",
+        "SourceCurveTranscendence",
+        "SourceCurveCoordinateExchange",
+        "SourceOriginalUniformizerFinite",
+        "SourceCurvePlaceRestriction",
+        "SourceCurveResidueAlgebraic",
+        "SourceOriginalResidueFinite"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEssentialFiniteType.lean",
+          "sha256": "C1E87B4289C63EECA2CCB744015FDB831F0ACE923056F58E7D316E91F58964F3",
+          "oleanSha256": "9818334D90C0F812867B5C910EFCE7C89F72E94DF6F1ADF5AB905CC27879CC9C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveOrders.lean",
+          "sha256": "EC6DAD2D7E90214FC886C8608E7851BC6D77D12973DF7017880748A572F9AD13",
+          "oleanSha256": "076798864DBB57C1DE2D15C7B6A9DCCF2C5CB2B7C7B02B76238F5A2026E5A84D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularOrders.lean",
+          "sha256": "89EB658680A95C207EBCC4607BC810F944C68B3D08BB60EED12289302F859901",
+          "oleanSha256": "C57838543F2AA66EEC9B2799653DCF59D6B9CF7ED17F572CDBB2B0E0E91D3BB1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTranscendence.lean",
+          "sha256": "61D64107EFC0C7EA7F255F62113749C834235230FE6EF6C904DB43913C6095FC",
+          "oleanSha256": "C9AD261F7A0BFB4B075716F7406BE84F84BC4E417C4F8249F42FE62DE2FC5205"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateExchange.lean",
+          "sha256": "9E2C9770DC7CEDFB4244393912E1037BCB10672B1160BFEE0465B17834CE5B27",
+          "oleanSha256": "40BF68C82CBA1A0D432EDCF4EBB724D19B19E33A055D046EB742BB766BB7CBEC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUniformizerFinite.lean",
+          "sha256": "91611DFDE7F28793CF410C436D466CAA16B1DF59662C2B5E46D1543DACE49EAC",
+          "oleanSha256": "BDD112649BED9F4C2C125CF0AD481239C74BEE409A36E35D8974089671588B11"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePlaceRestriction.lean",
+          "sha256": "A07E7260ACB2339BD8E97154C5D634792192801EE9F09E19D20BB543B7B761C3",
+          "oleanSha256": "FA6FABDB744B1DFAED062DC573FB44F51587F83690DD79E3D3C6E7A78EF2A1D5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveResidueAlgebraic.lean",
+          "sha256": "DABE503B28071D25089CDE2D4154DB674B27283EF8ECC9CBC8B1EABA6A6D07B8",
+          "oleanSha256": "679C0D16CCCAC1E79B4B248F520F71F42F9D8AF89525445AEBDB35F09256BEBA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFinite.lean",
+          "sha256": "03DFD6168D3A3282A22B4050E73B9D3DBDF0BA2975434A5D0BD20211F93A7249",
+          "oleanSha256": "8D83AD5BD61F4A21465B4C0E3E4F093D9C3B380CF0AD73329EBBA8B8E329C1AC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.finite_divisorExpansions",
+        "Dubon2026.SourceFunctionField.essFiniteType_original",
+        "Dubon2026.SourceCurve.Place.ord_nonneg_of_mem",
+        "Dubon2026.SourceCurve.Place.mem_of_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.mem_iff_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.ord_add_eq_of_lt",
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.mem_of_isAlgebraic",
+        "Dubon2026.SourceCurve.Place.ord_eq_zero_of_isAlgebraic",
+        "Dubon2026.SourceCurve.Place.transcendental_of_ord_ne_zero",
+        "Dubon2026.SourceCurve.isAlgebraic_adjoin_of_transcendental",
+        "Dubon2026.SourceFunctionField.finiteDimensional_original_over_transcendental",
+        "Dubon2026.SourceFunctionField.finiteDimensional_original_over_uniformizer",
+        "Dubon2026.SourceCurve.Place.adicValuation_le_one_iff",
+        "Dubon2026.SourceCurve.Place.comap_algebraMap_ne_top",
+        "Dubon2026.SourceCurve.Place.isPrincipalIdealRing_comap",
+        "Dubon2026.SourceCurve.Place.restrict_toValuationSubring",
+        "Dubon2026.SourceCurve.Place.mem_restrict_iff",
+        "Dubon2026.SourceCurve.Place.adjoin_mem_of_transcendental_residue",
+        "Dubon2026.SourceCurve.Place.isAlgebraic_residue_of_finite_coordinates",
+        "Dubon2026.SourceFunctionField.original_place_residue_isAlgebraic",
+        "Dubon2026.SourceFunctionField.original_place_residue_algebraMap_bijective",
+        "Dubon2026.SourceFunctionField.finite_original_place_residue",
+        "Dubon2026.SourceCurve.Place.ResidueField",
+        "Dubon2026.SourceCurve.Place.restrict"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.finite_divisorExpansions",
+        "Dubon2026.SourceFunctionField.essFiniteType_original",
+        "Dubon2026.SourceCurve.Place.ord_nonneg_of_mem",
+        "Dubon2026.SourceCurve.Place.mem_of_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.mem_iff_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.ord_add_eq_of_lt",
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.mem_of_isAlgebraic",
+        "Dubon2026.SourceCurve.Place.ord_eq_zero_of_isAlgebraic",
+        "Dubon2026.SourceCurve.Place.transcendental_of_ord_ne_zero",
+        "Dubon2026.SourceCurve.isAlgebraic_adjoin_of_transcendental",
+        "Dubon2026.SourceFunctionField.finiteDimensional_original_over_transcendental",
+        "Dubon2026.SourceFunctionField.finiteDimensional_original_over_uniformizer",
+        "Dubon2026.SourceCurve.Place.adicValuation_le_one_iff",
+        "Dubon2026.SourceCurve.Place.comap_algebraMap_ne_top",
+        "Dubon2026.SourceCurve.Place.isPrincipalIdealRing_comap",
+        "Dubon2026.SourceCurve.Place.restrict_toValuationSubring",
+        "Dubon2026.SourceCurve.Place.mem_restrict_iff",
+        "Dubon2026.SourceCurve.Place.adjoin_mem_of_transcendental_residue",
+        "Dubon2026.SourceCurve.Place.isAlgebraic_residue_of_finite_coordinates",
+        "Dubon2026.SourceFunctionField.original_place_residue_isAlgebraic",
+        "Dubon2026.SourceFunctionField.original_place_residue_algebraMap_bijective",
+        "Dubon2026.SourceFunctionField.finite_original_place_residue"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.ResidueField",
+        "Dubon2026.SourceCurve.Place.restrict"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalGeometryAudit9.log",
+      "logSha256": "78288EDB5C1C143D72EB2F4F3CD090FF818EBFEFDA2B7AB99277CD967ED98624",
+      "auditSha256": "5729780EE91371488C330EB446631E81C380592966A7DC78D5CF9728F6246EF4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 31,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLocalGeometryDependencyAudit.log",
+      "dependencyAuditSha256": "D7B692C729B1CF655AF7D8E406B7866516E630B1DBCEB861F8AE87A68542261E",
+      "dependencyAuditSourceSha256": "915DD0EDBB51FF5AAA45723BE5077A69473F9A4A3980D84371F7F8F09DB65A28",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_place_residue",
+        "Dubon2026.SourceFunctionField.finiteDimensional_original_over_uniformizer",
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff_ord_nonneg"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization and dimension -> actual finite coordinate extensions, residue finiteness and local order criterion.",
+      "discharged": "The actual original divisor-generated field is essentially of finite type. It is finite over every transcendental coordinate, in particular every actual place uniformizer. Actual regularity equals nonnegative local differential order. Every actual place residue is algebraic over the base: a transcendental residue would put its lifted rational function field, and hence the entire finite extension, in a proper integrally closed valuation ring. Over algebraically closed constants the actual residue map is bijective and the residue is finite. No finite-residue, finite-coordinate or local-spanning premise remains on these consumers.",
+      "boundary": "Scratch only; production promotion and verification pending. Principal-divisor finite support and degree zero, canonical divisor, Riemann--Roch, geometric genus and analytic cusp-form realization remain required. The matching lower dimension bound and period surjectivity remain open, followed by Hecke/Galois realization, the adic system and symmetric-power continuation. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-local-geometry-9-reuse-review-20261020.json",
+      "reuseReviewSha256": "8396697BDC10DCCA72F173925C342759F2308D4BFFA77F8C72CD4965C5053387",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-21T03:48:30.608921+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurvePlaceCenters",
+        "SourceCurveCoordinateSupport",
+        "SourceCurveFiniteSupport",
+        "SourceOriginalDivisorSupport"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePlaceCenters.lean",
+          "sha256": "35389067A5EB53DA18DFCAE4BE35668171D70BADBD6C8A763FB2C08FDAA8F2A1",
+          "oleanSha256": "523DED21180872581B07E456704BDBB130902816803E243F4351E65F735EE065"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateSupport.lean",
+          "sha256": "96EBB04330CE80BD1BDC4AB7686DAB4079CD34E7C2BC0064BC62B9D6C3115ADC",
+          "oleanSha256": "14EA9E69F5B1EA13A1ACAC80E5CED2D76C130A16662BAE5F1BBB088A131AF3C7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteSupport.lean",
+          "sha256": "6EFC80D3463A3F48B4249839B9E3A4EE3BD0D61F814B4ED7A26D7DBFE681ED76",
+          "oleanSha256": "C0468B6EC3D674669504AA6C4DBED33A0694B1B98AA9E149591DABE8C720EE42"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorSupport.lean",
+          "sha256": "AD7F429F4B4B667F2FC3AF3B43B8C3DCF930875ED7E4530521DE13C9C76FD805",
+          "oleanSha256": "A0AB12441B9CB7148113A26B3A2CDB355FEDCD432905780767966B1485FC88D1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.ord_eq_zero_iff_adicValuation_eq_one",
+        "Dubon2026.SourceCurve.Place.ord_neg",
+        "Dubon2026.SourceCurve.Place.mem_of_eval_monic_eq_zero",
+        "Dubon2026.SourceCurve.Place.mem_maximalIdeal_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.mem_center_iff",
+        "Dubon2026.SourceCurve.Place.mem_center_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.center_ne_bot",
+        "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum_asIdeal",
+        "Dubon2026.SourceCurve.Place.valuationSubringAtPrime_centerHeightOneSpectrum_le",
+        "Dubon2026.SourceCurve.Place.toValuationSubring_eq_of_forall_mem",
+        "Dubon2026.SourceCurve.Place.finite_setOf_forall_mem_and_ord_pos",
+        "Dubon2026.SourceCurve.polynomial_mem_of_coordinate_mem",
+        "Dubon2026.SourceCurve.integralClosure_mem_of_base_mem",
+        "Dubon2026.SourceCurve.finite_places_positive_X",
+        "Dubon2026.SourceCurve.finite_places_positive_of_finite_coordinate",
+        "Dubon2026.SourceFunctionField.finite_original_places_positive",
+        "Dubon2026.SourceFunctionField.finite_original_divisor_support",
+        "Dubon2026.SourceCurve.Place.center",
+        "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.ord_eq_zero_iff_adicValuation_eq_one",
+        "Dubon2026.SourceCurve.Place.ord_neg",
+        "Dubon2026.SourceCurve.Place.mem_of_eval_monic_eq_zero",
+        "Dubon2026.SourceCurve.Place.mem_maximalIdeal_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.mem_center_iff",
+        "Dubon2026.SourceCurve.Place.mem_center_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.center_ne_bot",
+        "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum_asIdeal",
+        "Dubon2026.SourceCurve.Place.valuationSubringAtPrime_centerHeightOneSpectrum_le",
+        "Dubon2026.SourceCurve.Place.toValuationSubring_eq_of_forall_mem",
+        "Dubon2026.SourceCurve.Place.finite_setOf_forall_mem_and_ord_pos",
+        "Dubon2026.SourceCurve.polynomial_mem_of_coordinate_mem",
+        "Dubon2026.SourceCurve.integralClosure_mem_of_base_mem",
+        "Dubon2026.SourceCurve.finite_places_positive_X",
+        "Dubon2026.SourceCurve.finite_places_positive_of_finite_coordinate",
+        "Dubon2026.SourceFunctionField.finite_original_places_positive",
+        "Dubon2026.SourceFunctionField.finite_original_divisor_support"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.center",
+        "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDivisorSupportAudit4.log",
+      "logSha256": "807715D82B0C592CF020243CBC69F0C7DBB3E7AB1C9FAD9C4F0578D3B028D559",
+      "auditSha256": "77008F074FE2CCE271AE22AE4E6AE5F9C5991184532273AB2D7C6DDD65EC23F7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 29,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDivisorSupportDependencyAudit.log",
+      "dependencyAuditSha256": "E0ED1E32DC733F59591DE34984BEE4D8B7D0E6D399700C2DC73CDC46BC33D98B",
+      "dependencyAuditSourceSha256": "91FB02BA421DA402D4C18FA93253D6AB3E8E74030333904758664A5AA817FDE5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_divisor_support"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch -> principal divisors -> finite normalized place-order support of actual functions.",
+      "discharged": "Every function in the actual original modular function field has only finitely many nonzero normalized place orders. For a transcendental function the proved finite coordinate extension gives a Dedekind integral-closure chart. Actual places containing the chart are identified with their actual prime centers. Pinned finiteness of prime ideal factors bounds the positive support; inversion handles negative support. Algebraic functions have order zero at every actual place. No finite-support or place-classification premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The degree-zero principal-divisor product formula remains unproved. Canonical divisors, Riemann--Roch, geometric genus and analytic cusp-form realization remain required for the matching dimension lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-divisor-support-4-reuse-review-20261020.json",
+      "reuseReviewSha256": "87EB18A4449DBD42E30C4803266E6FEDE7B9EE170B4BE3D865DE13A36EF59637",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-21T04:27:46.144030+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveChartOrders",
+        "SourceCurvePrimePlaces",
+        "SourceCurvePrimeResidues",
+        "SourceCurveRamificationOrders",
+        "SourceCurveCoordinateResidues",
+        "SourceCurveCoordinatePlaces",
+        "SourceCurveCoordinateDegree",
+        "SourceCurvePositiveDegree",
+        "SourceCurveTranscendentalDegree",
+        "SourceCurvePrincipalDegree",
+        "SourceCurveDivisors",
+        "SourceOriginalPrincipalDivisors"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveChartOrders.lean",
+          "sha256": "EC0048FC7EDDC93D08019718F40DC75D0B0DA44E64CD0A64B3ABA1CD329128EC",
+          "oleanSha256": "3453F34564E8C59E196286782F79F67D8E37D18F9E6056E82031C20F4E7C82FB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePrimePlaces.lean",
+          "sha256": "495EB01ABB8525498F5D5A4C5C4ED7C0476FDA399E439E63F9F6F72BA1C21DDF",
+          "oleanSha256": "29BBEBD4C8E9B0BF760CA6B0FF2E0805BCE97624B2E338971274F36E0842A48C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePrimeResidues.lean",
+          "sha256": "EED29FE00C13EF43ECA55D41ADEEA24D90F33D952582E3480A875557C6B33956",
+          "oleanSha256": "960BE880E9CD5183E9B8737B3E187F50ACAE2D123FD20D3135AD8D6D80A7885C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRamificationOrders.lean",
+          "sha256": "A16796D1D9F399466BB1860E57C545F33D9CAFF935ABAF4ABFB445C05645C2A2",
+          "oleanSha256": "CA4F0F7C7B736C5414BDF76BFB1944BA57E1B6F65C57E2AB4D7EA6EA1B12D555"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateResidues.lean",
+          "sha256": "D7224AB5388DB552E5418BD35C82DBBFA3AE4B6792070ADA1ED99FA44670C92B",
+          "oleanSha256": "9D94B9F69FE7319CAD4678FB578DB1B363160B1D2E173CA58056607B9FEE015B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinatePlaces.lean",
+          "sha256": "0702B390047CF65AB4739866E24E9EA508763BE1E6C8BB1867ABC05DC292E4E2",
+          "oleanSha256": "68768938B0447A35ACF4B766987A74368C7F561F127EE960365AFE637FB349BD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateDegree.lean",
+          "sha256": "F8F4CFB5E742F49716C822D6DBC5E56BE937ACF34772C4D068D70076D3DEC895",
+          "oleanSha256": "FDC8B9BEF90955C89E8CDD989D20FF276C090037396C8CDC897925472D9507C0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePositiveDegree.lean",
+          "sha256": "3F3B290DE31AFD8F168C55B27A6427FAFDBEA75D95FBBA957B8C00ED4F596F68",
+          "oleanSha256": "15713FF5F1CF49BE28306E128A291A8A81D3C8E7BFEFC52332F936B3B7F16C98"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTranscendentalDegree.lean",
+          "sha256": "6A8DF331E52C9E47BA119DCBF2A79287E17E7D3E0A1A8B621328B13734B965C4",
+          "oleanSha256": "C35EE66756DA33D95133B6F12A8C67B2D4D8A94EC5231BD2B8C40A337038357D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePrincipalDegree.lean",
+          "sha256": "48ABEB7F9C8AC5374BB81564BDAB28BBAC4D9926395610839C338DA9B31A26C7",
+          "oleanSha256": "79464150860C6576E20B83212364D7FD2406E2787F3A0B05DE2DDC6739136279"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveDivisors.lean",
+          "sha256": "5B50132BA32CE30CB85B322546127B39D12DCBE14E5D1BF664013286F90060A8",
+          "oleanSha256": "FCE58D39A4612E797771EFEFF4CDE127D63A40633B065080FE1649A5D55CEE35"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrincipalDivisors.lean",
+          "sha256": "9657CBB184E9525C68BC52DBA7829AEF99C1A4F7FFAD40124024853A602189FE",
+          "oleanSha256": "B179762B60D9F36DD5216A47D8F2A1803A1ACA30F7E9A436B02A6A7607D2FBAC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.eq_ord_of_addHom_of_nonneg_iff",
+        "Dubon2026.SourceCurve.Place.ord_eq_neg_log_center_valuation",
+        "Dubon2026.SourceCurve.Place.isPrincipalIdealRing_valuationSubring",
+        "Dubon2026.SourceCurve.Place.algebraMap_mem_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.center_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.ofHeightOneSpectrum_center",
+        "Dubon2026.SourceCurve.Place.ord_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.finrank_primeResidue",
+        "Dubon2026.SourceCurve.Place.ord_ofHeightOneSpectrum_eq_multiplicity",
+        "Dubon2026.SourceCurve.Place.ord_ofHeightOneSpectrum_eq_ramificationIdx",
+        "Dubon2026.SourceCurve.coordinateZeroIdeal_ne_bot",
+        "Dubon2026.SourceCurve.coordinateZero_inertiaDeg_eq_finrank",
+        "Dubon2026.SourceCurve.liesOver_coordinateZero_iff",
+        "Dubon2026.SourceCurve.coordinatePrimeHeight_mem",
+        "Dubon2026.SourceCurve.coordinatePrimePlaceEquiv_weight",
+        "Dubon2026.SourceCurve.sum_positive_orders_eq_finrank_of_chart",
+        "Dubon2026.SourceCurve.sum_positive_orders_X_eq_finrank",
+        "Dubon2026.SourceCurve.sum_positive_orders_eq_finrank_adjoin",
+        "Dubon2026.SourceCurve.adjoin_singleton_inv_eq",
+        "Dubon2026.SourceCurve.sum_orders_eq_positive_sub_inverse",
+        "Dubon2026.SourceCurve.sum_orders_eq_zero_of_finite_coordinates",
+        "Dubon2026.SourceCurve.Divisor.degree_eq_finsum",
+        "Dubon2026.SourceFunctionField.sum_original_orders_eq_zero",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_apply",
+        "Dubon2026.SourceFunctionField.degree_originalPrincipalDivisor",
+        "Dubon2026.SourceFunctionField.hasPrincipalDivisors_original",
+        "Dubon2026.SourceFunctionField.isCurveOver_original",
+        "Dubon2026.SourceCurve.coordinateZeroIdeal_isMaximal",
+        "Dubon2026.SourceCurve.Place.ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.primeLocalizationRingEquiv",
+        "Dubon2026.SourceCurve.Place.primeResidueEquiv",
+        "Dubon2026.SourceCurve.coordinateZeroIdeal",
+        "Dubon2026.SourceCurve.coordinateZeroResidueEquiv",
+        "Dubon2026.SourceCurve.coordinatePrimeHeight",
+        "Dubon2026.SourceCurve.coordinatePrimePlaceEquiv",
+        "Dubon2026.SourceCurve.Divisor",
+        "Dubon2026.SourceCurve.Divisor.degree",
+        "Dubon2026.SourceCurve.HasPrincipalDivisors",
+        "Dubon2026.SourceCurve.IsCurveOver",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.eq_ord_of_addHom_of_nonneg_iff",
+        "Dubon2026.SourceCurve.Place.ord_eq_neg_log_center_valuation",
+        "Dubon2026.SourceCurve.Place.isPrincipalIdealRing_valuationSubring",
+        "Dubon2026.SourceCurve.Place.algebraMap_mem_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.center_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.ofHeightOneSpectrum_center",
+        "Dubon2026.SourceCurve.Place.ord_ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.finrank_primeResidue",
+        "Dubon2026.SourceCurve.Place.ord_ofHeightOneSpectrum_eq_multiplicity",
+        "Dubon2026.SourceCurve.Place.ord_ofHeightOneSpectrum_eq_ramificationIdx",
+        "Dubon2026.SourceCurve.coordinateZeroIdeal_ne_bot",
+        "Dubon2026.SourceCurve.coordinateZero_inertiaDeg_eq_finrank",
+        "Dubon2026.SourceCurve.liesOver_coordinateZero_iff",
+        "Dubon2026.SourceCurve.coordinatePrimeHeight_mem",
+        "Dubon2026.SourceCurve.coordinatePrimePlaceEquiv_weight",
+        "Dubon2026.SourceCurve.sum_positive_orders_eq_finrank_of_chart",
+        "Dubon2026.SourceCurve.sum_positive_orders_X_eq_finrank",
+        "Dubon2026.SourceCurve.sum_positive_orders_eq_finrank_adjoin",
+        "Dubon2026.SourceCurve.adjoin_singleton_inv_eq",
+        "Dubon2026.SourceCurve.sum_orders_eq_positive_sub_inverse",
+        "Dubon2026.SourceCurve.sum_orders_eq_zero_of_finite_coordinates",
+        "Dubon2026.SourceCurve.Divisor.degree_eq_finsum",
+        "Dubon2026.SourceFunctionField.sum_original_orders_eq_zero",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_apply",
+        "Dubon2026.SourceFunctionField.degree_originalPrincipalDivisor",
+        "Dubon2026.SourceFunctionField.hasPrincipalDivisors_original",
+        "Dubon2026.SourceFunctionField.isCurveOver_original",
+        "Dubon2026.SourceCurve.coordinateZeroIdeal_isMaximal"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.ofHeightOneSpectrum",
+        "Dubon2026.SourceCurve.Place.primeLocalizationRingEquiv",
+        "Dubon2026.SourceCurve.Place.primeResidueEquiv",
+        "Dubon2026.SourceCurve.coordinateZeroIdeal",
+        "Dubon2026.SourceCurve.coordinateZeroResidueEquiv",
+        "Dubon2026.SourceCurve.coordinatePrimeHeight",
+        "Dubon2026.SourceCurve.coordinatePrimePlaceEquiv",
+        "Dubon2026.SourceCurve.Divisor",
+        "Dubon2026.SourceCurve.Divisor.degree",
+        "Dubon2026.SourceCurve.HasPrincipalDivisors",
+        "Dubon2026.SourceCurve.IsCurveOver",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrincipalDegreeAudit12.log",
+      "logSha256": "2886614621D2DCA7887C8C2D468F9B85DFEA46196E1D85A826BE3ED792AD34D6",
+      "auditSha256": "9C3C8B71A9985FE92A9D96BF32308EC7B09E82B4109CAD125F0E314498F52F6F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 77,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 48,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrincipalDegreeDependencyAudit.log",
+      "dependencyAuditSha256": "D90B5580297DA5AF34886B171831208ADCDC185EAD376B545631F9B93BAAF59F",
+      "dependencyAuditSourceSha256": "4A5E067EA85F9252ADEC7D2108726D9DB02E55F99B939223DFF1F453676C4E14",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.isCurveOver_original"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch -> actual original curve: principal-divisor finite support and degree zero, finite residues, and differential rank one.",
+      "discharged": "Every actual original-field function has a finite normalized-order divisor with degree zero. The actual chart primes and positive-order places correspond bijectively; their normalized orders equal pinned ramification indices, and their residue degrees equal pinned inertia degrees. The pinned ramification/inertia sum gives the degree of the positive divisor. Applying this to the function and its inverse proves degree zero, since both generate the same rational subfield. The integral-closure chart discharges all chart containment, module-finiteness, normalization and scalar-comparison inputs. Over algebraically closed constants the original curve interface is fully derived from these principal divisors, proved finite residues and proved differential rank one; no curve or principal-divisor premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-principal-degree-12-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6486E1004CE05556F6063B86A9616FBF6FA8468F8304F8BB12859B82A9CAAEEE"
+    }
+  ],
+  "reviews": [
+    "Tools/source-local-differentials-4-reuse-review-20261020.json",
+    "Tools/source-local-geometry-9-reuse-review-20261020.json",
+    "Tools/source-divisor-support-4-reuse-review-20261020.json",
+    "Tools/source-principal-degree-12-reuse-review-20261020.json"
+  ],
+  "productionFocusedReceipt5290": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalDifferentialsDependencyAuditProduction5290.log",
+        "sha256": "B8C1EB5EF88646BAE3DE023E495387AB68E992D0F51A764B6D7A9514C02D0D34",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff",
+          "Dubon2026.SourceFunctionField.regularDifferential_qExpansion_injective"
+        ],
+        "sourceSha256": "B6E0782AB6DC344DC15E6E15257923298CA1B16A45D6EA2FB6A1B87CF7F5A7D8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalGeometryDependencyAuditProduction5290.log",
+        "sha256": "D7B692C729B1CF655AF7D8E406B7866516E630B1DBCEB861F8AE87A68542261E",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.finite_original_place_residue",
+          "Dubon2026.SourceFunctionField.finiteDimensional_original_over_uniformizer",
+          "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff_ord_nonneg"
+        ],
+        "sourceSha256": "BBA8F694CF790BFFB7859CD0854D3A9E9D5F734540A1C5516B0C585CBA9ECBDB"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDivisorSupportDependencyAuditProduction5290.log",
+        "sha256": "E0ED1E32DC733F59591DE34984BEE4D8B7D0E6D399700C2DC73CDC46BC33D98B",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.finite_original_divisor_support"
+        ],
+        "sourceSha256": "B52BCCA1C64546D2F7CE7BA0322AA5C3E622ACEC29792869CCDB32A1F9E4935A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrincipalDegreeDependencyAuditProduction5290.log",
+        "sha256": "D90B5580297DA5AF34886B171831208ADCDC185EAD376B545631F9B93BAAF59F",
+        "requiredProofValueEdges": 48,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.isCurveOver_original"
+        ],
+        "sourceSha256": "E55F40279F93EA5952F07415B04257EC0C3B5344F9DF9C58A81B74DB538A07FA"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCurveProductionAudit5290.log",
+    "sha256": "F1F253E896639546B2FEC123D48979E01BFDBD743DD89BDE1864CE9787640A4D",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-curve-production-5290-build.log",
+    "aggregateSha256": "33648A96E59F976BEC9AEEE141B852A8C43DAF24FD6D7BDCE6A54C47A35BD341",
+    "productionModules": 5290,
+    "incrementModules": 29,
+    "axiomChecks": 134,
+    "exhaustiveIncrementTheorems": 208,
+    "linterScopes": 29,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 208,
+    "boundary": "Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+  },
+  "receipt5290": {
+    "recordedUTC": "2026-10-21T05:49:24.056029+00:00",
+    "log": "logs/dubon-build-20261020-213738-705.log",
+    "sha256": "30B0B47A0DD40809B4A0488B4764C7F022326C08CB4DCC9C09BECD8F6AB8A831",
+    "bytes": 9133482,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5290,
+    "projectTheorems": 37556,
+    "registeredConsumers": 16155,
+    "registeredConstructions": 830,
+    "declarations": 22407,
+    "generated": 21187,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_213428.log",
+    "foundationSha256": "2FB837C1C1F35AB881BA7B2C2DEB5FA3B433685F93685AB7DF5EE6981189B2FF",
+    "boundary": "Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+  }
+}

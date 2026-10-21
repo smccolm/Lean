@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch and the original source genus -> choice-independent canonical degree.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_CanonicalDivisor.lean.txt",
+        "sha256": "60B8DA1851EE78EF1FBA1051E49034659FE700583F123767A6188E8D384806B4"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_RiemannRochRows.lean.txt",
+        "sha256": "69FD6DCD1BB1FB98DD407D4C2DECE7283D0A9741F5744BB345C569774B7B0449"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePrincipalDegree.lean",
+      "sha256": "48ABEB7F9C8AC5374BB81564BDAB28BBAC4D9926395610839C338DA9B31A26C7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalDifferentials.lean",
+      "sha256": "E27B54648C716438AE75D42D1A76B6B7FD05842FE8B9AF35D1627289AEC1CBB1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrincipalDivisors.lean",
+      "sha256": "9657CBB184E9525C68BC52DBA7829AEF99C1A4F7FFAD40124024853A602189FE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCanonicalDivisors.lean",
+      "sha256": "D98EACEC94279851D9383114B862C675B85644956CE9A75615F588CAD1C01358"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRegularComparison.lean",
+      "sha256": "04D6F2DA9EBF9C7F1DADD497332AD51EEC1A8637B080AA428569AE0584FBE586"
+    }
+  ],
+  "routeAdjustment": "Keep the exact source genus definition. Prove canonical-degree independence directly from the actual rank-one differential theorem, local order additivity and principal-divisor degree zero. This avoids introducing the Picard quotient solely to establish choice independence. The resulting original j-degree expression is the input to the still-unproved numerical genus calculation; no numerical value is inferred from this identity.",
+  "discharged": "The degree of every nonzero original differential equals the degree of the literal j differential. Rank one expresses one nonzero differential as a nonzero scalar multiple of another; their local-order divisors differ by the actual principal divisor of the scalar. Its proved degree zero establishes choice independence. The exact source definition of genus therefore equals the degree expression at the original j canonical divisor. No principal-degree or curve premise remains.",
+  "remaining": "The numerical canonical-degree/genus formula, Riemann--Roch and its identification with the finite regular differential dimension remain required, together with analytic cusp-form realization. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

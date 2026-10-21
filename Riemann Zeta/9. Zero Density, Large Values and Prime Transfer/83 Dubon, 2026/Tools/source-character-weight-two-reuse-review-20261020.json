@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> character-to-weight-two reduction -> removal of the exact Eisenstein alternative and exact character/twist normalization.",
+  "precedingScratchReceipts": {
+    "source-eisenstein-12-scratch-receipt.json": "4BE02D1E741682579E47994F3B5C6052AC736B7FC0C1B72105CBA2D7FC508465"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\OrderOfElement.lean",
+      "sha256": "E1DAA65D815EA3752BDE0C3DD56E3EE803C940F596DB873F69B10A983E6EEA41"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryFlagExponent.lean",
+      "sha256": "22533FB770ACB58CC7893B276B4E5ECBBB2345A5BA2EBA783C4FA0E02A716204"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRaisedLevelEigensystem.lean",
+      "sha256": "F105A61DC71CE9D51A49815B10F8F0C12A13A708D84F540F248DB3122CF2C411"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGamma0Eisenstein.lean",
+      "sha256": "4A678799E28F11A8370B2940BAFA927ED7601B4325B5274920EBB168D507D771"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAffineFlagEigenSurvival.lean",
+      "sha256": "7A2C7EFCE971C5EEB93A85D3C4E92AF14EE0065B6786E341C22B77E5D7F5D18F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_HeckeEis_exists_isEigensystemH1_one_of_isEigensystemH1_gamma0NebenRep.lean.txt",
+      "sha256": "46170F1A691110B3BD748049A1BD3E0C3FE0B65423E672D04070D945CB181D80"
+    }
+  ],
+  "reuseSearch": "Checked the actual binary-character exponent, proved full-function survival alternative, raised-level evaluation, nonzero Eisenstein eigenclass and pinned Mathlib power congruence before expanding the source normalization.",
+  "routeAdjustment": "The archived source splits two exceptional exponent cases. The existing terminal-flag theorem allows a shorter single next-degree argument: two successive exceptions would force p-1 to divide two. The actual original binary-character output is consumed directly, and native Rep equality transports the full original Hecke operators without another cohomology model.",
+  "discharged": "The actual nonzero binary-flag character eigensystem feeds a nonzero original trivial-coefficient H1 eigensystem at level Q*p in every prime characteristic at least five, with the exact good-prime twist ell^t under the source congruence (p-1) divides sourceBinaryFlagExponentOf(p,n,j)+2*t. The original character is identified with its exact lower-diagonal exponent, exponents are reduced using actual prime-field units, and the inverse flag scalar is proved equal to ell^t. The Eisenstein alternative is removed by the actual nonzero Eisenstein class at the next flag degree; a second exception would imply p-1 divides two. When both character and twist exponents are divisible by p-1, the same-level result holds in every prime characteristic, including all characteristic-two cases. No survival, character identification, scalar agreement or Eisenstein eigenclass is assumed.",
+  "remaining": "The characteristic-three odd twist, all-prime assembly from original binary cohomology, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

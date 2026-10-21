@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual Galois association -> original all-prime weight-two class -> actual complex weight-two eigenclass with integral eigenvalues and exact residual reduction, or exact Eisenstein values.",
+  "precedingScratchReceipts": {
+    "source-finite-order-hecke-7-scratch-receipt.json": "1B2CE3B5FB3C8013D6148C1D1F3C8C613B33BF436613BBC8CA49D6C50892DF9F"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\AssociatedPrime\\Localization.lean",
+      "sha256": "2987977145311DE90D537B3EC4BCD917D72F628FF69CAE9C9E31F16FE6D494F1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\GoingUp.lean",
+      "sha256": "E86D37349BCDC34A2787D75FC1F9D132DE04B0E049B7E62700C7200F47506952"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\Algebra\\Basic.lean",
+      "sha256": "DB312EA3B953F17BC7C76C29CEAEDE0F92FECC21B345AB7B0654FED5558F2552"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralReductionExtension.lean",
+      "sha256": "C5B990EA49F90209565261ACFFAC735B9CB4A4E926E2ED8455175EEE5ACC927E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeWordTransport.lean",
+      "sha256": "3AAAEC58C9F86006CA22CAFC59DF1A3FA3214B8B2D8D34C51950D95D75950B3E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_DeligneSerre_exists_eigenvector_of_mem_minimalPrimes_of_faithfulSMul.lean.txt",
+      "sha256": "327FA8757A0CD850F795DEAE34303F56D34C01C8B16AA65DCC8F3F00149E8E8D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_DeligneSerre_exists_eigencharacter_of_annihilator_le.lean.txt",
+      "sha256": "E31508C36A9D6F5AB56681E657D42C783F1DBF44F7B70BB1DD13B1A106EFB881"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_CohCarrier_exists_complex_heckeT_eigen_reduction_eq_of_mem_span_int.lean.txt",
+      "sha256": "091CDB3321265E392D44BAA9A6A86D819EEB2DB67DCE26C11BA79D6BCD231CED"
+    }
+  ],
+  "reuseSearch": "Checked existing actual full prime Hecke operators and their commutativity, native H1 finiteness and integral span, free-algebra word transport and character construction, the integral-reduction extension theorem, pinned associated-prime APIs and the archived external lift.",
+  "routeAdjustment": "Use the original full native H1 and its integral span to prove faithfulness directly. A minimal prime under the residual character kernel and the existing integral-reduction extension avoid the external auxiliary representation, annihilator quotient, finite residue-field and maximal-ideal machinery. The superseded maximal-ideal helper remains unpromoted scratch. Only the actual required faithful-action case is developed; no incidental generalization.",
+  "discharged": "Every actual primitive form of source weight at least two and every prescribed prime supplies its genuine local coefficient field, characteristic-p residue embedding, nonzero original weight-two eigensystem at level M with Q dividing M and M dividing Q*p squared, and exact Fourier factor. That actual eigensystem either has eigenvalues ell+1 at all good primes or has a nonzero class in the original full complex H1 with integral eigenvalues and one reduction map preserving all prescribed values simultaneously. The integral span, finite integral Hecke algebra, full complex spanning, faithful action, residual character, minimal-prime complex eigenvector and extension of the reduction to all complex algebraic integers are derived. No supplied complex eigenclass, Hecke-algebra faithfulness, maximal ideal, residual-character extension or lifting certificate remains.",
+  "remaining": "The parabolic and boundary branches of geometric residual Galois association, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

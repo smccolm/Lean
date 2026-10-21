@@ -24426,6 +24426,1594 @@
     {
       "path": "Tools/source-period-h1-and-specialization.json",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodBinaryIntertwiner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodBinaryEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBinaryCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeCohomologyTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeSubgroupConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeCoefficientMorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeSymbolCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeSymbolTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePeriodCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePeriodTransition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodHeckeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveHeckeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodBinaryDiagonal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodBinaryHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeBinaryCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveBinaryHeckeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCohomologyFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSemilinearCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCohomologyChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryHeckeMorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryHeckeCohomology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryHeckeChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBinaryHeckeComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-binary-h1-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hecke-h1-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-binary-hecke-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-h1-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-binary-hecke-cohomology.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCocycleDenominators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryAdditiveCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCocycleCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexBinaryCocycleSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexBinaryH1Span.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeWordTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryH1HeckeAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveH1HeckeRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveIntegralH1Character.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveResidualH1Character.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSemilinearH1ReductionKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCoefficientReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryH1ReductionKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualTensorCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryH1TensorChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualBinaryCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryH1TensorInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCommutingPrescribedEigenvector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFaithfulCharacterFiber.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOperatorCharacterTensorEigenvector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryResidualH1Eigensystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveResidualH1Eigensystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeProductConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeConjugationLower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeProductSection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeProductCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeTraceOneRepresentativeChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceChosenCosetTraceOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeProductTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCorrespondenceOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeProductTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePrimeComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryH1HeckeCommute.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalResidualH1Eigensystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-integral-span-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-h1-character-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-h1-tensor-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residual-eigen-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hecke-commute-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residual-h1-eigensystem.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeEigenvectorLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeH1EigenExactSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCoefficientFlag.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagTriangular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeCoefficientHeckeH1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagQuotientRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagExactSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeHeckeNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagQuotientHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagEigenStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagOriginal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagExponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeHeckeScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryFlagUntwisted.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCharacterDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveCharacterDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0LevelIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeH1RestrictionTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryLevelRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelHeckeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelHeckeRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryLevelHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryLevelEigensystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryCharacterLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveCharacterLevel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFreeGroupH2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSanovMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSanovSyllables.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSanovWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSanovFree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSanovEntryReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSanovRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaFourFree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaFourIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0H2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0H1Surjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteFunctionBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFunctionRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteFunctionFlag.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFunctionFlag.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFunctionHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFlagRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFlagHeckeQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFlagH1Lifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-character-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-character-level-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-h2-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-affine-lift-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-character-lifting.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteFunctionDifference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineDiagonalUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFunctionInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeH1KernelRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeCorrespondenceBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeH1KernelHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFlagInclusion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineFlagEigenSurvival.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffinePointCalculus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineCocycleEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRaisedLevelConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRaisedLevelEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRaisedHeckeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRaisedHeckeRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialCoefficientHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRaisedLevelEvaluationHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRaisedLevelEigensystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2CocycleMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2CocycleExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2CocycleNormalForm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2CocycleSection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2CocycleExists.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0CuspFunctional.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeExceptional.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialCuspHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialCuspEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0Eisenstein.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterExponentReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterEigenReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAffineCharacterSurvival.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterTwistExponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterWeightTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeEntries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeCoinduced.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeNativeCocycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeNormalizedCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeNormLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreeAffineCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCupThreePrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceThreeFunctionAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceThreeFunctionHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceThreeAffinePrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceThreeConstantKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceThreeEigenLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceThreeWeightTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterWeightTwoAllPrimes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoTwistNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveWeightParity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBinaryWeightTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveWeightTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-affine-survival-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-raised-evaluation-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-eisenstein-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-character-weight-two-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-weight-two-all-prime-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-weight-two-all-primes.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2CocycleExt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePermutationPotential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2PermutationLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0TorsionLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0IntegralSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialH1IntegralAlternative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteOrderTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteOrderHeckeConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCosetTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteOrderHeckeTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteOrderHeckeEigen.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveWeightTwoAlternative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMinimalPrimeEigenvector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralResidualEigencharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialH1CharZeroSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialIntegralHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialIntegralChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialComplexIntegralSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialHeckeAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualHeckeWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialComplexHeckeAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialResidualHeckeCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTrivialComplexEigenlift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveComplexAlternative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceParabolicClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspUnipotent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspBoundaryValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteCuspBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspPrimeOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeTerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeOrbitSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspHeckeColumnMove.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCommutingCommonEigenvector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeCuspHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundaryCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceNativeBoundaryCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteCharacterReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualBoundaryCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualWeightTwoAlternatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveParabolicAlternative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-integral-span-reuse-review.md",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-finite-order-hecke-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-complex-eigenlift-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-parabolic-boundary-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-parabolic-boundary.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLocalCyclotomicAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCyclotomicLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDiagonalUnitPair.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundaryGaloisRepresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundaryGaloisLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualGaloisAlternative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveGaloisAlternative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGaloisCharacterTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceArithmeticWeightTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveWeightRestoration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceArithmeticSupportPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceArithmeticSupportLocalValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveOriginalSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeightResidualConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRealPeriodicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspRealMaximum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInvariantRealPart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReflectedPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSL2Reflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMixedPrimitiveVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoAnalyticPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoPrimitiveCusps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoMixedInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoPeriodPair.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoParabolicPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoPeriodDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-boundary-galois-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weight-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-pair-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-residual-galois-periods.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceManinOrbitCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceManinRelationDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceManinCuspSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceManinCuspStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceManinCuspPotential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceManinParabolicDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelProjectiveLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelProjectiveCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelPsi.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelProjectivePrimePower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelProjectiveCRT.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelIndexFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelGenusNumerics.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelEllipticCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspRationalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspDenominator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspNormalForm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspNormalFormCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceParabolicGenusBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentEuler.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDifferentialQExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDifferentialTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDifferentialExpansionInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentCoefficientMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularJSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularJBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularJTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalModularFunctionField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFieldGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFieldFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFieldDifferentialConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEisensteinFourExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDiscriminantProductExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDiscriminantIntegralExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularJNumeratorSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularJLaurentSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJPrincipalPart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRealizedPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInvariantPowerCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePowerSeriesProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentSeriesProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentPolynomialRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJPolynomialDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentRootTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeConjugatePolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentCoefficientReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeConjugateDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeProductInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeLaurentTranslates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeCyclotomicEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeConjugateRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeCoefficientPolynomialDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeConjugateIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPolynomialDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeMonicRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllDivisorMonicRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-manin-dimension-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-genus-numerics-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-function-field-13-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-analytic-j-6-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-j-descent-7-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-monic-relations-14-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-geometry.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEssentialFiniteType.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCoordinateExchange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalUniformizerFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePlaceRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveResidueAlgebraic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalResidueFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePlaceCenters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCoordinateSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDivisorSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveChartOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrimePlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrimeResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRamificationOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCoordinateResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCoordinatePlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCoordinateDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePositiveDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTranscendentalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrincipalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrincipalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-local-differentials-4-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-local-geometry-9-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-divisor-support-4-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-principal-degree-12-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-curve.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveUniformizerCotangent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveUniformizerResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveIntegralDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRegularCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveUnramifiedChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDifferentSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCoordinateDifferentialSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDifferentialSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCanonicalDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCanonicalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRiemannRochSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRegularComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGlobalConstants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLSpaceFiniteStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLSpaceFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCanonicalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCanonicalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAdeleCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAdeleLocalQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLinearQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDivisorDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAdeleQuotientDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAdelicQuotients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-integral-derivatives-7-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-canonical-divisors-7-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-regular-finite-6-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-canonical-degree-2-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-adelic-quotients-6-reuse-review-20261020.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-regular-differentials.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -29443,7 +31031,355 @@
     "SourcePeriodCohomologyBounded",
     "SourcePeriodCohomologyInjective",
     "SourceIntegralReductionExtension",
-    "SourcePrimitiveAlgebraicIntegerReduction"
+    "SourcePrimitiveAlgebraicIntegerReduction",
+    "SourcePeriodBinaryIntertwiner",
+    "SourcePeriodBinaryEquivalence",
+    "SourceOriginalBinaryCohomology",
+    "SourceHeckeCohomologyTrace",
+    "SourceHeckeSubgroupConjugation",
+    "SourceHeckeCoefficientMorphism",
+    "SourceHeckeCohomology",
+    "SourceHeckeSymbolCosets",
+    "SourceHeckeSymbolTrace",
+    "SourceHeckePeriodCosets",
+    "SourceHeckePeriodTransition",
+    "SourcePeriodHeckeCohomology",
+    "SourcePrimitiveHeckeCohomology",
+    "SourcePeriodBinaryDiagonal",
+    "SourcePeriodBinaryHecke",
+    "SourceHeckeBinaryCohomology",
+    "SourcePrimitiveBinaryHeckeCohomology",
+    "SourceIntegralCohomologyFinite",
+    "SourceSemilinearCohomology",
+    "SourceBinaryCohomologyChange",
+    "SourceBinaryHeckeMorphism",
+    "SourceBinaryHeckeCohomology",
+    "SourceBinaryHeckeChange",
+    "SourceOriginalBinaryHeckeComparison",
+    "SourceBinaryCocycleDenominators",
+    "SourceBinaryAdditiveCoefficients",
+    "SourceBinaryCocycleCoordinates",
+    "SourceComplexBinaryCocycleSpan",
+    "SourceComplexBinaryH1Span",
+    "SourceHeckeWordTransport",
+    "SourceBinaryH1HeckeAlgebra",
+    "SourcePrimitiveH1HeckeRelations",
+    "SourcePrimitiveIntegralH1Character",
+    "SourcePrimitiveResidualH1Character",
+    "SourceSemilinearH1ReductionKernel",
+    "SourceBinaryCoefficientReduction",
+    "SourceBinaryH1ReductionKernel",
+    "SourceResidualTensorCoordinates",
+    "SourceBinaryH1TensorChange",
+    "SourceResidualBinaryCoordinates",
+    "SourceBinaryH1TensorInjection",
+    "SourceCommutingPrescribedEigenvector",
+    "SourceFaithfulCharacterFiber",
+    "SourceOperatorCharacterTensorEigenvector",
+    "SourceBinaryResidualH1Eigensystem",
+    "SourcePrimitiveResidualH1Eigensystem",
+    "SourceIntegralHeckeConjugation",
+    "SourceHeckeProductConjugation",
+    "SourceHeckeConjugationLower",
+    "SourceHeckeProductSection",
+    "SourceHeckeProductCosets",
+    "SourceHeckeTraceOneRepresentativeChange",
+    "SourceChosenCosetTraceOne",
+    "SourceIntegralHeckeHom",
+    "SourceHeckeProductTransitions",
+    "SourceCorrespondenceOne",
+    "SourceHeckeProductTrace",
+    "SourceHeckePrimeComposition",
+    "SourceBinaryH1HeckeCommute",
+    "SourceOriginalResidualH1Eigensystem",
+    "SourceHeckeEigenvectorLift",
+    "SourceNativeH1EigenExactSequence",
+    "SourceBinaryCoefficientFlag",
+    "SourceBinaryFlagTriangular",
+    "SourceBinaryFlagAction",
+    "SourcePrimeCoefficientHeckeH1",
+    "SourceBinaryFlagHecke",
+    "SourceBinaryFlagQuotientRepresentation",
+    "SourceBinaryFlagExactSequence",
+    "SourcePrimeHeckeNaturality",
+    "SourceBinaryFlagQuotientHecke",
+    "SourceBinaryFlagEigenStep",
+    "SourceBinaryFlagDescent",
+    "SourceBinaryFlagOriginal",
+    "SourceBinaryFlagExponent",
+    "SourcePrimeHeckeScalar",
+    "SourceBinaryFlagUntwisted",
+    "SourceBinaryCharacterDescent",
+    "SourcePrimitiveCharacterDescent",
+    "SourceGamma0LevelIndex",
+    "SourceNativeH1RestrictionTrace",
+    "SourceBinaryLevelRestriction",
+    "SourceLevelHeckeCosets",
+    "SourceLevelHeckeRepresentatives",
+    "SourceBinaryLevelHecke",
+    "SourceBinaryLevelEigensystem",
+    "SourceBinaryCharacterLevel",
+    "SourcePrimitiveCharacterLevel",
+    "SourceFreeGroupH2",
+    "SourceSanovMatrices",
+    "SourceSanovSyllables",
+    "SourceSanovWords",
+    "SourceSanovFree",
+    "SourceSanovEntryReduction",
+    "SourceSanovRange",
+    "SourceGammaFourFree",
+    "SourceGammaFourIndex",
+    "SourceGamma0H2",
+    "SourceGamma0H1Surjection",
+    "SourceFiniteFunctionBasis",
+    "SourceAffineFunctionRepresentation",
+    "SourceFiniteFunctionFlag",
+    "SourceAffineFunctionFlag",
+    "SourceAffineFunctionHecke",
+    "SourceAffineFlagRepresentation",
+    "SourceAffineFlagHeckeQuotient",
+    "SourceAffineFlagH1Lifting",
+    "SourceFiniteFunctionDifference",
+    "SourceAffineDiagonalUnits",
+    "SourceAffineFunctionInvariants",
+    "SourceNativeH1KernelRepresentative",
+    "SourceNativeCorrespondenceBoundary",
+    "SourceNativeH1KernelHecke",
+    "SourceAffineFlagInclusion",
+    "SourceAffineFlagEigenSurvival",
+    "SourceAffinePointCalculus",
+    "SourceAffineCocycleEvaluation",
+    "SourceRaisedLevelConjugation",
+    "SourceRaisedLevelEvaluation",
+    "SourceRaisedHeckeCosets",
+    "SourceRaisedHeckeRepresentatives",
+    "SourceTrivialCoefficientHecke",
+    "SourceRaisedLevelEvaluationHecke",
+    "SourceRaisedLevelEigensystem",
+    "SourceSL2CocycleMatrices",
+    "SourceSL2CocycleExtension",
+    "SourceSL2CocycleNormalForm",
+    "SourceSL2CocycleSection",
+    "SourceSL2CocycleExists",
+    "SourceGamma0CuspFunctional",
+    "SourceCuspHeckeCosets",
+    "SourceCuspHeckeTransitions",
+    "SourceCuspHeckeExceptional",
+    "SourceTrivialCuspHecke",
+    "SourceTrivialCuspEvaluation",
+    "SourceGamma0Eisenstein",
+    "SourceCharacterExponentReduction",
+    "SourceCharacterEigenReduction",
+    "SourceAffineCharacterSurvival",
+    "SourceCharacterTwistExponent",
+    "SourceCharacterWeightTwo",
+    "SourceCupThreeEntries",
+    "SourceCupThreeCosets",
+    "SourceCupThreeCoinduced",
+    "SourceCupThreeNativeCocycles",
+    "SourceCupThreeNormalizedCocycle",
+    "SourceCupThreeOrbits",
+    "SourceCupThreeNormLift",
+    "SourceCupThreeAffineCocycle",
+    "SourceCupThreePrimitive",
+    "SourceThreeFunctionAction",
+    "SourceThreeFunctionHecke",
+    "SourceThreeAffinePrimitive",
+    "SourceThreeConstantKernel",
+    "SourceThreeEigenLift",
+    "SourceThreeWeightTwo",
+    "SourceCharacterWeightTwoAllPrimes",
+    "SourceWeightTwoTwistNormalization",
+    "SourcePrimitiveWeightParity",
+    "SourceBinaryWeightTwo",
+    "SourcePrimitiveWeightTwo",
+    "SourceSL2CocycleExt",
+    "SourcePermutationPotential",
+    "SourceSL2PermutationLift",
+    "SourceGamma0TorsionLift",
+    "SourceGamma0IntegralSpan",
+    "SourceTrivialH1IntegralAlternative",
+    "SourceFiniteOrderTrace",
+    "SourceEllipticPrimeNorm",
+    "SourceFiniteOrderHeckeConjugation",
+    "SourceCosetTransfer",
+    "SourceFiniteOrderHeckeTransfer",
+    "SourceFiniteOrderHeckeEigen",
+    "SourcePrimitiveWeightTwoAlternative",
+    "SourceMinimalPrimeEigenvector",
+    "SourceIntegralResidualEigencharacter",
+    "SourceTrivialH1CharZeroSpan",
+    "SourceTrivialIntegralHecke",
+    "SourceTrivialIntegralChange",
+    "SourceTrivialComplexIntegralSpan",
+    "SourceTrivialHeckeAlgebra",
+    "SourceResidualHeckeWords",
+    "SourceTrivialComplexHeckeAction",
+    "SourceTrivialResidualHeckeCharacter",
+    "SourceTrivialComplexEigenlift",
+    "SourcePrimitiveComplexAlternative",
+    "SourceParabolicClassification",
+    "SourceCuspUnipotent",
+    "SourceCuspBoundaryValues",
+    "SourceFiniteCuspBoundary",
+    "SourceCuspPrimeOrbits",
+    "SourceCuspHeckeTerms",
+    "SourceCuspHeckeOrbitSum",
+    "SourceCuspHeckeSum",
+    "SourceCuspHeckeColumnMove",
+    "SourceCommutingCommonEigenvector",
+    "SourceNativeCuspHecke",
+    "SourceBoundaryCharacters",
+    "SourceNativeBoundaryCharacters",
+    "SourceFiniteCharacterReduction",
+    "SourceResidualBoundaryCharacters",
+    "SourceResidualWeightTwoAlternatives",
+    "SourcePrimitiveParabolicAlternative",
+    "SourceLocalCyclotomicAction",
+    "SourceOriginalCyclotomicLocal",
+    "SourceDiagonalUnitPair",
+    "SourceBoundaryGaloisRepresentation",
+    "SourceBoundaryGaloisLocal",
+    "SourceResidualGaloisAlternative",
+    "SourcePrimitiveGaloisAlternative",
+    "SourceGaloisCharacterTwist",
+    "SourceArithmeticWeightTwist",
+    "SourcePrimitiveWeightRestoration",
+    "SourceArithmeticSupportPowers",
+    "SourceArithmeticSupportLocalValues",
+    "SourcePrimitiveOriginalSupport",
+    "SourceOriginalWeightResidualConsumer",
+    "SourceRealPeriodicity",
+    "SourceCuspRealMaximum",
+    "SourceInvariantRealPart",
+    "SourceReflectedPrimitive",
+    "SourceSL2Reflection",
+    "SourceMixedPrimitiveVanishing",
+    "SourceWeightTwoAnalyticPrimitive",
+    "SourceWeightTwoPrimitiveCusps",
+    "SourceWeightTwoMixedInjectivity",
+    "SourceWeightTwoPeriods",
+    "SourceWeightTwoPeriodPair",
+    "SourceWeightTwoParabolicPeriods",
+    "SourceWeightTwoPeriodDimension",
+    "SourceManinOrbitCount",
+    "SourceManinRelationDimension",
+    "SourceManinCuspSpace",
+    "SourceManinCuspStabilizer",
+    "SourceManinCuspPotential",
+    "SourceManinParabolicDimension",
+    "SourceLevelProjectiveLine",
+    "SourceLevelProjectiveCosets",
+    "SourceLevelPsi",
+    "SourceLevelProjectivePrimePower",
+    "SourceLevelProjectiveCRT",
+    "SourceLevelIndexFormula",
+    "SourceLevelGenusNumerics",
+    "SourceLevelEllipticCosets",
+    "SourceCuspRationalCoordinates",
+    "SourceCuspDenominator",
+    "SourceCuspNormalForm",
+    "SourceCuspNormalFormCriterion",
+    "SourceCuspClassification",
+    "SourceCuspCount",
+    "SourceParabolicGenusBound",
+    "SourceLaurentEuler",
+    "SourceDifferentialQExpansion",
+    "SourceDifferentialTranscendence",
+    "SourceDifferentialExpansionInjectivity",
+    "SourceLaurentCoefficientMap",
+    "SourceLaurentReindex",
+    "SourceModularJSeries",
+    "SourceModularJBaseChange",
+    "SourceModularJTranscendence",
+    "SourceOriginalModularFunctionField",
+    "SourceOriginalFieldGeneration",
+    "SourceOriginalFieldFinite",
+    "SourceOriginalFieldDifferentialConsumer",
+    "SourceAnalyticJInvariant",
+    "SourceEisensteinFourExpansion",
+    "SourceDiscriminantProductExpansion",
+    "SourceDiscriminantIntegralExpansion",
+    "SourceModularJNumeratorSum",
+    "SourceModularJLaurentSum",
+    "SourceJPrincipalPart",
+    "SourceRealizedPowerSeries",
+    "SourceInvariantPowerCoefficients",
+    "SourcePowerSeriesProduct",
+    "SourceLaurentSeriesProduct",
+    "SourceLaurentPolynomialRealization",
+    "SourceJPolynomialDescent",
+    "SourceLaurentRootTwist",
+    "SourcePrimeConjugatePolynomial",
+    "SourceLaurentCoefficientReindex",
+    "SourcePrimeConjugateDescent",
+    "SourcePrimeProductInvariance",
+    "SourcePrimeLaurentTranslates",
+    "SourcePrimeCyclotomicEmbedding",
+    "SourcePrimeConjugateRealization",
+    "SourcePrimeCoefficientPolynomialDescent",
+    "SourcePrimeConjugateIntegral",
+    "SourceIntegralPolynomialDescent",
+    "SourcePrimeMonicRelation",
+    "SourceAllDivisorMonicRelations",
+    "SourceOriginalDifferentialInjectivity",
+    "SourceCurvePlaces",
+    "SourceCurveLocalDifferentials",
+    "SourceOriginalDifferentialRank",
+    "SourceOriginalLocalDifferentials",
+    "SourceOriginalEssentialFiniteType",
+    "SourceCurveOrders",
+    "SourceOriginalRegularOrders",
+    "SourceCurveTranscendence",
+    "SourceCurveCoordinateExchange",
+    "SourceOriginalUniformizerFinite",
+    "SourceCurvePlaceRestriction",
+    "SourceCurveResidueAlgebraic",
+    "SourceOriginalResidueFinite",
+    "SourceCurvePlaceCenters",
+    "SourceCurveCoordinateSupport",
+    "SourceCurveFiniteSupport",
+    "SourceOriginalDivisorSupport",
+    "SourceCurveChartOrders",
+    "SourceCurvePrimePlaces",
+    "SourceCurvePrimeResidues",
+    "SourceCurveRamificationOrders",
+    "SourceCurveCoordinateResidues",
+    "SourceCurveCoordinatePlaces",
+    "SourceCurveCoordinateDegree",
+    "SourceCurvePositiveDegree",
+    "SourceCurveTranscendentalDegree",
+    "SourceCurvePrincipalDegree",
+    "SourceCurveDivisors",
+    "SourceOriginalPrincipalDivisors",
+    "SourceCurveLocalChart",
+    "SourceCurveLocalFinite",
+    "SourceOriginalLocalFinite",
+    "SourceCurveUniformizerCotangent",
+    "SourceCurveUniformizerResidue",
+    "SourceCurveIntegralDerivatives",
+    "SourceOriginalIntegralDerivatives",
+    "SourceCurveRegularCoordinate",
+    "SourceCurveUnramifiedChart",
+    "SourceCurveDifferentSupport",
+    "SourceCurveCoordinateDifferentialSupport",
+    "SourceCurveDifferentialSupport",
+    "SourceCurveCanonicalDivisor",
+    "SourceOriginalCanonicalDivisors",
+    "SourceCurveRiemannRochSpace",
+    "SourceCurveRegularComparison",
+    "SourceCurveGlobalConstants",
+    "SourceCurveLSpaceFiniteStep",
+    "SourceCurveLSpaceFinite",
+    "SourceOriginalRegularFinite",
+    "SourceCurveCanonicalDegree",
+    "SourceOriginalCanonicalDegree",
+    "SourceCurveAdeleCore",
+    "SourceCurveAdeleLocalQuotient",
+    "SourceCurveLinearQuotient",
+    "SourceCurveDivisorDegree",
+    "SourceCurveAdeleQuotientDimension",
+    "SourceOriginalAdelicQuotients"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

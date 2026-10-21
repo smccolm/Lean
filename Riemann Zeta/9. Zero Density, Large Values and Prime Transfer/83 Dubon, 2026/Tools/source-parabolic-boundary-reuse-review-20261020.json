@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original all-prime weight-two class -> actual parabolic complex lift or exact residual Dirichlet characters.",
+  "precedingScratchReceipts": {
+    "source-complex-eigenlift-12-scratch-receipt.json": "18E3D1C108F7C25B7262DE4E11868DA34B6CEF5BBBDB4CDF29C420443B485402"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeHom.lean",
+      "sha256": "12E022A28AA8B6779F246A87895FAA2B637051ACB8FBA8E02AE127B1B86C55F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeConjugation.lean",
+      "sha256": "0690E28B8016BEA1C153DA082862BFD42A15E63C35B98185E10EE55991C0FDD2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTrivialCuspHecke.lean",
+      "sha256": "B88A270B0EC48973DE279A7C6FA154590800C6D2DCEC1A3589B96267ACCC45D4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightTwo.lean",
+      "sha256": "F603F2AF3877429921C0B051CAB5516C9CEE71B2406A514217D476D7212CAE15"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMinimalPrimeEigenvector.lean",
+      "sha256": "2DD160B71E60595CC94B3DE09C700403D9540D12B257894989D77DF6A9A4A456"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCosetTransfer.lean",
+      "sha256": "561810717B3A3B5FDB78382E81F66C86AFC5D06CE44CF1C13D7BBAB90F7F896C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialIntegralHecke.lean",
+      "sha256": "D1298B9CE3CC1C80A9A898C34E37538ECD424A90CB592E4C3BF80B48AFA61CE0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialComplexEigenlift.lean",
+      "sha256": "9C44F8B04042F9B24875B3F3DA27CC2134E5F47203A9EB4D46C6CFD1798B3496"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularGroup_exists_eq_conj_T_zpow_of_trace_sq_eq_four.lean.txt",
+      "sha256": "83FB99437CB70EA501F7616E8B4081B11A561EB67E2C0E0DED478CAB06D1E5CA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Module_End_exists_common_eigenvector_of_commute.lean.txt",
+      "sha256": "E6191EC40BF14AF3B1010456D4F99F800D2FCC592D6BC2345374451672A92EBF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_CohCarrier_exists_dirichletCharacter_pair_of_not_mem_parabolicHoms_of_heckeT_eq_smul.lean.txt",
+      "sha256": "09C9523BDA686B841F1F8F6EF36C5C10B0A18ADC04E7AF3F3B6195BFEF607310"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "sha256": "24D0C54234CA1D0A33B2A98FAC560895E2FFAB033CBE8FC0BD4705C50E81567A"
+    }
+  ],
+  "reuseSearch": "Checked existing integral SL2 reduction, native H1 and full prime Hecke operators, original transfer and conjugation formulas, actual complex eigenlift, pinned finite-function and Dirichlet-character APIs, and the archived boundary proof.",
+  "routeAdjustment": "Specialize to the actual trivial-character Gamma0 source. Existing SL2 reduction supplies primitive-column and Borel lifts; existing native transfer supplies the full orbit sum. The previously proved minimal-prime eigenvector theorem supplies a simultaneous boundary eigenvector, avoiding a second general diagonalization proof. Trivial diamond action follows from Gamma0 itself. Finite-character integrality and the same original reduction map avoid an auxiliary coefficient or residue extension. The Finite instance is registered in the theorem list because Lean records its Prop-valued proof as a theorem; its initial classification failure is retained.",
+  "discharged": "Every original primitive form of source weight at least two and every prescribed prime supplies its genuine local coefficient field, residue characteristic, level M with Q dividing M and M dividing Q*p squared, nonzero original residual weight-two class, and exact Fourier twist. That actual class supplies either a nonzero parabolic original complex H1 eigenclass with integral eigenvalues and a simultaneous exact reduction, or two actual residual characters of the level unit group with product one and exact eigenvalues psi1(ell)+ell*psi2(ell). Signed parabolic matrix classification, nonzero finite cusp boundary, the full original prime Hecke orbit sum, commuting boundary operators, the genuine Dirichlet pair and its reduction through the same integral reduction map are all derived. The exact Eisenstein alternative is included as the pair of trivial characters. No boundary function, Hecke compatibility, character pair or parabolic complex lift is supplied.",
+  "remaining": "Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "ancillaryProjectionLemmas": [
+    "Dubon2026.SourceCuspBoundary.unipMat_apply_00",
+    "Dubon2026.SourceCuspBoundary.unipMat_apply_10",
+    "Dubon2026.SourceCuspBoundary.unipMat_apply_11"
+  ],
+  "ancillaryProjectionReason": "The proof unfolds the literal unipMat definition at these entries. These three rfl projection conveniences are individually kernel-audited but are not claimed as proof-value edges. All substantive required edges remain checked.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

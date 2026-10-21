@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic complex Hecke lift -> cusp-form realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization -> injective differential expansion on the original function field -> finite extension over actual j -> original monic modular-polynomial relations -> actual analytic j realization.",
+  "precedingScratchReceipts": {
+    "source-function-field-13-scratch-receipt.json": "56BBAF52A26FB1CE5A223F564CA34ACFE16C292F44CA9B3ABFEAD86C24D035F9"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_E4_cube_div_discriminant_smul.lean.txt",
+        "sha256": "D4060B140F9F445995D462339F832C64F69EFA1240F8567CD5B47B4147B2642C"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_qExpansion_E4_eq_map_eisenstein4.lean.txt",
+        "sha256": "547477290EB51F5FA7ACC6077FFE6C1F3C09C2F4CFFB21834EB5DA5B2252D174"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod.lean.txt",
+        "sha256": "4995BF2426BBC37C0B1E8905E8A7D320D35813841D4FFDD826AC152AB449058D"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.lean.txt",
+        "sha256": "6CEDC8448A693D4CBAA1BB895B6F7D211DED33E1C58DA6650068714A1DA2E794"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_hasSum_jNum_qParam.lean.txt",
+        "sha256": "E698B6A2871BA7AFE1E809BDB6EFCAF189A7948810B68B5A79B18D34CC940423"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_hasSum_jq_qParam.lean.txt",
+        "sha256": "C78AF1A08C74A379DE6F9AAAC8791672C5674195B228C82F1EAD5B02E5271BFB"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\EisensteinSeries\\QExpansion.lean",
+      "sha256": "791D375E824E44040D07B23F3F47071B2812ACB851B427D9F857374CEFA3678B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\Discriminant.lean",
+      "sha256": "03C3D4CCF0A60C8C8CB80B3F2ADDF8E13D9DF2F038CED2A164A6347BE371F8A0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\TaylorSeries.lean",
+      "sha256": "EDCC741C916D79BB3F4E66D93A1652CB7C53B5C440BF961F1D2A61D5B2D556D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\LocallyUniformLimit.lean",
+      "sha256": "0F15F53C70A8DCDD9AB2F25353AAACB5242FF1F57212744349F56AAE8DF20792"
+    }
+  ],
+  "routeAdjustment": "Reused pinned Eisenstein Fourier coefficients, discriminant product and nonvanishing, locally uniform limits, Taylor series and slash invariance. Selected the exact analytic realization proofs, retaining every convergence and formal-to-analytic bridge. Removed an unreachable upstream compatibility fallback; no imported options or linter exclusions. This supplies the identification required by the modular-polynomial descent route.",
+  "discharged": "The original integral Eisenstein series maps to the pinned normalized E4 q-expansion, and the original integral eta product maps to the actual analytic discriminant q-expansion. Locally uniform product differentiation and Taylor summation establish the exact analytic identification. At every point of the full upper half-plane, the literal rational j Laurent series sums to the actual E4 cubed divided by the actual nonvanishing discriminant. The analytic quotient is invariant under the original integral modular group. No modularity, series identification, convergence or discriminant nonvanishing is assumed.",
+  "remaining": "Modular-polynomial coefficient descent and the actual monic relations are still required; finite function-field degree and geometric genus are not proved by these analytic identities. Regular differential/cusp-form realization, period surjectivity, Hecke/Galois realization and the adic/symmetric-power inputs remain required. DUB-17--20 open; 16/20.",
+  "additionalAuditedTheorems": [],
+  "additionalAuditedTheoremsMeaning": "Audited public theorems not individually selected in the required-edge array; no claim of non-use is made.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> finite original canonical-divisor space and its linear equivalence with regular differentials.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finiteDimensional_lSpace.lean.txt",
+        "sha256": "C21B533D50CBFA1976A51726B090EE8A0882D9C690599F096B4EFB7F45E4174F"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finite_and_finrank_regularDifferentials_eq_genus.lean.txt",
+        "sha256": "D297C69133D1312D5B24CDD336951F041E60D427E1ECFFD42439D8C5C729880A"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_Repartitions.lean.txt",
+        "sha256": "66E1FC614EAAB427EFBA6BA200DFEF7C1358CC82663B12FDC714CE61E7ED8DF9"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_AdelicIndex.lean.txt",
+        "sha256": "2715C02227FD6BA1AB0E66EFFC7C33FCA1A889A00459CDB0057762540DEA008E"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Finiteness\\Finsupp.lean",
+      "sha256": "94A32F88302B06E2C9C0D31F3D6D53C54AA58F405475E9322C255A13AD584147"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IsAlgClosed\\Basic.lean",
+      "sha256": "D2B68358C83D98742A4D665E45D7B0B63405B660667687AE7FB1D41DC6CEC671"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Basic.lean",
+      "sha256": "D6D316B6CE84C8764227C7BAB52DE839D08422316C14946424C737C1FB73F40C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Isomorphisms.lean",
+      "sha256": "CC41F361F1F2B3CCB3B60C8A9C86DFCF49666716DD61C6B7933A253D22AA8DF7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Finsupp.lean",
+      "sha256": "969620EAF146D750684D9EC5F867B5F84F16F7B3779263799473BDA62399A037"
+    }
+  ],
+  "routeAdjustment": "Use the already proved positive-order degree identity to identify the constants, avoiding a new rational-place existence framework. Select only the local residue-map kernel from the external finite-divisor-space argument, and use the pinned finite-submodule quotient theorem plus finite-pole induction. This proves finiteness without porting the external general adele quotient machinery. Adapt the selected canonical-space/regular-differential equivalence and assemble it on the literal original field and its actual j divisor. The Riemann--Roch equality is not used or claimed.",
+  "discharged": "The actual original regular differential space is finite-dimensional over algebraically closed constants. The positive-order degree formula applied to an inverse forces every transcendental function to have a pole, so global regular functions are exactly the constants. At each place the kernel of the scaled local residue map is the divisor space with its bound decreased by one. Pinned finite-submodule/quotient theory and induction over the positive part of the actual finite divisor prove every divisor space finite. The actual j-canonical divisor space is explicitly linearly equivalent to the actual regular differential space. No constant-field or divisor-space finiteness assumption remains in the original consumer.",
+  "remaining": "Riemann--Roch and the geometric genus formula still determine the numerical dimension; actual analytic cusp-form realization is also required for the matching lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.Place.adicValuation_le_one_of_mem",
+    "Dubon2026.SourceCurve.Place.adicValuation_algebraMap_le_one",
+    "Dubon2026.SourceCurve.mem_lSpace_iff_ord",
+    "Dubon2026.SourceCurve.lSpace_mono",
+    "Dubon2026.SourceCurve.algebraMap_mem_lSpace_zero",
+    "Dubon2026.SourceCurve.RegularDifferentialsComparison.differentialCoeff_ne_zero",
+    "Dubon2026.SourceCurve.RegularDifferentialsComparison.toRegular_apply",
+    "Dubon2026.SourceCurve.finite_lSpace_zero",
+    "Dubon2026.SourceCurve.finrank_lSpace_zero"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

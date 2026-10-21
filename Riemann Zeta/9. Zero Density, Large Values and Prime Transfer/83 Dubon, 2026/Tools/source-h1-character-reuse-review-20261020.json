@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> nonzero residual H1 eigensystem -> the actual integral H1 Hecke character with the original local specialization.",
+  "precedingScratchReceipts": {
+    "source-integral-span-5-scratch-receipt.json": "D992E2F6BB8B6B9874C37FFD8AD983221702FCECE0AC6E27801C6040F43F128A",
+    "source-integral-h1-7-scratch-receipt.json": "D566A71808480552B0719A680DC751D74F9DF39CC42809F520289683E9983B76"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveAlgebraicIntegerReduction.lean",
+      "sha256": "15A2274D8E4A94ED88F54B923F8A2CB0CE3B204D7E1F2A9A449359336236E4A3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualCharacteristic.lean",
+      "sha256": "590B06EFA0C45075CA3E981D1AB53EF00C871552F44AEFA28E6686E76757BB15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckePairingFinite.lean",
+      "sha256": "869F1C12D4EF66BBF29E4E781E1BF681FC29586D98344338348DB06F68A29247"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveHeckeCharacter.lean",
+      "sha256": "E509ADE9E9C1A0E9D70543D1498ABC861B5CE2CF8FF4EF125C50360297372ABA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\FreeAlgebra.lean",
+      "sha256": "8EA9CB97BE723A58810B174439D61868465946CC0748B8170C069F7441AFA22B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Noetherian\\Basic.lean",
+      "sha256": "99C77DEF7F228BC7FDB702AAB358E36E8DC6F4EC2C3C6672AE281728CF2B4DB3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\Maps.lean",
+      "sha256": "7852C029969C52D4C402DD1E052007268F6F5292CC83452DCC844F7121116F3A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_HeckeEis_isEigensystemH1_binaryFormRepSL_of_heckeTLin_eq_smul.lean.txt",
+      "sha256": "9EB8AE1EEA4E83AA74F2C9A7DBA1037074333499F517038AA7939D6B1CE6BFA3"
+    }
+  ],
+  "reuseSearch": "Inspected the archived integral H1 character argument and the already proved original period eigenclass, integral span, integral coefficient field reduction and pinned FreeAlgebra, Noetherian and ring-hom factorization APIs.",
+  "routeAdjustment": "Apply the actual complex nonzero eigenclass to all integral operator relations. Native free-algebra evaluation and finite End modules give the character and integrality without first proving full H1 Hecke commutativity. Reuse the existing prescribed-prime local field and algebraic-integer specialization rather than reconstructing them. Preserve Apache-2.0 attribution and the archived LICENSE/NOTICE.",
+  "discharged": "For every original primitive form and source weight k >= 2, every relation in the genuine integral binary H1 Hecke algebra vanishes at the original good-prime Fourier coefficients. Integral spanning extends the relation to complex H1, where the actual nonzero original period eigenclass detects the eigenvalue. This constructs an actual character of the integral H1 operator algebra without assuming commutativity. Finite integral H1 makes that algebra finite over Z, so every character value is integral. At every prescribed rational prime the previously proved original local coefficient reduction extends to this actual H1 character, with exactly the original good-prime residual eigenvalues. No relation, character, integrality, specialization, residue characteristic or eigenvalue compatibility is supplied in the final consumer.",
+  "remaining": "Full Hecke commutativity, injectivity of tensor coefficient change and the nonzero residual H1 eigenclass still require proof. The character alone is not an eigenclass and does not assert that reduction preserves every nonzero integral class. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch with the actual canonical divisor -> finite support of every original differential.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_hasCanonicalDivisor_of_isCurveOver.lean.txt",
+        "sha256": "E075B6C88E3396E12F4521B2A93EA836FCE3EC6CB219B0447A11C0BA049C77FC"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Localization\\Basic.lean",
+      "sha256": "8AEA7670E913E55E0DB4EDC655678D6D29E4EFC2B21B6931D6EBCBCE9A456EEA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\EssentialFiniteness.lean",
+      "sha256": "2BD8671B54F4D7AF1CAB9E350E9B68380C749F4BBFFF4A938C953566E86C80F4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\IntegralClosure.lean",
+      "sha256": "FB773B9FC1BE55A288EB8032FBAEE220C08061B54431509F47B5A8D41336124D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Kaehler\\Basic.lean",
+      "sha256": "05A5F75FEB71B111B48DFFEC8ABEA3C414CACE1F9F8CDFD7C57CDC2E396FA853"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Kaehler\\Polynomial.lean",
+      "sha256": "01184A8BE376BBAF6EE959E04F52D1EFEB6700F294F1DEE6548C2CA4A0D667CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Unramified\\Field.lean",
+      "sha256": "BE71BFDF8417C5653160F40E052E6FAB16E76150434F3B3668FF703D0B47BCF0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LocalRing\\Module.lean",
+      "sha256": "7AD482AEBE2660C4D7E403814D0FDAC542432077F70C31B66F018A27D0E34648"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\Different.lean",
+      "sha256": "59B73A580CB62A11DE2955ACB1F662A042FC348D4CFB8989862DBF55DA92A541"
+    }
+  ],
+  "routeAdjustment": "Reuse the actual integral-closure chart and local uniformizer differential generator. Use pinned different-ideal nonvanishing and the unramifiedness criterion, then reduce bad centers to the existing finite positive-order support theorem using one nonzero different-ideal element. This avoids a new chart prime enumeration and the external general two-chart/local-model framework. Principal-divisor degree zero is not claimed as a proof dependency of canonical finite support; it is a separate later Riemann--Roch input.",
+  "discharged": "Every nonzero differential on the literal original function field has a finite divisor of its actual normalized local orders. At unramified integral-chart points, the coordinate differential generates the integral differential module, and its local order is zero. The pinned nonzero different ideal bounds the exceptional points by the finite prime support of one nonzero element. The coordinate pole locus is already proved finite. The actual j differential spans the original differential space, and principal finite support extends the result to every nonzero differential. No canonical-divisor or finite differential-support premise remains.",
+  "remaining": "Riemann--Roch, regular differential dimension, geometric genus and actual analytic cusp-form realization remain required for the matching lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.canonicalDivisorOf_apply",
+    "Dubon2026.SourceFunctionField.originalCanonicalDivisor_apply"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

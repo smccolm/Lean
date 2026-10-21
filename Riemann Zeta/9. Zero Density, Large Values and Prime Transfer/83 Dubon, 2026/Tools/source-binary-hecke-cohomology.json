@@ -1,0 +1,611 @@
+{
+  "date": "20 October 2026",
+  "modules": [
+    "Dubon2026.SourcePeriodBinaryIntertwiner",
+    "Dubon2026.SourcePeriodBinaryEquivalence",
+    "Dubon2026.SourceOriginalBinaryCohomology",
+    "Dubon2026.SourceHeckeCohomologyTrace",
+    "Dubon2026.SourceHeckeSubgroupConjugation",
+    "Dubon2026.SourceHeckeCoefficientMorphism",
+    "Dubon2026.SourceHeckeCohomology",
+    "Dubon2026.SourceHeckeSymbolCosets",
+    "Dubon2026.SourceHeckeSymbolTrace",
+    "Dubon2026.SourceHeckePeriodCosets",
+    "Dubon2026.SourceHeckePeriodTransition",
+    "Dubon2026.SourcePeriodHeckeCohomology",
+    "Dubon2026.SourcePrimitiveHeckeCohomology",
+    "Dubon2026.SourcePeriodBinaryDiagonal",
+    "Dubon2026.SourcePeriodBinaryHecke",
+    "Dubon2026.SourceHeckeBinaryCohomology",
+    "Dubon2026.SourcePrimitiveBinaryHeckeCohomology",
+    "Dubon2026.SourceIntegralCohomologyFinite",
+    "Dubon2026.SourceSemilinearCohomology",
+    "Dubon2026.SourceBinaryCohomologyChange",
+    "Dubon2026.SourceBinaryHeckeMorphism",
+    "Dubon2026.SourceBinaryHeckeCohomology",
+    "Dubon2026.SourceBinaryHeckeChange",
+    "Dubon2026.SourceOriginalBinaryHeckeComparison"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> integral-to-residual H1 eigenclass -> finite integral H1 and its actual Hecke-compatible coefficient change.",
+  "discharged": "For every original normalized primitive form and every source weight k >= 2, the actual column-binary native H1 class is nonzero and is an eigenvector of every full good-prime Hecke operator with its original Fourier eigenvalue. The original dual-period comparison is explicitly the diagonal of signed binomial coefficients and respects the literal adjugate diagonal. On every cocycle the transported operator is exactly the sum over the original Gamma0 cosets with the column diag(p,1) action. The full H1 operator has that actual cocycle representative; no eigenclass, nonvanishing, coefficient identification, Hecke compatibility or quotient-descent premise is supplied. At every actual source level and weight, integral column-binary native H1 is a finite Z-module, with Gamma0 finite generation derived using native Schreier and modular-group generation and coefficient finiteness from the existing monomial basis. The actual polynomial coefficient map descends to full native H1 and commutes with the full original Hecke correspondence over every coefficient ring. Its complex specialization equals the already proved analytic-period operator, and the original primitive form gives its nonzero eigenclass with the original good-prime Fourier eigenvalues. No finiteness, quotient-descent, Hecke comparison or eigenclass premise is supplied in these original-object consumers.",
+  "boundary": "Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 4,994-module scope: all thirteen retained regressions, 35,376 exhaustive theorem checks, 15,102 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.sourcePrimitive_binaryPeriodCohomology_ne_zero",
+    "Dubon2026.sourcePeriodH1BinaryEquiv_period",
+    "Dubon2026.sourcePrimitive_nonzero_periodHeckeEigensystem",
+    "Dubon2026.sourceHeckeCocycle_apply",
+    "Dubon2026.sourceHeckeConjugation_injective",
+    "Dubon2026.sourcePrimitive_nonzero_binaryHeckeEigensystem",
+    "Dubon2026.sourceHeckeBinaryH1_cocycle",
+    "Dubon2026.sourceHeckeBinaryCocycle_apply",
+    "Dubon2026.sourceIntegralBinaryH1Finite",
+    "Dubon2026.sourcePrimitive_nonzero_integralModelComplexEigensystem",
+    "Dubon2026.sourceBinaryH1Change_hecke",
+    "Dubon2026.sourceBinaryCocyclesChange_apply"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-20T14:37:10.974093+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourcePeriodBinaryIntertwiner",
+        "SourcePeriodBinaryEquivalence",
+        "SourceOriginalBinaryCohomology"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodBinaryIntertwiner.lean",
+          "sha256": "3799A81E704765C753E62AB08BE853EF486D15FAF928826C2974EAFB300A5B6A",
+          "oleanSha256": "BE747F9383E498902859599FBE9F2843903F9A1F5CF2F4DC01A44DE34E097264"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodBinaryEquivalence.lean",
+          "sha256": "A816AF15EA52A9C56996977B12D45ADE0162921397E58B9AA1A519E273CF9385",
+          "oleanSha256": "65A489D439B13369C22DE27D3C4A9EB48D00CC0708CCC5720022B0E298508ED3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCohomology.lean",
+          "sha256": "B1DD37956D28249FD1593E602E36A48F502E337B96919218395A089EC358FAB8",
+          "oleanSha256": "CBA13358A0E1689466A2FABA2B48A3529F1E42967D5EAB23149D2D8AA48EACBD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceModular_inverseTranspose_conjugate",
+        "Dubon2026.sourcePeriodBinaryIntertwiner_intertwine",
+        "Dubon2026.sourceModularBinaryFormSLRep_eq_column",
+        "Dubon2026.sourcePeriodDual_toMatrix",
+        "Dubon2026.sourcePeriodBinaryEquiv_toMatrix",
+        "Dubon2026.sourcePeriodBinaryEquiv_intertwine",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_period",
+        "Dubon2026.sourceOriginalBinaryPeriodCohomology_injective",
+        "Dubon2026.sourcePrimitive_binaryPeriodCohomology_ne_zero",
+        "Dubon2026.sourcePeriodBinaryIntertwiner",
+        "Dubon2026.sourcePeriodBinaryEquiv",
+        "Dubon2026.sourcePeriodColumnRep",
+        "Dubon2026.sourcePeriodCoefficientIso",
+        "Dubon2026.sourcePeriodH1BinaryEquiv",
+        "Dubon2026.sourceOriginalBinaryPeriodCohomology"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceModular_inverseTranspose_conjugate",
+        "Dubon2026.sourcePeriodBinaryIntertwiner_intertwine",
+        "Dubon2026.sourceModularBinaryFormSLRep_eq_column",
+        "Dubon2026.sourcePeriodDual_toMatrix",
+        "Dubon2026.sourcePeriodBinaryEquiv_toMatrix",
+        "Dubon2026.sourcePeriodBinaryEquiv_intertwine",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_period",
+        "Dubon2026.sourceOriginalBinaryPeriodCohomology_injective",
+        "Dubon2026.sourcePrimitive_binaryPeriodCohomology_ne_zero"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourcePeriodBinaryIntertwiner",
+        "Dubon2026.sourcePeriodBinaryEquiv",
+        "Dubon2026.sourcePeriodColumnRep",
+        "Dubon2026.sourcePeriodCoefficientIso",
+        "Dubon2026.sourcePeriodH1BinaryEquiv",
+        "Dubon2026.sourceOriginalBinaryPeriodCohomology"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1Audit3.log",
+      "logSha256": "A6F48732E16F285FA80287C051BF5BC5132DE799E0DACC3C177D70A259F1330D",
+      "auditSha256": "382939AFD32CE195C1EDAD5C4D96F4EE8B25DF6D2EB190FDFAE246E5A3D16993",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 29,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 53,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1DependencyAudit.log",
+      "dependencyAuditSha256": "A2B551FC5EAC0ADA43E8AB3FF22DBB5D9463DDD9F7B4DF8CCFFE3DF500DE5B15",
+      "dependencyAuditSourceSha256": "B43BCE3E44E07BDBCB0F23E6ECFA76253BE981363A3A7696797BEA59D4529668",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_binaryPeriodCohomology_ne_zero",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_period"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> original nonzero H1 Hecke eigensystem -> faithful dual-period to column-binary coefficient comparison.",
+      "discharged": "The actual primitive form in every source weight k >= 2 has a nonzero native column-binary H1 class. The coefficient isomorphism is constructed from the existing invertible binomial duality and conjugation by the actual modular matrix S; it intertwines the genuine SL2Z actions. Native H1 functoriality identifies its class with the transported original cocycle. No coefficient identification, injectivity or nonvanishing is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Hecke compatibility, the external custom/native H1 comparison, integral-to-residual nonzero eigensystem reduction, finite-characteristic weight reduction and geometric Galois association remain open. This does not prove a residual or adic Galois representation, purity, crystallinity or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-binary-h1-reuse-review-20261020.json",
+      "reuseReviewSha256": "FA1D66100B7CA174044D9EF2F293D328A0D8103ECF4DD9C85A6B6E4513EB6EFD",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T15:09:52.967556+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceHeckeCohomologyTrace",
+        "SourceHeckeSubgroupConjugation",
+        "SourceHeckeCoefficientMorphism",
+        "SourceHeckeCohomology",
+        "SourceHeckeSymbolCosets",
+        "SourceHeckeSymbolTrace",
+        "SourceHeckePeriodCosets",
+        "SourceHeckePeriodTransition",
+        "SourcePeriodHeckeCohomology",
+        "SourcePrimitiveHeckeCohomology"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeCohomologyTrace.lean",
+          "sha256": "821285C461F83DEACF116E9E99F927F6129CDCAD96C5429C64FDF598406BE654",
+          "oleanSha256": "2028FE711723218C11BA944C8F573179D0A06F84D5CF642D641AD62609F2D22A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeSubgroupConjugation.lean",
+          "sha256": "8C498DA4087A85FD75D9F768C00A31B23A8B9368560B3AC67B5F38BAC61C96D4",
+          "oleanSha256": "544035710EAE9DEA5D7F133C4672321670316A7A38B3DC08477D091355E17A98"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeCoefficientMorphism.lean",
+          "sha256": "44C14BFD48281FE9C43FBDEEF62DC8676174DD18FE43DD7B07BF92D539C6481A",
+          "oleanSha256": "82BD212C61E69B59F7083CFA062331608789963EA14858C5E2C7B63833BBC167"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeCohomology.lean",
+          "sha256": "3F8D0B4EE4D468A6E3571F25E180AC3AFD4120D8889FBCF5917AAC4ED74FD030",
+          "oleanSha256": "6C1437C3867FF6040B1468A2E75F189653940E1F93D753F9CC2DAACBFFEB243D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeSymbolCosets.lean",
+          "sha256": "030C979FB4C5CB8ED1EF9C9B43A9EE57E19B0E18227B5119556CE34BA77D8030",
+          "oleanSha256": "3DE934DE137402396B20984ACB8FFE0987AAE8F3B970FBDC54AB557310777C17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeSymbolTrace.lean",
+          "sha256": "B6FEC52227CFDB42BFC4785BD46CC87220102C8C4EF1431E0B288FFE0FA6B592",
+          "oleanSha256": "2111E191A76B43A901F7584CA37267EF09D5783C8B82E4996320DF6A3B4C7589"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodCosets.lean",
+          "sha256": "A6791B89BB73046C6AD51095F16619D4DC08A069D87248A410EB8ADF90D22940",
+          "oleanSha256": "1AC5B0CD479D4FAADDC706A4D91A1C11827FE5CC64665886FD1BE14C854CE5A4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodTransition.lean",
+          "sha256": "E997B9A6B82D522AF16251CED7553C1116EF832B0F9A97EFEAA9B4C0CC5F6CE6",
+          "oleanSha256": "5561234F4892C4EC4BE1019B80C79FD47CA18099B580FF5E584FBA6CD8BBEC51"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodHeckeCohomology.lean",
+          "sha256": "6738F850FF79EAED70BE064A0D293A9881E3866EDD629B6B056982C595118524",
+          "oleanSha256": "60153B6DD4F3D3E5860F14FFBE584E002C107F8D6EC75F8EECAB97F35B9FC305"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveHeckeCohomology.lean",
+          "sha256": "098570623636727B0DFA9A664B975A6ED3E9195C8C49801476DE68BDCA082C93",
+          "oleanSha256": "6ECCAB4C29B78082825FFCF43DC73DBC4EDA4A50B3BDAE54D4DCD1516D268583"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceHeckeH1Trace_cocycle",
+        "Dubon2026.sourceHeckeUpper_finiteIndex",
+        "Dubon2026.sourceHeckeConjugation_matrix",
+        "Dubon2026.sourceHeckeConjugation_injective",
+        "Dubon2026.sourceHeckeConjugation_integral",
+        "Dubon2026.sourceHeckeConjugation_adjugate",
+        "Dubon2026.sourceHeckeDualDiagonal_intertwine",
+        "Dubon2026.sourceHeckeH1_cocycle",
+        "Dubon2026.sourceHeckeCocycle_apply",
+        "Dubon2026.SourceModularSymbols.sourceHeckeDiagonalSymbol_invariant",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_mk",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_out",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_some",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_none",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_sum",
+        "Dubon2026.SourceModularSymbols.sourcePeriodMap_heckeCosetTrace",
+        "Dubon2026.sourceHeckeCuspRepresentative_transition",
+        "Dubon2026.sourceHeckeSymbolCoset_period",
+        "Dubon2026.sourcePeriodBetween_hecke",
+        "Dubon2026.sourceHeckePeriod_transition",
+        "Dubon2026.sourcePeriodCocycle_hecke",
+        "Dubon2026.sourcePeriodH1_hecke",
+        "Dubon2026.sourceOriginalPeriodCohomology_hecke",
+        "Dubon2026.sourcePrimitive_periodCohomology_eigen",
+        "Dubon2026.sourcePrimitive_nonzero_periodHeckeEigensystem",
+        "Dubon2026.sourceHeckeTraceCocycles",
+        "Dubon2026.sourceHeckeH1Trace",
+        "Dubon2026.sourceHeckeUpperFintype",
+        "Dubon2026.sourceHeckeConjugation",
+        "Dubon2026.sourceHeckeDualDiagonal",
+        "Dubon2026.sourceHeckeDualMorphism",
+        "Dubon2026.sourceHeckeCocycle",
+        "Dubon2026.sourceHeckeH1",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset",
+        "Dubon2026.sourceHeckeCuspRepresentative",
+        "Dubon2026.sourceHeckePeriodCorrection"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceHeckeH1Trace_cocycle",
+        "Dubon2026.sourceHeckeUpper_finiteIndex",
+        "Dubon2026.sourceHeckeConjugation_matrix",
+        "Dubon2026.sourceHeckeConjugation_injective",
+        "Dubon2026.sourceHeckeConjugation_integral",
+        "Dubon2026.sourceHeckeConjugation_adjugate",
+        "Dubon2026.sourceHeckeDualDiagonal_intertwine",
+        "Dubon2026.sourceHeckeH1_cocycle",
+        "Dubon2026.sourceHeckeCocycle_apply",
+        "Dubon2026.SourceModularSymbols.sourceHeckeDiagonalSymbol_invariant",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_mk",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_out",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_some",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_none",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset_sum",
+        "Dubon2026.SourceModularSymbols.sourcePeriodMap_heckeCosetTrace",
+        "Dubon2026.sourceHeckeCuspRepresentative_transition",
+        "Dubon2026.sourceHeckeSymbolCoset_period",
+        "Dubon2026.sourcePeriodBetween_hecke",
+        "Dubon2026.sourceHeckePeriod_transition",
+        "Dubon2026.sourcePeriodCocycle_hecke",
+        "Dubon2026.sourcePeriodH1_hecke",
+        "Dubon2026.sourceOriginalPeriodCohomology_hecke",
+        "Dubon2026.sourcePrimitive_periodCohomology_eigen",
+        "Dubon2026.sourcePrimitive_nonzero_periodHeckeEigensystem"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceHeckeTraceCocycles",
+        "Dubon2026.sourceHeckeH1Trace",
+        "Dubon2026.sourceHeckeUpperFintype",
+        "Dubon2026.sourceHeckeConjugation",
+        "Dubon2026.sourceHeckeDualDiagonal",
+        "Dubon2026.sourceHeckeDualMorphism",
+        "Dubon2026.sourceHeckeCocycle",
+        "Dubon2026.sourceHeckeH1",
+        "Dubon2026.SourceModularSymbols.sourceHeckeSymbolCoset",
+        "Dubon2026.sourceHeckeCuspRepresentative",
+        "Dubon2026.sourceHeckePeriodCorrection"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeH1Audit10.log",
+      "logSha256": "EC2551CDE15C524AF71EE346D89D2F7E8E37748165B9A39F82F926CAE37FF5C8",
+      "auditSha256": "F1F8C133E66CA056540007EE4DF33BCBDDB68B26E1752E52AB671C6C1ADED920",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 73,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 92,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeH1DependencyAudit.log",
+      "dependencyAuditSha256": "3BB5E6F9FC2CEA4B13A6C6CE08BEDE90250F7E107EDD96FD5829BF4A775DA342",
+      "dependencyAuditSourceSha256": "B148C839FBC9D80CA258163E529094CD7C6052BBBDEF8E34848C39DB9DF5D036",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_nonzero_periodHeckeEigensystem",
+        "Dubon2026.sourceHeckeCocycle_apply",
+        "Dubon2026.sourceHeckeConjugation_injective"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> original nonzero H1 Hecke eigensystem -> full native Hecke correspondence and original analytic period compatibility.",
+      "discharged": "The actual primitive form in every source weight k >= 2 has a nonzero native dual-period H1 eigenclass with its original Fourier eigenvalues at every good prime. The H1 operator acts on the full native cohomology and uses literal restriction along the derived diagonal conjugation, the actual adjugate coefficient map and finite coset corestriction. The original integral-symbol Hecke action is exactly the coset sum. Its previously proved analytic adjointness, period addition and equivariance give an explicit period coboundary proving H1 compatibility. No H1 operator, quotient descent, analytic comparison, eigenclass or nonvanishing premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Compatibility of the column-binary coefficient comparison with the Hecke diagonal, external custom/native H1 comparison, integral-to-residual nonvanishing, finite-characteristic weight reduction and geometric Galois association remain open. No residual or adic Galois representation, purity, crystallinity or higher symmetric-power automorphy is claimed. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-hecke-h1-reuse-review-20261020.json",
+      "reuseReviewSha256": "488F549DBD2C7885EDAB814EA8FF2B2EEAB7D7A911C28FF44F992EAB1162022E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T15:33:22.610354+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourcePeriodBinaryDiagonal",
+        "SourcePeriodBinaryHecke",
+        "SourceHeckeBinaryCohomology",
+        "SourcePrimitiveBinaryHeckeCohomology"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodBinaryDiagonal.lean",
+          "sha256": "0F5DAC1EBF5E292DE875F810B8033108158DF710783719280F8E7CA0BBF8C0D9",
+          "oleanSha256": "8608922C26434FC2CE1E02ABAB36D07C1BD978A3F25F1C3F026961896A913F55"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodBinaryHecke.lean",
+          "sha256": "3084611B0F3C7D23970E624E87B874F6AF0107DEEB2319AB7531F9C8BC63960A",
+          "oleanSha256": "C9D5C1AA1DBF58737138932E283639F41023E7D7830B9639E3FFA532E67A9D28"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeBinaryCohomology.lean",
+          "sha256": "5A024FE495CECDE4E0A5FB41BCD02A94EA4D69C80F57623F64886E2C98856B75",
+          "oleanSha256": "6AD11A58F9A2DD4DA180A7AC537D0ABF43D7658ECAEED54A4283B22ED06D8B73"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveBinaryHeckeCohomology.lean",
+          "sha256": "74BDB0C840937C530A4E5D0B9EA3435E422DCA337D54E5CB06BF1F86CEA74B69",
+          "oleanSha256": "12F1B76EB6A80F1D9D5B77FBBE3C9310705CC9E79F4A4D584FDD07CCABA418B6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceModularSinv_binaryMonomial",
+        "Dubon2026.sourcePeriodBinaryIntertwiner_diagonal",
+        "Dubon2026.sourceHeckeAdjugate_eq_columnDiagonal",
+        "Dubon2026.sourceHeckeDualDiagonal_toMatrix",
+        "Dubon2026.sourcePeriodBinaryEquiv_heckeDiagonal",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_cocycle",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_symm_cocycle",
+        "Dubon2026.sourceHeckeBinaryH1_cocycle",
+        "Dubon2026.sourceHeckeBinaryCocycle_apply",
+        "Dubon2026.sourcePrimitive_binaryPeriodCohomology_eigen",
+        "Dubon2026.sourcePrimitive_nonzero_binaryHeckeEigensystem",
+        "Dubon2026.sourceHeckeBinaryCocycle",
+        "Dubon2026.sourceHeckeBinaryH1"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceModularSinv_binaryMonomial",
+        "Dubon2026.sourcePeriodBinaryIntertwiner_diagonal",
+        "Dubon2026.sourceHeckeAdjugate_eq_columnDiagonal",
+        "Dubon2026.sourceHeckeDualDiagonal_toMatrix",
+        "Dubon2026.sourcePeriodBinaryEquiv_heckeDiagonal",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_cocycle",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_symm_cocycle",
+        "Dubon2026.sourceHeckeBinaryH1_cocycle",
+        "Dubon2026.sourceHeckeBinaryCocycle_apply",
+        "Dubon2026.sourcePrimitive_binaryPeriodCohomology_eigen",
+        "Dubon2026.sourcePrimitive_nonzero_binaryHeckeEigensystem"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceHeckeBinaryCocycle",
+        "Dubon2026.sourceHeckeBinaryH1"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeAudit4.log",
+      "logSha256": "1C5BB0E8F143EFD93709EED982311ABF8DD903673B37D37B6FD0E711FF26DDB5",
+      "auditSha256": "511A0B653A0477237C535C0CBA1DDED673409FD20BC87FF19767D1035AFC434C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 82,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeDependencyAudit.log",
+      "dependencyAuditSha256": "F813CE795F5221814B120282CA167FAED3AA6C9D4DF90264411DBA7C4311B755",
+      "dependencyAuditSourceSha256": "63B99AB6F69EF51DFA69D76F7563769577B8AB79EDCFFF5D62FDDE658E3368FF",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_nonzero_binaryHeckeEigensystem",
+        "Dubon2026.sourceHeckeBinaryH1_cocycle",
+        "Dubon2026.sourceHeckeBinaryCocycle_apply"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> integral-to-residual H1 eigenclass -> original complex nonzero column-binary H1 Hecke eigensystem.",
+      "discharged": "For every original normalized primitive form and every source weight k >= 2, the actual column-binary native H1 class is nonzero and is an eigenvector of every full good-prime Hecke operator with its original Fourier eigenvalue. The original dual-period comparison is explicitly the diagonal of signed binomial coefficients and respects the literal adjugate diagonal. On every cocycle the transported operator is exactly the sum over the original Gamma0 cosets with the column diag(p,1) action. The full H1 operator has that actual cocycle representative; no eigenclass, nonvanishing, coefficient identification, Hecke compatibility or quotient-descent premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Integral-to-residual nonzero H1 eigensystem reduction, external custom/native H1 comparison, finite-characteristic weight/level reduction and geometric Galois association remain open. This supplies no residual or adic Galois action, purity, crystallinity, Sato-Tate or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-binary-hecke-reuse-review-20261020.json",
+      "reuseReviewSha256": "6FA0B2F51DC2C9923A62B64B356080948740E6237D5DB6FF96786EE202695922",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T15:46:43.906309+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceIntegralCohomologyFinite",
+        "SourceSemilinearCohomology",
+        "SourceBinaryCohomologyChange",
+        "SourceBinaryHeckeMorphism",
+        "SourceBinaryHeckeCohomology",
+        "SourceBinaryHeckeChange",
+        "SourceOriginalBinaryHeckeComparison"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCohomologyFinite.lean",
+          "sha256": "AA8306B88C33775CC661605FCCA00C00CEAB94B5C51353852B8CAB544A8B2BFE",
+          "oleanSha256": "8EB81D788B70375DD01CA5A40F6AD0FB6B0292AD5E57F93D2FFAD2E4581DB1D8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSemilinearCohomology.lean",
+          "sha256": "AEA954DD5971FA14FE78043FFCB285545877FECE05B76505B3F080F0A4650D26",
+          "oleanSha256": "AEBD6665B108A7DBC193241C9AB5C1E37F59B7820F222E3F273A451B0B4EE5A1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryCohomologyChange.lean",
+          "sha256": "7CA3CA9881667B5640487A3CB0A2C48A0D8CA9267D4DC05759AE058E42240701",
+          "oleanSha256": "4788EE34BAB4FB7CA37BD80B9EF787ACC98BC10510FC08B1C756FB20CD9302CC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeMorphism.lean",
+          "sha256": "A3291C6871FF6D44605E174CCC44A56C94A121592A7D7BDAB7505ED6AFE25239",
+          "oleanSha256": "C261D7765562C25C202656A9371323B732E54C12BA4EBA38E1CA6A270670904F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeCohomology.lean",
+          "sha256": "9BC5CDE256D973516613B3077844978D0C87B34F3D735BC1BF3CD3D92663FC64",
+          "oleanSha256": "CDACB98699FF5CED5F0B987C6FA24601231F483FF2DE150BE45F0C6B3A9FEB9F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeChange.lean",
+          "sha256": "17749F208C66774A69B1F1B94FC10A42C2324283E7DB8BD01FCA8225F91FE484",
+          "oleanSha256": "A14C2E8906FD31BE3E4DBA8C86AF4401D5BCD0277A1A58E3B8FE800A600505DD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryHeckeComparison.lean",
+          "sha256": "92BEE074DB3C34DF9751CF9317A6B8A0B8886AB1DAD8C3324A8E498EBB2FC27C",
+          "oleanSha256": "CC3C11FD061BFA55F59192CC5CC7AFB752CA902B904B5F8A7DA5BD65EB4966E4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceCocyclesFinite",
+        "Dubon2026.sourceH1Finite",
+        "Dubon2026.sourceIntegralBinaryH1Finite",
+        "Dubon2026.sourceSemilinearCocycles_apply",
+        "Dubon2026.sourceSemilinearH1_cocycle",
+        "Dubon2026.sourceBinaryCoefficientMap_equivariant",
+        "Dubon2026.sourceBinaryCocyclesChange_apply",
+        "Dubon2026.sourceBinaryH1Change_cocycle",
+        "Dubon2026.sourceBinaryHeckeDiagonalMatrix",
+        "Dubon2026.sourceBinaryHeckeDiagonal_intertwine",
+        "Dubon2026.sourceBinaryHeckeH1_cocycle",
+        "Dubon2026.sourceBinaryHeckeCocycle_apply",
+        "Dubon2026.sourceBinaryCocyclesChange_hecke",
+        "Dubon2026.sourceBinaryH1Change_hecke",
+        "Dubon2026.sourceBinaryHeckeCocycle_complex",
+        "Dubon2026.sourceBinaryHeckeH1_complex",
+        "Dubon2026.sourcePrimitive_nonzero_integralModelComplexEigensystem",
+        "Dubon2026.sourceBinaryCoefficientRep",
+        "Dubon2026.sourceSemilinearCocycles",
+        "Dubon2026.sourceSemilinearH1",
+        "Dubon2026.sourceBinaryCocyclesChange",
+        "Dubon2026.sourceBinaryH1Change",
+        "Dubon2026.sourceBinaryHeckeMorphism",
+        "Dubon2026.sourceBinaryHeckeCocycle",
+        "Dubon2026.sourceBinaryHeckeH1"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceCocyclesFinite",
+        "Dubon2026.sourceH1Finite",
+        "Dubon2026.sourceIntegralBinaryH1Finite",
+        "Dubon2026.sourceSemilinearCocycles_apply",
+        "Dubon2026.sourceSemilinearH1_cocycle",
+        "Dubon2026.sourceBinaryCoefficientMap_equivariant",
+        "Dubon2026.sourceBinaryCocyclesChange_apply",
+        "Dubon2026.sourceBinaryH1Change_cocycle",
+        "Dubon2026.sourceBinaryHeckeDiagonalMatrix",
+        "Dubon2026.sourceBinaryHeckeDiagonal_intertwine",
+        "Dubon2026.sourceBinaryHeckeH1_cocycle",
+        "Dubon2026.sourceBinaryHeckeCocycle_apply",
+        "Dubon2026.sourceBinaryCocyclesChange_hecke",
+        "Dubon2026.sourceBinaryH1Change_hecke",
+        "Dubon2026.sourceBinaryHeckeCocycle_complex",
+        "Dubon2026.sourceBinaryHeckeH1_complex",
+        "Dubon2026.sourcePrimitive_nonzero_integralModelComplexEigensystem"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceBinaryCoefficientRep",
+        "Dubon2026.sourceSemilinearCocycles",
+        "Dubon2026.sourceSemilinearH1",
+        "Dubon2026.sourceBinaryCocyclesChange",
+        "Dubon2026.sourceBinaryH1Change",
+        "Dubon2026.sourceBinaryHeckeMorphism",
+        "Dubon2026.sourceBinaryHeckeCocycle",
+        "Dubon2026.sourceBinaryHeckeH1"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralH1Audit7.log",
+      "logSha256": "45E0F48C869C3DA823C3700DA00F1CDC9E37FAAC320EC8EA7657CD480957824F",
+      "auditSha256": "2B31E73BA78BAA712B81BB1D9743DD8F1E258DC124BC2FC584B127659852644D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 35,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 41,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralH1DependencyAudit.log",
+      "dependencyAuditSha256": "C6326569EBF1BE298EEAACF9BDC35723FB66CFDD6063E92D340DF3AAF87A202C",
+      "dependencyAuditSourceSha256": "694BDC0DC7F4A64A13C14372A74CEEB350ADBBE04A1939F8544513F8036948DE",
+      "consumers": [
+        "Dubon2026.sourceIntegralBinaryH1Finite",
+        "Dubon2026.sourcePrimitive_nonzero_integralModelComplexEigensystem",
+        "Dubon2026.sourceBinaryH1Change_hecke",
+        "Dubon2026.sourceBinaryCocyclesChange_apply"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> integral-to-residual H1 eigenclass -> finite integral H1 and its actual Hecke-compatible coefficient change.",
+      "discharged": "At every actual source level and weight, integral column-binary native H1 is a finite Z-module, with Gamma0 finite generation derived using native Schreier and modular-group generation and coefficient finiteness from the existing monomial basis. The actual polynomial coefficient map descends to full native H1 and commutes with the full original Hecke correspondence over every coefficient ring. Its complex specialization equals the already proved analytic-period operator, and the original primitive form gives its nonzero eigenclass with the original good-prime Fourier eigenvalues. No finiteness, quotient-descent, Hecke comparison or eigenclass premise is supplied in these original-object consumers.",
+      "boundary": "Scratch only; production promotion and verification pending. Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-h1-reuse-review-20261020.json",
+      "reuseReviewSha256": "FBB40F0B291988286C49066A2FCEF8D6F2D23F3CC919E557336C33B5C9C278A9",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-binary-h1-reuse-review-20261020.json",
+    "Tools/source-hecke-h1-reuse-review-20261020.json",
+    "Tools/source-binary-hecke-reuse-review-20261020.json",
+    "Tools/source-integral-h1-reuse-review-20261020.json"
+  ],
+  "productionFocusedReceipt4994": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1DependencyAuditProduction4994.log",
+        "sha256": "A2B551FC5EAC0ADA43E8AB3FF22DBB5D9463DDD9F7B4DF8CCFFE3DF500DE5B15",
+        "requiredProofValueEdges": 53,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_binaryPeriodCohomology_ne_zero",
+          "Dubon2026.sourcePeriodH1BinaryEquiv_period"
+        ],
+        "sourceSha256": "E21C41C43C9F229831FAE822B21E51269E4A5F94CBCB476D19901A3B17DD32E9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeH1DependencyAuditProduction4994.log",
+        "sha256": "3BB5E6F9FC2CEA4B13A6C6CE08BEDE90250F7E107EDD96FD5829BF4A775DA342",
+        "requiredProofValueEdges": 92,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_nonzero_periodHeckeEigensystem",
+          "Dubon2026.sourceHeckeCocycle_apply",
+          "Dubon2026.sourceHeckeConjugation_injective"
+        ],
+        "sourceSha256": "4CC7DCD4C84D90FB470D11F24832B79FA82F7A135FFC198A221D373A5B4825D6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeDependencyAuditProduction4994.log",
+        "sha256": "F813CE795F5221814B120282CA167FAED3AA6C9D4DF90264411DBA7C4311B755",
+        "requiredProofValueEdges": 82,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_nonzero_binaryHeckeEigensystem",
+          "Dubon2026.sourceHeckeBinaryH1_cocycle",
+          "Dubon2026.sourceHeckeBinaryCocycle_apply"
+        ],
+        "sourceSha256": "095924CC877B27AE47DE45989667780C2CDFB3F83A512DFCF2942BEC3EC10AE8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralH1DependencyAuditProduction4994.log",
+        "sha256": "C6326569EBF1BE298EEAACF9BDC35723FB66CFDD6063E92D340DF3AAF87A202C",
+        "requiredProofValueEdges": 41,
+        "consumers": [
+          "Dubon2026.sourceIntegralBinaryH1Finite",
+          "Dubon2026.sourcePrimitive_nonzero_integralModelComplexEigensystem",
+          "Dubon2026.sourceBinaryH1Change_hecke",
+          "Dubon2026.sourceBinaryCocyclesChange_apply"
+        ],
+        "sourceSha256": "D165A2E4F36C8D48AED37ECF5535C463BD6A7068E0196797D9360D6AD7EC4CC0"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeProductionAudit4994.log",
+    "sha256": "F00F010C86F768A6AE3B051FD2ADA1CBDBF4BBCF474B1857B55F3170A71B0650",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-binary-hecke-production-4994-build.log",
+    "aggregateSha256": "1C93249C410CB67884B4D36213EAF5B42B44D4CA958A9ADDA231D434F3421567",
+    "productionModules": 4994,
+    "incrementModules": 24,
+    "axiomChecks": 89,
+    "exhaustiveIncrementTheorems": 155,
+    "linterScopes": 24,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "boundary": "Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open."
+  },
+  "receipt4994": {
+    "recordedUTC": "2026-10-20T17:25:19.321806+00:00",
+    "log": "logs/dubon-build-20261020-090609-721.log",
+    "sha256": "11AAC5836F4E8DAA141046E1BB97A174F018832BAFD4321B99C44185F1394B30",
+    "bytes": 8569373,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 4994,
+    "projectTheorems": 35376,
+    "registeredConsumers": 15102,
+    "registeredConstructions": 526,
+    "declarations": 21028,
+    "generated": 19930,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_085720.log",
+    "foundationSha256": "AB76D334515DA63456001C4075C16EDD9A81907556C2D36D615DAAEC280D8C70",
+    "boundary": "Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open."
+  }
+}

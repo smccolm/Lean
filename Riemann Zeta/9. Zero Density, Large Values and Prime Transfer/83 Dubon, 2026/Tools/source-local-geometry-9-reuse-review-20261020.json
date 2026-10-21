@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization and dimension -> actual finite coordinate extensions, residue finiteness and local order criterion.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental.lean.txt",
+        "sha256": "5FE64777311FDC40E344D64423DACEA259C07A75A646D9BE9AD96C5EEB7DBD85"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_transcendental_of_ord_ne_zero.lean.txt",
+        "sha256": "C6E8829972F10475B8A8792B29BAFB7581A9749F0D992BFBE486E04F6A8EA225"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_DivisorPushPull.lean.txt",
+        "sha256": "CA80A6139646C59CD06C3BA8F3F6368FD53A9D72AADD763458B3EFB66E36240B"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finite_and_finrank_regularDifferentials_eq_genus.lean.txt",
+        "sha256": "D297C69133D1312D5B24CDD336951F041E60D427E1ECFFD42439D8C5C729880A"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Algebra.lean",
+      "sha256": "7E4CFDD8002CD15A9F2418FACA7B59D7A233308C73AFAF58266ED47961860233"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IntegrallyClosed.lean",
+      "sha256": "E1A768B0B75B47604EEBDFBCCEB773F09A7E64CF51D93B7D08C5AE33CDDBB0B5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Valuation\\Discrete\\Basic.lean",
+      "sha256": "0A34F1CEF91154133F8003CF500F94D061DDFAEE5E1A92908DE09E85091AC658"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IsAlgClosed\\Basic.lean",
+      "sha256": "D2B68358C83D98742A4D665E45D7B0B63405B660667687AE7FB1D41DC6CEC671"
+    }
+  ],
+  "routeAdjustment": "Pinned finite generation proves essential finite type directly. Pinned essential-finite-type plus algebraicity replaces the external finite-basis generation proof after transcendence-basis exchange. Integral closedness replaces monic coefficient reconstruction for algebraic place membership. Pinned cyclic value-group discreteness constructs actual place restrictions. The shorter transcendental-residue contradiction replaces rational-place classification and general residue-extension finiteness for the required algebraically closed base.",
+  "deferredModules": [
+    "SourceCurveResidueRestriction",
+    "SourceCurveResidueFinite"
+  ],
+  "deferredMeaning": "Compiled scratch exploration; excluded from this selected receipt and from promotion because the shorter original residue argument does not need it.",
+  "discharged": "The actual original divisor-generated field is essentially of finite type. It is finite over every transcendental coordinate, in particular every actual place uniformizer. Actual regularity equals nonnegative local differential order. Every actual place residue is algebraic over the base: a transcendental residue would put its lifted rational function field, and hence the entire finite extension, in a proper integrally closed valuation ring. Over algebraically closed constants the actual residue map is bijective and the residue is finite. No finite-residue, finite-coordinate or local-spanning premise remains on these consumers.",
+  "remaining": "Principal-divisor finite support and degree zero, canonical divisor, Riemann--Roch, geometric genus and analytic cusp-form realization remain required. The matching lower dimension bound and period surjectivity remain open, followed by Hecke/Galois realization, the adic system and symmetric-power continuation. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.Place.ord_add_eq_of_lt",
+    "Dubon2026.SourceCurve.Place.adicValuation_le_one_iff",
+    "Dubon2026.SourceCurve.Place.isPrincipalIdealRing_comap",
+    "Dubon2026.SourceCurve.Place.restrict_toValuationSubring",
+    "Dubon2026.SourceCurve.Place.mem_restrict_iff"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization -> actual local differential coordinates and injective original q-expansion.",
+  "precedingScratchReceipts": {
+    "source-monic-relations-14-scratch-receipt.json": "4B4DE8E568569A8BE3D1AD2B940C537F509FEDE79D47740897EE14BB8FD6DDEC"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_DivisorClassGroup.lean.txt",
+        "sha256": "0DC870B7F0BE4E97313D3333986BA5E61F6916AB6F7E16AB5058BB9EB2F1F1FE"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_CanonicalDivisor.lean.txt",
+        "sha256": "C0555F9EE05323F08CA20FD83E64F9E9A7B4D471F0179C2FB1EDF1F754369A12"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_RegularDifferentials.lean.txt",
+        "sha256": "634DA3FC59C6D4AD98F791EFAD145447CB34350F786D6A5C1CAFA687002591A8"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_dCoordGenerates_of_isCurveOver.lean.txt",
+        "sha256": "C8F66E7805AB526818607583724F060AC74433203E278A5DCDA0FE2070A025F1"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finite_and_finrank_regularDifferentials_eq_genus.lean.txt",
+        "sha256": "D297C69133D1312D5B24CDD336951F041E60D427E1ECFFD42439D8C5C729880A"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DiscreteValuationRing\\Basic.lean",
+      "sha256": "31F3DE22FD1FD60F4F79AAE91C3FE9A3E60E7D83EDA85D14D01AA8BE4178E22B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\AdicValuation.lean",
+      "sha256": "F68A9B66E279E163857DFA965D8CC9C93C1813060B5FDFB80DC8B2BEFAC14FED"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Dimension\\Constructions.lean",
+      "sha256": "8C5EFE209E37EA3F7B4733334C9E66E6A7FB20BAA528B3643B1FE41D634ECC4A"
+    }
+  ],
+  "routeAdjustment": "Reuse the actual finite-over-j result and literal constant kernel. This proves local coordinate spanning directly, avoiding the external general IsCurveOver package and change-of-transcendence-coordinate theorem at this step. Only actual places, normalized orders and the required regular subspace are selected. No Picard group or unrelated divisor generalization is included.",
+  "discharged": "For the actual original modular function field, the proved finite extension over the original j coordinate gives a one-dimensional differential space. The literal Euler-derivative kernel gives exactly the base constants. Every actual place uniformizer has order one while constants have order zero, so its differential is nonzero and spans. Thus regularity is equivalent to integrality of the actual local differential coefficient at every place. Q-expansion of the actual regular differential subspace is injective. No local spanning or separability premise remains.",
+  "remaining": "Regular differential dimension, geometric genus and actual analytic cusp-form realization are still required for the matching cusp-form lower bound. Principal divisors, residue finiteness and Riemann--Roch are not postulated by this scope. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.valuationSubring_not_isField_of_ne_top",
+    "Dubon2026.SourceCurve.Place.toValuationSubring_injective",
+    "Dubon2026.SourceCurve.Place.ext",
+    "Dubon2026.SourceCurve.Place.coe_algebraMap",
+    "Dubon2026.SourceCurve.Place.heightOneSpectrum_asIdeal",
+    "Dubon2026.SourceCurve.Place.adicValuation_ne_zero",
+    "Dubon2026.SourceCurve.Place.adicValuation_coe",
+    "Dubon2026.SourceCurve.Place.adicValuation_coe_eq_one_iff",
+    "Dubon2026.SourceCurve.Place.adicValuation_coe_irreducible",
+    "Dubon2026.SourceCurve.Place.ord_zero",
+    "Dubon2026.SourceCurve.Place.ord_one",
+    "Dubon2026.SourceCurve.Place.ord_mul",
+    "Dubon2026.SourceCurve.Place.ord_inv",
+    "Dubon2026.SourceCurve.Place.ord_coe_unit",
+    "Dubon2026.SourceCurve.Place.ord_zpow",
+    "Dubon2026.SourceCurve.Place.ord_unit_smul_zpow",
+    "Dubon2026.SourceCurve.Place.exists_unit_mul_zpow",
+    "Dubon2026.SourceCurve.Place.uniformizer_ne_zero",
+    "Dubon2026.SourceCurve.Place.dCoord_ne_zero",
+    "Dubon2026.SourceCurve.Place.exists_eq_smul_dCoord",
+    "Dubon2026.SourceCurve.Place.differentialCoeff_dCoord",
+    "Dubon2026.SourceCurve.Place.differentialCoeff_zero",
+    "Dubon2026.SourceCurve.Place.differentialCoeff_smul",
+    "Dubon2026.SourceCurve.Place.gate_ordDifferential_dCoord",
+    "Dubon2026.SourceCurve.Place.ordDifferential_smul",
+    "Dubon2026.SourceCurve.mem_regularDifferentials_iff"
+  ],
+  "additionalAuditedTheoremsMeaning": "Audited public theorems not individually selected in the required-edge array; no claim of non-use is made.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

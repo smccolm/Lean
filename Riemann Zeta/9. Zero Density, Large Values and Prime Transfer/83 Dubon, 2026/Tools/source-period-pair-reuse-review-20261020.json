@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> the original parabolic complex weight-two Hecke lift -> genuine cusp-form Hecke realization -> injectivity and parabolic image of the actual period pair.",
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "archive": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Dependencies\\Lean Reuse 2026-10-20\\anthropic-flt-residual-closure.zip",
+    "archiveSha256": "14024BCCF6D9663A1599A0657F307466EFF8F9C2DC52F257CD36D3D5A5227C4A",
+    "selectedFile": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_periodHomPair_injective.lean.txt",
+    "selectedFileSha256": "C76139BFE85CB91DCC55F63442CD2B612BB26F65311F38CB974207AC23CD848B"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEichlerTransformation.lean",
+      "sha256": "F3202E8EA7E6A92F975172AD1D1F046B7D76D5A78ABBDB7026A55351CECDB953"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEichlerPrimitive.lean",
+      "sha256": "DA2851930BD17BC6721C7659AA2B31AB90C4FAC364481BD075361CACF806B5FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodMap.lean",
+      "sha256": "5EE4A51FA01FDE90CE5FE81B6492D8FF2C4E73DBB8516D28E0A840D2125E4020"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodCocycle.lean",
+      "sha256": "A8737004A6F240220DDC4DCDE0E0B23873EB93B1862AB212C2FF6B822D024031"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspIntegral.lean",
+      "sha256": "2410E2763943B1DEB45B50F3A98A0201B39205FA4BDE8FDF24FF52DC1A64DF81"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspBoundaryValues.lean",
+      "sha256": "3C986752E3B18470F7BCBF3D394E803EF349198673D56CF1CB7725B15BE087FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTrivialIntegralHecke.lean",
+      "sha256": "B3C1EFE7514D065BA096544E9FBF9F1417B4C7058E2C7711BDA2C10B7C58237C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    }
+  ],
+  "reuseSearch": "Reviewed the archived injectivity proof and dimension route, actual existing Eichler derivative/transformation/cusp-decay proofs, polynomial period map and cocycle, native H1 finiteness, pinned q-expansion removable singularity and maximum principle, and pinned conjugate derivative.",
+  "routeAdjustment": "Reuse the actual original Eichler primitive and polynomial period map. Replace the external rectangular integral periodicity proof with the pinned removable cusp and maximum principle; replace mixed real-linear differentiation with two zero-real-part derivative arguments. Reuse finite native H1 for finite characters. The geometric reverse dimension bound is not supplied or weakened.",
+  "ancillaryTheorems": [
+    "Dubon2026.sourceWeightTwoPeriodReflection_involutive",
+    "Dubon2026.sourceWeightTwoPeriodValue_cocycle"
+  ],
+  "discharged": "The actual original weight-two cusp forms construct normalized Eichler primitives whose derivatives are the forms and whose limits at every original integral cusp are finite. Real-part invariance and these limits imply constancy by a removable cusp singularity and the complex maximum principle. Original polynomial cusp periods evaluated at the constant degree-zero form give native additive characters and exact primitive shifts. A kernel relation for their actual even/odd period pair supplies mixed primitive invariance, forcing f+g and g-f to vanish. Thus the native period pair is injective with image in the same exact parabolic character space returned by the residual lift. Existing finite native trivial H1 gives finite parabolic characters and the unconditional lower bound 2*dim S_2(Gamma0 N) <= dim parabolicHoms N. No holomorphy, cusp limits, primitive normalization, period invariance, period injectivity or dimension inequality is assumed.",
+  "remaining": "The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

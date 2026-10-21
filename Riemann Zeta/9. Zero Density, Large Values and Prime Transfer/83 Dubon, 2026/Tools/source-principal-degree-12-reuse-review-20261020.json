@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch -> actual original curve: principal-divisor finite support and degree zero, finite residues, and differential rank one.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_DivisorClassGroup.lean.txt",
+        "sha256": "0DC870B7F0BE4E97313D3333986BA5E61F6916AB6F7E16AB5058BB9EB2F1F1FE"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_IsCurveOver.lean.txt",
+        "sha256": "DDC4F1FFDDE98E5A811BB6F1749FF1084D23BA0ED260EBC639F755147EC5354E"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_fiberOver.lean.txt",
+        "sha256": "D0A4998B6AFD4E5AC2594563F9D23D6C310C1FB73EE993A2488882FAA523E847"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\RamificationInertia\\Basic.lean",
+      "sha256": "8DBA1B8F2A556BBD64E8A25DAD5222CBE56210DE2909B39E5F290A7BC57CE960"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\RamificationInertia\\Ramification.lean",
+      "sha256": "CF1A0408DDFA8727E878063A0BDE3FDAE4755EC93FEFA22C30B6EE7BDC18D9FC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\AdicValuation.lean",
+      "sha256": "F68A9B66E279E163857DFA965D8CC9C93C1813060B5FDFB80DC8B2BEFAC14FED"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\IntegralClosure.lean",
+      "sha256": "FB773B9FC1BE55A288EB8032FBAEE220C08061B54431509F47B5A8D41336124D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Localization\\AtPrime\\Basic.lean",
+      "sha256": "CB2B604DB903D26613DBB463194BE828D9211998A19E798A078F9471F89FA7C4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Polynomial\\Quotient.lean",
+      "sha256": "72C228BCE3D6E44976F74DE7EC5247DE5741BD8C3B350DD7D8C7CBC0803545D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\RatFunc\\AsPolynomial.lean",
+      "sha256": "F3EA236F7C28EF0A0AFABE162255C34F46ECFA72B1822C4C56165369FA62F980"
+    }
+  ],
+  "routeAdjustment": "Reuse the original finite-coordinate and finite-support proofs. Select only the external normalized-order uniqueness argument and the exact divisor/curve definitions. Pinned localizations identify residue fields, pinned multiplicities identify normalized orders, and the pinned ramification/inertia sum gives the positive degree directly. Comparing the coordinate with its inverse avoids the external Galois closure/global norm route and general rational-place classification. The existing GaloisInvariantValuationNorm theorem was checked but its valuation-invariance hypothesis does not hold for arbitrary global places; it was not substituted for the required product formula.",
+  "discharged": "Every actual original-field function has a finite normalized-order divisor with degree zero. The actual chart primes and positive-order places correspond bijectively; their normalized orders equal pinned ramification indices, and their residue degrees equal pinned inertia degrees. The pinned ramification/inertia sum gives the degree of the positive divisor. Applying this to the function and its inverse proves degree zero, since both generate the same rational subfield. The integral-closure chart discharges all chart containment, module-finiteness, normalization and scalar-comparison inputs. Over algebraically closed constants the original curve interface is fully derived from these principal divisors, proved finite residues and proved differential rank one; no curve or principal-divisor premise remains.",
+  "remaining": "Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.Place.isPrincipalIdealRing_valuationSubring",
+    "Dubon2026.SourceCurve.Place.algebraMap_mem_ofHeightOneSpectrum",
+    "Dubon2026.SourceCurve.Place.center_ofHeightOneSpectrum",
+    "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum_ofHeightOneSpectrum",
+    "Dubon2026.SourceCurve.coordinateZeroIdeal_ne_bot",
+    "Dubon2026.SourceCurve.coordinatePrimeHeight_mem",
+    "Dubon2026.SourceFunctionField.originalPrincipalDivisor_apply",
+    "Dubon2026.SourceCurve.coordinateZeroIdeal_isMaximal"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,901 @@
+{
+  "date": "20 October 2026",
+  "modules": [
+    "Dubon2026.SourceSL2CocycleExt",
+    "Dubon2026.SourcePermutationPotential",
+    "Dubon2026.SourceSL2PermutationLift",
+    "Dubon2026.SourceGamma0TorsionLift",
+    "Dubon2026.SourceGamma0IntegralSpan",
+    "Dubon2026.SourceTrivialH1IntegralAlternative",
+    "Dubon2026.SourceFiniteOrderTrace",
+    "Dubon2026.SourceEllipticPrimeNorm",
+    "Dubon2026.SourceFiniteOrderHeckeConjugation",
+    "Dubon2026.SourceCosetTransfer",
+    "Dubon2026.SourceFiniteOrderHeckeTransfer",
+    "Dubon2026.SourceFiniteOrderHeckeEigen",
+    "Dubon2026.SourcePrimitiveWeightTwoAlternative",
+    "Dubon2026.SourceMinimalPrimeEigenvector",
+    "Dubon2026.SourceIntegralResidualEigencharacter",
+    "Dubon2026.SourceTrivialH1CharZeroSpan",
+    "Dubon2026.SourceTrivialIntegralHecke",
+    "Dubon2026.SourceTrivialIntegralChange",
+    "Dubon2026.SourceTrivialComplexIntegralSpan",
+    "Dubon2026.SourceTrivialHeckeAlgebra",
+    "Dubon2026.SourceResidualHeckeWords",
+    "Dubon2026.SourceTrivialComplexHeckeAction",
+    "Dubon2026.SourceTrivialResidualHeckeCharacter",
+    "Dubon2026.SourceTrivialComplexEigenlift",
+    "Dubon2026.SourcePrimitiveComplexAlternative",
+    "Dubon2026.SourceParabolicClassification",
+    "Dubon2026.SourceCuspUnipotent",
+    "Dubon2026.SourceCuspBoundaryValues",
+    "Dubon2026.SourceFiniteCuspBoundary",
+    "Dubon2026.SourceCuspPrimeOrbits",
+    "Dubon2026.SourceCuspHeckeTerms",
+    "Dubon2026.SourceCuspHeckeOrbitSum",
+    "Dubon2026.SourceCuspHeckeSum",
+    "Dubon2026.SourceCuspHeckeColumnMove",
+    "Dubon2026.SourceCommutingCommonEigenvector",
+    "Dubon2026.SourceNativeCuspHecke",
+    "Dubon2026.SourceBoundaryCharacters",
+    "Dubon2026.SourceNativeBoundaryCharacters",
+    "Dubon2026.SourceFiniteCharacterReduction",
+    "Dubon2026.SourceResidualBoundaryCharacters",
+    "Dubon2026.SourceResidualWeightTwoAlternatives",
+    "Dubon2026.SourcePrimitiveParabolicAlternative"
+  ],
+  "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original all-prime weight-two class -> actual parabolic complex lift or exact residual Dirichlet characters.",
+  "discharged": "Every original primitive form of source weight at least two and every prescribed prime supplies its genuine local coefficient field, residue characteristic, level M with Q dividing M and M dividing Q*p squared, nonzero original residual weight-two class, and exact Fourier twist. That actual class supplies either a nonzero parabolic original complex H1 eigenclass with integral eigenvalues and a simultaneous exact reduction, or two actual residual characters of the level unit group with product one and exact eigenvalues psi1(ell)+ell*psi2(ell). Signed parabolic matrix classification, nonzero finite cusp boundary, the full original prime Hecke orbit sum, commuting boundary operators, the genuine Dirichlet pair and its reduction through the same integral reduction map are all derived. The exact Eisenstein alternative is included as the pair of trivial characters. No boundary function, Hecke compatibility, character pair or parabolic complex lift is supplied.",
+  "boundary": "Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,173-module scope: all thirteen retained regressions, 36,561 exhaustive theorem checks, 15,662 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.sourceTrivialH1_integral_or_torsion",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein_charP",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein_charP",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair_charP"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-20T21:07:27.939917+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceSL2CocycleExt",
+        "SourcePermutationPotential",
+        "SourceSL2PermutationLift",
+        "SourceGamma0TorsionLift",
+        "SourceGamma0IntegralSpan",
+        "SourceTrivialH1IntegralAlternative"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSL2CocycleExt.lean",
+          "sha256": "D6B24CFA6FA2A26CC317A079084452E3445361077C6E497D467A2EE9271F4554",
+          "oleanSha256": "F44053CFABEA88D623D1DAAA579AED0C4988C0AF986832A7DD2319BBC87CBC47"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePermutationPotential.lean",
+          "sha256": "C2B466419FB71ED41605A75409BD8EA957381400C3EA205BFB80B2EDF856E52E",
+          "oleanSha256": "4C1BC402DCE464C8779BC157D86B9E8277C4B860FAC970C88413134E50F25C36"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSL2PermutationLift.lean",
+          "sha256": "4F985447E3000F04C66D99C74DB5CAA5F4B64B5F5A3F0A7681D8427C61A0390D",
+          "oleanSha256": "D5339A14D6AE51734BA53A1BC2CBCBE297271DD538E588061EB0B037FC870AF9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGamma0TorsionLift.lean",
+          "sha256": "9EB14CE78B8F6C603FBEDF5D234D51FD3FB29594ADE5D8579D5AD0EDC4484831",
+          "oleanSha256": "4958A3E6F83E94583E1CEF7D244C8425F32453898AF5932698F1D6258C3A108B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGamma0IntegralSpan.lean",
+          "sha256": "68AD45E287EC678A4439EE87289053BE9BF0574934C7215E64D7192B15FD8829",
+          "oleanSha256": "069D39AB0CEA4FAB4EDEEAC9962C727720A2F94CD28045FBA9E45662A8C3A710"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialH1IntegralAlternative.lean",
+          "sha256": "EE3E9B3342F15508F26148EA3192397F2682D9E93BCC8F23AA635601E0C2768C",
+          "oleanSha256": "499D6BEDD9DC9D69918A98CEB3C7D9D671224D460568524DF131D01D45DBA37B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceSL2Cocycle_ext",
+        "Dubon2026.sourceAdditivePermutationRep_apply",
+        "Dubon2026.sourcePermutationCocycle_exists_potential",
+        "Dubon2026.sourceSL2PermutationCocycle_lift",
+        "Dubon2026.sourceGamma0Hom_lift_of_torsion_vanishing",
+        "Dubon2026.sourceGamma0Hom_mem_integralSpan",
+        "Dubon2026.sourceGamma0Hom_exists_torsion_of_not_mem_integralSpan",
+        "Dubon2026.sourceTrivialH1_mem_integralSpan",
+        "Dubon2026.sourceTrivialH1_integral_or_torsion",
+        "Dubon2026.sourceAdditivePermutationRep"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceSL2Cocycle_ext",
+        "Dubon2026.sourceAdditivePermutationRep_apply",
+        "Dubon2026.sourcePermutationCocycle_exists_potential",
+        "Dubon2026.sourceSL2PermutationCocycle_lift",
+        "Dubon2026.sourceGamma0Hom_lift_of_torsion_vanishing",
+        "Dubon2026.sourceGamma0Hom_mem_integralSpan",
+        "Dubon2026.sourceGamma0Hom_exists_torsion_of_not_mem_integralSpan",
+        "Dubon2026.sourceTrivialH1_mem_integralSpan",
+        "Dubon2026.sourceTrivialH1_integral_or_torsion"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceAdditivePermutationRep"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSpanAudit6.log",
+      "logSha256": "29DBCADCF13EBD9A8FA24DA003AB85EB6F5799BEF1544BF6735DBAAD06D06296",
+      "auditSha256": "0B7CAB2FC21CEC25EFA81D5B0DA83D9F7D26568B27931DFDB0FDC76E52F0D889",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 40,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSpanDependencyAudit.log",
+      "dependencyAuditSha256": "60460819BF24B256B43EF5FEA5A4C1757814AAE29AB13665E0524DD7684958F9",
+      "dependencyAuditSourceSha256": "8B941D3446C988DCDDE036765DB9BC42683AB2338E4473C1CD7BDA7FA6AAD63D",
+      "consumers": [
+        "Dubon2026.sourceTrivialH1_integral_or_torsion"
+      ],
+      "dependency": "DUB-17 Thm 2.6 / DUB-18 Cor 8.2 -> higher symmetric-power continuation -> residual Galois association -> original weight-two integral-span or detected finite-order alternative",
+      "discharged": "The actual original homomorphism lifts to the free integral coefficient module when it vanishes on finite-order elements; its finite support and integral-span membership are derived. Native H1 is consumed.",
+      "boundary": "Characteristic-zero Hecke lifting, finite-order Hecke scalar calculation, Galois association and subsequent adic and symmetric-power results remain; 16/20 gates.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-span-reuse-review.md",
+      "reuseReviewSha256": "555BF4AAB3FD472384A0B96BF250714370FCC866C148E9DDCDCDC6D16EEE7894",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T21:47:22.748557+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceFiniteOrderTrace",
+        "SourceEllipticPrimeNorm",
+        "SourceFiniteOrderHeckeConjugation",
+        "SourceCosetTransfer",
+        "SourceFiniteOrderHeckeTransfer",
+        "SourceFiniteOrderHeckeEigen",
+        "SourcePrimitiveWeightTwoAlternative"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOrderTrace.lean",
+          "sha256": "BD66B2321001FE6163FC384623B81A41AC68F4FC18ED60CFEDD089E0C6FFDDD5",
+          "oleanSha256": "BE663EF5CB824D0432BFFCC4034748DBBB1D48BA7C16D27F7F0263E6336BB24D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeNorm.lean",
+          "sha256": "9C1CE42C4A08E74296DD6B0639C400ECA05125F669F8F4D5AC430FEDA2A1E1DA",
+          "oleanSha256": "1834B2E451B5AE17E668764915B16CCAF88A146D64A63A994AE152914E654B85"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOrderHeckeConjugation.lean",
+          "sha256": "6CB2411AF3333A10ADBF6E43C22A85732E4A192B81FAF449E836E85974D5A87F",
+          "oleanSha256": "5C2CE63B043F79FDDC9069ABB26791D614D658A81F59403F8589A45C1F7A1A5E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCosetTransfer.lean",
+          "sha256": "561810717B3A3B5FDB78382E81F66C86AFC5D06CE44CF1C13D7BBAB90F7F896C",
+          "oleanSha256": "87B44F4F876DDC8EF6E0D5499293286482F9A8F5158005CC4C7B5CDD1584D9C8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOrderHeckeTransfer.lean",
+          "sha256": "7522FC9E4D3C7791FF676B38907E22A7B1BF08560B6D4E814E442E613C0A7BA7",
+          "oleanSha256": "99D2A8106C68D98EAD87890B6CAF49959B8DE8C87F654CAC6132AD2CD58C1D27"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOrderHeckeEigen.lean",
+          "sha256": "5C4D650C38578D2BAFE6FF03F9875DBE73C67930FD3D6593A6D16242F2D75EC8",
+          "oleanSha256": "7B6DF4333943A21BA7E02B41FED82EBF8681449FCDCEBB0937BFEE52AA09A186"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWeightTwoAlternative.lean",
+          "sha256": "171005C61551AD4529C45CD174ED1D1C856C7081CC2F6F33F33CB44D9A0CC27E",
+          "oleanSha256": "0A543DA9CB22D414500AF1291A04BE8AC8A0D68B2F03290ED8E3F2DB1A71FAF5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFiniteOrder.U_zero",
+        "Dubon2026.SourceFiniteOrder.U_one",
+        "Dubon2026.SourceFiniteOrder.U_add_two",
+        "Dubon2026.SourceFiniteOrder.U_growth",
+        "Dubon2026.SourceFiniteOrder.mul_self_apply",
+        "Dubon2026.SourceFiniteOrder.pow_succ_apply",
+        "Dubon2026.SourceFiniteOrder.offDiag_eq_zero_or_natAbs_trace_le_one",
+        "Dubon2026.SourceFiniteOrder.norm_ne_two_mul",
+        "Dubon2026.SourceFiniteOrder.norm_pos",
+        "Dubon2026.SourceFiniteOrder.norm_le",
+        "Dubon2026.SourceFiniteOrder.exists_norm_eq_prime",
+        "Dubon2026.SourceFiniteOrder.exists_mul_eq_mul_integralConj",
+        "Dubon2026.SourceFiniteOrder.hom_conjugation_eq_of_finiteOrder",
+        "Dubon2026.sourceTransfer_eq_coset_product",
+        "Dubon2026.sourceTransfer_restriction_eq_pow",
+        "Dubon2026.sourceFiniteOrderHecke_sum",
+        "Dubon2026.sourceTrivialCoefficientHecke_finiteOrder",
+        "Dubon2026.sourceTrivialH1Hecke_finiteOrder",
+        "Dubon2026.sourceTrivialH1Eigen_eisenstein_of_torsion",
+        "Dubon2026.sourceTrivialH1Eigen_integral_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein_charP",
+        "Dubon2026.SourceFiniteOrder.U"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFiniteOrder.U_zero",
+        "Dubon2026.SourceFiniteOrder.U_one",
+        "Dubon2026.SourceFiniteOrder.U_add_two",
+        "Dubon2026.SourceFiniteOrder.U_growth",
+        "Dubon2026.SourceFiniteOrder.mul_self_apply",
+        "Dubon2026.SourceFiniteOrder.pow_succ_apply",
+        "Dubon2026.SourceFiniteOrder.offDiag_eq_zero_or_natAbs_trace_le_one",
+        "Dubon2026.SourceFiniteOrder.norm_ne_two_mul",
+        "Dubon2026.SourceFiniteOrder.norm_pos",
+        "Dubon2026.SourceFiniteOrder.norm_le",
+        "Dubon2026.SourceFiniteOrder.exists_norm_eq_prime",
+        "Dubon2026.SourceFiniteOrder.exists_mul_eq_mul_integralConj",
+        "Dubon2026.SourceFiniteOrder.hom_conjugation_eq_of_finiteOrder",
+        "Dubon2026.sourceTransfer_eq_coset_product",
+        "Dubon2026.sourceTransfer_restriction_eq_pow",
+        "Dubon2026.sourceFiniteOrderHecke_sum",
+        "Dubon2026.sourceTrivialCoefficientHecke_finiteOrder",
+        "Dubon2026.sourceTrivialH1Hecke_finiteOrder",
+        "Dubon2026.sourceTrivialH1Eigen_eisenstein_of_torsion",
+        "Dubon2026.sourceTrivialH1Eigen_integral_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFiniteOrder.U"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOrderHeckeAudit7.log",
+      "logSha256": "264BE023A3BB86CA7F17286C3620D38009E4C50667AF35A5C17A383FE1F04DE6",
+      "auditSha256": "0B20306FE877F4A93D266A4A2B9797B46D34716B5D55080CB183B2610766E512",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 37,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 339,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAlternativeDependencyAudit.log",
+      "dependencyAuditSha256": "5AB43CE3C32B67AC53801658AFC0BB2A9671769541037D5722E98002EA8D945A",
+      "dependencyAuditSourceSha256": "B968585F43A88F8A0C74693ECF06D68AE6E3465739DC4D659252BF66E082FC96",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual Galois association -> original all-prime weight-two eigensystem -> integral-span characteristic-zero lift or exact Eisenstein eigensystem.",
+      "discharged": "Every actual primitive form of every source weight at least two and every prime supplies its genuine local field, characteristic-p residue embedding, nonzero original weight-two H1 eigensystem at level M with Q dividing M and M dividing Q*p squared, and its exact Fourier twist. That actual class either belongs to the integral span or has eigenvalues ell+1 at all good primes. Finite-order integral conjugacy, the full actual coset transfer calculation and the torsion-detection alternative are proved; torsion vanishing and the integral/Eisenstein alternative are not assumptions.",
+      "boundary": "Scratch only; production promotion and verification pending. Characteristic-zero Hecke lifting and geometric residual Galois association, including original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-finite-order-hecke-reuse-review-20261020.json",
+      "reuseReviewSha256": "AFFFB27B34A1F9D3EF811C87A06A995E680D76A20951C2CCF8FEACE1C617F209",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T21:57:57.244962+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceMinimalPrimeEigenvector",
+        "SourceIntegralResidualEigencharacter",
+        "SourceTrivialH1CharZeroSpan",
+        "SourceTrivialIntegralHecke",
+        "SourceTrivialIntegralChange",
+        "SourceTrivialComplexIntegralSpan",
+        "SourceTrivialHeckeAlgebra",
+        "SourceResidualHeckeWords",
+        "SourceTrivialComplexHeckeAction",
+        "SourceTrivialResidualHeckeCharacter",
+        "SourceTrivialComplexEigenlift",
+        "SourcePrimitiveComplexAlternative"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMinimalPrimeEigenvector.lean",
+          "sha256": "2DD160B71E60595CC94B3DE09C700403D9540D12B257894989D77DF6A9A4A456",
+          "oleanSha256": "B42C9B042619FB141CA3A719B77B5C20618BD5D7492E91B41DBBDAAD604FD890"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralResidualEigencharacter.lean",
+          "sha256": "96122DA35FB51AF4705BA6C472EC655C7B8D5EAD4C0B361296BF5A943E100F94",
+          "oleanSha256": "E27D4CCAC1910AB97486E4574BC0AB43CE67ECEBD628B42963FFACA8AA03E0EF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialH1CharZeroSpan.lean",
+          "sha256": "4A3C0EEDC8C81F14CF0DB5AEF225CB03960424AD07423B68554AE0F8D8CE4380",
+          "oleanSha256": "3F47D5F48D39A7A1909340F070478D9B21B432F4DF291482C35B82FB47C914FC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialIntegralHecke.lean",
+          "sha256": "D1298B9CE3CC1C80A9A898C34E37538ECD424A90CB592E4C3BF80B48AFA61CE0",
+          "oleanSha256": "2679BAEF71DEF29FA659ED0345ECF270926F11707025BE06C4DAA2DF8A547233"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialIntegralChange.lean",
+          "sha256": "1DEAB4EB654342CFF47C06B745934E26F2D3E386D931A598204568940E21480A",
+          "oleanSha256": "D8C9C8C80B876CD561D638E38D0AF06048CC1DA34E9E214AA3A359D3D1DA9B6F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialComplexIntegralSpan.lean",
+          "sha256": "B778E1927B7FAB3DCC7464144A363B2F9E8B2B29A4CDC8CE66828576DFE5B9F3",
+          "oleanSha256": "3855CADE012F79CB29A282260D653172E2A4A78819C7CB90C8939C8B4B13EBEA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialHeckeAlgebra.lean",
+          "sha256": "54DC1D26092992B428E106F7F5D9F23F5AE4CD56CC5B9A05454787AF235F0C0E",
+          "oleanSha256": "46926EB80CBCCEF1BEDC907A084536C4333DECE7E9118B433DD48B30E5D8BFB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualHeckeWords.lean",
+          "sha256": "C2DEA40B1C33CF4E5D9CA836DAE194DA208FF151D84093A6313340C5C32DAB1E",
+          "oleanSha256": "62BCD912B8F639828BA2A76B1BC49BE0373E28C393FD589BC43754FA9DC2E44F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialComplexHeckeAction.lean",
+          "sha256": "422D75D34D6A7EAF44EB7B9F9FFF4772742241E5DC26C6A05E67806EBDC02675",
+          "oleanSha256": "8701A8697C14AA8543FAFF4CE2432EF729241F14D7114CFCFC3223A3156333E6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialResidualHeckeCharacter.lean",
+          "sha256": "5E635BEBAE539235958FB6983E1B26E53819464272F8221046A2E19B0541C137",
+          "oleanSha256": "F8469EE0C061F71F82B27EB559286CEB391CA709D1677674E37A275D1B1C01F8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialComplexEigenlift.lean",
+          "sha256": "9C44F8B04042F9B24875B3F3DA27CC2134E5F47203A9EB4D46C6CFD1798B3496",
+          "oleanSha256": "D98B5C6593E680E34ECFBC2CCC9ABD456ACC69A494F07B388BA8F702FEA164CE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveComplexAlternative.lean",
+          "sha256": "1EADF893F9CE6BDB6F161D2614A9B6D7E2DC502DBF2D64C4B329EBD9B9913C9B",
+          "oleanSha256": "CDF73348807BC15125CF623482AA999A492F261A09C8169A63EF10B9DF91DC33"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceMinimalPrime_exists_eigenvector",
+        "Dubon2026.sourceIntegralFaithfulAction_exists_residualEigencharacter",
+        "Dubon2026.sourceTrivialH1_mem_integralSpan_charZero",
+        "Dubon2026.sourceTrivialRingHeckeOperators_field",
+        "Dubon2026.sourceTrivialH1_finite",
+        "Dubon2026.sourceTrivialRingHeckeOperators_commute",
+        "Dubon2026.sourceTrivialRingHecke_hom_apply",
+        "Dubon2026.sourceTrivialH1IntegerChange_hom_apply",
+        "Dubon2026.sourceTrivialH1IntegerChange_hecke",
+        "Dubon2026.sourceTrivialH1IntegerChange_injective",
+        "Dubon2026.sourceTrivialComplexH1_span_integer",
+        "Dubon2026.sourceTrivialComplexH1_end_zero_of_integer",
+        "Dubon2026.sourceTrivialHeckeAlgebra_finite",
+        "Dubon2026.sourceTrivialHeckeAlgebra_commutative",
+        "Dubon2026.sourceTrivialIntegralHeckeWord_coe",
+        "Dubon2026.sourceTrivialIntegralHeckeWord_surjective",
+        "Dubon2026.sourceResidualHeckeWord_intertwine",
+        "Dubon2026.sourceResidualHeckeWord_eigenvector",
+        "Dubon2026.sourceTrivialComplexHecke_relation",
+        "Dubon2026.sourceTrivialComplexHeckeAction_word",
+        "Dubon2026.sourceTrivialComplexHeckeAction_integer",
+        "Dubon2026.sourceTrivialComplexHeckeAction_injective",
+        "Dubon2026.sourceTrivialIntegralSpan_exists_HeckeCharacter",
+        "Dubon2026.sourceTrivialH1Eigen_HeckeCharacter_or_eisenstein",
+        "Dubon2026.sourceTrivialHeckeCharacter_exists_complexEigenlift",
+        "Dubon2026.sourceTrivialH1Eigen_complexLift_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein_charP",
+        "Dubon2026.sourceTrivialRingHeckeOperators",
+        "Dubon2026.sourceTrivialH1IntegerChange",
+        "Dubon2026.sourceTrivialHeckeAlgebra",
+        "Dubon2026.sourceTrivialIntegralHeckeWord",
+        "Dubon2026.sourceTrivialComplexHeckeAction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceMinimalPrime_exists_eigenvector",
+        "Dubon2026.sourceIntegralFaithfulAction_exists_residualEigencharacter",
+        "Dubon2026.sourceTrivialH1_mem_integralSpan_charZero",
+        "Dubon2026.sourceTrivialRingHeckeOperators_field",
+        "Dubon2026.sourceTrivialH1_finite",
+        "Dubon2026.sourceTrivialRingHeckeOperators_commute",
+        "Dubon2026.sourceTrivialRingHecke_hom_apply",
+        "Dubon2026.sourceTrivialH1IntegerChange_hom_apply",
+        "Dubon2026.sourceTrivialH1IntegerChange_hecke",
+        "Dubon2026.sourceTrivialH1IntegerChange_injective",
+        "Dubon2026.sourceTrivialComplexH1_span_integer",
+        "Dubon2026.sourceTrivialComplexH1_end_zero_of_integer",
+        "Dubon2026.sourceTrivialHeckeAlgebra_finite",
+        "Dubon2026.sourceTrivialHeckeAlgebra_commutative",
+        "Dubon2026.sourceTrivialIntegralHeckeWord_coe",
+        "Dubon2026.sourceTrivialIntegralHeckeWord_surjective",
+        "Dubon2026.sourceResidualHeckeWord_intertwine",
+        "Dubon2026.sourceResidualHeckeWord_eigenvector",
+        "Dubon2026.sourceTrivialComplexHecke_relation",
+        "Dubon2026.sourceTrivialComplexHeckeAction_word",
+        "Dubon2026.sourceTrivialComplexHeckeAction_integer",
+        "Dubon2026.sourceTrivialComplexHeckeAction_injective",
+        "Dubon2026.sourceTrivialIntegralSpan_exists_HeckeCharacter",
+        "Dubon2026.sourceTrivialH1Eigen_HeckeCharacter_or_eisenstein",
+        "Dubon2026.sourceTrivialHeckeCharacter_exists_complexEigenlift",
+        "Dubon2026.sourceTrivialH1Eigen_complexLift_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceTrivialRingHeckeOperators",
+        "Dubon2026.sourceTrivialH1IntegerChange",
+        "Dubon2026.sourceTrivialHeckeAlgebra",
+        "Dubon2026.sourceTrivialIntegralHeckeWord",
+        "Dubon2026.sourceTrivialComplexHeckeAction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexEigenliftAudit12.log",
+      "logSha256": "17390030CEFE7004C5A32176D758A9B1E39B4CCA5703431E48B9558A9635A516",
+      "auditSha256": "8D966D8012F0AC16B1CB655618E4C9327B87EF818B2810435023E9EF0A918DA6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 48,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 367,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexEigenliftDependencyAudit.log",
+      "dependencyAuditSha256": "FC78DABBECAF496A95969C80BFFB453095287F8055C02E822647A6380D831B0A",
+      "dependencyAuditSourceSha256": "6518658FBD080E2FCD50BCDDDDA499302411A1D4AB0EBD4661174DDC8861E30B",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual Galois association -> original all-prime weight-two class -> actual complex weight-two eigenclass with integral eigenvalues and exact residual reduction, or exact Eisenstein values.",
+      "discharged": "Every actual primitive form of source weight at least two and every prescribed prime supplies its genuine local coefficient field, characteristic-p residue embedding, nonzero original weight-two eigensystem at level M with Q dividing M and M dividing Q*p squared, and exact Fourier factor. That actual eigensystem either has eigenvalues ell+1 at all good primes or has a nonzero class in the original full complex H1 with integral eigenvalues and one reduction map preserving all prescribed values simultaneously. The integral span, finite integral Hecke algebra, full complex spanning, faithful action, residual character, minimal-prime complex eigenvector and extension of the reduction to all complex algebraic integers are derived. No supplied complex eigenclass, Hecke-algebra faithfulness, maximal ideal, residual-character extension or lifting certificate remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The parabolic and boundary branches of geometric residual Galois association, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-complex-eigenlift-reuse-review-20261020.json",
+      "reuseReviewSha256": "57CC4E2E515E4E5A5284C27BE19AFE7B4F40FBE299DBCF96AC52B36455A970B3",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T22:35:34.661698+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceParabolicClassification",
+        "SourceCuspUnipotent",
+        "SourceCuspBoundaryValues",
+        "SourceFiniteCuspBoundary",
+        "SourceCuspPrimeOrbits",
+        "SourceCuspHeckeTerms",
+        "SourceCuspHeckeOrbitSum",
+        "SourceCuspHeckeSum",
+        "SourceCuspHeckeColumnMove",
+        "SourceCommutingCommonEigenvector",
+        "SourceNativeCuspHecke",
+        "SourceBoundaryCharacters",
+        "SourceNativeBoundaryCharacters",
+        "SourceFiniteCharacterReduction",
+        "SourceResidualBoundaryCharacters",
+        "SourceResidualWeightTwoAlternatives",
+        "SourcePrimitiveParabolicAlternative"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicClassification.lean",
+          "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602",
+          "oleanSha256": "65A3CD255493214A21B972C9FD59B1733FDABB5D9A03DFEF98DD833FEA13C027"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspUnipotent.lean",
+          "sha256": "6CEFE5D3E957FF43F80E77D04DB7DC01CE43655DB91DAEE806CE7BA2B28A9833",
+          "oleanSha256": "2673F1F94807F32B4BA77C441D3A45C347E94AFDC899D296469B0CD07E8AF024"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspBoundaryValues.lean",
+          "sha256": "637C38419196D91FA3C2EBFA4FFCDBFA35C29B78164AFAA99A2B136610DEA723",
+          "oleanSha256": "1046D2621DBE31A5079E9D56AFE59FAE7D5B2852DB36B3A8E93D34100AD33982"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteCuspBoundary.lean",
+          "sha256": "B2344B9B56827512C11F0ECB4488026BB5DAD3424A7E652833384B4FA4685CA1",
+          "oleanSha256": "84A2CEF995C5C0C5D29B3370F821C796910DE86E413ABD6FC952148DDF848DA2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspPrimeOrbits.lean",
+          "sha256": "BE8937CF1A77E33394CC84882271A28FEC9569317AAA23C11B14C0CBFE613F1C",
+          "oleanSha256": "24A42E42DDFA8F0383610146C8E7066075443E75725A43CB9A8AA18AAEF9AC87"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspHeckeTerms.lean",
+          "sha256": "1C7D19AABD3B0731E376C90CFBE0E117C4955E7BE841D3ABDE1E5BDC0455FD2C",
+          "oleanSha256": "34CFF3C57F5569F49305B9B47CFAD834256573E2EE3EA0C41D6037E42B977246"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspHeckeOrbitSum.lean",
+          "sha256": "413100954214E3271B814FC394F0C6300887F1C66B18CDD1BFC768F995BFBFD4",
+          "oleanSha256": "AE7164946F920A29A6870AE2B9E46406F176EE3C16BB4BD0B0A4811EFBDEEFE3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspHeckeSum.lean",
+          "sha256": "19F8D531DAC730FB033FFD204EA791A7EAABD0D854F985A9F9CB4B577A7C671A",
+          "oleanSha256": "853943101B5E1D148889C2D37F9B786F3A3D9DE7061D44BBF55265D662125E31"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspHeckeColumnMove.lean",
+          "sha256": "364CBAFE8362D76B581092E1A4725E6AB729A21A15A0FCD5A598770A8FFFA37A",
+          "oleanSha256": "95626D9DFAEE53C8E35B8B7952570682D289ECC346B2E135046B02B01D16FAFF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCommutingCommonEigenvector.lean",
+          "sha256": "16B25A59B5D40921C3ABC43FCE824976DDCDA07F2CC5052564ABED301A76CFED",
+          "oleanSha256": "B947061E034E6F085C833B2D632B9665FF02A8504521C3D40E69B9CB63E7E6C7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceNativeCuspHecke.lean",
+          "sha256": "ED074E2D775E885496520FA7CA0677D69BA41A39C851BD0DE88FD706FC50938F",
+          "oleanSha256": "245D1C0378A1049C43133132743DC208248BA08757DB1FAE7869ADDD3F5121FE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryCharacters.lean",
+          "sha256": "8BA4D65032FE46580664C81D54274B5BA539ACD6512067A685C1C57CEDFD2CAA",
+          "oleanSha256": "D6FB181C47A1E449C98D37E9E3FD12C0EB7BF0D94F35D5DD7A668B4B0B4E4B0D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceNativeBoundaryCharacters.lean",
+          "sha256": "B9B5F7701F70621DBBB775E6A05CE93881E3DB2835EED6473A8D10B2D1B5C460",
+          "oleanSha256": "181AAEA0CCBBF0B8AF9F3F092CD52EEB6E15D94F88A54CA53138C335F5D535E9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteCharacterReduction.lean",
+          "sha256": "394B2101E169F38138EE576B17832A81F6EAC4C92BA54AF01CB0E268F445F4B0",
+          "oleanSha256": "9FEC4315939694C61C8B201DA5CF6E0B2361A4809859E9176C0CD010D56F2FAC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualBoundaryCharacters.lean",
+          "sha256": "632335AFCBC1DCA4BC3BEB89993BEE526F30B66DCB0A22AFFA5719AA45A622BA",
+          "oleanSha256": "00AC55CF49B72CE99E258A080D00BBEAE8FC3BD64843361EB8B310125BFD20F4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWeightTwoAlternatives.lean",
+          "sha256": "2AC56CB5ED1E53ED73D47C370A371969EAB1367C13A563968182A9A559F547DD",
+          "oleanSha256": "13081757C3683622C84BE6C7AFC48494E6B5537718EE795AC0B639F4EEE9E599"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicAlternative.lean",
+          "sha256": "DDEA8253EF628E20B0CC56A9ED0617F1D6B2109210DA8A57E3FBC64F32BC6D42",
+          "oleanSha256": "7A031D5735CB9FAB13D0452B9ECD92659A0E959906A781BE890873609DF8CED6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceParabolic.eq_T_zpow_of_col",
+        "Dubon2026.SourceParabolic.exists_isCoprime_fixed",
+        "Dubon2026.SourceParabolic.exists_conj_T_zpow_of_trace_eq_two",
+        "Dubon2026.SourceParabolic.classification",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_00",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_01",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_10",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_11",
+        "Dubon2026.SourceCuspBoundary.conj_T_zpow_eq_unipMat",
+        "Dubon2026.SourceCuspBoundary.unipMat_pow",
+        "Dubon2026.SourceCuspBoundary.inv_mul_unipMat_mul",
+        "Dubon2026.SourceCuspBoundary.unipMat_mem_Gamma",
+        "Dubon2026.SourceCuspBoundary.isCoprime_col",
+        "Dubon2026.SourceCuspBoundary.exists_conj_of_col_congr",
+        "Dubon2026.SourceCuspBoundary.coe_uOf",
+        "Dubon2026.SourceCuspBoundary.B_add",
+        "Dubon2026.SourceCuspBoundary.B_smul",
+        "Dubon2026.SourceCuspBoundary.B_mul_left",
+        "Dubon2026.SourceCuspBoundary.B_congr",
+        "Dubon2026.SourceCuspBoundary.colRed_mul_of_mem_Gamma0",
+        "Dubon2026.SourceCuspBoundary.exists_borel",
+        "Dubon2026.SourceCuspBoundary.B_eq_of_borel",
+        "Dubon2026.SourceCuspBoundary.mem_parabolicHoms_of_B_eq_zero",
+        "Dubon2026.SourceCuspBoundary.exists_lift",
+        "Dubon2026.SourceCuspBoundary.colRed_lift",
+        "Dubon2026.SourceCuspBoundary.scale_val_fst",
+        "Dubon2026.SourceCuspBoundary.scale_val_snd",
+        "Dubon2026.SourceCuspBoundary.scale_scale",
+        "Dubon2026.SourceCuspBoundary.scale_comm",
+        "Dubon2026.SourceCuspBoundary.scale_one",
+        "Dubon2026.SourceCuspBoundary.bOf_toP",
+        "Dubon2026.SourceCuspBoundary.bOf_smul",
+        "Dubon2026.SourceCuspBoundary.bOf_diagonal",
+        "Dubon2026.SourceCuspBoundary.bOf_ne_zero",
+        "Dubon2026.SourceCuspBoundary.mem_upper_iff",
+        "Dubon2026.SourceCuspBoundary.pOf_eq",
+        "Dubon2026.SourceCuspBoundary.qOf_eq",
+        "Dubon2026.SourceCuspBoundary.coe_uOf_eq_unipMat",
+        "Dubon2026.SourceCuspBoundary.coe_uOf_pow",
+        "Dubon2026.SourceCuspBoundary.coe_inv_mul_pow_mul",
+        "Dubon2026.SourceCuspBoundary.inv_mul_pow_mul_mem_iff",
+        "Dubon2026.SourceCuspBoundary.pow_smul_coe_eq_iff",
+        "Dubon2026.SourceCuspBoundary.not_dvd_e",
+        "Dubon2026.SourceCuspBoundary.dvd_pOf_iff",
+        "Dubon2026.SourceCuspBoundary.minimalPeriod_eq",
+        "Dubon2026.SourceCuspBoundary.orbOne_out",
+        "Dubon2026.SourceCuspBoundary.orbOne_out_out_mem",
+        "Dubon2026.SourceCuspBoundary.eq_orbOne_of_mem",
+        "Dubon2026.SourceCuspBoundary.minimalPeriod_orbOne_out",
+        "Dubon2026.SourceCuspBoundary.uOf_mem_upper",
+        "Dubon2026.SourceCuspBoundary.termOf_congr",
+        "Dubon2026.SourceCuspBoundary.termOf_conj",
+        "Dubon2026.SourceCuspBoundary.termOf_u",
+        "Dubon2026.SourceCuspBoundary.termOf_other",
+        "Dubon2026.SourceCuspBoundary.hecke_sum_eq_sum_orbits",
+        "Dubon2026.SourceCuspBoundary.coe_ellUnit",
+        "Dubon2026.SourceCuspBoundary.ellUnit_inv_mul",
+        "Dubon2026.SourceCuspBoundary.mul_ell_cancel",
+        "Dubon2026.SourceCuspBoundary.hecke_sum_uOf",
+        "Dubon2026.SourceCuspBoundary.exists_Gamma_mul_dvd",
+        "Dubon2026.sourceCommutingOperators_exists_commonEigenvector",
+        "Dubon2026.SourceCuspBoundary.B_native_hecke",
+        "Dubon2026.SourceCuspBoundary.bOf_native_hecke",
+        "Dubon2026.SourceCuspBoundary.rho_mem_W",
+        "Dubon2026.SourceCuspBoundary.rhoW_comm",
+        "Dubon2026.SourceCuspBoundary.exists_dirichlet_pair",
+        "Dubon2026.sourceComplexH1_nonparabolic_dirichletPair",
+        "Dubon2026.sourceFiniteCharacter_isIntegral",
+        "Dubon2026.sourceFiniteCharacterReduction_apply",
+        "Dubon2026.sourceComplexH1_residual_dirichletPair",
+        "Dubon2026.sourceTrivialH1Eigen_parabolicLift_or_dirichletPair",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair_charP",
+        "Dubon2026.SourceCuspBoundary.unipMat",
+        "Dubon2026.SourceCuspBoundary.uOf",
+        "Dubon2026.SourceCuspBoundary.B",
+        "Dubon2026.SourceCuspBoundary.colRed",
+        "Dubon2026.SourceCuspBoundary.parabolicHoms",
+        "Dubon2026.SourceCuspBoundary.P",
+        "Dubon2026.SourceCuspBoundary.instFiniteP",
+        "Dubon2026.SourceCuspBoundary.lift",
+        "Dubon2026.SourceCuspBoundary.toP",
+        "Dubon2026.SourceCuspBoundary.scale",
+        "Dubon2026.SourceCuspBoundary.bOf",
+        "Dubon2026.SourceCuspBoundary.pOf",
+        "Dubon2026.SourceCuspBoundary.qOf",
+        "Dubon2026.SourceCuspBoundary.OrbQ",
+        "Dubon2026.SourceCuspBoundary.orbOne",
+        "Dubon2026.SourceCuspBoundary.termOf",
+        "Dubon2026.SourceCuspBoundary.diagonalUnit",
+        "Dubon2026.SourceCuspBoundary.ellUnit",
+        "Dubon2026.SourceCuspBoundary.W",
+        "Dubon2026.SourceCuspBoundary.rho",
+        "Dubon2026.SourceCuspBoundary.rhoW",
+        "Dubon2026.sourceFiniteCharacterReduction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceParabolic.eq_T_zpow_of_col",
+        "Dubon2026.SourceParabolic.exists_isCoprime_fixed",
+        "Dubon2026.SourceParabolic.exists_conj_T_zpow_of_trace_eq_two",
+        "Dubon2026.SourceParabolic.classification",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_00",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_01",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_10",
+        "Dubon2026.SourceCuspBoundary.unipMat_apply_11",
+        "Dubon2026.SourceCuspBoundary.conj_T_zpow_eq_unipMat",
+        "Dubon2026.SourceCuspBoundary.unipMat_pow",
+        "Dubon2026.SourceCuspBoundary.inv_mul_unipMat_mul",
+        "Dubon2026.SourceCuspBoundary.unipMat_mem_Gamma",
+        "Dubon2026.SourceCuspBoundary.isCoprime_col",
+        "Dubon2026.SourceCuspBoundary.exists_conj_of_col_congr",
+        "Dubon2026.SourceCuspBoundary.coe_uOf",
+        "Dubon2026.SourceCuspBoundary.B_add",
+        "Dubon2026.SourceCuspBoundary.B_smul",
+        "Dubon2026.SourceCuspBoundary.B_mul_left",
+        "Dubon2026.SourceCuspBoundary.B_congr",
+        "Dubon2026.SourceCuspBoundary.colRed_mul_of_mem_Gamma0",
+        "Dubon2026.SourceCuspBoundary.exists_borel",
+        "Dubon2026.SourceCuspBoundary.B_eq_of_borel",
+        "Dubon2026.SourceCuspBoundary.mem_parabolicHoms_of_B_eq_zero",
+        "Dubon2026.SourceCuspBoundary.exists_lift",
+        "Dubon2026.SourceCuspBoundary.colRed_lift",
+        "Dubon2026.SourceCuspBoundary.scale_val_fst",
+        "Dubon2026.SourceCuspBoundary.scale_val_snd",
+        "Dubon2026.SourceCuspBoundary.scale_scale",
+        "Dubon2026.SourceCuspBoundary.scale_comm",
+        "Dubon2026.SourceCuspBoundary.scale_one",
+        "Dubon2026.SourceCuspBoundary.bOf_toP",
+        "Dubon2026.SourceCuspBoundary.bOf_smul",
+        "Dubon2026.SourceCuspBoundary.bOf_diagonal",
+        "Dubon2026.SourceCuspBoundary.bOf_ne_zero",
+        "Dubon2026.SourceCuspBoundary.mem_upper_iff",
+        "Dubon2026.SourceCuspBoundary.pOf_eq",
+        "Dubon2026.SourceCuspBoundary.qOf_eq",
+        "Dubon2026.SourceCuspBoundary.coe_uOf_eq_unipMat",
+        "Dubon2026.SourceCuspBoundary.coe_uOf_pow",
+        "Dubon2026.SourceCuspBoundary.coe_inv_mul_pow_mul",
+        "Dubon2026.SourceCuspBoundary.inv_mul_pow_mul_mem_iff",
+        "Dubon2026.SourceCuspBoundary.pow_smul_coe_eq_iff",
+        "Dubon2026.SourceCuspBoundary.not_dvd_e",
+        "Dubon2026.SourceCuspBoundary.dvd_pOf_iff",
+        "Dubon2026.SourceCuspBoundary.minimalPeriod_eq",
+        "Dubon2026.SourceCuspBoundary.orbOne_out",
+        "Dubon2026.SourceCuspBoundary.orbOne_out_out_mem",
+        "Dubon2026.SourceCuspBoundary.eq_orbOne_of_mem",
+        "Dubon2026.SourceCuspBoundary.minimalPeriod_orbOne_out",
+        "Dubon2026.SourceCuspBoundary.uOf_mem_upper",
+        "Dubon2026.SourceCuspBoundary.termOf_congr",
+        "Dubon2026.SourceCuspBoundary.termOf_conj",
+        "Dubon2026.SourceCuspBoundary.termOf_u",
+        "Dubon2026.SourceCuspBoundary.termOf_other",
+        "Dubon2026.SourceCuspBoundary.hecke_sum_eq_sum_orbits",
+        "Dubon2026.SourceCuspBoundary.coe_ellUnit",
+        "Dubon2026.SourceCuspBoundary.ellUnit_inv_mul",
+        "Dubon2026.SourceCuspBoundary.mul_ell_cancel",
+        "Dubon2026.SourceCuspBoundary.hecke_sum_uOf",
+        "Dubon2026.SourceCuspBoundary.exists_Gamma_mul_dvd",
+        "Dubon2026.sourceCommutingOperators_exists_commonEigenvector",
+        "Dubon2026.SourceCuspBoundary.B_native_hecke",
+        "Dubon2026.SourceCuspBoundary.bOf_native_hecke",
+        "Dubon2026.SourceCuspBoundary.rho_mem_W",
+        "Dubon2026.SourceCuspBoundary.rhoW_comm",
+        "Dubon2026.SourceCuspBoundary.exists_dirichlet_pair",
+        "Dubon2026.sourceComplexH1_nonparabolic_dirichletPair",
+        "Dubon2026.sourceFiniteCharacter_isIntegral",
+        "Dubon2026.sourceFiniteCharacterReduction_apply",
+        "Dubon2026.sourceComplexH1_residual_dirichletPair",
+        "Dubon2026.sourceTrivialH1Eigen_parabolicLift_or_dirichletPair",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair_charP",
+        "Dubon2026.SourceCuspBoundary.instFiniteP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCuspBoundary.unipMat",
+        "Dubon2026.SourceCuspBoundary.uOf",
+        "Dubon2026.SourceCuspBoundary.B",
+        "Dubon2026.SourceCuspBoundary.colRed",
+        "Dubon2026.SourceCuspBoundary.parabolicHoms",
+        "Dubon2026.SourceCuspBoundary.P",
+        "Dubon2026.SourceCuspBoundary.lift",
+        "Dubon2026.SourceCuspBoundary.toP",
+        "Dubon2026.SourceCuspBoundary.scale",
+        "Dubon2026.SourceCuspBoundary.bOf",
+        "Dubon2026.SourceCuspBoundary.pOf",
+        "Dubon2026.SourceCuspBoundary.qOf",
+        "Dubon2026.SourceCuspBoundary.OrbQ",
+        "Dubon2026.SourceCuspBoundary.orbOne",
+        "Dubon2026.SourceCuspBoundary.termOf",
+        "Dubon2026.SourceCuspBoundary.diagonalUnit",
+        "Dubon2026.SourceCuspBoundary.ellUnit",
+        "Dubon2026.SourceCuspBoundary.W",
+        "Dubon2026.SourceCuspBoundary.rho",
+        "Dubon2026.SourceCuspBoundary.rhoW",
+        "Dubon2026.sourceFiniteCharacterReduction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBoundaryAudit17.log",
+      "logSha256": "603EFB314037EE738288CCD3BEC993CED401007B27B5A9BA4222055C4A0D2A95",
+      "auditSha256": "BDB698F92BCCD80DEEA84AAC7887CF5FE7EFEA6EC9DEC7586B62158E19B3CF51",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 149,
+      "linterScopes": 17,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 435,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBoundaryDependencyAudit.log",
+      "dependencyAuditSha256": "1066B13BE099A945180FD3E3FCF504E60B632A5CC44F6F9683BFBFA4649F48C1",
+      "dependencyAuditSourceSha256": "7CE313F5A9EBFC5A735CA930848C4BC6E0583C70AA599AB5B748CFB5046440A5",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair_charP"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original all-prime weight-two class -> actual parabolic complex lift or exact residual Dirichlet characters.",
+      "discharged": "Every original primitive form of source weight at least two and every prescribed prime supplies its genuine local coefficient field, residue characteristic, level M with Q dividing M and M dividing Q*p squared, nonzero original residual weight-two class, and exact Fourier twist. That actual class supplies either a nonzero parabolic original complex H1 eigenclass with integral eigenvalues and a simultaneous exact reduction, or two actual residual characters of the level unit group with product one and exact eigenvalues psi1(ell)+ell*psi2(ell). Signed parabolic matrix classification, nonzero finite cusp boundary, the full original prime Hecke orbit sum, commuting boundary operators, the genuine Dirichlet pair and its reduction through the same integral reduction map are all derived. The exact Eisenstein alternative is included as the pair of trivial characters. No boundary function, Hecke compatibility, character pair or parabolic complex lift is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-boundary-reuse-review-20261020.json",
+      "reuseReviewSha256": "14E014C611EDB45EBDB3517F46435FCA0705A3275D59A3AF91CBD6A19D4DD60B",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-integral-span-reuse-review.md",
+    "Tools/source-finite-order-hecke-reuse-review-20261020.json",
+    "Tools/source-complex-eigenlift-reuse-review-20261020.json",
+    "Tools/source-parabolic-boundary-reuse-review-20261020.json"
+  ],
+  "productionFocusedReceipt5173": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSpanDependencyAuditProduction5173.log",
+        "sha256": "60460819BF24B256B43EF5FEA5A4C1757814AAE29AB13665E0524DD7684958F9",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.sourceTrivialH1_integral_or_torsion"
+        ],
+        "sourceSha256": "5337402D20874E7233581FF999073B84CBA8309065BBE37A71C11BEA64E87DCB"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAlternativeDependencyAuditProduction5173.log",
+        "sha256": "5AB43CE3C32B67AC53801658AFC0BB2A9671769541037D5722E98002EA8D945A",
+        "requiredProofValueEdges": 339,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein",
+          "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein_charP"
+        ],
+        "sourceSha256": "AAB870AC52D89C1E173180B43784557463254CD206C5DB03C0FCFA6B1788CC0A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexEigenliftDependencyAuditProduction5173.log",
+        "sha256": "FC78DABBECAF496A95969C80BFFB453095287F8055C02E822647A6380D831B0A",
+        "requiredProofValueEdges": 367,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein",
+          "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein_charP"
+        ],
+        "sourceSha256": "CF13459AAC09596FFF9D85E4E801BD969CBD715FF381B70172512F483093CC8B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBoundaryDependencyAuditProduction5173.log",
+        "sha256": "1066B13BE099A945180FD3E3FCF504E60B632A5CC44F6F9683BFBFA4649F48C1",
+        "requiredProofValueEdges": 435,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair",
+          "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair_charP"
+        ],
+        "sourceSha256": "2DA6E5B6C8FB3834E6CDB3D1C7ADC0E610ABAC9F44501062E13F60FAF68D6834"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBoundaryProductionAudit5173.log",
+    "sha256": "87672113D99038EF82743638C993AE19C6FD4AD538CC910BB980425E3FD55625",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-boundary-production-5173-build.log",
+    "aggregateSha256": "95511133F852E082012378C69F42248E4A1DAD9C6D5F25D1B0E542FF74CF7F96",
+    "productionModules": 5173,
+    "incrementModules": 42,
+    "axiomChecks": 161,
+    "exhaustiveIncrementTheorems": 273,
+    "linterScopes": 42,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 274,
+    "generatedDeclarationReconciliation": {
+      "declaration": "Dubon2026.sourceHeckeConjugation.congr_simp",
+      "scratchOrigin": "SourceCuspHeckeTerms",
+      "productionOrigin": "Dubon2026.SourceHeckeProductTransitions",
+      "explanation": "The identical generated theorem is already registered in the earlier production import graph. Every isolated and assembled theorem name was compared, and the generated declaration's type, proof and axioms match.",
+      "originChecks": [
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_0.log",
+          "sha256": "763393263E08C3E53B007FA858821F056E8EC9C69ECC8807F0D2009CF738E7D6"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_1.log",
+          "sha256": "020C40907BD23E7E787F8474D51B32915957C30F83DF86DE43DB11EC5F9A8BA8"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_2.log",
+          "sha256": "6D9F8907886E0A64A7AD1463E90B491B02165E89E4BD7A3A8EAC1F37880F139D"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_3.log",
+          "sha256": "D450F08B204CB0A3C77FE752FAC85182958055CE0E3104FB00DE5A9728F338A9"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_4.log",
+          "sha256": "4D6BF8466E4BE19C891BFD135D40CD4EF6A9FB750E682D888B9DE6890BFBB188"
+        }
+      ],
+      "originLog": "E:\\Lean\\.tmp\\dubon83\\BoundaryGeneratedAggregateOrigin5173.log",
+      "originSha256": "799EA91647C482354455D6B1B7EA4E23F72C41C8015D7BCC6E375EDC531531D4",
+      "comparisonLogs": {
+        "Scratch": "C95810EE73AEF499140962D7EA95A20E1E2053D326A11E45E17463F314CFC501",
+        "Production": "C95810EE73AEF499140962D7EA95A20E1E2053D326A11E45E17463F314CFC501"
+      }
+    },
+    "boundary": "Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open."
+  },
+  "receipt5173": {
+    "recordedUTC": "2026-10-21T00:09:57.792423+00:00",
+    "log": "logs/dubon-build-20261020-155913-719.log",
+    "sha256": "4631A67597B25C2699FC3DA51FF893F707A97A3493650DEA10BAB83C0EAD95D7",
+    "bytes": 8868562,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5173,
+    "projectTheorems": 36561,
+    "registeredConsumers": 15662,
+    "registeredConstructions": 702,
+    "declarations": 21764,
+    "generated": 20613,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_155605.log",
+    "foundationSha256": "3F73B3A7385DA8F5B6C3635021A065F70C3ED4E239747977830190356D13F075",
+    "boundary": "Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open."
+  }
+}

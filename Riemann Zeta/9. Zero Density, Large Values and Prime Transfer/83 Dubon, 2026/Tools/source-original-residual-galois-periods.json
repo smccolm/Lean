@@ -1,0 +1,616 @@
+{
+  "date": "20 October 2026",
+  "modules": [
+    "Dubon2026.SourceLocalCyclotomicAction",
+    "Dubon2026.SourceOriginalCyclotomicLocal",
+    "Dubon2026.SourceDiagonalUnitPair",
+    "Dubon2026.SourceBoundaryGaloisRepresentation",
+    "Dubon2026.SourceBoundaryGaloisLocal",
+    "Dubon2026.SourceResidualGaloisAlternative",
+    "Dubon2026.SourcePrimitiveGaloisAlternative",
+    "Dubon2026.SourceGaloisCharacterTwist",
+    "Dubon2026.SourceArithmeticWeightTwist",
+    "Dubon2026.SourcePrimitiveWeightRestoration",
+    "Dubon2026.SourceArithmeticSupportPowers",
+    "Dubon2026.SourceArithmeticSupportLocalValues",
+    "Dubon2026.SourcePrimitiveOriginalSupport",
+    "Dubon2026.SourceOriginalWeightResidualConsumer",
+    "Dubon2026.SourceRealPeriodicity",
+    "Dubon2026.SourceCuspRealMaximum",
+    "Dubon2026.SourceInvariantRealPart",
+    "Dubon2026.SourceReflectedPrimitive",
+    "Dubon2026.SourceSL2Reflection",
+    "Dubon2026.SourceMixedPrimitiveVanishing",
+    "Dubon2026.SourceWeightTwoAnalyticPrimitive",
+    "Dubon2026.SourceWeightTwoPrimitiveCusps",
+    "Dubon2026.SourceWeightTwoMixedInjectivity",
+    "Dubon2026.SourceWeightTwoPeriods",
+    "Dubon2026.SourceWeightTwoPeriodPair",
+    "Dubon2026.SourceWeightTwoParabolicPeriods",
+    "Dubon2026.SourceWeightTwoPeriodDimension"
+  ],
+  "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> the original parabolic complex weight-two Hecke lift -> genuine cusp-form Hecke realization -> injectivity and parabolic image of the actual period pair. Original residual branch: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> original weight-two parabolic-lift/Galois alternative -> exact cyclotomic weight twist and original Fourier residue normalization -> original arithmetic support and local values.",
+  "discharged": "Every original primitive form of source weight k>=2 and every prescribed prime construct its genuine local coefficient field and either the nonzero original parabolic complex H1 eigenclass with simultaneous integral reduction or a continuous rank-two residual Galois representation on the arithmetic group of support Q*p. On every good prime ell of the original level Q distinct from p, the trace at every original residue Frobenius is the actual original Fourier coefficient reduced through the constructed local embedding, and the determinant is ell^((k-1).toNat). The representation kills original norm inertia there. The source parity theorem proves the exact twist exponent, Q|M|Q*p^2 proves that all these primes are good for the intermediate level and that the arithmetic extensions at Q*p and M*p coincide. Existing original local conjugacy proves the local-value transport. No weight normalization, support equality, embedding compatibility, Galois realization for the boundary branch, Frobenius formula or inertia triviality is supplied to the final consumer. The actual original weight-two cusp forms construct normalized Eichler primitives whose derivatives are the forms and whose limits at every original integral cusp are finite. Real-part invariance and these limits imply constancy by a removable cusp singularity and the complex maximum principle. Original polynomial cusp periods evaluated at the constant degree-zero form give native additive characters and exact primitive shifts. A kernel relation for their actual even/odd period pair supplies mixed primitive invariance, forcing f+g and g-f to vanish. Thus the native period pair is injective with image in the same exact parabolic character space returned by the residual lift. Existing finite native trivial H1 gives finite parabolic characters and the unconditional lower bound 2*dim S_2(Gamma0 N) <= dim parabolicHoms N. No holomorphy, cusp limits, primitive normalization, period invariance, period injectivity or dimension inequality is assumed.",
+  "boundary": "The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,200-module scope: all thirteen retained regressions, 36,708 exhaustive theorem checks, 15,743 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_parabolicLift_or_residualGalois",
+    "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois_charP",
+    "Dubon2026.sourceWeightTwoParabolicPeriodPair_injective",
+    "Dubon2026.sourceWeightTwoPeriod_dimension_lower"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-20T22:53:18.919495+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceLocalCyclotomicAction",
+        "SourceOriginalCyclotomicLocal",
+        "SourceDiagonalUnitPair",
+        "SourceBoundaryGaloisRepresentation",
+        "SourceBoundaryGaloisLocal",
+        "SourceResidualGaloisAlternative",
+        "SourcePrimitiveGaloisAlternative"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLocalCyclotomicAction.lean",
+          "sha256": "BA4AEB3AC1E8539A089B468D53492AA981E85DFADC71961D97A313B2A095E3FE",
+          "oleanSha256": "E0FA9EFBE6DFBFE780AF4537393BCE7308BC78C8DAE9827C2CF17986879CDDD4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCyclotomicLocal.lean",
+          "sha256": "D4FBC30350F8BA709611C64687E192033B07B9BE51990B7BA59434428B083EE1",
+          "oleanSha256": "770050DC8341C757E7501A594DC7E32055BAD36E8B4BE355A85949A45D29BFBF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiagonalUnitPair.lean",
+          "sha256": "5DC1F47D74B8FC9149833ED49D060644EE167B1B0A3CD7BAE2AC3A8F5ECE1477",
+          "oleanSha256": "6158939C9DBA36CB170D06E6E28F2B1EDB9C2B6BB1F04038A2E8CA1AE54822E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryGaloisRepresentation.lean",
+          "sha256": "B794D601246C48AD5C0A91B626F0FE855441044523D485F96FEA0EE67B97FBC2",
+          "oleanSha256": "800F038FF539E9EE663B3CA37B424956BD994A84E30B1DDFE065C96E61F294FF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryGaloisLocal.lean",
+          "sha256": "EFF41FD203C60003753A42FE3099314D9740DFD121D2BC180D9AD203FB6D167D",
+          "oleanSha256": "45D304E50747FF53CE7033BBECE2D34DAE29539797C7E57A45C076A7DBCE2375"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualGaloisAlternative.lean",
+          "sha256": "ECBA1240A1DD2794DC403BED8C8B958DA520AE09D20D300935F813A1BA1F0A99",
+          "oleanSha256": "6548BAB9811E9A8C81F28E123AF9882EAAEA3D6A6AE2AAE452B3FDE5B2686C1E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGaloisAlternative.lean",
+          "sha256": "342844CE0C3B9A46DDE003CD82AD797B43788F9B28C2EA47A3A43CED75472260",
+          "oleanSha256": "8703C64F53417B473BA77370309E45E9712963B8579F9AFC3D4E3A3930D249CD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceLocal_roots_eq_of_residue_eq",
+        "Dubon2026.sourceLocal_frobenius_root",
+        "Dubon2026.sourceLocal_inertia_root",
+        "Dubon2026.sourceOriginalClosureResidue_charP",
+        "Dubon2026.sourceOriginalCyclotomic_frobenius",
+        "Dubon2026.sourceOriginalCyclotomic_inertia",
+        "Dubon2026.sourceArithmeticCyclotomic_frobenius",
+        "Dubon2026.sourceArithmeticCyclotomic_inertia",
+        "Dubon2026.sourceDiagonalUnitPair_val",
+        "Dubon2026.sourceDiagonalUnitPair_trace",
+        "Dubon2026.sourceDiagonalUnitPair_det",
+        "Dubon2026.sourceDiagonalUnitPair_eq_one",
+        "Dubon2026.sourceBoundaryGaloisRepresentation_continuous",
+        "Dubon2026.sourceBoundaryGaloisRepresentation_trace",
+        "Dubon2026.sourceBoundaryGaloisRepresentation_det",
+        "Dubon2026.sourceBoundaryGalois_frobenius_trace",
+        "Dubon2026.sourceBoundaryGalois_frobenius_det",
+        "Dubon2026.sourceBoundaryGalois_inertia",
+        "Dubon2026.sourceTrivialH1Eigen_parabolicLift_or_galoisRep",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep_charP",
+        "Dubon2026.sourceDiagonalUnitPair",
+        "Dubon2026.sourceBoundaryGaloisFiniteRepresentation",
+        "Dubon2026.sourceBoundaryGaloisRepresentation"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceLocal_roots_eq_of_residue_eq",
+        "Dubon2026.sourceLocal_frobenius_root",
+        "Dubon2026.sourceLocal_inertia_root",
+        "Dubon2026.sourceOriginalClosureResidue_charP",
+        "Dubon2026.sourceOriginalCyclotomic_frobenius",
+        "Dubon2026.sourceOriginalCyclotomic_inertia",
+        "Dubon2026.sourceArithmeticCyclotomic_frobenius",
+        "Dubon2026.sourceArithmeticCyclotomic_inertia",
+        "Dubon2026.sourceDiagonalUnitPair_val",
+        "Dubon2026.sourceDiagonalUnitPair_trace",
+        "Dubon2026.sourceDiagonalUnitPair_det",
+        "Dubon2026.sourceDiagonalUnitPair_eq_one",
+        "Dubon2026.sourceBoundaryGaloisRepresentation_continuous",
+        "Dubon2026.sourceBoundaryGaloisRepresentation_trace",
+        "Dubon2026.sourceBoundaryGaloisRepresentation_det",
+        "Dubon2026.sourceBoundaryGalois_frobenius_trace",
+        "Dubon2026.sourceBoundaryGalois_frobenius_det",
+        "Dubon2026.sourceBoundaryGalois_inertia",
+        "Dubon2026.sourceTrivialH1Eigen_parabolicLift_or_galoisRep",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceDiagonalUnitPair",
+        "Dubon2026.sourceBoundaryGaloisFiniteRepresentation",
+        "Dubon2026.sourceBoundaryGaloisRepresentation"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryGaloisAudit7.log",
+      "logSha256": "1C98990E78935C920CE835F60819028AC642734A95152C89F68AB83DF5768837",
+      "auditSha256": "D69D8E904BA84D48B5E79973C18DC7E97CA0D5755F368C75A036231214B93D10",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 456,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryGaloisDependencyAudit.log",
+      "dependencyAuditSha256": "E2BAE7A365E97A54686EF3763F457E55F8FD1EA35E7BF9A69E23917446CE455D",
+      "dependencyAuditSourceSha256": "C907C53A829C3487AA6FC515A3D4AD7FAE1BD7BC14CF731E042A7F49B34D17AA",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep_charP"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> actual original weight-two eigenclass -> residual Dirichlet pair -> original arithmetic Galois representation with exact original Frobenius trace/determinant and original norm-inertia triviality.",
+      "discharged": "The actual residual Dirichlet pair constructs a continuous two-dimensional representation of the original rational arithmetic Galois group at support M*p. At every original local residue Frobenius away from M and p its trace is the actual weight-two eigenvalue and its determinant is ell; it kills the original norm inertia at those primes. The native residue-root separation and original residue cardinality prove the exact cyclotomic Frobenius and inertia formulas through the same original arithmetic restriction. The actual primitive-form consumer preserves the genuine local field, residue characteristic, level bounds and Fourier factor, returning either the actual parabolic complex lift or this constructed Galois realization. No Galois representation, continuity, cyclotomic Frobenius formula or inertia triviality is supplied for the character branch.",
+      "boundary": "Scratch only; production promotion and verification pending. The parabolic complex branch still requires geometric Galois realization. The weight-two Fourier factor must be undone by the exact cyclotomic twist, and the resulting representation must be compared with the original support and original coefficient normalization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-boundary-galois-reuse-review-20261020.json",
+      "reuseReviewSha256": "260A738BED9DF8E47EAB7F2D00CB1C3B1ECBE94C911324A5597759B0146DA869",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-20T23:16:59.760839+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceGaloisCharacterTwist",
+        "SourceArithmeticWeightTwist",
+        "SourcePrimitiveWeightRestoration",
+        "SourceArithmeticSupportPowers",
+        "SourceArithmeticSupportLocalValues",
+        "SourcePrimitiveOriginalSupport",
+        "SourceOriginalWeightResidualConsumer"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGaloisCharacterTwist.lean",
+          "sha256": "CB04DB231438CC639075A16390D1977C2FB3B6056A587020B8D5056CE215435A",
+          "oleanSha256": "D8D53ADA3C213DF7842D021C7573D157A59628D34F39A664550475F4D31DF166"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticWeightTwist.lean",
+          "sha256": "553D27BA52598D298D37FF05BA54009995037960986BBE6C95AFFD0FCDA8882B",
+          "oleanSha256": "4F8914E1D6391B2CED26EE27FE4F7E3986D67AB5FA6A35C5CD18BE3747409158"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWeightRestoration.lean",
+          "sha256": "2F2CCC891C6734A4F622C01C1FDE81AF2915C5D38938155BFEF757578CB111F0",
+          "oleanSha256": "1EBCBB9E9684B9928F5D67A7142E49008DBAE2DB703482AB1469FE20F7435F1E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticSupportPowers.lean",
+          "sha256": "CC67BE8F465D0D4EC86AFBAA6C0C8D47D63ECF71B16F0B49ADC559D2B5E31D32",
+          "oleanSha256": "FBC7ED43702E4E7F7ACA70F7A99177274F0D1ABD8F52FFA1E30A036D3AE382A2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticSupportLocalValues.lean",
+          "sha256": "E7D99CEE015CF6D2C52C00C8DC355A9E98DF153F3A4767962EE7BAE9DED13D2B",
+          "oleanSha256": "A35D21B524D34F6CACF3201CCB882EAA8B00A8D1530AA26AAAF13A3297DCD271"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalSupport.lean",
+          "sha256": "BEE06B2A8220ECCB614831A735EF841D1D0F02C9DDAF3110CA0C70CFC4A9B701",
+          "oleanSha256": "082C4AA811F23DBD5E0364C00476BBDE1A09B0809BDB639E9B222992FD46C412"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightResidualConsumer.lean",
+          "sha256": "B98D72A4B4257FBFDF8608A32401A2E01B62AD513E701DE435B5192C137BB246",
+          "oleanSha256": "8BA4E346ECFD14EBE8A8FD599939FC31A9984919A10D300FDA3B48210C82E66A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGaloisCharacterTwist_val",
+        "Dubon2026.sourceGaloisCharacterTwist_continuous",
+        "Dubon2026.sourceGaloisCharacterTwist_trace",
+        "Dubon2026.sourceGaloisCharacterTwist_det",
+        "Dubon2026.sourceGaloisCharacterTwist_eq_one",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_frobenius",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_inertia",
+        "Dubon2026.sourceArithmeticWeightTwist_continuous",
+        "Dubon2026.sourceArithmeticWeightTwist_frobenius_trace",
+        "Dubon2026.sourceArithmeticWeightTwist_frobenius_det",
+        "Dubon2026.sourceArithmeticWeightTwist_inertia",
+        "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois",
+        "Dubon2026.sourceUnramifiedUnion_mono_dvd_pow",
+        "Dubon2026.sourceWeightTwo_arithmeticExtension_eq",
+        "Dubon2026.sourceArithmeticSupportRestriction_injective",
+        "Dubon2026.sourceArithmeticSupport_exists_representation",
+        "Dubon2026.sourceArithmeticSupport_local_trace",
+        "Dubon2026.sourceArithmeticSupport_local_det",
+        "Dubon2026.sourceArithmeticSupport_local_eq_one",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_parabolicLift_or_residualGalois",
+        "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois_charP",
+        "Dubon2026.sourceGaloisCharacterTwist",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter",
+        "Dubon2026.sourceArithmeticWeightTwist"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGaloisCharacterTwist_val",
+        "Dubon2026.sourceGaloisCharacterTwist_continuous",
+        "Dubon2026.sourceGaloisCharacterTwist_trace",
+        "Dubon2026.sourceGaloisCharacterTwist_det",
+        "Dubon2026.sourceGaloisCharacterTwist_eq_one",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_frobenius",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_inertia",
+        "Dubon2026.sourceArithmeticWeightTwist_continuous",
+        "Dubon2026.sourceArithmeticWeightTwist_frobenius_trace",
+        "Dubon2026.sourceArithmeticWeightTwist_frobenius_det",
+        "Dubon2026.sourceArithmeticWeightTwist_inertia",
+        "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois",
+        "Dubon2026.sourceUnramifiedUnion_mono_dvd_pow",
+        "Dubon2026.sourceWeightTwo_arithmeticExtension_eq",
+        "Dubon2026.sourceArithmeticSupportRestriction_injective",
+        "Dubon2026.sourceArithmeticSupport_exists_representation",
+        "Dubon2026.sourceArithmeticSupport_local_trace",
+        "Dubon2026.sourceArithmeticSupport_local_det",
+        "Dubon2026.sourceArithmeticSupport_local_eq_one",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_parabolicLift_or_residualGalois",
+        "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGaloisCharacterTwist",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter",
+        "Dubon2026.sourceArithmeticWeightTwist"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightAudit7.log",
+      "logSha256": "AB1EFAA1793F401AEF8EB6B321EEA4C3E74A8A1C3098940CA78AE898074E4B21",
+      "auditSha256": "45567CD4CF254948833CAE771C7B4AD4899CCCD2D40F5E5C1D9D2336301D074A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 485,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightDependencyAudit.log",
+      "dependencyAuditSha256": "BCA0BD7793E656D18C9D4BE56B5CD7B8C56EA4C6691C7B5C71AAD68850A50A25",
+      "dependencyAuditSourceSha256": "4689B532063957AA74C1A52BB065C8DDE4F7F90B5C5F69777472822352E4836B",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_parabolicLift_or_residualGalois",
+        "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois_charP"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> original weight-two parabolic-lift/Galois alternative -> exact cyclotomic weight twist and original Fourier residue normalization -> original arithmetic support and local values.",
+      "discharged": "Every original primitive form of source weight k>=2 and every prescribed prime construct its genuine local coefficient field and either the nonzero original parabolic complex H1 eigenclass with simultaneous integral reduction or a continuous rank-two residual Galois representation on the arithmetic group of support Q*p. On every good prime ell of the original level Q distinct from p, the trace at every original residue Frobenius is the actual original Fourier coefficient reduced through the constructed local embedding, and the determinant is ell^((k-1).toNat). The representation kills original norm inertia there. The source parity theorem proves the exact twist exponent, Q|M|Q*p^2 proves that all these primes are good for the intermediate level and that the arithmetic extensions at Q*p and M*p coincide. Existing original local conjugacy proves the local-value transport. No weight normalization, support equality, embedding compatibility, Galois realization for the boundary branch, Frobenius formula or inertia triviality is supplied to the final consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. The parabolic complex branch still requires geometric Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weight-reuse-review-20261020.json",
+      "reuseReviewSha256": "94F221CC4B3C41D23554A2243B08C280C33630EB62A6F6E7AA818FD4267E2A49",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-21T00:00:08.926278+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceRealPeriodicity",
+        "SourceCuspRealMaximum",
+        "SourceInvariantRealPart",
+        "SourceReflectedPrimitive",
+        "SourceSL2Reflection",
+        "SourceMixedPrimitiveVanishing",
+        "SourceWeightTwoAnalyticPrimitive",
+        "SourceWeightTwoPrimitiveCusps",
+        "SourceWeightTwoMixedInjectivity",
+        "SourceWeightTwoPeriods",
+        "SourceWeightTwoPeriodPair",
+        "SourceWeightTwoParabolicPeriods",
+        "SourceWeightTwoPeriodDimension"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRealPeriodicity.lean",
+          "sha256": "26EFA2B54D3270F611F2D84A0884B399E03B4920893BE8BD6BFD686A0B455D5A",
+          "oleanSha256": "0E46206FE639603CF51BED87B7C44AAA96256FF360057236752CA13342BD5D65"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspRealMaximum.lean",
+          "sha256": "B430D04A2E8014503AF1A1D924233D7DC5F6A283515904B860E849E0F6C1921F",
+          "oleanSha256": "39FD869307CDCB4785877A3746AB36943ED89F9B6837492DB4A8B9AF432EB52E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInvariantRealPart.lean",
+          "sha256": "C16617F222ED9C38026ACDE03FFAF59C79DE4B49BB02798181F02643202BA8EF",
+          "oleanSha256": "C55269E2FE8B092A41DFFF6D7533AAB7E48547775F4596DF3FDAAA3C74FA95FC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReflectedPrimitive.lean",
+          "sha256": "7B7C5A1D61048AC4269F309752DF5F1812B2DB4D84A5B1164EFEE3919BAC4AB3",
+          "oleanSha256": "FD82334F9EC1D54C567E11765C688468F134568A73F3779FD57A1F4059C0BEBE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSL2Reflection.lean",
+          "sha256": "5759B9E305F464875BA18C5D938A00F0F5499F9748F85B37D0CF5B408150103D",
+          "oleanSha256": "BA10A08067BBF839C6D2AED1CF9BC21F7AEE36AB2B86082C720B123263FFE03F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMixedPrimitiveVanishing.lean",
+          "sha256": "3B69894363792DCF91C79B633E844CC822697CE818BB70D739D0122210FBEE28",
+          "oleanSha256": "EAF6C9599C39B420D660802D22795D182A604083BCFF146A2FF03C2CA932F8A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoAnalyticPrimitive.lean",
+          "sha256": "C14EC9F87B9DD346D2D3C2163B173AC1F9ABF5B179F8582E4CB500C20BAC005F",
+          "oleanSha256": "B7B356FEC86578CEDF71A5F5EDB5A137F1A25704204D1546F56FE7C3908FBE27"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveCusps.lean",
+          "sha256": "B95BB7BA50916E3DE2CF3B390747DDAA9C64123AF60FED22AC17D3C60168A77F",
+          "oleanSha256": "4F81B182AB01DFEF2B6DC8F26C993ED1D16F8F6AB35F6C53B6B5CFF481DB3772"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoMixedInjectivity.lean",
+          "sha256": "5A753E8A446941CBFE888837C4854330BF8E2755489934716AC016A560653558",
+          "oleanSha256": "81A0BED212BE4190E50B4C30EC2D7CE5E5698E2CE43001A80FCF7873CA7B3976"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriods.lean",
+          "sha256": "4FD622D569471E89419F3A190A5CFD06E033716757A338649E02CF4810991479",
+          "oleanSha256": "4B5F7EA4B51A2EFCB24AE21FAEEB24DAF5BDD747A619A5D6DAE69D2BAA57D86E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodPair.lean",
+          "sha256": "3FE34C2269439ECC7EA030DFA985517E64ECC5839EB0D174941B5106D760BC31",
+          "oleanSha256": "C9CA34DDE4BCA6E65466E99E2C31E36F88CA749D60DF07DA23021C3924E3368F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoParabolicPeriods.lean",
+          "sha256": "8428662270F240A9938F90FF3263F0746A9A9213944BA8E7AA92D2BDAF0216B9",
+          "oleanSha256": "10DF190462BD7C618E27D867A7AFA96CF760CE9467F407581BD37BA9B948A35A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodDimension.lean",
+          "sha256": "45BD1F7FE378F0C8848462EAE918419BE50CC036477981BE14A8704003EA1341",
+          "oleanSha256": "90F59716E2097A41B3C472FE25D10A5F7B8EC4D0EC9328F14E57795C64A4EFCA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceHolomorphic_re_zero_deriv",
+        "Dubon2026.sourceHolomorphic_re_zero_const",
+        "Dubon2026.sourceHolomorphic_period_of_re_period_of_tendsto",
+        "Dubon2026.sourceHolomorphic_re_eq_of_isMaxOn",
+        "Dubon2026.sourceUpperHalfPlane_period_of_re_period_of_tendsto",
+        "Dubon2026.sourceUpperHalfPlane_re_eq_of_cusp_max",
+        "Dubon2026.sourceGamma0_exists_tile_translate",
+        "Dubon2026.sourceGamma0_realPart_constant",
+        "Dubon2026.sourceReflectedPrimitive_hasDerivAt",
+        "Dubon2026.sourceReflectedPrimitive_tendsto",
+        "Dubon2026.sourceJ_smul_SL",
+        "Dubon2026.sourceJConjugateSL_involutive",
+        "Dubon2026.sourceJConjugateSL_mem_Gamma0",
+        "Dubon2026.sourceJConjugateGamma0_involutive",
+        "Dubon2026.sourceJConjugateSL_mul",
+        "Dubon2026.sourceJConjugateSL_one",
+        "Dubon2026.sourceMixedPrimitive_derivative_zero",
+        "Dubon2026.sourceWeightTwoPrimitive_hasDerivAt",
+        "Dubon2026.sourceWeightTwoPrimitive_transform",
+        "Dubon2026.sourceWeightTwoPrimitive_tendsto",
+        "Dubon2026.sourceWeightTwoPrimitive_exists_cusp_limit",
+        "Dubon2026.sourceWeightTwo_mixedPrimitive_injective",
+        "Dubon2026.sourceWeightTwoConstant_fixed",
+        "Dubon2026.sourceWeightTwoPeriodValue_apply",
+        "Dubon2026.sourceWeightTwoPeriodValue_cocycle",
+        "Dubon2026.sourceWeightTwoPeriodValue_mul",
+        "Dubon2026.sourceWeightTwoPrimitive_period",
+        "Dubon2026.sourceWeightTwo_period_relation_zero",
+        "Dubon2026.sourceWeightTwoPeriodReflection_involutive",
+        "Dubon2026.sourceWeightTwoPeriodPair_injective",
+        "Dubon2026.sourceWeightTwoPeriodValue_eq_zero_of_fix",
+        "Dubon2026.sourceWeightTwo_cusp_translation_fix",
+        "Dubon2026.sourceWeightTwoPeriodHom_parabolic",
+        "Dubon2026.sourceJConjugateSL_trace",
+        "Dubon2026.sourceWeightTwoPeriodReflection_parabolic",
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_injective",
+        "Dubon2026.sourceWeightTwoCharacter_finite",
+        "Dubon2026.sourceWeightTwoParabolic_finite",
+        "Dubon2026.sourceWeightTwoPeriod_dimension_lower",
+        "Dubon2026.sourceJConjugateSL",
+        "Dubon2026.sourceJConjugateGamma0",
+        "Dubon2026.sourceJConjugateGamma0Hom",
+        "Dubon2026.sourceWeightTwoPrimitive",
+        "Dubon2026.sourceWeightTwoConstant",
+        "Dubon2026.sourceWeightTwoPeriodValue",
+        "Dubon2026.sourceWeightTwoPeriodHom",
+        "Dubon2026.sourceWeightTwoPeriodReflection",
+        "Dubon2026.sourceWeightTwoPeriodPair",
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceHolomorphic_re_zero_deriv",
+        "Dubon2026.sourceHolomorphic_re_zero_const",
+        "Dubon2026.sourceHolomorphic_period_of_re_period_of_tendsto",
+        "Dubon2026.sourceHolomorphic_re_eq_of_isMaxOn",
+        "Dubon2026.sourceUpperHalfPlane_period_of_re_period_of_tendsto",
+        "Dubon2026.sourceUpperHalfPlane_re_eq_of_cusp_max",
+        "Dubon2026.sourceGamma0_exists_tile_translate",
+        "Dubon2026.sourceGamma0_realPart_constant",
+        "Dubon2026.sourceReflectedPrimitive_hasDerivAt",
+        "Dubon2026.sourceReflectedPrimitive_tendsto",
+        "Dubon2026.sourceJ_smul_SL",
+        "Dubon2026.sourceJConjugateSL_involutive",
+        "Dubon2026.sourceJConjugateSL_mem_Gamma0",
+        "Dubon2026.sourceJConjugateGamma0_involutive",
+        "Dubon2026.sourceJConjugateSL_mul",
+        "Dubon2026.sourceJConjugateSL_one",
+        "Dubon2026.sourceMixedPrimitive_derivative_zero",
+        "Dubon2026.sourceWeightTwoPrimitive_hasDerivAt",
+        "Dubon2026.sourceWeightTwoPrimitive_transform",
+        "Dubon2026.sourceWeightTwoPrimitive_tendsto",
+        "Dubon2026.sourceWeightTwoPrimitive_exists_cusp_limit",
+        "Dubon2026.sourceWeightTwo_mixedPrimitive_injective",
+        "Dubon2026.sourceWeightTwoConstant_fixed",
+        "Dubon2026.sourceWeightTwoPeriodValue_apply",
+        "Dubon2026.sourceWeightTwoPeriodValue_cocycle",
+        "Dubon2026.sourceWeightTwoPeriodValue_mul",
+        "Dubon2026.sourceWeightTwoPrimitive_period",
+        "Dubon2026.sourceWeightTwo_period_relation_zero",
+        "Dubon2026.sourceWeightTwoPeriodReflection_involutive",
+        "Dubon2026.sourceWeightTwoPeriodPair_injective",
+        "Dubon2026.sourceWeightTwoPeriodValue_eq_zero_of_fix",
+        "Dubon2026.sourceWeightTwo_cusp_translation_fix",
+        "Dubon2026.sourceWeightTwoPeriodHom_parabolic",
+        "Dubon2026.sourceJConjugateSL_trace",
+        "Dubon2026.sourceWeightTwoPeriodReflection_parabolic",
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_injective",
+        "Dubon2026.sourceWeightTwoCharacter_finite",
+        "Dubon2026.sourceWeightTwoParabolic_finite",
+        "Dubon2026.sourceWeightTwoPeriod_dimension_lower"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceJConjugateSL",
+        "Dubon2026.sourceJConjugateGamma0",
+        "Dubon2026.sourceJConjugateGamma0Hom",
+        "Dubon2026.sourceWeightTwoPrimitive",
+        "Dubon2026.sourceWeightTwoConstant",
+        "Dubon2026.sourceWeightTwoPeriodValue",
+        "Dubon2026.sourceWeightTwoPeriodHom",
+        "Dubon2026.sourceWeightTwoPeriodReflection",
+        "Dubon2026.sourceWeightTwoPeriodPair",
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPairAudit13.log",
+      "logSha256": "DCFE3CF5E22DC1CE1C02D3C8E21CDA769B008B7DC98FC190D4A978832393E307",
+      "auditSha256": "2B4E5DF99BA709CDFDF6D4399FB1DDFF3CC0DD9BDE6BA107D7B9F4DE9313388A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 101,
+      "linterScopes": 13,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 51,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPairDependencyAudit.log",
+      "dependencyAuditSha256": "281227B347FB4EF3487D624CAB6F2806BD98E476665DA780C4EFA7DA68EE390C",
+      "dependencyAuditSourceSha256": "506FC322E3E6D2105B4F91715C2EFA6E04EF992D3CAC1361B9ABF56CAD3D5ED3",
+      "consumers": [
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_injective",
+        "Dubon2026.sourceWeightTwoPeriod_dimension_lower"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> the original parabolic complex weight-two Hecke lift -> genuine cusp-form Hecke realization -> injectivity and parabolic image of the actual period pair.",
+      "discharged": "The actual original weight-two cusp forms construct normalized Eichler primitives whose derivatives are the forms and whose limits at every original integral cusp are finite. Real-part invariance and these limits imply constancy by a removable cusp singularity and the complex maximum principle. Original polynomial cusp periods evaluated at the constant degree-zero form give native additive characters and exact primitive shifts. A kernel relation for their actual even/odd period pair supplies mixed primitive invariance, forcing f+g and g-f to vanish. Thus the native period pair is injective with image in the same exact parabolic character space returned by the residual lift. Existing finite native trivial H1 gives finite parabolic characters and the unconditional lower bound 2*dim S_2(Gamma0 N) <= dim parabolicHoms N. No holomorphy, cusp limits, primitive normalization, period invariance, period injectivity or dimension inequality is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-pair-reuse-review-20261020.json",
+      "reuseReviewSha256": "BE6DBFF672B7AF0FD2C614794ED0A04E575B072BB5D69298C13893ECB410BEE6",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-boundary-galois-reuse-review-20261020.json",
+    "Tools/source-original-weight-reuse-review-20261020.json",
+    "Tools/source-period-pair-reuse-review-20261020.json"
+  ],
+  "productionFocusedReceipt5200": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryGaloisDependencyAuditProduction5200.log",
+        "sha256": "E2BAE7A365E97A54686EF3763F457E55F8FD1EA35E7BF9A69E23917446CE455D",
+        "requiredProofValueEdges": 456,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep",
+          "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep_charP"
+        ],
+        "sourceSha256": "03C090E91547A12775BC6654D98F8FF6772441CF7BDC86CBC0E1EA25AF6DC76C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightDependencyAuditProduction5200.log",
+        "sha256": "BCA0BD7793E656D18C9D4BE56B5CD7B8C56EA4C6691C7B5C71AAD68850A50A25",
+        "requiredProofValueEdges": 485,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_originalSupport_parabolicLift_or_residualGalois",
+          "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois_charP"
+        ],
+        "sourceSha256": "1A4570B8F525C9959A8E379C0C4DBF746646B5A776F59D530CCFD8B0D1DE92D9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPairDependencyAuditProduction5200.log",
+        "sha256": "281227B347FB4EF3487D624CAB6F2806BD98E476665DA780C4EFA7DA68EE390C",
+        "requiredProofValueEdges": 51,
+        "consumers": [
+          "Dubon2026.sourceWeightTwoParabolicPeriodPair_injective",
+          "Dubon2026.sourceWeightTwoPeriod_dimension_lower"
+        ],
+        "sourceSha256": "F21DBC79AA255301E44CAFCDEF61D4C688D15B9EC869B2F7A1BB710E513F9E9D"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualPeriodsProductionAudit5200.log",
+    "sha256": "33D270F5F7FEA5C9E5A51E80C435FD21E8DA9EAF752C972509376DC3F68EAE75",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-residual-galois-periods-production-5200-build.log",
+    "aggregateSha256": "EAB73F146D35771D2AAB2951701FF80BC833FF5C546AEB8890EB86BB5BCB0C87",
+    "productionModules": 5200,
+    "incrementModules": 27,
+    "axiomChecks": 97,
+    "exhaustiveIncrementTheorems": 147,
+    "linterScopes": 27,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 148,
+    "generatedOriginReconciliation": {
+      "theorem": "UpperHalfPlane.im.eq_1",
+      "scratchOrigin": "SourceReflectedPrimitive",
+      "productionOrigin": "Dubon2026.CuspVerticalProfile",
+      "completeTheoremComparisons": [
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_0.log",
+          "sha256": "BDCC4081F1CD782B1648D2F78E7F9ECAB56E330E3DA2633BA42454803EF12761"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_1.log",
+          "sha256": "F6768B2EE0047B9CB7FBD0790243908B7712B2AABE87F40D49B2397D33AEF50C"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_2.log",
+          "sha256": "BEF9EDBF86E2F58EC28B9F8D44401BC4ADC292E8D36B619A1F4C2A3372A2C137"
+        },
+        {
+          "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_3.log",
+          "sha256": "A14A35AF29D8EB428B7D2145CDD3CA5423923425A8EF7F48EF0E62876C564AB1"
+        }
+      ],
+      "originLog": "E:\\Lean\\.tmp\\dubon83\\ResidualGeneratedAggregateOrigin5200.log",
+      "originSha256": "1ACAFA70F1A22264C0130EF2AD38EBF8B899E2E2E2D4463A9BB1BFC9302725F5",
+      "printedTypeAndProofHashes": {
+        "Scratch": "0A2F98C45BF2DB9CD89760443FCD95217E95FD14F984945984F886A093BAE67E",
+        "Production": "0A2F98C45BF2DB9CD89760443FCD95217E95FD14F984945984F886A093BAE67E"
+      }
+    },
+    "boundary": "The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open."
+  },
+  "receipt5200": {
+    "recordedUTC": "2026-10-21T01:39:49.952460+00:00",
+    "log": "logs/dubon-build-20261020-172704-365.log",
+    "sha256": "EE3C7F8B888728059D43F6496A04974AC99903746D8FDC4A31D1EDDF1A8FF7BC",
+    "bytes": 8904086,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5200,
+    "projectTheorems": 36708,
+    "registeredConsumers": 15743,
+    "registeredConstructions": 718,
+    "declarations": 21861,
+    "generated": 20680,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_172408.log",
+    "foundationSha256": "45AD1BE953F9363E8388BF0519FD96EB6C62078A209E57CDB79CA3679327258C",
+    "boundary": "The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open."
+  }
+}

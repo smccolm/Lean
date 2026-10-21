@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> character-to-weight-two reduction -> lifting an actual character H1 eigenclass through a coefficient surjection -> native Gamma0 H2 vanishing after inverting six -> the actual free Gamma4 intersection and its index dividing 48.",
+  "precedingScratchReceipts": {
+    "source-character-19-scratch-receipt.json": "DCA55FA0772214BA84E205839C1AC3355C67FDB9FFD58A657DB605F468C8909F"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedCohomologyTrace.lean",
+      "sha256": "7931C2238F3094BF74A5131D489A3767565B080AC012A711D522C3763CDDD59F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCommutingPrescribedEigenvector.lean",
+      "sha256": "368AA94B190457C62880D55E072422565E0ECF37B92D52F0D077F65CAE43177F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Homological\\GroupCohomology\\LongExactSequence.lean",
+      "sha256": "4EE4F2C23D7CEA9823902E3DD48D9A632BC4CA2D2E1618D19244F0D11C08F162"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeEigenvectorLift.lean",
+      "sha256": "945C4538BE502BB4B26011599028DC5E2D04F9DDA6D297F4F09767D5415E516C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_TW12CD1Dock_subsingleton_H2_gamma0.lean.txt",
+      "sha256": "3B9653A58DA1658631A5257976305834E41F23723FE547A3780567E2B6D6F8B6"
+    }
+  ],
+  "reuseSearch": "Checked the existing native coinduced trace, prescribed eigenvector lifting, finite Gamma0 H1 and pinned native long exactness before porting the free subgroup argument.",
+  "routeAdjustment": "Reuse of the local coinduced cohomology comparison removes the external finite-index trace development. A direct injective subgroup homomorphism and native Nielsen-Schreier replace a longer equivalence chain. Incidental congruence subgroup generalizations and unused ping-pong-domain lemmas were deferred.",
+  "discharged": "Native H2 of every actual Gamma0 coefficient representation vanishes when six is invertible. The actual integral unipotent matrices generate a free subgroup, proved through reduced words and strict coordinate growth. Integral entry descent places Gamma4 in that subgroup; native Nielsen-Schreier makes its intersection with Gamma0 free. Its genuine index divides the kernel-checked order 48 of SL2(ZMod 4). The existing native coinduced cohomology trace transfers free-group H2 vanishing. Native long exactness then proves H1 surjectivity for every actual coefficient surjection, and the existing finite prescribed-eigenvector theorem lifts a nonzero commuting H1 eigensystem. No freeness, subgroup index, H2 vanishing, H1 surjectivity, finite H1 or nonzero lifted eigenclass is assumed.",
+  "remaining": "The actual function-representation character-to-weight-two consumer, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

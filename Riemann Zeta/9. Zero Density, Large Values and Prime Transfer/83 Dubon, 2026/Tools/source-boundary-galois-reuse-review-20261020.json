@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> actual original weight-two eigenclass -> residual Dirichlet pair -> original arithmetic Galois representation with exact original Frobenius trace/determinant and original norm-inertia triviality.",
+  "precedingScratchReceipts": {
+    "source-parabolic-boundary-17-scratch-receipt.json": "4BA3C750B4A1F78605AFC44944482EA9C02ECC5936822A0DD4402D1731A55262"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\LocalResidueRootSeparation.lean",
+      "sha256": "8B24F3023EAA80CA7143BEFC91AB1DECA65532B26CF9EBF74C6C84EA3B370622"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalPrimeNormResidueCard.lean",
+      "sha256": "1CDA0DD10A7244C8A1738EDE6D0F68F68346056A7FC51123AD83D4E786A44D35"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticCyclotomicCharacter.lean",
+      "sha256": "6BB9B14B3AF4054A62888344F4D30C038DC21A1C5BEC366E2A140020676E834D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticCyclotomicRestriction.lean",
+      "sha256": "5E6E8B9F3C3FEB2DB2C09CD54A7B287B6ABF3C7F64986E550C3629A0019C5F63"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalPrimeCyclotomicCharacter.lean",
+      "sha256": "E14880CF11D46154837C08E4445D8D719A9406385B9D656F176017E3FE0A106A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightTwo.lean",
+      "sha256": "F603F2AF3877429921C0B051CAB5516C9CEE71B2406A514217D476D7212CAE15"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_GaloisRep_exists_galoisRep_trace_eq_add_mul_of_unitsHom.lean.txt",
+      "sha256": "5DE8C990BF33B46EE162CC7C178DDDB1F23C350E50E4F5B00696FD5C96934B21"
+    }
+  ],
+  "reuseSearch": "Checked original arithmetic and local cyclotomic characters, actual global/local restriction, original norm residue cardinality and root separation, and the archived diagonal-character Galois construction.",
+  "routeAdjustment": "Reuse the original rational completion and arithmetic Galois group throughout. Native root separation derives exact local Frobenius and inertia actions; finite cyclotomic factorization gives continuity. This avoids the external separate valuation-subring model, absolute-Galois finite-level wrapper and a new residue action. The required trace/determinant and inertia consumers are proved for the same original arithmetic restriction. The external diagonal calculation is adapted to the pinned Pi.monoidHom API without source options or global instance removals.",
+  "discharged": "The actual residual Dirichlet pair constructs a continuous two-dimensional representation of the original rational arithmetic Galois group at support M*p. At every original local residue Frobenius away from M and p its trace is the actual weight-two eigenvalue and its determinant is ell; it kills the original norm inertia at those primes. The native residue-root separation and original residue cardinality prove the exact cyclotomic Frobenius and inertia formulas through the same original arithmetic restriction. The actual primitive-form consumer preserves the genuine local field, residue characteristic, level bounds and Fourier factor, returning either the actual parabolic complex lift or this constructed Galois realization. No Galois representation, continuity, cyclotomic Frobenius formula or inertia triviality is supplied for the character branch.",
+  "remaining": "The parabolic complex branch still requires geometric Galois realization. The weight-two Fourier factor must be undone by the exact cyclotomic twist, and the resulting representation must be compared with the original support and original coefficient normalization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "ancillaryTheorems": [
+    "Dubon2026.sourceDiagonalUnitPair_eq_one"
+  ],
+  "ancillaryReason": "The individually audited diagonal identity convenience lemma is not a required dependency: the finite representation homomorphism's map_one proves the actual original inertia statement directly.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> nonzero original residual H1 eigensystem -> realization of the prescribed character on the actual coefficient reduction.",
+  "precedingScratchReceipts": {
+    "source-h1-character-5-scratch-receipt.json": "0A577FFF768F349D1E7261FD41854FABA93B8DDBEAAC78D8C99A602BC2E8F1C4",
+    "source-h1-tensor-7-scratch-receipt.json": "F9277915233545E2934BCC8373E43C6EFAFC57AD7F5C4AF9841F4E9DF232C670"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualH1Character.lean",
+      "sha256": "650E03AEA38948C7A0063DBA8F440CD22D6198DFEA016F3AB74DED7B9E816282"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1TensorInjection.lean",
+      "sha256": "BFE0E8B10DA11B6DD9672D0571AAB62FA3585F709E7B0448623EC409CF54D403"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1TensorChange.lean",
+      "sha256": "368D76896F3DDB84AD8F89872E5692C6EFCD44ADDAE217E6A9A21CC968624284"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Artinian\\Module.lean",
+      "sha256": "36DCFDC69809AC738E4F7F36B10EACE1C0F1CE520F8EF96941E6B6A8FA3E2402"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Support.lean",
+      "sha256": "19787677C3343B9FD7DE47A5531D40E55F62B5BFAB6C084E4C212A1C9858161C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Module_exists_ne_zero_forall_baseChange_eq_smul_of_algHom.lean.txt",
+      "sha256": "92FDF0B991FD475D9D021F8EEEE12F8796454B153286FA1646B5500784A3A504"
+    }
+  ],
+  "reuseSearch": "Checked pinned Mathlib support, residue-field, Artinian-module and tensor APIs and the already proved actual H1 character and tensor injection before adapting the archived finite-module eigenvector proof.",
+  "routeAdjustment": "Specialize the operator-algebra consumer to integer coefficients to match the actual integral H1 algebra and reconcile its canonical integer module structure. Use pinned Basis.baseChange and Fitting decomposition. Preserve Apache-2.0 attribution and the archived LICENSE/NOTICE.",
+  "discharged": "A prescribed character of a finite commuting integral operator algebra acting faithfully on a finite integral module is realized by a nonzero common eigenvector after tensoring with its target field. The proof derives nontriviality of the character fiber from support and obtains a common eigenvector with the prescribed eigenvalues using Fitting decomposition. Applied to the actual native integral H1, the previously proved injective tensor coefficient map gives a nonzero residual H1 class with all original good-prime eigenvalues, including the original primitive form and prescribed-prime local reduction. Character realization, tensor nonvanishing and reduction injectivity are derived.",
+  "remaining": "Pairwise commutativity of the full original integral H1 good-prime operators remains an explicit premise. The original residual eigensystem is therefore conditional on precisely that premise. Weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

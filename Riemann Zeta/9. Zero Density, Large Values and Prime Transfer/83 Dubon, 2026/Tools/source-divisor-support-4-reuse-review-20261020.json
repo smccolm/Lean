@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch -> principal divisors -> finite normalized place-order support of actual functions.",
+  "precedingScratchReceipts": {
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_PlacesOverDVR.lean.txt",
+        "sha256": "4786895EAA0B7F27BA9FEC56A58A787F1D1D3EC8BE0E893436E6B1F8293AC7B7"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_finite_setOf_ord_ne_zero_of_finiteDimensional.lean.txt",
+        "sha256": "5C0378FE2EC7572BB181DF279EDFBD0910BD60B7BB7B3789EB4E5D6814D4175E"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental_of_isSeparable.lean.txt",
+        "sha256": "3950E2978CE86D530EA5815C487FC6D362C78EC5418439C8F7BB9AC4564582B5"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\Factorization.lean",
+      "sha256": "81B136EF423959D669C1408429D5504F750A9468D37C82E90D59D3458BF606CC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\IntegralClosure.lean",
+      "sha256": "FB773B9FC1BE55A288EB8032FBAEE220C08061B54431509F47B5A8D41336124D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Localization\\Integral.lean",
+      "sha256": "EDE41F1428294AC4EA57B97D04E9A70B4323775D8031FFDD8A0E2365BAFC7C7E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\RatFunc\\AsPolynomial.lean",
+      "sha256": "F3EA236F7C28EF0A0AFABE162255C34F46ECFA72B1822C4C56165369FA62F980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Valuation\\ValuationSubring.lean",
+      "sha256": "A84CA1BBB002424BDB08471BD5A035FC291CA69ACB8139E2D7F24522560ADB28"
+    }
+  ],
+  "routeAdjustment": "Reuse the already proved finiteness over each transcendental coordinate. Select only the actual Dedekind-chart center proofs. Pinned integral-closure Dedekindness and prime-factor finiteness bound positive support directly. This replaces the external minimal-polynomial coefficient transfer, general ramification fibers and rational-place classification for the finite-support obligation. Exact place-order normalization is preserved.",
+  "discharged": "Every function in the actual original modular function field has only finitely many nonzero normalized place orders. For a transcendental function the proved finite coordinate extension gives a Dedekind integral-closure chart. Actual places containing the chart are identified with their actual prime centers. Pinned finiteness of prime ideal factors bounds the positive support; inversion handles negative support. Algebraic functions have order zero at every actual place. No finite-support or place-classification premise remains.",
+  "remaining": "The degree-zero principal-divisor product formula remains unproved. Canonical divisors, Riemann--Roch, geometric genus and analytic cusp-form realization remain required for the matching dimension lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.Place.ord_eq_zero_iff_adicValuation_eq_one",
+    "Dubon2026.SourceCurve.Place.ord_neg",
+    "Dubon2026.SourceCurve.Place.mem_of_eval_monic_eq_zero",
+    "Dubon2026.SourceCurve.Place.mem_center_iff",
+    "Dubon2026.SourceCurve.Place.centerHeightOneSpectrum_asIdeal"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

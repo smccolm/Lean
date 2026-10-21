@@ -1,6 +1,42 @@
 # Dubon 2026 — reproduction manifest
 
-Injective original period cohomology, faithful coefficient specialization and renewed residual-association research (20 October 2026): The original period map into native group-cohomology H1 is injective for every finite-index subgroup of SL(2,Z), every source weight k=n+2, and every rational base cusp. Its actual original Gamma0 and normalized primitive-form consumers derive a nonzero H1 class. The native H1 kernel gives the dual coboundary; the exact binary action and original Eichler transformation give the corrected invariant primitive. Actual Fourier periodicity makes its polynomial correction constant at each cusp, discharging all-cusp boundedness. Pinned nonpositive-weight vanishing/constancy and original Fourier decay kill the Eichler integral; its proved derivative recovers the original cusp form. No injectivity, nonzero period, primitive invariance or cusp-boundedness premise is supplied to these final consumers. The original primitive cusp form defines a native group-cohomology H1 class through its already proved convergent cusp integrals. The cocycle law, exact dual binary action, complex linearity, base-cusp independence and an explicit coboundary on each rational-cusp stabilizer are proved, with no supplied period cocycle, covariance, or parabolicity assumption. At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed. Exact unresolved source dependency: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> injectivity and nonvanishing of the original analytic period H1 class. DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic. The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The 4,970-module production aggregate and focused exhaustive original period H1 and coefficient specialization audit pass with zero diagnostics. All three proof-value audits pass, including the actual nonzero native H1 class of every original primitive form at every source weight and the faithful specialization of its original Hecke values. Sequential foundation/paper verification of the 4,970-module scope is pending. The preceding 4,958-module coefficient-field and residual eigensystem scope passed sequential canonical verification with zero diagnostics. The shorter analytic route adapts the published negative-weight argument using the already proved original scalar Eichler integral and pinned Mathlib vanishing. A further exact-commit search found an all-weight k>=3 residual Galois-association candidate, beyond the previously inspected weight-two adic endpoints. Its selected proof sources are archived; full transitive audit, pinned replay, original Hecke/H1 comparison remain pending. The actual original coefficient specialization adapter is now proved. This candidate does not supply an all-weight adic system, purity, crystallinity or Sato-Tate. Its complete 3,072-module repository import closure is now Git-blob verified and archived with license, notices and per-file attribution. The raw source scan has no prohibited proof tokens or postulates; 2,221 additional source-option lines and two missing pinned Mathlib imports remain adaptation concerns. An import-closure inspection is not a kernel audit. No root pin, proof limit, source contract or acceptance criterion changed.
+Canonical divisors and finite original regular differentials (20 October 2026): Every actual original valuation ring is essentially of finite type over the constants, hence has a finite local differential module. The proved finite extension over its actual uniformizer supplies a finite integral-closure chart, and the proved center identity gives its localization. The actual algebraic residue field is separable in characteristic zero. Pinned cotangent exactness and Nakayama then show that the actual uniformizer derivative generates the integral local differential module. Consequently the derivative of every integral original-field function has integral local coefficient and nonnegative local differential order. No local finiteness, residue separability, local generation or unramifiedness premise remains in the original consumers. Every nonzero differential on the literal original function field has a finite divisor of its actual normalized local orders. At unramified integral-chart points, the coordinate differential generates the integral differential module, and its local order is zero. The pinned nonzero different ideal bounds the exceptional points by the finite prime support of one nonzero element. The coordinate pole locus is already proved finite. The actual j differential spans the original differential space, and principal finite support extends the result to every nonzero differential. No canonical-divisor or finite differential-support premise remains. The actual original regular differential space is finite-dimensional over algebraically closed constants. The positive-order degree formula applied to an inverse forces every transcendental function to have a pole, so global regular functions are exactly the constants. At each place the kernel of the scaled local residue map is the divisor space with its bound decreased by one. Pinned finite-submodule/quotient theory and induction over the positive part of the actual finite divisor prove every divisor space finite. The actual j-canonical divisor space is explicitly linearly equivalent to the actual regular differential space. No constant-field or divisor-space finiteness assumption remains in the original consumer. The degree of every nonzero original differential equals the degree of the literal j differential. Rank one expresses one nonzero differential as a nonzero scalar multiple of another; their local-order divisors differ by the actual principal divisor of the scalar. Its proved degree zero establishes choice independence. The exact source definition of genus therefore equals the degree expression at the original j canonical divisor. No principal-degree or curve premise remains. For the literal original field, the repartition quotient between two finite divisor bounds is finite-dimensional and its dimension is exactly their degree difference. A scaled local residue map is surjective with kernel the bound decreased by one; pinned quotient isomorphisms and finite-submodule/quotient theory assemble the degree difference. The already proved finite actual residue fields discharge all finiteness inputs. The positive-order degree identity gives an actual place, so bounded global repartitions are linearly equivalent to the proved finite original divisor spaces. Actual principal divisors bound every global function. No finite-residue or nonempty-place premise remains. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> global index stabilization and residue duality -> exact finite local repartition quotient dimensions and bounded global functions. Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. The 5,318-module production aggregate and focused original regular differential audit pass with zero diagnostics. Five proof-value audits verify integral local differential generation, actual canonical finite support, finite original divisor and regular differential spaces, choice-independent canonical degree and exact finite repartition quotient dimensions. The source genus is evaluated at the actual j-canonical divisor. Riemann--Roch, the numerical genus/dimension and actual analytic cusp-form realization remain required. Sequential foundation/paper verification of this scope is pending. The preceding 5,290-module original curve scope passed sequential canonical verification with zero diagnostics. Canonical finite support, finite divisor spaces, finite regular differentials, canonical-degree independence and exact finite repartition quotient dimensions now follow from the literal original function field. The numerical genus and regular-differential dimension, Riemann--Roch and analytic cusp-form realization remain required. The shorter routes reuse pinned cotangent exactness, Nakayama, different ideals and finite-submodule/quotient theory, together with the already proved positive-order degree formula. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original principal divisors and local differential geometry (20 October 2026): For the actual original modular function field, the proved finite extension over the original j coordinate gives a one-dimensional differential space. The literal Euler-derivative kernel gives exactly the base constants. Every actual place uniformizer has order one while constants have order zero, so its differential is nonzero and spans. Thus regularity is equivalent to integrality of the actual local differential coefficient at every place. Q-expansion of the actual regular differential subspace is injective. No local spanning or separability premise remains. The actual original divisor-generated field is essentially of finite type. It is finite over every transcendental coordinate, in particular every actual place uniformizer. Actual regularity equals nonnegative local differential order. Every actual place residue is algebraic over the base: a transcendental residue would put its lifted rational function field, and hence the entire finite extension, in a proper integrally closed valuation ring. Over algebraically closed constants the actual residue map is bijective and the residue is finite. No finite-residue, finite-coordinate or local-spanning premise remains on these consumers. Every function in the actual original modular function field has only finitely many nonzero normalized place orders. For a transcendental function the proved finite coordinate extension gives a Dedekind integral-closure chart. Actual places containing the chart are identified with their actual prime centers. Pinned finiteness of prime ideal factors bounds the positive support; inversion handles negative support. Algebraic functions have order zero at every actual place. No finite-support or place-classification premise remains. Every actual original-field function has a finite normalized-order divisor with degree zero. The actual chart primes and positive-order places correspond bijectively; their normalized orders equal pinned ramification indices, and their residue degrees equal pinned inertia degrees. The pinned ramification/inertia sum gives the degree of the positive divisor. Applying this to the function and its inverse proves degree zero, since both generate the same rational subfield. The integral-closure chart discharges all chart containment, module-finiteness, normalization and scalar-comparison inputs. Over algebraically closed constants the original curve interface is fully derived from these principal divisors, proved finite residues and proved differential rank one; no curve or principal-divisor premise remains. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> Riemann--Roch -> actual original curve: principal-divisor finite support and degree zero, finite residues, and differential rank one. Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,290-module scope: all thirteen retained regressions, 37,556 exhaustive theorem checks, 16,155 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,261-module original arithmetic-genus and differential-expansion scope passed sequential canonical verification with zero diagnostics. The original regular differential space has injective q-expansion and proved local-coordinate regularity; its dimension and identification with actual analytic cusp forms remain required. The new product formula uses pinned ramification sums and prime/place residue and order comparisons, avoiding the general Galois-closure norm route. Earlier scratch reviews remain dated evidence: their former finite-coordinate, finite-residue and principal-divisor obligations are discharged by the assembled consumer here. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original parabolic dimension bound and injective differential expansion (20 October 2026): At every nonzero original level N, actual parabolic characters and one value per original cusp orbit inject into the exact two-term/three-term Manin relation space with one normalization coordinate. Vanishing on actual cusp stabilizers follows from the original squared-trace-four definition. The original S and ST coset actions have orders dividing two and three and are jointly connected by the integral modular-group generators. Pinned orbit counting and dual annihilator dimensions give the unconditional bound 6*dim(parabolicHoms N)+6*#cusps+3*#S-fixed-cosets+4*#ST-fixed-cosets <=12+[SL2(Z):Gamma0 N]. Native H1 finiteness is reused. No cusp potential, injectivity, orbit count, relation rank or parabolic dimension bound is assumed. For every nonzero original level N, the actual Gamma0 index equals the squarefree-divisor Dedekind psi expression, using existing integral SL2 reduction, projective primitive rows, prime-power charts and CRT. One actual quadratic-root/coset bijection gives the S and ST fixed-point counts. Original rational cusp orbits are classified by divisors d of N and units modulo gcd(d,N/d), with normal-form existence and both directions of orbit equivalence proved. Their cardinality equals the exact totient sum. The consumer combines these with the previously proved actual Manin inequality to prove dim_C(parabolicHoms N) <= 2*genusFormula N, with no assumed index, elliptic count, cusp count, normal form or classification. The actual cyclotomic conjugate product descends to rational Laurent series by its literal root-of-unity permutation and Galois action. Every conjugate is realized analytically on the full upper half-plane. Native proved Hecke representatives, integral transition factorizations and residue permutations give the analytic product invariance. Polynomial descent and integral Laurent coefficients put its coefficients in Z[j]. Pinned monic polynomial lifting gives the prime relation. Prime-factor induction and transitivity of integrality derive a monic relation for every nonzero substitution. The actual original divisor-generated field is therefore finite over its original j coordinate. Characteristic zero gives separability and the earlier separating-coordinate consumer proves actual differential q-expansion injective, without the prior monic-relation, separability or nonzero-Euler-derivative premises. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke lift -> cusp-form realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential realization -> injective original differential expansion -> original field finite over j -> actual integral monic relations for all nonzero divisor substitutions. Regular differential dimension, the geometric genus formula and analytic realization by actual cusp forms remain required for the matching cusp-form lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. The arithmetic genus expression is not yet identified with the geometric genus. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,261-module scope: all thirteen retained regressions, 37,348 exhaustive theorem checks, 16,047 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,200-module original residual-Galois and injective-period scope passed sequential canonical verification with zero diagnostics. The actual parabolic space has the arithmetic genus upper bound with index, elliptic and cusp counts proved. The original divisor-generated function field is finite over its literal j coordinate, and differential expansion is injective with monic relations and separability discharged. The matching cusp-form lower dimension bound still requires regular differential dimension, geometric genus and analytic cusp-form realization. Period surjectivity and Hecke/Galois realization remain required. All earlier scratch reviews are dated evidence for their selected scope; their former monic-relation and separability obligations are discharged by the assembled consumer recorded here. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original residual Galois branch and injective parabolic periods (20 October 2026): Every original primitive form of source weight k>=2 and every prescribed prime construct its genuine local coefficient field and either the nonzero original parabolic complex H1 eigenclass with simultaneous integral reduction or a continuous rank-two residual Galois representation on the arithmetic group of support Q*p. On every good prime ell of the original level Q distinct from p, the trace at every original residue Frobenius is the actual original Fourier coefficient reduced through the constructed local embedding, and the determinant is ell^((k-1).toNat). The representation kills original norm inertia there. The source parity theorem proves the exact twist exponent, Q|M|Q*p^2 proves that all these primes are good for the intermediate level and that the arithmetic extensions at Q*p and M*p coincide. Existing original local conjugacy proves the local-value transport. No weight normalization, support equality, embedding compatibility, Galois realization for the boundary branch, Frobenius formula or inertia triviality is supplied to the final consumer. The actual original weight-two cusp forms construct normalized Eichler primitives whose derivatives are the forms and whose limits at every original integral cusp are finite. Real-part invariance and these limits imply constancy by a removable cusp singularity and the complex maximum principle. Original polynomial cusp periods evaluated at the constant degree-zero form give native additive characters and exact primitive shifts. A kernel relation for their actual even/odd period pair supplies mixed primitive invariance, forcing f+g and g-f to vanish. Thus the native period pair is injective with image in the same exact parabolic character space returned by the residual lift. Existing finite native trivial H1 gives finite parabolic characters and the unconditional lower bound 2*dim S_2(Gamma0 N) <= dim parabolicHoms N. No holomorphy, cusp limits, primitive normalization, period invariance, period injectivity or dimension inequality is assumed. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> the original parabolic complex weight-two Hecke lift -> genuine cusp-form Hecke realization -> injectivity and parabolic image of the actual period pair. Original residual branch: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> original weight-two parabolic-lift/Galois alternative -> exact cyclotomic weight twist and original Fourier residue normalization -> original arithmetic support and local values. The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open. Sequential foundation/paper verification passes with zero diagnostics for the 5,200-module scope: all thirteen retained regressions, 36,708 exhaustive theorem checks, 15,743 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,173-module parabolic-lift and residual-character scope passed sequential canonical verification with zero diagnostics. Reuse of actual cyclotomic characters, weight parity, support restriction and local conjugacy supplies the original residual branch. Reuse of the original Eichler series, polynomial period cocycle and native H1 finiteness supplies injective parabolic periods and their lower dimension bound. The reverse dimension bound, surjectivity and geometric Hecke realization remain required. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original primitive-form parabolic lift or residual Dirichlet pair (20 October 2026): Every original primitive form of source weight at least two and every prescribed prime supplies its genuine local coefficient field, residue characteristic, level M with Q dividing M and M dividing Q*p squared, nonzero original residual weight-two class, and exact Fourier twist. That actual class supplies either a nonzero parabolic original complex H1 eigenclass with integral eigenvalues and a simultaneous exact reduction, or two actual residual characters of the level unit group with product one and exact eigenvalues psi1(ell)+ell*psi2(ell). Signed parabolic matrix classification, nonzero finite cusp boundary, the full original prime Hecke orbit sum, commuting boundary operators, the genuine Dirichlet pair and its reduction through the same integral reduction map are all derived. The exact Eisenstein alternative is included as the pair of trivial characters. No boundary function, Hecke compatibility, character pair or parabolic complex lift is supplied. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original all-prime weight-two class -> actual parabolic complex lift or exact residual Dirichlet characters. Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open. Sequential foundation/paper verification passes with zero diagnostics for the 5,173-module scope: all thirteen retained regressions, 36,561 exhaustive theorem checks, 15,662 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,131-module original all-prime weight-two scope passed sequential canonical verification with zero diagnostics. Existing native cohomology, integral SL2 reduction, full Hecke transfer, faithful complex action and integral-reduction extension shorten the archived external route. A minimal-prime eigenvector replaces auxiliary maximal-ideal and finite residue-field machinery; the same theorem supplies the boundary eigenvector. Trivial diamond action is derived from the actual Gamma0 group. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original all-prime weight-two reduction (20 October 2026): Every actual primitive form of every source weight at least two and every prescribed rational prime supplies its genuine local coefficient field and a nonzero original trivial-coefficient H1 eigensystem at a level M with Q dividing M and M dividing Q*p squared. Its good-prime eigenvalues have exactly the Fourier factor ell^((k-2)/2). The actual residual binary class, weight parity, prime-divisible level change, character descent, Eisenstein exception removal, raised-level evaluation, characteristic-two case and characteristic-three odd twist are all derived. The characteristic-three cup primitive constructs an actual affine cocycle in native cohomology. Constant inclusion either has a nonzero class in the range of the actual translation difference, where the existing prescribed-eigenvector theorem applies, or kills the class, where the original cusp functional proves the same-level twist. No residual field, nonzero class, parity, survival, cup primitive, Hecke comparison or finite-dimensionality hypothesis remains at the original primitive-form entry point. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> original all-prime weight-two cohomological input. Geometric residual Galois association, its original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open. Sequential foundation/paper verification passes with zero diagnostics for the 5,131-module scope: all thirteen retained regressions, 36,288 exhaustive theorem checks, 15,529 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,077-module original character-lifting scope passed sequential canonical verification with zero diagnostics. The renewed exact-commit reuse search now supplies the complete required all-prime cohomological reduction from the actual primitive form. Existing native cohomology, Hecke transversals, cusp evaluation and prescribed-eigenvector results replace the external duplicate foundations. A single next-degree Eisenstein argument shortens the characteristic-at-least-five case; the actual signed cup primitive and existing cusp functional shorten characteristic three; pinned odd-weight modular-form vanishing derives parity from the original form. The full external kernel replay and geometric Galois association are not claimed. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original character descent and function-flag lifting (20 October 2026): Every original primitive form of weight at least two and every prescribed rational prime p supply the genuine local coefficient field and a nonzero native H1 eigensystem for the actual one-dimensional character at a level M with Q|M, p|M and M|Q*p. All original good-prime Fourier reductions equal ell^j times the identity-coefficient character eigenvalues, and e+2*j is congruent to the original binary degree modulo p-1. For p away from Q, actual restriction to Gamma0(Q*p) is injective: its original p+1 coset index and finite trace are proved. The exact original Hecke coset equivalence, subgroup conjugation and native representative coboundary correction prove full good-prime Hecke compatibility. The residue-prime-divisibility premise is removed. No local coefficient field, binary eigenclass, surviving character, nonvanishing, index bound or Hecke comparison is assumed. Every nonzero native H1 eigensystem of the actual character d^(2*j), with j<p, lifts after inverting six to a nonzero eigensystem of the original affine function flag with the exact inverse-prime-power eigenvalue twist. The full genuine Hecke operators, their commutativity and leading-coordinate compatibility are derived. Pinned Lagrange interpolation gives the actual prime-field function basis. Native Gamma0 H2 vanishing, finite coefficients and the explicit top monomial give H1 surjectivity and nonzero prescribed eigenclass lifting. No coefficient or cohomological surjectivity, finite H1, commuting full Hecke action or nonzero lifted class is assumed. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> character-to-weight-two reduction -> actual character eigenclass lifting through the leading-coordinate quotient of the original affine function flag. Survival in the whole function representation or the precise Eisenstein exception, weight-two level evaluation, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open. Sequential foundation/paper verification passes with zero diagnostics for the 5,077-module scope: all thirteen retained regressions, 35,899 exhaustive theorem checks, 15,325 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,030-module original residual H1 eigensystem scope passed sequential canonical verification with zero diagnostics. The renewed exact-commit reuse search has now supplied locally proved all-prime character descent and the coefficient lifting needed for the archived weight-two reduction. Existing Hecke transversals and native H1 trace replace the external level-index argument; native Lagrange interpolation replaces its finite-function basis construction; the local coinduced trace replaces its finite-index H2 trace. The actual free Gamma4 intersection and its index dividing 48 discharge Gamma0 H2 vanishing after inverting six. The full external kernel replay and the remaining source acceptance gates are not claimed. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original residual H1 eigensystem (20 October 2026): All actual full good-prime binary H1 Hecke operators commute over every coefficient ring and in every binary degree. The proof constructs the exact product-coset bijection from existing integral transversals, composes the literal subgroup conjugations and coefficient maps, and proves the degree-one representative corrections are actual native coboundaries. This removes the final commutativity premise from the original primitive residual eigensystem consumer. For every original primitive form of weight at least two and every prescribed rational prime, a genuine local coefficient field and nonzero residual native H1 eigenclass realize all original good-prime Fourier reductions. No assumed integral span, character realization, reduction injection, commutativity or residual eigenclass remains. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> finite-characteristic weight/level reduction -> nonzero original residual H1 eigensystem -> full integral H1 Hecke commutativity. Finite-characteristic weight/level reduction and geometric residual Galois association remain to be proved. These residual cohomological results do not yet supply an all-weight adic system, purity, crystallinity, Sato-Tate or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open. Sequential foundation/paper verification passes with zero diagnostics for the 5,030-module scope: all thirteen retained regressions, 35,603 exhaustive theorem checks, 15,181 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,994-module original binary Hecke cohomology scope passed sequential canonical verification with zero diagnostics. The renewed exact-commit reuse search has now supplied a locally proved residual cohomological input for the archived Galois-association candidate. The adaptation reuses the original analytic periods, integral Hecke action, existing transversals and native H1 throughout. It proves integral spanning, the actual integral Hecke character, nonzero prescribed tensor eigenclasses, injective residual coefficient change and full Hecke commutativity. The full external transitive kernel replay is not claimed: the remaining finite-characteristic weight/level reduction and geometric association still need local proofs. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original binary Hecke eigenclass and finite integral H1 (20 October 2026): For every original normalized primitive form and every source weight k >= 2, the actual column-binary native H1 class is nonzero and is an eigenvector of every full good-prime Hecke operator with its original Fourier eigenvalue. The original dual-period comparison is explicitly the diagonal of signed binomial coefficients and respects the literal adjugate diagonal. On every cocycle the transported operator is exactly the sum over the original Gamma0 cosets with the column diag(p,1) action. The full H1 operator has that actual cocycle representative; no eigenclass, nonvanishing, coefficient identification, Hecke compatibility or quotient-descent premise is supplied. At every actual source level and weight, integral column-binary native H1 is a finite Z-module, with Gamma0 finite generation derived using native Schreier and modular-group generation and coefficient finiteness from the existing monomial basis. The actual polynomial coefficient map descends to full native H1 and commutes with the full original Hecke correspondence over every coefficient ring. Its complex specialization equals the already proved analytic-period operator, and the original primitive form gives its nonzero eigenclass with the original good-prime Fourier eigenvalues. No finiteness, quotient-descent, Hecke comparison or eigenclass premise is supplied in these original-object consumers. Exact unresolved source dependency: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual modular Galois association -> integral-to-residual H1 eigenclass -> finite integral H1 and its actual Hecke-compatible coefficient change. Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open. Sequential foundation/paper verification passes with zero diagnostics for the 4,994-module scope: all thirteen retained regressions, 35,376 exhaustive theorem checks, 15,102 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,970-module original period and coefficient-specialization scope passed sequential canonical verification with zero diagnostics. The renewed exact-commit search supplies a residual Galois-association candidate. Reuse of the existing analytic periods, integral modular-symbol Hecke adjointness, finite coset trace, binomial duality and native H1 functoriality removes its complex eigenclass input without importing a second analytic development. Its full external transitive kernel replay, integral-to-residual eigensystem reduction and geometric association are not yet accepted. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Injective original period cohomology, faithful coefficient specialization and renewed residual-association research (20 October 2026): The original period map into native group-cohomology H1 is injective for every finite-index subgroup of SL(2,Z), every source weight k=n+2, and every rational base cusp. Its actual original Gamma0 and normalized primitive-form consumers derive a nonzero H1 class. The native H1 kernel gives the dual coboundary; the exact binary action and original Eichler transformation give the corrected invariant primitive. Actual Fourier periodicity makes its polynomial correction constant at each cusp, discharging all-cusp boundedness. Pinned nonpositive-weight vanishing/constancy and original Fourier decay kill the Eichler integral; its proved derivative recovers the original cusp form. No injectivity, nonzero period, primitive invariance or cusp-boundedness premise is supplied to these final consumers. The original primitive cusp form defines a native group-cohomology H1 class through its already proved convergent cusp integrals. The cocycle law, exact dual binary action, complex linearity, base-cusp independence and an explicit coboundary on each rational-cusp stabilizer are proved, with no supplied period cocycle, covariance, or parabolicity assumption. At every original rational prime the actual primitive integral Hecke eigencharacter admits a specialization from all complex algebraic integers to the algebraic closure of its genuine finite local residue field, preserving every original Hecke value. The coefficient field, local extension, finite residue field, prescribed prime characteristic and specialization are derived, rather than supplied. The extension reuses native lying-over, integral quotient algebras and the algebraic-closure embedding; no new general construction of algebraic closures or coefficient fields is needed. Exact unresolved source dependency: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular Galois association -> analytic/etale comparison -> injectivity and nonvanishing of the original analytic period H1 class. DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> actual modular residual Galois association -> faithful extension of the original coefficient reduction to all complex algebraic integers in the prescribed characteristic. The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. Sequential foundation/paper verification passes with zero diagnostics for the 4,970-module scope: all thirteen retained regressions, 35,222 exhaustive theorem checks, 15,040 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 4,958-module coefficient-field and residual eigensystem scope passed sequential canonical verification with zero diagnostics. The shorter analytic route adapts the published negative-weight argument using the already proved original scalar Eichler integral and pinned Mathlib vanishing. A further exact-commit search found an all-weight k>=3 residual Galois-association candidate, beyond the previously inspected weight-two adic endpoints. Its selected proof sources are archived; full transitive audit, pinned replay, original Hecke/H1 comparison remain pending. The actual original coefficient specialization adapter is now proved. This candidate does not supply an all-weight adic system, purity, crystallinity or Sato-Tate. Its complete 3,072-module repository import closure is now Git-blob verified and archived with license, notices and per-file attribution. The raw source scan has no prohibited proof tokens or postulates; 2,221 additional source-option lines and two missing pinned Mathlib imports remain adaptation concerns. An import-closure inspection is not a kernel audit. No root pin, proof limit, source contract or acceptance criterion changed.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -18358,7 +18394,7 @@ The modular residual Galois representation and its source image bounds, prescrib
 
 ## Production original period H1 injectivity and specialization pending full run - 20 October 2026
 
-The 4,970-module production aggregate and focused exhaustive original period H1 and coefficient specialization audit pass with zero diagnostics. All three proof-value audits pass, including the actual nonzero native H1 class of every original primitive form at every source weight and the faithful specialization of its original Hecke values. Sequential foundation/paper verification of the 4,970-module scope is pending.
+Sequential foundation/paper verification passes with zero diagnostics for the 4,970-module scope: all thirteen retained regressions, 35,222 exhaustive theorem checks, 15,040 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
 
 The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.
 
@@ -18407,5 +18443,966 @@ The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometri
   "exit": 0,
   "diagnostics": 0,
   "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open."
+}
+```
+
+## Verified original native H1 class, all-weight injectivity and coefficient specialization - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,970-module scope: all thirteen retained regressions, 35,222 exhaustive theorem checks, 15,040 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T15:49:33.688623+00:00",
+  "log": "logs/dubon-build-20261020-073443-467.log",
+  "sha256": "0E13CCB7205048ABBCE7FAE788670877028666195AE2AC42AD1FAFA10F11492A",
+  "bytes": 8530122,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4970,
+  "projectTheorems": 35222,
+  "registeredConsumers": 15040,
+  "registeredConstructions": 499,
+  "declarations": 20939,
+  "generated": 19828,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_073115.log",
+  "foundationSha256": "8AA46A40851B1C5B70F11660BDD7C2B602D37CEABA9CD9A74B7635675E0D1001",
+  "boundary": "The full Eichler-Shimura decomposition, native H1 Hecke correspondence, geometric comparison with varying symmetric coefficients, continuous Galois action and exact Frobenius/Hecke compatibility remain open. No modular Galois representation, residual image bound, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open. The original H1 Hecke correspondence, integral-to-residual nonzero eigensystem comparison, finite-characteristic weight reduction, weight-two geometric Galois association and its audited original-object adapters remain open. No residual Galois action, image bound, all-weight adic compatible system, purity, crystalline theorem, Selmer dimension, R=T or higher symmetric-power automorphy is claimed. Acceptance stays 16/20; DUB-17--20 remain open."
+}
+```
+
+## Production original binary Hecke cohomology and integral coefficient change pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,994-module scope: all thirteen retained regressions, 35,376 exhaustive theorem checks, 15,102 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1DependencyAuditProduction4994.log",
+      "sha256": "A2B551FC5EAC0ADA43E8AB3FF22DBB5D9463DDD9F7B4DF8CCFFE3DF500DE5B15",
+      "requiredProofValueEdges": 53,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_binaryPeriodCohomology_ne_zero",
+        "Dubon2026.sourcePeriodH1BinaryEquiv_period"
+      ],
+      "sourceSha256": "E21C41C43C9F229831FAE822B21E51269E4A5F94CBCB476D19901A3B17DD32E9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeH1DependencyAuditProduction4994.log",
+      "sha256": "3BB5E6F9FC2CEA4B13A6C6CE08BEDE90250F7E107EDD96FD5829BF4A775DA342",
+      "requiredProofValueEdges": 92,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_nonzero_periodHeckeEigensystem",
+        "Dubon2026.sourceHeckeCocycle_apply",
+        "Dubon2026.sourceHeckeConjugation_injective"
+      ],
+      "sourceSha256": "4CC7DCD4C84D90FB470D11F24832B79FA82F7A135FFC198A221D373A5B4825D6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeDependencyAuditProduction4994.log",
+      "sha256": "F813CE795F5221814B120282CA167FAED3AA6C9D4DF90264411DBA7C4311B755",
+      "requiredProofValueEdges": 82,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_nonzero_binaryHeckeEigensystem",
+        "Dubon2026.sourceHeckeBinaryH1_cocycle",
+        "Dubon2026.sourceHeckeBinaryCocycle_apply"
+      ],
+      "sourceSha256": "095924CC877B27AE47DE45989667780C2CDFB3F83A512DFCF2942BEC3EC10AE8"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralH1DependencyAuditProduction4994.log",
+      "sha256": "C6326569EBF1BE298EEAACF9BDC35723FB66CFDD6063E92D340DF3AAF87A202C",
+      "requiredProofValueEdges": 41,
+      "consumers": [
+        "Dubon2026.sourceIntegralBinaryH1Finite",
+        "Dubon2026.sourcePrimitive_nonzero_integralModelComplexEigensystem",
+        "Dubon2026.sourceBinaryH1Change_hecke",
+        "Dubon2026.sourceBinaryCocyclesChange_apply"
+      ],
+      "sourceSha256": "D165A2E4F36C8D48AED37ECF5535C463BD6A7068E0196797D9360D6AD7EC4CC0"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryHeckeProductionAudit4994.log",
+  "sha256": "F00F010C86F768A6AE3B051FD2ADA1CBDBF4BBCF474B1857B55F3170A71B0650",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-binary-hecke-production-4994-build.log",
+  "aggregateSha256": "1C93249C410CB67884B4D36213EAF5B42B44D4CA958A9ADDA231D434F3421567",
+  "productionModules": 4994,
+  "incrementModules": 24,
+  "axiomChecks": 89,
+  "exhaustiveIncrementTheorems": 155,
+  "linterScopes": 24,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Verified original full binary Hecke eigensystem - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 4,994-module scope: all thirteen retained regressions, 35,376 exhaustive theorem checks, 15,102 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T17:25:19.321806+00:00",
+  "log": "logs/dubon-build-20261020-090609-721.log",
+  "sha256": "11AAC5836F4E8DAA141046E1BB97A174F018832BAFD4321B99C44185F1394B30",
+  "bytes": 8569373,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 4994,
+  "projectTheorems": 35376,
+  "registeredConsumers": 15102,
+  "registeredConstructions": 526,
+  "declarations": 21028,
+  "generated": 19930,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_085720.log",
+  "foundationSha256": "AB76D334515DA63456001C4075C16EDD9A81907556C2D36D615DAAEC280D8C70",
+  "boundary": "Spanning by integral cocycles, the integral Hecke character, full Hecke commutativity and nonzero residual eigensystem reduction still require proof. The coefficient-change map alone does not assert injectivity or preservation of nonzero classes. Finite-characteristic weight/level reduction, geometric Galois association, an all-weight adic system, purity, crystallinity, Sato-Tate and higher symmetric-power automorphy remain open. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Production original residual H1 eigensystem pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,030-module scope: all thirteen retained regressions, 35,603 exhaustive theorem checks, 15,181 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Finite-characteristic weight/level reduction and geometric residual Galois association remain to be proved. These residual cohomological results do not yet supply an all-weight adic system, purity, crystallinity, Sato-Tate or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSpanDependencyAuditProduction5030.log",
+      "sha256": "0763499623A15BD76206A6AEE5F5936A82DD0CA4B6CF54ADB91CA4E6A7ECEE06",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.sourceComplexBinaryH1_end_zero_of_integer",
+        "Dubon2026.sourceBinaryAdditiveCocycles_coeff"
+      ],
+      "sourceSha256": "8FE3C3011C2DF8EBB18F7251C95DF9CE42CDC4168751BACBE55D0AE19809D066"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceH1CharacterDependencyAuditProduction5030.log",
+      "sha256": "D7474A3E9C87A7EE185F4368FFC274656DA7272EC0F036233458F7B5407C8673",
+      "requiredProofValueEdges": 33,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_residualH1HeckeCharacter_charP",
+        "Dubon2026.sourcePrimitive_exists_residualH1HeckeCharacter"
+      ],
+      "sourceSha256": "C5623F0CC812082CD5772E7D1D64000BAF98355097D937418F085B29F463EB01"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceH1TensorDependencyAuditProduction5030.log",
+      "sha256": "90D05579CFC607587425DDD0B64FAC32FD55979E8BF189B5111E4696188E9E0F",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.sourceBinaryH1TensorChange_injective",
+        "Dubon2026.sourceBinaryH1TensorChange_hecke"
+      ],
+      "sourceSha256": "68EAF22114E875BBC03BEC8316346264164EC116FA896715E30A96C195D7AAF0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualEigenDependencyAuditProduction5030.log",
+      "sha256": "6FE44F6D7008A3235CF907EA4B579C96CBBB2BE1011005C8B805DFA0A649E725",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_residualH1Eigensystem_charP_of_commute",
+        "Dubon2026.sourcePrimitive_exists_residualH1Eigensystem_of_commute"
+      ],
+      "sourceSha256": "50089800E608B04693147D7050441C47874E6911AEC22F9944230187CD5C6855"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeCommuteDependencyAuditProduction5030.log",
+      "sha256": "273CDA5EFFDC7F6D1144D60E8F9513A8F7AACFA2B2C74CDF3D14582A6126C9C7",
+      "requiredProofValueEdges": 48,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_residualH1Eigensystem_charP",
+        "Dubon2026.sourcePrimitive_exists_residualH1Eigensystem"
+      ],
+      "sourceSha256": "2956737C641252AF89E16F0F6DEA6FBB2F872466C2EA92011321656D9F90D412"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualH1ProductionAudit5030.log",
+  "sha256": "256EFBEFA5853F1C4EDF937E6B41AF8415E585BC29C47AB128DF918B1D9A2569",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-residual-h1-eigensystem-production-5030-build.log",
+  "aggregateSha256": "0C710E5163A8C213F9237D40E22F3BD73B3B6ECE70147A3C90B9C78E89C0D745",
+  "productionModules": 5030,
+  "incrementModules": 36,
+  "axiomChecks": 110,
+  "exhaustiveIncrementTheorems": 227,
+  "linterScopes": 36,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "Finite-characteristic weight/level reduction and geometric residual Galois association remain to be proved. These residual cohomological results do not yet supply an all-weight adic system, purity, crystallinity, Sato-Tate or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Verified original residual H1 eigensystem - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,030-module scope: all thirteen retained regressions, 35,603 exhaustive theorem checks, 15,181 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Finite-characteristic weight/level reduction and geometric residual Galois association remain to be proved. These residual cohomological results do not yet supply an all-weight adic system, purity, crystallinity, Sato-Tate or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T18:58:08.626237+00:00",
+  "log": "logs/dubon-build-20261020-103828-686.log",
+  "sha256": "D542BF7565BACAEB48044480802BD9F77A2C340290D49CEBBC205E201F6803EF",
+  "bytes": 8630444,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5030,
+  "projectTheorems": 35603,
+  "registeredConsumers": 15181,
+  "registeredConstructions": 557,
+  "declarations": 21138,
+  "generated": 20091,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_103521.log",
+  "foundationSha256": "AF612C4E6C1741CD35FF1F617A0CA0D11F27A99D9514CA93B4FEB6CE756EF0FB",
+  "boundary": "Finite-characteristic weight/level reduction and geometric residual Galois association remain to be proved. These residual cohomological results do not yet supply an all-weight adic system, purity, crystallinity, Sato-Tate or higher symmetric-power automorphy. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Production original character descent and function-flag lifting pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,077-module scope: all thirteen retained regressions, 35,899 exhaustive theorem checks, 15,325 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Survival in the whole function representation or the precise Eisenstein exception, weight-two level evaluation, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharacterDependencyAuditProduction5077.log",
+      "sha256": "85992D4183208AA1ED6E2D190393D8345818AF822FB7FF6B534B754C5C305224",
+      "requiredProofValueEdges": 40,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_residualCharacterEigensystem",
+        "Dubon2026.sourceBinaryH1_exists_untwistedCharacterPiece"
+      ],
+      "sourceSha256": "04FC80CE261F6232CCF02B15EA583CDD035DF502E186D3E32212B300BC8C9C99"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharacterLevelDependencyAuditProduction5077.log",
+      "sha256": "E040462547735E081C6F125A953F8439837D03391A42FF32B1D1B821087FFFB7",
+      "requiredProofValueEdges": 60,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_residualCharacterLevel_charP",
+        "Dubon2026.sourcePrimitive_exists_residualCharacterLevel"
+      ],
+      "sourceSha256": "65E29ED3F3709734B02166BC40B7BF453BFF35555693AC7C27732021EF20757F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaH2DependencyAuditProduction5077.log",
+      "sha256": "88FACD46E95299ACCFE5293856BF5A74B67F33F7DFC04B4F334A30913B3B5431",
+      "requiredProofValueEdges": 41,
+      "consumers": [
+        "Dubon2026.sourceGamma0H1_eigen_lift"
+      ],
+      "sourceSha256": "C4BE281C84D0DD1BEFACF8439DFB2C8622A847281749D4A18E57D4DE564295D6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAffineLiftDependencyAuditProduction5077.log",
+      "sha256": "3503BF9EF709AD94F796CCC4C0C8083562F0F6DDDD8CB85BD6698AE97A266D37",
+      "requiredProofValueEdges": 72,
+      "consumers": [
+        "Dubon2026.sourceAffineFlag_exists_characterEigenlift"
+      ],
+      "sourceSha256": "8355F3A043C73F21C2508D29DDA7252B556A3370FF281E1EA2AB11EFE4A9B49B"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharacterLiftingProductionAudit5077.log",
+  "sha256": "F6ADD658527F55516EFB51CF7060BE2BD42D6EC1E536200BF3BD0F710FCB2FF3",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-character-lifting-production-5077-build.log",
+  "aggregateSha256": "8DC782A5C2FE2C28A191B81B925A5D8030AFD74E95C0F4D904A9118A59AD1ACF",
+  "productionModules": 5077,
+  "incrementModules": 47,
+  "axiomChecks": 206,
+  "exhaustiveIncrementTheorems": 297,
+  "linterScopes": 47,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "boundary": "Survival in the whole function representation or the precise Eisenstein exception, weight-two level evaluation, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Verified original character descent and function-flag lifting - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,077-module scope: all thirteen retained regressions, 35,899 exhaustive theorem checks, 15,325 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Survival in the whole function representation or the precise Eisenstein exception, weight-two level evaluation, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T20:27:24.152048+00:00",
+  "log": "logs/dubon-build-20261020-121534-391.log",
+  "sha256": "525F64B321C85FD349CBC3A12E6A849F1DBE91C5F265DA32398C014371679C11",
+  "bytes": 8708637,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5077,
+  "projectTheorems": 35899,
+  "registeredConsumers": 15325,
+  "registeredConstructions": 619,
+  "declarations": 21344,
+  "generated": 20275,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_121225.log",
+  "foundationSha256": "2539DB4921721867F5AF4B0E021E379CC63F2E987D156156D3F64BD9DE98A365",
+  "boundary": "Survival in the whole function representation or the precise Eisenstein exception, weight-two level evaluation, residue characteristics two and three, geometric residual Galois association, all-weight adic realization, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Production original all-prime weight-two reduction pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,131-module scope: all thirteen retained regressions, 36,288 exhaustive theorem checks, 15,529 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Geometric residual Galois association, its original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAffineSurvivalDependencyAuditProduction5131.log",
+      "sha256": "9D6A7D98EBB8D9313052CE1C50875DDBCCB667FCAD93512E544A09EC72CE0BC5",
+      "requiredProofValueEdges": 92,
+      "consumers": [
+        "Dubon2026.sourceAffineCharacter_eigen_survival"
+      ],
+      "sourceSha256": "2C978613EEF637735CBE7C7051B3E88DE29F87CE54610F3A1E03D1CD049D529E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRaisedEvaluationDependencyAuditProduction5131.log",
+      "sha256": "9F2DD7C4B34F94D5842233BE767A14C2794F07EA7B02675F6B9590F3FB1DB18C",
+      "requiredProofValueEdges": 120,
+      "consumers": [
+        "Dubon2026.sourceAffineCharacter_raiseLevel_or_exception"
+      ],
+      "sourceSha256": "DC3107ABE1F314C1107E51C3C041BC7132291B634E6F092A6A6CE412CB146D0A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEisensteinDependencyAuditProduction5131.log",
+      "sha256": "EDD07883B180CAE83DA89C2E45EA7123B25EA6340CB78DBBBA887C3BC964F799",
+      "requiredProofValueEdges": 56,
+      "consumers": [
+        "Dubon2026.sourceGamma0_exists_Eisenstein_eigenclass"
+      ],
+      "sourceSha256": "BE83C9C332A0594592A08D731DCB72A7C37722FF2508A867291CB70567DAAC32"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharacterWeightTwoDependencyAuditProduction5131.log",
+      "sha256": "92100ED853CFF70380693ABE715E6E439041B537D64D65F76B2BD309359D423C",
+      "requiredProofValueEdges": 186,
+      "consumers": [
+        "Dubon2026.sourceBinaryCharacter_to_weightTwo_of_five_le",
+        "Dubon2026.sourceCharacter_to_weightTwo_trivial"
+      ],
+      "sourceSha256": "62CE9D87344028321EAAB96F74B404996C8116B433527CF13DD9D14B33F684BD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoAllPrimeDependencyAuditProduction5131.log",
+      "sha256": "E9B8F6E26E261C21FBEABEB103B53AFB60BC6F4F00136E62EA9EF42FA6BD6D35",
+      "requiredProofValueEdges": 307,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_residualWeightTwo",
+        "Dubon2026.sourcePrimitive_exists_residualWeightTwo_charP"
+      ],
+      "sourceSha256": "5A2A9DA508C6B7B7F821B4D3EC685253C5649B9891DE77DA27059B1179E4E1AA"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoAllPrimeProductionAudit5131.log",
+  "sha256": "907C0F41C5993FC10B0E4AAF364041D699A5F19C39F9B8F34C1437CB69036345",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-weight-two-all-primes-production-5131-build.log",
+  "aggregateSha256": "B34749AAF9642494392D968AA26BE1D4C61686ED5758666E68BB3C1E049DBF1F",
+  "productionModules": 5131,
+  "incrementModules": 54,
+  "axiomChecks": 259,
+  "exhaustiveIncrementTheorems": 389,
+  "linterScopes": 54,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 390,
+  "generatedDeclarationReconciliation": {
+    "declaration": "Dubon2026.sourceAffineFunctionAction.congr_simp",
+    "productionOrigin": "Dubon2026.SourceAffineFunctionFlag",
+    "explanation": "Already registered earlier in the assembled import graph; isolated scratch and production module declarations coincide exactly.",
+    "log": "E:\\Lean\\.tmp\\dubon83\\WeightTwoGeneratedAggregateOrigin5131.log",
+    "sha256": "41D759DEE8B4C30C1D2D7FE680A03A44AE38E97431A56AE8784A145A48E17AD7",
+    "comparisonLogs": {
+      "Scratch": "CB18C23BB3FC74B8AF0D42AB6679EBE3A6E535CEACB8D63B47E830C4A8572E1F",
+      "Production": "CB18C23BB3FC74B8AF0D42AB6679EBE3A6E535CEACB8D63B47E830C4A8572E1F"
+    }
+  },
+  "boundary": "Geometric residual Galois association, its original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Verified original all-prime weight-two reduction - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,131-module scope: all thirteen retained regressions, 36,288 exhaustive theorem checks, 15,529 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Geometric residual Galois association, its original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "recordedUTC": "2026-10-20T22:24:41.600029+00:00",
+  "log": "logs/dubon-build-20261020-140636-926.log",
+  "sha256": "0439C7883C93018C50DCE699D166CCF559BF8F6D58D9EA68448E3C3C2D9FA558",
+  "bytes": 8801533,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5131,
+  "projectTheorems": 36288,
+  "registeredConsumers": 15529,
+  "registeredConstructions": 674,
+  "declarations": 21603,
+  "generated": 20464,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_140033.log",
+  "foundationSha256": "ABA32844EDB57D53768FAF8BE8D5E67A73A1271F7B53B04E280D93D3D9F9A4D7",
+  "boundary": "Geometric residual Galois association, its original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Production original parabolic lift and residual characters pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,173-module scope: all thirteen retained regressions, 36,561 exhaustive theorem checks, 15,662 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSpanDependencyAuditProduction5173.log",
+      "sha256": "60460819BF24B256B43EF5FEA5A4C1757814AAE29AB13665E0524DD7684958F9",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.sourceTrivialH1_integral_or_torsion"
+      ],
+      "sourceSha256": "5337402D20874E7233581FF999073B84CBA8309065BBE37A71C11BEA64E87DCB"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAlternativeDependencyAuditProduction5173.log",
+      "sha256": "5AB43CE3C32B67AC53801658AFC0BB2A9671769541037D5722E98002EA8D945A",
+      "requiredProofValueEdges": 339,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_integral_or_eisenstein_charP"
+      ],
+      "sourceSha256": "AAB870AC52D89C1E173180B43784557463254CD206C5DB03C0FCFA6B1788CC0A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexEigenliftDependencyAuditProduction5173.log",
+      "sha256": "FC78DABBECAF496A95969C80BFFB453095287F8055C02E822647A6380D831B0A",
+      "requiredProofValueEdges": 367,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_complexLift_or_eisenstein_charP"
+      ],
+      "sourceSha256": "CF13459AAC09596FFF9D85E4E801BD969CBD715FF381B70172512F483093CC8B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBoundaryDependencyAuditProduction5173.log",
+      "sha256": "1066B13BE099A945180FD3E3FCF504E60B632A5CC44F6F9683BFBFA4649F48C1",
+      "requiredProofValueEdges": 435,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_dirichletPair_charP"
+      ],
+      "sourceSha256": "2DA6E5B6C8FB3834E6CDB3D1C7ADC0E610ABAC9F44501062E13F60FAF68D6834"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBoundaryProductionAudit5173.log",
+  "sha256": "87672113D99038EF82743638C993AE19C6FD4AD538CC910BB980425E3FD55625",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-boundary-production-5173-build.log",
+  "aggregateSha256": "95511133F852E082012378C69F42248E4A1DAD9C6D5F25D1B0E542FF74CF7F96",
+  "productionModules": 5173,
+  "incrementModules": 42,
+  "axiomChecks": 161,
+  "exhaustiveIncrementTheorems": 273,
+  "linterScopes": 42,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 274,
+  "generatedDeclarationReconciliation": {
+    "declaration": "Dubon2026.sourceHeckeConjugation.congr_simp",
+    "scratchOrigin": "SourceCuspHeckeTerms",
+    "productionOrigin": "Dubon2026.SourceHeckeProductTransitions",
+    "explanation": "The identical generated theorem is already registered in the earlier production import graph. Every isolated and assembled theorem name was compared, and the generated declaration's type, proof and axioms match.",
+    "originChecks": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_0.log",
+        "sha256": "763393263E08C3E53B007FA858821F056E8EC9C69ECC8807F0D2009CF738E7D6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_1.log",
+        "sha256": "020C40907BD23E7E787F8474D51B32915957C30F83DF86DE43DB11EC5F9A8BA8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_2.log",
+        "sha256": "6D9F8907886E0A64A7AD1463E90B491B02165E89E4BD7A3A8EAC1F37880F139D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_3.log",
+        "sha256": "D450F08B204CB0A3C77FE752FAC85182958055CE0E3104FB00DE5A9728F338A9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\BoundaryOrigin5173_4.log",
+        "sha256": "4D6BF8466E4BE19C891BFD135D40CD4EF6A9FB750E682D888B9DE6890BFBB188"
+      }
+    ],
+    "originLog": "E:\\Lean\\.tmp\\dubon83\\BoundaryGeneratedAggregateOrigin5173.log",
+    "originSha256": "799EA91647C482354455D6B1B7EA4E23F72C41C8015D7BCC6E375EDC531531D4",
+    "comparisonLogs": {
+      "Scratch": "C95810EE73AEF499140962D7EA95A20E1E2053D326A11E45E17463F314CFC501",
+      "Production": "C95810EE73AEF499140962D7EA95A20E1E2053D326A11E45E17463F314CFC501"
+    }
+  },
+  "boundary": "Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Verified original parabolic lift and residual Dirichlet pair - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,173-module scope: all thirteen retained regressions, 36,561 exhaustive theorem checks, 15,662 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.
+
+```json
+{
+  "recordedUTC": "2026-10-21T00:09:57.792423+00:00",
+  "log": "logs/dubon-build-20261020-155913-719.log",
+  "sha256": "4631A67597B25C2699FC3DA51FF893F707A97A3493650DEA10BAB83C0EAD95D7",
+  "bytes": 8868562,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5173,
+  "projectTheorems": 36561,
+  "registeredConsumers": 15662,
+  "registeredConstructions": 702,
+  "declarations": 21764,
+  "generated": 20613,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_155605.log",
+  "foundationSha256": "3F73B3A7385DA8F5B6C3635021A065F70C3ED4E239747977830190356D13F075",
+  "boundary": "Galois realization of the parabolic and character branches, original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open."
+}
+```
+
+## Production original residual branch and parabolic periods pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,200-module scope: all thirteen retained regressions, 36,708 exhaustive theorem checks, 15,743 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBoundaryGaloisDependencyAuditProduction5200.log",
+      "sha256": "E2BAE7A365E97A54686EF3763F457E55F8FD1EA35E7BF9A69E23917446CE455D",
+      "requiredProofValueEdges": 456,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep",
+        "Dubon2026.sourcePrimitive_exists_weightTwo_parabolicLift_or_galoisRep_charP"
+      ],
+      "sourceSha256": "03C090E91547A12775BC6654D98F8FF6772441CF7BDC86CBC0E1EA25AF6DC76C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightDependencyAuditProduction5200.log",
+      "sha256": "BCA0BD7793E656D18C9D4BE56B5CD7B8C56EA4C6691C7B5C71AAD68850A50A25",
+      "requiredProofValueEdges": 485,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_parabolicLift_or_residualGalois",
+        "Dubon2026.sourcePrimitive_exists_parabolicLift_or_residualGalois_charP"
+      ],
+      "sourceSha256": "1A4570B8F525C9959A8E379C0C4DBF746646B5A776F59D530CCFD8B0D1DE92D9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPairDependencyAuditProduction5200.log",
+      "sha256": "281227B347FB4EF3487D624CAB6F2806BD98E476665DA780C4EFA7DA68EE390C",
+      "requiredProofValueEdges": 51,
+      "consumers": [
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_injective",
+        "Dubon2026.sourceWeightTwoPeriod_dimension_lower"
+      ],
+      "sourceSha256": "F21DBC79AA255301E44CAFCDEF61D4C688D15B9EC869B2F7A1BB710E513F9E9D"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidualPeriodsProductionAudit5200.log",
+  "sha256": "33D270F5F7FEA5C9E5A51E80C435FD21E8DA9EAF752C972509376DC3F68EAE75",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-residual-galois-periods-production-5200-build.log",
+  "aggregateSha256": "EAB73F146D35771D2AAB2951701FF80BC833FF5C546AEB8890EB86BB5BCB0C87",
+  "productionModules": 5200,
+  "incrementModules": 27,
+  "axiomChecks": 97,
+  "exhaustiveIncrementTheorems": 147,
+  "linterScopes": 27,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 148,
+  "generatedOriginReconciliation": {
+    "theorem": "UpperHalfPlane.im.eq_1",
+    "scratchOrigin": "SourceReflectedPrimitive",
+    "productionOrigin": "Dubon2026.CuspVerticalProfile",
+    "completeTheoremComparisons": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_0.log",
+        "sha256": "BDCC4081F1CD782B1648D2F78E7F9ECAB56E330E3DA2633BA42454803EF12761"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_1.log",
+        "sha256": "F6768B2EE0047B9CB7FBD0790243908B7712B2AABE87F40D49B2397D33AEF50C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_2.log",
+        "sha256": "BEF9EDBF86E2F58EC28B9F8D44401BC4ADC292E8D36B619A1F4C2A3372A2C137"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\ResidualOrigin5200_3.log",
+        "sha256": "A14A35AF29D8EB428B7D2145CDD3CA5423923425A8EF7F48EF0E62876C564AB1"
+      }
+    ],
+    "originLog": "E:\\Lean\\.tmp\\dubon83\\ResidualGeneratedAggregateOrigin5200.log",
+    "originSha256": "1ACAFA70F1A22264C0130EF2AD38EBF8B899E2E2E2D4463A9BB1BFC9302725F5",
+    "printedTypeAndProofHashes": {
+      "Scratch": "0A2F98C45BF2DB9CD89760443FCD95217E95FD14F984945984F886A093BAE67E",
+      "Production": "0A2F98C45BF2DB9CD89760443FCD95217E95FD14F984945984F886A093BAE67E"
+    }
+  },
+  "boundary": "The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open."
+}
+```
+
+## Verified original residual branch and injective parabolic periods - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,200-module scope: all thirteen retained regressions, 36,708 exhaustive theorem checks, 15,743 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open.
+
+```json
+{
+  "recordedUTC": "2026-10-21T01:39:49.952460+00:00",
+  "log": "logs/dubon-build-20261020-172704-365.log",
+  "sha256": "EE3C7F8B888728059D43F6496A04974AC99903746D8FDC4A31D1EDDF1A8FF7BC",
+  "bytes": 8904086,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5200,
+  "projectTheorems": 36708,
+  "registeredConsumers": 15743,
+  "registeredConstructions": 718,
+  "declarations": 21861,
+  "generated": 20680,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_172408.log",
+  "foundationSha256": "45AD1BE953F9363E8388BF0519FD96EB6C62078A209E57CDB79CA3679327258C",
+  "boundary": "The reverse dimension inequality, geometric surjectivity and Hecke comparison are still required for the parabolic branch, followed by its Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain. Acceptance is 16/20; DUB-17--20 remain open."
+}
+```
+
+## Production original dimension and differential assembly pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,261-module scope: all thirteen retained regressions, 37,348 exhaustive theorem checks, 16,047 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Regular differential dimension, the geometric genus formula and analytic realization by actual cusp forms remain required for the matching cusp-form lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. The arithmetic genus expression is not yet identified with the geometric genus. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceManinDimensionDependencyAuditProduction5261.log",
+      "sha256": "F9C50325DE7F208A100A0B296D857F7AB90FDBDE8409B3E9480CB309B5DA9CA6",
+      "requiredProofValueEdges": 67,
+      "consumers": [
+        "Dubon2026.SourceManin.parabolic_dimension_bound"
+      ],
+      "sourceSha256": "79E9F0BF6F3BCE4C3AE9938492ECC1512A9A413D8DC8024ACDBAC48227D76CCF"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenusNumericsDependencyAuditProduction5261.log",
+      "sha256": "7215383C743C26341B3D91D733E8D5ABE04C79D1DD34C6AE685612816B715032",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.sourceParabolic_dimension_le_two_mul_genusFormula"
+      ],
+      "sourceSha256": "D88159458371FDE875659F4782CAB9C23CC19CF1EBC1D484EACA19E5D9846721"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFunctionFieldFiniteDependencyAuditProduction5261.log",
+      "sha256": "AFCA541DB3B174814E3C7252525D68C90606912AB9963B24E9E3B536C1898306",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.diffQExp_original_injective_of_monic_relations",
+        "Dubon2026.SourceFunctionField.qEuler_jOver_ne_zero"
+      ],
+      "sourceSha256": "2EBBD7CF030AC8ACA9003E184D80C14BD1A3ACCA56C2A96BBE6CE4AE8FDFDB35"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticJDependencyAuditProduction5261.log",
+      "sha256": "A204AB868534CE8BE51DB1706095CBCDE64CD13A26BA2C618F5CD933DCDCBBC8",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.E4_cube_div_discriminant_smul",
+        "Dubon2026.SourceFunctionField.hasSum_jq_qParam"
+      ],
+      "sourceSha256": "25A862871B2DAAA471A8A87B6C49DEB37DA68B9E5D93842711E74BF0FF54D402"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceJDescentDependencyAuditProduction5261.log",
+      "sha256": "DEFF171973A0263BB60C4F971737DE22EE3D8054A8337C65B8B54A40D09E6842",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.mem_adjoin_jq_of_realL_invariant",
+        "Dubon2026.SourceFunctionField.RealL.coeff_prod_X_sub_C"
+      ],
+      "sourceSha256": "35AA2855E69F35B4D55D13E75EE28B43EEBB1206E1880919AD361E10690F6CBD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMonicRelationsDependencyAuditProduction5261.log",
+      "sha256": "A0AF188D3F174E74C576B96CE9082B016AB9AF9AE995DB1D3864E484D6DE7A1F",
+      "requiredProofValueEdges": 41,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finiteDimensional_original",
+        "Dubon2026.SourceFunctionField.diffQExp_original_injective"
+      ],
+      "sourceSha256": "1B2F3A7C81D6071EAEC6C1DE22283BD1B67C3A3FBCE1A266104CFF41974A53F7"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeometryProductionAudit5261.log",
+  "sha256": "5AA189B8D98E4A1481B329F98779B003F026E09BF920DD33ED35492CA58D07BC",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-geometry-production-5261-build.log",
+  "aggregateSha256": "32F4B862AA1408C4588CB42C116AD2629057729D1CE7077E7E0A20C9E230E302",
+  "productionModules": 5261,
+  "incrementModules": 61,
+  "axiomChecks": 390,
+  "exhaustiveIncrementTheorems": 640,
+  "linterScopes": 61,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 640,
+  "boundary": "Regular differential dimension, the geometric genus formula and analytic realization by actual cusp forms remain required for the matching cusp-form lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. The arithmetic genus expression is not yet identified with the geometric genus. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original dimension and differential assembly - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,261-module scope: all thirteen retained regressions, 37,348 exhaustive theorem checks, 16,047 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Regular differential dimension, the geometric genus formula and analytic realization by actual cusp forms remain required for the matching cusp-form lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. The arithmetic genus expression is not yet identified with the geometric genus. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T04:15:00.804066+00:00",
+  "log": "logs/dubon-build-20261020-201619-373.log",
+  "sha256": "C185993777E67F1F7675343698F07CBDF504C2E400AF35A0E5A91E73FB86DA51",
+  "bytes": 9077593,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5261,
+  "projectTheorems": 37348,
+  "registeredConsumers": 16047,
+  "registeredConstructions": 804,
+  "declarations": 22251,
+  "generated": 21080,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_201322.log",
+  "foundationSha256": "47F3088E3AFFEBF75E925EC918E5B875EBC9298088C08739F103BDE8C52E521E",
+  "boundary": "Regular differential dimension, the geometric genus formula and analytic realization by actual cusp forms remain required for the matching cusp-form lower bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. The arithmetic genus expression is not yet identified with the geometric genus. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production original curve assembly pending full run - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,290-module scope: all thirteen retained regressions, 37,556 exhaustive theorem checks, 16,155 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalDifferentialsDependencyAuditProduction5290.log",
+      "sha256": "B8C1EB5EF88646BAE3DE023E495387AB68E992D0F51A764B6D7A9514C02D0D34",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff",
+        "Dubon2026.SourceFunctionField.regularDifferential_qExpansion_injective"
+      ],
+      "sourceSha256": "B6E0782AB6DC344DC15E6E15257923298CA1B16A45D6EA2FB6A1B87CF7F5A7D8"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalGeometryDependencyAuditProduction5290.log",
+      "sha256": "D7B692C729B1CF655AF7D8E406B7866516E630B1DBCEB861F8AE87A68542261E",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_place_residue",
+        "Dubon2026.SourceFunctionField.finiteDimensional_original_over_uniformizer",
+        "Dubon2026.SourceFunctionField.mem_original_regularDifferentials_iff_ord_nonneg"
+      ],
+      "sourceSha256": "BBA8F694CF790BFFB7859CD0854D3A9E9D5F734540A1C5516B0C585CBA9ECBDB"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDivisorSupportDependencyAuditProduction5290.log",
+      "sha256": "E0ED1E32DC733F59591DE34984BEE4D8B7D0E6D399700C2DC73CDC46BC33D98B",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_divisor_support"
+      ],
+      "sourceSha256": "B52BCCA1C64546D2F7CE7BA0322AA5C3E622ACEC29792869CCDB32A1F9E4935A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrincipalDegreeDependencyAuditProduction5290.log",
+      "sha256": "D90B5580297DA5AF34886B171831208ADCDC185EAD376B545631F9B93BAAF59F",
+      "requiredProofValueEdges": 48,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.isCurveOver_original"
+      ],
+      "sourceSha256": "E55F40279F93EA5952F07415B04257EC0C3B5344F9DF9C58A81B74DB538A07FA"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCurveProductionAudit5290.log",
+  "sha256": "F1F253E896639546B2FEC123D48979E01BFDBD743DD89BDE1864CE9787640A4D",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-curve-production-5290-build.log",
+  "aggregateSha256": "33648A96E59F976BEC9AEEE141B852A8C43DAF24FD6D7BDCE6A54C47A35BD341",
+  "productionModules": 5290,
+  "incrementModules": 29,
+  "axiomChecks": 134,
+  "exhaustiveIncrementTheorems": 208,
+  "linterScopes": 29,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 208,
+  "boundary": "Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original curve assembly - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,290-module scope: all thirteen retained regressions, 37,556 exhaustive theorem checks, 16,155 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T05:49:24.056029+00:00",
+  "log": "logs/dubon-build-20261020-213738-705.log",
+  "sha256": "30B0B47A0DD40809B4A0488B4764C7F022326C08CB4DCC9C09BECD8F6AB8A831",
+  "bytes": 9133482,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5290,
+  "projectTheorems": 37556,
+  "registeredConsumers": 16155,
+  "registeredConstructions": 830,
+  "declarations": 22407,
+  "generated": 21187,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_213428.log",
+  "foundationSha256": "2FB837C1C1F35AB881BA7B2C2DEB5FA3B433685F93685AB7DF5EE6981189B2FF",
+  "boundary": "Canonical divisors, Riemann--Roch, regular differential dimension, geometric genus and analytic cusp-form realization remain required for the matching lower dimension bound. Period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production original regular differentials pending full run - 20 October 2026
+
+The 5,318-module production aggregate and focused original regular differential audit pass with zero diagnostics. Five proof-value audits verify integral local differential generation, actual canonical finite support, finite original divisor and regular differential spaces, choice-independent canonical degree and exact finite repartition quotient dimensions. The source genus is evaluated at the actual j-canonical divisor. Riemann--Roch, the numerical genus/dimension and actual analytic cusp-form realization remain required. Sequential foundation/paper verification of this scope is pending.
+
+Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDerivativesDependencyAuditProduction5318.log",
+      "sha256": "3DBC6D7CB56D8FAB2CDD527020D10DB7B7BF4662DA0D5ECE70DD91E1BA215A7A",
+      "requiredProofValueEdges": 37,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_ordDifferential_D_nonneg_of_mem",
+        "Dubon2026.SourceFunctionField.span_original_integral_uniformizer_differential"
+      ],
+      "sourceSha256": "8B36582A1FDD3BBC83737C1C1230F24291388D27E2B258078E144E8BD4042FA4"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCanonicalDivisorsDependencyAuditProduction5318.log",
+      "sha256": "99EB53147571DECCB3958AEC413056C928F264F2051916953DA0942628538785",
+      "requiredProofValueEdges": 32,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.hasCanonicalDivisor_original"
+      ],
+      "sourceSha256": "69C6F7E2CFA9FD4C9BD40620EDA04AA1D097F914A4F39A5345F24FA1029BD9FC"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRegularFiniteDependencyAuditProduction5318.log",
+      "sha256": "5B553CD0E4242DDE9EE074996157CF6957E34DB1D8424BEB99C6C7B414A7659D",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_regularDifferentials",
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_eq_canonicalSpace"
+      ],
+      "sourceSha256": "BF828CAF1D3E203C2C6194E73D8FF77EC004CA5DFFC8605F8F07F966810D27E1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCanonicalDegreeDependencyAuditProduction5318.log",
+      "sha256": "C33A7F346972B5A3C277008DFC4682AB854CB605B121DCF59FC6EEDC698DCD79",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalGenus_eq_jCanonical_degree",
+        "Dubon2026.SourceFunctionField.degree_originalCanonicalDivisor_eq_j"
+      ],
+      "sourceSha256": "1B15E750AD74947BAA82FA603A4465092AEF31E2DDFB8D9DAC664EB524C31F2D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAdelicQuotientsDependencyAuditProduction5318.log",
+      "sha256": "1B725E3E526066F789B10B6F31B7F5B48AEBBA7D4C339C08E50A9E709F5BFBFC",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_adeleBdd_quotient",
+        "Dubon2026.SourceFunctionField.finite_original_bounded_globals",
+        "Dubon2026.SourceFunctionField.original_diagonal_mem_adeleSpace"
+      ],
+      "sourceSha256": "DE69DB26EF4F05BAC5362435B97A1CF8D560F5D4AE174020D7BF7AA3F315595A"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularProductionAudit5318.log",
+  "sha256": "253EF307A272DDA4178C45CA6DFA961EE40768B4B9F17025141A7ACCE807B727",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-regular-differentials-production-5318-build.log",
+  "aggregateSha256": "0A5421C757B16B670C0029A77D95B132ED61CD8893268F3DCFD559F3E7A9B866",
+  "productionModules": 5318,
+  "incrementModules": 28,
+  "axiomChecks": 106,
+  "exhaustiveIncrementTheorems": 207,
+  "linterScopes": 28,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 207,
+  "boundary": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
 }
 ```

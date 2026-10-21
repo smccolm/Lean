@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual Galois association -> original all-prime weight-two eigensystem -> integral-span characteristic-zero lift or exact Eisenstein eigensystem.",
+  "precedingScratchReceipts": {
+    "source-integral-span-6-scratch-receipt.json": "9D4E3A09310DCAC109D715F24DB2366BAA6CD6E143837DBD5A3E83DCA226515E"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\Transfer.lean",
+      "sha256": "1FD65835E78B82E2BD7052C47C0DF14E330120844F2689AA64855910CA70300C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Homological\\GroupCohomology\\LowDegree.lean",
+      "sha256": "5870D5D2EA7251F9F41BB0E1F22BF819D888009D63D06F35237AA30D0780128F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTrivialH1IntegralAlternative.lean",
+      "sha256": "EE3E9B3342F15508F26148EA3192397F2682D9E93BCC8F23AA635601E0C2768C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWeightTwo.lean",
+      "sha256": "0D2522BD3C49F14F875AC255A8B6694355767726AC9DB466C9ECFD67088B0E52"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeConjugation.lean",
+      "sha256": "84E7EF5F5AAF25757ADB681F00921FE30DECDD29778D1967FC7769053B578EAC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_CohCarrier_heckeT_top_apply_eq_smul_of_isOfFinOrder.lean.txt",
+      "sha256": "1C992239EEF55948B8FFCCB54B1FD1C9EA6E66F4B580D558ABB979D7F15FE933"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_CohCarrier_transfer_restrict_eq_pow_index.lean.txt",
+      "sha256": "02248DC2BC3C1AEEFAC24D2336ACCF47D9586D04616BAF574D225899EF811C37"
+    }
+  ],
+  "reuseSearch": "Inspected pinned transfer and the existing actual Hecke conjugation, native H1, all-prime primitive-form consumer, and the archived external finite-order proof.",
+  "routeAdjustment": "Use the pinned transfer orbit formula twice and existing actual coset transitions rather than recreating an external cohomology model. Prove precisely the finite-order trace and prime-norm lemmas required for original Hecke conjugacy. Compose with the already proved native integral-span alternative and original form consumer.",
+  "discharged": "Every actual primitive form of every source weight at least two and every prime supplies its genuine local field, characteristic-p residue embedding, nonzero original weight-two H1 eigensystem at level M with Q dividing M and M dividing Q*p squared, and its exact Fourier twist. That actual class either belongs to the integral span or has eigenvalues ell+1 at all good primes. Finite-order integral conjugacy, the full actual coset transfer calculation and the torsion-detection alternative are proved; torsion vanishing and the integral/Eisenstein alternative are not assumptions.",
+  "remaining": "Characteristic-zero Hecke lifting and geometric residual Galois association, including original Frobenius trace/determinant and ramification comparison, all-weight adic realization, purity, crystallinity and higher symmetric-power continuation remain. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

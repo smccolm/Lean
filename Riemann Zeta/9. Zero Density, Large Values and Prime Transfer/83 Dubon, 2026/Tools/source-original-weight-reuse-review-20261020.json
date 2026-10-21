@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> residual modular Galois association -> original weight-two parabolic-lift/Galois alternative -> exact cyclotomic weight twist and original Fourier residue normalization -> original arithmetic support and local values.",
+  "precedingScratchReceipts": {
+    "source-boundary-galois-7-scratch-receipt.json": "679F6B6FFBC2736F9576137756BF1753B6B0465D52C34679564AB22CF1201A47"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PolarizedBlockContinuity.lean",
+      "sha256": "F7DEAC31643E8B451491799EA945C81ECC1D13AC2C435E9F5637248EED0A1025"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightTwo.lean",
+      "sha256": "F603F2AF3877429921C0B051CAB5516C9CEE71B2406A514217D476D7212CAE15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualHeckeCharacter.lean",
+      "sha256": "69E86C11997CF917707EBC1465AF973DF6AE96645F20F8864E438197874CE932"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticSupportRestriction.lean",
+      "sha256": "F3877F6BA6657D54E641A30B5D09638A91CF71DF13637C3AFCF991480B5348F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticSupportLocalConjugacy.lean",
+      "sha256": "685F53D5270E196ED8DFFFF55D6FF7E8324614D10E083C607FD84B9A35B6EDC5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticSupportRepresentationLocalConjugacy.lean",
+      "sha256": "D22566A035D7BCA838A7E4BA4D2D810768AB1776D51A96ED36951931365F87E6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticOriginalSupportDescent.lean",
+      "sha256": "D379B676AA67FD4C133927245AAE661D264DB3ABDFB6A57F472180A40F9A00A3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\UnramifiedGaloisStageUnion.lean",
+      "sha256": "91F90B6481DDC3FBA1F5F44FEAE4C087ED0A26FD5779D474354D65FAF9B04398"
+    }
+  ],
+  "reuseSearch": "Inspected original scalar centrality/continuity, source weight parity and Fourier residue identity, finite-stage unramified unions, existing support restriction and local conjugacy, and the more general auxiliary-inertia descent route.",
+  "routeAdjustment": "The literal level bounds give equality of arithmetic extensions by divisibility by powers. Reusing the existing surjective restriction and its local conjugacy avoids proving a new auxiliary-inertia kernel theorem or importing a separate absolute-Galois or local-field model. The exact scalar twist uses existing polarized scalar centrality and continuity.",
+  "discharged": "Every original primitive form of source weight k>=2 and every prescribed prime construct its genuine local coefficient field and either the nonzero original parabolic complex H1 eigenclass with simultaneous integral reduction or a continuous rank-two residual Galois representation on the arithmetic group of support Q*p. On every good prime ell of the original level Q distinct from p, the trace at every original residue Frobenius is the actual original Fourier coefficient reduced through the constructed local embedding, and the determinant is ell^((k-1).toNat). The representation kills original norm inertia there. The source parity theorem proves the exact twist exponent, Q|M|Q*p^2 proves that all these primes are good for the intermediate level and that the arithmetic extensions at Q*p and M*p coincide. Existing original local conjugacy proves the local-value transport. No weight normalization, support equality, embedding compatibility, Galois realization for the boundary branch, Frobenius formula or inertia triviality is supplied to the final consumer.",
+  "remaining": "The parabolic complex branch still requires geometric Galois realization. All-weight adic realization, purity, crystallinity, full residual-image inputs and higher symmetric-power continuation remain required. Acceptance remains 16/20; DUB-17--20 are open.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}
