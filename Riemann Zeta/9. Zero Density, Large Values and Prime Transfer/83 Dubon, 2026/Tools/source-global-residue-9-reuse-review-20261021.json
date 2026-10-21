@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> global residue vanishing for every differential and global function on the literal original field.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_PlacesOverDVR.lean.txt",
+        "sha256": "4786895EAA0B7F27BA9FEC56A58A787F1D1D3EC8BE0E893436E6B1F8293AC7B7"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_fiberOver.lean.txt",
+        "sha256": "D0A4998B6AFD4E5AC2594563F9D23D6C310C1FB73EE993A2488882FAA523E847"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_residueTheoremK_of_isAlgClosed.lean.txt",
+        "sha256": "89E923CB52655F5B7BDAB81D59F64B9F5E6DED96EE364CA5ADD324266A4F03CA"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\RamificationInertia\\Basic.lean",
+      "sha256": "8DBA1B8F2A556BBD64E8A25DAD5222CBE56210DE2909B39E5F290A7BC57CE960"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\Over.lean",
+      "sha256": "3632E26FD4F60D32550C310DEE3459069BF8C45870C8E3E3C4F3E62D7F3ED22F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\DedekindDomain\\Ideal\\Lemmas.lean",
+      "sha256": "B475CF7CCC63A5170638FAFCDD74935290CC84552376F60FCB9245BA52EB68BF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LocalRing\\ResidueField\\Defs.lean",
+      "sha256": "9006D604FC77CDEEB027D3755D5DC521D0486F7811CB7B67ECDC902B139694C4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Finprod.lean",
+      "sha256": "C3833C7B940B9118D57D23E201130FFB291F80BDABA6DBA6075663A52C6B9066"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Reuse existing prime-place, center, ramification and residue-quotient comparisons. The closed-constant-field contract makes every inertia degree one, so only this case is proved. Native Dedekind ramification sums and finite-support reindexing descend the Galois identity without the external completion-and-trace construction.",
+  "discharged": "The actual original global residue sum vanishes for every Kaehler differential and every global function. The actual extension-place fiber is identified with height-one primes of the integral closure of the base place ring, and with the native finite primes-over set. Normalized orders are native ramification indices and actual rational residue fields force inertia degree one. The pinned Dedekind identity yields the exact fiber sum equal to the extension degree. The proved local pullback law and finite-support reindexing yield the global pullback degree formula. Applied to the actual original field and its proved normal closure, this descends residue vanishing for dj; original differential spanning extends it to all differentials. All local geometry and support inputs are derived.",
+  "remaining": "Residue duality, equality of canonical genus with regular differential dimension, the numerical modular genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.Place.instIsDedekindDomainIntegralClosureAt",
+    "Dubon2026.SourceCurve.Place.instIsFractionRingIntegralClosureAt",
+    "Dubon2026.SourceCurve.Place.instFiniteIntegralClosureAt",
+    "Dubon2026.SourceCurve.Place.instTorsionFreeIntegralClosureAt",
+    "Dubon2026.SourceCurve.Place.integralClosureAtConstantsTower",
+    "Dubon2026.SourceCurve.Place.integralClosureAtExtensionTower",
+    "Dubon2026.SourceCurve.Place.finite_placeFiber"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

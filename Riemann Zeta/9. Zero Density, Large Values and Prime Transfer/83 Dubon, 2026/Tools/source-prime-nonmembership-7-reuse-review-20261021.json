@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> prime irreducibility -> actual prime j-field nonmembership.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC",
+    "source-global-residue-9-scratch-receipt.json": "A194E21697F37B35B0DCBBABB4F3D945C4C461EC862BA4E4BD2153B58019A5E5",
+    "source-riemann-roch-2-scratch-receipt.json": "ABC98B0526CED855C5A0C2E7BB4E3E2455A5A05E17B5098DE9CEC501B614EF59",
+    "source-coordinate-values-2-scratch-receipt.json": "15C6E5B735D28F55F39A0E244F006CD31BFF457A668A4102C86E9C775346D81C",
+    "source-prime-degree-2-scratch-receipt.json": "49FCD2928DF35342E34F2D13694BF08A02A6E482B5E42826179AB8D602112BBF"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_one_le_coeff_jq.lean.txt",
+        "sha256": "834AAF085FE4F50700F901DDFB15A9B2153A8E61096EAC567D9CCF9BBA0C561B"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero.lean.txt",
+        "sha256": "EC84CC4AD220914A52763FB7ABB7BC6C4BA7D5C4D3A2891B8CEBF8587233B5F3"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeMonicDegree.lean",
+      "sha256": "FEECF3899078870F5F51F1CB433AA4A6C6F931A0472A0A5D9B143DAB4C98F59D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJSeries.lean",
+      "sha256": "F5468233139301BAFB0294C249FBF72D100FE446C101AC30F7CF816F495309CE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJBaseChange.lean",
+      "sha256": "D9E55C25D73763F6BEF3FDD3D5D568F659E08FA452EE8FC6EC8202BC2C0B0232"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJTranscendence.lean",
+      "sha256": "EE2F731083C08361D473DB422BDA17B733A803A906630E23F2375AA4601E5AD3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentRootTwist.lean",
+      "sha256": "7843194E68662EAC1E816623E3CD000BDCF7F243A2B9CC66E0F0735D6C97C18B"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Reuse the checked external coefficient argument on the existing literal j, eta and Eisenstein series. Replace its modular-polynomial package input with the already proved original monic relation. This removes the irreducibility dependency from prime nonmembership and avoids duplicating analytic modularity.",
+  "discharged": "The original j series has positive coefficients at every nonnegative index, by its literal Eisenstein numerator and eta inverse. The root-of-unity orbit and Vieta coefficient identity rule out j(q^p)=P(j(q)) over every characteristic-zero coefficient field. The already proved prime monic relation gives integrality over the polynomial j-algebra; native integral-root descent then proves that the actual prime j substitution is outside the rational j-field. No nonmembership, coefficient positivity or irreducibility premise remains.",
+  "remaining": "Prime conjugate-product irreducibility and exact degree are the next consumers. All-level generation and exact j-map degree, modular ramification and fiber counts, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_one_sub_X_pow_of_lt",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_one_sub_X_pow_eq_coeff_one",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_one_sub_pow_le",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jq_eq_coeff_jNum",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.constantCoeff_geomSeries",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries_nonneg",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries_one",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_sub_X_pow_mul_geomSeries",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_mul_nonneg",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_nonneg",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_pow_nonneg",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_mul_of_nonneg",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_mul",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_pow",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_mul_congr",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_pow_congr",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_etaProd_eq_coeff_partialEta",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_partialGeom_pow",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_eisenstein4_nonneg",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jq_ne_zero",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_mul",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_of_not_dvd",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqModC_of_lt",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_of_lt",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_ne_zero",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.jqModC_eq_TS",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.jqNModC_eq_TS",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_qExpand_of_pow_eq_one",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.units_pow_eq_one_of_isPrimitiveRoot",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_aeval_jqModC_of_lt",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqNModC_self",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqNModC_of_lt",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.ne_zero_of_aeval_eq",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_algebraMap",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_comp_algebraMap",
+    "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMap_aeval_jqModC"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,1030 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurveDivisorDimensionGrowth",
+    "Dubon2026.SourceCurvePoleDivisor",
+    "Dubon2026.SourceCurveIntegralCoordinateBasis",
+    "Dubon2026.SourceCurvePoleBasisBound",
+    "Dubon2026.SourceCurvePolePackage",
+    "Dubon2026.SourceCurveDivisorProducts",
+    "Dubon2026.SourceCurvePoleDimensionGrowth",
+    "Dubon2026.SourceCurveGenusMaximum",
+    "Dubon2026.SourceOriginalGenusBound",
+    "Dubon2026.SourceCurveAdelicIndex",
+    "Dubon2026.SourceCurveAdelicBoundGrowth",
+    "Dubon2026.SourceCurveGlobalIndex",
+    "Dubon2026.SourceOriginalGlobalIndex",
+    "Dubon2026.SourceCurveWeilAction",
+    "Dubon2026.SourceCurveWeilPairing",
+    "Dubon2026.SourceCurveWeilRankOne",
+    "Dubon2026.SourceOriginalWeilRank",
+    "Dubon2026.SourceCurveLocalPrincipalParts",
+    "Dubon2026.SourceCurveLocalResidueScalar",
+    "Dubon2026.SourceCurveLocalResidueUniqueness",
+    "Dubon2026.SourceCurveCanonicalResidueData",
+    "Dubon2026.SourceOriginalLocalResidues",
+    "Dubon2026.SourceCurveResidueFunctional",
+    "Dubon2026.SourceCurveResidueProbe",
+    "Dubon2026.SourceOriginalResidueFunctional",
+    "Dubon2026.SourceCurveExactDerivativeOrder",
+    "Dubon2026.SourceOriginalExactDerivativeOrder",
+    "Dubon2026.SourceCurveCoordinateDerivation",
+    "Dubon2026.SourceCurveExactDifferentialResidue",
+    "Dubon2026.SourceOriginalExactDifferentialResidue",
+    "Dubon2026.SourceCurveLogarithmicResidue",
+    "Dubon2026.SourceCurvePowerResidueSum",
+    "Dubon2026.SourceOriginalPowerResidues"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> original regular differential dimension -> function-field Riemann--Roch -> residue duality -> global index formula, rank-one Weil differentials and the canonical residue functional. The exact derivative-order branch serves the canonical j-divisor degree and numerical genus identification.",
+  "discharged": "For the literal original field, degree minus divisor-space dimension is bounded above and attains its maximum. The actual j pole divisor has degree equal to the finite coordinate field degree. A pinned integral basis is regular outside those poles and admits a common multiple pole bound. Its independent polynomial multiples give the necessary lower dimension growth; exact local quotient dimensions and actual principal shifts extend this to every divisor. Pinned integer order completeness gives a maximizing divisor. No pole package, boundedness or maximum is assumed. All proofs compile at unchanged proof limits. For the literal original field, every global repartition quotient and its dual annihilator space are finite. The quotient between two sums of bounded and global repartitions has dimension equal to the increment of degree minus divisor-space dimension. The proved global maximum forces stabilization, giving the index formula. Evaluating at the zero divisor and using proved base constants replaces the auxiliary maximum parameter by the actual zero-divisor index. No global bound, maximum, global index finiteness or genus identity is assumed. For the literal original field, every nonzero bounded global-annihilating functional spans all such functionals uniquely over the function field. The double pairing associated to two independent functionals would inject two copies of a divisor space into an index space. The proved global index growth contradicts this dimension bound. Actual principal divisors, finite residues, a nonempty place and the derived maximum supply all geometric inputs; none is assumed on the original consumer. The generic pairing is also proved surjective when its nonzero functional has the stated maximal divisor bound; that bound is not yet supplied for the canonical differential. Every actual original place has a canonical normalized residue map. Distinct negative pure uniformizer powers are independent modulo integral functions: the largest pole in a finite sum cannot cancel. A pinned linear left inverse extracts the simple-pole coefficient, which vanishes on integral functions and higher pure poles. The actual residue map evaluates a cleared simple pole. Cleared-pole induction proves uniqueness over the proved rational residue field. Thus every map satisfying the literal source normalization equals the constructed map. No local residue, residue section, completion or rationality premise remains on the original consumer. Every nonzero actual original differential defines a finite trace-residue sum on repartitions. Actual finite canonical support bounds the nonzero terms. Single-place simple-pole probes evaluate to one using the proved rational residue fields and the pinned trace formula. Thus the functional is nonzero, and it vanishes on a divisor bound exactly when that divisor lies below the literal original canonical divisor. Local canonical data, differential generation, canonical support and nonempty places are all derived. No global residue identity is assumed. At every actual original place, ord of Df equals ord f minus one whenever ord f is nonzero. The actual unit-times-uniformizer decomposition and pinned integer-power derivation rule express the leading coefficient. The previously proved integral derivative bound puts the error term in the maximal ideal, while the characteristic-zero nonzero integer times the unit cannot cancel. Original local differential finiteness, separability and generation are derived; no such local assumptions remain. Exact differentials have zero local canonical residue at every actual original place. The actual local coefficient map is linear, and native derivation composition gives differentiation in the uniformizer. The proved integral coefficient bound handles regular functions; native integer-power differentiation and canonical normalization handle all pure poles. The proved finite principal-part uniqueness supplies the result for every function. All original local finiteness, separability, generation and rational-residue inputs are derived. At every actual original place the canonical residue of df/f equals the normalized order of f. In characteristic zero, the residue of f^n df is zero for n different from -1. For every nonzero original f and every integer n, the global trace-residue sum of f^n df is zero. The logarithmic case consumes the actual degree-zero principal-divisor theorem; the other cases consume zero local residues of exact differentials. The constructed original residue functional is explicitly applied to these diagonal powers. All local geometric inputs are derived.",
+  "boundary": "The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,351-module scope: all thirteen retained regressions, 38,032 exhaustive theorem checks, 16,386 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.original_degree_dimension_maximum",
+    "Dubon2026.SourceFunctionField.finite_original_omegaSpace",
+    "Dubon2026.SourceFunctionField.original_omega_dimension_formula",
+    "Dubon2026.SourceFunctionField.original_weil_differentials_rank_one",
+    "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_unique",
+    "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_simplePole",
+    "Dubon2026.SourceFunctionField.originalResidueFunctional_ne_zero",
+    "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_bound_iff",
+    "Dubon2026.SourceFunctionField.original_ordDifferential_D_eq_ord_sub_one",
+    "Dubon2026.SourceFunctionField.original_localResidue_exactDifferential",
+    "Dubon2026.SourceFunctionField.original_localResidue_logarithmic",
+    "Dubon2026.SourceFunctionField.original_localResidue_power_differential",
+    "Dubon2026.SourceFunctionField.originalResidueFunctional_power_differential"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T05:59:51.977862+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveDivisorDimensionGrowth",
+        "SourceCurvePoleDivisor",
+        "SourceCurveIntegralCoordinateBasis",
+        "SourceCurvePoleBasisBound",
+        "SourceCurvePolePackage",
+        "SourceCurveDivisorProducts",
+        "SourceCurvePoleDimensionGrowth",
+        "SourceCurveGenusMaximum",
+        "SourceOriginalGenusBound"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveDivisorDimensionGrowth.lean",
+          "sha256": "C61B3F08AD30A11E66241B57FDE61B75BFC11FA6460F94E3004B86DAFD45D06E",
+          "oleanSha256": "20AF44F969AAAF89ADCA1F21F8E84B677E0D9DA160EF3B66CC0AE55264DE78F8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePoleDivisor.lean",
+          "sha256": "5241F461E53D49DF9C55A0F6C9FDE86D3CA240C43E4A7B9FC72DCFFD7CE4285E",
+          "oleanSha256": "887AC12971A538590F1DE2E3C6725BEE4915B82D0E5CD0E4748A6F3DC50C53DB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralCoordinateBasis.lean",
+          "sha256": "7D0F8C55716A2C21617D018A3415B723039ECF3E19DCD17886B7A94AF7BA00C3",
+          "oleanSha256": "B4713F034E458D760D744B212300B477081B82235FEA68BE37322892078C2F6F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePoleBasisBound.lean",
+          "sha256": "18B1F7CD2EC749DF5CC43618B739A290467C593DE7DC0032A3B06A8ED9938B54",
+          "oleanSha256": "6FAB861944354DF48507CFB2D888EF7E5E10B4AC3690F93D6F8A2BFCF612AAE8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePolePackage.lean",
+          "sha256": "E2107CBAAE95F395A6D5BC6675E2DDE9AE50F1572BF0D2FAAA3E75A8C7065BBC",
+          "oleanSha256": "EB41620632255533F3E8B185990094C3539506BBE7F55C40789D48178B346F54"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveDivisorProducts.lean",
+          "sha256": "6F209BC5159C8DE1F71F995C9F9E8EF3946DE3C2D1F58FEB07993DE6DE193C9B",
+          "oleanSha256": "7BC2163E5957F272429587E173E5C884C6DB511B8E6C96EF0E779D95BA7D8C15"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePoleDimensionGrowth.lean",
+          "sha256": "F139FAF12FB7B60B0BC8919E3EF9ACDCA80C1976634E14BBBCFA7301BAACEF2F",
+          "oleanSha256": "94B4EB5BA5CB0FEB936C6CFDB5BADD6BE7D919E37AA0A4C4176044BF8E30F2A1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveGenusMaximum.lean",
+          "sha256": "88275FA0D6934701E24E11EABDF003DEACCB5D3D7BC72DFC8F834567BA1DAA6F",
+          "oleanSha256": "FA1296F0CEE65D95F22824971C434C65984A3D2D7C957507A3E4B42608CB4DA7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenusBound.lean",
+          "sha256": "E6292E0547A755C28ED0D04949EFE12DC57EDF0EC14048BBAD6B05ADACA86D74",
+          "oleanSha256": "2C0A3B084DA9221B2529B02322CA5F9406C850C1A341D15E215BA5D20A9910A3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.lSpaceQuotientToAdeleBddQuotient_injective",
+        "Dubon2026.SourceCurve.ell_sub_ell_le_degree_sub_degree",
+        "Dubon2026.SourceCurve.adeleBdd_inf_sup_globalSub",
+        "Dubon2026.SourceCurve.map_diagonal_lSpace_inf_adeleBdd",
+        "Dubon2026.SourceCurve.poleDivisor_apply",
+        "Dubon2026.SourceCurve.poleDivisor_nonneg",
+        "Dubon2026.SourceCurve.mem_lSpace_poleDivisor",
+        "Dubon2026.SourceCurve.degree_poleDivisor_eq_positive_inverse",
+        "Dubon2026.SourceCurve.degree_poleDivisor_eq_finrank",
+        "Dubon2026.SourceCurve.exists_basis_regular_outside_X",
+        "Dubon2026.SourceCurve.linearIndependent_powers_of_transcendental",
+        "Dubon2026.SourceCurve.linearIndependent_coordinate_powers_mul",
+        "Dubon2026.SourceCurve.exists_forall_mem_lSpace_nsmul_poleDivisor",
+        "Dubon2026.SourceCurve.exists_poleDivisorPackage_of_finite_coordinate",
+        "Dubon2026.SourceCurve.one_mem_lSpace_zero",
+        "Dubon2026.SourceCurve.mul_mem_lSpace_add",
+        "Dubon2026.SourceCurve.pow_mem_lSpace_nsmul",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.pow_mul_u_mem_lSpace",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.pow_mul_u_mem_lSpace_of_le",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.ell_nsmul_poleDivisor_ge",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.degree_nsmul_sub_ell_le",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.ell_nsmul_sub_pos",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.degree_sub_ell_le",
+        "Dubon2026.SourceCurve.riemannGenusBounded_of_poleDivisorPackage",
+        "Dubon2026.SourceCurve.exists_riemannGenusReachedAt_of_bounded",
+        "Dubon2026.SourceCurve.RiemannGenusReachedAt.eq_of_ge",
+        "Dubon2026.SourceFunctionField.exists_original_poleDivisorPackage",
+        "Dubon2026.SourceFunctionField.original_degree_dimension_bounded",
+        "Dubon2026.SourceFunctionField.original_degree_dimension_maximum",
+        "Dubon2026.SourceCurve.ell",
+        "Dubon2026.SourceCurve.lSpaceQuotientToAdeleBddQuotient",
+        "Dubon2026.SourceCurve.poleDivisor",
+        "Dubon2026.SourceCurve.PoleDivisorPackage",
+        "Dubon2026.SourceCurve.lSpaceShiftEquiv",
+        "Dubon2026.SourceCurve.RiemannGenusBounded",
+        "Dubon2026.SourceCurve.RiemannGenusReachedAt"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.lSpaceQuotientToAdeleBddQuotient_injective",
+        "Dubon2026.SourceCurve.ell_sub_ell_le_degree_sub_degree",
+        "Dubon2026.SourceCurve.adeleBdd_inf_sup_globalSub",
+        "Dubon2026.SourceCurve.map_diagonal_lSpace_inf_adeleBdd",
+        "Dubon2026.SourceCurve.poleDivisor_apply",
+        "Dubon2026.SourceCurve.poleDivisor_nonneg",
+        "Dubon2026.SourceCurve.mem_lSpace_poleDivisor",
+        "Dubon2026.SourceCurve.degree_poleDivisor_eq_positive_inverse",
+        "Dubon2026.SourceCurve.degree_poleDivisor_eq_finrank",
+        "Dubon2026.SourceCurve.exists_basis_regular_outside_X",
+        "Dubon2026.SourceCurve.linearIndependent_powers_of_transcendental",
+        "Dubon2026.SourceCurve.linearIndependent_coordinate_powers_mul",
+        "Dubon2026.SourceCurve.exists_forall_mem_lSpace_nsmul_poleDivisor",
+        "Dubon2026.SourceCurve.exists_poleDivisorPackage_of_finite_coordinate",
+        "Dubon2026.SourceCurve.one_mem_lSpace_zero",
+        "Dubon2026.SourceCurve.mul_mem_lSpace_add",
+        "Dubon2026.SourceCurve.pow_mem_lSpace_nsmul",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.pow_mul_u_mem_lSpace",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.pow_mul_u_mem_lSpace_of_le",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.ell_nsmul_poleDivisor_ge",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.degree_nsmul_sub_ell_le",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.ell_nsmul_sub_pos",
+        "Dubon2026.SourceCurve.PoleDivisorPackage.degree_sub_ell_le",
+        "Dubon2026.SourceCurve.riemannGenusBounded_of_poleDivisorPackage",
+        "Dubon2026.SourceCurve.exists_riemannGenusReachedAt_of_bounded",
+        "Dubon2026.SourceCurve.RiemannGenusReachedAt.eq_of_ge",
+        "Dubon2026.SourceFunctionField.exists_original_poleDivisorPackage",
+        "Dubon2026.SourceFunctionField.original_degree_dimension_bounded",
+        "Dubon2026.SourceFunctionField.original_degree_dimension_maximum"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ell",
+        "Dubon2026.SourceCurve.lSpaceQuotientToAdeleBddQuotient",
+        "Dubon2026.SourceCurve.poleDivisor",
+        "Dubon2026.SourceCurve.PoleDivisorPackage",
+        "Dubon2026.SourceCurve.lSpaceShiftEquiv",
+        "Dubon2026.SourceCurve.RiemannGenusBounded",
+        "Dubon2026.SourceCurve.RiemannGenusReachedAt"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenusBoundAudit9.log",
+      "logSha256": "F74E05ACCBE027075ECEFE85D39A4B0F1598B399BD67CE46A86EBF5F56FC67E9",
+      "auditSha256": "93A71A0766E35423B190A04F19A1B6F9448628101CBC390D3D24664D55B3865B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 62,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGenusBoundDependencyAudit.log",
+      "dependencyAuditSha256": "F0CDB8DBC55F2778C13FDA102F89AE1D03C1307267CC94D473193ECFD19C8A58",
+      "dependencyAuditSourceSha256": "100B64EE06F031C6292F8BD63F7B47F4708F9C315FF0FC762A2C665EEBCBCF89",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_degree_dimension_maximum"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> global index stabilization -> bounded and attained degree-minus-divisor-space dimension.",
+      "discharged": "For the literal original field, degree minus divisor-space dimension is bounded above and attains its maximum. The actual j pole divisor has degree equal to the finite coordinate field degree. A pinned integral basis is regular outside those poles and admits a common multiple pole bound. Its independent polynomial multiples give the necessary lower dimension growth; exact local quotient dimensions and actual principal shifts extend this to every divisor. Pinned integer order completeness gives a maximizing divisor. No pole package, boundedness or maximum is assumed. All proofs compile at unchanged proof limits.",
+      "boundary": "Scratch only; production promotion and verification pending. The auxiliary maximum parameter has not been identified with the canonical genus. The global index formula and residue duality remain required. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-genus-bound-9-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "76818A33B7ED14583BB8E3859CACD6F0BD2A0E434C7AD3127F8A45BD1E5FDF33"
+    },
+    {
+      "recordedUTC": "2026-10-21T06:05:33.539241+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveAdelicIndex",
+        "SourceCurveAdelicBoundGrowth",
+        "SourceCurveGlobalIndex",
+        "SourceOriginalGlobalIndex"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveAdelicIndex.lean",
+          "sha256": "8A1F829C0B03F4DDD777D05B06142DC606DC7F92229B1099072A5F1FA50081DF",
+          "oleanSha256": "985B9B41E3E971B721E6102DC1C4E94F2902E03AD80E0147069F12F6C70C9E55"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveAdelicBoundGrowth.lean",
+          "sha256": "C6D09A0FB2E3F47C69FFBB8B338D1DA04DB046CF83BD2DE442B57052F73856E4",
+          "oleanSha256": "9F8238A1EBC332C92A6056BDF0C8D923DB4D0C5DDD7068DDD1784D7F78C948FE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveGlobalIndex.lean",
+          "sha256": "879DE0FF35F4076E1CC885B2672723FD7BD365428CC9A75F8D7D84A4E2073B86",
+          "oleanSha256": "64B82719829F60FCCCFABA8629A74F3A4873566BAB055B3BF18249BB28F92E58"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalIndex.lean",
+          "sha256": "2BE4938EBA8ED909F43C84342BA711381B7C6CA8A1154A9AC51788BB1B7E9EE7",
+          "oleanSha256": "51FAF972728E936404CA8ABAA3FA68745F76D9454ED4806E3FFCF892E2AC91A1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.adeleBdd_directed",
+        "Dubon2026.SourceCurve.mem_adeleSpace_iff",
+        "Dubon2026.SourceCurve.indexOfSpecialty_eq",
+        "Dubon2026.SourceCurve.omegaSpace_vanishBdd",
+        "Dubon2026.SourceCurve.omegaSpace_vanishGlobal",
+        "Dubon2026.SourceCurve.omegaSpace_antitone",
+        "Dubon2026.SourceCurve.finrank_omegaSpace_eq_indexOfSpecialty",
+        "Dubon2026.SourceCurve.range_lSpaceQuotientToAdeleBddQuotient",
+        "Dubon2026.SourceCurve.finrank_adeleBddSup_quotient",
+        "Dubon2026.SourceCurve.globalSub_le_adeleSpace",
+        "Dubon2026.SourceCurve.adeleBdd_sup_globalSub_le_adeleSpace",
+        "Dubon2026.SourceCurve.adeleBddPrincipal_eq_comap",
+        "Dubon2026.SourceCurve.adeleBddPrincipal_mono",
+        "Dubon2026.SourceCurve.adeleBddSup_eq_of_degree_sub_ell_eq",
+        "Dubon2026.SourceCurve.adeleSpace_eq_of_genusReached",
+        "Dubon2026.SourceCurve.indexOfSpecialty_eq_zero_of_genusReached",
+        "Dubon2026.SourceCurve.indexOfSpecialty_eq_of_genusReached",
+        "Dubon2026.SourceFunctionField.finite_original_index_quotient",
+        "Dubon2026.SourceFunctionField.original_index_formula",
+        "Dubon2026.SourceFunctionField.finite_original_omegaSpace",
+        "Dubon2026.SourceFunctionField.original_omega_dimension_formula",
+        "Dubon2026.SourceCurve.indexOfSpecialty",
+        "Dubon2026.SourceCurve.adeleBddPrincipal",
+        "Dubon2026.SourceCurve.omegaSpace",
+        "Dubon2026.SourceCurve.omegaSpaceEquivIndexDual"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.adeleBdd_directed",
+        "Dubon2026.SourceCurve.mem_adeleSpace_iff",
+        "Dubon2026.SourceCurve.indexOfSpecialty_eq",
+        "Dubon2026.SourceCurve.omegaSpace_vanishBdd",
+        "Dubon2026.SourceCurve.omegaSpace_vanishGlobal",
+        "Dubon2026.SourceCurve.omegaSpace_antitone",
+        "Dubon2026.SourceCurve.finrank_omegaSpace_eq_indexOfSpecialty",
+        "Dubon2026.SourceCurve.range_lSpaceQuotientToAdeleBddQuotient",
+        "Dubon2026.SourceCurve.finrank_adeleBddSup_quotient",
+        "Dubon2026.SourceCurve.globalSub_le_adeleSpace",
+        "Dubon2026.SourceCurve.adeleBdd_sup_globalSub_le_adeleSpace",
+        "Dubon2026.SourceCurve.adeleBddPrincipal_eq_comap",
+        "Dubon2026.SourceCurve.adeleBddPrincipal_mono",
+        "Dubon2026.SourceCurve.adeleBddSup_eq_of_degree_sub_ell_eq",
+        "Dubon2026.SourceCurve.adeleSpace_eq_of_genusReached",
+        "Dubon2026.SourceCurve.indexOfSpecialty_eq_zero_of_genusReached",
+        "Dubon2026.SourceCurve.indexOfSpecialty_eq_of_genusReached",
+        "Dubon2026.SourceFunctionField.finite_original_index_quotient",
+        "Dubon2026.SourceFunctionField.original_index_formula",
+        "Dubon2026.SourceFunctionField.finite_original_omegaSpace",
+        "Dubon2026.SourceFunctionField.original_omega_dimension_formula"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.indexOfSpecialty",
+        "Dubon2026.SourceCurve.adeleBddPrincipal",
+        "Dubon2026.SourceCurve.omegaSpace",
+        "Dubon2026.SourceCurve.omegaSpaceEquivIndexDual"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalIndexAudit4.log",
+      "logSha256": "B136FC5EA68AE0A0B6CC3AD8623B94A4CEB8637728A140D0AA21AD97DF9CC5D4",
+      "auditSha256": "120256A648782558ED0D8D73E0381B558CACEA026A4C3F7D80DD61183590A1C1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 30,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalIndexDependencyAudit.log",
+      "dependencyAuditSha256": "07DFF8D6ECFBADC6EBE6BF83759F619D8F472C88DF43FF0508CE11B6A42D4B28",
+      "dependencyAuditSourceSha256": "54FDB9506F8AC039E659B28EB87B752A43400A511B81DE730341AE5E0576C697",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_omegaSpace",
+        "Dubon2026.SourceFunctionField.original_omega_dimension_formula"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> residue duality -> finite global index spaces and exact index formula.",
+      "discharged": "For the literal original field, every global repartition quotient and its dual annihilator space are finite. The quotient between two sums of bounded and global repartitions has dimension equal to the increment of degree minus divisor-space dimension. The proved global maximum forces stabilization, giving the index formula. Evaluating at the zero divisor and using proved base constants replaces the auxiliary maximum parameter by the actual zero-divisor index. No global bound, maximum, global index finiteness or genus identity is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. Residue duality and identification of the zero-divisor index with the canonical genus remain required. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-global-index-4-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "551DB1FF240628A5FAAF05CA7C274841CC77E5D4D99F276E3715CC95B5490919"
+    },
+    {
+      "recordedUTC": "2026-10-21T06:13:16.344476+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveWeilAction",
+        "SourceCurveWeilPairing",
+        "SourceCurveWeilRankOne",
+        "SourceOriginalWeilRank"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveWeilAction.lean",
+          "sha256": "0A05F565886C2C2FCF782E9EA4F5E2AC5E3EA4B3FEA97F8DD1994D047E3C2C7F",
+          "oleanSha256": "96281AF03CC1A854C8C35857C29B9A96D4CE0C3D693287640D469186FCFA7CEE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveWeilPairing.lean",
+          "sha256": "AC9CD679682356D082A119B972323DDFC806A7EB367D3441A70124D6754B2CED",
+          "oleanSha256": "1B4FD2EAC0E18E19A0D4BB40ED55B18D6BE23D169AF258DCA689215A29968238"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveWeilRankOne.lean",
+          "sha256": "AF151F9657B31A7AFA5A059128E5BB0A1951AD45E3045C1BC3068C084CA8464C",
+          "oleanSha256": "BB8E7C82CC43FAF20ACA28B631BF8A905171C1F4E41FE2ACEC76398E7036EFDE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRank.lean",
+          "sha256": "B02CD921A293C05AD2F335A43BF000B057C3BF9AB35F4D2FB44030DE606F5C12",
+          "oleanSha256": "172CDC4FA92943538378023E1CBC7AFF969E5FD2C8FAA77037933BEC7AAF1359"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.omegaSpace_le_weilDifferentialModule",
+        "Dubon2026.SourceCurve.omegaSpace_directed",
+        "Dubon2026.SourceCurve.mem_weilDifferentialModule_iff",
+        "Dubon2026.SourceCurve.mulAdele_apply",
+        "Dubon2026.SourceCurve.mulAdele_one",
+        "Dubon2026.SourceCurve.mulAdele_mul",
+        "Dubon2026.SourceCurve.mulAdele_mem_adeleBdd_sub",
+        "Dubon2026.SourceCurve.mulAdele_globalSub_le",
+        "Dubon2026.SourceCurve.mulAdele_mem_adeleSpace",
+        "Dubon2026.SourceCurve.adeleSpaceMul_coe",
+        "Dubon2026.SourceCurve.weilSmul_apply",
+        "Dubon2026.SourceCurve.adeleSpaceMul_one",
+        "Dubon2026.SourceCurve.adeleSpaceMul_mul",
+        "Dubon2026.SourceCurve.weilSmul_one",
+        "Dubon2026.SourceCurve.weilSmul_mul",
+        "Dubon2026.SourceCurve.weilSmul_injective",
+        "Dubon2026.SourceCurve.weilSmul_mem_omegaSpace_add",
+        "Dubon2026.SourceCurve.weilSmul_mem_omegaSpace_of_mem_lSpace",
+        "Dubon2026.SourceCurve.residuePairing_apply_coe",
+        "Dubon2026.SourceCurve.residuePairing_injective",
+        "Dubon2026.SourceCurve.ell_sub_le_indexOfSpecialty",
+        "Dubon2026.SourceCurve.adeleSpaceMul_add",
+        "Dubon2026.SourceCurve.adeleSpaceMul_zero",
+        "Dubon2026.SourceCurve.weilSmul_add_left",
+        "Dubon2026.SourceCurve.weilSmul_zero_left",
+        "Dubon2026.SourceCurve.weilSmul_neg_left",
+        "Dubon2026.SourceCurve.weilSmul_sub_left",
+        "Dubon2026.SourceCurve.weilSmul_eq_zero_iff_left",
+        "Dubon2026.SourceCurve.weilSmul_left_injective",
+        "Dubon2026.SourceCurve.doubleResiduePairing_apply_coe",
+        "Dubon2026.SourceCurve.doubleResiduePairing_injective",
+        "Dubon2026.SourceCurve.two_mul_ell_le_indexOfSpecialty",
+        "Dubon2026.SourceCurve.lSpace_eq_bot_of_degree_neg",
+        "Dubon2026.SourceCurve.ell_eq_zero_of_degree_neg",
+        "Dubon2026.SourceCurve.riemannInequality_of_genusReached",
+        "Dubon2026.SourceCurve.omegaSpace_finite_of_genusReached",
+        "Dubon2026.SourceCurve.exists_weilSmul_eq_of_genusReached",
+        "Dubon2026.SourceCurve.weilDifferentialRankOne_of_genusReached",
+        "Dubon2026.SourceCurve.residuePairing_surjective_of_rankOne_max",
+        "Dubon2026.SourceFunctionField.original_weil_differentials_rank_one",
+        "Dubon2026.SourceCurve.weilDifferentialModule",
+        "Dubon2026.SourceCurve.mulAdele",
+        "Dubon2026.SourceCurve.adeleSpaceMul",
+        "Dubon2026.SourceCurve.weilSmul",
+        "Dubon2026.SourceCurve.residuePairing",
+        "Dubon2026.SourceCurve.doubleResiduePairing",
+        "Dubon2026.SourceCurve.WeilDifferentialRankOne"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.omegaSpace_le_weilDifferentialModule",
+        "Dubon2026.SourceCurve.omegaSpace_directed",
+        "Dubon2026.SourceCurve.mem_weilDifferentialModule_iff",
+        "Dubon2026.SourceCurve.mulAdele_apply",
+        "Dubon2026.SourceCurve.mulAdele_one",
+        "Dubon2026.SourceCurve.mulAdele_mul",
+        "Dubon2026.SourceCurve.mulAdele_mem_adeleBdd_sub",
+        "Dubon2026.SourceCurve.mulAdele_globalSub_le",
+        "Dubon2026.SourceCurve.mulAdele_mem_adeleSpace",
+        "Dubon2026.SourceCurve.adeleSpaceMul_coe",
+        "Dubon2026.SourceCurve.weilSmul_apply",
+        "Dubon2026.SourceCurve.adeleSpaceMul_one",
+        "Dubon2026.SourceCurve.adeleSpaceMul_mul",
+        "Dubon2026.SourceCurve.weilSmul_one",
+        "Dubon2026.SourceCurve.weilSmul_mul",
+        "Dubon2026.SourceCurve.weilSmul_injective",
+        "Dubon2026.SourceCurve.weilSmul_mem_omegaSpace_add",
+        "Dubon2026.SourceCurve.weilSmul_mem_omegaSpace_of_mem_lSpace",
+        "Dubon2026.SourceCurve.residuePairing_apply_coe",
+        "Dubon2026.SourceCurve.residuePairing_injective",
+        "Dubon2026.SourceCurve.ell_sub_le_indexOfSpecialty",
+        "Dubon2026.SourceCurve.adeleSpaceMul_add",
+        "Dubon2026.SourceCurve.adeleSpaceMul_zero",
+        "Dubon2026.SourceCurve.weilSmul_add_left",
+        "Dubon2026.SourceCurve.weilSmul_zero_left",
+        "Dubon2026.SourceCurve.weilSmul_neg_left",
+        "Dubon2026.SourceCurve.weilSmul_sub_left",
+        "Dubon2026.SourceCurve.weilSmul_eq_zero_iff_left",
+        "Dubon2026.SourceCurve.weilSmul_left_injective",
+        "Dubon2026.SourceCurve.doubleResiduePairing_apply_coe",
+        "Dubon2026.SourceCurve.doubleResiduePairing_injective",
+        "Dubon2026.SourceCurve.two_mul_ell_le_indexOfSpecialty",
+        "Dubon2026.SourceCurve.lSpace_eq_bot_of_degree_neg",
+        "Dubon2026.SourceCurve.ell_eq_zero_of_degree_neg",
+        "Dubon2026.SourceCurve.riemannInequality_of_genusReached",
+        "Dubon2026.SourceCurve.omegaSpace_finite_of_genusReached",
+        "Dubon2026.SourceCurve.exists_weilSmul_eq_of_genusReached",
+        "Dubon2026.SourceCurve.weilDifferentialRankOne_of_genusReached",
+        "Dubon2026.SourceCurve.residuePairing_surjective_of_rankOne_max",
+        "Dubon2026.SourceFunctionField.original_weil_differentials_rank_one"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.weilDifferentialModule",
+        "Dubon2026.SourceCurve.mulAdele",
+        "Dubon2026.SourceCurve.adeleSpaceMul",
+        "Dubon2026.SourceCurve.weilSmul",
+        "Dubon2026.SourceCurve.residuePairing",
+        "Dubon2026.SourceCurve.doubleResiduePairing",
+        "Dubon2026.SourceCurve.WeilDifferentialRankOne"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeilRankAudit4.log",
+      "logSha256": "B1349954E893419A1A81E0051242153EF6AB8996BDC42F67E7CAEB918386783D",
+      "auditSha256": "316D9DB3C0F99D7738532010A2E383C3A3BA579B20CA1A3013DF08B3587F70FA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 57,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 32,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeilRankDependencyAudit.log",
+      "dependencyAuditSha256": "78BBAB2DABF281EA36B1D501259041EE2CC23E2B77B143ED45B6FEE11FD1A98B",
+      "dependencyAuditSourceSha256": "02EF8591614E3A928615ABF4BD5D033653845250F8A48EEEB87A4129BEE975DB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_weil_differentials_rank_one"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> residue duality -> rank one of actual Weil differentials.",
+      "discharged": "For the literal original field, every nonzero bounded global-annihilating functional spans all such functionals uniquely over the function field. The double pairing associated to two independent functionals would inject two copies of a divisor space into an index space. The proved global index growth contradicts this dimension bound. Actual principal divisors, finite residues, a nonempty place and the derived maximum supply all geometric inputs; none is assumed on the original consumer. The generic pairing is also proved surjective when its nonzero functional has the stated maximal divisor bound; that bound is not yet supplied for the canonical differential.",
+      "boundary": "Scratch only; production promotion and verification pending. A nonzero canonical residue functional with its exact maximal divisor bound remains required for residue duality and identification with canonical genus. Numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-weil-rank-4-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "033C30ABC94C026C86777F5993655FA093C46E20303E2D9B1BF605730F296131"
+    },
+    {
+      "recordedUTC": "2026-10-21T06:26:02.520017+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveLocalPrincipalParts",
+        "SourceCurveLocalResidueScalar",
+        "SourceCurveLocalResidueUniqueness",
+        "SourceCurveCanonicalResidueData",
+        "SourceOriginalLocalResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalPrincipalParts.lean",
+          "sha256": "0FAA427CC56D28EA9753A1FF67F66D16079A76B5799B96AF0DC0679AB1DCE755",
+          "oleanSha256": "5CEEB99224A02805D37439776EF3AC8B9F0EA246DE150B25839E10831D863A7B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalResidueScalar.lean",
+          "sha256": "EC87D64964C3512E89DA5896C7C5B4DEC225CFE9463AF7A3D23CA70E03867E13",
+          "oleanSha256": "F6DBAC30B8F4918E0E5BC34A9E4561F34F0E19871C43EB1C8BE6EB1C51081F22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalResidueUniqueness.lean",
+          "sha256": "E6679CBAC9E1BCDFA3746FFF6EE156DFBFCFD38D785EE88F20DB5302E8CA7829",
+          "oleanSha256": "3514728D7BC5606BE73B54706EE717B5D8BD77EACADDDF6C8ED77CC7E8F2BF8D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCanonicalResidueData.lean",
+          "sha256": "158D0D44A12EAE46DBA4228076D3E8A9A418ED0A1F53B18A8C854C25BACDDFB8",
+          "oleanSha256": "94E4F735F3EF95C078AE0FEACE58F2523B6873D4AA49D941511DEB74A619EE45"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalResidues.lean",
+          "sha256": "BDFF9378D23BE154A83734B3C1C57D537ECD3E401709C43E6917F8E0DA1178C4",
+          "oleanSha256": "21DDD106D5D5EE6E81D5D8D5F7D13EA938E4946CA51FF05B6CDA22DE79D465AA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.valuation_smul_uniformizer_neg_pow",
+        "Dubon2026.SourceCurve.Place.poleClass_linearIndependent",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_of_mem",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_neg_pow",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_uniformizer_inv",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_higherPole",
+        "Dubon2026.SourceCurve.Place.exists_integral_sub_simplePole",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_simplePole",
+        "Dubon2026.SourceCurve.Place.uniformizer_pow_mul_neg_pow",
+        "Dubon2026.SourceCurve.Place.clear_pole_mem",
+        "Dubon2026.SourceCurve.Place.linearMap_zero_of_integral_and_poles",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_unique",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_res_unique",
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_unique",
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_simplePole",
+        "Dubon2026.SourceCurve.Place.integralFunctions",
+        "Dubon2026.SourceCurve.Place.poleClass",
+        "Dubon2026.SourceCurve.Place.localResidueScalar",
+        "Dubon2026.SourceCurve.Place.LocalResidueData",
+        "Dubon2026.SourceCurve.Place.CanonicalLocalResidueDataK",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData",
+        "Dubon2026.SourceFunctionField.originalCanonicalLocalResidueData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.valuation_smul_uniformizer_neg_pow",
+        "Dubon2026.SourceCurve.Place.poleClass_linearIndependent",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_of_mem",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_neg_pow",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_uniformizer_inv",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_higherPole",
+        "Dubon2026.SourceCurve.Place.exists_integral_sub_simplePole",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_simplePole",
+        "Dubon2026.SourceCurve.Place.uniformizer_pow_mul_neg_pow",
+        "Dubon2026.SourceCurve.Place.clear_pole_mem",
+        "Dubon2026.SourceCurve.Place.linearMap_zero_of_integral_and_poles",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_unique",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_res_unique",
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_unique",
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_simplePole"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.integralFunctions",
+        "Dubon2026.SourceCurve.Place.poleClass",
+        "Dubon2026.SourceCurve.Place.localResidueScalar",
+        "Dubon2026.SourceCurve.Place.LocalResidueData",
+        "Dubon2026.SourceCurve.Place.CanonicalLocalResidueDataK",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData",
+        "Dubon2026.SourceFunctionField.originalCanonicalLocalResidueData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalResiduesAudit5.log",
+      "logSha256": "EE5D95D6F6CF2ADFBC2A26033B84F62D6C6F4809A674ADB197CCFC980C0D50F6",
+      "auditSha256": "D29FA856EB8019D6D54E1649402F95943E8AAAA626416CC2F3339259AB3D285A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 49,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 26,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLocalResiduesDependencyAudit.log",
+      "dependencyAuditSha256": "E2AA6D7B54F51FB3A148D5C16D4DD62DEFBBE60D8A15BC922E705BE820211BDA",
+      "dependencyAuditSourceSha256": "E51D5775A2578A7EB3E4C7C6A905C8097A5E8FCF878917DD307961828DD60468",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_unique",
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_simplePole"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> residue duality -> canonical local residues on the actual original field.",
+      "discharged": "Every actual original place has a canonical normalized residue map. Distinct negative pure uniformizer powers are independent modulo integral functions: the largest pole in a finite sum cannot cancel. A pinned linear left inverse extracts the simple-pole coefficient, which vanishes on integral functions and higher pure poles. The actual residue map evaluates a cleared simple pole. Cleared-pole induction proves uniqueness over the proved rational residue field. Thus every map satisfying the literal source normalization equals the constructed map. No local residue, residue section, completion or rationality premise remains on the original consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. The global sum-of-residues identity, nonzero canonical residue functional with its exact maximal divisor bound, and residue duality remain required. Numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-local-residues-5-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "FCC6DF3AA9C94301D47840A9B9052ABCC3989AAD28843A27F88A12AA46C4E6B4"
+    },
+    {
+      "recordedUTC": "2026-10-21T06:34:39.663771+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveResidueFunctional",
+        "SourceCurveResidueProbe",
+        "SourceOriginalResidueFunctional"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveResidueFunctional.lean",
+          "sha256": "2E8CF722B0AA04ABC7515A806102434E82DC0E70A0B4F972D28091FE0A37306B",
+          "oleanSha256": "48B526BB2E152C1D9702BC8BF5726F90F7D745053E3CCED14F38991FCE36F7BB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveResidueProbe.lean",
+          "sha256": "7E12F989D0FACE00E03350CA7729F4D13CC7BD1476BFFC52193A48E71C5706B7",
+          "oleanSha256": "BDF174B86B611460B969A94ABD12C4A79452D412D639F066CB14BC3A6231F4C1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFunctional.lean",
+          "sha256": "269E98744B0F6B4C79991024566636E4668616BA23C23B7A73BA4493CF54EAF0",
+          "oleanSha256": "CEA6869816E9B540653E0EDACCB24CA708BAF292614BCB311A6130F80B7EA680"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.CanonicalLocalResidueDataK.res_eq_zero_of_ord_nonneg",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_apply",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_eq_zero_of_ord_nonneg",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_eq_zero_of_adeleBdd_canonical",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_subset",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_finite",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_finite_of_adeleSpace",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_apply",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_vanish_adeleBdd_canonical",
+        "Dubon2026.SourceCurve.single_mem_adeleBdd",
+        "Dubon2026.SourceCurve.single_mem_adeleSpace",
+        "Dubon2026.SourceCurve.Place.trace_one_of_residue_bijective",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_single",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_simplePoleProbe",
+        "Dubon2026.SourceCurve.simplePoleProbe_mem_adeleBdd",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_ne_zero_of_rational_residues",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_adeleBound_le_canonical",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_ne_zero",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_canonical",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_bound_iff",
+        "Dubon2026.SourceCurve.Place.kaehlerResidueTermK",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam",
+        "Dubon2026.SourceCurve.weilOfKaehlerK",
+        "Dubon2026.SourceCurve.adeleSingle",
+        "Dubon2026.SourceCurve.simplePoleProbe",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.CanonicalLocalResidueDataK.res_eq_zero_of_ord_nonneg",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_apply",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_eq_zero_of_ord_nonneg",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_eq_zero_of_adeleBdd_canonical",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_subset",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_finite",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_finite_of_adeleSpace",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_apply",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_vanish_adeleBdd_canonical",
+        "Dubon2026.SourceCurve.single_mem_adeleBdd",
+        "Dubon2026.SourceCurve.single_mem_adeleSpace",
+        "Dubon2026.SourceCurve.Place.trace_one_of_residue_bijective",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_single",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_simplePoleProbe",
+        "Dubon2026.SourceCurve.simplePoleProbe_mem_adeleBdd",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_ne_zero_of_rational_residues",
+        "Dubon2026.SourceCurve.weilOfKaehlerK_adeleBound_le_canonical",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_ne_zero",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_canonical",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_bound_iff"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.kaehlerResidueTermK",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam",
+        "Dubon2026.SourceCurve.weilOfKaehlerK",
+        "Dubon2026.SourceCurve.adeleSingle",
+        "Dubon2026.SourceCurve.simplePoleProbe",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFunctionalAudit3.log",
+      "logSha256": "FAAEF3E8DFE6BFC631A6A352223BCBE64D7F80DB2A759D9EBF39E82C22A385B4",
+      "auditSha256": "184B72064A4CC5A601CDAF3640974B5356D08955FB0CF8770EF771D1D61BBD06",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFunctionalDependencyAudit.log",
+      "dependencyAuditSha256": "2B77EAFA862A9F7A54773380FC14D957ABBACD3D26B4F42943D2B848C0CEB4DB",
+      "dependencyAuditSourceSha256": "B7DE51B89BFE3F74968F7DBF2D73081D57C50C77F0BBAE4B2D891002F229F4A3",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_ne_zero",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_bound_iff"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> residue duality -> nonzero canonical residue functional with its exact maximal local divisor bound.",
+      "discharged": "Every nonzero actual original differential defines a finite trace-residue sum on repartitions. Actual finite canonical support bounds the nonzero terms. Single-place simple-pole probes evaluate to one using the proved rational residue fields and the pinned trace formula. Thus the functional is nonzero, and it vanishes on a divisor bound exactly when that divisor lies below the literal original canonical divisor. Local canonical data, differential generation, canonical support and nonempty places are all derived. No global residue identity is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The exact remaining condition for this functional to supply residue duality is vanishing on diagonal global functions, the global sum-of-residues identity. Identification with canonical genus, numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-residue-functional-3-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "FBA2362ADC7FC5C9D546C2C573538C3F651BD2AB6048C11DA2F6719A6950BC56"
+    },
+    {
+      "recordedUTC": "2026-10-21T06:41:43.629931+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveExactDerivativeOrder",
+        "SourceOriginalExactDerivativeOrder"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveExactDerivativeOrder.lean",
+          "sha256": "A55CC8E110FB17079E4DD57185EDB1C42FB2C3C79265F72AA55872B1F4D0A84F",
+          "oleanSha256": "2C6C33B0C6FAC16938A6D737BB94FB9C5442FF93A3127B54A9AE6C57DA8DE534"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExactDerivativeOrder.lean",
+          "sha256": "AF6F9A6E54F40E77C14C52BB0389E73871529C0EEB0D90E0B66FE79343EA3021",
+          "oleanSha256": "35D0B214B99A7AF4829ABD1EC0218F7996473BEF878082D234D215E7127DF1EA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.differentialCoeff_D_unit_mul_zpow",
+        "Dubon2026.SourceCurve.Place.ordDifferential_D_eq_ord_sub_one",
+        "Dubon2026.SourceFunctionField.original_ordDifferential_D_eq_ord_sub_one"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.differentialCoeff_D_unit_mul_zpow",
+        "Dubon2026.SourceCurve.Place.ordDifferential_D_eq_ord_sub_one",
+        "Dubon2026.SourceFunctionField.original_ordDifferential_D_eq_ord_sub_one"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceExactDerivativeAudit2.log",
+      "logSha256": "46D9BBA717C3D1B7AD251217B90121F1BE84A7572C23318EA02327A724B9562A",
+      "auditSha256": "AA6348A6A0CDF1E1EE8D17006522986506DD65E057DE88AA5BE36DEEE67093F7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceExactDerivativeDependencyAudit.log",
+      "dependencyAuditSha256": "9BD752A61719B1CE518BC089888F8BA2A67C6B18975C8F0C6006C167302B7A9C",
+      "dependencyAuditSourceSha256": "5617B723975DBCF07CAEE2A2AE89A206FA0AD5EA68D0707CBC7E45CD66D17836",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_ordDifferential_D_eq_ord_sub_one"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical geometric genus -> actual canonical j-divisor degree -> exact local derivative/ramification orders.",
+      "discharged": "At every actual original place, ord of Df equals ord f minus one whenever ord f is nonzero. The actual unit-times-uniformizer decomposition and pinned integer-power derivation rule express the leading coefficient. The previously proved integral derivative bound puts the error term in the maximal ideal, while the characteristic-zero nonzero integer times the unit cannot cancel. Original local differential finiteness, separability and generation are derived; no such local assumptions remain.",
+      "boundary": "Scratch only; production promotion and verification pending. Numerical canonical degree and genus identification remain required. The global residue theorem, residue duality, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-exact-derivative-2-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F887618B683BEE39433DAB5C57BCD6D0F49D0B5671662CD0FB2D1DFCF1194BBC"
+    },
+    {
+      "recordedUTC": "2026-10-21T06:46:54.129900+00:00",
+      "date": "2026-10-20 America/Vancouver",
+      "modules": [
+        "SourceCurveCoordinateDerivation",
+        "SourceCurveExactDifferentialResidue",
+        "SourceOriginalExactDifferentialResidue"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateDerivation.lean",
+          "sha256": "002458D1FC082210287A2751AA931E6CF0ED799B085D7F1AE0BCF75B72F7AF04",
+          "oleanSha256": "85E7DA7BD3BB04DFE7DCE7B1856421C904CEAA5B64CBE9729041D1DDBF6A7028"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveExactDifferentialResidue.lean",
+          "sha256": "883813AA43D3B340A949B011A98D73689DB70E4C3B56D4883B0D2E9FA75BCAE3",
+          "oleanSha256": "91BA6D392D2CE92D05344D362AF36F53ED06F18BB297E82D3A7E6AC35E1ABDC8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExactDifferentialResidue.lean",
+          "sha256": "0D9E3A43A31271B8C7F92618F0796E8C58B2A6A49CD435E7B150B117F111CEA3",
+          "oleanSha256": "C8DEEE77409A247F92835201192BD12C4C7899EF7C83FF1AB03F2075B0EE5871"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_apply",
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_uniformizer",
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_zpow",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_coordinateDerivation_eq_zero",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_exactDifferential",
+        "Dubon2026.SourceFunctionField.original_localResidue_exactDifferential",
+        "Dubon2026.SourceCurve.Place.differentialCoeffLinearMap",
+        "Dubon2026.SourceCurve.Place.coordinateDerivation"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_apply",
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_uniformizer",
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_zpow",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_coordinateDerivation_eq_zero",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_exactDifferential",
+        "Dubon2026.SourceFunctionField.original_localResidue_exactDifferential"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.differentialCoeffLinearMap",
+        "Dubon2026.SourceCurve.Place.coordinateDerivation"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceExactResidueAudit3.log",
+      "logSha256": "44F6320318CDEB9EFDA1EEA378634061DD199ECBB4C637C1207143955B7D2ED2",
+      "auditSha256": "F0EB3A22BA0FF0A08FB0BC4625E182C3AA730C872665099B53955E9A47C5BC49",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceExactResidueDependencyAudit.log",
+      "dependencyAuditSha256": "8FD4FC5A43DD89DD0F298AADF24544B6ED84D1EC2EF69CD74308688247EDB397",
+      "dependencyAuditSourceSha256": "9F5E53F0769C9D743A869AB75BB7D19B4C6058B4EA2397DEA4768BF8A5C6AC26",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_localResidue_exactDifferential"
+      ],
+      "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> original regular differential dimension -> Riemann--Roch -> global residue identity -> local differential/residue compatibility.",
+      "discharged": "Exact differentials have zero local canonical residue at every actual original place. The actual local coefficient map is linear, and native derivation composition gives differentiation in the uniformizer. The proved integral coefficient bound handles regular functions; native integer-power differentiation and canonical normalization handle all pure poles. The proved finite principal-part uniqueness supplies the result for every function. All original local finiteness, separability, generation and rational-residue inputs are derived.",
+      "boundary": "Scratch only; production promotion and verification pending. The global residue identity for arbitrary differentials remains required, followed by residue duality, canonical/numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-exact-residue-3-reuse-review-20261020.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5BB90C9735B807E273F77A991967B423FFDF21A22998DCEABDBBED736BC3E4F1"
+    },
+    {
+      "recordedUTC": "2026-10-21T07:12:18.197234+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCurveLogarithmicResidue",
+        "SourceCurvePowerResidueSum",
+        "SourceOriginalPowerResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLogarithmicResidue.lean",
+          "sha256": "0A796D8EB215721DF2B2ED15BF714F61F91F95D7746E5FFE4207FE6C2FFFC2A5",
+          "oleanSha256": "2FF9B3D6ABB776FB38B8AB48692CCC51BE1F9EA003C6D4F9FEB10433BDF9010B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePowerResidueSum.lean",
+          "sha256": "EE4F6A96D7FFC02C9B00F353BD02135B46803031E42DEDBD8AC07FCE4EE74B77",
+          "oleanSha256": "FF762FCD27BB9871F6903EB9A6D05DBFAF20390B5B6FE0189EBEB98213DB4409"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPowerResidues.lean",
+          "sha256": "885A9E93551EC2AD58E42F0262108087AD224098A77C7B5769BB2E4B6B018982",
+          "oleanSha256": "5EC381EC102F822581058C9813F67C4F444E1963FBDEF92843F1FD5E136938CE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_log_unit_mul_zpow",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_logarithmic",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_logarithmic",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_power_differential",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_power_differential",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_power_differential",
+        "Dubon2026.SourceCurve.residueSum_power_differential",
+        "Dubon2026.SourceFunctionField.original_localResidue_logarithmic",
+        "Dubon2026.SourceFunctionField.original_localResidue_power_differential",
+        "Dubon2026.SourceFunctionField.original_residueSum_power_differential",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_power_differential"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.coordinateDerivation_log_unit_mul_zpow",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_logarithmic",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_logarithmic",
+        "Dubon2026.SourceCurve.Place.localResidueScalar_power_differential",
+        "Dubon2026.SourceCurve.Place.canonicalLocalResidueData_power_differential",
+        "Dubon2026.SourceCurve.kaehlerResidueTermKFam_power_differential",
+        "Dubon2026.SourceCurve.residueSum_power_differential",
+        "Dubon2026.SourceFunctionField.original_localResidue_logarithmic",
+        "Dubon2026.SourceFunctionField.original_localResidue_power_differential",
+        "Dubon2026.SourceFunctionField.original_residueSum_power_differential",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_power_differential"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePowerResidueAudit3.log",
+      "logSha256": "8F19BF54CD3F12413AE61C1AF98E325F9F9056776B35634B27447C3C0DAABB79",
+      "auditSha256": "2A48D6771AEB42228C25F16246FBFF4871F577C594DCB35383EB7BDF13860AA3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePowerResidueDependencyAudit.log",
+      "dependencyAuditSha256": "7DEDBB2939E335C1BFD6180DC09E64D0E162470EB38F8FA1203033E13E7A43C4",
+      "dependencyAuditSourceSha256": "22596D3A378141AB912EE64BB832029C5D773636251DD95C1F594951BAEA7284",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_localResidue_logarithmic",
+        "Dubon2026.SourceFunctionField.original_localResidue_power_differential",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_power_differential"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> characteristic-zero power/logarithmic differential atoms.",
+      "discharged": "At every actual original place the canonical residue of df/f equals the normalized order of f. In characteristic zero, the residue of f^n df is zero for n different from -1. For every nonzero original f and every integer n, the global trace-residue sum of f^n df is zero. The logarithmic case consumes the actual degree-zero principal-divisor theorem; the other cases consume zero local residues of exact differentials. The constructed original residue functional is explicitly applied to these diagonal powers. All local geometric inputs are derived.",
+      "boundary": "Scratch only; production promotion and verification pending. The global residue identity for arbitrary differentials still requires rational-function spanning and finite-extension trace compatibility. Residue duality, canonical/numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-power-residue-3-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "1DFDD1AB5E42B4B963EF055661FAD9DDA13C81C1C24BA0BCA2EF746497FA910D"
+    }
+  ],
+  "reviews": [
+    "Tools/source-genus-bound-9-reuse-review-20261020.json",
+    "Tools/source-global-index-4-reuse-review-20261020.json",
+    "Tools/source-weil-rank-4-reuse-review-20261020.json",
+    "Tools/source-local-residues-5-reuse-review-20261020.json",
+    "Tools/source-residue-functional-3-reuse-review-20261020.json",
+    "Tools/source-exact-derivative-2-reuse-review-20261020.json",
+    "Tools/source-exact-residue-3-reuse-review-20261020.json",
+    "Tools/source-power-residue-3-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5351": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenusBoundDependencyAuditProduction5351.log",
+        "sha256": "F0CDB8DBC55F2778C13FDA102F89AE1D03C1307267CC94D473193ECFD19C8A58",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_degree_dimension_maximum"
+        ],
+        "sourceSha256": "B57B6110774C1CA1356914BCBDD0EC29D743912DB440AA69C79F2B7B6E1B3713"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalIndexDependencyAuditProduction5351.log",
+        "sha256": "07DFF8D6ECFBADC6EBE6BF83759F619D8F472C88DF43FF0508CE11B6A42D4B28",
+        "requiredProofValueEdges": 30,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.finite_original_omegaSpace",
+          "Dubon2026.SourceFunctionField.original_omega_dimension_formula"
+        ],
+        "sourceSha256": "A44D6A49C8D2B3E789E8660385871D802C6DF43800D95F5E05A6E5135AF5A0CE"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeilRankDependencyAuditProduction5351.log",
+        "sha256": "78BBAB2DABF281EA36B1D501259041EE2CC23E2B77B143ED45B6FEE11FD1A98B",
+        "requiredProofValueEdges": 32,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_weil_differentials_rank_one"
+        ],
+        "sourceSha256": "491189DA3ED9B6E5AE3172F463F323D25B34277C67F2F7700086557D936FDA16"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalResiduesDependencyAuditProduction5351.log",
+        "sha256": "E2AA6D7B54F51FB3A148D5C16D4DD62DEFBBE60D8A15BC922E705BE820211BDA",
+        "requiredProofValueEdges": 26,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_unique",
+          "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_simplePole"
+        ],
+        "sourceSha256": "C50539CE4C2E19CF7CACACE6924E2298CC4AC31C010B331AD962F1D4CD069833"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFunctionalDependencyAuditProduction5351.log",
+        "sha256": "2B77EAFA862A9F7A54773380FC14D957ABBACD3D26B4F42943D2B848C0CEB4DB",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalResidueFunctional_ne_zero",
+          "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_bound_iff"
+        ],
+        "sourceSha256": "29AF4280CBF9F354E8BC9D9736A5669B83B515801C2C5637055FF3CA67ABBFCC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceExactDerivativeDependencyAuditProduction5351.log",
+        "sha256": "9BD752A61719B1CE518BC089888F8BA2A67C6B18975C8F0C6006C167302B7A9C",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_ordDifferential_D_eq_ord_sub_one"
+        ],
+        "sourceSha256": "99FB8E3FDEA48ADE2A0A79C47C4A7C653167E7A8BD696CC605E054BEBFC6E7BC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceExactResidueDependencyAuditProduction5351.log",
+        "sha256": "8FD4FC5A43DD89DD0F298AADF24544B6ED84D1EC2EF69CD74308688247EDB397",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_localResidue_exactDifferential"
+        ],
+        "sourceSha256": "03E826F6E20B1FB2AE7404287440E5FFDADA619BEE92E3A99A9FA9E9250C254A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePowerResidueDependencyAuditProduction5351.log",
+        "sha256": "7DEDBB2939E335C1BFD6180DC09E64D0E162470EB38F8FA1203033E13E7A43C4",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_localResidue_logarithmic",
+          "Dubon2026.SourceFunctionField.original_localResidue_power_differential",
+          "Dubon2026.SourceFunctionField.originalResidueFunctional_power_differential"
+        ],
+        "sourceSha256": "AF53FC918358605AFA7AEF768E2338D10F1E8C5E4C2863272F5C484A0DFB3888"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueProductionAudit5351.log",
+    "sha256": "0CD9CD8F261F06C0E61339DCC011D5F48950040B11F707F225705F894B745A4F",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-assembly-production-5351-build.log",
+    "aggregateSha256": "9ACFDB2CA1FD35C16640FA9B7E9C8CA49C70F6EE11646F235342AB0F84047A73",
+    "productionModules": 5351,
+    "incrementModules": 33,
+    "axiomChecks": 178,
+    "exhaustiveIncrementTheorems": 269,
+    "linterScopes": 33,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 269,
+    "boundary": "The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+  },
+  "receipt5351": {
+    "recordedUTC": "2026-10-21T09:39:50.752095+00:00",
+    "log": "logs/dubon-build-20261021-020102-454.log",
+    "sha256": "8EDFAB8D2F7F36791B87CC6B144346CFF0673D7280400B335C57D3ABACDBA62F",
+    "bytes": 9260968,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5351,
+    "projectTheorems": 38032,
+    "registeredConsumers": 16386,
+    "registeredConstructions": 883,
+    "declarations": 22720,
+    "generated": 21454,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_002907.log",
+    "foundationSha256": "E7B53DBE49D4B4F2473A10A6C9A427A4565F75EB05667DDC658EBE6A0080B0A5",
+    "boundary": "The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+  }
+}

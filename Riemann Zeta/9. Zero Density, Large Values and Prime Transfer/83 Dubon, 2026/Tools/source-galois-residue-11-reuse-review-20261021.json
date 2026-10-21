@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> global residue vanishing in the literal finite Galois normal closure of the original field over j.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_LocalResidue.lean.txt",
+        "sha256": "DF922B18671E4CE7A1EEECD8F3A11F0AB1FCAE18715C78B3FB0C8507B19F1060"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_DivisorPushPull.lean.txt",
+        "sha256": "CA80A6139646C59CD06C3BA8F3F6368FD53A9D72AADD763458B3EFB66E36240B"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Etale\\Kaehler.lean",
+      "sha256": "DF1347DD5B5BCCC7F57FC8241D6F738F35120A82062A27236C1EB402A47D1405"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Trace\\Basic.lean",
+      "sha256": "8067C9F3C463F5EEDA72AEB4A55298FBAEE4EAC91FFBCA837590A3C3346AE519"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Normal\\Closure.lean",
+      "sha256": "BCBC319C903841B68D3A4940231D15225C1833DE3CD0C32CD8694C53FBA677B5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Galois\\Basic.lean",
+      "sha256": "D4924352BEFDF0394818C8988F531A760686D3C7F0B50551534586B837DA69E6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Dimension\\Constructions.lean",
+      "sha256": "8C5EFE209E37EA3F7B4733334C9E66E6A7FB20BAA528B3643B1FE41D634ECC4A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\Algebra\\Basic.lean",
+      "sha256": "DB312EA3B953F17BC7C76C29CEAEDE0F92FECC21B345AB7B0654FED5558F2552"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Valuation\\ValuationSubring.lean",
+      "sha256": "A84CA1BBB002424BDB08471BD5A035FC291CA69ACB8139E2D7F24522560ADB28"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Use native Galois trace averaging and the proved local pullback/invariance laws. Construct the actual normal closure instead of assuming the original extension is Galois. Reuse existing finite-coordinate geometry, principal-divisor product formulas and rational partial fractions. Build only the fixed-dj global functional from finite support, avoiding a separate auxiliary adelic/Riemann--Roch package and completion machinery. The place-fiber ramification comparison needed for descent is still open.",
+  "discharged": "The actual dj residue functional vanishes on every global function in the literal finite Galois normal closure of the original field over j. Normal-closure finiteness and Galoisness, finite original-field extension, essential finite type, finiteness over every transcendental coordinate, differential rank one by native etale base change, local spanning, finite local differentials, rational canonical residues, finite principal support and degree zero, and finite dj support are all derived. These construct the actual linear global residue map. Partial fractions prove base-field vanishing; actual place transport and local pullback prove invariance; the native Galois trace identity proves vanishing on the whole closure.",
+  "remaining": "The original global residue identity still requires descent from the proved normal-closure identity using the sum of normalized ramification indices over each actual place. Residue duality, canonical/numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.globalResidueLinearMap_apply",
+    "Dubon2026.SourceFunctionField.originalGaloisClosureConstantsTower"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

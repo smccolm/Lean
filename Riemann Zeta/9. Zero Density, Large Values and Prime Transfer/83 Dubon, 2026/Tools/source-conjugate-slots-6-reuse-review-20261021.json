@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> general composite degree -> explicit mapped minimal-polynomial roots -> primitive triangular conjugate count and distinctness.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC",
+    "source-global-residue-9-scratch-receipt.json": "A194E21697F37B35B0DCBBABB4F3D945C4C461EC862BA4E4BD2153B58019A5E5",
+    "source-riemann-roch-2-scratch-receipt.json": "ABC98B0526CED855C5A0C2E7BB4E3E2455A5A05E17B5098DE9CEC501B614EF59",
+    "source-coordinate-values-2-scratch-receipt.json": "15C6E5B735D28F55F39A0E244F006CD31BFF457A668A4102C86E9C775346D81C",
+    "source-prime-degree-2-scratch-receipt.json": "49FCD2928DF35342E34F2D13694BF08A02A6E482B5E42826179AB8D602112BBF",
+    "source-prime-nonmembership-7-scratch-receipt.json": "F47F62CA5E025711611910FA8721FA1684119C608F56CAE291E85C7308B59152",
+    "source-prime-exact-4-scratch-receipt.json": "5A452930A5F0468D535DC4814E0AC1453EDF98DBE151C0905F5412D023B216ED",
+    "source-original-prime-2-scratch-receipt.json": "3B472641E3C068968B13A74D2A5FA33238449A924BBD2DEB83B959D090575519",
+    "source-degree-transport-6-scratch-receipt.json": "247E7FA212FA6CBFD86BD42B2454659D232ED8259A2BFD508393A8214AE582A9",
+    "source-prime-power-step-3-scratch-receipt.json": "DA6167840D5E312AFD4263B459CFD70EB4E08C2B8519615080ED28D1F3C46192",
+    "source-prime-power-exact-5-scratch-receipt.json": "ACB710AD4569A1CFA7AE07D36B93DB2D4653F64F825644979CF3686D5DAB76E9",
+    "source-twisted-embedding-6-scratch-receipt.json": "F6E90FCD242319A2279F0615EDD0A249A04906A069D6412F5D536D399D79B356",
+    "source-prime-power-nonmembership-10-scratch-receipt.json": "020D3C99EBD9FF54D6B978983A9D8BB6DD9BE825B0B50198B96B1D87FCE38040",
+    "source-prime-power-degree-3-scratch-receipt.json": "09CB55D2572EBA1B5F560E2FDC39DF14D6B05BD4153D371F92E1AABF643414FE"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_minpoly_jqNModC_map_eq_prod_slots.lean.txt",
+        "sha256": "CDEB459B7761B51B7463FC2A70ABC3C46AAC1943B33DCDA42E21073C45ADAF35"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPrimeTwistCoordinates.lean",
+      "sha256": "335AFB62454B6A1E0B8974EB7F68FB704AEE06411E66E5B0C1FE8EA45BB939A9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelPsi.lean",
+      "sha256": "4C5549B56B465C2A459A2E4CA79B1C597C5F63B8443472D887CD98473AE44A8C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\GCD\\Basic.lean",
+      "sha256": "7FEC3E57CADD0574BC47FF3DF801D73578CAD10D5F7D56B6782BD09BBBA7767B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Divisors.lean",
+      "sha256": "0CE1942EF04738088970B9F6A1EBDC51D3FB6D271BB161575BDD52B62AF4EDED"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Reuse the existing dedekindPsi prime-power and coprime formulas instead of duplicating the source arithmetic. Replace the long gcd divisibility argument with native coprime gcd multiplication and cancellation. Reuse native divisor inversion to orient the count and existing Laurent TS injectivity for distinctness. No proof limits or global attributes changed.",
+  "discharged": "The literal primitive triangular indices are counted by dedekindPsi using native Chinese remainders, prime-power totient counts, coprime gcd identities and the existing level-factor formulas. Divisor inversion puts the count in the exact orientation of the Laurent conjugate product. Leading Laurent coefficients and primitive root injectivity distinguish all indexed values. The explicit product is monic of degree dedekindPsi with its exact distinct root list.",
+  "remaining": "Identify this product with the actual mapped minimal polynomial using the original relations and lower-level induction. This finite count alone does not prove the composite field degree. General composite generation and degree, modular ramification, fiber counts, numerical genus, analytic realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_eq",
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_iff",
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_one",
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_self"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

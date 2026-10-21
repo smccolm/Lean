@@ -1,0 +1,76 @@
+{
+  "date": "21 October 2026",
+  "purpose": "Renewed reuse search before expanding the remaining global residue dependency for DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2.",
+  "queries": [
+    "Lean theorem global residue algebraic curve Riemann Roch github 2026",
+    "Lean residueTraceCompletionCommute fermats last theorem",
+    "Lean formalization Sato Tate theorem 2026 github",
+    "Lean Rankin Selberg Deligne Ramanujan Petersson proof github",
+    "Lean modular forms symmetric power automorphy proof 2026 github"
+  ],
+  "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison.",
+  "candidates": [
+    {
+      "repository": "vaca22/riemann-roch-function-fields",
+      "url": "https://github.com/vaca22/riemann-roch-function-fields",
+      "commit": "dbca5beed1da77e2ecd1eec207d0451fa57e8aa6",
+      "committed": "2026-07-14T09:53:58Z",
+      "license": "Apache-2.0",
+      "lean": "4.31.0",
+      "review": "All 44 repository files fetched at this exact commit and verified against the recursive Git tree's blob SHA-1 and byte counts. Source retained as text; no imported or compiled external Lean.",
+      "snapshot": "vaca22-riemann-roch-snapshot-20261021.json",
+      "snapshotSha256": "EE2895F69E191C83671B3F388980F8098531B195E1CC0396BD29102A20ADD919",
+      "findings": [
+        "CoordinateFree/WeilDifferential.lean:257 defines IsCanonical via the maximal vanishing divisor of a nonzero Weil functional.",
+        "CoordinateFree/RiemannRoch.lean:270 and :284 prove duality and Riemann--Roch for that notion.",
+        "LocalResidue.lean constructs residue-field quotient maps for valuation rings, not differential residues.",
+        "No Kaehler/Kähler differential object or residue-trace/global differential residue theorem occurs in the complete source snapshot.",
+        "The existing original-field index formula and Weil-rank proof already discharge the overlapping obligations. No duplicate port is justified for those.",
+        "The unresolved bridge is identification of the actual canonical Kaehler divisor with a Weil canonical divisor, not existence of abstract Weil duality."
+      ],
+      "decision": "Useful independently checked source route; does not remove the present global differential-residue obligation. Retain for reference without changing pins or claiming a full replay."
+    },
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "url": "https://github.com/anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "committed": "2026-09-24T14:06:36Z",
+      "decision": "Current main rechecked through the GitHub API; unchanged from the selected source archive. Continue narrow adaptations on the pinned toolchain, with exact source consumers."
+    },
+    {
+      "repository": "lioristhmus/ramanujan-petersson",
+      "url": "https://github.com/lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "committed": "2026-03-20T15:35:54Z",
+      "boundaryURL": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/README.md",
+      "decision": "The author's public boundary explicitly leaves Deligne representation construction, purity and full Hecke/Euler-product infrastructure abstract. It does not discharge the missing actual modular inputs.",
+      "boundaryText": "# Lean Formalization Scope\n\nThis repository contains a Lean formalization companion to the source note, not a claim that every\ndeep input has already been fully internalized in Lean.\n\n## Current Public Endpoint\n\nThe exported Lean project provides a paper-facing public layer for the main results:\n\n- Theorem 3.1\n- Theorem 4.1\n- Theorem 2.1\n- Corollary 5.3 (prime-power clause)\n- Corollary 5.3 (coprime-index clause)\n\nThese public declarations live in the Lean companion and are supported by internal reduction and\ninterface layers documented in `blueprint.md` and `claims.yaml`.\n\n## Remaining Abstraction Boundaries\n\nThe current snapshot still treats some deep inputs as abstract interfaces rather than deriving them\nfully inside Lean. In particular, the present public endpoint does not yet fully internalize:\n\n- Deligne's representation-theoretic construction\n- the purity input behind the Frobenius eigenvalue bounds\n- the full Hecke multiplicativity / Euler-product infrastructure\n\nThat means this repository is best described publicly as a **Lean formalization companion** or a\n**paper-facing Lean formalization**, rather than a complete end-to-end internal derivation of every\nbackground theorem used by the note.\n"
+    }
+  ],
+  "searchConclusion": "No new checked end-to-end Sato--Tate, higher symmetric-power automorphy or actual Kaehler residue bridge was identified by these searches. This is a search result, not a universal nonexistence claim.",
+  "routeAdjustment": "Use proved integral derivation bounds, exact local residue vanishing, native integer-power differentiation and the actual degree-zero principal-divisor theorem to prove logarithmic and power-differential residue identities. The source's positive-characteristic Cartier branch is unnecessary for the original characteristic-zero field. Rational-function spanning and finite-extension trace compatibility remain required for arbitrary forms.",
+  "gates": "16/20; DUB-17--20 OPEN",
+  "rootPinsChanged": false,
+  "proofStandardsChanged": false,
+  "retainedArchive": {
+    "path": "Dependencies/Lean Reuse 2026-10-21/vaca22-riemann-roch-source.zip",
+    "sha256": "B43DFA2DEFD3D795216F4D264EDB1C06F6A3B486E13B8063E9EC1CC50F738380",
+    "files": 44,
+    "productionImported": false,
+    "externalReplayClaimed": false
+  },
+  "commentOnlyProductionAdjustment": {
+    "file": "Extension/Dubon2026/SourceOriginalCoprimeNonmembership.lean",
+    "beforeSha256": "112C1CB29E69D912F8582B175E6B8C9B14C66EF292DAFD58AA29E2E0DC919E8E",
+    "afterSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+    "reason": "Reflow prose beginning with the word constant; the literal integrity scanner rejected it as a declaration. No Lean declaration or proof changed.",
+    "declarationsAndProofBodiesIdentical": true,
+    "postEditVerification": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\source-original-all-level-degree-production-5476-post-comment-build.log",
+      "sha256": "8958DF84831B4FB99383E538B9DEC9D1A3FBC4F91E08FCE3DACBCF9C7AA62E8F",
+      "exit": 0,
+      "diagnostics": 0,
+      "inventory": "PASS: 6699 retained files; 10851 local links; 4320 unchanged existing Lean files."
+    }
+  }
+}

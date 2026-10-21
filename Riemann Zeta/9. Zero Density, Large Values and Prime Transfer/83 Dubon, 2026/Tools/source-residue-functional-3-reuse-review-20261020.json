@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> residue duality -> nonzero canonical residue functional with its exact maximal local divisor bound.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_LocalResidue.lean.txt",
+        "sha256": "DF922B18671E4CE7A1EEECD8F3A11F0AB1FCAE18715C78B3FB0C8507B19F1060"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_functionFieldRiemannRoch_of_residueTheoremK_of_isAlgClosed.lean.txt",
+        "sha256": "FCB7782A038145F3463733188E01F7C0180C8CC4BABC554104C292C737FA1750"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Trace\\Defs.lean",
+      "sha256": "65D4D7002398A856C037E9485A80AC592BFBF063318872C4C7E61A4A85003A4C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Finprod.lean",
+      "sha256": "C3833C7B940B9118D57D23E201130FFB291F80BDABA6DBA6075663A52C6B9066"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Dimension\\Finrank.lean",
+      "sha256": "E5C99C7A4767B80FBE2543C2B15CCD6127F6C37E9197E5F68A294B8DB6BA28D1"
+    }
+  ],
+  "routeAdjustment": "Select the source finite trace-residue sum. Reuse the proved canonical support and local residue construction. Rational actual residue fields make the constant-one simple-pole probe have trace one, avoiding a separate general separable-residue/trace nonvanishing interface. Prove the exact maximal local bound directly without assuming global annihilation or membership in omegaSpace.",
+  "discharged": "Every nonzero actual original differential defines a finite trace-residue sum on repartitions. Actual finite canonical support bounds the nonzero terms. Single-place simple-pole probes evaluate to one using the proved rational residue fields and the pinned trace formula. Thus the functional is nonzero, and it vanishes on a divisor bound exactly when that divisor lies below the literal original canonical divisor. Local canonical data, differential generation, canonical support and nonempty places are all derived. No global residue identity is assumed.",
+  "remaining": "The exact remaining condition for this functional to supply residue duality is vanishing on diagonal global functions, the global sum-of-residues identity. Identification with canonical genus, numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.Place.CanonicalLocalResidueDataK.res_eq_zero_of_ord_nonneg",
+    "Dubon2026.SourceCurve.kaehlerResidueTermKFam_apply",
+    "Dubon2026.SourceCurve.kaehlerResidueTermKFam_eq_zero_of_ord_nonneg",
+    "Dubon2026.SourceCurve.kaehlerResidueTermKFam_support_finite",
+    "Dubon2026.SourceCurve.weilOfKaehlerK_apply",
+    "Dubon2026.SourceCurve.single_mem_adeleBdd"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization -> all-level original j-map degree and generation -> exact expanded minimal-polynomial conjugate product under the divisor-level induction hypotheses.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC",
+    "source-global-residue-9-scratch-receipt.json": "A194E21697F37B35B0DCBBABB4F3D945C4C461EC862BA4E4BD2153B58019A5E5",
+    "source-riemann-roch-2-scratch-receipt.json": "ABC98B0526CED855C5A0C2E7BB4E3E2455A5A05E17B5098DE9CEC501B614EF59",
+    "source-coordinate-values-2-scratch-receipt.json": "15C6E5B735D28F55F39A0E244F006CD31BFF457A668A4102C86E9C775346D81C",
+    "source-prime-degree-2-scratch-receipt.json": "49FCD2928DF35342E34F2D13694BF08A02A6E482B5E42826179AB8D602112BBF",
+    "source-prime-nonmembership-7-scratch-receipt.json": "F47F62CA5E025711611910FA8721FA1684119C608F56CAE291E85C7308B59152",
+    "source-prime-exact-4-scratch-receipt.json": "5A452930A5F0468D535DC4814E0AC1453EDF98DBE151C0905F5412D023B216ED",
+    "source-original-prime-2-scratch-receipt.json": "3B472641E3C068968B13A74D2A5FA33238449A924BBD2DEB83B959D090575519",
+    "source-degree-transport-6-scratch-receipt.json": "247E7FA212FA6CBFD86BD42B2454659D232ED8259A2BFD508393A8214AE582A9",
+    "source-prime-power-step-3-scratch-receipt.json": "DA6167840D5E312AFD4263B459CFD70EB4E08C2B8519615080ED28D1F3C46192",
+    "source-prime-power-exact-5-scratch-receipt.json": "ACB710AD4569A1CFA7AE07D36B93DB2D4653F64F825644979CF3686D5DAB76E9",
+    "source-twisted-embedding-6-scratch-receipt.json": "F6E90FCD242319A2279F0615EDD0A249A04906A069D6412F5D536D399D79B356",
+    "source-prime-power-nonmembership-10-scratch-receipt.json": "020D3C99EBD9FF54D6B978983A9D8BB6DD9BE825B0B50198B96B1D87FCE38040",
+    "source-prime-power-degree-3-scratch-receipt.json": "09CB55D2572EBA1B5F560E2FDC39DF14D6B05BD4153D371F92E1AABF643414FE",
+    "source-conjugate-slots-6-scratch-receipt.json": "F0610584BF3396AD3A600F2CF5388984D3E40614CF678C5317AD8F297635176C",
+    "source-conjugate-step-7-scratch-receipt.json": "97FB8B186C049B32279303A0607F7C4C800E7B50EB55E2EE0210A11FA0676B2C"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_jqN_prime_not_mem_full.lean.txt",
+        "sha256": "131C1D7204BFEAD6F619308CCB38CC267FECDA25F6A40DB580CA8E17E5D6B10B"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_minpoly_jqNModC_map_eq_prod_slots.lean.txt",
+        "sha256": "CDEB459B7761B51B7463FC2A70ABC3C46AAC1943B33DCDA42E21073C45ADAF35"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConjugateEmbedding.lean",
+      "sha256": "DDD682B827B9FBC1C5BA55916BEE67DD511F89A234BFD5986BB5418A00ADEC1D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRelativeRootTransfer.lean",
+      "sha256": "38167DE27ED3F1C6087F48012CE1D29E384BCEF74774AA311DF3AFB30D6B0EFF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeConjugateMinpolyStep.lean",
+      "sha256": "C379FD29E932CBB171BEED244B78D68C4AE5DEA36B8ABADDAA9AFC813717F4D2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeConjugateReducedStep.lean",
+      "sha256": "090CD3C0FD42C4F0F21FF2561F1FD83DA1ACD37E1BC15C48354256720B1E17B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotValues.lean",
+      "sha256": "554E1CD0B53F057DD31D916B7223DE881E854E50E435DE5954F223D13263F662"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotCount.lean",
+      "sha256": "15D77FC16B7ECE0C09DCABCF2768C4912B925DFBDC3BA3D5DED9FAAE673342EB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerRelativeStep.lean",
+      "sha256": "88180B012FF3E17DB02519655FAAF11E9D613B551CF9818B957F3241782F1816"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceExpandedJConjugateComparison.lean",
+      "sha256": "934CCA2D3D4F790D0547F30D07112F71C971D37AC6594ADE021E49FB7C032902"
+    }
+  ],
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Minpoly\\Field.lean",
+      "sha256": "3530E82440AEBAF89E847C8E62372AAF1D7CFDC7CF460FF1D3EEE8CC57C508CA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Polynomial\\Eval\\Coeff.lean",
+      "sha256": "4CAEDAD1792FAEE9758BE69797C9935E4EA4EB76A9A64A1F9990E504847786D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Factorization\\Induction.lean",
+      "sha256": "4790E369A417A86889AC05F66487A9798705FB7B2173E083E2965569B8750724"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Reuse native gcd congruence and existing slot injectivity. Identify the twice-expanded candidate directly with the scaled slot value instead of repeating coefficient calculations. Use the actual full fields and native relative degrees instead of rebuilding rational scalar towers or assuming prime-polynomial symmetry.",
+  "discharged": "Native relative-degree multiplicativity and existing Dedekind-psi formulas derive the relative prime-step degree p or p+1 from explicit induction degree and generation. Primitive-index arithmetic, actual Laurent leading terms and primitive-root injectivity exclude every twice-expanded preceding-level conjugate. Actual field embeddings send contained j substitutions to their expanded minimal-polynomial roots; the lower product identity derives the preceding root shape and discharges the removed-root distinction. Strong induction then constructs every indexed root and proves the exact original expanded minimal polynomial equals the primitive triangular product over an algebraically closed characteristic-zero coefficient field, under generation and degree at divisor levels.",
+  "remaining": "The joint all-level induction must still prove generation and degree; the new conditional product identity is to be used only on proper divisors in that induction. Composite generation and degree, modular ramification and fiber counts, numerical genus, analytic cusp-form realization and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

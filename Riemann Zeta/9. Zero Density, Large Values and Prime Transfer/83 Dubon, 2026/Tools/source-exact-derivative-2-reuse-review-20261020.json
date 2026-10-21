@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical geometric genus -> actual canonical j-divisor degree -> exact local derivative/ramification orders.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_CanonicalDivisorUniformizer.lean.txt",
+        "sha256": "006AAE8A45A8370A9D278CD071D3D2DAB73086EB0F7CEA30377A7794D615E508"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Derivation\\Basic.lean",
+      "sha256": "CEDEACB6B5E4FF0EA8777D8607B9C084651FDF65946A68FAF364E590DF2E18AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Valuation\\Basic.lean",
+      "sha256": "AA9FFD9EFF07A8F9B773EC56983780227F908CF658ABCE9308AEA5B902381CE4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Module\\NatInt.lean",
+      "sha256": "8C3988BA51EAB4A65B1E0B2433B2DF786C3CB52058CD14979089F6FEF6301E4A"
+    }
+  ],
+  "routeAdjustment": "Use the proved integral differential coefficient and actual uniformizer decomposition directly with pinned Derivation.leibniz_zpow and valuation comparison. This proves the precise original ramification-order input without general coordinate change, completion or derivative-valuation infrastructure.",
+  "discharged": "At every actual original place, ord of Df equals ord f minus one whenever ord f is nonzero. The actual unit-times-uniformizer decomposition and pinned integer-power derivation rule express the leading coefficient. The previously proved integral derivative bound puts the error term in the maximal ideal, while the characteristic-zero nonzero integer times the unit cannot cancel. Original local differential finiteness, separability and generation are derived; no such local assumptions remain.",
+  "remaining": "Numerical canonical degree and genus identification remain required. The global residue theorem, residue duality, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

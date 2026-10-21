@@ -1,6 +1,26 @@
 # Dubon 2026 — reproduction manifest
 
-Canonical divisors and finite original regular differentials (20 October 2026): Every actual original valuation ring is essentially of finite type over the constants, hence has a finite local differential module. The proved finite extension over its actual uniformizer supplies a finite integral-closure chart, and the proved center identity gives its localization. The actual algebraic residue field is separable in characteristic zero. Pinned cotangent exactness and Nakayama then show that the actual uniformizer derivative generates the integral local differential module. Consequently the derivative of every integral original-field function has integral local coefficient and nonnegative local differential order. No local finiteness, residue separability, local generation or unramifiedness premise remains in the original consumers. Every nonzero differential on the literal original function field has a finite divisor of its actual normalized local orders. At unramified integral-chart points, the coordinate differential generates the integral differential module, and its local order is zero. The pinned nonzero different ideal bounds the exceptional points by the finite prime support of one nonzero element. The coordinate pole locus is already proved finite. The actual j differential spans the original differential space, and principal finite support extends the result to every nonzero differential. No canonical-divisor or finite differential-support premise remains. The actual original regular differential space is finite-dimensional over algebraically closed constants. The positive-order degree formula applied to an inverse forces every transcendental function to have a pole, so global regular functions are exactly the constants. At each place the kernel of the scaled local residue map is the divisor space with its bound decreased by one. Pinned finite-submodule/quotient theory and induction over the positive part of the actual finite divisor prove every divisor space finite. The actual j-canonical divisor space is explicitly linearly equivalent to the actual regular differential space. No constant-field or divisor-space finiteness assumption remains in the original consumer. The degree of every nonzero original differential equals the degree of the literal j differential. Rank one expresses one nonzero differential as a nonzero scalar multiple of another; their local-order divisors differ by the actual principal divisor of the scalar. Its proved degree zero establishes choice independence. The exact source definition of genus therefore equals the degree expression at the original j canonical divisor. No principal-degree or curve premise remains. For the literal original field, the repartition quotient between two finite divisor bounds is finite-dimensional and its dimension is exactly their degree difference. A scaled local residue map is surjective with kernel the bound decreased by one; pinned quotient isomorphisms and finite-submodule/quotient theory assemble the degree difference. The already proved finite actual residue fields discharge all finiteness inputs. The positive-order degree identity gives an actual place, so bounded global repartitions are linearly equivalent to the proved finite original divisor spaces. Actual principal divisors bound every global function. No finite-residue or nonempty-place premise remains. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> global index stabilization and residue duality -> exact finite local repartition quotient dimensions and bounded global functions. Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. The 5,318-module production aggregate and focused original regular differential audit pass with zero diagnostics. Five proof-value audits verify integral local differential generation, actual canonical finite support, finite original divisor and regular differential spaces, choice-independent canonical degree and exact finite repartition quotient dimensions. The source genus is evaluated at the actual j-canonical divisor. Riemann--Roch, the numerical genus/dimension and actual analytic cusp-form realization remain required. Sequential foundation/paper verification of this scope is pending. The preceding 5,290-module original curve scope passed sequential canonical verification with zero diagnostics. Canonical finite support, finite divisor spaces, finite regular differentials, canonical-degree independence and exact finite repartition quotient dimensions now follow from the literal original function field. The numerical genus and regular-differential dimension, Riemann--Roch and analytic cusp-form realization remain required. The shorter routes reuse pinned cotangent exactness, Nakayama, different ideals and finite-submodule/quotient theory, together with the already proved positive-order degree formula. No root pin, proof limit, source contract or acceptance criterion changed.
+Exact original j-map degree and generation at every nonzero level (21 October 2026): For every nonzero N, the actual rational divisor field equals Q(j,j_N). Its degree over Q(j) is dedekindPsi(N), and coefficient transport gives that same internal j-coordinate degree over every characteristic-zero coefficient field. The expanded minimal polynomial equals the primitive triangular conjugate product. A joint strong induction discharges all generation, degree, conjugate-product and nonmembership premises: unique common roots give two-prime generation, actual mixed fields identify the prime-power spread tower, coprime nonmembership supplies the first step, and native tower multiplication closes every level. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic realization -> exact original j-coordinate degree and field generation at every level. Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. The 5,476-module production aggregate and focused all-level original degree audit pass with zero diagnostics. Five proof-value audits verify the actual conjugate induction, proper-divisor generation, coprime-base nonmembership, mixed towers and unconditional all-level consumers. Field generation, exact internal degree and the conjugate identity are proved without those conclusions as premises. Modular ramification, fiber counts, numerical genus, analytic realization and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending. The preceding 5,441-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Selected FLT generation and degree arguments were adapted using existing local embeddings, Laurent relations, native minimal polynomials and relative-degree formulas. Two frozen scratch receipts contained stale preceding-cohort narrative; the new review records explicit prose corrections while preserving their source, audit and hash evidence. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original prime-power j-map degree and explicit conjugate product (21 October 2026): The actual twisted prime relation supplies every required embedding extension. The spread argument and strong induction prove next-series nonmembership for every original prime-power divisor field, using the existing prime base case. Thus each actual prime-power extension has degree p without a nonmembership premise. Native relative-degree multiplicativity and the existing coefficient-degree transport give internal j-coordinate degree dedekindPsi(p^k) for every prime power over every characteristic-zero coefficient field, including level one. The explicit primitive triangular Laurent product is separately proved monic of degree dedekindPsi(N) with distinct roots. Its identification with the actual all-level minimal polynomial remains required; the finite count alone does not prove composite degree. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization of original regular differentials -> exact original j-map degree, modular ramification and fiber counts. General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,441-module scope: all thirteen retained regressions, 38,536 exhaustive theorem checks, 16,689 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,416-module original prime-degree and coefficient-extension scope passed sequential canonical verification with zero diagnostics. The renewed 21 October search is recorded in Tools/lean-reuse-audit-20261021.json. Selected FLT root-spreading and conjugate-count arguments were adapted to the actual local fields, native embeddings and existing level-factor proofs. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original prime j-map degree and coefficient-degree preservation (21 October 2026): Every actual original place is a pole of j or lies over one unique finite j-value, with the proved local canonical coefficient. The literal prime conjugate product has a monic degree-(p+1) integral relation. Positive coefficients of the actual j series and the orbit-sum obstruction prove j(q^p) is outside the rational j-field. The finite root cycle then proves exact degree p+1, and the actual prime divisor generators identify the original internal j-coordinate degree with dedekindPsi(p). Coefficient independence, common denominators and finite basis spanning prove that every original j-coordinate degree equals its rational relative degree after coefficient extension; existing monic relations derive the finiteness premise. No prime degree, irreducibility, generation or degree-transport assumption remains in these original-field consumers. The same prime product also gives both adjacent prime-power relations. Removing the known root proves the degree-p upper bound, and the actual cyclotomic coefficient action proves the matching lower bound under explicit next-series nonmembership. Original divisor membership supplies the preceding-root hypotheses; next-series nonmembership and all-level generation remain required. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization of original regular differentials -> exact original j-map degree, modular ramification and fiber counts. Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,416-module scope: all thirteen retained regressions, 38,443 exhaustive theorem checks, 16,627 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,385-module original global residue and Riemann--Roch scope passed sequential canonical verification with zero diagnostics. The renewed 21 October search is recorded in Tools/lean-reuse-audit-20261021.json. Selected FLT coefficient, prime conjugate and finite base-change arguments were adapted to pinned Mathlib and existing local proofs. The rational degree reduction allows the required cyclotomic prime-power argument to serve the actual geometric field. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original global residues, Riemann--Roch and regular differential dimension (21 October 2026): The literal original field satisfies the global residue identity for every differential and global function, canonical residue duality, Riemann--Roch for every divisor, and equality of regular differential dimension with its canonical genus. Rational partial fractions, exact local pullback, actual place invariance and native Galois trace averaging prove vanishing on the literal normal closure. Actual place fibers and the pinned Dedekind ramification sum descend it to the original field. All finite extension, local geometry, residue rationality and finite support inputs are derived. Existing global index, Weil rank one and exact canonical maximality then give the bijective residue pairing and the full original dimension formula. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization of original regular differentials -> original Riemann--Roch and regular differential dimension -> canonical residue duality -> original global residue identity -> actual Galois closure and descent. The numerical modular genus, analytic cusp-form realization, matching weight-two cusp-form lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,385-module scope: all thirteen retained regressions, 38,255 exhaustive theorem checks, 16,492 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,351-module original index and local residue scope passed sequential canonical verification with zero diagnostics. The renewed 21 October search is recorded in Tools/lean-reuse-audit-20261021.json. Selected FLT partial-fraction and place-fiber arguments were adapted to pinned Mathlib and existing local proofs. The characteristic-zero Galois route avoids the external completion-and-trace construction. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original global index and canonical local residues (21 October 2026): For the literal original field, degree minus divisor-space dimension is bounded above and attains its maximum. The actual j pole divisor has degree equal to the finite coordinate field degree. A pinned integral basis is regular outside those poles and admits a common multiple pole bound. Its independent polynomial multiples give the necessary lower dimension growth; exact local quotient dimensions and actual principal shifts extend this to every divisor. Pinned integer order completeness gives a maximizing divisor. No pole package, boundedness or maximum is assumed. All proofs compile at unchanged proof limits. For the literal original field, every global repartition quotient and its dual annihilator space are finite. The quotient between two sums of bounded and global repartitions has dimension equal to the increment of degree minus divisor-space dimension. The proved global maximum forces stabilization, giving the index formula. Evaluating at the zero divisor and using proved base constants replaces the auxiliary maximum parameter by the actual zero-divisor index. No global bound, maximum, global index finiteness or genus identity is assumed. For the literal original field, every nonzero bounded global-annihilating functional spans all such functionals uniquely over the function field. The double pairing associated to two independent functionals would inject two copies of a divisor space into an index space. The proved global index growth contradicts this dimension bound. Actual principal divisors, finite residues, a nonempty place and the derived maximum supply all geometric inputs; none is assumed on the original consumer. The generic pairing is also proved surjective when its nonzero functional has the stated maximal divisor bound; that bound is not yet supplied for the canonical differential. Every actual original place has a canonical normalized residue map. Distinct negative pure uniformizer powers are independent modulo integral functions: the largest pole in a finite sum cannot cancel. A pinned linear left inverse extracts the simple-pole coefficient, which vanishes on integral functions and higher pure poles. The actual residue map evaluates a cleared simple pole. Cleared-pole induction proves uniqueness over the proved rational residue field. Thus every map satisfying the literal source normalization equals the constructed map. No local residue, residue section, completion or rationality premise remains on the original consumer. Every nonzero actual original differential defines a finite trace-residue sum on repartitions. Actual finite canonical support bounds the nonzero terms. Single-place simple-pole probes evaluate to one using the proved rational residue fields and the pinned trace formula. Thus the functional is nonzero, and it vanishes on a divisor bound exactly when that divisor lies below the literal original canonical divisor. Local canonical data, differential generation, canonical support and nonempty places are all derived. No global residue identity is assumed. At every actual original place, ord of Df equals ord f minus one whenever ord f is nonzero. The actual unit-times-uniformizer decomposition and pinned integer-power derivation rule express the leading coefficient. The previously proved integral derivative bound puts the error term in the maximal ideal, while the characteristic-zero nonzero integer times the unit cannot cancel. Original local differential finiteness, separability and generation are derived; no such local assumptions remain. Exact differentials have zero local canonical residue at every actual original place. The actual local coefficient map is linear, and native derivation composition gives differentiation in the uniformizer. The proved integral coefficient bound handles regular functions; native integer-power differentiation and canonical normalization handle all pure poles. The proved finite principal-part uniqueness supplies the result for every function. All original local finiteness, separability, generation and rational-residue inputs are derived. At every actual original place the canonical residue of df/f equals the normalized order of f. In characteristic zero, the residue of f^n df is zero for n different from -1. For every nonzero original f and every integer n, the global trace-residue sum of f^n df is zero. The logarithmic case consumes the actual degree-zero principal-divisor theorem; the other cases consume zero local residues of exact differentials. The constructed original residue functional is explicitly applied to these diagonal powers. All local geometric inputs are derived. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> original regular differential dimension -> function-field Riemann--Roch -> residue duality -> global index formula, rank-one Weil differentials and the canonical residue functional. The exact derivative-order branch serves the canonical j-divisor degree and numerical genus identification. The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,351-module scope: all thirteen retained regressions, 38,032 exhaustive theorem checks, 16,386 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,318-module original regular differential scope passed sequential canonical verification with zero diagnostics. The new proofs remove the global index-finiteness, degree-dimension maximum, Weil-rank and canonical local-residue assumptions from the actual original consumers. The residue functional is nonzero with its exact maximal local divisor bound; its global annihilation is still unproved. The shorter routes use the pinned integral basis, quotient and duality APIs, integer order completeness, maximal-term valuation and linear left inverse. Rational actual residues permit a direct principal-part construction and uniqueness proof without completion machinery at that step. Logarithmic residues equal actual orders, and all original power differentials have zero global residue by the proved principal-divisor product formula. The 21 October renewed search is recorded in Tools/lean-reuse-audit-20261021.json; the dedicated Riemann--Roch repository supplies Weil duality but not the required Kaehler comparison. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Canonical divisors and finite original regular differentials (20 October 2026): Every actual original valuation ring is essentially of finite type over the constants, hence has a finite local differential module. The proved finite extension over its actual uniformizer supplies a finite integral-closure chart, and the proved center identity gives its localization. The actual algebraic residue field is separable in characteristic zero. Pinned cotangent exactness and Nakayama then show that the actual uniformizer derivative generates the integral local differential module. Consequently the derivative of every integral original-field function has integral local coefficient and nonnegative local differential order. No local finiteness, residue separability, local generation or unramifiedness premise remains in the original consumers. Every nonzero differential on the literal original function field has a finite divisor of its actual normalized local orders. At unramified integral-chart points, the coordinate differential generates the integral differential module, and its local order is zero. The pinned nonzero different ideal bounds the exceptional points by the finite prime support of one nonzero element. The coordinate pole locus is already proved finite. The actual j differential spans the original differential space, and principal finite support extends the result to every nonzero differential. No canonical-divisor or finite differential-support premise remains. The actual original regular differential space is finite-dimensional over algebraically closed constants. The positive-order degree formula applied to an inverse forces every transcendental function to have a pole, so global regular functions are exactly the constants. At each place the kernel of the scaled local residue map is the divisor space with its bound decreased by one. Pinned finite-submodule/quotient theory and induction over the positive part of the actual finite divisor prove every divisor space finite. The actual j-canonical divisor space is explicitly linearly equivalent to the actual regular differential space. No constant-field or divisor-space finiteness assumption remains in the original consumer. The degree of every nonzero original differential equals the degree of the literal j differential. Rank one expresses one nonzero differential as a nonzero scalar multiple of another; their local-order divisors differ by the actual principal divisor of the scalar. Its proved degree zero establishes choice independence. The exact source definition of genus therefore equals the degree expression at the original j canonical divisor. No principal-degree or curve premise remains. For the literal original field, the repartition quotient between two finite divisor bounds is finite-dimensional and its dimension is exactly their degree difference. A scaled local residue map is surjective with kernel the bound decreased by one; pinned quotient isomorphisms and finite-submodule/quotient theory assemble the degree difference. The already proved finite actual residue fields discharge all finiteness inputs. The positive-order degree identity gives an actual place, so bounded global repartitions are linearly equivalent to the proved finite original divisor spaces. Actual principal divisors bound every global function. No finite-residue or nonempty-place premise remains. Source dependency chain: DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> global index stabilization and residue duality -> exact finite local repartition quotient dimensions and bounded global functions. Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. Sequential foundation/paper verification passes with zero diagnostics for the 5,318-module scope: all thirteen retained regressions, 37,763 exhaustive theorem checks, 16,241 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,290-module original curve scope passed sequential canonical verification with zero diagnostics. Canonical finite support, finite divisor spaces, finite regular differentials, canonical-degree independence and exact finite repartition quotient dimensions now follow from the literal original function field. The numerical genus and regular-differential dimension, Riemann--Roch and analytic cusp-form realization remain required. The shorter routes reuse pinned cotangent exactness, Nakayama, different ideals and finite-submodule/quotient theory, together with the already proved positive-order degree formula. No root pin, proof limit, source contract or acceptance criterion changed.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -19332,7 +19352,7 @@ Canonical divisors, Riemann--Roch, regular differential dimension, geometric gen
 
 ## Production original regular differentials pending full run - 20 October 2026
 
-The 5,318-module production aggregate and focused original regular differential audit pass with zero diagnostics. Five proof-value audits verify integral local differential generation, actual canonical finite support, finite original divisor and regular differential spaces, choice-independent canonical degree and exact finite repartition quotient dimensions. The source genus is evaluated at the actual j-canonical divisor. Riemann--Roch, the numerical genus/dimension and actual analytic cusp-form realization remain required. Sequential foundation/paper verification of this scope is pending.
+Sequential foundation/paper verification passes with zero diagnostics for the 5,318-module scope: all thirteen retained regressions, 37,763 exhaustive theorem checks, 16,241 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
 
 Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.
 
@@ -19404,5 +19424,605 @@ Global index stabilization and residue duality remain required for Riemann--Roch
   "diagnostics": 0,
   "scratchExhaustiveTheorems": 207,
   "boundary": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original regular differential assembly - 20 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,318-module scope: all thirteen retained regressions, 37,763 exhaustive theorem checks, 16,241 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T07:19:53.018460+00:00",
+  "log": "logs/dubon-build-20261020-230130-978.log",
+  "sha256": "71C6EB518B99A526250DF88BABB7013627B19BAA048A04957B11FAF27B175817",
+  "bytes": 9189738,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5318,
+  "projectTheorems": 37763,
+  "registeredConsumers": 16241,
+  "registeredConstructions": 850,
+  "declarations": 22516,
+  "generated": 21310,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261020_225807.log",
+  "foundationSha256": "3944592BB3FFED05484369123BEF33D982354B056F103324101BFA1BD838E5EF",
+  "boundary": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production original index and residues pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,351-module scope: all thirteen retained regressions, 38,032 exhaustive theorem checks, 16,386 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenusBoundDependencyAuditProduction5351.log",
+      "sha256": "F0CDB8DBC55F2778C13FDA102F89AE1D03C1307267CC94D473193ECFD19C8A58",
+      "requiredProofValueEdges": 33,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_degree_dimension_maximum"
+      ],
+      "sourceSha256": "B57B6110774C1CA1356914BCBDD0EC29D743912DB440AA69C79F2B7B6E1B3713"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalIndexDependencyAuditProduction5351.log",
+      "sha256": "07DFF8D6ECFBADC6EBE6BF83759F619D8F472C88DF43FF0508CE11B6A42D4B28",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finite_original_omegaSpace",
+        "Dubon2026.SourceFunctionField.original_omega_dimension_formula"
+      ],
+      "sourceSha256": "A44D6A49C8D2B3E789E8660385871D802C6DF43800D95F5E05A6E5135AF5A0CE"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeilRankDependencyAuditProduction5351.log",
+      "sha256": "78BBAB2DABF281EA36B1D501259041EE2CC23E2B77B143ED45B6FEE11FD1A98B",
+      "requiredProofValueEdges": 32,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_weil_differentials_rank_one"
+      ],
+      "sourceSha256": "491189DA3ED9B6E5AE3172F463F323D25B34277C67F2F7700086557D936FDA16"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalResiduesDependencyAuditProduction5351.log",
+      "sha256": "E2AA6D7B54F51FB3A148D5C16D4DD62DEFBBE60D8A15BC922E705BE820211BDA",
+      "requiredProofValueEdges": 26,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_unique",
+        "Dubon2026.SourceFunctionField.original_canonicalLocalResidue_simplePole"
+      ],
+      "sourceSha256": "C50539CE4C2E19CF7CACACE6924E2298CC4AC31C010B331AD962F1D4CD069833"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFunctionalDependencyAuditProduction5351.log",
+      "sha256": "2B77EAFA862A9F7A54773380FC14D957ABBACD3D26B4F42943D2B848C0CEB4DB",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_ne_zero",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_vanish_bound_iff"
+      ],
+      "sourceSha256": "29AF4280CBF9F354E8BC9D9736A5669B83B515801C2C5637055FF3CA67ABBFCC"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceExactDerivativeDependencyAuditProduction5351.log",
+      "sha256": "9BD752A61719B1CE518BC089888F8BA2A67C6B18975C8F0C6006C167302B7A9C",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_ordDifferential_D_eq_ord_sub_one"
+      ],
+      "sourceSha256": "99FB8E3FDEA48ADE2A0A79C47C4A7C653167E7A8BD696CC605E054BEBFC6E7BC"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceExactResidueDependencyAuditProduction5351.log",
+      "sha256": "8FD4FC5A43DD89DD0F298AADF24544B6ED84D1EC2EF69CD74308688247EDB397",
+      "requiredProofValueEdges": 21,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_localResidue_exactDifferential"
+      ],
+      "sourceSha256": "03E826F6E20B1FB2AE7404287440E5FFDADA619BEE92E3A99A9FA9E9250C254A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePowerResidueDependencyAuditProduction5351.log",
+      "sha256": "7DEDBB2939E335C1BFD6180DC09E64D0E162470EB38F8FA1203033E13E7A43C4",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_localResidue_logarithmic",
+        "Dubon2026.SourceFunctionField.original_localResidue_power_differential",
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_power_differential"
+      ],
+      "sourceSha256": "AF53FC918358605AFA7AEF768E2338D10F1E8C5E4C2863272F5C484A0DFB3888"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueProductionAudit5351.log",
+  "sha256": "0CD9CD8F261F06C0E61339DCC011D5F48950040B11F707F225705F894B745A4F",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-assembly-production-5351-build.log",
+  "aggregateSha256": "9ACFDB2CA1FD35C16640FA9B7E9C8CA49C70F6EE11646F235342AB0F84047A73",
+  "productionModules": 5351,
+  "incrementModules": 33,
+  "axiomChecks": 178,
+  "exhaustiveIncrementTheorems": 269,
+  "linterScopes": 33,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 269,
+  "boundary": "The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original index and residue assembly - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,351-module scope: all thirteen retained regressions, 38,032 exhaustive theorem checks, 16,386 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T09:39:50.752095+00:00",
+  "log": "logs/dubon-build-20261021-020102-454.log",
+  "sha256": "8EDFAB8D2F7F36791B87CC6B144346CFF0673D7280400B335C57D3ABACDBA62F",
+  "bytes": 9260968,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5351,
+  "projectTheorems": 38032,
+  "registeredConsumers": 16386,
+  "registeredConstructions": 883,
+  "declarations": 22720,
+  "generated": 21454,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_002907.log",
+  "foundationSha256": "E7B53DBE49D4B4F2473A10A6C9A427A4565F75EB05667DDC658EBE6A0080B0A5",
+  "boundary": "The exact remaining condition for the constructed residue functional is vanishing on diagonal global functions, the global residue identity. Residue duality, canonical/numerical genus identification, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production original Riemann--Roch pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,385-module scope: all thirteen retained regressions, 38,255 exhaustive theorem checks, 16,492 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The numerical modular genus, analytic cusp-form realization, matching weight-two cusp-form lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalResidueDependencyAuditProduction5385.log",
+      "sha256": "1AB97BBF34C2F5F60E9999B4F7EF257B4B6B3E0B8574D3881BD52E95CC6BB6D8",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_rationalJ"
+      ],
+      "sourceSha256": "9611078D93DA11744538259DA6B62B68F7AA29873A81D2891707CA26DC809CAB"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResiduePullbackDependencyAuditProduction5385.log",
+      "sha256": "78C07D62A4DD6EF313F0F3FADE18CB5FBCCAB797EE941B598358AE2D8540D51D",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_jRestricted_residue_pullback",
+        "Dubon2026.SourceFunctionField.original_jRestricted_order_scale"
+      ],
+      "sourceSha256": "630AC41AA5526B0ACF05FDCD10943966F410D5ABB24606BCE2C66DA388F5BB37"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueInvarianceDependencyAuditProduction5385.log",
+      "sha256": "60DFE65A70E18FA341C485D5AD62564E467466E150A26B3F0D10C55379C5BE93",
+      "requiredProofValueEdges": 32,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_jInvariant"
+      ],
+      "sourceSha256": "F1730305FD8D397301357D47217C6674CF16958F77DA0125CAEC3E133BA3E71A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGaloisResidueDependencyAuditProduction5385.log",
+      "sha256": "3901DF5B54FF42495054396B8574910156FED58A60CF24E15BB618F73507DB65",
+      "requiredProofValueEdges": 60,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalGaloisResidueMap_eq_zero"
+      ],
+      "sourceSha256": "26EC5D39C094190C53442ADE6E6B042BE1764A41347C767BCC430F838EBA6C82"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalResidueDependencyAuditProduction5385.log",
+      "sha256": "D6983C4913B3617065B468C5507ECFDC3AAC0EA495FF9CEDCBE85FE894104123",
+      "requiredProofValueEdges": 48,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalResidueFunctional_diagonal_zero"
+      ],
+      "sourceSha256": "F6F3DD41C7646E586C161F38AFE41E51FB8267792A93E301BD5C27F977ADAEEA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRiemannRochDependencyAuditProduction5385.log",
+      "sha256": "8843DB4AEA5078763A9B32CD51E5B7CFBB18AEFE68B2E7106A71397F2DD48A8A",
+      "requiredProofValueEdges": 38,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_functionFieldRiemannRoch",
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_eq_genus"
+      ],
+      "sourceSha256": "7E19B9BF92A879272FF1F244EAC2CC286DB78391FBE5A7FE0E21076FA3B28ED3"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRiemannRochProductionAudit5385.log",
+  "sha256": "6438B4DDC196FB8A4F34762A5BA4DF84CC12FC8BA35CA85FA708102DD2507E9D",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-riemann-roch-production-5385-build.log",
+  "aggregateSha256": "E3065F2FF638429157A037BE25F98C987881BAEA0B4D9939A9F1E620E816B5E3",
+  "productionModules": 5385,
+  "incrementModules": 34,
+  "axiomChecks": 141,
+  "exhaustiveIncrementTheorems": 223,
+  "linterScopes": 34,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 223,
+  "boundary": "The numerical modular genus, analytic cusp-form realization, matching weight-two cusp-form lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original global residues and Riemann--Roch - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,385-module scope: all thirteen retained regressions, 38,255 exhaustive theorem checks, 16,492 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The numerical modular genus, analytic cusp-form realization, matching weight-two cusp-form lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T11:03:31.932157+00:00",
+  "log": "logs/dubon-build-20261021-025521-054.log",
+  "sha256": "88857A50229B41D308CE0B65786DB33B120431ECADE6D9485A7261F354EA7FDF",
+  "bytes": 9328124,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5385,
+  "projectTheorems": 38255,
+  "registeredConsumers": 16492,
+  "registeredConstructions": 918,
+  "declarations": 22861,
+  "generated": 21571,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_025216.log",
+  "foundationSha256": "2C9C69E6A1E121E3ACBFB22B8F89ECA34223A405C5A00F7123B00A0262801310",
+  "boundary": "The numerical modular genus, analytic cusp-form realization, matching weight-two cusp-form lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production original modular degree pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,416-module scope: all thirteen retained regressions, 38,443 exhaustive theorem checks, 16,627 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateValuesDependencyAuditProduction5416.log",
+      "sha256": "069A7318BDEC17A7B5C83346040F0D57111B2854A10F42C93B73F5ED0096DA2A",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_j_place_dichotomy",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_pole",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_value"
+      ],
+      "sourceSha256": "6EBF325C5F0D03E2BAE578BCC817B607759BE80648EB873192150DD263C8FDC6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeDegreeDependencyAuditProduction5416.log",
+      "sha256": "D9D918575674949B1AE6E50A0D5C54827634814959189B41DE6009205F160BC2",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_le"
+      ],
+      "sourceSha256": "6EE8493E6CEFEB7C5E5941FE6AF5DB2569BC8BAA6EDF218AF3CEAA5056ECD88B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeNonmembershipDependencyAuditProduction5416.log",
+      "sha256": "F0BA7086434D56AA9011B2AB9B2DE1883BFD0FE9E2EA0BA88F87F7F5F93FB38C",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_rational_j"
+      ],
+      "sourceSha256": "DEB20106C523A7B1A79ED50DAB4B7217A7D50D1926BE826C2DFF9B4A9EAB8486"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeExactDependencyAuditProduction5416.log",
+      "sha256": "13B47BA4E9F7D4DBA1636FE2BE543258C843D30ED5C1EF37491F70D58DD42F1B",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_eq"
+      ],
+      "sourceSha256": "6876CC85610A998FAD5949ED48A0C58B856621ABCD12456C505558EAF87F1F7F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeDependencyAuditProduction5416.log",
+      "sha256": "429130500A1CAFD3317CA4F391506988938E9B7E2DEA077D9241C1F4DC52C035",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_eq_psi"
+      ],
+      "sourceSha256": "67F3B1602C02627101F9D3D346A3B761D8B447A0C1B510282BDC4A04A70127A0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDegreeTransportDependencyAuditProduction5416.log",
+      "sha256": "522E0C8D9D881971DAA7F0BAF2A070AA1DA43FA40F48542A35966E9EF3D1D092",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_baseChange"
+      ],
+      "sourceSha256": "6570246664DAEAA158F5E39467B6BF3D6C6258F0FC6DABD63530A90C48F03AC4"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerStepDependencyAuditProduction5416.log",
+      "sha256": "6F8F1E327AAAB248754FD8AB1A9E711E8F7B021B208F1727384FD59F7394F90F",
+      "requiredProofValueEdges": 21,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_le"
+      ],
+      "sourceSha256": "1103A9ED61CD1727D851DD79D84ABD038868585AB3EA84DBD42D87AC03FFEC18"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerExactDependencyAuditProduction5416.log",
+      "sha256": "C647C4B85858E0E7408B441AD38577D41E8B40F58F599F7304C5D23335D04CAD",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq_of_not_mem"
+      ],
+      "sourceSha256": "DC7BD325381B2BB325301EF9D2A88D9C14C7091E6DE0D029100132D251B28464"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularDegreeProductionAudit5416.log",
+  "sha256": "7FE29452CD6091D1004EAC27CBCDCA204CE09C7FB5CCA00F75AB51C26FC818B5",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-modular-degree-production-5416-build.log",
+  "aggregateSha256": "4522757BDF28E328A0A4F0ABC2AD1782BBDB8F823BF20EAEE9D15FDAF85E156B",
+  "productionModules": 5416,
+  "incrementModules": 31,
+  "axiomChecks": 148,
+  "exhaustiveIncrementTheorems": 188,
+  "linterScopes": 31,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 195,
+  "productionReuse": "Scratch imports qualified and proof-status comments aligned. Original prime generation reuses the existing laurentBaseChange_full_eq_adjoin and coeffEmb_algebraMap from SourceOriginalFieldGeneration; duplicate coefficient lemma and unnecessary generic adjoin lemma omitted. All retained public statements unchanged.",
+  "omittedScratchTheorems": [
+    "Dubon2026.SourceFunctionField.coeffEmb_algebraMap",
+    "Dubon2026.SourceFunctionField.laurentBaseChange_adjoin"
+  ],
+  "existingReuseTheorems": [
+    "Dubon2026.SourceFunctionField.laurentBaseChange_full_eq_adjoin",
+    "Dubon2026.SourceFunctionField.coeffEmb_algebraMap"
+  ],
+  "boundary": "Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original prime degree and coefficient extension - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,416-module scope: all thirteen retained regressions, 38,443 exhaustive theorem checks, 16,627 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T12:24:49.462022+00:00",
+  "log": "logs/dubon-build-20261021-041729-150.log",
+  "sha256": "722F03F20BC272EAA0C1AA3C7FACE7135D35C3BB9B745F765F74AA80EDDE044F",
+  "bytes": 9380562,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5416,
+  "projectTheorems": 38443,
+  "registeredConsumers": 16627,
+  "registeredConstructions": 931,
+  "declarations": 23009,
+  "generated": 21624,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_041435.log",
+  "foundationSha256": "A58984333F21422C76C4463A30FD8401D17A9D1D6A2E6AE90B7BFFB3DA845F1E",
+  "boundary": "Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production original prime-power degree pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,441-module scope: all thirteen retained regressions, 38,536 exhaustive theorem checks, 16,689 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedEmbeddingDependencyAuditProduction5441.log",
+      "sha256": "CD31ADDF5C48BD57E382B186F6C5604561F431AD5C9EFE17FA2F0F0FB08024EF",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.extend_actual_embedding_at_prime_twist"
+      ],
+      "sourceSha256": "4E90E0AB6890C3801764660047FD21D6BF8308817B344782DDC1AA2B0ED05058"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerNonmembershipDependencyAuditProduction5441.log",
+      "sha256": "B82249CFE5EA7041C5AEF657D6470E8569520275120AAC1F7694C1CF4FAF73BF",
+      "requiredProofValueEdges": 36,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq"
+      ],
+      "sourceSha256": "0270D07FBA2E3C85E7C33FCBB3F6B08104A2F9C8C731C51E26C86F92FF33FE76"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerDegreeDependencyAuditProduction5441.log",
+      "sha256": "07D078A899CF1A138E3B5922286994793D0ED88A36A7C0888810ECDAC7C42339",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_power_eq_psi"
+      ],
+      "sourceSha256": "67E1D57E529FC94E45095533D4E1D89436C73B320AD327B5E3632F405289F239"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotsDependencyAuditProduction5441.log",
+      "sha256": "FEB888F11E5BFBC2E303BE98BC9092868F85B06082BBB467F07387409D110B69",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_monic",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_natDegree",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots_nodup"
+      ],
+      "sourceSha256": "6973948D64164869E1CBB7BC01FB831936065B2EDDA20BDD7D633D1FA748168F"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePowerDegreeProductionAudit5441.log",
+  "sha256": "185C9CDA966F1015351193FE72D0B903B126D3B2C62F00E1461FD70475AEA488",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-prime-power-degree-production-5441-build.log",
+  "aggregateSha256": "3A2F96EC2103FFAFFA2D0E0384C707F64B4BD4571E23EF526BF7B0D07F9E4757",
+  "productionModules": 5441,
+  "incrementModules": 25,
+  "axiomChecks": 68,
+  "exhaustiveIncrementTheorems": 94,
+  "linterScopes": 25,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 94,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged; existing native embeddings, prime nonmembership, degree transport and level arithmetic reused.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "boundary": "General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Verified original prime-power degree and conjugate product - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,441-module scope: all thirteen retained regressions, 38,536 exhaustive theorem checks, 16,689 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.
+
+```json
+{
+  "recordedUTC": "2026-10-21T13:49:36.344493+00:00",
+  "log": "logs/dubon-build-20261021-053531-317.log",
+  "sha256": "5B2F21B67B9CD2DF59731ECABB1461CEB781DB29B8FE27A1681D94806C876D8A",
+  "bytes": 9406519,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5441,
+  "projectTheorems": 38536,
+  "registeredConsumers": 16689,
+  "registeredConstructions": 937,
+  "declarations": 23077,
+  "generated": 21655,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_053242.log",
+  "foundationSha256": "2B80DBB9B3D23EF02155EDB9F3BD6B79675AE741814F1E17B084AB3A0728B7B5",
+  "countReconciliation": {
+    "priorTheorems": 38443,
+    "focusedTheorems": 94,
+    "alreadyAuditedGeneratedTheorems": [
+      "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS.congr_simp"
+    ],
+    "newTheorems": 93,
+    "fullSetEqualsPriorUnionFocused": true,
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerCountReconciliation5441.log",
+    "sha256": "C68F84F3A4D00CAFF7A93E9253443EC123BF597F17368D1E34B7D98A8EDC7E2D"
+  },
+  "boundary": "General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+}
+```
+
+## Production all-level original degree pending full run - 21 October 2026
+
+The 5,476-module production aggregate and focused all-level original degree audit pass with zero diagnostics. Five proof-value audits verify the actual conjugate induction, proper-divisor generation, coprime-base nonmembership, mixed towers and unconditional all-level consumers. Field generation, exact internal degree and the conjugate identity are proved without those conclusions as premises. Modular ramification, fiber counts, numerical genus, analytic realization and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending.
+
+Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateStepDependencyAudit7Production5476.log",
+      "sha256": "4E23A02B8B4A295B7387A7E1AF91CD79D0AADCE4AACAFE7C24678835D7AF4E50",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_minpoly_degree_eq_full_relfinrank_of_generation",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_qExpand",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_roots_and_degree",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_top_slot_root",
+        "Dubon2026.SourceFunctionField.original_full_embedding_of_expanded_minpoly_root",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_full_step_degree",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_reduced_step_degree",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_relative_root"
+      ],
+      "sourceSha256": "5D47C8842111620D1B0116D76424C5047015C3C30872F2E3AB5BDAE5CB45F78F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateInductionDependencyAudit8Production5476.log",
+      "sha256": "DD184F59E871B774BA69CD7746304DDB49933FCA61FAD0DE1C91BA00F5FEA491",
+      "requiredProofValueEdges": 36,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_divisor_induction"
+      ],
+      "sourceSha256": "AF243F8D47907F603619B589B9D383F77644C8D8DBD9AEA493D524C54A3DB458"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenerationDependencyAudit5Production5476.log",
+      "sha256": "E9814FF87B639055FAF39CF4AB681912CAF725B86A34A93FEFF075C4F6C7D9EB",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_generation_of_proper_divisor_induction"
+      ],
+      "sourceSha256": "D8B53D79F9F9F4B8A8818403003E7D67920F0D318A72D41926F56298145577DA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoprimeNonmembershipDependencyAudit6Production5476.log",
+      "sha256": "6AC9C91D4E8F850055676BED42758463E88F38E4C8725681A47DED4977E4F1FA",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_divisor_induction"
+      ],
+      "sourceSha256": "7130C6B7D3A662904A324196F591436D904800C6FD2B46F99FD4EF48E9A085A9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelDegreeDependencyAudit9Production5476.log",
+      "sha256": "A11B318156151CA0E3BB9883BE559CA3BBF7EDEB8222100902701CF3076459BB",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_full_eq_pair",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_eq_psi",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct"
+      ],
+      "sourceSha256": "CD345C42C811A6F94CBF1E0AD8C5D44CB1564894087B0FD6B99DE27D449DA2B8"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllLevelDegreeProductionAudit5476.log",
+  "sha256": "F0C0B1058F32612F415083B7CE4E851E5B03750C99D9422483DFB552DA3ECEE7",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-all-level-degree-production-5476-build.log",
+  "aggregateSha256": "6B0831A3F6B3A4C149178253A27B7EDDD67A7628F4D2A3E902442EAF1A56AE7D",
+  "productionModules": 5476,
+  "incrementModules": 35,
+  "axiomChecks": 62,
+  "exhaustiveIncrementTheorems": 72,
+  "linterScopes": 35,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 72,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Existing unique-common-root descent, prime-power spread, coefficient transport and native relative degrees reused.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
 }
 ```

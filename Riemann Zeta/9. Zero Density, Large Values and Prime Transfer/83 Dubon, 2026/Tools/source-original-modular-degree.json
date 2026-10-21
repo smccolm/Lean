@@ -1,0 +1,958 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurveCoordinateValues",
+    "Dubon2026.SourceOriginalJCoordinatePlaces",
+    "Dubon2026.SourcePrimeMonicDegree",
+    "Dubon2026.SourcePrimeFieldDegreeBound",
+    "Dubon2026.SourceJProductTruncation",
+    "Dubon2026.SourceJPositiveCoefficients",
+    "Dubon2026.SourceJPrimeTwistCoordinates",
+    "Dubon2026.SourceJPrimePolynomialDegree",
+    "Dubon2026.SourceJPrimeOrbitObstruction",
+    "Dubon2026.SourceJPrimeNonpolynomial",
+    "Dubon2026.SourceJPrimeNonmembership",
+    "Dubon2026.SourcePrimeOrbitIrreducibility",
+    "Dubon2026.SourcePrimeConjugateRoots",
+    "Dubon2026.SourcePrimeConjugateBaseChange",
+    "Dubon2026.SourcePrimeExactFieldDegree",
+    "Dubon2026.SourceOriginalPrimeGeneration",
+    "Dubon2026.SourceOriginalPrimeDegree",
+    "Dubon2026.SourceLaurentCoefficientIndependence",
+    "Dubon2026.SourceLaurentDegreeTransportFields",
+    "Dubon2026.SourceLaurentDegreeTransportSpan",
+    "Dubon2026.SourceLaurentDegreeTransportIndependence",
+    "Dubon2026.SourceLaurentDegreeTransport",
+    "Dubon2026.SourceOriginalDegreeBaseChange",
+    "Dubon2026.SourcePrimeBidirectionalRelation",
+    "Dubon2026.SourcePrimeAdjacentRelations",
+    "Dubon2026.SourcePrimePowerStepPolynomial",
+    "Dubon2026.SourcePrimePowerCoefficientAction",
+    "Dubon2026.SourcePrimePowerRootOrbit",
+    "Dubon2026.SourcePrimeExpandedProduct",
+    "Dubon2026.SourcePrimePowerCyclotomicCycle",
+    "Dubon2026.SourcePrimePowerExactFieldDegree"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization of original regular differentials -> exact original j-map degree, modular ramification and fiber counts.",
+  "discharged": "Every actual original place is a pole of j or lies over one unique finite j-value, with the proved local canonical coefficient. The literal prime conjugate product has a monic degree-(p+1) integral relation. Positive coefficients of the actual j series and the orbit-sum obstruction prove j(q^p) is outside the rational j-field. The finite root cycle then proves exact degree p+1, and the actual prime divisor generators identify the original internal j-coordinate degree with dedekindPsi(p). Coefficient independence, common denominators and finite basis spanning prove that every original j-coordinate degree equals its rational relative degree after coefficient extension; existing monic relations derive the finiteness premise. No prime degree, irreducibility, generation or degree-transport assumption remains in these original-field consumers. The same prime product also gives both adjacent prime-power relations. Removing the known root proves the degree-p upper bound, and the actual cyclotomic coefficient action proves the matching lower bound under explicit next-series nonmembership. Original divisor membership supplies the preceding-root hypotheses; next-series nonmembership and all-level generation remain required.",
+  "boundary": "Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,416-module scope: all thirteen retained regressions, 38,443 exhaustive theorem checks, 16,627 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.original_j_place_dichotomy",
+    "Dubon2026.SourceFunctionField.original_jCanonical_at_pole",
+    "Dubon2026.SourceFunctionField.original_jCanonical_at_value",
+    "Dubon2026.SourceFunctionField.prime_j_extension_finrank_le",
+    "Dubon2026.SourceFunctionField.prime_j_not_mem_rational_j",
+    "Dubon2026.SourceFunctionField.prime_j_extension_finrank_eq",
+    "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_eq_psi",
+    "Dubon2026.SourceFunctionField.finrank_original_over_j_baseChange",
+    "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_le",
+    "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq_of_not_mem"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T09:40:49.577425+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCurveCoordinateValues",
+        "SourceOriginalJCoordinatePlaces"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateValues.lean",
+          "sha256": "E460C535AC3B2FD84B04283CF9B5D94102D5BE374809AA756F562A346079A436",
+          "oleanSha256": "8F614678570428683A13FB50E5BFC2AE96E881B1087B9AD7FAFFF37A145732F3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJCoordinatePlaces.lean",
+          "sha256": "39AB3C6904C1130CF4D194EAEFAB138198780DD5F7AB882FA5162F8256FE2C93",
+          "oleanSha256": "C836946A08C397046CFE9FAB8C3DF186C953BDD084E70EA61D8B0F842DA42CC2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.transcendental_sub_algebraMap_ne_zero",
+        "Dubon2026.SourceCurve.Place.ord_sub_algebraMap_pos_iff_residue_eq",
+        "Dubon2026.SourceCurve.Place.exists_unique_coordinate_value",
+        "Dubon2026.SourceFunctionField.original_j_place_dichotomy",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_pole",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_value"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.transcendental_sub_algebraMap_ne_zero",
+        "Dubon2026.SourceCurve.Place.ord_sub_algebraMap_pos_iff_residue_eq",
+        "Dubon2026.SourceCurve.Place.exists_unique_coordinate_value",
+        "Dubon2026.SourceFunctionField.original_j_place_dichotomy",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_pole",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_value"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateValuesAudit2.log",
+      "logSha256": "8900150B94B17B90133B46F3C80A26D9E46AAF934E785072735CC5C150F61BCA",
+      "auditSha256": "F371FCB5F77B80DB026867AEFDC1D4FD88C77EC2888C268715585E50B697B88E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateValuesDependencyAudit.log",
+      "dependencyAuditSha256": "069A7318BDEC17A7B5C83346040F0D57111B2854A10F42C93B73F5ED0096DA2A",
+      "dependencyAuditSourceSha256": "25D32CC34DBC73D2C2B51931A6BCC129AD39406ED395E51D20D01A0F289685FC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_j_place_dichotomy",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_pole",
+        "Dubon2026.SourceFunctionField.original_jCanonical_at_value"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus and analytic regularity -> actual j-place classification and canonical local coefficients.",
+      "discharged": "Every actual original place is either a pole of j or lies over one unique finite j value. This follows from the actual residue constant map and transcendence, with no place classification assumed. The actual canonical j-divisor coefficient is the coordinate order minus one at a pole and at a finite value, by the proved exact derivative order. All local differential and residue assumptions are discharged for the original field.",
+      "boundary": "Scratch only; production promotion and verification pending. The exact original j-map degree, modular ramification at 0 and 1728, absence of other finite ramification, and the actual fiber counts including cusps are still needed for the numerical genus. Analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coordinate-values-2-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B86F6D520A981B4158E77AB9FE3D06187485F7BE56EE968F5B79C82A64FDF9FF"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:00:23.666069+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimeMonicDegree",
+        "SourcePrimeFieldDegreeBound"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeMonicDegree.lean",
+          "sha256": "FEECF3899078870F5F51F1CB433AA4A6C6F931A0472A0A5D9B143DAB4C98F59D",
+          "oleanSha256": "93B822525BCE93012E686D67CE49D45A177018D67169BEB304F9D804F1A838EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeFieldDegreeBound.lean",
+          "sha256": "A2F717F6B365330ACFC45AF9EE11AC48586CD48878EBFF1EE3419ED00BC0583E",
+          "oleanSha256": "8632CEB55C25A900B692F1455BC5CB600B1ABD1B3B3D9110AAB93905CA8910E0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.exists_prime_monic_degree_product",
+        "Dubon2026.SourceFunctionField.exists_prime_monic_relation_degree",
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.exists_prime_monic_degree_product",
+        "Dubon2026.SourceFunctionField.exists_prime_monic_relation_degree",
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeDegreeAudit2.log",
+      "logSha256": "FEC813CB2704CF51FF99EBC3BFCC77D3D0648F3A3026FD1923BF5CC6F1D40ED5",
+      "auditSha256": "94924CE50D66A9005938409E365F4715A7AF74CA8F12D082CE143A6C1945FF22",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeDegreeDependencyAudit.log",
+      "dependencyAuditSha256": "D9D918575674949B1AE6E50A0D5C54827634814959189B41DE6009205F160BC2",
+      "dependencyAuditSourceSha256": "0C319AC09804F7480D8B3191FE711E5F9BF68E4510B747A985403AB27D7EE20E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_le"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> integral prime conjugate polynomial and prime extension upper bound.",
+      "discharged": "The existing literal prime conjugate product descends to a monic integral polynomial of exact degree p+1. Its actual j(q^p) root gives the original prime simple extension upper bound p+1 over every characteristic-zero coefficient field. No degree or polynomial-relation premise is assumed. Native monic lifting preserves the degree that the previous integrality-only consumer did not retain.",
+      "boundary": "Scratch only; production promotion and verification pending. The matching prime lower bound, all-level generation and exact j-map degree, modular ramification and fiber counts remain required. Analytic cusp-form realization, period surjectivity and downstream arithmetic and symmetric-power gates remain open. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-degree-2-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E9BD7BF44DC055CE69E19FC83B1BBB7E14DD117411A121C3A60A6C8CEA728FEC"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:16:01.621093+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceJProductTruncation",
+        "SourceJPositiveCoefficients",
+        "SourceJPrimeTwistCoordinates",
+        "SourceJPrimePolynomialDegree",
+        "SourceJPrimeOrbitObstruction",
+        "SourceJPrimeNonpolynomial",
+        "SourceJPrimeNonmembership"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJProductTruncation.lean",
+          "sha256": "2D88310EC714745CE48B4DBFE9959AD6FA63C875717DFFFABB09656F6322A4BA",
+          "oleanSha256": "7D94F287625186C3ABFEB2363255E07CE369E1B56269D366737A5E8B0416F601"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPositiveCoefficients.lean",
+          "sha256": "C76EAB3241577EC645CE78B1B35DA09BBD588DBDAC7A0856845BB07BF5A6678A",
+          "oleanSha256": "1778D7948BF6ABDE6DB0D9369808748F1E69E2DD8D402A1B41F76C51FD16B016"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPrimeTwistCoordinates.lean",
+          "sha256": "335AFB62454B6A1E0B8974EB7F68FB704AEE06411E66E5B0C1FE8EA45BB939A9",
+          "oleanSha256": "5A0FB7F6C1433699962DD8AB309EB227FAD7BD98E31273FA0E8E8AC7EA0BBDD1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPrimePolynomialDegree.lean",
+          "sha256": "9C844F3F773C64197E68AE564EDAC0FD2225B4AC9D115656F700CA39E90ABF62",
+          "oleanSha256": "E80DE0FC86F3A0B5EDE29E80332C831CBB02A56E59BA6EB06D7C551C1A7C19FB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPrimeOrbitObstruction.lean",
+          "sha256": "48BFA8247FCDA344A832966CD21D51217DD3F19241384464E38F5455D1B88581",
+          "oleanSha256": "6A9FEB79FA50E7AF99FA5E012CA0CA198F8B6ABAFD11B33E3C98F4A8840FAD88"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPrimeNonpolynomial.lean",
+          "sha256": "C78C7F810B4336596033F0524D78C09FF3768BBBA13AB9D98ABB3E4D5C06926C",
+          "oleanSha256": "FD053459E570CD45FEF2C0A53443CD24FFCC68BF54CA0B95B6DDD65A6FA283D7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJPrimeNonmembership.lean",
+          "sha256": "49EEF5F314A52513A28F4929B5115DA14085BFC311C65F5B069DD767B939BC29",
+          "oleanSha256": "BA849093BCB8FD794A593071C726EFA01C3479D2020D6A1EF95E2D0C5F8DFCEF"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_one_sub_X_pow_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_one_sub_X_pow_eq_coeff_one",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_one_sub_pow_le",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_etaProd_eq_coeff_partialProd",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jq_eq_coeff_jNum",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.constantCoeff_geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries_one",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_sub_X_pow_mul_geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_mul_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_pow_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_mul_of_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_mul",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_pow",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_mul_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_pow_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_inv_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.partialEta_mul_partialGeom",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_etaProd_eq_coeff_partialEta",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_dedekindEtaUnitInv_eq_coeff_partialGeom_pow",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_partialGeom_pow",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_dedekindEtaUnitInv",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_eisenstein4_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_jNum",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_jq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jq_ne_zero",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_mul",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_of_not_dvd",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqModC_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_neg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_ne_zero",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_injective",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.jqModC_eq_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.jqNModC_eq_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_qExpand_of_pow_eq_one",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.units_pow_eq_one_of_isPrimitiveRoot",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_aeval_jqModC_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_aeval_jqModC_neg_natDegree",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqNModC_self",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqNModC_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.ne_zero_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.natDegree_eq_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.monic_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_algebraMap",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_comp_algebraMap",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_qTwist_jqModC_eq_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_pow_jqModC_injective",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.sum_qTwist_jqModC_eq_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_sum_qTwist_jqModC",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC_of_isPrimitiveRoot",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMap_aeval_jqModC",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC_charZero",
+        "Dubon2026.SourceFunctionField.prime_j_integral_polynomial_algebra",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_rational_j",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.partialEta",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.partialGeom",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_one_sub_X_pow_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_one_sub_X_pow_eq_coeff_one",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_one_sub_pow_le",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_etaProd_eq_coeff_partialProd",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jq_eq_coeff_jNum",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.constantCoeff_geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_geomSeries_one",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_sub_X_pow_mul_geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_mul_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_prod_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_pow_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_mul_of_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_mul",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_pow",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_mul_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_pow_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_inv_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.partialEta_mul_partialGeom",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_etaProd_eq_coeff_partialEta",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_dedekindEtaUnitInv_eq_coeff_partialGeom_pow",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_partialGeom_pow",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_dedekindEtaUnitInv",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_eisenstein4_nonneg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_jNum",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.one_le_coeff_jq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jq_ne_zero",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_mul",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_of_not_dvd",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqModC_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_neg",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_coeff_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_ne_zero",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_injective",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.jqModC_eq_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.jqNModC_eq_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_qExpand_of_pow_eq_one",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.units_pow_eq_one_of_isPrimitiveRoot",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_aeval_jqModC_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_aeval_jqModC_neg_natDegree",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqNModC_self",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_jqNModC_of_lt",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.ne_zero_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.natDegree_eq_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.monic_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_algebraMap",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_comp_algebraMap",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_qTwist_jqModC_eq_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_pow_jqModC_injective",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.sum_qTwist_jqModC_eq_of_aeval_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeff_sum_qTwist_jqModC",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC_of_isPrimitiveRoot",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMap_aeval_jqModC",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC_charZero",
+        "Dubon2026.SourceFunctionField.prime_j_integral_polynomial_algebra",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_rational_j"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.geomSeries",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.partialEta",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.partialGeom",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeNonmembershipAudit7.log",
+      "logSha256": "83E899504837D1E542CBAB0A94B05D491590E917AB24BD1F1E898E7177F66A05",
+      "auditSha256": "E8680A8F68FCAC1384E457ED0000ED4CBF78E07B4B172A338583843276DA84AC",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 75,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeNonmembershipDependencyAudit.log",
+      "dependencyAuditSha256": "F0BA7086434D56AA9011B2AB9B2DE1883BFD0FE9E2EA0BA88F87F7F5F93FB38C",
+      "dependencyAuditSourceSha256": "AAA1B4F6E868D23C588556E76400FDE20ADA32EDE2B00063B6A860C05A744B4B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_rational_j"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> prime irreducibility -> actual prime j-field nonmembership.",
+      "discharged": "The original j series has positive coefficients at every nonnegative index, by its literal Eisenstein numerator and eta inverse. The root-of-unity orbit and Vieta coefficient identity rule out j(q^p)=P(j(q)) over every characteristic-zero coefficient field. The already proved prime monic relation gives integrality over the polynomial j-algebra; native integral-root descent then proves that the actual prime j substitution is outside the rational j-field. No nonmembership, coefficient positivity or irreducibility premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Prime conjugate-product irreducibility and exact degree are the next consumers. All-level generation and exact j-map degree, modular ramification and fiber counts, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-nonmembership-7-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A73471B5D1668010087D3D6D7E806EEF2894F224B99BB8DDB87074770373694B"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:19:25.091083+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimeOrbitIrreducibility",
+        "SourcePrimeConjugateRoots",
+        "SourcePrimeConjugateBaseChange",
+        "SourcePrimeExactFieldDegree"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeOrbitIrreducibility.lean",
+          "sha256": "16C15E1CCCD11952F719D628787EDA5E6B5D97DA37B17B71ACD4EB6646BB24F3",
+          "oleanSha256": "3592C56EBB2806735624CFA89D20D19866F670F1BFFFFFE6DE62219D33DB0634"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeConjugateRoots.lean",
+          "sha256": "E1A6AC6DF6C60FFD6425D506CBFA3195A076DFB8D29C70ED4B5BA968F643A36E",
+          "oleanSha256": "E3AC54A7C728D9991A189AA9EA6D15DF228B26FDDE4BD5C33F28F59C00E6CEAA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeConjugateBaseChange.lean",
+          "sha256": "269CD725BB424A4EB8CC11A9B6AC750092BF228CF0B8C5E80142D12F6C82756B",
+          "oleanSha256": "C395887C681382BF69464E5D1F1844B6D838F28D0EA7E4308BEFD1F11C6C793C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeExactFieldDegree.lean",
+          "sha256": "7E3A55101614B4C672866A2466BA5B08A03B0E80E59441D47BA4DD2A3DD1868F",
+          "oleanSha256": "D5FF90A16A785392FC545A8A991E25960B4C15CA445FA1F3DBFDFB6A012C4FC5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.irreducible_of_transitive_ringAut",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.conj_zero_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.conj_succ_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwistEquiv_apply",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coe_qTwistEquiv",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_TS_one_cycle",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.phiProd_conj_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.roots_phiProd_conj",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.roots_phiProd_conj_nodup",
+        "Dubon2026.SourceFunctionField.coeffMap_coeffEmb_algHom",
+        "Dubon2026.SourceFunctionField.coeffMap_qTwist_units",
+        "Dubon2026.SourceFunctionField.coeffMap_prime_conj",
+        "Dubon2026.SourceFunctionField.coeffMap_prime_product",
+        "Dubon2026.SourceFunctionField.exists_prime_product_algClosed",
+        "Dubon2026.SourceFunctionField.prime_extension_degree_of_not_mem",
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwistEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.irreducible_of_transitive_ringAut",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.conj_zero_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.conj_succ_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwistEquiv_apply",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coe_qTwistEquiv",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwist_TS_one_cycle",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.phiProd_conj_eq",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.roots_phiProd_conj",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.roots_phiProd_conj_nodup",
+        "Dubon2026.SourceFunctionField.coeffMap_coeffEmb_algHom",
+        "Dubon2026.SourceFunctionField.coeffMap_qTwist_units",
+        "Dubon2026.SourceFunctionField.coeffMap_prime_conj",
+        "Dubon2026.SourceFunctionField.coeffMap_prime_product",
+        "Dubon2026.SourceFunctionField.exists_prime_product_algClosed",
+        "Dubon2026.SourceFunctionField.prime_extension_degree_of_not_mem",
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_eq"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qTwistEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeExactAudit4.log",
+      "logSha256": "B14934B5373B609A96FD8CB563AB05BA67BD5C41D4C7341854BC515069C0395D",
+      "auditSha256": "98A9F00B09354DC49CA6CA171D543ADCBE73843F90B9BE89EC98319C7BAEB07F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeExactDependencyAudit.log",
+      "dependencyAuditSha256": "13B47BA4E9F7D4DBA1636FE2BE543258C843D30ED5C1EF37491F70D58DD42F1B",
+      "dependencyAuditSourceSha256": "D61869CF899A37F2212CDB838651B45070D1F3FC1A137A30345D9C13E5C39ABC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_extension_finrank_eq"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> actual prime conjugate irreducibility and exact prime simple-extension degree.",
+      "discharged": "The original integral prime conjugate product transports through a native cyclotomic embedding into every algebraically closed characteristic-zero coefficient field. Its distinct roots consist of one distinguished root and a full root-of-unity cycle. Coefficient fixing and original prime nonmembership prove irreducibility, so the actual prime j simple extension has degree p+1. Neither prime degree nor irreducibility is an input to the final consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Identification with the actual full divisor-generated field at prime level is the next consumer. All-level generation and exact j-map degree, modular ramification and fiber counts, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-exact-4-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B949B50FF6C42BE0D645BF89681FBAE297AC17210C271AE618CA8104020B40C4"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:24:50.965107+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalPrimeGeneration",
+        "SourceOriginalPrimeDegree"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeGeneration.lean",
+          "sha256": "79653987B3BDF14BAC58467A7208CE50243E3E41130725C07B41346F03639D3B",
+          "oleanSha256": "A8686B30BE318A9BF34AB200064A63B3C01786800C71F872236802871FD1B289"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeDegree.lean",
+          "sha256": "5ECCFEF96982AFF6A70033C6CCE7C4485646A0F932F673D7BC57F414366B439E",
+          "oleanSha256": "4F39C0178F13E97567AFBB7B8E88E49CE4C27CC0696F2467755BD5C6E0BE584D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coeffEmb_algebraMap",
+        "Dubon2026.SourceFunctionField.laurentBaseChange_adjoin",
+        "Dubon2026.SourceFunctionField.divisorExpansions_prime",
+        "Dubon2026.SourceFunctionField.original_prime_field_eq_adjoin_pair",
+        "Dubon2026.SourceFunctionField.original_prime_field_eq_simple_restrict",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_eq_psi"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coeffEmb_algebraMap",
+        "Dubon2026.SourceFunctionField.laurentBaseChange_adjoin",
+        "Dubon2026.SourceFunctionField.divisorExpansions_prime",
+        "Dubon2026.SourceFunctionField.original_prime_field_eq_adjoin_pair",
+        "Dubon2026.SourceFunctionField.original_prime_field_eq_simple_restrict",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_eq_psi"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeAudit2.log",
+      "logSha256": "97CDFB45A832CE9C35E8BFC32067525CB50411EA19026FB9DEDADF11E2AF6C8F",
+      "auditSha256": "A302EE2CB920B92CAA9A2105C319B4CB9D01C8488E4ADBD558F092ABE49EA752",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeDependencyAudit.log",
+      "dependencyAuditSha256": "429130500A1CAFD3317CA4F391506988938E9B7E2DEA077D9241C1F4DC52C035",
+      "dependencyAuditSourceSha256": "AFE66D8944D7424D12DB1D3C5194551C10A6A97F9A29FFA5F5EA695B2D4FB1D9",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_eq_psi"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> prime full-field generation and original internal coordinate degree.",
+      "discharged": "The actual original divisor set at prime level consists of j and j(q^p). Coefficient extension commutes with field generation, so the original full field is the actual simple prime j extension after restricting scalars. Native relative-rank transport proves the degree over the literal internal j coordinate is p+1, and the existing arithmetic level-factor theorem identifies this with dedekindPsi(p). No prime generation or degree premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Composite-level generation and exact j-map degree, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prime-2-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "AA9E4B74DC46E6E2A9802C79A72E16310729DF30219EF5FF17C887CBDD88AFB1"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:39:54.508987+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceLaurentCoefficientIndependence",
+        "SourceLaurentDegreeTransportFields",
+        "SourceLaurentDegreeTransportSpan",
+        "SourceLaurentDegreeTransportIndependence",
+        "SourceLaurentDegreeTransport",
+        "SourceOriginalDegreeBaseChange"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientIndependence.lean",
+          "sha256": "6F837D9F1393429111D16109CDF8E38CCC87CD7857B15A5EEEDC8A6473A09A59",
+          "oleanSha256": "879C11DA3A322C840CF0D37182241F436AD36BD7D818D53A691B7D69AC62BFFA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentDegreeTransportFields.lean",
+          "sha256": "11E59FBAFA0093767400AB7847A0B77D0050AC42990F47009FAC309092B7CB44",
+          "oleanSha256": "60382CC914E6333F3C5C7EBC7F95784F182A1938529F62B0CDDE33B7422886E4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentDegreeTransportSpan.lean",
+          "sha256": "F95B0612022B50CA906C3B04D8CE76D9E1D3A36593A272564D89956DCFD3E1DF",
+          "oleanSha256": "31B12AB224D4E15F9B2F4D0E388E132B1C2C22408B2D4436E062B637C252A063"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentDegreeTransportIndependence.lean",
+          "sha256": "682D0F9B7913EBD1C7D96921326339B46ABAF80702F8CB0C5FBC8470F18A0339",
+          "oleanSha256": "719D99B6C5D43D1C841E3DB934DCF2CDDADD26336DC6830A442BFB6DE593552E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentDegreeTransport.lean",
+          "sha256": "314AF2E272CF261909BBD43437CE54A9B338DDFD1044EBE5EA27875C025FB71E",
+          "oleanSha256": "89FB5543F42E21A696618F9C8017A72EFCBF76B0708CB5CDC82622AE6EF116A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDegreeBaseChange.lean",
+          "sha256": "994B66D9BE6699564D86BEB86028830EF0936902C4ABEE8A4AFB35EB98D0C623",
+          "oleanSha256": "DDAFC64FB433439F55D7C2834DE167387B55F2DA843F34C781FF6B5F27A69BAD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.linearIndependent_coeffEmb",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K₀_le",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K_le",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coeffEmb_aeval",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coeffEmb_mem_K",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coe_φ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coe_ψ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.ψ_compat",
+        "Dubon2026.SourceFunctionField.DegreeTransport.isAlgebraic_coeffEmb",
+        "Dubon2026.SourceFunctionField.DegreeTransport.laurentBaseChange_eq_adjoin",
+        "Dubon2026.SourceFunctionField.DegreeTransport.restrictScalars_adjoin_K",
+        "Dubon2026.SourceFunctionField.DegreeTransport.closure_image_eq",
+        "Dubon2026.SourceFunctionField.DegreeTransport.mem_span_image",
+        "Dubon2026.SourceFunctionField.DegreeTransport.mem_span_range",
+        "Dubon2026.SourceFunctionField.DegreeTransport.finite_and_finrank_le",
+        "Dubon2026.SourceFunctionField.DegreeTransport.linearIndependent_pow_mul",
+        "Dubon2026.SourceFunctionField.DegreeTransport.exists_common_denom",
+        "Dubon2026.SourceFunctionField.DegreeTransport.linearIndependent_ψ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.relfinrank_eq_of_finite",
+        "Dubon2026.SourceFunctionField.coeffEmb_rat_apply",
+        "Dubon2026.SourceFunctionField.laurentBaseChange_rat",
+        "Dubon2026.SourceFunctionField.original_coordinate_finrank_eq_relfinrank",
+        "Dubon2026.SourceFunctionField.original_coordinate_relfinrank_pos",
+        "Dubon2026.SourceFunctionField.finite_original_rational_coordinate",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_baseChange",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K₀",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K",
+        "Dubon2026.SourceFunctionField.DegreeTransport.E₀",
+        "Dubon2026.SourceFunctionField.DegreeTransport.E",
+        "Dubon2026.SourceFunctionField.DegreeTransport.φ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.ψ"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.linearIndependent_coeffEmb",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K₀_le",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K_le",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coeffEmb_aeval",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coeffEmb_mem_K",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coe_φ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.coe_ψ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.ψ_compat",
+        "Dubon2026.SourceFunctionField.DegreeTransport.isAlgebraic_coeffEmb",
+        "Dubon2026.SourceFunctionField.DegreeTransport.laurentBaseChange_eq_adjoin",
+        "Dubon2026.SourceFunctionField.DegreeTransport.restrictScalars_adjoin_K",
+        "Dubon2026.SourceFunctionField.DegreeTransport.closure_image_eq",
+        "Dubon2026.SourceFunctionField.DegreeTransport.mem_span_image",
+        "Dubon2026.SourceFunctionField.DegreeTransport.mem_span_range",
+        "Dubon2026.SourceFunctionField.DegreeTransport.finite_and_finrank_le",
+        "Dubon2026.SourceFunctionField.DegreeTransport.linearIndependent_pow_mul",
+        "Dubon2026.SourceFunctionField.DegreeTransport.exists_common_denom",
+        "Dubon2026.SourceFunctionField.DegreeTransport.linearIndependent_ψ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.relfinrank_eq_of_finite",
+        "Dubon2026.SourceFunctionField.coeffEmb_rat_apply",
+        "Dubon2026.SourceFunctionField.laurentBaseChange_rat",
+        "Dubon2026.SourceFunctionField.original_coordinate_finrank_eq_relfinrank",
+        "Dubon2026.SourceFunctionField.original_coordinate_relfinrank_pos",
+        "Dubon2026.SourceFunctionField.finite_original_rational_coordinate",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_baseChange"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.DegreeTransport.K₀",
+        "Dubon2026.SourceFunctionField.DegreeTransport.K",
+        "Dubon2026.SourceFunctionField.DegreeTransport.E₀",
+        "Dubon2026.SourceFunctionField.DegreeTransport.E",
+        "Dubon2026.SourceFunctionField.DegreeTransport.φ",
+        "Dubon2026.SourceFunctionField.DegreeTransport.ψ"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDegreeTransportAudit6.log",
+      "logSha256": "4818B85D5E3490BB1A23AB4A396FD89164184DB7E8B9F0CEDDABD0F4BDB52528",
+      "auditSha256": "55C945844EAF8F5B2E172F82DAF3EA063871D643D09827EA197E15F11BBEDB05",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 32,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDegreeTransportDependencyAudit.log",
+      "dependencyAuditSha256": "522E0C8D9D881971DAA7F0BAF2A070AA1DA43FA40F48542A35966E9EF3D1D092",
+      "dependencyAuditSourceSha256": "80D82F3A8D9F30D9FC7724ED2C91CF4750B6FEE317AC8EA58172D511E3D8E8A7",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_baseChange"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> coefficient-degree preservation for the actual original internal coordinate.",
+      "discharged": "Literal Laurent coefficients preserve rational linear independence under coefficient extension. Polynomial powers and common denominators preserve coordinate-field independence; algebraic spanning gives the matching degree upper bound. The actual original j-coordinate degree equals the relative degree of the rational original field. Existing all-divisor monic relations discharge the finite-extension hypothesis, and actual j transcendence is derived. No degree-transport or finiteness assumption remains in the original-field consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. The numerical rational degree at composite levels, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-degree-transport-6-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F7CDF5E70153DD86E2EF300917DFB16DED52F66A48B9498B8D39DE9A7EA6AF7F"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:46:07.225151+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimeBidirectionalRelation",
+        "SourcePrimeAdjacentRelations",
+        "SourcePrimePowerStepPolynomial"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeBidirectionalRelation.lean",
+          "sha256": "B00D3D572AAAB3024A5EEEF01E525155B607FDD6C84E350883E59AD274FA7C9E",
+          "oleanSha256": "A359FA713F42A816046CA2A4C682AA7D922A5E86E64F957D234B5C3128AD1C64"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeAdjacentRelations.lean",
+          "sha256": "C1EE5387DCF9E336B199DDB99DD2E6ACB8C52F3D85F5585A8D2A76B9C829CBDE",
+          "oleanSha256": "3495742FC83C19EA84C8B00FAAFD88D81990AE76760EF275BEBF9747E323082E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerStepPolynomial.lean",
+          "sha256": "DBEAF200B05EB74CF5FD6F194AD4B6BC2750B972F1CB3D9CD7B2873D86F88840",
+          "oleanSha256": "3958CDE23DC68A8AF04C1C62BE38CC1E9FE749995C035669960C480461516D9C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.prime_product_forward_root",
+        "Dubon2026.SourceFunctionField.prime_product_reverse_root",
+        "Dubon2026.SourceFunctionField.exists_prime_bidirectional_relation",
+        "Dubon2026.SourceFunctionField.relationAtSeed_reverse_substitution_eval",
+        "Dubon2026.SourceFunctionField.qExpand_jq_injective",
+        "Dubon2026.SourceFunctionField.exists_prime_adjacent_relations",
+        "Dubon2026.SourceFunctionField.exists_prime_power_step_polynomial",
+        "Dubon2026.SourceFunctionField.prime_power_step_finrank_le",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.prime_product_forward_root",
+        "Dubon2026.SourceFunctionField.prime_product_reverse_root",
+        "Dubon2026.SourceFunctionField.exists_prime_bidirectional_relation",
+        "Dubon2026.SourceFunctionField.relationAtSeed_reverse_substitution_eval",
+        "Dubon2026.SourceFunctionField.qExpand_jq_injective",
+        "Dubon2026.SourceFunctionField.exists_prime_adjacent_relations",
+        "Dubon2026.SourceFunctionField.exists_prime_power_step_polynomial",
+        "Dubon2026.SourceFunctionField.prime_power_step_finrank_le",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerStepAudit3.log",
+      "logSha256": "61837549896A697E747B8C085416825216E349E4155F4198488B2E74E68A4C11",
+      "auditSha256": "75B76B9DC4EBABD58F47A19876D2EA64CA759F13DC3942FB91205C74CE0373DE",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerStepDependencyAudit.log",
+      "dependencyAuditSha256": "6F8F1E327AAAB248754FD8AB1A9E711E8F7B021B208F1727384FD59F7394F90F",
+      "dependencyAuditSourceSha256": "1D94F41CAF077EE569D1AE7A69B494668015428B337EF4A26FB01CF371AA8E3E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_le"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> prime-power step polynomial and original preceding-field degree upper bound.",
+      "discharged": "The same literal prime conjugate product proves both orientations of the prime polynomial relation. Actual q substitutions give both adjacent roots. Distinct leading terms distinguish the previous and next series. Removing the known previous-level linear factor produces a monic degree-p polynomial for the next prime-power j series. Over the actual original preceding full field, divisor membership supplies both previous-series hypotheses and the next simple-extension degree is at most p. No polynomial symmetry, relation or preceding-root membership assumption remains there.",
+      "boundary": "Scratch only; production promotion and verification pending. The matching prime-power lower degree and all-level generation, modular ramification and actual fiber counts, numerical modular genus, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-power-step-3-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "501B0A900EB27C5C717E19B10FD678A09D4FB4FAF44AD472600A638217CD6ACA"
+    },
+    {
+      "recordedUTC": "2026-10-21T10:56:17.721361+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimePowerCoefficientAction",
+        "SourcePrimePowerRootOrbit",
+        "SourcePrimeExpandedProduct",
+        "SourcePrimePowerCyclotomicCycle",
+        "SourcePrimePowerExactFieldDegree"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerCoefficientAction.lean",
+          "sha256": "ACF314D33063FCF0E4B4F008F47BBBD58DE4EE6F4327E368773B315FC90C0C03",
+          "oleanSha256": "88E0F9916E1F7F00AFCC7BF715F4EA2E14C46FF620CB8D5F36E69DB9A8E03918"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerRootOrbit.lean",
+          "sha256": "0D72417F0931DE6938747153E6D16FB16C5853A31F031AF21AAF2F8DC5681FF5",
+          "oleanSha256": "E32BA30519EC1AE4E61D7EE1B53B9EB4300B2D94EED7C6C9CD5E0643B99EC4CE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeExpandedProduct.lean",
+          "sha256": "BB3DA754604B504338FA55020F8B376C57621CC7CB043CB66F8CC9BEBC0E0C47",
+          "oleanSha256": "988B199E6DAFABA2A4FFE8C89FE16D87BD7922428BDF36047CDB99982EDA95B1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerCyclotomicCycle.lean",
+          "sha256": "A19BCA639E299BC9C7D59FDF468DAA574CCDA69A2AB944FEEA7EE2E447EBAA26",
+          "oleanSha256": "90B2F3DA82B369476274613BAF25D5190F3088C9E3E7023673A745B45026CB6A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerExactFieldDegree.lean",
+          "sha256": "C881B3ED22544415D2C634C9ABD289526E03AA43D2306BD403B56C51BEB8EBF4",
+          "oleanSha256": "EC6712795E9C2EBB57A157A8A853E795EBBA2913A11AAB2C3CBB88D463C94DE8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qExpand_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMap_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMapEquiv_apply",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.range_map_eq_rUnit",
+        "Dubon2026.SourceFunctionField.coeffEmb_qExpand_jq_eq_TS",
+        "Dubon2026.SourceFunctionField.prime_product_expanded",
+        "Dubon2026.SourceFunctionField.prime_product_expanded_roots",
+        "Dubon2026.SourceFunctionField.prime_expanded_root_list_nodup",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.exists_cyclotomic_root_cycle",
+        "Dubon2026.SourceFunctionField.prime_power_step_finrank_eq_of_not_mem",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq_of_not_mem",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMapEquiv",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.rUnit"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.qExpand_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS_congr",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMap_TS",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMapEquiv_apply",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.range_map_eq_rUnit",
+        "Dubon2026.SourceFunctionField.coeffEmb_qExpand_jq_eq_TS",
+        "Dubon2026.SourceFunctionField.prime_product_expanded",
+        "Dubon2026.SourceFunctionField.prime_product_expanded_roots",
+        "Dubon2026.SourceFunctionField.prime_expanded_root_list_nodup",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.exists_cyclotomic_root_cycle",
+        "Dubon2026.SourceFunctionField.prime_power_step_finrank_eq_of_not_mem",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq_of_not_mem"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.coeffMapEquiv",
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.rUnit"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerExactAudit5.log",
+      "logSha256": "8BD2BC2DAF02081F11CA4FFB19FE1C7E24C0700DE6ED925387F71BAEF8BB41C8",
+      "auditSha256": "D8A0BA3E7277551899EC7000C1BB862BB94B75DDE1F69C62B2D2B18A50B77BD0",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 29,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerExactDependencyAudit.log",
+      "dependencyAuditSha256": "C647C4B85858E0E7408B441AD38577D41E8B40F58F599F7304C5D23335D04CAD",
+      "dependencyAuditSourceSha256": "468966648B8BF12082459D0F9FD834A1362B7650F2C998216B153ABC88A4E136",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq_of_not_mem"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> exact rational prime-power step degree under explicit nonmembership.",
+      "discharged": "The actual rational prime-power extension step has degree p when the next literal j series is outside the preceding field. A native cyclotomic Galois generator cycles the nontrivial twisted roots through the literal coefficient action. The proved conjugate product, known previous root and native monic division identify the remaining root list. The root-cycle criterion proves irreducibility and the matching lower degree, consuming the existing upper bound. The original preceding full-field consumer derives both membership hypotheses from actual divisors. The next-series nonmembership hypothesis remains explicit; no unconditional degree claim is made.",
+      "boundary": "Scratch only; production promotion and verification pending. Prove next-series nonmembership for the original fields and all-level generation and degree. Modular ramification, actual fiber counts, numerical genus, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-power-exact-5-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "26709C5196F2B73EF2FCE596F77DB1ED5B64FE4B88B948FF72F033861400C908"
+    }
+  ],
+  "reviews": [
+    "Tools/source-coordinate-values-2-reuse-review-20261021.json",
+    "Tools/source-prime-degree-2-reuse-review-20261021.json",
+    "Tools/source-prime-nonmembership-7-reuse-review-20261021.json",
+    "Tools/source-prime-exact-4-reuse-review-20261021.json",
+    "Tools/source-original-prime-2-reuse-review-20261021.json",
+    "Tools/source-degree-transport-6-reuse-review-20261021.json",
+    "Tools/source-prime-power-step-3-reuse-review-20261021.json",
+    "Tools/source-prime-power-exact-5-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5416": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateValuesDependencyAuditProduction5416.log",
+        "sha256": "069A7318BDEC17A7B5C83346040F0D57111B2854A10F42C93B73F5ED0096DA2A",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_j_place_dichotomy",
+          "Dubon2026.SourceFunctionField.original_jCanonical_at_pole",
+          "Dubon2026.SourceFunctionField.original_jCanonical_at_value"
+        ],
+        "sourceSha256": "6EBF325C5F0D03E2BAE578BCC817B607759BE80648EB873192150DD263C8FDC6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeDegreeDependencyAuditProduction5416.log",
+        "sha256": "D9D918575674949B1AE6E50A0D5C54827634814959189B41DE6009205F160BC2",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.prime_j_extension_finrank_le"
+        ],
+        "sourceSha256": "6EE8493E6CEFEB7C5E5941FE6AF5DB2569BC8BAA6EDF218AF3CEAA5056ECD88B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeNonmembershipDependencyAuditProduction5416.log",
+        "sha256": "F0BA7086434D56AA9011B2AB9B2DE1883BFD0FE9E2EA0BA88F87F7F5F93FB38C",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.prime_j_not_mem_rational_j"
+        ],
+        "sourceSha256": "DEB20106C523A7B1A79ED50DAB4B7217A7D50D1926BE826C2DFF9B4A9EAB8486"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeExactDependencyAuditProduction5416.log",
+        "sha256": "13B47BA4E9F7D4DBA1636FE2BE543258C843D30ED5C1EF37491F70D58DD42F1B",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.prime_j_extension_finrank_eq"
+        ],
+        "sourceSha256": "6876CC85610A998FAD5949ED48A0C58B856621ABCD12456C505558EAF87F1F7F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeDependencyAuditProduction5416.log",
+        "sha256": "429130500A1CAFD3317CA4F391506988938E9B7E2DEA077D9241C1F4DC52C035",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_eq_psi"
+        ],
+        "sourceSha256": "67F3B1602C02627101F9D3D346A3B761D8B447A0C1B510282BDC4A04A70127A0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDegreeTransportDependencyAuditProduction5416.log",
+        "sha256": "522E0C8D9D881971DAA7F0BAF2A070AA1DA43FA40F48542A35966E9EF3D1D092",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.finrank_original_over_j_baseChange"
+        ],
+        "sourceSha256": "6570246664DAEAA158F5E39467B6BF3D6C6258F0FC6DABD63530A90C48F03AC4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerStepDependencyAuditProduction5416.log",
+        "sha256": "6F8F1E327AAAB248754FD8AB1A9E711E8F7B021B208F1727384FD59F7394F90F",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_le"
+        ],
+        "sourceSha256": "1103A9ED61CD1727D851DD79D84ABD038868585AB3EA84DBD42D87AC03FFEC18"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerExactDependencyAuditProduction5416.log",
+        "sha256": "C647C4B85858E0E7408B441AD38577D41E8B40F58F599F7304C5D23335D04CAD",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq_of_not_mem"
+        ],
+        "sourceSha256": "DC7BD325381B2BB325301EF9D2A88D9C14C7091E6DE0D029100132D251B28464"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularDegreeProductionAudit5416.log",
+    "sha256": "7FE29452CD6091D1004EAC27CBCDCA204CE09C7FB5CCA00F75AB51C26FC818B5",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-modular-degree-production-5416-build.log",
+    "aggregateSha256": "4522757BDF28E328A0A4F0ABC2AD1782BBDB8F823BF20EAEE9D15FDAF85E156B",
+    "productionModules": 5416,
+    "incrementModules": 31,
+    "axiomChecks": 148,
+    "exhaustiveIncrementTheorems": 188,
+    "linterScopes": 31,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 195,
+    "productionReuse": "Scratch imports qualified and proof-status comments aligned. Original prime generation reuses the existing laurentBaseChange_full_eq_adjoin and coeffEmb_algebraMap from SourceOriginalFieldGeneration; duplicate coefficient lemma and unnecessary generic adjoin lemma omitted. All retained public statements unchanged.",
+    "omittedScratchTheorems": [
+      "Dubon2026.SourceFunctionField.coeffEmb_algebraMap",
+      "Dubon2026.SourceFunctionField.laurentBaseChange_adjoin"
+    ],
+    "existingReuseTheorems": [
+      "Dubon2026.SourceFunctionField.laurentBaseChange_full_eq_adjoin",
+      "Dubon2026.SourceFunctionField.coeffEmb_algebraMap"
+    ],
+    "boundary": "Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+  },
+  "receipt5416": {
+    "recordedUTC": "2026-10-21T12:24:49.462022+00:00",
+    "log": "logs/dubon-build-20261021-041729-150.log",
+    "sha256": "722F03F20BC272EAA0C1AA3C7FACE7135D35C3BB9B745F765F74AA80EDDE044F",
+    "bytes": 9380562,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5416,
+    "projectTheorems": 38443,
+    "registeredConsumers": 16627,
+    "registeredConstructions": 931,
+    "declarations": 23009,
+    "generated": 21624,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_041435.log",
+    "foundationSha256": "A58984333F21422C76C4463A30FD8401D17A9D1D6A2E6AE90B7BFFB3DA845F1E",
+    "boundary": "Next-series nonmembership for the original prime-power fields, the composite-level rational degree and generation, exact modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+  }
+}

@@ -33,7 +33,7 @@
   "dependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> global index stabilization and residue duality -> exact finite local repartition quotient dimensions and bounded global functions.",
   "discharged": "Every actual original valuation ring is essentially of finite type over the constants, hence has a finite local differential module. The proved finite extension over its actual uniformizer supplies a finite integral-closure chart, and the proved center identity gives its localization. The actual algebraic residue field is separable in characteristic zero. Pinned cotangent exactness and Nakayama then show that the actual uniformizer derivative generates the integral local differential module. Consequently the derivative of every integral original-field function has integral local coefficient and nonnegative local differential order. No local finiteness, residue separability, local generation or unramifiedness premise remains in the original consumers. Every nonzero differential on the literal original function field has a finite divisor of its actual normalized local orders. At unramified integral-chart points, the coordinate differential generates the integral differential module, and its local order is zero. The pinned nonzero different ideal bounds the exceptional points by the finite prime support of one nonzero element. The coordinate pole locus is already proved finite. The actual j differential spans the original differential space, and principal finite support extends the result to every nonzero differential. No canonical-divisor or finite differential-support premise remains. The actual original regular differential space is finite-dimensional over algebraically closed constants. The positive-order degree formula applied to an inverse forces every transcendental function to have a pole, so global regular functions are exactly the constants. At each place the kernel of the scaled local residue map is the divisor space with its bound decreased by one. Pinned finite-submodule/quotient theory and induction over the positive part of the actual finite divisor prove every divisor space finite. The actual j-canonical divisor space is explicitly linearly equivalent to the actual regular differential space. No constant-field or divisor-space finiteness assumption remains in the original consumer. The degree of every nonzero original differential equals the degree of the literal j differential. Rank one expresses one nonzero differential as a nonzero scalar multiple of another; their local-order divisors differ by the actual principal divisor of the scalar. Its proved degree zero establishes choice independence. The exact source definition of genus therefore equals the degree expression at the original j canonical divisor. No principal-degree or curve premise remains. For the literal original field, the repartition quotient between two finite divisor bounds is finite-dimensional and its dimension is exactly their degree difference. A scaled local residue map is surjective with kernel the bound decreased by one; pinned quotient isomorphisms and finite-submodule/quotient theory assemble the degree difference. The already proved finite actual residue fields discharge all finiteness inputs. The positive-order degree identity gives an actual place, so bounded global repartitions are linearly equivalent to the proved finite original divisor spaces. Actual principal divisors bound every global function. No finite-residue or nonempty-place premise remains.",
   "boundary": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
-  "status": "The 5,318-module production aggregate and focused original regular differential audit pass with zero diagnostics. Five proof-value audits verify integral local differential generation, actual canonical finite support, finite original divisor and regular differential spaces, choice-independent canonical degree and exact finite repartition quotient dimensions. The source genus is evaluated at the actual j-canonical divisor. Riemann--Roch, the numerical genus/dimension and actual analytic cusp-form realization remain required. Sequential foundation/paper verification of this scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,318-module scope: all thirteen retained regressions, 37,763 exhaustive theorem checks, 16,241 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "sourceConsumers": [
@@ -688,6 +688,25 @@
     "exit": 0,
     "diagnostics": 0,
     "scratchExhaustiveTheorems": 207,
+    "boundary": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
+  },
+  "receipt5318": {
+    "recordedUTC": "2026-10-21T07:19:53.018460+00:00",
+    "log": "logs/dubon-build-20261020-230130-978.log",
+    "sha256": "71C6EB518B99A526250DF88BABB7013627B19BAA048A04957B11FAF27B175817",
+    "bytes": 9189738,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5318,
+    "projectTheorems": 37763,
+    "registeredConsumers": 16241,
+    "registeredConstructions": 850,
+    "declarations": 22516,
+    "generated": 21310,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261020_225807.log",
+    "foundationSha256": "3944592BB3FFED05484369123BEF33D982354B056F103324101BFA1BD838E5EF",
     "boundary": "Global index stabilization and residue duality remain required for Riemann--Roch. The numerical genus/dimension, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20."
   }
 }

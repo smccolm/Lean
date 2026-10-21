@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-20 America/Vancouver",
+  "sourceDependency": "DUB-17 frozen Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy -> residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> regular differential dimension -> original function-field Riemann--Roch -> residue duality -> rank one of actual Weil differentials.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755"
+  },
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_omegaSpace_finite_of_genusReached.lean.txt",
+        "sha256": "61385E3B06EBC7224948010028A3516D0E700ED7AC3C4A443DDD80891E64CB20"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_functionFieldRiemannRoch_of_residueTheoremK_of_isAlgClosed.lean.txt",
+        "sha256": "FCB7782A038145F3463733188E01F7C0180C8CC4BABC554104C292C737FA1750"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_AdelicIndex.lean.txt",
+        "sha256": "2715C02227FD6BA1AB0E66EFFC7C33FCA1A889A00459CDB0057762540DEA008E"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Isomorphisms.lean",
+      "sha256": "CC41F361F1F2B3CCB3B60C8A9C86DFCF49666716DD61C6B7933A253D22AA8DF7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Dual\\Lemmas.lean",
+      "sha256": "95E14394211E2C061202A07ACFBF15DB8BB51B6159EC7C250E2037D2672FBB38"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Span\\Basic.lean",
+      "sha256": "0C850580EEBBCCFB3507D05835E4B6A7B2ADD29F52B520C20E29B53BCFD4C426"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Dimension\\Finrank.lean",
+      "sha256": "E5C99C7A4767B80FBE2543C2B15CCD6127F6C37E9197E5F68A294B8DB6BA28D1"
+    }
+  ],
+  "routeAdjustment": "Reuse the actual global index and pole maximum, principal-degree zero and pinned finite-dimensional injection/product theorems. Use the source double pairing to force rank one without constructing a general module structure over the function field. Supply the actual original place and finite residues; retain the canonical-functional/maximal-bound obligation explicitly.",
+  "discharged": "For the literal original field, every nonzero bounded global-annihilating functional spans all such functionals uniquely over the function field. The double pairing associated to two independent functionals would inject two copies of a divisor space into an index space. The proved global index growth contradicts this dimension bound. Actual principal divisors, finite residues, a nonempty place and the derived maximum supply all geometric inputs; none is assumed on the original consumer. The generic pairing is also proved surjective when its nonzero functional has the stated maximal divisor bound; that bound is not yet supplied for the canonical differential.",
+  "remaining": "A nonzero canonical residue functional with its exact maximal divisor bound remains required for residue duality and identification with canonical genus. Numerical genus, analytic cusp-form realization, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20.",
+  "additionalAuditedTheorems": [
+    "Dubon2026.SourceCurve.omegaSpace_le_weilDifferentialModule",
+    "Dubon2026.SourceCurve.omegaSpace_directed",
+    "Dubon2026.SourceCurve.mulAdele_apply",
+    "Dubon2026.SourceCurve.mulAdele_one",
+    "Dubon2026.SourceCurve.mulAdele_mul",
+    "Dubon2026.SourceCurve.mulAdele_globalSub_le",
+    "Dubon2026.SourceCurve.mulAdele_mem_adeleSpace",
+    "Dubon2026.SourceCurve.adeleSpaceMul_coe",
+    "Dubon2026.SourceCurve.weilSmul_apply",
+    "Dubon2026.SourceCurve.adeleSpaceMul_one",
+    "Dubon2026.SourceCurve.adeleSpaceMul_mul",
+    "Dubon2026.SourceCurve.weilSmul_one",
+    "Dubon2026.SourceCurve.weilSmul_mul",
+    "Dubon2026.SourceCurve.residuePairing_apply_coe",
+    "Dubon2026.SourceCurve.residuePairing_injective",
+    "Dubon2026.SourceCurve.ell_sub_le_indexOfSpecialty",
+    "Dubon2026.SourceCurve.adeleSpaceMul_add",
+    "Dubon2026.SourceCurve.adeleSpaceMul_zero",
+    "Dubon2026.SourceCurve.weilSmul_add_left",
+    "Dubon2026.SourceCurve.weilSmul_zero_left",
+    "Dubon2026.SourceCurve.weilSmul_neg_left",
+    "Dubon2026.SourceCurve.weilSmul_sub_left",
+    "Dubon2026.SourceCurve.doubleResiduePairing_apply_coe",
+    "Dubon2026.SourceCurve.residuePairing_surjective_of_rankOne_max"
+  ],
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

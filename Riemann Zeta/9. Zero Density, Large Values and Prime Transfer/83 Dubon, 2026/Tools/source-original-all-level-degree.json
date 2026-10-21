@@ -1,0 +1,711 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalJMinimalPolynomial",
+    "Dubon2026.SourceExpandedJMinimalPolynomial",
+    "Dubon2026.SourceExpandedJConjugateComparison",
+    "Dubon2026.SourceOriginalConjugateEmbedding",
+    "Dubon2026.SourcePrimeConjugateMinpolyStep",
+    "Dubon2026.SourcePrimeConjugateReducedStep",
+    "Dubon2026.SourceOriginalRelativeRootTransfer",
+    "Dubon2026.SourceLevelPsiPrimeStep",
+    "Dubon2026.SourceOriginalFieldTowerDegree",
+    "Dubon2026.SourceConjugateSlotPrimeDescent",
+    "Dubon2026.SourceConjugateRemovedRootDistinction",
+    "Dubon2026.SourceOriginalEmbeddedConjugate",
+    "Dubon2026.SourceOriginalReducedConjugateRoot",
+    "Dubon2026.SourceOriginalIndexedPrimeStep",
+    "Dubon2026.SourceOriginalConjugateInduction",
+    "Dubon2026.SourceUniqueCommonRootDescent",
+    "Dubon2026.SourceOriginalConjugateRootBounds",
+    "Dubon2026.SourceOriginalPredecessorGeneration",
+    "Dubon2026.SourceOriginalDivisorGeneration",
+    "Dubon2026.SourceOriginalGenerationInduction",
+    "Dubon2026.SourceConjugateConstantDescent",
+    "Dubon2026.SourceOriginalConjugateRangeEmbedding",
+    "Dubon2026.SourceCoprimePrimeImage",
+    "Dubon2026.SourceOriginalReducedPolynomial",
+    "Dubon2026.SourceOriginalCoprimeNonmembership",
+    "Dubon2026.SourceOriginalCoprimeInduction",
+    "Dubon2026.SourceOriginalTwoPrimeGeneration",
+    "Dubon2026.SourceOriginalDivisorPrimeGeneration",
+    "Dubon2026.SourceMixedPrimePowerGenerators",
+    "Dubon2026.SourceMixedPrimePowerFields",
+    "Dubon2026.SourceMixedPrimePowerNonmembership",
+    "Dubon2026.SourceRationalPrimeStepDegree",
+    "Dubon2026.SourceMixedPrimePowerDegree",
+    "Dubon2026.SourceOriginalAllLevelInduction",
+    "Dubon2026.SourceOriginalAllLevelDegree"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic realization -> exact original j-coordinate degree and field generation at every level.",
+  "discharged": "For every nonzero N, the actual rational divisor field equals Q(j,j_N). Its degree over Q(j) is dedekindPsi(N), and coefficient transport gives that same internal j-coordinate degree over every characteristic-zero coefficient field. The expanded minimal polynomial equals the primitive triangular conjugate product. A joint strong induction discharges all generation, degree, conjugate-product and nonmembership premises: unique common roots give two-prime generation, actual mixed fields identify the prime-power spread tower, coprime nonmembership supplies the first step, and native tower multiplication closes every level.",
+  "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "The 5,476-module production aggregate and focused all-level original degree audit pass with zero diagnostics. Five proof-value audits verify the actual conjugate induction, proper-divisor generation, coprime-base nonmembership, mixed towers and unconditional all-level consumers. Field generation, exact internal degree and the conjugate identity are proved without those conclusions as premises. Modular ramification, fiber counts, numerical genus, analytic realization and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [
+    {
+      "receipt": "source-generation-5-scratch-receipt.json",
+      "sha256": "1C221B28EEB2F62BB3E27E87630B2640945801592168437EED7622A7A2547014",
+      "issue": "The recorder retained the preceding conjugate-induction prose in dependency, discharged and boundary. Module, audit and hash evidence is unchanged.",
+      "correctDischarged": "Original level-N generation by j,j_N follows from generation and degree at proper divisors only, using unique-common-root descent and actual predecessor membership.",
+      "correctRemaining": "The complementary coprime nonmembership and exact-degree induction were still required at that snapshot."
+    },
+    {
+      "receipt": "source-coprime-nonmembership-6-scratch-receipt.json",
+      "sha256": "18A06F3287DD021C8A0C3978A087316B917787905A1097768C286FC981085779",
+      "issue": "The recorder retained the preceding conjugate-induction prose in dependency, discharged and boundary. Module, audit and hash evidence is unchanged.",
+      "correctDischarged": "For prime p not dividing M, j_p is outside the original full level-M field, under divisor-level generation and degree, by range-preserving embeddings and bounded polynomial descent.",
+      "correctRemaining": "The actual mixed prime-power tower identification and exact-degree joint induction were still required at that snapshot."
+    }
+  ],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.original_minpoly_degree_eq_full_relfinrank_of_generation",
+    "Dubon2026.SourceFunctionField.expandedJMinpoly_qExpand",
+    "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_roots_and_degree",
+    "Dubon2026.SourceFunctionField.expandedJMinpoly_top_slot_root",
+    "Dubon2026.SourceFunctionField.original_full_embedding_of_expanded_minpoly_root",
+    "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_full_step_degree",
+    "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_reduced_step_degree",
+    "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_relative_root",
+    "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_divisor_induction",
+    "Dubon2026.SourceFunctionField.original_generation_of_proper_divisor_induction",
+    "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_divisor_induction",
+    "Dubon2026.SourceFunctionField.original_full_eq_pair",
+    "Dubon2026.SourceFunctionField.finrank_original_over_j_eq_psi",
+    "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T11:58:25.188852+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalJMinimalPolynomial",
+        "SourceExpandedJMinimalPolynomial",
+        "SourceExpandedJConjugateComparison",
+        "SourceOriginalConjugateEmbedding",
+        "SourcePrimeConjugateMinpolyStep",
+        "SourcePrimeConjugateReducedStep",
+        "SourceOriginalRelativeRootTransfer"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJMinimalPolynomial.lean",
+          "sha256": "2956B5A57CD2EFD719655E495AFF349BFAC7BDBB2A4BB079165970AF21B207B4",
+          "oleanSha256": "A36F7DEA57FFDE4419DBC8DF86EA9C9035FF768D2311F6753C45E820FAE48A02"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceExpandedJMinimalPolynomial.lean",
+          "sha256": "0CB2A3750366F747CD4D39A8C0A9B29D2437141800BBE4DFA715D9D786F29D43",
+          "oleanSha256": "B84E1B69CC5B7B7842BC87BD11B182E94B376585BA4F1E2FA5D8A580CB939B01"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceExpandedJConjugateComparison.lean",
+          "sha256": "934CCA2D3D4F790D0547F30D07112F71C971D37AC6594ADE021E49FB7C032902",
+          "oleanSha256": "C77064B25C6C5F55AFB945861D5E299C6B8EF4C62FE1CD53A27FAF45CED264CF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConjugateEmbedding.lean",
+          "sha256": "DDD682B827B9FBC1C5BA55916BEE67DD511F89A234BFD5986BB5418A00ADEC1D",
+          "oleanSha256": "C8C8920FC182B497449B52883C4DF360DF444B2981F0A07AABC3E6C700DC13F2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeConjugateMinpolyStep.lean",
+          "sha256": "C379FD29E932CBB171BEED244B78D68C4AE5DEA36B8ABADDAA9AFC813717F4D2",
+          "oleanSha256": "53BF31E8EAA9E6F9E494188D25CDCA7CCD57DE2B779B1E91055880244C010922"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeConjugateReducedStep.lean",
+          "sha256": "090CD3C0FD42C4F0F21FF2561F1FD83DA1ACD37E1BC15C48354256720B1E17B9",
+          "oleanSha256": "4AB6926FEC33FEDCA3DC6371D11753F5A22BDF157484010EC53777A033B63D5C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRelativeRootTransfer.lean",
+          "sha256": "38167DE27ED3F1C6087F48012CE1D29E384BCEF74774AA311DF3AFB30D6B0EFF",
+          "oleanSha256": "6540EEC5D5209CC6417DB1ECFCC3E489C8E55824D5FBE343EF7A2B8B82DB5E82"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_j_substitution_isIntegral",
+        "Dubon2026.SourceFunctionField.original_j_simple_finrank_eq_minpoly",
+        "Dubon2026.SourceFunctionField.original_j_adjoin_union_eq_pair",
+        "Dubon2026.SourceFunctionField.original_minpoly_degree_eq_full_relfinrank_of_generation",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_monic",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_natDegree",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_distinguished_root",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_qExpand",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_roots_and_degree",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_top_slot_root",
+        "Dubon2026.SourceFunctionField.original_full_embedding_of_expanded_minpoly_root",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_full_step_degree",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_reduced_step_degree",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_relative_root",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_j_substitution_isIntegral",
+        "Dubon2026.SourceFunctionField.original_j_simple_finrank_eq_minpoly",
+        "Dubon2026.SourceFunctionField.original_j_adjoin_union_eq_pair",
+        "Dubon2026.SourceFunctionField.original_minpoly_degree_eq_full_relfinrank_of_generation",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_monic",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_natDegree",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_distinguished_root",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_qExpand",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_roots_and_degree",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_top_slot_root",
+        "Dubon2026.SourceFunctionField.original_full_embedding_of_expanded_minpoly_root",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_full_step_degree",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_reduced_step_degree",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_relative_root"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.expandedJMinpoly"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateStepAudit7.log",
+      "logSha256": "5FD6C95EA2F95A8ABCF6A5E47FF7D8DF6B9E14D25C6D4BF1B5ED00AD53DF8530",
+      "auditSha256": "7118D5B1EC61E0576FDD79360135EF7C8B35CF2759F803095F3E7831DE3B3DF6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateStepDependencyAudit7.log",
+      "dependencyAuditSha256": "4E23A02B8B4A295B7387A7E1AF91CD79D0AADCE4AACAFE7C24678835D7AF4E50",
+      "dependencyAuditSourceSha256": "A2500538B087AB8F63F682FC885DDB8E72A902450B91E11465CBC7803B1779A2",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_minpoly_degree_eq_full_relfinrank_of_generation",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_qExpand",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_roots_and_degree",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_top_slot_root",
+        "Dubon2026.SourceFunctionField.original_full_embedding_of_expanded_minpoly_root",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_full_step_degree",
+        "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_reduced_step_degree",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_relative_root"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> general composite degree -> actual mapped minimal-polynomial root induction -> original lower-level embeddings and full/reduced prime steps.",
+      "discharged": "Existing all-divisor monic relations directly prove integrality and monicity of the original expanded minimal polynomial. Native multiset divisibility reduces its product identity to individual indexed roots and the exact simple-field degree. Existing simple-extension embeddings transport a lower-level root to the actual original full field under explicit lower-level generation. The full degree-p+1 step identifies the prime relation with the relative minimal polynomial. The degree-p step removes the known preceding j root and proves every specified distinct twisted branch is a relative root. Native tower divisibility transfers these roots to the original base minimal polynomial.",
+      "boundary": "Scratch only; production promotion and verification pending. The degree/generation induction must supply the lower-level generation and step-degree inputs, and prove the specified branch differs from the removed preceding root. Full indexed-root construction, composite generation and degree, modular ramification and numerical genus remain required, followed by analytic realization and the period/arithmetic/symmetric-power gates. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-conjugate-step-7-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "CA34C3DF3B844507AF14134AA45341A4D68A473FA0C0296F85A5258BD9A71DF0"
+    },
+    {
+      "recordedUTC": "2026-10-21T12:19:48.921258+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceLevelPsiPrimeStep",
+        "SourceOriginalFieldTowerDegree",
+        "SourceConjugateSlotPrimeDescent",
+        "SourceConjugateRemovedRootDistinction",
+        "SourceOriginalEmbeddedConjugate",
+        "SourceOriginalReducedConjugateRoot",
+        "SourceOriginalIndexedPrimeStep",
+        "SourceOriginalConjugateInduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLevelPsiPrimeStep.lean",
+          "sha256": "C22CB9768B1AB6116300E0C9F9EE3629F378F748E8A0003B18724EBC0149DF7A",
+          "oleanSha256": "CDBE2ADC61BDB543EF6CE3881812C713DD1171A90724FC35B0FCA7CB330CB8C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFieldTowerDegree.lean",
+          "sha256": "ED431AA80A3DDDE4BDF7469DB656C443D05134349456924861D94647360F5D76",
+          "oleanSha256": "8DD1ABDDE704A43EC68975FBAC53020F7F8D32EC27D1C866A861E7D736FA321A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotPrimeDescent.lean",
+          "sha256": "F71F818F33435710B59A33ADEA2F2613538DA59814D08E11CCB39BCF492478E8",
+          "oleanSha256": "0256AED48735F6B72778505184EAE1C9C9376E5502AD19B3052F551B4CCB30D0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateRemovedRootDistinction.lean",
+          "sha256": "3DDAAC11A228D5B879DCF86EF1CCAFDD9E94B711816D230358E7E48BE8D0804C",
+          "oleanSha256": "83048F1C580767623A04E21AAF92FB9D3C586783B493FCF10979D271196D7096"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEmbeddedConjugate.lean",
+          "sha256": "077F377777554F078CE493AC8494E02735BF4D95EAD625333D349B0CF1DE3048",
+          "oleanSha256": "A5E4E1846A2BF9C77F18A725DA696F0342697277C27C2DFF21B5EE7B54914DC2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedConjugateRoot.lean",
+          "sha256": "9ED6894CA4F37B997945903BEBF7C26CD86C7F140306C3BFBAC6516D2AB37668",
+          "oleanSha256": "1F47C1E316EC88B26DDFB85D272636E7B35452C308937C5A563C310CCABA380C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIndexedPrimeStep.lean",
+          "sha256": "2505A79092792E4C447B6A770B108A544FB8435534AEA80544276A879E10728A",
+          "oleanSha256": "08B6C6E0CB11EBDE94D29F1E1655CBDFD01B59AEC10695393B474B89FD659448"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConjugateInduction.lean",
+          "sha256": "4C80119C46267D94E9A13FA3D6020F39D1D03BAAB1F4E1D2D567CD2DF1AFCFC2",
+          "oleanSha256": "C42C95F5028F1AF006897E8D9D70CAF16AD2081E73CD9EAB8FC37B7C966D4C59"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceLevelProjective.dedekindPsi_pos",
+        "Dubon2026.SourceLevelProjective.dedekindPsi_prime",
+        "Dubon2026.SourceLevelProjective.dedekindPsi_mul_prime_not_dvd",
+        "Dubon2026.SourceLevelProjective.dedekindPsi_mul_prime_dvd",
+        "Dubon2026.SourceFunctionField.original_full_mono_of_dvd",
+        "Dubon2026.SourceFunctionField.original_full_eq_adjoin_over_divisor_of_generation",
+        "Dubon2026.SourceFunctionField.original_j_substitution_isIntegral_over_full",
+        "Dubon2026.SourceFunctionField.original_relative_minpoly_degree_mul",
+        "Dubon2026.SourceFunctionField.original_relative_prime_minpoly_degree_of_induction",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.index_prime_descent",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_prime_seed",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_prime_branch",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_prime_square_expansion",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_ne_prime_square_expansion",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_member",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_slot_root_of_identity",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_shape_of_identity",
+        "Dubon2026.SourceFunctionField.original_reduced_prime_root_of_lower_identity",
+        "Dubon2026.SourceFunctionField.original_indexed_prime_step_root",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_divisor_induction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceLevelProjective.dedekindPsi_pos",
+        "Dubon2026.SourceLevelProjective.dedekindPsi_prime",
+        "Dubon2026.SourceLevelProjective.dedekindPsi_mul_prime_not_dvd",
+        "Dubon2026.SourceLevelProjective.dedekindPsi_mul_prime_dvd",
+        "Dubon2026.SourceFunctionField.original_full_mono_of_dvd",
+        "Dubon2026.SourceFunctionField.original_full_eq_adjoin_over_divisor_of_generation",
+        "Dubon2026.SourceFunctionField.original_j_substitution_isIntegral_over_full",
+        "Dubon2026.SourceFunctionField.original_relative_minpoly_degree_mul",
+        "Dubon2026.SourceFunctionField.original_relative_prime_minpoly_degree_of_induction",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.index_prime_descent",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_prime_seed",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_prime_branch",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_prime_square_expansion",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_ne_prime_square_expansion",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_member",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_slot_root_of_identity",
+        "Dubon2026.SourceFunctionField.expanded_minpoly_root_shape_of_identity",
+        "Dubon2026.SourceFunctionField.original_reduced_prime_root_of_lower_identity",
+        "Dubon2026.SourceFunctionField.original_indexed_prime_step_root",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_divisor_induction"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateInductionAudit8.log",
+      "logSha256": "08D0E79E75E51052B32D24443251B36E41330B25AE41AF6607353B39DED2C6B9",
+      "auditSha256": "EC5718F431E497BC2E2FB8D4311B4C22E09E184C12109F48A3366C23EB09231F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 36,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateInductionDependencyAudit8.log",
+      "dependencyAuditSha256": "DD184F59E871B774BA69CD7746304DDB49933FCA61FAD0DE1C91BA00F5FEA491",
+      "dependencyAuditSourceSha256": "9AD973B7F76EE8DB8F48D94843406E71B2B963620A43D16F27CA2E6F9484FEF4",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_divisor_induction"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization -> all-level original j-map degree and generation -> exact expanded minimal-polynomial conjugate product under the divisor-level induction hypotheses.",
+      "discharged": "Native relative-degree multiplicativity and existing Dedekind-psi formulas derive the relative prime-step degree p or p+1 from explicit induction degree and generation. Primitive-index arithmetic, actual Laurent leading terms and primitive-root injectivity exclude every twice-expanded preceding-level conjugate. Actual field embeddings send contained j substitutions to their expanded minimal-polynomial roots; the lower product identity derives the preceding root shape and discharges the removed-root distinction. Strong induction then constructs every indexed root and proves the exact original expanded minimal polynomial equals the primitive triangular product over an algebraically closed characteristic-zero coefficient field, under generation and degree at divisor levels.",
+      "boundary": "Scratch only; production promotion and verification pending. The joint all-level induction must still prove generation and degree; the new conditional product identity is to be used only on proper divisors in that induction. Composite generation and degree, modular ramification and fiber counts, numerical genus, analytic cusp-form realization and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-conjugate-induction-8-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "332FC402256FB6CC68925AEDB2D38B9A9B24E9BF3F1C79012F9BBDBB6A25603D"
+    },
+    {
+      "recordedUTC": "2026-10-21T12:29:01.383871+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceUniqueCommonRootDescent",
+        "SourceOriginalConjugateRootBounds",
+        "SourceOriginalPredecessorGeneration",
+        "SourceOriginalDivisorGeneration",
+        "SourceOriginalGenerationInduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUniqueCommonRootDescent.lean",
+          "sha256": "35131CC2DBBB0514EF253CE6CD55A697F754C81D0F005AEEE1F704E7A6D25CE9",
+          "oleanSha256": "FDEC94DED7D9D7E468832BE374FBBAF13230B8F80E824D31C081402F5265D2C4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConjugateRootBounds.lean",
+          "sha256": "98C0440A2E8FB1D1CE360F48C68E7148A6C49AC991494B00664E2DB55ABCF106",
+          "oleanSha256": "0742ED2206BCB3162B695335F7BCD997D0F076FF9F10C6C26D4E04B851CB6FB6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPredecessorGeneration.lean",
+          "sha256": "037A69D39606EFD27CF7D38B20E0A38BA0F0E8270039BD43B42146B1EA7290C4",
+          "oleanSha256": "177A16CF415D225887303A09961F5555265504877E526BDEF5140BC98980D885"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorGeneration.lean",
+          "sha256": "F34906C1F07A927CBA5B0A653F2F9A374A78C7724E2C157A36F6D2600A693533",
+          "oleanSha256": "D99A750544DDDF148404ECA85EDA99CD5D4CF09D1B8BCCCF28A25E8C2CC3CF06"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGenerationInduction.lean",
+          "sha256": "DD12099B0BFCC0FE2D66F5FA169EEC2F174DF62ECB2B1C969549B3EB08247316",
+          "oleanSha256": "5338F9B869C269932C03419F0F16ED24E6510BD59CC991612AF50DE6C73CD841"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.mem_range_of_unique_common_root_monic",
+        "Dubon2026.SourceFunctionField.original_lower_product_root_shape",
+        "Dubon2026.SourceFunctionField.original_lower_root_top_twist_eq_one",
+        "Dubon2026.SourceFunctionField.original_lower_root_ne_larger_branch",
+        "Dubon2026.SourceFunctionField.original_predecessor_mem_pair_of_lower_product",
+        "Dubon2026.SourceFunctionField.original_full_eq_pair_of_predecessor_membership",
+        "Dubon2026.SourceFunctionField.original_generation_of_proper_divisor_induction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.mem_range_of_unique_common_root_monic",
+        "Dubon2026.SourceFunctionField.original_lower_product_root_shape",
+        "Dubon2026.SourceFunctionField.original_lower_root_top_twist_eq_one",
+        "Dubon2026.SourceFunctionField.original_lower_root_ne_larger_branch",
+        "Dubon2026.SourceFunctionField.original_predecessor_mem_pair_of_lower_product",
+        "Dubon2026.SourceFunctionField.original_full_eq_pair_of_predecessor_membership",
+        "Dubon2026.SourceFunctionField.original_generation_of_proper_divisor_induction"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenerationAudit5.log",
+      "logSha256": "C6BB2D6B8F960FFE0E5761CA66C91669E5B9793D02E2EA5925794B78A8F5F92E",
+      "auditSha256": "6E7C5B0BF0B5F034B3FE85CAD89237FCF069CA5854D4D4E88672340881AB88A4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGenerationDependencyAudit5.log",
+      "dependencyAuditSha256": "E9814FF87B639055FAF39CF4AB681912CAF725B86A34A93FEFF075C4F6C7D9EB",
+      "dependencyAuditSourceSha256": "46F92A1FBB449C378B0CA4475530953F4A13877A7276A86181EFDF30663E643E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_generation_of_proper_divisor_induction"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization -> all-level original j-map degree and generation -> exact expanded minimal-polynomial conjugate product under the divisor-level induction hypotheses.",
+      "discharged": "Native relative-degree multiplicativity and existing Dedekind-psi formulas derive the relative prime-step degree p or p+1 from explicit induction degree and generation. Primitive-index arithmetic, actual Laurent leading terms and primitive-root injectivity exclude every twice-expanded preceding-level conjugate. Actual field embeddings send contained j substitutions to their expanded minimal-polynomial roots; the lower product identity derives the preceding root shape and discharges the removed-root distinction. Strong induction then constructs every indexed root and proves the exact original expanded minimal polynomial equals the primitive triangular product over an algebraically closed characteristic-zero coefficient field, under generation and degree at divisor levels.",
+      "boundary": "Scratch only; production promotion and verification pending. The joint all-level induction must still prove generation and degree; the new conditional product identity is to be used only on proper divisors in that induction. Composite generation and degree, modular ramification and fiber counts, numerical genus, analytic cusp-form realization and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-generation-5-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9B0B86B440C0990D1B1615B46F412C1716358B0CCE1AD72FFC9574658C72636E"
+    },
+    {
+      "recordedUTC": "2026-10-21T12:45:18.923045+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceConjugateConstantDescent",
+        "SourceOriginalConjugateRangeEmbedding",
+        "SourceCoprimePrimeImage",
+        "SourceOriginalReducedPolynomial",
+        "SourceOriginalCoprimeNonmembership",
+        "SourceOriginalCoprimeInduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateConstantDescent.lean",
+          "sha256": "F9F681460046C027D8F7680EC4B3BEA5706BC9710C3832E226D0159038396EFA",
+          "oleanSha256": "AAB27BDDE236E3A23FE9D2AEF00FC46B31653B1A261A23D06C3A068EEC3C0C8D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConjugateRangeEmbedding.lean",
+          "sha256": "6D9DEC8167F96FEDDDE4777278CFA7E793624D4003B62A9BBDA43D09F88D3CC4",
+          "oleanSha256": "F6ACBEB93FAFB5EC3F2F1A5FB9BFFA5F184C162FD132201AE071A13D87E92331"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoprimePrimeImage.lean",
+          "sha256": "0E955C483850B56D89C5C0D488AE1CD7B3D02A9D88DA35F6322647E0E01D9DC8",
+          "oleanSha256": "A8415BB388829B78CB0B82C366EB9552CA80916BB8E11C5FA48AA0DCCFE29593"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedPolynomial.lean",
+          "sha256": "A3BF5937865B1E4DF35EE30BA6F55EB5EC2BC8356EE3D2CDBF956D28B167D846",
+          "oleanSha256": "5E1D75BF4773117B058EDED6A2B5E9B790B645B86E396D26A2A04CB06F4EEDFE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoprimeNonmembership.lean",
+          "sha256": "C20634E1AE96798E3B7FCB27DC6B4A92611B1A3B145606E962C7315C3053C9AE",
+          "oleanSha256": "FBB0FA401E2B0C55048B221653226BA786B84139458131C0511C5F83E066725C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoprimeInduction.lean",
+          "sha256": "FA7B6297E0CBC031824D453FEE0A7F062FCE7C7C4997E5549CDC5212D93F7F84",
+          "oleanSha256": "C843804701DE1A44F511EC9F63E6A70B8C4BFF575C5BF0BEE1D9D592FAF2DAC0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.polynomial_value_mem_range_of_eval_eq_const",
+        "Dubon2026.SourceFunctionField.original_conjugate_embedding_in_prime_expansion_range",
+        "Dubon2026.SourceFunctionField.prime_j_image_of_coprime_expansion_range",
+        "Dubon2026.SourceFunctionField.original_member_reduced_polynomial",
+        "Dubon2026.SourceFunctionField.original_polynomial_value_under_embedding",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_conjugate_product",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_divisor_induction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.polynomial_value_mem_range_of_eval_eq_const",
+        "Dubon2026.SourceFunctionField.original_conjugate_embedding_in_prime_expansion_range",
+        "Dubon2026.SourceFunctionField.prime_j_image_of_coprime_expansion_range",
+        "Dubon2026.SourceFunctionField.original_member_reduced_polynomial",
+        "Dubon2026.SourceFunctionField.original_polynomial_value_under_embedding",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_conjugate_product",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_divisor_induction"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoprimeNonmembershipAudit6.log",
+      "logSha256": "70707EEF59D71A4C9009E5A748359F50C3F69E1946D6BB5643C3393BDEB44A4F",
+      "auditSha256": "FECAA78087F601D0DA1B0A3ABADDE71AD024DA9291F654D9AB576E353BD82CC4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 7,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoprimeNonmembershipDependencyAudit6.log",
+      "dependencyAuditSha256": "6AC9C91D4E8F850055676BED42758463E88F38E4C8725681A47DED4977E4F1FA",
+      "dependencyAuditSourceSha256": "75B8EAEA776FC8C98BBD392F5D10E65FCA97461FD080BBB92EAFBEBECEB38545",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_divisor_induction"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization -> all-level original j-map degree and generation -> exact expanded minimal-polynomial conjugate product under the divisor-level induction hypotheses.",
+      "discharged": "Native relative-degree multiplicativity and existing Dedekind-psi formulas derive the relative prime-step degree p or p+1 from explicit induction degree and generation. Primitive-index arithmetic, actual Laurent leading terms and primitive-root injectivity exclude every twice-expanded preceding-level conjugate. Actual field embeddings send contained j substitutions to their expanded minimal-polynomial roots; the lower product identity derives the preceding root shape and discharges the removed-root distinction. Strong induction then constructs every indexed root and proves the exact original expanded minimal polynomial equals the primitive triangular product over an algebraically closed characteristic-zero coefficient field, under generation and degree at divisor levels.",
+      "boundary": "Scratch only; production promotion and verification pending. The joint all-level induction must still prove generation and degree; the new conditional product identity is to be used only on proper divisors in that induction. Composite generation and degree, modular ramification and fiber counts, numerical genus, analytic cusp-form realization and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coprime-nonmembership-6-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "16386E782890642D80BA63746505D5623B38FCF7ECEE9C158AFD99AA1211958C"
+    },
+    {
+      "recordedUTC": "2026-10-21T13:01:29.347449+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalTwoPrimeGeneration",
+        "SourceOriginalDivisorPrimeGeneration",
+        "SourceMixedPrimePowerGenerators",
+        "SourceMixedPrimePowerFields",
+        "SourceMixedPrimePowerNonmembership",
+        "SourceRationalPrimeStepDegree",
+        "SourceMixedPrimePowerDegree",
+        "SourceOriginalAllLevelInduction",
+        "SourceOriginalAllLevelDegree"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwoPrimeGeneration.lean",
+          "sha256": "C49CABB6338D9B95DEB7489E4E9CEF684E2278FD2DDAFC55028C67187C076DCD",
+          "oleanSha256": "332B43C5F78379AF9D543DB0844D74EF7F7DE5C9FAABCF0C6213927968F41ED3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorPrimeGeneration.lean",
+          "sha256": "8D18658DC6B842F0B5A8E95EFC5CD3763C76BC8F031F510FC968C34F9E65EA2E",
+          "oleanSha256": "AC345BCCE0ACAB34A543705A9620AA7A5324DFBAE3F419AA9E497162E777275B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMixedPrimePowerGenerators.lean",
+          "sha256": "58F40156E20E22DDD7FEEDADCCC2AB0496A08544DDBD2F3AD2CD4EA849A0EDC7",
+          "oleanSha256": "CF14684AC278C500053BFF6A3668E7136C4CDA2151FA049154A7A1FDBA622F59"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMixedPrimePowerFields.lean",
+          "sha256": "F41A5058FC38FE92BE2E567B0EC2F502B7129B27DCE1C0AFED7E1EE623356D7F",
+          "oleanSha256": "94FB7B1024B86D345E65990B691D046AF2A4BF6464116C1C5219A8A544E6E3DA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMixedPrimePowerNonmembership.lean",
+          "sha256": "8C5734F2D0F7ACECAEEC2EC8FF332FA842759913894A329A9AA811F3F6AF81AB",
+          "oleanSha256": "DD5D191E2BBD842BA0EA0B368AB2E0302055F1829DAB6B415C97010359D5CC4E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalPrimeStepDegree.lean",
+          "sha256": "E3BB528E9A0781689D6B6E57396334D87851490C35C3ED277FADEDF0FA866667",
+          "oleanSha256": "F64D75427015ABD4B60080D18F2C09E02DC9B98DF4EFF6357F8775297194AEB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMixedPrimePowerDegree.lean",
+          "sha256": "D92954F194D03FE3A6B8DCB95D69C6CFF787D5851019C05C3537B6739F5769B1",
+          "oleanSha256": "8829E1205FDBEDA5D7CCA764FFFEF9790C1DD92CD8D5650EE9A79B44152BC38E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllLevelInduction.lean",
+          "sha256": "409FE3B76B166230368E7EB0323AA41FBC84099561087251BC2D2D58DFDABD77",
+          "oleanSha256": "A85867EE016B4AD41919A25702E0DC0C10E5D1A284A289760D92235A31E9FA70"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllLevelDegree.lean",
+          "sha256": "B6266BECC6B4AF4BB1D3E2677A419658F619ADF84A930D0BE506C7016B57CE4C",
+          "oleanSha256": "66353E84F9907750713DC85B431F7F163083E79E5B7DD184C3F18CD9D094BF47"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_two_prime_generation",
+        "Dubon2026.SourceFunctionField.original_divisor_series_mem_of_two_primes",
+        "Dubon2026.SourceFunctionField.mixed_prime_power_divisor_mem",
+        "Dubon2026.SourceFunctionField.original_full_mixed_prime_power_step_eq_adjoin",
+        "Dubon2026.SourceFunctionField.chainField_eq_original_mixed_prime_power",
+        "Dubon2026.SourceFunctionField.mixed_prime_power_next_not_mem_of_divisor_induction",
+        "Dubon2026.SourceFunctionField.rational_prime_step_finrank_eq_of_not_mem",
+        "Dubon2026.SourceFunctionField.original_mixed_prime_power_step_relfinrank",
+        "Dubon2026.SourceFunctionField.original_full_generation_and_degree",
+        "Dubon2026.SourceFunctionField.original_full_eq_pair",
+        "Dubon2026.SourceFunctionField.original_full_rational_relfinrank_eq_psi",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_eq_psi",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_two_prime_generation",
+        "Dubon2026.SourceFunctionField.original_divisor_series_mem_of_two_primes",
+        "Dubon2026.SourceFunctionField.mixed_prime_power_divisor_mem",
+        "Dubon2026.SourceFunctionField.original_full_mixed_prime_power_step_eq_adjoin",
+        "Dubon2026.SourceFunctionField.chainField_eq_original_mixed_prime_power",
+        "Dubon2026.SourceFunctionField.mixed_prime_power_next_not_mem_of_divisor_induction",
+        "Dubon2026.SourceFunctionField.rational_prime_step_finrank_eq_of_not_mem",
+        "Dubon2026.SourceFunctionField.original_mixed_prime_power_step_relfinrank",
+        "Dubon2026.SourceFunctionField.original_full_generation_and_degree",
+        "Dubon2026.SourceFunctionField.original_full_eq_pair",
+        "Dubon2026.SourceFunctionField.original_full_rational_relfinrank_eq_psi",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_eq_psi",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelDegreeAudit9.log",
+      "logSha256": "B81513FC95A7531B20835663E5EAD2C44C34CC9C7DBA33FE45A22A2016FBAA1F",
+      "auditSha256": "715FC842B0872A9F82F55AF3714ED1089CF9E8F0EB167173FBB6529B88980C9E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 25,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelDegreeDependencyAudit9.log",
+      "dependencyAuditSha256": "A11B318156151CA0E3BB9883BE559CA3BBF7EDEB8222100902701CF3076459BB",
+      "dependencyAuditSourceSha256": "05D36E1E5E06E25AED56267A69705A4BD75EB8C1A715615C60B1DEB04468DDD5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_full_eq_pair",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_eq_psi",
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic realization -> exact original j-coordinate degree and field generation at every level.",
+      "discharged": "For every nonzero N, the actual rational divisor field equals Q(j,j_N). Its degree over Q(j) is dedekindPsi(N), and coefficient transport gives that same internal j-coordinate degree over every characteristic-zero coefficient field. The expanded minimal polynomial equals the primitive triangular conjugate product. A joint strong induction discharges all generation, degree, conjugate-product and nonmembership premises: unique common roots give two-prime generation, actual mixed fields identify the prime-power spread tower, coprime nonmembership supplies the first step, and native tower multiplication closes every level.",
+      "boundary": "Scratch only; production promotion and verification pending. Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-all-level-degree-9-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [
+        {
+          "receipt": "source-generation-5-scratch-receipt.json",
+          "sha256": "1C221B28EEB2F62BB3E27E87630B2640945801592168437EED7622A7A2547014",
+          "issue": "The recorder retained the preceding conjugate-induction prose in dependency, discharged and boundary. Module, audit and hash evidence is unchanged.",
+          "correctDischarged": "Original level-N generation by j,j_N follows from generation and degree at proper divisors only, using unique-common-root descent and actual predecessor membership.",
+          "correctRemaining": "The complementary coprime nonmembership and exact-degree induction were still required at that snapshot."
+        },
+        {
+          "receipt": "source-coprime-nonmembership-6-scratch-receipt.json",
+          "sha256": "18A06F3287DD021C8A0C3978A087316B917787905A1097768C286FC981085779",
+          "issue": "The recorder retained the preceding conjugate-induction prose in dependency, discharged and boundary. Module, audit and hash evidence is unchanged.",
+          "correctDischarged": "For prime p not dividing M, j_p is outside the original full level-M field, under divisor-level generation and degree, by range-preserving embeddings and bounded polynomial descent.",
+          "correctRemaining": "The actual mixed prime-power tower identification and exact-degree joint induction were still required at that snapshot."
+        }
+      ],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "34D3F3634E4F7ADC0CAD99419F6DA1EE21686D3680917DDA1418564E2C180B2C"
+    }
+  ],
+  "reviews": [
+    "Tools/source-conjugate-step-7-reuse-review-20261021.json",
+    "Tools/source-conjugate-induction-8-reuse-review-20261021.json",
+    "Tools/source-generation-5-reuse-review-20261021.json",
+    "Tools/source-coprime-nonmembership-6-reuse-review-20261021.json",
+    "Tools/source-all-level-degree-9-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5476": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateStepDependencyAudit7Production5476.log",
+        "sha256": "4E23A02B8B4A295B7387A7E1AF91CD79D0AADCE4AACAFE7C24678835D7AF4E50",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_minpoly_degree_eq_full_relfinrank_of_generation",
+          "Dubon2026.SourceFunctionField.expandedJMinpoly_qExpand",
+          "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_roots_and_degree",
+          "Dubon2026.SourceFunctionField.expandedJMinpoly_top_slot_root",
+          "Dubon2026.SourceFunctionField.original_full_embedding_of_expanded_minpoly_root",
+          "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_full_step_degree",
+          "Dubon2026.SourceFunctionField.prime_twisted_minpoly_root_of_reduced_step_degree",
+          "Dubon2026.SourceFunctionField.expanded_minpoly_root_of_relative_root"
+        ],
+        "sourceSha256": "5D47C8842111620D1B0116D76424C5047015C3C30872F2E3AB5BDAE5CB45F78F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateInductionDependencyAudit8Production5476.log",
+        "sha256": "DD184F59E871B774BA69CD7746304DDB49933FCA61FAD0DE1C91BA00F5FEA491",
+        "requiredProofValueEdges": 36,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct_of_divisor_induction"
+        ],
+        "sourceSha256": "AF243F8D47907F603619B589B9D383F77644C8D8DBD9AEA493D524C54A3DB458"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenerationDependencyAudit5Production5476.log",
+        "sha256": "E9814FF87B639055FAF39CF4AB681912CAF725B86A34A93FEFF075C4F6C7D9EB",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_generation_of_proper_divisor_induction"
+        ],
+        "sourceSha256": "D8B53D79F9F9F4B8A8818403003E7D67920F0D318A72D41926F56298145577DA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoprimeNonmembershipDependencyAudit6Production5476.log",
+        "sha256": "6AC9C91D4E8F850055676BED42758463E88F38E4C8725681A47DED4977E4F1FA",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.prime_j_not_mem_original_coprime_of_divisor_induction"
+        ],
+        "sourceSha256": "7130C6B7D3A662904A324196F591436D904800C6FD2B46F99FD4EF48E9A085A9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelDegreeDependencyAudit9Production5476.log",
+        "sha256": "A11B318156151CA0E3BB9883BE559CA3BBF7EDEB8222100902701CF3076459BB",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_full_eq_pair",
+          "Dubon2026.SourceFunctionField.finrank_original_over_j_eq_psi",
+          "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_slotProduct"
+        ],
+        "sourceSha256": "CD345C42C811A6F94CBF1E0AD8C5D44CB1564894087B0FD6B99DE27D449DA2B8"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllLevelDegreeProductionAudit5476.log",
+    "sha256": "F0C0B1058F32612F415083B7CE4E851E5B03750C99D9422483DFB552DA3ECEE7",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-all-level-degree-production-5476-build.log",
+    "aggregateSha256": "6B0831A3F6B3A4C149178253A27B7EDDD67A7628F4D2A3E902442EAF1A56AE7D",
+    "productionModules": 5476,
+    "incrementModules": 35,
+    "axiomChecks": 62,
+    "exhaustiveIncrementTheorems": 72,
+    "linterScopes": 35,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 72,
+    "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Existing unique-common-root descent, prime-power spread, coefficient transport and native relative degrees reused.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "commentOnlyProductionAdjustment": {
+    "file": "Extension/Dubon2026/SourceOriginalCoprimeNonmembership.lean",
+    "beforeSha256": "112C1CB29E69D912F8582B175E6B8C9B14C66EF292DAFD58AA29E2E0DC919E8E",
+    "afterSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+    "reason": "Reflow prose beginning with the word constant; the literal integrity scanner rejected it as a declaration. No Lean declaration or proof changed.",
+    "declarationsAndProofBodiesIdentical": true,
+    "postEditVerification": {
+      "log": "E:\\Lean\\.tmp\\dubon83\\source-original-all-level-degree-production-5476-post-comment-build.log",
+      "sha256": "8958DF84831B4FB99383E538B9DEC9D1A3FBC4F91E08FCE3DACBCF9C7AA62E8F",
+      "exit": 0,
+      "diagnostics": 0,
+      "inventory": "PASS: 6699 retained files; 10851 local links; 4320 unchanged existing Lean files."
+    }
+  }
+}

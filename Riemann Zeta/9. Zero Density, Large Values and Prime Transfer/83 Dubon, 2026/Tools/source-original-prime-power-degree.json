@@ -1,0 +1,571 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourcePrimeProductRootChoice",
+    "Dubon2026.SourcePrimeTwistedProduct",
+    "Dubon2026.SourcePrimeTwistedRoots",
+    "Dubon2026.SourcePrimeTwistedMinpolyRoot",
+    "Dubon2026.SourceLaurentSimpleEmbedding",
+    "Dubon2026.SourcePrimeTwistedEmbedding",
+    "Dubon2026.SourcePrimePowerChainFields",
+    "Dubon2026.SourcePrimePowerChainExtension",
+    "Dubon2026.SourcePrimePowerExpansionRange",
+    "Dubon2026.SourcePrimePowerChainSpread",
+    "Dubon2026.SourcePrimePowerAdjacentEmbedding",
+    "Dubon2026.SourcePrimePowerRelationTransport",
+    "Dubon2026.SourcePrimePowerChainContradiction",
+    "Dubon2026.SourcePrimePowerChainNonmembership",
+    "Dubon2026.SourceOriginalPrimePowerFields",
+    "Dubon2026.SourceOriginalPrimePowerStep",
+    "Dubon2026.SourcePrimePowerRelativeStep",
+    "Dubon2026.SourcePrimePowerRationalDegree",
+    "Dubon2026.SourceOriginalPrimePowerDegree",
+    "Dubon2026.SourceConjugateSlotCount",
+    "Dubon2026.SourceConjugateSlotCRT",
+    "Dubon2026.SourceConjugateSlotTotal",
+    "Dubon2026.SourceConjugateSlotIndices",
+    "Dubon2026.SourceConjugateSlotValues",
+    "Dubon2026.SourceConjugateSlotProduct"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension bound -> numerical modular genus and analytic realization of original regular differentials -> exact original j-map degree, modular ramification and fiber counts.",
+  "discharged": "The actual twisted prime relation supplies every required embedding extension. The spread argument and strong induction prove next-series nonmembership for every original prime-power divisor field, using the existing prime base case. Thus each actual prime-power extension has degree p without a nonmembership premise. Native relative-degree multiplicativity and the existing coefficient-degree transport give internal j-coordinate degree dedekindPsi(p^k) for every prime power over every characteristic-zero coefficient field, including level one. The explicit primitive triangular Laurent product is separately proved monic of degree dedekindPsi(N) with distinct roots. Its identification with the actual all-level minimal polynomial remains required; the finite count alone does not prove composite degree.",
+  "boundary": "General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,441-module scope: all thirteen retained regressions, 38,536 exhaustive theorem checks, 16,689 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.extend_actual_embedding_at_prime_twist",
+    "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq",
+    "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_power_eq_psi",
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_monic",
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_natDegree",
+    "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots_nodup"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T11:17:18.841378+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimeProductRootChoice",
+        "SourcePrimeTwistedProduct",
+        "SourcePrimeTwistedRoots",
+        "SourcePrimeTwistedMinpolyRoot",
+        "SourceLaurentSimpleEmbedding",
+        "SourcePrimeTwistedEmbedding"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeProductRootChoice.lean",
+          "sha256": "EB33500CA71997467C9FAB9F1458FE29B63F5AD6F1655A1E624ACCE1703158A9",
+          "oleanSha256": "E63E5227F68BC23065B66F8539D6811A9F1A9F115D8798E0902B2BD44C28F62B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeTwistedProduct.lean",
+          "sha256": "1BE006CA7D73C09416EC385E7972A020B70BB6CAA70201416177A5705FA52CA2",
+          "oleanSha256": "0BD79C0B7E84449A74F8A0276164F646BD71DAB4D6FC81EFD0E80EDFB8D0C2F3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeTwistedRoots.lean",
+          "sha256": "4464C6B232892051B2830158B81042595D1F2E6003A07CD44AAA81C05878BE49",
+          "oleanSha256": "7DCEA1705ED98109C986591A74A215F2B551B158C2D8BA50ED9B13C01D4DFC85"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeTwistedMinpolyRoot.lean",
+          "sha256": "281A9E20943D9285EECF17AF7350D8747B1CC88BF48B31AAB3B681C734B8027E",
+          "oleanSha256": "71848636E6A2AEEF5AA3FD02019527F791B31E97F243FD2209CBEFE1F2996713"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentSimpleEmbedding.lean",
+          "sha256": "7A81FC049BE1C34B965FB63E4D8B0BE3DB6F0A92F396E2BE9C11F9ACA9030B9D",
+          "oleanSha256": "D12A427B67A5820598E6E2A071C18C71278DFC04CC6691D565A39F10554319BC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeTwistedEmbedding.lean",
+          "sha256": "FE898F38CFBEE96EFEF62994419D0630517A08F8FB1A241F258123CBA1471E48",
+          "oleanSha256": "BC6474D220913B1679BB1B49E50B557E5DAF4BF3AF8FB9259CCA9B9DEF0B6CF2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.primitive_root_pow_div",
+        "Dubon2026.SourceFunctionField.primitive_root_powers_multiset_eq",
+        "Dubon2026.SourceFunctionField.prime_product_eq_of_primitive",
+        "Dubon2026.SourceFunctionField.exists_prime_product_at_root",
+        "Dubon2026.SourceFunctionField.prime_product_twisted_expanded",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_root_iff",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_splits",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_roots",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_roots_nodup",
+        "Dubon2026.SourceFunctionField.exists_prime_twisted_minpoly_root",
+        "Dubon2026.SourceFunctionField.extend_simple_embedding_in_expansion_range",
+        "Dubon2026.SourceFunctionField.extend_embedding_at_prime_twist",
+        "Dubon2026.SourceFunctionField.extend_actual_embedding_at_prime_twist"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.primitive_root_pow_div",
+        "Dubon2026.SourceFunctionField.primitive_root_powers_multiset_eq",
+        "Dubon2026.SourceFunctionField.prime_product_eq_of_primitive",
+        "Dubon2026.SourceFunctionField.exists_prime_product_at_root",
+        "Dubon2026.SourceFunctionField.prime_product_twisted_expanded",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_root_iff",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_splits",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_roots",
+        "Dubon2026.SourceFunctionField.prime_twisted_product_roots_nodup",
+        "Dubon2026.SourceFunctionField.exists_prime_twisted_minpoly_root",
+        "Dubon2026.SourceFunctionField.extend_simple_embedding_in_expansion_range",
+        "Dubon2026.SourceFunctionField.extend_embedding_at_prime_twist",
+        "Dubon2026.SourceFunctionField.extend_actual_embedding_at_prime_twist"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedEmbeddingAudit6.log",
+      "logSha256": "E7D24CC23C9AC3D77A88BF75A7BEC1B423723E615269987F6F3FCC7E7C2CF9A5",
+      "auditSha256": "613D243E5614D85C6D08F33E15E014B9770B6DEEF532DF95DEF037E792426BFA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedEmbeddingDependencyAudit.log",
+      "dependencyAuditSha256": "CD31ADDF5C48BD57E382B186F6C5604561F431AD5C9EFE17FA2F0F0FB08024EF",
+      "dependencyAuditSourceSha256": "B1CD030D94778FD12E9AEC28FC9F8C70D337493EA1369AD8FF8C455771C76495",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.extend_actual_embedding_at_prime_twist"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> next-series nonmembership -> twisted embedding extension with decreasing expansion range.",
+      "discharged": "Native root-of-unity multisets allow the proved prime product at any required primitive root. Actual twisting and expansion give the exact split, distinct root list. Nonmembership makes the minimal polynomial non-linear, so a non-distinguished twisted root is derived. Native simple-extension homomorphisms, scalar restriction and a finite power basis extend the actual field embedding into the smaller expansion range, preserving the base action. The final consumer derives the prime polynomial and primitive p-th root from the actual larger root system. No root or embedding existence premise remains; the explicit next-series nonmembership assumption is the induction input for the subsequent tower argument.",
+      "boundary": "Scratch only; production promotion and verification pending. Assemble the original prime-power tower and prove next-series nonmembership, then all-level generation and degree. Modular ramification, actual fiber counts, numerical genus, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-twisted-embedding-6-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "1504DF6C90C2043442C0CAF70DE8392C8025DD073F45383DDF56593F23CC34D0"
+    },
+    {
+      "recordedUTC": "2026-10-21T11:33:20.336956+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimePowerChainFields",
+        "SourcePrimePowerChainExtension",
+        "SourcePrimePowerExpansionRange",
+        "SourcePrimePowerChainSpread",
+        "SourcePrimePowerAdjacentEmbedding",
+        "SourcePrimePowerRelationTransport",
+        "SourcePrimePowerChainContradiction",
+        "SourcePrimePowerChainNonmembership",
+        "SourceOriginalPrimePowerFields",
+        "SourceOriginalPrimePowerStep"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerChainFields.lean",
+          "sha256": "7EBA912CD006B985ABEE5A5387A36191825BCA4960489732AC3F5C02D4158921",
+          "oleanSha256": "37E45ED0DFEDD3F314BB4715E17EFDF3FBABC720B07DA19251A32383BC1CCDC0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerChainExtension.lean",
+          "sha256": "96E010ADA3CDE28BAC3663F28A7D78EC3D13124455A774CBCA02EBCB13EF1399",
+          "oleanSha256": "8B34A82E568B538BA9D5D57FA764D367444A595C3156C12FE41123F951184CF8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerExpansionRange.lean",
+          "sha256": "B2B9513900B28E6F4F98B432D94CCDD06252B9988D6A923E1954EA58BA3F6A58",
+          "oleanSha256": "1E9D0DD3D489465B0E82FEBCA4190FE6CF0B640261EC8C13F6A9313003B88413"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerChainSpread.lean",
+          "sha256": "DB394DDE277E3DDCBC1F972784680B1F3736B9A15C87299AD36E8D415CC80063",
+          "oleanSha256": "47E63382536FBE53883C50D02CA8DF91F7C2412154FA09043AC5DF6F3B6D6CE2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerAdjacentEmbedding.lean",
+          "sha256": "D9740C039EBF534DBC9227A9ABE4BDF36366F17DBBC6A8AF17BA81BAA8EF9403",
+          "oleanSha256": "FE7E3D5D25B26863434D02231CCA84ADCABCA35E09D288E241E2D28C7490E685"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerRelationTransport.lean",
+          "sha256": "6124D485095FC025FF81C5C67D8234D829DAB3B4A83B639F16EEA1E18EF2CD94",
+          "oleanSha256": "53606B0D9A9C07173286333B397C66DB4B564F4EBB58D974B79F86522EE7444B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerChainContradiction.lean",
+          "sha256": "B22352B9C371934493E255457853363CC421EC046A608743387281BBA08B7674",
+          "oleanSha256": "E7E636A4A59CC4EE9832B4832378F52A168D781FA92BD04CC8B371CEE07CC869"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerChainNonmembership.lean",
+          "sha256": "705888322B0FFD3FE4F399ECC8B5D611468A8936BB599BA7D2CB575F5982AECC",
+          "oleanSha256": "11B03F95950304721709D3BDE38EA74950C8BCB48B9381F5D47E1E491E28556A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePowerFields.lean",
+          "sha256": "53BBA38694BAD7FBEDA47F9802D98CACA74FE4A490EE12D56A76055B2436F6A6",
+          "oleanSha256": "FC5923EF398A836911008D82B986BB182D865D33355A1E3F114D3A6B78BE4025"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePowerStep.lean",
+          "sha256": "FB39A028654A6D45235E96767DB5CB565579B4B3CC663905BD2E5F0AE3D7CD1C",
+          "oleanSha256": "40DCD3A8766C9B94D1271700FCD55BB5370E1EC91E12C8BF371475E1F8B7D097"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.mem_chainField",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.full_le_chainField",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField_zero",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField_mono",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField_succ",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chain_extend",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.TS_not_mem_range_qExpand",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.range_qExpand_congr",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.exists_chain_spread_embedding",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.exists_adjacent_spread_embedding",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.relationAtSeed_eval_subfield_map",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chain_next_not_mem_of_earlier",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.prime_power_next_not_mem_chain",
+        "Dubon2026.SourceFunctionField.original_level_one_field_eq",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_one",
+        "Dubon2026.SourceFunctionField.chainField_one_eq_original_prime_power",
+        "Dubon2026.SourceFunctionField.original_prime_power_next_not_mem",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.mem_chainField",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.full_le_chainField",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField_zero",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField_mono",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField_succ",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chain_extend",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.TS_not_mem_range_qExpand",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.range_qExpand_congr",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.exists_chain_spread_embedding",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.exists_adjacent_spread_embedding",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.relationAtSeed_eval_subfield_map",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chain_next_not_mem_of_earlier",
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.prime_power_next_not_mem_chain",
+        "Dubon2026.SourceFunctionField.original_level_one_field_eq",
+        "Dubon2026.SourceFunctionField.prime_j_not_mem_original_one",
+        "Dubon2026.SourceFunctionField.chainField_one_eq_original_prime_power",
+        "Dubon2026.SourceFunctionField.original_prime_power_next_not_mem",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.PrimePowerNonmembership.chainField"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerNonmembershipAudit10.log",
+      "logSha256": "789CE8530237D0979439D3264CC6A098D3F13B4DD42973BEB68F3AC1AFDAAB9F",
+      "auditSha256": "BEDB5F945454E52B08635723311C379E6DD1BFB07D7DB41F9F7D7FB2D4063BB3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 36,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerNonmembershipDependencyAudit.log",
+      "dependencyAuditSha256": "B82249CFE5EA7041C5AEF657D6470E8569520275120AAC1F7694C1CF4FAF73BF",
+      "dependencyAuditSourceSha256": "B81D873CB946F4D669D21F16EB40E982C2AA83F9E0549B5D5F2606FDA13170A8",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> original prime-power next-series nonmembership -> unconditional degree-p extension steps.",
+      "discharged": "The actual phase-indexed prime-power field tower admits successive embeddings into decreasing expansion ranges. The exact prime root list, leading Laurent coefficients and injectivity force a contradiction if the next j series is already present. Strong induction discharges all earlier-stage premises; the initial prime case uses the already proved integral-root descent and nonpolynomiality. Native prime-power divisor classification identifies the tower with the literal original divisor field. Thus the original prime-power extension has degree p without the previous next-series nonmembership premise.",
+      "boundary": "Scratch only; production promotion and verification pending. Assemble total prime-power degree and prove composite-level generation and degree. Modular ramification, actual fiber counts, numerical genus, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-power-nonmembership-10-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6AB33B578269829C143495924908D2C8D148AAA47270D9728298833DB4D4C329"
+    },
+    {
+      "recordedUTC": "2026-10-21T11:35:22.944033+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourcePrimePowerRelativeStep",
+        "SourcePrimePowerRationalDegree",
+        "SourceOriginalPrimePowerDegree"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerRelativeStep.lean",
+          "sha256": "88180B012FF3E17DB02519655FAAF11E9D613B551CF9818B957F3241782F1816",
+          "oleanSha256": "B280259037552A4CCB262D893ABA554442CDB3FF7EAE78D64286ACF8CC85820B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerRationalDegree.lean",
+          "sha256": "7C730D84D52C06C9A8A5D8DF89285DBA085E6FAEE778157793513F801961459F",
+          "oleanSha256": "ED12B22BF6C21E3AE5EE471C6900CDA3B08CDB9F788E867BB775C2A2434E945F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePowerDegree.lean",
+          "sha256": "54A925308479DF107D96D798A9D58ADCA6713E701012AD66E3A7354E0B73DDAD",
+          "oleanSha256": "6AD27D9F6F2239FC1E6F69B13BEF53109F98A2EC303891F07D418252ACF76E41"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.relfinrank_adjoin_union_singleton",
+        "Dubon2026.SourceFunctionField.original_prime_power_field_succ",
+        "Dubon2026.SourceFunctionField.original_prime_power_fields_mono",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_relfinrank",
+        "Dubon2026.SourceFunctionField.original_prime_rational_relfinrank",
+        "Dubon2026.SourceFunctionField.original_prime_power_rational_relfinrank",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_power_eq_psi"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.relfinrank_adjoin_union_singleton",
+        "Dubon2026.SourceFunctionField.original_prime_power_field_succ",
+        "Dubon2026.SourceFunctionField.original_prime_power_fields_mono",
+        "Dubon2026.SourceFunctionField.original_prime_power_step_relfinrank",
+        "Dubon2026.SourceFunctionField.original_prime_rational_relfinrank",
+        "Dubon2026.SourceFunctionField.original_prime_power_rational_relfinrank",
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_power_eq_psi"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerDegreeAudit3.log",
+      "logSha256": "123C7B40C5ACC4A5546FBDAB670D381EEE695DE9B381D3EEEED37B0BC290D682",
+      "auditSha256": "989B430CCDAADF7E3FA28EC378FE116659B2BD79FC6A7C2269A3C54B4B4565AA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 7,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerDegreeDependencyAudit.log",
+      "dependencyAuditSha256": "07D078A899CF1A138E3B5922286994793D0ED88A36A7C0888810ECDAC7C42339",
+      "dependencyAuditSourceSha256": "044E96920E787361F2A02F5FF082B98ABF6704924AD8BE4CCD168F0FFB9D0107",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_power_eq_psi"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> exact original prime-power j-map degree and dedekindPsi.",
+      "discharged": "The actual full prime-power fields form the proved simple-extension tower. Native relative-degree multiplicativity combines the prime base degree p+1 with the unconditional degree-p steps to give p^k*(p+1) at level p^(k+1). The already proved original coefficient-degree transport and dedekindPsi formula give the exact internal j-coordinate degree for every prime power over every characteristic-zero coefficient field, including level one. No nonmembership, generation, finiteness or degree premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. General composite-level generation and degree, modular ramification, actual fiber counts, numerical genus, analytic cusp-form realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-power-degree-3-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A77FE0A6176B9DA7CF63CACDDA613F750860DCE4EB31E6324305ED5C989757F1"
+    },
+    {
+      "recordedUTC": "2026-10-21T11:44:48.960895+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceConjugateSlotCount",
+        "SourceConjugateSlotCRT",
+        "SourceConjugateSlotTotal",
+        "SourceConjugateSlotIndices",
+        "SourceConjugateSlotValues",
+        "SourceConjugateSlotProduct"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotCount.lean",
+          "sha256": "15D77FC16B7ECE0C09DCABCF2768C4912B925DFBDC3BA3D5DED9FAAE673342EB",
+          "oleanSha256": "181984CACC16B4188FB133536558D12D572D1B5165459CC362ED3F451A9C27C7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotCRT.lean",
+          "sha256": "6599FF9D3D26B7656A2AA7078785029AD89C1665EF35C4A4CE27921C9F8CD453",
+          "oleanSha256": "512FA16E64DA5CA59CFAAF5C1572FA43F55EB7302C9BD69503345A02F6032224"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotTotal.lean",
+          "sha256": "9910E6E7793762B7CBE745A51631411D1DB76B994CF39F46446933D578052DD2",
+          "oleanSha256": "F2038BD8A16002B2F485A200B7982D40354C9534CB4B5335BE15C7539630975E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotIndices.lean",
+          "sha256": "804B365A40F1A00BCFF30A0A5375868DEA110A98EB1A0D7506B89C20DFB0710E",
+          "oleanSha256": "C909CE7E819C39164430AE2066CB1877C5E2771D5FDAC1F2B42DB43CA20B4C28"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotValues.lean",
+          "sha256": "554E1CD0B53F057DD31D916B7223DE881E854E50E435DE5954F223D13263F662",
+          "oleanSha256": "A69F7D2C290139E373C2D114546B11FD26EFD15AEEDBD4630D08A873E9BA6093"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotProduct.lean",
+          "sha256": "92C22812564519DF2B0FDEAE444C86FE423A663D40577885E78FE47E456076EE",
+          "oleanSha256": "79BFAEB27BE662C5C1ADC5E10D65930F41A7401737A1668F3671D70556FD29C1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_eq",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_iff",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.gcd_eq_of_modEq",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_mod_iff",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_one",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_self",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_prime_pow_mid",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots_prime_pow",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_mul",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.gcd_mul_left_of_dvd",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.gcd_mul_right_of_dvd",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots_mul",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots_eq_dedekindPsi",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.mem_indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.card_indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.index_fst_ne_zero",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.index_phase_lt",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_eq",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_injective",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_injOn_indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_monic",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_natDegree",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots_nodup",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_eq",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_iff",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.gcd_eq_of_modEq",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotCond_mod_iff",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_one",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_self",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_prime_pow_mid",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots_prime_pow",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt_mul",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.gcd_mul_left_of_dvd",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.gcd_mul_right_of_dvd",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots_mul",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots_eq_dedekindPsi",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.mem_indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.card_indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.index_fst_ne_zero",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.index_phase_lt",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_eq",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_injective",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue_injOn_indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_monic",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_natDegree",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots_nodup"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotAt",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slots",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.indices",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotValue",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotsAudit6.log",
+      "logSha256": "250CE78E943DE3C1E08C6B9490BAB1028ADCA57025B946CB6B3E50DF088FD5C7",
+      "auditSha256": "60046C29F82353D7499B9F979BD72A6291037DB610867454E372C1EF2E39EBB8",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 39,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 30,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotsDependencyAudit.log",
+      "dependencyAuditSha256": "FEB888F11E5BFBC2E303BE98BC9092868F85B06082BBB467F07387409D110B69",
+      "dependencyAuditSourceSha256": "215F2543C90F27951960B4B3ED6FD136E91B18130D5DAAD41029DC2F73680D45",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_monic",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_natDegree",
+        "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots_nodup"
+      ],
+      "dependency": "DUB-17/18 -> symmetric-power continuation -> arithmetic automorphy/residual association -> original parabolic Hecke realization -> period surjectivity -> cusp-form lower dimension bound -> regular Kaehler differential dimension -> Riemann--Roch -> actual Kaehler-to-Weil residue comparison. -> numerical modular genus -> exact original j-map degree -> general composite degree -> explicit mapped minimal-polynomial roots -> primitive triangular conjugate count and distinctness.",
+      "discharged": "The literal primitive triangular indices are counted by dedekindPsi using native Chinese remainders, prime-power totient counts, coprime gcd identities and the existing level-factor formulas. Divisor inversion puts the count in the exact orientation of the Laurent conjugate product. Leading Laurent coefficients and primitive root injectivity distinguish all indexed values. The explicit product is monic of degree dedekindPsi with its exact distinct root list.",
+      "boundary": "Scratch only; production promotion and verification pending. Identify this product with the actual mapped minimal polynomial using the original relations and lower-level induction. This finite count alone does not prove the composite field degree. General composite generation and degree, modular ramification, fiber counts, numerical genus, analytic realization and downstream period, arithmetic and symmetric-power gates remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-conjugate-slots-6-reuse-review-20261021.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F16941B9C847A7A305B01DB610DF36625227E73F40E7E106DDAE3EF8F2387349"
+    }
+  ],
+  "reviews": [
+    "Tools/source-twisted-embedding-6-reuse-review-20261021.json",
+    "Tools/source-prime-power-nonmembership-10-reuse-review-20261021.json",
+    "Tools/source-prime-power-degree-3-reuse-review-20261021.json",
+    "Tools/source-conjugate-slots-6-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5441": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedEmbeddingDependencyAuditProduction5441.log",
+        "sha256": "CD31ADDF5C48BD57E382B186F6C5604561F431AD5C9EFE17FA2F0F0FB08024EF",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.extend_actual_embedding_at_prime_twist"
+        ],
+        "sourceSha256": "4E90E0AB6890C3801764660047FD21D6BF8308817B344782DDC1AA2B0ED05058"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerNonmembershipDependencyAuditProduction5441.log",
+        "sha256": "B82249CFE5EA7041C5AEF657D6470E8569520275120AAC1F7694C1CF4FAF73BF",
+        "requiredProofValueEdges": 36,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_prime_power_step_finrank_eq"
+        ],
+        "sourceSha256": "0270D07FBA2E3C85E7C33FCBB3F6B08104A2F9C8C731C51E26C86F92FF33FE76"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerDegreeDependencyAuditProduction5441.log",
+        "sha256": "07D078A899CF1A138E3B5922286994793D0ED88A36A7C0888810ECDAC7C42339",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.finrank_original_over_j_prime_power_eq_psi"
+        ],
+        "sourceSha256": "67E1D57E529FC94E45095533D4E1D89436C73B320AD327B5E3632F405289F239"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceConjugateSlotsDependencyAuditProduction5441.log",
+        "sha256": "FEB888F11E5BFBC2E303BE98BC9092868F85B06082BBB467F07387409D110B69",
+        "requiredProofValueEdges": 30,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_monic",
+          "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_natDegree",
+          "Dubon2026.SourceFunctionField.ConjugateSlots.slotProduct_roots_nodup"
+        ],
+        "sourceSha256": "6973948D64164869E1CBB7BC01FB831936065B2EDDA20BDD7D633D1FA748168F"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePowerDegreeProductionAudit5441.log",
+    "sha256": "185C9CDA966F1015351193FE72D0B903B126D3B2C62F00E1461FD70475AEA488",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-prime-power-degree-production-5441-build.log",
+    "aggregateSha256": "3A2F96EC2103FFAFFA2D0E0384C707F64B4BD4571E23EF526BF7B0D07F9E4757",
+    "productionModules": 5441,
+    "incrementModules": 25,
+    "axiomChecks": 68,
+    "exhaustiveIncrementTheorems": 94,
+    "linterScopes": 25,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 94,
+    "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged; existing native embeddings, prime nonmembership, degree transport and level arithmetic reused.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "boundary": "General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+  },
+  "receipt5441": {
+    "recordedUTC": "2026-10-21T13:49:36.344493+00:00",
+    "log": "logs/dubon-build-20261021-053531-317.log",
+    "sha256": "5B2F21B67B9CD2DF59731ECABB1461CEB781DB29B8FE27A1681D94806C876D8A",
+    "bytes": 9406519,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5441,
+    "projectTheorems": 38536,
+    "registeredConsumers": 16689,
+    "registeredConstructions": 937,
+    "declarations": 23077,
+    "generated": 21655,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_053242.log",
+    "foundationSha256": "2B80DBB9B3D23EF02155EDB9F3BD6B79675AE741814F1E17B084AB3A0728B7B5",
+    "countReconciliation": {
+      "priorTheorems": 38443,
+      "focusedTheorems": 94,
+      "alreadyAuditedGeneratedTheorems": [
+        "Dubon2026.SourceFunctionField.PrimeDegreeAux.TS.congr_simp"
+      ],
+      "newTheorems": 93,
+      "fullSetEqualsPriorUnionFocused": true,
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePowerCountReconciliation5441.log",
+      "sha256": "C68F84F3A4D00CAFF7A93E9253443EC123BF597F17368D1E34B7D98A8EDC7E2D"
+    },
+    "boundary": "General composite-level generation and degree, identification of the explicit conjugate product with the actual minimal polynomial, modular ramification at 0 and 1728 and absence of other finite ramification, actual fiber counts including cusps, numerical modular genus, analytic cusp-form realization, matching weight-two lower bound, period surjectivity, Hecke/Galois realization, the adic system and symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20."
+  }
+}
