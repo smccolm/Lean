@@ -54,7 +54,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> original Abel converse and period lattice -> actual cycle loops, normalized primitives and polygon jump matrix -> arbitrary regular-loop generation, integral period basis, discrete period lattice and the same skew-symmetric unimodular polygon matrix.",
   "discharged": "The actual integer cycles are realized by actual loops with their exact integral formulas. The same marked original dissection has normalized regular primitives, zero dual-tree jumps and the exact signed cyclic-word formula. Its integer word matrix expresses all jumps through the 2g complementary actual loop periods. Arbitrary regular loop periods have common integer coefficients in these same generators. For every original regular-differential basis, the original period lattice is the integer span of a real basis and is discrete, with no generation premise. The same complementary polygon matrix is skew-symmetric and has unit integer determinant, using two-way integer generation, full real span and exact Euler rank. All prior marked-point, corner, integer-cycle, normalization and actual-loop clauses are retained.",
   "boundary": "The Riemann bilinear relation, residue reciprocity, meromorphic period generation and full raw reciprocity remain required for the original Abel converse. Exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Discreteness is proved; it does not by itself identify original Pic0 with the complex torus. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
-  "status": "The 6,069-module production aggregate and focused original period-lattice audit pass with zero diagnostics. Eight proof-value audits verify actual cycle loops, normalized primitives, the exact polygon matrix and common integer generation of all regular loop periods. The original period lattice is discrete and the same complementary integer matrix is skew-symmetric and unimodular. Bilinear and meromorphic reciprocity and the original Abel converse remain required, followed by original torsion cardinality, Qbar comparison and Tate/Hecke/Frobenius and arithmetic gates. Sequential foundation/paper verification of this scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,069-module scope: all thirteen retained regressions, 42,190 exhaustive theorem checks, 18,628 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "frozenReceiptProseCorrections": [],
@@ -967,6 +967,208 @@
     "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Actual original places, cell geometry, loops, normalized primitives, same polygon word and exact integer matrix retained. Regular loop generation, period-lattice discreteness and matrix unimodularity are proved; bilinear and meromorphic reciprocity and the Abel converse remain open. No final source contract is weakened.",
     "omittedScratchTheorems": [],
     "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 212,
+      "scratchDistinct": 210,
+      "productionFocused": 210,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.CellGeometry.DissectionPeriods.gvec.eq_1": [
+          {
+            "scope": "SourcePeriodLatticeScratchOwnership145For6069",
+            "module": "Dubon2026.SourceOriginalPolygonCornerPrimitives"
+          },
+          {
+            "scope": "SourcePeriodLatticeScratchOwnership147For6069",
+            "module": "Dubon2026.SourceOriginalCellJumpDifferences"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.CellGeometry.DissectionPeriods.wordMatrix.congr_simp": [
+          {
+            "scope": "SourcePeriodLatticeScratchOwnership146For6069",
+            "module": "Dubon2026.SourceOriginalCyclePeriodMatrixAssembly"
+          },
+          {
+            "scope": "SourcePeriodLatticeScratchOwnership149For6069",
+            "module": "Dubon2026.SourceOriginalComplementaryWordMatrix"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalBoundaryArcPaths",
+            "SourceOriginalDissectionEdgePaths",
+            "SourceOriginalCellPathPrimitiveDerivative",
+            "SourceOriginalArcPathIntegral",
+            "SourceOriginalEdgePathIntegral",
+            "SourceOriginalTreeWalkPaths",
+            "SourceOriginalCycleChainIdentification",
+            "SourceOriginalFundamentalCycleLoops",
+            "SourceOriginalConstructedCycleLoops"
+          ],
+          "count": 40,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership142For6069.log",
+            "sha256": "07AA52306F2DE7861D02DD397C580BD9A5719F10D218F5D80B99DB502EBA0373",
+            "sourceSha256": "42CAA38A937A513BC9AB449D4A9303BE5CEE57A94C7B4A52397E071C6AC1E3CE"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalDualTreeNormalization",
+            "SourceOriginalNormalizedCellPrimitives",
+            "SourceOriginalConstructedNormalizedPrimitives"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership143For6069.log",
+            "sha256": "66317FE225A5908F5301FEB6EFBAFA91941086F0D715C5F0179F11855D4C7538",
+            "sourceSha256": "939C00E1D46A35DC81399D6C10537AE129D9727A97E188F9566E6361856C0AF5"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrimitiveJumpCirculation",
+            "SourceOriginalJumpCycleReduction",
+            "SourceOriginalConstructedJumpReduction"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership144For6069.log",
+            "sha256": "7A39349850F8E951FBD25E0AA07D9F3EA5F21628DB03DFE736CE24756CAB2936",
+            "sourceSha256": "F2B59D23B058B2687E6F3D593EE2744E51672457B6C9A4E5BCEB0F2601691CD1"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellPrimitiveArcIntegral",
+            "SourceOriginalSignedPrimitiveArcIntegral",
+            "SourceOriginalPolygonPrimitiveData",
+            "SourceOriginalPolygonPrimitiveEndpoints",
+            "SourceOriginalPolygonCornerPrimitives",
+            "SourceOriginalPolygonWordPrimitiveSum",
+            "SourceOriginalPrimitivePolygonWord",
+            "SourceOriginalConstructedPrimitivePolygon"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership145For6069.log",
+            "sha256": "27515238DA050165A00D53F158CBD7C4F13F37AA7786B6C4443EF910357ACD78",
+            "sourceSha256": "2FA14E707E432D86259A7706B581E98BE9E19833F56055FC9638F3E861CE6675"
+          }
+        },
+        {
+          "modules": [
+            "SourceCellPolygonWordChains",
+            "SourceOriginalCycleIntegralSums",
+            "SourceOriginalWordPeriodMatrix",
+            "SourceOriginalJumpPeriodClosure",
+            "SourceOriginalCyclePeriodPolygonData",
+            "SourceOriginalCyclePeriodMatrixAssembly",
+            "SourceOriginalConstructedPeriodMatrix"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership146For6069.log",
+            "sha256": "53FCC46BE65342C39E11411B521FC57F8F16BBD4B29704DB197DA287EFB66C94",
+            "sourceSha256": "A68A71A08539E83D7AC1EE170CF4FFB297AC73F4695B4ABADD2DBB7ACCB68FCE"
+          }
+        },
+        {
+          "modules": [
+            "SourcePathAtlasJumpClosure",
+            "SourceOriginalCoordinatePrimitiveComparison",
+            "SourceOriginalCellPrimitiveLocalDifference",
+            "SourceOriginalCellCarrierNeighborhoods",
+            "SourceOriginalPairedArcEquality",
+            "SourceOriginalCellJumpDifferences",
+            "SourceOriginalPathPrimitiveJumps",
+            "SourceOriginalRegularLoopJumpClosure",
+            "SourceOriginalConstructedRegularPeriods"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership147For6069.log",
+            "sha256": "5D2600A43367302AB50131CADBB169D23EDDCED3038717E12B4900EE526001B4",
+            "sourceSha256": "2635C8270F9A20B7532375CD33FC995FD5A4F3E06A75B1102BA237F4D153683A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalGeneratingLoopReindex",
+            "SourceOriginalConstructedGeneratingLoops",
+            "SourceOriginalDiscretePeriodLattice"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership148For6069.log",
+            "sha256": "BE88B06F691869B7D16E67C28D080997DEE4E0A9E96B2DADF3277D99D54EBBBA",
+            "sourceSha256": "599328D9F4F6869AD4F15AF9CBE6CAF281159FA72A5D2B256FC160D096A105B3"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicChordAntisymmetry",
+            "SourceCellPolygonWordAntisymmetry",
+            "SourcePeriodMatrixLatticeUnimodularity",
+            "SourceOriginalComplementaryPeriodSpan",
+            "SourceOriginalComplementaryWordMatrix",
+            "SourceOriginalUnimodularPeriodPolygon",
+            "SourceOriginalConstructedUnimodularPeriods"
+          ],
+          "count": 59,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership149For6069.log",
+            "sha256": "357D53347E398E0E5B5BD15D8D188C6A9573BEBD4F45290671CAFA812D2C0161",
+            "sourceSha256": "475E21F22D9B7147A4BBE455F059CB6B04CF3E6132AEF44B01F9BD46D1E7AD89"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeOwnership6069.log",
+        "sha256": "8024DDF6261A0DB81102552971AA77DE73864268CAD79AA34214A9675CD6B3F7",
+        "sourceSha256": "B64968EEB2D8973AD8D403B00B460A37B227007B0BE0065FF930418C0DC2CC66"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-225931-909.log",
+        "sha256": "C1E669D63AA22B933113C13B253AD2DD34F44EE4106D35537E2C5BAFAC2A361B"
+      }
+    },
+    "scratchToProductionCountReason": "All 210 distinct names from 212 exhaustive scratch checks are retained: 210 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The Riemann bilinear relation, residue reciprocity, meromorphic period generation and full raw reciprocity remain required for the original Abel converse. Exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Discreteness is proved; it does not by itself identify original Pic0 with the complex torus. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6069": {
+    "recordedUTC": "2026-10-22T08:55:36.503911+00:00",
+    "log": "logs/dubon-build-20261022-003749-371.log",
+    "sha256": "37B3DC87A6F661966F7D8E9CB36EBDD59B696D5C8806C33E79A32FD59F4842FD",
+    "bytes": 10516935,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6069,
+    "projectTheorems": 42190,
+    "registeredConsumers": 18628,
+    "registeredConstructions": 1294,
+    "declarations": 25701,
+    "generated": 23958,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_003255.log",
+    "foundationSha256": "85D786606B1497E457BDF50CD219E4DAF219557A55405198D769DDF52C1C4B3D",
+    "countReconciliation": {
+      "previousTheorems": 41981,
+      "focusedTheorems": 210,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp"
+      ],
+      "addedTheorems": 209,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeOwnership6069.log",
+      "ownershipSha256": "8024DDF6261A0DB81102552971AA77DE73864268CAD79AA34214A9675CD6B3F7"
+    },
     "scratchToProductionOwnership": {
       "scratchSum": 212,
       "scratchDistinct": 210,

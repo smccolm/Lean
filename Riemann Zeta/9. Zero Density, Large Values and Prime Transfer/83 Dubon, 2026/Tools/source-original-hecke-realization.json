@@ -1,0 +1,669 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurveCorrespondencePlaces",
+    "Dubon2026.SourceOriginalHeckeArithmeticPlaces",
+    "Dubon2026.SourceOriginalHeckeArithmeticDivisors",
+    "Dubon2026.SourceOriginalHeckeArithmetic",
+    "Dubon2026.SourceOriginalTateHeckeArithmetic",
+    "Dubon2026.SourceCurveCorrespondenceRamification",
+    "Dubon2026.SourceOriginalHeckeComplexPlaces",
+    "Dubon2026.SourceOriginalHeckeComplexDivisors",
+    "Dubon2026.SourceOriginalHeckeComplexPicard",
+    "Dubon2026.SourceOriginalFieldHomExt",
+    "Dubon2026.SourceOriginalHeckeAlphaGerms",
+    "Dubon2026.SourceOriginalHeckeAlphaPlaces",
+    "Dubon2026.SourceGermPullback",
+    "Dubon2026.SourceOriginalHeckeBetaGerms",
+    "Dubon2026.SourceOriginalHeckeBetaPlaces",
+    "Dubon2026.SourceOriginalTateComplexHecke",
+    "Dubon2026.SourceOriginalHeckeAnalyticRamification",
+    "Dubon2026.SourceOriginalHeckeFiniteFiber",
+    "Dubon2026.SourceOriginalHeckeUpperEquiv",
+    "Dubon2026.SourceHeckeFiberStabilizer",
+    "Dubon2026.SourceHeckeCosetFiberCount",
+    "Dubon2026.SourceOriginalHeckeFiberOrbits",
+    "Dubon2026.SourceOriginalHeckeCosetMultiplicity",
+    "Dubon2026.SourceOriginalHeckeAnalyticDivisor"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> arithmetic and complex compatibility, exact analytic divisor coset formula and original period comparison.",
+  "discharged": "The actual Picard Hecke operator and its Tate endomorphism commute with the original arithmetic Galois action. The genuine Qbar-to-complex Picard and Tate comparisons intertwine these Hecke operators. The literal alpha and beta maps restrict the actual analytic places as identity and dilation, with exact normalized ramification equations. The existing reverse monic relation proves analytic exhaustion of each prime beta fiber; actual integral conjugation, orbit separation and stabilizer orders identify every multiplicity. Thus the original beta-pullback/alpha-pushforward divisor operator equals the genuine quotient-coset sum at every analytic point, including elliptic points and primes dividing the level. No arithmetic-equivariance, complex Hecke-naturality, analytic-place, fiber-exhaustion or ramification-count premise remains.",
+  "boundary": "The original regular-differential to cusp-period comparison and Hecke compatibility with the original path-period lattice remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. The proved divisor formula uses the genuine quotient cosets; an equality with a separately written explicit representative formula is not claimed here. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "The 6,225-module production aggregate and focused Hecke comparison audit pass with zero diagnostics. Four declaration-value audits verify actual arithmetic equivariance, complex Picard/Tate Hecke compatibility and the ramification-correct analytic divisor coset formula. Original period compatibility, rank-two Hecke/Frobenius/inertia comparison and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.originalTateHecke",
+    "Dubon2026.SourceFunctionField.originalTateHecke_apply",
+    "Dubon2026.SourceFunctionField.originalTateHecke_commute",
+    "Dubon2026.SourceFunctionField.originalHeckePicard_arithmetic",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_originalHeckePicard",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_originalHeckeDivisor",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_originalHecke",
+    "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeAlpha",
+    "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.originalHeckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.originalHeckeBeta_analytic_ramification",
+    "Dubon2026.germPullback",
+    "Dubon2026.SourceFunctionField.originalHeckeDivisor_single_analytic_cosets",
+    "Dubon2026.SourceFunctionField.originalHeckeCosetPoint"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T12:32:51.009245+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveCorrespondencePlaces",
+        "SourceOriginalHeckeArithmeticPlaces",
+        "SourceOriginalHeckeArithmeticDivisors",
+        "SourceOriginalHeckeArithmetic",
+        "SourceOriginalTateHeckeArithmetic"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCorrespondencePlaces.lean",
+          "sha256": "267792E414260CD2169B2AD0ADFDDCF0E7211E081EC7E0767A7C760B693760AE",
+          "oleanSha256": "7459242C6EF904F62F221580FA321EA0E0A55820097D580B3F950D3AA7F7DC11"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeArithmeticPlaces.lean",
+          "sha256": "0A8A893FBDA1DC45D08AAF0C6E0AEC03AC9F1E8404F3AB9C7C30C29B1393A823",
+          "oleanSha256": "AA3BDB1A798482CBB1BE0430B1F9D5DF375FF8166DEEF5EA6528477D9B63A089"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeArithmeticDivisors.lean",
+          "sha256": "5DC9FE51D407672E9C002DFC45E85F767C1154F6098F6E6560BA8C3FFCAB2231",
+          "oleanSha256": "6C8F3BAD4E16C29C46410DACBC25E2B77230445A485144F96404014F05AA8F67"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeArithmetic.lean",
+          "sha256": "03E21A16F8F4B762DB1BA4141EE722A8049D926BE37DB6FDB5A2319B59B8B96B",
+          "oleanSha256": "8037D71030EBDA14373CE23ABE1C6D87A199088D8CB5F0E4DAE4B6443E186043"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeArithmetic.lean",
+          "sha256": "786260D0D6145619A0E42949A5676A0967B6F58C2D490DD503FA21479F4EB2A8",
+          "oleanSha256": "223CE6EF5A97944ABC39E4AB32EFEA23FA8C4B38B593A295554736763DE4C5AB"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.mem_restrictAlong_iff",
+        "Dubon2026.SourceCurve.Place.ord_restrictAlong",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_apply",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong_single",
+        "Dubon2026.SourceFunctionField.mem_originalArithmeticPlace_iff",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_restrictAlong",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_ramificationAlong",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisorEquiv_single",
+        "Dubon2026.SourceFunctionField.original_finitePullbackAlong_arithmetic",
+        "Dubon2026.SourceFunctionField.original_geometricPushforwardAlong_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckePicard_arithmetic",
+        "Dubon2026.SourceFunctionField.originalTateHecke_apply",
+        "Dubon2026.SourceFunctionField.originalTateHecke_galois",
+        "Dubon2026.SourceFunctionField.originalTateHecke_commute",
+        "Dubon2026.SourceCurve.Place.restrictAlong",
+        "Dubon2026.SourceCurve.Place.ramificationAlong",
+        "Dubon2026.SourceFunctionField.originalTateHecke"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.mem_restrictAlong_iff",
+        "Dubon2026.SourceCurve.Place.ord_restrictAlong",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_apply",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong_single",
+        "Dubon2026.SourceFunctionField.mem_originalArithmeticPlace_iff",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_restrictAlong",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_ramificationAlong",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisorEquiv_single",
+        "Dubon2026.SourceFunctionField.original_finitePullbackAlong_arithmetic",
+        "Dubon2026.SourceFunctionField.original_geometricPushforwardAlong_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckePicard_arithmetic",
+        "Dubon2026.SourceFunctionField.originalTateHecke_apply",
+        "Dubon2026.SourceFunctionField.originalTateHecke_galois",
+        "Dubon2026.SourceFunctionField.originalTateHecke_commute"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.restrictAlong",
+        "Dubon2026.SourceCurve.Place.ramificationAlong",
+        "Dubon2026.SourceFunctionField.originalTateHecke"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeArithmeticAudit5.log",
+      "logSha256": "1834012BD58A9F6050D3D1257F8DCF702E521B660787551086ABF666E8A90950",
+      "auditSha256": "96F735B5A6A95BCB39A29667075F538D40488E8C9DAB46230133CD30F32BEF4D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeArithmeticDependencyAudit5.log",
+      "dependencyAuditSha256": "75B89F3A9AE0601DFD8D48035FA498A2909FB8355F9C250EF5D74F55680654B9",
+      "dependencyAuditSourceSha256": "846DEBF31D2C54FBBBB05D51BF77DD593C7F69473D551E192686176B4BAB2A5D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateHecke",
+        "Dubon2026.SourceFunctionField.originalTateHecke_apply",
+        "Dubon2026.SourceFunctionField.originalTateHecke_commute",
+        "Dubon2026.SourceFunctionField.originalHeckePicard_arithmetic"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> original Jacobian Tate Hecke realization -> actual Picard and Tate Hecke arithmetic equivariance.",
+      "discharged": "Actual original place restriction commutes with coefficient automorphisms. Exact normalized orders prove ramification invariance. The actual finite pullback and geometric pushforward are therefore arithmetic-equivariant. The original alpha and beta field identities supply all commutation premises, so the genuine Picard Hecke operator is arithmetic-equivariant. Its actual coordinatewise Tate endomorphism commutes with the original Galois representation. No Picard or Tate Hecke equivariance premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Compatibility with the actual Qbar-to-complex Picard map and original period lattice, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-arithmetic-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "0A34168B5B633B41667D33C7557D58A5FEFB9A9DD58E3BE291787BF68A944247"
+    },
+    {
+      "recordedUTC": "2026-10-22T12:41:51.780481+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveCorrespondenceRamification",
+        "SourceOriginalHeckeComplexPlaces",
+        "SourceOriginalHeckeComplexDivisors",
+        "SourceOriginalHeckeComplexPicard"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCorrespondenceRamification.lean",
+          "sha256": "7C271130EDBE451136C8088D52D0263B8379603AC90A27E322FA683C670882DE",
+          "oleanSha256": "AA482B47F8CB07537A12838D17BD8183CD96087EA0AA01BA635CEE3E5A4833BB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeComplexPlaces.lean",
+          "sha256": "30B8B0129360EF4B5F372C73F317655AA209E55DF95B36DB05F2283D7B286CCA",
+          "oleanSha256": "BD64A6ADE14A43CF5C81A2B811292BBC9B288F987377CB6F4844D72C5F4D9FFD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeComplexDivisors.lean",
+          "sha256": "B774490D203FAAB84BB8F366E95F69A7A4FA38444ACD196E98A3ADA94339E0F4",
+          "oleanSha256": "A9BEB4FDBA6C99117A7A0E942E4A2F347796354D2C01F96706E20259E2FEF5D1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeComplexPicard.lean",
+          "sha256": "EE0A479F8444323E89645DBE85525C5D2CBE14AD15286F809ED57659463D1E9C",
+          "oleanSha256": "8E936FC4E42BD279CC5AB8CDCDA8B4AAB405EB58EE8FD3E35219C8E41CCBF53C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.ramificationAlong_pos",
+        "Dubon2026.SourceCurve.Place.comap_restrictAlong_eq_of_commute",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.restrictAlong_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.ramificationAlong_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.restrictAlong_ne_liftPlace_of_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finitePullbackAlong_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.geometricPushforwardAlong_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_originalHeckePicard"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.ramificationAlong_pos",
+        "Dubon2026.SourceCurve.Place.comap_restrictAlong_eq_of_commute",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.restrictAlong_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.ramificationAlong_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.restrictAlong_ne_liftPlace_of_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finitePullbackAlong_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.geometricPushforwardAlong_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_originalHeckePicard"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeComplexAudit4.log",
+      "logSha256": "CFD4C752A0927DE2ECF86A4132245ACDFA49EB07C84CCDACF9916F4249894C40",
+      "auditSha256": "4902FEBA6594950D3FE779FBF61DF8D3AF06BDE0158F5B4776AD52633386C511",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeComplexDependencyAudit4.log",
+      "dependencyAuditSha256": "CC7CB453257AD2F1694647DB13B970E6A6F3D0B52709060F686F7A4EDC17FBF8",
+      "dependencyAuditSourceSha256": "AEDEBD51F93BA77D75FBFBD07B719CAEDE787A0EB4B83A5AD4BAE92EAF2FB5D7",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_originalHeckePicard",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_originalHeckeDivisor"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> original Jacobian Tate Hecke realization -> exact Hecke compatibility of the actual Qbar-to-complex Picard map.",
+      "discharged": "The literal original place extension commutes with restriction along the compatible finite field maps, and exactly preserves their ramification orders. Positive ramification rules out an arithmetic restriction for a complex place outside the arithmetic image. These facts prove finite-pullback and geometric-pushforward conorm naturality on every place. The actual alpha and beta coefficient identities then prove the genuine Qbar-to-complex Picard map intertwines the original Hecke operators. No Picard base-change or divisor conorm naturality premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The induced actual Tate Hecke comparison is ready for the existing functoriality consumer after production assembly. Compatibility with the original period lattice, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-complex-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "067E15C3C6096483C919529174A2603FB87B6224CBFBE76E14B5568BE3013130"
+    },
+    {
+      "recordedUTC": "2026-10-22T13:09:39.548008+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalFieldHomExt",
+        "SourceOriginalHeckeAlphaGerms",
+        "SourceOriginalHeckeAlphaPlaces",
+        "SourceGermPullback",
+        "SourceOriginalHeckeBetaGerms",
+        "SourceOriginalHeckeBetaPlaces",
+        "SourceOriginalTateComplexHecke",
+        "SourceOriginalHeckeAnalyticRamification"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFieldHomExt.lean",
+          "sha256": "CB3F86B82FC900249F229DC38DFD2AFD26027B2B1FB693A7A2AB245B83FA0AB6",
+          "oleanSha256": "3C4242AA562294EE323A33DBAEC98F9B278B32CE9484946CAFF9CD2CEDCDCA7C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAlphaGerms.lean",
+          "sha256": "51A6CF0C0AE08D1D4F3A8542936133DB59D4965A981B7E7FD533CBC4009E0736",
+          "oleanSha256": "C97304ECB3BA97BD00369BC63E96FF6062D975C71C0110FA5D9F5BD523B10A4F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAlphaPlaces.lean",
+          "sha256": "EC430A04981B16259CD4ECE00200F043724014D5CA673A81AC67012CE060A0CC",
+          "oleanSha256": "A345249593335173E76EEB4B18D503A167006D42FF78E3A55D9DC8881FF1F2AE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGermPullback.lean",
+          "sha256": "01CCF9F6154CA9820B62D28C4855312B91BD254B7CC967B8FC5632CF9E1E010B",
+          "oleanSha256": "C860CE0A86CD9FBDE981FEB87741418DEEBD1F9E83B650F2AAFCA4803980667A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeBetaGerms.lean",
+          "sha256": "77B8FF9F5BA7B1599328073F5D0D76AB43AAB999FF6084D42441D0336BA5DA95",
+          "oleanSha256": "D90E5241419DE1BA42177204507DFA3E03864D2FBC93485ABA656324A962EC80"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeBetaPlaces.lean",
+          "sha256": "A273E81F4846AAB3E855D6051B9E21EB2FE47C49257CCDEDF236083F594A4A10",
+          "oleanSha256": "6C1B87BBA5ECC2A8EAB3ADAD7EC3DA86C386D526742BC78743E4917D1EB4070A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateComplexHecke.lean",
+          "sha256": "657D82C863890328BBD76924F07F1DA73872A8F2EF161CAB497C86D3D2B6A4BF",
+          "oleanSha256": "BE0CB205AA38F5B10E35D6A380506D13E041A883C6158052C8ADC1106A12A5E7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticRamification.lean",
+          "sha256": "2DF3F5DB870B1FF15D067B62FB550E950A52A920C1F791897F466E9DCB0BADAF",
+          "oleanSha256": "75AFDECF0EC717281CCA40B0DE57089D354935DA1CC084AD0D6D9F38D0F48165"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_field_ringHom_ext",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_heckeAlpha",
+        "Dubon2026.SourceFunctionField.original_realize_heckeAlpha_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_heckeAlpha",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeAlpha",
+        "Dubon2026.germPullback_coe",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_jOver_coe",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_jNOver_coe",
+        "Dubon2026.SourceFunctionField.tendsto_dilation_nhdsNE",
+        "Dubon2026.SourceFunctionField.ofComplex_dilation",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_heckeBeta",
+        "Dubon2026.SourceFunctionField.original_realize_heckeBeta_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_heckeBeta",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeBeta",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_analytic_ramification",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_analytic_ramification",
+        "Dubon2026.germPullback"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_field_ringHom_ext",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_heckeAlpha",
+        "Dubon2026.SourceFunctionField.original_realize_heckeAlpha_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_heckeAlpha",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeAlpha",
+        "Dubon2026.germPullback_coe",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_jOver_coe",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_jNOver_coe",
+        "Dubon2026.SourceFunctionField.tendsto_dilation_nhdsNE",
+        "Dubon2026.SourceFunctionField.ofComplex_dilation",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_heckeBeta",
+        "Dubon2026.SourceFunctionField.original_realize_heckeBeta_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_heckeBeta",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeBeta",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_analytic_ramification",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_analytic_ramification"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.germPullback"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationsAudit8.log",
+      "logSha256": "09461E63A9AD2138CE2BBBA26FE08BB6594B0E50CC2CCB490A2A24AEDEB214A8",
+      "auditSha256": "E570CD15FD34EC66B86B32BA4011FF9F212C9D92D20966BCC7CCCBC0C01E580E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationsDependencyAudit8.log",
+      "dependencyAuditSha256": "83222C90BCECACFAAB5E4BD52569F2DCA1DA702CF44D88C269783AB6188191BE",
+      "dependencyAuditSourceSha256": "E9DCC7E8E0BCAC339A780A0E09D7FFBF5A600005F1647C791EB16E55A5F0B715",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeAlpha",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeBeta",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_analytic_ramification",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_analytic_ramification",
+        "Dubon2026.germPullback"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> analytic divisor formula and original period comparison.",
+      "discharged": "The actual Qbar-to-complex Tate comparison intertwines the genuine Picard Hecke operators, using proved Picard compatibility rather than a naturality premise. Equality on the two original field generators identifies the germs of alpha with the identity and beta with nonzero complex dilation. Native meromorphic-order invariance then identifies the actual restricted analytic places and proves the exact normalized ramification equations, including elliptic points. No analytic degeneracy-place or ramification compatibility assumption remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual divisor double-coset formula and original period-lattice comparison remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-realizations-8-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "03217F074D11FB3F5441164BF3966EDC6B776E92429DF62C2E2F60B033CB43C7"
+    },
+    {
+      "recordedUTC": "2026-10-22T13:24:19.922268+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalHeckeFiniteFiber",
+        "SourceOriginalHeckeUpperEquiv",
+        "SourceHeckeFiberStabilizer",
+        "SourceHeckeCosetFiberCount",
+        "SourceOriginalHeckeFiberOrbits",
+        "SourceOriginalHeckeCosetMultiplicity",
+        "SourceOriginalHeckeAnalyticDivisor"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeFiniteFiber.lean",
+          "sha256": "4C13ADBD5B65FBA0B3A567A033CDF9AFB0470850CA91680427A81A733626F851",
+          "oleanSha256": "0AECEFA2598C1CA484AAD13E70B8EEC6A62A585DC9DDC56B226980220D08416B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeUpperEquiv.lean",
+          "sha256": "5C37DFA7A8586A03C0BEAE5A1E94252329EDD8F408EE920E2E8614E3A467C2CF",
+          "oleanSha256": "D17CB56C4A7BFF7A2CCDDB08E9FE39C151FC64ECE512F05398C30D9CBB51DFF2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFiberStabilizer.lean",
+          "sha256": "A9F039CB31CFAFCFB9C902187E769BF5EF180DD9150A3BC03451EE016D2E4A6E",
+          "oleanSha256": "EE7C90AE126CE8A031F68221557D609489D218519ADCA681EF260CADB21987B4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeCosetFiberCount.lean",
+          "sha256": "04D8A0DE75B3FE1B6D7AB9CF36C0A634EB5C5D3F573AAB7850DAEE036986F4C6",
+          "oleanSha256": "89FDAF042551D9B8E7B8F30B0B7CE1486BBDFECDA827B021CF43D38855DF3329"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeFiberOrbits.lean",
+          "sha256": "7DE74191AAD746E5A658D51EC006200AA86C743C56DCAF3F72C78921C58C579C",
+          "oleanSha256": "76C936E74A99C4862FC3FAFD144B5C9C1776C1687AAECE26C5FFF0DEDD734885"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeCosetMultiplicity.lean",
+          "sha256": "DE1592913CD53A48BEFB2A33FF878F8EBAEC9E6AE150130378CD27E13BB595AC",
+          "oleanSha256": "648A9E3827C2433A941FFF584F3C473CD9B554782ADBED47FA1739858B5EABBB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisor.lean",
+          "sha256": "10C0CF4A0283FEEC72B5EE454A998A55CC354115DBF2174E8ED7EE6A1B9B9BE3",
+          "oleanSha256": "3D99FF967EC4509362A94A066098B7775D6214CDC112DB7749E055005A9489EC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_reverse_relation",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_j_mem_of_restrict_analytic",
+        "Dubon2026.SourceFunctionField.exists_original_analytic_place_of_restrict_heckeBeta",
+        "Dubon2026.originalHeckeRaisedToUpper_toRaised",
+        "Dubon2026.originalHeckeUpperToRaised_toUpper",
+        "Dubon2026.originalHeckeUpperToRaised_matrix",
+        "Dubon2026.originalHeckeUpperToRaised_smul",
+        "Dubon2026.HeckeFiber.card_stabilizer_eq_card_filter_mul",
+        "Dubon2026.HeckeFiber.card_stabilizer_eq_coset_filter_mul",
+        "Dubon2026.SourceFunctionField.originalHecke_stabilizer_card",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_iff_heckeUpper_orbit",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_stabilizer_ramification",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_dilation",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_restrict_beta",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_ramification_eq_coset_card",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_pullback_single_analytic",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_single_analytic_cosets",
+        "Dubon2026.originalHeckeUpperToRaised",
+        "Dubon2026.originalHeckeRaisedToUpper",
+        "Dubon2026.originalHeckeUpperEquiv",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_reverse_relation",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_j_mem_of_restrict_analytic",
+        "Dubon2026.SourceFunctionField.exists_original_analytic_place_of_restrict_heckeBeta",
+        "Dubon2026.originalHeckeRaisedToUpper_toRaised",
+        "Dubon2026.originalHeckeUpperToRaised_toUpper",
+        "Dubon2026.originalHeckeUpperToRaised_matrix",
+        "Dubon2026.originalHeckeUpperToRaised_smul",
+        "Dubon2026.HeckeFiber.card_stabilizer_eq_card_filter_mul",
+        "Dubon2026.HeckeFiber.card_stabilizer_eq_coset_filter_mul",
+        "Dubon2026.SourceFunctionField.originalHecke_stabilizer_card",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_iff_heckeUpper_orbit",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_stabilizer_ramification",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_dilation",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_restrict_beta",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_ramification_eq_coset_card",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_pullback_single_analytic",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_single_analytic_cosets"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.originalHeckeUpperToRaised",
+        "Dubon2026.originalHeckeRaisedToUpper",
+        "Dubon2026.originalHeckeUpperEquiv",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisorAudit7.log",
+      "logSha256": "F7914339AB2A5429B4A5F47CD4B4C1FD27488DA5D83D8565AC81FBD920627543",
+      "auditSha256": "C867B7447342D7D031691A8D1912EF9F8ED12CE30FF9A48A2FBB8D910166FE69",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 36,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisorDependencyAudit7.log",
+      "dependencyAuditSha256": "C4A6A132317EA23C127F25249FA378EF4B661B2C1E7F017B593648CD6219EA6A",
+      "dependencyAuditSourceSha256": "14B69D5188B367643D481A069947E9B0E236D7428BAEEF9122067B503C13B075",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_single_analytic_cosets",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> original period comparison -> exact analytic divisor coset formula.",
+      "discharged": "The genuine original Hecke divisor correspondence on every analytic point equals the sum of actual inverse-dilation points over the original upper congruence quotient. The existing reverse monic relation proves analytic exhaustion of the beta fiber. Existing integral conjugation gives the raised-level subgroup equivalence without coprimality, and actual analytic orbit separation with normalized stabilizer orders gives every ramification multiplicity. The formula covers elliptic points and primes dividing the level. No abstract place dictionary, polynomial symmetry, free-action, finite-fiber exhaustion or multiplicity premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The original regular-differential to cusp-period comparison and Hecke compatibility with the original path-period lattice remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-analytic-divisor-7-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B9FF6DFADF2D8E868CB9AE8D1643BD7317A7732F26E12C4B0E9C89C5C45A66A9"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-hecke-arithmetic-5-reuse-review-20261022.json",
+    "Tools/source-original-hecke-complex-4-reuse-review-20261022.json",
+    "Tools/source-original-hecke-realizations-8-reuse-review-20261022.json",
+    "Tools/source-original-hecke-analytic-divisor-7-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6225": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeArithmeticDependencyAudit5Production6225.log",
+        "sha256": "75B89F3A9AE0601DFD8D48035FA498A2909FB8355F9C250EF5D74F55680654B9",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalTateHecke",
+          "Dubon2026.SourceFunctionField.originalTateHecke_apply",
+          "Dubon2026.SourceFunctionField.originalTateHecke_commute",
+          "Dubon2026.SourceFunctionField.originalHeckePicard_arithmetic"
+        ],
+        "sourceSha256": "3FC6EE1C4C6CEDC3B8AFD761C34EC3151AF8D83278F52B28EA4CD9B85E12A285"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeComplexDependencyAudit4Production6225.log",
+        "sha256": "CC7CB453257AD2F1694647DB13B970E6A6F3D0B52709060F686F7A4EDC17FBF8",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_originalHeckePicard",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_originalHeckeDivisor"
+        ],
+        "sourceSha256": "B5A300BB1A80188284F9382A274D5988A0AD7C5415939E13479BBA4B2189F942"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationsDependencyAudit8Production6225.log",
+        "sha256": "83222C90BCECACFAAB5E4BD52569F2DCA1DA702CF44D88C269783AB6188191BE",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_originalHecke",
+          "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeAlpha",
+          "Dubon2026.SourceFunctionField.originalAnalyticPlace_restrict_heckeBeta",
+          "Dubon2026.SourceFunctionField.originalHeckeAlpha_analytic_ramification",
+          "Dubon2026.SourceFunctionField.originalHeckeBeta_analytic_ramification",
+          "Dubon2026.germPullback"
+        ],
+        "sourceSha256": "8833BEE84BC06DE158D91FE6841EF1D5B8E1B2BFC52557E7FE4E1D5D59D4ECB7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisorDependencyAudit7Production6225.log",
+        "sha256": "C4A6A132317EA23C127F25249FA378EF4B661B2C1E7F017B593648CD6219EA6A",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalHeckeDivisor_single_analytic_cosets",
+          "Dubon2026.SourceFunctionField.originalHeckeCosetPoint"
+        ],
+        "sourceSha256": "420DAA1785973E8E3E33CCD2A1D99A50555B5ED6A13E3CD40598C7C1E3744C88"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationProductionAudit6225.log",
+    "sha256": "23EEE835CB6C9E06451A6D1335B4777EB42FA0E024F329C29AD49A85B3032DF3",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-realization-production-build-6225.log",
+    "aggregateSha256": "4D040D607B18406AC4830BB3D60A2ECF47DC43A3C197B0119997BAD480401255",
+    "productionModules": 6225,
+    "incrementModules": 24,
+    "axiomChecks": 66,
+    "exhaustiveIncrementTheorems": 86,
+    "linterScopes": 24,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 87,
+    "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. The original Picard groups, Tate functor, analytic places, normalized orders and literal Hecke field maps are retained. No final source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 87,
+      "scratchDistinct": 86,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAnalyticDivisor._proof_1": "_private.Dubon2026.SourceOriginalHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1"
+      },
+      "generatedNameReason": "The identical private local Fintype instance has one compiler-generated proof-name disambiguator in the scratch import graph. Only its exact observed name is normalized; both ownership audits and identical source bodies are checked.",
+      "generatedNameSourceEvidence": {
+        "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisor.lean",
+        "scratchSha256": "10C0CF4A0283FEEC72B5EE454A998A55CC354115DBF2174E8ED7EE6A1B9B9BE3",
+        "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAnalyticDivisor.lean",
+        "productionSha256": "8C25BFD4241AD543946EF896D8F84DD87AFA604BD46BD784681AD4397BEFF38C",
+        "equality": "Entire source bodies identical after import qualification only.",
+        "declaration": "private local instance : Fintype (Gamma0 N ⧸ heckeUpperSubgroup N ℓ) :=\n  sourceHeckeUpperFintype N ℓ"
+      },
+      "productionFocused": 86,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong.congr_simp": [
+          {
+            "scope": "SourceHeckeRealizationScratchOwnership173For6225",
+            "module": "Dubon2026.SourceOriginalHeckeArithmeticDivisors"
+          },
+          {
+            "scope": "SourceHeckeRealizationScratchOwnership174For6225",
+            "module": "Dubon2026.SourceOriginalHeckeComplexDivisors"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveCorrespondencePlaces",
+            "SourceOriginalHeckeArithmeticPlaces",
+            "SourceOriginalHeckeArithmeticDivisors",
+            "SourceOriginalHeckeArithmetic",
+            "SourceOriginalTateHeckeArithmetic"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership173For6225.log",
+            "sha256": "650F65BC035D8BE751F9B361D22D4212CF914441E8680F1F8537F36FFEFFAF0E",
+            "sourceSha256": "A2AC3AF68B709517FC6B2ABD90A3F967B047C424F5C114D324F709786E281A7D"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCorrespondenceRamification",
+            "SourceOriginalHeckeComplexPlaces",
+            "SourceOriginalHeckeComplexDivisors",
+            "SourceOriginalHeckeComplexPicard"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership174For6225.log",
+            "sha256": "460E78F20DBB852D72242001B689C638B8EF759F24C863EF73ED6FCD51CAAB74",
+            "sourceSha256": "62C9EA0DFF56AC14D7E63620BCD0BA01F4C5CFC2D3A2B00A26A14CA0EFD96B8E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalFieldHomExt",
+            "SourceOriginalHeckeAlphaGerms",
+            "SourceOriginalHeckeAlphaPlaces",
+            "SourceGermPullback",
+            "SourceOriginalHeckeBetaGerms",
+            "SourceOriginalHeckeBetaPlaces",
+            "SourceOriginalTateComplexHecke",
+            "SourceOriginalHeckeAnalyticRamification"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership175For6225.log",
+            "sha256": "81F7C1E2001CB0CDE6E53AB71717F50881894BC4118979F25702BA87572291A4",
+            "sourceSha256": "B71BC79501A00BFC1A49B6DAF33D7E170BB196CA2B50F87B0F1F575C226233F0"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeFiniteFiber",
+            "SourceOriginalHeckeUpperEquiv",
+            "SourceHeckeFiberStabilizer",
+            "SourceHeckeCosetFiberCount",
+            "SourceOriginalHeckeFiberOrbits",
+            "SourceOriginalHeckeCosetMultiplicity",
+            "SourceOriginalHeckeAnalyticDivisor"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership176For6225.log",
+            "sha256": "FEAEA286DD8D8C4AC6849092128B5F85D3F0BDBCD87BC96CC268EA2A365E49D5",
+            "sourceSha256": "BD6D98AAFDD2163BE7035311433F1DF0DF712C49ADBB0210572D4B44B11E3A64"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationOwnership6225.log",
+        "sha256": "272F56570FA7586419CE4FAFCAFAF4C74D383D6F9D71003A85A8D784E1B14FBB",
+        "sourceSha256": "BB1D1D14EA8BEA34A552AF4098383F851BDE20EC6925725564C88402C260182D"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-060443-756.log",
+        "sha256": "D998A4EA9C2912E72C695F41C69DEAE15CF6FB03A9BF8417180457D5B2C175AA"
+      }
+    },
+    "scratchToProductionCountReason": "All 86 distinct names from 87 exhaustive scratch checks are retained: 86 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original regular-differential to cusp-period comparison and Hecke compatibility with the original path-period lattice remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. The proved divisor formula uses the genuine quotient cosets; an equality with a separately written explicit representative formula is not claimed here. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

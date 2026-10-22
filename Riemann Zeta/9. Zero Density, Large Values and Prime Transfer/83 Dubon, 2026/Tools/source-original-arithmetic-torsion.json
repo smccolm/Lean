@@ -1,0 +1,1648 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceLaurentScalarIndependence",
+    "Dubon2026.SourceOriginalComplexCoefficientMap",
+    "Dubon2026.SourceOriginalComplexFieldExtension",
+    "Dubon2026.SourceOriginalComplexFieldIndependence",
+    "Dubon2026.SourceConstantFieldLocalCombinations",
+    "Dubon2026.SourceConstantFieldLocalRing",
+    "Dubon2026.SourceConstantFieldLocalFractions",
+    "Dubon2026.SourceConstantFieldResidueDigits",
+    "Dubon2026.SourceConstantFieldLocalDecomposition",
+    "Dubon2026.SourceOriginalComplexLocalExtension",
+    "Dubon2026.SourceCurveFiniteCoordinateValuations",
+    "Dubon2026.SourceOriginalComplexSpanSeparation",
+    "Dubon2026.SourceConstantFieldLocalUnits",
+    "Dubon2026.SourceConstantFieldExtensionOrders",
+    "Dubon2026.SourceConstantFieldValuationDomination",
+    "Dubon2026.SourceOriginalConstantFieldValuationExtension",
+    "Dubon2026.SourceOriginalConstantFieldPlaces",
+    "Dubon2026.SourceOriginalExtendedPlaceMap",
+    "Dubon2026.SourceOriginalDivisorConorm",
+    "Dubon2026.SourceOriginalComplexPicardMap",
+    "Dubon2026.SourceValuationIntegralCriterion",
+    "Dubon2026.SourceConstantFieldTraceOrders",
+    "Dubon2026.SourceConstantFieldTraceRegularity",
+    "Dubon2026.SourceOriginalNewCoordinatePlaces",
+    "Dubon2026.SourceOriginalComplexCoordinateTrace",
+    "Dubon2026.SourceCoordinateReducedFraction",
+    "Dubon2026.SourceConstantFieldRationalDescent",
+    "Dubon2026.SourceOriginalCoordinateDescent",
+    "Dubon2026.SourceConstantFieldCoordinateMap",
+    "Dubon2026.SourceConstantFieldCoordinateSpan",
+    "Dubon2026.SourceConstantFieldTraceReconstruction",
+    "Dubon2026.SourceOriginalComplexCoordinateBasis",
+    "Dubon2026.SourceOriginalComplexSpanDescent",
+    "Dubon2026.SourceConstantFieldOrderResidues",
+    "Dubon2026.SourceConstantFieldIndependentOrders",
+    "Dubon2026.SourceConstantFieldIndependentRepresentation",
+    "Dubon2026.SourceOriginalPrincipalDescent",
+    "Dubon2026.SourceOriginalComplexPicardInjectivity",
+    "Dubon2026.SourceReducedSpaceMinimum",
+    "Dubon2026.SourceOriginalReducedRiemannRochSpace",
+    "Dubon2026.SourceTranscendentalShift",
+    "Dubon2026.SourceTranscendentalTranslation",
+    "Dubon2026.SourceOriginalComplexConstantAutomorphisms",
+    "Dubon2026.SourceOriginalComplexTranslations",
+    "Dubon2026.SourceOriginalPrincipalDivisorIdentities",
+    "Dubon2026.SourceOriginalReducedDivisorInvariance",
+    "Dubon2026.SourceOriginalFiniteTorsionAction",
+    "Dubon2026.SourceOriginalFixedReducedDivisor",
+    "Dubon2026.SourceOriginalOffImageValues",
+    "Dubon2026.SourceOriginalTranslationOrbits",
+    "Dubon2026.SourceOriginalInvariantSupport",
+    "Dubon2026.SourceOriginalTorsionDivisorDescent",
+    "Dubon2026.SourceOriginalTorsionComparison"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> actual Qbar-complex torsion comparison -> exact place extension, principal-divisor descent, Picard injectivity and invariant reduced-divisor support descent.",
+  "discharged": "The literal Qbar-to-complex coefficient embedding preserves original linear independence. Every arithmetic place has one unique complex extension with unchanged normalized orders. The actual divisor conorm preserves degree and principal divisors; principal-divisor descent proves the induced original Picard map injective. For every nonzero n it is bijective on n-torsion: finite permutation action fixes a reduced representative, and translated j-value orbits exclude nonarithmetic support. Thus the literal original arithmetic Picard group has exactly n^(2g) n-torsion points, where g is explicitly the original complex genus. No place-extension, divisor-descent, finiteness, Picard-injectivity, torsion-preimage or torsion-count premise remains.",
+  "boundary": "The actual torsion preimages remove the comparison premise needed to construct the arithmetic-to-complex Tate equivalence. Tate realization with the actual period-lattice basis, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Arithmetic-genus invariance is not asserted by the explicit complex-genus count and is not needed for that next Tate comparison. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,174-module scope: all thirteen retained regressions, 42,723 exhaustive theorem checks, 18,858 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_linearIndependent",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.adjoin_range_fieldMap",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.complexScalarTower",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalFieldScalarTower",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_extended_place",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_fraction",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_expansion",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mem_torsion",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mk",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.forall_ne_liftPlace_of_comap_ne",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.forall_comap_ne_of_ne_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem_span",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.original_mem_span_of_regular_off_image",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.finite_original_arithmetic_torsion",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_reduced_space",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_translation",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.original_arithmetic_torsion_cardinality_complex_genus"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T09:14:19.026206+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceLaurentScalarIndependence",
+        "SourceOriginalComplexCoefficientMap",
+        "SourceOriginalComplexFieldExtension",
+        "SourceOriginalComplexFieldIndependence"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentScalarIndependence.lean",
+          "sha256": "BE41609448618C6E3549A0F6EF90012CAB4C54C30DF775A18B790C48955F70D4",
+          "oleanSha256": "A627BFBC7D437ACEF24FBB981437599E3FFF6201C2F525AE627E6DE4233C89AE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCoefficientMap.lean",
+          "sha256": "9C3C33DA372B90854329ACE67415098767B55507ED7567B65A9D40FEF745D54F",
+          "oleanSha256": "E954525044865A197A4D484E7BE756A58202BEA6C7692E49BE74DD440B747345"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexFieldExtension.lean",
+          "sha256": "8814C42739B76C097A372D96A24BB965BB6331AB2905338D4EE098BB1F0ED8C8",
+          "oleanSha256": "1AC7BFD1A21BCB7D02175B951D3DC8B0F8239E109646ADA3CB655407EFFEADBF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexFieldIndependence.lean",
+          "sha256": "6FFF3632817A9316C0BDFBF75779A698170B7D290E90F02C3D30316BD197EBE3",
+          "oleanSha256": "3D95394A76360336E3F167D19DC42BBE1F5C26B8AA9E1EB91B7DC9D1282DBD0D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.linearIndependent_coeffMap_algebraMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.coeffMap_sigma_constants",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.coeffMap_sigma_rational",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.coeffMap_sigma_mem_original",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_constants",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_j",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_jN",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexScalarTower",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalFieldScalarTower",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.adjoin_range_fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_linearIndependent",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.sigma",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexFieldAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalLaurentLinearMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.linearIndependent_coeffMap_algebraMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.coeffMap_sigma_constants",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.coeffMap_sigma_rational",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.coeffMap_sigma_mem_original",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_constants",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_j",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_jN",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexScalarTower",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalFieldScalarTower",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.adjoin_range_fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_linearIndependent"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.sigma",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexFieldAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalLaurentLinearMap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexFieldExtensionAudit4.log",
+      "logSha256": "88F4875E0996952D4C3ACB1CC3C873BCFC82E2EC0747D2F358C9F3DD14E35EE9",
+      "auditSha256": "12D562C50E4757F56F5525F3E55E26E3F3E3D1641690FD8FB9A740AEDD216D4B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 35,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexFieldExtensionDependencyAudit4.log",
+      "dependencyAuditSha256": "8CA063CCDD9AE2FC03D6ABC142A1C8A9E1F44F065AA29E5C1CEC3A60EB9B216E",
+      "dependencyAuditSourceSha256": "D25FA55CFB2C3128355B5EC7964900075CCCD67A53398D64205080343C15338C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_linearIndependent",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.adjoin_range_fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexScalarTower",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalFieldScalarTower"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> original place extension, divisor conorm and torsion descent -> actual Qbar-to-complex field embedding, commuting scalar towers, exact image generation and preserved linear independence.",
+      "discharged": "A fixed rational embedding of Qbar into the complex numbers acts on the literal original modular Laurent field. The actual j and level-j generators are preserved, and the embedded arithmetic field generates the original complex field. Both scalar towers commute. Every Qbar-linearly independent family of original arithmetic functions stays complex-linearly independent after this actual embedding, proved directly from Laurent coefficient coordinates.",
+      "boundary": "Scratch only; production promotion and verification pending. Exact place extension with normalized order preservation, principal-divisor transport and torsion descent remain required for Qbar-complex Picard torsion comparison. The complex n^(2g) cardinality is already proved. Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-field-extension-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A57E7CF44F0EB5CDA9B1A7A791C455CD294A0CD1DE0FF40F1155DF09793D0A28"
+    },
+    {
+      "recordedUTC": "2026-10-22T09:33:38.773172+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceConstantFieldLocalCombinations",
+        "SourceConstantFieldLocalRing",
+        "SourceConstantFieldLocalFractions",
+        "SourceConstantFieldResidueDigits",
+        "SourceConstantFieldLocalDecomposition",
+        "SourceOriginalComplexLocalExtension",
+        "SourceCurveFiniteCoordinateValuations",
+        "SourceOriginalComplexSpanSeparation",
+        "SourceConstantFieldLocalUnits",
+        "SourceConstantFieldExtensionOrders",
+        "SourceConstantFieldValuationDomination",
+        "SourceOriginalConstantFieldValuationExtension",
+        "SourceOriginalConstantFieldPlaces"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldLocalCombinations.lean",
+          "sha256": "0E6137B1C00271C62049C76EE1A803A4F3378A1B7184A1FF4E91A367255308E0",
+          "oleanSha256": "8AEC292DCF596E85A3ABF20E52BB60783BF76AC885573467B84DF08E3725629D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldLocalRing.lean",
+          "sha256": "A762A213486292E8D9BDDEE55B164596DE7E70F54ECE846FA214317090C63257",
+          "oleanSha256": "D57238C437C6F3158B526CF4E11B66AD6EAD4697D5B40981B2C9586CF6BEC7A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldLocalFractions.lean",
+          "sha256": "AE2AFE4F3592E9B5BD2AD8CE0D35FD243B7E97D71AFF0D412C5FDA8700E23ED5",
+          "oleanSha256": "11D35F8846135542502FCBA10FBF224EAE60238939A90B4816F2E5B56EA72C06"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldResidueDigits.lean",
+          "sha256": "8A1E0B1AC9BA798E6A8CD71BDE5AA153F63CC8EB6FE737D9ACD8618CA429D808",
+          "oleanSha256": "4E9401B01C028FB8DF752799CB4F783685B183C56ED8171C742BEC30AB334623"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldLocalDecomposition.lean",
+          "sha256": "72A0B39E4C14623503E13CBC4086322D30FEBE85837CD1A71E2DF894BA5173A1",
+          "oleanSha256": "5C6012071DE70947FB684CF7F7A3C3BFF7B7A46F1EE230DD3B7CD7A982A4A985"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexLocalExtension.lean",
+          "sha256": "EA36DC67E485C630402C383398824F917599345B8ADDBB42FC07AEFA6FD1B916",
+          "oleanSha256": "77FA4E44C11C8B2C83D251D2E1A4687D2ECE6DF0284379DE3FEAD1F3AFEEB29A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteCoordinateValuations.lean",
+          "sha256": "EB588245E9AD44FCF800E59B8027512A8ACF6389E81FF5A86CBFEDDB453CD064",
+          "oleanSha256": "7AD07DE49ECCE202E4B357EE31D54D3122AED1564736BBFA21342F35B93E19C0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexSpanSeparation.lean",
+          "sha256": "5CD8EB7B2404CC0359821C08054833DDB5AD5F59FCA5E9906D6EA6C7F18705FF",
+          "oleanSha256": "0F84053E086EE48E130CD5DF1D1EFCA86A19A0F7F5FA3F763168F66DF92242D5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldLocalUnits.lean",
+          "sha256": "E12B97FE3229FE5D282B0CB4D370666974D76BB0E03B9B2E3B8C8F520FF94750",
+          "oleanSha256": "10350D23816B500C55B17AE4A617DE7E5CF7FF2600F0556D956A04DB155369C1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldExtensionOrders.lean",
+          "sha256": "ABA30C5B67AEA5122E010F2C37ABFB955D3CB2C8211F1479ABDAD7002C9B0D27",
+          "oleanSha256": "7EC40925BFC6925D6893F5A5C5193EBC2BCF02718BC87E77706C8E627C197D91"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldValuationDomination.lean",
+          "sha256": "A460FA1DD7B99D0F864616D4B3D02FBDC88688BC4EF4BE1C88D4D9920E1C6909",
+          "oleanSha256": "45D3414B54FA81A1B5267EF5AE589D14F2FFA63BCEF0A9EBE59E03BDAF604D3A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstantFieldValuationExtension.lean",
+          "sha256": "9ED8A5CA0D5A1AE09016D078F902939041BC7E8682033F95B7BEAF4A81529EE8",
+          "oleanSha256": "A9F97F673E47361030F053A8650A4A55CA41706CFEA6C0443DFE1E1715327CC0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstantFieldPlaces.lean",
+          "sha256": "09F34AEA376A081015E5A9BD6310C152567E9DECAD9FB96980F00912B4808042",
+          "oleanSha256": "7C5AAF2BAC743E9FDDAE988D5CB411B3AB00652AAA19772FAD6A10E706A16469"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantField.Psi_single",
+        "Dubon2026.SourceCurve.ConstantField.Psi_apply",
+        "Dubon2026.SourceCurve.ConstantField.Psi_smul",
+        "Dubon2026.SourceCurve.ConstantField.Psi_pureW",
+        "Dubon2026.SourceCurve.ConstantField.Psi_mul_mem_range",
+        "Dubon2026.SourceCurve.ConstantField.mem_rangePsi_iff",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_mem_rangePsi",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_coe_mem_rangePsi",
+        "Dubon2026.SourceCurve.ConstantField.Psi_mem",
+        "Dubon2026.SourceCurve.ConstantField.mem_fracPsi_iff",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_mem_fracPsi",
+        "Dubon2026.SourceCurve.ConstantField.exists_mul_Psi_eq",
+        "Dubon2026.SourceCurve.ConstantField.exists_digit",
+        "Dubon2026.SourceCurve.ConstantField.decomp",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_fraction",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_expansion",
+        "Dubon2026.SourceCurve.ConstantField.exists_place_of_finite_coordinate",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.sum_ne_of_not_mem_span",
+        "Dubon2026.SourceCurve.ConstantField.ne_zero_and_inv_mem_of_add",
+        "Dubon2026.SourceCurve.ConstantField.ord_eq_zero_of_mem_of_inv_mem",
+        "Dubon2026.SourceCurve.ConstantField.extension_order_and_unique",
+        "Dubon2026.SourceCurve.ConstantField.exists_extending_valuation_of_proper_ideal",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_extending_valuation",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_extended_place",
+        "Dubon2026.SourceCurve.ConstantField.Psi",
+        "Dubon2026.SourceCurve.ConstantField.pureW",
+        "Dubon2026.SourceCurve.ConstantField.rangePsi",
+        "Dubon2026.SourceCurve.ConstantField.fracPsi"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.Psi_single",
+        "Dubon2026.SourceCurve.ConstantField.Psi_apply",
+        "Dubon2026.SourceCurve.ConstantField.Psi_smul",
+        "Dubon2026.SourceCurve.ConstantField.Psi_pureW",
+        "Dubon2026.SourceCurve.ConstantField.Psi_mul_mem_range",
+        "Dubon2026.SourceCurve.ConstantField.mem_rangePsi_iff",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_mem_rangePsi",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_coe_mem_rangePsi",
+        "Dubon2026.SourceCurve.ConstantField.Psi_mem",
+        "Dubon2026.SourceCurve.ConstantField.mem_fracPsi_iff",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_mem_fracPsi",
+        "Dubon2026.SourceCurve.ConstantField.exists_mul_Psi_eq",
+        "Dubon2026.SourceCurve.ConstantField.exists_digit",
+        "Dubon2026.SourceCurve.ConstantField.decomp",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_fraction",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_expansion",
+        "Dubon2026.SourceCurve.ConstantField.exists_place_of_finite_coordinate",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.sum_ne_of_not_mem_span",
+        "Dubon2026.SourceCurve.ConstantField.ne_zero_and_inv_mem_of_add",
+        "Dubon2026.SourceCurve.ConstantField.ord_eq_zero_of_mem_of_inv_mem",
+        "Dubon2026.SourceCurve.ConstantField.extension_order_and_unique",
+        "Dubon2026.SourceCurve.ConstantField.exists_extending_valuation_of_proper_ideal",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_extending_valuation",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_extended_place"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.Psi",
+        "Dubon2026.SourceCurve.ConstantField.pureW",
+        "Dubon2026.SourceCurve.ConstantField.rangePsi",
+        "Dubon2026.SourceCurve.ConstantField.fracPsi"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstantFieldPlacesAudit13.log",
+      "logSha256": "2F8C773AEC87ACB7F9DAB223D0F61EEDDB4628C2C869D632D79867796CC84574",
+      "auditSha256": "1F6CEB9E115A811B5DFAF5892532B49296E4941191EE1FC949A271A00E24400C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 69,
+      "linterScopes": 13,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 25,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstantFieldPlacesDependencyAudit13.log",
+      "dependencyAuditSha256": "A9AE224548C0987D1D14EEADA3C2180997CE1309424FEC5692356AB4C7850892",
+      "dependencyAuditSourceSha256": "2F8E34CDE3C954EDF74BAEFD7BBF0A1EED5411358D4151B03B8598823945124D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_extended_place",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_fraction",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_expansion"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> divisor conorm and descent -> unique actual constant-field place extension with exact normalized orders -> original Laurent independence, original finite residue fields, finite original coordinates and native valuation domination.",
+      "discharged": "Every place of the literal original modular function field over Qbar has a unique place above it in the literal original complex field, with exactly the same normalized integer order on every original function. Actual local fraction and residue-digit expansions are also proved. Original coefficient independence supplies separation and a proper uniformizer ideal; native valuation domination constructs an extending valuation ring; the existing finite original coordinate and integral-closure prime places make it discrete; local expansions give ramification index one and uniqueness. No extension place, preserved-order or finite-residue premise is supplied to the actual original consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual divisor conorm, principal-divisor descent and torsion descent remain necessary to compare original Qbar Picard torsion with the proved complex n^(2g) count. Place existence, uniqueness and exact original order preservation are discharged. Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-constant-field-places-13-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "FA9D8BAFD97CA7E57CF02D5AE7D05583070BC39085D731738190AEB45B5904A8"
+    },
+    {
+      "recordedUTC": "2026-10-22T09:50:20.472742+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalExtendedPlaceMap",
+        "SourceOriginalDivisorConorm",
+        "SourceOriginalComplexPicardMap"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExtendedPlaceMap.lean",
+          "sha256": "4ACAEF9D0AC3CC1FA3C7278BBF1BD71383A947EBFFB8573C084BC0BCFE6B5177",
+          "oleanSha256": "919D0CDF5460D05519CC5D247B07E3D1D98FFBA638B61E59249A46FE48D802F5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorConorm.lean",
+          "sha256": "E3F506A5A1DB71432C9F89D0850A63CC59FE3E96283756EB589113CA0B8F0CF1",
+          "oleanSha256": "936CA3680945126048C416A5E851D0C32BC3695C0BA7F00561F90569777CA066"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexPicardMap.lean",
+          "sha256": "BC7AC89525A6659D8C84584428E959DDC70BF445D9038490B626F7C826B23640",
+          "oleanSha256": "3D67053132574A4A2A19777DFA6965324E80F7C7547841F350EDF41FF04FA9FC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace_comap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.mem_liftPlace_iff",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.ord_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace_unique",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace_injective",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_eq_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.ord_phi_of_forall_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.forall_ne_liftPlace_of_comap_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.forall_comap_ne_of_ne_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_apply_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_apply_of_forall_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_single",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.degree_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.isPrincipal_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mk",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mem_torsion",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conormDegZero",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace_comap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.mem_liftPlace_iff",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.ord_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace_unique",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace_injective",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_eq_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.ord_phi_of_forall_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.forall_ne_liftPlace_of_comap_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.forall_comap_ne_of_ne_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_apply_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_apply_of_forall_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_single",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.degree_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.isPrincipal_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mk",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mem_torsion"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.conormDegZero",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexPicardMapAudit3.log",
+      "logSha256": "07F92C852DE37584C69C8EA1DDF21D8C57A605ABBD259796F221F30981A78850",
+      "auditSha256": "DAE69D9C59B89520B8118D3FCCDE613AD6B3E1A51AA4F512877685499563EBDE",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 40,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexPicardMapDependencyAudit3.log",
+      "dependencyAuditSha256": "CFB406AADE218C8DB8CF3A301C546FC096E621676656D5D3808EF31429CC1788",
+      "dependencyAuditSourceSha256": "7A07212AB059689CB54FAF78C4324187080DA6A9DD523619ADD9FBB9E1EFF26B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mem_torsion",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mk",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.forall_ne_liftPlace_of_comap_ne",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.forall_comap_ne_of_ne_liftPlace"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> actual divisor conorm and Picard map -> unique original place extension, exact orders and residue degrees.",
+      "discharged": "The unique arithmetic-to-complex place extension is injective, preserves orders, and original functions have zero order at every complex place outside its image. Its finite divisor pushforward preserves actual residue-weighted degree and actual principal divisors. It therefore defines the original arithmetic-to-complex Picard homomorphism and preserves all n-torsion. No degree, principality or torsion-preservation premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Principal-divisor descent is still needed for injectivity, and finite torsion descent for surjectivity. These compare the original Qbar torsion with the proved complex count; Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-picard-map-3-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A995E2A3DCA791C03FFAC95034EAF5454D5E726CB897497F668464122E81F190"
+    },
+    {
+      "recordedUTC": "2026-10-22T09:58:02.683725+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceValuationIntegralCriterion",
+        "SourceConstantFieldTraceOrders",
+        "SourceConstantFieldTraceRegularity",
+        "SourceOriginalNewCoordinatePlaces",
+        "SourceOriginalComplexCoordinateTrace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationIntegralCriterion.lean",
+          "sha256": "9262A0DE9888CA26DB78FC3FC110F19564F61B52032EDD29AC6B116A71859C5F",
+          "oleanSha256": "F28DFCFE5079B189FD96583A8D64A73934B406D110BA0722578599276E33EDC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldTraceOrders.lean",
+          "sha256": "38EBE734FC895B1A9D9B98E60E73DE29FE6A9458AB29453CF8D1A2EB98D28F9E",
+          "oleanSha256": "6B1AA0DEBD08D441D58A07B0E34BCEAC9608D3C592AADAD14CBCD7DC0E60CB52"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldTraceRegularity.lean",
+          "sha256": "B9908B69BF0A5CAA9862E22AF5222868217FCFD4D2ABCE8F3334A9FD5669B1F4",
+          "oleanSha256": "F6F3703D13E5DECD6E5585B935ABC355CD559F39B7EED214D4BBD06B5015D43C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNewCoordinatePlaces.lean",
+          "sha256": "1F2DFA1D4276D53751089AD809B6ECE0E412EC65D00E4B5BF84D2A444728D09B",
+          "oleanSha256": "065C303D285BA93B3B63DDF6D9CE0A332FD92B6CB09978D64E6578152AF665A0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCoordinateTrace.lean",
+          "sha256": "EC8CF67173B24D999AA9288F7B9EC7B4BCC781B5790DC6BAC00B0BA0895A4096",
+          "oleanSha256": "97071DABDABECB90585C6BDD8C98587C078DC4ABEF97D7FE8969D03461F14F86"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantField.isIntegral_of_forall_mem_valuationSubring",
+        "Dubon2026.SourceCurve.ConstantField.ord_algebraMap_add_eq_zero",
+        "Dubon2026.SourceCurve.ConstantField.trace_mem_of_forall_place",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.new_of_mem_coordinate_localRing",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.isIntegral_of_forall_mem_valuationSubring",
+        "Dubon2026.SourceCurve.ConstantField.ord_algebraMap_add_eq_zero",
+        "Dubon2026.SourceCurve.ConstantField.trace_mem_of_forall_place",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.new_of_mem_coordinate_localRing",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateTraceAudit5.log",
+      "logSha256": "BB2F89DC920DF9E8F65109F492823AB45B5E315692BFEFFF7997491CA984E6E8",
+      "auditSha256": "CDB16050C905D25DFA72FDEA78A6DADD759267640D0EB74DC4AC0671990B7BE8",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateTraceDependencyAudit5.log",
+      "dependencyAuditSha256": "601A14156263C397A95BBA58A9C56F290A7CEC7EC55D0E27476A511C262ECB74",
+      "dependencyAuditSourceSha256": "170A3A903707D1FE8C9B4D94F21B3C4B3BAE6267A98C6F89722F48D965AECCD9",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> principal-divisor descent -> coordinate trace regularity at constants outside Qbar -> native valuation intersection, original rational residues and finite-coordinate valuation normalization.",
+      "discharged": "For an actual original complex function regular at every place outside the image of arithmetic places, its trace to the original complex j-coordinate field is regular at every place over a constant outside Qbar. The finite original j coordinate, exact place extension and proved residue-field bijections supply every geometric hypothesis.",
+      "boundary": "Scratch only; production promotion and verification pending. Rational denominator descent and finite-basis trace reconstruction still precede principal-divisor descent and Picard injectivity. Finite torsion descent, Qbar torsion cardinality, Tate realization, Hecke/Frobenius comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-coordinate-trace-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F7AA4856009D4E42B58940E20D734AD47A2C23AFC44FEDDFD02F84B0BBCB5F17"
+    },
+    {
+      "recordedUTC": "2026-10-22T10:05:32.604952+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCoordinateReducedFraction",
+        "SourceConstantFieldRationalDescent",
+        "SourceOriginalCoordinateDescent"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateReducedFraction.lean",
+          "sha256": "8B99ED16E15A03F6A692C1391E82820CDBFBA253741CCBC41165AB151B4AB570",
+          "oleanSha256": "3E22A88434B49AE4DA80D90EED418031449671500AE9FE24BD2B77F9234F0BDE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldRationalDescent.lean",
+          "sha256": "D0628906501F512D7117B1009523C001A3CAC68BC7C3585F49C689CF14F2BB76",
+          "oleanSha256": "CB17DD83692BBE570D8F17005FD7CBC72F22A9A180FB15EDF1B1CC54A2A08D82"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateDescent.lean",
+          "sha256": "82C35694871EBB71DE60BED5DD675CAA8C4147FEDB735055EB87B42BAC13A905",
+          "oleanSha256": "D610BEC95B9CD5D3C7D6020477C6D2E3EC058E970C32E83E63F5CD2594C198E6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantField.exists_coprime_fraction_of_mem",
+        "Dubon2026.SourceCurve.ConstantField.aeval_mem",
+        "Dubon2026.SourceCurve.ConstantField.span_range_eq_adjoin",
+        "Dubon2026.SourceCurve.ConstantField.mem_span_of_coordinate_regular",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_j_fiber_place",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_mem_span_of_regular",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem_span"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.exists_coprime_fraction_of_mem",
+        "Dubon2026.SourceCurve.ConstantField.aeval_mem",
+        "Dubon2026.SourceCurve.ConstantField.span_range_eq_adjoin",
+        "Dubon2026.SourceCurve.ConstantField.mem_span_of_coordinate_regular",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_j_fiber_place",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_mem_span_of_regular",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem_span"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateDescentAudit3.log",
+      "logSha256": "1841B591BFB3A77083F9657E695F1A5F2C4F8532E47FF587BF58DAC0738218A9",
+      "auditSha256": "ECA403D6F89CE84F1D3B4A2B474C6D0BF5E3E36D3278028F16F645169BC41488",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateDescentDependencyAudit3.log",
+      "dependencyAuditSha256": "A46B1F155391BA1FEB2C6567977236A08476BAA3C56424F82282027704246B03",
+      "dependencyAuditSourceSha256": "AADCDC99091818BBAAC1D4F9492B295C3AA15BB273831C6DA5BF846846D688C6",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem_span"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> principal-divisor descent -> coordinate trace descent -> denominator-root cancellation, positive original j-fiber degree and proved trace regularity.",
+      "discharged": "Every original complex j-coordinate function regular at places over constants outside Qbar lies in the complex linear span of original arithmetic functions. Applied to the proved trace regularity, every required actual coordinate trace lies in that span. Coprime numerator and denominator prevent cancellation at a denominator root; the original positive fiber degree supplies a place detecting each root.",
+      "boundary": "Scratch only; production promotion and verification pending. Finite-basis trace reconstruction still precedes principal-divisor descent and Picard injectivity. Finite torsion descent, Qbar torsion cardinality, Tate realization, Hecke/Frobenius comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-coordinate-descent-3-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "DCAD9D831DAB1EE41BD441930D5A65F174AEE93790D0DB8EE6A7442148159A54"
+    },
+    {
+      "recordedUTC": "2026-10-22T10:07:55.272155+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceConstantFieldCoordinateMap",
+        "SourceConstantFieldCoordinateSpan",
+        "SourceConstantFieldTraceReconstruction",
+        "SourceOriginalComplexCoordinateBasis",
+        "SourceOriginalComplexSpanDescent"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldCoordinateMap.lean",
+          "sha256": "F8ACD3AD62BBF565C8D79F2FE9D8A76801DDB2413089157520847C1B7AFC44DA",
+          "oleanSha256": "2EEECD524C8371120AF0A7BD86BFD0DFCD7A64D164274DE6FC257FE3AC404676"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldCoordinateSpan.lean",
+          "sha256": "11294B815DAB082A7FCEE7CE1AFE8A3A5C8B13EFE8EFDF7EC699D327E6991C1A",
+          "oleanSha256": "A305FBE99C0A9D75CE7A1F96C8253EB1E39B64806070A8047E21F99D510393C8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldTraceReconstruction.lean",
+          "sha256": "D15D714B4997897218991AE0F57CA34C161AEFC07E502153501EF02429DF34E0",
+          "oleanSha256": "7671E7384CB11B358A2079370346D87D98305C84384E7DE2BAE285674D8AF812"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCoordinateBasis.lean",
+          "sha256": "FFC178BA7B1576A6595A96F143BE5E66763573992F7D4FB4FA780E403393C6D4",
+          "oleanSha256": "4316C8A8DC5A948891B67A4A65D7B328588198D9BA9F959B3A3996DB7090170F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexSpanDescent.lean",
+          "sha256": "72E89357332F3B3EB7D7B1D897885778FAAA6B7B82805D4C2BA9FCBE4921CF9E",
+          "oleanSha256": "781DEF33785B781C4DC9EA1859743B4495CDB16255CCA40E056E2A4E9B57EF6D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_mem_adjoin_simple",
+        "Dubon2026.SourceCurve.ConstantField.coe_iota",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_smul",
+        "Dubon2026.SourceCurve.ConstantField.coordinate_span_of_adjoin_top",
+        "Dubon2026.SourceCurve.ConstantField.exists_coordinate_basis_of_finrank_eq",
+        "Dubon2026.SourceCurve.ConstantField.trace_algebraMap",
+        "Dubon2026.SourceCurve.ConstantField.eq_sum_trace_mul",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_coordinate_basis",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_mem_span_of_regular_off_image",
+        "Dubon2026.SourceCurve.ConstantField.iota"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_mem_adjoin_simple",
+        "Dubon2026.SourceCurve.ConstantField.coe_iota",
+        "Dubon2026.SourceCurve.ConstantField.algebraMap_smul",
+        "Dubon2026.SourceCurve.ConstantField.coordinate_span_of_adjoin_top",
+        "Dubon2026.SourceCurve.ConstantField.exists_coordinate_basis_of_finrank_eq",
+        "Dubon2026.SourceCurve.ConstantField.trace_algebraMap",
+        "Dubon2026.SourceCurve.ConstantField.eq_sum_trace_mul",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_coordinate_basis",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_mem_span_of_regular_off_image"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.iota"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexSpanDescentAudit5.log",
+      "logSha256": "6930376A045546F7A62E3D9196500FC28595A4ADEAC1B640CD1965480DE423B0",
+      "auditSha256": "98EE3B296DE3F059AC55609963240E6B0A706DA7D1836E40D4F2B0CABF122B6A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 19,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexSpanDescentDependencyAudit5.log",
+      "dependencyAuditSha256": "59010AB99713AD5D3632C177B230A0F87B435218C916399B39D2076852A1F980",
+      "dependencyAuditSourceSha256": "9BF1687C5F019A49BAFE79EF318B1BDB05966A1725EE742BC54BF49966E47BAB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_mem_span_of_regular_off_image"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> principal-divisor descent -> function-span descent -> corresponding finite coordinate bases, original degree base change, coordinate trace descent and trace-dual reconstruction.",
+      "discharged": "Every literal original complex function regular outside the image of arithmetic places is a finite complex linear combination of original arithmetic functions. Corresponding finite coordinate bases, trace compatibility and trace-dual reconstruction are proved. No function-span, basis-independence or degree-comparison premise is supplied to the actual original consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Local order noncancellation and degree-zero divisor comparison still precede principal-divisor descent and Picard injectivity. Finite torsion descent, Qbar torsion cardinality, Tate realization, Hecke/Frobenius comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-span-descent-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "8D206B6B71761B2144AE5CB45C5E41212552FC02418E4DBF26E40B9640AA0F9E"
+    },
+    {
+      "recordedUTC": "2026-10-22T10:15:09.776138+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceConstantFieldOrderResidues",
+        "SourceConstantFieldIndependentOrders",
+        "SourceConstantFieldIndependentRepresentation",
+        "SourceOriginalPrincipalDescent",
+        "SourceOriginalComplexPicardInjectivity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldOrderResidues.lean",
+          "sha256": "D9800325992C3920CA2C1019CBEE4227AFAB4708E3E118632F68BF1909537AB1",
+          "oleanSha256": "6D0EF3C80F6C04AE5DB97832769C8DF6D3452C46269C7405FB71AC7CC587CC76"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldIndependentOrders.lean",
+          "sha256": "2D970A3D937BE92CA9089993CFA14A5C13DAA82FFCE45113027375AE5D316F63",
+          "oleanSha256": "FEDB2ACFD61DB5E1FE8E31E66D321F7A283C84B2BD5E63FFCD55C44CCDFF6F84"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantFieldIndependentRepresentation.lean",
+          "sha256": "AEC4D2749157AF6CD7D22AFEFB5B320A4EB0E02E8D53BF16B957B08453B1BBE8",
+          "oleanSha256": "F427CFE3F28EAF6192310367CD32AC204258CCCFB5E504576323AEF6A4AF0DBF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrincipalDescent.lean",
+          "sha256": "6363187AFB45784C7B01459ED04A9EA269BB2D851CB436AB0AE8F1E84128A675",
+          "oleanSha256": "64371767AFBF84E4DC1E07A64BDE9D29D12331E9D2A36FF79225BD0F1ED94DAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexPicardInjectivity.lean",
+          "sha256": "2DA26927EEC4A749449B4F84084795FD7F2290B57F0F64E9B8C207A7C731FE82",
+          "oleanSha256": "D0F3CF8240E66A4907E649E9561BE021173CBA0BDD2941B07DDB9E404D553244"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantField.irreducible_coe_ne_zero",
+        "Dubon2026.SourceCurve.ConstantField.ord_coe_isUnit",
+        "Dubon2026.SourceCurve.ConstantField.isUnit_of_ord_eq_zero",
+        "Dubon2026.SourceCurve.ConstantField.ord_pos_of_mem_maximalIdeal",
+        "Dubon2026.SourceCurve.ConstantField.mem_maximalIdeal_of_ord_pos",
+        "Dubon2026.SourceCurve.ConstantField.isUnit_add_of_mem_maximalIdeal",
+        "Dubon2026.SourceCurve.ConstantField.exists_sub_algebraMap_mem_maximalIdeal",
+        "Dubon2026.SourceCurve.ConstantField.ord_sum_le",
+        "Dubon2026.SourceCurve.ConstantField.exists_linearIndependent_repr",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_degree_eq_sum",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.isPrincipal_of_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_injective",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finite_original_arithmetic_torsion"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.irreducible_coe_ne_zero",
+        "Dubon2026.SourceCurve.ConstantField.ord_coe_isUnit",
+        "Dubon2026.SourceCurve.ConstantField.isUnit_of_ord_eq_zero",
+        "Dubon2026.SourceCurve.ConstantField.ord_pos_of_mem_maximalIdeal",
+        "Dubon2026.SourceCurve.ConstantField.mem_maximalIdeal_of_ord_pos",
+        "Dubon2026.SourceCurve.ConstantField.isUnit_add_of_mem_maximalIdeal",
+        "Dubon2026.SourceCurve.ConstantField.exists_sub_algebraMap_mem_maximalIdeal",
+        "Dubon2026.SourceCurve.ConstantField.ord_sum_le",
+        "Dubon2026.SourceCurve.ConstantField.exists_linearIndependent_repr",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_degree_eq_sum",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.isPrincipal_of_conorm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_injective",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finite_original_arithmetic_torsion"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInjectivityAudit5.log",
+      "logSha256": "3DAE77541A0FE1285886150111268FD90255367BD7F6FCE0A87ABFA50D5C9356",
+      "auditSha256": "659A0ECC82D28FE192087B7770427359D30A20CC30EB9B652BA27159333CC87A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInjectivityDependencyAudit5.log",
+      "dependencyAuditSha256": "566C63FBD7BD4B8B365FDC25843112288CFE372692FB9D2A6EC41072609C1327",
+      "dependencyAuditSourceSha256": "A509BA95D7B092588878E4EE4AA31DC6251CEB1728F43DCB3DE6E96DB71160E3",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finite_original_arithmetic_torsion"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> principal-divisor descent and actual Picard injectivity -> function-span descent, independent-coefficient least orders and effective degree-zero comparison.",
+      "discharged": "An actual original arithmetic divisor whose complex conorm is principal is already principal. Therefore the original arithmetic-to-complex Picard map is injective, and original arithmetic n-torsion is finite for every nonzero n. Independent constant coefficients prevent least-order cancellation, giving a principal divisor above the arithmetic divisor; degree zero forces equality. No descent, injectivity or arithmetic-finiteness premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Surjectivity on n-torsion remains necessary for exact original Qbar torsion cardinality. The finite-torsion descent route needs reduced Riemann-Roch representatives, the existing original coefficient actions and translation of transcendental constants. Tate realization, Hecke/Frobenius comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-picard-injectivity-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6DC4A1EFD157885ED070AB66C47B16669D7677CB8F72B2CDD3F89C8492EB63E6"
+    },
+    {
+      "recordedUTC": "2026-10-22T10:31:24.096601+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceReducedSpaceMinimum",
+        "SourceOriginalReducedRiemannRochSpace",
+        "SourceTranscendentalShift",
+        "SourceTranscendentalTranslation",
+        "SourceOriginalComplexConstantAutomorphisms",
+        "SourceOriginalComplexTranslations"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedSpaceMinimum.lean",
+          "sha256": "10DFD117264C7A3DB604F7BF1421CEC0296ACAB99619704A6661639B457A337C",
+          "oleanSha256": "7167083B42FA770EB017BCD8B1496FCD2A466A57951E305AAD3C34416921CCAD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedRiemannRochSpace.lean",
+          "sha256": "3C22ADE63816F36AF67647BB607402D48E75CBF9DDAE2A12B86BE2D8F818FE5B",
+          "oleanSha256": "433A8F4CAC16547EE912F0BED80C43A2A0BFA88EFDB9881B32EF188B0C46C666"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalShift.lean",
+          "sha256": "C64BA3D1D1AE176A8D3B7BEC72FD3C70B73DE9C74BA69D249DFB19C868D42DEB",
+          "oleanSha256": "A470C2CEFFB4817B38D157194335EDFF976845D3C4C9DAB02CB7DC92BFF82CED"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalTranslation.lean",
+          "sha256": "319A5F89A7C1103EA15F09CCD06D070CDE3187D13B573BF4C96648A4C5F2740F",
+          "oleanSha256": "13197B9AF74ADE1C499ACD2AC7DD96E750835AAFF40F99DCF5E76B12A1AEE130"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexConstantAutomorphisms.lean",
+          "sha256": "7DEF380769E9CD7875BD37B482DEDDE7A566FEDF2BC56208411591F9A998E544",
+          "oleanSha256": "E2A06B2353A2EAE7585123E31312C732A0F6682D9A05CBBF319D4C0B99145F20"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexTranslations.lean",
+          "sha256": "B0ED6B40D3FDCB4A6248622D954DD47D9917883A094C0F2622EEF47DB12CD884",
+          "oleanSha256": "B6C64D4FD155D08857A9DBE4C1FAFD9DA4427A5AC0BC2420804C326269C10924"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantField.exists_reduced_space_of_nonempty",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_reduced_space",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift_X",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift_comp_shift_neg",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift_neg_comp_shift",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shiftEquiv_X",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shiftEquiv_C",
+        "Dubon2026.SourceCurve.ConstantField.exists_translation_of_transcendental",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAutRestrict_symm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAut_fixes_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAut_fixes_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_translation",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shiftEquiv",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAutRestrict"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.exists_reduced_space_of_nonempty",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_reduced_space",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift_X",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift_comp_shift_neg",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift_neg_comp_shift",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shiftEquiv_X",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shiftEquiv_C",
+        "Dubon2026.SourceCurve.ConstantField.exists_translation_of_transcendental",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAutRestrict_symm",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAut_fixes_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAut_fixes_liftPlace",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_translation"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shift",
+        "Dubon2026.SourceCurve.ConstantField.TranscendentalShift.shiftEquiv",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAutRestrict"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedTranslationAudit6.log",
+      "logSha256": "F2FFEB1DE014BB171E70502654263CC4891F70F9166EC07F3C106E626069DA1A",
+      "auditSha256": "FB6235D8ACB260C9516004500571A48D168D512D63326B990D00050E0613ABE3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedTranslationDependencyAudit6.log",
+      "dependencyAuditSha256": "8A885B2FD3F6F59E6C915B8551531B4C6A4004F134354973D679185798E05078",
+      "dependencyAuditSourceSha256": "A765F7E777C844BB96A63127F514972A4701820CCC98647FDDDCDFBCB9A9380A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_reduced_space",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_translation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original Qbar torsion cardinality -> Qbar-complex Picard torsion comparison -> finite torsion descent -> unique reduced Riemann-Roch representatives and translating complex automorphisms fixing the arithmetic field and places.",
+      "discharged": "Every degree-zero original complex divisor has a least one-place pole bound whose Riemann-Roch space is spanned by a single nonzero original function. Every complex constant outside Qbar can be translated by any arithmetic constant through an actual coefficient automorphism fixing every arithmetic function and every lifted arithmetic place. No reduced-space, automorphism-extension or fixed-arithmetic-field premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Finite-action invariance of the reduced divisor and an infinite-orbit contradiction must still exclude places outside the arithmetic image. This precedes torsion surjectivity and the exact original Qbar torsion count. Tate realization, Hecke/Frobenius comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-reduced-translation-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "2179351652B4AF0A857FEA518E77E70198CBA7EBF8EB2BDB5BBCF67A3BE53529"
+    },
+    {
+      "recordedUTC": "2026-10-22T10:52:28.962587+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalPrincipalDivisorIdentities",
+        "SourceOriginalReducedDivisorInvariance",
+        "SourceOriginalFiniteTorsionAction",
+        "SourceOriginalFixedReducedDivisor",
+        "SourceOriginalOffImageValues",
+        "SourceOriginalTranslationOrbits",
+        "SourceOriginalInvariantSupport",
+        "SourceOriginalTorsionDivisorDescent",
+        "SourceOriginalTorsionComparison"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrincipalDivisorIdentities.lean",
+          "sha256": "84C14657A9F3711BA8B4451163C2688B62F0DC81857266EA057A4B1EE92DE8BE",
+          "oleanSha256": "2E6C009A13EB5C2C23361337E832FED00320C148B472A73B5BB63F742261D9BD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedDivisorInvariance.lean",
+          "sha256": "7958B529B4D3A60FBA65A88B37D3EEA2EE152FA1DCD3AD48C1457E6152B27349",
+          "oleanSha256": "CAFAF8623EC41E96A89F24979F8A6C04F11F691174D910AF15DB421E3D958E5B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteTorsionAction.lean",
+          "sha256": "D370949D5F0411001C5FA95F11B903ED60AE98BB1C557E6AD6DC04F04E45E289",
+          "oleanSha256": "71ABF77E06B298ED5E98FC067C8FF59422E0C0B1930C9FA565195CF415582E76"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFixedReducedDivisor.lean",
+          "sha256": "169D09F2209B23ABE7E6F45CD527736771DA75F7EBE1E95C5261B63ADD98B9ED",
+          "oleanSha256": "FA1F8BC515F4F67CBC45BC930D54AB5D29228155D7C967E427B693100B6702E6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOffImageValues.lean",
+          "sha256": "CF97F6EFA97F46FE08ED1AB08F38DF320811D55D3453CFFAC358BB7B77361EEF",
+          "oleanSha256": "6CFD8BEC0BA443A034DBEDB1925BB1A40530D3B8CD13226FB130CC846846408B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTranslationOrbits.lean",
+          "sha256": "FAA4A9F916CFF614EAA81ACAF0CCDA3E4D13EE50113006CF31C8F0AD147E67B5",
+          "oleanSha256": "CA6F51964CC6B35C869D402CACF6356C32D9E42D2D1F1F8F87E92CFE69BEDDB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInvariantSupport.lean",
+          "sha256": "1781E21A81C7B266EA26F54322E17208C338C46A75B8B0FE5634EF42CD10DD70",
+          "oleanSha256": "0C172ADEA48FD173420266AA56631649FB2393C9A0039B66A8E336DBEF3FBA8B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionDivisorDescent.lean",
+          "sha256": "1F3FC6F78B202EA005B156DECA1129B9739D303EC5D299699B2B62721E132D52",
+          "oleanSha256": "A63E5473E1EC3E60B15350E4FC0908195991075D6BF155F50E0B4BAC19CF26F2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionComparison.lean",
+          "sha256": "961F0E1D85A4809531A6D1AF27C260AC45A2236989605ABB326CF6BAA3630DCD",
+          "oleanSha256": "62A771C8DC9D9B9C2BB2547904BA8F96E9288CF07C2BF1B8772BE5E8E52435F4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_mul",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_inv",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_smul",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.mem_original_lSpace_add_principal_iff",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.mem_original_lSpace_arithmetic_iff",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_reduced_divisor_fixed",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complex_torsion_action_factorial",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complex_torsion_divisor_factorial_principal",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAut_fixes_lift_single",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_fixed_reduced_divisor",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.off_image_exists_nonarithmetic_j_value",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_j_value_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complex_translation_pow",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_translation_orbit_injective",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_divisor_pow_fixed",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_invariant_support_lifts",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_conorm_of_support_lifts",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_torsion_divisor_descent",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_torsion_preimage",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_torsion_cardinality_eq_complex",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_arithmetic_torsion_cardinality_complex_genus"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_mul",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_inv",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_smul",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_principal_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.mem_original_lSpace_add_principal_iff",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.mem_original_lSpace_arithmetic_iff",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_reduced_divisor_fixed",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complex_torsion_action_factorial",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complex_torsion_divisor_factorial_principal",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complexAut_fixes_lift_single",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_fixed_reduced_divisor",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.off_image_exists_nonarithmetic_j_value",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_j_value_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.complex_translation_pow",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_translation_orbit_injective",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_divisor_pow_fixed",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_invariant_support_lifts",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_conorm_of_support_lifts",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_torsion_divisor_descent",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_torsion_preimage",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_torsion_cardinality_eq_complex",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_arithmetic_torsion_cardinality_complex_genus"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionComparisonAudit9.log",
+      "logSha256": "F9D6DA7FB6B6FB7D1581198C4E12907B77A0B6EC6A3C948C5A5E9738518F702D",
+      "auditSha256": "68F31D21EDE531E8F32735ADD0AB7B0B31F18DC0219A4D161CF5CC87E1E62E0F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 35,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionComparisonDependencyAudit9.log",
+      "dependencyAuditSha256": "DAD8EF3250A6A67F0E31DB47413625295A08C188385061A61B90547EB4472998",
+      "dependencyAuditSourceSha256": "387345376DB772C2BFCBAC12523595ADAF0576AE82E693D9B47FE25211299677",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalConstantField.original_arithmetic_torsion_cardinality_complex_genus"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> actual Qbar-complex torsion comparison -> invariant reduced divisor, translated j-value orbits and arithmetic support descent.",
+      "discharged": "For every nonzero natural n, the actual constant-field Picard map is bijective on n-torsion. Finite permutation action fixes a reduced representative under a common factorial power, while translated j-values force every support place to lift from Qbar. The literal original arithmetic Picard group therefore has exactly n^(2g) n-torsion points, with g explicitly the original complex genus. No finite-action, support-descent, torsion-preimage or torsion-count premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Tate realization with its period-lattice basis, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Arithmetic-genus invariance is not asserted by this count. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-torsion-comparison-9-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "910CEE27103F9F2A84C58044A25D1C69CFF901A5E7EE51900835FFD887F82117"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-complex-field-extension-4-reuse-review-20261022.json",
+    "Tools/source-original-constant-field-places-13-reuse-review-20261022.json",
+    "Tools/source-original-complex-picard-map-3-reuse-review-20261022.json",
+    "Tools/source-original-coordinate-trace-5-reuse-review-20261022.json",
+    "Tools/source-original-coordinate-descent-3-reuse-review-20261022.json",
+    "Tools/source-original-complex-span-descent-5-reuse-review-20261022.json",
+    "Tools/source-original-picard-injectivity-5-reuse-review-20261022.json",
+    "Tools/source-original-reduced-translation-6-reuse-review-20261022.json",
+    "Tools/source-original-torsion-comparison-9-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6174": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexFieldExtensionDependencyAudit4Production6174.log",
+        "sha256": "8CA063CCDD9AE2FC03D6ABC142A1C8A9E1F44F065AA29E5C1CEC3A60EB9B216E",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.fieldMap_linearIndependent",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.adjoin_range_fieldMap",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.complexScalarTower",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.originalFieldScalarTower"
+        ],
+        "sourceSha256": "42EB390A294D3EF9F4AB2146F96036F17B29C175DFF6FDF1418D37CE3F0B4458"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstantFieldPlacesDependencyAudit13Production6174.log",
+        "sha256": "A9AE224548C0987D1D14EEADA3C2180997CE1309424FEC5692356AB4C7850892",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_extended_place",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_fraction",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.original_local_expansion"
+        ],
+        "sourceSha256": "BF90AE825837655E6CFFFBE0EE08C7C5593BE8D4496278076EB7309D4AAD9A09"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexPicardMapDependencyAudit3Production6174.log",
+        "sha256": "CFB406AADE218C8DB8CF3A301C546FC096E621676656D5D3808EF31429CC1788",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mem_torsion",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mk",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.forall_ne_liftPlace_of_comap_ne",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.forall_comap_ne_of_ne_liftPlace"
+        ],
+        "sourceSha256": "801E064EE3577E38B42AA83B2D0D144FE3D51F646B6DC43BD38446BF4DF923D1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateTraceDependencyAudit5Production6174.log",
+        "sha256": "601A14156263C397A95BBA58A9C56F290A7CEC7EC55D0E27476A511C262ECB74",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem"
+        ],
+        "sourceSha256": "CA8699BD7A0F197E6CAF563BF66FF8619FE36BFC63AE60D20AA8DA8A502CA835"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateDescentDependencyAudit3Production6174.log",
+        "sha256": "A46B1F155391BA1FEB2C6567977236A08476BAA3C56424F82282027704246B03",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.original_coordinate_trace_mem_span"
+        ],
+        "sourceSha256": "A299AB79C9649EFBEC70ED2DA90BEE87BE49EC0DA172C9A31FC9C92BA86E227B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexSpanDescentDependencyAudit5Production6174.log",
+        "sha256": "59010AB99713AD5D3632C177B230A0F87B435218C916399B39D2076852A1F980",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.original_mem_span_of_regular_off_image"
+        ],
+        "sourceSha256": "AD9E221A021B221E447626E4DD414B9F5C5AF941C7B736FC408FA5DF54111520"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInjectivityDependencyAudit5Production6174.log",
+        "sha256": "566C63FBD7BD4B8B365FDC25843112288CFE372692FB9D2A6EC41072609C1327",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.finite_original_arithmetic_torsion"
+        ],
+        "sourceSha256": "F148C3FCFF5F0036A91231756461482710960C96CAA22B00703B8E85E52C4932"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReducedTranslationDependencyAudit6Production6174.log",
+        "sha256": "8A885B2FD3F6F59E6C915B8551531B4C6A4004F134354973D679185798E05078",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_reduced_space",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_complex_translation"
+        ],
+        "sourceSha256": "C88E6F8D5B5449D88E480A2838DBCBC861BF49D9180B15BDE537C4D1A11AB0FE"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionComparisonDependencyAudit9Production6174.log",
+        "sha256": "DAD8EF3250A6A67F0E31DB47413625295A08C188385061A61B90547EB4472998",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalConstantField.original_arithmetic_torsion_cardinality_complex_genus"
+        ],
+        "sourceSha256": "B1091A7C03C8B98198DEC938DF5C3B6D615F3E0C5C0ADADEDA40CE56085641FC"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorsionProductionAudit6174.log",
+    "sha256": "9BD111A6CDCB526BA9D338D1C5B447CB1D40EB1D61AB03B6BCE41C73B57864EF",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-torsion-production-build-6174.log",
+    "aggregateSha256": "C637E685F182633BE201D71E9F47CA33503100467BDC8B95B2EF721AB4E8E344",
+    "productionModules": 6174,
+    "incrementModules": 53,
+    "axiomChecks": 137,
+    "exhaustiveIncrementTheorems": 254,
+    "linterScopes": 53,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 255,
+    "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. Actual original coefficient fields, places, normalized orders, divisors and Pic0 quotients are retained. Arithmetic Picard injectivity, actual torsion preimages and the exact complex-genus arithmetic count are proved. No final source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 255,
+      "scratchDistinct": 254,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemSubring_sourceCurveFiniteCoordinateValuations": "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemSubring_dubon2026",
+        "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_sourceCurveFiniteCoordinateValuations": "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_sourceCurveFiniteCoordinateValuations._proof_1": "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_dubon2026._proof_1"
+      },
+      "generatedNameReason": "Lean names these anonymous private instance theorems using the module root. Import qualification changes SourceCurveFiniteCoordinateValuations to Dubon2026.SourceCurveFiniteCoordinateValuations. Source text is identical after import normalization; all three corresponding generated theorems pass the exhaustive axiom audits.",
+      "generatedNameSourceEvidence": {
+        "scratchSha256": "EB588245E9AD44FCF800E59B8027512A8ACF6389E81FF5A86CBFEDDB453CD064",
+        "productionSha256": "451EA20F227C0D2C4119D98A9C60695082CD103957609FDB4BFD97C00543B50B"
+      },
+      "productionFocused": 254,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace.congr_simp": [
+          {
+            "scope": "SourceArithmeticTorsionScratchOwnership163For6174",
+            "module": "Dubon2026.SourceOriginalDivisorConorm"
+          },
+          {
+            "scope": "SourceArithmeticTorsionScratchOwnership169For6174",
+            "module": "Dubon2026.SourceOriginalInvariantSupport"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceLaurentScalarIndependence",
+            "SourceOriginalComplexCoefficientMap",
+            "SourceOriginalComplexFieldExtension",
+            "SourceOriginalComplexFieldIndependence"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership161For6174.log",
+            "sha256": "FEF460AEA6AB2D1611631B7E3CD9126C899AC53D31D3CB28EAD23AD685CFB5A1",
+            "sourceSha256": "CFB9E90849B8525174519A61F62720A4A7434E4AAFEBD0E48589FA2AADAC6DDA"
+          }
+        },
+        {
+          "modules": [
+            "SourceConstantFieldLocalCombinations",
+            "SourceConstantFieldLocalRing",
+            "SourceConstantFieldLocalFractions",
+            "SourceConstantFieldResidueDigits",
+            "SourceConstantFieldLocalDecomposition",
+            "SourceOriginalComplexLocalExtension",
+            "SourceCurveFiniteCoordinateValuations",
+            "SourceOriginalComplexSpanSeparation",
+            "SourceConstantFieldLocalUnits",
+            "SourceConstantFieldExtensionOrders",
+            "SourceConstantFieldValuationDomination",
+            "SourceOriginalConstantFieldValuationExtension",
+            "SourceOriginalConstantFieldPlaces"
+          ],
+          "count": 69,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership162For6174.log",
+            "sha256": "A25E6EFC36CD4992DDBD2C6E93D6BE500B729EDE43015649ED2D80ED1306F366",
+            "sourceSha256": "5DD6B222E74E9646660AA61608B835902CD16CF57BB3CF79A99CBEE94D77FD36"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalExtendedPlaceMap",
+            "SourceOriginalDivisorConorm",
+            "SourceOriginalComplexPicardMap"
+          ],
+          "count": 40,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership163For6174.log",
+            "sha256": "7187446936528E39919FF6B68E3BEED76831A4C8B20A8C57E8E2E3D034EF16FC",
+            "sourceSha256": "F472AB7EDBEAB0C7D1969F94DCD00D45E2812AF8C39BE945AE76E7319B703E01"
+          }
+        },
+        {
+          "modules": [
+            "SourceValuationIntegralCriterion",
+            "SourceConstantFieldTraceOrders",
+            "SourceConstantFieldTraceRegularity",
+            "SourceOriginalNewCoordinatePlaces",
+            "SourceOriginalComplexCoordinateTrace"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership164For6174.log",
+            "sha256": "252F601770488C210EA550F660CCC83BDAC2EFD0E6BFCA5874374F20CCA4BA7B",
+            "sourceSha256": "5FED3695F8734C6E45ADAB645DD4F10BEAB79F15473601A5F5BDC48F32FC8268"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoordinateReducedFraction",
+            "SourceConstantFieldRationalDescent",
+            "SourceOriginalCoordinateDescent"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership165For6174.log",
+            "sha256": "97CAE434FC2029BE7E23A6D2EE5C4432BE70335D57D588AC96B7C96B6DC23ED0",
+            "sourceSha256": "745FEA2749EB52AB26710CD1D527FDE78BA360F0B370B857404E1D231F5D2557"
+          }
+        },
+        {
+          "modules": [
+            "SourceConstantFieldCoordinateMap",
+            "SourceConstantFieldCoordinateSpan",
+            "SourceConstantFieldTraceReconstruction",
+            "SourceOriginalComplexCoordinateBasis",
+            "SourceOriginalComplexSpanDescent"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership166For6174.log",
+            "sha256": "9B51E2CBFE2CBD2BB99E495C469B25F12FED4A0D825C19543D123BAA37108AE6",
+            "sourceSha256": "C5D751F7292A0061D5F138ADABFC2C38082638E36846ED79E6998C3AC78C8E09"
+          }
+        },
+        {
+          "modules": [
+            "SourceConstantFieldOrderResidues",
+            "SourceConstantFieldIndependentOrders",
+            "SourceConstantFieldIndependentRepresentation",
+            "SourceOriginalPrincipalDescent",
+            "SourceOriginalComplexPicardInjectivity"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership167For6174.log",
+            "sha256": "1D4D7538E8EC69A655DC065D44348267644B70F6304F073C2AE4116E17A1F438",
+            "sourceSha256": "99F1AE750729DD2F62F5D036D9642535FFBC76B32B20223651C3F39FFE77D8A8"
+          }
+        },
+        {
+          "modules": [
+            "SourceReducedSpaceMinimum",
+            "SourceOriginalReducedRiemannRochSpace",
+            "SourceTranscendentalShift",
+            "SourceTranscendentalTranslation",
+            "SourceOriginalComplexConstantAutomorphisms",
+            "SourceOriginalComplexTranslations"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership168For6174.log",
+            "sha256": "2EB2CDCD7A47ED9D7BC48EBA536873FF6AB75E4FE92E36254361BB0F542AFCB2",
+            "sourceSha256": "3DE70F771A0C34FE2F88B55BDF612F4176F3F02124C9CC01315199F9C0CEC2B0"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrincipalDivisorIdentities",
+            "SourceOriginalReducedDivisorInvariance",
+            "SourceOriginalFiniteTorsionAction",
+            "SourceOriginalFixedReducedDivisor",
+            "SourceOriginalOffImageValues",
+            "SourceOriginalTranslationOrbits",
+            "SourceOriginalInvariantSupport",
+            "SourceOriginalTorsionDivisorDescent",
+            "SourceOriginalTorsionComparison"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership169For6174.log",
+            "sha256": "D00AF3835C743C276AE7568B5349B24F71D3F92763D66D91BCB4158D8E3025FC",
+            "sourceSha256": "5A2CC8978EAB4EE049770FB51C6EC4A0A0BA792A8C89705C0C8AF155A914CAC1"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorsionOwnership6174.log",
+        "sha256": "50A88B98813ED02014BD6A4602C394F3018C18DC2169D5614C103A795314AC62",
+        "sourceSha256": "C044E02DD115A136551B671AD47C7F0D83650F06826C8D4171F843D567AB3161"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-022902-789.log",
+        "sha256": "7820C02887921E20E6FA2B53BEAE28646C4D9230452AEFA27BFA732BD61EFF49"
+      }
+    },
+    "scratchToProductionCountReason": "All 254 distinct names from 255 exhaustive scratch checks are retained: 254 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual torsion preimages remove the comparison premise needed to construct the arithmetic-to-complex Tate equivalence. Tate realization with the actual period-lattice basis, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Arithmetic-genus invariance is not asserted by the explicit complex-genus count and is not needed for that next Tate comparison. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "postFocusedCommentRepair": {
+    "reason": "Canonical root and paper scanners matched comment lines beginning with constant, including constant-field. Reflowed all such lines in the new production scope. Both scanners and all Lean declarations/proofs are unchanged.",
+    "changes": [
+      {
+        "file": "Extension/Dubon2026/SourceOriginalComplexCoordinateTrace.lean",
+        "beforeSha256": "6628A9E912D235A43DA23B37D74B303292EF46F891414D8CFD0B85C5342AF0DA",
+        "afterSha256": "476B1309845E204B621C6103A3A19D64498A7D48DF6C61477422BA0ED4156294",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceOriginalComplexTranslations.lean",
+        "beforeSha256": "51EA705BFF91FC74D3EF7296EEC429204D5C19D4F60F7022D66ED2ACC2E6D135",
+        "afterSha256": "D01BAF5D9FF8C894ECC589782CC92C22340EC2B194538301CC64D7E148CBA48A",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceLaurentScalarIndependence.lean",
+        "beforeSha256": "BE41609448618C6E3549A0F6EF90012CAB4C54C30DF775A18B790C48955F70D4",
+        "afterSha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceOriginalComplexCoefficientMap.lean",
+        "beforeSha256": "16E116313F477AFF4CD1D7376A255DF79F692F35B72D6EF655AA1B25C6536673",
+        "afterSha256": "67F5A2EE6E82AF3EBCFC7365C2C10CF98833B3B55C65437A3B5B063669E0ADBC",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceOriginalComplexFieldIndependence.lean",
+        "beforeSha256": "D5F6E35DAB0299CE04C93B519DF0A554DE61A232DD6F75F3DFDC8AB02D01CAF9",
+        "afterSha256": "7880516A890587CE911D3160B51D048EDE59477DCAE4E6374F68FCF262F1E282",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceConstantFieldLocalCombinations.lean",
+        "beforeSha256": "0485BEB424750F86D4D77DFDF1EB08B61EDAE61ECB2D51274A99A96969341097",
+        "afterSha256": "87708E8E0ED54DFAA997089A1139532FDFC114B2B292C8FD60BCEC3BAD1E4B23",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceConstantFieldLocalRing.lean",
+        "beforeSha256": "C4D0D80BA7B5DD421D358BE9CD7F27A0E604D59B85030797679494491DBFA57A",
+        "afterSha256": "2308BB1D4279F12F1E7AF478B5F5BA478EBFB34942A76F28C5CDE23E0C55C192",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceConstantFieldLocalFractions.lean",
+        "beforeSha256": "A6346049246BD38339E8920A0285DB03708AAFE00A5F7B88C003B9F5F9591BE9",
+        "afterSha256": "B509F4D8606F2AFBEA5E1DC1720ED18EC858F53EDF033D45FA7B2683E11B254B",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceConstantFieldResidueDigits.lean",
+        "beforeSha256": "8A1E0B1AC9BA798E6A8CD71BDE5AA153F63CC8EB6FE737D9ACD8618CA429D808",
+        "afterSha256": "2793A42B28DA865FDD0CF7B1C83DCB950AF0C6EB2494B84AFC40CC988D301E0B",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceConstantFieldLocalDecomposition.lean",
+        "beforeSha256": "F3B5916A3D73C926E804EE2B08438ED591EF064432B0ECBB1636DE8CC96EEE38",
+        "afterSha256": "1941B1C63DD84C4A55947D98E90F0CE3B531738EA1AB133BD1EDA0883FAFF628",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceCurveFiniteCoordinateValuations.lean",
+        "beforeSha256": "451EA20F227C0D2C4119D98A9C60695082CD103957609FDB4BFD97C00543B50B",
+        "afterSha256": "1DA1CF3EFFA76AA02F897A6768CD9DABF40CC6670567AAAA95ACE75DAEF8015F",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceConstantFieldExtensionOrders.lean",
+        "beforeSha256": "948A6EA9953B25B554CCD5DD88794F012DAAE9988602FFC232DC8663B9BB6981",
+        "afterSha256": "D4CD0608C71FCC068610AB4597594923997BCC50483975DCB31DD0B25AECA4C0",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceOriginalNewCoordinatePlaces.lean",
+        "beforeSha256": "3BBECC353A5B6B41475EEAC1ACCD98D50B536060949685808A3CCE415D2FB97E",
+        "afterSha256": "5DA24758D5F656013544E71EB2A515E767C205D31C7A852749C7A9DAE835452A",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceOriginalReducedRiemannRochSpace.lean",
+        "beforeSha256": "BFE65A7879AF51B27AC4F565830B54260A03056E7F340B6D865B58078473B4A3",
+        "afterSha256": "91A0182819FE8B3C72997EB9DB32222C061C33709AC0C55329703DAD828ACEA2",
+        "declarationsAndProofBodiesIdentical": true
+      },
+      {
+        "file": "Extension/Dubon2026/SourceOriginalTorsionDivisorDescent.lean",
+        "beforeSha256": "B9AF386AEB562A084E25DEBC1B8F241D2741C5642CF7C79AD0A5F831E3ECA8F7",
+        "afterSha256": "EB7D3B3A3BE009322AADEB47B5491569AED314D1470756583143C485C6D4CD64",
+        "declarationsAndProofBodiesIdentical": true
+      }
+    ],
+    "failedFoundationLog": "logs/foundation_freeze_20261022_041706.log",
+    "failedFoundationSha256": "0E8283B57A517308772665DD3921884B1A5E6FD7B450386F5F884800213D21EC",
+    "frozenScratchChanged": false,
+    "postRepairVerification": {
+      "foundationLog": "logs/foundation_freeze_20261022_042951.log",
+      "foundationSha256": "2AF917D8EC99AA6B8C70EDB88D6D5413B8CD9A935553CD895DDEBA6B68C3DD05",
+      "paperLog": "logs/dubon-build-20261022-043252-852.log",
+      "paperSha256": "989B8141F421845A59F1CF0B1D9D319FC2747F868A8B69C7722174EB9895A1C7",
+      "exit": 0,
+      "diagnostics": 0,
+      "reason": "The sequential canonical run recompiles changed production comments and dependants, checks every production theorem and reruns all thirteen regressions. Proof bodies remain identical to the focused scope."
+    },
+    "failedPaperInventoryLog": "logs/dubon-build-20261022-042808-353.log",
+    "failedPaperInventorySha256": "01E9BC6104AF30AA6655C818D6072565A93FCEC327A7F94BEA3A67E8FB04F806"
+  },
+  "receipt6174": {
+    "recordedUTC": "2026-10-22T12:51:55.738819+00:00",
+    "log": "logs/dubon-build-20261022-043252-852.log",
+    "sha256": "989B8141F421845A59F1CF0B1D9D319FC2747F868A8B69C7722174EB9895A1C7",
+    "bytes": 10686586,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6174,
+    "projectTheorems": 42723,
+    "registeredConsumers": 18858,
+    "registeredConstructions": 1354,
+    "declarations": 26011,
+    "generated": 24580,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_042951.log",
+    "foundationSha256": "2AF917D8EC99AA6B8C70EDB88D6D5413B8CD9A935553CD895DDEBA6B68C3DD05",
+    "countReconciliation": {
+      "previousTheorems": 42469,
+      "focusedTheorems": 254,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 254,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorsionOwnership6174.log",
+      "ownershipSha256": "50A88B98813ED02014BD6A4602C394F3018C18DC2169D5614C103A795314AC62"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 255,
+      "scratchDistinct": 254,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemSubring_sourceCurveFiniteCoordinateValuations": "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemSubring_dubon2026",
+        "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_sourceCurveFiniteCoordinateValuations": "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_sourceCurveFiniteCoordinateValuations._proof_1": "_private.Dubon2026.SourceCurveFiniteCoordinateValuations.0.Dubon2026.SourceCurve.ConstantField.instIsFractionRingSubtypeMemValuationSubring_dubon2026._proof_1"
+      },
+      "generatedNameReason": "Lean names these anonymous private instance theorems using the module root. Import qualification changes SourceCurveFiniteCoordinateValuations to Dubon2026.SourceCurveFiniteCoordinateValuations. Source text is identical after import normalization; all three corresponding generated theorems pass the exhaustive axiom audits.",
+      "generatedNameSourceEvidence": {
+        "scratchSha256": "EB588245E9AD44FCF800E59B8027512A8ACF6389E81FF5A86CBFEDDB453CD064",
+        "productionSha256": "451EA20F227C0D2C4119D98A9C60695082CD103957609FDB4BFD97C00543B50B"
+      },
+      "productionFocused": 254,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.OriginalConstantField.liftPlace.congr_simp": [
+          {
+            "scope": "SourceArithmeticTorsionScratchOwnership163For6174",
+            "module": "Dubon2026.SourceOriginalDivisorConorm"
+          },
+          {
+            "scope": "SourceArithmeticTorsionScratchOwnership169For6174",
+            "module": "Dubon2026.SourceOriginalInvariantSupport"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceLaurentScalarIndependence",
+            "SourceOriginalComplexCoefficientMap",
+            "SourceOriginalComplexFieldExtension",
+            "SourceOriginalComplexFieldIndependence"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership161For6174.log",
+            "sha256": "FEF460AEA6AB2D1611631B7E3CD9126C899AC53D31D3CB28EAD23AD685CFB5A1",
+            "sourceSha256": "CFB9E90849B8525174519A61F62720A4A7434E4AAFEBD0E48589FA2AADAC6DDA"
+          }
+        },
+        {
+          "modules": [
+            "SourceConstantFieldLocalCombinations",
+            "SourceConstantFieldLocalRing",
+            "SourceConstantFieldLocalFractions",
+            "SourceConstantFieldResidueDigits",
+            "SourceConstantFieldLocalDecomposition",
+            "SourceOriginalComplexLocalExtension",
+            "SourceCurveFiniteCoordinateValuations",
+            "SourceOriginalComplexSpanSeparation",
+            "SourceConstantFieldLocalUnits",
+            "SourceConstantFieldExtensionOrders",
+            "SourceConstantFieldValuationDomination",
+            "SourceOriginalConstantFieldValuationExtension",
+            "SourceOriginalConstantFieldPlaces"
+          ],
+          "count": 69,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership162For6174.log",
+            "sha256": "A25E6EFC36CD4992DDBD2C6E93D6BE500B729EDE43015649ED2D80ED1306F366",
+            "sourceSha256": "5DD6B222E74E9646660AA61608B835902CD16CF57BB3CF79A99CBEE94D77FD36"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalExtendedPlaceMap",
+            "SourceOriginalDivisorConorm",
+            "SourceOriginalComplexPicardMap"
+          ],
+          "count": 40,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership163For6174.log",
+            "sha256": "7187446936528E39919FF6B68E3BEED76831A4C8B20A8C57E8E2E3D034EF16FC",
+            "sourceSha256": "F472AB7EDBEAB0C7D1969F94DCD00D45E2812AF8C39BE945AE76E7319B703E01"
+          }
+        },
+        {
+          "modules": [
+            "SourceValuationIntegralCriterion",
+            "SourceConstantFieldTraceOrders",
+            "SourceConstantFieldTraceRegularity",
+            "SourceOriginalNewCoordinatePlaces",
+            "SourceOriginalComplexCoordinateTrace"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership164For6174.log",
+            "sha256": "252F601770488C210EA550F660CCC83BDAC2EFD0E6BFCA5874374F20CCA4BA7B",
+            "sourceSha256": "5FED3695F8734C6E45ADAB645DD4F10BEAB79F15473601A5F5BDC48F32FC8268"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoordinateReducedFraction",
+            "SourceConstantFieldRationalDescent",
+            "SourceOriginalCoordinateDescent"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership165For6174.log",
+            "sha256": "97CAE434FC2029BE7E23A6D2EE5C4432BE70335D57D588AC96B7C96B6DC23ED0",
+            "sourceSha256": "745FEA2749EB52AB26710CD1D527FDE78BA360F0B370B857404E1D231F5D2557"
+          }
+        },
+        {
+          "modules": [
+            "SourceConstantFieldCoordinateMap",
+            "SourceConstantFieldCoordinateSpan",
+            "SourceConstantFieldTraceReconstruction",
+            "SourceOriginalComplexCoordinateBasis",
+            "SourceOriginalComplexSpanDescent"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership166For6174.log",
+            "sha256": "9B51E2CBFE2CBD2BB99E495C469B25F12FED4A0D825C19543D123BAA37108AE6",
+            "sourceSha256": "C5D751F7292A0061D5F138ADABFC2C38082638E36846ED79E6998C3AC78C8E09"
+          }
+        },
+        {
+          "modules": [
+            "SourceConstantFieldOrderResidues",
+            "SourceConstantFieldIndependentOrders",
+            "SourceConstantFieldIndependentRepresentation",
+            "SourceOriginalPrincipalDescent",
+            "SourceOriginalComplexPicardInjectivity"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership167For6174.log",
+            "sha256": "1D4D7538E8EC69A655DC065D44348267644B70F6304F073C2AE4116E17A1F438",
+            "sourceSha256": "99F1AE750729DD2F62F5D036D9642535FFBC76B32B20223651C3F39FFE77D8A8"
+          }
+        },
+        {
+          "modules": [
+            "SourceReducedSpaceMinimum",
+            "SourceOriginalReducedRiemannRochSpace",
+            "SourceTranscendentalShift",
+            "SourceTranscendentalTranslation",
+            "SourceOriginalComplexConstantAutomorphisms",
+            "SourceOriginalComplexTranslations"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership168For6174.log",
+            "sha256": "2EB2CDCD7A47ED9D7BC48EBA536873FF6AB75E4FE92E36254361BB0F542AFCB2",
+            "sourceSha256": "3DE70F771A0C34FE2F88B55BDF612F4176F3F02124C9CC01315199F9C0CEC2B0"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrincipalDivisorIdentities",
+            "SourceOriginalReducedDivisorInvariance",
+            "SourceOriginalFiniteTorsionAction",
+            "SourceOriginalFixedReducedDivisor",
+            "SourceOriginalOffImageValues",
+            "SourceOriginalTranslationOrbits",
+            "SourceOriginalInvariantSupport",
+            "SourceOriginalTorsionDivisorDescent",
+            "SourceOriginalTorsionComparison"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticTorsionScratchOwnership169For6174.log",
+            "sha256": "D00AF3835C743C276AE7568B5349B24F71D3F92763D66D91BCB4158D8E3025FC",
+            "sourceSha256": "5A2CC8978EAB4EE049770FB51C6EC4A0A0BA792A8C89705C0C8AF155A914CAC1"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticTorsionOwnership6174.log",
+        "sha256": "50A88B98813ED02014BD6A4602C394F3018C18DC2169D5614C103A795314AC62",
+        "sourceSha256": "C044E02DD115A136551B671AD47C7F0D83650F06826C8D4171F843D567AB3161"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-022902-789.log",
+        "sha256": "7820C02887921E20E6FA2B53BEAE28646C4D9230452AEFA27BFA732BD61EFF49"
+      }
+    },
+    "scratchToProductionCountReason": "All 254 distinct names from 255 exhaustive scratch checks are retained: 254 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual torsion preimages remove the comparison premise needed to construct the arithmetic-to-complex Tate equivalence. Tate realization with the actual period-lattice basis, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Arithmetic-genus invariance is not asserted by the explicit complex-genus count and is not needed for that next Tate comparison. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

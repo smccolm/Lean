@@ -1,0 +1,938 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceTateModule",
+    "Dubon2026.SourceTateFunctor",
+    "Dubon2026.SourceTateEquivalences",
+    "Dubon2026.SourceTateTorusCoordinates",
+    "Dubon2026.SourceTateTorusBasis",
+    "Dubon2026.SourceTateTorusNaturality",
+    "Dubon2026.SourceOriginalTateComparison",
+    "Dubon2026.SourceOriginalTatePeriod",
+    "Dubon2026.SourceOriginalTateRank",
+    "Dubon2026.SourceTateEndomorphisms",
+    "Dubon2026.SourceOriginalTateGalois",
+    "Dubon2026.SourceTateProjections",
+    "Dubon2026.SourceOriginalTateAdicContinuity",
+    "Dubon2026.SourceOriginalTatePadicContinuity",
+    "Dubon2026.SourceOriginalTateMatrixRepresentation",
+    "Dubon2026.SourceOriginalHeckeDegeneracy",
+    "Dubon2026.SourceFiniteCoordinateHom",
+    "Dubon2026.SourceOriginalHeckeFinite",
+    "Dubon2026.SourceOriginalHeckeFieldNaturality",
+    "Dubon2026.SourceCurveDivisorPullback",
+    "Dubon2026.SourceCurvePicardPullback",
+    "Dubon2026.SourceCurvePrimeNormOrders",
+    "Dubon2026.SourceCurveIntegralNormDivisor",
+    "Dubon2026.SourceCurveNormFiber",
+    "Dubon2026.SourceCurvePicardPushforward",
+    "Dubon2026.SourceCurvePicardCorrespondence",
+    "Dubon2026.SourceOriginalHeckePicard"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate representation and Picard Hecke correspondence -> arithmetic-to-period tensor comparison, native p-adic continuity, finite degeneracy maps and divisor norm/degree identities.",
+  "discharged": "The actual arithmetic Picard Tate module is linearly equivalent over the p-adic integers to the scalar extension of the same original integral period lattice, with its exact tensor formula. It is finite free of rank 2g, where g is explicitly the original complex genus. The original arithmetic Galois action has a continuous GL(2g,Zp) matrix realization with its exact basis action in the native p-adic topology. No Tate comparison, finite-rank, basis or continuity premise remains. The two literal original Hecke degeneracy maps are finite; actual residue-field identifications, ramification sums and the proved function-field norm identity make beta-pullback followed by alpha-pushforward a genuine endomorphism of the original Picard group. Its action on divisor classes is exact. No integral-map, finite-extension, degree-preservation or norm-formula premise remains on that original operator.",
+  "boundary": "Arithmetic equivariance of the actual Picard Hecke operator, compatibility with the Qbar-to-complex Picard comparison and the original period lattice, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. Field-map naturality alone does not establish those Picard or period identities. The finite-free rank uses the original complex genus explicitly and does not assert arithmetic-genus invariance. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,201-module scope: all thirteen retained regressions, 42,964 exhaustive theorem checks, 18,972 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_symm_tmul",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_apply",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_naturality",
+    "Dubon2026.TateModule.Period.phi2_baseChange",
+    "Dubon2026.SourceFunctionField.exists_original_tate_matrix_realization",
+    "Dubon2026.SourceFunctionField.originalTateGalois_uniform_congruence_isOpen",
+    "Dubon2026.SourceFunctionField.originalTateGaloisRep_coordinate_continuous",
+    "Dubon2026.SourceFunctionField.originalTateGaloisRep_apply",
+    "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_galois",
+    "Dubon2026.SourceFunctionField.originalHeckePicard_mk",
+    "Dubon2026.SourceFunctionField.originalHeckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.isPrincipal_originalHeckeDivisor",
+    "Dubon2026.SourceFunctionField.originalHeckeAlpha_arithmetic",
+    "Dubon2026.SourceFunctionField.originalHeckeBeta_arithmetic",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeAlpha_fieldMap",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeBeta_fieldMap",
+    "Dubon2026.SourceCurve.Pic0.finitePullback_mk",
+    "Dubon2026.SourceCurve.Pic0.geometricPushforward_mk",
+    "Dubon2026.SourceFunctionField.originalHeckeDivisor",
+    "Dubon2026.SourceFunctionField.originalHeckePicard"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T11:31:09.135465+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceTateModule",
+        "SourceTateFunctor",
+        "SourceTateEquivalences",
+        "SourceTateTorusCoordinates",
+        "SourceTateTorusBasis",
+        "SourceTateTorusNaturality",
+        "SourceOriginalTateComparison",
+        "SourceOriginalTatePeriod",
+        "SourceOriginalTateRank"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateModule.lean",
+          "sha256": "C57BE511743C4222E347EB7D21156DCC2C3721D3C60D9BC9077ABC0E12A13956",
+          "oleanSha256": "81F03B9114841AB53773DD35F920E62B5DA1379C9342B73E8E6F7A0B5D0DFEB6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateFunctor.lean",
+          "sha256": "9B76B29EA719EE76AD5BC6B303F543782E3877C081025F4F3B45A480A5247693",
+          "oleanSha256": "C1AE012F74796AC223BCC6989C288F4361F886576CEB023DA6987CE59DC7F089"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateEquivalences.lean",
+          "sha256": "2721A5CAE25DAC63011DF02018DEF10A1B0F59A941747005E3051A9C69F6475F",
+          "oleanSha256": "8C57BA6F40168C895B51F19827EB9B2D516CBC41FF147254F1A9C56EBCD63502"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorusCoordinates.lean",
+          "sha256": "24297CA905D46BBD4778E62229B98A7F7F1960C9FD96C48C64DA0A7D695877F9",
+          "oleanSha256": "334785F07798CFD248C9FABD7441B6BB280550C0332E273284F7087F4220C151"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorusBasis.lean",
+          "sha256": "65A8F2D2A9649AD3413F06DF048737A3200F674B06EBB9EE1798A6948E060077",
+          "oleanSha256": "AAF5A7003DB13BF786645436871A156FFD70593B66CBD7DCCA7CFE80FA83A4F3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorusNaturality.lean",
+          "sha256": "3982E0B55B4E1F33AA11210051178EE23B6705E44940D386C8525BE0CA6921E2",
+          "oleanSha256": "8C8D234E65B78E173B5348200E918A3EC8C356B8F19839CC38A5342170690929"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateComparison.lean",
+          "sha256": "B5A620C575001E7C2E1F232956BD6C652643C43284EAE53222E1D2D1AAE0DDD9",
+          "oleanSha256": "8A240944D6ACB195D9424BA614267DE25E99461337D4FB7B65F73C0054752BAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePeriod.lean",
+          "sha256": "C05BCB405E82E169C792557D2D125032D7625C7D24F6D5A32FC7F7ED72E3DF9A",
+          "oleanSha256": "7614F84977168A6F0B2F2CCD2A80C3CAA5E1BA04174D71B6704012914B1C0C21"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateRank.lean",
+          "sha256": "8E35E9BD1268857F815B9001AE60F434884D4B9872BEF983BEEC3109029804CF",
+          "oleanSha256": "E5AB6B74B37F4AF260BC5DFF4DC2C813B3D0402810007696363CABB21026E600"
+        }
+      ],
+      "queries": [
+        "Dubon2026.TateModule.torsion",
+        "Dubon2026.TateModule.compat",
+        "Dubon2026.TateModule.compat_pow",
+        "Dubon2026.TateModule.coe_add",
+        "Dubon2026.TateModule.coe_zero",
+        "Dubon2026.TateModule.coe_neg",
+        "Dubon2026.TateModule.coe_sub",
+        "Dubon2026.TateModule.apply_zero",
+        "Dubon2026.TateModule.natCast_smul_eq_mod",
+        "Dubon2026.TateModule.natCast_smul_eq_of_zmod_eq",
+        "Dubon2026.TateModule.toZModPow_eq_appr",
+        "Dubon2026.TateModule.appr_succ_smul_eq",
+        "Dubon2026.TateModule.smul_apply",
+        "Dubon2026.TateModule.natCast_padicInt_smul_apply",
+        "Dubon2026.TateModule.coe_tateMap_apply",
+        "Dubon2026.TateModule.tateMap_comp_apply",
+        "Dubon2026.TateModule.tateMap_injective",
+        "Dubon2026.TateModule.tateMap_surjective",
+        "Dubon2026.TateModule.tateEquivOfInjective_apply",
+        "Dubon2026.TateModule.tateMap_naturality",
+        "Dubon2026.TateModule.ofAddEquiv_apply",
+        "Dubon2026.TateModule.Period.natCast_ne_zero_K",
+        "Dubon2026.TateModule.Period.divLevel_apply",
+        "Dubon2026.TateModule.Period.natCast_pow_zsmul_eq",
+        "Dubon2026.TateModule.Period.natCast_zsmul_eq",
+        "Dubon2026.TateModule.Period.divLevel_natCast_pow_smul",
+        "Dubon2026.TateModule.Period.divLevel_succ_natCast_smul",
+        "Dubon2026.TateModule.Period.divLevel_zero",
+        "Dubon2026.TateModule.Period.divLevel_coe_eq_of_eq_add",
+        "Dubon2026.TateModule.Period.coe_iota_apply",
+        "Dubon2026.TateModule.Period.psi_apply",
+        "Dubon2026.TateModule.Period.coe_psi_apply",
+        "Dubon2026.TateModule.Period.equivFun_lam",
+        "Dubon2026.TateModule.Period.exists_eq_smul_of_divLevel_eq_zero",
+        "Dubon2026.TateModule.Period.psi_injective",
+        "Dubon2026.TateModule.Period.psi_surjective",
+        "Dubon2026.TateModule.Period.phi2_toLinearMap_eq",
+        "Dubon2026.TateModule.Period.phi2_tmul",
+        "Dubon2026.TateModule.Period.quotEnd_mk",
+        "Dubon2026.TateModule.Period.quotEnd_divLevel",
+        "Dubon2026.TateModule.Period.iota_restrict",
+        "Dubon2026.TateModule.Period.phi2_baseChange",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finite_order_mem_complexPicardMap_range",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_naturality",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_symm_tmul",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank",
+        "Dubon2026.TateModule",
+        "Dubon2026.TateModule.instSMul",
+        "Dubon2026.TateModule.instModule",
+        "Dubon2026.TateModule.tateMap",
+        "Dubon2026.TateModule.tateEquivOfInjective",
+        "Dubon2026.TateModule.ofAddEquiv",
+        "Dubon2026.TateModule.Period.divLevel",
+        "Dubon2026.TateModule.Period.iota",
+        "Dubon2026.TateModule.Period.psi",
+        "Dubon2026.TateModule.Period.lam",
+        "Dubon2026.TateModule.Period.psiEquiv",
+        "Dubon2026.TateModule.Period.phi2",
+        "Dubon2026.TateModule.Period.quotEnd",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.TateModule.torsion",
+        "Dubon2026.TateModule.compat",
+        "Dubon2026.TateModule.compat_pow",
+        "Dubon2026.TateModule.coe_add",
+        "Dubon2026.TateModule.coe_zero",
+        "Dubon2026.TateModule.coe_neg",
+        "Dubon2026.TateModule.coe_sub",
+        "Dubon2026.TateModule.apply_zero",
+        "Dubon2026.TateModule.natCast_smul_eq_mod",
+        "Dubon2026.TateModule.natCast_smul_eq_of_zmod_eq",
+        "Dubon2026.TateModule.toZModPow_eq_appr",
+        "Dubon2026.TateModule.appr_succ_smul_eq",
+        "Dubon2026.TateModule.smul_apply",
+        "Dubon2026.TateModule.natCast_padicInt_smul_apply",
+        "Dubon2026.TateModule.coe_tateMap_apply",
+        "Dubon2026.TateModule.tateMap_comp_apply",
+        "Dubon2026.TateModule.tateMap_injective",
+        "Dubon2026.TateModule.tateMap_surjective",
+        "Dubon2026.TateModule.tateEquivOfInjective_apply",
+        "Dubon2026.TateModule.tateMap_naturality",
+        "Dubon2026.TateModule.ofAddEquiv_apply",
+        "Dubon2026.TateModule.Period.natCast_ne_zero_K",
+        "Dubon2026.TateModule.Period.divLevel_apply",
+        "Dubon2026.TateModule.Period.natCast_pow_zsmul_eq",
+        "Dubon2026.TateModule.Period.natCast_zsmul_eq",
+        "Dubon2026.TateModule.Period.divLevel_natCast_pow_smul",
+        "Dubon2026.TateModule.Period.divLevel_succ_natCast_smul",
+        "Dubon2026.TateModule.Period.divLevel_zero",
+        "Dubon2026.TateModule.Period.divLevel_coe_eq_of_eq_add",
+        "Dubon2026.TateModule.Period.coe_iota_apply",
+        "Dubon2026.TateModule.Period.psi_apply",
+        "Dubon2026.TateModule.Period.coe_psi_apply",
+        "Dubon2026.TateModule.Period.equivFun_lam",
+        "Dubon2026.TateModule.Period.exists_eq_smul_of_divLevel_eq_zero",
+        "Dubon2026.TateModule.Period.psi_injective",
+        "Dubon2026.TateModule.Period.psi_surjective",
+        "Dubon2026.TateModule.Period.phi2_toLinearMap_eq",
+        "Dubon2026.TateModule.Period.phi2_tmul",
+        "Dubon2026.TateModule.Period.quotEnd_mk",
+        "Dubon2026.TateModule.Period.quotEnd_divLevel",
+        "Dubon2026.TateModule.Period.iota_restrict",
+        "Dubon2026.TateModule.Period.phi2_baseChange",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.finite_order_mem_complexPicardMap_range",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_naturality",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_symm_tmul",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.TateModule",
+        "Dubon2026.TateModule.instSMul",
+        "Dubon2026.TateModule.instModule",
+        "Dubon2026.TateModule.tateMap",
+        "Dubon2026.TateModule.tateEquivOfInjective",
+        "Dubon2026.TateModule.ofAddEquiv",
+        "Dubon2026.TateModule.Period.divLevel",
+        "Dubon2026.TateModule.Period.iota",
+        "Dubon2026.TateModule.Period.psi",
+        "Dubon2026.TateModule.Period.lam",
+        "Dubon2026.TateModule.Period.psiEquiv",
+        "Dubon2026.TateModule.Period.phi2",
+        "Dubon2026.TateModule.Period.quotEnd",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePeriodCompleteAudit9.log",
+      "logSha256": "4B9B4E7FF98330BC6503A1C377156F88C963B588C5C4D1AFFCACB71E8791A191",
+      "auditSha256": "A53030B6076D147883368CCA185CE5DC87068DAF5E791355831B562B2937D60B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 101,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 40,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePeriodCompleteDependencyAudit9.log",
+      "dependencyAuditSha256": "31F89791895AAF5405626AC6A221C632979AE2A4652BE93294499904F72D132F",
+      "dependencyAuditSourceSha256": "8DF64F2F6F9848DC0E42168692EB927B10FCD59D6F340E14260CD25A5208F1DC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_symm_tmul",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_naturality",
+        "Dubon2026.TateModule.Period.phi2_baseChange"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> actual arithmetic-to-complex Tate equivalence -> actual Picard-period equivalence and p-adic scalar extension of the original integral lattice.",
+      "discharged": "The actual compatible torsion sequences form a p-adic module. The literal arithmetic-to-complex Picard map induces a p-adic linear equivalence with its exact coordinate formula, using the proved actual torsion preimages. Composition with the actual Abel map identifies this arithmetic Tate module with the p-adic scalar extension of the same original integral period lattice. The explicit tensor formula is proved, and the original arithmetic Tate module is finite free of rank twice the original complex genus. No torsion comparison, finite rank, basis or lattice-comparison premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual Tate Galois action and native p-adic continuity, Hecke-equivariant realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open in this frozen scope. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-period-9-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D5886E793C62A2A5D23C5852C7B5E3962377E545D3424925F4C56D454F7BA7DE"
+    },
+    {
+      "recordedUTC": "2026-10-22T11:39:45.539853+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceTateEndomorphisms",
+        "SourceOriginalTateGalois",
+        "SourceTateProjections",
+        "SourceOriginalTateAdicContinuity",
+        "SourceOriginalTatePadicContinuity",
+        "SourceOriginalTateMatrixRepresentation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateEndomorphisms.lean",
+          "sha256": "D57F3F03765BA9146C6E89DDABBCCB265514A473C321945BE2A0AA2AB38B6EE9",
+          "oleanSha256": "D83CACD34559BB7A9C1CA3ADDCBFECCC2F1C57AA921D985AD7B7C2793F960067"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateGalois.lean",
+          "sha256": "73B7EC325A1132BD6A4C67731EFC76CE3ED6526D2526E1B464437195BBD19A94",
+          "oleanSha256": "5E4E9F4FAB3730FB41410355D44EEBD97DDB1942F2BE9CE78A15676783A56DF4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateProjections.lean",
+          "sha256": "F92CC6B6D510BDACDAE661A968E59917ABACE3D6393C9375C1800B34E510D73C",
+          "oleanSha256": "90C9FC27571809238A596430089AE3B612868FD4E467CD6B5E2EEAC0BCC3DA95"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateAdicContinuity.lean",
+          "sha256": "DEAD20232020C523AB18BA35AC7728E7AFE5C5EBE3721E1FD4716F0461BB861D",
+          "oleanSha256": "6A6A978DFEFF077730B76CDD5AAB260A6020405A9F1BC78931AF9538EC23C789"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePadicContinuity.lean",
+          "sha256": "22C8D7F6E2DF4F0179C964A354BFE1A38C0493C8C1FF47A09E3D4FF5EEB2BDAE",
+          "oleanSha256": "09C97F7B4F9B7B86F05D945C1F8ACD1B4D6FF8FF9879BB9BE2984C594B3B7C3A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateMatrixRepresentation.lean",
+          "sha256": "312F5A4EB1E948E135DADB4D6912182507402AAD4A7CF6854E1F3777F733DB02",
+          "oleanSha256": "2FDEDEAD2E39BB96FBECE5483B94379DEBD8793E240F6DA17DD898539092AAAB"
+        }
+      ],
+      "queries": [
+        "Dubon2026.TateModule.mapEnd_apply",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_apply",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_galois",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_coordinate_continuous",
+        "Dubon2026.TateModule.smul_apply_eq_zero_of_mem_span",
+        "Dubon2026.TateModule.proj_apply",
+        "Dubon2026.TateModule.torsionBy_proj",
+        "Dubon2026.TateModule.proj_mem_torsionBy",
+        "Dubon2026.TateModule.pow_smul_shiftOfProjEqZero",
+        "Dubon2026.TateModule.proj_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.originalTate_congruence_iff",
+        "Dubon2026.SourceFunctionField.originalTateGalois_congruence_isOpen",
+        "Dubon2026.SourceFunctionField.originalTateGalois_uniform_congruence_isOpen",
+        "Dubon2026.SourceFunctionField.originalTate_linear_coordinate_mem",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_linear_coordinate_continuous",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_matrix_continuous",
+        "Dubon2026.SourceFunctionField.originalTateMatrixRep_val",
+        "Dubon2026.SourceFunctionField.originalTateMatrixRep_continuous",
+        "Dubon2026.SourceFunctionField.exists_original_tate_matrix_realization",
+        "Dubon2026.TateModule.mapEnd",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate",
+        "Dubon2026.TateModule.proj",
+        "Dubon2026.TateModule.shiftOfProjEqZero",
+        "Dubon2026.SourceFunctionField.originalTateMatrixRep"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.TateModule.mapEnd_apply",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_apply",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_galois",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_coordinate_continuous",
+        "Dubon2026.TateModule.smul_apply_eq_zero_of_mem_span",
+        "Dubon2026.TateModule.proj_apply",
+        "Dubon2026.TateModule.torsionBy_proj",
+        "Dubon2026.TateModule.proj_mem_torsionBy",
+        "Dubon2026.TateModule.pow_smul_shiftOfProjEqZero",
+        "Dubon2026.TateModule.proj_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.originalTate_congruence_iff",
+        "Dubon2026.SourceFunctionField.originalTateGalois_congruence_isOpen",
+        "Dubon2026.SourceFunctionField.originalTateGalois_uniform_congruence_isOpen",
+        "Dubon2026.SourceFunctionField.originalTate_linear_coordinate_mem",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_linear_coordinate_continuous",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_matrix_continuous",
+        "Dubon2026.SourceFunctionField.originalTateMatrixRep_val",
+        "Dubon2026.SourceFunctionField.originalTateMatrixRep_continuous",
+        "Dubon2026.SourceFunctionField.exists_original_tate_matrix_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.TateModule.mapEnd",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate",
+        "Dubon2026.TateModule.proj",
+        "Dubon2026.TateModule.shiftOfProjEqZero",
+        "Dubon2026.SourceFunctionField.originalTateMatrixRep"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateGaloisAudit6.log",
+      "logSha256": "FE689F50223598EC53B2504B2C46CC74ACD034D739E8242DF47E891796F8AF60",
+      "auditSha256": "6849C209367A92D1342738BDA3EFB7E6B3B9540082742C62C7A68902318EF343",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 42,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateGaloisDependencyAudit6.log",
+      "dependencyAuditSha256": "31162882BF0A4EB3EC5AD14135F9C6AFED9FE5B5DFDDC0DAE7C6488227DD4014",
+      "dependencyAuditSourceSha256": "7B6D37F65A275F66D75E496AAF692D74089F9061BD5AB08B30656830F15053B3",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_tate_matrix_realization",
+        "Dubon2026.SourceFunctionField.originalTateGalois_uniform_congruence_isOpen",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_coordinate_continuous",
+        "Dubon2026.SourceFunctionField.originalTateGaloisRep_apply",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_galois"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> original Jacobian Tate module -> actual finite-free arithmetic Tate action with native p-adic continuity and exact GL(2g,Zp) realization.",
+      "discharged": "The original arithmetic Picard Galois action induces the actual p-adic linear Tate action with its exact torsion-coordinate formula. Projection kernels are exactly maximal-ideal powers of the Tate module. Existing finite fields of definition and the proved finite-free basis give open uniform congruence kernels. Native p-adic norm estimates prove continuity of every linear coordinate and of the actual matrix action. The resulting GL(2g,Zp) representation is continuous and has the exact action on the original Tate module in the constructed basis, where g is the original complex genus. No continuity, basis, finite-rank or matrix-realization hypothesis is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Actual Hecke correspondence and its compatibility with the original arithmetic-to-period comparison, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-galois-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "CB0AF2B03762F43FE95584917CBBB10CB1E7F228000A7135A8F4E7B85EE3ED09"
+    },
+    {
+      "recordedUTC": "2026-10-22T12:13:27.611339+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalHeckeDegeneracy",
+        "SourceFiniteCoordinateHom",
+        "SourceOriginalHeckeFinite",
+        "SourceOriginalHeckeFieldNaturality",
+        "SourceCurveDivisorPullback",
+        "SourceCurvePicardPullback",
+        "SourceCurvePrimeNormOrders",
+        "SourceCurveIntegralNormDivisor",
+        "SourceCurveNormFiber",
+        "SourceCurvePicardPushforward",
+        "SourceCurvePicardCorrespondence",
+        "SourceOriginalHeckePicard"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeDegeneracy.lean",
+          "sha256": "034090394005D8614741133CA7BF8F7A4776105EAF7E131CA486B57958EB0E0F",
+          "oleanSha256": "5569EC6D0084486D3B76456CF36C805FC357BF86AE43989522CC46B669287C8F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteCoordinateHom.lean",
+          "sha256": "6E15A7462844D38929F6BC8E2D6859E28B5DABF92B2D4134388C16A8F03E77D9",
+          "oleanSha256": "5A5A573076F9C3945ADA35DE159E39DF00063D2236BDA0BC628197AFAF9EF028"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeFinite.lean",
+          "sha256": "89C284ED501742A30493DF02E9398154AB7306B7967022E2970392A1A1E8BB00",
+          "oleanSha256": "5774A1E26137F29DDDA01DA13A68DBBA4990269D78276D9FD6DBEED0E0C64191"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeFieldNaturality.lean",
+          "sha256": "0D208A21B6E12D3D0D9BBFF1142790FFC432E21D2D2CF96EEB9617DBCDF86964",
+          "oleanSha256": "24697EE00477AA421F72C6C8F7A41B94E5BD206279E55AE54A4A95CBB5150D50"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveDivisorPullback.lean",
+          "sha256": "DB266D7CADDCB95B290348AC6F8643DAAA4692EDFDEC45B314681F081E9916A8",
+          "oleanSha256": "8AFBBD7F03A0DDC9EEECAF940BCAB073576E38304777124BD4ADD06418C998CC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardPullback.lean",
+          "sha256": "BA7E4F09E2603CC46D43F08A31211A1A2220F8ECF4354B0A7EBA3457770DF62F",
+          "oleanSha256": "11CE49E2E395D5FA30914B67C011BAF8DE6066C067CE3810BD623BC7DE68AC24"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePrimeNormOrders.lean",
+          "sha256": "62F34D2425BF7A25B12A9DB02845D5C553D30D383AD65916BE14925914D7BA0E",
+          "oleanSha256": "B9A4E5ECB63733A17DBCD7A451A4DCBA75A36C81B35D2EA62D9D9D5B319BF727"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralNormDivisor.lean",
+          "sha256": "E815B2D35A13CDCAF757C21909B5843B4D7607BA879FDC6D778DDFB8F238A48C",
+          "oleanSha256": "09511B012F4130F7132AC97B4D5E2EAE5071151D52A11F5DCD22B4495BBF4C22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveNormFiber.lean",
+          "sha256": "2E0167D61F18713BFCB67CFDA2F5F885BC1547FD1F1EA7AA559375D00727DF67",
+          "oleanSha256": "17C0C4F012F32EE7F5BBD9FCBE4737140B3A5D6D4652B1C9B4E38CA1A6E4279B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardPushforward.lean",
+          "sha256": "D0BD3FF990B174A4E63C26B559A9EECF8FA564B6EC07F60BB1C678EE6FD2B122",
+          "oleanSha256": "79600F282847CDE73F7F5B66C8A94220A46D4D08580B795095D955141FADF024"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardCorrespondence.lean",
+          "sha256": "F6BFE7DBD9A040B88FC44FCBF5A48FD9A8CDC0A10E47310E115304EBABAA76F9",
+          "oleanSha256": "9053AF1A8A6E74A65FD4AB4EA6C87FF80050297FB3C1B12679DB02DE5F0EBD3D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePicard.lean",
+          "sha256": "6F3C3C929817A3BEC24A2D7B87022ABD2BCC41448F0CEA39EC25FCEFE95242B6",
+          "oleanSha256": "6F123E906DD420969BC2D2A8F0852B50F96AFB03E8B4115825EBAA9082A7A583"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_full_degeneracy_map_le",
+        "Dubon2026.SourceFunctionField.original_over_mono_of_dvd",
+        "Dubon2026.SourceFunctionField.original_over_degeneracy_map_le",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_coe",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_coe",
+        "Dubon2026.SourceCurve.finite_hom_of_finite_image_coordinate",
+        "Dubon2026.SourceFunctionField.original_field_hom_finite",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_finite",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_finite",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeAlpha_fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeBeta_fieldMap",
+        "Dubon2026.SourceCurve.Place.mem_restrictionFiber",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_single",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_single_apply_of_eq",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_single_apply_of_ne",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_apply",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_finitePullback",
+        "Dubon2026.SourceCurve.Place.sum_restrictionFiber_orders",
+        "Dubon2026.SourceCurve.Divisor.degree_finitePullback",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_mem_degZero",
+        "Dubon2026.SourceCurve.Pic0.finitePullback_mk",
+        "Dubon2026.SourceCurve.Place.ord_coe_of_span_eq_maximal_pow",
+        "Dubon2026.SourceCurve.Place.fiberPrime_count_eq_order",
+        "Dubon2026.SourceCurve.Place.relNorm_fiberPrime_eq_maximal",
+        "Dubon2026.SourceCurve.Place.relNorm_span_eq_maximal_pow_sum",
+        "Dubon2026.SourceCurve.Place.ord_norm_integralClosureAt",
+        "Dubon2026.SourceCurve.Place.ord_norm_integral_eq_sum_fiber",
+        "Dubon2026.SourceCurve.Place.ord_norm_eq_sum_fiber",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward_single",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward_apply",
+        "Dubon2026.SourceCurve.Divisor.degree_geometricPushforward",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricPushforward",
+        "Dubon2026.SourceCurve.Pic0.geometricPushforward_mk",
+        "Dubon2026.SourceCurve.scalarTower_along",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_finitePullbackAlong",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricPushforwardAlong",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricCorrespondence",
+        "Dubon2026.SourceCurve.Pic0.geometricCorrespondence_mk",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_mem_degZero",
+        "Dubon2026.SourceFunctionField.isPrincipal_originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.originalHeckePicard_mk",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta",
+        "Dubon2026.SourceCurve.Place.restrictionFiber",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackSingle",
+        "Dubon2026.SourceCurve.Divisor.finitePullback",
+        "Dubon2026.SourceCurve.Pic0.finitePullback",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward",
+        "Dubon2026.SourceCurve.Pic0.geometricPushforward",
+        "Dubon2026.SourceCurve.algebraAlong",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence",
+        "Dubon2026.SourceCurve.Pic0.geometricCorrespondence",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.originalHeckePicard"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_full_degeneracy_map_le",
+        "Dubon2026.SourceFunctionField.original_over_mono_of_dvd",
+        "Dubon2026.SourceFunctionField.original_over_degeneracy_map_le",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_coe",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_coe",
+        "Dubon2026.SourceCurve.finite_hom_of_finite_image_coordinate",
+        "Dubon2026.SourceFunctionField.original_field_hom_finite",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_finite",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_finite",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeAlpha_fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeBeta_fieldMap",
+        "Dubon2026.SourceCurve.Place.mem_restrictionFiber",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_single",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_single_apply_of_eq",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_single_apply_of_ne",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_apply",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_finitePullback",
+        "Dubon2026.SourceCurve.Place.sum_restrictionFiber_orders",
+        "Dubon2026.SourceCurve.Divisor.degree_finitePullback",
+        "Dubon2026.SourceCurve.Divisor.finitePullback_mem_degZero",
+        "Dubon2026.SourceCurve.Pic0.finitePullback_mk",
+        "Dubon2026.SourceCurve.Place.ord_coe_of_span_eq_maximal_pow",
+        "Dubon2026.SourceCurve.Place.fiberPrime_count_eq_order",
+        "Dubon2026.SourceCurve.Place.relNorm_fiberPrime_eq_maximal",
+        "Dubon2026.SourceCurve.Place.relNorm_span_eq_maximal_pow_sum",
+        "Dubon2026.SourceCurve.Place.ord_norm_integralClosureAt",
+        "Dubon2026.SourceCurve.Place.ord_norm_integral_eq_sum_fiber",
+        "Dubon2026.SourceCurve.Place.ord_norm_eq_sum_fiber",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward_single",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward_apply",
+        "Dubon2026.SourceCurve.Divisor.degree_geometricPushforward",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricPushforward",
+        "Dubon2026.SourceCurve.Pic0.geometricPushforward_mk",
+        "Dubon2026.SourceCurve.scalarTower_along",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_finitePullbackAlong",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricPushforwardAlong",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_mem_degZero",
+        "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricCorrespondence",
+        "Dubon2026.SourceCurve.Pic0.geometricCorrespondence_mk",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_mem_degZero",
+        "Dubon2026.SourceFunctionField.isPrincipal_originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.originalHeckePicard_mk"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta",
+        "Dubon2026.SourceCurve.Place.restrictionFiber",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackSingle",
+        "Dubon2026.SourceCurve.Divisor.finitePullback",
+        "Dubon2026.SourceCurve.Pic0.finitePullback",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforward",
+        "Dubon2026.SourceCurve.Pic0.geometricPushforward",
+        "Dubon2026.SourceCurve.algebraAlong",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence",
+        "Dubon2026.SourceCurve.Pic0.geometricCorrespondence",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.originalHeckePicard"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePicardCompleteAudit12.log",
+      "logSha256": "E3AA18EA2A37477F506A57A0BBABC42D5EA797800A7C595F69FCF8322D4F1EE7",
+      "auditSha256": "ED63C3EA66B41C0CB54365B190DC7DB864A9B0CA2E4E8808E2E94DBAD227390C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 99,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 45,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePicardCompleteDependencyAudit12.log",
+      "dependencyAuditSha256": "054328D6E350C657C8257C33F6616138DA44683FFCFE8BF1FA0C49C46C6E6EB2",
+      "dependencyAuditSourceSha256": "F9DCA624CB346F57ACA469E6A2A7DE5FD631C76B5DADEC06743F21F22C33BF0F",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalHeckePicard_mk",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_mem_degZero",
+        "Dubon2026.SourceFunctionField.isPrincipal_originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_arithmetic",
+        "Dubon2026.SourceFunctionField.originalHeckeBeta_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeAlpha_fieldMap",
+        "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeBeta_fieldMap",
+        "Dubon2026.SourceCurve.Pic0.finitePullback_mk",
+        "Dubon2026.SourceCurve.Pic0.geometricPushforward_mk",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor",
+        "Dubon2026.SourceFunctionField.originalHeckePicard"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> original Jacobian Tate Hecke realization -> actual original Picard Hecke correspondence -> finite degeneracy maps, ramification-weighted pullback degree and norm pushforward of principal divisors.",
+      "discharged": "The actual original inclusion and q-substitution degeneracy maps are constructed and proved finite. Both commute with the actual arithmetic coefficient action and Qbar-to-complex coefficient embedding. Actual finite place fibers and normalized orders define divisor pullback; its principal-divisor and degree identities are proved. Native ideal norms, exact original prime/place comparison and the actual fraction-field denominator give the norm/order sum for every nonzero function over the residue-degree-one geometric fields. Pushforward therefore preserves principal divisors and degree. Their literal beta-pullback/alpha-pushforward composite defines the actual original Hecke endomorphism of Pic0, with its exact action on divisor classes. Finiteness, residue-field identifications, principal preservation and degree preservation are derived in the original consumer, not assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual Picard Hecke operator has been constructed. Field-map naturality is not yet Picard arithmetic equivariance or compatibility with the actual Qbar-to-complex Picard map and original period lattice. Those comparisons, rank-two Hecke/Frobenius/inertia realization, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-picard-12-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F80C2746ACF30453B0E1FD0ACD55246BA5F4ED6480B1763535F0C64AB90A51B2"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-tate-period-9-reuse-review-20261022.json",
+    "Tools/source-original-tate-galois-6-reuse-review-20261022.json",
+    "Tools/source-original-hecke-picard-12-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6201": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePeriodCompleteDependencyAudit9Production6201.log",
+        "sha256": "31F89791895AAF5405626AC6A221C632979AE2A4652BE93294499904F72D132F",
+        "requiredProofValueEdges": 40,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_symm_tmul",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_apply",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.originalTateComplexEquiv_naturality",
+          "Dubon2026.TateModule.Period.phi2_baseChange"
+        ],
+        "sourceSha256": "73BA19DEC88AB78FEE76E789F17CE5EB6746866AC550452162EAA4D13ADA6690"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateGaloisDependencyAudit6Production6201.log",
+        "sha256": "31162882BF0A4EB3EC5AD14135F9C6AFED9FE5B5DFDDC0DAE7C6488227DD4014",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_tate_matrix_realization",
+          "Dubon2026.SourceFunctionField.originalTateGalois_uniform_congruence_isOpen",
+          "Dubon2026.SourceFunctionField.originalTateGaloisRep_coordinate_continuous",
+          "Dubon2026.SourceFunctionField.originalTateGaloisRep_apply",
+          "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_galois"
+        ],
+        "sourceSha256": "EDB8B6774E861D1498E4601861B9D95C16DEF53211EA0B1E60B519A22E95C1AC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePicardCompleteDependencyAudit12Production6201.log",
+        "sha256": "054328D6E350C657C8257C33F6616138DA44683FFCFE8BF1FA0C49C46C6E6EB2",
+        "requiredProofValueEdges": 45,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalHeckePicard_mk",
+          "Dubon2026.SourceFunctionField.originalHeckeDivisor_mem_degZero",
+          "Dubon2026.SourceFunctionField.isPrincipal_originalHeckeDivisor",
+          "Dubon2026.SourceFunctionField.originalHeckeAlpha_arithmetic",
+          "Dubon2026.SourceFunctionField.originalHeckeBeta_arithmetic",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeAlpha_fieldMap",
+          "Dubon2026.SourceFunctionField.OriginalConstantField.originalHeckeBeta_fieldMap",
+          "Dubon2026.SourceCurve.Pic0.finitePullback_mk",
+          "Dubon2026.SourceCurve.Pic0.geometricPushforward_mk",
+          "Dubon2026.SourceFunctionField.originalHeckeDivisor",
+          "Dubon2026.SourceFunctionField.originalHeckePicard"
+        ],
+        "sourceSha256": "DE741AB7ED1FD310047C3708568B64F978DB1FC24D5D61C4AEEFBF01175E09CF"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeProductionAudit6201.log",
+    "sha256": "26D81FB4FC1E80B5FA5019728ECEC515F39053F63197EAB2757A9FBB9984ADDB",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-hecke-production-build-6201.log",
+    "aggregateSha256": "78976A56241433C8797042D8336D8B9F2C9724837E8509C41769ADF6F3D17DC0",
+    "productionModules": 6201,
+    "incrementModules": 27,
+    "axiomChecks": 151,
+    "exhaustiveIncrementTheorems": 241,
+    "linterScopes": 27,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 242,
+    "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. The original arithmetic Picard group, Tate sequences, integral period lattice, native p-adic topology and literal Hecke field maps are retained. No final source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 242,
+      "scratchDistinct": 242,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "No generated-name changes assumed; exact ownership comparison is required.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 241,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+          {
+            "scope": "SourceTateHeckeScratchOwnership172For6201",
+            "module": "Dubon2026.SourceCurveDivisorPullback"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceTateModule",
+            "SourceTateFunctor",
+            "SourceTateEquivalences",
+            "SourceTateTorusCoordinates",
+            "SourceTateTorusBasis",
+            "SourceTateTorusNaturality",
+            "SourceOriginalTateComparison",
+            "SourceOriginalTatePeriod",
+            "SourceOriginalTateRank"
+          ],
+          "count": 101,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateHeckeScratchOwnership170For6201.log",
+            "sha256": "D78889151B075D9D0D5C36CF514CAC8126B1EA3897BAF8C46930EDC5E5086FA7",
+            "sourceSha256": "263D2EB47732C277A332DCD6F245267E60EB9441F45FE5082E8B06892775B81A"
+          }
+        },
+        {
+          "modules": [
+            "SourceTateEndomorphisms",
+            "SourceOriginalTateGalois",
+            "SourceTateProjections",
+            "SourceOriginalTateAdicContinuity",
+            "SourceOriginalTatePadicContinuity",
+            "SourceOriginalTateMatrixRepresentation"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateHeckeScratchOwnership171For6201.log",
+            "sha256": "04D6A0BCAFD7B6A30F7D667018C13AE0B65F0A27505314EDD1A9C82577FCC85A",
+            "sourceSha256": "CC6A05BBF490CAA08BACF42A67BECC0C0D0174E87CC984ED7EBCD75A90053B2E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeDegeneracy",
+            "SourceFiniteCoordinateHom",
+            "SourceOriginalHeckeFinite",
+            "SourceOriginalHeckeFieldNaturality",
+            "SourceCurveDivisorPullback",
+            "SourceCurvePicardPullback",
+            "SourceCurvePrimeNormOrders",
+            "SourceCurveIntegralNormDivisor",
+            "SourceCurveNormFiber",
+            "SourceCurvePicardPushforward",
+            "SourceCurvePicardCorrespondence",
+            "SourceOriginalHeckePicard"
+          ],
+          "count": 99,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateHeckeScratchOwnership172For6201.log",
+            "sha256": "77B66C7FDF6E45FEA9FE0B2613E59B601A0D41916EBDD19EA445CB13D5FBEDDE",
+            "sourceSha256": "540328BA0EEE210E05FFDDE471C0A4E0E4CF98C4FF4D161971F17D9022107A6F"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeOwnership6201.log",
+        "sha256": "D2D2BA8E05D875740BB57D88F24AE9C947F1D8AEEF22DFED48120EF88EEB832F",
+        "sourceSha256": "7CDB6F2E357E6E83498C19990C5238CCC9F87E160F26EC0CC8B4C66D76BB5F94"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-043252-852.log",
+        "sha256": "989B8141F421845A59F1CF0B1D9D319FC2747F868A8B69C7722174EB9895A1C7"
+      }
+    },
+    "scratchToProductionCountReason": "All 242 distinct names from 242 exhaustive scratch checks are retained: 241 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Arithmetic equivariance of the actual Picard Hecke operator, compatibility with the Qbar-to-complex Picard comparison and the original period lattice, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. Field-map naturality alone does not establish those Picard or period identities. The finite-free rank uses the original complex genus explicitly and does not assert arithmetic-genus invariance. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6201": {
+    "recordedUTC": "2026-10-22T14:13:38.294628+00:00",
+    "log": "logs/dubon-build-20261022-060443-756.log",
+    "sha256": "D998A4EA9C2912E72C695F41C69DEAE15CF6FB03A9BF8417180457D5B2C175AA",
+    "bytes": 10749218,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6201,
+    "projectTheorems": 42964,
+    "registeredConsumers": 18972,
+    "registeredConstructions": 1391,
+    "declarations": 26162,
+    "generated": 24743,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_060158.log",
+    "foundationSha256": "CE66280F33A9DE92ACBB56AE523104A2CCCE2994CA3B96F921C1924534C3D802",
+    "countReconciliation": {
+      "previousTheorems": 42723,
+      "focusedTheorems": 241,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 241,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeOwnership6201.log",
+      "ownershipSha256": "D2D2BA8E05D875740BB57D88F24AE9C947F1D8AEEF22DFED48120EF88EEB832F"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 242,
+      "scratchDistinct": 242,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "No generated-name changes assumed; exact ownership comparison is required.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 241,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+          {
+            "scope": "SourceTateHeckeScratchOwnership172For6201",
+            "module": "Dubon2026.SourceCurveDivisorPullback"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceTateModule",
+            "SourceTateFunctor",
+            "SourceTateEquivalences",
+            "SourceTateTorusCoordinates",
+            "SourceTateTorusBasis",
+            "SourceTateTorusNaturality",
+            "SourceOriginalTateComparison",
+            "SourceOriginalTatePeriod",
+            "SourceOriginalTateRank"
+          ],
+          "count": 101,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateHeckeScratchOwnership170For6201.log",
+            "sha256": "D78889151B075D9D0D5C36CF514CAC8126B1EA3897BAF8C46930EDC5E5086FA7",
+            "sourceSha256": "263D2EB47732C277A332DCD6F245267E60EB9441F45FE5082E8B06892775B81A"
+          }
+        },
+        {
+          "modules": [
+            "SourceTateEndomorphisms",
+            "SourceOriginalTateGalois",
+            "SourceTateProjections",
+            "SourceOriginalTateAdicContinuity",
+            "SourceOriginalTatePadicContinuity",
+            "SourceOriginalTateMatrixRepresentation"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateHeckeScratchOwnership171For6201.log",
+            "sha256": "04D6A0BCAFD7B6A30F7D667018C13AE0B65F0A27505314EDD1A9C82577FCC85A",
+            "sourceSha256": "CC6A05BBF490CAA08BACF42A67BECC0C0D0174E87CC984ED7EBCD75A90053B2E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeDegeneracy",
+            "SourceFiniteCoordinateHom",
+            "SourceOriginalHeckeFinite",
+            "SourceOriginalHeckeFieldNaturality",
+            "SourceCurveDivisorPullback",
+            "SourceCurvePicardPullback",
+            "SourceCurvePrimeNormOrders",
+            "SourceCurveIntegralNormDivisor",
+            "SourceCurveNormFiber",
+            "SourceCurvePicardPushforward",
+            "SourceCurvePicardCorrespondence",
+            "SourceOriginalHeckePicard"
+          ],
+          "count": 99,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateHeckeScratchOwnership172For6201.log",
+            "sha256": "77B66C7FDF6E45FEA9FE0B2613E59B601A0D41916EBDD19EA445CB13D5FBEDDE",
+            "sourceSha256": "540328BA0EEE210E05FFDDE471C0A4E0E4CF98C4FF4D161971F17D9022107A6F"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeOwnership6201.log",
+        "sha256": "D2D2BA8E05D875740BB57D88F24AE9C947F1D8AEEF22DFED48120EF88EEB832F",
+        "sourceSha256": "7CDB6F2E357E6E83498C19990C5238CCC9F87E160F26EC0CC8B4C66D76BB5F94"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-043252-852.log",
+        "sha256": "989B8141F421845A59F1CF0B1D9D319FC2747F868A8B69C7722174EB9895A1C7"
+      }
+    },
+    "scratchToProductionCountReason": "All 242 distinct names from 242 exhaustive scratch checks are retained: 241 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Arithmetic equivariance of the actual Picard Hecke operator, compatibility with the Qbar-to-complex Picard comparison and the original period lattice, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. Field-map naturality alone does not establish those Picard or period identities. The finite-free rank uses the original complex genus explicitly and does not assert arithmetic-genus invariance. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}
