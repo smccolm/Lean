@@ -1,0 +1,1603 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalFinitePeriodGeneration",
+    "Dubon2026.SourceOriginalDiscretePeriodsOfLoops",
+    "Dubon2026.SourcePeriodReciprocityKernel",
+    "Dubon2026.SourcePeriodIntegerCorrection",
+    "Dubon2026.SourceOriginalLoopPeriodInjectivity",
+    "Dubon2026.SourceOriginalPathIntegralLinearCombination",
+    "Dubon2026.SourceOriginalGeneratorPeriodCorrection",
+    "Dubon2026.SourceOriginalPathIntegralSubtraction",
+    "Dubon2026.SourceOriginalRegularDifferentialSubtraction",
+    "Dubon2026.SourceOriginalIntegralPeriodsFromGenerators",
+    "Dubon2026.SourceOriginalAbelConverseFromRawReciprocity",
+    "Dubon2026.SourceCellRadialRegion",
+    "Dubon2026.SourceCellPeriodicRadius",
+    "Dubon2026.SourceCellRadialCompact",
+    "Dubon2026.SourceCellRadialNeighborhood",
+    "Dubon2026.SourceCellRadialInterior",
+    "Dubon2026.SourceOriginalAnalyticCellCoordinates",
+    "Dubon2026.SourceOriginalAnalyticCells",
+    "Dubon2026.SourceOriginalCellCoordinateInverse",
+    "Dubon2026.SourceOriginalDifferentialRegularNeighborhood",
+    "Dubon2026.SourceOriginalChartOneFormLaw",
+    "Dubon2026.SourceOriginalCellRegularCoefficient",
+    "Dubon2026.SourceOriginalCellCoefficientPullback",
+    "Dubon2026.SourceCellRadialPrimitive",
+    "Dubon2026.SourceOriginalCellPrimitives",
+    "Dubon2026.SourceOriginalPuncturedOneFormLaw",
+    "Dubon2026.SourceOriginalCellPuncturedCoefficient",
+    "Dubon2026.SourceComplexSimplePolePullback",
+    "Dubon2026.SourceOriginalCellResidues",
+    "Dubon2026.SourceCellBoundaryGeometry",
+    "Dubon2026.SourceCellBoundaryDifferentiation",
+    "Dubon2026.SourceCellArcFundamentalTheorem",
+    "Dubon2026.SourceCellPrimitiveContour",
+    "Dubon2026.SourceCellCenteredWinding",
+    "Dubon2026.SourceCellCenteredResidue",
+    "Dubon2026.SourceOriginalCellCenteredResidue",
+    "Dubon2026.SourceOriginalCellDissection",
+    "Dubon2026.SourceOriginalCellDissectionInteriors",
+    "Dubon2026.SourceOriginalDissectionCellResidues",
+    "Dubon2026.SourceOriginalCellCoordinateTransition",
+    "Dubon2026.SourceOriginalCellCoefficientTransition",
+    "Dubon2026.SourceOriginalCellBoundaryIntegrability",
+    "Dubon2026.SourceOriginalCellPrimitiveJumps",
+    "Dubon2026.SourceOriginalPairedArcOverlap",
+    "Dubon2026.SourceOriginalDissectionPrimitiveJumps",
+    "Dubon2026.SourceOriginalReversedArcIntegrand",
+    "Dubon2026.SourceCellArcIntegralExtension",
+    "Dubon2026.SourceOriginalWeightedArcIntegral",
+    "Dubon2026.SourceOriginalWeightedArcReversal",
+    "Dubon2026.SourceOriginalWeightedEdgeCancellation",
+    "Dubon2026.SourceOriginalDissectionEdgeCancellation",
+    "Dubon2026.SourceOriginalCellArcPartition",
+    "Dubon2026.SourceOriginalPairedBoundarySum",
+    "Dubon2026.SourceOriginalDissectionSkeletonRegularity",
+    "Dubon2026.SourceOriginalWeightedResidueJumpSum",
+    "Dubon2026.SourceOriginalPoleCarrierSum",
+    "Dubon2026.SourceOriginalDissectionResidueJumps"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> actual cell primitives, residues, paired-edge cancellation and the global residue-jump identity.",
+  "discharged": "All mathematics after the raw geometric loop-generation and reciprocity clauses is proved: actual Abel-Jacobi period membership gives principality, and the actual period subgroup is discrete. Native rank and integer-matrix arguments supply the correction directly without a symplectic normal form. Those raw geometric clauses remain explicit upstream inputs. On the original complex curve, actual analytic cell coordinates have proved differential and residue transport. Source radial domains have constructed normalized primitives and proved centered weighted contours. The exact source one-pole-per-carrier and centered-dissection outputs suffice for every per-cell residue sum. The source paired arcs give constant primitive jumps and exact weighted edge cancellation. Native interval additivity and the actual side bijection assemble the full assigned-pole residue-jump identity. Primitive existence, boundary regularity, orientation, endpoint handling, edge cancellation and global summation are discharged; no primitive, jump or residue identity remains assumed by the assembled dissection consumer.",
+  "boundary": "Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,825-module scope: all thirteen retained regressions, 40,466 exhaustive theorem checks, 17,754 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_periods_of_generating_loops",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_generator_period_correction",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_raw_reciprocity",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_open_starConvex_neighborhood",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isOpen_Kint",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_regular_primitives",
+    "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_comp_mul_deriv",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier_isCompact",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_isOpen",
+    "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_calculus",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_residue",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_weighted_residue",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_cell_residue",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_subset_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_and_jumps",
+    "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_integrable",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_edge_cancellation",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_residue_jumps"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T23:31:47.861767+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalFinitePeriodGeneration",
+        "SourceOriginalDiscretePeriodsOfLoops",
+        "SourcePeriodReciprocityKernel",
+        "SourcePeriodIntegerCorrection",
+        "SourceOriginalLoopPeriodInjectivity",
+        "SourceOriginalPathIntegralLinearCombination",
+        "SourceOriginalGeneratorPeriodCorrection"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePeriodGeneration.lean",
+          "sha256": "53E0EF3DBFD2EE004A27FA6D475341247F0F10E1F277D60EBCEB7A0CB82CAE10",
+          "oleanSha256": "271830FC8106B62596F954C9202DC0958DD97553A36F6ADDEAC00D767F872155"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiscretePeriodsOfLoops.lean",
+          "sha256": "1CCD51EF0B153865B0613A623A3BBF0FBAF0D86F806935173E7A4A168927EEAA",
+          "oleanSha256": "FE8E9D1FC979A2F21105128E9B8061C7333BD9246DF5332EBDA9D36736EC3AF4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodReciprocityKernel.lean",
+          "sha256": "E209570CD13026522B8BAB95729F66F31C8B0EFB3773969D9C61F75C0DDE79F9",
+          "oleanSha256": "C381980AA9BEB2B5ADE863FC3532ECBB3BE6557FC75CA47B63CDC72D05633F88"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodIntegerCorrection.lean",
+          "sha256": "29ED76D85AF8EEEF4201FB06A96377C161EEF034E7EB05DFEE07438ECBED627D",
+          "oleanSha256": "623993A96DC0C86CD8652949F52F340D4BA2590FB88245FC187C924D02AE48B2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLoopPeriodInjectivity.lean",
+          "sha256": "A9A88F5A3D386318F3C8B208A4300609E7FE1DFCF3B24ED6B0C7BE15C7F676BE",
+          "oleanSha256": "37A4BE4EF4EEC0D239F05AAEF76214D0D5738BD2836AA02EC04223EFC8217EF8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathIntegralLinearCombination.lean",
+          "sha256": "A84233D9FAC5F2556388FACF070A736400E8BC27B3716E92B4700AA01B762A70",
+          "oleanSha256": "1F975F7BE72F6E92632430FB254E6B8500C347E4EB0E8EA0436A5199DCFC2819"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneratorPeriodCorrection.lean",
+          "sha256": "E568B87F16BBFB58419EC62B77A3132AF6D667D20AB6D2FE5DB3E5A4190FDF90",
+          "oleanSha256": "A0FB73C590E1097506B75C09BF3C7322DB974049E967C155E26457D21B4D997D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_coordinates",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_period_lattice_eq_span_loops",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_period_basis_of_generating_loops",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_periods_of_generating_loops",
+        "Dubon2026.SourceFunctionField.PeriodCorrection.period_range_eq_reciprocity_kernel",
+        "Dubon2026.SourceFunctionField.PeriodCorrection.exists_period_correction_of_reciprocity_kernel",
+        "Dubon2026.SourceFunctionField.PeriodCorrection.exists_integer_period_correction",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_loop_period_matrix_injective",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_generator_period_correction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_coordinates",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_period_lattice_eq_span_loops",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_period_basis_of_generating_loops",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_periods_of_generating_loops",
+        "Dubon2026.SourceFunctionField.PeriodCorrection.period_range_eq_reciprocity_kernel",
+        "Dubon2026.SourceFunctionField.PeriodCorrection.exists_period_correction_of_reciprocity_kernel",
+        "Dubon2026.SourceFunctionField.PeriodCorrection.exists_integer_period_correction",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_loop_period_matrix_injective",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_generator_period_correction"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawPeriodsAudit7.log",
+      "logSha256": "2FA9F95F7DC06ADA9117EDF637C4C190355460F5126A19857BFBFBA26480293C",
+      "auditSha256": "0368F5C5D52B699131C596816D31D71500060D44BDA751B3EA3DAD9C224A8496",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 16,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawPeriodsDependencyAudit7.log",
+      "dependencyAuditSha256": "71A4C7A2C56A86EFB9533F0375B17582DD369A04AA1488CB760491CC259AF487",
+      "dependencyAuditSourceSha256": "1903B82298CBE1456C68FD0BDCE90E670A4F927D8EB0C7EE75E28D1E2C8A8B07",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_periods_of_generating_loops",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_generator_period_correction"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> discrete periods and Abel converse -> raw loop generation and reciprocity -> actual regular differential correction on generating loops.",
+      "discharged": "From 2g actual loops generating all regular periods, derive exact integer coordinates for the original period subgroup, a real basis and discreteness. Full real span is already proved on the actual original curve. The same basis gives injectivity of the regular-period matrix. Native rank-nullity proves its image is the kernel of the raw reciprocity pairing. An integral unimodular intersection matrix then gives integer correction coefficients directly. Actual primitive sums realize an original regular differential correcting all generating loop periods to multiples of two pi i under the exact raw bilinear and third-kind reciprocity clauses and Abel-Jacobi period membership. Neither matrix injectivity nor a symplectic normal form is an assumption of the final original consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Geometric loop generation and raw reciprocity remain explicit upstream obligations. Extension of the generator correction to every avoiding loop and the full Abel converse remain required. Original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-raw-periods-7-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "EDDD1C00C8650293F9AFC7DF07D2EFB791116A4B0B425CBA0DF5039FE72C02B8"
+    },
+    {
+      "recordedUTC": "2026-10-21T23:39:07.907938+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalPathIntegralSubtraction",
+        "SourceOriginalRegularDifferentialSubtraction",
+        "SourceOriginalIntegralPeriodsFromGenerators",
+        "SourceOriginalAbelConverseFromRawReciprocity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathIntegralSubtraction.lean",
+          "sha256": "E3D26743FA6DC2E8788FD811D862192ECDFB3FA51E042A69B5C50F41D713E25D",
+          "oleanSha256": "DDFAB35B14904052E93ED8288FBC439713B81F4E3CE703BB2C0D5890AA95C0BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularDifferentialSubtraction.lean",
+          "sha256": "D7329F166C3E38A4C80EB0331A83EA1525DA92B9E84C3A9065B2DEEF48D0E119",
+          "oleanSha256": "089AAA869AF1207DB3022257D7D17D556D2CD99DB719CBF889332133C8A525F5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodsFromGenerators.lean",
+          "sha256": "EEE318352129BE269D415560A6AE8E01CF22AC2A5156A33247599335C9A042B4",
+          "oleanSha256": "BD1FD1F77E10C2A235F3A026D6309DD2A4786B68D2642CC5387428551B1E0B7E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelConverseFromRawReciprocity.lean",
+          "sha256": "8AD02879632C3D2D7C66E3210F208786244276541522B984EBBCDD781A208A31",
+          "oleanSha256": "E8C62064EA869EE7F47C0AE63C31E480C0315A9F4D9B78A048ABB7C6BF9F0B29"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differentialCoeff_sub",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_sub_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_sub_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_sub_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_simple_poles_sub_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_residues_sub_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_integral_periods_of_generators",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_raw_reciprocity"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differentialCoeff_sub",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_sub_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_sub_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_sub_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_simple_poles_sub_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_residues_sub_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_integral_periods_of_generators",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_raw_reciprocity"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawAbelAudit4.log",
+      "logSha256": "5732E39B601B921DCAACF10E7F9C018E9CA843F75383D2B6912C5855746E9304",
+      "auditSha256": "3E77F3C2708774CC769A36047D71507D4048FF3A9F0A994DD067A7743652602C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawAbelDependencyAudit4.log",
+      "dependencyAuditSha256": "E79B6A48070AD662852E02B9E92285D606433CB9A44861C697CC4B53D9AC433F",
+      "dependencyAuditSourceSha256": "22BAA06D576CA363E4BDEB3E02BA813C12B065F4F8BC34E485A1F62FF800B8E0",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_raw_reciprocity"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> raw geometric loop generation and reciprocity; all subsequent analytic and original-function obligations proved.",
+      "discharged": "The exact raw geometric loop-generation and reciprocity clauses imply the Abel converse for every actual degree-zero original divisor with Abel-Jacobi vector in the actual period subgroup. Original Riemann-Roch supplies the prescribed-residue differential. The raw matrix correction supplies an original regular differential. Subtraction preserves all simple-pole bounds and residues; actual path primitive subtraction gives the integral difference. Loop generation modulo residues extends integral periods on the generators to every avoiding loop. The proved meromorphic exponential and original-function comparison then make the original divisor principal. No prescribed differential, regular correction, integral-period, meromorphic-gluing or function-comparison premise remains in the assembled original consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Actual geometric loop generation and raw reciprocity must still be constructed and proved; the Abel converse is conditional on those explicit source clauses. Unconditional period discreteness, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-raw-abel-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B6385BFED72790D8117629635935AAD1118FAA119DB1856B5C1036C5B495CA67"
+    },
+    {
+      "recordedUTC": "2026-10-21T23:53:38.845024+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCellRadialRegion",
+        "SourceCellPeriodicRadius",
+        "SourceCellRadialCompact",
+        "SourceCellRadialNeighborhood",
+        "SourceCellRadialInterior"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialRegion.lean",
+          "sha256": "18D20111558A188F9B57A4174205FD5463C18C56EA39D3F3BD75525967EDDB9A",
+          "oleanSha256": "7BCC026361C14E22548F56A1B35BEA44151B79DEC4C813D03B7822180DACD3DE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellPeriodicRadius.lean",
+          "sha256": "94F66DCF11A475BCABBA5C6279E1E435C02FBDAEAB9B8725496D9AE2243049CF",
+          "oleanSha256": "F2172D22055BFB7379A0F2F56C6576085171D57E45CEA6983054805C5E19C804"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialCompact.lean",
+          "sha256": "CD83B988468E5D7099BCFB55C11100BEAB23303CFC1FD02217968D95A3182520",
+          "oleanSha256": "E0D3082B2DAC49EB959F738D60EF933CD774A72F965E77C7F97F6BF19ED54A5A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialNeighborhood.lean",
+          "sha256": "C05AFBB6737CDEEE5A14F589F232D1C41D020A33CEFC87F8C588D2A2D2E9C6E0",
+          "oleanSha256": "027709CD54E0BCB36BB1758CF106DDC585A13E2B2B3097EB00D0AAC8D055F673"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialInterior.lean",
+          "sha256": "E57754D5F3B3DF7BE389C66ABD097C502466ED9C141D0CB1B4D31A17C235D4F0",
+          "oleanSha256": "12AA5C7ABE5FBF2625A2237027975B76607024316D2FB9B74DA9073BBFC666F5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.periodic_apply_arg",
+        "Dubon2026.SourceFunctionField.CellGeometry.continuousAt_periodic_radius_arg",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.K_eq_image",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isCompact_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.center_mem_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.starConvex_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_open_starConvex_neighborhood",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_positive_lower_radius",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isOpen_Kint",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.Kint",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop'",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.arcIcc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.arcSet"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.periodic_apply_arg",
+        "Dubon2026.SourceFunctionField.CellGeometry.continuousAt_periodic_radius_arg",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.K_eq_image",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isCompact_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.center_mem_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.starConvex_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_open_starConvex_neighborhood",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_positive_lower_radius",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isOpen_Kint"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.Kint",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop'",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.arcIcc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.arcSet"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialAudit5.log",
+      "logSha256": "C9DC08E7B65642F9E7F33F5F8B37872CB307BD0AA71C46FD5730372AD6833954",
+      "auditSha256": "BBE5626DF7CF578E5B6356E9BBB968B75EEF8971FC90F77B70BB012ABAEB903E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialDependencyAudit5.log",
+      "dependencyAuditSha256": "37268FB0583E432DDF11FAA031D5A658777B2FE817614FB7F9CA446179A23F0B",
+      "dependencyAuditSourceSha256": "2CC49A9202576657ADE4F8E3CCB5013A42A27BCB706DE7D6BABCBC9D242E3B05",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_open_starConvex_neighborhood",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isOpen_Kint"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> open star-convex radial primitive domains.",
+      "discharged": "The exact source radial cell is compact and star-convex, its strict interior is open, and every open set containing it contains an open star-convex neighborhood of the cell and its center. These are the planar-domain obligations needed for cellwise analytic primitives in the raw geometric reciprocity proof. The source positive periodic radius, finite angular subdivision and piecewise C2 boundary contract are retained. No original curve dissection, geometric loop generation or reciprocity theorem is claimed by these planar results.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual original curve cell dissection, cellwise coefficient calculus and contour reciprocity, geometric loop generation and raw reciprocity remain required. Their downstream Abel converse is proved conditionally in the preceding cohort. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-cell-radial-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "80E091FC48B7DED8158EEAE78AE6603E0623A3346F0BE4DEAB4BFDDDF0A6437A"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:11:25.482156+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalAnalyticCellCoordinates",
+        "SourceOriginalAnalyticCells",
+        "SourceOriginalCellCoordinateInverse",
+        "SourceOriginalDifferentialRegularNeighborhood",
+        "SourceOriginalChartOneFormLaw",
+        "SourceOriginalCellRegularCoefficient",
+        "SourceOriginalCellCoefficientPullback",
+        "SourceCellRadialPrimitive",
+        "SourceOriginalCellPrimitives"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticCellCoordinates.lean",
+          "sha256": "AD2FA2167D1B3B40ED2C33B95A06A914042B89B05438FB2381BC460EAD2A7DD4",
+          "oleanSha256": "9F7BCD6CF94CEC4A404B5C0C05EDFF2679AACF5825578BCBDC2DDC6EBE9FE82F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticCells.lean",
+          "sha256": "ECC186F76ABBB28C05F69AE11D63FF415A7F6E845D79D0FB01C122E6CEE39B03",
+          "oleanSha256": "1BE49A1488C22D9EDD8DF12C22E28C108C71FB1D14ED48A3871F118AFBC1D6B0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellCoordinateInverse.lean",
+          "sha256": "E4286C035751D54661FB279156D55B3669D49BB6D15E30EAF8A0DACC010761A8",
+          "oleanSha256": "987002BD1C2D340069F112AA14FB108E09279A9797AEC0DF7BE1DD08E49EC5EB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialRegularNeighborhood.lean",
+          "sha256": "9A9549C786FDC93231B35892E0AE13E6ADD8920FAAD78CBFB767258D02F3217D",
+          "oleanSha256": "16CDC1D80F6F0A92A748BCFB8F625CDF3CE4FB8EF2B57BB43F719B5998F459B7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartOneFormLaw.lean",
+          "sha256": "55AD09C611915E918688BC7704CBDF7BEC061E464B34445D79E2DEAB95977DB8",
+          "oleanSha256": "1511D7B67A7221688959485AC053B1E8A1018893D7939AF1EE60F3613BC5E180"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellRegularCoefficient.lean",
+          "sha256": "F8E53907AA0462DF401913678A4977EA7DCC485B419B121F82178D20ECD50C46",
+          "oleanSha256": "5B60AF2E73A9C3A674078BF55458F75BBCEF9837A33C71EE3BB0CFC78C09F714"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellCoefficientPullback.lean",
+          "sha256": "9980003808AF111A9232341328A0244A5261456FCFBC19427D70305CF1EA69E2",
+          "oleanSha256": "6DA0EC700A79D230735FF6F7D6E51656E65630985A9B89EBB067AA8F7181CC05"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialPrimitive.lean",
+          "sha256": "7E6F86B0B7D082ACAC5F595BA31AD66CC21419964B36F5B1C3FD92024CC4F084",
+          "oleanSha256": "93045EF0AF3878CD97FFAD519D06972FF6689CC88A5EB99B7C968AFE8B7886E2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPrimitives.lean",
+          "sha256": "B944A3B3AE5E189C864954C789C467D27048B40B2515B3ED0C48CE890B4CEEA4",
+          "oleanSha256": "8C2A10C0723DCE2213F79A01DC3A7C23C5CDA016BBD748666D60E375AB598AE3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier_isCompact",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_isOpen",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_primitive_domain",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_inverse",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.analyticAt_inverse",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_differentialCoeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_expression_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.one_form_law_at",
+        "Dubon2026.SourceFunctionField.OriginalChart.one_form_law",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_eq_near",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_comp_mul_deriv",
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_radial_primitive",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.analyticAt_coeff",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_regular_primitives",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.read",
+        "Dubon2026.SourceFunctionField.CellGeometry.coeffIn",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior'",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdry",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdryIntegrand"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier_isCompact",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_isOpen",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_primitive_domain",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_inverse",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.analyticAt_inverse",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_differentialCoeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_expression_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.one_form_law_at",
+        "Dubon2026.SourceFunctionField.OriginalChart.one_form_law",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_eq_near",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_comp_mul_deriv",
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_radial_primitive",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.analyticAt_coeff",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_regular_primitives"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.read",
+        "Dubon2026.SourceFunctionField.CellGeometry.coeffIn",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior'",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdry",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdryIntegrand"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPrimitivesAudit9.log",
+      "logSha256": "452DCDF14407047B1BF3D559D198C3E7629ED28AECDA3A6F58E6FED06596F755",
+      "auditSha256": "295132480C9A042D5B4BB94B5CD6F926DC567D4BCAE76C3B30B7EA2C23343402",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 29,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPrimitivesDependencyAudit9.log",
+      "dependencyAuditSha256": "5F72779242DBD45C1479A8C6A57F0561497AFE00AC330E42478A3332D141386E",
+      "dependencyAuditSourceSha256": "765999C9F2CC77841F5C6D3366BB86C5FB13B9ABCFF72CD29C40692B09F42952",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_regular_primitives",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_comp_mul_deriv",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier_isCompact",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_isOpen"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> actual regular cell coefficient calculus and constructed normalized cell primitives.",
+      "discharged": "Actual analytic cells on the original complex place manifold have compact carriers and open interiors. Their inverse coordinates are analytic. Original finite differential support and Hausdorffness give local regularity, and the existing Kaehler germ law proves both coordinate identities for actual regular coefficients. Radial integration now constructs normalized primitives for every family of original regular differentials on an open star-convex neighborhood of each cell. The domains, inverse analyticity and primitives are derived, not assumed. This removes the regular-coefficient and cell-primitive obligations needed before jumps and contour reciprocity; it does not construct a cell dissection or prove raw reciprocity.",
+      "boundary": "Scratch only; production promotion and verification pending. Simple-pole coefficient transport, the actual original curve cell dissection, cell jumps and contour reciprocity, geometric loop generation and raw reciprocity remain required. The downstream Abel converse is already proved conditionally on the raw geometric clauses. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-cell-primitives-9-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E85A1D302EE7EE565837ABA465C296019575D1B406A9C37FEBE0719AE7C20C42"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:19:14.334465+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalPuncturedOneFormLaw",
+        "SourceOriginalCellPuncturedCoefficient",
+        "SourceComplexSimplePolePullback",
+        "SourceOriginalCellResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPuncturedOneFormLaw.lean",
+          "sha256": "2C5FB5D7E80C98B58C3D49B21F2A954E6E8F1D2D82FDE602E2DBAF2764D55F43",
+          "oleanSha256": "B0BB59867FDBF28DE27A4FB3E79D39B65A7EB1D7A7B828EAD6960B3A6306EB17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPuncturedCoefficient.lean",
+          "sha256": "962435AE9EEF69B864B37F196185B304A14582EB8DF4C16F821DB8454A58CA90",
+          "oleanSha256": "9AD68DEF1F810B6014655D57344002D4F4B78925088061104A63ACCB0792F6A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexSimplePolePullback.lean",
+          "sha256": "EDF5E3FFAA231BD217D9F446495F9F5E7092A8509A7F776C907A981A797F7E8E",
+          "oleanSha256": "20C11F2247FF0A7996B3A9A94D0A5DA211ADC358ED83E5B615A32D4004E1B53A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellResidues.lean",
+          "sha256": "CA9AFE3F6DA727EA141E94B86E169B5633DB77E9414E17B0E1D65C82E0993A35",
+          "oleanSha256": "46165801F312B6DC31DC18C2A7A2F2E01D044D3A34979958AEE0B968C2EE4FFC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_differentialCoeff_mem_punctured",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily_tendsto_punctured",
+        "Dubon2026.SourceFunctionField.OriginalChart.one_form_law_punctured",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.inverse_tendsto_punctured",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_eq_near_punctured",
+        "Dubon2026.SourceFunctionField.CellGeometry.analyticAt_dslope",
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_simple_pole_pullback_remainder",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_simple_pole",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_calculus"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_differentialCoeff_mem_punctured",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily_tendsto_punctured",
+        "Dubon2026.SourceFunctionField.OriginalChart.one_form_law_punctured",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.inverse_tendsto_punctured",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_eq_near_punctured",
+        "Dubon2026.SourceFunctionField.CellGeometry.analyticAt_dslope",
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_simple_pole_pullback_remainder",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_simple_pole",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_calculus"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellResiduesAudit4.log",
+      "logSha256": "BAB046982C534E74A630E0544DF81F52EA6CEC20FF43F64DCC40C585757FA043",
+      "auditSha256": "1C6FFA3DA33D940D98252245FB110FEC6A8BD7DC55B9DAF6BCE8E172A42365F5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 16,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellResiduesDependencyAudit4.log",
+      "dependencyAuditSha256": "52032BD84797852B204B5CEA9FBA62E500B760F50320291D56D2AF5787CB4177",
+      "dependencyAuditSourceSha256": "09550654A60097CFBFF80971121B800FBFCBA81DDBFEE62B4EF9AFA8BF3AB44B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_calculus"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> exact cell coefficient calculus and simple-pole residue transport.",
+      "discharged": "The complete source cell-coefficient local calculus is proved for actual original differentials and genuine coordinates: fixed-chart regular identity, coefficient analyticity, regular pullback identity, and exact simple-pole residue divided by the cell-coordinate difference plus an analytic remainder. The residue is literal originalPlaceEval of uniformizer times differential coefficient. Finite original differential support gives regularity on punctured neighborhoods, and the actual original logarithmic reading supplies the pole model. This removes the coefficient-calculus obligation needed for contour reciprocity; it does not construct a dissection or prove reciprocity.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual original curve cell dissection, radial contour integration, cell jumps and contour reciprocity, geometric loop generation and raw reciprocity remain required. The downstream Abel converse is proved conditionally on the raw geometric clauses. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-cell-residues-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6A364E1D67E28D57249EC2394416BEB917CC58147FDA3286FC2001EB1F6F4355"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:26:56.768703+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCellBoundaryGeometry",
+        "SourceCellBoundaryDifferentiation",
+        "SourceCellArcFundamentalTheorem",
+        "SourceCellPrimitiveContour",
+        "SourceCellCenteredWinding",
+        "SourceCellCenteredResidue",
+        "SourceOriginalCellCenteredResidue"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellBoundaryGeometry.lean",
+          "sha256": "EA114ECD1ABFE7CA7A3E292971860F3170298FCA503F1ECF02D70FC0E2F65325",
+          "oleanSha256": "A044A8B4729999F3CC62031E75D3FBADCE870140A9915149E8D9B699DF5B3143"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellBoundaryDifferentiation.lean",
+          "sha256": "5FC6E95A71141305328B6B785C3AA08A998AA821D2C3789E77E9945F9CA6F761",
+          "oleanSha256": "7FFD99EE31433A2784C03DFFC8C38104E6477FC5A52B7240A218B47EB9D99B48"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellArcFundamentalTheorem.lean",
+          "sha256": "6FF336BB158BA62A1505AEBED0F3201E235B1824B4C940C42242B0AC65D06D15",
+          "oleanSha256": "54EBE5D0296ADADF3C98B95834EEE969100C29ECA6690590F7C3319C7DED3E13"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellPrimitiveContour.lean",
+          "sha256": "967D5E4642A1015B7CBD24FE5F81D2E58F08D6CFF5DFC39D4E93701C6EE6A23A",
+          "oleanSha256": "160385FB04EA5899640804B4C217682D1E3624921E0F9C8733AA72600D2B4FEB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellCenteredWinding.lean",
+          "sha256": "EA842F390F63B00E76E06E9697C6C47D6747F07DD339216DC17CF29B9D2977C6",
+          "oleanSha256": "630DD936D624BCF8B3EDD437719528DB314780DFFF3BDDD02CCA916C34D5B3C6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellCenteredResidue.lean",
+          "sha256": "8C8936D9E86C7E50C5811D6DBAC021387144B7C3D2DAF87F0925AE5A1FF664C9",
+          "oleanSha256": "B9E949DBA24F81C2B8781E335CCF6517D627A198B563706742AFC1A59286D922"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellCenteredResidue.lean",
+          "sha256": "94086A3D0D5A1E1961888D67563D5D083A1CB317BEC288CEF3E8C5AFB8933FBE",
+          "oleanSha256": "597D855E4F9AFB4ACB07BB35E9F19437FB78136E6F3AECF3E8395B79DA895A0B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_sub_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.norm_loop_sub_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.radius_arg_loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_mem_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_ne_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_periodic",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.continuous_loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.continuous_radiusDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.hasDerivAt_radiusOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.continuous_loopDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop'_eq_loopDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.hasDerivAt_loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.integral_eq_sub_of_arc_derivatives",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.integral_eq_zero_of_primitive",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.integral_eq_zero_of_analyticOnNhd",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.centered_winding",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.centered_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.analyticAt_coeff_off_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_weighted_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.radiusDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loopDerivOnArc"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_sub_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.norm_loop_sub_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.radius_arg_loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_mem_K",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_ne_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop_periodic",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.continuous_loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.continuous_radiusDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.hasDerivAt_radiusOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.continuous_loopDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loop'_eq_loopDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.hasDerivAt_loop",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.integral_eq_sub_of_arc_derivatives",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.integral_eq_zero_of_primitive",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.integral_eq_zero_of_analyticOnNhd",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.centered_winding",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.centered_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.analyticAt_coeff_off_center",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_weighted_residue"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.radiusDerivOnArc",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.loopDerivOnArc"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCenteredResidueAudit7.log",
+      "logSha256": "1672CD91CED360573810191CA9EA2A48F0333EC530F56A50F0E2D54CBC059E84",
+      "auditSha256": "99ACE4B1398CE69D31088E8501952D144BE582B321F2D312C600497BD54C25D5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 34,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 25,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCenteredResidueDependencyAudit7.log",
+      "dependencyAuditSha256": "FCE7992F5DB245F25A300259BE033C888B564D975EC38F4F6176EFE47514765C",
+      "dependencyAuditSourceSha256": "E55C31235AE57D13878A2350BAB6269EED38682419890DE74B69297D8A398B4B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_weighted_residue"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> actual weighted centered cell residue integrals.",
+      "discharged": "The exact piecewise C2 radial boundary has zero holomorphic integral and logarithmic integral 2*pi*I about its center. Removing a simple principal part proves the centered residue formula. Actual original cell coefficients and their products with holomorphic primitives consume that formula, with the literal original algebraic residue and exact 2*pi*I normalization. These are actual original-place consumers, not only planar lemmas. The source dissection promises at most one pole per cell and a centered cell for each pole; applicability to every cell requires the intersection/unique-interior argument and subsequent assembly, still pending here.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual original curve dissection must still be constructed. Prove unique-interior applicability of its pole-center data, assemble per-cell residue sums, pair oriented edge integrals, construct jumps, and establish geometric loop generation and raw reciprocity. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-centered-residue-7-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "C26B697445BC2555C83E18949F7F561E83D77C89E6FDFAEBE58868D635B1FAB5"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:31:04.859990+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalCellDissection",
+        "SourceOriginalCellDissectionInteriors",
+        "SourceOriginalDissectionCellResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellDissection.lean",
+          "sha256": "48D399FC33ECCE40C2BA7A0E8A3E11802D746CCC5F394E5CBABC98560CB8AB41",
+          "oleanSha256": "B612BC05783EED7F06A9958FA2FF2F357F9F672C34A386C9CC2D2746523DBEA2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellDissectionInteriors.lean",
+          "sha256": "F8FC1D47C835B7F4EC96389084BDAE0FFA371A538242DD193EDE3CE457551FCA",
+          "oleanSha256": "BBB6498A35D5C786B29F1B7B87FB6E39A8132E6286A5580E213A38CC34A9CEAD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionCellResidues.lean",
+          "sha256": "18E44EFE158F51D5F4E410ADEEBC37829A4E12309ED1CE47D55D0406A3F896F1",
+          "oleanSha256": "053782BA540D00383EA0898EB6C60A98DD15C95159B43797502D955CAF625C21"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_subset_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_subset_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdry_not_mem_interior",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.eq_of_interior_mem_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.pole_center_on_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_cell_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.arcOf",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.edgeInt",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.skeleton"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_subset_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_subset_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdry_not_mem_interior",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.eq_of_interior_mem_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.pole_center_on_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_cell_residue"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.arcOf",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.edgeInt",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.skeleton"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionResiduesAudit3.log",
+      "logSha256": "45C8B192D9647ED90C67903BFF564071EAB95DA88DC3C52A6916A44E772F735B",
+      "auditSha256": "07B737071C435D693D7BA61A82C88603DA4E7A92AC9E3E5B7602C65718FF31F6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 19,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionResiduesDependencyAudit3.log",
+      "dependencyAuditSha256": "55DA348AD5F84C38321A586DE0800E51307B3328A2DC91A82B15070C7BF0BDC0",
+      "dependencyAuditSourceSha256": "B73A2B16D411A6F41CCB1F17CBD46A113CAD3263320CCB3BDCB9E2377FCDDCB8",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_cell_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_subset_carrier"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> actual weighted per-cell finite residue sums from source geometric dissection data.",
+      "discharged": "The complete genuine paired cell-dissection structure is defined on the original curve; no existence is claimed by the definition. Its source intersection-chain property forces unique interior carriers. Therefore the source centered-cell assignment centers every pole in every carrier containing it. Under exactly the source one-pole-per-carrier and center-assignment outputs, the actual weighted contour of every cell equals the full finite residue sum. This proves the applicability of the shorter centered route and removes the per-cell weighted-residue obligation without assuming a per-cell center separately.",
+      "boundary": "Scratch only; production promotion and verification pending. Construct the actual original cell dissection, pair oriented edge integrals, construct constant primitive jumps and prove their global residue identity, then establish geometric loop generation and raw reciprocity. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-dissection-residues-3-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "60F83A6ED03FCDE5B7B4B824A59B4C92F79376EB89BC670AECBD8C3119E6CAD1"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:43:42.275467+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalCellCoordinateTransition",
+        "SourceOriginalCellCoefficientTransition",
+        "SourceOriginalCellBoundaryIntegrability",
+        "SourceOriginalCellPrimitiveJumps",
+        "SourceOriginalPairedArcOverlap",
+        "SourceOriginalDissectionPrimitiveJumps"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellCoordinateTransition.lean",
+          "sha256": "781D9A36C2222EBF448FC12CA88BF950CF15CCDDBA86E380CB7891198E060B8B",
+          "oleanSha256": "C26EE4D315442C1AE8DB488B3FD024A0AB9727EB940A6083B6FDAF1DAA3EAD41"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellCoefficientTransition.lean",
+          "sha256": "8156520A6D2F51C190DEE15F603CB6E1503056A8D9C2F4C4B5DEACBE2AE18178",
+          "oleanSha256": "1382F9017255252367809A44DDFD7FE21F084BDF9254975B9CE679417AA5BF8A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellBoundaryIntegrability.lean",
+          "sha256": "A0271DF58D6D53CCB399953E49849DBE81162E96ADC83DA5B2CE62F5DF6ED353",
+          "oleanSha256": "80F3D12F5EBDE817A2C650CA7B287E7A3F49498A56E97BD335DA8AE0A95D6761"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPrimitiveJumps.lean",
+          "sha256": "2664959864F218D593D3C7C0C1751C68C8558D98FC0DBCFB286153E8C745738D",
+          "oleanSha256": "3A6912F0FFD0778839E8EEA0558EACC805C76DC370230B09294598C52A412516"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPairedArcOverlap.lean",
+          "sha256": "C73D12E88C0AD150CCE7C0AA99860C52BFDA6768709740101B7E8652DF1BB2E4",
+          "oleanSha256": "557A25A4B18A8D18B1AFB8318A005F4C7013C7807D8016F7BFD949624DB1A977"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionPrimitiveJumps.lean",
+          "sha256": "C16A64D4354761F9CE138318D00F4541DAAA4F3DC9F421BF8A5866B3F1455F73",
+          "oleanSha256": "274A8CC841717BF07016135E850A9770534B6C530E57333306B1A32864CE66A9"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.transition_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.analyticAt_transition",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.deriv_transition",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_transition",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdry_coordinates",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.continuous_bdry",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.continuousOn_boundary_coefficient",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_integrable",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.primitive_jump_on_arc",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.reversed_arc_overlap",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.side_arcOf",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.paired_arc_overlap",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_and_jumps"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.transition_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.analyticAt_transition",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.deriv_transition",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_transition",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.bdry_coordinates",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.continuous_bdry",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.continuousOn_boundary_coefficient",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_integrable",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.primitive_jump_on_arc",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.reversed_arc_overlap",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.side_arcOf",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.paired_arc_overlap",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_and_jumps"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionJumpsAudit6.log",
+      "logSha256": "442B8CA1AD702540600439BD1B3D9846E6FDF30863A5240455515C18C1B984B6",
+      "auditSha256": "01CECEBF4BFBE82BEA11BE5C87CB923F9D192729D9BF651293D0221333D665D3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionJumpsDependencyAudit6.log",
+      "dependencyAuditSha256": "14F719AEF8B1A52D0E149D4EF146EE26504E15A165292ACEFBBD3E85C26CC4B7",
+      "dependencyAuditSourceSha256": "65452D6F89E39938CF12CA652C9CB1DCC0DC97DB43833BD2E266F72032C55195",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_and_jumps",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_integrable"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> constructed actual cell primitives and constant paired-edge jumps from source geometric dissection data.",
+      "discharged": "From genuine source cell-dissection data and original regular differentials, Lean constructs normalized primitives and constant jumps on every actual paired edge. Coordinate transition analyticity and exact differential coefficient transport are proved on the original curve. Actual arc regularity proves boundary integrability. The source reversed-arc data derive all required overlap conditions, including endpoints; the assembled consumer assumes neither primitives nor jumps.",
+      "boundary": "Scratch only; production promotion and verification pending. Construct the original source dissection, prove paired-edge integral cancellation and the global weighted residue-jump identity, then establish geometric loop generation and raw reciprocity. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-dissection-jumps-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6F537E9EFA34F7244099F08F317D630F196175CC05528408EEF1AF3713DDF1BD"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:51:25.727720+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalReversedArcIntegrand",
+        "SourceCellArcIntegralExtension",
+        "SourceOriginalWeightedArcIntegral",
+        "SourceOriginalWeightedArcReversal",
+        "SourceOriginalWeightedEdgeCancellation",
+        "SourceOriginalDissectionEdgeCancellation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalReversedArcIntegrand.lean",
+          "sha256": "06CE4796CAE178A07912EF3B68C6E69E4C7B43691A0E9D50C1C3328206999863",
+          "oleanSha256": "95D83010A9B432885331F63FB4FD24E2523C92870C40423A20B3757379414D5A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellArcIntegralExtension.lean",
+          "sha256": "710C14A5D41A85B9ABE9626B2F686EBAE317460220FAFA5BD2606B99F3B14384",
+          "oleanSha256": "C7A61F623FFBA872A71A88C58BC04134F21A882C700AD87A4723B5C7A6D30196"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightedArcIntegral.lean",
+          "sha256": "E5E7B74F2473B12415FE57D70735DAC58B606B7597ECFBA9B6279FC020638F26",
+          "oleanSha256": "6DA1FA606CFB8B6060BE5020FA33337217B38F9D8141E5FED8982D350C7A1659"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightedArcReversal.lean",
+          "sha256": "C553A7995E6E27AF72324FC8448D39504FA0ADB11B8E268B8BC288139F4A6C0C",
+          "oleanSha256": "B72C1A3A51908F8C719F1B298FD4AF6791C2BCBCAA70CAD2E34E5522CB77CE59"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightedEdgeCancellation.lean",
+          "sha256": "E71EF2474F094CEE88128C4C821BDE36872344417DDC6F429B147F9E9E3092F0",
+          "oleanSha256": "BBCC794896E5B516EC43DACBA54FDB76414F9C255F1054F5BE61AD5809FB9A83"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionEdgeCancellation.lean",
+          "sha256": "1C6F2C07C3C247F364BDCCBC386AB2C4D34363F96BA1FD4F982BEAE078DD2CB5",
+          "oleanSha256": "6A3D3EF27418248D7561D4CA6E6204E57620FF589416B66BD0B424270CAA717E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.reversed_arc_integrand",
+        "Dubon2026.SourceFunctionField.CellGeometry.arc_integral_eq_of_continuous_extension",
+        "Dubon2026.SourceFunctionField.CellGeometry.integral_reversed_contDiff_arc",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.weighted_arc_integral_extension",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.weighted_reversed_arc_integral",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.weighted_edge_cancellation",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.bdry_mem_skeleton",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_edge_cancellation"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.reversed_arc_integrand",
+        "Dubon2026.SourceFunctionField.CellGeometry.arc_integral_eq_of_continuous_extension",
+        "Dubon2026.SourceFunctionField.CellGeometry.integral_reversed_contDiff_arc",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.weighted_arc_integral_extension",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.weighted_reversed_arc_integral",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.weighted_edge_cancellation",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.bdry_mem_skeleton",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_edge_cancellation"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEdgeCancellationAudit6.log",
+      "logSha256": "8795360C7879F0602CC64687F8BDBC95BC2995721AD260419621BDC51D333E5A",
+      "auditSha256": "13DE5EFF04FF4517EA855CBDC9CF611728A84925AE69D5CC652FC04E30B1D21F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEdgeCancellationDependencyAudit6.log",
+      "dependencyAuditSha256": "50D4BEF9C02E357A76502B994A911B55D41ED07F902F7D193D490D2F9A02AEAE",
+      "dependencyAuditSourceSha256": "658534607D10E9FDBB638AFFA2A466AEC74806D775A77E4CC96FC6C2ECE29EBB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_edge_cancellation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> actual weighted paired-edge cancellation for constructed original cell primitives and jumps.",
+      "discharged": "The constructed actual cell primitives and jumps satisfy the weighted paired-edge cancellation identity for every original differential regular on the source skeleton. The exact original differential coefficient transition proves its reversed-arc pullback, and native substitution supplies the sign. Endpoint-insensitive interval congruence establishes the actual integrals. No primitive, jump, reversal or edge-identity hypothesis remains in the assembled consumer; genuine dissection existence remains upstream.",
+      "boundary": "Scratch only; production promotion and verification pending. Construct the original source dissection, assemble the global weighted residue-jump identity, and establish geometric loop generation and raw reciprocity. Unconditional discrete periods, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-edge-cancellation-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "C8786BF7012B261F90A54DD5022A0C18592E96D06AA7DA8112664777D2AD2F18"
+    },
+    {
+      "recordedUTC": "2026-10-22T00:56:29.827893+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalCellArcPartition",
+        "SourceOriginalPairedBoundarySum",
+        "SourceOriginalDissectionSkeletonRegularity",
+        "SourceOriginalWeightedResidueJumpSum",
+        "SourceOriginalPoleCarrierSum",
+        "SourceOriginalDissectionResidueJumps"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellArcPartition.lean",
+          "sha256": "5117F62DE3CE6F1BE661395A5D0F426725CD0FE264A8C6BA92DE36F56AFC3EFE",
+          "oleanSha256": "337BE3672D73BC949852ADDED6BF62A55F0223475631652E89685CB11B9A9C2B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPairedBoundarySum.lean",
+          "sha256": "09B8534CA3E4D066F741E45A7B812BE75328C52B036E1D2828FA80D74B4EF1F2",
+          "oleanSha256": "BB2651073976F776FF5A33092804932A07723C00C18DA8BA08521AD15C394D4B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionSkeletonRegularity.lean",
+          "sha256": "5D5C6036ED929FE819AE48DACDBAE7C6467CF20817A10D57DB643AC5CD00D8F2",
+          "oleanSha256": "FB97A9DA8AE5ECB3FCBBD3C5817F1531F74354440A06975B6D862A97B907F772"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeightedResidueJumpSum.lean",
+          "sha256": "7524894E285735A0A79553FF19333176C3C76D4C3C776977DC0780FA1C768C8F",
+          "oleanSha256": "41B15A4DB7057F0AB2A3D44EF5A6513EC86E45FD83636324E3372DD9D0FDF7BF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPoleCarrierSum.lean",
+          "sha256": "F9BC82AB0D7F2DF0644A3F2A5E96F9F80E6E838C5444BF61505A5587FCBCC31A",
+          "oleanSha256": "1EF8BC2FCA5C1ACE03B3C2DEC0D493A4E926231EB2D19A5B66A4725EB2A80962"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionResidueJumps.lean",
+          "sha256": "B410CD204D6815AA3A830EAFE0BB6AF12C047BBB06FE20E91C327E4725D8AF0F",
+          "oleanSha256": "3D33CD23A1A9D0FCD0F1E4D5843F4F4031E771B691462607352FEB4A4D70EB55"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.integral_eq_sum_arcInt",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.arcOf_side",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.sum_cell_integrals_eq_sum_paired",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.interior_of_pole_mem_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.pole_not_mem_skeleton",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.regular_on_skeleton",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_residue_jump_sum",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.sum_pole_carriers",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_residue_jumps",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.arcInt"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.integral_eq_sum_arcInt",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.arcOf_side",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.sum_cell_integrals_eq_sum_paired",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.interior_of_pole_mem_carrier",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.pole_not_mem_skeleton",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.regular_on_skeleton",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_residue_jump_sum",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.sum_pole_carriers",
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_residue_jumps"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.arcInt"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueJumpsAudit6.log",
+      "logSha256": "A22E4599ABB921612CB671E2E2271AC8B8D826D4BCBB8056617FC82297ED0401",
+      "auditSha256": "DD4D66B1F49F4F922F1496B7AF9FD7C46C0FF5185450D37085F7E1FD41BFF60C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueJumpsDependencyAudit6.log",
+      "dependencyAuditSha256": "422B23180FB39C5DCC382FD6017E0176E480EC740F24798E8889429BBB0EEC08",
+      "dependencyAuditSourceSha256": "4387CAD21DBF74EFAE6C4E974B44799622829600626ECCD2693D7409496C0459",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_residue_jumps"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> analytic cell dissection -> the full assigned-pole weighted residue-jump identity for constructed actual cell primitives.",
+      "discharged": "For the exact source centered one-pole-per-carrier dissection outputs, every original regular differential family has constructed normalized cell primitives and constant edge jumps satisfying the full weighted assigned-pole residue identity for every original simple-pole differential regular off that pole set. Boundary regularity, arc integrability, oriented edge cancellation, global finite summation and collapse to the assigned-pole sum are derived. Neither primitives, jumps nor a residue identity remain assumed by the assembled consumer. Genuine dissection existence and raw loop/matrix reciprocity remain upstream.",
+      "boundary": "Scratch only; production promotion and verification pending. Construct the original source dissection and establish geometric loop generation and raw loop/matrix reciprocity. Unconditional discrete periods and Abel converse, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-jumps-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "2DC975A878BABC03D8AAB9B53A6AC8D027B5B9AC77ED720374210F428EC3158C"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-raw-periods-7-reuse-review-20261021.json",
+    "Tools/source-original-raw-abel-4-reuse-review-20261021.json",
+    "Tools/source-cell-radial-5-reuse-review-20261021.json",
+    "Tools/source-original-cell-primitives-9-reuse-review-20261021.json",
+    "Tools/source-original-cell-residues-4-reuse-review-20261021.json",
+    "Tools/source-original-centered-residue-7-reuse-review-20261021.json",
+    "Tools/source-original-dissection-residues-3-reuse-review-20261021.json",
+    "Tools/source-original-dissection-jumps-6-reuse-review-20261021.json",
+    "Tools/source-original-edge-cancellation-6-reuse-review-20261021.json",
+    "Tools/source-original-residue-jumps-6-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5825": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawPeriodsDependencyAudit7Production5825.log",
+        "sha256": "71A4C7A2C56A86EFB9533F0375B17582DD369A04AA1488CB760491CC259AF487",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_periods_of_generating_loops",
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_generator_period_correction"
+        ],
+        "sourceSha256": "90143EE22B62D6465C29FEB3EF043E5CC61E4AFD9A0D1CABAA422A6B9DD6FF29"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawAbelDependencyAudit4Production5825.log",
+        "sha256": "E79B6A48070AD662852E02B9E92285D606433CB9A44861C697CC4B53D9AC433F",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_raw_reciprocity"
+        ],
+        "sourceSha256": "674D6B248828ED3BE5BA9CD75472723F7B20E1016DD469FB4E0234E078F63525"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialDependencyAudit5Production5825.log",
+        "sha256": "37268FB0583E432DDF11FAA031D5A658777B2FE817614FB7F9CA446179A23F0B",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_open_starConvex_neighborhood",
+          "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isOpen_Kint"
+        ],
+        "sourceSha256": "A23134346D774CE62F78901756CCCFF61A5198D6318B9595C6414E02E32CEED0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPrimitivesDependencyAudit9Production5825.log",
+        "sha256": "5F72779242DBD45C1479A8C6A57F0561497AFE00AC330E42478A3332D141386E",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_regular_primitives",
+          "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_comp_mul_deriv",
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier_isCompact",
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_isOpen"
+        ],
+        "sourceSha256": "37B9EE4301E085CF1F096CA78E732872901CD1E6006AA8F607E96059E59F096B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellResiduesDependencyAudit4Production5825.log",
+        "sha256": "52032BD84797852B204B5CEA9FBA62E500B760F50320291D56D2AF5787CB4177",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_calculus"
+        ],
+        "sourceSha256": "514E4158412CB2C24C914DD7D6BB2B38DD38A0ACCEFD47F8C846F52CFC121643"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCenteredResidueDependencyAudit7Production5825.log",
+        "sha256": "FCE7992F5DB245F25A300259BE033C888B564D975EC38F4F6176EFE47514765C",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_residue",
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_weighted_residue"
+        ],
+        "sourceSha256": "545E376E3C7303FC7262F8E7D6A1A97B2482075ACBAE96FE5288CF0D23A6BD5B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionResiduesDependencyAudit3Production5825.log",
+        "sha256": "55DA348AD5F84C38321A586DE0800E51307B3328A2DC91A82B15070C7BF0BDC0",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_cell_residue",
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_subset_carrier"
+        ],
+        "sourceSha256": "041489BB115004D10E0B7B68F119A81A2E1E806DCA0F87897A946CDB72F54701"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionJumpsDependencyAudit6Production5825.log",
+        "sha256": "14F719AEF8B1A52D0E149D4EF146EE26504E15A165292ACEFBBD3E85C26CC4B7",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_and_jumps",
+          "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_integrable"
+        ],
+        "sourceSha256": "FAC50C84194E0068FD98FFB5DD84B0BE3E594D83D125900CA71C82A81561FA2D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEdgeCancellationDependencyAudit6Production5825.log",
+        "sha256": "50D4BEF9C02E357A76502B994A911B55D41ED07F902F7D193D490D2F9A02AEAE",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_edge_cancellation"
+        ],
+        "sourceSha256": "9ECCEE80EA2BE2C15A73E34C48C4709158A6F79BA2A49F6F6160573025474CA5"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueJumpsDependencyAudit6Production5825.log",
+        "sha256": "422B23180FB39C5DCC382FD6017E0176E480EC740F24798E8889429BBB0EEC08",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_residue_jumps"
+        ],
+        "sourceSha256": "E389820B0CC7135714C7B5446AA4091DAAA353BC09B3EB1D414EBFF08DCC6EC6"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityProductionAudit5825.log",
+    "sha256": "E2CA233F9B97F0126FB1FA9FB81CE69C5639AAB0C61225DAEBC4E65339CC5C6A",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-cell-reciprocity-production-5825-build.log",
+    "aggregateSha256": "EE863545E787D1EBDC1E9112E187706B13A6CC4A44F41A116393EDB3284308C4",
+    "productionModules": 5825,
+    "incrementModules": 57,
+    "axiomChecks": 130,
+    "exhaustiveIncrementTheorems": 185,
+    "linterScopes": 57,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 186,
+    "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Original functions, places, differentials, paths, residues and actual cell dissection retained. Raw geometric clauses and dissection existence remain explicit upstream; no final source contract weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 186,
+      "scratchDistinct": 186,
+      "productionFocused": 185,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp": [
+          {
+            "scope": "SourceCellReciprocityScratchOwnership115For5825",
+            "module": "Dubon2026.SourceOriginalCellCoefficientTransition"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalFinitePeriodGeneration",
+            "SourceOriginalDiscretePeriodsOfLoops",
+            "SourcePeriodReciprocityKernel",
+            "SourcePeriodIntegerCorrection",
+            "SourceOriginalLoopPeriodInjectivity",
+            "SourceOriginalPathIntegralLinearCombination",
+            "SourceOriginalGeneratorPeriodCorrection"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership108For5825.log",
+            "sha256": "3978F5E11CC500164A40712C186B79C7FDE27C737ADB3F0109E231EBF9C83136",
+            "sourceSha256": "2E1699603AA1354B5515AA2F8B0550E19BA7FE7CA9E23D03BB641706B8763B72"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPathIntegralSubtraction",
+            "SourceOriginalRegularDifferentialSubtraction",
+            "SourceOriginalIntegralPeriodsFromGenerators",
+            "SourceOriginalAbelConverseFromRawReciprocity"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership109For5825.log",
+            "sha256": "A12B674F82C8CD8289BAFFB23FD77FE8CB985654866BF1A51BD44A12E1F30265",
+            "sourceSha256": "135AC62E8B430582CC9E29A47E5773218282347A973EB8701B832279EC38E0E4"
+          }
+        },
+        {
+          "modules": [
+            "SourceCellRadialRegion",
+            "SourceCellPeriodicRadius",
+            "SourceCellRadialCompact",
+            "SourceCellRadialNeighborhood",
+            "SourceCellRadialInterior"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership110For5825.log",
+            "sha256": "5C2580C32A2145FB98EBC69BA3C7E3AC59FAE34A4A50799ACBD3157E41AC1F64",
+            "sourceSha256": "C368307F27495CA0C08B386D21D1515C066577502D5B5FE63047C28BD07A373F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAnalyticCellCoordinates",
+            "SourceOriginalAnalyticCells",
+            "SourceOriginalCellCoordinateInverse",
+            "SourceOriginalDifferentialRegularNeighborhood",
+            "SourceOriginalChartOneFormLaw",
+            "SourceOriginalCellRegularCoefficient",
+            "SourceOriginalCellCoefficientPullback",
+            "SourceCellRadialPrimitive",
+            "SourceOriginalCellPrimitives"
+          ],
+          "count": 29,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership111For5825.log",
+            "sha256": "85FB8B9355B549862A160661AE5A0E9313C5BD76B1FE36CE8491C330D4FD7BCE",
+            "sourceSha256": "A4422202256CB898FAFFD862B4B1EDA71F060CBA3411577A8189F28B7954F59E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPuncturedOneFormLaw",
+            "SourceOriginalCellPuncturedCoefficient",
+            "SourceComplexSimplePolePullback",
+            "SourceOriginalCellResidues"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership112For5825.log",
+            "sha256": "BF5D10F66A0D83AF05C553A73AEA527F90F98A8DD11BA43E07F0EC3640971325",
+            "sourceSha256": "D9ABD0CD92F760B0A9C4C9C919F044E1BCC57B75B7E66C1001490E6040C339FB"
+          }
+        },
+        {
+          "modules": [
+            "SourceCellBoundaryGeometry",
+            "SourceCellBoundaryDifferentiation",
+            "SourceCellArcFundamentalTheorem",
+            "SourceCellPrimitiveContour",
+            "SourceCellCenteredWinding",
+            "SourceCellCenteredResidue",
+            "SourceOriginalCellCenteredResidue"
+          ],
+          "count": 34,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership113For5825.log",
+            "sha256": "0A320EF119AD0D3781F2BA528250BC32238F72D520D33CBE105340C7625648A1",
+            "sourceSha256": "1DAA78FF77BBCD87B2C35DDF506ACA89496440C2282F34CF3CCB70F4C1630645"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellDissection",
+            "SourceOriginalCellDissectionInteriors",
+            "SourceOriginalDissectionCellResidues"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership114For5825.log",
+            "sha256": "BF2626C4D18EAE0ECB26C34068855730429EA558F82DC05756050608DB207B8D",
+            "sourceSha256": "86FE0C0A68A7A30AA9757A6B2DBB516E0EBF24AA1431F64953047872743B41AE"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellCoordinateTransition",
+            "SourceOriginalCellCoefficientTransition",
+            "SourceOriginalCellBoundaryIntegrability",
+            "SourceOriginalCellPrimitiveJumps",
+            "SourceOriginalPairedArcOverlap",
+            "SourceOriginalDissectionPrimitiveJumps"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership115For5825.log",
+            "sha256": "563357BFA4B552B82D22048E38592D0CA5FF937AE49803DA7AAABD3251B71A1C",
+            "sourceSha256": "FDEDA9932A6B3AD7A147665F3F82317264D2651138564E81419FFC5A1EFF1C2F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalReversedArcIntegrand",
+            "SourceCellArcIntegralExtension",
+            "SourceOriginalWeightedArcIntegral",
+            "SourceOriginalWeightedArcReversal",
+            "SourceOriginalWeightedEdgeCancellation",
+            "SourceOriginalDissectionEdgeCancellation"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership116For5825.log",
+            "sha256": "1CB226E485C9F49876EF72B1984A0D13ED778C2BAA53F3D741F7FADBCCFF206F",
+            "sourceSha256": "33D51504919A0C4B6FCCC9800545300A6C528E2A8023E4B9309874B5DC4D7206"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellArcPartition",
+            "SourceOriginalPairedBoundarySum",
+            "SourceOriginalDissectionSkeletonRegularity",
+            "SourceOriginalWeightedResidueJumpSum",
+            "SourceOriginalPoleCarrierSum",
+            "SourceOriginalDissectionResidueJumps"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership117For5825.log",
+            "sha256": "B029D36790E3D8D606B0739795222A78B458D13AE9AC9D1DFB42101E7550D9D7",
+            "sourceSha256": "B23231C1B2009F99CDC86730F6CDDFBFC09EA449A821C756EFAD2206C9DECC26"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityOwnership5825.log",
+        "sha256": "5B4C264655D7D131A9F15D1A5E00B18AEDB597EA56EA3836B9CCAF4F7470FD10",
+        "sourceSha256": "77730194794F6932A3040D3022B5A5F8B044EA257FD1F216A6E093BB42A3B23A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-165250-763.log",
+        "sha256": "9A733DECBED9FCBAEA6E6131AFB73A17CAF8566013FE1F1BA0E1DC64BDE46BC0"
+      }
+    },
+    "scratchToProductionCountReason": "All 186 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt5825": {
+    "recordedUTC": "2026-10-22T02:32:55.081972+00:00",
+    "log": "logs/dubon-build-20261021-181912-897.log",
+    "sha256": "B80DD8019D9390F157665DC765310C3DA7B4485FB16783089C6FE89FAE04C853",
+    "bytes": 9966163,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5825,
+    "projectTheorems": 40466,
+    "registeredConsumers": 17754,
+    "registeredConstructions": 1121,
+    "declarations": 24422,
+    "generated": 22818,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_181602.log",
+    "foundationSha256": "058226C292B8E11D30AE98382E5DAF19F3CDA33183625E9A073415FE37B5C3F3",
+    "countReconciliation": {
+      "previousTheorems": 40282,
+      "focusedTheorems": 185,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.OriginalChart.pathPeriodLattice.congr_simp"
+      ],
+      "addedTheorems": 184,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityOwnership5825.log",
+      "ownershipSha256": "5B4C264655D7D131A9F15D1A5E00B18AEDB597EA56EA3836B9CCAF4F7470FD10"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 186,
+      "scratchDistinct": 186,
+      "productionFocused": 185,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp": [
+          {
+            "scope": "SourceCellReciprocityScratchOwnership115For5825",
+            "module": "Dubon2026.SourceOriginalCellCoefficientTransition"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalFinitePeriodGeneration",
+            "SourceOriginalDiscretePeriodsOfLoops",
+            "SourcePeriodReciprocityKernel",
+            "SourcePeriodIntegerCorrection",
+            "SourceOriginalLoopPeriodInjectivity",
+            "SourceOriginalPathIntegralLinearCombination",
+            "SourceOriginalGeneratorPeriodCorrection"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership108For5825.log",
+            "sha256": "3978F5E11CC500164A40712C186B79C7FDE27C737ADB3F0109E231EBF9C83136",
+            "sourceSha256": "2E1699603AA1354B5515AA2F8B0550E19BA7FE7CA9E23D03BB641706B8763B72"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPathIntegralSubtraction",
+            "SourceOriginalRegularDifferentialSubtraction",
+            "SourceOriginalIntegralPeriodsFromGenerators",
+            "SourceOriginalAbelConverseFromRawReciprocity"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership109For5825.log",
+            "sha256": "A12B674F82C8CD8289BAFFB23FD77FE8CB985654866BF1A51BD44A12E1F30265",
+            "sourceSha256": "135AC62E8B430582CC9E29A47E5773218282347A973EB8701B832279EC38E0E4"
+          }
+        },
+        {
+          "modules": [
+            "SourceCellRadialRegion",
+            "SourceCellPeriodicRadius",
+            "SourceCellRadialCompact",
+            "SourceCellRadialNeighborhood",
+            "SourceCellRadialInterior"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership110For5825.log",
+            "sha256": "5C2580C32A2145FB98EBC69BA3C7E3AC59FAE34A4A50799ACBD3157E41AC1F64",
+            "sourceSha256": "C368307F27495CA0C08B386D21D1515C066577502D5B5FE63047C28BD07A373F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAnalyticCellCoordinates",
+            "SourceOriginalAnalyticCells",
+            "SourceOriginalCellCoordinateInverse",
+            "SourceOriginalDifferentialRegularNeighborhood",
+            "SourceOriginalChartOneFormLaw",
+            "SourceOriginalCellRegularCoefficient",
+            "SourceOriginalCellCoefficientPullback",
+            "SourceCellRadialPrimitive",
+            "SourceOriginalCellPrimitives"
+          ],
+          "count": 29,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership111For5825.log",
+            "sha256": "85FB8B9355B549862A160661AE5A0E9313C5BD76B1FE36CE8491C330D4FD7BCE",
+            "sourceSha256": "A4422202256CB898FAFFD862B4B1EDA71F060CBA3411577A8189F28B7954F59E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPuncturedOneFormLaw",
+            "SourceOriginalCellPuncturedCoefficient",
+            "SourceComplexSimplePolePullback",
+            "SourceOriginalCellResidues"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership112For5825.log",
+            "sha256": "BF5D10F66A0D83AF05C553A73AEA527F90F98A8DD11BA43E07F0EC3640971325",
+            "sourceSha256": "D9ABD0CD92F760B0A9C4C9C919F044E1BCC57B75B7E66C1001490E6040C339FB"
+          }
+        },
+        {
+          "modules": [
+            "SourceCellBoundaryGeometry",
+            "SourceCellBoundaryDifferentiation",
+            "SourceCellArcFundamentalTheorem",
+            "SourceCellPrimitiveContour",
+            "SourceCellCenteredWinding",
+            "SourceCellCenteredResidue",
+            "SourceOriginalCellCenteredResidue"
+          ],
+          "count": 34,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership113For5825.log",
+            "sha256": "0A320EF119AD0D3781F2BA528250BC32238F72D520D33CBE105340C7625648A1",
+            "sourceSha256": "1DAA78FF77BBCD87B2C35DDF506ACA89496440C2282F34CF3CCB70F4C1630645"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellDissection",
+            "SourceOriginalCellDissectionInteriors",
+            "SourceOriginalDissectionCellResidues"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership114For5825.log",
+            "sha256": "BF2626C4D18EAE0ECB26C34068855730429EA558F82DC05756050608DB207B8D",
+            "sourceSha256": "86FE0C0A68A7A30AA9757A6B2DBB516E0EBF24AA1431F64953047872743B41AE"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellCoordinateTransition",
+            "SourceOriginalCellCoefficientTransition",
+            "SourceOriginalCellBoundaryIntegrability",
+            "SourceOriginalCellPrimitiveJumps",
+            "SourceOriginalPairedArcOverlap",
+            "SourceOriginalDissectionPrimitiveJumps"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership115For5825.log",
+            "sha256": "563357BFA4B552B82D22048E38592D0CA5FF937AE49803DA7AAABD3251B71A1C",
+            "sourceSha256": "FDEDA9932A6B3AD7A147665F3F82317264D2651138564E81419FFC5A1EFF1C2F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalReversedArcIntegrand",
+            "SourceCellArcIntegralExtension",
+            "SourceOriginalWeightedArcIntegral",
+            "SourceOriginalWeightedArcReversal",
+            "SourceOriginalWeightedEdgeCancellation",
+            "SourceOriginalDissectionEdgeCancellation"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership116For5825.log",
+            "sha256": "1CB226E485C9F49876EF72B1984A0D13ED778C2BAA53F3D741F7FADBCCFF206F",
+            "sourceSha256": "33D51504919A0C4B6FCCC9800545300A6C528E2A8023E4B9309874B5DC4D7206"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCellArcPartition",
+            "SourceOriginalPairedBoundarySum",
+            "SourceOriginalDissectionSkeletonRegularity",
+            "SourceOriginalWeightedResidueJumpSum",
+            "SourceOriginalPoleCarrierSum",
+            "SourceOriginalDissectionResidueJumps"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership117For5825.log",
+            "sha256": "B029D36790E3D8D606B0739795222A78B458D13AE9AC9D1DFB42101E7550D9D7",
+            "sourceSha256": "B23231C1B2009F99CDC86730F6CDDFBFC09EA449A821C756EFAD2206C9DECC26"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityOwnership5825.log",
+        "sha256": "5B4C264655D7D131A9F15D1A5E00B18AEDB597EA56EA3836B9CCAF4F7470FD10",
+        "sourceSha256": "77730194794F6932A3040D3022B5A5F8B044EA257FD1F216A6E093BB42A3B23A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-165250-763.log",
+        "sha256": "9A733DECBED9FCBAEA6E6131AFB73A17CAF8566013FE1F1BA0E1DC64BDE46BC0"
+      }
+    },
+    "scratchToProductionCountReason": "All 186 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

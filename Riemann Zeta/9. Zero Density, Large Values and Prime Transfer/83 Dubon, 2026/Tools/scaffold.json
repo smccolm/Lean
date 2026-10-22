@@ -26798,6 +26798,2806 @@
     {
       "path": "Tools/source-original-all-level-degree.json",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJFiberDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJDegreeSums.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPairBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBaseChangedMinpoly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSlotEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentOrderValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLaurentPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentExpansionOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSlotPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSlotRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSlotWidth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspWidth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspConjugateCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspConjugateDistinction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspPrimitiveLabels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspLabelWidthSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJModularQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspDegeneracyLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularRatioOperations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJSeedCuspRatio.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGeneratorRatios.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalModularRatios.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-j-degree-sums-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-slot-places-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cusp-width-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cusp-count-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-ratios-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cusps-and-ratios.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularRatioEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularRatioGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRealizationAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticOrderNontrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveOrderMapPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticPlaceBoundedness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticPlaceInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJSeedRatioValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticJValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticJFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelOneJPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularNormPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularQuotientIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalQuotientIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHolomorphicQuotientExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHolomorphicQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceQuotientCuspGrowth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceQuotientCuspPoleBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHolomorphicDiscriminantLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBoundedIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticChartPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePlaceExhaustion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodLatticeInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodPairScaling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJScalarAndLatticeRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodEisensteinInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJOrbitSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteFiberOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJTransformation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPointValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularStabilizerOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularDerivativeCuspBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJDerivativeForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJDerivativeIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJLocalOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticJMultiplicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteRamification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularStabilizerCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSubgroupStabilizerCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceStabilizerMeromorphicOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGamma0StabilizerIntersection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticRamification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCosetFiber.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCosetOrbitOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalOrbitFiberBijection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticOrbitSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExceptionalFiberCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCanonicalFiberSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCanonicalFiberDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNumericalGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-meromorphic-order-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-analytic-places-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-analytic-j-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-quotient-integral-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-bounded-integral-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-finite-place-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-j-orbit-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-j-multiplicity-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-analytic-ramification-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-orbit-fiber-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-exceptional-fiber-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-numerical-genus-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-numerical-genus.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularCoefficientOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticDerivativeOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticDifferentialRegularity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHolomorphicDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveChartIntegralCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularCuspOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularInverseJIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRealizationGermHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInverseJGermPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInverseJMonicRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInverseJRelationValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInverseJAnalyticRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInverseJLimits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMonicRelationRootBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInverseJPolynomialBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInverseJAnalyticBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInverseJDerivativePower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspBoundExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialSlashBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialCuspDecay.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularCuspForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialGerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularCuspGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoScalarHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJHeckeConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJHeckeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoReflectionHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoPeriodHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceParabolicCuspEigenlift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoFullEigenlift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidualNormalizedCuspLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePicardGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPicardGroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticFieldAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticPicard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTorsionGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-holomorphic-differential-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-inverse-j-integral-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-inverse-j-relation-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-inverse-j-bound-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-regular-cusp-forms-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-period-surjectivity-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-hecke-eigenlift-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-normalized-cusp-lift-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-picard-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-torsion-galois-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-periods-torsion.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteFieldOfDefinition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePlaceOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlaceFieldOfDefinition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPicardFieldOfDefinition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTorsionContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlaceEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticResidueValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticPowerDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePowerFiberAnalyticDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEllipticCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEllipticFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedRegularParameter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedRegularOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlaceInverseValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedMeromorphicOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteLocalParameter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticParameterLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePowerDescentLocalBranch.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNearbyOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamificationIsolated.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedChartOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteChartParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartDifferenceOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartBranchEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteChartTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceScalarTaylorSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticLaurentQuotients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJCuspGerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTaylorSubstitutions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspTaylorLaurentSubstitution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspTaylorFieldStability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspGermRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTaylorLaurentOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspGermOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTaylorQuotientGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspMeromorphicGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspDiscRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspDiscRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentExpansionDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormalizedCuspEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormalizedCuspDisc.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspDiscGermUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspDiscFunctions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspOrderMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspNormalValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveOrderOnePlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspPlaceFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspResidueValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspEvaluationFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspChartParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAllPlaceParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAllChartPackage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlaceCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlaceChartTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplexChartedSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplexChartOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlaceSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplexHausdorff.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-torsion-continuity-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-analytic-evaluation-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-finite-parameters-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-finite-charts-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-finite-transitions-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cusp-germs-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-normalized-cusp-disc-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-all-place-parameters-10-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-complex-manifold-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-complex-manifold.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticUnitRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticFiberPreimages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberOrderSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberDegreeConservation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartFiberData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNearbyFiberCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCompactChartCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplexCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalOnePoleFunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEvaluationContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalClopenObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplexConnected.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartGermHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartDerivativeGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartGermDerivation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartDifferentialRegularity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexPrimitiveGluing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathLocalPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathIntegralLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAbelJacobiPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartPathIntegrals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalAbelJacobi.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialReadingLinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodRealDual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRealAbelPotential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodsFullRealSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularEvaluationSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularEvaluationFrame.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAbelJacobiImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAbelJacobiOpenImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJacobiInversion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSimpleFiberResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSimpleFiberSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexSimplePoleContour.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexFiberContourDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexWeightedFiberContour.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexSimpleFiberContour.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexFiberConstancy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartFiberOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNonconstantDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrescribedFiberCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberLocalData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartFiberMultiplicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberDisks.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberContours.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberIndexing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberContourSums.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberContourComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberContourDifferentiation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberContourVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiberAbelJacobi.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrincipalFiberComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodCosetConstancy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAbelPrincipalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-complex-compact-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-complex-connected-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-path-primitives-11-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-local-abel-jacobi-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-periods-real-span-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-jacobi-inversion-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-simple-fiber-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-complex-fiber-contour-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-fiber-local-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-abel-principal-12-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-abel-jacobi.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTwoPoleDimensions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTwoPoleDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSimplePoleBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTwoPoleResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrescribedResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalRegularPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularPathLocalPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularPathPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalThirdKindPathPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicRemovableCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicCompactConstancy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicLeadingCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicPoleBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicDegreeBase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicDimensionBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicOrderNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicFinitePoles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicEffectivePoleBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicPoleBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicRRBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartReadFieldLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicPoleClearing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGermBasisRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalOnePoleComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicFunctionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalMeromorphicPrincipalDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSimplePoleRegularPart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLogarithmicReading.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalExponentialModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexPuncturedBallPaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePuncturedNeighborhoodConnected.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceChartFiniteAvoidance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceChartFinitePuncturePaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePuncturePaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDivisorAvoidingPaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularPathIntegralLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralPeriodPathIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodExponential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodExponentialConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalChartPathPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLocalChartPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularChartReadingAt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExponentialLocalTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExponentialChartDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicLogDerivativeComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExponentialMeromorphicOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralPeriodsPrincipal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-prescribed-residues-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-regular-paths-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-meromorphic-dimension-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-meromorphic-comparison-11-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-local-exponential-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-finite-paths-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-period-exponential-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-integral-periods-8-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-meromorphic-abel.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePeriodGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDiscretePeriodsOfLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodReciprocityKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodIntegerCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLoopPeriodInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathIntegralLinearCombination.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGeneratorPeriodCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathIntegralSubtraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularDifferentialSubtraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralPeriodsFromGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAbelConverseFromRawReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRadialRegion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPeriodicRadius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRadialCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRadialNeighborhood.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRadialInterior.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticCellCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticCells.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCoordinateInverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDifferentialRegularNeighborhood.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartOneFormLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellRegularCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCoefficientPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRadialPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPuncturedOneFormLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPuncturedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexSimplePolePullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellBoundaryGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellBoundaryDifferentiation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellArcFundamentalTheorem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPrimitiveContour.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellCenteredWinding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellCenteredResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCenteredResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellDissectionInteriors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionCellResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCoordinateTransition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCoefficientTransition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellBoundaryIntegrability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPrimitiveJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPairedArcOverlap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionPrimitiveJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalReversedArcIntegrand.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellArcIntegralExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeightedArcIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeightedArcReversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeightedEdgeCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionEdgeCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellArcPartition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPairedBoundarySum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionSkeletonRegularity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeightedResidueJumpSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoleCarrierSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionResidueJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-raw-periods-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-raw-abel-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cell-radial-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cell-primitives-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cell-residues-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-centered-residue-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-dissection-residues-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-dissection-jumps-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-edge-cancellation-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-residue-jumps-6-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cell-reciprocity.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCoverConnectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairingSides.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairingVertices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionOfPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPairedCellCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionFromPairedFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticPowerCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPowerCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartTransitionDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormalCellCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormalCoordinateShrink.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteNormalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormalFiberNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEvaluationClosedMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalUnramifiedEvaluationChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJCovering.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJBranchNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJPoleNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoveringSheetDecomposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSheetFamilies.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJSheetNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalUnramifiedChartDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticJSheets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSheetCollar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJGridScale.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSimplyConnectedCovering.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConvexJSheets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridSquares.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalOrdinarySquareSheets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRectangleAngles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRectangleRadius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRectangleBranches.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRectangleSmoothness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSixArcTrigonometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSixArcSegments.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSixArcRegion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSixArcSides.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSixArcBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalOrdinarySquareCells.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-paired-dissection-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-normal-coordinates-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-normal-fibers-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-j-covering-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-j-normal-neighborhoods-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-analytic-j-sheets-5-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-j-grid-scale-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-ordinary-square-sheets-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-ordinary-square-cells-10-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-ordinary-cells.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellReciprocalRegion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellReciprocalGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerRadius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerBreaks.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerRegion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerArcs.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerArcInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerSeparatedArcs.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBranchedCells.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInverseJCells.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoleCellGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoleCells.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridWindow.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridIndexGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellMarkedGridCentres.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridSquareBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellFiniteGridLayout.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellFiniteGridGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridRegionSheets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridCellFamilies.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJFiniteGrid.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridCellIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridCellCoverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRefinementBreaks.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellRadialRefinement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowSegments.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowArcGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowPerimeterPoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowPointPartition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowPointCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowHeightNeighbors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowAngles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowBase.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowBaseAngles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowBaseArcs.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowPerimeterSegments.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowRefinement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowRefinedArcs.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellWindowPerimeter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridWindow.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalCellCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCenters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridMarkedCenters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoleMarkedCenters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCenteredGlobalCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSegmentCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellVerticalSegmentShapes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellHorizontalSegmentShapes.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSegmentTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellOppositeSideTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSameSideTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellEdgeReparametrizations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPlanarGridData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSideSegments.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSquareArcData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellNeighborArcIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSideLocality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellSideRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridVertexSets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridVertexCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridBreakpoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridVertexRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridArcClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridArcOrientations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridArcReversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridPerimeterToSquare.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridSquareToPerimeter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridStarBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridStarSides.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridStarRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridOuterSidePartner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridSquareSidePartner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridAdjacentSquares.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridAdjacentExterior.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellGridIntersectionChains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPlanarGridGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlanarGridData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPlanarGridGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellFiniteClosedSelection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellArcGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDisjointArcUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalOrdinaryArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerArcCoverage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellConnectedPowerArc.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoweredArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBranchArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoleArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExteriorArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-branch-pole-cells-12-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-finite-grid-cells-11-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-global-cell-cover-19-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-centered-global-cover-4-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cell-edge-reparam-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-planar-grid-geometry-26-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-arc-matching-11-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-global-cells.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoweredArcImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInteriorArcImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExteriorArcImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalArcIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalArcSides.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalArcUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalRegionMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalArcPartner.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellArcAffineEndpoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPowerArcPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellReciprocalArcPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBoundaryArcCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArcPresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInteriorArcPresentations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExteriorArcPresentations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArcOrientations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellAffineArcTransports.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArcReversalTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArcPresentationMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSquareArcReversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExteriorArcReversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalCellPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegionalCarrierUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCarrierRegions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPoweredArcIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInteriorArcIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExteriorArcIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGlobalArcIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPairedIntersectionStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellIntersectionChains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedCellDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionGenusCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionBaseVertices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBaseVertexFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionEndpointImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSquareCarrierExistence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionVertexSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionVertexCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGridCellCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionCellCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedArcCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionArcCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionEulerIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEulerCellDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellIntegerEdgeBoundary.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellIntegerChainConnectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellIntegerSpanningTree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellIntegerTreeCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionBoundaryChains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionGraphConnectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCotreeComplementConnectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionTreeCotree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedTreeCotree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellCyclicBoundaryWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellIntegerTreeCut.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonCorners.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonState.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonGluing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonWordCycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionPolygonWord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedPolygonWord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellIntegerFundamentalCycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedCycleSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-global-arc-partner-8-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-arc-presentations-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-global-cell-pairing-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-constructed-dissection-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-euler-dissection-13-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tree-cotree-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-polygon-word-8-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cycle-system-2-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cycle-geometry.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalBoundaryArcPaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDissectionEdgePaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPathPrimitiveDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArcPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEdgePathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTreeWalkPaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCycleChainIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFundamentalCycleLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedCycleLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDualTreeNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormalizedCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedNormalizedPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveJumpCirculation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJumpCycleReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedJumpReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPrimitiveArcIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSignedPrimitiveArcIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonPrimitiveData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonPrimitiveEndpoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonCornerPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPolygonWordPrimitiveSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitivePolygonWord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedPrimitivePolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPolygonWordChains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCycleIntegralSums.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWordPeriodMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalJumpPeriodClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCyclePeriodPolygonData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCyclePeriodMatrixAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedPeriodMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePathAtlasJumpClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoordinatePrimitiveComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPrimitiveLocalDifference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellCarrierNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPairedArcEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellJumpDifferences.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPathPrimitiveJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularLoopJumpClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedRegularPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGeneratingLoopReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedGeneratingLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDiscretePeriodLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicChordAntisymmetry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCellPolygonWordAntisymmetry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodMatrixLatticeUnimodularity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplementaryPeriodSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplementaryWordMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalUnimodularPeriodPolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstructedUnimodularPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-cycle-loops-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-normalized-primitives-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-jump-reduction-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-polygon-8-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-cycle-period-matrix-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-regular-period-generation-9-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-discrete-period-lattice-3-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-unimodular-period-matrix-7-reuse-review-20261021.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-period-lattice.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -32321,7 +35121,600 @@
     "SourceRationalPrimeStepDegree",
     "SourceMixedPrimePowerDegree",
     "SourceOriginalAllLevelInduction",
-    "SourceOriginalAllLevelDegree"
+    "SourceOriginalAllLevelDegree",
+    "SourceOriginalJFiberDegree",
+    "SourceOriginalJDegreeSums",
+    "SourceOriginalPairBaseChange",
+    "SourceOriginalBaseChangedMinpoly",
+    "SourceOriginalSlotEmbedding",
+    "SourceLaurentOrderValuation",
+    "SourceCurveLaurentPlaces",
+    "SourceLaurentExpansionOrders",
+    "SourceOriginalSlotPlaces",
+    "SourceOriginalSlotRange",
+    "SourceOriginalSlotWidth",
+    "SourceOriginalCuspWidth",
+    "SourceCuspConjugateCoefficients",
+    "SourceCuspConjugateDistinction",
+    "SourceCuspPrimitiveLabels",
+    "SourceCuspLabelWidthSum",
+    "SourceOriginalCuspFamily",
+    "SourceOriginalCuspCount",
+    "SourceJModularQuotient",
+    "SourceCuspDegeneracyLaurent",
+    "SourceModularRatioOperations",
+    "SourceJSeedCuspRatio",
+    "SourceOriginalGeneratorRatios",
+    "SourceOriginalModularRatios",
+    "SourceModularRatioEvaluation",
+    "SourceModularRatioGerms",
+    "SourceOriginalMeromorphicRealization",
+    "SourceOriginalRealizationAlgebra",
+    "SourceOriginalAnalyticOrder",
+    "SourceOriginalAnalyticOrderNontrivial",
+    "SourceCurveOrderMapPlaces",
+    "SourceOriginalAnalyticPlaces",
+    "SourceOriginalAnalyticPlaceBoundedness",
+    "SourceOriginalAnalyticPlaceInvariance",
+    "SourceJSeedRatioValues",
+    "SourceOriginalAnalyticJValues",
+    "SourceOriginalAnalyticJFibers",
+    "SourceLevelOneJPolynomial",
+    "SourceModularNormPolynomial",
+    "SourceModularQuotientIntegral",
+    "SourceOriginalQuotientIntegral",
+    "SourceHolomorphicQuotientExtension",
+    "SourceOriginalHolomorphicQuotient",
+    "SourceQuotientCuspGrowth",
+    "SourceQuotientCuspPoleBound",
+    "SourceHolomorphicDiscriminantLift",
+    "SourceOriginalBoundedIntegral",
+    "SourceOriginalAnalyticChart",
+    "SourceOriginalAnalyticChartPlaces",
+    "SourceOriginalFinitePlaceExhaustion",
+    "SourcePeriodLatticeInvariants",
+    "SourcePeriodPairScaling",
+    "SourceJScalarAndLatticeRelations",
+    "SourcePeriodEisensteinInvariants",
+    "SourceAnalyticJOrbitSeparation",
+    "SourceOriginalFiniteFiberOrbits",
+    "SourceAnalyticJTransformation",
+    "SourceEllipticPointValues",
+    "SourceModularStabilizerOrders",
+    "SourceModularDerivativeCuspBounds",
+    "SourceAnalyticJDerivativeForms",
+    "SourceAnalyticJDerivativeIdentity",
+    "SourceAnalyticJLocalOrders",
+    "SourceOriginalAnalyticJMultiplicity",
+    "SourceOriginalFiniteRamification",
+    "SourceModularStabilizerCharacter",
+    "SourceSubgroupStabilizerCharacter",
+    "SourceStabilizerMeromorphicOrder",
+    "SourceGamma0StabilizerIntersection",
+    "SourceOriginalAnalyticRamification",
+    "SourceOriginalCosetFiber",
+    "SourceOriginalCosetOrbitOrder",
+    "SourceOriginalOrbitFiberBijection",
+    "SourceOriginalAnalyticOrbitSeparation",
+    "SourceEllipticStabilizerOrbits",
+    "SourceOriginalExceptionalFiberCounts",
+    "SourceOriginalCanonicalFiberSupport",
+    "SourceOriginalCanonicalFiberDegree",
+    "SourceOriginalNumericalGenus",
+    "SourceOriginalRegularCoefficientOrders",
+    "SourceOriginalAnalyticDerivativeOrder",
+    "SourceOriginalAnalyticDifferentialRegularity",
+    "SourceOriginalHolomorphicDifferentials",
+    "SourceCurveChartIntegralCriterion",
+    "SourceOriginalRegularCuspOrders",
+    "SourceOriginalRegularInverseJIntegral",
+    "SourceOriginalRealizationGermHom",
+    "SourceOriginalInverseJGermPolynomial",
+    "SourceOriginalInverseJMonicRelation",
+    "SourceOriginalInverseJRelationValues",
+    "SourceOriginalInverseJAnalyticRelation",
+    "SourceInverseJLimits",
+    "SourceMonicRelationRootBound",
+    "SourceInverseJPolynomialBounds",
+    "SourceOriginalInverseJAnalyticBound",
+    "SourceInverseJDerivativePower",
+    "SourceCuspBoundExtension",
+    "SourceOriginalDifferentialSlashBound",
+    "SourceOriginalDifferentialCuspDecay",
+    "SourceOriginalRegularCuspForms",
+    "SourceOriginalDifferentialGerm",
+    "SourceOriginalRegularCuspGerms",
+    "SourceOriginalCuspDimension",
+    "SourceOriginalPeriodSurjectivity",
+    "SourceWeightTwoScalarHecke",
+    "SourceJHeckeConjugation",
+    "SourceJHeckeCosets",
+    "SourceWeightTwoReflectionHecke",
+    "SourceWeightTwoPeriodHecke",
+    "SourceParabolicCuspEigenlift",
+    "SourceWeightTwoFullEigenlift",
+    "SourceResidualNormalizedCuspLift",
+    "SourceCurvePicardGroup",
+    "SourceOriginalPicardGroup",
+    "SourceOriginalArithmeticFieldAction",
+    "SourceOriginalArithmeticPlaces",
+    "SourceOriginalArithmeticDivisors",
+    "SourceOriginalArithmeticPicard",
+    "SourceOriginalTorsionGalois",
+    "SourceOriginalFiniteFieldOfDefinition",
+    "SourceOriginalFinitePlaceOrbit",
+    "SourceOriginalPlaceFieldOfDefinition",
+    "SourceOriginalPicardFieldOfDefinition",
+    "SourceOriginalTorsionContinuity",
+    "SourceOriginalPlaceEvaluation",
+    "SourceOriginalAnalyticResidueValues",
+    "SourceOriginalAnalyticEvaluation",
+    "SourceAnalyticPowerDescent",
+    "SourcePowerFiberAnalyticDescent",
+    "SourceOriginalEllipticCoordinate",
+    "SourceOriginalEllipticFibers",
+    "SourceOriginalRamifiedRegularParameter",
+    "SourceOriginalRamifiedRegularOrder",
+    "SourceOriginalPlaceInverseValues",
+    "SourceOriginalRamifiedMeromorphicOrder",
+    "SourceOriginalFiniteLocalParameter",
+    "SourceEllipticParameterLocal",
+    "SourcePowerDescentLocalBranch",
+    "SourceOriginalNearbyOrders",
+    "SourceOriginalRamificationIsolated",
+    "SourceOriginalRamifiedChartOrders",
+    "SourceOriginalFiniteChartParameters",
+    "SourceOriginalChartEvaluation",
+    "SourceOriginalChartComparison",
+    "SourceOriginalChartDifferenceOrders",
+    "SourceOriginalChartBranchEquality",
+    "SourceOriginalFiniteCharts",
+    "SourceOriginalFiniteChartTransitions",
+    "SourceScalarTaylorSeries",
+    "SourceAnalyticLaurentQuotients",
+    "SourceOriginalJCuspGerm",
+    "SourceTaylorSubstitutions",
+    "SourceCuspTaylorLaurentSubstitution",
+    "SourceCuspTaylorFieldStability",
+    "SourceOriginalCuspGermRealization",
+    "SourceTaylorLaurentOrder",
+    "SourceOriginalCuspGermOrders",
+    "SourceTaylorQuotientGerms",
+    "SourceCuspMeromorphicGerms",
+    "SourceCuspDiscRealization",
+    "SourceOriginalCuspDiscRealization",
+    "SourceLaurentExpansionDescent",
+    "SourceOriginalNormalizedCuspEmbedding",
+    "SourceOriginalNormalizedCuspDisc",
+    "SourceCuspDiscGermUniqueness",
+    "SourceOriginalCuspDiscFunctions",
+    "SourceOriginalCuspOrderMap",
+    "SourceOriginalCuspNormalValues",
+    "SourceCurveOrderOnePlaces",
+    "SourceOriginalCuspPlaceFamily",
+    "SourceOriginalCuspResidueValues",
+    "SourceOriginalCuspEvaluationFamily",
+    "SourceOriginalCuspChartParameters",
+    "SourceOriginalAllPlaceParameters",
+    "SourceOriginalAllChartPackage",
+    "SourceOriginalPlaceCharts",
+    "SourceOriginalPlaceChartTransitions",
+    "SourceOriginalComplexChartedSpace",
+    "SourceOriginalComplexChartOrders",
+    "SourceOriginalPlaceSeparation",
+    "SourceOriginalComplexHausdorff",
+    "SourceAnalyticUnitRoots",
+    "SourceAnalyticFiberPreimages",
+    "SourceOriginalFiberOrderSupport",
+    "SourceOriginalChartNeighborhoods",
+    "SourceOriginalFiberDegreeConservation",
+    "SourceOriginalChartFiberData",
+    "SourceOriginalNearbyFiberCover",
+    "SourceOriginalCompactChartCover",
+    "SourceOriginalComplexCompact",
+    "SourceOriginalOnePoleFunction",
+    "SourceOriginalEvaluationContinuity",
+    "SourceOriginalClopenObstruction",
+    "SourceOriginalComplexConnected",
+    "SourceOriginalChartDifferentials",
+    "SourceOriginalChartGermHom",
+    "SourceOriginalChartDerivativeGerms",
+    "SourceOriginalChartGermDerivation",
+    "SourceOriginalChartDifferentialRegularity",
+    "SourceOriginalChartPrimitives",
+    "SourceOriginalDifferentialTransitions",
+    "SourceComplexPrimitiveGluing",
+    "SourceOriginalPathLocalPrimitives",
+    "SourceOriginalPathPrimitives",
+    "SourceOriginalPathIntegral",
+    "SourceOriginalPathIntegralLaws",
+    "SourceOriginalAbelJacobiPeriods",
+    "SourceOriginalChartPathIntegrals",
+    "SourceOriginalLocalAbelJacobi",
+    "SourceOriginalDifferentialReadingLinear",
+    "SourcePeriodRealDual",
+    "SourceOriginalRealAbelPotential",
+    "SourceOriginalPeriodAnnihilator",
+    "SourceOriginalPeriodsFullRealSpan",
+    "SourceOriginalRegularEvaluationSeparation",
+    "SourceOriginalRegularEvaluationFrame",
+    "SourceOriginalAbelJacobiImage",
+    "SourceOriginalAbelJacobiOpenImage",
+    "SourceOriginalJacobiInversion",
+    "SourceOriginalSimpleFiberResidues",
+    "SourceOriginalSimpleFiberSum",
+    "SourceComplexSimplePoleContour",
+    "SourceComplexFiberContourDerivative",
+    "SourceComplexWeightedFiberContour",
+    "SourceComplexSimpleFiberContour",
+    "SourceComplexFiberConstancy",
+    "SourceOriginalChartFiberOrders",
+    "SourceOriginalNonconstantDifferential",
+    "SourceOriginalPrescribedFiberCover",
+    "SourceOriginalFiberLocalData",
+    "SourceOriginalChartFiberMultiplicity",
+    "SourceOriginalFiberCoefficients",
+    "SourceOriginalFiberDisks",
+    "SourceOriginalFiberContours",
+    "SourceOriginalFiberIndexing",
+    "SourceOriginalFiberContourSums",
+    "SourceOriginalFiberContourComparison",
+    "SourceOriginalFiberContourDifferentiation",
+    "SourceOriginalFiberContourVanishing",
+    "SourceOriginalFiberAbelJacobi",
+    "SourceOriginalPrincipalFiberComparison",
+    "SourcePeriodCosetConstancy",
+    "SourceOriginalAbelPrincipalDivisors",
+    "SourceOriginalTwoPoleDimensions",
+    "SourceOriginalTwoPoleDifferential",
+    "SourceOriginalDifferentialResidues",
+    "SourceOriginalSimplePoleBounds",
+    "SourceOriginalTwoPoleResidues",
+    "SourceOriginalPrescribedResidues",
+    "SourceOriginalLocalRegularPrimitives",
+    "SourceOriginalRegularPathLocalPrimitives",
+    "SourceOriginalRegularPathPrimitives",
+    "SourceOriginalThirdKindPathPrimitives",
+    "SourceMeromorphicRemovableCharts",
+    "SourceMeromorphicCompactConstancy",
+    "SourceMeromorphicLeadingCoefficient",
+    "SourceMeromorphicPoleBound",
+    "SourceMeromorphicDegreeBase",
+    "SourceMeromorphicDimensionBound",
+    "SourceOriginalMeromorphicDimension",
+    "SourceMeromorphicOrderNeighborhoods",
+    "SourceMeromorphicFinitePoles",
+    "SourceMeromorphicEffectivePoleBound",
+    "SourceOriginalMeromorphicPoleBound",
+    "SourceOriginalMeromorphicRRBounds",
+    "SourceOriginalChartReadFieldLaws",
+    "SourceOriginalMeromorphicPoleClearing",
+    "SourceOriginalGermBasisRelation",
+    "SourceOriginalOnePoleComparison",
+    "SourceOriginalMeromorphicFunctionComparison",
+    "SourceOriginalMeromorphicPrincipalDivisor",
+    "SourceOriginalSimplePoleRegularPart",
+    "SourceOriginalLogarithmicReading",
+    "SourceOriginalLocalExponentialModel",
+    "SourceComplexPuncturedBallPaths",
+    "SourcePuncturedNeighborhoodConnected",
+    "SourceChartFiniteAvoidance",
+    "SourceChartFinitePuncturePaths",
+    "SourceOriginalFinitePuncturePaths",
+    "SourceOriginalDivisorAvoidingPaths",
+    "SourceOriginalRegularPathIntegralLaws",
+    "SourceOriginalIntegralPeriodPathIndependence",
+    "SourceOriginalPeriodExponential",
+    "SourceOriginalPeriodExponentialConsumer",
+    "SourceOriginalLocalChartPathPrimitive",
+    "SourceOriginalLocalChartPathIntegral",
+    "SourceOriginalRegularChartReadingAt",
+    "SourceOriginalExponentialLocalTransport",
+    "SourceOriginalExponentialChartDerivative",
+    "SourceMeromorphicLogDerivativeComparison",
+    "SourceOriginalExponentialMeromorphicOrders",
+    "SourceOriginalIntegralPeriodsPrincipal",
+    "SourceOriginalFinitePeriodGeneration",
+    "SourceOriginalDiscretePeriodsOfLoops",
+    "SourcePeriodReciprocityKernel",
+    "SourcePeriodIntegerCorrection",
+    "SourceOriginalLoopPeriodInjectivity",
+    "SourceOriginalPathIntegralLinearCombination",
+    "SourceOriginalGeneratorPeriodCorrection",
+    "SourceOriginalPathIntegralSubtraction",
+    "SourceOriginalRegularDifferentialSubtraction",
+    "SourceOriginalIntegralPeriodsFromGenerators",
+    "SourceOriginalAbelConverseFromRawReciprocity",
+    "SourceCellRadialRegion",
+    "SourceCellPeriodicRadius",
+    "SourceCellRadialCompact",
+    "SourceCellRadialNeighborhood",
+    "SourceCellRadialInterior",
+    "SourceOriginalAnalyticCellCoordinates",
+    "SourceOriginalAnalyticCells",
+    "SourceOriginalCellCoordinateInverse",
+    "SourceOriginalDifferentialRegularNeighborhood",
+    "SourceOriginalChartOneFormLaw",
+    "SourceOriginalCellRegularCoefficient",
+    "SourceOriginalCellCoefficientPullback",
+    "SourceCellRadialPrimitive",
+    "SourceOriginalCellPrimitives",
+    "SourceOriginalPuncturedOneFormLaw",
+    "SourceOriginalCellPuncturedCoefficient",
+    "SourceComplexSimplePolePullback",
+    "SourceOriginalCellResidues",
+    "SourceCellBoundaryGeometry",
+    "SourceCellBoundaryDifferentiation",
+    "SourceCellArcFundamentalTheorem",
+    "SourceCellPrimitiveContour",
+    "SourceCellCenteredWinding",
+    "SourceCellCenteredResidue",
+    "SourceOriginalCellCenteredResidue",
+    "SourceOriginalCellDissection",
+    "SourceOriginalCellDissectionInteriors",
+    "SourceOriginalDissectionCellResidues",
+    "SourceOriginalCellCoordinateTransition",
+    "SourceOriginalCellCoefficientTransition",
+    "SourceOriginalCellBoundaryIntegrability",
+    "SourceOriginalCellPrimitiveJumps",
+    "SourceOriginalPairedArcOverlap",
+    "SourceOriginalDissectionPrimitiveJumps",
+    "SourceOriginalReversedArcIntegrand",
+    "SourceCellArcIntegralExtension",
+    "SourceOriginalWeightedArcIntegral",
+    "SourceOriginalWeightedArcReversal",
+    "SourceOriginalWeightedEdgeCancellation",
+    "SourceOriginalDissectionEdgeCancellation",
+    "SourceOriginalCellArcPartition",
+    "SourceOriginalPairedBoundarySum",
+    "SourceOriginalDissectionSkeletonRegularity",
+    "SourceOriginalWeightedResidueJumpSum",
+    "SourceOriginalPoleCarrierSum",
+    "SourceOriginalDissectionResidueJumps",
+    "SourceOriginalCellCoverConnectivity",
+    "SourceOriginalCellPairing",
+    "SourceOriginalCellPairingSides",
+    "SourceOriginalCellPairingVertices",
+    "SourceOriginalDissectionOfPairing",
+    "SourceOriginalPairedCellCounts",
+    "SourceOriginalDissectionFromPairedFamily",
+    "SourceAnalyticPowerCoordinate",
+    "SourceOriginalPowerCoordinate",
+    "SourceOriginalChartTransitionDerivative",
+    "SourceOriginalNormalCellCoordinates",
+    "SourceOriginalNormalCoordinateShrink",
+    "SourceOriginalFiniteNormalCoordinates",
+    "SourceOriginalNormalFiberNeighborhoods",
+    "SourceOriginalRegularEvaluation",
+    "SourceOriginalEvaluationClosedMap",
+    "SourceOriginalUnramifiedEvaluationChart",
+    "SourceOriginalJCovering",
+    "SourceOriginalJBranchNeighborhoods",
+    "SourceOriginalJPoleNeighborhoods",
+    "SourceCoveringSheetDecomposition",
+    "SourceOriginalSheetFamilies",
+    "SourceOriginalJSheetNeighborhoods",
+    "SourceOriginalUnramifiedChartDerivative",
+    "SourceOriginalAnalyticJSheets",
+    "SourceCellGridSeparation",
+    "SourceCellSheetCollar",
+    "SourceOriginalJGridScale",
+    "SourceSimplyConnectedCovering",
+    "SourceOriginalConvexJSheets",
+    "SourceCellGridSquares",
+    "SourceOriginalOrdinarySquareSheets",
+    "SourceCellRectangleAngles",
+    "SourceCellRectangleRadius",
+    "SourceCellRectangleBranches",
+    "SourceCellRectangleSmoothness",
+    "SourceCellSixArcTrigonometry",
+    "SourceCellSixArcSegments",
+    "SourceCellSixArcRegion",
+    "SourceCellSixArcSides",
+    "SourceCellSixArcBoundary",
+    "SourceOriginalOrdinarySquareCells",
+    "SourceCellReciprocalRegion",
+    "SourceCellReciprocalGeometry",
+    "SourceCellPowerRadius",
+    "SourceCellPowerBreaks",
+    "SourceCellPowerRegion",
+    "SourceCellPowerArcs",
+    "SourceCellPowerArcInjectivity",
+    "SourceCellPowerSeparatedArcs",
+    "SourceOriginalBranchedCells",
+    "SourceOriginalInverseJCells",
+    "SourceOriginalPoleCellGeometry",
+    "SourceOriginalPoleCells",
+    "SourceCellGridWindow",
+    "SourceCellGridIndexGeometry",
+    "SourceCellMarkedGridCentres",
+    "SourceCellGridSquareBounds",
+    "SourceCellFiniteGridLayout",
+    "SourceCellFiniteGridGeometry",
+    "SourceOriginalGridRegionSheets",
+    "SourceOriginalGridCellFamilies",
+    "SourceOriginalJFiniteGrid",
+    "SourceOriginalGridCellIndex",
+    "SourceOriginalGridCellCoverage",
+    "SourceCellRefinementBreaks",
+    "SourceCellRadialRefinement",
+    "SourceCellWindowSegments",
+    "SourceCellWindowArcGeometry",
+    "SourceCellWindowData",
+    "SourceCellWindowPerimeterPoints",
+    "SourceCellWindowPointPartition",
+    "SourceCellWindowPointCounts",
+    "SourceCellWindowHeightNeighbors",
+    "SourceCellWindowAngles",
+    "SourceCellWindowBase",
+    "SourceCellWindowBaseAngles",
+    "SourceCellWindowBaseArcs",
+    "SourceCellWindowPerimeterSegments",
+    "SourceCellWindowRefinement",
+    "SourceCellWindowRefinedArcs",
+    "SourceCellWindowPerimeter",
+    "SourceOriginalGridWindow",
+    "SourceOriginalGlobalCellCover",
+    "SourceOriginalCellCenters",
+    "SourceOriginalGridMarkedCenters",
+    "SourceOriginalPoleMarkedCenters",
+    "SourceOriginalCenteredGlobalCover",
+    "SourceCellSegmentCoordinates",
+    "SourceCellVerticalSegmentShapes",
+    "SourceCellHorizontalSegmentShapes",
+    "SourceCellSegmentTransport",
+    "SourceCellOppositeSideTransport",
+    "SourceCellSameSideTransport",
+    "SourceCellEdgeReparametrizations",
+    "SourceCellPlanarGridData",
+    "SourceCellSideSegments",
+    "SourceCellSquareArcData",
+    "SourceCellNeighborArcIdentity",
+    "SourceCellSideLocality",
+    "SourceCellSideRealization",
+    "SourceCellGridVertexSets",
+    "SourceCellGridVertexCounts",
+    "SourceCellGridBreakpoints",
+    "SourceCellGridVertexRealization",
+    "SourceCellGridArcClassification",
+    "SourceCellGridArcOrientations",
+    "SourceCellGridArcReversal",
+    "SourceCellGridPerimeterToSquare",
+    "SourceCellGridSquareToPerimeter",
+    "SourceCellGridStarBounds",
+    "SourceCellGridStarSides",
+    "SourceCellGridStarRelations",
+    "SourceCellGridOuterSidePartner",
+    "SourceCellGridSquareSidePartner",
+    "SourceCellGridAdjacentSquares",
+    "SourceCellGridAdjacentExterior",
+    "SourceCellGridIntersectionChains",
+    "SourceCellPlanarGridGeometry",
+    "SourceOriginalPlanarGridData",
+    "SourceOriginalPlanarGridGeometry",
+    "SourceCellFiniteClosedSelection",
+    "SourceOriginalCellArcGeometry",
+    "SourceOriginalDisjointArcUniqueness",
+    "SourceOriginalOrdinaryArcMatching",
+    "SourceCellPowerArcCoverage",
+    "SourceCellConnectedPowerArc",
+    "SourceOriginalPoweredArcMatching",
+    "SourceOriginalBranchArcMatching",
+    "SourceOriginalPoleArcMatching",
+    "SourceOriginalExteriorArcMatching",
+    "SourceOriginalGlobalArcMatching",
+    "SourceOriginalPoweredArcImage",
+    "SourceOriginalInteriorArcImages",
+    "SourceOriginalExteriorArcImages",
+    "SourceOriginalGlobalArcIndex",
+    "SourceOriginalGlobalArcSides",
+    "SourceOriginalGlobalArcUniqueness",
+    "SourceOriginalGlobalRegionMatching",
+    "SourceOriginalGlobalArcPartner",
+    "SourceCellArcAffineEndpoints",
+    "SourceCellPowerArcPresentation",
+    "SourceCellReciprocalArcPresentation",
+    "SourceOriginalBoundaryArcCoordinates",
+    "SourceOriginalArcPresentation",
+    "SourceOriginalInteriorArcPresentations",
+    "SourceOriginalExteriorArcPresentations",
+    "SourceOriginalArcOrientations",
+    "SourceCellAffineArcTransports",
+    "SourceOriginalArcReversalTransport",
+    "SourceOriginalArcPresentationMaps",
+    "SourceOriginalSquareArcReversal",
+    "SourceOriginalExteriorArcReversal",
+    "SourceOriginalGlobalCellPairing",
+    "SourceOriginalRegionalCarrierUniqueness",
+    "SourceOriginalCarrierRegions",
+    "SourceOriginalPoweredArcIncidence",
+    "SourceOriginalInteriorArcIncidence",
+    "SourceOriginalExteriorArcIncidence",
+    "SourceOriginalGlobalArcIncidence",
+    "SourceOriginalPairedIntersectionStep",
+    "SourceOriginalCellIntersectionChains",
+    "SourceOriginalConstructedCellDissection",
+    "SourceOriginalDissectionGenusCount",
+    "SourceOriginalDissectionBaseVertices",
+    "SourceOriginalBaseVertexFibers",
+    "SourceOriginalDissectionEndpointImages",
+    "SourceOriginalSquareCarrierExistence",
+    "SourceOriginalDissectionVertexSurjectivity",
+    "SourceOriginalDissectionVertexCount",
+    "SourceOriginalGridCellCount",
+    "SourceOriginalDissectionCellCount",
+    "SourceOriginalRamifiedArcCounts",
+    "SourceOriginalDissectionArcCount",
+    "SourceOriginalDissectionEulerIdentity",
+    "SourceOriginalEulerCellDissection",
+    "SourceCellIntegerEdgeBoundary",
+    "SourceCellIntegerChainConnectivity",
+    "SourceCellIntegerSpanningTree",
+    "SourceCellIntegerTreeCardinality",
+    "SourceOriginalDissectionBoundaryChains",
+    "SourceOriginalDissectionGraphConnectivity",
+    "SourceOriginalCotreeComplementConnectivity",
+    "SourceOriginalDissectionTreeCotree",
+    "SourceOriginalConstructedTreeCotree",
+    "SourceCellCyclicBoundaryWords",
+    "SourceCellIntegerTreeCut",
+    "SourceOriginalPolygonCorners",
+    "SourceOriginalPolygonState",
+    "SourceOriginalPolygonGluing",
+    "SourceOriginalPolygonWordCycles",
+    "SourceOriginalDissectionPolygonWord",
+    "SourceOriginalConstructedPolygonWord",
+    "SourceCellIntegerFundamentalCycles",
+    "SourceOriginalConstructedCycleSystem",
+    "SourceOriginalBoundaryArcPaths",
+    "SourceOriginalDissectionEdgePaths",
+    "SourceOriginalCellPathPrimitiveDerivative",
+    "SourceOriginalArcPathIntegral",
+    "SourceOriginalEdgePathIntegral",
+    "SourceOriginalTreeWalkPaths",
+    "SourceOriginalCycleChainIdentification",
+    "SourceOriginalFundamentalCycleLoops",
+    "SourceOriginalConstructedCycleLoops",
+    "SourceOriginalDualTreeNormalization",
+    "SourceOriginalNormalizedCellPrimitives",
+    "SourceOriginalConstructedNormalizedPrimitives",
+    "SourceOriginalPrimitiveJumpCirculation",
+    "SourceOriginalJumpCycleReduction",
+    "SourceOriginalConstructedJumpReduction",
+    "SourceOriginalCellPrimitiveArcIntegral",
+    "SourceOriginalSignedPrimitiveArcIntegral",
+    "SourceOriginalPolygonPrimitiveData",
+    "SourceOriginalPolygonPrimitiveEndpoints",
+    "SourceOriginalPolygonCornerPrimitives",
+    "SourceOriginalPolygonWordPrimitiveSum",
+    "SourceOriginalPrimitivePolygonWord",
+    "SourceOriginalConstructedPrimitivePolygon",
+    "SourceCellPolygonWordChains",
+    "SourceOriginalCycleIntegralSums",
+    "SourceOriginalWordPeriodMatrix",
+    "SourceOriginalJumpPeriodClosure",
+    "SourceOriginalCyclePeriodPolygonData",
+    "SourceOriginalCyclePeriodMatrixAssembly",
+    "SourceOriginalConstructedPeriodMatrix",
+    "SourcePathAtlasJumpClosure",
+    "SourceOriginalCoordinatePrimitiveComparison",
+    "SourceOriginalCellPrimitiveLocalDifference",
+    "SourceOriginalCellCarrierNeighborhoods",
+    "SourceOriginalPairedArcEquality",
+    "SourceOriginalCellJumpDifferences",
+    "SourceOriginalPathPrimitiveJumps",
+    "SourceOriginalRegularLoopJumpClosure",
+    "SourceOriginalConstructedRegularPeriods",
+    "SourceOriginalGeneratingLoopReindex",
+    "SourceOriginalConstructedGeneratingLoops",
+    "SourceOriginalDiscretePeriodLattice",
+    "SourceCyclicChordAntisymmetry",
+    "SourceCellPolygonWordAntisymmetry",
+    "SourcePeriodMatrixLatticeUnimodularity",
+    "SourceOriginalComplementaryPeriodSpan",
+    "SourceOriginalComplementaryWordMatrix",
+    "SourceOriginalUnimodularPeriodPolygon",
+    "SourceOriginalConstructedUnimodularPeriods"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

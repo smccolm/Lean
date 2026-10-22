@@ -1,0 +1,1746 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceAnalyticUnitRoots",
+    "Dubon2026.SourceAnalyticFiberPreimages",
+    "Dubon2026.SourceOriginalFiberOrderSupport",
+    "Dubon2026.SourceOriginalChartNeighborhoods",
+    "Dubon2026.SourceOriginalFiberDegreeConservation",
+    "Dubon2026.SourceOriginalChartFiberData",
+    "Dubon2026.SourceOriginalNearbyFiberCover",
+    "Dubon2026.SourceOriginalCompactChartCover",
+    "Dubon2026.SourceOriginalComplexCompact",
+    "Dubon2026.SourceOriginalOnePoleFunction",
+    "Dubon2026.SourceOriginalEvaluationContinuity",
+    "Dubon2026.SourceOriginalClopenObstruction",
+    "Dubon2026.SourceOriginalComplexConnected",
+    "Dubon2026.SourceOriginalChartDifferentials",
+    "Dubon2026.SourceOriginalChartGermHom",
+    "Dubon2026.SourceOriginalChartDerivativeGerms",
+    "Dubon2026.SourceOriginalChartGermDerivation",
+    "Dubon2026.SourceOriginalChartDifferentialRegularity",
+    "Dubon2026.SourceOriginalChartPrimitives",
+    "Dubon2026.SourceOriginalDifferentialTransitions",
+    "Dubon2026.SourceComplexPrimitiveGluing",
+    "Dubon2026.SourceOriginalPathLocalPrimitives",
+    "Dubon2026.SourceOriginalPathPrimitives",
+    "Dubon2026.SourceOriginalPathIntegral",
+    "Dubon2026.SourceOriginalPathIntegralLaws",
+    "Dubon2026.SourceOriginalAbelJacobiPeriods",
+    "Dubon2026.SourceOriginalChartPathIntegrals",
+    "Dubon2026.SourceOriginalLocalAbelJacobi",
+    "Dubon2026.SourceOriginalDifferentialReadingLinear",
+    "Dubon2026.SourcePeriodRealDual",
+    "Dubon2026.SourceOriginalRealAbelPotential",
+    "Dubon2026.SourceOriginalPeriodAnnihilator",
+    "Dubon2026.SourceOriginalPeriodsFullRealSpan",
+    "Dubon2026.SourceOriginalRegularEvaluationSeparation",
+    "Dubon2026.SourceOriginalRegularEvaluationFrame",
+    "Dubon2026.SourceOriginalAbelJacobiImage",
+    "Dubon2026.SourceOriginalAbelJacobiOpenImage",
+    "Dubon2026.SourceOriginalJacobiInversion",
+    "Dubon2026.SourceOriginalSimpleFiberResidues",
+    "Dubon2026.SourceOriginalSimpleFiberSum",
+    "Dubon2026.SourceComplexSimplePoleContour",
+    "Dubon2026.SourceComplexFiberContourDerivative",
+    "Dubon2026.SourceComplexWeightedFiberContour",
+    "Dubon2026.SourceComplexSimpleFiberContour",
+    "Dubon2026.SourceComplexFiberConstancy",
+    "Dubon2026.SourceOriginalChartFiberOrders",
+    "Dubon2026.SourceOriginalNonconstantDifferential",
+    "Dubon2026.SourceOriginalPrescribedFiberCover",
+    "Dubon2026.SourceOriginalFiberLocalData",
+    "Dubon2026.SourceOriginalChartFiberMultiplicity",
+    "Dubon2026.SourceOriginalFiberCoefficients",
+    "Dubon2026.SourceOriginalFiberDisks",
+    "Dubon2026.SourceOriginalFiberContours",
+    "Dubon2026.SourceOriginalFiberIndexing",
+    "Dubon2026.SourceOriginalFiberContourSums",
+    "Dubon2026.SourceOriginalFiberContourComparison",
+    "Dubon2026.SourceOriginalFiberContourDifferentiation",
+    "Dubon2026.SourceOriginalFiberContourVanishing",
+    "Dubon2026.SourceOriginalFiberAbelJacobi",
+    "Dubon2026.SourceOriginalPrincipalFiberComparison",
+    "Dubon2026.SourcePeriodCosetConstancy",
+    "Dubon2026.SourceOriginalAbelPrincipalDivisors"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual compact connected original curve, full real span of actual loop periods, Jacobi inversion and the principal-divisor kernel.",
+  "discharged": "The original complex place manifold is compact and connected. Exact fiber multiplicity conservation and the actual j function and reciprocal give compactness; the original index formula and maximum modulus exclude nontrivial clopen subsets. Actual regular differentials have compatible local primitives along every continuous path, giving original path integrals and local Abel-Jacobi identities. Actual loop periods span the full real vector space. Evaluation separation and the inverse function theorem prove Jacobi inversion for actual degree-zero divisors. Every actual principal divisor has Abel-Jacobi vector in the integer span of actual loop periods: exact chart orders retain fiber multiplicities, weighted contours represent fiber sums, and the original global residue theorem makes their derivative zero. Parameter-plane constancy and reciprocal fibers complete this direction. No compactness, connectedness, primitive, full-span, Jacobi-inversion or principal-to-period premise remains on these consumers. The subgroup named pathPeriodLattice is the literal integer span of actual loop periods; its discreteness is not yet proved.",
+  "boundary": "The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,719-module scope: all thirteen retained regressions, 40,099 exhaustive theorem checks, 17,525 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace",
+    "Dubon2026.SourceFunctionField.OriginalChart.place_connectedSpace",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_normalized_path_primitive",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_regular_chart_primitives",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_abelJacobiVec_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_apply",
+    "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_single",
+    "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_jacobi_inversion",
+    "Dubon2026.SourceFunctionField.original_sum_simple_fiber_eq_zero",
+    "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_mul_deriv_div_sub_eq_sum_analyticOrderNatAt",
+    "Dubon2026.SourceFunctionField.ComplexFiberContour.hasDerivAt_circleIntegral_mul_deriv_div_sub",
+    "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_div_sub_eq_sum",
+    "Dubon2026.SourceFunctionField.ComplexFiberContour.eventually_forall_sphere_ne",
+    "Dubon2026.SourceFunctionField.ComplexFiberContour.eq_of_hasDerivAt_zero_off_center",
+    "Dubon2026.SourceFunctionField.ComplexFiberContour.sum_eq_sum_sum",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_local_data",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_differential_eq_smul_D",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_prescribed_fiber_cover",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_chart_order_at_place",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_abelJacobiDiv_mem_of_isPrincipal"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T20:17:54.778527+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceAnalyticUnitRoots",
+        "SourceAnalyticFiberPreimages",
+        "SourceOriginalFiberOrderSupport",
+        "SourceOriginalChartNeighborhoods",
+        "SourceOriginalFiberDegreeConservation",
+        "SourceOriginalChartFiberData",
+        "SourceOriginalNearbyFiberCover",
+        "SourceOriginalCompactChartCover",
+        "SourceOriginalComplexCompact"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticUnitRoots.lean",
+          "sha256": "C08DDD9F02F363798B46F90E15642AEB3E7020E1EA708807DDB71ACA4033FC87",
+          "oleanSha256": "BB63DAB9C4E045A14715B6520E4132C6BA2B6F6576964ADA186ADF013EC5BF88"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticFiberPreimages.lean",
+          "sha256": "12D1DCBB9AA93FB54DB74FDA54896F6E0213B8A1A9DB96DBC5FEBEEBE90D4CF9",
+          "oleanSha256": "0CE512A703858CFA2A3400F0C94BAE3A84C50523DF796D42119C73A9C2C152C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberOrderSupport.lean",
+          "sha256": "1D0B8760E029A1BF5C2FCC5241746148957523C1601FEA591EDCE4CDD9C076E2",
+          "oleanSha256": "2DAA3584C945F9E1F5A77F1E6AEF4FBDBC6934A7F98CA4457F57CE403D30F8AA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartNeighborhoods.lean",
+          "sha256": "9F29A455CE19A4B771CAFB692885E4C1F420877D2032C888D3841A9B2112F252",
+          "oleanSha256": "5D6E4DC0FBF75FC57D6ED9764C6528CF58D7D83A6B558617BF31C947DA493CE2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberDegreeConservation.lean",
+          "sha256": "EF706EB1A4E6BCC1F5AFD2B5BDA93982F0E8CCFB207D51D603B95C0F1AC07A38",
+          "oleanSha256": "7984F1D6B10E3B5D1FB52DC52D446E0CBC34B7818A6DC65CF06AE07ACA32D323"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartFiberData.lean",
+          "sha256": "8F6DCA1DFDFE4E2052D277A2738955FD54872AA6BF8233AD3E3BA1489D60146F",
+          "oleanSha256": "52F8637EE79AC7D671418D8516F228632BA3948EABFAFA42978D67688842732A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNearbyFiberCover.lean",
+          "sha256": "DEA891D3F5794E661A1AA3E01DE239F92C3B2FC1B1C1ED823AED0A1E388CBDCB",
+          "oleanSha256": "BE2ADD75E9AAE9B1E477A4A72037CCB61CAEAA7A9A81C93545F089C440C249A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCompactChartCover.lean",
+          "sha256": "8B78D4FF9682001A9B5B8AB8BD75D8D42083DE8C9047FB28C53A2A7187597AA7",
+          "oleanSha256": "8BF85DDD5A25201818F1AF19BA297F6E6F322B5856517B98B706307A4BED1D06"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCompact.lean",
+          "sha256": "180CD4EE0E40E581FE7ABF5D768EDDE7599E6198B65B6FD6267F0EED728B0DDB",
+          "oleanSha256": "579051E29088324FA5F31973ECE72D6A6251EE0993CACD0490B1D9C9FE9C3789"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.AnalyticFiber.exists_analyticAt_pow_eq",
+        "Dubon2026.SourceFunctionField.AnalyticFiber.exists_finset_preimages_of_meromorphicOrderAt_eq",
+        "Dubon2026.SourceFunctionField.original_sub_const_mem_iff",
+        "Dubon2026.SourceFunctionField.original_ord_sub_const_of_pole",
+        "Dubon2026.SourceFunctionField.original_divisor_sum_support",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily_continuousAt_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_families_separated",
+        "Dubon2026.SourceFunctionField.mem_originalPositiveFiber",
+        "Dubon2026.SourceFunctionField.original_fiber_total_order_constant",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily_injOn",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_place_reading",
+        "Dubon2026.SourceFunctionField.OriginalChart.meromorphicOrderAt_place_reading",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_place_reading_regular_disk",
+        "Dubon2026.SourceFunctionField.OriginalChart.nearby_original_fiber_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_ord_sub_eval_pos",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_compact_chart_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace",
+        "Dubon2026.SourceFunctionField.originalPositiveFiber"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.AnalyticFiber.exists_analyticAt_pow_eq",
+        "Dubon2026.SourceFunctionField.AnalyticFiber.exists_finset_preimages_of_meromorphicOrderAt_eq",
+        "Dubon2026.SourceFunctionField.original_sub_const_mem_iff",
+        "Dubon2026.SourceFunctionField.original_ord_sub_const_of_pole",
+        "Dubon2026.SourceFunctionField.original_divisor_sum_support",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily_continuousAt_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_families_separated",
+        "Dubon2026.SourceFunctionField.mem_originalPositiveFiber",
+        "Dubon2026.SourceFunctionField.original_fiber_total_order_constant",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily_injOn",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_place_reading",
+        "Dubon2026.SourceFunctionField.OriginalChart.meromorphicOrderAt_place_reading",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_place_reading_regular_disk",
+        "Dubon2026.SourceFunctionField.OriginalChart.nearby_original_fiber_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_ord_sub_eval_pos",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_compact_chart_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalPositiveFiber"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCompactAudit9.log",
+      "logSha256": "F79B4D55B54FD9E08E5CDAFDA4A3D65964ABC60BF130697EBB21468D57E58978",
+      "auditSha256": "BC5DC95F9C0B837CD8C8FBB1AF37C245A5004B20645EBC6CAB82BD3370BCDCB1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 37,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCompactDependencyAudit9.log",
+      "dependencyAuditSha256": "31660BA0D90B0B6E55D30C0EB45F4B3D70A4957663BC3EF1FBAD083FECEFAA8C",
+      "dependencyAuditSourceSha256": "A3489905D30EE7FA4F6BE5977AF6E07DCB104254232288ABBDE85DAF19041701",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The actual original complex place manifold is compact. The original principal divisor has finite support and degree zero; subtracting a constant preserves its pole orders and therefore the total positive fiber order. Analytic roots of the nonvanishing local factor and the native inverse-function theorem give enough distinct nearby preimages. Native Hausdorff separation of the actual chart families makes preimages at different central places distinct. The conserved total positive order excludes every additional nearby place. Applied to the actual j function and reciprocal, this gives a finite cover of all original places by images of closed disks strictly inside their chart domains. Their proved continuity gives compactness. No finite-fiber, degree, chart separation, multiplicity, cover or compactness premise remains in the actual compactness consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-compact-9-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "056D09DE17AC6F41053A63EED66F22337D9F1DE9016F1261B07D31E4A951DB08"
+    },
+    {
+      "recordedUTC": "2026-10-21T20:23:25.561785+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalOnePoleFunction",
+        "SourceOriginalEvaluationContinuity",
+        "SourceOriginalClopenObstruction",
+        "SourceOriginalComplexConnected"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOnePoleFunction.lean",
+          "sha256": "553F3CFA10147444CFD95277CB259F98E72D28A6C32ED3F4AF4B7F5A3E5E8A99",
+          "oleanSha256": "D2316AE81A36D6FE22F7D742D662BB680DE34938525AD951B1E7A365EA8ABFC6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEvaluationContinuity.lean",
+          "sha256": "C2F1B4EF98FB6F3B4B5570837CFA80AF71922DDF95EB00E2C825BE3B196F982E",
+          "oleanSha256": "66B49936206B24B227938FB230A29220C647C7E90B07CC48851F4DE809240FA7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClopenObstruction.lean",
+          "sha256": "0920EAAC370BD88E2FD13D91B36463FF96DC89484F91B76E9011FDCB1E23FC1F",
+          "oleanSha256": "01DC5B11D979FFBEAEFFAA4BA7B6BE5638DDD67B8E81FD5E2C69C80867AA8B68"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexConnected.lean",
+          "sha256": "7A233EFF9829DA0B7F33197D2473F114A7886CBED5DD17F41D0F8EC3CA864350",
+          "oleanSha256": "C739B0224A4C89F67D20B1645ACC371DECF5FD51628E1468D6383A740E785AA1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.exists_original_nonconstant_regular_away",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuousAt_originalPlaceEval",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_false_of_proper_clopen",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_connectedSpace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.exists_original_nonconstant_regular_away",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuousAt_originalPlaceEval",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_false_of_proper_clopen",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_connectedSpace"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexConnectedAudit4.log",
+      "logSha256": "91CA8EA03576F56F814EBDFC8838652C0BF5F6101492CE9B018ED7017E7BE603",
+      "auditSha256": "8CCB8A70122621B051CF28BD594A0B5DC1298DF06DF492F056C37C11E6FE5650",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexConnectedDependencyAudit4.log",
+      "dependencyAuditSha256": "C76108F29848A589929EE5847943929D794FC96347F3C2D6EFB02D119087DFC2",
+      "dependencyAuditSourceSha256": "3F2CF6C1C288F3AC48F92BD8BBD82F18358AEEC909010B14D50405CE704BE927",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_connectedSpace"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The actual original complex place manifold is connected. The already proved original index formula gives a nonconstant original function regular away from any chosen place, using a one-place divisor whose space has dimension at least two. Literal residue evaluation is continuous wherever that function is regular, by the existing analytic uniformizer reading and exact chart inverse law. On a hypothetical clopen complement, compact maximum modulus yields local constancy. The original function minus its local constant value is nonzero, so the proved exact chart order is finite; local constancy instead gives infinite order, a contradiction. An actual original analytic place proves nonemptiness. No one-pole-function, continuity, compactness, order compatibility or connectedness assumption remains in the consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Complex Abel-Jacobi comparison, including the actual regular-differential period lattice, principal-divisor kernel and Jacobi inversion, remains required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-connected-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "14A75CF33D36688CA8C305D84B88CAA7EF83EC3AD4814A4B91A7FC48CC6E806F"
+    },
+    {
+      "recordedUTC": "2026-10-21T20:50:44.948467+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalChartDifferentials",
+        "SourceOriginalChartGermHom",
+        "SourceOriginalChartDerivativeGerms",
+        "SourceOriginalChartGermDerivation",
+        "SourceOriginalChartDifferentialRegularity",
+        "SourceOriginalChartPrimitives",
+        "SourceOriginalDifferentialTransitions",
+        "SourceComplexPrimitiveGluing",
+        "SourceOriginalPathLocalPrimitives",
+        "SourceOriginalPathPrimitives",
+        "SourceOriginalPathIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartDifferentials.lean",
+          "sha256": "3D8C4100E8E9EAFBCB4F94345E287C5DA33DA8B5069CED4BF2B689D46234A360",
+          "oleanSha256": "717D310D11F74D3048B86DE01B9C0B1DBAD39247C6074CA25E34D6905770FC13"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartGermHom.lean",
+          "sha256": "ACCDE56B09DE33644689C1D57D199810D9F501AB36BCA104CBF204BE55FAB3EE",
+          "oleanSha256": "EA190CA57C533E29F808565CB66B95183269B5A2D17EDE02B98D385278466226"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartDerivativeGerms.lean",
+          "sha256": "EF5F3A268F124F0C13BA62B42CCB916876F1A4B8E06C345CF33EC12C6DB7FEE5",
+          "oleanSha256": "848F3E00B0932200709B53C1F147498CEEAEEB1C8324E4EE1739397A6CA64240"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartGermDerivation.lean",
+          "sha256": "DC1F178439A31D5BBEBA10B2DCC8F30B3116F99B22A4F8D089B14B269FB2E698",
+          "oleanSha256": "514AE6DE96987DF601F94B02446617761108E79AC4AADF73F16FC0228C64A48E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartDifferentialRegularity.lean",
+          "sha256": "92BB91049F316D382F4BADD3D97ECC3BEDC9D1BD29D50AA0F9C0B10201C92E15",
+          "oleanSha256": "67B0AE9D4BD344ADD8AA32ECFB7525DA7FE5DC53C3559B1B9E8DE666EF2997EE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartPrimitives.lean",
+          "sha256": "C27C759650AE6C5F549D3DE022EDDA2D5E7F0A9FF1BE0E514C898801731BAC20",
+          "oleanSha256": "A0AA46E52ADE4C3DC12347A558625C5A4E61EB52FA6B55ED53A58C354CF4BAC4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialTransitions.lean",
+          "sha256": "65D653D5766556959C375A6ACE7A5EC299B0CAE421334DB56636325B9C817403",
+          "oleanSha256": "E3475B8F5D338F076C5586BF45761A0FB28E5B76B866547A5E640AC253A293B5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexPrimitiveGluing.lean",
+          "sha256": "DC7FFCF7E4AD442129589EB75D695DBE7DB5DF474479E4821BA52C377E6AC0F5",
+          "oleanSha256": "DF969E2285D7597070FC0E77EB9DB6A6E3F0E645A622B088AE82F83CBF8A3965"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathLocalPrimitives.lean",
+          "sha256": "5F1C2FE96B66AF57180F1B2614F40469BE0548DEA1306B49A3DD40A8E2F8D912",
+          "oleanSha256": "52CF2F98B0F663FE8607D4D40619E9FC9C48C07D9620C6E681474A14082B4910"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathPrimitives.lean",
+          "sha256": "E0491253558A233CC2DFFADAD00208CD91DFEA48F5F2523E8302FD31D3B8135F",
+          "oleanSha256": "B7412DA811B7002C1BF69E46A2D500C9D6E65CE44088957961BBF9D2F31C0BCD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathIntegral.lean",
+          "sha256": "114262510A38D2E40C428F71D06524D210C0190B7939C6789B019DBBA711FB86",
+          "oleanSha256": "9BF4A764AD180080E0C1AF27D14C8DD056934988E9159C61F01E01B6BFB83C1D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_eq_extChartAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_coefficient",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_readDifferential",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_algebraMap",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_one",
+        "Dubon2026.SourceFunctionField.OriginalChart.meromorphicAt_chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_chartRead_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_add",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_mul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadHom_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_differentiableAt_chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_add",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_mul",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_one",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartGerm_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartGerm_scalarTower",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadDerivation_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadDerivation_lift_smul_D",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_expression_germ",
+        "Dubon2026.SourceFunctionField.OriginalChart.chart_dCoord_order_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chart_differentialCoeff_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_readDifferential",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_readDifferential_primitive_on_chart",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_regular_chart_primitives",
+        "Dubon2026.SourceFunctionField.OriginalChart.uniformizer_regular_on_chart",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_expression_nhds",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_change",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.eventually_sub_eq_of_hasDerivAt",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimOn.mono",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.isPrimOn_of_isPrimNear",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimOn.extend",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.exists_isPrimOn_Icc",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuousAt_placeChart",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_source_mem_nhds",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_local_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_isPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong.sub_eq_initial",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_eq_of_isPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong.add_const",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong.continuous",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_normalized_path_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadHom",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartGermAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadDerivation",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimNear",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimOn",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_eq_extChartAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_coefficient",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_readDifferential",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_algebraMap",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_one",
+        "Dubon2026.SourceFunctionField.OriginalChart.meromorphicAt_chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_chartRead_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_add",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_mul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadHom_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_differentiableAt_chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_add",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_mul",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.deriv_chartRead_one",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartGerm_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartGerm_scalarTower",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadDerivation_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadDerivation_lift_smul_D",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_expression_germ",
+        "Dubon2026.SourceFunctionField.OriginalChart.chart_dCoord_order_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chart_differentialCoeff_regular",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_readDifferential",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_readDifferential_primitive_on_chart",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_regular_chart_primitives",
+        "Dubon2026.SourceFunctionField.OriginalChart.uniformizer_regular_on_chart",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_eq_expression_nhds",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_change",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.eventually_sub_eq_of_hasDerivAt",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimOn.mono",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.isPrimOn_of_isPrimNear",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimOn.extend",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.exists_isPrimOn_Icc",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuousAt_placeChart",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_source_mem_nhds",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_local_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_isPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong.sub_eq_initial",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_eq_of_isPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong.add_const",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong.continuous",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_normalized_path_primitive"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadHom",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartGermAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartReadDerivation",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimNear",
+        "Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.IsPrimOn",
+        "Dubon2026.SourceFunctionField.OriginalChart.IsPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathPrimitivesAudit11.log",
+      "logSha256": "C7C79B7FDDF466A080FB6AE39D056BC1B64736D5F1220C4F16AC56579ACD328D",
+      "auditSha256": "4BE505804487978C3F5D31330934187E1D9FC9BBD7477BAD0160BA32488B7C55",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 75,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 32,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathPrimitivesDependencyAudit11.log",
+      "dependencyAuditSha256": "DAFC28CE734D0AE52389B137DCA1FCA7F0840DF9F098EEA909A83EF6CAF820C7",
+      "dependencyAuditSourceSha256": "A2C13645E0792B4BED4870772F8EC02B1C0A620510CA0C4498FACF4B6E575E11",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_normalized_path_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_regular_chart_primitives"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every original regular differential has a continuous normalized primitive along every actual continuous path on the constructed original place manifold; its endpoint is the uniquely determined integral. Exact derivative orders show that the original chart uniformizer differential is a unit throughout the disk. Original regularity therefore makes its coefficient analytic on the full chart disk. The actual original residue map on punctured chart germs defines the scalar action, and the proved derivative identities define a derivation. The native Kaehler universal map proves differential-expression independence. Continuity extends this identity across the center, and the actual chart inverse laws prove coordinate compatibility. Native disk primitives and finite interval gluing give path existence; equal derivatives and connectedness of the parameter interval give uniqueness up to the initial value. No path-primitive existence, coordinate compatibility, regularity-to-analyticity or well-defined-integral assumption remains in the normalized path-primitive consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. The global complex Abel-Jacobi comparison remains required: actual loop-period lattice discreteness and full real span, the principal-divisor kernel in both directions, and Jacobi inversion. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-path-primitives-11-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "C1EE3A8CCD83997092342A2146B5440B560F5E3F6739CFF23F466084BDB9A4B2"
+    },
+    {
+      "recordedUTC": "2026-10-21T20:56:15.718937+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalPathIntegralLaws",
+        "SourceOriginalAbelJacobiPeriods",
+        "SourceOriginalChartPathIntegrals",
+        "SourceOriginalLocalAbelJacobi"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathIntegralLaws.lean",
+          "sha256": "6D5652ABD19CA3F86A2BB5E8221A061F987CD92C738F04E87D67D0726983D40E",
+          "oleanSha256": "B417EA6307946F718B3E3D583394FB47CAA4F3448479DEECAECBCBDD263E613E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiPeriods.lean",
+          "sha256": "C0837DE829C7213FEF1AC1C3E163276064AD21ADD7FA507CB034B916E4B8C7DA",
+          "oleanSha256": "F2F226FC416FF1EF0042FFCB546E039D1158B41A48FD5F1CB73077C05C027AD3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartPathIntegrals.lean",
+          "sha256": "CC3729661B1487EC29A6DFBDFFCD9CD97A6CAB427EFB26751945D502CD8CCC82",
+          "oleanSha256": "B52C1CF4580D9054B262E8BCCDCF6AE2586492C2E665F5C4CE056D3B4E46119D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalAbelJacobi.lean",
+          "sha256": "ECAF4AB62CAF22E2D4EA322A04EDD1C616CF5598526791A244CA41CB1F5AC9E8",
+          "oleanSha256": "EAAC77EF3D997A8E29F04BC717F26388B3AD52EE70290736A2B1764C4A5107C4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_symm",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_trans_left",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_trans_right",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_trans",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_symm",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_pathConnectedSpace",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_single",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_pathPeriodLattice_of_loop",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec_sub_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_of_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_chart_path",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_chart_path_integrals",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_abelJacobiVec_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPath",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathPeriodLattice"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_symm",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_trans_left",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_trans_right",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_trans",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_symm",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_pathConnectedSpace",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_single",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_pathPeriodLattice_of_loop",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec_sub_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_of_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_chart_path",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_chart_path_integrals",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_abelJacobiVec_chart_primitive"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPath",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathPeriodLattice"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalAbelJacobiAudit4.log",
+      "logSha256": "9E59ED0A2047694761D7C553FC7F6EB37059664AB39C43A61746E0D4E9EC7168",
+      "auditSha256": "4152473F4AD3627E08A190C2105D3881AECBCBED85261F327A7A5A24C9E14898",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 31,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalAbelJacobiDependencyAudit4.log",
+      "dependencyAuditSha256": "AF4FEC8BA55E216CBB2D96630ECE26CB4D96384D82CE78348C327AD2651F68E3",
+      "dependencyAuditSourceSha256": "11300B5C8E99313383C4D91697F0C780F4664FFBA2206A751F83F6BE2E98B87C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_abelJacobiVec_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_single"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Actual continuous paths exist between all original places: proved original connectedness combines with native local path connectedness of the constructed complex charts. Original regular-differential integration adds under concatenation and negates under reversal, using proved path-primitive existence and uniqueness. The actual Abel-Jacobi vector and additive original-divisor map are defined from these integrals. Their path ambiguity lies in the integer span of actual loop periods. Every original chart disk supplies analytic primitives whose vector is the actual local Abel-Jacobi difference modulo that integer span. Native paths inside the disk and the proved differential transition law identify their integrals with primitive endpoint differences. No path existence, primitive existence, coordinate compatibility, concatenation, reversal or local Abel-Jacobi identity is supplied as an assumption.",
+      "boundary": "Scratch only; production promotion and verification pending. The integer span of actual loop periods is defined but is not yet proved discrete or of full real span. These properties, the principal-divisor kernel in both directions and Jacobi inversion remain required for the global complex Abel-Jacobi comparison. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-local-abel-jacobi-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E8FC44E03581133E7E443FFB5C4EC18A416C6C2FD7E41A0A58BE55A9E24402B6"
+    },
+    {
+      "recordedUTC": "2026-10-21T21:03:53.733942+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalDifferentialReadingLinear",
+        "SourcePeriodRealDual",
+        "SourceOriginalRealAbelPotential",
+        "SourceOriginalPeriodAnnihilator",
+        "SourceOriginalPeriodsFullRealSpan"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialReadingLinear.lean",
+          "sha256": "7FBCD098376FE9405010A454B97B486B160EE0A56C9E8C283D5DB8FCE9C595F6",
+          "oleanSha256": "A6E137431950ADBA719950B4CDE451DC73AF66E358E448F993B95BC40E36EFF6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodRealDual.lean",
+          "sha256": "EDEDDDDF60898B3F558EF712DD87D708AB83F279D5530F6338BF1BE560D2FDCC",
+          "oleanSha256": "646198CB5C40C8B4CF571D12C97BA02C319705C3543BDAD110E0073910634B28"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRealAbelPotential.lean",
+          "sha256": "F15D3DEBE7A7A224B0163176EAF833AB708CD87474BA55D4D26BD55CC78E6A16",
+          "oleanSha256": "5E8662C73A81B47BFEE734C361F34E60D0DCEBA6211A4F2457B35AA148779D57"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodAnnihilator.lean",
+          "sha256": "7CD7B51C389A987CEAAD40C2CA13C5671FA5C1C0F1DA82F04CFC725D1D2D8941",
+          "oleanSha256": "844E14BBE1E21AA3092E38B09DE82B8CABF332E3F20AF73458FF95BABE3BEA90"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsFullRealSpan.lean",
+          "sha256": "78AE01F124F774B2DD4E5DE1FE2912C61AAEC08AD33B6B482490C934E4F94145",
+          "oleanSha256": "371588D9C311E1F3FE85B298B72ADFF7DB465A667C4C77507FB377368E914727"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differentialCoeff_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPlaceEval_sum_mul_of_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_readDifferential_eventually_eq_zero",
+        "Dubon2026.SourceFunctionField.PeriodRealDual.apply_eq_re_sum",
+        "Dubon2026.SourceFunctionField.PeriodRealDual.eventually_eq_of_isLocalMax_re",
+        "Dubon2026.SourceFunctionField.OriginalChart.realAbelPotential_local",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuous_realAbelPotential",
+        "Dubon2026.SourceFunctionField.OriginalChart.coefficients_eq_zero_of_annihilates_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_annihilates_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top_of_linearIndependent",
+        "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top",
+        "Dubon2026.SourceFunctionField.PeriodRealDual.coefficients",
+        "Dubon2026.SourceFunctionField.OriginalChart.realAbelPotential"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differentialCoeff_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPlaceEval_sum_mul_of_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_readDifferential_eventually_eq_zero",
+        "Dubon2026.SourceFunctionField.PeriodRealDual.apply_eq_re_sum",
+        "Dubon2026.SourceFunctionField.PeriodRealDual.eventually_eq_of_isLocalMax_re",
+        "Dubon2026.SourceFunctionField.OriginalChart.realAbelPotential_local",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuous_realAbelPotential",
+        "Dubon2026.SourceFunctionField.OriginalChart.coefficients_eq_zero_of_annihilates_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_annihilates_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top_of_linearIndependent",
+        "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.PeriodRealDual.coefficients",
+        "Dubon2026.SourceFunctionField.OriginalChart.realAbelPotential"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsRealSpanAudit5.log",
+      "logSha256": "698CEE6C0C624A89FE0BA1409DEC7316D6EB3508C59BD61D7EDD796423F4D625",
+      "auditSha256": "DC9DCAB03899E62C8876268B8902ABD3BAACA173AAA5AC2E095AF0398F6632FF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 19,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsRealSpanDependencyAudit5.log",
+      "dependencyAuditSha256": "5ECF70E5F5E80244D12EC5B62A08EFAF158F739A9D71C9B424ED85BD2556B4AE",
+      "dependencyAuditSourceSha256": "DE20641A178A933C45F185547A7A8AF2C7CEEDFDFC7DBA9B95D08094470D0E85",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "For every basis of the actual original regular-differential space, the integer span of actual loop periods spans the entire real coordinate space. Actual differential coefficients and residue evaluation prove finite linearity of the analytic readings. Their exact finite original place orders prove that a reading vanishing near one place forces the differential itself to vanish. A real functional annihilating all periods gives a real potential on the original place space; the proved local Abel-Jacobi formula makes it continuous and locally the real part of an analytic primitive. Original compactness supplies a maximum, native open mapping forces the primitive to be locally constant, and reading injectivity plus basis linear independence kills the functional. Native finite-dimensional duality excludes a proper real span. No primitive, chart compatibility, compactness, reading injectivity or full-span assumption remains in the original basis consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Full real span is proved, but discreteness of the actual integer period span, the principal-divisor kernel in both directions and Jacobi inversion remain required for global complex Abel-Jacobi. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-periods-real-span-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "92ECEAFC8149330644DFB735DAED194C8F9777C7710B231C89E12F139CFCB8F6"
+    },
+    {
+      "recordedUTC": "2026-10-21T21:12:36.831888+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalRegularEvaluationSeparation",
+        "SourceOriginalRegularEvaluationFrame",
+        "SourceOriginalAbelJacobiImage",
+        "SourceOriginalAbelJacobiOpenImage",
+        "SourceOriginalJacobiInversion"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularEvaluationSeparation.lean",
+          "sha256": "83194D6B96A0969DF22F304F1C7AEF5A479137E0D32EB5FF4963D142F4774F26",
+          "oleanSha256": "2C6F74A259B91EEDB2BD8339179BEFA452BB2E9A6193B11A4D7F11701781DFA1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularEvaluationFrame.lean",
+          "sha256": "54528B81DCDB930993F549665714F39A9AF288CD984A0C8ECD7FB88803484634",
+          "oleanSha256": "CBE9ECCF5FC5631986540B8AEE0A931AF3300AE178ED7E38E02EFF6ABBD7D2E1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiImage.lean",
+          "sha256": "C5D663212B6B7F012FBB18B18E05121835FEEB16A5B54E6FE0FF646FBF0D57A0",
+          "oleanSha256": "E681986F8F46C8CDCDF692AAE67E435DDDAA4575522667034EAFFD19B9878197"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOpenImage.lean",
+          "sha256": "AB2B3E1DDD615505E23AABA016435E15F94C1697FAA04442A68055E3994F97E5",
+          "oleanSha256": "507628B87B4CB27F7948A72B25FC766E71DDD7845EE636F792BAB46AD6E39783"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJacobiInversion.lean",
+          "sha256": "5557416A4DE79416015B53BB180A9B8DE76838B4EE06DFB00B79F22EF44DEBF7",
+          "oleanSha256": "70058800CEC123D90269BAF045DDA172164D9821CA175B6C28AE3B834DBF9F94"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_infinite",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_center",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_forall_readDifferential_center",
+        "Dubon2026.SourceFunctionField.OriginalChart.span_readDifferential_center_eq_top",
+        "Dubon2026.SourceFunctionField.OriginalChart.local_primitive_sum_mem_abelJacobiImage",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiImage_mem_nhds_of_frame",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_jacobi_inversion",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiImage"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_infinite",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_center",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_forall_readDifferential_center",
+        "Dubon2026.SourceFunctionField.OriginalChart.span_readDifferential_center_eq_top",
+        "Dubon2026.SourceFunctionField.OriginalChart.local_primitive_sum_mem_abelJacobiImage",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiImage_mem_nhds_of_frame",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_jacobi_inversion"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiImage"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJacobiInversionAudit5.log",
+      "logSha256": "672C0947BA728128248A3D6EC53DB42211030D7B5034817FB5ED9BE7A3F367D0",
+      "auditSha256": "FCB84DCAAE01D854342A22F69B9D08798752C4A3007D8B3FEB84AFF035C36F7D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJacobiInversionDependencyAudit5.log",
+      "dependencyAuditSha256": "6DEAFF8E8B95939812CB604143526D9BFA821F8EC4C136B041042C019A3E8BD4",
+      "dependencyAuditSourceSha256": "C6D886B4C27526738D80A8A835FC45D057BF64F307583FEE801CB6F73FADF1E4",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_jacobi_inversion"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every vector modulo the integer span of actual loop periods is represented by an actual degree-zero original divisor. An injective original chart disk makes the place space infinite. If an original regular differential vanished at every center, exact residue orders would make its differential order positive at every place, contradicting the already proved finite support of nonzero original differentials. These evaluations therefore span the complex coordinate space. Native linear algebra extracts an independent evaluation frame; full-chart primitives give a sum map whose derivative is the corresponding continuous linear equivalence. The native inverse-function theorem puts a neighborhood of zero into the actual image of degree-zero divisors modulo periods. That image is an open additive subgroup of the connected complex coordinate space, hence is the whole space. No evaluation separation, frame, primitive, local surjectivity or Jacobi inversion hypothesis remains in the original basis consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Full real span and Jacobi inversion are proved. Discreteness of the actual integer period span and the principal-divisor kernel in both directions remain required for global complex Abel-Jacobi. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-jacobi-inversion-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A1E07327C9C46F10047ECCCF90FA408AA95F9971F88F8495F95F721150F269DC"
+    },
+    {
+      "recordedUTC": "2026-10-21T21:23:00.786984+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalSimpleFiberResidues",
+        "SourceOriginalSimpleFiberSum"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimpleFiberResidues.lean",
+          "sha256": "15A124DBAEBA69C9A290DAC0DB9ABD64289CD89E435F99F7675BA91D05760085",
+          "oleanSha256": "5324A8BB887EE8DFF4A808C8AEC4182DE23662E514814EB2B67D04240B488256"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimpleFiberSum.lean",
+          "sha256": "FF1A5F4D85765763F929D7C854CEE92C863754EA6E2FB23BDC15D2CA1AEB39C1",
+          "oleanSha256": "E95214839E8F54401DBD2F70EBCB864E3E066ABC63B2386E8E87BB120BE427A4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_localResidue_mul_simplePole",
+        "Dubon2026.SourceFunctionField.original_simple_zero_residue",
+        "Dubon2026.SourceFunctionField.original_trace_residue_eq_eval",
+        "Dubon2026.SourceFunctionField.original_sum_simple_fiber_eq_zero"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_localResidue_mul_simplePole",
+        "Dubon2026.SourceFunctionField.original_simple_zero_residue",
+        "Dubon2026.SourceFunctionField.original_trace_residue_eq_eval",
+        "Dubon2026.SourceFunctionField.original_sum_simple_fiber_eq_zero"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimpleFiberAudit2.log",
+      "logSha256": "75E7683D53724A4BA96B8B192AC81DCC89F917E6B674D7AD960854C21BB0C9C9",
+      "auditSha256": "9E5A51E588C11344ABE0C16319E1C747756ABE5AE5D50925D50454C9B0B215C6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimpleFiberDependencyAudit2.log",
+      "dependencyAuditSha256": "C42EAA6E9990E086ACEFA9B65115C54EEFE2CC5EBF539A0BCED7AA7344BB71CF",
+      "dependencyAuditSourceSha256": "F6AB2E146BA73843F9BBD89FC2838C4BDC50360065B31A13D86D90FACDDDD7CF",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_sum_simple_fiber_eq_zero"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "For an actual original regular differential h Df, the sum of the original residue evaluations of h over each simple fiber of f is zero. Simple-pole normalization first proves multiplication by a regular function commutes with the residue up to its residue value. The original logarithmic residue identity proves the coefficient of Dg is nonzero at an order-one zero; the already proved exact derivative-order theorem then forces h to be regular there. These facts give the exact local residue of the differential divided by g. The original global residue theorem and the residue-field dimension one identify the finite residue sum with the fiber evaluation sum. No local simple-zero formula or global residue theorem is supplied as a hypothesis; simplicity of the fiber remains an explicit input for the forthcoming analytic consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Full real span and Jacobi inversion are proved in preceding scratch cohorts. The analytic fiber argument must derive simple nearby fibers and local constancy modulo periods, then prove principal divisors lie in the period kernel. The converse and period discreteness are also required. Original torsion finiteness/cardinality, comparison back to Qbar divisor classes, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-simple-fiber-2-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "33780B5599C67A9135180A9722512503FBE74B057BA701D655C15E1B45BC9502"
+    },
+    {
+      "recordedUTC": "2026-10-21T21:29:02.407607+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceComplexSimplePoleContour",
+        "SourceComplexFiberContourDerivative",
+        "SourceComplexWeightedFiberContour",
+        "SourceComplexSimpleFiberContour",
+        "SourceComplexFiberConstancy"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexSimplePoleContour.lean",
+          "sha256": "71FF05F3BA883C8DEFAFFEC248D0212F5819FABA8EEFDBEF543A7676F2338830",
+          "oleanSha256": "84BAEEF8ED0361EB94B59D3615DB76A24A8617D403978A24E1A279B203938756"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexFiberContourDerivative.lean",
+          "sha256": "E415997069C328BCBDAA2502E31790916878FBFD5B77FB12D8D7B512F88F8283",
+          "oleanSha256": "F84026E1A5EFABCE720E7B9D10DF5B7C0D0E328AE2C894E77509ED55A22BE789"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWeightedFiberContour.lean",
+          "sha256": "D6CFE1E0872F32F4B7EE75A83B22D3CA2499A943BEEC461023987A99E38B9172",
+          "oleanSha256": "FD662D4567C8070FAEB5263E72D6F6A22F075DA920284E59B51829FAE252EA73"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexSimpleFiberContour.lean",
+          "sha256": "30B8DB65536E19A1E32542536F161F1280CB7AEB49A47ACE0741193BA0ADAE8B",
+          "oleanSha256": "4ACF3A8AB29B3914F534712EFD3B7E4D71594E25A42B86B144F3E1A6D97DE13B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexFiberConstancy.lean",
+          "sha256": "9983A8313BC9A24ECC34AE1A24FA9428FE8FA2EF63DCBD02B3DD2BEE8EF8C592",
+          "oleanSha256": "F04B6FD1BD190B4D5398C0913C4546D7A19AE8CC1D5FC1A7732707C00D04D1C6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_eq_sum_residue_of_simplePole",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.CircleLogIntegralLevel.exists_pos_le_norm_sub",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.CircleLogIntegralLevel.norm_deriv_circleMap_le",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.CircleLogIntegralLevel.circleIntegral_mul_deriv_div_sq_eq",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.hasDerivAt_circleIntegral_mul_deriv_div_sub",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.WeightedArgumentPrinciple.analyticOrderAt_ne_top",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.WeightedArgumentPrinciple.finite_zeros",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.WeightedArgumentPrinciple.local_form",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_mul_deriv_div_sub_eq_sum_analyticOrderNatAt",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_div_sub_eq_sum",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eventually_forall_sphere_ne",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eq_of_hasDerivAt_zero_off_center",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.sum_eq_sum_sum"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_eq_sum_residue_of_simplePole",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.CircleLogIntegralLevel.exists_pos_le_norm_sub",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.CircleLogIntegralLevel.norm_deriv_circleMap_le",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.CircleLogIntegralLevel.circleIntegral_mul_deriv_div_sq_eq",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.hasDerivAt_circleIntegral_mul_deriv_div_sub",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.WeightedArgumentPrinciple.analyticOrderAt_ne_top",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.WeightedArgumentPrinciple.finite_zeros",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.WeightedArgumentPrinciple.local_form",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_mul_deriv_div_sub_eq_sum_analyticOrderNatAt",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_div_sub_eq_sum",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eventually_forall_sphere_ne",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eq_of_hasDerivAt_zero_off_center",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.sum_eq_sum_sum"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexFiberContourAudit5.log",
+      "logSha256": "55F225EE59CD02449447753F3CEBE9D357981323A47AF5FE119E7DB4BEFB2F97",
+      "auditSha256": "00272B834F5BC0D092D84E9D7F844D43460071B7DDA6A9BCE5D727AAC601B1C9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 34,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexFiberContourDependencyAudit5.log",
+      "dependencyAuditSha256": "75D8526451CB6D23E249C86E19E7AB062944CFAB54B5799506741E3208AAAA14",
+      "dependencyAuditSourceSha256": "58FAEE3106068A353082D1EAF8236D9A7062AD98373CBB08A3C6174A3EA9D87D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_mul_deriv_div_sub_eq_sum_analyticOrderNatAt",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.hasDerivAt_circleIntegral_mul_deriv_div_sub",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_div_sub_eq_sum",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eventually_forall_sphere_ne",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eq_of_hasDerivAt_zero_off_center",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.sum_eq_sum_sum"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The finite simple-pole circle-integral formula is proved by subtracting the explicit principal parts, filling the removable singularities and applying native Cauchy integration. Analytic factorization gives the weighted argument principle with exact zero multiplicities. Dominated differentiation and integration of an exact derivative give the parameter derivative of the weighted fiber integral. For simple zeros the differentiated contour is the sum of local coefficients divided by the coordinate derivative. Boundary nonvanishing persists locally, and a derivative vanishing off the center forces constancy on the disk. A finite reindexing lemma preserves each fiber multiplicity. All inputs are ordinary analytic hypotheses; no residue theorem, differentiation-under-integral or fiber constancy result is postulated.",
+      "boundary": "Scratch only; production promotion and verification pending. Apply these analytic formulas to the actual original charts, derive simple nearby fibers, and combine the already proved original simple-fiber residue sum with local Abel-Jacobi coordinates. Principal-divisor kernel in both directions and period discreteness remain required; full real span and Jacobi inversion are proved in preceding scratch cohorts. Original torsion finiteness/cardinality, comparison back to Qbar divisor classes, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-complex-fiber-contour-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7E66EA06B7183BD3DA5D1C7A400451CDCEF9116ABEF17D06E7A3EF2565DCF84E"
+    },
+    {
+      "recordedUTC": "2026-10-21T21:34:52.569904+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalChartFiberOrders",
+        "SourceOriginalNonconstantDifferential",
+        "SourceOriginalPrescribedFiberCover",
+        "SourceOriginalFiberLocalData",
+        "SourceOriginalChartFiberMultiplicity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartFiberOrders.lean",
+          "sha256": "53BF3E16C18DF80EFD439229FE328170D2BB3ADFFF63485051DE0A68BF58DD41",
+          "oleanSha256": "631D87F46D0B20D487D034A7E8E8A19F4374BD6E2DAC9FFBD19C44057D272FC6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNonconstantDifferential.lean",
+          "sha256": "E32BB5B40CEA485038ABAE490658327574F4D57EB34CE8F430E89F8B17212C94",
+          "oleanSha256": "CB4DD49D884215C4610821D1E7F779CABDEBC4866444BFB41AAD8E6C7EDC5F15"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedFiberCover.lean",
+          "sha256": "33E23BEC6448D3A8A784B6BEFBF31692597503D2537831318C8484FF1DD1DCA5",
+          "oleanSha256": "8FF25EF332F481B42EDAD026D6FE3297176CC0C25DCAED39DE3787745ED1D97A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberLocalData.lean",
+          "sha256": "13E896FDB45394A4AE94CB44C7B27916CA3086F37517FD52A8A44F92733F8E7C",
+          "oleanSha256": "1A7D07A1489ECCDA1515F5101AA21531DD0D9997AF076FA9E0B93CFA0C73314A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartFiberMultiplicity.lean",
+          "sha256": "8D1CC7AFF57FFA102358992677C746C553D5431245C9582B83F288F208FF9A41",
+          "oleanSha256": "B728B5B67B831561DB0ACB567A706A97849F5DDF9AFBCCFAC1B26F4E512775B9"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_order_sub",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_deriv_chartRead_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_D_ne_zero_of_nonconstant",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differential_eq_smul_D",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_prescribed_fiber_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_local_data",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_chart_order_at_place"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_order_sub",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_deriv_chartRead_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_D_ne_zero_of_nonconstant",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differential_eq_smul_D",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_prescribed_fiber_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_local_data",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_chart_order_at_place"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberLocalAudit5.log",
+      "logSha256": "F6883CFB12B57DEBCCB71B944705F47CEF05E68F86BCF2FEE65F0D7FABD13798",
+      "auditSha256": "8E34343687FFFB9E7AE98161C6543698EAD18A578021159ECD63F462B02E98E8",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberLocalDependencyAudit5.log",
+      "dependencyAuditSha256": "4A380E1DC843690FED87A262D5DD5E2393BEBFE88E53FD1B881B4EFC69D1218D",
+      "dependencyAuditSourceSha256": "661299D1DC6C8834982B3A11B84AA9A360CA9F9D729FFB3BBF5AD9120DCFE833",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_local_data",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differential_eq_smul_D",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_prescribed_fiber_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_chart_order_at_place"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The actual original chart order identifies the analytic zero multiplicity at every point of a chart with its algebraic normalized order. Finite order of a nonconstant function minus its central value, together with the native derivative-order identity, makes its coordinate derivative nonzero off the center. Finite original divisor support supplies a regular place; the actual differential germ then proves Df nonzero, and the proved one-dimensional Kaehler space expresses every original differential as h Df. Established compactness bounds a reciprocal outside arbitrary prescribed neighborhoods of the central fiber, forcing all nearby fibers inside them. Actual local Abel-Jacobi primitives and the proved differential germ identity supply all local disk data, including nonvanishing off the center. No chart-order, compactness, coefficient-existence, primitive or local-Abel-Jacobi hypothesis remains in these original consumers.",
+      "boundary": "Scratch only; production promotion and verification pending. The weighted contour consumer must combine these original local inputs with the proved simple-fiber residue sum to prove local constancy modulo periods. The principal-divisor kernel in both directions and period discreteness remain required; full real span and Jacobi inversion are proved in preceding scratch cohorts. Original torsion finiteness/cardinality, comparison back to Qbar divisor classes, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-fiber-local-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B8E66A939A91375159898BB8D2D57B1EB14C29E7B3FBF1201A54D816C4ABE676"
+    },
+    {
+      "recordedUTC": "2026-10-21T22:01:48.122005+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalFiberCoefficients",
+        "SourceOriginalFiberDisks",
+        "SourceOriginalFiberContours",
+        "SourceOriginalFiberIndexing",
+        "SourceOriginalFiberContourSums",
+        "SourceOriginalFiberContourComparison",
+        "SourceOriginalFiberContourDifferentiation",
+        "SourceOriginalFiberContourVanishing",
+        "SourceOriginalFiberAbelJacobi",
+        "SourceOriginalPrincipalFiberComparison",
+        "SourcePeriodCosetConstancy",
+        "SourceOriginalAbelPrincipalDivisors"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberCoefficients.lean",
+          "sha256": "3B993227DCAE7A24B51E6AC9B78E92F6D1074A7F8FC0E2CE1F936F0A5B444700",
+          "oleanSha256": "8D91BB0C8B49D478D0F739019DBC3C6756711C9533D1AAA6FA16E742D634E391"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberDisks.lean",
+          "sha256": "6BC11E6971B6D1D11D8C457BDDFA5B5D86A85729C002F9503D1FDCB8777378E5",
+          "oleanSha256": "0B28E698CE805DB821BA2D7704C245BFBB818912EAB76ED6DEF979B2D718AA3A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberContours.lean",
+          "sha256": "E3398DBD6416B49A40E2ECE1AD85D27B5F7D1BD39F6E47D976B2CC8BE261D722",
+          "oleanSha256": "ECC88D3D862A8949A2D7C31D7C4DA7824372C9737C6996AE11610A27E7E752E4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberIndexing.lean",
+          "sha256": "429A7BD9014DEED7B9A9C98FAF6733FD5F33EA1DB9089B0A95735186BE7F295F",
+          "oleanSha256": "975C2FA75DBBEF8AA2F8E3B5597A5145452556DC6103B3C7C3F88039E6308025"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberContourSums.lean",
+          "sha256": "6818704BAF7AE3BDE0529F601C6FD91D16AA3500634F83A54236007F021CB6DC",
+          "oleanSha256": "025F209FE51286D2E34F23703EFE6647F0AE18E36F7DFCF019DBC11B5D6E145B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberContourComparison.lean",
+          "sha256": "D5AA7138B0F03DAA79DA378B0514F48A6A53008380C79C21A9D60B77705BC48D",
+          "oleanSha256": "B2B4A2CC0A216AF0853A391D3FB5A822ABCC1198532BCD56EA13B12706AF8746"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberContourDifferentiation.lean",
+          "sha256": "C25626A676ECE3B9E155796D1D4E210C0828582C46BA6093F24B959557545BD4",
+          "oleanSha256": "6A24F237D60F01F274D121FC9B4E6EBF1EDAEC0B17B830FBB9C87C89D624733B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberContourVanishing.lean",
+          "sha256": "D7ABC6E54BF679A0287FBBB221B22764726A8600674099FA2ED2BC4A27307916",
+          "oleanSha256": "E365E85369D3AB504765CB8CFECA5C17925A0700B7B0C358F9E05DC858E1B282"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberAbelJacobi.lean",
+          "sha256": "772D8A12C50BD73BDF01F9EB529585B2983D0E0A88A1614273E42D21E7552A33",
+          "oleanSha256": "D56BDC0182D7DCD9232B7C5B452368DE8F88D7F93B96F5C0A6E755723171D97A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrincipalFiberComparison.lean",
+          "sha256": "8924BD2C0773BAA39350B943BD82DBB45E02C499F562281887FCE09CCF7846F8",
+          "oleanSha256": "498C38481E9B896A450E77ABF2134B874241C544F611672BAEEE156485512E65"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodCosetConstancy.lean",
+          "sha256": "9FD920BF0E4684CF7EC18F2CC3723FB955B7D7043ACCE532EC1162E11B0BCA5F",
+          "oleanSha256": "EEAA0CA2EDE0EAA969D389E09F68E1C50CAD910D73365B32BD92247D4E355A63"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelPrincipalDivisors.lean",
+          "sha256": "528FDB805833AB0A4AB55A28DBB70C5E9E17237720C5DB0F9DE626433F44A3AA",
+          "oleanSha256": "DDCA5187EBCDEC5D21C513D4E633A25635F0384F9C3F9CEF51839A50F48F5303"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_regular_fiber_coefficients",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_originalFiberDisks",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_originalFiberContours",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_originalFiberIndexing",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_sub_contour_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.hasDerivAt_originalFiberContourSum",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberContourDerivative_eq_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_original_abelJacobiDiv_fiber_sub_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalZeroDivisor_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_max_ord_sub_one_eq",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_principal_zero_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_zero_fiber_one_eq",
+        "Dubon2026.SourceFunctionField.PeriodCoset.sub_mem_of_eventually_sub_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_abelJacobiDiv_mem_of_isPrincipal",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberDifferentialModule",
+        "Dubon2026.SourceFunctionField.OriginalChart.OriginalFiberDisks",
+        "Dubon2026.SourceFunctionField.OriginalChart.OriginalFiberContours",
+        "Dubon2026.SourceFunctionField.OriginalChart.OriginalFiberIndexing",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberContourSum",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberContourDerivative",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalZeroDivisor"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_regular_fiber_coefficients",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_originalFiberDisks",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_originalFiberContours",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_originalFiberIndexing",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_sub_contour_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.hasDerivAt_originalFiberContourSum",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberContourDerivative_eq_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.eventually_original_abelJacobiDiv_fiber_sub_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalZeroDivisor_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_max_ord_sub_one_eq",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_principal_zero_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_zero_fiber_one_eq",
+        "Dubon2026.SourceFunctionField.PeriodCoset.sub_mem_of_eventually_sub_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_abelJacobiDiv_mem_of_isPrincipal"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberDifferentialModule",
+        "Dubon2026.SourceFunctionField.OriginalChart.OriginalFiberDisks",
+        "Dubon2026.SourceFunctionField.OriginalChart.OriginalFiberContours",
+        "Dubon2026.SourceFunctionField.OriginalChart.OriginalFiberIndexing",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberContourSum",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiberContourDerivative",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalZeroDivisor"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelPrincipalAudit12.log",
+      "logSha256": "7EA4C6E2C991DC07000A5A1CABEDCC6EB92A404FFB10A6B7ED87882EB983B770",
+      "auditSha256": "6F10BA864B719CD6D99C8BC64F38B3D1D1EF8D09D038CEA0D2B9A6829605199B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 83,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 31,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelPrincipalDependencyAudit12.log",
+      "dependencyAuditSha256": "5E31ECEC649F0BF7616FDA2C2F5AE1D7D1ED8F5152D5D26961616790F0949F1C",
+      "dependencyAuditSourceSha256": "E0902AA63D63F7450093D219509E5EE88CD8F844D5B98DD4A50DF8C4558B0A8B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_abelJacobiDiv_mem_of_isPrincipal"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every actual original principal divisor has Abel-Jacobi vector in the integer span of actual loop periods. Existing local primitives, exact orders, compactness and Hausdorff separation construct disjoint disks covering every nearby fiber. Weighted contours retain analytic multiplicities, including ramified central fibers. The existing original global residue theorem makes their derivative zero on nearby simple fibers, and the proved contour constancy theorem covers the center. Native constancy of the quotient-valued map on the parameter plane gives global fiber constancy. The fibers of a function and its reciprocal at zero and one then prove the principal-divisor direction. All local chart, coefficient, compactness, primitive, contour and constancy inputs are derived. No period discreteness or principal-kernel assertion is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The converse period-kernel implication and period discreteness remain required; full real span and Jacobi inversion are proved in preceding scratch cohorts. Original torsion finiteness/cardinality, comparison back to Qbar divisor classes, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-abel-principal-12-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "412741EB256BABB511D0F74A99F47A3569D3F739182D05D0EDE008E7C50A6026"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-complex-compact-9-reuse-review-20261021.json",
+    "Tools/source-original-complex-connected-4-reuse-review-20261021.json",
+    "Tools/source-original-path-primitives-11-reuse-review-20261021.json",
+    "Tools/source-original-local-abel-jacobi-4-reuse-review-20261021.json",
+    "Tools/source-original-periods-real-span-5-reuse-review-20261021.json",
+    "Tools/source-original-jacobi-inversion-5-reuse-review-20261021.json",
+    "Tools/source-original-simple-fiber-2-reuse-review-20261021.json",
+    "Tools/source-complex-fiber-contour-5-reuse-review-20261021.json",
+    "Tools/source-original-fiber-local-5-reuse-review-20261021.json",
+    "Tools/source-original-abel-principal-12-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5719": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCompactDependencyAudit9Production5719.log",
+        "sha256": "31660BA0D90B0B6E55D30C0EB45F4B3D70A4957663BC3EF1FBAD083FECEFAA8C",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace"
+        ],
+        "sourceSha256": "C4F3E299CF3A8DF4954A07F7286B7F09EB909DF9DBB923FFDDEB73BCF51302B6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexConnectedDependencyAudit4Production5719.log",
+        "sha256": "C76108F29848A589929EE5847943929D794FC96347F3C2D6EFB02D119087DFC2",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.place_connectedSpace"
+        ],
+        "sourceSha256": "43C1D0A6127EBCC6CEEF405E326E50F16776F76CAF5494E6978E5366AB4EB2E1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathPrimitivesDependencyAudit11Production5719.log",
+        "sha256": "DAFC28CE734D0AE52389B137DCA1FCA7F0840DF9F098EEA909A83EF6CAF820C7",
+        "requiredProofValueEdges": 32,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_normalized_path_primitive",
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_regular_chart_primitives"
+        ],
+        "sourceSha256": "E4640901D86859CE372CD7E254150002B971FB90B0B77154DC219CAB9EA14C88"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalAbelJacobiDependencyAudit4Production5719.log",
+        "sha256": "AF4FEC8BA55E216CBB2D96630ECE26CB4D96384D82CE78348C327AD2651F68E3",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_abelJacobiVec_chart_primitive",
+          "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_apply",
+          "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_single"
+        ],
+        "sourceSha256": "512C00369EDCAFFA831B1C6F936C2B1D809E5795DC4D1B28B8D399091484C67D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsRealSpanDependencyAudit5Production5719.log",
+        "sha256": "5ECF70E5F5E80244D12EC5B62A08EFAF158F739A9D71C9B424ED85BD2556B4AE",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top"
+        ],
+        "sourceSha256": "EBBF33ED06DDAF668D1F4E28A3B5A4C8F60D9DB388D721DCA71A54D6D3E67170"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJacobiInversionDependencyAudit5Production5719.log",
+        "sha256": "6DEAFF8E8B95939812CB604143526D9BFA821F8EC4C136B041042C019A3E8BD4",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_jacobi_inversion"
+        ],
+        "sourceSha256": "7CE822C82497750CB899904D2869DA70FC8E0DCE51ED8F144DD51440E3886777"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimpleFiberDependencyAudit2Production5719.log",
+        "sha256": "C42EAA6E9990E086ACEFA9B65115C54EEFE2CC5EBF539A0BCED7AA7344BB71CF",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_sum_simple_fiber_eq_zero"
+        ],
+        "sourceSha256": "E0224A80D06371BAACAADE06D86F413919D3BA222E720259E33157A2AAA9127A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexFiberContourDependencyAudit5Production5719.log",
+        "sha256": "75D8526451CB6D23E249C86E19E7AB062944CFAB54B5799506741E3208AAAA14",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_mul_deriv_div_sub_eq_sum_analyticOrderNatAt",
+          "Dubon2026.SourceFunctionField.ComplexFiberContour.hasDerivAt_circleIntegral_mul_deriv_div_sub",
+          "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_div_sub_eq_sum",
+          "Dubon2026.SourceFunctionField.ComplexFiberContour.eventually_forall_sphere_ne",
+          "Dubon2026.SourceFunctionField.ComplexFiberContour.eq_of_hasDerivAt_zero_off_center",
+          "Dubon2026.SourceFunctionField.ComplexFiberContour.sum_eq_sum_sum"
+        ],
+        "sourceSha256": "B1588ADE52F4C0D3DC27F92047E56F1019F3CC785098CE3975E33F6C935B3AB5"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberLocalDependencyAudit5Production5719.log",
+        "sha256": "4A380E1DC843690FED87A262D5DD5E2393BEBFE88E53FD1B881B4EFC69D1218D",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_local_data",
+          "Dubon2026.SourceFunctionField.OriginalChart.original_differential_eq_smul_D",
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_prescribed_fiber_cover",
+          "Dubon2026.SourceFunctionField.OriginalChart.original_chart_order_at_place"
+        ],
+        "sourceSha256": "42B8F11B7218B332FEA03428829C48D23122FB6036DAC944A4332820F1BFB2A7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelPrincipalDependencyAudit12Production5719.log",
+        "sha256": "5E31ECEC649F0BF7616FDA2C2F5AE1D7D1ED8F5152D5D26961616790F0949F1C",
+        "requiredProofValueEdges": 31,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_abelJacobiDiv_mem_of_isPrincipal"
+        ],
+        "sourceSha256": "F5E734910F5DBE5FB411ADB1AF38FF4046FDA1C51F6A1D050ECF309F817EC05C"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiProductionAudit5719.log",
+    "sha256": "F164D774DCA048FBB1701C06AFBBD3193F68589C9053B6F97B505954B5606886",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-abel-jacobi-production-5719-build.log",
+    "aggregateSha256": "6945C4460CEA64B7A8791099F29510238B6AF3DD314F509517296A6BDFA64122",
+    "productionModules": 5719,
+    "incrementModules": 62,
+    "axiomChecks": 162,
+    "exhaustiveIncrementTheorems": 320,
+    "linterScopes": 62,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 322,
+    "productionReuse": "Scratch imports qualified; three Mathlib umbrella imports replaced with explicit CauchyIntegral, ParametricIntervalIntegral, analytic Order and Tactic imports. All public statements and proof bodies unchanged. Literal original places, differentials, continuous paths, divisors and exact multiplicities are retained. No new mathematical input or discrete-period assumption introduced.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 322,
+      "scratchDistinct": 320,
+      "productionFocused": 320,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead.congr_simp": [
+          {
+            "scope": "SourceAbelJacobiScratchOwnership92For5719",
+            "module": "Dubon2026.SourceOriginalChartGermHom"
+          },
+          {
+            "scope": "SourceAbelJacobiScratchOwnership98For5719",
+            "module": "Dubon2026.SourceOriginalChartFiberOrders"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv.congr_simp": [
+          {
+            "scope": "SourceAbelJacobiScratchOwnership95For5719",
+            "module": "Dubon2026.SourceOriginalAbelJacobiImage"
+          },
+          {
+            "scope": "SourceAbelJacobiScratchOwnership99For5719",
+            "module": "Dubon2026.SourceOriginalFiberAbelJacobi"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceAnalyticUnitRoots",
+            "SourceAnalyticFiberPreimages",
+            "SourceOriginalFiberOrderSupport",
+            "SourceOriginalChartNeighborhoods",
+            "SourceOriginalFiberDegreeConservation",
+            "SourceOriginalChartFiberData",
+            "SourceOriginalNearbyFiberCover",
+            "SourceOriginalCompactChartCover",
+            "SourceOriginalComplexCompact"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership90For5719.log",
+            "sha256": "D152451D799D0F095C5FA9F329D7AC6C10C6766482E696066910AE66470A7C8B",
+            "sourceSha256": "82A7C61210919141C506D645807A37B7C3FA4A8EC5187B52D49684B176FF0B91"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalOnePoleFunction",
+            "SourceOriginalEvaluationContinuity",
+            "SourceOriginalClopenObstruction",
+            "SourceOriginalComplexConnected"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership91For5719.log",
+            "sha256": "B99760150361D341B36491CC4C0AB9F9CD656B2E2E8203A8B7865BFA4B44596D",
+            "sourceSha256": "AA9DD3D7928CF2AC677DA64C0EDD3764B5719DCF3CB8C71692C586DD76986C66"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalChartDifferentials",
+            "SourceOriginalChartGermHom",
+            "SourceOriginalChartDerivativeGerms",
+            "SourceOriginalChartGermDerivation",
+            "SourceOriginalChartDifferentialRegularity",
+            "SourceOriginalChartPrimitives",
+            "SourceOriginalDifferentialTransitions",
+            "SourceComplexPrimitiveGluing",
+            "SourceOriginalPathLocalPrimitives",
+            "SourceOriginalPathPrimitives",
+            "SourceOriginalPathIntegral"
+          ],
+          "count": 75,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership92For5719.log",
+            "sha256": "913F646CA93023158C1E7260669314F23C8845460FB24B97CD2696762A78DB20",
+            "sourceSha256": "E068D646698BE96257E4B827CAC5300A4573193921881285BD32A7E342D73587"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPathIntegralLaws",
+            "SourceOriginalAbelJacobiPeriods",
+            "SourceOriginalChartPathIntegrals",
+            "SourceOriginalLocalAbelJacobi"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership93For5719.log",
+            "sha256": "122DDDAD88BFEB493CCFA1AD55E8ECE8A0B0F96827C015F16D53CBD2F9790DB0",
+            "sourceSha256": "CA7B10E102664AC87F10DCF273B948BABCE0AA55C4803855256644E41C1AFE1E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalDifferentialReadingLinear",
+            "SourcePeriodRealDual",
+            "SourceOriginalRealAbelPotential",
+            "SourceOriginalPeriodAnnihilator",
+            "SourceOriginalPeriodsFullRealSpan"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership94For5719.log",
+            "sha256": "B21FAE0EEDDFE40DC2D30B63430C0B6C94BE8718A887DA7E4A4FAFD738E8FF65",
+            "sourceSha256": "31AA478973930D0E932FBECD36CA3F3B41D274C7549A1AF7838139196A6E17B3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRegularEvaluationSeparation",
+            "SourceOriginalRegularEvaluationFrame",
+            "SourceOriginalAbelJacobiImage",
+            "SourceOriginalAbelJacobiOpenImage",
+            "SourceOriginalJacobiInversion"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership95For5719.log",
+            "sha256": "6F99B56D3F4C54EB2DB6D986BE5227DC66BE6FCC200CB25314B59053EF9FE1EB",
+            "sourceSha256": "D27EB6E39FEE257503B7A9EB6A50342DFC422190BA0ECD1155D456DFBE7CAB81"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSimpleFiberResidues",
+            "SourceOriginalSimpleFiberSum"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership96For5719.log",
+            "sha256": "8BBE1C76CD1F45836DC3385A544991F43D231FCE7A5BBB29F700252AC623ED1F",
+            "sourceSha256": "A575A1B756C80E2781ABF2A8A9A15CC17FFA2C3253A89B935524748224976853"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexSimplePoleContour",
+            "SourceComplexFiberContourDerivative",
+            "SourceComplexWeightedFiberContour",
+            "SourceComplexSimpleFiberContour",
+            "SourceComplexFiberConstancy"
+          ],
+          "count": 34,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership97For5719.log",
+            "sha256": "CEC812D406821FB2CD20FE8F0FFE659DA2424393EEC8FB590BE635A8F7A881D7",
+            "sourceSha256": "1A705A486C59774FBB89CF60E18A471F8A280FA98D90DE145D6481D2AEF1AA5A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalChartFiberOrders",
+            "SourceOriginalNonconstantDifferential",
+            "SourceOriginalPrescribedFiberCover",
+            "SourceOriginalFiberLocalData",
+            "SourceOriginalChartFiberMultiplicity"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership98For5719.log",
+            "sha256": "C8113FDCDC237BBE564881E15FCC6BD77CDE6716D67CB88C89F3BFC29AFEB26B",
+            "sourceSha256": "90895793ED031E1845D4BFD262A6B9AC8AA2C395867F88D80415F09DFC7373A3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalFiberCoefficients",
+            "SourceOriginalFiberDisks",
+            "SourceOriginalFiberContours",
+            "SourceOriginalFiberIndexing",
+            "SourceOriginalFiberContourSums",
+            "SourceOriginalFiberContourComparison",
+            "SourceOriginalFiberContourDifferentiation",
+            "SourceOriginalFiberContourVanishing",
+            "SourceOriginalFiberAbelJacobi",
+            "SourceOriginalPrincipalFiberComparison",
+            "SourcePeriodCosetConstancy",
+            "SourceOriginalAbelPrincipalDivisors"
+          ],
+          "count": 83,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership99For5719.log",
+            "sha256": "7412C0C8CE88E16D65FB36DA2F0DB0E83FDF79D2CAD227CE1768183F4B479CE1",
+            "sourceSha256": "4E60FCF31AED7874EF91495FD92C2AF58F0C7D9CAE236D8E6DF5F0D4B7FC0809"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOwnership5719.log",
+        "sha256": "9E08A5D8C939790F1280A3055BD993575ECD03A003886DE11B9DC1AF9624EF7D",
+        "sourceSha256": "C0DCD946A58B1604F055A80B103D70B73964F1BF5A0EE85F9390E6AECBC1E106"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-131950-230.log",
+        "sha256": "49DE51E870E6919BEA0C15E72AD8C5E016C6D7773716E62BA1F03E8B104206BF"
+      }
+    },
+    "scratchToProductionCountReason": "All 320 distinct names from 322 exhaustive scratch checks are retained: 320 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt5719": {
+    "recordedUTC": "2026-10-21T23:41:18.927710+00:00",
+    "log": "logs/dubon-build-20261021-152910-153.log",
+    "sha256": "61366BE240469F7FAA279C0635D12ADA4D780124A454FE6CCA54BEB4530DDB4E",
+    "bytes": 9854645,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5719,
+    "projectTheorems": 40099,
+    "registeredConsumers": 17525,
+    "registeredConstructions": 1086,
+    "declarations": 24115,
+    "generated": 22494,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_152531.log",
+    "foundationSha256": "4BA8FA410FC194DABF73D0811CB35F6B2FC6B11FAC3356BA292A697C6591621F",
+    "countReconciliation": {
+      "previousTheorems": 39780,
+      "focusedTheorems": 320,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp"
+      ],
+      "addedTheorems": 319,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOwnership5719.log",
+      "ownershipSha256": "9E08A5D8C939790F1280A3055BD993575ECD03A003886DE11B9DC1AF9624EF7D"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 322,
+      "scratchDistinct": 320,
+      "productionFocused": 320,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead.congr_simp": [
+          {
+            "scope": "SourceAbelJacobiScratchOwnership92For5719",
+            "module": "Dubon2026.SourceOriginalChartGermHom"
+          },
+          {
+            "scope": "SourceAbelJacobiScratchOwnership98For5719",
+            "module": "Dubon2026.SourceOriginalChartFiberOrders"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv.congr_simp": [
+          {
+            "scope": "SourceAbelJacobiScratchOwnership95For5719",
+            "module": "Dubon2026.SourceOriginalAbelJacobiImage"
+          },
+          {
+            "scope": "SourceAbelJacobiScratchOwnership99For5719",
+            "module": "Dubon2026.SourceOriginalFiberAbelJacobi"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceAnalyticUnitRoots",
+            "SourceAnalyticFiberPreimages",
+            "SourceOriginalFiberOrderSupport",
+            "SourceOriginalChartNeighborhoods",
+            "SourceOriginalFiberDegreeConservation",
+            "SourceOriginalChartFiberData",
+            "SourceOriginalNearbyFiberCover",
+            "SourceOriginalCompactChartCover",
+            "SourceOriginalComplexCompact"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership90For5719.log",
+            "sha256": "D152451D799D0F095C5FA9F329D7AC6C10C6766482E696066910AE66470A7C8B",
+            "sourceSha256": "82A7C61210919141C506D645807A37B7C3FA4A8EC5187B52D49684B176FF0B91"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalOnePoleFunction",
+            "SourceOriginalEvaluationContinuity",
+            "SourceOriginalClopenObstruction",
+            "SourceOriginalComplexConnected"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership91For5719.log",
+            "sha256": "B99760150361D341B36491CC4C0AB9F9CD656B2E2E8203A8B7865BFA4B44596D",
+            "sourceSha256": "AA9DD3D7928CF2AC677DA64C0EDD3764B5719DCF3CB8C71692C586DD76986C66"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalChartDifferentials",
+            "SourceOriginalChartGermHom",
+            "SourceOriginalChartDerivativeGerms",
+            "SourceOriginalChartGermDerivation",
+            "SourceOriginalChartDifferentialRegularity",
+            "SourceOriginalChartPrimitives",
+            "SourceOriginalDifferentialTransitions",
+            "SourceComplexPrimitiveGluing",
+            "SourceOriginalPathLocalPrimitives",
+            "SourceOriginalPathPrimitives",
+            "SourceOriginalPathIntegral"
+          ],
+          "count": 75,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership92For5719.log",
+            "sha256": "913F646CA93023158C1E7260669314F23C8845460FB24B97CD2696762A78DB20",
+            "sourceSha256": "E068D646698BE96257E4B827CAC5300A4573193921881285BD32A7E342D73587"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPathIntegralLaws",
+            "SourceOriginalAbelJacobiPeriods",
+            "SourceOriginalChartPathIntegrals",
+            "SourceOriginalLocalAbelJacobi"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership93For5719.log",
+            "sha256": "122DDDAD88BFEB493CCFA1AD55E8ECE8A0B0F96827C015F16D53CBD2F9790DB0",
+            "sourceSha256": "CA7B10E102664AC87F10DCF273B948BABCE0AA55C4803855256644E41C1AFE1E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalDifferentialReadingLinear",
+            "SourcePeriodRealDual",
+            "SourceOriginalRealAbelPotential",
+            "SourceOriginalPeriodAnnihilator",
+            "SourceOriginalPeriodsFullRealSpan"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership94For5719.log",
+            "sha256": "B21FAE0EEDDFE40DC2D30B63430C0B6C94BE8718A887DA7E4A4FAFD738E8FF65",
+            "sourceSha256": "31AA478973930D0E932FBECD36CA3F3B41D274C7549A1AF7838139196A6E17B3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRegularEvaluationSeparation",
+            "SourceOriginalRegularEvaluationFrame",
+            "SourceOriginalAbelJacobiImage",
+            "SourceOriginalAbelJacobiOpenImage",
+            "SourceOriginalJacobiInversion"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership95For5719.log",
+            "sha256": "6F99B56D3F4C54EB2DB6D986BE5227DC66BE6FCC200CB25314B59053EF9FE1EB",
+            "sourceSha256": "D27EB6E39FEE257503B7A9EB6A50342DFC422190BA0ECD1155D456DFBE7CAB81"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSimpleFiberResidues",
+            "SourceOriginalSimpleFiberSum"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership96For5719.log",
+            "sha256": "8BBE1C76CD1F45836DC3385A544991F43D231FCE7A5BBB29F700252AC623ED1F",
+            "sourceSha256": "A575A1B756C80E2781ABF2A8A9A15CC17FFA2C3253A89B935524748224976853"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexSimplePoleContour",
+            "SourceComplexFiberContourDerivative",
+            "SourceComplexWeightedFiberContour",
+            "SourceComplexSimpleFiberContour",
+            "SourceComplexFiberConstancy"
+          ],
+          "count": 34,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership97For5719.log",
+            "sha256": "CEC812D406821FB2CD20FE8F0FFE659DA2424393EEC8FB590BE635A8F7A881D7",
+            "sourceSha256": "1A705A486C59774FBB89CF60E18A471F8A280FA98D90DE145D6481D2AEF1AA5A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalChartFiberOrders",
+            "SourceOriginalNonconstantDifferential",
+            "SourceOriginalPrescribedFiberCover",
+            "SourceOriginalFiberLocalData",
+            "SourceOriginalChartFiberMultiplicity"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership98For5719.log",
+            "sha256": "C8113FDCDC237BBE564881E15FCC6BD77CDE6716D67CB88C89F3BFC29AFEB26B",
+            "sourceSha256": "90895793ED031E1845D4BFD262A6B9AC8AA2C395867F88D80415F09DFC7373A3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalFiberCoefficients",
+            "SourceOriginalFiberDisks",
+            "SourceOriginalFiberContours",
+            "SourceOriginalFiberIndexing",
+            "SourceOriginalFiberContourSums",
+            "SourceOriginalFiberContourComparison",
+            "SourceOriginalFiberContourDifferentiation",
+            "SourceOriginalFiberContourVanishing",
+            "SourceOriginalFiberAbelJacobi",
+            "SourceOriginalPrincipalFiberComparison",
+            "SourcePeriodCosetConstancy",
+            "SourceOriginalAbelPrincipalDivisors"
+          ],
+          "count": 83,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership99For5719.log",
+            "sha256": "7412C0C8CE88E16D65FB36DA2F0DB0E83FDF79D2CAD227CE1768183F4B479CE1",
+            "sourceSha256": "4E60FCF31AED7874EF91495FD92C2AF58F0C7D9CAE236D8E6DF5F0D4B7FC0809"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOwnership5719.log",
+        "sha256": "9E08A5D8C939790F1280A3055BD993575ECD03A003886DE11B9DC1AF9624EF7D",
+        "sourceSha256": "C0DCD946A58B1604F055A80B103D70B73964F1BF5A0EE85F9390E6AECBC1E106"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-131950-230.log",
+        "sha256": "49DE51E870E6919BEA0C15E72AD8C5E016C6D7773716E62BA1F03E8B104206BF"
+      }
+    },
+    "scratchToProductionCountReason": "All 320 distinct names from 322 exhaustive scratch checks are retained: 320 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

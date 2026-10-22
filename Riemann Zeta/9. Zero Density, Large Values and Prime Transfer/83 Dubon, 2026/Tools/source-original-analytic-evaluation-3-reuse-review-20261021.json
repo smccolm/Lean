@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC",
+    "source-global-residue-9-scratch-receipt.json": "A194E21697F37B35B0DCBBABB4F3D945C4C461EC862BA4E4BD2153B58019A5E5",
+    "source-riemann-roch-2-scratch-receipt.json": "ABC98B0526CED855C5A0C2E7BB4E3E2455A5A05E17B5098DE9CEC501B614EF59",
+    "source-coordinate-values-2-scratch-receipt.json": "15C6E5B735D28F55F39A0E244F006CD31BFF457A668A4102C86E9C775346D81C",
+    "source-prime-degree-2-scratch-receipt.json": "49FCD2928DF35342E34F2D13694BF08A02A6E482B5E42826179AB8D602112BBF",
+    "source-prime-nonmembership-7-scratch-receipt.json": "F47F62CA5E025711611910FA8721FA1684119C608F56CAE291E85C7308B59152",
+    "source-prime-exact-4-scratch-receipt.json": "5A452930A5F0468D535DC4814E0AC1453EDF98DBE151C0905F5412D023B216ED",
+    "source-original-prime-2-scratch-receipt.json": "3B472641E3C068968B13A74D2A5FA33238449A924BBD2DEB83B959D090575519",
+    "source-degree-transport-6-scratch-receipt.json": "247E7FA212FA6CBFD86BD42B2454659D232ED8259A2BFD508393A8214AE582A9",
+    "source-prime-power-step-3-scratch-receipt.json": "DA6167840D5E312AFD4263B459CFD70EB4E08C2B8519615080ED28D1F3C46192",
+    "source-prime-power-exact-5-scratch-receipt.json": "ACB710AD4569A1CFA7AE07D36B93DB2D4653F64F825644979CF3686D5DAB76E9",
+    "source-twisted-embedding-6-scratch-receipt.json": "F6E90FCD242319A2279F0615EDD0A249A04906A069D6412F5D536D399D79B356",
+    "source-prime-power-nonmembership-10-scratch-receipt.json": "020D3C99EBD9FF54D6B978983A9D8BB6DD9BE825B0B50198B96B1D87FCE38040",
+    "source-prime-power-degree-3-scratch-receipt.json": "09CB55D2572EBA1B5F560E2FDC39DF14D6B05BD4153D371F92E1AABF643414FE",
+    "source-conjugate-slots-6-scratch-receipt.json": "F0610584BF3396AD3A600F2CF5388984D3E40614CF678C5317AD8F297635176C",
+    "source-conjugate-step-7-scratch-receipt.json": "97FB8B186C049B32279303A0607F7C4C800E7B50EB55E2EE0210A11FA0676B2C",
+    "source-conjugate-induction-8-scratch-receipt.json": "AB82CD0647A6024F5707A5150BAB22A76ADF48DE598FA10A71A4FD702E3D4FBB",
+    "source-generation-5-scratch-receipt.json": "1C221B28EEB2F62BB3E27E87630B2640945801592168437EED7622A7A2547014",
+    "source-coprime-nonmembership-6-scratch-receipt.json": "18A06F3287DD021C8A0C3978A087316B917787905A1097768C286FC981085779",
+    "source-all-level-degree-9-scratch-receipt.json": "EB8E866F2176EF3D7A1917242926C7115D2D3A1F7172F1DE75274F3D50B4E151",
+    "source-j-degree-sums-2-scratch-receipt.json": "27F40D179F6193BCD022E299E75B4D63DB671B88802142D9307C408975AA45CD",
+    "source-slot-places-7-scratch-receipt.json": "DA5C1515A441C66D461B4EEE7F7D81E3A74631128F2D83AA7771DC699D3DC256",
+    "source-cusp-width-3-scratch-receipt.json": "9AD249EB404FA0A42BDCC25D8C3F8AFBD16D32D6A0D64F99AEBEDB5A186FC156",
+    "source-cusp-count-6-scratch-receipt.json": "022FB2588922CA9E3E8C154828F318F03C650DBFE4AB317F1EBF38469306D497",
+    "source-modular-ratios-6-scratch-receipt.json": "BE04882DD383A0ED6DF36583FC14DC2634F42939A684F9552CB4EF21E3D1512D",
+    "source-meromorphic-order-6-scratch-receipt.json": "E4191DA645480778232FBF2BDAD134F377613333C29033059305A6EA6133D6B0",
+    "source-analytic-places-4-scratch-receipt.json": "796D82CC1B2D05F39347DDECB667DD9A474307661EAB5710EDD8698450A0789B",
+    "source-analytic-j-3-scratch-receipt.json": "5ADFDED6D3656415F767CDD5257CA646AA487D9A56B32585A6D945A20A2EC765",
+    "source-quotient-integral-4-scratch-receipt.json": "6040D419F15D7064EC81C205507B4E9243DF8AECF2D624A04EABC04AEF825EA6",
+    "source-bounded-integral-6-scratch-receipt.json": "2936A842C3B888FBEBB1902982F7521BB1869A7D1F6F2D72E44DCEAED3B797BF",
+    "source-finite-place-3-scratch-receipt.json": "3D007120D67E3D1AF18E64F36070B0848FEBB1517A74D5C6E53B9D9321B2A488",
+    "source-j-orbit-6-scratch-receipt.json": "50D1DB6FD9910675D705048A0789DE9721FB530917C01FAD58F44B85C1C32CC7",
+    "source-j-multiplicity-9-scratch-receipt.json": "85723F59E2F73939402F33BCE275D47AEE7B3A21FB2A727BCA1BA01196AE1400",
+    "source-analytic-ramification-5-scratch-receipt.json": "57659E5D5E4D4573393609F26945543814200C2A2BCF374A5B4B32605E6D38D5",
+    "source-orbit-fiber-4-scratch-receipt.json": "5D1BE88231ECE98C4C679010A81F88F23275E7C6605025231241A5AE1F2BD97A",
+    "source-exceptional-fiber-2-scratch-receipt.json": "032316A2484DB4852CD780C341EBD2E70AAB043992F914851D71EC2D6C027DF4",
+    "source-numerical-genus-3-scratch-receipt.json": "0F5E6ACFBDF7E4C89C6DA0BA0CF5701F337288D36319968DEECC0993D815D2DF",
+    "source-holomorphic-differential-4-scratch-receipt.json": "7EBFDDC3BD0521659F4629971770304AF7078BE59249814A4F1154AA68B9BCED",
+    "source-inverse-j-integral-3-scratch-receipt.json": "68523B7692C2C888697A8CE82ACD18F4A66251CC379510D9EFA00E028E8F0614",
+    "source-inverse-j-relation-5-scratch-receipt.json": "42B6011A8758CDC1394380CFB06DEB12A0F4195D1B5EC26727B57865BE046E62",
+    "source-inverse-j-bound-4-scratch-receipt.json": "5478D5D0160F4AFB8E325C539A5BD7086FAE84DEBE66EF487F3D828F0297AF6F",
+    "source-regular-cusp-forms-5-scratch-receipt.json": "7F29B08D575C81AE11803CE0E757DDA361A30B20346BB36F0C37D6CDA8011BA7",
+    "source-original-period-surjectivity-4-scratch-receipt.json": "675C3DF90B0E2CFB2487DC3BF3CB71DA477BC6A64F80E2746D240C0C734D074B",
+    "source-period-hecke-eigenlift-6-scratch-receipt.json": "B2FF9931B13E49F4999440F4459299E33D77F7FF31B1880F7489D342C8E886E2",
+    "source-normalized-cusp-lift-2-scratch-receipt.json": "3A69B7D0A23496D2B8DDC5493625312174DF65BD5A9F1AA7B83E079D0EDEB17F",
+    "source-original-picard-2-scratch-receipt.json": "24CFBE1A80259B17A8DEA2BF86FE41300F4464EE22559440EC038D67FFF08379",
+    "source-original-torsion-galois-5-scratch-receipt.json": "D0AF1E83277ACC2A5008056AA4A6C3AB9E34FE2C3DB65D0FF35B11C273E6D128",
+    "source-original-torsion-continuity-5-scratch-receipt.json": "778BD97F260BF7E7EEF88A97C7EBB326139179749E37E94524891E784975983B"
+  },
+  "frozenReceiptProseCorrections": [],
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The original residue evaluation follows the inspected literal place-value convention. The general complex chart and Abel-Jacobi proofs identify the necessary cardinality dependency. Local modular-ratio realizations and native normal form replace the general algebraic power-series convergence route.",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_exists_localParam_meromorphicOrderAt_evalAt_eq_ord_complex.lean.txt",
+        "sha256": "E4B299E17D265876D35B794A3235611C1C464C6C702032093A904CAA882521F6"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Pic0_exists_addEquiv_quotient_submodule_complex.lean.txt",
+        "sha256": "F8FB777C5CEB6F0EA0F82487C37A15B1C4AC863ABBEA3251D462DB23D811CF1C"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Pic0_exists_addEquiv_quotient_submodule_of_chartedSpace_complex.lean.txt",
+        "sha256": "072FF5F046E96465E0E6C2B9FF994DDFB3546F306271C782FDD0A262C303F013"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Pic0_natCard_torsion_prime_eq_pow_genus_complex.lean.txt",
+        "sha256": "8B50D3206D53E770BAB9B38E690CA5FB5A88B12778EBFB89049478B142034821"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_PlaceEvaluation.lean.txt",
+        "sha256": "C0B3D3143F70373B1C4C7D1F6898CEE192E18FFF867521EE4C451EF71319B8A6"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardGroup.lean",
+      "sha256": "32159B4BBF10E8164F38F4534587FA025AFC8E8D106037798080743B86B26BEE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionGalois.lean",
+      "sha256": "71DCC92CA5D4F9F8C27DDBE090C27F2C72DA8A4A09D000E3980D4FE84B9995BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionContinuity.lean",
+      "sha256": "0686C04B1CD7B1AD42F2C5514CC5DF7F50E54F01F326936BD9DE650AA1CFF670"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueFinite.lean",
+      "sha256": "364140071ED84A644BBC5C9710EA2AA815971C37665343EBAB875C4C84BD51DD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceCenters.lean",
+      "sha256": "F2746CA61E2DB176D765788BD8A0CEFCCFD507F79D98ED96A2FFCA4A3DFDAC2B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRealization.lean",
+      "sha256": "11B1A7D188C9B68D9A8BFCC7F3A3D322D0396797B0FCD07604867BFE8373C360"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticPlaces.lean",
+      "sha256": "CFF41DD41DEA34441C762CFF9128FA910C31A40A23368347411862AECE6B6A3B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePlaceExhaustion.lean",
+      "sha256": "79DDDF86772C0D03A0559340E146A19D16D519A864742848D5B41138BD6E5AEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRealizationAlgebra.lean",
+      "sha256": "CDC14D0CF0FC9DCC2E3AF474EE870FEA71DC8E28FC9A389A9F349E14EFB69F70"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticRamification.lean",
+      "sha256": "F07F113D3C4F54F9306B17C3F0E994C54CC8FF9147D0F8ADDEDE191E6935679C"
+    }
+  ],
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LocalRing\\ResidueField\\Basic.lean",
+      "sha256": "2179EBA548E1C11A1E84977806ED757806181F389C6E430C783AC854A0F41220"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Meromorphic\\NormalForm.lean",
+      "sha256": "00B7D509728CE960D4F829753706112D8F657D034882CBFC73D698507E51E86F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Meromorphic\\Order.lean",
+      "sha256": "73248808C2C3F3E543DC22191C1AA4B2E0FBA54BD0E1D1D6FF254F87FBBC4F85"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Before expanding the external complex Abel-Jacobi route, check local original Pic0, finite-place exhaustion, residues and meromorphic realizations. Pinned Mathlib has no direct complete-curve Pic0 cardinality theorem; its ring Picard group models a different object. The existing modular-ratio realization and native meromorphic normal form give the analytic residue-value comparison directly, avoiding the external general convergence theorem for algebraic power series and its Laurent-series realization. Only actual original evaluation is constructed; full charts and the global Pic0-period comparison are still required.",
+  "discharged": "The literal original residue field is identified with the constant field using its already proved algebraMap bijection. Evaluation of regular functions is the actual residue homomorphism, with zero assigned at poles, and its vanishing is equivalent to positive original order for nonzero regular functions. The existing meromorphic realization tends to this same residue value. Its native normal form is the actual residue-evaluation function along the original analytic places. That function is analytic exactly when the original function is regular, and its meromorphic order is the proved original normalized order multiplied by actual ramification. No analytic representative, evaluation compatibility or residue rationality premise is supplied.",
+  "remaining": "To obtain original torsion finiteness and exact cardinality, construct the actual complex place charts, including ramified elliptic points and cusps, prove the Abel-Jacobi comparison and carry it back to the original Qbar divisor classes. Tate realization, the rank-two Hecke component and Frobenius/inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

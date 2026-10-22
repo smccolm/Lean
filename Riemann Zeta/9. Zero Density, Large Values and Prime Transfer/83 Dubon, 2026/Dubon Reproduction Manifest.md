@@ -1,6 +1,50 @@
 # Dubon 2026 — reproduction manifest
 
-Exact original j-map degree and generation at every nonzero level (21 October 2026): For every nonzero N, the actual rational divisor field equals Q(j,j_N). Its degree over Q(j) is dedekindPsi(N), and coefficient transport gives that same internal j-coordinate degree over every characteristic-zero coefficient field. The expanded minimal polynomial equals the primitive triangular conjugate product. A joint strong induction discharges all generation, degree, conjugate-product and nonmembership premises: unique common roots give two-prime generation, actual mixed fields identify the prime-power spread tower, coprime nonmembership supplies the first step, and native tower multiplication closes every level. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic realization -> exact original j-coordinate degree and field generation at every level. Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. The 5,476-module production aggregate and focused all-level original degree audit pass with zero diagnostics. Five proof-value audits verify the actual conjugate induction, proper-divisor generation, coprime-base nonmembership, mixed towers and unconditional all-level consumers. Field generation, exact internal degree and the conjugate identity are proved without those conclusions as premises. Modular ramification, fiber counts, numerical genus, analytic realization and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending. The preceding 5,441-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Selected FLT generation and degree arguments were adapted using existing local embeddings, Laurent relations, native minimal polynomials and relative-degree formulas. Two frozen scratch receipts contained stale preceding-cohort narrative; the new review records explicit prose corrections while preserving their source, audit and hash evidence. No root pin, proof limit, source contract or acceptance criterion changed.
+Actual original loop periods, discrete lattice and unimodular matrix (22 October 2026): The actual integer cycles are realized by actual loops with their exact integral formulas. The same marked original dissection has normalized regular primitives, zero dual-tree jumps and the exact signed cyclic-word formula. Its integer word matrix expresses all jumps through the 2g complementary actual loop periods. Arbitrary regular loop periods have common integer coefficients in these same generators. For every original regular-differential basis, the original period lattice is the integer span of a real basis and is discrete, with no generation premise. The same complementary polygon matrix is skew-symmetric and has unit integer determinant, using two-way integer generation, full real span and exact Euler rank. All prior marked-point, corner, integer-cycle, normalization and actual-loop clauses are retained. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> original Abel converse and period lattice -> actual cycle loops, normalized primitives and polygon jump matrix -> arbitrary regular-loop generation, integral period basis, discrete period lattice and the same skew-symmetric unimodular polygon matrix. The Riemann bilinear relation, residue reciprocity, meromorphic period generation and full raw reciprocity remain required for the original Abel converse. Exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Discreteness is proved; it does not by itself identify original Pic0 with the complex torus. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. The 6,069-module production aggregate and focused original period-lattice audit pass with zero diagnostics. Eight proof-value audits verify actual cycle loops, normalized primitives, the exact polygon matrix and common integer generation of all regular loop periods. The original period lattice is discrete and the same complementary integer matrix is skew-symmetric and unimodular. Bilinear and meromorphic reciprocity and the original Abel converse remain required, followed by original torsion cardinality, Qbar comparison and Tate/Hecke/Frobenius and arithmetic gates. Sequential foundation/paper verification of this scope is pending. The preceding 6,020-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Existing original coefficient pullback, primitive uniqueness and compact carriers replace repeated external preliminary calculus; finite carrier neighborhoods suffice for the path atlas. Native integer-span membership gives common coefficients directly. The proved full real span and native basis lattice theorem close discreteness before meromorphic reciprocity. Direct four-point cyclic interval antisymmetry avoids extra chord-index cardinality transport. Root pins, proof limits, source fidelity and acceptance criteria remain unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original dissection, Euler and cycle geometry (21 October 2026): The actual original cells have a global arc pairing with opposite orientation and C1 reversal. Carrier intersection chains give the full CellDissection, and exact vertex-fiber, cell and arc counts give V-E+C=2-2g using the proved canonical-divisor/Riemann-Roch genus identity. The same dissection has disjoint primal and dual integer spanning trees with exactly 2g remaining edges. Its polygon word contains every oriented non-cotree edge exactly once, with actual vertex corners, cotree crossing paths and closed subword cycles. Closed integer fundamental cycles on these actual edges have Kronecker coordinates off the primal tree and decompose every additive-group-valued circulation. All marked interiors, separation, exact centers, injective vertices and incidence are retained. No dissection, Euler, tree, polygon or cycle-basis premise is supplied. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> actual original dissection, Euler identity, tree/cotree, polygon word and fundamental integer cycles. Analytic realization of the integer cycles as loops, regular and meromorphic period generation, and raw matrix reciprocity remain required. Unconditional original Abel converse and discrete periods, original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 6,020-module scope: all thirteen retained regressions, 41,981 exhaustive theorem checks, 18,548 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,957-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Reused canonical-divisor and Riemann-Roch results avoid another Riemann-Hurwitz development; actual integer edge chains avoid simple-graph edge-transport overhead, and native list-chain extraction replaces an extra induction. Root pins, proof limits, source fidelity and acceptance criteria remain unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual centered global cells and unique boundary matching (21 October 2026): Actual branch and pole cells are constructed with exact power and reciprocal geometry. A finite grid of ordinary and branch cells, together with pole cells over the refined outer window, covers every original place. Every prescribed finite set of places and base point lies at interior cell centers, and each carrier meets the marked set in at most one place. The constructed grid supplies exact planar two-region side incidence, opposite orientation bits, C1 side transports, shared-point intersection chains, vertex counts and endpoint realizations. A nonempty connected lifted set mapping onto a planar side is exactly one unique cell boundary arc in each corresponding ordinary, branch or exterior family. Finite closed carrier selection and native root cardinality replace new chart-neighborhood constructions. Full radial arc-index injectivity is reused uniformly. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> actual analytic cell dissection -> finite centered global cover, planar side geometry and unique actual arc matching. The actual arc side assignments and local matches still require assembly into a global pairing involution with C1 orientation reversal. Curve intersection chains, the curve Euler identity, loop generation and raw matrix reciprocity remain required. Thus unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,957-module scope: all thirteen retained regressions, 41,710 exhaustive theorem checks, 18,398 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,867-module scope passed sequential canonical verification with zero diagnostics, all thirteen regressions and 40,728 exhaustive theorem checks. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. The common edge-transport proof is adapted once; native finite closed separation avoids additional chart neighborhoods. Root pins, proof limits, source fidelity and all acceptance criteria remain unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual normal j charts and ordinary original-curve cells (21 October 2026): Actual original functions have normalized power coordinates with their exact place exponents. Finite disjoint normal charts exhaust nearby fibers. The original j evaluation is a covering away from 0 and 1728, with exactly dedekindPsi(N) points per ordinary fiber. Native unique covering lifts over convex sets and open sections construct analytic sheets around every ordinary closed grid square; this removes the external slit-plane and near-branch power-map sheet arguments. A finite grid avoids and separates marked values, and bounded regions away from branch disks have a uniform sheet collar. The complete source six-arc rectangle geometry constructs ordinary original-curve cells with exact preimage coverage and pairwise disjoint sheet carriers. Normal-coordinate existence, ordinary sheet count and analyticity, ordinary cell geometry and ordinary fiber coverage are discharged. A source paired family also has a proved conversion to the full dissection, including connectedness, vertex and side indexing and exact count transport. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> actual analytic cell dissection -> normal j charts, ordinary square sheets and six-arc original cells. Actual powered branch and exterior pole cells, a finite global family and its pairing, the Euler identity, loop generation and raw matrix reciprocity remain required. Thus the unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,867-module scope: all thirteen retained regressions, 40,728 exhaustive theorem checks, 17,893 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,825-module scope passed sequential canonical verification with zero diagnostics, all thirteen regressions and 40,466 exhaustive theorem checks. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Native simply connected covering lifts and compact convex collars shorten the ordinary-square route; existing actual chart orders, compact fiber control, degree and radial continuity are reused. The separate five-arc rectangle construction is omitted. Root pins, proof limits, source fidelity and all acceptance criteria remain unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original cell residue-jump identity and post-reciprocity Abel converse (21 October 2026): All mathematics after the raw geometric loop-generation and reciprocity clauses is proved: actual Abel-Jacobi period membership gives principality, and the actual period subgroup is discrete. Native rank and integer-matrix arguments supply the correction directly without a symplectic normal form. Those raw geometric clauses remain explicit upstream inputs. On the original complex curve, actual analytic cell coordinates have proved differential and residue transport. Source radial domains have constructed normalized primitives and proved centered weighted contours. The exact source one-pole-per-carrier and centered-dissection outputs suffice for every per-cell residue sum. The source paired arcs give constant primitive jumps and exact weighted edge cancellation. Native interval additivity and the actual side bijection assemble the full assigned-pole residue-jump identity. Primitive existence, boundary regularity, orientation, endpoint handling, edge cancellation and global summation are discharged; no primitive, jump or residue identity remains assumed by the assembled dissection consumer. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse and discrete periods -> raw geometric loop generation and reciprocity -> actual cell primitives, residues, paired-edge cancellation and the global residue-jump identity. Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,825-module scope: all thirteen retained regressions, 40,466 exhaustive theorem checks, 17,754 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,768-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Existing original Riemann-Roch, actual charts, orders and path integrals combine with native analytic primitives, interval substitution and finite matrix algebra to shorten the selected external arguments. The source dissection outputs justify centered contours, avoiding general noncentral radial winding and a separate Green formula. Root pins, proof limits, source fidelity and all acceptance criteria remain unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original meromorphic functions and principal divisors from integral periods (21 October 2026): Every degree-zero original divisor has an actual differential with at most simple poles and exactly its integer residues. Native compact holomorphic constancy and leading-coefficient elimination give the analytic pole-bound dimension estimate; original Riemann-Roch and germ independence then prove that every meromorphic function on the actual original complex curve comes from its original function field. Actual finite-support complements are path connected. For an original differential with the divisor residues and integral loop periods, actual path integrals construct the global exponential. Native logarithmic-derivative equality identifies its local germs with the exact-order models z^m exp(Psi), proving meromorphicity and the prescribed orders. The original-function comparison makes the divisor principal. Base-point existence, avoiding paths, exponential gluing and meromorphic-to-original-function comparison are discharged. Integral loop periods remain explicitly upstream. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> prescribed residues, actual meromorphic-function comparison and the principal divisor from integral loop periods. Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,768-module scope: all thirteen retained regressions, 40,282 exhaustive theorem checks, 17,647 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,719-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Existing original Riemann-Roch, path primitives and local orders combine with native logarithmic derivatives and analytic primitives to shorten the selected external arguments. Root pins, proof limits, source fidelity and all acceptance criteria remain unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original compact curve, full period span, Jacobi inversion and principal divisors (21 October 2026): The original complex place manifold is compact and connected. Exact fiber multiplicity conservation and the actual j function and reciprocal give compactness; the original index formula and maximum modulus exclude nontrivial clopen subsets. Actual regular differentials have compatible local primitives along every continuous path, giving original path integrals and local Abel-Jacobi identities. Actual loop periods span the full real vector space. Evaluation separation and the inverse function theorem prove Jacobi inversion for actual degree-zero divisors. Every actual principal divisor has Abel-Jacobi vector in the integer span of actual loop periods: exact chart orders retain fiber multiplicities, weighted contours represent fiber sums, and the original global residue theorem makes their derivative zero. Parameter-plane constancy and reciprocal fibers complete this direction. No compactness, connectedness, primitive, full-span, Jacobi-inversion or principal-to-period premise remains on these consumers. The subgroup named pathPeriodLattice is the literal integer span of actual loop periods; its discreteness is not yet proved. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual compact connected original curve, full real span of actual loop periods, Jacobi inversion and the principal-divisor kernel. The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,719-module scope: all thirteen retained regressions, 40,099 exhaustive theorem checks, 17,525 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,657-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Existing original Riemann-Roch, exact normalized orders and global residues, native analytic primitives, inverse functions and locally constant maps shorten the selected external arguments. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original torsion continuity and Hausdorff complex manifold (21 October 2026): The literal arithmetic action on the original divisor-class torsion is continuous: finite coefficient fields and finite divisor supports supply open stabilizers. Every original complex place, including every cusp, has an injective local uniformizer parameter. Its literal residue value is the coordinate, and all nonzero original functions have their exact normalized place order at every point of the disk. Actual cusp embeddings are analytic Taylor quotients; the existing exact expansion range removes their width factor, and a common disk, order-one uniformizer and inverse function give the cusp parameters. Existing finite-place ramification and exhaustive cusp classification cover all original places. Proved branch uniqueness gives open overlaps and analytic transitions. Native chart construction and original residue subtraction give a Hausdorff complex analytic manifold whose extended charts recover the exact original orders. No torsion continuity, local parameter, cusp normalization, residue comparison, chart compatibility or Hausdorffness premise remains on these consumers. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and its Hecke/Frobenius comparison -> actual torsion continuity and exact cardinality -> complex Abel-Jacobi comparison -> the original places as a compact connected Hausdorff complex curve with exact residue values and place orders. Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,657-module scope: all thirteen retained regressions, 39,780 exhaustive theorem checks, 17,387 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,595-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Existing exact cusp expansion ranges, original residues and place classification, native removable singularities and inverse functions, and valuation-ring incomparability shorten the selected external arguments. General algebraic power-series convergence and simultaneous approximation are unnecessary for these actual original consumers. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original periods, normalized cusp eigenlift and arithmetic torsion action (21 October 2026): Every original regular differential has a genuine holomorphic weight-two cusp form realization. Original place orders prove inverse-j integrality; the actual monic relation, a root bound and the discriminant derivative identity prove decay at every cusp. Injective analytic germs give the missing cusp-dimension lower bound. The existing numerical genus, Manin upper bound and period injection then prove the exact cusp and parabolic dimensions and surjectivity of the original period pair. Scalar periods and the explicitly reflected coset sum prove its Hecke equivariance. The supplied parabolic eigenclass yields a nonzero native cusp form with the same good-prime eigenvalues. Existing full Hecke commutativity extends this to all indices; Fourier coefficients give nonzero first coefficient and normalization. The original residual H1 consumer retains its integral eigenvalue lift and reduction map. No cusp-realization, dimension, period-surjectivity, Hecke-compatibility or normalization premise remains on these consumers. The genuine original degree-zero divisor-class group and its torsion are constructed. Actual torsion classes have nonzero function representatives with exact normalized orders. Literal coefficient automorphisms permute the same original places, preserve degree and principal divisors and descend to the actual Pic0 and its ZMod torsion. The arithmetic torsion action is proved without an action hypothesis. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> normalized weight-two cusp eigensystem -> actual parabolic Hecke realization -> surjective Hecke-equivariant period pair -> matching native cusp-form dimension -> original regular-differential cusp-form realization and numerical genus. Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,595-module scope: all thirteen retained regressions, 39,419 exhaustive theorem checks, 17,182 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,555-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Native removable singularities, original divisor orders, existing period and Fourier identities, and full Hecke commutativity shorten the selected external arguments. The actual regular-differential germ comparison avoids constructing a redundant chosen cusp-form map; the common eigenvector theorem avoids another maximal-ideal argument. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Original analytic places and numerical genus (21 October 2026): Every original field element has a meromorphic realization, and its j and jN generators have their actual analytic values. Bounded functions are integral over C[j], and all original finite places are analytic. Full j-orbit separation, exact local multiplicities and Gamma0 stabilizers give the normalized analytic ramification. Positive exact total degree identifies stabilizer orbits of level cosets bijectively with original finite fibers; original analytic places coincide exactly on Gamma0 orbits. Existing Manin and fixed-coset counts give the actual exceptional fiber cardinalities. The canonical j-divisor is supported on these two fibers and the cusps. Exact degree sums and original Riemann--Roch prove that the original complex function field genus and its regular-differential dimension equal the classical numerical genus formula. No analytic exhaustion, normalized ramification, exceptional fiber count, numerical genus or regular-differential-dimension premise remains on these original consumers. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic regular-differential realization. The shared input is an actual analytic realization of the original function field, exhaustive finite places, and exact normalized analytic ramification. The analytic regular-differential cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,555-module scope: all thirteen retained regressions, 39,155 exhaustive theorem checks, 17,081 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,500-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Native removable singularities, level-one discriminant division, the Weierstrass equation, cyclic stabilizers and existing original field generators shorten the adapted external arguments. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Exact original cusps and modular-form quotient representations (21 October 2026): Every finite j-fiber and the pole fiber have total multiplicity dedekindPsi(N). Actual primitive conjugate embeddings give normalized places with exact cusp widths; leading coefficients distinguish reduced labels, and their positive widths exhaust the full pole degree. Thus the actual j-pole set has cardinality cuspCount(N), without an exhaustiveness or cusp-count premise. Every element of the actual original field over C is a genuine equal-weight modular-form quotient with nonzero denominator. Existing cusp degeneracy maps, exact E4/discriminant coefficients and pair generation discharge all generator and field-representation inputs. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic regular-differential realization. The genus branch uses exact pole and fiber degree sums and actual cusp cardinality; the analytic branch uses exact modular-form quotient representations of all original function-field elements. Elliptic ramification and fiber counts at 0 and 1728, absence of other finite ramification, numerical genus, meromorphic realization and normalized analytic places, the regular-differential cusp-form comparison, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,500-module scope: all thirteen retained regressions, 38,701 exhaustive theorem checks, 16,816 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,476-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Native integer valuations and existing uniformizers replace the external Puiseux construction for cusp places. Positive pole-degree exhaustion replaces a global extension-of-places proof. Multiplying both parts of the j quotient by Delta permits reuse of existing cusp degeneracy maps instead of duplicating modular-form level raising. No root pin, proof limit, source contract or acceptance criterion changed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Exact original j-map degree and generation at every nonzero level (21 October 2026): For every nonzero N, the actual rational divisor field equals Q(j,j_N). Its degree over Q(j) is dedekindPsi(N), and coefficient transport gives that same internal j-coordinate degree over every characteristic-zero coefficient field. The expanded minimal polynomial equals the primitive triangular conjugate product. A joint strong induction discharges all generation, degree, conjugate-product and nonmembership premises: unique common roots give two-prime generation, actual mixed fields identify the prime-power spread tower, coprime nonmembership supplies the first step, and native tower multiplication closes every level. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic realization -> exact original j-coordinate degree and field generation at every level. Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 5,476-module scope: all thirteen retained regressions, 38,608 exhaustive theorem checks, 16,750 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 5,441-module scope passed sequential canonical verification with zero diagnostics. The renewed 21 October reuse search is recorded in Tools/lean-reuse-audit-20261021.json. Selected FLT generation and degree arguments were adapted using existing local embeddings, Laurent relations, native minimal polynomials and relative-degree formulas. Two frozen scratch receipts contained stale preceding-cohort narrative; the new review records explicit prose corrections while preserving their source, audit and hash evidence. No root pin, proof limit, source contract or acceptance criterion changed.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -19945,7 +19989,7 @@ General composite-level generation and degree, identification of the explicit co
 
 ## Production all-level original degree pending full run - 21 October 2026
 
-The 5,476-module production aggregate and focused all-level original degree audit pass with zero diagnostics. Five proof-value audits verify the actual conjugate induction, proper-divisor generation, coprime-base nonmembership, mixed towers and unconditional all-level consumers. Field generation, exact internal degree and the conjugate identity are proved without those conclusions as premises. Modular ramification, fiber counts, numerical genus, analytic realization and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending.
+Sequential foundation/paper verification passes with zero diagnostics for the 5,476-module scope: all thirteen retained regressions, 38,608 exhaustive theorem checks, 16,750 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
 
 Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
 
@@ -20024,5 +20068,4693 @@ Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cu
   "omittedScratchTheorems": [],
   "existingReuseTheorems": [],
   "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified all-level original degree and conjugate identity - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,476-module scope: all thirteen retained regressions, 38,608 exhaustive theorem checks, 16,750 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-21T15:14:44.250677+00:00",
+  "log": "logs/dubon-build-20261021-070341-414.log",
+  "sha256": "7F585F68EBAD92AFE4CE5903F5BBF8E28B31AEC933963F7AE474318F3221A228",
+  "bytes": 9426212,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5476,
+  "projectTheorems": 38608,
+  "registeredConsumers": 16750,
+  "registeredConstructions": 938,
+  "declarations": 23139,
+  "generated": 21666,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_070055.log",
+  "foundationSha256": "0D5B83B67BF1A48990BB0CC25EA6B01835085D383ACA4B221C0AEC1D04387397",
+  "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production actual cusp count and modular ratios pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,500-module scope: all thirteen retained regressions, 38,701 exhaustive theorem checks, 16,816 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Elliptic ramification and fiber counts at 0 and 1728, absence of other finite ramification, numerical genus, meromorphic realization and normalized analytic places, the regular-differential cusp-form comparison, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceJDegreeSumsDependencyAudit2Production5500.log",
+      "sha256": "A3B71EB0A3C502CEDB735488970E5631FF6EF0CD4FD8FCA8F7F4BF2708640F6C",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.sum_original_j_fiber_orders_finset",
+        "Dubon2026.SourceFunctionField.sum_original_j_pole_orders_finset"
+      ],
+      "sourceSha256": "A7E2CCB84A9F34608A9097DE2E350B0F5FC58A9FC5E364497FA6F629D5084609"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSlotPlacesDependencyAudit7Production5500.log",
+      "sha256": "60F2B70174E80D9A5EC0B4B5B8BFD3EC6D8AFD9A0FC57C066DB398FD7408988E",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_slot_place",
+        "Dubon2026.SourceFunctionField.original_internal_pair_adjoin_top"
+      ],
+      "sourceSha256": "95F71744950688CD19DC224E0BF4955DEF3D908CB99D3EE2B0CAD646C01385EE"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWidthDependencyAudit3Production5500.log",
+      "sha256": "6B8FC63B7064BF10EB62C2F10D9BA8E908CB7869DACE431978903104BCDC921D",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_cusp_place_with_width"
+      ],
+      "sourceSha256": "8807F3BAF947056B7E9A5FBA0B25EDA78571F357FBDBD0821C794AD10E8350CF"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCountDependencyAudit6Production5500.log",
+      "sha256": "3B41D94E7F96E11FE29DCC507E2DDB1DEBFFAC8D6693BFECE2277CC78928FEA1",
+      "requiredProofValueEdges": 19,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.natCard_original_j_poles_eq_cuspCount"
+      ],
+      "sourceSha256": "E0F5D85E189C4FFFF2331754D68BB3CC4E9AF3152967618D6F7BAB2639D31DCB"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularRatiosDependencyAudit6Production5500.log",
+      "sha256": "B409CB9DE21B4401EC4D4B7BBB60555344EDA31E393D5E6BB5DAA156513B12F5",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_field_modular_ratio",
+        "Dubon2026.SourceFunctionField.jqModC_eq_modular_quotient"
+      ],
+      "sourceSha256": "E3E2D0E757361E0852E855E8EDE77F371B9965B6474CB26B184BA1EFB34BB564"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspsAndRatiosProductionAudit5500.log",
+  "sha256": "90074FC0BA51FD5F977F776E60A4F793D4F2803E54CAC45FEFB41AE8F69AF246",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-cusps-and-ratios-production-5500-build.log",
+  "aggregateSha256": "325EFD297BCA4D298FE5F152B09F2185F8585BC894D881C721D27005DE69F3B3",
+  "productionModules": 5500,
+  "incrementModules": 24,
+  "axiomChecks": 74,
+  "exhaustiveIncrementTheorems": 93,
+  "linterScopes": 24,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 93,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Existing original degree, native valuations, uniformizers, positive finite sums and actual cusp degeneracy maps reused.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "boundary": "Elliptic ramification and fiber counts at 0 and 1728, absence of other finite ramification, numerical genus, meromorphic realization and normalized analytic places, the regular-differential cusp-form comparison, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified actual cusp count and modular ratios - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,500-module scope: all thirteen retained regressions, 38,701 exhaustive theorem checks, 16,816 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Elliptic ramification and fiber counts at 0 and 1728, absence of other finite ramification, numerical genus, meromorphic realization and normalized analytic places, the regular-differential cusp-form comparison, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-21T16:44:15.518787+00:00",
+  "log": "logs/dubon-build-20261021-082908-694.log",
+  "sha256": "EE199E6A55B0274B33B06C1C748D8CE11742B6B4FC4C38472F4DBC8C4AD98DD3",
+  "bytes": 9450813,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5500,
+  "projectTheorems": 38701,
+  "registeredConsumers": 16816,
+  "registeredConstructions": 946,
+  "declarations": 23213,
+  "generated": 21695,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_082610.log",
+  "foundationSha256": "EA3EEA5354D1F1E66E54730A951A19FF758F0C2D0586797274A629F9A8F6B49D",
+  "boundary": "Elliptic ramification and fiber counts at 0 and 1728, absence of other finite ramification, numerical genus, meromorphic realization and normalized analytic places, the regular-differential cusp-form comparison, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original numerical genus pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,555-module scope: all thirteen retained regressions, 39,155 exhaustive theorem checks, 17,081 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The analytic regular-differential cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicOrderDependencyAudit6Production5555.log",
+      "sha256": "EA570DC6778FDF43269CDE4E020B0BE0EDDCD3ABC56717AA6F31B9A172F43565",
+      "requiredProofValueEdges": 16,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_originalAnalyticOrder_pos",
+        "Dubon2026.SourceFunctionField.meromorphicAt_original_realize",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_mul",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_add",
+        "Dubon2026.SourceFunctionField.originalAnalyticOrder_algebraMap"
+      ],
+      "sourceSha256": "683A9FB6E180247FFB1B6032440C973A2F8E0454305BAF2EA719006B196A7EFF"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticPlacesDependencyAudit4Production5555.log",
+      "sha256": "E9E0DEF35B99DB76C6581203CA4161C5EF7A7A32B4AC076FD5706FE9D087C6DD",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_order",
+        "Dubon2026.SourceFunctionField.originalAnalyticRamification_pos",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_mem_iff_bounded",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_smul"
+      ],
+      "sourceSha256": "EED29C3F51358D58BAC96F54E4918B6C1D6EE4613DE905541C3019C28605AFEC"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticJDependencyAudit3Production5555.log",
+      "sha256": "7697EFD8A5362C9B89DD190FB3C6C1EC34418CBE793B3417FA98193D84338BF5",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_j_value",
+        "Dubon2026.SourceFunctionField.realize_jNOver"
+      ],
+      "sourceSha256": "7374715965B4EA5CC0A0BE60D9F5FC6F246B44D0686C9809CD5B0FB18948EB13"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceQuotientIntegralDependencyAudit4Production5555.log",
+      "sha256": "4975E7C7BE3FCCE70C30AB4C13D672900583B547B66BC1640B8DE7662B52FF76",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.isIntegral_original_of_discriminant_power"
+      ],
+      "sourceSha256": "843D11CB9704F6610A9005543592D0BDE52C092B2BF1EBB352DD2F7BB50EC8E9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBoundedIntegralDependencyAudit6Production5555.log",
+      "sha256": "62ACAC330B0BE55276656FE15F1F48CCF7C8CA3E1D5182E217053CB569616ABC",
+      "requiredProofValueEdges": 19,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.isIntegral_original_of_mem_all_analytic_places"
+      ],
+      "sourceSha256": "64019ED23AD61AE78169D77261765C4B97A9E4D98DF1A0AA052490DE22A8004C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePlaceDependencyAudit3Production5555.log",
+      "sha256": "9F961372056138A73B2E7B908717688875070795DB3B5E681F7D4E7B877DC69A",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_place_cusp_or_analytic",
+        "Dubon2026.SourceFunctionField.original_finite_fiber_realization"
+      ],
+      "sourceSha256": "00FDF95C2567ED6DB57E2A609AFB5357675F98DB577737EC5AD644CDF0DE8029"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceJOrbitDependencyAudit6Production5555.log",
+      "sha256": "B22B628C3DBB405DC4A559B6B8D9BEDB9AC539D74A708D5385C8C706A474108F",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_finite_fiber_full_orbit",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_implies_full_orbit"
+      ],
+      "sourceSha256": "D04ADBED1AF64B41D5767EA52E0D5A8EBBE1A19012060635350738BB9572BC47"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceJMultiplicityDependencyAudit9Production5555.log",
+      "sha256": "3718BCF6C29F7805A6F57031A9E2A6A91D05266DDCC6495495EE36F94D022FB8",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_finite_j_fiber_order_one",
+        "Dubon2026.SourceFunctionField.originalAnalyticRamification_dvd_full_stabilizer_half"
+      ],
+      "sourceSha256": "AC101BED534667965A30D98669D97D98A0C61B5E32D8F7D9B8E7FA63B2CC280C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticRamificationDependencyAudit5Production5555.log",
+      "sha256": "FDDF765F668C150D462789AF9F38BE009D86752F3109389B1B045201FBD901D6",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_two_mul_ramification_eq_stabilizer_card"
+      ],
+      "sourceSha256": "8C66437DEED30E42501FEE182FB1FA1451224A8ACF1E46AC964ED624D68888AC"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOrbitFiberDependencyAudit4Production5555.log",
+      "sha256": "8DDC19197844D6649521D58A72AC65786300A9184207358BA102D0CFF4CD0DBB",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.FiberOrbits.orbitToFiber_bijective",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_iff_gamma0_orbit"
+      ],
+      "sourceSha256": "4E5A4437412FEF6561FC579FACB835BE90F7AD2424CF30B1DB6DCFF33362562C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceExceptionalFiberDependencyAudit2Production5555.log",
+      "sha256": "00AD69DF65F93C0D8B200C9D54FB53FFCC80E344A90398E9A92C41E828AB554C",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.two_mul_card_original_j_1728_fiber",
+        "Dubon2026.SourceFunctionField.three_mul_card_original_j_zero_fiber"
+      ],
+      "sourceSha256": "0ED360164588F44FACD83BDF0CEE5146AED2F19FA08CA8876CE9874EE36A00BA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceNumericalGenusDependencyAudit3Production5555.log",
+      "sha256": "8FE124DA1BDADD32D3E2E906DE93C005CF3410B7C52D8DB4D8D6511512B4586E",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalGenus_eq_genusFormula",
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_eq_genusFormula"
+      ],
+      "sourceSha256": "56BAD0325ABD69426F58B37D67BACE519D1AA871DD19A7AC646821EFF6A6C89B"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNumericalGenusProductionAudit5555.log",
+  "sha256": "C0FE5D8A38B84711A908BAA82071C2A623871BA451AF46DAA85057A44F103386",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-numerical-genus-production-5555-build.log",
+  "aggregateSha256": "FD4AE0C9552B306DCE785F6D05AB42C52E1D41B4703050E6293833CA250E811D",
+  "productionModules": 5555,
+  "incrementModules": 55,
+  "axiomChecks": 314,
+  "exhaustiveIncrementTheorems": 455,
+  "linterScopes": 55,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 455,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Existing original modular quotients, normalized places, generator realizations and uniformizers reused with native removable singularities, level-one dimension, Weierstrass equation and cyclic stabilizers. Existing coset counts, exact degree and Riemann--Roch complete the numerical genus.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "boundary": "The analytic regular-differential cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original numerical genus and regular-differential dimension - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,555-module scope: all thirteen retained regressions, 39,155 exhaustive theorem checks, 17,081 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The analytic regular-differential cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-21T18:12:59.489676+00:00",
+  "log": "logs/dubon-build-20261021-100038-534.log",
+  "sha256": "C1A3F1FE865BB80A6F4DD5A5309787EE770020BE46D4C0D47FE6CCDB093A2C75",
+  "bytes": 9578575,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5555,
+  "projectTheorems": 39155,
+  "registeredConsumers": 17081,
+  "registeredConstructions": 995,
+  "declarations": 23527,
+  "generated": 21905,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_095704.log",
+  "foundationSha256": "A9447B891A5059BF4F0914E57AEB3D603240B1F2243768D9D7F35251DEBCF418",
+  "countReconciliation": {
+    "old": 38701,
+    "current": 39155,
+    "removed": [],
+    "added": 454,
+    "focused": 455,
+    "focusedAlreadyInPrevious": {
+      "Dubon2026.SourceFunctionField.originalCanonicalDivisor.congr_simp": "Dubon2026.SourceOriginalCanonicalFiberDegree"
+    },
+    "addedOutsideFocused": [],
+    "focusedMissingGlobal": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceNumericalGenusOwnership5555.log",
+    "ownershipSha256": "6A08DA9B2156757E4B797DE6786847AF6696D46AE3CA190799FF9F44B8ED283C"
+  },
+  "countReconciliationReason": "The generated originalCanonicalDivisor.congr_simp declaration already occurred in the preceding global audit. The focused 455-name scope adds 454 distinct global names; all preceding names are retained.",
+  "boundary": "The analytic regular-differential cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original period and normalized eigenlift pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,595-module scope: all thirteen retained regressions, 39,419 exhaustive theorem checks, 17,182 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicDifferentialDependencyAudit4Production5595.log",
+      "sha256": "930C7DE0476A829C6A1A1C4F03598B34DF57DB83B2E37066A1CDBC843BF82B38",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_differential_holomorphic_realization"
+      ],
+      "sourceSha256": "B53FCAF9E9076C1691A59BBBBED94EBECBA6224893848E6C9999A1193B0923C9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJIntegralDependencyAudit3Production5595.log",
+      "sha256": "42B3807F1E55194D7894AA81CBC3AA5B2A6BF8B6A4AEA102D3D693D0F3421995",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_integral"
+      ],
+      "sourceSha256": "B603979A5B6B1377D7637B58A03BB7BB6A3771DB94E0E0CB396DF67144899340"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJRelationDependencyAudit5Production5595.log",
+      "sha256": "C6CD452834CD76DB3513A00A5BB57ECAD6540EE02D684EED6B8663EB561FE400",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_relation"
+      ],
+      "sourceSha256": "4DA56B67A8E1AD88EA88B1B28EE700A85392EB4D03E45FEF036EB264B4450612"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJBoundDependencyAudit4Production5595.log",
+      "sha256": "71E903BE036C2A526EF4DE70FE1AE809EFC2BFABCF72B1EEFAAE53714492F7AF",
+      "requiredProofValueEdges": 11,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_bound"
+      ],
+      "sourceSha256": "FDEBCB9FE03D0581E403393A9450138D4BD80DB38152B4BA5D3366F615EBD67B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRegularCuspFormsDependencyAudit5Production5595.log",
+      "sha256": "3F11B4E361BDD6CF7A16CB6F101DF30E925312D2D521903703667F6C12AD7CDC",
+      "requiredProofValueEdges": 21,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_differential_cusp_form_realization"
+      ],
+      "sourceSha256": "FE0BDF65A0D32445A2A06B57CB31358A5EED926B505A49C8140E7A7A760D183A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodSurjectivityDependencyAudit4Production5595.log",
+      "sha256": "E100FEA97A1909A5B3F4EA2BC2E5A7CD207A9E7295C1D9D0A599B1CD52A434E7",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_surjective",
+        "Dubon2026.sourceWeightTwo_cusp_dimension_eq_genusFormula"
+      ],
+      "sourceSha256": "50F1D51D7F91870060F9D6B86434462564566558ED7A80DC811A6A599202A0D6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodHeckeEigenliftDependencyAudit6Production5595.log",
+      "sha256": "0A7131D6348AD6A079F87903AF077AAA890DC67A704EAF68B3B41171C9E72CD5",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.sourceTrivialH1Eigen_cuspLift_or_dirichletPair"
+      ],
+      "sourceSha256": "73579D0D0F02B288D52D6CE99A4FE2BC603CB1410D9D153FCF88CA3B149C18B7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizedCuspLiftDependencyAudit2Production5595.log",
+      "sha256": "E5B5814548E84F8BF4141FB973C8AA5C2B199045269322ED88890056394E86B6",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.sourceTrivialH1Eigen_normalizedCuspLift_or_dirichletPair"
+      ],
+      "sourceSha256": "0D9630BD880EFFA895B113E36AEEC8B80A4CA857802D5A206C1E2A23DD6F5155"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardDependencyAudit2Production5595.log",
+      "sha256": "57F0067528357101B8A8DF98409EDB84F77A5F8A647AF19EC1A049FDD7D4E5A6",
+      "requiredProofValueEdges": 7,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalJZero_torsion_orders",
+        "Dubon2026.SourceFunctionField.originalPic0_principal_eq_zero"
+      ],
+      "sourceSha256": "4A3BF8FFE5A028C595C3C6FC8B05B86693E86848C6DF821FA8488B5D2F60FA19"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionGaloisDependencyAudit5Production5595.log",
+      "sha256": "7F66E90281570ABB633ECF11B7B1DA99A297F3B278C59D47EB810B304811B00D",
+      "requiredProofValueEdges": 26,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut_j"
+      ],
+      "sourceSha256": "0A377DD2E57A561C6A2E59ECA16FA935B284346ADE1C4F76618CD0EDEDE3C208"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionProductionAudit5595.log",
+  "sha256": "2D545ED2A58D3D9560C815DFD505CF71315B120BB0AE37C676270BBB7F255FED",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-periods-torsion-production-5595-build.log",
+  "aggregateSha256": "B5202EE4CC1D686853C85F6CF23C0251919E027CA98CFD37E6D769FEC81D2936",
+  "productionModules": 5595,
+  "incrementModules": 40,
+  "axiomChecks": 132,
+  "exhaustiveIncrementTheorems": 264,
+  "linterScopes": 40,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 265,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Existing original regular differentials, period cocycles and Fourier identities are consumed. Explicit reflected coset corrections prove Hecke compatibility. Existing full Hecke commutativity and common eigenvectors discharge normalization without a new algebraic closure or maximal-ideal construction.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 265,
+    "scratchDistinct": 265,
+    "productionFocused": 264,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+        {
+          "scope": "SourcePeriodTorsionScratchOwnership74For5595",
+          "module": "Dubon2026.SourceInverseJLimits"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalRegularCoefficientOrders",
+          "SourceOriginalAnalyticDerivativeOrder",
+          "SourceOriginalAnalyticDifferentialRegularity",
+          "SourceOriginalHolomorphicDifferentials"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership71For5595.log",
+          "sha256": "44078DAAC471C21F6D70CBC298D0BE2BBC784FE3B74EB3E53677B5233CFAFDBC",
+          "sourceSha256": "355C070717C9A34770D3270EAA074946B2A208F754F04F5209D34245D0077D93"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurveChartIntegralCriterion",
+          "SourceOriginalRegularCuspOrders",
+          "SourceOriginalRegularInverseJIntegral"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership72For5595.log",
+          "sha256": "9C08118E3311BC7F5EDBD2789BDA56CF049A6E87AA50E338B7E3632843AC5743",
+          "sourceSha256": "F4EE67ABFD8300041E6D1C629257739D53D5F58170EA1B52764B35AF5E1FED92"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRealizationGermHom",
+          "SourceOriginalInverseJGermPolynomial",
+          "SourceOriginalInverseJMonicRelation",
+          "SourceOriginalInverseJRelationValues",
+          "SourceOriginalInverseJAnalyticRelation"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership73For5595.log",
+          "sha256": "51085BB6BC8C3A767D5064FD2EA3CAC494523C753C4C869DBB4EEAEA1B723B94",
+          "sourceSha256": "9BD0D3890800B4B60729025B6BE79BB11D7262246264307767179E91CBFB8DBA"
+        }
+      },
+      {
+        "modules": [
+          "SourceInverseJLimits",
+          "SourceMonicRelationRootBound",
+          "SourceInverseJPolynomialBounds",
+          "SourceOriginalInverseJAnalyticBound"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership74For5595.log",
+          "sha256": "FE62521403B22799F4D6C40F7E4BC02CCEBE131380CA2EE0030C5A7A5BBD3877",
+          "sourceSha256": "665A85119D8D90D5D95D18AEED8AD5E7F5E457B3284C9C871271266873607B49"
+        }
+      },
+      {
+        "modules": [
+          "SourceInverseJDerivativePower",
+          "SourceCuspBoundExtension",
+          "SourceOriginalDifferentialSlashBound",
+          "SourceOriginalDifferentialCuspDecay",
+          "SourceOriginalRegularCuspForms"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership75For5595.log",
+          "sha256": "27D7B8D7C366AD79E001016540D17283BF709F421431BBAF102DA81B5AB414D7",
+          "sourceSha256": "61F2C17C98F9802751922BAAC243E774808353EA05E921A991EF7C7686EFCB8F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDifferentialGerm",
+          "SourceOriginalRegularCuspGerms",
+          "SourceOriginalCuspDimension",
+          "SourceOriginalPeriodSurjectivity"
+        ],
+        "count": 37,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership76For5595.log",
+          "sha256": "0D3FED8D59CEDD0E8453E5192BB046A2AAE6024010B66B5A715511155D6C9303",
+          "sourceSha256": "20EB9675C851EA9EDDEAD1D3243E389734665C15733248B6676457BEFA3E3090"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoScalarHecke",
+          "SourceJHeckeConjugation",
+          "SourceJHeckeCosets",
+          "SourceWeightTwoReflectionHecke",
+          "SourceWeightTwoPeriodHecke",
+          "SourceParabolicCuspEigenlift"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership77For5595.log",
+          "sha256": "2DEFA3BE812597DAEED741E346D50DC72B9A96FE6F24FC3A44F8F6357C79A143",
+          "sourceSha256": "734AF76BB795DEE3CFE4EBC014FE55D625B06A32B5A19DC6B6FEE05D5F64447A"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoFullEigenlift",
+          "SourceResidualNormalizedCuspLift"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership78For5595.log",
+          "sha256": "0B14C6DF319C6E494487ECEC1EA67A4724AC44C8FCC370D2D9E47A74FA4F2443",
+          "sourceSha256": "71DC5770541A997A629734276FCA82BEAAACD70C0289FFA235E6D81B80DB7D7C"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurvePicardGroup",
+          "SourceOriginalPicardGroup"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership79For5595.log",
+          "sha256": "B88D8FC7DA5A697BB4730562F2A38C63C98E56E78F787BD773028443A16E2047",
+          "sourceSha256": "81ECC6DD492EEA3885805BCBD2AD0879B2302E945A0A5CEEF80D949E762DD57E"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalArithmeticFieldAction",
+          "SourceOriginalArithmeticPlaces",
+          "SourceOriginalArithmeticDivisors",
+          "SourceOriginalArithmeticPicard",
+          "SourceOriginalTorsionGalois"
+        ],
+        "count": 79,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership80For5595.log",
+          "sha256": "37CEB4C95EFF1F6F71A8B4694EF0DB97578D71CA95FCB663623176ADEE7FBC97",
+          "sourceSha256": "9C0754F20589033C8AEC9E9A0F7D51A6D4982B00FA50D7BE14AAE5671320962D"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionOwnership5595.log",
+      "sha256": "F2F16BB15C071EB2B7D885262A4BD504FF88D8BDC4F46B70CE0E034047EE9EFA",
+      "sourceSha256": "FF1A875C31DF5EC5FFEA08CCEE7E7BFCEFB2361F5CDEBDD6C11BD327129439AB"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-100038-534.log",
+      "sha256": "C1A3F1FE865BB80A6F4DD5A5309787EE770020BE46D4C0D47FE6CCDB093A2C75"
+    }
+  },
+  "scratchToProductionCountReason": "The generated JMultiplicity.jf.eq_1 declaration belongs to SourceInverseJLimits in its isolated scratch scope, but is already present in the preceding production global audit. All 265 distinct scratch theorem names are retained: 264 in the production focused scope and this one previously registered generated name. No unaccounted theorem is missing.",
+  "boundary": "Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original cusp forms, period isomorphism and normalized eigenlift - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,595-module scope: all thirteen retained regressions, 39,419 exhaustive theorem checks, 17,182 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-21T19:47:05.117506+00:00",
+  "log": "logs/dubon-build-20261021-113522-357.log",
+  "sha256": "4B261EED1CB41CC5D3194C232BB63EAD968CE05F0641BB77F969256C1E9AC214",
+  "bytes": 9652282,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5595,
+  "projectTheorems": 39419,
+  "registeredConsumers": 17182,
+  "registeredConstructions": 1026,
+  "declarations": 23659,
+  "generated": 22077,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_113215.log",
+  "foundationSha256": "F3BFA16DB36E328E82573333DCEA34648251BB9AF33CC254E136735BAF3E99A8",
+  "countReconciliation": {
+    "previousTheorems": 39155,
+    "focusedTheorems": 264,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 264,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionOwnership5595.log",
+    "ownershipSha256": "F2F16BB15C071EB2B7D885262A4BD504FF88D8BDC4F46B70CE0E034047EE9EFA"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 265,
+    "scratchDistinct": 265,
+    "productionFocused": 264,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+        {
+          "scope": "SourcePeriodTorsionScratchOwnership74For5595",
+          "module": "Dubon2026.SourceInverseJLimits"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalRegularCoefficientOrders",
+          "SourceOriginalAnalyticDerivativeOrder",
+          "SourceOriginalAnalyticDifferentialRegularity",
+          "SourceOriginalHolomorphicDifferentials"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership71For5595.log",
+          "sha256": "44078DAAC471C21F6D70CBC298D0BE2BBC784FE3B74EB3E53677B5233CFAFDBC",
+          "sourceSha256": "355C070717C9A34770D3270EAA074946B2A208F754F04F5209D34245D0077D93"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurveChartIntegralCriterion",
+          "SourceOriginalRegularCuspOrders",
+          "SourceOriginalRegularInverseJIntegral"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership72For5595.log",
+          "sha256": "9C08118E3311BC7F5EDBD2789BDA56CF049A6E87AA50E338B7E3632843AC5743",
+          "sourceSha256": "F4EE67ABFD8300041E6D1C629257739D53D5F58170EA1B52764B35AF5E1FED92"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRealizationGermHom",
+          "SourceOriginalInverseJGermPolynomial",
+          "SourceOriginalInverseJMonicRelation",
+          "SourceOriginalInverseJRelationValues",
+          "SourceOriginalInverseJAnalyticRelation"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership73For5595.log",
+          "sha256": "51085BB6BC8C3A767D5064FD2EA3CAC494523C753C4C869DBB4EEAEA1B723B94",
+          "sourceSha256": "9BD0D3890800B4B60729025B6BE79BB11D7262246264307767179E91CBFB8DBA"
+        }
+      },
+      {
+        "modules": [
+          "SourceInverseJLimits",
+          "SourceMonicRelationRootBound",
+          "SourceInverseJPolynomialBounds",
+          "SourceOriginalInverseJAnalyticBound"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership74For5595.log",
+          "sha256": "FE62521403B22799F4D6C40F7E4BC02CCEBE131380CA2EE0030C5A7A5BBD3877",
+          "sourceSha256": "665A85119D8D90D5D95D18AEED8AD5E7F5E457B3284C9C871271266873607B49"
+        }
+      },
+      {
+        "modules": [
+          "SourceInverseJDerivativePower",
+          "SourceCuspBoundExtension",
+          "SourceOriginalDifferentialSlashBound",
+          "SourceOriginalDifferentialCuspDecay",
+          "SourceOriginalRegularCuspForms"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership75For5595.log",
+          "sha256": "27D7B8D7C366AD79E001016540D17283BF709F421431BBAF102DA81B5AB414D7",
+          "sourceSha256": "61F2C17C98F9802751922BAAC243E774808353EA05E921A991EF7C7686EFCB8F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDifferentialGerm",
+          "SourceOriginalRegularCuspGerms",
+          "SourceOriginalCuspDimension",
+          "SourceOriginalPeriodSurjectivity"
+        ],
+        "count": 37,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership76For5595.log",
+          "sha256": "0D3FED8D59CEDD0E8453E5192BB046A2AAE6024010B66B5A715511155D6C9303",
+          "sourceSha256": "20EB9675C851EA9EDDEAD1D3243E389734665C15733248B6676457BEFA3E3090"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoScalarHecke",
+          "SourceJHeckeConjugation",
+          "SourceJHeckeCosets",
+          "SourceWeightTwoReflectionHecke",
+          "SourceWeightTwoPeriodHecke",
+          "SourceParabolicCuspEigenlift"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership77For5595.log",
+          "sha256": "2DEFA3BE812597DAEED741E346D50DC72B9A96FE6F24FC3A44F8F6357C79A143",
+          "sourceSha256": "734AF76BB795DEE3CFE4EBC014FE55D625B06A32B5A19DC6B6FEE05D5F64447A"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoFullEigenlift",
+          "SourceResidualNormalizedCuspLift"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership78For5595.log",
+          "sha256": "0B14C6DF319C6E494487ECEC1EA67A4724AC44C8FCC370D2D9E47A74FA4F2443",
+          "sourceSha256": "71DC5770541A997A629734276FCA82BEAAACD70C0289FFA235E6D81B80DB7D7C"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurvePicardGroup",
+          "SourceOriginalPicardGroup"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership79For5595.log",
+          "sha256": "B88D8FC7DA5A697BB4730562F2A38C63C98E56E78F787BD773028443A16E2047",
+          "sourceSha256": "81ECC6DD492EEA3885805BCBD2AD0879B2302E945A0A5CEEF80D949E762DD57E"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalArithmeticFieldAction",
+          "SourceOriginalArithmeticPlaces",
+          "SourceOriginalArithmeticDivisors",
+          "SourceOriginalArithmeticPicard",
+          "SourceOriginalTorsionGalois"
+        ],
+        "count": 79,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership80For5595.log",
+          "sha256": "37CEB4C95EFF1F6F71A8B4694EF0DB97578D71CA95FCB663623176ADEE7FBC97",
+          "sourceSha256": "9C0754F20589033C8AEC9E9A0F7D51A6D4982B00FA50D7BE14AAE5671320962D"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionOwnership5595.log",
+      "sha256": "F2F16BB15C071EB2B7D885262A4BD504FF88D8BDC4F46B70CE0E034047EE9EFA",
+      "sourceSha256": "FF1A875C31DF5EC5FFEA08CCEE7E7BFCEFB2361F5CDEBDD6C11BD327129439AB"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-100038-534.log",
+      "sha256": "C1A3F1FE865BB80A6F4DD5A5309787EE770020BE46D4C0D47FE6CCDB093A2C75"
+    }
+  },
+  "scratchToProductionCountReason": "The generated JMultiplicity.jf.eq_1 declaration belongs to SourceInverseJLimits in its isolated scratch scope, but is already present in the preceding production global audit. All 265 distinct scratch theorem names are retained: 264 in the production focused scope and this one previously registered generated name. No unaccounted theorem is missing.",
+  "boundary": "Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original complex manifold pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,657-module scope: all thirteen retained regressions, 39,780 exhaustive theorem checks, 17,387 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionContinuityDependencyAudit5Production5657.log",
+      "sha256": "473365C36386EE0C940E4DD93B61EB30788B0BBF2B6CF9480D0A0EB7DE23F193",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_continuous_apply"
+      ],
+      "sourceSha256": "F857562177BE67EAAA6AB433899D76E11A3B1405CF36257B47533782D1FACCA8"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticEvaluationDependencyAudit3Production5657.log",
+      "sha256": "1D07A9947B30E7A9624D7B687F6D52FFA60A3DC7C8485E9FDBC297B7B8037D85",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.meromorphicNFAt_originalPlaceEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_of_ord_sub_pos",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_algebraMap"
+      ],
+      "sourceSha256": "780D0EA095D2685FFF4644197B000ECD697A4D7BD36D10D190081F2E9954E566"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteParametersDependencyAudit9Production5657.log",
+      "sha256": "B01277BC54E22DDB92F03E21883B6B8B5CFD5DD0C19BA9364C556AF85F8D805B",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_finite_place_local_parameter"
+      ],
+      "sourceSha256": "84843E1D510CB08E99E9216490171173FDC9C69021E54AF2A59C4E8B55C72867"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteChartsDependencyAudit6Production5657.log",
+      "sha256": "63B1F7B2A6E19F5B78453BAD7FA91550E7F92EBC1B8894123EE875A921A81431",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_finite_place_chart_parameter"
+      ],
+      "sourceSha256": "B35A81911872C83F42B5E870C9584675E2473CFB871D91EBADB0F8D904470BBD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteTransitionsDependencyAudit6Production5657.log",
+      "sha256": "9EF8DC5B6CDABE81633A365E909C7765E7122A1C48DAC133BF680C4907A1AE6A",
+      "requiredProofValueEdges": 27,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_finiteChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_finiteChart_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_finiteChart_source"
+      ],
+      "sourceSha256": "A9E136BA96A73F3D0D652419F52B1BB68543584F76879E78F2223E173EA79195"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspGermsDependencyAudit9Production5657.log",
+      "sha256": "8241A30DFDE42944E169A32D4BD96BDC1C88E761E046707F3E8E484FDC683BE6",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient_order"
+      ],
+      "sourceSha256": "F0A455EA9E71F93AAA39F924EE8FB7397C156914B01542ADC61051BB4C5D459B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedCuspDiscDependencyAudit7Production5657.log",
+      "sha256": "606F41B52D92F65663185484F3A0B6B969245F83858B3A1E0EE519D98FC4B2A2",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_normalized_cusp_common_disc",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc_orders"
+      ],
+      "sourceSha256": "7E3CA9F4DC3C350524084712D9A49C535AFEB7772FFDF8C6DC5D11F15F284113"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPlaceParametersDependencyAudit10Production5657.log",
+      "sha256": "ABEB9B1F7DD56B96BFCCF8CF23161B8613656E3A008D316F2CA696B17D1275DE",
+      "requiredProofValueEdges": 35,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_place_chart_parameter"
+      ],
+      "sourceSha256": "B5E0F00654709B208E69088C3F856820D16FAAEE672FD5FC3D16362E429FA6B1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldDependencyAudit7Production5657.log",
+      "sha256": "54AB17BD6A24E150DAFB7635D6D725A190A229743A99EC129727437C35735957",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_isManifold",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_place_chart_order",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_t2Space"
+      ],
+      "sourceSha256": "9D71F85BB4E923088794121A29E3D537E155905AADA85019A0718AA23E941F67"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldProductionAudit5657.log",
+  "sha256": "3EEE9DF43CC03CBAEF21B6C243C2466556A1A8C4669CAFAB4EBC94C70BAED648",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-manifold-production-5657-build.log",
+  "aggregateSha256": "211E5158706FFD1FCFD87987E8ECB416C79CE99FFD2B04CDF48A9F60E128BD12",
+  "productionModules": 5657,
+  "incrementModules": 62,
+  "axiomChecks": 241,
+  "exhaustiveIncrementTheorems": 363,
+  "linterScopes": 62,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 366,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Actual original places, literal residue maps and divisor-class torsion are retained. Native quotient/removable and inverse-function results, existing exact cusp expansion range and branch uniqueness discharge the local analytic inputs. Valuation-ring incomparability replaces a general simultaneous approximation development. One prose-only correction rephrases a comment beginning with the declaration token constant to satisfy the unchanged integrity scan; frozen scratch evidence is preserved.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 366,
+    "scratchDistinct": 363,
+    "productionFocused": 363,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.originalPlaceEval.eq_1": [
+        {
+          "scope": "SourceComplexManifoldScratchOwnership82For5657",
+          "module": "Dubon2026.SourceOriginalAnalyticEvaluation"
+        },
+        {
+          "scope": "SourceComplexManifoldScratchOwnership88For5657",
+          "module": "Dubon2026.SourceOriginalCuspResidueValues"
+        }
+      ],
+      "HasStrictDerivAt.localInverse.congr_simp": [
+        {
+          "scope": "SourceComplexManifoldScratchOwnership83For5657",
+          "module": "Dubon2026.SourceOriginalFiniteLocalParameter"
+        },
+        {
+          "scope": "SourceComplexManifoldScratchOwnership84For5657",
+          "module": "Dubon2026.SourcePowerDescentLocalBranch"
+        },
+        {
+          "scope": "SourceComplexManifoldScratchOwnership88For5657",
+          "module": "Dubon2026.SourceOriginalCuspChartParameters"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalFiniteFieldOfDefinition",
+          "SourceOriginalFinitePlaceOrbit",
+          "SourceOriginalPlaceFieldOfDefinition",
+          "SourceOriginalPicardFieldOfDefinition",
+          "SourceOriginalTorsionContinuity"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership81For5657.log",
+          "sha256": "F43845F36999C5663FFF0FE4A4617FDDFB75958AD050EC2DBDCEFFD27B64290C",
+          "sourceSha256": "F868672EEABBE5900C4EA4B6CF22539CD9F19854232825DA03E86490566A4D79"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPlaceEvaluation",
+          "SourceOriginalAnalyticResidueValues",
+          "SourceOriginalAnalyticEvaluation"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership82For5657.log",
+          "sha256": "6AA88CB4CBA124087BA6C5921AEB94E3C9C005AF0CE1E284C40AE5538D084C3D",
+          "sourceSha256": "1B5495FEBDB58CE83E00BAEC6D4566826828C7549010DD366237ACC328E78BBF"
+        }
+      },
+      {
+        "modules": [
+          "SourceAnalyticPowerDescent",
+          "SourcePowerFiberAnalyticDescent",
+          "SourceOriginalEllipticCoordinate",
+          "SourceOriginalEllipticFibers",
+          "SourceOriginalRamifiedRegularParameter",
+          "SourceOriginalRamifiedRegularOrder",
+          "SourceOriginalPlaceInverseValues",
+          "SourceOriginalRamifiedMeromorphicOrder",
+          "SourceOriginalFiniteLocalParameter"
+        ],
+        "count": 56,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership83For5657.log",
+          "sha256": "A9BCCC833B265B77105E6AEEBED43EE1B2FB034F64FEFB5FD0848BE9CDAAFDB4",
+          "sourceSha256": "CFBFAE158DCBB006B7B3BA9011EF324DCB686EC9764B56FF5922BAF6A81B7A65"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticParameterLocal",
+          "SourcePowerDescentLocalBranch",
+          "SourceOriginalNearbyOrders",
+          "SourceOriginalRamificationIsolated",
+          "SourceOriginalRamifiedChartOrders",
+          "SourceOriginalFiniteChartParameters"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership84For5657.log",
+          "sha256": "7C30EF14A8C4CBB79D237EE041AD1BC1C5A57952D4A083E86646DFE6A3A49ADC",
+          "sourceSha256": "C4FC61F8D6C625EFA6BF881B128DCCF0E99E9A1207219D5CD99E10483AD46CAF"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalChartEvaluation",
+          "SourceOriginalChartComparison",
+          "SourceOriginalChartDifferenceOrders",
+          "SourceOriginalChartBranchEquality",
+          "SourceOriginalFiniteCharts",
+          "SourceOriginalFiniteChartTransitions"
+        ],
+        "count": 72,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership85For5657.log",
+          "sha256": "81F62929C90DDA27AB2204DB4213656C20A0ADF6BD0B8935F74CC40873C55D03",
+          "sourceSha256": "4C4B885F65A8265943F5DE916469FE4A8B7C2BAD69A95FA66C9526159D917021"
+        }
+      },
+      {
+        "modules": [
+          "SourceScalarTaylorSeries",
+          "SourceAnalyticLaurentQuotients",
+          "SourceOriginalJCuspGerm",
+          "SourceTaylorSubstitutions",
+          "SourceCuspTaylorLaurentSubstitution",
+          "SourceCuspTaylorFieldStability",
+          "SourceOriginalCuspGermRealization",
+          "SourceTaylorLaurentOrder",
+          "SourceOriginalCuspGermOrders"
+        ],
+        "count": 47,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership86For5657.log",
+          "sha256": "4570FB9C91F6AE299FA85E3A60A3572ABF2FC12B2B747FA5CB5579FC6C719190",
+          "sourceSha256": "04163B5C1986CEDE6C6B30352F3911D116771AF24108A4B923E4B9F35F63D9E0"
+        }
+      },
+      {
+        "modules": [
+          "SourceTaylorQuotientGerms",
+          "SourceCuspMeromorphicGerms",
+          "SourceCuspDiscRealization",
+          "SourceOriginalCuspDiscRealization",
+          "SourceLaurentExpansionDescent",
+          "SourceOriginalNormalizedCuspEmbedding",
+          "SourceOriginalNormalizedCuspDisc"
+        ],
+        "count": 39,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership87For5657.log",
+          "sha256": "7E7F0E9F235221D6D6131A470C944A71C094BC5CFA2E5257209BB32E42B66A45",
+          "sourceSha256": "A1518CA83A8A64FDB309C3E87BD9133E855C809734E093D87703AE7F82091CFB"
+        }
+      },
+      {
+        "modules": [
+          "SourceCuspDiscGermUniqueness",
+          "SourceOriginalCuspDiscFunctions",
+          "SourceOriginalCuspOrderMap",
+          "SourceOriginalCuspNormalValues",
+          "SourceCurveOrderOnePlaces",
+          "SourceOriginalCuspPlaceFamily",
+          "SourceOriginalCuspResidueValues",
+          "SourceOriginalCuspEvaluationFamily",
+          "SourceOriginalCuspChartParameters",
+          "SourceOriginalAllPlaceParameters"
+        ],
+        "count": 43,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership88For5657.log",
+          "sha256": "6DF66E6DD1D55B63821B8B1F927834F214A5BB69DABC9B60F2E87763A8BA88CC",
+          "sourceSha256": "17C537C909C90B7183F9A988714E9C94534BA558CFB99911F04E92E898679D16"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAllChartPackage",
+          "SourceOriginalPlaceCharts",
+          "SourceOriginalPlaceChartTransitions",
+          "SourceOriginalComplexChartedSpace",
+          "SourceOriginalComplexChartOrders",
+          "SourceOriginalPlaceSeparation",
+          "SourceOriginalComplexHausdorff"
+        ],
+        "count": 48,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership89For5657.log",
+          "sha256": "0B5D9567AD1835098DD4EB18EF16E7B34859EEFB8B276AE937679154295EA25A",
+          "sourceSha256": "0F30FC1ABE82E651E9F3771FE9BB8EC60B5B0789168F25E07784C20E797F4FAC"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldOwnership5657.log",
+      "sha256": "0787FE1E1D61CA74D56196AEF03858B7139BC712989760894F65A7ED4EE08DCD",
+      "sourceSha256": "9D4E29F50645C3A20C6047E3A31188B45F64FB50565FC1CCA4BA4803BB091018"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-113522-357.log",
+      "sha256": "4B261EED1CB41CC5D3194C232BB63EAD968CE05F0641BB77F969256C1E9AC214"
+    }
+  },
+  "scratchToProductionCountReason": "All 363 distinct names from 366 exhaustive scratch checks are retained: 363 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original torsion continuity and Hausdorff complex manifold - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,657-module scope: all thirteen retained regressions, 39,780 exhaustive theorem checks, 17,387 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-21T21:35:12.314908+00:00",
+  "log": "logs/dubon-build-20261021-131950-230.log",
+  "sha256": "49DE51E870E6919BEA0C15E72AD8C5E016C6D7773716E62BA1F03E8B104206BF",
+  "bytes": 9758209,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5657,
+  "projectTheorems": 39780,
+  "registeredConsumers": 17387,
+  "registeredConstructions": 1062,
+  "declarations": 23914,
+  "generated": 22253,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_131409.log",
+  "foundationSha256": "6AB8A09697BD0A805EC26401C9C21842A17BBD193181DACFD4DDFCDB654AF176",
+  "countReconciliation": {
+    "previousTheorems": 39419,
+    "focusedTheorems": 363,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.originalAnalyticPlace.congr_simp",
+      "HasStrictDerivAt.localInverse.congr_simp"
+    ],
+    "addedTheorems": 361,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldOwnership5657.log",
+    "ownershipSha256": "0787FE1E1D61CA74D56196AEF03858B7139BC712989760894F65A7ED4EE08DCD"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 366,
+    "scratchDistinct": 363,
+    "productionFocused": 363,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.originalPlaceEval.eq_1": [
+        {
+          "scope": "SourceComplexManifoldScratchOwnership82For5657",
+          "module": "Dubon2026.SourceOriginalAnalyticEvaluation"
+        },
+        {
+          "scope": "SourceComplexManifoldScratchOwnership88For5657",
+          "module": "Dubon2026.SourceOriginalCuspResidueValues"
+        }
+      ],
+      "HasStrictDerivAt.localInverse.congr_simp": [
+        {
+          "scope": "SourceComplexManifoldScratchOwnership83For5657",
+          "module": "Dubon2026.SourceOriginalFiniteLocalParameter"
+        },
+        {
+          "scope": "SourceComplexManifoldScratchOwnership84For5657",
+          "module": "Dubon2026.SourcePowerDescentLocalBranch"
+        },
+        {
+          "scope": "SourceComplexManifoldScratchOwnership88For5657",
+          "module": "Dubon2026.SourceOriginalCuspChartParameters"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalFiniteFieldOfDefinition",
+          "SourceOriginalFinitePlaceOrbit",
+          "SourceOriginalPlaceFieldOfDefinition",
+          "SourceOriginalPicardFieldOfDefinition",
+          "SourceOriginalTorsionContinuity"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership81For5657.log",
+          "sha256": "F43845F36999C5663FFF0FE4A4617FDDFB75958AD050EC2DBDCEFFD27B64290C",
+          "sourceSha256": "F868672EEABBE5900C4EA4B6CF22539CD9F19854232825DA03E86490566A4D79"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPlaceEvaluation",
+          "SourceOriginalAnalyticResidueValues",
+          "SourceOriginalAnalyticEvaluation"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership82For5657.log",
+          "sha256": "6AA88CB4CBA124087BA6C5921AEB94E3C9C005AF0CE1E284C40AE5538D084C3D",
+          "sourceSha256": "1B5495FEBDB58CE83E00BAEC6D4566826828C7549010DD366237ACC328E78BBF"
+        }
+      },
+      {
+        "modules": [
+          "SourceAnalyticPowerDescent",
+          "SourcePowerFiberAnalyticDescent",
+          "SourceOriginalEllipticCoordinate",
+          "SourceOriginalEllipticFibers",
+          "SourceOriginalRamifiedRegularParameter",
+          "SourceOriginalRamifiedRegularOrder",
+          "SourceOriginalPlaceInverseValues",
+          "SourceOriginalRamifiedMeromorphicOrder",
+          "SourceOriginalFiniteLocalParameter"
+        ],
+        "count": 56,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership83For5657.log",
+          "sha256": "A9BCCC833B265B77105E6AEEBED43EE1B2FB034F64FEFB5FD0848BE9CDAAFDB4",
+          "sourceSha256": "CFBFAE158DCBB006B7B3BA9011EF324DCB686EC9764B56FF5922BAF6A81B7A65"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticParameterLocal",
+          "SourcePowerDescentLocalBranch",
+          "SourceOriginalNearbyOrders",
+          "SourceOriginalRamificationIsolated",
+          "SourceOriginalRamifiedChartOrders",
+          "SourceOriginalFiniteChartParameters"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership84For5657.log",
+          "sha256": "7C30EF14A8C4CBB79D237EE041AD1BC1C5A57952D4A083E86646DFE6A3A49ADC",
+          "sourceSha256": "C4FC61F8D6C625EFA6BF881B128DCCF0E99E9A1207219D5CD99E10483AD46CAF"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalChartEvaluation",
+          "SourceOriginalChartComparison",
+          "SourceOriginalChartDifferenceOrders",
+          "SourceOriginalChartBranchEquality",
+          "SourceOriginalFiniteCharts",
+          "SourceOriginalFiniteChartTransitions"
+        ],
+        "count": 72,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership85For5657.log",
+          "sha256": "81F62929C90DDA27AB2204DB4213656C20A0ADF6BD0B8935F74CC40873C55D03",
+          "sourceSha256": "4C4B885F65A8265943F5DE916469FE4A8B7C2BAD69A95FA66C9526159D917021"
+        }
+      },
+      {
+        "modules": [
+          "SourceScalarTaylorSeries",
+          "SourceAnalyticLaurentQuotients",
+          "SourceOriginalJCuspGerm",
+          "SourceTaylorSubstitutions",
+          "SourceCuspTaylorLaurentSubstitution",
+          "SourceCuspTaylorFieldStability",
+          "SourceOriginalCuspGermRealization",
+          "SourceTaylorLaurentOrder",
+          "SourceOriginalCuspGermOrders"
+        ],
+        "count": 47,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership86For5657.log",
+          "sha256": "4570FB9C91F6AE299FA85E3A60A3572ABF2FC12B2B747FA5CB5579FC6C719190",
+          "sourceSha256": "04163B5C1986CEDE6C6B30352F3911D116771AF24108A4B923E4B9F35F63D9E0"
+        }
+      },
+      {
+        "modules": [
+          "SourceTaylorQuotientGerms",
+          "SourceCuspMeromorphicGerms",
+          "SourceCuspDiscRealization",
+          "SourceOriginalCuspDiscRealization",
+          "SourceLaurentExpansionDescent",
+          "SourceOriginalNormalizedCuspEmbedding",
+          "SourceOriginalNormalizedCuspDisc"
+        ],
+        "count": 39,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership87For5657.log",
+          "sha256": "7E7F0E9F235221D6D6131A470C944A71C094BC5CFA2E5257209BB32E42B66A45",
+          "sourceSha256": "A1518CA83A8A64FDB309C3E87BD9133E855C809734E093D87703AE7F82091CFB"
+        }
+      },
+      {
+        "modules": [
+          "SourceCuspDiscGermUniqueness",
+          "SourceOriginalCuspDiscFunctions",
+          "SourceOriginalCuspOrderMap",
+          "SourceOriginalCuspNormalValues",
+          "SourceCurveOrderOnePlaces",
+          "SourceOriginalCuspPlaceFamily",
+          "SourceOriginalCuspResidueValues",
+          "SourceOriginalCuspEvaluationFamily",
+          "SourceOriginalCuspChartParameters",
+          "SourceOriginalAllPlaceParameters"
+        ],
+        "count": 43,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership88For5657.log",
+          "sha256": "6DF66E6DD1D55B63821B8B1F927834F214A5BB69DABC9B60F2E87763A8BA88CC",
+          "sourceSha256": "17C537C909C90B7183F9A988714E9C94534BA558CFB99911F04E92E898679D16"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAllChartPackage",
+          "SourceOriginalPlaceCharts",
+          "SourceOriginalPlaceChartTransitions",
+          "SourceOriginalComplexChartedSpace",
+          "SourceOriginalComplexChartOrders",
+          "SourceOriginalPlaceSeparation",
+          "SourceOriginalComplexHausdorff"
+        ],
+        "count": 48,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership89For5657.log",
+          "sha256": "0B5D9567AD1835098DD4EB18EF16E7B34859EEFB8B276AE937679154295EA25A",
+          "sourceSha256": "0F30FC1ABE82E651E9F3771FE9BB8EC60B5B0789168F25E07784C20E797F4FAC"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldOwnership5657.log",
+      "sha256": "0787FE1E1D61CA74D56196AEF03858B7139BC712989760894F65A7ED4EE08DCD",
+      "sourceSha256": "9D4E29F50645C3A20C6047E3A31188B45F64FB50565FC1CCA4BA4803BB091018"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-113522-357.log",
+      "sha256": "4B261EED1CB41CC5D3194C232BB63EAD968CE05F0641BB77F969256C1E9AC214"
+    }
+  },
+  "scratchToProductionCountReason": "All 363 distinct names from 366 exhaustive scratch checks are retained: 363 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original Abel-Jacobi inputs pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,719-module scope: all thirteen retained regressions, 40,099 exhaustive theorem checks, 17,525 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexCompactDependencyAudit9Production5719.log",
+      "sha256": "31660BA0D90B0B6E55D30C0EB45F4B3D70A4957663BC3EF1FBAD083FECEFAA8C",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace"
+      ],
+      "sourceSha256": "C4F3E299CF3A8DF4954A07F7286B7F09EB909DF9DBB923FFDDEB73BCF51302B6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexConnectedDependencyAudit4Production5719.log",
+      "sha256": "C76108F29848A589929EE5847943929D794FC96347F3C2D6EFB02D119087DFC2",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_connectedSpace"
+      ],
+      "sourceSha256": "43C1D0A6127EBCC6CEEF405E326E50F16776F76CAF5494E6978E5366AB4EB2E1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPathPrimitivesDependencyAudit11Production5719.log",
+      "sha256": "DAFC28CE734D0AE52389B137DCA1FCA7F0840DF9F098EEA909A83EF6CAF820C7",
+      "requiredProofValueEdges": 32,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_normalized_path_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_regular_chart_primitives"
+      ],
+      "sourceSha256": "E4640901D86859CE372CD7E254150002B971FB90B0B77154DC219CAB9EA14C88"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalAbelJacobiDependencyAudit4Production5719.log",
+      "sha256": "AF4FEC8BA55E216CBB2D96630ECE26CB4D96384D82CE78348C327AD2651F68E3",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_abelJacobiVec_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_single"
+      ],
+      "sourceSha256": "512C00369EDCAFFA831B1C6F936C2B1D809E5795DC4D1B28B8D399091484C67D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsRealSpanDependencyAudit5Production5719.log",
+      "sha256": "5ECF70E5F5E80244D12EC5B62A08EFAF158F739A9D71C9B424ED85BD2556B4AE",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.span_real_pathPeriodLattice_eq_top"
+      ],
+      "sourceSha256": "EBBF33ED06DDAF668D1F4E28A3B5A4C8F60D9DB388D721DCA71A54D6D3E67170"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJacobiInversionDependencyAudit5Production5719.log",
+      "sha256": "6DEAFF8E8B95939812CB604143526D9BFA821F8EC4C136B041042C019A3E8BD4",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_jacobi_inversion"
+      ],
+      "sourceSha256": "7CE822C82497750CB899904D2869DA70FC8E0DCE51ED8F144DD51440E3886777"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimpleFiberDependencyAudit2Production5719.log",
+      "sha256": "C42EAA6E9990E086ACEFA9B65115C54EEFE2CC5EBF539A0BCED7AA7344BB71CF",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_sum_simple_fiber_eq_zero"
+      ],
+      "sourceSha256": "E0224A80D06371BAACAADE06D86F413919D3BA222E720259E33157A2AAA9127A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexFiberContourDependencyAudit5Production5719.log",
+      "sha256": "75D8526451CB6D23E249C86E19E7AB062944CFAB54B5799506741E3208AAAA14",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_mul_deriv_div_sub_eq_sum_analyticOrderNatAt",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.hasDerivAt_circleIntegral_mul_deriv_div_sub",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.circleIntegral_div_sub_eq_sum",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eventually_forall_sphere_ne",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.eq_of_hasDerivAt_zero_off_center",
+        "Dubon2026.SourceFunctionField.ComplexFiberContour.sum_eq_sum_sum"
+      ],
+      "sourceSha256": "B1588ADE52F4C0D3DC27F92047E56F1019F3CC785098CE3975E33F6C935B3AB5"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiberLocalDependencyAudit5Production5719.log",
+      "sha256": "4A380E1DC843690FED87A262D5DD5E2393BEBFE88E53FD1B881B4EFC69D1218D",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_fiber_local_data",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_differential_eq_smul_D",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_prescribed_fiber_cover",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_chart_order_at_place"
+      ],
+      "sourceSha256": "42B8F11B7218B332FEA03428829C48D23122FB6036DAC944A4332820F1BFB2A7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelPrincipalDependencyAudit12Production5719.log",
+      "sha256": "5E31ECEC649F0BF7616FDA2C2F5AE1D7D1ED8F5152D5D26961616790F0949F1C",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_abelJacobiDiv_mem_of_isPrincipal"
+      ],
+      "sourceSha256": "F5E734910F5DBE5FB411ADB1AF38FF4046FDA1C51F6A1D050ECF309F817EC05C"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiProductionAudit5719.log",
+  "sha256": "F164D774DCA048FBB1701C06AFBBD3193F68589C9053B6F97B505954B5606886",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-abel-jacobi-production-5719-build.log",
+  "aggregateSha256": "6945C4460CEA64B7A8791099F29510238B6AF3DD314F509517296A6BDFA64122",
+  "productionModules": 5719,
+  "incrementModules": 62,
+  "axiomChecks": 162,
+  "exhaustiveIncrementTheorems": 320,
+  "linterScopes": 62,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 322,
+  "productionReuse": "Scratch imports qualified; three Mathlib umbrella imports replaced with explicit CauchyIntegral, ParametricIntervalIntegral, analytic Order and Tactic imports. All public statements and proof bodies unchanged. Literal original places, differentials, continuous paths, divisors and exact multiplicities are retained. No new mathematical input or discrete-period assumption introduced.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 322,
+    "scratchDistinct": 320,
+    "productionFocused": 320,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.OriginalChart.chartRead.congr_simp": [
+        {
+          "scope": "SourceAbelJacobiScratchOwnership92For5719",
+          "module": "Dubon2026.SourceOriginalChartGermHom"
+        },
+        {
+          "scope": "SourceAbelJacobiScratchOwnership98For5719",
+          "module": "Dubon2026.SourceOriginalChartFiberOrders"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv.congr_simp": [
+        {
+          "scope": "SourceAbelJacobiScratchOwnership95For5719",
+          "module": "Dubon2026.SourceOriginalAbelJacobiImage"
+        },
+        {
+          "scope": "SourceAbelJacobiScratchOwnership99For5719",
+          "module": "Dubon2026.SourceOriginalFiberAbelJacobi"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceAnalyticUnitRoots",
+          "SourceAnalyticFiberPreimages",
+          "SourceOriginalFiberOrderSupport",
+          "SourceOriginalChartNeighborhoods",
+          "SourceOriginalFiberDegreeConservation",
+          "SourceOriginalChartFiberData",
+          "SourceOriginalNearbyFiberCover",
+          "SourceOriginalCompactChartCover",
+          "SourceOriginalComplexCompact"
+        ],
+        "count": 37,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership90For5719.log",
+          "sha256": "D152451D799D0F095C5FA9F329D7AC6C10C6766482E696066910AE66470A7C8B",
+          "sourceSha256": "82A7C61210919141C506D645807A37B7C3FA4A8EC5187B52D49684B176FF0B91"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalOnePoleFunction",
+          "SourceOriginalEvaluationContinuity",
+          "SourceOriginalClopenObstruction",
+          "SourceOriginalComplexConnected"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership91For5719.log",
+          "sha256": "B99760150361D341B36491CC4C0AB9F9CD656B2E2E8203A8B7865BFA4B44596D",
+          "sourceSha256": "AA9DD3D7928CF2AC677DA64C0EDD3764B5719DCF3CB8C71692C586DD76986C66"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalChartDifferentials",
+          "SourceOriginalChartGermHom",
+          "SourceOriginalChartDerivativeGerms",
+          "SourceOriginalChartGermDerivation",
+          "SourceOriginalChartDifferentialRegularity",
+          "SourceOriginalChartPrimitives",
+          "SourceOriginalDifferentialTransitions",
+          "SourceComplexPrimitiveGluing",
+          "SourceOriginalPathLocalPrimitives",
+          "SourceOriginalPathPrimitives",
+          "SourceOriginalPathIntegral"
+        ],
+        "count": 75,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership92For5719.log",
+          "sha256": "913F646CA93023158C1E7260669314F23C8845460FB24B97CD2696762A78DB20",
+          "sourceSha256": "E068D646698BE96257E4B827CAC5300A4573193921881285BD32A7E342D73587"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPathIntegralLaws",
+          "SourceOriginalAbelJacobiPeriods",
+          "SourceOriginalChartPathIntegrals",
+          "SourceOriginalLocalAbelJacobi"
+        ],
+        "count": 31,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership93For5719.log",
+          "sha256": "122DDDAD88BFEB493CCFA1AD55E8ECE8A0B0F96827C015F16D53CBD2F9790DB0",
+          "sourceSha256": "CA7B10E102664AC87F10DCF273B948BABCE0AA55C4803855256644E41C1AFE1E"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDifferentialReadingLinear",
+          "SourcePeriodRealDual",
+          "SourceOriginalRealAbelPotential",
+          "SourceOriginalPeriodAnnihilator",
+          "SourceOriginalPeriodsFullRealSpan"
+        ],
+        "count": 19,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership94For5719.log",
+          "sha256": "B21FAE0EEDDFE40DC2D30B63430C0B6C94BE8718A887DA7E4A4FAFD738E8FF65",
+          "sourceSha256": "31AA478973930D0E932FBECD36CA3F3B41D274C7549A1AF7838139196A6E17B3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegularEvaluationSeparation",
+          "SourceOriginalRegularEvaluationFrame",
+          "SourceOriginalAbelJacobiImage",
+          "SourceOriginalAbelJacobiOpenImage",
+          "SourceOriginalJacobiInversion"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership95For5719.log",
+          "sha256": "6F99B56D3F4C54EB2DB6D986BE5227DC66BE6FCC200CB25314B59053EF9FE1EB",
+          "sourceSha256": "D27EB6E39FEE257503B7A9EB6A50342DFC422190BA0ECD1155D456DFBE7CAB81"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalSimpleFiberResidues",
+          "SourceOriginalSimpleFiberSum"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership96For5719.log",
+          "sha256": "8BBE1C76CD1F45836DC3385A544991F43D231FCE7A5BBB29F700252AC623ED1F",
+          "sourceSha256": "A575A1B756C80E2781ABF2A8A9A15CC17FFA2C3253A89B935524748224976853"
+        }
+      },
+      {
+        "modules": [
+          "SourceComplexSimplePoleContour",
+          "SourceComplexFiberContourDerivative",
+          "SourceComplexWeightedFiberContour",
+          "SourceComplexSimpleFiberContour",
+          "SourceComplexFiberConstancy"
+        ],
+        "count": 34,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership97For5719.log",
+          "sha256": "CEC812D406821FB2CD20FE8F0FFE659DA2424393EEC8FB590BE635A8F7A881D7",
+          "sourceSha256": "1A705A486C59774FBB89CF60E18A471F8A280FA98D90DE145D6481D2AEF1AA5A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalChartFiberOrders",
+          "SourceOriginalNonconstantDifferential",
+          "SourceOriginalPrescribedFiberCover",
+          "SourceOriginalFiberLocalData",
+          "SourceOriginalChartFiberMultiplicity"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership98For5719.log",
+          "sha256": "C8113FDCDC237BBE564881E15FCC6BD77CDE6716D67CB88C89F3BFC29AFEB26B",
+          "sourceSha256": "90895793ED031E1845D4BFD262A6B9AC8AA2C395867F88D80415F09DFC7373A3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalFiberCoefficients",
+          "SourceOriginalFiberDisks",
+          "SourceOriginalFiberContours",
+          "SourceOriginalFiberIndexing",
+          "SourceOriginalFiberContourSums",
+          "SourceOriginalFiberContourComparison",
+          "SourceOriginalFiberContourDifferentiation",
+          "SourceOriginalFiberContourVanishing",
+          "SourceOriginalFiberAbelJacobi",
+          "SourceOriginalPrincipalFiberComparison",
+          "SourcePeriodCosetConstancy",
+          "SourceOriginalAbelPrincipalDivisors"
+        ],
+        "count": 83,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership99For5719.log",
+          "sha256": "7412C0C8CE88E16D65FB36DA2F0DB0E83FDF79D2CAD227CE1768183F4B479CE1",
+          "sourceSha256": "4E60FCF31AED7874EF91495FD92C2AF58F0C7D9CAE236D8E6DF5F0D4B7FC0809"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOwnership5719.log",
+      "sha256": "9E08A5D8C939790F1280A3055BD993575ECD03A003886DE11B9DC1AF9624EF7D",
+      "sourceSha256": "C0DCD946A58B1604F055A80B103D70B73964F1BF5A0EE85F9390E6AECBC1E106"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-131950-230.log",
+      "sha256": "49DE51E870E6919BEA0C15E72AD8C5E016C6D7773716E62BA1F03E8B104206BF"
+    }
+  },
+  "scratchToProductionCountReason": "All 320 distinct names from 322 exhaustive scratch checks are retained: 320 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original compact curve and Abel-Jacobi inputs - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,719-module scope: all thirteen retained regressions, 40,099 exhaustive theorem checks, 17,525 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-21T23:41:18.927710+00:00",
+  "log": "logs/dubon-build-20261021-152910-153.log",
+  "sha256": "61366BE240469F7FAA279C0635D12ADA4D780124A454FE6CCA54BEB4530DDB4E",
+  "bytes": 9854645,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5719,
+  "projectTheorems": 40099,
+  "registeredConsumers": 17525,
+  "registeredConstructions": 1086,
+  "declarations": 24115,
+  "generated": 22494,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_152531.log",
+  "foundationSha256": "4BA8FA410FC194DABF73D0811CB35F6B2FC6B11FAC3356BA292A697C6591621F",
+  "countReconciliation": {
+    "previousTheorems": 39780,
+    "focusedTheorems": 320,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp"
+    ],
+    "addedTheorems": 319,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOwnership5719.log",
+    "ownershipSha256": "9E08A5D8C939790F1280A3055BD993575ECD03A003886DE11B9DC1AF9624EF7D"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 322,
+    "scratchDistinct": 320,
+    "productionFocused": 320,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.OriginalChart.chartRead.congr_simp": [
+        {
+          "scope": "SourceAbelJacobiScratchOwnership92For5719",
+          "module": "Dubon2026.SourceOriginalChartGermHom"
+        },
+        {
+          "scope": "SourceAbelJacobiScratchOwnership98For5719",
+          "module": "Dubon2026.SourceOriginalChartFiberOrders"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv.congr_simp": [
+        {
+          "scope": "SourceAbelJacobiScratchOwnership95For5719",
+          "module": "Dubon2026.SourceOriginalAbelJacobiImage"
+        },
+        {
+          "scope": "SourceAbelJacobiScratchOwnership99For5719",
+          "module": "Dubon2026.SourceOriginalFiberAbelJacobi"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceAnalyticUnitRoots",
+          "SourceAnalyticFiberPreimages",
+          "SourceOriginalFiberOrderSupport",
+          "SourceOriginalChartNeighborhoods",
+          "SourceOriginalFiberDegreeConservation",
+          "SourceOriginalChartFiberData",
+          "SourceOriginalNearbyFiberCover",
+          "SourceOriginalCompactChartCover",
+          "SourceOriginalComplexCompact"
+        ],
+        "count": 37,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership90For5719.log",
+          "sha256": "D152451D799D0F095C5FA9F329D7AC6C10C6766482E696066910AE66470A7C8B",
+          "sourceSha256": "82A7C61210919141C506D645807A37B7C3FA4A8EC5187B52D49684B176FF0B91"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalOnePoleFunction",
+          "SourceOriginalEvaluationContinuity",
+          "SourceOriginalClopenObstruction",
+          "SourceOriginalComplexConnected"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership91For5719.log",
+          "sha256": "B99760150361D341B36491CC4C0AB9F9CD656B2E2E8203A8B7865BFA4B44596D",
+          "sourceSha256": "AA9DD3D7928CF2AC677DA64C0EDD3764B5719DCF3CB8C71692C586DD76986C66"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalChartDifferentials",
+          "SourceOriginalChartGermHom",
+          "SourceOriginalChartDerivativeGerms",
+          "SourceOriginalChartGermDerivation",
+          "SourceOriginalChartDifferentialRegularity",
+          "SourceOriginalChartPrimitives",
+          "SourceOriginalDifferentialTransitions",
+          "SourceComplexPrimitiveGluing",
+          "SourceOriginalPathLocalPrimitives",
+          "SourceOriginalPathPrimitives",
+          "SourceOriginalPathIntegral"
+        ],
+        "count": 75,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership92For5719.log",
+          "sha256": "913F646CA93023158C1E7260669314F23C8845460FB24B97CD2696762A78DB20",
+          "sourceSha256": "E068D646698BE96257E4B827CAC5300A4573193921881285BD32A7E342D73587"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPathIntegralLaws",
+          "SourceOriginalAbelJacobiPeriods",
+          "SourceOriginalChartPathIntegrals",
+          "SourceOriginalLocalAbelJacobi"
+        ],
+        "count": 31,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership93For5719.log",
+          "sha256": "122DDDAD88BFEB493CCFA1AD55E8ECE8A0B0F96827C015F16D53CBD2F9790DB0",
+          "sourceSha256": "CA7B10E102664AC87F10DCF273B948BABCE0AA55C4803855256644E41C1AFE1E"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDifferentialReadingLinear",
+          "SourcePeriodRealDual",
+          "SourceOriginalRealAbelPotential",
+          "SourceOriginalPeriodAnnihilator",
+          "SourceOriginalPeriodsFullRealSpan"
+        ],
+        "count": 19,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership94For5719.log",
+          "sha256": "B21FAE0EEDDFE40DC2D30B63430C0B6C94BE8718A887DA7E4A4FAFD738E8FF65",
+          "sourceSha256": "31AA478973930D0E932FBECD36CA3F3B41D274C7549A1AF7838139196A6E17B3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegularEvaluationSeparation",
+          "SourceOriginalRegularEvaluationFrame",
+          "SourceOriginalAbelJacobiImage",
+          "SourceOriginalAbelJacobiOpenImage",
+          "SourceOriginalJacobiInversion"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership95For5719.log",
+          "sha256": "6F99B56D3F4C54EB2DB6D986BE5227DC66BE6FCC200CB25314B59053EF9FE1EB",
+          "sourceSha256": "D27EB6E39FEE257503B7A9EB6A50342DFC422190BA0ECD1155D456DFBE7CAB81"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalSimpleFiberResidues",
+          "SourceOriginalSimpleFiberSum"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership96For5719.log",
+          "sha256": "8BBE1C76CD1F45836DC3385A544991F43D231FCE7A5BBB29F700252AC623ED1F",
+          "sourceSha256": "A575A1B756C80E2781ABF2A8A9A15CC17FFA2C3253A89B935524748224976853"
+        }
+      },
+      {
+        "modules": [
+          "SourceComplexSimplePoleContour",
+          "SourceComplexFiberContourDerivative",
+          "SourceComplexWeightedFiberContour",
+          "SourceComplexSimpleFiberContour",
+          "SourceComplexFiberConstancy"
+        ],
+        "count": 34,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership97For5719.log",
+          "sha256": "CEC812D406821FB2CD20FE8F0FFE659DA2424393EEC8FB590BE635A8F7A881D7",
+          "sourceSha256": "1A705A486C59774FBB89CF60E18A471F8A280FA98D90DE145D6481D2AEF1AA5A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalChartFiberOrders",
+          "SourceOriginalNonconstantDifferential",
+          "SourceOriginalPrescribedFiberCover",
+          "SourceOriginalFiberLocalData",
+          "SourceOriginalChartFiberMultiplicity"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership98For5719.log",
+          "sha256": "C8113FDCDC237BBE564881E15FCC6BD77CDE6716D67CB88C89F3BFC29AFEB26B",
+          "sourceSha256": "90895793ED031E1845D4BFD262A6B9AC8AA2C395867F88D80415F09DFC7373A3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalFiberCoefficients",
+          "SourceOriginalFiberDisks",
+          "SourceOriginalFiberContours",
+          "SourceOriginalFiberIndexing",
+          "SourceOriginalFiberContourSums",
+          "SourceOriginalFiberContourComparison",
+          "SourceOriginalFiberContourDifferentiation",
+          "SourceOriginalFiberContourVanishing",
+          "SourceOriginalFiberAbelJacobi",
+          "SourceOriginalPrincipalFiberComparison",
+          "SourcePeriodCosetConstancy",
+          "SourceOriginalAbelPrincipalDivisors"
+        ],
+        "count": 83,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbelJacobiScratchOwnership99For5719.log",
+          "sha256": "7412C0C8CE88E16D65FB36DA2F0DB0E83FDF79D2CAD227CE1768183F4B479CE1",
+          "sourceSha256": "4E60FCF31AED7874EF91495FD92C2AF58F0C7D9CAE236D8E6DF5F0D4B7FC0809"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAbelJacobiOwnership5719.log",
+      "sha256": "9E08A5D8C939790F1280A3055BD993575ECD03A003886DE11B9DC1AF9624EF7D",
+      "sourceSha256": "C0DCD946A58B1604F055A80B103D70B73964F1BF5A0EE85F9390E6AECBC1E106"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-131950-230.log",
+      "sha256": "49DE51E870E6919BEA0C15E72AD8C5E016C6D7773716E62BA1F03E8B104206BF"
+    }
+  },
+  "scratchToProductionCountReason": "All 320 distinct names from 322 exhaustive scratch checks are retained: 320 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The converse period-kernel implication and discreteness of the actual period subgroup remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original meromorphic functions pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,768-module scope: all thirteen retained regressions, 40,282 exhaustive theorem checks, 17,647 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesDependencyAudit6Production5768.log",
+      "sha256": "EC51D93B805F48BD21838500882E0383FEB2D9AB5BCA77C1DC0570688D2BAE7D",
+      "requiredProofValueEdges": 27,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_third_kind_differential"
+      ],
+      "sourceSha256": "70251389C03CE2A6CB023E233ACC9CC50862655EF9C162B1AEE2692A9807B46A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathsDependencyAudit4Production5768.log",
+      "sha256": "CF60A559A6B95758A46927C6E5638129FA8FD43900FB9265595B5CD0409CCBA2",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_third_kind_with_path_primitives"
+      ],
+      "sourceSha256": "EAE3570FF07A547B1F240A19A1058480585084AAD53F3BDB85DC39B8C40643BD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicDimensionDependencyAudit7Production5768.log",
+      "sha256": "7EE1DA4128693A1A4E5E4D9A2FF07763B3E8B4434719AB5B655908AC870F2F82",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_relation",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_const_germs_of_nonneg_order"
+      ],
+      "sourceSha256": "3696BC3A521DE9F69A1F90B58229BB9882DB30811677D3DC3DF19D1471AEC9E2"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicComparisonDependencyAudit11Production5768.log",
+      "sha256": "B92BE7D61715A845F583F125598D1F5F6009F9AF6C6FDD286329EB558DDEC140",
+      "requiredProofValueEdges": 27,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_meromorphic_orders"
+      ],
+      "sourceSha256": "FAB7921462EFFFEAA71C06051DDD6709A7F32F5BEED75A5CE37035C17D07C771"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalExponentialDependencyAudit3Production5768.log",
+      "sha256": "83B4B908BA0CA67246A50DF5528864422AC477CA4A88C6A01B6AFC7A2381E60A",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_exponential_model"
+      ],
+      "sourceSha256": "3F43A81E247F4E3661D5F47426E034CFE35A31AE0A807E5A6DD2762BF429CFDE"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePathsDependencyAudit6Production5768.log",
+      "sha256": "625321ABF63BF4B04E81A0E705AD5A52A06D4C1C1A8A7886A01EEA7E2188DE89",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_divisor_base_point",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_avoiding_divisor"
+      ],
+      "sourceSha256": "C124B69AA473C0A810D53E662B65E94E16B1BE83E7073841CFDE0B4C884D4F20"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodExponentialDependencyAudit4Production5768.log",
+      "sha256": "0E04DDD044A2FEC1FDDFF7AFBE8B30F49CEC7348C17B8F797C143F74A397323A",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_exponential"
+      ],
+      "sourceSha256": "37911E99FD14DF6753C974DF12B5293E7BBF070BD39E2822E596790EAA998960"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodsDependencyAudit8Production5768.log",
+      "sha256": "0A1567F6D76E0B25F50775BFEEA5634DE24A62B793B45D402356CB78846946DE",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_integral_periods"
+      ],
+      "sourceSha256": "430EFF7A93D3C9620461713F0E6296EF948A82CD4A088FB7098342A0A2A7D5F6"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelProductionAudit5768.log",
+  "sha256": "FFB70464604B6DE53CAACC2A6237D02EF4CA066F134048A9ECE560EF50F208BB",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-meromorphic-abel-production-5768-build.log",
+  "aggregateSha256": "062F017510C0DD40BD9791551D7EF91D7D98292F08CE913A6C23F08EB69698F2",
+  "productionModules": 5768,
+  "incrementModules": 49,
+  "axiomChecks": 134,
+  "exhaustiveIncrementTheorems": 185,
+  "linterScopes": 49,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 186,
+  "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Actual original places, meromorphic functions, differentials, continuous paths, residues and exact orders retained. The integral-period premise remains explicit; no new mathematical assumption introduced.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 186,
+    "scratchDistinct": 185,
+    "productionFocused": 185,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.originalGenus.congr_simp": [
+        {
+          "scope": "SourceMeromorphicAbelScratchOwnership100For5768",
+          "module": "Dubon2026.SourceOriginalTwoPoleDimensions"
+        },
+        {
+          "scope": "SourceMeromorphicAbelScratchOwnership103For5768",
+          "module": "Dubon2026.SourceOriginalMeromorphicRRBounds"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalTwoPoleDimensions",
+          "SourceOriginalTwoPoleDifferential",
+          "SourceOriginalDifferentialResidues",
+          "SourceOriginalSimplePoleBounds",
+          "SourceOriginalTwoPoleResidues",
+          "SourceOriginalPrescribedResidues"
+        ],
+        "count": 48,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership100For5768.log",
+          "sha256": "FBF9CF79180499AAB80843B977BAF663D8464AFB2498F78E3073B36036AEF7DB",
+          "sourceSha256": "DCAEF2463FDE02C2075678659A59DDB94EDF19C769233F9E6693321618603965"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalLocalRegularPrimitives",
+          "SourceOriginalRegularPathLocalPrimitives",
+          "SourceOriginalRegularPathPrimitives",
+          "SourceOriginalThirdKindPathPrimitives"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership101For5768.log",
+          "sha256": "B8431EE3CE486BEA76F6484AECC57719FF9D61CAD46BC53F02BDF843A9730F68",
+          "sourceSha256": "E8CADBB13790E3698DB2B331CC3BF0395E67CBDFFBF4639068CD5516608684E6"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicRemovableCharts",
+          "SourceMeromorphicCompactConstancy",
+          "SourceMeromorphicLeadingCoefficient",
+          "SourceMeromorphicPoleBound",
+          "SourceMeromorphicDegreeBase",
+          "SourceMeromorphicDimensionBound",
+          "SourceOriginalMeromorphicDimension"
+        ],
+        "count": 42,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership102For5768.log",
+          "sha256": "930A162F5CD03E09932B8AE5ADD7490BF6EB0AE009E713D432A027CFB7ED79A7",
+          "sourceSha256": "D7857382D1787E7B7EC459A259787CCDEC5FFD607619B465622646291101FD7B"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicOrderNeighborhoods",
+          "SourceMeromorphicFinitePoles",
+          "SourceMeromorphicEffectivePoleBound",
+          "SourceOriginalMeromorphicPoleBound",
+          "SourceOriginalMeromorphicRRBounds",
+          "SourceOriginalChartReadFieldLaws",
+          "SourceOriginalMeromorphicPoleClearing",
+          "SourceOriginalGermBasisRelation",
+          "SourceOriginalOnePoleComparison",
+          "SourceOriginalMeromorphicFunctionComparison",
+          "SourceOriginalMeromorphicPrincipalDivisor"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership103For5768.log",
+          "sha256": "18A2BD16F5909703375B681A422EF52D3FF1B670BAAA24520317C193FCA90521",
+          "sourceSha256": "285AF730A85F0B01F3E35B9AE0ED7F7EBB83AAB3F2B9D6FC095B9299938D245A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalSimplePoleRegularPart",
+          "SourceOriginalLogarithmicReading",
+          "SourceOriginalLocalExponentialModel"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership104For5768.log",
+          "sha256": "1334D8EFA5C1C7D5D5659010F791A6F4C0722E610C4087C190C0A960FC09A020",
+          "sourceSha256": "BB100DB5C482BD098664D86B3AFDD726A9EE192CA819085A31B3A30E6800D48A"
+        }
+      },
+      {
+        "modules": [
+          "SourceComplexPuncturedBallPaths",
+          "SourcePuncturedNeighborhoodConnected",
+          "SourceChartFiniteAvoidance",
+          "SourceChartFinitePuncturePaths",
+          "SourceOriginalFinitePuncturePaths",
+          "SourceOriginalDivisorAvoidingPaths"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership105For5768.log",
+          "sha256": "E6308EBFAF282E4735B059BCD1582A8CC831F0C6911E5BB44FD67ADEBEB19B52",
+          "sourceSha256": "BBD2F61E28B7CD13B342C80A954E4A9CC9263BA7B224800C06903E47E24F0982"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegularPathIntegralLaws",
+          "SourceOriginalIntegralPeriodPathIndependence",
+          "SourceOriginalPeriodExponential",
+          "SourceOriginalPeriodExponentialConsumer"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership106For5768.log",
+          "sha256": "B069D3D9140A760D46494B14513596BBC2E90FF3CF24DD984DC285CF440855F9",
+          "sourceSha256": "EB6B53AE595705FFD45746D95E5512CBAF7CFE6B0EC638AC352D0CB410CAF841"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalLocalChartPathPrimitive",
+          "SourceOriginalLocalChartPathIntegral",
+          "SourceOriginalRegularChartReadingAt",
+          "SourceOriginalExponentialLocalTransport",
+          "SourceOriginalExponentialChartDerivative",
+          "SourceMeromorphicLogDerivativeComparison",
+          "SourceOriginalExponentialMeromorphicOrders",
+          "SourceOriginalIntegralPeriodsPrincipal"
+        ],
+        "count": 11,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership107For5768.log",
+          "sha256": "B3C8496BA3C2BC8C47E83E264E33AE82795A761939CAA5991FA88A68B6E930D4",
+          "sourceSha256": "86806D0E1A97B72A37F48B411C7649CC6E73868C4BFC3EF52BBB5C540F0DA27E"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelOwnership5768.log",
+      "sha256": "BA53343093F1612094E8A05496CE2911DA3D4BFDCA2C713B37FA08D172AC7255",
+      "sourceSha256": "0BDE99FAD2A4378A84AA86C89719E1C820BF79ACBACD7BC4D3474763021127EA"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-152910-153.log",
+      "sha256": "61366BE240469F7FAA279C0635D12ADA4D780124A454FE6CCA54BEB4530DDB4E"
+    }
+  },
+  "scratchToProductionCountReason": "All 185 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original meromorphic functions and integral periods - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,768-module scope: all thirteen retained regressions, 40,282 exhaustive theorem checks, 17,647 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-22T01:05:16.537540+00:00",
+  "log": "logs/dubon-build-20261021-165250-763.log",
+  "sha256": "9A733DECBED9FCBAEA6E6131AFB73A17CAF8566013FE1F1BA0E1DC64BDE46BC0",
+  "bytes": 9908588,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5768,
+  "projectTheorems": 40282,
+  "registeredConsumers": 17647,
+  "registeredConstructions": 1098,
+  "declarations": 24249,
+  "generated": 22629,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_164926.log",
+  "foundationSha256": "E88250175B4425AC12DC7C0DC071DB904FDAD376A1EB477EC8B15CE42398A79F",
+  "countReconciliation": {
+    "previousTheorems": 40099,
+    "focusedTheorems": 185,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.OriginalChart.chartRead.eq_1",
+      "Dubon2026.SourceFunctionField.originalGenus.congr_simp"
+    ],
+    "addedTheorems": 183,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelOwnership5768.log",
+    "ownershipSha256": "BA53343093F1612094E8A05496CE2911DA3D4BFDCA2C713B37FA08D172AC7255"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 186,
+    "scratchDistinct": 185,
+    "productionFocused": 185,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.originalGenus.congr_simp": [
+        {
+          "scope": "SourceMeromorphicAbelScratchOwnership100For5768",
+          "module": "Dubon2026.SourceOriginalTwoPoleDimensions"
+        },
+        {
+          "scope": "SourceMeromorphicAbelScratchOwnership103For5768",
+          "module": "Dubon2026.SourceOriginalMeromorphicRRBounds"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalTwoPoleDimensions",
+          "SourceOriginalTwoPoleDifferential",
+          "SourceOriginalDifferentialResidues",
+          "SourceOriginalSimplePoleBounds",
+          "SourceOriginalTwoPoleResidues",
+          "SourceOriginalPrescribedResidues"
+        ],
+        "count": 48,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership100For5768.log",
+          "sha256": "FBF9CF79180499AAB80843B977BAF663D8464AFB2498F78E3073B36036AEF7DB",
+          "sourceSha256": "DCAEF2463FDE02C2075678659A59DDB94EDF19C769233F9E6693321618603965"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalLocalRegularPrimitives",
+          "SourceOriginalRegularPathLocalPrimitives",
+          "SourceOriginalRegularPathPrimitives",
+          "SourceOriginalThirdKindPathPrimitives"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership101For5768.log",
+          "sha256": "B8431EE3CE486BEA76F6484AECC57719FF9D61CAD46BC53F02BDF843A9730F68",
+          "sourceSha256": "E8CADBB13790E3698DB2B331CC3BF0395E67CBDFFBF4639068CD5516608684E6"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicRemovableCharts",
+          "SourceMeromorphicCompactConstancy",
+          "SourceMeromorphicLeadingCoefficient",
+          "SourceMeromorphicPoleBound",
+          "SourceMeromorphicDegreeBase",
+          "SourceMeromorphicDimensionBound",
+          "SourceOriginalMeromorphicDimension"
+        ],
+        "count": 42,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership102For5768.log",
+          "sha256": "930A162F5CD03E09932B8AE5ADD7490BF6EB0AE009E713D432A027CFB7ED79A7",
+          "sourceSha256": "D7857382D1787E7B7EC459A259787CCDEC5FFD607619B465622646291101FD7B"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicOrderNeighborhoods",
+          "SourceMeromorphicFinitePoles",
+          "SourceMeromorphicEffectivePoleBound",
+          "SourceOriginalMeromorphicPoleBound",
+          "SourceOriginalMeromorphicRRBounds",
+          "SourceOriginalChartReadFieldLaws",
+          "SourceOriginalMeromorphicPoleClearing",
+          "SourceOriginalGermBasisRelation",
+          "SourceOriginalOnePoleComparison",
+          "SourceOriginalMeromorphicFunctionComparison",
+          "SourceOriginalMeromorphicPrincipalDivisor"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership103For5768.log",
+          "sha256": "18A2BD16F5909703375B681A422EF52D3FF1B670BAAA24520317C193FCA90521",
+          "sourceSha256": "285AF730A85F0B01F3E35B9AE0ED7F7EBB83AAB3F2B9D6FC095B9299938D245A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalSimplePoleRegularPart",
+          "SourceOriginalLogarithmicReading",
+          "SourceOriginalLocalExponentialModel"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership104For5768.log",
+          "sha256": "1334D8EFA5C1C7D5D5659010F791A6F4C0722E610C4087C190C0A960FC09A020",
+          "sourceSha256": "BB100DB5C482BD098664D86B3AFDD726A9EE192CA819085A31B3A30E6800D48A"
+        }
+      },
+      {
+        "modules": [
+          "SourceComplexPuncturedBallPaths",
+          "SourcePuncturedNeighborhoodConnected",
+          "SourceChartFiniteAvoidance",
+          "SourceChartFinitePuncturePaths",
+          "SourceOriginalFinitePuncturePaths",
+          "SourceOriginalDivisorAvoidingPaths"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership105For5768.log",
+          "sha256": "E6308EBFAF282E4735B059BCD1582A8CC831F0C6911E5BB44FD67ADEBEB19B52",
+          "sourceSha256": "BBD2F61E28B7CD13B342C80A954E4A9CC9263BA7B224800C06903E47E24F0982"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegularPathIntegralLaws",
+          "SourceOriginalIntegralPeriodPathIndependence",
+          "SourceOriginalPeriodExponential",
+          "SourceOriginalPeriodExponentialConsumer"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership106For5768.log",
+          "sha256": "B069D3D9140A760D46494B14513596BBC2E90FF3CF24DD984DC285CF440855F9",
+          "sourceSha256": "EB6B53AE595705FFD45746D95E5512CBAF7CFE6B0EC638AC352D0CB410CAF841"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalLocalChartPathPrimitive",
+          "SourceOriginalLocalChartPathIntegral",
+          "SourceOriginalRegularChartReadingAt",
+          "SourceOriginalExponentialLocalTransport",
+          "SourceOriginalExponentialChartDerivative",
+          "SourceMeromorphicLogDerivativeComparison",
+          "SourceOriginalExponentialMeromorphicOrders",
+          "SourceOriginalIntegralPeriodsPrincipal"
+        ],
+        "count": 11,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership107For5768.log",
+          "sha256": "B3C8496BA3C2BC8C47E83E264E33AE82795A761939CAA5991FA88A68B6E930D4",
+          "sourceSha256": "86806D0E1A97B72A37F48B411C7649CC6E73868C4BFC3EF52BBB5C540F0DA27E"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelOwnership5768.log",
+      "sha256": "BA53343093F1612094E8A05496CE2911DA3D4BFDCA2C713B37FA08D172AC7255",
+      "sourceSha256": "0BDE99FAD2A4378A84AA86C89719E1C820BF79ACBACD7BC4D3474763021127EA"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-152910-153.log",
+      "sha256": "61366BE240469F7FAA279C0635D12ADA4D780124A454FE6CCA54BEB4530DDB4E"
+    }
+  },
+  "scratchToProductionCountReason": "All 185 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original cell reciprocity pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,825-module scope: all thirteen retained regressions, 40,466 exhaustive theorem checks, 17,754 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawPeriodsDependencyAudit7Production5825.log",
+      "sha256": "71A4C7A2C56A86EFB9533F0375B17582DD369A04AA1488CB760491CC259AF487",
+      "requiredProofValueEdges": 19,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_periods_of_generating_loops",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_generator_period_correction"
+      ],
+      "sourceSha256": "90143EE22B62D6465C29FEB3EF043E5CC61E4AFD9A0D1CABAA422A6B9DD6FF29"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRawAbelDependencyAudit4Production5825.log",
+      "sha256": "E79B6A48070AD662852E02B9E92285D606433CB9A44861C697CC4B53D9AC433F",
+      "requiredProofValueEdges": 16,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_raw_reciprocity"
+      ],
+      "sourceSha256": "674D6B248828ED3BE5BA9CD75472723F7B20E1016DD469FB4E0234E078F63525"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCellRadialDependencyAudit5Production5825.log",
+      "sha256": "37268FB0583E432DDF11FAA031D5A658777B2FE817614FB7F9CA446179A23F0B",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.exists_open_starConvex_neighborhood",
+        "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.isOpen_Kint"
+      ],
+      "sourceSha256": "A23134346D774CE62F78901756CCCFF61A5198D6318B9595C6414E02E32CEED0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPrimitivesDependencyAudit9Production5825.log",
+      "sha256": "5F72779242DBD45C1479A8C6A57F0561497AFE00AC330E42478A3332D141386E",
+      "requiredProofValueEdges": 19,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.exists_regular_primitives",
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.coeff_comp_mul_deriv",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.carrier_isCompact",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.interior_isOpen"
+      ],
+      "sourceSha256": "37B9EE4301E085CF1F096CA78E732872901CD1E6006AA8F607E96059E59F096B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellResiduesDependencyAudit4Production5825.log",
+      "sha256": "52032BD84797852B204B5CEA9FBA62E500B760F50320291D56D2AF5787CB4177",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.AnalyticCoord.local_calculus"
+      ],
+      "sourceSha256": "514E4158412CB2C24C914DD7D6BB2B38DD38A0ACCEFD47F8C846F52CFC121643"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCenteredResidueDependencyAudit7Production5825.log",
+      "sha256": "FCE7992F5DB245F25A300259BE033C888B564D975EC38F4F6176EFE47514765C",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.centered_weighted_residue"
+      ],
+      "sourceSha256": "545E376E3C7303FC7262F8E7D6A1A97B2482075ACBAE96FE5288CF0D23A6BD5B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionResiduesDependencyAudit3Production5825.log",
+      "sha256": "55DA348AD5F84C38321A586DE0800E51307B3328A2DC91A82B15070C7BF0BDC0",
+      "requiredProofValueEdges": 8,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.weighted_cell_residue",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_subset_carrier"
+      ],
+      "sourceSha256": "041489BB115004D10E0B7B68F119A81A2E1E806DCA0F87897A946CDB72F54701"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDissectionJumpsDependencyAudit6Production5825.log",
+      "sha256": "14F719AEF8B1A52D0E149D4EF146EE26504E15A165292ACEFBBD3E85C26CC4B7",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_and_jumps",
+        "Dubon2026.SourceFunctionField.CellGeometry.Cell.arc_integrable"
+      ],
+      "sourceSha256": "FAC50C84194E0068FD98FFB5DD84B0BE3E594D83D125900CA71C82A81561FA2D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEdgeCancellationDependencyAudit6Production5825.log",
+      "sha256": "50D4BEF9C02E357A76502B994A911B55D41ED07F902F7D193D490D2F9A02AEAE",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_edge_cancellation"
+      ],
+      "sourceSha256": "9ECCEE80EA2BE2C15A73E34C48C4709158A6F79BA2A49F6F6160573025474CA5"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueJumpsDependencyAudit6Production5825.log",
+      "sha256": "422B23180FB39C5DCC382FD6017E0176E480EC740F24798E8889429BBB0EEC08",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellDissection.exists_regular_primitives_residue_jumps"
+      ],
+      "sourceSha256": "E389820B0CC7135714C7B5446AA4091DAAA353BC09B3EB1D414EBFF08DCC6EC6"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityProductionAudit5825.log",
+  "sha256": "E2CA233F9B97F0126FB1FA9FB81CE69C5639AAB0C61225DAEBC4E65339CC5C6A",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-cell-reciprocity-production-5825-build.log",
+  "aggregateSha256": "EE863545E787D1EBDC1E9112E187706B13A6CC4A44F41A116393EDB3284308C4",
+  "productionModules": 5825,
+  "incrementModules": 57,
+  "axiomChecks": 130,
+  "exhaustiveIncrementTheorems": 185,
+  "linterScopes": 57,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 186,
+  "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Original functions, places, differentials, paths, residues and actual cell dissection retained. Raw geometric clauses and dissection existence remain explicit upstream; no final source contract weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 186,
+    "scratchDistinct": 186,
+    "productionFocused": 185,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp": [
+        {
+          "scope": "SourceCellReciprocityScratchOwnership115For5825",
+          "module": "Dubon2026.SourceOriginalCellCoefficientTransition"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalFinitePeriodGeneration",
+          "SourceOriginalDiscretePeriodsOfLoops",
+          "SourcePeriodReciprocityKernel",
+          "SourcePeriodIntegerCorrection",
+          "SourceOriginalLoopPeriodInjectivity",
+          "SourceOriginalPathIntegralLinearCombination",
+          "SourceOriginalGeneratorPeriodCorrection"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership108For5825.log",
+          "sha256": "3978F5E11CC500164A40712C186B79C7FDE27C737ADB3F0109E231EBF9C83136",
+          "sourceSha256": "2E1699603AA1354B5515AA2F8B0550E19BA7FE7CA9E23D03BB641706B8763B72"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPathIntegralSubtraction",
+          "SourceOriginalRegularDifferentialSubtraction",
+          "SourceOriginalIntegralPeriodsFromGenerators",
+          "SourceOriginalAbelConverseFromRawReciprocity"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership109For5825.log",
+          "sha256": "A12B674F82C8CD8289BAFFB23FD77FE8CB985654866BF1A51BD44A12E1F30265",
+          "sourceSha256": "135AC62E8B430582CC9E29A47E5773218282347A973EB8701B832279EC38E0E4"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellRadialRegion",
+          "SourceCellPeriodicRadius",
+          "SourceCellRadialCompact",
+          "SourceCellRadialNeighborhood",
+          "SourceCellRadialInterior"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership110For5825.log",
+          "sha256": "5C2580C32A2145FB98EBC69BA3C7E3AC59FAE34A4A50799ACBD3157E41AC1F64",
+          "sourceSha256": "C368307F27495CA0C08B386D21D1515C066577502D5B5FE63047C28BD07A373F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAnalyticCellCoordinates",
+          "SourceOriginalAnalyticCells",
+          "SourceOriginalCellCoordinateInverse",
+          "SourceOriginalDifferentialRegularNeighborhood",
+          "SourceOriginalChartOneFormLaw",
+          "SourceOriginalCellRegularCoefficient",
+          "SourceOriginalCellCoefficientPullback",
+          "SourceCellRadialPrimitive",
+          "SourceOriginalCellPrimitives"
+        ],
+        "count": 29,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership111For5825.log",
+          "sha256": "85FB8B9355B549862A160661AE5A0E9313C5BD76B1FE36CE8491C330D4FD7BCE",
+          "sourceSha256": "A4422202256CB898FAFFD862B4B1EDA71F060CBA3411577A8189F28B7954F59E"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPuncturedOneFormLaw",
+          "SourceOriginalCellPuncturedCoefficient",
+          "SourceComplexSimplePolePullback",
+          "SourceOriginalCellResidues"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership112For5825.log",
+          "sha256": "BF5D10F66A0D83AF05C553A73AEA527F90F98A8DD11BA43E07F0EC3640971325",
+          "sourceSha256": "D9ABD0CD92F760B0A9C4C9C919F044E1BCC57B75B7E66C1001490E6040C339FB"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellBoundaryGeometry",
+          "SourceCellBoundaryDifferentiation",
+          "SourceCellArcFundamentalTheorem",
+          "SourceCellPrimitiveContour",
+          "SourceCellCenteredWinding",
+          "SourceCellCenteredResidue",
+          "SourceOriginalCellCenteredResidue"
+        ],
+        "count": 34,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership113For5825.log",
+          "sha256": "0A320EF119AD0D3781F2BA528250BC32238F72D520D33CBE105340C7625648A1",
+          "sourceSha256": "1DAA78FF77BBCD87B2C35DDF506ACA89496440C2282F34CF3CCB70F4C1630645"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellDissection",
+          "SourceOriginalCellDissectionInteriors",
+          "SourceOriginalDissectionCellResidues"
+        ],
+        "count": 19,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership114For5825.log",
+          "sha256": "BF2626C4D18EAE0ECB26C34068855730429EA558F82DC05756050608DB207B8D",
+          "sourceSha256": "86FE0C0A68A7A30AA9757A6B2DBB516E0EBF24AA1431F64953047872743B41AE"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellCoordinateTransition",
+          "SourceOriginalCellCoefficientTransition",
+          "SourceOriginalCellBoundaryIntegrability",
+          "SourceOriginalCellPrimitiveJumps",
+          "SourceOriginalPairedArcOverlap",
+          "SourceOriginalDissectionPrimitiveJumps"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership115For5825.log",
+          "sha256": "563357BFA4B552B82D22048E38592D0CA5FF937AE49803DA7AAABD3251B71A1C",
+          "sourceSha256": "FDEDA9932A6B3AD7A147665F3F82317264D2651138564E81419FFC5A1EFF1C2F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalReversedArcIntegrand",
+          "SourceCellArcIntegralExtension",
+          "SourceOriginalWeightedArcIntegral",
+          "SourceOriginalWeightedArcReversal",
+          "SourceOriginalWeightedEdgeCancellation",
+          "SourceOriginalDissectionEdgeCancellation"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership116For5825.log",
+          "sha256": "1CB226E485C9F49876EF72B1984A0D13ED778C2BAA53F3D741F7FADBCCFF206F",
+          "sourceSha256": "33D51504919A0C4B6FCCC9800545300A6C528E2A8023E4B9309874B5DC4D7206"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellArcPartition",
+          "SourceOriginalPairedBoundarySum",
+          "SourceOriginalDissectionSkeletonRegularity",
+          "SourceOriginalWeightedResidueJumpSum",
+          "SourceOriginalPoleCarrierSum",
+          "SourceOriginalDissectionResidueJumps"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership117For5825.log",
+          "sha256": "B029D36790E3D8D606B0739795222A78B458D13AE9AC9D1DFB42101E7550D9D7",
+          "sourceSha256": "B23231C1B2009F99CDC86730F6CDDFBFC09EA449A821C756EFAD2206C9DECC26"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityOwnership5825.log",
+      "sha256": "5B4C264655D7D131A9F15D1A5E00B18AEDB597EA56EA3836B9CCAF4F7470FD10",
+      "sourceSha256": "77730194794F6932A3040D3022B5A5F8B044EA257FD1F216A6E093BB42A3B23A"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-165250-763.log",
+      "sha256": "9A733DECBED9FCBAEA6E6131AFB73A17CAF8566013FE1F1BA0E1DC64BDE46BC0"
+    }
+  },
+  "scratchToProductionCountReason": "All 186 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original cell residue-jump identity and conditional raw reciprocity - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,825-module scope: all thirteen retained regressions, 40,466 exhaustive theorem checks, 17,754 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-22T02:32:55.081972+00:00",
+  "log": "logs/dubon-build-20261021-181912-897.log",
+  "sha256": "B80DD8019D9390F157665DC765310C3DA7B4485FB16783089C6FE89FAE04C853",
+  "bytes": 9966163,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5825,
+  "projectTheorems": 40466,
+  "registeredConsumers": 17754,
+  "registeredConstructions": 1121,
+  "declarations": 24422,
+  "generated": 22818,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_181602.log",
+  "foundationSha256": "058226C292B8E11D30AE98382E5DAF19F3CDA33183625E9A073415FE37B5C3F3",
+  "countReconciliation": {
+    "previousTheorems": 40282,
+    "focusedTheorems": 185,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.OriginalChart.pathPeriodLattice.congr_simp"
+    ],
+    "addedTheorems": 184,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityOwnership5825.log",
+    "ownershipSha256": "5B4C264655D7D131A9F15D1A5E00B18AEDB597EA56EA3836B9CCAF4F7470FD10"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 186,
+    "scratchDistinct": 186,
+    "productionFocused": 185,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp": [
+        {
+          "scope": "SourceCellReciprocityScratchOwnership115For5825",
+          "module": "Dubon2026.SourceOriginalCellCoefficientTransition"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.OriginalChart.readDifferential.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalFinitePeriodGeneration",
+          "SourceOriginalDiscretePeriodsOfLoops",
+          "SourcePeriodReciprocityKernel",
+          "SourcePeriodIntegerCorrection",
+          "SourceOriginalLoopPeriodInjectivity",
+          "SourceOriginalPathIntegralLinearCombination",
+          "SourceOriginalGeneratorPeriodCorrection"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership108For5825.log",
+          "sha256": "3978F5E11CC500164A40712C186B79C7FDE27C737ADB3F0109E231EBF9C83136",
+          "sourceSha256": "2E1699603AA1354B5515AA2F8B0550E19BA7FE7CA9E23D03BB641706B8763B72"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPathIntegralSubtraction",
+          "SourceOriginalRegularDifferentialSubtraction",
+          "SourceOriginalIntegralPeriodsFromGenerators",
+          "SourceOriginalAbelConverseFromRawReciprocity"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership109For5825.log",
+          "sha256": "A12B674F82C8CD8289BAFFB23FD77FE8CB985654866BF1A51BD44A12E1F30265",
+          "sourceSha256": "135AC62E8B430582CC9E29A47E5773218282347A973EB8701B832279EC38E0E4"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellRadialRegion",
+          "SourceCellPeriodicRadius",
+          "SourceCellRadialCompact",
+          "SourceCellRadialNeighborhood",
+          "SourceCellRadialInterior"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership110For5825.log",
+          "sha256": "5C2580C32A2145FB98EBC69BA3C7E3AC59FAE34A4A50799ACBD3157E41AC1F64",
+          "sourceSha256": "C368307F27495CA0C08B386D21D1515C066577502D5B5FE63047C28BD07A373F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAnalyticCellCoordinates",
+          "SourceOriginalAnalyticCells",
+          "SourceOriginalCellCoordinateInverse",
+          "SourceOriginalDifferentialRegularNeighborhood",
+          "SourceOriginalChartOneFormLaw",
+          "SourceOriginalCellRegularCoefficient",
+          "SourceOriginalCellCoefficientPullback",
+          "SourceCellRadialPrimitive",
+          "SourceOriginalCellPrimitives"
+        ],
+        "count": 29,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership111For5825.log",
+          "sha256": "85FB8B9355B549862A160661AE5A0E9313C5BD76B1FE36CE8491C330D4FD7BCE",
+          "sourceSha256": "A4422202256CB898FAFFD862B4B1EDA71F060CBA3411577A8189F28B7954F59E"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPuncturedOneFormLaw",
+          "SourceOriginalCellPuncturedCoefficient",
+          "SourceComplexSimplePolePullback",
+          "SourceOriginalCellResidues"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership112For5825.log",
+          "sha256": "BF5D10F66A0D83AF05C553A73AEA527F90F98A8DD11BA43E07F0EC3640971325",
+          "sourceSha256": "D9ABD0CD92F760B0A9C4C9C919F044E1BCC57B75B7E66C1001490E6040C339FB"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellBoundaryGeometry",
+          "SourceCellBoundaryDifferentiation",
+          "SourceCellArcFundamentalTheorem",
+          "SourceCellPrimitiveContour",
+          "SourceCellCenteredWinding",
+          "SourceCellCenteredResidue",
+          "SourceOriginalCellCenteredResidue"
+        ],
+        "count": 34,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership113For5825.log",
+          "sha256": "0A320EF119AD0D3781F2BA528250BC32238F72D520D33CBE105340C7625648A1",
+          "sourceSha256": "1DAA78FF77BBCD87B2C35DDF506ACA89496440C2282F34CF3CCB70F4C1630645"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellDissection",
+          "SourceOriginalCellDissectionInteriors",
+          "SourceOriginalDissectionCellResidues"
+        ],
+        "count": 19,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership114For5825.log",
+          "sha256": "BF2626C4D18EAE0ECB26C34068855730429EA558F82DC05756050608DB207B8D",
+          "sourceSha256": "86FE0C0A68A7A30AA9757A6B2DBB516E0EBF24AA1431F64953047872743B41AE"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellCoordinateTransition",
+          "SourceOriginalCellCoefficientTransition",
+          "SourceOriginalCellBoundaryIntegrability",
+          "SourceOriginalCellPrimitiveJumps",
+          "SourceOriginalPairedArcOverlap",
+          "SourceOriginalDissectionPrimitiveJumps"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership115For5825.log",
+          "sha256": "563357BFA4B552B82D22048E38592D0CA5FF937AE49803DA7AAABD3251B71A1C",
+          "sourceSha256": "FDEDA9932A6B3AD7A147665F3F82317264D2651138564E81419FFC5A1EFF1C2F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalReversedArcIntegrand",
+          "SourceCellArcIntegralExtension",
+          "SourceOriginalWeightedArcIntegral",
+          "SourceOriginalWeightedArcReversal",
+          "SourceOriginalWeightedEdgeCancellation",
+          "SourceOriginalDissectionEdgeCancellation"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership116For5825.log",
+          "sha256": "1CB226E485C9F49876EF72B1984A0D13ED778C2BAA53F3D741F7FADBCCFF206F",
+          "sourceSha256": "33D51504919A0C4B6FCCC9800545300A6C528E2A8023E4B9309874B5DC4D7206"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellArcPartition",
+          "SourceOriginalPairedBoundarySum",
+          "SourceOriginalDissectionSkeletonRegularity",
+          "SourceOriginalWeightedResidueJumpSum",
+          "SourceOriginalPoleCarrierSum",
+          "SourceOriginalDissectionResidueJumps"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCellReciprocityScratchOwnership117For5825.log",
+          "sha256": "B029D36790E3D8D606B0739795222A78B458D13AE9AC9D1DFB42101E7550D9D7",
+          "sourceSha256": "B23231C1B2009F99CDC86730F6CDDFBFC09EA449A821C756EFAD2206C9DECC26"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellReciprocityOwnership5825.log",
+      "sha256": "5B4C264655D7D131A9F15D1A5E00B18AEDB597EA56EA3836B9CCAF4F7470FD10",
+      "sourceSha256": "77730194794F6932A3040D3022B5A5F8B044EA257FD1F216A6E093BB42A3B23A"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-165250-763.log",
+      "sha256": "9A733DECBED9FCBAEA6E6131AFB73A17CAF8566013FE1F1BA0E1DC64BDE46BC0"
+    }
+  },
+  "scratchToProductionCountReason": "All 186 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Actual source dissection construction and the remaining geometric loop-generation and matrix reciprocity clauses are open. Therefore the unconditional Abel converse and discreteness of actual periods remain open, followed by original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original ordinary cells pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,867-module scope: all thirteen retained regressions, 40,728 exhaustive theorem checks, 17,893 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Actual powered branch and exterior pole cells, a finite global family and its pairing, the Euler identity, loop generation and raw matrix reciprocity remain required. Thus the unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPairedDissectionDependencyAudit7Production5867.log",
+      "sha256": "CF372AC02C4B9B2A4DC82C95CAD92A16B45640B447DDF91C36368367D7DC60D8",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.exists_dissection_from_paired_family"
+      ],
+      "sourceSha256": "A53E7D45A7A1A05695DB586624F1368513C2F6090D993CA344478B7D478D78AD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalCoordinatesDependencyAudit4Production5867.log",
+      "sha256": "7DBA4A8646DC33D12B98E58061020E11A421179B0B7DC155FCECF4535CC9B794",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_normal_cell_coordinate"
+      ],
+      "sourceSha256": "E1FF37923D24EDDDE1CE21065D348B0A6A6C85E3B02A69C7D4638E3B57DC1FF8"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalFibersDependencyAudit3Production5867.log",
+      "sha256": "0B4E4A406E38A7301E184378EC8FA7BBEBC525DE81F04FCCA07E8B754883AF38",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_normal_fiber_neighborhoods"
+      ],
+      "sourceSha256": "DBAAF58D7D556F47C12C380F480BD8BD873F27E8CBD5BC68A0E44E995F68FF8E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJCoveringDependencyAudit4Production5867.log",
+      "sha256": "6088BA8B02F304BE03C62035EB6A2D52C703623A2E2C3A887EF6391C553ACF06",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isCoveringMapOn_original_j",
+        "Dubon2026.SourceFunctionField.OriginalChart.card_original_j_regular_fiber"
+      ],
+      "sourceSha256": "7303CCEAB7C6B03BCEAB236C2385A20F84F9A3E90F0A482CB04D481A42C96C46"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJNormalNeighborhoodsDependencyAudit2Production5867.log",
+      "sha256": "D7D64E39295AB03DFA4B065CDCF7C85F6ADDDF89FA604781FA49EB13A594A566",
+      "requiredProofValueEdges": 7,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_branch_neighborhoods",
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_pole_neighborhoods"
+      ],
+      "sourceSha256": "2602A7D83C6500ACBFEBD605663DA0D822E9F019B8F03862A80EDFCF26E4E620"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticJSheetsDependencyAudit5Production5867.log",
+      "sha256": "09D502E3FF83F3EA5F84D262B38CFCE712FF94DF21FA07B180861374A50B17E4",
+      "requiredProofValueEdges": 16,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_analytic_sheet_neighborhood"
+      ],
+      "sourceSha256": "A22908308358EE036634F7425275C6E85E95249FF2CB6E3A4BCB517CB9D4E061"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJGridScaleDependencyAudit3Production5867.log",
+      "sha256": "E0CA793E792CCA44B778E695138EF6604BCA453D91D8B998E1FC8A8F7EC6DBCC",
+      "requiredProofValueEdges": 8,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_separating_grid"
+      ],
+      "sourceSha256": "E0F16598518A7BF1D9879D423D242FE9973423953CF7F5FC233D9034171F65F3"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinarySquareSheetsDependencyAudit4Production5867.log",
+      "sha256": "192ACABE59C30903C299EC5EEA2BA35BF4C847C5CDE4D780697A74867E665760",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_ordinary_square_sheets"
+      ],
+      "sourceSha256": "471CE5FC7F349EF8144CF89446A7FD5744A35EDDC8A8DDEC97960AA15D75D3B8"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinarySquareCellsDependencyAudit10Production5867.log",
+      "sha256": "9E3DC41AA5856A183E2E48BFDEA1E6305F1E293391D642247806E45D2006474C",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_ordinary_square_cells"
+      ],
+      "sourceSha256": "7F42EDF4AA9FC161EF8751A498AC4EEC7CDC4893D524F6E20062C07B4C1F3D9A"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinaryCellsProductionAudit5867.log",
+  "sha256": "E44436DD85BC456B24105F406CAE4AF66B7093C1AEE3580643BAAC2BA06184C5",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinaryCellsProductionBuild5867.log",
+  "aggregateSha256": "4C3BA1CCE97EBD413AF2D0393CDB781440FBBEB47B846CD42B93A36BA932DFCA",
+  "productionModules": 5867,
+  "incrementModules": 42,
+  "axiomChecks": 165,
+  "exhaustiveIncrementTheorems": 263,
+  "linterScopes": 42,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 263,
+  "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Original functions, places, exact normal exponents, actual j sheets and radial cells retained. Global dissection existence and raw geometric reciprocity remain open; no final source contract weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 263,
+    "scratchDistinct": 263,
+    "productionFocused": 263,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalCellCoverConnectivity",
+          "SourceOriginalCellPairing",
+          "SourceOriginalCellPairingSides",
+          "SourceOriginalCellPairingVertices",
+          "SourceOriginalDissectionOfPairing",
+          "SourceOriginalPairedCellCounts",
+          "SourceOriginalDissectionFromPairedFamily"
+        ],
+        "count": 41,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership118For5867.log",
+          "sha256": "821F493155262E26AD717D05F1418C1A0BD0156E1BF7F866DA192783AF5B3E85",
+          "sourceSha256": "DD8BA2CA294743CA15627E6580D9AEA8DFA6F3EC8D24E28902385E7959845C3E"
+        }
+      },
+      {
+        "modules": [
+          "SourceAnalyticPowerCoordinate",
+          "SourceOriginalPowerCoordinate",
+          "SourceOriginalChartTransitionDerivative",
+          "SourceOriginalNormalCellCoordinates"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership119For5867.log",
+          "sha256": "5F1FB54F2910E394BA71BA0A4CCF2EFD1876FEE4687CA3B6CB136CD5398A0F87",
+          "sourceSha256": "688FD8A8A468A500DB42564769FDD41368807361C76BAFF9EC184C2E158E28AE"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalNormalCoordinateShrink",
+          "SourceOriginalFiniteNormalCoordinates",
+          "SourceOriginalNormalFiberNeighborhoods"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership120For5867.log",
+          "sha256": "23958C2B04A1997FD489CDA843A4D373E27EE57CA0481B0CB90233DC5D14CB56",
+          "sourceSha256": "5BB60A214F628A3A108877AB6968E6CA2DAA39978B9BFE25D5CB5AB2790A593B"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegularEvaluation",
+          "SourceOriginalEvaluationClosedMap",
+          "SourceOriginalUnramifiedEvaluationChart",
+          "SourceOriginalJCovering"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership121For5867.log",
+          "sha256": "1EFCB5C2ECFFE34BB3E567D3DD996E95FCD7C9513EF17E2730D0E5E6019A6A78",
+          "sourceSha256": "C83D20861248173A79529AE8DA97E37E74D5AF9A256E4FB611045CD188598890"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalJBranchNeighborhoods",
+          "SourceOriginalJPoleNeighborhoods"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership122For5867.log",
+          "sha256": "D486A9DE333765D67A84E8EF5EC4A53936D06FD4D7B1D0BFED587213A41F159B",
+          "sourceSha256": "3990F3EDA06BB0594B876C08860693AF1F2D71E9BDFD427CA71ED2CFBF261A2F"
+        }
+      },
+      {
+        "modules": [
+          "SourceCoveringSheetDecomposition",
+          "SourceOriginalSheetFamilies",
+          "SourceOriginalJSheetNeighborhoods",
+          "SourceOriginalUnramifiedChartDerivative",
+          "SourceOriginalAnalyticJSheets"
+        ],
+        "count": 32,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership123For5867.log",
+          "sha256": "894876C4B50B275EC0A8E7B46355C583FD0143AEF4764F9AB21D850574CBAA2B",
+          "sourceSha256": "7397E34B3B115DC004D619EC7BD2DE588FDF3B973194EDCB34F70596BEF0E992"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellGridSeparation",
+          "SourceCellSheetCollar",
+          "SourceOriginalJGridScale"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership124For5867.log",
+          "sha256": "8AA1A44D8035AD7745D8096D8BB117ACC14CD0119DF89AFA640C9F5ABAB772D6",
+          "sourceSha256": "4CC23B59DD54A2770BE5C4C2E6E1BC09EA494CDA583392F3D745797CCE88334B"
+        }
+      },
+      {
+        "modules": [
+          "SourceSimplyConnectedCovering",
+          "SourceOriginalConvexJSheets",
+          "SourceCellGridSquares",
+          "SourceOriginalOrdinarySquareSheets"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership125For5867.log",
+          "sha256": "50D09975D430960F27B2D8F56815B33C208EA8ADEBA1962B7FBA23757CBF06CE",
+          "sourceSha256": "AF4E84EE9938FFACF1743D927AA331EA79E0BF770106AF89B062A1DDA70444F5"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellRectangleAngles",
+          "SourceCellRectangleRadius",
+          "SourceCellRectangleBranches",
+          "SourceCellRectangleSmoothness",
+          "SourceCellSixArcTrigonometry",
+          "SourceCellSixArcSegments",
+          "SourceCellSixArcRegion",
+          "SourceCellSixArcSides",
+          "SourceCellSixArcBoundary",
+          "SourceOriginalOrdinarySquareCells"
+        ],
+        "count": 124,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership126For5867.log",
+          "sha256": "A2DAD4C8286F7331971E2BAD31B6202893727CE00F6FBEE6A182D2D181CA2D8F",
+          "sourceSha256": "ED8E8B926B356632567B96741DE8F75A55E438050C37F262FF01B90ECC04F990"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinaryCellsOwnership5867.log",
+      "sha256": "98DD2E70EC3A1F57B5BBDEA4117AF768D8A07D89E489A9096F385C20376D4935",
+      "sourceSha256": "CC6EF5CFB100278456EFFD21275FEEE06B93EDBAC1B701A62E30A8021216856E"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-181912-897.log",
+      "sha256": "B80DD8019D9390F157665DC765310C3DA7B4485FB16783089C6FE89FAE04C853"
+    }
+  },
+  "scratchToProductionCountReason": "All 263 distinct names from 263 exhaustive scratch checks are retained: 263 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Actual powered branch and exterior pole cells, a finite global family and its pairing, the Euler identity, loop generation and raw matrix reciprocity remain required. Thus the unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original normal charts and ordinary cells - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,867-module scope: all thirteen retained regressions, 40,728 exhaustive theorem checks, 17,893 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Actual powered branch and exterior pole cells, a finite global family and its pairing, the Euler identity, loop generation and raw matrix reciprocity remain required. Thus the unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-22T04:04:19.156065+00:00",
+  "log": "logs/dubon-build-20261021-194935-859.log",
+  "sha256": "ACE70F6A05D11C8E72F905EB895DA75BD78CF8553546F91BA08ABAC7A3E08C3B",
+  "bytes": 10047880,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5867,
+  "projectTheorems": 40728,
+  "registeredConsumers": 17893,
+  "registeredConstructions": 1147,
+  "declarations": 24601,
+  "generated": 23017,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_194630.log",
+  "foundationSha256": "28A4BA549EC1C5DEE7DF56AFBE6F404A7DA0F5F8E67A356E02BB260CA8A1398D",
+  "countReconciliation": {
+    "previousTheorems": 40466,
+    "focusedTheorems": 263,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.OriginalChart.chartRead.eq_1"
+    ],
+    "addedTheorems": 262,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinaryCellsOwnership5867.log",
+    "ownershipSha256": "98DD2E70EC3A1F57B5BBDEA4117AF768D8A07D89E489A9096F385C20376D4935"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 263,
+    "scratchDistinct": 263,
+    "productionFocused": 263,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalCellCoverConnectivity",
+          "SourceOriginalCellPairing",
+          "SourceOriginalCellPairingSides",
+          "SourceOriginalCellPairingVertices",
+          "SourceOriginalDissectionOfPairing",
+          "SourceOriginalPairedCellCounts",
+          "SourceOriginalDissectionFromPairedFamily"
+        ],
+        "count": 41,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership118For5867.log",
+          "sha256": "821F493155262E26AD717D05F1418C1A0BD0156E1BF7F866DA192783AF5B3E85",
+          "sourceSha256": "DD8BA2CA294743CA15627E6580D9AEA8DFA6F3EC8D24E28902385E7959845C3E"
+        }
+      },
+      {
+        "modules": [
+          "SourceAnalyticPowerCoordinate",
+          "SourceOriginalPowerCoordinate",
+          "SourceOriginalChartTransitionDerivative",
+          "SourceOriginalNormalCellCoordinates"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership119For5867.log",
+          "sha256": "5F1FB54F2910E394BA71BA0A4CCF2EFD1876FEE4687CA3B6CB136CD5398A0F87",
+          "sourceSha256": "688FD8A8A468A500DB42564769FDD41368807361C76BAFF9EC184C2E158E28AE"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalNormalCoordinateShrink",
+          "SourceOriginalFiniteNormalCoordinates",
+          "SourceOriginalNormalFiberNeighborhoods"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership120For5867.log",
+          "sha256": "23958C2B04A1997FD489CDA843A4D373E27EE57CA0481B0CB90233DC5D14CB56",
+          "sourceSha256": "5BB60A214F628A3A108877AB6968E6CA2DAA39978B9BFE25D5CB5AB2790A593B"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegularEvaluation",
+          "SourceOriginalEvaluationClosedMap",
+          "SourceOriginalUnramifiedEvaluationChart",
+          "SourceOriginalJCovering"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership121For5867.log",
+          "sha256": "1EFCB5C2ECFFE34BB3E567D3DD996E95FCD7C9513EF17E2730D0E5E6019A6A78",
+          "sourceSha256": "C83D20861248173A79529AE8DA97E37E74D5AF9A256E4FB611045CD188598890"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalJBranchNeighborhoods",
+          "SourceOriginalJPoleNeighborhoods"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership122For5867.log",
+          "sha256": "D486A9DE333765D67A84E8EF5EC4A53936D06FD4D7B1D0BFED587213A41F159B",
+          "sourceSha256": "3990F3EDA06BB0594B876C08860693AF1F2D71E9BDFD427CA71ED2CFBF261A2F"
+        }
+      },
+      {
+        "modules": [
+          "SourceCoveringSheetDecomposition",
+          "SourceOriginalSheetFamilies",
+          "SourceOriginalJSheetNeighborhoods",
+          "SourceOriginalUnramifiedChartDerivative",
+          "SourceOriginalAnalyticJSheets"
+        ],
+        "count": 32,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership123For5867.log",
+          "sha256": "894876C4B50B275EC0A8E7B46355C583FD0143AEF4764F9AB21D850574CBAA2B",
+          "sourceSha256": "7397E34B3B115DC004D619EC7BD2DE588FDF3B973194EDCB34F70596BEF0E992"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellGridSeparation",
+          "SourceCellSheetCollar",
+          "SourceOriginalJGridScale"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership124For5867.log",
+          "sha256": "8AA1A44D8035AD7745D8096D8BB117ACC14CD0119DF89AFA640C9F5ABAB772D6",
+          "sourceSha256": "4CC23B59DD54A2770BE5C4C2E6E1BC09EA494CDA583392F3D745797CCE88334B"
+        }
+      },
+      {
+        "modules": [
+          "SourceSimplyConnectedCovering",
+          "SourceOriginalConvexJSheets",
+          "SourceCellGridSquares",
+          "SourceOriginalOrdinarySquareSheets"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership125For5867.log",
+          "sha256": "50D09975D430960F27B2D8F56815B33C208EA8ADEBA1962B7FBA23757CBF06CE",
+          "sourceSha256": "AF4E84EE9938FFACF1743D927AA331EA79E0BF770106AF89B062A1DDA70444F5"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellRectangleAngles",
+          "SourceCellRectangleRadius",
+          "SourceCellRectangleBranches",
+          "SourceCellRectangleSmoothness",
+          "SourceCellSixArcTrigonometry",
+          "SourceCellSixArcSegments",
+          "SourceCellSixArcRegion",
+          "SourceCellSixArcSides",
+          "SourceCellSixArcBoundary",
+          "SourceOriginalOrdinarySquareCells"
+        ],
+        "count": 124,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrdinaryCellsScratchOwnership126For5867.log",
+          "sha256": "A2DAD4C8286F7331971E2BAD31B6202893727CE00F6FBEE6A182D2D181CA2D8F",
+          "sourceSha256": "ED8E8B926B356632567B96741DE8F75A55E438050C37F262FF01B90ECC04F990"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOrdinaryCellsOwnership5867.log",
+      "sha256": "98DD2E70EC3A1F57B5BBDEA4117AF768D8A07D89E489A9096F385C20376D4935",
+      "sourceSha256": "CC6EF5CFB100278456EFFD21275FEEE06B93EDBAC1B701A62E30A8021216856E"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-181912-897.log",
+      "sha256": "B80DD8019D9390F157665DC765310C3DA7B4485FB16783089C6FE89FAE04C853"
+    }
+  },
+  "scratchToProductionCountReason": "All 263 distinct names from 263 exhaustive scratch checks are retained: 263 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Actual powered branch and exterior pole cells, a finite global family and its pairing, the Euler identity, loop generation and raw matrix reciprocity remain required. Thus the unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original global cells pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,957-module scope: all thirteen retained regressions, 41,710 exhaustive theorem checks, 18,398 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The actual arc side assignments and local matches still require assembly into a global pairing involution with C1 orientation reversal. Curve intersection chains, the curve Euler identity, loop generation and raw matrix reciprocity remain required. Thus unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBranchPoleCellsDependencyAudit12Production5957.log",
+      "sha256": "78C1B49E0651A632FB1D56F09EA638749B7FDB10D0B623E1F2103829F96D3882",
+      "requiredProofValueEdges": 27,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_branch_cells",
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_j_pole_cells"
+      ],
+      "sourceSha256": "D64364A0BB0041BDB20A24CC156312ADF41FFA7D00D01AF5F261CDAFF29F47B0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteGridCellsDependencyAudit11Production5957.log",
+      "sha256": "D8D0F925810DF182C00BB367EBD6487A167933B3D821FD6C4D8610C5756FF98C",
+      "requiredProofValueEdges": 26,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalJFiniteGrid.exists_original_finite_window_cell_cover",
+        "Dubon2026.SourceFunctionField.CellGeometry.SquareGrid.FiniteLayout.perimeter_plain",
+        "Dubon2026.SourceFunctionField.CellGeometry.SquareGrid.FiniteLayout.branch_separation",
+        "Dubon2026.SourceFunctionField.CellGeometry.SquareGrid.FiniteLayout.closedBall_inside"
+      ],
+      "sourceSha256": "FCB865E04BA37A8CF9C55F06E4D563DB2ADED08581A8876DEC8168BA2DB0DFE9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalCellCoverDependencyAudit19Production5957.log",
+      "sha256": "45B8D898402D6F29576E1437ED03FDD4498C2EAAA1A1BBF6E1D6C5EAB0E25A21",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_global_cell_cover",
+        "Dubon2026.SourceFunctionField.CellGeometry.WindowPerimeter.exists_window_perimeter"
+      ],
+      "sourceSha256": "EC56C60E05B7EAC509C6BC961B5425EFDF3723DE380A2F549609C2EFB50DE7B7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCenteredGlobalCoverDependencyAudit4Production5957.log",
+      "sha256": "108D0F811D001ADA8D5AF74E9C39EE22FD7908424E0807F39B1CC2601494037B",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_global_cover"
+      ],
+      "sourceSha256": "8140E6BBF11512BB3FAFE86F1750BB1681C667E13D5F8A0DD119D03487D04694"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCellEdgeReparamDependencyAudit7Production5957.log",
+      "sha256": "D27151E56B6D5951A5F786D5A7D6CCA0340BEC2057DAEB84E4957F41F2B4191B",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.SegmentReparam.exists_reparam_across_edge",
+        "Dubon2026.SourceFunctionField.CellGeometry.SegmentReparam.exists_reparam_same_side"
+      ],
+      "sourceSha256": "1B90F8131C5CD8BD9DD27D21FEF141DE2F2BFAF5F3FACC8539EF01F38955E294"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlanarGridGeometryDependencyAudit26Production5957.log",
+      "sha256": "4ACC5DE3B4C63AACEC6DACE1DBF5DA42B4F41BE0F932160FD9223492E549652A",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_planar_cover"
+      ],
+      "sourceSha256": "4255816D5C5419BA8E81619C047FDFB51957E2DB66488BDB2BCC9DE14C8A7CA7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArcMatchingDependencyAudit11Production5957.log",
+      "sha256": "4C952C9BAA123DED22AA76AE04808E928757A79187D55E6D2A9E548ED13A1B49",
+      "requiredProofValueEdges": 26,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.ordinary_arc_matching",
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.branch_arc_matching",
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.exterior_arc_matching"
+      ],
+      "sourceSha256": "B96CF2B4221F241DF2ABBD52861C2AB67C7A15A3E7DB9D88FF00833FF68476D0"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalCellsProductionAudit5957.log",
+  "sha256": "0E0D375868A716307433DFDA8A0BF663383AE5798C0BBF22C5013BF318695FAA",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-global-cells-production-build-5957.log",
+  "aggregateSha256": "26CE15A137310FD41B03B04AE7C76D31ECC4121D70475C89E01A70F72FBB212C",
+  "productionModules": 5957,
+  "incrementModules": 90,
+  "axiomChecks": 593,
+  "exhaustiveIncrementTheorems": 982,
+  "linterScopes": 90,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 982,
+  "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Original functions and places, actual ordinary/branch/pole cells, marked centers and full planar incidence and local matching statements retained. Global dissection existence and raw geometric reciprocity remain open; no final source contract weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 982,
+    "scratchDistinct": 982,
+    "productionFocused": 982,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceCellReciprocalRegion",
+          "SourceCellReciprocalGeometry",
+          "SourceCellPowerRadius",
+          "SourceCellPowerBreaks",
+          "SourceCellPowerRegion",
+          "SourceCellPowerArcs",
+          "SourceCellPowerArcInjectivity",
+          "SourceCellPowerSeparatedArcs",
+          "SourceOriginalBranchedCells",
+          "SourceOriginalInverseJCells",
+          "SourceOriginalPoleCellGeometry",
+          "SourceOriginalPoleCells"
+        ],
+        "count": 114,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership127For5957.log",
+          "sha256": "E3C1B6379F661CD88212DDA6D90EE0D60B048657225A0DC0B90C33F3F9C6DFB4",
+          "sourceSha256": "CB6AE57D5386FE34AD7B2653C5290B1915032F1BD3BC8E17FC4E88E2CD8B6A64"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellGridWindow",
+          "SourceCellGridIndexGeometry",
+          "SourceCellMarkedGridCentres",
+          "SourceCellGridSquareBounds",
+          "SourceCellFiniteGridLayout",
+          "SourceCellFiniteGridGeometry",
+          "SourceOriginalGridRegionSheets",
+          "SourceOriginalGridCellFamilies",
+          "SourceOriginalJFiniteGrid",
+          "SourceOriginalGridCellIndex",
+          "SourceOriginalGridCellCoverage"
+        ],
+        "count": 103,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership128For5957.log",
+          "sha256": "A687FF7602DB752CF7B638EBC9501ED63C32EE5483BAD07BBBFC1C24E7C4F2B8",
+          "sourceSha256": "6F6DB630724AD9C9395846025AFCCD712A9CF13EB88C3ABD46EE5CBCF41E59E5"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellRefinementBreaks",
+          "SourceCellRadialRefinement",
+          "SourceCellWindowSegments",
+          "SourceCellWindowArcGeometry",
+          "SourceCellWindowData",
+          "SourceCellWindowPerimeterPoints",
+          "SourceCellWindowPointPartition",
+          "SourceCellWindowPointCounts",
+          "SourceCellWindowHeightNeighbors",
+          "SourceCellWindowAngles",
+          "SourceCellWindowBase",
+          "SourceCellWindowBaseAngles",
+          "SourceCellWindowBaseArcs",
+          "SourceCellWindowPerimeterSegments",
+          "SourceCellWindowRefinement",
+          "SourceCellWindowRefinedArcs",
+          "SourceCellWindowPerimeter",
+          "SourceOriginalGridWindow",
+          "SourceOriginalGlobalCellCover"
+        ],
+        "count": 299,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership129For5957.log",
+          "sha256": "EEFBE4F7DC545EF336B51F605816BD6EB89C4FB93F2A0C4A19836FDFE632A0AA",
+          "sourceSha256": "A6A3EAD9BB9BBF148C9A4A86819019280CAF3FB89A2FD00C442D367388D451F3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellCenters",
+          "SourceOriginalGridMarkedCenters",
+          "SourceOriginalPoleMarkedCenters",
+          "SourceOriginalCenteredGlobalCover"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership130For5957.log",
+          "sha256": "A79CAF0C2B02EABBCC06B9E3CF0A385B4A05A93CE400B82B534A5268B9748D5D",
+          "sourceSha256": "29A0D3F26ADADC01492BCBDC7D0006CDB735710D7DB9CA763267BCA1323A6D2D"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellSegmentCoordinates",
+          "SourceCellVerticalSegmentShapes",
+          "SourceCellHorizontalSegmentShapes",
+          "SourceCellSegmentTransport",
+          "SourceCellOppositeSideTransport",
+          "SourceCellSameSideTransport",
+          "SourceCellEdgeReparametrizations"
+        ],
+        "count": 49,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership131For5957.log",
+          "sha256": "88E25D4E1FBFEDD6BD564ADCAF617521075E51476392440F1BFD53C7BB138A79",
+          "sourceSha256": "9165FFF05BF2E2968C0AFB0A4902953A07CDC8A6A69CB4DC48E93BCBB308BC0D"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellPlanarGridData",
+          "SourceCellSideSegments",
+          "SourceCellSquareArcData",
+          "SourceCellNeighborArcIdentity",
+          "SourceCellSideLocality",
+          "SourceCellSideRealization",
+          "SourceCellGridVertexSets",
+          "SourceCellGridVertexCounts",
+          "SourceCellGridBreakpoints",
+          "SourceCellGridVertexRealization",
+          "SourceCellGridArcClassification",
+          "SourceCellGridArcOrientations",
+          "SourceCellGridArcReversal",
+          "SourceCellGridPerimeterToSquare",
+          "SourceCellGridSquareToPerimeter",
+          "SourceCellGridStarBounds",
+          "SourceCellGridStarSides",
+          "SourceCellGridStarRelations",
+          "SourceCellGridOuterSidePartner",
+          "SourceCellGridSquareSidePartner",
+          "SourceCellGridAdjacentSquares",
+          "SourceCellGridAdjacentExterior",
+          "SourceCellGridIntersectionChains",
+          "SourceCellPlanarGridGeometry",
+          "SourceOriginalPlanarGridData",
+          "SourceOriginalPlanarGridGeometry"
+        ],
+        "count": 373,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership132For5957.log",
+          "sha256": "E2BFAC0D32C7AEA95AA39B516A99075F54FE2DE28E96EE419286BFA90A1F26E9",
+          "sourceSha256": "CF33A57FE8E17D98C061117DB53DE62501CEFCAEC972FDCE0E2F9066A889DBF9"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellFiniteClosedSelection",
+          "SourceOriginalCellArcGeometry",
+          "SourceOriginalDisjointArcUniqueness",
+          "SourceOriginalOrdinaryArcMatching",
+          "SourceCellPowerArcCoverage",
+          "SourceCellConnectedPowerArc",
+          "SourceOriginalPoweredArcMatching",
+          "SourceOriginalBranchArcMatching",
+          "SourceOriginalPoleArcMatching",
+          "SourceOriginalExteriorArcMatching",
+          "SourceOriginalGlobalArcMatching"
+        ],
+        "count": 28,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership133For5957.log",
+          "sha256": "8D38318468348E8EB3443319AC879537FBE716AB4EC9420019CC1A249EA9558A",
+          "sourceSha256": "5D1ADC16765EBAD9935423E48E89C90C6EFADF94EFABBC94B58F6D5B7445D72B"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalCellsOwnership5957.log",
+      "sha256": "1804A71A8ADE242F81E0607D732EAB405723CC3E1DC6F6B8C6948F004A3F85F5",
+      "sourceSha256": "BAA0629B68CCA5ACE2A808CEAF7E259FB884ED5FD268AFCAE3F55ADD638694AF"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-194935-859.log",
+      "sha256": "ACE70F6A05D11C8E72F905EB895DA75BD78CF8553546F91BA08ABAC7A3E08C3B"
+    }
+  },
+  "scratchToProductionCountReason": "All 982 distinct names from 982 exhaustive scratch checks are retained: 982 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The actual arc side assignments and local matches still require assembly into a global pairing involution with C1 orientation reversal. Curve intersection chains, the curve Euler identity, loop generation and raw matrix reciprocity remain required. Thus unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original global cover and arc matching - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 5,957-module scope: all thirteen retained regressions, 41,710 exhaustive theorem checks, 18,398 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The actual arc side assignments and local matches still require assembly into a global pairing involution with C1 orientation reversal. Curve intersection chains, the curve Euler identity, loop generation and raw matrix reciprocity remain required. Thus unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-22T05:41:07.323700+00:00",
+  "log": "logs/dubon-build-20261021-212619-988.log",
+  "sha256": "739FDE2B85FDBC776D4616A7C4B02D6768744C714DD6626DD06DB6A16B9EB34E",
+  "bytes": 10353214,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 5957,
+  "projectTheorems": 41710,
+  "registeredConsumers": 18398,
+  "registeredConstructions": 1235,
+  "declarations": 25371,
+  "generated": 23535,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_212259.log",
+  "foundationSha256": "9A3DFE313FCB1D772D390975BF8341468B562A68E3F4BC311F416F62EAAFCAD0",
+  "countReconciliation": {
+    "previousTheorems": 40728,
+    "focusedTheorems": 982,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 982,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalCellsOwnership5957.log",
+    "ownershipSha256": "1804A71A8ADE242F81E0607D732EAB405723CC3E1DC6F6B8C6948F004A3F85F5"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 982,
+    "scratchDistinct": 982,
+    "productionFocused": 982,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceCellReciprocalRegion",
+          "SourceCellReciprocalGeometry",
+          "SourceCellPowerRadius",
+          "SourceCellPowerBreaks",
+          "SourceCellPowerRegion",
+          "SourceCellPowerArcs",
+          "SourceCellPowerArcInjectivity",
+          "SourceCellPowerSeparatedArcs",
+          "SourceOriginalBranchedCells",
+          "SourceOriginalInverseJCells",
+          "SourceOriginalPoleCellGeometry",
+          "SourceOriginalPoleCells"
+        ],
+        "count": 114,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership127For5957.log",
+          "sha256": "E3C1B6379F661CD88212DDA6D90EE0D60B048657225A0DC0B90C33F3F9C6DFB4",
+          "sourceSha256": "CB6AE57D5386FE34AD7B2653C5290B1915032F1BD3BC8E17FC4E88E2CD8B6A64"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellGridWindow",
+          "SourceCellGridIndexGeometry",
+          "SourceCellMarkedGridCentres",
+          "SourceCellGridSquareBounds",
+          "SourceCellFiniteGridLayout",
+          "SourceCellFiniteGridGeometry",
+          "SourceOriginalGridRegionSheets",
+          "SourceOriginalGridCellFamilies",
+          "SourceOriginalJFiniteGrid",
+          "SourceOriginalGridCellIndex",
+          "SourceOriginalGridCellCoverage"
+        ],
+        "count": 103,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership128For5957.log",
+          "sha256": "A687FF7602DB752CF7B638EBC9501ED63C32EE5483BAD07BBBFC1C24E7C4F2B8",
+          "sourceSha256": "6F6DB630724AD9C9395846025AFCCD712A9CF13EB88C3ABD46EE5CBCF41E59E5"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellRefinementBreaks",
+          "SourceCellRadialRefinement",
+          "SourceCellWindowSegments",
+          "SourceCellWindowArcGeometry",
+          "SourceCellWindowData",
+          "SourceCellWindowPerimeterPoints",
+          "SourceCellWindowPointPartition",
+          "SourceCellWindowPointCounts",
+          "SourceCellWindowHeightNeighbors",
+          "SourceCellWindowAngles",
+          "SourceCellWindowBase",
+          "SourceCellWindowBaseAngles",
+          "SourceCellWindowBaseArcs",
+          "SourceCellWindowPerimeterSegments",
+          "SourceCellWindowRefinement",
+          "SourceCellWindowRefinedArcs",
+          "SourceCellWindowPerimeter",
+          "SourceOriginalGridWindow",
+          "SourceOriginalGlobalCellCover"
+        ],
+        "count": 299,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership129For5957.log",
+          "sha256": "EEFBE4F7DC545EF336B51F605816BD6EB89C4FB93F2A0C4A19836FDFE632A0AA",
+          "sourceSha256": "A6A3EAD9BB9BBF148C9A4A86819019280CAF3FB89A2FD00C442D367388D451F3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellCenters",
+          "SourceOriginalGridMarkedCenters",
+          "SourceOriginalPoleMarkedCenters",
+          "SourceOriginalCenteredGlobalCover"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership130For5957.log",
+          "sha256": "A79CAF0C2B02EABBCC06B9E3CF0A385B4A05A93CE400B82B534A5268B9748D5D",
+          "sourceSha256": "29A0D3F26ADADC01492BCBDC7D0006CDB735710D7DB9CA763267BCA1323A6D2D"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellSegmentCoordinates",
+          "SourceCellVerticalSegmentShapes",
+          "SourceCellHorizontalSegmentShapes",
+          "SourceCellSegmentTransport",
+          "SourceCellOppositeSideTransport",
+          "SourceCellSameSideTransport",
+          "SourceCellEdgeReparametrizations"
+        ],
+        "count": 49,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership131For5957.log",
+          "sha256": "88E25D4E1FBFEDD6BD564ADCAF617521075E51476392440F1BFD53C7BB138A79",
+          "sourceSha256": "9165FFF05BF2E2968C0AFB0A4902953A07CDC8A6A69CB4DC48E93BCBB308BC0D"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellPlanarGridData",
+          "SourceCellSideSegments",
+          "SourceCellSquareArcData",
+          "SourceCellNeighborArcIdentity",
+          "SourceCellSideLocality",
+          "SourceCellSideRealization",
+          "SourceCellGridVertexSets",
+          "SourceCellGridVertexCounts",
+          "SourceCellGridBreakpoints",
+          "SourceCellGridVertexRealization",
+          "SourceCellGridArcClassification",
+          "SourceCellGridArcOrientations",
+          "SourceCellGridArcReversal",
+          "SourceCellGridPerimeterToSquare",
+          "SourceCellGridSquareToPerimeter",
+          "SourceCellGridStarBounds",
+          "SourceCellGridStarSides",
+          "SourceCellGridStarRelations",
+          "SourceCellGridOuterSidePartner",
+          "SourceCellGridSquareSidePartner",
+          "SourceCellGridAdjacentSquares",
+          "SourceCellGridAdjacentExterior",
+          "SourceCellGridIntersectionChains",
+          "SourceCellPlanarGridGeometry",
+          "SourceOriginalPlanarGridData",
+          "SourceOriginalPlanarGridGeometry"
+        ],
+        "count": 373,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership132For5957.log",
+          "sha256": "E2BFAC0D32C7AEA95AA39B516A99075F54FE2DE28E96EE419286BFA90A1F26E9",
+          "sourceSha256": "CF33A57FE8E17D98C061117DB53DE62501CEFCAEC972FDCE0E2F9066A889DBF9"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellFiniteClosedSelection",
+          "SourceOriginalCellArcGeometry",
+          "SourceOriginalDisjointArcUniqueness",
+          "SourceOriginalOrdinaryArcMatching",
+          "SourceCellPowerArcCoverage",
+          "SourceCellConnectedPowerArc",
+          "SourceOriginalPoweredArcMatching",
+          "SourceOriginalBranchArcMatching",
+          "SourceOriginalPoleArcMatching",
+          "SourceOriginalExteriorArcMatching",
+          "SourceOriginalGlobalArcMatching"
+        ],
+        "count": 28,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGlobalCellsScratchOwnership133For5957.log",
+          "sha256": "8D38318468348E8EB3443319AC879537FBE716AB4EC9420019CC1A249EA9558A",
+          "sourceSha256": "5D1ADC16765EBAD9935423E48E89C90C6EFADF94EFABBC94B58F6D5B7445D72B"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalCellsOwnership5957.log",
+      "sha256": "1804A71A8ADE242F81E0607D732EAB405723CC3E1DC6F6B8C6948F004A3F85F5",
+      "sourceSha256": "BAA0629B68CCA5ACE2A808CEAF7E259FB884ED5FD268AFCAE3F55ADD638694AF"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-194935-859.log",
+      "sha256": "ACE70F6A05D11C8E72F905EB895DA75BD78CF8553546F91BA08ABAC7A3E08C3B"
+    }
+  },
+  "scratchToProductionCountReason": "All 982 distinct names from 982 exhaustive scratch checks are retained: 982 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The actual arc side assignments and local matches still require assembly into a global pairing involution with C1 orientation reversal. Curve intersection chains, the curve Euler identity, loop generation and raw matrix reciprocity remain required. Thus unconditional original Abel converse and discrete periods, original torsion finiteness/cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original cycle geometry pending full run - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 6,020-module scope: all thirteen retained regressions, 41,981 exhaustive theorem checks, 18,548 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Analytic realization of the integer cycles as loops, regular and meromorphic period generation, and raw matrix reciprocity remain required. Unconditional original Abel converse and discrete periods, original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalArcPartnerDependencyAudit8Production6020.log",
+      "sha256": "A986D11B50465E8E8C497E331519D9ED5206A5E5DAB84F84B810A18F39B9FCF0",
+      "requiredProofValueEdges": 32,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.pairArc_involutive",
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.pairArc_ne_self"
+      ],
+      "sourceSha256": "0FD435754384AA238ADBC74E958340D1167E3DFB04A5F66E8C6F1635B1FE25AA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArcPresentationsDependencyAudit7Production6020.log",
+      "sha256": "6B903467722FBB77ED28CA65FBD04D8127952B060BCE1C3ACD4DEAFD03333E73",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.exists_arc_presentation"
+      ],
+      "sourceSha256": "C729D9D00E816A18F03165AC19FE2D9E5990D4052DC5A10C70C256D93057DCF1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGlobalCellPairingDependencyAudit7Production6020.log",
+      "sha256": "F3FE10985032467A09FC84C8153A6ACA92A9ECAA799CD0A3D1B75BB33B672B8B",
+      "requiredProofValueEdges": 32,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_paired_cover"
+      ],
+      "sourceSha256": "0A70DFB2CC0876F5B40560AD50CCF9A7448B3BE9351B6D435AFEAC45C602CC77"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstructedDissectionDependencyAudit9Production6020.log",
+      "sha256": "97DFE89E38FB6C0838EA7F79DAEC76B6245DBD7EDDFE0D12F171DBE96A54B4E3",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_dissection"
+      ],
+      "sourceSha256": "611F59ED120582D234A134ECEF2CF3FBDAAE2C4003E6F9BE89E3FC1B58DB536D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEulerDissectionDependencyAudit13Production6020.log",
+      "sha256": "01CD9620EBBAF5533D20ED8713EB51BF2DCD1857BBACB9300D964402BF39B3FB",
+      "requiredProofValueEdges": 35,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_euler_cell_dissection"
+      ],
+      "sourceSha256": "791B80C56463890BB1BED102C06342DEC4530DC2CB5870058B8CA6118634A76B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTreeCotreeDependencyAudit9Production6020.log",
+      "sha256": "A694D3BDA776FE203CD217FBE53C470718E6A914AA00CD4C19FFD203D51BA005",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_tree_cotree"
+      ],
+      "sourceSha256": "E563A77CFE088B0CCA002A3F9AEC41E41813A3F18ADF42BC66A1B919FA79AE9A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPolygonWordDependencyAudit8Production6020.log",
+      "sha256": "F3F1EF9E66852D2EAC160CBB77667ACCC23A085E4EBF982D4BB98F8F2BDFE66C",
+      "requiredProofValueEdges": 36,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_polygon_word"
+      ],
+      "sourceSha256": "51E182BD7D423724D6E17AA4CE62CBA325BF2421EF2C79C2C58B1AC28D716FE1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCycleSystemDependencyAudit2Production6020.log",
+      "sha256": "A8045314C7516EBBC766F724EAA325DDAEB50B307BE55964EA64B084BBD5E08E",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_cycle_system"
+      ],
+      "sourceSha256": "992FF3EA8E4BA1EACA7580BC6DBAF3D1D6B2FB9CA66B297AC0BF3EEA2539960F"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCycleGeometryProductionAudit6020.log",
+  "sha256": "BDFCD811F9717D10BF7E48EFCD38299B065AD35C9A5D191C27B90A8571B44816",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-cycle-geometry-production-build-6020.log",
+  "aggregateSha256": "C8313B203794CA36EC5B7FE28E15D7E5463AA1470B6E9BF83E853413D7ADDC74",
+  "productionModules": 6020,
+  "incrementModules": 63,
+  "axiomChecks": 186,
+  "exhaustiveIncrementTheorems": 271,
+  "linterScopes": 63,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 271,
+  "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Actual original places, source C1 reversals, intersection chains, literal vertices, marked-point clauses and the exact Euler identity retained. Geometric loop generation and raw reciprocity remain open; no final source contract weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 271,
+    "scratchDistinct": 271,
+    "productionFocused": 271,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalPoweredArcImage",
+          "SourceOriginalInteriorArcImages",
+          "SourceOriginalExteriorArcImages",
+          "SourceOriginalGlobalArcIndex",
+          "SourceOriginalGlobalArcSides",
+          "SourceOriginalGlobalArcUniqueness",
+          "SourceOriginalGlobalRegionMatching",
+          "SourceOriginalGlobalArcPartner"
+        ],
+        "count": 29,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership134For6020.log",
+          "sha256": "F589DF1F74A731E735E536026431EC18BB0348A4D9A01236D9D3C89EBE142515",
+          "sourceSha256": "81974C0318653D155CBCEEC65BA6ABD590AE8C2F28490D41F4A7CB88C20228FC"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellArcAffineEndpoints",
+          "SourceCellPowerArcPresentation",
+          "SourceCellReciprocalArcPresentation",
+          "SourceOriginalBoundaryArcCoordinates",
+          "SourceOriginalArcPresentation",
+          "SourceOriginalInteriorArcPresentations",
+          "SourceOriginalExteriorArcPresentations"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership135For6020.log",
+          "sha256": "26D0C0B5D556559874BE33CDB5028062496016DB051FCF8C8EB093FB7AD4F4DC",
+          "sourceSha256": "7A0A320DCEE3139E7E6918E13AEF69378550F5B93CE0DC150D7F8D2022028928"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalArcOrientations",
+          "SourceCellAffineArcTransports",
+          "SourceOriginalArcReversalTransport",
+          "SourceOriginalArcPresentationMaps",
+          "SourceOriginalSquareArcReversal",
+          "SourceOriginalExteriorArcReversal",
+          "SourceOriginalGlobalCellPairing"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership136For6020.log",
+          "sha256": "813D09BED6BBE539FE17CEDEF5F7FE3445BC9B6623C6747D39868BD4761D2541",
+          "sourceSha256": "573F06F67EBF982320A06C8879E83B58CDEF54B1663367BA47C8FBE6DCF7B79F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegionalCarrierUniqueness",
+          "SourceOriginalCarrierRegions",
+          "SourceOriginalPoweredArcIncidence",
+          "SourceOriginalInteriorArcIncidence",
+          "SourceOriginalExteriorArcIncidence",
+          "SourceOriginalGlobalArcIncidence",
+          "SourceOriginalPairedIntersectionStep",
+          "SourceOriginalCellIntersectionChains",
+          "SourceOriginalConstructedCellDissection"
+        ],
+        "count": 19,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership137For6020.log",
+          "sha256": "917088DB17F709367942299D757D50687DB974CCC38819BA08A4024397192C8C",
+          "sourceSha256": "4A953665A5265A6667C158147EF5722C0BBDFF69F9183FBD6D8CC28DCF76ACD3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDissectionGenusCount",
+          "SourceOriginalDissectionBaseVertices",
+          "SourceOriginalBaseVertexFibers",
+          "SourceOriginalDissectionEndpointImages",
+          "SourceOriginalSquareCarrierExistence",
+          "SourceOriginalDissectionVertexSurjectivity",
+          "SourceOriginalDissectionVertexCount",
+          "SourceOriginalGridCellCount",
+          "SourceOriginalDissectionCellCount",
+          "SourceOriginalRamifiedArcCounts",
+          "SourceOriginalDissectionArcCount",
+          "SourceOriginalDissectionEulerIdentity",
+          "SourceOriginalEulerCellDissection"
+        ],
+        "count": 44,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership138For6020.log",
+          "sha256": "1B93E32755797445A76F5905942E9D156236DE6FC09FB53B152D7149AB0B2678",
+          "sourceSha256": "CD0A7FB54A6F4401418366B6F86E05A348D095A2FFFE90EECC32EECDED45B4EB"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellIntegerEdgeBoundary",
+          "SourceCellIntegerChainConnectivity",
+          "SourceCellIntegerSpanningTree",
+          "SourceCellIntegerTreeCardinality",
+          "SourceOriginalDissectionBoundaryChains",
+          "SourceOriginalDissectionGraphConnectivity",
+          "SourceOriginalCotreeComplementConnectivity",
+          "SourceOriginalDissectionTreeCotree",
+          "SourceOriginalConstructedTreeCotree"
+        ],
+        "count": 44,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership139For6020.log",
+          "sha256": "69EE72934D151087EC8D519D744144C33B31316A1E53E391B7385DF6CC196723",
+          "sourceSha256": "530B00B6269548A0E294A2E3B7E84B768EE2EFC1C7A46BEE2E43AFBB8BBD27F4"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellCyclicBoundaryWords",
+          "SourceCellIntegerTreeCut",
+          "SourceOriginalPolygonCorners",
+          "SourceOriginalPolygonState",
+          "SourceOriginalPolygonGluing",
+          "SourceOriginalPolygonWordCycles",
+          "SourceOriginalDissectionPolygonWord",
+          "SourceOriginalConstructedPolygonWord"
+        ],
+        "count": 68,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership140For6020.log",
+          "sha256": "1B16D3E344DBCF18E7032F82A6DC5C64728946DD1ADC1B9C1F4080DCCCA49885",
+          "sourceSha256": "DCD5E4AFE664BC7D55EE5D35C1FBBF6D84DF0CE13E71E07D8CD6F5DE9266EEF7"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellIntegerFundamentalCycles",
+          "SourceOriginalConstructedCycleSystem"
+        ],
+        "count": 7,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership141For6020.log",
+          "sha256": "0C2371AF4671A6DBC3CB4BA36C6CF8905DE317783D75B8831C7BB7229CB911A5",
+          "sourceSha256": "0E0C4E39D045F2B29702485C395CFC01D2914D5373A4337B18C7324C70127072"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCycleGeometryOwnership6020.log",
+      "sha256": "7F84B6A58ACBE7CECF1996BD0767DC364D4E926454AF05D6A4C1DBFB0EF95E62",
+      "sourceSha256": "E9E3A20209BA55397F942244AFA0DD4ECA1CF4EBB150672A1CDA7D3BBA49D05C"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-212619-988.log",
+      "sha256": "739FDE2B85FDBC776D4616A7C4B02D6768744C714DD6626DD06DB6A16B9EB34E"
+    }
+  },
+  "scratchToProductionCountReason": "All 271 distinct names from 271 exhaustive scratch checks are retained: 271 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Analytic realization of the integer cycles as loops, regular and meromorphic period generation, and raw matrix reciprocity remain required. Unconditional original Abel converse and discrete periods, original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified original dissection and cycle geometry - 21 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 6,020-module scope: all thirteen retained regressions, 41,981 exhaustive theorem checks, 18,548 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Analytic realization of the integer cycles as loops, regular and meromorphic period generation, and raw matrix reciprocity remain required. Unconditional original Abel converse and discrete periods, original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-22T07:16:02.036382+00:00",
+  "log": "logs/dubon-build-20261021-225931-909.log",
+  "sha256": "C1E669D63AA22B933113C13B253AD2DD34F44EE4106D35537E2C5BAFAC2A361B",
+  "bytes": 10444217,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 6020,
+  "projectTheorems": 41981,
+  "registeredConsumers": 18548,
+  "registeredConstructions": 1271,
+  "declarations": 25591,
+  "generated": 23725,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261021_225637.log",
+  "foundationSha256": "A8BAE586798E8B5E77CFB959CCB511D24C6A3FD2CA0F586C46FAA37544382B45",
+  "countReconciliation": {
+    "previousTheorems": 41710,
+    "focusedTheorems": 271,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 271,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCycleGeometryOwnership6020.log",
+    "ownershipSha256": "7F84B6A58ACBE7CECF1996BD0767DC364D4E926454AF05D6A4C1DBFB0EF95E62"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 271,
+    "scratchDistinct": 271,
+    "productionFocused": 271,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalPoweredArcImage",
+          "SourceOriginalInteriorArcImages",
+          "SourceOriginalExteriorArcImages",
+          "SourceOriginalGlobalArcIndex",
+          "SourceOriginalGlobalArcSides",
+          "SourceOriginalGlobalArcUniqueness",
+          "SourceOriginalGlobalRegionMatching",
+          "SourceOriginalGlobalArcPartner"
+        ],
+        "count": 29,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership134For6020.log",
+          "sha256": "F589DF1F74A731E735E536026431EC18BB0348A4D9A01236D9D3C89EBE142515",
+          "sourceSha256": "81974C0318653D155CBCEEC65BA6ABD590AE8C2F28490D41F4A7CB88C20228FC"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellArcAffineEndpoints",
+          "SourceCellPowerArcPresentation",
+          "SourceCellReciprocalArcPresentation",
+          "SourceOriginalBoundaryArcCoordinates",
+          "SourceOriginalArcPresentation",
+          "SourceOriginalInteriorArcPresentations",
+          "SourceOriginalExteriorArcPresentations"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership135For6020.log",
+          "sha256": "26D0C0B5D556559874BE33CDB5028062496016DB051FCF8C8EB093FB7AD4F4DC",
+          "sourceSha256": "7A0A320DCEE3139E7E6918E13AEF69378550F5B93CE0DC150D7F8D2022028928"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalArcOrientations",
+          "SourceCellAffineArcTransports",
+          "SourceOriginalArcReversalTransport",
+          "SourceOriginalArcPresentationMaps",
+          "SourceOriginalSquareArcReversal",
+          "SourceOriginalExteriorArcReversal",
+          "SourceOriginalGlobalCellPairing"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership136For6020.log",
+          "sha256": "813D09BED6BBE539FE17CEDEF5F7FE3445BC9B6623C6747D39868BD4761D2541",
+          "sourceSha256": "573F06F67EBF982320A06C8879E83B58CDEF54B1663367BA47C8FBE6DCF7B79F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRegionalCarrierUniqueness",
+          "SourceOriginalCarrierRegions",
+          "SourceOriginalPoweredArcIncidence",
+          "SourceOriginalInteriorArcIncidence",
+          "SourceOriginalExteriorArcIncidence",
+          "SourceOriginalGlobalArcIncidence",
+          "SourceOriginalPairedIntersectionStep",
+          "SourceOriginalCellIntersectionChains",
+          "SourceOriginalConstructedCellDissection"
+        ],
+        "count": 19,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership137For6020.log",
+          "sha256": "917088DB17F709367942299D757D50687DB974CCC38819BA08A4024397192C8C",
+          "sourceSha256": "4A953665A5265A6667C158147EF5722C0BBDFF69F9183FBD6D8CC28DCF76ACD3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDissectionGenusCount",
+          "SourceOriginalDissectionBaseVertices",
+          "SourceOriginalBaseVertexFibers",
+          "SourceOriginalDissectionEndpointImages",
+          "SourceOriginalSquareCarrierExistence",
+          "SourceOriginalDissectionVertexSurjectivity",
+          "SourceOriginalDissectionVertexCount",
+          "SourceOriginalGridCellCount",
+          "SourceOriginalDissectionCellCount",
+          "SourceOriginalRamifiedArcCounts",
+          "SourceOriginalDissectionArcCount",
+          "SourceOriginalDissectionEulerIdentity",
+          "SourceOriginalEulerCellDissection"
+        ],
+        "count": 44,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership138For6020.log",
+          "sha256": "1B93E32755797445A76F5905942E9D156236DE6FC09FB53B152D7149AB0B2678",
+          "sourceSha256": "CD0A7FB54A6F4401418366B6F86E05A348D095A2FFFE90EECC32EECDED45B4EB"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellIntegerEdgeBoundary",
+          "SourceCellIntegerChainConnectivity",
+          "SourceCellIntegerSpanningTree",
+          "SourceCellIntegerTreeCardinality",
+          "SourceOriginalDissectionBoundaryChains",
+          "SourceOriginalDissectionGraphConnectivity",
+          "SourceOriginalCotreeComplementConnectivity",
+          "SourceOriginalDissectionTreeCotree",
+          "SourceOriginalConstructedTreeCotree"
+        ],
+        "count": 44,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership139For6020.log",
+          "sha256": "69EE72934D151087EC8D519D744144C33B31316A1E53E391B7385DF6CC196723",
+          "sourceSha256": "530B00B6269548A0E294A2E3B7E84B768EE2EFC1C7A46BEE2E43AFBB8BBD27F4"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellCyclicBoundaryWords",
+          "SourceCellIntegerTreeCut",
+          "SourceOriginalPolygonCorners",
+          "SourceOriginalPolygonState",
+          "SourceOriginalPolygonGluing",
+          "SourceOriginalPolygonWordCycles",
+          "SourceOriginalDissectionPolygonWord",
+          "SourceOriginalConstructedPolygonWord"
+        ],
+        "count": 68,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership140For6020.log",
+          "sha256": "1B16D3E344DBCF18E7032F82A6DC5C64728946DD1ADC1B9C1F4080DCCCA49885",
+          "sourceSha256": "DCD5E4AFE664BC7D55EE5D35C1FBBF6D84DF0CE13E71E07D8CD6F5DE9266EEF7"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellIntegerFundamentalCycles",
+          "SourceOriginalConstructedCycleSystem"
+        ],
+        "count": 7,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCycleGeometryScratchOwnership141For6020.log",
+          "sha256": "0C2371AF4671A6DBC3CB4BA36C6CF8905DE317783D75B8831C7BB7229CB911A5",
+          "sourceSha256": "0E0C4E39D045F2B29702485C395CFC01D2914D5373A4337B18C7324C70127072"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCycleGeometryOwnership6020.log",
+      "sha256": "7F84B6A58ACBE7CECF1996BD0767DC364D4E926454AF05D6A4C1DBFB0EF95E62",
+      "sourceSha256": "E9E3A20209BA55397F942244AFA0DD4ECA1CF4EBB150672A1CDA7D3BBA49D05C"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-212619-988.log",
+      "sha256": "739FDE2B85FDBC776D4616A7C4B02D6768744C714DD6626DD06DB6A16B9EB34E"
+    }
+  },
+  "scratchToProductionCountReason": "All 271 distinct names from 271 exhaustive scratch checks are retained: 271 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Analytic realization of the integer cycles as loops, regular and meromorphic period generation, and raw matrix reciprocity remain required. Unconditional original Abel converse and discrete periods, original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production original period lattice pending full run - 22 October 2026
+
+The 6,069-module production aggregate and focused original period-lattice audit pass with zero diagnostics. Eight proof-value audits verify actual cycle loops, normalized primitives, the exact polygon matrix and common integer generation of all regular loop periods. The original period lattice is discrete and the same complementary integer matrix is skew-symmetric and unimodular. Bilinear and meromorphic reciprocity and the original Abel converse remain required, followed by original torsion cardinality, Qbar comparison and Tate/Hecke/Frobenius and arithmetic gates. Sequential foundation/paper verification of this scope is pending.
+
+The Riemann bilinear relation, residue reciprocity, meromorphic period generation and full raw reciprocity remain required for the original Abel converse. Exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Discreteness is proved; it does not by itself identify original Pic0 with the complex torus. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCycleLoopsDependencyAudit9Production6069.log",
+      "sha256": "0B37A5779FD1FE21FFC8897590614303CC649B6000F39BD9CC381418B6564C81",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_centered_cycle_loops"
+      ],
+      "sourceSha256": "4682774474E9A143A015A6873F826A89CD9ABFD8B814063DBBB21DF585B97F51"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedPrimitivesDependencyAudit3Production6069.log",
+      "sha256": "4C1ECD8002BFCCE488D87527209AA6E0438713F4E727B8685081705766D65DF4",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_normalized_cycle_primitives"
+      ],
+      "sourceSha256": "945DE518DACAA5950055D145DC2D6B229BA03048CED8CFAA53269C7399C60BA7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJumpReductionDependencyAudit3Production6069.log",
+      "sha256": "DD02DCCD1B7208A508BE731C18410DAAD21B09D53803E9C0098152497372C6F6",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_jump_cycle_reduction"
+      ],
+      "sourceSha256": "17D09146D2098B872BF61EA97A15FEAC546F44B2CFD3A4BCCE40120153CDC0E7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitivePolygonDependencyAudit8Production6069.log",
+      "sha256": "D05BB5E0E5DA2EB5B64EA339B467184CD223C0AD7482BB6C5A58B847664ED02D",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_primitive_polygon_word"
+      ],
+      "sourceSha256": "772056341F305108C9ED84835AB2C3EF821CC6B52A42918DDF7694CAD7DA8932"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCyclePeriodMatrixDependencyAudit7Production6069.log",
+      "sha256": "D53137F03DC2C213E7B549A1F829B6EA970A86C269D7139FED9D23EA19A0873E",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_cycle_period_matrix"
+      ],
+      "sourceSha256": "A11D86BF90C44C16972C2843258C8BE80F93955300D02902AA79C48B1F4A8359"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPeriodGenerationDependencyAudit9Production6069.log",
+      "sha256": "6B739663546C7756E6D60F58C7BF2CCC70F53C25F900A4D43EA8FE085943DFE5",
+      "requiredProofValueEdges": 26,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_regular_cycle_generation"
+      ],
+      "sourceSha256": "E5032B56E139FA58FD5FDCA017ADA7FA4A6B7CD9EE383750527FA8E2C0CD27AF"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDiscretePeriodLatticeDependencyAudit3Production6069.log",
+      "sha256": "EFD17CD392B77F3E9A14F032B82D807C6EF2661CA5FEE757C8F8808ACECB9689",
+      "requiredProofValueEdges": 11,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_integral_period_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_discrete_period_lattice"
+      ],
+      "sourceSha256": "9B931B3CFF451EB1F4F84A85CC7ED458DAEAAA47343D1CCF917A3CDA8C779D2C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalUnimodularPeriodMatrixDependencyAudit7Production6069.log",
+      "sha256": "8284EEB67B07AD26911F3A4501561FE41CC058B0B85694A67573AE95BFE6FBCF",
+      "requiredProofValueEdges": 16,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.CellGeometry.exists_original_unimodular_period_polygon"
+      ],
+      "sourceSha256": "850FD8C53AA614A4A0DA7A4F6CACC749A7A7D624B6B587B04D743873509CBF2E"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeProductionAudit6069.log",
+  "sha256": "FF5206E4A8BEAD07A61681A6784A78F995632753EBFB04EC5CBED50AB13A1ADC",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-period-lattice-production-build-6069.log",
+  "aggregateSha256": "A9B5CB329936A6811727F22266D467CE737A9B7460FCDA34F89E392DEEEA23F5",
+  "productionModules": 6069,
+  "incrementModules": 49,
+  "axiomChecks": 103,
+  "exhaustiveIncrementTheorems": 210,
+  "linterScopes": 49,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 212,
+  "productionReuse": "Scratch imports qualified. All mathematical statements and proof bodies unchanged. Actual original places, cell geometry, loops, normalized primitives, same polygon word and exact integer matrix retained. Regular loop generation, period-lattice discreteness and matrix unimodularity are proved; bilinear and meromorphic reciprocity and the Abel converse remain open. No final source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 212,
+    "scratchDistinct": 210,
+    "productionFocused": 210,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.CellGeometry.DissectionPeriods.gvec.eq_1": [
+        {
+          "scope": "SourcePeriodLatticeScratchOwnership145For6069",
+          "module": "Dubon2026.SourceOriginalPolygonCornerPrimitives"
+        },
+        {
+          "scope": "SourcePeriodLatticeScratchOwnership147For6069",
+          "module": "Dubon2026.SourceOriginalCellJumpDifferences"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.CellGeometry.DissectionPeriods.wordMatrix.congr_simp": [
+        {
+          "scope": "SourcePeriodLatticeScratchOwnership146For6069",
+          "module": "Dubon2026.SourceOriginalCyclePeriodMatrixAssembly"
+        },
+        {
+          "scope": "SourcePeriodLatticeScratchOwnership149For6069",
+          "module": "Dubon2026.SourceOriginalComplementaryWordMatrix"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalBoundaryArcPaths",
+          "SourceOriginalDissectionEdgePaths",
+          "SourceOriginalCellPathPrimitiveDerivative",
+          "SourceOriginalArcPathIntegral",
+          "SourceOriginalEdgePathIntegral",
+          "SourceOriginalTreeWalkPaths",
+          "SourceOriginalCycleChainIdentification",
+          "SourceOriginalFundamentalCycleLoops",
+          "SourceOriginalConstructedCycleLoops"
+        ],
+        "count": 40,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership142For6069.log",
+          "sha256": "07AA52306F2DE7861D02DD397C580BD9A5719F10D218F5D80B99DB502EBA0373",
+          "sourceSha256": "42CAA38A937A513BC9AB449D4A9303BE5CEE57A94C7B4A52397E071C6AC1E3CE"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalDualTreeNormalization",
+          "SourceOriginalNormalizedCellPrimitives",
+          "SourceOriginalConstructedNormalizedPrimitives"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership143For6069.log",
+          "sha256": "66317FE225A5908F5301FEB6EFBAFA91941086F0D715C5F0179F11855D4C7538",
+          "sourceSha256": "939C00E1D46A35DC81399D6C10537AE129D9727A97E188F9566E6361856C0AF5"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPrimitiveJumpCirculation",
+          "SourceOriginalJumpCycleReduction",
+          "SourceOriginalConstructedJumpReduction"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership144For6069.log",
+          "sha256": "7A39349850F8E951FBD25E0AA07D9F3EA5F21628DB03DFE736CE24756CAB2936",
+          "sourceSha256": "F2B59D23B058B2687E6F3D593EE2744E51672457B6C9A4E5BCEB0F2601691CD1"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCellPrimitiveArcIntegral",
+          "SourceOriginalSignedPrimitiveArcIntegral",
+          "SourceOriginalPolygonPrimitiveData",
+          "SourceOriginalPolygonPrimitiveEndpoints",
+          "SourceOriginalPolygonCornerPrimitives",
+          "SourceOriginalPolygonWordPrimitiveSum",
+          "SourceOriginalPrimitivePolygonWord",
+          "SourceOriginalConstructedPrimitivePolygon"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership145For6069.log",
+          "sha256": "27515238DA050165A00D53F158CBD7C4F13F37AA7786B6C4443EF910357ACD78",
+          "sourceSha256": "2FA14E707E432D86259A7706B581E98BE9E19833F56055FC9638F3E861CE6675"
+        }
+      },
+      {
+        "modules": [
+          "SourceCellPolygonWordChains",
+          "SourceOriginalCycleIntegralSums",
+          "SourceOriginalWordPeriodMatrix",
+          "SourceOriginalJumpPeriodClosure",
+          "SourceOriginalCyclePeriodPolygonData",
+          "SourceOriginalCyclePeriodMatrixAssembly",
+          "SourceOriginalConstructedPeriodMatrix"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership146For6069.log",
+          "sha256": "53FCC46BE65342C39E11411B521FC57F8F16BBD4B29704DB197DA287EFB66C94",
+          "sourceSha256": "A68A71A08539E83D7AC1EE170CF4FFB297AC73F4695B4ABADD2DBB7ACCB68FCE"
+        }
+      },
+      {
+        "modules": [
+          "SourcePathAtlasJumpClosure",
+          "SourceOriginalCoordinatePrimitiveComparison",
+          "SourceOriginalCellPrimitiveLocalDifference",
+          "SourceOriginalCellCarrierNeighborhoods",
+          "SourceOriginalPairedArcEquality",
+          "SourceOriginalCellJumpDifferences",
+          "SourceOriginalPathPrimitiveJumps",
+          "SourceOriginalRegularLoopJumpClosure",
+          "SourceOriginalConstructedRegularPeriods"
+        ],
+        "count": 36,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership147For6069.log",
+          "sha256": "5D2600A43367302AB50131CADBB169D23EDDCED3038717E12B4900EE526001B4",
+          "sourceSha256": "2635C8270F9A20B7532375CD33FC995FD5A4F3E06A75B1102BA237F4D153683A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalGeneratingLoopReindex",
+          "SourceOriginalConstructedGeneratingLoops",
+          "SourceOriginalDiscretePeriodLattice"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership148For6069.log",
+          "sha256": "BE88B06F691869B7D16E67C28D080997DEE4E0A9E96B2DADF3277D99D54EBBBA",
+          "sourceSha256": "599328D9F4F6869AD4F15AF9CBE6CAF281159FA72A5D2B256FC160D096A105B3"
+        }
+      },
+      {
+        "modules": [
+          "SourceCyclicChordAntisymmetry",
+          "SourceCellPolygonWordAntisymmetry",
+          "SourcePeriodMatrixLatticeUnimodularity",
+          "SourceOriginalComplementaryPeriodSpan",
+          "SourceOriginalComplementaryWordMatrix",
+          "SourceOriginalUnimodularPeriodPolygon",
+          "SourceOriginalConstructedUnimodularPeriods"
+        ],
+        "count": 59,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodLatticeScratchOwnership149For6069.log",
+          "sha256": "357D53347E398E0E5B5BD15D8D188C6A9573BEBD4F45290671CAFA812D2C0161",
+          "sourceSha256": "475E21F22D9B7147A4BBE455F059CB6B04CF3E6132AEF44B01F9BD46D1E7AD89"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeOwnership6069.log",
+      "sha256": "8024DDF6261A0DB81102552971AA77DE73864268CAD79AA34214A9675CD6B3F7",
+      "sourceSha256": "B64968EEB2D8973AD8D403B00B460A37B227007B0BE0065FF930418C0DC2CC66"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-225931-909.log",
+      "sha256": "C1E669D63AA22B933113C13B253AD2DD34F44EE4106D35537E2C5BAFAC2A361B"
+    }
+  },
+  "scratchToProductionCountReason": "All 210 distinct names from 212 exhaustive scratch checks are retained: 210 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The Riemann bilinear relation, residue reciprocity, meromorphic period generation and full raw reciprocity remain required for the original Abel converse. Exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. Discreteness is proved; it does not by itself identify original Pic0 with the complex torus. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
 }
 ```

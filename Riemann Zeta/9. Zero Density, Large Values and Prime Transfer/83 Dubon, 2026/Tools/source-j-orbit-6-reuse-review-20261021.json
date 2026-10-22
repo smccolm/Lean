@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus -> finite elliptic ramification -> analytic j separates full modular orbits and every actual original finite fiber is realized by translates of a chosen point with that j-value.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC",
+    "source-global-residue-9-scratch-receipt.json": "A194E21697F37B35B0DCBBABB4F3D945C4C461EC862BA4E4BD2153B58019A5E5",
+    "source-riemann-roch-2-scratch-receipt.json": "ABC98B0526CED855C5A0C2E7BB4E3E2455A5A05E17B5098DE9CEC501B614EF59",
+    "source-coordinate-values-2-scratch-receipt.json": "15C6E5B735D28F55F39A0E244F006CD31BFF457A668A4102C86E9C775346D81C",
+    "source-prime-degree-2-scratch-receipt.json": "49FCD2928DF35342E34F2D13694BF08A02A6E482B5E42826179AB8D602112BBF",
+    "source-prime-nonmembership-7-scratch-receipt.json": "F47F62CA5E025711611910FA8721FA1684119C608F56CAE291E85C7308B59152",
+    "source-prime-exact-4-scratch-receipt.json": "5A452930A5F0468D535DC4814E0AC1453EDF98DBE151C0905F5412D023B216ED",
+    "source-original-prime-2-scratch-receipt.json": "3B472641E3C068968B13A74D2A5FA33238449A924BBD2DEB83B959D090575519",
+    "source-degree-transport-6-scratch-receipt.json": "247E7FA212FA6CBFD86BD42B2454659D232ED8259A2BFD508393A8214AE582A9",
+    "source-prime-power-step-3-scratch-receipt.json": "DA6167840D5E312AFD4263B459CFD70EB4E08C2B8519615080ED28D1F3C46192",
+    "source-prime-power-exact-5-scratch-receipt.json": "ACB710AD4569A1CFA7AE07D36B93DB2D4653F64F825644979CF3686D5DAB76E9",
+    "source-twisted-embedding-6-scratch-receipt.json": "F6E90FCD242319A2279F0615EDD0A249A04906A069D6412F5D536D399D79B356",
+    "source-prime-power-nonmembership-10-scratch-receipt.json": "020D3C99EBD9FF54D6B978983A9D8BB6DD9BE825B0B50198B96B1D87FCE38040",
+    "source-prime-power-degree-3-scratch-receipt.json": "09CB55D2572EBA1B5F560E2FDC39DF14D6B05BD4153D371F92E1AABF643414FE",
+    "source-conjugate-slots-6-scratch-receipt.json": "F0610584BF3396AD3A600F2CF5388984D3E40614CF678C5317AD8F297635176C",
+    "source-conjugate-step-7-scratch-receipt.json": "97FB8B186C049B32279303A0607F7C4C800E7B50EB55E2EE0210A11FA0676B2C",
+    "source-conjugate-induction-8-scratch-receipt.json": "AB82CD0647A6024F5707A5150BAB22A76ADF48DE598FA10A71A4FD702E3D4FBB",
+    "source-generation-5-scratch-receipt.json": "1C221B28EEB2F62BB3E27E87630B2640945801592168437EED7622A7A2547014",
+    "source-coprime-nonmembership-6-scratch-receipt.json": "18A06F3287DD021C8A0C3978A087316B917787905A1097768C286FC981085779",
+    "source-all-level-degree-9-scratch-receipt.json": "EB8E866F2176EF3D7A1917242926C7115D2D3A1F7172F1DE75274F3D50B4E151",
+    "source-j-degree-sums-2-scratch-receipt.json": "27F40D179F6193BCD022E299E75B4D63DB671B88802142D9307C408975AA45CD",
+    "source-slot-places-7-scratch-receipt.json": "DA5C1515A441C66D461B4EEE7F7D81E3A74631128F2D83AA7771DC699D3DC256",
+    "source-cusp-width-3-scratch-receipt.json": "9AD249EB404FA0A42BDCC25D8C3F8AFBD16D32D6A0D64F99AEBEDB5A186FC156",
+    "source-cusp-count-6-scratch-receipt.json": "022FB2588922CA9E3E8C154828F318F03C650DBFE4AB317F1EBF38469306D497",
+    "source-modular-ratios-6-scratch-receipt.json": "BE04882DD383A0ED6DF36583FC14DC2634F42939A684F9552CB4EF21E3D1512D",
+    "source-meromorphic-order-6-scratch-receipt.json": "E4191DA645480778232FBF2BDAD134F377613333C29033059305A6EA6133D6B0",
+    "source-analytic-places-4-scratch-receipt.json": "796D82CC1B2D05F39347DDECB667DD9A474307661EAB5710EDD8698450A0789B",
+    "source-analytic-j-3-scratch-receipt.json": "5ADFDED6D3656415F767CDD5257CA646AA487D9A56B32585A6D945A20A2EC765",
+    "source-quotient-integral-4-scratch-receipt.json": "6040D419F15D7064EC81C205507B4E9243DF8AECF2D624A04EABC04AEF825EA6",
+    "source-bounded-integral-6-scratch-receipt.json": "2936A842C3B888FBEBB1902982F7521BB1869A7D1F6F2D72E44DCEAED3B797BF",
+    "source-finite-place-3-scratch-receipt.json": "3D007120D67E3D1AF18E64F36070B0848FEBB1517A74D5C6E53B9D9321B2A488"
+  },
+  "frozenReceiptProseCorrections": [],
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_PeriodPair_lattice_eq_of_g2_eq_of_g3_eq.lean.txt",
+        "sha256": "29C882CEA0E25D8BB665FF8F08B9BD0913A103C0FF058B909BBE5670DD7EBA00"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_PeriodPair_Uniformization.lean.txt",
+        "sha256": "570FBF7464E86A88A131ECECAC451BD95734258B7B7E4A82928535CFD2D9F52E"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_smul_eq_of_E4_cube_div_discriminant_eq.lean.txt",
+        "sha256": "BEBAEF99EF10D71B18F3EFC3421A125BD5D13E9E92B9F3DC86ACE577A5358008"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePlaceExhaustion.lean",
+      "sha256": "A3ABED53F2D58BA1912F63B53564EACF2562465A5BD1A98363A4478254EF1273"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticJFibers.lean",
+      "sha256": "3E413AEF6E99452CC9B41DADAD01DDD050789B90A0CE56D004A6271A23224D64"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBoundedIntegral.lean",
+      "sha256": "403040D11DBCF945BC6932F65B72B5651DBE3D342E403199EEA7E932DD4A990C"
+    }
+  ],
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Elliptic\\Weierstrass.lean",
+      "sha256": "DDF25BA36ED026C33BC432AACECF76C054E7A94AEF7C50191F520DEF44E070B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Module\\Connected.lean",
+      "sha256": "E45727F966335D30977BE250D5A94550FCAD55EDC00712EE7B7E377BB29946FB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\Polynomial\\Basic.lean",
+      "sha256": "1A5E7E59BF56FBF8EF9F94705DFADD3589932660C7999CDBE2A5E160DCAC57EB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\LevelOne\\GradedRing.lean",
+      "sha256": "8BACE6C979FD9CB8A93D12BE0603732DBE75F602597C00DD8053AA4B540EE768"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Pinned Mathlib already supplies the Weierstrass differential equation, analytic principal parts, and pole orders. Select just lattice identity and the (tau,1) period pair with scalar transport from the external proof. Its elliptic-curve uniformization, torsion and point structures are unnecessary. The two unused zeta-value nonvanishing helpers are omitted. Existing original finite-place realization supplies a direct source consumer; no abstract place dictionary or new moduli structure is introduced.",
+  "discharged": "Equal analytic j-values imply a genuine SL(2,Z) relation. The native Weierstrass differential equation and principal parts prove equality of lattices from equal g2/g3; actual Eisenstein lattice sums and scalar transport give the required equality of lattice invariants. Integer basis relations and upper-half-plane positivity produce a determinant-one matrix. Composition with proved original finite-place exhaustion shows every original finite fiber is represented by translates of any chosen point with its j-value. Equal original analytic places likewise imply a full modular orbit. No lattice identity, orbit-separation, or finite-place exhaustion premise remains.",
+  "remaining": "The finer Gamma0 orbit relation, normalized analytic ramification, elliptic fiber cardinalities, numerical genus, regular-differential cusp-form realization, and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

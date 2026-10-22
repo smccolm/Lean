@@ -1,0 +1,1850 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalFiniteFieldOfDefinition",
+    "Dubon2026.SourceOriginalFinitePlaceOrbit",
+    "Dubon2026.SourceOriginalPlaceFieldOfDefinition",
+    "Dubon2026.SourceOriginalPicardFieldOfDefinition",
+    "Dubon2026.SourceOriginalTorsionContinuity",
+    "Dubon2026.SourceOriginalPlaceEvaluation",
+    "Dubon2026.SourceOriginalAnalyticResidueValues",
+    "Dubon2026.SourceOriginalAnalyticEvaluation",
+    "Dubon2026.SourceAnalyticPowerDescent",
+    "Dubon2026.SourcePowerFiberAnalyticDescent",
+    "Dubon2026.SourceOriginalEllipticCoordinate",
+    "Dubon2026.SourceOriginalEllipticFibers",
+    "Dubon2026.SourceOriginalRamifiedRegularParameter",
+    "Dubon2026.SourceOriginalRamifiedRegularOrder",
+    "Dubon2026.SourceOriginalPlaceInverseValues",
+    "Dubon2026.SourceOriginalRamifiedMeromorphicOrder",
+    "Dubon2026.SourceOriginalFiniteLocalParameter",
+    "Dubon2026.SourceEllipticParameterLocal",
+    "Dubon2026.SourcePowerDescentLocalBranch",
+    "Dubon2026.SourceOriginalNearbyOrders",
+    "Dubon2026.SourceOriginalRamificationIsolated",
+    "Dubon2026.SourceOriginalRamifiedChartOrders",
+    "Dubon2026.SourceOriginalFiniteChartParameters",
+    "Dubon2026.SourceOriginalChartEvaluation",
+    "Dubon2026.SourceOriginalChartComparison",
+    "Dubon2026.SourceOriginalChartDifferenceOrders",
+    "Dubon2026.SourceOriginalChartBranchEquality",
+    "Dubon2026.SourceOriginalFiniteCharts",
+    "Dubon2026.SourceOriginalFiniteChartTransitions",
+    "Dubon2026.SourceScalarTaylorSeries",
+    "Dubon2026.SourceAnalyticLaurentQuotients",
+    "Dubon2026.SourceOriginalJCuspGerm",
+    "Dubon2026.SourceTaylorSubstitutions",
+    "Dubon2026.SourceCuspTaylorLaurentSubstitution",
+    "Dubon2026.SourceCuspTaylorFieldStability",
+    "Dubon2026.SourceOriginalCuspGermRealization",
+    "Dubon2026.SourceTaylorLaurentOrder",
+    "Dubon2026.SourceOriginalCuspGermOrders",
+    "Dubon2026.SourceTaylorQuotientGerms",
+    "Dubon2026.SourceCuspMeromorphicGerms",
+    "Dubon2026.SourceCuspDiscRealization",
+    "Dubon2026.SourceOriginalCuspDiscRealization",
+    "Dubon2026.SourceLaurentExpansionDescent",
+    "Dubon2026.SourceOriginalNormalizedCuspEmbedding",
+    "Dubon2026.SourceOriginalNormalizedCuspDisc",
+    "Dubon2026.SourceCuspDiscGermUniqueness",
+    "Dubon2026.SourceOriginalCuspDiscFunctions",
+    "Dubon2026.SourceOriginalCuspOrderMap",
+    "Dubon2026.SourceOriginalCuspNormalValues",
+    "Dubon2026.SourceCurveOrderOnePlaces",
+    "Dubon2026.SourceOriginalCuspPlaceFamily",
+    "Dubon2026.SourceOriginalCuspResidueValues",
+    "Dubon2026.SourceOriginalCuspEvaluationFamily",
+    "Dubon2026.SourceOriginalCuspChartParameters",
+    "Dubon2026.SourceOriginalAllPlaceParameters",
+    "Dubon2026.SourceOriginalAllChartPackage",
+    "Dubon2026.SourceOriginalPlaceCharts",
+    "Dubon2026.SourceOriginalPlaceChartTransitions",
+    "Dubon2026.SourceOriginalComplexChartedSpace",
+    "Dubon2026.SourceOriginalComplexChartOrders",
+    "Dubon2026.SourceOriginalPlaceSeparation",
+    "Dubon2026.SourceOriginalComplexHausdorff"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and its Hecke/Frobenius comparison -> actual torsion continuity and exact cardinality -> complex Abel-Jacobi comparison -> the original places as a compact connected Hausdorff complex curve with exact residue values and place orders.",
+  "discharged": "The literal arithmetic action on the original divisor-class torsion is continuous: finite coefficient fields and finite divisor supports supply open stabilizers. Every original complex place, including every cusp, has an injective local uniformizer parameter. Its literal residue value is the coordinate, and all nonzero original functions have their exact normalized place order at every point of the disk. Actual cusp embeddings are analytic Taylor quotients; the existing exact expansion range removes their width factor, and a common disk, order-one uniformizer and inverse function give the cusp parameters. Existing finite-place ramification and exhaustive cusp classification cover all original places. Proved branch uniqueness gives open overlaps and analytic transitions. Native chart construction and original residue subtraction give a Hausdorff complex analytic manifold whose extended charts recover the exact original orders. No torsion continuity, local parameter, cusp normalization, residue comparison, chart compatibility or Hausdorffness premise remains on these consumers.",
+  "boundary": "Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,657-module scope: all thirteen retained regressions, 39,780 exhaustive theorem checks, 17,387 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_continuous_apply",
+    "Dubon2026.SourceFunctionField.meromorphicNFAt_originalPlaceEval",
+    "Dubon2026.SourceFunctionField.originalPlaceEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.originalPlaceEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_of_ord_sub_pos",
+    "Dubon2026.SourceFunctionField.originalPlaceEval_algebraMap",
+    "Dubon2026.SourceFunctionField.original_finite_place_local_parameter",
+    "Dubon2026.SourceFunctionField.original_finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.OriginalChart.isOpen_finiteChart_trans_source",
+    "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_finiteChart_transition",
+    "Dubon2026.SourceFunctionField.OriginalChart.mem_finiteChart_source",
+    "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient_order",
+    "Dubon2026.SourceFunctionField.original_normalized_cusp_common_disc",
+    "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc_orders",
+    "Dubon2026.SourceFunctionField.original_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.OriginalChart.place_isManifold",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_place_chart_order",
+    "Dubon2026.SourceFunctionField.OriginalChart.place_t2Space"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T18:04:14.695917+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalFiniteFieldOfDefinition",
+        "SourceOriginalFinitePlaceOrbit",
+        "SourceOriginalPlaceFieldOfDefinition",
+        "SourceOriginalPicardFieldOfDefinition",
+        "SourceOriginalTorsionContinuity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteFieldOfDefinition.lean",
+          "sha256": "7C503D285CED7D9963F8E9B049B3A73337F2A3298311595CF26ED8B4671654CE",
+          "oleanSha256": "2003E8358F2C0753F5DB6612A912D3CA3CCA7B05D7DC1A3EB2B258F1163517BB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePlaceOrbit.lean",
+          "sha256": "0C11FF3CAFA8303B63B3133380B9F80C4D5C6E77D653921AB65982D437A0E8BD",
+          "oleanSha256": "F7718D825CF585396852F84D05F19A5B9466726E155C945F2093C79087FA7597"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlaceFieldOfDefinition.lean",
+          "sha256": "05FCA0EED7D9DF991B491B8B22E02CA70E787BB4F151E48A4E53DD1533B9C27F",
+          "oleanSha256": "5B979EDE576CB0AE21299199304A913F3D9FC5EC2DB21D556F09F1CC594FA5CA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardFieldOfDefinition.lean",
+          "sha256": "D369A4F05F18534D84FD5062E5E3B0B464532E46241764F4EDEF03CDB25B4B39",
+          "oleanSha256": "C224FFF8260F8519A23FCB9C5B7761DDBA06BC511FA431D1AE5D1C9960313805"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionContinuity.lean",
+          "sha256": "0686C04B1CD7B1AD42F2C5514CC5DF7F50E54F01F326936BD9DE650AA1CFF670",
+          "oleanSha256": "BA64E5FFD402E922D4275F665D7D3110D8F30A45636CB215C7AB5E80E3855BCD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_function_fieldOfDefinition",
+        "Dubon2026.SourceFunctionField.original_place_galois_orbit_finite",
+        "Dubon2026.SourceFunctionField.original_place_fieldOfDefinition",
+        "Dubon2026.SourceFunctionField.original_picard_fieldOfDefinition",
+        "Dubon2026.SourceFunctionField.originalJZero_isOpen_stabilizer",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsion_isOpen_stabilizer",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_continuous_apply",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionDiscrete",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionContinuousAction",
+        "Dubon2026.SourceFunctionField.originalJZeroArithmeticAction",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionTopology",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionArithmeticAction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_function_fieldOfDefinition",
+        "Dubon2026.SourceFunctionField.original_place_galois_orbit_finite",
+        "Dubon2026.SourceFunctionField.original_place_fieldOfDefinition",
+        "Dubon2026.SourceFunctionField.original_picard_fieldOfDefinition",
+        "Dubon2026.SourceFunctionField.originalJZero_isOpen_stabilizer",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsion_isOpen_stabilizer",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_continuous_apply",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionDiscrete",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionContinuousAction"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalJZeroArithmeticAction",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionTopology",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionArithmeticAction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionContinuityAudit5.log",
+      "logSha256": "680A13A1880562A498706F50D487CCFE9F6559C67FC490EB8EC84FF368FBF64D",
+      "auditSha256": "F0420D0D0CDC7B2F537790D86D91A0A5B939EBD1B16663B37F6A16407E2D278F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionContinuityDependencyAudit5.log",
+      "dependencyAuditSha256": "473365C36386EE0C940E4DD93B61EB30788B0BBF2B6CF9480D0A0EB7DE23F193",
+      "dependencyAuditSourceSha256": "7D1F09F2AC2DF7060B88337D3A9C122C64365911E721113ADF1757C97E637F90",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_continuous_apply"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> continuous arithmetic action on genuine original degree-zero divisor-class torsion.",
+      "discharged": "Every actual original function over Qbar has a finite field of definition. The original j-place dichotomy and finite normalized-order supports prove that each original place has a finite arithmetic orbit. Functions distinguishing the literal valuation rings yield a finite field fixing the place. A finite compositum over a divisor support fixes its actual degree-zero class. Thus every original Pic0 stabilizer is open in the absolute Galois group. Native open-stabilizer topology proves continuity of the literal arithmetic action on the discrete original torsion, with no finiteness, finite-image or continuity hypothesis supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual original torsion still requires finiteness and exact cardinality, followed by Tate realization, the rank-two Hecke component and Frobenius/inertia comparison for the normalized cusp eigensystem. Arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-torsion-continuity-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6A449E58E46201BAF55B09FBA21CECCB408C9339EC0BD8CA9BD65B023322E8A1"
+    },
+    {
+      "recordedUTC": "2026-10-21T18:13:49.855485+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalPlaceEvaluation",
+        "SourceOriginalAnalyticResidueValues",
+        "SourceOriginalAnalyticEvaluation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlaceEvaluation.lean",
+          "sha256": "D2A1BADB0A0F2C618C72459347D1582CFFB5D1FD15FE007644FB4F0D70C63C58",
+          "oleanSha256": "AD0418DFCD9B3723CA368F1373D00662A554A8B3D0CCD6AEB09424DD731C11A4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticResidueValues.lean",
+          "sha256": "469C7BFD233BA5E91FEA216E0C33CFBC7185F18596DD28CBEB52427F4610482B",
+          "oleanSha256": "71E690909A61BC8ACFFDEBFAE93B1E9E9587F47D3D4A365575E46CC82DA588B1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticEvaluation.lean",
+          "sha256": "810FEE9EEA90974D196D9D7ECD32B4BA3A9F016584B2A876A3B5B51A2EEEA630",
+          "oleanSha256": "0C6C9A2B653772A1E02E1379F680D5E4E25FE985063B1EB24B55782B77B9D159"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalPlaceRegularEval_algebraMap",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_of_mem",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_algebraMap",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_sub_algebraMap",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_zero_iff_ord_pos",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_of_ord_sub_pos",
+        "Dubon2026.SourceFunctionField.original_realize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.original_realize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.original_regular_analytic_representative",
+        "Dubon2026.SourceFunctionField.meromorphicNFAt_originalPlaceEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.originalPlaceResidueEquiv",
+        "Dubon2026.SourceFunctionField.originalPlaceRegularEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalPlaceRegularEval_algebraMap",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_of_mem",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_algebraMap",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_sub_algebraMap",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_zero_iff_ord_pos",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_of_ord_sub_pos",
+        "Dubon2026.SourceFunctionField.original_realize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.original_realize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.original_regular_analytic_representative",
+        "Dubon2026.SourceFunctionField.meromorphicNFAt_originalPlaceEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_meromorphicOrderAt"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalPlaceResidueEquiv",
+        "Dubon2026.SourceFunctionField.originalPlaceRegularEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticEvaluationAudit3.log",
+      "logSha256": "14249590E010C7E9708300E631923712A3205ECA556EB8CEBE9AC36066241016",
+      "auditSha256": "580E78F66D9FAD34CB5CD275857F003C2EBCDA3487CF21567D71239EB76FD12A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticEvaluationDependencyAudit3.log",
+      "dependencyAuditSha256": "1D07A9947B30E7A9624D7B687F6D52FFA60A3DC7C8485E9FDBC297B7B8037D85",
+      "dependencyAuditSourceSha256": "15DBAE915F7F17CFE62AEDECB1A1D83239B9FF70F79A9145B161E83AA959E02B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.meromorphicNFAt_originalPlaceEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_of_ord_sub_pos",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_algebraMap"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The literal original residue field is identified with the constant field using its already proved algebraMap bijection. Evaluation of regular functions is the actual residue homomorphism, with zero assigned at poles, and its vanishing is equivalent to positive original order for nonzero regular functions. The existing meromorphic realization tends to this same residue value. Its native normal form is the actual residue-evaluation function along the original analytic places. That function is analytic exactly when the original function is regular, and its meromorphic order is the proved original normalized order multiplied by actual ramification. No analytic representative, evaluation compatibility or residue rationality premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. To obtain original torsion finiteness and exact cardinality, construct the actual complex place charts, including ramified elliptic points and cusps, prove the Abel-Jacobi comparison and carry it back to the original Qbar divisor classes. Tate realization, the rank-two Hecke component and Frobenius/inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-analytic-evaluation-3-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "FE6E1C505C4E5F1EA7193E6AF693E20CF484B1EEE65BBBE57532F6EC5F0486DE"
+    },
+    {
+      "recordedUTC": "2026-10-21T18:44:10.547624+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceAnalyticPowerDescent",
+        "SourcePowerFiberAnalyticDescent",
+        "SourceOriginalEllipticCoordinate",
+        "SourceOriginalEllipticFibers",
+        "SourceOriginalRamifiedRegularParameter",
+        "SourceOriginalRamifiedRegularOrder",
+        "SourceOriginalPlaceInverseValues",
+        "SourceOriginalRamifiedMeromorphicOrder",
+        "SourceOriginalFiniteLocalParameter"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticPowerDescent.lean",
+          "sha256": "13AD28B6DE30B86B4A4EEEDD1B569519F0FF676CF2062AE91E787A5D2EC3BB98",
+          "oleanSha256": "5E1C80E8CE8EE6C0B2D08B70463951AAF71BF116B028CBCB66C106E089552269"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePowerFiberAnalyticDescent.lean",
+          "sha256": "54DF4535AB97DF81A24145715E4FFCC8FCAEFA3570C8084E4A55D545BA94AC81",
+          "oleanSha256": "41325F5A32907DC70F5EA2F573C032D7F930A7E6D37552659460D9C2A303ACBB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEllipticCoordinate.lean",
+          "sha256": "B85DF6DAC9858E31A7A9C7B0B2B65E6D0762F86447E1A09BC4825E925D981696",
+          "oleanSha256": "AC4D80A4894C62043110BB28694E2B0F3DF1E7062F972502108B1B80E0F04317"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEllipticFibers.lean",
+          "sha256": "C42B145697193F498ABD9D23C1A15031B29E0F49B68B06DEF5734563F19D97EA",
+          "oleanSha256": "47B3F33B4B61F7F4CD38E8CFE0CF7651AD7D887931571AA023C27EBA4BFCB9B4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamifiedRegularParameter.lean",
+          "sha256": "6DCDA6FCEA7FC251EA4B00B62066152715E49A2D17DB728C0D976A7B03F28EA6",
+          "oleanSha256": "7BBFA45971A4F26CBF8B50889D536009DC8EF4AE9BD24DFF2EA9D40BB0659288"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamifiedRegularOrder.lean",
+          "sha256": "C4446A69BE2166F43FA475E7FAA9D4D55B56E0344916B9583FBCF78217FC5C75",
+          "oleanSha256": "CED26CFC2055AB48A151C9AB15EA5E51A4BC45055C03BFEE06D4778A85716AEA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlaceInverseValues.lean",
+          "sha256": "63321D36FF075F09F624FD3477B1426FBA6DF7EBB08CD71172CCDAC192B946E9",
+          "oleanSha256": "92EC067C3B11F4B6633D2C7327138E60852A28BD0BCDD1B5ABDD65E79FECF73E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamifiedMeromorphicOrder.lean",
+          "sha256": "EEC07F91FB3465063D94744A8C86038DDEB047931AD34F5F39DB665E97C41635",
+          "oleanSha256": "58E6C0B18A8FF591590D5558C7D6249A30F07308778518CA3DBF93D0270E2652"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteLocalParameter.lean",
+          "sha256": "B7A3782A04B4F5A1C7B8D05E2DE26241496F658E6D76BAFAE7A106D6C674510D",
+          "oleanSha256": "636024ABC642E3E35F3F832D5FDB28402B6A013FF35F0C2128329D624BCA03F5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.analyticAt_of_comp_power",
+        "Dubon2026.SourceFunctionField.PowerDescent.root_pow",
+        "Dubon2026.SourceFunctionField.PowerDescent.root_zero",
+        "Dubon2026.SourceFunctionField.PowerDescent.norm_root_power",
+        "Dubon2026.SourceFunctionField.PowerDescent.analyticAt_root_composite",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.upper_ne_conj",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_zero",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_sub_conj",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.coord_param",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_coord",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.analyticAt_param",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.hasDerivAt_param",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.deriv_param_ne_zero",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_im_pos_eventually",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.coord_smul",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.multiplier_eq_inv_square",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.exists_stabilizer_multiplier",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.place_eq_of_coord_power_eq",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_zero",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_regular_analytic",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_regular_order",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_inv",
+        "Dubon2026.SourceFunctionField.meromorphicAt_originalRamifiedPlace_eval",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.original_analytic_place_local_parameter",
+        "Dubon2026.SourceFunctionField.original_finite_place_local_parameter",
+        "Dubon2026.SourceFunctionField.PowerDescent.root",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.coord",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.analyticAt_of_comp_power",
+        "Dubon2026.SourceFunctionField.PowerDescent.root_pow",
+        "Dubon2026.SourceFunctionField.PowerDescent.root_zero",
+        "Dubon2026.SourceFunctionField.PowerDescent.norm_root_power",
+        "Dubon2026.SourceFunctionField.PowerDescent.analyticAt_root_composite",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.upper_ne_conj",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_zero",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_sub_conj",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.coord_param",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_coord",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.analyticAt_param",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.hasDerivAt_param",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.deriv_param_ne_zero",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param_im_pos_eventually",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.coord_smul",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.multiplier_eq_inv_square",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.exists_stabilizer_multiplier",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.place_eq_of_coord_power_eq",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_zero",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_regular_analytic",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_regular_order",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_inv",
+        "Dubon2026.SourceFunctionField.meromorphicAt_originalRamifiedPlace_eval",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.original_analytic_place_local_parameter",
+        "Dubon2026.SourceFunctionField.original_finite_place_local_parameter"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.PowerDescent.root",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.coord",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.param",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteParametersAudit9.log",
+      "logSha256": "B41938BBD544B4F9DECDC3D50B72E6125E5160507A74B7318021875657AE64B3",
+      "auditSha256": "90194C700EADE0A33E6562D2CF2832A9229F0E2A9D63A2D151F97540D794398D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 56,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 25,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteParametersDependencyAudit9.log",
+      "dependencyAuditSha256": "B01277BC54E22DDB92F03E21883B6B8B5CFD5DD0C19BA9364C556AF85F8D805B",
+      "dependencyAuditSourceSha256": "E7650C16D62BA44E9B1EF53A04E85E67D6F696AC212ED9DCAC351606146B565D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_finite_place_local_parameter"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every literal original complex place where j is regular has a locally injective parameter family through that place. Its actual uniformizer evaluates to the parameter and every nonzero original function is meromorphic with exactly its normalized original order at the center. The actual Gamma0 stabilizer realizes every ramification root of unity, proving power-fiber invariance. Native quotient continuity, removable singularities and analytic inversion descend the evaluation function through the ramification power and cancel the proved positive ramification factor. Inversion handles poles. No analytic model, fiber invariance, order comparison or unramified-center hypothesis is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. The center-order theorem is not yet a full chart: compatibility and exact orders throughout a neighborhood, cusp charts, compactness and the global Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and the comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-finite-parameters-9-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "78299BD1DEA564385F1098F2A0871E572A3BE37E332BBDE7D36415F128BF2BD3"
+    },
+    {
+      "recordedUTC": "2026-10-21T18:54:33.474907+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceEllipticParameterLocal",
+        "SourcePowerDescentLocalBranch",
+        "SourceOriginalNearbyOrders",
+        "SourceOriginalRamificationIsolated",
+        "SourceOriginalRamifiedChartOrders",
+        "SourceOriginalFiniteChartParameters"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticParameterLocal.lean",
+          "sha256": "E89545EA8569B96065B7EA94BBB252A4EFB8BD086E8CAA46D3414B53A3E534C4",
+          "oleanSha256": "5174F7A0B3A697D7C4C56C666E737BD898705C6CCDE21AB4D128A8A428A9E5CD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePowerDescentLocalBranch.lean",
+          "sha256": "5D5005D5BE0D6997B59F76009DE0DCAF87FF5A76373DCC7C8D145DCF5B7EBD8A",
+          "oleanSha256": "883BF4D8B87CBE71E22A8EAF664AC3243A7F35B3A4400D9B85402D242064610F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNearbyOrders.lean",
+          "sha256": "2159792CC93DA9C4CDCAA2998CF244EBB9D2FC82623B090790DE24B6FABA7D7B",
+          "oleanSha256": "AEE5F49457E4C6FF33EACEDA334C322D5F2A6D95B544733BE30328D109008D78"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamificationIsolated.lean",
+          "sha256": "D39E58E97B8CF8450D66270A2F138015FC8B0B19920CEB68D74334BD1E087220",
+          "oleanSha256": "A8E19D940D3DA19992F9B89960AD41B18F36F056B952D7E6914F0C4C3B094003"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamifiedChartOrders.lean",
+          "sha256": "BB79DC996470DF4AD2C9C842D9CC07239EEA04C55CD08170A106AD901E60A5B8",
+          "oleanSha256": "3BF282D5CC87FF77A0437C1BFD704B7C06C13186514EA62C3AB179D3FA005A15"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteChartParameters.lean",
+          "sha256": "2F818DA4344BC45351A45C4668743F6E503785C096BF5FD2EBDE59F86D3366BF",
+          "oleanSha256": "E4035158443E365B08F28C02D40F1BF852FB5A89CAA9797E5B2CD28900BC7238"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.analyticAt_param_of_ne_one",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.hasDerivAt_param_of_ne_one",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.deriv_param_ne_zero_of_ne_one",
+        "Dubon2026.SourceFunctionField.PowerDescent.exists_local_branch",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_nearby_orders",
+        "Dubon2026.SourceFunctionField.originalAnalyticRamification_eventually_one",
+        "Dubon2026.SourceFunctionField.originalAnalyticRamification_param_eventually_one",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_chart_orders",
+        "Dubon2026.SourceFunctionField.original_analytic_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.original_finite_place_chart_parameter"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.analyticAt_param_of_ne_one",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.hasDerivAt_param_of_ne_one",
+        "Dubon2026.SourceFunctionField.EllipticCoordinate.deriv_param_ne_zero_of_ne_one",
+        "Dubon2026.SourceFunctionField.PowerDescent.exists_local_branch",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_nearby_orders",
+        "Dubon2026.SourceFunctionField.originalAnalyticRamification_eventually_one",
+        "Dubon2026.SourceFunctionField.originalAnalyticRamification_param_eventually_one",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_chart_orders",
+        "Dubon2026.SourceFunctionField.original_analytic_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.original_finite_place_chart_parameter"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteChartsAudit6.log",
+      "logSha256": "B2F741ADD533378BDD10F51CB5A3DFC5996B48D0C8FCF4DB7FA4C823EE5B97A1",
+      "auditSha256": "93CC3AF0AD5D0803B13F6475A38AA877EFE56E5E9F060FF15B1ACEE09B808F57",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteChartsDependencyAudit6.log",
+      "dependencyAuditSha256": "63B1F7B2A6E19F5B78453BAD7FA91550E7F92EBC1B8894123EE875A921A81431",
+      "dependencyAuditSourceSha256": "00D4DA68C8FC4DE84505CB461EE5B9BD94159982060474E0C4E9F1C6E550CF27",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_finite_place_chart_parameter"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every actual original complex finite place has a locally injective parameter family on one fixed positive-radius disk, with its actual uniformizer equal to the parameter. At every point of that disk and for every nonzero original function, evaluation is meromorphic and has exactly the original normalized place order. Every function regular at that point evaluates analytically there. Native inverse branches of the power map transport the proved original realization away from the center. Existing E4/E6 nonzero germs, native isolated zeros and the full-stabilizer multiplicity theorem show that all sufficiently close noncentral points are unramified. The preceding descended center-order theorem handles the center. The disk radius is independent of the function, and no nearby unramifiedness, analytic representative or order-comparison premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Cusp parameters, compatibility of overlapping charts, compactness and the global Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-finite-charts-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "DAC623816D51FE3E56CE1B337CA417746491729CBB6B9FE2D589095BF583B9DE"
+    },
+    {
+      "recordedUTC": "2026-10-21T19:11:15.184735+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalChartEvaluation",
+        "SourceOriginalChartComparison",
+        "SourceOriginalChartDifferenceOrders",
+        "SourceOriginalChartBranchEquality",
+        "SourceOriginalFiniteCharts",
+        "SourceOriginalFiniteChartTransitions"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartEvaluation.lean",
+          "sha256": "93A7E6CFC8CDEEEC3F3DFB1E858143029958C05A960BD563F258C9C9F55DCC01",
+          "oleanSha256": "257442E177C1DC4E3E8B6933DEFCA964CDFA751B9827CFF93CACE99484F8C5C0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartComparison.lean",
+          "sha256": "FF1FF3975578F8F7CB55A5ACE99658886FBB9444F3272D7AD388B523508658A4",
+          "oleanSha256": "FDDADC6945609D1BE14870FADCF919704E1EE9A2BE894273C3D6458A0DF8E406"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartDifferenceOrders.lean",
+          "sha256": "461206066B96184B97DA7F1C036778B6AD7F6724CF1A9101B298840F8ACC44D4",
+          "oleanSha256": "3B46475ADEDE2A078F363F67F2D85933387418B999B9653CA9F2E3084749DCB1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartBranchEquality.lean",
+          "sha256": "C59114ED129216454D350D7C9CBD53AB00757150448A5228C5F3C3E0C2D5851D",
+          "oleanSha256": "55C41FFA3918AA6E22255158CF9EA395F0DEDEEF97DDDD5698BBAFD8C4FAF5C7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteCharts.lean",
+          "sha256": "601A43CF1E1A74A1CD015044C9E5D99DAF54F66522543EA4CBD57F96E8C9E697",
+          "oleanSha256": "FB259E942EA216797BF135C86D27725E328451896E58665656CE64213B0E6A77"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteChartTransitions.lean",
+          "sha256": "50BC36523FC25843A2BBE09617CE715913AB0D40A83FC718010C5478EFEAFBF5",
+          "oleanSha256": "7B7598A1904FE8AC302D4CE9D15BEF5CBE772C1CB227EF4A4E2A04CA12E9A9A6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalPlaceEval_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.analyticAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.eventually_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.meromorphicOrderAt_sub_const",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.uniformizer_sub_order",
+        "Dubon2026.SourceFunctionField.original_finite_place_parameter_package",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_decomp",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.sub_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.uniformizer_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.transition_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.analyticAt_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.tendsto_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.order_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_mem'",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.analyticAt_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.decomp",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference_step",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.le_difference_order",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference_order_top_of_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventuallyEq_of_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventuallyEq",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference_order_top",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.deriv_transition_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_good",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.meromorphicAt_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.ord_eq_of_difference_order_top",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_place_eq",
+        "Dubon2026.SourceFunctionField.OriginalChart.finite_spec",
+        "Dubon2026.SourceFunctionField.OriginalChart.finite_eval_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart_target",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_finiteChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_finiteChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_finiteChart_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.mk",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteRadius",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteFamily",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalPlaceEval_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.analyticAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.eventually_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.meromorphicOrderAt_sub_const",
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders.uniformizer_sub_order",
+        "Dubon2026.SourceFunctionField.original_finite_place_parameter_package",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_decomp",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.sub_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.uniformizer_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.transition_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.analyticAt_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.tendsto_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.order_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_mem'",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.analyticAt_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.decomp",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference_step",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.le_difference_order",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference_order_top_of_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventuallyEq_of_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventuallyEq",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference_order_top",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.deriv_transition_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_good",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.meromorphicAt_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.ord_eq_of_difference_order_top",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.eventually_place_eq",
+        "Dubon2026.SourceFunctionField.OriginalChart.finite_spec",
+        "Dubon2026.SourceFunctionField.OriginalChart.finite_eval_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart_target",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_finiteChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_finiteChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_finiteChart_transition"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.Orders",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.mk",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.ComparisonData.difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteRadius",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteFamily",
+        "Dubon2026.SourceFunctionField.OriginalChart.finiteChart"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteTransitionsAudit6.log",
+      "logSha256": "03DC32CC227581DB7A510680E78E538834DDFE1E6A2AFDFA47D0F0E958710792",
+      "auditSha256": "B739889F98255E131D006A9D625B399A48ED30E82FC0F45ADE96306D240DCA2C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 72,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteTransitionsDependencyAudit6.log",
+      "dependencyAuditSha256": "9EF8DC5B6CDABE81633A365E909C7765E7122A1C48DAC133BF680C4907A1AE6A",
+      "dependencyAuditSourceSha256": "FA0B5F801B563F379B350F6F094AB05BEF9155BCBBD0D3C681FE6C0B875DBB31",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_finiteChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_finiteChart_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_finiteChart_source"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The actual original uniformizer parameter at every finite place defines a genuine partial equivalence with its complex disk. Any two of these constructed finite-place charts have open overlap domain and analytic transition map. Repeated division of a regular original function by the order-one original uniformizer proves that differences of the two residue-value germs vanish to every order. Actual residue inversion handles poles. The native meromorphic identity theorem propagates these equalities over one common disk; normalized orders identify the original valuation rings and hence the actual place families. The public consumers instantiate all order, regularity and branch inputs with the already proved original finite-place parameters. Orders is a defined internal pointwise property, and ComparisonData packages narrower proved inputs; neither is presented as a separate existence proof or an assumed overlap conclusion.",
+      "boundary": "Scratch only; production promotion and verification pending. Cusp coverage and compatibility with cusp parameters, global Hausdorff/compact/connected curve structure and the Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-finite-transitions-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "64B2D98128E2E231B15537B3D76B517A4651A3508C14C7CA92A5F10ED475D551"
+    },
+    {
+      "recordedUTC": "2026-10-21T19:27:05.547401+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceScalarTaylorSeries",
+        "SourceAnalyticLaurentQuotients",
+        "SourceOriginalJCuspGerm",
+        "SourceTaylorSubstitutions",
+        "SourceCuspTaylorLaurentSubstitution",
+        "SourceCuspTaylorFieldStability",
+        "SourceOriginalCuspGermRealization",
+        "SourceTaylorLaurentOrder",
+        "SourceOriginalCuspGermOrders"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceScalarTaylorSeries.lean",
+          "sha256": "240A69A8D3A7958CBACDF2341A88C532E4C0F9BA2857FB0F33BE105FB1B6D368",
+          "oleanSha256": "C5D7417D37780F10CC66E07D947CBD12F685D7F250037ED0BA76C8B576D75B38"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticLaurentQuotients.lean",
+          "sha256": "4751AA421D56563684D9A8720A36B2DDA4B3D95B311C0E5EE56A8F3DC0618FB9",
+          "oleanSha256": "3DD9115C3A62BBF9F56F7E302E029E7A886284BBA2BE5B090D36BF335D46FEC4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJCuspGerm.lean",
+          "sha256": "4322802BE3552C8E7CA8A5EE3592E4ABFA9B14CA27A66222DB24C2752BCA53DF",
+          "oleanSha256": "467E8F63A18732566287773F7F1C27CEB0FFC5F0B10406AB548D4B9381250FB3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTaylorSubstitutions.lean",
+          "sha256": "08354B0D33CF6ACF6A1B7E631C0B524779E3F1896D0EA9C8232789EA608A673B",
+          "oleanSha256": "26FE524E18DFFC3E2819EE9F7E541F475396A0B30F4C0B058C9C6CB8F1ED668D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspTaylorLaurentSubstitution.lean",
+          "sha256": "626656A3E97E6321A48D2FEAF8B501935F52C2348565875EF7F5D4DCDC1C69BA",
+          "oleanSha256": "094B70B768D62306A70DEDD78B54648DB5C3B56EDEE581AB531BD4B41C568AA4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspTaylorFieldStability.lean",
+          "sha256": "E4BDA44C8C80A81DFDC4D59190CF226B29CE66AE2F033B98B7ED1596DF7D87A6",
+          "oleanSha256": "56FE9B7216C0BFAEEE643A6AA7828819FF9C9ADBA624EDBA3DCA510441E1396C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspGermRealization.lean",
+          "sha256": "0C0451BA51BB5C665BBACFC80764392ABC86A0308E8315D519BEE6CC3E5E8A0C",
+          "oleanSha256": "9C0423894315D56E6AF45BBF09C1DB397B8F227CC6850FB6324759453679BC84"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTaylorLaurentOrder.lean",
+          "sha256": "A972DEADF72C1AB3DBBCC278DF7BE7A82EA5D42C8F46AAF1D1A0CAC90AA1EC4A",
+          "oleanSha256": "D875AD873E0E540D49C8C3E574F3D62B433904EB93D96D5DBB305EA5725CC491"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspGermOrders.lean",
+          "sha256": "8CCD4C722E8EF6AF950F90C50989A9BCAAD44957E8E230FF0B0B6058909DFC8D",
+          "oleanSha256": "9B9F1341FFFE0D7908DD99D0EAAF42CB0DCD4EC053DC7C8CBCD09E4820356C1D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.coeff_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.hasFPowerSeriesAt_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_const",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_add",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_of_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.CuspTaylor.rationallyRealized_const",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized.add",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized.mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized.inv",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_cuspFunction",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpansion_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.jqModC_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_of_hasFPowerSeriesAt",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_comp_mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_comp_pow",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qTwist_coe_powerSeries",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpand_coe_powerSeries",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qTwist_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpand_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qTwist_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpand_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.TS_mem_realizedField",
+        "Dubon2026.SourceFunctionField.original_slot_embedding_mem_realizedField",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient",
+        "Dubon2026.SourceFunctionField.CuspTaylor.order_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.order_coe_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.meromorphicOrderAt_eq_series_order",
+        "Dubon2026.SourceFunctionField.CuspTaylor.meromorphicOrderAt_quotient",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient_order",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized",
+        "Dubon2026.SourceFunctionField.CuspTaylor.realizedField"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.coeff_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.hasFPowerSeriesAt_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_const",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_add",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_of_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.CuspTaylor.rationallyRealized_const",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized.add",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized.mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized.inv",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_cuspFunction",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpansion_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.jqModC_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_of_hasFPowerSeriesAt",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_comp_mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_comp_pow",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qTwist_coe_powerSeries",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpand_coe_powerSeries",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qTwist_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpand_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qTwist_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.qExpand_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspTaylor.TS_mem_realizedField",
+        "Dubon2026.SourceFunctionField.original_slot_embedding_mem_realizedField",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient",
+        "Dubon2026.SourceFunctionField.CuspTaylor.order_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.order_coe_series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.meromorphicOrderAt_eq_series_order",
+        "Dubon2026.SourceFunctionField.CuspTaylor.meromorphicOrderAt_quotient",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient_order"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.series",
+        "Dubon2026.SourceFunctionField.CuspTaylor.RationallyRealized",
+        "Dubon2026.SourceFunctionField.CuspTaylor.realizedField"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspGermsAudit9.log",
+      "logSha256": "F2B016FE0DE76D0ABCD3EE90F6D0C5DFDACBE04246BD808E3867C1B13A5E5158",
+      "auditSha256": "D9CFDDBD5247728B1F2F91DB7DF4522C39FAD08940E9E7996A207F44B7D20FA6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 47,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspGermsDependencyAudit9.log",
+      "dependencyAuditSha256": "8241A30DFDE42944E169A32D4BD96BDC1C88E761E046707F3E8E484FDC683BE6",
+      "dependencyAuditSourceSha256": "418A9630947386002174D2A799420E1120E5AF4BFB96F447F28952BA60D8C69A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient_order"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every element of every actual original cusp embedding is a quotient of convergent analytic Taylor germs. The actual E4-cube/discriminant expansion realizes j, and exact coefficient identities realize its unit twists and power substitutions. Field closure and the proved actual two-generator field description give the result for all original functions. Native Taylor coefficient vanishing identifies analytic and Laurent orders. For every nonzero original function the quotient has meromorphic order equal to its original normalized cusp-place order times the exact previously proved cusp normalization factor. Neither convergence nor order comparison is an input to the actual consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Normalized cusp parameters, one common disk with all-functions meromorphic realization, cusp coverage and compatibility, global Hausdorff/compact/connected curve structure and Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-cusp-germs-9-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5401EE0DD70225F67A121D43206A7D33AA9BF63575B748D7B6A43210410DF839"
+    },
+    {
+      "recordedUTC": "2026-10-21T19:40:26.846830+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceTaylorQuotientGerms",
+        "SourceCuspMeromorphicGerms",
+        "SourceCuspDiscRealization",
+        "SourceOriginalCuspDiscRealization",
+        "SourceLaurentExpansionDescent",
+        "SourceOriginalNormalizedCuspEmbedding",
+        "SourceOriginalNormalizedCuspDisc"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTaylorQuotientGerms.lean",
+          "sha256": "A950F1E9EDB563FB4135180AD3A8503C7756436C60C04F70A3011FCD544D1D8A",
+          "oleanSha256": "C80956D13E5E50C2FAF2F160D21471BFAA32311F4AF75B3AEC3CF1EEFF346A1A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspMeromorphicGerms.lean",
+          "sha256": "505455BCAE01323E9BF2210DACB11B805023F952EA4C0D707C54E95A676A3150",
+          "oleanSha256": "C38B4A4900AFA760279A09DE1F8F9AC39F8D3B7715CFB4269E3E0373BA75EDB7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspDiscRealization.lean",
+          "sha256": "3D4D21695EAC581179483ACB6C8ADFC8CA68AA386C44A643472D5868816FF083",
+          "oleanSha256": "841F5C95FD23695B31775C26DCC06695C0148EC8B3608B274E3A245828A7C3C8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspDiscRealization.lean",
+          "sha256": "FB432C7BCC4AC0B7A9222C0AAC537A2241586A890F7E644A31A7FB75A2F6D6FA",
+          "oleanSha256": "A2AF9AD75F86CB4927A767F13B9D8C23515747FBFF0B5D35277D8A326F069007"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentExpansionDescent.lean",
+          "sha256": "F44E50A2218260E11AD5C4B7E2E1F8A21C677460A026926CFCB502F8CCA91B0A",
+          "oleanSha256": "B0E2E0AE6204A9DFD272DDD35783BF86C638F8E9D75BC2144F87D23C72B7FE44"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedCuspEmbedding.lean",
+          "sha256": "1061A5304B4AC250CBE9FE478DD5A9B6E3CD0B15A16B7B2BBEE65E43F9E46D16",
+          "oleanSha256": "2189A3478AFF93D507C88A809988DD30761E89A1911B851879AF6B6C61432C22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedCuspDisc.lean",
+          "sha256": "E08195651A51CC0C45CE76759AF8BD637DB109BD7E128DE710FD4801E65519CF",
+          "oleanSha256": "0B3F023976EA21EEC5C93E1EB70CC08849CADC6238C8328BAADE3FAFD60DC2BA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_iff_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CuspTaylor.eventually_ne_zero_of_series_ne_zero",
+        "Dubon2026.SourceFunctionField.CuspTaylor.quotient_eq_iff_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.congr",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.unique",
+        "Dubon2026.SourceFunctionField.CuspTaylor.represents_const",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.add",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.inv",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.meromorphicAt",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.order",
+        "Dubon2026.SourceFunctionField.CuspTaylor.discField_mono",
+        "Dubon2026.SourceFunctionField.CuspTaylor.exists_discField_of_realized",
+        "Dubon2026.SourceFunctionField.CuspTaylor.order_ne_top_on_disc",
+        "Dubon2026.SourceFunctionField.original_embedding_common_disc",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc_orders",
+        "Dubon2026.SourceFunctionField.qExpand_descendExpansion",
+        "Dubon2026.SourceFunctionField.descendExpansion_order",
+        "Dubon2026.SourceFunctionField.descendExpansion_apply_of_eq",
+        "Dubon2026.SourceFunctionField.descendExpansion_TS_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalization_neZero",
+        "Dubon2026.SourceFunctionField.CuspLabels.embedding_mem_expansionRange",
+        "Dubon2026.SourceFunctionField.CuspLabels.qExpand_normalizedEmbedding",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding_order",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding_j_realized",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding_jN_realized",
+        "Dubon2026.SourceFunctionField.original_normalized_cusp_common_disc",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents",
+        "Dubon2026.SourceFunctionField.CuspTaylor.discField",
+        "Dubon2026.SourceFunctionField.descendExpansion",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalization",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.series_eq_iff_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CuspTaylor.eventually_ne_zero_of_series_ne_zero",
+        "Dubon2026.SourceFunctionField.CuspTaylor.quotient_eq_iff_eventuallyEq",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.congr",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.unique",
+        "Dubon2026.SourceFunctionField.CuspTaylor.represents_const",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.add",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.mul",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.inv",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.meromorphicAt",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.order",
+        "Dubon2026.SourceFunctionField.CuspTaylor.discField_mono",
+        "Dubon2026.SourceFunctionField.CuspTaylor.exists_discField_of_realized",
+        "Dubon2026.SourceFunctionField.CuspTaylor.order_ne_top_on_disc",
+        "Dubon2026.SourceFunctionField.original_embedding_common_disc",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc_orders",
+        "Dubon2026.SourceFunctionField.qExpand_descendExpansion",
+        "Dubon2026.SourceFunctionField.descendExpansion_order",
+        "Dubon2026.SourceFunctionField.descendExpansion_apply_of_eq",
+        "Dubon2026.SourceFunctionField.descendExpansion_TS_mem_realizedField",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalization_neZero",
+        "Dubon2026.SourceFunctionField.CuspLabels.embedding_mem_expansionRange",
+        "Dubon2026.SourceFunctionField.CuspLabels.qExpand_normalizedEmbedding",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding_order",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding_j_realized",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding_jN_realized",
+        "Dubon2026.SourceFunctionField.original_normalized_cusp_common_disc"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents",
+        "Dubon2026.SourceFunctionField.CuspTaylor.discField",
+        "Dubon2026.SourceFunctionField.descendExpansion",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalization",
+        "Dubon2026.SourceFunctionField.CuspLabels.normalizedEmbedding"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedCuspDiscAudit7.log",
+      "logSha256": "C0DD6E3E3AB8C564AEA02FBB6357CAAD6F1B6AF08706F81AC29D4AAEB6AC0BC0",
+      "auditSha256": "64037A1AFD8C0F3A22AAFA3E22BC0D7138EC86DF99999B86CDE53AEEA000C000",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 39,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 31,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedCuspDiscDependencyAudit7.log",
+      "dependencyAuditSha256": "606F41B52D92F65663185484F3A0B6B969245F83858B3A1E0EE519D98FC4B2A2",
+      "dependencyAuditSourceSha256": "F009F06224CF41FFFE78CCBF638A72286D08194DACD5CFFFF560C03926A129CE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_normalized_cusp_common_disc",
+        "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc_orders"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every actual original cusp embedding has a constructed normalized embedding obtained by inverting its proved common Laurent expansion. The order of this normalized embedding equals the original cusp-place order exactly. Its two original j generators remain explicit twisted/substituted j series, so their analytic realization follows from existing convergence proofs. Equality of formal analytic quotients is equivalent to equality of their punctured germs. Meromorphic realizations on one fixed disk form an intermediate field. Actual original pair generation therefore provides one positive radius for all original functions, with exact normalized order at the center and finite meromorphic order throughout the disk for every nonzero function. No expansion-range, normalization, common-radius, convergence or order-comparison premise remains in the actual normalized cusp consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. The compatible common-disk functions still need conversion to an actual cusp place chart with residue evaluation and normalized orders at every point. Cusp coverage and chart compatibility, global Hausdorff/compact/connected curve structure and Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-normalized-cusp-disc-7-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "04E92876A2AC56C6BE12BAFD1E583231D29BEFE144A873C46DCAA3328A7A9983"
+    },
+    {
+      "recordedUTC": "2026-10-21T19:51:20.016631+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCuspDiscGermUniqueness",
+        "SourceOriginalCuspDiscFunctions",
+        "SourceOriginalCuspOrderMap",
+        "SourceOriginalCuspNormalValues",
+        "SourceCurveOrderOnePlaces",
+        "SourceOriginalCuspPlaceFamily",
+        "SourceOriginalCuspResidueValues",
+        "SourceOriginalCuspEvaluationFamily",
+        "SourceOriginalCuspChartParameters",
+        "SourceOriginalAllPlaceParameters"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspDiscGermUniqueness.lean",
+          "sha256": "29D5F3D70239BE5F512419ABDAE17FDC4F910DB15BA0D23863E31908A130E9E2",
+          "oleanSha256": "8C5E0770D902B9B1FDA51771AAFE17600EDFFBDDC73E815E357B53E7AEB871EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspDiscFunctions.lean",
+          "sha256": "51E53D8D83201D5883C472FA0D88269E05E7DF5002E07D89EAE3905DACC502F0",
+          "oleanSha256": "2FB421AD1A7873340D05FEAE30E572BBDF9BF540F1272B32553239778C8AAEAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspOrderMap.lean",
+          "sha256": "1290200A0463E84BBA830C61796BC3A8E39B0C58B3AF6B4100A4C37DD30CC2F1",
+          "oleanSha256": "CB7FA76E3E07F54852B4BE713280313D409F883F0B1997B783439E495D15C0A4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspNormalValues.lean",
+          "sha256": "8788BCB36E052B80F1786035007DD9AC299A1359655AD7556F6974462F64D1D0",
+          "oleanSha256": "BB8369684CDB8F7EFB5D7F2F03E6BD45CC4F53C7581D8F7F926C71FC1FC3F866"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveOrderOnePlaces.lean",
+          "sha256": "1D0C8013F6C4C6C1EBAB1B6A92B988BA1196C08C23639B72E3ED5DFF296A498E",
+          "oleanSha256": "B40CB910BA5BFC46591DD911A25152C453211C805C52ED18BEB6897894DB6D5D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPlaceFamily.lean",
+          "sha256": "D4DAA43083E3B61EA696F52CAD87ED8E44D1D85F9AA61FB792AA8E070077803D",
+          "oleanSha256": "0E2B79CD37A71CD9B3A02F95E33FA28E9A1175A8A40DEBAE487A11D3188612EF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspResidueValues.lean",
+          "sha256": "338150816431135E93296ADD3EC9B67894C6793CFA623FC288DA7E8F49F32A4C",
+          "oleanSha256": "79320647B04F93E2D76E41592D65A26D758E60CEA68ADB5C2EB7E65B34FCBE9F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspEvaluationFamily.lean",
+          "sha256": "7B7D96F8AA3E168CC432A9425B7BAE2FB9D7D930E23848981BC544A940FDB4F9",
+          "oleanSha256": "E59D7BFF52D6EA0C6EEE42A8FB113E55FD8B60D74BFB22B72897223D1D2570F6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspChartParameters.lean",
+          "sha256": "CE6BC1E01FE9DBE4B832649EF9CBEFB5D8E2E1D1A9DE774FB6F7C3645235FAB3",
+          "oleanSha256": "8F126DAADA299890CBECE7EB525D6DE9FB53A783B178183D4D41EE377F9C07E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPlaceParameters.lean",
+          "sha256": "CD24DB9C017C8FA4FB80D4BFC2E4FACC093CF4F0BCE9DEBB16872BE1DC0165CD",
+          "oleanSha256": "B928DD73F150DDE1E66FE6AC70A8D9B7530CBBDC3E8AB0EA0B48F210DD7A4096"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventuallyEq_on_disc",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.order_eq_on_disc",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRadius_pos",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_meromorphicOn",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_represents",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_order_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_order_ne_top",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_const",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_add",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_mul",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_inv",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_const",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_mul",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_add",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_sub_const",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_germ",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_normalForm",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_order",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_order",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_analytic",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_deriv_ne_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_sub_uniformizer_one",
+        "Dubon2026.SourceCurve.Place.exists_place_of_orderMap_of_order_one",
+        "Dubon2026.SourceFunctionField.CuspLabels.exists_normalized_disc_place",
+        "Dubon2026.SourceFunctionField.CuspLabels.exists_cusp_disc_place_family",
+        "Dubon2026.SourceFunctionField.CuspLabels.eval_eq_discNormal",
+        "Dubon2026.SourceFunctionField.CuspLabels.exists_cusp_disc_evaluation_family",
+        "Dubon2026.SourceFunctionField.original_cusp_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.original_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRadius",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventuallyEq_on_disc",
+        "Dubon2026.SourceFunctionField.CuspTaylor.Represents.order_eq_on_disc",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRadius_pos",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_meromorphicOn",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_represents",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_order_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_order_ne_top",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_const",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_add",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_mul",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_inv",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_const",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_mul",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_add",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize_sub_const",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_germ",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_normalForm",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_order",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_order",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_analytic",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal_uniformizer_deriv_ne_zero",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder_sub_uniformizer_one",
+        "Dubon2026.SourceCurve.Place.exists_place_of_orderMap_of_order_one",
+        "Dubon2026.SourceFunctionField.CuspLabels.exists_normalized_disc_place",
+        "Dubon2026.SourceFunctionField.CuspLabels.exists_cusp_disc_place_family",
+        "Dubon2026.SourceFunctionField.CuspLabels.eval_eq_discNormal",
+        "Dubon2026.SourceFunctionField.CuspLabels.exists_cusp_disc_evaluation_family",
+        "Dubon2026.SourceFunctionField.original_cusp_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.original_place_chart_parameter"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.CuspLabels.discRadius",
+        "Dubon2026.SourceFunctionField.CuspLabels.discRealize",
+        "Dubon2026.SourceFunctionField.CuspLabels.discOrder",
+        "Dubon2026.SourceFunctionField.CuspLabels.discNormal"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPlaceParametersAudit10.log",
+      "logSha256": "3851D9EA845D8580193DF08FDB93A277C2FF5872031801D88A33B8FCE5573371",
+      "auditSha256": "5AE5E910798DD38B22C408FB244B3E8C3095D160362DB9009D96D16AFC0293A2",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 43,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 35,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPlaceParametersDependencyAudit10.log",
+      "dependencyAuditSha256": "ABEB9B1F7DD56B96BFCCF8CF23161B8613656E3A008D316F2CA696B17D1275DE",
+      "dependencyAuditSourceSha256": "0E2F4B2D98C13AAD76FB2127D39A1FBD670D129B3D561FB60158FD98476C654A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_place_chart_parameter"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every actual original complex place has an injective uniformizer parameter with literal residue value equal to the parameter. For every nonzero original function, its evaluation along this family is meromorphic and has exactly the original normalized place order at every point of the disk; regular original functions are analytic. At cusps, connected meromorphic uniqueness derives field-operation germs on the common disk. Native normal form of the original uniformizer has order one and nonzero derivative. Its nearby differences force normalization one in the existing order-map place construction. Literal residue evaluation equals the normal-form value. The native inverse-coordinate theorem produces the cusp parameter, and the existing exhaustive original pole family together with the finite-place parameter theorem covers every place. No local parameter, cusp coverage, valuation law, nontriviality, normalization or residue-comparison premise remains in the all-place consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Compatibility of the new all-place chart family, global Hausdorff/compact/connected curve structure and Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-all-place-parameters-10-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9D6FF8976C3A609216061F4B81AC4E03593A517EFBCE4CE13F4253DFB7946368"
+    },
+    {
+      "recordedUTC": "2026-10-21T20:01:39.638768+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalAllChartPackage",
+        "SourceOriginalPlaceCharts",
+        "SourceOriginalPlaceChartTransitions",
+        "SourceOriginalComplexChartedSpace",
+        "SourceOriginalComplexChartOrders",
+        "SourceOriginalPlaceSeparation",
+        "SourceOriginalComplexHausdorff"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllChartPackage.lean",
+          "sha256": "94273CC490EF84B7D3B5A86817B7286EE7B86EAC2B56FEE3F7F089E8D338F452",
+          "oleanSha256": "1680C09122EC936977D7E7FADE73F9154BD3B44B88B919F705ED497337922B6E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlaceCharts.lean",
+          "sha256": "64A83765B66DDB0508A5E5DDE533CAC6E255E59CC004EA3FEDB8B566100681F6",
+          "oleanSha256": "1C1A32C6AB4EEC0BAE397C2730608584F1CFFC91D16B2AD6AF8184866B0EAF9C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlaceChartTransitions.lean",
+          "sha256": "F3D8E064F73C88122A89A157277A458BB9E80BB1860A173D98C6032119B1ECC5",
+          "oleanSha256": "6D59FD420F98DA034A412771C86E9A40D6A8A925AD5C2EA43FE24789E2F7ADA6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexChartedSpace.lean",
+          "sha256": "86B3D17B8C748DA9853863373AFE1BB1582A418302E3E2D853BD32AF86D331BF",
+          "oleanSha256": "94DB8545A28D979009BFE895A33058CA62B34175A8AD7819AF6A637F123CCFE6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexChartOrders.lean",
+          "sha256": "BE69A8588E6B062E4FA3F8FAE1713FE6173D80B42D57D30C9B4EF52EA1F7A1D6",
+          "oleanSha256": "C914E52BF21C89BD48179FBA44195DA80FD787C805D3D7359F161861D7E904E2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPlaceSeparation.lean",
+          "sha256": "3FFC9948BC5FEAB00A0213DC679737B030EE92C387EF4CC553D5974F78279EC2",
+          "oleanSha256": "23F0BF48CF6FE7A22EF7B7BE32B61C1DB5B0513514A50371CA3654CF53495C75"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexHausdorff.lean",
+          "sha256": "F84262CABABC0131151821E88A18F625DBDD1457D8C77FF3E7C1BFE3482A7F26",
+          "oleanSha256": "D5CEFE48BFFA8636D9461711B11087F9CD988561360024D36E3F4C9809D0F3E8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_place_parameter_package",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_spec",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_eval_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_target",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_placeChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_placeChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_placeChart_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_place_atlas_iff",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_isManifold",
+        "Dubon2026.SourceFunctionField.OriginalChart.extPlaceChart_symm_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.extPlaceChart_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_place_chart_order",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuousOn_placeFamily",
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_placeFamily_image",
+        "Dubon2026.SourceFunctionField.original_places_separating_function",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_small_place_disc",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_t2Space",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeRadius",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeCore",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeTopology",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChartedSpace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_place_parameter_package",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_spec",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_eval_uniformizer",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_target",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_placeChart_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_placeChart_trans_source",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_placeChart_transition",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.mem_place_atlas_iff",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_isManifold",
+        "Dubon2026.SourceFunctionField.OriginalChart.extPlaceChart_symm_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.extPlaceChart_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_place_chart_order",
+        "Dubon2026.SourceFunctionField.OriginalChart.continuousOn_placeFamily",
+        "Dubon2026.SourceFunctionField.OriginalChart.isOpen_placeFamily_image",
+        "Dubon2026.SourceFunctionField.original_places_separating_function",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_small_place_disc",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_t2Space"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.placeRadius",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeFamily",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChart",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeCore",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeTopology",
+        "Dubon2026.SourceFunctionField.OriginalChart.placeChartedSpace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldAudit7.log",
+      "logSha256": "B8AFACD1EC14EF74EC6AC53D40C365421402964D3DB53230870A74BCB50B1220",
+      "auditSha256": "F06934AD9093341C1EC4FBDA2BD426CF47D164E1270B2F134E378D2101243F32",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 48,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 25,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldDependencyAudit7.log",
+      "dependencyAuditSha256": "54AB17BD6A24E150DAFB7635D6D725A190A229743A99EC129727437C35735957",
+      "dependencyAuditSourceSha256": "F826A4384A7B0BE5DE7F02CED533C3F601595F17CDBF0378352A0DFD645B8A96",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.place_isManifold",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_place_chart_order",
+        "Dubon2026.SourceFunctionField.OriginalChart.place_t2Space"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "The actual original complex places carry a constructed Hausdorff complex analytic manifold. Every place, including every cusp, has a native uniformizer chart. Proved branch uniqueness gives open overlaps and analytic transition maps. Native extended charts recover literal original residue evaluations and exact normalized original place orders. Incomparability of distinct nontrivial rank-one valuation rings and subtraction of the original residue produce an actual function vanishing at one place and polar at another; its reciprocal separates their chart neighborhoods. No local chart, compatibility, topology, analytic manifold or Hausdorffness hypothesis remains in these consumers.",
+      "boundary": "Scratch only; production promotion and verification pending. Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-manifold-7-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6B575664B25324A0B8325AC08D41AD51399931B27863730B7C592A52FB97300E"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-torsion-continuity-5-reuse-review-20261021.json",
+    "Tools/source-original-analytic-evaluation-3-reuse-review-20261021.json",
+    "Tools/source-original-finite-parameters-9-reuse-review-20261021.json",
+    "Tools/source-original-finite-charts-6-reuse-review-20261021.json",
+    "Tools/source-original-finite-transitions-6-reuse-review-20261021.json",
+    "Tools/source-original-cusp-germs-9-reuse-review-20261021.json",
+    "Tools/source-original-normalized-cusp-disc-7-reuse-review-20261021.json",
+    "Tools/source-original-all-place-parameters-10-reuse-review-20261021.json",
+    "Tools/source-original-complex-manifold-7-reuse-review-20261021.json"
+  ],
+  "productionCommentCorrections": [
+    {
+      "module": "Dubon2026.SourceOriginalChartEvaluation",
+      "old": "constant-subtraction comparisons needed for chart transitions.",
+      "new": "comparisons after subtracting constants, needed for chart transitions.",
+      "reason": "A comment began with the reserved declaration token constant and therefore matched the unchanged whole-source integrity scanner. Rephrase the comment; no Lean declaration, statement or proof changes. Frozen scratch evidence is preserved."
+    }
+  ],
+  "productionFocusedReceipt5657": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionContinuityDependencyAudit5Production5657.log",
+        "sha256": "473365C36386EE0C940E4DD93B61EB30788B0BBF2B6CF9480D0A0EB7DE23F193",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_continuous_apply"
+        ],
+        "sourceSha256": "F857562177BE67EAAA6AB433899D76E11A3B1405CF36257B47533782D1FACCA8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticEvaluationDependencyAudit3Production5657.log",
+        "sha256": "1D07A9947B30E7A9624D7B687F6D52FFA60A3DC7C8485E9FDBC297B7B8037D85",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.meromorphicNFAt_originalPlaceEval",
+          "Dubon2026.SourceFunctionField.originalPlaceEval_analyticAt_iff",
+          "Dubon2026.SourceFunctionField.originalPlaceEval_meromorphicOrderAt",
+          "Dubon2026.SourceFunctionField.originalPlaceEval_eq_of_ord_sub_pos",
+          "Dubon2026.SourceFunctionField.originalPlaceEval_algebraMap"
+        ],
+        "sourceSha256": "780D0EA095D2685FFF4644197B000ECD697A4D7BD36D10D190081F2E9954E566"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteParametersDependencyAudit9Production5657.log",
+        "sha256": "B01277BC54E22DDB92F03E21883B6B8B5CFD5DD0C19BA9364C556AF85F8D805B",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_finite_place_local_parameter"
+        ],
+        "sourceSha256": "84843E1D510CB08E99E9216490171173FDC9C69021E54AF2A59C4E8B55C72867"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteChartsDependencyAudit6Production5657.log",
+        "sha256": "63B1F7B2A6E19F5B78453BAD7FA91550E7F92EBC1B8894123EE875A921A81431",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_finite_place_chart_parameter"
+        ],
+        "sourceSha256": "B35A81911872C83F42B5E870C9584675E2473CFB871D91EBADB0F8D904470BBD"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteTransitionsDependencyAudit6Production5657.log",
+        "sha256": "9EF8DC5B6CDABE81633A365E909C7765E7122A1C48DAC133BF680C4907A1AE6A",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.isOpen_finiteChart_trans_source",
+          "Dubon2026.SourceFunctionField.OriginalChart.analyticOnNhd_finiteChart_transition",
+          "Dubon2026.SourceFunctionField.OriginalChart.mem_finiteChart_source"
+        ],
+        "sourceSha256": "A9E136BA96A73F3D0D652419F52B1BB68543584F76879E78F2223E173EA79195"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspGermsDependencyAudit9Production5657.log",
+        "sha256": "8241A30DFDE42944E169A32D4BD96BDC1C88E761E046707F3E8E484FDC683BE6",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_cusp_embedding_analytic_quotient_order"
+        ],
+        "sourceSha256": "F0A455EA9E71F93AAA39F924EE8FB7397C156914B01542ADC61051BB4C5D459B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormalizedCuspDiscDependencyAudit7Production5657.log",
+        "sha256": "606F41B52D92F65663185484F3A0B6B969245F83858B3A1E0EE519D98FC4B2A2",
+        "requiredProofValueEdges": 31,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_normalized_cusp_common_disc",
+          "Dubon2026.SourceFunctionField.original_cusp_embedding_common_disc_orders"
+        ],
+        "sourceSha256": "7E3CA9F4DC3C350524084712D9A49C535AFEB7772FFDF8C6DC5D11F15F284113"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPlaceParametersDependencyAudit10Production5657.log",
+        "sha256": "ABEB9B1F7DD56B96BFCCF8CF23161B8613656E3A008D316F2CA696B17D1275DE",
+        "requiredProofValueEdges": 35,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_place_chart_parameter"
+        ],
+        "sourceSha256": "B5E0F00654709B208E69088C3F856820D16FAAEE672FD5FC3D16362E429FA6B1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldDependencyAudit7Production5657.log",
+        "sha256": "54AB17BD6A24E150DAFB7635D6D725A190A229743A99EC129727437C35735957",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.place_isManifold",
+          "Dubon2026.SourceFunctionField.OriginalChart.original_place_chart_order",
+          "Dubon2026.SourceFunctionField.OriginalChart.place_t2Space"
+        ],
+        "sourceSha256": "9D71F85BB4E923088794121A29E3D537E155905AADA85019A0718AA23E941F67"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldProductionAudit5657.log",
+    "sha256": "3EEE9DF43CC03CBAEF21B6C243C2466556A1A8C4669CAFAB4EBC94C70BAED648",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-complex-manifold-production-5657-build.log",
+    "aggregateSha256": "211E5158706FFD1FCFD87987E8ECB416C79CE99FFD2B04CDF48A9F60E128BD12",
+    "productionModules": 5657,
+    "incrementModules": 62,
+    "axiomChecks": 241,
+    "exhaustiveIncrementTheorems": 363,
+    "linterScopes": 62,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 366,
+    "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Actual original places, literal residue maps and divisor-class torsion are retained. Native quotient/removable and inverse-function results, existing exact cusp expansion range and branch uniqueness discharge the local analytic inputs. Valuation-ring incomparability replaces a general simultaneous approximation development. One prose-only correction rephrases a comment beginning with the declaration token constant to satisfy the unchanged integrity scan; frozen scratch evidence is preserved.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 366,
+      "scratchDistinct": 363,
+      "productionFocused": 363,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalPlaceEval.eq_1": [
+          {
+            "scope": "SourceComplexManifoldScratchOwnership82For5657",
+            "module": "Dubon2026.SourceOriginalAnalyticEvaluation"
+          },
+          {
+            "scope": "SourceComplexManifoldScratchOwnership88For5657",
+            "module": "Dubon2026.SourceOriginalCuspResidueValues"
+          }
+        ],
+        "HasStrictDerivAt.localInverse.congr_simp": [
+          {
+            "scope": "SourceComplexManifoldScratchOwnership83For5657",
+            "module": "Dubon2026.SourceOriginalFiniteLocalParameter"
+          },
+          {
+            "scope": "SourceComplexManifoldScratchOwnership84For5657",
+            "module": "Dubon2026.SourcePowerDescentLocalBranch"
+          },
+          {
+            "scope": "SourceComplexManifoldScratchOwnership88For5657",
+            "module": "Dubon2026.SourceOriginalCuspChartParameters"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalFiniteFieldOfDefinition",
+            "SourceOriginalFinitePlaceOrbit",
+            "SourceOriginalPlaceFieldOfDefinition",
+            "SourceOriginalPicardFieldOfDefinition",
+            "SourceOriginalTorsionContinuity"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership81For5657.log",
+            "sha256": "F43845F36999C5663FFF0FE4A4617FDDFB75958AD050EC2DBDCEFFD27B64290C",
+            "sourceSha256": "F868672EEABBE5900C4EA4B6CF22539CD9F19854232825DA03E86490566A4D79"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPlaceEvaluation",
+            "SourceOriginalAnalyticResidueValues",
+            "SourceOriginalAnalyticEvaluation"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership82For5657.log",
+            "sha256": "6AA88CB4CBA124087BA6C5921AEB94E3C9C005AF0CE1E284C40AE5538D084C3D",
+            "sourceSha256": "1B5495FEBDB58CE83E00BAEC6D4566826828C7549010DD366237ACC328E78BBF"
+          }
+        },
+        {
+          "modules": [
+            "SourceAnalyticPowerDescent",
+            "SourcePowerFiberAnalyticDescent",
+            "SourceOriginalEllipticCoordinate",
+            "SourceOriginalEllipticFibers",
+            "SourceOriginalRamifiedRegularParameter",
+            "SourceOriginalRamifiedRegularOrder",
+            "SourceOriginalPlaceInverseValues",
+            "SourceOriginalRamifiedMeromorphicOrder",
+            "SourceOriginalFiniteLocalParameter"
+          ],
+          "count": 56,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership83For5657.log",
+            "sha256": "A9BCCC833B265B77105E6AEEBED43EE1B2FB034F64FEFB5FD0848BE9CDAAFDB4",
+            "sourceSha256": "CFBFAE158DCBB006B7B3BA9011EF324DCB686EC9764B56FF5922BAF6A81B7A65"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticParameterLocal",
+            "SourcePowerDescentLocalBranch",
+            "SourceOriginalNearbyOrders",
+            "SourceOriginalRamificationIsolated",
+            "SourceOriginalRamifiedChartOrders",
+            "SourceOriginalFiniteChartParameters"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership84For5657.log",
+            "sha256": "7C30EF14A8C4CBB79D237EE041AD1BC1C5A57952D4A083E86646DFE6A3A49ADC",
+            "sourceSha256": "C4FC61F8D6C625EFA6BF881B128DCCF0E99E9A1207219D5CD99E10483AD46CAF"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalChartEvaluation",
+            "SourceOriginalChartComparison",
+            "SourceOriginalChartDifferenceOrders",
+            "SourceOriginalChartBranchEquality",
+            "SourceOriginalFiniteCharts",
+            "SourceOriginalFiniteChartTransitions"
+          ],
+          "count": 72,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership85For5657.log",
+            "sha256": "81F62929C90DDA27AB2204DB4213656C20A0ADF6BD0B8935F74CC40873C55D03",
+            "sourceSha256": "4C4B885F65A8265943F5DE916469FE4A8B7C2BAD69A95FA66C9526159D917021"
+          }
+        },
+        {
+          "modules": [
+            "SourceScalarTaylorSeries",
+            "SourceAnalyticLaurentQuotients",
+            "SourceOriginalJCuspGerm",
+            "SourceTaylorSubstitutions",
+            "SourceCuspTaylorLaurentSubstitution",
+            "SourceCuspTaylorFieldStability",
+            "SourceOriginalCuspGermRealization",
+            "SourceTaylorLaurentOrder",
+            "SourceOriginalCuspGermOrders"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership86For5657.log",
+            "sha256": "4570FB9C91F6AE299FA85E3A60A3572ABF2FC12B2B747FA5CB5579FC6C719190",
+            "sourceSha256": "04163B5C1986CEDE6C6B30352F3911D116771AF24108A4B923E4B9F35F63D9E0"
+          }
+        },
+        {
+          "modules": [
+            "SourceTaylorQuotientGerms",
+            "SourceCuspMeromorphicGerms",
+            "SourceCuspDiscRealization",
+            "SourceOriginalCuspDiscRealization",
+            "SourceLaurentExpansionDescent",
+            "SourceOriginalNormalizedCuspEmbedding",
+            "SourceOriginalNormalizedCuspDisc"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership87For5657.log",
+            "sha256": "7E7F0E9F235221D6D6131A470C944A71C094BC5CFA2E5257209BB32E42B66A45",
+            "sourceSha256": "A1518CA83A8A64FDB309C3E87BD9133E855C809734E093D87703AE7F82091CFB"
+          }
+        },
+        {
+          "modules": [
+            "SourceCuspDiscGermUniqueness",
+            "SourceOriginalCuspDiscFunctions",
+            "SourceOriginalCuspOrderMap",
+            "SourceOriginalCuspNormalValues",
+            "SourceCurveOrderOnePlaces",
+            "SourceOriginalCuspPlaceFamily",
+            "SourceOriginalCuspResidueValues",
+            "SourceOriginalCuspEvaluationFamily",
+            "SourceOriginalCuspChartParameters",
+            "SourceOriginalAllPlaceParameters"
+          ],
+          "count": 43,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership88For5657.log",
+            "sha256": "6DF66E6DD1D55B63821B8B1F927834F214A5BB69DABC9B60F2E87763A8BA88CC",
+            "sourceSha256": "17C537C909C90B7183F9A988714E9C94534BA558CFB99911F04E92E898679D16"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAllChartPackage",
+            "SourceOriginalPlaceCharts",
+            "SourceOriginalPlaceChartTransitions",
+            "SourceOriginalComplexChartedSpace",
+            "SourceOriginalComplexChartOrders",
+            "SourceOriginalPlaceSeparation",
+            "SourceOriginalComplexHausdorff"
+          ],
+          "count": 48,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership89For5657.log",
+            "sha256": "0B5D9567AD1835098DD4EB18EF16E7B34859EEFB8B276AE937679154295EA25A",
+            "sourceSha256": "0F30FC1ABE82E651E9F3771FE9BB8EC60B5B0789168F25E07784C20E797F4FAC"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldOwnership5657.log",
+        "sha256": "0787FE1E1D61CA74D56196AEF03858B7139BC712989760894F65A7ED4EE08DCD",
+        "sourceSha256": "9D4E29F50645C3A20C6047E3A31188B45F64FB50565FC1CCA4BA4803BB091018"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-113522-357.log",
+        "sha256": "4B261EED1CB41CC5D3194C232BB63EAD968CE05F0641BB77F969256C1E9AC214"
+      }
+    },
+    "scratchToProductionCountReason": "All 363 distinct names from 366 exhaustive scratch checks are retained: 363 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt5657": {
+    "recordedUTC": "2026-10-21T21:35:12.314908+00:00",
+    "log": "logs/dubon-build-20261021-131950-230.log",
+    "sha256": "49DE51E870E6919BEA0C15E72AD8C5E016C6D7773716E62BA1F03E8B104206BF",
+    "bytes": 9758209,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5657,
+    "projectTheorems": 39780,
+    "registeredConsumers": 17387,
+    "registeredConstructions": 1062,
+    "declarations": 23914,
+    "generated": 22253,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_131409.log",
+    "foundationSha256": "6AB8A09697BD0A805EC26401C9C21842A17BBD193181DACFD4DDFCDB654AF176",
+    "countReconciliation": {
+      "previousTheorems": 39419,
+      "focusedTheorems": 363,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace.congr_simp",
+        "HasStrictDerivAt.localInverse.congr_simp"
+      ],
+      "addedTheorems": 361,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldOwnership5657.log",
+      "ownershipSha256": "0787FE1E1D61CA74D56196AEF03858B7139BC712989760894F65A7ED4EE08DCD"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 366,
+      "scratchDistinct": 363,
+      "productionFocused": 363,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalPlaceEval.eq_1": [
+          {
+            "scope": "SourceComplexManifoldScratchOwnership82For5657",
+            "module": "Dubon2026.SourceOriginalAnalyticEvaluation"
+          },
+          {
+            "scope": "SourceComplexManifoldScratchOwnership88For5657",
+            "module": "Dubon2026.SourceOriginalCuspResidueValues"
+          }
+        ],
+        "HasStrictDerivAt.localInverse.congr_simp": [
+          {
+            "scope": "SourceComplexManifoldScratchOwnership83For5657",
+            "module": "Dubon2026.SourceOriginalFiniteLocalParameter"
+          },
+          {
+            "scope": "SourceComplexManifoldScratchOwnership84For5657",
+            "module": "Dubon2026.SourcePowerDescentLocalBranch"
+          },
+          {
+            "scope": "SourceComplexManifoldScratchOwnership88For5657",
+            "module": "Dubon2026.SourceOriginalCuspChartParameters"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalFiniteFieldOfDefinition",
+            "SourceOriginalFinitePlaceOrbit",
+            "SourceOriginalPlaceFieldOfDefinition",
+            "SourceOriginalPicardFieldOfDefinition",
+            "SourceOriginalTorsionContinuity"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership81For5657.log",
+            "sha256": "F43845F36999C5663FFF0FE4A4617FDDFB75958AD050EC2DBDCEFFD27B64290C",
+            "sourceSha256": "F868672EEABBE5900C4EA4B6CF22539CD9F19854232825DA03E86490566A4D79"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPlaceEvaluation",
+            "SourceOriginalAnalyticResidueValues",
+            "SourceOriginalAnalyticEvaluation"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership82For5657.log",
+            "sha256": "6AA88CB4CBA124087BA6C5921AEB94E3C9C005AF0CE1E284C40AE5538D084C3D",
+            "sourceSha256": "1B5495FEBDB58CE83E00BAEC6D4566826828C7549010DD366237ACC328E78BBF"
+          }
+        },
+        {
+          "modules": [
+            "SourceAnalyticPowerDescent",
+            "SourcePowerFiberAnalyticDescent",
+            "SourceOriginalEllipticCoordinate",
+            "SourceOriginalEllipticFibers",
+            "SourceOriginalRamifiedRegularParameter",
+            "SourceOriginalRamifiedRegularOrder",
+            "SourceOriginalPlaceInverseValues",
+            "SourceOriginalRamifiedMeromorphicOrder",
+            "SourceOriginalFiniteLocalParameter"
+          ],
+          "count": 56,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership83For5657.log",
+            "sha256": "A9BCCC833B265B77105E6AEEBED43EE1B2FB034F64FEFB5FD0848BE9CDAAFDB4",
+            "sourceSha256": "CFBFAE158DCBB006B7B3BA9011EF324DCB686EC9764B56FF5922BAF6A81B7A65"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticParameterLocal",
+            "SourcePowerDescentLocalBranch",
+            "SourceOriginalNearbyOrders",
+            "SourceOriginalRamificationIsolated",
+            "SourceOriginalRamifiedChartOrders",
+            "SourceOriginalFiniteChartParameters"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership84For5657.log",
+            "sha256": "7C30EF14A8C4CBB79D237EE041AD1BC1C5A57952D4A083E86646DFE6A3A49ADC",
+            "sourceSha256": "C4FC61F8D6C625EFA6BF881B128DCCF0E99E9A1207219D5CD99E10483AD46CAF"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalChartEvaluation",
+            "SourceOriginalChartComparison",
+            "SourceOriginalChartDifferenceOrders",
+            "SourceOriginalChartBranchEquality",
+            "SourceOriginalFiniteCharts",
+            "SourceOriginalFiniteChartTransitions"
+          ],
+          "count": 72,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership85For5657.log",
+            "sha256": "81F62929C90DDA27AB2204DB4213656C20A0ADF6BD0B8935F74CC40873C55D03",
+            "sourceSha256": "4C4B885F65A8265943F5DE916469FE4A8B7C2BAD69A95FA66C9526159D917021"
+          }
+        },
+        {
+          "modules": [
+            "SourceScalarTaylorSeries",
+            "SourceAnalyticLaurentQuotients",
+            "SourceOriginalJCuspGerm",
+            "SourceTaylorSubstitutions",
+            "SourceCuspTaylorLaurentSubstitution",
+            "SourceCuspTaylorFieldStability",
+            "SourceOriginalCuspGermRealization",
+            "SourceTaylorLaurentOrder",
+            "SourceOriginalCuspGermOrders"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership86For5657.log",
+            "sha256": "4570FB9C91F6AE299FA85E3A60A3572ABF2FC12B2B747FA5CB5579FC6C719190",
+            "sourceSha256": "04163B5C1986CEDE6C6B30352F3911D116771AF24108A4B923E4B9F35F63D9E0"
+          }
+        },
+        {
+          "modules": [
+            "SourceTaylorQuotientGerms",
+            "SourceCuspMeromorphicGerms",
+            "SourceCuspDiscRealization",
+            "SourceOriginalCuspDiscRealization",
+            "SourceLaurentExpansionDescent",
+            "SourceOriginalNormalizedCuspEmbedding",
+            "SourceOriginalNormalizedCuspDisc"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership87For5657.log",
+            "sha256": "7E7F0E9F235221D6D6131A470C944A71C094BC5CFA2E5257209BB32E42B66A45",
+            "sourceSha256": "A1518CA83A8A64FDB309C3E87BD9133E855C809734E093D87703AE7F82091CFB"
+          }
+        },
+        {
+          "modules": [
+            "SourceCuspDiscGermUniqueness",
+            "SourceOriginalCuspDiscFunctions",
+            "SourceOriginalCuspOrderMap",
+            "SourceOriginalCuspNormalValues",
+            "SourceCurveOrderOnePlaces",
+            "SourceOriginalCuspPlaceFamily",
+            "SourceOriginalCuspResidueValues",
+            "SourceOriginalCuspEvaluationFamily",
+            "SourceOriginalCuspChartParameters",
+            "SourceOriginalAllPlaceParameters"
+          ],
+          "count": 43,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership88For5657.log",
+            "sha256": "6DF66E6DD1D55B63821B8B1F927834F214A5BB69DABC9B60F2E87763A8BA88CC",
+            "sourceSha256": "17C537C909C90B7183F9A988714E9C94534BA558CFB99911F04E92E898679D16"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAllChartPackage",
+            "SourceOriginalPlaceCharts",
+            "SourceOriginalPlaceChartTransitions",
+            "SourceOriginalComplexChartedSpace",
+            "SourceOriginalComplexChartOrders",
+            "SourceOriginalPlaceSeparation",
+            "SourceOriginalComplexHausdorff"
+          ],
+          "count": 48,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexManifoldScratchOwnership89For5657.log",
+            "sha256": "0B5D9567AD1835098DD4EB18EF16E7B34859EEFB8B276AE937679154295EA25A",
+            "sourceSha256": "0F30FC1ABE82E651E9F3771FE9BB8EC60B5B0789168F25E07784C20E797F4FAC"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexManifoldOwnership5657.log",
+        "sha256": "0787FE1E1D61CA74D56196AEF03858B7139BC712989760894F65A7ED4EE08DCD",
+        "sourceSha256": "9D4E29F50645C3A20C6047E3A31188B45F64FB50565FC1CCA4BA4803BB091018"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-113522-357.log",
+        "sha256": "4B261EED1CB41CC5D3194C232BB63EAD968CE05F0641BB77F969256C1E9AC214"
+      }
+    },
+    "scratchToProductionCountReason": "All 363 distinct names from 366 exhaustive scratch checks are retained: 363 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Compactness, connectedness and complex Abel-Jacobi comparison remain required. Original torsion finiteness/cardinality and comparison back to Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-21 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and regular-differential cusp-form realization -> finite analytic-place geometry -> identification of the genuine original analytic place with its actual finite j-value.",
+  "precedingScratchReceipts": {
+    "source-local-differentials-4-scratch-receipt.json": "B471FC977222E8CA887EF5FE601690AE67ADF34859BD7D5BA689D4CE69E90746",
+    "source-local-geometry-9-scratch-receipt.json": "244D003F7531BCBF1E99BE0C5A071AC96976B2C83595A7E302314A7BC7D6BC71",
+    "source-divisor-support-4-scratch-receipt.json": "31EC52277FA87A9C52BD3612427FE07A5C0DC8779E56C445ECC790A12D75C3E4",
+    "source-principal-degree-12-scratch-receipt.json": "3E3FB99CF99FA98033D2FC003DE7300B496F3906B7521DB32A666AA575FFE991",
+    "source-integral-derivatives-7-scratch-receipt.json": "70543856399CC08EF3454DEB488C8C0720CB01183D051F1138569BC4EAFE2290",
+    "source-canonical-divisors-7-scratch-receipt.json": "A504BC047C2E72410DE73C881EB187E7F8438D33852268439CFFD174D7DCE257",
+    "source-regular-finite-6-scratch-receipt.json": "6A2BA3566D12568B7585BF08AA8882FB5F9871AB77D6F45A58F667DAD2682C4D",
+    "source-canonical-degree-2-scratch-receipt.json": "BF881523E168901DE02B5B0BBC16EA6638AA763211A8DA48818785A24C7ECA79",
+    "source-adelic-quotients-6-scratch-receipt.json": "787E6577804E0001A09AFDCBBEEA3D92DA50EA6BB4C7AA8667532F9B3B0143BE",
+    "source-genus-bound-9-scratch-receipt.json": "52078058B3846D2722E1AC4C3099A4D60EB5BFBD611FCDCED66C3464A92F741C",
+    "source-global-index-4-scratch-receipt.json": "F790FDE6998E623222E2B1AFACB8E1360E8E222AB4456B33A087ECFCE565E755",
+    "source-weil-rank-4-scratch-receipt.json": "E70A87DB3E628E34781E754F85D29EA17B1F365A43A37345920A6248E92A28AB",
+    "source-local-residues-5-scratch-receipt.json": "7D13E38C45F2D657F0F58734B927FB7439D99D856CF1FF6D64172955EB8A256F",
+    "source-residue-functional-3-scratch-receipt.json": "B3A8BD636518B0F5A0B4E0DE4E97187D88E53AAF1E8FA6D32138020513E1E170",
+    "source-exact-derivative-2-scratch-receipt.json": "EB4C89BAA268A1CC66B3A075F53465AD4C2524A1175D70033779861FED426974",
+    "source-exact-residue-3-scratch-receipt.json": "D6E6D8EBF09F632A55D6CBFE3BB9446438EE5FC231768001436B4933DC2AF983",
+    "source-power-residue-3-scratch-receipt.json": "AF72BD69D52FE0E328A5AAE60F90FAC46DDCFAC37AC917B2CFFFEB53AB3EB035",
+    "source-rational-residue-3-scratch-receipt.json": "84091950BE1CF08638E6BC3B44876C2B1089402932A399070702F32AED5AAD04",
+    "source-residue-pullback-5-scratch-receipt.json": "2ADD8D228CD8A7FCE78EBE62FF8FD1F86FCAB94F3A1F74EE9D9AC5FC7AE662CA",
+    "source-residue-invariance-4-scratch-receipt.json": "4D673B932F3200E6C4DA39F5AB9A0028D1CF36DE682AE0B8195A98870681BDAF",
+    "source-galois-residue-11-scratch-receipt.json": "C4F04869C5FBDF82E58D111EEE30525FE927331F0C7A61A58B1258945896F6CC",
+    "source-global-residue-9-scratch-receipt.json": "A194E21697F37B35B0DCBBABB4F3D945C4C461EC862BA4E4BD2153B58019A5E5",
+    "source-riemann-roch-2-scratch-receipt.json": "ABC98B0526CED855C5A0C2E7BB4E3E2455A5A05E17B5098DE9CEC501B614EF59",
+    "source-coordinate-values-2-scratch-receipt.json": "15C6E5B735D28F55F39A0E244F006CD31BFF457A668A4102C86E9C775346D81C",
+    "source-prime-degree-2-scratch-receipt.json": "49FCD2928DF35342E34F2D13694BF08A02A6E482B5E42826179AB8D602112BBF",
+    "source-prime-nonmembership-7-scratch-receipt.json": "F47F62CA5E025711611910FA8721FA1684119C608F56CAE291E85C7308B59152",
+    "source-prime-exact-4-scratch-receipt.json": "5A452930A5F0468D535DC4814E0AC1453EDF98DBE151C0905F5412D023B216ED",
+    "source-original-prime-2-scratch-receipt.json": "3B472641E3C068968B13A74D2A5FA33238449A924BBD2DEB83B959D090575519",
+    "source-degree-transport-6-scratch-receipt.json": "247E7FA212FA6CBFD86BD42B2454659D232ED8259A2BFD508393A8214AE582A9",
+    "source-prime-power-step-3-scratch-receipt.json": "DA6167840D5E312AFD4263B459CFD70EB4E08C2B8519615080ED28D1F3C46192",
+    "source-prime-power-exact-5-scratch-receipt.json": "ACB710AD4569A1CFA7AE07D36B93DB2D4653F64F825644979CF3686D5DAB76E9",
+    "source-twisted-embedding-6-scratch-receipt.json": "F6E90FCD242319A2279F0615EDD0A249A04906A069D6412F5D536D399D79B356",
+    "source-prime-power-nonmembership-10-scratch-receipt.json": "020D3C99EBD9FF54D6B978983A9D8BB6DD9BE825B0B50198B96B1D87FCE38040",
+    "source-prime-power-degree-3-scratch-receipt.json": "09CB55D2572EBA1B5F560E2FDC39DF14D6B05BD4153D371F92E1AABF643414FE",
+    "source-conjugate-slots-6-scratch-receipt.json": "F0610584BF3396AD3A600F2CF5388984D3E40614CF678C5317AD8F297635176C",
+    "source-conjugate-step-7-scratch-receipt.json": "97FB8B186C049B32279303A0607F7C4C800E7B50EB55E2EE0210A11FA0676B2C",
+    "source-conjugate-induction-8-scratch-receipt.json": "AB82CD0647A6024F5707A5150BAB22A76ADF48DE598FA10A71A4FD702E3D4FBB",
+    "source-generation-5-scratch-receipt.json": "1C221B28EEB2F62BB3E27E87630B2640945801592168437EED7622A7A2547014",
+    "source-coprime-nonmembership-6-scratch-receipt.json": "18A06F3287DD021C8A0C3978A087316B917787905A1097768C286FC981085779",
+    "source-all-level-degree-9-scratch-receipt.json": "EB8E866F2176EF3D7A1917242926C7115D2D3A1F7172F1DE75274F3D50B4E151",
+    "source-j-degree-sums-2-scratch-receipt.json": "27F40D179F6193BCD022E299E75B4D63DB671B88802142D9307C408975AA45CD",
+    "source-slot-places-7-scratch-receipt.json": "DA5C1515A441C66D461B4EEE7F7D81E3A74631128F2D83AA7771DC699D3DC256",
+    "source-cusp-width-3-scratch-receipt.json": "9AD249EB404FA0A42BDCC25D8C3F8AFBD16D32D6A0D64F99AEBEDB5A186FC156",
+    "source-cusp-count-6-scratch-receipt.json": "022FB2588922CA9E3E8C154828F318F03C650DBFE4AB317F1EBF38469306D497",
+    "source-modular-ratios-6-scratch-receipt.json": "BE04882DD383A0ED6DF36583FC14DC2634F42939A684F9552CB4EF21E3D1512D",
+    "source-meromorphic-order-6-scratch-receipt.json": "E4191DA645480778232FBF2BDAD134F377613333C29033059305A6EA6133D6B0",
+    "source-analytic-places-4-scratch-receipt.json": "796D82CC1B2D05F39347DDECB667DD9A474307661EAB5710EDD8698450A0789B"
+  },
+  "frozenReceiptProseCorrections": [],
+  "externalReference": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ComplexPlaceDictionary_exists_pt_eq_of_mem.lean.txt",
+        "sha256": "C64DA5584E913399AF1F5DA09CA5895442F67556A20C65F8678C10EC4BFAD8FC"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ComplexPlaceDictionary_two_mul_ramification_eq_card_stabilizer.lean.txt",
+        "sha256": "34BD60669F691C42A7C45FB2AC76736C36E29CBC4595C68BB1A3969DEF61DB93"
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJSeedCuspRatio.lean",
+      "sha256": "5776811F6286D3F4C45D8072AC7BA55B053C41A789DCEB71CB5C1AB0EBEA1B8A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJModularQuotient.lean",
+      "sha256": "66039A031FC71EF0F96FF8DF1052AAA5D10654C8F4E4197F96B0F3CB8898D879"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspDegeneracyLaurent.lean",
+      "sha256": "0422A849BB8256AF9F9E231344057411E1B6A4D1EABCA93D6EC726EF118446E0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticPlaces.lean",
+      "sha256": "87BEB2050D7054A09D96563163F89F55E63AA531896B216594D8662B1D225FE5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticPlaceBoundedness.lean",
+      "sha256": "9AFBDB1631A82CC598510304DE90D2B5E39293A9159B1EDA8F3BA1545811DDBF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCoordinateValues.lean",
+      "sha256": "E460C535AC3B2FD84B04283CF9B5D94102D5BE374809AA756F562A346079A436"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalJFiberDegree.lean",
+      "sha256": "B9AE9D003C04E1D02750EC61BFCA2A7AC49C5E2C9E76D267846EB464F001D012"
+    }
+  ],
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\Discriminant.lean",
+      "sha256": "03C3D4CCF0A60C8C8CB80B3F2ADDF8E13D9DF2F038CED2A164A6347BE371F8A0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Meromorphic\\Order.lean",
+      "sha256": "73248808C2C3F3E543DC22191C1AA4B2E0FBA54BD0E1D1D6FF254F87FBBC4F85"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\UpperHalfPlane\\Manifold.lean",
+      "sha256": "04B98D016FD2BE9BC54B7A6B6A0B5B51BCFFF6C3489593A9B89A9B3A8C4913F7"
+    }
+  ],
+  "targetedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\targeted-lean-reuse-review-20261021.json",
+    "sha256": "73EBDFE8AEFAC70FCE3F91C2B0CE8881002390CE3B57E8F0C6CDC8E8D509AA56"
+  },
+  "routeAdjustment": "Reuse the existing cusp degeneracy maps for every divisor generator. Expose the actual values of the same explicit discriminant/E4 seed witnesses: the earlier existential ratio theorem did not expose these pointwise values. Reuse original meromorphic normalization, native continuity and original residue uniqueness to identify the finite fiber. No separate modular-form level-raising framework or new local algebra is required. Finite-place exhaustion next requires bounded functions to be integral over C[j]; native level-one discriminant division and modular-form norms provide the shorter reviewed source route.",
+  "discharged": "Every original divisor generator j(q^d) has pointwise realization E4(d*tau)^3/Delta(d*tau), with denominator nonvanishing proved. In particular the original j and j_N coordinates have their intended analytic values. The genuine normalized analytic place contains j, and ord(j-c)>0 holds exactly when c is the actual analytic j-value at the point. Positive order follows from meromorphic convergence and positive normalization; uniqueness uses the proved original residue-field theorem.",
+  "remaining": "Exhausting all finite places and separating modular orbits, elliptic ramification and cardinalities, numerical genus, regular-differential cusp-form realization, and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "production": "Scratch only; production promotion and verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,1391 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalTwoPoleDimensions",
+    "Dubon2026.SourceOriginalTwoPoleDifferential",
+    "Dubon2026.SourceOriginalDifferentialResidues",
+    "Dubon2026.SourceOriginalSimplePoleBounds",
+    "Dubon2026.SourceOriginalTwoPoleResidues",
+    "Dubon2026.SourceOriginalPrescribedResidues",
+    "Dubon2026.SourceOriginalLocalRegularPrimitives",
+    "Dubon2026.SourceOriginalRegularPathLocalPrimitives",
+    "Dubon2026.SourceOriginalRegularPathPrimitives",
+    "Dubon2026.SourceOriginalThirdKindPathPrimitives",
+    "Dubon2026.SourceMeromorphicRemovableCharts",
+    "Dubon2026.SourceMeromorphicCompactConstancy",
+    "Dubon2026.SourceMeromorphicLeadingCoefficient",
+    "Dubon2026.SourceMeromorphicPoleBound",
+    "Dubon2026.SourceMeromorphicDegreeBase",
+    "Dubon2026.SourceMeromorphicDimensionBound",
+    "Dubon2026.SourceOriginalMeromorphicDimension",
+    "Dubon2026.SourceMeromorphicOrderNeighborhoods",
+    "Dubon2026.SourceMeromorphicFinitePoles",
+    "Dubon2026.SourceMeromorphicEffectivePoleBound",
+    "Dubon2026.SourceOriginalMeromorphicPoleBound",
+    "Dubon2026.SourceOriginalMeromorphicRRBounds",
+    "Dubon2026.SourceOriginalChartReadFieldLaws",
+    "Dubon2026.SourceOriginalMeromorphicPoleClearing",
+    "Dubon2026.SourceOriginalGermBasisRelation",
+    "Dubon2026.SourceOriginalOnePoleComparison",
+    "Dubon2026.SourceOriginalMeromorphicFunctionComparison",
+    "Dubon2026.SourceOriginalMeromorphicPrincipalDivisor",
+    "Dubon2026.SourceOriginalSimplePoleRegularPart",
+    "Dubon2026.SourceOriginalLogarithmicReading",
+    "Dubon2026.SourceOriginalLocalExponentialModel",
+    "Dubon2026.SourceComplexPuncturedBallPaths",
+    "Dubon2026.SourcePuncturedNeighborhoodConnected",
+    "Dubon2026.SourceChartFiniteAvoidance",
+    "Dubon2026.SourceChartFinitePuncturePaths",
+    "Dubon2026.SourceOriginalFinitePuncturePaths",
+    "Dubon2026.SourceOriginalDivisorAvoidingPaths",
+    "Dubon2026.SourceOriginalRegularPathIntegralLaws",
+    "Dubon2026.SourceOriginalIntegralPeriodPathIndependence",
+    "Dubon2026.SourceOriginalPeriodExponential",
+    "Dubon2026.SourceOriginalPeriodExponentialConsumer",
+    "Dubon2026.SourceOriginalLocalChartPathPrimitive",
+    "Dubon2026.SourceOriginalLocalChartPathIntegral",
+    "Dubon2026.SourceOriginalRegularChartReadingAt",
+    "Dubon2026.SourceOriginalExponentialLocalTransport",
+    "Dubon2026.SourceOriginalExponentialChartDerivative",
+    "Dubon2026.SourceMeromorphicLogDerivativeComparison",
+    "Dubon2026.SourceOriginalExponentialMeromorphicOrders",
+    "Dubon2026.SourceOriginalIntegralPeriodsPrincipal"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module and Hecke/Frobenius comparison -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> prescribed residues, actual meromorphic-function comparison and the principal divisor from integral loop periods.",
+  "discharged": "Every degree-zero original divisor has an actual differential with at most simple poles and exactly its integer residues. Native compact holomorphic constancy and leading-coefficient elimination give the analytic pole-bound dimension estimate; original Riemann-Roch and germ independence then prove that every meromorphic function on the actual original complex curve comes from its original function field. Actual finite-support complements are path connected. For an original differential with the divisor residues and integral loop periods, actual path integrals construct the global exponential. Native logarithmic-derivative equality identifies its local germs with the exact-order models z^m exp(Psi), proving meromorphicity and the prescribed orders. The original-function comparison makes the divisor principal. Base-point existence, avoiding paths, exponential gluing and meromorphic-to-original-function comparison are discharged. Integral loop periods remain explicitly upstream.",
+  "boundary": "Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,768-module scope: all thirteen retained regressions, 40,282 exhaustive theorem checks, 17,647 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.exists_original_third_kind_differential",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_third_kind_with_path_primitives",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_relation",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_const_germs_of_nonneg_order",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_exponential_model",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_divisor_base_point",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_avoiding_divisor",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_exponential",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_integral_periods"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T22:13:58.421074+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalTwoPoleDimensions",
+        "SourceOriginalTwoPoleDifferential",
+        "SourceOriginalDifferentialResidues",
+        "SourceOriginalSimplePoleBounds",
+        "SourceOriginalTwoPoleResidues",
+        "SourceOriginalPrescribedResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwoPoleDimensions.lean",
+          "sha256": "3F926FEB106B7DEAE627B2481AD22ACDFC3AF7D7D49F49E8F379A0A855C8D5E5",
+          "oleanSha256": "3C9E81998F2668EDB309D137088AABB67D03180985673E71B8DC71913E8EAF29"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwoPoleDifferential.lean",
+          "sha256": "FC7109A8E3FC090C8BD5C797FC430C8515B6384FDBF84A2F673A2DF611C7C778",
+          "oleanSha256": "8DF478AD3C4423B30EA564E9B7606710B3518498909B1DA91F9D955F2200A778"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialResidues.lean",
+          "sha256": "4649039CB4CF5CF7CF6CFF1CE1499436754E0D9E5B424673BC170DF3447F5682",
+          "oleanSha256": "661514AFF5015B39A931C33DDCF048A371D687B447EC2653F0CDEB814D0AE782"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimplePoleBounds.lean",
+          "sha256": "A1BDFB6DFF82012D09D6B5E021254F9EF7484D5984DA9ACBE252828EF89C1207",
+          "oleanSha256": "3F22709F78158C90B2163F2D9FB416FD36878B59BEE6142761CF11A4AA7F1A15"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTwoPoleResidues.lean",
+          "sha256": "FCCFBA3FE6BC193FCE32D2AF406B166EF1FAB3DBC36533C911B406940EB34E63",
+          "oleanSha256": "F8A61B77B3D8DA2F5FDFF9E00979D93960FFF7C024BB491976F11F12A509FACB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidues.lean",
+          "sha256": "5075AFF3ED02217F0EA2C2034575F85333A21278B61C27ADA0A52D3B95BD73FD",
+          "oleanSha256": "FAD0A5B98C9C933B6D1ED1D4456077037A44A50409FAB0F4F29602B4BD43DF29"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_two_pole_dimensions",
+        "Dubon2026.SourceFunctionField.exists_original_two_pole_function",
+        "Dubon2026.SourceFunctionField.exists_original_two_pole_differential",
+        "Dubon2026.SourceFunctionField.originalDifferentialCoeff_apply",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_apply",
+        "Dubon2026.SourceFunctionField.original_simple_pole_bound_iff",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_simplePole",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_eq_zero_of_regular",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_ne_zero_of_simplePole",
+        "Dubon2026.SourceFunctionField.original_simple_pole_zero_bound",
+        "Dubon2026.SourceFunctionField.original_simple_pole_add_bound",
+        "Dubon2026.SourceFunctionField.original_simple_pole_smul_bound",
+        "Dubon2026.SourceFunctionField.original_simple_pole_sum_bound",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_finsum",
+        "Dubon2026.SourceFunctionField.original_two_pole_residue_sum",
+        "Dubon2026.SourceFunctionField.exists_original_normalized_two_pole_differential",
+        "Dubon2026.SourceFunctionField.exists_original_differential_with_prescribed_residues",
+        "Dubon2026.SourceFunctionField.exists_original_third_kind_differential",
+        "Dubon2026.SourceFunctionField.originalDifferentialCoeff",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_two_pole_dimensions",
+        "Dubon2026.SourceFunctionField.exists_original_two_pole_function",
+        "Dubon2026.SourceFunctionField.exists_original_two_pole_differential",
+        "Dubon2026.SourceFunctionField.originalDifferentialCoeff_apply",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_apply",
+        "Dubon2026.SourceFunctionField.original_simple_pole_bound_iff",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_simplePole",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_eq_zero_of_regular",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_ne_zero_of_simplePole",
+        "Dubon2026.SourceFunctionField.original_simple_pole_zero_bound",
+        "Dubon2026.SourceFunctionField.original_simple_pole_add_bound",
+        "Dubon2026.SourceFunctionField.original_simple_pole_smul_bound",
+        "Dubon2026.SourceFunctionField.original_simple_pole_sum_bound",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue_finsum",
+        "Dubon2026.SourceFunctionField.original_two_pole_residue_sum",
+        "Dubon2026.SourceFunctionField.exists_original_normalized_two_pole_differential",
+        "Dubon2026.SourceFunctionField.exists_original_differential_with_prescribed_residues",
+        "Dubon2026.SourceFunctionField.exists_original_third_kind_differential"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalDifferentialCoeff",
+        "Dubon2026.SourceFunctionField.originalDifferentialResidue"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesAudit6.log",
+      "logSha256": "4FDE229A9E5EF3C80738F3D422DB2CE99B232AA12525A39C612212FB47743FEF",
+      "auditSha256": "26C53F3A9647534D965A413BDCA2FDFD0E8737214B8990CF8B3E9493ED87ED3C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 48,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesDependencyAudit6.log",
+      "dependencyAuditSha256": "EC51D93B805F48BD21838500882E0383FEB2D9AB5BCA77C1DC0570688D2BAE7D",
+      "dependencyAuditSourceSha256": "5AEB5031A02CCC6CBFCE08FC9DDF896C25F2EF131068BF1B20B5B5C5AE0BDE95",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_third_kind_differential"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every actual original degree-zero divisor is realized as the exact residue divisor of an original differential with at most simple poles. Original Riemann-Roch and already proved negative-degree vanishing give a nonzero differential with simple poles at two specified distinct places and regular elsewhere. The actual canonical residue and trace form a linear map on original differentials. The original global residue theorem forces the two residues to sum to zero; the exact pole order makes them nonzero, permitting normalization to +1 and -1. A finite linear combination with the original divisor coefficients gives every prescribed residue. Degree zero cancels the auxiliary base-place term. The final consumer states literal original evaluation of the uniformizer times the differential coefficient, retaining the selected source contract. No Riemann-Roch, global residue, two-pole existence, normalization or third-kind existence premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Period correction to integral multiples of two pi i, the meromorphic exponential and original-function comparison still prevent closing the Abel converse. Period discreteness and exact original torsion cardinality, Qbar divisor-class comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residues-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "AE56CA3A8914C15B0F65B5F3814CB47E561A9F2B4080EA4C712363DB52440CD6"
+    },
+    {
+      "recordedUTC": "2026-10-21T22:21:29.682980+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalLocalRegularPrimitives",
+        "SourceOriginalRegularPathLocalPrimitives",
+        "SourceOriginalRegularPathPrimitives",
+        "SourceOriginalThirdKindPathPrimitives"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalRegularPrimitives.lean",
+          "sha256": "6C4F06A920858379731C40BE145864E9243C1F0FE971092E86809AA7340D58D5",
+          "oleanSha256": "6BE9BE26D52F96495A2598CF915AD366DD40E14962D73642BF2A142E61CC3525"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathLocalPrimitives.lean",
+          "sha256": "4720A0CF4534897711AB046412244D4E3850B8E34F1E3E3C587DEE207E01B8CC",
+          "oleanSha256": "47046D2B786B1BA245E826A7093D67C03B2563EDBBC2071621F9B7E24AE6E9DC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathPrimitives.lean",
+          "sha256": "2EF96F773B4E75E1A8657963BAECD776A1139CC4500BF32826F4934A9CDE9AD6",
+          "oleanSha256": "65185045B654BF0FF91F1FA545FDB0F0CC026DA6B8392E8640986DFC72CBBB22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalThirdKindPathPrimitives.lean",
+          "sha256": "101F8239F8B797968E6541D2B3B826E6FFDF07E6E0FC94541E7EC6E8772779CB",
+          "oleanSha256": "BE566045266B5725ABAE1DF3B5139EA881D44B8B9B40649B8BEF72F6FF689361"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_readDifferential_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_readDifferential_local_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.chart_differentialCoeff_regular_at",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_change_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_local_primitive_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_isPrimitiveAlong_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_isPrimitiveAlong_of_simplePole_residue_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_third_kind_with_path_primitives"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_readDifferential_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_readDifferential_local_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.chart_differentialCoeff_regular_at",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_change_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_local_primitive_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_isPrimitiveAlong_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_isPrimitiveAlong_of_simplePole_residue_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_third_kind_with_path_primitives"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathsAudit4.log",
+      "logSha256": "42D296D0C91CFA8D0E8C388274CA57981CE0FA92E6A5958DBB4F3E5C0272916E",
+      "auditSha256": "23691E3C1D4EE4A30880ACBA6F25BC12C6B1AF69BEF6978731D009DD54B14FF9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathsDependencyAudit4.log",
+      "dependencyAuditSha256": "CF60A559A6B95758A46927C6E5638129FA8FD43900FB9265595B5CD0409CCBA2",
+      "dependencyAuditSourceSha256": "261413D1A2153B3B883AF03B5FADC07414AC49AD0C8EF26937E03363E9F25A6D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_third_kind_with_path_primitives"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> actual original place charts with residue-value and normalized-order compatibility.",
+      "discharged": "Every actual original differential regular at the places traversed by a continuous path has an analytic primitive along that path. Regularity at one place gives an analytic reading and a smaller primitive disk. Exact chart differential orders and the existing punctured differential-germ identity prove the local transition law at regular overlaps. Continuity keeps the path in those smaller disks, and existing interval gluing produces the path primitive. The actual prescribed-residue differential constructed for every degree-zero divisor is regular on every path avoiding that divisor support, because a simple pole has nonzero residue. The final original consumer constructs both the differential and its path primitives. No global regularity, local transition, primitive-existence or third-kind-existence hypothesis remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Loop-period correction to integral multiples of two pi i, meromorphic exponentiation and the comparison of analytic meromorphic functions with original field elements still prevent closing the Abel converse. Period discreteness, exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-regular-paths-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "4DAEB65650D50446B46B7E1BFD9FCA4FB485EF7143A859D4C69AA4B51C37A99F"
+    },
+    {
+      "recordedUTC": "2026-10-21T22:30:34.283297+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceMeromorphicRemovableCharts",
+        "SourceMeromorphicCompactConstancy",
+        "SourceMeromorphicLeadingCoefficient",
+        "SourceMeromorphicPoleBound",
+        "SourceMeromorphicDegreeBase",
+        "SourceMeromorphicDimensionBound",
+        "SourceOriginalMeromorphicDimension"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicRemovableCharts.lean",
+          "sha256": "8A1282C98906FD9038B5193C6D3BBD4EBAAE031E9571DD64F8FE465339C885A1",
+          "oleanSha256": "D33358B05D04F49E2967A8B765B80294C60C04F77B977AA7469334E47F4D5F29"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCompactConstancy.lean",
+          "sha256": "D994EE13C16CA4CE53976B3F57A8EBC36CA29BBD5E7068311D6C9546DED605C0",
+          "oleanSha256": "3647890A35071A00EA1C42B15AE56CF4EA69BE148E896EC2DF761C369D875E5F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicLeadingCoefficient.lean",
+          "sha256": "790F1917E5DD8D9E8877C772D57F5A39A717ABAAD27CC3E84C2D82BDA706B076",
+          "oleanSha256": "2D49329E89DDD750E9A7A2C1CCB6343A4B6183E18EF70A085D60CDD0C7246EF0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPoleBound.lean",
+          "sha256": "2BCEDD6172549884C78A9FF3C795A1D494E1924CD66CD982BFFE644410BC18FA",
+          "oleanSha256": "09F1C8174D461A291A52C15630291136F73201D748C433037D1590F82C3B84AD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicDegreeBase.lean",
+          "sha256": "50D92B46153E8E1869C0E491F7ACFAA7C88392166BCCA1E3E0C412C6759AB32F",
+          "oleanSha256": "9661259B4C64333E402906D0CE43FAA47714C0480A98781D44CAB6474E58E25E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicDimensionBound.lean",
+          "sha256": "0162AA2C3844FEAED03BF308583CAFBB4C4D85AC4B5A85CFB18AD1980A2598BD",
+          "oleanSha256": "441663D517C764FC022DB4D39D5622A79D924FCD94A4E8FD611075892AFB2557"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicDimension.lean",
+          "sha256": "BD089CFC6533E7AD0BB3B2FD4B0E8D08DC1E7357EA97427FA716EAA01ED24AF2",
+          "oleanSha256": "C5A4F1514EF026E7020A93AF92A978DBE7D1E881723682D3BF4F23466ECFDD54"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_analyticAt_eventuallyEq",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_eventually_of_punctured",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.rd_eq_comp",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_symm_mem_source",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.analyticAt_transition",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.key",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.mdifferentiableAt_of_analyticAt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_const_germs_of_nonneg_order",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.apply_eq_of_eventuallyEq",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicAt_pow_sub",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicOrderAt_pow_sub",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicAt_wt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicOrderAt_wt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.le_order_iff",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_rep",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead_eq",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead_add",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead_smul",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.le_order_of_lead_eq_zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.add",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.smul",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.sub",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.sum",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.of_lead_eq_zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.degN_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.degN_sub_single",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.base",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.bound",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_relation_of_degree_lt_card",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_relation",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_const_germs_of_nonneg_order",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.φ",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.ctr",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.rd",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.wt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.degN"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_analyticAt_eventuallyEq",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_eventually_of_punctured",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.rd_eq_comp",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_symm_mem_source",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.analyticAt_transition",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.key",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.mdifferentiableAt_of_analyticAt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_const_germs_of_nonneg_order",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.apply_eq_of_eventuallyEq",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicAt_pow_sub",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicOrderAt_pow_sub",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicAt_wt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.meromorphicOrderAt_wt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.le_order_iff",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_rep",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead_eq",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead_add",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead_smul",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.le_order_of_lead_eq_zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.add",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.smul",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.sub",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.sum",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd.of_lead_eq_zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.degN_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.degN_sub_single",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.base",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.bound",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_relation_of_degree_lt_card",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_relation",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_const_germs_of_nonneg_order"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.φ",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.ctr",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.rd",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.wt",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.lead",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.Bdd",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.degN"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicDimensionAudit7.log",
+      "logSha256": "6DB4987F0116C5C4EF1C0C034CF347334F51C4A8886749DAF7A349E0CC6124BF",
+      "auditSha256": "66FD11CB0B316AE9C79CA91F17456FFF9B777FA57B63328827B297FB937669CE",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 42,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicDimensionDependencyAudit7.log",
+      "dependencyAuditSha256": "7EE1DA4128693A1A4E5E4D9A2FF07763B3E8B4434719AB5B655908AC870F2F82",
+      "dependencyAuditSourceSha256": "888E4A008AB851E4DF2C9A1C933221F0515DF3C64BB2804D11E284329B470A66",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_relation",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_const_germs_of_nonneg_order"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> meromorphic exponential -> original-function comparison -> analytic meromorphic dimension bound on the actual compact connected curve.",
+      "discharged": "For the actual original complex place manifold, every finite family of meromorphic functions with a fixed effective pole bound of degree d has a nontrivial complex linear relation in every punctured chart germ when its cardinality exceeds d+1. Meromorphic functions of nonnegative order have one constant germ on the entire original curve. Native meromorphic normal form fills removable points; analytic transitions identify the fillings and native compact holomorphic constancy supplies degree zero. Leading-coefficient elimination proves the general bound by induction on the pole degree. The final consumers derive analytic manifold structure, compactness and connectedness from the actual original charts; none remains an explicit hypothesis.",
+      "boundary": "Scratch only; production promotion and verification pending. The analytic meromorphic function must still be identified with an element of the original function field. The finite-pole argument, original Riemann-Roch denominator and basis-family comparison remain to be assembled. Loop-period correction, meromorphic exponentiation and that function comparison still prevent closing the Abel converse. Period discreteness, exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-meromorphic-dimension-7-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5B2A7D6D1C54C77246D15A42F71F1B0C819FCCD9BABC826A3DCC9BA04565DEF6"
+    },
+    {
+      "recordedUTC": "2026-10-21T22:42:51.774158+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceMeromorphicOrderNeighborhoods",
+        "SourceMeromorphicFinitePoles",
+        "SourceMeromorphicEffectivePoleBound",
+        "SourceOriginalMeromorphicPoleBound",
+        "SourceOriginalMeromorphicRRBounds",
+        "SourceOriginalChartReadFieldLaws",
+        "SourceOriginalMeromorphicPoleClearing",
+        "SourceOriginalGermBasisRelation",
+        "SourceOriginalOnePoleComparison",
+        "SourceOriginalMeromorphicFunctionComparison",
+        "SourceOriginalMeromorphicPrincipalDivisor"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicOrderNeighborhoods.lean",
+          "sha256": "0F48FB42CEE4AFBEA17BDC3E2E7F475732B0968B67682931DC8C397D27224AFA",
+          "oleanSha256": "A4A2D588955AD50D379E0EF00B2DCC9C0AEEA90F93257EC38E182DF90CA251F2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicFinitePoles.lean",
+          "sha256": "05E8B12A742E1BF19DDB548883B675E8D29CE3335EDBA2A86EB8A0C6FB759085",
+          "oleanSha256": "E0185D5FCBED48DCA5F0475493E7CD20961E6D8D590E7119ECFC8E8DE6BFFA3F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicEffectivePoleBound.lean",
+          "sha256": "E4804BD7E2525CB71AF34E50C086D1032AAC8BE99BE942D3F9B349C401DF1A1F",
+          "oleanSha256": "2C0AA0EA0ECFDD19FACF5D9FAEC77E63D96B0B104256F4F883AB47B808F69DB5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicPoleBound.lean",
+          "sha256": "4769AE40F48A26ABEEA6F0C92D5C29A42EB70500CC5CB6CB5FBC053590B035F7",
+          "oleanSha256": "4B8AD746DF153A0C1A8A305D6E755F751836402C5265196683607FE3574321C6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicRRBounds.lean",
+          "sha256": "A92CF4D94A4153E6F84520D25164B68A5EE08FB5ADA221B8EA9051953B2D29C0",
+          "oleanSha256": "AF3CDE13CB09338E1C31943D85C68E43B007C1C557FF914B3DB99D838966025F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartReadFieldLaws.lean",
+          "sha256": "ECAB37748F531C7DB939210637F2A8BC011EA27490524E447AFF0DC61B90A7C9",
+          "oleanSha256": "5EFA2BE872906B8D78AEA3B15BFC741E7D2774A7A8A3A0840E20EAA8739F6374"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicPoleClearing.lean",
+          "sha256": "61EB278B923F5A941C235DDA78E20F5B3860A2F4B0B5E2F59F4AB63B7B5B8D0D",
+          "oleanSha256": "4B57FE4CD0B5B91D64D683BAC53C874E03E252B8C9B43E7B7BD29411AF865816"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGermBasisRelation.lean",
+          "sha256": "0ED448107AE85D6A35F35329877A4483DA4E36F83B82F75514682FC7A6A6B329",
+          "oleanSha256": "71872718F0188E128D4F174B5100C6EAF9443E9DC1D9630DD7DC75F536F0ACB0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalOnePoleComparison.lean",
+          "sha256": "6798B43674FB878FCEB8F25745E8CBB732D16DEB46599E024D209C8E2B89A9D5",
+          "oleanSha256": "7126B2019C0995AE2181D54FD5A24BC76A205365310219D8B043AC213038F218"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicFunctionComparison.lean",
+          "sha256": "669F70F76D5C29763365E5585A4998601073E9E8415E313A346C3B1A80135374",
+          "oleanSha256": "CD112ABAD9B89985B699E0218F35EA1E94BE55DBC50AE8EB8D2A33D0DCD436A4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicPrincipalDivisor.lean",
+          "sha256": "1567D1E465E4AF571AF9E07E9FE52D6E4DE1A8088EE3E913EFE3FCD9FD47D996",
+          "oleanSha256": "DDE3811975E43C486ED1F144F0A36C9927842CDCD81051BF5F849122945D8430"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_ball_of_eventually_pf",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_mem_source_and_ball",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.rd_change",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_order_eq_top",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_order_eq_zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.forall_order_eq_top_or",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.finite_setOf_order_neg",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_effective_pole_bound",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_effective_meromorphic_pole_bound",
+        "Dubon2026.SourceFunctionField.original_riemannRoch_lower_bound",
+        "Dubon2026.SourceFunctionField.original_degree_single",
+        "Dubon2026.SourceFunctionField.exists_original_pole_clearing_function",
+        "Dubon2026.SourceFunctionField.original_one_place_dimension_sum_gt",
+        "Dubon2026.SourceFunctionField.OriginalChart.meromorphicOrderAt_chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_chartRead_eventuallyEq_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_eventually_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_neg",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_inv",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_lSpace_order_bound",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_pole_clearing",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_function_of_basis_germ_relation",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_function_of_one_pole_bound",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_function_of_meromorphicAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_meromorphic_orders"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_ball_of_eventually_pf",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_mem_source_and_ball",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.rd_change",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_order_eq_top",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.eventually_order_eq_zero",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.forall_order_eq_top_or",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.finite_setOf_order_neg",
+        "Dubon2026.SourceFunctionField.MeromorphicCompact.exists_effective_pole_bound",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_effective_meromorphic_pole_bound",
+        "Dubon2026.SourceFunctionField.original_riemannRoch_lower_bound",
+        "Dubon2026.SourceFunctionField.original_degree_single",
+        "Dubon2026.SourceFunctionField.exists_original_pole_clearing_function",
+        "Dubon2026.SourceFunctionField.original_one_place_dimension_sum_gt",
+        "Dubon2026.SourceFunctionField.OriginalChart.meromorphicOrderAt_chartRead",
+        "Dubon2026.SourceFunctionField.OriginalChart.eq_zero_of_chartRead_eventuallyEq_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_eventually_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_neg",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_inv",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_sum_smul",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_lSpace_order_bound",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_pole_clearing",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_function_of_basis_germ_relation",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_function_of_one_pole_bound",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_function_of_meromorphicAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_meromorphic_orders"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicComparisonAudit11.log",
+      "logSha256": "5FA804B939D9722B4745C152ECD37D483A85DE99E570CBEF432761B59A33C827",
+      "auditSha256": "8C34D6B471228FD329ED8827EA9C28CEF9A28ECEFD79DB2DC790AC206975EB73",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 35,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicComparisonDependencyAudit11.log",
+      "dependencyAuditSha256": "B92BE7D61715A845F583F125598D1F5F6009F9AF6C6FDD286329EB558DDEC140",
+      "dependencyAuditSourceSha256": "8FBD1E2282717379D33A4A38A861A432C57A78A21177CBE8E5706165E509B268",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_meromorphic_orders"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> meromorphic exponential -> proved original-function comparison and actual principal-divisor consumer.",
+      "discharged": "Every analytic meromorphic function on the actual original complex curve agrees in all punctured uniformizer germs with an element of the actual original function field. Analytic chart transitions, connectedness and compactness construct a finite effective pole bound. The already proved original Riemann-Roch inequality constructs a nonzero original multiplier clearing every pole except one chosen place. The same inequality provides two original divisor-space bases whose combined cardinality exceeds the analytic pole-degree bound. Their nontrivial relation and original chart-germ faithfulness force a nonzero denominator, yielding an original quotient. Dividing by the clearing multiplier proves the complete comparison. The final actual consumer shows that prescribed finite chart orders are the normalized-order divisor of a nonzero original function, hence an actual principal divisor. No function-field comparison, compactness, connectedness, finite-dimensionality or Riemann-Roch premise remains on the comparison theorem.",
+      "boundary": "Scratch only; production promotion and verification pending. The Abel converse still requires constructing the meromorphic exponential with the prescribed orders from an original differential whose loop periods are integral multiples of two pi i. Period correction and loop reciprocity remain unproved; meromorphic exponentiation is not yet assembled. Period discreteness, exact original torsion cardinality, Qbar comparison, Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-meromorphic-comparison-11-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "AA8B951800101ADCA8C36B032CEAE543119D421B53CF8184F965CB7AE0BF6DA2"
+    },
+    {
+      "recordedUTC": "2026-10-21T22:48:53.013968+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalSimplePoleRegularPart",
+        "SourceOriginalLogarithmicReading",
+        "SourceOriginalLocalExponentialModel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSimplePoleRegularPart.lean",
+          "sha256": "9960F2965C1BA290A8DA70B4C05970A7B3718F33D3F1484FFF4B74206A89104A",
+          "oleanSha256": "780744BCEA9C105B7F1ED6592EAC3011847C5779A11E497BD66DB14DADF1B1E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLogarithmicReading.lean",
+          "sha256": "0C2123C4BA28FCF9C711F719BB1B19F702CD4DA753D2F6ACB0914E420FC3982E",
+          "oleanSha256": "1171051E756D663207FEF239149B067834ED7F07F0A0DE4842E0FE26617206A1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalExponentialModel.lean",
+          "sha256": "1B96B99C9A54D3DFED4334508EC59C3C75EF793C2468DB4AAF7638D40E68B408",
+          "oleanSha256": "EFB0E964848E4B29492725E0AD753F9BBA3F4C06AC7F363EEBC3909838BAA059"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_simple_pole_regular_part",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_logarithmic_reading",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_logarithmic_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_exponential_model"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_simple_pole_regular_part",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_logarithmic_reading",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_logarithmic_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_exponential_model"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalExponentialAudit3.log",
+      "logSha256": "F1F508709C9F3D123F350B8A306CFE81CCF7BDAFE2224DBD535AE79D2EAD290C",
+      "auditSha256": "7822570A60AD4156C7B8FCC746E8ECBBD4E70FDCCD4B1BEDE59B359131577EBD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalExponentialDependencyAudit3.log",
+      "dependencyAuditSha256": "83B4B908BA0CA67246A50DF5528864422AC477CA4A88C6A01B6AFC7A2381E60A",
+      "dependencyAuditSourceSha256": "6A9728C6219144CBAE44B0E2E26C9A5672CD168703C97DB4D4C78F99AB42FE81",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_exponential_model"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> global meromorphic exponential -> local exponential model with exact original orders.",
+      "discharged": "Every actual original differential with at most a simple pole and integer residue m admits a local meromorphic model of exact order m, nonzero off the chart center, whose logarithmic derivative is the actual original differential reading. Subtracting the residue divided by the original uniformizer leaves a regular field element: residue vanishing gives positive original order before division by the uniformizer. Its reading is analytic, a native disk primitive gives Psi, and z^m exp(Psi(z)) has the exact derivative and meromorphic order. The final consumer requires only the actual differential simple-pole and residue data; it assumes no local model, analytic primitive or logarithmic-derivative identity.",
+      "boundary": "Scratch only; production promotion and verification pending. Global paths avoiding the finite divisor support, exponential path-independence from integral periods and gluing this local model to the global path exponential remain required. Loop-period correction and reciprocity remain open. The proved original-function comparison will then convert the global meromorphic function into an actual principal divisor. Period discreteness, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-local-exponential-3-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "88EA5493A0116BFFF0E1D53F4189288790BDC9293BCF77627E68AB3DB38E931C"
+    },
+    {
+      "recordedUTC": "2026-10-21T22:57:51.026168+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceComplexPuncturedBallPaths",
+        "SourcePuncturedNeighborhoodConnected",
+        "SourceChartFiniteAvoidance",
+        "SourceChartFinitePuncturePaths",
+        "SourceOriginalFinitePuncturePaths",
+        "SourceOriginalDivisorAvoidingPaths"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexPuncturedBallPaths.lean",
+          "sha256": "A64375BCC6EA0B322322C3B0053188D9B5FB452693F8ADAB18D4F09AA0C3ECE8",
+          "oleanSha256": "E22F5F47FB67467EC25AD480093FB4DCBCD135F52B1CA94021DF9210598B13FE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePuncturedNeighborhoodConnected.lean",
+          "sha256": "17E906B502F8D5440C3086F072B1B497B3370171FB2133B032CE83A150C83B9C",
+          "oleanSha256": "967819E074B916E24366EBA17FCB0B89025CB758A5ACED4ECC459A30C5D9242D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceChartFiniteAvoidance.lean",
+          "sha256": "EEFB4B353809D411FAA428E2C2700A24055B1995C3613D86BA139EE0CC328720",
+          "oleanSha256": "81C750A58D5FC8BABD3DF54E8B5742082B61ABE853D5523DEEE75A3F7124D426"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceChartFinitePuncturePaths.lean",
+          "sha256": "4AFA89A051D7DCB166F27207425ECC593E1698F7872308A100018B1B2D1C8D94",
+          "oleanSha256": "E9994F106BB080B78B055A5EEA5712D45DCB59774ECCB5DB273E269EEC632E17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePuncturePaths.lean",
+          "sha256": "B1FC016BA46EB292B0AEBA72489026B91F394F8FBB7C586DA924B6CAC97549FA",
+          "oleanSha256": "5D8FA6AB0909B30E06DCB86256D06FBACDE663BFDD8A324BEFC66B7A68CC344A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorAvoidingPaths.lean",
+          "sha256": "990BABDADB7E3729558781C01618633D2F8413CF369205A99CF74952683A6909",
+          "oleanSha256": "E950B37857CCF112A8EF1BC60210B26DC6EDC7C03F8CA787B889EE5488D75A9B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPathConnected_ball_diff_singleton",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPreconnected_compl_of_forall_nhd",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.eventually_nhdsWithin_compl_not_mem",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.eventually_pf_of_eventually_nhdsWithin",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isOpen_disc",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.mem_disc",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.symm_mem_disc",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.disc_eq_image",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.disc_diff_eq_image",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPathConnected_disc_diff",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPathConnected_compl_of_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_place_outside_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPathConnected_compl_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_divisor_base_point",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_avoiding_divisor",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.disc"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPathConnected_ball_diff_singleton",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPreconnected_compl_of_forall_nhd",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.eventually_nhdsWithin_compl_not_mem",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.eventually_pf_of_eventually_nhdsWithin",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isOpen_disc",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.mem_disc",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.symm_mem_disc",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.disc_eq_image",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.disc_diff_eq_image",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPathConnected_disc_diff",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.isPathConnected_compl_of_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_place_outside_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPathConnected_compl_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_divisor_base_point",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_avoiding_divisor"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.disc"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePathsAudit6.log",
+      "logSha256": "AEDE61D9B2F869B42225F3B8E7989281B14DFF50823D4E3275D6FB2335D738D4",
+      "auditSha256": "8E17F5C5885C72766960318DFD60FB666F67F23E037E880D4B920C8C53860D05",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePathsDependencyAudit6.log",
+      "dependencyAuditSha256": "625321ABF63BF4B04E81A0E705AD5A52A06D4C1C1A8A7886A01EEA7E2188DE89",
+      "dependencyAuditSourceSha256": "71F432D03EAB5A42492E75FD11CC7F3E3AF888C5E58CF233EDB6F3A31B4A758E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_divisor_base_point",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_avoiding_divisor"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> global meromorphic exponential -> actual paths avoiding the finite divisor support.",
+      "discharged": "The complement of any finite subset of actual original complex places is nonempty and path connected in the actual original chart topology. Native punctured-plane path connectedness and the native univBall homeomorphism give punctured coordinate-ball paths. A separation of the complement would extend across each deleted point using a punctured connected neighborhood, contradicting original connectedness. The existing original Hausdorff theorem makes finite sets closed. Actual chart inverse maps and nontrivial punctured complex neighborhoods supply an original place outside each finite set. The final consumers produce a base point outside every actual divisor support and an actual continuous path avoiding that support between any two places outside it. No complement-connectedness, nonempty-complement or avoiding-path premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The global meromorphic exponential still needs integral-period path independence, a local chart transition formula and gluing to the proved local models of exact integer order. Loop-period correction and reciprocity remain unproved. The original-function comparison is proved and ready to convert the eventual global function into an actual principal divisor. Period discreteness, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-finite-paths-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A226B96D9046113548A92C800E31553B9C4727CCD4EB898DAC6CD5E4E44E48BE"
+    },
+    {
+      "recordedUTC": "2026-10-21T23:04:05.110429+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalRegularPathIntegralLaws",
+        "SourceOriginalIntegralPeriodPathIndependence",
+        "SourceOriginalPeriodExponential",
+        "SourceOriginalPeriodExponentialConsumer"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathIntegralLaws.lean",
+          "sha256": "29DA86F0B7B454AEFAD69397A943F259723F135D44772C846156213749C92941",
+          "oleanSha256": "A9725BD432424A6899320F51D2B06916CB4944F08E22B317A491D17FBB29808B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodPathIndependence.lean",
+          "sha256": "085B61DD9B963491F6F45A16BB5AABA10462A0B5E86132A031DB68A99697E949",
+          "oleanSha256": "FDDE95C2E841A5D9B5B81C6CE79F2C860D9C627102804C85BFE11E450852E63B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodExponential.lean",
+          "sha256": "B9E592E2A91BEB87712DA6737BD3DF1223D827EA606F5301EF3573DAC0F30CB1",
+          "oleanSha256": "8290EFDE2A3C03CCFBDD34355B22BECE4BE2B21A458CE03C810B30EAE8089BF8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodExponentialConsumer.lean",
+          "sha256": "E4F697CA46AA1830B9F59DD0993F8E1ECD7B93BE860390EE9BCAF211D1C44678",
+          "oleanSha256": "965583E642E5A143E9BA52299F19476725BD9D45A2C0BDA00E781A0317BCCFDF"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_trans_of_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_trans_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_symm_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_coeff_regular_off_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.exp_pathIntegral_eq_of_integral_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalDivisorAvoidingPath_avoids",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential_eq_path",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential_transport",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_exponential",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalDivisorAvoidingPath",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_trans_of_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_trans_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathIntegral_symm_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_coeff_regular_off_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.exp_pathIntegral_eq_of_integral_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalDivisorAvoidingPath_avoids",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential_eq_path",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential_transport",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_exponential"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalDivisorAvoidingPath",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodExponential"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodExponentialAudit4.log",
+      "logSha256": "BC2D3E539982A90BA88D9E5B2548C5279B720EF746CDD3FE255D1443607927AE",
+      "auditSha256": "2F596A87635F65D7347FDBE80BF0F9F488511C17597F92FF05CD87D8B9EC4F1A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodExponentialDependencyAudit4.log",
+      "dependencyAuditSha256": "0E04DDD044A2FEC1FDDFF7AFBE8B30F49CEC7348C17B8F797C143F74A397323A",
+      "dependencyAuditSourceSha256": "3B502731338EA02F1AAA3A97EEA56D8D2CDDC9048863F5DD96B0F46113AF22E9",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_exponential"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> global meromorphic exponential -> path independence and transport from integral loop periods.",
+      "discharged": "Given an actual original differential with at most simple poles, actual residues equal to a divisor and integral multiples of two pi i as loop periods off its support, construct a function nonzero off that support with exact exponential transport along every avoiding path. Actual residue data derive regularity away from the support. The original path-integral concatenation and reversal laws now require only regularity on the traversed paths. Two avoiding paths differ by an actual loop, whose integral period gives equality of their exponentials. Existing actual avoiding-path and base-point existence construct the global function. The final consumer eliminates base-point, avoiding-path, primitive and path-independence premises. The integral-period condition remains explicitly upstream and is not claimed proved.",
+      "boundary": "Scratch only; production promotion and verification pending. The constructed global function must still be proved meromorphic with the prescribed chart orders by gluing it to the proved local exponential models. Integral period correction and reciprocity remain open. The original-function comparison is proved and will convert the global meromorphic function into an actual principal divisor. Period discreteness, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-period-exponential-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E933BDE64615BABE7622DF6DF0E07D9C78BEFEEF41A910EB436FF735336A3383"
+    },
+    {
+      "recordedUTC": "2026-10-21T23:15:37.472728+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalLocalChartPathPrimitive",
+        "SourceOriginalLocalChartPathIntegral",
+        "SourceOriginalRegularChartReadingAt",
+        "SourceOriginalExponentialLocalTransport",
+        "SourceOriginalExponentialChartDerivative",
+        "SourceMeromorphicLogDerivativeComparison",
+        "SourceOriginalExponentialMeromorphicOrders",
+        "SourceOriginalIntegralPeriodsPrincipal"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalChartPathPrimitive.lean",
+          "sha256": "2B702D6F4C87871E623BE036AC3E4FE7C1ED969644DC923F17A59E094ED8E2CD",
+          "oleanSha256": "6A4D96F6FFE74F78A6F863FCD80F3790743D9B51DF6A29C6D6622D1203D30FEE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalChartPathIntegral.lean",
+          "sha256": "1854923757A806BFD7D6836F4A6676C78F8100B39C8E40EE429025B4876767C2",
+          "oleanSha256": "400B94AA6B976A3D9CF67AD89109486D24EA51D41C03CCDDBF6014B6A468D465"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularChartReadingAt.lean",
+          "sha256": "19337BD78B9098867CE6FA5B5F36A5DBE45614AA8DCBAC8601F70A2F3BA09813",
+          "oleanSha256": "0CD47428799705005CB03C4274BEBFF7B111E76D0EE40E35ECD18AA16C1C0418"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExponentialLocalTransport.lean",
+          "sha256": "8ACF0C0F4B700AB88BA7A5023D501181A0304873C3AA86325553E9E3B5D83C32",
+          "oleanSha256": "77B7D025B1B3C25B872154610B0F01FAE0CF2CF093761B2EC2C2728775DB4CD4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExponentialChartDerivative.lean",
+          "sha256": "5A5F21579692CC11B922D849BF07DFD274799329B886558F902C235F1512EA40",
+          "oleanSha256": "AD6F759AB6F3801EB8C262B4A3DD2FD9E65D369392DCE3C653D5CE663445AB80"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicLogDerivativeComparison.lean",
+          "sha256": "FBEF23DFB20200EC4BEC59B5CD0A32262134EB29D416BECDEB202CF8AFE9E764",
+          "oleanSha256": "6D7D1A2F35BF92AF1957D77B4000B5EDBF8496FB1E6D6D10506585B6F96C0C19"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExponentialMeromorphicOrders.lean",
+          "sha256": "1214516D7A890AD9F144C0ADD5AE7E05DD9B92A5B0401170BF2B24274735582E",
+          "oleanSha256": "5B6062969773F8AF09F7AE8CC9E98B06E265F7E56691E1D063718E0052879EE9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodsPrincipal.lean",
+          "sha256": "F4E301241F250E43651CC2C40431F9A1574B8CEF5212B772787F62BB5EB670A0",
+          "oleanSha256": "C4B4F0D4CA48D146139F5288A535A2D71C4AEFA11912A58DF80E8B21250F32C2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_of_local_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_chart_path_integral",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_readDifferential_at_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_exponential_local_transport",
+        "Dubon2026.SourceFunctionField.OriginalChart.hasDerivAt_original_exponential_chart",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.meromorphicAt_of_same_logarithmic_derivative",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_meromorphic_orders_of_exponential_transport",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_orders_of_integral_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_integral_periods"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.isPrimitiveAlong_of_local_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_chart_path_integral",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticAt_readDifferential_at_of_coeff_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_exponential_local_transport",
+        "Dubon2026.SourceFunctionField.OriginalChart.hasDerivAt_original_exponential_chart",
+        "Dubon2026.SourceFunctionField.OriginalExpTopology.meromorphicAt_of_same_logarithmic_derivative",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_meromorphic_orders_of_exponential_transport",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_orders_of_integral_periods",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_integral_periods"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodsAudit8.log",
+      "logSha256": "99E21A48C3A9EB8B6702E62EA8E0B694D9ACCC7B601FD0B187E0983FE53BD457",
+      "auditSha256": "BD5606DC8E6EC7EF302067F7F69362C567F9F6AD44CAD16D4B493E6633BE08BD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodsDependencyAudit8.log",
+      "dependencyAuditSha256": "0A1567F6D76E0B25F50775BFEEA5634DE24A62B793B45D402356CB78846946DE",
+      "dependencyAuditSourceSha256": "285BD812712FC8DDAB31B85795DAB68CC9B0B0EEB60F8F13ED2A7F8FEDA8F388",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_integral_periods"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> exact original torsion cardinality -> complex Abel-Jacobi comparison -> Abel converse -> exact meromorphic orders and actual principality from integral loop periods.",
+      "discharged": "An actual original differential with at most simple poles, divisor residues and integral loop periods now produces a global meromorphic function with exactly the prescribed orders and an actual principal divisor in the original function field. Local chart paths realize primitive differences; path-exponential transport derives the chart differential equation. Native equality of logarithmic derivatives gives a nonzero constant multiple of each proved local exponential model. The proved original-function comparison discharges the meromorphic-to-rational premise. No global meromorphic exponential or original-function-comparison premise remains. Integral loop periods remain an explicit upstream mathematical obligation.",
+      "boundary": "Scratch only; production promotion and verification pending. Integral period correction from Abel-Jacobi period membership and the required reciprocity theorem remain open. Period discreteness, original torsion cardinality, Qbar comparison, Tate realization, Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-periods-8-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "8B32842C04B28C8E01A30A5283A58120DAAED03DCF8A35C20FFBC0D7BAAD424C"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-prescribed-residues-6-reuse-review-20261021.json",
+    "Tools/source-original-regular-paths-4-reuse-review-20261021.json",
+    "Tools/source-original-meromorphic-dimension-7-reuse-review-20261021.json",
+    "Tools/source-original-meromorphic-comparison-11-reuse-review-20261021.json",
+    "Tools/source-original-local-exponential-3-reuse-review-20261021.json",
+    "Tools/source-original-finite-paths-6-reuse-review-20261021.json",
+    "Tools/source-original-period-exponential-4-reuse-review-20261021.json",
+    "Tools/source-original-integral-periods-8-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5768": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesDependencyAudit6Production5768.log",
+        "sha256": "EC51D93B805F48BD21838500882E0383FEB2D9AB5BCA77C1DC0570688D2BAE7D",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_third_kind_differential"
+        ],
+        "sourceSha256": "70251389C03CE2A6CB023E233ACC9CC50862655EF9C162B1AEE2692A9807B46A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularPathsDependencyAudit4Production5768.log",
+        "sha256": "CF60A559A6B95758A46927C6E5638129FA8FD43900FB9265595B5CD0409CCBA2",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_third_kind_with_path_primitives"
+        ],
+        "sourceSha256": "EAE3570FF07A547B1F240A19A1058480585084AAD53F3BDB85DC39B8C40643BD"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicDimensionDependencyAudit7Production5768.log",
+        "sha256": "7EE1DA4128693A1A4E5E4D9A2FF07763B3E8B4434719AB5B655908AC870F2F82",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_meromorphic_relation",
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_const_germs_of_nonneg_order"
+        ],
+        "sourceSha256": "3696BC3A521DE9F69A1F90B58229BB9882DB30811677D3DC3DF19D1471AEC9E2"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicComparisonDependencyAudit11Production5768.log",
+        "sha256": "B92BE7D61715A845F583F125598D1F5F6009F9AF6C6FDD286329EB558DDEC140",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_meromorphic_orders"
+        ],
+        "sourceSha256": "FAB7921462EFFFEAA71C06051DDD6709A7F32F5BEED75A5CE37035C17D07C771"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLocalExponentialDependencyAudit3Production5768.log",
+        "sha256": "83B4B908BA0CA67246A50DF5528864422AC477CA4A88C6A01B6AFC7A2381E60A",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_local_exponential_model"
+        ],
+        "sourceSha256": "3F43A81E247F4E3661D5F47426E034CFE35A31AE0A807E5A6DD2762BF429CFDE"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePathsDependencyAudit6Production5768.log",
+        "sha256": "625321ABF63BF4B04E81A0E705AD5A52A06D4C1C1A8A7886A01EEA7E2188DE89",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_divisor_base_point",
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_path_avoiding_divisor"
+        ],
+        "sourceSha256": "C124B69AA473C0A810D53E662B65E94E16B1BE83E7073841CFDE0B4C884D4F20"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodExponentialDependencyAudit4Production5768.log",
+        "sha256": "0E04DDD044A2FEC1FDDFF7AFBE8B30F49CEC7348C17B8F797C143F74A397323A",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.exists_original_period_exponential"
+        ],
+        "sourceSha256": "37911E99FD14DF6753C974DF12B5293E7BBF070BD39E2822E596790EAA998960"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodsDependencyAudit8Production5768.log",
+        "sha256": "0A1567F6D76E0B25F50775BFEEA5634DE24A62B793B45D402356CB78846946DE",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_isPrincipal_of_integral_periods"
+        ],
+        "sourceSha256": "430EFF7A93D3C9620461713F0E6296EF948A82CD4A088FB7098342A0A2A7D5F6"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelProductionAudit5768.log",
+    "sha256": "FFB70464604B6DE53CAACC2A6237D02EF4CA066F134048A9ECE560EF50F208BB",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-meromorphic-abel-production-5768-build.log",
+    "aggregateSha256": "062F017510C0DD40BD9791551D7EF91D7D98292F08CE913A6C23F08EB69698F2",
+    "productionModules": 5768,
+    "incrementModules": 49,
+    "axiomChecks": 134,
+    "exhaustiveIncrementTheorems": 185,
+    "linterScopes": 49,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 186,
+    "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Actual original places, meromorphic functions, differentials, continuous paths, residues and exact orders retained. The integral-period premise remains explicit; no new mathematical assumption introduced.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 186,
+      "scratchDistinct": 185,
+      "productionFocused": 185,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalGenus.congr_simp": [
+          {
+            "scope": "SourceMeromorphicAbelScratchOwnership100For5768",
+            "module": "Dubon2026.SourceOriginalTwoPoleDimensions"
+          },
+          {
+            "scope": "SourceMeromorphicAbelScratchOwnership103For5768",
+            "module": "Dubon2026.SourceOriginalMeromorphicRRBounds"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalTwoPoleDimensions",
+            "SourceOriginalTwoPoleDifferential",
+            "SourceOriginalDifferentialResidues",
+            "SourceOriginalSimplePoleBounds",
+            "SourceOriginalTwoPoleResidues",
+            "SourceOriginalPrescribedResidues"
+          ],
+          "count": 48,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership100For5768.log",
+            "sha256": "FBF9CF79180499AAB80843B977BAF663D8464AFB2498F78E3073B36036AEF7DB",
+            "sourceSha256": "DCAEF2463FDE02C2075678659A59DDB94EDF19C769233F9E6693321618603965"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalLocalRegularPrimitives",
+            "SourceOriginalRegularPathLocalPrimitives",
+            "SourceOriginalRegularPathPrimitives",
+            "SourceOriginalThirdKindPathPrimitives"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership101For5768.log",
+            "sha256": "B8431EE3CE486BEA76F6484AECC57719FF9D61CAD46BC53F02BDF843A9730F68",
+            "sourceSha256": "E8CADBB13790E3698DB2B331CC3BF0395E67CBDFFBF4639068CD5516608684E6"
+          }
+        },
+        {
+          "modules": [
+            "SourceMeromorphicRemovableCharts",
+            "SourceMeromorphicCompactConstancy",
+            "SourceMeromorphicLeadingCoefficient",
+            "SourceMeromorphicPoleBound",
+            "SourceMeromorphicDegreeBase",
+            "SourceMeromorphicDimensionBound",
+            "SourceOriginalMeromorphicDimension"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership102For5768.log",
+            "sha256": "930A162F5CD03E09932B8AE5ADD7490BF6EB0AE009E713D432A027CFB7ED79A7",
+            "sourceSha256": "D7857382D1787E7B7EC459A259787CCDEC5FFD607619B465622646291101FD7B"
+          }
+        },
+        {
+          "modules": [
+            "SourceMeromorphicOrderNeighborhoods",
+            "SourceMeromorphicFinitePoles",
+            "SourceMeromorphicEffectivePoleBound",
+            "SourceOriginalMeromorphicPoleBound",
+            "SourceOriginalMeromorphicRRBounds",
+            "SourceOriginalChartReadFieldLaws",
+            "SourceOriginalMeromorphicPoleClearing",
+            "SourceOriginalGermBasisRelation",
+            "SourceOriginalOnePoleComparison",
+            "SourceOriginalMeromorphicFunctionComparison",
+            "SourceOriginalMeromorphicPrincipalDivisor"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership103For5768.log",
+            "sha256": "18A2BD16F5909703375B681A422EF52D3FF1B670BAAA24520317C193FCA90521",
+            "sourceSha256": "285AF730A85F0B01F3E35B9AE0ED7F7EBB83AAB3F2B9D6FC095B9299938D245A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSimplePoleRegularPart",
+            "SourceOriginalLogarithmicReading",
+            "SourceOriginalLocalExponentialModel"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership104For5768.log",
+            "sha256": "1334D8EFA5C1C7D5D5659010F791A6F4C0722E610C4087C190C0A960FC09A020",
+            "sourceSha256": "BB100DB5C482BD098664D86B3AFDD726A9EE192CA819085A31B3A30E6800D48A"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexPuncturedBallPaths",
+            "SourcePuncturedNeighborhoodConnected",
+            "SourceChartFiniteAvoidance",
+            "SourceChartFinitePuncturePaths",
+            "SourceOriginalFinitePuncturePaths",
+            "SourceOriginalDivisorAvoidingPaths"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership105For5768.log",
+            "sha256": "E6308EBFAF282E4735B059BCD1582A8CC831F0C6911E5BB44FD67ADEBEB19B52",
+            "sourceSha256": "BBD2F61E28B7CD13B342C80A954E4A9CC9263BA7B224800C06903E47E24F0982"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRegularPathIntegralLaws",
+            "SourceOriginalIntegralPeriodPathIndependence",
+            "SourceOriginalPeriodExponential",
+            "SourceOriginalPeriodExponentialConsumer"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership106For5768.log",
+            "sha256": "B069D3D9140A760D46494B14513596BBC2E90FF3CF24DD984DC285CF440855F9",
+            "sourceSha256": "EB6B53AE595705FFD45746D95E5512CBAF7CFE6B0EC638AC352D0CB410CAF841"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalLocalChartPathPrimitive",
+            "SourceOriginalLocalChartPathIntegral",
+            "SourceOriginalRegularChartReadingAt",
+            "SourceOriginalExponentialLocalTransport",
+            "SourceOriginalExponentialChartDerivative",
+            "SourceMeromorphicLogDerivativeComparison",
+            "SourceOriginalExponentialMeromorphicOrders",
+            "SourceOriginalIntegralPeriodsPrincipal"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership107For5768.log",
+            "sha256": "B3C8496BA3C2BC8C47E83E264E33AE82795A761939CAA5991FA88A68B6E930D4",
+            "sourceSha256": "86806D0E1A97B72A37F48B411C7649CC6E73868C4BFC3EF52BBB5C540F0DA27E"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelOwnership5768.log",
+        "sha256": "BA53343093F1612094E8A05496CE2911DA3D4BFDCA2C713B37FA08D172AC7255",
+        "sourceSha256": "0BDE99FAD2A4378A84AA86C89719E1C820BF79ACBACD7BC4D3474763021127EA"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-152910-153.log",
+        "sha256": "61366BE240469F7FAA279C0635D12ADA4D780124A454FE6CCA54BEB4530DDB4E"
+      }
+    },
+    "scratchToProductionCountReason": "All 185 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt5768": {
+    "recordedUTC": "2026-10-22T01:05:16.537540+00:00",
+    "log": "logs/dubon-build-20261021-165250-763.log",
+    "sha256": "9A733DECBED9FCBAEA6E6131AFB73A17CAF8566013FE1F1BA0E1DC64BDE46BC0",
+    "bytes": 9908588,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5768,
+    "projectTheorems": 40282,
+    "registeredConsumers": 17647,
+    "registeredConstructions": 1098,
+    "declarations": 24249,
+    "generated": 22629,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_164926.log",
+    "foundationSha256": "E88250175B4425AC12DC7C0DC071DB904FDAD376A1EB477EC8B15CE42398A79F",
+    "countReconciliation": {
+      "previousTheorems": 40099,
+      "focusedTheorems": 185,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead.eq_1",
+        "Dubon2026.SourceFunctionField.originalGenus.congr_simp"
+      ],
+      "addedTheorems": 183,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelOwnership5768.log",
+      "ownershipSha256": "BA53343093F1612094E8A05496CE2911DA3D4BFDCA2C713B37FA08D172AC7255"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 186,
+      "scratchDistinct": 185,
+      "productionFocused": 185,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalGenus.congr_simp": [
+          {
+            "scope": "SourceMeromorphicAbelScratchOwnership100For5768",
+            "module": "Dubon2026.SourceOriginalTwoPoleDimensions"
+          },
+          {
+            "scope": "SourceMeromorphicAbelScratchOwnership103For5768",
+            "module": "Dubon2026.SourceOriginalMeromorphicRRBounds"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalTwoPoleDimensions",
+            "SourceOriginalTwoPoleDifferential",
+            "SourceOriginalDifferentialResidues",
+            "SourceOriginalSimplePoleBounds",
+            "SourceOriginalTwoPoleResidues",
+            "SourceOriginalPrescribedResidues"
+          ],
+          "count": 48,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership100For5768.log",
+            "sha256": "FBF9CF79180499AAB80843B977BAF663D8464AFB2498F78E3073B36036AEF7DB",
+            "sourceSha256": "DCAEF2463FDE02C2075678659A59DDB94EDF19C769233F9E6693321618603965"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalLocalRegularPrimitives",
+            "SourceOriginalRegularPathLocalPrimitives",
+            "SourceOriginalRegularPathPrimitives",
+            "SourceOriginalThirdKindPathPrimitives"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership101For5768.log",
+            "sha256": "B8431EE3CE486BEA76F6484AECC57719FF9D61CAD46BC53F02BDF843A9730F68",
+            "sourceSha256": "E8CADBB13790E3698DB2B331CC3BF0395E67CBDFFBF4639068CD5516608684E6"
+          }
+        },
+        {
+          "modules": [
+            "SourceMeromorphicRemovableCharts",
+            "SourceMeromorphicCompactConstancy",
+            "SourceMeromorphicLeadingCoefficient",
+            "SourceMeromorphicPoleBound",
+            "SourceMeromorphicDegreeBase",
+            "SourceMeromorphicDimensionBound",
+            "SourceOriginalMeromorphicDimension"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership102For5768.log",
+            "sha256": "930A162F5CD03E09932B8AE5ADD7490BF6EB0AE009E713D432A027CFB7ED79A7",
+            "sourceSha256": "D7857382D1787E7B7EC459A259787CCDEC5FFD607619B465622646291101FD7B"
+          }
+        },
+        {
+          "modules": [
+            "SourceMeromorphicOrderNeighborhoods",
+            "SourceMeromorphicFinitePoles",
+            "SourceMeromorphicEffectivePoleBound",
+            "SourceOriginalMeromorphicPoleBound",
+            "SourceOriginalMeromorphicRRBounds",
+            "SourceOriginalChartReadFieldLaws",
+            "SourceOriginalMeromorphicPoleClearing",
+            "SourceOriginalGermBasisRelation",
+            "SourceOriginalOnePoleComparison",
+            "SourceOriginalMeromorphicFunctionComparison",
+            "SourceOriginalMeromorphicPrincipalDivisor"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership103For5768.log",
+            "sha256": "18A2BD16F5909703375B681A422EF52D3FF1B670BAAA24520317C193FCA90521",
+            "sourceSha256": "285AF730A85F0B01F3E35B9AE0ED7F7EBB83AAB3F2B9D6FC095B9299938D245A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSimplePoleRegularPart",
+            "SourceOriginalLogarithmicReading",
+            "SourceOriginalLocalExponentialModel"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership104For5768.log",
+            "sha256": "1334D8EFA5C1C7D5D5659010F791A6F4C0722E610C4087C190C0A960FC09A020",
+            "sourceSha256": "BB100DB5C482BD098664D86B3AFDD726A9EE192CA819085A31B3A30E6800D48A"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexPuncturedBallPaths",
+            "SourcePuncturedNeighborhoodConnected",
+            "SourceChartFiniteAvoidance",
+            "SourceChartFinitePuncturePaths",
+            "SourceOriginalFinitePuncturePaths",
+            "SourceOriginalDivisorAvoidingPaths"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership105For5768.log",
+            "sha256": "E6308EBFAF282E4735B059BCD1582A8CC831F0C6911E5BB44FD67ADEBEB19B52",
+            "sourceSha256": "BBD2F61E28B7CD13B342C80A954E4A9CC9263BA7B224800C06903E47E24F0982"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRegularPathIntegralLaws",
+            "SourceOriginalIntegralPeriodPathIndependence",
+            "SourceOriginalPeriodExponential",
+            "SourceOriginalPeriodExponentialConsumer"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership106For5768.log",
+            "sha256": "B069D3D9140A760D46494B14513596BBC2E90FF3CF24DD984DC285CF440855F9",
+            "sourceSha256": "EB6B53AE595705FFD45746D95E5512CBAF7CFE6B0EC638AC352D0CB410CAF841"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalLocalChartPathPrimitive",
+            "SourceOriginalLocalChartPathIntegral",
+            "SourceOriginalRegularChartReadingAt",
+            "SourceOriginalExponentialLocalTransport",
+            "SourceOriginalExponentialChartDerivative",
+            "SourceMeromorphicLogDerivativeComparison",
+            "SourceOriginalExponentialMeromorphicOrders",
+            "SourceOriginalIntegralPeriodsPrincipal"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicAbelScratchOwnership107For5768.log",
+            "sha256": "B3C8496BA3C2BC8C47E83E264E33AE82795A761939CAA5991FA88A68B6E930D4",
+            "sourceSha256": "86806D0E1A97B72A37F48B411C7649CC6E73868C4BFC3EF52BBB5C540F0DA27E"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalMeromorphicAbelOwnership5768.log",
+        "sha256": "BA53343093F1612094E8A05496CE2911DA3D4BFDCA2C713B37FA08D172AC7255",
+        "sourceSha256": "0BDE99FAD2A4378A84AA86C89719E1C820BF79ACBACD7BC4D3474763021127EA"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-152910-153.log",
+        "sha256": "61366BE240469F7FAA279C0635D12ADA4D780124A454FE6CCA54BEB4530DDB4E"
+      }
+    },
+    "scratchToProductionCountReason": "All 185 distinct names from 186 exhaustive scratch checks are retained: 185 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Integral period correction from Abel-Jacobi membership and reciprocity remain required for the full Abel converse. Discreteness of actual periods, original torsion finiteness/cardinality and comparison with Qbar divisor classes remain open, followed by Tate realization, rank-two Hecke/Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

@@ -1,0 +1,1437 @@
+{
+  "date": "21 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalRegularCoefficientOrders",
+    "Dubon2026.SourceOriginalAnalyticDerivativeOrder",
+    "Dubon2026.SourceOriginalAnalyticDifferentialRegularity",
+    "Dubon2026.SourceOriginalHolomorphicDifferentials",
+    "Dubon2026.SourceCurveChartIntegralCriterion",
+    "Dubon2026.SourceOriginalRegularCuspOrders",
+    "Dubon2026.SourceOriginalRegularInverseJIntegral",
+    "Dubon2026.SourceOriginalRealizationGermHom",
+    "Dubon2026.SourceOriginalInverseJGermPolynomial",
+    "Dubon2026.SourceOriginalInverseJMonicRelation",
+    "Dubon2026.SourceOriginalInverseJRelationValues",
+    "Dubon2026.SourceOriginalInverseJAnalyticRelation",
+    "Dubon2026.SourceInverseJLimits",
+    "Dubon2026.SourceMonicRelationRootBound",
+    "Dubon2026.SourceInverseJPolynomialBounds",
+    "Dubon2026.SourceOriginalInverseJAnalyticBound",
+    "Dubon2026.SourceInverseJDerivativePower",
+    "Dubon2026.SourceCuspBoundExtension",
+    "Dubon2026.SourceOriginalDifferentialSlashBound",
+    "Dubon2026.SourceOriginalDifferentialCuspDecay",
+    "Dubon2026.SourceOriginalRegularCuspForms",
+    "Dubon2026.SourceOriginalDifferentialGerm",
+    "Dubon2026.SourceOriginalRegularCuspGerms",
+    "Dubon2026.SourceOriginalCuspDimension",
+    "Dubon2026.SourceOriginalPeriodSurjectivity",
+    "Dubon2026.SourceWeightTwoScalarHecke",
+    "Dubon2026.SourceJHeckeConjugation",
+    "Dubon2026.SourceJHeckeCosets",
+    "Dubon2026.SourceWeightTwoReflectionHecke",
+    "Dubon2026.SourceWeightTwoPeriodHecke",
+    "Dubon2026.SourceParabolicCuspEigenlift",
+    "Dubon2026.SourceWeightTwoFullEigenlift",
+    "Dubon2026.SourceResidualNormalizedCuspLift",
+    "Dubon2026.SourceCurvePicardGroup",
+    "Dubon2026.SourceOriginalPicardGroup",
+    "Dubon2026.SourceOriginalArithmeticFieldAction",
+    "Dubon2026.SourceOriginalArithmeticPlaces",
+    "Dubon2026.SourceOriginalArithmeticDivisors",
+    "Dubon2026.SourceOriginalArithmeticPicard",
+    "Dubon2026.SourceOriginalTorsionGalois"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> normalized weight-two cusp eigensystem -> actual parabolic Hecke realization -> surjective Hecke-equivariant period pair -> matching native cusp-form dimension -> original regular-differential cusp-form realization and numerical genus.",
+  "discharged": "Every original regular differential has a genuine holomorphic weight-two cusp form realization. Original place orders prove inverse-j integrality; the actual monic relation, a root bound and the discriminant derivative identity prove decay at every cusp. Injective analytic germs give the missing cusp-dimension lower bound. The existing numerical genus, Manin upper bound and period injection then prove the exact cusp and parabolic dimensions and surjectivity of the original period pair. Scalar periods and the explicitly reflected coset sum prove its Hecke equivariance. The supplied parabolic eigenclass yields a nonzero native cusp form with the same good-prime eigenvalues. Existing full Hecke commutativity extends this to all indices; Fourier coefficients give nonzero first coefficient and normalization. The original residual H1 consumer retains its integral eigenvalue lift and reduction map. No cusp-realization, dimension, period-surjectivity, Hecke-compatibility or normalization premise remains on these consumers. The genuine original degree-zero divisor-class group and its torsion are constructed. Actual torsion classes have nonzero function representatives with exact normalized orders. Literal coefficient automorphisms permute the same original places, preserve degree and principal divisors and descend to the actual Pic0 and its ZMod torsion. The arithmetic torsion action is proved without an action hypothesis.",
+  "boundary": "Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,595-module scope: all thirteen retained regressions, 39,419 exhaustive theorem checks, 17,182 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.original_regular_differential_holomorphic_realization",
+    "Dubon2026.SourceFunctionField.original_regular_inverse_j_integral",
+    "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_relation",
+    "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_bound",
+    "Dubon2026.SourceFunctionField.original_regular_differential_cusp_form_realization",
+    "Dubon2026.sourceWeightTwoParabolicPeriodPair_surjective",
+    "Dubon2026.sourceWeightTwo_cusp_dimension_eq_genusFormula",
+    "Dubon2026.sourceTrivialH1Eigen_cuspLift_or_dirichletPair",
+    "Dubon2026.sourceTrivialH1Eigen_normalizedCuspLift_or_dirichletPair",
+    "Dubon2026.SourceFunctionField.originalJZero_torsion_orders",
+    "Dubon2026.SourceFunctionField.originalPic0_principal_eq_zero",
+    "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep",
+    "Dubon2026.SourceFunctionField.originalArithmeticRingAut_j"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-21T16:27:45.146950+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalRegularCoefficientOrders",
+        "SourceOriginalAnalyticDerivativeOrder",
+        "SourceOriginalAnalyticDifferentialRegularity",
+        "SourceOriginalHolomorphicDifferentials"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularCoefficientOrders.lean",
+          "sha256": "ABDF5D167648F336E22B647296EE3DF191CB0B921E8F169516AAAC81D604746A",
+          "oleanSha256": "D4B4F8F93B7580B159D435525E84642F87E86CE7247688CBEC8CE5F75281678B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticDerivativeOrder.lean",
+          "sha256": "19B98E7C8AAE056C6CBC8EF1D9A1F60619D494AC8B91159188BC540E92864B54",
+          "oleanSha256": "CDDBDD94FFF3DFB8F712B0C3B1856E7C2FA967AA20C63B6F3560E842F98C0A35"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticDifferentialRegularity.lean",
+          "sha256": "3834425EB1FF4E16EBF58498FC1C4360128669C7A9322EF3A1E820EAD2C841EB",
+          "oleanSha256": "805F78400AEA5DEEE13097A53ED6CBD4851BEDDB9D029C79DBC80D68563833CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHolomorphicDifferentials.lean",
+          "sha256": "4995F71D67125E1FCFC02CC284FC46C86FCE924FFA7666278CA7771477CF35B0",
+          "oleanSha256": "C5FA14B413B573E1B57CBE103C092C6D10EF8EF231946FBA5BE45C73099C08D4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_regular_coefficient_order_bound",
+        "Dubon2026.SourceFunctionField.meromorphicOrderAt_deriv_jf_add_one",
+        "Dubon2026.SourceFunctionField.original_analytic_derivative_order",
+        "Dubon2026.SourceFunctionField.original_regular_analytic_differential_order",
+        "Dubon2026.SourceFunctionField.original_regular_analytic_differential_bounded",
+        "Dubon2026.SourceFunctionField.mdifferentiable_raw_j_derivative",
+        "Dubon2026.SourceFunctionField.raw_j_derivative_smul",
+        "Dubon2026.SourceFunctionField.exists_original_holomorphic_differential",
+        "Dubon2026.SourceFunctionField.original_regular_differential_holomorphic_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_regular_coefficient_order_bound",
+        "Dubon2026.SourceFunctionField.meromorphicOrderAt_deriv_jf_add_one",
+        "Dubon2026.SourceFunctionField.original_analytic_derivative_order",
+        "Dubon2026.SourceFunctionField.original_regular_analytic_differential_order",
+        "Dubon2026.SourceFunctionField.original_regular_analytic_differential_bounded",
+        "Dubon2026.SourceFunctionField.mdifferentiable_raw_j_derivative",
+        "Dubon2026.SourceFunctionField.raw_j_derivative_smul",
+        "Dubon2026.SourceFunctionField.exists_original_holomorphic_differential",
+        "Dubon2026.SourceFunctionField.original_regular_differential_holomorphic_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicDifferentialAudit4.log",
+      "logSha256": "BCF15AB860E68FE9404B0A387F87B161969B394ABBBAAD92AFE541BD85E1CB30",
+      "auditSha256": "8AE30B0DEEEC04C4BBA19DD03EA554913F7E405DA3262DCD4D1E58A42264C387",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicDifferentialDependencyAudit4.log",
+      "dependencyAuditSha256": "930C7DE0476A829C6A1A1C4F03598B34DF57DB83B2E37066A1CDBC843BF82B38",
+      "dependencyAuditSourceSha256": "CD1C3E0D98B5FA7485EFF50975BC42B5F0950AEA833FE2410AD42CC4CD954793",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_differential_holomorphic_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus -> actual original finite-fiber bijection and exceptional cardinalities.",
+      "discharged": "Every nonzero coefficient x of an actual original regular differential x D(j) has an analytic pullback of order at least e-1 at every upper-half-plane point. The exact normalized j-order, native derivative-order identity and original local differential regularity derive this bound. The proved modular quotient representation and existing removable-singularity extension then give an actual holomorphic function with the weight-two Gamma0 transformation law, including at denominator zeros.",
+      "boundary": "Scratch only; production promotion and verification pending. Cusp decay, the complete regular-differential cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-holomorphic-differential-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "078051BB4E7AA788E7A566FA3768CC135946F41516AC4E3FAA8006523A58E894"
+    },
+    {
+      "recordedUTC": "2026-10-21T16:33:31.013352+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCurveChartIntegralCriterion",
+        "SourceOriginalRegularCuspOrders",
+        "SourceOriginalRegularInverseJIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveChartIntegralCriterion.lean",
+          "sha256": "2A0F9DCE79282CC36DF80EE4CD2A341D10607B41C2F3E9373A7AAAA4D7A58BEF",
+          "oleanSha256": "04B9AE1E5E9A9A0EB768C6C04EB4E36135A7B0A95AABC70AF407147E334CFAB1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularCuspOrders.lean",
+          "sha256": "D21701F39CFDBEF150D9ACEBE08F8E267DB0EDAEF952168642E3B585E3FEE171",
+          "oleanSha256": "C228A1BF84C4EF318B462F1C39A7C548665E2E57127539F9B63DDDAB35FACD91"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularInverseJIntegral.lean",
+          "sha256": "2F0E55AEDE353194C35FD10777F20A38EF712AA74E8978180FF4F8BBC987F6B0",
+          "oleanSha256": "4CEDC0E36CA175A347F46500650E80F4683478BF8B69719C7009B935FAA71E0A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.mem_chart_of_mem_all_places",
+        "Dubon2026.SourceCurve.isIntegral_adjoin_of_nonnegative_orders",
+        "Dubon2026.SourceFunctionField.original_regular_coefficient_canonical_bound",
+        "Dubon2026.SourceFunctionField.original_j_pole_order_le_psi",
+        "Dubon2026.SourceFunctionField.original_j_1728_order_le_two",
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_integral"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.mem_chart_of_mem_all_places",
+        "Dubon2026.SourceCurve.isIntegral_adjoin_of_nonnegative_orders",
+        "Dubon2026.SourceFunctionField.original_regular_coefficient_canonical_bound",
+        "Dubon2026.SourceFunctionField.original_j_pole_order_le_psi",
+        "Dubon2026.SourceFunctionField.original_j_1728_order_le_two",
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_integral"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJIntegralAudit3.log",
+      "logSha256": "C641AB6E02305A6F8032A0ADA45E01F734EF3D7AB3F6FBFF0C91CBC35759D234",
+      "auditSha256": "B6BEB4DC7208864F83B9F009DF771BA93430B26F86AC2F722DF3123459963750",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJIntegralDependencyAudit3.log",
+      "dependencyAuditSha256": "42B3807F1E55194D7894AA81CBC3AA5B2A6BF8B6A4AEA102D3D693D0F3421995",
+      "dependencyAuditSourceSha256": "38CA76B1E43CB30CACFDF3DF297FF8C2EB07E03302FA9642A1CD55CE83FD1F75",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_integral"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus -> actual original finite-fiber bijection and exceptional cardinalities.",
+      "discharged": "For every nonzero original coefficient x of a regular differential x D(j), the actual expression x^(2 psi) j^(psi+1) (j-1728)^psi is integral over C[j inverse]. All local valuation inequalities are derived from original regularity, canonical coefficients, the proved cusp-width bound by psi and the actual 1728 multiplicity bound by two. A native Dedekind prime-valuation intersection theorem applied to existing original prime places proves the integral-closure criterion.",
+      "boundary": "Scratch only; production promotion and verification pending. The inverse-j relation must still be transferred to analytic cusp decay. The completed cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-inverse-j-integral-3-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "AF9333884B12D001978719BC5986D7FABC9FF958B887428594FD1EAF3074685E"
+    },
+    {
+      "recordedUTC": "2026-10-21T16:47:33.073046+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalRealizationGermHom",
+        "SourceOriginalInverseJGermPolynomial",
+        "SourceOriginalInverseJMonicRelation",
+        "SourceOriginalInverseJRelationValues",
+        "SourceOriginalInverseJAnalyticRelation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRealizationGermHom.lean",
+          "sha256": "80242A5B3C2F2C34985CE8441EEB607778AEB2F8069CBC19B867E6D390098F47",
+          "oleanSha256": "D8B2FFEFE37794818EBAE5EC3CE26958226A12CDE0B02B23E9E03463FBA8A44E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInverseJGermPolynomial.lean",
+          "sha256": "7C27CE73DA307DEFD715D0347BBCCCC0C0A56F01ABE9A1324C53F519C0585223",
+          "oleanSha256": "1223A62FE124951C24E50EFF44443DAC233C4C596A1907DAE67301D475C85BF2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInverseJMonicRelation.lean",
+          "sha256": "930F0E2B9B8912B7332CF72718961ED566FCA48C520D924C3ABB3832DFEC3B5F",
+          "oleanSha256": "95F0A9D1E72AD392C8142E0301E49B15D5D2DF0CADA56E0204CD4680EBAF6A3D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInverseJRelationValues.lean",
+          "sha256": "3BC7437BC8C2DA441F7194BF6B8BC005B6D67BCC758D69639633F2D352413AB7",
+          "oleanSha256": "7347F4111CF4C3C5177458D95E424272F9CA8AB2CE004C6AD22A355D25446FEC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInverseJAnalyticRelation.lean",
+          "sha256": "58DF9535182F0FD62420AA75E18F4D5D82F857D062E44DF8CF880151198A64B1",
+          "oleanSha256": "A91122EB59C145DB39D93A92196225B9DDB36DF01D5BFD833EE08495540D040A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_algebraMap",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_j",
+        "Dubon2026.SourceFunctionField.original_realize_inv_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_j_inv",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_aeval_inverse_j",
+        "Dubon2026.SourceFunctionField.exists_original_inverse_j_monic_relation",
+        "Dubon2026.SourceFunctionField.original_inverse_j_relation_germ",
+        "Dubon2026.SourceFunctionField.original_inverse_j_relation_value",
+        "Dubon2026.SourceFunctionField.original_differential_expression_germ",
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_relation",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm",
+        "Dubon2026.SourceFunctionField.inverseJExpression"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_algebraMap",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_j",
+        "Dubon2026.SourceFunctionField.original_realize_inv_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_j_inv",
+        "Dubon2026.SourceFunctionField.originalRealizeGerm_aeval_inverse_j",
+        "Dubon2026.SourceFunctionField.exists_original_inverse_j_monic_relation",
+        "Dubon2026.SourceFunctionField.original_inverse_j_relation_germ",
+        "Dubon2026.SourceFunctionField.original_inverse_j_relation_value",
+        "Dubon2026.SourceFunctionField.original_differential_expression_germ",
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_relation"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalRealizeGerm",
+        "Dubon2026.SourceFunctionField.inverseJExpression"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJRelationAudit5.log",
+      "logSha256": "DBAD5FF500320E2E472432976D36E2B9D3618C5302F49D1441B768E874E04CDD",
+      "auditSha256": "FA0C8DB03BF88AE788D70DBFA95802B7A248D4328E798FE160FCC726DDC9E0F3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJRelationDependencyAudit5.log",
+      "dependencyAuditSha256": "C6CD452834CD76DB3513A00A5BB57ECAD6540EE02D684EED6B8663EB561FE400",
+      "dependencyAuditSourceSha256": "76698434F28F0368B6C8FDBDBAE5C2CF7BB2083DF668234EBB64FDB54AA8C4FB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_relation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> regular-differential cusp-form comparison -> decay at every cusp -> bounded inverse-j integral expression -> actual analytic monic relation.",
+      "discharged": "Every nonzero original regular coefficient supplies a positive-degree monic relation for the actual analytic expression (g/h)^(2 psi) j^(psi+1) (j-1728)^psi wherever h and j are nonzero. Its coefficients are the same complex polynomials evaluated at analytic inverse j. The original realization ring homomorphism into punctured germs and continuity prove this transfer; no analytic relation is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The monic relation must still yield an analytic bound, and the derivative identity must turn that bound into decay at every cusp. The completed cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-inverse-j-relation-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9707B9BA1CB16E852DF4A3FAEFB4366B9AA18819DC506C81DAEE932C1C84264D"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:00:52.097249+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceInverseJLimits",
+        "SourceMonicRelationRootBound",
+        "SourceInverseJPolynomialBounds",
+        "SourceOriginalInverseJAnalyticBound"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJLimits.lean",
+          "sha256": "314342FBCBE49C7FB9C5738DD0C4B2A7E342AB7DAA76C38702B551FB5668A00A",
+          "oleanSha256": "4044CA2694276E4E8F17D8AA894EB07D53DF893E793D475FC2FC22B41DCC76E9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMonicRelationRootBound.lean",
+          "sha256": "235D01FE0F6A038FB5EA4BE0A05BE79C2E31E8C18A57CAB6333CEE5D59954F1B",
+          "oleanSha256": "CA3DD588EEF9046B2CAE10A1939B1B18FC6B771E3B76722F27541BBA9E85994C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJPolynomialBounds.lean",
+          "sha256": "FD7E4C6ABB0BE4241BBABAAB08F6E8A5CCBF5553ED5D72127E2FF324D2451592",
+          "oleanSha256": "FAAB3F33288AAD3AD4AED9CFCBDC375CA8EDD5EA8448E33CCF1ACE1BA5B10136"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInverseJAnalyticBound.lean",
+          "sha256": "C833ACA34993788C09435D589F6B34449909F5C3155FCBCE5818F117435BD500",
+          "oleanSha256": "E1CBB5D2A2B35C82C2D2BADE714D876BACF609094D8DAF06DF845E67B47B34CA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_E₄_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_discriminant_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_inverse_j_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.eventually_j_ne_zero_atImInfty",
+        "Dubon2026.SourceFunctionField.norm_le_of_monic_relation",
+        "Dubon2026.SourceFunctionField.exists_inverse_j_polynomial_bound",
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_bound"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_E₄_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_discriminant_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_inverse_j_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.eventually_j_ne_zero_atImInfty",
+        "Dubon2026.SourceFunctionField.norm_le_of_monic_relation",
+        "Dubon2026.SourceFunctionField.exists_inverse_j_polynomial_bound",
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_bound"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJBoundAudit4.log",
+      "logSha256": "6199CD60BEBFEE6F6DC27640F15141D73D450842955902867404A01CC00D5396",
+      "auditSha256": "FD86FA08CC39FE9C390CF71D0FAF356C4F4360D0324A2F07EDC3BF4572E27889",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJBoundDependencyAudit4.log",
+      "dependencyAuditSha256": "71E903BE036C2A526EF4DE70FE1AE809EFC2BFABCF72B1EEFAAE53714492F7AF",
+      "dependencyAuditSourceSha256": "0F08194E2EF43003E75DD85110B4E9E40C4B08ADCA52E58AD65AD3FF89B77A6C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_bound"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> regular-differential cusp-form comparison -> decay at every cusp -> bounded inverse-j integral expression -> actual analytic monic relation.",
+      "discharged": "Every nonzero original regular coefficient supplies a uniform bound on the actual inverse-j analytic expression for every full modular translate, away from denominator zeros. The actual inverse j tends to zero, so the finitely many polynomial coefficients are bounded, and a finite monic-relation root estimate supplies the bound. No coefficient or expression bound is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The derivative identity must turn this bound into decay at every cusp, including denominator zeros. The linear cusp-form comparison and period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-inverse-j-bound-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "897B43EF140973EC1D5367C9C3D3407148FFC4E59E823558CAF94BC27158BE8C"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:02:32.161919+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceInverseJDerivativePower",
+        "SourceCuspBoundExtension",
+        "SourceOriginalDifferentialSlashBound",
+        "SourceOriginalDifferentialCuspDecay",
+        "SourceOriginalRegularCuspForms"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJDerivativePower.lean",
+          "sha256": "3BC8434C3AAE4963151A979ADC14D44D03A62A322882BA097D751D804EA9BAFF",
+          "oleanSha256": "60796982C862C1D41E52D87948036E0E51C8A6473C8FA491934749097D1A569D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspBoundExtension.lean",
+          "sha256": "B0468675E77809A2E854C412F3080BBC989CEA3EF54A133F139D2B9CD0481948",
+          "oleanSha256": "3BB13B32BE2336402B3EC6868ACCFF0D7AFF3B5989F99BE1809A705A4016C8AF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialSlashBound.lean",
+          "sha256": "6F752D43E13900AE1EC96BC6281800236CD80B2D521BA3E94D61A68BED9718AA",
+          "oleanSha256": "EA98F19F1BBCC1F9649111CAD898BC55E1FE010E0869C0E0780D7E1A45380103"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialCuspDecay.lean",
+          "sha256": "F29503EF43E1D33837A0842CF762DDF1E8A180B3FA3C1D7F9DFAF0C650492E3E",
+          "oleanSha256": "B685E3B8E5A576B33C2FFCE16C0B167BE2095ADEB88E5BC56E7EE5A6C8DF1012"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularCuspForms.lean",
+          "sha256": "D4FE8DBA88F30EC558C96DBC8DA5A2776E882E9C3D7F70639A1C7BCD38862BFD",
+          "oleanSha256": "686DC2E2C8C7B6A562B4CFA9E75AACC46549C78B4650ED5E260ADA121B08C9B7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.derivative_power_algebra",
+        "Dubon2026.SourceFunctionField.exists_raw_j_derivative_formula",
+        "Dubon2026.SourceFunctionField.jf_sub_1728",
+        "Dubon2026.SourceFunctionField.raw_j_derivative_power",
+        "Dubon2026.SourceFunctionField.eventually_ne_zero_modular_translate",
+        "Dubon2026.SourceFunctionField.eventually_le_of_punctured_nonzero",
+        "Dubon2026.SourceFunctionField.holomorphic_differential_slash_off_zeros",
+        "Dubon2026.SourceFunctionField.differential_slash_power_bound",
+        "Dubon2026.SourceFunctionField.original_regular_differential_slash_power_bound",
+        "Dubon2026.SourceFunctionField.tendsto_zero_of_norm_pow",
+        "Dubon2026.SourceFunctionField.tendsto_zero_of_modular_power_bound",
+        "Dubon2026.SourceFunctionField.original_regular_differential_cusp_decay",
+        "Dubon2026.SourceFunctionField.exists_original_regular_cusp_form",
+        "Dubon2026.SourceFunctionField.original_regular_differential_cusp_form_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.derivative_power_algebra",
+        "Dubon2026.SourceFunctionField.exists_raw_j_derivative_formula",
+        "Dubon2026.SourceFunctionField.jf_sub_1728",
+        "Dubon2026.SourceFunctionField.raw_j_derivative_power",
+        "Dubon2026.SourceFunctionField.eventually_ne_zero_modular_translate",
+        "Dubon2026.SourceFunctionField.eventually_le_of_punctured_nonzero",
+        "Dubon2026.SourceFunctionField.holomorphic_differential_slash_off_zeros",
+        "Dubon2026.SourceFunctionField.differential_slash_power_bound",
+        "Dubon2026.SourceFunctionField.original_regular_differential_slash_power_bound",
+        "Dubon2026.SourceFunctionField.tendsto_zero_of_norm_pow",
+        "Dubon2026.SourceFunctionField.tendsto_zero_of_modular_power_bound",
+        "Dubon2026.SourceFunctionField.original_regular_differential_cusp_decay",
+        "Dubon2026.SourceFunctionField.exists_original_regular_cusp_form",
+        "Dubon2026.SourceFunctionField.original_regular_differential_cusp_form_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRegularCuspFormsAudit5.log",
+      "logSha256": "2B8863381CBF920DE1DA4E4F4650276873249185DFAD0C761470277D939F8765",
+      "auditSha256": "692020F13BECBA6B6C44C868D5AC20E90355121C2306A8AD7E04482697D814CB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 38,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceRegularCuspFormsDependencyAudit5.log",
+      "dependencyAuditSha256": "3F11B4E361BDD6CF7A16CB6F101DF30E925312D2D521903703667F6C12AD7CDC",
+      "dependencyAuditSourceSha256": "1544CB71556B3E5D20AACF1FC981CFBA3D3E82AD99B1657A8189E09DA05E68DB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_regular_differential_cusp_form_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> regular-differential cusp-form comparison -> actual native cusp forms from original regular differentials -> holomorphy and decay at every cusp.",
+      "discharged": "Each nonzero original regular differential x d(j) has an actual native weight-two cusp form whose analytic function is its raw-derivative realization. The already proved inverse-j expression bound and derivative identity give a power estimate with a factor of Delta. Continuity and the identity theorem extend it across translated denominator zeros; E4 tends to one and Delta tends to zero, proving decay at every cusp. No cusp-decay or cusp-form-existence premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The linear injectivity and dimension comparison with native cusp forms remain to be assembled. Period surjectivity and the arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-regular-cusp-forms-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "3CB92F86A99B4485BF77FF7167115F6BD133D1014E34C84B477763BAFC29A475"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:09:03.104983+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalDifferentialGerm",
+        "SourceOriginalRegularCuspGerms",
+        "SourceOriginalCuspDimension",
+        "SourceOriginalPeriodSurjectivity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDifferentialGerm.lean",
+          "sha256": "A6AB17A792F5E1B59442A64BD0B6A32E3F07178B11D125A78DA7133C5625AD88",
+          "oleanSha256": "EDE53B68BEE2742DB56D3CAC8A0626CF719404DC54A2B0111F6B6583E5A35A84"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularCuspGerms.lean",
+          "sha256": "719D441CE7F2EF94BA1413849ED8765081C737729CD44BD13B49ADF383AF5F4D",
+          "oleanSha256": "EE2905AF3911C1EE11D9153A5C5157DAA8B7B81338F7B68BE2B9F88175DB1908"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspDimension.lean",
+          "sha256": "BF1567DE1AB2033196124E8EE46C811992B9F0A140BE8826FA8B8571B4855B6E",
+          "oleanSha256": "064BA175D44B943BA7D800712352AFD1FA7C56080D09BA97A877F9BF5334AC6E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodSurjectivity.lean",
+          "sha256": "6A8F44525193AF7B597AB8170C83E090BF60F18CFEE735CF8C220E95AA8C9A95",
+          "oleanSha256": "0B826D6EBD6232C0243597AE6543ACAFA4E25F9BB4D65661732E61BBCDC7BB0E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalDifferentialCoordinateEquiv_apply",
+        "Dubon2026.SourceFunctionField.eventually_raw_j_derivative_ne_zero",
+        "Dubon2026.SourceFunctionField.originalCoefficientDifferentialGerm_injective",
+        "Dubon2026.SourceFunctionField.originalRegularDifferentialGerm_injective",
+        "Dubon2026.SourceFunctionField.original_regular_cusp_germ",
+        "Dubon2026.SourceFunctionField.original_regular_coefficient_germ_mem_cusp_range",
+        "Dubon2026.SourceFunctionField.original_regular_differential_germ_range_le",
+        "Dubon2026.SourceFunctionField.original_weight_two_cusp_finite",
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_le_cuspForms",
+        "Dubon2026.SourceFunctionField.genusFormula_le_finrank_cuspForms",
+        "Dubon2026.sourceWeightTwoParabolic_dimension_eq",
+        "Dubon2026.sourceWeightTwo_cusp_dimension_eq_genusFormula",
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_surjective",
+        "Dubon2026.sourceWeightTwoParabolicPeriodEquiv_apply",
+        "Dubon2026.SourceFunctionField.originalDifferentialCoordinateEquiv",
+        "Dubon2026.SourceFunctionField.originalRealizeGermLinear",
+        "Dubon2026.SourceFunctionField.originalCoefficientDifferentialGerm",
+        "Dubon2026.SourceFunctionField.originalRegularDifferentialGerm",
+        "Dubon2026.SourceFunctionField.originalCuspFormGerm",
+        "Dubon2026.sourceWeightTwoParabolicPeriodEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalDifferentialCoordinateEquiv_apply",
+        "Dubon2026.SourceFunctionField.eventually_raw_j_derivative_ne_zero",
+        "Dubon2026.SourceFunctionField.originalCoefficientDifferentialGerm_injective",
+        "Dubon2026.SourceFunctionField.originalRegularDifferentialGerm_injective",
+        "Dubon2026.SourceFunctionField.original_regular_cusp_germ",
+        "Dubon2026.SourceFunctionField.original_regular_coefficient_germ_mem_cusp_range",
+        "Dubon2026.SourceFunctionField.original_regular_differential_germ_range_le",
+        "Dubon2026.SourceFunctionField.original_weight_two_cusp_finite",
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_le_cuspForms",
+        "Dubon2026.SourceFunctionField.genusFormula_le_finrank_cuspForms",
+        "Dubon2026.sourceWeightTwoParabolic_dimension_eq",
+        "Dubon2026.sourceWeightTwo_cusp_dimension_eq_genusFormula",
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_surjective",
+        "Dubon2026.sourceWeightTwoParabolicPeriodEquiv_apply"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalDifferentialCoordinateEquiv",
+        "Dubon2026.SourceFunctionField.originalRealizeGermLinear",
+        "Dubon2026.SourceFunctionField.originalCoefficientDifferentialGerm",
+        "Dubon2026.SourceFunctionField.originalRegularDifferentialGerm",
+        "Dubon2026.SourceFunctionField.originalCuspFormGerm",
+        "Dubon2026.sourceWeightTwoParabolicPeriodEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodSurjectivityAudit4.log",
+      "logSha256": "6D9B05CD7552E1B8FAE510ACD2204FC9741E8BE6BBC093C367F7E9E33BC82A36",
+      "auditSha256": "86E0BEEDAFAC511748D1066D65FEC4F6334DF4F45E8382DF28A95FD470F05E0E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 37,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodSurjectivityDependencyAudit4.log",
+      "dependencyAuditSha256": "E100FEA97A1909A5B3F4EA2BC2E5A7CD207A9E7295C1D9D0A599B1CD52A434E7",
+      "dependencyAuditSourceSha256": "9C1063D91E9EE0BB2DC1F19D6D7BAF9D0BD03EA803AD5BFFE5A12ECFF2A9CE4D",
+      "consumers": [
+        "Dubon2026.sourceWeightTwoParabolicPeriodPair_surjective",
+        "Dubon2026.sourceWeightTwo_cusp_dimension_eq_genusFormula"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> original parabolic Hecke eigensystem realization -> actual period-pair surjectivity -> matching native cusp-form dimension -> injective original regular-differential germ comparison and numerical genus.",
+      "discharged": "The actual original regular-differential germ map is complex-linear and injective, and its range is contained in the native weight-two cusp-form germ range. Therefore the original regular-differential dimension is at most the cusp-form dimension. The proved original numerical genus, existing Manin bound and period injection give the exact native cusp-form dimension and twice that dimension for the parabolic character space. The actual original period pair is surjective and defines a linear equivalence, with no dimension, cusp realization or surjectivity hypothesis.",
+      "boundary": "Scratch only; production promotion and verification pending. Hecke equivariance of the actual period pair and realization of the supplied parabolic eigenclass as a native cusp eigensystem remain required, followed by the Galois/arithmetic/symmetric-power gates. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-period-surjectivity-4-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "4DCFE885520F6D59C1B7EAFED51E78867684EA8D4BD97265BEA416159F24C7B6"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:25:21.986070+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceWeightTwoScalarHecke",
+        "SourceJHeckeConjugation",
+        "SourceJHeckeCosets",
+        "SourceWeightTwoReflectionHecke",
+        "SourceWeightTwoPeriodHecke",
+        "SourceParabolicCuspEigenlift"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoScalarHecke.lean",
+          "sha256": "6B15E8976E02473C123B39BE367581340C77C7F126A356E7BC284BDBC45A451A",
+          "oleanSha256": "4A93BD623CCFDB2764B1A5F5163FC8FB5FD27E06B754BE7B43C34CD8D8FD180B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJHeckeConjugation.lean",
+          "sha256": "FA606780E2F7FA7D133FE394E49EA41BDA6633750645919E2F5458B1662D78DC",
+          "oleanSha256": "67146CD799400384DCA76449C68C3CDBFA7DB15C5781FEA305D06705640E3647"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJHeckeCosets.lean",
+          "sha256": "90CE0017288F9854E379B68766E68A2A2F9C8490991980E4CC908909AD2C0A42",
+          "oleanSha256": "F9D6C0025BD09F6A350E1B79D5A35977768D446A8A9737FF139D89700B5931A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoReflectionHecke.lean",
+          "sha256": "8DF48A58228417125F1B75EA7EC1A34B96BA3CA8C8D35591AB7C3BA5BDB70EF9",
+          "oleanSha256": "52FFCA7C734B4F73A4FC817987452C02B18B71780E33F068804C3D98CB508345"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodHecke.lean",
+          "sha256": "7B69463722581EC6151E4F4906B51FC2B7AA535D702B27CF3D9E2D1FA461BC32",
+          "oleanSha256": "E41E7C059929E74188F07086B5620D927F61FD2FFF52F255686A26A1F26D3AAE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCuspEigenlift.lean",
+          "sha256": "202B36280A94AFA0D680739918B220F4C9B22B878278EFE55D56827FF135D680",
+          "oleanSha256": "2B66B655E3FE79B3656EEE9916DB699456B72258CFDFCD49ED1AD4E4FB498251"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceWeightTwoConstant_diagonal",
+        "Dubon2026.sourceWeightTwoHeckeHom_apply",
+        "Dubon2026.sourceWeightTwoPeriodValue_hecke",
+        "Dubon2026.sourceWeightTwoPeriodHom_hecke",
+        "Dubon2026.sourceJConjugate_mem_heckeUpper",
+        "Dubon2026.sourceHeckeConjugation_reflection",
+        "Dubon2026.SourceJHecke.quotientReflection_smul",
+        "Dubon2026.SourceJHecke.quotientReflection_eq_mk",
+        "Dubon2026.SourceJHecke.correction_mem",
+        "Dubon2026.SourceJHecke.transition_reflection",
+        "Dubon2026.sourceWeightTwoHecke_sum_reflection",
+        "Dubon2026.sourceWeightTwoPeriodReflection_hecke",
+        "Dubon2026.sourceWeightTwoPeriodPair_hecke",
+        "Dubon2026.sourceTrivialParabolicEigen_exists_cuspForm",
+        "Dubon2026.sourceTrivialH1Eigen_cuspLift_or_dirichletPair",
+        "Dubon2026.sourceWeightTwoHeckeHom",
+        "Dubon2026.sourceJHeckeUpper",
+        "Dubon2026.SourceJHecke.quotientReflection",
+        "Dubon2026.SourceJHecke.correction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceWeightTwoConstant_diagonal",
+        "Dubon2026.sourceWeightTwoHeckeHom_apply",
+        "Dubon2026.sourceWeightTwoPeriodValue_hecke",
+        "Dubon2026.sourceWeightTwoPeriodHom_hecke",
+        "Dubon2026.sourceJConjugate_mem_heckeUpper",
+        "Dubon2026.sourceHeckeConjugation_reflection",
+        "Dubon2026.SourceJHecke.quotientReflection_smul",
+        "Dubon2026.SourceJHecke.quotientReflection_eq_mk",
+        "Dubon2026.SourceJHecke.correction_mem",
+        "Dubon2026.SourceJHecke.transition_reflection",
+        "Dubon2026.sourceWeightTwoHecke_sum_reflection",
+        "Dubon2026.sourceWeightTwoPeriodReflection_hecke",
+        "Dubon2026.sourceWeightTwoPeriodPair_hecke",
+        "Dubon2026.sourceTrivialParabolicEigen_exists_cuspForm",
+        "Dubon2026.sourceTrivialH1Eigen_cuspLift_or_dirichletPair"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceWeightTwoHeckeHom",
+        "Dubon2026.sourceJHeckeUpper",
+        "Dubon2026.SourceJHecke.quotientReflection",
+        "Dubon2026.SourceJHecke.correction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodHeckeEigenliftAudit6.log",
+      "logSha256": "2E47674A7C4D2E612C9DE83EB138E33B25955CC91BD58D599ED6E4EF9FDE18FF",
+      "auditSha256": "1C959E4661174D312BBD644D5CBDC98DD1E903DEC50E3DB144AC2D105A461048",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 38,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodHeckeEigenliftDependencyAudit6.log",
+      "dependencyAuditSha256": "0A7131D6348AD6A079F87903AF077AAA890DC67A704EAF68B3B41171C9E72CD5",
+      "dependencyAuditSourceSha256": "42A8C61AC047F65A76E1C0B84B569C3B209313CD88B03F094CF700483CB3F584",
+      "consumers": [
+        "Dubon2026.sourceTrivialH1Eigen_cuspLift_or_dirichletPair"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> native cusp eigensystem -> original parabolic eigenclass through the surjective, injective and Hecke-equivariant period pair.",
+      "discharged": "The genuine scalar period map and its reflection intertwine the original good-prime Hecke operators. The reflected finite coset sum is reindexed by the actual reflection permutation, and the explicit subgroup correction terms cancel. The original period pair is therefore Hecke equivariant. Its proved surjectivity and injectivity produce a nonzero native cusp form from the supplied parabolic H1 eigenclass with exactly the same good-prime eigenvalues. The original residual H1 consumer retains the integral eigenvalue lift and reduction map while replacing the parabolic branch with this genuine cusp form.",
+      "boundary": "Scratch only; production promotion and verification pending. Normalization and full Hecke extension of the supplied cusp eigensystem, and its Galois realization, remain required before the arithmetic and higher symmetric-power gates. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-hecke-eigenlift-6-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6A5788E91BBD144BD0F4478FF7E004703BA8ACC7C1B4B4364E215EB109B7C808"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:28:48.314214+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceWeightTwoFullEigenlift",
+        "SourceResidualNormalizedCuspLift"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoFullEigenlift.lean",
+          "sha256": "F0C2F78B4DBFCD49D221E85C759A5165723312EFE0E240AB029207205DD8484D",
+          "oleanSha256": "E01E1E36291099EC86961D62D4CB735534227219586B3F885121E835D058D21A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualNormalizedCuspLift.lean",
+          "sha256": "ED67E68CE0119806735798ABB5268CFCD4E1D94190D1B8B7D7C8FD55EB99E6A7",
+          "oleanSha256": "5B920D8D8A9825CE7F09E1A419BB214C4B4391885EBAEABFC0A5A61A5CCC9E97"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceWeightTwoGoodEigen_exists_fullEigen",
+        "Dubon2026.sourceWeightTwoGoodEigen_exists_normalized",
+        "Dubon2026.sourceTrivialH1Eigen_normalizedCuspLift_or_dirichletPair"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceWeightTwoGoodEigen_exists_fullEigen",
+        "Dubon2026.sourceWeightTwoGoodEigen_exists_normalized",
+        "Dubon2026.sourceTrivialH1Eigen_normalizedCuspLift_or_dirichletPair"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizedCuspLiftAudit2.log",
+      "logSha256": "1C0E0F132058DF232B674C502F9AAAA46453BDA85A8B1D0B1B46EEF2BCA73510",
+      "auditSha256": "99A106CC9C95D337B2CC5C3D67502608976DF83E3684762885BB34091F2E466B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizedCuspLiftDependencyAudit2.log",
+      "dependencyAuditSha256": "E5B5814548E84F8BF4141FB973C8AA5C2B199045269322ED88890056394E86B6",
+      "dependencyAuditSourceSha256": "8FFD3D76641A2D781007E52A6B10765AD9745F60B7E71800C19FC83C1DFFEEF2",
+      "consumers": [
+        "Dubon2026.sourceTrivialH1Eigen_normalizedCuspLift_or_dirichletPair"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> normalized full cusp eigenform with the original integral good-prime values -> actual parabolic Hecke realization.",
+      "discharged": "The original prescribed good-prime cusp eigenspace is preserved by every classical Hecke operator. Existing full Hecke commutativity and the already proved common-eigenvector theorem give a nonzero eigenform for all indices while preserving every prescribed good-prime value. The actual Fourier coefficient identity and injectivity imply its first coefficient is nonzero. Scaling therefore produces a normalized full eigenform whose good-prime Fourier coefficients equal the same integral lift. The original residual H1 consumer retains the same integral values and residue map. No full-eigenform extension, normalization, or newness hypothesis is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Galois realization of this actual normalized full cusp eigensystem remains required, followed by the compatible arithmetic automorphy and higher symmetric-power gates. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-normalized-cusp-lift-2-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7DCE159A4DA63C699CE8A8FC2964BA6E54302FD514B7D1C09E5EAE69C9F1D9A4"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:39:19.582779+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceCurvePicardGroup",
+        "SourceOriginalPicardGroup"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardGroup.lean",
+          "sha256": "C7C7753D20A3BC152A7B86C16143B3150E428D6D8207074A3EDEB5057D59D266",
+          "oleanSha256": "81D0EA8C7BBD13F7AE02D093B90E2F693E1B458D2C187F2B88A5498854FB10C7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardGroup.lean",
+          "sha256": "32159B4BBF10E8164F38F4534587FA025AFC8E8D106037798080743B86B26BEE",
+          "oleanSha256": "57C0F4C9E695CF89F7D93CD0899451B749552275636F28E78677B290C8387F39"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Pic0.mk_surjective",
+        "Dubon2026.SourceCurve.Pic0.mk_eq_zero_iff",
+        "Dubon2026.SourceCurve.Pic0.mem_torsion_iff",
+        "Dubon2026.SourceCurve.Pic0.mk_mem_torsion_iff",
+        "Dubon2026.SourceFunctionField.originalPic0_principal_eq_zero",
+        "Dubon2026.SourceFunctionField.originalPic0_torsion_representative",
+        "Dubon2026.SourceFunctionField.originalJZero_torsion_orders",
+        "Dubon2026.SourceCurve.Divisor.degZero",
+        "Dubon2026.SourceCurve.Divisor.IsPrincipal",
+        "Dubon2026.SourceCurve.Divisor.principal",
+        "Dubon2026.SourceCurve.Pic0",
+        "Dubon2026.SourceCurve.Pic0.mk",
+        "Dubon2026.SourceCurve.Pic0.torsion",
+        "Dubon2026.SourceFunctionField.originalJZero"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Pic0.mk_surjective",
+        "Dubon2026.SourceCurve.Pic0.mk_eq_zero_iff",
+        "Dubon2026.SourceCurve.Pic0.mem_torsion_iff",
+        "Dubon2026.SourceCurve.Pic0.mk_mem_torsion_iff",
+        "Dubon2026.SourceFunctionField.originalPic0_principal_eq_zero",
+        "Dubon2026.SourceFunctionField.originalPic0_torsion_representative",
+        "Dubon2026.SourceFunctionField.originalJZero_torsion_orders"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Divisor.degZero",
+        "Dubon2026.SourceCurve.Divisor.IsPrincipal",
+        "Dubon2026.SourceCurve.Divisor.principal",
+        "Dubon2026.SourceCurve.Pic0",
+        "Dubon2026.SourceCurve.Pic0.mk",
+        "Dubon2026.SourceCurve.Pic0.torsion",
+        "Dubon2026.SourceFunctionField.originalJZero"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardAudit2.log",
+      "logSha256": "8A16EA5B977087290724517339DE1ED66E04286FB896E94F1237441F568D7E12",
+      "auditSha256": "B4128EF49F87793220E3CC2526EA6620B05A3A631E03AB898CB7B94DDA7BBF2D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 16,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 7,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardDependencyAudit2.log",
+      "dependencyAuditSha256": "57F0067528357101B8A8DF98409EDB84F77A5F8A647AF19EC1A049FDD7D4E5A6",
+      "dependencyAuditSourceSha256": "E728CB71F35F24F1444768A93BDBF75E33E9F75198D14813D0CA6F9AADFF1627",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalJZero_torsion_orders",
+        "Dubon2026.SourceFunctionField.originalPic0_principal_eq_zero"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association for the actual normalized cusp eigensystem -> original modular-curve Tate module -> genuine original degree-zero divisor classes and exact torsion function representatives.",
+      "discharged": "The genuine degree-zero divisor-class group is constructed from the existing actual normalized places and finite integer divisors, modulo nonzero function divisors. For the original modular field over the algebraic closure of Q this is the literal original JZero object. Quotient torsion membership yields a degree-zero divisor representative and an actual nonzero function with original principal divisor n times that representative, hence the exact normalized order equations. No torsion representative or function witness is supplied as a premise.",
+      "boundary": "Scratch only; production promotion and verification pending. Arithmetic action on this original divisor-class group, torsion cardinality and finite fields of definition, the actual Tate module and its rank-two Hecke and Frobenius comparison remain required for modular Galois association, followed by arithmetic automorphy and higher symmetric powers. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-picard-2-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D9031974593E80FFC26C5C2684C924B07904B50680CB19DD5966C56B39CAD6FD"
+    },
+    {
+      "recordedUTC": "2026-10-21T17:47:52.095840+00:00",
+      "date": "2026-10-21 America/Vancouver",
+      "modules": [
+        "SourceOriginalArithmeticFieldAction",
+        "SourceOriginalArithmeticPlaces",
+        "SourceOriginalArithmeticDivisors",
+        "SourceOriginalArithmeticPicard",
+        "SourceOriginalTorsionGalois"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticFieldAction.lean",
+          "sha256": "68D02BCE15AE063738AEEDAFCF83070414B1088EB046D9E04CD0C6C700E2DBBE",
+          "oleanSha256": "59FA149E69403ECB47F7981E9D2A2764BD3C6DEFDE86D501B27B8A4E3D5EDAA6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticPlaces.lean",
+          "sha256": "95BD896EB6A046F962C173BB7B67F3DD3C60DB98628EA00FA6A2B648A5419D6A",
+          "oleanSha256": "8927EEFC5B5F1952D35ADA609991F044137276BA3B7E1FCF8DD276619A16CAD3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticDivisors.lean",
+          "sha256": "A5B891336BD9D14AD6E20CCC3E2238190A1F699B110A8247E5D0FCCF2CB168A8",
+          "oleanSha256": "386A9C916FD5FF4E62FE7F2FBDEEF876B8B9B99C1A5070CFBEA1F98BCA7C08E4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticPicard.lean",
+          "sha256": "E90F6FA6A8174492D110470A9DF2A6E29068A10267DD9E09858EA1654AABDE2A",
+          "oleanSha256": "F9DA2BAFD221485249A2C3AB65CBF8CB029AB31372FA2053B1DE85A12F6765F9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionGalois.lean",
+          "sha256": "71DCC92CA5D4F9F8C27DDBE090C27F2C72DA8A4A09D000E3980D4FE84B9995BC",
+          "oleanSha256": "7499BBF1EBAC15F3C4B3941B64039F37D245F3C3244E0BA69A07F941550E9D3A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coeffMap_original_constants",
+        "Dubon2026.SourceFunctionField.coeffMap_mem_original",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut_constants",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut_j",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_ord",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_ord_action",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisorEquiv_apply",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_degree",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_principal",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_one",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_mul",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_one",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_mul",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicard_mk",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicard_torsion",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_apply",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut",
+        "Dubon2026.SourceFunctionField.originalArithmeticValuationEquiv",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlaceEquiv",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisorEquiv",
+        "Dubon2026.SourceFunctionField.originalArithmeticDegZero",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicard",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicardRep",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsion",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionModule",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionAddHom",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coeffMap_original_constants",
+        "Dubon2026.SourceFunctionField.coeffMap_mem_original",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut_constants",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut_j",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_ord",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_ord_action",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisorEquiv_apply",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_degree",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_principal",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_one",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace_mul",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_one",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisor_mul",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicard_mk",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicard_torsion",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep_apply"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut",
+        "Dubon2026.SourceFunctionField.originalArithmeticValuationEquiv",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlace",
+        "Dubon2026.SourceFunctionField.originalArithmeticPlaceEquiv",
+        "Dubon2026.SourceFunctionField.originalArithmeticDivisorEquiv",
+        "Dubon2026.SourceFunctionField.originalArithmeticDegZero",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicard",
+        "Dubon2026.SourceFunctionField.originalArithmeticPicardRep",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsion",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionModule",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionAddHom",
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionGaloisAudit5.log",
+      "logSha256": "654D92194AFDBEBDD48E416E70C937A7DA87E6B8457F7CB16734F48F7B58B0DE",
+      "auditSha256": "D4F3383A6F9911F0FD4D09BBCD3153D818154F25841CEF47ED16B29EB5889CD8",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 79,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 26,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionGaloisDependencyAudit5.log",
+      "dependencyAuditSha256": "7F66E90281570ABB633ECF11B7B1DA99A297F3B278C59D47EB810B304811B00D",
+      "dependencyAuditSourceSha256": "5AF32D2B7FB404F107B7A0F80156C76698C6D4F65E4B1ACF38BBEB0EEB264D78",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep",
+        "Dubon2026.SourceFunctionField.originalArithmeticRingAut_j"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> original Jacobian Tate module -> genuine original degree-zero divisor-class torsion and its actual arithmetic action.",
+      "discharged": "The literal arithmetic coefficient automorphism preserves the original modular function field, fixes its rational j coordinate and transforms constants by the original field automorphism. It permutes the actual normalized places with the exact order equation. The induced additive divisor action preserves degree over algebraically closed constants and carries principal divisors to genuine transformed function divisors. It therefore descends to the actual degree-zero divisor classes, with proved group action laws, and restricts to their genuine n-torsion. Native ZMod scalar multiplication gives the actual arithmetic Galois representation on this original torsion group. No arithmetic action or place/order compatibility premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual torsion group still requires finiteness and continuous arithmetic action, followed by Tate realization, the rank-two Hecke component and Frobenius/inertia comparison for the normalized cusp eigensystem. Arithmetic automorphy and higher symmetric-power continuation remain open. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-torsion-galois-5-reuse-review-20261021.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7878064F9DA7A087B5035709D9138D4D9172277DD2981EF1C7E5449D59253326"
+    }
+  ],
+  "reviews": [
+    "Tools/source-holomorphic-differential-4-reuse-review-20261021.json",
+    "Tools/source-inverse-j-integral-3-reuse-review-20261021.json",
+    "Tools/source-inverse-j-relation-5-reuse-review-20261021.json",
+    "Tools/source-inverse-j-bound-4-reuse-review-20261021.json",
+    "Tools/source-regular-cusp-forms-5-reuse-review-20261021.json",
+    "Tools/source-original-period-surjectivity-4-reuse-review-20261021.json",
+    "Tools/source-period-hecke-eigenlift-6-reuse-review-20261021.json",
+    "Tools/source-normalized-cusp-lift-2-reuse-review-20261021.json",
+    "Tools/source-original-picard-2-reuse-review-20261021.json",
+    "Tools/source-original-torsion-galois-5-reuse-review-20261021.json"
+  ],
+  "productionFocusedReceipt5595": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicDifferentialDependencyAudit4Production5595.log",
+        "sha256": "930C7DE0476A829C6A1A1C4F03598B34DF57DB83B2E37066A1CDBC843BF82B38",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_regular_differential_holomorphic_realization"
+        ],
+        "sourceSha256": "B53FCAF9E9076C1691A59BBBBED94EBECBA6224893848E6C9999A1193B0923C9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJIntegralDependencyAudit3Production5595.log",
+        "sha256": "42B3807F1E55194D7894AA81CBC3AA5B2A6BF8B6A4AEA102D3D693D0F3421995",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_regular_inverse_j_integral"
+        ],
+        "sourceSha256": "B603979A5B6B1377D7637B58A03BB7BB6A3771DB94E0E0CB396DF67144899340"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJRelationDependencyAudit5Production5595.log",
+        "sha256": "C6CD452834CD76DB3513A00A5BB57ECAD6540EE02D684EED6B8663EB561FE400",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_relation"
+        ],
+        "sourceSha256": "4DA56B67A8E1AD88EA88B1B28EE700A85392EB4D03E45FEF036EB264B4450612"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJBoundDependencyAudit4Production5595.log",
+        "sha256": "71E903BE036C2A526EF4DE70FE1AE809EFC2BFABCF72B1EEFAAE53714492F7AF",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_regular_inverse_j_analytic_bound"
+        ],
+        "sourceSha256": "FDEBCB9FE03D0581E403393A9450138D4BD80DB38152B4BA5D3366F615EBD67B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceRegularCuspFormsDependencyAudit5Production5595.log",
+        "sha256": "3F11B4E361BDD6CF7A16CB6F101DF30E925312D2D521903703667F6C12AD7CDC",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_regular_differential_cusp_form_realization"
+        ],
+        "sourceSha256": "FE0BDF65A0D32445A2A06B57CB31358A5EED926B505A49C8140E7A7A760D183A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodSurjectivityDependencyAudit4Production5595.log",
+        "sha256": "E100FEA97A1909A5B3F4EA2BC2E5A7CD207A9E7295C1D9D0A599B1CD52A434E7",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.sourceWeightTwoParabolicPeriodPair_surjective",
+          "Dubon2026.sourceWeightTwo_cusp_dimension_eq_genusFormula"
+        ],
+        "sourceSha256": "50F1D51D7F91870060F9D6B86434462564566558ED7A80DC811A6A599202A0D6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodHeckeEigenliftDependencyAudit6Production5595.log",
+        "sha256": "0A7131D6348AD6A079F87903AF077AAA890DC67A704EAF68B3B41171C9E72CD5",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.sourceTrivialH1Eigen_cuspLift_or_dirichletPair"
+        ],
+        "sourceSha256": "73579D0D0F02B288D52D6CE99A4FE2BC603CB1410D9D153FCF88CA3B149C18B7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizedCuspLiftDependencyAudit2Production5595.log",
+        "sha256": "E5B5814548E84F8BF4141FB973C8AA5C2B199045269322ED88890056394E86B6",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.sourceTrivialH1Eigen_normalizedCuspLift_or_dirichletPair"
+        ],
+        "sourceSha256": "0D9630BD880EFFA895B113E36AEEC8B80A4CA857802D5A206C1E2A23DD6F5155"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardDependencyAudit2Production5595.log",
+        "sha256": "57F0067528357101B8A8DF98409EDB84F77A5F8A647AF19EC1A049FDD7D4E5A6",
+        "requiredProofValueEdges": 7,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalJZero_torsion_orders",
+          "Dubon2026.SourceFunctionField.originalPic0_principal_eq_zero"
+        ],
+        "sourceSha256": "4A3BF8FFE5A028C595C3C6FC8B05B86693E86848C6DF821FA8488B5D2F60FA19"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionGaloisDependencyAudit5Production5595.log",
+        "sha256": "7F66E90281570ABB633ECF11B7B1DA99A297F3B278C59D47EB810B304811B00D",
+        "requiredProofValueEdges": 26,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalJZeroTorsionGaloisRep",
+          "Dubon2026.SourceFunctionField.originalArithmeticRingAut_j"
+        ],
+        "sourceSha256": "0A377DD2E57A561C6A2E59ECA16FA935B284346ADE1C4F76618CD0EDEDE3C208"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionProductionAudit5595.log",
+    "sha256": "2D545ED2A58D3D9560C815DFD505CF71315B120BB0AE37C676270BBB7F255FED",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-periods-torsion-production-5595-build.log",
+    "aggregateSha256": "B5202EE4CC1D686853C85F6CF23C0251919E027CA98CFD37E6D769FEC81D2936",
+    "productionModules": 5595,
+    "incrementModules": 40,
+    "axiomChecks": 132,
+    "exhaustiveIncrementTheorems": 264,
+    "linterScopes": 40,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 265,
+    "productionReuse": "Scratch imports qualified. All public statements and proof bodies unchanged. Existing original regular differentials, period cocycles and Fourier identities are consumed. Explicit reflected coset corrections prove Hecke compatibility. Existing full Hecke commutativity and common eigenvectors discharge normalization without a new algebraic closure or maximal-ideal construction.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 265,
+      "scratchDistinct": 265,
+      "productionFocused": 264,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+          {
+            "scope": "SourcePeriodTorsionScratchOwnership74For5595",
+            "module": "Dubon2026.SourceInverseJLimits"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalRegularCoefficientOrders",
+            "SourceOriginalAnalyticDerivativeOrder",
+            "SourceOriginalAnalyticDifferentialRegularity",
+            "SourceOriginalHolomorphicDifferentials"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership71For5595.log",
+            "sha256": "44078DAAC471C21F6D70CBC298D0BE2BBC784FE3B74EB3E53677B5233CFAFDBC",
+            "sourceSha256": "355C070717C9A34770D3270EAA074946B2A208F754F04F5209D34245D0077D93"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveChartIntegralCriterion",
+            "SourceOriginalRegularCuspOrders",
+            "SourceOriginalRegularInverseJIntegral"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership72For5595.log",
+            "sha256": "9C08118E3311BC7F5EDBD2789BDA56CF049A6E87AA50E338B7E3632843AC5743",
+            "sourceSha256": "F4EE67ABFD8300041E6D1C629257739D53D5F58170EA1B52764B35AF5E1FED92"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRealizationGermHom",
+            "SourceOriginalInverseJGermPolynomial",
+            "SourceOriginalInverseJMonicRelation",
+            "SourceOriginalInverseJRelationValues",
+            "SourceOriginalInverseJAnalyticRelation"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership73For5595.log",
+            "sha256": "51085BB6BC8C3A767D5064FD2EA3CAC494523C753C4C869DBB4EEAEA1B723B94",
+            "sourceSha256": "9BD0D3890800B4B60729025B6BE79BB11D7262246264307767179E91CBFB8DBA"
+          }
+        },
+        {
+          "modules": [
+            "SourceInverseJLimits",
+            "SourceMonicRelationRootBound",
+            "SourceInverseJPolynomialBounds",
+            "SourceOriginalInverseJAnalyticBound"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership74For5595.log",
+            "sha256": "FE62521403B22799F4D6C40F7E4BC02CCEBE131380CA2EE0030C5A7A5BBD3877",
+            "sourceSha256": "665A85119D8D90D5D95D18AEED8AD5E7F5E457B3284C9C871271266873607B49"
+          }
+        },
+        {
+          "modules": [
+            "SourceInverseJDerivativePower",
+            "SourceCuspBoundExtension",
+            "SourceOriginalDifferentialSlashBound",
+            "SourceOriginalDifferentialCuspDecay",
+            "SourceOriginalRegularCuspForms"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership75For5595.log",
+            "sha256": "27D7B8D7C366AD79E001016540D17283BF709F421431BBAF102DA81B5AB414D7",
+            "sourceSha256": "61F2C17C98F9802751922BAAC243E774808353EA05E921A991EF7C7686EFCB8F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalDifferentialGerm",
+            "SourceOriginalRegularCuspGerms",
+            "SourceOriginalCuspDimension",
+            "SourceOriginalPeriodSurjectivity"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership76For5595.log",
+            "sha256": "0D3FED8D59CEDD0E8453E5192BB046A2AAE6024010B66B5A715511155D6C9303",
+            "sourceSha256": "20EB9675C851EA9EDDEAD1D3243E389734665C15733248B6676457BEFA3E3090"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoScalarHecke",
+            "SourceJHeckeConjugation",
+            "SourceJHeckeCosets",
+            "SourceWeightTwoReflectionHecke",
+            "SourceWeightTwoPeriodHecke",
+            "SourceParabolicCuspEigenlift"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership77For5595.log",
+            "sha256": "2DEFA3BE812597DAEED741E346D50DC72B9A96FE6F24FC3A44F8F6357C79A143",
+            "sourceSha256": "734AF76BB795DEE3CFE4EBC014FE55D625B06A32B5A19DC6B6FEE05D5F64447A"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoFullEigenlift",
+            "SourceResidualNormalizedCuspLift"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership78For5595.log",
+            "sha256": "0B14C6DF319C6E494487ECEC1EA67A4724AC44C8FCC370D2D9E47A74FA4F2443",
+            "sourceSha256": "71DC5770541A997A629734276FCA82BEAAACD70C0289FFA235E6D81B80DB7D7C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurvePicardGroup",
+            "SourceOriginalPicardGroup"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership79For5595.log",
+            "sha256": "B88D8FC7DA5A697BB4730562F2A38C63C98E56E78F787BD773028443A16E2047",
+            "sourceSha256": "81ECC6DD492EEA3885805BCBD2AD0879B2302E945A0A5CEEF80D949E762DD57E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalArithmeticFieldAction",
+            "SourceOriginalArithmeticPlaces",
+            "SourceOriginalArithmeticDivisors",
+            "SourceOriginalArithmeticPicard",
+            "SourceOriginalTorsionGalois"
+          ],
+          "count": 79,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership80For5595.log",
+            "sha256": "37CEB4C95EFF1F6F71A8B4694EF0DB97578D71CA95FCB663623176ADEE7FBC97",
+            "sourceSha256": "9C0754F20589033C8AEC9E9A0F7D51A6D4982B00FA50D7BE14AAE5671320962D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionOwnership5595.log",
+        "sha256": "F2F16BB15C071EB2B7D885262A4BD504FF88D8BDC4F46B70CE0E034047EE9EFA",
+        "sourceSha256": "FF1A875C31DF5EC5FFEA08CCEE7E7BFCEFB2361F5CDEBDD6C11BD327129439AB"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-100038-534.log",
+        "sha256": "C1A3F1FE865BB80A6F4DD5A5309787EE770020BE46D4C0D47FE6CCDB093A2C75"
+      }
+    },
+    "scratchToProductionCountReason": "The generated JMultiplicity.jf.eq_1 declaration belongs to SourceInverseJLimits in its isolated scratch scope, but is already present in the preceding production global audit. All 265 distinct scratch theorem names are retained: 264 in the production focused scope and this one previously registered generated name. No unaccounted theorem is missing.",
+    "boundary": "Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt5595": {
+    "recordedUTC": "2026-10-21T19:47:05.117506+00:00",
+    "log": "logs/dubon-build-20261021-113522-357.log",
+    "sha256": "4B261EED1CB41CC5D3194C232BB63EAD968CE05F0641BB77F969256C1E9AC214",
+    "bytes": 9652282,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5595,
+    "projectTheorems": 39419,
+    "registeredConsumers": 17182,
+    "registeredConstructions": 1026,
+    "declarations": 23659,
+    "generated": 22077,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_113215.log",
+    "foundationSha256": "F3BFA16DB36E328E82573333DCEA34648251BB9AF33CC254E136735BAF3E99A8",
+    "countReconciliation": {
+      "previousTheorems": 39155,
+      "focusedTheorems": 264,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 264,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionOwnership5595.log",
+      "ownershipSha256": "F2F16BB15C071EB2B7D885262A4BD504FF88D8BDC4F46B70CE0E034047EE9EFA"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 265,
+      "scratchDistinct": 265,
+      "productionFocused": 264,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+          {
+            "scope": "SourcePeriodTorsionScratchOwnership74For5595",
+            "module": "Dubon2026.SourceInverseJLimits"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalRegularCoefficientOrders",
+            "SourceOriginalAnalyticDerivativeOrder",
+            "SourceOriginalAnalyticDifferentialRegularity",
+            "SourceOriginalHolomorphicDifferentials"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership71For5595.log",
+            "sha256": "44078DAAC471C21F6D70CBC298D0BE2BBC784FE3B74EB3E53677B5233CFAFDBC",
+            "sourceSha256": "355C070717C9A34770D3270EAA074946B2A208F754F04F5209D34245D0077D93"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveChartIntegralCriterion",
+            "SourceOriginalRegularCuspOrders",
+            "SourceOriginalRegularInverseJIntegral"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership72For5595.log",
+            "sha256": "9C08118E3311BC7F5EDBD2789BDA56CF049A6E87AA50E338B7E3632843AC5743",
+            "sourceSha256": "F4EE67ABFD8300041E6D1C629257739D53D5F58170EA1B52764B35AF5E1FED92"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRealizationGermHom",
+            "SourceOriginalInverseJGermPolynomial",
+            "SourceOriginalInverseJMonicRelation",
+            "SourceOriginalInverseJRelationValues",
+            "SourceOriginalInverseJAnalyticRelation"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership73For5595.log",
+            "sha256": "51085BB6BC8C3A767D5064FD2EA3CAC494523C753C4C869DBB4EEAEA1B723B94",
+            "sourceSha256": "9BD0D3890800B4B60729025B6BE79BB11D7262246264307767179E91CBFB8DBA"
+          }
+        },
+        {
+          "modules": [
+            "SourceInverseJLimits",
+            "SourceMonicRelationRootBound",
+            "SourceInverseJPolynomialBounds",
+            "SourceOriginalInverseJAnalyticBound"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership74For5595.log",
+            "sha256": "FE62521403B22799F4D6C40F7E4BC02CCEBE131380CA2EE0030C5A7A5BBD3877",
+            "sourceSha256": "665A85119D8D90D5D95D18AEED8AD5E7F5E457B3284C9C871271266873607B49"
+          }
+        },
+        {
+          "modules": [
+            "SourceInverseJDerivativePower",
+            "SourceCuspBoundExtension",
+            "SourceOriginalDifferentialSlashBound",
+            "SourceOriginalDifferentialCuspDecay",
+            "SourceOriginalRegularCuspForms"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership75For5595.log",
+            "sha256": "27D7B8D7C366AD79E001016540D17283BF709F421431BBAF102DA81B5AB414D7",
+            "sourceSha256": "61F2C17C98F9802751922BAAC243E774808353EA05E921A991EF7C7686EFCB8F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalDifferentialGerm",
+            "SourceOriginalRegularCuspGerms",
+            "SourceOriginalCuspDimension",
+            "SourceOriginalPeriodSurjectivity"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership76For5595.log",
+            "sha256": "0D3FED8D59CEDD0E8453E5192BB046A2AAE6024010B66B5A715511155D6C9303",
+            "sourceSha256": "20EB9675C851EA9EDDEAD1D3243E389734665C15733248B6676457BEFA3E3090"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoScalarHecke",
+            "SourceJHeckeConjugation",
+            "SourceJHeckeCosets",
+            "SourceWeightTwoReflectionHecke",
+            "SourceWeightTwoPeriodHecke",
+            "SourceParabolicCuspEigenlift"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership77For5595.log",
+            "sha256": "2DEFA3BE812597DAEED741E346D50DC72B9A96FE6F24FC3A44F8F6357C79A143",
+            "sourceSha256": "734AF76BB795DEE3CFE4EBC014FE55D625B06A32B5A19DC6B6FEE05D5F64447A"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoFullEigenlift",
+            "SourceResidualNormalizedCuspLift"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership78For5595.log",
+            "sha256": "0B14C6DF319C6E494487ECEC1EA67A4724AC44C8FCC370D2D9E47A74FA4F2443",
+            "sourceSha256": "71DC5770541A997A629734276FCA82BEAAACD70C0289FFA235E6D81B80DB7D7C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurvePicardGroup",
+            "SourceOriginalPicardGroup"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership79For5595.log",
+            "sha256": "B88D8FC7DA5A697BB4730562F2A38C63C98E56E78F787BD773028443A16E2047",
+            "sourceSha256": "81ECC6DD492EEA3885805BCBD2AD0879B2302E945A0A5CEEF80D949E762DD57E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalArithmeticFieldAction",
+            "SourceOriginalArithmeticPlaces",
+            "SourceOriginalArithmeticDivisors",
+            "SourceOriginalArithmeticPicard",
+            "SourceOriginalTorsionGalois"
+          ],
+          "count": 79,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodTorsionScratchOwnership80For5595.log",
+            "sha256": "37CEB4C95EFF1F6F71A8B4694EF0DB97578D71CA95FCB663623176ADEE7FBC97",
+            "sourceSha256": "9C0754F20589033C8AEC9E9A0F7D51A6D4982B00FA50D7BE14AAE5671320962D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodsTorsionOwnership5595.log",
+        "sha256": "F2F16BB15C071EB2B7D885262A4BD504FF88D8BDC4F46B70CE0E034047EE9EFA",
+        "sourceSha256": "FF1A875C31DF5EC5FFEA08CCEE7E7BFCEFB2361F5CDEBDD6C11BD327129439AB"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-100038-534.log",
+        "sha256": "C1A3F1FE865BB80A6F4DD5A5309787EE770020BE46D4C0D47FE6CCDB093A2C75"
+      }
+    },
+    "scratchToProductionCountReason": "The generated JMultiplicity.jf.eq_1 declaration belongs to SourceInverseJLimits in its isolated scratch scope, but is already present in the preceding production global audit. All 265 distinct scratch theorem names are retained: 264 in the production focused scope and this one previously registered generated name. No unaccounted theorem is missing.",
+    "boundary": "Galois realization of the actual normalized cusp eigensystem, compatible arithmetic automorphy and higher symmetric-power continuation remain required. The actual original torsion action still needs finiteness, continuity, Tate rank and the Hecke and Frobenius comparison with the normalized cusp eigensystem. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

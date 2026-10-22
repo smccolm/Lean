@@ -62,7 +62,7 @@
   "commentOnlyProductionAdjustment": {
     "file": "Extension/Dubon2026/SourceOriginalCoprimeNonmembership.lean",
     "beforeSha256": "112C1CB29E69D912F8582B175E6B8C9B14C66EF292DAFD58AA29E2E0DC919E8E",
-    "afterSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+    "afterSha256": "B7CB6247329A64DEBC78859B6458D1305F09CFADF7842614F237A57766851AD5",
     "reason": "Reflow prose beginning with the word constant; the literal integrity scanner rejected it as a declaration. No Lean declaration or proof changed.",
     "declarationsAndProofBodiesIdentical": true,
     "postEditVerification": {
@@ -71,6 +71,20 @@
       "exit": 0,
       "diagnostics": 0,
       "inventory": "PASS: 6699 retained files; 10851 local links; 4320 unchanged existing Lean files."
+    },
+    "normalizedLfAfterSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+    "newlineReceiptReconciliation": {
+      "recordedUTC": "2026-10-21T15:14:43.593056+00:00",
+      "module": "Dubon2026.SourceOriginalCoprimeNonmembership",
+      "normalizedLfSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+      "actualFileSha256": "B7CB6247329A64DEBC78859B6458D1305F09CFADF7842614F237A57766851AD5",
+      "crlfLineEndings": 74,
+      "exactConversion": "Actual bytes equal the normalized UTF-8 content with every LF replaced by CRLF.",
+      "declarationsAndProofTextMatchFrozenScratch": true,
+      "sourceChangedByReconciliation": false,
+      "cause": "The earlier comment-reflow script hashed new.encode(utf-8) before Path.write_text applied Windows newline conversion.",
+      "verifiedPaperLog": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-070341-414.log",
+      "verifiedPaperLogSha256": "7F585F68EBAD92AFE4CE5903F5BBF8E28B31AEC933963F7AE474318F3221A228"
     }
   }
 }

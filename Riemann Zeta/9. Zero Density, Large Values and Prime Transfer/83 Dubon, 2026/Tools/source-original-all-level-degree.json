@@ -40,7 +40,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual Galois association -> original parabolic Hecke realization -> period surjectivity -> matching cusp-form lower dimension -> numerical modular genus and analytic realization -> exact original j-coordinate degree and field generation at every level.",
   "discharged": "For every nonzero N, the actual rational divisor field equals Q(j,j_N). Its degree over Q(j) is dedekindPsi(N), and coefficient transport gives that same internal j-coordinate degree over every characteristic-zero coefficient field. The expanded minimal polynomial equals the primitive triangular conjugate product. A joint strong induction discharges all generation, degree, conjugate-product and nonmembership premises: unique common roots give two-prime generation, actual mixed fields identify the prime-power spread tower, coprime nonmembership supplies the first step, and native tower multiplication closes every level.",
   "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
-  "status": "The 5,476-module production aggregate and focused all-level original degree audit pass with zero diagnostics. Five proof-value audits verify the actual conjugate induction, proper-divisor generation, coprime-base nonmembership, mixed towers and unconditional all-level consumers. Field generation, exact internal degree and the conjugate identity are proved without those conclusions as premises. Modular ramification, fiber counts, numerical genus, analytic realization and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 5,476-module scope: all thirteen retained regressions, 38,608 exhaustive theorem checks, 16,750 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "frozenReceiptProseCorrections": [
@@ -697,7 +697,7 @@
   "commentOnlyProductionAdjustment": {
     "file": "Extension/Dubon2026/SourceOriginalCoprimeNonmembership.lean",
     "beforeSha256": "112C1CB29E69D912F8582B175E6B8C9B14C66EF292DAFD58AA29E2E0DC919E8E",
-    "afterSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+    "afterSha256": "B7CB6247329A64DEBC78859B6458D1305F09CFADF7842614F237A57766851AD5",
     "reason": "Reflow prose beginning with the word constant; the literal integrity scanner rejected it as a declaration. No Lean declaration or proof changed.",
     "declarationsAndProofBodiesIdentical": true,
     "postEditVerification": {
@@ -706,6 +706,39 @@
       "exit": 0,
       "diagnostics": 0,
       "inventory": "PASS: 6699 retained files; 10851 local links; 4320 unchanged existing Lean files."
+    },
+    "normalizedLfAfterSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+    "newlineReceiptReconciliation": {
+      "recordedUTC": "2026-10-21T15:14:43.593056+00:00",
+      "module": "Dubon2026.SourceOriginalCoprimeNonmembership",
+      "normalizedLfSha256": "3C346A1E0DBCC89B2DA0DE622F7B6F36D3DA47B8EAA73A6F75C5ABD59D322C34",
+      "actualFileSha256": "B7CB6247329A64DEBC78859B6458D1305F09CFADF7842614F237A57766851AD5",
+      "crlfLineEndings": 74,
+      "exactConversion": "Actual bytes equal the normalized UTF-8 content with every LF replaced by CRLF.",
+      "declarationsAndProofTextMatchFrozenScratch": true,
+      "sourceChangedByReconciliation": false,
+      "cause": "The earlier comment-reflow script hashed new.encode(utf-8) before Path.write_text applied Windows newline conversion.",
+      "verifiedPaperLog": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261021-070341-414.log",
+      "verifiedPaperLogSha256": "7F585F68EBAD92AFE4CE5903F5BBF8E28B31AEC933963F7AE474318F3221A228"
     }
+  },
+  "receipt5476": {
+    "recordedUTC": "2026-10-21T15:14:44.250677+00:00",
+    "log": "logs/dubon-build-20261021-070341-414.log",
+    "sha256": "7F585F68EBAD92AFE4CE5903F5BBF8E28B31AEC933963F7AE474318F3221A228",
+    "bytes": 9426212,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 5476,
+    "projectTheorems": 38608,
+    "registeredConsumers": 16750,
+    "registeredConstructions": 938,
+    "declarations": 23139,
+    "generated": 21666,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261021_070055.log",
+    "foundationSha256": "0D5B83B67BF1A48990BB0CC25EA6B01835085D383ACA4B221C0AEC1D04387397",
+    "boundary": "Modular ramification at 0 and 1728 and unramifiedness elsewhere, elliptic and cusp fiber counts, numerical genus, analytic realization, and the period/arithmetic/symmetric-power gates remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
   }
 }
