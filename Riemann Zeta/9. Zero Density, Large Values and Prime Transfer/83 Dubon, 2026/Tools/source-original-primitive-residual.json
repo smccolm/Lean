@@ -1,0 +1,1145 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceExplicitHeckeMatrixDescent",
+    "Dubon2026.SourceExplicitRankTwoCoordinates",
+    "Dubon2026.SourceOriginalExplicitHeckeRankTwo",
+    "Dubon2026.SourceContinuousHeckeCoordinateConsumer",
+    "Dubon2026.SourceOriginalExplicitHeckeGalois",
+    "Dubon2026.SourceRankTwoCoefficientSpecialization",
+    "Dubon2026.SourcePrimitiveCoefficientGaloisConsumer",
+    "Dubon2026.SourceOriginalPrimitiveTateSpecialization",
+    "Dubon2026.SourceOriginalPrimitiveGaloisRealization",
+    "Dubon2026.SourcePadicCoefficientLocalStructure",
+    "Dubon2026.SourcePadicIntegerCoefficientMap",
+    "Dubon2026.SourceIntegralImageLattice",
+    "Dubon2026.SourceIntegralTensorImage",
+    "Dubon2026.SourceIntegralLatticeRank",
+    "Dubon2026.SourceSpecializationInvariantLattice",
+    "Dubon2026.SourcePadicSpecializationLattice",
+    "Dubon2026.SourcePadicIntegralRealizationConsumer",
+    "Dubon2026.SourceOriginalPrimitiveIntegralLattice",
+    "Dubon2026.SourceLatticeFractionCoordinates",
+    "Dubon2026.SourceStableLatticeGaloisCoordinates",
+    "Dubon2026.SourceStableLatticeFieldComparison",
+    "Dubon2026.SourceStableLatticeContinuity",
+    "Dubon2026.SourcePadicResidueCharacteristic",
+    "Dubon2026.SourceLocalFieldResidueReduction",
+    "Dubon2026.SourceStableLatticeResidualRealization",
+    "Dubon2026.SourcePadicResidualRealizationConsumer",
+    "Dubon2026.SourcePadicResidualLocalConsumer",
+    "Dubon2026.SourceOriginalPrimitiveResidualRealization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual association -> original primitive weight-two continuous integral and residual realization -> literal Fourier specialization, stable integral Tate-image lattice, compatible coefficient local field and exact basis/reduction comparison.",
+  "discharged": "Every actual primitive weight-two form has a constructed finite p-adic coefficient field and a continuous two-dimensional representation specialized from its original rational Tate module, preserving every prime Fourier eigenvalue and actual Galois intertwining. The image of the original finite integral Tate module generates an invariant finite free rank-two coefficient-integer lattice. A constructed basis gives continuous integral matrices; their literal entrywise residues give a continuous representation over the actual finite discrete residue field of characteristic p. Coefficient inclusion and a constructed field-linear basis equivalence recover the original action. No representation, character extension, lattice, integral basis, residue characteristic or continuity input is supplied to the final consumers.",
+  "boundary": "Original Frobenius and inertia identities, residual association, arithmetic automorphy and higher symmetric-power continuation remain required for every source weight. The constructed weight-two residual realization is an input to the full all-weight route, not a narrowed source contract. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,363-module scope: all thirteen retained regressions, 43,862 exhaustive theorem checks, 19,373 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_galois_realization",
+    "Dubon2026.rankTwoCoefficientMap",
+    "Dubon2026.rankTwoCoefficientGaloisRep",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_stable_integral_lattice",
+    "Dubon2026.padicIntegerCoefficientMap",
+    "Dubon2026.padicIntegerCoefficientAlgebra",
+    "Dubon2026.integralImageLattice",
+    "Dubon2026.scalarExtensionIntegralMap",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization",
+    "Dubon2026.fieldMatrixIntegralAction",
+    "Dubon2026.stableLatticeGaloisRep",
+    "Dubon2026.stableLatticeGeneralLinearRep",
+    "Dubon2026.localFieldResidualRep"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T18:58:47.950288+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceExplicitHeckeMatrixDescent",
+        "SourceExplicitRankTwoCoordinates",
+        "SourceOriginalExplicitHeckeRankTwo",
+        "SourceContinuousHeckeCoordinateConsumer",
+        "SourceOriginalExplicitHeckeGalois",
+        "SourceRankTwoCoefficientSpecialization",
+        "SourcePrimitiveCoefficientGaloisConsumer",
+        "SourceOriginalPrimitiveTateSpecialization",
+        "SourceOriginalPrimitiveGaloisRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceExplicitHeckeMatrixDescent.lean",
+          "sha256": "546333B592814239F3C702FBEABE6370F04ACA27182AE238A7E8329C1EB487F5",
+          "oleanSha256": "AE92192C8F9126CDB2740CA96F73BDFB315F3C36518EB632BFC169F9419B1F78"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceExplicitRankTwoCoordinates.lean",
+          "sha256": "141C32F6680F81940573D7D33B7BC459A006F3BE62D9F0120EE519EEF888FA12",
+          "oleanSha256": "D6DCFA800D2300F00C9A625A928AEBB7E5669E96F5EBEEA696746473F8CB1A77"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "sha256": "C116025E619B5D19E63EAEE8EFB45C6A88963BA7579136D601FB77C588B04BD0",
+          "oleanSha256": "D7FF35A4E8D05C1D16CA040B633CBCA3D023996A6CC6F663A91BFE1119A32409"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceContinuousHeckeCoordinateConsumer.lean",
+          "sha256": "21EA1D13E3884D97F5713B396ED4798617E07F426A6617D082ED540512B52224",
+          "oleanSha256": "2F1AFD1A3FE7DED7841A73038E0F45C071974EE812054AC1EDDA6E42ADDDE617"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeGalois.lean",
+          "sha256": "2E2D6BBA6F1E8970D7961049C578E308B2A61D043FD0A15A731279EE8002F4C6",
+          "oleanSha256": "C08E205DB4ED64ECB552D7A997A8E470F0088BC688D6C994E64DBE008111D1E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoCoefficientSpecialization.lean",
+          "sha256": "6ED5BD92218B33E43DFB5B9447846025AD54DC4E70D39A0B90D5283171C43815",
+          "oleanSha256": "2B7E4BCFECCC9DF05E8AA0044F42EE4D69B2706A274FC899F50DC84C076B8838"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCoefficientGaloisConsumer.lean",
+          "sha256": "9158B0E579F08A58461018ABCCF1418D46DD950EA9D71E5B91F15711DD98938A",
+          "oleanSha256": "0849BFE6E2BAEECDBA21750541BAFAB1C1B40DD2FBC8FF1E774C9573432AC450"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "sha256": "836F7509F254AD3B4DA829FFA1AB5E7AAF82FC86D1F3EAEDC31325A6A9363A54",
+          "oleanSha256": "33B45765FD50A37A963D01FF368A30A1B4E9C016014146D9FFFD5D3BD56F2C7C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGaloisRealization.lean",
+          "sha256": "60204BF498C0393F7D8E31A39D4A70383A47F5A82215B9135578642639216037",
+          "oleanSha256": "B91E170F3BA76E0500C3BA0CED49C72AB99E0919B1AC15A2FAB5C588F5E426E8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceHeckeMatrixDescent.explicit_descent",
+        "Dubon2026.SourceHeckeMatrixDescent.explicit_descent_prime_generators",
+        "Dubon2026.explicitRankTwo_transfer_coordinates",
+        "Dubon2026.explicitRankTwo_reindex",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullHecke_explicit_matrix_rankTwo",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_word_rankTwo",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_prime_rankTwo",
+        "Dubon2026.exists_continuous_hecke_coordinate_rep",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_continuous_galois",
+        "Dubon2026.rankTwoCoefficientMap_smul",
+        "Dubon2026.rankTwoCoefficientMap_span",
+        "Dubon2026.rankTwoCoefficientGaloisRep_action",
+        "Dubon2026.rankTwoCoefficientGaloisRep_continuous",
+        "Dubon2026.specialize_continuous_rankTwo_hecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_specialization_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_galois_realization",
+        "Dubon2026.rankTwoCoefficientMap",
+        "Dubon2026.rankTwoCoefficientGaloisRep"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceHeckeMatrixDescent.explicit_descent",
+        "Dubon2026.SourceHeckeMatrixDescent.explicit_descent_prime_generators",
+        "Dubon2026.explicitRankTwo_transfer_coordinates",
+        "Dubon2026.explicitRankTwo_reindex",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullHecke_explicit_matrix_rankTwo",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_word_rankTwo",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_prime_rankTwo",
+        "Dubon2026.exists_continuous_hecke_coordinate_rep",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_continuous_galois",
+        "Dubon2026.rankTwoCoefficientMap_smul",
+        "Dubon2026.rankTwoCoefficientMap_span",
+        "Dubon2026.rankTwoCoefficientGaloisRep_action",
+        "Dubon2026.rankTwoCoefficientGaloisRep_continuous",
+        "Dubon2026.specialize_continuous_rankTwo_hecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_specialization_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_galois_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.rankTwoCoefficientMap",
+        "Dubon2026.rankTwoCoefficientGaloisRep"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGaloisAudit9.log",
+      "logSha256": "DA0313993B7F2C32D2877CED2D8F5E1FDC8DC379BB7B2AB948683D5893F927B6",
+      "auditSha256": "1D1904678A372C8C8D33487FF6440E9E368F70C4BE93F3482B9D9CCB21EF16C6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 24,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGaloisDependencyAudit9.log",
+      "dependencyAuditSha256": "5EB2137B277C21D43A0169F9DFC1B6EF9CC59E797FD748408ED6CD7E8B8BBF10",
+      "dependencyAuditSourceSha256": "FAF67028B1E47E525625C442F1AC2CBFB5F3A7F8030EDF073F2637924C2E347E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_galois_realization",
+        "Dubon2026.rankTwoCoefficientMap",
+        "Dubon2026.rankTwoCoefficientGaloisRep"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> continuous primitive weight-two realization -> exact original Tate Hecke algebra, constructed coefficient character and coefficient-change action with spanning image",
+      "discharged": "Every original primitive weight-two form has a constructed finite p-adic coefficient extension, an embedding of its literal Fourier field, a continuous GL2 representation and a specialization map from the actual original rational Tate module whose image spans the two-dimensional coefficient space. The map intertwines the original arithmetic Galois action and sends every original prime Hecke operator to the prescribed original Fourier eigenvalue. Regular and lattice bases and the auxiliary place are constructed. No representation, comparison, coefficient character, basis or spanning input is supplied to the final consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Prove the Frobenius/inertia identities and residual association for this original representation, then the arithmetic automorphy and higher continuation required for all source weights. This weight-two realization is an input to the full all-weight route, not a narrowed completion contract. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-galois-9-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "185221DBD66CD59C6AEC5C065E28C33D4202E6EF0163F9EF8AC1BD6A47B21F5A"
+    },
+    {
+      "recordedUTC": "2026-10-22T19:22:55.719020+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourcePadicCoefficientLocalStructure",
+        "SourcePadicIntegerCoefficientMap",
+        "SourceIntegralImageLattice",
+        "SourceIntegralTensorImage",
+        "SourceIntegralLatticeRank",
+        "SourceSpecializationInvariantLattice",
+        "SourcePadicSpecializationLattice",
+        "SourcePadicIntegralRealizationConsumer",
+        "SourceOriginalPrimitiveIntegralLattice"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicCoefficientLocalStructure.lean",
+          "sha256": "9DD9FD4F9E1C97515E67A079CBEA1B4DC8BDAD7B63363EDC76193E933C5C2CC4",
+          "oleanSha256": "D1DBC0AEC7E445E066BEA203057FA3F1B05451355F5F84EC671838DA39F90305"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicIntegerCoefficientMap.lean",
+          "sha256": "394B84A8DD735D8784F433226FCAD7A62DB0B95375BD0E757C8F70F7F2A91E99",
+          "oleanSha256": "A8C54E47CEF3CAE85363A846DE034CF03362039BAC0758FB435CE71826367156"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralImageLattice.lean",
+          "sha256": "44ECBE7D3C2A319A63ED1309BFA7D1891708C13B3E8DC75CAE02C89D7561F69E",
+          "oleanSha256": "8E97AF57F93684C04E7E3CC8E828EB2518CF3FD6B1E01BE0E158D210A8B8D3B4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTensorImage.lean",
+          "sha256": "8BB5B33C921365D66D896113696A487FE601B010B0417EA96CFC73BAB1435C44",
+          "oleanSha256": "FF992F13616C1A9AC0270CAB926C26DD39715D474A30F2F6BCA77586998CE570"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralLatticeRank.lean",
+          "sha256": "4FCFC105AED369445B481DC10A86089EF0041795CFDEBECEA4197C59A54C8E72",
+          "oleanSha256": "DC33BD5A47D71D3B719868E6D0B2F1952300C9DFEDFFC0FEC778C857DF60C412"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecializationInvariantLattice.lean",
+          "sha256": "3D8C0E4CA3E80C15C490864D2FE056BEB569483BBF39961E847F8B11FF4F0158",
+          "oleanSha256": "247273E088AA6389F768690E81948EB97B34E76464112EAD94AA35181D74EADD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicSpecializationLattice.lean",
+          "sha256": "909AB305AF40FF7D38BF27603A10811AB2DEE2487E26BD22517D54FD28E5074D",
+          "oleanSha256": "6B57CDC5F2A1EFAFA609D5AC674621BF60186D1774FD4FE86716009DFFD075E2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicIntegralRealizationConsumer.lean",
+          "sha256": "21655CDCB44ABEB4B43B7E72F92A874A4BDB00C035818AD89F7FDAC988737286",
+          "oleanSha256": "D2039C028614BC6D47184A6F220037873FC4D7187A4D6015DA3E8BF0D8D65268"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveIntegralLattice.lean",
+          "sha256": "F1670CC470A4A819C95FCAA5452D80C21D134414800FFACA508E3EE44AF14524",
+          "oleanSha256": "302C327E83F7C2F35E1B9F2639FE4FD03E3880FF95B3290FEA1E6EA449F618CB"
+        }
+      ],
+      "queries": [
+        "Dubon2026.padicFiniteCoefficient_local_structure",
+        "Dubon2026.padicInteger_normValuation_le_one",
+        "Dubon2026.padicInteger_coefficient_valuation_le_one",
+        "Dubon2026.padicIntegerCoefficientMap_coe",
+        "Dubon2026.padicIntegerCoefficient_scalarTower",
+        "Dubon2026.integralImageLattice_fg",
+        "Dubon2026.integralImageLattice_map_mem",
+        "Dubon2026.integralImageLattice_span",
+        "Dubon2026.scalarExtensionIntegralMap_tmul",
+        "Dubon2026.scalarExtensionIntegralMap_span",
+        "Dubon2026.scalarExtensionIntegralMap_intertwines",
+        "Dubon2026.fullIntegralLattice_free_finite_rank",
+        "Dubon2026.scalarSpecialization_lattice",
+        "Dubon2026.scalarSpecialization_lattice_invariant",
+        "Dubon2026.padicSpecialization_stable_lattice",
+        "Dubon2026.padic_realization_with_stable_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_stable_integral_lattice",
+        "Dubon2026.padicIntegerCoefficientMap",
+        "Dubon2026.padicIntegerCoefficientAlgebra",
+        "Dubon2026.integralImageLattice",
+        "Dubon2026.scalarExtensionIntegralMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.padicFiniteCoefficient_local_structure",
+        "Dubon2026.padicInteger_normValuation_le_one",
+        "Dubon2026.padicInteger_coefficient_valuation_le_one",
+        "Dubon2026.padicIntegerCoefficientMap_coe",
+        "Dubon2026.padicIntegerCoefficient_scalarTower",
+        "Dubon2026.integralImageLattice_fg",
+        "Dubon2026.integralImageLattice_map_mem",
+        "Dubon2026.integralImageLattice_span",
+        "Dubon2026.scalarExtensionIntegralMap_tmul",
+        "Dubon2026.scalarExtensionIntegralMap_span",
+        "Dubon2026.scalarExtensionIntegralMap_intertwines",
+        "Dubon2026.fullIntegralLattice_free_finite_rank",
+        "Dubon2026.scalarSpecialization_lattice",
+        "Dubon2026.scalarSpecialization_lattice_invariant",
+        "Dubon2026.padicSpecialization_stable_lattice",
+        "Dubon2026.padic_realization_with_stable_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_stable_integral_lattice"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.padicIntegerCoefficientMap",
+        "Dubon2026.padicIntegerCoefficientAlgebra",
+        "Dubon2026.integralImageLattice",
+        "Dubon2026.scalarExtensionIntegralMap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralLatticeAudit9.log",
+      "logSha256": "45ACB5FDD5DE81BC38A050736FCC17BF5CC2141F77D42A066123FC6B896FDA54",
+      "auditSha256": "5FD6186FA5AE18A940452C88C0948E9273E763F273BFC700FBA58F5C6B37B638",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 28,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralLatticeDependencyAudit9.log",
+      "dependencyAuditSha256": "0043E5C07A73163102264F3C6480180FBFA75E17BB0999C60738F20B2C9F5676",
+      "dependencyAuditSourceSha256": "FBDDFCE81354DA0F71D4BF612AE46CD9FD3A7F6D4B4CED692E317ED599BCFEB5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_stable_integral_lattice",
+        "Dubon2026.padicIntegerCoefficientMap",
+        "Dubon2026.padicIntegerCoefficientAlgebra",
+        "Dubon2026.integralImageLattice",
+        "Dubon2026.scalarExtensionIntegralMap"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual association -> primitive weight-two realization -> constructed stable integral Tate-image lattice and compatible local coefficient topology",
+      "discharged": "For every actual primitive weight-two form, the constructed coefficient field has a local-field structure whose topology equals its original p-adic module topology. The actual original integral Tate image generates a finite free rank-two coefficient-integer lattice invariant under the previously constructed continuous representation. The original rational Tate spanning map, all prime Fourier eigenvalues and Galois intertwining remain in the assembled conclusion. No stable lattice, freeness, rank or local-field topology is assumed by the actual consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Construct continuous integral matrix coordinates and residual reduction from this actual lattice; prove Frobenius/inertia and residual association, then the arithmetic automorphy and higher continuation required for all source weights. The weight-two realization remains an input to the full all-weight source contract. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-lattice-9-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "FBC144D4B19994B79B10207B3AFDC5DD81448C6A8FD24D398BE9C11142AC48E5"
+    },
+    {
+      "recordedUTC": "2026-10-22T19:37:09.019344+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceLatticeFractionCoordinates",
+        "SourceStableLatticeGaloisCoordinates",
+        "SourceStableLatticeFieldComparison",
+        "SourceStableLatticeContinuity",
+        "SourcePadicResidueCharacteristic",
+        "SourceLocalFieldResidueReduction",
+        "SourceStableLatticeResidualRealization",
+        "SourcePadicResidualRealizationConsumer",
+        "SourcePadicResidualLocalConsumer",
+        "SourceOriginalPrimitiveResidualRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLatticeFractionCoordinates.lean",
+          "sha256": "4A3E7CD41407B192B7E6ED21C25E0453E31DFB3A91470DF59190AA47B4820F40",
+          "oleanSha256": "6A79644F4A761A2CAA5418A4B76BCEED076339DDAC37F47F3E4845C700AB5D1E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeGaloisCoordinates.lean",
+          "sha256": "00790DC400AEAC16E35CC39D0F1C864197538A1A02EDC5171877CA0BB7959B01",
+          "oleanSha256": "0DA6055B13F6885C2C280E4B887BB675E5A115E9D456A2D3A5DFDC2699FFEEA2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeFieldComparison.lean",
+          "sha256": "E3AB8547CAC3A90701EAC271FC1AE3BFBC18A9D89FB8F86765EA119447DFD029",
+          "oleanSha256": "6A238D9BEEC499990BECD5266A0A395C91F73B4F8DFD4FFCC7E2EBD154649A84"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeContinuity.lean",
+          "sha256": "7EE46F918E42C09396909B08BD0C5D0B4D9D4D42DD2B71B2FF3AC172BF49B900",
+          "oleanSha256": "F13C6CF998D2DBE8964353D904DE7D6484F861858EB8D0B394D37F2A25274F2E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidueCharacteristic.lean",
+          "sha256": "E770175373A0B2FAFFB1E132487F5EC2D18E83532BE8D44858EBEE3B1026B021",
+          "oleanSha256": "F98B507D7B46D6D299863BD50CF3A63CCA04588420BD29A48AAB111309718234"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "sha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "oleanSha256": "37BD7DF392F6468D46E3D0DDA04EA2A4CF60F88DF1CC04FA82F6082105AC27CD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "sha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "oleanSha256": "087BB72F2749A912FA26C3E4FF44ECB0D7C5D0D51727B3FAFC06122D08A91E9F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "sha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "oleanSha256": "7BEEAE134597E1BDE43DDBBFC320222D8F1A65EE2CBD028FE411B9FF8A7F7F2D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualLocalConsumer.lean",
+          "sha256": "C3600C5C4C208536E67B916708EFC1BA9F720179782000FD5CBC910DAE4F9DCC",
+          "oleanSha256": "DC4597D7F58D6C99B8DAF34F48835458AF135C82706A898B8BFE9FB32BBC004C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualRealization.lean",
+          "sha256": "E822951A28DB05DE41893150C6DFF6D1DA548B5D756D47EE5D7CD6F29C03F179",
+          "oleanSha256": "2246504A8A946DD77D61FF506CC10CC9B469A33A33C86C01FE8A44F6E57EA97E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.latticeBasis_fraction_repr",
+        "Dubon2026.stableLatticeGaloisRep_coe",
+        "Dubon2026.stableLatticeGeneralLinearRep_entry",
+        "Dubon2026.stableLatticeGeneralLinearRep_action",
+        "Dubon2026.stableLatticeGeneralLinearRep_field_entry",
+        "Dubon2026.stableLatticeGeneralLinearRep_field_matrix",
+        "Dubon2026.stableLatticeGeneralLinearRep_field_action",
+        "Dubon2026.stableLatticeGeneralLinearRep_entry_continuous",
+        "Dubon2026.stableLatticeGeneralLinearRep_continuous",
+        "Dubon2026.padicCoefficient_valuation_prime_lt_one",
+        "Dubon2026.padicCoefficientResidue_charP",
+        "Dubon2026.localCoefficientResidue_finite_discrete",
+        "Dubon2026.localCoefficientResidue_continuous",
+        "Dubon2026.localFieldResidualRep_entry",
+        "Dubon2026.localFieldResidualRep_continuous",
+        "Dubon2026.stableLattice_integral_residual_realization",
+        "Dubon2026.padic_source_integral_residual_realization",
+        "Dubon2026.padic_source_local_integral_residual_realization",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization",
+        "Dubon2026.fieldMatrixIntegralAction",
+        "Dubon2026.stableLatticeGaloisRep",
+        "Dubon2026.stableLatticeGeneralLinearRep",
+        "Dubon2026.localFieldResidualRep"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.latticeBasis_fraction_repr",
+        "Dubon2026.stableLatticeGaloisRep_coe",
+        "Dubon2026.stableLatticeGeneralLinearRep_entry",
+        "Dubon2026.stableLatticeGeneralLinearRep_action",
+        "Dubon2026.stableLatticeGeneralLinearRep_field_entry",
+        "Dubon2026.stableLatticeGeneralLinearRep_field_matrix",
+        "Dubon2026.stableLatticeGeneralLinearRep_field_action",
+        "Dubon2026.stableLatticeGeneralLinearRep_entry_continuous",
+        "Dubon2026.stableLatticeGeneralLinearRep_continuous",
+        "Dubon2026.padicCoefficient_valuation_prime_lt_one",
+        "Dubon2026.padicCoefficientResidue_charP",
+        "Dubon2026.localCoefficientResidue_finite_discrete",
+        "Dubon2026.localCoefficientResidue_continuous",
+        "Dubon2026.localFieldResidualRep_entry",
+        "Dubon2026.localFieldResidualRep_continuous",
+        "Dubon2026.stableLattice_integral_residual_realization",
+        "Dubon2026.padic_source_integral_residual_realization",
+        "Dubon2026.padic_source_local_integral_residual_realization",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.fieldMatrixIntegralAction",
+        "Dubon2026.stableLatticeGaloisRep",
+        "Dubon2026.stableLatticeGeneralLinearRep",
+        "Dubon2026.localFieldResidualRep"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRealizationAudit10.log",
+      "logSha256": "E4F9A019FDD827EE24003D984F5EBE21ECDAC3B6F28D11D5B7FA24DB0A7EB462",
+      "auditSha256": "E71394CA468643552D6B54D08423623C77D47D06BDBC58A396A6AF729DFA265D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 45,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRealizationDependencyAudit10.log",
+      "dependencyAuditSha256": "CD7D5EA8E11371376163F9EF5605AEDB87FA300B0CFFDF72ED20A887E2EB1055",
+      "dependencyAuditSourceSha256": "7C7718AF8D57C1E84E5A30D9B6703F64A7DD264A609CCB631B26619E1FB595F5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization",
+        "Dubon2026.fieldMatrixIntegralAction",
+        "Dubon2026.stableLatticeGaloisRep",
+        "Dubon2026.stableLatticeGeneralLinearRep",
+        "Dubon2026.localFieldResidualRep"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual association -> primitive weight-two realization -> constructed continuous integral and finite characteristic-p residual matrices from the original stable Tate-image lattice",
+      "discharged": "Every original primitive weight-two form has continuous integral and residue matrix representations constructed from the actual original Tate-image lattice. The residue field is proved finite and discrete of characteristic p. Its entire representation is the literal entrywise residue of the integral representation. Coefficient inclusion and a constructed field-linear basis equivalence identify the integral action with the original continuous field action, retaining rational Tate spanning, all prime Fourier eigenvalues and Galois intertwining. No lattice, integral basis, continuity, residue characteristic or residual representation is an input to the final consumer.",
+      "boundary": "Scratch only; production promotion and verification pending. Prove original Frobenius/inertia compatibility and residual association, followed by the arithmetic automorphy and higher symmetric-power continuation required for every source weight. The constructed weight-two residual realization is an input to that full all-weight chain, not a source-gate closure. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residual-realization-10-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "26D21241C8AFCFC62856C38E3B98CFC990B1ED356E4F8C8793CA962939331232"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-primitive-galois-9-reuse-review-20261022.json",
+    "Tools/source-original-integral-lattice-9-reuse-review-20261022.json",
+    "Tools/source-original-residual-realization-10-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6363": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGaloisDependencyAudit9Production6363.log",
+        "sha256": "5EB2137B277C21D43A0169F9DFC1B6EF9CC59E797FD748408ED6CD7E8B8BBF10",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_galois_realization",
+          "Dubon2026.rankTwoCoefficientMap",
+          "Dubon2026.rankTwoCoefficientGaloisRep"
+        ],
+        "sourceSha256": "D4A47BF1954455BF986D99812FBCCBAB47DFFCAC0C25CABA2E5570515B499814"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralLatticeDependencyAudit9Production6363.log",
+        "sha256": "0043E5C07A73163102264F3C6480180FBFA75E17BB0999C60738F20B2C9F5676",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_stable_integral_lattice",
+          "Dubon2026.padicIntegerCoefficientMap",
+          "Dubon2026.padicIntegerCoefficientAlgebra",
+          "Dubon2026.integralImageLattice",
+          "Dubon2026.scalarExtensionIntegralMap"
+        ],
+        "sourceSha256": "20A5E5266DFEED1C9D664778AD0B32CE14B7BD2B6FC19EB929DD94C6C1BB4F02"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualRealizationDependencyAudit10Production6363.log",
+        "sha256": "CD7D5EA8E11371376163F9EF5605AEDB87FA300B0CFFDF72ED20A887E2EB1055",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization",
+          "Dubon2026.fieldMatrixIntegralAction",
+          "Dubon2026.stableLatticeGaloisRep",
+          "Dubon2026.stableLatticeGeneralLinearRep",
+          "Dubon2026.localFieldResidualRep"
+        ],
+        "sourceSha256": "A640C0E8E673DD6F26960017D5E748FFDB892DA7C15B260716AEE70913E36E40"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualProductionAudit6363.log",
+    "sha256": "6DDCFAA2D2437C718019E9DAC059BA1C9691E6EB6EF0D931ABD50A5ADEF871FE",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-residual-production-build-6363.log",
+    "aggregateSha256": "E5E24983BF1CEFC4348338AEAA3A561D0B7E67318A265775A977A6BA6DCBA15C",
+    "productionModules": 6363,
+    "incrementModules": 28,
+    "axiomChecks": 62,
+    "exhaustiveIncrementTheorems": 97,
+    "linterScopes": 28,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 97,
+    "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. The original regular differentials, native cusp forms, actual path integrals and both genuine period lattices are retained. No final source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 97,
+      "scratchDistinct": 97,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_1": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_3": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_4": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_5": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeGalois": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeGalois": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeRankTwo": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeRankTwo": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveGaloisRealization": "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveIntegralLattice": "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualRealization": "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrimitiveTateSpecialization": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveTateSpecialization": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_1": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_3": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_4": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_5": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_sourcePadicSpecializationLattice": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_dubon2026",
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicSpecializationLattice": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_1": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_3": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_4": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_5": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5"
+      },
+      "generatedNameReason": "Twenty-three exact observed private-instance and generated-proof name changes from qualified imports; complete source bodies agree. No wildcard normalization.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_1": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_3": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_4": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_5": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeGalois": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeGalois.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeGalois.lean",
+          "scratchSha256": "2E2D6BBA6F1E8970D7961049C578E308B2A61D043FD0A15A731279EE8002F4C6",
+          "productionSha256": "AE19C7EC693E6FECBAEB69BA6530B2FDDB4AE0B4032C40A1F1EA2B8E4B62B86E",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeGalois": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeGalois.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeGalois.lean",
+          "scratchSha256": "2E2D6BBA6F1E8970D7961049C578E308B2A61D043FD0A15A731279EE8002F4C6",
+          "productionSha256": "AE19C7EC693E6FECBAEB69BA6530B2FDDB4AE0B4032C40A1F1EA2B8E4B62B86E",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeRankTwo": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "scratchSha256": "C116025E619B5D19E63EAEE8EFB45C6A88963BA7579136D601FB77C588B04BD0",
+          "productionSha256": "8CA1F94C71379D045ECA444BABF142511D8BC832A522C839F7BBAEEBFF77C3E7",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeRankTwo": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "scratchSha256": "C116025E619B5D19E63EAEE8EFB45C6A88963BA7579136D601FB77C588B04BD0",
+          "productionSha256": "8CA1F94C71379D045ECA444BABF142511D8BC832A522C839F7BBAEEBFF77C3E7",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveGaloisRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGaloisRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveGaloisRealization.lean",
+          "scratchSha256": "60204BF498C0393F7D8E31A39D4A70383A47F5A82215B9135578642639216037",
+          "productionSha256": "8E5BF95A975D3A0516720797582E45AE57075727BB9C31CCD872F5516BEB5670",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveIntegralLattice": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveIntegralLattice.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveIntegralLattice.lean",
+          "scratchSha256": "F1670CC470A4A819C95FCAA5452D80C21D134414800FFACA508E3EE44AF14524",
+          "productionSha256": "E3148886DF31275D5B5F008C32ABB1FB6A5EC787507C05CABC33E258E9363FDC",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveResidualRealization.lean",
+          "scratchSha256": "E822951A28DB05DE41893150C6DFF6D1DA548B5D756D47EE5D7CD6F29C03F179",
+          "productionSha256": "A314301484990D28252ABDFE9A6556784C71E9E4EC985C968CE58333BCA099F4",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrimitiveTateSpecialization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "scratchSha256": "836F7509F254AD3B4DA829FFA1AB5E7AAF82FC86D1F3EAEDC31325A6A9363A54",
+          "productionSha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveTateSpecialization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "scratchSha256": "836F7509F254AD3B4DA829FFA1AB5E7AAF82FC86D1F3EAEDC31325A6A9363A54",
+          "productionSha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_1": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_3": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_4": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_5": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_sourcePadicSpecializationLattice": {
+          "productionName": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicSpecializationLattice.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicSpecializationLattice.lean",
+          "scratchSha256": "909AB305AF40FF7D38BF27603A10811AB2DEE2487E26BD22517D54FD28E5074D",
+          "productionSha256": "F41B0FDD12F911E3EAD6C6E36CF5BEF095EB32A357118C9686102A0829775493",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicSpecializationLattice": {
+          "productionName": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicSpecializationLattice.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicSpecializationLattice.lean",
+          "scratchSha256": "909AB305AF40FF7D38BF27603A10811AB2DEE2487E26BD22517D54FD28E5074D",
+          "productionSha256": "F41B0FDD12F911E3EAD6C6E36CF5BEF095EB32A357118C9686102A0829775493",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_1": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_3": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_4": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_5": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        }
+      },
+      "productionFocused": 97,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceExplicitHeckeMatrixDescent",
+            "SourceExplicitRankTwoCoordinates",
+            "SourceOriginalExplicitHeckeRankTwo",
+            "SourceContinuousHeckeCoordinateConsumer",
+            "SourceOriginalExplicitHeckeGalois",
+            "SourceRankTwoCoefficientSpecialization",
+            "SourcePrimitiveCoefficientGaloisConsumer",
+            "SourceOriginalPrimitiveTateSpecialization",
+            "SourceOriginalPrimitiveGaloisRealization"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualScratchOwnership198For6363.log",
+            "sha256": "0B52A46F7AB888833676ECA820C443FF825742A9ABED1A187129ACA70788FB4A",
+            "sourceSha256": "BB8C327307C76E86BAE88AD1E3AF6B29EC9B9579F3EE6E1F393AC60BED3B9F1A"
+          }
+        },
+        {
+          "modules": [
+            "SourcePadicCoefficientLocalStructure",
+            "SourcePadicIntegerCoefficientMap",
+            "SourceIntegralImageLattice",
+            "SourceIntegralTensorImage",
+            "SourceIntegralLatticeRank",
+            "SourceSpecializationInvariantLattice",
+            "SourcePadicSpecializationLattice",
+            "SourcePadicIntegralRealizationConsumer",
+            "SourceOriginalPrimitiveIntegralLattice"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualScratchOwnership199For6363.log",
+            "sha256": "F88FBB967ED84EB4531D3FBE9235BBC10ABEDA5D4A1ADE403C83AD01A7423DBE",
+            "sourceSha256": "2DF2CB7868E0C23051CDC9F80E45EC16E421F99834DBD85510AF1F923B3B4031"
+          }
+        },
+        {
+          "modules": [
+            "SourceLatticeFractionCoordinates",
+            "SourceStableLatticeGaloisCoordinates",
+            "SourceStableLatticeFieldComparison",
+            "SourceStableLatticeContinuity",
+            "SourcePadicResidueCharacteristic",
+            "SourceLocalFieldResidueReduction",
+            "SourceStableLatticeResidualRealization",
+            "SourcePadicResidualRealizationConsumer",
+            "SourcePadicResidualLocalConsumer",
+            "SourceOriginalPrimitiveResidualRealization"
+          ],
+          "count": 45,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualScratchOwnership200For6363.log",
+            "sha256": "645534C77AB33E0EFD107AD72F558A23A8E457668DBC2ECFDBA4C41AF01B01D6",
+            "sourceSha256": "F59E0ACB4A5E24FA2B9418BE9900ACDB25AD7836C57D086B824817953046DB86"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualOwnership6363.log",
+        "sha256": "34544134E968F8B6095A70ABB2609AEFE3C0BC3E82F15E66B0A8F538E2153294",
+        "sourceSha256": "ECA1A75E573F01DAE35EF0AEACDB6CE672B71F3A3CA319D21615B1FA1497582B"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-121504-888.log",
+        "sha256": "0776A67B84B2872C505C7AB0009162FCD388DCC3F89320829A36AF7A7AD11A42"
+      }
+    },
+    "scratchToProductionCountReason": "All 97 distinct names from 97 exhaustive scratch checks are retained: 97 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Original Frobenius and inertia identities, residual association, arithmetic automorphy and higher symmetric-power continuation remain required for every source weight. The constructed weight-two residual realization is an input to the full all-weight route, not a narrowed source contract. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6363": {
+    "recordedUTC": "2026-10-22T22:04:11.205008+00:00",
+    "log": "logs/dubon-build-20261022-134634-386.log",
+    "sha256": "596781F2410426CF232CB86DDBA5E7F3C6CB05FA88884E888E214E2C9F8542EF",
+    "bytes": 11017554,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6363,
+    "projectTheorems": 43862,
+    "registeredConsumers": 19373,
+    "registeredConstructions": 1487,
+    "declarations": 26660,
+    "generated": 25489,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_134327.log",
+    "foundationSha256": "9D8A58CC2C673FC6387E941ECCD0D075C38D46A7BC96F1D3546ACB60895D1D61",
+    "countReconciliation": {
+      "previousTheorems": 43765,
+      "focusedTheorems": 97,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 97,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualOwnership6363.log",
+      "ownershipSha256": "34544134E968F8B6095A70ABB2609AEFE3C0BC3E82F15E66B0A8F538E2153294"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 97,
+      "scratchDistinct": 97,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_1": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_3": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_4": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_5": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeGalois": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeGalois": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeRankTwo": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeRankTwo": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveGaloisRealization": "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveIntegralLattice": "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualRealization": "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrimitiveTateSpecialization": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveTateSpecialization": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_1": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_3": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_4": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_5": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_sourcePadicSpecializationLattice": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_dubon2026",
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicSpecializationLattice": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_1": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_3": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_4": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_5": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5"
+      },
+      "generatedNameReason": "Twenty-three exact observed private-instance and generated-proof name changes from qualified imports; complete source bodies agree. No wildcard normalization.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_1": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_3": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_4": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceLocalFieldResidueReduction._proof_5": {
+          "productionName": "_private.Dubon2026.SourceLocalFieldResidueReduction.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFieldResidueReduction.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalFieldResidueReduction.lean",
+          "scratchSha256": "177CC8F9ED9BDC54C23AAA51C7840C38FFE067947B4D20DE8F4A8D0A50506443",
+          "productionSha256": "1FD29124AC4346E095827C7FCFB3BF527F2CACE0ECAD83CE73F05B107A566824",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeGalois": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeGalois.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeGalois.lean",
+          "scratchSha256": "2E2D6BBA6F1E8970D7961049C578E308B2A61D043FD0A15A731279EE8002F4C6",
+          "productionSha256": "AE19C7EC693E6FECBAEB69BA6530B2FDDB4AE0B4032C40A1F1EA2B8E4B62B86E",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeGalois": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeGalois.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeGalois.lean",
+          "scratchSha256": "2E2D6BBA6F1E8970D7961049C578E308B2A61D043FD0A15A731279EE8002F4C6",
+          "productionSha256": "AE19C7EC693E6FECBAEB69BA6530B2FDDB4AE0B4032C40A1F1EA2B8E4B62B86E",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalExplicitHeckeRankTwo": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "scratchSha256": "C116025E619B5D19E63EAEE8EFB45C6A88963BA7579136D601FB77C588B04BD0",
+          "productionSha256": "8CA1F94C71379D045ECA444BABF142511D8BC832A522C839F7BBAEEBFF77C3E7",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalExplicitHeckeRankTwo": {
+          "productionName": "_private.Dubon2026.SourceOriginalExplicitHeckeRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeRankTwo.lean",
+          "scratchSha256": "C116025E619B5D19E63EAEE8EFB45C6A88963BA7579136D601FB77C588B04BD0",
+          "productionSha256": "8CA1F94C71379D045ECA444BABF142511D8BC832A522C839F7BBAEEBFF77C3E7",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveGaloisRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveGaloisRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGaloisRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveGaloisRealization.lean",
+          "scratchSha256": "60204BF498C0393F7D8E31A39D4A70383A47F5A82215B9135578642639216037",
+          "productionSha256": "8E5BF95A975D3A0516720797582E45AE57075727BB9C31CCD872F5516BEB5670",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveIntegralLattice": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveIntegralLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveIntegralLattice.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveIntegralLattice.lean",
+          "scratchSha256": "F1670CC470A4A819C95FCAA5452D80C21D134414800FFACA508E3EE44AF14524",
+          "productionSha256": "E3148886DF31275D5B5F008C32ABB1FB6A5EC787507C05CABC33E258E9363FDC",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveResidualRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveResidualRealization.lean",
+          "scratchSha256": "E822951A28DB05DE41893150C6DFF6D1DA548B5D756D47EE5D7CD6F29C03F179",
+          "productionSha256": "A314301484990D28252ABDFE9A6556784C71E9E4EC985C968CE58333BCA099F4",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrimitiveTateSpecialization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "scratchSha256": "836F7509F254AD3B4DA829FFA1AB5E7AAF82FC86D1F3EAEDC31325A6A9363A54",
+          "productionSha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveTateSpecialization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "scratchSha256": "836F7509F254AD3B4DA829FFA1AB5E7AAF82FC86D1F3EAEDC31325A6A9363A54",
+          "productionSha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_1": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_3": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_4": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicResidualRealizationConsumer._proof_5": {
+          "productionName": "_private.Dubon2026.SourcePadicResidualRealizationConsumer.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicResidualRealizationConsumer.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualRealizationConsumer.lean",
+          "scratchSha256": "9142A871243ACE8B99F97F3771F15B709E98A29C4F211A9C5ED64F7F415C63E3",
+          "productionSha256": "5DB775445D7476262C5EE733B6A4553B3D3A3EE54B1689ADB1679911F8B4539F",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_sourcePadicSpecializationLattice": {
+          "productionName": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntPadic_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicSpecializationLattice.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicSpecializationLattice.lean",
+          "scratchSha256": "909AB305AF40FF7D38BF27603A10811AB2DEE2487E26BD22517D54FD28E5074D",
+          "productionSha256": "F41B0FDD12F911E3EAD6C6E36CF5BEF095EB32A357118C9686102A0829775493",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourcePadicSpecializationLattice": {
+          "productionName": "_private.Dubon2026.SourcePadicSpecializationLattice.0.Dubon2026.instIsScalarTowerPadicIntSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourcePadicSpecializationLattice.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicSpecializationLattice.lean",
+          "scratchSha256": "909AB305AF40FF7D38BF27603A10811AB2DEE2487E26BD22517D54FD28E5074D",
+          "productionSha256": "F41B0FDD12F911E3EAD6C6E36CF5BEF095EB32A357118C9686102A0829775493",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_1": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_3": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_4": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        },
+        "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceStableLatticeResidualRealization._proof_5": {
+          "productionName": "_private.Dubon2026.SourceStableLatticeResidualRealization.0.Dubon2026.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+          "scratchPath": "E:\\Lean\\.tmp\\dubon83\\SourceStableLatticeResidualRealization.lean",
+          "productionPath": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "scratchSha256": "B01036A002E6DA88F4FC5B1FDBDF208B57C40DF032BE18E16D84687BAA337B15",
+          "productionSha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A",
+          "evidence": "Exact observed private-instance or generated-proof names; complete source bodies identical after removing import lines only."
+        }
+      },
+      "productionFocused": 97,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceExplicitHeckeMatrixDescent",
+            "SourceExplicitRankTwoCoordinates",
+            "SourceOriginalExplicitHeckeRankTwo",
+            "SourceContinuousHeckeCoordinateConsumer",
+            "SourceOriginalExplicitHeckeGalois",
+            "SourceRankTwoCoefficientSpecialization",
+            "SourcePrimitiveCoefficientGaloisConsumer",
+            "SourceOriginalPrimitiveTateSpecialization",
+            "SourceOriginalPrimitiveGaloisRealization"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualScratchOwnership198For6363.log",
+            "sha256": "0B52A46F7AB888833676ECA820C443FF825742A9ABED1A187129ACA70788FB4A",
+            "sourceSha256": "BB8C327307C76E86BAE88AD1E3AF6B29EC9B9579F3EE6E1F393AC60BED3B9F1A"
+          }
+        },
+        {
+          "modules": [
+            "SourcePadicCoefficientLocalStructure",
+            "SourcePadicIntegerCoefficientMap",
+            "SourceIntegralImageLattice",
+            "SourceIntegralTensorImage",
+            "SourceIntegralLatticeRank",
+            "SourceSpecializationInvariantLattice",
+            "SourcePadicSpecializationLattice",
+            "SourcePadicIntegralRealizationConsumer",
+            "SourceOriginalPrimitiveIntegralLattice"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualScratchOwnership199For6363.log",
+            "sha256": "F88FBB967ED84EB4531D3FBE9235BBC10ABEDA5D4A1ADE403C83AD01A7423DBE",
+            "sourceSha256": "2DF2CB7868E0C23051CDC9F80E45EC16E421F99834DBD85510AF1F923B3B4031"
+          }
+        },
+        {
+          "modules": [
+            "SourceLatticeFractionCoordinates",
+            "SourceStableLatticeGaloisCoordinates",
+            "SourceStableLatticeFieldComparison",
+            "SourceStableLatticeContinuity",
+            "SourcePadicResidueCharacteristic",
+            "SourceLocalFieldResidueReduction",
+            "SourceStableLatticeResidualRealization",
+            "SourcePadicResidualRealizationConsumer",
+            "SourcePadicResidualLocalConsumer",
+            "SourceOriginalPrimitiveResidualRealization"
+          ],
+          "count": 45,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualScratchOwnership200For6363.log",
+            "sha256": "645534C77AB33E0EFD107AD72F558A23A8E457668DBC2ECFDBA4C41AF01B01D6",
+            "sourceSha256": "F59E0ACB4A5E24FA2B9418BE9900ACDB25AD7836C57D086B824817953046DB86"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualOwnership6363.log",
+        "sha256": "34544134E968F8B6095A70ABB2609AEFE3C0BC3E82F15E66B0A8F538E2153294",
+        "sourceSha256": "ECA1A75E573F01DAE35EF0AEACDB6CE672B71F3A3CA319D21615B1FA1497582B"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-121504-888.log",
+        "sha256": "0776A67B84B2872C505C7AB0009162FCD388DCC3F89320829A36AF7A7AD11A42"
+      }
+    },
+    "scratchToProductionCountReason": "All 97 distinct names from 97 exhaustive scratch checks are retained: 97 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Original Frobenius and inertia identities, residual association, arithmetic automorphy and higher symmetric-power continuation remain required for every source weight. The constructed weight-two residual realization is an input to the full all-weight route, not a narrowed source contract. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

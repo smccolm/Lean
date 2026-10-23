@@ -1,0 +1,1508 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurveFiniteRankTrace",
+    "Dubon2026.SourceCurveFiniteRankTraceLinear",
+    "Dubon2026.SourceCurveTateCommutator",
+    "Dubon2026.SourceCurvePoleClassSpan",
+    "Dubon2026.SourceCurvePoleProjection",
+    "Dubon2026.SourceCurveTateCommutatorFinite",
+    "Dubon2026.SourceModularCoefficientTateResidues",
+    "Dubon2026.SourceCurveFiniteRankTraceOne",
+    "Dubon2026.SourceCurveTateUniformizerProjection",
+    "Dubon2026.SourceCurveTateResidueAgreement",
+    "Dubon2026.SourceModularCoefficientTateAgreement",
+    "Dubon2026.SourceCurveFiniteRankTraceAdd",
+    "Dubon2026.SourceCurveProjectedMultiplication",
+    "Dubon2026.SourceCurveTateLeibniz",
+    "Dubon2026.SourceCurveLocalTateLeibniz",
+    "Dubon2026.SourceModularCoefficientTateLeibniz",
+    "Dubon2026.SourceCurveLocalTateBilinear",
+    "Dubon2026.SourceCurveResidueDual",
+    "Dubon2026.SourceCurveLocalTateDerivation",
+    "Dubon2026.SourceModularCoefficientTateDifferentials",
+    "Dubon2026.SourceCurveFiniteRankTraceComparison",
+    "Dubon2026.SourceCurveRetractionTrace",
+    "Dubon2026.SourceCurveLocalRetractionTrace",
+    "Dubon2026.SourceModularCoefficientRetractionTrace",
+    "Dubon2026.SourceCurveFiniteRankTraceBlocks",
+    "Dubon2026.SourceCurveMatrixCommutatorTrace",
+    "Dubon2026.SourceCurveLocalMatrixTrace",
+    "Dubon2026.SourceModularCoefficientMatrixTrace",
+    "Dubon2026.SourceCurvePlaceCompletion",
+    "Dubon2026.SourceCurveCompletionEmbeddingValuation",
+    "Dubon2026.SourceCurveCompletionEmbedding",
+    "Dubon2026.SourceCurveCompletionFinite",
+    "Dubon2026.SourceCurveCompletionSeparable",
+    "Dubon2026.SourceModularCoefficientCompletions",
+    "Dubon2026.SourceCurveCompletionNorm",
+    "Dubon2026.SourceCurveCompletionIntegralAlgebra",
+    "Dubon2026.SourceCurveCompletionIntegrality",
+    "Dubon2026.SourceCurveCompletionIntegralBasis",
+    "Dubon2026.SourceModularCoefficientIntegralBasis"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/field-trace compatibility -> literal finite-rank local residues and the constructed integral basis of each actual completed extension.",
+  "discharged": "The actual modular coefficient fields have finite-rank local Tate commutators, whose traces equal the existing canonical differential residues. Bilinearity, the Leibniz identity and the differential coefficient formula are proved. For integral second factors the residue is unchanged by replacing the integral retraction, and the matrix commutator trace is the residue of the matrix trace. Every actual place completion is finite and separable over its j-coordinate completion. The ramification-normalized absolute value and native spectral norm prove that the actual completed integral ring is the integral closure of the base integral ring. Native finite freeness and localization construct an integral field basis whose coordinates characterize that ring exactly. Residue rationality, finite degree, separability, integral closure and integral-basis inputs are derived for the actual modular consumers.",
+  "boundary": "Compatibility of the original and completed residues and the field-trace sum over places remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required for good reduction. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,572-module scope: all thirteen retained regressions, 44,770 exhaustive theorem checks, 19,918 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.coeff_finite_range_tate_commutator",
+    "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_conj",
+    "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sub",
+    "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smul",
+    "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_zero",
+    "Dubon2026.SourceCurve.Place.tateProj_idem",
+    "Dubon2026.SourceCurve.ResidueTrace.finrankTrace",
+    "Dubon2026.SourceCurve.ResidueTrace.tateComm",
+    "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict",
+    "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace",
+    "Dubon2026.SourceCurve.Place.principalPartLift",
+    "Dubon2026.SourceCurve.Place.principalPart",
+    "Dubon2026.SourceCurve.Place.tateProj",
+    "Dubon2026.SourceCurve.Place.tateResidue",
+    "Dubon2026.SourceFunctionField.coeff_trace_canonicalResidue_eq_tateResidue",
+    "Dubon2026.SourceCurve.ResidueTrace.finite_range_smulRight",
+    "Dubon2026.SourceFunctionField.coeff_tateResidue_leibniz",
+    "Dubon2026.SourceCurve.ResidueTrace.piRestrict",
+    "Dubon2026.SourceCurve.ResidueTrace.epsRestrict",
+    "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_canonical_differential",
+    "Dubon2026.SourceCurve.ResidueTrace.residueDual_smul_apply",
+    "Dubon2026.SourceCurve.ResidueTrace.residueDual_ksmul_apply",
+    "Dubon2026.SourceCurve.ResidueTrace.ResidueDual",
+    "Dubon2026.SourceCurve.ResidueTrace.residueDualAddCommGroup",
+    "Dubon2026.SourceCurve.ResidueTrace.residueDualKModule",
+    "Dubon2026.SourceCurve.ResidueTrace.residueDualLinearMap",
+    "Dubon2026.SourceCurve.ResidueTrace.residueDualFModule",
+    "Dubon2026.SourceCurve.Place.tateResidueFunctional",
+    "Dubon2026.SourceCurve.Place.tateResidueDerivation",
+    "Dubon2026.SourceFunctionField.coeff_canonicalResidue_retraction_trace",
+    "Dubon2026.SourceCurve.ResidueTrace.projectedEnd",
+    "Dubon2026.SourceCurve.Place.integralRetraction",
+    "Dubon2026.SourceFunctionField.coeff_canonicalResidue_matrix_trace",
+    "Dubon2026.SourceCurve.ResidueTrace.blockEnd",
+    "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd",
+    "Dubon2026.SourceCurve.Place.integralMatrixEnd",
+    "Dubon2026.SourceFunctionField.coeff_completion_finite_separable",
+    "Dubon2026.SourceCurve.Place.adicCompletion",
+    "Dubon2026.SourceCurve.Place.adicCompletionIntegers",
+    "Dubon2026.SourceCurve.Place.completionPlace",
+    "Dubon2026.SourceCurve.Place.ramificationIndex",
+    "Dubon2026.SourceCurve.Place.adicCompletionComap",
+    "Dubon2026.SourceCurve.Place.completionExtensionAlgebra",
+    "Dubon2026.SourceCurve.Place.completionLinearCombination",
+    "Dubon2026.SourceFunctionField.coeff_completion_integral_basis",
+    "Dubon2026.SourceCurve.Place.completionRankOne",
+    "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue",
+    "Dubon2026.SourceCurve.Place.completionIntegersComap",
+    "Dubon2026.SourceCurve.Place.completionIntegersAlgebra",
+    "Dubon2026.SourceCurve.Place.completionBaseIntegersAlgebra",
+    "Dubon2026.SourceCurve.Place.CompletionIntegralBasis",
+    "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis",
+    "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mk"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T23:37:04.537884+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveFiniteRankTrace",
+        "SourceCurveFiniteRankTraceLinear",
+        "SourceCurveTateCommutator",
+        "SourceCurvePoleClassSpan",
+        "SourceCurvePoleProjection",
+        "SourceCurveTateCommutatorFinite",
+        "SourceModularCoefficientTateResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteRankTrace.lean",
+          "sha256": "7F5864D26FCC7B9A2156135B6804CB456219A7B25198CD8ABEC14916AD5D119E",
+          "oleanSha256": "030E665A62DBDAFA59D751019CAB78B508B50858709A3C1D7CF08C2EE201EC29"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteRankTraceLinear.lean",
+          "sha256": "16B430E045E7820D5AFACB14B7CBFA1C7F5A24D4A09CD1C329E04B9268AC7292",
+          "oleanSha256": "71794E9697B32BD24E5923851CF560B5AB6E28B40055385FDF00E9E6A2A2F1B1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTateCommutator.lean",
+          "sha256": "E2680CC9381093F108779B8C803E0F3CCECC37FE1BA8F18D1ED349AE2C9F90FA",
+          "oleanSha256": "3C145F33D08EB928945BB5C2CFEB1E202AB34231E9F15506FAE352C613DF8EBB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePoleClassSpan.lean",
+          "sha256": "CA2676C9C539011E46321081047CE4E4AB5FA5E00DE11579DCF02AC802428288",
+          "oleanSha256": "8A6E50F40CAEFC0D6983A94F81E5F3B2480DBA04CE9012E3D8B38350D6906402"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePoleProjection.lean",
+          "sha256": "122AB0A53E6693A7F36A207CBBE8480014A8C2B046CABBE6C840D6787089EE3B",
+          "oleanSha256": "3ADE18B718619B5B63A0E31E4DF83D9C81192B4B07F8E03244D5BCF66FC33787"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTateCommutatorFinite.lean",
+          "sha256": "B458CBEFA0E47F4114BB18E4F8A450E59E145A9BE9373A11069A367032838484",
+          "oleanSha256": "05F81E306022526C35DE185777F01AC7ACFDEE61B24ECD69442C8F8ADBED9FE8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientTateResidues.lean",
+          "sha256": "17662C07F796FED653D8D4B47B40FBF504B00EEF8F3AFF36068DA1441DEEA455",
+          "oleanSha256": "1855B4E842A03F1965689E4095AF52828E65A2B141AD2C0EAAB6970DB9C666C9"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ResidueTrace.range_comp_map_left",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_comp_comm",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_eq_trace_on_superspace",
+        "Dubon2026.SourceCurve.ResidueTrace.range_conj_eq_map",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_conj",
+        "Dubon2026.SourceCurve.ResidueTrace.range_sub_le",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_zero",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_zero",
+        "Dubon2026.SourceCurve.ResidueTrace.range_smul_le",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_smul",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smul",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm_mem_range",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm_eq_of_commute",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_tateCommRestrict",
+        "Dubon2026.SourceCurve.Place.poleClass_mem_span_of_clear_pole",
+        "Dubon2026.SourceCurve.Place.poleClass_span_eq_top",
+        "Dubon2026.SourceCurve.Place.poleClass_linearCombination_bijective",
+        "Dubon2026.SourceCurve.Place.principalPartLift_poleClass",
+        "Dubon2026.SourceCurve.Place.mkQ_principalPartLift",
+        "Dubon2026.SourceCurve.Place.principalPart_of_mem",
+        "Dubon2026.SourceCurve.Place.tateProj_mem",
+        "Dubon2026.SourceCurve.Place.tateProj_of_mem",
+        "Dubon2026.SourceCurve.Place.range_tateProj",
+        "Dubon2026.SourceCurve.Place.tateProj_idem",
+        "Dubon2026.SourceCurve.Place.finite_range_principalPart_mul",
+        "Dubon2026.SourceCurve.Place.finite_range_tate_commutator",
+        "Dubon2026.SourceFunctionField.coeff_finite_range_tate_commutator",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace",
+        "Dubon2026.SourceCurve.Place.principalPartLift",
+        "Dubon2026.SourceCurve.Place.principalPart",
+        "Dubon2026.SourceCurve.Place.tateProj",
+        "Dubon2026.SourceCurve.Place.tateResidue"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.range_comp_map_left",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_comp_comm",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_eq_trace_on_superspace",
+        "Dubon2026.SourceCurve.ResidueTrace.range_conj_eq_map",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_conj",
+        "Dubon2026.SourceCurve.ResidueTrace.range_sub_le",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_zero",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_zero",
+        "Dubon2026.SourceCurve.ResidueTrace.range_smul_le",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_smul",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smul",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm_mem_range",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm_eq_of_commute",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_tateCommRestrict",
+        "Dubon2026.SourceCurve.Place.poleClass_mem_span_of_clear_pole",
+        "Dubon2026.SourceCurve.Place.poleClass_span_eq_top",
+        "Dubon2026.SourceCurve.Place.poleClass_linearCombination_bijective",
+        "Dubon2026.SourceCurve.Place.principalPartLift_poleClass",
+        "Dubon2026.SourceCurve.Place.mkQ_principalPartLift",
+        "Dubon2026.SourceCurve.Place.principalPart_of_mem",
+        "Dubon2026.SourceCurve.Place.tateProj_mem",
+        "Dubon2026.SourceCurve.Place.tateProj_of_mem",
+        "Dubon2026.SourceCurve.Place.range_tateProj",
+        "Dubon2026.SourceCurve.Place.tateProj_idem",
+        "Dubon2026.SourceCurve.Place.finite_range_principalPart_mul",
+        "Dubon2026.SourceCurve.Place.finite_range_tate_commutator",
+        "Dubon2026.SourceFunctionField.coeff_finite_range_tate_commutator"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace",
+        "Dubon2026.SourceCurve.Place.principalPartLift",
+        "Dubon2026.SourceCurve.Place.principalPart",
+        "Dubon2026.SourceCurve.Place.tateProj",
+        "Dubon2026.SourceCurve.Place.tateResidue"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateFiniteAudit7.log",
+      "logSha256": "40F51861FA580E93F28F20B810DDBA06B1AD041194B93F63888ED7A0DE155C2D",
+      "auditSha256": "533583CBEFCC24F94FCF1E9B23CB5C22A573CF94BC240E1B64C0829FDD9B8E9A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 44,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateFiniteDependencyAudit7.log",
+      "dependencyAuditSha256": "0F73FF3E1B9ACEE5028CF97E2F245F1AD318C92DEC323D69E189A4CCB851BD1F",
+      "dependencyAuditSourceSha256": "E8C0CFC4CC656A0F048CEF274211A84720010ACD67124C2FF89597982229CECD",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_finite_range_tate_commutator",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_conj",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smul",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_zero",
+        "Dubon2026.SourceCurve.Place.tateProj_idem",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace",
+        "Dubon2026.SourceCurve.Place.principalPartLift",
+        "Dubon2026.SourceCurve.Place.principalPart",
+        "Dubon2026.SourceCurve.Place.tateProj",
+        "Dubon2026.SourceCurve.Place.tateResidue"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> finite-rank local commutators and native finite-image trace",
+      "discharged": "For every place of the literal modular coefficient field the actual projected Tate commutator has finite rank, with residue rationality and finite principal-part images derived. Pure poles span the actual quotient by integral functions, yielding a canonical integral projection. Finite-rank trace cyclicity, invariance under linear coordinates, subtraction and scalar multiplication are proved. The native total trace is used on the literal image; finite rank is a separate proved mathematical input, not an unused construction argument.",
+      "boundary": "Scratch only; production promotion and verification pending. Uniformizer agreement with the existing canonical residue, the differential chain rule and actual residue/trace compatibility remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required, followed by original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-tate-finite-7-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7F7F656EBF909356178DEC3269F19A4080B52A6A5353DBE70DDD1823113E12A3"
+    },
+    {
+      "recordedUTC": "2026-10-22T23:39:54.196823+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveFiniteRankTraceOne",
+        "SourceCurveTateUniformizerProjection",
+        "SourceCurveTateResidueAgreement",
+        "SourceModularCoefficientTateAgreement"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteRankTraceOne.lean",
+          "sha256": "E605EA7374F1567F42B407CD3E67D436BE205D83A47B8D0F132EE4DDEEA00AE9",
+          "oleanSha256": "ABAA6C93B05A0403A78CD7856387154F7349110C67D3580447C375E6752AC56B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTateUniformizerProjection.lean",
+          "sha256": "8D1EB7AC020A802AFA7216FB049B6E0FDF7650278DB66DF21B451AD92E97F335",
+          "oleanSha256": "13C0E981A5270E9C8A13B9104AC248618032AB14076A00D1DAB5454FAFCE2B2F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTateResidueAgreement.lean",
+          "sha256": "1BBC2FCC8FD8D849E10BD660DE19DF5F6AA1B6F559A1F5976980962693F83D20",
+          "oleanSha256": "4DCB87D111B1E6E6FDB102974BD8D7AE34E5EB40CB9E5FF56DD8353E99FB4277"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientTateAgreement.lean",
+          "sha256": "05616E0113E32E604F58807888DD69924BD1091C717B1779284043E9E89A521F",
+          "oleanSha256": "C5521749916FCD19A380830803C2F71C923845ED98BCA0C9AB1D6BF4C34E9E15"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ResidueTrace.range_smulRight_le_span",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_smulRight",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smulRight",
+        "Dubon2026.SourceCurve.Place.tateProj_neg_pow",
+        "Dubon2026.SourceCurve.Place.tateProj_uniformizer_mul_poleClass",
+        "Dubon2026.SourceCurve.Place.tateProj_uniformizer_mul_principalPart",
+        "Dubon2026.SourceCurve.Place.tateComm_uniformizer_apply",
+        "Dubon2026.SourceCurve.Place.tateResidue_uniformizer",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_uniformizer",
+        "Dubon2026.SourceFunctionField.coeff_trace_canonicalResidue_eq_tateResidue"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.range_smulRight_le_span",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_smulRight",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smulRight",
+        "Dubon2026.SourceCurve.Place.tateProj_neg_pow",
+        "Dubon2026.SourceCurve.Place.tateProj_uniformizer_mul_poleClass",
+        "Dubon2026.SourceCurve.Place.tateProj_uniformizer_mul_principalPart",
+        "Dubon2026.SourceCurve.Place.tateComm_uniformizer_apply",
+        "Dubon2026.SourceCurve.Place.tateResidue_uniformizer",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_uniformizer",
+        "Dubon2026.SourceFunctionField.coeff_trace_canonicalResidue_eq_tateResidue"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateAgreementAudit4.log",
+      "logSha256": "1B0B975BA8286646C5F01ED341EEAE8DC1D6E8ED74B8E361A56BC7CE87EC48A7",
+      "auditSha256": "250A85AF87009321069F770319048F2DED45BEA13ACC203C8326F15EEF3A5C3A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateAgreementDependencyAudit4.log",
+      "dependencyAuditSha256": "B9F78BB8866421B30FFB01B0F03DDCF71FF749B4B56A4808D2003FF2B7C62767",
+      "dependencyAuditSourceSha256": "9FC6069663B6E6A8B3E06DA27535CD07DEFC88C73FC10CDEE97A21332031F59D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_trace_canonicalResidue_eq_tateResidue",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_smulRight"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> exact actual local Tate/canonical-residue agreement",
+      "discharged": "At every actual modular coefficient-field place, the Tate commutator residue with the literal uniformizer equals the existing normalized scalar residue and the residue-field trace of the existing canonical local residue. The projected principal part extracts exactly the simple-pole coefficient. The resulting rank-one operator has trace equal to that coefficient, even on the infinite ambient local vector space.",
+      "boundary": "Scratch only; production promotion and verification pending. The differential chain rule, actual residue/trace compatibility and global residue vanishing remain required in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, the reverse genus bound, genus equality and place comparison remain required, followed by original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-tate-agreement-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "1DD079F90AB4C468955DBFE143AF7EE0C2525F828B864AB5FC3A87A1C5B8B24A"
+    },
+    {
+      "recordedUTC": "2026-10-22T23:46:28.085427+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveFiniteRankTraceAdd",
+        "SourceCurveProjectedMultiplication",
+        "SourceCurveTateLeibniz",
+        "SourceCurveLocalTateLeibniz",
+        "SourceModularCoefficientTateLeibniz"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteRankTraceAdd.lean",
+          "sha256": "889587F93853F544669196616ACDAFA2BC822B5BE17723618F890E4B39C07925",
+          "oleanSha256": "606EBDD2888236407610D739A117590D6028D84B90B7D7253BA187135D276EA0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveProjectedMultiplication.lean",
+          "sha256": "09EEB1D8BAE79AB1A16E32B5E51ABD2E0D61E45844C1F3A9533A23707A2D889D",
+          "oleanSha256": "A126BC65608155BD7ED0AB7DC9E09466616CC8BE40C7D842616301F429C0AB50"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTateLeibniz.lean",
+          "sha256": "08516992AABB047D3D0E6F72C3D99B0446F2BB29398CDCE36E5E8143BEDD0BD1",
+          "oleanSha256": "D52944ADA45AB5AFA46FFE28A71821BF7740B8F73980E2A5491B9BB210CA8884"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalTateLeibniz.lean",
+          "sha256": "B3EC3C8CA6731778526D83C010A32A3D4764CDD10FA3FB1A38B0488833792DF0",
+          "oleanSha256": "0A01C214CAB92DDB21BD5C1B67085B2BAB13DF12202FA3B288090A651FF053D1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientTateLeibniz.lean",
+          "sha256": "0FA4C8BF10089906B386CB34D79152EEB5CE77680C4ADAA473E35A1BCF9D8425",
+          "oleanSha256": "9497DDC5A076D1935370DE18321BF5B12DDC26CDA271AD6050FF163A0EC6ADAD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ResidueTrace.range_add_le",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_add",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_add",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_comp_right",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_comp_left",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_commutator_eq_zero",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_commutator_eq_zero_left",
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.epsRestrict_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict_comp_eq",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict_eq_bracket",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_epsRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm_leibniz_defect",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace_leibniz_snd",
+        "Dubon2026.SourceCurve.Place.tate_lmul_mul",
+        "Dubon2026.SourceCurve.Place.tateResidue_leibniz",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_leibniz",
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.epsRestrict"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.range_add_le",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_add",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_add",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_comp_right",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_comp_left",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_commutator_eq_zero",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_commutator_eq_zero_left",
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.epsRestrict_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict_comp_eq",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict_eq_bracket",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_epsRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.tateComm_leibniz_defect",
+        "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace_leibniz_snd",
+        "Dubon2026.SourceCurve.Place.tate_lmul_mul",
+        "Dubon2026.SourceCurve.Place.tateResidue_leibniz",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_leibniz"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.epsRestrict"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateLeibnizAudit5.log",
+      "logSha256": "2F71EAB8707D7E1E94EDD99CF65711ECD22EC37699160992BD183E77A90E59F8",
+      "auditSha256": "27271EB0D2F3975D0A8B58D8FBAE8DF52862DB8D76E256A8A0EB30D0E0D2DA95",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateLeibnizDependencyAudit5.log",
+      "dependencyAuditSha256": "6B66F39B70FE333D3ADE3F7DDA4DB004D071A51302FAAE74A0246998148C0169",
+      "dependencyAuditSourceSha256": "E4937D5ECC07D668DBD2924CDC9EFA3D57335160CA3E958136C57950391CC412",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_leibniz",
+        "Dubon2026.SourceCurve.ResidueTrace.piRestrict",
+        "Dubon2026.SourceCurve.ResidueTrace.epsRestrict"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> the exact actual local Tate-residue Leibniz rule",
+      "discharged": "At every literal modular coefficient-field place the actual Tate residue satisfies the differential Leibniz identity. The operator defect is a proved sum of four commutators with finite-rank factors, and cyclicity kills every error trace. All multiplication-defect, principal-part and Tate-commutator finiteness inputs are derived, so no such input remains a parameter of the actual-field theorem.",
+      "boundary": "Scratch only; production promotion and verification pending. Bilinearity, factorization through actual differentials and actual residue/trace compatibility remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required, followed by original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-tate-leibniz-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5C82A2EB606202FDB5D824C05D2EE13666FE130AACD3B40FC62BF0B8F1BF717F"
+    },
+    {
+      "recordedUTC": "2026-10-22T23:50:56.339900+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveLocalTateBilinear",
+        "SourceCurveResidueDual",
+        "SourceCurveLocalTateDerivation",
+        "SourceModularCoefficientTateDifferentials"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalTateBilinear.lean",
+          "sha256": "C7661A32D9FF2B61F7C26F4F1F3A2E91625142FBC4542FFDEE7042FEF7D37B9B",
+          "oleanSha256": "AC7EACA39F78FE77F8164E78A2B74912C7E3829CD0848A7674FC15131CD5A107"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveResidueDual.lean",
+          "sha256": "CC4493FA1C4FBEFF54D873AEAC8E16CA13314C832886967CDC42BB7BA691EF8F",
+          "oleanSha256": "36FEA51701B8DDF2F63AA50A687A711361E4F460090B3F56CB100B705C47E464"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalTateDerivation.lean",
+          "sha256": "79FCC1BE0219348DC9F881F386243FC9C950F57CB00C9893EE689941ED297E78",
+          "oleanSha256": "6A66FCAF6FA3D6A3318C78E5063C6839AC84695D9DC0436B4A572A43ADFAA9F9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientTateDifferentials.lean",
+          "sha256": "DFE448D04D385F247AB949D2E7823222BD8376F36FFCD8B74B24D4F74A0E88E2",
+          "oleanSha256": "44DD25EA7B24771D6A847343BAF3A4C609F2F5C9CB0DC90E45EF81CFB4C90596"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.tateComm_add_fst",
+        "Dubon2026.SourceCurve.Place.tateComm_add_snd",
+        "Dubon2026.SourceCurve.Place.tateComm_smul_fst",
+        "Dubon2026.SourceCurve.Place.tateComm_smul_snd",
+        "Dubon2026.SourceCurve.Place.tateResidue_add_fst",
+        "Dubon2026.SourceCurve.Place.tateResidue_add_snd",
+        "Dubon2026.SourceCurve.Place.tateResidue_smul_fst",
+        "Dubon2026.SourceCurve.Place.tateResidue_smul_snd",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_ext",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_smul_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_ksmul_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualScalarTower",
+        "Dubon2026.SourceCurve.Place.tateResidueDerivation_apply",
+        "Dubon2026.SourceCurve.Place.tateResidue_eq_differentialCoeff",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_differentialCoeff",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_canonical_differential",
+        "Dubon2026.SourceCurve.ResidueTrace.ResidueDual",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualAddCommGroup",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualKModule",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualLinearMap",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualFModule",
+        "Dubon2026.SourceCurve.Place.tateResidueFunctional",
+        "Dubon2026.SourceCurve.Place.tateResidueDerivation"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.tateComm_add_fst",
+        "Dubon2026.SourceCurve.Place.tateComm_add_snd",
+        "Dubon2026.SourceCurve.Place.tateComm_smul_fst",
+        "Dubon2026.SourceCurve.Place.tateComm_smul_snd",
+        "Dubon2026.SourceCurve.Place.tateResidue_add_fst",
+        "Dubon2026.SourceCurve.Place.tateResidue_add_snd",
+        "Dubon2026.SourceCurve.Place.tateResidue_smul_fst",
+        "Dubon2026.SourceCurve.Place.tateResidue_smul_snd",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_ext",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_smul_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_ksmul_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualScalarTower",
+        "Dubon2026.SourceCurve.Place.tateResidueDerivation_apply",
+        "Dubon2026.SourceCurve.Place.tateResidue_eq_differentialCoeff",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_differentialCoeff",
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_canonical_differential"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.ResidueDual",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualAddCommGroup",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualKModule",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualLinearMap",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualFModule",
+        "Dubon2026.SourceCurve.Place.tateResidueFunctional",
+        "Dubon2026.SourceCurve.Place.tateResidueDerivation"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateDifferentialsAudit4.log",
+      "logSha256": "96DC65E7485AD77DFB74FCBFC7BC9A2055ED249DB7F4D753C7032A92D6A30587",
+      "auditSha256": "BDEDC88F365E2AE4A87435573C55DBAAFA0253403AD221AF806A331E07E1900C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 47,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateDifferentialsDependencyAudit4.log",
+      "dependencyAuditSha256": "53118391E1C1F165C4FA5DC7E0EB68A74099978176CD93CA1A328D89F9BD30F3",
+      "dependencyAuditSourceSha256": "B96E7334621C8669C42B5E09C2C0ADC50A6A79DBEC8810321ED9C330BC8355A2",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_canonical_differential",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_smul_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDual_ksmul_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.ResidueDual",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualAddCommGroup",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualKModule",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualLinearMap",
+        "Dubon2026.SourceCurve.ResidueTrace.residueDualFModule",
+        "Dubon2026.SourceCurve.Place.tateResidueFunctional",
+        "Dubon2026.SourceCurve.Place.tateResidueDerivation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> the exact actual local Tate/differential/canonical-residue identity",
+      "discharged": "For every actual modular coefficient-field place the Tate pairing is bilinear and is exactly the residue-field trace of its existing canonical local residue of f dg. The actual residue derivation is constructed from the proved bilinearity and Leibniz rule with the function-field action on the dual by precomposition. The native universal property of Kaehler differentials gives the precise uniformizer-coefficient formula. Rational residues, nontrivial differentials and uniformizer generation are derived for the literal field.",
+      "boundary": "Scratch only; production promotion and verification pending. Actual field-trace compatibility across places and global residue vanishing remain required in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, the reverse genus bound, genus equality and place comparison remain required, followed by original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-tate-differentials-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F39BDFBCFF368853A2CF656BC0098B0F25774BFF6277B5940A57068A6456DFC7"
+    },
+    {
+      "recordedUTC": "2026-10-23T00:01:00.760106+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveFiniteRankTraceComparison",
+        "SourceCurveRetractionTrace",
+        "SourceCurveLocalRetractionTrace",
+        "SourceModularCoefficientRetractionTrace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteRankTraceComparison.lean",
+          "sha256": "9201DA670F40995F6FEE9395121BD68BB69BA9AC9B6AFAD4C6588C0F50088F8D",
+          "oleanSha256": "0DBE40F0B81DFE0F8D13DDE28B5DE3EB682DFAF215D6307BC6F7C8D1BA8491B1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRetractionTrace.lean",
+          "sha256": "6BB0CC520FC31AE984428B55E6775BB4A5309D89276E0B8FEA64AB188286530F",
+          "oleanSha256": "59A310B5C6DF5DCA439075DFF3A9277DA55A198FF7D9939139D66DA8592D425A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalRetractionTrace.lean",
+          "sha256": "100F137A9B86B75E50C006B84BB280911A0CABD326A302D990A6D5589373E917",
+          "oleanSha256": "511C3CECA4031F8028C22436A1AEBA18755FFB1EA99C69CAF1B6893F22A6A730"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientRetractionTrace.lean",
+          "sha256": "0544DE0BB3C6AB1960277EEA89B71244F47E7218B531282458FED34BABA4A0AA",
+          "oleanSha256": "2557B5FF0F0AC17276854182059BC57766213B2BF716E09A98A81B91D0EE38BE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_commutator_congr",
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd_sub_factor",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_projectedEnd_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd_eq_restrict",
+        "Dubon2026.SourceCurve.ResidueTrace.retraction_commutator_trace",
+        "Dubon2026.SourceCurve.Place.integralRetraction_apply",
+        "Dubon2026.SourceCurve.Place.finite_range_integralRetraction_principalPart",
+        "Dubon2026.SourceCurve.Place.tateResidue_integralRetraction",
+        "Dubon2026.SourceCurve.Place.tateResidue_eq_retraction_trace",
+        "Dubon2026.SourceFunctionField.coeff_canonicalResidue_retraction_trace",
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd",
+        "Dubon2026.SourceCurve.Place.integralRetraction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_commutator_congr",
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd_sub_factor",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_projectedEnd_sub",
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd_eq_restrict",
+        "Dubon2026.SourceCurve.ResidueTrace.retraction_commutator_trace",
+        "Dubon2026.SourceCurve.Place.integralRetraction_apply",
+        "Dubon2026.SourceCurve.Place.finite_range_integralRetraction_principalPart",
+        "Dubon2026.SourceCurve.Place.tateResidue_integralRetraction",
+        "Dubon2026.SourceCurve.Place.tateResidue_eq_retraction_trace",
+        "Dubon2026.SourceFunctionField.coeff_canonicalResidue_retraction_trace"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd",
+        "Dubon2026.SourceCurve.Place.integralRetraction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientRetractionTraceAudit4.log",
+      "logSha256": "A9BD4FE02899DE105B32F1D034E5BB4AC52FF20C390A00E88225E2E77109662D",
+      "auditSha256": "029C8C2F2E2688D28C73699C19ECD825929BFA0E1EF248FAD196EAE3BB932323",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientRetractionTraceDependencyAudit4.log",
+      "dependencyAuditSha256": "F8F7B9DD2106BE51A15FF127C150AEDD3D028039721D1376F80F2D15494964A3",
+      "dependencyAuditSourceSha256": "F61C5273D496C99960EA78538307347088B766E2E4565514DD277E068517C33E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_canonicalResidue_retraction_trace",
+        "Dubon2026.SourceCurve.ResidueTrace.projectedEnd",
+        "Dubon2026.SourceCurve.Place.integralRetraction"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> the finite commutator trace comparison for retractions onto actual local integral functions",
+      "discharged": "For the actual modular coefficient field, the canonical residue of f dg is computed by the finite commutator trace for any linear retraction onto its integral functions when g is integral. The changed commutator finite image is derived from finite principal parts and the proved canonical commutator. No changed-projector finiteness input is assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. Actual finite-extension integral bases and the comparison of field traces across places remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required, followed by original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-retraction-trace-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B35BD2B6E1EF021FFE4FAF8E6DBF30E8AC0F8746CEEFF71305933F75CEAA7104"
+    },
+    {
+      "recordedUTC": "2026-10-23T00:12:00.342917+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveFiniteRankTraceBlocks",
+        "SourceCurveMatrixCommutatorTrace",
+        "SourceCurveLocalMatrixTrace",
+        "SourceModularCoefficientMatrixTrace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteRankTraceBlocks.lean",
+          "sha256": "C10A6177BA26E645CDC3537889A3AFCFE4980D3BBF133F7D8F8BBC717982FD31",
+          "oleanSha256": "91368B0CCDD2C6A97448E9638016927594D7FC1441DC2CFD4BD07B0BB43E9E1C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveMatrixCommutatorTrace.lean",
+          "sha256": "C337F285CA0FBCBAC123CD1270926620D6D8FFBC5F8CFB706C0FBADF969045AA",
+          "oleanSha256": "0DAF9494D060E43A3F0601D656A5EB8912795CA6554773BDC92F8F6083B73857"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalMatrixTrace.lean",
+          "sha256": "6A58E2FB5DC32ED405A8EC709AB0B3767B09C338FAB0968CE3340C7E5A29457C",
+          "oleanSha256": "6BED90816032D59AC3F215FD1638EA5D85C19C5212197F4BFE7F79EDFDACA8B8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientMatrixTrace.lean",
+          "sha256": "5945BB0DC3D79C4D27D1B91C4E4B78F68532900A9931A32FF66DCBC302B98CC0",
+          "oleanSha256": "4A25CFFCA99E8C93B0A4EA47B169877ADB65E5AFEED96152A84D8DB4EE05D194"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_comp_middle",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_sum",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sum",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_single_block",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_blockSum",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd_commutator",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd_commutator_trace",
+        "Dubon2026.SourceCurve.Place.integralMatrixEnd_trace",
+        "Dubon2026.SourceFunctionField.coeff_canonicalResidue_matrix_trace",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd",
+        "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd",
+        "Dubon2026.SourceCurve.Place.integralMatrixEnd"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_comp_middle",
+        "Dubon2026.SourceCurve.ResidueTrace.finite_range_sum",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sum",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_single_block",
+        "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_blockSum",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd_apply",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd_commutator",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd_commutator_trace",
+        "Dubon2026.SourceCurve.Place.integralMatrixEnd_trace",
+        "Dubon2026.SourceFunctionField.coeff_canonicalResidue_matrix_trace"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd",
+        "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd",
+        "Dubon2026.SourceCurve.Place.integralMatrixEnd"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientMatrixTraceAudit4.log",
+      "logSha256": "5511F7B63341B1ED3AC1912CA367ADF2F30439DDFE2D9129B61172BD8ACBA316",
+      "auditSha256": "6B610B1A1B47CE8F4F41ADBCF9DE81F4166F460D84F3F0D27C5486C0408D0714",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 16,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientMatrixTraceDependencyAudit4.log",
+      "dependencyAuditSha256": "B348EF430D4631A4A548F4D733BC61034EF66EA0010C358A7505BB4146270B05",
+      "dependencyAuditSourceSha256": "8D5FC61D20FFC27274577636047E69B6B017ED957FD7C369F5ECF89471AA4B94",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_canonicalResidue_matrix_trace",
+        "Dubon2026.SourceCurve.ResidueTrace.blockEnd",
+        "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd",
+        "Dubon2026.SourceCurve.Place.integralMatrixEnd"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> the finite integral-coordinate matrix commutator and its literal matrix-trace residue",
+      "discharged": "The integral-coordinate matrix commutator has finite image and its trace equals the actual modular coefficient-field canonical residue of the literal matrix trace times dg. Finiteness of every entry commutator is derived from actual principal parts. Native finite-rank cyclicity kills every off-diagonal trace, and linearity sums the diagonal residues.",
+      "boundary": "Scratch only; production promotion and verification pending. Actual finite-extension integral bases and the comparison of field traces across places remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required, followed by original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-matrix-trace-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "018D1DE20767866E287EBFF442BA20B4ED992167AD4232181FD0E5596869DB7C"
+    },
+    {
+      "recordedUTC": "2026-10-23T00:22:51.207895+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurvePlaceCompletion",
+        "SourceCurveCompletionEmbeddingValuation",
+        "SourceCurveCompletionEmbedding",
+        "SourceCurveCompletionFinite",
+        "SourceCurveCompletionSeparable",
+        "SourceModularCoefficientCompletions"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePlaceCompletion.lean",
+          "sha256": "955F94BE74ACFD96EDCA0278D79A92FE574AF91D42A32FECB9829277229BE4AE",
+          "oleanSha256": "5D849D1BE3F1609AB5965028C4DA46B0A30D5DF9D25829A755373A3584473FB4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionEmbeddingValuation.lean",
+          "sha256": "3394262A654D960A17593D62ED8F5DD0F55610B3EA0B3D404EF4D671F93DD468",
+          "oleanSha256": "96F6329ED1C86EF650B17BA6A666547F837AA80B8069D642AC81F5F4CAF237A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionEmbedding.lean",
+          "sha256": "CB2139DC868B30483E80017324505ED6959504F14341E48DAEB201532FEA8E38",
+          "oleanSha256": "292363E3787CB85B4514F26AB1353B91CB8293012A546E1F505BA64FB568F70F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionFinite.lean",
+          "sha256": "0CE12E90932CB6FC3B06062381DECF69E9C1BB881689A15818AFD76343ACC1F1",
+          "oleanSha256": "0816884DC924C6E23F5CD2D3A25FAF47A57AA4D24B0EF9B4C9A756717327E11E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionSeparable.lean",
+          "sha256": "C95906205ECA727BEE59459041AD4B20BB39C82EDFD30EEF2F732EC7EED7BF81",
+          "oleanSha256": "935A07D61A598811C6A844538F57822C0578CB9BFB23208F0A92AF15A96876AE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientCompletions.lean",
+          "sha256": "16520468F249A59FADDFE58E2193024FAA1B776256058AD88FA5E0059516AD60",
+          "oleanSha256": "277DE6E7E2E75B6435951769594F282C04C8CA4894109EFD18901B0DD6DB1087"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.valued_completion_algebraMap",
+        "Dubon2026.SourceCurve.Place.completion_integer_iff",
+        "Dubon2026.SourceCurve.Place.completionIntegers_ne_top",
+        "Dubon2026.SourceCurve.Place.completionValuation_nontrivial",
+        "Dubon2026.SourceCurve.Place.completionPlace_integral_iff",
+        "Dubon2026.SourceCurve.Place.ramificationIndex_pos",
+        "Dubon2026.SourceCurve.Place.ramificationIndex_cast",
+        "Dubon2026.SourceCurve.Place.adicValuation_algebraMap",
+        "Dubon2026.SourceCurve.Place.valued_withValMapAlgebraMap",
+        "Dubon2026.SourceCurve.Place.uniformContinuous_withValMapAlgebraMap",
+        "Dubon2026.SourceCurve.Place.continuous_adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap_coe",
+        "Dubon2026.SourceCurve.Place.valued_adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap_algebraMap",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap_mem_integers",
+        "Dubon2026.SourceCurve.Place.algebraMap_completionExtension",
+        "Dubon2026.SourceCurve.Place.completionExtensionTower",
+        "Dubon2026.SourceCurve.Place.completionExtensionContinuousSMul",
+        "Dubon2026.SourceCurve.Place.completion_algebraMap_smul",
+        "Dubon2026.SourceCurve.Place.denseRange_completionLinearCombination",
+        "Dubon2026.SourceCurve.Place.completionLinearCombination_surjective",
+        "Dubon2026.SourceCurve.Place.finiteDimensional_completion",
+        "Dubon2026.SourceCurve.Place.isSeparable_algebraMap_completion",
+        "Dubon2026.SourceCurve.Place.isSeparable_completion",
+        "Dubon2026.SourceFunctionField.coeff_completion_finite_separable",
+        "Dubon2026.SourceCurve.Place.adicCompletion",
+        "Dubon2026.SourceCurve.Place.adicCompletionIntegers",
+        "Dubon2026.SourceCurve.Place.completionPlace",
+        "Dubon2026.SourceCurve.Place.ramificationIndex",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.completionExtensionAlgebra",
+        "Dubon2026.SourceCurve.Place.completionLinearCombination"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.valued_completion_algebraMap",
+        "Dubon2026.SourceCurve.Place.completion_integer_iff",
+        "Dubon2026.SourceCurve.Place.completionIntegers_ne_top",
+        "Dubon2026.SourceCurve.Place.completionValuation_nontrivial",
+        "Dubon2026.SourceCurve.Place.completionPlace_integral_iff",
+        "Dubon2026.SourceCurve.Place.ramificationIndex_pos",
+        "Dubon2026.SourceCurve.Place.ramificationIndex_cast",
+        "Dubon2026.SourceCurve.Place.adicValuation_algebraMap",
+        "Dubon2026.SourceCurve.Place.valued_withValMapAlgebraMap",
+        "Dubon2026.SourceCurve.Place.uniformContinuous_withValMapAlgebraMap",
+        "Dubon2026.SourceCurve.Place.continuous_adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap_coe",
+        "Dubon2026.SourceCurve.Place.valued_adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap_algebraMap",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap_mem_integers",
+        "Dubon2026.SourceCurve.Place.algebraMap_completionExtension",
+        "Dubon2026.SourceCurve.Place.completionExtensionTower",
+        "Dubon2026.SourceCurve.Place.completionExtensionContinuousSMul",
+        "Dubon2026.SourceCurve.Place.completion_algebraMap_smul",
+        "Dubon2026.SourceCurve.Place.denseRange_completionLinearCombination",
+        "Dubon2026.SourceCurve.Place.completionLinearCombination_surjective",
+        "Dubon2026.SourceCurve.Place.finiteDimensional_completion",
+        "Dubon2026.SourceCurve.Place.isSeparable_algebraMap_completion",
+        "Dubon2026.SourceCurve.Place.isSeparable_completion",
+        "Dubon2026.SourceFunctionField.coeff_completion_finite_separable"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.adicCompletion",
+        "Dubon2026.SourceCurve.Place.adicCompletionIntegers",
+        "Dubon2026.SourceCurve.Place.completionPlace",
+        "Dubon2026.SourceCurve.Place.ramificationIndex",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.completionExtensionAlgebra",
+        "Dubon2026.SourceCurve.Place.completionLinearCombination"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionsAudit6.log",
+      "logSha256": "03F950603ED3267E23920F5697506BF6A8E80EB256974DB266F6364EF96A0184",
+      "auditSha256": "5B2ABAFDBB84C501765C8372836FD28B8CCE91E69246F2B6D636939456C866C6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 67,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionsDependencyAudit6.log",
+      "dependencyAuditSha256": "137AC95DB2400B4A18C015B316ABF9E60701E2648D83011CB457BA24CB20A6A9",
+      "dependencyAuditSourceSha256": "765B0646B22D564519D2A29C5F26855F13A72A23C9D0E7D5F259E838BF17F496",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_completion_finite_separable",
+        "Dubon2026.SourceCurve.Place.adicCompletion",
+        "Dubon2026.SourceCurve.Place.adicCompletionIntegers",
+        "Dubon2026.SourceCurve.Place.completionPlace",
+        "Dubon2026.SourceCurve.Place.ramificationIndex",
+        "Dubon2026.SourceCurve.Place.adicCompletionComap",
+        "Dubon2026.SourceCurve.Place.completionExtensionAlgebra",
+        "Dubon2026.SourceCurve.Place.completionLinearCombination"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> the actual completed extension and its derived finite degree and separability",
+      "discharged": "For the actual modular coefficient field over perfect constants, every place completion is finite and separable over its literal j-coordinate completion. The original embedding is continuously extended and its ramification law proved. The original finite basis spans densely after completion and native finite-dimensional closedness proves full span. Separability is proved from the native separable closure of those spanning elements. The actual modular finite-degree and separability inputs are derived.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual integral-closure comparison and integral basis of the completed extension, residue compatibility with original fields and the trace comparison across places remain required. They serve global residue vanishing in residue characteristic, canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-completions-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5D63D4895A684D029BA14125AFDABB7771D60DB669C31C656EB304C8D0016A3E"
+    },
+    {
+      "recordedUTC": "2026-10-23T00:40:11.814981+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveCompletionNorm",
+        "SourceCurveCompletionIntegralAlgebra",
+        "SourceCurveCompletionIntegrality",
+        "SourceCurveCompletionIntegralBasis",
+        "SourceModularCoefficientIntegralBasis"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionNorm.lean",
+          "sha256": "15830D7310674FB520408ED80B743AF8CA0CF81620CA3B11B8EC780F2CE69F23",
+          "oleanSha256": "B99871A1D208DB1D2C91B6ED3D265012FC23900E010F021061ACF7E025321EE8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionIntegralAlgebra.lean",
+          "sha256": "FAE45154DE3E2FDDCA6F32B1AA2190BF7B11A0F8DFA1885E173F45326DF63ABD",
+          "oleanSha256": "1CF4DEB0F2980B7BC8F21053BFFE06696CE52FF9E550F8B952BFE983F37A0FE4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionIntegrality.lean",
+          "sha256": "96BB607FD9727915F923C79DADD2C180ACD0DB31840186F3E014A2063033F033",
+          "oleanSha256": "1DEC5EB5619D7FB3A6FA55D5C4F728A2990C25A552A736668C874B51F9113A0C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCompletionIntegralBasis.lean",
+          "sha256": "F948D3536E6AAF9578B6CD9973BFF1B734403388BDF0729A1FEA3B8FA348791D",
+          "oleanSha256": "AFA533521DDB020B67621FAE3C87C7124662AF9C093C95EA7F5B1D56151360C3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCoefficientIntegralBasis.lean",
+          "sha256": "22289C926378961E1ADE99B1D6A531D5F8733958A95D1FAB21CC1B3100C4D87E",
+          "oleanSha256": "1DD25F122DFD3B33A8255077ECEA80CEFFC4EB54F41E2DD71D97C6D29DF05D76"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.completion_norm_eq",
+        "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue_extends",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap_coe",
+        "Dubon2026.SourceCurve.Place.completionBaseIntegersTower",
+        "Dubon2026.SourceCurve.Place.completionIntegersTower",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap_injective",
+        "Dubon2026.SourceCurve.Place.torsionFree_completionIntegers",
+        "Dubon2026.SourceCurve.Place.isIntegral_completionIntegers",
+        "Dubon2026.SourceCurve.Place.isIntegralClosure_completionIntegers",
+        "Dubon2026.SourceCurve.Place.completionIntegers_finite_free",
+        "Dubon2026.SourceCurve.Place.completionIntegers_isLocalization",
+        "Dubon2026.SourceCurve.Place.exists_completion_integral_basis",
+        "Dubon2026.SourceCurve.Place.completionIntegralBasis_nonempty",
+        "Dubon2026.SourceFunctionField.coeff_completion_integral_basis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis_mem",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mem_iff",
+        "Dubon2026.SourceCurve.Place.completionRankOne",
+        "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap",
+        "Dubon2026.SourceCurve.Place.completionIntegersAlgebra",
+        "Dubon2026.SourceCurve.Place.completionBaseIntegersAlgebra",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mk"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.completion_norm_eq",
+        "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue_extends",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap_coe",
+        "Dubon2026.SourceCurve.Place.completionBaseIntegersTower",
+        "Dubon2026.SourceCurve.Place.completionIntegersTower",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap_injective",
+        "Dubon2026.SourceCurve.Place.torsionFree_completionIntegers",
+        "Dubon2026.SourceCurve.Place.isIntegral_completionIntegers",
+        "Dubon2026.SourceCurve.Place.isIntegralClosure_completionIntegers",
+        "Dubon2026.SourceCurve.Place.completionIntegers_finite_free",
+        "Dubon2026.SourceCurve.Place.completionIntegers_isLocalization",
+        "Dubon2026.SourceCurve.Place.exists_completion_integral_basis",
+        "Dubon2026.SourceCurve.Place.completionIntegralBasis_nonempty",
+        "Dubon2026.SourceFunctionField.coeff_completion_integral_basis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis_mem",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mem_iff"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.completionRankOne",
+        "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap",
+        "Dubon2026.SourceCurve.Place.completionIntegersAlgebra",
+        "Dubon2026.SourceCurve.Place.completionBaseIntegersAlgebra",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mk"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientIntegralBasisAudit5.log",
+      "logSha256": "13F10318FE1554FE7AC186334B3FDDC101DFD599EFD8A53E9BDEFDD3DCC905C3",
+      "auditSha256": "017C17871FE38DACA9DB54E255A3D56D1B6333384E18BD8CFF99F1455B960906",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 49,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientIntegralBasisDependencyAudit5.log",
+      "dependencyAuditSha256": "5D01BACCF945E72EE9E4EF3FC0DEFD57CCCACF35D9BA4A112168D3DF49850FE2",
+      "dependencyAuditSourceSha256": "1E5CB0777E8B892A6501ACD446AC182F8A54A691E19B953A247BF0015609EBBE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_completion_integral_basis",
+        "Dubon2026.SourceCurve.Place.completionRankOne",
+        "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue",
+        "Dubon2026.SourceCurve.Place.completionIntegersComap",
+        "Dubon2026.SourceCurve.Place.completionIntegersAlgebra",
+        "Dubon2026.SourceCurve.Place.completionBaseIntegersAlgebra",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis",
+        "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mk"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> canonical degree -> global residue vanishing -> residue/trace compatibility -> the actual completed integral closure and its constructed integral basis",
+      "discharged": "Every actual modular coefficient-field completion over its j-coordinate completion has a constructed field basis contained in the actual integral ring; membership in that ring is equivalent to integrality of every basis coordinate. The normalized extension absolute value and native spectral norm prove integral closure. Native finiteness and torsion-free freeness over the actual discrete valuation ring, followed by localization, construct the basis. The actual consumer derives finite degree and separability and accepts no integral-basis or integral-closure assumption.",
+      "boundary": "Scratch only; production promotion and verification pending. Compatibility with original residues and the trace comparison across places remain required for global residue vanishing, canonical degree, exceptional fibers including wild characteristics two and three, reverse genus, genus equality and place comparison. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-integral-basis-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5EE5EAA55CF7BA137647EA4CDB5E2F316032AFF4EF18C38E9EE26172A6B07F03"
+    }
+  ],
+  "reviews": [
+    "Tools/source-coefficient-tate-finite-7-reuse-review-20261022.json",
+    "Tools/source-coefficient-tate-agreement-4-reuse-review-20261022.json",
+    "Tools/source-coefficient-tate-leibniz-5-reuse-review-20261022.json",
+    "Tools/source-coefficient-tate-differentials-4-reuse-review-20261022.json",
+    "Tools/source-coefficient-retraction-trace-4-reuse-review-20261022.json",
+    "Tools/source-coefficient-matrix-trace-4-reuse-review-20261022.json",
+    "Tools/source-coefficient-completions-6-reuse-review-20261022.json",
+    "Tools/source-coefficient-integral-basis-5-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6572": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateFiniteDependencyAudit7Production6572.log",
+        "sha256": "0F73FF3E1B9ACEE5028CF97E2F245F1AD318C92DEC323D69E189A4CCB851BD1F",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_finite_range_tate_commutator",
+          "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_conj",
+          "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_sub",
+          "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_smul",
+          "Dubon2026.SourceCurve.ResidueTrace.finrankTrace_zero",
+          "Dubon2026.SourceCurve.Place.tateProj_idem",
+          "Dubon2026.SourceCurve.ResidueTrace.finrankTrace",
+          "Dubon2026.SourceCurve.ResidueTrace.tateComm",
+          "Dubon2026.SourceCurve.ResidueTrace.tateCommRestrict",
+          "Dubon2026.SourceCurve.ResidueTrace.tateCommTrace",
+          "Dubon2026.SourceCurve.Place.principalPartLift",
+          "Dubon2026.SourceCurve.Place.principalPart",
+          "Dubon2026.SourceCurve.Place.tateProj",
+          "Dubon2026.SourceCurve.Place.tateResidue"
+        ],
+        "sourceSha256": "EAFD0B6F5B8004BB69252CB08271355C38CC44D5FE79DB10FBB29C5506395DD5"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateAgreementDependencyAudit4Production6572.log",
+        "sha256": "B9F78BB8866421B30FFB01B0F03DDCF71FF749B4B56A4808D2003FF2B7C62767",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_trace_canonicalResidue_eq_tateResidue",
+          "Dubon2026.SourceCurve.ResidueTrace.finite_range_smulRight"
+        ],
+        "sourceSha256": "784E00761CF5E75E41A11052AA2FBF803BDF82E837B520D724AF86EA476173B6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateLeibnizDependencyAudit5Production6572.log",
+        "sha256": "6B66F39B70FE333D3ADE3F7DDA4DB004D071A51302FAAE74A0246998148C0169",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_tateResidue_leibniz",
+          "Dubon2026.SourceCurve.ResidueTrace.piRestrict",
+          "Dubon2026.SourceCurve.ResidueTrace.epsRestrict"
+        ],
+        "sourceSha256": "EDB30B687A38863FB89C72A5AB0439FDCC693E78156B58B33258DD26D047109E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientTateDifferentialsDependencyAudit4Production6572.log",
+        "sha256": "53118391E1C1F165C4FA5DC7E0EB68A74099978176CD93CA1A328D89F9BD30F3",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_tateResidue_eq_canonical_differential",
+          "Dubon2026.SourceCurve.ResidueTrace.residueDual_smul_apply",
+          "Dubon2026.SourceCurve.ResidueTrace.residueDual_ksmul_apply",
+          "Dubon2026.SourceCurve.ResidueTrace.ResidueDual",
+          "Dubon2026.SourceCurve.ResidueTrace.residueDualAddCommGroup",
+          "Dubon2026.SourceCurve.ResidueTrace.residueDualKModule",
+          "Dubon2026.SourceCurve.ResidueTrace.residueDualLinearMap",
+          "Dubon2026.SourceCurve.ResidueTrace.residueDualFModule",
+          "Dubon2026.SourceCurve.Place.tateResidueFunctional",
+          "Dubon2026.SourceCurve.Place.tateResidueDerivation"
+        ],
+        "sourceSha256": "82CBA8D3F27D75B1D16C793A415FBDD2812F5981FDFC12E14D7041C0B7F7F856"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientRetractionTraceDependencyAudit4Production6572.log",
+        "sha256": "F8F7B9DD2106BE51A15FF127C150AEDD3D028039721D1376F80F2D15494964A3",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_canonicalResidue_retraction_trace",
+          "Dubon2026.SourceCurve.ResidueTrace.projectedEnd",
+          "Dubon2026.SourceCurve.Place.integralRetraction"
+        ],
+        "sourceSha256": "0E6BB5A930A77724B57F0FA252AD919000CD247AAD85B291C1F8FF4883505E1B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientMatrixTraceDependencyAudit4Production6572.log",
+        "sha256": "B348EF430D4631A4A548F4D733BC61034EF66EA0010C358A7505BB4146270B05",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_canonicalResidue_matrix_trace",
+          "Dubon2026.SourceCurve.ResidueTrace.blockEnd",
+          "Dubon2026.SourceCurve.ResidueTrace.diagonalEnd",
+          "Dubon2026.SourceCurve.Place.integralMatrixEnd"
+        ],
+        "sourceSha256": "0C332D4C0A738723153BE06AD3F262B5170A93EA71E46CB77A66A90725F50925"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionsDependencyAudit6Production6572.log",
+        "sha256": "137AC95DB2400B4A18C015B316ABF9E60701E2648D83011CB457BA24CB20A6A9",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_completion_finite_separable",
+          "Dubon2026.SourceCurve.Place.adicCompletion",
+          "Dubon2026.SourceCurve.Place.adicCompletionIntegers",
+          "Dubon2026.SourceCurve.Place.completionPlace",
+          "Dubon2026.SourceCurve.Place.ramificationIndex",
+          "Dubon2026.SourceCurve.Place.adicCompletionComap",
+          "Dubon2026.SourceCurve.Place.completionExtensionAlgebra",
+          "Dubon2026.SourceCurve.Place.completionLinearCombination"
+        ],
+        "sourceSha256": "4F77F1BE46D4F97F05FB559E76825F1138564924408D4896E1353AD4FAF81F2B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientIntegralBasisDependencyAudit5Production6572.log",
+        "sha256": "5D01BACCF945E72EE9E4EF3FC0DEFD57CCCACF35D9BA4A112168D3DF49850FE2",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_completion_integral_basis",
+          "Dubon2026.SourceCurve.Place.completionRankOne",
+          "Dubon2026.SourceCurve.Place.completionRelativeAbsoluteValue",
+          "Dubon2026.SourceCurve.Place.completionIntegersComap",
+          "Dubon2026.SourceCurve.Place.completionIntegersAlgebra",
+          "Dubon2026.SourceCurve.Place.completionBaseIntegersAlgebra",
+          "Dubon2026.SourceCurve.Place.CompletionIntegralBasis",
+          "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.basis",
+          "Dubon2026.SourceCurve.Place.CompletionIntegralBasis.mk"
+        ],
+        "sourceSha256": "E30EA9E5FBA6F6AB646998B6C0648692568EF5E895EB309DB89549B1A4E3155D"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceProductionAudit6572.log",
+    "sha256": "10A17C987C09EA42F0259DFF04C58B73B1BF66B97A1734935EABF15EC43F9EB8",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-local-trace-production-build-6572.log",
+    "aggregateSha256": "FFC3DFAF6C7A1A37D8754A198D41D3E38AE7740C8212BBD0CA6820DEE71707D8",
+    "productionModules": 6572,
+    "incrementModules": 39,
+    "axiomChecks": 172,
+    "exhaustiveIncrementTheorems": 268,
+    "linterScopes": 39,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 269,
+    "productionReuse": "Only scratch import names are qualified; complete mathematical statements and proof bodies are retained. Actual finite-rank commutators, residues, completions, valuation rings and integral bases retain their literal definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 269,
+      "scratchDistinct": 269,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 268,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+          {
+            "scope": "SourceCoefficientLocalTraceScratchOwnership237For6572",
+            "module": "Dubon2026.SourceCurveCompletionEmbeddingValuation"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveFiniteRankTrace",
+            "SourceCurveFiniteRankTraceLinear",
+            "SourceCurveTateCommutator",
+            "SourceCurvePoleClassSpan",
+            "SourceCurvePoleProjection",
+            "SourceCurveTateCommutatorFinite",
+            "SourceModularCoefficientTateResidues"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership231For6572.log",
+            "sha256": "264F318197135842C7B88E07D5D2D5505AF8B6247A5CA36E40B62A5349FAA5FB",
+            "sourceSha256": "4373AC5425BCCFBAA95B19FCE9D7526685EED5DA9A80572B316ABA7748D48906"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceOne",
+            "SourceCurveTateUniformizerProjection",
+            "SourceCurveTateResidueAgreement",
+            "SourceModularCoefficientTateAgreement"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership232For6572.log",
+            "sha256": "2201B2FD4C56B08E3638FF1E396FA4BC2651CB8E519502499C4D01CE764E2D8B",
+            "sourceSha256": "E2C466DD30C1EED9B47A6B0A708AE854A405B9375838F27076C31084D1E46304"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceAdd",
+            "SourceCurveProjectedMultiplication",
+            "SourceCurveTateLeibniz",
+            "SourceCurveLocalTateLeibniz",
+            "SourceModularCoefficientTateLeibniz"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership233For6572.log",
+            "sha256": "5634A9817C8BE1735B2A816342E1B5BE3D9B39F2FDCBFAF85260CA8D27210737",
+            "sourceSha256": "FB385CEECC3D9239EF7E56DFC885CF7A30C954E2AA8787BDB328EDF89C9A19DF"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveLocalTateBilinear",
+            "SourceCurveResidueDual",
+            "SourceCurveLocalTateDerivation",
+            "SourceModularCoefficientTateDifferentials"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership234For6572.log",
+            "sha256": "6C97E92D894F533DB4A4D1C44A6E45A725E9AAFB50E7BF3BF6EDD5D77A95AE62",
+            "sourceSha256": "B8E86384B082DA9454E4E8EE5436073029F412AA576D00D49773F2096255D1EA"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceComparison",
+            "SourceCurveRetractionTrace",
+            "SourceCurveLocalRetractionTrace",
+            "SourceModularCoefficientRetractionTrace"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership235For6572.log",
+            "sha256": "EB2144C70196521934B51A627E0A2693032FB3BE87374953302C158B4EE057A2",
+            "sourceSha256": "CC1B05798800E74990147EDFE2474CCACBF1109AC17EC5C3A368FACF28948B5C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceBlocks",
+            "SourceCurveMatrixCommutatorTrace",
+            "SourceCurveLocalMatrixTrace",
+            "SourceModularCoefficientMatrixTrace"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership236For6572.log",
+            "sha256": "0A205D1569CBC80809D593FC8E96E45D0A5E7420375FCD071A907D9C59BF0FF8",
+            "sourceSha256": "7F0698B180A8837775DC6275F6C35D23F52BE7DBA941877BE542B1B2443FA242"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurvePlaceCompletion",
+            "SourceCurveCompletionEmbeddingValuation",
+            "SourceCurveCompletionEmbedding",
+            "SourceCurveCompletionFinite",
+            "SourceCurveCompletionSeparable",
+            "SourceModularCoefficientCompletions"
+          ],
+          "count": 67,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership237For6572.log",
+            "sha256": "9E462D2D76C3C35E74DCE162647BFB07EDC4EB491B9D207035BA67C268899877",
+            "sourceSha256": "A1B6F1B517F19090CFAA894971F6D44A0E7E934491D6829ED7592A2C9BBC3CDD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionNorm",
+            "SourceCurveCompletionIntegralAlgebra",
+            "SourceCurveCompletionIntegrality",
+            "SourceCurveCompletionIntegralBasis",
+            "SourceModularCoefficientIntegralBasis"
+          ],
+          "count": 49,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership238For6572.log",
+            "sha256": "6F3AD5D92B5F1A688E47AD1E23E4983C507E64F21B944C73179583630E296698",
+            "sourceSha256": "F6C9D0D416B37BA9BE03B28FD6FFA035F65529F48E5625B646AB2DE171F8AE10"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceOwnership6572.log",
+        "sha256": "E600350251F9600267F8614AE055A4A92881CC942812AF3C31D250BD0EF8D118",
+        "sourceSha256": "0343C5FD191EC6214321A5A99C73F44B807A78D63845177C3D5E7CD481DC830D"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-173640-632.log",
+        "sha256": "6EEEB9E6B550DE6F29D61B3764E6B7C2BB321B8EF45783A9E92BAD85E9D16DB7"
+      }
+    },
+    "scratchToProductionCountReason": "All 269 distinct names from 269 exhaustive scratch checks are retained: 268 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Compatibility of the original and completed residues and the field-trace sum over places remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required for good reduction. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6572": {
+    "recordedUTC": "2026-10-23T03:33:55.666133+00:00",
+    "log": "logs/dubon-build-20261022-191344-253.log",
+    "sha256": "C41C251C234D1B8C7E9FA2F90B12051DE3B1988F09C802DDB402B500F6477500",
+    "bytes": 11263092,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6572,
+    "projectTheorems": 44770,
+    "registeredConsumers": 19918,
+    "registeredConstructions": 1565,
+    "declarations": 27293,
+    "generated": 25954,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_191040.log",
+    "foundationSha256": "4964DF567D4E54E26F783E8D8206AB89970455D0A401743B10C991B8BA5B2FE9",
+    "countReconciliation": {
+      "previousTheorems": 44502,
+      "focusedTheorems": 268,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 268,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceOwnership6572.log",
+      "ownershipSha256": "E600350251F9600267F8614AE055A4A92881CC942812AF3C31D250BD0EF8D118"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 269,
+      "scratchDistinct": 269,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 268,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+          {
+            "scope": "SourceCoefficientLocalTraceScratchOwnership237For6572",
+            "module": "Dubon2026.SourceCurveCompletionEmbeddingValuation"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveFiniteRankTrace",
+            "SourceCurveFiniteRankTraceLinear",
+            "SourceCurveTateCommutator",
+            "SourceCurvePoleClassSpan",
+            "SourceCurvePoleProjection",
+            "SourceCurveTateCommutatorFinite",
+            "SourceModularCoefficientTateResidues"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership231For6572.log",
+            "sha256": "264F318197135842C7B88E07D5D2D5505AF8B6247A5CA36E40B62A5349FAA5FB",
+            "sourceSha256": "4373AC5425BCCFBAA95B19FCE9D7526685EED5DA9A80572B316ABA7748D48906"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceOne",
+            "SourceCurveTateUniformizerProjection",
+            "SourceCurveTateResidueAgreement",
+            "SourceModularCoefficientTateAgreement"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership232For6572.log",
+            "sha256": "2201B2FD4C56B08E3638FF1E396FA4BC2651CB8E519502499C4D01CE764E2D8B",
+            "sourceSha256": "E2C466DD30C1EED9B47A6B0A708AE854A405B9375838F27076C31084D1E46304"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceAdd",
+            "SourceCurveProjectedMultiplication",
+            "SourceCurveTateLeibniz",
+            "SourceCurveLocalTateLeibniz",
+            "SourceModularCoefficientTateLeibniz"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership233For6572.log",
+            "sha256": "5634A9817C8BE1735B2A816342E1B5BE3D9B39F2FDCBFAF85260CA8D27210737",
+            "sourceSha256": "FB385CEECC3D9239EF7E56DFC885CF7A30C954E2AA8787BDB328EDF89C9A19DF"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveLocalTateBilinear",
+            "SourceCurveResidueDual",
+            "SourceCurveLocalTateDerivation",
+            "SourceModularCoefficientTateDifferentials"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership234For6572.log",
+            "sha256": "6C97E92D894F533DB4A4D1C44A6E45A725E9AAFB50E7BF3BF6EDD5D77A95AE62",
+            "sourceSha256": "B8E86384B082DA9454E4E8EE5436073029F412AA576D00D49773F2096255D1EA"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceComparison",
+            "SourceCurveRetractionTrace",
+            "SourceCurveLocalRetractionTrace",
+            "SourceModularCoefficientRetractionTrace"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership235For6572.log",
+            "sha256": "EB2144C70196521934B51A627E0A2693032FB3BE87374953302C158B4EE057A2",
+            "sourceSha256": "CC1B05798800E74990147EDFE2474CCACBF1109AC17EC5C3A368FACF28948B5C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteRankTraceBlocks",
+            "SourceCurveMatrixCommutatorTrace",
+            "SourceCurveLocalMatrixTrace",
+            "SourceModularCoefficientMatrixTrace"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership236For6572.log",
+            "sha256": "0A205D1569CBC80809D593FC8E96E45D0A5E7420375FCD071A907D9C59BF0FF8",
+            "sourceSha256": "7F0698B180A8837775DC6275F6C35D23F52BE7DBA941877BE542B1B2443FA242"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurvePlaceCompletion",
+            "SourceCurveCompletionEmbeddingValuation",
+            "SourceCurveCompletionEmbedding",
+            "SourceCurveCompletionFinite",
+            "SourceCurveCompletionSeparable",
+            "SourceModularCoefficientCompletions"
+          ],
+          "count": 67,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership237For6572.log",
+            "sha256": "9E462D2D76C3C35E74DCE162647BFB07EDC4EB491B9D207035BA67C268899877",
+            "sourceSha256": "A1B6F1B517F19090CFAA894971F6D44A0E7E934491D6829ED7592A2C9BBC3CDD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionNorm",
+            "SourceCurveCompletionIntegralAlgebra",
+            "SourceCurveCompletionIntegrality",
+            "SourceCurveCompletionIntegralBasis",
+            "SourceModularCoefficientIntegralBasis"
+          ],
+          "count": 49,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceScratchOwnership238For6572.log",
+            "sha256": "6F3AD5D92B5F1A688E47AD1E23E4983C507E64F21B944C73179583630E296698",
+            "sourceSha256": "F6C9D0D416B37BA9BE03B28FD6FFA035F65529F48E5625B646AB2DE171F8AE10"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalTraceOwnership6572.log",
+        "sha256": "E600350251F9600267F8614AE055A4A92881CC942812AF3C31D250BD0EF8D118",
+        "sourceSha256": "0343C5FD191EC6214321A5A99C73F44B807A78D63845177C3D5E7CD481DC830D"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-173640-632.log",
+        "sha256": "6EEEB9E6B550DE6F29D61B3764E6B7C2BB321B8EF45783A9E92BAD85E9D16DB7"
+      }
+    },
+    "scratchToProductionCountReason": "All 269 distinct names from 269 exhaustive scratch checks are retained: 268 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Compatibility of the original and completed residues and the field-trace sum over places remain required for global residue vanishing in residue characteristic. Canonical degree, exceptional-fiber counts including wild characteristics two and three, reverse genus, genus equality and place comparison remain required for good reduction. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

@@ -30390,6 +30390,2042 @@
     {
       "path": "Tools/source-original-hecke-realization.json",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularCuspEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularCuspGlobalGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedPlaceContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticPlaceContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticChartCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEvaluationRealizationGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRegularDifferentialPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspChartPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticAbelPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeAbelCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoHeckeCosetTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeCosetPrimitiveDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckePrimitiveTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeAbelComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspPeriodLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRamifiedChartLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteCuspClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteCuspClassLocal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePathModularPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodLatticeEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodHeckeCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodHeckeLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeAbelQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-cusp-period-9-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-abel-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-period-lattice-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-quotient-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-periods.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveOrderUnitPerturbation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePlaceSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFinitePlaceIndicators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrescribedOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrescribedPlaceOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAnalyticDivisorMoving.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeAnalyticDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPicardHeckePeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateHeckePeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateHeckeTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeBadPrimeCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoHeckeAllPrimeTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeAllPrimePrimitiveTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeAllPrimeAbel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimePeriodCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimePeriodLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimeHeckeAbelQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPicardPrimeHeckePeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTatePrimeHeckePeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTatePrimeHeckeTensor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimePeriodCommute.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimePicardCommute.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFullLatticeHeckeAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateHeckeWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoFullHeckeAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoHeckePerfectPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimeHeckeCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimeHeckeReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimeCosetPointTransition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimeScalarPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimeHeckeCoefficientChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimePeriodPair.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalParabolicCharacterSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralWordAdditiveNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAllPrimeCharacterWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeWordParabolicRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalHeckeWordRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeComplexIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeComplexBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralAlgebraBasisCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeBasisCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoCuspHeckeDual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralHeckeCuspBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-divisor-moving-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-picard-tate-hecke-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-all-prime-abel-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-prime-tate-hecke-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-full-hecke-words-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-weight-two-perfect-hecke-2-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-all-prime-period-pair-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-hecke-independence-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-cusp-basis-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-full-hecke.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeMatrixRationalSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeMatrixRankTwoDeterminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeMatrixRationalGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeMatrixPadicAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeMatrixPadicRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeMatrixRealRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodRealBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodHeckeWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPeriodHeckeMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFullHeckeMatrixRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoRealHeckeRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeightTwoDualRealGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspDualHeckeWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspPeriodDual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDualCoordinateTranspose.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspPeriodTranspose.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspRealHeckeMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeMatrixRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspRealCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeMatrixRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateBasisConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateHeckeMatrices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalTate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePrimeImageGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalTateRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalTatePrimeRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGeneratedHeckeLinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeLinearGaloisTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalTateGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRankTwoHeckeGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalTateContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRankTwoCoordinateTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalContinuousRankTwoGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspLatticeHeckeRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSurjectiveHeckeWordEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCuspHeckeWords.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLatticeCuspHeckeEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLatticeEigencharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCoordinateBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFaithfulMatrixBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMatrixAlgebraSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPadicEigencharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFinitePadicSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-hecke-matrix-descent-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-real-hecke-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-matrix-rank-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-rational-tate-rank-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-rank-two-galois-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-continuous-rank-two-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-lattice-eigencharacter-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-padic-specialization-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-rank-two-specialization.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceExplicitHeckeMatrixDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceExplicitRankTwoCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExplicitHeckeRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceContinuousHeckeCoordinateConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalExplicitHeckeGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRankTwoCoefficientSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveCoefficientGaloisConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveTateSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveGaloisRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicCoefficientLocalStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicIntegerCoefficientMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralImageLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralTensorImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralLatticeRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpecializationInvariantLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicSpecializationLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicIntegralRealizationConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveIntegralLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLatticeFractionCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceStableLatticeGaloisCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceStableLatticeFieldComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceStableLatticeContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicResidueCharacteristic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLocalFieldResidueReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceStableLatticeResidualRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicResidualRealizationConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePadicResidualLocalConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveResidualRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-primitive-galois-9-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-integral-lattice-9-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-residual-realization-10-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-residual.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularFunctionFieldCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientFieldComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralModularCoefficientAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularRelationsInResidueCharacteristic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientFieldFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientFiniteCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoordinateNotPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePerfectCoordinateFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePerfectSeparatingCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientSeparability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteChartFunctionSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingCoordinateSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveIntegralCoordinateFunctionSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingFunctionSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientDivisorSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingCoordinateDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingPrincipalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingPrincipalDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalSeparatingCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalPrincipalDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalPolynomialPrincipalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalClosedPrincipalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteCoordinateResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrincipalDivisorTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrincipalExtensionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGaloisPrincipalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveMappedSeparatingCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalExtensionDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveClosedPrincipalDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveClosedSeparatingPrincipalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientPolynomialIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientPolynomialDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientPrimeObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPowerSeriesFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaFirstCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaFrobeniusPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaPowerObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDeltaPowerObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBernoulliPrimeDenominator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralEisensteinCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralEisensteinSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralEisensteinReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHasseCoefficientExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHassePolynomialDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHasseIntegralInput.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHasseCoefficientTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSmallCharacteristicHasse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHasseResidueIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeJOrbitFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHassePolynomialRootCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHasseOneRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaProductTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaCyclotomicProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaProductRegrouping.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaNormPowerSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaNormLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDeltaNormBookkeeping.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentTwistMonomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDiscriminantPrimeNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHassePolynomialTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHassePolynomialClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHasseEndgame.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeJPositiveCharacteristic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeJResidueNonmembership.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeResidueRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimePolynomialRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimeExactDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueRelationDegreeBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueReversePrimeDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueExpansionFields.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueTwistedPrimeRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueTwoPrimeGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueDivisorPrimeGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueMixedPrimePowerGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueMixedPrimePowerFields.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueAdjacentPrimeGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueReverseGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueRelativeDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueMixedDegreeRecurrence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimePowerDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueJMinimalPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueExpandedMinimalPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueExpandedConjugateComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueSimpleEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueConjugateEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimeRelationCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimeMinpolyStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimeReducedStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueRelativeRootTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueFieldTowerDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueEmbeddedConjugate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueReducedConjugateRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueIndexedPrimeStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueConjugateInduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueConjugateRootBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePredecessorGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueDivisorGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueGenerationInduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueConjugateRangeEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoprimePrimeImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueReducedPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoprimeNonmembership.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoprimeInduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueMixedPrimePowerDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueAllLevelInduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueAllLevelDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoefficientAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePrimitiveCoefficientScale.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueIntegralRelationTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResiduePowerCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueRationalDenominators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueClosedValuationField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueIntegralSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueOriginalSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-modular-coefficient-geometry-12-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-coefficient-divisor-support-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-rational-closed-principal-7-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-coefficient-curve-9-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-eta-obstruction-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-eisenstein-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hasse-integral-descent-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hasse-residue-identity-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hasse-orbit-count-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-discriminant-prime-norm-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hasse-polynomial-closure-2-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-prime-residue-nonmembership-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-prime-degree-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-reverse-prime-degree-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-mixed-generation-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-prime-power-degree-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-conjugate-foundations-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-conjugate-induction-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-generation-induction-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-coprime-induction-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-all-level-degree-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-integral-specialization-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-reduction-foundations.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussFractions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularPrimitiveScaling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularFiniteCoefficientSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularPrimitiveFractionForm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussValuationRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussResidueHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussResidueKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussConstants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussResidueImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGaussSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularResidueHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularReductionCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRegularProlongation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIndependent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionAdaptedBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionFrame.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionPolynomialCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionSubspaceBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularReductionDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIntegralPolynomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIntegralCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionFiniteIntegrality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionMinimalPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularIntegralMinimalPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionReciprocalPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionMinimalPolynomialDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionMonicEquation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionMonicOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionEquationSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionPoleCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionPoleSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularReductionPoleSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePrincipalGlobalConstants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingPoleDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingPolePackage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientGlobalSpaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientGenusMaximum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePositiveDivisorStabilization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularReductionGenusBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRepartitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRepartitionIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularReductionSourceGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingLocalFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientLocalFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientLocalDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDerivativeLowerOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientDerivativeOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparatingDifferentialSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCanonicalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientLocalResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientResidueFunctional.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientWeilRank.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-modular-gauss-valuation-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-gauss-residue-7-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-reduction-dimension-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-reduction-integrality-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-reduction-pole-space-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-reduction-genus-bound-10-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-local-geometry-7-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-residue-functional-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-reduction-geometry.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteRankTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteRankTraceLinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateCommutator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePoleClassSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePoleProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateCommutatorFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientTateResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteRankTraceOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateUniformizerProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateResidueAgreement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientTateAgreement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteRankTraceAdd.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveProjectedMultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateLeibniz.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalTateLeibniz.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientTateLeibniz.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalTateBilinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveResidueDual.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalTateDerivation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientTateDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteRankTraceComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRetractionTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalRetractionTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientRetractionTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteRankTraceBlocks.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveMatrixCommutatorTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalMatrixTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientMatrixTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePlaceCompletion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionEmbeddingValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionSeparable.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCompletions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionIntegralAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionIntegrality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionIntegralBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientIntegralBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-coefficient-tate-finite-7-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-tate-agreement-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-tate-leibniz-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-tate-differentials-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-retraction-trace-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-matrix-trace-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-completions-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-integral-basis-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-local-trace.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionResidueApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionResidueField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionPrincipalParts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionRetraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCompletionResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionTraceFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionTateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCompletionTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionIntegralCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionBasisRetraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionMatrixCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConjugateCommutator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionLocalFieldTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionTraceUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientLocalFieldTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionIdealPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionRamification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionResidueExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCompletionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberCompletions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberCompletionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCompletionSpectralNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberCompletionKernels.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberCompletionProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveProductFieldTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberCompletionTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCompletionSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberTateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberResidueConstants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateCanonicalSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGlobalTateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientTateSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientGlobalTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveParameterPoles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveParameterApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveParameterPoleSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveParameterProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveParameterResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveParameterTateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalParameterTateTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateInverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGeneratorOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTateGlobalFunctional.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGeneratorPowerResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGeneratorGlobalResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAdjoinGeneratorResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientGlobalResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientGlobalFunctional.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientResidueDuality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientRiemannRoch.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveEffectiveDivisorSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientHurwitzDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientHurwitzBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientJFiberDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientJDegreeSums.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientHurwitzNumeric.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientSlotEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientSlotPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientSlotRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientSlotWidth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCuspWidth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCuspDistinction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCuspFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCuspCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientHurwitzCuspBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientTameGenusCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientWildGenusCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientSimplePresentation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientCoordinateSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientHomSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientRootEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralJCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceExactIntegralModularPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoefficientIntegralMinimalPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientModularRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-coefficient-completion-residues-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-completion-trace-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-local-field-trace-7-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-completion-degree-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-completion-sum-8-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-global-trace-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-rational-parameter-trace-7-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-global-residues-11-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-hurwitz-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-degree-sums-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-cusp-width-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-cusp-count-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-genus-criteria-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-embedding-roots-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-modular-roots-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-coefficient-global-residues.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -36662,7 +38698,431 @@
     "SourceHeckeCosetFiberCount",
     "SourceOriginalHeckeFiberOrbits",
     "SourceOriginalHeckeCosetMultiplicity",
-    "SourceOriginalHeckeAnalyticDivisor"
+    "SourceOriginalHeckeAnalyticDivisor",
+    "SourceOriginalRegularCuspEquiv",
+    "SourceOriginalRegularCuspGlobalGerms",
+    "SourceOriginalRamifiedPlaceContinuity",
+    "SourceOriginalAnalyticPlaceContinuity",
+    "SourceOriginalAnalyticChartCoordinate",
+    "SourceOriginalEvaluationRealizationGerms",
+    "SourceOriginalRegularDifferentialPullback",
+    "SourceOriginalCuspChartPrimitives",
+    "SourceOriginalCuspPathIntegral",
+    "SourceOriginalAnalyticAbelPeriods",
+    "SourceOriginalHeckeAbelCosets",
+    "SourceWeightTwoHeckeCosetTrace",
+    "SourceOriginalHeckeCosetPrimitiveDerivative",
+    "SourceOriginalHeckePrimitiveTrace",
+    "SourceOriginalHeckeAbelComparison",
+    "SourceOriginalCuspPeriodLattice",
+    "SourceOriginalRamifiedChartLift",
+    "SourceOriginalFiniteCuspClass",
+    "SourceOriginalFiniteCuspClassLocal",
+    "SourceOriginalFinitePathModularPeriods",
+    "SourceOriginalPeriodLatticeEquality",
+    "SourceOriginalPeriodHeckeCoordinates",
+    "SourceOriginalPeriodHeckeLattice",
+    "SourceOriginalHeckeAbelQuotient",
+    "SourceCurveOrderUnitPerturbation",
+    "SourceOriginalFinitePlaceSeparation",
+    "SourceCurveFinitePlaceIndicators",
+    "SourceCurvePrescribedOrders",
+    "SourceOriginalPrescribedPlaceOrders",
+    "SourceOriginalAnalyticDivisorMoving",
+    "SourceOriginalHeckeAnalyticDivisors",
+    "SourceOriginalPicardHeckePeriods",
+    "SourceOriginalTateHeckePeriods",
+    "SourceOriginalTateHeckeTensor",
+    "SourceHeckeBadPrimeCosets",
+    "SourceWeightTwoHeckeAllPrimeTrace",
+    "SourceOriginalHeckeAllPrimePrimitiveTrace",
+    "SourceOriginalHeckeAllPrimeAbel",
+    "SourceOriginalPrimePeriodCoordinates",
+    "SourceOriginalPrimePeriodLattice",
+    "SourceOriginalPrimeHeckeAbelQuotient",
+    "SourceOriginalPicardPrimeHeckePeriods",
+    "SourceOriginalTatePrimeHeckePeriods",
+    "SourceOriginalTatePrimeHeckeTensor",
+    "SourceOriginalPrimePeriodCommute",
+    "SourceOriginalPrimePicardCommute",
+    "SourceOriginalFullLatticeHeckeAlgebra",
+    "SourceOriginalTateHeckeWords",
+    "SourceWeightTwoFullHeckeAlgebra",
+    "SourceWeightTwoHeckePerfectPairing",
+    "SourceAllPrimeHeckeCharacters",
+    "SourceAllPrimeHeckeReflection",
+    "SourceAllPrimeCosetPointTransition",
+    "SourceAllPrimeScalarPeriods",
+    "SourceAllPrimeHeckeCoefficientChange",
+    "SourceAllPrimePeriodPair",
+    "SourceRationalParabolicCharacterSpan",
+    "SourceIntegralWordAdditiveNaturality",
+    "SourceAllPrimeCharacterWords",
+    "SourceHeckeWordParabolicRelations",
+    "SourceRationalHeckeWordRelations",
+    "SourceIntegralHeckeComplexIndependence",
+    "SourceIntegralHeckeComplexBasis",
+    "SourceIntegralAlgebraBasisCoordinates",
+    "SourceIntegralHeckeBasisCoordinates",
+    "SourceWeightTwoCuspHeckeDual",
+    "SourceIntegralHeckeCuspBasis",
+    "SourceHeckeMatrixRationalSpan",
+    "SourceHeckeMatrixRankTwoDeterminant",
+    "SourceHeckeMatrixRationalGenerators",
+    "SourceHeckeMatrixPadicAlgebra",
+    "SourceHeckeMatrixPadicRankTwo",
+    "SourceHeckeMatrixRealRank",
+    "SourceOriginalPeriodRealBasis",
+    "SourceOriginalPeriodHeckeWords",
+    "SourceOriginalPeriodHeckeMatrices",
+    "SourceOriginalFullHeckeMatrixRange",
+    "SourceWeightTwoRealHeckeRank",
+    "SourceWeightTwoDualRealGenerators",
+    "SourceCuspDualHeckeWords",
+    "SourceOriginalCuspPeriodDual",
+    "SourceDualCoordinateTranspose",
+    "SourceOriginalCuspPeriodTranspose",
+    "SourceOriginalCuspRealHeckeMatrix",
+    "SourceOriginalHeckeMatrixRank",
+    "SourceOriginalCuspRealCoordinates",
+    "SourceOriginalHeckeMatrixRankTwo",
+    "SourceTateBasisConjugation",
+    "SourceOriginalTateHeckeMatrices",
+    "SourceOriginalRationalTate",
+    "SourceHeckePrimeImageGeneration",
+    "SourceOriginalRationalTateRankTwo",
+    "SourceOriginalRationalTatePrimeRankTwo",
+    "SourceGeneratedHeckeLinearity",
+    "SourceHeckeLinearGaloisTransport",
+    "SourceOriginalRationalTateGalois",
+    "SourceOriginalRankTwoHeckeGalois",
+    "SourceOriginalRationalTateContinuity",
+    "SourceRankTwoCoordinateTopology",
+    "SourceOriginalContinuousRankTwoGalois",
+    "SourceOriginalCuspLatticeHeckeRelations",
+    "SourceSurjectiveHeckeWordEquiv",
+    "SourceIntegralCuspHeckeWords",
+    "SourceOriginalLatticeCuspHeckeEquiv",
+    "SourceOriginalLatticeEigencharacter",
+    "SourceIntegralCoordinateBaseChange",
+    "SourceFaithfulMatrixBaseChange",
+    "SourceMatrixAlgebraSpecialization",
+    "SourceOriginalPadicEigencharacter",
+    "SourceOriginalFinitePadicSpecialization",
+    "SourceExplicitHeckeMatrixDescent",
+    "SourceExplicitRankTwoCoordinates",
+    "SourceOriginalExplicitHeckeRankTwo",
+    "SourceContinuousHeckeCoordinateConsumer",
+    "SourceOriginalExplicitHeckeGalois",
+    "SourceRankTwoCoefficientSpecialization",
+    "SourcePrimitiveCoefficientGaloisConsumer",
+    "SourceOriginalPrimitiveTateSpecialization",
+    "SourceOriginalPrimitiveGaloisRealization",
+    "SourcePadicCoefficientLocalStructure",
+    "SourcePadicIntegerCoefficientMap",
+    "SourceIntegralImageLattice",
+    "SourceIntegralTensorImage",
+    "SourceIntegralLatticeRank",
+    "SourceSpecializationInvariantLattice",
+    "SourcePadicSpecializationLattice",
+    "SourcePadicIntegralRealizationConsumer",
+    "SourceOriginalPrimitiveIntegralLattice",
+    "SourceLatticeFractionCoordinates",
+    "SourceStableLatticeGaloisCoordinates",
+    "SourceStableLatticeFieldComparison",
+    "SourceStableLatticeContinuity",
+    "SourcePadicResidueCharacteristic",
+    "SourceLocalFieldResidueReduction",
+    "SourceStableLatticeResidualRealization",
+    "SourcePadicResidualRealizationConsumer",
+    "SourcePadicResidualLocalConsumer",
+    "SourceOriginalPrimitiveResidualRealization",
+    "SourceModularFunctionFieldCoefficients",
+    "SourceModularCoefficientFieldComparison",
+    "SourceIntegralModularCoefficientAlgebra",
+    "SourceModularRelationsInResidueCharacteristic",
+    "SourceModularCoefficientFieldFinite",
+    "SourceModularCoefficientFiniteCoordinates",
+    "SourceModularCoordinateNotPower",
+    "SourcePerfectCoordinateFrobenius",
+    "SourcePerfectSeparatingCoordinate",
+    "SourceModularCoefficientSeparability",
+    "SourceModularCoefficientDifferentials",
+    "SourceModularCoefficientResidue",
+    "SourceCurveFiniteChartFunctionSupport",
+    "SourceCurveSeparatingCoordinateSupport",
+    "SourceCurveIntegralCoordinateFunctionSupport",
+    "SourceCurveSeparatingFunctionSupport",
+    "SourceModularCoefficientDivisorSupport",
+    "SourceCurveSeparatingCoordinateDegree",
+    "SourceCurveSeparatingPrincipalDegree",
+    "SourceCurveSeparatingPrincipalDivisor",
+    "SourceRationalSeparatingCoordinates",
+    "SourceRationalPrincipalDivisor",
+    "SourceRationalPolynomialPrincipalDegree",
+    "SourceRationalClosedPrincipalDivisors",
+    "SourceCurveFiniteCoordinateResidues",
+    "SourceCurvePrincipalDivisorTransport",
+    "SourceCurvePrincipalExtensionDegree",
+    "SourceCurveGaloisPrincipalDegree",
+    "SourceCurveMappedSeparatingCoordinate",
+    "SourceCurveRationalExtensionDivisors",
+    "SourceCurveClosedPrincipalDescent",
+    "SourceCurveClosedSeparatingPrincipalDivisors",
+    "SourceModularCoefficientCurve",
+    "SourceModularCoefficientPolynomialIntegral",
+    "SourceModularCoefficientPolynomialDescent",
+    "SourceModularCoefficientPrimeObstruction",
+    "SourceIntegralPowerSeriesFrobenius",
+    "SourceEtaFirstCoefficient",
+    "SourceEtaFrobeniusPowers",
+    "SourceEtaPowerObstruction",
+    "SourceDeltaPowerObstruction",
+    "SourceBernoulliPrimeDenominator",
+    "SourceIntegralEisensteinCoefficients",
+    "SourceIntegralEisensteinSeries",
+    "SourceIntegralEisensteinReduction",
+    "SourceHasseCoefficientExpansion",
+    "SourceHassePolynomialDescent",
+    "SourceHasseIntegralInput",
+    "SourceHasseCoefficientTransport",
+    "SourceSmallCharacteristicHasse",
+    "SourceHasseResidueIdentity",
+    "SourcePrimeJOrbitFactorization",
+    "SourceHassePolynomialRootCount",
+    "SourceHasseOneRoot",
+    "SourceEtaProductTransport",
+    "SourceEtaCyclotomicProduct",
+    "SourceEtaProductRegrouping",
+    "SourceEtaNormPowerSeries",
+    "SourceEtaNormLaurent",
+    "SourceDeltaNormBookkeeping",
+    "SourceLaurentTwistMonomials",
+    "SourceDiscriminantPrimeNorm",
+    "SourceHassePolynomialTransport",
+    "SourceHassePolynomialClosure",
+    "SourceHasseEndgame",
+    "SourcePrimeJPositiveCharacteristic",
+    "SourcePrimeJResidueNonmembership",
+    "SourcePrimeResidueRelations",
+    "SourceResiduePrimePolynomialRoots",
+    "SourceResiduePrimeExactDegree",
+    "SourceResidueRelationDegreeBounds",
+    "SourceResidueReversePrimeDegree",
+    "SourceResidueExpansionFields",
+    "SourceResidueTwistedPrimeRelations",
+    "SourceResidueTwoPrimeGeneration",
+    "SourceResidueDivisorPrimeGeneration",
+    "SourceResidueMixedPrimePowerGenerators",
+    "SourceResidueMixedPrimePowerFields",
+    "SourceResidueAdjacentPrimeGeneration",
+    "SourceResidueReverseGeneration",
+    "SourceResidueRelativeDegree",
+    "SourceResidueMixedDegreeRecurrence",
+    "SourceResiduePrimePowerDegree",
+    "SourceResidueJMinimalPolynomial",
+    "SourceResidueExpandedMinimalPolynomial",
+    "SourceResidueExpandedConjugateComparison",
+    "SourceResidueSimpleEmbedding",
+    "SourceResidueConjugateEmbedding",
+    "SourceResiduePrimeRelationCompatibility",
+    "SourceResiduePrimeMinpolyStep",
+    "SourceResiduePrimeReducedStep",
+    "SourceResidueRelativeRootTransfer",
+    "SourceResidueFieldTowerDegree",
+    "SourceResidueEmbeddedConjugate",
+    "SourceResidueReducedConjugateRoot",
+    "SourceResidueIndexedPrimeStep",
+    "SourceResidueConjugateInduction",
+    "SourceResidueConjugateRootBounds",
+    "SourceResiduePredecessorGeneration",
+    "SourceResidueDivisorGeneration",
+    "SourceResidueGenerationInduction",
+    "SourceResidueConjugateRangeEmbedding",
+    "SourceResidueCoprimePrimeImage",
+    "SourceResidueReducedPolynomial",
+    "SourceResidueCoprimeNonmembership",
+    "SourceResidueCoprimeInduction",
+    "SourceResidueMixedPrimePowerDegree",
+    "SourceResidueAllLevelInduction",
+    "SourceResidueAllLevelDegree",
+    "SourceResidueCoefficientAlgebra",
+    "SourceResiduePrimitiveCoefficientScale",
+    "SourceResidueIntegralRelationTransfer",
+    "SourceResiduePowerCoordinates",
+    "SourceResidueRationalDenominators",
+    "SourceResidueClosedValuationField",
+    "SourceResidueIntegralSpecialization",
+    "SourceResidueOriginalSpecialization",
+    "SourceModularGaussFractions",
+    "SourceModularPrimitiveScaling",
+    "SourceModularFiniteCoefficientSpan",
+    "SourceModularPrimitiveFractionForm",
+    "SourceModularGaussValuationRing",
+    "SourceModularGaussResidueHom",
+    "SourceModularGaussResidueKernel",
+    "SourceModularGaussConstants",
+    "SourceModularGaussResidueImage",
+    "SourceModularGaussSurjectivity",
+    "SourceModularResidueHom",
+    "SourceModularReductionCoordinate",
+    "SourceCurveRegularProlongation",
+    "SourceReductionIndependent",
+    "SourceReductionAdaptedBasis",
+    "SourceReductionFrame",
+    "SourceReductionPolynomialCover",
+    "SourceReductionSubspaceBasis",
+    "SourceReductionDimension",
+    "SourceModularReductionDimension",
+    "SourceReductionIntegralPolynomials",
+    "SourceReductionIntegralCoordinates",
+    "SourceReductionFiniteIntegrality",
+    "SourceReductionMinimalPolynomial",
+    "SourceModularIntegralMinimalPolynomial",
+    "SourceReductionReciprocalPolynomial",
+    "SourceReductionMinimalPolynomialDegree",
+    "SourceReductionMonicEquation",
+    "SourceReductionMonicOrder",
+    "SourceReductionEquationSpecialization",
+    "SourceReductionPoleCharts",
+    "SourceReductionPoleSpace",
+    "SourceModularReductionPoleSpace",
+    "SourceCurvePrincipalGlobalConstants",
+    "SourceCurveSeparatingPoleDegree",
+    "SourceCurveSeparatingPolePackage",
+    "SourceModularCoefficientGlobalSpaces",
+    "SourceModularCoefficientGenusMaximum",
+    "SourceCurvePositiveDivisorStabilization",
+    "SourceModularReductionGenusBound",
+    "SourceCurveRepartitions",
+    "SourceCurveRepartitionIndex",
+    "SourceModularReductionSourceGenus",
+    "SourceCurveSeparatingLocalFinite",
+    "SourceModularCoefficientLocalFinite",
+    "SourceModularCoefficientLocalDifferentials",
+    "SourceCurveDerivativeLowerOrder",
+    "SourceModularCoefficientDerivativeOrders",
+    "SourceCurveSeparatingDifferentialSupport",
+    "SourceModularCoefficientCanonicalDivisors",
+    "SourceModularCoefficientLocalResidues",
+    "SourceModularCoefficientResidueFunctional",
+    "SourceModularCoefficientWeilRank",
+    "SourceCurveFiniteRankTrace",
+    "SourceCurveFiniteRankTraceLinear",
+    "SourceCurveTateCommutator",
+    "SourceCurvePoleClassSpan",
+    "SourceCurvePoleProjection",
+    "SourceCurveTateCommutatorFinite",
+    "SourceModularCoefficientTateResidues",
+    "SourceCurveFiniteRankTraceOne",
+    "SourceCurveTateUniformizerProjection",
+    "SourceCurveTateResidueAgreement",
+    "SourceModularCoefficientTateAgreement",
+    "SourceCurveFiniteRankTraceAdd",
+    "SourceCurveProjectedMultiplication",
+    "SourceCurveTateLeibniz",
+    "SourceCurveLocalTateLeibniz",
+    "SourceModularCoefficientTateLeibniz",
+    "SourceCurveLocalTateBilinear",
+    "SourceCurveResidueDual",
+    "SourceCurveLocalTateDerivation",
+    "SourceModularCoefficientTateDifferentials",
+    "SourceCurveFiniteRankTraceComparison",
+    "SourceCurveRetractionTrace",
+    "SourceCurveLocalRetractionTrace",
+    "SourceModularCoefficientRetractionTrace",
+    "SourceCurveFiniteRankTraceBlocks",
+    "SourceCurveMatrixCommutatorTrace",
+    "SourceCurveLocalMatrixTrace",
+    "SourceModularCoefficientMatrixTrace",
+    "SourceCurvePlaceCompletion",
+    "SourceCurveCompletionEmbeddingValuation",
+    "SourceCurveCompletionEmbedding",
+    "SourceCurveCompletionFinite",
+    "SourceCurveCompletionSeparable",
+    "SourceModularCoefficientCompletions",
+    "SourceCurveCompletionNorm",
+    "SourceCurveCompletionIntegralAlgebra",
+    "SourceCurveCompletionIntegrality",
+    "SourceCurveCompletionIntegralBasis",
+    "SourceModularCoefficientIntegralBasis",
+    "SourceCurveCompletionResidueApproximation",
+    "SourceCurveCompletionResidueField",
+    "SourceCurveCompletionPrincipalParts",
+    "SourceCurveCompletionRetraction",
+    "SourceModularCoefficientCompletionResidues",
+    "SourceCurveCompletionTraceFactor",
+    "SourceCurveCompletionTateTrace",
+    "SourceModularCoefficientCompletionTrace",
+    "SourceCurveCompletionIntegralCoordinates",
+    "SourceCurveCompletionBasisRetraction",
+    "SourceCurveCompletionMatrixCoordinates",
+    "SourceCurveConjugateCommutator",
+    "SourceCurveCompletionLocalFieldTrace",
+    "SourceCurveCompletionTraceUniformizer",
+    "SourceModularCoefficientLocalFieldTrace",
+    "SourceCurveCompletionIdealPowers",
+    "SourceCurveCompletionRamification",
+    "SourceCurveCompletionResidueExtension",
+    "SourceCurveCompletionDegree",
+    "SourceModularCoefficientCompletionDegree",
+    "SourceCurveFiberCompletions",
+    "SourceCurveFiberCompletionDegree",
+    "SourceCurveCompletionSpectralNorm",
+    "SourceCurveFiberCompletionKernels",
+    "SourceCurveFiberCompletionProduct",
+    "SourceCurveProductFieldTrace",
+    "SourceCurveFiberCompletionTrace",
+    "SourceModularCoefficientCompletionSum",
+    "SourceCurveFiberTateTrace",
+    "SourceCurveFiberResidueConstants",
+    "SourceCurveTateCanonicalSupport",
+    "SourceCurveGlobalTateTrace",
+    "SourceModularCoefficientTateSupport",
+    "SourceModularCoefficientGlobalTrace",
+    "SourceCurveParameterPoles",
+    "SourceCurveParameterApproximation",
+    "SourceCurveParameterPoleSpan",
+    "SourceCurveParameterProjection",
+    "SourceCurveParameterResidue",
+    "SourceCurveParameterTateTrace",
+    "SourceRationalParameterTateTrace",
+    "SourceCurveTateVanishing",
+    "SourceCurveTateInverse",
+    "SourceCurveGeneratorOrders",
+    "SourceCurveTateGlobalFunctional",
+    "SourceCurveGeneratorPowerResidues",
+    "SourceCurveGeneratorGlobalResidues",
+    "SourceCurveAdjoinGeneratorResidues",
+    "SourceModularCoefficientGlobalResidues",
+    "SourceModularCoefficientGlobalFunctional",
+    "SourceModularCoefficientResidueDuality",
+    "SourceModularCoefficientRiemannRoch",
+    "SourceCurveEffectiveDivisorSum",
+    "SourceModularCoefficientHurwitzDivisor",
+    "SourceModularCoefficientHurwitzBound",
+    "SourceModularCoefficientJFiberDegree",
+    "SourceModularCoefficientJDegreeSums",
+    "SourceModularCoefficientHurwitzNumeric",
+    "SourceModularCoefficientSlotEmbedding",
+    "SourceModularCoefficientSlotPlaces",
+    "SourceModularCoefficientSlotRange",
+    "SourceModularCoefficientSlotWidth",
+    "SourceModularCoefficientCuspWidth",
+    "SourceModularCoefficientCuspDistinction",
+    "SourceModularCoefficientCuspFamily",
+    "SourceModularCoefficientCuspCount",
+    "SourceModularCoefficientHurwitzCuspBound",
+    "SourceModularCoefficientTameGenusCriterion",
+    "SourceModularCoefficientWildGenusCriterion",
+    "SourceModularCoefficientSimplePresentation",
+    "SourceModularCoefficientCoordinateSpecialization",
+    "SourceModularCoefficientHomSpecialization",
+    "SourceModularCoefficientRootEquivalence",
+    "SourceIntegralJCoordinate",
+    "SourceExactIntegralModularPolynomial",
+    "SourceCoefficientIntegralMinimalPolynomial",
+    "SourceModularCoefficientModularRoots"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

@@ -1,0 +1,897 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalRegularCuspEquiv",
+    "Dubon2026.SourceOriginalRegularCuspGlobalGerms",
+    "Dubon2026.SourceOriginalRamifiedPlaceContinuity",
+    "Dubon2026.SourceOriginalAnalyticPlaceContinuity",
+    "Dubon2026.SourceOriginalAnalyticChartCoordinate",
+    "Dubon2026.SourceOriginalEvaluationRealizationGerms",
+    "Dubon2026.SourceOriginalRegularDifferentialPullback",
+    "Dubon2026.SourceOriginalCuspChartPrimitives",
+    "Dubon2026.SourceOriginalCuspPathIntegral",
+    "Dubon2026.SourceOriginalAnalyticAbelPeriods",
+    "Dubon2026.SourceOriginalHeckeAbelCosets",
+    "Dubon2026.SourceWeightTwoHeckeCosetTrace",
+    "Dubon2026.SourceOriginalHeckeCosetPrimitiveDerivative",
+    "Dubon2026.SourceOriginalHeckePrimitiveTrace",
+    "Dubon2026.SourceOriginalHeckeAbelComparison",
+    "Dubon2026.SourceOriginalCuspPeriodLattice",
+    "Dubon2026.SourceOriginalRamifiedChartLift",
+    "Dubon2026.SourceOriginalFiniteCuspClass",
+    "Dubon2026.SourceOriginalFiniteCuspClassLocal",
+    "Dubon2026.SourceOriginalFinitePathModularPeriods",
+    "Dubon2026.SourceOriginalPeriodLatticeEquality",
+    "Dubon2026.SourceOriginalPeriodHeckeCoordinates",
+    "Dubon2026.SourceOriginalPeriodHeckeLattice",
+    "Dubon2026.SourceOriginalHeckeAbelQuotient"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> original regular-cusp and path-period comparison -> genuine Hecke-stable period quotient.",
+  "discharged": "The original regular differentials are linearly identified with actual weight-two cusp forms by their germs at every upper-half-plane point. Their actual path integrals equal normalized cusp-primitive differences. The modular cusp-period lattice equals the actual all-path period lattice: ramified local lifts and primitive descent handle elliptic points, and existing marked cell generation supplies loops avoiding the poles of j. The transpose of the genuine good-prime analytic Hecke operator preserves this lattice and descends to its actual quotient. Its action there agrees with the literal original divisor Hecke correspondence on every analytic point difference. No germ, pullback, primitive, lattice-equality, chosen-matrix, lattice-stability or analytic point-comparison premise remains.",
+  "boundary": "Extension from analytic point differences to every original Picard class, the induced Tate comparison, rank-two Hecke decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. The quotient comparison is for good primes; the earlier divisor formula still includes bad primes. Full source weights and quantifiers remain unchanged. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,249-module scope: all thirteen retained regressions, 43,176 exhaustive theorem checks, 19,089 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.original_pathIntegral_eq_cusp_primitive",
+    "Dubon2026.SourceFunctionField.originalRegularCuspEquiv",
+    "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference",
+    "Dubon2026.sourceWeightTwoHeckeCoset",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_eq_pathPeriodLattice",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_abel_difference",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_path_lattice",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T13:48:45.268665+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalRegularCuspEquiv",
+        "SourceOriginalRegularCuspGlobalGerms",
+        "SourceOriginalRamifiedPlaceContinuity",
+        "SourceOriginalAnalyticPlaceContinuity",
+        "SourceOriginalAnalyticChartCoordinate",
+        "SourceOriginalEvaluationRealizationGerms",
+        "SourceOriginalRegularDifferentialPullback",
+        "SourceOriginalCuspChartPrimitives",
+        "SourceOriginalCuspPathIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularCuspEquiv.lean",
+          "sha256": "D9EF84B3D471DA873A87DCD11235988E5B97A749C4C53CEBE67533D0EDB7E61E",
+          "oleanSha256": "F038A052EADCF709C33B60D0E58B5482D4B8D800AEA5B6BCD6D1BF9C9B8576B8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularCuspGlobalGerms.lean",
+          "sha256": "AFD4C875D4148D18A7A6D507B8A236402D56D1B8A14F3538B1FBE15C286926B6",
+          "oleanSha256": "1AC894878A93F1B598A3011B3DC6BB406353ECB7FA6217EB3EAD12B924220D1A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamifiedPlaceContinuity.lean",
+          "sha256": "C243F621814D92CAA5C2961FEC61C50D1F3388F9897162488F5CAB1282C88F71",
+          "oleanSha256": "9E967F4FED2E4305C128A24F6CDF68A3E5B10EC9FA2580264BEC25794FC2C343"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticPlaceContinuity.lean",
+          "sha256": "B6AE0651B370B0F63239F3090522331C8FC9DD037DF6BA1164A5653C7C4CBBED",
+          "oleanSha256": "7856D6B94CC6BA05232F8177CBC9B5A7D13A96EF724FB8601E5D8DBC0387C034"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticChartCoordinate.lean",
+          "sha256": "D8789934EF29F759B3AA5EDF325B20F8396BC342F577ACB84A9295AD473AA6AC",
+          "oleanSha256": "D85B862E2E570D2E1A72F6A93E29DAAEE5FAC1B144FD6B2D4942716A970E4DD9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEvaluationRealizationGerms.lean",
+          "sha256": "C20E30A68D8B6E0DE6B0EDB73FC51D2E1471DFA05BD46D703E00EFDBB099DB49",
+          "oleanSha256": "9F0570DA2CD395963A1E02B119497277BAF1E7FAEC6B8EA6046A3D7AB81D03AF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRegularDifferentialPullback.lean",
+          "sha256": "F4D4833CD4EFCCCAA28E93ED9FD674AD7EB344D6C140EF4CBAE0F552C0131486",
+          "oleanSha256": "4A2EC5BA3521688A769B1837719F59F577EB7EBD560B495A4FEEB9DDBE3E2758"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspChartPrimitives.lean",
+          "sha256": "0E212CF14A9CB9E41C1DD74C8B4172093D80BA96A1CD6AA583EC0B78B9E45080",
+          "oleanSha256": "39F2C7FE3FC212EB132191DD2560CA971F480F3B24AA3455FA21A9924A3EE806"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPathIntegral.lean",
+          "sha256": "0E1F684ADD1BCEAEF54D6F3E7941C1EDA57691449AC90CA4862A992B3491569E",
+          "oleanSha256": "0143E5E42867ADE2200D80969308DF7C20A951ADB4C656DEE4DABED61DEA3C77"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_eq_cuspForms",
+        "Dubon2026.SourceFunctionField.original_regular_differential_germ_range_eq",
+        "Dubon2026.SourceFunctionField.originalCuspFormGerm_injective",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv_germ_at_I",
+        "Dubon2026.SourceFunctionField.exists_original_regular_cusp_all_germs",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv_germ",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv_eventuallyEq",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRamifiedPlace_continuousAt_zero",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_power_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_ofComplex_continuousAt",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_continuous",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate_analyticAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate_tendsto_nhdsNE",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_analyticChartCoordinate",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_realize_of_analyticAt",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eventuallyEq_realize",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_analyticChartCoordinate_eventuallyEq_realize",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_analyticChartCoordinate_germ",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_analyticChartCoordinate",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_chart_primitive_cusp_comparison",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_cusp_primitive_isPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_pathIntegral_eq_cusp_primitive",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.finrank_original_regularDifferentials_eq_cuspForms",
+        "Dubon2026.SourceFunctionField.original_regular_differential_germ_range_eq",
+        "Dubon2026.SourceFunctionField.originalCuspFormGerm_injective",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv_germ_at_I",
+        "Dubon2026.SourceFunctionField.exists_original_regular_cusp_all_germs",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv_germ",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv_eventuallyEq",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRamifiedPlace_continuousAt_zero",
+        "Dubon2026.SourceFunctionField.originalRamifiedPlace_power_eventuallyEq",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_ofComplex_continuousAt",
+        "Dubon2026.SourceFunctionField.originalAnalyticPlace_continuous",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate_analyticAt",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate_self",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate_tendsto_nhdsNE",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_analyticChartCoordinate",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_realize_of_analyticAt",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eventuallyEq_realize",
+        "Dubon2026.SourceFunctionField.OriginalChart.chartRead_analyticChartCoordinate_eventuallyEq_realize",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_analyticChartCoordinate_germ",
+        "Dubon2026.SourceFunctionField.OriginalChart.readDifferential_analyticChartCoordinate",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_chart_primitive_cusp_comparison",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_cusp_primitive_isPrimitiveAlong",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_pathIntegral_eq_cusp_primitive"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPeriodAudit9.log",
+      "logSha256": "A2C62E3DE9AA8ADBF60EB02CE16A9B3ADF45F5C787E3E4ACB4528AC86298F1C1",
+      "auditSha256": "A46D454FC6B5214828A93E994B3D76807582AB01DCD805FEC3EEDB8B3945F56F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 36,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 30,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPeriodDependencyAudit9.log",
+      "dependencyAuditSha256": "03B819867B0305A3F349CC2B2037F333BEAD37DBF2747025F2E87B6341C4E60C",
+      "dependencyAuditSourceSha256": "79DDB24D5487D34AFEF2B6E1638DC3D976A50884721410C49C2A463E936E8084",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_pathIntegral_eq_cusp_primitive",
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv",
+        "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> original period comparison -> regular-differential/cusp equivalence and actual path integration.",
+      "discharged": "The actual original regular differential space is linearly equivalent to the native weight-two cusp forms, with its fixed original analytic germ at every point. The literal upper-half-plane-to-place map is continuous, including elliptic points. Its uniformizer coordinate has the exact finite positive order and recovers original evaluations. The chart differential pulls back to the corresponding cusp form across every point. For every actual upper-half-plane path, the original differential integral equals the endpoint difference of the already constructed normalized Eichler primitive. No dimension, germ normalization, continuity, ramification-exclusion, differential-pullback or path-period comparison premise remains for this theorem.",
+      "boundary": "Scratch only; production promotion and verification pending. Equality with the modular period lattice and compatibility of the actual original Picard/Tate Hecke operator with the analytic period action remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-cusp-period-9-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6862CC9A42335EB6F8E37CDAD81F6F727462C98FA0C8B2121392A4A292C9F138"
+    },
+    {
+      "recordedUTC": "2026-10-22T14:09:55.028875+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalAnalyticAbelPeriods",
+        "SourceOriginalHeckeAbelCosets",
+        "SourceWeightTwoHeckeCosetTrace",
+        "SourceOriginalHeckeCosetPrimitiveDerivative",
+        "SourceOriginalHeckePrimitiveTrace",
+        "SourceOriginalHeckeAbelComparison"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticAbelPeriods.lean",
+          "sha256": "9EE09FF2D3D60E91854E942F0449AE48DB8FE5848BC6D1C1E289B197F7F0C526",
+          "oleanSha256": "26C03866A90D949F87CE73A8791832421D5DB81E49B46215F786215F4D72D58F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelCosets.lean",
+          "sha256": "6BCE0B8E34417EF598FCAAD2EE3C8D2620B34A4D1D1318FD186FDFE9A8814D74",
+          "oleanSha256": "3D32E27E3ADC3168371FF82C71C0C51CC980A8CC3625D703EFF8BA4CBD52E3FF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoHeckeCosetTrace.lean",
+          "sha256": "E6CB238A4BB8E712D60F272B2947AF3204C6FF300D1E2C767687271FD31B50BA",
+          "oleanSha256": "061BE6FA7ADB941E86E57318ACD743386AB44F6624C423A67C8DB783F355EB6B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeCosetPrimitiveDerivative.lean",
+          "sha256": "A715D0C9C19AE3DDBF16CDC998C0E3303EFC8147DFB58EFD44541CE88753ACCC",
+          "oleanSha256": "43392BC2BE90150B17F63CF1C344D0A94DEB29ACEA8E9C764CFC57726A25B915"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrimitiveTrace.lean",
+          "sha256": "C6F042AEB0A833C3F0DC3940EF5BAF49980DD1CDC9B6B19C9A990FD3BB9A0380",
+          "oleanSha256": "1815EDD5FCB79927BE28A9B4877AC8CF5D1DD2CD1EABC44F030A99BD30E1DB9F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelComparison.lean",
+          "sha256": "A2FDB7914CF124E32480D2B1602BB6C7C7E926ED77C93EE1EB9BAED9155998D5",
+          "oleanSha256": "04B05DAE5C961F1E39B5A16A705B15A78868510200F915960F3AEF8B83680CBD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec_sub_cusp_primitive_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_analytic_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_cosets",
+        "Dubon2026.sourceWeightTwoHeckeDiagonal_invariant",
+        "Dubon2026.sourceWeightTwoHeckeCoset_mk",
+        "Dubon2026.sourceWeightTwoHeckeCoset_out",
+        "Dubon2026.sourceWeightTwoHeckeCoset_sum",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_eq_triangular",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPrimitive_hasDerivAt",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_hasDerivAt",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference",
+        "Dubon2026.sourceWeightTwoHeckeCoset"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiVec_sub_cusp_primitive_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv_analytic_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_cosets",
+        "Dubon2026.sourceWeightTwoHeckeDiagonal_invariant",
+        "Dubon2026.sourceWeightTwoHeckeCoset_mk",
+        "Dubon2026.sourceWeightTwoHeckeCoset_out",
+        "Dubon2026.sourceWeightTwoHeckeCoset_sum",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_eq_triangular",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPrimitive_hasDerivAt",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_hasDerivAt",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceWeightTwoHeckeCoset"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelAudit6.log",
+      "logSha256": "9C8B6609CC758D830F44E6B837C66431C7D7480B68E0E9AFF5DDD02ED69809BF",
+      "auditSha256": "2FA01AB84A3688A85641F36232520FEABC814149AFD8D80A22C7D80BDE41B0C2",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 33,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 26,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelDependencyAudit6.log",
+      "dependencyAuditSha256": "1281AA75F7F35E5B9EEC1379AA913E4662240DB4776E807B78DA58A3F1612644",
+      "dependencyAuditSourceSha256": "9E14A0D51B083861BA568CEAF6DC689F67FAEB11341BD9F6B0FCDC636B473DC6",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference",
+        "Dubon2026.sourceWeightTwoHeckeCoset"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> original period comparison -> actual good-prime Hecke Abel comparison on analytic point differences.",
+      "discharged": "For every actual analytic point difference and every good prime, the literal original beta-pullback/alpha-pushforward divisor Hecke operator has Abel image equal to the normalized primitive difference of the genuine analytic cusp Hecke transform in the actual original path-period quotient. The theorem assembles the original divisor coset formula, including elliptic multiplicities, actual path integration, positive triangular point action, weight-two slash derivatives, existing good-prime transversal and local primitive uniqueness. No analytic Hecke trace, primitive normalization, point-divisor comparison or ramification-count premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Extend the comparison from analytic point differences to the full original period lattice and all required divisor classes, then prove the actual Picard/Tate analytic Hecke compatibility, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-abel-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E27D4B6E09A8FE24E43B203CB1FD8C113A8350D8C6C6A82193B30845D0403BC5"
+    },
+    {
+      "recordedUTC": "2026-10-22T14:37:01.939341+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalCuspPeriodLattice",
+        "SourceOriginalRamifiedChartLift",
+        "SourceOriginalFiniteCuspClass",
+        "SourceOriginalFiniteCuspClassLocal",
+        "SourceOriginalFinitePathModularPeriods",
+        "SourceOriginalPeriodLatticeEquality"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPeriodLattice.lean",
+          "sha256": "EB9180BB47546AD831494EE8705D141B7AB9820890DAF3593DD2299D2C37E433",
+          "oleanSha256": "E0CF537684C0AD5C606ADBE454ECF70CB15A527A4921B218E4351049DF34FCFF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRamifiedChartLift.lean",
+          "sha256": "86A0B63E45C18E504D460490EF215D4299516256FC1D384776B7C8C953154BC6",
+          "oleanSha256": "2F874BCF2054099B28CBE5F279BEB83A16CB7324B1A6640150F7A41FD0849EA0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteCuspClass.lean",
+          "sha256": "5906EC2E633050AF193C8A5D7280C9F4BF80C6C885F4C0B10566AB4C9B088099",
+          "oleanSha256": "E96284841CA2FAEB7A34C513E822DAC19FCD5A2F7726A2B795220B5C03646943"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteCuspClassLocal.lean",
+          "sha256": "9193F9F759ED6FC265AAFFB2356DA4133EDF021B3D5375FAA63D05BD8A46D929",
+          "oleanSha256": "6C2165EDC329811ECFF5DA2B9AA720B18231D2DDC431B80F2CE7276C2B760AAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePathModularPeriods.lean",
+          "sha256": "D70CE3FBC62A3B6B640D96CCFEF6D007C489867294FA32AF297FD6F4F8B4A55C",
+          "oleanSha256": "D366EC88B368006DCC85A1E08F6AB538751562AE300C13D5E0F7438AA5160819"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeEquality.lean",
+          "sha256": "B6AC4334F937C8EA8191E1196233CDA18A608C7F96E45172E8C0BAE54537699E",
+          "oleanSha256": "C98546B2066E91ACAD99CAA31ECA22EFB4DBD7874FBD7F55EB5D63037121F3E5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_cusp_primitive_period",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_cusp_period_mem_pathPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_le_pathPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.powerDescent_root_continuousAt_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_chart_analytic_lift",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass_eq_of_place_eq",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_finite_path_integral_modular_class",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_finite_loop_period_mem_cusp_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_finite_loop_generation",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_loop_period_mem_cusp_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathPeriodLattice_le_originalCuspPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_eq_pathPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_cusp_primitive_period",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_cusp_period_mem_pathPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_le_pathPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.powerDescent_root_continuousAt_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_chart_analytic_lift",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass_eq_of_place_eq",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass_apply",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass_chart_primitive",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_finite_path_integral_modular_class",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_finite_loop_period_mem_cusp_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_finite_loop_generation",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_loop_period_mem_cusp_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.pathPeriodLattice_le_originalCuspPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_eq_pathPeriodLattice"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeAudit6.log",
+      "logSha256": "747CB2A597C50DD3D3A5A621042953941B025A64565D357006EC23DE229F5542",
+      "auditSha256": "7B61DBF53434647B56050371E16AD4AB96A44B4AA7A460564F729684E3BA9246",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 28,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeDependencyAudit6.log",
+      "dependencyAuditSha256": "04D4505789D6C33B203E3948FBDEC2FB08C958CA564AF2B11D229279805BE533",
+      "dependencyAuditSourceSha256": "3272B49C1125C0DD451BC8F50032FAFD82157BA6E819A6EE5BB1255309588C0D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_eq_pathPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> original Picard-period compatibility -> equality of the actual original path and modular cusp period lattices.",
+      "discharged": "The actual modular cusp-period lattice equals the actual original all-path period lattice for every finite family of original regular differentials. The forward inclusion uses genuine Gamma loops. For the reverse inclusion, chosen roots converge at ramified chart centers, local primitive classes descend by actual orbit separation, and their increments along finite-place paths equal actual integrals. Existing marked cell generation supplies finite-place loops spanning every original loop period, with no basis, unramified-point, chosen-generation or lattice-comparison premise.",
+      "boundary": "Scratch only; production promotion and verification pending. Derive Hecke preservation of this lattice and compatibility on all Picard classes, then actual Tate Hecke compatibility, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-period-lattice-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "33D03EA969AB7667E2FE0CC47512C2A74486BB4DFB072DDC146BDDBDBE2F8615"
+    },
+    {
+      "recordedUTC": "2026-10-22T14:41:54.806280+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalPeriodHeckeCoordinates",
+        "SourceOriginalPeriodHeckeLattice",
+        "SourceOriginalHeckeAbelQuotient"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodHeckeCoordinates.lean",
+          "sha256": "B391EC603BF56FB42584A45EAE08622E983B3E378F11A555B3DC56487FBEB3A7",
+          "oleanSha256": "55D37CCFBF40406F3C29BA96FF4E5723232230094732B7CFE4723A57FEAFCC8E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodHeckeLattice.lean",
+          "sha256": "C6DCDC961199732DBBAEBC15CDF9176844D0D9712C9DD97A30A87EBE8A8EFB0B",
+          "oleanSha256": "3009C8B718411436531509163D7BF53CEC63BC299865CF46EFF04393B8F638BC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelQuotient.lean",
+          "sha256": "EF415278E46905BE55D91B227B375DBB5CC4F62C0659DA60D619184AF01160D4",
+          "oleanSha256": "739DD68A31023E89A5F45A9027E57A66AA8E7A548AA2D40809A84162146590C3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke_cusp",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_dual",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_cusp_period",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_cusp_generator_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_cusp_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_path_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_mk",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_pathIntegral",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_primitive_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_abel_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke_cusp",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_dual",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_cusp_period",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_cusp_generator_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_cusp_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_path_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_mk",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_pathIntegral",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_primitive_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_abel_difference"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeQuotientAudit3.log",
+      "logSha256": "F8957BD49F5BD75AD048846C52C24C4879E843305E3D7C745688B2DC5EF7647B",
+      "auditSha256": "C0139726F7FC60E820EE353647F9AB28A49F260B53B986DDF1A398D1C20D248C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeQuotientDependencyAudit3.log",
+      "dependencyAuditSha256": "51819679879472946F17FD3B8F5AA0567AA48385189EB462F09B375B366B9ADB",
+      "dependencyAuditSourceSha256": "33FEA5D6CF34299155F3E28B73E6FEAA79D2F6ACA91F535DFCB974675737BDCF",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_abel_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_path_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> original Picard-period compatibility -> actual Hecke-stable path lattice and quotient action.",
+      "discharged": "The transpose of the genuine analytic weight-two prime Hecke operator, expressed using the original regular-cusp equivalence and the native basis-dual equivalence, preserves the actual original path-period lattice. Its descended endomorphism on the actual quotient matches the literal original divisor Hecke operator on all analytic point differences. No chosen matrix, lattice-stability, path-linearity or analytic point-compatibility premise remains. Good-prime primality and coprimality are explicit.",
+      "boundary": "Scratch only; production promotion and verification pending. Move every original divisor class away from cusps and extend the identity to all Picard classes, then prove actual Tate Hecke compatibility, rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-quotient-3-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F438B740CF27AF9C66FC9D9003D072333941ABB443ECCB1633A3A20B613421EA"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-cusp-period-9-reuse-review-20261022.json",
+    "Tools/source-original-hecke-abel-6-reuse-review-20261022.json",
+    "Tools/source-original-period-lattice-6-reuse-review-20261022.json",
+    "Tools/source-original-hecke-quotient-3-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6249": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPeriodDependencyAudit9Production6249.log",
+        "sha256": "03B819867B0305A3F349CC2B2037F333BEAD37DBF2747025F2E87B6341C4E60C",
+        "requiredProofValueEdges": 30,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_pathIntegral_eq_cusp_primitive",
+          "Dubon2026.SourceFunctionField.originalRegularCuspEquiv",
+          "Dubon2026.SourceFunctionField.OriginalChart.analyticChartCoordinate"
+        ],
+        "sourceSha256": "E847F3CCA8CBDA5669034F8F4C7C55DAE37872042A1C1E6D2E8F50F4D97EBB4B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelDependencyAudit6Production6249.log",
+        "sha256": "1281AA75F7F35E5B9EEC1379AA913E4662240DB4776E807B78DA58A3F1612644",
+        "requiredProofValueEdges": 26,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference",
+          "Dubon2026.sourceWeightTwoHeckeCoset"
+        ],
+        "sourceSha256": "9316AE43D338BC8DA7EA2AD7346FB0C35DB00ECDD0704A471B14766A21D20190"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodLatticeDependencyAudit6Production6249.log",
+        "sha256": "04D4505789D6C33B203E3948FBDEC2FB08C958CA564AF2B11D229279805BE533",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice_eq_pathPeriodLattice",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPeriodLattice",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalAnalyticCuspClass",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalFiniteCuspClass"
+        ],
+        "sourceSha256": "EB14B1AE09B8C513530C2137EB59C572BE93DE6C27E40974FE0882C2DEE044DC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeQuotientDependencyAudit3Production6249.log",
+        "sha256": "51819679879472946F17FD3B8F5AA0567AA48385189EB462F09B375B366B9ADB",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_abel_difference",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke_preserves_path_lattice",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalRegularHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke"
+        ],
+        "sourceSha256": "27F4F55CC13820612BDCFAA8CE07EA84B14D873C09AC94B185B466D897293234"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePeriodsProductionAudit6249.log",
+    "sha256": "04D20E3790485D4950F77F8C3DEB2BAE8974A1E24A4DEE7A75ECB4FAE9420A94",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-periods-production-build-6249.log",
+    "aggregateSha256": "60D12DD2BE988CCE668479F19A0A4D376EC659EE02A92EB6A77963D7258DA1A0",
+    "productionModules": 6249,
+    "incrementModules": 24,
+    "axiomChecks": 68,
+    "exhaustiveIncrementTheorems": 126,
+    "linterScopes": 24,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 127,
+    "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. The original regular differentials, native cusp forms, actual path integrals and both genuine period lattices are retained. No final source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 127,
+      "scratchDistinct": 126,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalHeckeAbelQuotient": "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeCoordinates": "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeLattice": "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelCosets._proof_1": "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+        "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelComparison._proof_1": "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1"
+      },
+      "generatedNameReason": "Five private local instance names have graph-dependent compiler disambiguators. Only the five exact observed names are normalized, after checking complete source-body identity up to import qualification. All theorem ownership audits remain unchanged.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalHeckeAbelQuotient": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelQuotient.lean",
+          "scratchSha256": "EF415278E46905BE55D91B227B375DBB5CC4F62C0659DA60D619184AF01160D4",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAbelQuotient.lean",
+          "productionSha256": "C8AF8BE5236AF34C0B34CC05146BC2E701F6F20D34B9D4E2A90E93A6DFFC9588",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local NeZero instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeCoordinates": {
+          "productionName": "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodHeckeCoordinates.lean",
+          "scratchSha256": "B391EC603BF56FB42584A45EAE08622E983B3E378F11A555B3DC56487FBEB3A7",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodHeckeCoordinates.lean",
+          "productionSha256": "CE1B8DE5780600C3CD6EBA6D3823B0720F6627374FDAE4A1E26484C17EA26A84",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local NeZero instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeLattice": {
+          "productionName": "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodHeckeLattice.lean",
+          "scratchSha256": "C6DCDC961199732DBBAEBC15CDF9176844D0D9712C9DD97A30A87EBE8A8EFB0B",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodHeckeLattice.lean",
+          "productionSha256": "0B0DDF841B8CCD0EAA3D757D37D485E7B17BF72086AFE29C392DAA3F89C7CCA3",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local NeZero instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelCosets._proof_1": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelCosets.lean",
+          "scratchSha256": "6BCE0B8E34417EF598FCAAD2EE3C8D2620B34A4D1D1318FD186FDFE9A8814D74",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAbelCosets.lean",
+          "productionSha256": "77FE3FE496BBD65B64B3F2256E8272E50EAD0527215A2A34B11B172799BFD3BD",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local Fintype instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelComparison._proof_1": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelComparison.lean",
+          "scratchSha256": "A2FDB7914CF124E32480D2B1602BB6C7C7E926ED77C93EE1EB9BAED9155998D5",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAbelComparison.lean",
+          "productionSha256": "77462D95AB011241F7A22722AF03DBE6F1150DFB7C7FFF9918BC3FC240178E3B",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local Fintype instance; exact observed generated name only."
+        }
+      },
+      "productionFocused": 126,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv.congr_simp": [
+          {
+            "scope": "SourceHeckePeriodsScratchOwnership178For6249",
+            "module": "Dubon2026.SourceOriginalAnalyticAbelPeriods"
+          },
+          {
+            "scope": "SourceHeckePeriodsScratchOwnership179For6249",
+            "module": "Dubon2026.SourceOriginalFiniteCuspClass"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalRegularCuspEquiv",
+            "SourceOriginalRegularCuspGlobalGerms",
+            "SourceOriginalRamifiedPlaceContinuity",
+            "SourceOriginalAnalyticPlaceContinuity",
+            "SourceOriginalAnalyticChartCoordinate",
+            "SourceOriginalEvaluationRealizationGerms",
+            "SourceOriginalRegularDifferentialPullback",
+            "SourceOriginalCuspChartPrimitives",
+            "SourceOriginalCuspPathIntegral"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership177For6249.log",
+            "sha256": "DA896AB25E7CA0202F7FBFC283B0C9CD3934923514D37A1034E54921987CB8FE",
+            "sourceSha256": "71A358BA5C9009BB63F6EDBB0CF70ED7F67DEF992904985C1F51701AB68AD77B"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAnalyticAbelPeriods",
+            "SourceOriginalHeckeAbelCosets",
+            "SourceWeightTwoHeckeCosetTrace",
+            "SourceOriginalHeckeCosetPrimitiveDerivative",
+            "SourceOriginalHeckePrimitiveTrace",
+            "SourceOriginalHeckeAbelComparison"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership178For6249.log",
+            "sha256": "DAD6523AD1A5FBCFB91487D998A32BD817EDAD825F9873572E9FA9A2C2B1BC20",
+            "sourceSha256": "D31567EDCC7B7BDBAB0926DD347BE542E35EA1EE65A5810B9ACC47FDD30DB00E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCuspPeriodLattice",
+            "SourceOriginalRamifiedChartLift",
+            "SourceOriginalFiniteCuspClass",
+            "SourceOriginalFiniteCuspClassLocal",
+            "SourceOriginalFinitePathModularPeriods",
+            "SourceOriginalPeriodLatticeEquality"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership179For6249.log",
+            "sha256": "103E451163357B1597DC3BD34FABD036BFF3193764E81A2D7125A7F81788B362",
+            "sourceSha256": "7BD77075345D5111073206F070D5C242345BBC54E4471D0337E830270A53E6BF"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPeriodHeckeCoordinates",
+            "SourceOriginalPeriodHeckeLattice",
+            "SourceOriginalHeckeAbelQuotient"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership180For6249.log",
+            "sha256": "171885D1E95C5064E7F030A0C760E7AD6C97CC708BE88D1C2EB952429DCD68E1",
+            "sourceSha256": "1935DD309B0463B4A53BA51D287B4605CC41711ECE26751659C8BEA39EFC5879"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePeriodsOwnership6249.log",
+        "sha256": "4D52E4AC7A532BB54C2F4BA127548092796CD357E50C69C6BAB7E1E3D7D5E71E",
+        "sourceSha256": "0095B63DACA6E2F3F3A24B3BAC2F423EAD1B9D89067F621E857EB350EB7C63FB"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-073120-259.log",
+        "sha256": "72CF73BBF0D88B1D9A9411D1BA8C5537C2DF82A3893ADEAF84718F18C7064ECE"
+      }
+    },
+    "scratchToProductionCountReason": "All 126 distinct names from 127 exhaustive scratch checks are retained: 126 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Extension from analytic point differences to every original Picard class, the induced Tate comparison, rank-two Hecke decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. The quotient comparison is for good primes; the earlier divisor formula still includes bad primes. Full source weights and quantifiers remain unchanged. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6249": {
+    "recordedUTC": "2026-10-22T17:12:09.646939+00:00",
+    "log": "logs/dubon-build-20261022-090001-914.log",
+    "sha256": "98486B167EA28C549AB18E3AAA303339034DFE390AFF85F9A4BB78ABBDFB1425",
+    "bytes": 10810023,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6249,
+    "projectTheorems": 43176,
+    "registeredConsumers": 19089,
+    "registeredConstructions": 1408,
+    "declarations": 26296,
+    "generated": 24859,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_085703.log",
+    "foundationSha256": "74F699A08BE7DA62E0FEB5C2FCA64B7545CE73785FA9E315CFA0A1D82FA9A3E9",
+    "countReconciliation": {
+      "previousTheorems": 43050,
+      "focusedTheorems": 126,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 126,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePeriodsOwnership6249.log",
+      "ownershipSha256": "4D52E4AC7A532BB54C2F4BA127548092796CD357E50C69C6BAB7E1E3D7D5E71E"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 127,
+      "scratchDistinct": 126,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalHeckeAbelQuotient": "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeCoordinates": "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeLattice": "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelCosets._proof_1": "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+        "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelComparison._proof_1": "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1"
+      },
+      "generatedNameReason": "Five private local instance names have graph-dependent compiler disambiguators. Only the five exact observed names are normalized, after checking complete source-body identity up to import qualification. All theorem ownership audits remain unchanged.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalHeckeAbelQuotient": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelQuotient.lean",
+          "scratchSha256": "EF415278E46905BE55D91B227B375DBB5CC4F62C0659DA60D619184AF01160D4",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAbelQuotient.lean",
+          "productionSha256": "C8AF8BE5236AF34C0B34CC05146BC2E701F6F20D34B9D4E2A90E93A6DFFC9588",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local NeZero instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeCoordinates": {
+          "productionName": "_private.Dubon2026.SourceOriginalPeriodHeckeCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodHeckeCoordinates.lean",
+          "scratchSha256": "B391EC603BF56FB42584A45EAE08622E983B3E378F11A555B3DC56487FBEB3A7",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodHeckeCoordinates.lean",
+          "productionSha256": "CE1B8DE5780600C3CD6EBA6D3823B0720F6627374FDAE4A1E26484C17EA26A84",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local NeZero instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPeriodHeckeLattice": {
+          "productionName": "_private.Dubon2026.SourceOriginalPeriodHeckeLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeriodHeckeLattice.lean",
+          "scratchSha256": "C6DCDC961199732DBBAEBC15CDF9176844D0D9712C9DD97A30A87EBE8A8EFB0B",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodHeckeLattice.lean",
+          "productionSha256": "0B0DDF841B8CCD0EAA3D757D37D485E7B17BF72086AFE29C392DAA3F89C7CCA3",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local NeZero instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelCosets._proof_1": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAbelCosets.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelCosets.lean",
+          "scratchSha256": "6BCE0B8E34417EF598FCAAD2EE3C8D2620B34A4D1D1318FD186FDFE9A8814D74",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAbelCosets.lean",
+          "productionSha256": "77FE3FE496BBD65B64B3F2256E8272E50EAD0527215A2A34B11B172799BFD3BD",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local Fintype instance; exact observed generated name only."
+        },
+        "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAbelComparison._proof_1": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAbelComparison.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAbelComparison.lean",
+          "scratchSha256": "A2FDB7914CF124E32480D2B1602BB6C7C7E926ED77C93EE1EB9BAED9155998D5",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAbelComparison.lean",
+          "productionSha256": "77462D95AB011241F7A22722AF03DBE6F1150DFB7C7FFF9918BC3FC240178E3B",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local Fintype instance; exact observed generated name only."
+        }
+      },
+      "productionFocused": 126,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalRegularCuspEquiv.congr_simp": [
+          {
+            "scope": "SourceHeckePeriodsScratchOwnership178For6249",
+            "module": "Dubon2026.SourceOriginalAnalyticAbelPeriods"
+          },
+          {
+            "scope": "SourceHeckePeriodsScratchOwnership179For6249",
+            "module": "Dubon2026.SourceOriginalFiniteCuspClass"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalRegularCuspEquiv",
+            "SourceOriginalRegularCuspGlobalGerms",
+            "SourceOriginalRamifiedPlaceContinuity",
+            "SourceOriginalAnalyticPlaceContinuity",
+            "SourceOriginalAnalyticChartCoordinate",
+            "SourceOriginalEvaluationRealizationGerms",
+            "SourceOriginalRegularDifferentialPullback",
+            "SourceOriginalCuspChartPrimitives",
+            "SourceOriginalCuspPathIntegral"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership177For6249.log",
+            "sha256": "DA896AB25E7CA0202F7FBFC283B0C9CD3934923514D37A1034E54921987CB8FE",
+            "sourceSha256": "71A358BA5C9009BB63F6EDBB0CF70ED7F67DEF992904985C1F51701AB68AD77B"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAnalyticAbelPeriods",
+            "SourceOriginalHeckeAbelCosets",
+            "SourceWeightTwoHeckeCosetTrace",
+            "SourceOriginalHeckeCosetPrimitiveDerivative",
+            "SourceOriginalHeckePrimitiveTrace",
+            "SourceOriginalHeckeAbelComparison"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership178For6249.log",
+            "sha256": "DAD6523AD1A5FBCFB91487D998A32BD817EDAD825F9873572E9FA9A2C2B1BC20",
+            "sourceSha256": "D31567EDCC7B7BDBAB0926DD347BE542E35EA1EE65A5810B9ACC47FDD30DB00E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCuspPeriodLattice",
+            "SourceOriginalRamifiedChartLift",
+            "SourceOriginalFiniteCuspClass",
+            "SourceOriginalFiniteCuspClassLocal",
+            "SourceOriginalFinitePathModularPeriods",
+            "SourceOriginalPeriodLatticeEquality"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership179For6249.log",
+            "sha256": "103E451163357B1597DC3BD34FABD036BFF3193764E81A2D7125A7F81788B362",
+            "sourceSha256": "7BD77075345D5111073206F070D5C242345BBC54E4471D0337E830270A53E6BF"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPeriodHeckeCoordinates",
+            "SourceOriginalPeriodHeckeLattice",
+            "SourceOriginalHeckeAbelQuotient"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePeriodsScratchOwnership180For6249.log",
+            "sha256": "171885D1E95C5064E7F030A0C760E7AD6C97CC708BE88D1C2EB952429DCD68E1",
+            "sourceSha256": "1935DD309B0463B4A53BA51D287B4605CC41711ECE26751659C8BEA39EFC5879"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePeriodsOwnership6249.log",
+        "sha256": "4D52E4AC7A532BB54C2F4BA127548092796CD357E50C69C6BAB7E1E3D7D5E71E",
+        "sourceSha256": "0095B63DACA6E2F3F3A24B3BAC2F423EAD1B9D89067F621E857EB350EB7C63FB"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-073120-259.log",
+        "sha256": "72CF73BBF0D88B1D9A9411D1BA8C5537C2DF82A3893ADEAF84718F18C7064ECE"
+      }
+    },
+    "scratchToProductionCountReason": "All 126 distinct names from 127 exhaustive scratch checks are retained: 126 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Extension from analytic point differences to every original Picard class, the induced Tate comparison, rank-two Hecke decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. The quotient comparison is for good primes; the earlier divisor formula still includes bad primes. Full source weights and quantifiers remain unchanged. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

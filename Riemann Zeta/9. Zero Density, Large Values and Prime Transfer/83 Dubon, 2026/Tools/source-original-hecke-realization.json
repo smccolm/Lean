@@ -29,7 +29,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> arithmetic and complex compatibility, exact analytic divisor coset formula and original period comparison.",
   "discharged": "The actual Picard Hecke operator and its Tate endomorphism commute with the original arithmetic Galois action. The genuine Qbar-to-complex Picard and Tate comparisons intertwine these Hecke operators. The literal alpha and beta maps restrict the actual analytic places as identity and dilation, with exact normalized ramification equations. The existing reverse monic relation proves analytic exhaustion of each prime beta fiber; actual integral conjugation, orbit separation and stabilizer orders identify every multiplicity. Thus the original beta-pullback/alpha-pushforward divisor operator equals the genuine quotient-coset sum at every analytic point, including elliptic points and primes dividing the level. No arithmetic-equivariance, complex Hecke-naturality, analytic-place, fiber-exhaustion or ramification-count premise remains.",
   "boundary": "The original regular-differential to cusp-period comparison and Hecke compatibility with the original path-period lattice remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. The proved divisor formula uses the genuine quotient cosets; an equality with a separately written explicit representative formula is not claimed here. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
-  "status": "The 6,225-module production aggregate and focused Hecke comparison audit pass with zero diagnostics. Four declaration-value audits verify actual arithmetic equivariance, complex Picard/Tate Hecke compatibility and the ramification-correct analytic divisor coset formula. Original period compatibility, rank-two Hecke/Frobenius/inertia comparison and downstream arithmetic gates remain required. Sequential foundation/paper verification of this scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,225-module scope: all thirteen retained regressions, 43,050 exhaustive theorem checks, 19,030 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "frozenReceiptProseCorrections": [],
@@ -555,6 +555,143 @@
     "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. The original Picard groups, Tate functor, analytic places, normalized orders and literal Hecke field maps are retained. No final source contract is weakened.",
     "omittedScratchTheorems": [],
     "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 87,
+      "scratchDistinct": 86,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAnalyticDivisor._proof_1": "_private.Dubon2026.SourceOriginalHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1"
+      },
+      "generatedNameReason": "The identical private local Fintype instance has one compiler-generated proof-name disambiguator in the scratch import graph. Only its exact observed name is normalized; both ownership audits and identical source bodies are checked.",
+      "generatedNameSourceEvidence": {
+        "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisor.lean",
+        "scratchSha256": "10C0CF4A0283FEEC72B5EE454A998A55CC354115DBF2174E8ED7EE6A1B9B9BE3",
+        "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAnalyticDivisor.lean",
+        "productionSha256": "8C25BFD4241AD543946EF896D8F84DD87AFA604BD46BD784681AD4397BEFF38C",
+        "equality": "Entire source bodies identical after import qualification only.",
+        "declaration": "private local instance : Fintype (Gamma0 N ⧸ heckeUpperSubgroup N ℓ) :=\n  sourceHeckeUpperFintype N ℓ"
+      },
+      "productionFocused": 86,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong.congr_simp": [
+          {
+            "scope": "SourceHeckeRealizationScratchOwnership173For6225",
+            "module": "Dubon2026.SourceOriginalHeckeArithmeticDivisors"
+          },
+          {
+            "scope": "SourceHeckeRealizationScratchOwnership174For6225",
+            "module": "Dubon2026.SourceOriginalHeckeComplexDivisors"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveCorrespondencePlaces",
+            "SourceOriginalHeckeArithmeticPlaces",
+            "SourceOriginalHeckeArithmeticDivisors",
+            "SourceOriginalHeckeArithmetic",
+            "SourceOriginalTateHeckeArithmetic"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership173For6225.log",
+            "sha256": "650F65BC035D8BE751F9B361D22D4212CF914441E8680F1F8537F36FFEFFAF0E",
+            "sourceSha256": "A2AC3AF68B709517FC6B2ABD90A3F967B047C424F5C114D324F709786E281A7D"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCorrespondenceRamification",
+            "SourceOriginalHeckeComplexPlaces",
+            "SourceOriginalHeckeComplexDivisors",
+            "SourceOriginalHeckeComplexPicard"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership174For6225.log",
+            "sha256": "460E78F20DBB852D72242001B689C638B8EF759F24C863EF73ED6FCD51CAAB74",
+            "sourceSha256": "62C9EA0DFF56AC14D7E63620BCD0BA01F4C5CFC2D3A2B00A26A14CA0EFD96B8E"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalFieldHomExt",
+            "SourceOriginalHeckeAlphaGerms",
+            "SourceOriginalHeckeAlphaPlaces",
+            "SourceGermPullback",
+            "SourceOriginalHeckeBetaGerms",
+            "SourceOriginalHeckeBetaPlaces",
+            "SourceOriginalTateComplexHecke",
+            "SourceOriginalHeckeAnalyticRamification"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership175For6225.log",
+            "sha256": "81F7C1E2001CB0CDE6E53AB71717F50881894BC4118979F25702BA87572291A4",
+            "sourceSha256": "B71BC79501A00BFC1A49B6DAF33D7E170BB196CA2B50F87B0F1F575C226233F0"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeFiniteFiber",
+            "SourceOriginalHeckeUpperEquiv",
+            "SourceHeckeFiberStabilizer",
+            "SourceHeckeCosetFiberCount",
+            "SourceOriginalHeckeFiberOrbits",
+            "SourceOriginalHeckeCosetMultiplicity",
+            "SourceOriginalHeckeAnalyticDivisor"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeRealizationScratchOwnership176For6225.log",
+            "sha256": "FEAEA286DD8D8C4AC6849092128B5F85D3F0BDBCD87BC96CC268EA2A365E49D5",
+            "sourceSha256": "BD6D98AAFDD2163BE7035311433F1DF0DF712C49ADBB0210572D4B44B11E3A64"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationOwnership6225.log",
+        "sha256": "272F56570FA7586419CE4FAFCAFAF4C74D383D6F9D71003A85A8D784E1B14FBB",
+        "sourceSha256": "BB1D1D14EA8BEA34A552AF4098383F851BDE20EC6925725564C88402C260182D"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-060443-756.log",
+        "sha256": "D998A4EA9C2912E72C695F41C69DEAE15CF6FB03A9BF8417180457D5B2C175AA"
+      }
+    },
+    "scratchToProductionCountReason": "All 86 distinct names from 87 exhaustive scratch checks are retained: 86 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original regular-differential to cusp-period comparison and Hecke compatibility with the original path-period lattice remain required, followed by rank-two Hecke decomposition, Frobenius and inertia comparison, arithmetic automorphy and higher symmetric-power continuation. The proved divisor formula uses the genuine quotient cosets; an equality with a separately written explicit representative formula is not claimed here. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6225": {
+    "recordedUTC": "2026-10-22T15:44:21.744077+00:00",
+    "log": "logs/dubon-build-20261022-073120-259.log",
+    "sha256": "72CF73BBF0D88B1D9A9411D1BA8C5537C2DF82A3893ADEAF84718F18C7064ECE",
+    "bytes": 10772388,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6225,
+    "projectTheorems": 43050,
+    "registeredConsumers": 19030,
+    "registeredConstructions": 1399,
+    "declarations": 26228,
+    "generated": 24788,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_072819.log",
+    "foundationSha256": "52923E03928BAF776CAEB284E70243EA7572C3F13B50DA9DFF9FAA87815AD492",
+    "countReconciliation": {
+      "previousTheorems": 42964,
+      "focusedTheorems": 86,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 86,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeRealizationOwnership6225.log",
+      "ownershipSha256": "272F56570FA7586419CE4FAFCAFAF4C74D383D6F9D71003A85A8D784E1B14FBB"
+    },
     "scratchToProductionOwnership": {
       "scratchSum": 87,
       "scratchDistinct": 86,

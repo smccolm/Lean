@@ -1,0 +1,1810 @@
+{
+  "date": "22 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurveOrderUnitPerturbation",
+    "Dubon2026.SourceOriginalFinitePlaceSeparation",
+    "Dubon2026.SourceCurveFinitePlaceIndicators",
+    "Dubon2026.SourceCurvePrescribedOrders",
+    "Dubon2026.SourceOriginalPrescribedPlaceOrders",
+    "Dubon2026.SourceOriginalAnalyticDivisorMoving",
+    "Dubon2026.SourceOriginalHeckeAnalyticDivisors",
+    "Dubon2026.SourceOriginalPicardHeckePeriods",
+    "Dubon2026.SourceOriginalTateHeckePeriods",
+    "Dubon2026.SourceOriginalTateHeckeTensor",
+    "Dubon2026.SourceHeckeBadPrimeCosets",
+    "Dubon2026.SourceWeightTwoHeckeAllPrimeTrace",
+    "Dubon2026.SourceOriginalHeckeAllPrimePrimitiveTrace",
+    "Dubon2026.SourceOriginalHeckeAllPrimeAbel",
+    "Dubon2026.SourceOriginalPrimePeriodCoordinates",
+    "Dubon2026.SourceOriginalPrimePeriodLattice",
+    "Dubon2026.SourceOriginalPrimeHeckeAbelQuotient",
+    "Dubon2026.SourceOriginalPicardPrimeHeckePeriods",
+    "Dubon2026.SourceOriginalTatePrimeHeckePeriods",
+    "Dubon2026.SourceOriginalTatePrimeHeckeTensor",
+    "Dubon2026.SourceOriginalPrimePeriodCommute",
+    "Dubon2026.SourceOriginalPrimePicardCommute",
+    "Dubon2026.SourceOriginalFullLatticeHeckeAlgebra",
+    "Dubon2026.SourceOriginalTateHeckeWords",
+    "Dubon2026.SourceWeightTwoFullHeckeAlgebra",
+    "Dubon2026.SourceWeightTwoHeckePerfectPairing",
+    "Dubon2026.SourceAllPrimeHeckeCharacters",
+    "Dubon2026.SourceAllPrimeHeckeReflection",
+    "Dubon2026.SourceAllPrimeCosetPointTransition",
+    "Dubon2026.SourceAllPrimeScalarPeriods",
+    "Dubon2026.SourceAllPrimeHeckeCoefficientChange",
+    "Dubon2026.SourceAllPrimePeriodPair",
+    "Dubon2026.SourceRationalParabolicCharacterSpan",
+    "Dubon2026.SourceIntegralWordAdditiveNaturality",
+    "Dubon2026.SourceAllPrimeCharacterWords",
+    "Dubon2026.SourceHeckeWordParabolicRelations",
+    "Dubon2026.SourceRationalHeckeWordRelations",
+    "Dubon2026.SourceIntegralHeckeComplexIndependence",
+    "Dubon2026.SourceIntegralHeckeComplexBasis",
+    "Dubon2026.SourceIntegralAlgebraBasisCoordinates",
+    "Dubon2026.SourceIntegralHeckeBasisCoordinates",
+    "Dubon2026.SourceWeightTwoCuspHeckeDual",
+    "Dubon2026.SourceIntegralHeckeCuspBasis"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Picard/Tate all-prime Hecke realization -> finite integral Hecke algebra, faithful complex scalar extension and constructed rational cusp matrices.",
+  "discharged": "Every degree-zero original divisor is moved to an actual analytic representative modulo a principal divisor. The literal original Picard and Tate Hecke correspondences agree with their period-quotient and tensor actions at every prime, including bad primes. These genuine integral lattice operators commute and integral Hecke words act compatibly on the original arithmetic Tate module. The actual weight-two full Hecke algebra is perfectly paired with cusp forms by the first Fourier coefficient. Its integer-independent integral operators remain complex-independent through the proved all-prime parabolic character realization and rational span. Dualizing the resulting integral algebra basis constructs a finite cusp basis with integer matrices for every positive-index Hecke operator. No divisor-moving, full Picard/Tate Hecke comparison, bad-prime period, lattice-stability, perfect-pairing, scalar-independence or rational-cusp-basis premise remains.",
+  "boundary": "Rank-two Hecke-equivariant freeness of the original rational Tate module, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. Full source weights and quantifiers are unchanged; the weight-two Jacobian construction is an input to the residual association route. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,292-module scope: all thirteen retained regressions, 43,439 exhaustive theorem checks, 19,203 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.exists_original_degree_zero_analytic_representative",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_all",
+    "Dubon2026.heckeBadUpperCoset",
+    "Dubon2026.heckeBadUpperCosetEquiv",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalPrimeHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_heckeWord",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_arithmetic_prime_commute",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_commutative",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_finite",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_range",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_generator",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_generator",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord",
+    "Dubon2026.sourceWeightTwoHeckeDualEquiv",
+    "Dubon2026.sourceWeightTwoHeckeDualEquiv_apply",
+    "Dubon2026.sourceWeightTwoFullHeckeAlgebra_eq_prime_adjoin",
+    "Dubon2026.sourceWeightTwoHeckePairing_apply",
+    "Dubon2026.sourceWeightTwoFullHeckeAlgebra",
+    "Dubon2026.sourceWeightTwoHeckePairing",
+    "Dubon2026.sourceAllPrimePeriodPair_hecke",
+    "Dubon2026.sourceAllPrimeHeckeHom_parabolic",
+    "Dubon2026.sourceAllPrimeHeckeHom_coefficient_change",
+    "Dubon2026.sourceAllPrimeRingHeckeOperators",
+    "Dubon2026.sourceAllPrimeHeckeHom",
+    "Dubon2026.sourceOriginalIntegralHecke_linearIndependent_complex",
+    "Dubon2026.sourceRationalParabolicHoms",
+    "Dubon2026.sourceRationalCharacterComplex",
+    "Dubon2026.sourceWeightTwoCuspHeckeWord",
+    "Dubon2026.sourceAllPrimeCharacterHeckeWord",
+    "Dubon2026.sourceRationalHeckeCuspBasis_rational",
+    "Dubon2026.sourceIntegralHeckeComplexBasis",
+    "Dubon2026.integralComplexAlgebraInclusion",
+    "Dubon2026.sourceIntegralHeckeBasis",
+    "Dubon2026.sourceIntegralHeckeToComplex",
+    "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv",
+    "Dubon2026.sourceIntegralHeckeCuspBasis",
+    "Dubon2026.sourceRationalHeckeCuspBasis"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-22T14:50:48.573827+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceCurveOrderUnitPerturbation",
+        "SourceOriginalFinitePlaceSeparation",
+        "SourceCurveFinitePlaceIndicators",
+        "SourceCurvePrescribedOrders",
+        "SourceOriginalPrescribedPlaceOrders",
+        "SourceOriginalAnalyticDivisorMoving"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveOrderUnitPerturbation.lean",
+          "sha256": "09050208A6469AFA2E3B7DB002799E8DE37985C409DEA665FEDBF6F0A38370CE",
+          "oleanSha256": "12966E7B361FD83A1E15E695E66369E38DE1296BC20C1A3C16E291C5F6318E89"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFinitePlaceSeparation.lean",
+          "sha256": "09827CB8CFB37369C39E46C0D32F35E17D668B886ECEE3CDAA125FE98C7FF840",
+          "oleanSha256": "0F86464256DEC118ECA67E9B6A11CB6A9DE8786CFA23257665C4E3044988E52A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFinitePlaceIndicators.lean",
+          "sha256": "0B68DA584A13358A63F8ADE32CD994E7E4BA9F8E2AB970E7F4886D437B1D1938",
+          "oleanSha256": "EF7A141D8B711C42155792152F9888574A445877A14514712802CC8FF546C2B1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePrescribedOrders.lean",
+          "sha256": "EF277C9918ED3F8EEB7D1602DE1976D63C498B74CF2F3F417DCED0A2A9A65D90",
+          "oleanSha256": "1AC0ED21E1A4CC43CB4244BDC4371B7730F684EABAA659814A3A7CC3C849ED4A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedPlaceOrders.lean",
+          "sha256": "8691B57F8C27534A0A7992ADC4489D16DF460E8AAB86B0C1F10195BCF2D39813",
+          "oleanSha256": "BF777C6441443D98BBBC9C0158DC23EBBDC38CDDC62760120DCB04B5A57A8BD7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAnalyticDivisorMoving.lean",
+          "sha256": "7989F016D6583E5590F72CF5F28F6C2858BB0EC30426D657E9707DDF75780C20",
+          "oleanSha256": "635654C5F39DC5F4C5A17B65A83971F8811C405EDDD81AC08370CE0DF4204ABE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.adicValuation_lt_one_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.one_lt_adicValuation_iff_ord_neg",
+        "Dubon2026.SourceCurve.Place.one_add_ne_zero_and_ord_eq_of_ord_neg",
+        "Dubon2026.SourceCurve.Place.ord_one_add_of_ord_pos",
+        "Dubon2026.SourceFunctionField.exists_original_polar_regular_separator",
+        "Dubon2026.SourceCurve.Place.exists_indicator",
+        "Dubon2026.SourceCurve.Place.exists_forall_ord_eq_of_sep",
+        "Dubon2026.SourceFunctionField.exists_original_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.exists_original_divisor_analytic_decomposition",
+        "Dubon2026.SourceFunctionField.degree_mapDomain_originalAnalyticPlace",
+        "Dubon2026.SourceFunctionField.exists_original_degree_zero_analytic_representative"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.adicValuation_lt_one_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.one_lt_adicValuation_iff_ord_neg",
+        "Dubon2026.SourceCurve.Place.one_add_ne_zero_and_ord_eq_of_ord_neg",
+        "Dubon2026.SourceCurve.Place.ord_one_add_of_ord_pos",
+        "Dubon2026.SourceFunctionField.exists_original_polar_regular_separator",
+        "Dubon2026.SourceCurve.Place.exists_indicator",
+        "Dubon2026.SourceCurve.Place.exists_forall_ord_eq_of_sep",
+        "Dubon2026.SourceFunctionField.exists_original_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.exists_original_divisor_analytic_decomposition",
+        "Dubon2026.SourceFunctionField.degree_mapDomain_originalAnalyticPlace",
+        "Dubon2026.SourceFunctionField.exists_original_degree_zero_analytic_representative"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorMovingAudit6.log",
+      "logSha256": "D9BAA567A0B284E68BD85873B8A1958123FBA4503E0C4DB047B360474B6A1BA3",
+      "auditSha256": "68489A404FBF37ECDA857A88F9DA96AD9C006B61FFF58A529AA72B94F9C61D2A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 36,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorMovingDependencyAudit6.log",
+      "dependencyAuditSha256": "E36739131E85FF03CEFE89247D3B047B5B06E625813349873FB3A1CCDC56D9E7",
+      "dependencyAuditSourceSha256": "0CB071CB25AD2AED3CA5A476C20AD60B09C6EA794CCB217DDDC2A444CB5368CD",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_degree_zero_analytic_representative"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual original Jacobian Tate Hecke realization -> full original Picard-period compatibility -> moving actual divisor classes away from cusps.",
+      "discharged": "Every original degree-zero divisor is an actual principal divisor plus a degree-zero finite integer combination of actual analytic places. Existing pair separation is strengthened to a finite family; valuation indicators then realize arbitrary prescribed orders. Applying this to the finite support of the original j function removes all cusps. The actual principal-divisor degree theorem and finite-place analytic exhaustion prove every clause. No approximation, principal-divisor or analytic-representative premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Assemble full original Picard-period Hecke compatibility from analytic point differences and these actual representatives, then the induced Tate comparison, rank-two Hecke decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-moving-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "BAE4B195B982953221AE52FC5DA2844FB11E84E2EC3B732551F973161049AFB5"
+    },
+    {
+      "recordedUTC": "2026-10-22T15:06:18.993865+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalHeckeAnalyticDivisors",
+        "SourceOriginalPicardHeckePeriods",
+        "SourceOriginalTateHeckePeriods",
+        "SourceOriginalTateHeckeTensor"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAnalyticDivisors.lean",
+          "sha256": "2CF270B70D147BDA1D583A45E2C187E2F66F1D34E1111AF1D80F70AE85BAE2D4",
+          "oleanSha256": "B164EDA9BEFFE39FEF645B4494386E0FE5954494B3520DD7AE33E48D93D48BAD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardHeckePeriods.lean",
+          "sha256": "7FEA056398DEA819D22F2EDC5A1456010FC93F1A75F666F57C91D7E39C4817B0",
+          "oleanSha256": "CC5BC2083F35734CB1FA2587A7C03FC82C6327C2F47199C29422216539A9C810"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckePeriods.lean",
+          "sha256": "CA873773E32E83F3F5468EB31B40BD556DCB65C3260F1C4CE4BB912B583CD513",
+          "oleanSha256": "E8FA411C2F437D3F151DF77D8ECD23613BB0208E3160A4B2D0316C32E18D578B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeTensor.lean",
+          "sha256": "E910261CF22FFE28342AF41D61D129ACD68FD234E4E8ED5247BBA28D0ACEDDEC",
+          "oleanSha256": "C1422515FDDF0EB7A8018B134A9E4F59924D4478FCD54BE6D16BC21F195C09C6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_analytic_divisor_eq_sum_differences",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_abel_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAbelPic0_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPicardPeriodEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke_coe",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriod_phi2_latticeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_analytic_divisor_eq_sum_differences",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_analytic_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_abel_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAbelPic0_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPicardPeriodEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke_coe",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodQuotientHecke_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriod_phi2_latticeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalHecke"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardTateHeckeAudit4.log",
+      "logSha256": "8D4A284EA11A1257CB9A8CA7591602D71CDB48B7692DA6122BF58C8BDE084476",
+      "auditSha256": "6D8D72002E9DFDB75044FA0D72F4C2CC108BDD582B75F97EFA667B2EED6F5E22",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardTateHeckeDependencyAudit4.log",
+      "dependencyAuditSha256": "6D688E683C3CD1C344F6C40C818829F30AA895550442297442F59311C79F3B5A",
+      "dependencyAuditSourceSha256": "D8094960921E325BFDB4257C73AC375DF30F693472700F25FECDF26AE9FB739C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> full original Picard-period Hecke compatibility and actual arithmetic Tate tensor realization.",
+      "discharged": "For every original Picard class, the actual Picard-period equivalence intertwines the literal arithmetic/complex good-prime Hecke correspondence and the genuine analytic dual Hecke operator on the original path-period quotient. Applying the actual Tate functor and the previously proved tensor equivalence identifies the literal arithmetic Picard correspondence on compatible torsion sequences with scalar extension of the same integral path-lattice operator. The sequence operator is exactly the defining TateModule.tateMap expression of originalTateHecke. No moving, principal-divisor, analytic-generator, full-Picard compatibility, lattice restriction or Tate naturality premise remains. Prime coprimality to the level remains explicit.",
+      "boundary": "Scratch only; production promotion and verification pending. Extend the exact analytic Hecke comparison and lattice/Tate realization to primes dividing the level, then prove the full rank-two Hecke algebra decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-picard-tate-hecke-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "029C127F5D8B0EC8833F88E7F98C4A54198AB305F87470E61DE3C00C413BE56A"
+    },
+    {
+      "recordedUTC": "2026-10-22T15:19:02.026739+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceHeckeBadPrimeCosets",
+        "SourceWeightTwoHeckeAllPrimeTrace",
+        "SourceOriginalHeckeAllPrimePrimitiveTrace",
+        "SourceOriginalHeckeAllPrimeAbel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeBadPrimeCosets.lean",
+          "sha256": "B8181A97AD0BFE72675087A8FD2DA1875D294421C279E4F0C29ABEE0CF44A8B3",
+          "oleanSha256": "B7CA6702DB69C6B39C1D33431F839E070AFDF00C8A5071E21775D09D51CE5080"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoHeckeAllPrimeTrace.lean",
+          "sha256": "2654549E427C62A95481FC3BCC2178EDE99F851A825206A271E592FF494943EB",
+          "oleanSha256": "CA955FEA22DF083A0E9A52819D33D54CB0F2C81A94DB8467621862949D387F02"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAllPrimePrimitiveTrace.lean",
+          "sha256": "AD4663AC6E79ACE5A4E00A2D3DADB8372EC0A3F4B7BFD01639C65B0DE858A9F0",
+          "oleanSha256": "8398F7D4C6174CBAA5EE51D27382E31548F24849589F36F5DB662738AF073201"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAllPrimeAbel.lean",
+          "sha256": "36999453EA894186963E8DE4200E03AEBF9F37B622BE21776DE48666087044B5",
+          "oleanSha256": "876D44503E0F7FA40D519EFB80C9D07424E3B6E2C2561597264987B93896492B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.heckeBadUpperCoset_injective",
+        "Dubon2026.heckeBadUpperCoset_surjective",
+        "Dubon2026.heckeUpperMatrix_translation",
+        "Dubon2026.sourceWeightTwoHeckeCoset_sum_bad",
+        "Dubon2026.sourceWeightTwoHeckeCoset_sum_all",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_all_hasDerivAt",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_all_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_all",
+        "Dubon2026.heckeBadUpperCoset",
+        "Dubon2026.heckeBadUpperCosetEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.heckeBadUpperCoset_injective",
+        "Dubon2026.heckeBadUpperCoset_surjective",
+        "Dubon2026.heckeUpperMatrix_translation",
+        "Dubon2026.sourceWeightTwoHeckeCoset_sum_bad",
+        "Dubon2026.sourceWeightTwoHeckeCoset_sum_all",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_all_hasDerivAt",
+        "Dubon2026.SourceFunctionField.originalHeckePrimitiveTrace_all_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_all"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.heckeBadUpperCoset",
+        "Dubon2026.heckeBadUpperCosetEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPrimeAbelAudit4.log",
+      "logSha256": "DD291E4F105ABE9399CB290BE393FAA9FB889AD619F5C6C71A3A79FDE2EECBB3",
+      "auditSha256": "0D50F54A73A134E7BF54FA71937B82E3341E7CCC28A6B98148944386F825CE79",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPrimeAbelDependencyAudit4.log",
+      "dependencyAuditSha256": "7EF090C441C2BDB7271D2697F8E3CB4981EE9662BFBE46A33CC7A4B318898982",
+      "dependencyAuditSourceSha256": "AF1E9FACC6D9D64ADE964DC1EFFC0593EB90D35E79E2A74D191C420A6481B1F3",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_all",
+        "Dubon2026.heckeBadUpperCoset",
+        "Dubon2026.heckeBadUpperCosetEquiv"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> full rank-two Hecke/Frobenius comparison -> actual all-prime Abel and period realization.",
+      "discharged": "At every prime, including primes dividing the level, the genuine weight-two Hecke coset trace equals the actual analytic prime Hecke operator. The exact p translation cosets at bad primes give U_p. The actual primitive endpoint and ramification-correct divisor formulas then identify the literal original Hecke correspondence under the Abel map on every analytic point difference. No prime coprimality, coset trace or primitive comparison premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. All-prime lattice stability and full Picard/Tate compatibility, rank-two Hecke algebra decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-all-prime-abel-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9A2278778C96893FE3FF1FBD5F24F05A84D1F88A8B01EC8951DF15053D2EFEEA"
+    },
+    {
+      "recordedUTC": "2026-10-22T15:22:23.151265+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalPrimePeriodCoordinates",
+        "SourceOriginalPrimePeriodLattice",
+        "SourceOriginalPrimeHeckeAbelQuotient",
+        "SourceOriginalPicardPrimeHeckePeriods",
+        "SourceOriginalTatePrimeHeckePeriods",
+        "SourceOriginalTatePrimeHeckeTensor"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodCoordinates.lean",
+          "sha256": "282D210BF55C0E268628F9C2BD6E3B57E31FEB4ED9C89CB740616C150F1FF90C",
+          "oleanSha256": "B77B8B900613A3271DEC15646391C7F0D959B9E2FB63C35B2DCD3AD3BEBB35F8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodLattice.lean",
+          "sha256": "AE3379AC8882B5ECB369B106A29C18357CC4E34BA4D7E6139AB03E631FE63C62",
+          "oleanSha256": "22981DD157FAFAEA1550490AB00592F4018B7D4AFB305791843B0F339C9ADC9A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeHeckeAbelQuotient.lean",
+          "sha256": "843AC7EC3778F0B1A204BDF5050BE9FD2EA6D6640341A73EA9A798EA2D5886DF",
+          "oleanSha256": "255C951C85DB421BF993CC5B9E06144C9C6B5429A231EE3B57D4137B57E0703D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardPrimeHeckePeriods.lean",
+          "sha256": "B6C9D0DDA2CE92CF63F78B058804DB21442FBB772D66BA84F7C48F1FBE19125A",
+          "oleanSha256": "8E3FC592AF0BA6CABDE5B673E266A72EE39F28D7ACE9014AEEB60F21408073A8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePrimeHeckePeriods.lean",
+          "sha256": "DE372E8E6685290920059D7CF1F19DFF32E88D97340AA8EB76CC523A44F2A2EB",
+          "oleanSha256": "DCF07F33C16CEAB5460BBA1194624C68D19C46438B3C9A3F0C60D0A322DCFA53"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePrimeHeckeTensor.lean",
+          "sha256": "F40DEFC4E8C28B8E7AD37581CF5279F312D9B46F3F67D722D13E0E266656A7A9",
+          "oleanSha256": "833DE179E7F7FF557B9C0AA6AC9D66F6CBADE3642C794E8082F793D5BBECCD82"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke_cusp",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_pathIntegral",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_primitive_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_cusp_generator_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_preserves_path_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_mk",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_analytic_abel_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_analytic_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_abel_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAbelPic0_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPicardPeriodEquiv_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke_coe",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriod_phi2_latticeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke_cusp",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_pathIntegral",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_primitive_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_cusp_generator_mem",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_preserves_path_lattice",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_mk",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_analytic_abel_difference",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_analytic_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_abel_divisor",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalAbelPic0_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPicardPeriodEquiv_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodQuotientEquiv_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke_coe",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriod_phi2_latticeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalPrimeHecke"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTateHeckeAudit6.log",
+      "logSha256": "235F2BA9C8BF1D8E5AF2F0D3033638F75DE80943C3A7092CB2CE7DFC2A5421CE",
+      "auditSha256": "25A50B59D269350EECDE1A955A0918D6ADBAB72450A4751C800BB80A0BD7596A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 44,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTateHeckeDependencyAudit6.log",
+      "dependencyAuditSha256": "2794B64F41772212596DAB7F145358F11FFD621BE0D65237E8D010CE2A8949A2",
+      "dependencyAuditSourceSha256": "473D2D375CA890E9EAF01B9EFC0A008DCC656CDA3CE8E99A49068D40B425F5FB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalPrimeHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> actual all-prime Picard and Tate tensor realization.",
+      "discharged": "For every prime, including primes dividing the level, the actual dual analytic Hecke operator preserves the original integral path-period lattice and descends to its quotient. The actual Picard-period equivalence intertwines the literal original divisor correspondence on every Picard class. The actual arithmetic Tate tensor equivalence identifies the same correspondence on compatible torsion sequences with scalar extension of that integral lattice operator. No coprimality-to-level, lattice stability, analytic-generator, full-Picard compatibility or Tate naturality premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Prove the full rank-two Hecke algebra decomposition, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prime-tate-hecke-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "4B836BD63607D9A3FFA393916F742CB56FB1D6516547A2323107AA1472C59B20"
+    },
+    {
+      "recordedUTC": "2026-10-22T15:39:04.506360+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceOriginalPrimePeriodCommute",
+        "SourceOriginalPrimePicardCommute",
+        "SourceOriginalFullLatticeHeckeAlgebra",
+        "SourceOriginalTateHeckeWords"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodCommute.lean",
+          "sha256": "FBFDD82973907967933687BDA99C85D411EED4BE42BF166775BC04C4B516CFCC",
+          "oleanSha256": "507BA921F32FC2FEF2A7CEF38257C3F6502B9C1F04D9953D5F037F8E8973770B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePicardCommute.lean",
+          "sha256": "6E8C451F3810D63CD71D838F029319AEE0D8CFF679A6D920AC21D72461DCF21D",
+          "oleanSha256": "6BC74D0A5BC13E8A15FBB5F1105FB3D2805DD448648ADDE2D2D671625CF1EA20"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullLatticeHeckeAlgebra.lean",
+          "sha256": "7E770516E0B87BD49FF4FA18FB5508AC2323D37389E338FE081F6A650DC9BD36",
+          "oleanSha256": "01B4C0C8C28E79D046BF0369941FE0B4D23654931410190724848DD3F46ECC07"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeWords.lean",
+          "sha256": "9D06CC440DF56533B107D17DB4F1AB477491E9E304EDF4FA0496ACC2AC1D4993",
+          "oleanSha256": "0DFD5FF9761DD69C792EDD5E221D8DE8C2D7E72B5CA7D1B039B708A055E40204"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_constr",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_complex_prime_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_arithmetic_prime_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_commutative",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_generator",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_range",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_generator",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_conjugate",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_heckeWord",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_constr",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_complex_prime_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_arithmetic_prime_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_commutative",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_generator",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_range",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_generator",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_conjugate",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_heckeWord"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeWordsAudit4.log",
+      "logSha256": "3EF4168655470C5095FE429EF1DECF054DBC86B158817C972DF5DDA81D1A337E",
+      "auditSha256": "DC38A6890BC9654F8A9DA57DF032B8A8C0137E339516940175F99D63A9D8EA40",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 31,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeWordsDependencyAudit4.log",
+      "dependencyAuditSha256": "5012FAE0C02DF2A9A63FF921E6CC976B12B637EFB9426FE36C51BDCD082400CB",
+      "dependencyAuditSourceSha256": "569CEBB58CFDBF35A5B70C59B1944A0D24600A977F96C72AF013834AB6C8F3FB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_heckeWord",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_arithmetic_prime_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_commutative",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_finite",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_range",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_generator",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_generator",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> full integral Hecke word realization and perfect first-coefficient pairing.",
+      "discharged": "All actual prime Hecke correspondences commute on the original arithmetic Picard group and on the integral path-period lattice. Their actual integral lattice algebra is finite. Every integral prime word on arithmetic Tate sequences is conjugate, under the actual Tate tensor equivalence, to scalar extension of its genuine integral lattice operator. This preserves the complete integral operator relations and discharges commutativity, finite-generation and word-comparison premises.",
+      "boundary": "Scratch only; production promotion and verification pending. Rational descent of the full Hecke algebra, rank-two freeness of the actual rational Tate realization, Frobenius/inertia, arithmetic automorphy and higher symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-full-hecke-words-4-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D4C99080F0A4BFE29038B45046EEC509AAC346FB845B61CF194B7039212BE197"
+    },
+    {
+      "recordedUTC": "2026-10-22T15:39:04.628659+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceWeightTwoFullHeckeAlgebra",
+        "SourceWeightTwoHeckePerfectPairing"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoFullHeckeAlgebra.lean",
+          "sha256": "5D99D61FC4ED77492BBBCCD8FEE181CA109A9F24179FB74E35DFFF38A5166D94",
+          "oleanSha256": "4C126B2B04840772437332F07185BB1B8CFB94821A0CED92E76AE735AA9CD69C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoHeckePerfectPairing.lean",
+          "sha256": "56B95768398C76244675191FAC846B3EF5D82F2938C8B272AAB7AFB4318FED32",
+          "oleanSha256": "DDE255DA56FB31B1BF3E1EB7234E81712C8F0B44947E6C09D93B3906027DBAD3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_commutative",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_finite",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_eq_prime_adjoin",
+        "Dubon2026.sourceWeightTwoFullHecke_form_separated",
+        "Dubon2026.sourceWeightTwoFullHecke_operator_separated",
+        "Dubon2026.sourceWeightTwoHeckePairing_apply",
+        "Dubon2026.sourceWeightTwoHeckePairing_injective",
+        "Dubon2026.sourceWeightTwoHeckePairing_flip_injective",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_finrank",
+        "Dubon2026.sourceWeightTwoHeckePairing_bijective",
+        "Dubon2026.sourceWeightTwoHeckeDualEquiv_apply",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra",
+        "Dubon2026.sourceWeightTwoHeckePairing",
+        "Dubon2026.sourceWeightTwoHeckeDualEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_commutative",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_finite",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_eq_prime_adjoin",
+        "Dubon2026.sourceWeightTwoFullHecke_form_separated",
+        "Dubon2026.sourceWeightTwoFullHecke_operator_separated",
+        "Dubon2026.sourceWeightTwoHeckePairing_apply",
+        "Dubon2026.sourceWeightTwoHeckePairing_injective",
+        "Dubon2026.sourceWeightTwoHeckePairing_flip_injective",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_finrank",
+        "Dubon2026.sourceWeightTwoHeckePairing_bijective",
+        "Dubon2026.sourceWeightTwoHeckeDualEquiv_apply"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra",
+        "Dubon2026.sourceWeightTwoHeckePairing",
+        "Dubon2026.sourceWeightTwoHeckeDualEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPerfectHeckeAudit2.log",
+      "logSha256": "D02D1A3E673C40B09ED9E8A2A762757A2DCB7E2B01E2D13BEC91D3360F645F18",
+      "auditSha256": "67CE6FC7C3791B4D4F3AA96786042A4746E259EC5EBAF5FD93AA06B49C52F6AF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPerfectHeckeDependencyAudit2.log",
+      "dependencyAuditSha256": "1427DDA3DD8A2205F96669B337A6C2F4F8603469715B708237E8BFCE37C68B63",
+      "dependencyAuditSourceSha256": "07849AA5C0D25505E3D2D8436DA20D61913196DB6AC893C6E9D7B0BBC72E816B",
+      "consumers": [
+        "Dubon2026.sourceWeightTwoHeckeDualEquiv",
+        "Dubon2026.sourceWeightTwoHeckeDualEquiv_apply",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra_eq_prime_adjoin",
+        "Dubon2026.sourceWeightTwoHeckePairing_apply",
+        "Dubon2026.sourceWeightTwoFullHeckeAlgebra",
+        "Dubon2026.sourceWeightTwoHeckePairing"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> full integral Hecke word realization and perfect first-coefficient pairing.",
+      "discharged": "The full original complex weight-two Hecke algebra equals the algebra generated by all prime operators, including bad primes. First Fourier-coefficient evaluation pairs this algebra perfectly with the actual cusp space. Both separation directions, equal finite dimension and the actual algebra-to-cusp-dual linear equivalence are proved without supplied separation or dimension hypotheses.",
+      "boundary": "Scratch only; production promotion and verification pending. The rational operator structure and rank-two original Tate decomposition remain required, followed by Frobenius/inertia, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-weight-two-perfect-hecke-2-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E1EC7105F586E02FEB7C8094472EE5B28C1065A3A8D4A77CADDA0945078EB023"
+    },
+    {
+      "recordedUTC": "2026-10-22T15:55:45.771716+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceAllPrimeHeckeCharacters",
+        "SourceAllPrimeHeckeReflection",
+        "SourceAllPrimeCosetPointTransition",
+        "SourceAllPrimeScalarPeriods",
+        "SourceAllPrimeHeckeCoefficientChange",
+        "SourceAllPrimePeriodPair"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeHeckeCharacters.lean",
+          "sha256": "F521683502111AB0879ED26AD4BB66F65376F8F88C9B94AC31BB3A1639F25B8A",
+          "oleanSha256": "F6337C616A582CAAF55549C5696FFF648FAED8B495B9B259E0F21A1EBB90989C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeHeckeReflection.lean",
+          "sha256": "D5535DB3C34D3EC11A350E828287E0C09069276C4CB403F5FC8EAC486E647307",
+          "oleanSha256": "51671DA5B2C9BFFCAF7DCE53E0F89D5E13FF9A75C46F63E971A0E1D0C51E7840"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeCosetPointTransition.lean",
+          "sha256": "4E514BFD8C5344F99BA988A6B3DF1C75193C0B6CD1CD981C1764340495323FC3",
+          "oleanSha256": "588812EAB158ECA69696ECC018EDF0C4F4D6C03A393CDCA2800451D603D5B537"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeScalarPeriods.lean",
+          "sha256": "BA67B348AE0DD3AA1B3688340F2132E0DDF293540DA5835A84F0E86FB669C1EE",
+          "oleanSha256": "9DD3303247996C01A5C6F19CD5C9AF30D760FFA2588F8F65A70EEA94AF8DF0E8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeHeckeCoefficientChange.lean",
+          "sha256": "483D271A28186232776D065CB37F05A4DA9A4CE06D0386F9B0EC64595F59F0C0",
+          "oleanSha256": "3770B1DF56D5D3CB86950E557C0379EB632EA987B44F530EFE9C85DA7FE74056"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimePeriodPair.lean",
+          "sha256": "88260A27DC1E5A10E542BB626FAC6E11546B5A012AAC4B62A8A1AA06B40F5B3C",
+          "oleanSha256": "A6A62FB7483FA6F32FC6A92AFE332DF048E46FB5B679ACC90C1C4445E971E8DC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceAllPrimeRingHecke_hom_apply",
+        "Dubon2026.sourceAllPrimeHeckeHom_apply",
+        "Dubon2026.sourceAllPrimeHecke_sum_reflection",
+        "Dubon2026.sourceAllPrimePeriodReflection_hecke",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_transition",
+        "Dubon2026.sourceAllPrimePeriodValue_hecke",
+        "Dubon2026.sourceAllPrimePeriodHom_hecke",
+        "Dubon2026.sourceAllPrimeHeckeHom_coefficient_change",
+        "Dubon2026.sourceAllPrimePeriodPair_hecke",
+        "Dubon2026.sourceAllPrimeHeckeHom_parabolic",
+        "Dubon2026.sourceAllPrimeRingHeckeOperators",
+        "Dubon2026.sourceAllPrimeHeckeHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceAllPrimeRingHecke_hom_apply",
+        "Dubon2026.sourceAllPrimeHeckeHom_apply",
+        "Dubon2026.sourceAllPrimeHecke_sum_reflection",
+        "Dubon2026.sourceAllPrimePeriodReflection_hecke",
+        "Dubon2026.SourceFunctionField.originalHeckeCosetPoint_transition",
+        "Dubon2026.sourceAllPrimePeriodValue_hecke",
+        "Dubon2026.sourceAllPrimePeriodHom_hecke",
+        "Dubon2026.sourceAllPrimeHeckeHom_coefficient_change",
+        "Dubon2026.sourceAllPrimePeriodPair_hecke",
+        "Dubon2026.sourceAllPrimeHeckeHom_parabolic"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceAllPrimeRingHeckeOperators",
+        "Dubon2026.sourceAllPrimeHeckeHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimePeriodPairAudit6.log",
+      "logSha256": "F1ABE43AA63B03C7E46D3D0476677B8C1BDDE901B49F4BFB20C281CABA915DB1",
+      "auditSha256": "E8E4FB24C3C770012E772498D3AD7F4A31D8A351F86274CC98ED657815907492",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 28,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimePeriodPairDependencyAudit6.log",
+      "dependencyAuditSha256": "A0DE2C7AEE8166D153FBED2113C7A71350356E669EE5F61CF5EB036B076BD677",
+      "dependencyAuditSourceSha256": "2F630A8E48D4D2B1DBAC4A84A791B1D39209A2B5E7E5DC16655AC99032CC0415",
+      "consumers": [
+        "Dubon2026.sourceAllPrimePeriodPair_hecke",
+        "Dubon2026.sourceAllPrimeHeckeHom_parabolic",
+        "Dubon2026.sourceAllPrimeHeckeHom_coefficient_change",
+        "Dubon2026.sourceAllPrimeRingHeckeOperators",
+        "Dubon2026.sourceAllPrimeHeckeHom"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> rational full Hecke algebra descent -> actual all-prime parabolic character realization.",
+      "discharged": "The actual original parabolic period pair intertwines every analytic prime Hecke operator, including U_p, with the existing native H1 correspondence. The full character family commutes with original reflection and with rational-to-complex coefficient change. The proved period surjectivity implies preservation of the actual parabolic space. No bad-prime period, reflection, coefficient-change or parabolic-stability premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Prove rational independence and rational matrix realization of the full original Hecke algebra, rank-two Tate freeness, Frobenius/inertia, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-all-prime-period-pair-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "619E93FE97885349CAC784BA2CF172DB0E43CE21B69BAAD4AD1ED119D169BF9D"
+    },
+    {
+      "recordedUTC": "2026-10-22T16:10:18.853558+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceRationalParabolicCharacterSpan",
+        "SourceIntegralWordAdditiveNaturality",
+        "SourceAllPrimeCharacterWords",
+        "SourceHeckeWordParabolicRelations",
+        "SourceRationalHeckeWordRelations",
+        "SourceIntegralHeckeComplexIndependence"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalParabolicCharacterSpan.lean",
+          "sha256": "854758CD4D0F322D1667C6F730AF1A4D6276FABFD5F1E614EE32DD1EFF6A5C71",
+          "oleanSha256": "4F12BD9D4C1526710A0B5FD313DCAC597F38ACDFBB716BEC6BB5B8A5074E094B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralWordAdditiveNaturality.lean",
+          "sha256": "5991B40C82B9AC8723125647ED9E34E6B06E008E75E1412D8638723A9328BAA7",
+          "oleanSha256": "DDED30C1BAF10C64EC1CF5E054533286136CC5FA274A5A25FBD60DEF62443391"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeCharacterWords.lean",
+          "sha256": "A04296262A67D9FAB5CB9EA4C0453FA1DF69626FCCD5D4223B326DE17818220A",
+          "oleanSha256": "6F8E869CA962E26BE35662C94C5E1D4A687A544C8CE03A5202DDFEB5723149AC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeWordParabolicRelations.lean",
+          "sha256": "C45FDD75DF3CF0CADCEBCE82924A1DD492B402160973FCDBCB955E4ED06C0E62",
+          "oleanSha256": "9D24746BDCCA05901CFEE673480C54ECF5973CDF0C8781E3C54465BD08B17857"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalHeckeWordRelations.lean",
+          "sha256": "902F4B6FFC261E586F2A8265C24BF9B85D30DCF01275EE5594E64F9263E26553",
+          "oleanSha256": "849246D1AA42F602DA5586B8A353366BE267104C856172D26BA6E6B5E4A0F127"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeComplexIndependence.lean",
+          "sha256": "DC6BD2A78E4FCD299E1A0153D63A7B86F650A870DD94D30CC2AE6F85C805CEF8",
+          "oleanSha256": "5426FD2C130AE267E192C5FA4DE95243354E56900BBE5CD06D1D091D0558EAF4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceRationalCharacterComplex_apply",
+        "Dubon2026.sourceRationalCharacterComplex_parabolic",
+        "Dubon2026.sourceParabolicCharacter_mem_rational_span",
+        "Dubon2026.sourceHeckeWord_intertwine_addHom",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord_period",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord_reflection",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord_rational",
+        "Dubon2026.sourceWeightTwoCuspHeckeWord_exists",
+        "Dubon2026.sourceWeightTwoPeriodHom_injective",
+        "Dubon2026.sourceHeckeWord_relation_period",
+        "Dubon2026.sourceHeckeWord_relation_parabolic",
+        "Dubon2026.sourceHeckeWord_relation_rational_character",
+        "Dubon2026.sourceHeckeWord_relation_coordinate",
+        "Dubon2026.sourceOriginalIntegralHecke_linearIndependent_complex",
+        "Dubon2026.sourceRationalParabolicHoms",
+        "Dubon2026.sourceRationalCharacterComplex",
+        "Dubon2026.sourceWeightTwoCuspHeckeWord",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceRationalCharacterComplex_apply",
+        "Dubon2026.sourceRationalCharacterComplex_parabolic",
+        "Dubon2026.sourceParabolicCharacter_mem_rational_span",
+        "Dubon2026.sourceHeckeWord_intertwine_addHom",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord_period",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord_reflection",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord_rational",
+        "Dubon2026.sourceWeightTwoCuspHeckeWord_exists",
+        "Dubon2026.sourceWeightTwoPeriodHom_injective",
+        "Dubon2026.sourceHeckeWord_relation_period",
+        "Dubon2026.sourceHeckeWord_relation_parabolic",
+        "Dubon2026.sourceHeckeWord_relation_rational_character",
+        "Dubon2026.sourceHeckeWord_relation_coordinate",
+        "Dubon2026.sourceOriginalIntegralHecke_linearIndependent_complex"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceRationalParabolicHoms",
+        "Dubon2026.sourceRationalCharacterComplex",
+        "Dubon2026.sourceWeightTwoCuspHeckeWord",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeIndependenceAudit6.log",
+      "logSha256": "9B7BB5FAD3505472F155DF0EA8006E50B1262A6DD9A9F70A13DB2152C1257F55",
+      "auditSha256": "34DD5DADB4B685809D904550F65B12CE132856F1C537CE3F263C7EFBA0F1A6F7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 24,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeIndependenceDependencyAudit6.log",
+      "dependencyAuditSha256": "8B6170AEA3097E451B5C41D19DC5A59BB8B23A9BDF8AC2D9771401310B935438",
+      "dependencyAuditSourceSha256": "3200C7D8AEA2D21C39E6B657B195171B3960CD15AC3359F20FCC11DB751C287A",
+      "consumers": [
+        "Dubon2026.sourceOriginalIntegralHecke_linearIndependent_complex",
+        "Dubon2026.sourceRationalParabolicHoms",
+        "Dubon2026.sourceRationalCharacterComplex",
+        "Dubon2026.sourceWeightTwoCuspHeckeWord",
+        "Dubon2026.sourceAllPrimeCharacterHeckeWord"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> rational full Hecke algebra descent -> actual all-prime parabolic character realization.",
+      "discharged": "Every integer-linearly independent family of genuine weight-two integral Hecke operators stays complex-linearly independent. Actual all-prime words intertwine with the faithful period map, commute with reflection and rational coefficient change, and annihilate the full parabolic space whenever their cusp relation vanishes. The rational parabolic span and native fraction-ring independence force every complex coefficient to vanish. No rational operator structure or scalar-independence premise remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Construct rational cusp matrices from the full integral algebra and the perfect coefficient pairing; prove rank-two Tate freeness, Frobenius/inertia, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-hecke-independence-6-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9A25A20E6503AD510F1F796B78495FFF3A693ED3CA238AAE5C44D3753B0FA5B7"
+    },
+    {
+      "recordedUTC": "2026-10-22T16:23:41.952162+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceIntegralHeckeComplexBasis",
+        "SourceIntegralAlgebraBasisCoordinates",
+        "SourceIntegralHeckeBasisCoordinates",
+        "SourceWeightTwoCuspHeckeDual",
+        "SourceIntegralHeckeCuspBasis"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeComplexBasis.lean",
+          "sha256": "49193498B90C3D6315E060F772E43613F3CC81B29A7016AE5260EF00707CCEC2",
+          "oleanSha256": "81FBE5CC73BD3AFF4BD122B029A4B89B897BEA8C533E245DFE592442BFFE4261"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralAlgebraBasisCoordinates.lean",
+          "sha256": "DBFD8025CD8C654C98C53BE0CCA14E99F1D5C2A4624AC52BDAEF4DCE301847DA",
+          "oleanSha256": "D433AD37A39277D2FCC5024185C30FB8ACA4EDA52F28997985B5F0157B75C6D1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeBasisCoordinates.lean",
+          "sha256": "0CAC20B2D59AD5D518AA713E2C796FC00AC3527F9722A9EF316ABA1A00349D76",
+          "oleanSha256": "A45A4548BC2E6C4CC16457692DE15F1EA2686E5EFD46F134E07550C07E82A027"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCuspHeckeDual.lean",
+          "sha256": "07945DC371D690DA36BBC2B7F5B7082F193C510ED9C02C32C65C94B2BE4475B4",
+          "oleanSha256": "CD47EE87C91CE9FC5D390C7761AE0443F0319A391A9F95FDC72590A55C7B9CAF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeCuspBasis.lean",
+          "sha256": "64FC27AD5C31DAF704484C4C0A99915084AD1D9B2B32EFF58A756901A771AD97",
+          "oleanSha256": "7D0624E0406B5913BE83506ED4B5F995513C9DE95FBE27C76A9A1336F1CC5003"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceOriginalIntegralHecke_le_full",
+        "Dubon2026.sourceWeightTwoFullHecke_adjoin_integral",
+        "Dubon2026.sourceWeightTwoFullHecke_span_integralBasis",
+        "Dubon2026.sourceIntegralHeckeComplexBasis_apply",
+        "Dubon2026.finiteIntegerOperatorAlgebra_free",
+        "Dubon2026.integralComplexAlgebraInclusion_apply",
+        "Dubon2026.integralComplexAlgebraInclusion_basis",
+        "Dubon2026.integralComplexAlgebraInclusion_repr",
+        "Dubon2026.sourceOriginalIntegralHecke_free",
+        "Dubon2026.sourceIntegralHeckeToComplex_apply",
+        "Dubon2026.sourceIntegralHeckeToComplex_basis",
+        "Dubon2026.sourceIntegralHeckeComplexBasis_repr",
+        "Dubon2026.sourceWeightTwoHeckePairing_flip_bijective",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv_apply",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv_operator",
+        "Dubon2026.sourceIntegralHeckeCuspBasis_repr",
+        "Dubon2026.sourceIntegralHeckeCuspBasis_pairing",
+        "Dubon2026.sourceIntegralHeckeCuspBasis_operator",
+        "Dubon2026.sourceRationalHeckeCuspBasis_integral",
+        "Dubon2026.sourceRationalHeckeCuspBasis_rational",
+        "Dubon2026.sourceIntegralHeckeComplexBasis",
+        "Dubon2026.integralComplexAlgebraInclusion",
+        "Dubon2026.sourceIntegralHeckeBasis",
+        "Dubon2026.sourceIntegralHeckeToComplex",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv",
+        "Dubon2026.sourceIntegralHeckeCuspBasis",
+        "Dubon2026.sourceRationalHeckeCuspBasis"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceOriginalIntegralHecke_le_full",
+        "Dubon2026.sourceWeightTwoFullHecke_adjoin_integral",
+        "Dubon2026.sourceWeightTwoFullHecke_span_integralBasis",
+        "Dubon2026.sourceIntegralHeckeComplexBasis_apply",
+        "Dubon2026.finiteIntegerOperatorAlgebra_free",
+        "Dubon2026.integralComplexAlgebraInclusion_apply",
+        "Dubon2026.integralComplexAlgebraInclusion_basis",
+        "Dubon2026.integralComplexAlgebraInclusion_repr",
+        "Dubon2026.sourceOriginalIntegralHecke_free",
+        "Dubon2026.sourceIntegralHeckeToComplex_apply",
+        "Dubon2026.sourceIntegralHeckeToComplex_basis",
+        "Dubon2026.sourceIntegralHeckeComplexBasis_repr",
+        "Dubon2026.sourceWeightTwoHeckePairing_flip_bijective",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv_apply",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv_operator",
+        "Dubon2026.sourceIntegralHeckeCuspBasis_repr",
+        "Dubon2026.sourceIntegralHeckeCuspBasis_pairing",
+        "Dubon2026.sourceIntegralHeckeCuspBasis_operator",
+        "Dubon2026.sourceRationalHeckeCuspBasis_integral",
+        "Dubon2026.sourceRationalHeckeCuspBasis_rational"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceIntegralHeckeComplexBasis",
+        "Dubon2026.integralComplexAlgebraInclusion",
+        "Dubon2026.sourceIntegralHeckeBasis",
+        "Dubon2026.sourceIntegralHeckeToComplex",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv",
+        "Dubon2026.sourceIntegralHeckeCuspBasis",
+        "Dubon2026.sourceRationalHeckeCuspBasis"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCuspBasisAudit5.log",
+      "logSha256": "81085465225B744162935ADBD72CC4C451DE93244B0496B6ECE507E967D38741",
+      "auditSha256": "45DF1E62C1BD6E5549BD7659D93C8693EF1F79C2FAB36848B8B3AB0967693F30",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 49,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCuspBasisDependencyAudit5.log",
+      "dependencyAuditSha256": "5F440CC6396DF31EBFC3030ECD0FE4BBF20736BAE23EB5494CD7C354D05CF9E1",
+      "dependencyAuditSourceSha256": "6F08A34F6813C5BC14351F025648FFFD47A33EF42B0487B7A9E7CC4A222E6E31",
+      "consumers": [
+        "Dubon2026.sourceRationalHeckeCuspBasis_rational",
+        "Dubon2026.sourceIntegralHeckeComplexBasis",
+        "Dubon2026.integralComplexAlgebraInclusion",
+        "Dubon2026.sourceIntegralHeckeBasis",
+        "Dubon2026.sourceIntegralHeckeToComplex",
+        "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv",
+        "Dubon2026.sourceIntegralHeckeCuspBasis",
+        "Dubon2026.sourceRationalHeckeCuspBasis"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and modular residual Galois association -> rank-two Hecke/Frobenius comparison -> rational full Hecke algebra descent -> constructed integer cusp matrices via the actual perfect coefficient pairing.",
+      "discharged": "The actual original weight-two cusp space now has a constructed finite basis with integer matrix entries for every positive-index Hecke operator, including bad primes. Its integral algebra is finite free; the same basis extends to the full complex algebra by the proved independence theorem and native span transport. Dualizing the actual perfect coefficient pairing identifies each cusp matrix entry with an integer multiplication coordinate. No prescribed rational basis, integral Fourier structure, scalar-independence or perfect-pairing assumption remains.",
+      "boundary": "Scratch only; production promotion and verification pending. Prove rank-two original Tate freeness and its Hecke-equivariant comparison, then Frobenius/inertia, arithmetic automorphy and higher symmetric-power continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-cusp-basis-5-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E8ECC0C99A03C5E22999B8335C743AAD9417F405D4AD055A0CD589F65BB64451"
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-divisor-moving-6-reuse-review-20261022.json",
+    "Tools/source-original-picard-tate-hecke-4-reuse-review-20261022.json",
+    "Tools/source-original-all-prime-abel-4-reuse-review-20261022.json",
+    "Tools/source-original-prime-tate-hecke-6-reuse-review-20261022.json",
+    "Tools/source-original-full-hecke-words-4-reuse-review-20261022.json",
+    "Tools/source-weight-two-perfect-hecke-2-reuse-review-20261022.json",
+    "Tools/source-all-prime-period-pair-6-reuse-review-20261022.json",
+    "Tools/source-integral-hecke-independence-6-reuse-review-20261022.json",
+    "Tools/source-integral-cusp-basis-5-reuse-review-20261022.json"
+  ],
+  "productionFocusedReceipt6292": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorMovingDependencyAudit6Production6292.log",
+        "sha256": "E36739131E85FF03CEFE89247D3B047B5B06E625813349873FB3A1CCDC56D9E7",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_degree_zero_analytic_representative"
+        ],
+        "sourceSha256": "E2C2FB82553FB00F14039896812CA3B46AC57A0807898CCF710E8090EA91E620"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardTateHeckeDependencyAudit4Production6292.log",
+        "sha256": "6D688E683C3CD1C344F6C40C818829F30AA895550442297442F59311C79F3B5A",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeHecke"
+        ],
+        "sourceSha256": "8E06BA6346E5BA9FF51CEE5ECA878B860F09AD55EA39002A00F2B6BB08839E40"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAllPrimeAbelDependencyAudit4Production6292.log",
+        "sha256": "7EF090C441C2BDB7271D2697F8E3CB4981EE9662BFBE46A33CC7A4B318898982",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalHecke_abel_analytic_difference_all",
+          "Dubon2026.heckeBadUpperCoset",
+          "Dubon2026.heckeBadUpperCosetEquiv"
+        ],
+        "sourceSha256": "DD8B8C0DB3A1FDE06DF00A2B9FCD73E23D3E74DF7EFF240626179E3B95BB452E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeTateHeckeDependencyAudit6Production6292.log",
+        "sha256": "2794B64F41772212596DAB7F145358F11FFD621BE0D65237E8D010CE2A8949A2",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_originalPrimeHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimeRegularHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodQuotientHecke",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimePeriodLatticeHecke"
+        ],
+        "sourceSha256": "7D01AE6D333F51E866F514E559DC7571FA4864B279AC8825BC1862B398891C25"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeWordsDependencyAudit4Production6292.log",
+        "sha256": "5012FAE0C02DF2A9A63FF921E6CC976B12B637EFB9426FE36C51BDCD082400CB",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTatePeriodTensorEquiv_heckeWord",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalHeckePicard_arithmetic_prime_commute",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_commutative",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra_finite",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_range",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord_generator",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord_generator",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalFullLatticeHeckeAlgebra",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalLatticeHeckeWord",
+          "Dubon2026.SourceFunctionField.OriginalChart.originalTateHeckeWord"
+        ],
+        "sourceSha256": "B37D5E9B69DB447B9ABDD4CF19D782AA8DE525AED5C9B2C98F672F756578B3D7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPerfectHeckeDependencyAudit2Production6292.log",
+        "sha256": "1427DDA3DD8A2205F96669B337A6C2F4F8603469715B708237E8BFCE37C68B63",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.sourceWeightTwoHeckeDualEquiv",
+          "Dubon2026.sourceWeightTwoHeckeDualEquiv_apply",
+          "Dubon2026.sourceWeightTwoFullHeckeAlgebra_eq_prime_adjoin",
+          "Dubon2026.sourceWeightTwoHeckePairing_apply",
+          "Dubon2026.sourceWeightTwoFullHeckeAlgebra",
+          "Dubon2026.sourceWeightTwoHeckePairing"
+        ],
+        "sourceSha256": "3E449942514B5CE8B1B7F263778538B060840AF7BF79D65358E9F16D65214C1D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimePeriodPairDependencyAudit6Production6292.log",
+        "sha256": "A0DE2C7AEE8166D153FBED2113C7A71350356E669EE5F61CF5EB036B076BD677",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.sourceAllPrimePeriodPair_hecke",
+          "Dubon2026.sourceAllPrimeHeckeHom_parabolic",
+          "Dubon2026.sourceAllPrimeHeckeHom_coefficient_change",
+          "Dubon2026.sourceAllPrimeRingHeckeOperators",
+          "Dubon2026.sourceAllPrimeHeckeHom"
+        ],
+        "sourceSha256": "9928DD44AE1369581964B6FCFCC909847D870C9BE6B26A016ED64A0DFAA9F536"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHeckeIndependenceDependencyAudit6Production6292.log",
+        "sha256": "8B6170AEA3097E451B5C41D19DC5A59BB8B23A9BDF8AC2D9771401310B935438",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.sourceOriginalIntegralHecke_linearIndependent_complex",
+          "Dubon2026.sourceRationalParabolicHoms",
+          "Dubon2026.sourceRationalCharacterComplex",
+          "Dubon2026.sourceWeightTwoCuspHeckeWord",
+          "Dubon2026.sourceAllPrimeCharacterHeckeWord"
+        ],
+        "sourceSha256": "1F7CDF02FFF08F646BAE92355D209B89C21E726A7AB381E590D2E936379DCCC4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCuspBasisDependencyAudit5Production6292.log",
+        "sha256": "5F440CC6396DF31EBFC3030ECD0FE4BBF20736BAE23EB5494CD7C354D05CF9E1",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.sourceRationalHeckeCuspBasis_rational",
+          "Dubon2026.sourceIntegralHeckeComplexBasis",
+          "Dubon2026.integralComplexAlgebraInclusion",
+          "Dubon2026.sourceIntegralHeckeBasis",
+          "Dubon2026.sourceIntegralHeckeToComplex",
+          "Dubon2026.sourceWeightTwoCuspHeckeDualEquiv",
+          "Dubon2026.sourceIntegralHeckeCuspBasis",
+          "Dubon2026.sourceRationalHeckeCuspBasis"
+        ],
+        "sourceSha256": "3C5BC0DC7F268B8AF95F791401E2B45879F7A9AF04C97A5EE63F898F4395E38D"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeProductionAudit6292.log",
+    "sha256": "29196D79F01C2CCD058D60701A447B6F3E8F2B3B43FD545FCF0FEE9EA75D482C",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-full-hecke-production-build-6292.log",
+    "aggregateSha256": "52C2A941D7CF697B97491049593DC4800259C02F65A469D91FF362D996B97872",
+    "productionModules": 6292,
+    "incrementModules": 43,
+    "axiomChecks": 140,
+    "exhaustiveIncrementTheorems": 265,
+    "linterScopes": 43,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 265,
+    "productionReuse": "Scratch imports qualified. Mathematical statements and proof bodies are unchanged. The original regular differentials, native cusp forms, actual path integrals and both genuine period lattices are retained. No final source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 265,
+      "scratchDistinct": 265,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeHeckeCharacters": "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeScalarPeriods": "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAllPrimeAbel._proof_1": "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+        "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPicardHeckePeriods": "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPicardPrimeHeckePeriods": "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimeHeckeAbelQuotient": "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCommute": "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCoordinates": "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodLattice": "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePicardCommute": "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckePeriods": "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckeTensor": "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTateHeckeWords": "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckePeriods": "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckeTensor": "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "generatedNameReason": "Fifteen exact observed private local instance names have graph-dependent compiler disambiguators. Complete source-body identity up to import qualification is verified for each; no other name is normalized.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeHeckeCharacters": {
+          "productionName": "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeHeckeCharacters.lean",
+          "scratchSha256": "F521683502111AB0879ED26AD4BB66F65376F8F88C9B94AC31BB3A1639F25B8A",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAllPrimeHeckeCharacters.lean",
+          "productionSha256": "F521683502111AB0879ED26AD4BB66F65376F8F88C9B94AC31BB3A1639F25B8A",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeScalarPeriods": {
+          "productionName": "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeScalarPeriods.lean",
+          "scratchSha256": "BA67B348AE0DD3AA1B3688340F2132E0DDF293540DA5835A84F0E86FB669C1EE",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAllPrimeScalarPeriods.lean",
+          "productionSha256": "52E1B4B92857876D9964721E58CC7C016C221EF1A6A4A40F9156334A4DF58FF1",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAllPrimeAbel._proof_1": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAllPrimeAbel.lean",
+          "scratchSha256": "36999453EA894186963E8DE4200E03AEBF9F37B622BE21776DE48666087044B5",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAllPrimeAbel.lean",
+          "productionSha256": "7B6431FE0A2A30E9F233136BCD321499F0BB907B0524CEF3F210D08BAA2385CA",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPicardHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardHeckePeriods.lean",
+          "scratchSha256": "7FEA056398DEA819D22F2EDC5A1456010FC93F1A75F666F57C91D7E39C4817B0",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardHeckePeriods.lean",
+          "productionSha256": "ED9B33295BDA93EAFFE6576D106131CD64C03B8939EFF48D8B4EEE161EEB927F",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPicardPrimeHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardPrimeHeckePeriods.lean",
+          "scratchSha256": "B6C9D0DDA2CE92CF63F78B058804DB21442FBB772D66BA84F7C48F1FBE19125A",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardPrimeHeckePeriods.lean",
+          "productionSha256": "90577474C814819D62CBB5D122199B7DCF5882C86C7756ADD7DEA8138D45C8EE",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimeHeckeAbelQuotient": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeHeckeAbelQuotient.lean",
+          "scratchSha256": "843AC7EC3778F0B1A204BDF5050BE9FD2EA6D6640341A73EA9A798EA2D5886DF",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimeHeckeAbelQuotient.lean",
+          "productionSha256": "2ED143D4155A85C6B717A083DACE128E75A8FF5255D9C356A578A99D93037493",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCommute": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodCommute.lean",
+          "scratchSha256": "FBFDD82973907967933687BDA99C85D411EED4BE42BF166775BC04C4B516CFCC",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePeriodCommute.lean",
+          "productionSha256": "241DAA5330C785636C4A9F25AF05B4EB305210B74502006ADE62A909D6D6A526",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCoordinates": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodCoordinates.lean",
+          "scratchSha256": "282D210BF55C0E268628F9C2BD6E3B57E31FEB4ED9C89CB740616C150F1FF90C",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePeriodCoordinates.lean",
+          "productionSha256": "647D8D5BCEF20DCA6822C17781CB48B581833FDF64253F8929814CE6350A7B51",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodLattice": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodLattice.lean",
+          "scratchSha256": "AE3379AC8882B5ECB369B106A29C18357CC4E34BA4D7E6139AB03E631FE63C62",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePeriodLattice.lean",
+          "productionSha256": "B0143658EA3ECAFC9B24E24488891487D4BA0C005336B3D3C283DE4355E0F540",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePicardCommute": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePicardCommute.lean",
+          "scratchSha256": "6E8C451F3810D63CD71D838F029319AEE0D8CFF679A6D920AC21D72461DCF21D",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePicardCommute.lean",
+          "productionSha256": "F8305FD2EEE716434D60B658225114FC5E3EA7B1903C34DAF5022CDFC8CF0C63",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckePeriods.lean",
+          "scratchSha256": "CA873773E32E83F3F5468EB31B40BD556DCB65C3260F1C4CE4BB912B583CD513",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckePeriods.lean",
+          "productionSha256": "18E8CA80ABD8D6A0D2CEA291272154E9CF107DDF066FC29AE625095388A3580A",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckeTensor": {
+          "productionName": "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeTensor.lean",
+          "scratchSha256": "E910261CF22FFE28342AF41D61D129ACD68FD234E4E8ED5247BBA28D0ACEDDEC",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckeTensor.lean",
+          "productionSha256": "7A6CDF8B6596A45A6295E1DCBA90BE72AE25A2601B2C8F607DD501D143AAFC96",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTateHeckeWords": {
+          "productionName": "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeWords.lean",
+          "scratchSha256": "9D06CC440DF56533B107D17DB4F1AB477491E9E304EDF4FA0496ACC2AC1D4993",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckeWords.lean",
+          "productionSha256": "D5A5B2DB3B6A5FEAA4488E2433BAB05C7A39F9254B8DDCB4BDDAE86A3F964BCF",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePrimeHeckePeriods.lean",
+          "scratchSha256": "DE372E8E6685290920059D7CF1F19DFF32E88D97340AA8EB76CC523A44F2A2EB",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePrimeHeckePeriods.lean",
+          "productionSha256": "886ED61F35FB0474F8511EF07D26A1FBE5B200DDA05302685E0F9684D436E688",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckeTensor": {
+          "productionName": "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePrimeHeckeTensor.lean",
+          "scratchSha256": "F40DEFC4E8C28B8E7AD37581CF5279F312D9B46F3F67D722D13E0E266656A7A9",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePrimeHeckeTensor.lean",
+          "productionSha256": "261DE482336C9CBE9983424E987B26B8176FF84B98181DEDD44867BC925A45C0",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        }
+      },
+      "productionFocused": 265,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveOrderUnitPerturbation",
+            "SourceOriginalFinitePlaceSeparation",
+            "SourceCurveFinitePlaceIndicators",
+            "SourceCurvePrescribedOrders",
+            "SourceOriginalPrescribedPlaceOrders",
+            "SourceOriginalAnalyticDivisorMoving"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership181For6292.log",
+            "sha256": "2B90C9FBD045B046C87E175D1E3DF5B3AC771E224D5D10ADEE0BE97D735613D6",
+            "sourceSha256": "40EE94A0579A4829CB8405107A0772E903933C229FECA49521E33FE13FE60124"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeAnalyticDivisors",
+            "SourceOriginalPicardHeckePeriods",
+            "SourceOriginalTateHeckePeriods",
+            "SourceOriginalTateHeckeTensor"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership182For6292.log",
+            "sha256": "2772DEFD55181D0A491C949649FD11F39F700220820712661B55355DDB8E7212",
+            "sourceSha256": "08044800B20EADDC75CB8CEF2A22E347E073BED924F34A69DD0686353699A2D7"
+          }
+        },
+        {
+          "modules": [
+            "SourceHeckeBadPrimeCosets",
+            "SourceWeightTwoHeckeAllPrimeTrace",
+            "SourceOriginalHeckeAllPrimePrimitiveTrace",
+            "SourceOriginalHeckeAllPrimeAbel"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership183For6292.log",
+            "sha256": "22E2A61D00AE54BE01CB57C8D590FFC481B3AC3711F6E6F9C51739A9E251D94B",
+            "sourceSha256": "240841EDFFC97C376E4637DA936A15A68E51BCDB8E5C603207BE40ACDC084A5A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrimePeriodCoordinates",
+            "SourceOriginalPrimePeriodLattice",
+            "SourceOriginalPrimeHeckeAbelQuotient",
+            "SourceOriginalPicardPrimeHeckePeriods",
+            "SourceOriginalTatePrimeHeckePeriods",
+            "SourceOriginalTatePrimeHeckeTensor"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership184For6292.log",
+            "sha256": "FA53FFF7B2A3D0AD74D666C1187E0B372DA191755FA1E3CDA7A71F355BF36B6B",
+            "sourceSha256": "73A2C0C49F82D61D8137E416456D9ACB7C0BF7B3872823B0DCB1C2F6B7802189"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrimePeriodCommute",
+            "SourceOriginalPrimePicardCommute",
+            "SourceOriginalFullLatticeHeckeAlgebra",
+            "SourceOriginalTateHeckeWords"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership185For6292.log",
+            "sha256": "C628379DE1715633B10D2AD280D13C41913293310FE8A7879244137F451624D4",
+            "sourceSha256": "EF9C23EE0BB4927D9929F85E89F8FF8316FFA4A06C1E79396BB2696B7122E6D0"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoFullHeckeAlgebra",
+            "SourceWeightTwoHeckePerfectPairing"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership186For6292.log",
+            "sha256": "FF29C0D0F4A8154BEF46811EEE4D3283AFBB8912EB70BACCFB1E1E6A8AD09C32",
+            "sourceSha256": "FEF462898B9A69A273788BCB6534C467BA725C3F1A22390025FAB70CE11F51A2"
+          }
+        },
+        {
+          "modules": [
+            "SourceAllPrimeHeckeCharacters",
+            "SourceAllPrimeHeckeReflection",
+            "SourceAllPrimeCosetPointTransition",
+            "SourceAllPrimeScalarPeriods",
+            "SourceAllPrimeHeckeCoefficientChange",
+            "SourceAllPrimePeriodPair"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership187For6292.log",
+            "sha256": "C21D874A446C28A766D02023649DA1A8B44523C0E179130D9D11C5AC7F8CE5BC",
+            "sourceSha256": "BE1ABAB4ED5262E9ED25E8F2CD318812E501B1A1F627E9126D8E37A0205E7AD1"
+          }
+        },
+        {
+          "modules": [
+            "SourceRationalParabolicCharacterSpan",
+            "SourceIntegralWordAdditiveNaturality",
+            "SourceAllPrimeCharacterWords",
+            "SourceHeckeWordParabolicRelations",
+            "SourceRationalHeckeWordRelations",
+            "SourceIntegralHeckeComplexIndependence"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership188For6292.log",
+            "sha256": "9BB7F0DE6A0CE609BD8A9C70C72FBEB5B0CC96FD82661FA2BC3F28813389C16A",
+            "sourceSha256": "1A7303606A50302841804F3E613297E118FEC30F5C7406CA7A5402B8A0FCB573"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralHeckeComplexBasis",
+            "SourceIntegralAlgebraBasisCoordinates",
+            "SourceIntegralHeckeBasisCoordinates",
+            "SourceWeightTwoCuspHeckeDual",
+            "SourceIntegralHeckeCuspBasis"
+          ],
+          "count": 49,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership189For6292.log",
+            "sha256": "1446192D47C9558C9405F4BCB9FFA64203B9443EEC0BF26F4FD30D2F3BE1C41E",
+            "sourceSha256": "17AB1E98ACC86250FCB3591BDB715CC248308AFE06BCF016437B590BC1BCFF68"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeOwnership6292.log",
+        "sha256": "5D5B76473BB9D32BCFDAC12BA0C4D3063A915424E02E40DEF557147D96F90D4B",
+        "sourceSha256": "8DE1F0807EA3B0F0A16C0BF334ECDE78128C32E73D90BB906C56B8A8659FBF5F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-090001-914.log",
+        "sha256": "98486B167EA28C549AB18E3AAA303339034DFE390AFF85F9A4BB78ABBDFB1425"
+      }
+    },
+    "scratchToProductionCountReason": "All 265 distinct names from 265 exhaustive scratch checks are retained: 265 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Rank-two Hecke-equivariant freeness of the original rational Tate module, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. Full source weights and quantifiers are unchanged; the weight-two Jacobian construction is an input to the residual association route. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6292": {
+    "recordedUTC": "2026-10-22T18:48:32.063410+00:00",
+    "log": "logs/dubon-build-20261022-103438-589.log",
+    "sha256": "0710CE47AB8BDBCAF9AAD993B3C02CB7716E8B13EB73AC42EA46CA7FC8A44D64",
+    "bytes": 10885907,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6292,
+    "projectTheorems": 43439,
+    "registeredConsumers": 19203,
+    "registeredConstructions": 1434,
+    "declarations": 26436,
+    "generated": 25095,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_103134.log",
+    "foundationSha256": "6D46D26F8F60D74EACDFD92FC4BF257C5DB8390E384CB2AAF41106EB379440E9",
+    "countReconciliation": {
+      "previousTheorems": 43176,
+      "focusedTheorems": 265,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.OriginalChart.abelJacobiDiv.congr_simp",
+        "Dubon2026.sourceWeightTwoPeriodPair.congr_simp"
+      ],
+      "addedTheorems": 263,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeOwnership6292.log",
+      "ownershipSha256": "5D5B76473BB9D32BCFDAC12BA0C4D3063A915424E02E40DEF557147D96F90D4B"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 265,
+      "scratchDistinct": 265,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeHeckeCharacters": "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeScalarPeriods": "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAllPrimeAbel._proof_1": "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+        "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPicardHeckePeriods": "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPicardPrimeHeckePeriods": "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimeHeckeAbelQuotient": "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCommute": "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCoordinates": "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodLattice": "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePicardCommute": "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckePeriods": "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckeTensor": "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTateHeckeWords": "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckePeriods": "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckeTensor": "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "generatedNameReason": "Fifteen exact observed private local instance names have graph-dependent compiler disambiguators. Complete source-body identity up to import qualification is verified for each; no other name is normalized.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeHeckeCharacters": {
+          "productionName": "_private.Dubon2026.SourceAllPrimeHeckeCharacters.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeHeckeCharacters.lean",
+          "scratchSha256": "F521683502111AB0879ED26AD4BB66F65376F8F88C9B94AC31BB3A1639F25B8A",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAllPrimeHeckeCharacters.lean",
+          "productionSha256": "F521683502111AB0879ED26AD4BB66F65376F8F88C9B94AC31BB3A1639F25B8A",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_sourceAllPrimeScalarPeriods": {
+          "productionName": "_private.Dubon2026.SourceAllPrimeScalarPeriods.0.Dubon2026.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceAllPrimeScalarPeriods.lean",
+          "scratchSha256": "BA67B348AE0DD3AA1B3688340F2132E0DDF293540DA5835A84F0E86FB669C1EE",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAllPrimeScalarPeriods.lean",
+          "productionSha256": "52E1B4B92857876D9964721E58CC7C016C221EF1A6A4A40F9156334A4DF58FF1",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup_sourceOriginalHeckeAllPrimeAbel._proof_1": {
+          "productionName": "_private.Dubon2026.SourceOriginalHeckeAllPrimeAbel.0.Dubon2026.SourceFunctionField.OriginalChart.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma0HeckeUpperSubgroup._proof_1",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeAllPrimeAbel.lean",
+          "scratchSha256": "36999453EA894186963E8DE4200E03AEBF9F37B622BE21776DE48666087044B5",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAllPrimeAbel.lean",
+          "productionSha256": "7B6431FE0A2A30E9F233136BCD321499F0BB907B0524CEF3F210D08BAA2385CA",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalPicardHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalPicardHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardHeckePeriods.lean",
+          "scratchSha256": "7FEA056398DEA819D22F2EDC5A1456010FC93F1A75F666F57C91D7E39C4817B0",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardHeckePeriods.lean",
+          "productionSha256": "ED9B33295BDA93EAFFE6576D106131CD64C03B8939EFF48D8B4EEE161EEB927F",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPicardPrimeHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalPicardPrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardPrimeHeckePeriods.lean",
+          "scratchSha256": "B6C9D0DDA2CE92CF63F78B058804DB21442FBB772D66BA84F7C48F1FBE19125A",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardPrimeHeckePeriods.lean",
+          "productionSha256": "90577474C814819D62CBB5D122199B7DCF5882C86C7756ADD7DEA8138D45C8EE",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimeHeckeAbelQuotient": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimeHeckeAbelQuotient.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimeHeckeAbelQuotient.lean",
+          "scratchSha256": "843AC7EC3778F0B1A204BDF5050BE9FD2EA6D6640341A73EA9A798EA2D5886DF",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimeHeckeAbelQuotient.lean",
+          "productionSha256": "2ED143D4155A85C6B717A083DACE128E75A8FF5255D9C356A578A99D93037493",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCommute": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePeriodCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodCommute.lean",
+          "scratchSha256": "FBFDD82973907967933687BDA99C85D411EED4BE42BF166775BC04C4B516CFCC",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePeriodCommute.lean",
+          "productionSha256": "241DAA5330C785636C4A9F25AF05B4EB305210B74502006ADE62A909D6D6A526",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodCoordinates": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePeriodCoordinates.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodCoordinates.lean",
+          "scratchSha256": "282D210BF55C0E268628F9C2BD6E3B57E31FEB4ED9C89CB740616C150F1FF90C",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePeriodCoordinates.lean",
+          "productionSha256": "647D8D5BCEF20DCA6822C17781CB48B581833FDF64253F8929814CE6350A7B51",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePeriodLattice": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePeriodLattice.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePeriodLattice.lean",
+          "scratchSha256": "AE3379AC8882B5ECB369B106A29C18357CC4E34BA4D7E6139AB03E631FE63C62",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePeriodLattice.lean",
+          "productionSha256": "B0143658EA3ECAFC9B24E24488891487D4BA0C005336B3D3C283DE4355E0F540",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimePicardCommute": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimePicardCommute.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimePicardCommute.lean",
+          "scratchSha256": "6E8C451F3810D63CD71D838F029319AEE0D8CFF679A6D920AC21D72461DCF21D",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimePicardCommute.lean",
+          "productionSha256": "F8305FD2EEE716434D60B658225114FC5E3EA7B1903C34DAF5022CDFC8CF0C63",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalTateHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckePeriods.lean",
+          "scratchSha256": "CA873773E32E83F3F5468EB31B40BD556DCB65C3260F1C4CE4BB912B583CD513",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckePeriods.lean",
+          "productionSha256": "18E8CA80ABD8D6A0D2CEA291272154E9CF107DDF066FC29AE625095388A3580A",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_sourceOriginalTateHeckeTensor": {
+          "productionName": "_private.Dubon2026.SourceOriginalTateHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValAndPrimeCoprime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeTensor.lean",
+          "scratchSha256": "E910261CF22FFE28342AF41D61D129ACD68FD234E4E8ED5247BBA28D0ACEDDEC",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckeTensor.lean",
+          "productionSha256": "7A6CDF8B6596A45A6295E1DCBA90BE72AE25A2601B2C8F607DD501D143AAFC96",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTateHeckeWords": {
+          "productionName": "_private.Dubon2026.SourceOriginalTateHeckeWords.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateHeckeWords.lean",
+          "scratchSha256": "9D06CC440DF56533B107D17DB4F1AB477491E9E304EDF4FA0496ACC2AC1D4993",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckeWords.lean",
+          "productionSha256": "D5A5B2DB3B6A5FEAA4488E2433BAB05C7A39F9254B8DDCB4BDDAE86A3F964BCF",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckePeriods": {
+          "productionName": "_private.Dubon2026.SourceOriginalTatePrimeHeckePeriods.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePrimeHeckePeriods.lean",
+          "scratchSha256": "DE372E8E6685290920059D7CF1F19DFF32E88D97340AA8EB76CC523A44F2A2EB",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePrimeHeckePeriods.lean",
+          "productionSha256": "886ED61F35FB0474F8511EF07D26A1FBE5B200DDA05302685E0F9684D436E688",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        },
+        "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalTatePrimeHeckeTensor": {
+          "productionName": "_private.Dubon2026.SourceOriginalTatePrimeHeckeTensor.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "scratchSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTatePrimeHeckeTensor.lean",
+          "scratchSha256": "F40DEFC4E8C28B8E7AD37581CF5279F312D9B46F3F67D722D13E0E266656A7A9",
+          "productionSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePrimeHeckeTensor.lean",
+          "productionSha256": "261DE482336C9CBE9983424E987B26B8176FF84B98181DEDD44867BC925A45C0",
+          "equality": "Entire source bodies identical after import qualification only.",
+          "declarationKind": "Private local instance; exact observed compiler disambiguator only."
+        }
+      },
+      "productionFocused": 265,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveOrderUnitPerturbation",
+            "SourceOriginalFinitePlaceSeparation",
+            "SourceCurveFinitePlaceIndicators",
+            "SourceCurvePrescribedOrders",
+            "SourceOriginalPrescribedPlaceOrders",
+            "SourceOriginalAnalyticDivisorMoving"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership181For6292.log",
+            "sha256": "2B90C9FBD045B046C87E175D1E3DF5B3AC771E224D5D10ADEE0BE97D735613D6",
+            "sourceSha256": "40EE94A0579A4829CB8405107A0772E903933C229FECA49521E33FE13FE60124"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeAnalyticDivisors",
+            "SourceOriginalPicardHeckePeriods",
+            "SourceOriginalTateHeckePeriods",
+            "SourceOriginalTateHeckeTensor"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership182For6292.log",
+            "sha256": "2772DEFD55181D0A491C949649FD11F39F700220820712661B55355DDB8E7212",
+            "sourceSha256": "08044800B20EADDC75CB8CEF2A22E347E073BED924F34A69DD0686353699A2D7"
+          }
+        },
+        {
+          "modules": [
+            "SourceHeckeBadPrimeCosets",
+            "SourceWeightTwoHeckeAllPrimeTrace",
+            "SourceOriginalHeckeAllPrimePrimitiveTrace",
+            "SourceOriginalHeckeAllPrimeAbel"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership183For6292.log",
+            "sha256": "22E2A61D00AE54BE01CB57C8D590FFC481B3AC3711F6E6F9C51739A9E251D94B",
+            "sourceSha256": "240841EDFFC97C376E4637DA936A15A68E51BCDB8E5C603207BE40ACDC084A5A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrimePeriodCoordinates",
+            "SourceOriginalPrimePeriodLattice",
+            "SourceOriginalPrimeHeckeAbelQuotient",
+            "SourceOriginalPicardPrimeHeckePeriods",
+            "SourceOriginalTatePrimeHeckePeriods",
+            "SourceOriginalTatePrimeHeckeTensor"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership184For6292.log",
+            "sha256": "FA53FFF7B2A3D0AD74D666C1187E0B372DA191755FA1E3CDA7A71F355BF36B6B",
+            "sourceSha256": "73A2C0C49F82D61D8137E416456D9ACB7C0BF7B3872823B0DCB1C2F6B7802189"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrimePeriodCommute",
+            "SourceOriginalPrimePicardCommute",
+            "SourceOriginalFullLatticeHeckeAlgebra",
+            "SourceOriginalTateHeckeWords"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership185For6292.log",
+            "sha256": "C628379DE1715633B10D2AD280D13C41913293310FE8A7879244137F451624D4",
+            "sourceSha256": "EF9C23EE0BB4927D9929F85E89F8FF8316FFA4A06C1E79396BB2696B7122E6D0"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoFullHeckeAlgebra",
+            "SourceWeightTwoHeckePerfectPairing"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership186For6292.log",
+            "sha256": "FF29C0D0F4A8154BEF46811EEE4D3283AFBB8912EB70BACCFB1E1E6A8AD09C32",
+            "sourceSha256": "FEF462898B9A69A273788BCB6534C467BA725C3F1A22390025FAB70CE11F51A2"
+          }
+        },
+        {
+          "modules": [
+            "SourceAllPrimeHeckeCharacters",
+            "SourceAllPrimeHeckeReflection",
+            "SourceAllPrimeCosetPointTransition",
+            "SourceAllPrimeScalarPeriods",
+            "SourceAllPrimeHeckeCoefficientChange",
+            "SourceAllPrimePeriodPair"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership187For6292.log",
+            "sha256": "C21D874A446C28A766D02023649DA1A8B44523C0E179130D9D11C5AC7F8CE5BC",
+            "sourceSha256": "BE1ABAB4ED5262E9ED25E8F2CD318812E501B1A1F627E9126D8E37A0205E7AD1"
+          }
+        },
+        {
+          "modules": [
+            "SourceRationalParabolicCharacterSpan",
+            "SourceIntegralWordAdditiveNaturality",
+            "SourceAllPrimeCharacterWords",
+            "SourceHeckeWordParabolicRelations",
+            "SourceRationalHeckeWordRelations",
+            "SourceIntegralHeckeComplexIndependence"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership188For6292.log",
+            "sha256": "9BB7F0DE6A0CE609BD8A9C70C72FBEB5B0CC96FD82661FA2BC3F28813389C16A",
+            "sourceSha256": "1A7303606A50302841804F3E613297E118FEC30F5C7406CA7A5402B8A0FCB573"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralHeckeComplexBasis",
+            "SourceIntegralAlgebraBasisCoordinates",
+            "SourceIntegralHeckeBasisCoordinates",
+            "SourceWeightTwoCuspHeckeDual",
+            "SourceIntegralHeckeCuspBasis"
+          ],
+          "count": 49,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFullHeckeScratchOwnership189For6292.log",
+            "sha256": "1446192D47C9558C9405F4BCB9FFA64203B9443EEC0BF26F4FD30D2F3BE1C41E",
+            "sourceSha256": "17AB1E98ACC86250FCB3591BDB715CC248308AFE06BCF016437B590BC1BCFF68"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFullHeckeOwnership6292.log",
+        "sha256": "5D5B76473BB9D32BCFDAC12BA0C4D3063A915424E02E40DEF557147D96F90D4B",
+        "sourceSha256": "8DE1F0807EA3B0F0A16C0BF334ECDE78128C32E73D90BB906C56B8A8659FBF5F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-090001-914.log",
+        "sha256": "98486B167EA28C549AB18E3AAA303339034DFE390AFF85F9A4BB78ABBDFB1425"
+      }
+    },
+    "scratchToProductionCountReason": "All 265 distinct names from 265 exhaustive scratch checks are retained: 265 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Rank-two Hecke-equivariant freeness of the original rational Tate module, Frobenius and inertia identities, arithmetic automorphy and higher symmetric-power continuation remain required. Full source weights and quantifiers are unchanged; the weight-two Jacobian construction is an input to the residual association route. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}
